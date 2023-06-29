@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDownloadResourceStatDataRequest Request Object
 type BatchDownloadResourceStatDataRequest struct {
 	Body *BatchQueryStatReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UnregisterAgentRequest Request Object
 type UnregisterAgentRequest struct {
 
 	// 客户端ID

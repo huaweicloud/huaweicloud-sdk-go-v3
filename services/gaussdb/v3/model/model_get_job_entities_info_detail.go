@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 根据不同的任务，显示不同的内容。
+// GetJobEntitiesInfoDetail 根据不同的任务，显示不同的内容。
 type GetJobEntitiesInfoDetail struct {
 }
 

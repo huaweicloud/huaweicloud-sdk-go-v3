@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDiskInfoRequest Request Object
 type UpdateDiskInfoRequest struct {
 
 	// 源端服务器ID

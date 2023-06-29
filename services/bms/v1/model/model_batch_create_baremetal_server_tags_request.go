@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateBaremetalServerTagsRequest Request Object
 type BatchCreateBaremetalServerTagsRequest struct {
 
 	// 裸金属服务器ID。

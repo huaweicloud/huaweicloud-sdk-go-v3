@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBuiltInPolicyDefinitionResponse Response Object
 type ShowBuiltInPolicyDefinitionResponse struct {
 
 	// 策略id

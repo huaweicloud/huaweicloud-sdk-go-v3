@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSessionResponse Response Object
 type CreateSessionResponse struct {
 
 	// 错误码

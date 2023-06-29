@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdatePartitionResponse Response Object
 type BatchUpdatePartitionResponse struct {
 	Body           *[]Partition `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`

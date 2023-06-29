@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取习题库里习题过滤字段
+// ExerciseFilter 获取习题库里习题过滤字段
 type ExerciseFilter struct {
 
 	// 需查询的习题名称

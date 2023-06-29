@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取clob数据的请求参数。
+// GetClobDetailParam 获取clob数据的请求参数。
 type GetClobDetailParam struct {
 
 	// 环境id。

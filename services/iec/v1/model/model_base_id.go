@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ID对象
+// BaseId ID对象
 type BaseId struct {
 
 	// 对象ID，uuid。

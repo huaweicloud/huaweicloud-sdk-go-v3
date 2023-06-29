@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件类型
+// OrderAlertIncidentContentIncidentType 事件类型
 type OrderAlertIncidentContentIncidentType struct {
 
 	// Id value

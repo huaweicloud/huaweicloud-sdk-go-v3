@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OBS桶
+// BucketDto OBS桶
 type BucketDto struct {
 
 	// 桶名称

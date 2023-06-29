@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// resource字段数据结构。
+// RespDeh resource字段数据结构。
 type RespDeh struct {
 
 	// 专属主机ID。

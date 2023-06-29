@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckNameRequest Request Object
 type CheckNameRequest struct {
 
 	// 实例名。 可以输入中文、数字、字母、下划线、点、破折号。长度介于3-100之间

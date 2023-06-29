@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CharacterConfig
 type CharacterConfig struct {
 
 	// 形象id

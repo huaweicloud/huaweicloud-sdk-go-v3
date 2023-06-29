@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// vpc protects vo
+// VpcProtectsVo vpc protects vo
 type VpcProtectsVo struct {
 
 	// 总VPC数

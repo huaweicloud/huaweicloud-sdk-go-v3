@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRequestThrottlingPoliciesBindedToApiV2Request Request Object
 type ListRequestThrottlingPoliciesBindedToApiV2Request struct {
 
 	// 实例ID

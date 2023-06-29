@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLineGroupRequest Request Object
 type ShowLineGroupRequest struct {
 
 	// 待查询的线路分组ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取指定分区指定列的列统计信息
+// GetPartitionColumnStatisticsInput 获取指定分区指定列的列统计信息
 type GetPartitionColumnStatisticsInput struct {
 
 	// 是否聚合返回统计信息

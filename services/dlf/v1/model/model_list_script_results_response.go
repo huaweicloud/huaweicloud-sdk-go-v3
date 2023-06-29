@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScriptResultsResponse Response Object
 type ListScriptResultsResponse struct {
 	Status *string `json:"status,omitempty"`
 

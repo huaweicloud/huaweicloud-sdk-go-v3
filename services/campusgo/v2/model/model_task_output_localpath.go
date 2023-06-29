@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出为localpath类型时的配置信息
+// TaskOutputLocalpath 输出为localpath类型时的配置信息
 type TaskOutputLocalpath struct {
 
 	// 挂载的源路径，存放作业运行结果的路径，必须为linux路径

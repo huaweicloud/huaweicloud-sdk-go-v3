@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 裸金属服务器挂载信息列表
+// VolumeAttachments 裸金属服务器挂载信息列表
 type VolumeAttachments struct {
 
 	// 挂载资源ID

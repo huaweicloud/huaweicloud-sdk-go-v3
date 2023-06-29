@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PushCertificateRequest Request Object
 type PushCertificateRequest struct {
 
 	// 证书id。

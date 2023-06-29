@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// DeleteClusterRequestBody This is a auto create Body Object
 type DeleteClusterRequestBody struct {
 
 	// 集群需要保留的快照数

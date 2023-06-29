@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PublicEndpoints
 type PublicEndpoints struct {
 
 	// 公网连接信息

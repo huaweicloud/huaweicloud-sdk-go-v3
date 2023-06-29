@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBugsPerDeveloperResponse Response Object
 type ShowBugsPerDeveloperResponse struct {
 
 	// 指标分子数值

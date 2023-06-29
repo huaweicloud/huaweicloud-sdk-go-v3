@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateAppsForAppQuotaResponse Response Object
 type AssociateAppsForAppQuotaResponse struct {
 
 	// 客户端应用与客户端配额绑定列表

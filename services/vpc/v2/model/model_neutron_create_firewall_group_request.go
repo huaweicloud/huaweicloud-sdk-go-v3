@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronCreateFirewallGroupRequest Request Object
 type NeutronCreateFirewallGroupRequest struct {
 	Body *NeutronCreateFirewallGroupRequestBody `json:"body,omitempty"`
 }

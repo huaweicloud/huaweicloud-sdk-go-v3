@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartGaussMySqlInstanceResponse Response Object
 type RestartGaussMySqlInstanceResponse struct {
 
 	// 任务ID。

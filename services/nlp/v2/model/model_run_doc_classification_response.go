@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunDocClassificationResponse Response Object
 type RunDocClassificationResponse struct {
 
 	// 标签列表

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 路由表
+// RouteTable 路由表
 type RouteTable struct {
 
 	// 路由表的id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCredentialRequest Request Object
 type CreateCredentialRequest struct {
 
 	// IAM用户的token，无需特殊权限。

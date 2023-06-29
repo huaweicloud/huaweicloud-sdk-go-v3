@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVaultProjectTagRequest Request Object
 type ShowVaultProjectTagRequest struct {
 }
 

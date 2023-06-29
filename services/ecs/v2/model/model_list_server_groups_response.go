@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServerGroupsResponse Response Object
 type ListServerGroupsResponse struct {
 
 	// 弹性云服务器组信息

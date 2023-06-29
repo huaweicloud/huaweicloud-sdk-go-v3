@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UninstallApkResponse Response Object
 type UninstallApkResponse struct {
 
 	// 请求的唯一标识ID。

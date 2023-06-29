@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Volume信息。
+// ListVolume Volume信息。
 type ListVolume struct {
 
 	// 磁盘类型。

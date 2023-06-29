@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 包含有关委托管理员的信息。
+// DelegatedAdministratorDto 包含有关委托管理员的信息。
 type DelegatedAdministratorDto struct {
 
 	// 将帐号设置为委托管理员的日期。

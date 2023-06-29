@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新主页请求体。
+// UpdatePortalInfoRequestBody 更新主页请求体。
 type UpdatePortalInfoRequestBody struct {
 
 	// 修改原因。

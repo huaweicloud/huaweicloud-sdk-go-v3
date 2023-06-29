@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRecordSetsByZoneRequest Request Object
 type ListRecordSetsByZoneRequest struct {
 
 	// 所属zone id。
@@ -27,7 +27,7 @@ type ListRecordSetsByZoneRequest struct {
 	// 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
 	Tags *string `json:"tags,omitempty"`
 
-	// 待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
+	// 待查询的Record Set的状态。 取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
 	Status *string `json:"status,omitempty"`
 
 	// 待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。

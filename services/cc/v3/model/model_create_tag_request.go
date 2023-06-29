@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTagRequest Request Object
 type CreateTagRequest struct {
 
 	// 资源ID。
 	ResourceId string `json:"resource_id"`
 
-	// 资源类型: - cc: 云连接 - bwp: 带宽包
+	// 资源类型: - cloud-connection: 云连接 - bandwidth-package: 带宽包
 	ResourceType CreateTagRequestResourceType `json:"resource_type"`
 
 	Body *CreateTagRequestBody `json:"body,omitempty"`
@@ -35,17 +35,17 @@ type CreateTagRequestResourceType struct {
 }
 
 type CreateTagRequestResourceTypeEnum struct {
-	CC  CreateTagRequestResourceType
-	BWP CreateTagRequestResourceType
+	CLOUD_CONNECTION  CreateTagRequestResourceType
+	BANDWIDTH_PACKAGE CreateTagRequestResourceType
 }
 
 func GetCreateTagRequestResourceTypeEnum() CreateTagRequestResourceTypeEnum {
 	return CreateTagRequestResourceTypeEnum{
-		CC: CreateTagRequestResourceType{
-			value: "cc",
+		CLOUD_CONNECTION: CreateTagRequestResourceType{
+			value: "cloud-connection",
 		},
-		BWP: CreateTagRequestResourceType{
-			value: "bwp",
+		BANDWIDTH_PACKAGE: CreateTagRequestResourceType{
+			value: "bandwidth-package",
 		},
 	}
 }
@@ -60,13 +60,18 @@ func (c CreateTagRequestResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateTagRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

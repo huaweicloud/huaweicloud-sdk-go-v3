@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePipelineRequest Request Object
 type DeletePipelineRequest struct {
 
 	// 项目ID

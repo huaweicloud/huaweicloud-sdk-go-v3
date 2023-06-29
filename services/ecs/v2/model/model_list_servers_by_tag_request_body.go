@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ListServersByTagRequestBody This is a auto create Body Object
 type ListServersByTagRequestBody struct {
 
 	// 值为filter：表示按标签过滤弹性云服务器，返回符合条件的云服务器列表。

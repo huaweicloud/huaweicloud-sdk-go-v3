@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeGraph2Request Request Object
 type ResizeGraph2Request struct {
 
 	// 图ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGaussMySqlInstanceDetailInfoResponse Response Object
 type ListGaussMySqlInstanceDetailInfoResponse struct {
 
 	// 实例详情。

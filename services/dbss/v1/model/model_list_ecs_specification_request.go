@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEcsSpecificationRequest Request Object
 type ListEcsSpecificationRequest struct {
 }
 

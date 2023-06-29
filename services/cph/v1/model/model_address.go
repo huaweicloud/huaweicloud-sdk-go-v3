@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务器开发端口信息
+// Address 服务器开发端口信息
 type Address struct {
 
 	// 云手机服务器的内网IP，过期字段

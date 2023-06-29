@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SATA云硬盘类型预留的云硬盘个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
+// QuotaDetailVolumesSata SATA云硬盘类型预留的云硬盘个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailVolumesSata struct {
 
 	// 已使用的数量。

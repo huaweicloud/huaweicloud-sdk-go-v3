@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeregisterScenes2Response Response Object
 type DeregisterScenes2Response struct {
 
 	// 取消订阅成功的SceneApplication。

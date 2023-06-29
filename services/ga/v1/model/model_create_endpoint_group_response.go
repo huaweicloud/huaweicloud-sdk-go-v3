@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEndpointGroupResponse Response Object
 type CreateEndpointGroupResponse struct {
 	EndpointGroup *EndpointGroupDetail `json:"endpoint_group,omitempty"`
 

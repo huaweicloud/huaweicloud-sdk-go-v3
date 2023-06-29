@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNamespacesResponse Response Object
 type ListNamespacesResponse struct {
 
 	// 组织列表

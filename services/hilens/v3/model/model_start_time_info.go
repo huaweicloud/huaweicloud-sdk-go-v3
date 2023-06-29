@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务开始运行时间信息
+// StartTimeInfo 任务开始运行时间信息
 type StartTimeInfo struct {
 
 	// 任务启动时间

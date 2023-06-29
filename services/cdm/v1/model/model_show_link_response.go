@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLinkResponse Response Object
 type ShowLinkResponse struct {
 
 	// 连接列表，请参见links数据结构说明

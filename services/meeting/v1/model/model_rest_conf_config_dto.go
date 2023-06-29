@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议其他配置信息。
+// RestConfConfigDto 会议其他配置信息。
 type RestConfConfigDto struct {
 
 	// 是否需要发送会议邮件通知。默认值由企业级配置决定。 - true: 需要 - false: 不需要

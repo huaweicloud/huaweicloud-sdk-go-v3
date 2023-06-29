@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 访问方式。
+// ExternalAccesses 访问方式。
 type ExternalAccesses struct {
 
 	// ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStaticRouteResponse Response Object
 type ShowStaticRouteResponse struct {
 	Route *Route `json:"route,omitempty"`
 

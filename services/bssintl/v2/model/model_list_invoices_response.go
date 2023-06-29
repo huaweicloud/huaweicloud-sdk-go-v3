@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInvoicesResponse Response Object
 type ListInvoicesResponse struct {
 
 	// 记录数，只有成功的时候才返回这个字段

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 短信发送明细。
+// AimSendDetail 短信发送明细。
 type AimSendDetail struct {
 
 	// 发送明细的唯一标识ID。

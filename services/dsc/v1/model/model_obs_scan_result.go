@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OBS扫描结果
+// ObsScanResult OBS扫描结果
 type ObsScanResult struct {
 
 	// 扫描结果总数

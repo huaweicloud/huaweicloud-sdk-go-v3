@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加一条或多条自定义指标监控数据，请求参数。
+// MetricDataItem 添加一条或多条自定义指标监控数据，请求参数。
 type MetricDataItem struct {
 	Metric *MetricInfo `json:"metric"`
 

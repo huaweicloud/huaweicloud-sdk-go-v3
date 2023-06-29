@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPictureModelingJobsResponse Response Object
 type ListPictureModelingJobsResponse struct {
 
 	// 照片建模任务总数。

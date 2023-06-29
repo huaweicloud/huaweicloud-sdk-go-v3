@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadSpecialConfigurationSettingResponse Response Object
 type UploadSpecialConfigurationSettingResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUpgradeDurationResponse Response Object
 type ShowUpgradeDurationResponse struct {
 
 	// 升级策略列表

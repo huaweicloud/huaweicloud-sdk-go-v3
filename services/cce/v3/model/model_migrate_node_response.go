@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MigrateNodeResponse Response Object
 type MigrateNodeResponse struct {
 
 	// API版本，固定值“v3”。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户鉴权信息。
+// UserInfo 用户鉴权信息。
 type UserInfo struct {
 
 	// 用户UUID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFunctionAsyncInvokeConfigResponse Response Object
 type ListFunctionAsyncInvokeConfigResponse struct {
 
 	// 函数异步配置列表。

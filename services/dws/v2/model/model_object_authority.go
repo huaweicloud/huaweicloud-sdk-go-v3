@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对象权限信息
+// ObjectAuthority 对象权限信息
 type ObjectAuthority struct {
 
 	// 对象名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchDepartmentByNameResponse Response Object
 type SearchDepartmentByNameResponse struct {
 
 	// 部门信息

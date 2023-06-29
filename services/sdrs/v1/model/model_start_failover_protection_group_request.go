@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartFailoverProtectionGroupRequest Request Object
 type StartFailoverProtectionGroupRequest struct {
 
 	// 保护组的ID。

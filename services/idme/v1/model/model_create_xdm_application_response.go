@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateXdmApplicationResponse Response Object
 type CreateXdmApplicationResponse struct {
 
 	// 应用ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源管理状态
+// WorkloadStatusReq 资源管理状态
 type WorkloadStatusReq struct {
 	WorkloadStatus *WorkloadStatus `json:"workload_status,omitempty"`
 }

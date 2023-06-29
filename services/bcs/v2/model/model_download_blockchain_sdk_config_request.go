@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadBlockchainSdkConfigRequest Request Object
 type DownloadBlockchainSdkConfigRequest struct {
 
 	// blockchainID

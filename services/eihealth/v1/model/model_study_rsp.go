@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// study详情返回体
+// StudyRsp study详情返回体
 type StudyRsp struct {
 
 	// study名称

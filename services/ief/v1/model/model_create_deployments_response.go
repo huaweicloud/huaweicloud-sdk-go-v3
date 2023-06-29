@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDeploymentsResponse Response Object
 type CreateDeploymentsResponse struct {
 
 	// 应用部署uuid

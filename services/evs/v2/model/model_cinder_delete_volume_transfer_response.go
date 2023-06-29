@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CinderDeleteVolumeTransferResponse Response Object
 type CinderDeleteVolumeTransferResponse struct {
 	HttpStatusCode int `json:"-"`
 }

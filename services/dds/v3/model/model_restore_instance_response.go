@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreInstanceResponse Response Object
 type RestoreInstanceResponse struct {
 
 	// 恢复到当前实例的异步任务ID。

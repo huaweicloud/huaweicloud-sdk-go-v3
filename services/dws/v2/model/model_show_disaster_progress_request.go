@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDisasterProgressRequest Request Object
 type ShowDisasterProgressRequest struct {
 
 	// disaster_recovery_id

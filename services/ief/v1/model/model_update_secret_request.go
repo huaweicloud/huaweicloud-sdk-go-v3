@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSecretRequest Request Object
 type UpdateSecretRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

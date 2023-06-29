@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRuleGroupResponse Response Object
 type DeleteRuleGroupResponse struct {
 
 	// 返回消息

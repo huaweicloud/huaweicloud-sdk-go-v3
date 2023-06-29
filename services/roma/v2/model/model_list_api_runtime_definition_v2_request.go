@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApiRuntimeDefinitionV2Request Request Object
 type ListApiRuntimeDefinitionV2Request struct {
 
 	// 实例ID

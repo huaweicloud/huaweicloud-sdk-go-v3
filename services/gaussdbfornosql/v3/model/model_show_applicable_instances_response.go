@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplicableInstancesResponse Response Object
 type ShowApplicableInstancesResponse struct {
 
 	// 实例列表

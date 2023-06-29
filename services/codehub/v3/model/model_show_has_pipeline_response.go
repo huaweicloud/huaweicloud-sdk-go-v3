@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowHasPipelineResponse Response Object
 type ShowHasPipelineResponse struct {
 	Error *Error `json:"error,omitempty"`
 

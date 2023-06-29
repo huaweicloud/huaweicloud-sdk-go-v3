@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunJobRequest Request Object
 type RunJobRequest struct {
 	Body *RunJobRequestBody `json:"body,omitempty"`
 }

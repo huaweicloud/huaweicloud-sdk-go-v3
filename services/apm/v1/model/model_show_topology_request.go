@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTopologyRequest Request Object
 type ShowTopologyRequest struct {
 
 	// 调用链traceId。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机使用的带宽信息
+// CreateNet2CloudPhoneServerRequestBodyBandWidth 云手机使用的带宽信息
 type CreateNet2CloudPhoneServerRequestBodyBandWidth struct {
 
 	// 云手机服务器的带宽唯一标识

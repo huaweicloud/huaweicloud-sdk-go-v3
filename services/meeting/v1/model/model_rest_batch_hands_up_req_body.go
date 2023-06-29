@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量举手请求。
+// RestBatchHandsUpReqBody 批量举手请求。
 type RestBatchHandsUpReqBody struct {
 
 	// - 0: 放下手 - 1: 举手

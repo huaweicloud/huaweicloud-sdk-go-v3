@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMenusRequest Request Object
 type ListMenusRequest struct {
 
 	// 菜单ID。

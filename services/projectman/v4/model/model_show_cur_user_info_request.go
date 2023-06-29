@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCurUserInfoRequest Request Object
 type ShowCurUserInfoRequest struct {
 }
 

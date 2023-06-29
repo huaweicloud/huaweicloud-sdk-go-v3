@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunFileTranslationRequest Request Object
 type RunFileTranslationRequest struct {
 	Body *FileTranslationReq `json:"body,omitempty"`
 }

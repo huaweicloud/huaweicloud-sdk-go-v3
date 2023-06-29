@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 阈值阈值设置请求体。
+// SetThresholdData 阈值阈值设置请求体。
 type SetThresholdData struct {
 
 	// 接收方向阈值设定值，单位为毫秒(ms)。 取值范围：0 - 10000。

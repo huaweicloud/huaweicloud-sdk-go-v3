@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端类型。
+// QueryDeviceTypeResultDto 终端类型。
 type QueryDeviceTypeResultDto struct {
 
 	// 终端类型，区分自研和第三方终端。 * TE：华为自研硬终端 * 3rd：第三方硬终端

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRequestTimelineResponse Response Object
 type ListRequestTimelineResponse struct {
 
 	// 安全统计的请求时间线数据

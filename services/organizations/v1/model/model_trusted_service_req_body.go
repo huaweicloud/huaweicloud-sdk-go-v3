@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可信服务相关操作的请求体。
+// TrustedServiceReqBody 可信服务相关操作的请求体。
 type TrustedServiceReqBody struct {
 
 	// 服务主体名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待删除会场信息
+// DelAttendInfo 待删除会场信息
 type DelAttendInfo struct {
 
 	// 会场号码。

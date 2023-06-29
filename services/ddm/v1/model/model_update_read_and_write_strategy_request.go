@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateReadAndWriteStrategyRequest Request Object
 type UpdateReadAndWriteStrategyRequest struct {
 
 	// DDM实例ID

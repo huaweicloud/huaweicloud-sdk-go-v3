@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建的引擎实例信息
+// InstanceInfo 创建的引擎实例信息
 type InstanceInfo struct {
 
 	// 引擎实例ID

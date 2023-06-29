@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Indicates the resource type
+// Quota Indicates the resource type
 type Quota struct {
 
 	// 类型。  取值范围： - \"graph\" - \"backup\" - \"metadata\"

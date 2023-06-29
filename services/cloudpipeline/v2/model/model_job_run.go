@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务运行信息
+// JobRun 任务运行信息
 type JobRun struct {
 
 	// 任务ID

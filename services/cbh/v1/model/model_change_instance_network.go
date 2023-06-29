@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改网络请求body。
+// ChangeInstanceNetwork 修改网络请求body。
 type ChangeInstanceNetwork struct {
 
 	// 云堡垒机实例状态，枚举值如下： - create  创建 - renewals  续费 - change  扩容

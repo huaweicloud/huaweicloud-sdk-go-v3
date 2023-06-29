@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// The request body of the DisassociateResourceSharePermission operation.
+// DisassociatePermissionReqBody The request body of the DisassociateResourceSharePermission operation.
 type DisassociatePermissionReqBody struct {
 
 	// 共享资源权限的ID。

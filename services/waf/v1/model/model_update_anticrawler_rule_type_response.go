@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAnticrawlerRuleTypeResponse Response Object
 type UpdateAnticrawlerRuleTypeResponse struct {
 
 	// JS脚本反爬虫规则类型，指定防护路径：anticrawler_specific_url 排除防护路径：anticrawler_except_url

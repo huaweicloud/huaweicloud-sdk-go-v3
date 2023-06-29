@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateServerBlockDeviceReq This is a auto create Body Object
 type UpdateServerBlockDeviceReq struct {
 	BlockDevice *UpdateServerBlockDeviceOption `json:"block_device"`
 }

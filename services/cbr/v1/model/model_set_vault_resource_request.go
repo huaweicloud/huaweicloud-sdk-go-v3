@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetVaultResourceRequest Request Object
 type SetVaultResourceRequest struct {
 
 	// 存储库id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadDbObjectTemplateResponse Response Object
 type UploadDbObjectTemplateResponse struct {
 
 	// 是否上传完成。

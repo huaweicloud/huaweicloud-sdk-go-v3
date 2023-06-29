@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetExceedCutNetResponse Response Object
 type SetExceedCutNetResponse struct {
 
 	// 业务受理单号

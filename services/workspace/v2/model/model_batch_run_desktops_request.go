@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchRunDesktopsRequest Request Object
 type BatchRunDesktopsRequest struct {
 	Body *BatchActionDesktopsReq `json:"body,omitempty"`
 }

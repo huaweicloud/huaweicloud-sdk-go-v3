@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronCreateFloatingIpResponse Response Object
 type NeutronCreateFloatingIpResponse struct {
 	Floatingip     *PostAndPutFloatingIpResp `json:"floatingip,omitempty"`
 	HttpStatusCode int                       `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息体。
+// DeletePortResponseModelData 消息体。
 type DeletePortResponseModelData struct {
 
 	// 通道号。

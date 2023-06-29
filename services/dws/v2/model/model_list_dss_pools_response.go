@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDssPoolsResponse Response Object
 type ListDssPoolsResponse struct {
 
 	// 专属分布式存储池详情列表。

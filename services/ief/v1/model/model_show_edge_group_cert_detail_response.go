@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEdgeGroupCertDetailResponse Response Object
 type ShowEdgeGroupCertDetailResponse struct {
 
 	// 证书ID

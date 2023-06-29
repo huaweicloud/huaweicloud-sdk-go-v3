@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图片审核结果。
+// ImageModerationResult 图片审核结果。
 type ImageModerationResult struct {
 
 	// 审核情况。

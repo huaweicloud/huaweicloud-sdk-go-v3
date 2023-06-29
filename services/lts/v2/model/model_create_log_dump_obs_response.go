@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLogDumpObsResponse Response Object
 type CreateLogDumpObsResponse struct {
 
 	// 转储id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPlanJournalsRequest Request Object
 type ShowPlanJournalsRequest struct {
 
 	// 测试计划id，测试计划的唯一标识，长度11-34位字符

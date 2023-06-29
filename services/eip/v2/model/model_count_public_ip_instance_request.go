@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CountPublicIpInstanceRequest Request Object
 type CountPublicIpInstanceRequest struct {
 }
 

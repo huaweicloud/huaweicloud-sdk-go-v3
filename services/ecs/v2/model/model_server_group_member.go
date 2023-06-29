@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器组添加、删除成员列表
+// ServerGroupMember 云服务器组添加、删除成员列表
 type ServerGroupMember struct {
 
 	// 云服务器UUID。

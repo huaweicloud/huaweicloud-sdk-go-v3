@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监听器对象列表，用于状态树中
+// ListenersInStatusResp 监听器对象列表，用于状态树中
 type ListenersInStatusResp struct {
 
 	// 监听器ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreSecretResponse Response Object
 type RestoreSecretResponse struct {
 	Secret         *Secret `json:"secret,omitempty"`
 	HttpStatusCode int     `json:"-"`

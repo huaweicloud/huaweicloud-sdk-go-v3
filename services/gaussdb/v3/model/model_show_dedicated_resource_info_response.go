@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDedicatedResourceInfoResponse Response Object
 type ShowDedicatedResourceInfoResponse struct {
 
 	// 专属资源池ID。

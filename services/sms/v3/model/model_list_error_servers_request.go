@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListErrorServersRequest Request Object
 type ListErrorServersRequest struct {
 
 	// 每一页记录的错误数量

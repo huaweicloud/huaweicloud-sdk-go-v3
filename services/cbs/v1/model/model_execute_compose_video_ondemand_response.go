@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteComposeVideoOndemandResponse Response Object
 type ExecuteComposeVideoOndemandResponse struct {
 	HttpStatusCode int `json:"-"`
 }

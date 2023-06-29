@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOpRecordResponse Response Object
 type ListOpRecordResponse struct {
 
 	// 操作记录总数

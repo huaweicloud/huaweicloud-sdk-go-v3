@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// httpserver配置信息
+// HttpForwarding httpserver配置信息
 type HttpForwarding struct {
 
 	// **参数说明**：用于接收满足规则条件数据的http服务器地址。

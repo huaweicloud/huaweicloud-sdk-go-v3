@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListL7policiesRequest Request Object
 type ListL7policiesRequest struct {
 
 	// 分页查询中每页的转发策略个数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateWorkflowResponse Response Object
 type CreateWorkflowResponse struct {
 
 	// 工作流id，唯一标识，根据project_id和workflow_name生成。

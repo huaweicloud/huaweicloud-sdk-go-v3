@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组证书列表返回体
+// EdgeGroupCertListResp 边缘节点组证书列表返回体
 type EdgeGroupCertListResp struct {
 
 	// 边缘节点组证书数目

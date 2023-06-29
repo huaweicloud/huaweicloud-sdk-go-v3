@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 辅助认证服务接入模式 INTERNET：互联网接入 DEDICATED：专线接入 SYSTEM_DEFAULT：系统默认
+// AuthServerAccessMode 辅助认证服务接入模式 INTERNET：互联网接入 DEDICATED：专线接入 SYSTEM_DEFAULT：系统默认
 type AuthServerAccessMode struct {
 	value string
 }
@@ -44,13 +44,18 @@ func (c AuthServerAccessMode) MarshalJSON() ([]byte, error) {
 
 func (c *AuthServerAccessMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

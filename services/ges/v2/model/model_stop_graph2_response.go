@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopGraph2Response Response Object
 type StopGraph2Response struct {
 
 	// 关闭图任务ID。请求失败时为空。

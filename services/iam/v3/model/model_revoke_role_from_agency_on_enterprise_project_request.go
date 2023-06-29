@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RevokeRoleFromAgencyOnEnterpriseProjectRequest Request Object
 type RevokeRoleFromAgencyOnEnterpriseProjectRequest struct {
 	Body *CreateOrDelAgencyEpPolicyAssignmentReqBody `json:"body,omitempty"`
 }

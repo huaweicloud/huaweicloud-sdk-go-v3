@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchRecordingsResponse Response Object
 type SearchRecordingsResponse struct {
 
 	// 查询偏移量。

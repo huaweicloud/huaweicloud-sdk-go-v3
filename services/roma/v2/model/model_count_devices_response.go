@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountDevicesResponse Response Object
 type CountDevicesResponse struct {
 	ProductTemplates *ProductTemplatesCalculation `json:"product_templates,omitempty"`
 

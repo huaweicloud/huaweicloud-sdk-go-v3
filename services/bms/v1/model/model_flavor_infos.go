@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// flavor数据结构说明
+// FlavorInfos flavor数据结构说明
 type FlavorInfos struct {
 
 	// 裸金属服务器规格ID

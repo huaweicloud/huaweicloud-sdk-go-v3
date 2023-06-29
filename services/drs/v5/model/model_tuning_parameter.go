@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调优参数。
+// TuningParameter 调优参数。
 type TuningParameter struct {
 
 	// 参数名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFollow302SwitchRequest Request Object
 type UpdateFollow302SwitchRequest struct {
 
 	// 加速域名id。获取方法请参见查询加速域名。

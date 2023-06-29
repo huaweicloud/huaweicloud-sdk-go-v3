@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLiveDataApiDeploymentHistoryV2Response Response Object
 type ListLiveDataApiDeploymentHistoryV2Response struct {
 
 	// 本次返回的列表长度

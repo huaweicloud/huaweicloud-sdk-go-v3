@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDataResponse Response Object
 type ShowDataResponse struct {
 
 	// 对象全路径（项目名称:/路径）

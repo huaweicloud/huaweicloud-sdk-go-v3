@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowJobConfigRequest Request Object
 type ShowJobConfigRequest struct {
 }
 

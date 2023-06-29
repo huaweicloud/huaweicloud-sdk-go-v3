@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAutoExpireScanTaskRequest Request Object
 type CreateAutoExpireScanTaskRequest struct {
 
 	// 实例ID。

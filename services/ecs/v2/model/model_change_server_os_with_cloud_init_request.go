@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeServerOsWithCloudInitRequest Request Object
 type ChangeServerOsWithCloudInitRequest struct {
 
 	// 云服务器ID。

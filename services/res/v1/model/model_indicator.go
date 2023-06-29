@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Indicator
 type Indicator struct {
 
 	// 指标名称： - clickPVRate，点击PV率 - clickUVRate，点击UV率 - customize，自定义

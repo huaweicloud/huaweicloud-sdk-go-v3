@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启停会议录制请求。
+// RestSetRecordReqBody 启停会议录制请求。
 type RestSetRecordReqBody struct {
 
 	// 录制启停开关。默认值为0。 - 0: 停止会议录制 - 1: 启动会议录制

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// authenticatingProxy模式相关配置。认证模式为authenticating_proxy时必选
+// AuthenticatingProxy authenticatingProxy模式相关配置。认证模式为authenticating_proxy时必选
 type AuthenticatingProxy struct {
 
 	// authenticating_proxy模式配置的x509格式CA证书(base64编码)。当集群认证模式为authenticating_proxy时，此项必须填写。   最大长度：1M

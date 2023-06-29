@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetectExtentionByNameAndIdResponse Response Object
 type DetectExtentionByNameAndIdResponse struct {
 	Meta *Meta `json:"meta,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowImageWatermarkRequest Request Object
 type ShowImageWatermarkRequest struct {
 	Body *ShowImageWatermarkRequestBody `json:"body,omitempty" type:"multipart"`
 }

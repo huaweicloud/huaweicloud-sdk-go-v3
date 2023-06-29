@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSignatureRequest Request Object
 type UpdateSignatureRequest struct {
 
 	// 签名ID

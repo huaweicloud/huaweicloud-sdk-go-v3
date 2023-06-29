@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新路由表请求体
+// UpdateRouteTable 更新路由表请求体
 type UpdateRouteTable struct {
 
 	// 路由器表名称

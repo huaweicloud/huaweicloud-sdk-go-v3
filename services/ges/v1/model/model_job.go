@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务
+// Job 任务
 type Job struct {
 
 	// 任务ID。

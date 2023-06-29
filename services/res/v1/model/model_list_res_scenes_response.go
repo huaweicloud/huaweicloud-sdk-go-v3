@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResScenesResponse Response Object
 type ListResScenesResponse struct {
 
 	// 是否成功。

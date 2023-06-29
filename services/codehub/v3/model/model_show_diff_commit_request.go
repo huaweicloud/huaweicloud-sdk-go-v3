@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDiffCommitRequest Request Object
 type ShowDiffCommitRequest struct {
 
 	// 仓库短id

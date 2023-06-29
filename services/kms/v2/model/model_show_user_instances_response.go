@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUserInstancesResponse Response Object
 type ShowUserInstancesResponse struct {
 
 	// 非默认用户主密钥个数。

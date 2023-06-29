@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowImageQuotaRequest Request Object
 type ShowImageQuotaRequest struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartFailoverProtectionGroupResponse Response Object
 type StartFailoverProtectionGroupResponse struct {
 
 	// 成功返回jobId信息

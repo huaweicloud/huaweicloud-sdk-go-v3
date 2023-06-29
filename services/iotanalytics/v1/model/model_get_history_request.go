@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询历史值请求
+// GetHistoryRequest 查询历史值请求
 type GetHistoryRequest struct {
 	TimeSpan *TimeSpan `json:"time_span"`
 

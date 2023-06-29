@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunMultiModalAssessmentRequest Request Object
 type RunMultiModalAssessmentRequest struct {
 	Body *PostMultiModalAssessmentReq `json:"body,omitempty"`
 }

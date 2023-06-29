@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 切换操作系统的参数
+// ChangeOsOption 切换操作系统的参数
 type ChangeOsOption struct {
 
 	// 切换系统所使用的新镜像的ID。

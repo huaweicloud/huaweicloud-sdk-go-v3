@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListExercisesRequest Request Object
 type ListExercisesRequest struct {
 
 	// 习题库id

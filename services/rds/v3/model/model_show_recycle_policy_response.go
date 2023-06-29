@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRecyclePolicyResponse Response Object
 type ShowRecyclePolicyResponse struct {
 
 	// 回收站实例保留天数

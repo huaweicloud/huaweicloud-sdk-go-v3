@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAssetModelResponse Response Object
 type CreateAssetModelResponse struct {
 
 	// 模型ID

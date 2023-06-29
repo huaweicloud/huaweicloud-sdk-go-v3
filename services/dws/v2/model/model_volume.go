@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 磁盘
+// Volume 磁盘
 type Volume struct {
 
 	// 磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）

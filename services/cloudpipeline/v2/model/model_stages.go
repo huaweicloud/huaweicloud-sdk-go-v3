@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线阶段执行信息
+// Stages 流水线阶段执行信息
 type Stages struct {
 
 	// 阶段执行结果。取值及含义：success：成功；error：失败；aborted：终止

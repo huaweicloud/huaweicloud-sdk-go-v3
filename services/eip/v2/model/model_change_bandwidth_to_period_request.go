@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeBandwidthToPeriodRequest Request Object
 type ChangeBandwidthToPeriodRequest struct {
 	Body *BwChangeToPeriodReq `json:"body,omitempty"`
 }

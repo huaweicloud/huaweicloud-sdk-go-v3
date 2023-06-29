@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateBlackWhiteListUsingPutRequest Request Object
 type UpdateBlackWhiteListUsingPutRequest struct {
 
 	// 黑白名单列表id

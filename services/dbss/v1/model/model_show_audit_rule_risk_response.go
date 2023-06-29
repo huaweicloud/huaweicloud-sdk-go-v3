@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAuditRuleRiskResponse Response Object
 type ShowAuditRuleRiskResponse struct {
 
 	// 风险规则ID

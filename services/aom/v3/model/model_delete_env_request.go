@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEnvRequest Request Object
 type DeleteEnvRequest struct {
 
 	// 环境id

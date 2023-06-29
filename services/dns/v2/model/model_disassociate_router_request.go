@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateRouterRequest Request Object
 type DisassociateRouterRequest struct {
 
 	// 待解关联zone的ID。

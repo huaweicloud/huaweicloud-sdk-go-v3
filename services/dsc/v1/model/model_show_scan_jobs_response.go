@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowScanJobsResponse Response Object
 type ShowScanJobsResponse struct {
 
 	// 本次返回的扫描任务列表

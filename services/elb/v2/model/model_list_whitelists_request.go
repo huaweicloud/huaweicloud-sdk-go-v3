@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWhitelistsRequest Request Object
 type ListWhitelistsRequest struct {
 
 	// 分页查询中每页的白名单个数

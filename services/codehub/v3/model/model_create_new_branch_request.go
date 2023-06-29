@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNewBranchRequest Request Object
 type CreateNewBranchRequest struct {
 
 	// 仓库的主键id

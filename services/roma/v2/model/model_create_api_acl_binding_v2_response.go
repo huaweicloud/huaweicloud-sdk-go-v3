@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateApiAclBindingV2Response Response Object
 type CreateApiAclBindingV2Response struct {
 
 	// API与ACL的绑定关系列表

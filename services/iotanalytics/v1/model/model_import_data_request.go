@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportDataRequest Request Object
 type ImportDataRequest struct {
 	Body *ImportDataRequestBody `json:"body,omitempty"`
 }

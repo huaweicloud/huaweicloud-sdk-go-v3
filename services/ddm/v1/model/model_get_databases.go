@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// databases返回参数
+// GetDatabases databases返回参数
 type GetDatabases struct {
 
 	// 分片数。

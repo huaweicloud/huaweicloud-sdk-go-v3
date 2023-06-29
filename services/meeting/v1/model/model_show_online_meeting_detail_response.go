@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOnlineMeetingDetailResponse Response Object
 type ShowOnlineMeetingDetailResponse struct {
 	ConferenceData *ConferenceInfo `json:"conferenceData,omitempty"`
 

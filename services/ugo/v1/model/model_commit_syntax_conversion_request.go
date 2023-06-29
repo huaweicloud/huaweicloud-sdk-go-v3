@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CommitSyntaxConversionRequest Request Object
 type CommitSyntaxConversionRequest struct {
 
 	// 迁移项目ID。

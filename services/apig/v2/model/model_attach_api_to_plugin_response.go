@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AttachApiToPluginResponse Response Object
 type AttachApiToPluginResponse struct {
 
 	// 绑定插件信息列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 安全组信息
+// SecurityGroupsResult 安全组信息
 type SecurityGroupsResult struct {
 
 	// 安全组ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务详情
+// JobDetail 任务详情
 type JobDetail struct {
 
 	// 元数据路径。

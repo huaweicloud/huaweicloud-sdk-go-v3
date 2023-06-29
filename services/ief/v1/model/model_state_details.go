@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IEC/IES节点状态详情
+// StateDetails IEC/IES节点状态详情
 type StateDetails struct {
 
 	// IEC/IES节点注册状态

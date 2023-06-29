@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBandwidthPackagesResponse Response Object
 type ListBandwidthPackagesResponse struct {
 
 	// 带宽包实例列表。

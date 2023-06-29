@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowResponse Response Object
 type ListWorkflowResponse struct {
 
 	// 所查询类型的流程总数

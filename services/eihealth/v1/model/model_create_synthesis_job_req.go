@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子合成路径规划作业请求体
+// CreateSynthesisJobReq 分子合成路径规划作业请求体
 type CreateSynthesisJobReq struct {
 	BasicInfo *CreateDrugJobBasicInfo `json:"basic_info"`
 

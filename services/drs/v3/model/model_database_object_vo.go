@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库对象信息体
+// DatabaseObjectVo 数据库对象信息体
 type DatabaseObjectVo struct {
 
 	// 数据库对象和数据库表名称，例如格式为hec-*-*-drs_test1。

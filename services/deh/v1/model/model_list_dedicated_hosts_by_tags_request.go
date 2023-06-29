@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDedicatedHostsByTagsRequest Request Object
 type ListDedicatedHostsByTagsRequest struct {
 	Body *ReqListDehByTags `json:"body,omitempty"`
 }

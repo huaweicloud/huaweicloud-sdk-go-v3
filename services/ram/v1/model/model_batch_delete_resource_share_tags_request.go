@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteResourceShareTagsRequest Request Object
 type BatchDeleteResourceShareTagsRequest struct {
 
 	// 资源共享实例的ID。

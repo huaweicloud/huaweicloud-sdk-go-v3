@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckNameResponse Response Object
 type CheckNameResponse struct {
 
 	// 返回值

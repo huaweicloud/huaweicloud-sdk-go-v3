@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业配置请求体
+// UpdateJobConfigReq 作业配置请求体
 type UpdateJobConfigReq struct {
 
 	// 作业保存条数

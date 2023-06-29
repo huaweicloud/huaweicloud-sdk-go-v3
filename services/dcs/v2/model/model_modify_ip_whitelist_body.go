@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置IP白名单结构体
+// ModifyIpWhitelistBody 设置IP白名单结构体
 type ModifyIpWhitelistBody struct {
 
 	// 实例ID

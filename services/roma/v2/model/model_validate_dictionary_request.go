@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateDictionaryRequest Request Object
 type ValidateDictionaryRequest struct {
 
 	// 实例ID

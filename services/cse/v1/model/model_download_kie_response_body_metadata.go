@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导出文件的描述信息
+// DownloadKieResponseBodyMetadata 导出文件的描述信息
 type DownloadKieResponseBodyMetadata struct {
 
 	// 版本号

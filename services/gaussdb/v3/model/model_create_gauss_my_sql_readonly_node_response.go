@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGaussMySqlReadonlyNodeResponse Response Object
 type CreateGaussMySqlReadonlyNodeResponse struct {
 
 	// 实例ID。

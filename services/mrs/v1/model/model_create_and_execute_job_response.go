@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAndExecuteJobResponse Response Object
 type CreateAndExecuteJobResponse struct {
 
 	// 作业执行对象是否由作业模板生成。

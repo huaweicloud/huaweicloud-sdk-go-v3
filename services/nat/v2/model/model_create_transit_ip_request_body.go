@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建中转IP的请求体。
+// CreateTransitIpRequestBody 创建中转IP的请求体。
 type CreateTransitIpRequestBody struct {
 	TransitIp *CreatTransitIpOption `json:"transit_ip"`
 }

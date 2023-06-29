@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVolumeRequest Request Object
 type ShowVolumeRequest struct {
 
 	// 磁盘ID。

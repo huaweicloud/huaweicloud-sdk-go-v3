@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// API数据源配置内容
+// ApiContentRsp API数据源配置内容
 type ApiContentRsp struct {
 
 	// 数据源名称

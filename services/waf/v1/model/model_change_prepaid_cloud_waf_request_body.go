@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更包周期云模式waf规格请求体
+// ChangePrepaidCloudWafRequestBody 变更包周期云模式waf规格请求体
 type ChangePrepaidCloudWafRequestBody struct {
 
 	// 项目id

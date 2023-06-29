@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取测试事件响应返回体。
+// ListEventsResult 获取测试事件响应返回体。
 type ListEventsResult struct {
 
 	// 测试事件ID。

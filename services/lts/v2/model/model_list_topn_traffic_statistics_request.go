@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTopnTrafficStatisticsRequest Request Object
 type ListTopnTrafficStatisticsRequest struct {
 	Body *TopnRequstBody `json:"body,omitempty"`
 }

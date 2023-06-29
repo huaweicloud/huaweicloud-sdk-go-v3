@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddPipelineJobResponse Response Object
 type AddPipelineJobResponse struct {
 
 	// 管道ID

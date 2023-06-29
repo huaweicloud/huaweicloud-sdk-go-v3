@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资产属性历史数据查询
+// RawRequest 资产属性历史数据查询
 type RawRequest struct {
 	TimeSpan *TimeSpanDt `json:"time_span,omitempty"`
 

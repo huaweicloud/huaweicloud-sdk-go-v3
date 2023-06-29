@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListParamGroupTemplatesResponse Response Object
 type ListParamGroupTemplatesResponse struct {
 
 	// 参数模板数量。

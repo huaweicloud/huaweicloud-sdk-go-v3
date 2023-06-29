@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入网上数据请求体
+// ImportNetworkDataReq 导入网上数据请求体
 type ImportNetworkDataReq struct {
 
 	// 所在文件夹

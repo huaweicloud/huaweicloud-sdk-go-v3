@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 日志接入偏移时间
+// AccessConfigTimeOffsetCreate 日志接入偏移时间
 type AccessConfigTimeOffsetCreate struct {
 
 	// 偏移时间。 当\"unit\"选择\"day\"时，范围为1~7天。 当\"unit\"选择\"hour\"时，范围为1~168小时。 当\"unit\"选择\"sec\"时，范围为1~604800秒。
@@ -62,13 +62,18 @@ func (c AccessConfigTimeOffsetCreateUnit) MarshalJSON() ([]byte, error) {
 
 func (c *AccessConfigTimeOffsetCreateUnit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

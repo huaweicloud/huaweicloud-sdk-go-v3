@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 秘钥对对象
+// SimpleKeypair 秘钥对对象
 type SimpleKeypair struct {
 
 	// 密钥名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务执行详情
+// TaskBeanFacade 任务执行详情
 type TaskBeanFacade struct {
 
 	// 任务ID

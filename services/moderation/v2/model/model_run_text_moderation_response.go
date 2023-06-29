@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunTextModerationResponse Response Object
 type RunTextModerationResponse struct {
 	Result         *TextDetectionResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                          `json:"-"`

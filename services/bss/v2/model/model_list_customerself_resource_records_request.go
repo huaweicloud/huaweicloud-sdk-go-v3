@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCustomerselfResourceRecordsRequest Request Object
 type ListCustomerselfResourceRecordsRequest struct {
 
 	// 语言：中文：zh_CN 英文：en_US。缺省为zh_CN

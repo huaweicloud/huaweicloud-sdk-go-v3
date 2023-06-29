@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAccessoryAccessUrlsResponse Response Object
 type ListAccessoryAccessUrlsResponse struct {
 
 	// 附件链接

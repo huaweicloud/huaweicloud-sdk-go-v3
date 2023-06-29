@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页信息。
+// Page 分页信息。
 type Page struct {
 
 	// 偏移量，表示从此偏移量开始查询，offset大于等于0。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAppVersionResponse Response Object
 type CreateAppVersionResponse struct {
 
 	// 应用模板ID

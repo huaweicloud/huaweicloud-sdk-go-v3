@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateElbResponse Response Object
 type AssociateElbResponse struct {
 
 	// 任务ID

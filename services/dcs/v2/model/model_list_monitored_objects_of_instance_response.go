@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMonitoredObjectsOfInstanceResponse Response Object
 type ListMonitoredObjectsOfInstanceResponse struct {
 
 	// 当前查询维度路由。如果是主维度，则数组中是自身ID。

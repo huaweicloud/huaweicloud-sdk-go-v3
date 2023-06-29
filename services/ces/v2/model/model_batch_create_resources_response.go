@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateResourcesResponse Response Object
 type BatchCreateResourcesResponse struct {
 
 	// 成功添加的资源数目

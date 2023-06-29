@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteFunctionAsyncInvokeConfigResponse Response Object
 type DeleteFunctionAsyncInvokeConfigResponse struct {
 	HttpStatusCode int `json:"-"`
 }

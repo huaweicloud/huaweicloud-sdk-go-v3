@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建用户信息
+// ServerAppInfoCreatedUser 创建用户信息
 type ServerAppInfoCreatedUser struct {
 
 	// 创建应用的用户ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除结构化配置参数
+// DeleteStructTemplateReqBody 删除结构化配置参数
 type DeleteStructTemplateReqBody struct {
 
 	// 结构化规则ID

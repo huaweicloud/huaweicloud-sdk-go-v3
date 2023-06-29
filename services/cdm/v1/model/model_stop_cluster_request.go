@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopClusterRequest Request Object
 type StopClusterRequest struct {
 
 	// 集群ID

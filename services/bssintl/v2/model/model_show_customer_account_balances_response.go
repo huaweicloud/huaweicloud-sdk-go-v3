@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCustomerAccountBalancesResponse Response Object
 type ShowCustomerAccountBalancesResponse struct {
 
 	// 账户余额列表。 具体请参见表1。

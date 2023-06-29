@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据类对象信息
+// DataClassRefPojo 数据类对象信息
 type DataClassRefPojo struct {
 
 	// 唯一标识ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// OperateSubscriptionResponse Response Object
 type OperateSubscriptionResponse struct {
 
 	// 操作失败的订阅个数

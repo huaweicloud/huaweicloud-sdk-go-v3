@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBcsEventsResponse Response Object
 type ListBcsEventsResponse struct {
 
 	// 指标对象列表。

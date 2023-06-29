@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateGraphRequest Request Object
 type CreateGraphRequest struct {
 	Body *CreateGraphReq `json:"body,omitempty"`
 }

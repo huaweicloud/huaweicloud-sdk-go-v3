@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 具体构建参数
+// RunPipelineDtoParamsBuildParams 具体构建参数
 type RunPipelineDtoParamsBuildParams struct {
 
 	// 分支还是tag触发

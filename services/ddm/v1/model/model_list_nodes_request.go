@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNodesRequest Request Object
 type ListNodesRequest struct {
 
 	// DDM实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转发规则匹配策略
+// CreateL7PolicyRuleOption 转发规则匹配策略
 type CreateL7PolicyRuleOption struct {
 
 	// 转发规则的管理状态；取值范围： true/false，默认为true。  不支持该字段，请勿使用。

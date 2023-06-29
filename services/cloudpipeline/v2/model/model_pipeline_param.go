@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线参数
+// PipelineParam 流水线参数
 type PipelineParam struct {
 
 	// 流水线参数名字

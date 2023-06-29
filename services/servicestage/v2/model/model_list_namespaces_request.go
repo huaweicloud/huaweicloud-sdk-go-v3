@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNamespacesRequest Request Object
 type ListNamespacesRequest struct {
 
 	// 授权名称。

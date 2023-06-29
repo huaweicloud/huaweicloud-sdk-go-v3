@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAttachmentRequest Request Object
 type UpdateAttachmentRequest struct {
 
 	// 企业路由器实例ID

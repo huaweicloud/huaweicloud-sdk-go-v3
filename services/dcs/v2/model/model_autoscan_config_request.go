@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置自动分析配置返回体
+// AutoscanConfigRequest 设置自动分析配置返回体
 type AutoscanConfigRequest struct {
 
 	// 是否开启自动分析

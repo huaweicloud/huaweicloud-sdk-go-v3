@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建包周期的弹性公网IP
+// CreatePrePaidPublicipRequestBody 创建包周期的弹性公网IP
 type CreatePrePaidPublicipRequestBody struct {
 	Publicip *CreatePrePaidPublicipOption `json:"publicip"`
 

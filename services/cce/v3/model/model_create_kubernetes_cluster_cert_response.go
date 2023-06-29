@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateKubernetesClusterCertResponse Response Object
 type CreateKubernetesClusterCertResponse struct {
 
 	// API类型，固定值“Config”，该值不可修改。

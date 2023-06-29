@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRulesRequest Request Object
 type ShowRulesRequest struct {
 
 	// 页码

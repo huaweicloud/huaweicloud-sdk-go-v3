@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckRepositoryDuplicateNameRequest Request Object
 type CheckRepositoryDuplicateNameRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us

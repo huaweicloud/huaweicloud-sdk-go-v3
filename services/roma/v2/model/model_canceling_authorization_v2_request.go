@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelingAuthorizationV2Request Request Object
 type CancelingAuthorizationV2Request struct {
 
 	// 实例ID

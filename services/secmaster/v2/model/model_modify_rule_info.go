@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of rule
+// ModifyRuleInfo Information of rule
 type ModifyRuleInfo struct {
 	Rule *ConditionInfo `json:"rule,omitempty"`
 }

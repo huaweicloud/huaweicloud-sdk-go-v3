@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新网络ACL参数。
+// UpdateFirewallOption 更新网络ACL参数。
 type UpdateFirewallOption struct {
 
 	// 网络ACL名称。更新时name不能为空。  中文字符、字母、数字、中划线和下划线组成，长度为1~64个字符

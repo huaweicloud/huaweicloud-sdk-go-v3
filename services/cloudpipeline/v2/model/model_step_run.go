@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 步骤运行信息
+// StepRun 步骤运行信息
 type StepRun struct {
 
 	// 步骤名称

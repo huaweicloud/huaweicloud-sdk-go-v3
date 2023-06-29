@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// HandRequest Request Object
 type HandRequest struct {
 
 	// 会议ID。

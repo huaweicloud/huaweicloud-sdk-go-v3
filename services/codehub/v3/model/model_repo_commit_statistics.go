@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 仓库统计信息
+// RepoCommitStatistics 仓库统计信息
 type RepoCommitStatistics struct {
 
 	// 仓库总提交次数

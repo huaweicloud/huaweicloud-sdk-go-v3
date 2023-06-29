@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateWebSocketTokenResponse Response Object
 type CreateWebSocketTokenResponse struct {
 
 	// WebSocket建链Token(有效期1分钟，且一次有效)。

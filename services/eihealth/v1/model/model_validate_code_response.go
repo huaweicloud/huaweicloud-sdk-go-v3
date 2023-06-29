@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateCodeResponse Response Object
 type ValidateCodeResponse struct {
 
 	// 预验证ticket

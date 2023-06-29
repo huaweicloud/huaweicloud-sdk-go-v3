@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpgradeGraphReq This is a auto create Body Object
 type UpgradeGraphReq struct {
 
 	// 升级到的版本，必须大于当前图版本。

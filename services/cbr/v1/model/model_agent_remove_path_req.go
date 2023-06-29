@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AgentRemovePathReq
 type AgentRemovePathReq struct {
 
 	// 移除备份路径详情

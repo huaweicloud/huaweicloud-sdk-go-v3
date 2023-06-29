@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLakeFormationInstanceRequest Request Object
 type CreateLakeFormationInstanceRequest struct {
 	Body *CreateInstanceRequestBody `json:"body,omitempty"`
 }

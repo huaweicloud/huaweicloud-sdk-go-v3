@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopyBackupResponse Response Object
 type CopyBackupResponse struct {
 	Replication    *BackupReplicateRespBody `json:"replication,omitempty"`
 	HttpStatusCode int                      `json:"-"`

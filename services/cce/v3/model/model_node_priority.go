@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点优先级批量配置
+// NodePriority 节点优先级批量配置
 type NodePriority struct {
 	NodeSelector *NodeSelector `json:"nodeSelector"`
 

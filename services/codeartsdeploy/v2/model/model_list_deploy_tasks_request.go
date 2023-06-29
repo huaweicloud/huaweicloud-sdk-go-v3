@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDeployTasksRequest Request Object
 type ListDeployTasksRequest struct {
 
 	// 项目ID

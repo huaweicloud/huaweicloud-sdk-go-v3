@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPolicyResponse Response Object
 type ListPolicyResponse struct {
 
 	// 防护策略的数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteProtectedInstanceNicResponse Response Object
 type DeleteProtectedInstanceNicResponse struct {
 
 	// 成功返回jobId信息

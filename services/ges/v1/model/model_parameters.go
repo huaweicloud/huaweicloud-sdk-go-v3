@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Parameters
 type Parameters struct {
 
 	// 元数据文件OBS路径，只支持文件。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePortRequest Request Object
 type UpdatePortRequest struct {
 
 	// 端口ID

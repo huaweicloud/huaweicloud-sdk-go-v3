@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// EventDataInfo
 type EventDataInfo struct {
 
 	// 事件类型，例如instance_host_info。

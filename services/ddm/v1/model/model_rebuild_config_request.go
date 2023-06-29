@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RebuildConfigRequest Request Object
 type RebuildConfigRequest struct {
 
 	// DDM实例ID

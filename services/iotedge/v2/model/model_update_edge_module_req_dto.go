@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新边缘模块请求结构体
+// UpdateEdgeModuleReqDto 更新边缘模块请求结构体
 type UpdateEdgeModuleReqDto struct {
 
 	// 边缘应用版本

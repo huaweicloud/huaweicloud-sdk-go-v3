@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIndirectPartnersResponse Response Object
 type ListIndirectPartnersResponse struct {
 
 	// 符合条件的记录个数，只有成功的时候出现。

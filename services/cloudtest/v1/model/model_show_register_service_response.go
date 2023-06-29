@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRegisterServiceResponse Response Object
 type ShowRegisterServiceResponse struct {
 
 	// 注册服务信息

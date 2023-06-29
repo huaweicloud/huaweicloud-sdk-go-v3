@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecutePostCreateImagesRequest Request Object
 type ExecutePostCreateImagesRequest struct {
 	Body *PostImagesReq `json:"body,omitempty" type:"multipart"`
 }

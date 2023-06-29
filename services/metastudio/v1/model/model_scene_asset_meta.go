@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 场景元数据。
+// SceneAssetMeta 场景元数据。
 type SceneAssetMeta struct {
 
 	// 可操作组件列表（如屏幕，灯光，摄像机）。

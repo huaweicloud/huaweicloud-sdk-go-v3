@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 在Edge实例中要配置转发规则推送数据的资源空间和产品列表
+// EdgeContentRuleReq 在Edge实例中要配置转发规则推送数据的资源空间和产品列表
 type EdgeContentRuleReq struct {
 
 	// Edge中的资源空间Id

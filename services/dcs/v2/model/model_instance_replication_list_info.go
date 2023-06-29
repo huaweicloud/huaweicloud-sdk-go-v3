@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 副本列表
+// InstanceReplicationListInfo 副本列表
 type InstanceReplicationListInfo struct {
 
 	// 副本角色，取值有： - master：表示主节点。 - slave：表示从节点。
@@ -76,13 +76,18 @@ func (c InstanceReplicationListInfoStatus) MarshalJSON() ([]byte, error) {
 
 func (c *InstanceReplicationListInfoStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

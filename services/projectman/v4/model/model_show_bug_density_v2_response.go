@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBugDensityV2Response Response Object
 type ShowBugDensityV2Response struct {
 
 	// 指标分子数值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateResWorkspaceRequest Request Object
 type CreateResWorkspaceRequest struct {
 	Body *CreateResWorkspaceRequestBody `json:"body,omitempty"`
 }

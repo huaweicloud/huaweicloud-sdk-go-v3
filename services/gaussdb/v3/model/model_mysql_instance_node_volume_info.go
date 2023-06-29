@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储盘信息。
+// MysqlInstanceNodeVolumeInfo 存储盘信息。
 type MysqlInstanceNodeVolumeInfo struct {
 
 	// 磁盘类型。

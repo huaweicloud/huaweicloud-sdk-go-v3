@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议录制文件下载链接信息。
+// RecordDownloadInfoBo 会议录制文件下载链接信息。
 type RecordDownloadInfoBo struct {
 
 	// 会议UUID。

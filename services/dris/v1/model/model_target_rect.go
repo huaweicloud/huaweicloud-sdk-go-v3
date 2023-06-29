@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目标检测框信息。
+// TargetRect 目标检测框信息。
 type TargetRect struct {
 
 	// **参数说明**：摄像头编码。

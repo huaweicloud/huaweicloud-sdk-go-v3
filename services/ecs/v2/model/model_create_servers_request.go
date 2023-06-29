@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateServersRequest Request Object
 type CreateServersRequest struct {
 
 	// 保证客户端请求幂等性的标识

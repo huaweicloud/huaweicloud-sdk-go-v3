@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEdgeCloudResponse Response Object
 type ShowEdgeCloudResponse struct {
 
 	// 边缘业务ID。

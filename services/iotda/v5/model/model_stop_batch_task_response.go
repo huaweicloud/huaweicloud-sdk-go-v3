@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopBatchTaskResponse Response Object
 type StopBatchTaskResponse struct {
 
 	// 批量操作目标结果集合

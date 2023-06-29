@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowHealthCheckResponse Response Object
 type ShowHealthCheckResponse struct {
 	HealthCheck *HealthCheckDetail `json:"health_check,omitempty"`
 

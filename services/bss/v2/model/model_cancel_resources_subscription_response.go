@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelResourcesSubscriptionResponse Response Object
 type CancelResourcesSubscriptionResponse struct {
 
 	// 客户退订订单ID的列表信息。

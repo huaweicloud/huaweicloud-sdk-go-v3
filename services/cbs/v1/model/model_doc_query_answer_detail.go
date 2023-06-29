@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DocQueryAnswerDetail
 type DocQueryAnswerDetail struct {
 
 	// 答案。

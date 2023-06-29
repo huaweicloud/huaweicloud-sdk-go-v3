@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAvailableZoneInfoResponse Response Object
 type ShowAvailableZoneInfoResponse struct {
 	AvailabilityZone *AvailabilityZones `json:"availability_zone,omitempty"`
 	HttpStatusCode   int                `json:"-"`

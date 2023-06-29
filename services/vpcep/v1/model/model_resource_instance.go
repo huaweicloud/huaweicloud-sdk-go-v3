@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源实例详情
+// ResourceInstance 资源实例详情
 type ResourceInstance struct {
 
 	// 资源ID，Endpoint Service ID或Endpoint ID。

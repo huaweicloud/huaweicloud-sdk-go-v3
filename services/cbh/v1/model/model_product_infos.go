@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云堡垒机产品信息。
+// ProductInfos 云堡垒机产品信息。
 type ProductInfos struct {
 
 	// 产品标识，通过订购询价接口获得。

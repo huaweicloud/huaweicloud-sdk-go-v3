@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// InsurancePolicyResult
 type InsurancePolicyResult struct {
 
 	// 发卡行。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计费类型信息，支持包年包月和按需计费，默认为按需计费。
+// ChargeInfoOption 计费类型信息，支持包年包月和按需计费，默认为按需计费。
 type ChargeInfoOption struct {
 
 	// 计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。

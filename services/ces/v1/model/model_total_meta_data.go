@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询结果元数据统计个数。
+// TotalMetaData 查询结果元数据统计个数。
 type TotalMetaData struct {
 
 	// 总条数。

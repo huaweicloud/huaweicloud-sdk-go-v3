@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSearchPictureResponse Response Object
 type RunSearchPictureResponse struct {
 
 	// 搜索结果总数。

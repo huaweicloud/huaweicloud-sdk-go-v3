@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchStatisticConferenceInfoResponse Response Object
 type SearchStatisticConferenceInfoResponse struct {
 
 	// 总记录数。

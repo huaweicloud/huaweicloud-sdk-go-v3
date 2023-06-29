@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PublishLiveDataApiV2Response Response Object
 type PublishLiveDataApiV2Response struct {
 
 	// 部署的编号

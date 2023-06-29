@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelReadonlyClusterResponse Response Object
 type CancelReadonlyClusterResponse struct {
 	HttpStatusCode int `json:"-"`
 }

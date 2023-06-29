@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateResourceGroupResponse Response Object
 type CreateResourceGroupResponse struct {
 
 	// 创建的资源分组ID，如：rg1606377637506DmVOENVyL。

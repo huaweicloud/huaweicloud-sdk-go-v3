@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建Tag请求体
+// CreateTagRequestBody 创建Tag请求体
 type CreateTagRequestBody struct {
 	Tag *Tag `json:"tag,omitempty"`
 }

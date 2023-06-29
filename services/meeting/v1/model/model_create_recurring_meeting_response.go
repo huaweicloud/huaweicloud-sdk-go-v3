@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRecurringMeetingResponse Response Object
 type CreateRecurringMeetingResponse struct {
 
 	// 会议信息列表。

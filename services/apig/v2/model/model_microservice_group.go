@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入微服务的API分组信息
+// MicroserviceGroup 导入微服务的API分组信息
 type MicroserviceGroup struct {
 
 	// 指定已有的分组，为空时创建新的分组

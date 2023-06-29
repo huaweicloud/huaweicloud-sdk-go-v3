@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 历史记录
+// IssueRecordV4 历史记录
 type IssueRecordV4 struct {
 
 	// 操作记录id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MigrateCompositeHostsRequest Request Object
 type MigrateCompositeHostsRequest struct {
 
 	// 当前企业项目ID

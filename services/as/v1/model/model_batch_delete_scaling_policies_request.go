@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteScalingPoliciesRequest Request Object
 type BatchDeleteScalingPoliciesRequest struct {
 	Body *BatchDeleteScalingPoliciesOption `json:"body,omitempty"`
 }

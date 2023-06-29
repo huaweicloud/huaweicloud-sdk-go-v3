@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// LanguageDetectionReq This is a auto create Body Object
 type LanguageDetectionReq struct {
 
 	// 需要识别语种的文本。仅支持utf-8编码，长度不超过2000字符。

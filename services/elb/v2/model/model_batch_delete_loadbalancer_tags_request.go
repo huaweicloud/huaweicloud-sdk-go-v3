@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteLoadbalancerTagsRequest Request Object
 type BatchDeleteLoadbalancerTagsRequest struct {
 
 	// 负载均衡器ID。

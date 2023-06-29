@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadAttachmentsResponse Response Object
 type UploadAttachmentsResponse struct {
 
 	// 关联id

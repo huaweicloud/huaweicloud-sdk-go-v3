@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClusterScaleInNumbersRequest Request Object
 type ListClusterScaleInNumbersRequest struct {
 
 	// 集群ID

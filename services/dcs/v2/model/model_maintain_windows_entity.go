@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 维护时间窗结构体
+// MaintainWindowsEntity 维护时间窗结构体
 type MaintainWindowsEntity struct {
 
 	// 序号。

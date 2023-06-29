@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteGaussMySqlConfigurationResponse Response Object
 type DeleteGaussMySqlConfigurationResponse struct {
 
 	// 参数模板ID。

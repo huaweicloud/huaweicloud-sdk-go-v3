@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTableColumnStatisticsResponse Response Object
 type ListTableColumnStatisticsResponse struct {
 	Body           *[]ColumnStatisticsObj `json:"body,omitempty"`
 	HttpStatusCode int                    `json:"-"`

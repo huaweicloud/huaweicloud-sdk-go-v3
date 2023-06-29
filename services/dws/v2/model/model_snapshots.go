@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照对象列表
+// Snapshots 快照对象列表
 type Snapshots struct {
 
 	// 快照ID。

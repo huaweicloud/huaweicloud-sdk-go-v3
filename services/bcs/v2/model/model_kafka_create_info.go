@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// kafka实例创建信息
+// KafkaCreateInfo kafka实例创建信息
 type KafkaCreateInfo struct {
 
 	// kafka实例规格，可选：mini：基准带宽100MB/s，small：基准带宽300MB/s，middle：基准带宽600MB/s，high：基准带宽1200MB/s

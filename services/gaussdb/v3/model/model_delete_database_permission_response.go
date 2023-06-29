@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDatabasePermissionResponse Response Object
 type DeleteDatabasePermissionResponse struct {
 
 	// 删除数据库用户的数据库权限任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// proxy实例规格变更请求体
+// TaurusProxyScaleRequest proxy实例规格变更请求体
 type TaurusProxyScaleRequest struct {
 
 	// 需要变更的新规格ID。

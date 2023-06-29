@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 凭据版本被标记的状态。
+// VersionMetadata 凭据版本被标记的状态。
 type VersionMetadata struct {
 
 	// 凭据的版本号标识符，凭据对象下唯一。

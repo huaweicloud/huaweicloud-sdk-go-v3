@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 命令参数body
+// CommandBody 命令参数body
 type CommandBody struct {
 
 	// 命令名称，分为：START、STOP、DELETE、SYNC、UPLOAD_LOG、RSET_LOG_ACL

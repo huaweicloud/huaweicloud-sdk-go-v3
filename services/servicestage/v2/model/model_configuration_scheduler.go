@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调度策略
+// ConfigurationScheduler 调度策略
 type ConfigurationScheduler struct {
 	Affinity *SchedulerAffinity `json:"affinity,omitempty"`
 

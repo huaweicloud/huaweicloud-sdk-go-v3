@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchStopJobsResponse Response Object
 type BatchStopJobsResponse struct {
 
 	// 批量暂停返回列表

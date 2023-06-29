@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAimSendTasksRequest Request Object
 type ListAimSendTasksRequest struct {
 
 	// 智能信息发送任务ID。

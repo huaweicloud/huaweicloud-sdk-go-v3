@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RuleServiceDto
+// RuleServiceDto RuleServiceDto
 type RuleServiceDto struct {
 
 	// 服务输入类型，0为手动输入类型，1为自动输入类型

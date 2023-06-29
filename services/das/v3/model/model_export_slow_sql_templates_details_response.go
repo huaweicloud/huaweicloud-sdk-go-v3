@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportSlowSqlTemplatesDetailsResponse Response Object
 type ExportSlowSqlTemplatesDetailsResponse struct {
 
 	// 慢日志模板数据列表。

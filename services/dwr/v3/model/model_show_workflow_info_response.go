@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWorkflowInfoResponse Response Object
 type ShowWorkflowInfoResponse struct {
 
 	// 工作流的名称。

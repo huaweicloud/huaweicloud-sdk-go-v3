@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCustomTemplateRequest Request Object
 type CreateCustomTemplateRequest struct {
 	Body *CreateCustomTemplateBody `json:"body,omitempty"`
 }

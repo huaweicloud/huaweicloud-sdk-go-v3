@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTimeLineTrafficStatisticsRequest Request Object
 type ListTimeLineTrafficStatisticsRequest struct {
 
 	// 时区

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除裸金属服务器或解绑网卡时是否删除该网卡
+// InterfaceAttachmentsReq 删除裸金属服务器或解绑网卡时是否删除该网卡
 type InterfaceAttachmentsReq struct {
 	DeleteOnTermination bool `json:"delete_on_termination"`
 }

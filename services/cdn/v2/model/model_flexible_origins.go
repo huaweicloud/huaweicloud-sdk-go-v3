@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 灵活回源信息,最多20条。
+// FlexibleOrigins 灵活回源信息,最多20条。
 type FlexibleOrigins struct {
 
 	// URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。

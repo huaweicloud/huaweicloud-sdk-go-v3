@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIpGroupsResponse Response Object
 type ListIpGroupsResponse struct {
 
 	// IP地址组列表返回对象。

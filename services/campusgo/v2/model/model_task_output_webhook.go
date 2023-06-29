@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出为webhook类型时的配置信息
+// TaskOutputWebhook 输出为webhook类型时的配置信息
 type TaskOutputWebhook struct {
 
 	// 结果回调地址

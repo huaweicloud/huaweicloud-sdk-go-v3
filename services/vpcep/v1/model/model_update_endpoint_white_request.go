@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEndpointWhiteRequest Request Object
 type UpdateEndpointWhiteRequest struct {
 
 	// 终端节点的ID。

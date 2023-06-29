@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteKeywordsAlarmRuleRequest Request Object
 type DeleteKeywordsAlarmRuleRequest struct {
 
 	// 关键词告警规则id

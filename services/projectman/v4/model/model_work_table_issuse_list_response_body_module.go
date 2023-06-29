@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模块信息
+// WorkTableIssuseListResponseBodyModule 模块信息
 type WorkTableIssuseListResponseBodyModule struct {
 
 	// 模块id

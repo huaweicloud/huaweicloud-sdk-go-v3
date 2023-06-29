@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PublicIp
 type PublicIp struct {
 
 	// 弹性IP绑定类型，取值如下。 - auto_assign：自动绑定。 - bind_existing：使用已有。

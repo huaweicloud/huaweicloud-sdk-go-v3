@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRocketInstanceTopicsRequest Request Object
 type ListRocketInstanceTopicsRequest struct {
 
 	// 实例ID。

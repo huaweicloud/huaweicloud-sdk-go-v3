@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 安全组数据结构
+// SecurityGroupsParams 安全组数据结构
 type SecurityGroupsParams struct {
 
 	// 安全组的ID。

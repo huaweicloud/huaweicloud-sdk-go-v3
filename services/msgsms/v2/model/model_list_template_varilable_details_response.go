@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTemplateVarilableDetailsResponse Response Object
 type ListTemplateVarilableDetailsResponse struct {
 
 	// 查询结果

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAimPersonalTemplateResponse Response Object
 type CreateAimPersonalTemplateResponse struct {
 
 	// 状态码。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询模板返回体。
+// AimTemplateReport 查询模板返回体。
 type AimTemplateReport struct {
 
 	// 智能信息模板ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建边缘私有镜像参数
+// CreateImageRequestBody 创建边缘私有镜像参数
 type CreateImageRequestBody struct {
 
 	// 边缘私有镜像名称。

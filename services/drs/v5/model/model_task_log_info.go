@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志查询结果信息体。
+// TaskLogInfo 日志查询结果信息体。
 type TaskLogInfo struct {
 
 	// 日志级别。

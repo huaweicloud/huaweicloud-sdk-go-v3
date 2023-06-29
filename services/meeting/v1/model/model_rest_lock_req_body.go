@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 锁定会议请求。
+// RestLockReqBody 锁定会议请求。
 type RestLockReqBody struct {
 
 	// - 0: 解锁 - 1: 锁定

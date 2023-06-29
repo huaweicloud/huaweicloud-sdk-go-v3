@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建误报屏蔽规则请求体
+// CreateIgnoreRuleRequestBody 创建误报屏蔽规则请求体
 type CreateIgnoreRuleRequestBody struct {
 
 	// 防护域名或防护网站，数组长度为0时，代表规则对全部域名或防护网站生效

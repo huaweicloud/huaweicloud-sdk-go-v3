@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInnodbLocksResponse Response Object
 type ListInnodbLocksResponse struct {
 
 	// 当前持有或等待锁的事务信息

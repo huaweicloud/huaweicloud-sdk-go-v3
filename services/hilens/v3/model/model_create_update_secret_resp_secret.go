@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥
+// CreateUpdateSecretRespSecret 密钥
 type CreateUpdateSecretRespSecret struct {
 
 	// 密钥ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddBucketsRequest Request Object
 type AddBucketsRequest struct {
 
 	// 资产类型

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 负载均衡器状态树对象
+// StatusResp 负载均衡器状态树对象
 type StatusResp struct {
 	Loadbalancer *LoadbalancerInStatusResp `json:"loadbalancer"`
 }

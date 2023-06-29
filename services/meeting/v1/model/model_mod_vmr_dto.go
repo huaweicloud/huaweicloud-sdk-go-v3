@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户修改云会议室或者个人会议ID信息。
+// ModVmrDto 用户修改云会议室或者个人会议ID信息。
 type ModVmrDto struct {
 
 	// 云会议室名称。

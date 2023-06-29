@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 绑定的域名信息
+// BindHost 绑定的域名信息
 type BindHost struct {
 
 	// 域名ID

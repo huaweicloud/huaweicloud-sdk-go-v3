@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIssuedCouponQuotasRequest Request Object
 type ListIssuedCouponQuotasRequest struct {
 
 	// 云经销商的代金券额度ID。获取方法请参见查询优惠券额度。此参数不携带或携带值为空时，不作为筛选条件。

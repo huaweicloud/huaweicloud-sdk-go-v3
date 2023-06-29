@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAppAclResponse Response Object
 type UpdateAppAclResponse struct {
 
 	// APP编号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目标实例根节点库信息体
+// DefaultRootDb 目标实例根节点库信息体
 type DefaultRootDb struct {
 
 	// 库名。

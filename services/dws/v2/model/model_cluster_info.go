@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群列表对象。
+// ClusterInfo 集群列表对象。
 type ClusterInfo struct {
 
 	// 集群ID。

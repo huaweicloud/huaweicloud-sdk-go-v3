@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出为obs类型时的配置信息
+// TaskOutputObs 输出为obs类型时的配置信息
 type TaskOutputObs struct {
 
 	// OBS桶名，选用obs类型输出时必填。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadFromObsRequest Request Object
 type UploadFromObsRequest struct {
 	Body *UploadFromObsReq `json:"body,omitempty"`
 }

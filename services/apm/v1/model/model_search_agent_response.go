@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchAgentResponse Response Object
 type SearchAgentResponse struct {
 
 	// 总页数。

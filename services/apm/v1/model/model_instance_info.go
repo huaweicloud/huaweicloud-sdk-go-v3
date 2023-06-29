@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例信息。
+// InstanceInfo 实例信息。
 type InstanceInfo struct {
 
 	// 实例id。

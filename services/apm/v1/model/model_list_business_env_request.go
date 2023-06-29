@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBusinessEnvRequest Request Object
 type ListBusinessEnvRequest struct {
 
 	// 应用id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBrokersResponse Response Object
 type ListBrokersResponse struct {
 
 	// 代理列表。

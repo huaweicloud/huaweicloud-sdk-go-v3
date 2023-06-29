@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAccessoryLimitsResponse Response Object
 type ShowAccessoryLimitsResponse struct {
 	AccessoryLimit *AccessoryLimitVo `json:"accessory_limit,omitempty"`
 	HttpStatusCode int               `json:"-"`

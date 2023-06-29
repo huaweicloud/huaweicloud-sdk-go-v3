@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PptReadConfig
 type PptReadConfig struct {
 
 	// 播报内容，长度为3~2500

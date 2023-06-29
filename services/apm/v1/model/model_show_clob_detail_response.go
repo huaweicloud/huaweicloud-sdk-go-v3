@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowClobDetailResponse Response Object
 type ShowClobDetailResponse struct {
 
 	// clob详情。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatefavoriteResponse Response Object
 type CreatefavoriteResponse struct {
 
 	// 创建时间

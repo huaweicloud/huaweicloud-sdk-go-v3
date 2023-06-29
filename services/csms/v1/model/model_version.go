@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 凭据版本。
+// Version 凭据版本。
 type Version struct {
 	VersionMetadata *VersionMetadata `json:"version_metadata,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群重启操作，定义哪些集群节点需要重启，请参见restart参数说明
+// CdmRestartClusterReqRestart 集群重启操作，定义哪些集群节点需要重启，请参见restart参数说明
 type CdmRestartClusterReqRestart struct {
 
 	// 重启时延，单位：秒

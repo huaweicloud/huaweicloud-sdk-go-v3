@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询流水线运行历史请求体
+// ListPipelineRunsQuery 查询流水线运行历史请求体
 type ListPipelineRunsQuery struct {
 
 	// 状态

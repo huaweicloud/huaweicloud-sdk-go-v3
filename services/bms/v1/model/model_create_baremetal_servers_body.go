@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建裸金属服务器接口请求结构体
+// CreateBaremetalServersBody 创建裸金属服务器接口请求结构体
 type CreateBaremetalServersBody struct {
 	Server *CreateServers `json:"server"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchSetSmnResponse Response Object
 type BatchSetSmnResponse struct {
 	Results *[]ImportSmnResp `json:"results,omitempty"`
 

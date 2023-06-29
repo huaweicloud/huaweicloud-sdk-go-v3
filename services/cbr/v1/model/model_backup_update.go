@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BackupUpdate
 type BackupUpdate struct {
 
 	// 备份名称

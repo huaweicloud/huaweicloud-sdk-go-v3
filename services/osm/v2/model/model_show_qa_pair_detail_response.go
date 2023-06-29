@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowQaPairDetailResponse Response Object
 type ShowQaPairDetailResponse struct {
 	Qapair *QaPair `json:"qapair,omitempty"`
 

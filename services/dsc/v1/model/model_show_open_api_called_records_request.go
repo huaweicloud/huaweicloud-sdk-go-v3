@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowOpenApiCalledRecordsRequest Request Object
 type ShowOpenApiCalledRecordsRequest struct {
 
 	// 分页大小，默认1000，最大2000。

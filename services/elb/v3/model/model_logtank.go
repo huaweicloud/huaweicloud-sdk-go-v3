@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云日志信息。
+// Logtank 云日志信息。
 type Logtank struct {
 
 	// 云日志ID。

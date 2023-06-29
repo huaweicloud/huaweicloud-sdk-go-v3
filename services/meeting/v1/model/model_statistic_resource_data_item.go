@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议已购资源使用数据的单个时间点数据。
+// StatisticResourceDataItem 会议已购资源使用数据的单个时间点数据。
 type StatisticResourceDataItem struct {
 
 	// 日期/月份。

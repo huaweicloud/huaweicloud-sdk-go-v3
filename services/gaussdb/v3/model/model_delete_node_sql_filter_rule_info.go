@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点级别的SQL限流规则。
+// DeleteNodeSqlFilterRuleInfo 节点级别的SQL限流规则。
 type DeleteNodeSqlFilterRuleInfo struct {
 
 	// 节点ID

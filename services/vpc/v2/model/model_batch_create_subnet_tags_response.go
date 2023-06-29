@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateSubnetTagsResponse Response Object
 type BatchCreateSubnetTagsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新云日志请求参数。
+// UpdateLogtankOption 更新云日志请求参数。
 type UpdateLogtankOption struct {
 
 	// 日志组别id，其他（非ELB）服务提供

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 归档信息
+// BackupDto 归档信息
 type BackupDto struct {
 
 	// id

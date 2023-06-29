@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VPCEP信息
+// VpcepInfo VPCEP信息
 type VpcepInfo struct {
 
 	// Kafka的Broker ip

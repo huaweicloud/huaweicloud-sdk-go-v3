@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHasVerifiedContactsResponse Response Object
 type ListHasVerifiedContactsResponse struct {
 
 	// 总数

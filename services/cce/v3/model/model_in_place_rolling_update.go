@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 原地升级配置
+// InPlaceRollingUpdate 原地升级配置
 type InPlaceRollingUpdate struct {
 
 	// 节点升级步长，取值范围为[1, 40]，建议取值20

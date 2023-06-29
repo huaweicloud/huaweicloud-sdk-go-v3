@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NodePublicIp
 type NodePublicIp struct {
 
 	// 已有的弹性IP的ID列表。数量不得大于待创建节点数 > 若已配置ids参数，则无需配置count和eip参数

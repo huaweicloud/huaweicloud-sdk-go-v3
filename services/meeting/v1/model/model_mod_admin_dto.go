@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待修改的管理员信息。
+// ModAdminDto 待修改的管理员信息。
 type ModAdminDto struct {
 
 	// 名称。

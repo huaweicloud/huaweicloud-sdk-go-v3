@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePersonalAuthResponse Response Object
 type CreatePersonalAuthResponse struct {
 	Authorization  *AuthorizationVi `json:"authorization,omitempty"`
 	HttpStatusCode int              `json:"-"`

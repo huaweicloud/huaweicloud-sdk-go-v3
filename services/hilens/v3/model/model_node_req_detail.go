@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备详细信息
+// NodeReqDetail 设备详细信息
 type NodeReqDetail struct {
 
 	// 批量注册数量。默认为单设备注册，即batch=1，如果大于1即为批量注册的最大数量。最大上限数量为100000

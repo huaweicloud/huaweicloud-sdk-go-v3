@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowJudgementDetailRequest Request Object
 type ShowJudgementDetailRequest struct {
 
 	// 判题任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTerminalsBindingDesktopsResponse Response Object
 type CreateTerminalsBindingDesktopsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

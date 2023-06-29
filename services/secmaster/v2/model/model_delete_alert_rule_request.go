@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAlertRuleRequest Request Object
 type DeleteAlertRuleRequest struct {
 
 	// workspace_id

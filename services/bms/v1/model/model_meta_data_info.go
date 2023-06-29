@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// metadata字段数据结构说明
+// MetaDataInfo metadata字段数据结构说明
 type MetaDataInfo struct {
 
 	// 用户ID（登录管理控制台，进入我的凭证，即可看到“用户ID”）。

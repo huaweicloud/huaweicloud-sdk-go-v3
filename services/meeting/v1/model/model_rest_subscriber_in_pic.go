@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子画面信息。
+// RestSubscriberInPic 子画面信息。
 type RestSubscriberInPic struct {
 
 	// 多画面中每个画面的编号。编号从1开始。默认值为“1”。

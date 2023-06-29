@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CleanNextflowCacheRequest Request Object
 type CleanNextflowCacheRequest struct {
 }
 

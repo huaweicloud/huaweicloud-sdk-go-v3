@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ListLoadbalancersByTagsRequestBody This is a auto create Body Object
 type ListLoadbalancersByTagsRequestBody struct {
 
 	// 分页起始。

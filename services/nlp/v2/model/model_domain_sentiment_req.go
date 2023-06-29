@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 请求消息
+// DomainSentimentReq 请求消息
 type DomainSentimentReq struct {
 
 	// 待分析文本。文本编码要求为utf-8。仅支持中文情感分析。 type为1（电商领域评论）时，限定200个字符以内，文本长度超过200个字符时，只检测前200个字符。 type为2（汽车领域评论）时，限定400个字符以内，文本长度超过400个字符时，只检测前400个字符。
@@ -60,13 +60,18 @@ func (c DomainSentimentReqType) MarshalJSON() ([]byte, error) {
 
 func (c *DomainSentimentReqType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPartitionNamesResponse Response Object
 type ListPartitionNamesResponse struct {
 
 	// 分区名字列表

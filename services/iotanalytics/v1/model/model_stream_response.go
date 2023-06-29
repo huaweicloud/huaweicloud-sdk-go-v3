@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流计算
+// StreamResponse 流计算
 type StreamResponse struct {
 
 	// 输入参数

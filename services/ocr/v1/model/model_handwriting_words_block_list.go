@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HandwritingWordsBlockList
 type HandwritingWordsBlockList struct {
 
 	// 文字块识别结果。

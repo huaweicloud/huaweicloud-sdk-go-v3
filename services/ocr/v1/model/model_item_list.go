@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ItemList
 type ItemList struct {
 
 	// 货物或应税劳务、服务名称。

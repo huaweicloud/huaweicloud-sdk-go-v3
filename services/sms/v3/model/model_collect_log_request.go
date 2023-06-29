@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CollectLogRequest Request Object
 type CollectLogRequest struct {
 
 	// 迁移任务ID

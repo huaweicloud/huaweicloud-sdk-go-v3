@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群详情信息对象。
+// ClusterDetail 集群详情信息对象。
 type ClusterDetail struct {
 	ActionProgress *ActionProgress `json:"action_progress,omitempty"`
 

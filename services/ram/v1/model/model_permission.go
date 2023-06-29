@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 有关RAM权限的信息。
+// Permission 有关RAM权限的信息。
 type Permission struct {
 
 	// 权限ID。

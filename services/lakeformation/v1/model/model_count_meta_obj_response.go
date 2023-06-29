@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountMetaObjResponse Response Object
 type CountMetaObjResponse struct {
 
 	// 总数量

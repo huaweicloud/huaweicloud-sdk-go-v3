@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteTemplateMaterialResponse Response Object
 type DeleteTemplateMaterialResponse struct {
 
 	// 响应状态。

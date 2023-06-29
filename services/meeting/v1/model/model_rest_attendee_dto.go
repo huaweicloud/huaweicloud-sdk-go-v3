@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 与会者信息。
+// RestAttendeeDto 与会者信息。
 type RestAttendeeDto struct {
 
 	// 与会者的用户UUID。

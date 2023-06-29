@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlInstanceInfoResponse Response Object
 type ShowGaussMySqlInstanceInfoResponse struct {
 	Instance       *MysqlInstanceInfoDetail `json:"instance,omitempty"`
 	HttpStatusCode int                      `json:"-"`

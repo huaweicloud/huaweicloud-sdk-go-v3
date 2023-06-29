@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群的节点信息
+// ClusterInstance 集群的节点信息
 type ClusterInstance struct {
 
 	// 节点的虚拟机ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTaskParameterRequest Request Object
 type ListTaskParameterRequest struct {
 
 	// 项目ID

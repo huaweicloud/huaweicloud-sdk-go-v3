@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateWhitelistRequest Request Object
 type CreateWhitelistRequest struct {
 	Body *CreateWhitelistRequestBody `json:"body,omitempty"`
 }

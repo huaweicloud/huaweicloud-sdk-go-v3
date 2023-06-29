@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePtrRecordResponse Response Object
 type UpdatePtrRecordResponse struct {
 
 	// PTR记录的ID，格式形如{region}:{floatingip_id}。

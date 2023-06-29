@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改速率的参数
+// SpeedLimit 修改速率的参数
 type SpeedLimit struct {
 
 	// 按时间段限速信息

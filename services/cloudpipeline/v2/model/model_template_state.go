@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子任务参数
+// TemplateState 子任务参数
 type TemplateState struct {
 
 	// 任务类型

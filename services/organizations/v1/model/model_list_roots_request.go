@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRootsRequest Request Object
 type ListRootsRequest struct {
 
 	// 页面中最大结果数量。

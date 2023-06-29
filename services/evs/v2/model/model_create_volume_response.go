@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVolumeResponse Response Object
 type CreateVolumeResponse struct {
 
 	// 任务ID，云硬盘为按需计费时返回该参数。 > 说明： >  > 如果需要查询job的状态，请参考：\"[查询job的状态](https://support.huaweicloud.com/api-evs/evs_04_0054.html)\"。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建技能订单请求体
+// CreateSkillOrderFrom 创建技能订单请求体
 type CreateSkillOrderFrom struct {
 
 	// 技能ID

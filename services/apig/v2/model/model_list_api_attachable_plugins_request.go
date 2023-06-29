@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApiAttachablePluginsRequest Request Object
 type ListApiAttachablePluginsRequest struct {
 
 	// 实例ID，在API网关控制台的“实例信息”中获取。

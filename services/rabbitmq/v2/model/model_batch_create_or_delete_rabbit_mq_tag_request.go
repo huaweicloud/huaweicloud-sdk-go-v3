@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateOrDeleteRabbitMqTagRequest Request Object
 type BatchCreateOrDeleteRabbitMqTagRequest struct {
 
 	// 实例ID。

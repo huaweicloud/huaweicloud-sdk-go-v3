@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除参数
+// DeleteIds 批量删除参数
 type DeleteIds struct {
 
 	// 所有删除对象ID的集合

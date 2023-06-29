@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 详情返回包周期信息体。
+// PeriodOrderResp 详情返回包周期信息体。
 type PeriodOrderResp struct {
 
 	// 订单状态

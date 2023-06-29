@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePluginsRequest Request Object
 type UpdatePluginsRequest struct {
 
 	// 实例ID。

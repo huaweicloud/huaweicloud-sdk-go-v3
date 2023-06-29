@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建外部实体后返回的信息结构体
+// ExternalEntityRespDto 创建外部实体后返回的信息结构体
 type ExternalEntityRespDto struct {
 
 	// 节点ID

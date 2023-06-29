@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateClientNetworkResponse Response Object
 type UpdateClientNetworkResponse struct {
 
 	// 任务ID。

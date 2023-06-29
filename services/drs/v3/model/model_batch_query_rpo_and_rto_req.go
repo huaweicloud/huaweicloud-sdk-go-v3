@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量查询RPO和RTO的请求体
+// BatchQueryRpoAndRtoReq 批量查询RPO和RTO的请求体
 type BatchQueryRpoAndRtoReq struct {
 
 	// 批量查询RPO和RTO的任务详情ID请求列表

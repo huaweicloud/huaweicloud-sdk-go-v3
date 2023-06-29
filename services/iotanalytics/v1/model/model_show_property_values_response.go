@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPropertyValuesResponse Response Object
 type ShowPropertyValuesResponse struct {
 
 	// 查询设备的属性值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 结构约束参数
+// StructureConstraintParamsDto 结构约束参数
 type StructureConstraintParamsDto struct {
 
 	// 子结构SMILES

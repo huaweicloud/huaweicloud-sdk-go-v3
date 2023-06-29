@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 客户端应用与客户端配额绑定信息
+// AppQuotaAppBinding 客户端应用与客户端配额绑定信息
 type AppQuotaAppBinding struct {
 
 	// 客户端配额编号

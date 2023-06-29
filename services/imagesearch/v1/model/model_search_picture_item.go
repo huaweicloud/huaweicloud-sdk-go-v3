@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 搜索结果详情。
+// SearchPictureItem 搜索结果详情。
 type SearchPictureItem struct {
 
 	// 被搜索图片的路径。

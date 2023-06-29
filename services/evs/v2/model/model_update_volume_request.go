@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateVolumeRequest Request Object
 type UpdateVolumeRequest struct {
 
 	// 云硬盘ID。

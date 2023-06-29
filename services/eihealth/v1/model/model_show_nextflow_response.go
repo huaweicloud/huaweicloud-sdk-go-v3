@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNextflowResponse Response Object
 type ShowNextflowResponse struct {
 
 	// 引擎版本号

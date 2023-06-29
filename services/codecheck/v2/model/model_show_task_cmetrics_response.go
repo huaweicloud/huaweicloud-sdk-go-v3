@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskCmetricsResponse Response Object
 type ShowTaskCmetricsResponse struct {
 
 	// 任务id

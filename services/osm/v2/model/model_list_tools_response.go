@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListToolsResponse Response Object
 type ListToolsResponse struct {
 
 	// 推荐工具列表

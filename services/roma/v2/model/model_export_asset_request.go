@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportAssetRequest Request Object
 type ExportAssetRequest struct {
 
 	// 实例ID

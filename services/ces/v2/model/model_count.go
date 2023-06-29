@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 次数
+// Count 次数
 type Count struct {
 }
 

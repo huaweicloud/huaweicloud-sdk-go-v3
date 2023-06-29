@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateLogGroupResponse Response Object
 type UpdateLogGroupResponse struct {
 
 	// 创建该日志组的时间， 毫秒级。

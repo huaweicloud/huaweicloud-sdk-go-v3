@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetachProtectedInstanceReplicationResponse Response Object
 type DetachProtectedInstanceReplicationResponse struct {
 
 	// 成功返回jobId信息

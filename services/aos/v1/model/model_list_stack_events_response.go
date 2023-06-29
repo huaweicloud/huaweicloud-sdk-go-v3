@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStackEventsResponse Response Object
 type ListStackEventsResponse struct {
 
 	// 资源栈事件列表

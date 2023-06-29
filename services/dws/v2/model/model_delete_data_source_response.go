@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDataSourceResponse Response Object
 type DeleteDataSourceResponse struct {
 
 	// 删除数据源job_id。

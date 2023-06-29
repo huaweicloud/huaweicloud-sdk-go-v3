@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务号详情。
+// PubDetail 服务号详情。
 type PubDetail struct {
 
 	// 服务号ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 强制跳转。
+// ForceRedirectConfig 强制跳转。
 type ForceRedirectConfig struct {
 
 	// 强制跳转开关（on：打开，off：关闭）。

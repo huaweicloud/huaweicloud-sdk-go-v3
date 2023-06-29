@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 服务委托创建请求
+// AgencyCreateReq 服务委托创建请求
 type AgencyCreateReq struct {
 
 	// 服务委托应用场景类型
@@ -59,13 +59,18 @@ func (c AgencyCreateReqType) MarshalJSON() ([]byte, error) {
 
 func (c *AgencyCreateReqType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

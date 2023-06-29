@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云堡垒机绑定\\解绑弹性公网IP请求对象。
+// OperateEipRequestBody 云堡垒机绑定\\解绑弹性公网IP请求对象。
 type OperateEipRequestBody struct {
 
 	// 弹性公网IP的ID,使用UUID格式。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPortsRequest Request Object
 type ListPortsRequest struct {
 
 	// 查询返回端口列表数量。取值范围：0~1000。

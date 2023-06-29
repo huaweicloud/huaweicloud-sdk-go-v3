@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteExerciseRequest Request Object
 type ExecuteExerciseRequest struct {
 
 	// 具体调用者的用户token

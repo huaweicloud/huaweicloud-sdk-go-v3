@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDbMaskTaskRequest Request Object
 type ListDbMaskTaskRequest struct {
 
 	// 模板ID

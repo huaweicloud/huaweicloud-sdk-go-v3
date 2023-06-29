@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDirectConnectResponse Response Object
 type UpdateDirectConnectResponse struct {
 
 	// 操作请求ID

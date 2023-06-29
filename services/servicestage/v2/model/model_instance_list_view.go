@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例参数。
+// InstanceListView 实例参数。
 type InstanceListView struct {
 
 	// 应用组件实例ID。

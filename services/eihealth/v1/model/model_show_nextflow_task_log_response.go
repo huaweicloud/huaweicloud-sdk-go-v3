@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNextflowTaskLogResponse Response Object
 type ShowNextflowTaskLogResponse struct {
 
 	// 任务日志条数

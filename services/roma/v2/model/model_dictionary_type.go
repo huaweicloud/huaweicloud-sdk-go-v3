@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 字典类型 - system: 代表系统内置字典,用户可编辑但不可删除 - user: 代表用户创建字典
+// DictionaryType 字典类型 - system: 代表系统内置字典,用户可编辑但不可删除 - user: 代表用户创建字典
 type DictionaryType struct {
 	value string
 }
@@ -40,13 +40,18 @@ func (c DictionaryType) MarshalJSON() ([]byte, error) {
 
 func (c *DictionaryType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

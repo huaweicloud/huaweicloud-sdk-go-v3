@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用区标签
+// AvailableTag 可用区标签
 type AvailableTag struct {
 
 	// 可用区计费模式，分为专属dedicated和共享shard

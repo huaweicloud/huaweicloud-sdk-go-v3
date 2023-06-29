@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResInstanceInfoRequest Request Object
 type ShowResInstanceInfoRequest struct {
 
 	// 资源类型

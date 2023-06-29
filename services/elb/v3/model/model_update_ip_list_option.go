@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新IP地址组IP列表请求参数。
+// UpdateIpListOption 更新IP地址组IP列表请求参数。
 type UpdateIpListOption struct {
 
 	// IP地址组的名称

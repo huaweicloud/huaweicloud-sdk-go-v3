@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMeasureUnitsResponse Response Object
 type ListMeasureUnitsResponse struct {
 
 	// 度量单位信息，具体参见表2。

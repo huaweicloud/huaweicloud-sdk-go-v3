@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像详情返回体
+// ImageDetailRsp 镜像详情返回体
 type ImageDetailRsp struct {
 
 	// 镜像名称

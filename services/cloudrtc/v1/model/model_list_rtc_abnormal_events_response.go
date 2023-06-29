@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRtcAbnormalEventsResponse Response Object
 type ListRtcAbnormalEventsResponse struct {
 
 	// 异常总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeviceGroupTreeResponse Response Object
 type ShowDeviceGroupTreeResponse struct {
 
 	// 本次返回数量

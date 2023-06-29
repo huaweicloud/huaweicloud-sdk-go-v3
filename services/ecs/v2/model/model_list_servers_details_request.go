@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListServersDetailsRequest Request Object
 type ListServersDetailsRequest struct {
 
 	// 查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。

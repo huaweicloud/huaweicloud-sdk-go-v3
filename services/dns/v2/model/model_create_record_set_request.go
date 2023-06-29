@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRecordSetRequest Request Object
 type CreateRecordSetRequest struct {
 
 	// 所属zone的ID。

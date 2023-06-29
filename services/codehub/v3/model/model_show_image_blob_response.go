@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowImageBlobResponse Response Object
 type ShowImageBlobResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEventSubResponse Response Object
 type DeleteEventSubResponse struct {
 
 	// 订阅ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移资源
+// MigrateResource 迁移资源
 type MigrateResource struct {
 
 	// 资源所属RegionID。迁移OBS服务资源时为必选项。

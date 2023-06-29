@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Data Channel配置数据
+// AddV2XEdgeDataChannelDto Data Channel配置数据
 type AddV2XEdgeDataChannelDto struct {
 
 	// **参数说明**：平台类型。  **取值范围**： - DRIS：华为路网数字化平台 - LITONG：利通 - ZHONGQIYAN：中汽研

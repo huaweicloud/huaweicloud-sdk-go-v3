@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据格式
+// DataSchema 数据格式
 type DataSchema struct {
 
 	// integer或double类型的的最小值，当属性值超过范围时系统不予存储，integer时范围：-9223372036854775808 ~ 9223372036854775807；double时范围：-1.7976931348623157E308 ~ 1.7976931348623157E308

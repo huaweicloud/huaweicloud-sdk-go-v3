@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RevokeMessageResponse Response Object
 type RevokeMessageResponse struct {
 
 	// 错误码

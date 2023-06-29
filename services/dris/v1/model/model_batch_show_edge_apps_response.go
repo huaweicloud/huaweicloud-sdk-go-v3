@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowEdgeAppsResponse Response Object
 type BatchShowEdgeAppsResponse struct {
 
 	// **参数说明**：总记录数。

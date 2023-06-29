@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreBackupResponse Response Object
 type RestoreBackupResponse struct {
 
 	// 数据作业ID

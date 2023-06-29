@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteSessionRequest Request Object
 type ExecuteSessionRequest struct {
 
 	// 机器人标识符。

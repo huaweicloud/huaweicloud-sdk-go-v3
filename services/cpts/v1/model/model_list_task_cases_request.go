@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTaskCasesRequest Request Object
 type ListTaskCasesRequest struct {
 
 	// 工程id

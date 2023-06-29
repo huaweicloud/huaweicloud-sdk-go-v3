@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 切换会议显示策略请求。
+// RestSwitchModeReqBody 切换会议显示策略请求。
 type RestSwitchModeReqBody struct {
 
 	// 会议显示策略。 - Fixed: 固定广播与会者 - VAS: 声控切换

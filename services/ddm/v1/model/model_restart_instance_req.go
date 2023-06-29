@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto restart Body Object
+// RestartInstanceReq This is a auto restart Body Object
 type RestartInstanceReq struct {
 	Restart *RestarInstanceInfo `json:"restart,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMigrationProjectsRequest Request Object
 type ListMigrationProjectsRequest struct {
 
 	// 分页查询的偏移量。

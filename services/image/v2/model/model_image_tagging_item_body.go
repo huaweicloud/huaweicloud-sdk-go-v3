@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ImageTaggingItemBody
 type ImageTaggingItemBody struct {
 
 	// 置信度，将Float型置信度转为String类型返回,取值范围：0-100。

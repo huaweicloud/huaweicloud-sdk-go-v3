@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaDisassociateSecurityGroupResponse Response Object
 type NovaDisassociateSecurityGroupResponse struct {
 	HttpStatusCode int `json:"-"`
 }

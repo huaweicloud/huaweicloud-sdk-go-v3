@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重启集群返回值
+// RestartInstanceRsp 重启集群返回值
 type RestartInstanceRsp struct {
 	JobId *[]string `json:"jobId,omitempty"`
 }

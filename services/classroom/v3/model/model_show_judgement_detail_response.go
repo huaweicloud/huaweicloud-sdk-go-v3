@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJudgementDetailResponse Response Object
 type ShowJudgementDetailResponse struct {
 
 	// 任务回调状态:callback_success(回调成功)、callback_error(回调出错)

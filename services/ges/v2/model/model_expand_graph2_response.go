@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandGraph2Response Response Object
 type ExpandGraph2Response struct {
 
 	// 扩副本任务ID。请求失败时字段为空。

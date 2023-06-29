@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowScalingGroupRequest Request Object
 type ShowScalingGroupRequest struct {
 
 	// 伸缩组ID。

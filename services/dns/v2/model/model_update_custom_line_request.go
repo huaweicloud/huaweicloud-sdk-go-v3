@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCustomLineRequest Request Object
 type UpdateCustomLineRequest struct {
 
 	// 解析线路ID。

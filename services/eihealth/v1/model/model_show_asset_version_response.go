@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAssetVersionResponse Response Object
 type ShowAssetVersionResponse struct {
 
 	// 资产id

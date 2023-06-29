@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCpiTaskResultRequest Request Object
 type ShowCpiTaskResultRequest struct {
 
 	// CPI任务ID

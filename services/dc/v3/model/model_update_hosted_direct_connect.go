@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新托管专线对象
+// UpdateHostedDirectConnect 更新托管专线对象
 type UpdateHostedDirectConnect struct {
 
 	// 物理专线的名字

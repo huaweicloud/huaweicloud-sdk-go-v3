@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateServerAutoTerminateTimeRequest Request Object
 type UpdateServerAutoTerminateTimeRequest struct {
 
 	// 云服务器ID。

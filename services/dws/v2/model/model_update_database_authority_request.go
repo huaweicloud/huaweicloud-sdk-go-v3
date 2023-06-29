@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDatabaseAuthorityRequest Request Object
 type UpdateDatabaseAuthorityRequest struct {
 
 	// cluster_id

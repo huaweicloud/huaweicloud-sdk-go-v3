@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 所需展示的字段列表模型。
+// FieldItem 所需展示的字段列表模型。
 type FieldItem struct {
 
 	// 表达式。

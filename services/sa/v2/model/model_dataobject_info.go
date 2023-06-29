@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of dataobject
+// DataobjectInfo Information of dataobject
 type DataobjectInfo struct {
 
 	// Id value

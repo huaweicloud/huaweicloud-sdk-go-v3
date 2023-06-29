@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DetachPolicyRequest Request Object
 type DetachPolicyRequest struct {
 
 	// 策略的唯一标识符（ID）。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeVehicleLicenseResponse Response Object
 type RecognizeVehicleLicenseResponse struct {
 	Result         *VehicleLicenseResult `json:"result,omitempty"`
 	HttpStatusCode int                   `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateLineGroupsResponse Response Object
 type UpdateLineGroupsResponse struct {
 
 	// 线路分组名称。

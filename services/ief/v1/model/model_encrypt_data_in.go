@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 加密数据信息
+// EncryptDataIn 加密数据信息
 type EncryptDataIn struct {
 
 	// 加密数据名称，小写英文字母、数字、中划线，以小写字母或数字开头，最大长度为64个字符，不能为空

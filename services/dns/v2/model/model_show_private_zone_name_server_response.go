@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPrivateZoneNameServerResponse Response Object
 type ShowPrivateZoneNameServerResponse struct {
 
 	// 名称服务器列表信息。

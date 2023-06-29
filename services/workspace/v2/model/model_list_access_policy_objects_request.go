@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAccessPolicyObjectsRequest Request Object
 type ListAccessPolicyObjectsRequest struct {
 
 	// 接入策略id。

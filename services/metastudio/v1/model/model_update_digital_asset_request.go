@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDigitalAssetRequest Request Object
 type UpdateDigitalAssetRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。

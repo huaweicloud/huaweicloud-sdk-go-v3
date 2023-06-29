@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateIterationV4Response Response Object
 type CreateIterationV4Response struct {
 
 	// 迭代id

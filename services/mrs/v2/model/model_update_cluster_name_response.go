@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateClusterNameResponse Response Object
 type UpdateClusterNameResponse struct {
 
 	// 更新映射请求操作结果，succeeded为操作成功，failed为操作失败

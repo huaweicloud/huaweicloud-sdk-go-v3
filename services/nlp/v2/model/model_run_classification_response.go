@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunClassificationResponse Response Object
 type RunClassificationResponse struct {
 	Result *ClassificationResult `json:"result,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页信息。
+// PageInfo 分页信息。
 type PageInfo struct {
 
 	// 下一页查询地址（本页的末尾凭据名称，下一页起始凭据名称）。

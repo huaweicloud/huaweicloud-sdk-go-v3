@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 一条事件监控信息
+// EventInfo 一条事件监控信息
 type EventInfo struct {
 
 	// 事件名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateTransactionSplitStatusResponse Response Object
 type UpdateTransactionSplitStatusResponse struct {
 
 	// 工作流ID

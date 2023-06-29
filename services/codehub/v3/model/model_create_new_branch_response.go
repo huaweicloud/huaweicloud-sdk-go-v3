@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateNewBranchResponse Response Object
 type CreateNewBranchResponse struct {
 	Error *Error `json:"error,omitempty"`
 

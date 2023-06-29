@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunLanguageDetectionRequest Request Object
 type RunLanguageDetectionRequest struct {
 	Body *LanguageDetectionReq `json:"body,omitempty"`
 }

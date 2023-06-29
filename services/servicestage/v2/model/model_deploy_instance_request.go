@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeployInstanceRequest Request Object
 type DeployInstanceRequest struct {
 	Body *InstanceDeployment `json:"body,omitempty"`
 }

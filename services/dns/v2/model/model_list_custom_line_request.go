@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCustomLineRequest Request Object
 type ListCustomLineRequest struct {
 
 	// 解析线路ID。

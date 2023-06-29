@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：分发通道及目标设备。
+// SendConfig **参数说明**：分发通道及目标设备。
 type SendConfig struct {
 	Channel *Channel `json:"channel"`
 

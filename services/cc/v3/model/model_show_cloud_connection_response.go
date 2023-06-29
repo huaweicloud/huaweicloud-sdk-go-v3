@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCloudConnectionResponse Response Object
 type ShowCloudConnectionResponse struct {
 	CloudConnection *CloudConnection `json:"cloud_connection,omitempty"`
 

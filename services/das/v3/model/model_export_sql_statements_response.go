@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportSqlStatementsResponse Response Object
 type ExportSqlStatementsResponse struct {
 
 	// 全量SQL集合。当集合为空时，说明SQL已全部导出。

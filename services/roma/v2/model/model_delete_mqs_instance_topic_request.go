@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMqsInstanceTopicRequest Request Object
 type DeleteMqsInstanceTopicRequest struct {
 
 	// 实例ID。

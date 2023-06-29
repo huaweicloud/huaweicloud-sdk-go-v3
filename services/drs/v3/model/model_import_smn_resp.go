@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 录入SMN返回体
+// ImportSmnResp 录入SMN返回体
 type ImportSmnResp struct {
 
 	// 任务ID

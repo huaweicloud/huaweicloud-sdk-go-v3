@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWorkFlowMetricResponse Response Object
 type ShowWorkFlowMetricResponse struct {
 
 	// 执行次数

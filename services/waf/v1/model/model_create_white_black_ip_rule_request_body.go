@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建黑白名单规则body
+// CreateWhiteBlackIpRuleRequestBody 创建黑白名单规则body
 type CreateWhiteBlackIpRuleRequestBody struct {
 
 	// 规则名称只能由字母、数字、-、_和.组成，长度不能超过64个字符

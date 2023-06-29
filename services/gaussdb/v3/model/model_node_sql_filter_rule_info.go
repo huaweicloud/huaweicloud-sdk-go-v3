@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点级别的SQL限流规则。
+// NodeSqlFilterRuleInfo 节点级别的SQL限流规则。
 type NodeSqlFilterRuleInfo struct {
 
 	// 节点ID

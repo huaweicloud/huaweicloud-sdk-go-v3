@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMemberDetailRequest Request Object
 type ShowMemberDetailRequest struct {
 
 	// 备份副本id

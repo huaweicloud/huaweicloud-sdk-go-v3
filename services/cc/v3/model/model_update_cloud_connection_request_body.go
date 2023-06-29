@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新云连接实例的请求体。
+// UpdateCloudConnectionRequestBody 更新云连接实例的请求体。
 type UpdateCloudConnectionRequestBody struct {
 	CloudConnection *UpdateCloudConnection `json:"cloud_connection"`
 }

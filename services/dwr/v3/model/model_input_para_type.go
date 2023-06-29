@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Input结构体参数类型。支持string,integer,float,boolean,list,map
+// InputParaType Input结构体参数类型。支持string,integer,float,boolean,list,map
 type InputParaType struct {
 }
 

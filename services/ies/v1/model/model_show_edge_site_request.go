@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEdgeSiteRequest Request Object
 type ShowEdgeSiteRequest struct {
 
 	// 边缘小站ID

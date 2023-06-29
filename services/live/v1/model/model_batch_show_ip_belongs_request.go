@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchShowIpBelongsRequest Request Object
 type BatchShowIpBelongsRequest struct {
 
 	// IP地址列表，最多20个。

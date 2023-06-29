@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// CreateSharedTagRequestBody 标签
 type CreateSharedTagRequestBody struct {
 	Tag *ResourceTag `json:"tag"`
 }

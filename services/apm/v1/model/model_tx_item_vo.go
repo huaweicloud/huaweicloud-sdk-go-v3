@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// URL跟踪视图。
+// TxItemVo URL跟踪视图。
 type TxItemVo struct {
 
 	// 组件名称。

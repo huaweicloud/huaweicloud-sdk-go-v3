@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteActionResponse Response Object
 type ExecuteActionResponse struct {
 
 	// 任务id。

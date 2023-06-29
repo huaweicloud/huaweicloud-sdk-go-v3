@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标分子过滤条件
+// MetricRequest2Dividend 指标分子过滤条件
 type MetricRequest2Dividend struct {
 
 	// 自定义字段

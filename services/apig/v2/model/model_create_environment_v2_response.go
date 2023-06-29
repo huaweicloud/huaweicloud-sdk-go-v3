@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEnvironmentV2Response Response Object
 type CreateEnvironmentV2Response struct {
 
 	// 创建时间

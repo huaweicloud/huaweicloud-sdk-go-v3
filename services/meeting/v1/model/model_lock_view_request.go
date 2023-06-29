@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// LockViewRequest Request Object
 type LockViewRequest struct {
 
 	// 会议ID。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateUsersInfo This is a auto create Body Object
 type CreateUsersInfo struct {
 
 	// DDM实例帐号名称，命名要求如下。  - 长度为1-32个字符。 - 必须以字母开头。 - 可以包含字母，数字、下划线，不能包含其它特殊字符。
@@ -91,13 +91,18 @@ func (c CreateUsersInfoBaseAuthority) MarshalJSON() ([]byte, error) {
 
 func (c *CreateUsersInfoBaseAuthority) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

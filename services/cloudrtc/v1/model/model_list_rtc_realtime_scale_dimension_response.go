@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRtcRealtimeScaleDimensionResponse Response Object
 type ListRtcRealtimeScaleDimensionResponse struct {
 
 	// 维度分布信息

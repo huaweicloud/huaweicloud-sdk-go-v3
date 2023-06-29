@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询智能信息报表请求体。
+// ListAimSendReportsRequestBody 查询智能信息报表请求体。
 type ListAimSendReportsRequestBody struct {
 
 	// 报表类型。  - 1：日报表 - 2：月报表  > 若不填，默认是1，即查询日报表。

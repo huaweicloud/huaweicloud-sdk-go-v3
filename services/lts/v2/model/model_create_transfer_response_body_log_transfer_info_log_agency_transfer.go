@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 委托转储信息。若转储为委托转储，则会返回该参数
+// CreateTransferResponseBodyLogTransferInfoLogAgencyTransfer 委托转储信息。若转储为委托转储，则会返回该参数
 type CreateTransferResponseBodyLogTransferInfoLogAgencyTransfer struct {
 
 	// 委托方账号ID

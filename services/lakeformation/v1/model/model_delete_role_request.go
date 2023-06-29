@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRoleRequest Request Object
 type DeleteRoleRequest struct {
 
 	// 实例Id

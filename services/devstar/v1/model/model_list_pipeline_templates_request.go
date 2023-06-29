@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPipelineTemplatesRequest Request Object
 type ListPipelineTemplatesRequest struct {
 
 	// 语言类型 中文:zh-cn 英文:en-us

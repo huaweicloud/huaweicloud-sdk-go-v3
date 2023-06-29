@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBackupRestoreTimeResponse Response Object
 type ShowBackupRestoreTimeResponse struct {
 
 	// 可恢复时间段列表。

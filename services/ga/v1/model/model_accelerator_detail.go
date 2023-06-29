@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 全球加速器实例。
+// AcceleratorDetail 全球加速器实例。
 type AcceleratorDetail struct {
 
 	// 全球加速器ID。

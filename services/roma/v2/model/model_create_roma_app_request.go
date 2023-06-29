@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRomaAppRequest Request Object
 type CreateRomaAppRequest struct {
 
 	// 实例ID

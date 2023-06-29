@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateVpcResponse Response Object
 type UpdateVpcResponse struct {
 	Vpc            *Vpc `json:"vpc,omitempty"`
 	HttpStatusCode int  `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDatabaseResourceRequest Request Object
 type ListDatabaseResourceRequest struct {
 }
 

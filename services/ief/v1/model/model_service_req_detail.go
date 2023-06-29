@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务详情
+// ServiceReqDetail 服务详情
 type ServiceReqDetail struct {
 	MetaData *SvcMetadata `json:"meta_data"`
 

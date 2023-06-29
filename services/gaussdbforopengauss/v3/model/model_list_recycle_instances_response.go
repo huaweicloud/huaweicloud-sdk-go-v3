@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRecycleInstancesResponse Response Object
 type ListRecycleInstancesResponse struct {
 
 	// 回收站所有引擎实例总数。

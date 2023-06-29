@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchRemoveEndpointServicePermissionsResponse Response Object
 type BatchRemoveEndpointServicePermissionsResponse struct {
 	Permissions    *[]EpsPermission `json:"permissions,omitempty"`
 	HttpStatusCode int              `json:"-"`

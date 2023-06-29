@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机规格信息。
+// PhoneModel 云手机规格信息。
 type PhoneModel struct {
 
 	// 云手机服务器的规格名称，不超过64个字节

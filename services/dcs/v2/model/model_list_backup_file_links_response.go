@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBackupFileLinksResponse Response Object
 type ListBackupFileLinksResponse struct {
 
 	// OBS桶内文件路径。

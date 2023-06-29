@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可恢复的时间段
+// RestorableTime 可恢复的时间段
 type RestorableTime struct {
 
 	// 可恢复时间段的开始时间点，UNIX时间戳格式，单位是毫秒，时区是UTC。

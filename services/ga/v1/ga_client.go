@@ -439,6 +439,201 @@ func (c *GaClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRequ
 	return &UpdateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddIpGroupIp 添加IP地址组中的IP网段
+//
+// 添加IP地址组中的IP网段。
+// 该接口属于异步接口，接口返回后，后台的添加任务仍在执行；可以使用查询IP地址组详情接口查询状态，当IP地址组状态为ACTIVE时，表示条目添加完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) AddIpGroupIp(request *model.AddIpGroupIpRequest) (*model.AddIpGroupIpResponse, error) {
+	requestDef := GenReqDefForAddIpGroupIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddIpGroupIpResponse), nil
+	}
+}
+
+// AddIpGroupIpInvoker 添加IP地址组中的IP网段
+func (c *GaClient) AddIpGroupIpInvoker(request *model.AddIpGroupIpRequest) *AddIpGroupIpInvoker {
+	requestDef := GenReqDefForAddIpGroupIp()
+	return &AddIpGroupIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateListener 绑定IP地址组与监听器
+//
+// 绑定IP地址组与监听器。
+// 该接口属于异步接口，接口返回后，后台的绑定任务仍在执行；可以使用查询IP地址组详情接口查询状态，当IP地址组状态为ACTIVE时，表示绑定完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) AssociateListener(request *model.AssociateListenerRequest) (*model.AssociateListenerResponse, error) {
+	requestDef := GenReqDefForAssociateListener()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateListenerResponse), nil
+	}
+}
+
+// AssociateListenerInvoker 绑定IP地址组与监听器
+func (c *GaClient) AssociateListenerInvoker(request *model.AssociateListenerRequest) *AssociateListenerInvoker {
+	requestDef := GenReqDefForAssociateListener()
+	return &AssociateListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIpGroup 创建IP地址组
+//
+// 创建IP地址组。
+// 该接口属于异步接口，会先返回一个IP地址组ID，但后台的创建任务仍在执行；可以使用查询IP地址组详情接口查询状态，当IP地址组状态为ACTIVE时，表示IP地址组创建完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.CreateIpGroupResponse, error) {
+	requestDef := GenReqDefForCreateIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpGroupResponse), nil
+	}
+}
+
+// CreateIpGroupInvoker 创建IP地址组
+func (c *GaClient) CreateIpGroupInvoker(request *model.CreateIpGroupRequest) *CreateIpGroupInvoker {
+	requestDef := GenReqDefForCreateIpGroup()
+	return &CreateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIpGroup 删除IP地址组
+//
+// 删除IP地址组。
+// 该接口属于异步接口，接口返回后，后台的删除任务仍在执行；可以使用查询IP地址组详情接口查询状态，当查询不到该IP地址组时，表示删除完成；删除IP地址组时，若IP地址组已经绑定了监听器，则需要先解绑IP地址组与监听器，再进行删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) DeleteIpGroup(request *model.DeleteIpGroupRequest) (*model.DeleteIpGroupResponse, error) {
+	requestDef := GenReqDefForDeleteIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpGroupResponse), nil
+	}
+}
+
+// DeleteIpGroupInvoker 删除IP地址组
+func (c *GaClient) DeleteIpGroupInvoker(request *model.DeleteIpGroupRequest) *DeleteIpGroupInvoker {
+	requestDef := GenReqDefForDeleteIpGroup()
+	return &DeleteIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateListener 解绑IP地址组与监听器
+//
+// 解绑IP地址组与监听器。
+// 该接口属于异步接口，接口返回后，后台的解绑任务仍在执行；可以使用查询IP地址组详情接口查询状态，当IP地址组状态为ACTIVE时，表示解绑完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) DisassociateListener(request *model.DisassociateListenerRequest) (*model.DisassociateListenerResponse, error) {
+	requestDef := GenReqDefForDisassociateListener()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateListenerResponse), nil
+	}
+}
+
+// DisassociateListenerInvoker 解绑IP地址组与监听器
+func (c *GaClient) DisassociateListenerInvoker(request *model.DisassociateListenerRequest) *DisassociateListenerInvoker {
+	requestDef := GenReqDefForDisassociateListener()
+	return &DisassociateListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIpGroups 查询IP地址组列表
+//
+// 查询IP地址组列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListIpGroups(request *model.ListIpGroupsRequest) (*model.ListIpGroupsResponse, error) {
+	requestDef := GenReqDefForListIpGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpGroupsResponse), nil
+	}
+}
+
+// ListIpGroupsInvoker 查询IP地址组列表
+func (c *GaClient) ListIpGroupsInvoker(request *model.ListIpGroupsRequest) *ListIpGroupsInvoker {
+	requestDef := GenReqDefForListIpGroups()
+	return &ListIpGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveIpGroupIp 删除IP地址组中的IP网段
+//
+// 删除IP地址组中的IP网段。
+// 该接口属于异步接口，接口返回后，后台的删除任务仍在执行；可以使用查询IP地址组详情接口查询状态，当IP地址组状态为ACTIVE时，表示条目删除完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) RemoveIpGroupIp(request *model.RemoveIpGroupIpRequest) (*model.RemoveIpGroupIpResponse, error) {
+	requestDef := GenReqDefForRemoveIpGroupIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveIpGroupIpResponse), nil
+	}
+}
+
+// RemoveIpGroupIpInvoker 删除IP地址组中的IP网段
+func (c *GaClient) RemoveIpGroupIpInvoker(request *model.RemoveIpGroupIpRequest) *RemoveIpGroupIpInvoker {
+	requestDef := GenReqDefForRemoveIpGroupIp()
+	return &RemoveIpGroupIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIpGroup 查询IP地址组详情
+//
+// 查询IP地址组详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowIpGroupResponse, error) {
+	requestDef := GenReqDefForShowIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpGroupResponse), nil
+	}
+}
+
+// ShowIpGroupInvoker 查询IP地址组详情
+func (c *GaClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowIpGroupInvoker {
+	requestDef := GenReqDefForShowIpGroup()
+	return &ShowIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIpGroup 更新IP地址组
+//
+// 更新IP地址组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.UpdateIpGroupResponse, error) {
+	requestDef := GenReqDefForUpdateIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpGroupResponse), nil
+	}
+}
+
+// UpdateIpGroupInvoker 更新IP地址组
+func (c *GaClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *UpdateIpGroupInvoker {
+	requestDef := GenReqDefForUpdateIpGroup()
+	return &UpdateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateListener 创建监听器
 //
 // 创建监听器。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetMultiTaskOffsetRequest Request Object
 type ResetMultiTaskOffsetRequest struct {
 
 	// 实例ID

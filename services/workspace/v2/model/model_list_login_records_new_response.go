@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLoginRecordsNewResponse Response Object
 type ListLoginRecordsNewResponse struct {
 
 	// 用户登录记录总数。

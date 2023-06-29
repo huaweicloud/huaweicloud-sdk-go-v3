@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateWholeImageRequest Request Object
 type CreateWholeImageRequest struct {
 	Body *CreateWholeImageRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// create Health Check request
+// CreateHealthCheckRequestBody create Health Check request
 type CreateHealthCheckRequestBody struct {
 	HealthCheck *CreateHealthCheckOption `json:"health_check"`
 }

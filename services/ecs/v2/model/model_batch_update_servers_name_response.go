@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdateServersNameResponse Response Object
 type BatchUpdateServersNameResponse struct {
 
 	// 提交请求成功后返回的响应列表。

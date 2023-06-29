@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClusterAllNodeLabelRequest Request Object
 type ListClusterAllNodeLabelRequest struct {
 }
 

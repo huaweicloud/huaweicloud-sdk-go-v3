@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDcDsRequest Request Object
 type ShowDcDsRequest struct {
 
 	// 边缘节点ID

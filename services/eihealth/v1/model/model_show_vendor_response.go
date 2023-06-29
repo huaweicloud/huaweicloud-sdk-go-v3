@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVendorResponse Response Object
 type ShowVendorResponse struct {
 
 	// 商标Base64

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息
+// ListQuotasResult 配额信息
 type ListQuotasResult struct {
 
 	// 配额列表

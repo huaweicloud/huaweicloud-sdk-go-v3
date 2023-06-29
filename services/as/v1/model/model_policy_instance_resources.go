@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额资源
+// PolicyInstanceResources 配额资源
 type PolicyInstanceResources struct {
 
 	// 查询配额的类型。

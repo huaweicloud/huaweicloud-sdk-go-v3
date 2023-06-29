@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 文本内容审核请求体
+// TextDetectionReq 文本内容审核请求体
 type TextDetectionReq struct {
 
 	// 事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介

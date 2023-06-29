@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClusterWorkloadResponse Response Object
 type ListClusterWorkloadResponse struct {
 
 	// 结果状态码。

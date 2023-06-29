@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群实例对象
+// Nodes 集群实例对象
 type Nodes struct {
 
 	// 集群实例ID

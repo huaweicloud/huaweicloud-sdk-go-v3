@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeInstanceNetworkResponse Response Object
 type ChangeInstanceNetworkResponse struct {
 
 	// 状态

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 音素的发音打分
+// PhonemePronunciation 音素的发音打分
 type PhonemePronunciation struct {
 
 	//

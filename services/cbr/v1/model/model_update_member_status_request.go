@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMemberStatusRequest Request Object
 type UpdateMemberStatusRequest struct {
 
 	// 成员id，成员id与项目id为同一个。

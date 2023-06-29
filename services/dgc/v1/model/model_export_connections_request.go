@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportConnectionsRequest Request Object
 type ExportConnectionsRequest struct {
 
 	// 工作空间id

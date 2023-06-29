@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 拓扑图上线条的的信息。
+// TraceTopologyLineInfo 拓扑图上线条的的信息。
 type TraceTopologyLineInfo struct {
 
 	// 开始时间。

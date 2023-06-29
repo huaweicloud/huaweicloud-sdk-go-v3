@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAvailabilityZonesResponse Response Object
 type ListAvailabilityZonesResponse struct {
 
 	// 请求ID。  注：自动生成。

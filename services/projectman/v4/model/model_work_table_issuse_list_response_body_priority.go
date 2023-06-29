@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项优先级信息
+// WorkTableIssuseListResponseBodyPriority 工作项优先级信息
 type WorkTableIssuseListResponseBodyPriority struct {
 
 	// 工作项优先级id

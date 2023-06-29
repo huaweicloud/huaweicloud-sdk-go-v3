@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTemplateResponse Response Object
 type CreateTemplateResponse struct {
 
 	// 服务端返回的新添加的模板的ID

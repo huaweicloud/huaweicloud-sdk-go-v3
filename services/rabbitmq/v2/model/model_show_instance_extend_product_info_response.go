@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceExtendProductInfoResponse Response Object
 type ShowInstanceExtendProductInfoResponse struct {
 
 	// 表示按需付费的产品列表。

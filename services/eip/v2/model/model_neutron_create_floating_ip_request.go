@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronCreateFloatingIpRequest Request Object
 type NeutronCreateFloatingIpRequest struct {
 	Body *NeutronCreateFloatingIpRequestBody `json:"body,omitempty"`
 }

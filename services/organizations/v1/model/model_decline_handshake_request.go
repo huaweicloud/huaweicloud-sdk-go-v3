@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeclineHandshakeRequest Request Object
 type DeclineHandshakeRequest struct {
 
 	// 邀请的唯一标识符（ID）。帐号在发起邀请时创建ID。

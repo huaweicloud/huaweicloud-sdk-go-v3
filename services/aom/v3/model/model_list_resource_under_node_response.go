@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResourceUnderNodeResponse Response Object
 type ListResourceUnderNodeResponse struct {
 
 	// 分页查询的数据。

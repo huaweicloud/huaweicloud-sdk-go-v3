@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronCreateFirewallPolicyResponse Response Object
 type NeutronCreateFirewallPolicyResponse struct {
 	FirewallPolicy *NeutronFirewallPolicy `json:"firewall_policy,omitempty"`
 	HttpStatusCode int                    `json:"-"`

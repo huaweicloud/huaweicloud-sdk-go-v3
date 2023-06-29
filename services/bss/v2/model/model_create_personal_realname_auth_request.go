@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePersonalRealnameAuthRequest Request Object
 type CreatePersonalRealnameAuthRequest struct {
 	Body *ApplyIndividualRealnameAuthsReq `json:"body,omitempty"`
 }

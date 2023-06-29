@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSasTokenResponse Response Object
 type CreateSasTokenResponse struct {
 
 	// API key的client_id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchNodeConnectionResponse Response Object
 type SwitchNodeConnectionResponse struct {
 	HttpStatusCode int `json:"-"`
 }

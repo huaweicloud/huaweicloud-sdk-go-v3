@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BCS组织维度监控数据列表结构
+// EntityMetricList BCS组织维度监控数据列表结构
 type EntityMetricList struct {
 
 	// 指标对象列表。

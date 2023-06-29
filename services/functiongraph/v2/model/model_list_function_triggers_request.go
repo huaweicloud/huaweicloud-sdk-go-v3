@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFunctionTriggersRequest Request Object
 type ListFunctionTriggersRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。

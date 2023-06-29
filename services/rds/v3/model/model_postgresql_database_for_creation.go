@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// PostgresqlDatabaseForCreation 数据库信息。
 type PostgresqlDatabaseForCreation struct {
 
 	// 数据库名称。  数据库名称长度可在1～63个字符之间，由字母、数字、或下划线组成，不能包含其他特殊字符，不能以“pg”和数字开头，且不能和RDS for PostgreSQL模板库重名。  RDS for PostgreSQL模板库包括postgres， template0 ，template1。

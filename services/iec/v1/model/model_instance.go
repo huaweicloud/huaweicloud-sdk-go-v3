@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘实例对象。
+// Instance 边缘实例对象。
 type Instance struct {
 
 	// 边缘实例ID。

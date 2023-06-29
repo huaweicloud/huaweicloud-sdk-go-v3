@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchUpdatePoliciesPriorityRequestBody This is a auto create Body Object
 type BatchUpdatePoliciesPriorityRequestBody struct {
 
 	// 转发策略的结构体

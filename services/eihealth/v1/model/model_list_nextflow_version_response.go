@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNextflowVersionResponse Response Object
 type ListNextflowVersionResponse struct {
 
 	// 版本总数

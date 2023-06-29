@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 资源共享邀请的详细信息。
+// ResourceShareInvitation 资源共享邀请的详细信息。
 type ResourceShareInvitation struct {
 
 	// 接收资源共享邀请的帐号ID。

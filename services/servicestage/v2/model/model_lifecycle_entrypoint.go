@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生命周期
+// LifecycleEntrypoint 生命周期
 type LifecycleEntrypoint struct {
 
 	// 执行命令行

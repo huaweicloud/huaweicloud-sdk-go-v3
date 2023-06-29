@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response of Dataclass Info Ref
+// DataclassInfoRef Response of Dataclass Info Ref
 type DataclassInfoRef struct {
 
 	// Id value

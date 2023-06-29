@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// schedulerHints字段数据结构说明
+// SchedulerHints schedulerHints字段数据结构说明
 type SchedulerHints struct {
 
 	// 是否在专属云中创建裸金属服务器，参数值为share或dedicate。约束：该值不传时默认为share。在专属云中创建裸金属服务器时，必须指定该字段为dedicate。
@@ -55,13 +55,18 @@ func (c SchedulerHintsDecBaremetal) MarshalJSON() ([]byte, error) {
 
 func (c *SchedulerHintsDecBaremetal) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

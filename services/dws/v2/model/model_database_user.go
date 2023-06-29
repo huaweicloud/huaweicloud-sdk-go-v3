@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户基本信息
+// DatabaseUser 用户基本信息
 type DatabaseUser struct {
 
 	// 用户名

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件订阅监控指标数据
+// EventSubMetricsItem 事件订阅监控指标数据
 type EventSubMetricsItem struct {
 
 	// 失败数

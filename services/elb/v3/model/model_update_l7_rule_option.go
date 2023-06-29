@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新七层转发规则的请求参数。
+// UpdateL7RuleOption 更新七层转发规则的请求参数。
 type UpdateL7RuleOption struct {
 
 	// 转发规则的管理状态，默认为true。  不支持该字段，请勿使用。

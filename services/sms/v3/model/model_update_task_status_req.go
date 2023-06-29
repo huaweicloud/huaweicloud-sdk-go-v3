@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateTaskStatusReq This is a auto create Body Object
 type UpdateTaskStatusReq struct {
 
 	// 操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
@@ -81,13 +81,18 @@ func (c UpdateTaskStatusReqOperation) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateTaskStatusReqOperation) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

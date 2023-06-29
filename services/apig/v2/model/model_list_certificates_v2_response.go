@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCertificatesV2Response Response Object
 type ListCertificatesV2Response struct {
 
 	// 本次返回的列表长度

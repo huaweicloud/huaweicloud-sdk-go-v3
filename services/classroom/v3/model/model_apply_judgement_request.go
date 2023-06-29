@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ApplyJudgementRequest Request Object
 type ApplyJudgementRequest struct {
 	Body *JudgementTaskRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RegisterServerRequest Request Object
 type RegisterServerRequest struct {
 	Body *PostSourceServerBody `json:"body,omitempty"`
 }

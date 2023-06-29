@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGaussDbDatastoresResponse Response Object
 type ListGaussDbDatastoresResponse struct {
 	Datastores     *[]DatastoresResult `json:"datastores,omitempty"`
 	HttpStatusCode int                 `json:"-"`

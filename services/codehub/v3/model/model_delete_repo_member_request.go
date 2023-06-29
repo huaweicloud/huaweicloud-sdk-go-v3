@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRepoMemberRequest Request Object
 type DeleteRepoMemberRequest struct {
 
 	// 仓库成员id

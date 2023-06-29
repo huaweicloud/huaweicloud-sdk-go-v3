@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 成员信息
+// AddAddressItemsInfoDtoAddressItems 成员信息
 type AddAddressItemsInfoDtoAddressItems struct {
 
 	// 地址名称

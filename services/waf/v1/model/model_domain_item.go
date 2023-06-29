@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 受攻击域名统计
+// DomainItem 受攻击域名统计
 type DomainItem struct {
 
 	// 域名

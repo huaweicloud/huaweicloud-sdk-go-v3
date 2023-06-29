@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-//
+// RouteTableListResp
 type RouteTableListResp struct {
 
 	// 功能说明：路由表ID  取值范围：标准UUID

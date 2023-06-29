@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowComponentByNameResponse Response Object
 type ShowComponentByNameResponse struct {
 
 	// 组件名称

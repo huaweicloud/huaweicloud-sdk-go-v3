@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 接口版本的请求消息类型信息
+// MediaTypes 接口版本的请求消息类型信息
 type MediaTypes struct {
 
 	// 文本类型

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组织配额的响应体。
+// QuotasResourcesDto 组织配额的响应体。
 type QuotasResourcesDto struct {
 
 	// 配额信息。

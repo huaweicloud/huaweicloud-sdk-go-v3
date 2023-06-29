@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFeaturesV2Response Response Object
 type ListFeaturesV2Response struct {
 
 	// 本次返回的列表长度

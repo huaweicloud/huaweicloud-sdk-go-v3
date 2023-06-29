@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEnvResponse Response Object
 type ShowEnvResponse struct {
 
 	// notebook是否使用专属资源池

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSimPricePlansResponse Response Object
 type ListSimPricePlansResponse struct {
 	Body           *[]SimPricePlanVo `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`

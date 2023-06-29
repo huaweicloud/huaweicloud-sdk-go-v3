@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSqlExplainResponse Response Object
 type ShowSqlExplainResponse struct {
 
 	// SQL执行计划列表

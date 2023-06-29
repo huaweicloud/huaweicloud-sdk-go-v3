@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListGaussMySqlInstancesRequest Request Object
 type ListGaussMySqlInstancesRequest struct {
 
 	// 语言。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 计划任务的配置项，选填。计划任务不支持obs输入，对于url输入则仅支持rtmp和rtsp两种形式。
+// TaskTiming 计划任务的配置项，选填。计划任务不支持obs输入，对于url输入则仅支持rtmp和rtsp两种形式。
 type TaskTiming struct {
 
 	// 计划任务的类型，使用计划任务时必填。可选类型分别为once（仅执行一次），daily（每日执行），weekly（每周执行），monthly（每月执行）。
@@ -80,13 +80,18 @@ func (c TaskTimingType) MarshalJSON() ([]byte, error) {
 
 func (c *TaskTimingType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

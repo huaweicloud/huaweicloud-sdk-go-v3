@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// EnablePolicyTypeResponse Response Object
 type EnablePolicyTypeResponse struct {
 	Root           *RootDto `json:"root,omitempty"`
 	HttpStatusCode int      `json:"-"`

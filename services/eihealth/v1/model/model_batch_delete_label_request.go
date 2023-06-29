@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteLabelRequest Request Object
 type BatchDeleteLabelRequest struct {
 	Body *BatchDeleteLabelReq `json:"body,omitempty"`
 }

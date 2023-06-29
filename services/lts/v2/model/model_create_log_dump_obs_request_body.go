@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 此参数在请求实体中，采用json字符串格式
+// CreateLogDumpObsRequestBody 此参数在请求实体中，采用json字符串格式
 type CreateLogDumpObsRequestBody struct {
 
 	// 日志组id。

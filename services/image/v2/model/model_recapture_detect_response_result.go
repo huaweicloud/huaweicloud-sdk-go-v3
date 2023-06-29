@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用成功时为图片标签内容。调用失败时无此字段。
+// RecaptureDetectResponseResult 调用成功时为图片标签内容。调用失败时无此字段。
 type RecaptureDetectResponseResult struct {
 
 	// 总体的结论： true：真实 false：虚假 uncertainty：不确定

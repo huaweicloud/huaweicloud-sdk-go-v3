@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 行数对比任务表级详情。
+// TableLineCompareDetailInfo 行数对比任务表级详情。
 type TableLineCompareDetailInfo struct {
 
 	// 源库表名称。
@@ -93,13 +93,18 @@ func (c TableLineCompareDetailInfoStatus) MarshalJSON() ([]byte, error) {
 
 func (c *TableLineCompareDetailInfoStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

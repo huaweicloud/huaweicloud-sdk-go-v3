@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDeploymentResponse Response Object
 type UpdateDeploymentResponse struct {
 	Template *DeploymentTemplate `json:"template,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCpiTaskRequest Request Object
 type CreateCpiTaskRequest struct {
 	Body *CpiTaskData `json:"body,omitempty"`
 }

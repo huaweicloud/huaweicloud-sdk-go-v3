@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VPCEP信息
+// VpcepInfoRsp VPCEP信息
 type VpcepInfoRsp struct {
 
 	// Kafka的VPCEP的service id

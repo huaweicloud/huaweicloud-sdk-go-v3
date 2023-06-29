@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 独享引擎实例防护域名信息
+// IdHostnameEntry 独享引擎实例防护域名信息
 type IdHostnameEntry struct {
 
 	// 防护域名ID

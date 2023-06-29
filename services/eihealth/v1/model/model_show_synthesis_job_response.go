@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSynthesisJobResponse Response Object
 type ShowSynthesisJobResponse struct {
 	BasicInfo *DrugJobDto `json:"basic_info,omitempty"`
 

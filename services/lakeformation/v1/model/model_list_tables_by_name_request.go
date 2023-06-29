@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTablesByNameRequest Request Object
 type ListTablesByNameRequest struct {
 
 	// 实例ID

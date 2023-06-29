@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNewBlockchainRequest Request Object
 type CreateNewBlockchainRequest struct {
 	Body *CreateRequestBody `json:"body,omitempty"`
 }

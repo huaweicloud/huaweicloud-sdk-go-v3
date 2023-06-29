@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用区中英文名称。
+// LocalName 可用区中英文名称。
 type LocalName struct {
 
 	// 可用区英文名称。

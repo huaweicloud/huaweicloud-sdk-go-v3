@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBlockchainNodesRequest Request Object
 type ShowBlockchainNodesRequest struct {
 
 	// blockchainID

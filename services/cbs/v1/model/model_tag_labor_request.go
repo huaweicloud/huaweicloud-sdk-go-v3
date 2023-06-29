@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// TagLaborRequest Request Object
 type TagLaborRequest struct {
 
 	// qabot编号，UUID格式。

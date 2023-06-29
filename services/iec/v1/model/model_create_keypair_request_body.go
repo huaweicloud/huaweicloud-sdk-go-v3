@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建秘钥对请求体。
+// CreateKeypairRequestBody 创建秘钥对请求体。
 type CreateKeypairRequestBody struct {
 
 	// 密钥对名称。 新创建的密钥名称不能和已有密钥名称相同。

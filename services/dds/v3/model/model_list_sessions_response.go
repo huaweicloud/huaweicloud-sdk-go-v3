@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSessionsResponse Response Object
 type ListSessionsResponse struct {
 
 	// 总记录数。

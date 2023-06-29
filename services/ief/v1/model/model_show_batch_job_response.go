@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBatchJobResponse Response Object
 type ShowBatchJobResponse struct {
 
 	// 批量处理作业ID

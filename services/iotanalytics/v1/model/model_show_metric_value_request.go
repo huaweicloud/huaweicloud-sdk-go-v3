@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMetricValueRequest Request Object
 type ShowMetricValueRequest struct {
 
 	// 资产ID

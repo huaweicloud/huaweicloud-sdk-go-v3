@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTopAbnormalResponse Response Object
 type ListTopAbnormalResponse struct {
 
 	// 异常请求数量

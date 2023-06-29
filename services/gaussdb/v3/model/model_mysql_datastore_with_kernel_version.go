@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// MysqlDatastoreWithKernelVersion 数据库信息。
 type MysqlDatastoreWithKernelVersion struct {
 
 	// 数据库引擎，现在只支持gaussdb-mysql

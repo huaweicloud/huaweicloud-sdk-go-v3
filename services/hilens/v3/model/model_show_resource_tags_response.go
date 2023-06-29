@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResourceTagsResponse Response Object
 type ShowResourceTagsResponse struct {
 
 	// 满足条件的总数

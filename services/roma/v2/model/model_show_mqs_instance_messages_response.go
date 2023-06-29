@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMqsInstanceMessagesResponse Response Object
 type ShowMqsInstanceMessagesResponse struct {
 
 	// 消息列表。

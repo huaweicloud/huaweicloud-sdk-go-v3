@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CurrentSlot
 type CurrentSlot struct {
 
 	// 槽位ID。

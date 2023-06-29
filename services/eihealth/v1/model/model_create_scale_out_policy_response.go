@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateScaleOutPolicyResponse Response Object
 type CreateScaleOutPolicyResponse struct {
 
 	// 扩容策略id

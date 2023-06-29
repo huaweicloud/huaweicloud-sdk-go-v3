@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 查询资源实例的请求体。
+// ListTagResourceInstancesRequestBody 查询资源实例的请求体。
 type ListTagResourceInstancesRequestBody struct {
 
 	// 索引位置， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数）如果action为filter默认为0,必须为数字，不能为负数
@@ -79,13 +79,18 @@ func (c ListTagResourceInstancesRequestBodyAction) MarshalJSON() ([]byte, error)
 
 func (c *ListTagResourceInstancesRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

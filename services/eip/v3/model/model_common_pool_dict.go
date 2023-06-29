@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 公共池详情
+// CommonPoolDict 公共池详情
 type CommonPoolDict struct {
 
 	// 公共池名字

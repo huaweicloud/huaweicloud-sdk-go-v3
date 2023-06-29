@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MQTT配置。 当enable_mqtt取值为false时，mqtts需要为空数组。
+// Mqtt MQTT配置。 当enable_mqtt取值为false时，mqtts需要为空数组。
 type Mqtt struct {
 
 	// MQTT监听地址，根据type取值确定。

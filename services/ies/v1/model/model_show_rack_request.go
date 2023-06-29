@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRackRequest Request Object
 type ShowRackRequest struct {
 
 	// 机柜ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAttributeResponse Response Object
 type CreateAttributeResponse struct {
 
 	// 自定义属性标识

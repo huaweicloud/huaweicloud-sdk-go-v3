@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchGaussMySqlInstanceSslResponse Response Object
 type SwitchGaussMySqlInstanceSslResponse struct {
 
 	// 任务ID。

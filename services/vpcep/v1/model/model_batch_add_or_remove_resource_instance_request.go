@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddOrRemoveResourceInstanceRequest Request Object
 type BatchAddOrRemoveResourceInstanceRequest struct {
 
 	// 资源类型，值为：endpoint_service或endpoint。

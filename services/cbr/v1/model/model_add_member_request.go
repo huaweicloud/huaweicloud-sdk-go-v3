@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddMemberRequest Request Object
 type AddMemberRequest struct {
 
 	// 备份副本id

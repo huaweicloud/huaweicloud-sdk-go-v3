@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListObsObjectRequest Request Object
 type ListObsObjectRequest struct {
 
 	// obs桶名称

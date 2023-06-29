@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ADMET with custom请求体
+// AdmetWithCustomRequest ADMET with custom请求体
 type AdmetWithCustomRequest struct {
 
 	// 分子SMILES表达式

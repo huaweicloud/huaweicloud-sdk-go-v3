@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMyKnowledgePointsResponse Response Object
 type ListMyKnowledgePointsResponse struct {
 
 	// 知识点数量

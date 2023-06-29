@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProtectionPolicyRequest Request Object
 type ListProtectionPolicyRequest struct {
 
 	// region id

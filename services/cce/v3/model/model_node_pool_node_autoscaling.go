@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点池自动伸缩相关配置
+// NodePoolNodeAutoscaling 节点池自动伸缩相关配置
 type NodePoolNodeAutoscaling struct {
 
 	// 是否开启自动扩缩容

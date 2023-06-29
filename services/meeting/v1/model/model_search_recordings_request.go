@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchRecordingsRequest Request Object
 type SearchRecordingsRequest struct {
 
 	// 用户的UUID。 > 仅管理员有权限查询本企业其他用户的会议录制；普通帐号该字段无效，只能查询自己的。

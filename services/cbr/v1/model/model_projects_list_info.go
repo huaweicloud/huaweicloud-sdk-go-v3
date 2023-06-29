@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目信息
+// ProjectsListInfo 项目信息
 type ProjectsListInfo struct {
 
 	// 域 ID

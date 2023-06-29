@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 维度信息
+// MetricDataDetailDimension 维度信息
 type MetricDataDetailDimension struct {
 
 	// 维度名称

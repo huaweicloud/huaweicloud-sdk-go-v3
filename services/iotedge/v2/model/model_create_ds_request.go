@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDsRequest Request Object
 type CreateDsRequest struct {
 
 	// 边缘节点ID

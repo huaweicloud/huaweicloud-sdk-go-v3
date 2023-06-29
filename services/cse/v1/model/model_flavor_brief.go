@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 微服务引擎专享版规格及描述
+// FlavorBrief 微服务引擎专享版规格及描述
 type FlavorBrief struct {
 
 	// 微服务引擎专享版规格

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBlockchainChannelsRequest Request Object
 type ListBlockchainChannelsRequest struct {
 
 	// blockchainID

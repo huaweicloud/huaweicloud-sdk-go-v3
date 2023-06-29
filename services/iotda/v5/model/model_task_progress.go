@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务执行状态统计对象，用于统计任务的整体执行情况。
+// TaskProgress 任务执行状态统计对象，用于统计任务的整体执行情况。
 type TaskProgress struct {
 
 	// 子任务总个数。

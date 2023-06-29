@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// EdgeImageRegionInfo
 type EdgeImageRegionInfo struct {
 
 	// 区域ID

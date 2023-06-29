@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// PostEventExtractionReq This is a auto create Body Object
 type PostEventExtractionReq struct {
 
 	// 待分析文本，长度为1~256，文本编码为UTF-8。

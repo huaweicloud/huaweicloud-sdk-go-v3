@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadAimTemplateMaterialResponse Response Object
 type UploadAimTemplateMaterialResponse struct {
 
 	// 状态码。

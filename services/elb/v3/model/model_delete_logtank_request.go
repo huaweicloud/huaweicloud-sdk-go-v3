@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLogtankRequest Request Object
 type DeleteLogtankRequest struct {
 
 	// 云日志ID。

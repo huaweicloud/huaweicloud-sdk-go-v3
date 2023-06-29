@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RenameParticipantRequest Request Object
 type RenameParticipantRequest struct {
 
 	// 会议ID。

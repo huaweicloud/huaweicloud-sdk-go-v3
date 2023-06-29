@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机信息。
+// Server 云手机信息。
 type Server struct {
 
 	// 云手机服务器名称 不超过65字符，只支持英文字母、数字、汉字、下划线和中划线

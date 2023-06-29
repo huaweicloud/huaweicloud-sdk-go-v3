@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteClusterDnsRequest Request Object
 type DeleteClusterDnsRequest struct {
 
 	// 集群的ID

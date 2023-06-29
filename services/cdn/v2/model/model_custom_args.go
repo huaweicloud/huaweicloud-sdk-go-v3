@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 鉴权参数
+// CustomArgs 鉴权参数
 type CustomArgs struct {
 
 	// 参数类型，custom_var：自定义，nginx_preset_var：预置的变量。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDbObjectTemplateProgressResponse Response Object
 type ShowDbObjectTemplateProgressResponse struct {
 
 	// 是否上传完成。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLoadbalancersByTagsRequest Request Object
 type ListLoadbalancersByTagsRequest struct {
 	Body *ListLoadbalancersByTagsRequestBody `json:"body,omitempty"`
 }

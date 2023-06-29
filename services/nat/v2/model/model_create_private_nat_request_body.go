@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建私网NAT网关实例的请求体。
+// CreatePrivateNatRequestBody 创建私网NAT网关实例的请求体。
 type CreatePrivateNatRequestBody struct {
 	Gateway *CreatePrivateNatOption `json:"gateway"`
 }

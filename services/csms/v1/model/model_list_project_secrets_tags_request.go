@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProjectSecretsTagsRequest Request Object
 type ListProjectSecretsTagsRequest struct {
 }
 

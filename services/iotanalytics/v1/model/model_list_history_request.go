@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListHistoryRequest Request Object
 type ListHistoryRequest struct {
 
 	// 存储ID

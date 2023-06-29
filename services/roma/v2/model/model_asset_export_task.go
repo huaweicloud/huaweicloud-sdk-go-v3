@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务ID
+// AssetExportTask 任务ID
 type AssetExportTask struct {
 }
 

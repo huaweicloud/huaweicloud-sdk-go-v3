@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性引用
+// PropertyReferenceResponse 属性引用
 type PropertyReferenceResponse struct {
 
 	// 属性引用类型，引用本资产属性（this）、引用其他资产属性（single）、引用子资产属性（children）

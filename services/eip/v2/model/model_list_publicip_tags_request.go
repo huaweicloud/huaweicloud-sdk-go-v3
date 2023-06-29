@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPublicipTagsRequest Request Object
 type ListPublicipTagsRequest struct {
 }
 

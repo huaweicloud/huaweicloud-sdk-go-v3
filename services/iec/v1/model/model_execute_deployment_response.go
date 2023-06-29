@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteDeploymentResponse Response Object
 type ExecuteDeploymentResponse struct {
 
 	// 边缘业务ID。

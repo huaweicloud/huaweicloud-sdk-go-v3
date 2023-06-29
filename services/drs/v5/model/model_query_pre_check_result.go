@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 预检查结果信息体。
+// QueryPreCheckResult 预检查结果信息体。
 type QueryPreCheckResult struct {
 
 	// 返回的预检查结果是否通过。

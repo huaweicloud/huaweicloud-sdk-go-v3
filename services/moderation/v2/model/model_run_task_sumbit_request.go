@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunTaskSumbitRequest Request Object
 type RunTaskSumbitRequest struct {
 	Body *TaskSumbitReq `json:"body,omitempty"`
 }

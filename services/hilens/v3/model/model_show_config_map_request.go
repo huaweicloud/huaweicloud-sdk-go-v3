@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowConfigMapRequest Request Object
 type ShowConfigMapRequest struct {
 
 	// 配置项ID，从专业版HiLens控制台配置项管理[获取配置项列表](listConfigMapUsingGET.xml)获取

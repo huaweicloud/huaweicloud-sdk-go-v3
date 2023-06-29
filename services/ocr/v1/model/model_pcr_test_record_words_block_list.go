@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PcrTestRecordWordsBlockList
 type PcrTestRecordWordsBlockList struct {
 
 	// 文字块识别结果。

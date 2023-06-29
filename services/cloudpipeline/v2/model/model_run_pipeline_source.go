@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线运行源参数
+// RunPipelineSource 流水线运行源参数
 type RunPipelineSource struct {
 
 	// 源类型

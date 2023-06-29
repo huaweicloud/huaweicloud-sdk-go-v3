@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeIpsProtectModeUsingPostResponse Response Object
 type ChangeIpsProtectModeUsingPostResponse struct {
 	Data           *IdObject `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`

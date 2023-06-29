@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像元素
+// ImageData 镜像元素
 type ImageData struct {
 
 	// 镜像ID

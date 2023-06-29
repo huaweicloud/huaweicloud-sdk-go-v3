@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRedislogResponse Response Object
 type CreateRedislogResponse struct {
 	HttpStatusCode int `json:"-"`
 }

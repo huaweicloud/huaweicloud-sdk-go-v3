@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetSqlFilterRuleResponse Response Object
 type SetSqlFilterRuleResponse struct {
 
 	// 设置SQL限流规则任务ID。

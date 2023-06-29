@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// URL鉴权。
+// UrlAuth URL鉴权。
 type UrlAuth struct {
 
 	// 是否开启URL鉴权(\"off\"/\"on\")。

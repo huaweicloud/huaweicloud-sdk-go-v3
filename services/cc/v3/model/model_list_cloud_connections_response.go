@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCloudConnectionsResponse Response Object
 type ListCloudConnectionsResponse struct {
 
 	// 云连接实例列表。

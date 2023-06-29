@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddRdsNoAgentDatabaseResponse Response Object
 type AddRdsNoAgentDatabaseResponse struct {
 
 	// 添加失败的数据库实例id

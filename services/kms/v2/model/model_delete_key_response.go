@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteKeyResponse Response Object
 type DeleteKeyResponse struct {
 
 	// 密钥ID

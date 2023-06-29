@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicActionListResponse Response Object
 type ShowPublicActionListResponse struct {
 
 	// 列表条目数

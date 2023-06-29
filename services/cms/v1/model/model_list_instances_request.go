@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListInstancesRequest Request Object
 type ListInstancesRequest struct {
 
 	// 查询返回实例数量限制 取值范围：1-1000。

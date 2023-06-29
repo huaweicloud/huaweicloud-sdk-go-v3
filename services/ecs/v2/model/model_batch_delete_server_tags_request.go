@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteServerTagsRequest Request Object
 type BatchDeleteServerTagsRequest struct {
 
 	// 云服务器ID。

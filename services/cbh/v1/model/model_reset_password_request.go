@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetPasswordRequest Request Object
 type ResetPasswordRequest struct {
 	Body *ResetPassword `json:"body,omitempty"`
 }

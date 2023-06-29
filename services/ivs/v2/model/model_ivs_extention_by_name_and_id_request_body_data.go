@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求消息的数据部分。
+// IvsExtentionByNameAndIdRequestBodyData 请求消息的数据部分。
 type IvsExtentionByNameAndIdRequestBodyData struct {
 
 	// 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。

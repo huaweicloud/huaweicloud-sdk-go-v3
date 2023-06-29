@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateRequestThrottlingPolicyV2Request Request Object
 type DisassociateRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID

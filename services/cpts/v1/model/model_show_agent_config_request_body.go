@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取探针配置信息请求体
+// ShowAgentConfigRequestBody 获取探针配置信息请求体
 type ShowAgentConfigRequestBody struct {
 
 	// 应用id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckNetAclRequest Request Object
 type CheckNetAclRequest struct {
 
 	// 目的虚拟机所属project_id

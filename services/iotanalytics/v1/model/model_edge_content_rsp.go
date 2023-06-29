@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IoTDA数据源详细配置内容
+// EdgeContentRsp IoTDA数据源详细配置内容
 type EdgeContentRsp struct {
 
 	// Edge实例Id

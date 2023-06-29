@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网络研讨会高级设置。
+// OpenRoomSettingVo 网络研讨会高级设置。
 type OpenRoomSettingVo struct {
 
 	// 网络研讨会介绍。

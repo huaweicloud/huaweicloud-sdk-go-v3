@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务器规格。
+// ServerModel 服务器规格。
 type ServerModel struct {
 
 	// 云手机服务器的规格名称，不超过64字节

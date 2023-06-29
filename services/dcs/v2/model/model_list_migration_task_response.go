@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMigrationTaskResponse Response Object
 type ListMigrationTaskResponse struct {
 
 	// 迁移任务数量。

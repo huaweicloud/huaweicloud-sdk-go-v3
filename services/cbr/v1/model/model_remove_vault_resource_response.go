@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemoveVaultResourceResponse Response Object
 type RemoveVaultResourceResponse struct {
 
 	// 移除的资源ID

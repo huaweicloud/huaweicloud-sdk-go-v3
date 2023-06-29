@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLoadbalancersByTagsResponse Response Object
 type ListLoadbalancersByTagsResponse struct {
 
 	// 总记录数。当resources为空时，表示名称为matches字段中指定的value的负载均衡器个数；resources不为空时，表示和tags字段匹配的负载均衡器的个数。

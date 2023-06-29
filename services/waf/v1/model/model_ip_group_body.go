@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ip地址组明细
+// IpGroupBody ip地址组明细
 type IpGroupBody struct {
 
 	// 地址组id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置多画面请求。
+// RestMixedPictureBody 设置多画面请求。
 type RestMixedPictureBody struct {
 
 	// 是否为手工设置多画面。 - 0: 系统自动多画面 - 1: 手工设置多画面

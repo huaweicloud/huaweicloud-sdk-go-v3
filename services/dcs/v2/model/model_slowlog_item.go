@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 慢日志单个条目
+// SlowlogItem 慢日志单个条目
 type SlowlogItem struct {
 
 	// 慢日志的唯一标识

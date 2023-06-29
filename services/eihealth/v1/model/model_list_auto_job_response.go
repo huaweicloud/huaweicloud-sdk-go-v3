@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAutoJobResponse Response Object
 type ListAutoJobResponse struct {
 
 	// 自动作业列表

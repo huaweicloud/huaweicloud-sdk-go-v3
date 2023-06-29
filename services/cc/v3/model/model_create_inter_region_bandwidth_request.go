@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateInterRegionBandwidthRequest Request Object
 type CreateInterRegionBandwidthRequest struct {
 	Body *CreateInterRegionBandwidthRequestBody `json:"body,omitempty"`
 }

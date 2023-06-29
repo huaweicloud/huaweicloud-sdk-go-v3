@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateV3Response Response Object
 type ShowTemplateV3Response struct {
 
 	// 模板id。

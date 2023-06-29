@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateResourceTagResponse Response Object
 type CreateResourceTagResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDelegatedAdministratorsRequest Request Object
 type ListDelegatedAdministratorsRequest struct {
 
 	// 服务主体的名称。

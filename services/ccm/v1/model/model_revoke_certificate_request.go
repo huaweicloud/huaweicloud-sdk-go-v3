@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RevokeCertificateRequest Request Object
 type RevokeCertificateRequest struct {
 
 	// 所要吊销的私有证书ID。

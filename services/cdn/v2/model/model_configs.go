@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置项。
+// Configs 配置项。
 type Configs struct {
 
 	// 回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。

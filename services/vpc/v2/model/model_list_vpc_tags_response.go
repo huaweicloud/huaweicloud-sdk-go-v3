@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcTagsResponse Response Object
 type ListVpcTagsResponse struct {
 
 	// tag对象列表

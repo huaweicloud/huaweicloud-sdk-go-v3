@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDefaultConfigRequest Request Object
 type CreateDefaultConfigRequest struct {
 	Body *DdosConfig `json:"body,omitempty"`
 }

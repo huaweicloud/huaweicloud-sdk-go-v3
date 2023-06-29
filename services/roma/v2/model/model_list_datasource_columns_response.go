@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDatasourceColumnsResponse Response Object
 type ListDatasourceColumnsResponse struct {
 
 	// 返回的实体对象

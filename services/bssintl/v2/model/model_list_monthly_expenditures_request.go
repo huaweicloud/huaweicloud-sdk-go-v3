@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMonthlyExpendituresRequest Request Object
 type ListMonthlyExpendituresRequest struct {
 
 	// 查询消费汇总账单所在的账期，格式为YYYY-MM。

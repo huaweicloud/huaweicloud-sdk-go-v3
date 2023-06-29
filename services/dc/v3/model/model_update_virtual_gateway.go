@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新虚拟网关参数
+// UpdateVirtualGateway 更新虚拟网关参数
 type UpdateVirtualGateway struct {
 
 	// 更新虚拟网关的名字

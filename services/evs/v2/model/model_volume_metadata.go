@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云硬盘的元数据。
+// VolumeMetadata 云硬盘的元数据。
 type VolumeMetadata struct {
 
 	// metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。

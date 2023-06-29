@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 阈值查询结果结构体
+// ThresholdData 阈值查询结果结构体
 type ThresholdData struct {
 
 	// 自定义接收方向阈值，单位为毫秒(ms)

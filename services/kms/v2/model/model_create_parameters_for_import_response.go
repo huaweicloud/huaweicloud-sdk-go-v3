@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateParametersForImportResponse Response Object
 type CreateParametersForImportResponse struct {
 
 	// 密钥ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowClusterResponse Response Object
 type ShowClusterResponse struct {
 
 	// 集群ID

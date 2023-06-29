@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BaremetalServerTag
 type BaremetalServerTag struct {
 
 	// 键。  - 最大长度127个unicode字符。  - key不能为空。

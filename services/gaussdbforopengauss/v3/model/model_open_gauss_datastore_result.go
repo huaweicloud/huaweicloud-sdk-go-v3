@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据库版本。不填时，默认为当前最新版本。  数据库支持版本可根据查询数据库引擎版本接口获取
+// OpenGaussDatastoreResult 数据库版本。不填时，默认为当前最新版本。  数据库支持版本可根据查询数据库引擎版本接口获取
 type OpenGaussDatastoreResult struct {
 
 	// 数据库引擎，不区分大小写，取值如下：  GaussDB
@@ -54,13 +54,18 @@ func (c OpenGaussDatastoreResultType) MarshalJSON() ([]byte, error) {
 
 func (c *OpenGaussDatastoreResultType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

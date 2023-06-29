@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCustomPropsTaskResultResponse Response Object
 type ShowCustomPropsTaskResultResponse struct {
 	Status *AsyncTaskStatus `json:"status,omitempty"`
 

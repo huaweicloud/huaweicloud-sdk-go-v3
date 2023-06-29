@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubCustomerCouponsRequest Request Object
 type ListSubCustomerCouponsRequest struct {
 
 	// 优惠券ID。

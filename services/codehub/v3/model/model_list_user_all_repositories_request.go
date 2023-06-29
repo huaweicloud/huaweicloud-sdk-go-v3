@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListUserAllRepositoriesRequest Request Object
 type ListUserAllRepositoriesRequest struct {
 
 	// 分页索引，从1开始计数

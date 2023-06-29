@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFsDirResponse Response Object
 type ShowFsDirResponse struct {
 
 	// 目录全路径

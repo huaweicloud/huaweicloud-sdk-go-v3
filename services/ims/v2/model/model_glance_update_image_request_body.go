@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 原生更新接口请求体
+// GlanceUpdateImageRequestBody 原生更新接口请求体
 type GlanceUpdateImageRequestBody struct {
 
 	// 所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
@@ -65,13 +65,18 @@ func (c GlanceUpdateImageRequestBodyOp) MarshalJSON() ([]byte, error) {
 
 func (c *GlanceUpdateImageRequestBodyOp) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

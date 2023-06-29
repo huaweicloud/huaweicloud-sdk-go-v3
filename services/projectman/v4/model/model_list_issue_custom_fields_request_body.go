@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询Scrum工作项的自定义字段，custom_fields和names的相关自定义字段都返回
+// ListIssueCustomFieldsRequestBody 查询Scrum工作项的自定义字段，custom_fields和names的相关自定义字段都返回
 type ListIssueCustomFieldsRequestBody struct {
 
 	// 自定义字段

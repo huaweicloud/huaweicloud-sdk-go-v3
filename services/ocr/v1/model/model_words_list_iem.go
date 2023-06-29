@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单元格内文字段列表。
+// WordsListIem 单元格内文字段列表。
 type WordsListIem struct {
 
 	// 文字块识别结果。

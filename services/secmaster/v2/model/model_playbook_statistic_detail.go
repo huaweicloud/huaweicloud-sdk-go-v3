@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// statistics of playbook
+// PlaybookStatisticDetail statistics of playbook
 type PlaybookStatisticDetail struct {
 
 	// 未审核剧本数量

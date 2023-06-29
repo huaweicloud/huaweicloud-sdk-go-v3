@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BackupReplicateReqBody
 type BackupReplicateReqBody struct {
 
 	// 复制的描述

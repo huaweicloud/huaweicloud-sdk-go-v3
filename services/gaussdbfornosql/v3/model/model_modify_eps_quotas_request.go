@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ModifyEpsQuotasRequest Request Object
 type ModifyEpsQuotasRequest struct {
 	Body *NoSqlModiflyEpsQuotasRequestBody `json:"body,omitempty"`
 }

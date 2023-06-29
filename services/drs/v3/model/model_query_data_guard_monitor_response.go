@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 容灾监控数据响应体
+// QueryDataGuardMonitorResponse 容灾监控数据响应体
 type QueryDataGuardMonitorResponse struct {
 
 	// 带宽。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CheckResultItemsBody
 type CheckResultItemsBody struct {
 
 	// 图片的URL路径。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPtrRecordsResponse Response Object
 type ListPtrRecordsResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 

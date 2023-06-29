@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteServiceSetUsingDeleteRequest Request Object
 type DeleteServiceSetUsingDeleteRequest struct {
 
 	// 服务集合id

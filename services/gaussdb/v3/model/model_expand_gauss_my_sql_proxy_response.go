@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandGaussMySqlProxyResponse Response Object
 type ExpandGaussMySqlProxyResponse struct {
 
 	// 任务ID。

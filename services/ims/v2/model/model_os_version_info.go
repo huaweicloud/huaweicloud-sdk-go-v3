@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作系统详情
+// OsVersionInfo 操作系统详情
 type OsVersionInfo struct {
 
 	// 操作系统的平台值

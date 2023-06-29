@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetTableColumnStatisticsResponse Response Object
 type SetTableColumnStatisticsResponse struct {
 	ColumnStatisticsDesc *TableColumnStatisticsDescription `json:"column_statistics_desc,omitempty"`
 

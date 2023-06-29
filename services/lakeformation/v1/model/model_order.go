@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 排列顺序
+// Order 排列顺序
 type Order struct {
 
 	// 列的名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGeoipRuleResponse Response Object
 type UpdateGeoipRuleResponse struct {
 
 	// 规则id

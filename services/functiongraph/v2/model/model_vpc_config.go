@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// vpc信息。
+// VpcConfig vpc信息。
 type VpcConfig struct {
 
 	// vpc名称。

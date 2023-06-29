@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApplicationEndpointsRequest Request Object
 type ListApplicationEndpointsRequest struct {
 
 	// Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。

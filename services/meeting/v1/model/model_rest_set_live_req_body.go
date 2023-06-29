@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启停会议直播请求。
+// RestSetLiveReqBody 启停会议直播请求。
 type RestSetLiveReqBody struct {
 
 	// 会议直播开关。默认值为0。 - 0: 停止会议直播 - 1: 启动会议直播

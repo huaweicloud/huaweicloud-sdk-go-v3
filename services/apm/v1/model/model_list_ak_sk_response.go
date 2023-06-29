@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAkSkResponse Response Object
 type ListAkSkResponse struct {
 	AccessAkSkModels *[]AccessAkskVo `json:"access_ak_sk_models,omitempty"`
 	HttpStatusCode   int             `json:"-"`

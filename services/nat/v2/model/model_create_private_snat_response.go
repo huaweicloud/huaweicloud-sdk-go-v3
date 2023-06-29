@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePrivateSnatResponse Response Object
 type CreatePrivateSnatResponse struct {
 	SnatRule *PrivateSnat `json:"snat_rule,omitempty"`
 

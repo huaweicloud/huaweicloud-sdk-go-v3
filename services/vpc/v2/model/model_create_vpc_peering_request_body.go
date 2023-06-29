@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateVpcPeeringRequestBody
 type CreateVpcPeeringRequestBody struct {
 	Peering *CreateVpcPeeringOption `json:"peering"`
 }

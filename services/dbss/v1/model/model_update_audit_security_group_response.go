@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAuditSecurityGroupResponse Response Object
 type UpdateAuditSecurityGroupResponse struct {
 
 	// 响应状态

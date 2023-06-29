@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询容灾信息返回体
+// DisasterRecoveryQueryResp 查询容灾信息返回体
 type DisasterRecoveryQueryResp struct {
 
 	// 容灾ID

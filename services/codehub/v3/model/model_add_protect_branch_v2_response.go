@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddProtectBranchV2Response Response Object
 type AddProtectBranchV2Response struct {
 	Error *Error `json:"error,omitempty"`
 

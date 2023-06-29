@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建弹性公网IP请求体。
+// CreatePublicIpRequestBody 创建弹性公网IP请求体。
 type CreatePublicIpRequestBody struct {
 	Publicip *CreatePublicIpOption `json:"publicip"`
 }

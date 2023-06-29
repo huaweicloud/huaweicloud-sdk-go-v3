@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateClusterTagRequest Request Object
 type CreateClusterTagRequest struct {
 
 	// 集群ID。

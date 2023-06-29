@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateImageHighresolutionMattingTaskRequest Request Object
 type CreateImageHighresolutionMattingTaskRequest struct {
 	Body *ImageHighresolutionMattingRequestBody `json:"body,omitempty"`
 }

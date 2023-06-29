@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 作业审核结果，当作业状态为succeeded时存在
+// VideoModerationResultResult 作业审核结果，当作业状态为succeeded时存在
 type VideoModerationResultResult struct {
 
 	// 视频审核结果是否通过。 block：包含敏感信息，不通过  review：需要人工复检 pass：不包含敏感信息，通过
@@ -65,13 +65,18 @@ func (c VideoModerationResultResultSuggestion) MarshalJSON() ([]byte, error) {
 
 func (c *VideoModerationResultResultSuggestion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

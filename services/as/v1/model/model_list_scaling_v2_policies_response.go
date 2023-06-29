@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScalingV2PoliciesResponse Response Object
 type ListScalingV2PoliciesResponse struct {
 
 	// 总记录数。

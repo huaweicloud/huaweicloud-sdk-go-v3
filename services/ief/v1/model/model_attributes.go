@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点属性
+// Attributes 节点属性
 type Attributes struct {
 
 	// 节点属性的key值，长度取值范围为1~128， 仅允许大小写英文字母、数字、下划线、中划线

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateAppQuotaWithAppResponse Response Object
 type DisassociateAppQuotaWithAppResponse struct {
 	HttpStatusCode int `json:"-"`
 }

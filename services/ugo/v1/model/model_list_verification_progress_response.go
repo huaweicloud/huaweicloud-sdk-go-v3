@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVerificationProgressResponse Response Object
 type ListVerificationProgressResponse struct {
 
 	// 对象总数。

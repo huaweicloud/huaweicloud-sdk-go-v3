@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListImageAutoSyncReposDetailsResponse Response Object
 type ListImageAutoSyncReposDetailsResponse struct {
 
 	// 镜像自动同步规则

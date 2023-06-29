@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例挂载信息结构
+// ProtectedInstanceAttachment 保护实例挂载信息结构
 type ProtectedInstanceAttachment struct {
 
 	// 复制对ID。

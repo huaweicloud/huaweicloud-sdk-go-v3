@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIterationV4Response Response Object
 type ShowIterationV4Response struct {
 
 	// 迭代结束时间，年-月-日

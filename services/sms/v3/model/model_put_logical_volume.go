@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改的逻辑卷信息
+// PutLogicalVolume 修改的逻辑卷信息
 type PutLogicalVolume struct {
 
 	// 逻辑卷ID

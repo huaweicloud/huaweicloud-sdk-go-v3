@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 内容对比详情信息体。
+// ContentCompareDetailInfo 内容对比详情信息体。
 type ContentCompareDetailInfo struct {
 
 	// 源库库名。

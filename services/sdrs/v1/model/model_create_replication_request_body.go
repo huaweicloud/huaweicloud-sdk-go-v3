@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建复制对请求体
+// CreateReplicationRequestBody 创建复制对请求体
 type CreateReplicationRequestBody struct {
 	Replication *CreateReplicationRequestParams `json:"replication"`
 }

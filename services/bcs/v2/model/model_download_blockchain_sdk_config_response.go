@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DownloadBlockchainSdkConfigResponse Response Object
 type DownloadBlockchainSdkConfigResponse struct {
 	HttpStatusCode int           `json:"-"`
 	Body           io.ReadCloser `json:"-" type:"stream"`

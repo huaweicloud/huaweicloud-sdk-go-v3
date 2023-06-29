@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLogHistogramResponse Response Object
 type ListLogHistogramResponse struct {
 
 	// 直方图结果

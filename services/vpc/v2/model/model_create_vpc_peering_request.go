@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVpcPeeringRequest Request Object
 type CreateVpcPeeringRequest struct {
 	Body *CreateVpcPeeringRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRoutesRequest Request Object
 type CreateRoutesRequest struct {
 
 	// 路由表ID

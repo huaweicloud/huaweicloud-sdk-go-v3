@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InviteOperateVideoRequest Request Object
 type InviteOperateVideoRequest struct {
 
 	// 会议ID。

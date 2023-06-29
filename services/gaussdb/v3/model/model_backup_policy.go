@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略信息。
+// BackupPolicy 备份策略信息。
 type BackupPolicy struct {
 
 	// 指定已生成的备份文件可以保存的天数。取值范围：1～732。

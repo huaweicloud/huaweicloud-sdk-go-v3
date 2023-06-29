@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CinderCreateVolumeTransferRequest Request Object
 type CinderCreateVolumeTransferRequest struct {
 	Body *CinderCreateVolumeTransferRequestBody `json:"body,omitempty"`
 }

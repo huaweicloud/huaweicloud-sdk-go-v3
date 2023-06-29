@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckAssetJobStatusRequest Request Object
 type CheckAssetJobStatusRequest struct {
 
 	// 实例ID

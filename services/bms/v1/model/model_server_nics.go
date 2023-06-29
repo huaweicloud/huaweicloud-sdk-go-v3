@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网卡Port ID
+// ServerNics 网卡Port ID
 type ServerNics struct {
 	Id string `json:"id"`
 }

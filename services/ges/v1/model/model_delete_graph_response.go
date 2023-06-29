@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteGraphResponse Response Object
 type DeleteGraphResponse struct {
 
 	// 删除图任务ID。请求失败时字段为空。 >可以查询jobId查看任务执行状态、获取返回结果

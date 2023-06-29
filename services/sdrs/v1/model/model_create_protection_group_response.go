@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateProtectionGroupResponse Response Object
 type CreateProtectionGroupResponse struct {
 
 	// 成功返回jobId信息

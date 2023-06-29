@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteServiceItemUsingDeleteResponse Response Object
 type DeleteServiceItemUsingDeleteResponse struct {
 	Data           *IdObject `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`

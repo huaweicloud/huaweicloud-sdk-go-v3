@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点网卡的描述信息。
+// NodeNicSpec 节点网卡的描述信息。
 type NodeNicSpec struct {
 	PrimaryNic *NicSpec `json:"primaryNic,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RebuildConfigResponse Response Object
 type RebuildConfigResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

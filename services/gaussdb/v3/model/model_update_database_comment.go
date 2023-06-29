@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库备注信息。
+// UpdateDatabaseComment 数据库备注信息。
 type UpdateDatabaseComment struct {
 
 	// 数据库名称。

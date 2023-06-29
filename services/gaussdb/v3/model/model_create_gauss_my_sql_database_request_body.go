@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建数据库请求体。
+// CreateGaussMySqlDatabaseRequestBody 创建数据库请求体。
 type CreateGaussMySqlDatabaseRequestBody struct {
 	Databases []CreateGaussMySqlDatabase `json:"databases"`
 }

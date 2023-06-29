@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddEipV2Response Response Object
 type AddEipV2Response struct {
 
 	// 弹性公网IP编号

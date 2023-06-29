@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 增加磁盘请求。
+// AddDesktopsVolumesReq 增加磁盘请求。
 type AddDesktopsVolumesReq struct {
 
 	// 新增磁盘参数。

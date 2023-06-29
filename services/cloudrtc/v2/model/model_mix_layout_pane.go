@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 录制视频混流参数。  用法如下：  如果某窗格需要展示某个固定用户的视频：  例如:{ \"id\": 1, \"user_id\": \"user001\", \"video_type\": \"CAMERASTREAM\" }  如果某窗格需要展示某个固定用户的共享屏幕：  例如:{ \"id\": 1, \"user_id\": \"user001\", \"video_type\": \"SCREENSTREAM\" }  如果某窗格需要展示共享桌面，不特定用户：  例如:{ \"id\": 1,  \"video_type\": \"SCREENSTREAM\"}
+// MixLayoutPane 录制视频混流参数。  用法如下：  如果某窗格需要展示某个固定用户的视频：  例如:{ \"id\": 1, \"user_id\": \"user001\", \"video_type\": \"CAMERASTREAM\" }  如果某窗格需要展示某个固定用户的共享屏幕：  例如:{ \"id\": 1, \"user_id\": \"user001\", \"video_type\": \"SCREENSTREAM\" }  如果某窗格需要展示共享桌面，不特定用户：  例如:{ \"id\": 1,  \"video_type\": \"SCREENSTREAM\"}
 type MixLayoutPane struct {
 
 	// 窗口id，从1开始编号
@@ -82,13 +82,18 @@ func (c MixLayoutPaneVideoType) MarshalJSON() ([]byte, error) {
 
 func (c *MixLayoutPaneVideoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -124,13 +129,18 @@ func (c MixLayoutPaneCropMode) MarshalJSON() ([]byte, error) {
 
 func (c *MixLayoutPaneCropMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -166,13 +176,18 @@ func (c MixLayoutPaneFillingPolicy) MarshalJSON() ([]byte, error) {
 
 func (c *MixLayoutPaneFillingPolicy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

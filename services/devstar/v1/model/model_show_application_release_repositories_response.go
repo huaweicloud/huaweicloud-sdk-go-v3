@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplicationReleaseRepositoriesResponse Response Object
 type ShowApplicationReleaseRepositoriesResponse struct {
 
 	// 软件包列表

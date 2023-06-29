@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEntitiesForPolicyRequest Request Object
 type ListEntitiesForPolicyRequest struct {
 
 	// 策略的唯一标识符（ID）。

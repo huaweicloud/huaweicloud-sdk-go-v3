@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库对象信息
+// DatabaseObjectInfo 数据库对象信息
 type DatabaseObjectInfo struct {
 
 	// type为database时，为库名；type为table或者view时，字段值参考示例

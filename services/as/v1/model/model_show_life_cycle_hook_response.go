@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLifeCycleHookResponse Response Object
 type ShowLifeCycleHookResponse struct {
 
 	// 生命周期挂钩名称。
@@ -77,13 +77,18 @@ func (c ShowLifeCycleHookResponseLifecycleHookType) MarshalJSON() ([]byte, error
 
 func (c *ShowLifeCycleHookResponseLifecycleHookType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -119,13 +124,18 @@ func (c ShowLifeCycleHookResponseDefaultResult) MarshalJSON() ([]byte, error) {
 
 func (c *ShowLifeCycleHookResponseDefaultResult) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

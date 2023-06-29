@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 灾备初始化进度信息体
+// StructProcessVo 灾备初始化进度信息体
 type StructProcessVo struct {
 
 	// 对象类型

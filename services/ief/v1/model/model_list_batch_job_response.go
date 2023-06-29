@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBatchJobResponse Response Object
 type ListBatchJobResponse struct {
 
 	// 数目

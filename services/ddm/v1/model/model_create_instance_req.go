@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateInstanceReq This is a auto create Body Object
 type CreateInstanceReq struct {
 	Instance *CreateInstanceDetail `json:"instance"`
 

@@ -48,6 +48,8 @@ func TestProfileProvider_GetRegion(t *testing.T) {
 
 	file, err := os.Create(path)
 	assert.Nil(t, err)
+	err = file.Chmod(0600)
+	assert.Nil(t, err)
 	_, err = file.WriteString(regionStr)
 	assert.Nil(t, err)
 	err = file.Close()

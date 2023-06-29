@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 资源类型。  基础资源：cce、cci、ecs、as。  可选资源：rds、dcs、elb等其他类型。
+// ResourceType 资源类型。  基础资源：cce、cci、ecs、as。  可选资源：rds、dcs、elb等其他类型。
 type ResourceType struct {
 	value string
 }
@@ -80,13 +80,18 @@ func (c ResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *ResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

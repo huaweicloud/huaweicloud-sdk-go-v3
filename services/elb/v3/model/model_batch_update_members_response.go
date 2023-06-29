@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdateMembersResponse Response Object
 type BatchUpdateMembersResponse struct {
 
 	// 请求ID。  注：自动生成 。

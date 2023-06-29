@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格信息。
+// FlavorResult 规格信息。
 type FlavorResult struct {
 
 	// CPU个数。

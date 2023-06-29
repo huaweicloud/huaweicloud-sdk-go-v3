@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 账号
+// DomainDto 账号
 type DomainDto struct {
 
 	// 账号id

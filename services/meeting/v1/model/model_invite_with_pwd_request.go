@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InviteWithPwdRequest Request Object
 type InviteWithPwdRequest struct {
 
 	// 会议ID。

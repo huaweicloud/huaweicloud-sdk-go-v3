@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFlavorsResponse Response Object
 type ListFlavorsResponse struct {
 
 	// 计算类型规格组。

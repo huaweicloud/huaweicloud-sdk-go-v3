@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCriteriasResponse Response Object
 type ListCriteriasResponse struct {
 	SearchCriterias *[]GetQuerySearchCriteriasBody `json:"search_criterias,omitempty"`
 	HttpStatusCode  int                            `json:"-"`

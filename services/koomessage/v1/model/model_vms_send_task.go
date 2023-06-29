@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 智能信息基础版任务详情。
+// VmsSendTask 智能信息基础版任务详情。
 type VmsSendTask struct {
 
 	// 智能信息基础版任务ID。

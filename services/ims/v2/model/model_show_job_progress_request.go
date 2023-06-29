@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowJobProgressRequest Request Object
 type ShowJobProgressRequest struct {
 
 	// 异步任务ID

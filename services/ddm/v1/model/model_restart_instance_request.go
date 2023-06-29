@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestartInstanceRequest Request Object
 type RestartInstanceRequest struct {
 
 	// DDM实例ID

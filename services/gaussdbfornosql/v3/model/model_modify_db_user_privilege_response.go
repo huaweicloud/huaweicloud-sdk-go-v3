@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ModifyDbUserPrivilegeResponse Response Object
 type ModifyDbUserPrivilegeResponse struct {
 
 	// 任务ID.

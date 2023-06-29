@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnvironmentsRequest Request Object
 type ListEnvironmentsRequest struct {
 
 	// 租户的企业项目id。

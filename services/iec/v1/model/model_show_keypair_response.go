@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowKeypairResponse Response Object
 type ShowKeypairResponse struct {
 
 	// 密钥名称。

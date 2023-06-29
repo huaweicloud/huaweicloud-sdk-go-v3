@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSyncCommandResponse Response Object
 type RunSyncCommandResponse struct {
 
 	// 请求的唯一标识ID。

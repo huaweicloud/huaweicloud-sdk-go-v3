@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopTaskResponse Response Object
 type StopTaskResponse struct {
 
 	// 手工启动/停止任务成功返回消息

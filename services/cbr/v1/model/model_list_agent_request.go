@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAgentRequest Request Object
 type ListAgentRequest struct {
 
 	// 每页显示条目数，正整数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MoveLakeFormationInstanceOutRecycleBinRequest Request Object
 type MoveLakeFormationInstanceOutRecycleBinRequest struct {
 
 	// LakeFormation实例ID

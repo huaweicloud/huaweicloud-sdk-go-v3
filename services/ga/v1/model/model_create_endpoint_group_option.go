@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建终端节点组的详细信息。
+// CreateEndpointGroupOption 创建终端节点组的详细信息。
 type CreateEndpointGroupOption struct {
 
 	// 终端节点组名称，取值范围：1~64个字符之间，只能由数字、字母、中划线和中文组成。

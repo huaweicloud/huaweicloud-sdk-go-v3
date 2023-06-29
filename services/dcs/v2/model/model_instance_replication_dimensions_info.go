@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控指标维度对象信息
+// InstanceReplicationDimensionsInfo 监控指标维度对象信息
 type InstanceReplicationDimensionsInfo struct {
 
 	// 监控维度名称

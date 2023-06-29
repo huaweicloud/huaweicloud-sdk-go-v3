@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ParseCertificateSigningRequestRequest Request Object
 type ParseCertificateSigningRequestRequest struct {
 	Body *ParseCertificateSigningRequestRequestBody `json:"body,omitempty"`
 }

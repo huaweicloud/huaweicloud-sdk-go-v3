@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddUserResponse Response Object
 type AddUserResponse struct {
 
 	// 用户UUID。

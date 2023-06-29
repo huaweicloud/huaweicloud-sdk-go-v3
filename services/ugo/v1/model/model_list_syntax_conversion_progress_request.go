@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSyntaxConversionProgressRequest Request Object
 type ListSyntaxConversionProgressRequest struct {
 
 	// 迁移项目ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ServerResource
 type ServerResource struct {
 
 	// 云服务器ID。

@@ -8,7 +8,7 @@ import (
 
 type UpdateDomainSettingsRequestBody struct {
 
-	// 域名id
+	// 网站域名ID
 	DomainId *string `json:"domain_id,omitempty"`
 
 	// 网站需要登录时，设置登录页面

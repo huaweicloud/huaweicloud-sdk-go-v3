@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteApiAclBindingV2Request Request Object
 type BatchDeleteApiAclBindingV2Request struct {
 
 	// 实例ID

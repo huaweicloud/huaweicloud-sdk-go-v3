@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProjectDemandStaticV4Response Response Object
 type ListProjectDemandStaticV4Response struct {
 
 	// 需求统计

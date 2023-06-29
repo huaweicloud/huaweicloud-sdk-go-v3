@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCertificateAuthorityResponse Response Object
 type ListCertificateAuthorityResponse struct {
 
 	// CA证书总数。

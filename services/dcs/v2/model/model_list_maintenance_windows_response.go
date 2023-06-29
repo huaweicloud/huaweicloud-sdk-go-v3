@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMaintenanceWindowsResponse Response Object
 type ListMaintenanceWindowsResponse struct {
 
 	// 支持的维护时间窗列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PubRequestBody
+// PubInfoRequestBody PubRequestBody
 type PubInfoRequestBody struct {
 
 	// 服务号LOGO图片ID。  > 通过上传智能信息服务号图片资源接口上传LOGO图片后获得的图片resource_id。图片要求大于等于240*240且比例相同。

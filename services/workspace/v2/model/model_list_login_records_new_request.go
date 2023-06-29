@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLoginRecordsNewRequest Request Object
 type ListLoginRecordsNewRequest struct {
 
 	// 查询的起始时间。指定该参数后，返回的结果为此时间之后的所有登录记录。时间格式如：“2016-08-20T21:11Z”。终止时间不为空时，起始时间为必填参数。
@@ -24,7 +24,7 @@ type ListLoginRecordsNewRequest struct {
 	// 登录桌面的终端系统类型，当前支持：WI（云桌面客户端）。
 	TerminalType *string `json:"terminal_type,omitempty"`
 
-	// 用于分页查询，取值范围0-255，默认值20。
+	// 用于分页查询，取值范围0-100，默认值20。
 	Limit *string `json:"limit,omitempty"`
 
 	// 用于分页查询，查询的起始记录序号，从0开始。

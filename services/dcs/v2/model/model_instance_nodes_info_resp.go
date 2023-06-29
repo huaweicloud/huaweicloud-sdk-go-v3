@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例信息响应体
+// InstanceNodesInfoResp 实例信息响应体
 type InstanceNodesInfoResp struct {
 
 	// 实例ID

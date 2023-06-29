@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Info of Dataclass Type
+// DataClassTypeDetailInfo Info of Dataclass Type
 type DataClassTypeDetailInfo struct {
 
 	// Id value

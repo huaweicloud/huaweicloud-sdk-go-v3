@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateScalingTagInfoRequest Request Object
 type CreateScalingTagInfoRequest struct {
 
 	// 资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
@@ -56,13 +56,18 @@ func (c CreateScalingTagInfoRequestResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateScalingTagInfoRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

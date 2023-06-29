@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建notebook请求体
+// CreateNotebookReq 创建notebook请求体
 type CreateNotebookReq struct {
 
 	// 描述信息，取值范围[0,1024]

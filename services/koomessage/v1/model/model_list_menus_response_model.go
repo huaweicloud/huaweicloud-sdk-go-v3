@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询菜单返回体。
+// ListMenusResponseModel 查询菜单返回体。
 type ListMenusResponseModel struct {
 
 	// 菜单信息。

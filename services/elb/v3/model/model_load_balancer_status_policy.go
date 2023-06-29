@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LB状态树的转发策略状态信息
+// LoadBalancerStatusPolicy LB状态树的转发策略状态信息
 type LoadBalancerStatusPolicy struct {
 
 	// 匹配后动作。  取值： - REDIRECT_TO_POOL：转发到后端服务器组。 - REDIRECT_TO_LISTENER：转发到监听器。

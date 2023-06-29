@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStackResourcesResponse Response Object
 type ListStackResourcesResponse struct {
 
 	// 资源栈中所管理的资源信息列表

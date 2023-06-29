@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建study作业请求体
+// CreateStudyJobReq 创建study作业请求体
 type CreateStudyJobReq struct {
 
 	// workflow作业id

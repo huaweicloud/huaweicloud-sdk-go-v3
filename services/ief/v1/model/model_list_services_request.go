@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListServicesRequest Request Object
 type ListServicesRequest struct {
 
 	// 指定分页查询每页的行数，最大为100，默认值为10。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteJobResponse Response Object
 type BatchDeleteJobResponse struct {
 	Body           *[]BatchOperateJobRsp `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`

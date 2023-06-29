@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUpgradeClusterTaskResponse Response Object
 type ShowUpgradeClusterTaskResponse struct {
 
 	// api版本，默认为v3

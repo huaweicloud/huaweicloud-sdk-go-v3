@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeAlertRequest Request Object
 type ChangeAlertRequest struct {
 
 	// application/json;charset=UTF-8

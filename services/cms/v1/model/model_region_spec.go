@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 一个区域内的资源需求描述
+// RegionSpec 一个区域内的资源需求描述
 type RegionSpec struct {
 
 	// 区域ID

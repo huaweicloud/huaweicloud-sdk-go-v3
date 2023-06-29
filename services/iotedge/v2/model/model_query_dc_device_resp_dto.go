@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询数采设备响应结构体
+// QueryDcDeviceRespDto 查询数采设备响应结构体
 type QueryDcDeviceRespDto struct {
 
 	// 设备id

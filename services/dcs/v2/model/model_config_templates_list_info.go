@@ -37,6 +37,9 @@ type ConfigTemplatesListInfo struct {
 
 	// 模板类型
 	Type *string `json:"type,omitempty"`
+
+	// 模板创建时间，仅在自定义参数模板中有意义，格式例如：2023-05-10T11:09:35.802Z
+	CreatedAt *string `json:"created_at,omitempty"`
 }
 
 func (o ConfigTemplatesListInfo) String() string {
@@ -78,13 +81,18 @@ func (c ConfigTemplatesListInfoProductType) MarshalJSON() ([]byte, error) {
 
 func (c *ConfigTemplatesListInfoProductType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -120,13 +128,18 @@ func (c ConfigTemplatesListInfoStorageType) MarshalJSON() ([]byte, error) {
 
 func (c *ConfigTemplatesListInfoStorageType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

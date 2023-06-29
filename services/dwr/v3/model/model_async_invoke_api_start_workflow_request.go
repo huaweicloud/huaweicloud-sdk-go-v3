@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AsyncInvokeApiStartWorkflowRequest Request Object
 type AsyncInvokeApiStartWorkflowRequest struct {
 
 	// 工作流名称。

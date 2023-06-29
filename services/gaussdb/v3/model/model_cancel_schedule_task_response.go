@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelScheduleTaskResponse Response Object
 type CancelScheduleTaskResponse struct {
 
 	// 任务ID，表示成功取消定时调度任务的ID。

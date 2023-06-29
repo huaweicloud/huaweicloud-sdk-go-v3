@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 灾备初始化对象详情信息
+// QueryFlowCompareDataResp 灾备初始化对象详情信息
 type QueryFlowCompareDataResp struct {
 
 	// 任务总数

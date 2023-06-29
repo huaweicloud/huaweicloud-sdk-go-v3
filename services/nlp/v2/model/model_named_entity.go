@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 命名实体。
+// NamedEntity 命名实体。
 type NamedEntity struct {
 
 	// 实体文本。

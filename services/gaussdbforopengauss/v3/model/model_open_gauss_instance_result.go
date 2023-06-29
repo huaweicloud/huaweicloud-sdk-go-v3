@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例信息。
+// OpenGaussInstanceResult 实例信息。
 type OpenGaussInstanceResult struct {
 
 	// 实例ID。

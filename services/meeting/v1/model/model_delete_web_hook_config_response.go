@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteWebHookConfigResponse Response Object
 type DeleteWebHookConfigResponse struct {
 	HttpStatusCode int `json:"-"`
 }

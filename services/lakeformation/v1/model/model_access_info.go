@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 接入信息
+// AccessInfo 接入信息
 type AccessInfo struct {
 
 	// 服务名称

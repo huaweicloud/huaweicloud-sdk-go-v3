@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateIndicatorRequest Request Object
 type UpdateIndicatorRequest struct {
 
 	// application/json;charset=UTF-8

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例的详细信息
+// OverrideInfo 实例的详细信息
 type OverrideInfo struct {
 
 	// 可用区ID

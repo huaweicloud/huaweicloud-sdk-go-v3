@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckApiGroupsV2Response Response Object
 type CheckApiGroupsV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

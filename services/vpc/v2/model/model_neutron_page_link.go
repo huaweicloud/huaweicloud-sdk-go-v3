@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronPageLink
 type NeutronPageLink struct {
 
 	// API链接

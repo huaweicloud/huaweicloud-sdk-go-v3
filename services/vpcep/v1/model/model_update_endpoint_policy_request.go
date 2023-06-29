@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEndpointPolicyRequest Request Object
 type UpdateEndpointPolicyRequest struct {
 
 	// 终端节点的ID。

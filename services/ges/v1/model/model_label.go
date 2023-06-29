@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// GES 元数据中lable类型
+// Label GES 元数据中lable类型
 type Label struct {
 
 	// Label名称。

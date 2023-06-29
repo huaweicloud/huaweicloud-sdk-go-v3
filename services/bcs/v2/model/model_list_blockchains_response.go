@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBlockchainsResponse Response Object
 type ListBlockchainsResponse struct {
 
 	// 服务实例简要信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// app详情
+// AppVersionDetail app详情
 type AppVersionDetail struct {
 
 	// 应用版本ID

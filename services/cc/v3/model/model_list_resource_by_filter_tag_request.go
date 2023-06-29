@@ -9,10 +9,10 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceByFilterTagRequest Request Object
 type ListResourceByFilterTagRequest struct {
 
-	// 资源类型: - cc: 云连接 - bwp: 带宽包
+	// 资源类型: - cloud-connection: 云连接 - bandwidth-package: 带宽包
 	ResourceType ListResourceByFilterTagRequestResourceType `json:"resource_type"`
 
 	Body *ListResourceByFilterTagRequestBody `json:"body,omitempty"`
@@ -32,17 +32,17 @@ type ListResourceByFilterTagRequestResourceType struct {
 }
 
 type ListResourceByFilterTagRequestResourceTypeEnum struct {
-	CC  ListResourceByFilterTagRequestResourceType
-	BWP ListResourceByFilterTagRequestResourceType
+	CLOUD_CONNECTION  ListResourceByFilterTagRequestResourceType
+	BANDWIDTH_PACKAGE ListResourceByFilterTagRequestResourceType
 }
 
 func GetListResourceByFilterTagRequestResourceTypeEnum() ListResourceByFilterTagRequestResourceTypeEnum {
 	return ListResourceByFilterTagRequestResourceTypeEnum{
-		CC: ListResourceByFilterTagRequestResourceType{
-			value: "cc",
+		CLOUD_CONNECTION: ListResourceByFilterTagRequestResourceType{
+			value: "cloud-connection",
 		},
-		BWP: ListResourceByFilterTagRequestResourceType{
-			value: "bwp",
+		BANDWIDTH_PACKAGE: ListResourceByFilterTagRequestResourceType{
+			value: "bandwidth-package",
 		},
 	}
 }
@@ -57,13 +57,18 @@ func (c ListResourceByFilterTagRequestResourceType) MarshalJSON() ([]byte, error
 
 func (c *ListResourceByFilterTagRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

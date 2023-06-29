@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCompetitionScoreResponse Response Object
 type CreateCompetitionScoreResponse struct {
 
 	// 作品ID

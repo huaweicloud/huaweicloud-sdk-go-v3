@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子搜索任务的请求体
+// SearchTaskData 分子搜索任务的请求体
 type SearchTaskData struct {
 
 	// 分子SMILES表达式

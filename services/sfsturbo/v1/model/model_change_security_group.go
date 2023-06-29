@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要修改的目标安全组ID
+// ChangeSecurityGroup 需要修改的目标安全组ID
 type ChangeSecurityGroup struct {
 
 	// 需要修改的目标安全组ID。

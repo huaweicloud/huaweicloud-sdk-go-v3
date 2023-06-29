@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 提交异步任务响应体。
+// AsyncCommitJobResp 提交异步任务响应体。
 type AsyncCommitJobResp struct {
 
 	// 批量异步任务ID。

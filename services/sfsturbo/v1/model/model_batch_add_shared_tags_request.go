@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddSharedTagsRequest Request Object
 type BatchAddSharedTagsRequest struct {
 
 	// MIME类型

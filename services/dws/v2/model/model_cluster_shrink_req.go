@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群缩容请求
+// ClusterShrinkReq 集群缩容请求
 type ClusterShrinkReq struct {
 
 	// 缩容数

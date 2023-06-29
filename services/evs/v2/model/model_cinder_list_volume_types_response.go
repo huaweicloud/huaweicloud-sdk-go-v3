@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CinderListVolumeTypesResponse Response Object
 type CinderListVolumeTypesResponse struct {
 	VolumeTypes    *[]VolumeType `json:"volume_types,omitempty"`
 	HttpStatusCode int           `json:"-"`

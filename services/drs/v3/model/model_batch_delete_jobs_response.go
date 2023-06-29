@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteJobsResponse Response Object
 type BatchDeleteJobsResponse struct {
 
 	// 批量结束任务或删除任务的响应体集合。

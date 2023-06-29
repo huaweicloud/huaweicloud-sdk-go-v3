@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输入数据的配置信息
+// TaskInputData 输入数据的配置信息
 type TaskInputData struct {
 
 	// VIS的视频流名称，当输入为vis类型时必选

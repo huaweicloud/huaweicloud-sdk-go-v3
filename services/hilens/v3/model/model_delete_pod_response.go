@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeletePodResponse Response Object
 type DeletePodResponse struct {
 
 	// pod的ID

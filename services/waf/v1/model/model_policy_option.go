@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 防护策略检测模块开关选项，如是否开启Web基础防护等
+// PolicyOption 防护策略检测模块开关选项，如是否开启Web基础防护等
 type PolicyOption struct {
 
 	// 基础防护是否开启

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadSpecialConfigurationSettingRequest Request Object
 type UploadSpecialConfigurationSettingRequest struct {
 
 	// 任务id

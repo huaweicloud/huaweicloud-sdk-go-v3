@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowHdfsFileListResponse Response Object
 type ShowHdfsFileListResponse struct {
 
 	// 文件总数，与分页无关。

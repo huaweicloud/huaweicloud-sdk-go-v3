@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主页催审返回体。
+// PushPortalInfoResponseModel 主页催审返回体。
 type PushPortalInfoResponseModel struct {
 	Data *PushPortalInfoResponseModelData `json:"data,omitempty"`
 }

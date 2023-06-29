@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTagsByResourceTypeRequest Request Object
 type ListTagsByResourceTypeRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

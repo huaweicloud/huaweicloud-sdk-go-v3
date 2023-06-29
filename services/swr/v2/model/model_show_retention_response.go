@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRetentionResponse Response Object
 type ShowRetentionResponse struct {
 
 	// 回收规则匹配策略，or

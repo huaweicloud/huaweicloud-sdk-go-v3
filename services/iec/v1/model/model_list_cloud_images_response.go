@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCloudImagesResponse Response Object
 type ListCloudImagesResponse struct {
 
 	// 查询返回的镜像列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息
+// QueryQuotaInfo 配额信息
 type QueryQuotaInfo struct {
 	Resource *QuotaResource `json:"resource,omitempty"`
 }

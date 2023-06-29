@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEventDetailResponse Response Object
 type ShowEventDetailResponse struct {
 	EventInfo      *SpanEventInfo `json:"event_info,omitempty"`
 	HttpStatusCode int            `json:"-"`

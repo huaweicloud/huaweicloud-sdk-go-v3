@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateWebHookConfigStatusRequest Request Object
 type UpdateWebHookConfigStatusRequest struct {
 
 	// 订阅配置记录ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStreamPortraitResponse Response Object
 type ShowStreamPortraitResponse struct {
 
 	// 播放画像信息列表。

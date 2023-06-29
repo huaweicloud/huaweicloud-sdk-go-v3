@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAlertNoticeConfigResponse Response Object
 type UpdateAlertNoticeConfigResponse struct {
 
 	// ID

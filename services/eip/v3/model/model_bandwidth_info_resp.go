@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 公网IP绑定的带宽信息
+// BandwidthInfoResp 公网IP绑定的带宽信息
 type BandwidthInfoResp struct {
 
 	// 带宽名称
@@ -64,13 +64,18 @@ func (c BandwidthInfoRespBandwidthType) MarshalJSON() ([]byte, error) {
 
 func (c *BandwidthInfoRespBandwidthType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

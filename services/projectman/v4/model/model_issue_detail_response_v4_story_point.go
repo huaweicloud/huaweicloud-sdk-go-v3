@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 故事点
+// IssueDetailResponseV4StoryPoint 故事点
 type IssueDetailResponseV4StoryPoint struct {
 
 	// 故事点id

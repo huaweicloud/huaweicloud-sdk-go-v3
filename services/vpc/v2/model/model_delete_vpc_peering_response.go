@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteVpcPeeringResponse Response Object
 type DeleteVpcPeeringResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加设备结构体。
+// AddDeviceRequestBody 添加设备结构体。
 type AddDeviceRequestBody struct {
 
 	// 设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。（注意:NB设备由于模组烧录信息后无法配置，所以NB设备会校验node_id全局唯一。）

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLoadbalancerRequest Request Object
 type DeleteLoadbalancerRequest struct {
 
 	// 负载均衡器id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCertificateV2Request Request Object
 type UpdateCertificateV2Request struct {
 
 	// 证书的编号

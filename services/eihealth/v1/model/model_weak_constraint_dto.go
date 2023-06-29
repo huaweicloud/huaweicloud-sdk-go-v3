@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子约束
+// WeakConstraintDto 分子约束
 type WeakConstraintDto struct {
 
 	// 属性名称

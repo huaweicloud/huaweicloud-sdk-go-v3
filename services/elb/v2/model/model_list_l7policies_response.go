@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListL7policiesResponse Response Object
 type ListL7policiesResponse struct {
 
 	// 转发策略对象的列表

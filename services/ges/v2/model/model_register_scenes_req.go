@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RegisterScenes请求体
+// RegisterScenesReq RegisterScenes请求体
 type RegisterScenesReq struct {
 
 	// 要订阅的具体场景。

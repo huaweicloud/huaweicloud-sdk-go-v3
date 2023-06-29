@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteWorkloadQueueResponse Response Object
 type DeleteWorkloadQueueResponse struct {
 
 	// 响应编码。

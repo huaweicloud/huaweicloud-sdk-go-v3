@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateOrderFormRequest Request Object
 type CreateOrderFormRequest struct {
 	Body *CreateSkillOrderFrom `json:"body,omitempty"`
 }

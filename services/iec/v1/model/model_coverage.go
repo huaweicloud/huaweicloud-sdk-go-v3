@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 覆盖策略对象
+// Coverage 覆盖策略对象
 type Coverage struct {
 
 	// 区域调度策略，只支持centralize/discrete。  - centralize：代表城市集中策略，指定该策略，边缘业务创建时会保证将所有实例都发放在同一个站点。 - discrete：代表城市分散，指定该策略，边缘业务创建时，尽量保证所有实例都分散发放在不同站点。

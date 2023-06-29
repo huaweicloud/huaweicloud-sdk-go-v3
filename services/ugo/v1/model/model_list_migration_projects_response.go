@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMigrationProjectsResponse Response Object
 type ListMigrationProjectsResponse struct {
 
 	// 当前页的迁移项目列表。

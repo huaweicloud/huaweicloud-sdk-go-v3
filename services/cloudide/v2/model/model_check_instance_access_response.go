@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckInstanceAccessResponse Response Object
 type CheckInstanceAccessResponse struct {
 
 	// 返回值

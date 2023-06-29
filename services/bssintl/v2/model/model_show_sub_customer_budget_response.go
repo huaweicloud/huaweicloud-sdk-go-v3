@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSubCustomerBudgetResponse Response Object
 type ShowSubCustomerBudgetResponse struct {
 
 	// 初始预算金额。

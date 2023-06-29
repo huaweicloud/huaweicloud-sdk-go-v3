@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTriggerResponse Response Object
 type ShowTriggerResponse struct {
 
 	// 触发动作，update

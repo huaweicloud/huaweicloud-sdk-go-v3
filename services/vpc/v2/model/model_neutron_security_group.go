@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronSecurityGroup
 type NeutronSecurityGroup struct {
 
 	// 功能说明：安全组描述 取值范围：0-255个字符

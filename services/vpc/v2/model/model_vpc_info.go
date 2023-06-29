@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// VpcInfo
 type VpcInfo struct {
 
 	// 对等连接其中一端vpc ID

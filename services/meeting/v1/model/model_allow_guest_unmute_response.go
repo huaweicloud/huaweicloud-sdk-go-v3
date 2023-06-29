@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AllowGuestUnmuteResponse Response Object
 type AllowGuestUnmuteResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级任务属性
+// UpgradeTaskSpec 升级任务属性
 type UpgradeTaskSpec struct {
 
 	// 升级前集群版本

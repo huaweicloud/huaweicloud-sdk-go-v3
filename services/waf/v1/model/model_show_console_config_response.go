@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConsoleConfigResponse Response Object
 type ShowConsoleConfigResponse struct {
 
 	// 是否支持EPS，false：不支持；true：支持

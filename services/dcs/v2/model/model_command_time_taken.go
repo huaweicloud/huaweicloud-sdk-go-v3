@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 命令耗时统计
+// CommandTimeTaken 命令耗时统计
 type CommandTimeTaken struct {
 
 	// 调用次数

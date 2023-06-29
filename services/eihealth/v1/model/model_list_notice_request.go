@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNoticeRequest Request Object
 type ListNoticeRequest struct {
 
 	// 消息状态是否已读，true返回已读，false返回未读，不填返回全部

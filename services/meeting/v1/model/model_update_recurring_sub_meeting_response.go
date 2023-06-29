@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateRecurringSubMeetingResponse Response Object
 type UpdateRecurringSubMeetingResponse struct {
 	HttpStatusCode int `json:"-"`
 }

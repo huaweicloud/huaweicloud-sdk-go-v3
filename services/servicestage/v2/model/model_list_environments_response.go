@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnvironmentsResponse Response Object
 type ListEnvironmentsResponse struct {
 
 	// 环境总数。

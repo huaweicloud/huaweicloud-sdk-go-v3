@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopMigrationTaskSyncResponse Response Object
 type StopMigrationTaskSyncResponse struct {
 	HttpStatusCode int `json:"-"`
 }

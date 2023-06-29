@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数流节点错误信息
+// SyncExecutionNodeErrorDetail 函数流节点错误信息
 type SyncExecutionNodeErrorDetail struct {
 
 	// 流程节点ID

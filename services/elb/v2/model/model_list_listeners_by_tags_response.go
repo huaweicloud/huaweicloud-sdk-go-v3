@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListListenersByTagsResponse Response Object
 type ListListenersByTagsResponse struct {
 
 	// 总记录数。当resources为空时，表示名称为matches字段中指定的value的资源个数；resources不为空时，表示和tags字段匹配的资源的个数。

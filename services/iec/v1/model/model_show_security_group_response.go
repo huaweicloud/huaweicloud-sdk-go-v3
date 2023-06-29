@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSecurityGroupResponse Response Object
 type ShowSecurityGroupResponse struct {
 	SecurityGroup  *SecurityGroup `json:"security_group,omitempty"`
 	HttpStatusCode int            `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRuntimesResponse Response Object
 type ListRuntimesResponse struct {
 
 	// 运行时列表。

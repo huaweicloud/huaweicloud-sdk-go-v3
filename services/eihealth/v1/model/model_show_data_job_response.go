@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDataJobResponse Response Object
 type ShowDataJobResponse struct {
 
 	// 已完成的数据列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckVerifyCodeResponse Response Object
 type CheckVerifyCodeResponse struct {
 
 	// 访问token字符串。

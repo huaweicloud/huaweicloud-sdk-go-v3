@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteGetCharactersRequest Request Object
 type ExecuteGetCharactersRequest struct {
 	Offset *string `json:"offset,omitempty"`
 

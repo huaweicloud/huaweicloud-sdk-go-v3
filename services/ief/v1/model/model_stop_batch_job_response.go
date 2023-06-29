@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopBatchJobResponse Response Object
 type StopBatchJobResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

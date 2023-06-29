@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMetadataLocksResponse Response Object
 type ListMetadataLocksResponse struct {
 
 	// 元数据锁列表

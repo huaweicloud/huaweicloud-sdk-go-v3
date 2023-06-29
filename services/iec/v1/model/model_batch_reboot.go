@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 批量重启边缘实例对象
+// BatchReboot 批量重启边缘实例对象
 type BatchReboot struct {
 
 	// 待重启的边缘实例列表。
@@ -58,13 +58,18 @@ func (c BatchRebootType) MarshalJSON() ([]byte, error) {
 
 func (c *BatchRebootType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

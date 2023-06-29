@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移域名请求体
+// MigrateCompositeHostsRequestBody 迁移域名请求体
 type MigrateCompositeHostsRequestBody struct {
 
 	// host_id列表

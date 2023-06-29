@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEncryptdatasResponse Response Object
 type ShowEncryptdatasResponse struct {
 	EncryptData    *EncryptData `json:"encrypt_data,omitempty"`
 	HttpStatusCode int          `json:"-"`

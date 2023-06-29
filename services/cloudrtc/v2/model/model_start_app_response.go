@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartAppResponse Response Object
 type StartAppResponse struct {
 
 	// 应用id

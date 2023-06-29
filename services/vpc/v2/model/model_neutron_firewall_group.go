@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronFirewallGroup
 type NeutronFirewallGroup struct {
 
 	// 功能说明：网络ACL组的ID

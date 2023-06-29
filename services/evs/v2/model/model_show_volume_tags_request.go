@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVolumeTagsRequest Request Object
 type ShowVolumeTagsRequest struct {
 
 	// 云硬盘ID

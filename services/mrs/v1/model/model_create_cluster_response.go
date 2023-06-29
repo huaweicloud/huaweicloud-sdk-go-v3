@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateClusterResponse Response Object
 type CreateClusterResponse struct {
 
 	// 操作结果。 - true：操作成功 - false：操作失败

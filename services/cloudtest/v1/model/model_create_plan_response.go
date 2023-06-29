@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePlanResponse Response Object
 type CreatePlanResponse struct {
 
 	// 接口调用成功返回的计划id

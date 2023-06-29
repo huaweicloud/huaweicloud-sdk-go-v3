@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNewTaskStatusResponse Response Object
 type ShowNewTaskStatusResponse struct {
 
 	// 任务状态，有以下几种： - success - failed - waiting - running - preprocess - ready

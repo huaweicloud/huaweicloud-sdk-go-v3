@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 详细信息结构体
+// DetailsBody 详细信息结构体
 type DetailsBody struct {
 
 	// 变更前的容量，仅在变更规格时有值

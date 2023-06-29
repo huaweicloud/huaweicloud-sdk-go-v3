@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteBlackWhiteListUsingDeleteRequest Request Object
 type DeleteBlackWhiteListUsingDeleteRequest struct {
 
 	// 黑白名单id

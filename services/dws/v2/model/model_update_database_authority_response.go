@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDatabaseAuthorityResponse Response Object
 type UpdateDatabaseAuthorityResponse struct {
 
 	// sql列表

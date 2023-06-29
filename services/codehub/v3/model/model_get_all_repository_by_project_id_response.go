@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GetAllRepositoryByProjectIdResponse Response Object
 type GetAllRepositoryByProjectIdResponse struct {
 	Error *Error `json:"error,omitempty"`
 

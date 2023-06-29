@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppQuotaBindableAppsResponse Response Object
 type ListAppQuotaBindableAppsResponse struct {
 
 	// 本次返回的列表长度

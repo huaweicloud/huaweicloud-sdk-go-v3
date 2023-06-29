@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNodesResponse Response Object
 type ShowNodesResponse struct {
 
 	// 满足条件的设备总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SubscribeWorkflowResponse Response Object
 type SubscribeWorkflowResponse struct {
 
 	// 流程id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateKafkaConsumerGroupRequest Request Object
 type CreateKafkaConsumerGroupRequest struct {
 
 	// 实例ID。

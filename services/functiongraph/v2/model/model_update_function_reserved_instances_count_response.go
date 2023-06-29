@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateFunctionReservedInstancesCountResponse Response Object
 type UpdateFunctionReservedInstancesCountResponse struct {
 
 	// 预留实例个数

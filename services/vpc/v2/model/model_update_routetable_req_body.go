@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateRoutetableReqBody
 type UpdateRoutetableReqBody struct {
 	Routetable *UpdateRouteTableReq `json:"routetable"`
 }

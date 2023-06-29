@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResRecallSetResponse Response Object
 type ShowResRecallSetResponse struct {
 
 	// 候选集列表

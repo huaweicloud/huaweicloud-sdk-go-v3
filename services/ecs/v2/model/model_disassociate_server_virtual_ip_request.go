@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateServerVirtualIpRequest Request Object
 type DisassociateServerVirtualIpRequest struct {
 
 	// 云服务器网卡ID。

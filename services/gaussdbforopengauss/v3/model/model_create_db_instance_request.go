@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDbInstanceRequest Request Object
 type CreateDbInstanceRequest struct {
 
 	// 语言

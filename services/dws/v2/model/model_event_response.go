@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件返回体
+// EventResponse 事件返回体
 type EventResponse struct {
 
 	// 事件类别

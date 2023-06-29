@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RegisterDelegatedAdministratorRequest Request Object
 type RegisterDelegatedAdministratorRequest struct {
 	Body *DelegatedAdministratorReqBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBlockchainResponse Response Object
 type DeleteBlockchainResponse struct {
 
 	// 操作记录id

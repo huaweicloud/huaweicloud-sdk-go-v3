@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 策略执行具体动作
+// ScalingPolicyActionV1 策略执行具体动作
 type ScalingPolicyActionV1 struct {
 
 	// 操作选项。ADD：添加实例。REMOVE/REDUCE：移除实例。SET：设置实例数为
@@ -69,13 +69,18 @@ func (c ScalingPolicyActionV1Operation) MarshalJSON() ([]byte, error) {
 
 func (c *ScalingPolicyActionV1Operation) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

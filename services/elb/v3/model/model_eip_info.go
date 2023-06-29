@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性ip，同publicips
+// EipInfo 弹性ip，同publicips
 type EipInfo struct {
 
 	// eip_id

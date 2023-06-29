@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新七层转发策略的请求参数。
+// UpdateL7PolicyOption 更新七层转发策略的请求参数。
 type UpdateL7PolicyOption struct {
 
 	// 转发策略的管理状态，默认为true。  不支持该字段，请勿使用。

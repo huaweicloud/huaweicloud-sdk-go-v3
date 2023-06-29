@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云堡垒机实例修改admin用户密码
+// ResetPassword 云堡垒机实例修改admin用户密码
 type ResetPassword struct {
 
 	// admin用户修改后的新密码，8-32位，大写字母、小写字母、数字和特殊字符。

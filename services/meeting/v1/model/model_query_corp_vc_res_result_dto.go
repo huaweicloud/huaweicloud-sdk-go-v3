@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 企业资源信息。
+// QueryCorpVcResResultDto 企业资源信息。
 type QueryCorpVcResResultDto struct {
 
 	// 云会议室类型列表。

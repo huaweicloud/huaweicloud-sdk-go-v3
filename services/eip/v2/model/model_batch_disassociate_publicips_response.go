@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDisassociatePublicipsResponse Response Object
 type BatchDisassociatePublicipsResponse struct {
 
 	// job_id列表，此job信息不保存在数据库中，不能同过组件查询到。

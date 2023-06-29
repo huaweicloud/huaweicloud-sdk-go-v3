@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建资源分组，请求参数。
+// CreateResourceGroupRequestBody 创建资源分组，请求参数。
 type CreateResourceGroupRequestBody struct {
 
 	// 资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。

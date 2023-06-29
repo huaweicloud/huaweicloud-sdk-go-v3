@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateConfigMapResponse Response Object
 type UpdateConfigMapResponse struct {
 	Configmap *ConfigMap `json:"configmap,omitempty"`
 

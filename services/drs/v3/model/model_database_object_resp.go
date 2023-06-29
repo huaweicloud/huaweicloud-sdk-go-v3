@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对象选择返回体
+// DatabaseObjectResp 对象选择返回体
 type DatabaseObjectResp struct {
 
 	// 任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略
+// BackupStrategyDetail 备份策略
 type BackupStrategyDetail struct {
 
 	// 策略ID。

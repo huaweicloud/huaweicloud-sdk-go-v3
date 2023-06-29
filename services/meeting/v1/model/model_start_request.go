@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 激活会议请求。
+// StartRequest 激活会议请求。
 type StartRequest struct {
 
 	// 会议ID。

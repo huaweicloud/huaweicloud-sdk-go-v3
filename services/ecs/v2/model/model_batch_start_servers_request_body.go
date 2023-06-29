@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchStartServersRequestBody This is a auto create Body Object
 type BatchStartServersRequestBody struct {
 	OsStart *BatchStartServersOption `json:"os-start"`
 }

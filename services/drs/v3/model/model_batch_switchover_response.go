@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchSwitchoverResponse Response Object
 type BatchSwitchoverResponse struct {
 
 	// 批量主备倒换任务返回列表

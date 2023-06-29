@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新分区
+// PutVolume 更新分区
 type PutVolume struct {
 
 	// 数据库ID

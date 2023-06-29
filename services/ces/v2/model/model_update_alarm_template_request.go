@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlarmTemplateRequest Request Object
 type UpdateAlarmTemplateRequest struct {
 
 	// 告警模板ID

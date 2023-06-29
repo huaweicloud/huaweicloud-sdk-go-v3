@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线信息
+// SpecificCommitInfoLastPipeline 流水线信息
 type SpecificCommitInfoLastPipeline struct {
 
 	// 流水线id

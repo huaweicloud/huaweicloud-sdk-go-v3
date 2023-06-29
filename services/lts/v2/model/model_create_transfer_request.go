@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTransferRequest Request Object
 type CreateTransferRequest struct {
 	Body *CreateTransferRequestBody `json:"body,omitempty"`
 }

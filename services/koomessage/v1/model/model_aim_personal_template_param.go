@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 个人模板参数。
+// AimPersonalTemplateParam 个人模板参数。
 type AimPersonalTemplateParam struct {
 
 	// 动态参数类型。1：表示文本类型。

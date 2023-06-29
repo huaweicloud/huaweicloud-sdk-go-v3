@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群对象。
+// CreateClusterBody 集群对象。
 type CreateClusterBody struct {
 	Instance *CreateClusterInstanceBody `json:"instance"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNodeActivationRecordsResponse Response Object
 type ShowNodeActivationRecordsResponse struct {
 
 	// 满足条件的激活记录总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceCreateTagResponse Response Object
 type GlanceCreateTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

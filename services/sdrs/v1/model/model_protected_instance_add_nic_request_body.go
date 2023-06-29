@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例添加网卡请求体
+// ProtectedInstanceAddNicRequestBody 保护实例添加网卡请求体
 type ProtectedInstanceAddNicRequestBody struct {
 
 	// 添加网卡的子网ID。该参数是子网的network_id，和neutron_network_id的值保持一致。

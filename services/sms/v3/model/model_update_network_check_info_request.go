@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateNetworkCheckInfoRequest Request Object
 type UpdateNetworkCheckInfoRequest struct {
 
 	// 任务id

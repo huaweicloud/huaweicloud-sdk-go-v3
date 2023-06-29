@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 代码提交记录 / 分支创建记录 详细信息
+// CommitRecordDetail 代码提交记录 / 分支创建记录 详细信息
 type CommitRecordDetail struct {
 
 	// 仓库ID

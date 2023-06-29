@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAppConfigV2Response Response Object
 type UpdateAppConfigV2Response struct {
 
 	// 应用配置编号

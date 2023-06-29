@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 各终端厂商的审核状态。
+// FactoryInfo 各终端厂商的审核状态。
 type FactoryInfo struct {
 
 	// 厂商类型。  - HUAWEI：表示华为厂商 - XIAOMI：表示小米厂商 - OPPO：表示OPPO厂商 - VIVO：表示VIVO厂商 - MEIZU：表示魅族厂商

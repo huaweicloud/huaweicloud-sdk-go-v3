@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchSetSpeedResponse Response Object
 type BatchSetSpeedResponse struct {
 
 	// 总数

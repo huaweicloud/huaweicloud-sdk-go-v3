@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// VideoConfig
 type VideoConfig struct {
 
 	// 背景id

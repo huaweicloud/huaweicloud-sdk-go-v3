@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceResponse Response Object
 type ShowInstanceResponse struct {
 
 	// DDM实例ID。

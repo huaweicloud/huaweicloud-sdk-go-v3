@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警配置信息
+// AlertConfigRespWarnConfig 告警配置信息
 type AlertConfigRespWarnConfig struct {
 
 	// DDoS攻击

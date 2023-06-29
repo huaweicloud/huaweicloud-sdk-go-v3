@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterImeiResponse Response Object
 type RegisterImeiResponse struct {
 
 	// 业务受理单号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppEnvsResponse Response Object
 type ListAppEnvsResponse struct {
 
 	// 环境信息列表。

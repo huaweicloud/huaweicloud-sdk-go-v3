@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 镜像标签请求体
+// BatchAddOrDeleteTagsRequestBody 镜像标签请求体
 type BatchAddOrDeleteTagsRequestBody struct {
 
 	// 要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
@@ -58,13 +58,18 @@ func (c BatchAddOrDeleteTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 
 func (c *BatchAddOrDeleteTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

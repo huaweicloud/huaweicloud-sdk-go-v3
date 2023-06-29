@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSumTableRequest Request Object
 type ShowSumTableRequest struct {
 
 	// 应用id。

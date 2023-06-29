@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRetentionHistoriesResponse Response Object
 type ListRetentionHistoriesResponse struct {
 
 	// 镜像老化日志

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDisasterRecoveryRequest Request Object
 type CreateDisasterRecoveryRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShareTemplatesResponse Response Object
 type ShareTemplatesResponse struct {
 	Error *Error `json:"error,omitempty"`
 

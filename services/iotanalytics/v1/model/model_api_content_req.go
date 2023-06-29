@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Api数据源请求内容
+// ApiContentReq Api数据源请求内容
 type ApiContentReq struct {
 
 	// api数据源名称

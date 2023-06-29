@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVaultRequest Request Object
 type CreateVaultRequest struct {
 	Body *VaultCreateReq `json:"body,omitempty"`
 }

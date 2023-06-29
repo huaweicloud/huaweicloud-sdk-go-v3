@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddRuleGroupResponse Response Object
 type AddRuleGroupResponse struct {
 
 	// 返回消息

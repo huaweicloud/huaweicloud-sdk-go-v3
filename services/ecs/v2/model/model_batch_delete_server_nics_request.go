@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteServerNicsRequest Request Object
 type BatchDeleteServerNicsRequest struct {
 
 	// 云服务器ID。

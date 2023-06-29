@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAskQuestionResponse Response Object
 type CreateAskQuestionResponse struct {
 
 	// 问题

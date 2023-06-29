@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// cdm信息
+// Datastore cdm信息
 type Datastore struct {
 
 	// 类型，一般为cdm。

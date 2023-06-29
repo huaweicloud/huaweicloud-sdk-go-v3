@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MySql配置信息
+// MysqlForwarding MySql配置信息
 type MysqlForwarding struct {
 	Address *NetAddress `json:"address"`
 

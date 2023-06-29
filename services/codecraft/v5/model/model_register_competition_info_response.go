@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterCompetitionInfoResponse Response Object
 type RegisterCompetitionInfoResponse struct {
 
 	// 是否允许提交作品，true-允许，false-不允许

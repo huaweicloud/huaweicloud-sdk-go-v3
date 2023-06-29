@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单条日志记录
+// CheckpointRsp 单条日志记录
 type CheckpointRsp struct {
 
 	// 数据名称

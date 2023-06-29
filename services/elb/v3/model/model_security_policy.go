@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义安全策略信息
+// SecurityPolicy 自定义安全策略信息
 type SecurityPolicy struct {
 
 	// 自定义安全安全策略的id。

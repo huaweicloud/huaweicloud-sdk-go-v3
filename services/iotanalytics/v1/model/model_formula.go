@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 表达式
+// Formula 表达式
 type Formula struct {
 
 	// 公式，最多1024个字符(分析任务单输出场景，配合TransformModel或AggregateModel的output_property使用)

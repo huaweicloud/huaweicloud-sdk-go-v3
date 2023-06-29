@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaListKeypairsRequest Request Object
 type NovaListKeypairsRequest struct {
 
 	// 查询返回秘钥数量限制。  在微版本2.35后支持

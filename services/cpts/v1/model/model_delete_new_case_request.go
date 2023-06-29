@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteNewCaseRequest Request Object
 type DeleteNewCaseRequest struct {
 
 	// 用例id

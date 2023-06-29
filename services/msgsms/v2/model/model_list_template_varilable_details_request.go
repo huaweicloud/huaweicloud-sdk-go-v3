@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTemplateVarilableDetailsRequest Request Object
 type ListTemplateVarilableDetailsRequest struct {
 
 	// 模板ID

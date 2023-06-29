@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddTagV2Response Response Object
 type AddTagV2Response struct {
 	Error *Error `json:"error,omitempty"`
 

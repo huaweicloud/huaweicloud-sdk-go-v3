@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 描述共享的不同角色。
+// DistinctSharedPrincipal 描述共享的不同角色。
 type DistinctSharedPrincipal struct {
 
 	// 资源共享实例的创建者或使用者的帐号ID或URN。

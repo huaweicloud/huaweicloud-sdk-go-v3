@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDatakeyResponse Response Object
 type CreateDatakeyResponse struct {
 
 	// 密钥ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteWebHookConfigRequest Request Object
 type DeleteWebHookConfigRequest struct {
 
 	// 订阅配置记录ID。

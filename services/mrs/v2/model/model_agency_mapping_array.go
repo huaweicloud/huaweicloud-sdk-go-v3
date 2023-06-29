@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户（组）与IAM委托的映射关系数组结构体
+// AgencyMappingArray 用户（组）与IAM委托的映射关系数组结构体
 type AgencyMappingArray struct {
 
 	// 用户（组）与委托之间的映射关系详细信息。

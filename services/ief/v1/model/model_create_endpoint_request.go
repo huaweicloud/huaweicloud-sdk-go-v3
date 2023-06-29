@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEndpointRequest Request Object
 type CreateEndpointRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

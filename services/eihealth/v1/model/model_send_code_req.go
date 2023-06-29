@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发送验证码请求体
+// SendCodeReq 发送验证码请求体
 type SendCodeReq struct {
 
 	// 认证方式:sms，email，vmfa

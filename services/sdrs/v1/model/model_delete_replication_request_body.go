@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除复制对请求体
+// DeleteReplicationRequestBody 删除复制对请求体
 type DeleteReplicationRequestBody struct {
 	Replication *DeleteReplicationRequestParams `json:"replication"`
 }

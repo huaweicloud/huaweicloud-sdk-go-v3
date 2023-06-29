@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PushShareFilesResponse Response Object
 type PushShareFilesResponse struct {
 
 	// 请求的唯一标识ID。

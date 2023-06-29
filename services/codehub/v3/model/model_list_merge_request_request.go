@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMergeRequestRequest Request Object
 type ListMergeRequestRequest struct {
 
 	// 仓库短id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目的端虚拟机信息
+// TargetServerByTask 目的端虚拟机信息
 type TargetServerByTask struct {
 
 	// btrfs信息，数据从源端获取

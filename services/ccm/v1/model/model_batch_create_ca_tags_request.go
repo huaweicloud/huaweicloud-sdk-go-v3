@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateCaTagsRequest Request Object
 type BatchCreateCaTagsRequest struct {
 
 	// 所需要批量创建标签的CA证书ID。

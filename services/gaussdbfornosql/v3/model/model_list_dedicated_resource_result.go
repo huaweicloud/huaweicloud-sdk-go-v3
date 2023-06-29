@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 专属资源信息列表。
+// ListDedicatedResourceResult 专属资源信息列表。
 type ListDedicatedResourceResult struct {
 
 	// 专属资源ID。

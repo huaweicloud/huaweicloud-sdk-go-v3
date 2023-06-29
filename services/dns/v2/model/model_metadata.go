@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 返回满足过滤条件的资源总数。
+// Metadata 返回满足过滤条件的资源总数。
 type Metadata struct {
 
 	// 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。

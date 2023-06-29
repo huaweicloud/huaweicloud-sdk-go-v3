@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDesktopsRequest Request Object
 type ListDesktopsRequest struct {
 
 	// 桌面所属用户。
@@ -23,6 +23,9 @@ type ListDesktopsRequest struct {
 
 	// 用于分页查询，取值范围0-1000，默认值1000。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 桌面池ID,多个桌面池ID用逗号隔开。
+	PoolId *string `json:"pool_id,omitempty"`
 }
 
 func (o ListDesktopsRequest) String() string {

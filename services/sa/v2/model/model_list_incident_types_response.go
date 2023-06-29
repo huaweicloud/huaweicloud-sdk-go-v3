@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIncidentTypesResponse Response Object
 type ListIncidentTypesResponse struct {
 
 	// Error code

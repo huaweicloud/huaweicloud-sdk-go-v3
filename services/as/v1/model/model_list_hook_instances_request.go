@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListHookInstancesRequest Request Object
 type ListHookInstancesRequest struct {
 
 	// 伸缩组ID。

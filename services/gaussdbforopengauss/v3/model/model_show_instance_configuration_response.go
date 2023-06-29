@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceConfigurationResponse Response Object
 type ShowInstanceConfigurationResponse struct {
 
 	// 引擎版本。

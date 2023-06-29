@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VCN服务器信息，只有输入为vcn时才可以且必须使用
+// TaskInputVcn VCN服务器信息，只有输入为vcn时才可以且必须使用
 type TaskInputVcn struct {
 
 	// VCN服务器的IP地址

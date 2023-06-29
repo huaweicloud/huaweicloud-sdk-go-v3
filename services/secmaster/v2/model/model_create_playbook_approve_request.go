@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePlaybookApproveRequest Request Object
 type CreatePlaybookApproveRequest struct {
 
 	// application/json;charset=UTF-8

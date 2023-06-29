@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CPU阈值查询结果结构体
+// CpuThresholdData CPU阈值查询结果结构体
 type CpuThresholdData struct {
 
 	// 自定义的cpu阈值，单位为百分比(%)

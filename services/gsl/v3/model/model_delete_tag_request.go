@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTagRequest Request Object
 type DeleteTagRequest struct {
 
 	// 标签标识

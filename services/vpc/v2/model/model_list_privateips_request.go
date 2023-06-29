@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPrivateipsRequest Request Object
 type ListPrivateipsRequest struct {
 
 	// 私有IP所在子网的唯一标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateClusterInstallCmdRequest Request Object
 type CreateClusterInstallCmdRequest struct {
 
 	// 边缘集群ID

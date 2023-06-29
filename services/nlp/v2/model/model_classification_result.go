@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// result字段数据结构说明
+// ClassificationResult result字段数据结构说明
 type ClassificationResult struct {
 
 	// 待分析文本。

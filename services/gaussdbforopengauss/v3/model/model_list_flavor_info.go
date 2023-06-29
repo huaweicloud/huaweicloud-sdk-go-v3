@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格信息。
+// ListFlavorInfo 规格信息。
 type ListFlavorInfo struct {
 
 	// cpu核数。

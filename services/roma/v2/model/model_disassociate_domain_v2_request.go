@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateDomainV2Request Request Object
 type DisassociateDomainV2Request struct {
 
 	// 实例ID

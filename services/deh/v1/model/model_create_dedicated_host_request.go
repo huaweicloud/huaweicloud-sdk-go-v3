@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDedicatedHostRequest Request Object
 type CreateDedicatedHostRequest struct {
 	Body *ReqAllocateDeh `json:"body,omitempty"`
 }

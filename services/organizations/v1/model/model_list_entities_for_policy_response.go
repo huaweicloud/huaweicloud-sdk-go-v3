@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEntitiesForPolicyResponse Response Object
 type ListEntitiesForPolicyResponse struct {
 
 	// 结构列表，每个结构都包含有关指定策略附加到的实体的详细信息。

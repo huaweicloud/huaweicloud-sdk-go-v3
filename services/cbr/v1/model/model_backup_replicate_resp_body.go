@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BackupReplicateRespBody
 type BackupReplicateRespBody struct {
 
 	// 待复制的备份ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PostRequestsResponse Response Object
 type PostRequestsResponse struct {
 
 	// 请求ID。  调用失败时无此字段。

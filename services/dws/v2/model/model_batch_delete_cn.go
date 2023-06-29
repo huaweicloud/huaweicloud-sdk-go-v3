@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除CN节点ID信息
+// BatchDeleteCn 批量删除CN节点ID信息
 type BatchDeleteCn struct {
 
 	// 批量删除CN节点ID

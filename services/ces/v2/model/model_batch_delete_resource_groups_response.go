@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteResourceGroupsResponse Response Object
 type BatchDeleteResourceGroupsResponse struct {
 
 	// 成功删除的资源分组ID列表

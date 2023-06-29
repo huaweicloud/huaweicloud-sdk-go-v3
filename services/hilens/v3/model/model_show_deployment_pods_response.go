@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeploymentPodsResponse Response Object
 type ShowDeploymentPodsResponse struct {
 
 	// pod总个数

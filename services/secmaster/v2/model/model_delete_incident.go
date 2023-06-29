@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除事件
+// DeleteIncident 删除事件
 type DeleteIncident struct {
 
 	// 删除事件的ID列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 具体url信息
+// Urls 具体url信息
 type Urls struct {
 
 	// urlid

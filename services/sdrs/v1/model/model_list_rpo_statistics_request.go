@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRpoStatisticsRequest Request Object
 type ListRpoStatisticsRequest struct {
 
 	// 每次请求返回结果个数限制，取值范围为[0,1000]的正整数，默认值为1000。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 只读节点权重信息
+// ModifyProxyWeightReadonlyNode 只读节点权重信息
 type ModifyProxyWeightReadonlyNode struct {
 
 	// 只读节点ID

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 虚拟接口对等体对象
+// VifPeer 虚拟接口对等体对象
 type VifPeer struct {
 
 	// 资源ID
@@ -103,13 +103,18 @@ func (c VifPeerRouteMode) MarshalJSON() ([]byte, error) {
 
 func (c *VifPeerRouteMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

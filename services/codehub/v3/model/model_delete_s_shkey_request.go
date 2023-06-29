@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSShkeyRequest Request Object
 type DeleteSShkeyRequest struct {
 
 	// sshKey的id

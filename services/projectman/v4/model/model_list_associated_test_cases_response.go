@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAssociatedTestCasesResponse Response Object
 type ListAssociatedTestCasesResponse struct {
 
 	// 关联的测试用例列表

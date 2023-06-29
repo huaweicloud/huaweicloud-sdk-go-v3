@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRootsResponse Response Object
 type ListRootsResponse struct {
 
 	// 在组织中定义的根列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单词的流利度打分
+// WordFluency 单词的流利度打分
 type WordFluency struct {
 
 	//

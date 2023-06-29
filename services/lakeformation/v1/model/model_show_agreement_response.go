@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAgreementResponse Response Object
 type ShowAgreementResponse struct {
 
 	// 租户协议列表

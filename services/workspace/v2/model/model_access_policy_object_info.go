@@ -11,14 +11,14 @@ import (
 
 type AccessPolicyObjectInfo struct {
 
-	// 黑名单中的对象id，目前仅用户对象。
+	// 黑名单中的对象id。
 	ObjectId string `json:"object_id"`
 
-	// 对象名。
-	ObjectName *string `json:"object_name,omitempty"`
-
-	// 对象类型，当前只支持用户类型。 * USER： 用户
+	// 对象类型。 * USER： 用户 * USERGROUP： 用户组
 	ObjectType AccessPolicyObjectInfoObjectType `json:"object_type"`
+
+	// 对象名。后续此参数不会校验。
+	ObjectName *string `json:"object_name,omitempty"`
 }
 
 func (o AccessPolicyObjectInfo) String() string {
@@ -35,13 +35,17 @@ type AccessPolicyObjectInfoObjectType struct {
 }
 
 type AccessPolicyObjectInfoObjectTypeEnum struct {
-	USER AccessPolicyObjectInfoObjectType
+	USER      AccessPolicyObjectInfoObjectType
+	USERGROUP AccessPolicyObjectInfoObjectType
 }
 
 func GetAccessPolicyObjectInfoObjectTypeEnum() AccessPolicyObjectInfoObjectTypeEnum {
 	return AccessPolicyObjectInfoObjectTypeEnum{
 		USER: AccessPolicyObjectInfoObjectType{
 			value: "USER",
+		},
+		USERGROUP: AccessPolicyObjectInfoObjectType{
+			value: "USERGROUP",
 		},
 	}
 }
@@ -56,13 +60,18 @@ func (c AccessPolicyObjectInfoObjectType) MarshalJSON() ([]byte, error) {
 
 func (c *AccessPolicyObjectInfoObjectType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

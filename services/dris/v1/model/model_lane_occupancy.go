@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分车道统计的占有率
+// LaneOccupancy 分车道统计的占有率
 type LaneOccupancy struct {
 
 	// **参数说明**：车道编号。车道从左到右，从0开始编号

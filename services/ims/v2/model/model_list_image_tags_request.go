@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListImageTagsRequest Request Object
 type ListImageTagsRequest struct {
 
 	// 镜像ID。

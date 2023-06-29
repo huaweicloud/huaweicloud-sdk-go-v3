@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowInstanceRoleRequest Request Object
 type ShowInstanceRoleRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新测试用例信息请求体
+// UpdateTestCaseRequestBody 更新测试用例信息请求体
 type UpdateTestCaseRequestBody struct {
 
 	// 页面上显示的用例名称，长度为[3-128]位字符

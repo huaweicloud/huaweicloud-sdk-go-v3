@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 丢包率阈值查询结果结构体
+// PacketThresholdData 丢包率阈值查询结果结构体
 type PacketThresholdData struct {
 
 	// 自定义接收方向阈值，单位为百分比(%)

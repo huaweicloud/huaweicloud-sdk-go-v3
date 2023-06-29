@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTableSchemaResponse Response Object
 type ShowTableSchemaResponse struct {
 
 	// 表ID。

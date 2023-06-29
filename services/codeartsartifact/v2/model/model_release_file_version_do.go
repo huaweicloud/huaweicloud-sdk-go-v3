@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发布文件版本信息
+// ReleaseFileVersionDo 发布文件版本信息
 type ReleaseFileVersionDo struct {
 
 	// 发布库文件的版本

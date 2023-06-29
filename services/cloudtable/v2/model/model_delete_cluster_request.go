@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteClusterRequest Request Object
 type DeleteClusterRequest struct {
 
 	// 语言类型

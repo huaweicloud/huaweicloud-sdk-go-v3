@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckHostsRequest Request Object
 type CheckHostsRequest struct {
 
 	// 授权详情id

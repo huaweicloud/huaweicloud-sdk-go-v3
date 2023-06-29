@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Copy playbook
+// CopyPlaybookInfo Copy playbook
 type CopyPlaybookInfo struct {
 
 	// 名称

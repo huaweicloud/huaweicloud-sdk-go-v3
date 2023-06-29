@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Kafka数据源请求内容
+// KafkaContentReq Kafka数据源请求内容
 type KafkaContentReq struct {
 
 	// KAFKA连接方式

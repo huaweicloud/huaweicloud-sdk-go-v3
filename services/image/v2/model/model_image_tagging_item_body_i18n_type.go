@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签类别的多种语言输出。
+// ImageTaggingItemBodyI18nType 标签类别的多种语言输出。
 type ImageTaggingItemBodyI18nType struct {
 
 	// 中文标签类别

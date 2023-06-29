@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘业务对象
+// EdgeCloudOption 边缘业务对象
 type EdgeCloudOption struct {
 
 	// 边缘业务名称。 取值范围：只能由中文字符、大小写英文字母、数字及中划线、下划线组成，且长度为[1-32]个字符。

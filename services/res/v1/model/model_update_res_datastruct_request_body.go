@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateResDatastructRequestBody This is a auto create Body Object
 type UpdateResDatastructRequestBody struct {
 
 	// 数据源名称:，1-64位字母、数字、下划线、中划线组合。

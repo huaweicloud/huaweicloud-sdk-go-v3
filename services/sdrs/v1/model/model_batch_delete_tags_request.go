@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteTagsRequest Request Object
 type BatchDeleteTagsRequest struct {
 
 	// 保护实例的ID。

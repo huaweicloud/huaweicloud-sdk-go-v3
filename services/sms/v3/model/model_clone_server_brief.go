@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 克隆服务器基本信息
+// CloneServerBrief 克隆服务器基本信息
 type CloneServerBrief struct {
 
 	// 克隆服务器ID

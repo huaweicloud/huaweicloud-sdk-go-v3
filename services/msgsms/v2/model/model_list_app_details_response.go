@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppDetailsResponse Response Object
 type ListAppDetailsResponse struct {
 
 	// 查询结果

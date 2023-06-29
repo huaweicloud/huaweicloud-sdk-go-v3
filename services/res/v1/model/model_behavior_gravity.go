@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重力衰减因子
+// BehaviorGravity 重力衰减因子
 type BehaviorGravity struct {
 
 	// 衰减因子。

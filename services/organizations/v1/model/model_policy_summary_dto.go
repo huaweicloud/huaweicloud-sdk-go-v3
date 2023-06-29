@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 包含有关策略的信息，但不包括内容。
+// PolicySummaryDto 包含有关策略的信息，但不包括内容。
 type PolicySummaryDto struct {
 
 	// 一个布尔值，指示指定的策略是否为系统策略。如果为true，即为系统策略，则可以将策略附加到根、组织单元或帐号，但不能编辑它。

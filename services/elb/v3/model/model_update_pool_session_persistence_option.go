@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 会话持久性对象。
+// UpdatePoolSessionPersistenceOption 会话持久性对象。
 type UpdatePoolSessionPersistenceOption struct {
 
 	// cookie名称。  格式：仅支持字母、数字、中划线(-)、下划线(_)和点号(.)。  使用说明： - 只有当type为APP_COOKIE时才有效。其他情况下传该字段会报错。  [不支持该字段，请勿使用。](tag:hws_eu,hcso_dt)
@@ -65,13 +65,18 @@ func (c UpdatePoolSessionPersistenceOptionType) MarshalJSON() ([]byte, error) {
 
 func (c *UpdatePoolSessionPersistenceOptionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

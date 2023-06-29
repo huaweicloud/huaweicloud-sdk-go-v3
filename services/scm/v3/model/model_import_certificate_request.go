@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportCertificateRequest Request Object
 type ImportCertificateRequest struct {
 	Body *ImportCertificateRequestBody `json:"body,omitempty"`
 }

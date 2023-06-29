@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 字段类型列表，最大长度100
+// Columns 字段类型列表，最大长度100
 type Columns struct {
 
 	// 数据的字段名称，最大支持长度256
@@ -65,13 +65,18 @@ func (c ColumnsType) MarshalJSON() ([]byte, error) {
 
 func (c *ColumnsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

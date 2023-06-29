@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新模板请求
+// UpdateTemplates 更新模板请求
 type UpdateTemplates struct {
 
 	// 模板名称,非必填

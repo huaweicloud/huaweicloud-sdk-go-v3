@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowInstanceDiskRequest Request Object
 type ShowInstanceDiskRequest struct {
 
 	// 语言。

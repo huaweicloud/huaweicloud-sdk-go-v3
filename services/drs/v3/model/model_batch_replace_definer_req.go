@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量设置replaceDefiner请求体
+// BatchReplaceDefinerReq 批量设置replaceDefiner请求体
 type BatchReplaceDefinerReq struct {
 
 	// 批量设置replaceDefiner请求列表

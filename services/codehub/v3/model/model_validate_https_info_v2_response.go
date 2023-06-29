@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateHttpsInfoV2Response Response Object
 type ValidateHttpsInfoV2Response struct {
 	Error *Error `json:"error,omitempty"`
 

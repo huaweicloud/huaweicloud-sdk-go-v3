@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBigkeyScanTaskDetailsRequest Request Object
 type ShowBigkeyScanTaskDetailsRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建自定义告警模板请求参数。
+// CreateAlarmTemplateRequestBody 创建自定义告警模板请求参数。
 type CreateAlarmTemplateRequestBody struct {
 
 	// 自定义告警模板名称，只能包含0-9/a-z/A-Z/_/-或汉字，长度为1-128。。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBlackWhiteListUsingDeleteResponse Response Object
 type DeleteBlackWhiteListUsingDeleteResponse struct {
 	Data           *IdObject `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`

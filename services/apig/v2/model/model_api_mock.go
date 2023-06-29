@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// mock后端详情
+// ApiMock mock后端详情
 type ApiMock struct {
 
 	// 描述信息。长度不超过255个字符 > 中文字符必须为UTF-8或者unicode编码。

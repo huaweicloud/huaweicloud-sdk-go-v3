@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcAttachmentsResponse Response Object
 type ListVpcAttachmentsResponse struct {
 
 	// VPC连接列表

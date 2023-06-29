@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAlarmTemplateResponse Response Object
 type CreateAlarmTemplateResponse struct {
 
 	// 自定义告警模板创建成功返回的ID，如：at1603252280799wLRyGLxnz。

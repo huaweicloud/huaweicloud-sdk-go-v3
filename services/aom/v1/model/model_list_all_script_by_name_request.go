@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAllScriptByNameRequest Request Object
 type ListAllScriptByNameRequest struct {
 	Body *SearchScriptsRequestBody `json:"body,omitempty"`
 }

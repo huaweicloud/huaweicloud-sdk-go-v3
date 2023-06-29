@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHookInstancesResponse Response Object
 type ListHookInstancesResponse struct {
 
 	// 伸缩实例生命周期挂钩列表。

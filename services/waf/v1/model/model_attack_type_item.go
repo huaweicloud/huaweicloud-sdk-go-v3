@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 攻击事件分布统计
+// AttackTypeItem 攻击事件分布统计
 type AttackTypeItem struct {
 
 	// 攻击事件类型

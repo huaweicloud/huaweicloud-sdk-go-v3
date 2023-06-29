@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBareMetalServersRequest Request Object
 type ListBareMetalServersRequest struct {
 
 	// 裸金属服务器规格ID

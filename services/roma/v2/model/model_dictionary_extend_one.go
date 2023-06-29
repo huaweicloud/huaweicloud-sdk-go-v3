@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 字典扩展字段1 - 字符集：中文、英文字母、数字、下划线和空格
+// DictionaryExtendOne 字典扩展字段1 - 字符集：中文、英文字母、数字、下划线和空格
 type DictionaryExtendOne struct {
 }
 

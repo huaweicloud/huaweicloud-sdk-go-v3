@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对比维度数据
+// ReportDimVo 对比维度数据
 type ReportDimVo struct {
 
 	// id

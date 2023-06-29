@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建边缘节点请求结构体。
+// EdgeNodeCreation 创建边缘节点请求结构体。
 type EdgeNodeCreation struct {
 
 	// 边缘节点ID

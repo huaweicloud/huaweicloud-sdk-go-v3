@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 从OBS导入元数据请求体
+// UploadFromObsReq 从OBS导入元数据请求体
 type UploadFromObsReq struct {
 
 	// 元数据存储地址。

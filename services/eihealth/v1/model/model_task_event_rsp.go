@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务启动事件响应内容
+// TaskEventRsp 任务启动事件响应内容
 type TaskEventRsp struct {
 
 	// 任务启动事件类型

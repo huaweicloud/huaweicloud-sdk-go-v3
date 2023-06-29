@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunCheckResultRequest Request Object
 type RunCheckResultRequest struct {
 
 	// 任务标识。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAccessInfosRequest Request Object
 type ListAccessInfosRequest struct {
 
 	// LakeFormation实例ID

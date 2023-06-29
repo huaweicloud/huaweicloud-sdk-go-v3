@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RuleRef
 type RuleRef struct {
 
 	// 规则ID。

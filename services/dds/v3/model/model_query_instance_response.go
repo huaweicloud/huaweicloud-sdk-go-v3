@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例信息。
+// QueryInstanceResponse 实例信息。
 type QueryInstanceResponse struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目信息
+// GetProjectInfoV4ResultProject 项目信息
 type GetProjectInfoV4ResultProject struct {
 
 	// 项目numId

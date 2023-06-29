@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 虚拟网关对象
+// VirtualGateway 虚拟网关对象
 type VirtualGateway struct {
 
 	// 虚拟网关的ID
@@ -87,13 +87,18 @@ func (c VirtualGatewayType) MarshalJSON() ([]byte, error) {
 
 func (c *VirtualGatewayType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

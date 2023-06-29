@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddDataMaskRequest Request Object
 type BatchAddDataMaskRequest struct {
 	Body *DynamicDataMask `json:"body,omitempty"`
 }

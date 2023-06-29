@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDbBackupsResponse Response Object
 type ListDbBackupsResponse struct {
 
 	// 备份信息。

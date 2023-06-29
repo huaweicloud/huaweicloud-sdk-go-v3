@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMyActionTemplateResponse Response Object
 type CreateMyActionTemplateResponse struct {
 
 	// 三方算子ID

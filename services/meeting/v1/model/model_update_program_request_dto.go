@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新节目详情响应
+// UpdateProgramRequestDto 更新节目详情响应
 type UpdateProgramRequestDto struct {
 
 	// 节目名称。

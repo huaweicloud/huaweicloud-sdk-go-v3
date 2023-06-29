@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckAppV2Response Response Object
 type CheckAppV2Response struct {
 
 	// 编号

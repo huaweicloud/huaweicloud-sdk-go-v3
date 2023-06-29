@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线创建状态响应体
+// TemplateView 流水线创建状态响应体
 type TemplateView struct {
 
 	// 模板ID

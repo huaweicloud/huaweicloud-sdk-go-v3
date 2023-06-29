@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSubnetRequest Request Object
 type CreateSubnetRequest struct {
 	Body *CreateSubnetRequestBody `json:"body,omitempty"`
 }

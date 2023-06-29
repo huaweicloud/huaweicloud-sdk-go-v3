@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstanceConsumerGroupsResponse Response Object
 type ListInstanceConsumerGroupsResponse struct {
 
 	// 所有的消费组。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShrinkInstanceNodeResponse Response Object
 type ShrinkInstanceNodeResponse struct {
 
 	// 任务ID。

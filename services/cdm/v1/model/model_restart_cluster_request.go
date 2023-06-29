@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestartClusterRequest Request Object
 type RestartClusterRequest struct {
 
 	// 集群ID

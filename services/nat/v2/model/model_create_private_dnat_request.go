@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePrivateDnatRequest Request Object
 type CreatePrivateDnatRequest struct {
 	Body *CreatePrivateDnatOptionBody `json:"body,omitempty"`
 }

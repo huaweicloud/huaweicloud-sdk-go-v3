@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchDistinctSharedResourcesResponse Response Object
 type SearchDistinctSharedResourcesResponse struct {
 
 	// 不同资源的信息列表。

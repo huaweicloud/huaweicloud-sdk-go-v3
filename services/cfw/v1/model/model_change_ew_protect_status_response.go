@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeEwProtectStatusResponse Response Object
 type ChangeEwProtectStatusResponse struct {
 	Data *SuccessRspData `json:"data,omitempty"`
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSpecialThrottlingConfigurationV2Response Response Object
 type CreateSpecialThrottlingConfigurationV2Response struct {
 
 	// 特殊配置的编号

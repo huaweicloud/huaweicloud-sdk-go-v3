@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDeploymentsResponse Response Object
 type ListDeploymentsResponse struct {
 
 	// 部署计划列表的总和。

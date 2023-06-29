@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义字段
+// NewCustomField 自定义字段
 type NewCustomField struct {
 
 	// 自定义字段

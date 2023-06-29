@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MigrateDomainRequest Request Object
 type MigrateDomainRequest struct {
 	Body *DomainMigrate `json:"body,omitempty"`
 }

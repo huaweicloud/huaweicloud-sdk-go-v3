@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobInstanceResponse Response Object
 type ShowJobInstanceResponse struct {
 	Status *string `json:"status,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AttrPair
 type AttrPair struct {
 
 	// 被推荐对象的属性名。

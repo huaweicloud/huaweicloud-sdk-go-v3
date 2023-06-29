@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务详情
+// ServiceRespDetail 服务详情
 type ServiceRespDetail struct {
 
 	// 创建时间

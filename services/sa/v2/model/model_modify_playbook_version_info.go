@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of playbook version
+// ModifyPlaybookVersionInfo Information of playbook version
 type ModifyPlaybookVersionInfo struct {
 
 	// The description, display only

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountTasksResponse Response Object
 type CountTasksResponse struct {
 	CommonTaskDetails *TaskStatisticDetails `json:"common_task_details,omitempty"`
 

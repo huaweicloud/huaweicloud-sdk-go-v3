@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ge
+// UpdateDirectoryRequestBody ge
 type UpdateDirectoryRequestBody struct {
 
 	// 目录名称

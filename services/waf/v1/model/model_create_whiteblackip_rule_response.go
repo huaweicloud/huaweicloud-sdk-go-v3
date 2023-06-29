@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateWhiteblackipRuleResponse Response Object
 type CreateWhiteblackipRuleResponse struct {
 
 	// 规则id

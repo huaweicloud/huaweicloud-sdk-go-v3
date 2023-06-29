@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// tag信息。
+// TagField tag信息。
 type TagField struct {
 
 	// 字段名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求数据。
+// CreateApplicationRequestBodyMetadata 请求数据。
 type CreateApplicationRequestBodyMetadata struct {
 
 	// 名称。

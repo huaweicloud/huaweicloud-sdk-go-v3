@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订单和产品信息
+// BatchProfile 订单和产品信息
 type BatchProfile struct {
 
 	// 租户id

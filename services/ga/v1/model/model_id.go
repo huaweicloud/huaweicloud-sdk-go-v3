@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// id
+// Id id
 type Id struct {
 
 	// 关联监听器ID。

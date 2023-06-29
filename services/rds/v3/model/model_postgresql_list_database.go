@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// PostgresqlListDatabase 数据库信息。
 type PostgresqlListDatabase struct {
 
 	// 数据库名称。

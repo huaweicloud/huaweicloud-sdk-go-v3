@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDeploymentGroupRequest Request Object
 type CreateDeploymentGroupRequest struct {
 	Body *DeploymentGroup `json:"body,omitempty"`
 }

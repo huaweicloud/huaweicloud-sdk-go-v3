@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateSignatureResponse Response Object
 type ValidateSignatureResponse struct {
 
 	// 密钥ID。

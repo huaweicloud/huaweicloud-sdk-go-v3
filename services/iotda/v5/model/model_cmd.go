@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 给设备下发命令的命令内容，在动作的type为“DEVICE_CMD”时有效，且为必选
+// Cmd 给设备下发命令的命令内容，在动作的type为“DEVICE_CMD”时有效，且为必选
 type Cmd struct {
 
 	// **参数说明**：设备命令名称，在设备关联的产品模型中定义。

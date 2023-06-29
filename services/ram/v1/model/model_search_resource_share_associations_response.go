@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchResourceShareAssociationsResponse Response Object
 type SearchResourceShareAssociationsResponse struct {
 
 	// 绑定的详细信息列表。

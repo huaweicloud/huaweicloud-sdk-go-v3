@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息
+// QuotaRsp 配额信息
 type QuotaRsp struct {
 
 	// 配额项名称，支持USER,PROJECT,USER_PROJECT,STORAGE,PROJECT_APP,PROJECT_NOTEBOOK,PROJECT_WORKFLOW,PROJECT_IMAGE

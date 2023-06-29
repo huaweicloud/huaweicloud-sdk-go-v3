@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改数据库账号权限请求体
+// RedisModifyDbUserPrivilegeRequestBody 修改数据库账号权限请求体
 type RedisModifyDbUserPrivilegeRequestBody struct {
 
 	// 账号名称。  小于36个字符，以字母开头，仅包含数字、字母、中划线、下划线。

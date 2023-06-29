@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CinderAcceptVolumeTransferRequest Request Object
 type CinderAcceptVolumeTransferRequest struct {
 
 	// 云硬盘ID

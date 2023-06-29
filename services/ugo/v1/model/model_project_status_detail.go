@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 评估任务状态详情。
+// ProjectStatusDetail 评估任务状态详情。
 type ProjectStatusDetail struct {
 
 	// 采集的状态。

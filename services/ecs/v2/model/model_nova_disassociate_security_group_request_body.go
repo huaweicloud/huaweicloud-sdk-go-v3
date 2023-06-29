@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// NovaDisassociateSecurityGroupRequestBody This is a auto create Body Object
 type NovaDisassociateSecurityGroupRequestBody struct {
 	RemoveSecurityGroup *NovaRemoveSecurityGroupOption `json:"removeSecurityGroup"`
 }

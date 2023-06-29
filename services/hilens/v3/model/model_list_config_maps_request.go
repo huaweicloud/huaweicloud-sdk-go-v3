@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListConfigMapsRequest Request Object
 type ListConfigMapsRequest struct {
 
 	// 服务提供者：ief或hilens，默认为hilens。

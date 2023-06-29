@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// API版本
+// Version API版本
 type Version struct {
 
 	// API版本号。

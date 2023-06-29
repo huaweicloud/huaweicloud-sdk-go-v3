@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InstallMultiTasksRequest Request Object
 type InstallMultiTasksRequest struct {
 
 	// 实例ID

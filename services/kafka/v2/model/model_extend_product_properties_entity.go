@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品规格属性描述。
+// ExtendProductPropertiesEntity 产品规格属性描述。
 type ExtendProductPropertiesEntity struct {
 
 	// 每个Broker的最大分区数。

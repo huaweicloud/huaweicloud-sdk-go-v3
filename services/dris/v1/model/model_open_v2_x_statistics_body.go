@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：统计数据信息。
+// OpenV2XStatisticsBody **参数说明**：统计数据信息。
 type OpenV2XStatisticsBody struct {
 	Source *StatisticsSourceDto `json:"source,omitempty"`
 

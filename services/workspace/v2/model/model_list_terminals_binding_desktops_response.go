@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTerminalsBindingDesktopsResponse Response Object
 type ListTerminalsBindingDesktopsResponse struct {
 
 	// MAC绑定VM信息列表

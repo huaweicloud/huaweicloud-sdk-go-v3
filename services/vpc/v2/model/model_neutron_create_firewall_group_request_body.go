@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronCreateFirewallGroupRequestBody
 type NeutronCreateFirewallGroupRequestBody struct {
 	FirewallGroup *NeutronCreateFirewallGroupOption `json:"firewall_group"`
 }

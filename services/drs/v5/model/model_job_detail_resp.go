@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务详情响应体。
+// JobDetailResp 任务详情响应体。
 type JobDetailResp struct {
 
 	// 任务ID。

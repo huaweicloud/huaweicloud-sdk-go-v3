@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCompletionRateRequest Request Object
 type ShowCompletionRateRequest struct {
 
 	// devcloud项目的32位id

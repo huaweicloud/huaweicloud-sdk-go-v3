@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可选。SQL作业。
+// SqlJob 可选。SQL作业。
 type SqlJob struct {
 
 	// 作业的SQL。

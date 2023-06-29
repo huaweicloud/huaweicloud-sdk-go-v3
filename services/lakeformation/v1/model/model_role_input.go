@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// role信息
+// RoleInput role信息
 type RoleInput struct {
 
 	// role名字

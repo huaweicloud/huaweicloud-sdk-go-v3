@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartGraph2Response Response Object
 type StartGraph2Response struct {
 
 	// 启动图任务ID。请求失败时字段为空。

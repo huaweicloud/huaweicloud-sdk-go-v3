@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘hub与外部实体的mqtt连接信息
+// MqttConnectionInfo 边缘hub与外部实体的mqtt连接信息
 type MqttConnectionInfo struct {
 
 	// 采用cleint方式连接时，mqtt服务器地址

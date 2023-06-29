@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMessageClearRuleRequest Request Object
 type UpdateMessageClearRuleRequest struct {
 	Body *SetMessageClearRuleReq `json:"body,omitempty"`
 }

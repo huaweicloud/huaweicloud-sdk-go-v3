@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartDeployTaskResponse Response Object
 type StartDeployTaskResponse struct {
 
 	// 部署记录id

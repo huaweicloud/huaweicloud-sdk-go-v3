@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UninstallInstanceEipRequest Request Object
 type UninstallInstanceEipRequest struct {
 
 	// 云堡垒机实例ID，使用UUID格式。

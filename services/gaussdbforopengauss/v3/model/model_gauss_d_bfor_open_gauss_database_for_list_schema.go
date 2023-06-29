@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库schema信息。
+// GaussDBforOpenGaussDatabaseForListSchema 数据库schema信息。
 type GaussDBforOpenGaussDatabaseForListSchema struct {
 
 	// schema名称。

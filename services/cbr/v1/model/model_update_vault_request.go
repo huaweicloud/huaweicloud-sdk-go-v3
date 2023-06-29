@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateVaultRequest Request Object
 type UpdateVaultRequest struct {
 
 	// 存储库ID

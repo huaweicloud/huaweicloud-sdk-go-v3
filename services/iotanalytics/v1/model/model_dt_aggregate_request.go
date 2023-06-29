@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合计算
+// DtAggregateRequest 聚合计算
 type DtAggregateRequest struct {
 
 	// 输入参数，最多支持10个

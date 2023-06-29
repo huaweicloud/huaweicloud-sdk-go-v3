@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAomMappingRulesRequest Request Object
 type ShowAomMappingRulesRequest struct {
 }
 

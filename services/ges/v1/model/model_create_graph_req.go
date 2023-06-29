@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateGraphReq This is a auto create Body Object
 type CreateGraphReq struct {
 	Graph *Graph `json:"graph"`
 }

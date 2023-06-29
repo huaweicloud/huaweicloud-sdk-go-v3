@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDataobjectRelationRequest Request Object
 type ListDataobjectRelationRequest struct {
 
 	// application/json;charset=UTF-8

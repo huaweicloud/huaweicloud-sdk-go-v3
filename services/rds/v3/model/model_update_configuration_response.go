@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateConfigurationResponse Response Object
 type UpdateConfigurationResponse struct {
 	Configuration  *UpdateConfigurationRspConfiguration `json:"configuration,omitempty"`
 	HttpStatusCode int                                  `json:"-"`

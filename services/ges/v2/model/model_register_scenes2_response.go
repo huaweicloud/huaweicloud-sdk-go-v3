@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterScenes2Response Response Object
 type RegisterScenes2Response struct {
 
 	// 订阅scenes结果。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCustomRuleResponse Response Object
 type CreateCustomRuleResponse struct {
 
 	// 规则id

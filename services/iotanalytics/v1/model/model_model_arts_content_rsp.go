@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SMN数据源配置内容
+// ModelArtsContentRsp SMN数据源配置内容
 type ModelArtsContentRsp struct {
 
 	// 服务名称

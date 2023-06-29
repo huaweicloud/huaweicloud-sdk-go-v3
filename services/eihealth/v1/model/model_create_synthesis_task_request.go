@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSynthesisTaskRequest Request Object
 type CreateSynthesisTaskRequest struct {
 	Body *SynthesisTaskData `json:"body,omitempty"`
 }

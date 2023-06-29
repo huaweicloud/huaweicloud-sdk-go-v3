@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDataJobRequest Request Object
 type DeleteDataJobRequest struct {
 
 	// 数据作业id

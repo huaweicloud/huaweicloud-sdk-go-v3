@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用域信息
+// NovaAvailabilityZone 可用域信息
 type NovaAvailabilityZone struct {
 
 	// 该字段的值为null。

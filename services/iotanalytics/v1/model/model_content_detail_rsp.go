@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IoTA服务各类数据源详细配置内容
+// ContentDetailRsp IoTA服务各类数据源详细配置内容
 type ContentDetailRsp struct {
 	IotdaContent *IotdaContentRsp `json:"iotda_content,omitempty"`
 

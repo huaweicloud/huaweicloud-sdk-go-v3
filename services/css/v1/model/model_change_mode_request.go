@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeModeRequest Request Object
 type ChangeModeRequest struct {
 
 	// 指定修改的集群ID。

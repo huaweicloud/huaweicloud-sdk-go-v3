@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDirectoryTreeResponse Response Object
 type ShowDirectoryTreeResponse struct {
 	ParentDirectoryId *string `json:"parent_directory_id,omitempty"`
 

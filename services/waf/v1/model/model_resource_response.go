@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源信息
+// ResourceResponse 资源信息
 type ResourceResponse struct {
 
 	// 资源id

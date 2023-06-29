@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BatchListMetricDataRequestBody
 type BatchListMetricDataRequestBody struct {
 
 	// 指标数据。数组长度最大500

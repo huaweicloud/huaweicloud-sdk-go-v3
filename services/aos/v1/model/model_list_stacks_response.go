@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStacksResponse Response Object
 type ListStacksResponse struct {
 
 	// 资源栈列表。默认按照生成时间排序，最早生成的在最前

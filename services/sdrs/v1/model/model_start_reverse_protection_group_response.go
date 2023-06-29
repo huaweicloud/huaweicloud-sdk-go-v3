@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartReverseProtectionGroupResponse Response Object
 type StartReverseProtectionGroupResponse struct {
 
 	// 成功返回jobId信息

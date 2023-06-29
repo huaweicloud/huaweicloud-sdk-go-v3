@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// the request body of acceptance
+// AcceptanceSchema the request body of acceptance
 type AcceptanceSchema struct {
 
 	// request_id

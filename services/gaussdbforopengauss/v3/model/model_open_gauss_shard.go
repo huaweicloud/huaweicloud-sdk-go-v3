@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DN分片扩容时必填
+// OpenGaussShard DN分片扩容时必填
 type OpenGaussShard struct {
 
 	// 新增的DN分片扩容数大小

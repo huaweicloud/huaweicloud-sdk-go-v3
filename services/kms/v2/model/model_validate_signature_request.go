@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateSignatureRequest Request Object
 type ValidateSignatureRequest struct {
 	Body *VerifyRequestBody `json:"body,omitempty"`
 }

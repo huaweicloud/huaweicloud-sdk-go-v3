@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库版本信息。
+// Datastore 数据库版本信息。
 type Datastore struct {
 
 	// 数据库类型。

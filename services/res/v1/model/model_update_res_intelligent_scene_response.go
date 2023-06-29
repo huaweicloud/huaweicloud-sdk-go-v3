@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateResIntelligentSceneResponse Response Object
 type UpdateResIntelligentSceneResponse struct {
 
 	// 是否成功。

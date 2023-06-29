@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAssetModelRequest Request Object
 type UpdateAssetModelRequest struct {
 
 	// 模型ID

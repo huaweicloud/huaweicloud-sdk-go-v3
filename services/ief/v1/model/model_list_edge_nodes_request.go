@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEdgeNodesRequest Request Object
 type ListEdgeNodesRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值
@@ -98,13 +98,18 @@ func (c ListEdgeNodesRequestState) MarshalJSON() ([]byte, error) {
 
 func (c *ListEdgeNodesRequestState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

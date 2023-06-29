@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunAddPictureResponse Response Object
 type RunAddPictureResponse struct {
 
 	// 调用成功时表示调用结果。  调用失败时无此字段。

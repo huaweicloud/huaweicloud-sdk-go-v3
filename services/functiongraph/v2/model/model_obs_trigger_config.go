@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 触发器结构体
+// ObsTriggerConfig 触发器结构体
 type ObsTriggerConfig struct {
 
 	// OBS桶名（trigger_type为OBS时配置）

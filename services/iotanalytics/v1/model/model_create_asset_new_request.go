@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAssetNewRequest Request Object
 type CreateAssetNewRequest struct {
 	Body *AssetAddRequest `json:"body,omitempty"`
 }

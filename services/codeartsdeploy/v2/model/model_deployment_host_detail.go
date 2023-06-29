@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 主机信息详情
+// DeploymentHostDetail 主机信息详情
 type DeploymentHostDetail struct {
 
 	// 主机集群id
@@ -46,7 +46,7 @@ type DeploymentHostDetail struct {
 	// 主机集群名
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称
@@ -124,13 +124,18 @@ func (c DeploymentHostDetailOs) MarshalJSON() ([]byte, error) {
 
 func (c *DeploymentHostDetailOs) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

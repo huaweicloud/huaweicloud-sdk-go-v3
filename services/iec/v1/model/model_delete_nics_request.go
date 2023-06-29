@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteNicsRequest Request Object
 type DeleteNicsRequest struct {
 
 	// 边缘实例ID。

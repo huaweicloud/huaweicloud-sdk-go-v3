@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListV2xEdgeAppRequest Request Object
 type ListV2xEdgeAppRequest struct {
 
 	// **参数说明**：Edge ID，用于唯一标识一个Edge，创建Edge后获得。方法参见 [创建Edge](https://support.huaweicloud.com/api-v2x/v2x_04_0078.html)。

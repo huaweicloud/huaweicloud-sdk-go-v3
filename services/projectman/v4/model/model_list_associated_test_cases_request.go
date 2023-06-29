@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAssociatedTestCasesRequest Request Object
 type ListAssociatedTestCasesRequest struct {
 
 	// devcloud项目的32位id

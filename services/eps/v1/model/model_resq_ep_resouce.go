@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取企业项目下资源请求
+// ResqEpResouce 获取企业项目下资源请求
 type ResqEpResouce struct {
 
 	// 项目ID列表。resource_types中包含region级别服务时为必选项。

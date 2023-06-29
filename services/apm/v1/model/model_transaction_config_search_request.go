@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取url跟踪配置数据入参。
+// TransactionConfigSearchRequest 获取url跟踪配置数据入参。
 type TransactionConfigSearchRequest struct {
 
 	// 应用id。

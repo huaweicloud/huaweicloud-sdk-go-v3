@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群版本
+// Datastore 集群版本
 type Datastore struct {
 
 	// 集群类型。

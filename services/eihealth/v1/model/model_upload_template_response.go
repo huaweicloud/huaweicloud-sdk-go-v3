@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadTemplateResponse Response Object
 type UploadTemplateResponse struct {
 
 	// 模板id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 回执接口。
+// VmsCallBack 回执接口。
 type VmsCallBack struct {
 
 	// 回调类型。  - 0：发送状态回执 - 1：上行消息回执

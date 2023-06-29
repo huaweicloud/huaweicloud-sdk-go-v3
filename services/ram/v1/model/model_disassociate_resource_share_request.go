@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateResourceShareRequest Request Object
 type DisassociateResourceShareRequest struct {
 
 	// 资源共享实例的ID。

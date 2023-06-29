@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板参数。
+// AimTemplateParams 模板参数。
 type AimTemplateParams struct {
 
 	// 参数类型。 - string：文本 - integer：数字

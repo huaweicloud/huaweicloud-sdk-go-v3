@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAuthorizeRequest Request Object
 type DeleteAuthorizeRequest struct {
 
 	// 授权名称。

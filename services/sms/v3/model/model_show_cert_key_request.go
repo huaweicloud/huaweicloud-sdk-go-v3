@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCertKeyRequest Request Object
 type ShowCertKeyRequest struct {
 
 	// 迁移任务ID

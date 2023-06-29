@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 东西向防护的资源信息，例如VPC、VGW等
+// EwProtectResourceInfo 东西向防护的资源信息，例如VPC、VGW等
 type EwProtectResourceInfo struct {
 
 	// 防护资源类型：0 VPC，1 VGW

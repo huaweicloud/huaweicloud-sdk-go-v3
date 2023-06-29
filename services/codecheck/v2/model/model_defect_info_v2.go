@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 缺陷信息
+// DefectInfoV2 缺陷信息
 type DefectInfoV2 struct {
 
 	// 缺陷的id

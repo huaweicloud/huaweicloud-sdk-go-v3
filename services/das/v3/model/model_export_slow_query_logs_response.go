@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportSlowQueryLogsResponse Response Object
 type ExportSlowQueryLogsResponse struct {
 
 	// 慢SQL集合。当集合为空时，说明慢SQL已全部导出。

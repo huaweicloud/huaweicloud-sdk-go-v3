@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAkSkRequest Request Object
 type CreateAkSkRequest struct {
 	Body *CreateAkskModel `json:"body,omitempty"`
 }

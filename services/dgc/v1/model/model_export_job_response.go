@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportJobResponse Response Object
 type ExportJobResponse struct {
 	HttpStatusCode int `json:"-"`
 }

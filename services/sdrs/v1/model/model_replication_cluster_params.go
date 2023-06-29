@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 复制集群相关参数
+// ReplicationClusterParams 复制集群相关参数
 type ReplicationClusterParams struct {
 
 	// 可用区名称。

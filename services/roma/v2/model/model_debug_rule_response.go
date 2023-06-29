@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DebugRuleResponse Response Object
 type DebugRuleResponse struct {
 
 	// 规则测试输出结果

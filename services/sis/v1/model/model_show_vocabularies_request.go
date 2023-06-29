@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVocabulariesRequest Request Object
 type ShowVocabulariesRequest struct {
 
 	// 页码偏移量，表示从此页码偏移量开始查询，offset大于等于0。

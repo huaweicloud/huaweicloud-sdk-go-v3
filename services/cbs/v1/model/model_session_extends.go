@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SessionExtends
 type SessionExtends struct {
 	TagIds *Tag `json:"tag_ids,omitempty"`
 

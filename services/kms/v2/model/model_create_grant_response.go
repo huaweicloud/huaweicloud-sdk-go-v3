@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGrantResponse Response Object
 type CreateGrantResponse struct {
 
 	// 授权ID，64字节。

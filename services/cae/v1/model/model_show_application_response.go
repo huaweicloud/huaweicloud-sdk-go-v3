@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplicationResponse Response Object
 type ShowApplicationResponse struct {
 
 	// API版本。

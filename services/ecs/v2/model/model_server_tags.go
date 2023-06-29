@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ServerTags
 type ServerTags struct {
 
 	// 键。  - 最大长度127个unicode字符。  - key不能为空。

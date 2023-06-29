@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 虚拟私有云的请求数据对象。
+// CreateVpcOption 虚拟私有云的请求数据对象。
 type CreateVpcOption struct {
 
 	// 虚拟私有云名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  约束：同一个帐号下的名称不能重复

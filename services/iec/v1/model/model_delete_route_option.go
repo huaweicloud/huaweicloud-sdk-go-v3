@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除路由对象
+// DeleteRouteOption 删除路由对象
 type DeleteRouteOption struct {
 
 	// 功能说明：路由的目的网段  约束：合法的CIDR格式

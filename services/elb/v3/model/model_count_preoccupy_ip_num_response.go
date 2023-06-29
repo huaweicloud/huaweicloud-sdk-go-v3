@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountPreoccupyIpNumResponse Response Object
 type CountPreoccupyIpNumResponse struct {
 	PreoccupyIp *PreoccupyIp `json:"preoccupy_ip,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteUpdateVideoInfoByIdResponse Response Object
 type ExecuteUpdateVideoInfoByIdResponse struct {
 
 	// 创建时间

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAnticrawlerRuleResponse Response Object
 type CreateAnticrawlerRuleResponse struct {
 
 	// 规则id

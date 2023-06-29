@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAimCallbacksRequest Request Object
 type ListAimCallbacksRequest struct {
 }
 

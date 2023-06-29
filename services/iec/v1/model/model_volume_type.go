@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 卷类型对象
+// VolumeType 卷类型对象
 type VolumeType struct {
 
 	// 硬盘类型的ID。

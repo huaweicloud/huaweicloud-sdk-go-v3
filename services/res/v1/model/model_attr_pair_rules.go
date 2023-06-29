@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性对规则
+// AttrPairRules 属性对规则
 type AttrPairRules struct {
 
 	// 属性对。

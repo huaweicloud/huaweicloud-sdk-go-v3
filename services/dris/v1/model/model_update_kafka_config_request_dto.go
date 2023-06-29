@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：kafka更新配置，支持topicPrefix、userTopics、brokers，需要把该字段新的对应值全量写入。
+// UpdateKafkaConfigRequestDto **参数说明**：kafka更新配置，支持topicPrefix、userTopics、brokers，需要把该字段新的对应值全量写入。
 type UpdateKafkaConfigRequestDto struct {
 
 	// **参数说明**：Topic前缀，不携带时以user_topics中具体Topic为准，携带时前缀将拼接在user_topics中的topic前方，例如：topic_prefixv2x-v1-tracks，topic_prefixv2x-v1-bsm。  **取值范围**：只允许字母、数字、下划线（_）、连接符（-）的组合。

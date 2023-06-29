@@ -60,6 +60,8 @@ type UpdateDependencyRequestBodyRuntimeEnum struct {
 	C__NET_CORE_2_1 UpdateDependencyRequestBodyRuntime
 	C__NET_CORE_3_1 UpdateDependencyRequestBodyRuntime
 	PHP7_3          UpdateDependencyRequestBodyRuntime
+	CUSTOM          UpdateDependencyRequestBodyRuntime
+	HTTP            UpdateDependencyRequestBodyRuntime
 }
 
 func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRuntimeEnum {
@@ -112,6 +114,12 @@ func GetUpdateDependencyRequestBodyRuntimeEnum() UpdateDependencyRequestBodyRunt
 		PHP7_3: UpdateDependencyRequestBodyRuntime{
 			value: "PHP7.3",
 		},
+		CUSTOM: UpdateDependencyRequestBodyRuntime{
+			value: "Custom",
+		},
+		HTTP: UpdateDependencyRequestBodyRuntime{
+			value: "http",
+		},
 	}
 }
 
@@ -125,13 +133,18 @@ func (c UpdateDependencyRequestBodyRuntime) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateDependencyRequestBodyRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

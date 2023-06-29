@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息。
+// Message 消息。
 type Message struct {
 
 	// 消息ID。

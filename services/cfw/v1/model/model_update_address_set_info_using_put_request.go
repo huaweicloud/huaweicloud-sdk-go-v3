@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAddressSetInfoUsingPutRequest Request Object
 type UpdateAddressSetInfoUsingPutRequest struct {
 
 	// 地址组id

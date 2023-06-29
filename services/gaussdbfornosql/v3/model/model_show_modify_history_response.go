@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowModifyHistoryResponse Response Object
 type ShowModifyHistoryResponse struct {
 
 	// 实例参数的修改历史列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteVpcPeeringRequest Request Object
 type DeleteVpcPeeringRequest struct {
 
 	// 对等连接ID

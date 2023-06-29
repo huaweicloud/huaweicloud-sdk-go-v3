@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业运行失败时收集到的错误信息
+// TaskDetailsError 作业运行失败时收集到的错误信息
 type TaskDetailsError struct {
 
 	// 算法服务定义的错误码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronUpdateSecurityGroupResponse Response Object
 type NeutronUpdateSecurityGroupResponse struct {
 	SecurityGroup  *NeutronSecurityGroup `json:"security_group,omitempty"`
 	HttpStatusCode int                   `json:"-"`

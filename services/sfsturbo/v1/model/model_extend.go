@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// extend对象
+// Extend extend对象
 type Extend struct {
 
 	// 扩容后文件系统的新容量，以GB为单位。扩容步长大于等于100GB。  普通文件系统容量，取值范围500~32768。  带宽型文件系统，容量范围是10240~327680

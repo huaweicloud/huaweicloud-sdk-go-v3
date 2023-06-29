@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建容器时使用的资源
+// DeploymentResources 创建容器时使用的资源
 type DeploymentResources struct {
 
 	// 允许容器使用的最大资源，key值支持填写：cpu, memory, gpu, npu, D310, D910

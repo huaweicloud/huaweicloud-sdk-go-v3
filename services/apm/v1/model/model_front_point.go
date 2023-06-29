@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据点模型。
+// FrontPoint 数据点模型。
 type FrontPoint struct {
 
 	// 时间。

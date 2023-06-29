@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CommitVerificationRequest Request Object
 type CommitVerificationRequest struct {
 
 	// 迁移项目ID。

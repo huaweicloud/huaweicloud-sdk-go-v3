@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组证书基本信息
+// EdgeGroupCertRequest 边缘节点组证书基本信息
 type EdgeGroupCertRequest struct {
 
 	// 证书名称。只允许中文字符、英文字母、数字、下划线、中划线，最大长度64

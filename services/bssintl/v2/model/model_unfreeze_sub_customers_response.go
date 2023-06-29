@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnfreezeSubCustomersResponse Response Object
 type UnfreezeSubCustomersResponse struct {
 
 	// 错误原因，只有部分失败的时候才返回。 具体请参见表1。

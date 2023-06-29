@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群创建失败原因。
+// FailedReasonsCreateFailed 集群创建失败原因。
 type FailedReasonsCreateFailed struct {
 
 	// 错误码

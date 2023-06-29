@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FlavorInstance
 type FlavorInstance struct {
 
 	// 边缘实例规格的ID。

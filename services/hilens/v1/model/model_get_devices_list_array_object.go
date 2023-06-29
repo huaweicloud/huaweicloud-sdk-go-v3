@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备实体列表
+// GetDevicesListArrayObject 设备实体列表
 type GetDevicesListArrayObject struct {
 
 	// 设备ID

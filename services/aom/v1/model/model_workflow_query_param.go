@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询工作流列表。
+// WorkflowQueryParam 查询工作流列表。
 type WorkflowQueryParam struct {
 
 	// 搜索内容，可以针对工作流名称和描述内容进行搜索。

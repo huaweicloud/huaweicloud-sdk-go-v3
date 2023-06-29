@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRealTimeInfoOfMeetingRequest Request Object
 type ShowRealTimeInfoOfMeetingRequest struct {
 
 	// 会议ID。

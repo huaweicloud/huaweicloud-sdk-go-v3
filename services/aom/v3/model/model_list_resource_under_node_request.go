@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceUnderNodeRequest Request Object
 type ListResourceUnderNodeRequest struct {
 
 	// 云服务资源；同rms服务的provider

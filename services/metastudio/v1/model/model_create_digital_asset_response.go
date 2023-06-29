@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDigitalAssetResponse Response Object
 type CreateDigitalAssetResponse struct {
 
 	// 数字资产ID。

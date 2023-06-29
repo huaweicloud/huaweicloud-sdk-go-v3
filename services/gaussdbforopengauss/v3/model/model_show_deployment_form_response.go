@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeploymentFormResponse Response Object
 type ShowDeploymentFormResponse struct {
 
 	// 初始节点数。

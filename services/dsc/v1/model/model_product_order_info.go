@@ -20,8 +20,7 @@ type ProductOrderInfo struct {
 	// 资源ID
 	ResourceId *string `json:"resourceId,omitempty"`
 
-	// 产品信息
-	ProductInfo *[]ProductInfoBean `json:"productInfo,omitempty"`
+	ProductInfo *ProductInfo `json:"productInfo,omitempty"`
 }
 
 func (o ProductOrderInfo) String() string {

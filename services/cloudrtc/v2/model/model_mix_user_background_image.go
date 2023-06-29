@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指定用户的背景图，优先级大于default_user_background_image
+// MixUserBackgroundImage 指定用户的背景图，优先级大于default_user_background_image
 type MixUserBackgroundImage struct {
 
 	// 需要设置背景图的用户ID

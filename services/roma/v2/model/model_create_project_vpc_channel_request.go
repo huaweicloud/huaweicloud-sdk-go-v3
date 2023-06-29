@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateProjectVpcChannelRequest Request Object
 type CreateProjectVpcChannelRequest struct {
 	Body *ProjectVpcCreate `json:"body,omitempty"`
 }

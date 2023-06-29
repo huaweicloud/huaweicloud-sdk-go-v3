@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Action info
+// ModifyActionInfo Action info
 type ModifyActionInfo struct {
 
 	// The name, display only

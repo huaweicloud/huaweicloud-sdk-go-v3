@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计算资源
+// TaskSourceUsageEstimate 计算资源
 type TaskSourceUsageEstimate struct {
 
 	// cpu消耗

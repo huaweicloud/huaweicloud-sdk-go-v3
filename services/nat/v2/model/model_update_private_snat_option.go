@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新SNAT规则的请求体。
+// UpdatePrivateSnatOption 更新SNAT规则的请求体。
 type UpdatePrivateSnatOption struct {
 
 	// 中转IP的ID的列表。

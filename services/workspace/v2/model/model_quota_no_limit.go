@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 租户配额对象，不包含最大值和最小值。
+// QuotaNoLimit 租户配额对象，不包含最大值和最小值。
 type QuotaNoLimit struct {
 
 	// 配额资源列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVideoTaggingMediaTaskResponse Response Object
 type ShowVideoTaggingMediaTaskResponse struct {
 
 	// 任务id

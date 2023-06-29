@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAutoLaunchGroupsRequest Request Object
 type ListAutoLaunchGroupsRequest struct {
 
 	// 查询返回智能购买组的数量限制 取值范围：1-1000。

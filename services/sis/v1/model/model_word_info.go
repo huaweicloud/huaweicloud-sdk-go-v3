@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WordInfo
 type WordInfo struct {
 
 	// 起始时间

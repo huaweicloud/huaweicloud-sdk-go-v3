@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户信息。
+// GaussDBforOpenGaussUserForList 数据库用户信息。
 type GaussDBforOpenGaussUserForList struct {
 
 	// 帐号名。

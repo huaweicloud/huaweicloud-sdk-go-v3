@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateConfigMapRequest Request Object
 type CreateConfigMapRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

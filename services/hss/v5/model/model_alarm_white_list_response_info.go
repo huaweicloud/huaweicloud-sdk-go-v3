@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警白名单详情
+// AlarmWhiteListResponseInfo 告警白名单详情
 type AlarmWhiteListResponseInfo struct {
 
 	// 企业项目名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 执行http探测
+// HttpGetDetail 执行http探测
 type HttpGetDetail struct {
 
 	// 必须要以/开头，构造结果为：协议类型://主机地址:端口路径

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 版本信息结构体
+// Versions 版本信息结构体
 type Versions struct {
 
 	// 接口版本的ID

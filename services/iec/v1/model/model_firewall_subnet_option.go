@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 防火墙关联的子网对象
+// FirewallSubnetOption 防火墙关联的子网对象
 type FirewallSubnetOption struct {
 
 	// 子网ID。

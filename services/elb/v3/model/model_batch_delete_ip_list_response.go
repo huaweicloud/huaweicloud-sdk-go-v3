@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteIpListResponse Response Object
 type BatchDeleteIpListResponse struct {
 	Ipgroup *IpGroup `json:"ipgroup,omitempty"`
 

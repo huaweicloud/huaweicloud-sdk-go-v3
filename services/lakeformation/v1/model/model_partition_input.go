@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// partition base object
+// PartitionInput partition base object
 type PartitionInput struct {
 
 	// 分区值列表

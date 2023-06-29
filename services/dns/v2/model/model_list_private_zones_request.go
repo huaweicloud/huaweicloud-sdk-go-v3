@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPrivateZonesRequest Request Object
 type ListPrivateZonesRequest struct {
 
 	// 待查询的zone的类型。  取值范围：private。

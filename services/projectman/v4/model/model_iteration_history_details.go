@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作详情
+// IterationHistoryDetails 操作详情
 type IterationHistoryDetails struct {
 
 	// 变更的字段

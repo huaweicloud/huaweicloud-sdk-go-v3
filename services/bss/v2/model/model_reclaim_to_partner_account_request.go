@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ReclaimToPartnerAccountRequest Request Object
 type ReclaimToPartnerAccountRequest struct {
 	Body *ReclaimToPartnerAccountBalancesReq `json:"body,omitempty"`
 }

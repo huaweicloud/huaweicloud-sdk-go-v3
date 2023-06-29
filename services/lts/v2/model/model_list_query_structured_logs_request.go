@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListQueryStructuredLogsRequest Request Object
 type ListQueryStructuredLogsRequest struct {
 
 	// 日志组id。

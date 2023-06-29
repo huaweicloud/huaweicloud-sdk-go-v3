@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 包含有关帐号是可信服务委托管理员的信息。
+// DelegatedServiceDto 包含有关帐号是可信服务委托管理员的信息。
 type DelegatedServiceDto struct {
 
 	// 服务主体的名称。

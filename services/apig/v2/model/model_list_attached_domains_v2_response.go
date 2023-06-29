@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAttachedDomainsV2Response Response Object
 type ListAttachedDomainsV2Response struct {
 
 	// 本次返回的列表长度

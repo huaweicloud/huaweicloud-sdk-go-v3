@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListImageResponse Response Object
 type ListImageResponse struct {
 
 	// 镜像总数

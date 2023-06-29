@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 购买模式参数
+// ChangeCloudPhoneServerModelRequestBodyExtendParam 购买模式参数
 type ChangeCloudPhoneServerModelRequestBodyExtendParam struct {
 
 	// 否自动付款。默认不自动付款。如果是规格升配的变更，则需要支付额外的费用，如果是降配的变更，则会自动退款。 - 1 表示自动付款 - 0 表示不自动付款

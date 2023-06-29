@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建带宽包实例的请求体。
+// CreateBandwidthPackageRequestBody 创建带宽包实例的请求体。
 type CreateBandwidthPackageRequestBody struct {
 	BandwidthPackage *CreateBandwidthPackage `json:"bandwidth_package"`
 }

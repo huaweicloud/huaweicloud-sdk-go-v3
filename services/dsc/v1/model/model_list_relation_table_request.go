@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRelationTableRequest Request Object
 type ListRelationTableRequest struct {
 
 	// 任务ID

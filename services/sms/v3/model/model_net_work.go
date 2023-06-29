@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网卡实体类
+// NetWork 网卡实体类
 type NetWork struct {
 
 	// 网卡的名称

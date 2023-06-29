@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件来源。
+// SourceObject 组件来源。
 type SourceObject struct {
 	Kind *SourceKind `json:"kind"`
 

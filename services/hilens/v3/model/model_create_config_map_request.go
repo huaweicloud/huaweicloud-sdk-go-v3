@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateConfigMapRequest Request Object
 type CreateConfigMapRequest struct {
 
 	// 服务名称，hilens或者ief，默认hilens

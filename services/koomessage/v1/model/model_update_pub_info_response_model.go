@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更改服务号详情返回体。
+// UpdatePubInfoResponseModel 更改服务号详情返回体。
 type UpdatePubInfoResponseModel struct {
 	Data *UpdatePubInfoResponseModelData `json:"data,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSubscriptionRequest Request Object
 type UpdateSubscriptionRequest struct {
 
 	// Topic的唯一的资源标识。可以通过[查看主题列表](smn_api_51004.xml)获取该标识。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetachPolicyResponse Response Object
 type DetachPolicyResponse struct {
 	HttpStatusCode int `json:"-"`
 }

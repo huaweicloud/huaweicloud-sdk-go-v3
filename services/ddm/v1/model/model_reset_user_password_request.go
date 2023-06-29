@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetUserPasswordRequest Request Object
 type ResetUserPasswordRequest struct {
 
 	// DDM实例ID。

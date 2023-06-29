@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点绑定加密数据配置
+// EncryptDataNodeReq 边缘节点绑定加密数据配置
 type EncryptDataNodeReq struct {
 
 	// 加密数据ID列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIaConfigsRequest Request Object
 type ListIaConfigsRequest struct {
 
 	// 边缘节点ID

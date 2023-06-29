@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAimSendReportsRequest Request Object
 type ListAimSendReportsRequest struct {
 
 	// 请求体参数类型，该字段必须设置为：application/json。

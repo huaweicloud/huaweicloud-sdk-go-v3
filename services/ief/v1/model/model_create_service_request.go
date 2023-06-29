@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateServiceRequest Request Object
 type CreateServiceRequest struct {
 
 	// 铂金版实例ID

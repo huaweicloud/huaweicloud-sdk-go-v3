@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSqlLimitRulesResponse Response Object
 type ListSqlLimitRulesResponse struct {
 
 	// SQL限流规则列表

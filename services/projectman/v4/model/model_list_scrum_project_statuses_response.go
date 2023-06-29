@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScrumProjectStatusesResponse Response Object
 type ListScrumProjectStatusesResponse struct {
 
 	// 状态总数

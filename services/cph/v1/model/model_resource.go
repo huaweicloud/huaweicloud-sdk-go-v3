@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源详情。
+// Resource 资源详情。
 type Resource struct {
 
 	// 资源ID。

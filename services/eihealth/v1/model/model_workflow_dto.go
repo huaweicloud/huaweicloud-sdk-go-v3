@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流程请求体
+// WorkflowDto 流程请求体
 type WorkflowDto struct {
 
 	// 流程名称，取值范围[1,56]，允许大小写字母、数字、以及特殊字符中划线(-)和下划线(_)。更新流程时，流程名称不支持修改。

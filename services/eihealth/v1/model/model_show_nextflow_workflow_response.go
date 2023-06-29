@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNextflowWorkflowResponse Response Object
 type ShowNextflowWorkflowResponse struct {
 
 	// 流程id

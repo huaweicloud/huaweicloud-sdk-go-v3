@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 绑定EIP请求体
+// AttachEipReq 绑定EIP请求体
 type AttachEipReq struct {
 
 	// 弹性公网IP的ID。

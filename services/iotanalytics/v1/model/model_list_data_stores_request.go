@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDataStoresRequest Request Object
 type ListDataStoresRequest struct {
 
 	// 存储组 ID

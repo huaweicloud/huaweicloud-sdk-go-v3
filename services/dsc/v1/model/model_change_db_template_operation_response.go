@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeDbTemplateOperationResponse Response Object
 type ChangeDbTemplateOperationResponse struct {
 
 	// 返回消息

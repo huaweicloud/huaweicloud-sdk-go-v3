@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmHistoriesRequest Request Object
 type ListAlarmHistoriesRequest struct {
 
 	// 服务提供的资源分组功能，创建的资源分组ID，如：rg1603107497873DK4O2pXbn。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更规格请求。
+// ResizeDesktopReq 变更规格请求。
 type ResizeDesktopReq struct {
 
 	// 桌面数据。支持批量按需类型桌面变更为同一规格。

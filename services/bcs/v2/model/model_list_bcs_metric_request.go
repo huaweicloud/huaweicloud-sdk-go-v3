@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBcsMetricRequest Request Object
 type ListBcsMetricRequest struct {
 
 	// 区块链服务id

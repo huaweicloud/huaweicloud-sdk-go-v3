@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddBlackWhiteListUsingPostRequest Request Object
 type AddBlackWhiteListUsingPostRequest struct {
 
 	// 企业项目id，用户支持企业项目后，由企业项目生成的id。

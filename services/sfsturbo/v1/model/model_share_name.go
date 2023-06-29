@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要修改的SFS Turbo文件系统
+// ShareName 需要修改的SFS Turbo文件系统
 type ShareName struct {
 
 	// 需要修改的SFS Turbo文件系统的名字

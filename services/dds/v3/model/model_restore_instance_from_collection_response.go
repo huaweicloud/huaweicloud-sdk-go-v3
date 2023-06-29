@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreInstanceFromCollectionResponse Response Object
 type RestoreInstanceFromCollectionResponse struct {
 
 	// 库表级恢复的异步任务ID。

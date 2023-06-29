@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuditDatabasesRequest Request Object
 type ListAuditDatabasesRequest struct {
 
 	// 实例ID

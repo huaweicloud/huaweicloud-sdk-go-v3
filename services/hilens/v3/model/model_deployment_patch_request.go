@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新应用部署部分参数
+// DeploymentPatchRequest 更新应用部署部分参数
 type DeploymentPatchRequest struct {
 
 	// 技能版本，可选，当下发的技能版本和当前部署的版本不一致的时候，根据技能模板参数更新部署

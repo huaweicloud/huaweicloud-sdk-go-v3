@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRelationsResponse Response Object
 type CreateRelationsResponse struct {
 
 	// 错误码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreatePortRequestBody
 type CreatePortRequestBody struct {
 	Port *CreatePortOption `json:"port"`
 }

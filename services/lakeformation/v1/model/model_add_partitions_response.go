@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddPartitionsResponse Response Object
 type AddPartitionsResponse struct {
 	Body           *[]Partition `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`

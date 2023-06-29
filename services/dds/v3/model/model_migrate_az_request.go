@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MigrateAzRequest Request Object
 type MigrateAzRequest struct {
 
 	// 实例ID。

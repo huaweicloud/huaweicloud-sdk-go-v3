@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNodeEncryptdatasRequest Request Object
 type CreateNodeEncryptdatasRequest struct {
 
 	// 边缘节点ID

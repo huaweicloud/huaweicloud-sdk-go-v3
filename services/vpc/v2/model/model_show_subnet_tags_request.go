@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSubnetTagsRequest Request Object
 type ShowSubnetTagsRequest struct {
 
 	// 子网ID

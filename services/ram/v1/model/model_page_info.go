@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页详细信息。
+// PageInfo 分页详细信息。
 type PageInfo struct {
 
 	// 上一页的页面标识。

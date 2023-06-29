@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项状态信息
+// WorkTableIssuseListResponseBodyStatus 工作项状态信息
 type WorkTableIssuseListResponseBodyStatus struct {
 
 	// 工作项状态id

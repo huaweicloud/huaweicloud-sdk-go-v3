@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器可挂载网卡和卷数。
+// ServerAttachableQuantity 云服务器可挂载网卡和卷数。
 type ServerAttachableQuantity struct {
 
 	// 可挂载scsi卷数。

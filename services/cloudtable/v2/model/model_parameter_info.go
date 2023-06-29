@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群配置信息详情
+// ParameterInfo 集群配置信息详情
 type ParameterInfo struct {
 
 	// 参数ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会场选看请求。
+// RestParticipantViewReqBody 会场选看请求。
 type RestParticipantViewReqBody struct {
 
 	// 选看类型。 - 2: 选看会场

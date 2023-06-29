@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 描述共享的不同资源。
+// DistinctSharedResource 描述共享的不同资源。
 type DistinctSharedResource struct {
 
 	// 资源的统一资源名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListQuotaStatusRequest Request Object
 type ListQuotaStatusRequest struct {
 
 	// 创建云堡垒机所在的可用区，需要指定可用分区名称。 可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceListImageMemberSchemasResponse Response Object
 type GlanceListImageMemberSchemasResponse struct {
 
 	// 视图链接。

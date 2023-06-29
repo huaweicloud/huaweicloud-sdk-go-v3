@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用例简略信息
+// TestCaseBriefInfo 用例简略信息
 type TestCaseBriefInfo struct {
 
 	// 用例id

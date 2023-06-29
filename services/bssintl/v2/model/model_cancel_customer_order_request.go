@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelCustomerOrderRequest Request Object
 type CancelCustomerOrderRequest struct {
 	Body *CancelCustomerOrderReq `json:"body,omitempty"`
 }

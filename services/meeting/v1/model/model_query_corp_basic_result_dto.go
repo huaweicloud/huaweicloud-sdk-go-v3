@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 企业基本信息。
+// QueryCorpBasicResultDto 企业基本信息。
 type QueryCorpBasicResultDto struct {
 
 	// 企业名称。

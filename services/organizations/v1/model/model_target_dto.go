@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 要邀请加入组织的帐号的标识符（ID）。
+// TargetDto 要邀请加入组织的帐号的标识符（ID）。
 type TargetDto struct {
 
 	// 目标类型，account：账户，email：邮箱。

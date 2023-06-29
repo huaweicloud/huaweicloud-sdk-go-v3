@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重分布请求
+// RedistributionReq 重分布请求
 type RedistributionReq struct {
 
 	// 重分布模式

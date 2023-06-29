@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 构建任务的环境变量。
+// BuildInfoParameters 构建任务的环境变量。
 type BuildInfoParameters struct {
 
 	// 编译命令。默认：  1、根目录存在build.sh：./build.sh  2、根据运行系统，示例如下：  Java和Tomcat：mvn clean package  Nodejs: npm build

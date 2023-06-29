@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunAspectSentimentAdvanceRequest Request Object
 type RunAspectSentimentAdvanceRequest struct {
 	Body *AspectSentimentAdvanceRequest `json:"body,omitempty"`
 }

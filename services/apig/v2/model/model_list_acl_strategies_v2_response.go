@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAclStrategiesV2Response Response Object
 type ListAclStrategiesV2Response struct {
 
 	// 本次返回的列表长度

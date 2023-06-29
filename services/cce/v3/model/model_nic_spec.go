@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主网卡的描述信息。
+// NicSpec 主网卡的描述信息。
 type NicSpec struct {
 
 	// 网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。拓展网卡创建时必须指定subnetId。

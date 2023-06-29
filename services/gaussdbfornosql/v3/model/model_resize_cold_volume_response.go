@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeColdVolumeResponse Response Object
 type ResizeColdVolumeResponse struct {
 
 	// 任务ID。

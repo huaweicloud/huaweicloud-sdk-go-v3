@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 开启自动创建快照策略，默认关闭。  当backupStrategy参数配置不为空时，才会开启自动创建快照策略。
+// CreateClusterBackupStrategyBody 开启自动创建快照策略，默认关闭。  当backupStrategy参数配置不为空时，才会开启自动创建快照策略。
 type CreateClusterBackupStrategyBody struct {
 
 	// 每天自动创建快照的时间点。只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。

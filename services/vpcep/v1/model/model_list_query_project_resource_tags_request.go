@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListQueryProjectResourceTagsRequest Request Object
 type ListQueryProjectResourceTagsRequest struct {
 
 	// 资源类型，值为：endpoint_service或endpoint。

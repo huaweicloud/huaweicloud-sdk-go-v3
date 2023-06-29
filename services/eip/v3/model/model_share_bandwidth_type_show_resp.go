@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带宽支持类型对象
+// ShareBandwidthTypeShowResp 带宽支持类型对象
 type ShareBandwidthTypeShowResp struct {
 
 	// 支持带宽类型的id

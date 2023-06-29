@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新数据源配置
+// ReconfigureExtDataSourceActionReq 更新数据源配置
 type ReconfigureExtDataSourceActionReq struct {
 	Reconfigure *ReconfigureExtDataSourceAction `json:"reconfigure"`
 }

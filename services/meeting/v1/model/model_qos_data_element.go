@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 含阈值告警的QoS数据元素，包括时间，QoS取值，告警状态，产生告警时的阈值。
+// QosDataElement 含阈值告警的QoS数据元素，包括时间，QoS取值，告警状态，产生告警时的阈值。
 type QosDataElement struct {
 
 	// QoS时间点, UTC时间，格式：yyyy-MM-ddTHH:mm:ss.SSSZ。

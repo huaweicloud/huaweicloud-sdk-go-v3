@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新项目信息
+// UpdateProjectRequestV4 更新项目信息
 type UpdateProjectRequestV4 struct {
 
 	// 项目描述

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateKmsTagsResponse Response Object
 type BatchCreateKmsTagsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

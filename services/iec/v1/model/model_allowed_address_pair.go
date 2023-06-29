@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IP/Mac对象
+// AllowedAddressPair IP/Mac对象
 type AllowedAddressPair struct {
 
 	// IP地址  约束：不支持0.0.0.0/0  建议：如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。

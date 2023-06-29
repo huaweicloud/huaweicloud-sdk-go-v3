@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 监听器实例。
+// ListenerDetail 监听器实例。
 type ListenerDetail struct {
 
 	// 监听器ID。

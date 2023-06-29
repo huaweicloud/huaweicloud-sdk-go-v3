@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronShowFirewallGroupRequest Request Object
 type NeutronShowFirewallGroupRequest struct {
 
 	// 网络ACL防火墙组ID

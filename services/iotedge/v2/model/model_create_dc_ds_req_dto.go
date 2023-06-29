@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建数据源配置请求结构体
+// CreateDcDsReqDto 创建数据源配置请求结构体
 type CreateDcDsReqDto struct {
 
 	// 采集数据源id，节点下唯一

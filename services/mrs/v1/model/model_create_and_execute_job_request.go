@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAndExecuteJobRequest Request Object
 type CreateAndExecuteJobRequest struct {
 	Body *SubmitJobReqV11 `json:"body,omitempty"`
 }

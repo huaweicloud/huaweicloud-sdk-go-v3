@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLogtanksResponse Response Object
 type ListLogtanksResponse struct {
 
 	// 描述信息

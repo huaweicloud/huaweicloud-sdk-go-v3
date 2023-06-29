@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移用户响应体
+// QueryUserResp 迁移用户响应体
 type QueryUserResp struct {
 
 	// 任务id

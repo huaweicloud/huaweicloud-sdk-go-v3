@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// GeneralTableResult
 type GeneralTableResult struct {
 
 	// 文字区域数目。

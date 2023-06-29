@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项类型信息
+// WorkTableIssuseListResponseBodyTracker 工作项类型信息
 type WorkTableIssuseListResponseBodyTracker struct {
 
 	// 工作项类型id

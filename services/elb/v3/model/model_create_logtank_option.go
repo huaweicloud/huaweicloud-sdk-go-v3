@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建云日志请求参数。
+// CreateLogtankOption 创建云日志请求参数。
 type CreateLogtankOption struct {
 
 	// 负载均衡器id

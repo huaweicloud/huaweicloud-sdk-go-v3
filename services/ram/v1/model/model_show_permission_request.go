@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPermissionRequest Request Object
 type ShowPermissionRequest struct {
 
 	// 共享资源权限的ID。

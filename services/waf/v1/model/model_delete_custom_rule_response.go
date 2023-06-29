@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteCustomRuleResponse Response Object
 type DeleteCustomRuleResponse struct {
 
 	// 规则id

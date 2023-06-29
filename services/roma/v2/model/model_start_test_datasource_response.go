@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartTestDatasourceResponse Response Object
 type StartTestDatasourceResponse struct {
 
 	// 返回结果 - true (成功)

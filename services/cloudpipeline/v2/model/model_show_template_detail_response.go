@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateDetailResponse Response Object
 type ShowTemplateDetailResponse struct {
 
 	// 模板ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEventsRequest Request Object
 type CreateEventsRequest struct {
 
 	// 上报自定义事件。请求参数。

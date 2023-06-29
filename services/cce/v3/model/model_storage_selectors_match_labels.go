@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// evs盘的匹配字段，支持DataVolume中的size、volumeType、metadataEncrypted、metadataCmkid、count五个字段。
+// StorageSelectorsMatchLabels evs盘的匹配字段，支持DataVolume中的size、volumeType、metadataEncrypted、metadataCmkid、count五个字段。
 type StorageSelectorsMatchLabels struct {
 
 	// 匹配的磁盘大小，不填则无磁盘大小限制。例如：100.

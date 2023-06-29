@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数挂载结构体。
+// FuncMount 函数挂载结构体。
 type FuncMount struct {
 
 	// 挂载类型(sfs/sfsTurbo/ecs)，func_mounts非空时必选。

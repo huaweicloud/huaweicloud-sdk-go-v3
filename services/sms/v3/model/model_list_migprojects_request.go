@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMigprojectsRequest Request Object
 type ListMigprojectsRequest struct {
 
 	// 每一页记录的迁移项目

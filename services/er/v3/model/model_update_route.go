@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 路由
+// UpdateRoute 路由
 type UpdateRoute struct {
 
 	// 路由下一跳

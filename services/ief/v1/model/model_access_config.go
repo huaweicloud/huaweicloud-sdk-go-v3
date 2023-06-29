@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 访问配置，与access_protocol直接关联
+// AccessConfig 访问配置，与access_protocol直接关联
 type AccessConfig struct {
 	ProtocolType *ValueInAttributes `json:"protocol_type"`
 

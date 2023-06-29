@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeEnterpriseRealnameAuthenticationRequest Request Object
 type ChangeEnterpriseRealnameAuthenticationRequest struct {
 	Body *ChangeEnterpriseRealnameAuthsReq `json:"body,omitempty"`
 }

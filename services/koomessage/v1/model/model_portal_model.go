@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 主页模型。
+// PortalModel 主页模型。
 type PortalModel struct {
 
 	// 主页ID。

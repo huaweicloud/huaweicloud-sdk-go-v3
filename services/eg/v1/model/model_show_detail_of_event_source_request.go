@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailOfEventSourceRequest Request Object
 type ShowDetailOfEventSourceRequest struct {
 
 	// 指定查询的事件源ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteRulesResponse Response Object
 type BatchDeleteRulesResponse struct {
 
 	// 返回数组

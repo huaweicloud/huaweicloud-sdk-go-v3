@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowWorkflowRequest Request Object
 type ShowWorkflowRequest struct {
 
 	// 是否显示模板参数详情

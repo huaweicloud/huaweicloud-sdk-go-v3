@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDisassociateDomainsV2Request Request Object
 type BatchDisassociateDomainsV2Request struct {
 
 	// 证书的编号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 语法转换或者迁移的数据库对象。
+// DatabaseObject 语法转换或者迁移的数据库对象。
 type DatabaseObject struct {
 
 	// 对象类型。

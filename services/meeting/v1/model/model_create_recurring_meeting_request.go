@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRecurringMeetingRequest Request Object
 type CreateRecurringMeetingRequest struct {
 
 	// 标识是否为第三方portal过来的请求。 > 该参数将废弃，请勿使用。

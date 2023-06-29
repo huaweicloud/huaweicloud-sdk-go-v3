@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLtsSlowlogDetailsRequest Request Object
 type ListLtsSlowlogDetailsRequest struct {
 
 	// 语言。

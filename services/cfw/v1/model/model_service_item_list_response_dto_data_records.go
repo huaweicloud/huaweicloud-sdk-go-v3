@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// service item
+// ServiceItemListResponseDtoDataRecords service item
 type ServiceItemListResponseDtoDataRecords struct {
 
 	// 服务成员id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAuthorizingAppsV2Response Response Object
 type CreateAuthorizingAppsV2Response struct {
 
 	// API与APP的授权关系列表

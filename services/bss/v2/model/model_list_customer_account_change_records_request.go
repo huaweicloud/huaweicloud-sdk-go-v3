@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCustomerAccountChangeRecordsRequest Request Object
 type ListCustomerAccountChangeRecordsRequest struct {
 
 	// |参数名称：账户类型。BALANCE_TYPE_DEBIT：现金账户BALANCE_TYPE_CREDIT：信用账户| |参数的约束及描述：必填|

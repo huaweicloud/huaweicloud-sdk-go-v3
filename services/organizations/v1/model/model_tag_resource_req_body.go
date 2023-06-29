@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TagResource 操作的请求体。
+// TagResourceReqBody TagResource 操作的请求体。
 type TagResourceReqBody struct {
 
 	// 要添加到指定资源的标签列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandShareRequest Request Object
 type ExpandShareRequest struct {
 
 	// MIME类型

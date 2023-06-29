@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业report文件
+// NextflowJobReportFile 作业report文件
 type NextflowJobReportFile struct {
 
 	// 报告文件名

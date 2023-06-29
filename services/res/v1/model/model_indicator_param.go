@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义指标参数
+// IndicatorParam 自定义指标参数
 type IndicatorParam struct {
 	CustomizeParameter *CustomizeParameter `json:"customize_parameter,omitempty"`
 

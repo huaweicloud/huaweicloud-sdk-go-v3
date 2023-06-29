@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNodeRequest Request Object
 type CreateNodeRequest struct {
 
 	// 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
@@ -56,13 +56,18 @@ func (c CreateNodeRequestNodepoolScaleUp) MarshalJSON() ([]byte, error) {
 
 func (c *CreateNodeRequestNodepoolScaleUp) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

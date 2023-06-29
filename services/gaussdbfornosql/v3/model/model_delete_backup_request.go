@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteBackupRequest Request Object
 type DeleteBackupRequest struct {
 
 	// 备份文件ID。

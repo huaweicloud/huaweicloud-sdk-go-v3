@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 安装应用请求体。
+// InstallApkRequestBody 安装应用请求体。
 type InstallApkRequestBody struct {
 
 	// 安装应用固定填写install。

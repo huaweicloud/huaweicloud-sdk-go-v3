@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询趋势图入参。
+// TrendParam 查询趋势图入参。
 type TrendParam struct {
 	ViewConfig *TrendView `json:"view_config"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用区信息
+// AvailableZoneV2 可用区信息
 type AvailableZoneV2 struct {
 
 	// 可用区编码

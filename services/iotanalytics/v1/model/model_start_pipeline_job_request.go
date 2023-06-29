@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartPipelineJobRequest Request Object
 type StartPipelineJobRequest struct {
 
 	// 管道ID

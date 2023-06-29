@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateDeleteTransitIpTagsRequest Request Object
 type BatchCreateDeleteTransitIpTagsRequest struct {
 
 	// 中转IP的ID。

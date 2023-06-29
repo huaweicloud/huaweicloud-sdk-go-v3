@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机服务器任务。
+// ServerJob 云手机服务器任务。
 type ServerJob struct {
 
 	// 云手机服务器的唯一标识ID，云手机服务器相关任务包含此字段。

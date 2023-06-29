@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDatabaseAuthorityResponse Response Object
 type ShowDatabaseAuthorityResponse struct {
 
 	// 对象权限集合

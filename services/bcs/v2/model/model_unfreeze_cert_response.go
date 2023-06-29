@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnfreezeCertResponse Response Object
 type UnfreezeCertResponse struct {
 
 	// 操作结果

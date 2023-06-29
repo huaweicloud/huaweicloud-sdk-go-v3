@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateAutoLaunchGroupReqV2 This is a auto create Body Object
 type UpdateAutoLaunchGroupReqV2 struct {
 
 	// 智能购买组名称。 取值范围：1-64个字符，只能包含中文、字母、数字、下划线和中划线
@@ -73,13 +73,18 @@ func (c UpdateAutoLaunchGroupReqV2ExcessFulfilledCapacityBehavior) MarshalJSON()
 
 func (c *UpdateAutoLaunchGroupReqV2ExcessFulfilledCapacityBehavior) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -115,13 +120,18 @@ func (c UpdateAutoLaunchGroupReqV2InstancesBehaviorWithExpiration) MarshalJSON()
 
 func (c *UpdateAutoLaunchGroupReqV2InstancesBehaviorWithExpiration) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

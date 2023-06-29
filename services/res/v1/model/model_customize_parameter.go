@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义参数
+// CustomizeParameter 自定义参数
 type CustomizeParameter struct {
 
 	// 别名。

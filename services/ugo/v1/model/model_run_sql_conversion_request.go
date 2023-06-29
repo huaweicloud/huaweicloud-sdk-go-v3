@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunSqlConversionRequest Request Object
 type RunSqlConversionRequest struct {
 	Body *SqlConvertReq `json:"body,omitempty"`
 }

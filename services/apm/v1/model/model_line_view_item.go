@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 连接线视图函数详情。
+// LineViewItem 连接线视图函数详情。
 type LineViewItem struct {
 
 	// 表达式。

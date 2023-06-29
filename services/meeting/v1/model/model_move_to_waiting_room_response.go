@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MoveToWaitingRoomResponse Response Object
 type MoveToWaitingRoomResponse struct {
 	HttpStatusCode int `json:"-"`
 }

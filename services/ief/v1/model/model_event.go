@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 系统订阅事件基本信息
+// Event 系统订阅事件基本信息
 type Event struct {
 
 	// 系统订阅事件ID

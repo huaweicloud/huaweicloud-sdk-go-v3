@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSourceRequest Request Object
 type CreateSourceRequest struct {
 
 	// 实例ID

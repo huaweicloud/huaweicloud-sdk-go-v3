@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPostalAddressResponse Response Object
 type ListPostalAddressResponse struct {
 
 	// 邮寄地址的个数，只有成功的时候才返回。

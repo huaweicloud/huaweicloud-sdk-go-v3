@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网卡ID信息。
+// NicId 网卡ID信息。
 type NicId struct {
 
 	// 网卡ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaShowKeypairRequest Request Object
 type NovaShowKeypairRequest struct {
 
 	// 密钥名称信息。

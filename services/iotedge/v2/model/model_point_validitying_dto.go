@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 点位校验配置结构体
+// PointValidityingDto 点位校验配置结构体
 type PointValidityingDto struct {
 
 	// 点位上报值的最小值，小于该值则上报告警

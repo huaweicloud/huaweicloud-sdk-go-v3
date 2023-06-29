@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订阅流程请求体
+// SubscribeWorkflowReq 订阅流程请求体
 type SubscribeWorkflowReq struct {
 
 	// 资产id。长度1-64，只能包含字母、数字、下划线和中划线

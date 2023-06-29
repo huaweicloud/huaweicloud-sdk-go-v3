@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPropagationsResponse Response Object
 type ListPropagationsResponse struct {
 
 	// 路由传播列表

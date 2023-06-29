@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchStartInstanceResponse Response Object
 type BatchStartInstanceResponse struct {
 
 	// 任务列表对象。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunEntitySentimentResponse Response Object
 type RunEntitySentimentResponse struct {
 
 	// 响应的文本

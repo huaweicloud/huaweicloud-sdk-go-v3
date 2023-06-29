@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMonitoredObjectsRequest Request Object
 type ListMonitoredObjectsRequest struct {
 
 	// 主维度ID，当前支持dcs_instance_id，dcs_memcached_instance_id。

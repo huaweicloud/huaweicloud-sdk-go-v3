@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RollbackSnapshotResponse Response Object
 type RollbackSnapshotResponse struct {
 	Rollback       *RollbackInfo `json:"rollback,omitempty"`
 	HttpStatusCode int           `json:"-"`

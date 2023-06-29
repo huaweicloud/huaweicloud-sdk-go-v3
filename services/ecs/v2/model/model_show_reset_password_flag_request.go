@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResetPasswordFlagRequest Request Object
 type ShowResetPasswordFlagRequest struct {
 
 	// 云服务器ID。

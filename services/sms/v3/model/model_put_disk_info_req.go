@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// PutDiskInfoReq This is a auto create Body Object
 type PutDiskInfoReq struct {
 
 	// 更新的磁盘信息

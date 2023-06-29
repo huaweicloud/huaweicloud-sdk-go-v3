@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create response Object
+// CreateUsersDetailResponses This is a auto create response Object
 type CreateUsersDetailResponses struct {
 
 	// DDM实例帐号名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作详情信息
+// EventDetailRequestInfo 操作详情信息
 type EventDetailRequestInfo struct {
 
 	// Agent ID

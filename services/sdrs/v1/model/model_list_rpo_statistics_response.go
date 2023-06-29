@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRpoStatisticsResponse Response Object
 type ListRpoStatisticsResponse struct {
 
 	// 资源的RPO超标趋势记录列表。

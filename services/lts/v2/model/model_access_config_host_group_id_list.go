@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志接入主机组ID列表
+// AccessConfigHostGroupIdList 日志接入主机组ID列表
 type AccessConfigHostGroupIdList struct {
 
 	// 主机组ID列表

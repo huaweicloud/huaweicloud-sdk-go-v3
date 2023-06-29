@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 公网IP地址，如果未指定，则默认不使用公网连接。
+// CreateGraphReqGraphPublicIp 公网IP地址，如果未指定，则默认不使用公网连接。
 type CreateGraphReqGraphPublicIp struct {
 
 	// 弹性IP绑定类型，取值如下。  - auto_assign：自动绑定。 - bind_existing：使用已有。

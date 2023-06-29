@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 路由表项
+// Route 路由表项
 type Route struct {
 
 	// 路由id

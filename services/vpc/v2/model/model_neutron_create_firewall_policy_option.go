@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronCreateFirewallPolicyOption
 type NeutronCreateFirewallPolicyOption struct {
 
 	// 审计标记。

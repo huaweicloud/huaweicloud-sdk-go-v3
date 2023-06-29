@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源库中的schema信息。
+// SchemaInfo 源库中的schema信息。
 type SchemaInfo struct {
 
 	// 是否选择全部schema。

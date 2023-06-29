@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAppQuotaRequest Request Object
 type DeleteAppQuotaRequest struct {
 
 	// 实例ID

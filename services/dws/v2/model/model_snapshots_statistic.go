@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照统计信息。
+// SnapshotsStatistic 快照统计信息。
 type SnapshotsStatistic struct {
 
 	// 资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。

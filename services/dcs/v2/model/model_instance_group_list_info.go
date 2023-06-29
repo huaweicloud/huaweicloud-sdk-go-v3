@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分片列表
+// InstanceGroupListInfo 分片列表
 type InstanceGroupListInfo struct {
 
 	// 分片id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DownloadStatisticsExcelResponse Response Object
 type DownloadStatisticsExcelResponse struct {
 	HttpStatusCode int `json:"-"`
 }

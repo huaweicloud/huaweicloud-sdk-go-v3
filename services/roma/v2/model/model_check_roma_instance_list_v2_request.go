@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckRomaInstanceListV2Request Request Object
 type CheckRomaInstanceListV2Request struct {
 
 	// 实例状态

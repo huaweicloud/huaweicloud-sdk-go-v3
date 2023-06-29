@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询流日志返回值
+// HttpQueryCfwFlowLogsResponseDtoData 查询流日志返回值
 type HttpQueryCfwFlowLogsResponseDtoData struct {
 
 	// 返回数量

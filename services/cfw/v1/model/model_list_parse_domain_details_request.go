@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListParseDomainDetailsRequest Request Object
 type ListParseDomainDetailsRequest struct {
 
 	// 域名

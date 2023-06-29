@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主持人选看请求。
+// RestChairViewReqBody 主持人选看请求。
 type RestChairViewReqBody struct {
 
 	// 主持人观看的画面类型。 - 0: 主持人轮询 - 1: 主持人观看多画面 - 2: 主持人选看会场

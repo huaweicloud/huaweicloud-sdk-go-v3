@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DCS数据源配置内容
+// DcsContentReq DCS数据源配置内容
 type DcsContentReq struct {
 
 	// VPC-EP服务端id

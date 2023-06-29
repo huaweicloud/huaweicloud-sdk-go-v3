@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 注册的数据库用户信息
+// DbUser 注册的数据库用户信息
 type DbUser struct {
 
 	// 数据库用户ID

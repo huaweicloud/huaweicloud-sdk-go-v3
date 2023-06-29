@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPackagesRequest Request Object
 type ListPackagesRequest struct {
 	Body *PackagesListRequestBody `json:"body,omitempty"`
 }

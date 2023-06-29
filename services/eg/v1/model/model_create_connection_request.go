@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateConnectionRequest Request Object
 type CreateConnectionRequest struct {
 	Body *ConnectionCreateReq `json:"body,omitempty"`
 }

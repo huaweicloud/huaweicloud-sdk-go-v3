@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDcDsResponse Response Object
 type ShowDcDsResponse struct {
 
 	// 采集数据源id，节点下唯一

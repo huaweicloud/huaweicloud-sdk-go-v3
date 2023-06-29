@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVpcsRequest Request Object
 type ListVpcsRequest struct {
 
 	// 查询返回虚拟私有云列表数量。

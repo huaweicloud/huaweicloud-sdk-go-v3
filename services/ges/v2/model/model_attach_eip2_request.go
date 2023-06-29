@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AttachEip2Request Request Object
 type AttachEip2Request struct {
 
 	// 图ID。

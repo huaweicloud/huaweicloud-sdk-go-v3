@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新端口请求体
+// UpdatePortRequestBody 更新端口请求体
 type UpdatePortRequestBody struct {
 	Port *UpdatePortOption `json:"port"`
 }

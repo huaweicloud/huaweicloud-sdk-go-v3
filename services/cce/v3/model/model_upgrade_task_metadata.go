@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级任务元数据
+// UpgradeTaskMetadata 升级任务元数据
 type UpgradeTaskMetadata struct {
 
 	// 升级任务ID

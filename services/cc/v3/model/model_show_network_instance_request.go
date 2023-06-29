@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNetworkInstanceRequest Request Object
 type ShowNetworkInstanceRequest struct {
 
 	// 网络实例ID。

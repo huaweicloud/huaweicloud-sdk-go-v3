@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateConsumedMessageResponse Response Object
 type ValidateConsumedMessageResponse struct {
 
 	// 消费验证结果。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDeleteConnectorOrderRequest Request Object
 type CreateDeleteConnectorOrderRequest struct {
 
 	// 实例ID。

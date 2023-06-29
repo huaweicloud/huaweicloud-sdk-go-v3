@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGaussMySqlConfigurationsResponse Response Object
 type ListGaussMySqlConfigurationsResponse struct {
 	Configurations *[]ConfigurationSummary `json:"configurations,omitempty"`
 

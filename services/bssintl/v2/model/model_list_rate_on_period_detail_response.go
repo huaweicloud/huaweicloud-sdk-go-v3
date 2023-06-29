@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRateOnPeriodDetailResponse Response Object
 type ListRateOnPeriodDetailResponse struct {
 	OfficialWebsiteRatingResult *OfficialWebsiteRatingResult `json:"official_website_rating_result,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCategoryListRequest Request Object
 type ShowCategoryListRequest struct {
 
 	// 页码

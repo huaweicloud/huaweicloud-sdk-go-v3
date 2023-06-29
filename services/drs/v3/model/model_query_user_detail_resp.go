@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移用户响应体
+// QueryUserDetailResp 迁移用户响应体
 type QueryUserDetailResp struct {
 
 	// 用户账户id。

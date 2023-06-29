@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBackup2Response Response Object
 type DeleteBackup2Response struct {
 	Body           map[string]string `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`

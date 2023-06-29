@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// kerberos认证需要的信息
+// KerberosVo kerberos认证需要的信息
 type KerberosVo struct {
 
 	// krb5配置文件

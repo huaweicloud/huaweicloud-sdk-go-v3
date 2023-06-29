@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签。
+// PrivateTag 标签。
 type PrivateTag struct {
 
 	// 标签key值。

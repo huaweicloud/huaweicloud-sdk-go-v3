@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowApiInfoRequest Request Object
 type ShowApiInfoRequest struct {
 
 	// 待查询版本号。以v开头，如v2。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListReadWriteRatioRequest Request Object
 type ListReadWriteRatioRequest struct {
 
 	// DDM实例ID。

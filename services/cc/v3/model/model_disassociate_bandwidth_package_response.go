@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateBandwidthPackageResponse Response Object
 type DisassociateBandwidthPackageResponse struct {
 	BandwidthPackage *BandwidthPackage `json:"bandwidth_package,omitempty"`
 

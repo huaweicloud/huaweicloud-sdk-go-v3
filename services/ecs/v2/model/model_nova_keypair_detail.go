@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-//
+// NovaKeypairDetail
 type NovaKeypairDetail struct {
 
 	// 密钥对应publicKey信息。

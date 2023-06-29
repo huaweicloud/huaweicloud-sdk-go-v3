@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateVolumeTagsRequest Request Object
 type BatchCreateVolumeTagsRequest struct {
 
 	// 云硬盘ID。

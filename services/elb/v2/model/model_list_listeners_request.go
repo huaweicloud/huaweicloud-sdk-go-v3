@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListListenersRequest Request Object
 type ListListenersRequest struct {
 
 	// 分页查询中每页的监听器个数

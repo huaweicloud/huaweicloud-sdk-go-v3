@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckCanAuthUsersOfAppResponse Response Object
 type CheckCanAuthUsersOfAppResponse struct {
 
 	// 候选用户成员列表

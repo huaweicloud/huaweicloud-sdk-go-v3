@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAsyncInvocationsRequest Request Object
 type ListAsyncInvocationsRequest struct {
 
 	// 函数URN

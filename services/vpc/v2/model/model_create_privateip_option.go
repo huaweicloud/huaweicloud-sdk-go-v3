@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreatePrivateipOption
 type CreatePrivateipOption struct {
 
 	// 分配IP的子网标识

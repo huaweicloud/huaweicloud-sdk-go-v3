@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteProtectionGroupRequest Request Object
 type DeleteProtectionGroupRequest struct {
 
 	// 保护组ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTemplateViewHistoriesResponse Response Object
 type ListTemplateViewHistoriesResponse struct {
 
 	// 我浏览的模板。

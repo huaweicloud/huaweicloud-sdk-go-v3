@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 漏洞列表
+// VulInfo 漏洞列表
 type VulInfo struct {
 
 	// 漏洞名称

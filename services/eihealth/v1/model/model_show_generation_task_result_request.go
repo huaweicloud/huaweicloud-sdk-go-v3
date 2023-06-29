@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowGenerationTaskResultRequest Request Object
 type ShowGenerationTaskResultRequest struct {
 
 	// 分子生成任务ID

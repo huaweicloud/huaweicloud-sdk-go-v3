@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDomainCaTagsRequest Request Object
 type ListDomainCaTagsRequest struct {
 }
 

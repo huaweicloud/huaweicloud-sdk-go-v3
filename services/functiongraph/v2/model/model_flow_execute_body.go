@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数流执行请求body体
+// FlowExecuteBody 函数流执行请求body体
 type FlowExecuteBody struct {
 
 	// 函数执行时需要的Header

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTtsaDataRequest Request Object
 type ListTtsaDataRequest struct {
 
 	// 任务ID。

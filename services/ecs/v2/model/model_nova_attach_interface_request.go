@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaAttachInterfaceRequest Request Object
 type NovaAttachInterfaceRequest struct {
 
 	// 云服务器ID。

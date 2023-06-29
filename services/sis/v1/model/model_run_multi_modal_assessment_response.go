@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunMultiModalAssessmentResponse Response Object
 type RunMultiModalAssessmentResponse struct {
 
 	// 综合评分，0-100

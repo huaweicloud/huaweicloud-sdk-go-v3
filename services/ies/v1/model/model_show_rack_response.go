@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRackResponse Response Object
 type ShowRackResponse struct {
 	Rack           *Rack `json:"rack,omitempty"`
 	HttpStatusCode int   `json:"-"`

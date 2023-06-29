@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// create Accelerator request
+// CreateAcceleratorRequestBody create Accelerator request
 type CreateAcceleratorRequestBody struct {
 	Accelerator *CreateAcceleratorOption `json:"accelerator"`
 }

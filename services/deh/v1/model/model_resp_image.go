@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器镜像信息。
+// RespImage 弹性云服务器镜像信息。
 type RespImage struct {
 
 	// 弹性云服务器镜像ID。

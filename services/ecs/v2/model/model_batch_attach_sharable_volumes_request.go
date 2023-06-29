@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAttachSharableVolumesRequest Request Object
 type BatchAttachSharableVolumesRequest struct {
 
 	// 共享磁盘ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解析详情。
+// AimResolveDetail 解析详情。
 type AimResolveDetail struct {
 
 	// 解析详情唯一标识ID。

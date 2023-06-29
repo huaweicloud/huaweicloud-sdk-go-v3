@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkSpacesResponse Response Object
 type ListWorkSpacesResponse struct {
 
 	// 返回总条目数

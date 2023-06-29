@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDisasterRecoveryResponse Response Object
 type CreateDisasterRecoveryResponse struct {
 
 	// 搭建容灾关系的工作ID。

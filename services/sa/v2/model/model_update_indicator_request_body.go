@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// update indicator request body
+// UpdateIndicatorRequestBody update indicator request body
 type UpdateIndicatorRequestBody struct {
 
 	// 触发标志

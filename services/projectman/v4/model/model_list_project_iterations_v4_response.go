@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProjectIterationsV4Response Response Object
 type ListProjectIterationsV4Response struct {
 
 	// 迭代总数

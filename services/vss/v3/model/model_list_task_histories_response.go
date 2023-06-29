@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTaskHistoriesResponse Response Object
 type ListTaskHistoriesResponse struct {
 
-	// 历史扫描任务总数
+	// 网站历史扫描任务总数
 	Total *int32 `json:"total,omitempty"`
 
-	// 历史扫描任务列表
+	// 网站历史扫描任务列表
 	Data           *[]ShowTasksResponseBody `json:"data,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

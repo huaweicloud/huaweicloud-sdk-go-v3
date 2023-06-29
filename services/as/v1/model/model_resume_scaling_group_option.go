@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 启停伸缩组请求
+// ResumeScalingGroupOption 启停伸缩组请求
 type ResumeScalingGroupOption struct {
 
 	// 启用或停止伸缩组操作的标识。启用：resume 停止：pause
@@ -51,13 +51,18 @@ func (c ResumeScalingGroupOptionAction) MarshalJSON() ([]byte, error) {
 
 func (c *ResumeScalingGroupOptionAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

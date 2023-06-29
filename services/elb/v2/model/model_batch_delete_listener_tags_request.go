@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteListenerTagsRequest Request Object
 type BatchDeleteListenerTagsRequest struct {
 
 	// 监听器ID。

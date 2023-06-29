@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSubnetRequest Request Object
 type UpdateSubnetRequest struct {
 
 	// 子网ID。

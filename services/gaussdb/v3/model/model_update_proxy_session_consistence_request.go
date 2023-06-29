@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateProxySessionConsistenceRequest Request Object
 type UpdateProxySessionConsistenceRequest struct {
 
 	// 语言。

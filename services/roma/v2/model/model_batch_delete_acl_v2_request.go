@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteAclV2Request Request Object
 type BatchDeleteAclV2Request struct {
 
 	// 实例ID

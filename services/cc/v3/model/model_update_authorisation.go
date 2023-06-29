@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新授权的详细信息。
+// UpdateAuthorisation 更新授权的详细信息。
 type UpdateAuthorisation struct {
 
 	// 授权的名称。

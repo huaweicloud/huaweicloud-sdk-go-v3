@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ListTag
 type ListTag struct {
 
 	// 功能说明：标签键 约束：key不能为空

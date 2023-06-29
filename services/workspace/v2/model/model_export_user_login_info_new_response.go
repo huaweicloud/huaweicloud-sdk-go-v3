@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportUserLoginInfoNewResponse Response Object
 type ExportUserLoginInfoNewResponse struct {
 	HttpStatusCode int           `json:"-"`
 	Body           io.ReadCloser `json:"-" type:"stream"`

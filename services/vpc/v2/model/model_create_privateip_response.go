@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePrivateipResponse Response Object
 type CreatePrivateipResponse struct {
 
 	// 私有IP列表对象

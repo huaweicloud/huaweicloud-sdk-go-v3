@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 回调配置
+// AppCallbackUrl 回调配置
 type AppCallbackUrl struct {
 
 	// 回调通知url地址，url必须以http://或https://开头，需要支持POST调用。
@@ -64,13 +64,18 @@ func (c AppCallbackUrlNotifyEventSubscription) MarshalJSON() ([]byte, error) {
 
 func (c *AppCallbackUrlNotifyEventSubscription) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

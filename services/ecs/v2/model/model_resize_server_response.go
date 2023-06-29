@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeServerResponse Response Object
 type ResizeServerResponse struct {
 
 	// 订单号，创建包年包月的弹性云服务器时返回该参数。

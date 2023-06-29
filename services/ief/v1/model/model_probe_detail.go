@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 探针配置
+// ProbeDetail 探针配置
 type ProbeDetail struct {
 
 	// 执行探测的命令行命令，长度1-10240内的字符串

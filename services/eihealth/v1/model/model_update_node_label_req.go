@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息
+// UpdateNodeLabelReq 标签信息
 type UpdateNodeLabelReq struct {
 
 	// 标签名称

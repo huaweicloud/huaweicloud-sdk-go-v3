@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIpsSwitchStatusUsingGetResponse Response Object
 type ListIpsSwitchStatusUsingGetResponse struct {
 	Data           *IpsSwitchResponseDto `json:"data,omitempty"`
 	HttpStatusCode int                   `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEdgeSitesRequest Request Object
 type ListEdgeSitesRequest struct {
 
 	// 每页的数量

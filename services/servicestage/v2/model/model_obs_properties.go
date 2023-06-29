@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 软件包的其他属性，只有在选择对象存储obs的时候才需要添加。
+// ObsProperties 软件包的其他属性，只有在选择对象存储obs的时候才需要添加。
 type ObsProperties struct {
 
 	// obs的终端地址，比如：https://obs.region_name.external_domain_name.com。

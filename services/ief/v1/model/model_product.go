@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品详情
+// Product 产品详情
 type Product struct {
 
 	// 产品id

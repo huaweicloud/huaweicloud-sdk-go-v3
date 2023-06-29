@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询云服务器指定磁盘挂载信息响应信息
+// ServerBlockDevice 查询云服务器指定磁盘挂载信息响应信息
 type ServerBlockDevice struct {
 
 	// 云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘

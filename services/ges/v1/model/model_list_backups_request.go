@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBackupsRequest Request Object
 type ListBackupsRequest struct {
 
 	// 每页资源数量的最大值，默认为10。

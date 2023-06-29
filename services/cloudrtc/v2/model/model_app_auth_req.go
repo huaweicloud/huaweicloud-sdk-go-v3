@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改app鉴权请求
+// AppAuthReq 修改app鉴权请求
 type AppAuthReq struct {
 
 	// 开启或关闭URL鉴权

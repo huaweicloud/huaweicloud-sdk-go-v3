@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RenewalResourcesResponse Response Object
 type RenewalResourcesResponse struct {
 
 	// 续订资源生成的订单ID的列表。

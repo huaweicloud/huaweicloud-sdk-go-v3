@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMonitorIndicatorDataRequest Request Object
 type ListMonitorIndicatorDataRequest struct {
 
 	// 开始时间。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RetryInfo
 type RetryInfo struct {
 
 	// 任务ID

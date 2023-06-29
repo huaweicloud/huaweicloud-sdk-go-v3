@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreatePortOption
 type CreatePortOption struct {
 
 	// 功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空

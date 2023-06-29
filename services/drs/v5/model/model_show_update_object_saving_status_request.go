@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowUpdateObjectSavingStatusRequest Request Object
 type ShowUpdateObjectSavingStatusRequest struct {
 
 	// 任务ID。

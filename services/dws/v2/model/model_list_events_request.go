@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEventsRequest Request Object
 type ListEventsRequest struct {
 
 	// 偏移量

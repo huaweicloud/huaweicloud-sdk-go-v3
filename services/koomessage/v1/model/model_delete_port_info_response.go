@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeletePortInfoResponse Response Object
 type DeletePortInfoResponse struct {
 	Data           *DeletePortResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                      `json:"-"`

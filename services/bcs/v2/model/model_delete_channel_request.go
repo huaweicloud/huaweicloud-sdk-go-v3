@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteChannelRequest Request Object
 type DeleteChannelRequest struct {
 
 	// 区块链服务id。可调用“查询服务实例列表”接口获取ID

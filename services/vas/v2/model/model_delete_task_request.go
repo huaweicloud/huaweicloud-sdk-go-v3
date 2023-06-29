@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTaskRequest Request Object
 type DeleteTaskRequest struct {
 
 	// 服务名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartGraph2Request Request Object
 type StartGraph2Request struct {
 
 	// 图ID。

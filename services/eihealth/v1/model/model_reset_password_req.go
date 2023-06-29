@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重置密码请求体
+// ResetPasswordReq 重置密码请求体
 type ResetPasswordReq struct {
 
 	// 验证码

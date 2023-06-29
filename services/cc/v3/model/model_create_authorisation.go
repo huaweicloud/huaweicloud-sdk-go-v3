@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建授权的详细信息。
+// CreateAuthorisation 创建授权的详细信息。
 type CreateAuthorisation struct {
 
 	// 授权的名称。
@@ -72,13 +72,18 @@ func (c CreateAuthorisationInstanceType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateAuthorisationInstanceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

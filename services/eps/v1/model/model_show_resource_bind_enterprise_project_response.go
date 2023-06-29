@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResourceBindEnterpriseProjectResponse Response Object
 type ShowResourceBindEnterpriseProjectResponse struct {
 
 	// 资源列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPublishedTemplatesResponse Response Object
 type ListPublishedTemplatesResponse struct {
 
 	// 返回模板的数量。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTasksResponse Response Object
 type ShowTasksResponse struct {
 
 	// 任务名称
@@ -24,7 +24,7 @@ type ShowTasksResponse struct {
 	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 
-	// 域名
+	// 网站域名
 	DomainName *string `json:"domain_name,omitempty"`
 
 	TaskSettings *TaskSettings `json:"task_settings,omitempty"`
@@ -38,7 +38,7 @@ type ShowTasksResponse struct {
 	// 任务结束的时间
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 任务状态:   * running - 正在运行   * success - 成功   * canceled - 已取消   * waiting - 正在等待   * failure - 失败
+	// 任务状态:   * running - 正在运行   * success - 成功   * canceled - 已取消   * waiting - 正在等待   * ready - 已就绪，排队中   * failure - 失败
 	TaskStatus *ShowTasksResponseTaskStatus `json:"task_status,omitempty"`
 
 	// 监测任务状态:   * running - 正在运行   * waiting - 正在等待   * finished - 已完成
@@ -102,13 +102,18 @@ func (c ShowTasksResponseTaskType) MarshalJSON() ([]byte, error) {
 
 func (c *ShowTasksResponseTaskType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -123,6 +128,7 @@ type ShowTasksResponseTaskStatusEnum struct {
 	SUCCESS  ShowTasksResponseTaskStatus
 	CANCELED ShowTasksResponseTaskStatus
 	WAITING  ShowTasksResponseTaskStatus
+	READY    ShowTasksResponseTaskStatus
 	FAILURE  ShowTasksResponseTaskStatus
 }
 
@@ -140,6 +146,9 @@ func GetShowTasksResponseTaskStatusEnum() ShowTasksResponseTaskStatusEnum {
 		WAITING: ShowTasksResponseTaskStatus{
 			value: "waiting",
 		},
+		READY: ShowTasksResponseTaskStatus{
+			value: "ready",
+		},
 		FAILURE: ShowTasksResponseTaskStatus{
 			value: "failure",
 		},
@@ -156,13 +165,18 @@ func (c ShowTasksResponseTaskStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ShowTasksResponseTaskStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -202,13 +216,18 @@ func (c ShowTasksResponseScheduleStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ShowTasksResponseScheduleStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -248,13 +267,18 @@ func (c ShowTasksResponseSafeLevel) MarshalJSON() ([]byte, error) {
 
 func (c *ShowTasksResponseSafeLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

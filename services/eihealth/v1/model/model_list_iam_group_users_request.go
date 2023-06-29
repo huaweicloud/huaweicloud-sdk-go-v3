@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIamGroupUsersRequest Request Object
 type ListIamGroupUsersRequest struct {
 
 	// IAM用户组id

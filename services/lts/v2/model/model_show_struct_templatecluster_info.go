@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 结构化类型。
+// ShowStructTemplateclusterInfo 结构化类型。
 type ShowStructTemplateclusterInfo struct {
 
 	// 测试

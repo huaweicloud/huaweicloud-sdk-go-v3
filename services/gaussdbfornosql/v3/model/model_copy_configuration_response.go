@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopyConfigurationResponse Response Object
 type CopyConfigurationResponse struct {
 
 	// 复制后的参数模板ID。

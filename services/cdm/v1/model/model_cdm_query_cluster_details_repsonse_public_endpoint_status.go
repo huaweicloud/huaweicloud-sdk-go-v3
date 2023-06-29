@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EIP状态信息
+// CdmQueryClusterDetailsRepsonsePublicEndpointStatus EIP状态信息
 type CdmQueryClusterDetailsRepsonsePublicEndpointStatus struct {
 
 	// 状态

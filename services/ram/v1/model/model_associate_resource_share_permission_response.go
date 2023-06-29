@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateResourceSharePermissionResponse Response Object
 type AssociateResourceSharePermissionResponse struct {
 	HttpStatusCode int `json:"-"`
 }

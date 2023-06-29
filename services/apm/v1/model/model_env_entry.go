@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 环境信息。
+// EnvEntry 环境信息。
 type EnvEntry struct {
 
 	// 环境id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EIP异常事件响应体
+// DailyLog EIP异常事件响应体
 type DailyLog struct {
 
 	// 开始时间

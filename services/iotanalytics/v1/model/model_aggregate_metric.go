@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询指标
+// AggregateMetric 查询指标
 type AggregateMetric struct {
 
 	// 声明属性作为表达式参数

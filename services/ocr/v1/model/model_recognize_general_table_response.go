@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeGeneralTableResponse Response Object
 type RecognizeGeneralTableResponse struct {
 	Result         *GeneralTableResult `json:"result,omitempty"`
 	HttpStatusCode int                 `json:"-"`

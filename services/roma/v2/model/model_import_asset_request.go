@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportAssetRequest Request Object
 type ImportAssetRequest struct {
 
 	// 实例ID

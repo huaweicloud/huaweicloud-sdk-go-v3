@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 攻击类型
+// ListEventItems 攻击类型
 type ListEventItems struct {
 
 	// 事件id

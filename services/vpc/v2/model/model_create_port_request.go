@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePortRequest Request Object
 type CreatePortRequest struct {
 	Body *CreatePortRequestBody `json:"body,omitempty"`
 }

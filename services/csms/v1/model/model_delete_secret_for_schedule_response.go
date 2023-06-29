@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteSecretForScheduleResponse Response Object
 type DeleteSecretForScheduleResponse struct {
 	Secret         *Secret `json:"secret,omitempty"`
 	HttpStatusCode int     `json:"-"`

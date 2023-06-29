@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOpLogResponse Response Object
 type ShowOpLogResponse struct {
 	OperationLog   *OperationLog `json:"operation_log,omitempty"`
 	HttpStatusCode int           `json:"-"`

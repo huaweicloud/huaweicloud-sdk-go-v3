@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTemplateByJobIdRequest Request Object
 type ListTemplateByJobIdRequest struct {
 
 	// 作业id。

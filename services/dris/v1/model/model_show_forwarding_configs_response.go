@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowForwardingConfigsResponse Response Object
 type ShowForwardingConfigsResponse struct {
 
 	// **参数说明**：满足查询条件的记录总数。

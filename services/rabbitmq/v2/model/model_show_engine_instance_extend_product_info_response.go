@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEngineInstanceExtendProductInfoResponse Response Object
 type ShowEngineInstanceExtendProductInfoResponse struct {
 
 	// 消息引擎类型。

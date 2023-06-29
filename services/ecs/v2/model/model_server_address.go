@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器的网络属性。
+// ServerAddress 弹性云服务器的网络属性。
 type ServerAddress struct {
 
 	// IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
@@ -67,13 +67,18 @@ func (c ServerAddressOSEXTIPStype) MarshalJSON() ([]byte, error) {
 
 func (c *ServerAddressOSEXTIPStype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartJobRequest Request Object
 type StartJobRequest struct {
 
 	// 工作空间id

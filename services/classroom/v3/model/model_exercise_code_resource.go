@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 习题详细内容
+// ExerciseCodeResource 习题详细内容
 type ExerciseCodeResource struct {
 
 	// 习题内容存储id

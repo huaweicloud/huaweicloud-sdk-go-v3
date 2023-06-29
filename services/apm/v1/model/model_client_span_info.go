@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// span信息。
+// ClientSpanInfo span信息。
 type ClientSpanInfo struct {
 
 	// vTraceId，虚拟traceI。

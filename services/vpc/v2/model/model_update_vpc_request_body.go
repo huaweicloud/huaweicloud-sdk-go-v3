@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateVpcRequestBody
 type UpdateVpcRequestBody struct {
 	Vpc *UpdateVpcOption `json:"vpc"`
 }

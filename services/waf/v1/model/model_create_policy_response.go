@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePolicyResponse Response Object
 type CreatePolicyResponse struct {
 
 	// 防护策略id

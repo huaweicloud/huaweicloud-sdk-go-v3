@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNameSpaceListRequest Request Object
 type ShowNameSpaceListRequest struct {
 
 	// 偏移量

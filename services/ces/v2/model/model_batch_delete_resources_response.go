@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteResourcesResponse Response Object
 type BatchDeleteResourcesResponse struct {
 
 	// 成功删除的资源数目

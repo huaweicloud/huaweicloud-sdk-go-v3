@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Dataobject Search
+// DataobjectSearch Dataobject Search
 type DataobjectSearch struct {
 
 	// limit

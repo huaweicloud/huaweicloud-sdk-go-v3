@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ES扫描结果信息
+// EsScanResultInfo ES扫描结果信息
 type EsScanResultInfo struct {
 
 	// 任务ID

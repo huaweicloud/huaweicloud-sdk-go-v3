@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFirmwaresRequest Request Object
 type ListFirmwaresRequest struct {
 
 	// 固件适用设备类型

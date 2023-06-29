@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRabbitMqTagsRequest Request Object
 type ShowRabbitMqTagsRequest struct {
 
 	// 实例ID。

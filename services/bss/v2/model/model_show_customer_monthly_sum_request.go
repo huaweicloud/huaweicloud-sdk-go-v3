@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCustomerMonthlySumRequest Request Object
 type ShowCustomerMonthlySumRequest struct {
 
 	// 查询消费汇总数据所在的账期，东八区时间，格式为YYYY-MM。

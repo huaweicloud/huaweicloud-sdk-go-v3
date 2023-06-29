@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteMultiTaskMappingResponse Response Object
 type DeleteMultiTaskMappingResponse struct {
 
 	// 映射唯一ID

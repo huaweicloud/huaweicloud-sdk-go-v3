@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 包含可信服务详细信息的结构，可信服务表示已启用与组织集成的服务。
+// TrustedServiceDto 包含可信服务详细信息的结构，可信服务表示已启用与组织集成的服务。
 type TrustedServiceDto struct {
 
 	// 可信服务的名称。

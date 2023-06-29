@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新测试用例状态请求体
+// UpdateTestCaseResultRequestBody 更新测试用例状态请求体
 type UpdateTestCaseResultRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id

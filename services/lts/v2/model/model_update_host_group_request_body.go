@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新主机组请求体
+// UpdateHostGroupRequestBody 更新主机组请求体
 type UpdateHostGroupRequestBody struct {
 
 	// 主机组ID

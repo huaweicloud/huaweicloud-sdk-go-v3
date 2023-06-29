@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCertificateAuthorityRequest Request Object
 type ShowCertificateAuthorityRequest struct {
 
 	// CA证书ID。

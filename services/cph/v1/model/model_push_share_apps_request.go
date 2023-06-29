@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PushShareAppsRequest Request Object
 type PushShareAppsRequest struct {
 	Body *PushShareAppsRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunTaskRequest Request Object
 type RunTaskRequest struct {
 
 	// 实例ID

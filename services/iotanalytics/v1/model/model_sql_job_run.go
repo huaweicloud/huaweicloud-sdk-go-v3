@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL作业运行。
+// SqlJobRun SQL作业运行。
 type SqlJobRun struct {
 
 	// 作业类型。DDL, DCL, IMPORT, EXPORT, QUERY, INSERT.

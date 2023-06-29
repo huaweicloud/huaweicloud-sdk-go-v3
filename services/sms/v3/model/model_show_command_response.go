@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCommandResponse Response Object
 type ShowCommandResponse struct {
 
 	// 命令名称，分为：START、STOP、DELETE、SYNC

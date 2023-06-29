@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPublicTemplateInfoRequest Request Object
 type ShowPublicTemplateInfoRequest struct {
 
 	// 模板名称。

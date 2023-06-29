@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询资产属性最新值请求
+// LastAssetPropertyValueRequest 查询资产属性最新值请求
 type LastAssetPropertyValueRequest struct {
 
 	// 对property按指定tags标签进行过滤查询，填入资产标签属性的属性名与属性值，不可为空，例如 {\"tagPropertyA\": \"id0001\"}；注意，标签过滤只对打上标签时刻之后的数据生效，打标签之前的数据不能通过标签过滤

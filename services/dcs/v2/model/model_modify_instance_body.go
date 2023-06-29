@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改实例信息
+// ModifyInstanceBody 修改实例信息
 type ModifyInstanceBody struct {
 
 	// 实例名称  由英文字符开头，只能由英文字母、数字、中划线和下划线组成。  创建单个实例时，名称长度为4到64位的字符串。批量创建实例时，名称长度为4到56位的字符串，且实例名称格式为“自定义名称-n”，其中n从000开始，依次递增。例如，批量创建两个实例，自定义名称为dcs_demo，则两个实例的名称为dcs_demo-000和dcs_demo-001。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务请求
+// PictureModelingByUrlReq 任务请求
 type PictureModelingByUrlReq struct {
 
 	// 图片URL

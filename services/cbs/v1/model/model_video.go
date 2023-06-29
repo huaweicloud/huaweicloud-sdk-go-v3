@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Video
 type Video struct {
 
 	// 创建时间

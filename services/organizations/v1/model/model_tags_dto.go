@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义标签键值对。
+// TagsDto 自定义标签键值对。
 type TagsDto struct {
 
 	// 键。最大长度127个unicode字符。 key不能为空。

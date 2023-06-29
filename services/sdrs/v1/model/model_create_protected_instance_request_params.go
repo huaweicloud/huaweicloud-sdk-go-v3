@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建保护实例数据结构
+// CreateProtectedInstanceRequestParams 创建保护实例数据结构
 type CreateProtectedInstanceRequestParams struct {
 
 	// 需要加入的保护组ID。
@@ -85,13 +85,18 @@ func (c CreateProtectedInstanceRequestParamsTenancy) MarshalJSON() ([]byte, erro
 
 func (c *CreateProtectedInstanceRequestParamsTenancy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

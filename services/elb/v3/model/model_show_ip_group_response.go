@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIpGroupResponse Response Object
 type ShowIpGroupResponse struct {
 	Ipgroup *IpGroup `json:"ipgroup,omitempty"`
 

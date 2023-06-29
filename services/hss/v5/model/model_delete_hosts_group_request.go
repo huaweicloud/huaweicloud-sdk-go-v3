@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteHostsGroupRequest Request Object
 type DeleteHostsGroupRequest struct {
 
 	// region id

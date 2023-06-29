@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSqlAlarmRulesResponse Response Object
 type ListSqlAlarmRulesResponse struct {
 
 	// SQL告警

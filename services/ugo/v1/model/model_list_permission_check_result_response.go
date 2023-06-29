@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPermissionCheckResultResponse Response Object
 type ListPermissionCheckResultResponse struct {
 
 	// 权限检查的总条目个数。

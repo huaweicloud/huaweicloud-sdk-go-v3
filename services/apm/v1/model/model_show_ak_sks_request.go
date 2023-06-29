@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAkSksRequest Request Object
 type ShowAkSksRequest struct {
 }
 

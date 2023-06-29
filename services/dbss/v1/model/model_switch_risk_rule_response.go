@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchRiskRuleResponse Response Object
 type SwitchRiskRuleResponse struct {
 
 	// 响应状态

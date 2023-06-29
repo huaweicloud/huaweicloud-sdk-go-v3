@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelWorkspaceRequest Request Object
 type CancelWorkspaceRequest struct {
 }
 

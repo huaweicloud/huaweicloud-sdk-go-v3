@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 灾备初始化对象详情信息体
+// StructDetailVo 灾备初始化对象详情信息体
 type StructDetailVo struct {
 
 	// 进度

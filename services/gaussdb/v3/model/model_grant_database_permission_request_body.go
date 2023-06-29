@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 授予数据库用户数据库权限。
+// GrantDatabasePermissionRequestBody 授予数据库用户数据库权限。
 type GrantDatabasePermissionRequestBody struct {
 
 	// 数据库用户列表，列表最大长度为50。

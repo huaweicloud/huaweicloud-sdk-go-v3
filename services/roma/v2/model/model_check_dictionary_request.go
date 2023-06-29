@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckDictionaryRequest Request Object
 type CheckDictionaryRequest struct {
 
 	// 字典ID

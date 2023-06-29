@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteSpecialThrottlingConfigurationV2Response Response Object
 type DeleteSpecialThrottlingConfigurationV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

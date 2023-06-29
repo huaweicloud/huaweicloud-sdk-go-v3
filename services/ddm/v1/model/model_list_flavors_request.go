@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFlavorsRequest Request Object
 type ListFlavorsRequest struct {
 
 	// 引擎id,通过查询DDM引擎信息接口获取。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 独享引擎实例信息
+// ListInstance 独享引擎实例信息
 type ListInstance struct {
 
 	// 独享引擎实例ID

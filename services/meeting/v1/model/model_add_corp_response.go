@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddCorpResponse Response Object
 type AddCorpResponse struct {
 
 	// 返回结果。

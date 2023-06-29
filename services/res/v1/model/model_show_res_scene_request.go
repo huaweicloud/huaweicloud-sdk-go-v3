@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResSceneRequest Request Object
 type ShowResSceneRequest struct {
 
 	// 工作空间id。

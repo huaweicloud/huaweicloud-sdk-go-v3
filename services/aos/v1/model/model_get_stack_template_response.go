@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GetStackTemplateResponse Response Object
 type GetStackTemplateResponse struct {
 	Location       *string `json:"Location,omitempty"`
 	HttpStatusCode int     `json:"-"`

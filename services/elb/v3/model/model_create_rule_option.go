@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建L7转发规则器请求
+// CreateRuleOption 创建L7转发规则器请求
 type CreateRuleOption struct {
 
 	// 转发规则的管理状态，默认为true。  不支持该字段，请勿使用。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePubInfoResponse Response Object
 type CreatePubInfoResponse struct {
 	Data           *CreatePubInfoResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                         `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源配置
+// QuotaResource 资源配置
 type QuotaResource struct {
 
 	// 已创建的资源个数

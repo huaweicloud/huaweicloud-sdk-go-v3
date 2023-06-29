@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+// AlarmTemplateId 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
 type AlarmTemplateId struct {
 }
 

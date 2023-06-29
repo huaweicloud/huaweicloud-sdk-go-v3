@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 策略组详情
+// PolicyGroupResponseInfo 策略组详情
 type PolicyGroupResponseInfo struct {
 
 	// 策略组名

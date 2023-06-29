@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转发到的后端主机组的URL配置。rewrite_url_enable为true时，改字段有效。
+// RewriteUrlConfig 转发到的后端主机组的URL配置。rewrite_url_enable为true时，改字段有效。
 type RewriteUrlConfig struct {
 
 	// url host

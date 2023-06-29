@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMultiTaskMappingRequest Request Object
 type DeleteMultiTaskMappingRequest struct {
 
 	// 实例ID

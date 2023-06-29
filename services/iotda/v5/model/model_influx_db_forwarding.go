@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// InfluxDB配置信息
+// InfluxDbForwarding InfluxDB配置信息
 type InfluxDbForwarding struct {
 	Address *NetAddress `json:"address"`
 

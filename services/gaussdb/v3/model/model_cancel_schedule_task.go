@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 取消定时任务请求体
+// CancelScheduleTask 取消定时任务请求体
 type CancelScheduleTask struct {
 
 	// 任务ID。

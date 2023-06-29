@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// service item
+// AddServiceItemsUsingPostRequestBodyServiceItems service item
 type AddServiceItemsUsingPostRequestBodyServiceItems struct {
 
 	// 服务成员id

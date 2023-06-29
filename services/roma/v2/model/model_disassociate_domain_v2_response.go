@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateDomainV2Response Response Object
 type DisassociateDomainV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

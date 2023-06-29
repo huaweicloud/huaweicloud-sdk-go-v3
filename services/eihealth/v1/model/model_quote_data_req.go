@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 引用数据请求体
+// QuoteDataReq 引用数据请求体
 type QuoteDataReq struct {
 
 	// 引入项目ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新企业路由器请求体
+// UpdateEnterpriseRouter 更新企业路由器请求体
 type UpdateEnterpriseRouter struct {
 
 	// 企业路由器实例名称

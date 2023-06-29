@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLiveDataQuotaV2Response Response Object
 type ListLiveDataQuotaV2Response struct {
 
 	// 数据源配额

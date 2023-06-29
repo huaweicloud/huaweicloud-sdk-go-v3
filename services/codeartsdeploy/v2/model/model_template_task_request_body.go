@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 通过模板创建应用请求体
+// TemplateTaskRequestBody 通过模板创建应用请求体
 type TemplateTaskRequestBody struct {
 
-	// 项目id
+	// 项目ID
 	ProjectId string `json:"project_id"`
 
 	// 项目名称

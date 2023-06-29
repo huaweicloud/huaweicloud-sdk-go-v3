@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSignatureDetailsResponse Response Object
 type ListSignatureDetailsResponse struct {
 
 	// 查询结果

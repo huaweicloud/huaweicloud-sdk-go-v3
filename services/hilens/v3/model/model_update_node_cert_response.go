@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNodeCertResponse Response Object
 type UpdateNodeCertResponse struct {
 
 	// 设备ID

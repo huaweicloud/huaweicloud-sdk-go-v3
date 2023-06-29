@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 习题难度信息
+// DifficultInfo 习题难度信息
 type DifficultInfo struct {
 
 	// 难度id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库权限请求
+// DatabasePermissionReq 数据库权限请求
 type DatabasePermissionReq struct {
 
 	// 对象类型 [DATABASE | SCHEMA | TABLE | VIEW | COLUMN | FUNCTION| SEQUENCE | NODEGROUP | ROLE]

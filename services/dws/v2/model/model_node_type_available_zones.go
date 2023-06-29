@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点类型支持的可用区及状态信息。
+// NodeTypeAvailableZones 节点类型支持的可用区及状态信息。
 type NodeTypeAvailableZones struct {
 
 	// 可用区ID。

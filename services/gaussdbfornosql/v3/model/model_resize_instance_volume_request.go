@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeInstanceVolumeRequest Request Object
 type ResizeInstanceVolumeRequest struct {
 
 	// 实例ID。

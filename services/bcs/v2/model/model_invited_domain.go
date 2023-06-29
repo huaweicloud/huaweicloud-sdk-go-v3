@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 被邀请列表
+// InvitedDomain 被邀请列表
 type InvitedDomain struct {
 
 	// 被邀请方租户

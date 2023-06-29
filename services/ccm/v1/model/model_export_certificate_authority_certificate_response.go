@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportCertificateAuthorityCertificateResponse Response Object
 type ExportCertificateAuthorityCertificateResponse struct {
 
 	// 证书内容。  >  - 通过API请求本接口，证书内容中换行符已使用\"\\r\\n\"代替；  >  - 通过console端导出证书，将得到标准的PEM格式的证书文件。

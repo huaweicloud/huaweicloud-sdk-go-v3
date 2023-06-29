@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// ResourceTag 标签
 type ResourceTag struct {
 
 	// 键

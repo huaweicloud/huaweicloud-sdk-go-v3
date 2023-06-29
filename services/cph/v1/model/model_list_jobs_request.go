@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListJobsRequest Request Object
 type ListJobsRequest struct {
 
 	// 任务下发请求时响应的request_id。 request_id和request_ids必须指定其中一个。request_id和request_ids同时指定的时候，以request_ids为准。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 批量查询迁移项目返回的迁移项目信息
+// MigprojectsResponseBody 批量查询迁移项目返回的迁移项目信息
 type MigprojectsResponseBody struct {
 
 	// 迁移项目ID
@@ -91,13 +91,18 @@ func (c MigprojectsResponseBodyType) MarshalJSON() ([]byte, error) {
 
 func (c *MigprojectsResponseBodyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddExtensionStarRequest Request Object
 type AddExtensionStarRequest struct {
 	Body *ExtensionStar `json:"body,omitempty"`
 }

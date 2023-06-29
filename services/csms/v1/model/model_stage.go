@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 凭据状态。
+// Stage 凭据状态。
 type Stage struct {
 
 	// 凭据的版本状态名称。  约束：最小长度1，最大长度64。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStacksResponse Response Object
 type ListStacksResponse struct {
 	Stack *StacksTags `json:"stack,omitempty"`
 

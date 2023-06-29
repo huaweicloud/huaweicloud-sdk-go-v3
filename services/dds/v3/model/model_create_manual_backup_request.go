@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateManualBackupRequest Request Object
 type CreateManualBackupRequest struct {
 	Body *CreateManualBackupRequestBody `json:"body,omitempty"`
 }

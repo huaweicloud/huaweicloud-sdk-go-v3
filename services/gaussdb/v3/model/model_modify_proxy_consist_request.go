@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改代理一致性请求体
+// ModifyProxyConsistRequest 修改代理一致性请求体
 type ModifyProxyConsistRequest struct {
 
 	// 会话一致性。 - 取值\"true\"时表示会话一致性开启。 - 取值\"false\"时表示会话一致性关闭。

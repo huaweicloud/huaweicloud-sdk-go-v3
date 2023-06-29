@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CSE微服务详细信息
+// MicroServiceInfoCse CSE微服务详细信息
 type MicroServiceInfoCse struct {
 
 	// 微服务引擎编号

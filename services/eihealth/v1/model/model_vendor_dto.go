@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// vendor配置请求体
+// VendorDto vendor配置请求体
 type VendorDto struct {
 
 	// 供应商id

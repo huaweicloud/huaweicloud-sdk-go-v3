@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例规格详情。
+// CreateInstanceFlavorOption 实例规格详情。
 type CreateInstanceFlavorOption struct {
 
 	// 节点数量。   - GaussDB(for Cassandra)实例的节点数量可取3~12。   - GaussDB(for Mongo)4.0版本副本集实例的节点数量可取3。   - GaussDB(for Influx)实例的节点数量可取3~16。

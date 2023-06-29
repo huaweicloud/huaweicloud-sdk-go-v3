@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UcbParam
 type UcbParam struct {
 
 	// 折中参数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAimResolveDetailsRequest Request Object
 type ListAimResolveDetailsRequest struct {
 
 	// 解析任务ID或者发送任务ID。

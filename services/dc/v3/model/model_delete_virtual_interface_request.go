@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteVirtualInterfaceRequest Request Object
 type DeleteVirtualInterfaceRequest struct {
 
 	// 虚拟接口ID。

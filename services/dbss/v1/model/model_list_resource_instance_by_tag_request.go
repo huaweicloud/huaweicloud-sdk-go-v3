@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceInstanceByTagRequest Request Object
 type ListResourceInstanceByTagRequest struct {
 
 	// 资源类型。审计：auditInstance

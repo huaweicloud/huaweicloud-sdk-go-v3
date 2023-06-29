@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合计算
+// AggregateModel 聚合计算
 type AggregateModel struct {
 
 	// 输入参数，最多支持10个

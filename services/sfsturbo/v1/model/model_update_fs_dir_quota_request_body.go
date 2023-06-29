@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目录配额信息
+// UpdateFsDirQuotaRequestBody 目录配额信息
 type UpdateFsDirQuotaRequestBody struct {
 
 	// 合法的已存在的目录的全路径

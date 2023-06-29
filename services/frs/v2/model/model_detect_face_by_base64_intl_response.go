@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetectFaceByBase64IntlResponse Response Object
 type DetectFaceByBase64IntlResponse struct {
 
 	// 检测到的人脸。 调用失败时无此字段。

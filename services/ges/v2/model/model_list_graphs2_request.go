@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListGraphs2Request Request Object
 type ListGraphs2Request struct {
 
 	// 本次请求的起始位置，默认为0。

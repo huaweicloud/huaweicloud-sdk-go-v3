@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMqsInstanceTopicsResponse Response Object
 type ListMqsInstanceTopicsResponse struct {
 
 	// topic的总数。

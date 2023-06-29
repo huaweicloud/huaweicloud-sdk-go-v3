@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWeeklyReportsRequest Request Object
 type ListWeeklyReportsRequest struct {
 
 	// 每周的起始时间

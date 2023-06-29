@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WhitelistResp
 type WhitelistResp struct {
 
 	// 白名单id

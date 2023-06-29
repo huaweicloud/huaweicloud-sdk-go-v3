@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// delete tag request
+// DeleteTagsRequestBody delete tag request
 type DeleteTagsRequestBody struct {
 
 	// 标签列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchTransactionConfigResponse Response Object
 type SearchTransactionConfigResponse struct {
 
 	// URL跟踪视图配置列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateVaultRequest Request Object
 type BatchUpdateVaultRequest struct {
 	Body *BatchUpdateVaultRequestBody `json:"body,omitempty"`
 }

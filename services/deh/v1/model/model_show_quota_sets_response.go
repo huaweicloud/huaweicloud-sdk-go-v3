@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowQuotaSetsResponse Response Object
 type ShowQuotaSetsResponse struct {
 
 	// 专属主机的配额。

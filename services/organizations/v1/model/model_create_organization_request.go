@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateOrganizationRequest Request Object
 type CreateOrganizationRequest struct {
 }
 

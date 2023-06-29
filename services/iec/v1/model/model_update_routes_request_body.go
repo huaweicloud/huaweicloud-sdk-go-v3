@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新路由请求体
+// UpdateRoutesRequestBody 更新路由请求体
 type UpdateRoutesRequestBody struct {
 
 	// 待更新的路由信息

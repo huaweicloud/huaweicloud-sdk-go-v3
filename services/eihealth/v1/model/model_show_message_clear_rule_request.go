@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMessageClearRuleRequest Request Object
 type ShowMessageClearRuleRequest struct {
 }
 

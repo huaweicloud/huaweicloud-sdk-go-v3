@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunGetFileTranslationResultResponse Response Object
 type RunGetFileTranslationResultResponse struct {
 
 	// 当前翻译状态。具体状态如下所示： WAITING 等待翻译。 FINISHED 翻译已经完成。 ERROR 翻译过程中发生错误。 调用失败时无此字段。

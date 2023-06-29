@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计费信息
+// MarketOptions 计费信息
 type MarketOptions struct {
 	ChargeMode *ChargeMode `json:"charge_mode,omitempty"`
 

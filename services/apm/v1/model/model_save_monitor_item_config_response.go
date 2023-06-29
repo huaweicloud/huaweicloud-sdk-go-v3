@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SaveMonitorItemConfigResponse Response Object
 type SaveMonitorItemConfigResponse struct {
 
 	// 保存监控项返回状态。

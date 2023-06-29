@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopSimCardResponse Response Object
 type StopSimCardResponse struct {
 
 	// 业务受理单号

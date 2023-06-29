@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEdgeNodeCertsResponse Response Object
 type CreateEdgeNodeCertsResponse struct {
 
 	// 证书id

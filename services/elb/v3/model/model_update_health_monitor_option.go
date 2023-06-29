@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新健康检查请求参数。
+// UpdateHealthMonitorOption 更新健康检查请求参数。
 type UpdateHealthMonitorOption struct {
 
 	// 健康检查的管理状态。  取值： - true：表示开启健康检查，默认为true。 - false表示关闭健康检查。
@@ -116,13 +116,18 @@ func (c UpdateHealthMonitorOptionHttpMethod) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateHealthMonitorOptionHttpMethod) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpgradeClusterResponse Response Object
 type UpgradeClusterResponse struct {
 
 	// 升级任务ID，可通过调用获取集群升级任务详情API查询进展

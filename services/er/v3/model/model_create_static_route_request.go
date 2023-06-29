@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateStaticRouteRequest Request Object
 type CreateStaticRouteRequest struct {
 
 	// 幂等性标识

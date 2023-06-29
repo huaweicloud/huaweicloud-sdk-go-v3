@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateResponse Response Object
 type ShowTemplateResponse struct {
 	Template       *TemplateResponseBody `json:"template,omitempty"`
 	HttpStatusCode int                   `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateSubnetOption
 type UpdateSubnetOption struct {
 
 	// 功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）

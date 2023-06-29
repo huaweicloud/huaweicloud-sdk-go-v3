@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMultiAccountTransferCouponsRequest Request Object
 type ListMultiAccountTransferCouponsRequest struct {
 
 	// 偏移量，默认值为0。此参数不携带或携带值为空或携带值为null时，取默认值0；不支持携带值为空串。

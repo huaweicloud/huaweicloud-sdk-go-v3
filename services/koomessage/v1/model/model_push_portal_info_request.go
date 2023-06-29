@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PushPortalInfoRequest Request Object
 type PushPortalInfoRequest struct {
 
 	// 主页ID。

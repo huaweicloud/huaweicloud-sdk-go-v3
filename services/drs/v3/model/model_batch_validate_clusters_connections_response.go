@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchValidateClustersConnectionsResponse Response Object
 type BatchValidateClustersConnectionsResponse struct {
 
 	// 批量测试连接响应体集合。

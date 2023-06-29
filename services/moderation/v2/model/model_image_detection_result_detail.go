@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ImageDetectionResultDetail
 type ImageDetectionResultDetail struct {
 
 	// 涉政敏感人物检测结果。

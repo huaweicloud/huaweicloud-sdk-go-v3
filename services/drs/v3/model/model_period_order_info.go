@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 包年/包月信息体
+// PeriodOrderInfo 包年/包月信息体
 type PeriodOrderInfo struct {
 
 	// 订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
@@ -60,13 +60,18 @@ func (c PeriodOrderInfoPeriodType) MarshalJSON() ([]byte, error) {
 
 func (c *PeriodOrderInfoPeriodType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}
@@ -101,13 +106,18 @@ func (c PeriodOrderInfoIsAutoRenew) MarshalJSON() ([]byte, error) {
 
 func (c *PeriodOrderInfoIsAutoRenew) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 健康检查实例。
+// HealthCheckDetail 健康检查实例。
 type HealthCheckDetail struct {
 
 	// 健康检查ID。

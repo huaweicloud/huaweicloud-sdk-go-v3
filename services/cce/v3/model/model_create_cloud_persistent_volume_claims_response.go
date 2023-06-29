@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCloudPersistentVolumeClaimsResponse Response Object
 type CreateCloudPersistentVolumeClaimsResponse struct {
 
 	// API版本，固定值**v1**

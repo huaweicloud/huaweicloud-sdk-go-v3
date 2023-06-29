@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对象，包括编号与名称
+// AttributeChange 对象，包括编号与名称
 type AttributeChange struct {
 
 	// 变更后的取值

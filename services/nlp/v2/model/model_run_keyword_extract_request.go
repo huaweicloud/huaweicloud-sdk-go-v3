@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunKeywordExtractRequest Request Object
 type RunKeywordExtractRequest struct {
 	Body *KeywordExtractReq `json:"body,omitempty"`
 }

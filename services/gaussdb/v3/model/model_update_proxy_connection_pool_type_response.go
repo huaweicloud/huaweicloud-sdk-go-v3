@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProxyConnectionPoolTypeResponse Response Object
 type UpdateProxyConnectionPoolTypeResponse struct {
 
 	// 任务ID。

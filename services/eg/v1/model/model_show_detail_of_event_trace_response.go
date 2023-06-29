@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDetailOfEventTraceResponse Response Object
 type ShowDetailOfEventTraceResponse struct {
 
 	// 事件ID

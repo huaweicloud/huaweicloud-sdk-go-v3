@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器标签。
+// ServerTag 云服务器标签。
 type ServerTag struct {
 
 	// 键。  - 不能为空。  - 对于同一资源键值唯一。  - 长度不超过36个字符。  - 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。

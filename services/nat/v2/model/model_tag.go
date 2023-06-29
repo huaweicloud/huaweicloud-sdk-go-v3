@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Tag
 type Tag struct {
 
 	// 键。最大长度128个unicode字符。key不能为空。

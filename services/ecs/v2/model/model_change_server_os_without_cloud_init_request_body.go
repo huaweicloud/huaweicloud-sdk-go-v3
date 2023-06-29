@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ChangeServerOsWithoutCloudInitRequestBody This is a auto create Body Object
 type ChangeServerOsWithoutCloudInitRequestBody struct {
 	OsChange *ChangeServerOsWithoutCloudInitOption `json:"os-change"`
 }

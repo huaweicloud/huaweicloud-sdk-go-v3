@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘实例关联的安全组
+// InstanceSecurityGroup 边缘实例关联的安全组
 type InstanceSecurityGroup struct {
 
 	// 安全组名称或者UUID。

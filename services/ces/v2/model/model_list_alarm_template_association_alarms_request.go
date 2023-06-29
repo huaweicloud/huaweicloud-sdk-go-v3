@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmTemplateAssociationAlarmsRequest Request Object
 type ListAlarmTemplateAssociationAlarmsRequest struct {
 
 	// 告警模板的ID，以at开头，后跟字母、数字，长度最长为64

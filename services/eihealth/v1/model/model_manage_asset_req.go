@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作资产请求体
+// ManageAssetReq 操作资产请求体
 type ManageAssetReq struct {
 	Action *AssetAction `json:"action"`
 }

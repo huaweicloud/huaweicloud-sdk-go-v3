@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图像内容审核请求体
+// ImageDetectionReq 图像内容审核请求体
 type ImageDetectionReq struct {
 
 	// 事件类型。 可选值如下： head_image：头像 album：相册 dynamic：动态 article：帖子 comment：评论 room_cover：房间封面 group_message：群聊图片 message：私聊图片 product：商品图片

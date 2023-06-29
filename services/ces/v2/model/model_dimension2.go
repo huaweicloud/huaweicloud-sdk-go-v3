@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标维度
+// Dimension2 指标维度
 type Dimension2 struct {
 
 	// 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。

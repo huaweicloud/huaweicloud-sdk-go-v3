@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFlavorsRequest Request Object
 type ListFlavorsRequest struct {
 
 	// 实例所在区域。

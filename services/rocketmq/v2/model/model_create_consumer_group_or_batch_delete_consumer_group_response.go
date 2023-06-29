@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateConsumerGroupOrBatchDeleteConsumerGroupResponse Response Object
 type CreateConsumerGroupOrBatchDeleteConsumerGroupResponse struct {
 
 	// 删除消费组的任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEngineFlavorsRequest Request Object
 type ListEngineFlavorsRequest struct {
 
 	// 实例ID

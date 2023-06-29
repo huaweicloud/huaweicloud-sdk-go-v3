@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTransactionSplitStatusRequest Request Object
 type UpdateTransactionSplitStatusRequest struct {
 
 	// 实例ID。

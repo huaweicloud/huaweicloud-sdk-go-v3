@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateInstanceBy3rdRequest Request Object
 type CreateInstanceBy3rdRequest struct {
 
 	// 实例标签（不同的第三方需要和CodeArtsIDEOnline服务共同设定标签）。不传默认为classroom

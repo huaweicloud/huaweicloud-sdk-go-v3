@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量执行错误信息
+// OperateErrorInfo 批量执行错误信息
 type OperateErrorInfo struct {
 
 	// 唯一标识ID，流程URN

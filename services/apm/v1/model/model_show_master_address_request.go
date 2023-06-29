@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMasterAddressRequest Request Object
 type ShowMasterAddressRequest struct {
 
 	// region英文名称。

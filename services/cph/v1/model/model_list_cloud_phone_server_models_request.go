@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCloudPhoneServerModelsRequest Request Object
 type ListCloudPhoneServerModelsRequest struct {
 
 	// 产品类型 - 0：云手机 - 1：云手游

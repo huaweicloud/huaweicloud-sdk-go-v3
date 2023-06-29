@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRepositoryByCloudIdeResponse Response Object
 type ShowRepositoryByCloudIdeResponse struct {
 
 	// CloudIde打开链接:https://xxx/cloudide/loading?instanceId=xxx&scmUrl=xxx

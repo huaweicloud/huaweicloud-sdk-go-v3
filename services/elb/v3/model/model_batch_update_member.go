@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量更新后端服务器响应参数
+// BatchUpdateMember 批量更新后端服务器响应参数
 type BatchUpdateMember struct {
 
 	// 后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BehaviorsConfig
 type BehaviorsConfig struct {
 
 	// 正向行为。

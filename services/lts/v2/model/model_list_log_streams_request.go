@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLogStreamsRequest Request Object
 type ListLogStreamsRequest struct {
 
 	// 日志组名称

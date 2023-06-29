@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改的域名信息。
+// ModifyClusterDns 修改的域名信息。
 type ModifyClusterDns struct {
 
 	// 待修改的域名。

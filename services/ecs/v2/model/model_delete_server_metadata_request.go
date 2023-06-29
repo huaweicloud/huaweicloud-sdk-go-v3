@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteServerMetadataRequest Request Object
 type DeleteServerMetadataRequest struct {
 
 	// 待删除的云服务器metadata键值

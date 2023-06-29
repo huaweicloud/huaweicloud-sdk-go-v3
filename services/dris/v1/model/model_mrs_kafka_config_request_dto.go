@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：mrsKafka配置。
+// MrsKafkaConfigRequestDto **参数说明**：mrsKafka配置。
 type MrsKafkaConfigRequestDto struct {
 
 	// **参数说明**：mrskafka的主题列表，根据需要转发的消息类型填写。  **取值范围**：  - v2x-v1-tracks：edge上报的车辆轨迹数据  - v2x-v1-bsm：车载T-BOX，mqtt协议接入rsu， websocket协议接入rsu上报的BSM消息数据  - v2x-v1-rsi：mqtt协议接入rsu，edge上报的RSI消息数据  - v2x-v1-rsm： mqtt协议接入rsu，edge上报的RSM消息数据  - v2x-v1-spat：mqtt协议接入rsu， websocket协议接入rsu上报的SPAT消息数据  - v2x-v1-edge-flow：edge上报的车流量统计信息数据

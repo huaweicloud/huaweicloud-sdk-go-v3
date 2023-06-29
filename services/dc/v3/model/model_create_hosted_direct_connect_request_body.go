@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建托管专线对象信息
+// CreateHostedDirectConnectRequestBody 创建托管专线对象信息
 type CreateHostedDirectConnectRequestBody struct {
 	HostedConnect *CreateHostedDirectConnect `json:"hosted_connect"`
 }

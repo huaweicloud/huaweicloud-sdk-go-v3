@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListParseDomainDetailsResponse Response Object
 type ListParseDomainDetailsResponse struct {
 
 	// 域名id列表

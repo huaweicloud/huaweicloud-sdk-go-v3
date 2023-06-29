@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchListJobDetailsResponse Response Object
 type BatchListJobDetailsResponse struct {
 
 	// 任务数量

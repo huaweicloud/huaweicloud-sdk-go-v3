@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSummaryResponse Response Object
 type RunSummaryResponse struct {
 
 	// 根据文本请求体，返回摘要结果。调用失败时无此字段。

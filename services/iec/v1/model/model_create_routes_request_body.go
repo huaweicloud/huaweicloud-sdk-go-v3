@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建路由请求体
+// CreateRoutesRequestBody 创建路由请求体
 type CreateRoutesRequestBody struct {
 
 	// 待创建的路由列表

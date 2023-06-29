@@ -4,6 +4,8 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"encoding/json"
+	"errors"
+	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"os"
 	"reflect"
@@ -52,6 +54,8 @@ func (o *UploadSignatureFileRequestBody) UnmarshalJSON(b []byte) error {
 			field.Set(reflect.ValueOf(def.NewFilePart(file)))
 		case *def.MultiPart:
 			field.Set(reflect.ValueOf(def.NewMultiPart(m[jsonName])))
+		default:
+			return errors.New(fmt.Sprintf("unmarshal %s failed", m[jsonName]))
 		}
 	}
 	return nil

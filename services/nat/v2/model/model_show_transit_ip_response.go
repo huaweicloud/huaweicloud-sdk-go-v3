@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTransitIpResponse Response Object
 type ShowTransitIpResponse struct {
 	TransitIp *TransitIp `json:"transit_ip,omitempty"`
 

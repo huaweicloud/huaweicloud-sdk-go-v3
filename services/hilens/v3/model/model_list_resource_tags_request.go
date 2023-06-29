@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceTagsRequest Request Object
 type ListResourceTagsRequest struct {
 
 	// 资源类型

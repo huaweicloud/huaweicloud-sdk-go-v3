@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNewInstantMessagesReadResponse Response Object
 type UpdateNewInstantMessagesReadResponse struct {
 
 	// 错误码

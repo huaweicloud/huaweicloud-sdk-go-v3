@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMemberRequest Request Object
 type DeleteMemberRequest struct {
 
 	// 后端服务器组ID。

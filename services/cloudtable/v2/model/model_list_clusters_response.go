@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClustersResponse Response Object
 type ListClustersResponse struct {
 
 	// 查询到的集群详细列表，每个json体表示一个集群的详情。

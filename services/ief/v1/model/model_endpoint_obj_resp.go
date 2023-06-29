@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 端点详情
+// EndpointObjResp 端点详情
 type EndpointObjResp struct {
 
 	// 创建时间

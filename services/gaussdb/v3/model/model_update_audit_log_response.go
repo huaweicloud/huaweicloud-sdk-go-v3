@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAuditLogResponse Response Object
 type UpdateAuditLogResponse struct {
 
 	// 开启/关闭全量SQL操作结果。

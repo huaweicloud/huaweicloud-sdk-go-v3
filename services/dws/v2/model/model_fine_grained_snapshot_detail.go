@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 细粒度备份信息
+// FineGrainedSnapshotDetail 细粒度备份信息
 type FineGrainedSnapshotDetail struct {
 
 	// 数据库。

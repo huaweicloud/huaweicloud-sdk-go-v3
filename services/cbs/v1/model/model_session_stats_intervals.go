@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SessionStatsIntervals
 type SessionStatsIntervals struct {
 
 	// 间隔周期开始时间。

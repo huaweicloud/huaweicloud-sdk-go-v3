@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储库批量修改参数体
+// BatchUpdateVaultRequestBody 存储库批量修改参数体
 type BatchUpdateVaultRequestBody struct {
 	Vault *VaultBatchUpdate `json:"vault"`
 }

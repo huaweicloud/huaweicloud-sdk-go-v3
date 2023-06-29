@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTaskRulesetResponse Response Object
 type ListTaskRulesetResponse struct {
 	Body           *[]TaskRulesetInfo `json:"body,omitempty"`
 	HttpStatusCode int                `json:"-"`

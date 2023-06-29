@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘实例地址
+// InstanceAddress 边缘实例地址
 type InstanceAddress struct {
 
 	// MAC地址。

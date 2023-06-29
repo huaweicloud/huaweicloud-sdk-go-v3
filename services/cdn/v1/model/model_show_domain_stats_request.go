@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDomainStatsRequest Request Object
 type ShowDomainStatsRequest struct {
 
 	// - 动作名称，可选summary、detail。 - summary：查询汇总数据 - detail：查询数据详情。

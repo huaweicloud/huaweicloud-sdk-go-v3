@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateLineGroupsRequest Request Object
 type UpdateLineGroupsRequest struct {
 
 	// 待更新的线路分组ID。

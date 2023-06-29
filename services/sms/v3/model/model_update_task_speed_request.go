@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTaskSpeedRequest Request Object
 type UpdateTaskSpeedRequest struct {
 
 	// 主机迁移任务的ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用实例历史版本
+// QueryAppInstanceHistoryResponseDto 应用实例历史版本
 type QueryAppInstanceHistoryResponseDto struct {
 
 	// 应用ID

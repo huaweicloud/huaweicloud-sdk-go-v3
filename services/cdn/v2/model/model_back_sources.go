@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 高级回源信息源站配置。
+// BackSources 高级回源信息源站配置。
 type BackSources struct {
 
 	// 源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。

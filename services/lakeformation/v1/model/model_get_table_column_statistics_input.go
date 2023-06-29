@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取表列统计信息输入参数
+// GetTableColumnStatisticsInput 获取表列统计信息输入参数
 type GetTableColumnStatisticsInput struct {
 
 	// 列名

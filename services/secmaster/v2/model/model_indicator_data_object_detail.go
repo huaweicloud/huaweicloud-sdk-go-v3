@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// detail of indicator
+// IndicatorDataObjectDetail detail of indicator
 type IndicatorDataObjectDetail struct {
 	IndicatorType *CreateIndicatorDetailIndicatorType `json:"indicator_type,omitempty"`
 

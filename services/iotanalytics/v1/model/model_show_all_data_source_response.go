@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAllDataSourceResponse Response Object
 type ShowAllDataSourceResponse struct {
 
 	// 总数

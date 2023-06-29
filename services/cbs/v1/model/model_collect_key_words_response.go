@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CollectKeyWordsResponse Response Object
 type CollectKeyWordsResponse struct {
 
 	// 指定时间范围内，用户问关键词列表。

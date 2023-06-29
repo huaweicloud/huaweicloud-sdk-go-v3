@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节目基础信息。
+// ProgramRequestBase 节目基础信息。
 type ProgramRequestBase struct {
 
 	// 节目名称。

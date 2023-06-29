@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSignatureFileRequest Request Object
 type ShowSignatureFileRequest struct {
 
 	// 营业执照ID

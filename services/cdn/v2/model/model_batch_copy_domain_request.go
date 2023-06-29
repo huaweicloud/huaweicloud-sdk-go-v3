@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCopyDomainRequest Request Object
 type BatchCopyDomainRequest struct {
 	Body *BatchCopyDRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePrivateNatRequest Request Object
 type DeletePrivateNatRequest struct {
 
 	// 私网NAT网关实例的ID。

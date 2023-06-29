@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDatabaseResourceRequest Request Object
 type DeleteDatabaseResourceRequest struct {
 
 	// 数据库ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlarmTemplateRequest Request Object
 type UpdateAlarmTemplateRequest struct {
 
 	// 需要更新的自定义告警模板ID。

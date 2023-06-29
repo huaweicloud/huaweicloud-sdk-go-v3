@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 短信发送通道参数。
+// SmsChannel 短信发送通道参数。
 type SmsChannel struct {
 
 	// 短信通道号。  > 必须与另外三个字段sms_tpl_id、sms_sign、sms_app_name相匹配，这些字段信息可以从“云消息服务KooMessage-管理控制台-短信配置-短信签名管理-通道号”中获取。

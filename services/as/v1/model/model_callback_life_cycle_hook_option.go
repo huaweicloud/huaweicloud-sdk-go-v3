@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 伸缩实例生命周期回调
+// CallbackLifeCycleHookOption 伸缩实例生命周期回调
 type CallbackLifeCycleHookOption struct {
 
 	// 生命周期操作令牌，通过查询伸缩实例挂起信息接口获取。指定生命周期回调对象，当不传入instance_id字段时，该字段为必选。当该字段与instance_id字段都传入，优先使用该字段进行回调。
@@ -68,13 +68,18 @@ func (c CallbackLifeCycleHookOptionLifecycleActionResult) MarshalJSON() ([]byte,
 
 func (c *CallbackLifeCycleHookOptionLifecycleActionResult) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

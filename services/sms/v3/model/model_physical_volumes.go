@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 使用大小
+// PhysicalVolumes 使用大小
 type PhysicalVolumes struct {
 
 	// 分区类型，普通分区，启动分区，系统分区

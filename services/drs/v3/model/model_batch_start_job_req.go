@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量启动任务请求体。
+// BatchStartJobReq 批量启动任务请求体。
 type BatchStartJobReq struct {
 
 	// 批量启动任务请求列表。

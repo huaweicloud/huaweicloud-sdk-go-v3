@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 租户协议
+// TenantAgreement 租户协议
 type TenantAgreement struct {
 
 	// 协议名称

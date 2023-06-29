@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// LeftRightPosition
 type LeftRightPosition struct {
 	Left *Position `json:"left"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateLoadbalancerRequest Request Object
 type UpdateLoadbalancerRequest struct {
 
 	// 待更新的负载均衡器id

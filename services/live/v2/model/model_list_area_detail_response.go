@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAreaDetailResponse Response Object
 type ListAreaDetailResponse struct {
 
 	// 时间戳及相应时间的指标数值

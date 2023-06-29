@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportCheckpointResponse Response Object
 type ImportCheckpointResponse struct {
 	Sync           *SyncRespBody `json:"sync,omitempty"`
 	HttpStatusCode int           `json:"-"`

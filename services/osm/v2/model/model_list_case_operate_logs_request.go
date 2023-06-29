@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCaseOperateLogsRequest Request Object
 type ListCaseOperateLogsRequest struct {
 
 	// 工单id

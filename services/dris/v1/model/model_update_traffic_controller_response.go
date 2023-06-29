@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateTrafficControllerResponse Response Object
 type UpdateTrafficControllerResponse struct {
 
 	// **参数说明**：信号机设备ID，全局唯一。

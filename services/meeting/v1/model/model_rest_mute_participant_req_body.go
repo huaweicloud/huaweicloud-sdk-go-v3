@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 静音与会者请求。
+// RestMuteParticipantReqBody 静音与会者请求。
 type RestMuteParticipantReqBody struct {
 
 	// - 0: 取消静音 - 1: 静音

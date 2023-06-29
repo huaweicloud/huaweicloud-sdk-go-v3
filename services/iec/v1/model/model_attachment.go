@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Attachment
 type Attachment struct {
 
 	// 挂载信息对应的ID。

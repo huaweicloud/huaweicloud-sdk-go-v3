@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteScalingPolicyRequest Request Object
 type DeleteScalingPolicyRequest struct {
 
 	// 伸缩策略ID。

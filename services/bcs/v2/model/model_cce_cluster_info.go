@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 使用已有CCE集群信息，说明：Fabric1.4版本服务仅支持1.15及以下版本集群
+// CceClusterInfo 使用已有CCE集群信息，说明：Fabric1.4版本服务仅支持1.15及以下版本集群
 type CceClusterInfo struct {
 
 	// 集群ID

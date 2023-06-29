@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVaultTagResponse Response Object
 type ShowVaultTagResponse struct {
 
 	// 标签列表 tags中key不重复

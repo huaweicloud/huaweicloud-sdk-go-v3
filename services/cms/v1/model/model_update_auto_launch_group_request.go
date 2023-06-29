@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAutoLaunchGroupRequest Request Object
 type UpdateAutoLaunchGroupRequest struct {
 
 	// 智能购买组ID

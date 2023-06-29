@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机使用的带宽信息。独占带宽按流量计费，共享带宽可选择带宽大小
+// CreateCloudPhoneServerRequestBodyBandWidth 云手机使用的带宽信息。独占带宽按流量计费，共享带宽可选择带宽大小
 type CreateCloudPhoneServerRequestBodyBandWidth struct {
 
 	// 云手机服务器的带宽唯一标识

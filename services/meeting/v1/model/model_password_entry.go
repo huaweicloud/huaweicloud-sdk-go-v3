@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密码信息。
+// PasswordEntry 密码信息。
 type PasswordEntry struct {
 
 	// 会议角色。 - chair: 会议主持人 - general: 普通与会者

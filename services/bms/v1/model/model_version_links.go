@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// API的url地址
+// VersionLinks API的url地址
 type VersionLinks struct {
 
 	// API的url地址

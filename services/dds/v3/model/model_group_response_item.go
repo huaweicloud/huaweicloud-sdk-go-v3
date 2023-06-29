@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例组信息。
+// GroupResponseItem 实例组信息。
 type GroupResponseItem struct {
 
 	// 节点类型。 取值： - shard - config - mongos - replica - single

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 磁盘IO信息。
+// ExtendProductIosEntity 磁盘IO信息。
 type ExtendProductIosEntity struct {
 
 	// 存储IO规格。

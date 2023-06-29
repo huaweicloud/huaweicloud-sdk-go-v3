@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAntitamperRuleResponse Response Object
 type ListAntitamperRuleResponse struct {
 
 	// 网页防篡改规则总条数

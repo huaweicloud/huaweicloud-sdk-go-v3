@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClusterDetailsRequest Request Object
 type ListClusterDetailsRequest struct {
 
 	// 集群ID

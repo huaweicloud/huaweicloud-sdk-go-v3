@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流计算输出映射
+// StreamOutput 流计算输出映射
 type StreamOutput struct {
 
 	// 输出参数名称，必须是接收数据类型为资产数据的实时分析作业中已定义的

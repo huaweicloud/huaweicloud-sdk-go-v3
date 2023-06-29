@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeNodeCertsResponse Response Object
 type ListEdgeNodeCertsResponse struct {
 
 	// 节点上已关联的应用证书和设备证书的数目

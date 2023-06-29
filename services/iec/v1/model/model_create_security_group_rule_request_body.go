@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建安全组规则请求体。
+// CreateSecurityGroupRuleRequestBody 创建安全组规则请求体。
 type CreateSecurityGroupRuleRequestBody struct {
 	SecurityGroupRule *CreateSecurityGroupRuleOption `json:"security_group_rule"`
 }

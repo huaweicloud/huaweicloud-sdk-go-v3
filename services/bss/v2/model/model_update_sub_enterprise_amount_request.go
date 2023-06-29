@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSubEnterpriseAmountRequest Request Object
 type UpdateSubEnterpriseAmountRequest struct {
 	Body *TransferEnterpriseMultiAccountReq `json:"body,omitempty"`
 }

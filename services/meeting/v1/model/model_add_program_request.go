@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddProgramRequest Request Object
 type AddProgramRequest struct {
 
 	// 请求requestId，用来标识一路请求，用于问题跟踪定位，建议使用UUID，若不携带，则后台自动生成。

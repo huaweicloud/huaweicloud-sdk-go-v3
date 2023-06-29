@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListShadowsResponse Response Object
 type ListShadowsResponse struct {
 	Body           *[]ShadowService `json:"body,omitempty"`
 	HttpStatusCode int              `json:"-"`

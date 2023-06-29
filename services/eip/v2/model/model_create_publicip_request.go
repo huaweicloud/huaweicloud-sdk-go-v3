@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePublicipRequest Request Object
 type CreatePublicipRequest struct {
 	Body *CreatePublicipRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetCustomMultiPictureResponse Response Object
 type SetCustomMultiPictureResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResDatasourceResponse Response Object
 type ShowResDatasourceResponse struct {
 	Datasource *Datasources `json:"datasource,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议与会者CPU QoS数据，当qosType = cpu 时有效。
+// QosCpuInfo 会议与会者CPU QoS数据，当qosType = cpu 时有效。
 type QosCpuInfo struct {
 
 	// App最大CPU使用率。

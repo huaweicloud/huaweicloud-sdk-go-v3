@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用例列表详情
+// ProjectDirectory 用例列表详情
 type ProjectDirectory struct {
 
 	// id

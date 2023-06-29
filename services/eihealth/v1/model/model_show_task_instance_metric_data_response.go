@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskInstanceMetricDataResponse Response Object
 type ShowTaskInstanceMetricDataResponse struct {
 
 	// 监控数据列表

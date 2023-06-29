@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronCreateFirewallGroupOption
 type NeutronCreateFirewallGroupOption struct {
 
 	// 功能说明：网络ACL组名称 取值范围：0-255个字符

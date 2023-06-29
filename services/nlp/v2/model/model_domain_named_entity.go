@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 命名实体类
+// DomainNamedEntity 命名实体类
 type DomainNamedEntity struct {
 
 	// 实体文本。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBranchesResponse Response Object
 type ListBranchesResponse struct {
 
 	// 项目分支列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNameSpaceListResponse Response Object
 type ShowNameSpaceListResponse struct {
 	Body           *[]NamespaceVo `json:"body,omitempty"`
 	HttpStatusCode int            `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Redis 3.0 proxy集群中proxy节点监控对象结构
+// ProxyNodeMonitoredObject Redis 3.0 proxy集群中proxy节点监控对象结构
 type ProxyNodeMonitoredObject struct {
 
 	// 测量对象ID，即节点的ID。

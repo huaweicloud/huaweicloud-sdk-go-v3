@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// GeneralTableRequestBody
 type GeneralTableRequestBody struct {
 
 	// 与url二选一  图片最小边不小于15px，最长边不超过8192px，支持JPEG、JPG、PNG、BMP、TIFF格式。  图片文件Base64编码字符串，点击[这里](https://support.huaweicloud.com/ocr_faq/ocr_01_0032.html)查看详细获取方式。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPipelineRunDetailResponse Response Object
 type ShowPipelineRunDetailResponse struct {
 
 	// 流水线运行实例ID

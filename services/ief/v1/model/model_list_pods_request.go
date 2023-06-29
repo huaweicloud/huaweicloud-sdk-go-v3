@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPodsRequest Request Object
 type ListPodsRequest struct {
 
 	// 指定节点查询应用实例，可选， 与group_id、deployment_id、deployment_ids四选一

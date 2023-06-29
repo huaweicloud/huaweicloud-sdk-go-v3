@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPubInfosRequest Request Object
 type ListPubInfosRequest struct {
 
 	// 服务号名称。

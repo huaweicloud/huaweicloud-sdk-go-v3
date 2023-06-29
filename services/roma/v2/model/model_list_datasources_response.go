@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDatasourcesResponse Response Object
 type ListDatasourcesResponse struct {
 
 	// 返回所有满足条件的对象个数

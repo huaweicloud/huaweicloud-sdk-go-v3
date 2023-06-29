@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用输出参数
+// AppOutputParameterDto 应用输出参数
 type AppOutputParameterDto struct {
 
 	// 参数名称，单个应用内唯一。取值范围：长度为[1,32]，以小写字母开头，允许出现中划线(-)、小写字母和数字，且必须以小写字母或数字结尾。

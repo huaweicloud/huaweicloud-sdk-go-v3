@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OT模板概要响应信息
+// QueryOtTemplateBriefRespDto OT模板概要响应信息
 type QueryOtTemplateBriefRespDto struct {
 
 	// 模板id

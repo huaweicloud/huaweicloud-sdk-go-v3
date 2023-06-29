@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 静默活体检测结果，LivelessDetectResult结构见表[结构格式说明表](https://support.huaweicloud.com/api-face/face_02_0102.html#face_02_0102__table112325301714)。 调用失败时无此字段。
+// LiveDetectFaceRespResult 静默活体检测结果，LivelessDetectResult结构见表[结构格式说明表](https://support.huaweicloud.com/api-face/face_02_0102.html#face_02_0102__table112325301714)。 调用失败时无此字段。
 type LiveDetectFaceRespResult struct {
 
 	// 是否是活体。

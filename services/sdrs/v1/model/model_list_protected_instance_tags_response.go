@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProtectedInstanceTagsResponse Response Object
 type ListProtectedInstanceTagsResponse struct {
 
 	// 标签列表。

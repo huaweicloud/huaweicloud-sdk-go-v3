@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NetworkIpAvailability
 type NetworkIpAvailability struct {
 
 	// 网络ID

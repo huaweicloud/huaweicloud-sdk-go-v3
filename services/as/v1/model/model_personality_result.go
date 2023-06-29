@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 个人信息
+// PersonalityResult 个人信息
 type PersonalityResult struct {
 
 	// 注入文件路径信息。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSpecialThrottlingConfigurationsV2Response Response Object
 type ListSpecialThrottlingConfigurationsV2Response struct {
 
 	// 本次返回的列表长度

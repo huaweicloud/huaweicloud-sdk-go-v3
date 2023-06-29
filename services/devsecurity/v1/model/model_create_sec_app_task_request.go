@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSecAppTaskRequest Request Object
 type CreateSecAppTaskRequest struct {
 	Body *CreateSecAppTaskRequestBody `json:"body,omitempty" type:"multipart"`
 }

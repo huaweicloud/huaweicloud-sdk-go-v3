@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 结构化模板实体
+// StructTemplate 结构化模板实体
 type StructTemplate struct {
 
 	// 项目id
@@ -86,13 +86,18 @@ func (c StructTemplateTemplateType) MarshalJSON() ([]byte, error) {
 
 func (c *StructTemplateTemplateType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

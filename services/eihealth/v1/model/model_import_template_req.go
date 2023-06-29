@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入模板请求体
+// ImportTemplateReq 导入模板请求体
 type ImportTemplateReq struct {
 
 	// 源项目id

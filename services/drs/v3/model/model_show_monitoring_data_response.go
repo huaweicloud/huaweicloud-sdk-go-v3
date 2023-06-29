@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMonitoringDataResponse Response Object
 type ShowMonitoringDataResponse struct {
 
 	// 容灾监控数据响应体集合

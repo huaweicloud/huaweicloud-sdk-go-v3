@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCommonPoolsRequest Request Object
 type ListCommonPoolsRequest struct {
 
 	// 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group

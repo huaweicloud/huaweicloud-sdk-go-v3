@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAlertRequest Request Object
 type DeleteAlertRequest struct {
 
 	// application/json;charset=UTF-8

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCaseTemplatesRequest Request Object
 type ListCaseTemplatesRequest struct {
 
 	// 业务类型id

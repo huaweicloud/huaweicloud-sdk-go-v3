@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// TagResp 标签
 type TagResp struct {
 
 	// 键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。

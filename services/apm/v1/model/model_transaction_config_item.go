@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// URL跟踪视图配置。
+// TransactionConfigItem URL跟踪视图配置。
 type TransactionConfigItem struct {
 
 	// 配置id。

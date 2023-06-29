@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// DeleteServerGroupMemberRequestBody This is a auto create Body Object
 type DeleteServerGroupMemberRequestBody struct {
 	RemoveMember *ServerGroupMember `json:"remove_member"`
 }

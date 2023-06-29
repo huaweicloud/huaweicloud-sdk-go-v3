@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListImageRequest Request Object
 type ListImageRequest struct {
 
 	// 镜像类型

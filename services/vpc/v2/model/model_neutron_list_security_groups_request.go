@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronListSecurityGroupsRequest Request Object
 type NeutronListSecurityGroupsRequest struct {
 
 	// 每页返回的个数

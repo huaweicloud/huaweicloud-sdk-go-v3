@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVpcRouteRequest Request Object
 type ShowVpcRouteRequest struct {
 
 	// 路由ID

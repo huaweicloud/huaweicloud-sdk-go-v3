@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 要加入的终端设备详情
+// DevicesDevicesAdded 要加入的终端设备详情
 type DevicesDevicesAdded struct {
 
 	// 终端设备和节点关系的名称，只允许中文字符、英文字母、数字、下划线、中划线，最大长度64

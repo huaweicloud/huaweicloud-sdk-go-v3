@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartTaskRequest Request Object
 type StartTaskRequest struct {
 
 	// 服务名称

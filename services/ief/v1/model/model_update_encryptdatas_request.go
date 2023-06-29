@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEncryptdatasRequest Request Object
 type UpdateEncryptdatasRequest struct {
 
 	// 加密数据ID

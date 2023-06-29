@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeApplicationResponse Response Object
 type ChangeApplicationResponse struct {
 
 	// 应用ID。

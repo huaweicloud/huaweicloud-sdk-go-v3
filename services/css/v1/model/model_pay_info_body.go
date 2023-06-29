@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 包周期集群相关参数，订购包周期集群时使用。
+// PayInfoBody 包周期集群相关参数，订购包周期集群时使用。
 type PayInfoBody struct {
 
 	// 订购周期类型。 - 2: 包月。 - 3: 包年。

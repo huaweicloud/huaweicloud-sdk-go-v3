@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更行数
+// SpecificCommitInfoStats 变更行数
 type SpecificCommitInfoStats struct {
 
 	// 变更增加的行数

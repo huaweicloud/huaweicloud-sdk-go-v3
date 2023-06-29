@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPropertyRequest Request Object
 type ListPropertyRequest struct {
 
 	// 属性，支持LABEL/PUBLISHER/CATEGORY

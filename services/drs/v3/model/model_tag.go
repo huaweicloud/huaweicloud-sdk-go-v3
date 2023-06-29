@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DRS标签
+// Tag DRS标签
 type Tag struct {
 
 	// 标签key

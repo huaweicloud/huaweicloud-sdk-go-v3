@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业详情返回体
+// StudyJobRsp 作业详情返回体
 type StudyJobRsp struct {
 
 	// study作业id

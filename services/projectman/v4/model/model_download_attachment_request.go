@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadAttachmentRequest Request Object
 type DownloadAttachmentRequest struct {
 
 	// devcloud项目的32位id

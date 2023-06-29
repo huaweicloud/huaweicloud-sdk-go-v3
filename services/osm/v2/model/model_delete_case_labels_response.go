@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteCaseLabelsResponse Response Object
 type DeleteCaseLabelsResponse struct {
 
 	// 错误码

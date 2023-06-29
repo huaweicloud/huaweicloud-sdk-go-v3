@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeApiVersionV2Request Request Object
 type ChangeApiVersionV2Request struct {
 
 	// 实例编号

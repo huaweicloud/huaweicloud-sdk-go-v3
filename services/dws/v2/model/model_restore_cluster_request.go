@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreClusterRequest Request Object
 type RestoreClusterRequest struct {
 
 	// 待恢复的快照ID。

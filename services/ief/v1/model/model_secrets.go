@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 环境变量引用密钥时使用。使用ValueFrom时，secret与configmap必须二选一。
+// Secrets 环境变量引用密钥时使用。使用ValueFrom时，secret与configmap必须二选一。
 type Secrets struct {
 
 	// 密钥的名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunNerDomainRequest Request Object
 type RunNerDomainRequest struct {
 	Body *PostDomainNerRequest `json:"body,omitempty"`
 }

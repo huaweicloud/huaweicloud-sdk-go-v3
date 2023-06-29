@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 实体链接post请求体
+// PostEntityLinkingRequest 实体链接post请求体
 type PostEntityLinkingRequest struct {
 
 	// 待分析文本，长度为1~50，文本编码为UTF-8。
@@ -54,13 +54,18 @@ func (c PostEntityLinkingRequestLang) MarshalJSON() ([]byte, error) {
 
 func (c *PostEntityLinkingRequestLang) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

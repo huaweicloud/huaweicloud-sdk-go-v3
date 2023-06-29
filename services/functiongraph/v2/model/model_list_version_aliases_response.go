@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVersionAliasesResponse Response Object
 type ListVersionAliasesResponse struct {
 
 	// 函数版本别名列表

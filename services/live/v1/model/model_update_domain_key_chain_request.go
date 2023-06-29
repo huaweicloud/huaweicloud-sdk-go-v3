@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDomainKeyChainRequest Request Object
 type UpdateDomainKeyChainRequest struct {
 
 	// 直播域名，包括推流域名和播放域名

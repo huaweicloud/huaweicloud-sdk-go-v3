@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto update request Object
+// UpdateUserReq This is a auto update request Object
 type UpdateUserReq struct {
 	User *UpdateUserDetailReq `json:"user"`
 }

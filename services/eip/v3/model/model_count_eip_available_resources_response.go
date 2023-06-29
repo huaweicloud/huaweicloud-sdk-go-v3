@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountEipAvailableResourcesResponse Response Object
 type CountEipAvailableResourcesResponse struct {
 
 	// - 功能说明：返回结果

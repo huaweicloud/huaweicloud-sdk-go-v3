@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除网卡请求体。
+// DeleteNicsRequestBody 删除网卡请求体。
 type DeleteNicsRequestBody struct {
 
 	// 待删除网卡信息。

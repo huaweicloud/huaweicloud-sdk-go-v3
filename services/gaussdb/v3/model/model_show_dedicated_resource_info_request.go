@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDedicatedResourceInfoRequest Request Object
 type ShowDedicatedResourceInfoRequest struct {
 
 	// 语言。

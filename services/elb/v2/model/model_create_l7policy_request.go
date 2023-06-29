@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateL7policyRequest Request Object
 type CreateL7policyRequest struct {
 	Body *CreateL7policyRequestBody `json:"body,omitempty"`
 }

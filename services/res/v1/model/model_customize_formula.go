@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义公式
+// CustomizeFormula 自定义公式
 type CustomizeFormula struct {
 
 	// 别名。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of rule
+// RuleInfo Information of rule
 type RuleInfo struct {
 
 	// Id value

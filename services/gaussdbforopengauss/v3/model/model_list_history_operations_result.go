@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数修改历史记录明细信息。
+// ListHistoryOperationsResult 参数修改历史记录明细信息。
 type ListHistoryOperationsResult struct {
 
 	// 参数名称。

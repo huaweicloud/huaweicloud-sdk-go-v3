@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisableAttributeRequest Request Object
 type DisableAttributeRequest struct {
 
 	// 自定义属性标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建规则集信息
+// Ruleset 创建规则集信息
 type Ruleset struct {
 
 	// 项目ID

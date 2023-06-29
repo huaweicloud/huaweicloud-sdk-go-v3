@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 字典排序，值越小顺序越靠前
+// DictionaryOrder 字典排序，值越小顺序越靠前
 type DictionaryOrder struct {
 }
 

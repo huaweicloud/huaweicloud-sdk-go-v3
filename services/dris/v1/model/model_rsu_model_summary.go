@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// RSU型号概要信息。
+// RsuModelSummary RSU型号概要信息。
 type RsuModelSummary struct {
 
 	// **参数说明**：RSU型号ID，用于唯一标识一个RSU型号，在平台创建RSU型号后由平台分配获得。  **取值范围**：长度不小于1不超过36，只允许字母、数字、连接符（-）的组合。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisableCertificateAuthorityCrlRequest Request Object
 type DisableCertificateAuthorityCrlRequest struct {
 
 	// 所要禁用CRL的CA证书ID。

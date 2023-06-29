@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 在线会议信息。
+// RealTimeConfInfo 在线会议信息。
 type RealTimeConfInfo struct {
 
 	// 主持人与会者标识。

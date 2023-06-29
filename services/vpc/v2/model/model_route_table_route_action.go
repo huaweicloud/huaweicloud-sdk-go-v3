@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新路由表路由对象动作，可选add、mod、del
+// RouteTableRouteAction 更新路由表路由对象动作，可选add、mod、del
 type RouteTableRouteAction struct {
 
 	// 新增路由条目，type，destination，nexthop必选

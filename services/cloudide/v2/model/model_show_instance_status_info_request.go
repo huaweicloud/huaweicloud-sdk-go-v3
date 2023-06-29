@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowInstanceStatusInfoRequest Request Object
 type ShowInstanceStatusInfoRequest struct {
 
 	// CodeArtsIDEOnline实例id

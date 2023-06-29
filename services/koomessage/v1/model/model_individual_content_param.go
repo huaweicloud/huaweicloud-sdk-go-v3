@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 智能信息基础版参数名称。
+// IndividualContentParam 智能信息基础版参数名称。
 type IndividualContentParam struct {
 
 	// 智能信息基础版参数名称。

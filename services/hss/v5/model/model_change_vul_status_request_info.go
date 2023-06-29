@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 漏洞操作列表
+// ChangeVulStatusRequestInfo 漏洞操作列表
 type ChangeVulStatusRequestInfo struct {
 
 	// 操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - verify : 验证

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelGaussMySqlInstanceEipResponse Response Object
 type CancelGaussMySqlInstanceEipResponse struct {
 
 	// 任务ID。

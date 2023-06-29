@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMetadatas2Request Request Object
 type ListMetadatas2Request struct {
 
 	// 本次请求的起始位置，默认为0。

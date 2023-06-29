@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteComposeVideoRequest Request Object
 type ExecuteComposeVideoRequest struct {
 
 	// 视频id

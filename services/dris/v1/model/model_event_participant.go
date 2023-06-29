@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 交通参与者
+// EventParticipant 交通参与者
 type EventParticipant struct {
 
 	// **参数说明**：交通参与者的具体类型描述。  **取值范围**：  - unknown：未知  - motor：机动车  - non-motor：非机动车  - pedestrian：行人
@@ -84,13 +84,18 @@ func (c EventParticipantPtcType) MarshalJSON() ([]byte, error) {
 
 func (c *EventParticipantPtcType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 超时配置，开启后不支持关闭
+// TimeoutConfig 超时配置，开启后不支持关闭
 type TimeoutConfig struct {
 
 	// WAF连接源站超时配置

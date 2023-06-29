@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板网络参数配置
+// AppConfigs 应用模板网络参数配置
 type AppConfigs struct {
 
 	// 默认为false，表示是否开启特权模式

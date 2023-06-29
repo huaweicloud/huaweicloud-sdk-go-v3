@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVirtualGatewayRequest Request Object
 type ShowVirtualGatewayRequest struct {
 
 	// 显示字段列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAssistAuthConfigRequest Request Object
 type ShowAssistAuthConfigRequest struct {
 }
 

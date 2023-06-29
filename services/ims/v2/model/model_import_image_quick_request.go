@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportImageQuickRequest Request Object
 type ImportImageQuickRequest struct {
 	Body *QuickImportImageByFileRequestBody `json:"body,omitempty"`
 }

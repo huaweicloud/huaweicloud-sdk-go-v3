@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 域名请求体
+// CreateHostRequestBody 域名请求体
 type CreateHostRequestBody struct {
 
 	// 域名（域名只能由字母、数字、-、_和.组成，长度不能超过64个字符，如www.domain.com）
@@ -92,13 +92,18 @@ func (c CreateHostRequestBodyLbAlgorithm) MarshalJSON() ([]byte, error) {
 
 func (c *CreateHostRequestBodyLbAlgorithm) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

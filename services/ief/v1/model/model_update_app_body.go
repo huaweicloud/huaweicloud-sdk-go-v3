@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新应用模板的请求体
+// UpdateAppBody 更新应用模板的请求体
 type UpdateAppBody struct {
 	App *AppUpdate `json:"app"`
 }

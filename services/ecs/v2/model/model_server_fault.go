@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器故障信息。
+// ServerFault 弹性云服务器故障信息。
 type ServerFault struct {
 
 	// 错误码。

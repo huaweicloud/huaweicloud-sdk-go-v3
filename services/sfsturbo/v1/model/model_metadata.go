@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// metadata参数详情
+// Metadata metadata参数详情
 type Metadata struct {
 
 	// 要创加密文件系统，该字段传KMS服务专业版密钥的ID。

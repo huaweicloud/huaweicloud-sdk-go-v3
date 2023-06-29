@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDomainCertTagsRequest Request Object
 type ListDomainCertTagsRequest struct {
 }
 

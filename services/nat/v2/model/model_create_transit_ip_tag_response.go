@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTransitIpTagResponse Response Object
 type CreateTransitIpTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

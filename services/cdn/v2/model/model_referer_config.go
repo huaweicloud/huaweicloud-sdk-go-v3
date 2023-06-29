@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 防盗链。
+// RefererConfig 防盗链。
 type RefererConfig struct {
 
 	// Referer黑白名单类型，off：关闭Referer黑白名单，black：Referer黑名单，white：Referer白名单。

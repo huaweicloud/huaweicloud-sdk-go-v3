@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Update Service Set Required Body
+// UpdateServiceSetUsingPutRequestBody Update Service Set Required Body
 type UpdateServiceSetUsingPutRequestBody struct {
 
 	// 服务组名称

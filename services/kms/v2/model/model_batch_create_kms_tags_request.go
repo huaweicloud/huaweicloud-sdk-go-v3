@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateKmsTagsRequest Request Object
 type BatchCreateKmsTagsRequest struct {
 
 	// 密钥ID

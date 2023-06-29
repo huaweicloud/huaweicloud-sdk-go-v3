@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAuthorisationResponse Response Object
 type CreateAuthorisationResponse struct {
 	Authorisation *Authorisation `json:"authorisation,omitempty"`
 

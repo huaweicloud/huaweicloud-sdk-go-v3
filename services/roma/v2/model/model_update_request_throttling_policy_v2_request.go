@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateRequestThrottlingPolicyV2Request Request Object
 type UpdateRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID

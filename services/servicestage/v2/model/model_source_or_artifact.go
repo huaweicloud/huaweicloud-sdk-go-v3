@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 当组件来源的kind是artifact时spec的内容结构。
+// SourceOrArtifact 当组件来源的kind是artifact时spec的内容结构。
 type SourceOrArtifact struct {
 
 	// 存储方式，支持软件仓库swr和对象存储obs。
@@ -80,13 +80,18 @@ func (c SourceOrArtifactStorage) MarshalJSON() ([]byte, error) {
 
 func (c *SourceOrArtifactStorage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -118,13 +123,18 @@ func (c SourceOrArtifactType) MarshalJSON() ([]byte, error) {
 
 func (c *SourceOrArtifactType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

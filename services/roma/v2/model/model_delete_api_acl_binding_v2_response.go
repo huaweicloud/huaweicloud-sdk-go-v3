@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteApiAclBindingV2Response Response Object
 type DeleteApiAclBindingV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

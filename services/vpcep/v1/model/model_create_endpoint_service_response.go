@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEndpointServiceResponse Response Object
 type CreateEndpointServiceResponse struct {
 
 	// 终端节点服务的ID，唯一标识。
@@ -47,9 +47,6 @@ type CreateEndpointServiceResponse struct {
 
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
-
-	// 网段类型。 ● public：公网网段 ● internal：内网网段 默认值为internal。
-	CidrType *CreateEndpointServiceResponseCidrType `json:"cidr_type,omitempty"`
 
 	// 服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
 	Ports *[]PortList `json:"ports,omitempty"`
@@ -111,13 +108,18 @@ func (c CreateEndpointServiceResponseServerType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateEndpointServiceResponseServerType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -157,55 +159,18 @@ func (c CreateEndpointServiceResponseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *CreateEndpointServiceResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
-		return err
-	} else {
-		return errors.New("convert enum data to string error")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
 	}
-}
 
-type CreateEndpointServiceResponseCidrType struct {
-	value string
-}
-
-type CreateEndpointServiceResponseCidrTypeEnum struct {
-	PUBLIC   CreateEndpointServiceResponseCidrType
-	INTERNAL CreateEndpointServiceResponseCidrType
-}
-
-func GetCreateEndpointServiceResponseCidrTypeEnum() CreateEndpointServiceResponseCidrTypeEnum {
-	return CreateEndpointServiceResponseCidrTypeEnum{
-		PUBLIC: CreateEndpointServiceResponseCidrType{
-			value: "public",
-		},
-		INTERNAL: CreateEndpointServiceResponseCidrType{
-			value: "internal",
-		},
-	}
-}
-
-func (c CreateEndpointServiceResponseCidrType) Value() string {
-	return c.value
-}
-
-func (c CreateEndpointServiceResponseCidrType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateEndpointServiceResponseCidrType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -253,13 +218,18 @@ func (c CreateEndpointServiceResponseTcpProxy) MarshalJSON() ([]byte, error) {
 
 func (c *CreateEndpointServiceResponseTcpProxy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

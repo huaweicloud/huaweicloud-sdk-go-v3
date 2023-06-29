@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLogDumpObsRequest Request Object
 type CreateLogDumpObsRequest struct {
 	Body *CreateLogDumpObsRequestBody `json:"body,omitempty"`
 }

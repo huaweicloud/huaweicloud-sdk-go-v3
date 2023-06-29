@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDataobjectRelationResponse Response Object
 type DeleteDataobjectRelationResponse struct {
 
 	// Id value

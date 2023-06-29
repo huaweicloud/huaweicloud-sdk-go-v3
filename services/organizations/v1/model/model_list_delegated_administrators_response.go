@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDelegatedAdministratorsResponse Response Object
 type ListDelegatedAdministratorsResponse struct {
 
 	// 组织中委托管理员列表。

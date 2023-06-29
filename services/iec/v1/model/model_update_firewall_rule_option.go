@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新防火墙规则的参数
+// UpdateFirewallRuleOption 更新防火墙规则的参数
 type UpdateFirewallRuleOption struct {
 	EgressFirewallPolicy *FirewallPolicy `json:"egress_firewall_policy"`
 

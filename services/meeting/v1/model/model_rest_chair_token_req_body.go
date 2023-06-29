@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 申请主持人请求。
+// RestChairTokenReqBody 申请主持人请求。
 type RestChairTokenReqBody struct {
 
 	// - 0: 释放主持人 - 1: 申请主持人

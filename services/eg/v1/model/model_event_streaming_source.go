@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 事件源，一个事件流中事件源只有一个
+// EventStreamingSource 事件源，一个事件流中事件源只有一个
 type EventStreamingSource struct {
 	SourceKafka *SourceKafkaMqParameters `json:"source_kafka,omitempty"`
 
@@ -52,13 +52,18 @@ func (c EventStreamingSourceName) MarshalJSON() ([]byte, error) {
 
 func (c *EventStreamingSourceName) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

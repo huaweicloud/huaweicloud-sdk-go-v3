@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源实例详情
+// ListResourceResp 资源实例详情
 type ListResourceResp struct {
 
 	// 资源详情。 资源对象，用于扩展。默认为空

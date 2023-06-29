@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改终端节点服务名称
+// UpdateEndpointServiceNameMode 修改终端节点服务名称
 type UpdateEndpointServiceNameMode struct {
 
 	// 终端节点服务名称

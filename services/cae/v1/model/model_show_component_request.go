@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowComponentRequest Request Object
 type ShowComponentRequest struct {
 
 	// 组件id。

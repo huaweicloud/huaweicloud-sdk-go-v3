@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTaskCmetricsRequest Request Object
 type ShowTaskCmetricsRequest struct {
 
 	// 项目ID

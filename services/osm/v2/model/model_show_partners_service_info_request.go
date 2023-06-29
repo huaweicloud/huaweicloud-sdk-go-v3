@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPartnersServiceInfoRequest Request Object
 type ShowPartnersServiceInfoRequest struct {
 
 	// 工单子类

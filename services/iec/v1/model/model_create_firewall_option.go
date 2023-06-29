@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建防火墙参数
+// CreateFirewallOption 创建防火墙参数
 type CreateFirewallOption struct {
 
 	// 中文字符、字母、数字、中划线和下划线组成，长度为1~64个字符

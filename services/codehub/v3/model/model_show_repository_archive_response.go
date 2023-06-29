@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRepositoryArchiveResponse Response Object
 type ShowRepositoryArchiveResponse struct {
 	HttpStatusCode int `json:"-"`
 }

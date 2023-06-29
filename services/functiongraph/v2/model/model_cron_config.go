@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 定时配置
+// CronConfig 定时配置
 type CronConfig struct {
 
 	// 定时配置名称

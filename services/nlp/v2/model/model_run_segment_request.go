@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunSegmentRequest Request Object
 type RunSegmentRequest struct {
 	Body *SegmentRequest `json:"body,omitempty"`
 }

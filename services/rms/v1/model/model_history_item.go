@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源历史
+// HistoryItem 资源历史
 type HistoryItem struct {
 
 	// 用户id

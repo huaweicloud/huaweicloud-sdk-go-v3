@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节目素材信息。
+// ProgramItemResponseBase 节目素材信息。
 type ProgramItemResponseBase struct {
 
 	// 素材ID。

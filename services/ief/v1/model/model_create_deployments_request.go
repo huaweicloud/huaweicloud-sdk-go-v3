@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDeploymentsRequest Request Object
 type CreateDeploymentsRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

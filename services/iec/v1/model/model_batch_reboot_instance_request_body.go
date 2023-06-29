@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量重启边缘实例请求体。
+// BatchRebootInstanceRequestBody 批量重启边缘实例请求体。
 type BatchRebootInstanceRequestBody struct {
 	Reboot *BatchReboot `json:"reboot,omitempty"`
 }

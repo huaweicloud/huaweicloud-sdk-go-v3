@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDedicatedHostsResponse Response Object
 type ListDedicatedHostsResponse struct {
 
 	// 满足查询条件的专属主机。

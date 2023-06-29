@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出配置请求
+// OutputRequest 输出配置请求
 type OutputRequest struct {
 
 	// 输出参数名称,formulas中定义的name

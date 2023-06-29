@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建实例请求体
+// CreateDatabaseReq 创建实例请求体
 type CreateDatabaseReq struct {
 
 	// 实例名称

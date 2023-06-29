@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTaskSuccessRateResponse Response Object
 type ListTaskSuccessRateResponse struct {
 
-	// 项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称

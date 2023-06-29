@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 独享引擎改名请求数据
+// RenameInstanceRequestBody 独享引擎改名请求数据
 type RenameInstanceRequestBody struct {
 
 	// 独享引擎新名称

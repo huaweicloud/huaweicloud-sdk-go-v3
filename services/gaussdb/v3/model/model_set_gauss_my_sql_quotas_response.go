@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetGaussMySqlQuotasResponse Response Object
 type SetGaussMySqlQuotasResponse struct {
 
 	// 资源列表对象。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBackupRequest Request Object
 type ShowBackupRequest struct {
 
 	// 备份ID

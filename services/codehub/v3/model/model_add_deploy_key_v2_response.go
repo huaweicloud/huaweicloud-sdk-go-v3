@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddDeployKeyV2Response Response Object
 type AddDeployKeyV2Response struct {
 	Error *Error `json:"error,omitempty"`
 

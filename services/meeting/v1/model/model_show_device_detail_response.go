@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeviceDetailResponse Response Object
 type ShowDeviceDetailResponse struct {
 
 	// 终端名称。

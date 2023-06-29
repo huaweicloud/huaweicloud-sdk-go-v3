@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 请求正常
+// QueryTagsOption 请求正常
 type QueryTagsOption struct {
 
 	// 过滤条件，包含标签，最多包含10个Tag，结构体不能缺失。
@@ -79,13 +79,18 @@ func (c QueryTagsOptionAction) MarshalJSON() ([]byte, error) {
 
 func (c *QueryTagsOptionAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

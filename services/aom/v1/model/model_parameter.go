@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 全局参数
+// Parameter 全局参数
 type Parameter struct {
 
 	// 参数名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图备份
+// Backup 图备份
 type Backup struct {
 
 	// 备份ID。

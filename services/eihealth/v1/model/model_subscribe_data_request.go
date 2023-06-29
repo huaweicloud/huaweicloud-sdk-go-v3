@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SubscribeDataRequest Request Object
 type SubscribeDataRequest struct {
 
 	// 资产订阅目标项目

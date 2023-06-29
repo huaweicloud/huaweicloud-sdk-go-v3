@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNotificationTemplateResponse Response Object
 type UpdateNotificationTemplateResponse struct {
 
 	// 通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
@@ -71,13 +71,18 @@ func (c UpdateNotificationTemplateResponseLocale) MarshalJSON() ([]byte, error) 
 
 func (c *UpdateNotificationTemplateResponseLocale) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

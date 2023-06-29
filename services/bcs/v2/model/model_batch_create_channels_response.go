@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateChannelsResponse Response Object
 type BatchCreateChannelsResponse struct {
 
 	// 操作记录id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建磁盘的元数据
+// MetaData 创建磁盘的元数据
 type MetaData struct {
 
 	// metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。 说明： 系统盘不支持加密。

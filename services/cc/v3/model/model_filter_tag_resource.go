@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签资源
+// FilterTagResource 标签资源
 type FilterTagResource struct {
 
 	// 资源ID

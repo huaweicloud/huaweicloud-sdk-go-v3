@@ -511,6 +511,27 @@ func (c *DcsClient) DeleteSingleInstanceInvoker(request *model.DeleteSingleInsta
 	return &DeleteSingleInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteClusterSwitchover 集群分片倒换
+//
+// 集群分片倒换，适用于proxy和cluster实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ExecuteClusterSwitchover(request *model.ExecuteClusterSwitchoverRequest) (*model.ExecuteClusterSwitchoverResponse, error) {
+	requestDef := GenReqDefForExecuteClusterSwitchover()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteClusterSwitchoverResponse), nil
+	}
+}
+
+// ExecuteClusterSwitchoverInvoker 集群分片倒换
+func (c *DcsClient) ExecuteClusterSwitchoverInvoker(request *model.ExecuteClusterSwitchoverRequest) *ExecuteClusterSwitchoverInvoker {
+	requestDef := GenReqDefForExecuteClusterSwitchover()
+	return &ExecuteClusterSwitchoverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAvailableZones 查询可用区信息
 //
 // 查询所在局点的可用区信息
@@ -1228,6 +1249,27 @@ func (c *DcsClient) ShowInstance(request *model.ShowInstanceRequest) (*model.Sho
 func (c *DcsClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
 	requestDef := GenReqDefForShowInstance()
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobInfo 查询租户Job执行结果
+//
+// 查询租户Job执行结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowJobInfo(request *model.ShowJobInfoRequest) (*model.ShowJobInfoResponse, error) {
+	requestDef := GenReqDefForShowJobInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobInfoResponse), nil
+	}
+}
+
+// ShowJobInfoInvoker 查询租户Job执行结果
+func (c *DcsClient) ShowJobInfoInvoker(request *model.ShowJobInfoRequest) *ShowJobInfoInvoker {
+	requestDef := GenReqDefForShowJobInfo()
+	return &ShowJobInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMigrationTask 查询迁移任务详情

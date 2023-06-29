@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServicesResponse Response Object
 type ListServicesResponse struct {
 
 	// 满足条件的端点个数

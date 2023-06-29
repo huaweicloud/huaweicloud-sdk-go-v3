@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMessageRequest Request Object
 type ListMessageRequest struct {
 
 	// 医疗智能体项目名

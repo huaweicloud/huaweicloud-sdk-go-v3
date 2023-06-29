@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPrivateDnatResponse Response Object
 type ShowPrivateDnatResponse struct {
 	DnatRule *PrivateDnat `json:"dnat_rule,omitempty"`
 

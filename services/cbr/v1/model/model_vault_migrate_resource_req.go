@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// VaultMigrateResourceReq
 type VaultMigrateResourceReq struct {
 
 	// 目标存储库

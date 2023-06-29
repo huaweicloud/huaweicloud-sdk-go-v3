@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAccessPoliciesResponse Response Object
 type ListAccessPoliciesResponse struct {
 
 	// 查询接入策略响应。

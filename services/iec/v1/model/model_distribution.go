@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例分布对象
+// Distribution 实例分布对象
 type Distribution struct {
 
 	// 所在大区名称。

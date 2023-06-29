@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 绑定或解绑节点请求体
+// UpdateGroupNodeBindingRequest 绑定或解绑节点请求体
 type UpdateGroupNodeBindingRequest struct {
 
 	// 新增绑定的节点ID列表

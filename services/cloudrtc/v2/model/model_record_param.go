@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 录制参数
+// RecordParam 录制参数
 type RecordParam struct {
 
 	// 录制规则id。

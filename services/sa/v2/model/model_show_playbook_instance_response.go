@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPlaybookInstanceResponse Response Object
 type ShowPlaybookInstanceResponse struct {
 
 	// Id value

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署节点的返回结果
+// NodeResult 部署节点的返回结果
 type NodeResult struct {
 
 	// 部署的节点ID

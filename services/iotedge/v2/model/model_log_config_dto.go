@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志配置
+// LogConfigDto 日志配置
 type LogConfigDto struct {
 
 	// 应用日志文件大小限制，单位MB，默认50，取值范围10-1000

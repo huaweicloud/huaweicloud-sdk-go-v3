@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件通道监控指标数据
+// EventPubMetricsItem 事件通道监控指标数据
 type EventPubMetricsItem struct {
 
 	// 事件大小

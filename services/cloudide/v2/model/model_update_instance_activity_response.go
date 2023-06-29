@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceActivityResponse Response Object
 type UpdateInstanceActivityResponse struct {
 	Result *ExpireVo `json:"result,omitempty"`
 

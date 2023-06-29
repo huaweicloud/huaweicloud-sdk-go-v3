@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWorkflowInstanceRequest Request Object
 type ListWorkflowInstanceRequest struct {
 
 	// 请求返回的最大记录条数。分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
@@ -82,13 +82,18 @@ func (c ListWorkflowInstanceRequestStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ListWorkflowInstanceRequestStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

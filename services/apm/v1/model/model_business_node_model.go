@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 业务数据结构。
+// BusinessNodeModel 业务数据结构。
 type BusinessNodeModel struct {
 
 	// 默认应用。

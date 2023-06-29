@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateIpListRequest Request Object
 type UpdateIpListRequest struct {
 
 	// IP地址组ID。

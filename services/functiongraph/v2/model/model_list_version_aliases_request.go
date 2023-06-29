@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVersionAliasesRequest Request Object
 type ListVersionAliasesRequest struct {
 
 	// 函数的URN。

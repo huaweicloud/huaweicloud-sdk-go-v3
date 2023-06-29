@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// vpc对象
+// VpcObject vpc对象
 type VpcObject struct {
 
 	// 虚拟私有云ID，如果是自动创建，填“autoCreate”

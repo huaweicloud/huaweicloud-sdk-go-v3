@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解析路由结果返回结构体
+// RouterDetailRespDto 解析路由结果返回结构体
 type RouterDetailRespDto struct {
 
 	// 路由ID，节点下唯一

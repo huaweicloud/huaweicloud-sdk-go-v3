@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// QueryAvailableRdsList。
+// QueryAvailableRdsList QueryAvailableRdsList。
 type QueryAvailableRdsList struct {
 
 	// 数据库实例 ID。

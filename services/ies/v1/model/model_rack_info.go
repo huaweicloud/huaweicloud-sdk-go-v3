@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 机柜信息
+// RackInfo 机柜信息
 type RackInfo struct {
 
 	// 机柜功率，单位：w

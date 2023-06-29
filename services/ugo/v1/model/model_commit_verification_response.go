@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CommitVerificationResponse Response Object
 type CommitVerificationResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据对象
+// BucketObjectDto 数据对象
 type BucketObjectDto struct {
 
 	// 对象全路径（项目名称:/路径）

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新弹性公网IP请求数据
+// UpdatePublicIpRequestBody 更新弹性公网IP请求数据
 type UpdatePublicIpRequestBody struct {
 	Publicip *UpdatePublicIpOption `json:"publicip"`
 }

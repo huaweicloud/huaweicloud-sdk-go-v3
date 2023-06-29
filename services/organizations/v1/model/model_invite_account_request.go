@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InviteAccountRequest Request Object
 type InviteAccountRequest struct {
 	Body *InviteAccountReqBody `json:"body,omitempty"`
 }

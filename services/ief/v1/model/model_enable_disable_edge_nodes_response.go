@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// EnableDisableEdgeNodesResponse Response Object
 type EnableDisableEdgeNodesResponse struct {
 	Node           *Action `json:"node,omitempty"`
 	HttpStatusCode int     `json:"-"`

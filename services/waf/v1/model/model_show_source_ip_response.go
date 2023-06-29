@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSourceIpResponse Response Object
 type ShowSourceIpResponse struct {
 
 	// 源站信息列表

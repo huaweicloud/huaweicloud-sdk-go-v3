@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新专属主机属性消息体。
+// ReqUpdateDeh 更新专属主机属性消息体。
 type ReqUpdateDeh struct {
 	DedicatedHost *ReqUpdateDehMessage `json:"dedicated_host"`
 }

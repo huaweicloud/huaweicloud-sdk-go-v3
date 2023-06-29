@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AttachCallbackInstanceLifeCycleHookResponse Response Object
 type AttachCallbackInstanceLifeCycleHookResponse struct {
 	HttpStatusCode int `json:"-"`
 }

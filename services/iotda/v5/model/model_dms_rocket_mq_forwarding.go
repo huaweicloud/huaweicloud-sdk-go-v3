@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// rocketMQ服务配置信息
+// DmsRocketMqForwarding rocketMQ服务配置信息
 type DmsRocketMqForwarding struct {
 
 	// **参数说明**：转发rocketMQ消息对应的地址列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateResWorkspaceRequestBody This is a auto create Body Object
 type UpdateResWorkspaceRequestBody struct {
 
 	// 工作空间名称，1-64位数字、字母、下划线、中划线组成，支持中文，不能以 - 结尾。

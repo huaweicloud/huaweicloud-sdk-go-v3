@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateResourceTagRequest Request Object
 type BatchCreateResourceTagRequest struct {
 
 	// 集群的ID

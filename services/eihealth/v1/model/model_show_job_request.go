@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowJobRequest Request Object
 type ShowJobRequest struct {
 
 	// 设置为LOG时，返回作业日志链接

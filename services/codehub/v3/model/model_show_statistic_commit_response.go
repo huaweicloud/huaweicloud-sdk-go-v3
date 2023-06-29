@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStatisticCommitResponse Response Object
 type ShowStatisticCommitResponse struct {
 	Error *Error `json:"error,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项优先级
+// IssueItemSfV4Priority 工作项优先级
 type IssueItemSfV4Priority struct {
 
 	// 优先级id

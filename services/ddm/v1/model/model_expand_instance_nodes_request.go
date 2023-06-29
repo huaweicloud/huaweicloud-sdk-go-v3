@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandInstanceNodesRequest Request Object
 type ExpandInstanceNodesRequest struct {
 
 	// DDM实例ID

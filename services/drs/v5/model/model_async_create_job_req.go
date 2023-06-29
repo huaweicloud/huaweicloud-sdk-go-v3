@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 异步创建任务请求体。
+// AsyncCreateJobReq 异步创建任务请求体。
 type AsyncCreateJobReq struct {
 	BaseInfo *JobBaseInfo `json:"base_info"`
 

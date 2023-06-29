@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateCommandResponse Response Object
 type UpdateCommandResponse struct {
 
 	// 命令所属服务id

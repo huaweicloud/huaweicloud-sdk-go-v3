@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaListKeypairsResponse Response Object
 type NovaListKeypairsResponse struct {
 
 	// 密钥信息列表。

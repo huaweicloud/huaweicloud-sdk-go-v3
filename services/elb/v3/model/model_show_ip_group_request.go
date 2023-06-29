@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowIpGroupRequest Request Object
 type ShowIpGroupRequest struct {
 
 	// IP地址组ID。

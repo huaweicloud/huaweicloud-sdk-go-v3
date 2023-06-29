@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScaleOutPolicyResponse Response Object
 type ListScaleOutPolicyResponse struct {
 
 	// 总数

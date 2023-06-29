@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchFaceByFaceIdRequest Request Object
 type SearchFaceByFaceIdRequest struct {
 
 	// 人脸库名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestartCloudPhoneRequest Request Object
 type RestartCloudPhoneRequest struct {
 	Body *RestartCloudPhoneRequestBody `json:"body,omitempty"`
 }

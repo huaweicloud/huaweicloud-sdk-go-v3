@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPublisherRequest Request Object
 type ListPublisherRequest struct {
 
 	// 发布商名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAsyncInvocationsResponse Response Object
 type ListAsyncInvocationsResponse struct {
 
 	// 异步调用记录列表。

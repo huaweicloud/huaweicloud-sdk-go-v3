@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMessageEmailConfigRequest Request Object
 type DeleteMessageEmailConfigRequest struct {
 }
 

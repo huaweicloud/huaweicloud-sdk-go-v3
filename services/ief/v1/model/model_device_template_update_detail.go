@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备模板
+// DeviceTemplateUpdateDetail 设备模板
 type DeviceTemplateUpdateDetail struct {
 
 	// 设备模板描述，最大长度255

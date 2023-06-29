@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResDatasourceWorkDetailResponse Response Object
 type ShowResDatasourceWorkDetailResponse struct {
 	ErrorCount *ErrorCount `json:"error_count,omitempty"`
 

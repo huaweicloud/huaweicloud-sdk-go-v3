@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAutoLaunchGroupRequest Request Object
 type ShowAutoLaunchGroupRequest struct {
 
 	// 智能购买组ID

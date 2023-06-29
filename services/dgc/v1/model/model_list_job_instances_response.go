@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListJobInstancesResponse Response Object
 type ListJobInstancesResponse struct {
 	Total *int32 `json:"total,omitempty"`
 

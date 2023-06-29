@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteVocabularyRequest Request Object
 type DeleteVocabularyRequest struct {
 
 	// 热词表id。

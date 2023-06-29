@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAskQuestionRequest Request Object
 type CreateAskQuestionRequest struct {
 
 	// 调用智能客服服务标志。

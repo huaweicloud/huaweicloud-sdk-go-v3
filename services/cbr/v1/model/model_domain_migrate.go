@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DomainMigrate
 type DomainMigrate struct {
 
 	// 是否触发其他区域迁移

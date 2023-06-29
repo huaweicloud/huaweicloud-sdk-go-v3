@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateInstancesPeriodOrderResponse Response Object
 type CreateInstancesPeriodOrderResponse struct {
 
 	// 描述

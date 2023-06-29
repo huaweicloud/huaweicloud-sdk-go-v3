@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFileResponse Response Object
 type CreateFileResponse struct {
 
 	// 文件路径。

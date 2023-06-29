@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceMonitorExtendResponse Response Object
 type ShowInstanceMonitorExtendResponse struct {
 
 	// 实例秒级监控开关。  - true，表示开启。 - false，表示关闭。

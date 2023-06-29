@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteGaussMySqlBackupResponse Response Object
 type DeleteGaussMySqlBackupResponse struct {
 
 	// 任务ID。

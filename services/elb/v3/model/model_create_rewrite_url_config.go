@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转发到的后端主机组的URL配置。rewrite_url_enable为true时，该字段必须传入。
+// CreateRewriteUrlConfig 转发到的后端主机组的URL配置。rewrite_url_enable为true时，该字段必须传入。
 type CreateRewriteUrlConfig struct {
 
 	// url重写的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。默认值${host}表示继承原值（即与被重写请求保持一致）。

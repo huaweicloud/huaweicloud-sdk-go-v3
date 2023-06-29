@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnableCertificateAuthorityCrlRequest Request Object
 type EnableCertificateAuthorityCrlRequest struct {
 
 	// 所要启用CRL的CA证书ID。

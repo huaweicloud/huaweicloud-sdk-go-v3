@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCertificateAuthorityRequest Request Object
 type DeleteCertificateAuthorityRequest struct {
 
 	// 所要计划删除的CA证书ID。

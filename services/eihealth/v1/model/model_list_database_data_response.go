@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDatabaseDataResponse Response Object
 type ListDatabaseDataResponse struct {
 
 	// 总条数

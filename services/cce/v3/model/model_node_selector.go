@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点标签选择器，匹配Kubernetes中nodeSelector相关约束
+// NodeSelector 节点标签选择器，匹配Kubernetes中nodeSelector相关约束
 type NodeSelector struct {
 
 	// 标签键

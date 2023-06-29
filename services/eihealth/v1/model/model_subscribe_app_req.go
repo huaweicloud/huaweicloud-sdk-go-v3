@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订阅应用请求体
+// SubscribeAppReq 订阅应用请求体
 type SubscribeAppReq struct {
 
 	// 资产id。长度1-128，只能包含字母、数字、下划线和中划线

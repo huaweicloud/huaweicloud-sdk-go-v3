@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ModifyVolumeRequest Request Object
 type ModifyVolumeRequest struct {
 
 	// 实例ID。

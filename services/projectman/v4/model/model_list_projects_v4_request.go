@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProjectsV4Request Request Object
 type ListProjectsV4Request struct {
 
 	// 偏移量 从0开始

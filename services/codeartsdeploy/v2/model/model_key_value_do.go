@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署应用时传递的动态参数
+// KeyValueDo 部署应用时传递的动态参数
 type KeyValueDo struct {
 
 	// 部署应用时传递的参数名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowUpgradeDurationRequest Request Object
 type ShowUpgradeDurationRequest struct {
 
 	// 语言。

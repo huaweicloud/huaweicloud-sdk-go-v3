@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSkillInfoRequest Request Object
 type ShowSkillInfoRequest struct {
 
 	// 技能ID

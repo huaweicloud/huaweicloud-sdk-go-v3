@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ORACLE集群地址
+// MultiOracleAddress ORACLE集群地址
 type MultiOracleAddress struct {
 
 	// ORACLE地址

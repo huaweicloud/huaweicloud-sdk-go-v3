@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteNicsResponse Response Object
 type DeleteNicsResponse struct {
 
 	// 任务ID。

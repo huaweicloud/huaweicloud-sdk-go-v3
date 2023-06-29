@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数流详情
+// WorkflowSimpleInfo 函数流详情
 type WorkflowSimpleInfo struct {
 
 	// 函数流是否返回流式数据

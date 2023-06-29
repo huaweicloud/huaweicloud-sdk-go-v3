@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群所关联的参数组详情。
+// ClusterConfiguration 集群所关联的参数组详情。
 type ClusterConfiguration struct {
 
 	// 参数组ID。

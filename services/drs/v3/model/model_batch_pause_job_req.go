@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量暂停任务请求体
+// BatchPauseJobReq 批量暂停任务请求体
 type BatchPauseJobReq struct {
 
 	// 不能包含空对象。 集合中的job_id取值严格匹配UUID规则。

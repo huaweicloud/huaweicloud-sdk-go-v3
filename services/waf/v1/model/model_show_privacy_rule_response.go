@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPrivacyRuleResponse Response Object
 type ShowPrivacyRuleResponse struct {
 
 	// 规则id

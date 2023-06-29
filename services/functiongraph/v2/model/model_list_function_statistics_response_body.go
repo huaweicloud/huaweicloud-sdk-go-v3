@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数指标
+// ListFunctionStatisticsResponseBody 函数指标
 type ListFunctionStatisticsResponseBody struct {
 
 	// 调用次数

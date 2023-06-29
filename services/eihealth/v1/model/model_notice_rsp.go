@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息通知返回体
+// NoticeRsp 消息通知返回体
 type NoticeRsp struct {
 
 	// 消息id

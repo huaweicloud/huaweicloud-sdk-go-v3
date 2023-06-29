@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPrivateNatsResponse Response Object
 type ListPrivateNatsResponse struct {
 
 	// 查询私网NAT网关实例列表的响应体。 详见PrivateNat字段说明。

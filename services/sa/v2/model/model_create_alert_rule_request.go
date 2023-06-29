@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAlertRuleRequest Request Object
 type CreateAlertRuleRequest struct {
 
 	// workspace_id

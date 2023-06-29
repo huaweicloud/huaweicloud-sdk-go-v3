@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 后端云服务器对象列表，用于状态树中
+// PoolsInStatusResp 后端云服务器对象列表，用于状态树中
 type PoolsInStatusResp struct {
 
 	// 后端云服务器组ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// quota响应
+// Quota quota响应
 type Quota struct {
 
 	// 查询的配额信息。

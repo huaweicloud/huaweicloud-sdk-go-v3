@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// API版本详细信息列表。
+// ApiVersionResponse API版本详细信息列表。
 type ApiVersionResponse struct {
 
 	// API版本号。

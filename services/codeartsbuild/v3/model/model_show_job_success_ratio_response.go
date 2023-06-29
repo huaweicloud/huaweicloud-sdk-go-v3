@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobSuccessRatioResponse Response Object
 type ShowJobSuccessRatioResponse struct {
 
 	// 任务成功构建次数

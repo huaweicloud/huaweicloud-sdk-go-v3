@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DebugApiV2Request Request Object
 type DebugApiV2Request struct {
 
 	// 实例ID

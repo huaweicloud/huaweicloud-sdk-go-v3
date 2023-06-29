@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息列表。
+// QuotaResourcesDto 配额信息列表。
 type QuotaResourcesDto struct {
 
 	// 配额信息。

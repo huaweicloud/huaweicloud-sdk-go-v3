@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowFileRequest Request Object
 type ShowFileRequest struct {
 
 	// 仓库短id

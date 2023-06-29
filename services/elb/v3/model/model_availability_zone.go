@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用区。
+// AvailabilityZone 可用区。
 type AvailabilityZone struct {
 
 	// 可用区唯一编码。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带宽对象
+// BatchCreateBandwidthOption 带宽对象
 type BatchCreateBandwidthOption struct {
 
 	// 取值范围：正整数  功能说明：批创的共享带宽的个数  说明： 如果传入的参数为小数（如 2.2）或者字符类型（如“2”），会自动强制转换为整数。

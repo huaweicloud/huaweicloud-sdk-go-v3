@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFirewallRuleRequest Request Object
 type UpdateFirewallRuleRequest struct {
 
 	// 网络ACL ID

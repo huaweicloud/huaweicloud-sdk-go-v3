@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateKmsTagResponse Response Object
 type CreateKmsTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

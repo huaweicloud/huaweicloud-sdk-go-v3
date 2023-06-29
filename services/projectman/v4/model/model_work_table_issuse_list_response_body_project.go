@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目信息
+// WorkTableIssuseListResponseBodyProject 项目信息
 type WorkTableIssuseListResponseBodyProject struct {
 
 	// 项目id

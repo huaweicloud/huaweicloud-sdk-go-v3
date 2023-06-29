@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchPublishOrOfflineApiV2Response Response Object
 type BatchPublishOrOfflineApiV2Response struct {
 
 	// 发布或下线成功的信息

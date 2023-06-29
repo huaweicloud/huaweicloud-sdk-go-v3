@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 企业注册信息。
+// CorpBasicInfoDto 企业注册信息。
 type CorpBasicInfoDto struct {
 
 	// 企业id。

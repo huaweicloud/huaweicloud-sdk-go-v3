@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRouteTablesRequest Request Object
 type ListRouteTablesRequest struct {
 
 	// 每页返回的个数

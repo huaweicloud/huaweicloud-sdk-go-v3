@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMenuRequest Request Object
 type UpdateMenuRequest struct {
 
 	// 菜单ID。

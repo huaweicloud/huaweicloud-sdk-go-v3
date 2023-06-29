@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源数据库信息。
+// SourceDb 源数据库信息。
 type SourceDb struct {
 
 	// 用户名。

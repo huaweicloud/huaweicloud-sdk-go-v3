@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 镜像导出请求体
+// ExportImageRequestBody 镜像导出请求体
 type ExportImageRequestBody struct {
 
 	// 目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
@@ -69,13 +69,18 @@ func (c ExportImageRequestBodyFileFormat) MarshalJSON() ([]byte, error) {
 
 func (c *ExportImageRequestBodyFileFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

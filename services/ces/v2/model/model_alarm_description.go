@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警描述，长度0-256
+// AlarmDescription 告警描述，长度0-256
 type AlarmDescription struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowInstanceMonitorExtendRequest Request Object
 type ShowInstanceMonitorExtendRequest struct {
 
 	// 语言。

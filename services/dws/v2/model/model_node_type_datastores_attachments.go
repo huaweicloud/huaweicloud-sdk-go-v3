@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 内核版本附加信息。
+// NodeTypeDatastoresAttachments 内核版本附加信息。
 type NodeTypeDatastoresAttachments struct {
 
 	// 内核版本支持的最小CN。

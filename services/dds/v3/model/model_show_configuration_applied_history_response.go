@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConfigurationAppliedHistoryResponse Response Object
 type ShowConfigurationAppliedHistoryResponse struct {
 
 	// 参数模板应用历史列表

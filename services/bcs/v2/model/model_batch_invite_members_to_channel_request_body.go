@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 邀请联盟成员
+// BatchInviteMembersToChannelRequestBody 邀请联盟成员
 type BatchInviteMembersToChannelRequestBody struct {
 
 	// 发出邀请的服务实例ID

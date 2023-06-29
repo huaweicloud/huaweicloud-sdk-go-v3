@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改app回调请求
+// AppCallbackUrlReq 修改app回调请求
 type AppCallbackUrlReq struct {
 
 	// 回调通知url地址，url必须以http://或https://开头，需要支持POST调用。

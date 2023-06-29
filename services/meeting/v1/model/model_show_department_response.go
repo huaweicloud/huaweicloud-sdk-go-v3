@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDepartmentResponse Response Object
 type ShowDepartmentResponse struct {
 
 	// 部门编码。

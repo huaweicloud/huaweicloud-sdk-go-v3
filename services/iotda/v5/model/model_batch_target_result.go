@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量操作目标结果
+// BatchTargetResult 批量操作目标结果
 type BatchTargetResult struct {
 
 	// 执行批量任务的目标。

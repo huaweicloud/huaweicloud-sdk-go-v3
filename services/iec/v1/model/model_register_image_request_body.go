@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RegisterImageRequestBody
 type RegisterImageRequestBody struct {
 
 	// 注册到边缘云上的公有云IMS的私有镜像id。

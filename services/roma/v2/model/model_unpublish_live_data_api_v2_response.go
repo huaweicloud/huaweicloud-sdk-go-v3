@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnpublishLiveDataApiV2Response Response Object
 type UnpublishLiveDataApiV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

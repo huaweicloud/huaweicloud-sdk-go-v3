@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPartitionNamesRequest Request Object
 type ListPartitionNamesRequest struct {
 
 	// 实例ID

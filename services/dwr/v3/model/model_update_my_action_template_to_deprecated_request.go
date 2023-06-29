@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMyActionTemplateToDeprecatedRequest Request Object
 type UpdateMyActionTemplateToDeprecatedRequest struct {
 
 	// 申请禁用的三方算子名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMonitoredObjectsOfInstanceRequest Request Object
 type ListMonitoredObjectsOfInstanceRequest struct {
 
 	// 主维度对象ID，与DCS实例列表中实例ID相同。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 智能信息基础版参数名称。
+// ContentParam 智能信息基础版参数名称。
 type ContentParam struct {
 
 	// 智能信息基础版参数名称。

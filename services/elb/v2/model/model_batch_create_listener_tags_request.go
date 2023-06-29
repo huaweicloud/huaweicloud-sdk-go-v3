@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateListenerTagsRequest Request Object
 type BatchCreateListenerTagsRequest struct {
 
 	// 监听器ID。

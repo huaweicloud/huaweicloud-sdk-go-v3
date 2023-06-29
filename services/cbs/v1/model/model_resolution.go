@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Resolution
 type Resolution struct {
 
 	// 像素x

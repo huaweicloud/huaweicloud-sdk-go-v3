@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobsResponse Response Object
 type ShowJobsResponse struct {
 
 	// 作业数,查询单个作业时为0

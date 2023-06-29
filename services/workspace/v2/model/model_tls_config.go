@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TLS信息。
+// TlsConfig TLS信息。
 type TlsConfig struct {
 
 	// pem内容, 有则更新，无则上传。查询不返回。

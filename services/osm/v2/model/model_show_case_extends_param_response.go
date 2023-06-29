@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCaseExtendsParamResponse Response Object
 type ShowCaseExtendsParamResponse struct {
 
 	// 错误码

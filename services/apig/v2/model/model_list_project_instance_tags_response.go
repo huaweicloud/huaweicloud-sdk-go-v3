@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProjectInstanceTagsResponse Response Object
 type ListProjectInstanceTagsResponse struct {
 
 	// 项目下所有实例绑定的标签列表

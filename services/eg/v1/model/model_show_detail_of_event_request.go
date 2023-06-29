@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailOfEventRequest Request Object
 type ShowDetailOfEventRequest struct {
 
 	// 追踪事件的uniqueId

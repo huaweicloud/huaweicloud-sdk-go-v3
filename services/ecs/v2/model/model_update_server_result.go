@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器详情。
+// UpdateServerResult 云服务器详情。
 type UpdateServerResult struct {
 
 	// 项目ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNotificationsRequest Request Object
 type ListNotificationsRequest struct {
 }
 

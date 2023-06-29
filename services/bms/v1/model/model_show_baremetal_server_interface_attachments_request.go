@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBaremetalServerInterfaceAttachmentsRequest Request Object
 type ShowBaremetalServerInterfaceAttachmentsRequest struct {
 
 	// 裸金属服务器ID

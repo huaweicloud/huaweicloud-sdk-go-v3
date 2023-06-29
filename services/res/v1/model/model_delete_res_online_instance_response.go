@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteResOnlineInstanceResponse Response Object
 type DeleteResOnlineInstanceResponse struct {
 
 	// 是否成功。

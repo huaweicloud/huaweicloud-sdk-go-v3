@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetSpeedValueResponse Response Object
 type SetSpeedValueResponse struct {
 
 	// 业务受理单号

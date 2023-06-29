@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePrivateNatTagResponse Response Object
 type CreatePrivateNatTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

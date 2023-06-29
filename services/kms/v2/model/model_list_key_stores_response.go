@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListKeyStoresResponse Response Object
 type ListKeyStoresResponse struct {
 
 	// 密钥库总数

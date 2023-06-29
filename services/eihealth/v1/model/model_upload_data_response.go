@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadDataResponse Response Object
 type UploadDataResponse struct {
 
 	// 分段上传任务id

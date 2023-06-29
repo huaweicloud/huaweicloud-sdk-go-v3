@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaCreateKeypairResponse Response Object
 type NovaCreateKeypairResponse struct {
 	Keypair        *NovaKeypair `json:"keypair,omitempty"`
 	HttpStatusCode int          `json:"-"`

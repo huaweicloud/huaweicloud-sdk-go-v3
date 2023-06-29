@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAvailableZonesV2Request Request Object
 type ListAvailableZonesV2Request struct {
 }
 

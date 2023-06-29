@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// the request body of join-request
+// JoinRequestSchema the request body of join-request
 type JoinRequestSchema struct {
 
 	// the region of user

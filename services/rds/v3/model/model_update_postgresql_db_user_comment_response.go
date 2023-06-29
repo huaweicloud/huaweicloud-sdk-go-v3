@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePostgresqlDbUserCommentResponse Response Object
 type UpdatePostgresqlDbUserCommentResponse struct {
 
 	// 操作结果。

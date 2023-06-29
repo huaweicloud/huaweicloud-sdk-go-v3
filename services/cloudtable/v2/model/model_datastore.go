@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建集群数据库参数。
+// Datastore 创建集群数据库参数。
 type Datastore struct {
 
 	// controller版本号，默认1.0.6

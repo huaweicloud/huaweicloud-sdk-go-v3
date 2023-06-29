@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeCloudResponse Response Object
 type ListEdgeCloudResponse struct {
 
 	// 边缘业务数量。

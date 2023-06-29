@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘站点对象类型
+// Site 边缘站点对象类型
 type Site struct {
 
 	// 边缘站点ID。

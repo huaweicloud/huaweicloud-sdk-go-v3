@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPrivateNatsByTagsResponse Response Object
 type ListPrivateNatsByTagsResponse struct {
 
 	// 资源列表。

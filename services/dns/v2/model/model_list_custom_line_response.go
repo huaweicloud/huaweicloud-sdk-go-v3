@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomLineResponse Response Object
 type ListCustomLineResponse struct {
 
 	// 线路列表。

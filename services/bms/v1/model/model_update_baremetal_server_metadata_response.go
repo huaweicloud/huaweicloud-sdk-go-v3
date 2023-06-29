@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateBaremetalServerMetadataResponse Response Object
 type UpdateBaremetalServerMetadataResponse struct {
 
 	//

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// function input when grant policy
+// FunctionInfo function input when grant policy
 type FunctionInfo struct {
 
 	// function name

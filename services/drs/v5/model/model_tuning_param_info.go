@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 高级设置信息体。
+// TuningParamInfo 高级设置信息体。
 type TuningParamInfo struct {
 
 	// 全量调优参数。

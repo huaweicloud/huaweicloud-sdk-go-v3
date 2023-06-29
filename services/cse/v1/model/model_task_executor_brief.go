@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务元数据
+// TaskExecutorBrief 任务元数据
 type TaskExecutorBrief struct {
 
 	// 子任务持续时长

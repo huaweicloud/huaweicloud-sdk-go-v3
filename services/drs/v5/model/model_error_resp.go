@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求失败时返回的错误对象响应体。
+// ErrorResp 请求失败时返回的错误对象响应体。
 type ErrorResp struct {
 
 	// 错误码。

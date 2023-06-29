@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandGaussMySqlInstanceVolumeResponse Response Object
 type ExpandGaussMySqlInstanceVolumeResponse struct {
 
 	// 扩容后容量。

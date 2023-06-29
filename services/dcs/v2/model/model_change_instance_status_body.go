@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重启、清空实例数据的请求体
+// ChangeInstanceStatusBody 重启、清空实例数据的请求体
 type ChangeInstanceStatusBody struct {
 
 	// 实例的ID列表。

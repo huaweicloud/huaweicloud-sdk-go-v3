@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateInstallCmdRequest Request Object
 type CreateInstallCmdRequest struct {
 
 	// 边缘节点ID

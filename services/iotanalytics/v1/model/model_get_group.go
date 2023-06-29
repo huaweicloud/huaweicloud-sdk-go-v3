@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储组信息
+// GetGroup 存储组信息
 type GetGroup struct {
 
 	// 存储组 ID

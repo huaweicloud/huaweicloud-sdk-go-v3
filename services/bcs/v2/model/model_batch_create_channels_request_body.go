@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建通道的配置
+// BatchCreateChannelsRequestBody 创建通道的配置
 type BatchCreateChannelsRequestBody struct {
 
 	// 通道列表

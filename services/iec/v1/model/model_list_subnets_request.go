@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubnetsRequest Request Object
 type ListSubnetsRequest struct {
 
 	// 虚拟私有云ID。

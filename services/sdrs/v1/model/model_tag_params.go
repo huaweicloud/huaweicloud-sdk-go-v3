@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 值为列表的tag结构
+// TagParams 值为列表的tag结构
 type TagParams struct {
 
 	// 键。最大长度127个unicode字符。 key不能为空。key不能为空或者空字符串，不能为空格，使用之前先trim 前后半角空格。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelHandshakeResponse Response Object
 type CancelHandshakeResponse struct {
 	Handshake      *HandshakeDto `json:"handshake,omitempty"`
 	HttpStatusCode int           `json:"-"`

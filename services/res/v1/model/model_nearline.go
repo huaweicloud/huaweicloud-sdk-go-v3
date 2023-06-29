@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Nearline
 type Nearline struct {
 	ItemTopic *Topic `json:"item_topic,omitempty"`
 

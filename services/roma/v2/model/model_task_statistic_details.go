@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 每种状态任务的数量信息
+// TaskStatisticDetails 每种状态任务的数量信息
 type TaskStatisticDetails struct {
 
 	// 运行任务数量

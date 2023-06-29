@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBaremetalServerTagsRequest Request Object
 type ShowBaremetalServerTagsRequest struct {
 	ServerId string `json:"server_id"`
 }

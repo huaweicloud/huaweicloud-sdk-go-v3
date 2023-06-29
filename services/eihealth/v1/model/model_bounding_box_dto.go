@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 结合口袋，包含口袋中心位置和尺寸大小
+// BoundingBoxDto 结合口袋，包含口袋中心位置和尺寸大小
 type BoundingBoxDto struct {
 
 	// 口袋中心坐标; x, y, z轴的坐标

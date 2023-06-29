@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数模板信息
+// UpdateConfigurationRspConfiguration 参数模板信息
 type UpdateConfigurationRspConfiguration struct {
 
 	// 参数模板ID。

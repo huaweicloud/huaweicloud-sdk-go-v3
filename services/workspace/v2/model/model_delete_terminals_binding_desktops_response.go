@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteTerminalsBindingDesktopsResponse Response Object
 type DeleteTerminalsBindingDesktopsResponse struct {
 
 	// 需删除的策略ID列表

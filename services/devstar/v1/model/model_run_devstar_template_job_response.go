@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunDevstarTemplateJobResponse Response Object
 type RunDevstarTemplateJobResponse struct {
 
 	// 任务id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加保护实例标签请求体
+// ProtectedInstanceAddTagsRequestBody 添加保护实例标签请求体
 type ProtectedInstanceAddTagsRequestBody struct {
 	Tag *ResourceTag `json:"tag"`
 }

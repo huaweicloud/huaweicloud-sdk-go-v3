@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAccessConfigRequest Request Object
 type DeleteAccessConfigRequest struct {
 	Body *DeleteAccessConfigRequestBody `json:"body,omitempty"`
 }

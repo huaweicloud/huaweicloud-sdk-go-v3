@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAttachmentResponse Response Object
 type UpdateAttachmentResponse struct {
 	Attachment *AttachmentResponse `json:"attachment,omitempty"`
 

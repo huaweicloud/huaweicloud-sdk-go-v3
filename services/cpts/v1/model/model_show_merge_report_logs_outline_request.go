@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMergeReportLogsOutlineRequest Request Object
 type ShowMergeReportLogsOutlineRequest struct {
 
 	// 任务运行id（报告id）

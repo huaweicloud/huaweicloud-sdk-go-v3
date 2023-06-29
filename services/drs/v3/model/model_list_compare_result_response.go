@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCompareResultResponse Response Object
 type ListCompareResultResponse struct {
 
 	// 任务id。

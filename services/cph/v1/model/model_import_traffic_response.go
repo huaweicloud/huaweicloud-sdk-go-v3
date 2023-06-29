@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportTrafficResponse Response Object
 type ImportTrafficResponse struct {
 
 	// 请求的唯一标识ID。

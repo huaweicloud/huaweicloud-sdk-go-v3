@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控数据列表项目
+// EntityMetricListItem 监控数据列表项目
 type EntityMetricListItem struct {
 
 	// cpu使用率

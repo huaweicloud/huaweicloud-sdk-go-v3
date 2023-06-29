@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 扩容磁盘请求。
+// ExpandDesktopsVolumesReq 扩容磁盘请求。
 type ExpandDesktopsVolumesReq struct {
 
 	// 扩容磁盘参数。

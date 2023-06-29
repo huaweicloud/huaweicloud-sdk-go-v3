@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格信息。
+// FlavorInfo 规格信息。
 type FlavorInfo struct {
 
 	// 引擎名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTrustedServicesRequest Request Object
 type ListTrustedServicesRequest struct {
 
 	// 页面中最大结果数量。

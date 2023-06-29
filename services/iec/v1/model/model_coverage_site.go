@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 站点覆盖策略
+// CoverageSite 站点覆盖策略
 type CoverageSite struct {
 
 	// 站点名称。 具体信息可通过调用“查询边缘站点列表”来查询(注意：本字段区分大小写)。

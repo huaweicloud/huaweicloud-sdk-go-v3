@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储单元
+// StorageUnit 存储单元
 type StorageUnit struct {
 	StorageType *StorageType `json:"storage_type"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePeriodToOnDemandRequest Request Object
 type UpdatePeriodToOnDemandRequest struct {
 	Body *PeriodToOnDemandReq `json:"body,omitempty"`
 }

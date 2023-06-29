@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 汇聚数据表格传参。
+// SumTableParam 汇聚数据表格传参。
 type SumTableParam struct {
 
 	// 上次请求的id。

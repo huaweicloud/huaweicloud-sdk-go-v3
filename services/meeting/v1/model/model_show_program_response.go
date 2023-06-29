@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProgramResponse Response Object
 type ShowProgramResponse struct {
 
 	// 节目ID。

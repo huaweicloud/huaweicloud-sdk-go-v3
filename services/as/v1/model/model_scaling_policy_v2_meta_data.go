@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 附件信息
+// ScalingPolicyV2MetaData 附件信息
 type ScalingPolicyV2MetaData struct {
 
 	// 伸缩带宽策略中带宽对应的共享类型

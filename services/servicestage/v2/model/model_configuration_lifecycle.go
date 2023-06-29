@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生命周期
+// ConfigurationLifecycle 生命周期
 type ConfigurationLifecycle struct {
 	Entrypoint *LifecycleEntrypoint `json:"entrypoint,omitempty"`
 

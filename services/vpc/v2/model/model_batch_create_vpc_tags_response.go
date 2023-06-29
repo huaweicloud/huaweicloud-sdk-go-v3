@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateVpcTagsResponse Response Object
 type BatchCreateVpcTagsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

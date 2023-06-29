@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 上传日志请求体
+// UploadLogRequestBody 上传日志请求体
 type UploadLogRequestBody struct {
 
 	// 指定桶名称

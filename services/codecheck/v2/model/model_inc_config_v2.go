@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 增量检查相关的参数
+// IncConfigV2 增量检查相关的参数
 type IncConfigV2 struct {
 
 	// 需要关联的父任务ID，流水线创建或MR创建任务需要该参数

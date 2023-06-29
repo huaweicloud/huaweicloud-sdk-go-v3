@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAlarmRuleResourcesResponse Response Object
 type ListAlarmRuleResourcesResponse struct {
 
 	// 资源信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListImageTagResponse Response Object
 type ListImageTagResponse struct {
 
 	// 镜像版本总数

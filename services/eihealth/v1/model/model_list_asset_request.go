@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAssetRequest Request Object
 type ListAssetRequest struct {
 
 	// 资产类别，支持IMAGE/APP/WORKFLOW/DATASET，支持查询多个，以','分割

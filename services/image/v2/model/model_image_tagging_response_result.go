@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用成功时为图片标签内容。  调用失败时无此字段。
+// ImageTaggingResponseResult 调用成功时为图片标签内容。  调用失败时无此字段。
 type ImageTaggingResponseResult struct {
 
 	// 标签列表集合。

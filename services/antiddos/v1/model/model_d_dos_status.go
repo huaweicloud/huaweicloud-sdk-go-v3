@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ddos状态响应体
+// DDosStatus ddos状态响应体
 type DDosStatus struct {
 
 	// EIP的ID

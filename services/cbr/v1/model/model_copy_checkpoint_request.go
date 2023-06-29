@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CopyCheckpointRequest Request Object
 type CopyCheckpointRequest struct {
 	Body *CheckpointReplicateReq `json:"body,omitempty"`
 }

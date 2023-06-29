@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AutoRenewalResourcesResponse Response Object
 type AutoRenewalResourcesResponse struct {
 	HttpStatusCode int `json:"-"`
 }

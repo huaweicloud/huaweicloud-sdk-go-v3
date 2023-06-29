@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备上报数据打印开关
+// DeviceDataRecord 设备上报数据打印开关
 type DeviceDataRecord struct {
 
 	// 磁盘配额，单位MB，参考值，只能保证在这个值左右

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBucketResponse Response Object
 type DeleteBucketResponse struct {
 
 	// 返回消息

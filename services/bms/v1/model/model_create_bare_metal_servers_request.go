@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateBareMetalServersRequest Request Object
 type CreateBareMetalServersRequest struct {
 	Body *CreateBaremetalServersBody `json:"body,omitempty"`
 }

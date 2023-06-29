@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLoadBalancerResponse Response Object
 type ShowLoadBalancerResponse struct {
 
 	// 请求ID。  注：自动生成 。

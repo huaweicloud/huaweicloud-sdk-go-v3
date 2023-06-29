@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板参数。
+// TemplateView 模板参数。
 type TemplateView struct {
 	TemplateName *Template `json:"template_name,omitempty"`
 

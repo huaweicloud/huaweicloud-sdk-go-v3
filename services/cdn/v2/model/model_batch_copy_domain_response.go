@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCopyDomainResponse Response Object
 type BatchCopyDomainResponse struct {
 
 	// 成功响应体

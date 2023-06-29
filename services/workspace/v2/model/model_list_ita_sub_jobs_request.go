@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListItaSubJobsRequest Request Object
 type ListItaSubJobsRequest struct {
 
 	// 任务状态 - SUCCESS：成功。 - RUNNING：运行中。 - FAILED：失败。 - WAITING：等待。

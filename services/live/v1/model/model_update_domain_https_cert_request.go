@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDomainHttpsCertRequest Request Object
 type UpdateDomainHttpsCertRequest struct {
 
 	// 直播播放域名

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeApiVersionV2Response Response Object
 type ChangeApiVersionV2Response struct {
 
 	// 发布记录的ID

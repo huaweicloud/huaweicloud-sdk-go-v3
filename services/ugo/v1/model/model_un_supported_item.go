@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL语句不支持转换的详情。
+// UnSupportedItem SQL语句不支持转换的详情。
 type UnSupportedItem struct {
 
 	// SQL语句不支持转换的原因。

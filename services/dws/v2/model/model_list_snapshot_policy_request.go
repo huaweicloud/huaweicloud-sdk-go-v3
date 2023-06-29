@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSnapshotPolicyRequest Request Object
 type ListSnapshotPolicyRequest struct {
 
 	// 集群ID

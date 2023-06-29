@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEdgeGroupNodeBindingResponse Response Object
 type UpdateEdgeGroupNodeBindingResponse struct {
 
 	// 边缘节点组ID

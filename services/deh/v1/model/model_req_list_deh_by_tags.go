@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 按标签查询专属主机列表请求参数。
+// ReqListDehByTags 按标签查询专属主机列表请求参数。
 type ReqListDehByTags struct {
 
 	// 查询包含所有指定标签的专属主机结构体不能缺失。 1.最多包含10个key，每个key下面的value最多10个。 2.结构体不能缺失。 3.key不能为空或者空字符串。 4.key不能重复。 5.同一个key中value不能重复。
@@ -76,13 +76,18 @@ func (c ReqListDehByTagsAction) MarshalJSON() ([]byte, error) {
 
 func (c *ReqListDehByTagsAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

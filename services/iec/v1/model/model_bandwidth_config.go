@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 带宽配置
+// BandwidthConfig 带宽配置
 type BandwidthConfig struct {
 
 	// 带宽类型，现支持WHOLE类型，即共享带宽，其他类型不支持。
@@ -54,13 +54,18 @@ func (c BandwidthConfigSharetype) MarshalJSON() ([]byte, error) {
 
 func (c *BandwidthConfigSharetype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

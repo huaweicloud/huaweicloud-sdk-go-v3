@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateColdVolumeResponse Response Object
 type CreateColdVolumeResponse struct {
 
 	// 任务ID。

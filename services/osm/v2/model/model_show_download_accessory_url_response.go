@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDownloadAccessoryUrlResponse Response Object
 type ShowDownloadAccessoryUrlResponse struct {
 
 	// 错误码

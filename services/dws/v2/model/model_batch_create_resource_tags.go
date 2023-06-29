@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签列表信息
+// BatchCreateResourceTags 标签列表信息
 type BatchCreateResourceTags struct {
 
 	// 标签列表

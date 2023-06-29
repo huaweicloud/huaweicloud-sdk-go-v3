@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDssPoolsRequest Request Object
 type ListDssPoolsRequest struct {
 }
 

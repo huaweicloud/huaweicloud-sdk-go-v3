@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户信息。
+// AddUserRequestBody 用户信息。
 type AddUserRequestBody struct {
 
 	// 企业用户名称。

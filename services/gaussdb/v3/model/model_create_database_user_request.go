@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建数据库用户的请求信息。
+// CreateDatabaseUserRequest 创建数据库用户的请求信息。
 type CreateDatabaseUserRequest struct {
 	Users []CreateDatabaseUserList `json:"users"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandReplicationRequest Request Object
 type ExpandReplicationRequest struct {
 
 	// 复制对的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnvInstancesRequest Request Object
 type ListEnvInstancesRequest struct {
 
 	// 应用id。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 路由对象
+// Route 路由对象
 type Route struct {
 
 	// 路由的类型  取值范围：     1）ecs：弹性云服务器     2）vip：虚拟IP     3）local：系统路由，不可修改和删除
@@ -68,13 +68,18 @@ func (c RouteType) MarshalJSON() ([]byte, error) {
 
 func (c *RouteType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

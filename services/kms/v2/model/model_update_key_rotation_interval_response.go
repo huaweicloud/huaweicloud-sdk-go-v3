@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateKeyRotationIntervalResponse Response Object
 type UpdateKeyRotationIntervalResponse struct {
 	HttpStatusCode int `json:"-"`
 }

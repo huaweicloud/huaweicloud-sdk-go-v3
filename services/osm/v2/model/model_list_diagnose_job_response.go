@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDiagnoseJobResponse Response Object
 type ListDiagnoseJobResponse struct {
 
 	//  任务执行的状态 0：准备中，2：执行中，3：完成，4：失败，7：未执行，8：不可用；用于判断任务的是否执行结束，3就是结束了，4,7,8说明是TSC诊断脚本有问题，OSM这边无法处理
@@ -85,13 +85,18 @@ func (c ListDiagnoseJobResponseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ListDiagnoseJobResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

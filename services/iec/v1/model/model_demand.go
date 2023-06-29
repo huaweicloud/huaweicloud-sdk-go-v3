@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 租户需求
+// Demand 租户需求
 type Demand struct {
 
 	// 所属运营商。

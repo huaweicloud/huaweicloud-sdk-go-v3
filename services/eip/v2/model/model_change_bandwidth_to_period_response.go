@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeBandwidthToPeriodResponse Response Object
 type ChangeBandwidthToPeriodResponse struct {
 
 	// 转包带宽列表

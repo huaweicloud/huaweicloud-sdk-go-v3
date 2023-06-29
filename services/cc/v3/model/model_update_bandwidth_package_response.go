@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateBandwidthPackageResponse Response Object
 type UpdateBandwidthPackageResponse struct {
 	BandwidthPackage *BandwidthPackage `json:"bandwidth_package,omitempty"`
 

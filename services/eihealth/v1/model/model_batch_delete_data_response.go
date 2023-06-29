@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteDataResponse Response Object
 type BatchDeleteDataResponse struct {
 
 	// 数据作业ID

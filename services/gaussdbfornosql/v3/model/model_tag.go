@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签列表。
+// Tag 标签列表。
 type Tag struct {
 
 	// 标签类型: - user - system

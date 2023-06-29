@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSecurityPolicyRequest Request Object
 type UpdateSecurityPolicyRequest struct {
 
 	// 自定义安全策略的ID。

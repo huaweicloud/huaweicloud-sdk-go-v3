@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试用例信息
+// ExerciseCaseResource 测试用例信息
 type ExerciseCaseResource struct {
 
 	// 测试用例存储id

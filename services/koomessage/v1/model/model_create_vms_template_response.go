@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVmsTemplateResponse Response Object
 type CreateVmsTemplateResponse struct {
 
 	// 智能信息基础版模板ID，用来唯一标识上传的模板。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpgradeEngineRequest Request Object
 type UpgradeEngineRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"

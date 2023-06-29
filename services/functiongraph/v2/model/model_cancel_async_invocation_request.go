@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelAsyncInvocationRequest Request Object
 type CancelAsyncInvocationRequest struct {
 
 	// 函数URN

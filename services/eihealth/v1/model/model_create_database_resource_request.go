@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDatabaseResourceRequest Request Object
 type CreateDatabaseResourceRequest struct {
 	Body *CreateDatabaseResourceReq `json:"body,omitempty"`
 }

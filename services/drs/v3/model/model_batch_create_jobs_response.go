@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateJobsResponse Response Object
 type BatchCreateJobsResponse struct {
 
 	// 批量创建任务的响应体集合。

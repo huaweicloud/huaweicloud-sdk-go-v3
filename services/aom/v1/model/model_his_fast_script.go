@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// HIS 用户快速执行脚本实体类。
+// HisFastScript HIS 用户快速执行脚本实体类。
 type HisFastScript struct {
 
 	// 脚本类型。SHELL BAT PYTHON POWER_SHELL

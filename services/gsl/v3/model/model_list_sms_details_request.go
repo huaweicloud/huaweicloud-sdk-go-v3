@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSmsDetailsRequest Request Object
 type ListSmsDetailsRequest struct {
 
 	// 分页查询时每页显示的记录数，默认值为10，取值范围为10-500的整数

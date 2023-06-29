@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCloudConnectionRequest Request Object
 type CreateCloudConnectionRequest struct {
 	Body *CreateCloudConnectionRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级配置
+// UpgradeStrategy 升级配置
 type UpgradeStrategy struct {
 
 	// 升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"

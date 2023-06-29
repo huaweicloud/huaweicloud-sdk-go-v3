@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCancelAuthorizationInterfaceResponse Response Object
 type BatchCancelAuthorizationInterfaceResponse struct {
 	HttpStatusCode int `json:"-"`
 }

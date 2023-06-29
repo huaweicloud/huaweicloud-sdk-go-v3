@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// HibernateClusterResponse Response Object
 type HibernateClusterResponse struct {
 	HttpStatusCode int `json:"-"`
 }

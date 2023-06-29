@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建订阅告警请求体
+// AlarmSubRequest 创建订阅告警请求体
 type AlarmSubRequest struct {
 
 	// 告警订阅名称

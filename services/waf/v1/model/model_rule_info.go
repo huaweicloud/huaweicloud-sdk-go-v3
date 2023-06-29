@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 使用该Ip地址相关的规则信息
+// RuleInfo 使用该Ip地址相关的规则信息
 type RuleInfo struct {
 
 	// 规则id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用查询返回的数据结构。
+// AppSearchParam 应用查询返回的数据结构。
 type AppSearchParam struct {
 
 	// 应用id。

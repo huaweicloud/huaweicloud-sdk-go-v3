@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPublicZonesRequest Request Object
 type ListPublicZonesRequest struct {
 
 	// 待查询的zone的类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为空。

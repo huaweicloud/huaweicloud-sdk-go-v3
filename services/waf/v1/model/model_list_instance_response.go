@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstanceResponse Response Object
 type ListInstanceResponse struct {
 
 	// 独享引擎实例数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Redis 4.0 和 5.0 proxy集群中proxy节点监控对象结构
+// Proxy2NodeMonitoredObject Redis 4.0 和 5.0 proxy集群中proxy节点监控对象结构
 type Proxy2NodeMonitoredObject struct {
 
 	// 测量对象ID，即节点的ID。

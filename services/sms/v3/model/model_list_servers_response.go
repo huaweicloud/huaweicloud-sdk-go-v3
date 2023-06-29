@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServersResponse Response Object
 type ListServersResponse struct {
 
 	// 符合查询条件的源端总数量，不受limit和offset影响

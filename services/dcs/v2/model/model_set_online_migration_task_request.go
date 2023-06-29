@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetOnlineMigrationTaskRequest Request Object
 type SetOnlineMigrationTaskRequest struct {
 
 	// 在线迁移任务ID。

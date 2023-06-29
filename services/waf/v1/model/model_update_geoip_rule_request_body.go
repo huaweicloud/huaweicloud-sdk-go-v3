@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 地理位置封禁请求体
+// UpdateGeoipRuleRequestBody 地理位置封禁请求体
 type UpdateGeoipRuleRequestBody struct {
 
 	// 地理位置控制规则名称

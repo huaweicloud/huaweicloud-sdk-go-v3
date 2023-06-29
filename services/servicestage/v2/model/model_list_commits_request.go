@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCommitsRequest Request Object
 type ListCommitsRequest struct {
 
 	// 授权名称。

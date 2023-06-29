@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFunctionsResponse Response Object
 type ListFunctionsResponse struct {
 
 	// 函数列表。

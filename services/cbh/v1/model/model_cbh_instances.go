@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建堡垒机实例请求参数。
+// CbhInstances 创建堡垒机实例请求参数。
 type CbhInstances struct {
 
 	// 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50 已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。

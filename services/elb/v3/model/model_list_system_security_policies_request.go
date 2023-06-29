@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSystemSecurityPoliciesRequest Request Object
 type ListSystemSecurityPoliciesRequest struct {
 }
 

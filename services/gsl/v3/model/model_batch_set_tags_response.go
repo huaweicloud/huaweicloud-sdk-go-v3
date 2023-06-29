@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchSetTagsResponse Response Object
 type BatchSetTagsResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

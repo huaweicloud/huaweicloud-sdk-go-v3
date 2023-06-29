@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关联的中转IP。
+// AssociatedTransitIp 关联的中转IP。
 type AssociatedTransitIp struct {
 
 	// 中转IP的ID。

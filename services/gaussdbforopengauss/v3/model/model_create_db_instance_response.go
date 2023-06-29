@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDbInstanceResponse Response Object
 type CreateDbInstanceResponse struct {
 	Instance *OpenGaussInstanceResult `json:"instance,omitempty"`
 

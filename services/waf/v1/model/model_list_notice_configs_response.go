@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNoticeConfigsResponse Response Object
 type ListNoticeConfigsResponse struct {
 
 	// 配置的告警通知总数量

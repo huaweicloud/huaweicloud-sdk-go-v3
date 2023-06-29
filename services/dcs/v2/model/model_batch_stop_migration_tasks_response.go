@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchStopMigrationTasksResponse Response Object
 type BatchStopMigrationTasksResponse struct {
 
 	// 数据迁移任务列表。

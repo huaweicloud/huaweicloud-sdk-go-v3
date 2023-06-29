@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDataResponse Response Object
 type CreateDataResponse struct {
 
 	// 创建文件夹返回体

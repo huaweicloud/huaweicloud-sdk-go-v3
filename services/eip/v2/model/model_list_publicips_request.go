@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPublicipsRequest Request Object
 type ListPublicipsRequest struct {
 
 	// 取值为上一页数据的最后一条记录的id，为空时为查询第一页
@@ -78,13 +78,18 @@ func (c ListPublicipsRequestIpVersion) MarshalJSON() ([]byte, error) {
 
 func (c *ListPublicipsRequestIpVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateVpcPeeringRequestBody
 type UpdateVpcPeeringRequestBody struct {
 	Peering *UpdateVpcPeeringOption `json:"peering"`
 }

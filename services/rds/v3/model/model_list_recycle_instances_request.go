@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRecycleInstancesRequest Request Object
 type ListRecycleInstancesRequest struct {
 
 	// 语言

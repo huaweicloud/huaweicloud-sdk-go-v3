@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddServiceItemsUsingPostResponse Response Object
 type AddServiceItemsUsingPostResponse struct {
 	Data           *ServiceItemIds `json:"data,omitempty"`
 	HttpStatusCode int             `json:"-"`

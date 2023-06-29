@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDependenciesRequest Request Object
 type ListDependenciesRequest struct {
 
 	// 上一次查询依赖包的最后记录位置，默认为\"0\"。

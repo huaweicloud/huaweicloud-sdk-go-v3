@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddServerNicsRequest Request Object
 type BatchAddServerNicsRequest struct {
 
 	// 云服务器ID。

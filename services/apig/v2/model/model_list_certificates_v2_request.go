@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCertificatesV2Request Request Object
 type ListCertificatesV2Request struct {
 
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0
@@ -73,13 +73,18 @@ func (c ListCertificatesV2RequestType) MarshalJSON() ([]byte, error) {
 
 func (c *ListCertificatesV2RequestType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunShellCommandResponse Response Object
 type RunShellCommandResponse struct {
 
 	// 请求的唯一标识ID。

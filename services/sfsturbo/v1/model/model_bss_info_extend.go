@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 扩容计费参数详情
+// BssInfoExtend 扩容计费参数详情
 type BssInfoExtend struct {
 
 	// 是否自动付款
@@ -54,13 +54,18 @@ func (c BssInfoExtendIsAutoPay) MarshalJSON() ([]byte, error) {
 
 func (c *BssInfoExtendIsAutoPay) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int64")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int64)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int64")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int64); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int64 error")
 	}

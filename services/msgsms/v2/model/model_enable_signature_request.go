@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnableSignatureRequest Request Object
 type EnableSignatureRequest struct {
 
 	// 签名ID

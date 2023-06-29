@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建个人模板请求体。
+// CreateAimPersonalTemplateRequestBody 创建个人模板请求体。
 type CreateAimPersonalTemplateRequestBody struct {
 
 	// 布局类型。 - MultipleImageAndText：多图文类 - StandardImageAndText：图文类 - PureText：长文本类 - VideoImageAndText：视频图文类 - Video：视频类 - ECImageAndText：电商类 - RedPacket：红包类 - RedPacketPersonal：个性化红包类 - ImageTextAndVideo：图文视频类 - Notification1：一般通知类 - Notification2：增强通知类 - Carousel：横滑类1 - CarouselTitle：横滑类2 - CarouselSquareImage：图片轮播类（1:1） - CarouselImageSixteenToNine：图片轮播类（16:9） - CarouselVerticalImage：图片轮播类（48:65） - CardVoucher：单卡券 - CardVouchers：多卡券（最多支持四张卡券） - Ecommerce：电商多商品类 - Trip1：机票类 - Trip2：火车票类 - Trip3：汽车票类 - PlaneTrip：增强机票类 - SimplePoster：海报类 - NativePureText：超文本普通类 - NativeImageAndText：超文本增强类 - ShortVideo：短剧视频类  > 当送审厂商包含vivo时，各布局类型上传的图片最小像素要求如下： > - card_id为StandardImageAndText，宽高比为16:9时，图片的最小像素为1088px*612px。 > - card_id为MultipleImageAndText，宽高比为16:9时，图片的最小像素为1088px*612px。 > - card_id为MultipleImageAndText，宽高比为1:1时，图片的最小像素为320px*320px。 > - card_id为Video，宽高比为16:9时，视频封面图片的最小像素为1088px*612px。 > - card_id为RedPacket，宽高比为1:1时，图片的最小像素为320px*320px。 > - card_id为CarouselImageSixteenToNine，宽高比为16:9时，图片的最小像素为1088px*612px。 > - card_id为CarouselSquareImage，宽高比为1:1时，图片的最小像素为1088px*1088px。 > - card_id为CarouselVerticalImage，宽高比为48:65时，图片的最小像素为960px*1300px。 > - card_id为Notification1，宽高比为3:1时，图片的最小像素为576px*192px。 > - card_id为Notification2，宽高比为3:1时，图片的最小像素为576px*192px。 > - card_id为ECImageAndText，宽高比为1:1时，图片的最小像素为1088px*1088px。

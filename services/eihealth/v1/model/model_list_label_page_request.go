@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLabelPageRequest Request Object
 type ListLabelPageRequest struct {
 
 	// 华为云项目ID，您可以从[获取项目ID](eihealth_33_0044.xml)中获取。

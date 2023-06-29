@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照详情对象
+// SnapshotDetail 快照详情对象
 type SnapshotDetail struct {
 
 	// 快照ID。

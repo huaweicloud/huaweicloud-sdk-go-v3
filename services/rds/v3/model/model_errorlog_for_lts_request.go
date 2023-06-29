@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 查询实例的错误日志对象
+// ErrorlogForLtsRequest 查询实例的错误日志对象
 type ErrorlogForLtsRequest struct {
 
 	// 开始日期，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
@@ -94,13 +94,18 @@ func (c ErrorlogForLtsRequestLevel) MarshalJSON() ([]byte, error) {
 
 func (c *ErrorlogForLtsRequestLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

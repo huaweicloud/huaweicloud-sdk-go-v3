@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLayoutRequest Request Object
 type ShowLayoutRequest struct {
 
 	// 会议ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点安装或升级记录
+// UpgradeHistory 节点安装或升级记录
 type UpgradeHistory struct {
 
 	// 节点升级或安装历史版本id

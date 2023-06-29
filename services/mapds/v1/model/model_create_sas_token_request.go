@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSasTokenRequest Request Object
 type CreateSasTokenRequest struct {
 
 	// IAM用户的token，无需特殊权限。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件详情
+// CreateIncident 事件详情
 type CreateIncident struct {
 
 	// 版本

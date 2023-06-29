@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除迁移任务请求体
+// DeleteMigrateTaskRequest 删除迁移任务请求体
 type DeleteMigrateTaskRequest struct {
 
 	// 删除的迁移任务ID列表。

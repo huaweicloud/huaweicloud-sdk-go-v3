@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建服务号的返回体。
+// CreatePubInfoResponseModel 创建服务号的返回体。
 type CreatePubInfoResponseModel struct {
 	Data *CreatePubInfoResponseModelData `json:"data,omitempty"`
 }

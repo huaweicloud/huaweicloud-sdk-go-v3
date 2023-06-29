@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发布信息。
+// PublicationRequestBase 发布信息。
 type PublicationRequestBase struct {
 
 	// 发布名称。

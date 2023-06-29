@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建独享模式域名的请求体
+// CreatePremiumHostRequestBody 创建独享模式域名的请求体
 type CreatePremiumHostRequestBody struct {
 
 	// 证书id，通过查询证书列表接口（ListCertificates）接口获取证书id   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数

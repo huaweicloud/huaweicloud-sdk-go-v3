@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// listener对象中的ipgroup信息
+// ListenerIpGroup listener对象中的ipgroup信息
 type ListenerIpGroup struct {
 
 	// 监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 结合位点
+// BindSiteDto 结合位点
 type BindSiteDto struct {
 	Receptor *DrugFile `json:"receptor"`
 

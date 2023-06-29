@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteSessionResponse Response Object
 type ExecuteSessionResponse struct {
 
 	// 回复类型： 0   问答型机器人回复。 1   任务型机器人回复。 2   闲聊回复。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListUsersOfStreamResponse Response Object
 type ListUsersOfStreamResponse struct {
 
 	// 观众趋势列表。

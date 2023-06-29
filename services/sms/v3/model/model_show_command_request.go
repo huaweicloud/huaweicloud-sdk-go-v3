@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCommandRequest Request Object
 type ShowCommandRequest struct {
 
 	// 命令对应的服务器ID

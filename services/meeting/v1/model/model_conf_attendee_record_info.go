@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 与会者记录。
+// ConfAttendeeRecordInfo 与会者记录。
 type ConfAttendeeRecordInfo struct {
 
 	// 与会者名称。

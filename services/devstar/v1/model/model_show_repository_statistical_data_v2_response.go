@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRepositoryStatisticalDataV2Response Response Object
 type ShowRepositoryStatisticalDataV2Response struct {
 
 	// 代码仓的名称

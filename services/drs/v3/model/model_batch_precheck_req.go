@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量预检查请求体
+// BatchPrecheckReq 批量预检查请求体
 type BatchPrecheckReq struct {
 
 	// 批量预检查请求列表

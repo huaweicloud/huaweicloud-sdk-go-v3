@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEdgeNodeResponse Response Object
 type CreateEdgeNodeResponse struct {
 
 	// 边缘节点ID

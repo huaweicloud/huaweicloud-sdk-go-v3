@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMigrationTaskStatsResponse Response Object
 type ShowMigrationTaskStatsResponse struct {
 
 	// 全量迁移进度百分比。

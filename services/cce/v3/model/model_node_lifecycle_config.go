@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点自定义生命周期配置
+// NodeLifecycleConfig 节点自定义生命周期配置
 type NodeLifecycleConfig struct {
 
 	// 安装前执行脚本 > 输入的值需要经过Base64编码，方法为echo -n \"待编码内容\" | base64。

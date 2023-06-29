@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchStartOrStopTasksRequest Request Object
 type BatchStartOrStopTasksRequest struct {
 
 	// 实例ID

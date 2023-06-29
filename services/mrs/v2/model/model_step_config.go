@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业配置。
+// StepConfig 作业配置。
 type StepConfig struct {
 	JobExecution *JobExecution `json:"job_execution"`
 }

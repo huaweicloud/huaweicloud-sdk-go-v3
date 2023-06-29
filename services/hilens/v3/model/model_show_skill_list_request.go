@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSkillListRequest Request Object
 type ShowSkillListRequest struct {
 
 	// 每页显示的条目数量, 最大 100，默认值 10

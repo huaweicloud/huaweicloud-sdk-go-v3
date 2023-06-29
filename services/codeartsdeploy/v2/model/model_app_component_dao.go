@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用和AOM应用组件对应关系
+// AppComponentDao 应用和AOM应用组件对应关系
 type AppComponentDao struct {
 
 	// 部署任务id

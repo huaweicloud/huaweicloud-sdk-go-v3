@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建云连接实例的详细信息。
+// CreateCloudConnection 创建云连接实例的详细信息。
 type CreateCloudConnection struct {
 
 	// 云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。

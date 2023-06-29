@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据加工返回体
+// DataTransformationResp 数据加工返回体
 type DataTransformationResp struct {
 
 	// 任务id
@@ -64,13 +64,18 @@ func (c DataTransformationRespStatus) MarshalJSON() ([]byte, error) {
 
 func (c *DataTransformationRespStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

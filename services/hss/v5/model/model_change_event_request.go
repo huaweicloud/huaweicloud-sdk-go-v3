@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeEventRequest Request Object
 type ChangeEventRequest struct {
 
 	// region id

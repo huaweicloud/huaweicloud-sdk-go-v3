@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemoveUsersResponse Response Object
 type RemoveUsersResponse struct {
 	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

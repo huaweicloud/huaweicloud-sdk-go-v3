@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Position
 type Position struct {
 
 	// 像素坐标x

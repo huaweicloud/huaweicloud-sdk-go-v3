@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建SNAT规则的请求体。
+// CreateNatGatewaySnatRuleRequestOption 创建SNAT规则的请求体。
 type CreateNatGatewaySnatRuleRequestOption struct {
 	SnatRule *CreateNatGatewaySnatRuleOption `json:"snat_rule"`
 }

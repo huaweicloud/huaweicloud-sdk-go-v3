@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建数据表请求结构体
+// QueryDcDsBriefRespDto 创建数据表请求结构体
 type QueryDcDsBriefRespDto struct {
 
 	// 采集数据源id，节点下唯一

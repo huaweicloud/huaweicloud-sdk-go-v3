@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVpcAttachmentRequest Request Object
 type CreateVpcAttachmentRequest struct {
 
 	// 幂等性标识

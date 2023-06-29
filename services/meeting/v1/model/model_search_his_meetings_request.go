@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchHisMeetingsRequest Request Object
 type SearchHisMeetingsRequest struct {
 
 	// 用户的UUID。 > 该参数将废弃，请勿使用。

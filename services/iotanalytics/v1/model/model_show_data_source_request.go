@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDataSourceRequest Request Object
 type ShowDataSourceRequest struct {
 
 	// 数据源id

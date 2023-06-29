@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// update Listener request
+// UpdateListenerRequestBody update Listener request
 type UpdateListenerRequestBody struct {
 	Listener *UpdateListenerOption `json:"listener"`
 }

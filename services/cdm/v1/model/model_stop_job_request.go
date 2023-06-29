@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopJobRequest Request Object
 type StopJobRequest struct {
 
 	// 集群ID

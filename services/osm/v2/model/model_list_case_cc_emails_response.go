@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCaseCcEmailsResponse Response Object
 type ListCaseCcEmailsResponse struct {
 	CcEmailInfo *IncidentOrderCcEmailInfoV2 `json:"cc_email_info,omitempty"`
 

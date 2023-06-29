@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFlavorsRequest Request Object
 type ListFlavorsRequest struct {
 
 	// 缓存实例ID，根据该字段可查询出实例可变更的规格
@@ -73,13 +73,18 @@ func (c ListFlavorsRequestCpuType) MarshalJSON() ([]byte, error) {
 
 func (c *ListFlavorsRequestCpuType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

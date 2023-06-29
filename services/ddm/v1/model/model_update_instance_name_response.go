@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceNameResponse Response Object
 type UpdateInstanceNameResponse struct {
 
 	// DDM实例名称

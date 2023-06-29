@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建节点时的扩展参数。
+// NodeExtendParam 创建节点时的扩展参数。
 type NodeExtendParam struct {
 
 	// 云服务器规格的分类。响应中会返回此字段。

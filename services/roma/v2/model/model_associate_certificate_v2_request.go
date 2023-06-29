@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateCertificateV2Request Request Object
 type AssociateCertificateV2Request struct {
 
 	// 实例ID

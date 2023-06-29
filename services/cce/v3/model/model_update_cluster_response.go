@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateClusterResponse Response Object
 type UpdateClusterResponse struct {
 
 	// API类型，固定值“Cluster”或“cluster”，该值不可修改。

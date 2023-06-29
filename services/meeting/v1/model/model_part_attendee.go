@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部分与会者信息。
+// PartAttendee 部分与会者信息。
 type PartAttendee struct {
 
 	// 与会者名称。

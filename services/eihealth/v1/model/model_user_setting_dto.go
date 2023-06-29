@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新用户请求体
+// UserSettingDto 更新用户请求体
 type UserSettingDto struct {
 
 	// 允许同时运行的作业数

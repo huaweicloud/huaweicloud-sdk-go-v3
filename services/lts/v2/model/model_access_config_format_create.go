@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志格式
+// AccessConfigFormatCreate 日志格式
 type AccessConfigFormatCreate struct {
 	Single *AccessConfigFormatSingleCreate `json:"single,omitempty"`
 

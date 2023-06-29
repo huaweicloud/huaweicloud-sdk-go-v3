@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProjectDetailResponse Response Object
 type ShowProjectDetailResponse struct {
 
 	// 命名空间ID。

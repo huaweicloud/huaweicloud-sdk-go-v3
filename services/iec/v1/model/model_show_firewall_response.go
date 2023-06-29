@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFirewallResponse Response Object
 type ShowFirewallResponse struct {
 	Firewall       *Firewall `json:"firewall,omitempty"`
 	HttpStatusCode int       `json:"-"`

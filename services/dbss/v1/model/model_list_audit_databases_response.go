@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAuditDatabasesResponse Response Object
 type ListAuditDatabasesResponse struct {
 
 	// 数据库信息列表

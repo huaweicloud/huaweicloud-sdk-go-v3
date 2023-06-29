@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateRouteRequestBody This is a auto create Body Object
 type UpdateRouteRequestBody struct {
 	Route *UpdateRoute `json:"route"`
 }

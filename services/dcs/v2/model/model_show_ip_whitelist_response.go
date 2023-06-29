@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIpWhitelistResponse Response Object
 type ShowIpWhitelistResponse struct {
 
 	// 实例ID

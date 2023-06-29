@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取组件环境拓扑数据的请求参数。
+// EnvTopoRequest 获取组件环境拓扑数据的请求参数。
 type EnvTopoRequest struct {
 
 	// 环境id。

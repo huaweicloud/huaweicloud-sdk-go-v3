@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Datapoint
 type Datapoint struct {
 
 	// 聚合周期内指标数据的最大值。

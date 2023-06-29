@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签选择器
+// PodAffinityTermLabelSelector 标签选择器
 type PodAffinityTermLabelSelector struct {
 
 	// 匹配规则表达式

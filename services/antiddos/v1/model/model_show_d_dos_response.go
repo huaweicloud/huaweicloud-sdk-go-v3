@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDDosResponse Response Object
 type ShowDDosResponse struct {
 
 	// 是否开启L7层防护

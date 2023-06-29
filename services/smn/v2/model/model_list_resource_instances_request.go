@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceInstancesRequest Request Object
 type ListResourceInstancesRequest struct {
 
 	// 资源类型，目前有:  smn_topic，主题  smn_sms，短信  smn_application，移动推送

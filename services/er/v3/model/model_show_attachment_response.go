@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAttachmentResponse Response Object
 type ShowAttachmentResponse struct {
 	Attachment *AttachmentResponse `json:"attachment,omitempty"`
 

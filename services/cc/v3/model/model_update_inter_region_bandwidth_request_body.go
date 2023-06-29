@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新域间带宽实例的请求体。
+// UpdateInterRegionBandwidthRequestBody 更新域间带宽实例的请求体。
 type UpdateInterRegionBandwidthRequestBody struct {
 	InterRegionBandwidth *UpdateInterRegionBandwidth `json:"inter_region_bandwidth"`
 }

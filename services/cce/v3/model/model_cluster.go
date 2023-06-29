@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Cluster
 type Cluster struct {
 
 	// API类型，固定值“Cluster”或“cluster”，该值不可修改。

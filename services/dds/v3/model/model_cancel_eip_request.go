@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelEipRequest Request Object
 type CancelEipRequest struct {
 
 	// 节点ID。

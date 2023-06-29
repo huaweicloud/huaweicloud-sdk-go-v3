@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTagRequest Request Object
 type ListTagRequest struct {
 
 	// 资源的类型：DNS-public_zone，DNS-private_zone，DNS-public_recordset，DNS-private_recordset，DNS-ptr_record。

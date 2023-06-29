@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateOptimizationTaskRequest Request Object
 type CreateOptimizationTaskRequest struct {
 	Body *OptimizationTaskData `json:"body,omitempty"`
 }

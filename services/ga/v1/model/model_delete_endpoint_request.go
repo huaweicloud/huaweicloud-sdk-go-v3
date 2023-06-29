@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEndpointRequest Request Object
 type DeleteEndpointRequest struct {
 
 	// 终端节点组ID。

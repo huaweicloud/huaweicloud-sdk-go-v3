@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSubcustomerMonthlyBillsResponse Response Object
 type ListSubcustomerMonthlyBillsResponse struct {
 
 	// 账单记录，具体参考表2。

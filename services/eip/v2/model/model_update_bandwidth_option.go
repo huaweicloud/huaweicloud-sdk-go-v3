@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新带宽对象(三个参数不能全为空)
+// UpdateBandwidthOption 更新带宽对象(三个参数不能全为空)
 type UpdateBandwidthOption struct {
 
 	// 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线），为空表示不修改名称  功能说明：带宽名称  约束：name、size必须有一个参数有值
@@ -65,13 +65,18 @@ func (c UpdateBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateBandwidthOptionChargeMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

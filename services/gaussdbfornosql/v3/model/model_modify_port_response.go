@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ModifyPortResponse Response Object
 type ModifyPortResponse struct {
 
 	// 任务ID。

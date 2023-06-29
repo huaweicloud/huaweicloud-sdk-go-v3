@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户开启的自定义属性
+// CustomProp 用户开启的自定义属性
 type CustomProp struct {
 
 	// 自定义属性的ID（API侧）

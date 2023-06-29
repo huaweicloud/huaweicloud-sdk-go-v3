@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchConfirmConfigsNewResponse Response Object
 type BatchConfirmConfigsNewResponse struct {
 
 	// 已确认的配置项id

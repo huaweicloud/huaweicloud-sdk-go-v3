@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL限流规则和最大并发数
+// SqlFilterRulePattern SQL限流规则和最大并发数
 type SqlFilterRulePattern struct {
 
 	// SQL限流规则。

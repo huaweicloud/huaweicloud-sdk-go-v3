@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEndpointPolicyRequest Request Object
 type DeleteEndpointPolicyRequest struct {
 
 	// 终端节点的ID。

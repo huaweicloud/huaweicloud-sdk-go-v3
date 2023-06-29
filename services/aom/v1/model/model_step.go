@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建作业时的步骤参数
+// Step 创建作业时的步骤参数
 type Step struct {
 
 	// 步骤id。

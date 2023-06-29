@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源列表
+// Resources 资源列表
 type Resources struct {
 
 	// ProjectID

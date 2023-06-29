@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目工作项概览信息
+// IssueCompletionRateResponseV4 项目工作项概览信息
 type IssueCompletionRateResponseV4 struct {
 	IssueStatus *IssueStatusResponseV4 `json:"issue_status,omitempty"`
 

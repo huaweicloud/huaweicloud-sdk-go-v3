@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteActiveAlarmsRequest Request Object
 type DeleteActiveAlarmsRequest struct {
 
 	// domainId

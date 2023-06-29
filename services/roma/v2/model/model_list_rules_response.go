@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRulesResponse Response Object
 type ListRulesResponse struct {
 
 	// 总数

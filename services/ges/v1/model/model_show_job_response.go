@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobResponse Response Object
 type ShowJobResponse struct {
 
 	// 系统提示信息，执行成功时，字段可能为空。执行失败时，用于显示错误信息。

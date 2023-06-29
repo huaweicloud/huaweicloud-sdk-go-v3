@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目成员信息
+// BindUserRsp 项目成员信息
 type BindUserRsp struct {
 
 	// 项目成员用户id

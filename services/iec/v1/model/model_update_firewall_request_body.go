@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新网络ACL请求体
+// UpdateFirewallRequestBody 更新网络ACL请求体
 type UpdateFirewallRequestBody struct {
 	Firewall *UpdateFirewallOption `json:"firewall"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 是否收藏应用，收藏的应用会在列表里优先显示
+// AppFavorite 是否收藏应用，收藏的应用会在列表里优先显示
 type AppFavorite struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResourceInstancesCountResponse Response Object
 type ShowResourceInstancesCountResponse struct {
 
 	// 总记录数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLinkRequest Request Object
 type ShowLinkRequest struct {
 
 	// 集群ID

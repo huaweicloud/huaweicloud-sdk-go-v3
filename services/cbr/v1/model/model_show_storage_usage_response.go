@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStorageUsageResponse Response Object
 type ShowStorageUsageResponse struct {
 
 	// 满足过滤条件的资源总条数

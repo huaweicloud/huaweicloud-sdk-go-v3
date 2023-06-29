@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMetadataRequest Request Object
 type ShowMetadataRequest struct {
 
 	// 备份ID

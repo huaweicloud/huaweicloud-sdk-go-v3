@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建study请求体
+// CreateStudyReq 创建study请求体
 type CreateStudyReq struct {
 
 	// study名称

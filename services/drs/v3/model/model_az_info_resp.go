@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用区信息
+// AzInfoResp 可用区信息
 type AzInfoResp struct {
 
 	// 可用区标识代码

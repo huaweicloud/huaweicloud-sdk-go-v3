@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 磁盘IO信息
+// RabbitMqExtendProductIosEntity 磁盘IO信息
 type RabbitMqExtendProductIosEntity struct {
 
 	// 存储IO规格。

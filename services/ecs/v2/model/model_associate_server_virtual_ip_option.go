@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AssociateServerVirtualIpOption
 type AssociateServerVirtualIpOption struct {
 
 	// 网卡的子网ID。

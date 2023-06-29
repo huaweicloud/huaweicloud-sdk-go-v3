@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAutoRecordResponse Response Object
 type UpdateAutoRecordResponse struct {
 
 	// 应用id

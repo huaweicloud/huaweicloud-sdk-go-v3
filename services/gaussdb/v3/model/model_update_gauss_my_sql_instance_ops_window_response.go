@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGaussMySqlInstanceOpsWindowResponse Response Object
 type UpdateGaussMySqlInstanceOpsWindowResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

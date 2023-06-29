@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像信息
+// ImageInfo 镜像信息
 type ImageInfo struct {
 
 	// 源项目名

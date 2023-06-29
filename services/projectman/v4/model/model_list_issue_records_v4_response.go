@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIssueRecordsV4Response Response Object
 type ListIssueRecordsV4Response struct {
 
 	// 操作记录id (已废弃)

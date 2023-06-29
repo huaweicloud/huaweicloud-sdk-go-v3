@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InstallMultiTasksResponse Response Object
 type InstallMultiTasksResponse struct {
 	Body           *[]MultiTaskInitElement `json:"body,omitempty"`
 	HttpStatusCode int                     `json:"-"`

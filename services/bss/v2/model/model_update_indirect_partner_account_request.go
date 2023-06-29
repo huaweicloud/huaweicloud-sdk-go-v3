@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateIndirectPartnerAccountRequest Request Object
 type UpdateIndirectPartnerAccountRequest struct {
 	Body *AdjustToIndirectPartnerReq `json:"body,omitempty"`
 }

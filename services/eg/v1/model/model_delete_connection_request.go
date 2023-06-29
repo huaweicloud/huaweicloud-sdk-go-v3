@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteConnectionRequest Request Object
 type DeleteConnectionRequest struct {
 
 	// 指定查询的目标连接ID

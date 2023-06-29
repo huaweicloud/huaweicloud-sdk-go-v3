@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeSecurityGroupRequest Request Object
 type ChangeSecurityGroupRequest struct {
 
 	// MIME类型

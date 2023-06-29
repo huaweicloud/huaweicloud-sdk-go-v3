@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnterpriseOrganizationsRequest Request Object
 type ListEnterpriseOrganizationsRequest struct {
 
 	// 是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。

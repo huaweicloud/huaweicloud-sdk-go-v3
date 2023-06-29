@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置服务器自动分配弹性IP时，创建弹性IP的配置参数，详情见 eip 结构体
+// CreateNet2CloudPhoneServerRequestBodyPublicIpEip 配置服务器自动分配弹性IP时，创建弹性IP的配置参数，详情见 eip 结构体
 type CreateNet2CloudPhoneServerRequestBodyPublicIpEip struct {
 
 	// 弹性公网IP的类型，取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP）

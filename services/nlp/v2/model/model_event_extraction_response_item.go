@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// events数据结构
+// EventExtractionResponseItem events数据结构
 type EventExtractionResponseItem struct {
 
 	// 事件元素列表。

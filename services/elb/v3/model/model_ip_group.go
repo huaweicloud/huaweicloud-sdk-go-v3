@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IP地址组信息。
+// IpGroup IP地址组信息。
 type IpGroup struct {
 
 	// IP地址组的创建时间。

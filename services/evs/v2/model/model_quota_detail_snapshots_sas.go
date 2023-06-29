@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SAS类型云硬盘预留快照个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
+// QuotaDetailSnapshotsSas SAS类型云硬盘预留快照个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailSnapshotsSas struct {
 
 	// 已使用的数量。

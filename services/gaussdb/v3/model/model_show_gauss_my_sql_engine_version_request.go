@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowGaussMySqlEngineVersionRequest Request Object
 type ShowGaussMySqlEngineVersionRequest struct {
 
 	// 语言。

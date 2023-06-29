@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 策略定义
+// PolicyDefinition 策略定义
 type PolicyDefinition struct {
 
 	// 策略id

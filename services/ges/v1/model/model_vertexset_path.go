@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 点数据
+// VertexsetPath 点数据
 type VertexsetPath struct {
 
 	// OBS文件路径

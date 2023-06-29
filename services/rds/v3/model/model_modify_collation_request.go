@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ModifyCollationRequest Request Object
 type ModifyCollationRequest struct {
 
 	// 语言

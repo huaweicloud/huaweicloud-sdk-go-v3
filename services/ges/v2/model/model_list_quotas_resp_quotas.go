@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// resource类型列表，请求失败时该字段为空。
+// ListQuotasRespQuotas resource类型列表，请求失败时该字段为空。
 type ListQuotasRespQuotas struct {
 
 	// GES资源配额列表。

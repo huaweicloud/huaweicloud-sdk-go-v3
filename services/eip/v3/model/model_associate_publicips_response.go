@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociatePublicipsResponse Response Object
 type AssociatePublicipsResponse struct {
 
 	// 本次请求的编号

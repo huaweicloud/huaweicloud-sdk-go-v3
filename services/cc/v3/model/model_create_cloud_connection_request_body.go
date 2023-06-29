@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建云连接实例的请求体。
+// CreateCloudConnectionRequestBody 创建云连接实例的请求体。
 type CreateCloudConnectionRequestBody struct {
 	CloudConnection *CreateCloudConnection `json:"cloud_connection"`
 }

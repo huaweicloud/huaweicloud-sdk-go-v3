@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTransitIpsResponse Response Object
 type ListTransitIpsResponse struct {
 
 	// 查询中转IP列表的响应体。

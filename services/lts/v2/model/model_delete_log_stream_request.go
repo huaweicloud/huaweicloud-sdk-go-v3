@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLogStreamRequest Request Object
 type DeleteLogStreamRequest struct {
 
 	// 租户想删除的日志流所在的日志组的groupid，一般为36位字符串。

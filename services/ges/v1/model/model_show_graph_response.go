@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGraphResponse Response Object
 type ShowGraphResponse struct {
 	Graph *Graph1 `json:"graph,omitempty"`
 

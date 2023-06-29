@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 缩略图。
+// Thumbnail 缩略图。
 type Thumbnail struct {
 
 	// 缩略图ID。

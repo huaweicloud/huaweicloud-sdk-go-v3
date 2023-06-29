@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNodePoolResponse Response Object
 type UpdateNodePoolResponse struct {
 
 	// API类型，固定值“NodePool”。

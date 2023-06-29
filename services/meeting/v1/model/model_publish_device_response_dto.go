@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发布的设备信息。
+// PublishDeviceResponseDto 发布的设备信息。
 type PublishDeviceResponseDto struct {
 
 	// 设备用户ID。

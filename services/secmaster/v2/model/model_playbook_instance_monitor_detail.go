@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 剧本运行监控详情
+// PlaybookInstanceMonitorDetail 剧本运行监控详情
 type PlaybookInstanceMonitorDetail struct {
 
 	// 运行总次数

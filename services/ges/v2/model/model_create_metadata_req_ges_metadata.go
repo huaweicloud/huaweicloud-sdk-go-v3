@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储metadata的消息信息的对象。
+// CreateMetadataReqGesMetadata 存储metadata的消息信息的对象。
 type CreateMetadataReqGesMetadata struct {
 
 	// label列表

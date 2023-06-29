@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建作业时传的data参数
+// AudioModerationResultRequestParamsData 创建作业时传的data参数
 type AudioModerationResultRequestParamsData struct {
 	Url *string `json:"url,omitempty"`
 }

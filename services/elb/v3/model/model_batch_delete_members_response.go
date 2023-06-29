@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteMembersResponse Response Object
 type BatchDeleteMembersResponse struct {
 
 	// 请求ID。  注：自动生成 。

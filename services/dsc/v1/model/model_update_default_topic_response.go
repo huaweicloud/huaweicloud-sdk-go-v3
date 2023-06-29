@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDefaultTopicResponse Response Object
 type UpdateDefaultTopicResponse struct {
 
 	// 返回消息

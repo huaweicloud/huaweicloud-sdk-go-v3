@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateIpListRequestBody This is a auto create Body Object
 type UpdateIpListRequestBody struct {
 	Ipgroup *UpdateIpListOption `json:"ipgroup,omitempty"`
 }

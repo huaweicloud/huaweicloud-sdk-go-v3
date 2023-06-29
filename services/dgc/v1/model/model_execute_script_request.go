@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteScriptRequest Request Object
 type ExecuteScriptRequest struct {
 
 	// 工作空间id

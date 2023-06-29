@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDedicatedResourcesResponse Response Object
 type ListDedicatedResourcesResponse struct {
 
 	// 总记录数。

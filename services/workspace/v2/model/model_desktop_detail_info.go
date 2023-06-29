@@ -3,10 +3,13 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
-// 桌面详情。
+// DesktopDetailInfo 桌面详情。
 type DesktopDetailInfo struct {
 
 	// 桌面ID。
@@ -39,7 +42,7 @@ type DesktopDetailInfo struct {
 	Created *string `json:"created,omitempty"`
 
 	// 桌面安全组。
-	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 
 	// 桌面的登录状态。  - UNREGISTER：表示桌面未注册时的状态（桌面启动后，会自动注册）。关机后也会出现未注册的状态。 - REGISTERED：表示桌面注册以后，等待用户连接的状态。 - CONNECTED：表示用户已经成功登录，正在使用桌面。 - DISCONNECTED：表示桌面与客户端断开会话后显示的状态，可能为关闭客户端窗口，或客户端与桌面网络断开引起。
 	LoginStatus *string `json:"login_status,omitempty"`
@@ -83,6 +86,12 @@ type DesktopDetailInfo struct {
 
 	// 桌面标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
+
+	// 上网方式。 - NAT：表示NAT上网方式。 - EIP：表示EIP上网方式。 - BOTH：表示两种上网方式都支持。
+	InternetMode *DesktopDetailInfoInternetMode `json:"internet_mode,omitempty"`
+
+	// 桌面是否正在绑定EIP。
+	IsAttachingEip *bool `json:"is_attaching_eip,omitempty"`
 }
 
 func (o DesktopDetailInfo) String() string {
@@ -92,4 +101,55 @@ func (o DesktopDetailInfo) String() string {
 	}
 
 	return strings.Join([]string{"DesktopDetailInfo", string(data)}, " ")
+}
+
+type DesktopDetailInfoInternetMode struct {
+	value string
+}
+
+type DesktopDetailInfoInternetModeEnum struct {
+	NAT  DesktopDetailInfoInternetMode
+	EIP  DesktopDetailInfoInternetMode
+	BOTH DesktopDetailInfoInternetMode
+}
+
+func GetDesktopDetailInfoInternetModeEnum() DesktopDetailInfoInternetModeEnum {
+	return DesktopDetailInfoInternetModeEnum{
+		NAT: DesktopDetailInfoInternetMode{
+			value: "NAT",
+		},
+		EIP: DesktopDetailInfoInternetMode{
+			value: "EIP",
+		},
+		BOTH: DesktopDetailInfoInternetMode{
+			value: "BOTH",
+		},
+	}
+}
+
+func (c DesktopDetailInfoInternetMode) Value() string {
+	return c.value
+}
+
+func (c DesktopDetailInfoInternetMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DesktopDetailInfoInternetMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 服务开放的端口映射列表
+// PortList 服务开放的端口映射列表
 type PortList struct {
 
 	// 终端节点访问的端口。 终端节点提供给用户，作为访问终端节点服务的端口，范围1-65535。
@@ -57,13 +57,18 @@ func (c PortListProtocol) MarshalJSON() ([]byte, error) {
 
 func (c *PortListProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

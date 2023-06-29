@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 租户注册协议响应体
+// TenantAgreementBody 租户注册协议响应体
 type TenantAgreementBody struct {
 
 	// 租户协议列表

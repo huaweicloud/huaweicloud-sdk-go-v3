@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClassroomsRequest Request Object
 type ListClassroomsRequest struct {
 
 	// 信息记录的起始编号

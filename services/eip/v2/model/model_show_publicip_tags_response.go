@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicipTagsResponse Response Object
 type ShowPublicipTagsResponse struct {
 
 	// 标签列表

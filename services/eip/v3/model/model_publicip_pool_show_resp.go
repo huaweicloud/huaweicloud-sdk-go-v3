@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 公网IP池详情
+// PublicipPoolShowResp 公网IP池详情
 type PublicipPoolShowResp struct {
 
 	// 公网IP池id
@@ -102,13 +102,18 @@ func (c PublicipPoolShowRespType) MarshalJSON() ([]byte, error) {
 
 func (c *PublicipPoolShowRespType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

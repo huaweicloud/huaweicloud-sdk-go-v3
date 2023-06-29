@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddAddressSetInfoUsingPostResponse Response Object
 type AddAddressSetInfoUsingPostResponse struct {
 	Data           *IdObject `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`

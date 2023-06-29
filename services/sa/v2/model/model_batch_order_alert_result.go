@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 委托告警返回对象
+// BatchOrderAlertResult 委托告警返回对象
 type BatchOrderAlertResult struct {
 
 	// 失败id

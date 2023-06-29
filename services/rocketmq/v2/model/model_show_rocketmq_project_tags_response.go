@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRocketmqProjectTagsResponse Response Object
 type ShowRocketmqProjectTagsResponse struct {
 
 	// 标签列表

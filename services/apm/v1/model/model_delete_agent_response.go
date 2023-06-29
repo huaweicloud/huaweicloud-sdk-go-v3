@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAgentResponse Response Object
 type DeleteAgentResponse struct {
 
 	// 删除状态。

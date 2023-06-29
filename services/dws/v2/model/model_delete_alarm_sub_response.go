@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAlarmSubResponse Response Object
 type DeleteAlarmSubResponse struct {
 
 	// 告警订阅ID

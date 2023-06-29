@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClusterScaleInNumbersResponse Response Object
 type ListClusterScaleInNumbersResponse struct {
 
 	// 合适的缩容数

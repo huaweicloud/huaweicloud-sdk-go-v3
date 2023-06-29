@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项的统计信息
+// IssueStatusResponseV4 工作项的统计信息
 type IssueStatusResponseV4 struct {
 
 	// 已关闭数量

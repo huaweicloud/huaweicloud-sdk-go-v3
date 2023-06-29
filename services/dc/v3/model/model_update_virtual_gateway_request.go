@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateVirtualGatewayRequest Request Object
 type UpdateVirtualGatewayRequest struct {
 
 	// 虚拟网关ID

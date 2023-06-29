@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEngineFlavorsResponse Response Object
 type ListEngineFlavorsResponse struct {
 
 	// 可用的规格列表信息

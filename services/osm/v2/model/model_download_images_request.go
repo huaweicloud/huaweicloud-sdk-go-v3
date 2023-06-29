@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadImagesRequest Request Object
 type DownloadImagesRequest struct {
 
 	// 附件id

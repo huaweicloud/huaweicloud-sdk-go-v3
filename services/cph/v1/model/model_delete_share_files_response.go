@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteShareFilesResponse Response Object
 type DeleteShareFilesResponse struct {
 
 	// 请求的唯一标识ID。

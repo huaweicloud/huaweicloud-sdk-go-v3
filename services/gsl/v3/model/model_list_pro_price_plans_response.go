@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProPricePlansResponse Response Object
 type ListProPricePlansResponse struct {
 
 	// 每页的记录数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNotificationTemplateResponse Response Object
 type ListNotificationTemplateResponse struct {
 
 	// 为一个html文本，需要进行相应的解析后展示

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandGaussMySqlInstanceVolumeRequest Request Object
 type ExpandGaussMySqlInstanceVolumeRequest struct {
 
 	// 语言。

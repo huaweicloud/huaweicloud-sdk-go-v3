@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性权重
+// NumericalAttr 属性权重
 type NumericalAttr struct {
 
 	// 特征名。

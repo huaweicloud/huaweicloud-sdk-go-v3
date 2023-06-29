@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTasklogResponse Response Object
 type ShowTasklogResponse struct {
 	ParamInfo *ParamInfo `json:"param_info,omitempty"`
 

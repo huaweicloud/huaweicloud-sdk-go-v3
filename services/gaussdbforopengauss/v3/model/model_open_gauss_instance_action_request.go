@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// OpenGaussInstanceActionRequest
 type OpenGaussInstanceActionRequest struct {
 	ExpandCluster *OpenGaussExpandCluster `json:"expand_cluster,omitempty"`
 

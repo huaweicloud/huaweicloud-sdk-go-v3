@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchMemberVmrResponse Response Object
 type SearchMemberVmrResponse struct {
 
 	// 页面起始页，从0开始。

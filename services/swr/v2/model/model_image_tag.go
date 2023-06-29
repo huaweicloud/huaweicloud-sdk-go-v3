@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 版本
+// ImageTag 版本
 type ImageTag struct {
 }
 

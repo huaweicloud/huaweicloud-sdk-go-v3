@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 最终租户修改子用户安全信息
+// UpdateUserByDomainReq 最终租户修改子用户安全信息
 type UpdateUserByDomainReq struct {
 
 	// 新密码，在8-32位之间支持用户自定义密码长度，至少包含以下四种字符中的三种： 大写字母、小写字母、数字和特殊字符。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteExternalEntityRequest Request Object
 type DeleteExternalEntityRequest struct {
 
 	// 边缘节点ID

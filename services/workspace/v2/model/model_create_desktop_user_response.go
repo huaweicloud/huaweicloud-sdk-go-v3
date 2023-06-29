@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDesktopUserResponse Response Object
 type CreateDesktopUserResponse struct {
 
 	// 用户id。

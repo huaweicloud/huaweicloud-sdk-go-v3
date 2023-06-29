@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指定ID任务的实例信息。
+// GetJobInstanceInfoDetail 指定ID任务的实例信息。
 type GetJobInstanceInfoDetail struct {
 
 	// 实例ID。

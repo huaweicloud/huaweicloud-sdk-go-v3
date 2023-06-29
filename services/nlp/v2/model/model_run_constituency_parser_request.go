@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunConstituencyParserRequest Request Object
 type RunConstituencyParserRequest struct {
 	Body *ConstituencyParserReq `json:"body,omitempty"`
 }

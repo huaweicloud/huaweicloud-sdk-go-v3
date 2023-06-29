@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAdmetWithCustomPropsResponse Response Object
 type ShowAdmetWithCustomPropsResponse struct {
 
 	// 用户已开启的自定义属性集合

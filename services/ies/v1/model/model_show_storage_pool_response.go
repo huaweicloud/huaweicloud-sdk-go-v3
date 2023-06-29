@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStoragePoolResponse Response Object
 type ShowStoragePoolResponse struct {
 	StoragePool    *StoragePool `json:"storage_pool,omitempty"`
 	HttpStatusCode int          `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监听器HTTP扩展头部对象。
+// InsertHeader 监听器HTTP扩展头部对象。
 type InsertHeader struct {
 
 	// 负载均衡器弹性公网IP透传开关。

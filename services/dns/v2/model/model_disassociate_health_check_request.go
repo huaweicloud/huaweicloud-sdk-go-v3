@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateHealthCheckRequest Request Object
 type DisassociateHealthCheckRequest struct {
 
 	// Record Set关联健康检查。

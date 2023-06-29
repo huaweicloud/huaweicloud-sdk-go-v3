@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询经过转换计算的序列值定义
+// TransformMetricsRequest 查询经过转换计算的序列值定义
 type TransformMetricsRequest struct {
 	TimeSpan *TimeSpanDt `json:"time_span,omitempty"`
 

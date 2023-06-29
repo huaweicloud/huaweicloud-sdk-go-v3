@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业在实例上的状态信息
+// TaskStatus 作业在实例上的状态信息
 type TaskStatus struct {
 
 	// 作业运行失败原因

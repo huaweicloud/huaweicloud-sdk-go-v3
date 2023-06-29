@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息。
+// TagResult 标签信息。
 type TagResult struct {
 
 	// 标签键。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// QaBotAnswer
 type QaBotAnswer struct {
 
 	// 问答对ID。

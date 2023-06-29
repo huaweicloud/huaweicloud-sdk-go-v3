@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解除云办公服务锁定状态请求。
+// UnlockWorkspaceRequestBody 解除云办公服务锁定状态请求。
 type UnlockWorkspaceRequestBody struct {
 
 	// 解除项目锁定操作类型。

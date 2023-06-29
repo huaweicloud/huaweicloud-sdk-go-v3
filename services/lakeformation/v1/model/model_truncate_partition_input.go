@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 清空分区数据
+// TruncatePartitionInput 清空分区数据
 type TruncatePartitionInput struct {
 
 	// 分区值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性公网IP对象
+// OpenPublicIp 弹性公网IP对象
 type OpenPublicIp struct {
 
 	// 弹性IP绑定类型，取值如下： auto_assign：自动绑定 not_use：暂未使用 bind_existing ：使用已有

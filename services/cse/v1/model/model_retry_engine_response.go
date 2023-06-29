@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RetryEngineResponse Response Object
 type RetryEngineResponse struct {
 
 	// 创建的微服务引擎专享版ID

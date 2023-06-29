@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作流节点定义
+// Action 工作流节点定义
 type Action struct {
 
 	// 节点名称

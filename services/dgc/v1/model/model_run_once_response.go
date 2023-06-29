@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunOnceResponse Response Object
 type RunOnceResponse struct {
 
 	// 作业实例id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// MatchFeaturePair
 type MatchFeaturePair struct {
 
 	// 用户特征。

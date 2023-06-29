@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志接入详细信息
+// AccessConfigDeatilCreate 日志接入详细信息
 type AccessConfigDeatilCreate struct {
 
 	// 采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次

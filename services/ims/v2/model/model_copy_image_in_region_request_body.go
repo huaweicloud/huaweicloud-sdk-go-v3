@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求参数
+// CopyImageInRegionRequestBody 请求参数
 type CopyImageInRegionRequestBody struct {
 
 	// 加密密钥。默认为空。

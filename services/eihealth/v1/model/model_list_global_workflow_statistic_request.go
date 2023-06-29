@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListGlobalWorkflowStatisticRequest Request Object
 type ListGlobalWorkflowStatisticRequest struct {
 }
 

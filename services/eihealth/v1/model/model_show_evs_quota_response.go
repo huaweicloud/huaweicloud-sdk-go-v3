@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEvsQuotaResponse Response Object
 type ShowEvsQuotaResponse struct {
 
 	// 总配额

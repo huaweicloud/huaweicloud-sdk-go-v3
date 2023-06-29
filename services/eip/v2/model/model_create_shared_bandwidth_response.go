@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSharedBandwidthResponse Response Object
 type CreateSharedBandwidthResponse struct {
 	Bandwidth      *BandwidthResp `json:"bandwidth,omitempty"`
 	HttpStatusCode int            `json:"-"`

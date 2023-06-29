@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除镜像tag返回体
+// DeleteTagRsp 批量删除镜像tag返回体
 type DeleteTagRsp struct {
 
 	// 镜像tag名称

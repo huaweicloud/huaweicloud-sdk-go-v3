@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建云服务器组请求返回对象
+// Pool 创建云服务器组请求返回对象
 type Pool struct {
 
 	// 后端云服务器组的管理状态，只支持设置为true。  不支持该字段，请勿使用。
@@ -116,13 +116,18 @@ func (c PoolProtectionStatus) MarshalJSON() ([]byte, error) {
 
 func (c *PoolProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

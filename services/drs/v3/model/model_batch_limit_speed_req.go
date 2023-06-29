@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BatchLimitSpeedReq
 type BatchLimitSpeedReq struct {
 
 	// 灾备限速设置信息

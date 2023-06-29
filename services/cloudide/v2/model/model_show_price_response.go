@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPriceResponse Response Object
 type ShowPriceResponse struct {
 
 	// 技术栈价格列表

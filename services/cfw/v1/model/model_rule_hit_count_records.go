@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规则击中次数记录
+// RuleHitCountRecords 规则击中次数记录
 type RuleHitCountRecords struct {
 
 	// 每页显示个数

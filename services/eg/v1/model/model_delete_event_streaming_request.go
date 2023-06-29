@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEventStreamingRequest Request Object
 type DeleteEventStreamingRequest struct {
 
 	// 事件流ID

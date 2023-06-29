@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器标签。
+// ResourceTag 云服务器标签。
 type ResourceTag struct {
 
 	// 键。  - 最大长度127个unicode字符。  - key不能为空。  - 只能包含字母、数字、下划线“_”、中划线“-”。

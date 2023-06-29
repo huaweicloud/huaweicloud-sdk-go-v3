@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCertificatesHttpsInfoResponse Response Object
 type ShowCertificatesHttpsInfoResponse struct {
 
 	// 查询结果总数

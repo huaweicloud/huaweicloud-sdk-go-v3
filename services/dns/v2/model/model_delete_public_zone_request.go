@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePublicZoneRequest Request Object
 type DeletePublicZoneRequest struct {
 
 	// 待删除zone的ID

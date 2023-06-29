@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteInterRegionBandwidthResponse Response Object
 type DeleteInterRegionBandwidthResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可被参数模板应用的实例信息
+// ApplicableInstancesInfo 可被参数模板应用的实例信息
 type ApplicableInstancesInfo struct {
 
 	// 实例ID。

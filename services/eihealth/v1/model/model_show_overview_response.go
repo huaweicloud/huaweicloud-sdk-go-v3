@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOverviewResponse Response Object
 type ShowOverviewResponse struct {
 
 	// 平台ID

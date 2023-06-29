@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 证书配置查询响应体。
+// HttpGetBody 证书配置查询响应体。
 type HttpGetBody struct {
 
 	// HTTPS证书是否启用，on：开启，off：关闭。

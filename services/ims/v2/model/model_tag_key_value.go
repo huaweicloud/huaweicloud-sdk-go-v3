@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像标签
+// TagKeyValue 镜像标签
 type TagKeyValue struct {
 
 	// 标签的键

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// OBS文档嵌入水印请求体
+// CreateDocWatermarkByAddressRequestBody OBS文档嵌入水印请求体
 type CreateDocWatermarkByAddressRequestBody struct {
 
 	// 项目所在region的id，如：xx-xx-1。
@@ -102,13 +102,18 @@ func (c CreateDocWatermarkByAddressRequestBodyDocType) MarshalJSON() ([]byte, er
 
 func (c *CreateDocWatermarkByAddressRequestBodyDocType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -144,13 +149,18 @@ func (c CreateDocWatermarkByAddressRequestBodyVisibleType) MarshalJSON() ([]byte
 
 func (c *CreateDocWatermarkByAddressRequestBodyVisibleType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

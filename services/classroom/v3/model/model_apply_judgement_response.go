@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ApplyJudgementResponse Response Object
 type ApplyJudgementResponse struct {
 
 	// 判题任务ID

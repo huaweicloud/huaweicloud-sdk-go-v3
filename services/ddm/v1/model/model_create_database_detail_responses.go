@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Response Object
+// CreateDatabaseDetailResponses This is a auto create Response Object
 type CreateDatabaseDetailResponses struct {
 
 	// 逻辑库名称。

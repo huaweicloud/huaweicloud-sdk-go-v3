@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShrinkInstanceNodesResponse Response Object
 type ShrinkInstanceNodesResponse struct {
 
 	// 任务ID，仅按需实例返回该参数。

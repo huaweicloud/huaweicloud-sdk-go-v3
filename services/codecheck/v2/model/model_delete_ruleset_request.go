@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRulesetRequest Request Object
 type DeleteRulesetRequest struct {
 
 	// 项目ID

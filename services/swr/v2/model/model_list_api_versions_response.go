@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApiVersionsResponse Response Object
 type ListApiVersionsResponse struct {
 
 	// 描述version相关对象的列表

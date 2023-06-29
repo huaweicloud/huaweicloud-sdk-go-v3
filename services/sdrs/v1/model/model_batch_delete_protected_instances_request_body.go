@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除请求体
+// BatchDeleteProtectedInstancesRequestBody 批量删除请求体
 type BatchDeleteProtectedInstancesRequestBody struct {
 
 	// 所需要删除的保护实例列表。

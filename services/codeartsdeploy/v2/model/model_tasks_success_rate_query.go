@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询多个应用的部署成功率的请求体
+// TasksSuccessRateQuery 查询多个应用的部署成功率的请求体
 type TasksSuccessRateQuery struct {
 
 	// 部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DebugLiveDataApiV2Response Response Object
 type DebugLiveDataApiV2Response struct {
 
 	// 测试返回的状态码

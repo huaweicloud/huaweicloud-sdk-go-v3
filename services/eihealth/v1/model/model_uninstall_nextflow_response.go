@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UninstallNextflowResponse Response Object
 type UninstallNextflowResponse struct {
 	HttpStatusCode int `json:"-"`
 }

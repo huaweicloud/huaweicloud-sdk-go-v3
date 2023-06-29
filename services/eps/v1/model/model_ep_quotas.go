@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 企业项目配额响应
+// EpQuotas 企业项目配额响应
 type EpQuotas struct {
 
 	// 总配额

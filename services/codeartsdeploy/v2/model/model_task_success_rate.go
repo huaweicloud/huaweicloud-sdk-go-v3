@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个应用的部署成功率
+// TaskSuccessRate 单个应用的部署成功率
 type TaskSuccessRate struct {
 
 	// 任务id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSpanSearchResponse Response Object
 type ShowSpanSearchResponse struct {
 
 	// 返回的总数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeFlashAsrResponse Response Object
 type RecognizeFlashAsrResponse struct {
 
 	// 服务内部的令牌，可用于在日志中追溯具体调用流程

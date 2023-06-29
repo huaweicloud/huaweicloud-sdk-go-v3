@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckWeekPasswordRequest Request Object
 type CheckWeekPasswordRequest struct {
 	Body *CheckWeekPasswordRequestBody `json:"body,omitempty"`
 }

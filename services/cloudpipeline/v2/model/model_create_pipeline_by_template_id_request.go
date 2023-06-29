@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePipelineByTemplateIdRequest Request Object
 type CreatePipelineByTemplateIdRequest struct {
 
 	// 项目ID

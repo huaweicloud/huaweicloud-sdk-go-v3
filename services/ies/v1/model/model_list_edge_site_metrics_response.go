@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeSiteMetricsResponse Response Object
 type ListEdgeSiteMetricsResponse struct {
 
 	// 监控数据

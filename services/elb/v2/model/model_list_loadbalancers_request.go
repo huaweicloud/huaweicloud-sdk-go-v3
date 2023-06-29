@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLoadbalancersRequest Request Object
 type ListLoadbalancersRequest struct {
 
 	// 分页查询中每页的负载均衡器个数

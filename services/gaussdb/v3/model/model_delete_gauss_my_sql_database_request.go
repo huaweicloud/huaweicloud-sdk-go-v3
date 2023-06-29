@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteGaussMySqlDatabaseRequest Request Object
 type DeleteGaussMySqlDatabaseRequest struct {
 
 	// 语言。

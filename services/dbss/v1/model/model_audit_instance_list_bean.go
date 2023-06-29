@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 审计实例列表bean
+// AuditInstanceListBean 审计实例列表bean
 type AuditInstanceListBean struct {
 
 	// 付费模式 Period：包周期 Demand：按需。

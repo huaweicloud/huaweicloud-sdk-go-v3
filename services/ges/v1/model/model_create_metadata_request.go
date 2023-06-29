@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMetadataRequest Request Object
 type CreateMetadataRequest struct {
 	Body *CreateMetadataReq `json:"body,omitempty"`
 }

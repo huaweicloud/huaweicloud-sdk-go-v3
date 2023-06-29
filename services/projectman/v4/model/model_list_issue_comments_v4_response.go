@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIssueCommentsV4Response Response Object
 type ListIssueCommentsV4Response struct {
 
 	// 评论总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 证书信息。
+// CertificateInfo 证书信息。
 type CertificateInfo struct {
 
 	// 证书的管理状态。  不支持该字段，请勿使用。

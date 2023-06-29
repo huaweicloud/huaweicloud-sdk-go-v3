@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建健康检查的详细信息。
+// CreateHealthCheckOption 创建健康检查的详细信息。
 type CreateHealthCheckOption struct {
 
 	// 终端节点组ID。

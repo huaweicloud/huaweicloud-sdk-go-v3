@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTestCaseRequest Request Object
 type CreateTestCaseRequest struct {
 	Body *CreateTestCaseRequestBody `json:"body,omitempty"`
 }

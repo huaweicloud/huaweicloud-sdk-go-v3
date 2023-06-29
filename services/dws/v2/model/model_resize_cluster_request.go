@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeClusterRequest Request Object
 type ResizeClusterRequest struct {
 
 	// 待调整大小的集群ID

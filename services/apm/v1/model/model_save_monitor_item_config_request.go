@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SaveMonitorItemConfigRequest Request Object
 type SaveMonitorItemConfigRequest struct {
 
 	// 应用id。

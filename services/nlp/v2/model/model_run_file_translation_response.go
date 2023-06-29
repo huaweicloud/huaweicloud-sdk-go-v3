@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunFileTranslationResponse Response Object
 type RunFileTranslationResponse struct {
 
 	// 创建的任务标识, 如果创建任务成功时必存在。调用失败时无此字段。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据恢复请求体
+// RestoreBackupReq 数据恢复请求体
 type RestoreBackupReq struct {
 
 	// 执行策略（true：全部覆盖，false：全部跳过，默认为true）

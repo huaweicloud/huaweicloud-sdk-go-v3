@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchAddServerNicsRequestBody This is a auto create Body Object
 type BatchAddServerNicsRequestBody struct {
 
 	// 需要添加的网卡参数列表。

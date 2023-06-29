@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFunctionAsMetricResponse Response Object
 type ListFunctionAsMetricResponse struct {
 
 	// 函数Urn及其指标数

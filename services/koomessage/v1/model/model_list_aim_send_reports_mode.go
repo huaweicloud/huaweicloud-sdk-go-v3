@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 报表数据体。
+// ListAimSendReportsMode 报表数据体。
 type ListAimSendReportsMode struct {
 
 	// 数据列表。

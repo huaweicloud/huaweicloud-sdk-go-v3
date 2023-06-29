@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteVpcRouteRequest Request Object
 type DeleteVpcRouteRequest struct {
 
 	// 路由ID

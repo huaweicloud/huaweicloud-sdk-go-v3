@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetServerPasswordRequest Request Object
 type ResetServerPasswordRequest struct {
 
 	// 云服务器ID。

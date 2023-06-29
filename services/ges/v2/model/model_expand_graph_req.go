@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 扩副本请求体
+// ExpandGraphReq 扩副本请求体
 type ExpandGraphReq struct {
 	Expand *ExpandGraphReqExpand `json:"expand"`
 }

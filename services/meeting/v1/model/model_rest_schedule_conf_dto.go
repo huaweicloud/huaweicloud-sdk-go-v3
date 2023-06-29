@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议信息。
+// RestScheduleConfDto 会议信息。
 type RestScheduleConfDto struct {
 
 	// 会议开始时间（UTC时间）。格式：yyyy-MM-dd HH:mm。 > * 创建预约会议时，如果没有指定开始时间或填空串，则表示会议马上开始 > * 时间是UTC时间，即0时区的时间

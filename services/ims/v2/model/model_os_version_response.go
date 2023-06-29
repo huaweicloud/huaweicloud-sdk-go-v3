@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询版本响应体
+// OsVersionResponse 查询版本响应体
 type OsVersionResponse struct {
 
 	// 接口状态。

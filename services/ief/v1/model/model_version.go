@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板版本
+// Version 应用模板版本
 type Version struct {
 	Version *VersionDetail `json:"version"`
 }

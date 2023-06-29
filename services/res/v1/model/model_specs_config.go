@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SpecsConfig
 type SpecsConfig struct {
 
 	// 离线计算规格。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEndpointResponse Response Object
 type DeleteEndpointResponse struct {
 	HttpStatusCode int `json:"-"`
 }

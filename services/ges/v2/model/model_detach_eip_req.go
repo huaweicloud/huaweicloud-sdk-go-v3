@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解绑EIP请求体
+// DetachEipReq 解绑EIP请求体
 type DetachEipReq struct {
 
 	// 弹性公网IP的ID。

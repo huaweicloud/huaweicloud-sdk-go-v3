@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 异常站点
+// ErrorSite 异常站点
 type ErrorSite struct {
 
 	// 异常站点。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchDeleteBaremetalServerTagsRequestBody This is a auto create Body Object
 type BatchDeleteBaremetalServerTagsRequestBody struct {
 
 	// 操作标识（仅支持小写）：delete（删除）。
@@ -54,13 +54,18 @@ func (c BatchDeleteBaremetalServerTagsRequestBodyAction) MarshalJSON() ([]byte, 
 
 func (c *BatchDeleteBaremetalServerTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

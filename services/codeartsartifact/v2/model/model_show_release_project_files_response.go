@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowReleaseProjectFilesResponse Response Object
 type ShowReleaseProjectFilesResponse struct {
 	Result         *StandardResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                     `json:"-"`

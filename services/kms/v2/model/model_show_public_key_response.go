@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicKeyResponse Response Object
 type ShowPublicKeyResponse struct {
 
 	// 密钥ID。

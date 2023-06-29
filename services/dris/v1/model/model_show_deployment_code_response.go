@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeploymentCodeResponse Response Object
 type ShowDeploymentCodeResponse struct {
 
 	// **参数说明**：生成的安装命令。

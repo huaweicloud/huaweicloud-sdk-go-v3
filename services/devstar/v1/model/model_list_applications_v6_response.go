@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApplicationsV6Response Response Object
 type ListApplicationsV6Response struct {
 
 	// 应用列表

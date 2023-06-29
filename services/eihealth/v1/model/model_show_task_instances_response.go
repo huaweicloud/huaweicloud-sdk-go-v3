@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskInstancesResponse Response Object
 type ShowTaskInstancesResponse struct {
 
 	// 实例个数

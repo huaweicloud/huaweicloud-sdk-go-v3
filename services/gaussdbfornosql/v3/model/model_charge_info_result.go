@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 付费方式信息，与请求参数相同。
+// ChargeInfoResult 付费方式信息，与请求参数相同。
 type ChargeInfoResult struct {
 
 	// 计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。

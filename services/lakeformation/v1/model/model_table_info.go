@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// table input when grant policy
+// TableInfo table input when grant policy
 type TableInfo struct {
 	Columns *ColumnInfo `json:"columns,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEventsResponse Response Object
 type CreateEventsResponse struct {
 
 	// 响应参数。

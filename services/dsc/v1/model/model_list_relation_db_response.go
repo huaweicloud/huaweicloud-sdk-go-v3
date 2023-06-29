@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRelationDbResponse Response Object
 type ListRelationDbResponse struct {
 
 	// 关系信息总数

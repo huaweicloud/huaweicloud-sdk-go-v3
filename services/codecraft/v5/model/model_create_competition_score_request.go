@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCompetitionScoreRequest Request Object
 type CreateCompetitionScoreRequest struct {
 	Body *CreateScoresRequestModel `json:"body,omitempty"`
 }

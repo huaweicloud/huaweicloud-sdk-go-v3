@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：不同车辆类型的流量统计。
+// ModelFlow **参数说明**：不同车辆类型的流量统计。
 type ModelFlow struct {
 
 	// **参数说明**：车辆类型。参考[车辆基本类型](https://support.huaweicloud.com/api-v2x/v2x_04_0162.html)。

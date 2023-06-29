@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchSetDefinerResponse Response Object
 type BatchSetDefinerResponse struct {
 
 	// 总数

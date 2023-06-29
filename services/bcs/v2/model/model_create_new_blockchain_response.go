@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateNewBlockchainResponse Response Object
 type CreateNewBlockchainResponse struct {
 
 	// 服务实例ID

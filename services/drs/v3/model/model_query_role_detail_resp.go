@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移角色响应体
+// QueryRoleDetailResp 迁移角色响应体
 type QueryRoleDetailResp struct {
 
 	// 角色。

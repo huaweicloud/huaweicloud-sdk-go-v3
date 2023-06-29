@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CommitAsyncJobResponse Response Object
 type CommitAsyncJobResponse struct {
 	Job            *AsyncCommitJobResp `json:"job,omitempty"`
 	HttpStatusCode int                 `json:"-"`

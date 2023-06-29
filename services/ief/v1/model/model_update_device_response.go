@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDeviceResponse Response Object
 type UpdateDeviceResponse struct {
 	Device         *Device `json:"device,omitempty"`
 	HttpStatusCode int     `json:"-"`

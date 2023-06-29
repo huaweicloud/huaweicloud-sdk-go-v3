@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 后端服务器操作状态。
+// MemberStatus 后端服务器操作状态。
 type MemberStatus struct {
 
 	// 监听器ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConsumeSubCustomersResponse Response Object
 type ListConsumeSubCustomersResponse struct {
 
 	// 子客户列表。 具体请参见表SubCustomerInfo。

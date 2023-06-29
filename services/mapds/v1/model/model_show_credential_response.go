@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCredentialResponse Response Object
 type ShowCredentialResponse struct {
 
 	// 凭证信息。

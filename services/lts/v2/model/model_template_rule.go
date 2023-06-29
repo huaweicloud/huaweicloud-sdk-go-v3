@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 结构化模板规则对象
+// TemplateRule 结构化模板规则对象
 type TemplateRule struct {
 
 	// 结构化类型，只支持custom_regex,json,split,nginx
@@ -66,13 +66,18 @@ func (c TemplateRuleType) MarshalJSON() ([]byte, error) {
 
 func (c *TemplateRuleType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

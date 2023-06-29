@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRunResponse Response Object
 type CreateRunResponse struct {
 
 	// 作业运行ID。

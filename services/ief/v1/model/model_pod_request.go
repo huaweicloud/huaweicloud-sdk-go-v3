@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用部署模板
+// PodRequest 应用部署模板
 type PodRequest struct {
 	Configs *PodConfigs `json:"configs"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SignPublishedAgreementResponse Response Object
 type SignPublishedAgreementResponse struct {
 
 	// 签署记录id

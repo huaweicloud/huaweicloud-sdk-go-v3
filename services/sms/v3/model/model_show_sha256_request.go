@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSha256Request Request Object
 type ShowSha256Request struct {
 
 	// 关键字

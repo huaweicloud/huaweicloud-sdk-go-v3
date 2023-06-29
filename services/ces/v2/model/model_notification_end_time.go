@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警通知关闭时间
+// NotificationEndTime 告警通知关闭时间
 type NotificationEndTime struct {
 }
 

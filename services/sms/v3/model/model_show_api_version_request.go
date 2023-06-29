@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowApiVersionRequest Request Object
 type ShowApiVersionRequest struct {
 
 	// 版本信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCertKeyResponse Response Object
 type ShowCertKeyResponse struct {
 
 	// 证书

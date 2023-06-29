@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateL7PolicyResponse Response Object
 type UpdateL7PolicyResponse struct {
 
 	// 请求ID。  注：自动生成 。

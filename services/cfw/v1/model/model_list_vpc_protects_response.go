@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcProtectsResponse Response Object
 type ListVpcProtectsResponse struct {
 
 	// 调用链id

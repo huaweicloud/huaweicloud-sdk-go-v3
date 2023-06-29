@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListQueryAllSearchCriteriasResponse Response Object
 type ListQueryAllSearchCriteriasResponse struct {
 
 	// 快速查询

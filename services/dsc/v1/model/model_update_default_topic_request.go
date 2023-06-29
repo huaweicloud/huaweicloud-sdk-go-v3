@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDefaultTopicRequest Request Object
 type UpdateDefaultTopicRequest struct {
 	Body *DefaultTopicRequest `json:"body,omitempty"`
 }

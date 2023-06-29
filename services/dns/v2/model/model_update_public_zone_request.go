@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePublicZoneRequest Request Object
 type UpdatePublicZoneRequest struct {
 
 	// 待修改zone的ID

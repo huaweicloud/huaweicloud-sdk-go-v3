@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可修改的合流参数
+// UpdateMixParam 可修改的合流参数
 type UpdateMixParam struct {
 
 	// 视频布局模板编号，仅支持自定义模板之间的更新。

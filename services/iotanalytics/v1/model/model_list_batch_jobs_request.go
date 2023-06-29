@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBatchJobsRequest Request Object
 type ListBatchJobsRequest struct {
 
 	// 当前偏移量，默认为0。

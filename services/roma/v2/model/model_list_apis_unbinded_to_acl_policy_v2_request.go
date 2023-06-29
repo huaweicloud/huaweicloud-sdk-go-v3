@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApisUnbindedToAclPolicyV2Request Request Object
 type ListApisUnbindedToAclPolicyV2Request struct {
 
 	// 实例ID

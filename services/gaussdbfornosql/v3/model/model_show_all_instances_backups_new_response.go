@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAllInstancesBackupsNewResponse Response Object
 type ShowAllInstancesBackupsNewResponse struct {
 
 	// 备份总数量。

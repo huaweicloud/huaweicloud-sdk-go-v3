@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新notebook请求体
+// UpdateNotebookReq 更新notebook请求体
 type UpdateNotebookReq struct {
 
 	// notebook描述信息，取值范围[0,1024]

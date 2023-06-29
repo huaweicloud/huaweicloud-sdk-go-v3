@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPlaybookInstancesResponse Response Object
 type ListPlaybookInstancesResponse struct {
 
 	// tatal count

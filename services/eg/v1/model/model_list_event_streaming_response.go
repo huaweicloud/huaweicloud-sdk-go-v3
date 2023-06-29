@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEventStreamingResponse Response Object
 type ListEventStreamingResponse struct {
 	Body *[]EventStreamingDetail `json:"body,omitempty"`
 

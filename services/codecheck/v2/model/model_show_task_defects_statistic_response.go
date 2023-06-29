@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskDefectsStatisticResponse Response Object
 type ShowTaskDefectsStatisticResponse struct {
 	Severity *StatisticSeverityV2 `json:"severity,omitempty"`
 

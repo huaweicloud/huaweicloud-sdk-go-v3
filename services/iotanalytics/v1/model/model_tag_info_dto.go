@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息
+// TagInfoDto 标签信息
 type TagInfoDto struct {
 
 	// 算子Id

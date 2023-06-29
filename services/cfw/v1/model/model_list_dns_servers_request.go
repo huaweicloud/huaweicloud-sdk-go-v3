@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDnsServersRequest Request Object
 type ListDnsServersRequest struct {
 
 	// 每页显示个数

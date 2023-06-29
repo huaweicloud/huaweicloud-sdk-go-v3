@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端状态信息
+// UserStatusDto 终端状态信息
 type UserStatusDto struct {
 
 	// 终端号码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSyncJobResponse Response Object
 type ShowSyncJobResponse struct {
 	Body *[]SyncJob `json:"body,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 被邀请的与会者信息。包含预约会议时邀请的与会者和会中主持人邀请的与会者。
+// ParticipantInfo 被邀请的与会者信息。包含预约会议时邀请的与会者和会中主持人邀请的与会者。
 type ParticipantInfo struct {
 
 	// 与会者的号码。

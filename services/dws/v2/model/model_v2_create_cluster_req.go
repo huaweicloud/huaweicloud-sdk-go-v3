@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// V2接口创建集群请求体。
+// V2CreateClusterReq V2接口创建集群请求体。
 type V2CreateClusterReq struct {
 	Cluster *V2CreateCluster `json:"cluster,omitempty"`
 }

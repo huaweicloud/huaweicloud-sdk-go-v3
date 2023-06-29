@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业具体输出数据
+// TaskOutputs 作业具体输出数据
 type TaskOutputs struct {
 
 	// 输出数据

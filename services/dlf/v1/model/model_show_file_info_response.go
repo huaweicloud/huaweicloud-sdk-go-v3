@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFileInfoResponse Response Object
 type ShowFileInfoResponse struct {
 	Jobs *[]Job `json:"jobs,omitempty"`
 

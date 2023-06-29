@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 多画面显示信息。
+// MultiPicDisplayDo 多画面显示信息。
 type MultiPicDisplayDo struct {
 
 	// 是否为手工设置多画面。 * 0 ：系统自动多画面 * 1 ：手工设置多画面

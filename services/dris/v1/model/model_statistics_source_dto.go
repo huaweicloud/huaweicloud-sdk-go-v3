@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：消息来源。
+// StatisticsSourceDto **参数说明**：消息来源。
 type StatisticsSourceDto struct {
 
 	// **参数说明**：信息来源的具体类型描述。
@@ -62,13 +62,18 @@ func (c StatisticsSourceDtoSourceType) MarshalJSON() ([]byte, error) {
 
 func (c *StatisticsSourceDtoSourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

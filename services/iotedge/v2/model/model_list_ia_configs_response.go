@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIaConfigsResponse Response Object
 type ListIaConfigsResponse struct {
 
 	// 南向3rdIA配置项列表

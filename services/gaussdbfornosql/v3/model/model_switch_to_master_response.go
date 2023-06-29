@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchToMasterResponse Response Object
 type SwitchToMasterResponse struct {
 
 	// 容灾实例主备倒换的工作ID。

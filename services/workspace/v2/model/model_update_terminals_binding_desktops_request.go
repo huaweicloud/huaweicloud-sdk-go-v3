@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTerminalsBindingDesktopsRequest Request Object
 type UpdateTerminalsBindingDesktopsRequest struct {
 	Body *UpdateTerminalsBindingDesktopsRequestBody `json:"body,omitempty"`
 }

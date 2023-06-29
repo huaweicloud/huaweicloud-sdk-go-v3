@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteGroupResponse Response Object
 type BatchDeleteGroupResponse struct {
 
 	// 删除失败的消费组列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckProductHealthyRequest Request Object
 type CheckProductHealthyRequest struct {
 
 	// 语言

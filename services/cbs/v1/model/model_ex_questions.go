@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ExQuestions
 type ExQuestions struct {
 
 	// 扩展问题。

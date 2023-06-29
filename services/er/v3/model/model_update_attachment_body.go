@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新连接基本信息
+// UpdateAttachmentBody 更新连接基本信息
 type UpdateAttachmentBody struct {
 
 	// 连接描述信息，取值范围：最大长度36字节，带“-”连字符的UUID格式

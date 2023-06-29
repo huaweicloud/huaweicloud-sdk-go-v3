@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目桶
+// ProjectBucketRsp 项目桶
 type ProjectBucketRsp struct {
 
 	// 项目编号

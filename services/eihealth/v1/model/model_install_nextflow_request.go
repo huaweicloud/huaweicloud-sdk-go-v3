@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InstallNextflowRequest Request Object
 type InstallNextflowRequest struct {
 	Body *InstallNextflowRequestBody `json:"body,omitempty" type:"multipart"`
 }

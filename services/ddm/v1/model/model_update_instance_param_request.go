@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateInstanceParamRequest Request Object
 type UpdateInstanceParamRequest struct {
 
 	// DDM实例ID

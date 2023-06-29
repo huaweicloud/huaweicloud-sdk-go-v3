@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道号绑定服务号请求体。
+// LockPortRequestBody 通道号绑定服务号请求体。
 type LockPortRequestBody struct {
 
 	// 服务号ID。

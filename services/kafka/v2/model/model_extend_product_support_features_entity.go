@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 支持的特性功能。
+// ExtendProductSupportFeaturesEntity 支持的特性功能。
 type ExtendProductSupportFeaturesEntity struct {
 
 	// 特性名称。

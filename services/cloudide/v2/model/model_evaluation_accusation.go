@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 其中evaluation_id和reply_id之中必须选择一个填写
+// EvaluationAccusation 其中evaluation_id和reply_id之中必须选择一个填写
 type EvaluationAccusation struct {
 
 	// 举报内容

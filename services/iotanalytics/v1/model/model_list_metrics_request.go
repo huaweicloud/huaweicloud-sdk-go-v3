@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMetricsRequest Request Object
 type ListMetricsRequest struct {
 
 	// 存储ID

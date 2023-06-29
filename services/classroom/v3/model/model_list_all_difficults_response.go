@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAllDifficultsResponse Response Object
 type ListAllDifficultsResponse struct {
 
 	// 所有难度数量

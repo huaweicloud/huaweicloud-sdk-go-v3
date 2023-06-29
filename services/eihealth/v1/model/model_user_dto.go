@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户
+// UserDto 用户
 type UserDto struct {
 	Domain *DomainDto `json:"domain,omitempty"`
 

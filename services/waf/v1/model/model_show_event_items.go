@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 攻击类型
+// ShowEventItems 攻击类型
 type ShowEventItems struct {
 
 	// 攻击发生时的时间戳（毫秒）

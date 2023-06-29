@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowStatisticalDataRequest Request Object
 type ShowStatisticalDataRequest struct {
 
 	// 仓库id

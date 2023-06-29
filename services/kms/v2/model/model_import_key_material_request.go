@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportKeyMaterialRequest Request Object
 type ImportKeyMaterialRequest struct {
 	Body *ImportKeyMaterialRequestBody `json:"body,omitempty"`
 }

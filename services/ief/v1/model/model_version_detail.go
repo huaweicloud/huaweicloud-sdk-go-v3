@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板版本配置
+// VersionDetail 应用模板版本配置
 type VersionDetail struct {
 
 	// 应用版本号

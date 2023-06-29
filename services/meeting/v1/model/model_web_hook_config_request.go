@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议推送参数配置请求。
+// WebHookConfigRequest 会议推送参数配置请求。
 type WebHookConfigRequest struct {
 
 	// 企业ID。按企业注册回调时需要填写。

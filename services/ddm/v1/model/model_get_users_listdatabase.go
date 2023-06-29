@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto query response Object
+// GetUsersListdatabase This is a auto query response Object
 type GetUsersListdatabase struct {
 
 	// DDM实例帐号关联的逻辑库名称。

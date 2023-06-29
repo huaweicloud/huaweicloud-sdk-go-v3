@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 期望值设置的时间信息
+// ExceptedMetadata 期望值设置的时间信息
 type ExceptedMetadata struct {
 
 	// 属性类型标识，string|int|float|boolean（boolean类型为true或false），默认为string

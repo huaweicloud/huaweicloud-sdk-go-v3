@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateLtsInfoConfigResponse Response Object
 type UpdateLtsInfoConfigResponse struct {
 
 	// lts配置信息id

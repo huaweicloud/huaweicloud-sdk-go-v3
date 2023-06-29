@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AttachEipResponse Response Object
 type AttachEipResponse struct {
 
 	// 任务ID。

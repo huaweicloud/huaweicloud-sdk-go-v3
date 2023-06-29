@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// V2XEdge模型资源列表返回对象
+// V2XEdgeListResponseDto V2XEdge模型资源列表返回对象
 type V2XEdgeListResponseDto struct {
 
 	// **参数说明**：Edge ID，用于唯一标识一个Edge。
@@ -81,13 +81,18 @@ func (c V2XEdgeListResponseDtoChannelStatus) MarshalJSON() ([]byte, error) {
 
 func (c *V2XEdgeListResponseDtoChannelStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHostOverviewResponse Response Object
 type ListHostOverviewResponse struct {
 
 	// openApi查询主机概览

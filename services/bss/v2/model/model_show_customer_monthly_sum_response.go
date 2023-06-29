@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCustomerMonthlySumResponse Response Object
 type ShowCustomerMonthlySumResponse struct {
 
 	// 总条数，必须大于等于0。

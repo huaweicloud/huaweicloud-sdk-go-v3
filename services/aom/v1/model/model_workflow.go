@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更服务工作流工作流元数据。
+// Workflow 变更服务工作流工作流元数据。
 type Workflow struct {
 
 	// 工作流id，唯一标识，根据project_id和workflow_name生成。

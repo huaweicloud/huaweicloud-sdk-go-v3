@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建网络实例的详细信息。
+// CreateNetworkInstance 创建网络实例的详细信息。
 type CreateNetworkInstance struct {
 
 	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
@@ -79,13 +79,18 @@ func (c CreateNetworkInstanceType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateNetworkInstanceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

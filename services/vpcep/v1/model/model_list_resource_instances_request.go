@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceInstancesRequest Request Object
 type ListResourceInstancesRequest struct {
 
 	// 资源类型，值为：endpoint_service或endpoint。

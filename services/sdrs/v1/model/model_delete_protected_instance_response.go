@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteProtectedInstanceResponse Response Object
 type DeleteProtectedInstanceResponse struct {
 
 	// 成功返回jobId信息

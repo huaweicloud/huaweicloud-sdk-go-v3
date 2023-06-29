@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddBlackWhiteListUsingPostResponse Response Object
 type AddBlackWhiteListUsingPostResponse struct {
 	Data           *IdObject `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`

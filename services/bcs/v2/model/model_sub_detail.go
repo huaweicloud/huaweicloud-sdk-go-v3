@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子操作详情
+// SubDetail 子操作详情
 type SubDetail struct {
 
 	// 子操作名

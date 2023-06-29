@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeInstanceOrderRequest Request Object
 type ChangeInstanceOrderRequest struct {
 
 	// 云堡垒机实例ID。

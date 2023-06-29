@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DataConfig
 type DataConfig struct {
 	Offline *Offline `json:"offline"`
 

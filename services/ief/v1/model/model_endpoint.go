@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 端点详情
+// Endpoint 端点详情
 type Endpoint struct {
 	Endpoint *EndpointObj `json:"endpoint,omitempty"`
 }

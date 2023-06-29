@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCustomPropsTaskRequest Request Object
 type CreateCustomPropsTaskRequest struct {
 	Body *CustomPropsTaskData `json:"body,omitempty"`
 }

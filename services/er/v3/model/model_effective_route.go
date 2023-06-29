@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 有效路由数据
+// EffectiveRoute 有效路由数据
 type EffectiveRoute struct {
 
 	// 路由ID

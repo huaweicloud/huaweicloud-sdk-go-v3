@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetachEip2Response Response Object
 type DetachEip2Response struct {
 	Body           map[string]string `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`

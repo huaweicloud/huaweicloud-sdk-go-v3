@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateInstanceActivityRequest Request Object
 type UpdateInstanceActivityRequest struct {
 
 	// CodeArtsIDEOnline实例id

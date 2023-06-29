@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEnvRequest Request Object
 type CreateEnvRequest struct {
 	Body *EnvParam `json:"body,omitempty"`
 }

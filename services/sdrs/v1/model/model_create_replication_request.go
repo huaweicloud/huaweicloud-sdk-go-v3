@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateReplicationRequest Request Object
 type CreateReplicationRequest struct {
 	Body *CreateReplicationRequestBody `json:"body,omitempty"`
 }

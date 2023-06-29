@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// The request body of the UpdateResourceShare operation.
+// UpdateResourceShareReqBody The request body of the UpdateResourceShare operation.
 type UpdateResourceShareReqBody struct {
 
 	// 资源共享实例的名称。

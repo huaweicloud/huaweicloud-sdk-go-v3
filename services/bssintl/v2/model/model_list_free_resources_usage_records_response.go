@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFreeResourcesUsageRecordsResponse Response Object
 type ListFreeResourcesUsageRecordsResponse struct {
 
 	// 资源包使用明细记录，具体参见表1。

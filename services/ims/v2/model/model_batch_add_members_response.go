@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchAddMembersResponse Response Object
 type BatchAddMembersResponse struct {
 
 	// 异步任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除任务响应体。
+// DeleteJobResp 删除任务响应体。
 type DeleteJobResp struct {
 
 	// 错误码。

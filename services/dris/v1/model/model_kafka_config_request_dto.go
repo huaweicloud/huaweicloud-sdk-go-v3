@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：Kafka配置。
+// KafkaConfigRequestDto **参数说明**：Kafka配置。
 type KafkaConfigRequestDto struct {
 
 	// **参数说明**：Topic前缀，不携带时以user_topics中具体Topic为准，携带时前缀将拼接在user_topics中的topic前方，例如：topic_prefixv2x-v1-tracks，topic_prefixv2x-v1-bsm。

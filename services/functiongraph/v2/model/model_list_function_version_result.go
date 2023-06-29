@@ -155,6 +155,7 @@ type ListFunctionVersionResultRuntimeEnum struct {
 	C__NET_CORE_3_1 ListFunctionVersionResultRuntime
 	PHP7_3          ListFunctionVersionResultRuntime
 	PYTHON3_9       ListFunctionVersionResultRuntime
+	CUSTOM          ListFunctionVersionResultRuntime
 	HTTP            ListFunctionVersionResultRuntime
 }
 
@@ -208,6 +209,9 @@ func GetListFunctionVersionResultRuntimeEnum() ListFunctionVersionResultRuntimeE
 		PYTHON3_9: ListFunctionVersionResultRuntime{
 			value: "Python3.9",
 		},
+		CUSTOM: ListFunctionVersionResultRuntime{
+			value: "Custom",
+		},
 		HTTP: ListFunctionVersionResultRuntime{
 			value: "http",
 		},
@@ -224,13 +228,18 @@ func (c ListFunctionVersionResultRuntime) MarshalJSON() ([]byte, error) {
 
 func (c *ListFunctionVersionResultRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -274,13 +283,18 @@ func (c ListFunctionVersionResultCodeType) MarshalJSON() ([]byte, error) {
 
 func (c *ListFunctionVersionResultCodeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

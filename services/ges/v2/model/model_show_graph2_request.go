@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowGraph2Request Request Object
 type ShowGraph2Request struct {
 
 	// 图ID。

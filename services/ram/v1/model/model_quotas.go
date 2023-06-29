@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源共享的配额。
+// Quotas 资源共享的配额。
 type Quotas struct {
 
 	// 配额类型。resource_share帐号创建资源共享的数量，resource_association资源共享关联的资源数量，principal_association资源共享关联的身份数量，permission_association资源共享关联的权限数量，tag_association资源共享关联的标签数量。

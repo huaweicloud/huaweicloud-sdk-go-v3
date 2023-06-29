@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息列表，列表最大长度为50。
+// CreateGaussMySqlDatabase 数据库信息列表，列表最大长度为50。
 type CreateGaussMySqlDatabase struct {
 
 	// 数据库名称,数据库名称长度可在1～64个字符之间，由字母、数字、下划线、中划线组成，中划线的累计总长度小于等于10个字符，且不能包含其他特殊字符。

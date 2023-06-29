@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubnetsRequest Request Object
 type ListSubnetsRequest struct {
 
 	// 每页返回的个数

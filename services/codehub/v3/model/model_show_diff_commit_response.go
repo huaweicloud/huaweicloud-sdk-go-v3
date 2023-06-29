@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDiffCommitResponse Response Object
 type ShowDiffCommitResponse struct {
 	Error *Error `json:"error,omitempty"`
 

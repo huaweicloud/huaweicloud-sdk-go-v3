@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量启动边缘实例请求体。
+// BatchStartInstanceRequestBody 批量启动边缘实例请求体。
 type BatchStartInstanceRequestBody struct {
 	OsStart *BatchStart `json:"os-start,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配体预览信息
+// LigandPreviewDto 配体预览信息
 type LigandPreviewDto struct {
 
 	// 配体索引（从0起编号）

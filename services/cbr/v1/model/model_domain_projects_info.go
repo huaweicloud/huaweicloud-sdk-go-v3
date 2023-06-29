@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DomainProjectsInfo
 type DomainProjectsInfo struct {
 
 	//

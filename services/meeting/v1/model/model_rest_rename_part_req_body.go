@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重命名与会者请求。
+// RestRenamePartReqBody 重命名与会者请求。
 type RestRenamePartReqBody struct {
 
 	// 与会者标识。 已入会的必须填写该字段。

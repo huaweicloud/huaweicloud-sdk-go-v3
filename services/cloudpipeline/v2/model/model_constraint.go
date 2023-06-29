@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务参数校验参数
+// Constraint 任务参数校验参数
 type Constraint struct {
 
 	// 校验规则类型

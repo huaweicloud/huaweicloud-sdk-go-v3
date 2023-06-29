@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 对规格的资源需求约束
+// FlavorRequirement 对规格的资源需求约束
 type FlavorRequirement struct {
 	VcpuCount *IntegerRange `json:"vcpu_count,omitempty"`
 
@@ -67,13 +67,18 @@ func (c FlavorRequirementCpuManufacturers) MarshalJSON() ([]byte, error) {
 
 func (c *FlavorRequirementCpuManufacturers) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -109,13 +114,18 @@ func (c FlavorRequirementInstanceGenerations) MarshalJSON() ([]byte, error) {
 
 func (c *FlavorRequirementInstanceGenerations) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

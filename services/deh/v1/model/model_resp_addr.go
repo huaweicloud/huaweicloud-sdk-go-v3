@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器的vpc信息。
+// RespAddr 云服务器的vpc信息。
 type RespAddr struct {
 
 	// 云服务器的vpc ip。

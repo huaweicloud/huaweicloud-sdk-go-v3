@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowHistoryDetailsResponse Response Object
 type ShowHistoryDetailsResponse struct {
 
 	// 构建任务名称

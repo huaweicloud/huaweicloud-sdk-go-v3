@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckRulesetParametersResponse Response Object
 type CheckRulesetParametersResponse struct {
 
 	// 历史记录数据

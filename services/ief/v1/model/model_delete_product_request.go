@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteProductRequest Request Object
 type DeleteProductRequest struct {
 
 	// 批量节点注册作业ID

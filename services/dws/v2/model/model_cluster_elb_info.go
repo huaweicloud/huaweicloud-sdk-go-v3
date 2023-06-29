@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Elb返回体
+// ClusterElbInfo Elb返回体
 type ClusterElbInfo struct {
 
 	// 弹性负载均衡ID

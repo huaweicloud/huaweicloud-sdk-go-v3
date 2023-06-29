@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 预检查失败子任务信息体
+// PrecheckFailSubJobVo 预检查失败子任务信息体
 type PrecheckFailSubJobVo struct {
 
 	// 预检查失败子任务id。

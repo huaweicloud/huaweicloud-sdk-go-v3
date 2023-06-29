@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNatGatewayDnatRuleRequest Request Object
 type ShowNatGatewayDnatRuleRequest struct {
 
 	// DNAT规则的ID。

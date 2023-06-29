@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性值
+// AdditionalProperties 属性值
 type AdditionalProperties struct {
 
 	// 类型

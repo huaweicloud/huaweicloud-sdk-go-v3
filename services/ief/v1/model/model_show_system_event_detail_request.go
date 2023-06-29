@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSystemEventDetailRequest Request Object
 type ShowSystemEventDetailRequest struct {
 
 	// 系统订阅名称

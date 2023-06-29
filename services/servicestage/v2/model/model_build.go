@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 构建工程。
+// Build 构建工程。
 type Build struct {
 	Parameters *BuildParameters `json:"parameters,omitempty"`
 }

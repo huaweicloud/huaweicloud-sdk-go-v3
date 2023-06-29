@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateHookRequest Request Object
 type CreateHookRequest struct {
 
 	// 授权名称。

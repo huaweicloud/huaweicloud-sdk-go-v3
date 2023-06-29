@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcChannelsV2Response Response Object
 type ListVpcChannelsV2Response struct {
 
 	// 本次返回的列表长度

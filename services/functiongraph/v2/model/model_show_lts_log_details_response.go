@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLtsLogDetailsResponse Response Object
 type ShowLtsLogDetailsResponse struct {
 
 	// 日志组名称

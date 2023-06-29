@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTablesRequest Request Object
 type ListTablesRequest struct {
 
 	// 过滤表名称的关键词。

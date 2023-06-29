@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServerInterfacesResponse Response Object
 type ListServerInterfacesResponse struct {
 	AttachableQuantity *InterfaceAttachableQuantity `json:"attachableQuantity,omitempty"`
 

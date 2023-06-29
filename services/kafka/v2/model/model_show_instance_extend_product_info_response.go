@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceExtendProductInfoResponse Response Object
 type ShowInstanceExtendProductInfoResponse struct {
 
 	// 表示[按需付费的](tag:hws,hws_hk,hws_ocb,ctc,sbc,hk_sbc,cmcc,g42,tm,hk_g42,hk_tm)产品列表。

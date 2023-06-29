@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPresetLabelRequest Request Object
 type ListPresetLabelRequest struct {
 }
 

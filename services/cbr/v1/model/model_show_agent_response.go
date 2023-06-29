@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAgentResponse Response Object
 type ShowAgentResponse struct {
 	Agent          *Agent `json:"agent,omitempty"`
 	HttpStatusCode int    `json:"-"`

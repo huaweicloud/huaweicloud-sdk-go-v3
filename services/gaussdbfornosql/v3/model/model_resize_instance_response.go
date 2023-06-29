@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeInstanceResponse Response Object
 type ResizeInstanceResponse struct {
 
 	// 任务ID，仅按需实例时会返回该参数。

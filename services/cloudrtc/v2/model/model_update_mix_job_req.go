@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 合流任务参数
+// UpdateMixJobReq 合流任务参数
 type UpdateMixJobReq struct {
 	MixParam *UpdateMixParam `json:"mix_param"`
 }

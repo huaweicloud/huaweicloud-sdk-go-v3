@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BCS组织实例监控数据详情查询请求结构
+// ListInstanceMetricRequestBody BCS组织实例监控数据详情查询请求结构
 type ListInstanceMetricRequestBody struct {
 
 	// 实体类型，[可选值如下: org(包括代理节点baas-agent、共识节点orderer、记账节点peer), plugin(插件)] 默认为org

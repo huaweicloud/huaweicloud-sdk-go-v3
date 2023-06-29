@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddApplyJoinProjectForAgcRequest Request Object
 type AddApplyJoinProjectForAgcRequest struct {
 
 	// 租户id

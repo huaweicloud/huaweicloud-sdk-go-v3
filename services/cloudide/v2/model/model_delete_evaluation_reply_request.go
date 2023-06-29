@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEvaluationReplyRequest Request Object
 type DeleteEvaluationReplyRequest struct {
 
 	// 回复id

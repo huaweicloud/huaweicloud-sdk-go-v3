@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 任务关联的目的端信息
+// TargetServerAssociatedWithTask 任务关联的目的端信息
 type TargetServerAssociatedWithTask struct {
 
 	// 目的端在SMS数据库中的ID
@@ -70,13 +70,18 @@ func (c TargetServerAssociatedWithTaskOsType) MarshalJSON() ([]byte, error) {
 
 func (c *TargetServerAssociatedWithTaskOsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

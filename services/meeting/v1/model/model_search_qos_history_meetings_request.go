@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchQosHistoryMeetingsRequest Request Object
 type SearchQosHistoryMeetingsRequest struct {
 
 	// 查询的起始日期，Unix时间戳（单位毫秒）。

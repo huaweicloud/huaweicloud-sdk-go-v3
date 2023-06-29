@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库权限列表，列表最大长度为50。
+// DatabasePermission 数据库权限列表，列表最大长度为50。
 type DatabasePermission struct {
 
 	// 数据库名称。

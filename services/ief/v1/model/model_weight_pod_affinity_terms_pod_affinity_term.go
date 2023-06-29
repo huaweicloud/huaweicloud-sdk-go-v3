@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Pod亲和规则
+// WeightPodAffinityTermsPodAffinityTerm Pod亲和规则
 type WeightPodAffinityTermsPodAffinityTerm struct {
 	LabelSelector *LabelSelector `json:"labelSelector,omitempty"`
 

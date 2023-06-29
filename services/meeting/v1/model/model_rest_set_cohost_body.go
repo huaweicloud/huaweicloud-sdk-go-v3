@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 申请联席主持人请求。
+// RestSetCohostBody 申请联席主持人请求。
 type RestSetCohostBody struct {
 
 	// - 0：撤销联席主持人 - 1：设置联席主持人

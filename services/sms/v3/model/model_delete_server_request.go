@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteServerRequest Request Object
 type DeleteServerRequest struct {
 
 	// 源端服务器在主机迁移服务中的ID

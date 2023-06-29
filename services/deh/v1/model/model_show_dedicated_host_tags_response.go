@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDedicatedHostTagsResponse Response Object
 type ShowDedicatedHostTagsResponse struct {
 
 	// 专属主机标签列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照列表信息。
+// SnapshotList 快照列表信息。
 type SnapshotList struct {
 
 	// 云硬盘快照ID。

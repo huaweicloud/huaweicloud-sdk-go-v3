@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ips特性状态返回查询
+// IpsSwitchResponseDto ips特性状态返回查询
 type IpsSwitchResponseDto struct {
 
 	// ips开关id

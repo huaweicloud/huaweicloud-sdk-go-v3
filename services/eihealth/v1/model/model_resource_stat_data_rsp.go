@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源统计数据返回体
+// ResourceStatDataRsp 资源统计数据返回体
 type ResourceStatDataRsp struct {
 
 	// 统计值

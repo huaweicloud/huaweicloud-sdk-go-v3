@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateFunctionMaxInstanceConfigResponse Response Object
 type UpdateFunctionMaxInstanceConfigResponse struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
@@ -154,6 +154,7 @@ type UpdateFunctionMaxInstanceConfigResponseRuntimeEnum struct {
 	C__NET_CORE_3_1 UpdateFunctionMaxInstanceConfigResponseRuntime
 	PHP7_3          UpdateFunctionMaxInstanceConfigResponseRuntime
 	PYTHON3_9       UpdateFunctionMaxInstanceConfigResponseRuntime
+	CUSTOM          UpdateFunctionMaxInstanceConfigResponseRuntime
 	HTTP            UpdateFunctionMaxInstanceConfigResponseRuntime
 }
 
@@ -207,6 +208,9 @@ func GetUpdateFunctionMaxInstanceConfigResponseRuntimeEnum() UpdateFunctionMaxIn
 		PYTHON3_9: UpdateFunctionMaxInstanceConfigResponseRuntime{
 			value: "Python3.9",
 		},
+		CUSTOM: UpdateFunctionMaxInstanceConfigResponseRuntime{
+			value: "Custom",
+		},
 		HTTP: UpdateFunctionMaxInstanceConfigResponseRuntime{
 			value: "http",
 		},
@@ -223,13 +227,18 @@ func (c UpdateFunctionMaxInstanceConfigResponseRuntime) MarshalJSON() ([]byte, e
 
 func (c *UpdateFunctionMaxInstanceConfigResponseRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -273,13 +282,18 @@ func (c UpdateFunctionMaxInstanceConfigResponseCodeType) MarshalJSON() ([]byte, 
 
 func (c *UpdateFunctionMaxInstanceConfigResponseCodeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -315,13 +329,18 @@ func (c UpdateFunctionMaxInstanceConfigResponseType) MarshalJSON() ([]byte, erro
 
 func (c *UpdateFunctionMaxInstanceConfigResponseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

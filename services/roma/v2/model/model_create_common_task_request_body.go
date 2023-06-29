@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务信息
+// CreateCommonTaskRequestBody 任务信息
 type CreateCommonTaskRequestBody struct {
 	Task *TaskBasicRequestBody `json:"task"`
 

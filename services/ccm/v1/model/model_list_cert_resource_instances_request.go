@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCertResourceInstancesRequest Request Object
 type ListCertResourceInstancesRequest struct {
 	Body *ListResourceInstancesRequestBody `json:"body,omitempty"`
 }

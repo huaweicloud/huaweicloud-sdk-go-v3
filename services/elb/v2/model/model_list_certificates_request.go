@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCertificatesRequest Request Object
 type ListCertificatesRequest struct {
 
 	// 每页返回的个数。 取值范围：0~intmax。

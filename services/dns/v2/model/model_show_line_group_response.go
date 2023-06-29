@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLineGroupResponse Response Object
 type ShowLineGroupResponse struct {
 
 	// 线路分组名称。

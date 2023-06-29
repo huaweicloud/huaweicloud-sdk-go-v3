@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBandwidthCalcResponse Response Object
 type ShowBandwidthCalcResponse struct {
 
 	// 95峰值，日峰值月平均线信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateValueListResponse Response Object
 type UpdateValueListResponse struct {
 
 	// 引用表id

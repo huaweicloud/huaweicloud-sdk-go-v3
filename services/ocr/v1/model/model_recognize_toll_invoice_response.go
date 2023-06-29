@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeTollInvoiceResponse Response Object
 type RecognizeTollInvoiceResponse struct {
 	Result         *TollInvoiceResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`

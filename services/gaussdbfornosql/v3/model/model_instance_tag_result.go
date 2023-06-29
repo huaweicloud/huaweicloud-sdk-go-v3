@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签列表。
+// InstanceTagResult 标签列表。
 type InstanceTagResult struct {
 
 	// 标签键。最大长度36个unicode字符，key不能为空。 字符集：0-9，A-Z，a-z，“_”，“-”，中文。

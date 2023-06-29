@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMonitorItemViewConfigResponse Response Object
 type ShowMonitorItemViewConfigResponse struct {
 
 	// 标题。

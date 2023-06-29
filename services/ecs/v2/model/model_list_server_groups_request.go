@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListServerGroupsRequest Request Object
 type ListServerGroupsRequest struct {
 
 	// 查询返回server group数量限制。

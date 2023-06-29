@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeMacaoIdCardResponse Response Object
 type RecognizeMacaoIdCardResponse struct {
 	Result         *MacaoIdCardResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`

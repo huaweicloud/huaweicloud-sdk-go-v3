@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteGetVideosListResponse Response Object
 type ExecuteGetVideosListResponse struct {
 
 	// 配额

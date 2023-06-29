@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HotQuestionCount
 type HotQuestionCount struct {
 
 	// 问答对ID。

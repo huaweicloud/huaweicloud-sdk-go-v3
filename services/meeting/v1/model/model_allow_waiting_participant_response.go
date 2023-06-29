@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AllowWaitingParticipantResponse Response Object
 type AllowWaitingParticipantResponse struct {
 	HttpStatusCode int `json:"-"`
 }

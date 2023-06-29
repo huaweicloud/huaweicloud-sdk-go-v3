@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ClusterInformation
 type ClusterInformation struct {
 	Spec *ClusterInformationSpec `json:"spec"`
 

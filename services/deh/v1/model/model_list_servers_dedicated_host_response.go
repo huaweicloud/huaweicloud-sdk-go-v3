@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServersDedicatedHostResponse Response Object
 type ListServersDedicatedHostResponse struct {
 
 	// server字段数据结构说明

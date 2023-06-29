@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAimSendTaskResponse Response Object
 type CreateAimSendTaskResponse struct {
 
 	// 智能信息发送任务名称。

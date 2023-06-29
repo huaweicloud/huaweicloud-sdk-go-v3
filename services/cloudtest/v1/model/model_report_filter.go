@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 过滤条件
+// ReportFilter 过滤条件
 type ReportFilter struct {
 
 	// 创建人

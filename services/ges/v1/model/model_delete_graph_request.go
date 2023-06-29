@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteGraphRequest Request Object
 type DeleteGraphRequest struct {
 
 	// 图ID。

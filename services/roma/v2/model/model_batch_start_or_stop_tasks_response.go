@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchStartOrStopTasksResponse Response Object
 type BatchStartOrStopTasksResponse struct {
 
 	// 成功的个数

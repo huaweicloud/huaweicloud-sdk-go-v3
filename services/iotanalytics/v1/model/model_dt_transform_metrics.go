@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转换指标列表
+// DtTransformMetrics 转换指标列表
 type DtTransformMetrics struct {
 
 	// 定义指标计算查询的输入资产属性列表

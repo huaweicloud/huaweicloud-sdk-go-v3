@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启动后处理或者停止前处理参数。
+// LifecycleProcessParameter 启动后处理或者停止前处理参数。
 type LifecycleProcessParameter struct {
 
 	// 命令参数，适用于command类型

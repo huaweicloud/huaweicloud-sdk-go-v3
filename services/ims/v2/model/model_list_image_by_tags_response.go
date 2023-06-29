@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListImageByTagsResponse Response Object
 type ListImageByTagsResponse struct {
 
 	// 镜像信息列表

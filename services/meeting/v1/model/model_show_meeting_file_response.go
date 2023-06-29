@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMeetingFileResponse Response Object
 type ShowMeetingFileResponse struct {
 
 	// 会议纪要文件码。

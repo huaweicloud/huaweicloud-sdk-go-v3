@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTransactionDetailResponse Response Object
 type ShowTransactionDetailResponse struct {
 
 	// 组件节点列表。

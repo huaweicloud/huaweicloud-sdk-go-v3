@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除数据库请求体。
+// DeleteGaussMySqlDatabaseRequestBody 删除数据库请求体。
 type DeleteGaussMySqlDatabaseRequestBody struct {
 
 	// 准备删除的数据库列表，列表最大长度为50。

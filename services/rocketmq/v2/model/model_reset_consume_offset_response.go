@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetConsumeOffsetResponse Response Object
 type ResetConsumeOffsetResponse struct {
 
 	// 重置的队列。

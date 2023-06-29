@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 具体插件版本信息
+// Versions 具体插件版本信息
 type Versions struct {
 
 	// 插件版本号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConsumerListOrDetailsResponse Response Object
 type ShowConsumerListOrDetailsResponse struct {
 
 	// Topic列表（当查询topic消费“列表”时才显示此参数）。

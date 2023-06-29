@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// create Listener request
+// CreateListenerRequestBody create Listener request
 type CreateListenerRequestBody struct {
 	Listener *CreateListenerOption `json:"listener"`
 }

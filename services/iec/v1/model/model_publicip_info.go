@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性公网IP信息
+// PublicipInfo 弹性公网IP信息
 type PublicipInfo struct {
 
 	//   IP版本的信息

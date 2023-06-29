@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateScalingPolicyResponse Response Object
 type CreateScalingPolicyResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

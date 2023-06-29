@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 用例运行结果信息
+// JudgementCaseResult 用例运行结果信息
 type JudgementCaseResult struct {
 
 	// 用例实际运行结果输出
@@ -70,13 +70,18 @@ func (c JudgementCaseResultCaseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *JudgementCaseResultCaseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

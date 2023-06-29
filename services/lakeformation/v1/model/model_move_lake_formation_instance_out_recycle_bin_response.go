@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MoveLakeFormationInstanceOutRecycleBinResponse Response Object
 type MoveLakeFormationInstanceOutRecycleBinResponse struct {
 	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`

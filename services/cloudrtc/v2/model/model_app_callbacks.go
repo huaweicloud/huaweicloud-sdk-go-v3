@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// app回调配置
+// AppCallbacks app回调配置
 type AppCallbacks struct {
 	PushCallback *AppCallbackUrl `json:"push_callback,omitempty"`
 

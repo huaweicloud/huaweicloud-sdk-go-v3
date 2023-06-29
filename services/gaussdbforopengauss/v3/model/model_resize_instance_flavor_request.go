@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeInstanceFlavorRequest Request Object
 type ResizeInstanceFlavorRequest struct {
 
 	// 语言

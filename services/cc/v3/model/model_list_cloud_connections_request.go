@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCloudConnectionsRequest Request Object
 type ListCloudConnectionsRequest struct {
 
 	// 分页查询时，每页返回的个数。
@@ -35,6 +35,9 @@ type ListCloudConnectionsRequest struct {
 
 	// 根据类型过滤云连接实例列表。
 	Type *[]string `json:"type,omitempty"`
+
+	// 根据使用场景过滤云连接实例列表。
+	UsedScene *[]string `json:"used_scene,omitempty"`
 }
 
 func (o ListCloudConnectionsRequest) String() string {
@@ -72,13 +75,18 @@ func (c ListCloudConnectionsRequestStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ListCloudConnectionsRequestStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

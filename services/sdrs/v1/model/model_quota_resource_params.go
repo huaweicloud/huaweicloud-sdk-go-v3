@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额资源数据结构
+// QuotaResourceParams 配额资源数据结构
 type QuotaResourceParams struct {
 
 	// 资源类型server_groups：表示保护组资源类型。replications：表示复制对资源类型。

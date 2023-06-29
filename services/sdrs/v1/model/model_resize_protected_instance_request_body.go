@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例变更规格请求体
+// ResizeProtectedInstanceRequestBody 保护实例变更规格请求体
 type ResizeProtectedInstanceRequestBody struct {
 	Resize *ResizeProtectedInstanceRequestParams `json:"resize"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronUpdateFirewallRuleRequestBody
 type NeutronUpdateFirewallRuleRequestBody struct {
 	FirewallRule *NeutronUpdateFirewallRuleOption `json:"firewall_rule"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网络信息
+// Networks 网络信息
 type Networks struct {
 
 	// 子网的网络id。

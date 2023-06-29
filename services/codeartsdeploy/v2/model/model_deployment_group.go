@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 主机集群详细信息
+// DeploymentGroup 主机集群详细信息
 type DeploymentGroup struct {
 
 	// 主机集群名
@@ -18,7 +18,7 @@ type DeploymentGroup struct {
 	// 局点信息
 	RegionName string `json:"region_name"`
 
-	// 项目id
+	// 项目ID
 	ProjectId string `json:"project_id"`
 
 	// 操作信息：windows|linux
@@ -73,13 +73,18 @@ func (c DeploymentGroupOs) MarshalJSON() ([]byte, error) {
 
 func (c *DeploymentGroupOs) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备动态属性
+// ValueInTwin 终端设备动态属性
 type ValueInTwin struct {
 	Excepted *Excepted `json:"excepted,omitempty"`
 

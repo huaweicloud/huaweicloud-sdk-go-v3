@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试用例执行信息，数组长度小于等于50
+// TestCaseExecuteBean 测试用例执行信息，数组长度小于等于50
 type TestCaseExecuteBean struct {
 
 	// 测试用例唯一标识，列表中不允许存在重复的id，固定长度32位字符

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTagsResponse Response Object
 type ListTagsResponse struct {
 
 	// 每页记录数

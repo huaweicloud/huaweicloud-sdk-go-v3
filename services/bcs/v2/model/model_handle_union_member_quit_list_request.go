@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// HandleUnionMemberQuitListRequest Request Object
 type HandleUnionMemberQuitListRequest struct {
 	Body *QuitUnionFromMemberListRequestBody `json:"body,omitempty"`
 }

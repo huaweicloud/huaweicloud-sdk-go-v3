@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatefavoriteRequest Request Object
 type CreatefavoriteRequest struct {
 	Body *CreatefavoriteReqbody `json:"body,omitempty"`
 }

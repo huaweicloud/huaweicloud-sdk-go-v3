@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEnterpriseProjectRequest Request Object
 type ShowEnterpriseProjectRequest struct {
 
 	// 企业项目ID。 可以通过查询企业项目列表接口获取。

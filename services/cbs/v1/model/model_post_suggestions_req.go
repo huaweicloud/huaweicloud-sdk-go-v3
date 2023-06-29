@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostSuggestionsReq
 type PostSuggestionsReq struct {
 
 	// 用户输入的问题，长度为1~512。

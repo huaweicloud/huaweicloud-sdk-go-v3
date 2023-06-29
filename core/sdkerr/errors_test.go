@@ -24,6 +24,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"testing"
 )
@@ -44,7 +45,8 @@ func TestNewServiceResponseError(t *testing.T) {
 		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
 	}
 	defer func(Body io.ReadCloser) {
-		_ = Body.Close()
+		err := Body.Close()
+		log.Printf("[WARNING] %s\n", err)
 	}(response.Body)
 
 	responseError := NewServiceResponseError(response)
@@ -65,7 +67,8 @@ func TestNewServiceResponseError2(t *testing.T) {
 		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
 	}
 	defer func(Body io.ReadCloser) {
-		_ = Body.Close()
+		err := Body.Close()
+		log.Printf("[WARNING] %s\n", err)
 	}(response.Body)
 
 	responseError := NewServiceResponseError(response)
@@ -88,7 +91,8 @@ func TestNewServiceResponseError3(t *testing.T) {
 		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
 	}
 	defer func(Body io.ReadCloser) {
-		_ = Body.Close()
+		err := Body.Close()
+		log.Printf("[WARNING] %s\n", err)
 	}(response.Body)
 
 	responseError := NewServiceResponseError(response)
@@ -106,7 +110,8 @@ func TestNewServiceResponseError4(t *testing.T) {
 		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
 	}
 	defer func(Body io.ReadCloser) {
-		_ = Body.Close()
+		err := Body.Close()
+		log.Printf("[WARNING] %s\n", err)
 	}(response.Body)
 
 	responseError := NewServiceResponseError(response)
@@ -124,7 +129,8 @@ func TestNewServiceResponseError5(t *testing.T) {
 		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
 	}
 	defer func(Body io.ReadCloser) {
-		_ = Body.Close()
+		err := Body.Close()
+		log.Printf("[WARNING] %s\n", err)
 	}(response.Body)
 
 	responseError := NewServiceResponseError(response)

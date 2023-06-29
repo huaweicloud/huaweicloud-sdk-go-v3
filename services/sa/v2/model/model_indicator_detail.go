@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// indicator detail
+// IndicatorDetail indicator detail
 type IndicatorDetail struct {
 
 	// 指标ID

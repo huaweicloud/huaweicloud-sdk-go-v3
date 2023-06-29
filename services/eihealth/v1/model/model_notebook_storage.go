@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// notebook存储信息
+// NotebookStorage notebook存储信息
 type NotebookStorage struct {
 
 	// notebook存储路径

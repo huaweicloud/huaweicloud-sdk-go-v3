@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSkillOrderListResponse Response Object
 type ShowSkillOrderListResponse struct {
 
 	// 订单总数

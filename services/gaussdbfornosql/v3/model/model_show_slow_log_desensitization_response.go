@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSlowLogDesensitizationResponse Response Object
 type ShowSlowLogDesensitizationResponse struct {
 
 	// 实例慢日志脱敏开启状态，取值：  - on 开启  - off 关闭

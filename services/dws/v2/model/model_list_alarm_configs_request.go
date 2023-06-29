@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmConfigsRequest Request Object
 type ListAlarmConfigsRequest struct {
 
 	// 偏移量

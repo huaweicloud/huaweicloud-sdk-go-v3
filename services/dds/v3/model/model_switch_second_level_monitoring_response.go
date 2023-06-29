@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchSecondLevelMonitoringResponse Response Object
 type SwitchSecondLevelMonitoringResponse struct {
 	HttpStatusCode int `json:"-"`
 }

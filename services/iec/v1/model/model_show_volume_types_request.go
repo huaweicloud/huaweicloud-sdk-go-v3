@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVolumeTypesRequest Request Object
 type ShowVolumeTypesRequest struct {
 }
 

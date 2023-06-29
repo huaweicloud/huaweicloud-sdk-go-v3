@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFlavorSellPoliciesResponse Response Object
 type ListFlavorSellPoliciesResponse struct {
 
 	// 云服务器规格销售策略数量。

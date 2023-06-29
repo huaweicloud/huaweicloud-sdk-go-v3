@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMultiAccountRetrieveCouponsRequest Request Object
 type ListMultiAccountRetrieveCouponsRequest struct {
 
 	// 企业子账户的账号ID。

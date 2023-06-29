@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实时码率
+// V2BitrateInfo 实时码率
 type V2BitrateInfo struct {
 
 	// 域名。

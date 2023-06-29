@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询企业资源的返回结果。
+// QueryCorpResResultDto 查询企业资源的返回结果。
 type QueryCorpResResultDto struct {
 	CorpVcRes *QueryCorpVcResResultDto `json:"corpVcRes,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteJobActionResponse Response Object
 type ExecuteJobActionResponse struct {
 
 	// 异步操作任务响应查询ID。

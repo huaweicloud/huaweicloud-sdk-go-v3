@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCommandRequest Request Object
 type UpdateCommandRequest struct {
 
 	// 实例ID

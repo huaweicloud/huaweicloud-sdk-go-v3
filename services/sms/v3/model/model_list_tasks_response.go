@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTasksResponse Response Object
 type ListTasksResponse struct {
 
 	// 符合要求的任务数量，不受分页影响

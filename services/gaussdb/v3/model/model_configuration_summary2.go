@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数模板信息。
+// ConfigurationSummary2 参数模板信息。
 type ConfigurationSummary2 struct {
 
 	// 参数组ID。

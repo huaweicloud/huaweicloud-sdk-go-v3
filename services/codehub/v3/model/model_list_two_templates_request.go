@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTwoTemplatesRequest Request Object
 type ListTwoTemplatesRequest struct {
 
 	// 模板平台类型

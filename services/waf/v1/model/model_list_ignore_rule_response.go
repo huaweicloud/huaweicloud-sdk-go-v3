@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIgnoreRuleResponse Response Object
 type ListIgnoreRuleResponse struct {
 
 	// 该策略下全局白名单规则数量

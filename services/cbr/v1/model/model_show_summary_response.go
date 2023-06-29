@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSummaryResponse Response Object
 type ShowSummaryResponse struct {
 
 	// 总容量大小

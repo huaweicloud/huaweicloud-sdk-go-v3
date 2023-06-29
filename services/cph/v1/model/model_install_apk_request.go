@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InstallApkRequest Request Object
 type InstallApkRequest struct {
 	Body *InstallApkRequestBody `json:"body,omitempty"`
 }

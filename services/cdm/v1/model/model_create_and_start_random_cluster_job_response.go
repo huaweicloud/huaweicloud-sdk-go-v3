@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAndStartRandomClusterJobResponse Response Object
 type CreateAndStartRandomClusterJobResponse struct {
 
 	// 作业运行信息，请参见submission参数说明

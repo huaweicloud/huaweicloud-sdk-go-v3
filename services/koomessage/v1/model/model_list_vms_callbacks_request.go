@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVmsCallbacksRequest Request Object
 type ListVmsCallbacksRequest struct {
 }
 

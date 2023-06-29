@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FlavorSpotOptions
 type FlavorSpotOptions struct {
 
 	// 购买的竞价实例时长

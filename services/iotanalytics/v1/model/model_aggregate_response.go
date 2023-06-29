@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合计算
+// AggregateResponse 聚合计算
 type AggregateResponse struct {
 
 	// 输入参数

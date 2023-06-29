@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除agent入参。
+// AgentDeleteParam 删除agent入参。
 type AgentDeleteParam struct {
 
 	// 实例列表。

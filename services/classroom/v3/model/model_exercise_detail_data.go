@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 习题详细内容及测试用例信息
+// ExerciseDetailData 习题详细内容及测试用例信息
 type ExerciseDetailData struct {
 	ExerciseCodeResource *ExerciseCodeResource `json:"exercise_code_resource,omitempty"`
 

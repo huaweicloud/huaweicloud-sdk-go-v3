@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListHasVerifiedContactsRequest Request Object
 type ListHasVerifiedContactsRequest struct {
 
 	// 联系方式类型

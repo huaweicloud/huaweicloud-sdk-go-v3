@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数异步调用目标参数配置。
+// FuncAsyncDestinationConfig 函数异步调用目标参数配置。
 type FuncAsyncDestinationConfig struct {
 	OnSuccess *FuncDestinationConfig `json:"on_success,omitempty"`
 

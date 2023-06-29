@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteTableResponse Response Object
 type DeleteTableResponse struct {
 
 	// 被删除表ID

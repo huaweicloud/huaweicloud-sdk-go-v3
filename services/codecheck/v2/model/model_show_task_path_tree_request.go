@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTaskPathTreeRequest Request Object
 type ShowTaskPathTreeRequest struct {
 
 	// 项目id

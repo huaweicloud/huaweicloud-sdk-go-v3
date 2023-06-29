@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopVideoMotionCaptureJobRequest Request Object
 type StopVideoMotionCaptureJobRequest struct {
 
 	// 任务ID。

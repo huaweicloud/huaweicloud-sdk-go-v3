@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMapTileRequest Request Object
 type ShowMapTileRequest struct {
 
 	// 缩放级别，取值范围[0~20]。

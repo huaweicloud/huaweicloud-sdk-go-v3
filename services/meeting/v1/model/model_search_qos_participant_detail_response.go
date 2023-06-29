@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchQosParticipantDetailResponse Response Object
 type SearchQosParticipantDetailResponse struct {
 	User *QosParticipantInfo `json:"user,omitempty"`
 

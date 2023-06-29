@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowStaticRouteRequest Request Object
 type ShowStaticRouteRequest struct {
 
 	// 路由表ID

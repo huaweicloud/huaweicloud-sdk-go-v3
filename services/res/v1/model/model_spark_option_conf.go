@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// spark可选配置项
+// SparkOptionConf spark可选配置项
 type SparkOptionConf struct {
 
 	// 参数名称

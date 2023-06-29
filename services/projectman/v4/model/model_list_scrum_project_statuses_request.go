@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListScrumProjectStatusesRequest Request Object
 type ListScrumProjectStatusesRequest struct {
 
 	// devcloud项目的32位id

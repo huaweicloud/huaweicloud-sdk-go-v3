@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FinancialStatementResult
 type FinancialStatementResult struct {
 
 	// 识别出来的表格、文本区域个数。

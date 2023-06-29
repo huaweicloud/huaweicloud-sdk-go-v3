@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceActionResponse Response Object
 type UpdateInstanceActionResponse struct {
 
 	// Job ID。

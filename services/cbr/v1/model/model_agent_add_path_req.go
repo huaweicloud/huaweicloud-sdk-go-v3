@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AgentAddPathReq
 type AgentAddPathReq struct {
 
 	// 增加备份路径详情

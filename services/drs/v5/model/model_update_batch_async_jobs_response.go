@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateBatchAsyncJobsResponse Response Object
 type UpdateBatchAsyncJobsResponse struct {
 
 	// 批量更新指定ID异步任务响应体。

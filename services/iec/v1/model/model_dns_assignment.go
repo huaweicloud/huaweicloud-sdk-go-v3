@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DNS配置
+// DnsAssignment DNS配置
 type DnsAssignment struct {
 
 	// 端口内网fqdn

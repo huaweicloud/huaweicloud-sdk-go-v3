@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 容灾演练虚拟机数据结构
+// DrillServerParams 容灾演练虚拟机数据结构
 type DrillServerParams struct {
 
 	// 演练云服务器对应的保护实例ID。

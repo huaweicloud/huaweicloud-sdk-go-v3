@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteApplicationConfigurationRequest Request Object
 type DeleteApplicationConfigurationRequest struct {
 
 	// 应用ID。

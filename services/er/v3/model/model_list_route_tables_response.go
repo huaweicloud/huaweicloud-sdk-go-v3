@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRouteTablesResponse Response Object
 type ListRouteTablesResponse struct {
 
 	// 路由表列表

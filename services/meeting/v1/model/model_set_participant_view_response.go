@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetParticipantViewResponse Response Object
 type SetParticipantViewResponse struct {
 	HttpStatusCode int `json:"-"`
 }

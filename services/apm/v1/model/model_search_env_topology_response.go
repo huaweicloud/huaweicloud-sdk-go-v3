@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchEnvTopologyResponse Response Object
 type SearchEnvTopologyResponse struct {
 
 	// 组件节点列表。

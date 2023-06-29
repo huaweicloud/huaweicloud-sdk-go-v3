@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量操作的目标集合
+// BatchTargets 批量操作的目标集合
 type BatchTargets struct {
 
 	// 执行批量任务的目标集合，最多支持100个目标，当task_type为firmwareUpgrade，softwareUpgrade时，此处填写device_id

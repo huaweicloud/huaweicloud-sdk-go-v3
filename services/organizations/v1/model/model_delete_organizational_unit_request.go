@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteOrganizationalUnitRequest Request Object
 type DeleteOrganizationalUnitRequest struct {
 
 	// 与组织单元关联的唯一标识符（ID）。

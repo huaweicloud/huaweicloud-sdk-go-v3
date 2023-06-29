@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFeedbackRequest Request Object
 type CreateFeedbackRequest struct {
 	Body *CreateFeedbackV2Req `json:"body,omitempty"`
 }

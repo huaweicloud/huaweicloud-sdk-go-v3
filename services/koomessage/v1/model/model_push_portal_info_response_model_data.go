@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息体。
+// PushPortalInfoResponseModelData 消息体。
 type PushPortalInfoResponseModelData struct {
 
 	// 主页申请记录ID。

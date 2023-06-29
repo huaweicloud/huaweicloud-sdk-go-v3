@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源池
+// WorkloadQueueReq 资源池
 type WorkloadQueueReq struct {
 	WorkloadQueue *WorkloadQueue `json:"workload_queue"`
 }

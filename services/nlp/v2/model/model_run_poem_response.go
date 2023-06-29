@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunPoemResponse Response Object
 type RunPoemResponse struct {
 
 	// 根据文本请求体，返回生成的诗歌。调用失败时无此字段。

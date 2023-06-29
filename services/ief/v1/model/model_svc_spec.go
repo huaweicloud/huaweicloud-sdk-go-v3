@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务的动态属性
+// SvcSpec 服务的动态属性
 type SvcSpec struct {
 
 	// 虚拟服务IP地址

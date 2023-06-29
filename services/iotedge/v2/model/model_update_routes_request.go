@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateRoutesRequest Request Object
 type UpdateRoutesRequest struct {
 
 	// 边缘节点ID

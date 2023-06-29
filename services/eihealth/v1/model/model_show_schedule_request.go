@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowScheduleRequest Request Object
 type ShowScheduleRequest struct {
 
 	// 计算资源id

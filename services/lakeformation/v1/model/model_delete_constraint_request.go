@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteConstraintRequest Request Object
 type DeleteConstraintRequest struct {
 
 	// 实例ID

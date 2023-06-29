@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CloseKafkaManagerRequest Request Object
 type CloseKafkaManagerRequest struct {
 
 	// 实例id

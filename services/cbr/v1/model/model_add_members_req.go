@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份共享目标用户的项目id。
+// AddMembersReq 备份共享目标用户的项目id。
 type AddMembersReq struct {
 
 	// 列表，待添加备份共享成员的project_id。

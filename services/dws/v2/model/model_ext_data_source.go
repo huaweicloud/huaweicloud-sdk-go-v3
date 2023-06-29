@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据源信息
+// ExtDataSource 数据源信息
 type ExtDataSource struct {
 
 	// id。

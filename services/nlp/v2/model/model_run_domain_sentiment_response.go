@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunDomainSentimentResponse Response Object
 type RunDomainSentimentResponse struct {
 	Result *HwCloudSentimentResp `json:"result,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计算出该条告警历史的资源监控数据上报时间和监控数值。
+// DataPointForAlarmHistory 计算出该条告警历史的资源监控数据上报时间和监控数值。
 type DataPointForAlarmHistory struct {
 
 	// 计算出该条告警历史的资源监控数据上报时间，UNIX时间戳，单位毫秒，如：1603131028000。

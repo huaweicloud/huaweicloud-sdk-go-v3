@@ -3,10 +3,11 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 
 	"encoding/json"
+	"errors"
+	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"os"
 	"reflect"
@@ -61,6 +62,8 @@ func (o *ShowDocWatermarkRequestBody) UnmarshalJSON(b []byte) error {
 			field.Set(reflect.ValueOf(def.NewFilePart(file)))
 		case *def.MultiPart:
 			field.Set(reflect.ValueOf(def.NewMultiPart(m[jsonName])))
+		default:
+			return errors.New(fmt.Sprintf("unmarshal %s failed", m[jsonName]))
 		}
 	}
 	return nil
@@ -104,13 +107,18 @@ func (c ShowDocWatermarkRequestBodyDocType) MarshalJSON() ([]byte, error) {
 
 func (c *ShowDocWatermarkRequestBodyDocType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

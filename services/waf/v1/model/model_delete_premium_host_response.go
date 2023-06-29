@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeletePremiumHostResponse Response Object
 type DeletePremiumHostResponse struct {
 
 	// 域名id

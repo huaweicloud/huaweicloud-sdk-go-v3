@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点错误处理的定义
+// ActionResult 节点错误处理的定义
 type ActionResult struct {
 
 	// 触发错误处理需符合的条件

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateUserRoleResponse Response Object
 type UpdateUserRoleResponse struct {
 
 	// 用户id

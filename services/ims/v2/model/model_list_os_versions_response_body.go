@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询操作系统列表响应体
+// ListOsVersionsResponseBody 查询操作系统列表响应体
 type ListOsVersionsResponseBody struct {
 
 	// 操作系统的平台值，如RedHat等

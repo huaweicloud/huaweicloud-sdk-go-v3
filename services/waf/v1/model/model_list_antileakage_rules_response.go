@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAntileakageRulesResponse Response Object
 type ListAntileakageRulesResponse struct {
 
 	// 防泄漏规则数量

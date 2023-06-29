@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPrivateSnatsRequest Request Object
 type ListPrivateSnatsRequest struct {
 
 	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。

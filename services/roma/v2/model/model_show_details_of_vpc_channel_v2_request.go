@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailsOfVpcChannelV2Request Request Object
 type ShowDetailsOfVpcChannelV2Request struct {
 
 	// 实例ID

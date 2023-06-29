@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新地址组信息
+// UpdateAddressSetDto 更新地址组信息
 type UpdateAddressSetDto struct {
 
 	// 地址组名称
@@ -63,13 +63,18 @@ func (c UpdateAddressSetDtoAddressType) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateAddressSetDtoAddressType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

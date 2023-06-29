@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetConfigurationRequest Request Object
 type ResetConfigurationRequest struct {
 
 	// 需重置的参数模板ID。

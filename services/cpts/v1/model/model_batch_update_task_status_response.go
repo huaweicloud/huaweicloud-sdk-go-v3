@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdateTaskStatusResponse Response Object
 type BatchUpdateTaskStatusResponse struct {
 
 	// 响应码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户数字类型特征统计
+// NumFeatureReport 用户数字类型特征统计
 type NumFeatureReport struct {
 
 	// 平均值。

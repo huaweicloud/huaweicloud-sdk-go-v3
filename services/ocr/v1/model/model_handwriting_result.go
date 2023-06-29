@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HandwritingResult
 type HandwritingResult struct {
 
 	// 代表检测识别出来的文字块数目。 \"segment_digit\" 和\"segment\"默认为1。

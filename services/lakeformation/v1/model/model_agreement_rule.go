@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 协议规则信息
+// AgreementRule 协议规则信息
 type AgreementRule struct {
 
 	// 协议名称

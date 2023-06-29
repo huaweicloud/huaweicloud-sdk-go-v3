@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 回源Ip信息
+// IpsItem 回源Ip信息
 type IpsItem struct {
 
 	// waf回源Ip

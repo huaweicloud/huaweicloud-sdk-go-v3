@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResourcesJobDetailRequest Request Object
 type ShowResourcesJobDetailRequest struct {
 
 	// 批量操作返回的JOB ID

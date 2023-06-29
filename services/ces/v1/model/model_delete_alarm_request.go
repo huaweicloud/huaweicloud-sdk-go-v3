@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAlarmRequest Request Object
 type DeleteAlarmRequest struct {
 
 	// 告警规则的ID。

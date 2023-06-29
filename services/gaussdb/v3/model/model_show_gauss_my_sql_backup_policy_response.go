@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlBackupPolicyResponse Response Object
 type ShowGaussMySqlBackupPolicyResponse struct {
 	BackupPolicy   *BackupPolicy `json:"backup_policy,omitempty"`
 	HttpStatusCode int           `json:"-"`

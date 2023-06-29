@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartMeetingResponse Response Object
 type StartMeetingResponse struct {
 
 	// uuid。 > 废弃参数，请勿使用。

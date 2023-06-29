@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// GetAllRepositoryByProjectIdRequest Request Object
 type GetAllRepositoryByProjectIdRequest struct {
 
 	// 分页索引，从1开始计数

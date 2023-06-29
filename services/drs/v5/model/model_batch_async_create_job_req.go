@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量异步创建任务请求体。
+// BatchAsyncCreateJobReq 批量异步创建任务请求体。
 type BatchAsyncCreateJobReq struct {
 
 	// 异步创建任务请求体。

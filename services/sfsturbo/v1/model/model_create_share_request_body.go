@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建文件系统参数body
+// CreateShareRequestBody 创建文件系统参数body
 type CreateShareRequestBody struct {
 	Share *Share `json:"share"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteWorkflowResponse Response Object
 type DeleteWorkflowResponse struct {
 	XRequestId *string `json:"x-request-id,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 系统盘参数
+// RootVolume 系统盘参数
 type RootVolume struct {
 
 	// 系统盘大小，容量单位为GB，输入大小范围为[40,100]。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备组信息结构体，创建、查询、修改设备组时返回
+// DeviceGroupResponseSummary 设备组信息结构体，创建、查询、修改设备组时返回
 type DeviceGroupResponseSummary struct {
 
 	// 设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。

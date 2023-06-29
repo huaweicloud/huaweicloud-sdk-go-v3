@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页查询的公共属性。
+// Pages 分页查询的公共属性。
 type Pages struct {
 
 	// 页面起始页，从0开始。

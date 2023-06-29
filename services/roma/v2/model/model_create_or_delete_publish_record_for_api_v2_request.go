@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateOrDeletePublishRecordForApiV2Request Request Object
 type CreateOrDeletePublishRecordForApiV2Request struct {
 
 	// 实例ID

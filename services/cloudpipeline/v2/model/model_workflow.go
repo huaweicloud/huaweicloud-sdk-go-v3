@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线参数详情
+// Workflow 流水线参数详情
 type Workflow struct {
 
 	// 任务类型,list类型数据

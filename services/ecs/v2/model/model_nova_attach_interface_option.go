@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaAttachInterfaceOption
 type NovaAttachInterfaceOption struct {
 
 	// 私有IP。  有port_id时，该参数不起作用，并且有该参数时，必须有net_id。  只有列表中第一个元素有效。传入两个及以上元素会报错。

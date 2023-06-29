@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeFlightItineraryResponse Response Object
 type RecognizeFlightItineraryResponse struct {
 	Result         *FlightItineraryResult `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`

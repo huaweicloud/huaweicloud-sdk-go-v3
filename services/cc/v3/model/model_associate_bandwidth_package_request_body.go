@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关联带宽包实例的请求体。
+// AssociateBandwidthPackageRequestBody 关联带宽包实例的请求体。
 type AssociateBandwidthPackageRequestBody struct {
 	BandwidthPackage *AssociateBandwidthPackage `json:"bandwidth_package"`
 }

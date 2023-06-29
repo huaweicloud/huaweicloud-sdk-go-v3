@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronListFloatingIpsResponse Response Object
 type NeutronListFloatingIpsResponse struct {
 
 	// floatingip对象列表

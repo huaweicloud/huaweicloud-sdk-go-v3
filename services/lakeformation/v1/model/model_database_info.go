@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// database input when grant policy
+// DatabaseInfo database input when grant policy
 type DatabaseInfo struct {
 
 	// 数据库名

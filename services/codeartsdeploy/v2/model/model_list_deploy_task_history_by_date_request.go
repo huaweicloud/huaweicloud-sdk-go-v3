@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDeployTaskHistoryByDateRequest Request Object
 type ListDeployTaskHistoryByDateRequest struct {
 
 	// 项目ID

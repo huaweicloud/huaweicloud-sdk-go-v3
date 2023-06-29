@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVolumesResponse Response Object
 type ListVolumesResponse struct {
 
 	// 查询到的云硬盘总数量，不受分页影响。

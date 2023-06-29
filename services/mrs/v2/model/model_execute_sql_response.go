@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteSqlResponse Response Object
 type ExecuteSqlResponse struct {
 
 	// SQL的执行id。执行select、show和desc语句时才会生成id，其他操作id为空

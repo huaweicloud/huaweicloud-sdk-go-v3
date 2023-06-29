@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePrePaidBandwidthRequest Request Object
 type UpdatePrePaidBandwidthRequest struct {
 
 	// 带宽唯一标识。通过弹性公网IP详情获取，且此弹性公网IP是包周期的。

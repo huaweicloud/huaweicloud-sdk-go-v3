@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOrderIncidentResponse Response Object
 type ListOrderIncidentResponse struct {
 
 	// 数据总量

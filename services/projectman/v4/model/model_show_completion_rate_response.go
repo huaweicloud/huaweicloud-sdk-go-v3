@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCompletionRateResponse Response Object
 type ShowCompletionRateResponse struct {
 
 	// 指标分子数值

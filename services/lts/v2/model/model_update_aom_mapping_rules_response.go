@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAomMappingRulesResponse Response Object
 type UpdateAomMappingRulesResponse struct {
 
 	// 项目id

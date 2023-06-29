@@ -39,6 +39,9 @@ type AddressGroup struct {
 	// 功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
+	// IP地址组资源标签
+	Tags []ResourceTag `json:"tags"`
+
 	// 功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
 	Status string `json:"status"`
 

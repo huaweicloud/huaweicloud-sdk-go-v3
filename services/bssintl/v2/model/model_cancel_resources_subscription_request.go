@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelResourcesSubscriptionRequest Request Object
 type CancelResourcesSubscriptionRequest struct {
 	Body *UnsubscribeResourcesReq `json:"body,omitempty"`
 }

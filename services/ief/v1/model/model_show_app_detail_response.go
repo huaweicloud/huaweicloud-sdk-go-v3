@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAppDetailResponse Response Object
 type ShowAppDetailResponse struct {
 	App            *AppResp `json:"app,omitempty"`
 	HttpStatusCode int      `json:"-"`

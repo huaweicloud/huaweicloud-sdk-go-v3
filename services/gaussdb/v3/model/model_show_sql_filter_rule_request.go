@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSqlFilterRuleRequest Request Object
 type ShowSqlFilterRuleRequest struct {
 
 	// 语言。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// L7转发规则
+// L7Rule L7转发规则
 type L7Rule struct {
 
 	// 转发规则的管理状，默认为true。  不支持该字段，请勿使用。
@@ -104,13 +104,18 @@ func (c L7RuleType) MarshalJSON() ([]byte, error) {
 
 func (c *L7RuleType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckParametersResponse Response Object
 type CheckParametersResponse struct {
 	Body           *[]TaskCheckParamters `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`

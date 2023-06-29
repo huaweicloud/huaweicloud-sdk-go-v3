@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateScalingConfigResponse Response Object
 type CreateScalingConfigResponse struct {
 
 	// 伸缩配置ID

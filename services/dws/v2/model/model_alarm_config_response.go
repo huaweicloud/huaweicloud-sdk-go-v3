@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警配置详情
+// AlarmConfigResponse 告警配置详情
 type AlarmConfigResponse struct {
 
 	// 告警配置ID

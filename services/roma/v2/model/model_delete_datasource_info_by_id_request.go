@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDatasourceInfoByIdRequest Request Object
 type DeleteDatasourceInfoByIdRequest struct {
 
 	// 实例ID

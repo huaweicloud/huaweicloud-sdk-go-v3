@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowChargeModesRequest Request Object
 type ShowChargeModesRequest struct {
 
 	// 加速类型，base（基础加速）

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteSecretResponse Response Object
 type DeleteSecretResponse struct {
 	Secret         *SecretId `json:"secret,omitempty"`
 	HttpStatusCode int       `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ParseCertificateSigningRequestResponse Response Object
 type ParseCertificateSigningRequestResponse struct {
 
 	// 密钥算法。

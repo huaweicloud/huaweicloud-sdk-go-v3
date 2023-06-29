@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetDefaulTemplateRequest Request Object
 type SetDefaulTemplateRequest struct {
 
 	// 项目ID

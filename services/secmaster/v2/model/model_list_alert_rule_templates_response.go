@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAlertRuleTemplatesResponse Response Object
 type ListAlertRuleTemplatesResponse struct {
 
 	// total count

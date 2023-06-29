@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTaskRulesetRequest Request Object
 type ListTaskRulesetRequest struct {
 
 	// 项目ID

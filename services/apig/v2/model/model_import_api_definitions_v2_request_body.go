@@ -3,10 +3,11 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 
 	"encoding/json"
+	"errors"
+	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"os"
 	"reflect"
@@ -73,6 +74,8 @@ func (o *ImportApiDefinitionsV2RequestBody) UnmarshalJSON(b []byte) error {
 			field.Set(reflect.ValueOf(def.NewFilePart(file)))
 		case *def.MultiPart:
 			field.Set(reflect.ValueOf(def.NewMultiPart(m[jsonName])))
+		default:
+			return errors.New(fmt.Sprintf("unmarshal %s failed", m[jsonName]))
 		}
 	}
 	return nil
@@ -108,13 +111,18 @@ func (c ImportApiDefinitionsV2RequestBodyExtendMode) MarshalJSON() ([]byte, erro
 
 func (c *ImportApiDefinitionsV2RequestBodyExtendMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -150,13 +158,18 @@ func (c ImportApiDefinitionsV2RequestBodyApiMode) MarshalJSON() ([]byte, error) 
 
 func (c *ImportApiDefinitionsV2RequestBodyApiMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

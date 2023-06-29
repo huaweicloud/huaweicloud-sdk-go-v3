@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVpcsRequest Request Object
 type ListVpcsRequest struct {
 
 	// 每页返回的个数

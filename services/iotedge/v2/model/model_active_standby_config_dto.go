@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 高可用主备配置请求结构体
+// ActiveStandbyConfigDto 高可用主备配置请求结构体
 type ActiveStandbyConfigDto struct {
 
 	// 当前的工作节点，主节点还是备节点在工作，初始创建时工作节点为DEFAULT节点，(DEFAULT|MASTER|SLAVE)

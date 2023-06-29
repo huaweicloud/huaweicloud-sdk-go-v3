@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterImageResponse Response Object
 type RegisterImageResponse struct {
 
 	// 异步任务ID。

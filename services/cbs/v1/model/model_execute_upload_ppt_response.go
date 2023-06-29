@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteUploadPptResponse Response Object
 type ExecuteUploadPptResponse struct {
 
 	// 图片链接列表

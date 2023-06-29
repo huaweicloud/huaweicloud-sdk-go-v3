@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSearchCriteriasResponse Response Object
 type CreateSearchCriteriasResponse struct {
 
 	// 快速查询id

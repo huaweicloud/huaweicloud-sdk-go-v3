@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// JobStatus
 type JobStatus struct {
 
 	// 任务的状态，有如下四种状态：  - JobPhaseInitializing JobPhase = \"Initializing\" - JobPhaseRunning JobPhase = \"Running\" - JobPhaseFailed JobPhase = \"Failed\" - JobPhaseSuccess JobPhase = \"Success\"

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改数据库备注请求体。
+// UpdateDatabaseCommentRequest 修改数据库备注请求体。
 type UpdateDatabaseCommentRequest struct {
 
 	// 准备修改备注的数据库列表，列表最大长度为50。

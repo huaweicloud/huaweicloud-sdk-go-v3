@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FinancialStatementWordsRegionList
 type FinancialStatementWordsRegionList struct {
 
 	// 区域属性：文本或表格。

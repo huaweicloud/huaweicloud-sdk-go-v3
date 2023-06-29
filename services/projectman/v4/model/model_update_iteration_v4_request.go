@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateIterationV4Request Request Object
 type UpdateIterationV4Request struct {
 
 	// devcloud项目的32位id

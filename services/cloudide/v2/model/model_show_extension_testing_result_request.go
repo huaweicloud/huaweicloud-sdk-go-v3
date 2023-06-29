@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowExtensionTestingResultRequest Request Object
 type ShowExtensionTestingResultRequest struct {
 
 	// 发布商凭证,x-publisher-token和X-Auth-Token必传一个

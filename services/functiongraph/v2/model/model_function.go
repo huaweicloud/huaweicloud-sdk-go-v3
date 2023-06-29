@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数信息
+// Function 函数信息
 type Function struct {
 
 	// 函数名称，在单个流程中，名称需要唯一

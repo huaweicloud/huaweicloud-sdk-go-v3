@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppsResponse Response Object
 type ListAppsResponse struct {
 
 	// 分页查询时，每页最多展示的记录数。

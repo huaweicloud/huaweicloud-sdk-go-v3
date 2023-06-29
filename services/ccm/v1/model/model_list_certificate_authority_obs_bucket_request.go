@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCertificateAuthorityObsBucketRequest Request Object
 type ListCertificateAuthorityObsBucketRequest struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCloudPhoneServerResponse Response Object
 type CreateCloudPhoneServerResponse struct {
 
 	// 请求的唯一标识ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDomainProjectsRequest Request Object
 type ListDomainProjectsRequest struct {
 
 	// 租户名称

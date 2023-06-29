@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// NovaCreateServersRequestBody This is a auto create Body Object
 type NovaCreateServersRequestBody struct {
 	Server *NovaCreateServersOption `json:"server"`
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDomainKeyChainResponse Response Object
 type ShowDomainKeyChainResponse struct {
 
 	// 防盗链Key值，由32个字符组成，支持大写字母、小写字母、数字。不可为纯数字或纯字母。
@@ -70,13 +70,18 @@ func (c ShowDomainKeyChainResponseAuthType) MarshalJSON() ([]byte, error) {
 
 func (c *ShowDomainKeyChainResponseAuthType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 预验证请求体
+// CodeVerifyReq 预验证请求体
 type CodeVerifyReq struct {
 
 	// 验证码

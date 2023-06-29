@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除目录请求
+// DeleteFsDirRequestBody 删除目录请求
 type DeleteFsDirRequestBody struct {
 
 	// 合法的的目录全路径

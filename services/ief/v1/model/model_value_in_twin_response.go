@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备静态属性信息
+// ValueInTwinResponse 终端设备静态属性信息
 type ValueInTwinResponse struct {
 	Excepted *ExceptedActual `json:"excepted,omitempty"`
 

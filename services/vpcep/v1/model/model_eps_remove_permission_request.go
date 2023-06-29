@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除终端节点服务白名单请求体。
+// EpsRemovePermissionRequest 删除终端节点服务白名单请求体。
 type EpsRemovePermissionRequest struct {
 
 	// 终端节点服务白名单表主键ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新floatingip对象
+// UpdateFloatingIpOption 更新floatingip对象
 type UpdateFloatingIpOption struct {
 
 	// 端口id。

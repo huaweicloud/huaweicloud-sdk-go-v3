@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceSharePermissionsRequest Request Object
 type ListResourceSharePermissionsRequest struct {
 
 	// 资源共享实例的ID。

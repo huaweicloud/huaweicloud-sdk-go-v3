@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格变更时必填。
+// OpenGaussResizeRequest 规格变更时必填。
 type OpenGaussResizeRequest struct {
 
 	// 规格变更时选定的目标规格。新规格的资源规格编码。参考表1中GaussDB的“规格编码”列内容获取。

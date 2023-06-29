@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAddonTemplatesRequest Request Object
 type ListAddonTemplatesRequest struct {
 
 	// 指定的插件名称或插件别名，不填写则查询列表。

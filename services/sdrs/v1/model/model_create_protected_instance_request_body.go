@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建保护实例请求体
+// CreateProtectedInstanceRequestBody 创建保护实例请求体
 type CreateProtectedInstanceRequestBody struct {
 	ProtectedInstance *CreateProtectedInstanceRequestParams `json:"protected_instance"`
 }

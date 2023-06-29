@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// catalog信息
+// CatalogInput catalog信息
 type CatalogInput struct {
 
 	// catalog名字

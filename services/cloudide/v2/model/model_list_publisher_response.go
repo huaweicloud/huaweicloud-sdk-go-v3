@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPublisherResponse Response Object
 type ListPublisherResponse struct {
 
 	// 返回值

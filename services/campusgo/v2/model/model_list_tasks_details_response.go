@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTasksDetailsResponse Response Object
 type ListTasksDetailsResponse struct {
 
 	// 符合检索条件的总条目数

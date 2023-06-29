@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBandwidthsResponse Response Object
 type ListBandwidthsResponse struct {
 
 	// 带宽列表对象

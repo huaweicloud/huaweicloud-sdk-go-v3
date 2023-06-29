@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// IssueCertificateAuthorityCertificateRequest Request Object
 type IssueCertificateAuthorityCertificateRequest struct {
 
 	// 所要激活的从属CA证书ID。

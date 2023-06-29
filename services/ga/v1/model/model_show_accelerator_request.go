@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAcceleratorRequest Request Object
 type ShowAcceleratorRequest struct {
 
 	// 全球加速器ID。

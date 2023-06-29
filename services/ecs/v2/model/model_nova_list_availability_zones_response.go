@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaListAvailabilityZonesResponse Response Object
 type NovaListAvailabilityZonesResponse struct {
 
 	// 可用域信息。

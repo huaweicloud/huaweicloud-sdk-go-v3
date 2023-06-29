@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源分组中的资源信息统计。
+// InstanceStatistics 资源分组中的资源信息统计。
 type InstanceStatistics struct {
 
 	// 该资源分组中当前处在告警状态的资源个数。

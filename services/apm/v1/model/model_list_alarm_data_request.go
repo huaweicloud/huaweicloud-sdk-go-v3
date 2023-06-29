@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmDataRequest Request Object
 type ListAlarmDataRequest struct {
 
 	// 应用id。

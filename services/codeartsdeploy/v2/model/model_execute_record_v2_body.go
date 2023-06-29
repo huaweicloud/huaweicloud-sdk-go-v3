@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用部署记录Body
+// ExecuteRecordV2Body 应用部署记录Body
 type ExecuteRecordV2Body struct {
 
 	// 部署用时

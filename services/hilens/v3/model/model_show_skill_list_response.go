@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSkillListResponse Response Object
 type ShowSkillListResponse struct {
 
 	// 技能列表

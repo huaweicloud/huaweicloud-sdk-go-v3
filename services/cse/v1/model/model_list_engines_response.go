@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnginesResponse Response Object
 type ListEnginesResponse struct {
 
 	// 当前符合查询条件的微服务引擎专享版总个数

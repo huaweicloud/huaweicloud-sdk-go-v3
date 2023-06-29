@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResourceGroupResponse Response Object
 type ListResourceGroupResponse struct {
 
 	// 一个或者多个资源分组信息。

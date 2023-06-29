@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 关联详情
+// Association 关联详情
 type Association struct {
 
 	// 关联唯一标识

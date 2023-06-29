@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 证书文件的本地存储路径
+// CertificateLocalPathDto 证书文件的本地存储路径
 type CertificateLocalPathDto struct {
 
 	// 节点数字证书的本地存储路径。

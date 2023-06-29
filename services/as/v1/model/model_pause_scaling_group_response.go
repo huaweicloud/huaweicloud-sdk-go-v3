@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PauseScalingGroupResponse Response Object
 type PauseScalingGroupResponse struct {
 	HttpStatusCode int `json:"-"`
 }

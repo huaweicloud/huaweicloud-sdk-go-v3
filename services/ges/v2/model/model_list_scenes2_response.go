@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScenes2Response Response Object
 type ListScenes2Response struct {
 
 	// scene场景分析插件信息。

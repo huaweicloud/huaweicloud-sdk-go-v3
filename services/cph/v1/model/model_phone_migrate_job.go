@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机迁移任务。
+// PhoneMigrateJob 云手机迁移任务。
 type PhoneMigrateJob struct {
 
 	// 源云手机id。

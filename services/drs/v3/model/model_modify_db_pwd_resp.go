@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改数据库密码返回体
+// ModifyDbPwdResp 修改数据库密码返回体
 type ModifyDbPwdResp struct {
 
 	// 任务ID

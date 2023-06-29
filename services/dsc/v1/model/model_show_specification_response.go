@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSpecificationResponse Response Object
 type ShowSpecificationResponse struct {
 
 	// 订单列表

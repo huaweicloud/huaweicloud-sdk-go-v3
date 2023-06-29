@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLogStreamResponse Response Object
 type ListLogStreamResponse struct {
 
 	// 日志组数组。

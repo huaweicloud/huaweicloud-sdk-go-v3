@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowConfigurationAppliedHistoryRequest Request Object
 type ShowConfigurationAppliedHistoryRequest struct {
 
 	// 参数模板ID。

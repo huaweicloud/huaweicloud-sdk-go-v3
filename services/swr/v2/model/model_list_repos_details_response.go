@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListReposDetailsResponse Response Object
 type ListReposDetailsResponse struct {
 	Body *[]ShowReposResp `json:"body,omitempty"`
 

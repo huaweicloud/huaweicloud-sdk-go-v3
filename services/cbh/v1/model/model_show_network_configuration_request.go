@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNetworkConfigurationRequest Request Object
 type ShowNetworkConfigurationRequest struct {
 	Body *NetworkRequestBody `json:"body,omitempty"`
 }

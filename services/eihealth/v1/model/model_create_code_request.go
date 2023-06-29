@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCodeRequest Request Object
 type CreateCodeRequest struct {
 
 	// 用户id

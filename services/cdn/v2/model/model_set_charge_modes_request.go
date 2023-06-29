@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetChargeModesRequest Request Object
 type SetChargeModesRequest struct {
 	Body *SetChargeModesBody `json:"body,omitempty"`
 }

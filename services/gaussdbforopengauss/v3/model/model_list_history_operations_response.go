@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHistoryOperationsResponse Response Object
 type ListHistoryOperationsResponse struct {
 
 	// 参数修改历史的列表记录。

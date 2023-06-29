@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// SNAT规则的响应体。
+// PrivateSnat SNAT规则的响应体。
 type PrivateSnat struct {
 
 	// SNAT规则的ID。

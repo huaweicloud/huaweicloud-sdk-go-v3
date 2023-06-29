@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AttachServerVolumeRequest Request Object
 type AttachServerVolumeRequest struct {
 
 	// 云服务器ID。

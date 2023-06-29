@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFeedbackOptionResponse Response Object
 type ListFeedbackOptionResponse struct {
 
 	// 错误码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateManualBackupResponse Response Object
 type CreateManualBackupResponse struct {
 
 	// 手动备份的异步任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性去重复，只能选择整型和字符串类型属性
+// Deduplication 属性去重复，只能选择整型和字符串类型属性
 type Deduplication struct {
 
 	// 属性。

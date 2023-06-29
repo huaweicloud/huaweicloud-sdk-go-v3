@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePrePaidPublicipRequest Request Object
 type CreatePrePaidPublicipRequest struct {
 	Body *CreatePrePaidPublicipRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowIpBelongsResponse Response Object
 type BatchShowIpBelongsResponse struct {
 
 	// IP归属信息列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDataSourceRequest Request Object
 type CreateDataSourceRequest struct {
 
 	// 集群ID

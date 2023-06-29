@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 点数据
+// SchemaPath 点数据
 type SchemaPath struct {
 
 	// OBS文件路径

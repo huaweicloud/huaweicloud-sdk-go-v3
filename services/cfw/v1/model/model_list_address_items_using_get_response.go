@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAddressItemsUsingGetResponse Response Object
 type ListAddressItemsUsingGetResponse struct {
 	Data           *AddressItemListResponseDtoData `json:"data,omitempty"`
 	HttpStatusCode int                             `json:"-"`

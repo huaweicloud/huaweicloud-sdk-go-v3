@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceListImageMembersResponse Response Object
 type GlanceListImageMembersResponse struct {
 
 	// 成员信息

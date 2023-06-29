@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnterpriseOrganizationsResponse Response Object
 type ListEnterpriseOrganizationsResponse struct {
 
 	// 根节点ID，如果请求有parent_id，则该参数无值。

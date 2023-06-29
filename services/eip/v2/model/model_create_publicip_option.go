@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建弹性公网IP的IP对象
+// CreatePublicipOption 创建弹性公网IP的IP对象
 type CreatePublicipOption struct {
 
 	// 功能说明：希望申请到的弹性公网IP的地址，不指定时由系统自动分配  约束：必须为IP地址格式，且必须在可用地址池范围内
@@ -66,13 +66,18 @@ func (c CreatePublicipOptionIpVersion) MarshalJSON() ([]byte, error) {
 
 func (c *CreatePublicipOptionIpVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

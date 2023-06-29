@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFlavorsResponse Response Object
 type ListFlavorsResponse struct {
 
 	// 边缘实例规格数量。

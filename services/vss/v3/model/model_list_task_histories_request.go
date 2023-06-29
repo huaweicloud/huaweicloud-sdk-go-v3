@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTaskHistoriesRequest Request Object
 type ListTaskHistoriesRequest struct {
 
-	// 域名ID
+	// 网站域名ID
 	DomainId string `json:"domain_id"`
 
 	// 分页查询，偏移量，表示从此偏移量开始查询

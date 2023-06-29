@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -19,6 +22,15 @@ type User struct {
 
 	// 用户绑定桌面云总数。
 	TotalDesktops *int32 `json:"total_desktops,omitempty"`
+
+	// 手机号。
+	UserPhone *string `json:"user_phone,omitempty"`
+
+	// 激活类型，默认为用户激活。 * USER_ACTIVATE： 用户激活 * ADMIN_ACTIVATE： 管理员激活
+	ActiveType *UserActiveType `json:"active_type,omitempty"`
+
+	// 是不是预创建的用户。
+	IsPreUser *bool `json:"is_pre_user,omitempty"`
 
 	// 账户过期时间，0表示永远不过期。
 	AccountExpires *string `json:"account_expires,omitempty"`
@@ -52,4 +64,51 @@ func (o User) String() string {
 	}
 
 	return strings.Join([]string{"User", string(data)}, " ")
+}
+
+type UserActiveType struct {
+	value string
+}
+
+type UserActiveTypeEnum struct {
+	USER_ACTIVATE  UserActiveType
+	ADMIN_ACTIVATE UserActiveType
+}
+
+func GetUserActiveTypeEnum() UserActiveTypeEnum {
+	return UserActiveTypeEnum{
+		USER_ACTIVATE: UserActiveType{
+			value: "USER_ACTIVATE",
+		},
+		ADMIN_ACTIVATE: UserActiveType{
+			value: "ADMIN_ACTIVATE",
+		},
+	}
+}
+
+func (c UserActiveType) Value() string {
+	return c.value
+}
+
+func (c UserActiveType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UserActiveType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

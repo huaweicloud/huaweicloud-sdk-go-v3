@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数工作流转发配置信息
+// FunctionGraphForwarding 函数工作流转发配置信息
 type FunctionGraphForwarding struct {
 
 	// **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。

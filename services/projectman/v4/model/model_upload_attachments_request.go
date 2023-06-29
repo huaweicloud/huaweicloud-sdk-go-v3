@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadAttachmentsRequest Request Object
 type UploadAttachmentsRequest struct {
 
 	// 项目id

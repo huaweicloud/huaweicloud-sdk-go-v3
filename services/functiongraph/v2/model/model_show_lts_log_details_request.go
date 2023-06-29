@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLtsLogDetailsRequest Request Object
 type ShowLtsLogDetailsRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。

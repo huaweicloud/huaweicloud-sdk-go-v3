@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新云手机属性请求体。
+// UpdateCloudPhonePropertyRequestBody 更新云手机属性请求体。
 type UpdateCloudPhonePropertyRequestBody struct {
 
 	// 手机列表

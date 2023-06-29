@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加图片body体
+// AddPictureRequestReq 添加图片body体
 type AddPictureRequestReq struct {
 
 	// 图片文件Base64编码字符串，仅支持JPEG/JPG/PNG/BMP格式，图片最小边不小于100px，最大边不超过2048px。

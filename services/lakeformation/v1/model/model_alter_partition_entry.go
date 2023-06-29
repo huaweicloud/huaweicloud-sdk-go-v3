@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改分区实体
+// AlterPartitionEntry 修改分区实体
 type AlterPartitionEntry struct {
 	Partition *PartitionInput `json:"partition"`
 

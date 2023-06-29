@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性公网IP字典对象
+// PublicIp 弹性公网IP字典对象
 type PublicIp struct {
 
 	// 弹性公网IP唯一标识。

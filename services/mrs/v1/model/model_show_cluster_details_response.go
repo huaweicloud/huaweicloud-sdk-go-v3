@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowClusterDetailsResponse Response Object
 type ShowClusterDetailsResponse struct {
 	Cluster        *Cluster `json:"cluster,omitempty"`
 	HttpStatusCode int      `json:"-"`

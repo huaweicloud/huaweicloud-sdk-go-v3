@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子优化任务的返回结果
+// OptimizationResult 分子优化任务的返回结果
 type OptimizationResult struct {
 
 	// 任务名

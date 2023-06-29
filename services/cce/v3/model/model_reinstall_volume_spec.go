@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务器重装云硬盘配置
+// ReinstallVolumeSpec 服务器重装云硬盘配置
 type ReinstallVolumeSpec struct {
 
 	// 用户自定义镜像ID

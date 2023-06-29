@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群快照对象列表
+// ClusterSnapshots 集群快照对象列表
 type ClusterSnapshots struct {
 
 	// 快照ID。

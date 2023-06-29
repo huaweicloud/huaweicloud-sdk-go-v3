@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RetryBatchTaskResponse Response Object
 type RetryBatchTaskResponse struct {
 
 	// 批量操作目标结果集合

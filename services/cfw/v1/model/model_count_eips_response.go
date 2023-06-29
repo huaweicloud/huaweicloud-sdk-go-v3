@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountEipsResponse Response Object
 type CountEipsResponse struct {
 	Data           *EipCountRespData `json:"data,omitempty"`
 	HttpStatusCode int               `json:"-"`

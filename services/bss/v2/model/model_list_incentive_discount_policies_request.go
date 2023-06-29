@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIncentiveDiscountPoliciesRequest Request Object
 type ListIncentiveDiscountPoliciesRequest struct {
 
 	// 查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。

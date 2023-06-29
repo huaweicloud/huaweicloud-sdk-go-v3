@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAssetResponse Response Object
 type ListAssetResponse struct {
 
 	// 资产总数

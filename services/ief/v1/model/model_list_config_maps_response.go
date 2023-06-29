@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConfigMapsResponse Response Object
 type ListConfigMapsResponse struct {
 
 	// 配置项

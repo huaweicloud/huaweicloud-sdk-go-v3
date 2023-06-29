@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchGaussMySqlInstanceSslRequest Request Object
 type SwitchGaussMySqlInstanceSslRequest struct {
 
 	// 语言。

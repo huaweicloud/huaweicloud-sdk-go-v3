@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListExercisesResponse Response Object
 type ListExercisesResponse struct {
 
 	// 习题库数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额列表
+// PolicyInstanceQuotas 配额列表
 type PolicyInstanceQuotas struct {
 
 	// 配额资源详情。

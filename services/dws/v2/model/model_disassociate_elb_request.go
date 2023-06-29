@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateElbRequest Request Object
 type DisassociateElbRequest struct {
 
 	// 集群ID

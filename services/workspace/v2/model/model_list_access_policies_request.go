@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAccessPoliciesRequest Request Object
 type ListAccessPoliciesRequest struct {
 
 	// 每页数量,范围0-100,默认100。

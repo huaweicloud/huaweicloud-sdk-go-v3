@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCloudPhonePropertyRequest Request Object
 type UpdateCloudPhonePropertyRequest struct {
 	Body *UpdateCloudPhonePropertyRequestBody `json:"body,omitempty"`
 }

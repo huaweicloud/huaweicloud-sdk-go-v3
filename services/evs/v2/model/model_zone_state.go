@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用分区的状态。
+// ZoneState 可用分区的状态。
 type ZoneState struct {
 
 	// 可用分区是否可用。

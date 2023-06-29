@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRecordingFileDownloadUrlsResponse Response Object
 type ShowRecordingFileDownloadUrlsResponse struct {
 
 	// 录制文件下载链接。

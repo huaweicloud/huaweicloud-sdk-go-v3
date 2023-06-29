@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议与会统计数据的单个时间点数据。
+// StatisticParticipateDataItem 会议与会统计数据的单个时间点数据。
 type StatisticParticipateDataItem struct {
 
 	// 日期/月份。

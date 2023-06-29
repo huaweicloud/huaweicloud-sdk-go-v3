@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DDM实例的信息。
+// ShowInstanceBeanResponse DDM实例的信息。
 type ShowInstanceBeanResponse struct {
 
 	// DDM实例ID。

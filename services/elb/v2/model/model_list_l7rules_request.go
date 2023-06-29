@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListL7rulesRequest Request Object
 type ListL7rulesRequest struct {
 
 	// 分页查询中每页的转发规则个数

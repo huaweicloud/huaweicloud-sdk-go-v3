@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCancelJobRequest Request Object
 type BatchCancelJobRequest struct {
 
 	// 是否强制停止作业

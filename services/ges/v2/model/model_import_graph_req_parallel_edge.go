@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重复边处理。  图规格为（一千亿边）的图暂不支持该参数。
+// ImportGraphReqParallelEdge 重复边处理。  图规格为（一千亿边）的图暂不支持该参数。
 type ImportGraphReqParallelEdge struct {
 
 	// 处理方式，取值为allow，ignore和override，默认为allow。  - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。 图规格为（一千亿边）的图暂不支持该参数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEventRequest Request Object
 type UpdateEventRequest struct {
 
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。

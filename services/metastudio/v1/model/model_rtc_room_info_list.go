@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RTC Animation加入房间信息。
+// RtcRoomInfoList RTC Animation加入房间信息。
 type RtcRoomInfoList struct {
 
 	// RTC应用ID。

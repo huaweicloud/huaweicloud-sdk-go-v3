@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIncidentsRequest Request Object
 type ListIncidentsRequest struct {
 
 	// application/json;charset=UTF-8

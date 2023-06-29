@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRecordingsRequest Request Object
 type DeleteRecordingsRequest struct {
 
 	// 会议UUID列表，多个会议UUID之间以英文逗号隔开。

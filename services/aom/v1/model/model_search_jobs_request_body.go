@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页查询作业列表请求参数
+// SearchJobsRequestBody 分页查询作业列表请求参数
 type SearchJobsRequestBody struct {
 
 	// name为作业名称。

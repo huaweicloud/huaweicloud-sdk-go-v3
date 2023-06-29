@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 匹配规则表达式
+// MatchExpression 匹配规则表达式
 type MatchExpression struct {
 
 	// 规则的标签

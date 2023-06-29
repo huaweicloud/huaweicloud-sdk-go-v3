@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MoveAccount 操作的请求体。
+// MoveAccountReqBody MoveAccount 操作的请求体。
 type MoveAccountReqBody struct {
 
 	// 要移出帐号的根或组织单元的唯一标识符（ID）。

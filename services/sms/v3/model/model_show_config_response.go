@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConfigResponse Response Object
 type ShowConfigResponse struct {
 
 	// mainRegion,obs_domain,disktype,process_and_it及以后增加的信息

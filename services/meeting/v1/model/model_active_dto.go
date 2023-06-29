@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备联系人信息。
+// ActiveDto 设备联系人信息。
 type ActiveDto struct {
 
 	// 手机号。 例如中国大陆手机+86xxxxxxxxxxx。当填写手机号时 “country”参数必填。 > 号码和邮箱必须填一个，若企业未开启短信功能，则邮箱必填。

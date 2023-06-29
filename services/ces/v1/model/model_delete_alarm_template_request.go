@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAlarmTemplateRequest Request Object
 type DeleteAlarmTemplateRequest struct {
 
 	// 需要删除的自定义告警模板ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格内容信息。
+// FlavorInfo 规格内容信息。
 type FlavorInfo struct {
 
 	// 并发数。单位：个

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新外部实体请求结构体
+// UpdateExternalEntityReqDto 更新外部实体请求结构体
 type UpdateExternalEntityReqDto struct {
 
 	// 连接外部实体的协议类型

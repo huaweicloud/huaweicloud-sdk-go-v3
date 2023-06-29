@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateApplyRequest Request Object
 type CreateApplyRequest struct {
 	Body *JoinRequestSchema `json:"body,omitempty"`
 }

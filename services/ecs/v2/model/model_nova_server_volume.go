@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaServerVolume
 type NovaServerVolume struct {
 
 	// 云磁盘ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 条件列表参数较为复杂，存在级联关系，建议同时使用控制台上的添加误报屏蔽规则，单击F12键查看路径后缀为/ignore，方法为POST的请求参数，便于理解参数的填写
+// CreateCondition 条件列表参数较为复杂，存在级联关系，建议同时使用控制台上的添加误报屏蔽规则，单击F12键查看路径后缀为/ignore，方法为POST的请求参数，便于理解参数的填写
 type CreateCondition struct {
 
 	// 字段类型，可选值有ip、url、params、cookie、header

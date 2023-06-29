@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目标实例信息。
+// TargetInstanceBody 目标实例信息。
 type TargetInstanceBody struct {
 
 	// Redis实例ID（target_instance信息中必须填写）。

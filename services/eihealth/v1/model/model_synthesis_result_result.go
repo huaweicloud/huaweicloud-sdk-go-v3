@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 合成路径规划结果字典
+// SynthesisResultResult 合成路径规划结果字典
 type SynthesisResultResult struct {
 
 	// 分子合成规划中的分子

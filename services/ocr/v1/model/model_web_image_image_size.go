@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WebImageImageSize
 type WebImageImageSize struct {
 
 	// 传入image_size时的返回，为图像高度。

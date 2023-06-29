@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件信息。
+// ComponentInfo 组件信息。
 type ComponentInfo struct {
 
 	// 组件名称。

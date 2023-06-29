@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要授权的用户信息
+// GaussMySqlDatabaseUser 需要授权的用户信息
 type GaussMySqlDatabaseUser struct {
 
 	// 数据库用户名

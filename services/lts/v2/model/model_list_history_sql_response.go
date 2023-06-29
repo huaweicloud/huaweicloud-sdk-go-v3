@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHistorySqlResponse Response Object
 type ListHistorySqlResponse struct {
 	Results        *[]QuertHistorySqlResultsBody `json:"results,omitempty"`
 	HttpStatusCode int                           `json:"-"`

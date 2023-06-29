@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateRoutetableReqBody
 type CreateRoutetableReqBody struct {
 	Routetable *CreateRouteTableReq `json:"routetable"`
 }

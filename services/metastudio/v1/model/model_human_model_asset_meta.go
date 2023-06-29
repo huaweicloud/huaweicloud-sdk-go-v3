@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数字人模型元数据。
+// HumanModelAssetMeta 数字人模型元数据。
 type HumanModelAssetMeta struct {
 
 	// 数字人模型风格ID。 * system_male_001: 男性风格01 * system_female_001: 女性风格01 * system_male_002：男性风格02  * system_female_002: 女性风格02
@@ -68,13 +68,18 @@ func (c HumanModelAssetMetaModelingType) MarshalJSON() ([]byte, error) {
 
 func (c *HumanModelAssetMetaModelingType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

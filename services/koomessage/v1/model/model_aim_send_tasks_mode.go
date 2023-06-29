@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 智能信息发送任务。
+// AimSendTasksMode 智能信息发送任务。
 type AimSendTasksMode struct {
 
 	// 智能信息发送任务名称。

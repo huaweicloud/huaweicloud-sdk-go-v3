@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用于返回具体的错误码和错误消息
+// ErrMsg 用于返回具体的错误码和错误消息
 type ErrMsg struct {
 
 	// 错误码

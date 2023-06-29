@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronRemoveFirewallRuleResponse Response Object
 type NeutronRemoveFirewallRuleResponse struct {
 
 	// 功能说明：网络ACL策略ID

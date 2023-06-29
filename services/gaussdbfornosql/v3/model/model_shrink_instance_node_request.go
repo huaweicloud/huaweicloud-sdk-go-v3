@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShrinkInstanceNodeRequest Request Object
 type ShrinkInstanceNodeRequest struct {
 
 	// 实例ID。

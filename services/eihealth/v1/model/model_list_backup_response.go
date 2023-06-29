@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBackupResponse Response Object
 type ListBackupResponse struct {
 
 	// 归档记录总数量

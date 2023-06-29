@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 列信息
+// Column 列信息
 type Column struct {
 
 	// 列类型，包括array bigint binary boolean char date decimal double float int interval map set smallint string struct timestamp tinyint union varchar

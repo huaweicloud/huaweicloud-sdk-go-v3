@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLinkResponse Response Object
 type CreateLinkResponse struct {
 
 	// 连接名称

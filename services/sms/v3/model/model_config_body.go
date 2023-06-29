@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置参数body
+// ConfigBody 配置参数body
 type ConfigBody struct {
 
 	// 配置类型，分为：”EXCLUDE_MIGRATE_PATH\"，\"EXCLUDE_SYNC_PATH\"，\"ONLY_SYNC_PATH\",\"OTHERS\"

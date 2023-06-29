@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteCloudPersistentVolumeClaimsResponse Response Object
 type DeleteCloudPersistentVolumeClaimsResponse struct {
 
 	// API版本，固定值**v1**

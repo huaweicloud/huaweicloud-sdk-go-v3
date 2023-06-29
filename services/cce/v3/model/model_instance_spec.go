@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// spec是集合类的元素类型，内容为插件实例具体信息
+// InstanceSpec spec是集合类的元素类型，内容为插件实例具体信息
 type InstanceSpec struct {
 
 	// 集群id

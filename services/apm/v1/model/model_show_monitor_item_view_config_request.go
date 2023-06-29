@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMonitorItemViewConfigRequest Request Object
 type ShowMonitorItemViewConfigRequest struct {
 
 	// 环境id。

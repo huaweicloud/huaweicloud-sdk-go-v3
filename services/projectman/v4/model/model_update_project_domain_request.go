@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateProjectDomainRequest Request Object
 type UpdateProjectDomainRequest struct {
 
 	// devcloud项目的32位id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Offline
 type Offline struct {
 
 	// 用户数据url。

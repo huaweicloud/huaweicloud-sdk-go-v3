@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PublishRootAssetRequest Request Object
 type PublishRootAssetRequest struct {
 
 	// 根资产ID

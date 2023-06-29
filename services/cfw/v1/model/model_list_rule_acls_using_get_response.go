@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRuleAclsUsingGetResponse Response Object
 type ListRuleAclsUsingGetResponse struct {
 	Data           *RuleAclListResponseDtoData `json:"data,omitempty"`
 	HttpStatusCode int                         `json:"-"`

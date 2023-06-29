@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchImportCloudPhoneDataResponse Response Object
 type BatchImportCloudPhoneDataResponse struct {
 
 	// 请求的唯一标识ID。

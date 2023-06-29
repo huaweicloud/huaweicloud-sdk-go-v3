@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// hosting结果文件的相关信息
+// TaskHostingResultHostingResult hosting结果文件的相关信息
 type TaskHostingResultHostingResult struct {
 
 	// 结果文件result.json的过期时间
@@ -75,13 +75,18 @@ func (c TaskHostingResultHostingResultStatus) MarshalJSON() ([]byte, error) {
 
 func (c *TaskHostingResultHostingResultStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// HTTP限制列表
+// TriggerQpsDict HTTP限制列表
 type TriggerQpsDict struct {
 
 	// HTTP请求数分段ID

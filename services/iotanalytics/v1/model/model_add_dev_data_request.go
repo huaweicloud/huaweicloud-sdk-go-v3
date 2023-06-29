@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddDevDataRequest Request Object
 type AddDevDataRequest struct {
 
 	// 数据源id

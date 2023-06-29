@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RelatedIntention
 type RelatedIntention struct {
 
 	// 意图名称。

@@ -6,11 +6,11 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAvailabilityZonesResponse Response Object
 type ListAvailabilityZonesResponse struct {
 
 	// 云桌面支持的可用分区列表。
-	AvailabilityZones *[]AvailabilityZone `json:"availability_zones,omitempty"`
+	AvailabilityZones *[]AvailabilityZoneInfo `json:"availability_zones,omitempty"`
 
 	// 云桌面支持的可用分区列表总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`

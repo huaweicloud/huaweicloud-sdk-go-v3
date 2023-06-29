@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDefaultConfigResponse Response Object
 type ShowDefaultConfigResponse struct {
 
 	// 是否开启L7层防护

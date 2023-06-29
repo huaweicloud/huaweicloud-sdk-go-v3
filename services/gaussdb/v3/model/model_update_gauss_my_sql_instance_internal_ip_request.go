@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateGaussMySqlInstanceInternalIpRequest Request Object
 type UpdateGaussMySqlInstanceInternalIpRequest struct {
 
 	// 语言。

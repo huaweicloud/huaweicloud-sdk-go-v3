@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTagRequest Request Object
 type DeleteTagRequest struct {
 
 	// 资源ID
@@ -18,7 +18,7 @@ type DeleteTagRequest struct {
 	// 待删除资源标签的key
 	TagKey string `json:"tag_key"`
 
-	// 资源类型: - cc: 云连接 - bwp: 带宽包
+	// 资源类型: - cloud-connection: 云连接 - bandwidth-package: 带宽包
 	ResourceType DeleteTagRequestResourceType `json:"resource_type"`
 }
 
@@ -36,17 +36,17 @@ type DeleteTagRequestResourceType struct {
 }
 
 type DeleteTagRequestResourceTypeEnum struct {
-	CC  DeleteTagRequestResourceType
-	BWP DeleteTagRequestResourceType
+	CLOUD_CONNECTION  DeleteTagRequestResourceType
+	BANDWIDTH_PACKAGE DeleteTagRequestResourceType
 }
 
 func GetDeleteTagRequestResourceTypeEnum() DeleteTagRequestResourceTypeEnum {
 	return DeleteTagRequestResourceTypeEnum{
-		CC: DeleteTagRequestResourceType{
-			value: "cc",
+		CLOUD_CONNECTION: DeleteTagRequestResourceType{
+			value: "cloud-connection",
 		},
-		BWP: DeleteTagRequestResourceType{
-			value: "bwp",
+		BANDWIDTH_PACKAGE: DeleteTagRequestResourceType{
+			value: "bandwidth-package",
 		},
 	}
 }
@@ -61,13 +61,18 @@ func (c DeleteTagRequestResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *DeleteTagRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

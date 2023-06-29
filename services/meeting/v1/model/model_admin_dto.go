@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 管理员信息。
+// AdminDto 管理员信息。
 type AdminDto struct {
 
 	// 用户帐号，帐号只能包含大小写字母、数字、_、-、.、@符号，不能为纯数字和@后面带.号。

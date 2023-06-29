@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 内核版本信息。
+// NodeTypeDatastores 内核版本信息。
 type NodeTypeDatastores struct {
 
 	// 内核版本号。

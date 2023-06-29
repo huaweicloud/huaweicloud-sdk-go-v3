@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 实例信息
+// OpenGaussInstanceRequest 实例信息
 type OpenGaussInstanceRequest struct {
 
 	// 实例名称。 用于表示实例的名称，同一租户下，同类型的实例名可重名。  取值范围：4~64个字符之间，必须以字母开头，区分大小写，可以包含字母、数字、中划线或者下划线，不能包含其他的特殊字符。
@@ -112,13 +112,18 @@ func (c OpenGaussInstanceRequestReplicaNum) MarshalJSON() ([]byte, error) {
 
 func (c *OpenGaussInstanceRequestReplicaNum) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

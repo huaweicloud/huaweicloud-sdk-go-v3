@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改收件方式与信息体
+// BatchSetAlarmNotifyInfo 修改收件方式与信息体
 type BatchSetAlarmNotifyInfo struct {
 
 	// 手动输入手机号、邮箱模式时填写

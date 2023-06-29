@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新资产信息请求体
+// UpdateAssetReq 更新资产信息请求体
 type UpdateAssetReq struct {
 
 	// 短描述

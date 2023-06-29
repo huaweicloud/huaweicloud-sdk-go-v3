@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加相关资源配置请求对象
+// AddForwardingConfigRequestDto 添加相关资源配置请求对象
 type AddForwardingConfigRequestDto struct {
 
 	// **参数说明**：转发配置的类型。  **取值范围**：当前仅支持“kafka，mrskafka”。

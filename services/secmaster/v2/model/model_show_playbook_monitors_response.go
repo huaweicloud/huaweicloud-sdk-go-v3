@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPlaybookMonitorsResponse Response Object
 type ShowPlaybookMonitorsResponse struct {
 
 	// Error code

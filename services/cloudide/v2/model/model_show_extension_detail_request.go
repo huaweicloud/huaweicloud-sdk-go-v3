@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowExtensionDetailRequest Request Object
 type ShowExtensionDetailRequest struct {
 	Body *ExtensionSearchUserInputParamCustomizeForDetail `json:"body,omitempty"`
 }

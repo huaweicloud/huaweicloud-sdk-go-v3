@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDedicatedHostTypesRequest Request Object
 type ListDedicatedHostTypesRequest struct {
 
 	// AZ。

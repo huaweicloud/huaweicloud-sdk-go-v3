@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetBalancerWindowResponse Response Object
 type SetBalancerWindowResponse struct {
 
 	// 任务ID。

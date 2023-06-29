@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnableEnterpriseProjectRequest Request Object
 type EnableEnterpriseProjectRequest struct {
 
 	// 企业项目ID，不能为0。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateStartedConfConfigRequest Request Object
 type UpdateStartedConfConfigRequest struct {
 
 	// 会议ID。

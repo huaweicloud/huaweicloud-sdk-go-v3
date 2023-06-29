@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源分组修改请求体
+// PutResourceGroupReq 资源分组修改请求体
 type PutResourceGroupReq struct {
 
 	// 资源分组名称，只能为字母、数字、汉字、-、_，最大长度为128

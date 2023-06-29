@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchShowEdgeAppVersionsRequest Request Object
 type BatchShowEdgeAppVersionsRequest struct {
 
 	// **参数说明**：实例ID。dris物理实例的唯一标识。获取方法参见[获取Instance-Id](https://support.huaweicloud.com/api-v2x/v2x_04_0030.html)。  **取值范围**：仅支持数字，小写字母和连接符（-）的组合，长度36。
@@ -74,13 +74,18 @@ func (c BatchShowEdgeAppVersionsRequestState) MarshalJSON() ([]byte, error) {
 
 func (c *BatchShowEdgeAppVersionsRequestState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateServerTagsRequest Request Object
 type BatchCreateServerTagsRequest struct {
 
 	// 云服务器ID。

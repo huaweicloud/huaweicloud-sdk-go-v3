@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护组停止保护请求体
+// StopProtectionGroupRequestBody 保护组停止保护请求体
 type StopProtectionGroupRequestBody struct {
 
 	// 标识保护组停止保护操作。该参数目前默认值为空。

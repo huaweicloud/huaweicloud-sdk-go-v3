@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划处理者信息
+// TestPlanDetailOwner 测试计划处理者信息
 type TestPlanDetailOwner struct {
 
 	// 测试计划处理者id

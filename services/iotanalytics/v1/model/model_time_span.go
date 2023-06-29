@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 起止时间范围
+// TimeSpan 起止时间范围
 type TimeSpan struct {
 
 	// 起始时间

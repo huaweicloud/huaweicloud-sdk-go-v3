@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateOrganizationalUnit 操作的请求体。
+// UpdateOrganizationalUnitReqBody UpdateOrganizationalUnit 操作的请求体。
 type UpdateOrganizationalUnitReqBody struct {
 
 	// 要分配给新组织单元的名称。

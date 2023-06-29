@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteFlowLogRequest Request Object
 type DeleteFlowLogRequest struct {
 
 	// 流日志资源唯一标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandInstanceStorageRequest Request Object
 type ExpandInstanceStorageRequest struct {
 
 	// 集群的ID。

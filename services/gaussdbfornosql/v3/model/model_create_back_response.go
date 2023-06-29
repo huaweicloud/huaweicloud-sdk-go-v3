@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateBackResponse Response Object
 type CreateBackResponse struct {
 
 	// 任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署参数配置
+// DeploymentResp 部署参数配置
 type DeploymentResp struct {
 
 	// 应用部署uuid

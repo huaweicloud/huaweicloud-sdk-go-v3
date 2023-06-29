@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道号解绑服务号请求体。
+// UnlockPortRequestBody 通道号解绑服务号请求体。
 type UnlockPortRequestBody struct {
 
 	// 主键ID，取查询通道号绑定信息列表返回的ID字段。

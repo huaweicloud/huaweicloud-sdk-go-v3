@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListOrderIncidentRequest Request Object
 type ListOrderIncidentRequest struct {
 
 	// 版本号

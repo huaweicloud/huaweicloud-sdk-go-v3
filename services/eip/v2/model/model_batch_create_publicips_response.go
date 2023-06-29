@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreatePublicipsResponse Response Object
 type BatchCreatePublicipsResponse struct {
 
 	// job_id，需要访问调用netAPI组件访问job执行情况。netAPI：/v1/{tenant_id}/jobs/{job_id}

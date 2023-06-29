@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自动化运维工作流工作流元数据。
+// WorkflowRequestBody 自动化运维工作流工作流元数据。
 type WorkflowRequestBody struct {
 
 	// 工作流名称，需要满足中文、英文大小写、数字、中划线和下划线{1,64}。

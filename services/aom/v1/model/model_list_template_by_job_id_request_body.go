@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 根据作业id分页查询方案集合
+// ListTemplateByJobIdRequestBody 根据作业id分页查询方案集合
 type ListTemplateByJobIdRequestBody struct {
 
 	// 方案名称

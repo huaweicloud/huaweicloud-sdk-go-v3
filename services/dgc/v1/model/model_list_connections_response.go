@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConnectionsResponse Response Object
 type ListConnectionsResponse struct {
 	Total *int32 `json:"total,omitempty"`
 

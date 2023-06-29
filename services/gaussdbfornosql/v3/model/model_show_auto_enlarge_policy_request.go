@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAutoEnlargePolicyRequest Request Object
 type ShowAutoEnlargePolicyRequest struct {
 
 	// 实例Id，可以调用5.3.3 查询实例列表和详情接口获取。如果未申请实例，可以调用5.3.1 创建实例接口创建。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库参数名、目标数据库参数值。
+// DbParam 数据库参数名、目标数据库参数值。
 type DbParam struct {
 
 	// 数据库参数名。

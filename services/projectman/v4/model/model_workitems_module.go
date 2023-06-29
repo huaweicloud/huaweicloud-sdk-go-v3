@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模块
+// WorkitemsModule 模块
 type WorkitemsModule struct {
 
 	// 模块id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改用户基本信息
+// UpdateUserReq 修改用户基本信息
 type UpdateUserReq struct {
 
 	// 用户手机号，纯数字，长度小于等于32位。必须与国家码同时存在。

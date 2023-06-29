@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源配额对象
+// QuotaResource 资源配额对象
 type QuotaResource struct {
 
 	// 资源类型。

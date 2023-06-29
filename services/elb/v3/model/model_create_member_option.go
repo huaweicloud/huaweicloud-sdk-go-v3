@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建后端服务器请求参数
+// CreateMemberOption 创建后端服务器请求参数
 type CreateMemberOption struct {
 
 	// 后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡IP。  [ 不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)

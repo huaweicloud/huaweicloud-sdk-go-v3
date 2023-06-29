@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CloseKafkaManagerResponse Response Object
 type CloseKafkaManagerResponse struct {
 	HttpStatusCode int `json:"-"`
 }

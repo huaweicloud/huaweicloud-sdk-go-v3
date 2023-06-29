@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 高级备份策略，与请求参数相同。
+// BackupStrategyResult 高级备份策略，与请求参数相同。
 type BackupStrategyResult struct {
 
 	// 备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。

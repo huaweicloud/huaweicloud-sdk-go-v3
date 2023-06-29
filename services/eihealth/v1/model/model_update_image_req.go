@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新镜像请求体
+// UpdateImageReq 更新镜像请求体
 type UpdateImageReq struct {
 	Type *ImageType `json:"type,omitempty"`
 

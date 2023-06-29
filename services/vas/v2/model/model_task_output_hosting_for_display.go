@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出为hosting类型时的配置和展示信息
+// TaskOutputHostingForDisplay 输出为hosting类型时的配置和展示信息
 type TaskOutputHostingForDisplay struct {
 
 	// 作业所有结果文件所在的OBS桶和路径

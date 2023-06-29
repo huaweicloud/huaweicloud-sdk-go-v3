@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateConsumerGroupOrBatchDeleteConsumerGroupRequest Request Object
 type CreateConsumerGroupOrBatchDeleteConsumerGroupRequest struct {
 
 	// 实例ID。

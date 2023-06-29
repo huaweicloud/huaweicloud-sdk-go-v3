@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// Tag 标签
 type Tag struct {
 
 	// 标签键

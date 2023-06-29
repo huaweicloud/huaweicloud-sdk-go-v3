@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteProtectedInstancesResponse Response Object
 type BatchDeleteProtectedInstancesResponse struct {
 
 	// 成功返回jobId信息

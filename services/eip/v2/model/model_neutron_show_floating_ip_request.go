@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronShowFloatingIpRequest Request Object
 type NeutronShowFloatingIpRequest struct {
 
 	// floatingip的ID

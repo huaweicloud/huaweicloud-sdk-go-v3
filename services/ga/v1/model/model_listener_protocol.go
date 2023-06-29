@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 监听的网络传输协议类型。
+// ListenerProtocol 监听的网络传输协议类型。
 type ListenerProtocol struct {
 	value string
 }
@@ -40,13 +40,18 @@ func (c ListenerProtocol) MarshalJSON() ([]byte, error) {
 
 func (c *ListenerProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

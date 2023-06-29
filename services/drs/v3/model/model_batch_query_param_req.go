@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BatchQueryParamReq
 type BatchQueryParamReq struct {
 
 	// 查询任务ID集合。

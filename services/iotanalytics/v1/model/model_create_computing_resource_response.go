@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateComputingResourceResponse Response Object
 type CreateComputingResourceResponse struct {
 
 	// 新增计算资源ID。

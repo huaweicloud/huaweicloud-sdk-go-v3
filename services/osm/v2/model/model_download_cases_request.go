@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadCasesRequest Request Object
 type DownloadCasesRequest struct {
 
 	// 语言

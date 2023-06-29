@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDisasterDetailRequest Request Object
 type ShowDisasterDetailRequest struct {
 
 	// 容灾ID

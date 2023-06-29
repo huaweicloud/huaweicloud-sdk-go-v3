@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDatabaseResourceResponse Response Object
 type CreateDatabaseResourceResponse struct {
 	HttpStatusCode int `json:"-"`
 }

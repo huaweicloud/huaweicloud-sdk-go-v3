@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MigrateVaultResourceResponse Response Object
 type MigrateVaultResourceResponse struct {
 
 	//

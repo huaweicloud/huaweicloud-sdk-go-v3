@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 集群启动操作，定义集群启动标识，为空对象
+// CdmStopClusterReqStop 集群启动操作，定义集群启动标识，为空对象
 type CdmStopClusterReqStop struct {
 
 	// 关机类型： - IMMEDIATELY：立即关机。 - GRACEFULLY：优雅关机。
@@ -58,13 +58,18 @@ func (c CdmStopClusterReqStopStopMode) MarshalJSON() ([]byte, error) {
 
 func (c *CdmStopClusterReqStopStopMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

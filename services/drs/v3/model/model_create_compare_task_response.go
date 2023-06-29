@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCompareTaskResponse Response Object
 type CreateCompareTaskResponse struct {
 
 	// 任务id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteUserRequest Request Object
 type DeleteUserRequest struct {
 
 	// DDM实例ID。

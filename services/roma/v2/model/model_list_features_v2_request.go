@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFeaturesV2Request Request Object
 type ListFeaturesV2Request struct {
 
 	// 实例ID

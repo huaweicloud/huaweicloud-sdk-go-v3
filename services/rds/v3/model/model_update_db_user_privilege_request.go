@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDbUserPrivilegeRequest Request Object
 type UpdateDbUserPrivilegeRequest struct {
 
 	// 实例ID。

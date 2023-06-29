@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVaultResourceInstancesResponse Response Object
 type ShowVaultResourceInstancesResponse struct {
 
 	// 符合查询条件的资源列表（action为count时无此参数）。

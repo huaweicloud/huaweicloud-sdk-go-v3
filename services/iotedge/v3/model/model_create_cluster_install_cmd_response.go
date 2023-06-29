@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateClusterInstallCmdResponse Response Object
 type CreateClusterInstallCmdResponse struct {
 
 	// 标准版节点安装/升级命令

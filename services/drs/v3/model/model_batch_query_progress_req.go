@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量查询同步进度的请求体
+// BatchQueryProgressReq 批量查询同步进度的请求体
 type BatchQueryProgressReq struct {
 
 	// 批量查询进度任务ID请求列表

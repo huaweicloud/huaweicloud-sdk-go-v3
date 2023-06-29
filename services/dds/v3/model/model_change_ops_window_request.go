@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeOpsWindowRequest Request Object
 type ChangeOpsWindowRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 区块生成配置信息
+// CreateRequestBodyBlockInfo 区块生成配置信息
 type CreateRequestBodyBlockInfo struct {
 
 	// 区块产生时间（单位：秒），默认2秒

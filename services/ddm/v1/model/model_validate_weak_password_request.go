@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateWeakPasswordRequest Request Object
 type ValidateWeakPasswordRequest struct {
 	Body *WeakPasswordReq `json:"body,omitempty"`
 }

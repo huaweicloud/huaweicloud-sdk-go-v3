@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateDomainV2Request Request Object
 type AssociateDomainV2Request struct {
 
 	// 实例ID

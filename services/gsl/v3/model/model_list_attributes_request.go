@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAttributesRequest Request Object
 type ListAttributesRequest struct {
 
 	// 自定义属性名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 失败子任务详情。
+// PrecheckFailSubJobResult 失败子任务详情。
 type PrecheckFailSubJobResult struct {
 
 	// 子任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeletePublicIpRequest Request Object
 type BatchDeletePublicIpRequest struct {
 	Body *BatchDeletePublicIpRequestBody `json:"body,omitempty"`
 }

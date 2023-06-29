@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 域源信息
+// DomainOriginHost 域源信息
 type DomainOriginHost struct {
 
 	// 域名ID。获取方法请参见查询加速域名。

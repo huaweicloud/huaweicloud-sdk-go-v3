@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePlaybookVersionRequest Request Object
 type DeletePlaybookVersionRequest struct {
 
 	// application/json;charset=UTF-8

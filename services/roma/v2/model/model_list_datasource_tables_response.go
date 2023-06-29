@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDatasourceTablesResponse Response Object
 type ListDatasourceTablesResponse struct {
 
 	// 数据源中所有的表名称

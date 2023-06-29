@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 元数据锁
+// MetadataLock 元数据锁
 type MetadataLock struct {
 
 	// 会话ID

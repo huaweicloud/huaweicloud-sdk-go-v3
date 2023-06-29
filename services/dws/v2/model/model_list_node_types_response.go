@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNodeTypesResponse Response Object
 type ListNodeTypesResponse struct {
 
 	// 节点类型对象列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 素材信息。
+// Material 素材信息。
 type Material struct {
 
 	// 素材ID。

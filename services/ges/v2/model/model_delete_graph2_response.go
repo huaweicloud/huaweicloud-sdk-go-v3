@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteGraph2Response Response Object
 type DeleteGraph2Response struct {
 
 	// 删除图任务ID。请求失败时字段为空。

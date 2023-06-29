@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警统计
+// AlarmStatisticResponse 告警统计
 type AlarmStatisticResponse struct {
 
 	// 日期

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订阅镜像实体
+// SubscribeImageReq 订阅镜像实体
 type SubscribeImageReq struct {
 
 	// 镜像资产ID

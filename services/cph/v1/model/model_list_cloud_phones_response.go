@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCloudPhonesResponse Response Object
 type ListCloudPhonesResponse struct {
 
 	// 云手机信息

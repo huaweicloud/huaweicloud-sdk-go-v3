@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStoredValueCardsResponse Response Object
 type ListStoredValueCardsResponse struct {
 
 	// 符合查询条件的总条数。

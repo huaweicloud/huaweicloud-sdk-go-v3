@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeHandwritingResponse Response Object
 type RecognizeHandwritingResponse struct {
 	Result         *HandwritingResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`

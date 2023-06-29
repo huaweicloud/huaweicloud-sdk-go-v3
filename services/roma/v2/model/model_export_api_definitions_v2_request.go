@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportApiDefinitionsV2Request Request Object
 type ExportApiDefinitionsV2Request struct {
 
 	// 实例ID

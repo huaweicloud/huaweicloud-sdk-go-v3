@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// AttachServerVolumeRequestBody This is a auto create Body Object
 type AttachServerVolumeRequestBody struct {
 	VolumeAttachment *AttachServerVolumeOption `json:"volumeAttachment"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateFaceResponse Response Object
 type UpdateFaceResponse struct {
 
 	// 更新的人脸数量。 调用失败时无此字段。

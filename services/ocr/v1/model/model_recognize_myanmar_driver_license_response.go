@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeMyanmarDriverLicenseResponse Response Object
 type RecognizeMyanmarDriverLicenseResponse struct {
 	Result         *MyanmarDriverLicenseResult `json:"result,omitempty"`
 	HttpStatusCode int                         `json:"-"`

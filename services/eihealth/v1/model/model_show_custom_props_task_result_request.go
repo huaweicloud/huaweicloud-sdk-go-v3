@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCustomPropsTaskResultRequest Request Object
 type ShowCustomPropsTaskResultRequest struct {
 
 	// 自定义属性任务ID

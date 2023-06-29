@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddDeviceRequest Request Object
 type AddDeviceRequest struct {
 
 	// 边缘节点ID

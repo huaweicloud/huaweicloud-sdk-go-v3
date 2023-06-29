@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteExerciseResponse Response Object
 type ExecuteExerciseResponse struct {
 
 	// 判题任务ID

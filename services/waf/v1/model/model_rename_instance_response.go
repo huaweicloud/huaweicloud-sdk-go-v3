@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RenameInstanceResponse Response Object
 type RenameInstanceResponse struct {
 
 	// 独享引擎实例ID

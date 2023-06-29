@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群节点配置
+// ClusterNodeConfig 集群节点配置
 type ClusterNodeConfig struct {
 
 	// master虚拟ip

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SessionStatsTotal
 type SessionStatsTotal struct {
 
 	// 会话总数。

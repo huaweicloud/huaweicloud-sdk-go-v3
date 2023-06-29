@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNextflowTaskDetailResponse Response Object
 type ShowNextflowTaskDetailResponse struct {
 
 	// task id

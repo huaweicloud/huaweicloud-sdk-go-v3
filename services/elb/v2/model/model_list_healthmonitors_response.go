@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHealthmonitorsResponse Response Object
 type ListHealthmonitorsResponse struct {
 
 	// 健康检查对象的列表

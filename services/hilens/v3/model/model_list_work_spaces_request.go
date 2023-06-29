@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWorkSpacesRequest Request Object
 type ListWorkSpacesRequest struct {
 
 	// 用户的userId，用于查询指定的的子工作空间

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicZoneNameServerResponse Response Object
 type ShowPublicZoneNameServerResponse struct {
 
 	// 查询单个公网Zone的名称服务器响应。

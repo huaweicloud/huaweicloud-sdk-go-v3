@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEastWestFirewallRequest Request Object
 type ListEastWestFirewallRequest struct {
 
 	// 每页显示个数

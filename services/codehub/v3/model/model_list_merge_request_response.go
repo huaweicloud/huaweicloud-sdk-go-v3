@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMergeRequestResponse Response Object
 type ListMergeRequestResponse struct {
 	Error *Error `json:"error,omitempty"`
 

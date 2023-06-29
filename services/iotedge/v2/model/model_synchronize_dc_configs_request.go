@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SynchronizeDcConfigsRequest Request Object
 type SynchronizeDcConfigsRequest struct {
 
 	// 边缘节点ID

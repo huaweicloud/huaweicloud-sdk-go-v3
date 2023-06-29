@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStatisticsResponse Response Object
 type ListStatisticsResponse struct {
 
 	// 资源数量信息列表。

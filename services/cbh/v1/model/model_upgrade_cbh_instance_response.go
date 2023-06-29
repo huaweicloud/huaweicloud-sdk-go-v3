@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpgradeCbhInstanceResponse Response Object
 type UpgradeCbhInstanceResponse struct {
 
 	// 操作结果。

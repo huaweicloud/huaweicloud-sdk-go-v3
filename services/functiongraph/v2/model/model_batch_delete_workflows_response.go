@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteWorkflowsResponse Response Object
 type BatchDeleteWorkflowsResponse struct {
 
 	// 成功流程URN列表

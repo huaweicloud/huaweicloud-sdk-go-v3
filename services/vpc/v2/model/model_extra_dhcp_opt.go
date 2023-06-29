@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ExtraDhcpOpt
 type ExtraDhcpOpt struct {
 
 	// Option名称

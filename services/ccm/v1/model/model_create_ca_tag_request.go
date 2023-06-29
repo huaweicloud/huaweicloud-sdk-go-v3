@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCaTagRequest Request Object
 type CreateCaTagRequest struct {
 
 	// 所需要创建标签的CA证书ID。

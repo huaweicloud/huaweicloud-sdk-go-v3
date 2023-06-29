@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceRoleResponse Response Object
 type ShowInstanceRoleResponse struct {
 
 	// 枚举类型(master、slave)代表实例是主实例还是备实例。

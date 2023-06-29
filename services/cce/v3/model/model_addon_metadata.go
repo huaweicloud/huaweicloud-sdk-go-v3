@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件基本信息，集合类的元素类型，包含一组由不同名称定义的属性。
+// AddonMetadata 插件基本信息，集合类的元素类型，包含一组由不同名称定义的属性。
 type AddonMetadata struct {
 
 	// 唯一id标识

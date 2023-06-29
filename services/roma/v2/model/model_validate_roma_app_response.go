@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateRomaAppResponse Response Object
 type ValidateRomaAppResponse struct {
 
 	// 应用ID

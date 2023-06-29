@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVmsTemplateStatusRequest Request Object
 type ListVmsTemplateStatusRequest struct {
 
 	// 智能信息基础版模板ID。

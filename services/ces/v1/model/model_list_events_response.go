@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEventsResponse Response Object
 type ListEventsResponse struct {
 
 	// 一条或者多条事件数据。

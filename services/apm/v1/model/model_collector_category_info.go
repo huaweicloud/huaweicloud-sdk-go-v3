@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 采集器类别信息。
+// CollectorCategoryInfo 采集器类别信息。
 type CollectorCategoryInfo struct {
 
 	// 采集器类别id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组绑定的应用部署
+// GroupDeployment 边缘节点组绑定的应用部署
 type GroupDeployment struct {
 
 	// 应用部署uuid

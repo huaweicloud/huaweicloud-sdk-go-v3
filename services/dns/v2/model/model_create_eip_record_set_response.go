@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEipRecordSetResponse Response Object
 type CreateEipRecordSetResponse struct {
 
 	// PTR记录的ID，格式形如{region}:{floatingip_id}。

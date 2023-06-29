@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 每个云硬盘的容量配额限制。键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
+// QuotaDetailPerVolumeGigabytes 每个云硬盘的容量配额限制。键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailPerVolumeGigabytes struct {
 
 	// 已使用的数量。

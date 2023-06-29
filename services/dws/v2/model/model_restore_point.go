@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 恢复集群
+// RestorePoint 恢复集群
 type RestorePoint struct {
 
 	// 快照ID

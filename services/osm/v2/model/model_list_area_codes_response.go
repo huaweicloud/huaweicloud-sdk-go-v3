@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAreaCodesResponse Response Object
 type ListAreaCodesResponse struct {
 
 	// 国家码列表

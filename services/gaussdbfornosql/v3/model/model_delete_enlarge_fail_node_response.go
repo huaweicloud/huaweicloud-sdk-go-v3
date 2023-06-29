@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEnlargeFailNodeResponse Response Object
 type DeleteEnlargeFailNodeResponse struct {
 
 	// 任务ID。

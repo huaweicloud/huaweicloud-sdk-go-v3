@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAppEnvsRequest Request Object
 type ListAppEnvsRequest struct {
 
 	// 组件id。

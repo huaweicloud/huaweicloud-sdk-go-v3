@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Volume
 type Volume struct {
 
 	// 磁盘大小，单位为GB  - 系统盘取值范围：40~1024 - 数据盘取值范围：100~32768

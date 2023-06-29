@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板版本基本信息
+// BaseTemplateVersion 模板版本基本信息
 type BaseTemplateVersion struct {
 
 	// 模板的唯一ID，由模板服务随机生成

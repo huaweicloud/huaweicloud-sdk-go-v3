@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机镜像信息。
+// PhoneImage 云手机镜像信息。
 type PhoneImage struct {
 
 	// 手机镜像名称，不超过128个字节

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSqlAlarmRuleResponse Response Object
 type CreateSqlAlarmRuleResponse struct {
 
 	// 告警规则id

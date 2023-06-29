@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddSshKeyResponse Response Object
 type AddSshKeyResponse struct {
 	Error *Error `json:"error,omitempty"`
 

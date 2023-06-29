@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建密钥或者更新密钥的请求体
+// SecretRequestBody 创建密钥或者更新密钥的请求体
 type SecretRequestBody struct {
 
 	// 工作空间ID。默认为default。

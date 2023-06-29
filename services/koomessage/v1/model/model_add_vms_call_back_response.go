@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddVmsCallBackResponse Response Object
 type AddVmsCallBackResponse struct {
 
 	// 请求状态，固定200。

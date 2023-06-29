@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// security_groups数据结构说明
+// SecurityGroupsList security_groups数据结构说明
 type SecurityGroupsList struct {
 
 	// 安全组名称或者UUID

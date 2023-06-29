@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAgentConfigResponse Response Object
 type ShowAgentConfigResponse struct {
 	Code *string `json:"code,omitempty"`
 

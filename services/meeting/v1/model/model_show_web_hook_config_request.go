@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowWebHookConfigRequest Request Object
 type ShowWebHookConfigRequest struct {
 
 	// 企业ID。按企业注册回调时需要填写。

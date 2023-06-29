@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AsyncInvokeApiStartWorkflowResponse Response Object
 type AsyncInvokeApiStartWorkflowResponse struct {
 
 	// 运行实例的URN。

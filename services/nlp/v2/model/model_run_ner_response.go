@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunNerResponse Response Object
 type RunNerResponse struct {
 
 	// 命名实体识别结果。调用失败时无此字段。

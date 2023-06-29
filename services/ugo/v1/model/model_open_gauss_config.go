@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// GaussDB的特殊配置。
+// OpenGaussConfig GaussDB的特殊配置。
 type OpenGaussConfig struct {
 
 	// 权限检查类型。
@@ -55,13 +55,18 @@ func (c OpenGaussConfigPermissionCheckType) MarshalJSON() ([]byte, error) {
 
 func (c *OpenGaussConfigPermissionCheckType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

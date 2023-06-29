@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of playbook
+// ModifyPlaybookInfo Information of playbook
 type ModifyPlaybookInfo struct {
 
 	// The name, display only

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务号解冻请求体。
+// UnfreezePubRequestBody 服务号解冻请求体。
 type UnfreezePubRequestBody struct {
 
 	// 解冻原因。

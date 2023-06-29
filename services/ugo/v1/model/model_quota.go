@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息。
+// Quota 配额信息。
 type Quota struct {
 
 	// UGO的项目类型。

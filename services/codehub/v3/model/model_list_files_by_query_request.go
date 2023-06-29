@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFilesByQueryRequest Request Object
 type ListFilesByQueryRequest struct {
 
 	// 仓库短id

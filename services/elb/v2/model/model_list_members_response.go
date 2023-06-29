@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMembersResponse Response Object
 type ListMembersResponse struct {
 
 	// 后端云服务器对象的列表

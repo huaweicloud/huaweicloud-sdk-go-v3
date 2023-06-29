@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePublicIpRequest Request Object
 type UpdatePublicIpRequest struct {
 
 	// 弹性公网IP ID

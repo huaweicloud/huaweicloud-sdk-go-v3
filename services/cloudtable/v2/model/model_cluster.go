@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建集群参数对象实体。
+// Cluster 创建集群参数对象实体。
 type Cluster struct {
 
 	// 是否开启IAM权限认证。 - false：不开启 - true：开启

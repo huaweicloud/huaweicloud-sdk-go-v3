@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartTestDatasourceRequest Request Object
 type StartTestDatasourceRequest struct {
 
 	// 实例ID

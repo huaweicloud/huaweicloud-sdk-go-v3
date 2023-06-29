@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ApplyWorkspaceResponse Response Object
 type ApplyWorkspaceResponse struct {
 
 	// 开通云办公服务的任务ID。

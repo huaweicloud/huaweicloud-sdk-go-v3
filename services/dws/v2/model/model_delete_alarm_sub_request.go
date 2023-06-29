@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAlarmSubRequest Request Object
 type DeleteAlarmSubRequest struct {
 
 	// 告警订阅ID

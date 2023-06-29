@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// QaBotAnswersNew
 type QaBotAnswersNew struct {
 
 	// 问答机器人回复。

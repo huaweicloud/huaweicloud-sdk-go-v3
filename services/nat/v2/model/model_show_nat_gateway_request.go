@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNatGatewayRequest Request Object
 type ShowNatGatewayRequest struct {
 
 	// 公网NAT网关实例的ID。

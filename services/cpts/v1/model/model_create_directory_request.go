@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDirectoryRequest Request Object
 type CreateDirectoryRequest struct {
 
 	// 测试工程id

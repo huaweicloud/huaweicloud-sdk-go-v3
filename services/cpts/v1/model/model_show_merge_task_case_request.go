@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMergeTaskCaseRequest Request Object
 type ShowMergeTaskCaseRequest struct {
 
 	// 任务运行id（报告id）

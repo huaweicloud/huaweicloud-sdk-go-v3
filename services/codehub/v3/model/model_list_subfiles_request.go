@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubfilesRequest Request Object
 type ListSubfilesRequest struct {
 
 	// 仓库id

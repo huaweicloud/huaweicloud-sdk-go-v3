@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunRecaptureDetectResponse Response Object
 type RunRecaptureDetectResponse struct {
 	Result         *RecaptureDetectResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                            `json:"-"`

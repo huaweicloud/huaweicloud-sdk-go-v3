@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息
+// EpResourceTag 标签信息
 type EpResourceTag struct {
 
 	// tms资源标签key，值最大长度36个unicode字符。 key不能为空。不能包含非打印字符ASCII(0-31)

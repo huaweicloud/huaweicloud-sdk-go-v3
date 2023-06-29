@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCaseExtendsParamRequest Request Object
 type ShowCaseExtendsParamRequest struct {
 
 	// 组id

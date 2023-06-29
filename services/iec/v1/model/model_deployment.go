@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署计划对象
+// Deployment 部署计划对象
 type Deployment struct {
 
 	// 部署计划ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ImageFrame
 type ImageFrame struct {
 
 	// 创建时间

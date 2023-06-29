@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAddonInstanceRequest Request Object
 type UpdateAddonInstanceRequest struct {
 
 	// 插件实例id

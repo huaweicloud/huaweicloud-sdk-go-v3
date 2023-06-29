@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AllowClientRecordRequest Request Object
 type AllowClientRecordRequest struct {
 
 	// 会议ID。

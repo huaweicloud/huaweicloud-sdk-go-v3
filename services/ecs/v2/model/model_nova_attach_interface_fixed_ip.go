@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaAttachInterfaceFixedIp
 type NovaAttachInterfaceFixedIp struct {
 
 	// IP地址。

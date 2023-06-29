@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCheckpointResponse Response Object
 type ListCheckpointResponse struct {
 
 	// 总条数

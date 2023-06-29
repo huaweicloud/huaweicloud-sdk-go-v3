@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 环境变量引用配置项时使用。
+// ConfigsMap 环境变量引用配置项时使用。
 type ConfigsMap struct {
 
 	// 配置项的名称

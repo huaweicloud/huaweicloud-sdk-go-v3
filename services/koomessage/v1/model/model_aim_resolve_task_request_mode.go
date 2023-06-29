@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 短链配置
+// AimResolveTaskRequestMode 短链配置
 type AimResolveTaskRequestMode struct {
 
 	// 智能信息模板ID，由9位数字组成。

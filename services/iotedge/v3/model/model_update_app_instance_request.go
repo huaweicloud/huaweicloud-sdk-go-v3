@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAppInstanceRequest Request Object
 type UpdateAppInstanceRequest struct {
 
 	// 边缘集群ID

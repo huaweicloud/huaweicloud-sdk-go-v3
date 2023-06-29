@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetGaussMySqlProxyWeightRequest Request Object
 type SetGaussMySqlProxyWeightRequest struct {
 
 	// 语言。

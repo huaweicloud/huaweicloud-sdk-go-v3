@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelGaussMySqlInstanceEipRequest Request Object
 type CancelGaussMySqlInstanceEipRequest struct {
 
 	// 语言。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 短信下发响应对象。
+// AimTemplate 短信下发响应对象。
 type AimTemplate struct {
 
 	// 智能信息模板ID。  > 智能信息平台生成的模板ID，由9位数字组成。

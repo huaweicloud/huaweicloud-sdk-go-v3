@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnfreezePubResponse Response Object
 type UnfreezePubResponse struct {
 	Data           *UnfreezePubResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                       `json:"-"`

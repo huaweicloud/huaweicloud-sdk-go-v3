@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchStartBaremetalServersRequest Request Object
 type BatchStartBaremetalServersRequest struct {
 	Body *OsStartBody `json:"body,omitempty"`
 }

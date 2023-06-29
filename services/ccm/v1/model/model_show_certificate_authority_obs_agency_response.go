@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCertificateAuthorityObsAgencyResponse Response Object
 type ShowCertificateAuthorityObsAgencyResponse struct {
 
 	// OBS当前的授权结果。 - **true** - **false**

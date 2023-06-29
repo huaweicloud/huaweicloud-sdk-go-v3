@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//
+// PersistentVolumeClaimSpec
 type PersistentVolumeClaimSpec struct {
 
 	// 资源需为已经存在的存储资源 - 如果存储资源类型是SFS、EVS、SFS-Turbo，本参数需要填入对应资源的ID - 如果资源类型为OBS，本参数填入OBS名称
@@ -72,13 +72,18 @@ func (c PersistentVolumeClaimSpecAccessModes) MarshalJSON() ([]byte, error) {
 
 func (c *PersistentVolumeClaimSpecAccessModes) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckRomaAppSecretRequest Request Object
 type CheckRomaAppSecretRequest struct {
 
 	// 应用ID

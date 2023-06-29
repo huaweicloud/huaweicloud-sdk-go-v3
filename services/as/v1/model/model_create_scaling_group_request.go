@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateScalingGroupRequest Request Object
 type CreateScalingGroupRequest struct {
 	Body *CreateScalingGroupOption `json:"body,omitempty"`
 }

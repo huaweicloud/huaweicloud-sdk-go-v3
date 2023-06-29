@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警通知内容。
+// FrontAlarmNotifyResult 告警通知内容。
 type FrontAlarmNotifyResult struct {
 
 	// 告警通知id。

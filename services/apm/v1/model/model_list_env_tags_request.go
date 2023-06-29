@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnvTagsRequest Request Object
 type ListEnvTagsRequest struct {
 
 	// 应用id。

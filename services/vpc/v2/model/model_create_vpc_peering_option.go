@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// peering对象
+// CreateVpcPeeringOption peering对象
 type CreateVpcPeeringOption struct {
 
 	// 功能说明：对等连接名称 取值范围：支持1~64个字符

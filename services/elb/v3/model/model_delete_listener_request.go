@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteListenerRequest Request Object
 type DeleteListenerRequest struct {
 
 	// 监听器ID。

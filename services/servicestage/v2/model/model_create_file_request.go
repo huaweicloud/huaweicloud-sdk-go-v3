@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFileRequest Request Object
 type CreateFileRequest struct {
 
 	// 授权名称。

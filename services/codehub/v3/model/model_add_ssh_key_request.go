@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddSshKeyRequest Request Object
 type AddSshKeyRequest struct {
 	Body *AddSshKeyRequestBody `json:"body,omitempty"`
 }

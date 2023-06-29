@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息
+// TagsInfo 标签信息
 type TagsInfo struct {
 
 	// 功能说明：键。同一资源的key值不能重复。

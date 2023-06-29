@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportLiveDataApiDefinitionsV2Response Response Object
 type ImportLiveDataApiDefinitionsV2Response struct {
 
 	// 导入成功信息

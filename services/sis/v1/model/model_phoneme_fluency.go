@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//  音素的流利度打分
+// PhonemeFluency  音素的流利度打分
 type PhonemeFluency struct {
 
 	//

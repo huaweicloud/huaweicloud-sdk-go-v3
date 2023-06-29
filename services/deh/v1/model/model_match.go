@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// match字段数据结构。
+// Match match字段数据结构。
 type Match struct {
 
 	// 键，表示要匹配的字段。  key不能重复，value为匹配的值。  此字段为固定字典值。  不允许为空字符串。  当前key的参数值仅支持resource_name，此时value的参数值为专属主机名称。
@@ -54,13 +54,18 @@ func (c MatchKey) MarshalJSON() ([]byte, error) {
 
 func (c *MatchKey) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新迁移用户请求体
+// UpdateUserReq 更新迁移用户请求体
 type UpdateUserReq struct {
 
 	// 任务ID

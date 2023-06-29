@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVolumeTagsResponse Response Object
 type ListVolumeTagsResponse struct {
 
 	// 所有云硬盘的标签信息

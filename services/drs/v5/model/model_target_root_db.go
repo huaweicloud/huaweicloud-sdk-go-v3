@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库对象迁移或同步目标库信息，两层到三层数据库时需要指定。
+// TargetRootDb 数据库对象迁移或同步目标库信息，两层到三层数据库时需要指定。
 type TargetRootDb struct {
 
 	// 库名。

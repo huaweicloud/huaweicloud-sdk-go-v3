@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteNatGatewayDnatRuleRequest Request Object
 type DeleteNatGatewayDnatRuleRequest struct {
 
 	// 公网NAT网关实例的ID。

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 智能购买组列表
+// AutoLaunchGroupInfo 智能购买组列表
 type AutoLaunchGroupInfo struct {
 
 	// 智能购买组ID

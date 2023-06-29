@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEntityConfigurationResponse Response Object
 type ShowEntityConfigurationResponse struct {
 
 	// 数据库版本。

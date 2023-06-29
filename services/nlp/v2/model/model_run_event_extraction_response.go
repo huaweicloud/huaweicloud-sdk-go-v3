@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunEventExtractionResponse Response Object
 type RunEventExtractionResponse struct {
 
 	// 事件抽取结果。调用失败时无此字段。

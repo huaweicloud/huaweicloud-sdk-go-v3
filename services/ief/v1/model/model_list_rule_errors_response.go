@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRuleErrorsResponse Response Object
 type ListRuleErrorsResponse struct {
 
 	// 满足条件的错误个数

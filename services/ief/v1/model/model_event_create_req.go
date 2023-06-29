@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 系统订阅创建请求体
+// EventCreateReq 系统订阅创建请求体
 type EventCreateReq struct {
 	Systemevent *EventCreateDetail `json:"systemevent,omitempty"`
 }

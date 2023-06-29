@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PushPortalInfoResponse Response Object
 type PushPortalInfoResponse struct {
 	Data           *PushPortalInfoResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                          `json:"-"`

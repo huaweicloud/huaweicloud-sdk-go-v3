@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目下某个测试计划操作历史列表
+// TestPlanJournalList 项目下某个测试计划操作历史列表
 type TestPlanJournalList struct {
 
 	// 项目id，项目唯一标识，固定长度32位字符

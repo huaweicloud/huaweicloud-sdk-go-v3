@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求参数
+// AddOrUpdateTagsRequestBody 请求参数
 type AddOrUpdateTagsRequestBody struct {
 
 	// 镜像ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTopDomainNamesResponse Response Object
 type ShowTopDomainNamesResponse struct {
 
 	// top域名信息

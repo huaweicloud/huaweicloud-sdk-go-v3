@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRtcAbnormalEventsRequest Request Object
 type ListRtcAbnormalEventsRequest struct {
 
 	// 应用ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义属性
+// CustomField 自定义属性
 type CustomField struct {
 
 	// 自定义属性名

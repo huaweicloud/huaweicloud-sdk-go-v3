@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDeployTaskByTemplateResponse Response Object
 type CreateDeployTaskByTemplateResponse struct {
 
 	// 应用名称

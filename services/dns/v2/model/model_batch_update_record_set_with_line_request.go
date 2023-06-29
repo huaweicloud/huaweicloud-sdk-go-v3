@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateRecordSetWithLineRequest Request Object
 type BatchUpdateRecordSetWithLineRequest struct {
 
 	// 所属zone的ID。

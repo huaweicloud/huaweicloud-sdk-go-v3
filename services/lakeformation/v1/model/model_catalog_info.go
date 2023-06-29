@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// catalog input when grant policy
+// CatalogInfo catalog input when grant policy
 type CatalogInfo struct {
 
 	// 子数据库信息

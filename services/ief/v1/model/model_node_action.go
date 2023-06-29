@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点启停
+// NodeAction 节点启停
 type NodeAction struct {
 	Node *Action `json:"node"`
 }

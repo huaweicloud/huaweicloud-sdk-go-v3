@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteUpdateVideoByIdResponse Response Object
 type ExecuteUpdateVideoByIdResponse struct {
 	HttpStatusCode int `json:"-"`
 }

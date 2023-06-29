@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListQueryHttpCodeResponse Response Object
 type ListQueryHttpCodeResponse struct {
 
 	// 基于时间轴的状态码

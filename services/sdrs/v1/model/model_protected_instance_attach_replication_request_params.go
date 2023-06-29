@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例挂载复制对请求数据结构
+// ProtectedInstanceAttachReplicationRequestParams 保护实例挂载复制对请求数据结构
 type ProtectedInstanceAttachReplicationRequestParams struct {
 
 	// 复制对的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDashBoardResponse Response Object
 type CreateDashBoardResponse struct {
 
 	// 仪表盘图表

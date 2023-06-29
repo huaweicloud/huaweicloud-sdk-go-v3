@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPartnerCouponsRecordRequest Request Object
 type ListPartnerCouponsRecordRequest struct {
 
 	// 操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。

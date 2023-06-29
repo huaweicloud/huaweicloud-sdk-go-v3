@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSuggestionsRequest Request Object
 type ListSuggestionsRequest struct {
 
 	// qabot编号，UUID格式。

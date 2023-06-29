@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeIdDocumentResponse Response Object
 type RecognizeIdDocumentResponse struct {
 	Result         *IdDocumentItem `json:"result,omitempty"`
 	HttpStatusCode int             `json:"-"`

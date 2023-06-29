@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateServerNameRequest Request Object
 type UpdateServerNameRequest struct {
 
 	// 云手机服务器的唯一标识。

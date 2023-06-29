@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子区域识别文字块列表，输出顺序从左到右，先上后下。
+// GeneralTableWordsBlockList 子区域识别文字块列表，输出顺序从左到右，先上后下。
 type GeneralTableWordsBlockList struct {
 
 	// 文字块识别结果。

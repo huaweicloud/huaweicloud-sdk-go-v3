@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConfigurationDatastoresResponse Response Object
 type ListConfigurationDatastoresResponse struct {
 
 	// 引擎信息。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronDeleteFirewallGroupResponse Response Object
 type NeutronDeleteFirewallGroupResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPrivateZoneNameServerRequest Request Object
 type ShowPrivateZoneNameServerRequest struct {
 
 	// 待查询内网zone的ID。

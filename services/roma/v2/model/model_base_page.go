@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页基本信息
+// BasePage 分页基本信息
 type BasePage struct {
 
 	// 本次返回的列表长度

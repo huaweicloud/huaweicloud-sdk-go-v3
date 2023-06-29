@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProxySessionConsistenceResponse Response Object
 type UpdateProxySessionConsistenceResponse struct {
 
 	// 任务ID。

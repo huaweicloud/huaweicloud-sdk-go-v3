@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadAccessoriesRequest Request Object
 type DownloadAccessoriesRequest struct {
 
 	// 附件id列表，下载支持多个，逗号隔开

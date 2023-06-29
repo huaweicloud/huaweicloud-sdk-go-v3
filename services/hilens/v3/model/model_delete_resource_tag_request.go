@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteResourceTagRequest Request Object
 type DeleteResourceTagRequest struct {
 
 	// 资源ID，不同资源（节点，部署，配置项，密钥）有不同的资源ID

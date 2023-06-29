@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetAutoEnlargePolicyResponse Response Object
 type SetAutoEnlargePolicyResponse struct {
 	HttpStatusCode int `json:"-"`
 }

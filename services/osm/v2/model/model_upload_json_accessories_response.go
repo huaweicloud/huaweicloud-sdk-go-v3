@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadJsonAccessoriesResponse Response Object
 type UploadJsonAccessoriesResponse struct {
 
 	// 附件id

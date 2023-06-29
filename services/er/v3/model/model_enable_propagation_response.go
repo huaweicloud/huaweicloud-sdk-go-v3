@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// EnablePropagationResponse Response Object
 type EnablePropagationResponse struct {
 	Propagation *Propagation `json:"propagation,omitempty"`
 

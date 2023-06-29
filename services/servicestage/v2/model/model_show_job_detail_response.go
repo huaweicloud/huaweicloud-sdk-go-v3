@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobDetailResponse Response Object
 type ShowJobDetailResponse struct {
 
 	// 部署任务数量。

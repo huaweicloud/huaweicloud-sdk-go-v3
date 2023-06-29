@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//
+// BulkCreateAndDeleteVaultTagsReq
 type BulkCreateAndDeleteVaultTagsReq struct {
 
 	// 标签列表。  tags不允许为空列表。  tags中最多包含10个key。  tags中key不允许重复。
@@ -61,13 +61,18 @@ func (c BulkCreateAndDeleteVaultTagsReqAction) MarshalJSON() ([]byte, error) {
 
 func (c *BulkCreateAndDeleteVaultTagsReqAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

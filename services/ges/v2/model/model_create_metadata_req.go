@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建元数据请求体
+// CreateMetadataReq 创建元数据请求体
 type CreateMetadataReq struct {
 
 	// 元数据存储地址。

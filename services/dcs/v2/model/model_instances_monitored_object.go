@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控对象结构
+// InstancesMonitoredObject 监控对象结构
 type InstancesMonitoredObject struct {
 
 	// 测量对象ID，即实例的ID。

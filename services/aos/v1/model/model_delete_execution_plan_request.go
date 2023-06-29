@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteExecutionPlanRequest Request Object
 type DeleteExecutionPlanRequest struct {
 
 	// 用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID

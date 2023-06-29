@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// operation of playbook
+// OperationPlaybookInfo operation of playbook
 type OperationPlaybookInfo struct {
 
 	// 重试： RETRY  终止： TERMINATE

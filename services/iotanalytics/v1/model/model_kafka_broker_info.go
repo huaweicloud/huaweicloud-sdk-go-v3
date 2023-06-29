@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Kafka Server地址
+// KafkaBrokerInfo Kafka Server地址
 type KafkaBrokerInfo struct {
 
 	// IP

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CompareObjectInfoWithToken
 type CompareObjectInfoWithToken struct {
 
 	// 库名。

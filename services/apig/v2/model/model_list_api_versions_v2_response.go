@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApiVersionsV2Response Response Object
 type ListApiVersionsV2Response struct {
 
 	// 本次返回的列表长度

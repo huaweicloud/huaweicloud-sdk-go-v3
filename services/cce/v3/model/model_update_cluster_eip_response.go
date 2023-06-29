@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateClusterEipResponse Response Object
 type UpdateClusterEipResponse struct {
 	Metadata *Metadata `json:"metadata,omitempty"`
 

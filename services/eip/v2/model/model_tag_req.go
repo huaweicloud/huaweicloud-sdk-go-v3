@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// TagReq 标签
 type TagReq struct {
 
 	// 键。最大长度127个unicode字符。 key不能为空。(搜索时不对此参数做校验)

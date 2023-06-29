@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CountEipAvailableResourcesRequest Request Object
 type CountEipAvailableResourcesRequest struct {
 	Body *EipResourcesAvailableV3RequestBody `json:"body,omitempty"`
 }

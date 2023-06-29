@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 裸金属服务器挂载云硬盘接口请求结构体
+// AttachVolumeBody 裸金属服务器挂载云硬盘接口请求结构体
 type AttachVolumeBody struct {
 	VolumeAttachment *VolumeAttachment `json:"volumeAttachment"`
 }

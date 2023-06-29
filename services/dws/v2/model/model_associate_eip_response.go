@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateEipResponse Response Object
 type AssociateEipResponse struct {
 	HttpStatusCode int `json:"-"`
 }

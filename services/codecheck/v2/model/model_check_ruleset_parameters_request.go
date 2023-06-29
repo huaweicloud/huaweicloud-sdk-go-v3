@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckRulesetParametersRequest Request Object
 type CheckRulesetParametersRequest struct {
 
 	// 项目ID

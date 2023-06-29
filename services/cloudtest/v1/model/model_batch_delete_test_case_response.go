@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteTestCaseResponse Response Object
 type BatchDeleteTestCaseResponse struct {
 
 	// 接口调用失败错误码

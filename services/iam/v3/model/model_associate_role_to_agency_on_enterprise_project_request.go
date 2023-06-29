@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateRoleToAgencyOnEnterpriseProjectRequest Request Object
 type AssociateRoleToAgencyOnEnterpriseProjectRequest struct {
 	Body *CreateAgencyEpPolicyAssignmentReqBody `json:"body,omitempty"`
 }

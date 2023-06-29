@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义错误页面。
+// ErrorCodeRedirectRules 自定义错误页面。
 type ErrorCodeRedirectRules struct {
 
 	// 重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504

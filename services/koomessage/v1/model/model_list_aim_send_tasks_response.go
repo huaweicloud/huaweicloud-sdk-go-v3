@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAimSendTasksResponse Response Object
 type ListAimSendTasksResponse struct {
 
 	// 短信记录查询结果列表。

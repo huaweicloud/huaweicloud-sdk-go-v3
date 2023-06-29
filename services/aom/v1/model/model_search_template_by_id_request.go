@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchTemplateByIdRequest Request Object
 type SearchTemplateByIdRequest struct {
 
 	// 方案id。

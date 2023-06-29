@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResourceGroupRequest Request Object
 type ShowResourceGroupRequest struct {
 
 	// 资源分组ID。

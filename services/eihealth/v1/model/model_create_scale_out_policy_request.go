@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateScaleOutPolicyRequest Request Object
 type CreateScaleOutPolicyRequest struct {
 	Body *CreateScaleOutPolicyReq `json:"body,omitempty"`
 }

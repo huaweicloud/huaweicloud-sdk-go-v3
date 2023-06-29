@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建或修改规则动作响应结构体
+// RoutingRuleAction 创建或修改规则动作响应结构体
 type RoutingRuleAction struct {
 
 	// 规则动作ID，用于唯一标识一条规则动作，在创建规则动作时由物联网平台分配获得，创建时无需携带，由平台统一分配唯一的action_id。

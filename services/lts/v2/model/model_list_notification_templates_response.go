@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNotificationTemplatesResponse Response Object
 type ListNotificationTemplatesResponse struct {
 
 	// 模板数组

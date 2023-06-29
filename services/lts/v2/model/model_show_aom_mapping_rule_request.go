@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAomMappingRuleRequest Request Object
 type ShowAomMappingRuleRequest struct {
 
 	// 接入规则ID

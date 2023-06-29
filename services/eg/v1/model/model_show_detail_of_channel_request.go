@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailOfChannelRequest Request Object
 type ShowDetailOfChannelRequest struct {
 
 	// 指定查询的事件通道ID

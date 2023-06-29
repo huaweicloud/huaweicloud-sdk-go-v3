@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据盘参数
+// DataVolume 数据盘参数
 type DataVolume struct {
 
 	// 数据盘大小，容量单位为GB，输入大小范围为[1,500]。

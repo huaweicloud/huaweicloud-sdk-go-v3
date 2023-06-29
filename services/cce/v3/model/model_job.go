@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Job
 type Job struct {
 
 	// API类型，固定值“Job”，该值不可修改。

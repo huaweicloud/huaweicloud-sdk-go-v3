@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 端点详情
+// EndpointObj 端点详情
 type EndpointObj struct {
 
 	// 端点描述，最大长度255，不允许^~#$%&*<>()[]{}'\"\\

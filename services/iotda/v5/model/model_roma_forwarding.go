@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转发roma消息结构
+// RomaForwarding 转发roma消息结构
 type RomaForwarding struct {
 
 	// **参数说明**：转发roma消息对应的地址列表

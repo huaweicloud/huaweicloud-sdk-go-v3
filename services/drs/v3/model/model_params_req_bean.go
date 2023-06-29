@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数信息
+// ParamsReqBean 参数信息
 type ParamsReqBean struct {
 
 	// 数据库参数名

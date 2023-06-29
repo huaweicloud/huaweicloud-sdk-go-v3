@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备详情
+// NodeResponse 设备详情
 type NodeResponse struct {
 
 	// 设备ID

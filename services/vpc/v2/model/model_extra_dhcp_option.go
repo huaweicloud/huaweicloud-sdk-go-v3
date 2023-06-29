@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 子网配置的NTP地址或租约时间对象
+// ExtraDhcpOption 子网配置的NTP地址或租约时间对象
 type ExtraDhcpOption struct {
 
 	// 功能说明：子网配置的NTP地址名称或子网配置的租约到期名称。 约束：目前只支持字段“ntp”或“addresstime”
@@ -58,13 +58,18 @@ func (c ExtraDhcpOptionOptName) MarshalJSON() ([]byte, error) {
 
 func (c *ExtraDhcpOptionOptName) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

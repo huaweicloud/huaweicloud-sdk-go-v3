@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项操作的用户
+// IssueRecordV4User 工作项操作的用户
 type IssueRecordV4User struct {
 
 	// 用户数字id

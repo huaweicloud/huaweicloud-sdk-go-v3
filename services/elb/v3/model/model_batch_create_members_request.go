@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateMembersRequest Request Object
 type BatchCreateMembersRequest struct {
 
 	// 后端服务器组ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTracedEventsRequest Request Object
 type ListTracedEventsRequest struct {
 
 	// 查询数据起始时间

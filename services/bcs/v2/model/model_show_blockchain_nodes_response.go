@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBlockchainNodesResponse Response Object
 type ShowBlockchainNodesResponse struct {
 
 	// key:组织名，value：组织详细信息

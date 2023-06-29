@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRtcAbnormalEventDimensionResponse Response Object
 type ListRtcAbnormalEventDimensionResponse struct {
 
 	// 异常体验列表

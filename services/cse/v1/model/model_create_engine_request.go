@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEngineRequest Request Object
 type CreateEngineRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWhiteBlackIpRuleResponse Response Object
 type ShowWhiteBlackIpRuleResponse struct {
 
 	// 规则id

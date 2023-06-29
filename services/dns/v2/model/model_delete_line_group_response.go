@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteLineGroupResponse Response Object
 type DeleteLineGroupResponse struct {
 
 	// 线路分组名称。

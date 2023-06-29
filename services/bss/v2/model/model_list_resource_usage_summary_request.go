@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceUsageSummaryRequest Request Object
 type ListResourceUsageSummaryRequest struct {
 
 	// 语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文

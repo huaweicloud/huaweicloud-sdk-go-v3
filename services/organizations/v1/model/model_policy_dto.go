@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 包含有关策略的详细信息的结构。
+// PolicyDto 包含有关策略的详细信息的结构。
 type PolicyDto struct {
 
 	// 策略的文本内容。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowConfigSettingRequest Request Object
 type ShowConfigSettingRequest struct {
 
 	// 任务id

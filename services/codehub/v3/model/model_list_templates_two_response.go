@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTemplatesTwoResponse Response Object
 type ListTemplatesTwoResponse struct {
 	Error *Error `json:"error,omitempty"`
 

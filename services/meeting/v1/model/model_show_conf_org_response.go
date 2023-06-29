@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConfOrgResponse Response Object
 type ShowConfOrgResponse struct {
 
 	// SP管理员根据会议ID查询该会议归属的企业ID。

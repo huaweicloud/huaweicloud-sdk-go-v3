@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDatabasesResponse Response Object
 type ListDatabasesResponse struct {
 
 	// 逻辑库相关信息的集合

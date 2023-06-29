@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// spark自定义计算规格
+// SparkCalcSpec spark自定义计算规格
 type SparkCalcSpec struct {
 
 	// driver内存

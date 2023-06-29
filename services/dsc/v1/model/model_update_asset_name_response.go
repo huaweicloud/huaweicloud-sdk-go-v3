@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAssetNameResponse Response Object
 type UpdateAssetNameResponse struct {
 
 	// 返回消息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowServerLimitsResponse Response Object
 type ShowServerLimitsResponse struct {
 	Absolute       *ServerLimits `json:"absolute,omitempty"`
 	HttpStatusCode int           `json:"-"`

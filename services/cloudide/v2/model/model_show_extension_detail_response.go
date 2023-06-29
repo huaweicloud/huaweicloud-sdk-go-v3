@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowExtensionDetailResponse Response Object
 type ShowExtensionDetailResponse struct {
 
 	// 插件列表查询结果集合

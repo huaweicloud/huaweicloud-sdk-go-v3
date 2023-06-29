@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个单词的发音评测结果
+// Word 单个单词的发音评测结果
 type Word struct {
 
 	// 去除了所有标点符号后的原始文本 前端调用接口后推荐使用“​text​”来在UI 中展示结果

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNodesResponse Response Object
 type ListNodesResponse struct {
 
 	// DDM实例节点信息列表的集合。

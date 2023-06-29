@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLakeFormationInstanceRequest Request Object
 type DeleteLakeFormationInstanceRequest struct {
 
 	// 是否放入回收站

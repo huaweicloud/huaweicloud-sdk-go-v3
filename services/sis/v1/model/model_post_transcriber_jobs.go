@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostTranscriberJobs
 type PostTranscriberJobs struct {
 	Config *TranscriberConfig `json:"config"`
 

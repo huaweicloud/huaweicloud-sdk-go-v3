@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待更新的标签集
+// BatchUpdateNodeLabelReq 待更新的标签集
 type BatchUpdateNodeLabelReq struct {
 
 	// 标签列表

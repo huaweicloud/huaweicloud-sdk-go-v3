@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSubscriptionsResponse Response Object
 type ListSubscriptionsResponse struct {
 
 	// 请求的唯一标识ID。

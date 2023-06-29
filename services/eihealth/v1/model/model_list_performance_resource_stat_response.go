@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPerformanceResourceStatResponse Response Object
 type ListPerformanceResourceStatResponse struct {
 
 	// 性能加速资源总数

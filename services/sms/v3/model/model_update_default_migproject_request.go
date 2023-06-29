@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDefaultMigprojectRequest Request Object
 type UpdateDefaultMigprojectRequest struct {
 
 	// 迁移项目ID

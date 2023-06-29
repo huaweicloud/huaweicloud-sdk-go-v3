@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 浮点数统计信息
+// DoubleColumnStatisticsData 浮点数统计信息
 type DoubleColumnStatisticsData struct {
 
 	// 列中浮点数最小值

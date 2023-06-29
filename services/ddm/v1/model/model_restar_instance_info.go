@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto restart Body Object
+// RestarInstanceInfo This is a auto restart Body Object
 type RestarInstanceInfo struct {
 
 	// 重启的类型，soft或者hard。 - soft表示软重启（只重启进程）。 - hard表示强制重启（重启虚拟机）。
@@ -55,13 +55,18 @@ func (c RestarInstanceInfoType) MarshalJSON() ([]byte, error) {
 
 func (c *RestarInstanceInfoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

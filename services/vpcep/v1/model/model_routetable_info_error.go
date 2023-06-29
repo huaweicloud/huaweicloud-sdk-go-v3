@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 当修改终端节点子网路由表失败时，返回错误提示信息
+// RoutetableInfoError 当修改终端节点子网路由表失败时，返回错误提示信息
 type RoutetableInfoError struct {
 
 	// 绑定终端节点子网路由表失败信息。

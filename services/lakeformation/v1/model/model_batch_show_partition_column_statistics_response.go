@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowPartitionColumnStatisticsResponse Response Object
 type BatchShowPartitionColumnStatisticsResponse struct {
 
 	// 分区统计信息的数量

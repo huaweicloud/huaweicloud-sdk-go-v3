@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成短链请求体。
+// CreateResolveTaskRequestBody 生成短链请求体。
 type CreateResolveTaskRequestBody struct {
 
 	// 智能信息模板ID，由9位数字组成。

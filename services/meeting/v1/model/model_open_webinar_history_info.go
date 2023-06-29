@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 历史召开研讨会议信息。
+// OpenWebinarHistoryInfo 历史召开研讨会议信息。
 type OpenWebinarHistoryInfo struct {
 
 	// 网络研讨会ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIssuedCouponQuotasResponse Response Object
 type ListIssuedCouponQuotasResponse struct {
 
 	// 查询的记录总数。

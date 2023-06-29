@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadSignatureFileRequest Request Object
 type UploadSignatureFileRequest struct {
 
 	// 描述

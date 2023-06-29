@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 探针配置
+// AgentConfig 探针配置
 type AgentConfig struct {
 
 	// 探针id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCaseCategoriesRequest Request Object
 type ListCaseCategoriesRequest struct {
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCloudWafPostPaidResourceRequest Request Object
 type DeleteCloudWafPostPaidResourceRequest struct {
 
 	// 区域id

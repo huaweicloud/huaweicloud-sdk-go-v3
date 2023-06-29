@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchInviteMembersToChannelRequest Request Object
 type BatchInviteMembersToChannelRequest struct {
 	Body *BatchInviteMembersToChannelRequestBody `json:"body,omitempty"`
 }

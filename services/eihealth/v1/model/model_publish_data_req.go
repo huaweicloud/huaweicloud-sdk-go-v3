@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发布数据资产请求体
+// PublishDataReq 发布数据资产请求体
 type PublishDataReq struct {
 
 	// 资产名

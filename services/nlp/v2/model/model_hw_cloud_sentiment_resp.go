@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// result字段数据结构说明
+// HwCloudSentimentResp result字段数据结构说明
 type HwCloudSentimentResp struct {
 
 	// 该文本的分析结果标签，取值如下： 0 负向 1 正向

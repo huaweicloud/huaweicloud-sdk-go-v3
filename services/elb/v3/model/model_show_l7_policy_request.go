@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowL7PolicyRequest Request Object
 type ShowL7PolicyRequest struct {
 
 	// 转发策略ID。

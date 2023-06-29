@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建带宽的请求体
+// CreateSharedBandwidthOption 创建带宽的请求体
 type CreateSharedBandwidthOption struct {
 
 	// 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建共享带宽时，给共享带宽绑定企业项目ID。
@@ -70,13 +70,18 @@ func (c CreateSharedBandwidthOptionChargeMode) MarshalJSON() ([]byte, error) {
 
 func (c *CreateSharedBandwidthOptionChargeMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

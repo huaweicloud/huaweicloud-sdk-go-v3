@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportPointsResponse Response Object
 type ImportPointsResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

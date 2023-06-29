@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDataobjectRelationRequest Request Object
 type DeleteDataobjectRelationRequest struct {
 
 	// application/json;charset=UTF-8

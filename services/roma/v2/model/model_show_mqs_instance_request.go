@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMqsInstanceRequest Request Object
 type ShowMqsInstanceRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// update Endpoint request
+// UpdateEndpointRequestBody update Endpoint request
 type UpdateEndpointRequestBody struct {
 	Endpoint *UpdateEndpointOption `json:"endpoint"`
 }

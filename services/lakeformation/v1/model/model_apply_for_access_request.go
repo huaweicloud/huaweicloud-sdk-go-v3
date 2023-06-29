@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ApplyForAccessRequest Request Object
 type ApplyForAccessRequest struct {
 
 	// LakeFormation实例ID

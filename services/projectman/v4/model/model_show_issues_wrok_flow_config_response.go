@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIssuesWrokFlowConfigResponse Response Object
 type ShowIssuesWrokFlowConfigResponse struct {
 
 	// 流转数据

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 逻辑卷信息
+// LogicalVolumes 逻辑卷信息
 type LogicalVolumes struct {
 
 	// 块数量

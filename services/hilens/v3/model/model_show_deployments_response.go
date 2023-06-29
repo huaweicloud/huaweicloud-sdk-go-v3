@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeploymentsResponse Response Object
 type ShowDeploymentsResponse struct {
 
 	// 部署的全部数量

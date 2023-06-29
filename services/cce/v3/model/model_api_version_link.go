@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// API版本的URL链接信息。
+// ApiVersionLink API版本的URL链接信息。
 type ApiVersionLink struct {
 
 	// API版本信息的链接。
@@ -54,13 +54,18 @@ func (c ApiVersionLinkRel) MarshalJSON() ([]byte, error) {
 
 func (c *ApiVersionLinkRel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

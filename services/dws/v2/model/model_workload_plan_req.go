@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源管理计划
+// WorkloadPlanReq 资源管理计划
 type WorkloadPlanReq struct {
 
 	// 计划名称

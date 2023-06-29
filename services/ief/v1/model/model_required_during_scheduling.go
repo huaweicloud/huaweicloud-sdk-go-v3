@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 强制使用定义的规则调度，且不会影响已经在节点上运行的Pod。即强制选择调度到满足规则的节点，不会调度到不满足规则的节点。
+// RequiredDuringScheduling 强制使用定义的规则调度，且不会影响已经在节点上运行的Pod。即强制选择调度到满足规则的节点，不会调度到不满足规则的节点。
 type RequiredDuringScheduling struct {
 
 	// 节点选择规则

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBucketsRequest Request Object
 type ListBucketsRequest struct {
 
 	// 已授权

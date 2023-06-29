@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SaveLayoutResponse Response Object
 type SaveLayoutResponse struct {
 	HttpStatusCode int `json:"-"`
 }

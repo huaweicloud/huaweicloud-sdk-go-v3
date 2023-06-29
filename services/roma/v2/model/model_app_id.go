@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用ID
+// AppId 应用ID
 type AppId struct {
 }
 

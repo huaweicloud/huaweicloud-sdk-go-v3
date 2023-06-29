@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求失败时为空。
+// ShowGraphRespGraph 请求失败时为空。
 type ShowGraphRespGraph struct {
 
 	// 图ID。

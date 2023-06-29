@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBackupRecordsResponse Response Object
 type ListBackupRecordsResponse struct {
 
 	// 返回记录数。

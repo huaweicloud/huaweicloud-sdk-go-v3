@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTriggersRequest Request Object
 type ListTriggersRequest struct {
 
 	// 目标函数的urn

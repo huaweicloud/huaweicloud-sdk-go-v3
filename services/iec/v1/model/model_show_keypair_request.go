@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowKeypairRequest Request Object
 type ShowKeypairRequest struct {
 
 	// 密钥名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListComputingResourceFlavorsRequest Request Object
 type ListComputingResourceFlavorsRequest struct {
 
 	// 可用区

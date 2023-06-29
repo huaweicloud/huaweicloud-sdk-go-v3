@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 运行流水线请求体
+// RunPipelineDto 运行流水线请求体
 type RunPipelineDto struct {
 
 	// 使用的源

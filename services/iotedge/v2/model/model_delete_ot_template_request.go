@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteOtTemplateRequest Request Object
 type DeleteOtTemplateRequest struct {
 
 	// 模板id，节点下唯一。

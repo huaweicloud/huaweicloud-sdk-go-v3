@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteChannelResponse Response Object
 type DeleteChannelResponse struct {
 
 	// 操作记录id

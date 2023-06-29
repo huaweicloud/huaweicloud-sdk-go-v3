@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateGatewayResponseV2Request Request Object
 type CreateGatewayResponseV2Request struct {
 
 	// 实例ID，在API网关控制台的“实例信息”中获取。

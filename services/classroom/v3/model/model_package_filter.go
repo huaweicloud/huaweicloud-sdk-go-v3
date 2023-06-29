@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取租户的习题库过滤字段
+// PackageFilter 获取租户的习题库过滤字段
 type PackageFilter struct {
 
 	// 需查询的习题库名称

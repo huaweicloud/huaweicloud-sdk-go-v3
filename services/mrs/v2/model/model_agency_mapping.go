@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户（组）与IAM委托的映射关系结构体
+// AgencyMapping 用户（组）与IAM委托的映射关系结构体
 type AgencyMapping struct {
 
 	// 该映射绑定的IAM委托名称。

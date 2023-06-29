@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateOrDeleteTagsRequest Request Object
 type BatchCreateOrDeleteTagsRequest struct {
 
 	// 实例ID。

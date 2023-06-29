@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 推送文件请求体。
+// PushFileRequestBody 推送文件请求体。
 type PushFileRequestBody struct {
 
 	// 推送文件固定填写push。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEventsRequest Request Object
 type ListEventsRequest struct {
 
 	// 查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天

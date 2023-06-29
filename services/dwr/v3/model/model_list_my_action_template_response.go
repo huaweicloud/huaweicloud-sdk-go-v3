@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMyActionTemplateResponse Response Object
 type ListMyActionTemplateResponse struct {
 
 	// 列表条目数

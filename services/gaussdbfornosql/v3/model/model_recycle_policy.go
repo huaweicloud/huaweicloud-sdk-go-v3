@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 回收策略。
+// RecyclePolicy 回收策略。
 type RecyclePolicy struct {
 
 	// 策略保持时长（1-7天），天数为正整数，默认7天。

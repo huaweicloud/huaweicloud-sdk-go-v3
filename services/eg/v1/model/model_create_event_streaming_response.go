@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEventStreamingResponse Response Object
 type CreateEventStreamingResponse struct {
 
 	// 事件流ID

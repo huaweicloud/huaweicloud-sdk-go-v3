@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计划周期信息
+// PlanCycle 计划周期信息
 type PlanCycle struct {
 
 	// 计划开始时间，要求用UTC时间表示。如2020-03-04

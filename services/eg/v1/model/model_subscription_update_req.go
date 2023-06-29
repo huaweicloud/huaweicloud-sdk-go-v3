@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新订阅，全量更新订阅源和目标
+// SubscriptionUpdateReq 更新订阅，全量更新订阅源和目标
 type SubscriptionUpdateReq struct {
 
 	// 订阅描述

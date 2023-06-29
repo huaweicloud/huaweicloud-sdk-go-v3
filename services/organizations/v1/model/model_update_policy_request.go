@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePolicyRequest Request Object
 type UpdatePolicyRequest struct {
 
 	// 策略的唯一标识符（ID）。
@@ -60,13 +60,18 @@ func (c UpdatePolicyRequestXLanguage) MarshalJSON() ([]byte, error) {
 
 func (c *UpdatePolicyRequestXLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

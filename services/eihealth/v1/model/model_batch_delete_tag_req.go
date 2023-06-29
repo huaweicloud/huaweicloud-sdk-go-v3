@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除镜像tag请求体
+// BatchDeleteTagReq 批量删除镜像tag请求体
 type BatchDeleteTagReq struct {
 
 	// 删除镜像tag名称列表

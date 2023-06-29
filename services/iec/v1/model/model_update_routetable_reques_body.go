@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新路由表请求体
+// UpdateRoutetableRequesBody 更新路由表请求体
 type UpdateRoutetableRequesBody struct {
 	Routetable *UpdateRoutetableOption `json:"routetable,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 菜单催审返回体。
+// PushMenuInfoResponseModel 菜单催审返回体。
 type PushMenuInfoResponseModel struct {
 	Data *PushMenuInfoResponseModelData `json:"data,omitempty"`
 }

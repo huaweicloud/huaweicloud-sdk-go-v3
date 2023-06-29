@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePrepaidCloudWafResponse Response Object
 type CreatePrepaidCloudWafResponse struct {
 
 	// 订单id

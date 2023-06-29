@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportCertificateAuthorityCertificateRequest Request Object
 type ExportCertificateAuthorityCertificateRequest struct {
 
 	// 所要导出的CA证书ID。

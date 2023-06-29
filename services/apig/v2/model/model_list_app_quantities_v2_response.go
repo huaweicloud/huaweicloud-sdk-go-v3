@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppQuantitiesV2Response Response Object
 type ListAppQuantitiesV2Response struct {
 
 	// 已进行API访问授权的APP个数

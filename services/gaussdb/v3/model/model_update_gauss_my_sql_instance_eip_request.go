@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateGaussMySqlInstanceEipRequest Request Object
 type UpdateGaussMySqlInstanceEipRequest struct {
 
 	// 语言。

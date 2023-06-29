@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVpcTagsRequest Request Object
 type ListVpcTagsRequest struct {
 }
 

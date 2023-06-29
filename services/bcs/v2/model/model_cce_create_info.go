@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建新集群信息
+// CceCreateInfo 创建新集群信息
 type CceCreateInfo struct {
 
 	// 集群节点数

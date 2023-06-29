@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of playbook
+// PlaybookInfo Information of playbook
 type PlaybookInfo struct {
 
 	// Id value

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePostPaidServersRequest Request Object
 type CreatePostPaidServersRequest struct {
 
 	// 保证客户端请求幂等性的标识

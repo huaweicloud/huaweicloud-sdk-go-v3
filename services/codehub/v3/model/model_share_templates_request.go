@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShareTemplatesRequest Request Object
 type ShareTemplatesRequest struct {
 
 	// 仓库id

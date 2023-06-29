@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePipelineByTemplateRequest Request Object
 type CreatePipelineByTemplateRequest struct {
 	Body *TemplateCddl `json:"body,omitempty"`
 }

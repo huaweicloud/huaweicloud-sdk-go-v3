@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BindingVifDetails
 type BindingVifDetails struct {
 
 	// 功能说明：取值为true，表示是虚拟机的主网卡。

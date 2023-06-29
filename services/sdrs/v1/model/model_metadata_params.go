@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例元数据数据结构
+// MetadataParams 保护实例元数据数据结构
 type MetadataParams struct {
 
 	// 保护实例元数据中资源冻结的字段。 true：表示资源被冻结。 空：表示资源没有被冻结。

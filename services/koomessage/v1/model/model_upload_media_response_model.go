@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 上传素材返回信息。
+// UploadMediaResponseModel 上传素材返回信息。
 type UploadMediaResponseModel struct {
 
 	// 资源类型。 - 1：图片

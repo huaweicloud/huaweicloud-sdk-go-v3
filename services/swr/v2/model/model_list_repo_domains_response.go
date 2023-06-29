@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRepoDomainsResponse Response Object
 type ListRepoDomainsResponse struct {
 
 	// 共享租户列表

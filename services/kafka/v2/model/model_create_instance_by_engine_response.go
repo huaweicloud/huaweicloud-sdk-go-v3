@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateInstanceByEngineResponse Response Object
 type CreateInstanceByEngineResponse struct {
 
 	// 实例ID

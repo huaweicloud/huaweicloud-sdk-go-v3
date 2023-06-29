@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待重建数据的云手机信息。
+// RestoreInfo 待重建数据的云手机信息。
 type RestoreInfo struct {
 
 	// 云手机ID

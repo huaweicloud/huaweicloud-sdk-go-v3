@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LB状态树的后端服务器组的后端服务器状态信息
+// LoadBalancerStatusMember LB状态树的后端服务器组的后端服务器状态信息
 type LoadBalancerStatusMember struct {
 
 	// 后端服务器配置状态。取值：ACTIVE表示使用中。

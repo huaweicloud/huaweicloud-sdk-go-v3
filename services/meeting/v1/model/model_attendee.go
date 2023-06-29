@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 与会者信息。
+// Attendee 与会者信息。
 type Attendee struct {
 
 	// 与会者的用户UUID。

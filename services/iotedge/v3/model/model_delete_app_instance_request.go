@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAppInstanceRequest Request Object
 type DeleteAppInstanceRequest struct {
 
 	// 边缘集群ID

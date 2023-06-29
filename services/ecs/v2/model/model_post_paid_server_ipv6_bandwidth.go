@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IPV6共享带宽。
+// PostPaidServerIpv6Bandwidth IPV6共享带宽。
 type PostPaidServerIpv6Bandwidth struct {
 
 	// 绑定的共享带宽ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaListKeypairsResult
 type NovaListKeypairsResult struct {
 	Keypair *NovaSimpleKeypair `json:"keypair"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowsResponse Response Object
 type ListWorkflowsResponse struct {
 
 	// 列表总条数。

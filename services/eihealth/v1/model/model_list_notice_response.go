@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNoticeResponse Response Object
 type ListNoticeResponse struct {
 
 	// 通知消息总数

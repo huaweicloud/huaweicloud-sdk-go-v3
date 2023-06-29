@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizePcrTestRecordResponse Response Object
 type RecognizePcrTestRecordResponse struct {
 	Result         *PcrTestRecordResult `json:"result,omitempty"`
 	HttpStatusCode int                  `json:"-"`

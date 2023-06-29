@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组更新请求体
+// EdgeGroupUpdateRequest 边缘节点组更新请求体
 type EdgeGroupUpdateRequest struct {
 
 	// 边缘节点组描述

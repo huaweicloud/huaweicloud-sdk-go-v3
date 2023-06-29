@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSqlAlarmRuleRequest Request Object
 type DeleteSqlAlarmRuleRequest struct {
 
 	// Sql告警规则id

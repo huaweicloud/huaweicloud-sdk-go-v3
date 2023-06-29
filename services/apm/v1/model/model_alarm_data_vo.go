@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警信息视图。
+// AlarmDataVo 告警信息视图。
 type AlarmDataVo struct {
 
 	// 告警通知id。

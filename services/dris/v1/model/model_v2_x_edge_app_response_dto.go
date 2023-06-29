@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：EdgeApp传输对象。
+// V2XEdgeAppResponseDto **参数说明**：EdgeApp传输对象。
 type V2XEdgeAppResponseDto struct {
 
 	// **参数说明**：Edge ID，用于唯一标识一个Edge。

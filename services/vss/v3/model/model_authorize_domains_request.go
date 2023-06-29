@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AuthorizeDomainsRequest Request Object
 type AuthorizeDomainsRequest struct {
 	Body *AuthorizeDomainsRequestBody `json:"body,omitempty"`
 }

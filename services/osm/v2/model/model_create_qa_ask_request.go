@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateQaAskRequest Request Object
 type CreateQaAskRequest struct {
 
 	// 调用智能客服服务标志。

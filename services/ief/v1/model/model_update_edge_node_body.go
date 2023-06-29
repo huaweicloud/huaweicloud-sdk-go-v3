@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新节点配置
+// UpdateEdgeNodeBody 更新节点配置
 type UpdateEdgeNodeBody struct {
 	Node *EdgeNodeUpdate `json:"node"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateCertificateV2Response Response Object
 type DisassociateCertificateV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

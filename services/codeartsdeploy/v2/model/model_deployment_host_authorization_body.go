@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 登录主机鉴权，使用密码登录则填写密码即可，使用密钥则填写密钥，二选一即可。
+// DeploymentHostAuthorizationBody 登录主机鉴权，使用密码登录则填写密码即可，使用密钥则填写密钥，二选一即可。
 type DeploymentHostAuthorizationBody struct {
 
 	// 用户名，可输入中英文，数字和符号(-_.)。
@@ -63,13 +63,18 @@ func (c DeploymentHostAuthorizationBodyTrustedType) MarshalJSON() ([]byte, error
 
 func (c *DeploymentHostAuthorizationBodyTrustedType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

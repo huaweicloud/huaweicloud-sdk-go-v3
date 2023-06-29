@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 阻断页面
+// CcrulesListInfoActionDetailResponse 阻断页面
 type CcrulesListInfoActionDetailResponse struct {
 
 	// 内容类型，值可为“application/json”、“text/html”、“text/xml”。
@@ -62,13 +62,18 @@ func (c CcrulesListInfoActionDetailResponseContentType) MarshalJSON() ([]byte, e
 
 func (c *CcrulesListInfoActionDetailResponseContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

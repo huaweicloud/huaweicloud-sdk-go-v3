@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 统计信息
+// CreateCommitResponseBodyStats 统计信息
 type CreateCommitResponseBodyStats struct {
 
 	// 变更增加的行数

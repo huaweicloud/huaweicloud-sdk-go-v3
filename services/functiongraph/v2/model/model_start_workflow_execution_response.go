@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartWorkflowExecutionResponse Response Object
 type StartWorkflowExecutionResponse struct {
 
 	// 错误码

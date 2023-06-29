@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePubInfoRequest Request Object
 type UpdatePubInfoRequest struct {
 
 	// 服务号ID。

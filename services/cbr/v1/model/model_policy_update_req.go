@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 策略修改body
+// PolicyUpdateReq 策略修改body
 type PolicyUpdateReq struct {
 	Policy *PolicyUpdate `json:"policy"`
 }

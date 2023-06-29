@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCancelAuthorizationInterfaceRequest Request Object
 type BatchCancelAuthorizationInterfaceRequest struct {
 
 	// instance id

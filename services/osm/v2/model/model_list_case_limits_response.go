@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCaseLimitsResponse Response Object
 type ListCaseLimitsResponse struct {
 	Config         *TenantConfigV2 `json:"config,omitempty"`
 	HttpStatusCode int             `json:"-"`

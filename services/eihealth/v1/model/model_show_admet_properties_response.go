@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAdmetPropertiesResponse Response Object
 type ShowAdmetPropertiesResponse struct {
 
 	// 分子ADMET属性字典

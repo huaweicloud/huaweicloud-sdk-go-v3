@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeHealthCodeResponse Response Object
 type RecognizeHealthCodeResponse struct {
 	Result         *HealthCodeResult `json:"result,omitempty"`
 	HttpStatusCode int               `json:"-"`

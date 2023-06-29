@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// Tag 标签
 type Tag struct {
 
 	// 标签key，最大长度36个字符。不能为空，只能包含大小写字母，数字，中划线“-”，下划线“_”

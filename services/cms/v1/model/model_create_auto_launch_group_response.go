@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAutoLaunchGroupResponse Response Object
 type CreateAutoLaunchGroupResponse struct {
 
 	// 创建好的智能购买组

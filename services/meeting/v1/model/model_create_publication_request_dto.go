@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发布信息。
+// CreatePublicationRequestDto 发布信息。
 type CreatePublicationRequestDto struct {
 
 	// 发布名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源库中的对象类型信息。
+// ObjectTypeInfo 源库中的对象类型信息。
 type ObjectTypeInfo struct {
 
 	// 是否选择全部object类型。取值为true时，不包含USER。

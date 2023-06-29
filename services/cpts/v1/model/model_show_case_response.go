@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCaseResponse Response Object
 type ShowCaseResponse struct {
 
 	// 响应码

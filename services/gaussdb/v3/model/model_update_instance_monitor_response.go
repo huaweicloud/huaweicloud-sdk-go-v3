@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceMonitorResponse Response Object
 type UpdateInstanceMonitorResponse struct {
 
 	// 修改秒级监控的任务流ID

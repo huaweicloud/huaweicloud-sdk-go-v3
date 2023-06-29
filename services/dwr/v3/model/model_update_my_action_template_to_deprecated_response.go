@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateMyActionTemplateToDeprecatedResponse Response Object
 type UpdateMyActionTemplateToDeprecatedResponse struct {
 	XRequestId *string `json:"x-request-id,omitempty"`
 

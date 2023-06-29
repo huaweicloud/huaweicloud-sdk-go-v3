@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSnapshotDetailsResponse Response Object
 type ListSnapshotDetailsResponse struct {
 	Snapshot       *SnapshotDetail `json:"snapshot,omitempty"`
 	HttpStatusCode int             `json:"-"`

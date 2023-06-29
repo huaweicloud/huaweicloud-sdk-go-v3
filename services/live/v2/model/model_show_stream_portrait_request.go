@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowStreamPortraitRequest Request Object
 type ShowStreamPortraitRequest struct {
 
 	// 播放域名。

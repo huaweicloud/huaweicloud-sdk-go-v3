@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CollectKeyWordsRequest Request Object
 type CollectKeyWordsRequest struct {
 
 	// qabot编号，UUID格式。

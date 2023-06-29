@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建自定义告警模板的告警策略。
+// AlarmTemplateCondition 创建自定义告警模板的告警策略。
 type AlarmTemplateCondition struct {
 
 	// 告警阈值的比较条件，可以是>、=、<、>=、<=。

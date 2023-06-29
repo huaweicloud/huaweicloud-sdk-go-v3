@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建复制对请求体数据结构
+// CreateReplicationRequestParams 创建复制对请求体数据结构
 type CreateReplicationRequestParams struct {
 
 	// 保护组的ID。

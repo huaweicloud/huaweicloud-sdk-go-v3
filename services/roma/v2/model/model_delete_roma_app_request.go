@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRomaAppRequest Request Object
 type DeleteRomaAppRequest struct {
 
 	// 应用ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 专属主机的配额。
+// RespQuotaSet 专属主机的配额。
 type RespQuotaSet struct {
 
 	// 配额类别。

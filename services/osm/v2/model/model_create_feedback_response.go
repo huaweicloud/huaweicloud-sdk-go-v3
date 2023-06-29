@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFeedbackResponse Response Object
 type CreateFeedbackResponse struct {
 
 	// 错误码

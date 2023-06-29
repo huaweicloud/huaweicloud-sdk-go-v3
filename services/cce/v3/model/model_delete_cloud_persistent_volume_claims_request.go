@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCloudPersistentVolumeClaimsRequest Request Object
 type DeleteCloudPersistentVolumeClaimsRequest struct {
 
 	// 需要删除的PersistentVolumClaim的名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetPasswordResponse Response Object
 type ResetPasswordResponse struct {
 
 	// 密码验证剩余次数

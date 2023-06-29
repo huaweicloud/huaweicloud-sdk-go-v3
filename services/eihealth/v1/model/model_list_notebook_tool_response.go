@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNotebookToolResponse Response Object
 type ListNotebookToolResponse struct {
 
 	// 总个数

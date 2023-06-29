@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEdgeNodeDeviceResponse Response Object
 type UpdateEdgeNodeDeviceResponse struct {
 
 	// 工业终端设备预留字段

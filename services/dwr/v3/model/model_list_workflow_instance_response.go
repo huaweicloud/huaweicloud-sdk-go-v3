@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowInstanceResponse Response Object
 type ListWorkflowInstanceResponse struct {
 
 	// 满足条件的运行实例个数。

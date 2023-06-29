@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSnapshotRequest Request Object
 type ShowSnapshotRequest struct {
 
 	// 快照ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomerselfResourceRecordDetailsResponse Response Object
 type ListCustomerselfResourceRecordDetailsResponse struct {
 
 	// 资源详单数据记录。 具体请参见表1。

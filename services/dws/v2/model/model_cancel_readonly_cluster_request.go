@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelReadonlyClusterRequest Request Object
 type CancelReadonlyClusterRequest struct {
 
 	// 集群的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEnvironmentDetailRequest Request Object
 type ShowEnvironmentDetailRequest struct {
 
 	// 环境ID。

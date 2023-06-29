@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateResJobResponse Response Object
 type UpdateResJobResponse struct {
 
 	// 是否成功

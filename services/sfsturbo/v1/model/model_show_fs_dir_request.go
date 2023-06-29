@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowFsDirRequest Request Object
 type ShowFsDirRequest struct {
 
 	// MIME类型

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 卷配置
+// Volumes 卷配置
 type Volumes struct {
 
 	// 卷名称，小写字母或数字，最长63个字符

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 绑定策略返回体
+// VaultPolicyResp 绑定策略返回体
 type VaultPolicyResp struct {
 
 	// 目标region的vault ID，仅设置复制策略时有。

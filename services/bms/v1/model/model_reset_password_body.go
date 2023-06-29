@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 一键重置裸金属服务器密码接口请求结构体
+// ResetPasswordBody 一键重置裸金属服务器密码接口请求结构体
 type ResetPasswordBody struct {
 	ResetPassword *ResetPassword `json:"reset-password"`
 }

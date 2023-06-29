@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新云服务器Body体。
+// UpdateServerOption 更新云服务器Body体。
 type UpdateServerOption struct {
 
 	// 修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。

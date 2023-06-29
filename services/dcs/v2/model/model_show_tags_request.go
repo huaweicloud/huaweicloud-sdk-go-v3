@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTagsRequest Request Object
 type ShowTagsRequest struct {
 
 	// 实例ID。

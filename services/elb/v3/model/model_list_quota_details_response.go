@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListQuotaDetailsResponse Response Object
 type ListQuotaDetailsResponse struct {
 
 	// 请求ID。  注：自动生成 。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 人物位置信息，该数组有四个值，分别代表左上角的坐标和右下角的坐标。例如[207,522,340,567] 207代表的是左上角的坐标 522代表左上角的坐标 340代表的是右下角的坐标 567代表的是右下角的坐标。
+// VideoModerationImageDetailListFaceLocation 人物位置信息，该数组有四个值，分别代表左上角的坐标和右下角的坐标。例如[207,522,340,567] 207代表的是左上角的坐标 522代表左上角的坐标 340代表的是右下角的坐标 567代表的是右下角的坐标。
 type VideoModerationImageDetailListFaceLocation struct {
 
 	// 检测出人脸的左上角横坐标。

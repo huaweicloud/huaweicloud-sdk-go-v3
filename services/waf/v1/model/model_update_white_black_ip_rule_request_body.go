@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新黑白名单规则请求体，其中请求体中必须包含name、white以及addr或者ip_group_id中一个
+// UpdateWhiteBlackIpRuleRequestBody 更新黑白名单规则请求体，其中请求体中必须包含name、white以及addr或者ip_group_id中一个
 type UpdateWhiteBlackIpRuleRequestBody struct {
 
 	// 黑白名单规则名称

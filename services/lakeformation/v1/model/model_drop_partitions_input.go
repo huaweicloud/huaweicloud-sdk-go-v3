@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除分区信息
+// DropPartitionsInput 删除分区信息
 type DropPartitionsInput struct {
 
 	// 是否跳过不存在分区

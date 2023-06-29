@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteCustomLineResponse Response Object
 type DeleteCustomLineResponse struct {
 
 	// 解析线路ID。

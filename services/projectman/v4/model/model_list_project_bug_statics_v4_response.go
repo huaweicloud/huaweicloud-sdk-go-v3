@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProjectBugStaticsV4Response Response Object
 type ListProjectBugStaticsV4Response struct {
 
 	// bug统计

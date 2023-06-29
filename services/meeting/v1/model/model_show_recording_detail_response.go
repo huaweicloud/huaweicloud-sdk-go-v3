@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRecordingDetailResponse Response Object
 type ShowRecordingDetailResponse struct {
 
 	// 会议UUID。

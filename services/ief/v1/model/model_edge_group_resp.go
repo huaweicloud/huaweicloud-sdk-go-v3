@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组返回参数
+// EdgeGroupResp 边缘节点组返回参数
 type EdgeGroupResp struct {
 
 	// 边缘节点组ID

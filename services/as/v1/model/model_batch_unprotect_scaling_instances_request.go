@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUnprotectScalingInstancesRequest Request Object
 type BatchUnprotectScalingInstancesRequest struct {
 
 	// 实例ID。

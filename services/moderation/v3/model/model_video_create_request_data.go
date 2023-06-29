@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 视频数据输入
+// VideoCreateRequestData 视频数据输入
 type VideoCreateRequestData struct {
 
 	// 视频url地址

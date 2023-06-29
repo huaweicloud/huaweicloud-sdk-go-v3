@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeNodesResponse Response Object
 type ListEdgeNodesResponse struct {
 
 	// 总记录数

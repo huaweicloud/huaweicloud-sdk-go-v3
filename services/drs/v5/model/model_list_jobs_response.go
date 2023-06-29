@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListJobsResponse Response Object
 type ListJobsResponse struct {
 
 	// 列表中的项目总数，与分页无关。

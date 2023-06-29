@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetRoleResponse Response Object
 type SetRoleResponse struct {
 	HttpStatusCode int `json:"-"`
 }

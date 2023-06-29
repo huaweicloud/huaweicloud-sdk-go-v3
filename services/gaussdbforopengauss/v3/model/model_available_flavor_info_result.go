@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例可变更规格信息。
+// AvailableFlavorInfoResult 实例可变更规格信息。
 type AvailableFlavorInfoResult struct {
 
 	// 资源规格编码。

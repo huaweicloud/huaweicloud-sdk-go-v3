@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取Region环境入参。
+// BusinessEnvRequest 获取Region环境入参。
 type BusinessEnvRequest struct {
 
 	// 应用id。

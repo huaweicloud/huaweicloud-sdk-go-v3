@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 媒体接入(包括SBC和MCU)分组信息。
+// OrgGroupDto 媒体接入(包括SBC和MCU)分组信息。
 type OrgGroupDto struct {
 
 	// 分组Id。

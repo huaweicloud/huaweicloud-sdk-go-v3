@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量更新数据库对象选择消息体
+// BatchUpdateDatabaseObjectReq 批量更新数据库对象选择消息体
 type BatchUpdateDatabaseObjectReq struct {
 
 	// 批量更新数据库对象请求任务ID列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签详情。
+// BatchCreateResourceTag 标签详情。
 type BatchCreateResourceTag struct {
 
 	// 标签键。

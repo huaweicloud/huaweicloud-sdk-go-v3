@@ -281,6 +281,18 @@ func (i *DeleteSingleInstanceInvoker) Invoke() (*model.DeleteSingleInstanceRespo
 	}
 }
 
+type ExecuteClusterSwitchoverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteClusterSwitchoverInvoker) Invoke() (*model.ExecuteClusterSwitchoverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteClusterSwitchoverResponse), nil
+	}
+}
+
 type ListAvailableZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -686,6 +698,18 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowJobInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInfoInvoker) Invoke() (*model.ShowJobInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobInfoResponse), nil
 	}
 }
 

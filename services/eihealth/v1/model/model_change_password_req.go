@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改密码请求体
+// ChangePasswordReq 修改密码请求体
 type ChangePasswordReq struct {
 
 	// 原始密码

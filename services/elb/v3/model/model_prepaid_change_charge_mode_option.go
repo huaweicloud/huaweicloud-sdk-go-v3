@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 包周期选项，pay_type=prepaid或charge_mode为prepaid时填写。
+// PrepaidChangeChargeModeOption 包周期选项，pay_type=prepaid或charge_mode为prepaid时填写。
 type PrepaidChangeChargeModeOption struct {
 
 	// 是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
@@ -67,13 +67,18 @@ func (c PrepaidChangeChargeModeOptionPeriodType) MarshalJSON() ([]byte, error) {
 
 func (c *PrepaidChangeChargeModeOptionPeriodType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

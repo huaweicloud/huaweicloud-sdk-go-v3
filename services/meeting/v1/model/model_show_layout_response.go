@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLayoutResponse Response Object
 type ShowLayoutResponse struct {
 
 	// 结果码。 * 0：成功 * 非0：失败

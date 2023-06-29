@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportCertificateAuthorityCsrRequest Request Object
 type ExportCertificateAuthorityCsrRequest struct {
 
 	// 未激活的从属CA证书ID。

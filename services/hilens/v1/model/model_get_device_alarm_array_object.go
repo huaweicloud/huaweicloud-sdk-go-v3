@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备告警实体列表
+// GetDeviceAlarmArrayObject 设备告警实体列表
 type GetDeviceAlarmArrayObject struct {
 
 	// 设备告警记录ID

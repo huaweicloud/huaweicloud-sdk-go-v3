@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新资源分组，请求参数。
+// UpdateResourceGroupRequestBody 更新资源分组，请求参数。
 type UpdateResourceGroupRequestBody struct {
 
 	// 资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。

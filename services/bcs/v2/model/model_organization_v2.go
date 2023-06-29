@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组织信息
+// OrganizationV2 组织信息
 type OrganizationV2 struct {
 
 	// 组织名称

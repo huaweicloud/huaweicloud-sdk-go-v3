@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListJobsRequest Request Object
 type ListJobsRequest struct {
 
 	// 任务结束日期，当前只支持日期，不支持时间。格式为：yyyy-MM-dd，比如2019-03-27。

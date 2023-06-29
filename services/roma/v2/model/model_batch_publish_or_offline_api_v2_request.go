@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchPublishOrOfflineApiV2Request Request Object
 type BatchPublishOrOfflineApiV2Request struct {
 
 	// 实例ID

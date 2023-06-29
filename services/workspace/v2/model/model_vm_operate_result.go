@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作失败的桌面列表。
+// VmOperateResult 操作失败的桌面列表。
 type VmOperateResult struct {
 
 	// 桌面ID。

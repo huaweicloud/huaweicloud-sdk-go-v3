@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额详细信息。
+// QuotaDetail 配额详细信息。
 type QuotaDetail struct {
 
 	// 已使用的数量。

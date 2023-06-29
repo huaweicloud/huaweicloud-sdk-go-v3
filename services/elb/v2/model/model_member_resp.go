@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 后端云服务器响应体
+// MemberResp 后端云服务器响应体
 type MemberResp struct {
 
 	// 后端云服务器ID

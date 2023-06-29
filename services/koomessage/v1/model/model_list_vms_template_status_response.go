@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVmsTemplateStatusResponse Response Object
 type ListVmsTemplateStatusResponse struct {
 
 	// 状态码。

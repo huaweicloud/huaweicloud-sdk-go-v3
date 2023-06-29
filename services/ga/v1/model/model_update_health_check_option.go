@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新健康检查的详细信息。
+// UpdateHealthCheckOption 更新健康检查的详细信息。
 type UpdateHealthCheckOption struct {
 	Protocol *HealthCheckProtocol `json:"protocol,omitempty"`
 

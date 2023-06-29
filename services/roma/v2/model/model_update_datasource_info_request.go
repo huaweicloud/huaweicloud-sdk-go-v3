@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDatasourceInfoRequest Request Object
 type UpdateDatasourceInfoRequest struct {
 
 	// 实例ID

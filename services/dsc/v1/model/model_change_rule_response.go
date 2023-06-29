@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeRuleResponse Response Object
 type ChangeRuleResponse struct {
 
 	// 返回消息

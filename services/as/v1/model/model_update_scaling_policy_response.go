@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateScalingPolicyResponse Response Object
 type UpdateScalingPolicyResponse struct {
 
 	// 伸缩策略ID。

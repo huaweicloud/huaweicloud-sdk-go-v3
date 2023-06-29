@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEnvByNameRequest Request Object
 type ShowEnvByNameRequest struct {
 
 	// 环境名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVolumesRequest Request Object
 type ListVolumesRequest struct {
 
 	// 通过云硬盘ID进行分页查询。默认为查询第一页数据。

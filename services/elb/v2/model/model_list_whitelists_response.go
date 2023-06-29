@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWhitelistsResponse Response Object
 type ListWhitelistsResponse struct {
 
 	// 白名单对象的列表

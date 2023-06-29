@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAlertConfigRequest Request Object
 type ShowAlertConfigRequest struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSharedBandwidthRequest Request Object
 type CreateSharedBandwidthRequest struct {
 	Body *CreateSharedBandwidhRequestBody `json:"body,omitempty"`
 }

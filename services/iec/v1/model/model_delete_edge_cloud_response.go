@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEdgeCloudResponse Response Object
 type DeleteEdgeCloudResponse struct {
 
 	// 边缘任务ID。

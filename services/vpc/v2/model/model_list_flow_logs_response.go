@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFlowLogsResponse Response Object
 type ListFlowLogsResponse struct {
 
 	// flow_log对象列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群参数配置列表信息
+// ConfigurationParameterValues 集群参数配置列表信息
 type ConfigurationParameterValues struct {
 
 	// 集群参数配置列表

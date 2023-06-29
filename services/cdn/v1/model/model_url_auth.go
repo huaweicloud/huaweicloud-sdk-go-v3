@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// URL鉴权。
+// UrlAuth URL鉴权。
 type UrlAuth struct {
 
 	// A/B/C类防盗链开关（\"off\"/\"on\"）。

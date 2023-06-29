@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDesktopUserRequest Request Object
 type CreateDesktopUserRequest struct {
-	Body *CreateUserReq `json:"body,omitempty"`
+	Body *CreateUserRequest `json:"body,omitempty"`
 }
 
 func (o CreateDesktopUserRequest) String() string {

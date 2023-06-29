@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListInstancesRequest Request Object
 type ListInstancesRequest struct {
 
 	// 每页显示的条目数量 10/15/30

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListContainerNodesResponse Response Object
 type ListContainerNodesResponse struct {
 
 	// 容器节点总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ShowServerRemoteConsoleRequestBody This is a auto create Body Object
 type ShowServerRemoteConsoleRequestBody struct {
 	RemoteConsole *GetServerRemoteConsoleOption `json:"remote_console"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowQuotaResponse Response Object
 type ShowQuotaResponse struct {
 
 	// 请求ID。  注：自动生成 。

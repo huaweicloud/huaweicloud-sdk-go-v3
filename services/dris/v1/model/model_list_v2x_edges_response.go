@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListV2xEdgesResponse Response Object
 type ListV2xEdgesResponse struct {
 
 	// **参数说明**：总数。

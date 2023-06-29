@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicipResponse Response Object
 type ShowPublicipResponse struct {
 
 	// 本次请求的编号

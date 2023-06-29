@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSharedBandwidthRequest Request Object
 type DeleteSharedBandwidthRequest struct {
 
 	// 带宽唯一标识  约束： 当前仅支持删除共享带宽

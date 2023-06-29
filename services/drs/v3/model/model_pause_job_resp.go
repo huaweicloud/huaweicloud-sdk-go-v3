@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 暂停任务返回体
+// PauseJobResp 暂停任务返回体
 type PauseJobResp struct {
 
 	// 任务id

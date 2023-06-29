@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVocabularyRequest Request Object
 type ShowVocabularyRequest struct {
 
 	// 热词表id。

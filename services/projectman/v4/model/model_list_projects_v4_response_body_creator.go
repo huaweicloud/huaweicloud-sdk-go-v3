@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建者信息
+// ListProjectsV4ResponseBodyCreator 创建者信息
 type ListProjectsV4ResponseBodyCreator struct {
 
 	// 创建人numId

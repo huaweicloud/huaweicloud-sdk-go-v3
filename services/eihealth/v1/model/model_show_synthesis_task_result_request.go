@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSynthesisTaskResultRequest Request Object
 type ShowSynthesisTaskResultRequest struct {
 
 	// 分子合成路径规划任务ID

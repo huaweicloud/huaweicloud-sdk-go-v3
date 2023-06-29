@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteFsDirRequest Request Object
 type DeleteFsDirRequest struct {
 
 	// MIME类型

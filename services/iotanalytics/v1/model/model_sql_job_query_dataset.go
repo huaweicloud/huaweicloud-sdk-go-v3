@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL作业运行结果。
+// SqlJobQueryDataset SQL作业运行结果。
 type SqlJobQueryDataset struct {
 
 	// 作业类型。DDL, DCL, IMPORT, EXPORT, QUERY, INSERT.

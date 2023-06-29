@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOverviewsClassificationResponse Response Object
 type ListOverviewsClassificationResponse struct {
 	Domain *DomainClassificationItem `json:"domain,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePoolRequest Request Object
 type UpdatePoolRequest struct {
 
 	// 后端云服务器组id

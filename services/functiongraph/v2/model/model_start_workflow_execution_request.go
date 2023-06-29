@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartWorkflowExecutionRequest Request Object
 type StartWorkflowExecutionRequest struct {
 
 	// 函数流定义ID

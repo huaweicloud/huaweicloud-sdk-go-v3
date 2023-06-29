@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScalingTagInfosByTenantIdResponse Response Object
 type ListScalingTagInfosByTenantIdResponse struct {
 
 	// 资源标签。

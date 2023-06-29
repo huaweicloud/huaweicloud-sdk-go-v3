@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// HandleNotificationRequest Request Object
 type HandleNotificationRequest struct {
 	Body *HandleNotificationRequestBody `json:"body,omitempty"`
 }

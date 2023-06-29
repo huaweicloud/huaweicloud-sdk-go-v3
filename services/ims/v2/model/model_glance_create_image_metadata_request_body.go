@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建镜像请求体
+// GlanceCreateImageMetadataRequestBody 创建镜像请求体
 type GlanceCreateImageMetadataRequestBody struct {
 
 	// 镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
@@ -91,13 +91,18 @@ func (c GlanceCreateImageMetadataRequestBodyDiskFormat) MarshalJSON() ([]byte, e
 
 func (c *GlanceCreateImageMetadataRequestBodyDiskFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

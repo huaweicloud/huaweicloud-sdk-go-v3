@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAlertRuleResponse Response Object
 type DeleteAlertRuleResponse struct {
 
 	// rule_id

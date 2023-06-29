@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteGetCharactersResponse Response Object
 type ExecuteGetCharactersResponse struct {
 
 	// 配额

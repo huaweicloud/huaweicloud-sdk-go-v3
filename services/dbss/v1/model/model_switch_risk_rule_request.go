@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchRiskRuleRequest Request Object
 type SwitchRiskRuleRequest struct {
 
 	// 实例ID

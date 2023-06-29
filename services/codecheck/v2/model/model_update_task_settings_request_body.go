@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务配置高级选项的请求信息
+// UpdateTaskSettingsRequestBody 任务配置高级选项的请求信息
 type UpdateTaskSettingsRequestBody struct {
 
 	// 高级选项参数的相关信息

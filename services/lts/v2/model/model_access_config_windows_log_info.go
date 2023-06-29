@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 日志接入采集Windows事件日志
+// AccessConfigWindowsLogInfo 日志接入采集Windows事件日志
 type AccessConfigWindowsLogInfo struct {
 
 	// 采集Windows事件日志类型。Application：应用系统，System：系统，Security：安全，Setup：启动
@@ -68,13 +68,18 @@ func (c AccessConfigWindowsLogInfoCategorys) MarshalJSON() ([]byte, error) {
 
 func (c *AccessConfigWindowsLogInfoCategorys) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -122,13 +127,18 @@ func (c AccessConfigWindowsLogInfoEventLevel) MarshalJSON() ([]byte, error) {
 
 func (c *AccessConfigWindowsLogInfoEventLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDeployKeyRequest Request Object
 type DeleteDeployKeyRequest struct {
 
 	// 部署密钥id

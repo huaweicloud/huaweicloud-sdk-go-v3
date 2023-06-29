@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeOsRequest Request Object
 type ChangeOsRequest struct {
 
 	// 边缘实例ID。

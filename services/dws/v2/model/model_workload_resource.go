@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作负载队列资源项
+// WorkloadResource 工作负载队列资源项
 type WorkloadResource struct {
 
 	// 资源名称。

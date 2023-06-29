@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIncentiveDiscountPoliciesResponse Response Object
 type ListIncentiveDiscountPoliciesResponse struct {
 
 	// 产品折扣和激励策略信息列表。 具体请参见表2。

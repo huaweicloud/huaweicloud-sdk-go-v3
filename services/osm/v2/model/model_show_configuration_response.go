@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConfigurationResponse Response Object
 type ShowConfigurationResponse struct {
 
 	// 配置项键

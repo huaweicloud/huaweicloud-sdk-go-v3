@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// links字段数据结构说明
+// Links links字段数据结构说明
 type Links struct {
 
 	// 快捷链接标记名称

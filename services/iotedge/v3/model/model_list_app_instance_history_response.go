@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppInstanceHistoryResponse Response Object
 type ListAppInstanceHistoryResponse struct {
 
 	// 应用实例历史版本列表

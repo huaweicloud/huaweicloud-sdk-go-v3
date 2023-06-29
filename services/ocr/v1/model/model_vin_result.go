@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// VinResult
 type VinResult struct {
 
 	// 识别检测到的车架号。

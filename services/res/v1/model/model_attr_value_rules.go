@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AttrValueRules
 type AttrValueRules struct {
 
 	// 被推荐对象的属性-值配置。

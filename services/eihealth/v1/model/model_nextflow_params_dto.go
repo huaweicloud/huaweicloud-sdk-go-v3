@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流程参数
+// NextflowParamsDto 流程参数
 type NextflowParamsDto struct {
 
 	// 参数名

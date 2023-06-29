@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户配置信息
+// CustomerConfig 用户配置信息
 type CustomerConfig struct {
 
 	// 失败提醒。

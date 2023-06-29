@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 计费类型信息，仅支持按需和包周期。
+// OpenGaussChargeInfo 计费类型信息，仅支持按需和包周期。
 type OpenGaussChargeInfo struct {
 
 	// 计费模式。postPaid：后付费，即按需付费。prePaid：预付费，即包年/包月。
@@ -67,13 +67,18 @@ func (c OpenGaussChargeInfoChargeMode) MarshalJSON() ([]byte, error) {
 
 func (c *OpenGaussChargeInfoChargeMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -109,13 +114,18 @@ func (c OpenGaussChargeInfoPeriodType) MarshalJSON() ([]byte, error) {
 
 func (c *OpenGaussChargeInfoPeriodType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

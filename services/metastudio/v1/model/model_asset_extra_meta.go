@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资产元数据。根据资产类型选择其中一个填写。
+// AssetExtraMeta 资产元数据。根据资产类型选择其中一个填写。
 type AssetExtraMeta struct {
 	HumanModelMeta *HumanModelAssetMeta `json:"human_model_meta,omitempty"`
 

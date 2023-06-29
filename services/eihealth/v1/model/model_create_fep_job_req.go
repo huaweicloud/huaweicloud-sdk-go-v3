@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建自由能微扰作业请求体
+// CreateFepJobReq 创建自由能微扰作业请求体
 type CreateFepJobReq struct {
 	BasicInfo *CreateDrugJobBasicInfo `json:"basic_info"`
 

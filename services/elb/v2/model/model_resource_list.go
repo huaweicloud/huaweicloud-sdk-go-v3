@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源对象id列表。
+// ResourceList 资源对象id列表。
 type ResourceList struct {
 
 	// 资源ID

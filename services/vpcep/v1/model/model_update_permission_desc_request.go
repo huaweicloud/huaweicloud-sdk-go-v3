@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新终端节点服务白名单描述
+// UpdatePermissionDescRequest 更新终端节点服务白名单描述
 type UpdatePermissionDescRequest struct {
 	Permission *EpsUpdatePermissionDesc `json:"permission"`
 }

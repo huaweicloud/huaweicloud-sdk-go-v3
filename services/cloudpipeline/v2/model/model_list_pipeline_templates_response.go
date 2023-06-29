@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPipelineTemplatesResponse Response Object
 type ListPipelineTemplatesResponse struct {
 
 	// 起始偏移

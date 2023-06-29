@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新项目追踪器
+// UpdateTrackerReq 更新项目追踪器
 type UpdateTrackerReq struct {
 
 	// 转储生命周期

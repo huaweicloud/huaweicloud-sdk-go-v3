@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 容器端口映射值
+// HostContainerPortMapping 容器端口映射值
 type HostContainerPortMapping struct {
 
 	// 构成一堆映射的容器端口

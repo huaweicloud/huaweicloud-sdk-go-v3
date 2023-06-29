@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转发到的后端主机组的URL配置。
+// UpdateRedirectPoolsExtendConfig 转发到的后端主机组的URL配置。
 type UpdateRedirectPoolsExtendConfig struct {
 
 	// 是否开启url重定向

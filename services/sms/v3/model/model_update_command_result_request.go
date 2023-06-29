@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCommandResultRequest Request Object
 type UpdateCommandResultRequest struct {
 
 	// 上报命令执行结果的命令所对应的服务端ID

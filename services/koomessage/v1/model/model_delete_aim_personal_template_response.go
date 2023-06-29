@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAimPersonalTemplateResponse Response Object
 type DeleteAimPersonalTemplateResponse struct {
 
 	// 响应状态。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLoadBalancerStatusRequest Request Object
 type ShowLoadBalancerStatusRequest struct {
 
 	// 负载均衡器ID。

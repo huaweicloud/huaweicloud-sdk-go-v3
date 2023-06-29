@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEffectiveRoutesRequest Request Object
 type ListEffectiveRoutesRequest struct {
 
 	// 路由表ID
@@ -87,13 +87,18 @@ func (c ListEffectiveRoutesRequestResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *ListEffectiveRoutesRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

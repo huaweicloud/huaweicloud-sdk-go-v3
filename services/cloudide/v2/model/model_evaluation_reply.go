@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 评论回复,其中evaluation_id和reply_id之中必须选择一个填写
+// EvaluationReply 评论回复,其中evaluation_id和reply_id之中必须选择一个填写
 type EvaluationReply struct {
 
 	// 所在评论id

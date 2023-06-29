@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
+// QuotaDetailSnapshots 快照个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailSnapshots struct {
 
 	// 已使用的数量。

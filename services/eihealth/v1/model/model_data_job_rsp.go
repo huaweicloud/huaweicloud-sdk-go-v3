@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据作业列表item
+// DataJobRsp 数据作业列表item
 type DataJobRsp struct {
 
 	// 数据作业创建者

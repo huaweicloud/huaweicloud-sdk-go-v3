@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNextflowWorkflowResponse Response Object
 type ListNextflowWorkflowResponse struct {
 
 	// 当前页的流程列表

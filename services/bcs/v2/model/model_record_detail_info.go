@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作记录详细信息
+// RecordDetailInfo 操作记录详细信息
 type RecordDetailInfo struct {
 
 	// 操作记录ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务详情
+// ParamInfo 任务详情
 type ParamInfo struct {
 
 	// 仓库地址

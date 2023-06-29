@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunEntityLinkingResponse Response Object
 type RunEntityLinkingResponse struct {
 
 	// 识别出的实体列表

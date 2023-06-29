@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// GES 元数据
+// GesMetaData GES 元数据
 type GesMetaData struct {
 
 	// Label数据结构集合。

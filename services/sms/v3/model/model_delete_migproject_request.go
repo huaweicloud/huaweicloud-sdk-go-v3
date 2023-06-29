@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMigprojectRequest Request Object
 type DeleteMigprojectRequest struct {
 
 	// 需要删除的迁移项目的ID

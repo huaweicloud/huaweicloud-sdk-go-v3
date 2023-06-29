@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSecretTagRequest Request Object
 type DeleteSecretTagRequest struct {
 
 	// 凭据ID

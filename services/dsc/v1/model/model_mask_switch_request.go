@@ -9,7 +9,7 @@ import (
 type MaskSwitchRequest struct {
 
 	// 脱敏任务状态
-	Status *int32 `json:"status,omitempty"`
+	Status int32 `json:"status"`
 }
 
 func (o MaskSwitchRequest) String() string {

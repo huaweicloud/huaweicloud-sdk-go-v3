@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMonthUsagesResponse Response Object
 type ShowMonthUsagesResponse struct {
 
 	// 月用量列表

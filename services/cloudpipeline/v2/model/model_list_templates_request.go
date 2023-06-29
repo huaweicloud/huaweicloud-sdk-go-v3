@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTemplatesRequest Request Object
 type ListTemplatesRequest struct {
 
 	// 模板类型

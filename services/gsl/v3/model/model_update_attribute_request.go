@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAttributeRequest Request Object
 type UpdateAttributeRequest struct {
 
 	// 自定义属性标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateSubnetResponse Response Object
 type UpdateSubnetResponse struct {
 	Subnet         *UpdateSubnetResponseObject `json:"subnet,omitempty"`
 	HttpStatusCode int                         `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警详情
+// Alert 告警详情
 type Alert struct {
 
 	// 版本

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateSubnetResponse Response Object
 type DisassociateSubnetResponse struct {
 	Routetable     *Routetable `json:"routetable,omitempty"`
 	HttpStatusCode int         `json:"-"`

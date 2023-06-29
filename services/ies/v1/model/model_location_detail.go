@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 场地详情
+// LocationDetail 场地详情
 type LocationDetail struct {
 
 	// 场地名称（已废弃），传入该参数不会再生效，新建站点也不会再返回该字段

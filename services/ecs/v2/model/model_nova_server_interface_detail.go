@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaServerInterfaceDetail
 type NovaServerInterfaceDetail struct {
 
 	// 网卡私网IP信息列表。

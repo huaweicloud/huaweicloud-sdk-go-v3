@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用实例亲和性规则，仅铂金版支持
+// Affinity 应用实例亲和性规则，仅铂金版支持
 type Affinity struct {
 	NodeAffinity *AffinityNodeAffinity `json:"nodeAffinity,omitempty"`
 

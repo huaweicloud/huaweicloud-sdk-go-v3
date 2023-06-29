@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadSecretBlobRequest Request Object
 type DownloadSecretBlobRequest struct {
 
 	// 凭据的名称。

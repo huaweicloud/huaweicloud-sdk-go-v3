@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateResourceShareResponse Response Object
 type DisassociateResourceShareResponse struct {
 	ResourceShareAssociations *[]ResourceShareAssociation `json:"resource_share_associations,omitempty"`
 	HttpStatusCode            int                         `json:"-"`

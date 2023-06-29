@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署实例请求体
+// InstanceDeployment 部署实例请求体
 type InstanceDeployment struct {
 
 	// 实例id

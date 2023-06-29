@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNodeResponse Response Object
 type ShowNodeResponse struct {
 
 	// 设备ID

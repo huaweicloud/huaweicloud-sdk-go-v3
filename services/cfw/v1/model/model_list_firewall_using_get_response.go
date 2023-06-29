@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFirewallUsingGetResponse Response Object
 type ListFirewallUsingGetResponse struct {
 	Data           *GetFirewallInstanceData `json:"data,omitempty"`
 	HttpStatusCode int                      `json:"-"`

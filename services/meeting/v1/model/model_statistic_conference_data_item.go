@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议总体数据的单个时间点数据。
+// StatisticConferenceDataItem 会议总体数据的单个时间点数据。
 type StatisticConferenceDataItem struct {
 
 	// 日期/月份，category = conference_info时有效。 小时，category = conference_hourly_info时有效。

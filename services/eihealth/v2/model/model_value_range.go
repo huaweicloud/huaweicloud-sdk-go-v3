@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数值值域区间定义
+// ValueRange 数值值域区间定义
 type ValueRange struct {
 
 	// 值域下限

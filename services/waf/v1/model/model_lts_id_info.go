@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志组与日志流id信息，对应云日志服务（lts）创建的日志组和日志流id。
+// LtsIdInfo 日志组与日志流id信息，对应云日志服务（lts）创建的日志组和日志流id。
 type LtsIdInfo struct {
 
 	// 日志组id

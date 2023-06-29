@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchConfigurationResponse Response Object
 type SwitchConfigurationResponse struct {
 
 	// 应用参数模板的异步任务ID。

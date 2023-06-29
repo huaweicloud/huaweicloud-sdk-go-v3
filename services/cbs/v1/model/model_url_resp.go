@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UrlResp
 type UrlResp struct {
 
 	// 图片id

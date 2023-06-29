@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 物理专线更新对象参数
+// UpdateDirectConnectRequestBody 物理专线更新对象参数
 type UpdateDirectConnectRequestBody struct {
 	DirectConnect *UpdateDirectConnect `json:"direct_connect,omitempty"`
 }

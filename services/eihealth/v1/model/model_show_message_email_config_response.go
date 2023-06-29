@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMessageEmailConfigResponse Response Object
 type ShowMessageEmailConfigResponse struct {
 
 	// 服务器地址

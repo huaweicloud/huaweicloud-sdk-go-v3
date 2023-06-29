@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业流参数
+// TaskStream 作业流参数
 type TaskStream struct {
 
 	// 作业参数配置

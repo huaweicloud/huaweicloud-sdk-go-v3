@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ContentCompareDiff
 type ContentCompareDiff struct {
 
 	// 查询目标库的SQL。

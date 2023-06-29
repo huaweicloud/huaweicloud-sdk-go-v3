@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetChargeModesResponse Response Object
 type SetChargeModesResponse struct {
 
 	// 账号的计费模式

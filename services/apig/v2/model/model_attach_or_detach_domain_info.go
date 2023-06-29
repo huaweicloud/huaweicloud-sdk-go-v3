@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 证书绑定或解绑域名信息。如果填了instance_id则只操作该实例下指定域名；如果不填instance_id则操作全局指定域名。
+// AttachOrDetachDomainInfo 证书绑定或解绑域名信息。如果填了instance_id则只操作该实例下指定域名；如果不填instance_id则操作全局指定域名。
 type AttachOrDetachDomainInfo struct {
 
 	// 域名

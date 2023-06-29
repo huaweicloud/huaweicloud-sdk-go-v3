@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RegisterAgentRequest Request Object
 type RegisterAgentRequest struct {
 	Body *AgentRegisterReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 元数据是否加密
+// UploadFromObsReqEncryption 元数据是否加密
 type UploadFromObsReqEncryption struct {
 
 	// 是否启动加密特性。

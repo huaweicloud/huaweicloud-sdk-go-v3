@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteImageTagRequest Request Object
 type DeleteImageTagRequest struct {
 
 	// 镜像ID。

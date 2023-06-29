@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVpcRequest Request Object
 type ShowVpcRequest struct {
 
 	// 虚拟私有云ID。

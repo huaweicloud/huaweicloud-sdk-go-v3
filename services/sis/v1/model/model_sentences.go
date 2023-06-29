@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Sentences
 type Sentences struct {
 
 	// 分句结果信息

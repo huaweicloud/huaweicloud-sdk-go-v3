@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListValueListResponse Response Object
 type ListValueListResponse struct {
 
 	// 引用表条数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// delete indicator request body
+// DeleteIndicatorRequestBody delete indicator request body
 type DeleteIndicatorRequestBody struct {
 
 	// id list

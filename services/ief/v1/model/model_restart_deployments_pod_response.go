@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartDeploymentsPodResponse Response Object
 type RestartDeploymentsPodResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

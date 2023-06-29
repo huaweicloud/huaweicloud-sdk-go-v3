@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMetadata2Response Response Object
 type CreateMetadata2Response struct {
 
 	// 元数据ID。

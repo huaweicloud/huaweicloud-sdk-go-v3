@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAssociatedIssuesResponse Response Object
 type ListAssociatedIssuesResponse struct {
 
 	// 关联的工作项列表

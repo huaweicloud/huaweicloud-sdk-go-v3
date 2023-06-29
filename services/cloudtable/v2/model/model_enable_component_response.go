@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// EnableComponentResponse Response Object
 type EnableComponentResponse struct {
 	HttpStatusCode int `json:"-"`
 }

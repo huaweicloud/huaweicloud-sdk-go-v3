@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSupplyRecommendationRequest Request Object
 type ListSupplyRecommendationRequest struct {
 	Body *ListSupplyRecommendationRequestBody `json:"body,omitempty"`
 }

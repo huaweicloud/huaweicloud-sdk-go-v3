@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// EnableTrustedServiceResponse Response Object
 type EnableTrustedServiceResponse struct {
 	HttpStatusCode int `json:"-"`
 }

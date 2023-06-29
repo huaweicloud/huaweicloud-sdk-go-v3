@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateSqlFilterControlResponse Response Object
 type UpdateSqlFilterControlResponse struct {
 
 	// 开启/关闭SQL限流任务ID。

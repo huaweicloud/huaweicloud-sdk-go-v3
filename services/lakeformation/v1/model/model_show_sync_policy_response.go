@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSyncPolicyResponse Response Object
 type ShowSyncPolicyResponse struct {
 
 	// 策略版本

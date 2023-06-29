@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// TagsReq
 type TagsReq struct {
 
 	// 键。  最大长度127个unicode字符。  不允许为空字符串。  前后的空格会被丢弃。

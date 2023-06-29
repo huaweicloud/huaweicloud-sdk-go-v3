@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateClusterWorkloadRequest Request Object
 type CreateClusterWorkloadRequest struct {
 
 	// 集群ID

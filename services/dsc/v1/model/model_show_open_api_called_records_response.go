@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOpenApiCalledRecordsResponse Response Object
 type ShowOpenApiCalledRecordsResponse struct {
 
 	// 调用API总次数

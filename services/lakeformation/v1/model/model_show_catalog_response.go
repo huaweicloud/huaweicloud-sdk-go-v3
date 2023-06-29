@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCatalogResponse Response Object
 type ShowCatalogResponse struct {
 
 	// catalog名字

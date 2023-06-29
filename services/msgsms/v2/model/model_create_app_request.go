@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAppRequest Request Object
 type CreateAppRequest struct {
 	Body *SmsAppAddReq `json:"body,omitempty"`
 }

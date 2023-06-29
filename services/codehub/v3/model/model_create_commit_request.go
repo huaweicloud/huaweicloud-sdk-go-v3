@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCommitRequest Request Object
 type CreateCommitRequest struct {
 
 	// 仓库短id

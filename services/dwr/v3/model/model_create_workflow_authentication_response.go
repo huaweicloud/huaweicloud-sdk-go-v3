@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateWorkflowAuthenticationResponse Response Object
 type CreateWorkflowAuthenticationResponse struct {
 	XRequestId *string `json:"x-request-id,omitempty"`
 

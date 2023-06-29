@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateFileResponse Response Object
 type ShowTemplateFileResponse struct {
 
 	// 文件内容（返回的文件内容为encoding指定的编码格式编码后的内容）。

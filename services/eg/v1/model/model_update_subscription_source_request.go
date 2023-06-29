@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSubscriptionSourceRequest Request Object
 type UpdateSubscriptionSourceRequest struct {
 
 	// 事件订阅ID

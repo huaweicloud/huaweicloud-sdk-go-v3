@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSecretStageRequest Request Object
 type ShowSecretStageRequest struct {
 
 	// 凭据名称。

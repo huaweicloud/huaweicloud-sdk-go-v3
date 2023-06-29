@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划创建者信息
+// TestPlanDetailCreator 测试计划创建者信息
 type TestPlanDetailCreator struct {
 
 	// 测试计划创建者id

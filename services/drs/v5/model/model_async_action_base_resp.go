@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 异步操作任务基础响应体。
+// AsyncActionBaseResp 异步操作任务基础响应体。
 type AsyncActionBaseResp struct {
 
 	// 异步操作任务响应查询ID。

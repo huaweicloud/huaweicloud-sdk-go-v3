@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMyActionTemplateRequest Request Object
 type DeleteMyActionTemplateRequest struct {
 
 	// 三方算子模板名。

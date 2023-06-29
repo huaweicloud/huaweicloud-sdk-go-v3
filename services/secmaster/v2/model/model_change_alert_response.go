@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeAlertResponse Response Object
 type ChangeAlertResponse struct {
 
 	// Id value

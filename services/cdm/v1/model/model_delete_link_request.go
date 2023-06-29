@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLinkRequest Request Object
 type DeleteLinkRequest struct {
 
 	// 集群ID

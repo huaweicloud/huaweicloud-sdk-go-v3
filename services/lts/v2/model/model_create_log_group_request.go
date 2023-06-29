@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLogGroupRequest Request Object
 type CreateLogGroupRequest struct {
 	Body *CreateLogGroupParams `json:"body,omitempty"`
 }

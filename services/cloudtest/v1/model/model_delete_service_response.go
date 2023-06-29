@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteServiceResponse Response Object
 type DeleteServiceResponse struct {
 
 	// 接口调用失败错误码

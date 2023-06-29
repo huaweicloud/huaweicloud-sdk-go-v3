@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListUsageTypesResponse Response Object
 type ListUsageTypesResponse struct {
 
 	// 总数。

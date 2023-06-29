@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeDbTemplateOperationRequest Request Object
 type ChangeDbTemplateOperationRequest struct {
 
 	// 模板ID

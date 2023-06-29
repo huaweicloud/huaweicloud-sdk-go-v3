@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// os-extended-volumes:volumes_attached字段数据结构说明
+// OsExtendedVolumes os-extended-volumes:volumes_attached字段数据结构说明
 type OsExtendedVolumes struct {
 
 	// 云硬盘ID

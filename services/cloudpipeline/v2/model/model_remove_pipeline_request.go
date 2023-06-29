@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RemovePipelineRequest Request Object
 type RemovePipelineRequest struct {
 
 	// 要删除的流水线ID

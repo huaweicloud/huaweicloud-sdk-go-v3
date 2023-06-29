@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunQueryInstanceRequest Request Object
 type RunQueryInstanceRequest struct {
 
 	// 实例名称。

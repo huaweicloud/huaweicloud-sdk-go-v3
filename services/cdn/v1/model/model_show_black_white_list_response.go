@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBlackWhiteListResponse Response Object
 type ShowBlackWhiteListResponse struct {
 
 	// IP黑白名单类型（0：关闭IP黑白名单功能，1：黑名单，2：白名单）

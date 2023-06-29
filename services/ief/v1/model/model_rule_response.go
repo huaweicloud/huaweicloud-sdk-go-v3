@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规则配置
+// RuleResponse 规则配置
 type RuleResponse struct {
 
 	// 创建时间

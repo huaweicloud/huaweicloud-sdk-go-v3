@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAlarmTemplateAssociationAlarmsResponse Response Object
 type ListAlarmTemplateAssociationAlarmsResponse struct {
 
 	// 告警规则列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSecurityGroupRulesRequest Request Object
 type ListSecurityGroupRulesRequest struct {
 
 	// 查询返回边缘安全组规则列表数量。取值范围：0~1000。

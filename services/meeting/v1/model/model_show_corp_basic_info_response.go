@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCorpBasicInfoResponse Response Object
 type ShowCorpBasicInfoResponse struct {
 
 	// 企业id。

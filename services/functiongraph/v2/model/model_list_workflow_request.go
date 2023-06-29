@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWorkflowRequest Request Object
 type ListWorkflowRequest struct {
 
 	// 函数流名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机服务器的属性描述，不超过512个字节
+// ServerModelExtendSpec 云手机服务器的属性描述，不超过512个字节
 type ServerModelExtendSpec struct {
 
 	// 云手机服务器cpu类型

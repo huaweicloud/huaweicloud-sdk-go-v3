@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页返回信息
+// PagedInfo 分页返回信息
 type PagedInfo struct {
 
 	// 本次返回的对象个数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据盘信息
+// CreateDataImage 数据盘信息
 type CreateDataImage struct {
 
 	// 数据盘镜像名称。

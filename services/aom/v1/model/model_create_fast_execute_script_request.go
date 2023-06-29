@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFastExecuteScriptRequest Request Object
 type CreateFastExecuteScriptRequest struct {
 	Body *HisFastScript `json:"body,omitempty"`
 }

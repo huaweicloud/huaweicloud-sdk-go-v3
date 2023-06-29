@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaCreateKeypairRequest Request Object
 type NovaCreateKeypairRequest struct {
 
 	// 微版本头

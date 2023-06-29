@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移错误信息
+// MigrationErrors 迁移错误信息
 type MigrationErrors struct {
 
 	// 保存错误信息的json字符串

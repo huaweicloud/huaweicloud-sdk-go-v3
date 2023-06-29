@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建ELB时，新建公网IP请求参数
+// CreateLoadBalancerPublicIpOption 创建ELB时，新建公网IP请求参数
 type CreateLoadBalancerPublicIpOption struct {
 
 	// IP版本。  取值：4表示IPv4，6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)

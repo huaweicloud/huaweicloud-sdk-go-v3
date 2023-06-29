@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCheckpointRequest Request Object
 type CreateCheckpointRequest struct {
 	Body *VaultBackupReq `json:"body,omitempty"`
 }

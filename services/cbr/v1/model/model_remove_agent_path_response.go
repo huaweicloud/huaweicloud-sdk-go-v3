@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemoveAgentPathResponse Response Object
 type RemoveAgentPathResponse struct {
 
 	// 移除的路径列表

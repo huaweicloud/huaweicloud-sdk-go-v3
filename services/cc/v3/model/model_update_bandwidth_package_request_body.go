@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新带宽包实例的请求体。
+// UpdateBandwidthPackageRequestBody 更新带宽包实例的请求体。
 type UpdateBandwidthPackageRequestBody struct {
 	BandwidthPackage *UpdateBandwidthPackage `json:"bandwidth_package"`
 }

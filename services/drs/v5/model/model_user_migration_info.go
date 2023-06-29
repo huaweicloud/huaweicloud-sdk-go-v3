@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户迁移信息体。
+// UserMigrationInfo 用户迁移信息体。
 type UserMigrationInfo struct {
 
 	// 是否迁移用户。

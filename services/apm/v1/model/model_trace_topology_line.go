@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 拓扑图上的组件调用指向线。
+// TraceTopologyLine 拓扑图上的组件调用指向线。
 type TraceTopologyLine struct {
 
 	// 开始节点id。

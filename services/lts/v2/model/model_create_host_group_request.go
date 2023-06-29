@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateHostGroupRequest Request Object
 type CreateHostGroupRequest struct {
 	Body *CreateHostGroupRequestBody `json:"body,omitempty"`
 }

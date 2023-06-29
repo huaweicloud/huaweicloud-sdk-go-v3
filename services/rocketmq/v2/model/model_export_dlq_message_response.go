@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportDlqMessageResponse Response Object
 type ExportDlqMessageResponse struct {
 	Body           *[]Message `json:"body,omitempty"`
 	HttpStatusCode int        `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备搜索结果结构体
+// SearchDevice 设备搜索结果结构体
 type SearchDevice struct {
 
 	// 资源空间ID。

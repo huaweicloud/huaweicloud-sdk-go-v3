@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListReplicationsResponse Response Object
 type ListReplicationsResponse struct {
 
 	// 复制对列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBaremetalFlavorDetailExtendsResponse Response Object
 type ListBaremetalFlavorDetailExtendsResponse struct {
 
 	// 裸金属服务器规格列表，详情请参见表2 flavors数据结构说明。

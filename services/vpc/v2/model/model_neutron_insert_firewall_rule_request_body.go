@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronInsertFirewallRuleRequestBody
 type NeutronInsertFirewallRuleRequestBody struct {
 
 	// 功能说明：网络ACL规则ID

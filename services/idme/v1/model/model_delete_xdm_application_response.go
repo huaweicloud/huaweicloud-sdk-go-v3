@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteXdmApplicationResponse Response Object
 type DeleteXdmApplicationResponse struct {
 
 	// 返回结果。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 磁盘
+// Volume 磁盘
 type Volume struct {
 
 	// 桌面数据盘对应的磁盘类型，需要与系统所提供的磁盘类型相匹配。  -SAS：高IO。 -SSD：超高IO。

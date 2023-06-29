@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAppResponse Response Object
 type UpdateAppResponse struct {
 
 	// 应用KEY

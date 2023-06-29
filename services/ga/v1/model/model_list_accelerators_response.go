@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAcceleratorsResponse Response Object
 type ListAcceleratorsResponse struct {
 
 	// 全球加速器列表。

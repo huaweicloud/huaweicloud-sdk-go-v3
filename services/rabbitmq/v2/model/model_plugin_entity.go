@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件信息。
+// PluginEntity 插件信息。
 type PluginEntity struct {
 
 	// 是否运行。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUserSettingResponse Response Object
 type ShowUserSettingResponse struct {
 	Operation *Operation `json:"operation,omitempty"`
 

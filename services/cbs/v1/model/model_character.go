@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 形象
+// Character 形象
 type Character struct {
 
 	// 创建时间

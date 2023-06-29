@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AgentRegisterReq
 type AgentRegisterReq struct {
 	Agent *AgentRegister `json:"agent"`
 }

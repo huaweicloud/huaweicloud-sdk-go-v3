@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新作业参数请求体
+// UpdateJobReq 更新作业参数请求体
 type UpdateJobReq struct {
 
 	// 步骤的参数修改信息

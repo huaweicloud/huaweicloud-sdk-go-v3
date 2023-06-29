@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点类型对象
+// NodeTypes 节点类型对象
 type NodeTypes struct {
 
 	// 节点类型名称。

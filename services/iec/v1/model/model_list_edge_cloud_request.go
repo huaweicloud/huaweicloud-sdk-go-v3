@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEdgeCloudRequest Request Object
 type ListEdgeCloudRequest struct {
 
 	// 偏移量。 当前偏移量，默认为0。

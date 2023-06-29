@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServersByTagResponse Response Object
 type ListServersByTagResponse struct {
 
 	// 返回的云服务器列表。

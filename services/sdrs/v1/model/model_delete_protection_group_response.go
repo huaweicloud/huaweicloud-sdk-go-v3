@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteProtectionGroupResponse Response Object
 type DeleteProtectionGroupResponse struct {
 
 	// 成功返回jobId信息

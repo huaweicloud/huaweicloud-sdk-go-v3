@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IoTDA数据源详细配置内容
+// IotdaContentRsp IoTDA数据源详细配置内容
 type IotdaContentRsp struct {
 
 	// IoTDA实例Id

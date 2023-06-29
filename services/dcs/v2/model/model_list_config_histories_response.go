@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConfigHistoriesResponse Response Object
 type ListConfigHistoriesResponse struct {
 
 	// 实例参数修改记录个数

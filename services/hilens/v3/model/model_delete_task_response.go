@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteTaskResponse Response Object
 type DeleteTaskResponse struct {
 
 	// 作业id

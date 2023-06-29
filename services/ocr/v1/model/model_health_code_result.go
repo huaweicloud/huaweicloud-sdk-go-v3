@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HealthCodeResult
 type HealthCodeResult struct {
 
 	// 防疫码类别： - 健康码：health_code - 核酸检测记录：pcr_test_record - 通信行程卡：travel_card - 其他：other

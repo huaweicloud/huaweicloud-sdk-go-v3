@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CN节点详情。
+// CoordinatorNode CN节点详情。
 type CoordinatorNode struct {
 
 	// 节点ID。

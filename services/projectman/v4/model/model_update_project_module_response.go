@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProjectModuleResponse Response Object
 type UpdateProjectModuleResponse struct {
 
 	// 模块描述

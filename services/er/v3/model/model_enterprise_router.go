@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 企业路由器
+// EnterpriseRouter 企业路由器
 type EnterpriseRouter struct {
 
 	// 企业路由器实例的ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateClusterRequestBody This is a auto create Body Object
 type CreateClusterRequestBody struct {
 	Cluster *CreateClusterInfo `json:"cluster"`
 }

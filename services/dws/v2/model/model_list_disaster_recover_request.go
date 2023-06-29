@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDisasterRecoverRequest Request Object
 type ListDisasterRecoverRequest struct {
 }
 

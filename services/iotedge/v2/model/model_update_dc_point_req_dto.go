@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新点位表请求结构体
+// UpdateDcPointReqDto 更新点位表请求结构体
 type UpdateDcPointReqDto struct {
 
 	// 点位名称，允许中、数字、英文大小写、下划线、中划线、#%()*特殊字符

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建任务响应体。
+// CreateJobResp 创建任务响应体。
 type CreateJobResp struct {
 
 	// 任务ID。

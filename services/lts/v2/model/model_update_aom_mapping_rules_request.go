@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAomMappingRulesRequest Request Object
 type UpdateAomMappingRulesRequest struct {
 	Body *UpdateAomMappingRequest `json:"body,omitempty"`
 }

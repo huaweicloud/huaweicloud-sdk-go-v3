@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCertificateAuthorityObsBucketResponse Response Object
 type ListCertificateAuthorityObsBucketResponse struct {
 
 	// OBS桶总数。

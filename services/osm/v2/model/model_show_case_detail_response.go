@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCaseDetailResponse Response Object
 type ShowCaseDetailResponse struct {
 	IncidentDetailInfo *IncidentDetailInfoV2 `json:"incident_detail_info,omitempty"`
 	HttpStatusCode     int                   `json:"-"`

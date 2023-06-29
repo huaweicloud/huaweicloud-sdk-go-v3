@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGaussMySqlDatabaseCharsetsResponse Response Object
 type ListGaussMySqlDatabaseCharsetsResponse struct {
 
 	// 数据库字符集列表

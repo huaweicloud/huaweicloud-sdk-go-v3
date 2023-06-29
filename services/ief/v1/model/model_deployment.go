@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署参数配置
+// Deployment 部署参数配置
 type Deployment struct {
 
 	// 部署名称，只允许英文小写字母、数字、中划线，最大长度32，英文小写字母或数字开头和结尾

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCasesRequest Request Object
 type CreateCasesRequest struct {
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。
@@ -18,10 +18,10 @@ type CreateCasesRequest struct {
 	// 环境时区，值为通用的时区描述字符串，比如GMT+8等，默认为GMT+8。  涉及时间的数据会根据环境时区处理。
 	XTimeZone *string `json:"X-Time-Zone,omitempty"`
 
-	// 手机验证序列号id，如果选择非注册手机号提醒，必填
+	// 手机验证序列号id，如果是非注册联系方式则必填，通过\"查询已验证的列表\"接口查询获取
 	XPhoneVerifiedid *string `json:"x-phone-verifiedid,omitempty"`
 
-	// 邮件验证序列号id，如果选择非注册邮箱提醒，必填
+	// 邮件验证序列号id，如果是非注册联系方式则必填，通过\"查询已验证的列表\"接口查询获取
 	XEmailVerifiedid *string `json:"x-email-verifiedid,omitempty"`
 
 	Body *CreateOrderIncidentV2Req `json:"body,omitempty"`

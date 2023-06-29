@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 一个az对象
+// AzInfo 一个az对象
 type AzInfo struct {
 
 	// 可用分区的名字。

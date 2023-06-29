@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTopicStatusResponse Response Object
 type ShowTopicStatusResponse struct {
 
 	// 代理。

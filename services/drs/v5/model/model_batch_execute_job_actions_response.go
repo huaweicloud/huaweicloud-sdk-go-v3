@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchExecuteJobActionsResponse Response Object
 type BatchExecuteJobActionsResponse struct {
 
 	// 批量异步操作任务响应体。

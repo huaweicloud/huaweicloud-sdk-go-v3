@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartPausingWorkflowExecutionsResponse Response Object
 type StartPausingWorkflowExecutionsResponse struct {
 
 	// 结果返回体

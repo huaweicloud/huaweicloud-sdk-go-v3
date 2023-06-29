@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateRuleAclDto
+// OrderRuleAclDto UpdateRuleAclDto
 type OrderRuleAclDto struct {
 
 	// 目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空

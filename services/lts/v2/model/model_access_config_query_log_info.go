@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志接入日志详情
+// AccessConfigQueryLogInfo 日志接入日志详情
 type AccessConfigQueryLogInfo struct {
 
 	// 日志组ID

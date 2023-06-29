@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线执行结果
+// PipelineExecuteStates 流水线执行结果
 type PipelineExecuteStates struct {
 
 	// 流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止

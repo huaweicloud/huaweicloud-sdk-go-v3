@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTenantQuotaResponse Response Object
 type ShowTenantQuotaResponse struct {
 	Absolute       *Absolute `json:"absolute,omitempty"`
 	HttpStatusCode int       `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMigrationProjectDetailRequest Request Object
 type ShowMigrationProjectDetailRequest struct {
 
 	// 迁移项目ID。

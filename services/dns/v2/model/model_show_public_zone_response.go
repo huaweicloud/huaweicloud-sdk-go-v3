@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicZoneResponse Response Object
 type ShowPublicZoneResponse struct {
 
 	// Zone的ID

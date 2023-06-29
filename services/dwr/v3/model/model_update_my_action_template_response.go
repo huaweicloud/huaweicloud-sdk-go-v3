@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateMyActionTemplateResponse Response Object
 type UpdateMyActionTemplateResponse struct {
 
 	// 算子模板名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 此参数在请求实体中，采用json字符串格式
+// QueryLtsStructLogParamsNew 此参数在请求实体中，采用json字符串格式
 type QueryLtsStructLogParamsNew struct {
 
 	// sql语句字符串。

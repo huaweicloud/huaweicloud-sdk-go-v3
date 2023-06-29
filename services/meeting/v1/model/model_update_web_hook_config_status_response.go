@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateWebHookConfigStatusResponse Response Object
 type UpdateWebHookConfigStatusResponse struct {
 	HttpStatusCode int `json:"-"`
 }

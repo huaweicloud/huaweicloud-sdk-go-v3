@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartMeetingRequest Request Object
 type StartMeetingRequest struct {
 	Body *StartRequest `json:"body,omitempty"`
 }

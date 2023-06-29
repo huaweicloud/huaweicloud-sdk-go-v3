@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListObsBucketRequest Request Object
 type ListObsBucketRequest struct {
 
 	// 桶类型。OBJECT：桶列表；PFS：并行文件系统。不传返回所有

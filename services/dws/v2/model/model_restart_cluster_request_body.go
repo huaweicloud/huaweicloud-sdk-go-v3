@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// RestartClusterRequestBody This is a auto create Body Object
 type RestartClusterRequestBody struct {
 
 	// 重启标识

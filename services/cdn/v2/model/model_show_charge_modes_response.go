@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowChargeModesResponse Response Object
 type ShowChargeModesResponse struct {
 
 	// 计费模式查询结果

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新复制对名称请求体
+// UpdateReplicationNameRequestBody 更新复制对名称请求体
 type UpdateReplicationNameRequestBody struct {
 	Replication *UpdateReplicationNameRequestParams `json:"replication"`
 }

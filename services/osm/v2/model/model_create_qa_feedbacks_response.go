@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateQaFeedbacksResponse Response Object
 type CreateQaFeedbacksResponse struct {
 
 	// 错误码

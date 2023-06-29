@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划需求列表详情
+// TestPlanIssueDetail 测试计划需求列表详情
 type TestPlanIssueDetail struct {
 
 	// 项目id，项目唯一标识，固定长度32位字符

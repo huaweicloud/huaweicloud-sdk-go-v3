@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 复制记录额外信息
+// ReplicationRecordsExtraInfo 复制记录额外信息
 type ReplicationRecordsExtraInfo struct {
 
 	// 复制进度

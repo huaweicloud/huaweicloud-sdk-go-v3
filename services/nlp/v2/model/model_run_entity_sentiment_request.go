@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunEntitySentimentRequest Request Object
 type RunEntitySentimentRequest struct {
 	Body *EntitySentimentReq `json:"body,omitempty"`
 }

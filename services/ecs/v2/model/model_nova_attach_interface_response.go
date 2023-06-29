@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaAttachInterfaceResponse Response Object
 type NovaAttachInterfaceResponse struct {
 	InterfaceAttachment *NovaServerInterfaceDetail `json:"interfaceAttachment,omitempty"`
 	HttpStatusCode      int                        `json:"-"`

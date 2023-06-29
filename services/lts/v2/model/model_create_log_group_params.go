@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建日志组参数。
+// CreateLogGroupParams 创建日志组参数。
 type CreateLogGroupParams struct {
 
 	// 需要创建的日志组名称。

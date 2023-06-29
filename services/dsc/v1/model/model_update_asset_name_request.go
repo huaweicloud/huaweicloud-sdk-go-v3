@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAssetNameRequest Request Object
 type UpdateAssetNameRequest struct {
 
 	// 资产ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// quota详细信息
+// QuotaInfo quota详细信息
 type QuotaInfo struct {
 
 	// 查询的资源类型。

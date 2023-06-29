@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储组信息
+// StorageGroup 存储组信息
 type StorageGroup struct {
 
 	// 存储组名称

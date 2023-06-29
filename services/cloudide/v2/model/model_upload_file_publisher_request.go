@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadFilePublisherRequest Request Object
 type UploadFilePublisherRequest struct {
 
 	// 发布商凭证,x-publisher-token和X-Auth-Token必传一个

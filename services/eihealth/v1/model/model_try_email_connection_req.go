@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 邮箱服务器连通性测试
+// TryEmailConnectionReq 邮箱服务器连通性测试
 type TryEmailConnectionReq struct {
 
 	// 服务器地址

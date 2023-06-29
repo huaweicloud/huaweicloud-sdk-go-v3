@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWorkspaceLockResponse Response Object
 type ShowWorkspaceLockResponse struct {
 
 	// 云办公服务是否被锁定，0代表未锁定，1代表锁定。

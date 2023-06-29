@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSearchTaskRequest Request Object
 type CreateSearchTaskRequest struct {
 	Body *SearchTaskData `json:"body,omitempty"`
 }

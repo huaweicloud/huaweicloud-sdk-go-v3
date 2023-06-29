@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据行。
+// FrontRow 数据行。
 type FrontRow struct {
 
 	// 数据单元集合。

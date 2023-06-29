@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
+// AlarmName 告警名称, 只能包含0-9/a-z/A-Z/_/-或汉字，长度1-128
 type AlarmName struct {
 }
 

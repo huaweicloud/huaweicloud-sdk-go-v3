@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchoverReplicaSetResponse Response Object
 type SwitchoverReplicaSetResponse struct {
 
 	// 任务ID。

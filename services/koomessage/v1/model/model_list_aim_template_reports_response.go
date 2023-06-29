@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAimTemplateReportsResponse Response Object
 type ListAimTemplateReportsResponse struct {
 
 	// 查询模板报表结果集。

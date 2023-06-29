@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTopologyTreeRequest Request Object
 type ShowTopologyTreeRequest struct {
 
 	// 区域id。

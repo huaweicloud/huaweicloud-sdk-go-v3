@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNodeRequest Request Object
 type CreateNodeRequest struct {
 
 	// 服务提供者：ief或hilens，选择设备纳管到不同的平台。不填默认为hilens平台

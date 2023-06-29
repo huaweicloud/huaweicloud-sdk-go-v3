@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 入参对象
+// DbUserPrivilegeRequest 入参对象
 type DbUserPrivilegeRequest struct {
 
 	// 账号，数据库相关联的帐号

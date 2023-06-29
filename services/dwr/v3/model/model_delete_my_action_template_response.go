@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteMyActionTemplateResponse Response Object
 type DeleteMyActionTemplateResponse struct {
 	XRequestId *string `json:"x-request-id,omitempty"`
 

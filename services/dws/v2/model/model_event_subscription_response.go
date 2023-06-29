@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件订阅详情
+// EventSubscriptionResponse 事件订阅详情
 type EventSubscriptionResponse struct {
 
 	// 订阅ID

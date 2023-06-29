@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDesktopDetailRequest Request Object
 type ShowDesktopDetailRequest struct {
 
 	// 桌面ID。

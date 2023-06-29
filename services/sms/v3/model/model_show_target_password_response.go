@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTargetPasswordResponse Response Object
 type ShowTargetPasswordResponse struct {
 
 	// 模板ID

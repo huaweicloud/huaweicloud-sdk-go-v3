@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建或更新作业请求体
+// TaskRequest 创建或更新作业请求体
 type TaskRequest struct {
 
 	// 作业动作，创建作业或者是删除作业又或是更新作业等

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSharesResponse Response Object
 type ListSharesResponse struct {
 
 	// SFS Turbo文件系统的列表。

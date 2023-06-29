@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAssistAuthConfigResponse Response Object
 type ShowAssistAuthConfigResponse struct {
 	OtpConfigInfo  *OtpConfigInfo `json:"otp_config_info,omitempty"`
 	HttpStatusCode int            `json:"-"`

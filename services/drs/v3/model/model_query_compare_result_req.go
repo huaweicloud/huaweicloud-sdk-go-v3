@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// QueryCompareResultReq
 type QueryCompareResultReq struct {
 
 	// 任务id。

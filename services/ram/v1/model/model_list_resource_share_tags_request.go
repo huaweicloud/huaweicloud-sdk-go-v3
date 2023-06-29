@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResourceShareTagsRequest Request Object
 type ListResourceShareTagsRequest struct {
 
 	// 分页页面的最大值。

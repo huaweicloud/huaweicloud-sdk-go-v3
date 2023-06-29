@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ServiceCapability结构体。
+// ServiceCapability ServiceCapability结构体。
 type ServiceCapability struct {
 
 	// **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。

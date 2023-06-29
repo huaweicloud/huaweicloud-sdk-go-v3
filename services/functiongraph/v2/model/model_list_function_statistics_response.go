@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFunctionStatisticsResponse Response Object
 type ListFunctionStatisticsResponse struct {
 
 	// 调用次数

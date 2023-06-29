@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关联设备信息
+// DeviceInfos 关联设备信息
 type DeviceInfos struct {
 
 	// 设备和节点关系的名称，只允许中文字符、英文字母、数字、下划线、中划线，最大长度64

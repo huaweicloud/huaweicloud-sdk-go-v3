@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResWorkspacesResponse Response Object
 type ListResWorkspacesResponse struct {
 
 	// 是否成功。

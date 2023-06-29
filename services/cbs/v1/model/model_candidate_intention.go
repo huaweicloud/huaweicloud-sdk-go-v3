@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CandidateIntention
 type CandidateIntention struct {
 
 	// 候选意图。

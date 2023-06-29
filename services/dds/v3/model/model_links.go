@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对应API的链接信息，v3版本该字段为[]。
+// Links 对应API的链接信息，v3版本该字段为[]。
 type Links struct {
 
 	// 对应该API的URL，该字段为\"\"。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateEipRequest Request Object
 type DisassociateEipRequest struct {
 
 	// 集群ID

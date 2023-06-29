@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMqsInstanceRequest Request Object
 type ListMqsInstanceRequest struct {
 
 	// 是否包含内部的实例。include_internal参数必须为true。
@@ -51,13 +51,18 @@ func (c ListMqsInstanceRequestIncludeInternal) MarshalJSON() ([]byte, error) {
 
 func (c *ListMqsInstanceRequestIncludeInternal) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

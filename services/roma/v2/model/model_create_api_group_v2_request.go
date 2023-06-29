@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateApiGroupV2Request Request Object
 type CreateApiGroupV2Request struct {
 
 	// 实例ID

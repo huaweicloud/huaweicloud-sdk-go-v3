@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 文本相似度请求体
+// TextSimilarityAdvanceRequest 文本相似度请求体
 type TextSimilarityAdvanceRequest struct {
 
 	// 待计算文本1，长度1~512，文本编码为UTF-8。
@@ -57,13 +57,18 @@ func (c TextSimilarityAdvanceRequestLang) MarshalJSON() ([]byte, error) {
 
 func (c *TextSimilarityAdvanceRequestLang) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求成功返回的数据。
+// FreezePubResponseModelData 请求成功返回的数据。
 type FreezePubResponseModelData struct {
 
 	// 服务号ID。

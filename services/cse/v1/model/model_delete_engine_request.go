@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEngineRequest Request Object
 type DeleteEngineRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"

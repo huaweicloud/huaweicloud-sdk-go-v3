@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEdgeGroupCertRequest Request Object
 type DeleteEdgeGroupCertRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

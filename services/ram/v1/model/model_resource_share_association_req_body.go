@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// The request body of AssociateResourceShare and DisassociateResourceShare operations.
+// ResourceShareAssociationReqBody The request body of AssociateResourceShare and DisassociateResourceShare operations.
 type ResourceShareAssociationReqBody struct {
 
 	// 指定与资源共享实例关联的一个或多个资源使用者的列表。

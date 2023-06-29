@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 是否开启源/目的检查开关。
+// AllowedAddressPair 是否开启源/目的检查开关。
 type AllowedAddressPair struct {
 
 	// 是否开启源/目的检查开关。  默认是开启，不允许置空。  关闭：1.1.1.1/0 开启：除“1.1.1.1/0”以外的其余值均按开启处理

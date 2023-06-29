@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunJobResponse Response Object
 type RunJobResponse struct {
 
 	// 临时任务名称

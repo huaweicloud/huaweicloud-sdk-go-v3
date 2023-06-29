@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateConfTokenResponse Response Object
 type CreateConfTokenResponse struct {
 	Data *TokenInfo `json:"data,omitempty"`
 

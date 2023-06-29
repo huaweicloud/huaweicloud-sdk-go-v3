@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateRouteTableRequest Request Object
 type DisassociateRouteTableRequest struct {
 
 	// 路由表ID

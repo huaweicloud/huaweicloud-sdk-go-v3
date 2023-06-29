@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDatakeyWithoutPlaintextResponse Response Object
 type CreateDatakeyWithoutPlaintextResponse struct {
 
 	// 密钥ID。

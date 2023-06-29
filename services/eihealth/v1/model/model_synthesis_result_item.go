@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子合成路径规划结果条目
+// SynthesisResultItem 分子合成路径规划结果条目
 type SynthesisResultItem struct {
 
 	// 分子合成规划，列表内是reactions id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCustomAuthorizerV2Request Request Object
 type DeleteCustomAuthorizerV2Request struct {
 
 	// 实例ID

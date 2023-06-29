@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBackupFileLinksRequest Request Object
 type ListBackupFileLinksRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateRuleRequest Request Object
 type UpdateRuleRequest struct {
 
 	// 实例ID

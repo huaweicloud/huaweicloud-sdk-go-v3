@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFirmwaresResponse Response Object
 type ListFirmwaresResponse struct {
 
 	// 固件数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PublishAppMessageResponse Response Object
 type PublishAppMessageResponse struct {
 
 	// 唯一的消息ID。

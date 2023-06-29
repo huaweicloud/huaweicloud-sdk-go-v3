@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDatabaseUserResponse Response Object
 type ShowDatabaseUserResponse struct {
 
 	// 是否可以登陆

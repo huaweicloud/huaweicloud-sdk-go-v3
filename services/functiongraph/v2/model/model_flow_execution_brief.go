@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 函数流执行概要信息
+// FlowExecutionBrief 函数流执行概要信息
 type FlowExecutionBrief struct {
 
 	// 流程定义ID
@@ -88,13 +88,18 @@ func (c FlowExecutionBriefStatus) MarshalJSON() ([]byte, error) {
 
 func (c *FlowExecutionBriefStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

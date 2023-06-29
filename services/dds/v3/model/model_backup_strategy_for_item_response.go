@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自动备份策略。
+// BackupStrategyForItemResponse 自动备份策略。
 type BackupStrategyForItemResponse struct {
 
 	// 备份时间段。自动备份将在该时间段内触发。当前时间指UTC时间。

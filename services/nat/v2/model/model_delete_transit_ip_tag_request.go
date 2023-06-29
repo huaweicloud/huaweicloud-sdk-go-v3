@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTransitIpTagRequest Request Object
 type DeleteTransitIpTagRequest struct {
 
 	// 标签key。

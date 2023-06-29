@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteGetCharacterInfoByIdResponse Response Object
 type ExecuteGetCharacterInfoByIdResponse struct {
 
 	// 创建时间

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSsoConfigResponse Response Object
 type ShowSsoConfigResponse struct {
 
 	// 是否开启SSO登录。

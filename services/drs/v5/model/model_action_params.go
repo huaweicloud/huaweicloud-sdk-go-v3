@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作任务动作参数。
+// ActionParams 操作任务动作参数。
 type ActionParams struct {
 
 	// 测试连接数据库信息。

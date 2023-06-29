@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandReplicasetNodeResponse Response Object
 type ExpandReplicasetNodeResponse struct {
 
 	// 任务ID，仅按需实例返回该参数。

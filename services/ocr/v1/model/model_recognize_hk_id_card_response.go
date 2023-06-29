@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeHkIdCardResponse Response Object
 type RecognizeHkIdCardResponse struct {
 	Result         *HkIdCardResult `json:"result,omitempty"`
 	HttpStatusCode int             `json:"-"`

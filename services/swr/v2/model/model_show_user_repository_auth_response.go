@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUserRepositoryAuthResponse Response Object
 type ShowUserRepositoryAuthResponse struct {
 
 	// id

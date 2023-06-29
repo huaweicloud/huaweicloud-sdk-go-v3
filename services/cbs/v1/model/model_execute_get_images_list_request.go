@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteGetImagesListRequest Request Object
 type ExecuteGetImagesListRequest struct {
 
 	// 范围：大于等于1 默认：10

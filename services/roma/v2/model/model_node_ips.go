@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点内部ip信息
+// NodeIps 节点内部ip信息
 type NodeIps struct {
 
 	// 自定义后端服务livedta组件节点ip列表

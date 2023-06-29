@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplicationConfigurationResponse Response Object
 type ShowApplicationConfigurationResponse struct {
 
 	// 应用配置列表。

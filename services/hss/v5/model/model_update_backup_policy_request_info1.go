@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略
+// UpdateBackupPolicyRequestInfo1 备份策略
 type UpdateBackupPolicyRequestInfo1 struct {
 
 	// 策略是否启用，缺省值：true

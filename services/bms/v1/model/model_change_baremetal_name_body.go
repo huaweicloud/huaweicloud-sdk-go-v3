@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改裸金属服务器名称接口请求结构体
+// ChangeBaremetalNameBody 修改裸金属服务器名称接口请求结构体
 type ChangeBaremetalNameBody struct {
 	Server *ChangeBaremetalNameServer `json:"server"`
 }

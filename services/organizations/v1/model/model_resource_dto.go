@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源信息。
+// ResourceDto 资源信息。
 type ResourceDto struct {
 
 	// 资源Id。

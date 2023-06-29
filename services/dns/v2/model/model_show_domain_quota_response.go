@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDomainQuotaResponse Response Object
 type ShowDomainQuotaResponse struct {
 
 	// 配额项数据。

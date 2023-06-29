@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 修改终端节点服务接口请求结构体
+// UpdateEndpointServiceRequestBody 修改终端节点服务接口请求结构体
 type UpdateEndpointServiceRequestBody struct {
 
 	// 是否需要审批。 ● false：不需审批，创建的终端节点连接直接为accepted状态。 ● true：需审批，创建的终端节点连接需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
@@ -82,13 +82,18 @@ func (c UpdateEndpointServiceRequestBodyTcpProxy) MarshalJSON() ([]byte, error) 
 
 func (c *UpdateEndpointServiceRequestBodyTcpProxy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置replaceDefiner信息
+// ReplaceDefinerInfo 设置replaceDefiner信息
 type ReplaceDefinerInfo struct {
 
 	// 任务id

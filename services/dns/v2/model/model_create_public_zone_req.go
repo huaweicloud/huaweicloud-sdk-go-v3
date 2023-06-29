@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建公网zone请求
+// CreatePublicZoneReq 创建公网zone请求
 type CreatePublicZoneReq struct {
 
 	// Zone名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPresetLabelResponse Response Object
 type ListPresetLabelResponse struct {
 
 	// 预置标签数量

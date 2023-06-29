@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规则地址dto
+// RuleAddressDto 规则地址dto
 type RuleAddressDto struct {
 
 	// 源类型0手工输入,1关联IP地址组,2域名

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteVisionActiveCodeResponse Response Object
 type DeleteVisionActiveCodeResponse struct {
 	HttpStatusCode int `json:"-"`
 }

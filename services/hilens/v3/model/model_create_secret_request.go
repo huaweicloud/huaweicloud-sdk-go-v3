@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSecretRequest Request Object
 type CreateSecretRequest struct {
 
 	// 服务提供者：ief或hilens，选择设备纳管到不同的平台。不填默认为hilens平台

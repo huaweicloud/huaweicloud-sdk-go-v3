@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeGaussMySqlInstanceSpecificationResponse Response Object
 type ChangeGaussMySqlInstanceSpecificationResponse struct {
 
 	// 规格变更的任务ID，仅变更按需实例时会返回该参数

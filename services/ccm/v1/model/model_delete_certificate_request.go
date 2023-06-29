@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCertificateRequest Request Object
 type DeleteCertificateRequest struct {
 
 	// 所要删除的私有证书ID。

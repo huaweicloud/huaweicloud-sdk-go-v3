@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HealthCodeWordsBlockList
 type HealthCodeWordsBlockList struct {
 
 	// 文字块识别结果。

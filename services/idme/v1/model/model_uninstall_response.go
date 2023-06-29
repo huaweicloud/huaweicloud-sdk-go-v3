@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UninstallResponse Response Object
 type UninstallResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

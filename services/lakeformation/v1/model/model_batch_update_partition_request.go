@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdatePartitionRequest Request Object
 type BatchUpdatePartitionRequest struct {
 
 	// 实例ID

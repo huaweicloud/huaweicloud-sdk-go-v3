@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAccountRequest Request Object
 type ShowAccountRequest struct {
 
 	// 帐号的唯一标识符（ID）。

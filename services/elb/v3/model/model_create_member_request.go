@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMemberRequest Request Object
 type CreateMemberRequest struct {
 
 	// 后端服务器组ID。

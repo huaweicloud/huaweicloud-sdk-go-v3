@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新授权的详细信息。
+// UpdateAuthorisationRequestBody 更新授权的详细信息。
 type UpdateAuthorisationRequestBody struct {
 	Authorisation *UpdateAuthorisation `json:"authorisation"`
 }

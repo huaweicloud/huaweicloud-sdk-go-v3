@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlertRuleMetricsRequest Request Object
 type ListAlertRuleMetricsRequest struct {
 
 	// workspace_id

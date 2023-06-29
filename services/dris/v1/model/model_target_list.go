@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：目标设备类型对应id的列表。
+// TargetList **参数说明**：目标设备类型对应id的列表。
 type TargetList struct {
 
 	// **参数说明**：通过LTE-PC5传输通道（by_lte_pc5参数值为true）下发的rsu id列表。如果rsu id列表为空，则匹配事件范围内的在线rsu进行下发。

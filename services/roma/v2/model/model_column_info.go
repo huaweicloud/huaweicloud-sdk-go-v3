@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 表字段详情
+// ColumnInfo 表字段详情
 type ColumnInfo struct {
 
 	// 字段名称

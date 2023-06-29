@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreBackupRequest Request Object
 type RestoreBackupRequest struct {
 
 	// 备份id

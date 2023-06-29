@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件支持升级的集群版本
+// SupportVersions 插件支持升级的集群版本
 type SupportVersions struct {
 
 	// 支持的集群类型

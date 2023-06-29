@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 切换裸金属服务器操作系统接口请求结构体
+// OsChangeReq 切换裸金属服务器操作系统接口请求结构体
 type OsChangeReq struct {
 	OsChange *OsChange `json:"os-change"`
 }

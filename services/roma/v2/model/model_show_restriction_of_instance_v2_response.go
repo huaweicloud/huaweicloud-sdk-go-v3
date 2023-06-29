@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRestrictionOfInstanceV2Response Response Object
 type ShowRestrictionOfInstanceV2Response struct {
 
 	// 受限的IP网段的CIDR列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateRouteTableRequest Request Object
 type AssociateRouteTableRequest struct {
 
 	// 幂等性标识

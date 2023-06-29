@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDetailsOfDomainNameCertificateV2Response Response Object
 type ShowDetailsOfDomainNameCertificateV2Response struct {
 
 	// 证书域名

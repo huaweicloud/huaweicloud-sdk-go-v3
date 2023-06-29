@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCommonTaskRequest Request Object
 type CreateCommonTaskRequest struct {
 
 	// 实例ID

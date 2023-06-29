@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成发送短信请求体。
+// CreateVmsSendTaskRequestBody 生成发送短信请求体。
 type CreateVmsSendTaskRequestBody struct {
 
 	// 任务名称。

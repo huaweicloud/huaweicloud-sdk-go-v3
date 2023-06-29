@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteServerGroupRequest Request Object
 type DeleteServerGroupRequest struct {
 
 	// 弹性云服务器组UUID。

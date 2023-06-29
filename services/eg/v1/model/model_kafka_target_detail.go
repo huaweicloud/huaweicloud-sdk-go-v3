@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订阅的kafka事件目标参数列表，该字段序列化后总长度不超过1024字节
+// KafkaTargetDetail 订阅的kafka事件目标参数列表，该字段序列化后总长度不超过1024字节
 type KafkaTargetDetail struct {
 
 	// 主题

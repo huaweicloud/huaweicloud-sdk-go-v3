@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群所关联的参数组信息
+// ParameterGroup 集群所关联的参数组信息
 type ParameterGroup struct {
 
 	// 参数组ID

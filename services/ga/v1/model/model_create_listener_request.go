@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateListenerRequest Request Object
 type CreateListenerRequest struct {
 	Body *CreateListenerRequestBody `json:"body,omitempty"`
 }

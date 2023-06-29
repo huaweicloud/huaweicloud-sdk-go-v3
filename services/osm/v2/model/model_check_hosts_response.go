@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckHostsResponse Response Object
 type CheckHostsResponse struct {
 
 	// 错误码

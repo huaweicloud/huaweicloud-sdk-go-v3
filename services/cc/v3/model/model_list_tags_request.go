@@ -9,10 +9,10 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTagsRequest Request Object
 type ListTagsRequest struct {
 
-	// 资源类型: - cc: 云连接 - bwp: 带宽包
+	// 资源类型: - cloud-connection: 云连接 - bandwidth-package: 带宽包
 	ResourceType ListTagsRequestResourceType `json:"resource_type"`
 
 	// 资源ID
@@ -33,17 +33,17 @@ type ListTagsRequestResourceType struct {
 }
 
 type ListTagsRequestResourceTypeEnum struct {
-	CC  ListTagsRequestResourceType
-	BWP ListTagsRequestResourceType
+	CLOUD_CONNECTION  ListTagsRequestResourceType
+	BANDWIDTH_PACKAGE ListTagsRequestResourceType
 }
 
 func GetListTagsRequestResourceTypeEnum() ListTagsRequestResourceTypeEnum {
 	return ListTagsRequestResourceTypeEnum{
-		CC: ListTagsRequestResourceType{
-			value: "cc",
+		CLOUD_CONNECTION: ListTagsRequestResourceType{
+			value: "cloud-connection",
 		},
-		BWP: ListTagsRequestResourceType{
-			value: "bwp",
+		BANDWIDTH_PACKAGE: ListTagsRequestResourceType{
+			value: "bandwidth-package",
 		},
 	}
 }
@@ -58,13 +58,18 @@ func (c ListTagsRequestResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *ListTagsRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

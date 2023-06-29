@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateResourceSharePermissionResponse Response Object
 type DisassociateResourceSharePermissionResponse struct {
 	HttpStatusCode int `json:"-"`
 }

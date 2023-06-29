@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRedislogDownloadLinkRequest Request Object
 type CreateRedislogDownloadLinkRequest struct {
 
 	// 实例ID。

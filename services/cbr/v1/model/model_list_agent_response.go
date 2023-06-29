@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAgentResponse Response Object
 type ListAgentResponse struct {
 
 	// 客户端实例列表

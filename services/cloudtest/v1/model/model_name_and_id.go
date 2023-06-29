@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对象编号与名称
+// NameAndId 对象编号与名称
 type NameAndId struct {
 
 	// 对象编号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMultiAccountTransferAmountRequest Request Object
 type ShowMultiAccountTransferAmountRequest struct {
 
 	// 账户类型：BALANCE_TYPE_DEBIT：余额账户BALANCE_TYPE_CREDIT：信用账户

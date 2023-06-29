@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// AddServerNicsReq This is a auto create Body Object
 type AddServerNicsReq struct {
 
 	//

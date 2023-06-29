@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDataStoreResponse Response Object
 type UpdateDataStoreResponse struct {
 
 	// 存储 ID

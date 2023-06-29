@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAddressItemUsingDeleteRequest Request Object
 type DeleteAddressItemUsingDeleteRequest struct {
 
 	// 地址组成员id

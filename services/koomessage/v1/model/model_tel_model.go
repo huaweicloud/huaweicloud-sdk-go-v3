@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 热线模型。
+// TelModel 热线模型。
 type TelModel struct {
 
 	// 电话号码（只能包含数字和”-“，且开头和结尾必须为数字）。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLogStreamRequest Request Object
 type CreateLogStreamRequest struct {
 
 	// 租户想创建的日志流所在的日志组的groupid，一般为36位字符串。

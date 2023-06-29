@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDDosStatusResponse Response Object
 type ListDDosStatusResponse struct {
 
 	// 弹性IP总数

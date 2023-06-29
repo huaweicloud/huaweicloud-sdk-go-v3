@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询素材返回体。
+// ListAimTemplateMaterialsResponseMode 查询素材返回体。
 type ListAimTemplateMaterialsResponseMode struct {
 	PageInfo *PageInfo `json:"page_info"`
 

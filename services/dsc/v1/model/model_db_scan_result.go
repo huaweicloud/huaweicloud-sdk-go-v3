@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库扫描结果
+// DbScanResult 数据库扫描结果
 type DbScanResult struct {
 
 	// 扫描结果总数

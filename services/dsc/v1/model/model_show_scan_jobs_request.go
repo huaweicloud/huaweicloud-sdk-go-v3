@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowScanJobsRequest Request Object
 type ShowScanJobsRequest struct {
 
 	// 页码

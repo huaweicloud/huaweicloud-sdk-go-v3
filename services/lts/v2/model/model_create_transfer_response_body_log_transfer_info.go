@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 日志转储信息
+// CreateTransferResponseBodyLogTransferInfo 日志转储信息
 type CreateTransferResponseBodyLogTransferInfo struct {
 	LogAgencyTransfer *CreateTransferResponseBodyLogTransferInfoLogAgencyTransfer `json:"log_agency_transfer,omitempty"`
 
@@ -71,13 +71,18 @@ func (c CreateTransferResponseBodyLogTransferInfoLogStorageFormat) MarshalJSON()
 
 func (c *CreateTransferResponseBodyLogTransferInfoLogStorageFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -113,13 +118,18 @@ func (c CreateTransferResponseBodyLogTransferInfoLogTransferMode) MarshalJSON() 
 
 func (c *CreateTransferResponseBodyLogTransferInfoLogTransferMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -159,13 +169,18 @@ func (c CreateTransferResponseBodyLogTransferInfoLogTransferStatus) MarshalJSON(
 
 func (c *CreateTransferResponseBodyLogTransferInfoLogTransferStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -205,13 +220,18 @@ func (c CreateTransferResponseBodyLogTransferInfoLogTransferType) MarshalJSON() 
 
 func (c *CreateTransferResponseBodyLogTransferInfoLogTransferType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

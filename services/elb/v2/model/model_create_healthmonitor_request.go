@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateHealthmonitorRequest Request Object
 type CreateHealthmonitorRequest struct {
 	Body *CreateHealthmonitorRequestBody `json:"body,omitempty"`
 }

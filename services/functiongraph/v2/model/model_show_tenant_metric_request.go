@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTenantMetricRequest Request Object
 type ShowTenantMetricRequest struct {
 
 	// 时间段，单位为分钟

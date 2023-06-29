@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowWindowsBaremetalServerPwdRequest Request Object
 type ShowWindowsBaremetalServerPwdRequest struct {
 
 	// 裸金属服务器ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPartnerAccountChangeRecordsResponse Response Object
 type ListPartnerAccountChangeRecordsResponse struct {
 
 	// 返回总条数。

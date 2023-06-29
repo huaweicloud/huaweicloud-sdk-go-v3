@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 静态属性
+// ValueInAttributes 静态属性
 type ValueInAttributes struct {
 
 	// value 最大长度512，value允许英文字母、数字、下划线、中划线、点、逗号、冒号、/、@、+、?、^、=、%、&、~、#、!、*

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除用户请求体
+// BatchDeleteMemberReq 批量删除用户请求体
 type BatchDeleteMemberReq struct {
 
 	// 删除用户列表

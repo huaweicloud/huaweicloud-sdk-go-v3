@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 整体流利度打分
+// Fluency 整体流利度打分
 type Fluency struct {
 
 	// 流利度综合得分 0-100

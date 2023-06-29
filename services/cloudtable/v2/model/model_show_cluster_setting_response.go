@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowClusterSettingResponse Response Object
 type ShowClusterSettingResponse struct {
 
 	// 集群参数生效状态：0、未更改 1、未应用 2、应用中 3、已应用 4、应用失败

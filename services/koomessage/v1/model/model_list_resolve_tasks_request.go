@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResolveTasksRequest Request Object
 type ListResolveTasksRequest struct {
 
 	// 解析任务ID。

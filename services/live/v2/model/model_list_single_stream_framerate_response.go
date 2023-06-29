@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSingleStreamFramerateResponse Response Object
 type ListSingleStreamFramerateResponse struct {
 
 	// 用量详情。

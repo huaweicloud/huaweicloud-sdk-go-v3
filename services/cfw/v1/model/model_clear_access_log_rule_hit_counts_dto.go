@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// clear access log rule hit counts dto
+// ClearAccessLogRuleHitCountsDto clear access log rule hit counts dto
 type ClearAccessLogRuleHitCountsDto struct {
 
 	// 规则id列表

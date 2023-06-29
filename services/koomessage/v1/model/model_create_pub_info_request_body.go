@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建服务号一站式请求体。
+// CreatePubInfoRequestBody 创建服务号一站式请求体。
 type CreatePubInfoRequestBody struct {
 	PubRequestBody *PubInfoRequestBody `json:"pub_request_body"`
 

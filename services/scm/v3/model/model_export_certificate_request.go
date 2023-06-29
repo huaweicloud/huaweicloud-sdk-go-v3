@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportCertificateRequest Request Object
 type ExportCertificateRequest struct {
 
 	// 证书id。

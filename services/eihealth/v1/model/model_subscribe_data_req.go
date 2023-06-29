@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订阅资产市场数据请求体
+// SubscribeDataReq 订阅资产市场数据请求体
 type SubscribeDataReq struct {
 
 	// 资产ID

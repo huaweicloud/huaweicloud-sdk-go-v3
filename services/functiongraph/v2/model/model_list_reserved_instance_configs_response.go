@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListReservedInstanceConfigsResponse Response Object
 type ListReservedInstanceConfigsResponse struct {
 
 	// 函数预留实例列表

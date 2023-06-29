@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件实例详细信息-response结构体
+// AddonInstance 插件实例详细信息-response结构体
 type AddonInstance struct {
 
 	// API类型，固定值“Addon”，该值不可修改。

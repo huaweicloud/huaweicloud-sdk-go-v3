@@ -75,6 +75,7 @@ type ListDependenciesResultRuntimeEnum struct {
 	C__NET_CORE_3_1 ListDependenciesResultRuntime
 	PHP7_3          ListDependenciesResultRuntime
 	PYTHON3_9       ListDependenciesResultRuntime
+	CUSTOM          ListDependenciesResultRuntime
 	HTTP            ListDependenciesResultRuntime
 }
 
@@ -128,6 +129,9 @@ func GetListDependenciesResultRuntimeEnum() ListDependenciesResultRuntimeEnum {
 		PYTHON3_9: ListDependenciesResultRuntime{
 			value: "Python3.9",
 		},
+		CUSTOM: ListDependenciesResultRuntime{
+			value: "Custom",
+		},
 		HTTP: ListDependenciesResultRuntime{
 			value: "http",
 		},
@@ -144,13 +148,18 @@ func (c ListDependenciesResultRuntime) MarshalJSON() ([]byte, error) {
 
 func (c *ListDependenciesResultRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

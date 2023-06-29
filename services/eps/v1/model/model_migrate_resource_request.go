@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MigrateResourceRequest Request Object
 type MigrateResourceRequest struct {
 
 	// 目标企业项目ID，enterprise_project_id为0时表示迁移资源到默认资源组default。注：实际迁移时，会将资源所属的【当前企业项目ID】替换为【目标企业项目ID】，所以不需要指定【当前企业项目ID】。

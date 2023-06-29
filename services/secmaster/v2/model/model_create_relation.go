@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Create Relation
+// CreateRelation Create Relation
 type CreateRelation struct {
 
 	// search ids

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSlowLogDesensitizationRequest Request Object
 type ShowSlowLogDesensitizationRequest struct {
 
 	// 实例ID。

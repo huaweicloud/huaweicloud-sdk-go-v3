@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateVendorRequest Request Object
 type UpdateVendorRequest struct {
 	Body *UpdateVendorRequestBody `json:"body,omitempty" type:"multipart"`
 }

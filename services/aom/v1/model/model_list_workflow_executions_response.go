@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowExecutionsResponse Response Object
 type ListWorkflowExecutionsResponse struct {
 	Body           *[]WorkflowExecutionBrief `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`

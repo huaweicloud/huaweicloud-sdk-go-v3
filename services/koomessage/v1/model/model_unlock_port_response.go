@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnlockPortResponse Response Object
 type UnlockPortResponse struct {
 	Data           *UnlockPortResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                      `json:"-"`

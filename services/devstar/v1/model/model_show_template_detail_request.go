@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTemplateDetailRequest Request Object
 type ShowTemplateDetailRequest struct {
 
 	// 语言类型，缺省值为“zh-cn”。  枚举值： - zh-cn：中文 - en-us：英文
@@ -58,13 +58,18 @@ func (c ShowTemplateDetailRequestXLanguage) MarshalJSON() ([]byte, error) {
 
 func (c *ShowTemplateDetailRequestXLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

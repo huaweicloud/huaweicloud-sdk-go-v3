@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteIndicatorRequest Request Object
 type DeleteIndicatorRequest struct {
 
 	// application/json;charset=UTF-8

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClustersResponse Response Object
 type ListClustersResponse struct {
 
 	// 集群列表，请参见clusters参数说明

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelShareConnectionsRequest Request Object
 type CancelShareConnectionsRequest struct {
 
 	// 语言

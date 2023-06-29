@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 点位处理配置结构体
+// ProcessingConfigDto 点位处理配置结构体
 type ProcessingConfigDto struct {
 	Validity *PointValidityingDto `json:"validity,omitempty"`
 

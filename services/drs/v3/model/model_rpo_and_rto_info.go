@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RpoAndRTO信息体
+// RpoAndRtoInfo RpoAndRTO信息体
 type RpoAndRtoInfo struct {
 
 	// 检查点

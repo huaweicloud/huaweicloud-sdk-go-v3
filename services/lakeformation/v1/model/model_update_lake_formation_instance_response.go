@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateLakeFormationInstanceResponse Response Object
 type UpdateLakeFormationInstanceResponse struct {
 
 	// LakeFormation实例Id

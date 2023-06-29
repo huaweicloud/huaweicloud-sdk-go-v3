@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopCbhInstanceRequest Request Object
 type StopCbhInstanceRequest struct {
 	Body *StopCbhRequestBody `json:"body,omitempty"`
 }

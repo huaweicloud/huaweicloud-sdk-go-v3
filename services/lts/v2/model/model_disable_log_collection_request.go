@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisableLogCollectionRequest Request Object
 type DisableLogCollectionRequest struct {
 }
 

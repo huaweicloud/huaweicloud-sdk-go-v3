@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateInstallCmdResponse Response Object
 type CreateInstallCmdResponse struct {
 
 	// 标准版节点安装/升级命令

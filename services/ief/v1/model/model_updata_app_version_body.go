@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新应用模板版本的请求体
+// UpdataAppVersionBody 更新应用模板版本的请求体
 type UpdataAppVersionBody struct {
 	Version *VersionUpdate `json:"version"`
 }

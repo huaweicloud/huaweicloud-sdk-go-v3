@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘业务对象
+// EdgeCloud 边缘业务对象
 type EdgeCloud struct {
 
 	// 边缘业务ID。

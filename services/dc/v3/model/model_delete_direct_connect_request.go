@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDirectConnectRequest Request Object
 type DeleteDirectConnectRequest struct {
 
 	// 物理专线连接ID。

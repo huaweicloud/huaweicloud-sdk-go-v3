@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMetricDataRequest Request Object
 type CreateMetricDataRequest struct {
 
 	// 添加一条或多条自定义指标监控数据，请求参数。

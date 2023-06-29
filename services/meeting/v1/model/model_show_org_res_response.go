@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOrgResResponse Response Object
 type ShowOrgResResponse struct {
 
 	// 企业管理员查询所属企业的资源使用信息。

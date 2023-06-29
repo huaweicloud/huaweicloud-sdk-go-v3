@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeGroupsResponse Response Object
 type ListEdgeGroupsResponse struct {
 
 	// 边缘节点组数目

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDomainHttpsCertResponse Response Object
 type ShowDomainHttpsCertResponse struct {
 
 	// 证书格式，默认为PEM，当前只支持PEM格式
@@ -61,13 +61,18 @@ func (c ShowDomainHttpsCertResponseCertificateFormat) MarshalJSON() ([]byte, err
 
 func (c *ShowDomainHttpsCertResponseCertificateFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

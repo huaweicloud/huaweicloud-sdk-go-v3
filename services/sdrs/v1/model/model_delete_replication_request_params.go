@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除复制对请求数据结构
+// DeleteReplicationRequestParams 删除复制对请求数据结构
 type DeleteReplicationRequestParams struct {
 
 	// 保护组的ID。

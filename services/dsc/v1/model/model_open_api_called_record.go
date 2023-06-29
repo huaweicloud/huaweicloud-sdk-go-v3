@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OpenApi调用记录
+// OpenApiCalledRecord OpenApi调用记录
 type OpenApiCalledRecord struct {
 
 	// 调用API的user_name

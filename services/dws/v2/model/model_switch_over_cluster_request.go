@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchOverClusterRequest Request Object
 type SwitchOverClusterRequest struct {
 
 	// 集群的ID。

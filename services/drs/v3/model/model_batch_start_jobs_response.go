@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchStartJobsResponse Response Object
 type BatchStartJobsResponse struct {
 
 	// 批量启动实时灾备任务返回列表。

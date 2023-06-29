@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowClusterRequest Request Object
 type ShowClusterRequest struct {
 
 	// 边缘集群ID

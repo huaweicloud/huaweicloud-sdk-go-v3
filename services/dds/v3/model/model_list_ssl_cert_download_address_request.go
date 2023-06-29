@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSslCertDownloadAddressRequest Request Object
 type ListSslCertDownloadAddressRequest struct {
 
 	// 语言。

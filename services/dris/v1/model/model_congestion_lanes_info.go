@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 车道拥堵信息。
+// CongestionLanesInfo 车道拥堵信息。
 type CongestionLanesInfo struct {
 
 	// **参数说明**：车道号。

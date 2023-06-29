@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDiagnosisTaskDetailsResponse Response Object
 type ShowDiagnosisTaskDetailsResponse struct {
 
 	// 诊断结果为异常的诊断项总数

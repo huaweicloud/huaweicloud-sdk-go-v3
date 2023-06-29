@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmTemplatesRequest Request Object
 type ListAlarmTemplatesRequest struct {
 
 	// 自定义告警模的ID，如：at1603330892378wkDm77y6B。

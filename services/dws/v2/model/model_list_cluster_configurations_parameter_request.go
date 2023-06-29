@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClusterConfigurationsParameterRequest Request Object
 type ListClusterConfigurationsParameterRequest struct {
 
 	// 集群的ID。

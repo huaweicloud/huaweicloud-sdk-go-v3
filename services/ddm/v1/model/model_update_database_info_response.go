@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDatabaseInfoResponse Response Object
 type UpdateDatabaseInfoResponse struct {
 
 	// DDM实例id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用镜像列表信息
+// QueryAppImageResponseDto 应用镜像列表信息
 type QueryAppImageResponseDto struct {
 
 	// 镜像组织

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateConfTokenRequest Request Object
 type CreateConfTokenRequest struct {
 
 	// 会议ID。 > 创建会议时返回的conferenceID。不是vmrConferenceID。

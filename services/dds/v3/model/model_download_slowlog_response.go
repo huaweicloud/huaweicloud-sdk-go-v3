@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DownloadSlowlogResponse Response Object
 type DownloadSlowlogResponse struct {
 
 	// 具体信息。

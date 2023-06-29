@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchToMasterRequest Request Object
 type SwitchToMasterRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRestoreCollectionsResponse Response Object
 type ListRestoreCollectionsResponse struct {
 
 	// 集合总数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckApisV2Response Response Object
 type CheckApisV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunMultiGrainedSegmentRequest Request Object
 type RunMultiGrainedSegmentRequest struct {
 	Body *PostMultiGrainedSegmentReq `json:"body,omitempty"`
 }

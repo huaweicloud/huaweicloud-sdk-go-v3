@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备属性
+// EdgemgrDeviceReq 终端设备属性
 type EdgemgrDeviceReq struct {
 
 	// 终端设备名称，只允许中文字符、英文字母、数字、下划线、中划线，长度限制为1~64

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTemplateMaterialRequest Request Object
 type DeleteTemplateMaterialRequest struct {
 
 	// 请求体参数类型，该字段必须设置为：application/json。

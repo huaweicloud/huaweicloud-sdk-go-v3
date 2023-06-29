@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDeploymentHostResponse Response Object
 type CreateDeploymentHostResponse struct {
 
 	// 主机id

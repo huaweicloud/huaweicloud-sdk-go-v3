@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 扩展配置列表
+// ExtendDDoSSet 扩展配置列表
 type ExtendDDoSSet struct {
 
 	// 配置分段ID

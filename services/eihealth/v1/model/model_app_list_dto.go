@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用列表返回的单个应用对象
+// AppListDto 应用列表返回的单个应用对象
 type AppListDto struct {
 
 	// 应用id

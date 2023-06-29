@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterPortResponse Response Object
 type RegisterPortResponse struct {
 	Data           *RegisterPortResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                        `json:"-"`

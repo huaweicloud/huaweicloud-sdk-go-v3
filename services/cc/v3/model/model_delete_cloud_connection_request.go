@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCloudConnectionRequest Request Object
 type DeleteCloudConnectionRequest struct {
 
 	// 云连接实例ID。

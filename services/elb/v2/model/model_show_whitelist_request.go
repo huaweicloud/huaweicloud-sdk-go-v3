@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowWhitelistRequest Request Object
 type ShowWhitelistRequest struct {
 
 	// 白名单的id

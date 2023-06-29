@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandInstanceNodesResponse Response Object
 type ExpandInstanceNodesResponse struct {
 
 	// DDM实例ID。

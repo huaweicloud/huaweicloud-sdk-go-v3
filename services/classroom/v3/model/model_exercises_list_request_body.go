@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取习题库里习题调用参数
+// ExercisesListRequestBody 获取习题库里习题调用参数
 type ExercisesListRequestBody struct {
 	Filter *ExerciseFilter `json:"filter,omitempty"`
 

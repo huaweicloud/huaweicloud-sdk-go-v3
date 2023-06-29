@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConfigurationParameterResponse Response Object
 type ShowConfigurationParameterResponse struct {
 
 	// 参数模板ID。

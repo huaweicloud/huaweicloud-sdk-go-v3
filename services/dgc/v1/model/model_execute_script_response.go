@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteScriptResponse Response Object
 type ExecuteScriptResponse struct {
 	InstanceId     *string `json:"instanceId,omitempty"`
 	HttpStatusCode int     `json:"-"`

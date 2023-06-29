@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输入输出过滤配置
+// StateDataFilter 输入输出过滤配置
 type StateDataFilter struct {
 
 	// 输入过滤表达式（JsonPath）

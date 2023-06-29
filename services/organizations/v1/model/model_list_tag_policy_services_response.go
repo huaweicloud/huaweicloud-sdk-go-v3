@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTagPolicyServicesResponse Response Object
 type ListTagPolicyServicesResponse struct {
 	Services       *[]TagPolicyServiceDto `json:"services,omitempty"`
 	HttpStatusCode int                    `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 错误样例
+// ErrorSample 错误样例
 type ErrorSample struct {
 
 	// 检测源描述。

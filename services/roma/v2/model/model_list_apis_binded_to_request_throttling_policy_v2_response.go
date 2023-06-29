@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApisBindedToRequestThrottlingPolicyV2Response Response Object
 type ListApisBindedToRequestThrottlingPolicyV2Response struct {
 
 	// 本次返回的列表长度

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// ListInstancesDatastoreResult 数据库信息。
 type ListInstancesDatastoreResult struct {
 
 	// 数据库引擎。

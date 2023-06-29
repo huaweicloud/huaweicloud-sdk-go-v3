@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// metadata字段数据结构说明
+// MetadataInfos metadata字段数据结构说明
 type MetadataInfos struct {
 
 	// metadata键、值。键、值长度均不大于255字节。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// server字段数据结构说明。
+// RespServer server字段数据结构说明。
 type RespServer struct {
 
 	// 弹性云服务器的网络属性。

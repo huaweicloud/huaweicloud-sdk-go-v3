@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储库订单
+// VaultOrder 存储库订单
 type VaultOrder struct {
 
 	// 存储库名称  最小长度：1  最大长度：64

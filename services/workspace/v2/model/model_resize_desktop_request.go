@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeDesktopRequest Request Object
 type ResizeDesktopRequest struct {
 	Body *ResizeDesktopReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWorkflowExecutionForPageResponse Response Object
 type ShowWorkflowExecutionForPageResponse struct {
 
 	// 返回所有满足条件的对象个数

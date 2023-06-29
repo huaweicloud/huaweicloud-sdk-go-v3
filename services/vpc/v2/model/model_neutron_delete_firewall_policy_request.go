@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronDeleteFirewallPolicyRequest Request Object
 type NeutronDeleteFirewallPolicyRequest struct {
 
 	// 网络ACL防火墙策略ID

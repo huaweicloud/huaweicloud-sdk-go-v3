@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 恢复到已有实例的请求body
+// RestoreRequestBody 恢复到已有实例的请求body
 type RestoreRequestBody struct {
 
 	// 备份文件名称。根据备份文件恢复到已有的实例。

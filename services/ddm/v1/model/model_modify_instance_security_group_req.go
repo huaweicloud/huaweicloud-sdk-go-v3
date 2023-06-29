@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto update body Object
+// ModifyInstanceSecurityGroupReq This is a auto update body Object
 type ModifyInstanceSecurityGroupReq struct {
 
 	// 安全组ID，默认值为原安全组ID，可根据需要判断是否修改安全组ID

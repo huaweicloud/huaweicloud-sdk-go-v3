@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 回调地址请求体。
+// AddCallbackRequestBody 回调地址请求体。
 type AddCallbackRequestBody struct {
 
 	// 回调地址。  > - 必须http或https开头，建议使用https > - 支持域名或公网IP回调地址，不支持私网IP回调地址

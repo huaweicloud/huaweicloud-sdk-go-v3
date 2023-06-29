@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建异步任务响应体。
+// AsyncCreateJobResp 创建异步任务响应体。
 type AsyncCreateJobResp struct {
 
 	// 批量异步创建的任务ID。

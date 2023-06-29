@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEnvironmentDetailResponse Response Object
 type ShowEnvironmentDetailResponse struct {
 
 	// 环境ID。

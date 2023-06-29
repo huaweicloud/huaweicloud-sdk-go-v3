@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCompositeHostResponse Response Object
 type ShowCompositeHostResponse struct {
 
 	// 域名id

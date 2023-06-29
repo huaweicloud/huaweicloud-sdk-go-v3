@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCustomerBillsMonthlyBreakDownRequest Request Object
 type ListCustomerBillsMonthlyBreakDownRequest struct {
 
 	// 语言。en_US：英文。zh_CN：中文

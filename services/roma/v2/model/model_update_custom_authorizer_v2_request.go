@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCustomAuthorizerV2Request Request Object
 type UpdateCustomAuthorizerV2Request struct {
 
 	// 实例ID

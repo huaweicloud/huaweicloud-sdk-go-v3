@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSkillOrderInfoResponse Response Object
 type ShowSkillOrderInfoResponse struct {
 
 	// 技能是否支持永久使用标识。1标识支持，0为不支持

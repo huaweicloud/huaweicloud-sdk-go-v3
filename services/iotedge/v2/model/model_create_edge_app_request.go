@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEdgeAppRequest Request Object
 type CreateEdgeAppRequest struct {
 	Body *CreateEdgeApplicationRequestDto `json:"body,omitempty"`
 }

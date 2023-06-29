@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RecomendAnswer
 type RecomendAnswer struct {
 
 	// 问答对ID。

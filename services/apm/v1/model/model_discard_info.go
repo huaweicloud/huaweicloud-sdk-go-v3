@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 丢弃的信息。
+// DiscardInfo 丢弃的信息。
 type DiscardInfo struct {
 
 	// 类型。

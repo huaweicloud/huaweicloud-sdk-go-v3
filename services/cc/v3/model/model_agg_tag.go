@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对于多个key相同的value，聚合成为key/values
+// AggTag 对于多个key相同的value，聚合成为key/values
 type AggTag struct {
 
 	// 键

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网络信息
+// NetworksResult 网络信息
 type NetworksResult struct {
 
 	// 网络ID

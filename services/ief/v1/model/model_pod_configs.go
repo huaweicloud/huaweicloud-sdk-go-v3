@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用实例配置
+// PodConfigs 应用实例配置
 type PodConfigs struct {
 
 	// 应用实例是否启用主机网络，不启用则使用端口映射，默认值false

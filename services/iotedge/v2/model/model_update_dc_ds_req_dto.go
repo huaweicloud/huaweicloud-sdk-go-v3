@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改数据源配置请求结构体
+// UpdateDcDsReqDto 修改数据源配置请求结构体
 type UpdateDcDsReqDto struct {
 
 	// 数据源的连接及采集信息

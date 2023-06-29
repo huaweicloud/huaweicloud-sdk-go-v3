@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteOtpDevicesRequest Request Object
 type BatchDeleteOtpDevicesRequest struct {
 
 	// 用户ID。

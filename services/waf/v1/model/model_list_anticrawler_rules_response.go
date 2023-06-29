@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAnticrawlerRulesResponse Response Object
 type ListAnticrawlerRulesResponse struct {
 
 	// 该策略下反爬虫规则数量

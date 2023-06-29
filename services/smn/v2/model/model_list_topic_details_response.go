@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTopicDetailsResponse Response Object
 type ListTopicDetailsResponse struct {
 
 	// 更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。

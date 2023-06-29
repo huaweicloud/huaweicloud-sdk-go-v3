@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除数据库用户请求体。
+// DeleteDatabaseUserRequest 删除数据库用户请求体。
 type DeleteDatabaseUserRequest struct {
 
 	// 准备删除的数据库用户列表，列表最大长度为50。

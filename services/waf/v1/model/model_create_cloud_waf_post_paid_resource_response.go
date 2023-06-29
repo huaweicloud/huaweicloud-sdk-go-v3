@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCloudWafPostPaidResourceResponse Response Object
 type CreateCloudWafPostPaidResourceResponse struct {
 
 	// 云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：铂金版   - 7: 入门版   - 22：按需版本

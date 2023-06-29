@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 识别文字块列表，输出顺序从左到右，先上后下。
+// GeneralTextWordsBlockList 识别文字块列表，输出顺序从左到右，先上后下。
 type GeneralTextWordsBlockList struct {
 
 	// 文字块识别结果。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateInstanceRequest Request Object
 type UpdateInstanceRequest struct {
 
 	// bcs 服务id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 扩展属性，目前支持server_id，允许为空
+// MultiTaskInitBodyExtInfo 扩展属性，目前支持server_id，允许为空
 type MultiTaskInitBodyExtInfo struct {
 
 	// Mysql的ServerID

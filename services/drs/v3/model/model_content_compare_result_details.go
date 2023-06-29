@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ContentCompareResultDetails
 type ContentCompareResultDetails struct {
 
 	// 源库名称。

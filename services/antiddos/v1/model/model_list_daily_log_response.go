@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDailyLogResponse Response Object
 type ListDailyLogResponse struct {
 
 	// 弹性IP总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转换计算
+// DtTransformRequest 转换计算
 type DtTransformRequest struct {
 
 	// 输入参数，最多支持10个

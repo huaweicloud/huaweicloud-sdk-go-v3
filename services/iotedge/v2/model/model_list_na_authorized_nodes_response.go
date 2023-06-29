@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNaAuthorizedNodesResponse Response Object
 type ListNaAuthorizedNodesResponse struct {
 
 	// 总记录数

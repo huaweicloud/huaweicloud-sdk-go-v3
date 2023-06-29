@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEdgeGroupNodeBindingRequest Request Object
 type UpdateEdgeGroupNodeBindingRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

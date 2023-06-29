@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSegmentResponse Response Object
 type RunSegmentResponse struct {
 
 	// 分词结果。调用失败时无此字段。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddIssueWorkHoursRequest Request Object
 type AddIssueWorkHoursRequest struct {
 
 	// 项目id

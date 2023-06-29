@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunTextModerationRequest Request Object
 type RunTextModerationRequest struct {
 	Body *TextDetectionReq `json:"body,omitempty"`
 }

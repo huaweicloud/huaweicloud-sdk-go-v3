@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteUserResponse Response Object
 type DeleteUserResponse struct {
 
 	// 信息。

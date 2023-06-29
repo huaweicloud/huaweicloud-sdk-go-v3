@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskPathTreeResponse Response Object
 type ShowTaskPathTreeResponse struct {
 
 	// 任务的目录树信息

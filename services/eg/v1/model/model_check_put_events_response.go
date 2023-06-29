@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckPutEventsResponse Response Object
 type CheckPutEventsResponse struct {
 
 	// 预校验发布事件失败的个数

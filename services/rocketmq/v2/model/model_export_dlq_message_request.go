@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportDlqMessageRequest Request Object
 type ExportDlqMessageRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListL7RulesResponse Response Object
 type ListL7RulesResponse struct {
 
 	// 请求ID。  注：自动生成 。

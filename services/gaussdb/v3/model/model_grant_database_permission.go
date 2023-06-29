@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户权限信息。
+// GrantDatabasePermission 数据库用户权限信息。
 type GrantDatabasePermission struct {
 
 	// 数据库用户名。

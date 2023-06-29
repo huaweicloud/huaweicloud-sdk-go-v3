@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询主机信息请求体
+// GetHostListRequestBody 查询主机信息请求体
 type GetHostListRequestBody struct {
 
 	// 主机ID列表。可以根据主机ID列表进行批量过滤

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// HangUpRequest Request Object
 type HangUpRequest struct {
 
 	// 会议ID。

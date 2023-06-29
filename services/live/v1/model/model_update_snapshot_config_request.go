@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSnapshotConfigRequest Request Object
 type UpdateSnapshotConfigRequest struct {
 	Body *LiveSnapshotConfig `json:"body,omitempty"`
 }

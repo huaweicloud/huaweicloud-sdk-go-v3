@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateIpGroupRequest Request Object
 type UpdateIpGroupRequest struct {
 
 	// 待更新的IP地址组的ID。

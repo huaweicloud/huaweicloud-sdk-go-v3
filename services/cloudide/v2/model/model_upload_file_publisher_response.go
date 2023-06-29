@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadFilePublisherResponse Response Object
 type UploadFilePublisherResponse struct {
 
 	// 返回值

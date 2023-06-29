@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群所在的网络信息以及安全组信息。
+// Nics 集群所在的网络信息以及安全组信息。
 type Nics struct {
 
 	// CloudTable集群所在网络ID。

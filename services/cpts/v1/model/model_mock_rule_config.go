@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 全链路压测探针Mock规则配置
+// MockRuleConfig 全链路压测探针Mock规则配置
 type MockRuleConfig struct {
 
 	// 服务类型（当前只支持http）

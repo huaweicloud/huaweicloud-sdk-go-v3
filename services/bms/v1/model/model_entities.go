@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// entities字段数据结构说明
+// Entities entities字段数据结构说明
 type Entities struct {
 
 	// 子任务数量。没有子任务时为0

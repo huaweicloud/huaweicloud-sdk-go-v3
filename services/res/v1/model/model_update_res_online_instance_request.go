@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateResOnlineInstanceRequest Request Object
 type UpdateResOnlineInstanceRequest struct {
 
 	// 作业id。

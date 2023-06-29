@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteQaChatRequest Request Object
 type ExecuteQaChatRequest struct {
 
 	// 机器人标识符，qabot编号，UUID格式。

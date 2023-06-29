@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除数据库用户的数据库权限
+// DeleteDatabasePermissionRequestBody 删除数据库用户的数据库权限
 type DeleteDatabasePermissionRequestBody struct {
 
 	// 数据库用户列表，列表最大长度为50。

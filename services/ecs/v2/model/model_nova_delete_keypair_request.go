@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaDeleteKeypairRequest Request Object
 type NovaDeleteKeypairRequest struct {
 
 	// 密钥名称。

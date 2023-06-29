@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新带宽包实例的请求体
+// UpdateBandwidthPackage 更新带宽包实例的请求体
 type UpdateBandwidthPackage struct {
 
 	// 带宽包实例的名字。
@@ -63,13 +63,18 @@ func (c UpdateBandwidthPackageBillingMode) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateBandwidthPackageBillingMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

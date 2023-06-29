@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGaussMySqlDatabaseUserResponse Response Object
 type ListGaussMySqlDatabaseUserResponse struct {
 
 	// 数据库用户列表。

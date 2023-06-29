@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowClassroomDetailRequest Request Object
 type ShowClassroomDetailRequest struct {
 
 	// 课堂ID

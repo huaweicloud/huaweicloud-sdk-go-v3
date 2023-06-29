@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// TaskBotAnswers
 type TaskBotAnswers struct {
 
 	// 答案。

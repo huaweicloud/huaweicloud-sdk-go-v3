@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSignedLatestPublishedAgreementResponse Response Object
 type ShowSignedLatestPublishedAgreementResponse struct {
 
 	// 是否签署

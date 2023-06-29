@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateVersionAliasResponse Response Object
 type UpdateVersionAliasResponse struct {
 
 	// 要获取的别名名称。

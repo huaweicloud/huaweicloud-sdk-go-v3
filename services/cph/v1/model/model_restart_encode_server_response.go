@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartEncodeServerResponse Response Object
 type RestartEncodeServerResponse struct {
 
 	// 请求的唯一标识ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PPT图片元数据。
+// PptPageInfo PPT图片元数据。
 type PptPageInfo struct {
 
 	// 页面编号。

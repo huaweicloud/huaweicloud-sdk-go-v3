@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除数据请求体
+// BatchDeleteDataReq 删除数据请求体
 type BatchDeleteDataReq struct {
 
 	// 删除的数据ID集（项目名称:/路径）

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点离线缓存配置
+// OfflineCacheConfigsDto 节点离线缓存配置
 type OfflineCacheConfigsDto struct {
 
 	// 数据上报优先级，可选项：realtime_first实时数据优先 sequential按时序上报，默认realtime_first

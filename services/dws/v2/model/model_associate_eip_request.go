@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateEipRequest Request Object
 type AssociateEipRequest struct {
 
 	// 集群ID

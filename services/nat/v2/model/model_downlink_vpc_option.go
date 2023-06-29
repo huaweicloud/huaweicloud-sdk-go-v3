@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 私网NAT网关实例所属的VPC实例。
+// DownlinkVpcOption 私网NAT网关实例所属的VPC实例。
 type DownlinkVpcOption struct {
 
 	// 私网NAT网关实例所属的子网的ID。

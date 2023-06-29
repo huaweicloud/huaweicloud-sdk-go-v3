@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新监听器的请求体。
+// UpdateListenerReq 更新监听器的请求体。
 type UpdateListenerReq struct {
 
 	// 监听器名称。

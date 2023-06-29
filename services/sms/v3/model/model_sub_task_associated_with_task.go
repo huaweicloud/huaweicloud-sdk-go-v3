@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务关联的子任务信息
+// SubTaskAssociatedWithTask 任务关联的子任务信息
 type SubTaskAssociatedWithTask struct {
 
 	// 子任务ID

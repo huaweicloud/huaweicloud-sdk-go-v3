@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 证书设置
+// HttpPutBody 证书设置
 type HttpPutBody struct {
 
 	// HTTPS证书是否启用，on：开启，off：关闭。

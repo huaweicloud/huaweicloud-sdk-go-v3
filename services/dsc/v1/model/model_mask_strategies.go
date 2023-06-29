@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 脱敏策略列表，每个策略对应一个字段，脱敏策略数最多100个。详情见“动态脱敏策略配置”。
+// MaskStrategies 脱敏策略列表，每个策略对应一个字段，脱敏策略数最多100个。详情见“动态脱敏策略配置”。
 type MaskStrategies struct {
 
 	// 需要脱敏的字段名称，最大支持长度256。
@@ -93,13 +93,18 @@ func (c MaskStrategiesAlgorithm) MarshalJSON() ([]byte, error) {
 
 func (c *MaskStrategiesAlgorithm) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

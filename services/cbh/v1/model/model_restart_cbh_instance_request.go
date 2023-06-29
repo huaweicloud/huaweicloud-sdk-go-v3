@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestartCbhInstanceRequest Request Object
 type RestartCbhInstanceRequest struct {
 	Body *RebootCbhRequestBody `json:"body,omitempty"`
 }

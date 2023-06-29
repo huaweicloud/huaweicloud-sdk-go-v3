@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateExternalEntityResponse Response Object
 type CreateExternalEntityResponse struct {
 
 	// 节点ID

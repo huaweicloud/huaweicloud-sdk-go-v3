@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEnterpriseProjectAuthResponse Response Object
 type CreateEnterpriseProjectAuthResponse struct {
 	HttpStatusCode int `json:"-"`
 }

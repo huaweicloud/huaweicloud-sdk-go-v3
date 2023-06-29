@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子合成路径规划任务的请求体
+// SynthesisTaskData 分子合成路径规划任务的请求体
 type SynthesisTaskData struct {
 
 	// 分子SMILES表达式

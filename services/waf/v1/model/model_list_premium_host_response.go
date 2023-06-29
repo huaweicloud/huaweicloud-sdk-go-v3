@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPremiumHostResponse Response Object
 type ListPremiumHostResponse struct {
 
 	// 全部防护域名的数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 外部联系人信息。
+// ExternalContactDto 外部联系人信息。
 type ExternalContactDto struct {
 
 	// 其他号码。 > * 其他号码必须以国家码作为前缀 > * otherNumber填写时，otherNumberCountry也必须填写 > * 如果要清空手机号配置，则otherNumberCountry和otherNumber都要置为\"\"

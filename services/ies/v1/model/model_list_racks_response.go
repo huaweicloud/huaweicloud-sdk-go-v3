@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRacksResponse Response Object
 type ListRacksResponse struct {
 
 	// 机柜列表

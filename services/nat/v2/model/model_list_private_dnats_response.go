@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPrivateDnatsResponse Response Object
 type ListPrivateDnatsResponse struct {
 
 	// 查询DNAT规则列表的响应体。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportCertificateResponse Response Object
 type ExportCertificateResponse struct {
 
 	// 证书及证书链。

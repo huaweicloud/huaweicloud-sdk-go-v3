@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机服务器卷信息
+// Volume 云手机服务器卷信息
 type Volume struct {
 
 	// 云手机服务器的硬盘名称

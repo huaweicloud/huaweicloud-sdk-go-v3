@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAuthorizationsRequest Request Object
 type UpdateAuthorizationsRequest struct {
 
 	// 授权id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AsscoiateReq
 type AsscoiateReq struct {
 	Subnets *AssociateRouteTableAndSubnetReq `json:"subnets"`
 }

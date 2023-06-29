@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPermissionsRequest Request Object
 type ListPermissionsRequest struct {
 
 	// 分页查询时，每页返回的个数。

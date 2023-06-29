@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDeploymentRequest Request Object
 type CreateDeploymentRequest struct {
 
 	// 平台提供者，分别为hilens及ief。当为hilens时，请求部署在hilens平台的相关数据

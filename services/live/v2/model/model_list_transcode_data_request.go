@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTranscodeDataRequest Request Object
 type ListTranscodeDataRequest struct {
 
 	// 推流域名。

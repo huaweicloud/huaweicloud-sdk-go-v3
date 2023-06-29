@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标准版节点获取安装命令请求体
+// CreateInstallCmdRequestDto 标准版节点获取安装命令请求体
 type CreateInstallCmdRequestDto struct {
 
 	// 安装命令执行的主机标签DEFAULT|MASTER|SLAVE

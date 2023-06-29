@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作进度信息
+// ProcessInfo 操作进度信息
 type ProcessInfo struct {
 
 	// 操作名

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePostalRequest Request Object
 type DeletePostalRequest struct {
 
 	// 邮寄地址ID

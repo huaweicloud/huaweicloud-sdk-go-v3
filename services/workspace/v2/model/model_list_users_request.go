@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListUsersRequest Request Object
 type ListUsersRequest struct {
 
 	// 桌面用户名，长度范围为1-20，不能包含特殊字符，不能以数字开头。
@@ -20,6 +20,9 @@ type ListUsersRequest struct {
 
 	// 用户描述查询，模糊匹配。
 	Description *string `json:"description,omitempty"`
+
+	// 激活类型，默认为用户激活。 * USER_ACTIVATE： 用户激活 * ADMIN_ACTIVATE： 管理员激活
+	ActiveType *string `json:"active_type,omitempty"`
 }
 
 func (o ListUsersRequest) String() string {

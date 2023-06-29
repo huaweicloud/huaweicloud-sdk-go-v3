@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建主页请求体。
+// PortalInfoRequestBody 创建主页请求体。
 type PortalInfoRequestBody struct {
 
 	// 主页背景图片资源ID。  > 分辨率大于等于1440*810，支持jpg、jpeg、bmp、png。参数值为上传智能信息服务号图片资源API返回的resource_id。

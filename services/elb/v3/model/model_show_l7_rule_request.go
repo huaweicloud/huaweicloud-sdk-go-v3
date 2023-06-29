@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowL7RuleRequest Request Object
 type ShowL7RuleRequest struct {
 
 	// 7层转发策略。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新子网的请求体。
+// UpdateSubnetRequestBody 更新子网的请求体。
 type UpdateSubnetRequestBody struct {
 	Subnet *UpdateSubnetOption `json:"subnet,omitempty"`
 }

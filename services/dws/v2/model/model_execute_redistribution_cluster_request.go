@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteRedistributionClusterRequest Request Object
 type ExecuteRedistributionClusterRequest struct {
 
 	// 集群ID

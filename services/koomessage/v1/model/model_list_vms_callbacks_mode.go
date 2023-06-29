@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 响应数据。
+// ListVmsCallbacksMode 响应数据。
 type ListVmsCallbacksMode struct {
 
 	// 回执接口列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateCompareTaskResult
 type CreateCompareTaskResult struct {
 
 	// 对比任务创建成功后，返回对比任务的id，用于查询该对比任务的结果。

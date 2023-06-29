@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格相关快捷链接地址。
+// FlavorLink 规格相关快捷链接地址。
 type FlavorLink struct {
 
 	// 对应快捷链接。

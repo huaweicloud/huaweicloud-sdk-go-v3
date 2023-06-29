@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除保护实例请求体
+// DeleteProtectedInstanceRequestBody 删除保护实例请求体
 type DeleteProtectedInstanceRequestBody struct {
 
 	// 是否删除容灾站点服务器，默认值为false。

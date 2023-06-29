@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VPC类型连接
+// VpcAttachmentCreateRequest VPC类型连接
 type VpcAttachmentCreateRequest struct {
 
 	// VPC的id，取值范围：最大长度36字节，带“-”连字符的UUID格式

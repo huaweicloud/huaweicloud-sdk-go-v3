@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDesktopRequest Request Object
 type CreateDesktopRequest struct {
 	Body *CreateDesktopReq `json:"body,omitempty"`
 }

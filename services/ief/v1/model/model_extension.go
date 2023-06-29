@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量处理对象额外属性
+// Extension 批量处理对象额外属性
 type Extension struct {
 
 	// 属性名，可填：node_name

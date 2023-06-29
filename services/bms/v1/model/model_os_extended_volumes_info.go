@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// os-extended-volumes:volumes_attached数据结构说明
+// OsExtendedVolumesInfo os-extended-volumes:volumes_attached数据结构说明
 type OsExtendedVolumesInfo struct {
 
 	// 磁盘ID，格式为UUID
@@ -64,13 +64,18 @@ func (c OsExtendedVolumesInfoBootIndex) MarshalJSON() ([]byte, error) {
 
 func (c *OsExtendedVolumesInfoBootIndex) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

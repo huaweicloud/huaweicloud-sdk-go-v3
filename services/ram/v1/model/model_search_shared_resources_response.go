@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchSharedResourcesResponse Response Object
 type SearchSharedResourcesResponse struct {
 
 	// 共享资源的信息列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AllowDbPrivilegesResponse Response Object
 type AllowDbPrivilegesResponse struct {
 	HttpStatusCode int `json:"-"`
 }

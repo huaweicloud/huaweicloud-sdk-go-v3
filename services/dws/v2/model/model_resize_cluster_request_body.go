@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ResizeClusterRequestBody This is a auto create Body Object
 type ResizeClusterRequestBody struct {
 	ScaleOut *ScaleOut `json:"scale_out,omitempty"`
 }

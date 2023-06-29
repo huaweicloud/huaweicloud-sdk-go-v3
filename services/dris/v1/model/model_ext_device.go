@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对应linux上device概念，用于串口、AI加速卡的挂载
+// ExtDevice 对应linux上device概念，用于串口、AI加速卡的挂载
 type ExtDevice struct {
 
 	// **参数说明**：源路径。

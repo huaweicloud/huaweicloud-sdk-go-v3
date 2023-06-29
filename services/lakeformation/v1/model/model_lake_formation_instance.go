@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// LakeFormation实例详细信息
+// LakeFormationInstance LakeFormation实例详细信息
 type LakeFormationInstance struct {
 
 	// LakeFormation实例Id

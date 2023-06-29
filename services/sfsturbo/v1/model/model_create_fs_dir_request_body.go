@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建目录请求
+// CreateFsDirRequestBody 创建目录请求
 type CreateFsDirRequestBody struct {
 
 	// 合法的的目录全路径

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePipelineJobRequest Request Object
 type UpdatePipelineJobRequest struct {
 
 	// 是否需要校验配置是否正确

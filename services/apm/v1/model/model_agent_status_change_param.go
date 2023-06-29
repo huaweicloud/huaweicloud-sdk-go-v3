@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 改变探针状态的参数。
+// AgentStatusChangeParam 改变探针状态的参数。
 type AgentStatusChangeParam struct {
 
 	// 探针实例id列表。

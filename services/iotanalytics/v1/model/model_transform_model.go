@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转换计算
+// TransformModel 转换计算
 type TransformModel struct {
 
 	// 输入参数，最多支持10个

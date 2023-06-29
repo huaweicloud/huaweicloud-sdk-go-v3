@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePipelineByTemplateResponse Response Object
 type CreatePipelineByTemplateResponse struct {
 
 	// 实例ID

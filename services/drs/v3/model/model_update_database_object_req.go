@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新对象选择信息体
+// UpdateDatabaseObjectReq 更新对象选择信息体
 type UpdateDatabaseObjectReq struct {
 
 	// 任务ID

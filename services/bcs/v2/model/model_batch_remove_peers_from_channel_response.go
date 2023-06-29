@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchRemovePeersFromChannelResponse Response Object
 type BatchRemovePeersFromChannelResponse struct {
 
 	// 操作记录id

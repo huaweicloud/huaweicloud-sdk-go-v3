@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 克隆服务器类
+// CloneServer 克隆服务器类
 type CloneServer struct {
 
 	// 克隆服务器ID

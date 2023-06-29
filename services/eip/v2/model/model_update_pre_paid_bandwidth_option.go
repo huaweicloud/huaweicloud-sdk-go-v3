@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新带宽请求中的带宽信息
+// UpdatePrePaidBandwidthOption 更新带宽请求中的带宽信息
 type UpdatePrePaidBandwidthOption struct {
 
 	// 功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），为空表示不修改名称  约束：和参数size必须有一个参数有值

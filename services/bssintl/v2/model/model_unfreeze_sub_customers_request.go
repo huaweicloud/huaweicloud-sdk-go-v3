@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UnfreezeSubCustomersRequest Request Object
 type UnfreezeSubCustomersRequest struct {
 	Body *UnfreezeSubCustomersReq `json:"body,omitempty"`
 }

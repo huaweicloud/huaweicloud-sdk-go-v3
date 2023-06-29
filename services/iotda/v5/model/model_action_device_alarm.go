@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 上报设备告警消息结构
+// ActionDeviceAlarm 上报设备告警消息结构
 type ActionDeviceAlarm struct {
 
 	// **参数说明**：告警名称。

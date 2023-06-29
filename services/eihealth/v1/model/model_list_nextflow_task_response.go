@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNextflowTaskResponse Response Object
 type ListNextflowTaskResponse struct {
 
 	// 子任务实例

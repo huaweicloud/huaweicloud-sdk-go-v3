@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateDeleteTagsRequest Request Object
 type BatchCreateDeleteTagsRequest struct {
 
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 资源类型: - cc: 云连接 - bwp: 带宽包
+	// 资源类型: - cloud-connection: 云连接 - bandwidth-package: 带宽包
 	ResourceType BatchCreateDeleteTagsRequestResourceType `json:"resource_type"`
 
 	Body *Tags `json:"body,omitempty"`
@@ -35,17 +35,17 @@ type BatchCreateDeleteTagsRequestResourceType struct {
 }
 
 type BatchCreateDeleteTagsRequestResourceTypeEnum struct {
-	CC  BatchCreateDeleteTagsRequestResourceType
-	BWP BatchCreateDeleteTagsRequestResourceType
+	CLOUD_CONNECTION  BatchCreateDeleteTagsRequestResourceType
+	BANDWIDTH_PACKAGE BatchCreateDeleteTagsRequestResourceType
 }
 
 func GetBatchCreateDeleteTagsRequestResourceTypeEnum() BatchCreateDeleteTagsRequestResourceTypeEnum {
 	return BatchCreateDeleteTagsRequestResourceTypeEnum{
-		CC: BatchCreateDeleteTagsRequestResourceType{
-			value: "cc",
+		CLOUD_CONNECTION: BatchCreateDeleteTagsRequestResourceType{
+			value: "cloud-connection",
 		},
-		BWP: BatchCreateDeleteTagsRequestResourceType{
-			value: "bwp",
+		BANDWIDTH_PACKAGE: BatchCreateDeleteTagsRequestResourceType{
+			value: "bandwidth-package",
 		},
 	}
 }
@@ -60,13 +60,18 @@ func (c BatchCreateDeleteTagsRequestResourceType) MarshalJSON() ([]byte, error) 
 
 func (c *BatchCreateDeleteTagsRequestResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

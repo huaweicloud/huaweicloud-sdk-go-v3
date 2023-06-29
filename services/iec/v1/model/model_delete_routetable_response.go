@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRoutetableResponse Response Object
 type DeleteRoutetableResponse struct {
 	HttpStatusCode int `json:"-"`
 }

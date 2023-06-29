@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDeploymentGroupDetailRequest Request Object
 type ShowDeploymentGroupDetailRequest struct {
 
 	// 主机集群id

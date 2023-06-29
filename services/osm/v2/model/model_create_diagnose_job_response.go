@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDiagnoseJobResponse Response Object
 type CreateDiagnoseJobResponse struct {
 
 	// 错误码

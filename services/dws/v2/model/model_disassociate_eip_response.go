@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateEipResponse Response Object
 type DisassociateEipResponse struct {
 	HttpStatusCode int `json:"-"`
 }

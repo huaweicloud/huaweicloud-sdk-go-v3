@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SendSmsRequest Request Object
 type SendSmsRequest struct {
 	Body *CreateSendSmsReq `json:"body,omitempty"`
 }

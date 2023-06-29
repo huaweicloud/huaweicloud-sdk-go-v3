@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// sasl plain 认证信息
+// SaslPlainAuthInfo sasl plain 认证信息
 type SaslPlainAuthInfo struct {
 
 	// 用户名。支持大小写字母、数字、“.”、“-” 、“_”

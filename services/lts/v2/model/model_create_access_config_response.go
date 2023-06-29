@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAccessConfigResponse Response Object
 type CreateAccessConfigResponse struct {
 
 	// 日志接入ID
@@ -69,13 +69,18 @@ func (c CreateAccessConfigResponseAccessConfigType) MarshalJSON() ([]byte, error
 
 func (c *CreateAccessConfigResponseAccessConfigType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

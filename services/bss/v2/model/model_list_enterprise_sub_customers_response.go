@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnterpriseSubCustomersResponse Response Object
 type ListEnterpriseSubCustomersResponse struct {
 
 	// 结果集数量，成功才有。

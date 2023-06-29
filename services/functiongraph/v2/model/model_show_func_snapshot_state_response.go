@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFuncSnapshotStateResponse Response Object
 type ShowFuncSnapshotStateResponse struct {
 
 	// 快照制作状态

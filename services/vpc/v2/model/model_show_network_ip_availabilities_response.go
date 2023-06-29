@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNetworkIpAvailabilitiesResponse Response Object
 type ShowNetworkIpAvailabilitiesResponse struct {
 	NetworkIpAvailability *NetworkIpAvailability `json:"network_ip_availability,omitempty"`
 	HttpStatusCode        int                    `json:"-"`

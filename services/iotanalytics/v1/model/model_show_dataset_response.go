@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDatasetResponse Response Object
 type ShowDatasetResponse struct {
 
 	// 作业结果总个数。

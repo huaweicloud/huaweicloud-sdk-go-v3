@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新云连接实例的详细信息。
+// UpdateCloudConnection 更新云连接实例的详细信息。
 type UpdateCloudConnection struct {
 
 	// 云连接实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。

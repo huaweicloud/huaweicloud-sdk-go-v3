@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 阶段运行信息
+// StageRun 阶段运行信息
 type StageRun struct {
 
 	// 阶段ID

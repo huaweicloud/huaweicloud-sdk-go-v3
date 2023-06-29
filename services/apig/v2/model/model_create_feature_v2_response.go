@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFeatureV2Response Response Object
 type CreateFeatureV2Response struct {
 
 	// 特性编号

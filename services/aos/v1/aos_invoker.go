@@ -269,6 +269,18 @@ func (i *DeleteTemplateVersionInvoker) Invoke() (*model.DeleteTemplateVersionRes
 	}
 }
 
+type ListTemplateVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTemplateVersionsInvoker) Invoke() (*model.ListTemplateVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTemplateVersionsResponse), nil
+	}
+}
+
 type ListTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }

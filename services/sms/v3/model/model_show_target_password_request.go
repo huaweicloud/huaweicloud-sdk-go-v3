@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTargetPasswordRequest Request Object
 type ShowTargetPasswordRequest struct {
 
 	// 模板的ID

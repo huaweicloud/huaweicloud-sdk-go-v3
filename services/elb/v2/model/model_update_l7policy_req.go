@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新转发策略对象请求体
+// UpdateL7policyReq 更新转发策略对象请求体
 type UpdateL7policyReq struct {
 
 	// 转发策略名称

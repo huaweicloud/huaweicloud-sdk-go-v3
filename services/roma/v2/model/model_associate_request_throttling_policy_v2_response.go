@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateRequestThrottlingPolicyV2Response Response Object
 type AssociateRequestThrottlingPolicyV2Response struct {
 
 	// API与流控策略的绑定关系列表

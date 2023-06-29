@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCustomLineRequest Request Object
 type CreateCustomLineRequest struct {
 	Body *CreateCustomLines `json:"body,omitempty"`
 }

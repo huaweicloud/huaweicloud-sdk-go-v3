@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEventSourceRequest Request Object
 type DeleteEventSourceRequest struct {
 
 	// 指定查询的事件源ID

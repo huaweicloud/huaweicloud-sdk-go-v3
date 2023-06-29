@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunSemanticParserRequest Request Object
 type RunSemanticParserRequest struct {
 	Body *IntentReq `json:"body,omitempty"`
 }

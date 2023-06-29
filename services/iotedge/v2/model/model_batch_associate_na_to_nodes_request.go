@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAssociateNaToNodesRequest Request Object
 type BatchAssociateNaToNodesRequest struct {
 
 	// 北向数据接收端点ID

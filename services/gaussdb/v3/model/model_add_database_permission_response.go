@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddDatabasePermissionResponse Response Object
 type AddDatabasePermissionResponse struct {
 
 	// 授予用户权限的任务ID。

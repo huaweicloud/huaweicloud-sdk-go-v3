@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建计划请求体
+// CreatePlanRequestBody 创建计划请求体
 type CreatePlanRequestBody struct {
 
 	// 计划名称

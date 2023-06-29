@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateConsumerGroupRequest Request Object
 type BatchUpdateConsumerGroupRequest struct {
 
 	// 实例ID。

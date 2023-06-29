@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 维护窗口
+// CdmQueryClusterDetailsRepsonseMaintainWindow 维护窗口
 type CdmQueryClusterDetailsRepsonseMaintainWindow struct {
 
 	// 周几

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建floatingip对象
+// NeutronCreateFloatingIpRequestBody 创建floatingip对象
 type NeutronCreateFloatingIpRequestBody struct {
 	Floatingip *CreateFloatingIpOption `json:"floatingip"`
 }

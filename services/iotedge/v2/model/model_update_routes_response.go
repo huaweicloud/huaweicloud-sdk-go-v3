@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateRoutesResponse Response Object
 type UpdateRoutesResponse struct {
 
 	// 路由列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EIP防护流量响应体
+// DailyData EIP防护流量响应体
 type DailyData struct {
 
 	// 开始时间

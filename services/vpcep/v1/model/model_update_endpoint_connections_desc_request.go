@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEndpointConnectionsDescRequest Request Object
 type UpdateEndpointConnectionsDescRequest struct {
 
 	// 终端节点服务ID

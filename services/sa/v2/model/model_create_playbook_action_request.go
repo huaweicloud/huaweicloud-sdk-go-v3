@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePlaybookActionRequest Request Object
 type CreatePlaybookActionRequest struct {
 
 	// application/json;charset=UTF-8

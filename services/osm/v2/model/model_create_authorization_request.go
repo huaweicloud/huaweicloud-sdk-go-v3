@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAuthorizationRequest Request Object
 type CreateAuthorizationRequest struct {
 
 	// 事件id

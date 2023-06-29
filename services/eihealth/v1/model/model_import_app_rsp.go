@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入应用响应体
+// ImportAppRsp 导入应用响应体
 type ImportAppRsp struct {
 
 	// 源应用id

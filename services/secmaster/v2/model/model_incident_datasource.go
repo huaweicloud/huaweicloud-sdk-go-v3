@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据源信息
+// IncidentDatasource 数据源信息
 type IncidentDatasource struct {
 
 	// current page count

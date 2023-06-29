@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountCaResourceInstancesResponse Response Object
 type CountCaResourceInstancesResponse struct {
 
 	// 总记录数。

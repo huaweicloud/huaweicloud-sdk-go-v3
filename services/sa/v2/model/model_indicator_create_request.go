@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// indicator create request
+// IndicatorCreateRequest indicator create request
 type IndicatorCreateRequest struct {
 
 	// 指标名称

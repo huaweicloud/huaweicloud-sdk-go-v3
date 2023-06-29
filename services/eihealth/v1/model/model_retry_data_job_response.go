@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RetryDataJobResponse Response Object
 type RetryDataJobResponse struct {
 	HttpStatusCode int `json:"-"`
 }

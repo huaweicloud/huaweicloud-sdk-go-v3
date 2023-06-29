@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 鉴权
+// Authentication 鉴权
 type Authentication struct {
 
 	// 一型一密/一机一密的用户名

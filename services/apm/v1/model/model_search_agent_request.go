@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchAgentRequest Request Object
 type SearchAgentRequest struct {
 
 	// 应用id。

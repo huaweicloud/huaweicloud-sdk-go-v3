@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunTextModerationResponse Response Object
 type RunTextModerationResponse struct {
 
 	// 本次请求的唯⼀标识，⽤于问题排查，建议保存

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GetExecutionPlanResponse Response Object
 type GetExecutionPlanResponse struct {
 
 	// 执行计划项目的列表

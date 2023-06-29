@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateResSceneRequestBody This is a auto create Body Object
 type UpdateResSceneRequestBody struct {
 
 	// 场景类型： - customize，自定义推荐 - popularity，热门推荐 - relation，关联推荐 - personalization，猜你喜欢

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlertConfigRequest Request Object
 type UpdateAlertConfigRequest struct {
 	Body *UpdateAlertConfigRequestBody `json:"body,omitempty"`
 }

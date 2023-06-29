@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 伸缩配置详情
+// ScalingConfiguration 伸缩配置详情
 type ScalingConfiguration struct {
 
 	// 伸缩配置ID，全局唯一。

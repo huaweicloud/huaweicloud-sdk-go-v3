@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCouponQuotasRecordsRequest Request Object
 type ListCouponQuotasRecordsRequest struct {
 
 	// 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。为空表示查询所有的代金券额度发放回收记录。不为空表示仅查询与该云经销商相关的代金券额度发放回收记录。默认查询所有云经销商的代金券额度发放回收记录。

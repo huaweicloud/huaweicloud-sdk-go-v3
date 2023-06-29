@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改源端信息json的请求体，当前只支持修改源端服务器名称和迁移项目ID
+// PutSourceServerBody 修改源端信息json的请求体，当前只支持修改源端服务器名称和迁移项目ID
 type PutSourceServerBody struct {
 
 	// 源端服务器修改后的名字

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBranchesByRepositoryIdResponse Response Object
 type ListBranchesByRepositoryIdResponse struct {
 	Error *Error `json:"error,omitempty"`
 

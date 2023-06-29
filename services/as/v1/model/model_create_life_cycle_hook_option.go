@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建生命周期挂钩
+// CreateLifeCycleHookOption 创建生命周期挂钩
 type CreateLifeCycleHookOption struct {
 
 	// 生命周期挂钩名称(1-32个字符)，只能包含字母、数字、下划线或中划线。
@@ -70,13 +70,18 @@ func (c CreateLifeCycleHookOptionLifecycleHookType) MarshalJSON() ([]byte, error
 
 func (c *CreateLifeCycleHookOptionLifecycleHookType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -112,13 +117,18 @@ func (c CreateLifeCycleHookOptionDefaultResult) MarshalJSON() ([]byte, error) {
 
 func (c *CreateLifeCycleHookOptionDefaultResult) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

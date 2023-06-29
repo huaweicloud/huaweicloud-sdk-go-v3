@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGroupResponse Response Object
 type CreateGroupResponse struct {
 
 	// 存储组 ID

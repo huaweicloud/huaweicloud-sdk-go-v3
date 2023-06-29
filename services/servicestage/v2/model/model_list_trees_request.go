@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTreesRequest Request Object
 type ListTreesRequest struct {
 
 	// 授权名称。

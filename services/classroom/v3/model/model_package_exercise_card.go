@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 习题简单信息返回体，用于列表返回
+// PackageExerciseCard 习题简单信息返回体，用于列表返回
 type PackageExerciseCard struct {
 
 	// 习题id

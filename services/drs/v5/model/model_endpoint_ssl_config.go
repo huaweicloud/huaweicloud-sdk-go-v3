@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库SSL证书信息体。如果数据库启用了SSL安全连接，请确保相关配置正确，并输入SSL证书相关参数，否则无需填写此参数。
+// EndpointSslConfig 数据库SSL证书信息体。如果数据库启用了SSL安全连接，请确保相关配置正确，并输入SSL证书相关参数，否则无需填写此参数。
 type EndpointSslConfig struct {
 
 	// 是否SSL安全连接。如果数据库启用了SSL安全连接，参数值为true。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHotKeyScanTasksResponse Response Object
 type ListHotKeyScanTasksResponse struct {
 
 	// 实例ID

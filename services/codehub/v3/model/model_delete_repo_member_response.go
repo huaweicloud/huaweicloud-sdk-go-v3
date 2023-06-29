@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRepoMemberResponse Response Object
 type DeleteRepoMemberResponse struct {
 	Error *Error `json:"error,omitempty"`
 

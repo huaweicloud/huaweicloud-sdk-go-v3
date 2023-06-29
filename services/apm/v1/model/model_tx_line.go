@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件之间调用指向线。
+// TxLine 组件之间调用指向线。
 type TxLine struct {
 
 	// 开始节点。

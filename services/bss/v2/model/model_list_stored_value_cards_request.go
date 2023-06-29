@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListStoredValueCardsRequest Request Object
 type ListStoredValueCardsRequest struct {
 
 	// 状态：1：可使用2：已用完

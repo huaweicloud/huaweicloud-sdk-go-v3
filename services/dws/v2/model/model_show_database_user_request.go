@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDatabaseUserRequest Request Object
 type ShowDatabaseUserRequest struct {
 
 	// cluster_id

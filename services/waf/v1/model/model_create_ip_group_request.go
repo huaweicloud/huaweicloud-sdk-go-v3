@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateIpGroupRequest Request Object
 type CreateIpGroupRequest struct {
 
 	// 企业项目id

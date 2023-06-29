@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDisasterRecoveryDrillsRequest Request Object
 type ListDisasterRecoveryDrillsRequest struct {
 
 	// 保护组的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartReverseProtectionGroupRequest Request Object
 type StartReverseProtectionGroupRequest struct {
 
 	// 保护组的ID。

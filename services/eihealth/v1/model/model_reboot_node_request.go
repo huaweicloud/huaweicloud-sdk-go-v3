@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RebootNodeRequest Request Object
 type RebootNodeRequest struct {
 
 	// 计算资源id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAccessoryAccessUrlsRequest Request Object
 type ListAccessoryAccessUrlsRequest struct {
 
 	// 组id

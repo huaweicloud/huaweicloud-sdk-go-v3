@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 邀请共享请求。
+// InviteShareDto 邀请共享请求。
 type InviteShareDto struct {
 
 	// 邀请标志。 * 0：取消邀请 * 1：邀请

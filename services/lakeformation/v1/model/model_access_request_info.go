@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 申请接入服务的请求信息
+// AccessRequestInfo 申请接入服务的请求信息
 type AccessRequestInfo struct {
 
 	// 服务创建的id

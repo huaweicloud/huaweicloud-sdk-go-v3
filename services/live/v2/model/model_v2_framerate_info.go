@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实时帧率
+// V2FramerateInfo 实时帧率
 type V2FramerateInfo struct {
 
 	// 推流域名。

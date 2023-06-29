@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ReclaimCouponQuotasResponse Response Object
 type ReclaimCouponQuotasResponse struct {
 
 	// 回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。

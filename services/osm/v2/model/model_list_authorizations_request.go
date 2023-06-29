@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuthorizationsRequest Request Object
 type ListAuthorizationsRequest struct {
 
 	// 子用户名称

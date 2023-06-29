@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务详情
+// SvcMetadata 服务详情
 type SvcMetadata struct {
 
 	// 自定义标签属性列表

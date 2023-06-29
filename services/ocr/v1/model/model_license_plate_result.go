@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// LicensePlateResult
 type LicensePlateResult struct {
 
 	// 车牌内容。

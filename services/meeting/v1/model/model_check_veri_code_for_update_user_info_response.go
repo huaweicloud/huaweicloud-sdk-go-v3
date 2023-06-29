@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckVeriCodeForUpdateUserInfoResponse Response Object
 type CheckVeriCodeForUpdateUserInfoResponse struct {
 	HttpStatusCode int `json:"-"`
 }

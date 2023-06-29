@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 检查云堡垒机实例网络请求信息。
+// NetworkRequestBody 检查云堡垒机实例网络请求信息。
 type NetworkRequestBody struct {
 
 	// 云堡垒机实例状态，枚举值如下： - create  创建 - renewals  更新 - change  变更 状态为renewals或change时server_id必传。

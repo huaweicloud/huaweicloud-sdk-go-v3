@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新域间带宽的详情信息。
+// UpdateInterRegionBandwidth 更新域间带宽的详情信息。
 type UpdateInterRegionBandwidth struct {
 
 	// 域间带宽值。

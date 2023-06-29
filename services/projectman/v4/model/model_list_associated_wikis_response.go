@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAssociatedWikisResponse Response Object
 type ListAssociatedWikisResponse struct {
 
 	// 关联的wiki列表

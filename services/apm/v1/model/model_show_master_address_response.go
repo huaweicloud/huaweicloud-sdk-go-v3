@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMasterAddressResponse Response Object
 type ShowMasterAddressResponse struct {
 
 	// region的英文名称。

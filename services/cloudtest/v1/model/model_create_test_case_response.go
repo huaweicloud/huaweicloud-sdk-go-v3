@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTestCaseResponse Response Object
 type CreateTestCaseResponse struct {
 
 	// 测试用例唯一标识

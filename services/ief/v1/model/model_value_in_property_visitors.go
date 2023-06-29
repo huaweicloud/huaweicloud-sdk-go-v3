@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 孪生属性配置，与access_protocol关联。
+// ValueInPropertyVisitors 孪生属性配置，与access_protocol关联。
 type ValueInPropertyVisitors struct {
 	RegisterType *ValueInAttributes `json:"register_type,omitempty"`
 

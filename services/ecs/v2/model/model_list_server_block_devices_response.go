@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServerBlockDevicesResponse Response Object
 type ListServerBlockDevicesResponse struct {
 	AttachableQuantity *BlockDeviceAttachableQuantity `json:"attachableQuantity,omitempty"`
 

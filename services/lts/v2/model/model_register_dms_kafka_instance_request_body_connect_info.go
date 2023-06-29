@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// kafka连接信息。购买kafka时，SASL_SSL是否配置，如果有，则需要填写账号密码
+// RegisterDmsKafkaInstanceRequestBodyConnectInfo kafka连接信息。购买kafka时，SASL_SSL是否配置，如果有，则需要填写账号密码
 type RegisterDmsKafkaInstanceRequestBodyConnectInfo struct {
 
 	// 账号

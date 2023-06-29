@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartAndStopDeploymentPodRequest Request Object
 type StartAndStopDeploymentPodRequest struct {
 
 	// 部署ID，可以在部署详情中获取指定ID

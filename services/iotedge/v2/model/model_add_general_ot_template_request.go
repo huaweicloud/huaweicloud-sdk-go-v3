@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddGeneralOtTemplateRequest Request Object
 type AddGeneralOtTemplateRequest struct {
 }
 

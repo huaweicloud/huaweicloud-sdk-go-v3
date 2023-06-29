@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteServerPasswordRequest Request Object
 type DeleteServerPasswordRequest struct {
 
 	// 云服务器ID。

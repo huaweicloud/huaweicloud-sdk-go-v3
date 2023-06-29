@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点重装配置参数
+// ReinstallNodeSpec 节点重装配置参数
 type ReinstallNodeSpec struct {
 
 	// 操作系统。指定自定义镜像场景将以IMS镜像的实际操作系统版本为准。请选择当前集群支持的操作系统版本，例如EulerOS 2.5、CentOS 7.6、EulerOS 2.8。

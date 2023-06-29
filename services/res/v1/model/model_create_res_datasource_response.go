@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateResDatasourceResponse Response Object
 type CreateResDatasourceResponse struct {
 
 	// 是否成功。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 采集器配置。
+// CollectorConfigModel 采集器配置。
 type CollectorConfigModel struct {
 	LineViewConfig *LineViewConfigModel `json:"line_view_config,omitempty"`
 

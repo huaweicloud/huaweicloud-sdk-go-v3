@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateWorkflowRequest Request Object
 type UpdateWorkflowRequest struct {
 
 	// 工作流名称。

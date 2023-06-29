@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreAssetRequest Request Object
 type RestoreAssetRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。

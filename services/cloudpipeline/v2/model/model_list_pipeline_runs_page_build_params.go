@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 构建参数
+// ListPipelineRunsPageBuildParams 构建参数
 type ListPipelineRunsPageBuildParams struct {
 
 	// 合并请求事件类型

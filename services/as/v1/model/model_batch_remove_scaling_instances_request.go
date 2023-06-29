@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchRemoveScalingInstancesRequest Request Object
 type BatchRemoveScalingInstancesRequest struct {
 
 	// 实例ID。

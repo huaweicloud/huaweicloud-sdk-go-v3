@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddProtectBranchV2Request Request Object
 type AddProtectBranchV2Request struct {
 
 	// 仓库主键id

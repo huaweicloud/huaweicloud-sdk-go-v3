@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDeleteConnectorOrderResponse Response Object
 type CreateDeleteConnectorOrderResponse struct {
 
 	// 返回cbc生成的订单id。

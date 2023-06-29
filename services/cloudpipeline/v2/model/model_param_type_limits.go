@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CodeCheck任务语言参数
+// ParamTypeLimits CodeCheck任务语言参数
 type ParamTypeLimits struct {
 
 	// 是否废弃

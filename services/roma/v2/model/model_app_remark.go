@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用描述
+// AppRemark 应用描述
 type AppRemark struct {
 }
 

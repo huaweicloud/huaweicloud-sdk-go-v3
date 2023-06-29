@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeEngineInstanceRequest Request Object
 type ResizeEngineInstanceRequest struct {
 
 	// 消息引擎。

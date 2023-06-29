@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 小数统计信息
+// DecimalColumnStatisticsData 小数统计信息
 type DecimalColumnStatisticsData struct {
 	MinimumValue *Decimal `json:"minimum_value"`
 

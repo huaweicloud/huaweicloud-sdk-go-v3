@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源配额实例详情
+// QuotaShowResp 资源配额实例详情
 type QuotaShowResp struct {
 
 	// 功能说明：根据type过滤查询指定类型的配额 取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解关联带宽包实例的请求体。
+// DisassociateBandwidthPackageRequestBody 解关联带宽包实例的请求体。
 type DisassociateBandwidthPackageRequestBody struct {
 	BandwidthPackage *DisassociateBandwidthPackage `json:"bandwidth_package"`
 }

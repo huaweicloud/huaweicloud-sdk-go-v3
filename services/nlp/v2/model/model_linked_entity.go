@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 链接的实体 类
+// LinkedEntity 链接的实体 类
 type LinkedEntity struct {
 
 	// 实体指称

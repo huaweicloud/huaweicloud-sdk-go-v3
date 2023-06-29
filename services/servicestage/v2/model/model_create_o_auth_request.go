@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateOAuthRequest Request Object
 type CreateOAuthRequest struct {
 
 	// 仓库类型。 支持OAuth授权的仓库类型有：github、gitlab、gitee、bitbucket。
@@ -68,13 +68,18 @@ func (c CreateOAuthRequestRepoType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateOAuthRequestRepoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

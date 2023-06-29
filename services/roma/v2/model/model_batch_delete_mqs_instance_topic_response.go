@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteMqsInstanceTopicResponse Response Object
 type BatchDeleteMqsInstanceTopicResponse struct {
 
 	// 待删除的topic列表。

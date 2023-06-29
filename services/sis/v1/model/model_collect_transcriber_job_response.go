@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CollectTranscriberJobResponse Response Object
 type CollectTranscriberJobResponse struct {
 
 	// 录音文件识别任务标识符。  使用“callback_url”回调url时，该字段会随结果发送至用户服务器。 使用get接口查询，不会出现该字段

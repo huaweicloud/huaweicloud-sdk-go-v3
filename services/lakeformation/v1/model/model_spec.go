@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格信息
+// Spec 规格信息
 type Spec struct {
 
 	// 规格编码

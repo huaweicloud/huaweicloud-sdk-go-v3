@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点参数
+// EdgeNode 边缘节点参数
 type EdgeNode struct {
 
 	// 边缘节点名称，只允许中文字符、英文字母、数字、下划线、中划线，最大长度64 Name为必填字段，且本帐号中唯一。

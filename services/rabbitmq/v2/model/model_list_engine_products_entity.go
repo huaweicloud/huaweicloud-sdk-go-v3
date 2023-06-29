@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品规格的详细信息。
+// ListEngineProductsEntity 产品规格的详细信息。
 type ListEngineProductsEntity struct {
 
 	// 产品类型。当前产品类型有单机和集群。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建磁盘的extendparam字段
+// PrePaidServerDataVolumeExtendParam 创建磁盘的extendparam字段
 type PrePaidServerDataVolumeExtendParam struct {
 
 	// 磁盘产品资源规格编码，如SATA，SAS和SSD。  > 说明： >  > 废弃字段。

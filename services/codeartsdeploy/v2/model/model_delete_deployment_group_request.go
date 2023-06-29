@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDeploymentGroupRequest Request Object
 type DeleteDeploymentGroupRequest struct {
 
 	// 主机集群id

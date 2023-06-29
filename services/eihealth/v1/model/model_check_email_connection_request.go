@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckEmailConnectionRequest Request Object
 type CheckEmailConnectionRequest struct {
 	Body *TryEmailConnectionReq `json:"body,omitempty"`
 }

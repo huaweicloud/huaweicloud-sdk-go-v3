@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业的输出配置，至少需要配置一项输出方式。
+// TaskOutput 作业的输出配置，至少需要配置一项输出方式。
 type TaskOutput struct {
 	Obs *TaskOutputObs `json:"obs,omitempty"`
 

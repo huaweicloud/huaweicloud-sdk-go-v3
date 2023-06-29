@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSendCountryDetailsRequest Request Object
 type ListSendCountryDetailsRequest struct {
 
 	// 国家(英文)

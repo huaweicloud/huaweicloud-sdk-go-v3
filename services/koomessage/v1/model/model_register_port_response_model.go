@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 登记通道号返回体。
+// RegisterPortResponseModel 登记通道号返回体。
 type RegisterPortResponseModel struct {
 	Data *RegisterResult `json:"data,omitempty"`
 }

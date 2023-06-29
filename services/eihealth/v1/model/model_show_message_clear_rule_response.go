@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMessageClearRuleResponse Response Object
 type ShowMessageClearRuleResponse struct {
 
 	// 最多保留记录数

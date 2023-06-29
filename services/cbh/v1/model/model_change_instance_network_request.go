@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeInstanceNetworkRequest Request Object
 type ChangeInstanceNetworkRequest struct {
 
 	// 云堡垒机实例ID，使用UUID格式。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDispatchesRequest Request Object
 type UpdateDispatchesRequest struct {
 
 	// 实例ID

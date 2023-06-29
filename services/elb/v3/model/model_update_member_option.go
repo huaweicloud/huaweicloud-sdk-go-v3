@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新后端服务器请求参数。
+// UpdateMemberOption 更新后端服务器请求参数。
 type UpdateMemberOption struct {
 
 	// 后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。

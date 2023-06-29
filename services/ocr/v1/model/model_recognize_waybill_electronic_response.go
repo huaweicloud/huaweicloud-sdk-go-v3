@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeWaybillElectronicResponse Response Object
 type RecognizeWaybillElectronicResponse struct {
 	Result         *WaybillElectronicResult `json:"result,omitempty"`
 	HttpStatusCode int                      `json:"-"`

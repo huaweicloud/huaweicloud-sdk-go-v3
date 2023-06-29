@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询保护实例数据结构
+// ShowProtectedInstanceParams 查询保护实例数据结构
 type ShowProtectedInstanceParams struct {
 
 	// 保护实例的ID。

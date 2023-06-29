@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份里的库表信息。 - 为空表示实例级查询 - 非空表示库表级查询
+// QueryDatabaseTableInfo 备份里的库表信息。 - 为空表示实例级查询 - 非空表示库表级查询
 type QueryDatabaseTableInfo struct {
 
 	// 数据库名称。

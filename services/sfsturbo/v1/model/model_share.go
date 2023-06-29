@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建文件系统参数body
+// Share 创建文件系统参数body
 type Share struct {
 
 	// 文件系统所在可用区(az)的编码

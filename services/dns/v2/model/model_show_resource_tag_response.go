@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResourceTagResponse Response Object
 type ShowResourceTagResponse struct {
 
 	// 指定实例的标签列表。

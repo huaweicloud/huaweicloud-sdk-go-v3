@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCreateAccountStatusesResponse Response Object
 type ListCreateAccountStatusesResponse struct {
 
 	// 包含有关请求的详细信息的对象列表。

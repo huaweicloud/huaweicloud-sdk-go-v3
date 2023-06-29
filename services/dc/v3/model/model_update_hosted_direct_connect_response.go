@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateHostedDirectConnectResponse Response Object
 type UpdateHostedDirectConnectResponse struct {
 
 	// 操作请求ID

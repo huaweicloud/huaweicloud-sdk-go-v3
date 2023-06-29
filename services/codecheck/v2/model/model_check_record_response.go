@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckRecordResponse Response Object
 type CheckRecordResponse struct {
 
 	// 历史记录数据

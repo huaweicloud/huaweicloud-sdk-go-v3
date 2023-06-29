@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFuncSnapshotRequest Request Object
 type UpdateFuncSnapshotRequest struct {
 
 	// 禁用/启用

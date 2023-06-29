@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountPublicIpInstanceResponse Response Object
 type CountPublicIpInstanceResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

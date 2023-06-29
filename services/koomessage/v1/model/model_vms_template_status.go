@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询智能信息基础版模板返回体。
+// VmsTemplateStatus 查询智能信息基础版模板返回体。
 type VmsTemplateStatus struct {
 
 	// 智能信息基础版模板ID。

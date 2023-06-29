@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警历史详细信息
+// AlarmHistoryInfo 告警历史详细信息
 type AlarmHistoryInfo struct {
 
 	// 告警规则的ID，如：al1603131199286dzxpqK3Ez。

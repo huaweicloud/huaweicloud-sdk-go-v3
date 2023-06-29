@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteCaTagsRequest Request Object
 type BatchDeleteCaTagsRequest struct {
 
 	// 所需要批量删除标签的CA证书ID。

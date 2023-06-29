@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePortInfoRequest Request Object
 type DeletePortInfoRequest struct {
 
 	// 通道号ID。

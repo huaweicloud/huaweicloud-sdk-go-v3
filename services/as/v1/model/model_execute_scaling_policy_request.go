@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteScalingPolicyRequest Request Object
 type ExecuteScalingPolicyRequest struct {
 
 	// 伸缩策略ID。

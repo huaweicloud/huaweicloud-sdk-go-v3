@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迭代
+// IssueItemSfV4Iteration 迭代
 type IssueItemSfV4Iteration struct {
 
 	// 迭代id

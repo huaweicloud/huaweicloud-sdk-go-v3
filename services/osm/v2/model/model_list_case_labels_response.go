@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCaseLabelsResponse Response Object
 type ListCaseLabelsResponse struct {
 
 	// 工单关联的标签列表

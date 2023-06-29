@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 转发策略对象，用于状态树
+// L7policiesInStatusResp 转发策略对象，用于状态树
 type L7policiesInStatusResp struct {
 
 	// 转发策略ID
@@ -67,13 +67,18 @@ func (c L7policiesInStatusRespAction) MarshalJSON() ([]byte, error) {
 
 func (c *L7policiesInStatusRespAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

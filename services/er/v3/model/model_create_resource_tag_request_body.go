@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建资源标签的请求体
+// CreateResourceTagRequestBody 创建资源标签的请求体
 type CreateResourceTagRequestBody struct {
 	Tag *Tag `json:"tag"`
 }

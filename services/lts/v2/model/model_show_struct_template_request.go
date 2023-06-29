@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowStructTemplateRequest Request Object
 type ShowStructTemplateRequest struct {
 
 	// 日志组ID

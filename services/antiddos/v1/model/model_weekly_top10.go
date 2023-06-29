@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WeeklyTop10
+// WeeklyTop10 WeeklyTop10
 type WeeklyTop10 struct {
 
 	// 弹性IP地址

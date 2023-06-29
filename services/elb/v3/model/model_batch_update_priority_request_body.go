@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量更新转发策略优先级的请求参数。
+// BatchUpdatePriorityRequestBody 批量更新转发策略优先级的请求参数。
 type BatchUpdatePriorityRequestBody struct {
 
 	// 待更新的l7policy的ID。

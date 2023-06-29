@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddDeployKeyRequest Request Object
 type AddDeployKeyRequest struct {
 
 	// 仓库短id

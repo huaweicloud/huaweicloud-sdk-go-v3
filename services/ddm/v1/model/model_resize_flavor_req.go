@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更至目标规格的请求信息。
+// ResizeFlavorReq 变更至目标规格的请求信息。
 type ResizeFlavorReq struct {
 
 	// 变更至新规格的资源规格编码。

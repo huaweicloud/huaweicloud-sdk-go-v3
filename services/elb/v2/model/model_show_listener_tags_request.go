@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowListenerTagsRequest Request Object
 type ShowListenerTagsRequest struct {
 
 	// 监听器ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改配置v2接口请求参数
+// HbaseModifySettingV2Req 修改配置v2接口请求参数
 type HbaseModifySettingV2Req struct {
 
 	// 是否重启

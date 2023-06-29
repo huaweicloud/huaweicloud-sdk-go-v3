@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主键信息
+// PrimaryKey 主键信息
 type PrimaryKey struct {
 
 	// catalog名称

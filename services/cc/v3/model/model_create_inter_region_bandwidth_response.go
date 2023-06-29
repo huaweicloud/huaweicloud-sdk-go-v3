@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateInterRegionBandwidthResponse Response Object
 type CreateInterRegionBandwidthResponse struct {
 	InterRegionBandwidth *InterRegionBandwidth `json:"inter_region_bandwidth,omitempty"`
 

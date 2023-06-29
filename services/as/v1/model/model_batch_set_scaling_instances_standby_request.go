@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchSetScalingInstancesStandbyRequest Request Object
 type BatchSetScalingInstancesStandbyRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务实例VPC信息体。
+// JobNodeVpcInfo 任务实例VPC信息体。
 type JobNodeVpcInfo struct {
 
 	// 任务实例所在虚拟私有云ID。

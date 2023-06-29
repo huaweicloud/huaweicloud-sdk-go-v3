@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// change_security_group对象
+// ChangeSecurityGroupRequestBody change_security_group对象
 type ChangeSecurityGroupRequestBody struct {
 	ChangeSecurityGroup *ChangeSecurityGroup `json:"change_security_group"`
 }

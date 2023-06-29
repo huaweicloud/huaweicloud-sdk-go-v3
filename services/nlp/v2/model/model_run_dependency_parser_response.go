@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunDependencyParserResponse Response Object
 type RunDependencyParserResponse struct {
 
 	// 依存句法分析结果，词汇集合。调用失败时无此字段。

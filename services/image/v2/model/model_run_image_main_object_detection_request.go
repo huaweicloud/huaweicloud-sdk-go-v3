@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunImageMainObjectDetectionRequest Request Object
 type RunImageMainObjectDetectionRequest struct {
 	Body *ImageMainObjectDetectionReq `json:"body,omitempty"`
 }

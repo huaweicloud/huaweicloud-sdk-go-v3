@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateTagResponse Response Object
 type BatchCreateTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRandomRequest Request Object
 type CreateRandomRequest struct {
 	Body *GenRandomRequestBody `json:"body,omitempty"`
 }

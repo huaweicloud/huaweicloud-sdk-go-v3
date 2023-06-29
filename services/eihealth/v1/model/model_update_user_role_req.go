@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新用户请求体
+// UpdateUserRoleReq 更新用户请求体
 type UpdateUserRoleReq struct {
 	Role *UserRole `json:"role"`
 }

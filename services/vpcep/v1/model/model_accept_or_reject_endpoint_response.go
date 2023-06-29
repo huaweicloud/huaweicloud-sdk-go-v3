@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AcceptOrRejectEndpointResponse Response Object
 type AcceptOrRejectEndpointResponse struct {
 
 	// 连接列表

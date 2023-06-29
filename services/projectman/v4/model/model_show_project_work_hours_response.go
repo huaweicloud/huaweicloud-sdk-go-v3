@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProjectWorkHoursResponse Response Object
 type ShowProjectWorkHoursResponse struct {
 
 	// 工时列表

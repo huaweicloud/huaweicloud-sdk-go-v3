@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除用户返回体
+// BatchDeleteMemberRsp 批量删除用户返回体
 type BatchDeleteMemberRsp struct {
 
 	// 用户id

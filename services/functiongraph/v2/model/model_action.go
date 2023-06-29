@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点操作详情
+// Action 节点操作详情
 type Action struct {
 	FunctionRef *FunctionRef `json:"function_ref,omitempty"`
 }

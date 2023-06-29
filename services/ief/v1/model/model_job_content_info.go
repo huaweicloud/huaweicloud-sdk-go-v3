@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量作业详情
+// JobContentInfo 批量作业详情
 type JobContentInfo struct {
 
 	// 批量作业对象类型，支持如下选项： - node：边缘节点 - node_group：边缘节点组 - deployment：边缘应用

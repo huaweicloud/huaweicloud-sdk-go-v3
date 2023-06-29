@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkitemStatusRecordsV4Response Response Object
 type ListWorkitemStatusRecordsV4Response struct {
 
 	// 操作历史

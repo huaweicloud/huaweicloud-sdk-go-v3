@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListKeypairsRequest Request Object
 type ListKeypairsRequest struct {
 
 	// 查询返回keypair列表当前页面的数量。 取值范围：0~1000。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEventStreamingResponse Response Object
 type ShowEventStreamingResponse struct {
 
 	// 事件流名称，租户下唯一，由字母、数字、点、下划线和中划线组成，必须字母或数字开头
@@ -89,13 +89,18 @@ func (c ShowEventStreamingResponseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ShowEventStreamingResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云硬盘类型的规格
+// VolumeTypeExtraSpecs 云硬盘类型的规格
 type VolumeTypeExtraSpecs struct {
 
 	// 支持当前云硬盘类型的可用区列表，列表的元素以逗号分隔。

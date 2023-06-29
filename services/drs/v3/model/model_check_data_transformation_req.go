@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 校验数据加工规则请求体
+// CheckDataTransformationReq 校验数据加工规则请求体
 type CheckDataTransformationReq struct {
 
 	// 任务id

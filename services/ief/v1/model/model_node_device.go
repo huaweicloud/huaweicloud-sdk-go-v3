@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点的终端设备信息
+// NodeDevice 边缘节点的终端设备信息
 type NodeDevice struct {
 	Added *DeviceInfos `json:"added,omitempty"`
 

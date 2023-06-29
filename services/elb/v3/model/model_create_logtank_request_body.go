@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建云日志请求体
+// CreateLogtankRequestBody 创建云日志请求体
 type CreateLogtankRequestBody struct {
 	Logtank *CreateLogtankOption `json:"logtank"`
 }

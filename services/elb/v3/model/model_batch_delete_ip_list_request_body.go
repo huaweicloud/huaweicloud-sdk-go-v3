@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Response Object
+// BatchDeleteIpListRequestBody This is a auto create Response Object
 type BatchDeleteIpListRequestBody struct {
 	Ipgroup *BatchDeleteIpListOption `json:"ipgroup,omitempty"`
 }

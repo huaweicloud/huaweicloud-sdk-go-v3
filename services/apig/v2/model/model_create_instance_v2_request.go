@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateInstanceV2Request Request Object
 type CreateInstanceV2Request struct {
 	Body *InstanceCreateReq `json:"body,omitempty"`
 }

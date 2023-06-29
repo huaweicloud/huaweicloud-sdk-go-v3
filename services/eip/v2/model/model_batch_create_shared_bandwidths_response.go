@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateSharedBandwidthsResponse Response Object
 type BatchCreateSharedBandwidthsResponse struct {
 
 	// 批创的带宽对象的列表

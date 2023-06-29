@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDailyReportRequest Request Object
 type ListDailyReportRequest struct {
 
 	// 用户EIP对应的ID

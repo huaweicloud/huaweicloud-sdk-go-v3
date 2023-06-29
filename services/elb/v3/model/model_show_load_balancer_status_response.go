@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLoadBalancerStatusResponse Response Object
 type ShowLoadBalancerStatusResponse struct {
 	Statuses *LoadBalancerStatusResult `json:"statuses,omitempty"`
 

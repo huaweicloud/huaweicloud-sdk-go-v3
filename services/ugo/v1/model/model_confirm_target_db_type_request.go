@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ConfirmTargetDbTypeRequest Request Object
 type ConfirmTargetDbTypeRequest struct {
 	Body *ConfirmTargetDbReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子优化结果条目
+// OptimizationResultItem 分子优化结果条目
 type OptimizationResultItem struct {
 
 	// 分子SMILES表达式

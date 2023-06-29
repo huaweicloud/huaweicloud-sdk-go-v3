@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BankcardResult
 type BankcardResult struct {
 
 	// 发卡行。

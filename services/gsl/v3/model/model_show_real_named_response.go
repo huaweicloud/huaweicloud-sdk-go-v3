@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRealNamedResponse Response Object
 type ShowRealNamedResponse struct {
 
 	// ICCID

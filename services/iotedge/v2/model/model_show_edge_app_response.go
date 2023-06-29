@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEdgeAppResponse Response Object
 type ShowEdgeAppResponse struct {
 
 	// 应用id

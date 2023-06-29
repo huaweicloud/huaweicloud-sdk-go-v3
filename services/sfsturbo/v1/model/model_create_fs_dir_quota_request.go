@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFsDirQuotaRequest Request Object
 type CreateFsDirQuotaRequest struct {
 
 	// MIME类型

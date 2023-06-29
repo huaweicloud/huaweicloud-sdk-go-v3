@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFunctionsRequest Request Object
 type ListFunctionsRequest struct {
 
 	// 上一次查询到的最后的记录位置。

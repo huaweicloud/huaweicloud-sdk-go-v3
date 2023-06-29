@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVideoTaggingMediaTaskResponse Response Object
 type CreateVideoTaggingMediaTaskResponse struct {
 
 	// 任务唯一标识

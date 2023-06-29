@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPoolsRequest Request Object
 type ListPoolsRequest struct {
 
 	// 分页查询中每页的后端服务器组个数

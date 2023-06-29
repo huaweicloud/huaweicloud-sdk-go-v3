@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Striping
 type Striping struct {
 
 	// 最近领域个数。

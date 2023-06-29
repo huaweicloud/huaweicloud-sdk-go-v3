@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页页码信息
+// PageInfoOption 分页页码信息
 type PageInfoOption struct {
 
 	// 翻页时，作为前一页的marker取值

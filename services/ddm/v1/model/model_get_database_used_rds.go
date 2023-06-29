@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// used_rds 返回参数
+// GetDatabaseUsedRds used_rds 返回参数
 type GetDatabaseUsedRds struct {
 
 	// 关联RDS节点ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaListServerSecurityGroupsResponse Response Object
 type NovaListServerSecurityGroupsResponse struct {
 
 	// security_group列表

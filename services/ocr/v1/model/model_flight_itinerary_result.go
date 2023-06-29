@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FlightItineraryResult
 type FlightItineraryResult struct {
 
 	// 印刷序号。

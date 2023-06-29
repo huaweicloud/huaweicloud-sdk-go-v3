@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// flavor字段数据结构说明
+// FlavorInfo flavor字段数据结构说明
 type FlavorInfo struct {
 
 	// 规格ID

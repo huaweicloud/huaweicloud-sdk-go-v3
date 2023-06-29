@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRoomSettingResponse Response Object
 type ShowRoomSettingResponse struct {
 
 	// 网络研讨会介绍。

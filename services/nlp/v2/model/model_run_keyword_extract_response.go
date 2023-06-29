@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunKeywordExtractResponse Response Object
 type RunKeywordExtractResponse struct {
 
 	// 关键词列表。调用失败时无此字段。

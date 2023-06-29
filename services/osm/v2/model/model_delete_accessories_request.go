@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAccessoriesRequest Request Object
 type DeleteAccessoriesRequest struct {
 
 	// f

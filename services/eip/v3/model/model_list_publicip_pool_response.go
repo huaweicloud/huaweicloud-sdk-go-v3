@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPublicipPoolResponse Response Object
 type ListPublicipPoolResponse struct {
 
 	// 功能说明：公网池对象

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteFaceSetResponse Response Object
 type DeleteFaceSetResponse struct {
 
 	// 人脸库名称。 调用失败时无此字段。

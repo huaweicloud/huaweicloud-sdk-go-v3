@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstanceTagsResponse Response Object
 type ListInstanceTagsResponse struct {
 
 	// 实例绑定的标签列表

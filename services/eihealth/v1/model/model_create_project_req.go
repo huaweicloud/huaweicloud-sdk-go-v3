@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建项目请求体
+// CreateProjectReq 创建项目请求体
 type CreateProjectReq struct {
 
 	// 项目描述

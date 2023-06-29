@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNotificationTopicsResponse Response Object
 type ListNotificationTopicsResponse struct {
 
 	// request_id

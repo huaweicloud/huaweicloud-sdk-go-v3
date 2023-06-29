@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchConfigurationRequest Request Object
 type SwitchConfigurationRequest struct {
 
 	// 参数模板ID。

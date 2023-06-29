@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新负载均衡器的请求体
+// UpdateLoadbalancerReq 更新负载均衡器的请求体
 type UpdateLoadbalancerReq struct {
 
 	// 负载均衡器名称。

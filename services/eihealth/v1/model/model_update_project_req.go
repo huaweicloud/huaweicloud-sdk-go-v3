@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新项目请求体
+// UpdateProjectReq 更新项目请求体
 type UpdateProjectReq struct {
 
 	// 项目描述

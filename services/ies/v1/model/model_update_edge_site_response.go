@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEdgeSiteResponse Response Object
 type UpdateEdgeSiteResponse struct {
 	EdgeSite       *EdgeSiteDetail `json:"edge_site,omitempty"`
 	HttpStatusCode int             `json:"-"`

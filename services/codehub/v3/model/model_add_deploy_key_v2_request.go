@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddDeployKeyV2Request Request Object
 type AddDeployKeyV2Request struct {
 
 	// 仓库主键id

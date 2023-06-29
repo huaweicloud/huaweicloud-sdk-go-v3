@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSpResResponse Response Object
 type ShowSpResResponse struct {
 
 	// SP下所有企业已使用的会议并发数量。

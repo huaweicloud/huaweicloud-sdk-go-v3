@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListKmsByTagsRequest Request Object
 type ListKmsByTagsRequest struct {
 
 	// 资源实例，固定值为resource_instances

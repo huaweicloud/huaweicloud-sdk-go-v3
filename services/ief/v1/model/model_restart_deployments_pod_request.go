@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestartDeploymentsPodRequest Request Object
 type RestartDeploymentsPodRequest struct {
 
 	// 应用部署ID

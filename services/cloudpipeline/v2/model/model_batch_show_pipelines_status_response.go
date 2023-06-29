@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowPipelinesStatusResponse Response Object
 type BatchShowPipelinesStatusResponse struct {
 	Body           *[]PipelineExecuteStates `json:"body,omitempty"`
 	HttpStatusCode int                      `json:"-"`

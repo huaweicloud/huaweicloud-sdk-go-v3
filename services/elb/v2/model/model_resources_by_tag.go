@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 根据标签查询资源响应返回对象。
+// ResourcesByTag 根据标签查询资源响应返回对象。
 type ResourcesByTag struct {
 
 	// 资源ID.

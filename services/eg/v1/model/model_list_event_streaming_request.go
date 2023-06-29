@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEventStreamingRequest Request Object
 type ListEventStreamingRequest struct {
 
 	// 偏移量，表示从此偏移量开始查询，偏移量不能小于0

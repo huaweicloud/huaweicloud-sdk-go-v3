@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTtsaResponse Response Object
 type CreateTtsaResponse struct {
 
 	// 任务ID。

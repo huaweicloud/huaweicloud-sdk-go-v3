@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Quotas
 type Quotas struct {
 
 	// 资源配额列表。

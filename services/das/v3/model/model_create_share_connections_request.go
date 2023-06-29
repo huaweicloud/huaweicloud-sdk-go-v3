@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateShareConnectionsRequest Request Object
 type CreateShareConnectionsRequest struct {
 
 	// 语言

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResetUserPasswordReq。
+// ResetUserPasswordReq ResetUserPasswordReq。
 type ResetUserPasswordReq struct {
 
 	// 重置后的新密码。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出映射
+// OutputWithModel 输出映射
 type OutputWithModel struct {
 
 	// 输出参数名称,formulas中定义的name

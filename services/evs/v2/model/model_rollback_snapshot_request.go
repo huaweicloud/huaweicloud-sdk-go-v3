@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RollbackSnapshotRequest Request Object
 type RollbackSnapshotRequest struct {
 
 	// 快照ID

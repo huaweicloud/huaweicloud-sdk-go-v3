@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteCreateVideoResponse Response Object
 type ExecuteCreateVideoResponse struct {
 
 	// 视频id

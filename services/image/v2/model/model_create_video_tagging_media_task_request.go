@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVideoTaggingMediaTaskRequest Request Object
 type CreateVideoTaggingMediaTaskRequest struct {
 	Body *CreateVideoTaggingMediaTaskRequestBody `json:"body,omitempty"`
 }

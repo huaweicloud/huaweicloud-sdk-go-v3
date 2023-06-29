@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMigrationTaskRequest Request Object
 type ShowMigrationTaskRequest struct {
 
 	// 任务ID。

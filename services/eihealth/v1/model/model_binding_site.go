@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 结合位点
+// BindingSite 结合位点
 type BindingSite struct {
 
 	// 蛋白质3D结构，使用gzip压缩然后转base64格式

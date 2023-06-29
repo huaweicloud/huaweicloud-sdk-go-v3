@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件列表
+// Components 组件列表
 type Components struct {
 
 	// 组件id，当组件类型为DN，组件id为6001，则对应的值为dn_6001。

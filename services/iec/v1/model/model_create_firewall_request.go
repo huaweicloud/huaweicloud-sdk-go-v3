@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFirewallRequest Request Object
 type CreateFirewallRequest struct {
 	Body *CreateFirewallRequestBody `json:"body,omitempty"`
 }

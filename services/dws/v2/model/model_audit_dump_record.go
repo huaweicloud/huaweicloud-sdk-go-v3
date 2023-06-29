@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 审计日志
+// AuditDumpRecord 审计日志
 type AuditDumpRecord struct {
 
 	// 集群id。

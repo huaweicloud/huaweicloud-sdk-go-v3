@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新终端设备孪生参数配置
+// TwinUpdateDetail 更新终端设备孪生参数配置
 type TwinUpdateDetail struct {
 
 	// 终端设备动态属性

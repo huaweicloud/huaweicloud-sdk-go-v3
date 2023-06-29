@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAppVersionRequest Request Object
 type CreateAppVersionRequest struct {
 
 	// 应用ID

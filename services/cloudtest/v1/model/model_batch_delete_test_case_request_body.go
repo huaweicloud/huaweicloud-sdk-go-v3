@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除测试用例请求体
+// BatchDeleteTestCaseRequestBody 批量删除测试用例请求体
 type BatchDeleteTestCaseRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id，取值范围为10-9999

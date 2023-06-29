@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteComputingResourceResponse Response Object
 type DeleteComputingResourceResponse struct {
 
 	// 被删除计算资源ID。

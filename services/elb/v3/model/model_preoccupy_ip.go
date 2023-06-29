@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PreoccupyIp
 type PreoccupyIp struct {
 
 	// 预占IP总数

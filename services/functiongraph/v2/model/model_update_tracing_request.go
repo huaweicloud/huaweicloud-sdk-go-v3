@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTracingRequest Request Object
 type UpdateTracingRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。

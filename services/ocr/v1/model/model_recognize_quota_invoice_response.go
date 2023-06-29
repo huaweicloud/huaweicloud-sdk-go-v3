@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeQuotaInvoiceResponse Response Object
 type RecognizeQuotaInvoiceResponse struct {
 	Result         *QuotaInvoiceResult `json:"result,omitempty"`
 	HttpStatusCode int                 `json:"-"`

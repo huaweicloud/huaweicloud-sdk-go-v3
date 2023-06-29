@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBatchJobRequest Request Object
 type ShowBatchJobRequest struct {
 
 	// 数据开发任务ID。

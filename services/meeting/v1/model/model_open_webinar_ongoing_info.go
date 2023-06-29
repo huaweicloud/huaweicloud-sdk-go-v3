@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 正在召开研讨会信息。
+// OpenWebinarOngoingInfo 正在召开研讨会信息。
 type OpenWebinarOngoingInfo struct {
 
 	// 实时在线人数。

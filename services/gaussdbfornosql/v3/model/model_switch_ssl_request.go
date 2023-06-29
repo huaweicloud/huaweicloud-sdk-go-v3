@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchSslRequest Request Object
 type SwitchSslRequest struct {
 
 	// 实例ID。

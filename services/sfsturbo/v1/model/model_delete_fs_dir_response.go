@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteFsDirResponse Response Object
 type DeleteFsDirResponse struct {
 	HttpStatusCode int `json:"-"`
 }

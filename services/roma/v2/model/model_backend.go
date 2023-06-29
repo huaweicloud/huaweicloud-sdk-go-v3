@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 后端服务定义
+// Backend 后端服务定义
 type Backend struct {
 
 	// 后端主机地址列表

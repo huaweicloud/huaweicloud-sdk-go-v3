@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddShardingNodeResponse Response Object
 type AddShardingNodeResponse struct {
 
 	// 任务ID。

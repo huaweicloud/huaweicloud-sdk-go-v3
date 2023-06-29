@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEventStreamingRequest Request Object
 type CreateEventStreamingRequest struct {
 	Body *EventStreamingCreateReq `json:"body,omitempty"`
 }

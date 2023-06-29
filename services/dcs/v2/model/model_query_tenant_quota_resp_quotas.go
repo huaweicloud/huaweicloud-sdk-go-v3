@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息。
+// QueryTenantQuotaRespQuotas 配额信息。
 type QueryTenantQuotaRespQuotas struct {
 
 	// 配额列表。

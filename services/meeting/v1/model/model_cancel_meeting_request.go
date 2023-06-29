@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelMeetingRequest Request Object
 type CancelMeetingRequest struct {
 
 	// 会议ID。 > 创建会议时返回的conferenceID。不是vmrConferenceID。

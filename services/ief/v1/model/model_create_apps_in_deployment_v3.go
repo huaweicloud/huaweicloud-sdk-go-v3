@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署参数配置
+// CreateAppsInDeploymentV3 部署参数配置
 type CreateAppsInDeploymentV3 struct {
 
 	// 副本数量

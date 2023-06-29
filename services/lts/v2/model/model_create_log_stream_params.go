@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建日志流参数。
+// CreateLogStreamParams 创建日志流参数。
 type CreateLogStreamParams struct {
 
 	// 需要创建的日志流名称

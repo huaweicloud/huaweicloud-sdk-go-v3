@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronDeleteSecurityGroupRequest Request Object
 type NeutronDeleteSecurityGroupRequest struct {
 
 	// 安全组ID

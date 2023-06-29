@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询对比任务信息体。
+// CompareResultInfo 查询对比任务信息体。
 type CompareResultInfo struct {
 	ObjectsCompareOverviewInfo *ObjectsCompareTaskInfo `json:"objects_compare_overview_info,omitempty"`
 

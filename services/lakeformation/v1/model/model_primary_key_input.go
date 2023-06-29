@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主键信息
+// PrimaryKeyInput 主键信息
 type PrimaryKeyInput struct {
 
 	// 列名称

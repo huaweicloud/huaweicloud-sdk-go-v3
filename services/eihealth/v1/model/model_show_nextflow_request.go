@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNextflowRequest Request Object
 type ShowNextflowRequest struct {
 
 	// 引擎ID

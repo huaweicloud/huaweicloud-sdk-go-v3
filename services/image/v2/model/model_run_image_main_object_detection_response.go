@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunImageMainObjectDetectionResponse Response Object
 type RunImageMainObjectDetectionResponse struct {
 
 	// 主体列表集合。

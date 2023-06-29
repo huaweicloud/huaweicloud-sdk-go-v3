@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAomMappingRulesResponse Response Object
 type ShowAomMappingRulesResponse struct {
 	Body           *[]AomMappingRuleResp `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`

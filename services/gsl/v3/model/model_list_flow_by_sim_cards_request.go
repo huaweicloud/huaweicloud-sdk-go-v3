@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFlowBySimCardsRequest Request Object
 type ListFlowBySimCardsRequest struct {
 	Body *ListFlowBySimCardsReq `json:"body,omitempty"`
 }

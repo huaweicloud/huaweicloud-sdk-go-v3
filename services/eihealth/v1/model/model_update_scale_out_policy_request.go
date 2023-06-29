@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateScaleOutPolicyRequest Request Object
 type UpdateScaleOutPolicyRequest struct {
 
 	// 策略id

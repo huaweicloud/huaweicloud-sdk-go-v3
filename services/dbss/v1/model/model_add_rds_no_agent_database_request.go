@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddRdsNoAgentDatabaseRequest Request Object
 type AddRdsNoAgentDatabaseRequest struct {
 
 	// 实例ID

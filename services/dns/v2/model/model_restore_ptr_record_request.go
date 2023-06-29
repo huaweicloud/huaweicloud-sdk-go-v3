@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestorePtrRecordRequest Request Object
 type RestorePtrRecordRequest struct {
 
 	// 域名所属的区域。

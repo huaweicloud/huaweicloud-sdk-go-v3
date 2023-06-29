@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlProxyFlavorsResponse Response Object
 type ShowGaussMySqlProxyFlavorsResponse struct {
 
 	// 规格组信息。

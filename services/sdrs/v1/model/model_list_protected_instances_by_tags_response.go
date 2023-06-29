@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProtectedInstancesByTagsResponse Response Object
 type ListProtectedInstancesByTagsResponse struct {
 
 	// 返回的保护实例列表。

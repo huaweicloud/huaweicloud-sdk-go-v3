@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMonitorIndicatorsRequest Request Object
 type ListMonitorIndicatorsRequest struct {
 }
 

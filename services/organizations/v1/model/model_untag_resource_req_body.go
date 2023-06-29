@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UntagResource 操作的请求体。
+// UntagResourceReqBody UntagResource 操作的请求体。
 type UntagResourceReqBody struct {
 	TagKeys []string `json:"tag_keys"`
 }

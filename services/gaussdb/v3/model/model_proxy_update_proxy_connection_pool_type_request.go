@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// proxy更新连接池请求体。
+// ProxyUpdateProxyConnectionPoolTypeRequest proxy更新连接池请求体。
 type ProxyUpdateProxyConnectionPoolTypeRequest struct {
 
 	// 连接池类型。CLOSED：关闭连接池；SESSION：开启会话级连接池

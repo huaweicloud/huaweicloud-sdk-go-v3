@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备更新配置
+// EdgemgrDevicesUpdate 终端设备更新配置
 type EdgemgrDevicesUpdate struct {
 	Device *EdgemgrDevicesPara `json:"device"`
 }

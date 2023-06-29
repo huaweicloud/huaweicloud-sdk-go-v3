@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisableAttributeResponse Response Object
 type DisableAttributeResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

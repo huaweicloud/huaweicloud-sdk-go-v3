@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchAgentResponse Response Object
 type SwitchAgentResponse struct {
 
 	// 响应状态

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAppQuotaRequest Request Object
 type UpdateAppQuotaRequest struct {
 
 	// 实例ID

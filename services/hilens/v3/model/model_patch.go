@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 增量更新的部署参数
+// Patch 增量更新的部署参数
 type Patch struct {
 
 	// 环境变量更新

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCostsRequest Request Object
 type ListCostsRequest struct {
 
 	// 语言。中文：zh_CN英文：en_US缺省为zh_CN。

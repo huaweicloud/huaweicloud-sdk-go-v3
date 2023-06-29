@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddServerGroupMemberRequest Request Object
 type AddServerGroupMemberRequest struct {
 
 	// 云服务器组ID。

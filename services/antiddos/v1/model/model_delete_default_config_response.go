@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDefaultConfigResponse Response Object
 type DeleteDefaultConfigResponse struct {
 
 	// 内部错误码

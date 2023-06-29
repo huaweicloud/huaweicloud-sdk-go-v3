@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新边缘实例的参数
+// UpdateInstanceOption 更新边缘实例的参数
 type UpdateInstanceOption struct {
 
 	// 修改后的边缘实例名称， 只能由中文字符、英文字母、数字及“_”、“-”、“.”组成。

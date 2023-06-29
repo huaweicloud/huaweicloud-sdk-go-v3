@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopSystemEventRequest Request Object
 type StopSystemEventRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

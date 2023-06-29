@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppImageResponse Response Object
 type ListAppImageResponse struct {
 
 	// 总记录数

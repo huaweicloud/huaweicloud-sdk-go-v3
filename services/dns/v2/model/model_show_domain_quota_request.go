@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDomainQuotaRequest Request Object
 type ShowDomainQuotaRequest struct {
 
 	// 租户ID。

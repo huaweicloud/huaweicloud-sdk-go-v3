@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListComponentInfosRequest Request Object
 type ListComponentInfosRequest struct {
 
 	// 语言

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEnterpriseRouterRequest Request Object
 type ShowEnterpriseRouterRequest struct {
 
 	// 企业路由器实例ID

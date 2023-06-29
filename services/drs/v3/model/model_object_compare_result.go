@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ObjectCompareResult
 type ObjectCompareResult struct {
 
 	// 对象级对比任务的id。

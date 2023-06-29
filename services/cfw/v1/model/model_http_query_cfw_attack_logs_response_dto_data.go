@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询攻击日志返回值
+// HttpQueryCfwAttackLogsResponseDtoData 查询攻击日志返回值
 type HttpQueryCfwAttackLogsResponseDtoData struct {
 
 	// 返回数量

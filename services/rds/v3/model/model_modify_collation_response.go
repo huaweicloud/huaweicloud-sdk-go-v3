@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ModifyCollationResponse Response Object
 type ModifyCollationResponse struct {
 
 	// 任务ID。

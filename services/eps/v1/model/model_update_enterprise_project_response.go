@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEnterpriseProjectResponse Response Object
 type UpdateEnterpriseProjectResponse struct {
 	EnterpriseProject *EpDetail `json:"enterprise_project,omitempty"`
 	HttpStatusCode    int       `json:"-"`

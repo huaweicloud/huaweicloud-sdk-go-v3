@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowStatisticCommitV3Request Request Object
 type ShowStatisticCommitV3Request struct {
 
 	// 仓库短id

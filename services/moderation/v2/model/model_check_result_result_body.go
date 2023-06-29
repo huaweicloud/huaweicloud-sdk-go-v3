@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CheckResultResultBody
 type CheckResultResultBody struct {
 
 	// 任务标识。

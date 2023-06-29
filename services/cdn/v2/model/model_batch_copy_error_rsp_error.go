@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 错误体
+// BatchCopyErrorRspError 错误体
 type BatchCopyErrorRspError struct {
 
 	// 错误码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转移项目请求体
+// TransferProjectReq 转移项目请求体
 type TransferProjectReq struct {
 
 	// 转移用户id

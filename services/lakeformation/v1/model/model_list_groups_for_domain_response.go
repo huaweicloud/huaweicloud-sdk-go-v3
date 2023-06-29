@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGroupsForDomainResponse Response Object
 type ListGroupsForDomainResponse struct {
 	UserGroup *[]UserGroup `json:"user_group,omitempty"`
 

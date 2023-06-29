@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAlertRuleMetricsResponse Response Object
 type ListAlertRuleMetricsResponse struct {
 
 	// ListAlertRuleMetricsResponseBody

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetCohostRequest Request Object
 type SetCohostRequest struct {
 
 	// 会议ID。

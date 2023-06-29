@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HealthCodeRequestBody
 type HealthCodeRequestBody struct {
 
 	// 图像数据，base64编码，图片尺寸不小于15×15像素，最长边不超过8192像素，支持JPG/PNG/BMP/TIFF格式。

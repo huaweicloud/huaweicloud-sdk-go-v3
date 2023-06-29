@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDomainBandwidthPeakResponse Response Object
 type ListDomainBandwidthPeakResponse struct {
 
 	// 域名对应的带宽峰值列表。

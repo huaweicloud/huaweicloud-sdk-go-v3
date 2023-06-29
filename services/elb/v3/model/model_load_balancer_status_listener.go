@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LB状态树的监听器状态信息
+// LoadBalancerStatusListener LB状态树的监听器状态信息
 type LoadBalancerStatusListener struct {
 
 	// 监听器的名称。

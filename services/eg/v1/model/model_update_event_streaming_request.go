@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEventStreamingRequest Request Object
 type UpdateEventStreamingRequest struct {
 
 	// 事件流ID

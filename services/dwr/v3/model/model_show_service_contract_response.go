@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowServiceContractResponse Response Object
 type ShowServiceContractResponse struct {
 
 	// 服务协议类型,默认为use_public_action_privacy_statement。
@@ -63,13 +63,18 @@ func (c ShowServiceContractResponseAgreementType) MarshalJSON() ([]byte, error) 
 
 func (c *ShowServiceContractResponseAgreementType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

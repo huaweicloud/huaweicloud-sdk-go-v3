@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDependencyVersionResponse Response Object
 type ListDependencyVersionResponse struct {
 
 	// 依赖包列表

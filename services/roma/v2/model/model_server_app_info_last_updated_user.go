@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 最后更新用户信息
+// ServerAppInfoLastUpdatedUser 最后更新用户信息
 type ServerAppInfoLastUpdatedUser struct {
 
 	// 最后修改者的用户ID

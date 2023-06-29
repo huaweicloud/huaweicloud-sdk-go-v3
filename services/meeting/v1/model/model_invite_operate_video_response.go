@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InviteOperateVideoResponse Response Object
 type InviteOperateVideoResponse struct {
 	HttpStatusCode int `json:"-"`
 }

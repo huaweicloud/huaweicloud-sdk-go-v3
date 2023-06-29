@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceParamResponse Response Object
 type UpdateInstanceParamResponse struct {
 
 	// 节点列表。

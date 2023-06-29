@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// GetProductTemplatesRequest Request Object
 type GetProductTemplatesRequest struct {
 
 	// 项目ID

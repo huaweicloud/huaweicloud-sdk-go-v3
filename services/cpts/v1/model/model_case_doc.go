@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 文本用例信息
+// CaseDoc 文本用例信息
 type CaseDoc struct {
 
 	// 用例描述信息

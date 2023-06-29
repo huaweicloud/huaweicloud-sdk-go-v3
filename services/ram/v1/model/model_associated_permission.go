@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 描述与资源共享关联的权限的对象。
+// AssociatedPermission 描述与资源共享关联的权限的对象。
 type AssociatedPermission struct {
 
 	// 权限的ID。

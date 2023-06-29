@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateNodeTagsRequest Request Object
 type BatchCreateNodeTagsRequest struct {
 	Body *MultiResourcesMultiTags `json:"body,omitempty"`
 }

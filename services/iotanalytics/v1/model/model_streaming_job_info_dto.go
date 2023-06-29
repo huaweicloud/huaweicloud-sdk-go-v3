@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实时分析作业基础信息，包括：实时分析作业ID、实时分析作业名称、作业类型等。
+// StreamingJobInfoDto 实时分析作业基础信息，包括：实时分析作业ID、实时分析作业名称、作业类型等。
 type StreamingJobInfoDto struct {
 
 	// 作业ID

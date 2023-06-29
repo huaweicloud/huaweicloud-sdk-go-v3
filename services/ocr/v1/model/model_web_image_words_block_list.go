@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WebImageWordsBlockList
 type WebImageWordsBlockList struct {
 
 	// 文字块识别结果。

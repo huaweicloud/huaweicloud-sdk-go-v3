@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestartEncodeServerRequest Request Object
 type RestartEncodeServerRequest struct {
 	Body *RestartEncodeServerRequestBody `json:"body,omitempty"`
 }

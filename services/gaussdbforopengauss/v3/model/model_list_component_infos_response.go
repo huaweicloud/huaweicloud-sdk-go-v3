@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListComponentInfosResponse Response Object
 type ListComponentInfosResponse struct {
 
 	// 组件信息。

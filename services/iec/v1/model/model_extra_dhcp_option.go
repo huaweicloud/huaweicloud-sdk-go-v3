@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DHCP扩展属性
+// ExtraDhcpOption DHCP扩展属性
 type ExtraDhcpOption struct {
 
 	// Option名称

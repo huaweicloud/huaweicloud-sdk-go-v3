@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建结果
+// CreateGroupResp 创建结果
 type CreateGroupResp struct {
 }
 

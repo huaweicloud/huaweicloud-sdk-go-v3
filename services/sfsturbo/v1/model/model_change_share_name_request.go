@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeShareNameRequest Request Object
 type ChangeShareNameRequest struct {
 
 	// MIME类型

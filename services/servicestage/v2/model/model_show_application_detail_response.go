@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplicationDetailResponse Response Object
 type ShowApplicationDetailResponse struct {
 
 	// 组件个数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadFromObs2Response Response Object
 type UploadFromObs2Response struct {
 
 	// 元数据的id。

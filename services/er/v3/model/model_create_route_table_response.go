@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRouteTableResponse Response Object
 type CreateRouteTableResponse struct {
 	RouteTable *RouteTable `json:"route_table,omitempty"`
 

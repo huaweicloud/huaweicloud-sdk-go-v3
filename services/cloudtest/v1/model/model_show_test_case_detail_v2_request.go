@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTestCaseDetailV2Request Request Object
 type ShowTestCaseDetailV2Request struct {
 
 	// 用例编号，长度为[3-128]位字符

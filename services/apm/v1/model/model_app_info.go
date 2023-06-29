@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用信息。
+// AppInfo 应用信息。
 type AppInfo struct {
 
 	// 环境名称。

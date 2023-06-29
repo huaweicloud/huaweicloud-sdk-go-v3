@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
+// QuotaDetailBackups 备份个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailBackups struct {
 
 	// 已使用的数量。

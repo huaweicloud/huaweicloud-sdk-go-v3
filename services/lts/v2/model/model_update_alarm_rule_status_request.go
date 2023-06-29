@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlarmRuleStatusRequest Request Object
 type UpdateAlarmRuleStatusRequest struct {
 	Body *ChangeAlarmRuleStatus `json:"body,omitempty"`
 }

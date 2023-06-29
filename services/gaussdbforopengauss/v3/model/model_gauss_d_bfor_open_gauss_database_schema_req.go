@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建数据库schema信息。
+// GaussDBforOpenGaussDatabaseSchemaReq 创建数据库schema信息。
 type GaussDBforOpenGaussDatabaseSchemaReq struct {
 
 	// 数据库名称。  数据库名称在1到63个字符之间，由字母、数字、或下划线组成，不能包含其他特殊字符，不能以“pg”和数字开头，且不能和GaussDB 模板库重名。  GaussDB 模板库包括postgres， template0 ，template1。

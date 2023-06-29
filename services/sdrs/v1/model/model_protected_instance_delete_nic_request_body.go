@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例删除网卡请求体
+// ProtectedInstanceDeleteNicRequestBody 保护实例删除网卡请求体
 type ProtectedInstanceDeleteNicRequestBody struct {
 
 	// 网卡Port ID。

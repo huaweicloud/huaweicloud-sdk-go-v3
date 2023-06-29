@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunDomainSentimentRequest Request Object
 type RunDomainSentimentRequest struct {
 	Body *DomainSentimentReq `json:"body,omitempty"`
 }

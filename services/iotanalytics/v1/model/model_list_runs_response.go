@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRunsResponse Response Object
 type ListRunsResponse struct {
 
 	// 作业总个数。

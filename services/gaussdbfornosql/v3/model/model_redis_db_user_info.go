@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户信息。
+// RedisDbUserInfo 数据库用户信息。
 type RedisDbUserInfo struct {
 
 	// 账号名称。  小于36个字符，以字母开头，仅包含数字、字母、中划线、下划线。

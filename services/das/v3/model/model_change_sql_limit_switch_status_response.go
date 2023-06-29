@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeSqlLimitSwitchStatusResponse Response Object
 type ChangeSqlLimitSwitchStatusResponse struct {
 
 	// SQL限流任务ID

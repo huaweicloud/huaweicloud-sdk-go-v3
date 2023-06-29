@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMessageTemplateDetailsResponse Response Object
 type ListMessageTemplateDetailsResponse struct {
 
 	// 模板ID。

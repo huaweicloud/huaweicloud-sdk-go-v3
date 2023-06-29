@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主机集群详情响应体
+// DeploymentGroupDetail 主机集群详情响应体
 type DeploymentGroupDetail struct {
 
 	// 主机集群id
@@ -18,7 +18,7 @@ type DeploymentGroupDetail struct {
 	// 修改时间
 	UpdatedTime *string `json:"updated_time,omitempty"`
 
-	// 组内主机数量，一个主机集群内最多可添加200台主机
+	// 集群内主机数量，一个主机集群内最多可添加200台主机
 	HostCount *int32 `json:"host_count,omitempty"`
 
 	// 项目名称
@@ -30,7 +30,7 @@ type DeploymentGroupDetail struct {
 	// 局点信息
 	RegionName *string `json:"region_name,omitempty"`
 
-	// 项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 操作系统：windows|linux

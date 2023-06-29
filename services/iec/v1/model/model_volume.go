@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 硬盘对象
+// Volume 硬盘对象
 type Volume struct {
 
 	// 硬盘ID。

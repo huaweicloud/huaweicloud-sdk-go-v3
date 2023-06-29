@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AwakeClusterResponse Response Object
 type AwakeClusterResponse struct {
 	HttpStatusCode int `json:"-"`
 }

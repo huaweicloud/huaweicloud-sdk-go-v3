@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchCreatePublicipsV2RequestBody This is a auto create Body Object
 type BatchCreatePublicipsV2RequestBody struct {
 	Bandwidth *BatchBandwidth `json:"bandwidth"`
 

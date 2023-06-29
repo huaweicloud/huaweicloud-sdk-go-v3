@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器所属安全组列表。
+// ServerSecurityGroup 弹性云服务器所属安全组列表。
 type ServerSecurityGroup struct {
 
 	// 安全组名称或者UUID。

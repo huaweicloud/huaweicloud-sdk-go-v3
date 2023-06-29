@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户自己修改个人信息。
+// ModMemberDto 用户自己修改个人信息。
 type ModMemberDto struct {
 
 	// 名称。

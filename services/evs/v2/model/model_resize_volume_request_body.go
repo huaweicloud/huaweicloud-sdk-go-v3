@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ResizeVolumeRequestBody This is a auto create Body Object
 type ResizeVolumeRequestBody struct {
 	BssParam *BssParamForResizeVolume `json:"bssParam,omitempty"`
 

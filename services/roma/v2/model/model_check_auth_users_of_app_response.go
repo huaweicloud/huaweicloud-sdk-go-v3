@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckAuthUsersOfAppResponse Response Object
 type CheckAuthUsersOfAppResponse struct {
 
 	// 应用的总成员数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateIncidentRequestBody
+// CreateIncidentRequestBody CreateIncidentRequestBody
 type CreateIncidentRequestBody struct {
 	DataObject *CreateIncident `json:"data_object,omitempty"`
 }

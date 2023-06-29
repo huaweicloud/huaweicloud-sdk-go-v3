@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAuditLogResponse Response Object
 type ListAuditLogResponse struct {
 
 	// 审计日志列表。

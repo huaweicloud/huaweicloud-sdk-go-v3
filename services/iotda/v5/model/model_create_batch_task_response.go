@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateBatchTaskResponse Response Object
 type CreateBatchTaskResponse struct {
 
 	// 批量任务ID，创建批量任务时由物联网平台分配获得。

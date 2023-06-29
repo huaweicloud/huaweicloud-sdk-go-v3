@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetLoginMethodResponse Response Object
 type ResetLoginMethodResponse struct {
 
 	// Requested information

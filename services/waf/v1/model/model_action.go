@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用来保存网站反爬虫中特征反爬虫的防护动作信息
+// Action 用来保存网站反爬虫中特征反爬虫的防护动作信息
 type Action struct {
 
 	// 特征反爬虫中防护动作信息   - log：仅记录   - block：拦截

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWeeklyReportsResponse Response Object
 type ListWeeklyReportsResponse struct {
 
 	// 一周内DDoS拦截次数

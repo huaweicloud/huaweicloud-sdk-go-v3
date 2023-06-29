@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowServerRemoteConsoleRequest Request Object
 type ShowServerRemoteConsoleRequest struct {
 	ServerId string `json:"server_id"`
 

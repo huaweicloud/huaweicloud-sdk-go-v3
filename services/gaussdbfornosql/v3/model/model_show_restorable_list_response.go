@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRestorableListResponse Response Object
 type ShowRestorableListResponse struct {
 
 	// 可恢复的实例总数

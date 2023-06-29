@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddDeviceToGroupRequest Request Object
 type BatchAddDeviceToGroupRequest struct {
 
 	// 实例ID

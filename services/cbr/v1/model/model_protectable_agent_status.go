@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ProtectableAgentStatus
 type ProtectableAgentStatus struct {
 
 	// agent无法连接的错误码

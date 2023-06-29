@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateInstanceBy3rdResponse Response Object
 type CreateInstanceBy3rdResponse struct {
 	Result *InstancesResponseInstancesVoResult `json:"result,omitempty"`
 

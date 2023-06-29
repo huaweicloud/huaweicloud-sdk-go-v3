@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像标签
+// Tags 镜像标签
 type Tags struct {
 
 	// 标签的键。最大长度127个unicode字符，key不能为空。

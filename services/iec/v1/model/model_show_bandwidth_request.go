@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBandwidthRequest Request Object
 type ShowBandwidthRequest struct {
 
 	// 带宽ID。

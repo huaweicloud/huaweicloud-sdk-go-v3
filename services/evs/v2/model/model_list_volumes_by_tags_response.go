@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVolumesByTagsResponse Response Object
 type ListVolumesByTagsResponse struct {
 
 	// 符合查询条件的云硬盘资源个数

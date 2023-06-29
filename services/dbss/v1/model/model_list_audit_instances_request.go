@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuditInstancesRequest Request Object
 type ListAuditInstancesRequest struct {
 
 	// 偏移量

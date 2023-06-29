@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SendVerifyCodesResponse Response Object
 type SendVerifyCodesResponse struct {
 
 	// 错误码

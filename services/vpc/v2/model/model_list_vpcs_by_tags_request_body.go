@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ListVpcsByTagsRequestBody This is a auto create Body Object
 type ListVpcsByTagsRequestBody struct {
 
 	// 功能说明：操作标识 取值范围：filter(过滤)，count(查询总条数)
@@ -67,13 +67,18 @@ func (c ListVpcsByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 
 func (c *ListVpcsByTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

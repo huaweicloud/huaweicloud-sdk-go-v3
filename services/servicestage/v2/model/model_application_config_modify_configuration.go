@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用配置信息。
+// ApplicationConfigModifyConfiguration 应用配置信息。
 type ApplicationConfigModifyConfiguration struct {
 
 	// 应用环境变量。

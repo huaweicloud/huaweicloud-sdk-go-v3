@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNodesResponse Response Object
 type ListNodesResponse struct {
 
 	// API类型，固定值“List”

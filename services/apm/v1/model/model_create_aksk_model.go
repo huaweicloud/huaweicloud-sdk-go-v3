@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 新增ak-sk入参。
+// CreateAkskModel 新增ak-sk入参。
 type CreateAkskModel struct {
 
 	// 描述信息。

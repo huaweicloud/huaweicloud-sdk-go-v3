@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NodePoolSpecUpdate
 type NodePoolSpecUpdate struct {
 	NodeTemplate *NodeSpecUpdate `json:"nodeTemplate"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportCertificateRequest Request Object
 type ExportCertificateRequest struct {
 
 	// 所要导出的私有证书ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云硬盘uri自描述信息。
+// Link 云硬盘uri自描述信息。
 type Link struct {
 
 	// 对应的快捷链接。

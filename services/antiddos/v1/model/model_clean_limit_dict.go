@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 连接数限制列表
+// CleanLimitDict 连接数限制列表
 type CleanLimitDict struct {
 
 	// 清洗时访问限制分段ID

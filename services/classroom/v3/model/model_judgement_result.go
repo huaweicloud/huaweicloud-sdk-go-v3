@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务执行结果
+// JudgementResult 任务执行结果
 type JudgementResult struct {
 
 	// 标准类型输出结果

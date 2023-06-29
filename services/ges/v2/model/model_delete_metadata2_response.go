@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteMetadata2Response Response Object
 type DeleteMetadata2Response struct {
 	Body           map[string]string `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`

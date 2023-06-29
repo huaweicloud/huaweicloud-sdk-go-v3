@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemoveRoomResponse Response Object
 type RemoveRoomResponse struct {
 	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

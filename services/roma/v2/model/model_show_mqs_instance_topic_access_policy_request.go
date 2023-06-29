@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMqsInstanceTopicAccessPolicyRequest Request Object
 type ShowMqsInstanceTopicAccessPolicyRequest struct {
 
 	// 实例ID。

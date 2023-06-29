@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckWeakPasswordRequest Request Object
 type CheckWeakPasswordRequest struct {
 
 	// 语言。

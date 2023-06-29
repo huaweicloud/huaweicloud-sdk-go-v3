@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务需要暴露的端口列表
+// SvcPort 服务需要暴露的端口列表
 type SvcPort struct {
 
 	// 服务端口必须进行命名，而且名称只允许是{protocol}-{suffix}这种格式，其中{protocol}可以是tcp、http等，IEF根据在端口上定义的协议来提供对应的路由能力。例如“name:http-0”和“name:tcp-0”是合法的端口名，“name:http2forecast”是非法的端口号。

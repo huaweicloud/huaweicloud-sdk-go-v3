@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAddressSetDetailUsingGetRequest Request Object
 type ListAddressSetDetailUsingGetRequest struct {
 
 	// 地址组id

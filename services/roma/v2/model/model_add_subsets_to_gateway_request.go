@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddSubsetsToGatewayRequest Request Object
 type AddSubsetsToGatewayRequest struct {
 
 	// 实例ID

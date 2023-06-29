@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSeveritiesResponse Response Object
 type ListSeveritiesResponse struct {
 
 	// 是否展示

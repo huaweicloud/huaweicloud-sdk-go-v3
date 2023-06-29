@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateRuleAclUsingPutRequest Request Object
 type UpdateRuleAclUsingPutRequest struct {
 
 	// 规则Id

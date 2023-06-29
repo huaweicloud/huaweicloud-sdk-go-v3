@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEnterpriseRouterRequest Request Object
 type CreateEnterpriseRouterRequest struct {
 
 	// 幂等性标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWhiteblackipRuleResponse Response Object
 type ListWhiteblackipRuleResponse struct {
 
 	// 黑白名单规则条数

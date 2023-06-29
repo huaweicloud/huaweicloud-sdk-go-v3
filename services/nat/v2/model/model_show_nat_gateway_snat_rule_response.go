@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNatGatewaySnatRuleResponse Response Object
 type ShowNatGatewaySnatRuleResponse struct {
 	SnatRule       *NatGatewaySnatRuleResponseBody `json:"snat_rule,omitempty"`
 	HttpStatusCode int                             `json:"-"`

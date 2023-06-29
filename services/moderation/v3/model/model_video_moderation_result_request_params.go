@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业创建参数
+// VideoModerationResultRequestParams 作业创建参数
 type VideoModerationResultRequestParams struct {
 	Data *VideoModerationResultRequestParamsData `json:"data"`
 

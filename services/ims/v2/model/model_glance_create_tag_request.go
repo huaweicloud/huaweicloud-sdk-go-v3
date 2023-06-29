@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// GlanceCreateTagRequest Request Object
 type GlanceCreateTagRequest struct {
 
 	// 镜像id

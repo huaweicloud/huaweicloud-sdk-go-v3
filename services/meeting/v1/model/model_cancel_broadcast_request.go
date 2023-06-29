@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelBroadcastRequest Request Object
 type CancelBroadcastRequest struct {
 
 	// 会议ID。

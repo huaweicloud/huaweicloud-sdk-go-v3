@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置企业用户指定类型的阈值的请求体。
+// SetQosThresholdReq 设置企业用户指定类型的阈值的请求体。
 type SetQosThresholdReq struct {
 	Latency *SetThresholdData `json:"latency,omitempty"`
 

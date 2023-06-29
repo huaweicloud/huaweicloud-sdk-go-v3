@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重装拓展参数，已废弃。
+// ReinstallExtendParam 重装拓展参数，已废弃。
 type ReinstallExtendParam struct {
 
 	// 指定待切换目标操作系统所使用的用户镜像ID，已废弃。 指定此参数等价于指定ReinstallVolumeSpec中imageID，原取值将被覆盖。

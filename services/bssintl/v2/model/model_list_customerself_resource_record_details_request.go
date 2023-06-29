@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCustomerselfResourceRecordDetailsRequest Request Object
 type ListCustomerselfResourceRecordDetailsRequest struct {
 	Body *QueryResRecordsDetailReq `json:"body,omitempty"`
 }

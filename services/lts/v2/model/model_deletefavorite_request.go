@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletefavoriteRequest Request Object
 type DeletefavoriteRequest struct {
 
 	// 收藏资源id

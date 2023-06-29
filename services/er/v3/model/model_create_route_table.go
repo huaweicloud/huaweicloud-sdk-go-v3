@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 路由表
+// CreateRouteTable 路由表
 type CreateRouteTable struct {
 
 	// 路由器表名称

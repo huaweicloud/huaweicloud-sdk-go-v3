@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDbObjectCollectionStatusRequest Request Object
 type ShowDbObjectCollectionStatusRequest struct {
 
 	// 任务ID。

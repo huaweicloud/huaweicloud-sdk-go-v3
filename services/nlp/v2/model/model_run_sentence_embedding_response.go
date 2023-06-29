@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSentenceEmbeddingResponse Response Object
 type RunSentenceEmbeddingResponse struct {
 
 	// 句向量结果列表，按输入句子顺序返回句向量。调用失败时无此字段。

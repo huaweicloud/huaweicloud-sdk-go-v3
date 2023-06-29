@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// resize是一个对象
+// ResizeGraphReqResize resize是一个对象
 type ResizeGraphReqResize struct {
 
 	// 图规格类型，当前支持取值为\"2\",\"3\",\"4\",\"5\"分别代表扩容成千万边、一亿边、十亿边、百亿边规格的图。

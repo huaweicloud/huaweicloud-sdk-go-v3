@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群的实例对象。
+// Instance 集群的实例对象。
 type Instance struct {
 
 	// 集群所在可用区的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddDatabasePermissionRequest Request Object
 type AddDatabasePermissionRequest struct {
 
 	// 语言。

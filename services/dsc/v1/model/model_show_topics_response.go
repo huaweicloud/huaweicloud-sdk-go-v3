@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTopicsResponse Response Object
 type ShowTopicsResponse struct {
 
 	// 默认消息通知主题的唯一资源标识符

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteTopicAttributesResponse Response Object
 type DeleteTopicAttributesResponse struct {
 
 	// 请求的唯一标识ID。

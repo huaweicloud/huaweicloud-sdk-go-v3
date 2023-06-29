@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchTagActionRequest Request Object
 type BatchTagActionRequest struct {
 
 	// 实例ID。

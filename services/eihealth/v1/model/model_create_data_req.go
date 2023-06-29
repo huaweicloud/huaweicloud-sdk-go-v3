@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建文件夹请求体
+// CreateDataReq 创建文件夹请求体
 type CreateDataReq struct {
 
 	// 文件夹名称

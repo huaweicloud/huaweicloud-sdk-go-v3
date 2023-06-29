@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// API的URL地址。
+// ShowApiVersionLinksParams API的URL地址。
 type ShowApiVersionLinksParams struct {
 
 	// 链接的描述

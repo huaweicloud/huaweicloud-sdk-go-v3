@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署模板信息
+// DeploymentTemplate 部署模板信息
 type DeploymentTemplate struct {
 	Configs *PodConfig `json:"configs,omitempty"`
 

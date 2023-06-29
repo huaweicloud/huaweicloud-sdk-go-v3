@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 别名记录。
+// AliasTarget 别名记录。
 type AliasTarget struct {
 
 	// 资源服务类型，支持别名记录的服务。取值：  cloudsite：云速建站 waf：Web应用防火墙

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateOptimizationTaskResponse Response Object
 type CreateOptimizationTaskResponse struct {
 
 	// 分子优化任务ID

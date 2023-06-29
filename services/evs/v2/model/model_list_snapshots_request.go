@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSnapshotsRequest Request Object
 type ListSnapshotsRequest struct {
 
 	// 偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateLabelsRequest Request Object
 type UpdateLabelsRequest struct {
 
 	// 修改标签的id

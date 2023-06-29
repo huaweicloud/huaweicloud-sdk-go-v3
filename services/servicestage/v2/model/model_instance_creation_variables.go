@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变量值，通过模板创建时必填
+// InstanceCreationVariables 变量值，通过模板创建时必填
 type InstanceCreationVariables struct {
 
 	// 环境变量

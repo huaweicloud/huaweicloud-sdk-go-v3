@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWorkflowsRequest Request Object
 type ListWorkflowsRequest struct {
 
 	// 工作流的名称前缀。名称必须以字母或数字开头，只能由字母、数字、下划线和中划线组成，长度小于等于64个字符。

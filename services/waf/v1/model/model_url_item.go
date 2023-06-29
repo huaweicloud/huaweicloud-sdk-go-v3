@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 受攻击URL统计
+// UrlItem 受攻击URL统计
 type UrlItem struct {
 
 	// url路径

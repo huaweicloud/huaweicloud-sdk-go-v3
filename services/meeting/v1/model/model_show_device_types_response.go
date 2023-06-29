@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeviceTypesResponse Response Object
 type ShowDeviceTypesResponse struct {
 
 	// 查询到的终端类型列表

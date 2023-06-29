@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpgradeDatabaseVersionResponse Response Object
 type UpgradeDatabaseVersionResponse struct {
 
 	// 任务ID。

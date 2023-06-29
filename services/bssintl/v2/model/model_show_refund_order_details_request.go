@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRefundOrderDetailsRequest Request Object
 type ShowRefundOrderDetailsRequest struct {
 
 	// 退订订单或者降配订单的ID。

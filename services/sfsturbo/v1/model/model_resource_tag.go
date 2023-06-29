@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// resource_tag字段说明
+// ResourceTag resource_tag字段说明
 type ResourceTag struct {
 
 	// 标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。

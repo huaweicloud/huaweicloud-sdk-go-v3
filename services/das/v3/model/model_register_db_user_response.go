@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterDbUserResponse Response Object
 type RegisterDbUserResponse struct {
 
 	// 数据库用户ID

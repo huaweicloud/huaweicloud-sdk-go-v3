@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 列表接口返回的路由表对象
+// ListRoutetableOption 列表接口返回的路由表对象
 type ListRoutetableOption struct {
 
 	// 路由表ID  取值范围：标准UUID

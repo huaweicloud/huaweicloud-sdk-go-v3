@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 可用分区结构体
+// AvailableZones 可用分区结构体
 type AvailableZones struct {
 
 	// 可用区编码。
@@ -67,13 +67,18 @@ func (c AvailableZonesResourceAvailability) MarshalJSON() ([]byte, error) {
 
 func (c *AvailableZonesResourceAvailability) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateConstraintResponse Response Object
 type BatchCreateConstraintResponse struct {
 	HttpStatusCode int `json:"-"`
 }

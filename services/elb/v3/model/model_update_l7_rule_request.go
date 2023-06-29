@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateL7RuleRequest Request Object
 type UpdateL7RuleRequest struct {
 
 	// 策略ID。

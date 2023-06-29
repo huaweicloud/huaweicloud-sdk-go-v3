@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePortalInfoRequest Request Object
 type UpdatePortalInfoRequest struct {
 
 	// 主页ID。

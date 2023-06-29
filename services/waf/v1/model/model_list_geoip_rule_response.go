@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGeoipRuleResponse Response Object
 type ListGeoipRuleResponse struct {
 
 	// 该策略下地理位置控制规则数量

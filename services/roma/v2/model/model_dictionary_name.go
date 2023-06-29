@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 字典名称 - 字符集：中文、英文字母、数字、下划线和空格 - 约束：实例下唯一
+// DictionaryName 字典名称 - 字符集：中文、英文字母、数字、下划线和空格 - 约束：实例下唯一
 type DictionaryName struct {
 }
 

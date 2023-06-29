@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdateJobResponse Response Object
 type BatchUpdateJobResponse struct {
 
 	// 总数

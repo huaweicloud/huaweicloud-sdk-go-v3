@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划详情
+// TestPlanDetail 测试计划详情
 type TestPlanDetail struct {
 
 	// 测试计划id

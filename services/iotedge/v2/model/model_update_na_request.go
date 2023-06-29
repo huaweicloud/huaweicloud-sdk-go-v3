@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateNaRequest Request Object
 type UpdateNaRequest struct {
 
 	// 北向数据接收端点ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProductAuthenticationResponse Response Object
 type ShowProductAuthenticationResponse struct {
 
 	// 一型一密/一机一密的用户名

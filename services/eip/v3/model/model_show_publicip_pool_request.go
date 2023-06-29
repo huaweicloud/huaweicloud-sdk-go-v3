@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPublicipPoolRequest Request Object
 type ShowPublicipPoolRequest struct {
 
 	// 公网IP池ID唯一标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// TagsResp
 type TagsResp struct {
 
 	// 键。  key最大长度36个字符。  key不能为空字符串。  key只能由中文，字母，数字，“-”，“_”组成。

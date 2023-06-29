@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartCbhInstanceResponse Response Object
 type RestartCbhInstanceResponse struct {
 	HttpStatusCode int `json:"-"`
 }

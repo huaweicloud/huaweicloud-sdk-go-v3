@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSubCustomerResponse Response Object
 type CreateSubCustomerResponse struct {
 
 	// 客户ID。 只有成功或者错误码在CBC.99000050时才会返回。

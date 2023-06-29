@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 代码信息
+// Scm 代码信息
 type Scm struct {
 
 	// 代码Tag

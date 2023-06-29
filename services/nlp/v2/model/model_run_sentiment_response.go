@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSentimentResponse Response Object
 type RunSentimentResponse struct {
 	Result *HwCloudSentimentResp `json:"result,omitempty"`
 

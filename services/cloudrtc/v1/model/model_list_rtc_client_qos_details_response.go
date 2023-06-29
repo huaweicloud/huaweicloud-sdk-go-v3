@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRtcClientQosDetailsResponse Response Object
 type ListRtcClientQosDetailsResponse struct {
 
 	// 房间ID

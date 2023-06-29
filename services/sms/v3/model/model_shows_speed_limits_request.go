@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowsSpeedLimitsRequest Request Object
 type ShowsSpeedLimitsRequest struct {
 
 	// 查询限速信息的任务ID

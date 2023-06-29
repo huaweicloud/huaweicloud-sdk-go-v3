@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAppCountRequest Request Object
 type ShowAppCountRequest struct {
 
 	// 地域 1. cn：国内 2. intl：国际

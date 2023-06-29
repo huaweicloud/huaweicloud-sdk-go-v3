@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 点位缩放配置结构体
+// PointScalingDto 点位缩放配置结构体
 type PointScalingDto struct {
 
 	// 缩放的倍率

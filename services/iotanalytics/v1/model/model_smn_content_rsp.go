@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SMN数据源配置内容
+// SmnContentRsp SMN数据源配置内容
 type SmnContentRsp struct {
 
 	// 项目id

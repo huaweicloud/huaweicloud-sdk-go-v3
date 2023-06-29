@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResourcesJobDetailResponse Response Object
 type ShowResourcesJobDetailResponse struct {
 
 	// job id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息，与请求参数相同。
+// DatastoreResult 数据库信息，与请求参数相同。
 type DatastoreResult struct {
 
 	// 数据库类型。 - 支持GaussDB(for Cassandra)，GaussDB(for Mongo)，GaussDB(for Influx)数据库实例。 - 取值为“cassandra”，表示创建GaussDB(for Cassandra)数据库实例。 - 取值为“mongodb”，表示创建GaussDB(for Mongo)数据库实例。 - 取值为“influxdb”，表示创建GaussDB(for Influx)数据库实例。

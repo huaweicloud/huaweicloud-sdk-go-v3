@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FinancialStatementWordsBlockList
 type FinancialStatementWordsBlockList struct {
 
 	// 文字块内容。当入参\"return_text_location\"为false时，每个单元格返回一个文本值，不同行文本由换行符 \"\\n\" 拼接。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFeatureV2Request Request Object
 type CreateFeatureV2Request struct {
 
 	// 实例ID，在API网关控制台的“实例信息”中获取。

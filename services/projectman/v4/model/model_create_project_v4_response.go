@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateProjectV4Response Response Object
 type CreateProjectV4Response struct {
 
 	// 项目数字id

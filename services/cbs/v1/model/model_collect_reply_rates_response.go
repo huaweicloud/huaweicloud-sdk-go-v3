@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CollectReplyRatesResponse Response Object
 type CollectReplyRatesResponse struct {
 
 	// 统计周期目前支持year、month、week、day。 调用失败时无此字段。

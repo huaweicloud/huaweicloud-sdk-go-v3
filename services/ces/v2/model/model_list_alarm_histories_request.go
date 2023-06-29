@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmHistoriesRequest Request Object
 type ListAlarmHistoriesRequest struct {
 
 	// 告警ID,以al开头，后跟22位由字母或数字组成的字符串

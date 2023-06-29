@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListOrgInstancesRequest Request Object
 type ListOrgInstancesRequest struct {
 
 	// 是否页面显示（以标签配置为准）

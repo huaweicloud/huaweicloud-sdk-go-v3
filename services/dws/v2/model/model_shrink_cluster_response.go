@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShrinkClusterResponse Response Object
 type ShrinkClusterResponse struct {
 
 	// 缩容job_id。

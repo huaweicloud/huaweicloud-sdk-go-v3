@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RankEtlFilter
 type RankEtlFilter struct {
 
 	// 行为去重方式： - abs_weight，权重绝对值 - date，日期

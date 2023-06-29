@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEnvMonitorItemsResponse Response Object
 type ShowEnvMonitorItemsResponse struct {
 
 	// 采集器类别集合。

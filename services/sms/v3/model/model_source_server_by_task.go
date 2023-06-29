@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源端服务器信息
+// SourceServerByTask 源端服务器信息
 type SourceServerByTask struct {
 
 	// 源端服务器ID

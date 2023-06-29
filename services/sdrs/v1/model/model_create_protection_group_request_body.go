@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建保护组请求体
+// CreateProtectionGroupRequestBody 创建保护组请求体
 type CreateProtectionGroupRequestBody struct {
 	ServerGroup *CreateProtectionGroupRequestParams `json:"server_group"`
 }

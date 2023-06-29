@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTemplatesV2Response Response Object
 type ListTemplatesV2Response struct {
 
 	// 返回模板的数量。

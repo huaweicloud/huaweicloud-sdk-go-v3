@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopClusterResponse Response Object
 type StopClusterResponse struct {
 
 	// 作业ID

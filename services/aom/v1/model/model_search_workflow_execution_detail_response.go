@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchWorkflowExecutionDetailResponse Response Object
 type SearchWorkflowExecutionDetailResponse struct {
 
 	// 流程定义ID。

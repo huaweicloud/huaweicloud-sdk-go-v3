@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchAssociateDomainsV2Response Response Object
 type BatchAssociateDomainsV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

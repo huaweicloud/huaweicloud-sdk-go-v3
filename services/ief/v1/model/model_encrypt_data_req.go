@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 加密数据配置
+// EncryptDataReq 加密数据配置
 type EncryptDataReq struct {
 	EncryptData *EncryptDataIn `json:"encrypt_data"`
 }

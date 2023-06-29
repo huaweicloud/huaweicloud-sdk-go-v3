@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListListenersRequest Request Object
 type ListListenersRequest struct {
 
 	// 每页返回的个数。

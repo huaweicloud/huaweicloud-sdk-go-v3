@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateOrDeletePublishRecordForApiV2Response Response Object
 type CreateOrDeletePublishRecordForApiV2Response struct {
 
 	// 发布记录的ID

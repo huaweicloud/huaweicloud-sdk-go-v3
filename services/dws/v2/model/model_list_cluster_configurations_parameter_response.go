@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClusterConfigurationsParameterResponse Response Object
 type ListClusterConfigurationsParameterResponse struct {
 
 	// 集群使用的参数配置信息。

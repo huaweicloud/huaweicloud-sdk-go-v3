@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandInstanceNodeRequest Request Object
 type ExpandInstanceNodeRequest struct {
 
 	// 实例ID。

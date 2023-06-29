@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 复制对扩容请求体
+// ExtendReplicationRequestBody 复制对扩容请求体
 type ExtendReplicationRequestBody struct {
 	ExtendReplication *ExtendReplicationRequestParams `json:"extend-replication"`
 }

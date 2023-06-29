@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BatchAddServerNicOption
 type BatchAddServerNicOption struct {
 
 	// 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。

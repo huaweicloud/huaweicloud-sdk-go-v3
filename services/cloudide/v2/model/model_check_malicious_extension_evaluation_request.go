@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckMaliciousExtensionEvaluationRequest Request Object
 type CheckMaliciousExtensionEvaluationRequest struct {
 	Body *EvaluationAccusation `json:"body,omitempty"`
 }

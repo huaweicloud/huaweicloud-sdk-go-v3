@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建授权的详细信息。
+// CreateAuthorisationRequestBody 创建授权的详细信息。
 type CreateAuthorisationRequestBody struct {
 	Authorisation *CreateAuthorisation `json:"authorisation"`
 }

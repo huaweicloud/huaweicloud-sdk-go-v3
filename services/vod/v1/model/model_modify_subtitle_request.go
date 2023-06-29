@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ModifySubtitleRequest Request Object
 type ModifySubtitleRequest struct {
 	Body *SubtitleModifyReq `json:"body,omitempty"`
 }

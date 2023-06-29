@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// catalog response
+// Catalog catalog response
 type Catalog struct {
 
 	// catalog名字

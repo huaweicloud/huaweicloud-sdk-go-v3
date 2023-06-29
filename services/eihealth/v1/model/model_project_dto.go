@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目
+// ProjectDto 项目
 type ProjectDto struct {
 
 	// 项目id

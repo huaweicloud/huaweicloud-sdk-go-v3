@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// event
+// Event event
 type Event struct {
 
 	// SA数据对象版本号，数据接入时需携带版本号。版本号由SA服务团队负责更新，数据源只可填写SA给定的版本号。目前版本为1.0.0。

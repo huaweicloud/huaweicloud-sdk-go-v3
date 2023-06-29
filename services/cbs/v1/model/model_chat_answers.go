@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ChatAnswers
 type ChatAnswers struct {
 
 	// 答案。

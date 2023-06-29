@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGaussMySqlInstanceInternalIpResponse Response Object
 type UpdateGaussMySqlInstanceInternalIpResponse struct {
 
 	// 任务ID。

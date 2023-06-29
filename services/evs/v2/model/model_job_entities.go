@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Job的响应信息。
+// JobEntities Job的响应信息。
 type JobEntities struct {
 
 	// 云硬盘的类型。

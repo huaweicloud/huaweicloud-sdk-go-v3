@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpgradeCbhInstanceRequest Request Object
 type UpgradeCbhInstanceRequest struct {
 	Body *UpgradeCbhRequestBody `json:"body,omitempty"`
 }

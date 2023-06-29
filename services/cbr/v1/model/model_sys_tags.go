@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SysTags
 type SysTags struct {
 
 	// 键。  系统标签的key，从白名单中取，不能随意定义。 目前仅支持 _sys_enterprise_project_id字段，对应 的value为企业项目ID。

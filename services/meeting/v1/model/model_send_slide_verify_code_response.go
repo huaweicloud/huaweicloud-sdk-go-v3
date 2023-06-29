@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SendSlideVerifyCodeResponse Response Object
 type SendSlideVerifyCodeResponse struct {
 
 	// 抠出图形后的原背景图。通过“data:url”方式来定义图片。

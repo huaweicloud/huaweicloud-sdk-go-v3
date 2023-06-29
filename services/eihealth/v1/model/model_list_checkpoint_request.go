@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCheckpointRequest Request Object
 type ListCheckpointRequest struct {
 
 	// 数据作业id

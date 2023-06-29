@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetLoginMethodRequest Request Object
 type ResetLoginMethodRequest struct {
 
 	// 堡垒机实例ID，使用UUID格式。

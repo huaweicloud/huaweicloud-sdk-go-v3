@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务号冻结，会冻结下属所有资源。不需审核，即时生效。
+// FreezePubRequestBody 服务号冻结，会冻结下属所有资源。不需审核，即时生效。
 type FreezePubRequestBody struct {
 
 	// 冻结原因。

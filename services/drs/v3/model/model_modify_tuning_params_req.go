@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改调优参数请求体
+// ModifyTuningParamsReq 修改调优参数请求体
 type ModifyTuningParamsReq struct {
 
 	// 全量参数的参数名及对应的取值

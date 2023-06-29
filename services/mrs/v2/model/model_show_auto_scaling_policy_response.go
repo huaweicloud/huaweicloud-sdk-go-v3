@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAutoScalingPolicyResponse Response Object
 type ShowAutoScalingPolicyResponse struct {
 
 	// 弹性伸缩策略列表

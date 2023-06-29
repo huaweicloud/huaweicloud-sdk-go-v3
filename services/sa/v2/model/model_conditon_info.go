@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ConditonInfo
+// ConditonInfo ConditonInfo
 type ConditonInfo struct {
 
 	// name

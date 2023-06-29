@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求的返回的数据对象
+// ResultValueCustomReportListVo 请求的返回的数据对象
 type ResultValueCustomReportListVo struct {
 
 	// 起始记录数大于实际总条数时，值为0，分页请求才有此值

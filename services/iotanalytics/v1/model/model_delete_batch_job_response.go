@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBatchJobResponse Response Object
 type DeleteBatchJobResponse struct {
 
 	// 被删除作业ID。

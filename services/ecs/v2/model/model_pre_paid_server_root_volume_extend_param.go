@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PrePaidServerRootVolumeExtendParam
 type PrePaidServerRootVolumeExtendParam struct {
 
 	// 磁盘产品资源规格编码，如SATA，SAS和SSD。  > 说明： >  > 废弃字段。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateKafkaConsumerGroupResponse Response Object
 type CreateKafkaConsumerGroupResponse struct {
 
 	// 创建结果

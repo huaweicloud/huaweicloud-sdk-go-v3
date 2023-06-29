@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务详情
+// Service 服务详情
 type Service struct {
 	Service *ServiceReqDetail `json:"service,omitempty"`
 }

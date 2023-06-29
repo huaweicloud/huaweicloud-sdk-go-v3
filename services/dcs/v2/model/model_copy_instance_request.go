@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CopyInstanceRequest Request Object
 type CopyInstanceRequest struct {
 
 	// 实例ID。

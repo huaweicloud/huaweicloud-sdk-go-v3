@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEventSourceRequest Request Object
 type UpdateEventSourceRequest struct {
 
 	// 指定查询的事件源ID

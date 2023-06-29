@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出为dis类型时的配置信息
+// TaskOutputDis 输出为dis类型时的配置信息
 type TaskOutputDis struct {
 
 	// DIS流名称

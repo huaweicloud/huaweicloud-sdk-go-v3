@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteJobResponse Response Object
 type ExecuteJobResponse struct {
 
 	// 作业id

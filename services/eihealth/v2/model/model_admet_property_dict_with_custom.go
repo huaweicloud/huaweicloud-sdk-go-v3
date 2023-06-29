@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子ADMET属性字典(包含自定义属性)
+// AdmetPropertyDictWithCustom 分子ADMET属性字典(包含自定义属性)
 type AdmetPropertyDictWithCustom struct {
 }
 

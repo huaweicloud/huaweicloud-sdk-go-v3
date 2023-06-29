@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportBackupResponse Response Object
 type ImportBackupResponse struct {
 
 	// 同步备份副本接口的返回信息

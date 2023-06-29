@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPredefinedTagResponse Response Object
 type ListPredefinedTagResponse struct {
 
 	// 标签集合

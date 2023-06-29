@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCaseDetailRequest Request Object
 type ShowCaseDetailRequest struct {
 
 	// 工单id

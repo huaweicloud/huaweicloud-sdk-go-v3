@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteManualBackupResponse Response Object
 type BatchDeleteManualBackupResponse struct {
 
 	// 备份删除结果

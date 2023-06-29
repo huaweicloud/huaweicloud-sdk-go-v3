@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IP池对象。 支持IPv4和IPv6
+// IpPool IP池对象。 支持IPv4和IPv6
 type IpPool struct {
 
 	// 线路的ID。

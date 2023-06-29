@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// HangUpResponse Response Object
 type HangUpResponse struct {
 	HttpStatusCode int `json:"-"`
 }

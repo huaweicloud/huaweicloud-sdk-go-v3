@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 优先级顺序信息
+// WorkTableIssuseListResponseBodyOrder 优先级顺序信息
 type WorkTableIssuseListResponseBodyOrder struct {
 
 	// 优先级顺序id

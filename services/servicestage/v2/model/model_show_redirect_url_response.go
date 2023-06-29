@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRedirectUrlResponse Response Object
 type ShowRedirectUrlResponse struct {
 
 	// 授权重定向URL。

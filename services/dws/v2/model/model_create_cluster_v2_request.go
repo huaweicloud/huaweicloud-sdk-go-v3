@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateClusterV2Request Request Object
 type CreateClusterV2Request struct {
 	Body *V2CreateClusterReq `json:"body,omitempty"`
 }

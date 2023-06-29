@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 表中列的统计
+// TableColumnStatistics 表中列的统计
 type TableColumnStatistics struct {
 	ColumnStatisticsDesc *TableColumnStatisticsDescription `json:"column_statistics_desc"`
 

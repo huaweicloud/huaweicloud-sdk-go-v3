@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartAndStopDeploymentResponse Response Object
 type StartAndStopDeploymentResponse struct {
 
 	// 部署Id

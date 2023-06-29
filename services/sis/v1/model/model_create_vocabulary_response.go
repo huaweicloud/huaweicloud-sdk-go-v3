@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVocabularyResponse Response Object
 type CreateVocabularyResponse struct {
 
 	// 调用成功返回热词表ID，调用失败时无此字段。

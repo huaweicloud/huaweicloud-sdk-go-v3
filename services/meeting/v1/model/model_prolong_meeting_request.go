@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ProlongMeetingRequest Request Object
 type ProlongMeetingRequest struct {
 
 	// 会议ID。

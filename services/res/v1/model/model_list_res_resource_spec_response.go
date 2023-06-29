@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResResourceSpecResponse Response Object
 type ListResResourceSpecResponse struct {
 
 	// 离线计算规格。

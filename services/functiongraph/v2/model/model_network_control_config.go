@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数网络配置。
+// NetworkControlConfig 函数网络配置。
 type NetworkControlConfig struct {
 
 	// 禁止公网访问开关。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListServersDetailsResponse Response Object
 type ListServersDetailsResponse struct {
 
 	// 弹性云服务器的列表总数。

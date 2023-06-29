@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDomainTrafficDetailResponse Response Object
 type ListDomainTrafficDetailResponse struct {
 
 	// 采样数据列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CollectHotQuestionsResponse Response Object
 type CollectHotQuestionsResponse struct {
 
 	// 指定时间范围内，热点问题列表。

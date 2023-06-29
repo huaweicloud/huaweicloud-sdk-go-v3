@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRelationBucketsRequest Request Object
 type ListRelationBucketsRequest struct {
 
 	// 任务ID

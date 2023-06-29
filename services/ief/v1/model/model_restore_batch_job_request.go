@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreBatchJobRequest Request Object
 type RestoreBatchJobRequest struct {
 
 	// 批量处理作业ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AttrValue
 type AttrValue struct {
 
 	// 属性名称。

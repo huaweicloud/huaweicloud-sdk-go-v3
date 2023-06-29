@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLakeFormationInstancesResponse Response Object
 type ListLakeFormationInstancesResponse struct {
 
 	// LakeFormation实例列表

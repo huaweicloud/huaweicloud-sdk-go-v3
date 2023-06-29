@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProtectableResponse Response Object
 type ListProtectableResponse struct {
 
 	// 可保护性查询实例

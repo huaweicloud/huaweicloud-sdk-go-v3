@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSnapshotStatisticsRequest Request Object
 type ListSnapshotStatisticsRequest struct {
 
 	// 集群的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 增量导入图请求体
+// ImportGraphReq 增量导入图请求体
 type ImportGraphReq struct {
 
 	// 边文件目录或边文件名。

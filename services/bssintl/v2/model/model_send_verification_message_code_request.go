@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SendVerificationMessageCodeRequest Request Object
 type SendVerificationMessageCodeRequest struct {
 	Body *SendVerificationCodeV2Req `json:"body,omitempty"`
 }

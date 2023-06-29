@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelGrantResponse Response Object
 type CancelGrantResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：platform_type为非DRIS时有效，表示第三方平台的对接参数。
+// PlatformPara **参数说明**：platform_type为非DRIS时有效，表示第三方平台的对接参数。
 type PlatformPara struct {
 
 	// **参数说明**：第三方业务平台的ip地址和端口。

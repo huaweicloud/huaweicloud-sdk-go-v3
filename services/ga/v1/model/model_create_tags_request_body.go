@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// create tag request
+// CreateTagsRequestBody create tag request
 type CreateTagsRequestBody struct {
 
 	// 标签列表。

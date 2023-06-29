@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSslCertDownloadLinkResponse Response Object
 type ShowSslCertDownloadLinkResponse struct {
 
 	// ssl下载链接。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateNodeEncryptdatasResponse Response Object
 type CreateNodeEncryptdatasResponse struct {
 	HttpStatusCode int `json:"-"`
 }

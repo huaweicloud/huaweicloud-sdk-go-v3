@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCertificateRequest Request Object
 type UpdateCertificateRequest struct {
 
 	// SSL证书ID

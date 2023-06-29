@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLiveDataApiDeploymentHistoryV2Request Request Object
 type ListLiveDataApiDeploymentHistoryV2Request struct {
 
 	// 实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// KbqaAnswers
 type KbqaAnswers struct {
 
 	// 答案。

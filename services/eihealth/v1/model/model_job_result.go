@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业运行结果信息
+// JobResult 作业运行结果信息
 type JobResult struct {
 
 	// 输入总数

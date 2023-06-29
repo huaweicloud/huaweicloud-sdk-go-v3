@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据源信息
+// CreateAlertDataSource 数据源信息
 type CreateAlertDataSource struct {
 
 	// current page count

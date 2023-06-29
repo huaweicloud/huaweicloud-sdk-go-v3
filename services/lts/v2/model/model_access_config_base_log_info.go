@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志接入基础日志信息。
+// AccessConfigBaseLogInfo 日志接入基础日志信息。
 type AccessConfigBaseLogInfo struct {
 
 	// 日志组ID

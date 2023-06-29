@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNaResponse Response Object
 type UpdateNaResponse struct {
 
 	// NA系统ID，提供给其他系统访问的唯一标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询容灾演练数据结构
+// ShowDisasterRecoveryDrillParams 查询容灾演练数据结构
 type ShowDisasterRecoveryDrillParams struct {
 
 	// 容灾演练的ID。

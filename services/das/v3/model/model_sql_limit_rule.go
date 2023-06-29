@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL限流规则
+// SqlLimitRule SQL限流规则
 type SqlLimitRule struct {
 
 	// SQL限流规则ID

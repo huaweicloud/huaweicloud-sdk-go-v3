@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ReplyRatesIntervals
 type ReplyRatesIntervals struct {
 
 	// 间隔周期开始时间。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源信息。
+// Resource 资源信息。
 type Resource struct {
 
 	// 资源详情。 资源对象，用于扩展。默认为空。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户详细信息
+// DatabaseUserInfoReq 用户详细信息
 type DatabaseUserInfoReq struct {
 
 	// 是否可以登陆

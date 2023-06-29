@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstancePortResponse Response Object
 type UpdateInstancePortResponse struct {
 
 	// 任务ID。

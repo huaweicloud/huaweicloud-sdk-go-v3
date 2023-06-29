@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSslCertDownloadLinkResponse Response Object
 type ListSslCertDownloadLinkResponse struct {
 	CertInfoList   *[]DownloadInfoRsp `json:"cert_info_list,omitempty"`
 	HttpStatusCode int                `json:"-"`

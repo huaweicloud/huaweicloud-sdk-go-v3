@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取租户的习题库调用参数
+// PackagesListRequestBody 获取租户的习题库调用参数
 type PackagesListRequestBody struct {
 	Filter *PackageFilter `json:"filter,omitempty"`
 

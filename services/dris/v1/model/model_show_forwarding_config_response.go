@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowForwardingConfigResponse Response Object
 type ShowForwardingConfigResponse struct {
 
 	// **参数说明**：转发配置的类型。  **取值范围**：当前仅支持“kafka、mrskafka”。
@@ -82,13 +82,18 @@ func (c ShowForwardingConfigResponseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ShowForwardingConfigResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

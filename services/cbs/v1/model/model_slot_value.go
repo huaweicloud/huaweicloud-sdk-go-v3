@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SlotValue
 type SlotValue struct {
 
 	// 词。

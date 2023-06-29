@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListStoragePoolsRequest Request Object
 type ListStoragePoolsRequest struct {
 
 	// 每页的数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchSetAttributesRequest Request Object
 type BatchSetAttributesRequest struct {
 	Body *BatchSetAttributesReq `json:"body,omitempty"`
 }

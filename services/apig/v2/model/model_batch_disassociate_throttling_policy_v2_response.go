@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDisassociateThrottlingPolicyV2Response Response Object
 type BatchDisassociateThrottlingPolicyV2Response struct {
 
 	// 成功解除绑定的API和流控策略绑定关系的数量

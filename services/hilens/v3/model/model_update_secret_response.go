@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateSecretResponse Response Object
 type UpdateSecretResponse struct {
 
 	// 工作空间ID

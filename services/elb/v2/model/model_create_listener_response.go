@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateListenerResponse Response Object
 type CreateListenerResponse struct {
 	Listener       *ListenerResp `json:"listener,omitempty"`
 	HttpStatusCode int           `json:"-"`

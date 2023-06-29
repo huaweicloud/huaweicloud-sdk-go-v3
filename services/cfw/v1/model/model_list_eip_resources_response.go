@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEipResourcesResponse Response Object
 type ListEipResourcesResponse struct {
 	Data           *EipResponseData `json:"data,omitempty"`
 	HttpStatusCode int              `json:"-"`

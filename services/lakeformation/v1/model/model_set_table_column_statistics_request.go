@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetTableColumnStatisticsRequest Request Object
 type SetTableColumnStatisticsRequest struct {
 
 	// 实例Id

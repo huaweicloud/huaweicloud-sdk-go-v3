@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建或修改规则条件的响应消息
+// RoutingRule 创建或修改规则条件的响应消息
 type RoutingRule struct {
 
 	// 规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。

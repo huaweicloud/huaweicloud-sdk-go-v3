@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UnlockTargetEcsRequest Request Object
 type UnlockTargetEcsRequest struct {
 
 	// 指定任务的ID

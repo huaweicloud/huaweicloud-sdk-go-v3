@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDDosRequest Request Object
 type UpdateDDosRequest struct {
 
 	// 用户EIP对应的ID

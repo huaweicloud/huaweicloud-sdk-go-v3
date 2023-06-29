@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddApplyJoinProjectForAgcResponse Response Object
 type AddApplyJoinProjectForAgcResponse struct {
 	HttpStatusCode int `json:"-"`
 }

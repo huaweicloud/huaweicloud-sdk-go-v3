@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Rest请求的响应结果body
+// RestResponse Rest请求的响应结果body
 type RestResponse struct {
 
 	// 结果码。

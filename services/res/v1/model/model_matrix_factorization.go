@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 矩阵分解参数配置
+// MatrixFactorization 矩阵分解参数配置
 type MatrixFactorization struct {
 
 	// 隐向量维度。

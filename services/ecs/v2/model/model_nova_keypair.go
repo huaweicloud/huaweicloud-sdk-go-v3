@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaKeypair
 type NovaKeypair struct {
 
 	// 密钥对应指纹信息。

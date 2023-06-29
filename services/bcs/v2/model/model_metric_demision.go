@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标描述信息
+// MetricDemision 指标描述信息
 type MetricDemision struct {
 
 	// 命名空间

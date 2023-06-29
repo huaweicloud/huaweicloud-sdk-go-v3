@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSyncPolicyRequest Request Object
 type ShowSyncPolicyRequest struct {
 
 	// instance id

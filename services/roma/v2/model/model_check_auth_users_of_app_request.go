@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckAuthUsersOfAppRequest Request Object
 type CheckAuthUsersOfAppRequest struct {
 
 	// 应用ID

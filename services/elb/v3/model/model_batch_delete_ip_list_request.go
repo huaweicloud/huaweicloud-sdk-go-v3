@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteIpListRequest Request Object
 type BatchDeleteIpListRequest struct {
 
 	// IP地址组ID。

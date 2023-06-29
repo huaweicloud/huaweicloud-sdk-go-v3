@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateReplicationNameResponse Response Object
 type UpdateReplicationNameResponse struct {
 	Replication    *ShowReplicationParams `json:"replication,omitempty"`
 	HttpStatusCode int                    `json:"-"`

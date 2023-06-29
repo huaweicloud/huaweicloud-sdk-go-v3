@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLtsErrorLogDetailsRequest Request Object
 type ListLtsErrorLogDetailsRequest struct {
 
 	// 语言。

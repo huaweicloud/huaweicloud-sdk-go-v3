@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowImageWatermarkWithImageByAddressResponse Response Object
 type ShowImageWatermarkWithImageByAddressResponse struct {
 
 	// 当前项目所在region的id，如：xx-xx-1。

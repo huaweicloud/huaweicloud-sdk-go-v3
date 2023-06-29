@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 机票行程列表。
+// ItineraryList 机票行程列表。
 type ItineraryList struct {
 
 	// 始发站。

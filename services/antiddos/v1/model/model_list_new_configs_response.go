@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNewConfigsResponse Response Object
 type ListNewConfigsResponse struct {
 
 	// 流量限制列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckUserIdentityResponse Response Object
 type CheckUserIdentityResponse struct {
 
 	// 状态码。具体请参考状态码。只有失败才会返回这个参数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchQosOnlineMeetingsRequest Request Object
 type SearchQosOnlineMeetingsRequest struct {
 
 	// 查询偏移量。 * 取值：大于等于0，默认值为0 * 大于等于最大条目数量，则返回最后一页的数据

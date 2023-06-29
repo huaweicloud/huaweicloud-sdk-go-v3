@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更服务模板模板元数据。
+// Template 变更服务模板模板元数据。
 type Template struct {
 	ApproveInfo *ApproveInfo `json:"approve_info,omitempty"`
 

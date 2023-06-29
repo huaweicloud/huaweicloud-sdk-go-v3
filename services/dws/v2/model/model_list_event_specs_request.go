@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEventSpecsRequest Request Object
 type ListEventSpecsRequest struct {
 
 	// 事件配置名称

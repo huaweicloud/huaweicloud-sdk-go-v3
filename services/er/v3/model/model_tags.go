@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签
+// Tags 标签
 type Tags struct {
 
 	// 标签键，不能为空，最大长度127个unicode字符。

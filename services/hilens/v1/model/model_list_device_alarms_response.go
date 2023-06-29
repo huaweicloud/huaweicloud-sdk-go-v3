@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDeviceAlarmsResponse Response Object
 type ListDeviceAlarmsResponse struct {
 
 	// 满足条件的设备告警总数

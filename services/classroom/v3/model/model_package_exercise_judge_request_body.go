@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 习题库里习题判题调用参数
+// PackageExerciseJudgeRequestBody 习题库里习题判题调用参数
 type PackageExerciseJudgeRequestBody struct {
 
 	// 判题结束后的回调url

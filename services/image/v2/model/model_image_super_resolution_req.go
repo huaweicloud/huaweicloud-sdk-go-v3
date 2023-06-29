@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto crerate Body Object
+// ImageSuperResolutionReq This is a auto crerate Body Object
 type ImageSuperResolutionReq struct {
 
 	// 图像数据，base64编码，输入图像范围200px ~ 1080px，支持JPG/PNG/BMP/JPEG/WEBP格式

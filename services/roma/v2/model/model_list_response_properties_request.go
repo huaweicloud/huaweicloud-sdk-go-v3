@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListResponsePropertiesRequest Request Object
 type ListResponsePropertiesRequest struct {
 
 	// 实例ID

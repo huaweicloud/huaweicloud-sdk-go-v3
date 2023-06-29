@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 原域名所有配置
+// BatchCopyErrorRsp 原域名所有配置
 type BatchCopyErrorRsp struct {
 	Error *BatchCopyErrorRspError `json:"error,omitempty"`
 }

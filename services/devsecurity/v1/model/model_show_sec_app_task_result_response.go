@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSecAppTaskResultResponse Response Object
 type ShowSecAppTaskResultResponse struct {
 	BasicInfo *BasicInfo `json:"basic_info,omitempty"`
 

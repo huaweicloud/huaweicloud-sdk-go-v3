@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点类型详细
+// Detail 节点类型详细
 type Detail struct {
 
 	// 属性类型。

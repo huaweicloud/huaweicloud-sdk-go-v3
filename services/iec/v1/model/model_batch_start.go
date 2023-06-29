@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量启动边缘实例对象
+// BatchStart 批量启动边缘实例对象
 type BatchStart struct {
 
 	// 待启动的边缘实例列表。

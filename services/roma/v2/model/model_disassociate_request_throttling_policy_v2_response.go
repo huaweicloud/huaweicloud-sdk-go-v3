@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateRequestThrottlingPolicyV2Response Response Object
 type DisassociateRequestThrottlingPolicyV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

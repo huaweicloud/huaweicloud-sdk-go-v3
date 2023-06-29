@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 代码仓相关的信息非必填，主要是用于CodeFever临时仓库使用，不填时直接使用创建任务时已经提供的信息
+// RunRequestV2 代码仓相关的信息非必填，主要是用于CodeFever临时仓库使用，不填时直接使用创建任务时已经提供的信息
 type RunRequestV2 struct {
 
 	// 该任务对应临时仓库有权限的用户名

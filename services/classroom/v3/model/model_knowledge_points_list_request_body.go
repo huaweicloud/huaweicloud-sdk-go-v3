@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 知识点列表请求参数
+// KnowledgePointsListRequestBody 知识点列表请求参数
 type KnowledgePointsListRequestBody struct {
 
 	// 名称模糊查询

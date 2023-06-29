@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备型号信息。
+// QueryDeviceInfoResultDto 终端设备型号信息。
 type QueryDeviceInfoResultDto struct {
 
 	// 终端型号。

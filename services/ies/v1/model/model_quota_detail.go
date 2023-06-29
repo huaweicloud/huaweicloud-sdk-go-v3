@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源配额详情
+// QuotaDetail 资源配额详情
 type QuotaDetail struct {
 
 	// 资源类型 取值范围：  - edge_site：边缘小站  - compute_device：计算设备

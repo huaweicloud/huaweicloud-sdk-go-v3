@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议纪要信息。
+// ListMeetingFileResponseDto 会议纪要信息。
 type ListMeetingFileResponseDto struct {
 
 	// 会议纪要文件码。

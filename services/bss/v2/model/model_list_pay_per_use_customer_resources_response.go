@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPayPerUseCustomerResourcesResponse Response Object
 type ListPayPerUseCustomerResourcesResponse struct {
 
 	// 资源列表。 具体请参见表2。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 角色权限信息
+// RoleAuthority 角色权限信息
 type RoleAuthority struct {
 
 	// 角色名称

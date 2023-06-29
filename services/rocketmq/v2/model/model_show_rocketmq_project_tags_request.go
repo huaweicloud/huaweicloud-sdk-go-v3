@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRocketmqProjectTagsRequest Request Object
 type ShowRocketmqProjectTagsRequest struct {
 }
 

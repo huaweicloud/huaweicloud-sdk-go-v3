@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额列表
+// AllQuotas 配额列表
 type AllQuotas struct {
 
 	// 配额详情资源列表。

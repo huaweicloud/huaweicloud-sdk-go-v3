@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 手动同步镜像需要的参数
+// CreateManualImageSyncRepoRequestBody 手动同步镜像需要的参数
 type CreateManualImageSyncRepoRequestBody struct {
 
 	// 版本列表

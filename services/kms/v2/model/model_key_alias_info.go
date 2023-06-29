@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥别名信息。
+// KeyAliasInfo 密钥别名信息。
 type KeyAliasInfo struct {
 
 	// 密钥ID。

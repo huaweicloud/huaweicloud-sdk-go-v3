@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVpcRouteResponse Response Object
 type ShowVpcRouteResponse struct {
 	Route          *VpcRoute `json:"route,omitempty"`
 	HttpStatusCode int       `json:"-"`

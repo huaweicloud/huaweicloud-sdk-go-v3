@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSupplyRecommendationResponse Response Object
 type ListSupplyRecommendationResponse struct {
 
 	// 资源供给推荐结果

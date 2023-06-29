@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVirtualInterfaceRequest Request Object
 type CreateVirtualInterfaceRequest struct {
 	Body *CreateVirtualInterfaceRequestBody `json:"body,omitempty"`
 }

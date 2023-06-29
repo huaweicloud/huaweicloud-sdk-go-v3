@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProtectedInstancesRequest Request Object
 type ListProtectedInstancesRequest struct {
 
 	// 保护组的ID，表示查询该保护组下的所有保护实例列表。
@@ -79,13 +79,18 @@ func (c ListProtectedInstancesRequestQueryType) MarshalJSON() ([]byte, error) {
 
 func (c *ListProtectedInstancesRequestQueryType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

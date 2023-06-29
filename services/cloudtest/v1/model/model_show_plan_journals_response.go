@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPlanJournalsResponse Response Object
 type ShowPlanJournalsResponse struct {
 
 	// 项目下查询测试计划操作历史返回结构

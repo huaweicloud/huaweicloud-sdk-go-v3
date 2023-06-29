@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重启云手机请求体。
+// RestartCloudPhoneRequestBody 重启云手机请求体。
 type RestartCloudPhoneRequestBody struct {
 
 	// 云手机镜像

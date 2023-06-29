@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改注册的数据库用户请求
+// UpdateDbUserRequestBody 修改注册的数据库用户请求
 type UpdateDbUserRequestBody struct {
 
 	// 数据库用户名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceAddImageMemberResponse Response Object
 type GlanceAddImageMemberResponse struct {
 
 	// 共享状态

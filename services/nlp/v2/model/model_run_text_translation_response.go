@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunTextTranslationResponse Response Object
 type RunTextTranslationResponse struct {
 
 	// 翻译原文，编码格式为UTF-8。调用失败时无此字段。

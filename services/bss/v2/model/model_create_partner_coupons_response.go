@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePartnerCouponsResponse Response Object
 type CreatePartnerCouponsResponse struct {
 
 	// 错误的客户列表和错误信息，只有HTTP 200的时候才会返回这个结构体，具体参见表1。

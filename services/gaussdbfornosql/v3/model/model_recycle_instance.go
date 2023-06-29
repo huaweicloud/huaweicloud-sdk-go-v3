@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 回收备份实例信息。
+// RecycleInstance 回收备份实例信息。
 type RecycleInstance struct {
 
 	// 实例ID。

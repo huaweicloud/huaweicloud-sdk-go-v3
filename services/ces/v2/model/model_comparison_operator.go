@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 阈值符号, 支持的值为(>|<|>=|<=|=|><)
+// ComparisonOperator 阈值符号, 支持的值为(>|<|>=|<=|=|><)
 type ComparisonOperator struct {
 }
 

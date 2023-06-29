@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreWorkflowExecutionRequest Request Object
 type RestoreWorkflowExecutionRequest struct {
 
 	// 工作流实例名。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLabelRequest Request Object
 type DeleteLabelRequest struct {
 
 	// 标签id

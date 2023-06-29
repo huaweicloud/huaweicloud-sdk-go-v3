@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 当前用户云堡垒机的配额信息。返回默认值null。
+// QuotaDetail 当前用户云堡垒机的配额信息。返回默认值null。
 type QuotaDetail struct {
 
 	// 中文配额描述。

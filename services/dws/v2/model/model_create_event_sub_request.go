@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEventSubRequest Request Object
 type CreateEventSubRequest struct {
 	Body *EventSubRequest `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入实例请求体
+// QuoteDatabaseReq 导入实例请求体
 type QuoteDatabaseReq struct {
 
 	// 源项目id

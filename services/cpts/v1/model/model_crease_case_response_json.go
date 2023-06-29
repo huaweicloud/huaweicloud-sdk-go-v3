@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 响应json
+// CreaseCaseResponseJson 响应json
 type CreaseCaseResponseJson struct {
 
 	// 用例id

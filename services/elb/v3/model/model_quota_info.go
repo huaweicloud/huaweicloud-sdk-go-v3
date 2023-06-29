@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额信息，包括总配额和已使用配额。
+// QuotaInfo 配额信息，包括总配额和已使用配额。
 type QuotaInfo struct {
 
 	// 资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_bindings，  其中members_per_pool表示一个pool下最多可关联的member数量。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// change_name对象
+// ChangeShareNameReq change_name对象
 type ChangeShareNameReq struct {
 	ChangeName *ShareName `json:"change_name"`
 }

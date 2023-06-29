@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// items
+// BlackWhiteListResponseDataRecords items
 type BlackWhiteListResponseDataRecords struct {
 
 	// 黑白名单列表id

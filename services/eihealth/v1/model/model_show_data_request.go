@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDataRequest Request Object
 type ShowDataRequest struct {
 
 	// 返回文件内容

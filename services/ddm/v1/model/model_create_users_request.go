@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateUsersRequest Request Object
 type CreateUsersRequest struct {
 
 	// DDM实例ID。

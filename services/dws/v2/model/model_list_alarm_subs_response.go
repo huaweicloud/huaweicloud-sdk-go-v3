@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAlarmSubsResponse Response Object
 type ListAlarmSubsResponse struct {
 
 	// 告警订阅总数

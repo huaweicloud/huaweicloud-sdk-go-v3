@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 构建工程。
+// BuildInfo 构建工程。
 type BuildInfo struct {
 
 	// 构建ID，查看构建列表获取。

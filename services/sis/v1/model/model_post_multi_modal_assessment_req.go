@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostMultiModalAssessmentReq
 type PostMultiModalAssessmentReq struct {
 	Config *MultiModalConfig `json:"config"`
 

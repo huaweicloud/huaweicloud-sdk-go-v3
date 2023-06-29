@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAuthorizingAppsV2Request Request Object
 type CreateAuthorizingAppsV2Request struct {
 
 	// 实例ID

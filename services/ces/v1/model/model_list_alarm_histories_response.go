@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAlarmHistoriesResponse Response Object
 type ListAlarmHistoriesResponse struct {
 
 	// 一条或者多条告警历史详细信息

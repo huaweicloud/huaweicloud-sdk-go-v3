@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateResourcesRequest Request Object
 type BatchCreateResourcesRequest struct {
 
 	// 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串

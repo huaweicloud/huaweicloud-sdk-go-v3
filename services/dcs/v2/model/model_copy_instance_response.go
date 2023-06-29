@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopyInstanceResponse Response Object
 type CopyInstanceResponse struct {
 
 	// 备份记录ID。

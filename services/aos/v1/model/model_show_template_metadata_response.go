@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateMetadataResponse Response Object
 type ShowTemplateMetadataResponse struct {
 
 	// 模板的唯一ID，由模板服务随机生成

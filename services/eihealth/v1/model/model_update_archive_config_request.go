@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateArchiveConfigRequest Request Object
 type UpdateArchiveConfigRequest struct {
 
 	// region id

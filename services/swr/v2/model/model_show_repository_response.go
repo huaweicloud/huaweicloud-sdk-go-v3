@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRepositoryResponse Response Object
 type ShowRepositoryResponse struct {
 
 	// 仓库编号

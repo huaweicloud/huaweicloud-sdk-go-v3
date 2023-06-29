@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CountMetaObjRequest Request Object
 type CountMetaObjRequest struct {
 
 	// instance id

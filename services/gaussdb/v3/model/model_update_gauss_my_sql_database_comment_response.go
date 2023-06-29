@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGaussMySqlDatabaseCommentResponse Response Object
 type UpdateGaussMySqlDatabaseCommentResponse struct {
 
 	// 修改数据库备注的任务ID。

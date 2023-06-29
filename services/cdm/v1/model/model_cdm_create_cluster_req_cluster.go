@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群对象，请参见cluster参数说明
+// CdmCreateClusterReqCluster 集群对象，请参见cluster参数说明
 type CdmCreateClusterReqCluster struct {
 
 	// 定时开机的时间，CDM集群会在每天这个时间开机

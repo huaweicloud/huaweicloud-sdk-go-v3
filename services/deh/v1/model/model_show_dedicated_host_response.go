@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDedicatedHostResponse Response Object
 type ShowDedicatedHostResponse struct {
 	DedicatedHost  *RespDedicatedHost `json:"dedicated_host,omitempty"`
 	HttpStatusCode int                `json:"-"`

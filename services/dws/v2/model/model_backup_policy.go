@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略
+// BackupPolicy 备份策略
 type BackupPolicy struct {
 
 	// 保留天数。

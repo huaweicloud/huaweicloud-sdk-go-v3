@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListElbsRequest Request Object
 type ListElbsRequest struct {
 
 	// 集群ID

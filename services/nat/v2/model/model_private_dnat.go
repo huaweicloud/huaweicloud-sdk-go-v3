@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// DNAT规则的响应体。
+// PrivateDnat DNAT规则的响应体。
 type PrivateDnat struct {
 
 	// DNAT规则的ID。
@@ -97,13 +97,18 @@ func (c PrivateDnatProtocol) MarshalJSON() ([]byte, error) {
 
 func (c *PrivateDnatProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

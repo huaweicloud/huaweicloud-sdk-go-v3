@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListKmsByTagsResponse Response Object
 type ListKmsByTagsResponse struct {
 
 	// 资源实例列表，详情请参见resource字段数据结构说明。

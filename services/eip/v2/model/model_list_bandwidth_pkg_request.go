@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBandwidthPkgRequest Request Object
 type ListBandwidthPkgRequest struct {
 
 	// 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定

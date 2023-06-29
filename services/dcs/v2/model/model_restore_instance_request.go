@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreInstanceRequest Request Object
 type RestoreInstanceRequest struct {
 
 	// 实例ID。

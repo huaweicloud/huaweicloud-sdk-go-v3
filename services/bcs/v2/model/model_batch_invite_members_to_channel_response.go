@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchInviteMembersToChannelResponse Response Object
 type BatchInviteMembersToChannelResponse struct {
 
 	// 请求成功的结果

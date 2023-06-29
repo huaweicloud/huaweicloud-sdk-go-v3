@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateIpGroupResponse Response Object
 type UpdateIpGroupResponse struct {
 
 	// 地址组id

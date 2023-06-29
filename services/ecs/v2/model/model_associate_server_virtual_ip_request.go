@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateServerVirtualIpRequest Request Object
 type AssociateServerVirtualIpRequest struct {
 
 	// 云服务器网卡ID。

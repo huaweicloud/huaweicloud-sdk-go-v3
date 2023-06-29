@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetGaussMySqlDatabasePasswordResponse Response Object
 type ResetGaussMySqlDatabasePasswordResponse struct {
 
 	// 修改数据库用户密码的任务ID。

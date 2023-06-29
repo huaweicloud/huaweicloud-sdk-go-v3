@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateVpcAttachmentResponse Response Object
 type UpdateVpcAttachmentResponse struct {
 	VpcAttachment *VpcAttachmentDetails `json:"vpc_attachment,omitempty"`
 

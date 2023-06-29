@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAuditRuleScopesResponse Response Object
 type ListAuditRuleScopesResponse struct {
 
 	// 审计范围规则列表

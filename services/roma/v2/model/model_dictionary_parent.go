@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 父字典编码,为空时代表自身就是最顶级字典
+// DictionaryParent 父字典编码,为空时代表自身就是最顶级字典
 type DictionaryParent struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥
+// SecretDetail 密钥
 type SecretDetail struct {
 
 	// 密钥名称，以小写英文字母开头，4-64位，可以使用小写英文、数字、中划线（-），不能以中划线结尾

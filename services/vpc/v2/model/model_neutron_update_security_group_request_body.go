@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronUpdateSecurityGroupRequestBody
 type NeutronUpdateSecurityGroupRequestBody struct {
 	SecurityGroup *NeutronUpdateSecurityGroupOption `json:"security_group"`
 }

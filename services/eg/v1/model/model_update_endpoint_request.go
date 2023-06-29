@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEndpointRequest Request Object
 type UpdateEndpointRequest struct {
 
 	// 指定查询访问端点的id

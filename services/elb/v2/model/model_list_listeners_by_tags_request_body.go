@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ListListenersByTagsRequestBody This is a auto create Body Object
 type ListListenersByTagsRequestBody struct {
 
 	// 分页起始。

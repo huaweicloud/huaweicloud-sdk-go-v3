@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备属性
+// EdgemgrDevices 终端设备属性
 type EdgemgrDevices struct {
 	Device *EdgemgrDevicesDetail `json:"device"`
 }

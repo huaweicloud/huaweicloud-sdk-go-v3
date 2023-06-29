@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRecordSetRequest Request Object
 type DeleteRecordSetRequest struct {
 
 	// 当前recordset所属的zoneID。

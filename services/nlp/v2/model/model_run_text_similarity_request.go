@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunTextSimilarityRequest Request Object
 type RunTextSimilarityRequest struct {
 	Body *TextSimilarityRequest `json:"body,omitempty"`
 }

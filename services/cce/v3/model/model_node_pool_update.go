@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NodePoolUpdate
 type NodePoolUpdate struct {
 	Metadata *NodePoolMetadataUpdate `json:"metadata"`
 

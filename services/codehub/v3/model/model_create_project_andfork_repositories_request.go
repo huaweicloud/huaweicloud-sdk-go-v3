@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateProjectAndforkRepositoriesRequest Request Object
 type CreateProjectAndforkRepositoriesRequest struct {
 	Body *ForkProjectRepoRequest `json:"body,omitempty"`
 }

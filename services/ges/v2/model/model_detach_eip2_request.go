@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DetachEip2Request Request Object
 type DetachEip2Request struct {
 
 	// 图ID。

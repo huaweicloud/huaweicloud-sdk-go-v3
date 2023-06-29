@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateBatchOrderAlertsResponse Response Object
 type CreateBatchOrderAlertsResponse struct {
 
 	// Id value

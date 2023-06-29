@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CCE微服务Service信息
+// MicroServiceInfoCceService CCE微服务Service信息
 type MicroServiceInfoCceService struct {
 
 	// 云容器引擎集群编号

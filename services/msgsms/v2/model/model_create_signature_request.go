@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSignatureRequest Request Object
 type CreateSignatureRequest struct {
 	Body *SmsSignatureReq `json:"body,omitempty"`
 }

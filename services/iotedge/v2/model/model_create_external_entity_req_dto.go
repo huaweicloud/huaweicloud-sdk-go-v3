@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建外部实体请求结构体
+// CreateExternalEntityReqDto 创建外部实体请求结构体
 type CreateExternalEntityReqDto struct {
 
 	// 外部实体Id，节点下唯一

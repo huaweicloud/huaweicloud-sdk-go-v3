@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSecurityGroupRulesRequest Request Object
 type ListSecurityGroupRulesRequest struct {
 
 	// 功能说明：每页返回个数 取值范围：0-2000

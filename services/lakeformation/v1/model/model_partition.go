@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 分区信息
+// Partition 分区信息
 type Partition struct {
 
 	// catalog名字

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 元数据迁移任务。
+// MetadataTask 元数据迁移任务。
 type MetadataTask struct {
 
 	// 元数据迁移任务ID。

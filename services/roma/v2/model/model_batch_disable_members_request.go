@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDisableMembersRequest Request Object
 type BatchDisableMembersRequest struct {
 
 	// 实例ID

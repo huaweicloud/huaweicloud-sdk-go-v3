@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 高可用配置请求结构体
+// HaConfigDto 高可用配置请求结构体
 type HaConfigDto struct {
 
 	// 节点高可用类型双活或者主备

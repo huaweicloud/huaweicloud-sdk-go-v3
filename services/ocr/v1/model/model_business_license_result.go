@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BusinessLicenseResult
 type BusinessLicenseResult struct {
 
 	//   - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。

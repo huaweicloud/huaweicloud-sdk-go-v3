@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警模板的告警策略总数
+// PolicyTotal 告警模板的告警策略总数
 type PolicyTotal struct {
 }
 

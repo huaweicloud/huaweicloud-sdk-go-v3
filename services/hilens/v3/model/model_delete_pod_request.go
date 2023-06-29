@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePodRequest Request Object
 type DeletePodRequest struct {
 
 	// 应用部署ID

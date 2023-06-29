@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVersionDetailsResponse Response Object
 type ListVersionDetailsResponse struct {
 
 	// VPC终端节点版本信息列表。

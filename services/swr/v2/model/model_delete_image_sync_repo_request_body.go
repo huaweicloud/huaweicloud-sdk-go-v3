@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要删除镜像自动同步任务的信息
+// DeleteImageSyncRepoRequestBody 需要删除镜像自动同步任务的信息
 type DeleteImageSyncRepoRequestBody struct {
 
 	// 目标region ID。

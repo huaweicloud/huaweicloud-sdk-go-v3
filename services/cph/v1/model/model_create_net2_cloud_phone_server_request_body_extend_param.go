@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计费模式参数
+// CreateNet2CloudPhoneServerRequestBodyExtendParam 计费模式参数
 type CreateNet2CloudPhoneServerRequestBodyExtendParam struct {
 
 	// 计费类型  0 表示包周期

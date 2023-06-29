@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UninstallNextflowRequest Request Object
 type UninstallNextflowRequest struct {
 
 	// 引擎ID

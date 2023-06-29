@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDeployTaskResponse Response Object
 type DeleteDeployTaskResponse struct {
 
 	// 部署任务id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// hypervisor信息。
+// Hypervisor hypervisor信息。
 type Hypervisor struct {
 
 	// hypervisor类型

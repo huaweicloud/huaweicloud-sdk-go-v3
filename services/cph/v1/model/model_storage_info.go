@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待导出数据的云手机信息。
+// StorageInfo 待导出数据的云手机信息。
 type StorageInfo struct {
 
 	// 云手机ID

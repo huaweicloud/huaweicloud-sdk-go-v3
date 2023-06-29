@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSnapshotConfigsResponse Response Object
 type ListSnapshotConfigsResponse struct {
 
 	// 总条目数

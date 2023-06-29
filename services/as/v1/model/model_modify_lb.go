@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 负载均衡器
+// ModifyLb 负载均衡器
 type ModifyLb struct {
 	LbaasListener *LbaasListener `json:"lbaas_listener,omitempty"`
 

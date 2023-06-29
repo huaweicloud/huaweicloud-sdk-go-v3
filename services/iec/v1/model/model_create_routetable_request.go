@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRoutetableRequest Request Object
 type CreateRoutetableRequest struct {
 	Body *CreateRoutetableRequestBody `json:"body,omitempty"`
 }

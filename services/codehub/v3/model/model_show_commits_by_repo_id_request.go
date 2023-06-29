@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCommitsByRepoIdRequest Request Object
 type ShowCommitsByRepoIdRequest struct {
 
 	// 提交作者

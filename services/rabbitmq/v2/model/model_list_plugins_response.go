@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPluginsResponse Response Object
 type ListPluginsResponse struct {
 
 	// 插件信息列表。

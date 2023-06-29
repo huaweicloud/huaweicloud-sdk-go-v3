@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIssueV4Response Response Object
 type ShowIssueV4Response struct {
 
 	// 实际工时

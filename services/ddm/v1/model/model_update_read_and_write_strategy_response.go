@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateReadAndWriteStrategyResponse Response Object
 type UpdateReadAndWriteStrategyResponse struct {
 
 	// 操作是否成功。

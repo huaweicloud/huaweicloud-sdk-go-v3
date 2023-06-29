@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机信息。
+// Phone 云手机信息。
 type Phone struct {
 
 	// 云手机的名称，不超过65个字符

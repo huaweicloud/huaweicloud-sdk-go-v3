@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据探索报告
+// FinalReport 数据探索报告
 type FinalReport struct {
 
 	// 报告生成时间。

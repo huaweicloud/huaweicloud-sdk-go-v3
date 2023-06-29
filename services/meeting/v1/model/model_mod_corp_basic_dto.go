@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待修改的企业基本信息。
+// ModCorpBasicDto 待修改的企业基本信息。
 type ModCorpBasicDto struct {
 
 	// 企业名称，格式必须满足^[^#%&'+;<>=\\\"'？?\\\\\\\\……/]*$。

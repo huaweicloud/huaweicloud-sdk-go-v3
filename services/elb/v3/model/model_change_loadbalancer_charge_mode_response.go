@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeLoadbalancerChargeModeResponse Response Object
 type ChangeLoadbalancerChargeModeResponse struct {
 
 	// 转包周期下单成功的EIP ID列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePersonalTemplateStateRequest Request Object
 type UpdatePersonalTemplateStateRequest struct {
 
 	// 智能信息模板ID。

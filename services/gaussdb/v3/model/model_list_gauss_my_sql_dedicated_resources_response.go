@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGaussMySqlDedicatedResourcesResponse Response Object
 type ListGaussMySqlDedicatedResourcesResponse struct {
 
 	// 专属资源池信息

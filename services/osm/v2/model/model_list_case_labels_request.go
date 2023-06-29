@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCaseLabelsRequest Request Object
 type ListCaseLabelsRequest struct {
 
 	// 工单id

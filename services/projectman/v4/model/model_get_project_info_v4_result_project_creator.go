@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建者信息
+// GetProjectInfoV4ResultProjectCreator 创建者信息
 type GetProjectInfoV4ResultProjectCreator struct {
 
 	// 创建人num_id

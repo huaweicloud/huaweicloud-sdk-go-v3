@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunCheckTaskJobsRequest Request Object
 type RunCheckTaskJobsRequest struct {
 
 	// 图像内容审核任务处理状态如下：  - created 已创建  - running 正在处理  - finish 已完成  - failed 处理失败
@@ -69,13 +69,18 @@ func (c RunCheckTaskJobsRequestStatus) MarshalJSON() ([]byte, error) {
 
 func (c *RunCheckTaskJobsRequestStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

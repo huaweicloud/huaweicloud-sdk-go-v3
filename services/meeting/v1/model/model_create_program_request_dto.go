@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节目信息。
+// CreateProgramRequestDto 节目信息。
 type CreateProgramRequestDto struct {
 
 	// 节目名称。

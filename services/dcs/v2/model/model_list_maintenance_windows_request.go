@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMaintenanceWindowsRequest Request Object
 type ListMaintenanceWindowsRequest struct {
 }
 

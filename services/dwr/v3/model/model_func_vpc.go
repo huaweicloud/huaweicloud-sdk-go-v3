@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数vpc
+// FuncVpc 函数vpc
 type FuncVpc struct {
 
 	// 子网编号。当func_vpc非空时必选。

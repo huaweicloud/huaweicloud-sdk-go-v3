@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转换计算
+// TransformResponse 转换计算
 type TransformResponse struct {
 
 	// 输入参数

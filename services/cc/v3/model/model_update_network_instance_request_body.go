@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新网络实例的请求体。
+// UpdateNetworkInstanceRequestBody 更新网络实例的请求体。
 type UpdateNetworkInstanceRequestBody struct {
 	NetworkInstance *UpdateNetworkInstance `json:"network_instance"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCaseLabelsResponse Response Object
 type CreateCaseLabelsResponse struct {
 
 	// 错误码

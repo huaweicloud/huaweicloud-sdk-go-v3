@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建模板请求体
+// CreateTemplateReq 创建模板请求体
 type CreateTemplateReq struct {
 
 	// 模板名称

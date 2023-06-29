@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关闭云堡垒机实例请求对象。
+// StopCbhRequestBody 关闭云堡垒机实例请求对象。
 type StopCbhRequestBody struct {
 
 	// 云堡垒机实例ID，使用UUID格式。

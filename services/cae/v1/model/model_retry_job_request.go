@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RetryJobRequest Request Object
 type RetryJobRequest struct {
 
 	// 任务ID

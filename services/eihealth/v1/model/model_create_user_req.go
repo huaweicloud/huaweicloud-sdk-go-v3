@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建用户请求体
+// CreateUserReq 创建用户请求体
 type CreateUserReq struct {
 
 	// 用户名，长度5~31之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格

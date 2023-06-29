@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// flavor规格信息。
+// MysqlFlavorInfo flavor规格信息。
 type MysqlFlavorInfo struct {
 
 	// CPU核数。

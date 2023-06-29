@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteBigkeyScanTaskRequest Request Object
 type DeleteBigkeyScanTaskRequest struct {
 
 	// 实例ID。

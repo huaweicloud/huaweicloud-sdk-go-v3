@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEncryptdataNodesResponse Response Object
 type ListEncryptdataNodesResponse struct {
 
 	// 绑定的边缘节点总数

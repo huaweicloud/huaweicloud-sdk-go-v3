@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合计算定义
+// AggregateMetrics 聚合计算定义
 type AggregateMetrics struct {
 	TimeSpan *TimeSpan `json:"time_span"`
 

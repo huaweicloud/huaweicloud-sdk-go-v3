@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板配置
+// AppDetail 应用模板配置
 type AppDetail struct {
 
 	// 应用模板名称，只允许英文小写字母、数字、中划线，最大长度32， 英文小写字母或数字开头和结尾 Name为必填字段

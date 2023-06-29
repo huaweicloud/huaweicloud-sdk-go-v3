@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 策略类型相关操作的请求体。
+// PolicyTypeReqBody 策略类型相关操作的请求体。
 type PolicyTypeReqBody struct {
 
 	// 策略类型的名称，service_control_policy服务控制策略；tag_policy：标签策略。
@@ -58,13 +58,18 @@ func (c PolicyTypeReqBodyPolicyType) MarshalJSON() ([]byte, error) {
 
 func (c *PolicyTypeReqBodyPolicyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

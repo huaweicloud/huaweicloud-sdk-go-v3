@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response of listing playbook instance informations
+// PlaybookInstanceInfo Response of listing playbook instance informations
 type PlaybookInstanceInfo struct {
 
 	// Id value

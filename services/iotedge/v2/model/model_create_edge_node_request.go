@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEdgeNodeRequest Request Object
 type CreateEdgeNodeRequest struct {
 	Body *EdgeNodeCreation `json:"body,omitempty"`
 }

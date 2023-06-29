@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEventResponse Response Object
 type ShowEventResponse struct {
 
 	// 测试事件ID。

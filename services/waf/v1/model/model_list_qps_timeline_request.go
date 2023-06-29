@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListQpsTimelineRequest Request Object
 type ListQpsTimelineRequest struct {
 
 	// 通过企业项目管理服务的查询企业项目列表接口ListEnterpriseProject查询通过企业项目管理服务的查询企业项目列表接口ListEnterpriseProject查询企业项目ID

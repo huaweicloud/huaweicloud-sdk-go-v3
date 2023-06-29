@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteWorkflowRequest Request Object
 type ExecuteWorkflowRequest struct {
 
 	// 任务id，从工作流命令列表中获取的工作流id。

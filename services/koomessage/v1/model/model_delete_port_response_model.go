@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道号删除返回体。
+// DeletePortResponseModel 通道号删除返回体。
 type DeletePortResponseModel struct {
 	Data *DeletePortResponseModelData `json:"data,omitempty"`
 }

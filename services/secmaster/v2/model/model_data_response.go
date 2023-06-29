@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// indicator batch operation response
+// DataResponse indicator batch operation response
 type DataResponse struct {
 
 	// id list

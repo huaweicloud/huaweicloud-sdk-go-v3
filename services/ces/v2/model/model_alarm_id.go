@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警规则id，以al开头，包含22个数字或字母
+// AlarmId 告警规则id，以al开头，包含22个数字或字母
 type AlarmId struct {
 }
 

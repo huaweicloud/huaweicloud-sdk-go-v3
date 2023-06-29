@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// master的配置，支持指定可用区、规格和故障域。若指定故障域，则必须所有master节点都需要指定故障字段。
+// MasterSpec master的配置，支持指定可用区、规格和故障域。若指定故障域，则必须所有master节点都需要指定故障字段。
 type MasterSpec struct {
 
 	// 可用区

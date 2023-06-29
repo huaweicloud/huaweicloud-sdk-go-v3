@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeInstanceVolumeResponse Response Object
 type ResizeInstanceVolumeResponse struct {
 
 	// 工作流ID。

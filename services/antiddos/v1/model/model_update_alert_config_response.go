@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAlertConfigResponse Response Object
 type UpdateAlertConfigResponse struct {
 
 	// 内部错误码

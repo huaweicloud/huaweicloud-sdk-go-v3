@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPunishmentRulesResponse Response Object
 type ListPunishmentRulesResponse struct {
 
 	// 攻击惩罚规则数量

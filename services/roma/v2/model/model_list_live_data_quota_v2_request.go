@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLiveDataQuotaV2Request Request Object
 type ListLiveDataQuotaV2Request struct {
 
 	// 实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNasRequest Request Object
 type ListNasRequest struct {
 
 	// NA名称搜索关键字

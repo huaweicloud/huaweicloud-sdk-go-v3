@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重要程度信息
+// WorkTableIssuseListResponseBodySeverity 重要程度信息
 type WorkTableIssuseListResponseBodySeverity struct {
 
 	// 重要程度id

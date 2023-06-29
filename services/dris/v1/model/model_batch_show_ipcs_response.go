@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowIpcsResponse Response Object
 type BatchShowIpcsResponse struct {
 
 	// **参数说明**：总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLabelPageResponse Response Object
 type ListLabelPageResponse struct {
 
 	// 标签页面列表

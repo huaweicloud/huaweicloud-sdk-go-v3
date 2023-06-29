@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建中转IP的请求体。
+// CreatTransitIpOption 创建中转IP的请求体。
 type CreatTransitIpOption struct {
 
 	// 当前项目子网的ID。

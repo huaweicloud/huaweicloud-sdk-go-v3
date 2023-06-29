@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 申请的域名信息。
+// CreateClusterDns 申请的域名信息。
 type CreateClusterDns struct {
 
 	// 待创建的域名。

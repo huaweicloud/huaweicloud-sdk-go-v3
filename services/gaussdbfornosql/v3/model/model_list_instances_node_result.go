@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例节点信息。
+// ListInstancesNodeResult 实例节点信息。
 type ListInstancesNodeResult struct {
 
 	// 节点ID。

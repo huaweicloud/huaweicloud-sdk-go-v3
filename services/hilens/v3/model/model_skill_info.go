@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 技能详情
+// SkillInfo 技能详情
 type SkillInfo struct {
 
 	// 技能应用场景

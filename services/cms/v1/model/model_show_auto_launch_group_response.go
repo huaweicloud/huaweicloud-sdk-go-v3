@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAutoLaunchGroupResponse Response Object
 type ShowAutoLaunchGroupResponse struct {
 	AutoLaunchGroup *ShowAutoLaunchGroupResp `json:"auto_launch_group,omitempty"`
 	HttpStatusCode  int                      `json:"-"`

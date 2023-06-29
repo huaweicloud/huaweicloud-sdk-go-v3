@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateRouterResponse Response Object
 type AssociateRouterResponse struct {
 
 	// Router(VPC)的ID。

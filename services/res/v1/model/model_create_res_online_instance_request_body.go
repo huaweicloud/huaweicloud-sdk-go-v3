@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateResOnlineInstanceRequestBody This is a auto create Body Object
 type CreateResOnlineInstanceRequestBody struct {
 
 	// 作业名称，1-64位的字母、数字、下划线、中划线组合。

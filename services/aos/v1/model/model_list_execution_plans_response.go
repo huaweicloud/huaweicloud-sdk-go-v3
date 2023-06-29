@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListExecutionPlansResponse Response Object
 type ListExecutionPlansResponse struct {
 
 	// 执行计划列表。默认按照生成时间排序，最早生成的在最前

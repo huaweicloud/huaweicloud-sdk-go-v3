@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceParamResponse Response Object
 type ShowInstanceParamResponse struct {
 
 	// DDM参数最后更新时间。

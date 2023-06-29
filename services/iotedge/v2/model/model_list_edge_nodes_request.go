@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEdgeNodesRequest Request Object
 type ListEdgeNodesRequest struct {
 
 	// 节点名称

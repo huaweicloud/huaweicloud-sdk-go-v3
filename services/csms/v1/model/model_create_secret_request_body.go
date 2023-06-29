@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建凭据请求消息体。
+// CreateSecretRequestBody 创建凭据请求消息体。
 type CreateSecretRequestBody struct {
 
 	// 凭据名称。  约束：取值范围为1到64个字符，满足正则匹配“^[a-zA-Z0-9._-]{1,64}$”。

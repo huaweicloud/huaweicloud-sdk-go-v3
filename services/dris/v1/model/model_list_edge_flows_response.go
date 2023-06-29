@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeFlowsResponse Response Object
 type ListEdgeFlowsResponse struct {
 
 	// **参数说明**：条件查询返回的总条数。

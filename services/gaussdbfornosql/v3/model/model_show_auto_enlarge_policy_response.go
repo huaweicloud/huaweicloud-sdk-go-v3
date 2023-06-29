@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAutoEnlargePolicyResponse Response Object
 type ShowAutoEnlargePolicyResponse struct {
 	Policy         *DiskAutoExpansionPolicy `json:"policy,omitempty"`
 	HttpStatusCode int                      `json:"-"`

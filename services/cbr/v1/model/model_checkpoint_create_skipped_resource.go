@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份时跳过的资源
+// CheckpointCreateSkippedResource 备份时跳过的资源
 type CheckpointCreateSkippedResource struct {
 
 	// 资源ID

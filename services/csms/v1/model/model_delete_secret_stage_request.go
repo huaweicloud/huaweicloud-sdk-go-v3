@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSecretStageRequest Request Object
 type DeleteSecretStageRequest struct {
 
 	// 凭据的资源标识符。

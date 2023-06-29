@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Bug信息
+// BugStatisticResponseV4 Bug信息
 type BugStatisticResponseV4 struct {
 
 	// 重要程度为关键的缺陷数

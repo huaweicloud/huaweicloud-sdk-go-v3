@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCloudPhoneServerDetailRequest Request Object
 type ShowCloudPhoneServerDetailRequest struct {
 
 	// 云手机服务器的唯一标识。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteHealthmonitorRequest Request Object
 type DeleteHealthmonitorRequest struct {
 
 	// 健康检查id

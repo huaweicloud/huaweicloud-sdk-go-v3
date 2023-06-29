@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPolicyRequest Request Object
 type ListPolicyRequest struct {
 
 	// instance id

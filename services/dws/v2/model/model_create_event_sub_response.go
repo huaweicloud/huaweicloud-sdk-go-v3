@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEventSubResponse Response Object
 type CreateEventSubResponse struct {
 
 	// 订阅ID

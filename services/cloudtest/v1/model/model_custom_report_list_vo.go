@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实际的数据类型：单个对象，集合或NULL
+// CustomReportListVo 实际的数据类型：单个对象，集合或NULL
 type CustomReportListVo struct {
 
 	// 报表id

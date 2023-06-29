@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 返回结果的详细内容。
+// ImageDetectionResultDetail 返回结果的详细内容。
 type ImageDetectionResultDetail struct {
 
 	// 审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检

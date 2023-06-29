@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateComponentRequest Request Object
 type CreateComponentRequest struct {
 
 	// 应用ID。

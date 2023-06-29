@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSyntaxConversionProgressResponse Response Object
 type ListSyntaxConversionProgressResponse struct {
 
 	// 对象总数。

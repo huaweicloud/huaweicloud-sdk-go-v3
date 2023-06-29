@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建应用请求体
+// AppReq 创建应用请求体
 type AppReq struct {
 
 	// app名称，仅支持填入utf8格式内容

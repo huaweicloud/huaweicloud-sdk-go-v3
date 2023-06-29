@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTopUrlRequest Request Object
 type ShowTopUrlRequest struct {
 
 	// 查询起始时间戳，只能传0点毫秒时间戳

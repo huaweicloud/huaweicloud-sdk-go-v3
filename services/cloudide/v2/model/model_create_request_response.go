@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRequestResponse Response Object
 type CreateRequestResponse struct {
 
 	// the unique id of the request

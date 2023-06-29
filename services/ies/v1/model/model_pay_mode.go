@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 包周期付款类型 - FULL: 全预付 - HALF：半预付
+// PayMode 包周期付款类型 - FULL: 全预付 - HALF：半预付
 type PayMode struct {
 	value string
 }
@@ -40,13 +40,18 @@ func (c PayMode) MarshalJSON() ([]byte, error) {
 
 func (c *PayMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

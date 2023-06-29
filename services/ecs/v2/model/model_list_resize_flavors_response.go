@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResizeFlavorsResponse Response Object
 type ListResizeFlavorsResponse struct {
 
 	// 云服务器规格列表。

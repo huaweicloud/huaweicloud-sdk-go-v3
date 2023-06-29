@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateTaskStatusRequestBody
+// UpdateTaskStatusRequestBody UpdateTaskStatusRequestBody
 type UpdateTaskStatusRequestBody struct {
 
 	// cluster_id

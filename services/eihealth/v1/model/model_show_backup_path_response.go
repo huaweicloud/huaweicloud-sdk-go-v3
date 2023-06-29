@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBackupPathResponse Response Object
 type ShowBackupPathResponse struct {
 	HttpStatusCode int `json:"-"`
 }

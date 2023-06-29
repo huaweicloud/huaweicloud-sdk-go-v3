@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreOldInstanceResponse Response Object
 type RestoreOldInstanceResponse struct {
 
 	// 工作流ID。

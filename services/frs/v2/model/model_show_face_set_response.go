@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFaceSetResponse Response Object
 type ShowFaceSetResponse struct {
 	FaceSetInfo    *FaceSetInfo `json:"face_set_info,omitempty"`
 	HttpStatusCode int          `json:"-"`

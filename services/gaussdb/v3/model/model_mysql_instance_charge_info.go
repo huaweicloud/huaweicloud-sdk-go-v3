@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计费类型信息，支持包年包月和按需，默认为按需。
+// MysqlInstanceChargeInfo 计费类型信息，支持包年包月和按需，默认为按需。
 type MysqlInstanceChargeInfo struct {
 
 	// 计费模式。

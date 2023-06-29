@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListExtensionsRequest Request Object
 type ListExtensionsRequest struct {
 	Body *ExtensionQueryParamSnake `json:"body,omitempty"`
 }

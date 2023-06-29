@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥。
+// Secret 密钥。
 type Secret struct {
 	Secret *SecretDetail `json:"secret"`
 }

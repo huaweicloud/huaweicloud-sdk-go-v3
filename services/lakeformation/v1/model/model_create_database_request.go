@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDatabaseRequest Request Object
 type CreateDatabaseRequest struct {
 
 	// 实例Id

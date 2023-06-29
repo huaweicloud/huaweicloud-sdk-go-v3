@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartOrFlushInstancesResponse Response Object
 type RestartOrFlushInstancesResponse struct {
 
 	// 删除/重启/清空实例的结果。

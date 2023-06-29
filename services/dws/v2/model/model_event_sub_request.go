@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建事件订阅请求体
+// EventSubRequest 创建事件订阅请求体
 type EventSubRequest struct {
 
 	// 事件订阅名称

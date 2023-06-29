@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ModelArts数据源配置内容
+// ModelArtsContentReq ModelArts数据源配置内容
 type ModelArtsContentReq struct {
 
 	// 服务名称

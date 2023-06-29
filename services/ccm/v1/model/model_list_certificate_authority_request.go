@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCertificateAuthorityRequest Request Object
 type ListCertificateAuthorityRequest struct {
 
 	// 指定查询返回记录条数，默认值10。

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDetailsOfAppConfigV2Response Response Object
 type ShowDetailsOfAppConfigV2Response struct {
 
 	// 应用配置编号

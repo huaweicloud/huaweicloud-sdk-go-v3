@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// LockPortResponse Response Object
 type LockPortResponse struct {
 	Data           *LockPortResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                    `json:"-"`

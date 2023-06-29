@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateScalingGroupResponse Response Object
 type CreateScalingGroupResponse struct {
 
 	// 伸缩组ID

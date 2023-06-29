@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// EtlBasicParameter
 type EtlBasicParameter struct {
 
 	// 用户特征。

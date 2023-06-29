@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可维护时间段。
+// MaintenanceWindow 可维护时间段。
 type MaintenanceWindow struct {
 
 	// 日期，范围：Mon、Tue、Wed、Thu、Fri、Sat、Sun。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子SMILES表达式
+// Smiles 分子SMILES表达式
 type Smiles struct {
 }
 

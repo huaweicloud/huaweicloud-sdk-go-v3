@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowOptimizationTaskResultRequest Request Object
 type ShowOptimizationTaskResultRequest struct {
 
 	// 分子优化任务ID

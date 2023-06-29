@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateEnterpriseRouterRequestBody This is a auto create Body Object
 type CreateEnterpriseRouterRequestBody struct {
 	Instance *CreateEnterpriseRouter `json:"instance"`
 }

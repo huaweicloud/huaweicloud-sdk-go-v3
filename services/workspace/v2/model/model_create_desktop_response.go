@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDesktopResponse Response Object
 type CreateDesktopResponse struct {
 
 	// 创建云桌面总任务id

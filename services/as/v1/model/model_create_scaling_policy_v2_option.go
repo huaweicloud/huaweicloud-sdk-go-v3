@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建伸缩策略（V2）
+// CreateScalingPolicyV2Option 创建伸缩策略（V2）
 type CreateScalingPolicyV2Option struct {
 
 	// 策略名称（1-64）字符，可以用中文、字母、数字、下划线、中划线的组合。
@@ -77,13 +77,18 @@ func (c CreateScalingPolicyV2OptionScalingResourceType) MarshalJSON() ([]byte, e
 
 func (c *CreateScalingPolicyV2OptionScalingResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -123,13 +128,18 @@ func (c CreateScalingPolicyV2OptionScalingPolicyType) MarshalJSON() ([]byte, err
 
 func (c *CreateScalingPolicyV2OptionScalingPolicyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建弹性云服务器（按需）接口Body体。
+// PostPaidServer 创建弹性云服务器（按需）接口Body体。
 type PostPaidServer struct {
 
 	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z

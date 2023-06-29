@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 双活实例rsync同步状态指标值
+// NoSqlDrDateSyncIndicators 双活实例rsync同步状态指标值
 type NoSqlDrDateSyncIndicators struct {
 
 	// 节点内同步命令的执行速率,每秒多少条数据；

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateFlowLogRequest Request Object
 type CreateFlowLogRequest struct {
 	Body *CreateFlowLogReqBody `json:"body,omitempty"`
 }

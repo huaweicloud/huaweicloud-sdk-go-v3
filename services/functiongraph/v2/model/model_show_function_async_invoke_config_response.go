@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFunctionAsyncInvokeConfigResponse Response Object
 type ShowFunctionAsyncInvokeConfigResponse struct {
 
 	// 函数URN。

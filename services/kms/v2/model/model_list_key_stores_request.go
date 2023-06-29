@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListKeyStoresRequest Request Object
 type ListKeyStoresRequest struct {
 
 	// 指定查询返回记录条数，默认值10。

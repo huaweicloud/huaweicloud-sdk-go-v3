@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 开启保护/重保护请求体
+// StartProtectionGroupRequestBody 开启保护/重保护请求体
 type StartProtectionGroupRequestBody struct {
 
 	// 标识保护组开始保护操作。目前该参数为空。

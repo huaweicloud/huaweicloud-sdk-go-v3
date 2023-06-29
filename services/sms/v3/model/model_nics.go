@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网卡资源
+// Nics 网卡资源
 type Nics struct {
 
 	// 子网ID，如果是自动创建，使用\"autoCreate\"

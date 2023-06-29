@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateEnvResponse Response Object
 type CreateEnvResponse struct {
 
 	// 对象id

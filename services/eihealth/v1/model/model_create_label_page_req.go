@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签页面请求体
+// CreateLabelPageReq 标签页面请求体
 type CreateLabelPageReq struct {
 
 	// 标签页面标题，正则匹配中文，英文字母和数字及下划线

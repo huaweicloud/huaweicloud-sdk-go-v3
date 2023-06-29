@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVirtualGatewayRequest Request Object
 type CreateVirtualGatewayRequest struct {
 	Body *CreateVirtualGatewayRequestBody `json:"body,omitempty"`
 }

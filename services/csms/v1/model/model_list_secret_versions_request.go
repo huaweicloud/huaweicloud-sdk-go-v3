@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSecretVersionsRequest Request Object
 type ListSecretVersionsRequest struct {
 
 	// 凭据名称。

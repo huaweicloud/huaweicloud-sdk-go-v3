@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SubscribeAppResponse Response Object
 type SubscribeAppResponse struct {
 
 	// 应用id

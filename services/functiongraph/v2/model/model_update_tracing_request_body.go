@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新函数调用链请求体
+// UpdateTracingRequestBody 更新函数调用链请求体
 type UpdateTracingRequestBody struct {
 
 	// apm的ak

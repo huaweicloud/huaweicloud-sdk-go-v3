@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新网络实例的详细信息。
+// UpdateNetworkInstance 更新网络实例的详细信息。
 type UpdateNetworkInstance struct {
 
 	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。

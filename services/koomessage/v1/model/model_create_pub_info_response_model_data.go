@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 响应实体类。
+// CreatePubInfoResponseModelData 响应实体类。
 type CreatePubInfoResponseModelData struct {
 
 	// 服务号申请记录ID。

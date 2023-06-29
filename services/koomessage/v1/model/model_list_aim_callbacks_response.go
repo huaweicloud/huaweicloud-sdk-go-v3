@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAimCallbacksResponse Response Object
 type ListAimCallbacksResponse struct {
 
 	// 状态码。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 即将召开研讨会议信息。
+// OpenWebinarUpcomingInfo 即将召开研讨会议信息。
 type OpenWebinarUpcomingInfo struct {
 
 	// 网络研讨会ID。

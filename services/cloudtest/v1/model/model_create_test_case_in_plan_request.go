@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTestCaseInPlanRequest Request Object
 type CreateTestCaseInPlanRequest struct {
 
 	// 计划唯一标识，长度11-34位字符

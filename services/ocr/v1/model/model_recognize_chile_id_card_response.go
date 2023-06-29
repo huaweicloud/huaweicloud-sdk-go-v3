@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeChileIdCardResponse Response Object
 type RecognizeChileIdCardResponse struct {
 	Result         *ChileIdCardResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`

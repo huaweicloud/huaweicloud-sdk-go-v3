@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchAuthorizeInterfaceResponse Response Object
 type BatchAuthorizeInterfaceResponse struct {
 
 	// lakecat策略信息

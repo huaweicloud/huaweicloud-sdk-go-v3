@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetDefaultOrderFormRequest Request Object
 type SetDefaultOrderFormRequest struct {
 
 	// 订单ID

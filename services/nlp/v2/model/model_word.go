@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 词汇类
+// Word 词汇类
 type Word struct {
 
 	// 词汇文本。

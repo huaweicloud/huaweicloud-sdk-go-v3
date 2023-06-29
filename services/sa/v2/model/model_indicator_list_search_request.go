@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// indicator list query request
+// IndicatorListSearchRequest indicator list query request
 type IndicatorListSearchRequest struct {
 
 	// id list

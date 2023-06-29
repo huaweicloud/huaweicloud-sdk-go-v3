@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSlavePriorityRequest Request Object
 type UpdateSlavePriorityRequest struct {
 
 	// 实例ID。

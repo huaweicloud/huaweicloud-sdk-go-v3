@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数流执行概要信息
+// WorkflowExecutionBrief 函数流执行概要信息
 type WorkflowExecutionBrief struct {
 
 	// 流程定义ID

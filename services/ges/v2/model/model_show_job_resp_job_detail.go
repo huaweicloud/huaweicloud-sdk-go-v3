@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 只有jobName为ImportGraph时才返回，用于显示导入图详情。
+// ShowJobRespJobDetail 只有jobName为ImportGraph时才返回，用于显示导入图详情。
 type ShowJobRespJobDetail struct {
 
 	// 元数据路径。

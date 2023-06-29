@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePersonalRealnameAuthResponse Response Object
 type CreatePersonalRealnameAuthResponse struct {
 
 	// 是否需要转人工审核，只有状态码为200才返回该参数： 0：不需要1：需要

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重启实例
+// TaurusRestartInstanceRequest 重启实例
 type TaurusRestartInstanceRequest struct {
 
 	// 实例是否延迟重启，默认false，立即重启。  - true: 延迟重启，实例将在运维时间窗内自动重启。 - false: 立即重启。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateLakeFormationInstanceTagsRequest Request Object
 type BatchUpdateLakeFormationInstanceTagsRequest struct {
 
 	// LakeFormation实例ID

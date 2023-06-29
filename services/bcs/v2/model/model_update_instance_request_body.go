@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加节点和添加组织，添加组织是需要提供pvc_name
+// UpdateInstanceRequestBody 添加节点和添加组织，添加组织是需要提供pvc_name
 type UpdateInstanceRequestBody struct {
 
 	// 添加节点的组织列表

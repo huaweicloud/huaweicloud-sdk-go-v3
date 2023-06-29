@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项流转数据对象
+// WorkItemStatusFlowVo 工作项流转数据对象
 type WorkItemStatusFlowVo struct {
 
 	//  父状态的名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaServerImage
 type NovaServerImage struct {
 
 	// 镜像ID。

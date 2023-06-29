@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// LimitSpeedReq
 type LimitSpeedReq struct {
 
 	// 任务id

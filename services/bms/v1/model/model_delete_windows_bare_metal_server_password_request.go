@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteWindowsBareMetalServerPasswordRequest Request Object
 type DeleteWindowsBareMetalServerPasswordRequest struct {
 
 	// 裸金属服务器ID

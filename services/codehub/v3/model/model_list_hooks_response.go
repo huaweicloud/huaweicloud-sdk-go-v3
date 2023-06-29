@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHooksResponse Response Object
 type ListHooksResponse struct {
 	Error *Error `json:"error,omitempty"`
 

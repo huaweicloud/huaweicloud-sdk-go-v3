@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// - 开启/关闭sql限流参数体。
+// DeleteSqlFilterRuleReq - 开启/关闭sql限流参数体。
 type DeleteSqlFilterRuleReq struct {
 	SqlFilterRules []DeleteNodeSqlFilterRuleInfo `json:"sql_filter_rules"`
 }

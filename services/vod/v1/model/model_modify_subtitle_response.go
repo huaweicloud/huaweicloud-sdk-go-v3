@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ModifySubtitleResponse Response Object
 type ModifySubtitleResponse struct {
 
 	// 媒资ID。

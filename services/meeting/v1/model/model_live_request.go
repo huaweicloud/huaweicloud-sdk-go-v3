@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// LiveRequest Request Object
 type LiveRequest struct {
 
 	// 会议ID。

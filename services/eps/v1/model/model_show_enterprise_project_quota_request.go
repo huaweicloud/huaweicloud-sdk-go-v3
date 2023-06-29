@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEnterpriseProjectQuotaRequest Request Object
 type ShowEnterpriseProjectQuotaRequest struct {
 }
 

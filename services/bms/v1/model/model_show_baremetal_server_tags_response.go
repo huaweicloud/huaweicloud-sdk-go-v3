@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBaremetalServerTagsResponse Response Object
 type ShowBaremetalServerTagsResponse struct {
 
 	//

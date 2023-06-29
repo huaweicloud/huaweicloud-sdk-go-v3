@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额资源
+// QuotaResourcesResponseInfo 配额资源
 type QuotaResourcesResponseInfo struct {
 
 	// 主机安全配额的资源ID

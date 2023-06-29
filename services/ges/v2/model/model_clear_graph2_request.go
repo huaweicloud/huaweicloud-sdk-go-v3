@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ClearGraph2Request Request Object
 type ClearGraph2Request struct {
 
 	// 图ID。

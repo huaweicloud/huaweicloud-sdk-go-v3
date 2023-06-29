@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBlockchainStatusResponse Response Object
 type ShowBlockchainStatusResponse struct {
 	Bcs *Detail `json:"bcs,omitempty"`
 

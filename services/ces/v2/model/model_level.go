@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警级别, 1为紧急，2为重要，3为次要，4为提示
+// Level 告警级别, 1为紧急，2为重要，3为次要，4为提示
 type Level struct {
 }
 

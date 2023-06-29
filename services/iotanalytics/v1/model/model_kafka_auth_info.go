@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Kafka 认证信息
+// KafkaAuthInfo Kafka 认证信息
 type KafkaAuthInfo struct {
 
 	// 安全协议

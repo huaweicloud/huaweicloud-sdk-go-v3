@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddBucketsResponse Response Object
 type AddBucketsResponse struct {
 
 	// 返回消息

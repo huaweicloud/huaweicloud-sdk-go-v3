@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHostedDirectConnectsResponse Response Object
 type ListHostedDirectConnectsResponse struct {
 
 	// 本次操作的请求ID

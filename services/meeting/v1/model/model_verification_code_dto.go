@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 验证码信息。
+// VerificationCodeDto 验证码信息。
 type VerificationCodeDto struct {
 
 	// 后台自动识别是手机号还是邮箱。 如果为手机号，必须加上国家码，例如中国大陆手机为“+86xxxxxxxxxxx”，当填写手机号时 “country”参数必填。

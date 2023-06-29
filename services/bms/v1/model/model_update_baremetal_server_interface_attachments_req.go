@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改裸金属服务器所绑定的弹性网卡属性：终止时删除，即删除裸金属服务器，或者解绑网卡时是否删除该网卡
+// UpdateBaremetalServerInterfaceAttachmentsReq 修改裸金属服务器所绑定的弹性网卡属性：终止时删除，即删除裸金属服务器，或者解绑网卡时是否删除该网卡
 type UpdateBaremetalServerInterfaceAttachmentsReq struct {
 	InterfaceAttachment *InterfaceAttachmentsReq `json:"interface_attachment"`
 }

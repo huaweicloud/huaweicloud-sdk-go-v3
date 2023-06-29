@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 编码容器信息。
+// EncodeServer 编码容器信息。
 type EncodeServer struct {
 
 	// 编码服务的名称，不大于64个字节

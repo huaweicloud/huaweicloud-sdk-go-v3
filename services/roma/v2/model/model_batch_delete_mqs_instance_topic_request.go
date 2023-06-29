@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteMqsInstanceTopicRequest Request Object
 type BatchDeleteMqsInstanceTopicRequest struct {
 
 	// 实例ID。

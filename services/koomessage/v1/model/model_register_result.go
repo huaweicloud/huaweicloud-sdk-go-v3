@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求成功返回的数据。
+// RegisterResult 请求成功返回的数据。
 type RegisterResult struct {
 
 	// 通道号。

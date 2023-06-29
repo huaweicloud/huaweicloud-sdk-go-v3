@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建实例请求体
+// InstanceCreation 创建实例请求体
 type InstanceCreation struct {
 
 	// 实例名称，必填

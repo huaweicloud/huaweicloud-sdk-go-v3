@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略信息。
+// ShowBackupPolicy 备份策略信息。
 type ShowBackupPolicy struct {
 
 	// 全量备份文件可以保存的天数。

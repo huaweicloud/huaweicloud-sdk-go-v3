@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddDepartmentResponse Response Object
 type AddDepartmentResponse struct {
 
 	// 返回结果。

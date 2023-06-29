@@ -4,6 +4,8 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"encoding/json"
+	"errors"
+	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"os"
 	"reflect"
@@ -11,7 +13,7 @@ import (
 	"strings"
 )
 
-// 上传图片请求
+// PostImagesReq 上传图片请求
 type PostImagesReq struct {
 
 	// 图片类型： 0：背景 最大 1920*1080 2：图标  最大1920*1080 图片格式：jpg，png
@@ -61,6 +63,8 @@ func (o *PostImagesReq) UnmarshalJSON(b []byte) error {
 			field.Set(reflect.ValueOf(def.NewFilePart(file)))
 		case *def.MultiPart:
 			field.Set(reflect.ValueOf(def.NewMultiPart(m[jsonName])))
+		default:
+			return errors.New(fmt.Sprintf("unmarshal %s failed", m[jsonName]))
 		}
 	}
 	return nil

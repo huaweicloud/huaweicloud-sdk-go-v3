@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangePublicipToPeriodResponse Response Object
 type ChangePublicipToPeriodResponse struct {
 
 	// 转包IP列表

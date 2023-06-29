@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPipelineLastStatusV2Response Response Object
 type ShowPipelineLastStatusV2Response struct {
 
 	// 流水线id

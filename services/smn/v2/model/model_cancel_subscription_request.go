@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelSubscriptionRequest Request Object
 type CancelSubscriptionRequest struct {
 
 	// 订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。

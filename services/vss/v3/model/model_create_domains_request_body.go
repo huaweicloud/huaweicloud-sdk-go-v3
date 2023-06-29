@@ -8,10 +8,10 @@ import (
 
 type CreateDomainsRequestBody struct {
 
-	// 域名
+	// 网站域名
 	DomainName string `json:"domain_name"`
 
-	// 域名的别名
+	// 网站域名的别名
 	Alias string `json:"alias"`
 }
 

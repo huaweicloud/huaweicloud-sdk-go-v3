@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNet2CloudPhoneServerRequest Request Object
 type CreateNet2CloudPhoneServerRequest struct {
 	Body *CreateNet2CloudPhoneServerRequestBody `json:"body,omitempty"`
 }

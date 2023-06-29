@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// indicator batch operation response
+// IndicatorBatchOperateResponse indicator batch operation response
 type IndicatorBatchOperateResponse struct {
 
 	// id list

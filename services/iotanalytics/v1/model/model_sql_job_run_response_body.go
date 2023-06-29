@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL作业运行响应。
+// SqlJobRunResponseBody SQL作业运行响应。
 type SqlJobRunResponseBody struct {
 
 	// 作业类型。DDL, DCL, IMPORT, EXPORT, QUERY, INSERT.

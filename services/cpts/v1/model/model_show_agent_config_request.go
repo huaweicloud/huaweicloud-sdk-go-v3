@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAgentConfigRequest Request Object
 type ShowAgentConfigRequest struct {
 	Body *ShowAgentConfigRequestBody `json:"body,omitempty"`
 }

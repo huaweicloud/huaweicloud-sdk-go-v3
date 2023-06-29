@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCreateAccountStatusRequest Request Object
 type ShowCreateAccountStatusRequest struct {
 
 	// 指定唯一标识CreateAccount请求的ID值。

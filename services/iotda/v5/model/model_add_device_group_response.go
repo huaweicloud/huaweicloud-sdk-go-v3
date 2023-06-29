@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddDeviceGroupResponse Response Object
 type AddDeviceGroupResponse struct {
 
 	// 设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。

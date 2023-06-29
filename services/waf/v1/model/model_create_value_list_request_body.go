@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建或更新引用表
+// CreateValueListRequestBody 创建或更新引用表
 type CreateValueListRequestBody struct {
 
 	// 引用表名称，只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64
@@ -96,13 +96,18 @@ func (c CreateValueListRequestBodyType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateValueListRequestBodyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

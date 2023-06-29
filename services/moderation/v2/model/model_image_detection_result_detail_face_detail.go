@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 涉政场景中的人物面部信息。
+// ImageDetectionResultDetailFaceDetail 涉政场景中的人物面部信息。
 type ImageDetectionResultDetailFaceDetail struct {
 
 	// 人脸区域高度。

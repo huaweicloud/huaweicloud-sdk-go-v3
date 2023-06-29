@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照参数。
+// InstanceSnapshotView 快照参数。
 type InstanceSnapshotView struct {
 
 	// 创建时间。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcsResponse Response Object
 type ListVpcsResponse struct {
 
 	// 虚拟私有云的总数。

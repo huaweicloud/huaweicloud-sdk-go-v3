@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowScheduleResponse Response Object
 type ShowScheduleResponse struct {
 
 	// 是否可调度

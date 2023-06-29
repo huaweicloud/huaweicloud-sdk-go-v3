@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BusinessCardResult
 type BusinessCardResult struct {
 
 	// 姓名列表。

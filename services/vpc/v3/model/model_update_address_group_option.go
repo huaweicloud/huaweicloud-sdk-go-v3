@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateAddressGroupOption
 type UpdateAddressGroupOption struct {
 
 	// 功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）

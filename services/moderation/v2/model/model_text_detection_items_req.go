@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// TextDetectionItemsReq
 type TextDetectionItemsReq struct {
 
 	// 待检测文本，编码格式为“utf-8”，限定5000个字符以内，文本长度超过5000个字符时，只检测前5000个字符。

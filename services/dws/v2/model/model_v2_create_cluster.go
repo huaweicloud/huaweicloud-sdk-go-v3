@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// v2创建集群请求
+// V2CreateCluster v2创建集群请求
 type V2CreateCluster struct {
 
 	// 集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线或下划线，长度为4~64个字符。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新健康检查请求
+// UpdateHealthmonitorReq 更新健康检查请求
 type UpdateHealthmonitorReq struct {
 
 	// 健康检查名称。

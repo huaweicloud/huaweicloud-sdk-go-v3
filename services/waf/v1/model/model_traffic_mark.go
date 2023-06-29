@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流量标识（用于攻击惩罚），WAF根据这些配置判断如何在Header中识别客户端IP（代理模式）、如何在Cookie中识别Session、如何在参数中识别User。
+// TrafficMark 流量标识（用于攻击惩罚），WAF根据这些配置判断如何在Header中识别客户端IP（代理模式）、如何在Cookie中识别Session、如何在参数中识别User。
 type TrafficMark struct {
 
 	// IP标记，客户端最原始的IP地址的HTTP请求头字段。

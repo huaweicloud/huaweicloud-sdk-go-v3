@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEngineResponse Response Object
 type DeleteEngineResponse struct {
 
 	// 创建的微服务引擎专享版ID

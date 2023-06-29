@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// the request body of login
+// LoginSchema the request body of login
 type LoginSchema struct {
 
 	// ide_type

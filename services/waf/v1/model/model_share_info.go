@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 共享信息
+// ShareInfo 共享信息
 type ShareInfo struct {
 
 	// 共享用户数

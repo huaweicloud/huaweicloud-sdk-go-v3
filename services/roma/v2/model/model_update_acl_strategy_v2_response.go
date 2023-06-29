@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAclStrategyV2Response Response Object
 type UpdateAclStrategyV2Response struct {
 
 	// 名称

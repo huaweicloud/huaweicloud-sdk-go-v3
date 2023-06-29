@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目信息
+// ProjectRsp 项目信息
 type ProjectRsp struct {
 
 	// 项目id

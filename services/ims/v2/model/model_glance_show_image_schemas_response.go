@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceShowImageSchemasResponse Response Object
 type GlanceShowImageSchemasResponse struct {
 	AdditionalProperties *AdditionalProperties `json:"additionalProperties,omitempty"`
 

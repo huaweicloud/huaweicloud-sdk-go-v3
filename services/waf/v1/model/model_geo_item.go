@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 攻击来源区域统计
+// GeoItem 攻击来源区域统计
 type GeoItem struct {
 
 	// 攻击来源区域

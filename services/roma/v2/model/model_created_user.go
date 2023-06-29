@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建时的用户
+// CreatedUser 创建时的用户
 type CreatedUser struct {
 
 	// 用户ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DeploymentEdgecloud
 type DeploymentEdgecloud struct {
 
 	// 边缘业务ID。

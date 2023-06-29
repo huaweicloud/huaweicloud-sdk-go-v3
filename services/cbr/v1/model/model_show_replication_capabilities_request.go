@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowReplicationCapabilitiesRequest Request Object
 type ShowReplicationCapabilitiesRequest struct {
 }
 

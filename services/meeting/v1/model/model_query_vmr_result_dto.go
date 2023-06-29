@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户查询的云会议室或者个人会议ID详情。
+// QueryVmrResultDto 用户查询的云会议室或者个人会议ID详情。
 type QueryVmrResultDto struct {
 
 	// 云会议室的ID。 > 对应[[创建会议](https://support.huaweicloud.com/api-meeting/meeting_21_0014.html)](tag:hws)[[创建会议](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0014.html)](tag:hk)接口中的vmrID。

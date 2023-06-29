@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署资源。
+// ReferResources 部署资源。
 type ReferResources struct {
 
 	// 资源ID。

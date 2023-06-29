@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储库修改参数体
+// VaultUpdateReq 存储库修改参数体
 type VaultUpdateReq struct {
 	Vault *VaultUpdate `json:"vault"`
 }

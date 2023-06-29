@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 异常通知信息设置信息体。配置该参数时，代表当任务状态异常时，系统将发送通知给指定的SMN Topic。
+// AlarmNotifyConfig 异常通知信息设置信息体。配置该参数时，代表当任务状态异常时，系统将发送通知给指定的SMN Topic。
 type AlarmNotifyConfig struct {
 
 	// 异常告警是否通知用户。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstanceDatabasesResponse Response Object
 type ListInstanceDatabasesResponse struct {
 
 	// Redis实例数据库列表。

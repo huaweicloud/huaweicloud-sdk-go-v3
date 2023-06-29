@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddCorpAdminResponse Response Object
 type AddCorpAdminResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateHealthCheckRequest Request Object
 type AssociateHealthCheckRequest struct {
 
 	// 待查询的recordset ID。

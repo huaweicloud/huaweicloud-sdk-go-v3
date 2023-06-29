@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配额列表对象。
+// QuotasQuotas 配额列表对象。
 type QuotasQuotas struct {
 
 	// 资源列表对象。

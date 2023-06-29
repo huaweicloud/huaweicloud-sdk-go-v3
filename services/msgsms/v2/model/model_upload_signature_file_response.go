@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadSignatureFileResponse Response Object
 type UploadSignatureFileResponse struct {
 
 	// 文件ID

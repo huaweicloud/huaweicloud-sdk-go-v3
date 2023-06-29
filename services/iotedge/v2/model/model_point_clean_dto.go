@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 点位清洗配置结构体
+// PointCleanDto 点位清洗配置结构体
 type PointCleanDto struct {
 
 	// 静默时间窗口，在该时间窗口内，没有触发上报条件，点位将不会上

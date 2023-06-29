@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项不同状态下的数量
+// IssueCompletionRateV4IssueStatus 工作项不同状态下的数量
 type IssueCompletionRateV4IssueStatus struct {
 
 	// 已关闭的工作项

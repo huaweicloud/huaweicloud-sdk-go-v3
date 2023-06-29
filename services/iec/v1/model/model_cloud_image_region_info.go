@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CloudImageRegionInfo
 type CloudImageRegionInfo struct {
 
 	// 区域ID

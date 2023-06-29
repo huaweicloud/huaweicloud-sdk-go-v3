@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDeviceTemplateRequest Request Object
 type CreateDeviceTemplateRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

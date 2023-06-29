@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流量配置
+// MetricConfig 流量配置
 type MetricConfig struct {
 
 	// 流量配置名称

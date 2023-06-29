@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchAgentRequest Request Object
 type SwitchAgentRequest struct {
 
 	// 实例ID

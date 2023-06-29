@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSqlInjectionRulesRequest Request Object
 type ListSqlInjectionRulesRequest struct {
 
 	// 实例ID

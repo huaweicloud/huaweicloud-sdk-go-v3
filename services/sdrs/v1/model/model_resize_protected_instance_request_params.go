@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例变更规格请求数据结构
+// ResizeProtectedInstanceRequestParams 保护实例变更规格请求数据结构
 type ResizeProtectedInstanceRequestParams struct {
 
 	// 变更规格后，生产站点云服务器和容灾站点云服务器的flavor ID。可通过查询云服务器规格变更支持列表接口获取。 说明：系统支持同时变更生产站点云服务器和容灾站点云服务器的规格。如需同时变更，请使用flavorRef参数，变更规格后，生产站点云服务器和容灾站点云服务器的规格相同。

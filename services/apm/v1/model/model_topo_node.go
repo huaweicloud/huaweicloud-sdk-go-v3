@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件节点。
+// TopoNode 组件节点。
 type TopoNode struct {
 
 	// 节点类型。

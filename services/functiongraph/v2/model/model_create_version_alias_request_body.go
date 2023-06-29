@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 版本别名结构
+// CreateVersionAliasRequestBody 版本别名结构
 type CreateVersionAliasRequestBody struct {
 
 	// 要获取的别名名称。

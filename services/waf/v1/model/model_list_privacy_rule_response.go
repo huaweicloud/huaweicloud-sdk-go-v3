@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPrivacyRuleResponse Response Object
 type ListPrivacyRuleResponse struct {
 
 	// 规则条数

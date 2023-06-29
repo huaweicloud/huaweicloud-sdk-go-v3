@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 带宽对象
+// RemoveFromSharedBandwidthOption 带宽对象
 type RemoveFromSharedBandwidthOption struct {
 
 	// 弹性公网IP从共享带宽移除后，会为此弹性公网IP创建独占带宽进行计费。  此参数表示弹性公网IP从共享带宽移除后，使用的独占带宽的计费类型。（bandwidth/traffic）
@@ -61,13 +61,18 @@ func (c RemoveFromSharedBandwidthOptionChargeMode) MarshalJSON() ([]byte, error)
 
 func (c *RemoveFromSharedBandwidthOptionChargeMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

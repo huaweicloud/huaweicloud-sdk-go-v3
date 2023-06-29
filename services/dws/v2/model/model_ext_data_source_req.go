@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据源请求
+// ExtDataSourceReq 数据源请求
 type ExtDataSourceReq struct {
 
 	// 数据源id

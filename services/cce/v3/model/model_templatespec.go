@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件模板详细信息
+// Templatespec 插件模板详细信息
 type Templatespec struct {
 
 	// 模板类型（helm，static）

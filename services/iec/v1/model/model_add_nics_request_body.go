@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加网卡请求体
+// AddNicsRequestBody 添加网卡请求体
 type AddNicsRequestBody struct {
 
 	// 虚拟私有云ID。

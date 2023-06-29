@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建的自定义告警模板详细信息
+// AlarmTemplate 创建的自定义告警模板详细信息
 type AlarmTemplate struct {
 
 	// 自定义告警模板名称，如：alarmTemplate-Test01。

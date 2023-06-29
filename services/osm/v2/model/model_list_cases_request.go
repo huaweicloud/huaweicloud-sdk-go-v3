@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCasesRequest Request Object
 type ListCasesRequest struct {
 
 	// 关键字查询，支持多个空格隔开

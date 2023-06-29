@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务节点元数据。
+// Metadata 任务节点元数据。
 type Metadata struct {
 
 	// 节点类型。

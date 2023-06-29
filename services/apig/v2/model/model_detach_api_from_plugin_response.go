@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetachApiFromPluginResponse Response Object
 type DetachApiFromPluginResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PublishDataResponse Response Object
 type PublishDataResponse struct {
 
 	// 资产id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道号绑定服务号返回返回体。
+// LockPortResponseModel 通道号绑定服务号返回返回体。
 type LockPortResponseModel struct {
 
 	// 信息。

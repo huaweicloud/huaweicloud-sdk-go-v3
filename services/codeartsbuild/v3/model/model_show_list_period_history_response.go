@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowListPeriodHistoryResponse Response Object
 type ShowListPeriodHistoryResponse struct {
 
 	// 记录总数

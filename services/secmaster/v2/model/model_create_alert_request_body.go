@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateAlertRequestBody
+// CreateAlertRequestBody CreateAlertRequestBody
 type CreateAlertRequestBody struct {
 	DataObject *CreateAlert `json:"data_object,omitempty"`
 }

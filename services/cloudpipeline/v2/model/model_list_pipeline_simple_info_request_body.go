@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询流水线信息对象
+// ListPipelineSimpleInfoRequestBody 查询流水线信息对象
 type ListPipelineSimpleInfoRequestBody struct {
 
 	// 流水线名字。参数存在，则进行模糊匹配

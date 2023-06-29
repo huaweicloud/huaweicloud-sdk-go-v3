@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteHooksResponse Response Object
 type DeleteHooksResponse struct {
 	Error *Error `json:"error,omitempty"`
 

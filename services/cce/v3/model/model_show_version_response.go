@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVersionResponse Response Object
 type ShowVersionResponse struct {
 
 	// API版本信息列表

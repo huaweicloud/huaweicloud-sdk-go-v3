@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApiQuantitiesV2Response Response Object
 type ListApiQuantitiesV2Response struct {
 
 	// API总个数

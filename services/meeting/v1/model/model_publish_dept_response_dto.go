@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发布的部门信息。
+// PublishDeptResponseDto 发布的部门信息。
 type PublishDeptResponseDto struct {
 
 	// 部门编码。

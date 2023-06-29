@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateVersionContentResponse Response Object
 type ShowTemplateVersionContentResponse struct {
 	Location       *string `json:"Location,omitempty"`
 	HttpStatusCode int     `json:"-"`

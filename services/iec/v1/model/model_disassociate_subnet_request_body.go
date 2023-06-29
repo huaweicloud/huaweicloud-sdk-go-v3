@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 路由表解关联子网请求体
+// DisassociateSubnetRequestBody 路由表解关联子网请求体
 type DisassociateSubnetRequestBody struct {
 
 	// 子网ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 深度学习作业通用参数
+// DeepLearingParam 深度学习作业通用参数
 type DeepLearingParam struct {
 	InitialParameters *Initial `json:"initial_parameters,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunTextSimilarityResponse Response Object
 type RunTextSimilarityResponse struct {
 
 	// 相似度得分，范围在0~1，默认小数点后保留8位。调用失败时无此字段。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDomainDetailByNameRequest Request Object
 type ShowDomainDetailByNameRequest struct {
 
 	// 加速域名名称,获取方法请参见查询加速域名。

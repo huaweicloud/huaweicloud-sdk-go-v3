@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规则配置
+// RuleConfig 规则配置
 type RuleConfig struct {
 
 	// 规则描述，最大长度255，不允许^~#$%&*<>()[]{}'\"\\

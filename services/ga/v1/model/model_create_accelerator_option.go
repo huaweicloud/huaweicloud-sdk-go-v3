@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建全球加速器实例的详细信息。
+// CreateAcceleratorOption 创建全球加速器实例的详细信息。
 type CreateAcceleratorOption struct {
 
 	// 全球加速器名称，取值范围：1~64个字符之间，只能由数字、字母、中划线和中文组成。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MigrateCompositeHostsResponse Response Object
 type MigrateCompositeHostsResponse struct {
 
 	// host_id列表

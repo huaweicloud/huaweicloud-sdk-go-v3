@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFastExecuteScriptResponse Response Object
 type CreateFastExecuteScriptResponse struct {
 
 	// 工作流执行id。

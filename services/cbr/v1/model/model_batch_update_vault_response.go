@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdateVaultResponse Response Object
 type BatchUpdateVaultResponse struct {
 
 	// 已批量修改id列表

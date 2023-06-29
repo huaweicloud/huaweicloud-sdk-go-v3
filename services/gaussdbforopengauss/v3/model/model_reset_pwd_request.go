@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetPwdRequest Request Object
 type ResetPwdRequest struct {
 
 	// 语言

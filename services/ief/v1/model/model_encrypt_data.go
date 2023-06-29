@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 加密数据信息
+// EncryptData 加密数据信息
 type EncryptData struct {
 
 	// 加密数据ID

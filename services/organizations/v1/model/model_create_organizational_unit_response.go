@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateOrganizationalUnitResponse Response Object
 type CreateOrganizationalUnitResponse struct {
 	OrganizationalUnit *OrganizationalUnitDto `json:"organizational_unit,omitempty"`
 	HttpStatusCode     int                    `json:"-"`

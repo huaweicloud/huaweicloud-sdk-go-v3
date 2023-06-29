@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAppliedInstancesRequest Request Object
 type ListAppliedInstancesRequest struct {
 
 	// 参数模板ID。

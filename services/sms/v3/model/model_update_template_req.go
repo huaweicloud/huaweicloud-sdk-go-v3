@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateTemplateReq This is a auto create Body Object
 type UpdateTemplateReq struct {
 	Template *TemplateRequest `json:"template,omitempty"`
 }

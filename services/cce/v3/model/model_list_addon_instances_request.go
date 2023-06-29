@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAddonInstancesRequest Request Object
 type ListAddonInstancesRequest struct {
 
 	// 含义：想要筛选的插件名称或插件别名  属性：隐藏参数

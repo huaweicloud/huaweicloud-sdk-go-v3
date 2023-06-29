@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteJobActionRequest Request Object
 type ExecuteJobActionRequest struct {
 
 	// 任务ID (对比任务相关操作，多任务场景传父任务详情返回的master_job_id)
@@ -60,13 +60,18 @@ func (c ExecuteJobActionRequestXLanguage) MarshalJSON() ([]byte, error) {
 
 func (c *ExecuteJobActionRequestXLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备升级包信息
+// OtaPackageInfo 设备升级包信息
 type OtaPackageInfo struct {
 
 	// **参数说明**：升级包ID，用于唯一标识一个升级包。由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、连接符（-）的组合。

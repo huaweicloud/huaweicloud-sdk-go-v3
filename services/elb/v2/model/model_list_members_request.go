@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMembersRequest Request Object
 type ListMembersRequest struct {
 
 	// 后端云服务器组id

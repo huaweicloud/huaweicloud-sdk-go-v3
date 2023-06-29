@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVpcAttachmentRequest Request Object
 type ShowVpcAttachmentRequest struct {
 
 	// 企业路由器实例ID

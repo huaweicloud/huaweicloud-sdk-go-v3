@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateSubnetRequest Request Object
 type AssociateSubnetRequest struct {
 
 	// 路由表ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新托管专线对象参数
+// UpdateHostedDirectConnectRequestBody 更新托管专线对象参数
 type UpdateHostedDirectConnectRequestBody struct {
 	HostedConnect *UpdateHostedDirectConnect `json:"hosted_connect,omitempty"`
 }

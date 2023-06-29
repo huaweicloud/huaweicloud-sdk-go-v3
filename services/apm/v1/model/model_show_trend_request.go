@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTrendRequest Request Object
 type ShowTrendRequest struct {
 
 	// 应用id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateChannelRequest Request Object
 type CreateChannelRequest struct {
 	Body *ChannelCreateReq `json:"body,omitempty"`
 }

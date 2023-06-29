@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateSnapshotRequestBody This is a auto create Body Object
 type UpdateSnapshotRequestBody struct {
 	Snapshot *UpdateSnapshotOption `json:"snapshot"`
 }

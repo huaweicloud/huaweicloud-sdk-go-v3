@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteWorkflowsRequest Request Object
 type BatchDeleteWorkflowsRequest struct {
 	Body *WorkflowDeleteBody `json:"body,omitempty"`
 }

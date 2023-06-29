@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRetentionResponse Response Object
 type CreateRetentionResponse struct {
 
 	// 镜像老化规则id

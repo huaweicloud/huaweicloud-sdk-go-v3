@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询指标请求
+// GetMetricsRequest 查询指标请求
 type GetMetricsRequest struct {
 
 	// 查询类型

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签属性
+// Tag 标签属性
 type Tag struct {
 
 	// 标签key值，长度取值范围为1~36， 仅允许大小写英文字母、数字、下划线、中划线

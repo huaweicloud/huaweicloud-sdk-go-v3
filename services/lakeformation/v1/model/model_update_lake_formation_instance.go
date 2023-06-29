@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改实例信息
+// UpdateLakeFormationInstance 修改实例信息
 type UpdateLakeFormationInstance struct {
 
 	// 实例名称

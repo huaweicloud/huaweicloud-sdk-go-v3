@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunPoemRequest Request Object
 type RunPoemRequest struct {
 	Body *CreatePoem `json:"body,omitempty"`
 }

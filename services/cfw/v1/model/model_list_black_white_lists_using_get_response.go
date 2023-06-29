@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBlackWhiteListsUsingGetResponse Response Object
 type ListBlackWhiteListsUsingGetResponse struct {
 	Data           *BlackWhiteListResponseData `json:"data,omitempty"`
 	HttpStatusCode int                         `json:"-"`

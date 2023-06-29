@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTerminalsBindingDesktopsConfigRequest Request Object
 type ListTerminalsBindingDesktopsConfigRequest struct {
 }
 

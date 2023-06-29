@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadDataTraceRequest Request Object
 type DownloadDataTraceRequest struct {
 
 	// Locale语言信息, zh_cn返回中文，en-us返回英文

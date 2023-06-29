@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 脚本版本的详细信息。
+// ScriptVersion 脚本版本的详细信息。
 type ScriptVersion struct {
 
 	// 脚本内容，脚本内容不能为空

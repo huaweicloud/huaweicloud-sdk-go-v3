@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartStopNetResponse Response Object
 type StartStopNetResponse struct {
 
 	// 业务受理单号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRocketMqMigrationTaskResponse Response Object
 type ListRocketMqMigrationTaskResponse struct {
 
 	// 元数据迁移任务总数。

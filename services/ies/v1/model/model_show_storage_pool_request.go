@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowStoragePoolRequest Request Object
 type ShowStoragePoolRequest struct {
 
 	// 存储池ID

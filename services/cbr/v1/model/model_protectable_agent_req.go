@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ProtectableAgentReq
 type ProtectableAgentReq struct {
 
 	// 查询参数列表

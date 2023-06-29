@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPermissionsResponse Response Object
 type ListPermissionsResponse struct {
 
 	// 共享资源权限的详细信息列表。

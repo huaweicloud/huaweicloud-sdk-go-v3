@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 磁盘信息
+// PutDisk 磁盘信息
 type PutDisk struct {
 
 	// 磁盘名称

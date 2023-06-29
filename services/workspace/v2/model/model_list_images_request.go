@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListImagesRequest Request Object
 type ListImagesRequest struct {
 
 	// 产品镜像的操作系统类型，如Windows。

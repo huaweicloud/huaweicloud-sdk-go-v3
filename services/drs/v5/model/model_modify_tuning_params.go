@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改高级设置信息体。
+// ModifyTuningParams 修改高级设置信息体。
 type ModifyTuningParams struct {
 
 	// 全量参数的参数名及对应的取值。

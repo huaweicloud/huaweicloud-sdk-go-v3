@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTopicsRequest Request Object
 type ShowTopicsRequest struct {
 
 	// 页码

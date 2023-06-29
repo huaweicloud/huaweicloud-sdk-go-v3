@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowRsusResponse Response Object
 type BatchShowRsusResponse struct {
 
 	// **参数说明**：返回RSU的总体数量。

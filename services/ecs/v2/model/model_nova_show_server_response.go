@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaShowServerResponse Response Object
 type NovaShowServerResponse struct {
 	Server         *NovaServer `json:"server,omitempty"`
 	HttpStatusCode int         `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会控操作信息
+// ConfCtlRecordInfo 会控操作信息
 type ConfCtlRecordInfo struct {
 
 	// 操作时间（UTC时间，单位毫秒）。

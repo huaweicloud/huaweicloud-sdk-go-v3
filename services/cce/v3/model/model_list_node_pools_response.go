@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNodePoolsResponse Response Object
 type ListNodePoolsResponse struct {
 
 	// API type. The value is fixed to List.

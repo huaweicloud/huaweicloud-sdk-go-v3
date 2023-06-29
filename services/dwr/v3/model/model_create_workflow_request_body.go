@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建工作流的请求Body
+// CreateWorkflowRequestBody 创建工作流的请求Body
 type CreateWorkflowRequestBody struct {
 
 	// 工作流的编排定义,必须有TYPE，TYPE值必须是3种State（DELAY，OPERATION，END）中一种。每个state的名字是1-80长度的只含数字，字母，-和_的String。
@@ -71,13 +71,18 @@ func (c CreateWorkflowRequestBodyMode) MarshalJSON() ([]byte, error) {
 
 func (c *CreateWorkflowRequestBodyMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

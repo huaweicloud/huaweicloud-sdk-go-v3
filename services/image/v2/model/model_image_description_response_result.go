@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图像描述结果信息
+// ImageDescriptionResponseResult 图像描述结果信息
 type ImageDescriptionResponseResult struct {
 
 	// 图像描述。

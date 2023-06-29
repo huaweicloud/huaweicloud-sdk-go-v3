@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 管理员信息。
+// QueryAdminResultDto 管理员信息。
 type QueryAdminResultDto struct {
 
 	// 用户UUID。

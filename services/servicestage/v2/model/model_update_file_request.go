@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFileRequest Request Object
 type UpdateFileRequest struct {
 
 	// 授权名称。

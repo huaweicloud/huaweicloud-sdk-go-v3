@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowExtensionAuthorizationRequest Request Object
 type ShowExtensionAuthorizationRequest struct {
 
 	// 插件版本

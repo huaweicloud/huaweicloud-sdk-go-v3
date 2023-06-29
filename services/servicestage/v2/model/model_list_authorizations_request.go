@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuthorizationsRequest Request Object
 type ListAuthorizationsRequest struct {
 }
 

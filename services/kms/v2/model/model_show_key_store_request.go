@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowKeyStoreRequest Request Object
 type ShowKeyStoreRequest struct {
 
 	// 密钥库ID

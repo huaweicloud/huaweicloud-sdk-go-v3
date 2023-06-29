@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceDeleteImageMemberResponse Response Object
 type GlanceDeleteImageMemberResponse struct {
 	HttpStatusCode int `json:"-"`
 }

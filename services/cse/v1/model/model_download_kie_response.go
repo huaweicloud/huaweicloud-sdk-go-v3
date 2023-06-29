@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DownloadKieResponse Response Object
 type DownloadKieResponse struct {
 	Metadata *DownloadKieResponseBodyMetadata `json:"metadata,omitempty"`
 

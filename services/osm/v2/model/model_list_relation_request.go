@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRelationRequest Request Object
 type ListRelationRequest struct {
 
 	// 要关联的工单id

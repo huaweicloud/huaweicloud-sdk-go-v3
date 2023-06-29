@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据单元。
+// FrontCell 数据单元。
 type FrontCell struct {
 
 	// 数据类型。

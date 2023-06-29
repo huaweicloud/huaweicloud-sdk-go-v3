@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunDeletePictureResponse Response Object
 type RunDeletePictureResponse struct {
 
 	// 调用成功时表示调用结果。  调用失败时无此字段。

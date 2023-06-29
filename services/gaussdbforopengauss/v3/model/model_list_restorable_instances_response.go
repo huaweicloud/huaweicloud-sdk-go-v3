@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRestorableInstancesResponse Response Object
 type ListRestorableInstancesResponse struct {
 
 	// 返回可用于备份恢复的实例列表。

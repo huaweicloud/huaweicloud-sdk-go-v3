@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetGaussMySqlProxyWeightResponse Response Object
 type SetGaussMySqlProxyWeightResponse struct {
 
 	// 任务ID。

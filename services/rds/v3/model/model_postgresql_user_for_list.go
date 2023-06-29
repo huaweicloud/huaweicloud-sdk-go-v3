@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户信息。
+// PostgresqlUserForList 数据库用户信息。
 type PostgresqlUserForList struct {
 
 	// 帐号名。

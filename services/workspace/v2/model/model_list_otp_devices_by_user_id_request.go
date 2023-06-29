@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListOtpDevicesByUserIdRequest Request Object
 type ListOtpDevicesByUserIdRequest struct {
 
 	// 用户ID。

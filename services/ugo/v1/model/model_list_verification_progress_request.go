@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVerificationProgressRequest Request Object
 type ListVerificationProgressRequest struct {
 
 	// 迁移项目ID。

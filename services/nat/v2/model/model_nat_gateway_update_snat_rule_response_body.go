@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新SNAT规则的响应体。
+// NatGatewayUpdateSnatRuleResponseBody 更新SNAT规则的响应体。
 type NatGatewayUpdateSnatRuleResponseBody struct {
 
 	// SNAT规则的ID。
@@ -107,13 +107,18 @@ func (c NatGatewayUpdateSnatRuleResponseBodyStatus) MarshalJSON() ([]byte, error
 
 func (c *NatGatewayUpdateSnatRuleResponseBodyStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

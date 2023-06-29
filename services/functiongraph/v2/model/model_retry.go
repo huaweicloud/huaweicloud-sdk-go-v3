@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重试策略
+// Retry 重试策略
 type Retry struct {
 
 	// 重试策略名称，在单个流程中，名称需要唯一

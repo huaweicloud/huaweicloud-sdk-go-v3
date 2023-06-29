@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RebuildImageResponse Response Object
 type RebuildImageResponse struct {
 	HttpStatusCode int `json:"-"`
 }

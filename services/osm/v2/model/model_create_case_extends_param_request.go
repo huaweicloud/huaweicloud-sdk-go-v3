@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCaseExtendsParamRequest Request Object
 type CreateCaseExtendsParamRequest struct {
 
 	// 工单id

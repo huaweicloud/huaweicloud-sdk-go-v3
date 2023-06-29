@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePrivilegesResponse Response Object
 type CreatePrivilegesResponse struct {
 
 	// 错误码

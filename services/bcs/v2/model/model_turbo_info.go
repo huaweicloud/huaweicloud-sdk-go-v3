@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 极速文件存储卷信息
+// TurboInfo 极速文件存储卷信息
 type TurboInfo struct {
 
 	// 共享方式，固定值为“STANDARD”

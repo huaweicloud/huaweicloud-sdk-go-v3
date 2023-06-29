@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFreeResourcesUsageRecordsRequest Request Object
 type ListFreeResourcesUsageRecordsRequest struct {
 
 	// 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。 此参数不携带或携带值为空时，不作为筛选条件。

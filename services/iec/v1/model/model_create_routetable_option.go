@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建路由表请求体
+// CreateRoutetableOption 创建路由表请求体
 type CreateRoutetableOption struct {
 
 	// 路由表名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）

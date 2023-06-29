@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteMqsInstanceTopicResponse Response Object
 type DeleteMqsInstanceTopicResponse struct {
 
 	// Topic列表。

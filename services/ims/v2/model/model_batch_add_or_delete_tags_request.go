@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddOrDeleteTagsRequest Request Object
 type BatchAddOrDeleteTagsRequest struct {
 
 	// 镜像ID。

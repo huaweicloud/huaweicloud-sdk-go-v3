@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobResponse Response Object
 type ShowJobResponse struct {
 
 	// 请求的唯一标识ID。

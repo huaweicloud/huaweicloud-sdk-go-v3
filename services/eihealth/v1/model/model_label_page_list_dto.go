@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签页面列表返回的单个标签对象
+// LabelPageListDto 标签页面列表返回的单个标签对象
 type LabelPageListDto struct {
 
 	// 标签页面id

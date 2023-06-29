@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPartnerAdjustRecordsResponse Response Object
 type ListPartnerAdjustRecordsResponse struct {
 
 	// 调账记录列表。 具体请参见表2。

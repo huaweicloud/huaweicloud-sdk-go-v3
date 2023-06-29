@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDependcyResponse Response Object
 type ShowDependcyResponse struct {
 
 	// 依赖包ID。

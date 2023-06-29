@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateBaremetalServerMetadataRequest Request Object
 type UpdateBaremetalServerMetadataRequest struct {
 
 	// 裸金属服务器ID

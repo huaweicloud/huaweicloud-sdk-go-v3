@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShrinkClusterRequest Request Object
 type ShrinkClusterRequest struct {
 
 	// 集群ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带名称的公式
+// NamedFormula 带名称的公式
 type NamedFormula struct {
 
 	// 公式名称，不能和输入参数名重复，正则：\"^[A-Za-z][A-Za-z_]{0,31}$\"

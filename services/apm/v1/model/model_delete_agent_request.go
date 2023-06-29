@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAgentRequest Request Object
 type DeleteAgentRequest struct {
 
 	// 应用id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronListFirewallGroupsRequest Request Object
 type NeutronListFirewallGroupsRequest struct {
 
 	// 分页查询起始的资源ID，为空时查询第一页

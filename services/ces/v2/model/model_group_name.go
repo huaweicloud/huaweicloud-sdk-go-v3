@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源分组名称
+// GroupName 资源分组名称
 type GroupName struct {
 }
 

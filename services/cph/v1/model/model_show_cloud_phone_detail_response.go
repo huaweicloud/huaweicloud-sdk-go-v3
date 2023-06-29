@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCloudPhoneDetailResponse Response Object
 type ShowCloudPhoneDetailResponse struct {
 
 	// 请求的唯一标识ID，不超过32个字节。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导出图请求体
+// ExportGraphReq 导出图请求体
 type ExportGraphReq struct {
 
 	// 图的导出OBS路径。

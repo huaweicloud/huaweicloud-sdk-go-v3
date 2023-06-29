@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateV2xEdgeAppResponse Response Object
 type UpdateV2xEdgeAppResponse struct {
 
 	// **参数说明**：Edge ID，用于唯一标识一个Edge。

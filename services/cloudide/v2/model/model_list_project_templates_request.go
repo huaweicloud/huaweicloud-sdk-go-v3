@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProjectTemplatesRequest Request Object
 type ListProjectTemplatesRequest struct {
 
 	// cpu架构 x86|arm

@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMapTileResponse Response Object
 type ShowMapTileResponse struct {
 	ContentType    *string       `json:"Content-Type,omitempty"`
 	HttpStatusCode int           `json:"-"`

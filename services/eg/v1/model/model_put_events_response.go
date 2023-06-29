@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PutEventsResponse Response Object
 type PutEventsResponse struct {
 
 	// 发布失败的事件个数

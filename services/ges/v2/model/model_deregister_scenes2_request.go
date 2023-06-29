@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeregisterScenes2Request Request Object
 type DeregisterScenes2Request struct {
 
 	// 图ID。

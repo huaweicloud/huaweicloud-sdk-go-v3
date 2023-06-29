@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowKmsTagsRequest Request Object
 type ShowKmsTagsRequest struct {
 
 	// 密钥ID

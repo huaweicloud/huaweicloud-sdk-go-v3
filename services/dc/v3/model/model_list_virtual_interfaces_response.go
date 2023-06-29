@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVirtualInterfacesResponse Response Object
 type ListVirtualInterfacesResponse struct {
 
 	// 操作请求ID

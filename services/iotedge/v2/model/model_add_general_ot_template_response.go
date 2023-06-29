@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddGeneralOtTemplateResponse Response Object
 type AddGeneralOtTemplateResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

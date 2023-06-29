@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更规格的桌面对象。
+// ResizeDesktopData 变更规格的桌面对象。
 type ResizeDesktopData struct {
 
 	// 桌面ID。

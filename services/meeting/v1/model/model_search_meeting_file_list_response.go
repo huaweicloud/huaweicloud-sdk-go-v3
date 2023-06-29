@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchMeetingFileListResponse Response Object
 type SearchMeetingFileListResponse struct {
 
 	// 页面起始页，从0开始。

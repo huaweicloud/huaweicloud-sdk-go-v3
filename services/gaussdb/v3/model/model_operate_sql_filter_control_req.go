@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 开启/关闭SQL限流参数体
+// OperateSqlFilterControlReq 开启/关闭SQL限流参数体
 type OperateSqlFilterControlReq struct {
 
 	// SQL限流开关状态。 取值： - ON，表示开启。 - OFF，表示关闭。

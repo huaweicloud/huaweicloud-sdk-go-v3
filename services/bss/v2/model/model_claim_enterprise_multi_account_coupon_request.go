@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ClaimEnterpriseMultiAccountCouponRequest Request Object
 type ClaimEnterpriseMultiAccountCouponRequest struct {
 	Body *TransferEnterpriseMultiAccountCouponReq `json:"body,omitempty"`
 }

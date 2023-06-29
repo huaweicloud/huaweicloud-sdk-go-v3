@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新误报屏蔽规则请求体
+// UpdateIgnoreRuleRequestBody 更新误报屏蔽规则请求体
 type UpdateIgnoreRuleRequestBody struct {
 
 	// 防护域名或防护网站，数组长度为0时，代表规则对全部域名或防护网站生效

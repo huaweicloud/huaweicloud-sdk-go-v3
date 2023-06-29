@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DecryptDataRequest Request Object
 type DecryptDataRequest struct {
 	Body *DecryptDataRequestBody `json:"body,omitempty"`
 }

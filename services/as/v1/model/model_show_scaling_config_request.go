@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowScalingConfigRequest Request Object
 type ShowScalingConfigRequest struct {
 
 	// 伸缩配置ID，查询唯一配置。

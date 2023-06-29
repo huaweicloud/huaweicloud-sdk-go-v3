@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchShardResponse Response Object
 type SwitchShardResponse struct {
 
 	// 任务ID。

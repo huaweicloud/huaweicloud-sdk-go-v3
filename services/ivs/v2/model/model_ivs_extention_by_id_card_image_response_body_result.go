@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用返回结果。
+// IvsExtentionByIdCardImageResponseBodyResult 调用返回结果。
 type IvsExtentionByIdCardImageResponseBodyResult struct {
 
 	// 子服务名称。

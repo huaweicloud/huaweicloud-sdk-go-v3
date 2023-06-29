@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDownloadResourceStatDataResponse Response Object
 type BatchDownloadResourceStatDataResponse struct {
 
 	// 资源统计数据列表

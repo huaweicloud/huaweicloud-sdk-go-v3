@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartInstanceResponse Response Object
 type StartInstanceResponse struct {
 
 	// 返回值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAomMappingRulesRequest Request Object
 type DeleteAomMappingRulesRequest struct {
 
 	// 接入lts规则id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowClobDetailRequest Request Object
 type ShowClobDetailRequest struct {
 
 	// 应用id。

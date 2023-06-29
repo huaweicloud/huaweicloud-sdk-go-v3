@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadTaskReportRequest Request Object
 type DownloadTaskReportRequest struct {
 
 	// 任务ID

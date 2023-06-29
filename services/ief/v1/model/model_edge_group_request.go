@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组参数
+// EdgeGroupRequest 边缘节点组参数
 type EdgeGroupRequest struct {
 
 	// 节点组名称。只允许中文字符、英文字母、数字、下划线、中划线，最大长度64

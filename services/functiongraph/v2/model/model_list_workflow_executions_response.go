@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowExecutionsResponse Response Object
 type ListWorkflowExecutionsResponse struct {
 
 	// 流程执行信息列表

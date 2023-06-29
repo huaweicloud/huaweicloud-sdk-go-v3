@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchRebootServersRequestBody This is a auto create Body Object
 type BatchRebootServersRequestBody struct {
 	Reboot *BatchRebootSeversOption `json:"reboot"`
 }

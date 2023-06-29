@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteResDatasourceRequest Request Object
 type DeleteResDatasourceRequest struct {
 
 	// 工作空间id。

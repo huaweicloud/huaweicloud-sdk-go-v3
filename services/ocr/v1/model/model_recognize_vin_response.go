@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeVinResponse Response Object
 type RecognizeVinResponse struct {
 	Result         *VinResult `json:"result,omitempty"`
 	HttpStatusCode int        `json:"-"`

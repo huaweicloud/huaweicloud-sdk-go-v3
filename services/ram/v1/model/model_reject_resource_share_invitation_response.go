@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RejectResourceShareInvitationResponse Response Object
 type RejectResourceShareInvitationResponse struct {
 	ResourceShareInvitation *ResourceShareInvitation `json:"resource_share_invitation,omitempty"`
 	HttpStatusCode          int                      `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划设计阶段信息
+// TestPlanDetailDesignStage 测试计划设计阶段信息
 type TestPlanDetailDesignStage struct {
 
 	// 用例个数

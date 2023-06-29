@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTableMetaResponse Response Object
 type ListTableMetaResponse struct {
 	TableMetas *[]TableMeta `json:"table_metas,omitempty"`
 

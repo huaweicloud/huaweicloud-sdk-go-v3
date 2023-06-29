@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListGraphBackupsRequest Request Object
 type ListGraphBackupsRequest struct {
 
 	// 图ID。

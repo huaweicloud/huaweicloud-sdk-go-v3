@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetGaussMySqlPasswordRequest Request Object
 type ResetGaussMySqlPasswordRequest struct {
 
 	// 语言。

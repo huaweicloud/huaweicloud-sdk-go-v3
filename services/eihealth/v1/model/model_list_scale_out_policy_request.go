@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListScaleOutPolicyRequest Request Object
 type ListScaleOutPolicyRequest struct {
 }
 

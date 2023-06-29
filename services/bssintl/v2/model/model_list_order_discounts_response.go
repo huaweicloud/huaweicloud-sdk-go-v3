@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOrderDiscountsResponse Response Object
 type ListOrderDiscountsResponse struct {
 
 	// 可用的折扣列表。 具体请参见表2。

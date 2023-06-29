@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 与会者自己解除静音请求。
+// RestAllowUnMuteReqBody 与会者自己解除静音请求。
 type RestAllowUnMuteReqBody struct {
 
 	// 是否允许自己解除静音（仅静音时有效），默认为允许。 - 0: 不允许 - 1: 允许

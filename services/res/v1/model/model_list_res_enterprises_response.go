@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListResEnterprisesResponse Response Object
 type ListResEnterprisesResponse struct {
 
 	// 企业项目列表。

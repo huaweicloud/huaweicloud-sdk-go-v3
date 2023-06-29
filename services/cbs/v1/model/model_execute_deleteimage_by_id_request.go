@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteDeleteimageByIdRequest Request Object
 type ExecuteDeleteimageByIdRequest struct {
 
 	// 图片id

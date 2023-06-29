@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重置数据库账号请求体。
+// RedisResetDbUserPasswordRequestBody 重置数据库账号请求体。
 type RedisResetDbUserPasswordRequestBody struct {
 
 	// 账号名称。  小于36个字符，以字母开头，仅包含数字、字母、中划线、下划线。

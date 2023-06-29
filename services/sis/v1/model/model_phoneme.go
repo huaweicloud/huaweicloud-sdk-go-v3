@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个音素的发音评测结果
+// Phoneme 单个音素的发音评测结果
 type Phoneme struct {
 
 	// 音标（ARPAbet音标系统）

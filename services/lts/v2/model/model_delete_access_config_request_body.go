@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除日志接入请求体
+// DeleteAccessConfigRequestBody 删除日志接入请求体
 type DeleteAccessConfigRequestBody struct {
 
 	// 日志接入ID列表

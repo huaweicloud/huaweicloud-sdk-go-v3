@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOrganizationShareResponse Response Object
 type ShowOrganizationShareResponse struct {
 
 	// 如果为\"true\"，则表示启用与组织的共享。默认为\"false\"。

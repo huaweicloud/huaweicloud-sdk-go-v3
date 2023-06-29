@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMqsInstanceResponse Response Object
 type ListMqsInstanceResponse struct {
 
 	// 实例列表

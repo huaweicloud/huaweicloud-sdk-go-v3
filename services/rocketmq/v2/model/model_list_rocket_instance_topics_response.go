@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRocketInstanceTopicsResponse Response Object
 type ListRocketInstanceTopicsResponse struct {
 
 	// topic总数。

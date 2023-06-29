@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点信息
+// TreeNode 节点信息
 type TreeNode struct {
 
 	// 目录或文件名

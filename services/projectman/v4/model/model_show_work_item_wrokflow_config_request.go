@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowWorkItemWrokflowConfigRequest Request Object
 type ShowWorkItemWrokflowConfigRequest struct {
 
 	// devcloud项目的32位id

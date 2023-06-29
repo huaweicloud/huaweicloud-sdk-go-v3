@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDomainNotAddedProjectsV4Request Request Object
 type ListDomainNotAddedProjectsV4Request struct {
 
 	// 分页索引，偏移量,offset是limit的整数倍，limit=10,offset=0,10,20...

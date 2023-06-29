@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMaintenanceWindowRequest Request Object
 type UpdateMaintenanceWindowRequest struct {
 
 	// 集群的ID。

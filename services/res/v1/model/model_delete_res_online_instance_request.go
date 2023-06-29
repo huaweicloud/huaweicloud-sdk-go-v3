@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteResOnlineInstanceRequest Request Object
 type DeleteResOnlineInstanceRequest struct {
 
 	// 工作空间id。

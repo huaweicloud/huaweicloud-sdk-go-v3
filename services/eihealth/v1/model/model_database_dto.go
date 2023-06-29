@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例详情
+// DatabaseDto 实例详情
 type DatabaseDto struct {
 
 	// 实例id

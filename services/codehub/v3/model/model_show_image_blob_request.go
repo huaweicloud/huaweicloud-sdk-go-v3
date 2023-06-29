@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowImageBlobRequest Request Object
 type ShowImageBlobRequest struct {
 
 	// 仓库id

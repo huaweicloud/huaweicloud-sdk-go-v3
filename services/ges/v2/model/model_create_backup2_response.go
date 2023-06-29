@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateBackup2Response Response Object
 type CreateBackup2Response struct {
 
 	// 图备份任务ID。

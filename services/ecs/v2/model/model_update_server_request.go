@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateServerRequest Request Object
 type UpdateServerRequest struct {
 
 	// 云服务器ID。

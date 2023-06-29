@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAlertConfigResponse Response Object
 type ShowAlertConfigResponse struct {
 
 	// 告警群组的唯一标识

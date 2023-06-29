@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量续传任务请求列表
+// BatchRetryReq 批量续传任务请求列表
 type BatchRetryReq struct {
 
 	// 批量续传任务请求列表

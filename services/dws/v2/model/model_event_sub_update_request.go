@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新订阅事件请求体
+// EventSubUpdateRequest 更新订阅事件请求体
 type EventSubUpdateRequest struct {
 
 	// 事件订阅名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群扩展信息
+// ExtendedProperties 集群扩展信息
 type ExtendedProperties struct {
 
 	// 工作空间ID。

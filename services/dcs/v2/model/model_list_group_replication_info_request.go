@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListGroupReplicationInfoRequest Request Object
 type ListGroupReplicationInfoRequest struct {
 
 	// 实例ID。

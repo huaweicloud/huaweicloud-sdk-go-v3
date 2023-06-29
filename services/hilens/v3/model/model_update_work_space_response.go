@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateWorkSpaceResponse Response Object
 type UpdateWorkSpaceResponse struct {
 
 	// 工作空间id

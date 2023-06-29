@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBusinessResponse Response Object
 type ListBusinessResponse struct {
 
 	// 获取应用列表数据结构。

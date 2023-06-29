@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListReceivedHandshakesResponse Response Object
 type ListReceivedHandshakesResponse struct {
 
 	// 邀请（握手）对象的列表，其中包含与指定帐号关联的每个邀请（握手）的详细信息。

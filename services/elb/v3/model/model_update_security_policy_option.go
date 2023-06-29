@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新自定义安全策略的请求参数。
+// UpdateSecurityPolicyOption 更新自定义安全策略的请求参数。
 type UpdateSecurityPolicyOption struct {
 
 	// 自定义安全策略的名称。
@@ -168,13 +168,18 @@ func (c UpdateSecurityPolicyOptionCiphers) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateSecurityPolicyOptionCiphers) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

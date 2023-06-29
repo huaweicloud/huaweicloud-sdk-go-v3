@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取服务号详情返回体。
+// ListPubInfosResponseModel 获取服务号详情返回体。
 type ListPubInfosResponseModel struct {
 	PageInfo *Page `json:"page_info,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDeployKeyV2Response Response Object
 type DeleteDeployKeyV2Response struct {
 	Error *Error `json:"error,omitempty"`
 

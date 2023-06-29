@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateComponentRequest Request Object
 type CreateComponentRequest struct {
 
 	// 环境id。

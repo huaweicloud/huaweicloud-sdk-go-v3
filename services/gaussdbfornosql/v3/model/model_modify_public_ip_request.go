@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ModifyPublicIpRequest Request Object
 type ModifyPublicIpRequest struct {
 
 	// 实例ID。

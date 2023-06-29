@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询双活域响应体结构
+// ShowActiveActiveDomainParams 查询双活域响应体结构
 type ShowActiveActiveDomainParams struct {
 
 	// 双活域ID。

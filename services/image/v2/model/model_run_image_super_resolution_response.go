@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunImageSuperResolutionResponse Response Object
 type RunImageSuperResolutionResponse struct {
 	Result         *ImageSuperResolutionResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                                 `json:"-"`

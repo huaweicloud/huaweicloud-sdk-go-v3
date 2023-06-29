@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备接入类型（已废弃）
+// EdgeDeviceAuthInfo 设备接入类型（已废弃）
 type EdgeDeviceAuthInfo struct {
 
 	// 鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写secret字段，使用证书认证接入方式(CERTIFICATES)填写fingerprint字段，不填写auth_type默认为密钥认证接入方式(SECRET)

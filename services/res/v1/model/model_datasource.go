@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Datasource
 type Datasource struct {
 
 	// 数据源名称。

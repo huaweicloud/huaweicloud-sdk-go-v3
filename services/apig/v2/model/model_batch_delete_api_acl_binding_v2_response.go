@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteApiAclBindingV2Response Response Object
 type BatchDeleteApiAclBindingV2Response struct {
 
 	// 成功解除绑定的ACL策略数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApiGroupsQuantitiesV2Response Response Object
 type ListApiGroupsQuantitiesV2Response struct {
 
 	// 未上架的API分组个数  暂不支持

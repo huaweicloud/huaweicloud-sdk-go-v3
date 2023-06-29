@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRelationsRequest Request Object
 type CreateRelationsRequest struct {
 
 	// 要关联的工单id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启动云堡垒机实例请求对象。
+// StartCbhRequestBody 启动云堡垒机实例请求对象。
 type StartCbhRequestBody struct {
 
 	// 云堡垒机实例的ID，使用UUID格式。

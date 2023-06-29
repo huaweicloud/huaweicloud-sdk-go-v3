@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 与会者列表。
+// PageParticipant 与会者列表。
 type PageParticipant struct {
 
 	// 被邀请的与会者信息。包含预约会议时邀请的与会者和会中主持人邀请的与会者。

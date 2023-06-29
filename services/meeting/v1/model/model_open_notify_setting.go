@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网络研讨会通知配置。
+// OpenNotifySetting 网络研讨会通知配置。
 type OpenNotifySetting struct {
 
 	// 发送邮件日历是否开启。 * Y：开启 * N： 不开启

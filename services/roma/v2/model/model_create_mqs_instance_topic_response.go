@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMqsInstanceTopicResponse Response Object
 type CreateMqsInstanceTopicResponse struct {
 
 	// topic名称。

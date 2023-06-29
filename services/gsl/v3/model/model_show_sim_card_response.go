@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSimCardResponse Response Object
 type ShowSimCardResponse struct {
 
 	// sim卡id

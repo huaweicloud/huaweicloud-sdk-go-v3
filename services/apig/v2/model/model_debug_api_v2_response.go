@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DebugApiV2Response Response Object
 type DebugApiV2Response struct {
 
 	// 调试请求报文内容

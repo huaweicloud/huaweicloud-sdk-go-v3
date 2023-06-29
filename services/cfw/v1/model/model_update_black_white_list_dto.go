@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// UpdateBlackWhiteListDto
+// UpdateBlackWhiteListDto UpdateBlackWhiteListDto
 type UpdateBlackWhiteListDto struct {
 
 	// 地址方向0：源地址1：目的地址
@@ -72,13 +72,18 @@ func (c UpdateBlackWhiteListDtoListType) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateBlackWhiteListDtoListType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

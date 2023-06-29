@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaListServerSecurityGroupsRequest Request Object
 type NovaListServerSecurityGroupsRequest struct {
 
 	// 云服务器ID。

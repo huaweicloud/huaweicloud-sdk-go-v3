@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTemplateDetailRequest Request Object
 type ShowTemplateDetailRequest struct {
 
 	// 模板ID

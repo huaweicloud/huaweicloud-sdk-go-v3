@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchDistinctPrincipalsRequest Request Object
 type SearchDistinctPrincipalsRequest struct {
 	Body *SearchDistinctSharedPrincipalsReqBody `json:"body,omitempty"`
 }

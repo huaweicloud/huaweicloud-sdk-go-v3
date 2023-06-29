@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分析任务
+// AnalysisModelRequest 分析任务
 type AnalysisModelRequest struct {
 
 	// 分析任务名称，正则：\"^[a-zA-Z][a-zA-Z0-9_]{0,63}$\"

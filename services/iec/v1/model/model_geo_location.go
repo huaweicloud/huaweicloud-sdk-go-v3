@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// GeoLocation
 type GeoLocation struct {
 
 	// 地理位置信息ID。

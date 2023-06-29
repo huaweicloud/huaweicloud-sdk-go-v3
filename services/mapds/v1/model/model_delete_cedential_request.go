@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCedentialRequest Request Object
 type DeleteCedentialRequest struct {
 
 	// 待删除的key的id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// AssociateServerVirtualIpRequestBody This is a auto create Body Object
 type AssociateServerVirtualIpRequestBody struct {
 	Nic *AssociateServerVirtualIpOption `json:"nic"`
 }

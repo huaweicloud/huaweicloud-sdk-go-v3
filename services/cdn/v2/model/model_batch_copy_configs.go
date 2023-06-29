@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 原域名所有配置
+// BatchCopyConfigs 原域名所有配置
 type BatchCopyConfigs struct {
 
 	// 目标域名列表,多个域名以逗号（半角）分隔,域名数最大10个。

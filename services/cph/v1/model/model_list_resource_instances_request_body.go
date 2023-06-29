@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 查询资源实例请求体
+// ListResourceInstancesRequestBody 查询资源实例请求体
 type ListResourceInstancesRequestBody struct {
 
 	// 操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。
@@ -70,13 +70,18 @@ func (c ListResourceInstancesRequestBodyAction) MarshalJSON() ([]byte, error) {
 
 func (c *ListResourceInstancesRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

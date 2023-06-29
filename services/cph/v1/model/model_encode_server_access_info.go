@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 编码服务访问信息。
+// EncodeServerAccessInfo 编码服务访问信息。
 type EncodeServerAccessInfo struct {
 
 	// 编码服务监听端口

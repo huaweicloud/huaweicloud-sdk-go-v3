@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailOfEventTraceRequest Request Object
 type ShowDetailOfEventTraceRequest struct {
 
 	// 事件唯一标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowFunctionAsyncInvokeConfigRequest Request Object
 type ShowFunctionAsyncInvokeConfigRequest struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。

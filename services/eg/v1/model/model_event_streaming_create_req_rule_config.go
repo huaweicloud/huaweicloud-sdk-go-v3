@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件规则，包括过滤规则和转换规则
+// EventStreamingCreateReqRuleConfig 事件规则，包括过滤规则和转换规则
 type EventStreamingCreateReqRuleConfig struct {
 	Transform *TransForm `json:"transform,omitempty"`
 

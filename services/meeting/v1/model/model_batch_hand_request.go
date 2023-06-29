@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchHandRequest Request Object
 type BatchHandRequest struct {
 
 	// 会议ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateWebSocketTokenRequest Request Object
 type CreateWebSocketTokenRequest struct {
 
 	// 会议ID。

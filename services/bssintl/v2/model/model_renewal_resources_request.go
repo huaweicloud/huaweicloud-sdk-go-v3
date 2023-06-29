@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RenewalResourcesRequest Request Object
 type RenewalResourcesRequest struct {
 	Body *RenewalResourcesReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDirectoryResponse Response Object
 type CreateDirectoryResponse struct {
 
 	// 响应码

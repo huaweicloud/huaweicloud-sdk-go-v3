@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ModifyVolumeResponse Response Object
 type ModifyVolumeResponse struct {
 
 	// 任务ID，仅按需实例时会返回该参数。

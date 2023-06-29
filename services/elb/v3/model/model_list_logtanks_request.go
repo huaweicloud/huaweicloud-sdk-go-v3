@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLogtanksRequest Request Object
 type ListLogtanksRequest struct {
 
 	// 每页返回的个数。

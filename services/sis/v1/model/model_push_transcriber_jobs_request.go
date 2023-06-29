@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PushTranscriberJobsRequest Request Object
 type PushTranscriberJobsRequest struct {
 	Body *PostTranscriberJobs `json:"body,omitempty"`
 }

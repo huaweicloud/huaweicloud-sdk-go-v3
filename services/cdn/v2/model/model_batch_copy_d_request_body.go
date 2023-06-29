@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 域名复制请求体
+// BatchCopyDRequestBody 域名复制请求体
 type BatchCopyDRequestBody struct {
 	Configs *BatchCopyConfigs `json:"configs"`
 }

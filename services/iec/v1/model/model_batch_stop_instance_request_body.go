@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量关闭边缘实例请求体。
+// BatchStopInstanceRequestBody 批量关闭边缘实例请求体。
 type BatchStopInstanceRequestBody struct {
 	OsStop *BatchStop `json:"os-stop,omitempty"`
 }

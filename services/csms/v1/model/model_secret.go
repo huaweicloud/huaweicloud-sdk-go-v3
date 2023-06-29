@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 凭据对象。
+// Secret 凭据对象。
 type Secret struct {
 
 	// 凭据的资源标识符。

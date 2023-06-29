@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListReadWriteRatioResponse Response Object
 type ListReadWriteRatioResponse struct {
 
 	// DDM读写比例监控信息条数。

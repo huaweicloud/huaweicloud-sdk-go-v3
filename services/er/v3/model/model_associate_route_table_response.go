@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateRouteTableResponse Response Object
 type AssociateRouteTableResponse struct {
 	Association *Association `json:"association,omitempty"`
 

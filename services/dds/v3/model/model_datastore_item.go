@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// DatastoreItem 数据库信息。
 type DatastoreItem struct {
 
 	// 数据库引擎。

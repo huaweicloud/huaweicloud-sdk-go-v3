@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ReclaimEnterpriseMultiAccountCouponResponse Response Object
 type ReclaimEnterpriseMultiAccountCouponResponse struct {
 
 	// |参数名称：实际回收金额。| |参数的约束及描述：成功时返回|

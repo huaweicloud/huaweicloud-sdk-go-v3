@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAllScriptByNameResponse Response Object
 type ListAllScriptByNameResponse struct {
 
 	// 查询结果集合。

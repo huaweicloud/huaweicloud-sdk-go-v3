@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSignatureResponse Response Object
 type ShowSignatureResponse struct {
 
 	// 签名主键id，用于获取、修改、删除、申请激活签名的唯一标识

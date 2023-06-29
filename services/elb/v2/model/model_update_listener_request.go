@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateListenerRequest Request Object
 type UpdateListenerRequest struct {
 
 	// 监听器id

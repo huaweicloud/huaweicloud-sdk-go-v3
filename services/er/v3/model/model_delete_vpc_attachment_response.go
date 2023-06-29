@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteVpcAttachmentResponse Response Object
 type DeleteVpcAttachmentResponse struct {
 	HttpStatusCode int `json:"-"`
 }

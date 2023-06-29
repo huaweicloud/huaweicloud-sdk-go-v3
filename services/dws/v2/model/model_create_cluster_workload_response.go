@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateClusterWorkloadResponse Response Object
 type CreateClusterWorkloadResponse struct {
 
 	// 响应编码。

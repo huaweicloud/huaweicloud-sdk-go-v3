@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteAlarmRulesResponse Response Object
 type BatchDeleteAlarmRulesResponse struct {
 
 	// 成功删除的告警规则ID列表

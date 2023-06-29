@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 交通事件扩展信息
+// EventExInfo 交通事件扩展信息
 type EventExInfo struct {
 
 	// **参数说明**：识别出交通事件时所对应的交通参与者。

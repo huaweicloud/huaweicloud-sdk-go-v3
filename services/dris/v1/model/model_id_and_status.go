@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：对象的简易状态，包括ID和状态。
+// IdAndStatus **参数说明**：对象的简易状态，包括ID和状态。
 type IdAndStatus struct {
 
 	// **参数说明**：摄像头、雷达或RSU的ID。

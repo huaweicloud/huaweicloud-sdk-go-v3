@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVocabulariesResponse Response Object
 type ShowVocabulariesResponse struct {
 
 	// 热词表数。

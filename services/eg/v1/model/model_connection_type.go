@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 目标连接类型。目前支持webhook：http连接；kafka：华为云官方kafka实例
+// ConnectionType 目标连接类型。目前支持webhook：http连接；kafka：华为云官方kafka实例
 type ConnectionType struct {
 	value string
 }
@@ -40,13 +40,18 @@ func (c ConnectionType) MarshalJSON() ([]byte, error) {
 
 func (c *ConnectionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

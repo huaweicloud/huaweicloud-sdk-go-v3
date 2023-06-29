@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划完成阶段信息
+// TestPlanDetailReportStage 测试计划完成阶段信息
 type TestPlanDetailReportStage struct {
 
 	// 用例完成率,按状态统计

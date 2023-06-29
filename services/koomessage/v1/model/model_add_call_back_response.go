@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddCallBackResponse Response Object
 type AddCallBackResponse struct {
 
 	// 状态码。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRacksRequest Request Object
 type ListRacksRequest struct {
 
 	// 每页的数量

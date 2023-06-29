@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道号解绑服务号返回体。
+// UnlockPortResponseModel 通道号解绑服务号返回体。
 type UnlockPortResponseModel struct {
 
 	// 信息。

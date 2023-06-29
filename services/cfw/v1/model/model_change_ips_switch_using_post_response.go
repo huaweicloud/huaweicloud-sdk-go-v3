@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeIpsSwitchUsingPostResponse Response Object
 type ChangeIpsSwitchUsingPostResponse struct {
 
 	// trace_id

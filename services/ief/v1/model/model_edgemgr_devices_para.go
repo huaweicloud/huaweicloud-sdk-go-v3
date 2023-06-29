@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备属性
+// EdgemgrDevicesPara 终端设备属性
 type EdgemgrDevicesPara struct {
 
 	// 终端设备描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\

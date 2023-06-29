@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量处理对象详情
+// Target 批量处理对象详情
 type Target struct {
 
 	// 批量处理对象基本信息

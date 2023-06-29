@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SwitchGaussMySqlConfigurationResponse Response Object
 type SwitchGaussMySqlConfigurationResponse struct {
 
 	// 应用参数模板的任务ID。

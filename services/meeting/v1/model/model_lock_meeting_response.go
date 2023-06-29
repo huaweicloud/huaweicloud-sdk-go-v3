@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// LockMeetingResponse Response Object
 type LockMeetingResponse struct {
 	HttpStatusCode int `json:"-"`
 }

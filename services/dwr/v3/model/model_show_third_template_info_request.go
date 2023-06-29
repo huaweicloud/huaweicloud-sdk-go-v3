@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowThirdTemplateInfoRequest Request Object
 type ShowThirdTemplateInfoRequest struct {
 
 	// 三方算子模板名称。

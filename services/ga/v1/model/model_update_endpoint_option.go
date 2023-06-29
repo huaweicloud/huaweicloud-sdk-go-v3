@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新终端节点的详细信息。
+// UpdateEndpointOption 更新终端节点的详细信息。
 type UpdateEndpointOption struct {
 
 	// 终端节点权重。

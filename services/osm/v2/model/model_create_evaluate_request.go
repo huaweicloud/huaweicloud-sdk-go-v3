@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEvaluateRequest Request Object
 type CreateEvaluateRequest struct {
 
 	// 调用智能客服服务标志。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备信息
+// QueryDeviceSimplifyDto 设备信息
 type QueryDeviceSimplifyDto struct {
 
 	// 设备id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// VolumesAttached
 type VolumesAttached struct {
 
 	// 磁盘ID，格式为UUID。

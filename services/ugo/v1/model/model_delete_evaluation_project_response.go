@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEvaluationProjectResponse Response Object
 type DeleteEvaluationProjectResponse struct {
 
 	// 评估项目ID。

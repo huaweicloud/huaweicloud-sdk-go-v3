@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCheckJobsResponse Response Object
 type BatchCheckJobsResponse struct {
 
 	// 预检查响应体

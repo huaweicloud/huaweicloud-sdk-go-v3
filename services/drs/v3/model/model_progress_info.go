@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移进度信息体
+// ProgressInfo 迁移进度信息体
 type ProgressInfo struct {
 
 	// 完成进度

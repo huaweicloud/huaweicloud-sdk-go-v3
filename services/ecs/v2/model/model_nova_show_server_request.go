@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaShowServerRequest Request Object
 type NovaShowServerRequest struct {
 
 	// 云服务器ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateClusterSettingResponse Response Object
 type UpdateClusterSettingResponse struct {
 
 	// 配置修改结果

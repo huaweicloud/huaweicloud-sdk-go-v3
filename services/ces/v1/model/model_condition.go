@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警规则设置的告警策略
+// Condition 告警规则设置的告警策略
 type Condition struct {
 
 	// 告警阈值的比较条件，可以是>、=、<、>=、<=。

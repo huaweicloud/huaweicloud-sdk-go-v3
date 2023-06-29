@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApplicationAttributesResponse Response Object
 type ListApplicationAttributesResponse struct {
 
 	// 请求的唯一标识ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreatePublicipsRequest Request Object
 type BatchCreatePublicipsRequest struct {
 	Body *BatchCreatePublicipsV2RequestBody `json:"body,omitempty"`
 }

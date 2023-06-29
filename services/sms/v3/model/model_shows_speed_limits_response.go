@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowsSpeedLimitsResponse Response Object
 type ShowsSpeedLimitsResponse struct {
 
 	// 按时间段限速信息

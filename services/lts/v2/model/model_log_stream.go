@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 返回的日志流信息
+// LogStream 返回的日志流信息
 type LogStream struct {
 
 	// 创建时间

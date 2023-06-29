@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项的状态
+// WorkitemStatusStatus 工作项的状态
 type WorkitemStatusStatus struct {
 
 	// 工作项的状态id

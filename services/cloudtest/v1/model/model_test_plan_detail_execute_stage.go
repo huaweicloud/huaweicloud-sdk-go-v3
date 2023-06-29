@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划执行阶段信息
+// TestPlanDetailExecuteStage 测试计划执行阶段信息
 type TestPlanDetailExecuteStage struct {
 
 	// 缺陷个数

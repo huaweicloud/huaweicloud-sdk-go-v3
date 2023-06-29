@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPrivateNatTagsResponse Response Object
 type ShowPrivateNatTagsResponse struct {
 
 	// 请求id。

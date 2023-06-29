@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResourceBindEnterpriseProjectRequest Request Object
 type ShowResourceBindEnterpriseProjectRequest struct {
 
 	// 企业项目ID

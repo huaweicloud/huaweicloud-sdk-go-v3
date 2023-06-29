@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例空间信息。数据来源于文件系统。已用空间包含数据空间、日志空间和其他空间，其他空间包括引擎产生的临时文件等。
+// InstanceSpaceInfo 实例空间信息。数据来源于文件系统。已用空间包含数据空间、日志空间和其他空间，其他空间包括引擎产生的临时文件等。
 type InstanceSpaceInfo struct {
 
 	// 实例总空间，以字节为单位。GaussDB(for MySQL)不会返回总空间

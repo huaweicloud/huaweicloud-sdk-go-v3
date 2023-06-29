@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ReinstallBaremetalServerOsRequest Request Object
 type ReinstallBaremetalServerOsRequest struct {
 
 	// 裸金属服务器ID

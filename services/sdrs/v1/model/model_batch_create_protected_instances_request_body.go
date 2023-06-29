@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量创建保护实例请求数据接口
+// BatchCreateProtectedInstancesRequestBody 批量创建保护实例请求数据接口
 type BatchCreateProtectedInstancesRequestBody struct {
 	ProtectedInstances *BatchCreateProtectedInstancesRequestParams `json:"protected_instances"`
 }

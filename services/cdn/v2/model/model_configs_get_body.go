@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置项。
+// ConfigsGetBody 配置项。
 type ConfigsGetBody struct {
 
 	// 回源请求头配置

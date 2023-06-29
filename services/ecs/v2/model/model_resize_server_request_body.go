@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ResizeServerRequestBody This is a auto create Body Object
 type ResizeServerRequestBody struct {
 	Resize *ResizePrePaidServerOption `json:"resize"`
 

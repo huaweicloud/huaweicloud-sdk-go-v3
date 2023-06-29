@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// notebook详情
+// NotebookEntity notebook详情
 type NotebookEntity struct {
 
 	// notebook ID

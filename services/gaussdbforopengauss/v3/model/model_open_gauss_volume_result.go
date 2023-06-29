@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// volume信息。
+// OpenGaussVolumeResult volume信息。
 type OpenGaussVolumeResult struct {
 
 	// 磁盘类型。  取值如下，区分大小写：  - ULTRAHIGH，表示SSD。 - ESSD，表示急速云盘
@@ -58,13 +58,18 @@ func (c OpenGaussVolumeResultType) MarshalJSON() ([]byte, error) {
 
 func (c *OpenGaussVolumeResultType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMessageReceiveConfigResponse Response Object
 type ShowMessageReceiveConfigResponse struct {
 
 	// 接收范围（不接收消息(none)、仅接收自己操作的消息(mine)、接收全部消息(all)）

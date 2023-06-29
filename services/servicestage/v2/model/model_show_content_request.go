@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowContentRequest Request Object
 type ShowContentRequest struct {
 
 	// 授权名称。

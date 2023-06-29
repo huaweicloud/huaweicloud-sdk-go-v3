@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAuditSensitiveMasksResponse Response Object
 type ListAuditSensitiveMasksResponse struct {
 
 	// 规则列表

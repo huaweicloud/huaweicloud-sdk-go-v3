@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAttributeRequest Request Object
 type CreateAttributeRequest struct {
 	Body *AddOrModifyAttributeReq `json:"body,omitempty"`
 }

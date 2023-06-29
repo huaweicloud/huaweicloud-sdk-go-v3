@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 在IoTDA实例中要配置转发规则推送数据的资源空间和产品列表
+// IotdaContentRuleReq 在IoTDA实例中要配置转发规则推送数据的资源空间和产品列表
 type IotdaContentRuleReq struct {
 
 	// IoTDA中的资源空间Id

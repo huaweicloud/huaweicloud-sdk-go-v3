@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFunctionsResponse Response Object
 type ListFunctionsResponse struct {
 	PageInfo *PagedInfo `json:"page_info,omitempty"`
 

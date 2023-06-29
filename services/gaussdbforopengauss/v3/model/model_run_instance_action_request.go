@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunInstanceActionRequest Request Object
 type RunInstanceActionRequest struct {
 
 	// 语言

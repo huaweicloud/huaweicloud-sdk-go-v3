@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快应用模型。
+// CreatePubFastappModel 快应用模型。
 type CreatePubFastappModel struct {
 
 	// 快应用名。  > 长度范围为1-30个字符，中文占2个字符，英文占1个字符。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteShareRequest Request Object
 type DeleteShareRequest struct {
 
 	// MIME类型

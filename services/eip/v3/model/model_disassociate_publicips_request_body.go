@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解绑弹性公网IP的请求体
+// DisassociatePublicipsRequestBody 解绑弹性公网IP的请求体
 type DisassociatePublicipsRequestBody struct {
 	Publicip *DisassociatePublicipsOption `json:"publicip"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeAvailabilityZoneRequest Request Object
 type ChangeAvailabilityZoneRequest struct {
 
 	// 企业路由器实例ID

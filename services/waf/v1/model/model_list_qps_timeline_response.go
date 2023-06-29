@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListQpsTimelineResponse Response Object
 type ListQpsTimelineResponse struct {
 
 	// 安全总览的Qps时间线统计数据

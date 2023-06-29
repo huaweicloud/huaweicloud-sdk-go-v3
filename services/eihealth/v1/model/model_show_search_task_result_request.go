@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSearchTaskResultRequest Request Object
 type ShowSearchTaskResultRequest struct {
 
 	// 分子搜索任务ID

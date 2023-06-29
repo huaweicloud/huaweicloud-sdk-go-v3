@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchResourceShareInvitationResponse Response Object
 type SearchResourceShareInvitationResponse struct {
 	ResourceShareInvitations *[]ResourceShareInvitation `json:"resource_share_invitations,omitempty"`
 

@@ -1,0 +1,94 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+// LinkAttributeAndElementVo 属性id列表
+type LinkAttributeAndElementVo struct {
+
+	// 属性id列表
+	Ids []int64 `json:"ids"`
+
+	// 关联的数据标准的id
+	StandRowId int64 `json:"stand_row_id"`
+
+	// 表id
+	TableId int64 `json:"table_id"`
+
+	// 表类型:维度、事实表、汇总表、业务表(默认)
+	BizType LinkAttributeAndElementVoBizType `json:"biz_type"`
+}
+
+func (o LinkAttributeAndElementVo) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "LinkAttributeAndElementVo struct{}"
+	}
+
+	return strings.Join([]string{"LinkAttributeAndElementVo", string(data)}, " ")
+}
+
+type LinkAttributeAndElementVoBizType struct {
+	value string
+}
+
+type LinkAttributeAndElementVoBizTypeEnum struct {
+	TABLE_MODEL             LinkAttributeAndElementVoBizType
+	AGGREGATION_LOGIC_TABLE LinkAttributeAndElementVoBizType
+	FACT_LOGIC_TABLE        LinkAttributeAndElementVoBizType
+	DIMENSION               LinkAttributeAndElementVoBizType
+	DIMENSION_LOGIC_TABLE   LinkAttributeAndElementVoBizType
+}
+
+func GetLinkAttributeAndElementVoBizTypeEnum() LinkAttributeAndElementVoBizTypeEnum {
+	return LinkAttributeAndElementVoBizTypeEnum{
+		TABLE_MODEL: LinkAttributeAndElementVoBizType{
+			value: "TABLE_MODEL",
+		},
+		AGGREGATION_LOGIC_TABLE: LinkAttributeAndElementVoBizType{
+			value: "AGGREGATION_LOGIC_TABLE",
+		},
+		FACT_LOGIC_TABLE: LinkAttributeAndElementVoBizType{
+			value: "FACT_LOGIC_TABLE",
+		},
+		DIMENSION: LinkAttributeAndElementVoBizType{
+			value: "DIMENSION",
+		},
+		DIMENSION_LOGIC_TABLE: LinkAttributeAndElementVoBizType{
+			value: "DIMENSION_LOGIC_TABLE",
+		},
+	}
+}
+
+func (c LinkAttributeAndElementVoBizType) Value() string {
+	return c.value
+}
+
+func (c LinkAttributeAndElementVoBizType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LinkAttributeAndElementVoBizType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

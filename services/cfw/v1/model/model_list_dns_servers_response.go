@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDnsServersResponse Response Object
 type ListDnsServersResponse struct {
 
 	// dns服务器列表

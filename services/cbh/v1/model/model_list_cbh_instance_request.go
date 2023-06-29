@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCbhInstanceRequest Request Object
 type ListCbhInstanceRequest struct {
 }
 

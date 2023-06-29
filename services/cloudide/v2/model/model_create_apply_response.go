@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateApplyResponse Response Object
 type CreateApplyResponse struct {
 
 	// the message of join-request

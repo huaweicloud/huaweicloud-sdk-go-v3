@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteClusterCnResponse Response Object
 type BatchDeleteClusterCnResponse struct {
 
 	// 批量删除CN节点任务ID

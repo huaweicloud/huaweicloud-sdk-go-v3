@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateConsumedMessageRequest Request Object
 type ValidateConsumedMessageRequest struct {
 
 	// engine

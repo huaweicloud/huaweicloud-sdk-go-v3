@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunRecaptureDetectRequest Request Object
 type RunRecaptureDetectRequest struct {
 	Body *RecaptureDetectReq `json:"body,omitempty"`
 }

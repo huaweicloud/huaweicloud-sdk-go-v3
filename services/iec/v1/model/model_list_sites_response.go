@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSitesResponse Response Object
 type ListSitesResponse struct {
 
 	// 边缘站点总数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标分子过滤条件
+// MetricRequest3Dividend 指标分子过滤条件
 type MetricRequest3Dividend struct {
 
 	// 是否按时

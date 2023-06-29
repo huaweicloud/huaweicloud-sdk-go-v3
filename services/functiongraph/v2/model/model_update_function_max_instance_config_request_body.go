@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新函数最大实例数请求体
+// UpdateFunctionMaxInstanceConfigRequestBody 更新函数最大实例数请求体
 type UpdateFunctionMaxInstanceConfigRequestBody struct {
 
 	// 最大实例数；-1代表该函数实例数无限制，0代表该函数被禁用

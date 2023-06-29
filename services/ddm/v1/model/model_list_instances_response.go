@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstancesResponse Response Object
 type ListInstancesResponse struct {
 
 	// DDM实例的信息。

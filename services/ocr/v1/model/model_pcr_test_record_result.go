@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PcrTestRecordResult
 type PcrTestRecordResult struct {
 
 	// 姓名

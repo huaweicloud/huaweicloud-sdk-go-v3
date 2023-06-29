@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义属性任务的返回结果
+// CustomPropsResult 自定义属性任务的返回结果
 type CustomPropsResult struct {
 
 	// 自定义属性ID（API侧）

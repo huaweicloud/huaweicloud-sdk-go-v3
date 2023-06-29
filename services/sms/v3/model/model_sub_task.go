@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改任务进度
+// SubTask 修改任务进度
 type SubTask struct {
 
 	// 子任务ID

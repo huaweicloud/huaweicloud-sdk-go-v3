@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控数据列表
+// DataPointDto 监控数据列表
 type DataPointDto struct {
 
 	// 时间戳

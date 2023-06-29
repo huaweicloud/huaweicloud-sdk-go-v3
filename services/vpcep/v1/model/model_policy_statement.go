@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// policy
+// PolicyStatement policy
 type PolicyStatement struct {
 
 	// 允许或拒绝，控制访问权限

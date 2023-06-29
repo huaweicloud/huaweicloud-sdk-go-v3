@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePostPaidVaultRequest Request Object
 type CreatePostPaidVaultRequest struct {
 	Body *VaultOrderCreateReqs `json:"body,omitempty"`
 }

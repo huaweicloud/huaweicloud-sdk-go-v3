@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunOnceRequest Request Object
 type RunOnceRequest struct {
 
 	// 工作空间id

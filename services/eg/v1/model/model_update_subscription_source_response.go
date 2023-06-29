@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateSubscriptionSourceResponse Response Object
 type UpdateSubscriptionSourceResponse struct {
 
 	// 订阅源ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 维度对象结构体
+// DimChild 维度对象结构体
 type DimChild struct {
 
 	// 维度名称，当前支持维度有dcs_instance_id、dcs_cluster_redis_node、 dcs_cluster_proxy_node和dcs_memcached_instance_id。

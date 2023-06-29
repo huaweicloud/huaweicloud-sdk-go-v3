@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// EncryptDataResponse Response Object
 type EncryptDataResponse struct {
 
 	// 密钥ID。

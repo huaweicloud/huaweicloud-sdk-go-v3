@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 挂载用户信息。
+// MountUser 挂载用户信息。
 type MountUser struct {
 
 	// 用户ID(-1~65534的非0整数)

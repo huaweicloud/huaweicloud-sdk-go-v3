@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAppQuotaBoundAppsRequest Request Object
 type ListAppQuotaBoundAppsRequest struct {
 
 	// 实例ID

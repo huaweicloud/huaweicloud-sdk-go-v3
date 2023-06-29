@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PutEventsRequest Request Object
 type PutEventsRequest struct {
 
 	// 指定查询的事件通道ID

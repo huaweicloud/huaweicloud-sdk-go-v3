@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源分组信息
+// ResourceGroupInfo 资源分组信息
 type ResourceGroupInfo struct {
 
 	// 资源分组的名称，如：ResourceGroup-Test01。

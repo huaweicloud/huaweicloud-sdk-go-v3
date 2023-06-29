@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数异步配置请求体。
+// UpdateFunctionAsyncInvokeConfigRequestBody 函数异步配置请求体。
 type UpdateFunctionAsyncInvokeConfigRequestBody struct {
 
 	// 消息最大存活时长，取值范围[1，86400]，单位：秒，默认值为3600。

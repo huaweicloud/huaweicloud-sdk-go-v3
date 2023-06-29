@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuditInstanceJobsRequest Request Object
 type ListAuditInstanceJobsRequest struct {
 
 	// 资源ID

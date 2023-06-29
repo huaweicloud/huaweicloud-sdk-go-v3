@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWorkflowTriggersRequest Request Object
 type ListWorkflowTriggersRequest struct {
 
 	// 目标函数流的id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 位置信息。
+// Position3D 位置信息。
 type Position3D struct {
 
 	// **参数说明**：定义纬度数值，北纬为正，南纬为负，单位°，精度小数点后7位。

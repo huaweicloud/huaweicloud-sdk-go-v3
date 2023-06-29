@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowProjectDetailRequest Request Object
 type ShowProjectDetailRequest struct {
 
 	// 授权名称。

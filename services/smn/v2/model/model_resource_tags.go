@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源标签列表结构体。
+// ResourceTags 资源标签列表结构体。
 type ResourceTags struct {
 
 	// 键。  - 最大长度127个unicode字符。  - key不能为空。

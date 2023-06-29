@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteResSceneResponse Response Object
 type DeleteResSceneResponse struct {
 
 	// 是否成功。

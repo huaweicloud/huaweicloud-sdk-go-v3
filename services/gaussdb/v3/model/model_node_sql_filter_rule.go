@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL限流规则。
+// NodeSqlFilterRule SQL限流规则。
 type NodeSqlFilterRule struct {
 
 	// Sql限流类型。  取值范围： - SELECT - UPDATE - DELETE

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateCaseContactInfoResponse Response Object
 type UpdateCaseContactInfoResponse struct {
 
 	// 错误码

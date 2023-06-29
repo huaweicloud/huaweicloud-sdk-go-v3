@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询经过聚合计算的序列值定义
+// AggregateMetricsRequest 查询经过聚合计算的序列值定义
 type AggregateMetricsRequest struct {
 	TimeSpan *TimeSpanDt `json:"time_span,omitempty"`
 

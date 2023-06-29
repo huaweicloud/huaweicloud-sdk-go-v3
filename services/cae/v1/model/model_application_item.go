@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用信息。
+// ApplicationItem 应用信息。
 type ApplicationItem struct {
 
 	// ID。

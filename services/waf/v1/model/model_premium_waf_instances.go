@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 租户引擎实例信息
+// PremiumWafInstances 租户引擎实例信息
 type PremiumWafInstances struct {
 
 	// 引擎实例id

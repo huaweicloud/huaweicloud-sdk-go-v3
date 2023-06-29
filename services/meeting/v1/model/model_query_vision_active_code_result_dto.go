@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 激活码信息。
+// QueryVisionActiveCodeResultDto 激活码信息。
 type QueryVisionActiveCodeResultDto struct {
 
 	// 激活码唯一标识。

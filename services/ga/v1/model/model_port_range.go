@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// port range
+// PortRange port range
 type PortRange struct {
 
 	// 起始端口。

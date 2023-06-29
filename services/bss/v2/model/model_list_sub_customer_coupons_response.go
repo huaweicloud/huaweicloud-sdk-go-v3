@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSubCustomerCouponsResponse Response Object
 type ListSubCustomerCouponsResponse struct {
 
 	// 符合查询条件的总条数。

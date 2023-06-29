@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDomainSettingsRequest Request Object
 type ShowDomainSettingsRequest struct {
 
-	// 域名ID
+	// 网站域名ID
 	DomainId string `json:"domain_id"`
 }
 

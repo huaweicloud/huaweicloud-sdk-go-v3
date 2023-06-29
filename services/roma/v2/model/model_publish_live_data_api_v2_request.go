@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PublishLiveDataApiV2Request Request Object
 type PublishLiveDataApiV2Request struct {
 
 	// 实例ID

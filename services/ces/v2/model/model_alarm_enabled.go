@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警开关
+// AlarmEnabled 告警开关
 type AlarmEnabled struct {
 }
 

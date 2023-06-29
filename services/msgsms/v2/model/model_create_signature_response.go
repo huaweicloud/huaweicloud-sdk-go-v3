@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSignatureResponse Response Object
 type CreateSignatureResponse struct {
 
 	// 签名主键ID

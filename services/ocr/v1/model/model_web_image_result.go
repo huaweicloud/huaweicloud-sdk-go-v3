@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WebImageResult
 type WebImageResult struct {
 
 	// 代表检测识别出来的文字块数目。

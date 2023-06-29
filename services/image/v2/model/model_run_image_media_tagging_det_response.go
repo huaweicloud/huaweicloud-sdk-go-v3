@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunImageMediaTaggingDetResponse Response Object
 type RunImageMediaTaggingDetResponse struct {
 	Result         *ImageMediaTaggingDetResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                                 `json:"-"`

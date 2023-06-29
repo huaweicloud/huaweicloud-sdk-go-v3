@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关联
+// AssociationRequestBody 关联
 type AssociationRequestBody struct {
 
 	// 连接唯一标识

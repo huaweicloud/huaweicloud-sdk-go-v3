@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNextflowVersionRequest Request Object
 type ListNextflowVersionRequest struct {
 }
 

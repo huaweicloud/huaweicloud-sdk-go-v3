@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListValueListRequest Request Object
 type ListValueListRequest struct {
 
 	// 分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。

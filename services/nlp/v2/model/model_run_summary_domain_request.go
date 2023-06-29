@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunSummaryDomainRequest Request Object
 type RunSummaryDomainRequest struct {
 	Body *SummaryDomainReq `json:"body,omitempty"`
 }

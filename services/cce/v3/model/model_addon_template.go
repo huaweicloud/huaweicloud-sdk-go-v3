@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件模板详情-response结构体
+// AddonTemplate 插件模板详情-response结构体
 type AddonTemplate struct {
 
 	// API类型，固定值“Addon”，该值不可修改。

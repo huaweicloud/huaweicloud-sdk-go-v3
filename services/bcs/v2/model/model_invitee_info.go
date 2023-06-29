@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 被邀请方的信息
+// InviteeInfo 被邀请方的信息
 type InviteeInfo struct {
 
 	// 被邀请用户id

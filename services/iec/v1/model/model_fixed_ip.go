@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 私有IP对象
+// FixedIp 私有IP对象
 type FixedIp struct {
 
 	// 所属子网ID

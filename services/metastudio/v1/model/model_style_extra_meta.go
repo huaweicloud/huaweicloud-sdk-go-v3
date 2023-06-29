@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 风格额外信息
+// StyleExtraMeta 风格额外信息
 type StyleExtraMeta struct {
 
 	// 是否支持照片建模

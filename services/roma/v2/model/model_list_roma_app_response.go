@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRomaAppResponse Response Object
 type ListRomaAppResponse struct {
 
 	// 总的数量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户昵称
+// UpdateUserNickNameRequestV4 用户昵称
 type UpdateUserNickNameRequestV4 struct {
 
 	// 用户昵称

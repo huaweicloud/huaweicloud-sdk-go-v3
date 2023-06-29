@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateWebinarResponse Response Object
 type CreateWebinarResponse struct {
 
 	// 网络研讨会ID。

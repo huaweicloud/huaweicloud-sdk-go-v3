@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRestorableListRequest Request Object
 type ShowRestorableListRequest struct {
 
 	// 备份文件ID

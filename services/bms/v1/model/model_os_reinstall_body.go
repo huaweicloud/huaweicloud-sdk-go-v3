@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重装裸金属服务器操作系统接口请求结构体
+// OsReinstallBody 重装裸金属服务器操作系统接口请求结构体
 type OsReinstallBody struct {
 	OsReinstall *OsReinstall `json:"os-reinstall"`
 }

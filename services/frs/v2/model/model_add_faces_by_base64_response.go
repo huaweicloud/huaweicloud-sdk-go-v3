@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddFacesByBase64Response Response Object
 type AddFacesByBase64Response struct {
 
 	// 人脸库ID。 调用失败时无此字段。

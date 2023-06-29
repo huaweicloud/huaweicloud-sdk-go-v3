@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置更新接口使用的结构，现在支持kafka配置的更新
+// UpdateForwardingConfigRequestDto 配置更新接口使用的结构，现在支持kafka配置的更新
 type UpdateForwardingConfigRequestDto struct {
 	KafkaConfig *UpdateKafkaConfigRequestDto `json:"kafka_config,omitempty"`
 

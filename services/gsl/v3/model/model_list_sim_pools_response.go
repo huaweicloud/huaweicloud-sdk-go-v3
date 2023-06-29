@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSimPoolsResponse Response Object
 type ListSimPoolsResponse struct {
 
 	// 每页记录数

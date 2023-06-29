@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddServerNicsRequest Request Object
 type AddServerNicsRequest struct {
 	ServerId string `json:"server_id"`
 

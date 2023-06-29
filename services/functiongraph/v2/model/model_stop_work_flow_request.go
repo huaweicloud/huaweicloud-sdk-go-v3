@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopWorkFlowRequest Request Object
 type StopWorkFlowRequest struct {
 
 	// 函数工作流ID

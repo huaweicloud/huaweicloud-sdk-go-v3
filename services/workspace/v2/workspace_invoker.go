@@ -149,6 +149,18 @@ func (i *BatchDeleteDesktopsInvoker) Invoke() (*model.BatchDeleteDesktopsRespons
 	}
 }
 
+type BatchLogoffDesktopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchLogoffDesktopsInvoker) Invoke() (*model.BatchLogoffDesktopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchLogoffDesktopsResponse), nil
+	}
+}
+
 type BatchRunDesktopsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -233,6 +245,114 @@ func (i *ShowDesktopDetailInvoker) Invoke() (*model.ShowDesktopDetailResponse, e
 	}
 }
 
+type ListUnusedDesktopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUnusedDesktopsInvoker) Invoke() (*model.ListUnusedDesktopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUnusedDesktopsResponse), nil
+	}
+}
+
+type ListUsedDesktopInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsedDesktopInfoInvoker) Invoke() (*model.ListUsedDesktopInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsedDesktopInfoResponse), nil
+	}
+}
+
+type BatchDeleteUserGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteUserGroupsInvoker) Invoke() (*model.BatchDeleteUserGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteUserGroupsResponse), nil
+	}
+}
+
+type CreateUserGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUserGroupInvoker) Invoke() (*model.CreateUserGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUserGroupResponse), nil
+	}
+}
+
+type DeleteUserGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteUserGroupInvoker) Invoke() (*model.DeleteUserGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteUserGroupResponse), nil
+	}
+}
+
+type ListUserGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserGroupsInvoker) Invoke() (*model.ListUserGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserGroupsResponse), nil
+	}
+}
+
+type ListUsersOfGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsersOfGroupInvoker) Invoke() (*model.ListUsersOfGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsersOfGroupResponse), nil
+	}
+}
+
+type RunActionsOnGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunActionsOnGroupInvoker) Invoke() (*model.RunActionsOnGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunActionsOnGroupResponse), nil
+	}
+}
+
+type UpdateUserGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateUserGroupInvoker) Invoke() (*model.UpdateUserGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateUserGroupResponse), nil
+	}
+}
+
 type ListImagesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,6 +374,54 @@ func (i *ListItaSubJobsInvoker) Invoke() (*model.ListItaSubJobsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListItaSubJobsResponse), nil
+	}
+}
+
+type ApplyDesktopsInternetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyDesktopsInternetInvoker) Invoke() (*model.ApplyDesktopsInternetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyDesktopsInternetResponse), nil
+	}
+}
+
+type AssociateDesktopsEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateDesktopsEipInvoker) Invoke() (*model.AssociateDesktopsEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateDesktopsEipResponse), nil
+	}
+}
+
+type BatchDisassociateDesktopsEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateDesktopsEipInvoker) Invoke() (*model.BatchDisassociateDesktopsEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisassociateDesktopsEipResponse), nil
+	}
+}
+
+type ListDesktopsEipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopsEipsInvoker) Invoke() (*model.ListDesktopsEipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopsEipsResponse), nil
 	}
 }
 
@@ -353,6 +521,18 @@ func (i *UpdateTerminalsBindingDesktopsConfigInvoker) Invoke() (*model.UpdateTer
 	}
 }
 
+type BatchCreateUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateUsersInvoker) Invoke() (*model.BatchCreateUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateUsersResponse), nil
+	}
+}
+
 type BatchDeleteOtpDevicesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +614,18 @@ func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListUsersResponse), nil
+	}
+}
+
+type ResetRandomPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetRandomPasswordInvoker) Invoke() (*model.ResetRandomPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetRandomPasswordResponse), nil
 	}
 }
 

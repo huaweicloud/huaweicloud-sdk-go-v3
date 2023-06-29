@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个站点的配额
+// SiteQuotaNoLimit 单个站点的配额
 type SiteQuotaNoLimit struct {
 
 	// 配额资源列表

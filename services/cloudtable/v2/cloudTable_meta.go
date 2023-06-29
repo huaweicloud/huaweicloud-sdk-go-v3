@@ -51,21 +51,17 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 func GenReqDefForEnableComponent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/{projectId}/clusters/{clusterId}/components/{componentName}").
+		WithPath("/v2/{project_id}/clusters/{cluster_id}/components/{component_name}").
 		WithResponse(new(model.EnableComponentResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("projectId").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
-		WithJsonTag("clusterId").
+		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ComponentName").
-		WithJsonTag("componentName").
+		WithJsonTag("component_name").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -84,17 +80,13 @@ func GenReqDefForEnableComponent() *def.HttpRequestDef {
 func GenReqDefForExpandClusterComponent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/{projectId}/clusters/{clusterId}/nodes").
+		WithPath("/v2/{project_id}/clusters/{cluster_id}/nodes").
 		WithResponse(new(model.ExpandClusterComponentResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("projectId").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
-		WithJsonTag("clusterId").
+		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -133,17 +125,13 @@ func GenReqDefForListClusters() *def.HttpRequestDef {
 func GenReqDefForRebootCloudTableCluster() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/{projectId}/clusters/{clusterId}/restart").
+		WithPath("/v2/{project_id}/clusters/{cluster_id}/restart").
 		WithResponse(new(model.RebootCloudTableClusterResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("projectId").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
-		WithJsonTag("clusterId").
+		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -187,17 +175,13 @@ func GenReqDefForShowClusterDetail() *def.HttpRequestDef {
 func GenReqDefForShowClusterSetting() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{projectId}/clusters/{clusterId}/setting").
+		WithPath("/v2/{project_id}/clusters/{cluster_id}/setting").
 		WithResponse(new(model.ShowClusterSettingResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("projectId").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
-		WithJsonTag("clusterId").
+		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -212,17 +196,13 @@ func GenReqDefForShowClusterSetting() *def.HttpRequestDef {
 func GenReqDefForUpdateClusterSetting() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v2/{projectId}/clusters/{clusterId}/setting").
+		WithPath("/v2/{project_id}/clusters/{cluster_id}/setting").
 		WithResponse(new(model.UpdateClusterSettingResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("projectId").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
-		WithJsonTag("clusterId").
+		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDeviceTwinResponse Response Object
 type UpdateDeviceTwinResponse struct {
 	PropertyVisitors *ValueInPropertyVisitors `json:"property_visitors,omitempty"`
 

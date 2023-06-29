@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadFailureReportRequest Request Object
 type DownloadFailureReportRequest struct {
 
 	// 迁移项目ID。

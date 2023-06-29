@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作负载队列
+// WorkloadQueue 工作负载队列
 type WorkloadQueue struct {
 
 	// 工作负载队列名称。

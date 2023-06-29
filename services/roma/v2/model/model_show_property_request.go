@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPropertyRequest Request Object
 type ShowPropertyRequest struct {
 
 	// 实例ID

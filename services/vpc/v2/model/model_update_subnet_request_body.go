@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateSubnetRequestBody
 type UpdateSubnetRequestBody struct {
 	Subnet *UpdateSubnetOption `json:"subnet"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带分页的批量查询任务详情请求体
+// BatchQueryJobReqPage 带分页的批量查询任务详情请求体
 type BatchQueryJobReqPage struct {
 
 	// 批量查询任务详情

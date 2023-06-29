@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAppConfigsV2Request Request Object
 type ListAppConfigsV2Request struct {
 
 	// 实例ID

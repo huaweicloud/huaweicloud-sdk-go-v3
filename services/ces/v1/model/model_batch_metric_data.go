@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BatchMetricData
 type BatchMetricData struct {
 
 	// 指标单位。

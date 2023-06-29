@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteBaremetalServerTagsRequest Request Object
 type BatchDeleteBaremetalServerTagsRequest struct {
 	ServerId string `json:"server_id"`
 

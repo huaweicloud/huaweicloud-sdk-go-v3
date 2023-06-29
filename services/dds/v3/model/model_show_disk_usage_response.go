@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDiskUsageResponse Response Object
 type ShowDiskUsageResponse struct {
 
 	// 磁盘信息列表

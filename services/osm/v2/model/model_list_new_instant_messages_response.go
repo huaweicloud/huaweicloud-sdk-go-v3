@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNewInstantMessagesResponse Response Object
 type ListNewInstantMessagesResponse struct {
 
 	// 状态列表

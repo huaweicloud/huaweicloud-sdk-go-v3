@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// Show3dStructureContentResponse Response Object
 type Show3dStructureContentResponse struct {
 	HttpStatusCode int `json:"-"`
 }

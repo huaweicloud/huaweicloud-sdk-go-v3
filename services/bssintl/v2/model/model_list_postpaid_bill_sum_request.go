@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPostpaidBillSumRequest Request Object
 type ListPostpaidBillSumRequest struct {
 
 	// 账单所归属的月份。格式：YYYY-MM。

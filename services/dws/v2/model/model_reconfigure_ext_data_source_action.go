@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新数据源配置
+// ReconfigureExtDataSourceAction 更新数据源配置
 type ReconfigureExtDataSourceAction struct {
 
 	// 重启。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateOriginHostRequest Request Object
 type UpdateOriginHostRequest struct {
 
 	// 加速域名ID。获取方法请参见查询加速域名。

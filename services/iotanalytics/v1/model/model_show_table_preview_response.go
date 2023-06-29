@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTablePreviewResponse Response Object
 type ShowTablePreviewResponse struct {
 
 	// 表的列名称和类型。

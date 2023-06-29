@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建容灾演练请求数据结构
+// CreateDisasterRecoveryDrillRequestParams 创建容灾演练请求数据结构
 type CreateDisasterRecoveryDrillRequestParams struct {
 
 	// 保护组的ID。

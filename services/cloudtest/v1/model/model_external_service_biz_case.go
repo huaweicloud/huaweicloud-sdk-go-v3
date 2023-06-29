@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试用例其他扩展信息
+// ExternalServiceBizCase 测试用例其他扩展信息
 type ExternalServiceBizCase struct {
 
 	// 测试用例描述信息，长度为[0-500]位字符

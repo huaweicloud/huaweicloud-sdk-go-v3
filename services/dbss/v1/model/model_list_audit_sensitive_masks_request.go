@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuditSensitiveMasksRequest Request Object
 type ListAuditSensitiveMasksRequest struct {
 
 	// 实例ID

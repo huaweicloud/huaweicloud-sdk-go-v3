@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用例数据
+// JudgementCaseInfo 用例数据
 type JudgementCaseInfo struct {
 
 	// 用例数据输入

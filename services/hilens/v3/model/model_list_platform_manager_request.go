@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPlatformManagerRequest Request Object
 type ListPlatformManagerRequest struct {
 
 	// 订单Id，可以根据订单Id查询

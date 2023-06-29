@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// 配额资源，不包含最大最小限制值。
+// ResourceNoLimit 配额资源，不包含最大最小限制值。
 type ResourceNoLimit struct {
 
-	// 资源类别。 general_instances：普通桌面 ram：内存 cores：CPU volumes：磁盘数量 volume_gigabytes：磁盘容量 gpu_instances：GPU桌面 deh：云办公主机 users：用户 policy_groups: 策略组 Cores: CPU(配额工具使用)
+	// 资源类别。 general_instances：普通桌面 Memory：内存 cores：CPU volumes：磁盘数量 volume_gigabytes：磁盘容量 gpu_instances：GPU桌面 deh：云办公主机 users：用户 policy_groups: 策略组 Cores: CPU(配额工具使用)
 	Type *string `json:"type,omitempty"`
 
 	// 配额数

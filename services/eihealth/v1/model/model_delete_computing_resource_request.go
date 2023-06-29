@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteComputingResourceRequest Request Object
 type DeleteComputingResourceRequest struct {
 
 	// 云服务器ID

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAuthorizationDetailResponse Response Object
 type ShowAuthorizationDetailResponse struct {
 
 	// 授权id

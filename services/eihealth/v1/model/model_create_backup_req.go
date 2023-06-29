@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据归档请求参数
+// CreateBackupReq 数据归档请求参数
 type CreateBackupReq struct {
 
 	// 归档描述，最大长度为1000

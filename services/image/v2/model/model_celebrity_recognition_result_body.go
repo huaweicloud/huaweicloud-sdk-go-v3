@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CelebrityRecognitionResultBody
 type CelebrityRecognitionResultBody struct {
 
 	// 置信度，取值范围 0-1。

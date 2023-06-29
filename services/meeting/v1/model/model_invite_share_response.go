@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InviteShareResponse Response Object
 type InviteShareResponse struct {
 	HttpStatusCode int `json:"-"`
 }

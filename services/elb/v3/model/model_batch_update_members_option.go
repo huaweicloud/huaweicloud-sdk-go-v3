@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量添加member请求参数。
+// BatchUpdateMembersOption 批量添加member请求参数。
 type BatchUpdateMembersOption struct {
 
 	// 后端服务器端口

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 速率参数
+// SpeedLimitlJson 速率参数
 type SpeedLimitlJson struct {
 
 	// 时间段开始时间，格式：XX:XX。

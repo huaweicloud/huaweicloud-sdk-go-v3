@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建DNAT规则的请求体。
+// CreateNatGatewayDnatOption 创建DNAT规则的请求体。
 type CreateNatGatewayDnatOption struct {
 
 	// DNAT规则的描述，长度限制为255。

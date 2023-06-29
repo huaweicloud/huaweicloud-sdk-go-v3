@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作用户返回体
+// UserIdRsp 操作用户返回体
 type UserIdRsp struct {
 
 	// 用户id

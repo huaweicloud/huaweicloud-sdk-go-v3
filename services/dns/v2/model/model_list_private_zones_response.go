@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPrivateZonesResponse Response Object
 type ListPrivateZonesResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 

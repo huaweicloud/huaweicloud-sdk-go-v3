@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 策略时间调度规则
+// BackupTriggerRequestInfo 策略时间调度规则
 type BackupTriggerRequestInfo struct {
 	Properties *BackupTriggerPropertiesRequestInfo `json:"properties"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DetachProtectedInstanceReplicationRequest Request Object
 type DetachProtectedInstanceReplicationRequest struct {
 
 	// 保护实例的ID。

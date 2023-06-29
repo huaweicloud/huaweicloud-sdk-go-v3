@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新保护实例名称请求体
+// UpdateProtectedInstanceNameRequestBody 更新保护实例名称请求体
 type UpdateProtectedInstanceNameRequestBody struct {
 	ProtectedInstance *UpdateProtectedInstanceNameRequestParams `json:"protected_instance"`
 }

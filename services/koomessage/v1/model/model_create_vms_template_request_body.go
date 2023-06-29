@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 新建智能信息基础版模板的请求消息体。
+// CreateVmsTemplateRequestBody 新建智能信息基础版模板的请求消息体。
 type CreateVmsTemplateRequestBody struct {
 
 	// 智能信息基础版模板有效期。单位：天，必须取整，最长9999天。

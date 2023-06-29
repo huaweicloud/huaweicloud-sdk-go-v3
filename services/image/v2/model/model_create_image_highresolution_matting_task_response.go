@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateImageHighresolutionMattingTaskResponse Response Object
 type CreateImageHighresolutionMattingTaskResponse struct {
 
 	// 任务唯一标识

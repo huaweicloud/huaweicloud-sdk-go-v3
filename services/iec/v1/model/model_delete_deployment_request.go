@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDeploymentRequest Request Object
 type DeleteDeploymentRequest struct {
 
 	// 部署计划ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据加工详情
+// DataTransformationInfo 数据加工详情
 type DataTransformationInfo struct {
 	TransformationInfo *TransformationInfo `json:"transformation_info,omitempty"`
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 批量操作资源标签的请求体
+// BatchDeletePublicipTagsRequestBody 批量操作资源标签的请求体
 type BatchDeletePublicipTagsRequestBody struct {
 
 	// 标签列表
@@ -54,13 +54,18 @@ func (c BatchDeletePublicipTagsRequestBodyAction) MarshalJSON() ([]byte, error) 
 
 func (c *BatchDeletePublicipTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

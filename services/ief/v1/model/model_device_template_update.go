@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备模板
+// DeviceTemplateUpdate 设备模板
 type DeviceTemplateUpdate struct {
 	DeviceTemplate *DeviceTemplateUpdateDetail `json:"device_template"`
 }

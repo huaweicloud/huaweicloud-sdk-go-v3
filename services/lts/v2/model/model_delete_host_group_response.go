@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteHostGroupResponse Response Object
 type DeleteHostGroupResponse struct {
 
 	// 主机组详细信息

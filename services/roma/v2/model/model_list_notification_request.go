@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNotificationRequest Request Object
 type ListNotificationRequest struct {
 
 	// 实例ID

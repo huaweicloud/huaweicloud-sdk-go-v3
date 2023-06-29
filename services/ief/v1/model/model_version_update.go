@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板版本配置
+// VersionUpdate 应用模板版本配置
 type VersionUpdate struct {
 
 	// 环境变量

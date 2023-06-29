@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetectLiveByUrlIntlResponse Response Object
 type DetectLiveByUrlIntlResponse struct {
 	VideoResult *LiveDetectRespVideoresult `json:"video-result,omitempty"`
 

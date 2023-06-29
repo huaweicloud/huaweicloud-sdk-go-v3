@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// JobSpec
 type JobSpec struct {
 
 	// 任务的类型，例：“CreateCluster”- 创建集群。

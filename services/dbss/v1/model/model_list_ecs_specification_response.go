@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEcsSpecificationResponse Response Object
 type ListEcsSpecificationResponse struct {
 
 	// ecs规格集合

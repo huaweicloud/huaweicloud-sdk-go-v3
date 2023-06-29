@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePublicipRequest Request Object
 type DeletePublicipRequest struct {
 
 	// 弹性公网IP唯一标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddReadonlyNodeRequest Request Object
 type AddReadonlyNodeRequest struct {
 
 	// 实例ID。

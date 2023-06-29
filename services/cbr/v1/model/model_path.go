@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Path
 type Path struct {
 
 	// 路径ID

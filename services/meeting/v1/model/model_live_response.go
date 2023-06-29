@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// LiveResponse Response Object
 type LiveResponse struct {
 	HttpStatusCode int `json:"-"`
 }

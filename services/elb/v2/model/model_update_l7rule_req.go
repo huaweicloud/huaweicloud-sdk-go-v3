@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// L7转发策略请求实体
+// UpdateL7ruleReq L7转发策略请求实体
 type UpdateL7ruleReq struct {
 
 	// 转发匹配方式： type为HOST_NAME时，取值范围：EQUAL_TO：精确匹配；t ype为PATH时，取值范围：REGEX：正则匹配；STARTS_WITH：前缀匹配；EQUAL_TO：精确匹配。

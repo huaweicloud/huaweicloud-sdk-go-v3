@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeEngineInstanceResponse Response Object
 type ResizeEngineInstanceResponse struct {
 
 	// 规格变更任务ID。

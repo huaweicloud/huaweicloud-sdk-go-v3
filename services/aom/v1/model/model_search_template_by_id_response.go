@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchTemplateByIdResponse Response Object
 type SearchTemplateByIdResponse struct {
 	ApproveInfo *ApproveInfo `json:"approve_info,omitempty"`
 

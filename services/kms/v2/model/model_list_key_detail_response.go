@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListKeyDetailResponse Response Object
 type ListKeyDetailResponse struct {
 	KeyInfo        *KeyDetails `json:"key_info,omitempty"`
 	HttpStatusCode int         `json:"-"`

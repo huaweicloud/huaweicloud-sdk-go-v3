@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ParseTemplateVariablesResponse Response Object
 type ParseTemplateVariablesResponse struct {
 
 	// 解析模板得到的参数列表

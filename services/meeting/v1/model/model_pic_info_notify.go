@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子画面信息。
+// PicInfoNotify 子画面信息。
 type PicInfoNotify struct {
 
 	// 多画面中每个画面的编号，编号从1开始。

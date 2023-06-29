@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckNeedVerifyResponse Response Object
 type CheckNeedVerifyResponse struct {
 
 	// 是否需要验证

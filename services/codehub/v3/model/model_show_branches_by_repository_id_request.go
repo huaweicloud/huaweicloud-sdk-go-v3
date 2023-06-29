@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBranchesByRepositoryIdRequest Request Object
 type ShowBranchesByRepositoryIdRequest struct {
 
 	// 仓库的主键id

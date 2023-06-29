@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CPI结果条目
+// CpiResultItem CPI结果条目
 type CpiResultItem struct {
 
 	// 分子SMILES表达式

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改图片信息的请求体
+// RunModifyPictureReq 修改图片信息的请求体
 type RunModifyPictureReq struct {
 
 	// 图片URL路径，作为图片库中索引图片的ID。

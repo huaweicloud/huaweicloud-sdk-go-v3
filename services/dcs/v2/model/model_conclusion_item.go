@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 诊断结论
+// ConclusionItem 诊断结论
 type ConclusionItem struct {
 
 	// 结论id

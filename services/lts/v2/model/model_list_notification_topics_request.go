@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNotificationTopicsRequest Request Object
 type ListNotificationTopicsRequest struct {
 
 	// 查询游标，初始传入0，后续从上一次的返回值中获取

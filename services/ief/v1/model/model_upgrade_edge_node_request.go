@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpgradeEdgeNodeRequest Request Object
 type UpgradeEdgeNodeRequest struct {
 
 	// 边缘节点ID

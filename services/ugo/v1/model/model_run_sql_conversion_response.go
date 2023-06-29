@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSqlConversionResponse Response Object
 type RunSqlConversionResponse struct {
 
 	// 是否支持SQL语句转换。

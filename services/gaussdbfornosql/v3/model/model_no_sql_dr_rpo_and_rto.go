@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 容灾实例切换的RPO和RTO指标
+// NoSqlDrRpoAndRto 容灾实例切换的RPO和RTO指标
 type NoSqlDrRpoAndRto struct {
 
 	// 场景，枚举值   FAILOVER 强制切换;    SWITCHOVER 主备倒换
@@ -61,13 +61,18 @@ func (c NoSqlDrRpoAndRtoScene) MarshalJSON() ([]byte, error) {
 
 func (c *NoSqlDrRpoAndRtoScene) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

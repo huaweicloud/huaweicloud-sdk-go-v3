@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRestoreDatabasesResponse Response Object
 type ListRestoreDatabasesResponse struct {
 
 	// 数据库总数。

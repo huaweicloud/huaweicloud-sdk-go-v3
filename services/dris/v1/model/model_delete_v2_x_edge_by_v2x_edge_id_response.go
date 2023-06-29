@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteV2XEdgeByV2xEdgeIdResponse Response Object
 type DeleteV2XEdgeByV2xEdgeIdResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

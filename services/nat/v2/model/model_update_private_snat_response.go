@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePrivateSnatResponse Response Object
 type UpdatePrivateSnatResponse struct {
 
 	// 请求ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBalanceStatusRequest Request Object
 type ShowBalanceStatusRequest struct {
 
 	// 语言

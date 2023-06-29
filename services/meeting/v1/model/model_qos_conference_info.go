@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议QoS告警信息。
+// QosConferenceInfo 会议QoS告警信息。
 type QosConferenceInfo struct {
 
 	// 会议UUID。

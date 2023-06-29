@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListStacksRequest Request Object
 type ListStacksRequest struct {
 
 	// 技术栈标签。默认为空值，查询全部。 例如：Java,CPP,GO,Python;可查询多个标签

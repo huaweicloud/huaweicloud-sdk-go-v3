@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 路由表详情
+// Routetable 路由表详情
 type Routetable struct {
 
 	// 路由表ID  取值范围：标准UUID

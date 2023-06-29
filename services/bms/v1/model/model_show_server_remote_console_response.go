@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowServerRemoteConsoleResponse Response Object
 type ShowServerRemoteConsoleResponse struct {
 	RemoteConsole  *ServerRemoteConsole `json:"remote_console,omitempty"`
 	HttpStatusCode int                  `json:"-"`

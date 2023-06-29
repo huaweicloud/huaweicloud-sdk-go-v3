@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询属性值请求
+// GetPropertyRequest 查询属性值请求
 type GetPropertyRequest struct {
 
 	// 对property按指定tags标签进行过滤查询，填入设备标签与标签值，不可为空，例如 {\"deviceId\": \"id0001\"}

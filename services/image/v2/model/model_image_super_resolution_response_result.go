@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图像超分结果信息
+// ImageSuperResolutionResponseResult 图像超分结果信息
 type ImageSuperResolutionResponseResult struct {
 
 	// 超分结果图片的base64码

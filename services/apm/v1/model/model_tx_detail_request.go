@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取URL跟踪视图详情入参。
+// TxDetailRequest 获取URL跟踪视图详情入参。
 type TxDetailRequest struct {
 
 	// 事务名称。

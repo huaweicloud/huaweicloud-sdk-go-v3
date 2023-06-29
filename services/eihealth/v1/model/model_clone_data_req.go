@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 复制数据请求体
+// CloneDataReq 复制数据请求体
 type CloneDataReq struct {
 
 	// 执行策略（true：全部覆盖，false：全部跳过，默认为true）

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥。
+// UpdateSecret 密钥。
 type UpdateSecret struct {
 	Secret *UpdateSecretDetail `json:"secret"`
 }

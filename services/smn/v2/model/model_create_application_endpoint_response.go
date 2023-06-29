@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateApplicationEndpointResponse Response Object
 type CreateApplicationEndpointResponse struct {
 
 	// 请求的唯一标识ID。

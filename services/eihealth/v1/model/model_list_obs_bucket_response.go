@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListObsBucketResponse Response Object
 type ListObsBucketResponse struct {
 
 	// 桶个数

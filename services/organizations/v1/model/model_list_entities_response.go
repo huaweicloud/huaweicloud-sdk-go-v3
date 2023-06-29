@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEntitiesResponse Response Object
 type ListEntitiesResponse struct {
 
 	// 组织中的根、组织单元和帐号的列表。

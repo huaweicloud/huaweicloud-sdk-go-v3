@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadProductResponse Response Object
 type UploadProductResponse struct {
 
 	// 导入成功的产品数

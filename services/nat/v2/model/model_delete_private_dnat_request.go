@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePrivateDnatRequest Request Object
 type DeletePrivateDnatRequest struct {
 
 	// DNAT规则的ID。

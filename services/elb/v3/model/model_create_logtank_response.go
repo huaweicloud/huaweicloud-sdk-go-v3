@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLogtankResponse Response Object
 type CreateLogtankResponse struct {
 	Logtank *Logtank `json:"logtank,omitempty"`
 

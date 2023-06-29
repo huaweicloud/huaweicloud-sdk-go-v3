@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddWorkloadQueueResponse Response Object
 type AddWorkloadQueueResponse struct {
 
 	// 响应编码。

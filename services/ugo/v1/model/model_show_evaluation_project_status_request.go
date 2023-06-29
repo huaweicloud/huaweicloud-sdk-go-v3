@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEvaluationProjectStatusRequest Request Object
 type ShowEvaluationProjectStatusRequest struct {
 
 	// 评估项目ID。

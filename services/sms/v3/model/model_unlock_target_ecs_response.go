@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnlockTargetEcsResponse Response Object
 type UnlockTargetEcsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

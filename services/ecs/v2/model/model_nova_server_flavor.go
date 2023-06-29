@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaServerFlavor
 type NovaServerFlavor struct {
 
 	// 云服务器类型ID。  微版本2.47后不支持。

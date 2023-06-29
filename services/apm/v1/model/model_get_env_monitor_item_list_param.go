@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询特定环境下监控项参数模型。
+// GetEnvMonitorItemListParam 查询特定环境下监控项参数模型。
 type GetEnvMonitorItemListParam struct {
 
 	// 环境id。

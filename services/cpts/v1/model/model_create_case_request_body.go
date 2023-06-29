@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateCaseRequestBody
+// CreateCaseRequestBody CreateCaseRequestBody
 type CreateCaseRequestBody struct {
 
 	// name

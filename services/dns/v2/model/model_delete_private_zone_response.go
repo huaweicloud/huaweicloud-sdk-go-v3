@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeletePrivateZoneResponse Response Object
 type DeletePrivateZoneResponse struct {
 
 	// zone的ID，uuid形式的一个资源标识。

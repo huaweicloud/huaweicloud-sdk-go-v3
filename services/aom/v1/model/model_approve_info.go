@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 审批信息
+// ApproveInfo 审批信息
 type ApproveInfo struct {
 
 	// 审批人主题选择。

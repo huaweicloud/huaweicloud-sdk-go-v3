@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDocWatermarkByAddressResponse Response Object
 type CreateDocWatermarkByAddressResponse struct {
 
 	// 当前项目所在region的id，如：xx-xx-1。

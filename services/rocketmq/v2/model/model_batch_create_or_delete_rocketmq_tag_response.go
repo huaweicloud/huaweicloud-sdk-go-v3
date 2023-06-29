@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateOrDeleteRocketmqTagResponse Response Object
 type BatchCreateOrDeleteRocketmqTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

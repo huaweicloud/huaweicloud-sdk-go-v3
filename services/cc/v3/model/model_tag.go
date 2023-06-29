@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 一个key/value键值对
+// Tag 一个key/value键值对
 type Tag struct {
 
 	// 键

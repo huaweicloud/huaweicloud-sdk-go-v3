@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateClusterDnsRequest Request Object
 type CreateClusterDnsRequest struct {
 
 	// 集群的ID

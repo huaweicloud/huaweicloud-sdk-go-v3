@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSignatureDetailsRequest Request Object
 type ListSignatureDetailsRequest struct {
 
 	// 应用名称

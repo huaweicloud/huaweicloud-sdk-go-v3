@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPublicipRequest Request Object
 type ShowPublicipRequest struct {
 
 	// 弹性公网IP唯一标识

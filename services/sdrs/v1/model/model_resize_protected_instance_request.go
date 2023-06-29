@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeProtectedInstanceRequest Request Object
 type ResizeProtectedInstanceRequest struct {
 
 	// 保护实例的ID。

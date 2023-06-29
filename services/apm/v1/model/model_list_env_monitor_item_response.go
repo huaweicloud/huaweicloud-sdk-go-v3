@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnvMonitorItemResponse Response Object
 type ListEnvMonitorItemResponse struct {
 
 	// 监控项列表。

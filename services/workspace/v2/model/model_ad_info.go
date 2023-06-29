@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 域信息。
+// AdInfo 域信息。
 type AdInfo struct {
 
 	// 域类型。 - LITE_AS：本地认证。 - LOCAL_AD：本地AD。
@@ -87,13 +87,18 @@ func (c AdInfoDomainType) MarshalJSON() ([]byte, error) {
 
 func (c *AdInfoDomainType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

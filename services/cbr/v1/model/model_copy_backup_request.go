@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CopyBackupRequest Request Object
 type CopyBackupRequest struct {
 
 	// 复制的备份ID

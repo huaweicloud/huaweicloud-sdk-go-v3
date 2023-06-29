@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIpNumRequirementResponse Response Object
 type ShowIpNumRequirementResponse struct {
 
 	// 消耗的IP个数

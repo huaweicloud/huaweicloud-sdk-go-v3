@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据源信息
+// ShowAlertRspDatasource 数据源信息
 type ShowAlertRspDatasource struct {
 
 	// current page count

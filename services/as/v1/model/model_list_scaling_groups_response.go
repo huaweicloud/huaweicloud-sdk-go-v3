@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListScalingGroupsResponse Response Object
 type ListScalingGroupsResponse struct {
 
 	// 总记录数

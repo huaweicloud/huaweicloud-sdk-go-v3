@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFlowLogsResponse Response Object
 type ListFlowLogsResponse struct {
 	Data           *HttpQueryCfwFlowLogsResponseDtoData `json:"data,omitempty"`
 	HttpStatusCode int                                  `json:"-"`

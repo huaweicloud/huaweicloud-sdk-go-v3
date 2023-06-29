@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBackendInstancesV2Request Request Object
 type ListBackendInstancesV2Request struct {
 
 	// 实例ID

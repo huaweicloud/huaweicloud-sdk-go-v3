@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnableDisableEdgeNodesRequest Request Object
 type EnableDisableEdgeNodesRequest struct {
 
 	// 节点ID

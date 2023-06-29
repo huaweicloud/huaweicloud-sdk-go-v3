@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新异步任务响应体。
+// AsyncUpdateJobResp 更新异步任务响应体。
 type AsyncUpdateJobResp struct {
 
 	// 任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSqlAlarmRulesRequest Request Object
 type ListSqlAlarmRulesRequest struct {
 }
 

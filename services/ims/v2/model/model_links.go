@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 视图链接。
+// Links 视图链接。
 type Links struct {
 
 	// 域名

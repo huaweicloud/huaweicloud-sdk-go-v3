@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMfaResponse Response Object
 type ListMfaResponse struct {
 
 	// mfa方式个数

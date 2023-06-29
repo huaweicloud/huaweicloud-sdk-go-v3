@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPartnersCasesPrivilegeResponse Response Object
 type ShowPartnersCasesPrivilegeResponse struct {
 
 	// 是否有权限

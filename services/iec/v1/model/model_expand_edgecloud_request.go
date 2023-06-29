@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandEdgecloudRequest Request Object
 type ExpandEdgecloudRequest struct {
 
 	// 部署计划ID。  约束： - 该接口只能执行指定边缘业务ID（id）创建的部署计划。

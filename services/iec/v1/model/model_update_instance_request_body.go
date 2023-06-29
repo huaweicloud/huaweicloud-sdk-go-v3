@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新边缘实例请求体
+// UpdateInstanceRequestBody 更新边缘实例请求体
 type UpdateInstanceRequestBody struct {
 	Server *UpdateInstanceOption `json:"server"`
 }

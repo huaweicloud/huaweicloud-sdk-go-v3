@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRelationRequest Request Object
 type DeleteRelationRequest struct {
 
 	// 被接触关联的工单id

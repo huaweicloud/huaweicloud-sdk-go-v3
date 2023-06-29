@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源数量详情。
+// Statistic 资源数量详情。
 type Statistic struct {
 
 	// 资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。

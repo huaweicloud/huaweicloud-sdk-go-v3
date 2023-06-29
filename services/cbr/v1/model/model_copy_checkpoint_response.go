@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopyCheckpointResponse Response Object
 type CopyCheckpointResponse struct {
 	Replication    *CheckpointReplicateRespBody `json:"replication,omitempty"`
 	HttpStatusCode int                          `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业。
+// Job 作业。
 type Job struct {
 
 	// 仅在响应返回。作业ID。

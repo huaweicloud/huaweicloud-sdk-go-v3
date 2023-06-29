@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPublicBorderGroupsResponse Response Object
 type ListPublicBorderGroupsResponse struct {
 
 	// 功能说明：公共池分组对象

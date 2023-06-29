@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 专属分布式存储池详情。
+// DssPool 专属分布式存储池详情。
 type DssPool struct {
 
 	// 专属分布式存储池名称。

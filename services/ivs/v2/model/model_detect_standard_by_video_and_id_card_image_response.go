@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetectStandardByVideoAndIdCardImageResponse Response Object
 type DetectStandardByVideoAndIdCardImageResponse struct {
 	Meta *Meta `json:"meta,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddSubsetsToGatewayResponse Response Object
 type AddSubsetsToGatewayResponse struct {
 	Body           *[]AddSubsetsToGatewayResponseBody `json:"body,omitempty"`
 	HttpStatusCode int                                `json:"-"`

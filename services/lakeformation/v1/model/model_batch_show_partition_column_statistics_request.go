@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchShowPartitionColumnStatisticsRequest Request Object
 type BatchShowPartitionColumnStatisticsRequest struct {
 
 	// 实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InstallInstanceEipRequest Request Object
 type InstallInstanceEipRequest struct {
 
 	// 云堡垒机实例ID，使用UUID格式表示。

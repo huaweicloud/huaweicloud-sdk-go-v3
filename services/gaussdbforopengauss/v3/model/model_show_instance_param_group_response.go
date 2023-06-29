@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceParamGroupResponse Response Object
 type ShowInstanceParamGroupResponse struct {
 
 	// 引擎版本。

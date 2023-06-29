@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储库批量修改属性
+// VaultBatchUpdate 存储库批量修改属性
 type VaultBatchUpdate struct {
 
 	// 存储库smn消息通知开关

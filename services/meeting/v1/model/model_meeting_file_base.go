@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议纪要文件信息。
+// MeetingFileBase 会议纪要文件信息。
 type MeetingFileBase struct {
 
 	// 会议纪要文件码。

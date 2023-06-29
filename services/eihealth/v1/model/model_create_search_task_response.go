@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSearchTaskResponse Response Object
 type CreateSearchTaskResponse struct {
 
 	// 分子搜索任务ID

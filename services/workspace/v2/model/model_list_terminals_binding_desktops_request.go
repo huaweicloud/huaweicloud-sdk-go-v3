@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTerminalsBindingDesktopsRequest Request Object
 type ListTerminalsBindingDesktopsRequest struct {
 
 	// 桌面名。

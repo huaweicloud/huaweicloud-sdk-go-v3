@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateRouterRequest Request Object
 type AssociateRouterRequest struct {
 
 	// 关联VPC的Zone ID。

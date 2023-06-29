@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceStatusInfoResponse Response Object
 type ShowInstanceStatusInfoResponse struct {
 	Result *InstanceStatusResponse `json:"result,omitempty"`
 

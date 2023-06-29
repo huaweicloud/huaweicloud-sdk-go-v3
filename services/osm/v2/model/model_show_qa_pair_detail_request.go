@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowQaPairDetailRequest Request Object
 type ShowQaPairDetailRequest struct {
 
 	// 调用智能客服服务标志。

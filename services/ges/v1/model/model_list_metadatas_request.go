@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMetadatasRequest Request Object
 type ListMetadatasRequest struct {
 
 	// 每页资源数量的最大值，默认为10。

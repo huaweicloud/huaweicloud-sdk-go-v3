@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 不同键值对应的时间线
+// StatisticsTimelineItem 不同键值对应的时间线
 type StatisticsTimelineItem struct {
 
 	// 键值，包括请求总量（ACCESS）、Bot攻击防护（CRAWLER）、攻击总量（ATTACK）、Web基础防护（WEB_ATTACK）、精准防护（PRECISE）、CC攻击防护（CC）

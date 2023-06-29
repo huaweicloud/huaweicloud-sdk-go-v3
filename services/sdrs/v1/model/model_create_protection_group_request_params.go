@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建保护组请求体结构
+// CreateProtectionGroupRequestParams 创建保护组请求体结构
 type CreateProtectionGroupRequestParams struct {
 
 	// 指定保护组的名称，最大支持长度为64个字节。只包含中文字符、英文字母（a～ｚ、Ａ～Ｚ）、数字（０~９）、小数点（．）、下划线（_）、中划线（-）。
@@ -69,13 +69,18 @@ func (c CreateProtectionGroupRequestParamsDrType) MarshalJSON() ([]byte, error) 
 
 func (c *CreateProtectionGroupRequestParamsDrType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

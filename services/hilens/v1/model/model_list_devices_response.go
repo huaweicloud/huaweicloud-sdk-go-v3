@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDevicesResponse Response Object
 type ListDevicesResponse struct {
 
 	// 满足条件的设备总数

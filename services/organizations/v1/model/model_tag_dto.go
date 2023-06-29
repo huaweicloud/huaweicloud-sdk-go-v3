@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义标签键值对。
+// TagDto 自定义标签键值对。
 type TagDto struct {
 
 	// 标签键的密钥标识符或名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PutOfficialEventsRequest Request Object
 type PutOfficialEventsRequest struct {
 
 	// 事件源名称

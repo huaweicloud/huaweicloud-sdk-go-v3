@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新资产请求体。
+// UpdateDigitalAssetRequestBody 更新资产请求体。
 type UpdateDigitalAssetRequestBody struct {
 
 	// 资产名称。
@@ -107,13 +107,18 @@ func (c UpdateDigitalAssetRequestBodyAssetType) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateDigitalAssetRequestBodyAssetType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -149,13 +154,18 @@ func (c UpdateDigitalAssetRequestBodyAssetState) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateDigitalAssetRequestBodyAssetState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

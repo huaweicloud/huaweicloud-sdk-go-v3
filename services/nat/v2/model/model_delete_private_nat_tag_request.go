@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePrivateNatTagRequest Request Object
 type DeletePrivateNatTagRequest struct {
 
 	// 标签key。

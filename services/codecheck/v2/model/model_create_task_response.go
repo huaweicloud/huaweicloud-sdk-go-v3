@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTaskResponse Response Object
 type CreateTaskResponse struct {
 
 	// 检查任务id

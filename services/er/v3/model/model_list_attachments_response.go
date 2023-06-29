@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAttachmentsResponse Response Object
 type ListAttachmentsResponse struct {
 
 	// 连接列表

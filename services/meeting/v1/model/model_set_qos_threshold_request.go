@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetQosThresholdRequest Request Object
 type SetQosThresholdRequest struct {
 
 	// 阈值类型： * AUDIO：音频相关阈值 * VIDEO：视频相关阈值 * SCREEN：屏幕共享相关阈值 * CPU：CPU相关阈值
@@ -65,13 +65,18 @@ func (c SetQosThresholdRequestThresholdType) MarshalJSON() ([]byte, error) {
 
 func (c *SetQosThresholdRequestThresholdType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 编辑网路研讨会议。
+// OpenEditConfReq 编辑网路研讨会议。
 type OpenEditConfReq struct {
 
 	// 网络研讨会ID。

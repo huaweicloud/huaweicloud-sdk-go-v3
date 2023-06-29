@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建健康检查请求参数。
+// CreateHealthMonitorOption 创建健康检查请求参数。
 type CreateHealthMonitorOption struct {
 
 	// 健康检查的管理状态。  取值： - true：表示开启健康检查，默认为true。 - false表示关闭健康检查。

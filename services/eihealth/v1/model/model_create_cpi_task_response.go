@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCpiTaskResponse Response Object
 type CreateCpiTaskResponse struct {
 
 	// CPI任务ID

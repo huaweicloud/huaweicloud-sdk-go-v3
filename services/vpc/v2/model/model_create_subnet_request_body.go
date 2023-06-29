@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建子网对象
+// CreateSubnetRequestBody 创建子网对象
 type CreateSubnetRequestBody struct {
 	Subnet *CreateSubnetOption `json:"subnet"`
 }

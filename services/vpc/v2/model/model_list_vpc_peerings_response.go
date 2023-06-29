@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcPeeringsResponse Response Object
 type ListVpcPeeringsResponse struct {
 
 	// peering对象列表

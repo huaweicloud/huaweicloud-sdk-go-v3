@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FuncCode结构返回体。
+// FuncCode FuncCode结构返回体。
 type FuncCode struct {
 
 	// 函数代码，如果不为空必须进行base64编码，为空时使用默认的代码。

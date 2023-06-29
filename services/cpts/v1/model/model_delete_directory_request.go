@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDirectoryRequest Request Object
 type DeleteDirectoryRequest struct {
 
 	// 目录id

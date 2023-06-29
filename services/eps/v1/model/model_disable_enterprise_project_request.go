@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisableEnterpriseProjectRequest Request Object
 type DisableEnterpriseProjectRequest struct {
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 

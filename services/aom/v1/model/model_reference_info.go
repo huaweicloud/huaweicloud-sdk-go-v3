@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 脚本版本或文件包版本引用的作业详情。
+// ReferenceInfo 脚本版本或文件包版本引用的作业详情。
 type ReferenceInfo struct {
 
 	// 作业ID。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 实例规格详情。
+// RestoreNewInstanceFlavorOption 实例规格详情。
 type RestoreNewInstanceFlavorOption struct {
 
 	// 节点类型。 取值：   - 集群实例包含mongos、shard和config节点，各节点下该参数取值分别为“mongos”、“shard”和“config”。   - 副本集实例下该参数取值为“replica”。   - 单节点实例下该参数取值为“single”。
@@ -76,13 +76,18 @@ func (c RestoreNewInstanceFlavorOptionType) MarshalJSON() ([]byte, error) {
 
 func (c *RestoreNewInstanceFlavorOptionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

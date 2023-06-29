@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePolicyRequest Request Object
 type DeletePolicyRequest struct {
 
 	// 策略的唯一标识符（ID）。

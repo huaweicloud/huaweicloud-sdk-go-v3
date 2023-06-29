@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+// NodeTypeElasticVolumeSpecs 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
 type NodeTypeElasticVolumeSpecs struct {
 
 	// 云盘存储类型。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量更新迁移用户请求体
+// BatchUpdateSrcUserReq 批量更新迁移用户请求体
 type BatchUpdateSrcUserReq struct {
 
 	// 批量更新迁移用户请求列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowExerciseDetailResponse Response Object
 type ShowExerciseDetailResponse struct {
 
 	// 习题id

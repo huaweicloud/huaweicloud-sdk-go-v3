@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResInstanceInfoResponse Response Object
 type ShowResInstanceInfoResponse struct {
 
 	// 企业项目列表

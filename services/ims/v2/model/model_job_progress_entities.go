@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// JobProgressEntities
 type JobProgressEntities struct {
 
 	// 镜像ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源码仓库参数
+// Source 源码仓库参数
 type Source struct {
 
 	// 源码仓名字

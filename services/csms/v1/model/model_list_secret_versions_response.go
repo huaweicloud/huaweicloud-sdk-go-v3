@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSecretVersionsResponse Response Object
 type ListSecretVersionsResponse struct {
 
 	// version_metadata对象。

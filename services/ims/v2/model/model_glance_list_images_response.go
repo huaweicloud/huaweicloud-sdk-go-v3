@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceListImagesResponse Response Object
 type GlanceListImagesResponse struct {
 
 	// 查询首页的URL。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAvailableDisasterClustersResponse Response Object
 type ListAvailableDisasterClustersResponse struct {
 
 	// 容灾可用集群列表

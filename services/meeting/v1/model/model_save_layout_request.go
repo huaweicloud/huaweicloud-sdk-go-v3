@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SaveLayoutRequest Request Object
 type SaveLayoutRequest struct {
 
 	// 会议ID。

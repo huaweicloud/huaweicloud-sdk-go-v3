@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 授权
+// Authorisation 授权
 type Authorisation struct {
 
 	// 授权的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEndpointServiceResponse Response Object
 type ListEndpointServiceResponse struct {
 
 	// 终端节点服务列表

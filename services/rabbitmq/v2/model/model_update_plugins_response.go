@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePluginsResponse Response Object
 type UpdatePluginsResponse struct {
 
 	// 后台任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关联Wiki详情
+// AttachWikiDetail 关联Wiki详情
 type AttachWikiDetail struct {
 
 	// 工作项ID

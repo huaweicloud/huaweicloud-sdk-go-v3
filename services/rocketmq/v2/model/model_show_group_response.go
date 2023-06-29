@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGroupResponse Response Object
 type ShowGroupResponse struct {
 
 	// 是否可以消费。

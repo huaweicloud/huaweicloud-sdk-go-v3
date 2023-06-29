@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAssetsNewRequest Request Object
 type ListAssetsNewRequest struct {
 
 	// 每页记录数

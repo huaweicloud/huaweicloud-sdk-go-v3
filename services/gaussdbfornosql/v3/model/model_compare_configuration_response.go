@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CompareConfigurationResponse Response Object
 type CompareConfigurationResponse struct {
 
 	// 参数之间的区别集合。

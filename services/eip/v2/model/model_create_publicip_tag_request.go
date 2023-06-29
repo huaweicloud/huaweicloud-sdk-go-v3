@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePublicipTagRequest Request Object
 type CreatePublicipTagRequest struct {
 
 	// 资源ID

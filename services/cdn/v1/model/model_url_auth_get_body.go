@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// URL鉴权查询响应体。
+// UrlAuthGetBody URL鉴权查询响应体。
 type UrlAuthGetBody struct {
 
 	// 是否开启URL鉴权，off：开启,on：关闭。

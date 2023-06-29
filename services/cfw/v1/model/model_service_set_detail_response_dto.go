@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Query Service Set Detail Response Body
+// ServiceSetDetailResponseDto Query Service Set Detail Response Body
 type ServiceSetDetailResponseDto struct {
 
 	// 服务组id

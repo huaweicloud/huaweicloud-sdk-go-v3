@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 秒级监控修改请求
+// TaurusModifyInstanceMonitorRequestBody 秒级监控修改请求
 type TaurusModifyInstanceMonitorRequestBody struct {
 
 	// 实例秒级监控开关。  - true：开启 - false：关闭
@@ -57,13 +57,18 @@ func (c TaurusModifyInstanceMonitorRequestBodyPeriod) MarshalJSON() ([]byte, err
 
 func (c *TaurusModifyInstanceMonitorRequestBodyPeriod) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

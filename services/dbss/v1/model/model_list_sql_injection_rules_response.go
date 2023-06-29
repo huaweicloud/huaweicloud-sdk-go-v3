@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSqlInjectionRulesResponse Response Object
 type ListSqlInjectionRulesResponse struct {
 
 	// SQL规则列表

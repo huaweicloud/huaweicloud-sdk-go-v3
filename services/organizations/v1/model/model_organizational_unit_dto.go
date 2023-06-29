@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 包含有关新创建的组织单元的详细信息的结构。
+// OrganizationalUnitDto 包含有关新创建的组织单元的详细信息的结构。
 type OrganizationalUnitDto struct {
 
 	// 与组织单元关联的唯一标识符（ID）。

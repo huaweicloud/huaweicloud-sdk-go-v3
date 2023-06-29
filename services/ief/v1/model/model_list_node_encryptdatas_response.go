@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNodeEncryptdatasResponse Response Object
 type ListNodeEncryptdatasResponse struct {
 
 	// 加密数据列表详情

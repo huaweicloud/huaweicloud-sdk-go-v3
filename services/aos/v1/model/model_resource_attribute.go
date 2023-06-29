@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源属性  以HCL格式的模板为例，资源属性的key 为 name，value 为 \"test_vpc\"  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，资源属性的key 为 name，value 为 \"test_vpc\"  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+// ResourceAttribute 资源属性  以HCL格式的模板为例，资源属性的key 为 name，value 为 \"test_vpc\"  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，资源属性的key 为 name，value 为 \"test_vpc\"  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
 type ResourceAttribute struct {
 
 	// 资源属性的键

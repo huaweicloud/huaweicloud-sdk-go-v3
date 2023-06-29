@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会议信息。
+// RestInviteWithPwdReqBody 会议信息。
 type RestInviteWithPwdReqBody struct {
 
 	// 被邀请者的SIP号码。

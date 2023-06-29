@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除事件
+// DeleteAlert 删除事件
 type DeleteAlert struct {
 
 	// 删除事件的ID列表

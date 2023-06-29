@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIssueAssociatedCommitsResponse Response Object
 type ListIssueAssociatedCommitsResponse struct {
 
 	// 提交记录列表

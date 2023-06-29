@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEnvironmentV2Request Request Object
 type DeleteEnvironmentV2Request struct {
 
 	// 实例ID

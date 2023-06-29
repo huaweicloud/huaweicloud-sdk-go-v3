@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSecretForScheduleRequest Request Object
 type DeleteSecretForScheduleRequest struct {
 
 	// 凭据名称。

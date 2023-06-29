@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEdgeNodeRequest Request Object
 type ShowEdgeNodeRequest struct {
 
 	// 边缘节点ID

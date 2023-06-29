@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Approve Detail
+// ApproveOpinionDetail Approve Detail
 type ApproveOpinionDetail struct {
 
 	// Approve Result.

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLakeFormationInstancesRequest Request Object
 type ListLakeFormationInstancesRequest struct {
 
 	// 是否查询回收站中的实例

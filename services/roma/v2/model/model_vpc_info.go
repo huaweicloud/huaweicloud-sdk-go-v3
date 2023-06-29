@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VPC通道详情。如果vpc_channel_status = 1，则这个object类型为必填信息
+// VpcInfo VPC通道详情。如果vpc_channel_status = 1，则这个object类型为必填信息
 type VpcInfo struct {
 
 	// 云服务器ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子优化任务的请求体
+// OptimizationTaskData 分子优化任务的请求体
 type OptimizationTaskData struct {
 
 	// 分子SMILES表达式

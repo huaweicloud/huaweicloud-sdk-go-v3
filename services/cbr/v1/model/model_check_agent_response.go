@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckAgentResponse Response Object
 type CheckAgentResponse struct {
 
 	// 状态列表

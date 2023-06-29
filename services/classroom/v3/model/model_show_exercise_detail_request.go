@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowExerciseDetailRequest Request Object
 type ShowExerciseDetailRequest struct {
 
 	// 需查询的习题id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadImageFileRequest Request Object
 type DownloadImageFileRequest struct {
 
 	// devcloud项目的32位id

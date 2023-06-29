@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SendImmediateEventResponse Response Object
 type SendImmediateEventResponse struct {
 
 	// **参数说明**：即时事件ID。

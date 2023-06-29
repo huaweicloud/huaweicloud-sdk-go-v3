@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVpcEndpointRequest Request Object
 type CreateVpcEndpointRequest struct {
 	Body *CreateVpcEndpointRequestBody `json:"body,omitempty"`
 }

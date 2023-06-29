@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更桌面规格Job响应。
+// ResizeDesktopJobResult 变更桌面规格Job响应。
 type ResizeDesktopJobResult struct {
 
 	// 桌面ID。

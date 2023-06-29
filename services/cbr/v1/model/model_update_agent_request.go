@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAgentRequest Request Object
 type UpdateAgentRequest struct {
 	AgentId string `json:"agent_id"`
 

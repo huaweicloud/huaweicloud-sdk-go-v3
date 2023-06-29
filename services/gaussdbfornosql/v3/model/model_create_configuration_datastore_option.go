@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库对象。
+// CreateConfigurationDatastoreOption 数据库对象。
 type CreateConfigurationDatastoreOption struct {
 
 	// 数据库类型。 - GaussDB(for Cassandra)实例取值为“cassandra”。 - GaussDB(for Mongo)实例取值为\"mongodb\"。 - GaussDB(for Influx)实例取值为\"influxdb\"。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务节点定义。
+// Node 任务节点定义。
 type Node struct {
 
 	// 父亲节点的名称。

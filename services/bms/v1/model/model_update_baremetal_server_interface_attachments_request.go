@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateBaremetalServerInterfaceAttachmentsRequest Request Object
 type UpdateBaremetalServerInterfaceAttachmentsRequest struct {
 	PortId string `json:"port_id"`
 

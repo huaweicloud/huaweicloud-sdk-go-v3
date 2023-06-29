@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询指标
+// TransformMetric 查询指标
 type TransformMetric struct {
 
 	// 声明属性作为表达式参数

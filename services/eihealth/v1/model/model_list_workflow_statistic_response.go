@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowStatisticResponse Response Object
 type ListWorkflowStatisticResponse struct {
 
 	// 应用总数

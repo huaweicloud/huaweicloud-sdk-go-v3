@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDeploymentRequest Request Object
 type ShowDeploymentRequest struct {
 
 	// 应用部署ID

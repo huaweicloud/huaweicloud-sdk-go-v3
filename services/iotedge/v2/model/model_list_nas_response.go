@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNasResponse Response Object
 type ListNasResponse struct {
 
 	// 北向NA列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreNewInstanceRequest Request Object
 type RestoreNewInstanceRequest struct {
 	Body *RestoreNewInstanceRequestBody `json:"body,omitempty"`
 }

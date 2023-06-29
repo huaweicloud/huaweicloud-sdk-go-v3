@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWindowsBaremetalServerPwdResponse Response Object
 type ShowWindowsBaremetalServerPwdResponse struct {
 
 	// 加密后的密码

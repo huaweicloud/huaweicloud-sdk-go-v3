@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发送AIM消息体。
+// CreateAimSendTaskRequestBody 发送AIM消息体。
 type CreateAimSendTaskRequestBody struct {
 
 	// 智能信息发送任务名称。  > 不能为空白字符串。

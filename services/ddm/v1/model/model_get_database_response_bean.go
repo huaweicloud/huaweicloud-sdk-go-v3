@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// database 返回参数
+// GetDatabaseResponseBean database 返回参数
 type GetDatabaseResponseBean struct {
 
 	// 逻辑库名称。

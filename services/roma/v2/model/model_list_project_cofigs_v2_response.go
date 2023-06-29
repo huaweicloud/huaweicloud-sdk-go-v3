@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProjectCofigsV2Response Response Object
 type ListProjectCofigsV2Response struct {
 
 	// 本次返回的列表长度

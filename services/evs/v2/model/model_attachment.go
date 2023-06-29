@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云硬盘挂载信息。
+// Attachment 云硬盘挂载信息。
 type Attachment struct {
 
 	// 挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX

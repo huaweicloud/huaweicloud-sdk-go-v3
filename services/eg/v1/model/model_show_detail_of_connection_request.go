@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailOfConnectionRequest Request Object
 type ShowDetailOfConnectionRequest struct {
 
 	// 指定查询的目标连接ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：分发通道，至少指定一个通道。
+// Channel **参数说明**：分发通道，至少指定一个通道。
 type Channel struct {
 
 	// **参数说明**：LTE-PC5传输通道。若通过LTE-PC5传输通道下发事件，该字段为true。

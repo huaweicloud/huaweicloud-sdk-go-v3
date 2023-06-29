@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板详情
+// TemplateRsp 模板详情
 type TemplateRsp struct {
 
 	// 模板id

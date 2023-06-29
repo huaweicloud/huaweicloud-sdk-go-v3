@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建虚拟网关对象参数
+// CreateVirtualGateway 创建虚拟网关对象参数
 type CreateVirtualGateway struct {
 
 	// 虚拟网关接入的VPC的ID

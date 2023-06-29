@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级包的位置
+// FileLocation 升级包的位置
 type FileLocation struct {
 	ObsLocation *ObsLocation `json:"obs_location,omitempty"`
 }

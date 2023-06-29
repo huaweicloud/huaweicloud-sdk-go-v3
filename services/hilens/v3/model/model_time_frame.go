@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 定时任务时间段信息
+// TimeFrame 定时任务时间段信息
 type TimeFrame struct {
 
 	// 任务开始时间

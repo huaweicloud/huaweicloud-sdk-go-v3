@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDataPolicyResponse Response Object
 type ShowDataPolicyResponse struct {
 
 	// 项目级删除策略（true：允许项目数据删除操作，false：不允许删除操作，默认为true）

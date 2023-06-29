@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDomainsRequest Request Object
 type DeleteDomainsRequest struct {
 
-	// 域名
+	// 网站域名
 	DomainName string `json:"domain_name"`
 }
 

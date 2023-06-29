@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubnetTagsRequest Request Object
 type ListSubnetTagsRequest struct {
 }
 

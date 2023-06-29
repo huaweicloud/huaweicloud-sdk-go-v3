@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLabelsRequest Request Object
 type DeleteLabelsRequest struct {
 
 	// 删除标签的id

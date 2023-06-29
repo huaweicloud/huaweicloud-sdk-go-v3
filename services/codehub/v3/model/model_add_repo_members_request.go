@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddRepoMembersRequest Request Object
 type AddRepoMembersRequest struct {
 
 	// 仓库uuid(由CreateRepository接口返回)

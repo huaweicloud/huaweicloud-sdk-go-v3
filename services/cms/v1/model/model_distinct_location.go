@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DistinctLocation
 type DistinctLocation struct {
 
 	// 区域ID

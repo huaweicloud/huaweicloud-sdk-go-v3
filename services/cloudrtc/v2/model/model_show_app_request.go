@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAppRequest Request Object
 type ShowAppRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。

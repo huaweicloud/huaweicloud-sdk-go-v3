@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IoTDA数据源详细配置内容
+// EdgeContentReq IoTDA数据源详细配置内容
 type EdgeContentReq struct {
 
 	// edge实例Id

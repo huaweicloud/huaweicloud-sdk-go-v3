@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PolicyAssociateVault
 type PolicyAssociateVault struct {
 
 	// 关联的远端存储库ID

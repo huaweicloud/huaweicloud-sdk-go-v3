@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户ID或第三方账号信息列表
+// ShowUserRequestDto 用户ID或第三方账号信息列表
 type ShowUserRequestDto struct {
 
 	// 用户ID或者第三方账号

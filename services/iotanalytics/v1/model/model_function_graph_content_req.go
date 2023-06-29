@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FunctionGraph数据源配置内容
+// FunctionGraphContentReq FunctionGraph数据源配置内容
 type FunctionGraphContentReq struct {
 
 	// 名称

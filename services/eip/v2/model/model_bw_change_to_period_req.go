@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务按需转包请求体
+// BwChangeToPeriodReq 云服务按需转包请求体
 type BwChangeToPeriodReq struct {
 
 	// 待按需转包带宽列表

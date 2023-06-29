@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateJobsAsyncResponse Response Object
 type BatchCreateJobsAsyncResponse struct {
 	Job            *AsyncCreateJobResp `json:"job,omitempty"`
 	HttpStatusCode int                 `json:"-"`

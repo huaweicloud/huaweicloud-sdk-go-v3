@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDomainRequest Request Object
 type ShowDomainRequest struct {
 
 	// 源项目ID

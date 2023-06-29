@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待创建云服务器的网卡信息。
+// PrePaidServerNic 待创建云服务器的网卡信息。
 type PrePaidServerNic struct {
 
 	// 待创建云服务器所在的子网信息，需要指定vpcid对应VPC下的子网ID，UUID格式。  可以通过VPC服务 [查询子网](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListSubnets) 接口查询，该接口支持通过创建云服务器填写的vpcid进行过滤查询。

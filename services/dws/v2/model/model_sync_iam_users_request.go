@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SyncIamUsersRequest Request Object
 type SyncIamUsersRequest struct {
 
 	// cluster_id

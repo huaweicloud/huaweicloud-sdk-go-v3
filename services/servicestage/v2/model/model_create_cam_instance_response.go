@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCamInstanceResponse Response Object
 type CreateCamInstanceResponse struct {
 
 	// 实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddExtensionEvaluationRequest Request Object
 type AddExtensionEvaluationRequest struct {
 	Body *Evaluation `json:"body,omitempty"`
 }

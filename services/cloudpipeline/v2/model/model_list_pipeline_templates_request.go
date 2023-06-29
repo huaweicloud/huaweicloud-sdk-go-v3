@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPipelineTemplatesRequest Request Object
 type ListPipelineTemplatesRequest struct {
 
 	// 租户ID

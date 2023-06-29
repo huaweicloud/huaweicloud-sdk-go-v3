@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAlertResponse Response Object
 type ShowAlertResponse struct {
 
 	// Id value

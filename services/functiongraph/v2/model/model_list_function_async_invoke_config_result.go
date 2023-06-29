@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数异步配置返回结构体。
+// ListFunctionAsyncInvokeConfigResult 函数异步配置返回结构体。
 type ListFunctionAsyncInvokeConfigResult struct {
 
 	// 函数URN。

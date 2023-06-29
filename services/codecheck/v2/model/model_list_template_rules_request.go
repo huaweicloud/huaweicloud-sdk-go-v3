@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTemplateRulesRequest Request Object
 type ListTemplateRulesRequest struct {
 
 	// 项目ID

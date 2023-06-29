@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-//
+// Agent
 type Agent struct {
 
 	// 客户端创建时间

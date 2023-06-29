@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略。
+// OpenGaussBackupStrategyForListResponse 备份策略。
 type OpenGaussBackupStrategyForListResponse struct {
 
 	// 备份时间段。自动备份将在该时间段内触发。  当前时间指UTC时间。

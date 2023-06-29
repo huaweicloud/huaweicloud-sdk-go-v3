@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OTP辅助认证方式配置
+// OtpConfigInfo OTP辅助认证方式配置
 type OtpConfigInfo struct {
 
 	// 是否启用
@@ -27,6 +27,8 @@ type OtpConfigInfo struct {
 
 	// pem格式证书内容
 	CertContent *string `json:"cert_content,omitempty"`
+
+	ApplyRule *ApplyRuleInfo `json:"apply_rule,omitempty"`
 }
 
 func (o OtpConfigInfo) String() string {

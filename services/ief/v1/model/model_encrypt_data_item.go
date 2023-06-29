@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 加密数据项配置
+// EncryptDataItem 加密数据项配置
 type EncryptDataItem struct {
 
 	// 加密数据项键名，小写英文字母、数字、中划线，以小写字母或数字开头，最大长度为32个字符，不能为空

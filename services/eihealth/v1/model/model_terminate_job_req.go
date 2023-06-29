@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终止作业请求体
+// TerminateJobReq 终止作业请求体
 type TerminateJobReq struct {
 
 	// 是否强制终止,默认为false

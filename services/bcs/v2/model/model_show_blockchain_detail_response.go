@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBlockchainDetailResponse Response Object
 type ShowBlockchainDetailResponse struct {
 	BasicInfo *BasicInfo `json:"basic_info,omitempty"`
 

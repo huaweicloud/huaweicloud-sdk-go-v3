@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubCustomerCouponsRequest Request Object
 type ListSubCustomerCouponsRequest struct {
 
 	// 优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。

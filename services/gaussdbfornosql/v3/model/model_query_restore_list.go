@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可恢复的实例信息结构体
+// QueryRestoreList 可恢复的实例信息结构体
 type QueryRestoreList struct {
 
 	// 实例ID

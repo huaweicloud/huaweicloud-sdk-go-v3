@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建域间带宽实例的请求体。
+// CreateInterRegionBandwidthRequestBody 创建域间带宽实例的请求体。
 type CreateInterRegionBandwidthRequestBody struct {
 	InterRegionBandwidth *CreateInterRegionBandwidth `json:"inter_region_bandwidth"`
 }

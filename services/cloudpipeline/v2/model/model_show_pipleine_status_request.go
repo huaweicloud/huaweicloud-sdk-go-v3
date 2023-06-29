@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPipleineStatusRequest Request Object
 type ShowPipleineStatusRequest struct {
 
 	// 要获取状态的流水线ID

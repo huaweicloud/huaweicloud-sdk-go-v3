@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源端列表中关联的任务
+// TaskByServerSource 源端列表中关联的任务
 type TaskByServerSource struct {
 
 	// 任务ID

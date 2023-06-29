@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点（服务器）状态列表
+// ContainerNodeInfo 节点（服务器）状态列表
 type ContainerNodeInfo struct {
 
 	// 节点id

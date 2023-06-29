@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopMigrationTaskSyncRequest Request Object
 type StopMigrationTaskSyncRequest struct {
 
 	// 任务ID

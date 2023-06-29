@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDomainNotAddedProjectsV4Response Response Object
 type ListDomainNotAddedProjectsV4Response struct {
 
 	// 项目信息列表

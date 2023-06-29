@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTenantMetricResponse Response Object
 type ShowTenantMetricResponse struct {
 
 	// 执行次数

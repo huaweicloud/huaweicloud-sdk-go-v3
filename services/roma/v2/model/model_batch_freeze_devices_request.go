@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchFreezeDevicesRequest Request Object
 type BatchFreezeDevicesRequest struct {
 
 	// 实例ID

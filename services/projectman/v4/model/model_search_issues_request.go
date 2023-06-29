@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchIssuesRequest Request Object
 type SearchIssuesRequest struct {
 	Body *ListWorkTableIssueRequestV4RequestBody `json:"body,omitempty"`
 }

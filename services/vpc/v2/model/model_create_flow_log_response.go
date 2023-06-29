@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFlowLogResponse Response Object
 type CreateFlowLogResponse struct {
 	FlowLog        *FlowLogResp `json:"flow_log,omitempty"`
 	HttpStatusCode int          `json:"-"`

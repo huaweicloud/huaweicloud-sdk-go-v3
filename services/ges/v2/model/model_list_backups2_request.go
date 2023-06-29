@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBackups2Request Request Object
 type ListBackups2Request struct {
 
 	// 本次请求的起始位置，默认为0。

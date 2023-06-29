@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级图请求体
+// UpgradeGraphReq 升级图请求体
 type UpgradeGraphReq struct {
 
 	// 升级到的版本，必须大于当前图版本。

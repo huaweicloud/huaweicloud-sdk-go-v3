@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAutoLaunchGroupResponse Response Object
 type DeleteAutoLaunchGroupResponse struct {
 
 	// 错误码 请求失败时，响应体中包含错误码 请求成功时，不在响应消息体中包含错误码

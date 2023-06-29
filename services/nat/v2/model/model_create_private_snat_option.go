@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建SNAT规则的请求体。
+// CreatePrivateSnatOption 创建SNAT规则的请求体。
 type CreatePrivateSnatOption struct {
 
 	// 私网NAT网关实例的ID。

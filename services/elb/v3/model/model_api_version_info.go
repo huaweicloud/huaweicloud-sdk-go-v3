@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Response Object
+// ApiVersionInfo This is a auto create Response Object
 type ApiVersionInfo struct {
 
 	// API版本号。  取值：由高到低版本分别为v3，v2，v2.0。
@@ -62,13 +62,18 @@ func (c ApiVersionInfoStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ApiVersionInfoStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

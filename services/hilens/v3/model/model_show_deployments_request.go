@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDeploymentsRequest Request Object
 type ShowDeploymentsRequest struct {
 
 	// 集群ID，查询部署在该节点组的应用列表，和node_id不可同时请求

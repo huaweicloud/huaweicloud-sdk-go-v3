@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ImportGraphReq This is a auto create Body Object
 type ImportGraphReq struct {
 
 	// 边文件目录或边文件名。

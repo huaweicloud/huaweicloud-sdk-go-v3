@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateNodeLabelRequest Request Object
 type BatchUpdateNodeLabelRequest struct {
 
 	// 节点id

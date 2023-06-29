@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 在IoTDA实例中的规则ID及其配套的推送数据动作ID
+// IotdaRuleAction 在IoTDA实例中的规则ID及其配套的推送数据动作ID
 type IotdaRuleAction struct {
 
 	// IoTDA中的规则Id

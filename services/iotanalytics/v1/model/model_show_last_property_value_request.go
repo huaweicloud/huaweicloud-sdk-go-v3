@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLastPropertyValueRequest Request Object
 type ShowLastPropertyValueRequest struct {
 
 	// 资产ID

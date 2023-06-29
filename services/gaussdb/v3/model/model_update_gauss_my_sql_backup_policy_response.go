@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGaussMySqlBackupPolicyResponse Response Object
 type UpdateGaussMySqlBackupPolicyResponse struct {
 
 	// 状态信息

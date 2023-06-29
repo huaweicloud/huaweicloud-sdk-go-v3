@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIterationHistoriesRequest Request Object
 type ListIterationHistoriesRequest struct {
 
 	// 迭代id

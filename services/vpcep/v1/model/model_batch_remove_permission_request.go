@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除终端节点服务白名单列表。
+// BatchRemovePermissionRequest 批量删除终端节点服务白名单列表。
 type BatchRemovePermissionRequest struct {
 	Permissions []EpsRemovePermissionRequest `json:"permissions"`
 }

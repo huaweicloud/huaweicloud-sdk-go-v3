@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronListFirewallPoliciesResponse Response Object
 type NeutronListFirewallPoliciesResponse struct {
 
 	// firewall_policy对象列表

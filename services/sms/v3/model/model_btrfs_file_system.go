@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// btrfs分区类型
+// BtrfsFileSystem btrfs分区类型
 type BtrfsFileSystem struct {
 
 	// 文件系统名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetMultiTaskOffsetResponse Response Object
 type ResetMultiTaskOffsetResponse struct {
 
 	// 任务重置结果

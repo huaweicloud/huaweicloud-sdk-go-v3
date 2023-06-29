@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateIgnorePathRequest Request Object
 type UpdateIgnorePathRequest struct {
 
 	// 项目ID

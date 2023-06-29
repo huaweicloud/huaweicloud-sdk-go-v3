@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteLabelResponse Response Object
 type BatchDeleteLabelResponse struct {
 	HttpStatusCode int `json:"-"`
 }

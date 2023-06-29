@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRepoMembersRequest Request Object
 type ListRepoMembersRequest struct {
 
 	// 第几页

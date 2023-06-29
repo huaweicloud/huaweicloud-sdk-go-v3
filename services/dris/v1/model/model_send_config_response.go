@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：分发通道选择及目标推送设备的配置。
+// SendConfigResponse **参数说明**：分发通道选择及目标推送设备的配置。
 type SendConfigResponse struct {
 	Channel *Channel `json:"channel,omitempty"`
 

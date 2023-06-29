@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Application的属性列表。
+// ListApplicationAttributesResponseBodyAttributes Application的属性列表。
 type ListApplicationAttributesResponseBodyAttributes struct {
 
 	// 应用平台是否启用。

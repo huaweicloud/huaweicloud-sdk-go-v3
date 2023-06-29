@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResourceInstance操作的请求体。
+// ResourceInstanceReqBody ResourceInstance操作的请求体。
 type ResourceInstanceReqBody struct {
 
 	// 不包含任意一个标签，该字段为true时查询所有不带标签的资源。

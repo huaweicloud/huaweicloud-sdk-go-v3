@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建安全组参数。
+// CreateSecurityGroupOption 创建安全组参数。
 type CreateSecurityGroupOption struct {
 
 	// 安全组的名称。

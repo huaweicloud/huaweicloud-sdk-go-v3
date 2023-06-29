@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronListFirewallPoliciesRequest Request Object
 type NeutronListFirewallPoliciesRequest struct {
 
 	// 每页返回的个数

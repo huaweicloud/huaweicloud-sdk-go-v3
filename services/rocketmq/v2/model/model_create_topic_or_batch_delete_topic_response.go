@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTopicOrBatchDeleteTopicResponse Response Object
 type CreateTopicOrBatchDeleteTopicResponse struct {
 
 	// 主题名称。

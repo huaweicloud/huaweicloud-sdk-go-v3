@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchConfirmConfigsNewRequest Request Object
 type BatchConfirmConfigsNewRequest struct {
 
 	// 边缘节点ID

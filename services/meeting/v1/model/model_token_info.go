@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会控Token信息。
+// TokenInfo 会控Token信息。
 type TokenInfo struct {
 
 	// 会控Token。有效期半个小时。

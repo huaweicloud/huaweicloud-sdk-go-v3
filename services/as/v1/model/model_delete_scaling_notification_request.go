@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteScalingNotificationRequest Request Object
 type DeleteScalingNotificationRequest struct {
 
 	// 伸缩组标识。

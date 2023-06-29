@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需求概览信息
+// DemandStatisticResponseV4 需求概览信息
 type DemandStatisticResponseV4 struct {
 
 	// 已关闭数量

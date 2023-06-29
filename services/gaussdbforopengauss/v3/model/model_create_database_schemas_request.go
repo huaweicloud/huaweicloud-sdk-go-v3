@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDatabaseSchemasRequest Request Object
 type CreateDatabaseSchemasRequest struct {
 
 	// 语言

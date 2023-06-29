@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板
+// App 应用模板
 type App struct {
 	App *AppDetail `json:"app"`
 }

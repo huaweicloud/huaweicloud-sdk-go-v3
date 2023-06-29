@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NearLineRecallParam
 type NearLineRecallParam struct {
 
 	// 时间过滤。

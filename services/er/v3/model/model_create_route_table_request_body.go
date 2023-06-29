@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateRouteTableRequestBody This is a auto create Body Object
 type CreateRouteTableRequestBody struct {
 	RouteTable *CreateRouteTable `json:"route_table,omitempty"`
 }

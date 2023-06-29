@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// HandleUnionMemberQuitListResponse Response Object
 type HandleUnionMemberQuitListResponse struct {
 
 	// 请求结果

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateDeletePrivateNatTagsRequest Request Object
 type BatchCreateDeletePrivateNatTagsRequest struct {
 
 	// 私网NAT网关的ID。

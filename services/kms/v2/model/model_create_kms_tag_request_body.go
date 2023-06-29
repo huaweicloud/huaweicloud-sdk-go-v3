@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建KMS资源标签请求体。
+// CreateKmsTagRequestBody 创建KMS资源标签请求体。
 type CreateKmsTagRequestBody struct {
 	Tag *TagItem `json:"tag,omitempty"`
 

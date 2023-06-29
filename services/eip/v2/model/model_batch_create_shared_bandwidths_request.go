@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateSharedBandwidthsRequest Request Object
 type BatchCreateSharedBandwidthsRequest struct {
 	Body *BatchCreateBandwidthRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateStructTemplateRequest Request Object
 type UpdateStructTemplateRequest struct {
 	Body *LtsStructTemplateInfo `json:"body,omitempty"`
 }

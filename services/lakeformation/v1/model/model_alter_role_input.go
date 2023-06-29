@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// role信息
+// AlterRoleInput role信息
 type AlterRoleInput struct {
 
 	// 描述信息

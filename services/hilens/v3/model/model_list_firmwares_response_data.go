@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 固件详情
+// ListFirmwaresResponseData 固件详情
 type ListFirmwaresResponseData struct {
 
 	// 固件id

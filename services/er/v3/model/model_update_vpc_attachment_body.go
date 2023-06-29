@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新vpc基本信息请求体
+// UpdateVpcAttachmentBody 更新vpc基本信息请求体
 type UpdateVpcAttachmentBody struct {
 
 	// VPC连接描述信息，取值范围：最大长度36字节，带“-”连字符的UUID格式

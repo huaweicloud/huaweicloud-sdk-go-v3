@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunTaskResponse Response Object
 type RunTaskResponse struct {
 
 	// 执行id

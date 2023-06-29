@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// LoadBalancerStatusResult
 type LoadBalancerStatusResult struct {
 	Loadbalancer *LoadBalancerStatus `json:"loadbalancer"`
 }

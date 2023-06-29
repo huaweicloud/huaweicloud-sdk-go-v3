@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 冗余参数，仅用于新版console（前端）使用
+// AccessProgress 冗余参数，仅用于新版console（前端）使用
 type AccessProgress struct {
 
 	// 步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析

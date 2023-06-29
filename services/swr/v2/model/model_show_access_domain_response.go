@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAccessDomainResponse Response Object
 type ShowAccessDomainResponse struct {
 
 	// true：存在；false：不存在

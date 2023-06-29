@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeWebImageResponse Response Object
 type RecognizeWebImageResponse struct {
 	Result         *WebImageResult `json:"result,omitempty"`
 	HttpStatusCode int             `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务配置检查参数请求信息
+// ConfigTaskParameterBody 任务配置检查参数请求信息
 type ConfigTaskParameterBody struct {
 
 	// 检查工具ID

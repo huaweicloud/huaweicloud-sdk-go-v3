@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 上传模板素材响应体。
+// UploadAimTemplateMaterialResponseMode 上传模板素材响应体。
 type UploadAimTemplateMaterialResponseMode struct {
 
 	// 模板素材ID。

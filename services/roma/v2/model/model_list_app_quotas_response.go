@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppQuotasResponse Response Object
 type ListAppQuotasResponse struct {
 
 	// 本次返回的列表长度

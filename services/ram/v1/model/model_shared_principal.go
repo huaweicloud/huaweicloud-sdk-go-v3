@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 描述资源共享管理的角色
+// SharedPrincipal 描述资源共享管理的角色
 type SharedPrincipal struct {
 
 	// 资源使用者绑定的资源共享实例的ID。

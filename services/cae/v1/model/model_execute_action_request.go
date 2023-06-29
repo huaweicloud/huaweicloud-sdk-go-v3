@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteActionRequest Request Object
 type ExecuteActionRequest struct {
 
 	// 组件id。

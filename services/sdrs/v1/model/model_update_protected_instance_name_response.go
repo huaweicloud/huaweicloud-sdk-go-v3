@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProtectedInstanceNameResponse Response Object
 type UpdateProtectedInstanceNameResponse struct {
 	ProtectedInstance *ShowProtectedInstanceParams `json:"protected_instance,omitempty"`
 	HttpStatusCode    int                          `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPipelineJobsRequest Request Object
 type ListPipelineJobsRequest struct {
 
 	// 数据存储Id

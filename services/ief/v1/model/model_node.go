@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点参数
+// Node 边缘节点参数
 type Node struct {
 	Node *EdgeNode `json:"node"`
 }

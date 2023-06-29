@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据库引擎列表。
+// DatastoresResult 数据库引擎列表。
 type DatastoresResult struct {
 
 	// 部署形态支持的引擎版本列表
@@ -58,13 +58,18 @@ func (c DatastoresResultInstanceMode) MarshalJSON() ([]byte, error) {
 
 func (c *DatastoresResultInstanceMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

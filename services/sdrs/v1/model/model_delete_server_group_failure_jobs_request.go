@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteServerGroupFailureJobsRequest Request Object
 type DeleteServerGroupFailureJobsRequest struct {
 
 	// 保护组ID。

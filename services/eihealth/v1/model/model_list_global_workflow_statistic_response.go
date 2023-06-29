@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGlobalWorkflowStatisticResponse Response Object
 type ListGlobalWorkflowStatisticResponse struct {
 
 	// 所有作业总数

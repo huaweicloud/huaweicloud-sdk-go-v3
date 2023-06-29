@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAlarmResponse Response Object
 type CreateAlarmResponse struct {
 
 	// 告警规则的ID。

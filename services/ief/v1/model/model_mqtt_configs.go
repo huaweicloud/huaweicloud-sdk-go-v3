@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MQTT配置
+// MqttConfigs MQTT配置
 type MqttConfigs struct {
 
 	// 是否启用MQTT

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAntitamperRuleResponse Response Object
 type ShowAntitamperRuleResponse struct {
 
 	// 规则id

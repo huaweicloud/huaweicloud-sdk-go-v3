@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSupportedRegionsResponse Response Object
 type ListSupportedRegionsResponse struct {
 
 	// 区域列表

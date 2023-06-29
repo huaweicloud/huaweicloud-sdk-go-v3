@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDeployTasksResponse Response Object
 type ListDeployTasksResponse struct {
 
 	// 总数

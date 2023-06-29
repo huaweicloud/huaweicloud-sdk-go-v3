@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowTrafficEventsResponse Response Object
 type BatchShowTrafficEventsResponse struct {
 
 	// **参数说明**：返回条目总数量。

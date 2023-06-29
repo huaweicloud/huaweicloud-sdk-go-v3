@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEipRecordSetRequest Request Object
 type CreateEipRecordSetRequest struct {
 
 	// 租户的区域信息。

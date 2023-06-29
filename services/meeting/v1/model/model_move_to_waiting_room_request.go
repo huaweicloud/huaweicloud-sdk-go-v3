@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MoveToWaitingRoomRequest Request Object
 type MoveToWaitingRoomRequest struct {
 
 	// 会议ID。

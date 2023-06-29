@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeFlavorRequest Request Object
 type ResizeFlavorRequest struct {
 
 	// DDM实例ID。

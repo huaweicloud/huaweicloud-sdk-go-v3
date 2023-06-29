@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchEnvTopologyRequest Request Object
 type SearchEnvTopologyRequest struct {
 
 	// 应用id。

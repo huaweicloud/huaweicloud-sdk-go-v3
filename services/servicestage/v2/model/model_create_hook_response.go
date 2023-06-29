@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateHookResponse Response Object
 type CreateHookResponse struct {
 
 	// hook ID。

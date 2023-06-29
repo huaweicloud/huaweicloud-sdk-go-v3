@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIssueCustomFieldsResponse Response Object
 type ListIssueCustomFieldsResponse struct {
 
 	// 自定义字段返回数据

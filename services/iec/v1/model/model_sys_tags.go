@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 系统标签。
+// SysTags 系统标签。
 type SysTags struct {
 
 	// 系统标签的Key值。

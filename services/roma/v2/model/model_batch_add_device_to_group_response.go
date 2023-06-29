@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchAddDeviceToGroupResponse Response Object
 type BatchAddDeviceToGroupResponse struct {
 	HttpStatusCode int `json:"-"`
 }

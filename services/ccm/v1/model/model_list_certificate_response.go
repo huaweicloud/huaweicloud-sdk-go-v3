@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCertificateResponse Response Object
 type ListCertificateResponse struct {
 
 	// 私有证书总数。

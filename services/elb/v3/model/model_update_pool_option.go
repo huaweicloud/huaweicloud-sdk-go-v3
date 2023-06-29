@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新后端服务器组请求参数。
+// UpdatePoolOption 更新后端服务器组请求参数。
 type UpdatePoolOption struct {
 
 	// 后端云服务器组的管理状态，只支持更新为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -83,13 +83,18 @@ func (c UpdatePoolOptionProtectionStatus) MarshalJSON() ([]byte, error) {
 
 func (c *UpdatePoolOptionProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAppResponse Response Object
 type DeleteAppResponse struct {
 
 	// 返回ok的结果，表示删除成功。

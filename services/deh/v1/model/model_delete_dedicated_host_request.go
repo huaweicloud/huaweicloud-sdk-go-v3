@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDedicatedHostRequest Request Object
 type DeleteDedicatedHostRequest struct {
 
 	// 专属主机ID。

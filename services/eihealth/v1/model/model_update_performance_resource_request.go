@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePerformanceResourceRequest Request Object
 type UpdatePerformanceResourceRequest struct {
 
 	// 性能加速ID

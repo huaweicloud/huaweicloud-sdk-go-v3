@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图文审核场景的黑白词库传入参数设置。
+// ImgTextConfig 图文审核场景的黑白词库传入参数设置。
 type ImgTextConfig struct {
 
 	// 检测时使用的自定义黑名单词库列表。

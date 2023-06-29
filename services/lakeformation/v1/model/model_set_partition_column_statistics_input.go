@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置分区的列统计信息body体
+// SetPartitionColumnStatisticsInput 设置分区的列统计信息body体
 type SetPartitionColumnStatisticsInput struct {
 
 	// 是否合入原有统计信息

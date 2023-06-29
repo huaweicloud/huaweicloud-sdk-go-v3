@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicTemplateInfoResponse Response Object
 type ShowPublicTemplateInfoResponse struct {
 	ProvidedActions *ProvidedAction `json:"provided_actions,omitempty"`
 

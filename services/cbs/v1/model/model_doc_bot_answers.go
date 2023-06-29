@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DocBotAnswers
 type DocBotAnswers struct {
 
 	// 答案。

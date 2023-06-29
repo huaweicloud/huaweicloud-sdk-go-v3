@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新带宽请求体。
+// UpdateBandwidthRequestBody 更新带宽请求体。
 type UpdateBandwidthRequestBody struct {
 	Bandwidth *UpdateBandwidthOption `json:"bandwidth"`
 }

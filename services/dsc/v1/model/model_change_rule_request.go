@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeRuleRequest Request Object
 type ChangeRuleRequest struct {
-	Body *RuleRequest `json:"body,omitempty"`
+	Body *RuleChangeRequest `json:"body,omitempty"`
 }
 
 func (o ChangeRuleRequest) String() string {

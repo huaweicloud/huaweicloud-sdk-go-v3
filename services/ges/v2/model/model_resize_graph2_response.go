@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeGraph2Response Response Object
 type ResizeGraph2Response struct {
 
 	// 扩容图任务ID。请求失败时字段为空。

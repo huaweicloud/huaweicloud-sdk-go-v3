@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AllowDbPrivilegesRequest Request Object
 type AllowDbPrivilegesRequest struct {
 
 	// 语言

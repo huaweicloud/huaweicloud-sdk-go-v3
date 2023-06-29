@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountResourceInstanceByTagResponse Response Object
 type CountResourceInstanceByTagResponse struct {
 
 	// 资源实例列表

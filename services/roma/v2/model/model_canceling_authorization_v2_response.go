@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelingAuthorizationV2Response Response Object
 type CancelingAuthorizationV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// rpo超标记录
+// RpoStattisticsParams rpo超标记录
 type RpoStattisticsParams struct {
 
 	// 资源的RPO超标趋势记录id。
@@ -66,13 +66,18 @@ func (c RpoStattisticsParamsResourceType) MarshalJSON() ([]byte, error) {
 
 func (c *RpoStattisticsParamsResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

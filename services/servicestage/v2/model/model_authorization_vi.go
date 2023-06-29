@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 授权结构体。
+// AuthorizationVi 授权结构体。
 type AuthorizationVi struct {
 
 	// 授权名称。

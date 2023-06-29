@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateParaGroupNameResponse Response Object
 type ValidateParaGroupNameResponse struct {
 
 	// 校验结果。true为已存在，false为不存在。

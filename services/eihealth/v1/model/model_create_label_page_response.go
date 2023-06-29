@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLabelPageResponse Response Object
 type CreateLabelPageResponse struct {
 
 	// 标签页面id

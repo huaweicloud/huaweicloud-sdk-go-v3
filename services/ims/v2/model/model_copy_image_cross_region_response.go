@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopyImageCrossRegionResponse Response Object
 type CopyImageCrossRegionResponse struct {
 
 	// 异步任务ID。

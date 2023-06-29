@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSecurityGroupsRequest Request Object
 type ListSecurityGroupsRequest struct {
 
 	// 每页返回的个数

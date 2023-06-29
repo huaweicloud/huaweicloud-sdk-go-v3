@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会话持久性对象。
+// SessionPersistence 会话持久性对象。
 type SessionPersistence struct {
 
 	// cookie名称。  格式：仅支持字母、数字、中划线(-)、下划线(_)和点号(.)。  使用说明： - 只有当type为APP_COOKIE时才有效。其他情况下传该字段会报错。  [不支持该字段，请勿使用。](tag:hws_eu,hcso_dt)

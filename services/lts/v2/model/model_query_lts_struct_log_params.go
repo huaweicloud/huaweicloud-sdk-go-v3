@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 此参数在请求实体中，采用json字符串格式
+// QueryLtsStructLogParams 此参数在请求实体中，采用json字符串格式
 type QueryLtsStructLogParams struct {
 
 	// 搜索起始时间（UTC时间，毫秒级）。

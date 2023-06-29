@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApisNotBoundWithSignatureKeyV2Request Request Object
 type ListApisNotBoundWithSignatureKeyV2Request struct {
 
 	// 实例ID

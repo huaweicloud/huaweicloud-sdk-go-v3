@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSimPoolMembersRequest Request Object
 type ListSimPoolMembersRequest struct {
 
 	// 流量池标识

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnvsResponse Response Object
 type ListEnvsResponse struct {
 
 	// 分页查询的页数。

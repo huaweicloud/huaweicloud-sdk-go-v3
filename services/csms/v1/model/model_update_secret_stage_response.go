@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateSecretStageResponse Response Object
 type UpdateSecretStageResponse struct {
 	Stage          *Stage `json:"stage,omitempty"`
 	HttpStatusCode int    `json:"-"`

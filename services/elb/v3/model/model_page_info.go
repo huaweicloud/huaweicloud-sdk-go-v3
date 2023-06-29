@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页信息
+// PageInfo 分页信息
 type PageInfo struct {
 
 	// 分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。

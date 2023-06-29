@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// volumeAttachment数据结构说明
+// VolumeAttachment volumeAttachment数据结构说明
 type VolumeAttachment struct {
 
 	// 要挂卷的卷ID。可以从云硬盘控制台查询，或者通过调用“查询云硬盘列表”API获取。

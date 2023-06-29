@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlJobInfoResponse Response Object
 type ShowGaussMySqlJobInfoResponse struct {
 	Job            *GetJobInfoDetail `json:"job,omitempty"`
 	HttpStatusCode int               `json:"-"`

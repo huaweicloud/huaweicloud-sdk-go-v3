@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListVmsSendTasksRequest Request Object
 type ListVmsSendTasksRequest struct {
 
 	// 智能信息基础版任务名称。

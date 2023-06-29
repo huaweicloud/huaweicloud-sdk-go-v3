@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobConfigResponse Response Object
 type ShowJobConfigResponse struct {
 
 	// 作业保存条数

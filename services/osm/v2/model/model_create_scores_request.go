@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateScoresRequest Request Object
 type CreateScoresRequest struct {
 
 	// 工单id

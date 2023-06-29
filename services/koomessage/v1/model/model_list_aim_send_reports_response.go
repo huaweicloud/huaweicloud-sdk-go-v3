@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAimSendReportsResponse Response Object
 type ListAimSendReportsResponse struct {
 
 	// 响应码。

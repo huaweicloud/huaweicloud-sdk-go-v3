@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点数据源请求内容
+// NodeContentReq 节点数据源请求内容
 type NodeContentReq struct {
 
 	// 节点实例ID

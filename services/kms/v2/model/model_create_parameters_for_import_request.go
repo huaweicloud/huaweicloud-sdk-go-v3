@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateParametersForImportRequest Request Object
 type CreateParametersForImportRequest struct {
 	Body *GetParametersForImportRequestBody `json:"body,omitempty"`
 }

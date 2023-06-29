@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 代理鉴权信息。
+// ProxyTokenDto 代理鉴权信息。
 type ProxyTokenDto struct {
 
 	// 代理鉴权服务器的短token字符串。

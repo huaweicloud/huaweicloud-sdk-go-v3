@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteSqlFilterRuleResponse Response Object
 type DeleteSqlFilterRuleResponse struct {
 
 	// 删除SQL限流规则任务ID。

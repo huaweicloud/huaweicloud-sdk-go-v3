@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateLogtankResponse Response Object
 type UpdateLogtankResponse struct {
 
 	// 请求ID。  注：自动生成 。

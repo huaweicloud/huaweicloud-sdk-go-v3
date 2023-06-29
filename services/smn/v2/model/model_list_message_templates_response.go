@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMessageTemplatesResponse Response Object
 type ListMessageTemplatesResponse struct {
 
 	// 请求的唯一标识ID。

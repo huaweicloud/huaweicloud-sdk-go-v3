@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnvInstancesResponse Response Object
 type ListEnvInstancesResponse struct {
 
 	// 实例信息列表。

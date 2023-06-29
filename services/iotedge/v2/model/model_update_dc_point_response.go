@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDcPointResponse Response Object
 type UpdateDcPointResponse struct {
 
 	// 点位表id，数据源下唯一

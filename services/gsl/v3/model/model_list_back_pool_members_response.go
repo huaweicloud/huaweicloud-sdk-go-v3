@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBackPoolMembersResponse Response Object
 type ListBackPoolMembersResponse struct {
 
 	// 每页记录数

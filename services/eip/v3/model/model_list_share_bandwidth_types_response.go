@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListShareBandwidthTypesResponse Response Object
 type ListShareBandwidthTypesResponse struct {
 
 	// 功能说明：共享带宽类型对象

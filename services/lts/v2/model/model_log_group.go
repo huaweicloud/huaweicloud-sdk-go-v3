@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 返回的日志组信息
+// LogGroup 返回的日志组信息
 type LogGroup struct {
 
 	// 创建时间

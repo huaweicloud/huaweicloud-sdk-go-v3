@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlarmRulePoliciesRequest Request Object
 type UpdateAlarmRulePoliciesRequest struct {
 
 	// Alarm实例ID

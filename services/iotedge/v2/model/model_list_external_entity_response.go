@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListExternalEntityResponse Response Object
 type ListExternalEntityResponse struct {
 
 	// 外部实体列表

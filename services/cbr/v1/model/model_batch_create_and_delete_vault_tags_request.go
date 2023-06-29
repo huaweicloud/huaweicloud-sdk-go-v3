@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateAndDeleteVaultTagsRequest Request Object
 type BatchCreateAndDeleteVaultTagsRequest struct {
 
 	// 资源id

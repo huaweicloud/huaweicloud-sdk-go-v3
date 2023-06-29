@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息
+// HostGroupTag 标签信息
 type HostGroupTag struct {
 
 	// 标签Key

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEdgeApplicationVersionRequest Request Object
 type CreateEdgeApplicationVersionRequest struct {
 
 	// 应用ID，应用唯一。

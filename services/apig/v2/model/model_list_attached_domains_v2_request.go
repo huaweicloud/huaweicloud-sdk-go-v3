@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAttachedDomainsV2Request Request Object
 type ListAttachedDomainsV2Request struct {
 
 	// 证书的编号

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Node节点指标项。
+// QueryMetricResult Node节点指标项。
 type QueryMetricResult struct {
 
 	// 任务ID。

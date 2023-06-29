@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRealNameResponse Response Object
 type DeleteRealNameResponse struct {
 
 	// 业务受理单号

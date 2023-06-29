@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// InvokeGaussMySqlInstanceSwitchOverRequest Request Object
 type InvokeGaussMySqlInstanceSwitchOverRequest struct {
 
 	// 语言。

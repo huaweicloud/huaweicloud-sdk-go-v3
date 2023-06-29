@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSecretRequest Request Object
 type DeleteSecretRequest struct {
 
 	// 密钥ID，从专业版HiLens控制台密钥管理[获密钥列表](getSecretsListUsingGET.xml)获取

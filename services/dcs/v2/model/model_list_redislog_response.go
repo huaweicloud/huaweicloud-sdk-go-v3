@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRedislogResponse Response Object
 type ListRedislogResponse struct {
 
 	// 总数

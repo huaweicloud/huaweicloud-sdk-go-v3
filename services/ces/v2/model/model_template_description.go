@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+// TemplateDescription 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
 type TemplateDescription struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListConversionsRequest Request Object
 type ListConversionsRequest struct {
 
 	// 语言。zh_CN：中文en_US：英文缺省为zh_CN。

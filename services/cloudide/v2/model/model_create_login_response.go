@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLoginResponse Response Object
 type CreateLoginResponse struct {
 
 	// login_id

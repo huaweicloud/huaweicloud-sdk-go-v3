@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAppCountResponse Response Object
 type ShowAppCountResponse struct {
 
 	// 总数

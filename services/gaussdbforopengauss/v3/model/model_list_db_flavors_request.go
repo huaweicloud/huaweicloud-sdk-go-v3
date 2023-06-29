@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDbFlavorsRequest Request Object
 type ListDbFlavorsRequest struct {
 
 	// 语言

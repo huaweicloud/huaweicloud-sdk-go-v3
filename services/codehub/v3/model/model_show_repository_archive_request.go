@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRepositoryArchiveRequest Request Object
 type ShowRepositoryArchiveRequest struct {
 
 	// 仓库的uuid

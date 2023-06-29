@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeploymentJobsResponse Response Object
 type ShowDeploymentJobsResponse struct {
 
 	// 部署任务编号

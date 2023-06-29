@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmsRequest Request Object
 type ListAlarmsRequest struct {
 
 	// 取值范围(0,100]，默认值为100  用于限制结果数据条数。

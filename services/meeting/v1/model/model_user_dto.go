@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页查询企业用户信息。
+// UserDto 分页查询企业用户信息。
 type UserDto struct {
 
 	// 用户ID。

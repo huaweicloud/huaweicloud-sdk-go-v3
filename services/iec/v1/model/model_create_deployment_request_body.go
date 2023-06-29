@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建部署计划请求体
+// CreateDeploymentRequestBody 创建部署计划请求体
 type CreateDeploymentRequestBody struct {
 	Edgecloud *EdgeCloudOption `json:"edgecloud"`
 }

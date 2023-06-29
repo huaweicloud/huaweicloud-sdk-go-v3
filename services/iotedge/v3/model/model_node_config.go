@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群节点信息
+// NodeConfig 集群节点信息
 type NodeConfig struct {
 
 	// 节点IP

@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIpcResponse Response Object
 type ShowIpcResponse struct {
 
 	// **参数说明**：摄像头ID，console界面查询摄像头IPC列表中的设备Id。
@@ -106,13 +106,18 @@ func (c ShowIpcResponseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ShowIpcResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

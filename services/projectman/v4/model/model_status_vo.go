@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 状态
+// StatusVo 状态
 type StatusVo struct {
 
 	// 状态id

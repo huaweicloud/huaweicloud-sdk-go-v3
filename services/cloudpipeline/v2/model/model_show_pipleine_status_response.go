@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPipleineStatusResponse Response Object
 type ShowPipleineStatusResponse struct {
 
 	// 流水线ID

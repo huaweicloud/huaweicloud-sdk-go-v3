@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Scene
 type Scene struct {
 
 	// 类型。

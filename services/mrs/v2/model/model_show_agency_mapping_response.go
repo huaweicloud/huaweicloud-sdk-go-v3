@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAgencyMappingResponse Response Object
 type ShowAgencyMappingResponse struct {
 
 	// 用户（组）与委托之间的映射关系详细信息。

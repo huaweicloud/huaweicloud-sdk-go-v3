@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移任务实例信息
+// ConfigMigrationInstanceBody 迁移任务实例信息
 type ConfigMigrationInstanceBody struct {
 
 	// Redis实例ID。（Redis类型为云服务Redis时必须填写）

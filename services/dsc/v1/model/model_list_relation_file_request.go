@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRelationFileRequest Request Object
 type ListRelationFileRequest struct {
 
 	// 任务ID

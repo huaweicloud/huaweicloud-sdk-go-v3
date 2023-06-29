@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSpecsRequest Request Object
 type ListSpecsRequest struct {
 
 	// 规格编码

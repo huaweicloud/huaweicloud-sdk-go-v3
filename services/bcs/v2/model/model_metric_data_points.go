@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询结果要点
+// MetricDataPoints 查询结果要点
 type MetricDataPoints struct {
 
 	// 时间戳。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户信息
+// UserAccountVo 用户信息
 type UserAccountVo struct {
 
 	// 用户账户ID。

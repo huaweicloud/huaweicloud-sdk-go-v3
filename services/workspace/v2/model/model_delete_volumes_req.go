@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除桌面数据盘请求。
+// DeleteVolumesReq 删除桌面数据盘请求。
 type DeleteVolumesReq struct {
 
 	// 待删除的桌面数据盘ID列表。

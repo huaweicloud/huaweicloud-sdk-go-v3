@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMembersResponse Response Object
 type ListMembersResponse struct {
 
 	// 请求ID。  注：自动生成 。

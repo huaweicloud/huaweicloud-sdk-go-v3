@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SyncIamUsersResponse Response Object
 type SyncIamUsersResponse struct {
 
 	// 创建成功用户列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlertNoticeConfigRequest Request Object
 type UpdateAlertNoticeConfigRequest struct {
 
 	// zh-cn/en-us

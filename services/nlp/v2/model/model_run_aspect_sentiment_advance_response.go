@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunAspectSentimentAdvanceResponse Response Object
 type RunAspectSentimentAdvanceResponse struct {
 
 	// 待分析文本

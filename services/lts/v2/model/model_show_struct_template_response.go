@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStructTemplateResponse Response Object
 type ShowStructTemplateResponse struct {
 
 	// 结构化字段

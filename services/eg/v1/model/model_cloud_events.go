@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CloudEvents事件格式定义，参考https://github.com/cloudevents/spec/blob/v1.0.1/spec.md
+// CloudEvents CloudEvents事件格式定义，参考https://github.com/cloudevents/spec/blob/v1.0.1/spec.md
 type CloudEvents struct {
 
 	// 事件唯一标识串，同一个事件来源里必须唯一

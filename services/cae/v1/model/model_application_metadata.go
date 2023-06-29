@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据。
+// ApplicationMetadata 数据。
 type ApplicationMetadata struct {
 
 	// 应用id。

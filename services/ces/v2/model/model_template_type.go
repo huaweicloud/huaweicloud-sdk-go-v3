@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 模板类型(custom代表默认自定义模板，system代表系统模板)
+// TemplateType 模板类型(custom代表默认自定义模板，system代表系统模板)
 type TemplateType struct {
 	value string
 }
@@ -40,13 +40,18 @@ func (c TemplateType) MarshalJSON() ([]byte, error) {
 
 func (c *TemplateType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetRecyclePolicyRequest Request Object
 type SetRecyclePolicyRequest struct {
 	Body *RecyclePolicyRequestBody `json:"body,omitempty"`
 }

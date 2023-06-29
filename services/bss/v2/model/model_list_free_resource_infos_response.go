@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFreeResourceInfosResponse Response Object
 type ListFreeResourceInfosResponse struct {
 
 	// 资源包信息列表，具体参见表2。

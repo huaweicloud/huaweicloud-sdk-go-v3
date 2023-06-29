@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPrivateSnatRequest Request Object
 type ShowPrivateSnatRequest struct {
 
 	// SNAT规则的ID。

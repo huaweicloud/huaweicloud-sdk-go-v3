@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// create Endpoint Group request
+// CreateEndpointGroupRequestBody create Endpoint Group request
 type CreateEndpointGroupRequestBody struct {
 	EndpointGroup *CreateEndpointGroupOption `json:"endpoint_group"`
 }

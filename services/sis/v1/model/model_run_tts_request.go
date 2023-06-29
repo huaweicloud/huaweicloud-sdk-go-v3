@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunTtsRequest Request Object
 type RunTtsRequest struct {
 	Body *PostCustomTtsReq `json:"body,omitempty"`
 }

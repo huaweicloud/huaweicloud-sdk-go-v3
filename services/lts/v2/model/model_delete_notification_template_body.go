@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除通知模板参数体
+// DeleteNotificationTemplateBody 删除通知模板参数体
 type DeleteNotificationTemplateBody struct {
 
 	// 待删除模板名称数组

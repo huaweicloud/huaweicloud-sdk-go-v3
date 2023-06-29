@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLoadBalancerResponse Response Object
 type CreateLoadBalancerResponse struct {
 	Loadbalancer *LoadBalancer `json:"loadbalancer,omitempty"`
 

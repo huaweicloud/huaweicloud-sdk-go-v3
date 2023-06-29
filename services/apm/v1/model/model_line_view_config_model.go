@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指向线视图配置。
+// LineViewConfigModel 指向线视图配置。
 type LineViewConfigModel struct {
 
 	// 视图对应的指标集的名称。

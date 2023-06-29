@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDelegatedServicesRequest Request Object
 type ListDelegatedServicesRequest struct {
 
 	// 帐号的唯一标识符（ID）。

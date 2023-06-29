@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPartnerAccountChangeRecordsRequest Request Object
 type ListPartnerAccountChangeRecordsRequest struct {
 
 	// 账户类型。BALANCE_TYPE_DEBIT：现金账户,BALANCE_TYPE_CREDIT：信用账户

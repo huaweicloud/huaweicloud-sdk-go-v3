@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPublicActionListRequest Request Object
 type ShowPublicActionListRequest struct {
 
 	// 模板名前缀。

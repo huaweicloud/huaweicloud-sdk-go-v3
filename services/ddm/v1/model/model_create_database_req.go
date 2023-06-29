@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateDatabaseReq This is a auto create Body Object
 type CreateDatabaseReq struct {
 
 	// 逻辑库相关信息的集合

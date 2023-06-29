@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPermissionResponse Response Object
 type ShowPermissionResponse struct {
 	Permission     *Permission `json:"permission,omitempty"`
 	HttpStatusCode int         `json:"-"`

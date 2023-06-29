@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGatewayResponseV2Response Response Object
 type UpdateGatewayResponseV2Response struct {
 
 	// 响应名称

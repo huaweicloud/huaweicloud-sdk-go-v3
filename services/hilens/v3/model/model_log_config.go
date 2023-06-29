@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志配置列表
+// LogConfig 日志配置列表
 type LogConfig struct {
 
 	// app：应用日志。 system：系统的日志

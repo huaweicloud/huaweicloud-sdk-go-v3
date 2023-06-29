@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// study作业最值信息
+// ExtremumDto study作业最值信息
 type ExtremumDto struct {
 
 	// 最值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群对象
+// CreateClusterInfo 集群对象
 type CreateClusterInfo struct {
 
 	// 节点类型

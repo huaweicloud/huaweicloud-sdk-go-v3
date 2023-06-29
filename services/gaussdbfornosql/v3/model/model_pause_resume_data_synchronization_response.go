@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PauseResumeDataSynchronizationResponse Response Object
 type PauseResumeDataSynchronizationResponse struct {
 
 	// 暂停/恢复具备容灾关系的实例数据同步的工作ID

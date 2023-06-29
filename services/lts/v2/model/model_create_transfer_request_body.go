@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建OBS转储，DIS转储，DMS转储
+// CreateTransferRequestBody 创建OBS转储，DIS转储，DMS转储
 type CreateTransferRequestBody struct {
 
 	// 日志组ID

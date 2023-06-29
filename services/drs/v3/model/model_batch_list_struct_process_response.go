@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchListStructProcessResponse Response Object
 type BatchListStructProcessResponse struct {
 
 	// 批量查询灾备初始化进度返回列表

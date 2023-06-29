@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInterRegionBandwidthsResponse Response Object
 type ListInterRegionBandwidthsResponse struct {
 
 	// 域间带宽实例列表。

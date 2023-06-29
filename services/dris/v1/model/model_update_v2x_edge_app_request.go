@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateV2xEdgeAppRequest Request Object
 type UpdateV2xEdgeAppRequest struct {
 
 	// **参数说明**：应用唯一ID，升级边缘应用前应先部署边缘应用，方法参见：[部署边缘应用](https://support.huaweicloud.com/api-v2x/v2x_04_0112.html)。  **取值范围**：只允许字母、数字、下划线（_）、连接符（-）、美元符号（$）的组合。

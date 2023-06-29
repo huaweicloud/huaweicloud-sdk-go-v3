@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AcceptServiceContractResponse Response Object
 type AcceptServiceContractResponse struct {
 	XRequestId *string `json:"x-request-id,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLogStreamResponse Response Object
 type CreateLogStreamResponse struct {
 
 	// 创建的日志流的Id。

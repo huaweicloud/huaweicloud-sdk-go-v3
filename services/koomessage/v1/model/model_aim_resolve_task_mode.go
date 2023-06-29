@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询发送任务短链请求信息
+// AimResolveTaskMode 查询发送任务短链请求信息
 type AimResolveTaskMode struct {
 
 	// 智能信息模板ID，由9位数字组成。

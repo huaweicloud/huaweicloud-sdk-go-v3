@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateValueListResponse Response Object
 type CreateValueListResponse struct {
 
 	// 引用表id

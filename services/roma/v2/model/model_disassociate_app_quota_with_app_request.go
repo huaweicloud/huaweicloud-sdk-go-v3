@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateAppQuotaWithAppRequest Request Object
 type DisassociateAppQuotaWithAppRequest struct {
 
 	// 实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunImageSuperResolutionRequest Request Object
 type RunImageSuperResolutionRequest struct {
 	Body *ImageSuperResolutionReq `json:"body,omitempty"`
 }

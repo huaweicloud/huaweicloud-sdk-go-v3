@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRuleAclUsingDeleteResponse Response Object
 type DeleteRuleAclUsingDeleteResponse struct {
 	Data           *RuleId `json:"data,omitempty"`
 	HttpStatusCode int     `json:"-"`

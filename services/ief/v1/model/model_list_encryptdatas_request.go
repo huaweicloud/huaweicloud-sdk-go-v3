@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEncryptdatasRequest Request Object
 type ListEncryptdatasRequest struct {
 
 	// 加密数据名称

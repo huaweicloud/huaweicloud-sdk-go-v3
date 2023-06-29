@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 地址组成员信息
+// AddAddressItemsInfoDto 地址组成员信息
 type AddAddressItemsInfoDto struct {
 
 	// 地址组id

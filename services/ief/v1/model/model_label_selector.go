@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签选择器
+// LabelSelector 标签选择器
 type LabelSelector struct {
 
 	// 匹配规则表达式

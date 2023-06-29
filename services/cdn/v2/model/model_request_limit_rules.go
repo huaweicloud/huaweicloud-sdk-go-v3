@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求限速配置。
+// RequestLimitRules 请求限速配置。
 type RequestLimitRules struct {
 
 	// 状态, on：开启，off：关闭。

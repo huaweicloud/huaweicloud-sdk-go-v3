@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板协议内容数据结构。
+// AimPersonalTemplateContent 模板协议内容数据结构。
 type AimPersonalTemplateContent struct {
 
 	// 模板资源类型。 - text：表示文本 - image：表示图片 - video：表示视频 - button：表示按钮 - followPub：表示华为服务号，暂不支持  > 图片轮播类模板最多可以放5张图片，即card_id为CarouselSquareImage、CarouselImageSixteenToNine、CarouselVerticalImage时，type为image的资源最多有5个。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEnterpriseProjectAuthRequest Request Object
 type CreateEnterpriseProjectAuthRequest struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShrinkInstanceNodesResponse Response Object
 type ShrinkInstanceNodesResponse struct {
 
 	// DDM实例ID。

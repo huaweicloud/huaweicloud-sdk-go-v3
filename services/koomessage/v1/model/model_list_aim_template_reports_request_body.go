@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板报表查询过滤条件。
+// ListAimTemplateReportsRequestBody 模板报表查询过滤条件。
 type ListAimTemplateReportsRequestBody struct {
 
 	// 智能信息模板ID列表，一次最多请求100个。

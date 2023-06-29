@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 用于查询资源实例的Tag过滤条件
+// ListResourceByFilterTagRequestBody 用于查询资源实例的Tag过滤条件
 type ListResourceByFilterTagRequestBody struct {
 
 	// 动作。|- filter：过滤。 count：查询总条数。
@@ -67,13 +67,18 @@ func (c ListResourceByFilterTagRequestBodyAction) MarshalJSON() ([]byte, error) 
 
 func (c *ListResourceByFilterTagRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

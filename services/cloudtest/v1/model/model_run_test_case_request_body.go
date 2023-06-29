@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 执行测试用例请求体
+// RunTestCaseRequestBody 执行测试用例请求体
 type RunTestCaseRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id

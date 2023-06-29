@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAvailabilityZoneRequest Request Object
 type ListAvailabilityZoneRequest struct {
 
 	// 企业路由器ID

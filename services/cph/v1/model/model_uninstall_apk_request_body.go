@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 卸载应用请求体。
+// UninstallApkRequestBody 卸载应用请求体。
 type UninstallApkRequestBody struct {
 
 	// 卸载应用固定填写uninstall。

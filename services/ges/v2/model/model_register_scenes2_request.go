@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RegisterScenes2Request Request Object
 type RegisterScenes2Request struct {
 
 	// 图ID。

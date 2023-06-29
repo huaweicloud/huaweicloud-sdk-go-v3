@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRetentionsResponse Response Object
 type ListRetentionsResponse struct {
 	Body           *[]Retention `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDbMaskTaskResponse Response Object
 type ListDbMaskTaskResponse struct {
 
 	// 脱敏任务列表

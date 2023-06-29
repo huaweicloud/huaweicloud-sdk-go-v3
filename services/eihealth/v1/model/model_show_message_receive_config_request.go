@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMessageReceiveConfigRequest Request Object
 type ShowMessageReceiveConfigRequest struct {
 }
 

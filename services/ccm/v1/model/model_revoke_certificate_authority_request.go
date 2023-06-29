@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RevokeCertificateAuthorityRequest Request Object
 type RevokeCertificateAuthorityRequest struct {
 
 	// 所要吊销的子CA ID。

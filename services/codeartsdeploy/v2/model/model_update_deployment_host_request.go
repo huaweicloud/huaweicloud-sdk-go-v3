@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDeploymentHostRequest Request Object
 type UpdateDeploymentHostRequest struct {
 
 	// 主机集群id

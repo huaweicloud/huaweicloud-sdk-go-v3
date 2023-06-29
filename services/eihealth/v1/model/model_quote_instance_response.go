@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// QuoteInstanceResponse Response Object
 type QuoteInstanceResponse struct {
 	Body           *[]QuoteDatabaseResultRsp `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`

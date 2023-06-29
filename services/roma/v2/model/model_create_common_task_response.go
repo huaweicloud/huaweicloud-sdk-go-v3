@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCommonTaskResponse Response Object
 type CreateCommonTaskResponse struct {
 	Task *TaskBasicRsp `json:"task,omitempty"`
 

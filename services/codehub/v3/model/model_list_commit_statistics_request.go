@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCommitStatisticsRequest Request Object
 type ListCommitStatisticsRequest struct {
 
 	// 分支名

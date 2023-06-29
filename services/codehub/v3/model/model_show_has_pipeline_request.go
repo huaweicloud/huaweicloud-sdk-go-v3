@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowHasPipelineRequest Request Object
 type ShowHasPipelineRequest struct {
 
 	// 仓库id

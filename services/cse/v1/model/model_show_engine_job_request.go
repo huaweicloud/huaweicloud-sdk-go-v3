@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEngineJobRequest Request Object
 type ShowEngineJobRequest struct {
 
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"。

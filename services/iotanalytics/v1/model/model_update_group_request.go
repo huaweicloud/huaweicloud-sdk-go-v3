@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateGroupRequest Request Object
 type UpdateGroupRequest struct {
 
 	// 存储组 ID

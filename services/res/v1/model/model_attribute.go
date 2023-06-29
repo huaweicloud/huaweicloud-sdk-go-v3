@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Attribute
 type Attribute struct {
 
 	// 名称。

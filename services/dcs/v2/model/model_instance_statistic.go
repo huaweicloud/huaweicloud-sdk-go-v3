@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例的统计信息。
+// InstanceStatistic 实例的统计信息。
 type InstanceStatistic struct {
 
 	// 缓存实例网络入流量，单位：Kbps。

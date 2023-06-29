@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAppAclRequest Request Object
 type DeleteAppAclRequest struct {
 
 	// 实例ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteProjectModuleRequest Request Object
 type DeleteProjectModuleRequest struct {
 
 	// devcloud项目的32位id

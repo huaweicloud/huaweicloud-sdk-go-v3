@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 调度计划详情
+// TaskDispatch 调度计划详情
 type TaskDispatch struct {
 
 	// 调度计划的执行开始时间
@@ -82,13 +82,18 @@ func (c TaskDispatchPeriod) MarshalJSON() ([]byte, error) {
 
 func (c *TaskDispatchPeriod) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

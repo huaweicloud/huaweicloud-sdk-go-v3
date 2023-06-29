@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportGraph2Request Request Object
 type ExportGraph2Request struct {
 
 	// 图ID。

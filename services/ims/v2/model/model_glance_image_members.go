@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取镜像成员列表
+// GlanceImageMembers 获取镜像成员列表
 type GlanceImageMembers struct {
 
 	// 共享状态。

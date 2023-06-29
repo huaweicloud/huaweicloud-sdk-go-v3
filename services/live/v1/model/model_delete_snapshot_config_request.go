@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSnapshotConfigRequest Request Object
 type DeleteSnapshotConfigRequest struct {
 
 	// 直播流播放域名

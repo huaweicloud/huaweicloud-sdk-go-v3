@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCategoryListResponse Response Object
 type ShowCategoryListResponse struct {
 
 	// 返回值

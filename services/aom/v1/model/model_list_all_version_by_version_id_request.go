@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAllVersionByVersionIdRequest Request Object
 type ListAllVersionByVersionIdRequest struct {
 	Body *SearchScriptsRequestBody `json:"body,omitempty"`
 }

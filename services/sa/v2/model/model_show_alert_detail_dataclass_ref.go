@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// dataclass对象
+// ShowAlertDetailDataclassRef dataclass对象
 type ShowAlertDetailDataclassRef struct {
 
 	// Id value

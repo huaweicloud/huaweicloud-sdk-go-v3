@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddImageTagRequest Request Object
 type AddImageTagRequest struct {
 
 	// 镜像ID。

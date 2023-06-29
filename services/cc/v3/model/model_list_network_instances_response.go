@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNetworkInstancesResponse Response Object
 type ListNetworkInstancesResponse struct {
 
 	// 网络实例列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// object
+// CommonResponseDtoData object
 type CommonResponseDtoData struct {
 
 	// 防护对象id

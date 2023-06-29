@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 专属主机上创建的云服务器规格。
+// RespInstanceCapacity 专属主机上创建的云服务器规格。
 type RespInstanceCapacity struct {
 
 	// 支持创建的云服务器规格。

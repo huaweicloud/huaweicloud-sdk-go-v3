@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVideoTaggingMediaTaskRequest Request Object
 type ShowVideoTaggingMediaTaskRequest struct {
 
 	// 任务id

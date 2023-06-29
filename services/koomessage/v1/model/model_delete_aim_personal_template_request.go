@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAimPersonalTemplateRequest Request Object
 type DeleteAimPersonalTemplateRequest struct {
 
 	// 智能信息模板ID。

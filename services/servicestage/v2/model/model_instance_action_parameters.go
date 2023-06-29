@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作参数，scale和rollback时提供。
+// InstanceActionParameters 操作参数，scale和rollback时提供。
 type InstanceActionParameters struct {
 
 	// 实例数，在scale操作时提供。

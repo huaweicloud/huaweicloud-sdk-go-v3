@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 阈值
+// Value 阈值
 type Value struct {
 }
 

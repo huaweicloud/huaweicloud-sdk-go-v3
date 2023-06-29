@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteBlockchainRequest Request Object
 type DeleteBlockchainRequest struct {
 
 	// bcs 服务id

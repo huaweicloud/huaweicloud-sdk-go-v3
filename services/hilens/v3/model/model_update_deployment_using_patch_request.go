@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDeploymentUsingPatchRequest Request Object
 type UpdateDeploymentUsingPatchRequest struct {
 
 	// 部署ID

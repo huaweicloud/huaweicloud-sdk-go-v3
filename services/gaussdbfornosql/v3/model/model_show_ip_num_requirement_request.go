@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowIpNumRequirementRequest Request Object
 type ShowIpNumRequirementRequest struct {
 
 	// 创建实例或扩容节点的个数。最大支持输入200。

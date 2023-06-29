@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OBS数据源配置内容
+// ObsContentRsp OBS数据源配置内容
 type ObsContentRsp struct {
 
 	// 桶名称

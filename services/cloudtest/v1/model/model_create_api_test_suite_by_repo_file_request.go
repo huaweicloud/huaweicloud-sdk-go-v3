@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateApiTestSuiteByRepoFileRequest Request Object
 type CreateApiTestSuiteByRepoFileRequest struct {
 	Body *CreateTestSuitByRepoFileInfo `json:"body,omitempty"`
 }

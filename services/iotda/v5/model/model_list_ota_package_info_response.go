@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOtaPackageInfoResponse Response Object
 type ListOtaPackageInfoResponse struct {
 
 	// 升级包列表

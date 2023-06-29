@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteFacesResponse Response Object
 type BatchDeleteFacesResponse struct {
 
 	// 删除的人脸数量。 调用失败时无此字段。

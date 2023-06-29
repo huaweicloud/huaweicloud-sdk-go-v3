@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务信息
+// Task 任务信息
 type Task struct {
 
 	// 任务id

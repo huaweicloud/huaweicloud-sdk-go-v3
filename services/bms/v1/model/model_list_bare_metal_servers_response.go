@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBareMetalServersResponse Response Object
 type ListBareMetalServersResponse struct {
 
 	// 裸金属服务器详情列表

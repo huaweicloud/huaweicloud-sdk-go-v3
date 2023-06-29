@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowImageWatermarkResponse Response Object
 type ShowImageWatermarkResponse struct {
 
 	// 暗水印内容，长度不超过32个字节

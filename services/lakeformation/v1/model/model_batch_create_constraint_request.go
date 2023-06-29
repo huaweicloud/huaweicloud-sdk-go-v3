@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateConstraintRequest Request Object
 type BatchCreateConstraintRequest struct {
 
 	// 实例ID

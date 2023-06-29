@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个评估项目。
+// EvaluationProject 单个评估项目。
 type EvaluationProject struct {
 
 	// 评估项目ID。

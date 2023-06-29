@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateResOnlineInstanceRequestBody This is a auto create Body Object
 type UpdateResOnlineInstanceRequestBody struct {
 
 	// 类别。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSqlFilterRuleResponse Response Object
 type ShowSqlFilterRuleResponse struct {
 
 	// 节点ID

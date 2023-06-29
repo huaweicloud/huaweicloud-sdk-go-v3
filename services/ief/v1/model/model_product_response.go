@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品详情返回体
+// ProductResponse 产品详情返回体
 type ProductResponse struct {
 
 	// 产品id

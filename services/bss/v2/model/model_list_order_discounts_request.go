@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListOrderDiscountsRequest Request Object
 type ListOrderDiscountsRequest struct {
 
 	// 订单ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEdgeNodeDetailResponse Response Object
 type ShowEdgeNodeDetailResponse struct {
 	Node           *EdgeNodeResp `json:"node,omitempty"`
 	HttpStatusCode int           `json:"-"`

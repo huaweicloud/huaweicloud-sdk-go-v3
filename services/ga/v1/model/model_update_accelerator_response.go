@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAcceleratorResponse Response Object
 type UpdateAcceleratorResponse struct {
 	Accelerator *AcceleratorDetail `json:"accelerator,omitempty"`
 

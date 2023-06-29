@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunModerationAudioRequest Request Object
 type RunModerationAudioRequest struct {
 	Body *RunModerationAudioRequestBody `json:"body,omitempty"`
 }

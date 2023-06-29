@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部门基本信息。
+// DeptBasicDto 部门基本信息。
 type DeptBasicDto struct {
 
 	// 部门编码。

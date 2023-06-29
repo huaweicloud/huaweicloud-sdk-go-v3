@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改日志接入请求体
+// UpdateAccessConfigRequestBody 修改日志接入请求体
 type UpdateAccessConfigRequestBody struct {
 
 	// 日志接入ID

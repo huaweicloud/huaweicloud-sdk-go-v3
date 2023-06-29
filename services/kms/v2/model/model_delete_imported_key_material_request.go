@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteImportedKeyMaterialRequest Request Object
 type DeleteImportedKeyMaterialRequest struct {
 	Body *OperateKeyRequestBody `json:"body,omitempty"`
 }

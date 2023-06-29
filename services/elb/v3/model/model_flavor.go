@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 负载均衡器规格信息。
+// Flavor 负载均衡器规格信息。
 type Flavor struct {
 
 	// 规格ID。

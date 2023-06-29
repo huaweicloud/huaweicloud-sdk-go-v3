@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSynthesisTaskResponse Response Object
 type CreateSynthesisTaskResponse struct {
 
 	// 分子合成路径规划任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckParametersRequest Request Object
 type CheckParametersRequest struct {
 
 	// 项目ID

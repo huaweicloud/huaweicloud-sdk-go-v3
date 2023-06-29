@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostQaSessionReq
 type PostQaSessionReq struct {
 	Extends *SessionExtends `json:"extends,omitempty"`
 

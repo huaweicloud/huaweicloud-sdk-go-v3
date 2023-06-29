@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisableCertificateAuthorityRequest Request Object
 type DisableCertificateAuthorityRequest struct {
 
 	// 所要禁用CA证书ID。

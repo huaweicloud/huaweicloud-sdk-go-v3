@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息清理规则请求体
+// SetMessageClearRuleReq 消息清理规则请求体
 type SetMessageClearRuleReq struct {
 
 	// 最多保留记录数

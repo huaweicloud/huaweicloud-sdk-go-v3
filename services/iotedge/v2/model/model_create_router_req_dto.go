@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建路由请求结构体
+// CreateRouterReqDto 创建路由请求结构体
 type CreateRouterReqDto struct {
 
 	// 路由ID，节点下唯一

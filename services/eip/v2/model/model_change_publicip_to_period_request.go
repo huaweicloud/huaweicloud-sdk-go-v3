@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangePublicipToPeriodRequest Request Object
 type ChangePublicipToPeriodRequest struct {
 	Body *ChangeToPeriodReq `json:"body,omitempty"`
 }

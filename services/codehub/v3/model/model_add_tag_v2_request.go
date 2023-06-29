@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddTagV2Request Request Object
 type AddTagV2Request struct {
 
 	// 仓库主键id

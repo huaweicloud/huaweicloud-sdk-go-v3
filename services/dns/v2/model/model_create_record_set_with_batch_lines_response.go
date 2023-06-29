@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRecordSetWithBatchLinesResponse Response Object
 type CreateRecordSetWithBatchLinesResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 

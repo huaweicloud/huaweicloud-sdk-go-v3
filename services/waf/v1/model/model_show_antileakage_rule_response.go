@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAntileakageRuleResponse Response Object
 type ShowAntileakageRuleResponse struct {
 
 	// 规则id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 趋势图数据模型。
+// FrontLine 趋势图数据模型。
 type FrontLine struct {
 
 	// 数据点集合。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询主页列表响应体。
+// ListPortalInfosResponseModel 查询主页列表响应体。
 type ListPortalInfosResponseModel struct {
 
 	// 主页列表。

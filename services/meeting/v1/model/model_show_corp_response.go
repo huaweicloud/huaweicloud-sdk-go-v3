@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCorpResponse Response Object
 type ShowCorpResponse struct {
 	BasicInfo *QueryCorpBasicResultDto `json:"basicInfo,omitempty"`
 

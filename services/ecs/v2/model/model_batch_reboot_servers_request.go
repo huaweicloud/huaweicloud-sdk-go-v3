@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchRebootServersRequest Request Object
 type BatchRebootServersRequest struct {
 	Body *BatchRebootServersRequestBody `json:"body,omitempty"`
 }

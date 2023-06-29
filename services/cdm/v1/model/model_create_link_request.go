@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLinkRequest Request Object
 type CreateLinkRequest struct {
 
 	// 集群ID

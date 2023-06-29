@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Flow
 type Flow struct {
 
 	// 流程id。

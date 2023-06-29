@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportUserLoginInfoNewRequest Request Object
 type ExportUserLoginInfoNewRequest struct {
 
 	// 查询的起始时间。指定该参数后，返回的结果为此时间之后的所有登录记录。时间格式如：“2016-08-20T21:11Z”。终止时间不为空时，起始时间为必填参数。

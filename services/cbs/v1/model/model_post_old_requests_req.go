@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostOldRequestsReq
 type PostOldRequestsReq struct {
 	Extends *OldExtends `json:"extends,omitempty"`
 

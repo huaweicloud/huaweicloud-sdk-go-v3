@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPassphraseRequest Request Object
 type ShowPassphraseRequest struct {
 
 	// 任务ID

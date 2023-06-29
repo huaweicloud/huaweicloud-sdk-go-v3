@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowModuleRequest Request Object
 type ShowModuleRequest struct {
 
 	// 边缘节点ID

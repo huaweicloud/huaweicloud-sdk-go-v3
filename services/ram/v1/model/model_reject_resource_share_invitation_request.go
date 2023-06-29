@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RejectResourceShareInvitationRequest Request Object
 type RejectResourceShareInvitationRequest struct {
 
 	// 资源共享邀请的ID。

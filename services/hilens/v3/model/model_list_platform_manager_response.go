@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPlatformManagerResponse Response Object
 type ListPlatformManagerResponse struct {
 
 	// 订单总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源站配置。
+// SourcesConfig 源站配置。
 type SourcesConfig struct {
 
 	// 源站IP或者域名。

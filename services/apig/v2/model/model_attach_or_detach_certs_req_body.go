@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 域名绑定和解绑证书的请求体
+// AttachOrDetachCertsReqBody 域名绑定和解绑证书的请求体
 type AttachOrDetachCertsReqBody struct {
 
 	// 证书的id集合

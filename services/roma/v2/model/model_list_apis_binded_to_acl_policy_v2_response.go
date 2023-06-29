@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApisBindedToAclPolicyV2Response Response Object
 type ListApisBindedToAclPolicyV2Response struct {
 
 	// 本次返回的列表长度

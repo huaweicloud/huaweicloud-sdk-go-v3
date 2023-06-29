@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CompareTableInfoWithToken
 type CompareTableInfoWithToken struct {
 
 	// 表名。

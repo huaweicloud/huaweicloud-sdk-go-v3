@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRecordRulesResponse Response Object
 type ListRecordRulesResponse struct {
 
 	// 录制规则列表

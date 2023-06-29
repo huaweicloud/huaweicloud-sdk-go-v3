@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTopnTrafficStatisticsResponse Response Object
 type ListTopnTrafficStatisticsResponse struct {
 
 	// 响应结果

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandShareResponse Response Object
 type ExpandShareResponse struct {
 
 	// SFS Turbo文件系统ID。

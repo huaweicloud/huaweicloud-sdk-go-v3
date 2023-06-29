@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道号登记请求体。
+// RegisterPortRequestBody 通道号登记请求体。
 type RegisterPortRequestBody struct {
 
 	// 通道号。 - port_type=5时 ，长度必须为5 - port_type=1或3，长度在21位内

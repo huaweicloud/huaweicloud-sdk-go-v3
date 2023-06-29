@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeptAndChildDeptResponse Response Object
 type ShowDeptAndChildDeptResponse struct {
 
 	// 企业ID。

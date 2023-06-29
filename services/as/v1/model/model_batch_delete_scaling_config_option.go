@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除伸缩配置请求
+// BatchDeleteScalingConfigOption 批量删除伸缩配置请求
 type BatchDeleteScalingConfigOption struct {
 
 	// 伸缩配置ID。

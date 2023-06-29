@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InvokeGaussMySqlInstanceSwitchOverResponse Response Object
 type InvokeGaussMySqlInstanceSwitchOverResponse struct {
 
 	// 任务ID。

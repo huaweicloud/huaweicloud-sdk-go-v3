@@ -6,14 +6,11 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowClusterSettingRequest Request Object
 type ShowClusterSettingRequest struct {
 
-	// 租户ID
-	ProjectId string `json:"projectId"`
-
 	// 项目ID
-	ClusterId string `json:"clusterId"`
+	ClusterId string `json:"cluster_id"`
 
 	// 语言类型
 	XLanguage *string `json:"X-Language,omitempty"`

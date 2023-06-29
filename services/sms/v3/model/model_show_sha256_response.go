@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSha256Response Response Object
 type ShowSha256Response struct {
 
 	// Sha256值

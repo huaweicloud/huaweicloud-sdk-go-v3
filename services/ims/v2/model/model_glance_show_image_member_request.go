@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// GlanceShowImageMemberRequest Request Object
 type GlanceShowImageMemberRequest struct {
 
 	// 镜像id

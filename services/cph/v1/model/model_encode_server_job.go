@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 编码容器任务。
+// EncodeServerJob 编码容器任务。
 type EncodeServerJob struct {
 
 	// 编码服务的唯一标识ID，编码服务相关任务包含此字段。

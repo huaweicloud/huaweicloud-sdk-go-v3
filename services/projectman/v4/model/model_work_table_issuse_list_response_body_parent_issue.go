@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 父工作项信息
+// WorkTableIssuseListResponseBodyParentIssue 父工作项信息
 type WorkTableIssuseListResponseBodyParentIssue struct {
 
 	// 父工作项id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 执行异步shell命令任务。
+// RunSyncCommandJob 执行异步shell命令任务。
 type RunSyncCommandJob struct {
 
 	// 云手机的唯一标识，云手机相关任务包含此字段

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpgradeGraph2Response Response Object
 type UpgradeGraph2Response struct {
 
 	// 执行该异步任务的jobId。

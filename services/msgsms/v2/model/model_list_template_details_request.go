@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTemplateDetailsRequest Request Object
 type ListTemplateDetailsRequest struct {
 
 	// 应用key

@@ -6,17 +6,14 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnableComponentRequest Request Object
 type EnableComponentRequest struct {
 
-	// 租户ID
-	ProjectId string `json:"projectId"`
-
 	// 集群ID
-	ClusterId string `json:"clusterId"`
+	ClusterId string `json:"cluster_id"`
 
 	// 组件类型，取值为tsdb
-	ComponentName string `json:"componentName"`
+	ComponentName string `json:"component_name"`
 
 	// 语言类型
 	XLanguage *string `json:"X-Language,omitempty"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建凭据版本请求体。
+// CreateSecretVersionRequestBody 创建凭据版本请求体。
 type CreateSecretVersionRequestBody struct {
 
 	// 新创建凭据的凭据值，将其加密后，存入初始版本中。  类型：base64编码的二进制数据对象。  约束：secret_binary和secret_string必须且只能设置一个，最大32K。

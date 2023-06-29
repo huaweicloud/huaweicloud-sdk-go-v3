@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTopicResponse Response Object
 type CreateTopicResponse struct {
 
 	// 请求的唯一标识ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobEventResponse Response Object
 type ShowJobEventResponse struct {
 
 	// 条数

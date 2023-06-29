@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 区域。
+// AreaRegion 区域。
 type AreaRegion struct {
 
 	// 区域所属地区，取值： - OUTOFCM： 中国大陆以外 - CM：中国大陆

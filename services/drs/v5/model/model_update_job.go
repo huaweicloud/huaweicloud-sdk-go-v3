@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新任务信息体。
+// UpdateJob 更新任务信息体。
 type UpdateJob struct {
 
 	// 待更新的任务ID。

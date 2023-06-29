@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateServerGroupRequestBody This is a auto create Body Object
 type CreateServerGroupRequestBody struct {
 	ServerGroup *CreateServerGroupOption `json:"server_group"`
 }

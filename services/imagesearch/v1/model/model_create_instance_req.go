@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建实例的body体
+// CreateInstanceReq 创建实例的body体
 type CreateInstanceReq struct {
 
 	// 实例名称。  - 仅支持小写字母（a-z）、数字，横杠和下划线。  - 以字母开头，长度在16位以内。

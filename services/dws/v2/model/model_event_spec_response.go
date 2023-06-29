@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件配置对象
+// EventSpecResponse 事件配置对象
 type EventSpecResponse struct {
 
 	// 事件配置ID

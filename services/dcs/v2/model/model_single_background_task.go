@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个任务结构体
+// SingleBackgroundTask 单个任务结构体
 type SingleBackgroundTask struct {
 
 	// 后台任务ID

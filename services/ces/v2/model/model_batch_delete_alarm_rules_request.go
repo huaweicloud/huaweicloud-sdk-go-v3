@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteAlarmRulesRequest Request Object
 type BatchDeleteAlarmRulesRequest struct {
 	Body *BatchDeleteAlarmsRequestBody `json:"body,omitempty"`
 }

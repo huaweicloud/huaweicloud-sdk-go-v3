@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UnfreezePubRequest Request Object
 type UnfreezePubRequest struct {
 
 	// 服务号ID。

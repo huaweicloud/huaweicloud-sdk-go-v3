@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResultRequest Request Object
 type ShowResultRequest struct {
 
 	// the unique if of the request

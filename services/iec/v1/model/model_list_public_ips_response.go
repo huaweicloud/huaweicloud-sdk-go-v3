@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPublicIpsResponse Response Object
 type ListPublicIpsResponse struct {
 
 	// 弹性公网IP数目。

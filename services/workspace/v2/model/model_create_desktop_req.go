@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建桌面请求。
+// CreateDesktopReq 创建桌面请求。
 type CreateDesktopReq struct {
 
 	// 云桌面类型。  - DEDICATED：专属桌面。
@@ -36,16 +36,18 @@ type CreateDesktopReq struct {
 	Nics *[]Nic `json:"nics,omitempty"`
 
 	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组。
-	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 
-	// 创建桌面使用的参数列表。长度为1-50。  当前不支持一批桌面不同配置，所有桌面的配置和第一台的一致，如果第一台未设置参数，则取外层的同名参数。
+	// 创建桌面使用的参数列表。长度为1-100。  当前不支持一批桌面不同配置，所有桌面的配置和第一台的一致，如果第一台未设置参数，则取外层的同名参数。
 	Desktops []Desktop `json:"desktops"`
 
-	// 创建成功后是否发送邮件通知桌面用户，默认为true。此参数仅在开通云桌面服务的domain_type为LOCAL_AD时有效，为LITE_AS时无效，因为LITE_AS首次创建桌面时必须发送邮件通知桌面用户修改登录密码。
+	// 创建成功后是否发送邮件通知桌面用户，默认为true。
 	EmailNotification *bool `json:"email_notification,omitempty"`
 
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
+
+	Eip *Eip `json:"eip,omitempty"`
 }
 
 func (o CreateDesktopReq) String() string {
@@ -83,13 +85,18 @@ func (c CreateDesktopReqDesktopType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateDesktopReqDesktopType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

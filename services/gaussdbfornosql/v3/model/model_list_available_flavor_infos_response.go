@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAvailableFlavorInfosResponse Response Object
 type ListAvailableFlavorInfosResponse struct {
 
 	// 实例id。

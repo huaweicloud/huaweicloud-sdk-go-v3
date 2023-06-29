@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTransitIpTagsResponse Response Object
 type ShowTransitIpTagsResponse struct {
 
 	// 请求id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// **参数说明**：转发配置信息。
+// ForwardingConfigRequestDto **参数说明**：转发配置信息。
 type ForwardingConfigRequestDto struct {
 	KafkaConfig *KafkaConfigRequestDto `json:"kafka_config,omitempty"`
 

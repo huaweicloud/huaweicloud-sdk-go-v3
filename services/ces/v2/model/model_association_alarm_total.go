@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警模板关联的告警规则数目
+// AssociationAlarmTotal 告警模板关联的告警规则数目
 type AssociationAlarmTotal struct {
 }
 

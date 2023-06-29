@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListObsBucketsRequest Request Object
 type ListObsBucketsRequest struct {
 
 	// 分页查询时的偏移量

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowScalingPolicyResponse Response Object
 type ShowScalingPolicyResponse struct {
 	ScalingPolicy  *ScalingV1PolicyDetail `json:"scaling_policy,omitempty"`
 	HttpStatusCode int                    `json:"-"`

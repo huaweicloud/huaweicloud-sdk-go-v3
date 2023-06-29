@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNotebookTokenResponse Response Object
 type ShowNotebookTokenResponse struct {
 
 	// notebook鉴权信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLtsInfoConfigResponse Response Object
 type ShowLtsInfoConfigResponse struct {
 
 	// lts配置信息id，每个企业项目对应唯一id

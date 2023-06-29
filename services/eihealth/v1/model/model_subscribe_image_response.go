@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SubscribeImageResponse Response Object
 type SubscribeImageResponse struct {
 
 	// 镜像id

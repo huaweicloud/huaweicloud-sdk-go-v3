@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询边缘节点列表响应体
+// EdgeNodeDto 查询边缘节点列表响应体
 type EdgeNodeDto struct {
 
 	// 边缘节点ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateServerMetadataResponse Response Object
 type UpdateServerMetadataResponse struct {
 
 	// 用户自定义metadata键值对。

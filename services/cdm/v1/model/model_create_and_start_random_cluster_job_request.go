@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAndStartRandomClusterJobRequest Request Object
 type CreateAndStartRandomClusterJobRequest struct {
 
 	// 请求语言。

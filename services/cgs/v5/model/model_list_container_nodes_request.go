@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListContainerNodesRequest Request Object
 type ListContainerNodesRequest struct {
 
 	// 节点（服务器）名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NetConfig
 type NetConfig struct {
 
 	// 边缘网络ID。  约束： - 创建边缘业务仅支持使用系统规划的虚拟私有云。

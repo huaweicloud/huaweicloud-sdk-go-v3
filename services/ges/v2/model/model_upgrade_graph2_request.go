@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpgradeGraph2Request Request Object
 type UpgradeGraph2Request struct {
 
 	// 图ID。

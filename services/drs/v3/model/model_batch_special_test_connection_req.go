@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群批量测试连接任务请求体
+// BatchSpecialTestConnectionReq 集群批量测试连接任务请求体
 type BatchSpecialTestConnectionReq struct {
 
 	// 集群批量测试连接任务请求列表

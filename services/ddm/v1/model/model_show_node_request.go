@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNodeRequest Request Object
 type ShowNodeRequest struct {
 
 	// DDM实例ID

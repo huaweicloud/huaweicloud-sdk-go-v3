@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListJobsRequest Request Object
 type ListJobsRequest struct {
 
 	// 作业来源于课堂或课程。 取值范围： classroom:课堂作业 course:课程作业

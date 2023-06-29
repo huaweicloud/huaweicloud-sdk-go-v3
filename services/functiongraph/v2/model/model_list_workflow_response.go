@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkflowResponse Response Object
 type ListWorkflowResponse struct {
 
 	// 返回所有满足条件的对象个数

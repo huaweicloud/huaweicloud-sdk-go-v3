@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAccessConfigResponse Response Object
 type DeleteAccessConfigResponse struct {
 
 	// 日志接入列表

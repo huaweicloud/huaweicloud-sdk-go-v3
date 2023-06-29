@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 回源请求头
+// OriginRequestHeader 回源请求头
 type OriginRequestHeader struct {
 
 	// 设置回源请求头参数。格式要求：由数字，大小写字母，中划线组成，只能以字母开头。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPipelineSimpleInfoRequest Request Object
 type ListPipelineSimpleInfoRequest struct {
 	Body *ListPipelineSimpleInfoRequestBody `json:"body,omitempty"`
 }

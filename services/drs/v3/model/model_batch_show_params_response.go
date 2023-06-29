@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowParamsResponse Response Object
 type BatchShowParamsResponse struct {
 
 	// 查询数据库参数响应体

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDeviceTemplateByIdRequest Request Object
 type UpdateDeviceTemplateByIdRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

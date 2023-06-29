@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组合订单
+// CombinedOrder 组合订单
 type CombinedOrder struct {
 
 	// 组合订单 ID

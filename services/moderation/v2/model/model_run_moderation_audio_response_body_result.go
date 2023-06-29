@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用成功时表示调用结果。 调用失败时无此字段。
+// RunModerationAudioResponseBodyResult 调用成功时表示调用结果。 调用失败时无此字段。
 type RunModerationAudioResponseBodyResult struct {
 	Detail *RunModerationAudioResponseBodyResultDetail `json:"detail,omitempty"`
 

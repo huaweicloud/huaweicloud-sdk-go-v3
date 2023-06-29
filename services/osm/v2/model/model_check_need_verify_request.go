@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckNeedVerifyRequest Request Object
 type CheckNeedVerifyRequest struct {
 
 	// 联系方式值

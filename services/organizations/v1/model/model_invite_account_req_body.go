@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// InviteAccount 操作的请求体。
+// InviteAccountReqBody InviteAccount 操作的请求体。
 type InviteAccountReqBody struct {
 	Target *TargetDto `json:"target"`
 

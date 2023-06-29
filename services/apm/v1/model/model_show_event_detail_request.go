@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEventDetailRequest Request Object
 type ShowEventDetailRequest struct {
 
 	// trace id。

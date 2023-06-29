@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转发MRS Kafka消息结构
+// MrsKafkaForwarding 转发MRS Kafka消息结构
 type MrsKafkaForwarding struct {
 
 	// **参数说明**：转发kafka消息对应的地址列表

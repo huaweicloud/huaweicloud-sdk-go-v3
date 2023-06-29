@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateNewTaskResponse Response Object
 type CreateNewTaskResponse struct {
 
 	// 响应码

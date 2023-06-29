@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 父工作项
+// CreateIssueResponseV4ParentIssue 父工作项
 type CreateIssueResponseV4ParentIssue struct {
 
 	// 父工作项id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBmsDevicesResponse Response Object
 type ShowBmsDevicesResponse struct {
 
 	// 显卡id列表

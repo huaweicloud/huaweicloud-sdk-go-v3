@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSecurityGroupRuleResponse Response Object
 type CreateSecurityGroupRuleResponse struct {
 	SecurityGroupRule *SecurityGroupRule `json:"security_group_rule,omitempty"`
 	HttpStatusCode    int                `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddMemberV4Response Response Object
 type AddMemberV4Response struct {
 	HttpStatusCode int `json:"-"`
 }

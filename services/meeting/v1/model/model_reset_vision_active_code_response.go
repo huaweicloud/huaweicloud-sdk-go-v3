@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetVisionActiveCodeResponse Response Object
 type ResetVisionActiveCodeResponse struct {
 
 	// 激活码。

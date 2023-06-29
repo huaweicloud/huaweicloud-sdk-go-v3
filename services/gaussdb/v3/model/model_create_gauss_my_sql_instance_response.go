@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGaussMySqlInstanceResponse Response Object
 type CreateGaussMySqlInstanceResponse struct {
 	Instance *MysqlInstanceResponse `json:"instance,omitempty"`
 

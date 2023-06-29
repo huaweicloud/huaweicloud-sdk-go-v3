@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateResSceneRequest Request Object
 type UpdateResSceneRequest struct {
 
 	// 场景id。

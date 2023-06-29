@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PrePaidServerRootVolumeMetadata
 type PrePaidServerRootVolumeMetadata struct {
 
 	// metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTaskRulesetRequest Request Object
 type UpdateTaskRulesetRequest struct {
 
 	// 任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// metadata是集群对象的元数据定义，是集合类的元素类型，包含一组由不同名称定义的属性。
+// PersistentVolumeClaimMetadata metadata是集群对象的元数据定义，是集合类的元素类型，包含一组由不同名称定义的属性。
 type PersistentVolumeClaimMetadata struct {
 
 	// PersistentVolumeClaim名称，可以包含小写字母、数字、连字符和点，开头和结尾必须是字母或数字，最长253个字符，同一namespace下name不能重复。

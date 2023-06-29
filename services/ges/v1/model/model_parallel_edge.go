@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ParallelEdge
 type ParallelEdge struct {
 
 	// 处理方式，取值为allow，ignore和override，默认为allow。 - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateIgnoreRuleResponse Response Object
 type UpdateIgnoreRuleResponse struct {
 
 	// 规则id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// the request body of event
+// EventSchema the request body of event
 type EventSchema struct {
 
 	// the component of the codearts snap

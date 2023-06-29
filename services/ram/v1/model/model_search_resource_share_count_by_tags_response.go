@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchResourceShareCountByTagsResponse Response Object
 type SearchResourceShareCountByTagsResponse struct {
 
 	// 总记录数。

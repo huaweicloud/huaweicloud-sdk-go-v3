@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ResExecConfig
 type ResExecConfig struct {
 	SparkCalcSpec *SparkCalcSpec `json:"spark_calc_spec,omitempty"`
 

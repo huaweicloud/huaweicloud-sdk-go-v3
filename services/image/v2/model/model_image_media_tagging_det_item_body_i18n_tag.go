@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签的多种语言输出。
+// ImageMediaTaggingDetItemBodyI18nTag 标签的多种语言输出。
 type ImageMediaTaggingDetItemBodyI18nTag struct {
 
 	// 中文标签。

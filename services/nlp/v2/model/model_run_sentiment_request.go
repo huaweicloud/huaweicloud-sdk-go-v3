@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunSentimentRequest Request Object
 type RunSentimentRequest struct {
 	Body *HwCloudSentimentReq `json:"body,omitempty"`
 }

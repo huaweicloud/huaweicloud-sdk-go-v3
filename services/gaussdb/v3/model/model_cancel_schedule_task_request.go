@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CancelScheduleTaskRequest Request Object
 type CancelScheduleTaskRequest struct {
 
 	// 语言。

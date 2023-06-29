@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRoutesResponse Response Object
 type DeleteRoutesResponse struct {
 
 	// 路由列表

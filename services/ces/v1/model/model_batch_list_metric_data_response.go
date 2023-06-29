@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchListMetricDataResponse Response Object
 type BatchListMetricDataResponse struct {
 
 	// 监控指标。

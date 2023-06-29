@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateKeywordsAlarmRuleResponse Response Object
 type CreateKeywordsAlarmRuleResponse struct {
 
 	// 告警规则id

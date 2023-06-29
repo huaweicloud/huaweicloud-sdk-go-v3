@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProvincesResponse Response Object
 type ListProvincesResponse struct {
 
 	// 查询个数，成功的时候返回。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务器组信息
+// HostGroupItem 服务器组信息
 type HostGroupItem struct {
 
 	// 服务器组ID

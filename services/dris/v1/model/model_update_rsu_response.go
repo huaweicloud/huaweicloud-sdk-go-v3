@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateRsuResponse Response Object
 type UpdateRsuResponse struct {
 
 	// **参数说明**：RSU的唯一标识符，在平台创建RSU时由平台生成。

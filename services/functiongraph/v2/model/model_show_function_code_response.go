@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFunctionCodeResponse Response Object
 type ShowFunctionCodeResponse struct {
 
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
@@ -86,6 +86,7 @@ type ShowFunctionCodeResponseRuntimeEnum struct {
 	C__NET_CORE_3_1 ShowFunctionCodeResponseRuntime
 	PHP7_3          ShowFunctionCodeResponseRuntime
 	PYTHON3_9       ShowFunctionCodeResponseRuntime
+	CUSTOM          ShowFunctionCodeResponseRuntime
 	HTTP            ShowFunctionCodeResponseRuntime
 }
 
@@ -139,6 +140,9 @@ func GetShowFunctionCodeResponseRuntimeEnum() ShowFunctionCodeResponseRuntimeEnu
 		PYTHON3_9: ShowFunctionCodeResponseRuntime{
 			value: "Python3.9",
 		},
+		CUSTOM: ShowFunctionCodeResponseRuntime{
+			value: "Custom",
+		},
 		HTTP: ShowFunctionCodeResponseRuntime{
 			value: "http",
 		},
@@ -155,13 +159,18 @@ func (c ShowFunctionCodeResponseRuntime) MarshalJSON() ([]byte, error) {
 
 func (c *ShowFunctionCodeResponseRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -205,13 +214,18 @@ func (c ShowFunctionCodeResponseCodeType) MarshalJSON() ([]byte, error) {
 
 func (c *ShowFunctionCodeResponseCodeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

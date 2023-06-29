@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// indicator detail
+// CreateIndicatorDetail indicator detail
 type CreateIndicatorDetail struct {
 	DataSource *CreateAlertDataSource `json:"data_source,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移云手机请求体。
+// BatchMigrateCloudPhoneRequestBody 迁移云手机请求体。
 type BatchMigrateCloudPhoneRequestBody struct {
 
 	// 待迁移数据的云手机信息。

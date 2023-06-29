@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateVpcPeeringResponse Response Object
 type UpdateVpcPeeringResponse struct {
 	Peering        *VpcPeering `json:"peering,omitempty"`
 	HttpStatusCode int         `json:"-"`

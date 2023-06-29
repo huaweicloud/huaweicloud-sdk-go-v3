@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartGraph2Response Response Object
 type RestartGraph2Response struct {
 
 	// 强制重启任务ID。请求失败时字段为空。

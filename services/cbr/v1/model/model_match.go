@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Match
 type Match struct {
 
 	// 键。 key取值范围为：\"resource_name\"，资源名称

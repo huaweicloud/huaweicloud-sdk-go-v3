@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEndPointDetailResponse Response Object
 type ShowEndPointDetailResponse struct {
 	Endpoint       *EndpointObjResp `json:"endpoint,omitempty"`
 	HttpStatusCode int              `json:"-"`

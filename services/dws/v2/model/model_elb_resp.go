@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群ELB的相关信息
+// ElbResp 集群ELB的相关信息
 type ElbResp struct {
 
 	// 公网ip

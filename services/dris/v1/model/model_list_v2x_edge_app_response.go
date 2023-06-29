@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListV2xEdgeAppResponse Response Object
 type ListV2xEdgeAppResponse struct {
 
 	// **参数说明**：满足查询条件的记录数。

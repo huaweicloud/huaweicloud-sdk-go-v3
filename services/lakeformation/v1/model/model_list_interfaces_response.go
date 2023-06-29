@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInterfacesResponse Response Object
 type ListInterfacesResponse struct {
 
 	// lakecat策略信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAuditQuotaResponse Response Object
 type ShowAuditQuotaResponse struct {
 
 	// 实例当前剩余配额。

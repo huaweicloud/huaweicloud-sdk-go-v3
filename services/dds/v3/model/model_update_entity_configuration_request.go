@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEntityConfigurationRequest Request Object
 type UpdateEntityConfigurationRequest struct {
 
 	// 实例ID。

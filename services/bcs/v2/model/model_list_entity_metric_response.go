@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEntityMetricResponse Response Object
 type ListEntityMetricResponse struct {
 
 	// 指标对象列表。

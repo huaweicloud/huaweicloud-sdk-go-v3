@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 错误处理策略详情
+// OnError 错误处理策略详情
 type OnError struct {
 
 	// 错误匹配表达式，用来过滤需要处理的异常

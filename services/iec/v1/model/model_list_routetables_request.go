@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRoutetablesRequest Request Object
 type ListRoutetablesRequest struct {
 
 	// 路由表ID

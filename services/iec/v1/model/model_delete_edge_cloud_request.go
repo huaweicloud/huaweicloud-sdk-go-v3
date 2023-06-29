@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEdgeCloudRequest Request Object
 type DeleteEdgeCloudRequest struct {
 
 	// 边缘业务ID。

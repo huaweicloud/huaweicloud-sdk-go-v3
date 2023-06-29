@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置项
+// UpdateConfigMap 配置项
 type UpdateConfigMap struct {
 
 	// 配置项描述,最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\

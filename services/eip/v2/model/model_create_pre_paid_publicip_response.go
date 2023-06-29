@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePrePaidPublicipResponse Response Object
 type CreatePrePaidPublicipResponse struct {
 	Publicip *PublicipCreateResp `json:"publicip,omitempty"`
 

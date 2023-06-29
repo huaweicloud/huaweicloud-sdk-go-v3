@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddAgentPathResponse Response Object
 type AddAgentPathResponse struct {
 
 	// 新添加成功的路径列表

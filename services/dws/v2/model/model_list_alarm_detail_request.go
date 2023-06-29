@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmDetailRequest Request Object
 type ListAlarmDetailRequest struct {
 
 	// 时区

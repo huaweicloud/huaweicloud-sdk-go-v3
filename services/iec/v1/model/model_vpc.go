@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 虚拟私有云的数据对象。
+// Vpc 虚拟私有云的数据对象。
 type Vpc struct {
 
 	// 虚拟私有云的ID。

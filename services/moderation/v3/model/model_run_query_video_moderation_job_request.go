@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunQueryVideoModerationJobRequest Request Object
 type RunQueryVideoModerationJobRequest struct {
 
 	// 创建作业成功时，接口返回的job_id。

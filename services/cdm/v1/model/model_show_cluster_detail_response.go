@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowClusterDetailResponse Response Object
 type ShowClusterDetailResponse struct {
 
 	// 集群绑定的EIP

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTablesResponse Response Object
 type ListTablesResponse struct {
 	Tables *[]Table `json:"tables,omitempty"`
 

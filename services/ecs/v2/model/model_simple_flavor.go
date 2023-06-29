@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器规格。
+// SimpleFlavor 云服务器规格。
 type SimpleFlavor struct {
 
 	// 云服务器规格的ID。

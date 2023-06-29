@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配置项
+// ConfigMapResp 配置项
 type ConfigMapResp struct {
 
 	// 配置项ID

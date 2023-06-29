@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建容灾演练请求体
+// CreateDisasterRecoveryDrillRequestBody 创建容灾演练请求体
 type CreateDisasterRecoveryDrillRequestBody struct {
 	DisasterRecoveryDrill *CreateDisasterRecoveryDrillRequestParams `json:"disaster_recovery_drill"`
 }

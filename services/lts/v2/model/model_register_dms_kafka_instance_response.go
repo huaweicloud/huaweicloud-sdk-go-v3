@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterDmsKafkaInstanceResponse Response Object
 type RegisterDmsKafkaInstanceResponse struct {
 
 	// kafka ID

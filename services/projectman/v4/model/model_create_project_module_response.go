@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateProjectModuleResponse Response Object
 type CreateProjectModuleResponse struct {
 
 	// 模块描述

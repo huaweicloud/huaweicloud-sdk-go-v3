@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePublicZoneStatusResponse Response Object
 type UpdatePublicZoneStatusResponse struct {
 
 	// zone的ID，uuid形式的一个资源标识。

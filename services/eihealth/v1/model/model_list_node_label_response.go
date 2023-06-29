@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNodeLabelResponse Response Object
 type ListNodeLabelResponse struct {
 
 	// 节点标签数量

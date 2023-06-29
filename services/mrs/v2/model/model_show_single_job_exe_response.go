@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSingleJobExeResponse Response Object
 type ShowSingleJobExeResponse struct {
 	JobDetail      *JobQueryBean `json:"job_detail,omitempty"`
 	HttpStatusCode int           `json:"-"`

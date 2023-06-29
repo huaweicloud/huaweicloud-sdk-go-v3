@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// MemberRef
 type MemberRef struct {
 
 	// 后端服务器ID。

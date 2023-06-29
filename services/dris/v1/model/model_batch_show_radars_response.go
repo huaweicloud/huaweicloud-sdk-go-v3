@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowRadarsResponse Response Object
 type BatchShowRadarsResponse struct {
 
 	// **参数说明**：总数

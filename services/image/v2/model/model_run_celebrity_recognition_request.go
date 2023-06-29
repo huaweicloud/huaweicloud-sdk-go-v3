@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunCelebrityRecognitionRequest Request Object
 type RunCelebrityRecognitionRequest struct {
 	Body *CelebrityRecognitionReq `json:"body,omitempty"`
 }

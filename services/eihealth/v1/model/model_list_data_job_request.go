@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDataJobRequest Request Object
 type ListDataJobRequest struct {
 
 	// 创建者名称

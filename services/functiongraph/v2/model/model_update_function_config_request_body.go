@@ -120,6 +120,7 @@ type UpdateFunctionConfigRequestBodyRuntimeEnum struct {
 	C__NET_CORE_3_1 UpdateFunctionConfigRequestBodyRuntime
 	PHP7_3          UpdateFunctionConfigRequestBodyRuntime
 	PYTHON3_9       UpdateFunctionConfigRequestBodyRuntime
+	CUSTOM          UpdateFunctionConfigRequestBodyRuntime
 	HTTP            UpdateFunctionConfigRequestBodyRuntime
 }
 
@@ -173,6 +174,9 @@ func GetUpdateFunctionConfigRequestBodyRuntimeEnum() UpdateFunctionConfigRequest
 		PYTHON3_9: UpdateFunctionConfigRequestBodyRuntime{
 			value: "Python3.9",
 		},
+		CUSTOM: UpdateFunctionConfigRequestBodyRuntime{
+			value: "Custom",
+		},
 		HTTP: UpdateFunctionConfigRequestBodyRuntime{
 			value: "http",
 		},
@@ -189,13 +193,18 @@ func (c UpdateFunctionConfigRequestBodyRuntime) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateFunctionConfigRequestBodyRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

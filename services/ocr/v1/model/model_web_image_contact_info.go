@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WebImageContactInfo
 type WebImageContactInfo struct {
 
 	// 传入contact_info时的返回，为姓名。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成短链的参数对象。
+// ResolveTaskParam 生成短链的参数对象。
 type ResolveTaskParam struct {
 
 	// 创建解析任务时填写用户唯一标识，手机号码或者任何的唯一标识，唯一标识不超过64个字符。 发送智能信息时则必须填客户的手机号码。样例为：130****0001。

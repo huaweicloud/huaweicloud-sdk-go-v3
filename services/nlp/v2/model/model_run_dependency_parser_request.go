@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunDependencyParserRequest Request Object
 type RunDependencyParserRequest struct {
 	Body *DependencyParserRequest `json:"body,omitempty"`
 }

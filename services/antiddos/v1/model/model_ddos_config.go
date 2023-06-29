@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WeeklyReport
+// DdosConfig WeeklyReport
 type DdosConfig struct {
 
 	// 是否开启L7层防护

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级包在OBS的位置
+// ObsLocation 升级包在OBS的位置
 type ObsLocation struct {
 
 	// **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。

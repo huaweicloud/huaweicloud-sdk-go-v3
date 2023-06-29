@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLatelyGroupStatisticsV2Response Response Object
 type ListLatelyGroupStatisticsV2Response struct {
 
 	// 响应码

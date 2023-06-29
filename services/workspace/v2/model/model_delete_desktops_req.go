@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除桌面请求。
+// DeleteDesktopsReq 批量删除桌面请求。
 type DeleteDesktopsReq struct {
 
 	// 待删除的桌面ID列表。

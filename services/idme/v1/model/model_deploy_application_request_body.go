@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用部署版本信息
+// DeployApplicationRequestBody 应用部署版本信息
 type DeployApplicationRequestBody struct {
 
 	// 版本信息。

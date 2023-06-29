@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ReinstallServerWithoutCloudInitRequestBody This is a auto create Body Object
 type ReinstallServerWithoutCloudInitRequestBody struct {
 	OsReinstall *ReinstallServerWithoutCloudInitOption `json:"os-reinstall"`
 }

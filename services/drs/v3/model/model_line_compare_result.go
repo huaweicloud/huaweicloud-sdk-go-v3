@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// LineCompareResult
 type LineCompareResult struct {
 
 	// 行对比任务的id。

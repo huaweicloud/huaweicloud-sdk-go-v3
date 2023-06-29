@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CopySnapshotRequest Request Object
 type CopySnapshotRequest struct {
 
 	// 快照ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCertificateAuthorityObsAgencyResponse Response Object
 type CreateCertificateAuthorityObsAgencyResponse struct {
 
 	// 创建OBS委托，由IAM返回的授权ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddResourceTagRequest Request Object
 type BatchAddResourceTagRequest struct {
 
 	// 资源类型。审计：auditInstance

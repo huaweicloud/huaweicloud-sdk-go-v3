@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新云日志信息请求体
+// UpdateLogtankRequestBody 更新云日志信息请求体
 type UpdateLogtankRequestBody struct {
 
 	// 云日志服务日志组ID。

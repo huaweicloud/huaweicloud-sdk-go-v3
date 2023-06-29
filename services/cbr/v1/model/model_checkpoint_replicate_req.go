@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 执行复制请求体
+// CheckpointReplicateReq 执行复制请求体
 type CheckpointReplicateReq struct {
 	Replicate *CheckpointReplicateParam `json:"replicate"`
 }

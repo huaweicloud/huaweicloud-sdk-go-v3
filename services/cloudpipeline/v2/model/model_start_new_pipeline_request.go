@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartNewPipelineRequest Request Object
 type StartNewPipelineRequest struct {
 
 	// 流水线ID

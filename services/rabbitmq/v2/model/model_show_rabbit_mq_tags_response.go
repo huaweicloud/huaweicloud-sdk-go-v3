@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRabbitMqTagsResponse Response Object
 type ShowRabbitMqTagsResponse struct {
 
 	// 标签列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户的角色信息
+// UserRoleVo 用户的角色信息
 type UserRoleVo struct {
 
 	// 角色

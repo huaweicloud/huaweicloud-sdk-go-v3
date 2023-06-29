@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVpcepConnectionRequest Request Object
 type ShowVpcepConnectionRequest struct {
 
 	// 指定待查询的集群ID。

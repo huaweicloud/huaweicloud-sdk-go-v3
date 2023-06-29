@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateResOnlineInstanceRequest Request Object
 type CreateResOnlineInstanceRequest struct {
 
 	// 资源id（数据源id或场景id）。

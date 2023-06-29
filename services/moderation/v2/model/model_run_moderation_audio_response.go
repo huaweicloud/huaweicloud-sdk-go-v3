@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunModerationAudioResponse Response Object
 type RunModerationAudioResponse struct {
 	Result         *RunModerationAudioResponseBodyResult `json:"result,omitempty"`
 	HttpStatusCode int                                   `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InstallNextflowResponse Response Object
 type InstallNextflowResponse struct {
 
 	// 引擎ID

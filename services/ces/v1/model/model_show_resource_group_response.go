@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowResourceGroupResponse Response Object
 type ShowResourceGroupResponse struct {
 
 	// 资源分组的名称，如：Resource-Group-ECS-01。

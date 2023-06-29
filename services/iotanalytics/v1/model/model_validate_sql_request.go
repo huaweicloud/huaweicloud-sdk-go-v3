@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateSqlRequest Request Object
 type ValidateSqlRequest struct {
 	Body *ValidateSqlRequestBody `json:"body,omitempty"`
 }

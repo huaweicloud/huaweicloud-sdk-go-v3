@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddProtectedInstanceNicRequest Request Object
 type AddProtectedInstanceNicRequest struct {
 
 	// 保护实例的ID。

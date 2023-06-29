@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTagResponse Response Object
 type CreateTagResponse struct {
 
 	// tag标签名称。

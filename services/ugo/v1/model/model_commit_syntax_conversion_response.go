@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CommitSyntaxConversionResponse Response Object
 type CommitSyntaxConversionResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建云日志信息请求体
+// CreateLogtankRequestBody 创建云日志信息请求体
 type CreateLogtankRequestBody struct {
 
 	// 云日志服务日志组ID。

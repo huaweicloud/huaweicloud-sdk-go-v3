@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteClusterTagRequest Request Object
 type DeleteClusterTagRequest struct {
 
 	// 集群ID。

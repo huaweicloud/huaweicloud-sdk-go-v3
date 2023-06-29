@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCaResourceInstancesRequest Request Object
 type ListCaResourceInstancesRequest struct {
 	Body *ListResourceInstancesRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartAndStopDeploymentRequest Request Object
 type StartAndStopDeploymentRequest struct {
 
 	// 应用部署ID

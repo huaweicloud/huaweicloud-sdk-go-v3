@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEdgeNodeResponse Response Object
 type ShowEdgeNodeResponse struct {
 
 	// 边缘节点在IEF的日志配置

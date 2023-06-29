@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务器可挂载磁盘数量。
+// BlockDeviceAttachableQuantity 云服务器可挂载磁盘数量。
 type BlockDeviceAttachableQuantity struct {
 
 	// 云服务器可挂载scsi类型磁盘数量。

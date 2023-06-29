@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFalsePositiveRequest Request Object
 type UpdateFalsePositiveRequest struct {
 	Body *UpdateFalsePositiveRequestBody `json:"body,omitempty"`
 }

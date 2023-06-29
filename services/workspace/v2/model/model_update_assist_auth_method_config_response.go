@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateAssistAuthMethodConfigResponse Response Object
 type UpdateAssistAuthMethodConfigResponse struct {
 	HttpStatusCode int `json:"-"`
 }

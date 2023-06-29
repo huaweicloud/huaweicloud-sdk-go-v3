@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteGatewayResponseTypeV2Request Request Object
 type DeleteGatewayResponseTypeV2Request struct {
 
 	// 实例ID，在API网关控制台的“实例信息”中获取。
@@ -124,13 +124,18 @@ func (c DeleteGatewayResponseTypeV2RequestResponseType) MarshalJSON() ([]byte, e
 
 func (c *DeleteGatewayResponseTypeV2RequestResponseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

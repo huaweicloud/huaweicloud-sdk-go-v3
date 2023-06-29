@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowServerAutoRecoveryRequest Request Object
 type ShowServerAutoRecoveryRequest struct {
 
 	// 云服务器ID。

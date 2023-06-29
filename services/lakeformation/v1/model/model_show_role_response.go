@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRoleResponse Response Object
 type ShowRoleResponse struct {
 	Role *Role `json:"role,omitempty"`
 

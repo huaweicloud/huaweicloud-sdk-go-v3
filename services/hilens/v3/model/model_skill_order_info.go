@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订单详情
+// SkillOrderInfo 订单详情
 type SkillOrderInfo struct {
 
 	// 技能是否支持永久使用标识。1标识支持，0为不支持

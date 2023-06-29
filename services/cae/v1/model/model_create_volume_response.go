@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVolumeResponse Response Object
 type CreateVolumeResponse struct {
 	HttpStatusCode int `json:"-"`
 }

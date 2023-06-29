@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteResWorkspaceResponse Response Object
 type DeleteResWorkspaceResponse struct {
 
 	// 是否成功。

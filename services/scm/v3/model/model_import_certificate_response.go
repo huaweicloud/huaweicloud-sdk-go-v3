@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportCertificateResponse Response Object
 type ImportCertificateResponse struct {
 
 	// 证书id。

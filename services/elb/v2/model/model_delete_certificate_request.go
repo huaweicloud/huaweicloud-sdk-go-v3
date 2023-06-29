@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCertificateRequest Request Object
 type DeleteCertificateRequest struct {
 
 	// SSL证书ID

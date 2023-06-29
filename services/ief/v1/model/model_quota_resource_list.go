@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源列表
+// QuotaResourceList 资源列表
 type QuotaResourceList struct {
 
 	// 资源列表

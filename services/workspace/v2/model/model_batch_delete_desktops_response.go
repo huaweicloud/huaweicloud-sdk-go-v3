@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteDesktopsResponse Response Object
 type BatchDeleteDesktopsResponse struct {
 
 	// 任务ID。

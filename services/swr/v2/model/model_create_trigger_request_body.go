@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要创建触发器的信息
+// CreateTriggerRequestBody 需要创建触发器的信息
 type CreateTriggerRequestBody struct {
 
 	// 触发动作，update

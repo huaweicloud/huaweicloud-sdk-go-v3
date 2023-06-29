@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowProjectReleaseFilesRequest Request Object
 type ShowProjectReleaseFilesRequest struct {
 
 	// 文件名称，模糊搜索

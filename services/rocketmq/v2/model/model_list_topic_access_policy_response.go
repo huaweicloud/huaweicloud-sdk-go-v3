@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTopicAccessPolicyResponse Response Object
 type ListTopicAccessPolicyResponse struct {
 
 	// 用户列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSslCertDownloadAddressResponse Response Object
 type ListSslCertDownloadAddressResponse struct {
 
 	// 证书列表

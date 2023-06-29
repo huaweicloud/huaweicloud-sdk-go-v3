@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用例其他扩展信息
+// ExtendInfo 用例其他扩展信息
 type ExtendInfo struct {
 	Author *ExtendAuthorInfo `json:"author,omitempty"`
 

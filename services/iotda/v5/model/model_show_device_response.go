@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDeviceResponse Response Object
 type ShowDeviceResponse struct {
 
 	// 资源空间ID。

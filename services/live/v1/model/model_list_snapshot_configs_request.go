@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSnapshotConfigsRequest Request Object
 type ListSnapshotConfigsRequest struct {
 
 	// 域名

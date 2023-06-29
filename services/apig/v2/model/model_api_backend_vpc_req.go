@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VPC通道详情。vpc_channel_status = 1，则这个object类型为必填信息
+// ApiBackendVpcReq VPC通道详情。vpc_channel_status = 1，则这个object类型为必填信息
 type ApiBackendVpcReq struct {
 
 	// 代理主机

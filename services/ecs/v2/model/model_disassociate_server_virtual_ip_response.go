@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateServerVirtualIpResponse Response Object
 type DisassociateServerVirtualIpResponse struct {
 
 	// 云服务器网卡ID

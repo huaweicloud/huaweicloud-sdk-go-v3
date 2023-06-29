@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订单以及产品相关信息
+// ServerMetadata 订单以及产品相关信息
 type ServerMetadata struct {
 
 	// 订单ID，不超过64个字节

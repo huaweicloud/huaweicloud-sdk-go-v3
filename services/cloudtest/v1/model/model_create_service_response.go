@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateServiceResponse Response Object
 type CreateServiceResponse struct {
 
 	// 接口调用成功返回的服务名

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRunsRequest Request Object
 type ListRunsRequest struct {
 
 	// 当前偏移量，默认为0。
@@ -85,13 +85,18 @@ func (c ListRunsRequestOrder) MarshalJSON() ([]byte, error) {
 
 func (c *ListRunsRequestOrder) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

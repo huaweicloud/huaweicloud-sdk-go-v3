@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RevokeMessageRequest Request Object
 type RevokeMessageRequest struct {
 
 	// 工单id

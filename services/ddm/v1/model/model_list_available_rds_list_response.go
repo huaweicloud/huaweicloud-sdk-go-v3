@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAvailableRdsListResponse Response Object
 type ListAvailableRdsListResponse struct {
 
 	// 获取创建逻辑库可用数据库实例信息列表的集合。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeSecurityGroupRequest Request Object
 type ChangeSecurityGroupRequest struct {
 
 	// 待修改安全组的集群ID。

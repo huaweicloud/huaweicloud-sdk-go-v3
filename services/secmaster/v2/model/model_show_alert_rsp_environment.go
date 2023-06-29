@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 环境信息
+// ShowAlertRspEnvironment 环境信息
 type ShowAlertRspEnvironment struct {
 
 	// The name, display only

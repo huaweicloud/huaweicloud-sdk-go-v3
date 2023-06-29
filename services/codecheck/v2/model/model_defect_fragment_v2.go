@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// start_offset和end_offset均为-1，表示该行不是缺陷片段或者整行都是，需要结合DefectInfoV2中的line_number属性一起判断哪一行是具体的缺陷片段。
+// DefectFragmentV2 start_offset和end_offset均为-1，表示该行不是缺陷片段或者整行都是，需要结合DefectInfoV2中的line_number属性一起判断哪一行是具体的缺陷片段。
 type DefectFragmentV2 struct {
 
 	// 行号

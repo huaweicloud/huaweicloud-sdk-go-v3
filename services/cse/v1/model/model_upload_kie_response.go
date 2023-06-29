@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadKieResponse Response Object
 type UploadKieResponse struct {
 
 	// 导入成功的配置项列表。

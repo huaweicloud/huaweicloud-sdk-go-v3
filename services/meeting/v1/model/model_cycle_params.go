@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 周期会议的参数。
+// CycleParams 周期会议的参数。
 type CycleParams struct {
 
 	// 周期会议的开始日期，格式：YYYY-MM-DD。 开始日期不能早于当前日期。 > 日期是timeZoneID指定的时区的日期，非UTC时间的日期。

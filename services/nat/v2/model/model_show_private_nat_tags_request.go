@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPrivateNatTagsRequest Request Object
 type ShowPrivateNatTagsRequest struct {
 
 	// 私网NAT网关的ID。

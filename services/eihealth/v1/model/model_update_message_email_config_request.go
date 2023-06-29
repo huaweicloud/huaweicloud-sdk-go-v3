@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMessageEmailConfigRequest Request Object
 type UpdateMessageEmailConfigRequest struct {
 	Body *SetMessageEmailConfigReq `json:"body,omitempty"`
 }

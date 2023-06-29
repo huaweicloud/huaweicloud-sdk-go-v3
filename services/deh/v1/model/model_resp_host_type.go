@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 可用的专属主机类型。
+// RespHostType 可用的专属主机类型。
 type RespHostType struct {
 
 	// 专属主机类型。

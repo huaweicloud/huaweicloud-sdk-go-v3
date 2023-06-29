@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateWhitelistReq
 type CreateWhitelistReq struct {
 
 	// 白名单所在的项目ID

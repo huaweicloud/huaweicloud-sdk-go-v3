@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteVirtualGatewayRequest Request Object
 type DeleteVirtualGatewayRequest struct {
 
 	// 虚拟网关ID

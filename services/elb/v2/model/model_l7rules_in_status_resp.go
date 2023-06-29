@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 转发规则对象，用于状态树中
+// L7rulesInStatusResp 转发规则对象，用于状态树中
 type L7rulesInStatusResp struct {
 
 	// 转发规则的匹配内容。PATH：匹配请求中的路径；HOST_NAME：匹配请求中的域名
@@ -61,13 +61,18 @@ func (c L7rulesInStatusRespType) MarshalJSON() ([]byte, error) {
 
 func (c *L7rulesInStatusRespType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

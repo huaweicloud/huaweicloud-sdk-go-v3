@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 支持的特性功能。
+// RabbitMqProductSupportFeaturesEntity 支持的特性功能。
 type RabbitMqProductSupportFeaturesEntity struct {
 
 	// 特性名称。

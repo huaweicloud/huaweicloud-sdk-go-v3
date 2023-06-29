@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 文件信息。
+// AssetFileInfo 文件信息。
 type AssetFileInfo struct {
 
 	// 文件ID。

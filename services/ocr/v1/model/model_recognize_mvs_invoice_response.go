@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeMvsInvoiceResponse Response Object
 type RecognizeMvsInvoiceResponse struct {
 	Result         *MvsInvoiceResult `json:"result,omitempty"`
 	HttpStatusCode int               `json:"-"`

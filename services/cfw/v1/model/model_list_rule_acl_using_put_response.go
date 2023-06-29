@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRuleAclUsingPutResponse Response Object
 type ListRuleAclUsingPutResponse struct {
 	Data           *RuleId `json:"data,omitempty"`
 	HttpStatusCode int     `json:"-"`

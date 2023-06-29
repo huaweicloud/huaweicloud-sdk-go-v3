@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEvaluationProjectsRequest Request Object
 type ListEvaluationProjectsRequest struct {
 
 	// 评估项目名称（模糊搜索）。
@@ -72,13 +72,18 @@ func (c ListEvaluationProjectsRequestEvaluationProjectStatus) MarshalJSON() ([]b
 
 func (c *ListEvaluationProjectsRequestEvaluationProjectStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEventResponse Response Object
 type ListEventResponse struct {
 
 	// 攻击事件数量

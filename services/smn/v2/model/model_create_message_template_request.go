@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMessageTemplateRequest Request Object
 type CreateMessageTemplateRequest struct {
 	Body *CreateMessageTemplateRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRecordDataResponse Response Object
 type ListRecordDataResponse struct {
 
 	// 采样数据列表。

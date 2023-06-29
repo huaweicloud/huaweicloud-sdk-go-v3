@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBmsDevicesRequest Request Object
 type ShowBmsDevicesRequest struct {
 
 	// 计算资源id

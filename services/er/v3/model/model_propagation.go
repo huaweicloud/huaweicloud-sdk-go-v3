@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 传播详情
+// Propagation 传播详情
 type Propagation struct {
 
 	// 关联唯一标识

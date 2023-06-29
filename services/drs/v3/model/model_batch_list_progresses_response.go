@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchListProgressesResponse Response Object
 type BatchListProgressesResponse struct {
 
 	// 总数

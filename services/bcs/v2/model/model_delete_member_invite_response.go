@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteMemberInviteResponse Response Object
 type DeleteMemberInviteResponse struct {
 
 	// 请求成功的结果

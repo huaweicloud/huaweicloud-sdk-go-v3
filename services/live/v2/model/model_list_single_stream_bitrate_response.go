@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSingleStreamBitrateResponse Response Object
 type ListSingleStreamBitrateResponse struct {
 
 	// 用量详情。

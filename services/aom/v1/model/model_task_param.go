@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务参数对象。
+// TaskParam 任务参数对象。
 type TaskParam struct {
 
 	// 参数名称。

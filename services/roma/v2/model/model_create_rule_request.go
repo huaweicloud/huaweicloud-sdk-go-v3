@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRuleRequest Request Object
 type CreateRuleRequest struct {
 
 	// 实例ID

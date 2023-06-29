@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用成功时表示调用结果。  调用失败时无此字段。
+// TaskSumbitResponseResult 调用成功时表示调用结果。  调用失败时无此字段。
 type TaskSumbitResponseResult struct {
 
 	// 批量图像内容审核的任务标识，用于后续的结果查询。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEpsQuotasRequest Request Object
 type ListEpsQuotasRequest struct {
 
 	// 企业项目名称。支持模糊搜索，若不指定则返回所有企业项目配额。

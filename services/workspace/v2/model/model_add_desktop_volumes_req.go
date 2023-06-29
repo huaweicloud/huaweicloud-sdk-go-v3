@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个桌面添加磁盘参数。
+// AddDesktopVolumesReq 单个桌面添加磁盘参数。
 type AddDesktopVolumesReq struct {
 
 	// 桌面Id。

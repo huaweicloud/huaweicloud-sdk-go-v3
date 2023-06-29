@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 专属资源信息容量信息。
+// DedicatedResourceCapacity 专属资源信息容量信息。
 type DedicatedResourceCapacity struct {
 
 	// CPU核数。

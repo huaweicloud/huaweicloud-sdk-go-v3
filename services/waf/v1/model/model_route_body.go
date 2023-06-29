@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个路由线路详细信息
+// RouteBody 单个路由线路详细信息
 type RouteBody struct {
 
 	// WAF集群的cname后缀

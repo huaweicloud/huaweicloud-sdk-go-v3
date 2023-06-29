@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIndicatorsResponse Response Object
 type ListIndicatorsResponse struct {
 
 	// Id value

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowServerPasswordResponse Response Object
 type ShowServerPasswordResponse struct {
 
 	// 加密后的密码。

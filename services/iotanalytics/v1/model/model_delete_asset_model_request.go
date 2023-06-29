@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAssetModelRequest Request Object
 type DeleteAssetModelRequest struct {
 
 	// 模型ID

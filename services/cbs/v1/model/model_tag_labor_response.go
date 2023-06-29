@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// TagLaborResponse Response Object
 type TagLaborResponse struct {
 
 	// 调用成功时的返回请求ID。  调用失败时无此字段。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 预置标签
+// PresetLabelRsp 预置标签
 type PresetLabelRsp struct {
 
 	// 标签名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MoveAccountRequest Request Object
 type MoveAccountRequest struct {
 
 	// 帐号的唯一标识符（ID）。

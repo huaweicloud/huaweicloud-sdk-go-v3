@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPartitionsResponse Response Object
 type ListPartitionsResponse struct {
 	Partitions *[]Partition `json:"partitions,omitempty"`
 

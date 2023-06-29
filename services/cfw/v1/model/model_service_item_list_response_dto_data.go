@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 服务组成员列表
+// ServiceItemListResponseDtoData 服务组成员列表
 type ServiceItemListResponseDtoData struct {
 
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 权限检查条目。
+// PermissionItem 权限检查条目。
 type PermissionItem struct {
 
 	// 权限类型。

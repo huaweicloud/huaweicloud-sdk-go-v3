@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DownloadKeystoreRequest Request Object
 type DownloadKeystoreRequest struct {
 
 	// 下载的文件名称

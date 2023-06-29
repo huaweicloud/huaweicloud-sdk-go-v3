@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddUserToAppResponse Response Object
 type AddUserToAppResponse struct {
 
 	// 应用的总成员数量

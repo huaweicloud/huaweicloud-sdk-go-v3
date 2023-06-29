@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SendDlqMessageResponse Response Object
 type SendDlqMessageResponse struct {
 
 	// 重发死信消息结果。

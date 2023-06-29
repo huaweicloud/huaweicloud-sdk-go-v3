@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateResourceRequest Request Object
 type UpdateResourceRequest struct {
 
 	// 工作空间id

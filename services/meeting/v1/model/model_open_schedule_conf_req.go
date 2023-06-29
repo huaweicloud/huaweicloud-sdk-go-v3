@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建网络研讨会请求。
+// OpenScheduleConfReq 创建网络研讨会请求。
 type OpenScheduleConfReq struct {
 
 	// 网络研讨会主题。长度限制为128个字符。

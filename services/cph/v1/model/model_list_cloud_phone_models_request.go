@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCloudPhoneModelsRequest Request Object
 type ListCloudPhoneModelsRequest struct {
 
 	// 规格状态 - 0：下线状态 - 1：正常使用 不传该参数表示查询所有状态的规格。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLineGroupsRequest Request Object
 type ListLineGroupsRequest struct {
 
 	// 线路分组ID。 模糊匹配。

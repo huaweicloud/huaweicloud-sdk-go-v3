@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGraphResponse Response Object
 type CreateGraphResponse struct {
 
 	// 图ID。

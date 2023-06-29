@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PersistentVolumeClaimStatus
 type PersistentVolumeClaimStatus struct {
 
 	// 显示volume实际具有的访问模式。

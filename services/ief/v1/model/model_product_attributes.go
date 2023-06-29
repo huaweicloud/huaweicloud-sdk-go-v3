@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品属性
+// ProductAttributes 产品属性
 type ProductAttributes struct {
 
 	// 产品属性值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用申请资源
+// ResourceDto 应用申请资源
 type ResourceDto struct {
 
 	// cpu架构类型，不填默认X86

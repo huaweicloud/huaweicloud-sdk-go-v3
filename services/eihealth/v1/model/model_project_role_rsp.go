@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 项目角色详情
+// ProjectRoleRsp 项目角色详情
 type ProjectRoleRsp struct {
 
 	// 项目角色名

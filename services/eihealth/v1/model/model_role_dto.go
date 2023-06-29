@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 角色
+// RoleDto 角色
 type RoleDto struct {
 
 	// 角色id

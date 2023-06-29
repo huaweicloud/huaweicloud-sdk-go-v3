@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateNotebookResponse Response Object
 type CreateNotebookResponse struct {
 
 	// notebook ID

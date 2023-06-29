@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowJobInfosRequest Request Object
 type ShowJobInfosRequest struct {
 
 	// Job ID

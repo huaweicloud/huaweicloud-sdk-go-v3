@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteLineGroupRequest Request Object
 type DeleteLineGroupRequest struct {
 
 	// 线路分组ID。

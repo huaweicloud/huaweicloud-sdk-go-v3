@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteGetFramsListByImagesIdRequest Request Object
 type ExecuteGetFramsListByImagesIdRequest struct {
 
 	// 图片id

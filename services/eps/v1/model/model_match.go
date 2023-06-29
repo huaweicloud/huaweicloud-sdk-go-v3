@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 匹配字段
+// Match 匹配字段
 type Match struct {
 
 	// 键。有matches参数时，该字段为必填，固定为resource_name。

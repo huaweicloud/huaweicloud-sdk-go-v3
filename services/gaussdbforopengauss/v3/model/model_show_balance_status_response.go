@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBalanceStatusResponse Response Object
 type ShowBalanceStatusResponse struct {
 
 	// 平衡状态。

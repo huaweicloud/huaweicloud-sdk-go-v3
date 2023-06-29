@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询日志接入列表请求体
+// GetAccessConfigListRequestBody 查询日志接入列表请求体
 type GetAccessConfigListRequestBody struct {
 
 	// 接入配置名称列表

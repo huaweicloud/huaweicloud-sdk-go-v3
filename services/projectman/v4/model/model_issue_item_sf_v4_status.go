@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项状态
+// IssueItemSfV4Status 工作项状态
 type IssueItemSfV4Status struct {
 
 	// 状态id

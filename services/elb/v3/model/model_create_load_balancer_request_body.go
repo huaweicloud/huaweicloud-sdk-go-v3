@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateLoadBalancerRequestBody This is a auto create Body Object
 type CreateLoadBalancerRequestBody struct {
 	Loadbalancer *CreateLoadBalancerOption `json:"loadbalancer"`
 }

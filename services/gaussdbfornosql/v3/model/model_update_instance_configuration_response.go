@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceConfigurationResponse Response Object
 type UpdateInstanceConfigurationResponse struct {
 
 	// 修改实例参数的异步任务ID。

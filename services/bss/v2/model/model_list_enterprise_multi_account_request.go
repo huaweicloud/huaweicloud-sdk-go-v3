@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnterpriseMultiAccountRequest Request Object
 type ListEnterpriseMultiAccountRequest struct {
 
 	// 企业子账户的账号ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBackups2Response Response Object
 type ListBackups2Response struct {
 
 	// 备份总个数。请求失败时，字段为空。

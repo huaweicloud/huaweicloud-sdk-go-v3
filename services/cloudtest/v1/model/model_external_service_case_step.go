@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试步骤，数组长度小于10
+// ExternalServiceCaseStep 测试步骤，数组长度小于10
 type ExternalServiceCaseStep struct {
 
 	// 测试用例预期结果信息，长度为[0-500]位字符

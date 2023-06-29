@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetBalancerSwitchResponse Response Object
 type SetBalancerSwitchResponse struct {
 
 	// 任务ID。

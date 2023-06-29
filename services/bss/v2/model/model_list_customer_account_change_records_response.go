@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomerAccountChangeRecordsResponse Response Object
 type ListCustomerAccountChangeRecordsResponse struct {
 
 	// |参数名称：总条数| |参数的约束及描述：总条数|

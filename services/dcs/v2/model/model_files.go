@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入的备份文件文件列表。
+// Files 导入的备份文件文件列表。
 type Files struct {
 
 	// 备份文件名。

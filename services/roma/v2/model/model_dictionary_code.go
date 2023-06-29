@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 字典编码 - 字符集：英文字母、数字、下划线和空格 - 约束：实例下唯一
+// DictionaryCode 字典编码 - 字符集：英文字母、数字、下划线和空格 - 约束：实例下唯一
 type DictionaryCode struct {
 }
 

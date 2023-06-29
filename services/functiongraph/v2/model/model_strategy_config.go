@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数策略配置。
+// StrategyConfig 函数策略配置。
 type StrategyConfig struct {
 
 	// 单函数最大实例数，v1取值0和-1，v2取值-1到1000 -1代表该函数实例数无限制 0代表该函数被禁用

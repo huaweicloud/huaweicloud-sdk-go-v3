@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新容灾演练名称请求体
+// UpdateDisasterRecoveryDrillNameRequestBody 更新容灾演练名称请求体
 type UpdateDisasterRecoveryDrillNameRequestBody struct {
 	DisasterRecoveryDrill *UpdateDisasterRecoveryDrillNameRequestParams `json:"disaster_recovery_drill"`
 }

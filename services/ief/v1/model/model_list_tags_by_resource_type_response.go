@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTagsByResourceTypeResponse Response Object
 type ListTagsByResourceTypeResponse struct {
 
 	// 标签列表

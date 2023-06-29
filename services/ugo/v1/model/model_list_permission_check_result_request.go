@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPermissionCheckResultRequest Request Object
 type ListPermissionCheckResultRequest struct {
 
 	// 迁移项目ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照信息。
+// CreateSnapshotOption 快照信息。
 type CreateSnapshotOption struct {
 
 	// 源云硬盘的ID。

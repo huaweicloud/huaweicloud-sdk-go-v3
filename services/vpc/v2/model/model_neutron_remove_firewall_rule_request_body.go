@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronRemoveFirewallRuleRequestBody
 type NeutronRemoveFirewallRuleRequestBody struct {
 
 	// 功能说明：待移除的ACL规则ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLoadBalancerRequest Request Object
 type CreateLoadBalancerRequest struct {
 	Body *CreateLoadBalancerRequestBody `json:"body,omitempty"`
 }

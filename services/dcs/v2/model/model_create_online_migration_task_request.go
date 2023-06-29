@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateOnlineMigrationTaskRequest Request Object
 type CreateOnlineMigrationTaskRequest struct {
 	Body *CreateOnlineMigrationTaskBody `json:"body,omitempty"`
 }

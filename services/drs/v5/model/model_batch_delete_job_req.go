@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除任务请求体。
+// BatchDeleteJobReq 批量删除任务请求体。
 type BatchDeleteJobReq struct {
 
 	// 批量删除任务请求体。

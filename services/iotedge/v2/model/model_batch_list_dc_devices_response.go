@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchListDcDevicesResponse Response Object
 type BatchListDcDevicesResponse struct {
 
 	// 总记录数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteConnectorResponse Response Object
 type DeleteConnectorResponse struct {
 
 	// 返回异步执行删除任务的job id。

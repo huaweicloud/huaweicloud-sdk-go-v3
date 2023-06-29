@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPerformanceResourceStatRequest Request Object
 type ListPerformanceResourceStatRequest struct {
 
 	// 限制量，单次查询总量，必须由数字组成，默认为100，取值范围[1,1000]

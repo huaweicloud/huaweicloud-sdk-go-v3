@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建终端节点详细信息。
+// CreateEndpointOption 创建终端节点详细信息。
 type CreateEndpointOption struct {
 
 	// 对应后端资源的ID，比如EIP的ID。

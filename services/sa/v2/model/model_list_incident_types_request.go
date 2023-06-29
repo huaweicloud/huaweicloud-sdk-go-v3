@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIncidentTypesRequest Request Object
 type ListIncidentTypesRequest struct {
 
 	// 工作空间ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 失败时的error信息
+// ApiError 失败时的error信息
 type ApiError struct {
 
 	// 只有对外的接口才会返回此内容

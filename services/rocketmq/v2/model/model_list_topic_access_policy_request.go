@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListTopicAccessPolicyRequest Request Object
 type ListTopicAccessPolicyRequest struct {
 
 	// 实例ID。

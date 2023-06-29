@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个桌面扩容磁盘参数。
+// ExpandVolumesReq 单个桌面扩容磁盘参数。
 type ExpandVolumesReq struct {
 
 	// 桌面ID。

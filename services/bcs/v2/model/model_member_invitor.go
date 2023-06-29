@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 联盟成员中的邀请方
+// MemberInvitor 联盟成员中的邀请方
 type MemberInvitor struct {
 
 	// 邀请方BCS服务实例ID

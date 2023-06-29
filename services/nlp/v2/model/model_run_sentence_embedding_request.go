@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunSentenceEmbeddingRequest Request Object
 type RunSentenceEmbeddingRequest struct {
 	Body *PostSentenceEmbeddingReq `json:"body,omitempty"`
 }

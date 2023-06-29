@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckClusterRequest Request Object
 type CheckClusterRequest struct {
 	Body *ClusterCheckRequestBody `json:"body,omitempty"`
 }

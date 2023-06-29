@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 鉴权配置
+// AppAuth 鉴权配置
 type AppAuth struct {
 
 	// 开启或关闭URL鉴权

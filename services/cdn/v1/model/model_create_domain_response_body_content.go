@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建域名返回信息
+// CreateDomainResponseBodyContent 创建域名返回信息
 type CreateDomainResponseBodyContent struct {
 
 	// 加速域名ID。

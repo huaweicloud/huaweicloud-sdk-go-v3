@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateExtensionAuthorizationRequest Request Object
 type CreateExtensionAuthorizationRequest struct {
 
 	// CodeArtsIDEOnline实例ID

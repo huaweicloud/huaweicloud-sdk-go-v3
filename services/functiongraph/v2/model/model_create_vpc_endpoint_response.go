@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVpcEndpointResponse Response Object
 type CreateVpcEndpointResponse struct {
 
-	// 依赖id列表
-	State *[]string `json:"state,omitempty"`
+	// Ip列表
+	Endpoints *[]string `json:"endpoints,omitempty"`
 
-	// 快照制作响应码
-	Code           *string `json:"code,omitempty"`
+	// 域名地址
+	Address        *string `json:"address,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

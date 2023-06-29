@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCustomPropsTaskResponse Response Object
 type CreateCustomPropsTaskResponse struct {
 
 	// 自定义属性ID

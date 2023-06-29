@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteClusterRequest Request Object
 type DeleteClusterRequest struct {
 
 	// 指定待删除集群的ID

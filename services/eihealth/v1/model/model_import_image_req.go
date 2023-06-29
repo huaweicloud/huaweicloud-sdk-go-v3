@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入镜像UI接口请求体
+// ImportImageReq 导入镜像UI接口请求体
 type ImportImageReq struct {
 
 	// 源项目ID

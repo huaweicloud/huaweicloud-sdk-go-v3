@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用成功时的返回值。
+// TagFieldsInfo 调用成功时的返回值。
 type TagFieldsInfo struct {
 
 	// 字段名称

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建算子时用户可修改参数列表
+// Input 创建算子时用户可修改参数列表
 type Input struct {
 
 	// 输入参数名称，由小写字母、数字和中划线“-”组成
@@ -97,13 +97,18 @@ func (c InputType) MarshalJSON() ([]byte, error) {
 
 func (c *InputType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

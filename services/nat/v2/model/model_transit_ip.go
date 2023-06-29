@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 中转子网IP的响应体。
+// TransitIp 中转子网IP的响应体。
 type TransitIp struct {
 
 	// 中转IP的ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListInstancesRequest Request Object
 type ListInstancesRequest struct {
 
 	// 页码。 当前页面数，默认为0。 取值大于等于0，取值为0时返回第1页

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateMyActionTemplateRequest Request Object
 type UpdateMyActionTemplateRequest struct {
 
 	// 模板名称。名称必须以third开头，只能由字母、数字、下划线和中划线组成，长度小于等于32个字符。

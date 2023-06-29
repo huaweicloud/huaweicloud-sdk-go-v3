@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateBlackWhiteListResponse Response Object
 type UpdateBlackWhiteListResponse struct {
 
 	// 编码

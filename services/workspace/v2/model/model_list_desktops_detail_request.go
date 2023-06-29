@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDesktopsDetailRequest Request Object
 type ListDesktopsDetailRequest struct {
 
 	// 桌面状态。  - ACTIVE：运行中。 - SHUTOFF：关机。 - ERROR：异常。
@@ -35,6 +35,9 @@ type ListDesktopsDetailRequest struct {
 
 	// 桌面的标签。样例：  - key1=value1。 - key1=value1，key2=value2。
 	Tag *string `json:"tag,omitempty"`
+
+	// 桌面池ID,多个桌面池ID用逗号隔开。
+	PoolId *string `json:"pool_id,omitempty"`
 }
 
 func (o ListDesktopsDetailRequest) String() string {

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 多画面布局。
+// RestPicLayout 多画面布局。
 type RestPicLayout struct {
 
 	// 多画面轮询时间，单位秒。

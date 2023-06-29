@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeSitesResponse Response Object
 type ListEdgeSitesResponse struct {
 
 	// 边缘小站列表。

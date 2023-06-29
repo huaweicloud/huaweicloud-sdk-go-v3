@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UninstallApkRequest Request Object
 type UninstallApkRequest struct {
 	Body *UninstallApkRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建点位表配置请求结构体
+// CreateDcPointReqDto 创建点位表配置请求结构体
 type CreateDcPointReqDto struct {
 
 	// 点位表id，数据源下唯一

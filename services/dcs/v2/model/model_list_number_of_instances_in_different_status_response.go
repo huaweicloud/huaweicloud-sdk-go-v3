@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNumberOfInstancesInDifferentStatusResponse Response Object
 type ListNumberOfInstancesInDifferentStatusResponse struct {
 	Redis *StatusStatistic `json:"redis,omitempty"`
 

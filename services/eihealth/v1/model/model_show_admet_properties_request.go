@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAdmetPropertiesRequest Request Object
 type ShowAdmetPropertiesRequest struct {
 	Body *AdmetRequest `json:"body,omitempty"`
 }

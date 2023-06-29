@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAgentRequest Request Object
 type ShowAgentRequest struct {
 
 	// 客户端ID

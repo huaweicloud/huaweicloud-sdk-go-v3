@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SMN数据源配置内容
+// FunctionGraphContentRsp SMN数据源配置内容
 type FunctionGraphContentRsp struct {
 
 	// 名称

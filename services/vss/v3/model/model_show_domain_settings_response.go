@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDomainSettingsResponse Response Object
 type ShowDomainSettingsResponse struct {
 
-	// 域名id
+	// 网站域名ID
 	DomainId *string `json:"domain_id,omitempty"`
 
 	// 网站需要登录时，设置登录页面
@@ -30,7 +30,7 @@ type ShowDomainSettingsResponse struct {
 	// 设置自定义HTTP请求头
 	HttpHeaders map[string]string `json:"http_headers,omitempty"`
 
-	// 域名
+	// 网站域名
 	DomainName     *string `json:"domain_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

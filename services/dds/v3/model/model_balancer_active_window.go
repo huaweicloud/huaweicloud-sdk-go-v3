@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 活动时间窗设置。
+// BalancerActiveWindow 活动时间窗设置。
 type BalancerActiveWindow struct {
 
 	// 活动时间窗开始时间。

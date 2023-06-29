@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNetworkIpAvailabilitiesRequest Request Object
 type ShowNetworkIpAvailabilitiesRequest struct {
 
 	// 网络ID

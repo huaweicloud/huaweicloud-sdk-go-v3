@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 边缘小站详情
+// EdgeSiteDetail 边缘小站详情
 type EdgeSiteDetail struct {
 
 	// 边缘小站ID

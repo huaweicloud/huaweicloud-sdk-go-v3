@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// PushTranscriberJobsResponse Response Object
 type PushTranscriberJobsResponse struct {
 
 	// 创建的任务标识, 如果创建任务成功时必须存在。

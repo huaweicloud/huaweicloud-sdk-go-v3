@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDatabaseWaterMarkResponse Response Object
 type CreateDatabaseWaterMarkResponse struct {
 
 	// 嵌入水印后的数据

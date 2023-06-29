@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePostalResponse Response Object
 type CreatePostalResponse struct {
 
 	// 邮寄地址ID。

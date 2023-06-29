@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSimplifiedInstancesResponse Response Object
 type ListSimplifiedInstancesResponse struct {
 
 	// 实例集合

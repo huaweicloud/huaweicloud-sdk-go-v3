@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetQosThresholdResponse Response Object
 type SetQosThresholdResponse struct {
 
 	// 返回码

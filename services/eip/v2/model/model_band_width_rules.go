@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带宽规则对象
+// BandWidthRules 带宽规则对象
 type BandWidthRules struct {
 
 	// 带宽规则ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunDocClassificationRequest Request Object
 type RunDocClassificationRequest struct {
 	Body *DocumentClassificationReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDesktopDetailResponse Response Object
 type ShowDesktopDetailResponse struct {
 	Desktop        *DesktopDetailInfo `json:"desktop,omitempty"`
 	HttpStatusCode int                `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListScalingV2PoliciesRequest Request Object
 type ListScalingV2PoliciesRequest struct {
 
 	// 伸缩组ID。

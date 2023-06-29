@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HistorySlotWord
 type HistorySlotWord struct {
 
 	// 词

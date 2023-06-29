@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新主页响应体。
+// UpdatePortalInfoResponseModel 更新主页响应体。
 type UpdatePortalInfoResponseModel struct {
 	Portal *PortalModel `json:"portal,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchCreateMembersRequestBody This is a auto create Body Object
 type BatchCreateMembersRequestBody struct {
 
 	// 后端服务器对象。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 反黄，暴恐检测详情
+// ImageDetectionResultSimpleDetail 反黄，暴恐检测详情
 type ImageDetectionResultSimpleDetail struct {
 
 	// 置信度，取值范围 0-1。

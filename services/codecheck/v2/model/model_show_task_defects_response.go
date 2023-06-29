@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskDefectsResponse Response Object
 type ShowTaskDefectsResponse struct {
 
 	// 缺陷详情信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个录制文件下载链接信息。
+// RecordDownloadUrlDo 单个录制文件下载链接信息。
 type RecordDownloadUrlDo struct {
 
 	// 下载鉴权token，下载文件时，使用该token鉴权。（一小时内有效，使用后立即失效）。

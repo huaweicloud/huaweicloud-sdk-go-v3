@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListUnreadNewInstantMessagesResponse Response Object
 type ListUnreadNewInstantMessagesResponse struct {
 
 	// 未读消息列表

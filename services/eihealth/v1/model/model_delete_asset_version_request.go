@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAssetVersionRequest Request Object
 type DeleteAssetVersionRequest struct {
 
 	// 资产id

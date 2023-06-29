@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InstallInstanceEipResponse Response Object
 type InstallInstanceEipResponse struct {
 	HttpStatusCode int `json:"-"`
 }

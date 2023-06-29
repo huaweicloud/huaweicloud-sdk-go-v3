@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAppsResponse Response Object
 type ListAppsResponse struct {
 
 	// 应用模板配置

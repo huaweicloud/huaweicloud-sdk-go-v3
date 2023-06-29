@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteProtectedInstanceTagRequest Request Object
 type DeleteProtectedInstanceTagRequest struct {
 
 	// 保护实例的ID。

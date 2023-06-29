@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckPutEventsRequest Request Object
 type CheckPutEventsRequest struct {
 	Body *CheckPutEventsReq `json:"body,omitempty"`
 }

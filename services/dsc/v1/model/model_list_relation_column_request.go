@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRelationColumnRequest Request Object
 type ListRelationColumnRequest struct {
 
 	// 任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMemberGroupResponse Response Object
 type CreateMemberGroupResponse struct {
 
 	// 本次返回的列表长度

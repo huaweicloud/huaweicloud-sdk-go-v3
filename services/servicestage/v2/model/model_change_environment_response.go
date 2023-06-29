@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeEnvironmentResponse Response Object
 type ChangeEnvironmentResponse struct {
 
 	// 环境ID。

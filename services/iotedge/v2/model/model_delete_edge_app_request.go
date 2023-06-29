@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEdgeAppRequest Request Object
 type DeleteEdgeAppRequest struct {
 
 	// 应用ID，应用唯一。

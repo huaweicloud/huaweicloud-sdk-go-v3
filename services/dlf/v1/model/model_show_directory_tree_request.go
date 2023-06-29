@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDirectoryTreeRequest Request Object
 type ShowDirectoryTreeRequest struct {
 
 	// 工作空间id

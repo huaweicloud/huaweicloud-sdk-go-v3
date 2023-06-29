@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点设备认证方式信息。
+// DeviceAuthInfoDto 边缘节点设备认证方式信息。
 type DeviceAuthInfoDto struct {
 
 	// 边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CelebrityRecognitionReq
 type CelebrityRecognitionReq struct {
 
 	// 与url二选一  图片文件Base64编码字符串。要求base64编码后大小不超过10M。  政治人物检测人脸部分不小于40*40像素。  支持JPG/PNG/BMP格式。

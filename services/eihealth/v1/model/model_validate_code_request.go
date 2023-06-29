@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateCodeRequest Request Object
 type ValidateCodeRequest struct {
 
 	// 用户id

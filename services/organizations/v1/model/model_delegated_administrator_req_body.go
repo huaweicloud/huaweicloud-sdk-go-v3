@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 委托管理员相关操作的请求体。
+// DelegatedAdministratorReqBody 委托管理员相关操作的请求体。
 type DelegatedAdministratorReqBody struct {
 
 	// 服务主体名称。

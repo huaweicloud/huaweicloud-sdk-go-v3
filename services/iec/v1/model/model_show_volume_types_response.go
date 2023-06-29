@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVolumeTypesResponse Response Object
 type ShowVolumeTypesResponse struct {
 
 	// 硬盘类型列表。

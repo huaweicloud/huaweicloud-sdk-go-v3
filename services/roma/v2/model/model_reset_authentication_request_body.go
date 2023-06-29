@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备用户密码更新请求
+// ResetAuthenticationRequestBody 设备用户密码更新请求
 type ResetAuthenticationRequestBody struct {
 
 	// 设备用户名，支持英文大小写、英文符号(-)及数字，长度限制10-50位，传参空，用户名不被重置

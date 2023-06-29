@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// IntentResult
 type IntentResult struct {
 
 	// 标签label的置信度。

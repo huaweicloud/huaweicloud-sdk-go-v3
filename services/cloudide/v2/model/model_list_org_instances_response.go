@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOrgInstancesResponse Response Object
 type ListOrgInstancesResponse struct {
 	Instances *PageInstancesVo `json:"instances,omitempty"`
 

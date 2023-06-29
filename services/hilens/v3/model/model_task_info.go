@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取作业详情
+// TaskInfo 获取作业详情
 type TaskInfo struct {
 
 	// 作业名称

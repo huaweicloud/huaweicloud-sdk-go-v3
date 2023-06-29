@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Condition info of rule
+// ConditionInfo Condition info of rule
 type ConditionInfo struct {
 
 	// expression type, all, any, user_define

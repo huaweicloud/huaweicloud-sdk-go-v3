@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网络网卡信息
+// Nic 网络网卡信息
 type Nic struct {
 
 	// 网卡信息，如eth0,eth1

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页结果信息。
+// OpenPageInfo 分页结果信息。
 type OpenPageInfo struct {
 
 	// 偏移量。

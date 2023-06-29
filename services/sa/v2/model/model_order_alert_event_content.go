@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件内容
+// OrderAlertEventContent 事件内容
 type OrderAlertEventContent struct {
 
 	// 状态

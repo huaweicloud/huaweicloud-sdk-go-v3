@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRtcRealtimeScaleResponse Response Object
 type ListRtcRealtimeScaleResponse struct {
 
 	// 时间戳及相应时间的指标数值列表

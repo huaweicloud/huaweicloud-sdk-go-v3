@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// absolute数据结构说明
+// Absolute absolute数据结构说明
 type Absolute struct {
 
 	// 裸金属服务器最大申请数量

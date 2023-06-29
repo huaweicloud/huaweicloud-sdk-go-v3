@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDetailsOfAclPolicyV2Response Response Object
 type ShowDetailsOfAclPolicyV2Response struct {
 
 	// 名称

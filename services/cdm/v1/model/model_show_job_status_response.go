@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobStatusResponse Response Object
 type ShowJobStatusResponse struct {
 
 	// 作业运行信息，详见submissions参数说明。

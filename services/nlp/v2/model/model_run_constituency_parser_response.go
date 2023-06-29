@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunConstituencyParserResponse Response Object
 type RunConstituencyParserResponse struct {
 
 	// 成分句法分析结果，用嵌套括号的形式表示一棵树。括号内的第一个元素为子树的标签，若是叶子节点则用符号_代替。第二个元素为子树，若是叶子节点则为字符串。

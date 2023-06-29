@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新告警通知请求信息
+// UpdateAlertNoticeConfigRequestBody 更新告警通知请求信息
 type UpdateAlertNoticeConfigRequestBody struct {
 
 	// 告警通知名称

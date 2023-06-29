@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 公网IP中的vnic对象，存储绑定PORT的相关信息
+// VnicInfo 公网IP中的vnic对象，存储绑定PORT的相关信息
 type VnicInfo struct {
 
 	// 功能说明：私网IP地址

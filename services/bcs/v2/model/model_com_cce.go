@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CCE组件
+// ComCce CCE组件
 type ComCce struct {
 	Cluster *Detail `json:"cluster,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCommonPoolsResponse Response Object
 type ListCommonPoolsResponse struct {
 
 	// 功能说明：公共池对象

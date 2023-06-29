@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSignedLatestPublishedAgreementRequest Request Object
 type ShowSignedLatestPublishedAgreementRequest struct {
 
 	// 协议类型

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控项数据结构。
+// MonitorItem 监控项数据结构。
 type MonitorItem struct {
 
 	// 监控项id。

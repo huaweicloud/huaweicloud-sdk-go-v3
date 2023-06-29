@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CinderListQuotasResponse Response Object
 type CinderListQuotasResponse struct {
 	QuotaSet       *QuotaList `json:"quota_set,omitempty"`
 	HttpStatusCode int        `json:"-"`

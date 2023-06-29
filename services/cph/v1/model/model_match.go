@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 搜索字段
+// Match 搜索字段
 type Match struct {
 
 	// 键。  当前key的参数值只能取“resource_name”，此时value的参数值为资源名称。
@@ -54,13 +54,18 @@ func (c MatchKey) MarshalJSON() ([]byte, error) {
 
 func (c *MatchKey) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

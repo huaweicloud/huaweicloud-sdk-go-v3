@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRuleHitCountResponse Response Object
 type ListRuleHitCountResponse struct {
 	Data           *RuleHitCountRecords `json:"data,omitempty"`
 	HttpStatusCode int                  `json:"-"`

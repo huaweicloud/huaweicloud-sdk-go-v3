@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApiAttachedPluginsResponse Response Object
 type ListApiAttachedPluginsResponse struct {
 
 	// 本次返回的列表长度

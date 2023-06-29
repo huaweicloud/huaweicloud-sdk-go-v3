@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RegisterServerResponse Response Object
 type RegisterServerResponse struct {
 
 	// 源端ID

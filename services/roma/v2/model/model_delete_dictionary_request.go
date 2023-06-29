@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDictionaryRequest Request Object
 type DeleteDictionaryRequest struct {
 
 	// 字典ID

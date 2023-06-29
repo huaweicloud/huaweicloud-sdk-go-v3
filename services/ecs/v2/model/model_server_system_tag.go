@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器系统标签。
+// ServerSystemTag 弹性云服务器系统标签。
 type ServerSystemTag struct {
 
 	// 系统标签的Key值。

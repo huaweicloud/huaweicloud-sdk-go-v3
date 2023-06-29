@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResourceQuotasRequest Request Object
 type ShowResourceQuotasRequest struct {
 
 	// region id

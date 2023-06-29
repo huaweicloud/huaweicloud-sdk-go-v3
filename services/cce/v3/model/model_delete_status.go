@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DeleteStatus
 type DeleteStatus struct {
 
 	// 集群删除时已经存在的集群资源记录总数

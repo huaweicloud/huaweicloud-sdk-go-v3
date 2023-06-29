@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CountPublicIpResponse Response Object
 type CountPublicIpResponse struct {
 
 	// 弹性公网数量

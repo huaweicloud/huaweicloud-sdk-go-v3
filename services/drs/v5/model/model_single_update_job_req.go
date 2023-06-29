@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新单个任务请求体。
+// SingleUpdateJobReq 更新单个任务请求体。
 type SingleUpdateJobReq struct {
 	Job *UpdateJobReq `json:"job"`
 }

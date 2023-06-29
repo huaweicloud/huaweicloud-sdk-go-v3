@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateTaskStatusRequest Request Object
 type BatchUpdateTaskStatusRequest struct {
 
 	// 工程id

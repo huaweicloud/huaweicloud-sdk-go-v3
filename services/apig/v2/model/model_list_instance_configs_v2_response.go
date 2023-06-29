@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstanceConfigsV2Response Response Object
 type ListInstanceConfigsV2Response struct {
 
 	// 本次返回的列表长度

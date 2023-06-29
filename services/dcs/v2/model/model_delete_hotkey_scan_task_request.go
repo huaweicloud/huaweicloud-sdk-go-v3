@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteHotkeyScanTaskRequest Request Object
 type DeleteHotkeyScanTaskRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadMediaResponse Response Object
 type UploadMediaResponse struct {
 	Data           *UploadMediaResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                       `json:"-"`

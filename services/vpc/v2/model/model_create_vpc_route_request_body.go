@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateVpcRouteRequestBody
 type CreateVpcRouteRequestBody struct {
 	Route *CreateVpcRouteOption `json:"route"`
 }

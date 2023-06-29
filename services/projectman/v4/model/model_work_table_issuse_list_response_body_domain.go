@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 领域信息
+// WorkTableIssuseListResponseBodyDomain 领域信息
 type WorkTableIssuseListResponseBodyDomain struct {
 
 	// 领域id

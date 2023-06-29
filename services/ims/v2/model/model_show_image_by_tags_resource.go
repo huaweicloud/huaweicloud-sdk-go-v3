@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// resource字段数据结构说明
+// ShowImageByTagsResource resource字段数据结构说明
 type ShowImageByTagsResource struct {
 
 	// 镜像ID

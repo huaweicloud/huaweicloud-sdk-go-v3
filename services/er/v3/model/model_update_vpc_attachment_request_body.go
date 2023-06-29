@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateVpcAttachmentRequestBody This is a auto create Body Object
 type UpdateVpcAttachmentRequestBody struct {
 	VpcAttachment *UpdateVpcAttachmentBody `json:"vpc_attachment,omitempty"`
 }

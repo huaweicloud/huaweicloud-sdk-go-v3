@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDataSourceResponse Response Object
 type UpdateDataSourceResponse struct {
 
 	// 更新数据源job_id。

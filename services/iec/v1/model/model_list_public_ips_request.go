@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPublicIpsRequest Request Object
 type ListPublicIpsRequest struct {
 
 	// 查询返回弹性IP列表数量。取值范围：0~1000。

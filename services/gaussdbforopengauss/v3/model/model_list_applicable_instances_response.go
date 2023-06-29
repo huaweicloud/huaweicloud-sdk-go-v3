@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApplicableInstancesResponse Response Object
 type ListApplicableInstancesResponse struct {
 
 	// 实例列表，显示实例ID和实例名称。

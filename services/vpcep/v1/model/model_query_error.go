@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询资源返回的异常信息
+// QueryError 查询资源返回的异常信息
 type QueryError struct {
 
 	// 错误编码。

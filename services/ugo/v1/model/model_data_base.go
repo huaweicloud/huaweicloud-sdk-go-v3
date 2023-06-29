@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库连接信息。
+// DataBase 数据库连接信息。
 type DataBase struct {
 
 	// 端口。

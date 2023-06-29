@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 对象级对比详情信息体。
+// ObjectsCompareDetailInfo 对象级对比详情信息体。
 type ObjectsCompareDetailInfo struct {
 
 	// 源库对比值。

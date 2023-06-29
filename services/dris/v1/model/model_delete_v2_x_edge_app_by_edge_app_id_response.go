@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteV2XEdgeAppByEdgeAppIdResponse Response Object
 type DeleteV2XEdgeAppByEdgeAppIdResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

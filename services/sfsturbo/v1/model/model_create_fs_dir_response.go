@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFsDirResponse Response Object
 type CreateFsDirResponse struct {
 	HttpStatusCode int `json:"-"`
 }

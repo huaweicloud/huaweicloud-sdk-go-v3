@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RemoteConsole
 type RemoteConsole struct {
 
 	// 远程登录的协议。

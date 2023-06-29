@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronDeleteFloatingIpResponse Response Object
 type NeutronDeleteFloatingIpResponse struct {
 	HttpStatusCode int `json:"-"`
 }

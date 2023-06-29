@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLeftQuotaResponse Response Object
 type ShowLeftQuotaResponse struct {
 
 	// 剩余服务器数

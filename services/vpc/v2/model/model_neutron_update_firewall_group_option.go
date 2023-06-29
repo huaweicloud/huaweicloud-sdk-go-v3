@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronUpdateFirewallGroupOption
 type NeutronUpdateFirewallGroupOption struct {
 
 	// 网络ACL防火墙是否受管理员控制。

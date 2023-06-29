@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 描述RAM中的资源共享。
+// ResourceShare 描述RAM中的资源共享。
 type ResourceShare struct {
 
 	// 资源共享实例的ID。

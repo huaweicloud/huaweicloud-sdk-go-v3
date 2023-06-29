@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级任务状态信息
+// UpgradeTaskStatus 升级任务状态信息
 type UpgradeTaskStatus struct {
 
 	// 升级任务状态. > Init：初始化 > Queuing：等待 > Running：运行中 > Pause：暂停 > Success：成功 > Failed：失败

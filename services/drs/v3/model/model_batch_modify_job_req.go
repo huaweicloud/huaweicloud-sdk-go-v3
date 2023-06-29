@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量修改任务请求体
+// BatchModifyJobReq 批量修改任务请求体
 type BatchModifyJobReq struct {
 
 	// 修改任务请求体

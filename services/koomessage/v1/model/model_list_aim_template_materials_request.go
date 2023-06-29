@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAimTemplateMaterialsRequest Request Object
 type ListAimTemplateMaterialsRequest struct {
 
 	// 资源类型。 - image：表示图片 - video：表示视频

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProjectTraceResponse Response Object
 type ShowProjectTraceResponse struct {
 
 	// 数据对象（目录，文件）总数量

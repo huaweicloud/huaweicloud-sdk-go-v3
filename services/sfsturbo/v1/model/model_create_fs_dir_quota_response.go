@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateFsDirQuotaResponse Response Object
 type CreateFsDirQuotaResponse struct {
 
 	// 合法的已存在的目录的全路径

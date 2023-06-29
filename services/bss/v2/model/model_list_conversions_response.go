@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConversionsResponse Response Object
 type ListConversionsResponse struct {
 
 	// 度量单位的换算信息，具体参见表3。

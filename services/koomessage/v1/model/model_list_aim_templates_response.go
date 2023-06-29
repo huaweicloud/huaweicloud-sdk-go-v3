@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAimTemplatesResponse Response Object
 type ListAimTemplatesResponse struct {
 
 	// 模板列表。

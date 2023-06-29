@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePrivateipRequest Request Object
 type DeletePrivateipRequest struct {
 
 	// 私有IP ID

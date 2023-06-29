@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模板中使用的素材。
+// Material 模板中使用的素材。
 type Material struct {
 
 	// 素材ID。

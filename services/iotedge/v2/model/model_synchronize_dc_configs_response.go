@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SynchronizeDcConfigsResponse Response Object
 type SynchronizeDcConfigsResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowWebHookConfigResponse Response Object
 type ShowWebHookConfigResponse struct {
 
 	// 结果码。

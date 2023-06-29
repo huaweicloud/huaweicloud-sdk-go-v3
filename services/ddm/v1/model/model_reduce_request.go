@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto request Object
+// ReduceRequest This is a auto request Object
 type ReduceRequest struct {
 
 	// 需要缩容的节点数量，最大值为实例节点数减1。

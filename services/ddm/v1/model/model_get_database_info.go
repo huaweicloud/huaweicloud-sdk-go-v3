@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// databases 返回参数
+// GetDatabaseInfo databases 返回参数
 type GetDatabaseInfo struct {
 
 	// 逻辑库名称。

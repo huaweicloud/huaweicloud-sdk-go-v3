@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 操作，支持start, stop, restart, scale, rollback。
+// InstanceActionType 操作，支持start, stop, restart, scale, rollback。
 type InstanceActionType struct {
 	value string
 }
@@ -52,13 +52,18 @@ func (c InstanceActionType) MarshalJSON() ([]byte, error) {
 
 func (c *InstanceActionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

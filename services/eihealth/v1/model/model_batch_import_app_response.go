@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchImportAppResponse Response Object
 type BatchImportAppResponse struct {
 	Body           *[]ImportAppRsp `json:"body,omitempty"`
 	HttpStatusCode int             `json:"-"`

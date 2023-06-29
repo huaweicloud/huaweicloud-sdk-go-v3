@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddNicsResponse Response Object
 type AddNicsResponse struct {
 
 	// 任务ID。

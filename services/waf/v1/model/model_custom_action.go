@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 精准防护规则命中后操作对象
+// CustomAction 精准防护规则命中后操作对象
 type CustomAction struct {
 
 	// 操作类型。   - “block”：拦截。   - “pass”：放行。   - “log”：仅记录
@@ -62,13 +62,18 @@ func (c CustomActionCategory) MarshalJSON() ([]byte, error) {
 
 func (c *CustomActionCategory) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

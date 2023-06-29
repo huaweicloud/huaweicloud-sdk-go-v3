@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 根据标签查询资源时，match字段结构。
+// ActionMatch 根据标签查询资源时，match字段结构。
 type ActionMatch struct {
 
 	// 键。目前只支持resource_name。表示匹配资源实例的名称。

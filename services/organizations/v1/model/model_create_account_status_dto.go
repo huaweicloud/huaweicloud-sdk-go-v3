@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 包含有关在组织中创建帐号的CreateAccount请求的状态。
+// CreateAccountStatusDto 包含有关在组织中创建帐号的CreateAccount请求的状态。
 type CreateAccountStatusDto struct {
 
 	// 如果帐号创建成功，则为新帐号的唯一标识符（ID）。

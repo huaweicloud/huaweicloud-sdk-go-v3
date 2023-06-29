@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据库对象选择信息
+// DatabaseInfo 数据库对象选择信息
 type DatabaseInfo struct {
 
 	// object_type为database时，为库名；object_type为table或者view时，字段值参考示例。
@@ -78,13 +78,18 @@ func (c DatabaseInfoObjectType) MarshalJSON() ([]byte, error) {
 
 func (c *DatabaseInfoObjectType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

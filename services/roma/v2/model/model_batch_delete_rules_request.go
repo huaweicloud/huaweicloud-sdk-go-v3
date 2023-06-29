@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteRulesRequest Request Object
 type BatchDeleteRulesRequest struct {
 
 	// 实例ID

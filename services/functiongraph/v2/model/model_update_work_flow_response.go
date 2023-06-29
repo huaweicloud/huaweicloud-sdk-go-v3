@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateWorkFlowResponse Response Object
 type UpdateWorkFlowResponse struct {
 
 	// 函数流是否返回流式数据

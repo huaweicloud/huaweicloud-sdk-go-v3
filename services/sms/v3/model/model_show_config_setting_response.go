@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConfigSettingResponse Response Object
 type ShowConfigSettingResponse struct {
 
 	// 任务ID

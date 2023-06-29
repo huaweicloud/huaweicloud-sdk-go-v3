@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteHookRequest Request Object
 type DeleteHookRequest struct {
 
 	// 授权名称。

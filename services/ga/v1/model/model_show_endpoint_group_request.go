@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowEndpointGroupRequest Request Object
 type ShowEndpointGroupRequest struct {
 
 	// 终端节点组ID。

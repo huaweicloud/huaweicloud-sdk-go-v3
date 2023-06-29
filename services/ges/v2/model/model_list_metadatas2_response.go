@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMetadatas2Response Response Object
 type ListMetadatas2Response struct {
 
 	// 元数据返回个数。请求失败时，字段为空。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCloudPhoneImagesRequest Request Object
 type ListCloudPhoneImagesRequest struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BindEipReq This is a auto create Body Object
 type BindEipReq struct {
 
 	// 弹性公网IP的ID。

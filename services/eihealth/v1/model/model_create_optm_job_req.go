@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建分子优化请求体
+// CreateOptmJobReq 创建分子优化请求体
 type CreateOptmJobReq struct {
 	BasicInfo *CreateDrugJobBasicInfo `json:"basic_info"`
 

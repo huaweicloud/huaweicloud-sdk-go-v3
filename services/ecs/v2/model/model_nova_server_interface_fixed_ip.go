@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaServerInterfaceFixedIp
 type NovaServerInterfaceFixedIp struct {
 
 	// 网卡私网IP信息。

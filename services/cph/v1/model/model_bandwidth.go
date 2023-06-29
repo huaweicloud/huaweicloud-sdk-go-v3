@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带宽信息响应
+// Bandwidth 带宽信息响应
 type Bandwidth struct {
 
 	// 云手机服务器的带宽名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchListMetricDataRequest Request Object
 type BatchListMetricDataRequest struct {
 	Body *BatchListMetricDataRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBreifStructTemplateRequest Request Object
 type ListBreifStructTemplateRequest struct {
 }
 

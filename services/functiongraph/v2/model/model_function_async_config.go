@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数异步配置返回结构体。
+// FunctionAsyncConfig 函数异步配置返回结构体。
 type FunctionAsyncConfig struct {
 
 	// 消息最大存活时长，取值范围[60，86400]。单位：秒。

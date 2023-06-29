@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteNamespaceAuthRequest Request Object
 type DeleteNamespaceAuthRequest struct {
 
 	// 消息体的类型（格式），下方类型可任选其一使用： application/json;charset=utf-8 application/json
@@ -60,13 +60,18 @@ func (c DeleteNamespaceAuthRequestContentType) MarshalJSON() ([]byte, error) {
 
 func (c *DeleteNamespaceAuthRequestContentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

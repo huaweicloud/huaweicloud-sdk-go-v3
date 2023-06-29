@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库列信息。
+// ColumnObject 数据库列信息。
 type ColumnObject struct {
 
 	// 该列在实时同步场景下的类型。取值： - config：当该列作为数据过滤高级设置的关联列时，需要填写，同时如果该列是主建或优化查询所需的索引，则需要填写primary_key_for_data_filtering或index_for_data_filtering。（注意：是否同步该列到目标库由“filtered”属性控制，与库级、模式级、表级控制方式不同。）

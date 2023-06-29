@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemoveNodeResponse Response Object
 type RemoveNodeResponse struct {
 
 	// API版本，固定值“v3”。

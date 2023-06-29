@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件信息。
+// AppNodeModel 组件信息。
 type AppNodeModel struct {
 
 	// 组件id。

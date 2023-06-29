@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlBackupListResponse Response Object
 type ShowGaussMySqlBackupListResponse struct {
 
 	// 备份信息。

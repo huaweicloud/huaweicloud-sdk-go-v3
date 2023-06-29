@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDesktopVolumesRequest Request Object
 type DeleteDesktopVolumesRequest struct {
 
 	// 桌面ID。

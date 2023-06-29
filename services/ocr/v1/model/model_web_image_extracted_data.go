@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// WebImageExtractedData
 type WebImageExtractedData struct {
 	ContactInfo *WebImageContactInfo `json:"contact_info,omitempty"`
 

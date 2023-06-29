@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 涉黄场景审核结果
+// PornModerationResultDetail 涉黄场景审核结果
 type PornModerationResultDetail struct {
 
 	// 置信度，取值范围 0-1。

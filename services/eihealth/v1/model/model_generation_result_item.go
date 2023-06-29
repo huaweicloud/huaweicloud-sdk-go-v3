@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子生成结果条目
+// GenerationResultItem 分子生成结果条目
 type GenerationResultItem struct {
 
 	// 分子SMILES表达式

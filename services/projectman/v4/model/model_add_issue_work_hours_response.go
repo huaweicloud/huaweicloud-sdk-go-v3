@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddIssueWorkHoursResponse Response Object
 type AddIssueWorkHoursResponse struct {
 
 	// 已添加的工时列表

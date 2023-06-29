@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchQuotaResponse Response Object
 type SearchQuotaResponse struct {
 
 	// 剩余可创建云堡垒机实例个数。

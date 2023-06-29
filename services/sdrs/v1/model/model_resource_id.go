@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护实例Id
+// ResourceId 保护实例Id
 type ResourceId struct {
 
 	// 资源ID

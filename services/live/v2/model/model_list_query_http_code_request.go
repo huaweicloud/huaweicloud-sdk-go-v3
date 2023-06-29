@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListQueryHttpCodeRequest Request Object
 type ListQueryHttpCodeRequest struct {
 
 	// 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。

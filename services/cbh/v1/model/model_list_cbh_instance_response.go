@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCbhInstanceResponse Response Object
 type ListCbhInstanceResponse struct {
 
 	// 云堡垒机实例总数。

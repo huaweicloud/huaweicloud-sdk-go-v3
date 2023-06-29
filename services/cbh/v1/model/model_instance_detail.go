@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CBH实例详情
+// InstanceDetail CBH实例详情
 type InstanceDetail struct {
 
 	// 云堡垒机实例弹性公网IP，返回默认值null

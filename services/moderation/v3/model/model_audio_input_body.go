@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 音频数据的输入
+// AudioInputBody 音频数据的输入
 type AudioInputBody struct {
 
 	// 音频url地址。

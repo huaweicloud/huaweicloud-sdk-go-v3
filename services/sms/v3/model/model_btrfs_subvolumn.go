@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// btrfs子卷信息
+// BtrfsSubvolumn btrfs子卷信息
 type BtrfsSubvolumn struct {
 
 	// 父卷的uuid

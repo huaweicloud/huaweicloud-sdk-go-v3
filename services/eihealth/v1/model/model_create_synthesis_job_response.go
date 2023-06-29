@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSynthesisJobResponse Response Object
 type CreateSynthesisJobResponse struct {
 
 	// 作业id

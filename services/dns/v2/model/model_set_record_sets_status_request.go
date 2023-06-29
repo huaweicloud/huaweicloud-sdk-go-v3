@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetRecordSetsStatusRequest Request Object
 type SetRecordSetsStatusRequest struct {
 
 	// 待设置Record Set的ID信息。

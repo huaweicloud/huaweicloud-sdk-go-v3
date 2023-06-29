@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义属性建模的评估指标
+// CustomPropsModelMetric 自定义属性建模的评估指标
 type CustomPropsModelMetric struct {
 
 	// 评估指标的名称

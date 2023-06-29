@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAppResponse Response Object
 type ShowAppResponse struct {
 
 	// 应用主键ID，用于获取、修改应用的唯一标识

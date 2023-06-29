@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRecordSetsWithLineRequest Request Object
 type ListRecordSetsWithLineRequest struct {
 
 	// 待查询的Record Set的域名类型。  取值范围：public  搜索模式默认为模糊搜索。  默认值为public。

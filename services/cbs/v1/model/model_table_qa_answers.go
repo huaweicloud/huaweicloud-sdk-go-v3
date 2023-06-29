@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// TableQaAnswers
 type TableQaAnswers struct {
 
 	// 表格问答答案。

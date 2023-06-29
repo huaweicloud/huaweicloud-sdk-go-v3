@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例数量统计信息。
+// StatusStatistic 实例数量统计信息。
 type StatusStatistic struct {
 
 	// 支付中的实例数。

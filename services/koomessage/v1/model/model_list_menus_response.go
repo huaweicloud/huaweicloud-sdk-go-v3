@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMenusResponse Response Object
 type ListMenusResponse struct {
 	Data           *ListMenusResponseModel `json:"data,omitempty"`
 	HttpStatusCode int                     `json:"-"`

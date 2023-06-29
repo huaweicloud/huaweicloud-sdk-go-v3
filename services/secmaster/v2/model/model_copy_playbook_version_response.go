@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopyPlaybookVersionResponse Response Object
 type CopyPlaybookVersionResponse struct {
 
 	// Error code

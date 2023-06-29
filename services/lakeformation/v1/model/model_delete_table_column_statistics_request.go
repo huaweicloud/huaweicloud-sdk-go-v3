@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTableColumnStatisticsRequest Request Object
 type DeleteTableColumnStatisticsRequest struct {
 
 	// 实例ID

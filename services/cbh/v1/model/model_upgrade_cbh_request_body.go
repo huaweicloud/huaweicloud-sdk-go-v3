@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 升级云堡垒机实例请求对象。
+// UpgradeCbhRequestBody 升级云堡垒机实例请求对象。
 type UpgradeCbhRequestBody struct {
 
 	// 云堡垒机实例ID，使用UUID格式。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据库对象空间信息，数据来源于information_schema.tables系统表。已用空间包含数据空间、索引空间和碎片空间。
+// DbObjectSpaceInfo 数据库对象空间信息，数据来源于information_schema.tables系统表。已用空间包含数据空间、索引空间和碎片空间。
 type DbObjectSpaceInfo struct {
 
 	// 对象类型，如果是table，同时需要传database_id
@@ -73,13 +73,18 @@ func (c DbObjectSpaceInfoObjectType) MarshalJSON() ([]byte, error) {
 
 func (c *DbObjectSpaceInfoObjectType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

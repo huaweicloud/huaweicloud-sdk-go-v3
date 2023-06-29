@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEdgeGroupCertsResponse Response Object
 type ListEdgeGroupCertsResponse struct {
 	Body           *[]EdgeGroupCertListResp `json:"body,omitempty"`
 	HttpStatusCode int                      `json:"-"`

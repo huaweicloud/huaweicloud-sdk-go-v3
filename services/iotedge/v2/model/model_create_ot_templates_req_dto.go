@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建OT数采模板请求体
+// CreateOtTemplatesReqDto 创建OT数采模板请求体
 type CreateOtTemplatesReqDto struct {
 
 	// 模板id

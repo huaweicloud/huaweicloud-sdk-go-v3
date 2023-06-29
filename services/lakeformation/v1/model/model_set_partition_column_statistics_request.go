@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetPartitionColumnStatisticsRequest Request Object
 type SetPartitionColumnStatisticsRequest struct {
 
 	// 实例ID

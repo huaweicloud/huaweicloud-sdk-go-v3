@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowScaleInPolicyResponse Response Object
 type ShowScaleInPolicyResponse struct {
 
 	// 空置时间

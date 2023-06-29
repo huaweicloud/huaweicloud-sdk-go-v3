@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点
+// Action 节点
 type Action struct {
 
 	// 启用，停用边缘节点，支持start/stop

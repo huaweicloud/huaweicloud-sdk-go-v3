@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量创建保护实例虚拟机信息
+// ServerInfo 批量创建保护实例虚拟机信息
 type ServerInfo struct {
 
 	// 指定的生产站点云服务器ID。

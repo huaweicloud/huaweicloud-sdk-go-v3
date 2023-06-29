@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRelationResponse Response Object
 type DeleteRelationResponse struct {
 
 	// 错误码

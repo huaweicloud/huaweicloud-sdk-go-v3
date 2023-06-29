@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddInstanceTagsResponse Response Object
 type AddInstanceTagsResponse struct {
 
 	// 添加标签的实例ID。

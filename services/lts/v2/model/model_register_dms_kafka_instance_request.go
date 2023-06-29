@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RegisterDmsKafkaInstanceRequest Request Object
 type RegisterDmsKafkaInstanceRequest struct {
 	Body *RegisterDmsKafkaInstanceRequestBody `json:"body,omitempty"`
 }

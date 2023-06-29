@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备信息
+// DevicesDevices 终端设备信息
 type DevicesDevices struct {
 	Added *DevicesDevicesAdded `json:"added,omitempty"`
 

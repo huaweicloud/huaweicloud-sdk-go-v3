@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 解绑服务号返回体。
+// UnfreezePubResponseModel 解绑服务号返回体。
 type UnfreezePubResponseModel struct {
 	Data *FreezePubResponseModelData `json:"data,omitempty"`
 }

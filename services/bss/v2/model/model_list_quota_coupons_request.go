@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListQuotaCouponsRequest Request Object
 type ListQuotaCouponsRequest struct {
 	Body *QueryCouponQuotasReqExt `json:"body,omitempty"`
 }

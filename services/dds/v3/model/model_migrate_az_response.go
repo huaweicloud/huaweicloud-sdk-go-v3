@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MigrateAzResponse Response Object
 type MigrateAzResponse struct {
 
 	// 任务ID。

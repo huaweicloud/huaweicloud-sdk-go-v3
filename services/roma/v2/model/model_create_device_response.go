@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDeviceResponse Response Object
 type CreateDeviceResponse struct {
 
 	// 权限

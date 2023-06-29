@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTerminalsBindingDesktopsRequest Request Object
 type DeleteTerminalsBindingDesktopsRequest struct {
 	Body *DeleteTerminalsBindingDesktopsRequestBody `json:"body,omitempty"`
 }

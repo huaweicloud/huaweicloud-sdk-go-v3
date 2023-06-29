@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDatabaseResponse Response Object
 type ShowDatabaseResponse struct {
 	Database       *GetDatabaseResponseBean `json:"database,omitempty"`
 	HttpStatusCode int                      `json:"-"`

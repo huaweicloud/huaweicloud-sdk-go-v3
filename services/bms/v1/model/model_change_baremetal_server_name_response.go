@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeBaremetalServerNameResponse Response Object
 type ChangeBaremetalServerNameResponse struct {
 	Server         *ChangeBaremetalNameResponsesServers `json:"server,omitempty"`
 	HttpStatusCode int                                  `json:"-"`

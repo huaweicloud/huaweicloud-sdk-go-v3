@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ResourceExtraInfoIncludeVolumes
 type ResourceExtraInfoIncludeVolumes struct {
 
 	// 卷ID，仅支持uuid

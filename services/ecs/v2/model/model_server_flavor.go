@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器规格信息。
+// ServerFlavor 弹性云服务器规格信息。
 type ServerFlavor struct {
 
 	// 弹性云服务器规格ID。

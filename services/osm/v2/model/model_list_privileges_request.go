@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPrivilegesRequest Request Object
 type ListPrivilegesRequest struct {
 
 	// 权限标识

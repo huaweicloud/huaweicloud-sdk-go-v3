@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVendorResponse Response Object
 type ListVendorResponse struct {
 
 	// 供应商个数

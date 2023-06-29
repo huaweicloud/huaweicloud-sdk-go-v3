@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetAuthenticationResponse Response Object
 type ResetAuthenticationResponse struct {
 
 	// 一型一密/一机一密的用户名

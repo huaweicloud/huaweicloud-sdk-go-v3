@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTrendResponse Response Object
 type ShowTrendResponse struct {
 
 	// 趋势图数据列表。

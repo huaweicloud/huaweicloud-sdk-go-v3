@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PauseResumeDataSynchronizationRequest Request Object
 type PauseResumeDataSynchronizationRequest struct {
 
 	// 实例ID。

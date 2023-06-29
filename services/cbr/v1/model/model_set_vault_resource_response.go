@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetVaultResourceResponse Response Object
 type SetVaultResourceResponse struct {
 
 	// 本次设置的资源id列表。

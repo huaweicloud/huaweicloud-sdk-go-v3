@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCompetitionWorksResponse Response Object
 type ListCompetitionWorksResponse struct {
 
 	// 作品列表

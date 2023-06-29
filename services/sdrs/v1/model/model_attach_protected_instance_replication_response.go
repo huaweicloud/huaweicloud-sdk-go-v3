@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AttachProtectedInstanceReplicationResponse Response Object
 type AttachProtectedInstanceReplicationResponse struct {
 
 	// 成功返回jobId信息

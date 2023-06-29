@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteGetCharacterInfoByIdRequest Request Object
 type ExecuteGetCharacterInfoByIdRequest struct {
 
 	// 形象id

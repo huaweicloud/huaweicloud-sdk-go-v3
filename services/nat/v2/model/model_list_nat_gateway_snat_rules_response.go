@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListNatGatewaySnatRulesResponse Response Object
 type ListNatGatewaySnatRulesResponse struct {
 
 	// 查询SNAT规则列表的响应体。

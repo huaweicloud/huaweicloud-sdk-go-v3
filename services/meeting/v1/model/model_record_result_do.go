@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 录制信息。
+// RecordResultDo 录制信息。
 type RecordResultDo struct {
 
 	// 会议UUID。

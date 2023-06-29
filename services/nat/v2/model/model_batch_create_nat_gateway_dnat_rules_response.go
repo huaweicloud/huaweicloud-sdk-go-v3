@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateNatGatewayDnatRulesResponse Response Object
 type BatchCreateNatGatewayDnatRulesResponse struct {
 
 	// DNAT规则批量创建对象的响应体。

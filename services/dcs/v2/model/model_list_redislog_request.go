@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRedislogRequest Request Object
 type ListRedislogRequest struct {
 
 	// 实例ID。

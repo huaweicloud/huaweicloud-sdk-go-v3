@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDbFlavorsResponse Response Object
 type ListDbFlavorsResponse struct {
 
 	// 实例规格信息。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 素材元数据。
+// MaterialAssetMeta 素材元数据。
 type MaterialAssetMeta struct {
 
 	// 可替换的素材组件列表。

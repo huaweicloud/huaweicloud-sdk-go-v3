@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 剧本实例运行数据
+// PlaybookInstanceRunStatistics 剧本实例运行数据
 type PlaybookInstanceRunStatistics struct {
 
 	// 剧本实例ID

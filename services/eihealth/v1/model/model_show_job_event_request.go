@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowJobEventRequest Request Object
 type ShowJobEventRequest struct {
 
 	// Locale语言类型，zh_cn返回中文，en_us返回英文

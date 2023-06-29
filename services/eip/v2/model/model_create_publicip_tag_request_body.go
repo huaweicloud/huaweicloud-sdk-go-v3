@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建tag对象的请求体
+// CreatePublicipTagRequestBody 创建tag对象的请求体
 type CreatePublicipTagRequestBody struct {
 	Tag *ResourceTagOption `json:"tag"`
 }

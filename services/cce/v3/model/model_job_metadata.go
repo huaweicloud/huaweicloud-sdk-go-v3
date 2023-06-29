@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// JobMetadata
 type JobMetadata struct {
 
 	// 任务的ID。

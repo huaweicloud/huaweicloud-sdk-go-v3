@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务实例信息体。
+// JobNodeInfo 任务实例信息体。
 type JobNodeInfo struct {
 	Spec *JobNodeSpecInfo `json:"spec"`
 

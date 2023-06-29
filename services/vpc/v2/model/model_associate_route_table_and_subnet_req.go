@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AssociateRouteTableAndSubnetReq
 type AssociateRouteTableAndSubnetReq struct {
 
 	// 路由表关联子网ID列表

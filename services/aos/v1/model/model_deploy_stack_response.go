@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeployStackResponse Response Object
 type DeployStackResponse struct {
 
 	// 部署ID

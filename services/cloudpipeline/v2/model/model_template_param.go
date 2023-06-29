@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线参数
+// TemplateParam 流水线参数
 type TemplateParam struct {
 
 	// 是否必须

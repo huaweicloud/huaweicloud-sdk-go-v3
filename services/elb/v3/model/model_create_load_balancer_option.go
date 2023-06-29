@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建负载均衡器参数。
+// CreateLoadBalancerOption 创建负载均衡器参数。
 type CreateLoadBalancerOption struct {
 
 	// 负载均衡器ID（UUID）。不支持该字段，请勿使用。
@@ -132,13 +132,18 @@ func (c CreateLoadBalancerOptionWafFailureAction) MarshalJSON() ([]byte, error) 
 
 func (c *CreateLoadBalancerOptionWafFailureAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -174,13 +179,18 @@ func (c CreateLoadBalancerOptionProtectionStatus) MarshalJSON() ([]byte, error) 
 
 func (c *CreateLoadBalancerOptionProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

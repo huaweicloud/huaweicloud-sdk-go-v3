@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Rule
 type Rule struct {
 
 	// 候选集表名。

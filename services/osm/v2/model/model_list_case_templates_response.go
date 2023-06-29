@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCaseTemplatesResponse Response Object
 type ListCaseTemplatesResponse struct {
 
 	// 总数

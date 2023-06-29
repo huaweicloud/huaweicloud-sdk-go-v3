@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response of Playbook Info Ref
+// PlaybookInfoRef Response of Playbook Info Ref
 type PlaybookInfoRef struct {
 
 	// Id value

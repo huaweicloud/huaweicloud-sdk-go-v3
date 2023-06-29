@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateVmrResponse Response Object
 type AssociateVmrResponse struct {
 	HttpStatusCode int `json:"-"`
 }

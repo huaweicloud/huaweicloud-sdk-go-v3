@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数流节点执行详细信息
+// NodeExecutionDetail 函数流节点执行详细信息
 type NodeExecutionDetail struct {
 
 	// 流程节点ID

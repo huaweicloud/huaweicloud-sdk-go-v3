@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Action info
+// ActionInfo Action info
 type ActionInfo struct {
 
 	// Id value

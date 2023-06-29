@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMultiTaskMappingsResponse Response Object
 type CreateMultiTaskMappingsResponse struct {
 
 	// 映射唯一ID

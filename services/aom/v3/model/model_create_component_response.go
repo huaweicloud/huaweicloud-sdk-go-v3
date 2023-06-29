@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateComponentResponse Response Object
 type CreateComponentResponse struct {
 
 	// 对象id

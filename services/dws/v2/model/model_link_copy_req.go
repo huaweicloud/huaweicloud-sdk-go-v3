@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 快照复制请求
+// LinkCopyReq 快照复制请求
 type LinkCopyReq struct {
 
 	// 快照名称

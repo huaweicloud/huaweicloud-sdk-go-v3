@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除实例接口返回结构体
+// BatchOpsResult 批量删除实例接口返回结构体
 type BatchOpsResult struct {
 
 	// 操作结果，取值有success或failed。

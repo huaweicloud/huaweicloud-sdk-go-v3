@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePortResponse Response Object
 type UpdatePortResponse struct {
 	Port           *Port `json:"port,omitempty"`
 	HttpStatusCode int   `json:"-"`

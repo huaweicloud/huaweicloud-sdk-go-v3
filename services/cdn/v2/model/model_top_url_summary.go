@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// top url 详情数据
+// TopUrlSummary top url 详情数据
 type TopUrlSummary struct {
 
 	// URL名称。

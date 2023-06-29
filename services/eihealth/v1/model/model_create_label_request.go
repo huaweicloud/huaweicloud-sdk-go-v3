@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLabelRequest Request Object
 type CreateLabelRequest struct {
 	Body *CreateLabelReq `json:"body,omitempty"`
 }

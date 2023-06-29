@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取实例信息列表入参。
+// InstanceSearchParam 获取实例信息列表入参。
 type InstanceSearchParam struct {
 
 	// 环境id。

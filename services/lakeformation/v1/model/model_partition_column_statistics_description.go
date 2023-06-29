@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 列统计信息的描述信息
+// PartitionColumnStatisticsDescription 列统计信息的描述信息
 type PartitionColumnStatisticsDescription struct {
 
 	// 分区值的列表

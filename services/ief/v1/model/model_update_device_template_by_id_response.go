@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDeviceTemplateByIdResponse Response Object
 type UpdateDeviceTemplateByIdResponse struct {
 	DeviceTemplate *EdgemgrDevice `json:"device_template,omitempty"`
 	HttpStatusCode int            `json:"-"`

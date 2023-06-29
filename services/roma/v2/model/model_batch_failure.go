@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量操作失败的返回结果
+// BatchFailure 批量操作失败的返回结果
 type BatchFailure struct {
 
 	// 操作失败的API ID

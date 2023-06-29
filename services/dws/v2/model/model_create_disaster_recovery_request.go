@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDisasterRecoveryRequest Request Object
 type CreateDisasterRecoveryRequest struct {
 	Body *CreateDisasterRecoveryReq `json:"body,omitempty"`
 }

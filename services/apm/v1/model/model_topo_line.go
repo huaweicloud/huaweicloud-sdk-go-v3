@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件之间调用指向线。
+// TopoLine 组件之间调用指向线。
 type TopoLine struct {
 
 	// 开始节点。

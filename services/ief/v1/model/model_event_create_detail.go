@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 系统订阅创建配置
+// EventCreateDetail 系统订阅创建配置
 type EventCreateDetail struct {
 
 	// 系统订阅名称。只允许小写英文字符、数字、下划线、中划线，最大长度64，同一个帐号中创建的系统订阅和消息规则名唯一

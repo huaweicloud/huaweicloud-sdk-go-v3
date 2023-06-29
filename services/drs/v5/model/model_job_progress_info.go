@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务进度信息。
+// JobProgressInfo 任务进度信息。
 type JobProgressInfo struct {
 
 	// 迁移对比百分比。

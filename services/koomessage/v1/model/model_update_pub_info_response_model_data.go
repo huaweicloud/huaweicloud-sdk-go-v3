@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求成功返回的数据。
+// UpdatePubInfoResponseModelData 请求成功返回的数据。
 type UpdatePubInfoResponseModelData struct {
 
 	// 服务号更新记录ID。

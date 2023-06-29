@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCorpAdminResponse Response Object
 type ShowCorpAdminResponse struct {
 
 	// 用户UUID。

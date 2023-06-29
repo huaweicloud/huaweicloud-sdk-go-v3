@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConfigurationTemplatesResponse Response Object
 type ListConfigurationTemplatesResponse struct {
 
 	// 总记录数。

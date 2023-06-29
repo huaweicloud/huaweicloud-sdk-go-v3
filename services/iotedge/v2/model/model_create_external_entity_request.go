@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateExternalEntityRequest Request Object
 type CreateExternalEntityRequest struct {
 
 	// 边缘节点ID

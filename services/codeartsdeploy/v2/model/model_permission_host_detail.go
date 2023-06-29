@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主机相关权限详情类
+// PermissionHostDetail 主机相关权限详情类
 type PermissionHostDetail struct {
 
 	// 是否有查看权限

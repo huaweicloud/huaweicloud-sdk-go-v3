@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddEngressEipV2Response Response Object
 type AddEngressEipV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

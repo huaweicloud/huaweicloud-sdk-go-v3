@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopPipelineRunResponse Response Object
 type StopPipelineRunResponse struct {
 
 	// 操作是否成功

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 供给推荐的选项
+// SupplyOption 供给推荐的选项
 type SupplyOption struct {
 
 	// 推荐结果的粒度 BY_REGION：对每个区域打分，可使用多种规格满足需求 BY_AZ：对每个可用区打分 BY_FLAVOR：对每个规格打分，可使用多地域满足需求 BY_FLAVOR_AND_REGION：对每个区域下的每个规格打分 BY_FLAVOR_AND_AZ：对每个可用区下的每个规格打分
@@ -70,13 +70,18 @@ func (c SupplyOptionResultGranularity) MarshalJSON() ([]byte, error) {
 
 func (c *SupplyOptionResultGranularity) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

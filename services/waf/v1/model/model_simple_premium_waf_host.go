@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 独享模式域名信息列表
+// SimplePremiumWafHost 独享模式域名信息列表
 type SimplePremiumWafHost struct {
 
 	// 域名id

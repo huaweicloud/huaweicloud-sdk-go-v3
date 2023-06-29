@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMultiAccountRetrieveCouponsResponse Response Object
 type ListMultiAccountRetrieveCouponsResponse struct {
 
 	// 记录条数。

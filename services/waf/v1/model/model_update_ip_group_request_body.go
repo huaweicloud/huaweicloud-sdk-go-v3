@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 地址组名称
+// UpdateIpGroupRequestBody 地址组名称
 type UpdateIpGroupRequestBody struct {
 
 	// 地址组名称

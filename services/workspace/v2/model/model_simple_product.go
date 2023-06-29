@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品信息。
+// SimpleProduct 产品信息。
 type SimpleProduct struct {
 
 	// 产品ID。
@@ -27,7 +27,7 @@ type SimpleProduct struct {
 	// 产品描述。
 	Descriptions *string `json:"descriptions,omitempty"`
 
-	// 周期套餐标识，1表示包周期，0表示按需。
+	// 周期套餐标识，0表示包周期，1表示按需。
 	ChargeMode *string `json:"charge_mode,omitempty"`
 }
 

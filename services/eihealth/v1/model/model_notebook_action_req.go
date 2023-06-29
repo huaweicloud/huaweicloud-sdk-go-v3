@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启停notebook请求体
+// NotebookActionReq 启停notebook请求体
 type NotebookActionReq struct {
 	Action *ActionType `json:"action"`
 }

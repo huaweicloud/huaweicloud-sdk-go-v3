@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRelationDbRequest Request Object
 type ListRelationDbRequest struct {
 
 	// 任务ID

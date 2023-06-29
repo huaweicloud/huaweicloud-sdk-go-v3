@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowAllDataSourceRequest Request Object
 type ShowAllDataSourceRequest struct {
 
 	// filter

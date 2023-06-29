@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFirewallsRequest Request Object
 type ListFirewallsRequest struct {
 
 	// 每页返回的个数  取值范围：0~1000

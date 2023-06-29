@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMfaRequest Request Object
 type ListMfaRequest struct {
 
 	// 用户id

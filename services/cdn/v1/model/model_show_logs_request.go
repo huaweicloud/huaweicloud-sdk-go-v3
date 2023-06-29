@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLogsRequest Request Object
 type ShowLogsRequest struct {
 
 	// 只支持单个域名，如：www.test1.com。

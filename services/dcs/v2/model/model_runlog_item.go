@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 运行日志单个条目
+// RunlogItem 运行日志单个条目
 type RunlogItem struct {
 
 	// 日志的唯一标识

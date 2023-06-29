@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAvailableZonesV2Response Response Object
 type ListAvailableZonesV2Response struct {
 
 	// 可用区列表

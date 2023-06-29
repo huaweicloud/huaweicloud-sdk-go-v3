@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 性能加速资源信息
+// PerformanceResourcesRsp 性能加速资源信息
 type PerformanceResourcesRsp struct {
 
 	// 性能加速资源id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Tag
 type Tag struct {
 
 	// 标签键。同一资源的key值不能重复。 最大长度36个字符。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。

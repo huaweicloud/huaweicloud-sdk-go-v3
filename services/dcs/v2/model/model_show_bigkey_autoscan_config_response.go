@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBigkeyAutoscanConfigResponse Response Object
 type ShowBigkeyAutoscanConfigResponse struct {
 
 	// 实例ID

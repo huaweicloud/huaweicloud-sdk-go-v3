@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建药物作业基本信息
+// CreateDrugJobBasicInfo 创建药物作业基本信息
 type CreateDrugJobBasicInfo struct {
 
 	// 作业的名称，取值范围：[5,64]，允许大小写字母、数字、空格、下划线(_)和中划线(-),只能以数字或字母开头

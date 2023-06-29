@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandVolumesResponse Response Object
 type ExpandVolumesResponse struct {
 
 	// 扩容磁盘任务ID。

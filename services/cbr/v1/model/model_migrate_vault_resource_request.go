@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MigrateVaultResourceRequest Request Object
 type MigrateVaultResourceRequest struct {
 	VaultId string `json:"vault_id"`
 

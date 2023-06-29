@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发起实例诊断请求体
+// CreateDiagnosisTaskBody 发起实例诊断请求体
 type CreateDiagnosisTaskBody struct {
 
 	// 诊断开始时间。UNIX时间戳，单位毫秒。

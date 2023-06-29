@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClusterTagsRequest Request Object
 type ListClusterTagsRequest struct {
 
 	// 集群的ID。

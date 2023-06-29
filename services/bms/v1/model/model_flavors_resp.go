@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// flavors数据结构说明
+// FlavorsResp flavors数据结构说明
 type FlavorsResp struct {
 
 	// 裸金属服务器规格的ID

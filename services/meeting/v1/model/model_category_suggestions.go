@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 各项内容审核结果。
+// CategorySuggestions 各项内容审核结果。
 type CategorySuggestions struct {
 
 	// 政治人物审核。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户列表，列表最大长度为50。
+// CreateDatabaseUserList 数据库用户列表，列表最大长度为50。
 type CreateDatabaseUserList struct {
 
 	// 数据库用户名称，数据库用户名称在1到32个字符之间，由字母、数字、下划线组成，不能包含其他特殊字符。

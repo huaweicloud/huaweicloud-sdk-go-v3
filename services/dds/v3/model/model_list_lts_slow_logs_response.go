@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLtsSlowLogsResponse Response Object
 type ListLtsSlowLogsResponse struct {
 
 	// 慢日志具体信息。

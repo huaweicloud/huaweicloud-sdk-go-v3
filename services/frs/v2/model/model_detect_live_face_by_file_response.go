@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DetectLiveFaceByFileResponse Response Object
 type DetectLiveFaceByFileResponse struct {
 	Result *LiveDetectFaceRespResult `json:"result,omitempty"`
 

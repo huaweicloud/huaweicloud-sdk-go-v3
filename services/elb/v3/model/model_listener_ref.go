@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监听器
+// ListenerRef 监听器
 type ListenerRef struct {
 
 	// 监听器ID。

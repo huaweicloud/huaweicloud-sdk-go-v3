@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规则配置
+// RuleDetail 规则配置
 type RuleDetail struct {
 	Rule *RuleConfig `json:"rule,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProtectionGroupNameResponse Response Object
 type UpdateProtectionGroupNameResponse struct {
 	ServerGroup    *ShowProtectionGroupParams `json:"server_group,omitempty"`
 	HttpStatusCode int                        `json:"-"`

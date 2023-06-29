@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTransfersResponse Response Object
 type ListTransfersResponse struct {
 
 	// 查询日志转储信息数组

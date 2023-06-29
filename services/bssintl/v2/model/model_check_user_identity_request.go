@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckUserIdentityRequest Request Object
 type CheckUserIdentityRequest struct {
 	Body *CheckSubcustomerUserReq `json:"body,omitempty"`
 }

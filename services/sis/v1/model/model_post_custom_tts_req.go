@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostCustomTtsReq
 type PostCustomTtsReq struct {
 
 	// 待合成的文本，文本长度限制小于500字符。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// The request body of the AssociateResourceSharePermission operation.
+// AssociatePermissionReqBody The request body of the AssociateResourceSharePermission operation.
 type AssociatePermissionReqBody struct {
 
 	// 共享资源权限的ID。

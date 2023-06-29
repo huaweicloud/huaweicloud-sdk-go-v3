@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteInterRegionBandwidthRequest Request Object
 type DeleteInterRegionBandwidthRequest struct {
 
 	// 域间带宽实例ID。

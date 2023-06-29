@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowEvaluationProjectDetailResponse Response Object
 type ShowEvaluationProjectDetailResponse struct {
 
 	// 数据库大小。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateScaleInPolicyRequest Request Object
 type UpdateScaleInPolicyRequest struct {
 	Body *UpdateScaleInPolicyReq `json:"body,omitempty"`
 }

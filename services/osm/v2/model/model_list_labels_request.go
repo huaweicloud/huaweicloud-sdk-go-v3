@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLabelsRequest Request Object
 type ListLabelsRequest struct {
 
 	// 查询偏移量，默认0

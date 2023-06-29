@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份策略对象，包括备份保留的天数和备份开始时间。
+// BackupPolicyItem 备份策略对象，包括备份保留的天数和备份开始时间。
 type BackupPolicyItem struct {
 
 	// 备份文件可以保存的天数。

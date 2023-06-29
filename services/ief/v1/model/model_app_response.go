@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用模板配置
+// AppResponse 应用模板配置
 type AppResponse struct {
 
 	// 应用模板ID

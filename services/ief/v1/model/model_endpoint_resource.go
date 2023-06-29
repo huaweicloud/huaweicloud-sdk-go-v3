@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息端点资源属性
+// EndpointResource 消息端点资源属性
 type EndpointResource struct {
 
 	// 消息端点资源。 示例：- dis: {\"channel\": \"dis channel name\"} - servicebus: {\"path\": \"/request path\"} - apigw: {\"resource\": \"http://ssss.com\"} - eventbus: {\"topic\": \"/xxxx\"}

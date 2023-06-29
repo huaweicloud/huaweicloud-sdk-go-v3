@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 限制迁移速度请求体
+// SpeedLimitInfo 限制迁移速度请求体
 type SpeedLimitInfo struct {
 
 	// 开始限速时间, 此时间为UTC时间，开始时间为整时，若有分钟，则会忽略，格式为hh:mm，小时数为两位，例如：01:00。

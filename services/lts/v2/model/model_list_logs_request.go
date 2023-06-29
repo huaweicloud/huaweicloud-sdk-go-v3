@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLogsRequest Request Object
 type ListLogsRequest struct {
 
 	// 日志组id。

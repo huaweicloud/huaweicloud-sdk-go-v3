@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowNodesInformationResponse Response Object
 type BatchShowNodesInformationResponse struct {
 
 	// 查询结果的实例总数

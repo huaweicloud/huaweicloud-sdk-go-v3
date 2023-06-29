@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetSimCardResponse Response Object
 type ResetSimCardResponse struct {
 
 	// 业务受理单号

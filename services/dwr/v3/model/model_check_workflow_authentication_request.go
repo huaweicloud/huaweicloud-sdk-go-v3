@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckWorkflowAuthenticationRequest Request Object
 type CheckWorkflowAuthenticationRequest struct {
 }
 

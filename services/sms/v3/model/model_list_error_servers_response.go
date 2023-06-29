@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListErrorServersResponse Response Object
 type ListErrorServersResponse struct {
 
 	// 迁移过程中发生错误的源端数量

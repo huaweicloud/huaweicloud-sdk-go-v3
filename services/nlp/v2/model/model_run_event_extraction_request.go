@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunEventExtractionRequest Request Object
 type RunEventExtractionRequest struct {
 	Body *PostEventExtractionReq `json:"body,omitempty"`
 }

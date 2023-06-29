@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 添加分区信息
+// AddPartitionInput 添加分区信息
 type AddPartitionInput struct {
 
 	// 是否跳过已存在的分区

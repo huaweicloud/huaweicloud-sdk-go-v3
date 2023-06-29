@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStoragePoolsResponse Response Object
 type ListStoragePoolsResponse struct {
 
 	// 存储池列表

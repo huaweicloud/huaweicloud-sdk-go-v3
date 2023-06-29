@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云堡垒机服务可用分区信息。
+// AvailabilityZones 云堡垒机服务可用分区信息。
 type AvailabilityZones struct {
 
 	// 云堡垒机服务可用区ID。

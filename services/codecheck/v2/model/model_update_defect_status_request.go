@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDefectStatusRequest Request Object
 type UpdateDefectStatusRequest struct {
 
 	// 任务id

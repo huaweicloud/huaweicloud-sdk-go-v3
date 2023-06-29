@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点信息
+// Nodes 节点信息
 type Nodes struct {
 
 	// 节点ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRecommendWordsResponse Response Object
 type ListRecommendWordsResponse struct {
 
 	// 错误码

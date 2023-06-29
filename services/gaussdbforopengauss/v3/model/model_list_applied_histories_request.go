@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAppliedHistoriesRequest Request Object
 type ListAppliedHistoriesRequest struct {
 
 	// 语言。默认值：en-us。
@@ -64,13 +64,18 @@ func (c ListAppliedHistoriesRequestXLanguage) MarshalJSON() ([]byte, error) {
 
 func (c *ListAppliedHistoriesRequestXLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

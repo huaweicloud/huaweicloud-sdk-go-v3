@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUnsetScalingInstancesStantbyResponse Response Object
 type BatchUnsetScalingInstancesStantbyResponse struct {
 	HttpStatusCode int `json:"-"`
 }

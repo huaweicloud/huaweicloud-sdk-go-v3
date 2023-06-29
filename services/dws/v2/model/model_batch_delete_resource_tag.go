@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签详情。
+// BatchDeleteResourceTag 标签详情。
 type BatchDeleteResourceTag struct {
 
 	// 标签键。

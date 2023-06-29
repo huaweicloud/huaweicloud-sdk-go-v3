@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportCertificateAuthorityCertificateRequest Request Object
 type ImportCertificateAuthorityCertificateRequest struct {
 
 	// 所要导入的CA证书ID。

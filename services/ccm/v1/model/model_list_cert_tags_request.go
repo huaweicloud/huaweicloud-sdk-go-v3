@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCertTagsRequest Request Object
 type ListCertTagsRequest struct {
 
 	// 所需要查询标签列表的证书ID。

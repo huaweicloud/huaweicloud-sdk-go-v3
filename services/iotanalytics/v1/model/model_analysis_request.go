@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分析任务
+// AnalysisRequest 分析任务
 type AnalysisRequest struct {
 
 	// 分析任务名，必须是模型中已存在的

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateProxyConnectionPoolTypeRequest Request Object
 type UpdateProxyConnectionPoolTypeRequest struct {
 
 	// 实例ID，严格匹配UUID规则。

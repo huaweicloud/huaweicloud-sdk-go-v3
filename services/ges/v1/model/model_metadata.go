@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 元数据
+// Metadata 元数据
 type Metadata struct {
 
 	// 元数据 ID。

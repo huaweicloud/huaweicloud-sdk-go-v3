@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分组详情
+// CommonPoolsWithBorderGroupDict 分组详情
 type CommonPoolsWithBorderGroupDict struct {
 
 	// 同组的公共池列表

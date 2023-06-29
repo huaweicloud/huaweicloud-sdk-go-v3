@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务项详情
+// Task 任务项详情
 type Task struct {
 
 	// 任务项ID

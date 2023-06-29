@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetRecordSetsStatusResponse Response Object
 type SetRecordSetsStatusResponse struct {
 
 	// Record Set的ID。

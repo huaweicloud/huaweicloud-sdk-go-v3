@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConnectionStatisticsResponse Response Object
 type ShowConnectionStatisticsResponse struct {
 
 	// 总连接数，包括内部连接与外部连接。

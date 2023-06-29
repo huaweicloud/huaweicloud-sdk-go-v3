@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAssociationsResponse Response Object
 type ListAssociationsResponse struct {
 
 	// 路由表关联列表

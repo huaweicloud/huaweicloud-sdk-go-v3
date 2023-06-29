@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群连接信息
+// ClusterLinks 集群连接信息
 type ClusterLinks struct {
 
 	// 关系

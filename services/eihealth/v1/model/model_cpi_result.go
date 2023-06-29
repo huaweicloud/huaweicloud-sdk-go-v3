@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CPI任务的返回结果
+// CpiResult CPI任务的返回结果
 type CpiResult struct {
 
 	// 蛋白质FASTA标题

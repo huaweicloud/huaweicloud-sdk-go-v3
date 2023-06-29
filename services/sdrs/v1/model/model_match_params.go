@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// match数据结构
+// MatchParams match数据结构
 type MatchParams struct {
 
 	// 键。目前限定为resource_name，后续扩展。

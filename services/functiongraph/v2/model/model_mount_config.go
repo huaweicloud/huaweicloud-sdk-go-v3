@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数挂载配置。
+// MountConfig 函数挂载配置。
 type MountConfig struct {
 	MountUser *MountUser `json:"mount_user"`
 

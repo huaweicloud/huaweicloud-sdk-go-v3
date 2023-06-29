@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDatasourceResponse Response Object
 type CreateDatasourceResponse struct {
 
 	// 数据源id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandGaussMySqlProxyRequest Request Object
 type ExpandGaussMySqlProxyRequest struct {
 
 	// 语言。

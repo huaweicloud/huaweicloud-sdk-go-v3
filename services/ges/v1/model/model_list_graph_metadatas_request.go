@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListGraphMetadatasRequest Request Object
 type ListGraphMetadatasRequest struct {
 
 	// 元数据ID。

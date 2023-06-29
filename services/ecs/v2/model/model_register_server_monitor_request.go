@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RegisterServerMonitorRequest Request Object
 type RegisterServerMonitorRequest struct {
 
 	// 云服务器ID。

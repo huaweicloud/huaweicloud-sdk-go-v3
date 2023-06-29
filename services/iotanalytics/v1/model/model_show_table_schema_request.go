@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTableSchemaRequest Request Object
 type ShowTableSchemaRequest struct {
 
 	// 表ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStatisticsResponse Response Object
 type ListStatisticsResponse struct {
 
 	// 安全总览请求与攻击数据

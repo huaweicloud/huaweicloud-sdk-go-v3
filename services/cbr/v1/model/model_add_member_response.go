@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddMemberResponse Response Object
 type AddMemberResponse struct {
 
 	// 添加备份共享成员响应信息

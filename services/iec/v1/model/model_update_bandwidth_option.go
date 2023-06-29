@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新带宽参数
+// UpdateBandwidthOption 更新带宽参数
 type UpdateBandwidthOption struct {
 
 	// 带宽名称。

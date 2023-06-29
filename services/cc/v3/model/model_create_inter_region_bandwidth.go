@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建域间带宽的详情信息。
+// CreateInterRegionBandwidth 创建域间带宽的详情信息。
 type CreateInterRegionBandwidth struct {
 
 	// 云连接实例ID。

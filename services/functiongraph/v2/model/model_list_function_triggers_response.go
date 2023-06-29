@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFunctionTriggersResponse Response Object
 type ListFunctionTriggersResponse struct {
 	Body           *[]ListFunctionTriggerResult `json:"body,omitempty"`
 	HttpStatusCode int                          `json:"-"`

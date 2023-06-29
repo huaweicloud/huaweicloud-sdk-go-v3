@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像详情
+// QueryImageByTagsResourceDetail 镜像详情
 type QueryImageByTagsResourceDetail struct {
 
 	// 镜像状态

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机属性信息。
+// Property 云手机属性信息。
 type Property struct {
 
 	// 云手机id

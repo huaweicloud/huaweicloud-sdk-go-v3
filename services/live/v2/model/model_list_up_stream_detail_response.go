@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListUpStreamDetailResponse Response Object
 type ListUpStreamDetailResponse struct {
 
 	// 推流域名

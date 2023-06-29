@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// proxy节点扩容信息
+// EnlargeProxyRequest proxy节点扩容信息
 type EnlargeProxyRequest struct {
 
 	// proxy节点扩容操作需要扩容的节点数。  扩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的proxy节点的总数量小于等于32。

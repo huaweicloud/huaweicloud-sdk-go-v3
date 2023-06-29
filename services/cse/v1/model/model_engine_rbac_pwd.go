@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 操作微服务引擎专享版安全认证信息
+// EngineRbacPwd 操作微服务引擎专享版安全认证信息
 type EngineRbacPwd struct {
 
 	// 开启安全认证的微服务引擎专享版默认root帐号的密码

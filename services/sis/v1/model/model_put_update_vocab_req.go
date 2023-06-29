@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//
+// PutUpdateVocabReq
 type PutUpdateVocabReq struct {
 
 	// 热词表名，不可重复。内容限制为字母，数字，下中划线和井号，长度不超过32字节。
@@ -60,13 +60,18 @@ func (c PutUpdateVocabReqLanguage) MarshalJSON() ([]byte, error) {
 
 func (c *PutUpdateVocabReqLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

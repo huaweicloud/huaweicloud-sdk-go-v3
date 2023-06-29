@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用启动参数
+// EnvExecutionBody 应用启动参数
 type EnvExecutionBody struct {
 
 	// 部署应用时传递的参数

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// eip信息
+// EipResult eip信息
 type EipResult struct {
 
 	// IP地址类型。
@@ -65,13 +65,18 @@ func (c EipResultIpType) MarshalJSON() ([]byte, error) {
 
 func (c *EipResultIpType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

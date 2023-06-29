@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDatasourceRequest Request Object
 type CreateDatasourceRequest struct {
 	Body *CreateDatasourceReqDto `json:"body,omitempty"`
 }

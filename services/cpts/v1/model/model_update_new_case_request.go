@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateNewCaseRequest Request Object
 type UpdateNewCaseRequest struct {
 
 	// 用例id

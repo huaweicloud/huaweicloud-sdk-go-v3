@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// GlanceAddImageMemberRequest Request Object
 type GlanceAddImageMemberRequest struct {
 
 	// 镜像id

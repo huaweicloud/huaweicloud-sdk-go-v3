@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateLakeFormationInstanceRequest Request Object
 type UpdateLakeFormationInstanceRequest struct {
 
 	// LakeFormation实例ID

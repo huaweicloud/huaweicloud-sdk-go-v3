@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmNotifyRequest Request Object
 type ListAlarmNotifyRequest struct {
 
 	// 应用id，用于鉴权。

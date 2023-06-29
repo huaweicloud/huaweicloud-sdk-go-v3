@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库模式对象。
+// SchemaObject 数据库模式对象。
 type SchemaObject struct {
 
 	// 该模式在实时同步场景下的类型。取值： - config：仅当该模式作为数据过滤高级设置的关联模式时，需要填写，此时该模式以及该模式下的tables“不会”被同步到目标库，name、all属性不生效，tables需要填写被关联的相关对象。（注意：如果需要同步该模式对象，则在下级对象中填写sync_type值为config。）

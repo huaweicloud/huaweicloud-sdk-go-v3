@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRenewRateOnPeriodRequest Request Object
 type ListRenewRateOnPeriodRequest struct {
 	Body *ListRenewRateOnPeriodReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSystemSecurityPoliciesResponse Response Object
 type ListSystemSecurityPoliciesResponse struct {
 
 	// 系统安全策略列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启动裸金属服务器接口请求结构体
+// OsStartBody 启动裸金属服务器接口请求结构体
 type OsStartBody struct {
 	OsStart *StartServersInfo `json:"os-start"`
 }

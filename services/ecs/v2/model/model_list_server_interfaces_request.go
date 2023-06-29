@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListServerInterfacesRequest Request Object
 type ListServerInterfacesRequest struct {
 
 	// 云服务器ID。

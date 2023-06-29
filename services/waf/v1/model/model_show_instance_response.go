@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceResponse Response Object
 type ShowInstanceResponse struct {
 
 	// 独享引擎实例ID

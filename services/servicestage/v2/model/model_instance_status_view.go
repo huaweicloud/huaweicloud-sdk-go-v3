@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 状态详情。
+// InstanceStatusView 状态详情。
 type InstanceStatusView struct {
 	Status *InstanceStatusType `json:"status,omitempty"`
 

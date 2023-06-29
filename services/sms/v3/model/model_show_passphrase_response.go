@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPassphraseResponse Response Object
 type ShowPassphraseResponse struct {
 
 	// 任务ID

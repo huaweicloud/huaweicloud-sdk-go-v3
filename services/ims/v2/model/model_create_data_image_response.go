@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDataImageResponse Response Object
 type CreateDataImageResponse struct {
 
 	// 异步任务ID。

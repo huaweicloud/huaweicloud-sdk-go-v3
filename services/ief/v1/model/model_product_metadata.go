@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品属性值基本信息
+// ProductMetadata 产品属性值基本信息
 type ProductMetadata struct {
 
 	// 产品属性值类型

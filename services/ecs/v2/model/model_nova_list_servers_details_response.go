@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NovaListServersDetailsResponse Response Object
 type NovaListServersDetailsResponse struct {
 
 	// 查询云服务器信息列表。

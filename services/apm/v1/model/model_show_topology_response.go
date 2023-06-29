@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTopologyResponse Response Object
 type ShowTopologyResponse struct {
 
 	// 全局traceId。

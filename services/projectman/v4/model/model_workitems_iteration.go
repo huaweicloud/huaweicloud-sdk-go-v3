@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迭代
+// WorkitemsIteration 迭代
 type WorkitemsIteration struct {
 
 	// 迭代id

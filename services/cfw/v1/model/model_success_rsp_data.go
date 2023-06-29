@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 响应体
+// SuccessRspData 响应体
 type SuccessRspData struct {
 
 	// 标识ID

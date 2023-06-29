@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRepositoryRequest Request Object
 type DeleteRepositoryRequest struct {
 
 	// 仓库uuid(由CreateRepository接口返回)，用来指定删除的仓库

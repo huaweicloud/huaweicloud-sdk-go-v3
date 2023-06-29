@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDDosStatusRequest Request Object
 type ListDDosStatusRequest struct {
 
 	// 可选范围： - normal：表示正常 - configging：表示设置中 - notConfig：表示未设置 - packetcleaning：表示清洗 - packetdropping：表示黑洞  不带此参数默认所有列表，以neutron查询到的顺序为准。

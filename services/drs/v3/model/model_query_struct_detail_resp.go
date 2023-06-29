@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 灾备初始化对象详情
+// QueryStructDetailResp 灾备初始化对象详情
 type QueryStructDetailResp struct {
 
 	// 任务ID

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 命令耗时统计列表
+// CommandTimeTakenList 命令耗时统计列表
 type CommandTimeTakenList struct {
 
 	// 执行命令的总次数
@@ -64,13 +64,18 @@ func (c CommandTimeTakenListResult) MarshalJSON() ([]byte, error) {
 
 func (c *CommandTimeTakenListResult) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

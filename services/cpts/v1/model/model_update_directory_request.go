@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDirectoryRequest Request Object
 type UpdateDirectoryRequest struct {
 
 	// 目录id

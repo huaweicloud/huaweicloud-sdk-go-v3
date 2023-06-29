@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询访问控制日志返回数据
+// HttpQueryCfwAccessControllerLogsResponseDtoData 查询访问控制日志返回数据
 type HttpQueryCfwAccessControllerLogsResponseDtoData struct {
 
 	// 返回数量

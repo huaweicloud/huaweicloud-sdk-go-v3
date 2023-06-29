@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 扩展配置，请参见extended-configs参数说明。
+// LinksLinkconfigvaluesExtendedconfigs 扩展配置，请参见extended-configs参数说明。
 type LinksLinkconfigvaluesExtendedconfigs struct {
 
 	// 名称

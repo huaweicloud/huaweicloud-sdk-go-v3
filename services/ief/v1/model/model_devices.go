@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 终端设备属性
+// Devices 终端设备属性
 type Devices struct {
 	Devices *DevicesDevices `json:"devices"`
 }

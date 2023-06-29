@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnregisterAgentResponse Response Object
 type UnregisterAgentResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLogStreamRequest Request Object
 type ListLogStreamRequest struct {
 
 	// 租户想查询的日志流所在的日志组的groupid，一般为36位字符串。

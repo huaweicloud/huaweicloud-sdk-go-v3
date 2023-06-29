@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCustomfieldsRequest Request Object
 type CreateCustomfieldsRequest struct {
 
 	// devcloud项目的32位id

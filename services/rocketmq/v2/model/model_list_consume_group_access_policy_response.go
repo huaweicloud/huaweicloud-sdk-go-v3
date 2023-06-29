@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConsumeGroupAccessPolicyResponse Response Object
 type ListConsumeGroupAccessPolicyResponse struct {
 
 	// 用户列表。

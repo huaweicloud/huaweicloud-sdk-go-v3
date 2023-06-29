@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CCE资源标签
+// ResourceTag CCE资源标签
 type ResourceTag struct {
 
 	// Key值。 - 不能为空，最多支持128个字符 - 可用UTF-8格式表示的汉字、字母、数字和空格 - 支持部分特殊字符：_.:/=+-@ - 不能以\"\\_sys\\_\"开头

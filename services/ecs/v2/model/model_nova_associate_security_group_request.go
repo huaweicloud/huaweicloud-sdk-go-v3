@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaAssociateSecurityGroupRequest Request Object
 type NovaAssociateSecurityGroupRequest struct {
 
 	// 弹性云服务器ID。

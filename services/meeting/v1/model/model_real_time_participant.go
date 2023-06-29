@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 在线会场信息。
+// RealTimeParticipant 在线会场信息。
 type RealTimeParticipant struct {
 
 	// 与会者标识。

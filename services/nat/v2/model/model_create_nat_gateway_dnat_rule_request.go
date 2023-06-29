@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateNatGatewayDnatRuleRequest Request Object
 type CreateNatGatewayDnatRuleRequest struct {
 	Body *CreateNatGatewayDnatRuleOption `json:"body,omitempty"`
 }

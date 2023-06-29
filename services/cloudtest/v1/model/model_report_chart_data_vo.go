@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 报表数据
+// ReportChartDataVo 报表数据
 type ReportChartDataVo struct {
 
 	// 报表id

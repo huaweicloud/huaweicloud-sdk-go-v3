@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateElbResponse Response Object
 type DisassociateElbResponse struct {
 
 	// 任务ID

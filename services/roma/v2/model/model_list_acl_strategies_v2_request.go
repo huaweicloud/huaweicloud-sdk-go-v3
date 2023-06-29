@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAclStrategiesV2Request Request Object
 type ListAclStrategiesV2Request struct {
 
 	// 实例ID

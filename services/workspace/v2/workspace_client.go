@@ -271,6 +271,27 @@ func (c *WorkspaceClient) BatchDeleteDesktopsInvoker(request *model.BatchDeleteD
 	return &BatchDeleteDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchLogoffDesktops 批量注销桌面
+//
+// 批量注销桌面。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchLogoffDesktops(request *model.BatchLogoffDesktopsRequest) (*model.BatchLogoffDesktopsResponse, error) {
+	requestDef := GenReqDefForBatchLogoffDesktops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchLogoffDesktopsResponse), nil
+	}
+}
+
+// BatchLogoffDesktopsInvoker 批量注销桌面
+func (c *WorkspaceClient) BatchLogoffDesktopsInvoker(request *model.BatchLogoffDesktopsRequest) *BatchLogoffDesktopsInvoker {
+	requestDef := GenReqDefForBatchLogoffDesktops()
+	return &BatchLogoffDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchRunDesktops 操作桌面
 //
 // 批量操作桌面，用于批量开机、关机和重启。
@@ -418,6 +439,195 @@ func (c *WorkspaceClient) ShowDesktopDetailInvoker(request *model.ShowDesktopDet
 	return &ShowDesktopDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUnusedDesktops 查询在指定时间段未使用的桌面
+//
+// 查询在指定时间段未使用的桌面。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUnusedDesktops(request *model.ListUnusedDesktopsRequest) (*model.ListUnusedDesktopsResponse, error) {
+	requestDef := GenReqDefForListUnusedDesktops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUnusedDesktopsResponse), nil
+	}
+}
+
+// ListUnusedDesktopsInvoker 查询在指定时间段未使用的桌面
+func (c *WorkspaceClient) ListUnusedDesktopsInvoker(request *model.ListUnusedDesktopsRequest) *ListUnusedDesktopsInvoker {
+	requestDef := GenReqDefForListUnusedDesktops()
+	return &ListUnusedDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUsedDesktopInfo 查询使用桌面的时长
+//
+// 查询使用桌面的时长。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUsedDesktopInfo(request *model.ListUsedDesktopInfoRequest) (*model.ListUsedDesktopInfoResponse, error) {
+	requestDef := GenReqDefForListUsedDesktopInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsedDesktopInfoResponse), nil
+	}
+}
+
+// ListUsedDesktopInfoInvoker 查询使用桌面的时长
+func (c *WorkspaceClient) ListUsedDesktopInfoInvoker(request *model.ListUsedDesktopInfoRequest) *ListUsedDesktopInfoInvoker {
+	requestDef := GenReqDefForListUsedDesktopInfo()
+	return &ListUsedDesktopInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteUserGroups 批量删除用户组
+//
+// 该接口用于批量删除用户组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteUserGroups(request *model.BatchDeleteUserGroupsRequest) (*model.BatchDeleteUserGroupsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteUserGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteUserGroupsResponse), nil
+	}
+}
+
+// BatchDeleteUserGroupsInvoker 批量删除用户组
+func (c *WorkspaceClient) BatchDeleteUserGroupsInvoker(request *model.BatchDeleteUserGroupsRequest) *BatchDeleteUserGroupsInvoker {
+	requestDef := GenReqDefForBatchDeleteUserGroups()
+	return &BatchDeleteUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUserGroup 创建用户组
+//
+// 该接口用于创建用户组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateUserGroup(request *model.CreateUserGroupRequest) (*model.CreateUserGroupResponse, error) {
+	requestDef := GenReqDefForCreateUserGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUserGroupResponse), nil
+	}
+}
+
+// CreateUserGroupInvoker 创建用户组
+func (c *WorkspaceClient) CreateUserGroupInvoker(request *model.CreateUserGroupRequest) *CreateUserGroupInvoker {
+	requestDef := GenReqDefForCreateUserGroup()
+	return &CreateUserGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteUserGroup 删除用户组
+//
+// 删除用户组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteUserGroup(request *model.DeleteUserGroupRequest) (*model.DeleteUserGroupResponse, error) {
+	requestDef := GenReqDefForDeleteUserGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteUserGroupResponse), nil
+	}
+}
+
+// DeleteUserGroupInvoker 删除用户组
+func (c *WorkspaceClient) DeleteUserGroupInvoker(request *model.DeleteUserGroupRequest) *DeleteUserGroupInvoker {
+	requestDef := GenReqDefForDeleteUserGroup()
+	return &DeleteUserGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserGroups 查询用户组列表
+//
+// 查询用户组列表，支持分页。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUserGroups(request *model.ListUserGroupsRequest) (*model.ListUserGroupsResponse, error) {
+	requestDef := GenReqDefForListUserGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserGroupsResponse), nil
+	}
+}
+
+// ListUserGroupsInvoker 查询用户组列表
+func (c *WorkspaceClient) ListUserGroupsInvoker(request *model.ListUserGroupsRequest) *ListUserGroupsInvoker {
+	requestDef := GenReqDefForListUserGroups()
+	return &ListUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUsersOfGroup 查询用户组中的用户
+//
+// 该接口用于查询用户组中的用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUsersOfGroup(request *model.ListUsersOfGroupRequest) (*model.ListUsersOfGroupResponse, error) {
+	requestDef := GenReqDefForListUsersOfGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsersOfGroupResponse), nil
+	}
+}
+
+// ListUsersOfGroupInvoker 查询用户组中的用户
+func (c *WorkspaceClient) ListUsersOfGroupInvoker(request *model.ListUsersOfGroupRequest) *ListUsersOfGroupInvoker {
+	requestDef := GenReqDefForListUsersOfGroup()
+	return &ListUsersOfGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunActionsOnGroup 操作用户组
+//
+// 操作用户组，如添加用户、删除用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) RunActionsOnGroup(request *model.RunActionsOnGroupRequest) (*model.RunActionsOnGroupResponse, error) {
+	requestDef := GenReqDefForRunActionsOnGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunActionsOnGroupResponse), nil
+	}
+}
+
+// RunActionsOnGroupInvoker 操作用户组
+func (c *WorkspaceClient) RunActionsOnGroupInvoker(request *model.RunActionsOnGroupRequest) *RunActionsOnGroupInvoker {
+	requestDef := GenReqDefForRunActionsOnGroup()
+	return &RunActionsOnGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUserGroup 修改用户组信息
+//
+// 该接口用于修改用户组信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateUserGroup(request *model.UpdateUserGroupRequest) (*model.UpdateUserGroupResponse, error) {
+	requestDef := GenReqDefForUpdateUserGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateUserGroupResponse), nil
+	}
+}
+
+// UpdateUserGroupInvoker 修改用户组信息
+func (c *WorkspaceClient) UpdateUserGroupInvoker(request *model.UpdateUserGroupRequest) *UpdateUserGroupInvoker {
+	requestDef := GenReqDefForUpdateUserGroup()
+	return &UpdateUserGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListImages 查询产品镜像列表
 //
 // 该接口用于查询云桌面支持的产品镜像列表。
@@ -458,6 +668,90 @@ func (c *WorkspaceClient) ListItaSubJobs(request *model.ListItaSubJobsRequest) (
 func (c *WorkspaceClient) ListItaSubJobsInvoker(request *model.ListItaSubJobsRequest) *ListItaSubJobsInvoker {
 	requestDef := GenReqDefForListItaSubJobs()
 	return &ListItaSubJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ApplyDesktopsInternet 开通桌面上网功能
+//
+// 开通桌面上网功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ApplyDesktopsInternet(request *model.ApplyDesktopsInternetRequest) (*model.ApplyDesktopsInternetResponse, error) {
+	requestDef := GenReqDefForApplyDesktopsInternet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyDesktopsInternetResponse), nil
+	}
+}
+
+// ApplyDesktopsInternetInvoker 开通桌面上网功能
+func (c *WorkspaceClient) ApplyDesktopsInternetInvoker(request *model.ApplyDesktopsInternetRequest) *ApplyDesktopsInternetInvoker {
+	requestDef := GenReqDefForApplyDesktopsInternet()
+	return &ApplyDesktopsInternetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateDesktopsEip 桌面绑定EIP
+//
+// 桌面绑定EIP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) AssociateDesktopsEip(request *model.AssociateDesktopsEipRequest) (*model.AssociateDesktopsEipResponse, error) {
+	requestDef := GenReqDefForAssociateDesktopsEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateDesktopsEipResponse), nil
+	}
+}
+
+// AssociateDesktopsEipInvoker 桌面绑定EIP
+func (c *WorkspaceClient) AssociateDesktopsEipInvoker(request *model.AssociateDesktopsEipRequest) *AssociateDesktopsEipInvoker {
+	requestDef := GenReqDefForAssociateDesktopsEip()
+	return &AssociateDesktopsEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateDesktopsEip 批量桌面解绑EIP
+//
+// 批量桌面解绑EIP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDisassociateDesktopsEip(request *model.BatchDisassociateDesktopsEipRequest) (*model.BatchDisassociateDesktopsEipResponse, error) {
+	requestDef := GenReqDefForBatchDisassociateDesktopsEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisassociateDesktopsEipResponse), nil
+	}
+}
+
+// BatchDisassociateDesktopsEipInvoker 批量桌面解绑EIP
+func (c *WorkspaceClient) BatchDisassociateDesktopsEipInvoker(request *model.BatchDisassociateDesktopsEipRequest) *BatchDisassociateDesktopsEipInvoker {
+	requestDef := GenReqDefForBatchDisassociateDesktopsEip()
+	return &BatchDisassociateDesktopsEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopsEips 查询已绑定桌面和未绑定的Eip
+//
+// 查询已绑定桌面和未绑定的Eip。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopsEips(request *model.ListDesktopsEipsRequest) (*model.ListDesktopsEipsResponse, error) {
+	requestDef := GenReqDefForListDesktopsEips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopsEipsResponse), nil
+	}
+}
+
+// ListDesktopsEipsInvoker 查询已绑定桌面和未绑定的Eip
+func (c *WorkspaceClient) ListDesktopsEipsInvoker(request *model.ListDesktopsEipsRequest) *ListDesktopsEipsInvoker {
+	requestDef := GenReqDefForListDesktopsEips()
+	return &ListDesktopsEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProducts 查询产品套餐列表
@@ -628,9 +922,30 @@ func (c *WorkspaceClient) UpdateTerminalsBindingDesktopsConfigInvoker(request *m
 	return &UpdateTerminalsBindingDesktopsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateUsers 批量创建用户
+//
+// 该接口用于批量创建用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchCreateUsers(request *model.BatchCreateUsersRequest) (*model.BatchCreateUsersResponse, error) {
+	requestDef := GenReqDefForBatchCreateUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateUsersResponse), nil
+	}
+}
+
+// BatchCreateUsersInvoker 批量创建用户
+func (c *WorkspaceClient) BatchCreateUsersInvoker(request *model.BatchCreateUsersRequest) *BatchCreateUsersInvoker {
+	requestDef := GenReqDefForBatchCreateUsers()
+	return &BatchCreateUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteOtpDevices 解绑OTP设备
 //
-// 该接口用于解绑用户的OTP设备
+// 该接口用于解绑用户的OTP设备。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchDeleteOtpDevices(request *model.BatchDeleteOtpDevicesRequest) (*model.BatchDeleteOtpDevicesResponse, error) {
@@ -651,7 +966,7 @@ func (c *WorkspaceClient) BatchDeleteOtpDevicesInvoker(request *model.BatchDelet
 
 // ChangeUserStatus 操作用户
 //
-// 该接口用于操作用户，包含三种操作：锁定、解锁和重置密码。
+// 该接口用于操作用户，包含三种操作：锁定、解锁和重置密码（重置密码建议使用/v2/{project_id}/users/{user_id}/random-password接口，在没有通知方式的情况下必须使用/v2/{project_id}/users/{user_id}/random-password接口）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ChangeUserStatus(request *model.ChangeUserStatusRequest) (*model.ChangeUserStatusResponse, error) {
@@ -712,9 +1027,9 @@ func (c *WorkspaceClient) DeleteUserInvoker(request *model.DeleteUserRequest) *D
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListOtpDevicesByUserId 查询MFA设备
+// ListOtpDevicesByUserId 查询OTP设备
 //
-// 该接口用于查询相应用户下面的MFA设备
+// 该接口用于查询相应用户下面的OTP设备。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListOtpDevicesByUserId(request *model.ListOtpDevicesByUserIdRequest) (*model.ListOtpDevicesByUserIdResponse, error) {
@@ -727,7 +1042,7 @@ func (c *WorkspaceClient) ListOtpDevicesByUserId(request *model.ListOtpDevicesBy
 	}
 }
 
-// ListOtpDevicesByUserIdInvoker 查询MFA设备
+// ListOtpDevicesByUserIdInvoker 查询OTP设备
 func (c *WorkspaceClient) ListOtpDevicesByUserIdInvoker(request *model.ListOtpDevicesByUserIdRequest) *ListOtpDevicesByUserIdInvoker {
 	requestDef := GenReqDefForListOtpDevicesByUserId()
 	return &ListOtpDevicesByUserIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -773,6 +1088,27 @@ func (c *WorkspaceClient) ListUsers(request *model.ListUsersRequest) (*model.Lis
 func (c *WorkspaceClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
 	requestDef := GenReqDefForListUsers()
 	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetRandomPassword 给用户重置随机密码
+//
+// 该接口用于给用户重置一个密码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ResetRandomPassword(request *model.ResetRandomPasswordRequest) (*model.ResetRandomPasswordResponse, error) {
+	requestDef := GenReqDefForResetRandomPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetRandomPasswordResponse), nil
+	}
+}
+
+// ResetRandomPasswordInvoker 给用户重置随机密码
+func (c *WorkspaceClient) ResetRandomPasswordInvoker(request *model.ResetRandomPasswordRequest) *ResetRandomPasswordInvoker {
+	requestDef := GenReqDefForResetRandomPassword()
+	return &ResetRandomPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateUserInfo 修改用户信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 容灾可用集群信息
+// DisasterRecoveryClusterVo 容灾可用集群信息
 type DisasterRecoveryClusterVo struct {
 
 	// 集群ID

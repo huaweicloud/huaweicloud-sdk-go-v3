@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询已绑定EIP记录明细信息。
+// BindedEipResult 查询已绑定EIP记录明细信息。
 type BindedEipResult struct {
 
 	// 弹性公网ID。

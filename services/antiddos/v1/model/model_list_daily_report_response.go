@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDailyReportResponse Response Object
 type ListDailyReportResponse struct {
 
 	// 24小时内的流量数据

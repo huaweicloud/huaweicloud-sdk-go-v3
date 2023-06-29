@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子合成路径规划任务的返回结果
+// SynthesisResult 分子合成路径规划任务的返回结果
 type SynthesisResult struct {
 
 	// 分子SMILES表达式

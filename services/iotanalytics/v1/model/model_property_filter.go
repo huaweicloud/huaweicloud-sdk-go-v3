@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性过滤器
+// PropertyFilter 属性过滤器
 type PropertyFilter struct {
 
 	// 过滤属性名称，正则：\"^[a-zA-Z0-9_]{1,64}$\"

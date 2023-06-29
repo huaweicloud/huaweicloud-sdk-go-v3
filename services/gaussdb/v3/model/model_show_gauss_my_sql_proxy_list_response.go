@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlProxyListResponse Response Object
 type ShowGaussMySqlProxyListResponse struct {
 
 	// Proxy实例信息列表。

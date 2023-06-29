@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 新版(任务用例分离版本)更新任务请求体
+// UpdateNewTaskRequestBody 新版(任务用例分离版本)更新任务请求体
 type UpdateNewTaskRequestBody struct {
 
 	// 名称

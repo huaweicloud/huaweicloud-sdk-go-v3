@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSeveritiesRequest Request Object
 type ListSeveritiesRequest struct {
 
 	// 产品类型id

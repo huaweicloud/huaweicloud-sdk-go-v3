@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 订阅批量操作请求
+// SubscriptionOperateReq 订阅批量操作请求
 type SubscriptionOperateReq struct {
 
 	// 订阅对象ID列表，单次批量操作最多支持10个订阅
@@ -58,13 +58,18 @@ func (c SubscriptionOperateReqOperation) MarshalJSON() ([]byte, error) {
 
 func (c *SubscriptionOperateReqOperation) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 错误日志请求体。
+// LtsLogErrorQueryRequest 错误日志请求体。
 type LtsLogErrorQueryRequest struct {
 
 	// 节点ID。

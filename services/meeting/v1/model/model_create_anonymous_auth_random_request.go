@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAnonymousAuthRandomRequest Request Object
 type CreateAnonymousAuthRandomRequest struct {
 
 	// 会议ID。

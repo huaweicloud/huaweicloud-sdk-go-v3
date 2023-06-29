@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAllDifficultsRequest Request Object
 type ListAllDifficultsRequest struct {
 }
 

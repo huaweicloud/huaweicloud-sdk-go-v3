@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConfigTemplatesResponse Response Object
 type ListConfigTemplatesResponse struct {
 
 	// 模板个数。

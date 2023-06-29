@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DIS数据源配置内容
+// DisContentRsp DIS数据源配置内容
 type DisContentRsp struct {
 
 	// 通道名称

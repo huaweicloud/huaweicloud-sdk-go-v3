@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取应用拓扑数据的请求参数。
+// BusinessTopoRequest 获取应用拓扑数据的请求参数。
 type BusinessTopoRequest struct {
 
 	// 目标应用id。

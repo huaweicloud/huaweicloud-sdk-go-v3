@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAccessConfigResponse Response Object
 type ListAccessConfigResponse struct {
 
 	// 日志接入列表

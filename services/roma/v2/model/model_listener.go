@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 监听器
+// Listener 监听器
 type Listener struct {
 
 	// 监听器名称
@@ -62,13 +62,18 @@ func (c ListenerIpVersion) MarshalJSON() ([]byte, error) {
 
 func (c *ListenerIpVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

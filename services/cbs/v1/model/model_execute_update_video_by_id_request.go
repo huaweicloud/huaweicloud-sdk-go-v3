@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteUpdateVideoByIdRequest Request Object
 type ExecuteUpdateVideoByIdRequest struct {
 
 	// 视频id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddIngressEipV2Response Response Object
 type AddIngressEipV2Response struct {
 
 	// 实例ID

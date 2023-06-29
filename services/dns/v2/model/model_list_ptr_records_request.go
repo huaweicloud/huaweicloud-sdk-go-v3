@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPtrRecordsRequest Request Object
 type ListPtrRecordsRequest struct {
 
 	// 分页查询起始的资源ID，为空时为查询第一页。  默认值为空。

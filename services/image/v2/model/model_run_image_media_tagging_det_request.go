@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunImageMediaTaggingDetRequest Request Object
 type RunImageMediaTaggingDetRequest struct {
 	Body *ImageMediaTaggingDetReq `json:"body,omitempty"`
 }

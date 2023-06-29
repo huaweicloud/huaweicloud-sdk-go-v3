@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchChangeDataResponse Response Object
 type BatchChangeDataResponse struct {
 
 	// 批量数据加工响应列表

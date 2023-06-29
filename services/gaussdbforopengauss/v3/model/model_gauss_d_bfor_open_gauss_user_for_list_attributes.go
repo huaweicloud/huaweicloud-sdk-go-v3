@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户的权限属性。
+// GaussDBforOpenGaussUserForListAttributes 用户的权限属性。
 type GaussDBforOpenGaussUserForListAttributes struct {
 
 	// 用户是否具有超级用户权限，取值为“true”或“false”。

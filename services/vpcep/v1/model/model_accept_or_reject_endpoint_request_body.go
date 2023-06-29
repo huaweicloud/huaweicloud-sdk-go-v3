@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 连接终端节点列表请求结构体
+// AcceptOrRejectEndpointRequestBody 连接终端节点列表请求结构体
 type AcceptOrRejectEndpointRequestBody struct {
 
 	// 允许或拒绝连接。 ● receive：允许连接。 ● reject：拒绝连接。
@@ -58,13 +58,18 @@ func (c AcceptOrRejectEndpointRequestBodyAction) MarshalJSON() ([]byte, error) {
 
 func (c *AcceptOrRejectEndpointRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

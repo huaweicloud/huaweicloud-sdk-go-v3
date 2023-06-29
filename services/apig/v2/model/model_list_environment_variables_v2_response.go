@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnvironmentVariablesV2Response Response Object
 type ListEnvironmentVariablesV2Response struct {
 
 	// 本次返回的列表长度

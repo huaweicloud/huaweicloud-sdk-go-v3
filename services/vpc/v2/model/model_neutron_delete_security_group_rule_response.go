@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// NeutronDeleteSecurityGroupRuleResponse Response Object
 type NeutronDeleteSecurityGroupRuleResponse struct {
 	HttpStatusCode int `json:"-"`
 }

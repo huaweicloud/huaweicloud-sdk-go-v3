@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListCloudConnectionRoutesRequest Request Object
 type ListCloudConnectionRoutesRequest struct {
 
 	// 分页查询时，每页返回的个数。

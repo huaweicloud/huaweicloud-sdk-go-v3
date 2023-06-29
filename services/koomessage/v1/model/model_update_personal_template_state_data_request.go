@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启用禁用模板请求体。
+// UpdatePersonalTemplateStateDataRequest 启用禁用模板请求体。
 type UpdatePersonalTemplateStateDataRequest struct {
 
 	// 状态。 - 0：禁用 - 1：启用

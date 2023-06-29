@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据库对象信息体。实时迁移、实时同步需要迁移或同步的库或者表，支持实时同步场景对数据库对象进行加工，即可以为数据库对象添加过滤规则、高级设置、列加工、附加列等。 数据加工相关具体约束参考：https://support.huaweicloud.com/realtimesyn-drs/drs_03_0035.html
+// DbObject 数据库对象信息体。实时迁移、实时同步需要迁移或同步的库或者表，支持实时同步场景对数据库对象进行加工，即可以为数据库对象添加过滤规则、高级设置、列加工、附加列等。 数据加工相关具体约束参考：https://support.huaweicloud.com/realtimesyn-drs/drs_03_0035.html
 type DbObject struct {
 
 	// 数据库对象迁移或同步范围。取值： - all：全部迁移。 - database：库级迁移或同步。 - table：表级迁移或同步。
@@ -64,13 +64,18 @@ func (c DbObjectObjectScope) MarshalJSON() ([]byte, error) {
 
 func (c *DbObjectObjectScope) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

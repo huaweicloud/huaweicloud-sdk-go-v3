@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCcRulesResponse Response Object
 type ListCcRulesResponse struct {
 
 	// Number of rules in the policy

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDomainsRequest Request Object
 type ListDomainsRequest struct {
 
 	// 加速域名，采用模糊匹配的方式。（长度限制为1-255字符）。

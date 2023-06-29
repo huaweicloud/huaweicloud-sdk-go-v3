@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowComponentDetailResponse Response Object
 type ShowComponentDetailResponse struct {
 
 	// 应用组件ID。

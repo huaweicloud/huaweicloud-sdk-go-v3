@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVideoMotionCaptureJobResponse Response Object
 type CreateVideoMotionCaptureJobResponse struct {
 
 	// 视频驱动动作任务ID

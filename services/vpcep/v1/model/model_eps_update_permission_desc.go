@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新终端节点服务白名单描述请求体。
+// EpsUpdatePermissionDesc 更新终端节点服务白名单描述请求体。
 type EpsUpdatePermissionDesc struct {
 
 	// 终端节点服务白名单描述

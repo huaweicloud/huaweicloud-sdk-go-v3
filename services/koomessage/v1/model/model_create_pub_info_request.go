@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePubInfoRequest Request Object
 type CreatePubInfoRequest struct {
 	Body *CreatePubInfoRequestBody `json:"body,omitempty"`
 }

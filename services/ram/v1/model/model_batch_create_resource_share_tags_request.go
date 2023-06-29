@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateResourceShareTagsRequest Request Object
 type BatchCreateResourceShareTagsRequest struct {
 
 	// 资源共享实例的ID。

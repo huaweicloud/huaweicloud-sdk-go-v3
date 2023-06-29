@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BackupReplicateReq
 type BackupReplicateReq struct {
 	Replicate *BackupReplicateReqBody `json:"replicate"`
 }

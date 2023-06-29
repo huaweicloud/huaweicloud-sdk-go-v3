@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListUpComingWebinarsResponse Response Object
 type ListUpComingWebinarsResponse struct {
 
 	// 偏移量。

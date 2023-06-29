@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLogtankResponse Response Object
 type CreateLogtankResponse struct {
 
 	// 请求的唯一标识。

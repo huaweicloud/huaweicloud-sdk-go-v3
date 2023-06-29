@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBucketStorageResponse Response Object
 type ShowBucketStorageResponse struct {
 
 	// 已用存量（字节）

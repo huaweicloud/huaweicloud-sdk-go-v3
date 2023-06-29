@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 相关快捷链接地址。
+// Link 相关快捷链接地址。
 type Link struct {
 
 	// 对应快捷链接。

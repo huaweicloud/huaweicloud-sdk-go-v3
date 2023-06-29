@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 异常通知信息
+// AlarmNotifyInfo 异常通知信息
 type AlarmNotifyInfo struct {
 
 	// 订阅延迟时间(单位为s)

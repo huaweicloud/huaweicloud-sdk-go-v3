@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSslCertDownloadLinkRequest Request Object
 type ListSslCertDownloadLinkRequest struct {
 	InstanceId string `json:"instance_id"`
 

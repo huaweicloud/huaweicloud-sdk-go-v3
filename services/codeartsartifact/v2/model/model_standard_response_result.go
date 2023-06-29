@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 返回的具体结果信息
+// StandardResponseResult 返回的具体结果信息
 type StandardResponseResult struct {
 
 	// 符合条件的结果列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SampleParam
 type SampleParam struct {
 
 	// 训练集测试集划分方式： - TIME，时间比例 - RAMDOM，个数比例

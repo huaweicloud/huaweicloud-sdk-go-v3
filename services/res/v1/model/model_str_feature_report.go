@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 物品离散值类型特征统计
+// StrFeatureReport 物品离散值类型特征统计
 type StrFeatureReport struct {
 
 	// 特征名。

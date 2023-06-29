@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RPO和RTO信息体
+// QueryRpoAndRtoResp RPO和RTO信息体
 type QueryRpoAndRtoResp struct {
 
 	// 任务ID

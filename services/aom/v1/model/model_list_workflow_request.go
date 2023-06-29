@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListWorkflowRequest Request Object
 type ListWorkflowRequest struct {
 	Body *WorkflowQueryParam `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowOtTemplateRequest Request Object
 type ShowOtTemplateRequest struct {
 
 	// 模板id，节点下唯一。

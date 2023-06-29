@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标维度
+// MetricDimension 指标维度
 type MetricDimension struct {
 
 	// 指标维度名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnablePropagationRequest Request Object
 type EnablePropagationRequest struct {
 
 	// 幂等性标识

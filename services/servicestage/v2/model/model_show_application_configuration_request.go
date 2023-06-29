@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowApplicationConfigurationRequest Request Object
 type ShowApplicationConfigurationRequest struct {
 
 	// 应用ID。

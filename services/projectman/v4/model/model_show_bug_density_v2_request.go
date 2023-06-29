@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBugDensityV2Request Request Object
 type ShowBugDensityV2Request struct {
 
 	// devcloud项目的32位id

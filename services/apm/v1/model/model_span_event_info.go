@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// event信息的简要信息。
+// SpanEventInfo event信息的简要信息。
 type SpanEventInfo struct {
 
 	// 环境名称。

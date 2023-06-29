@@ -6,11 +6,11 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAccessPolicyObjectsResponse Response Object
 type ListAccessPolicyObjectsResponse struct {
 
 	// 查询接入策略应用对象响应。
-	PolicyObjectsList *[]AccessPolicyObjectInfo `json:"policy_objects_list,omitempty"`
+	PolicyObjectsList *[]AccessPolicyObject `json:"policy_objects_list,omitempty"`
 
 	// 对象总数。
 	Total          *int32 `json:"total,omitempty"`

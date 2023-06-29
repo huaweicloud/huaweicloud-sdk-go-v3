@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDrugJobResponse Response Object
 type ListDrugJobResponse struct {
 
 	// 作业列表

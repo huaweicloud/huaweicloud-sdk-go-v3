@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowServerRequest Request Object
 type ShowServerRequest struct {
 
 	// 源端服务器在主机迁移服务中的ID

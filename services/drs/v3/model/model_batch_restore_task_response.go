@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchRestoreTaskResponse Response Object
 type BatchRestoreTaskResponse struct {
 
 	// 批量续传返回列表

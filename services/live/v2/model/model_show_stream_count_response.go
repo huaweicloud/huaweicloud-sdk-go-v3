@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowStreamCountResponse Response Object
 type ShowStreamCountResponse struct {
 
 	// 采样数据列表。

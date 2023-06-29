@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowClusterDetailRequest Request Object
 type ShowClusterDetailRequest struct {
 
 	// 语言类型

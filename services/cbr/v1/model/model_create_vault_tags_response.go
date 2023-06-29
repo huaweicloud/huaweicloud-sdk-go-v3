@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVaultTagsResponse Response Object
 type CreateVaultTagsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

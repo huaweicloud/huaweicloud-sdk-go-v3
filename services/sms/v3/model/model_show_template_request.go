@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTemplateRequest Request Object
 type ShowTemplateRequest struct {
 
 	// 需要查询的模板信息的ID

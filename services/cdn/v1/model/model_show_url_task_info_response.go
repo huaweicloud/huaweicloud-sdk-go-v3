@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUrlTaskInfoResponse Response Object
 type ShowUrlTaskInfoResponse struct {
 
 	// 查询结果总数

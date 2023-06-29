@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// volume信息。
+// Volume volume信息。
 type Volume struct {
 
 	// 磁盘大小。单位：GB。

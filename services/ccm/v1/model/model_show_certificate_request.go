@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCertificateRequest Request Object
 type ShowCertificateRequest struct {
 
 	// 需要查询的私有证书ID。

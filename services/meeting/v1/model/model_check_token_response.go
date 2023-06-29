@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckTokenResponse Response Object
 type CheckTokenResponse struct {
 
 	// Access Token字符串。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CinderListVolumeTransfersRequest Request Object
 type CinderListVolumeTransfersRequest struct {
 
 	// 返回结果个数限制，取值为大 于0的整数

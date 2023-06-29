@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateIndirectPartnerAccountResponse Response Object
 type UpdateIndirectPartnerAccountResponse struct {
 
 	// 事务流水ID，只有成功响应才会返回。

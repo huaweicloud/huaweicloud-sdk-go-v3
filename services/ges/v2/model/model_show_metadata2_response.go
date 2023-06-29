@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMetadata2Response Response Object
 type ShowMetadata2Response struct {
 
 	// 元数据是否加密

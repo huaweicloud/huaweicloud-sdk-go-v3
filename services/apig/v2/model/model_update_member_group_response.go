@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateMemberGroupResponse Response Object
 type UpdateMemberGroupResponse struct {
 
 	// VPC通道后端服务器组名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 委托授权的信息
+// Agency 委托授权的信息
 type Agency struct {
 
 	// 用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400

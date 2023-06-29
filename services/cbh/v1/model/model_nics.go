@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云堡垒机实例网卡信息。
+// Nics 云堡垒机实例网卡信息。
 type Nics struct {
 
 	// 子网ID，字母数字下划线连接符组成。

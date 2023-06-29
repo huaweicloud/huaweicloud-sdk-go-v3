@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ImageReadConfigResp
 type ImageReadConfigResp struct {
 
 	// 播报内容，长度为1~2500

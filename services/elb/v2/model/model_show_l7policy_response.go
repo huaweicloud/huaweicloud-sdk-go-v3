@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowL7policyResponse Response Object
 type ShowL7policyResponse struct {
 	L7policy       *L7policyResp `json:"l7policy,omitempty"`
 	HttpStatusCode int           `json:"-"`

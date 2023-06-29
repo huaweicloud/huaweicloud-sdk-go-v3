@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RankFeaturePair
 type RankFeaturePair struct {
 
 	// 待推荐对象的属性。

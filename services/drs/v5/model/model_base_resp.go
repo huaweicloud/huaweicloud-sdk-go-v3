@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 基础响应体。
+// BaseResp 基础响应体。
 type BaseResp struct {
 
 	// 列表中的项目总数，与分页无关。

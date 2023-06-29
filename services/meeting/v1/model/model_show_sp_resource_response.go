@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSpResourceResponse Response Object
 type ShowSpResourceResponse struct {
 	Te1080pHardCount *ResDetailDto `json:"te1080pHardCount,omitempty"`
 

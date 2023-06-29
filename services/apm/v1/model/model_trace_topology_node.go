@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用链拓扑图的节点。
+// TraceTopologyNode 调用链拓扑图的节点。
 type TraceTopologyNode struct {
 
 	// 节点id。

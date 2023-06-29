@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSqlResultWithJobResponse Response Object
 type ShowSqlResultWithJobResponse struct {
 
 	// SQL语句查询结果。

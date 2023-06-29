@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProvincesRequest Request Object
 type ListProvincesRequest struct {
 
 	// 语言。zh_CN：中文en_us：英文缺省为zh_CN。

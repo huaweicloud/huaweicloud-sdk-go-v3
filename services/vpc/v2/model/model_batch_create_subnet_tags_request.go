@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchCreateSubnetTagsRequest Request Object
 type BatchCreateSubnetTagsRequest struct {
 
 	// 子网ID

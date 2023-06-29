@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 终端节点组实例。
+// EndpointGroupDetail 终端节点组实例。
 type EndpointGroupDetail struct {
 
 	// 终端节点组ID。

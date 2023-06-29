@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAutoLaunchGroupRequest Request Object
 type CreateAutoLaunchGroupRequest struct {
 	Body *AutoLaunchGroupReqV2 `json:"body,omitempty"`
 }

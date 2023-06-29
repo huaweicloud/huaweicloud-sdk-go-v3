@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OBS桶信息
+// ObsInfo OBS桶信息
 type ObsInfo struct {
 
 	// OBS桶名称

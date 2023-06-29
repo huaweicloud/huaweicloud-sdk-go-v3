@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowConfOrgRequest Request Object
 type ShowConfOrgRequest struct {
 
 	// 会议ID。

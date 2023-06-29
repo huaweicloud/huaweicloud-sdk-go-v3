@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AttachInternalIpResponse Response Object
 type AttachInternalIpResponse struct {
 
 	// 任务ID。

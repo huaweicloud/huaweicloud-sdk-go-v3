@@ -23,22 +23,22 @@ type DomainItem struct {
 	// 提示危漏洞数
 	Hint *int32 `json:"hint,omitempty"`
 
-	// 域名id
+	// 网站域名ID
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 一级域名id
+	// 一级域名ID
 	TopLevelDomainId *string `json:"top_level_domain_id,omitempty"`
 
-	// 域名
+	// 网站域名
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 域名的别名
+	// 网站域名的别名
 	Alias *string `json:"alias,omitempty"`
 
-	// 创建域名资产的时间
+	// 创建网站域名资产的时间
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
+	// 网站域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
 	AuthStatus *DomainItemAuthStatus `json:"auth_status,omitempty"`
 
 	// 协议类型:   * http:// - HTTP   * https:// - HTTPS
@@ -96,13 +96,18 @@ func (c DomainItemAuthStatus) MarshalJSON() ([]byte, error) {
 
 func (c *DomainItemAuthStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -138,13 +143,18 @@ func (c DomainItemProtocolType) MarshalJSON() ([]byte, error) {
 
 func (c *DomainItemProtocolType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

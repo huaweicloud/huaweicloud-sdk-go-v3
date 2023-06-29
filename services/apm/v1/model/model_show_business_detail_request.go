@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBusinessDetailRequest Request Object
 type ShowBusinessDetailRequest struct {
 
 	// 应用id。

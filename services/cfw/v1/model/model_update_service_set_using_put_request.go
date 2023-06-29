@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateServiceSetUsingPutRequest Request Object
 type UpdateServiceSetUsingPutRequest struct {
 
 	// 服务组id

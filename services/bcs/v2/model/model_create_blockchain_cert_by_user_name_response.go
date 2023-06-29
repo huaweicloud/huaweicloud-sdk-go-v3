@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateBlockchainCertByUserNameResponse Response Object
 type CreateBlockchainCertByUserNameResponse struct {
 	HttpStatusCode int           `json:"-"`
 	Body           io.ReadCloser `json:"-" type:"stream"`

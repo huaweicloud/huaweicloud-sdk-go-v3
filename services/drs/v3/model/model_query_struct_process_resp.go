@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询灾备初始化进度
+// QueryStructProcessResp 查询灾备初始化进度
 type QueryStructProcessResp struct {
 
 	// 任务ID

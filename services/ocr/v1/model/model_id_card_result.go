@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// IdCardResult
 type IdCardResult struct {
 
 	// 姓名。

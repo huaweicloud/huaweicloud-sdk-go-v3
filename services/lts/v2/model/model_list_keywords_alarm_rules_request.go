@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListKeywordsAlarmRulesRequest Request Object
 type ListKeywordsAlarmRulesRequest struct {
 }
 

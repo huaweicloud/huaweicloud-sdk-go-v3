@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchWorkflowExecutionDetailRequest Request Object
 type SearchWorkflowExecutionDetailRequest struct {
 
 	// 工作流ID，唯一标识，根据project_id和workflow_name生成。

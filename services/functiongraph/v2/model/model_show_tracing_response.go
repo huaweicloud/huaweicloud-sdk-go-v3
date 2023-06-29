@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTracingResponse Response Object
 type ShowTracingResponse struct {
 
 	// apm的ak

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSnapshotsResponse Response Object
 type ListSnapshotsResponse struct {
 
 	// 快照的总数量，不受limi参数的影响。

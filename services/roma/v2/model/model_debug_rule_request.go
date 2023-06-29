@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DebugRuleRequest Request Object
 type DebugRuleRequest struct {
 
 	// 实例ID

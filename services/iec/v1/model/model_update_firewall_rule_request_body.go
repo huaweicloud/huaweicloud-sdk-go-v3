@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新防火墙规则请求体
+// UpdateFirewallRuleRequestBody 更新防火墙规则请求体
 type UpdateFirewallRuleRequestBody struct {
 	Firewall *UpdateFirewallRuleOption `json:"firewall,omitempty"`
 }

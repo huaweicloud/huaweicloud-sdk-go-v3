@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportMqsInstanceTopicRequest Request Object
 type ExportMqsInstanceTopicRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 功能特性的键值对。
+// RabbitMqExtendProductPropertiesEntity 功能特性的键值对。
 type RabbitMqExtendProductPropertiesEntity struct {
 
 	// Broker的最大个数。

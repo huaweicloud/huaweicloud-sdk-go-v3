@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Slot
 type Slot struct {
 
 	// 实体文本。

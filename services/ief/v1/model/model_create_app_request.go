@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAppRequest Request Object
 type CreateAppRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

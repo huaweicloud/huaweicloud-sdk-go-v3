@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunEntityLinkingRequest Request Object
 type RunEntityLinkingRequest struct {
 	Body *PostEntityLinkingRequest `json:"body,omitempty"`
 }

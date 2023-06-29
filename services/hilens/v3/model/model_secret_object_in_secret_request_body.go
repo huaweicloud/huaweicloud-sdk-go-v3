@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建密钥或者更更新密钥请求体中的secret对象
+// SecretObjectInSecretRequestBody 创建密钥或者更更新密钥请求体中的secret对象
 type SecretObjectInSecretRequestBody struct {
 
 	// 密钥名称，以小写英文字母开头，4-64位，可以使用小写英文、数字、中划线（-），不能以中划线结尾。

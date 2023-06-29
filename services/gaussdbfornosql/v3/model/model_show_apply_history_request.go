@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowApplyHistoryRequest Request Object
 type ShowApplyHistoryRequest struct {
 
 	// 参数组id

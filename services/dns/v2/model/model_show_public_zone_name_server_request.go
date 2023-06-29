@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPublicZoneNameServerRequest Request Object
 type ShowPublicZoneNameServerRequest struct {
 
 	// 待查询zone的ID。  可以通过查询公网Zone列表获取。

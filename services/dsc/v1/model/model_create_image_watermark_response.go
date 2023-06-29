@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateImageWatermarkResponse Response Object
 type CreateImageWatermarkResponse struct {
 	HttpStatusCode int           `json:"-"`
 	Body           io.ReadCloser `json:"-" type:"stream"`

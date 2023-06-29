@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteResourceGroupRequest Request Object
 type DeleteResourceGroupRequest struct {
 
 	// 资源分组ID。

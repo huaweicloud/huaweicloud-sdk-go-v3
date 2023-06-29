@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 一条事件监控详细信息
+// EventInfoDetail 一条事件监控详细信息
 type EventInfoDetail struct {
 
 	// 事件名称。  必须以字母开头，只能包含0-9/a-z/A-Z/_，长度最短为1，最大为64。

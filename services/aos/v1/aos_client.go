@@ -553,7 +553,9 @@ func (c *AosClient) ListStackOutputsInvoker(request *model.ListStackOutputsReque
 //
 // 此API用于列举资源栈中当前管理的所有资源的信息
 //
-// 对于非终态的资源栈（状态以&#x60;IN_PROGRESS&#x60;结尾），不返回资源属性。非终态状态包括但不限于以下状态：
+// 当资源栈处于非终态时，仅输出资源栈下资源的简要信息，包含逻辑资源名称（logical_resource_name），逻辑资源类型（logical_resource_type），物理资源id（physical_resource_id），物理资源名称（physical_resource_name），资源状态（status）等信息；当资源栈处于终态时，将额外输出具体信息，如资源属性（resource_attributes）
+//
+// 非终态包括但不限于以下状态：
 //   * 正在部署（DEPLOYMENT_IN_PROGRESS）
 //   * 正在删除（DELETION_IN_PROGRESS）
 //   * 正在回滚（ROLLBACK_IN_PROGRESS）
@@ -710,6 +712,37 @@ func (c *AosClient) DeleteTemplateVersion(request *model.DeleteTemplateVersionRe
 func (c *AosClient) DeleteTemplateVersionInvoker(request *model.DeleteTemplateVersionRequest) *DeleteTemplateVersionInvoker {
 	requestDef := GenReqDefForDeleteTemplateVersion()
 	return &DeleteTemplateVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplateVersions 列举模板版本
+//
+// 列举模板版本信息（ListTemplateVersions）
+//
+// 此API用于列举模板下所有的模板版本信息
+//
+//   * 默认按照生成时间排序，最早生成的模板排列在最前面
+//   * 注意：目前返回全量模板版本信息，即不支持分页
+//   * 如果没有任何模板版本，则返回空list
+//   * 若template_name和template_id同时存在，则模板服务会检查是否两个匹配
+//   * 若模板不存在则返回404
+//
+// ListTemplateVersions返回的信息只包含模板版本摘要信息（具体摘要信息见ListTemplateVersionsResponseBody），若用户需要了解模板版本内容，请调用ShowTemplateVersionContent
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ListTemplateVersions(request *model.ListTemplateVersionsRequest) (*model.ListTemplateVersionsResponse, error) {
+	requestDef := GenReqDefForListTemplateVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTemplateVersionsResponse), nil
+	}
+}
+
+// ListTemplateVersionsInvoker 列举模板版本
+func (c *AosClient) ListTemplateVersionsInvoker(request *model.ListTemplateVersionsRequest) *ListTemplateVersionsInvoker {
+	requestDef := GenReqDefForListTemplateVersions()
+	return &ListTemplateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTemplates 列举模板

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTranscodeDataResponse Response Object
 type ListTranscodeDataResponse struct {
 
 	// 采样数据列表。

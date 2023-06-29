@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Proxy信息。
+// MysqlProxyInfo Proxy信息。
 type MysqlProxyInfo struct {
 
 	// Proxy实例ID。

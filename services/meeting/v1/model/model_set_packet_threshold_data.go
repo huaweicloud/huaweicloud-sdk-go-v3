@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 丢包率阈值设置请求体。
+// SetPacketThresholdData 丢包率阈值设置请求体。
 type SetPacketThresholdData struct {
 
 	// 接收方向阈值设定值，单位为百分比(%)。 取值范围：0 - 100。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportImageQuickResponse Response Object
 type ImportImageQuickResponse struct {
 
 	// 异步任务ID。

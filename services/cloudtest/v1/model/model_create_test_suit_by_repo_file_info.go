@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成测试套的请求信息
+// CreateTestSuitByRepoFileInfo 生成测试套的请求信息
 type CreateTestSuitByRepoFileInfo struct {
 
 	// 要生成的测试套名称

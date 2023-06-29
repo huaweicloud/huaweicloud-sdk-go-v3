@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InvokeFunctionResponse Response Object
 type InvokeFunctionResponse struct {
 
 	// 请求ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例所属项目ID。
+// TenantIdDef 实例所属项目ID。
 type TenantIdDef struct {
 }
 

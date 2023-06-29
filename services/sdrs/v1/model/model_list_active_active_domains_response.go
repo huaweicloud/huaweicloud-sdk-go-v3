@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListActiveActiveDomainsResponse Response Object
 type ListActiveActiveDomainsResponse struct {
 
 	// 双活域列表信息。

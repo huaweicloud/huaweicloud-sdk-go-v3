@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClusterCnResponse Response Object
 type ListClusterCnResponse struct {
 
 	// 集群支持的最小CN节点数量。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移中对象进度信息体。
+// QueryMigrationObjectProgressInfo 迁移中对象进度信息体。
 type QueryMigrationObjectProgressInfo struct {
 
 	// 概览详情。

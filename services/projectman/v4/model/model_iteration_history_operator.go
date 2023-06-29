@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变更操作人
+// IterationHistoryOperator 变更操作人
 type IterationHistoryOperator struct {
 
 	// 用户uuid

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// > 说明： >  > 如果是从镜像创建云硬盘，则不支持传入“__system__encrypted”和“__system__cmkid”字段，创建出来的云硬盘与镜像的加密属性一致。
+// PostPaidServerDataVolumeMetadata > 说明： >  > 如果是从镜像创建云硬盘，则不支持传入“__system__encrypted”和“__system__cmkid”字段，创建出来的云硬盘与镜像的加密属性一致。
 type PostPaidServerDataVolumeMetadata struct {
 
 	// metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。

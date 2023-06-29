@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowOptmJobResponse Response Object
 type ShowOptmJobResponse struct {
 	BasicInfo *DrugJobDto `json:"basic_info,omitempty"`
 

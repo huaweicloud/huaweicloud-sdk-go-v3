@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建防护策略。若新建防护策略，则protection_policy_id为空，create_protection_policy必选
+// ProtectionProxyInfoRequestInfo 创建防护策略。若新建防护策略，则protection_policy_id为空，create_protection_policy必选
 type ProtectionProxyInfoRequestInfo struct {
 
 	// 策略ID，新建策略可不填

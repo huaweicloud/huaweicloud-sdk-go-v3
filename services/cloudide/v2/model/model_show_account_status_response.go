@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAccountStatusResponse Response Object
 type ShowAccountStatusResponse struct {
 	Result *AccountStatus `json:"result,omitempty"`
 

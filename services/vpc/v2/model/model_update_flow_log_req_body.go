@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateFlowLogReqBody
 type UpdateFlowLogReqBody struct {
 	FlowLog *UpdateFlowLogReq `json:"flow_log"`
 }

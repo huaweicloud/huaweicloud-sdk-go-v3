@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 配体配置
+// LigandDto 配体配置
 type LigandDto struct {
 	Ligand *DrugFile `json:"ligand"`
 

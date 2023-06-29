@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRunRequest Request Object
 type ShowRunRequest struct {
 
 	// 作业ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelWorkspaceResponse Response Object
 type CancelWorkspaceResponse struct {
 
 	// 注销云办公服务的任务ID。

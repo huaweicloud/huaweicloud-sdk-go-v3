@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListQueryStructuredLogsResponse Response Object
 type ListQueryStructuredLogsResponse struct {
 
 	// 日志信息。

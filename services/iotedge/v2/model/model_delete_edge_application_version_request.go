@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteEdgeApplicationVersionRequest Request Object
 type DeleteEdgeApplicationVersionRequest struct {
 
 	// 应用版本,应用内版本唯一。

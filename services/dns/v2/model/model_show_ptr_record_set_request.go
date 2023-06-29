@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPtrRecordSetRequest Request Object
 type ShowPtrRecordSetRequest struct {
 
 	// 租户的区域信息。

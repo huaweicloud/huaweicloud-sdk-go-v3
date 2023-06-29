@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量停止数据迁移任务结构体
+// BatchStopMigrationTasksBody 批量停止数据迁移任务结构体
 type BatchStopMigrationTasksBody struct {
 
 	// 数据迁移任务列表。

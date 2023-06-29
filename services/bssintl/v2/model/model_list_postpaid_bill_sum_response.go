@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPostpaidBillSumResponse Response Object
 type ListPostpaidBillSumResponse struct {
 
 	// 账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM

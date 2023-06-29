@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标类型统计数据
+// CreateIndicatorDetailIndicatorType 指标类型统计数据
 type CreateIndicatorDetailIndicatorType struct {
 
 	// indicator_type

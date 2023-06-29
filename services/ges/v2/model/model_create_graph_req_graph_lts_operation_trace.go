@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图实例是否开启审计日志，默认不开启。
+// CreateGraphReqGraphLtsOperationTrace 图实例是否开启审计日志，默认不开启。
 type CreateGraphReqGraphLtsOperationTrace struct {
 
 	// 是否开启图审计，默认“false”。

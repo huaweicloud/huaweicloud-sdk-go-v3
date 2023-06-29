@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LB状态树的后端服务器组健康检查器状态信息。
+// LoadBalancerStatusHealthMonitor LB状态树的后端服务器组健康检查器状态信息。
 type LoadBalancerStatusHealthMonitor struct {
 
 	// 协议类型。取值：TCP、UDP_CONNECT或HTTP。

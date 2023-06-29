@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStackOutputsResponse Response Object
 type ListStackOutputsResponse struct {
 
 	// 资源栈输出列表

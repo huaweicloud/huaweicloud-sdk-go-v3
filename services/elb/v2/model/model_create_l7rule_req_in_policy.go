@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建转发规则的请求体
+// CreateL7ruleReqInPolicy 创建转发规则的请求体
 type CreateL7ruleReqInPolicy struct {
 
 	// 转发规则的管理状态；该字段为预留字段，暂未启用。默认为true。
@@ -70,13 +70,18 @@ func (c CreateL7ruleReqInPolicyType) MarshalJSON() ([]byte, error) {
 
 func (c *CreateL7ruleReqInPolicyType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

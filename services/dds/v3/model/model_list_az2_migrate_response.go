@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAz2MigrateResponse Response Object
 type ListAz2MigrateResponse struct {
 
 	// 可用区具体信息。

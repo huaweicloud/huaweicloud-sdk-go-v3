@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteL7ruleRequest Request Object
 type DeleteL7ruleRequest struct {
 
 	// 转发策略id

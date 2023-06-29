@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResizeInstanceFlavorResponse Response Object
 type ResizeInstanceFlavorResponse struct {
 
 	// 任务id。按需实例时仅返回任务id。

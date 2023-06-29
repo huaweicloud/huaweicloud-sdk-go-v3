@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckSlideVerifyCodeResponse Response Object
 type CheckSlideVerifyCodeResponse struct {
 
 	// 访问Token字符串。

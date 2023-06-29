@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreWorkflowExecutionResponse Response Object
 type RestoreWorkflowExecutionResponse struct {
 
 	// 运行实例的URN。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 订单信息, 有订单表示包周期
+// BillingInfoDict 订单信息, 有订单表示包周期
 type BillingInfoDict struct {
 
 	// 订单信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEndpointServicePermissionDescResponse Response Object
 type UpdateEndpointServicePermissionDescResponse struct {
 	Permissions    *[]EpsPermission `json:"permissions,omitempty"`
 	HttpStatusCode int              `json:"-"`

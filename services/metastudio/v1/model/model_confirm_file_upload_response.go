@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ConfirmFileUploadResponse Response Object
 type ConfirmFileUploadResponse struct {
 	HttpStatusCode int `json:"-"`
 }

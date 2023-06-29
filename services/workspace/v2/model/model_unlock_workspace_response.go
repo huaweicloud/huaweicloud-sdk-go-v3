@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UnlockWorkspaceResponse Response Object
 type UnlockWorkspaceResponse struct {
 
 	// 任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云日志信息
+// LogtankItem 云日志信息
 type LogtankItem struct {
 
 	// 云日志信息唯一的资源标识。

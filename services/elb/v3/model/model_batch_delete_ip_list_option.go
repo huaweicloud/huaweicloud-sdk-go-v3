@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除IP地址组中的IP。
+// BatchDeleteIpListOption 批量删除IP地址组中的IP。
 type BatchDeleteIpListOption struct {
 
 	// IP列表。

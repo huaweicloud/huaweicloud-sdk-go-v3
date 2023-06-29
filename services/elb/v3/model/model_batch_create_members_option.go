@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量添加member请求参数。
+// BatchCreateMembersOption 批量添加member请求参数。
 type BatchCreateMembersOption struct {
 
 	// 后端服务器名称。

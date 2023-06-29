@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流计算
+// DtStreamRequest 流计算
 type DtStreamRequest struct {
 
 	// 输入参数，最多支持10个

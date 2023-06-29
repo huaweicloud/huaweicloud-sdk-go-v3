@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入函数请求结构体
+// ImportFunctionRequestBody 导入函数请求结构体
 type ImportFunctionRequestBody struct {
 
 	// 函数名

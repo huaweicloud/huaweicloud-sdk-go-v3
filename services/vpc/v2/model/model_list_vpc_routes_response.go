@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVpcRoutesResponse Response Object
 type ListVpcRoutesResponse struct {
 
 	// route对象列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopIndividualStreamJobResponse Response Object
 type StopIndividualStreamJobResponse struct {
 	XRequestId     *string `json:"X-request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

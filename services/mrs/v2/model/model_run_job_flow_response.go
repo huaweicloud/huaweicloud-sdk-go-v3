@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunJobFlowResponse Response Object
 type RunJobFlowResponse struct {
 
 	// 集群创建成功后系统返回的集群ID值。

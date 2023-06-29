@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AllowGuestUnmuteRequest Request Object
 type AllowGuestUnmuteRequest struct {
 
 	// 会议ID。

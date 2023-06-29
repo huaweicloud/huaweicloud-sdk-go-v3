@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCloudWafPostPaidResourceRequest Request Object
 type CreateCloudWafPostPaidResourceRequest struct {
 
 	// 区域id

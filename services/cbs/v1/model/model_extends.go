@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Extends
 type Extends struct {
 	TagIds *Tag `json:"tag_ids,omitempty"`
 

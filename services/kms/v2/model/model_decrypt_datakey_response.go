@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DecryptDatakeyResponse Response Object
 type DecryptDatakeyResponse struct {
 
 	// DEK明文的16进制字符串。

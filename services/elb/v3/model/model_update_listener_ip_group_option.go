@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// listener对象中的ipgroup信息
+// UpdateListenerIpGroupOption listener对象中的ipgroup信息
 type UpdateListenerIpGroupOption struct {
 
 	// 监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
@@ -61,13 +61,18 @@ func (c UpdateListenerIpGroupOptionType) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateListenerIpGroupOptionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

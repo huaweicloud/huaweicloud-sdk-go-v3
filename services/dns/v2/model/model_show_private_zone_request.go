@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPrivateZoneRequest Request Object
 type ShowPrivateZoneRequest struct {
 
 	// 待查询zone的ID。

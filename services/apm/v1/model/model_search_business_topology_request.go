@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchBusinessTopologyRequest Request Object
 type SearchBusinessTopologyRequest struct {
 
 	// 应用id。

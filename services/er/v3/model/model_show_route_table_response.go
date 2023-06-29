@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRouteTableResponse Response Object
 type ShowRouteTableResponse struct {
 	RouteTable *RouteTable `json:"route_table,omitempty"`
 

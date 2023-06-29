@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDiagnosisTaskRequest Request Object
 type CreateDiagnosisTaskRequest struct {
 
 	// 实例ID

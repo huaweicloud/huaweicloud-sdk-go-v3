@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 插件安装/升级-request结构体
+// InstanceRequest 插件安装/升级-request结构体
 type InstanceRequest struct {
 
 	// API类型，固定值“Addon”，该值不可修改，该字段传入无效。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ChangeMasterStandbyRequest Request Object
 type ChangeMasterStandbyRequest struct {
 
 	// 实例ID。

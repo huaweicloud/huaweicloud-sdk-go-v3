@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateWeakPasswordResponse Response Object
 type ValidateWeakPasswordResponse struct {
 
 	// 是否为弱密码。 - 返回\"true\"，是弱密码。 - 返回\"false\"，不是弱密码。

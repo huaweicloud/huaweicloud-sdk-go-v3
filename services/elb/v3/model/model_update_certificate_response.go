@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateCertificateResponse Response Object
 type UpdateCertificateResponse struct {
 
 	// 请求ID。  注：自动生成 。

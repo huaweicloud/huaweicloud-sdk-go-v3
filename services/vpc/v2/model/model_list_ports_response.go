@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPortsResponse Response Object
 type ListPortsResponse struct {
 
 	// port列表对象

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckTokenVerificationResponse Response Object
 type CheckTokenVerificationResponse struct {
 
 	// 过期时间

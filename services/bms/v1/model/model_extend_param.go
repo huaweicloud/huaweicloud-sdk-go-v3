@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建裸金属服务器的extendparam字段数据结构说明
+// ExtendParam 创建裸金属服务器的extendparam字段数据结构说明
 type ExtendParam struct {
 
 	// 计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
@@ -69,13 +69,18 @@ func (c ExtendParamChargingMode) MarshalJSON() ([]byte, error) {
 
 func (c *ExtendParamChargingMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -111,13 +116,18 @@ func (c ExtendParamPeriodType) MarshalJSON() ([]byte, error) {
 
 func (c *ExtendParamPeriodType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

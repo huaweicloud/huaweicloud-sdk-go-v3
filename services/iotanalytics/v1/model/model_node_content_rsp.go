@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点数据源配置内容
+// NodeContentRsp 节点数据源配置内容
 type NodeContentRsp struct {
 
 	// 节点实例ID

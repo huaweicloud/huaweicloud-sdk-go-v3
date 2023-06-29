@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCheckpointResponse Response Object
 type CreateCheckpointResponse struct {
 	Checkpoint     *CheckpointCreate `json:"checkpoint,omitempty"`
 	HttpStatusCode int               `json:"-"`

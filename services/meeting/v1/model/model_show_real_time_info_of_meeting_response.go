@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRealTimeInfoOfMeetingResponse Response Object
 type ShowRealTimeInfoOfMeetingResponse struct {
 
 	// 被邀请与会者信息，包括预约会议时邀请的与会者和会中主持人邀请的与会者，已经加入会议的和未加入会议的都返回。

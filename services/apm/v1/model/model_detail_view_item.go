@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点详情视图函数信息。
+// DetailViewItem 节点详情视图函数信息。
 type DetailViewItem struct {
 
 	// 表达式。

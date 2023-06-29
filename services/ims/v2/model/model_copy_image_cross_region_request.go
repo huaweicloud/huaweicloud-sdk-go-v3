@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CopyImageCrossRegionRequest Request Object
 type CopyImageCrossRegionRequest struct {
 
 	// 镜像ID

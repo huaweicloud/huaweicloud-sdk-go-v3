@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPublicipPoolResponse Response Object
 type ShowPublicipPoolResponse struct {
 	PublicipPool *PublicipPoolShowResp `json:"publicip_pool,omitempty"`
 

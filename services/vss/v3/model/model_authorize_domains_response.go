@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AuthorizeDomainsResponse Response Object
 type AuthorizeDomainsResponse struct {
 
 	// 状态码:   * success - 成功   * failure - 失败
@@ -18,7 +18,7 @@ type AuthorizeDomainsResponse struct {
 	// 返回的提示信息
 	InfoDescription *string `json:"info_description,omitempty"`
 
-	// 域名认证使用须知
+	// 网站域名认证使用须知
 	UsageNotice    *string `json:"usage_notice,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
@@ -62,13 +62,18 @@ func (c AuthorizeDomainsResponseInfoCode) MarshalJSON() ([]byte, error) {
 
 func (c *AuthorizeDomainsResponseInfoCode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

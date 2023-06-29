@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetCustomMultiPictureRequest Request Object
 type SetCustomMultiPictureRequest struct {
 
 	// 会议ID。

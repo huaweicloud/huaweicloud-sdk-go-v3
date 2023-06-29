@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDelegatedServicesResponse Response Object
 type ListDelegatedServicesResponse struct {
 
 	// 帐号是其委托管理员的服务。

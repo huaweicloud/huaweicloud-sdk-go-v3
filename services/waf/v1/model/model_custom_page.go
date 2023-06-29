@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义告警页面
+// CustomPage 自定义告警页面
 type CustomPage struct {
 
 	// 返回状态码

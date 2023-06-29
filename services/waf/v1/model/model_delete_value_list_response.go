@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteValueListResponse Response Object
 type DeleteValueListResponse struct {
 
 	// 引用表id

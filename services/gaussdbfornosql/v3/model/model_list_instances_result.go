@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例信息。
+// ListInstancesResult 实例信息。
 type ListInstancesResult struct {
 
 	// 实例ID。

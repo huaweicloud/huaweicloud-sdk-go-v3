@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 报表详情。
+// AimSendReport 报表详情。
 type AimSendReport struct {
 
 	// 报表日期时间。

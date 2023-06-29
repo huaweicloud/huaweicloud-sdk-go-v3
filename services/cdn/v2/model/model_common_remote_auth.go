@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 远程鉴权配置。
+// CommonRemoteAuth 远程鉴权配置。
 type CommonRemoteAuth struct {
 
 	// 是否开启远程鉴权(on：开启，off：关闭)。

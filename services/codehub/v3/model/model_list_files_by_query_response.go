@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFilesByQueryResponse Response Object
 type ListFilesByQueryResponse struct {
 	Error *Error `json:"error,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomerBillsFeeRecordsResponse Response Object
 type ListCustomerBillsFeeRecordsResponse struct {
 
 	// 结果集数量，只有成功才返回这个参数。

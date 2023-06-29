@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAppRequest Request Object
 type UpdateAppRequest struct {
 
 	// 应用主键ID

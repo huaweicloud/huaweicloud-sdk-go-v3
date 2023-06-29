@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源标签键
+// TagsSingleValue 资源标签键
 type TagsSingleValue struct {
 
 	// 资源标签键。最大长度36个Unicode字符，不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。同一资源的key值不能重复。action为delete时，不校验标签字符集，最大长度127个Unicode字符。

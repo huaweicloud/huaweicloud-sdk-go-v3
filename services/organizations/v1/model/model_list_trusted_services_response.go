@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTrustedServicesResponse Response Object
 type ListTrustedServicesResponse struct {
 
 	// 启用与组织集成的服务主体列表。

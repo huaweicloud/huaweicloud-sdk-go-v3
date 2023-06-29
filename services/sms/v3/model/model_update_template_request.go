@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTemplateRequest Request Object
 type UpdateTemplateRequest struct {
 
 	// 需要修改信息的模板的ID

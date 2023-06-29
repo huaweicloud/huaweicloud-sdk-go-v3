@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateHostedDirectConnectRequest Request Object
 type UpdateHostedDirectConnectRequest struct {
 
 	// 托管专线连接ID。

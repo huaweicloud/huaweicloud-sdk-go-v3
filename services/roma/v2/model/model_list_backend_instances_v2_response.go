@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBackendInstancesV2Response Response Object
 type ListBackendInstancesV2Response struct {
 
 	// 本次返回的列表长度

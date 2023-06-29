@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Route
 type Route struct {
 
 	// 功能说明：路由目的地 取值范围：IP地址段 约束：仅支持配置默认路由，且其取值只能是0.0.0.0/0

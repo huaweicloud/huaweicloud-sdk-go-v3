@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteVpcEndpointRequest Request Object
 type DeleteVpcEndpointRequest struct {
 
 	// vpc ID

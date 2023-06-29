@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出配置响应
+// OutputResponse 输出配置响应
 type OutputResponse struct {
 
 	// 输出参数名称,formulas中定义的name

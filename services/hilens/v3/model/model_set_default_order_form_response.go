@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SetDefaultOrderFormResponse Response Object
 type SetDefaultOrderFormResponse struct {
 
 	// 订单ID

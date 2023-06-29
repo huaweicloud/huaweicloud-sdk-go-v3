@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetUserPasswordResponse Response Object
 type ResetUserPasswordResponse struct {
 
 	// 操作是否成功。

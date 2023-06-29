@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateWhitelistRequest Request Object
 type UpdateWhitelistRequest struct {
 
 	// 待更新的白名单id

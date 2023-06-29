@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ObjectCompareResultDetails
 type ObjectCompareResultDetails struct {
 
 	// 源库名称。

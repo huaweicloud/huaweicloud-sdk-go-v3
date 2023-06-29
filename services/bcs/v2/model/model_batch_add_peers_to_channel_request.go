@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchAddPeersToChannelRequest Request Object
 type BatchAddPeersToChannelRequest struct {
 
 	// bcs 服务id

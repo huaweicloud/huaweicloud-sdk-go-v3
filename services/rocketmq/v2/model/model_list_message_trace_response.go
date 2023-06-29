@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMessageTraceResponse Response Object
 type ListMessageTraceResponse struct {
 
 	// 消息轨迹列表。

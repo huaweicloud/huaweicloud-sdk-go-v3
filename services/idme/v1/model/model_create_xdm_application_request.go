@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateXdmApplicationRequest Request Object
 type CreateXdmApplicationRequest struct {
 	Body *CreateXdmApplicationRequestBody `json:"body,omitempty"`
 }

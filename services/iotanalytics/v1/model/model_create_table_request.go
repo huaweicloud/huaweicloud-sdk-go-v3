@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTableRequest Request Object
 type CreateTableRequest struct {
 	Body *CreateTableRequestBody `json:"body,omitempty"`
 }

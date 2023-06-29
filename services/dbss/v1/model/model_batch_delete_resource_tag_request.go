@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteResourceTagRequest Request Object
 type BatchDeleteResourceTagRequest struct {
 
 	// 资源类型。审计：auditInstance

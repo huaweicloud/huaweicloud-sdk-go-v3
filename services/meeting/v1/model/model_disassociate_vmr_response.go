@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DisassociateVmrResponse Response Object
 type DisassociateVmrResponse struct {
 	HttpStatusCode int `json:"-"`
 }

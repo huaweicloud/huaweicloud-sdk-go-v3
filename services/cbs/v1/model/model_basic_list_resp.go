@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BasicListResp
 type BasicListResp struct {
 
 	// 配额

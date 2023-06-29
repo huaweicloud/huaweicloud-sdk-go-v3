@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRenewRateOnPeriodResponse Response Object
 type ListRenewRateOnPeriodResponse struct {
 
 	// |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|

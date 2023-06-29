@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadIssueImgResponse Response Object
 type UploadIssueImgResponse struct {
 
 	// 图片id

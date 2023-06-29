@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRegionInfoOfMeetingResponse Response Object
 type ShowRegionInfoOfMeetingResponse struct {
 
 	// 会议所在区域的公网IP地址。

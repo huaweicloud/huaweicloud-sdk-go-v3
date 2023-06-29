@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 执行shell命令请求体。
+// RunShellCommandRequestBody 执行shell命令请求体。
 type RunShellCommandRequestBody struct {
 
 	// ADB命令，固定填写shell。

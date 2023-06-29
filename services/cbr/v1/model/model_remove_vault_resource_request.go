@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RemoveVaultResourceRequest Request Object
 type RemoveVaultResourceRequest struct {
 
 	// 存储库ID

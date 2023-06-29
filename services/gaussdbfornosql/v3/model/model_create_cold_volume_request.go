@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateColdVolumeRequest Request Object
 type CreateColdVolumeRequest struct {
 
 	// 实例ID。

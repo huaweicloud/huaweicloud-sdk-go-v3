@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 运行时参数。
+// RuntimeTypeView 运行时参数。
 type RuntimeTypeView struct {
 
 	// 类型名称。

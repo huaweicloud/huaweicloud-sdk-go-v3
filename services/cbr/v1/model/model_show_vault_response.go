@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowVaultResponse Response Object
 type ShowVaultResponse struct {
 	Vault          *Vault `json:"vault,omitempty"`
 	HttpStatusCode int    `json:"-"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）统计数据项
+// BandwidthStatisticsTimelineItem 带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）统计数据项
 type BandwidthStatisticsTimelineItem struct {
 
 	// 键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）

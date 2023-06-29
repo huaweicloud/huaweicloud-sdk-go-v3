@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPermissionsRequest Request Object
 type ListPermissionsRequest struct {
 
 	// 分页页面的最大值。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListHealthmonitorsRequest Request Object
 type ListHealthmonitorsRequest struct {
 
 	// 分页查询中每页的健康检查个数

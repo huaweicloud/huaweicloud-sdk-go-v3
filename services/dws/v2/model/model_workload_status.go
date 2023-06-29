@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源管理信息
+// WorkloadStatus 资源管理信息
 type WorkloadStatus struct {
 
 	// 开关。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDataobjectRelationResponse Response Object
 type CreateDataobjectRelationResponse struct {
 
 	// Id value

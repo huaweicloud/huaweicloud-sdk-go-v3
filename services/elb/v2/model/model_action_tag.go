@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 要搜索的标签值。
+// ActionTag 要搜索的标签值。
 type ActionTag struct {
 
 	// 标签的键。最大长度127个unicode字符。

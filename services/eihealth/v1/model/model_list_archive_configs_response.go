@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListArchiveConfigsResponse Response Object
 type ListArchiveConfigsResponse struct {
 
 	// 归档设置记录总数

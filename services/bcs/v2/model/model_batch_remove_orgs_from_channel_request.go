@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchRemoveOrgsFromChannelRequest Request Object
 type BatchRemoveOrgsFromChannelRequest struct {
 
 	// 区块链服务id。

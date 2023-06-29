@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规则id列表
+// RuleIdList 规则id列表
 type RuleIdList struct {
 
 	// 规则id列表

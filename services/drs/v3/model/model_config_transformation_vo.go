@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据同步配置库规则信息体
+// ConfigTransformationVo 数据同步配置库规则信息体
 type ConfigTransformationVo struct {
 
 	// 库名.表名。

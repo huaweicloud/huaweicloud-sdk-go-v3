@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志关键词统计请求体。
+// QueryLogKeyWordCountRequestBody 日志关键词统计请求体。
 type QueryLogKeyWordCountRequestBody struct {
 
 	// 开始时间

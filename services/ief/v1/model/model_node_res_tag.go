@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签属性
+// NodeResTag 标签属性
 type NodeResTag struct {
 
 	// 键。最大长度36个unicode字符。 不能为空，只能包含大小写字母，数字，中划线“-”，下划线“_”。

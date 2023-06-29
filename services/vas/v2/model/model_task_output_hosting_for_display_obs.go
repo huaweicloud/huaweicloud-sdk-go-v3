@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 单个结果文件result.json所在的OBS桶和路径
+// TaskOutputHostingForDisplayObs 单个结果文件result.json所在的OBS桶和路径
 type TaskOutputHostingForDisplayObs struct {
 
 	// 结果文件result.json所在的OBS桶

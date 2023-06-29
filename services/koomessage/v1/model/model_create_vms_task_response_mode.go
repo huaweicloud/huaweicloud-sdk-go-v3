@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建任务请求体。
+// CreateVmsTaskResponseMode 创建任务请求体。
 type CreateVmsTaskResponseMode struct {
 
 	// 智能信息基础版下发结果返回码。

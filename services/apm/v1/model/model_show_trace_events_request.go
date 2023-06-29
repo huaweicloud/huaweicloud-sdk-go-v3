@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowTraceEventsRequest Request Object
 type ShowTraceEventsRequest struct {
 
 	// 调用链ID。

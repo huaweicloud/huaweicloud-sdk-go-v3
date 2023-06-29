@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHostNetResponse Response Object
 type ListHostNetResponse struct {
 	Body           *[]NetResp `json:"body,omitempty"`
 	HttpStatusCode int        `json:"-"`

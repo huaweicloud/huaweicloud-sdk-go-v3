@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJob2Response Response Object
 type ShowJob2Response struct {
 
 	// 任务ID。

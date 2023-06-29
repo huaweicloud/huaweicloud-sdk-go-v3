@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询流水线列表请求体
+// ListPipelineQuery 查询流水线列表请求体
 type ListPipelineQuery struct {
 
 	// 项目ID列表

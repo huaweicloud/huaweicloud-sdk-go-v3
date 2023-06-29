@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTraceEventsResponse Response Object
 type ShowTraceEventsResponse struct {
 
 	// span event信息列表。

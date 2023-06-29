@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// ListGaussMysqlDatabaseInfo 数据库信息。
 type ListGaussMysqlDatabaseInfo struct {
 
 	// 数据库名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 软件漏洞列表
+// VulHostInfo 软件漏洞列表
 type VulHostInfo struct {
 
 	// 主机id

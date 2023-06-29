@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 资源共享及其指定类型的任何资源关联的RAM权限的信息。
+// PermissionSummary 资源共享及其指定类型的任何资源关联的RAM权限的信息。
 type PermissionSummary struct {
 
 	// 权限ID。

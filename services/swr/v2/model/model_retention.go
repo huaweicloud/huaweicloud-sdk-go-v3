@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像老化规则
+// Retention 镜像老化规则
 type Retention struct {
 
 	// 回收规则匹配策略，or

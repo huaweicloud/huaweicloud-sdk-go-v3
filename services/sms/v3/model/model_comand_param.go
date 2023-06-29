@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 命令响应参数
+// ComandParam 命令响应参数
 type ComandParam struct {
 
 	// 任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// InviteUserResponse Response Object
 type InviteUserResponse struct {
 
 	// 用户是否存在

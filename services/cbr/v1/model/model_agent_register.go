@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AgentRegister
 type AgentRegister struct {
 
 	// 客户端ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业创建参数
+// AudioModerationResultRequestParams 作业创建参数
 type AudioModerationResultRequestParams struct {
 
 	// 创建作业时传的event_type参数

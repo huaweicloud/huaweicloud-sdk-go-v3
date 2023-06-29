@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMetadata2Request Request Object
 type ShowMetadata2Request struct {
 
 	// 元数据ID。

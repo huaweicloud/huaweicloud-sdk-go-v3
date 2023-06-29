@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdatePersonalTemplateStateResponse Response Object
 type UpdatePersonalTemplateStateResponse struct {
 
 	// 请求状态，固定200。

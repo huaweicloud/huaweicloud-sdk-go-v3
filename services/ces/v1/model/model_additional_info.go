@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警历史额外字段，仅针对事件监控告警场景所产生的告警历史信息。
+// AdditionalInfo 告警历史额外字段，仅针对事件监控告警场景所产生的告警历史信息。
 type AdditionalInfo struct {
 
 	// 该条告警历史对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。

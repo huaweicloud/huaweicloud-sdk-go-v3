@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateOrDeleteRabbitMqTagResponse Response Object
 type BatchCreateOrDeleteRabbitMqTagResponse struct {
 	HttpStatusCode int `json:"-"`
 }

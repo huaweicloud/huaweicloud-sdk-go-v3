@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEnginesResponse Response Object
 type ListEnginesResponse struct {
 
 	// 引擎信息列表。

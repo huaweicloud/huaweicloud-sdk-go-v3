@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShrinkInstanceNodesRequest Request Object
 type ShrinkInstanceNodesRequest struct {
 
 	// DDM实例ID

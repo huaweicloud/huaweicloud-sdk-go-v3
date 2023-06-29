@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// peering对象
+// VpcPeering peering对象
 type VpcPeering struct {
 
 	// 对等连接ID
@@ -85,13 +85,18 @@ func (c VpcPeeringStatus) MarshalJSON() ([]byte, error) {
 
 func (c *VpcPeeringStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

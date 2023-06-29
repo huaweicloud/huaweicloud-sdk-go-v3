@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警页面配置参数，用于配置“自定义”或者“重定向”页面
+// BlockPage 告警页面配置参数，用于配置“自定义”或者“重定向”页面
 type BlockPage struct {
 
 	// 模板名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadExtensionFileRequest Request Object
 type UploadExtensionFileRequest struct {
 
 	// 插件类型。目前只支持CodeArtsIDEOnline

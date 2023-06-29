@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// QualificationCertificateResult
 type QualificationCertificateResult struct {
 
 	// 身份证号（非必有，依赖对应从业资格证板式）。

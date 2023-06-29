@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ReplyRatesTotal
 type ReplyRatesTotal struct {
 
 	// 用户提问总数。

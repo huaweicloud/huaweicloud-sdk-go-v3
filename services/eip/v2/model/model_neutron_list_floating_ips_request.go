@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NeutronListFloatingIpsRequest Request Object
 type NeutronListFloatingIpsRequest struct {
 
 	// 每页显示的条目数量。

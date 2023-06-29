@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组件节点。
+// TxNode 组件节点。
 type TxNode struct {
 
 	// 节点id。

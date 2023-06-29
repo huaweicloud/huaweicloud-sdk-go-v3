@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExpandReplicationResponse Response Object
 type ExpandReplicationResponse struct {
 
 	// 成功返回jobId信息

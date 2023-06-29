@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDatabasesResponse Response Object
 type ListDatabasesResponse struct {
 	Databases *[]Database `json:"databases,omitempty"`
 

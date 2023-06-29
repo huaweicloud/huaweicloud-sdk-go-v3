@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDiagnoseRecordsRequest Request Object
 type ListDiagnoseRecordsRequest struct {
 
 	// 单页大小

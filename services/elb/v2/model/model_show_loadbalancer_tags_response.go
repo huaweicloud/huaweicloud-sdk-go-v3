@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLoadbalancerTagsResponse Response Object
 type ShowLoadbalancerTagsResponse struct {
 
 	// 标签列表

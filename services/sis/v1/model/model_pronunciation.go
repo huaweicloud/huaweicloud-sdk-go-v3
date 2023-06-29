@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 整体发音打分
+// Pronunciation 整体发音打分
 type Pronunciation struct {
 
 	// 发音质量综合得分 0-100

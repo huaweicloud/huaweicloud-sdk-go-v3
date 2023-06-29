@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 物联网平台转发数据的通道配置参数。
+// ChannelDetail 物联网平台转发数据的通道配置参数。
 type ChannelDetail struct {
 	HttpForwarding *HttpForwarding `json:"http_forwarding,omitempty"`
 

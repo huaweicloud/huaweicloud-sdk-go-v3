@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceStatusResponse Response Object
 type ShowInstanceStatusResponse struct {
 
 	// 实例ID

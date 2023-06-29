@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StopExecutionResponse Response Object
 type StopExecutionResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

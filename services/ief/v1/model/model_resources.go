@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 容器使用的资源
+// Resources 容器使用的资源
 type Resources struct {
 	Limits *LimitsRequests `json:"limits,omitempty"`
 

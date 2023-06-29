@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 慢日志请求体。
+// LtsLogSlowQueryRequest 慢日志请求体。
 type LtsLogSlowQueryRequest struct {
 
 	// 节点ID。

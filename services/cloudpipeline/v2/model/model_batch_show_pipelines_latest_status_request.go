@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchShowPipelinesLatestStatusRequest Request Object
 type BatchShowPipelinesLatestStatusRequest struct {
 
 	// 项目ID

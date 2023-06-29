@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLogsResponse Response Object
 type ListLogsResponse struct {
 
 	// 日志条数。

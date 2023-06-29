@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateVolumeResponse Response Object
 type UpdateVolumeResponse struct {
 
 	// 是否挂载信息。

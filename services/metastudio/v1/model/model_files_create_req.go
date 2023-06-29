@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建文件请求。
+// FilesCreateReq 创建文件请求。
 type FilesCreateReq struct {
 
 	// 文件名。创建文件时候不区分大小写，最大长度256，最小长度1。

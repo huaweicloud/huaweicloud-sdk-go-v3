@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 数据源
+// DatasourceInfo 数据源
 type DatasourceInfo struct {
 
 	// 数据源名称，数据源名称不能包含&、<、>、\"、'、(、) ，长度为1~255字符
@@ -198,13 +198,18 @@ func (c DatasourceInfoDatasourceType) MarshalJSON() ([]byte, error) {
 
 func (c *DatasourceInfoDatasourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRestrictionOfInstanceV2Request Request Object
 type ShowRestrictionOfInstanceV2Request struct {
 
 	// 实例ID

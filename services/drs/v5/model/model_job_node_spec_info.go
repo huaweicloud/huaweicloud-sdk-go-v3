@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 任务实例规格信息体。
+// JobNodeSpecInfo 任务实例规格信息体。
 type JobNodeSpecInfo struct {
 
 	// 实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
@@ -63,13 +63,18 @@ func (c JobNodeSpecInfoNodeType) MarshalJSON() ([]byte, error) {
 
 func (c *JobNodeSpecInfoNodeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

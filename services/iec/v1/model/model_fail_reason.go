@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 失败原因对象。
+// FailReason 失败原因对象。
 type FailReason struct {
 
 	// 错误码

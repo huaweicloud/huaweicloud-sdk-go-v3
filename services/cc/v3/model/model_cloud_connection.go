@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// 云连接实例。
+// CloudConnection 云连接实例。
 type CloudConnection struct {
 
 	// 云连接实例的ID。
@@ -40,6 +40,9 @@ type CloudConnection struct {
 
 	// 云连接使用场景。 - VPC：虚拟私有云。
 	UsedScene *CloudConnectionUsedScene `json:"used_scene,omitempty"`
+
+	// 标签列表。
+	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 云连接实例关联网络实例的个数。
 	NetworkInstanceNumber *int32 `json:"network_instance_number,omitempty"`
@@ -86,13 +89,18 @@ func (c CloudConnectionStatus) MarshalJSON() ([]byte, error) {
 
 func (c *CloudConnectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -124,13 +132,18 @@ func (c CloudConnectionUsedScene) MarshalJSON() ([]byte, error) {
 
 func (c *CloudConnectionUsedScene) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户名密码信息。
+// ResetDatabasePassword 数据库用户名密码信息。
 type ResetDatabasePassword struct {
 
 	// 数据库用户名。

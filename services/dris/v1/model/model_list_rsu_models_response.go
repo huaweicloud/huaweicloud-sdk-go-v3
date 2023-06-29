@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRsuModelsResponse Response Object
 type ListRsuModelsResponse struct {
 
 	// **参数说明**：满足查询条件的记录总数。

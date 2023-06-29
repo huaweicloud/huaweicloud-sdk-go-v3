@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要删除quota的目录
+// DeleteFsDirQuotaRequestBody 需要删除quota的目录
 type DeleteFsDirQuotaRequestBody struct {
 
 	// 合法的已存在的目录的全路径

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowScaleInPolicyRequest Request Object
 type ShowScaleInPolicyRequest struct {
 }
 

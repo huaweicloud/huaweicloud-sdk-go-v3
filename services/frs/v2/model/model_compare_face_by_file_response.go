@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CompareFaceByFileResponse Response Object
 type CompareFaceByFileResponse struct {
 	Image1Face *CompareFace `json:"image1_face,omitempty"`
 

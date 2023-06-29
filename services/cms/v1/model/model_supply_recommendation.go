@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源供给推荐结果
+// SupplyRecommendation 资源供给推荐结果
 type SupplyRecommendation struct {
 
 	// 实例规格ID

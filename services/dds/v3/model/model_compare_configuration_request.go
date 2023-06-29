@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CompareConfigurationRequest Request Object
 type CompareConfigurationRequest struct {
 	Body *DiffConfigurationRequest `json:"body,omitempty"`
 }

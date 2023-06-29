@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateRecordSetWithBatchLinesRequest Request Object
 type CreateRecordSetWithBatchLinesRequest struct {
 
 	// 所属Zone的ID。

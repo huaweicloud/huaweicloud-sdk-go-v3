@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSqlFilterControlResponse Response Object
 type ShowSqlFilterControlResponse struct {
 
 	// sql限流开关状态。  取值：  - ON：已开启 - OFF：已关闭

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAcceleratorRequest Request Object
 type CreateAcceleratorRequest struct {
 	Body *CreateAcceleratorRequestBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RecognizeShortAudioRequest Request Object
 type RecognizeShortAudioRequest struct {
 	Body *PostShortAudioReq `json:"body,omitempty"`
 }

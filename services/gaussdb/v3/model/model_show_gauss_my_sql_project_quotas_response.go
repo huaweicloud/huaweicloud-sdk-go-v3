@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowGaussMySqlProjectQuotasResponse Response Object
 type ShowGaussMySqlProjectQuotasResponse struct {
 	Quotas         *ProjectQuotas `json:"quotas,omitempty"`
 	HttpStatusCode int            `json:"-"`

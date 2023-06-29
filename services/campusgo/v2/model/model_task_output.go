@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业的输出配置
+// TaskOutput 作业的输出配置
 type TaskOutput struct {
 	Obs *TaskOutputObs `json:"obs,omitempty"`
 

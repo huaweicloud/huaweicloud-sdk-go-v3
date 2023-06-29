@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务信息
+// ClusterTask 任务信息
 type ClusterTask struct {
 
 	// 任务描述

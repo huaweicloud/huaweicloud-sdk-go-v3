@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportMqsInstanceTopicResponse Response Object
 type ExportMqsInstanceTopicResponse struct {
 	HttpStatusCode int           `json:"-"`
 	Body           io.ReadCloser `json:"-" type:"stream"`

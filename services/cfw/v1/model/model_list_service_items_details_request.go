@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListServiceItemsDetailsRequest Request Object
 type ListServiceItemsDetailsRequest struct {
 
 	// 服务组id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 会话详细信息列表。
+// QuerySessionResponse 会话详细信息列表。
 type QuerySessionResponse struct {
 
 	// 会话ID。

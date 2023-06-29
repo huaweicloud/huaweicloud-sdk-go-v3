@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 备份参数对象。
+// CreateManualBackupOption 备份参数对象。
 type CreateManualBackupOption struct {
 
 	// 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListExternalVaultResponse Response Object
 type ListExternalVaultResponse struct {
 
 	// 存储库实例列表

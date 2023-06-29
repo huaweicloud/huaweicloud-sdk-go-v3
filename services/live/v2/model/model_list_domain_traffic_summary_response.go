@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDomainTrafficSummaryResponse Response Object
 type ListDomainTrafficSummaryResponse struct {
 
 	// 域名对应的流量汇总列表。

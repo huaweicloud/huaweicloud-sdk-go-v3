@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ValidateHttpsInfoV2Request Request Object
 type ValidateHttpsInfoV2Request struct {
 
 	// 用户iam_user_uuid

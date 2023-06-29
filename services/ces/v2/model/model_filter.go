@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合方式, 支持的值为(average|min|max|sum)
+// Filter 聚合方式, 支持的值为(average|min|max|sum)
 type Filter struct {
 }
 

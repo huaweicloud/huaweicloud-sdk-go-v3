@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopInstanceRequest Request Object
 type StopInstanceRequest struct {
 
 	// 实例id

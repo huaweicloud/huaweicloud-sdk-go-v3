@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 远程鉴权配置。
+// RemoteAuthRuleVo 远程鉴权配置。
 type RemoteAuthRuleVo struct {
 
 	// 可访问的鉴权服务器地址。 输入的URL必须有“http”或“https”。不能是localhost或127.0.0.1这类本地地址。 不能是CDN的加速域名。

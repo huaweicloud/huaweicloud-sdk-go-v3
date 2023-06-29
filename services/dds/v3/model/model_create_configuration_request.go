@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateConfigurationRequest Request Object
 type CreateConfigurationRequest struct {
 	Body *CreateConfigurationRequestBody `json:"body,omitempty"`
 }

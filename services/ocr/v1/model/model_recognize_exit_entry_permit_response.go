@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeExitEntryPermitResponse Response Object
 type RecognizeExitEntryPermitResponse struct {
 	Result         *ExitEntryPermitResult `json:"result,omitempty"`
 	HttpStatusCode int                    `json:"-"`

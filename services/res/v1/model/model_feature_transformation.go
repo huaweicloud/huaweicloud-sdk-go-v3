@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FeatureTransformation
 type FeatureTransformation struct {
 	Attr *Attribute `json:"attr,omitempty"`
 

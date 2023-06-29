@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// image字段数据结构说明
+// Image image字段数据结构说明
 type Image struct {
 
 	// 裸金属服务器镜像ID

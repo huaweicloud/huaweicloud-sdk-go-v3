@@ -5,78 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vss/v3/model"
 )
 
-type AuthorizeDomainsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AuthorizeDomainsInvoker) Invoke() (*model.AuthorizeDomainsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AuthorizeDomainsResponse), nil
-	}
-}
-
-type CreateDomainsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDomainsInvoker) Invoke() (*model.CreateDomainsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDomainsResponse), nil
-	}
-}
-
-type DeleteDomainsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDomainsInvoker) Invoke() (*model.DeleteDomainsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDomainsResponse), nil
-	}
-}
-
-type ListDomainsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDomainsResponse), nil
-	}
-}
-
-type ShowDomainSettingsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDomainSettingsInvoker) Invoke() (*model.ShowDomainSettingsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDomainSettingsResponse), nil
-	}
-}
-
-type UpdateDomainSettingsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDomainSettingsInvoker) Invoke() (*model.UpdateDomainSettingsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDomainSettingsResponse), nil
-	}
-}
-
 type DownloadTaskReportInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,5 +134,77 @@ func (i *ShowTasksInvoker) Invoke() (*model.ShowTasksResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTasksResponse), nil
+	}
+}
+
+type AuthorizeDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeDomainsInvoker) Invoke() (*model.AuthorizeDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AuthorizeDomainsResponse), nil
+	}
+}
+
+type CreateDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainsInvoker) Invoke() (*model.CreateDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainsResponse), nil
+	}
+}
+
+type DeleteDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainsInvoker) Invoke() (*model.DeleteDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainsResponse), nil
+	}
+}
+
+type ListDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainsResponse), nil
+	}
+}
+
+type ShowDomainSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainSettingsInvoker) Invoke() (*model.ShowDomainSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainSettingsResponse), nil
+	}
+}
+
+type UpdateDomainSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainSettingsInvoker) Invoke() (*model.UpdateDomainSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainSettingsResponse), nil
 	}
 }

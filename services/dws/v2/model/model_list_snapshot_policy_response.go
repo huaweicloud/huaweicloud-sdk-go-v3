@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSnapshotPolicyResponse Response Object
 type ListSnapshotPolicyResponse struct {
 
 	// 保留天数。

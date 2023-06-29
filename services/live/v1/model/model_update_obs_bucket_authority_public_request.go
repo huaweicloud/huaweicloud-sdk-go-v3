@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateObsBucketAuthorityPublicRequest Request Object
 type UpdateObsBucketAuthorityPublicRequest struct {
 	Body *ObsAuthorityConfigV2 `json:"body,omitempty"`
 }

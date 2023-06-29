@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVaultResourceInstancesRequest Request Object
 type ShowVaultResourceInstancesRequest struct {
 	Body *VaultResourceInstancesReq `json:"body,omitempty"`
 }

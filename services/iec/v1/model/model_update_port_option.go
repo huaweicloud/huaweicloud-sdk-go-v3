@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新端口请求体
+// UpdatePortOption 更新端口请求体
 type UpdatePortOption struct {
 
 	// IP/Mac对列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLastHistoryResponse Response Object
 type ShowLastHistoryResponse struct {
 
 	// 构建记录id--唯一key

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPrivateKeyVerifyResponse Response Object
 type ShowPrivateKeyVerifyResponse struct {
 	Error *Error `json:"error,omitempty"`
 

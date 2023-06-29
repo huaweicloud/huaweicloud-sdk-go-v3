@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建单个任务请求体。
+// CreateJobReq 创建单个任务请求体。
 type CreateJobReq struct {
 	BaseInfo *JobBaseInfo `json:"base_info"`
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 命名实体识别post请求体
+// NerRequest 命名实体识别post请求体
 type NerRequest struct {
 
 	// 待分析文本，中文长度为1~512，英文和西班牙文长度为1~2000，文本编码为UTF-8。
@@ -62,13 +62,18 @@ func (c NerRequestLang) MarshalJSON() ([]byte, error) {
 
 func (c *NerRequestLang) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

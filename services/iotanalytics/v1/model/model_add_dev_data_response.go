@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddDevDataResponse Response Object
 type AddDevDataResponse struct {
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPortInfosRequest Request Object
 type ListPortInfosRequest struct {
 
 	// 操作类型。 - 0：查询通道号列表 - 1：查询绑定关系列表

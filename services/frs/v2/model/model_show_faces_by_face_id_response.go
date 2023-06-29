@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowFacesByFaceIdResponse Response Object
 type ShowFacesByFaceIdResponse struct {
 
 	// 人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。

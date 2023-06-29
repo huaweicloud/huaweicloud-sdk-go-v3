@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 更新监听器请求参数
+// UpdateListenerOption 更新监听器请求参数
 type UpdateListenerOption struct {
 
 	// 监听器的管理状态。只能设置为true。  不支持该字段，请勿使用。
@@ -118,13 +118,18 @@ func (c UpdateListenerOptionProtectionStatus) MarshalJSON() ([]byte, error) {
 
 func (c *UpdateListenerOptionProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

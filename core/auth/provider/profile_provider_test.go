@@ -67,6 +67,8 @@ func TestProfileCredentialProvider_GetCredentials(t *testing.T) {
 
 	file, err := os.Create(path)
 	assert.Nil(t, err)
+	err = file.Chmod(0600)
+	assert.Nil(t, err)
 	_, err = file.WriteString(credentialStr)
 	assert.Nil(t, err)
 	err = file.Close()

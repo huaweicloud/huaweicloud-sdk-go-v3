@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目标检测框位置信息
+// BoundingBox 目标检测框位置信息
 type BoundingBox struct {
 
 	// 检测框区域宽度

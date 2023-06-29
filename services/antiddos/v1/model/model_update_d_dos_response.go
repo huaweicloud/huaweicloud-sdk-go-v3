@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDDosResponse Response Object
 type UpdateDDosResponse struct {
 
 	// 内部错误码

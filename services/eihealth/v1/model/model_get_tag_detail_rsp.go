@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像版本详情
+// GetTagDetailRsp 镜像版本详情
 type GetTagDetailRsp struct {
 
 	// 镜像版本名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProductConfigResponse Response Object
 type ShowProductConfigResponse struct {
 
 	// 服务id

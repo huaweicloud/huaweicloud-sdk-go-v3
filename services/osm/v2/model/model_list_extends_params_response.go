@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListExtendsParamsResponse Response Object
 type ListExtendsParamsResponse struct {
 
 	// 附加参数列表

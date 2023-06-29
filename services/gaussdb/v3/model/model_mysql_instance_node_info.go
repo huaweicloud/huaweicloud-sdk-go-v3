@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点信息。
+// MysqlInstanceNodeInfo 节点信息。
 type MysqlInstanceNodeInfo struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息邮件发送配置请求体
+// SetMessageEmailConfigReq 消息邮件发送配置请求体
 type SetMessageEmailConfigReq struct {
 
 	// 服务器地址

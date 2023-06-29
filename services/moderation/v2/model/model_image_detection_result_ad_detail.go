@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 广告检测详情
+// ImageDetectionResultAdDetail 广告检测详情
 type ImageDetectionResultAdDetail struct {
 
 	// 置信度，取值范围 0-1。

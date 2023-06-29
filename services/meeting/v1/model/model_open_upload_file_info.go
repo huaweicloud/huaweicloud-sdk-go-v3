@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 文件上传信息。
+// OpenUploadFileInfo 文件上传信息。
 type OpenUploadFileInfo struct {
 
 	// 文件Id。

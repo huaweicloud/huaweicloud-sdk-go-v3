@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NeutronUpdateFirewallPolicyOption
 type NeutronUpdateFirewallPolicyOption struct {
 
 	// 功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云服务按需转包请求体
+// ChangeToPeriodReq 云服务按需转包请求体
 type ChangeToPeriodReq struct {
 
 	// 待按需转包IP列表

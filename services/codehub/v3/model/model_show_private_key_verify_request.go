@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPrivateKeyVerifyRequest Request Object
 type ShowPrivateKeyVerifyRequest struct {
 	Body *PrivateKeyVerify `json:"body,omitempty"`
 }

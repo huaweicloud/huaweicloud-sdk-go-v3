@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// PostShortAudioAssessmentReq
 type PostShortAudioAssessmentReq struct {
 	Config *AudioConfig `json:"config"`
 

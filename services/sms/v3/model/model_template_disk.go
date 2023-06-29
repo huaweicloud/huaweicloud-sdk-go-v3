@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 磁盘模板
+// TemplateDisk 磁盘模板
 type TemplateDisk struct {
 
 	// 磁盘ID

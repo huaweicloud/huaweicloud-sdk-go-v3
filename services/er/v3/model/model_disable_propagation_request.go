@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisablePropagationRequest Request Object
 type DisablePropagationRequest struct {
 
 	// 企业路由器实例ID

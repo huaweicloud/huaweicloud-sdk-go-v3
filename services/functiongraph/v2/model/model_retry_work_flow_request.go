@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RetryWorkFlowRequest Request Object
 type RetryWorkFlowRequest struct {
 
 	// 函数工作流ID

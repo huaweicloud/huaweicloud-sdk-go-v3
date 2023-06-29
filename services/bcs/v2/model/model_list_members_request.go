@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListMembersRequest Request Object
 type ListMembersRequest struct {
 }
 

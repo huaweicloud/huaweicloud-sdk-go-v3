@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSystemEventResponse Response Object
 type CreateSystemEventResponse struct {
 	Systemevent    *Event `json:"systemevent,omitempty"`
 	HttpStatusCode int    `json:"-"`

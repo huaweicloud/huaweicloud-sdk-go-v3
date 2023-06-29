@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateProtectionGroupNameRequest Request Object
 type UpdateProtectionGroupNameRequest struct {
 
 	// 保护组ID。

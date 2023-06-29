@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEndpointGroupsRequest Request Object
 type ListEndpointGroupsRequest struct {
 
 	// 分页查询每页的资源个数。如果不设置，则默认为500。
@@ -81,13 +81,18 @@ func (c ListEndpointGroupsRequestStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ListEndpointGroupsRequestStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

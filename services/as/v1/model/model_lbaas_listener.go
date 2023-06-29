@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 增强型负载均衡器信息
+// LbaasListener 增强型负载均衡器信息
 type LbaasListener struct {
 
 	// 监听器ID。

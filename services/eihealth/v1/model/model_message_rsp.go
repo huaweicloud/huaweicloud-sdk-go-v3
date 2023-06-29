@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息邮件发送配置
+// MessageRsp 消息邮件发送配置
 type MessageRsp struct {
 
 	// 消息类型

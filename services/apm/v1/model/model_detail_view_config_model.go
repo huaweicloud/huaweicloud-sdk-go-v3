@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 详情视图配置。
+// DetailViewConfigModel 详情视图配置。
 type DetailViewConfigModel struct {
 
 	// 视图对应的指标集的名称。

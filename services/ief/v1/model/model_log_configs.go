@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点日志配置
+// LogConfigs 边缘节点日志配置
 type LogConfigs struct {
 
 	// 数据库保存的主键，不需要关注此字段。

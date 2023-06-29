@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeAgentStatusResponse Response Object
 type ChangeAgentStatusResponse struct {
 
 	// 返回结果ok表示成功。

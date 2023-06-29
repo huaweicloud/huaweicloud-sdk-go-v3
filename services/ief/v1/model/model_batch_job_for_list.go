@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量处理作业详情
+// BatchJobForList 批量处理作业详情
 type BatchJobForList struct {
 
 	// 批量处理作业ID

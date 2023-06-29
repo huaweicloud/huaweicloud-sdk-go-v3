@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListScalingConfigsRequest Request Object
 type ListScalingConfigsRequest struct {
 
 	// 伸缩配置名称。

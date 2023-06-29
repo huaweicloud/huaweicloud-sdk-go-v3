@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowTrafficControllersResponse Response Object
 type BatchShowTrafficControllersResponse struct {
 
 	// **参数说明**：返回信号机设备的总体数量。

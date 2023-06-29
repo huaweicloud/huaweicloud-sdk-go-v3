@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDependencyVersionRequest Request Object
 type DeleteDependencyVersionRequest struct {
 
 	// 依赖包的ID。

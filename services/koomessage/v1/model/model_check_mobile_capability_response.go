@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckMobileCapabilityResponse Response Object
 type CheckMobileCapabilityResponse struct {
 
 	// 支持智能信息手机号码列表。

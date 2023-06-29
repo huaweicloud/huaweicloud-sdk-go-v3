@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ValidateSqlResponse Response Object
 type ValidateSqlResponse struct {
 
 	// SQL是否通过语法校验

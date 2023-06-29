@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// redis数据源配置内容
+// DcsContentRsp redis数据源配置内容
 type DcsContentRsp struct {
 
 	// VPC-EP服务端id

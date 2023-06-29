@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLabelResponse Response Object
 type CreateLabelResponse struct {
 
 	// 标签id

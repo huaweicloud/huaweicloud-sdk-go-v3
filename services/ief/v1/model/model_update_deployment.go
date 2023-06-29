@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新部署请求Body参数
+// UpdateDeployment 更新部署请求Body参数
 type UpdateDeployment struct {
 	Deployment *UpdatePodDeployment `json:"deployment,omitempty"`
 

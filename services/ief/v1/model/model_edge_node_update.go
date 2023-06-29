@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点参数
+// EdgeNodeUpdate 边缘节点参数
 type EdgeNodeUpdate struct {
 
 	// 边缘节点描述，最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建测试用例请求体
+// CreateTestCaseRequestBody 创建测试用例请求体
 type CreateTestCaseRequestBody struct {
 
 	// 页面上显示的用例名称，长度为[3-128]位字符

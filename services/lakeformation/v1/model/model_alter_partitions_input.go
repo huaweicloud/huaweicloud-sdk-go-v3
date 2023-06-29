@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改分区输入
+// AlterPartitionsInput 修改分区输入
 type AlterPartitionsInput struct {
 
 	// 批量修改分区对象数组

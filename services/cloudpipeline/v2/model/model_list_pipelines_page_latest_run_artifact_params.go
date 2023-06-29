@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 制品源参数
+// ListPipelinesPageLatestRunArtifactParams 制品源参数
 type ListPipelinesPageLatestRunArtifactParams struct {
 
 	// 包版本

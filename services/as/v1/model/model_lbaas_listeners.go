@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 增强型负载均衡器
+// LbaasListeners 增强型负载均衡器
 type LbaasListeners struct {
 
 	// 后端云服务器组ID

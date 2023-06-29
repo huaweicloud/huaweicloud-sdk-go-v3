@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PayOrdersRequest Request Object
 type PayOrdersRequest struct {
 	Body *PayCustomerOrderV3Req `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求参数
+// BatchDeletePublicIpRequestBody 请求参数
 type BatchDeletePublicIpRequestBody struct {
 
 	// 弹性公网ip的id列表。

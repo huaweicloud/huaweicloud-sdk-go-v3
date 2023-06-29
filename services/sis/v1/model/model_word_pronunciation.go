@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//  单词发音打分
+// WordPronunciation  单词发音打分
 type WordPronunciation struct {
 
 	// 单词发音综合得分 0-100

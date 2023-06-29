@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateSecurityPolicyResponse Response Object
 type UpdateSecurityPolicyResponse struct {
 	SecurityPolicy *SecurityPolicy `json:"security_policy,omitempty"`
 

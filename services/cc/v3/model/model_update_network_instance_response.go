@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNetworkInstanceResponse Response Object
 type UpdateNetworkInstanceResponse struct {
 	NetworkInstance *NetworkInstance `json:"network_instance,omitempty"`
 

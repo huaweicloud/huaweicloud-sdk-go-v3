@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAimTemplatesRequest Request Object
 type ListAimTemplatesRequest struct {
 
 	// 智能信息模板ID。

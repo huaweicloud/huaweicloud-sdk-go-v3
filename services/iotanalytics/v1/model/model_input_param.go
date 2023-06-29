@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性定义为输入参数
+// InputParam 属性定义为输入参数
 type InputParam struct {
 
 	// 参数名称

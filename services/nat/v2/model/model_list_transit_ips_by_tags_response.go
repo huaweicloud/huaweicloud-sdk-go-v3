@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTransitIpsByTagsResponse Response Object
 type ListTransitIpsByTagsResponse struct {
 
 	// 资源列表。

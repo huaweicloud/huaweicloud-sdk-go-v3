@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRuleRequest Request Object
 type DeleteRuleRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

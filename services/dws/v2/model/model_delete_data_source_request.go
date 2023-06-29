@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDataSourceRequest Request Object
 type DeleteDataSourceRequest struct {
 
 	// 集群ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// FreezeNodeResponse Response Object
 type FreezeNodeResponse struct {
 
 	// 设备ID

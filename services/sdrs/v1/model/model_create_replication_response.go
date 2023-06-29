@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateReplicationResponse Response Object
 type CreateReplicationResponse struct {
 
 	// 成功返回jobId信息

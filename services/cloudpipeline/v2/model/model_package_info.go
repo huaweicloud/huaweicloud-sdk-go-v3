@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线产物
+// PackageInfo 流水线产物
 type PackageInfo struct {
 
 	// 产物名

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckInstanceAccessRequest Request Object
 type CheckInstanceAccessRequest struct {
 
 	// CodeArtsIDEOnline实例id

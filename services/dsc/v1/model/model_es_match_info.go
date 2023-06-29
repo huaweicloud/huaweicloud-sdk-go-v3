@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ES数据项匹配信息
+// EsMatchInfo ES数据项匹配信息
 type EsMatchInfo struct {
 
 	// 数据字段名

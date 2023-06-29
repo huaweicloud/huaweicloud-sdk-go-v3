@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteApiByVersionIdV2Request Request Object
 type DeleteApiByVersionIdV2Request struct {
 
 	// 实例ID

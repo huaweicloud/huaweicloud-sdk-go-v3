@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 攻击源Ip
+// IpItem 攻击源Ip
 type IpItem struct {
 
 	// ip地址

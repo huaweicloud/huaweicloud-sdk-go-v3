@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSlowLogRequest Request Object
 type ListSlowLogRequest struct {
 
 	// DDM实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunShellCommandRequest Request Object
 type RunShellCommandRequest struct {
 	Body *RunShellCommandRequestBody `json:"body,omitempty"`
 }

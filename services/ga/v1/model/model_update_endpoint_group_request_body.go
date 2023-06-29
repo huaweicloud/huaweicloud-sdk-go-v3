@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// update Endpoint Group request
+// UpdateEndpointGroupRequestBody update Endpoint Group request
 type UpdateEndpointGroupRequestBody struct {
 	EndpointGroup *UpdateEndpointGroupOption `json:"endpoint_group"`
 }

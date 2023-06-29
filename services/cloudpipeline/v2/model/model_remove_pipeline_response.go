@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemovePipelineResponse Response Object
 type RemovePipelineResponse struct {
 
 	// 流水线ID

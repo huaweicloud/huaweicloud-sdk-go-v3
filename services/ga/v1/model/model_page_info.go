@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页查询页的信息。
+// PageInfo 分页查询页的信息。
 type PageInfo struct {
 
 	// 下一页的marker，为空时表示最后一页。

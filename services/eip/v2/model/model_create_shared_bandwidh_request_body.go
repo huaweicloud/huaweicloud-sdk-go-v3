@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建共享带宽请求体
+// CreateSharedBandwidhRequestBody 创建共享带宽请求体
 type CreateSharedBandwidhRequestBody struct {
 	Bandwidth *CreateSharedBandwidthOption `json:"bandwidth"`
 }

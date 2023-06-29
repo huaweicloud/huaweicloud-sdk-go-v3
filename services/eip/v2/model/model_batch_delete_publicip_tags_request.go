@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeletePublicipTagsRequest Request Object
 type BatchDeletePublicipTagsRequest struct {
 
 	// 资源ID

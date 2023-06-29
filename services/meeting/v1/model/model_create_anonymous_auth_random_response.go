@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAnonymousAuthRandomResponse Response Object
 type CreateAnonymousAuthRandomResponse struct {
 
 	// 下一跳URL。

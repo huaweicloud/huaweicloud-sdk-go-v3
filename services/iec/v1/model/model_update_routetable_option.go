@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新路由表
+// UpdateRoutetableOption 更新路由表
 type UpdateRoutetableOption struct {
 
 	// 路由表名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）

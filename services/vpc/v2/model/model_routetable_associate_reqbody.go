@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// RoutetableAssociateReqbody
 type RoutetableAssociateReqbody struct {
 	Routetable *AsscoiateReq `json:"routetable"`
 }

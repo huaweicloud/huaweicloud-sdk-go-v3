@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 证书属性配置
+// Cert 证书属性配置
 type Cert struct {
 
 	// 证书名称

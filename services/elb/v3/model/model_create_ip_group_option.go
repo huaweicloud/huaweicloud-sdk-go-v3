@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建IP地址组请求参数。
+// CreateIpGroupOption 创建IP地址组请求参数。
 type CreateIpGroupOption struct {
 
 	// IP地址组所在的项目ID。

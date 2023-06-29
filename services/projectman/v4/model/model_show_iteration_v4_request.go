@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowIterationV4Request Request Object
 type ShowIterationV4Request struct {
 
 	// 迭代id

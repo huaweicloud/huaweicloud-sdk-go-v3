@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowProjectTagsListRequest Request Object
 type ShowProjectTagsListRequest struct {
 
 	// 资源类型

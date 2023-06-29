@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 公网访问信息。只有在httpsEnable设置为true时该参数配置生效。
+// CreateClusterPublicIpReq 公网访问信息。只有在httpsEnable设置为true时该参数配置生效。
 type CreateClusterPublicIpReq struct {
 	Eip *CreateClusterPublicEip `json:"eip"`
 

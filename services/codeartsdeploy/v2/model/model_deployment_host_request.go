@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 主机信息
+// DeploymentHostRequest 主机信息
 type DeploymentHostRequest struct {
 
 	// 主机名称

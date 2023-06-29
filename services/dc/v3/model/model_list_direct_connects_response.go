@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDirectConnectsResponse Response Object
 type ListDirectConnectsResponse struct {
 
 	// 操作请求ID

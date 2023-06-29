@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 修改会议配置请求。
+// UpdateStartedConfigReqBody 修改会议配置请求。
 type UpdateStartedConfigReqBody struct {
 
 	// 锁定共享标志位。 * 0: 不锁定 * 1: 锁定

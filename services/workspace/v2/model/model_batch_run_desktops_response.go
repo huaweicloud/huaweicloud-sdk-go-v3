@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchRunDesktopsResponse Response Object
 type BatchRunDesktopsResponse struct {
 
 	// 操作失败桌面列表。
 	FailedOperationList *[]VmOperateResult `json:"failed_operation_list,omitempty"`
 
-	// 任务ID。
+	// 任务ID，冷迁移启动时返回。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

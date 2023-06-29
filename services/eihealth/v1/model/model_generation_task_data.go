@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子生成任务的请求体
+// GenerationTaskData 分子生成任务的请求体
 type GenerationTaskData struct {
 
 	// 生成分子数量

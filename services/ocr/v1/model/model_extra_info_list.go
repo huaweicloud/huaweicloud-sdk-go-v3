@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ExtraInfoList
 type ExtraInfoList struct {
 
 	// 表示key值，可能是qq, wechat, alipay及bank等。

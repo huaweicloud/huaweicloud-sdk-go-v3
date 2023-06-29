@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 合流任务参数，转推和录制至少选一个
+// MixJobReq 合流任务参数，转推和录制至少选一个
 type MixJobReq struct {
 	MixParam *MixParam `json:"mix_param"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ServerNicsReq
 type ServerNicsReq struct {
 
 	// 网卡的子网ID

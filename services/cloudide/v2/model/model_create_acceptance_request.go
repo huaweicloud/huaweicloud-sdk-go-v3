@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAcceptanceRequest Request Object
 type CreateAcceptanceRequest struct {
 	Body *AcceptanceSchema `json:"body,omitempty"`
 }

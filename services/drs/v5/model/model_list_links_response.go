@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLinksResponse Response Object
 type ListLinksResponse struct {
 
 	// 可用链路信息。

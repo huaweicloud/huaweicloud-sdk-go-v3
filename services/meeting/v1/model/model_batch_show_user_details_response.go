@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchShowUserDetailsResponse Response Object
 type BatchShowUserDetailsResponse struct {
 
 	// 用户信息列表

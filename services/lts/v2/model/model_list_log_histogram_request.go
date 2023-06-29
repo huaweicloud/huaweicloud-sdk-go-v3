@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListLogHistogramRequest Request Object
 type ListLogHistogramRequest struct {
 	Body *QueryLogKeyWordCountRequestBody `json:"body,omitempty"`
 }

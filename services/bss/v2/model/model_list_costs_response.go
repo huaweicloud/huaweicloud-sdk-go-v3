@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCostsResponse Response Object
 type ListCostsResponse struct {
 
 	// 货币。 CNY：人民币

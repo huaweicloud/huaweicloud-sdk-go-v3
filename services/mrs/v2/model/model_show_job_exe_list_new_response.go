@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowJobExeListNewResponse Response Object
 type ShowJobExeListNewResponse struct {
 
 	// 总记录数

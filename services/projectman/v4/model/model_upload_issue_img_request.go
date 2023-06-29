@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadIssueImgRequest Request Object
 type UploadIssueImgRequest struct {
 
 	// devcloud项目的32位id

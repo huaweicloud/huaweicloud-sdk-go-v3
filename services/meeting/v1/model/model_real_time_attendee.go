@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 被邀请与会者信息。
+// RealTimeAttendee 被邀请与会者信息。
 type RealTimeAttendee struct {
 
 	// 与会者的华为云会议帐号。

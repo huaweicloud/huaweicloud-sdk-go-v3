@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分区中的列统计
+// PartitionColumnStatistics 分区中的列统计
 type PartitionColumnStatistics struct {
 	ColumnStatisticsDesc *PartitionColumnStatisticsDescription `json:"column_statistics_desc"`
 

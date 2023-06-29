@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NodePool
 type NodePool struct {
 
 	// API类型，固定值“NodePool”。

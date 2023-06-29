@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowBlockchainFlavorsResponse Response Object
 type ShowBlockchainFlavorsResponse struct {
 	EnterpriseSpec *InstanceSpc `json:"enterprise_spec,omitempty"`
 	HttpStatusCode int          `json:"-"`

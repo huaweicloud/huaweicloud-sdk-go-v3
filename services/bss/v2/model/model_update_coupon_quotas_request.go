@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateCouponQuotasRequest Request Object
 type UpdateCouponQuotasRequest struct {
 	Body *AdjustCouponQuotasReq `json:"body,omitempty"`
 }

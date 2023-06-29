@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Information of playbook version
+// PlaybookVersionInfo Information of playbook version
 type PlaybookVersionInfo struct {
 
 	// Id value

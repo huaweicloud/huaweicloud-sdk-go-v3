@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateOnlineMigrationTaskResponse Response Object
 type CreateOnlineMigrationTaskResponse struct {
 
 	// 在线迁移任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateSecurityGroupRequestBody
 type CreateSecurityGroupRequestBody struct {
 	SecurityGroup *CreateSecurityGroupOption `json:"security_group"`
 }

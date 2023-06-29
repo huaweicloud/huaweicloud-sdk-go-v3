@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StartDisasterRecoveryRequest Request Object
 type StartDisasterRecoveryRequest struct {
 
 	// 容灾ID

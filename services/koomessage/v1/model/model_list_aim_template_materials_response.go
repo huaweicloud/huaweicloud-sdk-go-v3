@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAimTemplateMaterialsResponse Response Object
 type ListAimTemplateMaterialsResponse struct {
 
 	// 状态码。

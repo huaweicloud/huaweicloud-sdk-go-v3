@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储库创建参数
+// VaultCreateParameters 存储库创建参数
 type VaultCreateParameters struct {
 	CombinedOrder *CombinedOrder `json:"combined_order,omitempty"`
 }

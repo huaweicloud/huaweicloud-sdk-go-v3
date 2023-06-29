@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//
+// DisassociateServerVirtualIpOption
 type DisassociateServerVirtualIpOption struct {
 
 	// 云服务器添加网卡的信息。  约束：解绑虚拟IP时，subnet_id为空字符串
@@ -57,13 +57,18 @@ func (c DisassociateServerVirtualIpOptionSubnetId) MarshalJSON() ([]byte, error)
 
 func (c *DisassociateServerVirtualIpOptionSubnetId) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -95,13 +100,18 @@ func (c DisassociateServerVirtualIpOptionIpAddress) MarshalJSON() ([]byte, error
 
 func (c *DisassociateServerVirtualIpOptionIpAddress) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

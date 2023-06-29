@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 补救措施
+// ShowAlertRspRemediation 补救措施
 type ShowAlertRspRemediation struct {
 
 	// The name, display only

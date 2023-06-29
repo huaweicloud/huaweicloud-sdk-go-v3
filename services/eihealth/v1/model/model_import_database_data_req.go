@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入数据请求体
+// ImportDatabaseDataReq 导入数据请求体
 type ImportDatabaseDataReq struct {
 
 	// 导入文件l路径列表

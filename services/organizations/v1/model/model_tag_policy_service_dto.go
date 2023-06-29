@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// A quota of organization.
+// TagPolicyServiceDto A quota of organization.
 type TagPolicyServiceDto struct {
 
 	// The service name of the service.

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClustersRequest Request Object
 type ListClustersRequest struct {
 
 	// 边缘集群名称

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHistoryStreamsResponse Response Object
 type ListHistoryStreamsResponse struct {
 
 	// 历史流信息列表。

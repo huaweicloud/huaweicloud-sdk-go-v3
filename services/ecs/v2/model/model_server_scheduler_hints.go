@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弹性云服务器调度信息。
+// ServerSchedulerHints 弹性云服务器调度信息。
 type ServerSchedulerHints struct {
 
 	// 反亲和性组信息。  UUID格式。

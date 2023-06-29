@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDisasterRecoveryDrillNameResponse Response Object
 type UpdateDisasterRecoveryDrillNameResponse struct {
 	DisasterRecoveryDrill *ShowDisasterRecoveryDrillParams `json:"disaster_recovery_drill,omitempty"`
 	HttpStatusCode        int                              `json:"-"`

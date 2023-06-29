@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLineGroupRequest Request Object
 type CreateLineGroupRequest struct {
 	Body *CreateLineGroupsReq `json:"body,omitempty"`
 }

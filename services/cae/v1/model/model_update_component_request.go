@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateComponentRequest Request Object
 type UpdateComponentRequest struct {
 
 	// 组件id。

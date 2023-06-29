@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteCaseLabelsRequest Request Object
 type DeleteCaseLabelsRequest struct {
 
 	// 工单id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowReplicationRequest Request Object
 type ShowReplicationRequest struct {
 
 	// 复制对ID。

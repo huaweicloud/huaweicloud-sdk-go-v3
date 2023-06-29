@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNodeFirmwareResponse Response Object
 type UpdateNodeFirmwareResponse struct {
 	FirmwareName *string `json:"firmware_name,omitempty"`
 

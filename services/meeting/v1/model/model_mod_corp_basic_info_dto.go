@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 企业注册信息
+// ModCorpBasicInfoDto 企业注册信息
 type ModCorpBasicInfoDto struct {
 
 	// 企业所在地，最大长度为255个字符。

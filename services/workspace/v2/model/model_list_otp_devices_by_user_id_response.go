@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOtpDevicesByUserIdResponse Response Object
 type ListOtpDevicesByUserIdResponse struct {
 
-	// otp设备
+	// otp设备。
 	OtpDevices     *[]OtpDevice `json:"otp_devices,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

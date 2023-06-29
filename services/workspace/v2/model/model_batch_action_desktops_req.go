@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// 批量操作桌面请求。
+// BatchActionDesktopsReq 批量操作桌面请求。
 type BatchActionDesktopsReq struct {
 
 	// 操作的桌面ID列表。
 	DesktopIds []string `json:"desktop_ids"`
 
-	// 操作类型。 -os-start 启动。 -reboot 重启。 -os-stop 关机。
+	// 操作类型。 -os-start 启动。 -reboot 重启。 -os-stop 关机。 -os-hibernate 休眠。
 	OpType string `json:"op_type"`
 
 	// SOFT：普通操作；HARD：强制操作。例如type为HARD，op_type为os-stop代表强制关机。
@@ -61,13 +61,18 @@ func (c BatchActionDesktopsReqType) MarshalJSON() ([]byte, error) {
 
 func (c *BatchActionDesktopsReqType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

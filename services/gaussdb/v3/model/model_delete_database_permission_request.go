@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDatabasePermissionRequest Request Object
 type DeleteDatabasePermissionRequest struct {
 
 	// 语言。

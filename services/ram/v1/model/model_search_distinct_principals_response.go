@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchDistinctPrincipalsResponse Response Object
 type SearchDistinctPrincipalsResponse struct {
 
 	// 不同角色的信息列表。

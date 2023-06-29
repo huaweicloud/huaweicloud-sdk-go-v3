@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteWhiteBlackIpRuleResponse Response Object
 type DeleteWhiteBlackIpRuleResponse struct {
 
 	// 黑白名单规则id

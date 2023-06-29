@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchListDcDsRequest Request Object
 type BatchListDcDsRequest struct {
 
 	// 边缘节点ID

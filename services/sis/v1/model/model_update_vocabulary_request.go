@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateVocabularyRequest Request Object
 type UpdateVocabularyRequest struct {
 
 	// 被更新的热词表id。

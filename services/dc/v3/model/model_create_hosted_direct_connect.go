@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建托管专线参数对象
+// CreateHostedDirectConnect 创建托管专线参数对象
 type CreateHostedDirectConnect struct {
 
 	// 托管物理专线的名字。

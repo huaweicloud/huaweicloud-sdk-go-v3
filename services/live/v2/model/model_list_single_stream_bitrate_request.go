@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSingleStreamBitrateRequest Request Object
 type ListSingleStreamBitrateRequest struct {
 
 	// 推流域名。

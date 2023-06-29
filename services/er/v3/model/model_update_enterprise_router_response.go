@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEnterpriseRouterResponse Response Object
 type UpdateEnterpriseRouterResponse struct {
 	Instance *EnterpriseRouter `json:"instance,omitempty"`
 

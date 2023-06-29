@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除路由请求体
+// DeleteRoutesRequestBody 删除路由请求体
 type DeleteRoutesRequestBody struct {
 
 	// 待删除的路由信息

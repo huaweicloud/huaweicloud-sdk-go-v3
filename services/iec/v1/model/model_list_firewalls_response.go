@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFirewallsResponse Response Object
 type ListFirewallsResponse struct {
 
 	// 网络ACL数量。

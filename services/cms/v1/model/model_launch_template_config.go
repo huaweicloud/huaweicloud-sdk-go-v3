@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启动模板相关配置
+// LaunchTemplateConfig 启动模板相关配置
 type LaunchTemplateConfig struct {
 	LaunchTemplate *LaunchTemplateInfo `json:"launch_template"`
 

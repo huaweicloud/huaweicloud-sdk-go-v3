@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 组织的配额。
+// QuotaDto 组织的配额。
 type QuotaDto struct {
 
 	// 配额类型，account账户，organizational_unit组织单元，policy策略。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowMigrateStatusRequest Request Object
 type ShowMigrateStatusRequest struct {
 
 	// 是否查询其他区域结果

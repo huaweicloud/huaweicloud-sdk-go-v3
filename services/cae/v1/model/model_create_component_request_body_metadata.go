@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求数据。
+// CreateComponentRequestBodyMetadata 请求数据。
 type CreateComponentRequestBodyMetadata struct {
 
 	// 组件名称。

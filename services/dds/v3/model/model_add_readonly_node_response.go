@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddReadonlyNodeResponse Response Object
 type AddReadonlyNodeResponse struct {
 
 	// 任务ID。

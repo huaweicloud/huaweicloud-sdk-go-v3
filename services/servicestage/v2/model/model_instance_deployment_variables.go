@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 变量参数值，模板部署时模版参数信息
+// InstanceDeploymentVariables 变量参数值，模板部署时模版参数信息
 type InstanceDeploymentVariables struct {
 
 	// 环境变量

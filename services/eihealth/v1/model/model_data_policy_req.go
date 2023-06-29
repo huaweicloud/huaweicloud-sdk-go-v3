@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 允许/禁止删除数据策略
+// DataPolicyReq 允许/禁止删除数据策略
 type DataPolicyReq struct {
 	DeletePolicy *PolicyType `json:"delete_policy"`
 }

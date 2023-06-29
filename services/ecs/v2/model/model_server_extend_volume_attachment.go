@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 挂载到弹性云服务器上的磁盘。
+// ServerExtendVolumeAttachment 挂载到弹性云服务器上的磁盘。
 type ServerExtendVolumeAttachment struct {
 
 	// 磁盘ID，格式为UUID。

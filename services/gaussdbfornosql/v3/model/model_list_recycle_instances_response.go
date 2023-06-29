@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRecycleInstancesResponse Response Object
 type ListRecycleInstancesResponse struct {
 
 	// 总记录数。

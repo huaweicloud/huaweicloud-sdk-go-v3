@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CN横向扩容/DN分片扩容时必填
+// OpenGaussExpandCluster CN横向扩容/DN分片扩容时必填
 type OpenGaussExpandCluster struct {
 
 	// CN横向扩容时必填

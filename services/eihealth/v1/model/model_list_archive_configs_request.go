@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListArchiveConfigsRequest Request Object
 type ListArchiveConfigsRequest struct {
 }
 

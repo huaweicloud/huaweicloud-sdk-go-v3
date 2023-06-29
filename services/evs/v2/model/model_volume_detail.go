@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云硬盘详情。
+// VolumeDetail 云硬盘详情。
 type VolumeDetail struct {
 
 	// 云硬盘的ID。

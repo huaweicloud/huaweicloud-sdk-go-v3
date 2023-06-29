@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 根据标签筛选。
+// TagFilter 根据标签筛选。
 type TagFilter struct {
 
 	// 标签\"键\"的标识符或名称。

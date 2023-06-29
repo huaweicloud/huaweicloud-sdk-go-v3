@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowProtectionGroupRequest Request Object
 type ShowProtectionGroupRequest struct {
 
 	// 保护组的ID。

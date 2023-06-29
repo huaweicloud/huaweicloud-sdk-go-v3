@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SecurityGroupOption
 type SecurityGroupOption struct {
 
 	// 边缘实例的安全组，会对边缘实例中配置的网卡生效。需要指定已有安全组的ID。不填写时选择默认安全组

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowImageHighresolutionMattingTaskRequest Request Object
 type ShowImageHighresolutionMattingTaskRequest struct {
 
 	// 任务id

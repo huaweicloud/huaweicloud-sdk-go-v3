@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 连接信息
+// SelfLinksInfo 连接信息
 type SelfLinksInfo struct {
 
 	// 连接地址

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPublicipPoolRequest Request Object
 type ListPublicipPoolRequest struct {
 
 	// 分页查询起始的资源ID，为空时为查询第一页

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询发送任务列表响应体。
+// ListVmsSendTasksResponseMode 查询发送任务列表响应体。
 type ListVmsSendTasksResponseMode struct {
 
 	// 智能信息基础版任务查询列表。

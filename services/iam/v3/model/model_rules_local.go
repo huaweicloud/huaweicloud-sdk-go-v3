@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 联邦用户映射到IAM中的身份信息
+// RulesLocal 联邦用户映射到IAM中的身份信息
 type RulesLocal struct {
 	User *RulesLocalUser `json:"user,omitempty"`
 

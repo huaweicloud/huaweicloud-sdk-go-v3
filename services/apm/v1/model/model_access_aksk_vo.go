@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ak/sk数据模型。
+// AccessAkskVo ak/sk数据模型。
 type AccessAkskVo struct {
 
 	// ak/sk的id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListElbsResponse Response Object
 type ListElbsResponse struct {
 
 	// 弹性负载均衡列表

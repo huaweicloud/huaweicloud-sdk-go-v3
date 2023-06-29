@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeletePostgresqlDatabaseResponse Response Object
 type DeletePostgresqlDatabaseResponse struct {
 
 	// 操作结果。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源参数
+// RunPipelineSourceParams 源参数
 type RunPipelineSourceParams struct {
 
 	// 代码仓类型

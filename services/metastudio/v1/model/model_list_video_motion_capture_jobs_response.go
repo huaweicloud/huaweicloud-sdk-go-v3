@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVideoMotionCaptureJobsResponse Response Object
 type ListVideoMotionCaptureJobsResponse struct {
 
 	// 视频驱动任务总数。

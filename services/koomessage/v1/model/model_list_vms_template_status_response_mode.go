@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 智能信息基础版模板状态查询返回体。
+// ListVmsTemplateStatusResponseMode 智能信息基础版模板状态查询返回体。
 type ListVmsTemplateStatusResponseMode struct {
 
 	// 智能信息基础版模板列表。

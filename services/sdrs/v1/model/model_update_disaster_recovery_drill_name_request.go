@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDisasterRecoveryDrillNameRequest Request Object
 type UpdateDisasterRecoveryDrillNameRequest struct {
 
 	// 容灾演练的ID。

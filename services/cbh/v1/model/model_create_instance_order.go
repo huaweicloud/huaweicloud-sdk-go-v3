@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成订单接口请求参数。
+// CreateInstanceOrder 生成订单接口请求参数。
 type CreateInstanceOrder struct {
 
 	// 云堡垒机实例key。

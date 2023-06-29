@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPoolsResponse Response Object
 type ListPoolsResponse struct {
 
 	// 请求ID。  注：自动生成 。

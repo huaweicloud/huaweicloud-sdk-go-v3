@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子画面信息。
+// RestPicLayoutBody 子画面信息。
 type RestPicLayoutBody struct {
 	RestPicLayout *RestPicLayout `json:"restPicLayout,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Specifies parameters required for updating a virtual-interface.
+// UpdateVirtualInterfaceRequestBody Specifies parameters required for updating a virtual-interface.
 type UpdateVirtualInterfaceRequestBody struct {
 	VirtualInterface *UpdateVirtualInterface `json:"virtual_interface"`
 }

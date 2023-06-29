@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowHisMeetingDetailRequest Request Object
 type ShowHisMeetingDetailRequest struct {
 
 	// 会议UUID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新后端云服务器组的请求体
+// UpdatePoolReq 更新后端云服务器组的请求体
 type UpdatePoolReq struct {
 
 	// 后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法；当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。

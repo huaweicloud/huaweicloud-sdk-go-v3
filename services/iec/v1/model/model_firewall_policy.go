@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 网络ACL策略。
+// FirewallPolicy 网络ACL策略。
 type FirewallPolicy struct {
 
 	// 网络ACL策略ID。

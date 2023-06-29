@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddIndependentNodeRequest Request Object
 type AddIndependentNodeRequest struct {
 
 	// 指定需要独立master或client的集群ID。

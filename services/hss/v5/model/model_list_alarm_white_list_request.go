@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAlarmWhiteListRequest Request Object
 type ListAlarmWhiteListRequest struct {
 
 	// region id

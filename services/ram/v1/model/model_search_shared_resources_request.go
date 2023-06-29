@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SearchSharedResourcesRequest Request Object
 type SearchSharedResourcesRequest struct {
 	Body *SearchSharedResourcesReqBody `json:"body,omitempty"`
 }

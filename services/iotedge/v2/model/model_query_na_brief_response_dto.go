@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建及查询北向NA返回结构体（简洁版）
+// QueryNaBriefResponseDto 创建及查询北向NA返回结构体（简洁版）
 type QueryNaBriefResponseDto struct {
 
 	// NA系统ID，提供给其他系统访问的唯一标识

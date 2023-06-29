@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListStructTemplateResponse Response Object
 type ListStructTemplateResponse struct {
 
 	// 查询的自定义结构化模板数组

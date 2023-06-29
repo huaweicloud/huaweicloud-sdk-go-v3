@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchStopMigrationTasksRequest Request Object
 type BatchStopMigrationTasksRequest struct {
 	Body *BatchStopMigrationTasksBody `json:"body,omitempty"`
 }

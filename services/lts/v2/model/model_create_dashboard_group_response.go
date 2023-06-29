@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDashboardGroupResponse Response Object
 type CreateDashboardGroupResponse struct {
 
 	// 响应结果

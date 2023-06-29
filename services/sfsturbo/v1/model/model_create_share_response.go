@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateShareResponse Response Object
 type CreateShareResponse struct {
 
 	// 创建的SFS Turbo文件系统ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListPodsResponse Response Object
 type ListPodsResponse struct {
 
 	// 应用实例总数

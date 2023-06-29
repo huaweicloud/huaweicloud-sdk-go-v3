@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAlarmSubRequest Request Object
 type UpdateAlarmSubRequest struct {
 
 	// 告警订阅ID

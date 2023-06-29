@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 连接参数配置，请参见link-config-values参数说明
+// LinksLinkconfigvalues 连接参数配置，请参见link-config-values参数说明
 type LinksLinkconfigvalues struct {
 
 	// 连接配置参数数据结构，请参见configs参数说明。

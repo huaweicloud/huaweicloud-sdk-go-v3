@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 运营商信息
+// Operator 运营商信息
 type Operator struct {
 
 	// 运营商ID。

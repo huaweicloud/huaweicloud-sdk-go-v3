@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建迁移项目请求体。
+// CreateMigrationProject 创建迁移项目请求体。
 type CreateMigrationProject struct {
 
 	// 迁移项目名称。长度为5-50个字符，以英文字母开头，英文字母或数字结束，允许包含下划线和中划线。不允许重复。

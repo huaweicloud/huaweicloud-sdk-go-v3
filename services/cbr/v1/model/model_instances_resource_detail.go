@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// InstancesResourceDetail
 type InstancesResourceDetail struct {
 	Vault *Vault `json:"vault,omitempty"`
 }

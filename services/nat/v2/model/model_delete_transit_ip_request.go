@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTransitIpRequest Request Object
 type DeleteTransitIpRequest struct {
 
 	// 中转IP的ID。

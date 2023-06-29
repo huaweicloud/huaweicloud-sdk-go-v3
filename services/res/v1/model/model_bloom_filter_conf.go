@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BloomFilterConf
 type BloomFilterConf struct {
 
 	// 待过滤行为类型。

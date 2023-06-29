@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDependencyResponse Response Object
 type CreateDependencyResponse struct {
 
 	// 依赖包版本ID。

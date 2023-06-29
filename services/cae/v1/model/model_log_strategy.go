@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 日志策略。
+// LogStrategy 日志策略。
 type LogStrategy struct {
 
 	// 收集路径。

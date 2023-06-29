@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListWorkloadQueueResponse Response Object
 type ListWorkloadQueueResponse struct {
 
 	// 工作负载队列名称。

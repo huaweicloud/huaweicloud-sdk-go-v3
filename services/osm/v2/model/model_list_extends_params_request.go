@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListExtendsParamsRequest Request Object
 type ListExtendsParamsRequest struct {
 
 	// 业务类型id

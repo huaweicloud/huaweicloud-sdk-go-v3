@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 脚本的基本信息。
+// Script 脚本的基本信息。
 type Script struct {
 	ApproveInfo *ApproveInfo `json:"approve_info,omitempty"`
 

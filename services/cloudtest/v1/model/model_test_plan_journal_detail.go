@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 测试计划操作历史详情
+// TestPlanJournalDetail 测试计划操作历史详情
 type TestPlanJournalDetail struct {
 
 	// 测试计划基础信息变更，包括计划名称，测试类型，计划处理者、版本号、关联迭代、开始日期、截至日期、描述

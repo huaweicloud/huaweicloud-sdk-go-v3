@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGaussMySqlBackupResponse Response Object
 type CreateGaussMySqlBackupResponse struct {
 	Backup *Backup `json:"backup,omitempty"`
 

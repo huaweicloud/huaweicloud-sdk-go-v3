@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSatisfactionDimensionsResponse Response Object
 type ListSatisfactionDimensionsResponse struct {
 
 	// 总数

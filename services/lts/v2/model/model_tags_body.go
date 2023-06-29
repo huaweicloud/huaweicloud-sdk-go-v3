@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签字段信息
+// TagsBody 标签字段信息
 type TagsBody struct {
 
 	// 标签键

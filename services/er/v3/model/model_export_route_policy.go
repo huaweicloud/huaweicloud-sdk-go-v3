@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 出方向路由策略
+// ExportRoutePolicy 出方向路由策略
 type ExportRoutePolicy struct {
 
 	// 出方向Ipv4协议路由策略id

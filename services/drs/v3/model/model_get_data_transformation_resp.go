@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据加工行过滤配置信息
+// GetDataTransformationResp 数据加工行过滤配置信息
 type GetDataTransformationResp struct {
 
 	// 数据加工总数。

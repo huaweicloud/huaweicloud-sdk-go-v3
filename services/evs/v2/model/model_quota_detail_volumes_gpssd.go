@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// GPSSD类型云硬盘预留的云硬盘个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
+// QuotaDetailVolumesGpssd GPSSD类型云硬盘预留的云硬盘个数，键值对，包含：reserved（预留）、limit（最大）和in_use（已使用）。
 type QuotaDetailVolumesGpssd struct {
 
 	// 已使用的数量。

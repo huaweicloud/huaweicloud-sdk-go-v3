@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转事件
+// OrderAlert 转事件
 type OrderAlert struct {
 
 	// 转事件的ID列表

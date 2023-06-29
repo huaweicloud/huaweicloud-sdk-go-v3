@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除与会者请求。
+// RestBulkDelAttendReqBody 删除与会者请求。
 type RestBulkDelAttendReqBody struct {
 
 	// 待删除会场列表。

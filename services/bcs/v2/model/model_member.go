@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 联盟成员
+// Member 联盟成员
 type Member struct {
 
 	// 是否支持可信

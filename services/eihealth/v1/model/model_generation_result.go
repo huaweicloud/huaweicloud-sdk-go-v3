@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子生成任务的返回结果
+// GenerationResult 分子生成任务的返回结果
 type GenerationResult struct {
 
 	// 任务名

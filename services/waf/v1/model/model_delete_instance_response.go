@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteInstanceResponse Response Object
 type DeleteInstanceResponse struct {
 
 	// 独享引擎实例ID

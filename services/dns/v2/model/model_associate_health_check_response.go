@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateHealthCheckResponse Response Object
 type AssociateHealthCheckResponse struct {
 
 	// 健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。

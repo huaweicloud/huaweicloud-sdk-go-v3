@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetGaussMySqlQuotasRequest Request Object
 type SetGaussMySqlQuotasRequest struct {
 
 	// 语言。

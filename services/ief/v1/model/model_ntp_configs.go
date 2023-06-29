@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ntp配置
+// NtpConfigs ntp配置
 type NtpConfigs struct {
 
 	// ntp服务是否开启

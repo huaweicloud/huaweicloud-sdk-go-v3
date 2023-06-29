@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteAclV2Response Response Object
 type BatchDeleteAclV2Response struct {
 
 	// 删除成功的ACL策略数量

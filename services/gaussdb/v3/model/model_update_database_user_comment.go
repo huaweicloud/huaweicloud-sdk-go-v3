@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库用户备注信息。
+// UpdateDatabaseUserComment 数据库用户备注信息。
 type UpdateDatabaseUserComment struct {
 
 	// 数据库用户名。

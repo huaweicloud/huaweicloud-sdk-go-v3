@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDbUserResponse Response Object
 type CreateDbUserResponse struct {
 
 	// 任务ID。

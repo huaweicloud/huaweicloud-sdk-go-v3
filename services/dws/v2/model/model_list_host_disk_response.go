@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHostDiskResponse Response Object
 type ListHostDiskResponse struct {
 	Body           *[]DiskResp `json:"body,omitempty"`
 	HttpStatusCode int         `json:"-"`

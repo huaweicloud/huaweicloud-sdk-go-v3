@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业具体输入数据
+// TaskInput 作业具体输入数据
 type TaskInput struct {
 
 	// 输入数据

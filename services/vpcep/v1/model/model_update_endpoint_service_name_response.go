@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEndpointServiceNameResponse Response Object
 type UpdateEndpointServiceNameResponse struct {
 
 	// 终端节点服务名称

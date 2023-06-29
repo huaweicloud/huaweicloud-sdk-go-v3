@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTagsRequest Request Object
 type DeleteTagsRequest struct {
 
 	// 资源类型。

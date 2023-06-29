@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAssociatedWikisRequest Request Object
 type ListAssociatedWikisRequest struct {
 
 	// devcloud项目的32位id

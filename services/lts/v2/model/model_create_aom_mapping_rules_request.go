@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAomMappingRulesRequest Request Object
 type CreateAomMappingRulesRequest struct {
 
 	// 是否开启自动映射

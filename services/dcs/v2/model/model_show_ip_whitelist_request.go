@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowIpWhitelistRequest Request Object
 type ShowIpWhitelistRequest struct {
 
 	// 实例ID。

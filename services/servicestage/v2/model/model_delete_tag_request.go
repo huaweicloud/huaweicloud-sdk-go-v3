@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteTagRequest Request Object
 type DeleteTagRequest struct {
 
 	// 授权名称。

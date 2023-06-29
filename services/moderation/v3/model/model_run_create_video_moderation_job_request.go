@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunCreateVideoModerationJobRequest Request Object
 type RunCreateVideoModerationJobRequest struct {
 	Body *VideoCreateRequest `json:"body,omitempty"`
 }

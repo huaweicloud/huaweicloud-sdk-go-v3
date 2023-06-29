@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建评估项目请求体。
+// CreateEvaluationProjectReq 创建评估项目请求体。
 type CreateEvaluationProjectReq struct {
 
 	// 评估项目名称。长度为5-50个字符，以英文字母开头，英文字母或数字结束，允许包含下划线和中划线。不允许重复。

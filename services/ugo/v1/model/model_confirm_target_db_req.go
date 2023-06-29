@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 确认目标数据库版本的请求体。
+// ConfirmTargetDbReq 确认目标数据库版本的请求体。
 type ConfirmTargetDbReq struct {
 
 	// 评估项目ID。

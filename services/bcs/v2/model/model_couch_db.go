@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// couchDB信息
+// CouchDb couchDB信息
 type CouchDb struct {
 
 	// couchDB用户名

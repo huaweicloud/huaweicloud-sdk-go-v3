@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateResourceShareResponse Response Object
 type UpdateResourceShareResponse struct {
 	ResourceShare  *ResourceShare `json:"resource_share,omitempty"`
 	HttpStatusCode int            `json:"-"`

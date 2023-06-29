@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// PostRequestsRequest Request Object
 type PostRequestsRequest struct {
 
 	// qabot编号，UUID格式，如：303a0a00-c88a-43e3-aa2f-d5b8b9832b02。

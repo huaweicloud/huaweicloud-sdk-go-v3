@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListInstancesDetailsResponse Response Object
 type ListInstancesDetailsResponse struct {
 
 	// 实例信息。

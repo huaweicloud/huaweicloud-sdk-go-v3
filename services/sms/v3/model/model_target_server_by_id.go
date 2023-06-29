@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目的端
+// TargetServerById 目的端
 type TargetServerById struct {
 
 	// 目的端服务器ID

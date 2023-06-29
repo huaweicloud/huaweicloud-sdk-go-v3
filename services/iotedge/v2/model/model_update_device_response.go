@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDeviceResponse Response Object
 type UpdateDeviceResponse struct {
 
 	// 设备配置，内容由产品的$config服务定义。

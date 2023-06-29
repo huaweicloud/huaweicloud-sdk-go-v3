@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 负载均衡器信息
+// LoadBalancerRef 负载均衡器信息
 type LoadBalancerRef struct {
 
 	// 负载均衡器ID。

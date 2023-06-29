@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApisBindedToSignatureKeyV2Request Request Object
 type ListApisBindedToSignatureKeyV2Request struct {
 
 	// 实例ID

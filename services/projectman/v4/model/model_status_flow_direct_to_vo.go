@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// StatusFlowDirectToVo
 type StatusFlowDirectToVo struct {
 
 	//  父状态的名称

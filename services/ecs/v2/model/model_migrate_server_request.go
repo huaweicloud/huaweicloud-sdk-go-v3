@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// MigrateServerRequest Request Object
 type MigrateServerRequest struct {
 
 	// 云服务器ID。

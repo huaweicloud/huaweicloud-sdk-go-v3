@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowRepositoryNameExistRequest Request Object
 type ShowRepositoryNameExistRequest struct {
 
 	// 项目的uuid

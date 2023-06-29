@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFunctionCodeRequest Request Object
 type UpdateFunctionCodeRequest struct {
 
 	// 函数的URN，详细解释见表1 FunctionGraph函数字段说明表的描述。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdatePoliciesPriorityResponse Response Object
 type BatchUpdatePoliciesPriorityResponse struct {
 
 	// 请求ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAddonInstanceRequest Request Object
 type CreateAddonInstanceRequest struct {
 	Body *InstanceRequest `json:"body,omitempty"`
 }

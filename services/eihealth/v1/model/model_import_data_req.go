@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入数据请求体
+// ImportDataReq 导入数据请求体
 type ImportDataReq struct {
 
 	// 执行策略（true：全部覆盖，false：全部跳过，默认为true）

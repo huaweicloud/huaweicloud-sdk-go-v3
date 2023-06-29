@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DeleteTagsRequestBody
+// DeleteTagsRequestBody DeleteTagsRequestBody
 type DeleteTagsRequestBody struct {
 
 	// 资源id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskSettingsResponse Response Object
 type ShowTaskSettingsResponse struct {
 
 	// 高级选项的相关信息

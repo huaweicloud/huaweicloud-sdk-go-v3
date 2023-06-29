@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// search condition
+// DataobjectSearchCondition search condition
 type DataobjectSearchCondition struct {
 
 	// conditions

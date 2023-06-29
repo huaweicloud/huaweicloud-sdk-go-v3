@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowExtensionEvaluationResponse Response Object
 type ShowExtensionEvaluationResponse struct {
 
 	// 返回值

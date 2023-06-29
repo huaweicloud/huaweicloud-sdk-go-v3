@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUnsetScalingInstancesStantbyRequest Request Object
 type BatchUnsetScalingInstancesStantbyRequest struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警详情
+// ListAlertRsp 告警详情
 type ListAlertRsp struct {
 
 	// 版本

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSharesRequest Request Object
 type ListSharesRequest struct {
 
 	// MIME类型

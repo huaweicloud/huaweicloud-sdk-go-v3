@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例规格信息列表。
+// ListFlavorsResult 实例规格信息列表。
 type ListFlavorsResult struct {
 
 	// 引擎名称。

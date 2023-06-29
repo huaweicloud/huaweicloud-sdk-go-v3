@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SendSmsVerificationCodeResponse Response Object
 type SendSmsVerificationCodeResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateInstanceRequestBody
+// CreateInstanceRequestBody CreateInstanceRequestBody
 type CreateInstanceRequestBody struct {
 
 	// 收费模式，当前仅支持按需收费（30）

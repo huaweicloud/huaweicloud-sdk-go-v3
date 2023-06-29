@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建包周期存储库请求体
+// VaultOrderCreateReqs 创建包周期存储库请求体
 type VaultOrderCreateReqs struct {
 	Vault *VaultOrder `json:"vault"`
 }

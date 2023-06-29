@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 表列表
+// ListTableByNameInput 表列表
 type ListTableByNameInput struct {
 
 	// 被查询表的名字列表

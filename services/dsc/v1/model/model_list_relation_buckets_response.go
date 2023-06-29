@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRelationBucketsResponse Response Object
 type ListRelationBucketsResponse struct {
 
 	// 关系信息总数

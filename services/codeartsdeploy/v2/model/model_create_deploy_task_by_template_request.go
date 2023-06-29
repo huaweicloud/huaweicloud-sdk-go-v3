@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDeployTaskByTemplateRequest Request Object
 type CreateDeployTaskByTemplateRequest struct {
 	Body *TemplateTaskRequestBody `json:"body,omitempty"`
 }

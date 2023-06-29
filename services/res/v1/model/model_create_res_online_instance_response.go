@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateResOnlineInstanceResponse Response Object
 type CreateResOnlineInstanceResponse struct {
 
 	// 是否成功

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateSecurityGroupRuleOption
 type CreateSecurityGroupRuleOption struct {
 
 	// 安全组ID

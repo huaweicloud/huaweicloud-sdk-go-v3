@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchSecondLevelMonitoringRequest Request Object
 type SwitchSecondLevelMonitoringRequest struct {
 
 	// 实例ID。

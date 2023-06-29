@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListProductsResponse Response Object
 type ListProductsResponse struct {
 
 	// 套餐所支持操作系统类型。请求参数有os_type时，才有此参数。

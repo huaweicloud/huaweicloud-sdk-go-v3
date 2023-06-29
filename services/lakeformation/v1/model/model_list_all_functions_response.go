@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAllFunctionsResponse Response Object
 type ListAllFunctionsResponse struct {
 	PageInfo *PagedInfo `json:"page_info,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例信息
+// MysqlInstanceRequest 实例信息
 type MysqlInstanceRequest struct {
 	ChargeInfo *MysqlChargeInfo `json:"charge_info,omitempty"`
 

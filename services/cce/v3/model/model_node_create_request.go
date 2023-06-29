@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NodeCreateRequest
 type NodeCreateRequest struct {
 
 	// API类型，固定值“Node”，该值不可修改。

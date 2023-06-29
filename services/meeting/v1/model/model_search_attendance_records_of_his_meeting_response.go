@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchAttendanceRecordsOfHisMeetingResponse Response Object
 type SearchAttendanceRecordsOfHisMeetingResponse struct {
 
 	// 查询偏移量。

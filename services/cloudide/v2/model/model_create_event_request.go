@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEventRequest Request Object
 type CreateEventRequest struct {
 	Body *EventSchema `json:"body,omitempty"`
 }

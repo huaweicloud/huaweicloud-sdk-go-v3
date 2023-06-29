@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExportDatasetRequest Request Object
 type ExportDatasetRequest struct {
 
 	// 作业ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除账号请求
+// RedisDeleteDbUserRequest 删除账号请求
 type RedisDeleteDbUserRequest struct {
 
 	// 需要删除的数据库账号名称列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// EipResourcesAvailableV3RequestBody This is a auto create Body Object
 type EipResourcesAvailableV3RequestBody struct {
 
 	// 公共池类型

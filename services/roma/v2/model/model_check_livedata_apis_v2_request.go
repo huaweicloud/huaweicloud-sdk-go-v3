@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckLivedataApisV2Request Request Object
 type CheckLivedataApisV2Request struct {
 
 	// 实例ID

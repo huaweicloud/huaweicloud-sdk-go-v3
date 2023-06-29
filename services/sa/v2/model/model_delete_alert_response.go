@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteAlertResponse Response Object
 type DeleteAlertResponse struct {
 
 	// Id value

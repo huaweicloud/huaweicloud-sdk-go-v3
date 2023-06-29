@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowPrivateNatResponse Response Object
 type ShowPrivateNatResponse struct {
 	Gateway *PrivateNat `json:"gateway,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建单个任务请求体。
+// SingleCreateJobReq 创建单个任务请求体。
 type SingleCreateJobReq struct {
 	Job *CreateJobReq `json:"job"`
 }

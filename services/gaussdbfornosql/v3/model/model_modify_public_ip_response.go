@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ModifyPublicIpResponse Response Object
 type ModifyPublicIpResponse struct {
 
 	// 任务ID。

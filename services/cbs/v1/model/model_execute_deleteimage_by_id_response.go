@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteDeleteimageByIdResponse Response Object
 type ExecuteDeleteimageByIdResponse struct {
 	HttpStatusCode int `json:"-"`
 }

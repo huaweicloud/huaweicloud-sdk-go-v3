@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取原始数据表格入参。
+// RawTableParam 获取原始数据表格入参。
 type RawTableParam struct {
 
 	// 上一次扫描的数据ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ImageDetectionResultBody
 type ImageDetectionResultBody struct {
 	Detail *ImageDetectionResultDetail `json:"detail,omitempty"`
 

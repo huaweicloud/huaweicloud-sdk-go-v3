@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteBackendInstanceV2Request Request Object
 type DeleteBackendInstanceV2Request struct {
 
 	// 实例ID

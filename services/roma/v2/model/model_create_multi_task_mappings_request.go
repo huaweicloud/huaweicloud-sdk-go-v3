@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMultiTaskMappingsRequest Request Object
 type CreateMultiTaskMappingsRequest struct {
 
 	// 实例ID

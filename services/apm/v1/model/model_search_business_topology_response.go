@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchBusinessTopologyResponse Response Object
 type SearchBusinessTopologyResponse struct {
 
 	// 组件节点列表。

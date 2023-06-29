@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成发送任务短链配置信息
+// AimResolveTask 生成发送任务短链配置信息
 type AimResolveTask struct {
 
 	// 智能信息模板ID，由9位数字组成。

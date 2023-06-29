@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RunDeletePictureRequest Request Object
 type RunDeletePictureRequest struct {
 
 	// 实例名称。

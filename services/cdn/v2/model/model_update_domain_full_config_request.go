@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDomainFullConfigRequest Request Object
 type UpdateDomainFullConfigRequest struct {
 
 	// 加速域名

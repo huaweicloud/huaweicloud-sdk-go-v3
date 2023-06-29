@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 注册数据库用户请求
+// RegisterDbUserRequestBody 注册数据库用户请求
 type RegisterDbUserRequestBody struct {
 
 	// 数据库用户名称

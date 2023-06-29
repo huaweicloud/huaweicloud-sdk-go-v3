@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecuteGetFramsListByImagesIdResponse Response Object
 type ExecuteGetFramsListByImagesIdResponse struct {
 
 	// 播报框

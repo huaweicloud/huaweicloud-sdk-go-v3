@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSignatureKeysV2Request Request Object
 type ListSignatureKeysV2Request struct {
 
 	// 实例ID

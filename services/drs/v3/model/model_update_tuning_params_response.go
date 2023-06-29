@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateTuningParamsResponse Response Object
 type UpdateTuningParamsResponse struct {
 
 	// 全量调优参数

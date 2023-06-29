@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRoutetableResponse Response Object
 type ShowRoutetableResponse struct {
 	Routetable     *Routetable `json:"routetable,omitempty"`
 	HttpStatusCode int         `json:"-"`

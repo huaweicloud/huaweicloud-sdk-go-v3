@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddHooksRequest Request Object
 type AddHooksRequest struct {
 
 	// 组名(克隆地址中域名后面项目名前的一段 示例：git@repo.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228 )

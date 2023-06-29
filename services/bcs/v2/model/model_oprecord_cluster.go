@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群信息
+// OprecordCluster 集群信息
 type OprecordCluster struct {
 
 	// 集群类型

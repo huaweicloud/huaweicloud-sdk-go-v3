@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 自定义键值对。
+// Tag 自定义键值对。
 type Tag struct {
 
 	// 标签\"键\"的标识符或名称。

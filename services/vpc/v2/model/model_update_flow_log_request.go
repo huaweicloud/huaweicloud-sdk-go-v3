@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateFlowLogRequest Request Object
 type UpdateFlowLogRequest struct {
 
 	// 流日志资源唯一标识

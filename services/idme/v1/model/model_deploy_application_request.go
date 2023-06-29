@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeployApplicationRequest Request Object
 type DeployApplicationRequest struct {
 
 	// 运行服务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowProductConfigRequest Request Object
 type ShowProductConfigRequest struct {
 
 	// 协议类型

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// KeyWordsStat
 type KeyWordsStat struct {
 
 	// 关键词。

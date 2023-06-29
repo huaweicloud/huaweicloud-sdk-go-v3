@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto query response Object
+// GetUsersListDetailResponses This is a auto query response Object
 type GetUsersListDetailResponses struct {
 
 	// DDM实例帐号名称。

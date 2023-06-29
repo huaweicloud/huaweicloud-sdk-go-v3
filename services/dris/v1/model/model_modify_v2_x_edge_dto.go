@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// V2XEdge模型资源返回对象
+// ModifyV2XEdgeDto V2XEdge模型资源返回对象
 type ModifyV2XEdgeDto struct {
 
 	// **参数说明**：名称。  **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。

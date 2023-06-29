@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskCaseAwChartResponse Response Object
 type ShowTaskCaseAwChartResponse struct {
 
 	// 响应码

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociateBandwidthPackageRequest Request Object
 type AssociateBandwidthPackageRequest struct {
 
 	// 带宽包实例ID。

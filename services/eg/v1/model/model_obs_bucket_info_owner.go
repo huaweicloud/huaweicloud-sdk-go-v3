@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 桶拥有者信息
+// ObsBucketInfoOwner 桶拥有者信息
 type ObsBucketInfoOwner struct {
 
 	// 显示名称

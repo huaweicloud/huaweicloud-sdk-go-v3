@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteCustomAuthorizerV2Response Response Object
 type DeleteCustomAuthorizerV2Response struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCustomfieldsResponse Response Object
 type CreateCustomfieldsResponse struct {
 
 	// 字段选项

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateTagsRequestBody
+// CreateTagsRequestBody CreateTagsRequestBody
 type CreateTagsRequestBody struct {
 
 	// 资源id

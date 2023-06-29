@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群容灾恢复详情
+// ClusterDisasterRecovery 集群容灾恢复详情
 type ClusterDisasterRecovery struct {
 	PrimaryCluster *ClusterRecoveryProgress `json:"primary_cluster,omitempty"`
 

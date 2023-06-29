@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件详情统计
+// EventManagementResponseInfo 事件详情统计
 type EventManagementResponseInfo struct {
 
 	// 事件编号

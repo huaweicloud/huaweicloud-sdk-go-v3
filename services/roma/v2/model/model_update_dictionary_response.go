@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateDictionaryResponse Response Object
 type UpdateDictionaryResponse struct {
 
 	// 字典ID

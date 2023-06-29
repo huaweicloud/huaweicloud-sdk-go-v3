@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResizeGraphRequest Request Object
 type ResizeGraphRequest struct {
 
 	// 图ID。

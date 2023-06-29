@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSlowLogResponse Response Object
 type ListSlowLogResponse struct {
 
 	// DDM慢sql日志条数。

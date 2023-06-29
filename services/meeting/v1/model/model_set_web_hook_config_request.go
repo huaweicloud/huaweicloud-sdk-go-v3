@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SetWebHookConfigRequest Request Object
 type SetWebHookConfigRequest struct {
 	Body *WebHookConfigRequest `json:"body,omitempty"`
 }

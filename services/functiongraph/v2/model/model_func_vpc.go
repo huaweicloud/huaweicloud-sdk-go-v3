@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数vpc配置。
+// FuncVpc 函数vpc配置。
 type FuncVpc struct {
 
 	// 虚拟私有云名称。

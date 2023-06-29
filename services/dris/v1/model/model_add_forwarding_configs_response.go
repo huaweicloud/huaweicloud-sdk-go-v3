@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddForwardingConfigsResponse Response Object
 type AddForwardingConfigsResponse struct {
 
 	// **参数说明**：转发配置的类型。  **取值范围**：当前仅支持“kafka、mrskafka”。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源参数
+// CodeSourceParams 源参数
 type CodeSourceParams struct {
 
 	// 代码仓类型

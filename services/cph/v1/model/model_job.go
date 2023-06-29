@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 任务。
+// Job 任务。
 type Job struct {
 
 	// 云手机的唯一标识，云手机相关任务包含此字段

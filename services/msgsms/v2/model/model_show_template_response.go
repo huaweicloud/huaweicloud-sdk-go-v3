@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTemplateResponse Response Object
 type ShowTemplateResponse struct {
 
 	// 模板主键ID，用于获取、修改、删除模板以及查询模板变量的唯一标识

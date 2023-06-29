@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPlansRequest Request Object
 type ShowPlansRequest struct {
 
 	// 模糊查询使用(针对测试计划名称)

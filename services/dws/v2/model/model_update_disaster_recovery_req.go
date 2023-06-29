@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新容灾配置请求体
+// UpdateDisasterRecoveryReq 更新容灾配置请求体
 type UpdateDisasterRecoveryReq struct {
 
 	// 容灾同步周期

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -13,6 +16,12 @@ type EditUserReq struct {
 
 	// 用户邮箱。
 	UserEmail *string `json:"user_email,omitempty"`
+
+	// 手机号。
+	UserPhone *string `json:"user_phone,omitempty"`
+
+	// 激活类型，默认为用户激活。 * USER_ACTIVATE： 用户激活 * ADMIN_ACTIVATE： 管理员激活
+	ActiveType *EditUserReqActiveType `json:"active_type,omitempty"`
 
 	// 账户过期时间，0表示永远不过期。
 	AccountExpires *string `json:"account_expires,omitempty"`
@@ -37,4 +46,51 @@ func (o EditUserReq) String() string {
 	}
 
 	return strings.Join([]string{"EditUserReq", string(data)}, " ")
+}
+
+type EditUserReqActiveType struct {
+	value string
+}
+
+type EditUserReqActiveTypeEnum struct {
+	USER_ACTIVATE  EditUserReqActiveType
+	ADMIN_ACTIVATE EditUserReqActiveType
+}
+
+func GetEditUserReqActiveTypeEnum() EditUserReqActiveTypeEnum {
+	return EditUserReqActiveTypeEnum{
+		USER_ACTIVATE: EditUserReqActiveType{
+			value: "USER_ACTIVATE",
+		},
+		ADMIN_ACTIVATE: EditUserReqActiveType{
+			value: "ADMIN_ACTIVATE",
+		},
+	}
+}
+
+func (c EditUserReqActiveType) Value() string {
+	return c.value
+}
+
+func (c EditUserReqActiveType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *EditUserReqActiveType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

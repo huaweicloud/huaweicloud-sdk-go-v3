@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowClusterEndpointsResponse Response Object
 type ShowClusterEndpointsResponse struct {
 	Metadata *Metadata `json:"metadata,omitempty"`
 

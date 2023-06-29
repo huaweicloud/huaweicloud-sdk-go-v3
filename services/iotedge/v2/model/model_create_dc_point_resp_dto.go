@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建点位表配置响应结构体
+// CreateDcPointRespDto 创建点位表配置响应结构体
 type CreateDcPointRespDto struct {
 
 	// 点位表id，数据源下唯一

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteVolumeTagsRequest Request Object
 type BatchDeleteVolumeTagsRequest struct {
 
 	// 磁盘ID。

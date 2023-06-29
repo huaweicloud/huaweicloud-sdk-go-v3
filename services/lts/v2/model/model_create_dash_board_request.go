@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDashBoardRequest Request Object
 type CreateDashBoardRequest struct {
 	Body *CreateDashBoardReqBody `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例相关信息的集合
+// CreateInstanceDetail 实例相关信息的集合
 type CreateInstanceDetail struct {
 
 	// DDM实例名称，命名要求如下。 - 长度为4-64个字符。 - 必须以字母开头。 - 可以包含字母、数字、中划线，不能包含其它特殊字符。

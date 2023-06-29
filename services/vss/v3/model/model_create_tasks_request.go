@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTasksRequest Request Object
 type CreateTasksRequest struct {
 
 	// 是否将本次扫描升级为专业版规格（￥99.00/次）

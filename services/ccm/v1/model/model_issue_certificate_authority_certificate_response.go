@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// IssueCertificateAuthorityCertificateResponse Response Object
 type IssueCertificateAuthorityCertificateResponse struct {
 	HttpStatusCode int `json:"-"`
 }

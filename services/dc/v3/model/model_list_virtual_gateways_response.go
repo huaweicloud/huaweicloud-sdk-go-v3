@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListVirtualGatewaysResponse Response Object
 type ListVirtualGatewaysResponse struct {
 
 	// 操作请求ID

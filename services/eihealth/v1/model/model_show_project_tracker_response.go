@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProjectTrackerResponse Response Object
 type ShowProjectTrackerResponse struct {
 
 	// 追踪器配置转储生命周期

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteGetVideosListRequest Request Object
 type ExecuteGetVideosListRequest struct {
 
 	// 范围：大于等于1 默认：10

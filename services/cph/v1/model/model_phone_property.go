@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机属性信息。
+// PhoneProperty 云手机属性信息。
 type PhoneProperty struct {
 
 	// 云手机id

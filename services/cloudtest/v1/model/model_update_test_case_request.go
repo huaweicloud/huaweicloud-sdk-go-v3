@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateTestCaseRequest Request Object
 type UpdateTestCaseRequest struct {
 
 	// 测试用例唯一标识，固定长度32位字符

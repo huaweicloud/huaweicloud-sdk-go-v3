@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Topic
 type Topic struct {
 
 	// 名称。

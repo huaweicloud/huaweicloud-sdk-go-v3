@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPortResultsRequest Request Object
 type ListPortResultsRequest struct {
 
 	// 任务ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClusterConfigurationsResponse Response Object
 type ListClusterConfigurationsResponse struct {
 
 	// 集群所关联的参数组信息。

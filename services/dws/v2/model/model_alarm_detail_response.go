@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警详情
+// AlarmDetailResponse 告警详情
 type AlarmDetailResponse struct {
 
 	// 告警定义ID

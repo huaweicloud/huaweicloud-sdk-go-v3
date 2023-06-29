@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 新增路由条目的字段
+// AddRouteTableRoute 新增路由条目的字段
 type AddRouteTableRoute struct {
 
 	// 功能说明：路由的类型 取值范围： ecs：弹性云服务器 eni：网卡 vip：虚拟IP nat：NAT网关 peering：对等连接 vpn：虚拟专用网络 dc：云专线 cc：云连接 egw：VPC终端节点

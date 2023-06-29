@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建网络ACL请求体。
+// CreateFirewallRequestBody 创建网络ACL请求体。
 type CreateFirewallRequestBody struct {
 	Firewall *CreateFirewallOption `json:"firewall"`
 }

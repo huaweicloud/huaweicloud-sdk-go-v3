@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// NovaCreateServersRequest Request Object
 type NovaCreateServersRequest struct {
 
 	// 微版本头

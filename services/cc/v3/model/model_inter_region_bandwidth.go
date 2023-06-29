@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 域间带宽实例。
+// InterRegionBandwidth 域间带宽实例。
 type InterRegionBandwidth struct {
 
 	// 域间带宽实例的ID。

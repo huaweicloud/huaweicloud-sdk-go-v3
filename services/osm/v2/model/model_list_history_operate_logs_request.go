@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListHistoryOperateLogsRequest Request Object
 type ListHistoryOperateLogsRequest struct {
 
 	// 授权id

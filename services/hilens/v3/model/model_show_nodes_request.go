@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowNodesRequest Request Object
 type ShowNodesRequest struct {
 
 	// 查询的起始位置，取值范围为非负整数，默认为0

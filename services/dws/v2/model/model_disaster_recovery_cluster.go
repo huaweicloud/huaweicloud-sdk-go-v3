@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 容灾集群信息
+// DisasterRecoveryCluster 容灾集群信息
 type DisasterRecoveryCluster struct {
 
 	// 容灾集群信息ID

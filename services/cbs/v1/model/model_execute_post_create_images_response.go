@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExecutePostCreateImagesResponse Response Object
 type ExecutePostCreateImagesResponse struct {
 
 	// 图片id

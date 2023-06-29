@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 输出信息。
+// OutputInfo 输出信息。
 type OutputInfo struct {
 
 	// 面部表情输入地址。

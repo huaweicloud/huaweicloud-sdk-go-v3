@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchDeleteInstancesResponse Response Object
 type BatchDeleteInstancesResponse struct {
 
 	// 修改实例的结果。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件类型
+// CreateIncidentIncidentType 事件类型
 type CreateIncidentIncidentType struct {
 
 	// Id value

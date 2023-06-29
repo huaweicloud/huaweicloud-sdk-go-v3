@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteDisasterRecoveryResponse Response Object
 type DeleteDisasterRecoveryResponse struct {
 
 	// 解除容灾关系的工作ID。

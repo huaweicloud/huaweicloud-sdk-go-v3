@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SendCommandRequest Request Object
 type SendCommandRequest struct {
 
 	// 实例ID

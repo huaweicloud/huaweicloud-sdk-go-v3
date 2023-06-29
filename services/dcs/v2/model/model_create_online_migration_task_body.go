@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建在线数据迁移任务结构体
+// CreateOnlineMigrationTaskBody 创建在线数据迁移任务结构体
 type CreateOnlineMigrationTaskBody struct {
 
 	// 在线迁移任务名称。

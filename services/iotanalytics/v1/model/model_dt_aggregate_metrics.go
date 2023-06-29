@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 聚合指标列表
+// DtAggregateMetrics 聚合指标列表
 type DtAggregateMetrics struct {
 
 	// 定义指标计算查询的输入资产属性列表

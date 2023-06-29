@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateScalingNotificationResponse Response Object
 type CreateScalingNotificationResponse struct {
 
 	// SMN服务中Topic的唯一的资源标识。

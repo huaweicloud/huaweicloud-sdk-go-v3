@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 创建安全组规则参数
+// CreateSecurityGroupRuleOption 创建安全组规则参数
 type CreateSecurityGroupRuleOption struct {
 
 	// 安全组规则描述信息。
@@ -85,13 +85,18 @@ func (c CreateSecurityGroupRuleOptionDirection) MarshalJSON() ([]byte, error) {
 
 func (c *CreateSecurityGroupRuleOptionDirection) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -123,13 +128,18 @@ func (c CreateSecurityGroupRuleOptionEthertype) MarshalJSON() ([]byte, error) {
 
 func (c *CreateSecurityGroupRuleOptionEthertype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

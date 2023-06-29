@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateMetadataReq This is a auto create Body Object
 type CreateMetadataReq struct {
 
 	// 元数据存储地址。

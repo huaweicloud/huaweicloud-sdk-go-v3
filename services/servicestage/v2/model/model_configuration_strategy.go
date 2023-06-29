@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 部署策略
+// ConfigurationStrategy 部署策略
 type ConfigurationStrategy struct {
 
 	// 部署策略

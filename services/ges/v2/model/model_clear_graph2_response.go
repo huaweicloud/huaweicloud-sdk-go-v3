@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ClearGraph2Response Response Object
 type ClearGraph2Response struct {
 
 	// 执行该异步任务的jobId。

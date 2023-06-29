@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 扩展属性，目前只支持server_id
+// MultiTaskInitElementExtInfo 扩展属性，目前只支持server_id
 type MultiTaskInitElementExtInfo struct {
 
 	// Mysql的ServerID

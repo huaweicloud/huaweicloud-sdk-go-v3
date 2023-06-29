@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CountCertResourceInstancesRequest Request Object
 type CountCertResourceInstancesRequest struct {
 	Body *ListResourceInstancesRequestBody `json:"body,omitempty"`
 }

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListOnDemandResourceRatingsResponse Response Object
 type ListOnDemandResourceRatingsResponse struct {
 
 	// 折扣的金额。

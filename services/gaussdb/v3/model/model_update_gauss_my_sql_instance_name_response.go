@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGaussMySqlInstanceNameResponse Response Object
 type UpdateGaussMySqlInstanceNameResponse struct {
 
 	// 修改实例名称的任务ID

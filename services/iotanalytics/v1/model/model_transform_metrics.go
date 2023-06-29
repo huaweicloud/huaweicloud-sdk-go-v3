@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 转换计算定义
+// TransformMetrics 转换计算定义
 type TransformMetrics struct {
 	TimeSpan *TimeSpan `json:"time_span"`
 

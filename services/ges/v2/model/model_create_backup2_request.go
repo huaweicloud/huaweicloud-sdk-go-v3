@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateBackup2Request Request Object
 type CreateBackup2Request struct {
 
 	// 图ID。

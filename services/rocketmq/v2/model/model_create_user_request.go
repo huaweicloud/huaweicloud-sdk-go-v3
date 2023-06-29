@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateUserRequest Request Object
 type CreateUserRequest struct {
 
 	// 实例ID。

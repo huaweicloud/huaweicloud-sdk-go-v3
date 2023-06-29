@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteMigrationTaskResponse Response Object
 type DeleteMigrationTaskResponse struct {
 
 	// 删除的迁移任务ID列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 待迁移数据的云手机信息。
+// MigrateInfo 待迁移数据的云手机信息。
 type MigrateInfo struct {
 
 	// 源云手机ID

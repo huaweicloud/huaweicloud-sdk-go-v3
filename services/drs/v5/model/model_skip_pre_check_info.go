@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 跳过预检查项参数。
+// SkipPreCheckInfo 跳过预检查项参数。
 type SkipPreCheckInfo struct {
 
 	// 跳过的预检查项。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDeviceGroupsResponse Response Object
 type ListDeviceGroupsResponse struct {
 
 	// 设备组信息列表。

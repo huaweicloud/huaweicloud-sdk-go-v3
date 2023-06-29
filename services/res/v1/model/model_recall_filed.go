@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 召回字段
+// RecallFiled 召回字段
 type RecallFiled struct {
 
 	// 字段名称。

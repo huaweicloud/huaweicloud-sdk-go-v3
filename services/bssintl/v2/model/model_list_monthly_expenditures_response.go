@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMonthlyExpendituresResponse Response Object
 type ListMonthlyExpendituresResponse struct {
 
 	// 返回码

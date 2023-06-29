@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDockerLoginResponse Response Object
 type ShowDockerLoginResponse struct {
 
 	// 临时登录指令

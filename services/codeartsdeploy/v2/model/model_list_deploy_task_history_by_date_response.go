@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDeployTaskHistoryByDateResponse Response Object
 type ListDeployTaskHistoryByDateResponse struct {
 
 	// 应用历史部署记录列表

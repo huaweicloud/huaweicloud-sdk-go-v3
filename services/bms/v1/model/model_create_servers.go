@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// server字段数据结构说明
+// CreateServers server字段数据结构说明
 type CreateServers struct {
 
 	// 裸金属服务器使用的镜像ID或者镜像资源的URL。ID格式为通用唯一识别码（Universally Unique Identifier，简称UUID）。镜像ID可以从镜像服务控制台获取，或者参考《镜像服务API参考》的“查询镜像列表”章节查询。在使用“查询镜像列表”API查询时，可以添加过滤字段“?virtual_env_type=Ironic”来筛选裸金属服务器镜像。

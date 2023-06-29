@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库列定义
+// DatabaseColumnDto 数据库列定义
 type DatabaseColumnDto struct {
 
 	// 列名

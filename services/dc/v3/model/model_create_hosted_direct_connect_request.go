@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateHostedDirectConnectRequest Request Object
 type CreateHostedDirectConnectRequest struct {
 	Body *CreateHostedDirectConnectRequestBody `json:"body,omitempty"`
 }

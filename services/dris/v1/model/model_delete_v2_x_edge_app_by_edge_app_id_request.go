@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteV2XEdgeAppByEdgeAppIdRequest Request Object
 type DeleteV2XEdgeAppByEdgeAppIdRequest struct {
 
 	// **参数说明**：用户自定义应用唯一ID。  **取值范围**：只允许字母、数字、下划线（_）、连接符（-）、美元符号（$）的组合。

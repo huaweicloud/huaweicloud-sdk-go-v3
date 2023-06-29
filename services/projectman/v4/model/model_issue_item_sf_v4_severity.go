@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项重要程度
+// IssueItemSfV4Severity 工作项重要程度
 type IssueItemSfV4Severity struct {
 
 	// 重要程度id

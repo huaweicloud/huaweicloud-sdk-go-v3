@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowShardingBalancerResponse Response Object
 type ShowShardingBalancerResponse struct {
 
 	// 集群均衡是否打开。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowIssueCompletionRateResponse Response Object
 type ShowIssueCompletionRateResponse struct {
 
 	// 不同类型的工作项完成率

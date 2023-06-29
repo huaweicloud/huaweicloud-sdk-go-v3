@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTreesResponse Response Object
 type ListTreesResponse struct {
 
 	// 仓库文件列表。

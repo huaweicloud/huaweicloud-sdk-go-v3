@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomAuthorizersV2Response Response Object
 type ListCustomAuthorizersV2Response struct {
 
 	// 本次返回的列表长度

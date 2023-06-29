@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListClusterSnapshotsResponse Response Object
 type ListClusterSnapshotsResponse struct {
 
 	// 快照对象列表。

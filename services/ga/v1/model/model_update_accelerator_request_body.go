@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// update Accelerator request
+// UpdateAcceleratorRequestBody update Accelerator request
 type UpdateAcceleratorRequestBody struct {
 	Accelerator *UpdateAcceleratorOption `json:"accelerator"`
 }

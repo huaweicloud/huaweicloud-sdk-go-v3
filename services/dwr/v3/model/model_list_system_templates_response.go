@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSystemTemplatesResponse Response Object
 type ListSystemTemplatesResponse struct {
 
 	// 列表条目数。

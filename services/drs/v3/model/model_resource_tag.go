@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签信息体
+// ResourceTag 标签信息体
 type ResourceTag struct {
 
 	// 标签键，最大长度36，只能包含字母、数字、下划线、中划线和中文，需要修改标签时填写。

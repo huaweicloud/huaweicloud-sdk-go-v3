@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMultiAccountTransferAmountResponse Response Object
 type ShowMultiAccountTransferAmountResponse struct {
 
 	// 记录条数。

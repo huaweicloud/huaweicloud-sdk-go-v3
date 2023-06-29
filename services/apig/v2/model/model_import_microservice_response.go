@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportMicroserviceResponse Response Object
 type ImportMicroserviceResponse struct {
 
 	// vpc通道编号

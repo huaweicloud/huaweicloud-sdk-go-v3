@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 热度策略的分群配置
+// Category 热度策略的分群配置
 type Category struct {
 
 	// 用户特征。

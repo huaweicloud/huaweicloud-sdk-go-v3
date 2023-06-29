@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateReassignmentTaskRequest Request Object
 type CreateReassignmentTaskRequest struct {
 
 	// 实例ID。

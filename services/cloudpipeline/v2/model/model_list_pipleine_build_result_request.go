@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPipleineBuildResultRequest Request Object
 type ListPipleineBuildResultRequest struct {
 
 	// 项目id

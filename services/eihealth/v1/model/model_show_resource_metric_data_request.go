@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowResourceMetricDataRequest Request Object
 type ShowResourceMetricDataRequest struct {
 
 	// 查询监控数据起始时间，UNIX时间戳，单位毫秒，不填时默认为当前时间

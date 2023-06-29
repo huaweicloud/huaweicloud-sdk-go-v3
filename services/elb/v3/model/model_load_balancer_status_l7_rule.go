@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询负载均衡状态树返回对象中的rule数据模型。
+// LoadBalancerStatusL7Rule 查询负载均衡状态树返回对象中的rule数据模型。
 type LoadBalancerStatusL7Rule struct {
 
 	// L7转发规则ID。

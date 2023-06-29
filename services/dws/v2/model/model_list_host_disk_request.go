@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListHostDiskRequest Request Object
 type ListHostDiskRequest struct {
 
 	// 集群ID。获取方法，请参见9.6-获取集群ID。

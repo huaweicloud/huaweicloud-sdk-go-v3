@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGenerationTaskResponse Response Object
 type CreateGenerationTaskResponse struct {
 
 	// 分子生成任务ID

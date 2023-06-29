@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// JobEntities
 type JobEntities struct {
 
 	// 每个子任务的执行信息。

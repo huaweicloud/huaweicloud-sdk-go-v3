@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteReplicationRequest Request Object
 type DeleteReplicationRequest struct {
 
 	// 复制对的ID。

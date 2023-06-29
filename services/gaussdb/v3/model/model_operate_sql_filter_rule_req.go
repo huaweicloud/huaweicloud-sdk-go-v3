@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// - 开启/关闭sql限流参数体。
+// OperateSqlFilterRuleReq - 开启/关闭sql限流参数体。
 type OperateSqlFilterRuleReq struct {
 	SqlFilterRules []NodeSqlFilterRuleInfo `json:"sql_filter_rules"`
 }

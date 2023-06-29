@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RestoreCertificateAuthorityRequest Request Object
 type RestoreCertificateAuthorityRequest struct {
 
 	// 所需要恢复的CA证书ID。

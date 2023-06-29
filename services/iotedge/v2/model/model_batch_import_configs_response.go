@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchImportConfigsResponse Response Object
 type BatchImportConfigsResponse struct {
 
 	// 已成功导入的配置项id

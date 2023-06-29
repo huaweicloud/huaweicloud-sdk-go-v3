@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpgradeGaussMySqlInstanceDatabaseResponse Response Object
 type UpgradeGaussMySqlInstanceDatabaseResponse struct {
 
 	// 任务ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCertificateAuthorityResponse Response Object
 type ShowCertificateAuthorityResponse struct {
 
 	// CA证书ID。

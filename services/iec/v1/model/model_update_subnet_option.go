@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新子网的结构体。
+// UpdateSubnetOption 更新子网的结构体。
 type UpdateSubnetOption struct {
 
 	// 子网名称  取值范围：0-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）

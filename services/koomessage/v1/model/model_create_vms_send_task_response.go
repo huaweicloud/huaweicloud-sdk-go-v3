@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVmsSendTaskResponse Response Object
 type CreateVmsSendTaskResponse struct {
 
 	// 状态码。

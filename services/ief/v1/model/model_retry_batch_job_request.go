@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RetryBatchJobRequest Request Object
 type RetryBatchJobRequest struct {
 
 	// 批量处理作业ID

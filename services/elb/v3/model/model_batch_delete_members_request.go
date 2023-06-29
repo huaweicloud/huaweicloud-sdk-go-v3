@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteMembersRequest Request Object
 type BatchDeleteMembersRequest struct {
 
 	// 后端服务器组ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 允许客户端录制请求。
+// RestAllowClientRecordReqBody 允许客户端录制请求。
 type RestAllowClientRecordReqBody struct {
 
 	// * 0：取消与会者客户端录制权限 * 1：允许与会者客户端录制

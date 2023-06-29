@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 连接基本信息详情
+// AttachmentResponse 连接基本信息详情
 type AttachmentResponse struct {
 
 	// 连接名字

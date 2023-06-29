@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例磁盘类型信息。
+// Storage 实例磁盘类型信息。
 type Storage struct {
 
 	// 磁盘类型名称，可能取值如下： - ULTRAHIGH，表示SSD。

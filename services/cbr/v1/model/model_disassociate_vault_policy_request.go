@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisassociateVaultPolicyRequest Request Object
 type DisassociateVaultPolicyRequest struct {
 
 	// 存储库ID

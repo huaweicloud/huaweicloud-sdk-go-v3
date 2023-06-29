@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建作业时传的data参数
+// VideoModerationResultRequestParamsData 创建作业时传的data参数
 type VideoModerationResultRequestParamsData struct {
 
 	// 创建作业时传的url参数

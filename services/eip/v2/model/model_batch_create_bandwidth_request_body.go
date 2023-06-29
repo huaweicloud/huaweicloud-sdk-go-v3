@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量创建带宽的请求体
+// BatchCreateBandwidthRequestBody 批量创建带宽的请求体
 type BatchCreateBandwidthRequestBody struct {
 	Bandwidth *BatchCreateBandwidthOption `json:"bandwidth"`
 }

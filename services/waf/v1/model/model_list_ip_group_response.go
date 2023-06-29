@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIpGroupResponse Response Object
 type ListIpGroupResponse struct {
 
 	// 该用户当前企业项目下Ip地址组数量，只包含本地地址组

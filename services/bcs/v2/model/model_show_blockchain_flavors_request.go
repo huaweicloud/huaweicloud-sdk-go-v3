@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowBlockchainFlavorsRequest Request Object
 type ShowBlockchainFlavorsRequest struct {
 
 	// 取值范围(0,1000]，默认值为1000。用于限制本次返回的结果数据条数。

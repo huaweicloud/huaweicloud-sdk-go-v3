@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetGaussMySqlPasswordResponse Response Object
 type ResetGaussMySqlPasswordResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchVisionActiveCodeResponse Response Object
 type SearchVisionActiveCodeResponse struct {
 
 	// 页面起始页，从0开始。

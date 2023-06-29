@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 信息窗素材信息。
+// UpdateMaterialRequestDto 信息窗素材信息。
 type UpdateMaterialRequestDto struct {
 
 	// 素材名称。

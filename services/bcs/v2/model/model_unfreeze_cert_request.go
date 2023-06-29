@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UnfreezeCertRequest Request Object
 type UnfreezeCertRequest struct {
 
 	// userName

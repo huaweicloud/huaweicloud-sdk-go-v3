@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 计划中批量添加测试用例请求体
+// CreateTestCaseInPlanRequestBody 计划中批量添加测试用例请求体
 type CreateTestCaseInPlanRequestBody struct {
 
 	// 注册测试类型服务接口返回的服务id

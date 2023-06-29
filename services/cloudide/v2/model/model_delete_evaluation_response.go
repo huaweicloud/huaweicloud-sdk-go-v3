@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteEvaluationResponse Response Object
 type DeleteEvaluationResponse struct {
 
 	// 返回值

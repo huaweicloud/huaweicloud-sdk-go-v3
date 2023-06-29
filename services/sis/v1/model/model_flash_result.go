@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FlashResult
 type FlashResult struct {
 
 	// 音频声道id

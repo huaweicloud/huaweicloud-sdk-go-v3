@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点的终端设备信息
+// EdgeNodeUpdateByDevice 边缘节点的终端设备信息
 type EdgeNodeUpdateByDevice struct {
 	Nodes *NodeUpdateByDevice `json:"nodes"`
 }

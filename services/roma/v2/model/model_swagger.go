@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// swagger文档导入结果  暂不支持
+// Swagger swagger文档导入结果  暂不支持
 type Swagger struct {
 
 	// swagger文档编号

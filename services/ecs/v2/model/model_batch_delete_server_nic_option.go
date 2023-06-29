@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// BatchDeleteServerNicOption
 type BatchDeleteServerNicOption struct {
 
 	// 网卡Port ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ServerNicSecurityGroup
 type ServerNicSecurityGroup struct {
 
 	// 安全组ID。

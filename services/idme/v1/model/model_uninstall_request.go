@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UninstallRequest Request Object
 type UninstallRequest struct {
 
 	// 运行服务的ID。

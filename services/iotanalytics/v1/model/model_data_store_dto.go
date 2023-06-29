@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 存储信息
+// DataStoreDto 存储信息
 type DataStoreDto struct {
 
 	// 存储ID

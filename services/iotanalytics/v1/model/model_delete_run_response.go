@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteRunResponse Response Object
 type DeleteRunResponse struct {
 
 	// 被取消作业运行ID

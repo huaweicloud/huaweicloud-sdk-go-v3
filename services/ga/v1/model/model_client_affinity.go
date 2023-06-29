@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 客户端亲和性，取值： - SOURCE_IP：按源IP保持会话。 - NONE：关闭。
+// ClientAffinity 客户端亲和性，取值： - SOURCE_IP：按源IP保持会话。 - NONE：关闭。
 type ClientAffinity struct {
 	value string
 }
@@ -40,13 +40,18 @@ func (c ClientAffinity) MarshalJSON() ([]byte, error) {
 
 func (c *ClientAffinity) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

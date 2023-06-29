@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 改变告警规则状态
+// ChangeAlarmRuleStatus 改变告警规则状态
 type ChangeAlarmRuleStatus struct {
 
 	// 告警规则ID

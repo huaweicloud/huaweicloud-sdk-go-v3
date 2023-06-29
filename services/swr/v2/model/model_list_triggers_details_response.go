@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTriggersDetailsResponse Response Object
 type ListTriggersDetailsResponse struct {
 
 	// 触发器列表

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRocketMqMigrationTaskRequest Request Object
 type DeleteRocketMqMigrationTaskRequest struct {
 
 	// 实例ID。

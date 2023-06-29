@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowPauseResumeStutusRequest Request Object
 type ShowPauseResumeStutusRequest struct {
 
 	// 实例ID。

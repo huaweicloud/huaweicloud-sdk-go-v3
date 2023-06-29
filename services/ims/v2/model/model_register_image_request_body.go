@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像上传请求体
+// RegisterImageRequestBody 镜像上传请求体
 type RegisterImageRequestBody struct {
 
 	// 源镜像的URL，格式：<bucket>:<file> image_url对应的镜像桶中的文件，镜像文件格式的取值范围为：ZVHD、QCOW2、VHD、RAW、VHDX、QED、VDI、QCOW、ZVHD2、VMDK。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SubnetIpAvailability
 type SubnetIpAvailability struct {
 
 	// 子网中已经使用的IP数目（不包含系统预留地址）

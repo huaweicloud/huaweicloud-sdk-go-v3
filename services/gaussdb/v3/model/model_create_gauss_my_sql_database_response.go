@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateGaussMySqlDatabaseResponse Response Object
 type CreateGaussMySqlDatabaseResponse struct {
 
 	// 创建数据库的任务ID。

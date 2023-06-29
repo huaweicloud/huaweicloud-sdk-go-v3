@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateGatewayResponseTypeV2Response Response Object
 type UpdateGatewayResponseTypeV2Response struct {
 	Body           map[string]ResponseInfoResp `json:"body,omitempty"`
 	HttpStatusCode int                         `json:"-"`

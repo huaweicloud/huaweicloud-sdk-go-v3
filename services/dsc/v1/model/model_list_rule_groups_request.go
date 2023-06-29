@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRuleGroupsRequest Request Object
 type ListRuleGroupsRequest struct {
 
 	// 页码

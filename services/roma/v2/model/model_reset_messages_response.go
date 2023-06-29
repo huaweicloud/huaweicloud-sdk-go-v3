@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetMessagesResponse Response Object
 type ResetMessagesResponse struct {
 
 	// topic名称。

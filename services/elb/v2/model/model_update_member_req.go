@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新后端云服务器的请求体
+// UpdateMemberReq 更新后端云服务器的请求体
 type UpdateMemberReq struct {
 
 	// 后端云服务器名称。

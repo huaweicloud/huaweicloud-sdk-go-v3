@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchCreateClusterCnResponse Response Object
 type BatchCreateClusterCnResponse struct {
 
 	// 批量增加CN节点任务ID

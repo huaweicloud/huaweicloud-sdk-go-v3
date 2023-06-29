@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateLifyCycleHookRequest Request Object
 type CreateLifyCycleHookRequest struct {
 
 	// 伸缩组标识。

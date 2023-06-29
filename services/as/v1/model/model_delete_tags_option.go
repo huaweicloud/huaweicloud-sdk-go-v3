@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 标签列表
+// DeleteTagsOption 标签列表
 type DeleteTagsOption struct {
 
 	// 标签列表。action为delete时，tags结构体不能缺失，key不能为空，或者空字符串。
@@ -54,13 +54,18 @@ func (c DeleteTagsOptionAction) MarshalJSON() ([]byte, error) {
 
 func (c *DeleteTagsOptionAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

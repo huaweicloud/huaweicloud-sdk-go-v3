@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 删除主机组请求体
+// DeleteHostGroupRequestBody 删除主机组请求体
 type DeleteHostGroupRequestBody struct {
 
 	// 主机组ID列表

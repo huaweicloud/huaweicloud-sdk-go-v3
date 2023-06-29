@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// RollbackSnapshotRequestBody This is a auto create Body Object
 type RollbackSnapshotRequestBody struct {
 	Rollback *RollbackSnapshotOption `json:"rollback"`
 }

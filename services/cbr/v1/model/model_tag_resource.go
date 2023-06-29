@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// TagResource
 type TagResource struct {
 
 	// 资源ID

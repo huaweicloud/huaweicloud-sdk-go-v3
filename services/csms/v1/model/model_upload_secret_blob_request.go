@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadSecretBlobRequest Request Object
 type UploadSecretBlobRequest struct {
 	Body *UploadSecretBlobRequestBody `json:"body,omitempty"`
 }

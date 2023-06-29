@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateLifeCycleHookRequest Request Object
 type UpdateLifeCycleHookRequest struct {
 
 	// 伸缩组标识。

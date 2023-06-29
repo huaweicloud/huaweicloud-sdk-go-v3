@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowDetailsOfAppCodeV2Response Response Object
 type ShowDetailsOfAppCodeV2Response struct {
 
 	// App Code值  支持英文，+_!@#$%+/=，且只能以英文和+、/开头。

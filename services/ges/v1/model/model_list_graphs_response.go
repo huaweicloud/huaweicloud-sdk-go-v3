@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGraphsResponse Response Object
 type ListGraphsResponse struct {
 
 	// 图总个数。请求失败时为空。

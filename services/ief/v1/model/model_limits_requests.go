@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源配置限制
+// LimitsRequests 资源配置限制
 type LimitsRequests struct {
 
 	// cpu核数，大于等于0.01，最大1000；请求不需要带单位

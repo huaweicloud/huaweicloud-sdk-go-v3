@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMultiTasksResponse Response Object
 type CreateMultiTasksResponse struct {
 
 	// 任务ID, 可为空

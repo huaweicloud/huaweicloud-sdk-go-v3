@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要解绑的网卡列表信息
+// DeleteServerNicsReq 需要解绑的网卡列表信息
 type DeleteServerNicsReq struct {
 
 	//

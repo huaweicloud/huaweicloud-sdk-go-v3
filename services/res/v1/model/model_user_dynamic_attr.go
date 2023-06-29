@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UserDynamicAttr
 type UserDynamicAttr struct {
 	UserInterestedAttrs *Attribute `json:"user_interested_attrs,omitempty"`
 

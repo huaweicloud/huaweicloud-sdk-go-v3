@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// EnablePolicyTypeRequest Request Object
 type EnablePolicyTypeRequest struct {
 	Body *PolicyTypeReqBody `json:"body,omitempty"`
 }

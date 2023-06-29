@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UploadMediaRequest Request Object
 type UploadMediaRequest struct {
 	Body *UploadMediaRequestBody `json:"body,omitempty" type:"multipart"`
 }

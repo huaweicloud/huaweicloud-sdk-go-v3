@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ReadConfigResp
 type ReadConfigResp struct {
 
 	// 图片播报配置

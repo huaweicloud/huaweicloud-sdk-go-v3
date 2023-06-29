@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateEndpointConnectionsDescResponse Response Object
 type UpdateEndpointConnectionsDescResponse struct {
 
 	// 连接列表

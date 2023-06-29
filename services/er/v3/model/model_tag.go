@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源标签
+// Tag 资源标签
 type Tag struct {
 
 	// 标签键，最大长度36个unicode字符，格式为大小写字母，数字，中划线“-”，下划线“_”，中文。

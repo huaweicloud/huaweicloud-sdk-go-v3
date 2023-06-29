@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页请求体
+// PageReq 分页请求体
 type PageReq struct {
 
 	// 当前页, 不能超过item除每页任务数量的最大页

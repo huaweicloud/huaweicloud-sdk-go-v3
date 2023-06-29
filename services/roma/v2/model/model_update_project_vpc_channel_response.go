@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProjectVpcChannelResponse Response Object
 type UpdateProjectVpcChannelResponse struct {
 
 	// 项目VPC通道列表

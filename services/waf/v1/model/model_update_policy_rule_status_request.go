@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdatePolicyRuleStatusRequest Request Object
 type UpdatePolicyRuleStatusRequest struct {
 
 	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
@@ -82,13 +82,18 @@ func (c UpdatePolicyRuleStatusRequestRuletype) MarshalJSON() ([]byte, error) {
 
 func (c *UpdatePolicyRuleStatusRequestRuletype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

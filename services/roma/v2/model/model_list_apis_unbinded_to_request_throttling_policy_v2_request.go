@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApisUnbindedToRequestThrottlingPolicyV2Request Request Object
 type ListApisUnbindedToRequestThrottlingPolicyV2Request struct {
 
 	// 实例ID

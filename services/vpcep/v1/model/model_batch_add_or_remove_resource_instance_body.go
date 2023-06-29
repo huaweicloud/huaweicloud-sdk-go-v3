@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量添加或删除资源标签接口请求结构体
+// BatchAddOrRemoveResourceInstanceBody 批量添加或删除资源标签接口请求结构体
 type BatchAddOrRemoveResourceInstanceBody struct {
 
 	// 标签列表，没有标签默认为空数组。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDcDsRequest Request Object
 type DeleteDcDsRequest struct {
 
 	// 边缘节点ID

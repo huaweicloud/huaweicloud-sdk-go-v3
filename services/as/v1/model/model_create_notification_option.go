@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 配置伸缩组通知
+// CreateNotificationOption 配置伸缩组通知
 type CreateNotificationOption struct {
 
 	// SMN服务中Topic的唯一的资源标识。
@@ -70,13 +70,18 @@ func (c CreateNotificationOptionTopicScene) MarshalJSON() ([]byte, error) {
 
 func (c *CreateNotificationOptionTopicScene) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

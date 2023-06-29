@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateProjectDomainResponse Response Object
 type UpdateProjectDomainResponse struct {
 
 	// 领域名称

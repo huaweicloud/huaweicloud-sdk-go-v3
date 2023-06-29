@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpgradeEngineResponse Response Object
 type UpgradeEngineResponse struct {
 
 	// 创建的微服务引擎专享版ID

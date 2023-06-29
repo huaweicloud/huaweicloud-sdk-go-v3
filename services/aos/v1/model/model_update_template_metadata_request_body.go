@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新模板元数据请求体
+// UpdateTemplateMetadataRequestBody 更新模板元数据请求体
 type UpdateTemplateMetadataRequestBody struct {
 
 	// 模板的唯一ID，由模板服务随机生成

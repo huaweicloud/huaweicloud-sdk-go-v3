@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateBatchJobRequest Request Object
 type CreateBatchJobRequest struct {
 	Body *Job `json:"body,omitempty"`
 }

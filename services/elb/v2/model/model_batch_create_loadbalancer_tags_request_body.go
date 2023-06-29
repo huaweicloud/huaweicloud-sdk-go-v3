@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// BatchCreateLoadbalancerTagsRequestBody This is a auto create Body Object
 type BatchCreateLoadbalancerTagsRequestBody struct {
 
 	// 操作类型。 取值范围：create - 创建标签。
@@ -54,13 +54,18 @@ func (c BatchCreateLoadbalancerTagsRequestBodyAction) MarshalJSON() ([]byte, err
 
 func (c *BatchCreateLoadbalancerTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

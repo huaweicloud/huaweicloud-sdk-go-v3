@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplyHistoryResponse Response Object
 type ShowApplyHistoryResponse struct {
 
 	// 参数组模板应用历史列表

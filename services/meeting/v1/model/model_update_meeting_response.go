@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateMeetingResponse Response Object
 type UpdateMeetingResponse struct {
 
 	// 会议信息列表。

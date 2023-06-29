@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBigkeyScanTaskResponse Response Object
 type DeleteBigkeyScanTaskResponse struct {
 	HttpStatusCode int `json:"-"`
 }

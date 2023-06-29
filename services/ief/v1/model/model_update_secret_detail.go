@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥
+// UpdateSecretDetail 密钥
 type UpdateSecretDetail struct {
 
 	// 密钥描述,最大长度255，不允许^ ~ # $ % & * < > ( ) [ ] { } ' \" \\

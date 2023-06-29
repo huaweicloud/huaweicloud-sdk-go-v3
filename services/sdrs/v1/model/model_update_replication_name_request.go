@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateReplicationNameRequest Request Object
 type UpdateReplicationNameRequest struct {
 
 	// replication_id

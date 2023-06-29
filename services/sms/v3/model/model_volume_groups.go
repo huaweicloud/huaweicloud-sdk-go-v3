@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 逻辑卷组信息
+// VolumeGroups 逻辑卷组信息
 type VolumeGroups struct {
 
 	// Pv信息

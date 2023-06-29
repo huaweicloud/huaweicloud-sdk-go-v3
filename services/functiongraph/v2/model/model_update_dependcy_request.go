@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateDependcyRequest Request Object
 type UpdateDependcyRequest struct {
 
 	// 依赖包的ID。

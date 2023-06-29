@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SQL作业。
+// Schedule SQL作业。
 type Schedule struct {
 
 	// 调度开始时间。时间格式为ISO时区日期时间。例如2021-03-03T10:15:30+08:00

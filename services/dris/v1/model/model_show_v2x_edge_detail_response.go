@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowV2xEdgeDetailResponse Response Object
 type ShowV2xEdgeDetailResponse struct {
 
 	// **参数说明**：Edge ID，用于唯一标识一个Edge。

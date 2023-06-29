@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowTaskInstancePodResponse Response Object
 type ShowTaskInstancePodResponse struct {
 
 	// pod信息

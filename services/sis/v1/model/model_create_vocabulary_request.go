@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVocabularyRequest Request Object
 type CreateVocabularyRequest struct {
 	Body *PostCreateVocabReq `json:"body,omitempty"`
 }

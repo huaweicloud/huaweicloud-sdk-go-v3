@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSubnetsByTagsResponse Response Object
 type ListSubnetsByTagsResponse struct {
 
 	// 资源列表

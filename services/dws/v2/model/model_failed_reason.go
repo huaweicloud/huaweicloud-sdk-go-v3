@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// FailedReason
 type FailedReason struct {
 
 	// 错误码。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIssueAssociatedCommitsRequest Request Object
 type ListIssueAssociatedCommitsRequest struct {
 
 	// devcloud项目的32位id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowExtensionEvaluationStarRequest Request Object
 type ShowExtensionEvaluationStarRequest struct {
 
 	// 插件id

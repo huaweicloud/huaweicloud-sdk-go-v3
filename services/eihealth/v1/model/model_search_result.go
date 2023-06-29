@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分子搜索任务的返回结果
+// SearchResult 分子搜索任务的返回结果
 type SearchResult struct {
 
 	// 分子SMILES表达式

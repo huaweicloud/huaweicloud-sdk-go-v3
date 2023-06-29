@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowNetworkConfigurationResponse Response Object
 type ShowNetworkConfigurationResponse struct {
 
 	// 云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。

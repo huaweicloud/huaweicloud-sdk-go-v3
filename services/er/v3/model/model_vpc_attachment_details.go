@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// VPC类型连接
+// VpcAttachmentDetails VPC类型连接
 type VpcAttachmentDetails struct {
 
 	// VPC连接ID

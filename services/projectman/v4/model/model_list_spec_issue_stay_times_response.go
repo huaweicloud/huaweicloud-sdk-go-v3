@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSpecIssueStayTimesResponse Response Object
 type ListSpecIssueStayTimesResponse struct {
 
 	// 计算失败的工作项id,一般指未关闭的工作项

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunMultiGrainedSegmentResponse Response Object
 type RunMultiGrainedSegmentResponse struct {
 
 	// 多粒度分词结果列表。调用失败时无此字段。

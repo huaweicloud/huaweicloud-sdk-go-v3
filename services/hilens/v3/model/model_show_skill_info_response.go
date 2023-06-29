@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowSkillInfoResponse Response Object
 type ShowSkillInfoResponse struct {
 
 	// 技能应用场景

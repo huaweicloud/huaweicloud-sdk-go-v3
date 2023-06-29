@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CPI任务的请求体
+// CpiTaskData CPI任务的请求体
 type CpiTaskData struct {
 
 	// 蛋白质FASTA标题

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建后端云服务器的请求体
+// CreateMemberReq 创建后端云服务器的请求体
 type CreateMemberReq struct {
 
 	// 后端云服务器所在的项目ID。

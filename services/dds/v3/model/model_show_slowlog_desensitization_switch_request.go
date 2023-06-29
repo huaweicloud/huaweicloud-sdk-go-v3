@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowSlowlogDesensitizationSwitchRequest Request Object
 type ShowSlowlogDesensitizationSwitchRequest struct {
 
 	// 语言。

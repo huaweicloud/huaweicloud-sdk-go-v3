@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckRepositoryDuplicateNameResponse Response Object
 type CheckRepositoryDuplicateNameResponse struct {
 
 	// 重名校验是否通过,true:校验通过不重名,false:校验不通过重名

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartAndStopDeploymentPodResponse Response Object
 type StartAndStopDeploymentPodResponse struct {
 
 	// pod的ID

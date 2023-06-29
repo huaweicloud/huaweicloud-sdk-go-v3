@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListFlowBySimCardsResponse Response Object
 type ListFlowBySimCardsResponse struct {
 	Body           *[]SimCardsFlowVo `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`

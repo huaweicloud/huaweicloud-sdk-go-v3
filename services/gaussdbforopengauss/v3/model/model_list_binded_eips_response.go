@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBindedEipsResponse Response Object
 type ListBindedEipsResponse struct {
 
 	// 查询实例已绑定EIP列表。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnvironmentsRequest Request Object
 type ListEnvironmentsRequest struct {
 
 	// 起始偏移量，表示从此偏移量开始查询， offset大于等于0

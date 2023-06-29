@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListMonitorIndicatorsResponse Response Object
 type ListMonitorIndicatorsResponse struct {
 	Body           *[]IndicatorInfo `json:"body,omitempty"`
 	HttpStatusCode int              `json:"-"`

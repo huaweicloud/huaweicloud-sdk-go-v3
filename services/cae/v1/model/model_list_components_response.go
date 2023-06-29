@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListComponentsResponse Response Object
 type ListComponentsResponse struct {
 
 	// API版本。

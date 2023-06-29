@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteMetadata2Request Request Object
 type DeleteMetadata2Request struct {
 
 	// 元数据ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListApisBindedToSignatureKeyV2Response Response Object
 type ListApisBindedToSignatureKeyV2Response struct {
 
 	// 本次返回的列表长度

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 镜像标签
+// ImageTag 镜像标签
 type ImageTag struct {
 
 	// 标签key值

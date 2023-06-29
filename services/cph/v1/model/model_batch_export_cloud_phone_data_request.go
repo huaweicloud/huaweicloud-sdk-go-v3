@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchExportCloudPhoneDataRequest Request Object
 type BatchExportCloudPhoneDataRequest struct {
 	Body *BatchExportCloudPhoneDataRequestBody `json:"body,omitempty"`
 }

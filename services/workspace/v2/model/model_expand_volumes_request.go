@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExpandVolumesRequest Request Object
 type ExpandVolumesRequest struct {
 	Body *ExpandDesktopsVolumesReq `json:"body,omitempty"`
 }

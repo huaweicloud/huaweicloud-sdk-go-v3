@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAcceleratorRequest Request Object
 type DeleteAcceleratorRequest struct {
 
 	// 全球加速器ID。

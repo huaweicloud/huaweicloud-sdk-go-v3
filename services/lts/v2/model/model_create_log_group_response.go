@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateLogGroupResponse Response Object
 type CreateLogGroupResponse struct {
 
 	// 创建的日志组的Id。

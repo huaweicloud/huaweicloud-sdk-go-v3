@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSpaceAnalysisTaskResponse Response Object
 type CreateSpaceAnalysisTaskResponse struct {
 
 	// 执行时间，毫秒为单位的时间戳

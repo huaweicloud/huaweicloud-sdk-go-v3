@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 关联工作项详情
+// AssociateIssueDetail 关联工作项详情
 type AssociateIssueDetail struct {
 
 	// 工作项标题

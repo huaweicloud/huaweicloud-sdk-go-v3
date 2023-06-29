@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// StopBatchJobRequest Request Object
 type StopBatchJobRequest struct {
 
 	// 批量处理作业ID

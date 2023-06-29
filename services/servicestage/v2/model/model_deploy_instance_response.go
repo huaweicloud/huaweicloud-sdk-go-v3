@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeployInstanceResponse Response Object
 type DeployInstanceResponse struct {
 
 	// 实例id

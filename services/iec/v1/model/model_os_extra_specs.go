@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// OsExtraSpecs
 type OsExtraSpecs struct {
 
 	// 此参数是Region级配置，某个AZ没有在cond:operation:az参数中配置时默认使用此参数的取值。不配置或无此参数时等同于“normal”。

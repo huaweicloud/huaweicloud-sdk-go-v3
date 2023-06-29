@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowLatestPublishedAgreementResponse Response Object
 type ShowLatestPublishedAgreementResponse struct {
 	CaseAgreement  *AgreementVo `json:"case_agreement,omitempty"`
 	HttpStatusCode int          `json:"-"`

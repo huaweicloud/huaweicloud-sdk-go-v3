@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询地址组列表返回数据
+// AddressSetListResponseDtoData 查询地址组列表返回数据
 type AddressSetListResponseDtoData struct {
 
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0

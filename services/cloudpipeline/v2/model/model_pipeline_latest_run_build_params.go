@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 运行构建参数
+// PipelineLatestRunBuildParams 运行构建参数
 type PipelineLatestRunBuildParams struct {
 
 	// 合并请求的事件类型

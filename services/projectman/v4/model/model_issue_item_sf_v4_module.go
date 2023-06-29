@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 模块
+// IssueItemSfV4Module 模块
 type IssueItemSfV4Module struct {
 
 	// 模块id

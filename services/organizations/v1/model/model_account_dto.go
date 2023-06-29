@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 包含组织成员的帐号的有关信息。
+// AccountDto 包含组织成员的帐号的有关信息。
 type AccountDto struct {
 
 	// 帐号的唯一标识符（ID）。

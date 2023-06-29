@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 此参数在请求实体中，采用json字符串格式
+// QueryLtsLogParams 此参数在请求实体中，采用json字符串格式
 type QueryLtsLogParams struct {
 
 	// 搜索起始时间（UTC时间，毫秒级）。
@@ -85,13 +85,18 @@ func (c QueryLtsLogParamsSearchType) MarshalJSON() ([]byte, error) {
 
 func (c *QueryLtsLogParamsSearchType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

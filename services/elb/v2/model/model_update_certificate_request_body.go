@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// UpdateCertificateRequestBody This is a auto create Body Object
 type UpdateCertificateRequestBody struct {
 
 	// SSL证书对象 最大长度65536字符。 支持证书链，最大11层(含证书和证书链)

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListApiVersionDetailV2Request Request Object
 type ListApiVersionDetailV2Request struct {
 
 	// 实例ID，在API网关控制台的“实例信息”中获取。

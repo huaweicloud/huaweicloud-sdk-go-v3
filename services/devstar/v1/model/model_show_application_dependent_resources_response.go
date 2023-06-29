@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowApplicationDependentResourcesResponse Response Object
 type ShowApplicationDependentResourcesResponse struct {
 
 	// 依赖云资源信息

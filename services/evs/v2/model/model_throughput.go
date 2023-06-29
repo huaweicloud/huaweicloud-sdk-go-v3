@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Throughput
 type Throughput struct {
 
 	// 冻结标签。

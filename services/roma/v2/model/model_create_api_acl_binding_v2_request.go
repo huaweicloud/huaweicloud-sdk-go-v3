@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateApiAclBindingV2Request Request Object
 type CreateApiAclBindingV2Request struct {
 
 	// 实例ID

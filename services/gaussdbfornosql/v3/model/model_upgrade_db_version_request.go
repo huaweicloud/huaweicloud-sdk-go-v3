@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpgradeDbVersionRequest Request Object
 type UpgradeDbVersionRequest struct {
 
 	// 实例ID。

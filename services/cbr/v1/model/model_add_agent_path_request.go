@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AddAgentPathRequest Request Object
 type AddAgentPathRequest struct {
 
 	// 客户端ID

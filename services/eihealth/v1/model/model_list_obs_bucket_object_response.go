@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListObsBucketObjectResponse Response Object
 type ListObsBucketObjectResponse struct {
 
 	// 数据（文件夹、文件）总数量

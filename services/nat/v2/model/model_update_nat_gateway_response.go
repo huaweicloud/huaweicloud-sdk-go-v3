@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateNatGatewayResponse Response Object
 type UpdateNatGatewayResponse struct {
 	NatGateway     *NatGatewayResponseBody `json:"nat_gateway,omitempty"`
 	HttpStatusCode int                     `json:"-"`

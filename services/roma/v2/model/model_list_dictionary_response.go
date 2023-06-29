@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDictionaryResponse Response Object
 type ListDictionaryResponse struct {
 
 	// 总数，与分页无关

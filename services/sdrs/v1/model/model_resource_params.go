@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源参数数据结构
+// ResourceParams 资源参数数据结构
 type ResourceParams struct {
 
 	// 保护实例ID。

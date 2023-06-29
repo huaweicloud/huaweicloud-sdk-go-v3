@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云手机访问信息。
+// PhoneAccessInfo 云手机访问信息。
 type PhoneAccessInfo struct {
 
 	// 自定义端口类型，不超过16个字节

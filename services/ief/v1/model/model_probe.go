@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 探针配置
+// Probe 探针配置
 type Probe struct {
 	Exec *Exec `json:"exec,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckMaliciousExtensionEvaluationResponse Response Object
 type CheckMaliciousExtensionEvaluationResponse struct {
 
 	// 返回值

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListArticlesRequest Request Object
 type ListArticlesRequest struct {
 
 	// 调用智能客服服务标志。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 消息体。
+// PushMenuInfoResponseModelData 消息体。
 type PushMenuInfoResponseModelData struct {
 
 	// 菜单申请记录ID。

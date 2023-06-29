@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateWhitelistReq
 type UpdateWhitelistReq struct {
 
 	// 是否开启白名单访问控制开关。true：开启；false：关闭

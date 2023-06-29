@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSnapshotPolicyRequest Request Object
 type DeleteSnapshotPolicyRequest struct {
 
 	// 集群ID。

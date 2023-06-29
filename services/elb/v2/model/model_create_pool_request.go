@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePoolRequest Request Object
 type CreatePoolRequest struct {
 	Body *CreatePoolRequestBody `json:"body,omitempty"`
 }

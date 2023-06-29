@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 与会嘉宾列表。
+// OpenAttendeeEntity 与会嘉宾列表。
 type OpenAttendeeEntity struct {
 
 	// App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业事件响应内容
+// JobEventRsp 作业事件响应内容
 type JobEventRsp struct {
 
 	// 执行动作名称

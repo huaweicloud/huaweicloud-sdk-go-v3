@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportDataResponse Response Object
 type ImportDataResponse struct {
 
 	// 数据作业ID

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowInstanceDiskResponse Response Object
 type ShowInstanceDiskResponse struct {
 
 	// 已使用量。表示当前实例已使用的存储空间大小。单位：GB

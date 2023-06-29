@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 动态属性
+// ExceptedActual 动态属性
 type ExceptedActual struct {
 
 	// 动态属性的初始值，最大长度512，value允许英文字母、数字、下划线、中划线、点、逗号、冒号、/、@、+、?、^、=、%、&、~、#、!、*

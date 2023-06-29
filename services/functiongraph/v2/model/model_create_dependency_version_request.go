@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateDependencyVersionRequest Request Object
 type CreateDependencyVersionRequest struct {
 	Body *CreateDependencyRequestBody `json:"body,omitempty"`
 }

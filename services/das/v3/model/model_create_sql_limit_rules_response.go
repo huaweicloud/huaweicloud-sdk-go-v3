@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSqlLimitRulesResponse Response Object
 type CreateSqlLimitRulesResponse struct {
 	HttpStatusCode int `json:"-"`
 }

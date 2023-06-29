@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例配置信息
+// InstanceConfigResult 实例配置信息
 type InstanceConfigResult struct {
 
 	// 云服务器的规格ID。

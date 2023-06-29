@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WeeklyCount
+// WeeklyCount WeeklyCount
 type WeeklyCount struct {
 
 	// DDoS拦截次数

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 表列统计信息的描述信息
+// TableColumnStatisticsDescription 表列统计信息的描述信息
 type TableColumnStatisticsDescription struct {
 
 	// 最后统计时间

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 续传任务返回体
+// RetryTaskResp 续传任务返回体
 type RetryTaskResp struct {
 
 	// 任务id

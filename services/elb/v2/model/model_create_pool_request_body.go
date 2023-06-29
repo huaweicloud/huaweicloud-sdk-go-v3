@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreatePoolRequestBody This is a auto create Body Object
 type CreatePoolRequestBody struct {
 	Pool *CreatePoolReq `json:"pool"`
 }

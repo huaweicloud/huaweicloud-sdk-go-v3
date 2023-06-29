@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签对象
+// NodeLabelRsp 标签对象
 type NodeLabelRsp struct {
 
 	// 标签名称

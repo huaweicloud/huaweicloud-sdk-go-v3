@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 告警消息请求参数。
+// AlarmDataListRequest 告警消息请求参数。
 type AlarmDataListRequest struct {
 
 	// 页码。

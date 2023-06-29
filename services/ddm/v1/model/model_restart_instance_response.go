@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestartInstanceResponse Response Object
 type RestartInstanceResponse struct {
 
 	// DDM实例ID。

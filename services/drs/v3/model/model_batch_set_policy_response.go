@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchSetPolicyResponse Response Object
 type BatchSetPolicyResponse struct {
 
 	// 批量设置同步策略响应体

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAllVersionByVersionIdResponse Response Object
 type ListAllVersionByVersionIdResponse struct {
 
 	// 查询结果集合。

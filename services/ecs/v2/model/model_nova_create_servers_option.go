@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//  弹性云服务器信息
+// NovaCreateServersOption  弹性云服务器信息
 type NovaCreateServersOption struct {
 
 	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
@@ -106,13 +106,18 @@ func (c NovaCreateServersOptionOSDCFdiskConfig) MarshalJSON() ([]byte, error) {
 
 func (c *NovaCreateServersOptionOSDCFdiskConfig) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

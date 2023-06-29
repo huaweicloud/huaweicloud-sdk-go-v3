@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 定义指标计算查询的输入资产属性
+// MetricInput 定义指标计算查询的输入资产属性
 type MetricInput struct {
 
 	// 指标计算表达式的入参名称

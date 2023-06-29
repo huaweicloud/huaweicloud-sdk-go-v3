@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ImportTemplateResponse Response Object
 type ImportTemplateResponse struct {
 	Body           *[]ImportTemplateResultRsp `json:"body,omitempty"`
 	HttpStatusCode int                        `json:"-"`

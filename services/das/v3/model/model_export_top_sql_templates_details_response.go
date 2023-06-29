@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportTopSqlTemplatesDetailsResponse Response Object
 type ExportTopSqlTemplatesDetailsResponse struct {
 
 	// SQL模板列表。

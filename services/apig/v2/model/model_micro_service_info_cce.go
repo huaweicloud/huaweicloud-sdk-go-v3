@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// CCE微服务工作负载信息
+// MicroServiceInfoCce CCE微服务工作负载信息
 type MicroServiceInfoCce struct {
 
 	// 云容器引擎集群编号
@@ -77,13 +77,18 @@ func (c MicroServiceInfoCceWorkloadType) MarshalJSON() ([]byte, error) {
 
 func (c *MicroServiceInfoCceWorkloadType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteBackupResponse Response Object
 type DeleteBackupResponse struct {
 
 	// 任务ID。

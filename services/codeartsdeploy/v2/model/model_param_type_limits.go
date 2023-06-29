@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 枚举类型参数实体类
+// ParamTypeLimits 枚举类型参数实体类
 type ParamTypeLimits struct {
 
 	// 枚举值可选参数

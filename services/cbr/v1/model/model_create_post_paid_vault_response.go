@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreatePostPaidVaultResponse Response Object
 type CreatePostPaidVaultResponse struct {
 
 	// 订单详情

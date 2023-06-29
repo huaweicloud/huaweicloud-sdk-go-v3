@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询告警历史返回的总条数。
+// MetaDataForAlarmHistory 查询告警历史返回的总条数。
 type MetaDataForAlarmHistory struct {
 
 	// 查询告警历史返回的总条数。

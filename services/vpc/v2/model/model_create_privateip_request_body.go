@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreatePrivateipRequestBody
 type CreatePrivateipRequestBody struct {
 
 	// 私有IP列表对象

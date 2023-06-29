@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNameServersRequest Request Object
 type ListNameServersRequest struct {
 
 	// 待查询名称服务器的类型。 取值范围: public, private。 如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。 如果为private，表示查询内网的名称服务器。 搜索模式精确搜索。 默认值为空。

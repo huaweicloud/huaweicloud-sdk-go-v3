@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 防护策略详情
+// PolicyResponse 防护策略详情
 type PolicyResponse struct {
 
 	// 防护策略id

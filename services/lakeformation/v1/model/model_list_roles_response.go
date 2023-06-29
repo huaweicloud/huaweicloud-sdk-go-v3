@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRolesResponse Response Object
 type ListRolesResponse struct {
 	Roles *[]Role `json:"roles,omitempty"`
 

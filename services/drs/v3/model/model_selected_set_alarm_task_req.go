@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 需要设置SMN的任务信息。
+// SelectedSetAlarmTaskReq 需要设置SMN的任务信息。
 type SelectedSetAlarmTaskReq struct {
 
 	// 任务ID

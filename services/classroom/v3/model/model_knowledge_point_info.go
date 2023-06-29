@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 习题知识点信息
+// KnowledgePointInfo 习题知识点信息
 type KnowledgePointInfo struct {
 
 	// 知识点id

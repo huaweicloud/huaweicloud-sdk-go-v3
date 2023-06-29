@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建路由请求体
+// CreateRoute 创建路由请求体
 type CreateRoute struct {
 
 	// 路由目的地址

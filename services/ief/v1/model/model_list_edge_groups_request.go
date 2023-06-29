@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEdgeGroupsRequest Request Object
 type ListEdgeGroupsRequest struct {
 
 	// 铂金版实例ID，专业版实例为空值

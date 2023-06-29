@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowAddonInstanceResponse Response Object
 type ShowAddonInstanceResponse struct {
 
 	// API类型，固定值“Addon”，该值不可修改。

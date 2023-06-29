@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ImageMainObjectDetectionReq This is a auto create Body Object
 type ImageMainObjectDetectionReq struct {
 
 	// 与url二选一  图像数据，base64编码，要求base64编码后大小不超过10M，最短边至少1px，最长边最大10000px，支持JPG/PNG/BMP格式。

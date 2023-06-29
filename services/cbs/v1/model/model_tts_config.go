@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 语音合成配置 - 目前可用tts资源尚未确定，校验待定，测试可以先不测后端接口校验
+// TtsConfig 语音合成配置 - 目前可用tts资源尚未确定，校验待定，测试可以先不测后端接口校验
 type TtsConfig struct {
 
 	// 用于设置音色

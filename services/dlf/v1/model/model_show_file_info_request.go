@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowFileInfoRequest Request Object
 type ShowFileInfoRequest struct {
 
 	// 工作空间id

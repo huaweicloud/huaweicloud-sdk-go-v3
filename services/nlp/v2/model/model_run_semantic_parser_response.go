@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunSemanticParserResponse Response Object
 type RunSemanticParserResponse struct {
 	Result *IntentResult `json:"result,omitempty"`
 

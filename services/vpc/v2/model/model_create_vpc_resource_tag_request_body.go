@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// CreateVpcResourceTagRequestBody This is a auto create Body Object
 type CreateVpcResourceTagRequestBody struct {
 	Tag *ResourceTag `json:"tag"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListDesktopsDetailResponse Response Object
 type ListDesktopsDetailResponse struct {
 
 	// 桌面详情列表。

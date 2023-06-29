@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateGaussMySqlInstanceSecurityGroupRequest Request Object
 type UpdateGaussMySqlInstanceSecurityGroupRequest struct {
 
 	// 语言。

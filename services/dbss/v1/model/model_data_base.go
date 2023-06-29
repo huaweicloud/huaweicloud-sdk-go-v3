@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息
+// DataBase 数据库信息
 type DataBase struct {
 
 	// 数据库ID

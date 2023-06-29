@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchUpdateChildNickNamesRequest Request Object
 type BatchUpdateChildNickNamesRequest struct {
 	Body *BatchUpdateChildUserNickNamesRequestBody `json:"body,omitempty"`
 }

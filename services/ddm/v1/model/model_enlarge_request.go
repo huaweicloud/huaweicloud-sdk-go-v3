@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto request Object
+// EnlargeRequest This is a auto request Object
 type EnlargeRequest struct {
 
 	// 当前进行节点扩容的DDM实例底层虚机规格id

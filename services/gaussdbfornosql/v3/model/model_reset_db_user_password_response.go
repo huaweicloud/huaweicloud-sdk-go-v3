@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ResetDbUserPasswordResponse Response Object
 type ResetDbUserPasswordResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateComputingResourceRequest Request Object
 type CreateComputingResourceRequest struct {
 	Body *CreateComputingResourceRequestBody `json:"body,omitempty"`
 }

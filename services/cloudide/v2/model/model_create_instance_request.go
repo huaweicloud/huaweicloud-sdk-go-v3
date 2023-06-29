@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateInstanceRequest Request Object
 type CreateInstanceRequest struct {
 
 	// 租户id（对应华为云帐号的domainId）

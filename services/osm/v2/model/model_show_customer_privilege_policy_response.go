@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowCustomerPrivilegePolicyResponse Response Object
 type ShowCustomerPrivilegePolicyResponse struct {
 
 	// 开关状态

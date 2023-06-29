@@ -28,6 +28,10 @@ var (
 		"https://gaussdb.ap-southeast-4.myhuaweicloud.com")
 	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
 		"https://gaussdb.sa-brazil-1.myhuaweicloud.com")
+	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
+		"https://gaussdbformysql.ap-southeast-1.myhuaweicloud.com")
+	AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2",
+		"https://gaussdbformysql.ap-southeast-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -42,6 +46,8 @@ var staticFields = map[string]*region.Region{
 	"tr-west-1":      TR_WEST_1,
 	"ap-southeast-4": AP_SOUTHEAST_4,
 	"sa-brazil-1":    SA_BRAZIL_1,
+	"ap-southeast-1": AP_SOUTHEAST_1,
+	"ap-southeast-2": AP_SOUTHEAST_2,
 }
 
 var provider = region.DefaultProviderChain("GAUSSDB")

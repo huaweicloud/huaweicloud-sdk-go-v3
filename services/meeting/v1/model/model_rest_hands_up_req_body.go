@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 举手请求。
+// RestHandsUpReqBody 举手请求。
 type RestHandsUpReqBody struct {
 
 	// - 0: 放下手 - 1: 举手

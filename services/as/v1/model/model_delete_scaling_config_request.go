@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteScalingConfigRequest Request Object
 type DeleteScalingConfigRequest struct {
 
 	// 伸缩配置ID。

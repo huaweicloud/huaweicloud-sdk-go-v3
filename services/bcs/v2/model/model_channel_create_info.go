@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 通道信息
+// ChannelCreateInfo 通道信息
 type ChannelCreateInfo struct {
 
 	// 通道名称，字符串长度4-24，必须包含a-z，0-9，以小写字母开头，以小写字母或者数字结尾

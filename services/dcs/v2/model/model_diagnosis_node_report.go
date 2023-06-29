@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 节点诊断报告
+// DiagnosisNodeReport 节点诊断报告
 type DiagnosisNodeReport struct {
 
 	// 节点IP。例如：192.168.0.234:6379
@@ -75,13 +75,18 @@ func (c DiagnosisNodeReportRole) MarshalJSON() ([]byte, error) {
 
 func (c *DiagnosisNodeReportRole) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

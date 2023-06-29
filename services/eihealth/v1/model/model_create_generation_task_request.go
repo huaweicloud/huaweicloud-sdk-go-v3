@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateGenerationTaskRequest Request Object
 type CreateGenerationTaskRequest struct {
 	Body *GenerationTaskData `json:"body,omitempty"`
 }

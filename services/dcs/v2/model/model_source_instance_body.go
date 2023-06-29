@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 源实例信息。
+// SourceInstanceBody 源实例信息。
 type SourceInstanceBody struct {
 
 	// Redis实例名称(source_instance信息中填写)。

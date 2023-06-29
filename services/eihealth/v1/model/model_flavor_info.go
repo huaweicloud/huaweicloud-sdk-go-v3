@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// notebook规格信息
+// FlavorInfo notebook规格信息
 type FlavorInfo struct {
 
 	// notebook占用的cpu,0.1核为100m,单位为\"C\"

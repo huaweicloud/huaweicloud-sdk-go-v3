@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// ExportGraphReq This is a auto create Body Object
 type ExportGraphReq struct {
 
 	// 图的导出OBS路径。

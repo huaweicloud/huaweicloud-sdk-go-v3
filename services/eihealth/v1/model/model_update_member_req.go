@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分享项目请求体
+// UpdateMemberReq 分享项目请求体
 type UpdateMemberReq struct {
 	Role *ProjectRoleType `json:"role"`
 }

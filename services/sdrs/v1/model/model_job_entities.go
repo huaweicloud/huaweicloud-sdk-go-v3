@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// JobEntities
 type JobEntities struct {
 
 	// 复制对ID

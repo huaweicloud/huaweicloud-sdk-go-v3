@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 提交任务异常时返回的异常信息
+// Error 提交任务异常时返回的异常信息
 type Error struct {
 
 	// 任务异常错误信息描述

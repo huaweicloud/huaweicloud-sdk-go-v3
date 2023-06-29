@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 度量项
+// MetricInfo 度量项
 type MetricInfo struct {
 
 	// 代码规模

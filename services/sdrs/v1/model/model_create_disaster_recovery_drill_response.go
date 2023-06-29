@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDisasterRecoveryDrillResponse Response Object
 type CreateDisasterRecoveryDrillResponse struct {
 
 	// 成功返回jobId信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateSecretVersionResponse Response Object
 type CreateSecretVersionResponse struct {
 	VersionMetadata *VersionMetadata `json:"version_metadata,omitempty"`
 	HttpStatusCode  int              `json:"-"`

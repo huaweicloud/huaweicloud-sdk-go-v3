@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BroadcastMessageResponse Response Object
 type BroadcastMessageResponse struct {
 
 	// **参数说明**：资源空间ID。

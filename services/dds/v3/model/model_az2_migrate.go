@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 规格信息。
+// Az2Migrate 规格信息。
 type Az2Migrate struct {
 
 	// 可用区ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowVaultTagRequest Request Object
 type ShowVaultTagRequest struct {
 
 	// 资源id

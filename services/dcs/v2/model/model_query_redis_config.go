@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 实例配置项
+// QueryRedisConfig 实例配置项
 type QueryRedisConfig struct {
 
 	// 配置参数值。

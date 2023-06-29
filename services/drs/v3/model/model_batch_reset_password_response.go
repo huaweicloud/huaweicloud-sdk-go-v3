@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchResetPasswordResponse Response Object
 type BatchResetPasswordResponse struct {
 	Results *[]ModifyDbPwdResp `json:"results,omitempty"`
 

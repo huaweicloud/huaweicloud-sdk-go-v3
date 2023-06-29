@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// used_rds参数说明
+// DatabaseInstabcesParam used_rds参数说明
 type DatabaseInstabcesParam struct {
 
 	// 逻辑库关联的RDS的id

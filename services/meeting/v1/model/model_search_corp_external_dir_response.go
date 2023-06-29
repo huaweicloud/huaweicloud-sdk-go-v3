@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchCorpExternalDirResponse Response Object
 type SearchCorpExternalDirResponse struct {
 
 	// 页面起始页，从0开始。

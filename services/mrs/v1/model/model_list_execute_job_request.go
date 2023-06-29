@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListExecuteJobRequest Request Object
 type ListExecuteJobRequest struct {
 
 	// 分页查询每页返回的最大作业数量。  取值范围：[1～100]

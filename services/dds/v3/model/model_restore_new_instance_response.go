@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RestoreNewInstanceResponse Response Object
 type RestoreNewInstanceResponse struct {
 
 	// 实例ID。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSharedTagRequest Request Object
 type CreateSharedTagRequest struct {
 
 	// MIME类型

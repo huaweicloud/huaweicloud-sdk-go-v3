@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 序列化/反序列化的信息
+// SerDeInfo 序列化/反序列化的信息
 type SerDeInfo struct {
 
 	// 名字信息

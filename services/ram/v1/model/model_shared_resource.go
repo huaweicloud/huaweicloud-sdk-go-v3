@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 描述RAM中的资源共享关联的资源。
+// SharedResource 描述RAM中的资源共享关联的资源。
 type SharedResource struct {
 
 	// 资源的统一资源名称。

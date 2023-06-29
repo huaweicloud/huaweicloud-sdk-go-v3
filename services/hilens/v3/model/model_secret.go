@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 密钥信息
+// Secret 密钥信息
 type Secret struct {
 
 	// 密钥key，最大长度63个字符。不能为空，只能包含大小写字母，数字，中划线“-”，下划线“_”

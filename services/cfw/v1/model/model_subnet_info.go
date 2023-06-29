@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 管理子网信息
+// SubnetInfo 管理子网信息
 type SubnetInfo struct {
 
 	// 子网id

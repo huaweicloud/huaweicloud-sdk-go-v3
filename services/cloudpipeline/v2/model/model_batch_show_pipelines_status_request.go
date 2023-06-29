@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchShowPipelinesStatusRequest Request Object
 type BatchShowPipelinesStatusRequest struct {
 
 	// 要获取状态的流水线ID，用逗号隔开

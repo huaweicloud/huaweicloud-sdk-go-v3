@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建设备组请求结构体
+// AddDeviceGroupDto 创建设备组请求结构体
 type AddDeviceGroupDto struct {
 
 	// **参数说明**：设备组名称，单个资源空间下不可重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_? '#().,&%@!-等字符的组合。

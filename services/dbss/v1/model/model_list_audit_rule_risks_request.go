@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAuditRuleRisksRequest Request Object
 type ListAuditRuleRisksRequest struct {
 
 	// 实例ID

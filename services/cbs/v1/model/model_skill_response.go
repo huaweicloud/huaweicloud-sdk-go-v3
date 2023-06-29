@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// SkillResponse
 type SkillResponse struct {
 
 	// 技能ID。

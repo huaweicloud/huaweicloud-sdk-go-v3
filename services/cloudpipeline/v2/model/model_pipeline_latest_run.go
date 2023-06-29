@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流水线及其最近一次运行信息
+// PipelineLatestRun 流水线及其最近一次运行信息
 type PipelineLatestRun struct {
 
 	// 流水线ID

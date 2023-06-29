@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNodeLabelRequest Request Object
 type ListNodeLabelRequest struct {
 
 	// 节点id

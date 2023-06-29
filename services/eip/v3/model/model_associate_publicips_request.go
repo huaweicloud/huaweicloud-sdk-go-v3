@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// AssociatePublicipsRequest Request Object
 type AssociatePublicipsRequest struct {
 
 	// 弹性公网IP的ID

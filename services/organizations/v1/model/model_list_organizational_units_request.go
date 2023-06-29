@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListOrganizationalUnitsRequest Request Object
 type ListOrganizationalUnitsRequest struct {
 
 	// 父节点（根或组织单元）的唯一标识符（ID）。

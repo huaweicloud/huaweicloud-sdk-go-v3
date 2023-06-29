@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 检查项风险信息
+// CheckRuleRiskInfoResponseInfo 检查项风险信息
 type CheckRuleRiskInfoResponseInfo struct {
 
 	// 风险等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危

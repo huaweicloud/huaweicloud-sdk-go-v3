@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RebuildImageRequest Request Object
 type RebuildImageRequest struct {
 
 	// 租户ID。

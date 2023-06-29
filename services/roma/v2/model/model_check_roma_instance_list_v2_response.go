@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckRomaInstanceListV2Response Response Object
 type CheckRomaInstanceListV2Response struct {
 
 	// 列表总数

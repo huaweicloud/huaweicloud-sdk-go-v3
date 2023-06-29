@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportCheckpointRequest Request Object
 type ImportCheckpointRequest struct {
 	Body *SyncReq `json:"body,omitempty"`
 }

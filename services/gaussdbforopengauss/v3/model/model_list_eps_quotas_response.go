@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEpsQuotasResponse Response Object
 type ListEpsQuotasResponse struct {
 
 	// 企业配额列表。

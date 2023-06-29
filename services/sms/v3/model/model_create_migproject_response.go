@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateMigprojectResponse Response Object
 type CreateMigprojectResponse struct {
 
 	// 创建迁移项目返回的新添加的迁移项目的id

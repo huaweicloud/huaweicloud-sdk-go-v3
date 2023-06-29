@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListConfigurationsDiffResponse Response Object
 type ListConfigurationsDiffResponse struct {
 
 	// 参数组之间的差异集合。

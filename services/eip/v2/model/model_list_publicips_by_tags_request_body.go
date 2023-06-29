@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 通过标签过滤弹性公网IP的请求体
+// ListPublicipsByTagsRequestBody 通过标签过滤弹性公网IP的请求体
 type ListPublicipsByTagsRequestBody struct {
 
 	// 包含标签，最多包含10个key。  每个key下面的value最多10个，结构体不能缺失，key不能为空或者空字符串。  Key不能重复，同一个key中values不能重复。
@@ -67,13 +67,18 @@ func (c ListPublicipsByTagsRequestBodyAction) MarshalJSON() ([]byte, error) {
 
 func (c *ListPublicipsByTagsRequestBodyAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

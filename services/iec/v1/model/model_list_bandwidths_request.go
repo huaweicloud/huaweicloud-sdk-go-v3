@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListBandwidthsRequest Request Object
 type ListBandwidthsRequest struct {
 
 	// 查询的数目，取值范围：0~1000。

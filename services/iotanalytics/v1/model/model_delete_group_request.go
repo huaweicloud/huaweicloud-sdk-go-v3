@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteGroupRequest Request Object
 type DeleteGroupRequest struct {
 
 	// 存储组 ID

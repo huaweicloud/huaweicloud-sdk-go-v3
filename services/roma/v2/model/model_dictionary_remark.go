@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 字典描述
+// DictionaryRemark 字典描述
 type DictionaryRemark struct {
 }
 

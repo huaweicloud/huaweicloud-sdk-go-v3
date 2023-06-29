@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowExtremumInfoResponse Response Object
 type ShowExtremumInfoResponse struct {
 	Maximum *ExtremumDto `json:"maximum,omitempty"`
 

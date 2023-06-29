@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateVirtualGatewayResponse Response Object
 type CreateVirtualGatewayResponse struct {
 	VirtualGateway *VirtualGateway `json:"virtual_gateway,omitempty"`
 

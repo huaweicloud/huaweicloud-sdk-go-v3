@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeletePlaybookRuleResponse Response Object
 type DeletePlaybookRuleResponse struct {
 
 	// Error code

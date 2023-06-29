@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户基础信息。
+// BaseUser 用户基础信息。
 type BaseUser struct {
 
 	// 企业用户名称。

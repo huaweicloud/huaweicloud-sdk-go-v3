@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddToPersonalSpaceResponse Response Object
 type AddToPersonalSpaceResponse struct {
 	HttpStatusCode int `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 资源取值范围，最大值最小值可取。 约束：min<=max
+// IntegerRange 资源取值范围，最大值最小值可取。 约束：min<=max
 type IntegerRange struct {
 
 	// 最大值，-1表示无限制

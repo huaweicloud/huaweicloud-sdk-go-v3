@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// nics字段数据结构说明
+// Nics nics字段数据结构说明
 type Nics struct {
 
 	// 裸金属服务器网卡所在的子网信息。需要指定vpcid对应VPC下已创建的子网（subnet）的网络ID（network_id），UUID格式。子网（subnet）的网络ID（network_id）可以从虚拟私有云控制台或者参考《虚拟私有云API参考》的“查询子网列表”章节获取。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateAssistAuthMethodConfigRequest Request Object
 type UpdateAssistAuthMethodConfigRequest struct {
 	Body *AssistAuthMethodConfigRequest `json:"body,omitempty"`
 }

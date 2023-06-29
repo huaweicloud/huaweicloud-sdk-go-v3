@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteDisasterRecoveryRequest Request Object
 type DeleteDisasterRecoveryRequest struct {
 
 	// 集群的ID

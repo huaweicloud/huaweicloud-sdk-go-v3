@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RemovePublicipsFromSharedBandwidthResponse Response Object
 type RemovePublicipsFromSharedBandwidthResponse struct {
 	HttpStatusCode int `json:"-"`
 }

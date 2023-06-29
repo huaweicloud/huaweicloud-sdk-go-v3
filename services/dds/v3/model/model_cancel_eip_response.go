@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelEipResponse Response Object
 type CancelEipResponse struct {
 
 	// 任务ID。

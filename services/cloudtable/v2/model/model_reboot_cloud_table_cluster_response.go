@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RebootCloudTableClusterResponse Response Object
 type RebootCloudTableClusterResponse struct {
 	Body           *[]RestartInstanceRsp `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`

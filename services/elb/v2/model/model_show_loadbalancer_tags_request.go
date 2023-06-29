@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowLoadbalancerTagsRequest Request Object
 type ShowLoadbalancerTagsRequest struct {
 
 	// 负载均衡器所在的项目id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteKeyRequest Request Object
 type DeleteKeyRequest struct {
 	Body *ScheduleKeyDeletionRequestBody `json:"body,omitempty"`
 }

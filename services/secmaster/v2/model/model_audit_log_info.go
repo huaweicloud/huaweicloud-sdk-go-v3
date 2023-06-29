@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Audit Log Info
+// AuditLogInfo Audit Log Info
 type AuditLogInfo struct {
 
 	// instance type.

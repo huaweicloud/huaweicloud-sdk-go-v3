@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// StartScaleOutPolicyResponse Response Object
 type StartScaleOutPolicyResponse struct {
 	HttpStatusCode int `json:"-"`
 }

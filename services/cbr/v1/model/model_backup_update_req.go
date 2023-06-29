@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新请求参数体
+// BackupUpdateReq 更新请求参数体
 type BackupUpdateReq struct {
 	Backup *BackupUpdate `json:"backup,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListClustersRequest Request Object
 type ListClustersRequest struct {
 
 	// 分页参数，列表的偏移量，默认值为0

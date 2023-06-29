@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 函数通知目标参数配置。
+// FuncDestinationConfig 函数通知目标参数配置。
 type FuncDestinationConfig struct {
 
 	// 目标类型。  - OBS：通知到OBS服务。 - SMN：通知到SMN服务。 - DIS：通知到DIS服务。 - FunctionGraph： 通知到函数服务。
@@ -66,13 +66,18 @@ func (c FuncDestinationConfigDestination) MarshalJSON() ([]byte, error) {
 
 func (c *FuncDestinationConfigDestination) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 拥堵事件信息
+// CongestionInfo 拥堵事件信息
 type CongestionInfo struct {
 
 	// **参数说明**：拥堵级别。  **取值范围**：  - 1：拥堵级别低，速度[25, 30) 单位：km/h  - 2：拥堵级别中，速度[15，25) 单位：km/h  - 3：拥堵级别高，速度[0, 15) 单位：km/h

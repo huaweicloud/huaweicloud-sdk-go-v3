@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateEndpointRoutetableRequest Request Object
 type UpdateEndpointRoutetableRequest struct {
 
 	// 终端节点的ID。

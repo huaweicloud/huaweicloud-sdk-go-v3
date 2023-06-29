@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// expand是一个对象
+// ExpandGraphReqExpand expand是一个对象
 type ExpandGraphReqExpand struct {
 
 	// 新扩副本数量。

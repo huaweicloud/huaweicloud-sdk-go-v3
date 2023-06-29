@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 全量迁移进度。
+// ProgressCompleteInfo 全量迁移进度。
 type ProgressCompleteInfo struct {
 
 	// 完成进度。

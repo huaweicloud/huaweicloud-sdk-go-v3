@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据加工对象
+// DataTransformationObjectVo 数据加工对象
 type DataTransformationObjectVo struct {
 
 	// 数据库对象、数据库表名称和过滤类型名称，例如格式为db1-*-*-tb1-*-*---conditionFilter--。

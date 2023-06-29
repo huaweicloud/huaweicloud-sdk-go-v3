@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 生成短链响应实体类。
+// ListResolveTaskResult 生成短链响应实体类。
 type ListResolveTaskResult struct {
 
 	// 任务ID。

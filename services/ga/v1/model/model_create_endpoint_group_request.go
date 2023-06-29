@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateEndpointGroupRequest Request Object
 type CreateEndpointGroupRequest struct {
 	Body *CreateEndpointGroupRequestBody `json:"body,omitempty"`
 }

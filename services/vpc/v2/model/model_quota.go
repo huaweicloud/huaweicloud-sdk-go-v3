@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Quota
 type Quota struct {
 
 	// 资源列表对象

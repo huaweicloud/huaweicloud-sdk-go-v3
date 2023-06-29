@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 查询应用详情响应体
+// TaskInfo 查询应用详情响应体
 type TaskInfo struct {
 
 	// 部署任务id
@@ -18,7 +18,7 @@ type TaskInfo struct {
 	// 应用名称
 	Name *string `json:"name,omitempty"`
 
-	// 项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称
@@ -154,13 +154,18 @@ func (c TaskInfoState) MarshalJSON() ([]byte, error) {
 
 func (c *TaskInfoState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

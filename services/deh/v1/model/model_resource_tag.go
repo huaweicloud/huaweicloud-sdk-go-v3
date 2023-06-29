@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 专属主机标签结构体
+// ResourceTag 专属主机标签结构体
 type ResourceTag struct {
 
 	// 键。 长度不超过36个Unicode字符。 不能为空。 不能包含以下ASCII非打印字符：“=”,“*”,“<”,“>”,“\\”,“|”,“/”,“,”。

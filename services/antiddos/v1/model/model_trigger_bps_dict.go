@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 流量限制列表
+// TriggerBpsDict 流量限制列表
 type TriggerBpsDict struct {
 
 	// 流量分段ID

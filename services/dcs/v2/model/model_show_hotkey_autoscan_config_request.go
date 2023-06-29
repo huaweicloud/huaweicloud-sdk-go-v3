@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowHotkeyAutoscanConfigRequest Request Object
 type ShowHotkeyAutoscanConfigRequest struct {
 
 	// 实例ID。

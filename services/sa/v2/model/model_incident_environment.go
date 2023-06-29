@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 环境信息
+// IncidentEnvironment 环境信息
 type IncidentEnvironment struct {
 
 	// The name, display only

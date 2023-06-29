@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListFunctionAsMetricRequest Request Object
 type ListFunctionAsMetricRequest struct {
 
 	// 指标类型，默认值为failcount。

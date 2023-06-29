@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询智能信息发送任务响应体。
+// AimSendTaskSmsChannel 查询智能信息发送任务响应体。
 type AimSendTaskSmsChannel struct {
 
 	// 短信通道号。  > 预留字段，暂时为空。

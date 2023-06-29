@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// Resource
 type Resource struct {
 
 	// 配额类型。  枚举值说明：  alarm，告警规则

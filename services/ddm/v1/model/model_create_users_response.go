@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateUsersResponse Response Object
 type CreateUsersResponse struct {
 
 	// DDM实例帐号相关信息的集合。

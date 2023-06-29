@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSelfPrivilegesResponse Response Object
 type ListSelfPrivilegesResponse struct {
 
 	// 总数

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 已录入SMN信息体
+// QuerySmnInfoResp 已录入SMN信息体
 type QuerySmnInfoResp struct {
 
 	// SMN信息

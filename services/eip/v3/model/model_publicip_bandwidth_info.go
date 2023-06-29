@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 公网IP绑定的带宽信息
+// PublicipBandwidthInfo 公网IP绑定的带宽信息
 type PublicipBandwidthInfo struct {
 
 	// 带宽ID

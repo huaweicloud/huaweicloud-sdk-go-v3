@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 购买包周期云模式waf请求参数
+// CreatePrepaidCloudWafRequestBody 购买包周期云模式waf请求参数
 type CreatePrepaidCloudWafRequestBody struct {
 
 	// 项目id

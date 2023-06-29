@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateServiceRequest Request Object
 type UpdateServiceRequest struct {
 
 	// 注册服务唯一标识，该值由注册接口返回

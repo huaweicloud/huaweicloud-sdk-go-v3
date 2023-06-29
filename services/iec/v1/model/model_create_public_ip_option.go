@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建公网IP请求参数
+// CreatePublicIpOption 创建公网IP请求参数
 type CreatePublicIpOption struct {
 
 	// 边缘站点的ID。

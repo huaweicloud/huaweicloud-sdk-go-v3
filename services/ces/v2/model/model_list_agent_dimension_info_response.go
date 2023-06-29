@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListAgentDimensionInfoResponse Response Object
 type ListAgentDimensionInfoResponse struct {
 
 	// 维度信息

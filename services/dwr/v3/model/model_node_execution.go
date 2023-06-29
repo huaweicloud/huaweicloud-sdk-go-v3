@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 节点执行记录
+// NodeExecution 节点执行记录
 type NodeExecution struct {
 
 	// 流程节点执行状态  最小长度：1  最大长度：32  枚举值：  success  fail  running  timeout  cancel

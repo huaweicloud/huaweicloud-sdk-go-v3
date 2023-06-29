@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateAlarmRulesRequest Request Object
 type CreateAlarmRulesRequest struct {
 	Body *PostAlarmsReqV2 `json:"body,omitempty"`
 }

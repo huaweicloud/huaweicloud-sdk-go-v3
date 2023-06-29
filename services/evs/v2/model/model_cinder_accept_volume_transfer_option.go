@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标记接受云硬盘过户操作。
+// CinderAcceptVolumeTransferOption 标记接受云硬盘过户操作。
 type CinderAcceptVolumeTransferOption struct {
 
 	// 云硬盘过户的身份认证密钥。  创建云硬盘过户时会返回该身份认证密钥。

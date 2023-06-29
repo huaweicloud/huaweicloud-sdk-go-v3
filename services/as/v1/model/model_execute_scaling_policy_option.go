@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 执行或启用或停止伸缩策略
+// ExecuteScalingPolicyOption 执行或启用或停止伸缩策略
 type ExecuteScalingPolicyOption struct {
 
 	// 执行或启用或停止伸缩策略操作的标识。执行：execute。启用：resume。停止：pause。
@@ -51,13 +51,18 @@ func (c ExecuteScalingPolicyOptionAction) MarshalJSON() ([]byte, error) {
 
 func (c *ExecuteScalingPolicyOptionAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 管道作业基础信息，包括：管道ID、管道名称、管道类型等。
+// PipelineJobInfoDto 管道作业基础信息，包括：管道ID、管道名称、管道类型等。
 type PipelineJobInfoDto struct {
 
 	// 管道ID

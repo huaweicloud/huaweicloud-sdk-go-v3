@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ExportGraph2Response Response Object
 type ExportGraph2Response struct {
 
 	// 执行该异步任务的jobId。

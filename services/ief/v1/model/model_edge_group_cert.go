@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边缘节点组证书
+// EdgeGroupCert 边缘节点组证书
 type EdgeGroupCert struct {
 
 	// 证书ID

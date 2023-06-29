@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户自定义键值对
+// EipMetaData 用户自定义键值对
 type EipMetaData struct {
 
 	// 伸缩带宽策略中带宽对应的共享类型。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowImageHighresolutionMattingTaskResponse Response Object
 type ShowImageHighresolutionMattingTaskResponse struct {
 
 	// 任务id

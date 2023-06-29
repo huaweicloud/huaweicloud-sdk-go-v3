@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListTtsaJobsResponse Response Object
 type ListTtsaJobsResponse struct {
 
 	// 语音驱动任务总数。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateTestCaseResultResponse Response Object
 type UpdateTestCaseResultResponse struct {
 
 	// 接口调用失败错误码

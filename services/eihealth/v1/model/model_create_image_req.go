@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建镜像请求体
+// CreateImageReq 创建镜像请求体
 type CreateImageReq struct {
 
 	// 描述信息

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建网络实例的请求体。
+// CreateNetworkInstanceRequestBody 创建网络实例的请求体。
 type CreateNetworkInstanceRequestBody struct {
 	NetworkInstance *CreateNetworkInstance `json:"network_instance"`
 }

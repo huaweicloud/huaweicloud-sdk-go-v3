@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateRedislogDownloadLinkResponse Response Object
 type CreateRedislogDownloadLinkResponse struct {
 
 	// 日志id

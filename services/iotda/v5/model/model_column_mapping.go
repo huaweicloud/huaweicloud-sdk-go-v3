@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库的列和流转数据的对应关系。
+// ColumnMapping 数据库的列和流转数据的对应关系。
 type ColumnMapping struct {
 
 	// **参数说明**：数据库的列名

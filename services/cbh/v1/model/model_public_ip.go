@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 云堡垒机实例弹性公网IP信息。可填写null值
+// PublicIp 云堡垒机实例弹性公网IP信息。可填写null值
 type PublicIp struct {
 
 	// 已分配的弹性IP和EIP只能有一个。

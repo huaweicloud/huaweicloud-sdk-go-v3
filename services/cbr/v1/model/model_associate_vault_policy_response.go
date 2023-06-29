@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateVaultPolicyResponse Response Object
 type AssociateVaultPolicyResponse struct {
 	AssociatePolicy *VaultPolicyResp `json:"associate_policy,omitempty"`
 	HttpStatusCode  int              `json:"-"`

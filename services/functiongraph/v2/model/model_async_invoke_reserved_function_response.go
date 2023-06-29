@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AsyncInvokeReservedFunctionResponse Response Object
 type AsyncInvokeReservedFunctionResponse struct {
 
 	// 预留实例id

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeSecurityGroupResponse Response Object
 type ChangeSecurityGroupResponse struct {
 
 	// SFS Turbo文件系统ID。

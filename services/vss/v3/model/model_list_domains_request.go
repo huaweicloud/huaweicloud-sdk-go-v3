@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListDomainsRequest Request Object
 type ListDomainsRequest struct {
 
-	// 域名ID
+	// 网站域名ID
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
+	// 网站域名的认证状态:   * unauth - 未认证   * auth - 已认证   * invalid - 认证文件无效   * manual - 人工认证   * skip - 免认证
 	AuthStatus *ListDomainsRequestAuthStatus `json:"auth_status,omitempty"`
 
 	// 分页查询，偏移量，表示从此偏移量开始查询
@@ -76,13 +76,18 @@ func (c ListDomainsRequestAuthStatus) MarshalJSON() ([]byte, error) {
 
 func (c *ListDomainsRequestAuthStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

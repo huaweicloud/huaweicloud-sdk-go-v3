@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Condition define
+// ConditionItem Condition define
 type ConditionItem struct {
 
 	// Name of the condition.

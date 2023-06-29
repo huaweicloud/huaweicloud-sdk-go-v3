@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 机柜
+// Rack 机柜
 type Rack struct {
 
 	// 机柜ID

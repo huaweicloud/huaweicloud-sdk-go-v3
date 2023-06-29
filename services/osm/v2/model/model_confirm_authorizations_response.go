@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ConfirmAuthorizationsResponse Response Object
 type ConfirmAuthorizationsResponse struct {
 
 	// 错误码

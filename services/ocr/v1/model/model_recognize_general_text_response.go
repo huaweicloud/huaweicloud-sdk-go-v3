@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RecognizeGeneralTextResponse Response Object
 type RecognizeGeneralTextResponse struct {
 	Result         *GeneralTextResult `json:"result,omitempty"`
 	HttpStatusCode int                `json:"-"`

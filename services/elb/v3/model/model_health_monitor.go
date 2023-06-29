@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 健康检查对象
+// HealthMonitor 健康检查对象
 type HealthMonitor struct {
 
 	// 健康检查的管理状态。  取值： - true：表示开启健康检查，默认为true。 - false表示关闭健康检查。

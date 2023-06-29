@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UploadBatchTaskFileResponse Response Object
 type UploadBatchTaskFileResponse struct {
 
 	// 上传的批量任务文件ID，由平台自动生成。

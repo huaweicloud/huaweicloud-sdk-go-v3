@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// AutoClassificationResult
 type AutoClassificationResult struct {
 	Status *AutoClassificationResultStatus `json:"status"`
 

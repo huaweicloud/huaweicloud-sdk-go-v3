@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-//
+// NodeStatus
 type NodeStatus struct {
 
 	// 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
@@ -103,13 +103,18 @@ func (c NodeStatusPhase) MarshalJSON() ([]byte, error) {
 
 func (c *NodeStatusPhase) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

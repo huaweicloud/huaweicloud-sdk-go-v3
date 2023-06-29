@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateRecordCallbackRequest Request Object
 type UpdateRecordCallbackRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。

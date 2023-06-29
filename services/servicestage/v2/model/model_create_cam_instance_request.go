@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateCamInstanceRequest Request Object
 type CreateCamInstanceRequest struct {
 	Body *InstanceCreation `json:"body,omitempty"`
 }

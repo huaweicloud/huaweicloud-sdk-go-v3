@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCheckpointRequest Request Object
 type ShowCheckpointRequest struct {
 
 	// 还原点ID

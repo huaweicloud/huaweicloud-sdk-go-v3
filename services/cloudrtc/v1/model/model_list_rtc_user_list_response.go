@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListRtcUserListResponse Response Object
 type ListRtcUserListResponse struct {
 
 	// 总数

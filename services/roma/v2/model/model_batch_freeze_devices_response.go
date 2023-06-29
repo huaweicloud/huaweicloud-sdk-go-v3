@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchFreezeDevicesResponse Response Object
 type BatchFreezeDevicesResponse struct {
 
 	// 下线成功设备列表

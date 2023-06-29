@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowProjectQuotasResponse Response Object
 type ShowProjectQuotasResponse struct {
 	Quotas         *ProjectQuotasResult `json:"quotas,omitempty"`
 	HttpStatusCode int                  `json:"-"`

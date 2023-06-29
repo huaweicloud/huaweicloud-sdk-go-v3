@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 用户自定义字段
+// WorkitemCustomField 用户自定义字段
 type WorkitemCustomField struct {
 
 	// 自定义字段id

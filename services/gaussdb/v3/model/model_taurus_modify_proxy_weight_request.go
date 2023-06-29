@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// proxy实例修改权重请求体
+// TaurusModifyProxyWeightRequest proxy实例修改权重请求体
 type TaurusModifyProxyWeightRequest struct {
 
 	// 主节点权重

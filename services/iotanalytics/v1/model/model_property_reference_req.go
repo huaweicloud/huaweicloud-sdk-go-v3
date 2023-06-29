@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 属性引用
+// PropertyReferenceReq 属性引用
 type PropertyReferenceReq struct {
 
 	// 引用的资产ID，只有single型参数才能填写，可填写null置空

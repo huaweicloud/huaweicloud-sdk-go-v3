@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CancelAsyncInvocationResponse Response Object
 type CancelAsyncInvocationResponse struct {
 	HttpStatusCode int `json:"-"`
 }

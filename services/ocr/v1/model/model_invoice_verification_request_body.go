@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// InvoiceVerificationRequestBody
 type InvoiceVerificationRequestBody struct {
 
 	// 发票代码。发票种类为全电发票时，该参数须为空字符串。

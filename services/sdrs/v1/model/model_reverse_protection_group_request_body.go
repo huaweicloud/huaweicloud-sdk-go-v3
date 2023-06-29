@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 保护组切换请求体
+// ReverseProtectionGroupRequestBody 保护组切换请求体
 type ReverseProtectionGroupRequestBody struct {
 	ReverseServerGroup *ReverseProtectionGroupRequestParams `json:"reverse-server-group"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 目标数据库信息。
+// TargetDbInfo 目标数据库信息。
 type TargetDbInfo struct {
 
 	// 用户名。

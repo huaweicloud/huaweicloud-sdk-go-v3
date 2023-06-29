@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListStorageResourcesRequest Request Object
 type ListStorageResourcesRequest struct {
 }
 

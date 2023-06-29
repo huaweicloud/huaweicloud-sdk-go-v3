@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListReceivedHandshakesRequest Request Object
 type ListReceivedHandshakesRequest struct {
 
 	// 页面中最大结果数量。

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTasksResponse Response Object
 type CreateTasksResponse struct {
 
 	// 状态码:   * success - 成功   * failure - 失败
@@ -21,7 +21,7 @@ type CreateTasksResponse struct {
 	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 
-	// 任务状态:   * running - 正在运行   * success - 成功   * canceled - 已取消   * waiting - 正在等待   * failure - 失败
+	// 任务状态:   * running - 正在运行   * success - 成功   * canceled - 已取消   * waiting - 正在等待   * ready - 已就绪，排队中   * failure - 失败
 	TaskStatus     *CreateTasksResponseTaskStatus `json:"task_status,omitempty"`
 	HttpStatusCode int                            `json:"-"`
 }
@@ -65,13 +65,18 @@ func (c CreateTasksResponseInfoCode) MarshalJSON() ([]byte, error) {
 
 func (c *CreateTasksResponseInfoCode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}
@@ -86,6 +91,7 @@ type CreateTasksResponseTaskStatusEnum struct {
 	SUCCESS  CreateTasksResponseTaskStatus
 	CANCELED CreateTasksResponseTaskStatus
 	WAITING  CreateTasksResponseTaskStatus
+	READY    CreateTasksResponseTaskStatus
 	FAILURE  CreateTasksResponseTaskStatus
 }
 
@@ -103,6 +109,9 @@ func GetCreateTasksResponseTaskStatusEnum() CreateTasksResponseTaskStatusEnum {
 		WAITING: CreateTasksResponseTaskStatus{
 			value: "waiting",
 		},
+		READY: CreateTasksResponseTaskStatus{
+			value: "ready",
+		},
 		FAILURE: CreateTasksResponseTaskStatus{
 			value: "failure",
 		},
@@ -119,13 +128,18 @@ func (c CreateTasksResponseTaskStatus) MarshalJSON() ([]byte, error) {
 
 func (c *CreateTasksResponseTaskStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

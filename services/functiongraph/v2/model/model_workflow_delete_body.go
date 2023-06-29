@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 批量删除函数流的Body体
+// WorkflowDeleteBody 批量删除函数流的Body体
 type WorkflowDeleteBody struct {
 
 	// 函数流URN列表

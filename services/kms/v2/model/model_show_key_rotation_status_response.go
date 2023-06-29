@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowKeyRotationStatusResponse Response Object
 type ShowKeyRotationStatusResponse struct {
 
 	// 密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCertificateAuthorityResponse Response Object
 type CreateCertificateAuthorityResponse struct {
 
 	// 当前签发的CA证书ID。

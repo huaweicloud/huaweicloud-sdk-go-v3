@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 恢复请求body
+// BackupRestoreReq 恢复请求body
 type BackupRestoreReq struct {
 	Restore *BackupRestore `json:"restore"`
 }

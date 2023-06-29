@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建图请求体
+// CreateGraphReq 创建图请求体
 type CreateGraphReq struct {
 	Graph *CreateGraphReqGraph `json:"graph"`
 }

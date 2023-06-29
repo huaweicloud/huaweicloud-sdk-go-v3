@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubCustomersRequest Request Object
 type ListSubCustomersRequest struct {
 	Body *QuerySubCustomerListReq `json:"body,omitempty"`
 }

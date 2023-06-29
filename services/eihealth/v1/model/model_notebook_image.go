@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// notebook镜像
+// NotebookImage notebook镜像
 type NotebookImage struct {
 	ImageType *DevelopImageType `json:"image_type"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListHostRouteResponse Response Object
 type ListHostRouteResponse struct {
 
 	// 路由线路数量

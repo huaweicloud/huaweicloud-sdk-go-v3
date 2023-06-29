@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SignPublishedAgreementRequest Request Object
 type SignPublishedAgreementRequest struct {
 
 	// 协议id

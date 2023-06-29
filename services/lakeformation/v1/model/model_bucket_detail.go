@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// obs桶详细信息
+// BucketDetail obs桶详细信息
 type BucketDetail struct {
 
 	// obs桶id

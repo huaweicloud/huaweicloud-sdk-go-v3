@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomerOrdersResponse Response Object
 type ListCustomerOrdersResponse struct {
 
 	// 大于等于0的整数。 符合条件的记录总数。

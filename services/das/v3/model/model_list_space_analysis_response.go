@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSpaceAnalysisResponse Response Object
 type ListSpaceAnalysisResponse struct {
 
 	// 记录总数

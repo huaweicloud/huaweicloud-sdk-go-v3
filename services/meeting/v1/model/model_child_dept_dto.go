@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 子部门详情。
+// ChildDeptDto 子部门详情。
 type ChildDeptDto struct {
 
 	// 部门编码。

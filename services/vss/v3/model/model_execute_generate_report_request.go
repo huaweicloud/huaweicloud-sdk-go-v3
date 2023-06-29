@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ExecuteGenerateReportRequest Request Object
 type ExecuteGenerateReportRequest struct {
 	Body *ExecuteGenerateReportRequestBody `json:"body,omitempty"`
 }

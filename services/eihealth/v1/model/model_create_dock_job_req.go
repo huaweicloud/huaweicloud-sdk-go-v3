@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建分子对接作业请求体
+// CreateDockJobReq 创建分子对接作业请求体
 type CreateDockJobReq struct {
 	BasicInfo *CreateDrugJobBasicInfo `json:"basic_info"`
 

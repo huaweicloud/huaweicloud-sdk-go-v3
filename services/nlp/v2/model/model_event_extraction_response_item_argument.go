@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 事件元素
+// EventExtractionResponseItemArgument 事件元素
 type EventExtractionResponseItemArgument struct {
 
 	// 元素角色。元素角色指的是事件元素在事件中扮演的角色，是事件元素与事件的语义关系。

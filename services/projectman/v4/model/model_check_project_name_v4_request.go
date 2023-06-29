@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CheckProjectNameV4Request Request Object
 type CheckProjectNameV4Request struct {
 	Body *CheckProjectNameRequestV4 `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListInvoicesRequest Request Object
 type ListInvoicesRequest struct {
 
 	// 发票申请开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。

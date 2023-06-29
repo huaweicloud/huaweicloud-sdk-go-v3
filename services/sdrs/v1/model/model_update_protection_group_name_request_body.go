@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新保护组名称请求体
+// UpdateProtectionGroupNameRequestBody 更新保护组名称请求体
 type UpdateProtectionGroupNameRequestBody struct {
 	ServerGroup *UpdateProtectionGroupNameRequestParams `json:"server_group"`
 }

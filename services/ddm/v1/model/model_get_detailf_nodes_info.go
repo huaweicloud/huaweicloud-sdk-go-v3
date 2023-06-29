@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// nodes参数说明。
+// GetDetailfNodesInfo nodes参数说明。
 type GetDetailfNodesInfo struct {
 
 	// DDM实例节点状态。

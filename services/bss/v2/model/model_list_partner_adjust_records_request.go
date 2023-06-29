@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPartnerAdjustRecordsRequest Request Object
 type ListPartnerAdjustRecordsRequest struct {
 
 	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)获取customer_id。为空表示查询所有的调账记录。不为空表示仅查询与该客户相关的调账记录。此参数不携带或携带值为空时，默认查询所有客户的调账记录。 说明： 此处的客户包含伙伴的子客户，以及华为云总经销商关联的云经销商（二级经销商）。

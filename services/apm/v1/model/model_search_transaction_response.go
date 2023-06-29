@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// SearchTransactionResponse Response Object
 type SearchTransactionResponse struct {
 
 	// URL跟踪视图列表。

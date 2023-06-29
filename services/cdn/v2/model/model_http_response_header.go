@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// http响应头设置
+// HttpResponseHeader http响应头设置
 type HttpResponseHeader struct {
 
 	// 设置HTTP响应头参数。取值：\"Content-Disposition\", \"Content-Language\", \"Access-Control-Allow-Origin\",\"Access-Control-Allow-Methods\", \"Access-Control-Max-Age\", \"Access-Control-Expose-Headers\"或自定义头部。格式要求：长度1~100，以字母开头，可以使用字母、数字和短横杠。

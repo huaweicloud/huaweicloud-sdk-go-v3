@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 启动任务请求体。
+// StartInfo 启动任务请求体。
 type StartInfo struct {
 
 	// 任务id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListIndirectPartnersRequest Request Object
 type ListIndirectPartnersRequest struct {
 	Body *QueryIndirectPartnersReq `json:"body,omitempty"`
 }

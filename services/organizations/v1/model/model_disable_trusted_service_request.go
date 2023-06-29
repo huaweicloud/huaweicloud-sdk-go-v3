@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DisableTrustedServiceRequest Request Object
 type DisableTrustedServiceRequest struct {
 	Body *TrustedServiceReqBody `json:"body,omitempty"`
 }

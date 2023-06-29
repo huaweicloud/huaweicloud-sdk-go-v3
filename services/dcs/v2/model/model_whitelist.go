@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IP白名单分组列表结构体
+// Whitelist IP白名单分组列表结构体
 type Whitelist struct {
 
 	// 白名单分组名称，每个实例支持创建4个分组。

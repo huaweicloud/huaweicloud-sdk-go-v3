@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 调用返回结果。
+// IvsStandardByVideoAndNameAndIdResponseBodyResult 调用返回结果。
 type IvsStandardByVideoAndNameAndIdResponseBodyResult struct {
 
 	// 子服务名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// HistorySlot
 type HistorySlot struct {
 
 	// 槽位名称。

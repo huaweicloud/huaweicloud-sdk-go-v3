@@ -245,6 +245,114 @@ func (i *UpdateHealthCheckInvoker) Invoke() (*model.UpdateHealthCheckResponse, e
 	}
 }
 
+type AddIpGroupIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddIpGroupIpInvoker) Invoke() (*model.AddIpGroupIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddIpGroupIpResponse), nil
+	}
+}
+
+type AssociateListenerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateListenerInvoker) Invoke() (*model.AssociateListenerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateListenerResponse), nil
+	}
+}
+
+type CreateIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpGroupInvoker) Invoke() (*model.CreateIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpGroupResponse), nil
+	}
+}
+
+type DeleteIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpGroupInvoker) Invoke() (*model.DeleteIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpGroupResponse), nil
+	}
+}
+
+type DisassociateListenerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateListenerInvoker) Invoke() (*model.DisassociateListenerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateListenerResponse), nil
+	}
+}
+
+type ListIpGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpGroupsInvoker) Invoke() (*model.ListIpGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpGroupsResponse), nil
+	}
+}
+
+type RemoveIpGroupIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveIpGroupIpInvoker) Invoke() (*model.RemoveIpGroupIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveIpGroupIpResponse), nil
+	}
+}
+
+type ShowIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpGroupInvoker) Invoke() (*model.ShowIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpGroupResponse), nil
+	}
+}
+
+type UpdateIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIpGroupInvoker) Invoke() (*model.UpdateIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIpGroupResponse), nil
+	}
+}
+
 type CreateListenerInvoker struct {
 	*invoker.BaseInvoker
 }

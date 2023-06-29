@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowUpgradeProgressResponse Response Object
 type ShowUpgradeProgressResponse struct {
 
 	// 升级的固件版本

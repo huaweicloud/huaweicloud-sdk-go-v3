@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// RestoreClusterRequestBody This is a auto create Body Object
 type RestoreClusterRequestBody struct {
 	Restore *Restore `json:"restore"`
 }

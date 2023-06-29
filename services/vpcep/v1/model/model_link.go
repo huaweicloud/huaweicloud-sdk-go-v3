@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// API的url地址
+// Link API的url地址
 type Link struct {
 
 	// 当前API版本的引用地址。

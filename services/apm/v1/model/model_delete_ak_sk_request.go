@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAkSkRequest Request Object
 type DeleteAkSkRequest struct {
 
 	// 需要删除的ak信息。

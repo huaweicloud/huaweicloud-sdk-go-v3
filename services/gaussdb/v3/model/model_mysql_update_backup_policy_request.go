@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设置自动备份策略信息
+// MysqlUpdateBackupPolicyRequest 设置自动备份策略信息
 type MysqlUpdateBackupPolicyRequest struct {
 	BackupPolicy *MysqlBackupPolicy `json:"backup_policy"`
 }

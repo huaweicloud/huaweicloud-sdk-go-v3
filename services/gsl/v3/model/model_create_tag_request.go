@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateTagRequest Request Object
 type CreateTagRequest struct {
 	Body *AddOrModifyTagReq `json:"body,omitempty"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListAutoJobRequest Request Object
 type ListAutoJobRequest struct {
 
 	// Locale语言类型，zh_cn返回中文，en_us返回英文

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// UpdateVpcOption
 type UpdateVpcOption struct {
 
 	// 功能说明：虚拟私有云名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  约束：如果名称不为空，则同一个租户下的VPC不允许重名。

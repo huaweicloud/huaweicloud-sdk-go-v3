@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AddVolumesResponse Response Object
 type AddVolumesResponse struct {
 
 	// 增加磁盘任务ID

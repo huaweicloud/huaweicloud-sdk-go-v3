@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控数据信息
+// MetricItemResultApi 监控数据信息
 type MetricItemResultApi struct {
 	Metric *MetricDemision `json:"metric,omitempty"`
 

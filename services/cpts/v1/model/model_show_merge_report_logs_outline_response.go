@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowMergeReportLogsOutlineResponse Response Object
 type ShowMergeReportLogsOutlineResponse struct {
 
 	// 响应码

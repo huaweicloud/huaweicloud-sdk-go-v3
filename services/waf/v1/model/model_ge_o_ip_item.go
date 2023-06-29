@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 地理位置控制规则
+// GeOIpItem 地理位置控制规则
 type GeOIpItem struct {
 
 	// 规则id

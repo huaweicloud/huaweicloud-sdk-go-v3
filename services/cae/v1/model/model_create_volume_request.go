@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateVolumeRequest Request Object
 type CreateVolumeRequest struct {
 
 	// 环境id。

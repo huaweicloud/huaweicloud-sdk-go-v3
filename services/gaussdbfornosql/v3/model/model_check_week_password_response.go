@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CheckWeekPasswordResponse Response Object
 type CheckWeekPasswordResponse struct {
 
 	// 是否是弱密码。 - true:是弱密码。 - false:不是弱密码。

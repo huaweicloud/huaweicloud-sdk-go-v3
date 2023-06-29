@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 产品参数
+// ProductCreateRequest 产品参数
 type ProductCreateRequest struct {
 	Product *ProductRequest `json:"product"`
 }

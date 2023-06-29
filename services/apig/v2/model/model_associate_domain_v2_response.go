@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// AssociateDomainV2Response Response Object
 type AssociateDomainV2Response struct {
 
 	// 自定义域名
@@ -76,13 +76,18 @@ func (c AssociateDomainV2ResponseStatus) MarshalJSON() ([]byte, error) {
 
 func (c *AssociateDomainV2ResponseStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(int32)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
 	}

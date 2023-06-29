@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数集
+// StructLogContents 参数集
 type StructLogContents struct {
 
 	// 日志原数据。

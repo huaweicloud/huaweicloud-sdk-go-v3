@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSubCustomerBillDetailRequest Request Object
 type ListSubCustomerBillDetailRequest struct {
 
 	// 语言。忽略大小写，默认 zh_cn：中文 en_us：英文

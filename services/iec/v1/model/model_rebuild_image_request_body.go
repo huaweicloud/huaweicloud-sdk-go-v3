@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 重试镜像任务请求体。
+// RebuildImageRequestBody 重试镜像任务请求体。
 type RebuildImageRequestBody struct {
 
 	// 重试镜像任务动作，取值retry。

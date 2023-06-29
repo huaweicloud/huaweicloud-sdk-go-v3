@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导出云手机数据请求体。
+// BatchExportCloudPhoneDataRequestBody 导出云手机数据请求体。
 type BatchExportCloudPhoneDataRequestBody struct {
 
 	// 待导出数据的云手机信息

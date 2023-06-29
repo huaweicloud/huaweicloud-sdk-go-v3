@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 命名实体识别post请求体
+// PostSentenceEmbeddingReq 命名实体识别post请求体
 type PostSentenceEmbeddingReq struct {
 
 	// 文本列表，文本长度为1~512，列表大小为1~1000，文本编码为UTF-8。
@@ -54,13 +54,18 @@ func (c PostSentenceEmbeddingReqDomain) MarshalJSON() ([]byte, error) {
 
 func (c *PostSentenceEmbeddingReqDomain) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

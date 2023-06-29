@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListPostalAddressRequest Request Object
 type ListPostalAddressRequest struct {
 
 	// 偏移量。默认值为0。

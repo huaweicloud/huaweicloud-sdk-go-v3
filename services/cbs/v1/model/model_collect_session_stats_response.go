@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CollectSessionStatsResponse Response Object
 type CollectSessionStatsResponse struct {
 
 	// 统计周期目前支持year、month、week、day。

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// 存储池
+// StoragePool 存储池
 type StoragePool struct {
 
 	// 机柜ID

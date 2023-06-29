@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 请求体
+// RunModerationAudioRequestBody 请求体
 type RunModerationAudioRequestBody struct {
 
 	// 与url二选一  语音文件Base64编码字符串。要求base64编码后大小不超过4M。语音时长不超过1分钟。

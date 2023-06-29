@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// SwitchModeRequest Request Object
 type SwitchModeRequest struct {
 
 	// 会议ID。

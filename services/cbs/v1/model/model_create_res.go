@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// CreateRes
 type CreateRes struct {
 
 	// 视频id

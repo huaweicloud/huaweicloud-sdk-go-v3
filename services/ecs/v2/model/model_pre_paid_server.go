@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建弹性云服务器（包周期）接口Body体。
+// PrePaidServer 创建弹性云服务器（包周期）接口Body体。
 type PrePaidServer struct {
 
 	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建路由表请求体
+// CreateRoutetableRequestBody 创建路由表请求体
 type CreateRoutetableRequestBody struct {
 	Routetable *CreateRoutetableOption `json:"routetable"`
 }

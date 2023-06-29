@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// DnsAssignMent
 type DnsAssignMent struct {
 
 	// 端口hostname

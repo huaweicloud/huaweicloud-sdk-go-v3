@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建结构化模板中的字段模型
+// FieldModel 创建结构化模板中的字段模型
 type FieldModel struct {
 
 	// 字段名称

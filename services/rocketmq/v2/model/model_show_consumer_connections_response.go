@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowConsumerConnectionsResponse Response Object
 type ShowConsumerConnectionsResponse struct {
 
 	// 消费组名称

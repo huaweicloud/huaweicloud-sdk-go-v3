@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 函数绑定日志配置。
+// FuncLogConfig 函数绑定日志配置。
 type FuncLogConfig struct {
 
 	// 函数绑定日志组名。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 安全组数据对象
+// SecurityGroup 安全组数据对象
 type SecurityGroup struct {
 
 	// 安全组的ID。UUID

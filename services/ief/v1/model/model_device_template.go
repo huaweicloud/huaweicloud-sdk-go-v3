@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备模板
+// DeviceTemplate 设备模板
 type DeviceTemplate struct {
 	DeviceTemplate *EdgemgrDeviceReq `json:"device_template"`
 }

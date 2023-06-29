@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 分页信息
+// PageInfo 分页信息
 type PageInfo struct {
 
 	// 下一页标识。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 更新VPC请求体
+// UpdateVpcRequestBody 更新VPC请求体
 type UpdateVpcRequestBody struct {
 	Vpc *UpdateVpcOption `json:"vpc,omitempty"`
 }

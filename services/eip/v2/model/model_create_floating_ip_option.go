@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建floatingip对象
+// CreateFloatingIpOption 创建floatingip对象
 type CreateFloatingIpOption struct {
 
 	// 浮动IP地址。

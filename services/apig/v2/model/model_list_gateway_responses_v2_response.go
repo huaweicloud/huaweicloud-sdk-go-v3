@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListGatewayResponsesV2Response Response Object
 type ListGatewayResponsesV2Response struct {
 
 	// 本次返回的列表长度

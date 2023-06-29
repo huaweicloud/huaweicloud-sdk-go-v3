@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群使用的参数配置值。
+// ConfigurationParameterUnit 集群使用的参数配置值。
 type ConfigurationParameterUnit struct {
 
 	// 参数类型，包括：cn、dn。

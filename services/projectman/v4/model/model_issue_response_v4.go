@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 工作项属性
+// IssueResponseV4 工作项属性
 type IssueResponseV4 struct {
 
 	// 实际工时

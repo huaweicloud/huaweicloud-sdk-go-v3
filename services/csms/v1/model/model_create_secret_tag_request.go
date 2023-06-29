@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateSecretTagRequest Request Object
 type CreateSecretTagRequest struct {
 
 	// 凭据ID

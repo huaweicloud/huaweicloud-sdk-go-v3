@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListInstanceMetricRequest Request Object
 type ListInstanceMetricRequest struct {
 
 	// 区块链服务id。

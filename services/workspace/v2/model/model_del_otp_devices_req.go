@@ -8,7 +8,7 @@ import (
 
 type DelOtpDevicesReq struct {
 
-	// 待解绑的otp配置id数组
+	// 待解绑的otp配置id数组。
 	OtpIds *[]string `json:"otp_ids,omitempty"`
 }
 

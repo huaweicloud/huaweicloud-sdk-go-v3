@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群容灾进度详情
+// ClusterRecoveryProgress 集群容灾进度详情
 type ClusterRecoveryProgress struct {
 
 	// key

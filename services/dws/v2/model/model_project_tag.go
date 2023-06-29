@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 标签详情。
+// ProjectTag 标签详情。
 type ProjectTag struct {
 
 	// 键。

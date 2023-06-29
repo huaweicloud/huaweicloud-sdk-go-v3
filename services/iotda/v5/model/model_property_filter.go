@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 设备属性过滤信息，自定义结构。
+// PropertyFilter 设备属性过滤信息，自定义结构。
 type PropertyFilter struct {
 
 	// **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。

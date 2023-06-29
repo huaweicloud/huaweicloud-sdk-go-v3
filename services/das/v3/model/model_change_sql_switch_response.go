@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ChangeSqlSwitchResponse Response Object
 type ChangeSqlSwitchResponse struct {
 
 	// 开关状态。取值： Enabled：已开启， Disabled：已关闭， Switching：开关切换中

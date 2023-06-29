@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询结果返回体。
+// ListPortInfosResponseModel 查询结果返回体。
 type ListPortInfosResponseModel struct {
 	PageInfo *PageOffSet `json:"page_info,omitempty"`
 

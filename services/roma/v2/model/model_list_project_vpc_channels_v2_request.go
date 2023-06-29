@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListProjectVpcChannelsV2Request Request Object
 type ListProjectVpcChannelsV2Request struct {
 
 	// 偏移量，表示从此偏移量开始查询，偏移量小于0时，自动转换为0

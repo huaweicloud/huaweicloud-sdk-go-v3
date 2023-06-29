@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowQosThresholdResponse Response Object
 type ShowQosThresholdResponse struct {
 	Latency *ThresholdData `json:"latency,omitempty"`
 

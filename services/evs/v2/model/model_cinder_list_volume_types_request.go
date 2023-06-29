@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CinderListVolumeTypesRequest Request Object
 type CinderListVolumeTypesRequest struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// DeleteLifecycleHookResponse Response Object
 type DeleteLifecycleHookResponse struct {
 	HttpStatusCode int `json:"-"`
 }

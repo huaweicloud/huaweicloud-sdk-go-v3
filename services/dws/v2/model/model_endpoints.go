@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群的内网连接信息。
+// Endpoints 集群的内网连接信息。
 type Endpoints struct {
 
 	// 内网连接信息。

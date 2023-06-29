@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowCloudPhoneDetailRequest Request Object
 type ShowCloudPhoneDetailRequest struct {
 
 	// 云手机id。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// GlanceShowImageMemberSchemasResponse Response Object
 type GlanceShowImageMemberSchemasResponse struct {
 
 	// 视图名称。

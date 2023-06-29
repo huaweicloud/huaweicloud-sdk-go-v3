@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListLiveDataApiV2Response Response Object
 type ListLiveDataApiV2Response struct {
 
 	// 本次返回的列表长度

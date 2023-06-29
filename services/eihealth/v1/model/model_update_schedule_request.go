@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateScheduleRequest Request Object
 type UpdateScheduleRequest struct {
 
 	// 计算资源id

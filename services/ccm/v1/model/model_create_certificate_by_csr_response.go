@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateCertificateByCsrResponse Response Object
 type CreateCertificateByCsrResponse struct {
 
 	// 当前签发的证书ID。

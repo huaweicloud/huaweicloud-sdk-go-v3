@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 频率模式配置。和periods字段二选一，不可共存。
+// TaskTimingFrequency 频率模式配置。和periods字段二选一，不可共存。
 type TaskTimingFrequency struct {
 
 	// 相邻两次执行之间的间隔，频率模式必填。取值范围在5~720之间，单位：分钟。

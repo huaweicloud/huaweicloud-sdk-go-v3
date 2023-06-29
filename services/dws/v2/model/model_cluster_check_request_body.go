@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建集群校验请求体
+// ClusterCheckRequestBody 创建集群校验请求体
 type ClusterCheckRequestBody struct {
 	Cluster *ClusterCheckBody `json:"cluster"`
 }

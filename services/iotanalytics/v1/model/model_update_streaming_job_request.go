@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateStreamingJobRequest Request Object
 type UpdateStreamingJobRequest struct {
 
 	// 是否需要校验配置是否正确

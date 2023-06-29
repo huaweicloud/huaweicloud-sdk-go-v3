@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePrivateZoneRequest Request Object
 type CreatePrivateZoneRequest struct {
 	Body *CreatePrivateZoneReq `json:"body,omitempty"`
 }

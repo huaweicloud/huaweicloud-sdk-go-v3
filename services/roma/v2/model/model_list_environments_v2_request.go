@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListEnvironmentsV2Request Request Object
 type ListEnvironmentsV2Request struct {
 
 	// 实例ID

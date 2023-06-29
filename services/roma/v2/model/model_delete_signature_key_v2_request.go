@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteSignatureKeyV2Request Request Object
 type DeleteSignatureKeyV2Request struct {
 
 	// 实例ID

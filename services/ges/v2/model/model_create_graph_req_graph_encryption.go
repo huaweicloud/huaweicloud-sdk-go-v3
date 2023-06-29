@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 图实例是否加密，默认不加密。
+// CreateGraphReqGraphEncryption 图实例是否加密，默认不加密。
 type CreateGraphReqGraphEncryption struct {
 
 	// 是否启动加密特性。取值为“true”或者“false”。默认为“false”。

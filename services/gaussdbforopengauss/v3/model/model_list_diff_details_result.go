@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数配置模板差异列表
+// ListDiffDetailsResult 参数配置模板差异列表
 type ListDiffDetailsResult struct {
 
 	// 参数名称。

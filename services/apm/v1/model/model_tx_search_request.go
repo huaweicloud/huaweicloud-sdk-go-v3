@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 获取URL跟踪视图列表入参。
+// TxSearchRequest 获取URL跟踪视图列表入参。
 type TxSearchRequest struct {
 
 	// 应用id。

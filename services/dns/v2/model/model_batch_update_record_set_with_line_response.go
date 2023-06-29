@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchUpdateRecordSetWithLineResponse Response Object
 type BatchUpdateRecordSetWithLineResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 

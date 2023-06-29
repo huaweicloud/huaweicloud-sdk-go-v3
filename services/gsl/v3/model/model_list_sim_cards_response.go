@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListSimCardsResponse Response Object
 type ListSimCardsResponse struct {
 
 	// 每页记录数

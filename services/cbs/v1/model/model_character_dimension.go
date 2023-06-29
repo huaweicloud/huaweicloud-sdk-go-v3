@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 角色的尺寸
+// CharacterDimension 角色的尺寸
 type CharacterDimension struct {
 
 	// 角色的高度

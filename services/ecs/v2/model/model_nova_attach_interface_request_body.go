@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// This is a auto create Body Object
+// NovaAttachInterfaceRequestBody This is a auto create Body Object
 type NovaAttachInterfaceRequestBody struct {
 	InterfaceAttachment *NovaAttachInterfaceOption `json:"interfaceAttachment"`
 }

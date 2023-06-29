@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用申请资源
+// TaskResourceDto 应用申请资源
 type TaskResourceDto struct {
 
 	// cpu申请使用量，取值范围[0.1-128]，单位C，支持一位小数。对于应用，不填默认1C；对于流程和作业，不填默认使用前一级的配置，填值会覆盖更新。覆盖关系：作业->流程->应用

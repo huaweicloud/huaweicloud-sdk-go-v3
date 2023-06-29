@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// HandleNotificationResponse Response Object
 type HandleNotificationResponse struct {
 
 	// 请求成功的结果

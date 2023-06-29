@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListSecurityGroupRulesRequest Request Object
 type ListSecurityGroupRulesRequest struct {
 
 	// 功能说明：分页查询起始的资源ID，为空时查询第一页

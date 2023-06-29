@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreatePersonalAuthRequest Request Object
 type CreatePersonalAuthRequest struct {
 
 	// 仓库类型。 支持私人令牌授权的仓库类型有：github、gitlab、gitee。
@@ -61,13 +61,18 @@ func (c CreatePersonalAuthRequestRepoType) MarshalJSON() ([]byte, error) {
 
 func (c *CreatePersonalAuthRequestRepoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

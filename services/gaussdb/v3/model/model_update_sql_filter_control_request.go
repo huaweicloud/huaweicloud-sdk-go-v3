@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// UpdateSqlFilterControlRequest Request Object
 type UpdateSqlFilterControlRequest struct {
 
 	// 语言。

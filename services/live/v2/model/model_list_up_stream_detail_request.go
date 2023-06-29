@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListUpStreamDetailRequest Request Object
 type ListUpStreamDetailRequest struct {
 
 	// 推流域名。

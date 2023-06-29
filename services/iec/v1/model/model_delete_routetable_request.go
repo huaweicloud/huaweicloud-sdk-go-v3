@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteRoutetableRequest Request Object
 type DeleteRoutetableRequest struct {
 
 	// 路由表ID

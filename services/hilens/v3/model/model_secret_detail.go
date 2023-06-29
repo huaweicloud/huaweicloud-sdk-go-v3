@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询密钥详情响应
+// SecretDetail 查询密钥详情响应
 type SecretDetail struct {
 
 	// 密钥ID

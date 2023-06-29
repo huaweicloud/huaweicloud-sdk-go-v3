@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateShareConnectionsResponse Response Object
 type CreateShareConnectionsResponse struct {
 	HttpStatusCode int `json:"-"`
 }

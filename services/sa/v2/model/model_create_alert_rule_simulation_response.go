@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAlertRuleSimulationResponse Response Object
 type CreateAlertRuleSimulationResponse struct {
 
 	// alert_count

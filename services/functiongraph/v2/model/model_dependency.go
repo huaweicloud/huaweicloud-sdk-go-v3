@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 函数依赖包结构。
+// Dependency 函数依赖包结构。
 type Dependency struct {
 
 	// 依赖包属主的domainId。
@@ -67,6 +67,7 @@ type DependencyRuntimeEnum struct {
 	C__NET_CORE_3_1 DependencyRuntime
 	PHP7_3          DependencyRuntime
 	PYTHON3_9       DependencyRuntime
+	CUSTOM          DependencyRuntime
 	HTTP            DependencyRuntime
 }
 
@@ -120,6 +121,9 @@ func GetDependencyRuntimeEnum() DependencyRuntimeEnum {
 		PYTHON3_9: DependencyRuntime{
 			value: "Python3.9",
 		},
+		CUSTOM: DependencyRuntime{
+			value: "Custom",
+		},
 		HTTP: DependencyRuntime{
 			value: "http",
 		},
@@ -136,13 +140,18 @@ func (c DependencyRuntime) MarshalJSON() ([]byte, error) {
 
 func (c *DependencyRuntime) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

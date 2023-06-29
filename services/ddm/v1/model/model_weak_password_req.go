@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 弱密码请求参数。
+// WeakPasswordReq 弱密码请求参数。
 type WeakPasswordReq struct {
 
 	// 待测试是否是弱密码的字符串。

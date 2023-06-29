@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 边数据
+// EdgesetPath 边数据
 type EdgesetPath struct {
 
 	// OBS文件路径

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Profile对象
+// ProfileResp Profile对象
 type ProfileResp struct {
 
 	// 订单的id

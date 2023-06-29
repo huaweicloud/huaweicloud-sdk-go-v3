@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateScalingConfigRequest Request Object
 type CreateScalingConfigRequest struct {
 	Body *CreateScalingConfigOption `json:"body,omitempty"`
 }

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// 批量创建保护实例请求数据接口
+// BatchCreateProtectedInstancesRequestParams 批量创建保护实例请求数据接口
 type BatchCreateProtectedInstancesRequestParams struct {
 
 	// 保护实例的名称前缀，批量创建保护实例时，为区分不同保护实例，创建过程中系统会自动在名称后加\"-0001\"的类似标记，故此时名称的长度为[1-59]个字符。只包含中文字符、英文字母（a～ｚ、Ａ～Ｚ）、数字（０~９）、小数点（．）、下划线（_）、中划线（-）。
@@ -79,13 +79,18 @@ func (c BatchCreateProtectedInstancesRequestParamsTenancy) MarshalJSON() ([]byte
 
 func (c *BatchCreateProtectedInstancesRequestParamsTenancy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

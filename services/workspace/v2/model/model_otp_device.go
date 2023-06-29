@@ -10,19 +10,19 @@ import (
 
 type OtpDevice struct {
 
-	// 用户otp 信息id
+	// 用户otp 信息id。
 	Id *string `json:"id,omitempty"`
 
-	// 用户id
+	// 用户id。
 	UserId *string `json:"user_id,omitempty"`
 
-	// 用户名
+	// 用户名。
 	UserName *string `json:"user_name,omitempty"`
 
 	// 用户otp设备状态 UNREGISTER: 未绑定 REGISTERED：已绑定
 	Status *OtpDeviceStatus `json:"status,omitempty"`
 
-	// 用户otp设备绑定时间
+	// 用户otp设备绑定时间。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 }
 
@@ -65,13 +65,18 @@ func (c OtpDeviceStatus) MarshalJSON() ([]byte, error) {
 
 func (c *OtpDeviceStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
-	if myConverter != nil {
-		val, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-		if err == nil {
-			c.value = val.(string)
-			return nil
-		}
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
 		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
 	} else {
 		return errors.New("convert enum data to string error")
 	}

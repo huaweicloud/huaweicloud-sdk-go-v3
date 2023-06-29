@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAcceptanceResponse Response Object
 type CreateAcceptanceResponse struct {
 
 	// acceptance_id

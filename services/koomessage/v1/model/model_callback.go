@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 注册详情。
+// Callback 注册详情。
 type Callback struct {
 
 	// 回调地址。

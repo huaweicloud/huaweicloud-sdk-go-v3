@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAntiTamperRuleResponse Response Object
 type CreateAntiTamperRuleResponse struct {
 
 	// 规则id

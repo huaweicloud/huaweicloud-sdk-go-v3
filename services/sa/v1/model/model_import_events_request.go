@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ImportEventsRequest Request Object
 type ImportEventsRequest struct {
 
 	// 语言。

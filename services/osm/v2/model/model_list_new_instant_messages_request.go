@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListNewInstantMessagesRequest Request Object
 type ListNewInstantMessagesRequest struct {
 
 	// 工单id

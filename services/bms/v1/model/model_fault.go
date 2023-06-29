@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// fault字段数据结构说明
+// Fault fault字段数据结构说明
 type Fault struct {
 
 	// 故障信息

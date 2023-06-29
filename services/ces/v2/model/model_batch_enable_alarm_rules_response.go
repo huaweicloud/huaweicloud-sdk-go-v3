@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// BatchEnableAlarmRulesResponse Response Object
 type BatchEnableAlarmRulesResponse struct {
 
 	// 成功启停的告警规则ID列表

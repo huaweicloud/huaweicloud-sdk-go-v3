@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 查询span数据请求参数模型。
+// TraceSearchParam 查询span数据请求参数模型。
 type TraceSearchParam struct {
 
 	// region名称。

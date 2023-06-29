@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAkSkResponse Response Object
 type CreateAkSkResponse struct {
 
 	// 创建/删除的ak信息。

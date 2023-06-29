@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// NovaServerSecurityGroup
 type NovaServerSecurityGroup struct {
 
 	// 安全组名称或者uuid。

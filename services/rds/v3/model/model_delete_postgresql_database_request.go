@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeletePostgresqlDatabaseRequest Request Object
 type DeletePostgresqlDatabaseRequest struct {
 
 	// 语言

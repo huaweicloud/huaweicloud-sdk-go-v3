@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 公网ip
+// PublicIp 公网ip
 type PublicIp struct {
 
 	// 弹性公网IP类型，默认为5_bgp

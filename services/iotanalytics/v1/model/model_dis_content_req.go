@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DIS数据源配置内容
+// DisContentReq DIS数据源配置内容
 type DisContentReq struct {
 
 	// 项目id

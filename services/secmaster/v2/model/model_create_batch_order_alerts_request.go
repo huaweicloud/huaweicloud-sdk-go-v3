@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateBatchOrderAlertsRequest Request Object
 type CreateBatchOrderAlertsRequest struct {
 
 	// application/json;charset=UTF-8

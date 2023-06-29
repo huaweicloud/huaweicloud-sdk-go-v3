@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateApiTestSuiteByRepoFileResponse Response Object
 type CreateApiTestSuiteByRepoFileResponse struct {
 
 	// 生成的测试套的id

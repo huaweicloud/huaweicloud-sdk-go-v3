@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 导入应用请求体
+// BatchImportAppReq 导入应用请求体
 type BatchImportAppReq struct {
 
 	// 源项目id

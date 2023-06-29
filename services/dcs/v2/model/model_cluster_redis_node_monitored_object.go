@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 监控对象结构
+// ClusterRedisNodeMonitoredObject 监控对象结构
 type ClusterRedisNodeMonitoredObject struct {
 
 	// 测量对象ID，即节点的ID。

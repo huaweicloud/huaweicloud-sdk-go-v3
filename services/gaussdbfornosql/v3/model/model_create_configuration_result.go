@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 参数模板信息。
+// CreateConfigurationResult 参数模板信息。
 type CreateConfigurationResult struct {
 
 	// 参数模板ID。

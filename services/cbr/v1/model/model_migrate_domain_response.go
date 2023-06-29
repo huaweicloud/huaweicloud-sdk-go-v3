@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// MigrateDomainResponse Response Object
 type MigrateDomainResponse struct {
 	Body           map[string]string `json:"body,omitempty"`
 	HttpStatusCode int               `json:"-"`

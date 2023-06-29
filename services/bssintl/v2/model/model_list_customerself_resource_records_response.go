@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListCustomerselfResourceRecordsResponse Response Object
 type ListCustomerselfResourceRecordsResponse struct {
 
 	// 资源费用记录数据。 具体请参见表3。

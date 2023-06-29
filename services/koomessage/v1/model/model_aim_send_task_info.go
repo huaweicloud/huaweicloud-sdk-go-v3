@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 发送任务消息体。
+// AimSendTaskInfo 发送任务消息体。
 type AimSendTaskInfo struct {
 
 	// 智能信息发送任务名称。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// RunAudioAssessmentResponse Response Object
 type RunAudioAssessmentResponse struct {
 
 	// 综合评分，0-100

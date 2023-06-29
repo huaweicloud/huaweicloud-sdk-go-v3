@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// BatchDeleteClusterCnRequest Request Object
 type BatchDeleteClusterCnRequest struct {
 
 	// 集群的ID。

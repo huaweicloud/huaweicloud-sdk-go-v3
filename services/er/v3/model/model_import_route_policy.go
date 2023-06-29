@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 入方向路由策略
+// ImportRoutePolicy 入方向路由策略
 type ImportRoutePolicy struct {
 
 	// 入方向Ipv4协议路由策略id

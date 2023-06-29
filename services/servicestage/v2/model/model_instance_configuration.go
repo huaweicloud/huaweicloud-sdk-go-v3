@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 应用配置，环境变量等，如{“env”: [{“name”: “log-level”: “warn”}]}, 默认空。
+// InstanceConfiguration 应用配置，环境变量等，如{“env”: [{“name”: “log-level”: “warn”}]}, 默认空。
 type InstanceConfiguration struct {
 
 	// 应用环境变量。

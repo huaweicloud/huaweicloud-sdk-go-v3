@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListIterationHistoriesResponse Response Object
 type ListIterationHistoriesResponse struct {
 
 	// 总数

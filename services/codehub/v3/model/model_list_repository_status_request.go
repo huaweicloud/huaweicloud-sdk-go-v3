@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ListRepositoryStatusRequest Request Object
 type ListRepositoryStatusRequest struct {
 
 	// 仓库的uuid,用来指定需要查看的仓库

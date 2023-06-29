@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 延长会议请求。
+// RestProlongDurReqBody 延长会议请求。
 type RestProlongDurReqBody struct {
 
 	// - 0: 手动延长 - 1: 自动延长（未携带延长时间时，默认每次延长15分钟）

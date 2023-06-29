@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowDetailsOfDomainNameCertificateV2Request Request Object
 type ShowDetailsOfDomainNameCertificateV2Request struct {
 
 	// 实例ID

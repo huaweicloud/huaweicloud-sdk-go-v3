@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 迁移详情概览。
+// MigrationObjectOverviewInfo 迁移详情概览。
 type MigrationObjectOverviewInfo struct {
 
 	// 类型。

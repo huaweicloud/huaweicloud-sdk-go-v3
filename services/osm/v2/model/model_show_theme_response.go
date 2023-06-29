@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowThemeResponse Response Object
 type ShowThemeResponse struct {
 
 	// 关联主题列表

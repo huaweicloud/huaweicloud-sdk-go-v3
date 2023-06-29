@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-//
+// ContentCompareResult
 type ContentCompareResult struct {
 
 	// 内容对比的任务id。

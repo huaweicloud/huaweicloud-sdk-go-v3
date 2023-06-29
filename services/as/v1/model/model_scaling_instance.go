@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 伸缩实例。
+// ScalingInstance 伸缩实例。
 type ScalingInstance struct {
 
 	// 云服务器名称。

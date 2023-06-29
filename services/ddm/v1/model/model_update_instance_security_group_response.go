@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// UpdateInstanceSecurityGroupResponse Response Object
 type UpdateInstanceSecurityGroupResponse struct {
 
 	// 安全组ID

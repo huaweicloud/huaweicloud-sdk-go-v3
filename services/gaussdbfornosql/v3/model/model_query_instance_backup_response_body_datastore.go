@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 数据库信息。
+// QueryInstanceBackupResponseBodyDatastore 数据库信息。
 type QueryInstanceBackupResponseBodyDatastore struct {
 
 	// 数据库类型。

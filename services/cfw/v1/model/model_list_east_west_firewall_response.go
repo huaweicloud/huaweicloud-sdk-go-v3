@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListEastWestFirewallResponse Response Object
 type ListEastWestFirewallResponse struct {
 	Data           *GetEastWestFirewallResponseBody `json:"data,omitempty"`
 	HttpStatusCode int                              `json:"-"`

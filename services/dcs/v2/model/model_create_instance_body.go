@@ -86,6 +86,9 @@ type CreateInstanceBody struct {
 
 	// 支持自定义重命名高危命令。只有创建Redis4.0和Redis5.0实例才支持重命名高危命令，Redis3.0和Memcached实例不支持。  创建Redis4.0和Redis5.0实例，如果没发送该参数或该参数为空，表示没有需要重命名的命令。当前支持重命名的高危命令有command、keys、flushdb、flushall和hgetall，其他命令暂不支持重命名。
 	RenameCommands *interface{} `json:"rename_commands,omitempty"`
+
+	// 参数模板ID
+	TemplateId *string `json:"template_id,omitempty"`
 }
 
 func (o CreateInstanceBody) String() string {

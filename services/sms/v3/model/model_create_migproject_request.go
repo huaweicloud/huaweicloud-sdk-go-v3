@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMigprojectRequest Request Object
 type CreateMigprojectRequest struct {
 	Body *PostMigProjectBody `json:"body,omitempty"`
 }

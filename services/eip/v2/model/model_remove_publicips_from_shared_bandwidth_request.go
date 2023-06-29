@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// RemovePublicipsFromSharedBandwidthRequest Request Object
 type RemovePublicipsFromSharedBandwidthRequest struct {
 
 	// 带宽唯一标识

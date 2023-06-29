@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateDeploymentGroupResponse Response Object
 type CreateDeploymentGroupResponse struct {
 
 	// 主机集群ID

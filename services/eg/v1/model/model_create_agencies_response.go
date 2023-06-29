@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateAgenciesResponse Response Object
 type CreateAgenciesResponse struct {
 
 	// 服务委托授权记录。

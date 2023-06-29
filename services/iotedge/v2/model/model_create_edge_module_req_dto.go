@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 创建边缘模块请求结构体
+// CreateEdgeModuleReqDto 创建边缘模块请求结构体
 type CreateEdgeModuleReqDto struct {
 
 	// 边缘应用名称

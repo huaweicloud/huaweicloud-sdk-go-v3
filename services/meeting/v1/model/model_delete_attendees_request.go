@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAttendeesRequest Request Object
 type DeleteAttendeesRequest struct {
 
 	// 会议ID。

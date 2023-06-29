@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// DeleteAddonInstanceRequest Request Object
 type DeleteAddonInstanceRequest struct {
 
 	// 插件实例id

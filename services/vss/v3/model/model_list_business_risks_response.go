@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ListBusinessRisksResponse Response Object
 type ListBusinessRisksResponse struct {
 
 	// 业务风险总数

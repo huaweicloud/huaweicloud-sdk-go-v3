@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 作业对应服务的标题
+// TaskDetailsServiceTitle 作业对应服务的标题
 type TaskDetailsServiceTitle struct {
 
 	// 作业对应服务的中文标题

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 指标信息
+// MetricInfoList 指标信息
 type MetricInfoList struct {
 
 	// 指标维度

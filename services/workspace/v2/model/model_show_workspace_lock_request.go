@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ShowWorkspaceLockRequest Request Object
 type ShowWorkspaceLockRequest struct {
 }
 

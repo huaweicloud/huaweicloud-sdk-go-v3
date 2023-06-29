@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// ShowRepoIdResponse Response Object
 type ShowRepoIdResponse struct {
 	Error *Error `json:"error,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 恢复对象
+// Restore 恢复对象
 type Restore struct {
 
 	// 集群名称，要求唯一性，必须以字母开头并只包含字母、数字、中划线，下划线，长度为4~64个字符。

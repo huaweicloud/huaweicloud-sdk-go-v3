@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 集群操作进度，任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。示例如 \"action_progress\":{\"SNAPSHOTTING\":\"16%\"}
+// ActionProgress 集群操作进度，任务信息，由key、value组成。key值为正在进行的任务，value值为正在进行任务的进度。示例如 \"action_progress\":{\"SNAPSHOTTING\":\"16%\"}
 type ActionProgress struct {
 
 	// 创建集群进度，例如：29%

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// ResetAdministratorRequest Request Object
 type ResetAdministratorRequest struct {
 
 	// DDM实例ID。

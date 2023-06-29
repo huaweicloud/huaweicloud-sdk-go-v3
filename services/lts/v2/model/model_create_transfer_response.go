@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CreateTransferResponse Response Object
 type CreateTransferResponse struct {
 
 	// 日志组ID

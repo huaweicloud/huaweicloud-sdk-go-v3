@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Response Object
+// CopySnapshotResponse Response Object
 type CopySnapshotResponse struct {
 
 	// 快照id。

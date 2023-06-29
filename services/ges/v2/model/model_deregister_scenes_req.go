@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DeregisterScenes请求体
+// DeregisterScenesReq DeregisterScenes请求体
 type DeregisterScenesReq struct {
 
 	// 要取消订阅的具体场景列表。

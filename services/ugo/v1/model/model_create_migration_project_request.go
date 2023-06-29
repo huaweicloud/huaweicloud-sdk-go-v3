@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Request Object
+// CreateMigrationProjectRequest Request Object
 type CreateMigrationProjectRequest struct {
 	Body *CreateMigrationProject `json:"body,omitempty"`
 }
