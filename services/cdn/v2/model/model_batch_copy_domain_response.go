@@ -9,7 +9,7 @@ import (
 // BatchCopyDomainResponse Response Object
 type BatchCopyDomainResponse struct {
 
-	// 成功响应体
+	// 复制配置结果。
 	Result         *[]BatchCopyResultVo `json:"result,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

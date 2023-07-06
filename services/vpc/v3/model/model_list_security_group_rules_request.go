@@ -35,6 +35,9 @@ type ListSecurityGroupRulesRequest struct {
 
 	// 功能说明：安全组规则生效策略
 	Action *string `json:"action,omitempty"`
+
+	// 功能说明：远端IP地址 取值范围：cidr格式
+	RemoteIpPrefix *string `json:"remote_ip_prefix,omitempty"`
 }
 
 func (o ListSecurityGroupRulesRequest) String() string {

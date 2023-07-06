@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WebSocketSeek webSocket配置。  > 只支持全站加速。
+// WebSocketSeek webSocket配置。  > 只有全站加速的域名支持该配置。
 type WebSocketSeek struct {
 
 	// 开关， on 开启，off 关闭。

@@ -18,10 +18,10 @@ type SourceWithPort struct {
 	// 源站IP（非内网IP）或者域名。
 	IpOrDomain string `json:"ip_or_domain"`
 
-	// 源站类型（\"ipaddr\"： \"IP源站\"；\"domain\"： \"域名源站\"；\"obs_bucket\"： \"OBS Bucket源站\"）
+	// 源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
 	OriginType SourceWithPortOriginType `json:"origin_type"`
 
-	// 主备状态（1代表主站；0代表备站）；主源站必须存在，备源站可选。
+	// 主备状态（1代表主源站；0代表备源站）。
 	ActiveStandby int32 `json:"active_standby"`
 
 	// 是否开启Obs静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。

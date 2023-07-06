@@ -26,6 +26,9 @@ type HostGroupItem struct {
 
 	// 服务器ID列表
 	HostIdList *[]string `json:"host_id_list,omitempty"`
+
+	// 是否是线下数据中心服务器组
+	IsOutside *bool `json:"is_outside,omitempty"`
 }
 
 func (o HostGroupItem) String() string {

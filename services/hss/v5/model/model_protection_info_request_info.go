@@ -22,6 +22,8 @@ type ProtectionInfoRequestInfo struct {
 	// 是否服务器备份，包含如下：   - closed ：关闭。   - opened ：开启。   若选择开启服务器备份，则backup_cycle必填
 	BackupProtectionStatus string `json:"backup_protection_status"`
 
+	BackupResources *BackupResources `json:"backup_resources,omitempty"`
+
 	// 备份策略ID
 	BackupPolicyId *string `json:"backup_policy_id,omitempty"`
 

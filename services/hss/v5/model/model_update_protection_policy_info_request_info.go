@@ -37,6 +37,9 @@ type UpdateProtectionPolicyInfoRequestInfo struct {
 
 	// 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
 	RuntimeDetectionStatus *string `json:"runtime_detection_status,omitempty"`
+
+	// 进程白名单
+	ProcessWhitelist *[]TrustProcessInfo `json:"process_whitelist,omitempty"`
 }
 
 func (o UpdateProtectionPolicyInfoRequestInfo) String() string {

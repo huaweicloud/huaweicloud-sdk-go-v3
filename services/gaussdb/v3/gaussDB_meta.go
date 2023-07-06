@@ -2158,8 +2158,8 @@ func GenReqDefForShowSqlFilterRule() *def.HttpRequestDef {
 		WithJsonTag("node_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Type").
-		WithJsonTag("type").
+		WithName("SqlType").
+		WithJsonTag("sql_type").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

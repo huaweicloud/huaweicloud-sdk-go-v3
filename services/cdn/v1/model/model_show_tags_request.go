@@ -9,7 +9,7 @@ import (
 // ShowTagsRequest Request Object
 type ShowTagsRequest struct {
 
-	// 资源id
+	// 资源id。  > 域名ID
 	ResourceId string `json:"resource_id"`
 }
 

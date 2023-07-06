@@ -21,7 +21,7 @@ func CdnClientBuilder() *http_client.HcHttpClientBuilder {
 
 // BatchDeleteTags 删除资源标签配置接口
 //
-// 用于删除资源标签
+// 用于删除资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*model.BatchDeleteTagsResponse, error) {
@@ -105,7 +105,7 @@ func (c *CdnClient) CreateRefreshTasksInvoker(request *model.CreateRefreshTasksR
 
 // CreateTags 创建资源标签配置接口
 //
-// 用于创建资源标签
+// 用于创建资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTagsResponse, error) {
@@ -375,7 +375,7 @@ func (c *CdnClient) ShowDomainItemLocationDetailsInvoker(request *model.ShowDoma
 	return &ShowDomainItemLocationDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDomainLocationStats 查询域名统计数据-区域运营商
+// ShowDomainLocationStats 按区域运营商查询域名统计数据
 //
 // - 支持查询90天内的数据。
 //
@@ -402,7 +402,7 @@ func (c *CdnClient) ShowDomainLocationStats(request *model.ShowDomainLocationSta
 	}
 }
 
-// ShowDomainLocationStatsInvoker 查询域名统计数据-区域运营商
+// ShowDomainLocationStatsInvoker 按区域运营商查询域名统计数据
 func (c *CdnClient) ShowDomainLocationStatsInvoker(request *model.ShowDomainLocationStatsRequest) *ShowDomainLocationStatsInvoker {
 	requestDef := GenReqDefForShowDomainLocationStats()
 	return &ShowDomainLocationStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -632,7 +632,7 @@ func (c *CdnClient) ShowResponseHeaderInvoker(request *model.ShowResponseHeaderR
 
 // ShowTags 查询资源标签列表配置接口
 //
-// 用于查询资源标签列表
+// 用于查询资源标签列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowTags(request *model.ShowTagsRequest) (*model.ShowTagsResponse, error) {
@@ -791,9 +791,9 @@ func (c *CdnClient) UpdateDomainMultiCertificatesInvoker(request *model.UpdateDo
 	return &UpdateDomainMultiCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateDomainOrigin 修改源站信息
+// UpdateDomainOrigin 修改源站信息。
 //
-// 修改源站信息。源站IP地址或域名都可以指引CDN节点回源到对应的源站服务器，源站域名不能与加速域名相同。
+// 修改加速域名的源站配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) UpdateDomainOrigin(request *model.UpdateDomainOriginRequest) (*model.UpdateDomainOriginResponse, error) {
@@ -806,7 +806,7 @@ func (c *CdnClient) UpdateDomainOrigin(request *model.UpdateDomainOriginRequest)
 	}
 }
 
-// UpdateDomainOriginInvoker 修改源站信息
+// UpdateDomainOriginInvoker 修改源站信息。
 func (c *CdnClient) UpdateDomainOriginInvoker(request *model.UpdateDomainOriginRequest) *UpdateDomainOriginInvoker {
 	requestDef := GenReqDefForUpdateDomainOrigin()
 	return &UpdateDomainOriginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -854,7 +854,7 @@ func (c *CdnClient) UpdateHttpsInfoInvoker(request *model.UpdateHttpsInfoRequest
 	return &UpdateHttpsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateOriginHost 修改回源HOST
+// UpdateOriginHost 修改回源HOST。
 //
 // 修改回源HOST。回源HOST是CDN节点在回源过程中，在源站访问的站点域名，即http请求头中的host信息。
 //
@@ -869,7 +869,7 @@ func (c *CdnClient) UpdateOriginHost(request *model.UpdateOriginHostRequest) (*m
 	}
 }
 
-// UpdateOriginHostInvoker 修改回源HOST
+// UpdateOriginHostInvoker 修改回源HOST。
 func (c *CdnClient) UpdateOriginHostInvoker(request *model.UpdateOriginHostRequest) *UpdateOriginHostInvoker {
 	requestDef := GenReqDefForUpdateOriginHost()
 	return &UpdateOriginHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -9,13 +9,13 @@ import (
 // UpdateBlackWhiteListResponse Response Object
 type UpdateBlackWhiteListResponse struct {
 
-	// 编码
+	// 响应码，200：成功，400，失败。
 	Code *string `json:"code,omitempty"`
 
-	// 结果
+	// 响应结果。
 	Result *string `json:"result,omitempty"`
 
-	// 数据
+	// 响应体返回内容。
 	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

@@ -33,6 +33,9 @@ type ResourceShareAssociation struct {
 
 	// 绑定的当前状态。
 	Status string `json:"status"`
+
+	// 绑定的当前状态的描述。
+	StatusMessage *string `json:"status_message,omitempty"`
 }
 
 func (o ResourceShareAssociation) String() string {

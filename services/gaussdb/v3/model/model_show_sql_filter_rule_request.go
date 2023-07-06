@@ -19,7 +19,7 @@ type ShowSqlFilterRuleRequest struct {
 	NodeId string `json:"node_id"`
 
 	// SQL限流类型，取值为SELECT、UPDATE、DELETE，不区分大小写；若不传则默认查询所有类型的限流规则。
-	Type *string `json:"type,omitempty"`
+	SqlType *string `json:"sql_type,omitempty"`
 }
 
 func (o ShowSqlFilterRuleRequest) String() string {

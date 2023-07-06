@@ -9,14 +9,17 @@ import (
 // SourcesConfig 源站配置。
 type SourcesConfig struct {
 
-	// 源站IP或者域名。
-	OriginAddr string `json:"origin_addr"`
-
 	// 源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
 	OriginType string `json:"origin_type"`
 
+	// 源站IP或者域名。
+	OriginAddr string `json:"origin_addr"`
+
 	// 源站优先级，70：主，30：备。
 	Priority int32 `json:"priority"`
+
+	// 权重，取值范围1-100。
+	Weight *int32 `json:"weight,omitempty"`
 
 	// 是否开启Obs静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
 	ObsWebHostingStatus *string `json:"obs_web_hosting_status,omitempty"`

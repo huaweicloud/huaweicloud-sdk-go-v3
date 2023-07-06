@@ -27,7 +27,7 @@ type Domains struct {
 	// 加速域名对应的CNAME。
 	Cname *string `json:"cname,omitempty"`
 
-	// 源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
+	// 源站配置。
 	Sources *[]Sources `json:"sources,omitempty"`
 
 	DomainOriginHost *DomainOriginHost `json:"domain_origin_host,omitempty"`
@@ -47,7 +47,7 @@ type Domains struct {
 	// 锁定状态（0代表未锁定；1代表锁定）。
 	Locked *int32 `json:"locked,omitempty"`
 
-	// 自动刷新预热（0代表关闭；1代表打开）
+	// 自动刷新预热（0代表关闭；1代表打开）。
 	AutoRefreshPreheat *int32 `json:"auto_refresh_preheat,omitempty"`
 
 	// 华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
@@ -59,19 +59,19 @@ type Domains struct {
 	// 回源跟随状态。
 	FollowStatus *string `json:"follow_status,omitempty"`
 
-	// 是否暂停源站回源。
+	// 是否暂停源站回源（off代表关闭 on代表开启）。
 	OriginStatus *string `json:"origin_status,omitempty"`
 
-	// 域名禁用原因
+	// 域名禁用原因。
 	BannedReason *string `json:"banned_reason,omitempty"`
 
-	// 域名锁定原因
+	// 域名锁定原因。
 	LockedReason *string `json:"locked_reason,omitempty"`
 
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 标签信息
+	// 标签信息。
 	Tags *[]EpResourceTag `json:"tags,omitempty"`
 }
 

@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// BatchCopyResultVo 成功响应详细内容
+// BatchCopyResultVo 成功响应详细内容。
 type BatchCopyResultVo struct {
 
 	// 失败原因,成功时没有该字段
 	Reason *string `json:"reason,omitempty"`
 
-	// 批量操作结果
+	// 批量操作结果。
 	Status BatchCopyResultVoStatus `json:"status"`
 
-	// 域名
+	// 域名。
 	DomainName string `json:"domain_name"`
 }
 

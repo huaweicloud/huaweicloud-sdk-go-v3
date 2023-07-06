@@ -269,10 +269,6 @@ func GenReqDefForDownloadAppVersion() *def.HttpRequestDef {
 		WithJsonTag("version").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

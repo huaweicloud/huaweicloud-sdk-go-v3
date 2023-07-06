@@ -35,6 +35,9 @@ type ProtectionProxyInfoRequestInfo struct {
 
 	// 操作系统，新建防护策略则必填。包含如下：   - Windows : Windows系统   - Linux : Linux系统
 	OperatingSystem *string `json:"operating_system,omitempty"`
+
+	// 进程白名单
+	ProcessWhitelist *[]TrustProcessInfo `json:"process_whitelist,omitempty"`
 }
 
 func (o ProtectionProxyInfoRequestInfo) String() string {

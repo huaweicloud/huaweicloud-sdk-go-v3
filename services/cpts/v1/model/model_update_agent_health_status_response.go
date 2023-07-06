@@ -8,10 +8,14 @@ import (
 
 // UpdateAgentHealthStatusResponse Response Object
 type UpdateAgentHealthStatusResponse struct {
+
+	// 响应码
 	Code *string `json:"code,omitempty"`
 
+	// 响应消息
 	Message *string `json:"message,omitempty"`
 
+	// 扩展信息
 	Extend *interface{} `json:"extend,omitempty"`
 
 	Result         *UpdateAgentStatusResponseDetail `json:"result,omitempty"`

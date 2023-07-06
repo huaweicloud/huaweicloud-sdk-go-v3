@@ -10,7 +10,10 @@ import (
 type DeleteGaussMySqlReadonlyNodeResponse struct {
 
 	// 任务ID。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
+
+	// 订单号，仅包年/包月返回该参数。
+	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

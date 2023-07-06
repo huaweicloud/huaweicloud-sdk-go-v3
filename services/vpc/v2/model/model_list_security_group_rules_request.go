@@ -17,6 +17,9 @@ type ListSecurityGroupRulesRequest struct {
 
 	// 安全组ID
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
+
+	// 功能说明：远端IP地址 取值范围：cidr格式
+	RemoteIpPrefix *string `json:"remote_ip_prefix,omitempty"`
 }
 
 func (o ListSecurityGroupRulesRequest) String() string {

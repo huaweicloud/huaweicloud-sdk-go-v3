@@ -749,6 +749,18 @@ func (i *ShowErrorLogInvoker) Invoke() (*model.ShowErrorLogResponse, error) {
 	}
 }
 
+type ShowHighRiskCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHighRiskCommandsInvoker) Invoke() (*model.ShowHighRiskCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHighRiskCommandsResponse), nil
+	}
+}
+
 type ShowInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -938,6 +950,18 @@ func (i *UpdateConfigurationInvoker) Invoke() (*model.UpdateConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateConfigurationResponse), nil
+	}
+}
+
+type UpdateHighRiskCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHighRiskCommandsInvoker) Invoke() (*model.UpdateHighRiskCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHighRiskCommandsResponse), nil
 	}
 }
 

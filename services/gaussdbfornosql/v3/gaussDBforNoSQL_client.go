@@ -1323,6 +1323,27 @@ func (c *GaussDBforNoSQLClient) ShowErrorLogInvoker(request *model.ShowErrorLogR
 	return &ShowErrorLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHighRiskCommands 查询高危命令
+//
+// 查询Redis的高危命令
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowHighRiskCommands(request *model.ShowHighRiskCommandsRequest) (*model.ShowHighRiskCommandsResponse, error) {
+	requestDef := GenReqDefForShowHighRiskCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHighRiskCommandsResponse), nil
+	}
+}
+
+// ShowHighRiskCommandsInvoker 查询高危命令
+func (c *GaussDBforNoSQLClient) ShowHighRiskCommandsInvoker(request *model.ShowHighRiskCommandsRequest) *ShowHighRiskCommandsInvoker {
+	requestDef := GenReqDefForShowHighRiskCommands()
+	return &ShowHighRiskCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceConfiguration 获取指定实例的参数
 //
 // 获取指定实例的参数信息。
@@ -1657,6 +1678,27 @@ func (c *GaussDBforNoSQLClient) UpdateConfiguration(request *model.UpdateConfigu
 func (c *GaussDBforNoSQLClient) UpdateConfigurationInvoker(request *model.UpdateConfigurationRequest) *UpdateConfigurationInvoker {
 	requestDef := GenReqDefForUpdateConfiguration()
 	return &UpdateConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHighRiskCommands 修改高危命令
+//
+// 批量修改高危命令
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdateHighRiskCommands(request *model.UpdateHighRiskCommandsRequest) (*model.UpdateHighRiskCommandsResponse, error) {
+	requestDef := GenReqDefForUpdateHighRiskCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHighRiskCommandsResponse), nil
+	}
+}
+
+// UpdateHighRiskCommandsInvoker 修改高危命令
+func (c *GaussDBforNoSQLClient) UpdateHighRiskCommandsInvoker(request *model.UpdateHighRiskCommandsRequest) *UpdateHighRiskCommandsInvoker {
+	requestDef := GenReqDefForUpdateHighRiskCommands()
+	return &UpdateHighRiskCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceConfiguration 修改指定实例的参数

@@ -9,7 +9,7 @@ import (
 // UrlAuth URL鉴权。
 type UrlAuth struct {
 
-	// 是否开启URL鉴权(\"off\"/\"on\")。
+	// 是否开启URL鉴权，off：开启,on：关闭。
 	Status string `json:"status"`
 
 	// 鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2

@@ -45,11 +45,17 @@ type CreateVolumeOption struct {
 	// 快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
 	SnapshotId *string `json:"snapshot_id,omitempty"`
 
-	// 云硬盘类型。  目前支持\"SATA\"，\"SAS\"，\"GPSSD\"，\"SSD\"和\"ESSD\"五种。  - \"SATA\"为普通IO云硬盘(已售罄) - \"SAS\"为高IO云硬盘 - \"GPSSD\"为通用型SSD云硬盘 - \"SSD\"为超高IO云硬盘 - \"ESSD\"为极速IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
+	// 云硬盘类型。  目前支持\"SATA\"，\"SAS\"，\"GPSSD\"，\"SSD\"，\"ESSD\"，\"GPSSD2\"和\"ESSD2\"七种。  - \"SATA\"为普通IO云硬盘(已售罄) - \"SAS\"为高IO云硬盘 - \"GPSSD\"为通用型SSD云硬盘 - \"SSD\"为超高IO云硬盘 - \"ESSD\"为极速IO云硬盘 - \"GPSSD2\"为通用型SSD V2云硬盘 - \"ESSD2\"为极速型SSD V2云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
 	VolumeType CreateVolumeOptionVolumeType `json:"volume_type"`
 
 	// 云硬盘标签信息。
 	Tags map[string]string `json:"tags,omitempty"`
+
+	// 给云硬盘配置iops，购买GPSSD2、ESSD2类型的云硬盘时必填，其他类型不能设置。  说明： 1、了解GPSSD2、ESSD2类型的iops大小范围，请参见 [云硬盘类型及性能介绍里面的云硬盘性能数据表](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 2、只支持按需计费。
+	Iops *int32 `json:"iops,omitempty"`
+
+	// 给云硬盘配置吞吐量，单位是MiB/s，购买GPSSD2类型云盘时必填，其他类型不能设置。  说明： 1、了解GPSSD2类型的吞吐量大小范围，请参见 [云硬盘类型及性能介绍里面的云硬盘性能数据表](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 2、只支持按需计费。
+	Throughput *int32 `json:"throughput,omitempty"`
 }
 
 func (o CreateVolumeOption) String() string {
@@ -66,11 +72,13 @@ type CreateVolumeOptionVolumeType struct {
 }
 
 type CreateVolumeOptionVolumeTypeEnum struct {
-	SSD   CreateVolumeOptionVolumeType
-	GPSSD CreateVolumeOptionVolumeType
-	SAS   CreateVolumeOptionVolumeType
-	SATA  CreateVolumeOptionVolumeType
-	ESSD  CreateVolumeOptionVolumeType
+	SSD    CreateVolumeOptionVolumeType
+	GPSSD  CreateVolumeOptionVolumeType
+	SAS    CreateVolumeOptionVolumeType
+	SATA   CreateVolumeOptionVolumeType
+	ESSD   CreateVolumeOptionVolumeType
+	GPSSD2 CreateVolumeOptionVolumeType
+	ESSD2  CreateVolumeOptionVolumeType
 }
 
 func GetCreateVolumeOptionVolumeTypeEnum() CreateVolumeOptionVolumeTypeEnum {
@@ -89,6 +97,12 @@ func GetCreateVolumeOptionVolumeTypeEnum() CreateVolumeOptionVolumeTypeEnum {
 		},
 		ESSD: CreateVolumeOptionVolumeType{
 			value: "ESSD",
+		},
+		GPSSD2: CreateVolumeOptionVolumeType{
+			value: "GPSSD2",
+		},
+		ESSD2: CreateVolumeOptionVolumeType{
+			value: "ESSD2",
 		},
 	}
 }

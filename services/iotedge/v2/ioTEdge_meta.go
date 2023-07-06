@@ -1240,10 +1240,6 @@ func GenReqDefForShowPointTemplate() *def.HttpRequestDef {
 		WithJsonTag("ds_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1263,10 +1259,6 @@ func GenReqDefForShowPoints() *def.HttpRequestDef {
 		WithName("DsId").
 		WithJsonTag("ds_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

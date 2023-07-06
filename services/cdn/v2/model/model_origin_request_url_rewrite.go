@@ -15,7 +15,7 @@ type OriginRequestUrlRewrite struct {
 	// 匹配类型， all：所有文件， file_path：URL路径， wildcard：通配符， full_path: 全路径。
 	MatchType string `json:"match_type"`
 
-	// 需要替换的URI。 以正斜线（/）开头的URI，不含http(s)://头及域名。 长度不超过512个字符。 支持通配符\\*匹配，如：/test/\\*_/\\*.mp4。 匹配方式为“所有文件”时，不支持配置参数。
+	// 需要替换的URI。 改写后的URI以正斜线（/）开头的URI，不含http(s)://头及域名。 长度不超过512个字符。 支持通配符\\*匹配，如：/test/\\*_/\\*.mp4。 匹配方式为“所有文件”时，不支持配置参数。
 	SourceUrl *string `json:"source_url,omitempty"`
 
 	// 以正斜线（/）开头的URI，不含http(s)://头及域名。 长度不超过256个字符。 通配符 * 可通过$n捕获（n=1,2,3...，例如：/newtest/$1/$2.jpg）。

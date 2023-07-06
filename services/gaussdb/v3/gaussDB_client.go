@@ -397,9 +397,9 @@ func (c *GaussDBClient) DeleteGaussMySqlDatabaseUserInvoker(request *model.Delet
 	return &DeleteGaussMySqlDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteGaussMySqlInstance 删除实例
+// DeleteGaussMySqlInstance 删除/退订数据库实例
 //
-// 删除数据库实例，不支持删除包周期实例。
+// 删除/退订数据库实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlInstance(request *model.DeleteGaussMySqlInstanceRequest) (*model.DeleteGaussMySqlInstanceResponse, error) {
@@ -412,7 +412,7 @@ func (c *GaussDBClient) DeleteGaussMySqlInstance(request *model.DeleteGaussMySql
 	}
 }
 
-// DeleteGaussMySqlInstanceInvoker 删除实例
+// DeleteGaussMySqlInstanceInvoker 删除/退订数据库实例
 func (c *GaussDBClient) DeleteGaussMySqlInstanceInvoker(request *model.DeleteGaussMySqlInstanceRequest) *DeleteGaussMySqlInstanceInvoker {
 	requestDef := GenReqDefForDeleteGaussMySqlInstance()
 	return &DeleteGaussMySqlInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -439,9 +439,9 @@ func (c *GaussDBClient) DeleteGaussMySqlProxyInvoker(request *model.DeleteGaussM
 	return &DeleteGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteGaussMySqlReadonlyNode 删除只读节点
+// DeleteGaussMySqlReadonlyNode 删除/退订只读节点
 //
-// 删除实例的只读节点。多可用区模式删除只读节点时，要保证删除后，剩余的只读节点和主节点在不同的可用区中，否则无法删除该只读节点。
+// 删除/退订实例的只读节点。多可用区模式删除/退订只读节点时，要保证删除/退订后，剩余的只读节点和主节点在不同的可用区中，否则无法删除/退订该只读节点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) DeleteGaussMySqlReadonlyNode(request *model.DeleteGaussMySqlReadonlyNodeRequest) (*model.DeleteGaussMySqlReadonlyNodeResponse, error) {
@@ -454,7 +454,7 @@ func (c *GaussDBClient) DeleteGaussMySqlReadonlyNode(request *model.DeleteGaussM
 	}
 }
 
-// DeleteGaussMySqlReadonlyNodeInvoker 删除只读节点
+// DeleteGaussMySqlReadonlyNodeInvoker 删除/退订只读节点
 func (c *GaussDBClient) DeleteGaussMySqlReadonlyNodeInvoker(request *model.DeleteGaussMySqlReadonlyNodeRequest) *DeleteGaussMySqlReadonlyNodeInvoker {
 	requestDef := GenReqDefForDeleteGaussMySqlReadonlyNode()
 	return &DeleteGaussMySqlReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

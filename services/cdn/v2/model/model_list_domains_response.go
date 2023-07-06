@@ -12,7 +12,7 @@ type ListDomainsResponse struct {
 	// 总条数。
 	Total *int32 `json:"total,omitempty"`
 
-	// 域名信息
+	// 域名信息。
 	Domains        *[]Domains `json:"domains,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

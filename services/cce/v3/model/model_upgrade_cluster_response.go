@@ -8,10 +8,10 @@ import (
 
 // UpgradeClusterResponse Response Object
 type UpgradeClusterResponse struct {
+	Metadata *UpgradeCluserResponseMetadata `json:"metadata,omitempty"`
 
-	// 升级任务ID，可通过调用获取集群升级任务详情API查询进展
-	Uid            *string `json:"uid,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Spec           *UpgradeResponseSpec `json:"spec,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o UpgradeClusterResponse) String() string {

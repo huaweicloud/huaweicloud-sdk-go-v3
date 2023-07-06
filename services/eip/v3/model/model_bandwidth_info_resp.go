@@ -9,19 +9,19 @@ import (
 	"strings"
 )
 
-// BandwidthInfoResp 公网IP绑定的带宽信息
+// BandwidthInfoResp 弹性公网IP绑定的带宽信息
 type BandwidthInfoResp struct {
 
-	// 带宽名称
+	// - 功能说明：带宽名称
 	BandwidthName *string `json:"bandwidth_name,omitempty"`
 
-	// 带宽大小
+	// - 功能说明：带宽大小
 	BandwidthNumber *int32 `json:"bandwidth_number,omitempty"`
 
-	// 带宽类型
+	// - 功能说明：带宽类型
 	BandwidthType *BandwidthInfoRespBandwidthType `json:"bandwidth_type,omitempty"`
 
-	// 带宽id
+	// - 功能说明：带宽id
 	BandwidthId *string `json:"bandwidth_id,omitempty"`
 }
 

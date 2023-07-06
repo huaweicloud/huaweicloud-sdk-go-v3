@@ -9,6 +9,12 @@ import (
 // ConfigsGetBody 配置项。
 type ConfigsGetBody struct {
 
+	// 业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+	BusinessType *string `json:"business_type,omitempty"`
+
+	// 服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+	ServiceArea *string `json:"service_area,omitempty"`
+
 	// 回源请求头配置
 	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty"`
 

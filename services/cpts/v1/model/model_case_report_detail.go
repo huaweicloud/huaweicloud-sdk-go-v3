@@ -576,7 +576,7 @@ type CaseReportDetail struct {
 	// aw的http url
 	Url *string `json:"url,omitempty"`
 
-	// 反应实时vuser数数据
+	// 反应实时vuser数据
 	UserConcur *int32 `json:"userConcur,omitempty"`
 
 	// 分支uri

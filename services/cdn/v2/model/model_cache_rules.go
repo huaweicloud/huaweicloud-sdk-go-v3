@@ -20,7 +20,7 @@ type CacheRules struct {
 	// 缓存过期时间单位，s：秒；m：分；h：小时；d：天。
 	TtlUnit string `json:"ttl_unit"`
 
-	// 此条配置的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
+	// 此条缓存规则的优先级, 默认值1，数值越大，优先级越高，取值范围为1-100，优先级不能相同。
 	Priority int32 `json:"priority"`
 
 	// 缓存遵循源站开关，on：打开，off：关闭。

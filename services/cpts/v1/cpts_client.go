@@ -19,9 +19,9 @@ func CptsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// BatchUpdateTaskStatus 批量启停任务（新版启停任务接口）
+// BatchUpdateTaskStatus 批量启停任务
 //
-// 批量启停任务（新版启停任务接口）
+// 批量启停任务
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) BatchUpdateTaskStatus(request *model.BatchUpdateTaskStatusRequest) (*model.BatchUpdateTaskStatusResponse, error) {
@@ -34,7 +34,7 @@ func (c *CptsClient) BatchUpdateTaskStatus(request *model.BatchUpdateTaskStatusR
 	}
 }
 
-// BatchUpdateTaskStatusInvoker 批量启停任务（新版启停任务接口）
+// BatchUpdateTaskStatusInvoker 批量启停任务
 func (c *CptsClient) BatchUpdateTaskStatusInvoker(request *model.BatchUpdateTaskStatusRequest) *BatchUpdateTaskStatusInvoker {
 	requestDef := GenReqDefForBatchUpdateTaskStatus()
 	return &BatchUpdateTaskStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -82,9 +82,9 @@ func (c *CptsClient) CreateDirectoryInvoker(request *model.CreateDirectoryReques
 	return &CreateDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateNewCase 创建用例
+// CreateNewCase 创建用例v2
 //
-// 创建用例
+// 创建用例v2
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) CreateNewCase(request *model.CreateNewCaseRequest) (*model.CreateNewCaseResponse, error) {
@@ -97,15 +97,15 @@ func (c *CptsClient) CreateNewCase(request *model.CreateNewCaseRequest) (*model.
 	}
 }
 
-// CreateNewCaseInvoker 创建用例
+// CreateNewCaseInvoker 创建用例v2
 func (c *CptsClient) CreateNewCaseInvoker(request *model.CreateNewCaseRequest) *CreateNewCaseInvoker {
 	requestDef := GenReqDefForCreateNewCase()
 	return &CreateNewCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateNewTask 创建任务
+// CreateNewTask 创建任务v3
 //
-// 创建任务
+// 创建任务v3
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) CreateNewTask(request *model.CreateNewTaskRequest) (*model.CreateNewTaskResponse, error) {
@@ -118,7 +118,7 @@ func (c *CptsClient) CreateNewTask(request *model.CreateNewTaskRequest) (*model.
 	}
 }
 
-// CreateNewTaskInvoker 创建任务
+// CreateNewTaskInvoker 创建任务v3
 func (c *CptsClient) CreateNewTaskInvoker(request *model.CreateNewTaskRequest) *CreateNewTaskInvoker {
 	requestDef := GenReqDefForCreateNewTask()
 	return &CreateNewTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -250,9 +250,9 @@ func (c *CptsClient) DeleteDirectoryInvoker(request *model.DeleteDirectoryReques
 	return &DeleteDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteNewCase 删除用例
+// DeleteNewCase 删除用例v2
 //
-// 删除用例
+// 删除用例v2
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) DeleteNewCase(request *model.DeleteNewCaseRequest) (*model.DeleteNewCaseResponse, error) {
@@ -265,15 +265,15 @@ func (c *CptsClient) DeleteNewCase(request *model.DeleteNewCaseRequest) (*model.
 	}
 }
 
-// DeleteNewCaseInvoker 删除用例
+// DeleteNewCaseInvoker 删除用例v2
 func (c *CptsClient) DeleteNewCaseInvoker(request *model.DeleteNewCaseRequest) *DeleteNewCaseInvoker {
 	requestDef := GenReqDefForDeleteNewCase()
 	return &DeleteNewCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteNewTask 删除任务
+// DeleteNewTask 删除任务v3
 //
-// 删除任务
+// 删除任务v3
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) DeleteNewTask(request *model.DeleteNewTaskRequest) (*model.DeleteNewTaskResponse, error) {
@@ -286,7 +286,7 @@ func (c *CptsClient) DeleteNewTask(request *model.DeleteNewTaskRequest) (*model.
 	}
 }
 
-// DeleteNewTaskInvoker 删除任务
+// DeleteNewTaskInvoker 删除任务v3
 func (c *CptsClient) DeleteNewTaskInvoker(request *model.DeleteNewTaskRequest) *DeleteNewTaskInvoker {
 	requestDef := GenReqDefForDeleteNewTask()
 	return &DeleteNewTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -483,7 +483,7 @@ func (c *CptsClient) ShowHistoryRunInfoInvoker(request *model.ShowHistoryRunInfo
 
 // ShowMergeCaseDetail 内外融合单个用例的详情数据
 //
-// 内外融合单个用例的详情数据
+// 查询单个用例的详情数据
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) ShowMergeCaseDetail(request *model.ShowMergeCaseDetailRequest) (*model.ShowMergeCaseDetailResponse, error) {
@@ -525,7 +525,7 @@ func (c *CptsClient) ShowMergeReportLogsOutlineInvoker(request *model.ShowMergeR
 
 // ShowMergeTaskCase 内外融合当前任务用例列表接口
 //
-// 内外融合当前任务用例列表接口
+// 查询当前任务用例列表接口
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) ShowMergeTaskCase(request *model.ShowMergeTaskCaseRequest) (*model.ShowMergeTaskCaseResponse, error) {
@@ -733,9 +733,9 @@ func (c *CptsClient) UpdateDirectoryInvoker(request *model.UpdateDirectoryReques
 	return &UpdateDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateNewCase 修改用例
+// UpdateNewCase 修改用例v2
 //
-// 修改用例
+// 修改用例v2
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CptsClient) UpdateNewCase(request *model.UpdateNewCaseRequest) (*model.UpdateNewCaseResponse, error) {
@@ -748,7 +748,7 @@ func (c *CptsClient) UpdateNewCase(request *model.UpdateNewCaseRequest) (*model.
 	}
 }
 
-// UpdateNewCaseInvoker 修改用例
+// UpdateNewCaseInvoker 修改用例v2
 func (c *CptsClient) UpdateNewCaseInvoker(request *model.UpdateNewCaseRequest) *UpdateNewCaseInvoker {
 	requestDef := GenReqDefForUpdateNewCase()
 	return &UpdateNewCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
