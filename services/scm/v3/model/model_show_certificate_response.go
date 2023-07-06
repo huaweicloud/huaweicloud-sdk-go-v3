@@ -73,7 +73,8 @@ type ShowCertificateResponse struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 域名所有权认证信息，详情请参见Authentification字段数据结构说明。
-	Authentification *[]Authentification `json:"authentification,omitempty"`
+	Authentification *[]Authentification `json:"authentification,omitempty"`//deprecated 废弃
+	Authentifications *[]Authentification `json:"authentifications,omitempty"`//new version api response json prop
 	HttpStatusCode   int                 `json:"-"`
 }
 
