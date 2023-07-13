@@ -9,12 +9,13 @@ import (
 	"strings"
 )
 
+// Access 访问方式。
 type Access struct {
 
-	// 地址。
+	// 访问地址。
 	Address *string `json:"address,omitempty"`
 
-	// 类型。
+	// 访问方式类型。
 	Type *AccessType `json:"type,omitempty"`
 }
 

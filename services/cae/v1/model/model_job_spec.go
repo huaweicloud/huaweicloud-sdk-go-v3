@@ -8,10 +8,13 @@ import (
 
 type JobSpec struct {
 
-	// 任务状态
+	// 任务进度。
+	Progress float32 `json:"progress,omitempty"`
+
+	// 任务状态。
 	Status *string `json:"status,omitempty"`
 
-	// 子任务
+	// 子任务。
 	Tasks *[]Task `json:"tasks,omitempty"`
 }
 

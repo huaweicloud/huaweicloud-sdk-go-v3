@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -8,17 +9,20 @@ import (
 
 type ComponentItem struct {
 
-	// 组件id。
+	// 组件ID。
 	Id *string `json:"id,omitempty"`
 
 	// 组件名称。
 	Name *string `json:"name,omitempty"`
 
-	// 组件状态。
-	Status *string `json:"status,omitempty"`
-
 	// 资源信息。
 	Annotations map[string]string `json:"annotations,omitempty"`
+
+	// 创建时间。
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+
+	// 更新时间。
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
 	Spec *ComponentSpec `json:"spec,omitempty"`
 }

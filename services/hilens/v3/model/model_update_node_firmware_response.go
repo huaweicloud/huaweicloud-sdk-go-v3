@@ -8,6 +8,8 @@ import (
 
 // UpdateNodeFirmwareResponse Response Object
 type UpdateNodeFirmwareResponse struct {
+	Body *interface{} `json:"body,omitempty"`
+
 	FirmwareName *string `json:"firmware_name,omitempty"`
 
 	FirmwareId     *string `json:"firmware_id,omitempty"`

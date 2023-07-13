@@ -11,11 +11,14 @@ import (
 
 type EventItem struct {
 
-	// 事件名。
+	// 事件名称。
 	Name *string `json:"name,omitempty"`
 
+	// 涉及对象类型。
+	InvolvedObjectKind *EventItemInvolvedObjectKind `json:"involved_object_kind,omitempty"`
+
 	// 涉及对象。
-	InvolvedObject *EventItemInvolvedObject `json:"involved_object,omitempty"`
+	InvolvedObject *string `json:"involved_object,omitempty"`
 
 	// 组件事件信息。
 	Message *string `json:"message,omitempty"`
@@ -23,7 +26,7 @@ type EventItem struct {
 	// 创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 修改时间。
+	// 更新时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 组件事件状态。
@@ -42,39 +45,39 @@ func (o EventItem) String() string {
 	return strings.Join([]string{"EventItem", string(data)}, " ")
 }
 
-type EventItemInvolvedObject struct {
+type EventItemInvolvedObjectKind struct {
 	value string
 }
 
-type EventItemInvolvedObjectEnum struct {
-	COMPONENT          EventItemInvolvedObject
-	COMPONENT_INSTANCE EventItemInvolvedObject
-	COMPONENT_SCALING  EventItemInvolvedObject
+type EventItemInvolvedObjectKindEnum struct {
+	COMPONENT          EventItemInvolvedObjectKind
+	COMPONENT_INSTANCE EventItemInvolvedObjectKind
+	COMPONENT_SCALING  EventItemInvolvedObjectKind
 }
 
-func GetEventItemInvolvedObjectEnum() EventItemInvolvedObjectEnum {
-	return EventItemInvolvedObjectEnum{
-		COMPONENT: EventItemInvolvedObject{
+func GetEventItemInvolvedObjectKindEnum() EventItemInvolvedObjectKindEnum {
+	return EventItemInvolvedObjectKindEnum{
+		COMPONENT: EventItemInvolvedObjectKind{
 			value: "Component",
 		},
-		COMPONENT_INSTANCE: EventItemInvolvedObject{
+		COMPONENT_INSTANCE: EventItemInvolvedObjectKind{
 			value: "ComponentInstance",
 		},
-		COMPONENT_SCALING: EventItemInvolvedObject{
+		COMPONENT_SCALING: EventItemInvolvedObjectKind{
 			value: "ComponentScaling",
 		},
 	}
 }
 
-func (c EventItemInvolvedObject) Value() string {
+func (c EventItemInvolvedObjectKind) Value() string {
 	return c.value
 }
 
-func (c EventItemInvolvedObject) MarshalJSON() ([]byte, error) {
+func (c EventItemInvolvedObjectKind) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *EventItemInvolvedObject) UnmarshalJSON(b []byte) error {
+func (c *EventItemInvolvedObjectKind) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

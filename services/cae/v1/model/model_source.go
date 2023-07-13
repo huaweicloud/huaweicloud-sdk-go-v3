@@ -9,16 +9,17 @@ import (
 	"strings"
 )
 
+// Source 源信息。
 type Source struct {
 	Code *Repo `json:"code,omitempty"`
 
-	// 代码源类型。
+	// 源类型。
 	Type SourceType `json:"type"`
 
-	// 代码源管理平台。
+	// 源子类型。 - 源类型为code时，子类型表示不同的代码仓库，如DevCloud（CodeArts)、GitLab、GitHub、Gitee、Bitbucket。 - 源类型为softwarePackage时，子类型表示不同的软件包仓库，如BinObs、BinDevCloud（CodeArts软件发布库)。
 	SubType *SourceSubType `json:"sub_type,omitempty"`
 
-	// url代码地址。
+	// url地址。 - 源类型为image时，url地址为镜像地址。 - 源类型为code时，url地址为git地址。 - 源类型为softwarePackage时，url地址为软件包地址。
 	Url string `json:"url"`
 }
 

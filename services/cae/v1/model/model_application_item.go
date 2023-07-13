@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -9,11 +10,20 @@ import (
 // ApplicationItem 应用信息。
 type ApplicationItem struct {
 
-	// ID。
+	// 应用ID。
 	Id *string `json:"id,omitempty"`
 
-	// 名称。
+	// 应用名称。
 	Name *string `json:"name,omitempty"`
+
+	// 应用附加属性，当前只支持description参数。
+	Annotations map[string]string `json:"annotations,omitempty"`
+
+	// 创建时间。
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+
+	// 更新时间。
+	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 }
 
 func (o ApplicationItem) String() string {

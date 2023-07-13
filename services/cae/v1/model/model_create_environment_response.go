@@ -9,14 +9,9 @@ import (
 // CreateEnvironmentResponse Response Object
 type CreateEnvironmentResponse struct {
 
-	// API版本。
-	ApiVersion *string `json:"api_version,omitempty"`
-
-	// 资源种类
-	Kind *string `json:"kind,omitempty"`
-
-	Metadata       *EnvironmentMetadata `json:"metadata,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	// 任务ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateEnvironmentResponse) String() string {

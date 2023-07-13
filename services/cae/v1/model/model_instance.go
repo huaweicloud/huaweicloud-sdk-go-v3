@@ -11,7 +11,7 @@ import (
 
 type Instance struct {
 
-	// id
+	// 实例ID。
 	Id *string `json:"id,omitempty"`
 
 	// 实例名称。

@@ -605,6 +605,54 @@ func (i *ShowPrivateipInvoker) Invoke() (*model.ShowPrivateipResponse, error) {
 	}
 }
 
+type NeutronAddRouterInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronAddRouterInterfaceInvoker) Invoke() (*model.NeutronAddRouterInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronAddRouterInterfaceResponse), nil
+	}
+}
+
+type NeutronCreateNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateNetworkInvoker) Invoke() (*model.NeutronCreateNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronCreateNetworkResponse), nil
+	}
+}
+
+type NeutronCreatePortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreatePortInvoker) Invoke() (*model.NeutronCreatePortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronCreatePortResponse), nil
+	}
+}
+
+type NeutronCreateRouterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateRouterInvoker) Invoke() (*model.NeutronCreateRouterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronCreateRouterResponse), nil
+	}
+}
+
 type NeutronCreateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +674,54 @@ func (i *NeutronCreateSecurityGroupRuleInvoker) Invoke() (*model.NeutronCreateSe
 		return nil, err
 	} else {
 		return result.(*model.NeutronCreateSecurityGroupRuleResponse), nil
+	}
+}
+
+type NeutronCreateSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateSubnetInvoker) Invoke() (*model.NeutronCreateSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronCreateSubnetResponse), nil
+	}
+}
+
+type NeutronDeleteNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteNetworkInvoker) Invoke() (*model.NeutronDeleteNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronDeleteNetworkResponse), nil
+	}
+}
+
+type NeutronDeletePortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeletePortInvoker) Invoke() (*model.NeutronDeletePortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronDeletePortResponse), nil
+	}
+}
+
+type NeutronDeleteRouterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteRouterInvoker) Invoke() (*model.NeutronDeleteRouterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronDeleteRouterResponse), nil
 	}
 }
 
@@ -653,6 +749,54 @@ func (i *NeutronDeleteSecurityGroupRuleInvoker) Invoke() (*model.NeutronDeleteSe
 	}
 }
 
+type NeutronDeleteSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteSubnetInvoker) Invoke() (*model.NeutronDeleteSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronDeleteSubnetResponse), nil
+	}
+}
+
+type NeutronListNetworksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronListNetworksInvoker) Invoke() (*model.NeutronListNetworksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronListNetworksResponse), nil
+	}
+}
+
+type NeutronListPortsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronListPortsInvoker) Invoke() (*model.NeutronListPortsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronListPortsResponse), nil
+	}
+}
+
+type NeutronListRoutersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronListRoutersInvoker) Invoke() (*model.NeutronListRoutersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronListRoutersResponse), nil
+	}
+}
+
 type NeutronListSecurityGroupRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +818,66 @@ func (i *NeutronListSecurityGroupsInvoker) Invoke() (*model.NeutronListSecurityG
 		return nil, err
 	} else {
 		return result.(*model.NeutronListSecurityGroupsResponse), nil
+	}
+}
+
+type NeutronListSubnetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronListSubnetsInvoker) Invoke() (*model.NeutronListSubnetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronListSubnetsResponse), nil
+	}
+}
+
+type NeutronRemoveRouterInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronRemoveRouterInterfaceInvoker) Invoke() (*model.NeutronRemoveRouterInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronRemoveRouterInterfaceResponse), nil
+	}
+}
+
+type NeutronShowNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowNetworkInvoker) Invoke() (*model.NeutronShowNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronShowNetworkResponse), nil
+	}
+}
+
+type NeutronShowPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowPortInvoker) Invoke() (*model.NeutronShowPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronShowPortResponse), nil
+	}
+}
+
+type NeutronShowRouterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowRouterInvoker) Invoke() (*model.NeutronShowRouterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronShowRouterResponse), nil
 	}
 }
 
@@ -701,6 +905,54 @@ func (i *NeutronShowSecurityGroupRuleInvoker) Invoke() (*model.NeutronShowSecuri
 	}
 }
 
+type NeutronShowSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowSubnetInvoker) Invoke() (*model.NeutronShowSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronShowSubnetResponse), nil
+	}
+}
+
+type NeutronUpdateNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateNetworkInvoker) Invoke() (*model.NeutronUpdateNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronUpdateNetworkResponse), nil
+	}
+}
+
+type NeutronUpdatePortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdatePortInvoker) Invoke() (*model.NeutronUpdatePortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronUpdatePortResponse), nil
+	}
+}
+
+type NeutronUpdateRouterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateRouterInvoker) Invoke() (*model.NeutronUpdateRouterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronUpdateRouterResponse), nil
+	}
+}
+
 type NeutronUpdateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -710,6 +962,18 @@ func (i *NeutronUpdateSecurityGroupInvoker) Invoke() (*model.NeutronUpdateSecuri
 		return nil, err
 	} else {
 		return result.(*model.NeutronUpdateSecurityGroupResponse), nil
+	}
+}
+
+type NeutronUpdateSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateSubnetInvoker) Invoke() (*model.NeutronUpdateSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NeutronUpdateSubnetResponse), nil
 	}
 }
 
@@ -914,6 +1178,18 @@ func (i *NeutronUpdateFirewallRuleInvoker) Invoke() (*model.NeutronUpdateFirewal
 		return nil, err
 	} else {
 		return result.(*model.NeutronUpdateFirewallRuleResponse), nil
+	}
+}
+
+type ListApiVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionInvoker) Invoke() (*model.ListApiVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiVersionResponse), nil
 	}
 }
 

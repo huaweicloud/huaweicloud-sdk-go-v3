@@ -12,10 +12,10 @@ import (
 // CreateComponentRequestBodySpec 组件规格信息。
 type CreateComponentRequestBodySpec struct {
 
-	// 语言/运行时，例如：Java8、tomcat8。
+	// 语言/运行时。
 	Runtime CreateComponentRequestBodySpecRuntime `json:"runtime"`
 
-	// 副本数目。
+	// 实例个数。
 	Replica int32 `json:"replica"`
 
 	Build *Build `json:"build,omitempty"`

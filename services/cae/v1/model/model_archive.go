@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// Archive 构建产物纳管。
 type Archive struct {
 
-	// 镜像命名空间。
+	// 产物纳管SWR组织。
 	ArtifactNamespace *string `json:"artifact_namespace,omitempty"`
 }
 

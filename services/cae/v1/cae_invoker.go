@@ -17,15 +17,15 @@ func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
 	}
 }
 
-type ShowAgencyInvoker struct {
+type ListAgenciesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
+func (i *ListAgenciesInvoker) Invoke() (*model.ListAgenciesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowAgencyResponse), nil
+		return result.(*model.ListAgenciesResponse), nil
 	}
 }
 
@@ -77,6 +77,54 @@ func (i *ShowApplicationInvoker) Invoke() (*model.ShowApplicationResponse, error
 	}
 }
 
+type CreateCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateResponse), nil
+	}
+}
+
+type DeleteCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCertificateResponse), nil
+	}
+}
+
+type ListCertificatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertificatesResponse), nil
+	}
+}
+
+type UpdateCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCertificateInvoker) Invoke() (*model.UpdateCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCertificateResponse), nil
+	}
+}
+
 type CreateComponentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -113,6 +161,30 @@ func (i *ExecuteActionInvoker) Invoke() (*model.ExecuteActionResponse, error) {
 	}
 }
 
+type ListComponentEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListComponentEventsInvoker) Invoke() (*model.ListComponentEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListComponentEventsResponse), nil
+	}
+}
+
+type ListComponentInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListComponentInstancesInvoker) Invoke() (*model.ListComponentInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListComponentInstancesResponse), nil
+	}
+}
+
 type ListComponentSnapshotsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,30 +206,6 @@ func (i *ListComponentsInvoker) Invoke() (*model.ListComponentsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListComponentsResponse), nil
-	}
-}
-
-type ListEventsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEventsResponse), nil
-	}
-}
-
-type ListInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstancesResponse), nil
 	}
 }
 
@@ -209,15 +257,51 @@ func (i *DeleteComponentConfigurationInvoker) Invoke() (*model.DeleteComponentCo
 	}
 }
 
-type ListConfigurationsInvoker struct {
+type ListComponentConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListConfigurationsInvoker) Invoke() (*model.ListConfigurationsResponse, error) {
+func (i *ListComponentConfigurationsInvoker) Invoke() (*model.ListComponentConfigurationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListConfigurationsResponse), nil
+		return result.(*model.ListComponentConfigurationsResponse), nil
+	}
+}
+
+type CreateDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainResponse), nil
+	}
+}
+
+type DeleteDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainResponse), nil
+	}
+}
+
+type ListDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainsResponse), nil
 	}
 }
 
@@ -278,6 +362,66 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowJobResponse), nil
+	}
+}
+
+type CreateTimerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTimerRuleInvoker) Invoke() (*model.CreateTimerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTimerRuleResponse), nil
+	}
+}
+
+type DeleteTimerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTimerRuleInvoker) Invoke() (*model.DeleteTimerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTimerRuleResponse), nil
+	}
+}
+
+type ListTimerRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTimerRulesInvoker) Invoke() (*model.ListTimerRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTimerRulesResponse), nil
+	}
+}
+
+type ShowExecutionResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExecutionResultInvoker) Invoke() (*model.ShowExecutionResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExecutionResultResponse), nil
+	}
+}
+
+type UpdateTimerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTimerRuleInvoker) Invoke() (*model.UpdateTimerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTimerRuleResponse), nil
 	}
 }
 

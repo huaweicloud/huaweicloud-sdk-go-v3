@@ -9,7 +9,7 @@ import (
 // ExecuteActionResponse Response Object
 type ExecuteActionResponse struct {
 
-	// 任务id。
+	// 任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

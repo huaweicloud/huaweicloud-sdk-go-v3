@@ -1083,6 +1083,90 @@ func (c *VpcClient) ShowPrivateipInvoker(request *model.ShowPrivateipRequest) *S
 	return &ShowPrivateipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// NeutronAddRouterInterface 路由器添加接口
+//
+// 添加路由器接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronAddRouterInterface(request *model.NeutronAddRouterInterfaceRequest) (*model.NeutronAddRouterInterfaceResponse, error) {
+	requestDef := GenReqDefForNeutronAddRouterInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronAddRouterInterfaceResponse), nil
+	}
+}
+
+// NeutronAddRouterInterfaceInvoker 路由器添加接口
+func (c *VpcClient) NeutronAddRouterInterfaceInvoker(request *model.NeutronAddRouterInterfaceRequest) *NeutronAddRouterInterfaceInvoker {
+	requestDef := GenReqDefForNeutronAddRouterInterface()
+	return &NeutronAddRouterInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateNetwork 创建网络
+//
+// 创建网络
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronCreateNetwork(request *model.NeutronCreateNetworkRequest) (*model.NeutronCreateNetworkResponse, error) {
+	requestDef := GenReqDefForNeutronCreateNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateNetworkResponse), nil
+	}
+}
+
+// NeutronCreateNetworkInvoker 创建网络
+func (c *VpcClient) NeutronCreateNetworkInvoker(request *model.NeutronCreateNetworkRequest) *NeutronCreateNetworkInvoker {
+	requestDef := GenReqDefForNeutronCreateNetwork()
+	return &NeutronCreateNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreatePort 创建端口
+//
+// 创建端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronCreatePort(request *model.NeutronCreatePortRequest) (*model.NeutronCreatePortResponse, error) {
+	requestDef := GenReqDefForNeutronCreatePort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreatePortResponse), nil
+	}
+}
+
+// NeutronCreatePortInvoker 创建端口
+func (c *VpcClient) NeutronCreatePortInvoker(request *model.NeutronCreatePortRequest) *NeutronCreatePortInvoker {
+	requestDef := GenReqDefForNeutronCreatePort()
+	return &NeutronCreatePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateRouter 创建路由器
+//
+// 创建路由器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronCreateRouter(request *model.NeutronCreateRouterRequest) (*model.NeutronCreateRouterResponse, error) {
+	requestDef := GenReqDefForNeutronCreateRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateRouterResponse), nil
+	}
+}
+
+// NeutronCreateRouterInvoker 创建路由器
+func (c *VpcClient) NeutronCreateRouterInvoker(request *model.NeutronCreateRouterRequest) *NeutronCreateRouterInvoker {
+	requestDef := GenReqDefForNeutronCreateRouter()
+	return &NeutronCreateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // NeutronCreateSecurityGroup 创建安全组
 //
 // 创建安全组
@@ -1123,6 +1207,90 @@ func (c *VpcClient) NeutronCreateSecurityGroupRule(request *model.NeutronCreateS
 func (c *VpcClient) NeutronCreateSecurityGroupRuleInvoker(request *model.NeutronCreateSecurityGroupRuleRequest) *NeutronCreateSecurityGroupRuleInvoker {
 	requestDef := GenReqDefForNeutronCreateSecurityGroupRule()
 	return &NeutronCreateSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronCreateSubnet 创建子网
+//
+// 创建子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronCreateSubnet(request *model.NeutronCreateSubnetRequest) (*model.NeutronCreateSubnetResponse, error) {
+	requestDef := GenReqDefForNeutronCreateSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronCreateSubnetResponse), nil
+	}
+}
+
+// NeutronCreateSubnetInvoker 创建子网
+func (c *VpcClient) NeutronCreateSubnetInvoker(request *model.NeutronCreateSubnetRequest) *NeutronCreateSubnetInvoker {
+	requestDef := GenReqDefForNeutronCreateSubnet()
+	return &NeutronCreateSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteNetwork 删除网络
+//
+// 删除网络
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronDeleteNetwork(request *model.NeutronDeleteNetworkRequest) (*model.NeutronDeleteNetworkResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteNetworkResponse), nil
+	}
+}
+
+// NeutronDeleteNetworkInvoker 删除网络
+func (c *VpcClient) NeutronDeleteNetworkInvoker(request *model.NeutronDeleteNetworkRequest) *NeutronDeleteNetworkInvoker {
+	requestDef := GenReqDefForNeutronDeleteNetwork()
+	return &NeutronDeleteNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeletePort 删除端口
+//
+// 删除端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronDeletePort(request *model.NeutronDeletePortRequest) (*model.NeutronDeletePortResponse, error) {
+	requestDef := GenReqDefForNeutronDeletePort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeletePortResponse), nil
+	}
+}
+
+// NeutronDeletePortInvoker 删除端口
+func (c *VpcClient) NeutronDeletePortInvoker(request *model.NeutronDeletePortRequest) *NeutronDeletePortInvoker {
+	requestDef := GenReqDefForNeutronDeletePort()
+	return &NeutronDeletePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronDeleteRouter 删除路由器
+//
+// 删除路由器
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronDeleteRouter(request *model.NeutronDeleteRouterRequest) (*model.NeutronDeleteRouterResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteRouterResponse), nil
+	}
+}
+
+// NeutronDeleteRouterInvoker 删除路由器
+func (c *VpcClient) NeutronDeleteRouterInvoker(request *model.NeutronDeleteRouterRequest) *NeutronDeleteRouterInvoker {
+	requestDef := GenReqDefForNeutronDeleteRouter()
+	return &NeutronDeleteRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NeutronDeleteSecurityGroup 删除安全组
@@ -1167,6 +1335,90 @@ func (c *VpcClient) NeutronDeleteSecurityGroupRuleInvoker(request *model.Neutron
 	return &NeutronDeleteSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// NeutronDeleteSubnet 删除子网
+//
+// 删除子网
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronDeleteSubnet(request *model.NeutronDeleteSubnetRequest) (*model.NeutronDeleteSubnetResponse, error) {
+	requestDef := GenReqDefForNeutronDeleteSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronDeleteSubnetResponse), nil
+	}
+}
+
+// NeutronDeleteSubnetInvoker 删除子网
+func (c *VpcClient) NeutronDeleteSubnetInvoker(request *model.NeutronDeleteSubnetRequest) *NeutronDeleteSubnetInvoker {
+	requestDef := GenReqDefForNeutronDeleteSubnet()
+	return &NeutronDeleteSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListNetworks 查询网络列表
+//
+// 查询提交请求的租户的所有网络，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronListNetworks(request *model.NeutronListNetworksRequest) (*model.NeutronListNetworksResponse, error) {
+	requestDef := GenReqDefForNeutronListNetworks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListNetworksResponse), nil
+	}
+}
+
+// NeutronListNetworksInvoker 查询网络列表
+func (c *VpcClient) NeutronListNetworksInvoker(request *model.NeutronListNetworksRequest) *NeutronListNetworksInvoker {
+	requestDef := GenReqDefForNeutronListNetworks()
+	return &NeutronListNetworksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListPorts 查询端口列表
+//
+// 查询提交请求的租户的所有端口，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronListPorts(request *model.NeutronListPortsRequest) (*model.NeutronListPortsResponse, error) {
+	requestDef := GenReqDefForNeutronListPorts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListPortsResponse), nil
+	}
+}
+
+// NeutronListPortsInvoker 查询端口列表
+func (c *VpcClient) NeutronListPortsInvoker(request *model.NeutronListPortsRequest) *NeutronListPortsInvoker {
+	requestDef := GenReqDefForNeutronListPorts()
+	return &NeutronListPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListRouters 查询路由器列表
+//
+// 查询提交请求的租户有权限操作的所有路由器信息，单次查询最多返回2000条数据，超过2000后会返回分页标记。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronListRouters(request *model.NeutronListRoutersRequest) (*model.NeutronListRoutersResponse, error) {
+	requestDef := GenReqDefForNeutronListRouters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListRoutersResponse), nil
+	}
+}
+
+// NeutronListRoutersInvoker 查询路由器列表
+func (c *VpcClient) NeutronListRoutersInvoker(request *model.NeutronListRoutersRequest) *NeutronListRoutersInvoker {
+	requestDef := GenReqDefForNeutronListRouters()
+	return &NeutronListRoutersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // NeutronListSecurityGroupRules 查询安全组规则列表
 //
 // 查询提交请求的租户有权限查看的所有安全组规则。单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询
@@ -1207,6 +1459,111 @@ func (c *VpcClient) NeutronListSecurityGroups(request *model.NeutronListSecurity
 func (c *VpcClient) NeutronListSecurityGroupsInvoker(request *model.NeutronListSecurityGroupsRequest) *NeutronListSecurityGroupsInvoker {
 	requestDef := GenReqDefForNeutronListSecurityGroups()
 	return &NeutronListSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronListSubnets 查询子网列表
+//
+// 查询提交请求租户的所有子网，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询 。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronListSubnets(request *model.NeutronListSubnetsRequest) (*model.NeutronListSubnetsResponse, error) {
+	requestDef := GenReqDefForNeutronListSubnets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronListSubnetsResponse), nil
+	}
+}
+
+// NeutronListSubnetsInvoker 查询子网列表
+func (c *VpcClient) NeutronListSubnetsInvoker(request *model.NeutronListSubnetsRequest) *NeutronListSubnetsInvoker {
+	requestDef := GenReqDefForNeutronListSubnets()
+	return &NeutronListSubnetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronRemoveRouterInterface 路由器删除接口
+//
+// 删除路由器接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronRemoveRouterInterface(request *model.NeutronRemoveRouterInterfaceRequest) (*model.NeutronRemoveRouterInterfaceResponse, error) {
+	requestDef := GenReqDefForNeutronRemoveRouterInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronRemoveRouterInterfaceResponse), nil
+	}
+}
+
+// NeutronRemoveRouterInterfaceInvoker 路由器删除接口
+func (c *VpcClient) NeutronRemoveRouterInterfaceInvoker(request *model.NeutronRemoveRouterInterfaceRequest) *NeutronRemoveRouterInterfaceInvoker {
+	requestDef := GenReqDefForNeutronRemoveRouterInterface()
+	return &NeutronRemoveRouterInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowNetwork 查询网络
+//
+// 查询指定的网络详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronShowNetwork(request *model.NeutronShowNetworkRequest) (*model.NeutronShowNetworkResponse, error) {
+	requestDef := GenReqDefForNeutronShowNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowNetworkResponse), nil
+	}
+}
+
+// NeutronShowNetworkInvoker 查询网络
+func (c *VpcClient) NeutronShowNetworkInvoker(request *model.NeutronShowNetworkRequest) *NeutronShowNetworkInvoker {
+	requestDef := GenReqDefForNeutronShowNetwork()
+	return &NeutronShowNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowPort 查询端口
+//
+// 查询端口详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronShowPort(request *model.NeutronShowPortRequest) (*model.NeutronShowPortResponse, error) {
+	requestDef := GenReqDefForNeutronShowPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowPortResponse), nil
+	}
+}
+
+// NeutronShowPortInvoker 查询端口
+func (c *VpcClient) NeutronShowPortInvoker(request *model.NeutronShowPortRequest) *NeutronShowPortInvoker {
+	requestDef := GenReqDefForNeutronShowPort()
+	return &NeutronShowPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronShowRouter 查询路由器
+//
+// 查询路由器详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronShowRouter(request *model.NeutronShowRouterRequest) (*model.NeutronShowRouterResponse, error) {
+	requestDef := GenReqDefForNeutronShowRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowRouterResponse), nil
+	}
+}
+
+// NeutronShowRouterInvoker 查询路由器
+func (c *VpcClient) NeutronShowRouterInvoker(request *model.NeutronShowRouterRequest) *NeutronShowRouterInvoker {
+	requestDef := GenReqDefForNeutronShowRouter()
+	return &NeutronShowRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NeutronShowSecurityGroup 查询安全组
@@ -1251,6 +1608,90 @@ func (c *VpcClient) NeutronShowSecurityGroupRuleInvoker(request *model.NeutronSh
 	return &NeutronShowSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// NeutronShowSubnet 查询子网
+//
+// 查询子网详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronShowSubnet(request *model.NeutronShowSubnetRequest) (*model.NeutronShowSubnetResponse, error) {
+	requestDef := GenReqDefForNeutronShowSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronShowSubnetResponse), nil
+	}
+}
+
+// NeutronShowSubnetInvoker 查询子网
+func (c *VpcClient) NeutronShowSubnetInvoker(request *model.NeutronShowSubnetRequest) *NeutronShowSubnetInvoker {
+	requestDef := GenReqDefForNeutronShowSubnet()
+	return &NeutronShowSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateNetwork 更新网络
+//
+// 更新网络
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronUpdateNetwork(request *model.NeutronUpdateNetworkRequest) (*model.NeutronUpdateNetworkResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateNetworkResponse), nil
+	}
+}
+
+// NeutronUpdateNetworkInvoker 更新网络
+func (c *VpcClient) NeutronUpdateNetworkInvoker(request *model.NeutronUpdateNetworkRequest) *NeutronUpdateNetworkInvoker {
+	requestDef := GenReqDefForNeutronUpdateNetwork()
+	return &NeutronUpdateNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdatePort 更新端口
+//
+// 更新端口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronUpdatePort(request *model.NeutronUpdatePortRequest) (*model.NeutronUpdatePortResponse, error) {
+	requestDef := GenReqDefForNeutronUpdatePort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdatePortResponse), nil
+	}
+}
+
+// NeutronUpdatePortInvoker 更新端口
+func (c *VpcClient) NeutronUpdatePortInvoker(request *model.NeutronUpdatePortRequest) *NeutronUpdatePortInvoker {
+	requestDef := GenReqDefForNeutronUpdatePort()
+	return &NeutronUpdatePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateRouter 更新路由器
+//
+// 更新路由器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronUpdateRouter(request *model.NeutronUpdateRouterRequest) (*model.NeutronUpdateRouterResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateRouterResponse), nil
+	}
+}
+
+// NeutronUpdateRouterInvoker 更新路由器
+func (c *VpcClient) NeutronUpdateRouterInvoker(request *model.NeutronUpdateRouterRequest) *NeutronUpdateRouterInvoker {
+	requestDef := GenReqDefForNeutronUpdateRouter()
+	return &NeutronUpdateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // NeutronUpdateSecurityGroup 更新安全组
 //
 // 更新安全组
@@ -1270,6 +1711,27 @@ func (c *VpcClient) NeutronUpdateSecurityGroup(request *model.NeutronUpdateSecur
 func (c *VpcClient) NeutronUpdateSecurityGroupInvoker(request *model.NeutronUpdateSecurityGroupRequest) *NeutronUpdateSecurityGroupInvoker {
 	requestDef := GenReqDefForNeutronUpdateSecurityGroup()
 	return &NeutronUpdateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NeutronUpdateSubnet 更新子网
+//
+// 更新子网
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) NeutronUpdateSubnet(request *model.NeutronUpdateSubnetRequest) (*model.NeutronUpdateSubnetResponse, error) {
+	requestDef := GenReqDefForNeutronUpdateSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NeutronUpdateSubnetResponse), nil
+	}
+}
+
+// NeutronUpdateSubnetInvoker 更新子网
+func (c *VpcClient) NeutronUpdateSubnetInvoker(request *model.NeutronUpdateSubnetRequest) *NeutronUpdateSubnetInvoker {
+	requestDef := GenReqDefForNeutronUpdateSubnet()
+	return &NeutronUpdateSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NeutronAddFirewallRule 插入网络ACL规则
@@ -1627,6 +2089,27 @@ func (c *VpcClient) NeutronUpdateFirewallRule(request *model.NeutronUpdateFirewa
 func (c *VpcClient) NeutronUpdateFirewallRuleInvoker(request *model.NeutronUpdateFirewallRuleRequest) *NeutronUpdateFirewallRuleInvoker {
 	requestDef := GenReqDefForNeutronUpdateFirewallRule()
 	return &NeutronUpdateFirewallRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiVersion 查询API版本信息列表
+//
+// 返回当前API所有可用的版本（仅针对OpenStack原生接口）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
+	requestDef := GenReqDefForListApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionResponse), nil
+	}
+}
+
+// ListApiVersionInvoker 查询API版本信息列表
+func (c *VpcClient) ListApiVersionInvoker(request *model.ListApiVersionRequest) *ListApiVersionInvoker {
+	requestDef := GenReqDefForListApiVersion()
+	return &ListApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateVpcTags 批量创建VPC资源标签

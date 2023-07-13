@@ -15,7 +15,7 @@ type ExecuteActionRequestBodyMetadata struct {
 	// 资源信息。
 	Annotations map[string]string `json:"annotations,omitempty"`
 
-	// action名称。
+	// action名称，具体action如下。 - deploy：部署。 - upgrade：升级。 - configure：生效配置。 - scale：伸缩。 - restart：重启。 - start：启动。 - stop：停止。 - rollback：回滚。
 	Name ExecuteActionRequestBodyMetadataName `json:"name"`
 }
 

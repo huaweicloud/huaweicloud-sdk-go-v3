@@ -6,15 +6,16 @@ import (
 	"strings"
 )
 
+// Repo 源码仓库信息。
 type Repo struct {
 
-	// 授权名。
+	// 授权名称。
 	AuthName *string `json:"auth_name,omitempty"`
 
 	// 分支。
 	Branch *string `json:"branch,omitempty"`
 
-	// 命名空间。
+	// 命名空间，需填写命名空间的Base64编码。
 	Namespace *string `json:"namespace,omitempty"`
 }
 

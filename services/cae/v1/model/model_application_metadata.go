@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// ApplicationMetadata 数据。
+// ApplicationMetadata 响应数据。
 type ApplicationMetadata struct {
 
-	// 应用id。
+	// 应用ID。
 	Id *string `json:"id,omitempty"`
 
 	// 应用名称。
 	Name *string `json:"name,omitempty"`
 
-	// 附加应用信息。
+	// 应用附加属性，当前只支持description参数。
 	Annotations map[string]string `json:"annotations,omitempty"`
 
 	// 创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 修改时间。
+	// 更新时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 

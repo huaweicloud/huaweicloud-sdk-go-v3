@@ -11,28 +11,25 @@ import (
 
 type EnvironmentItem struct {
 
-	// 环境id。
+	// 环境ID。
 	Id *string `json:"id,omitempty"`
 
 	// 环境名称。
 	Name *string `json:"name,omitempty"`
 
-	// 任务id。
+	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
 	// 环境状态。
 	Status *EnvironmentItemStatus `json:"status,omitempty"`
 
-	// 环境类型。
-	Type *EnvironmentItemType `json:"type,omitempty"`
-
-	// 环境信息。
+	// 环境附加属性。 - cluster_id：CCE集群ID。 - description: 环境描述信息。 - enterprise_project_id：企业项目ID。 - group_name：主环境绑定的SWR组织名称。 - inbound_eip_addr：负载均衡绑定EIP地址。 - namespace：CCE集群命名空间。 - public_elb_id：ELB ID，主环境绑定的负载均衡ID。 - type：环境类型，当前仅支持exclusive类型。 - vpc_id：主环境绑定的VPC ID。
 	Annotations map[string]string `json:"annotations,omitempty"`
 
 	// 创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 修改时间。
+	// 更新时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
@@ -53,7 +50,6 @@ type EnvironmentItemStatusEnum struct {
 	CREATING      EnvironmentItemStatus
 	FINISH        EnvironmentItemStatus
 	DELETING      EnvironmentItemStatus
-	ERROR         EnvironmentItemStatus
 	FREEZE        EnvironmentItemStatus
 	POLICE_FREEZE EnvironmentItemStatus
 	DELETE_FAILED EnvironmentItemStatus
@@ -69,9 +65,6 @@ func GetEnvironmentItemStatusEnum() EnvironmentItemStatusEnum {
 		},
 		DELETING: EnvironmentItemStatus{
 			value: "deleting",
-		},
-		ERROR: EnvironmentItemStatus{
-			value: "error",
 		},
 		FREEZE: EnvironmentItemStatus{
 			value: "freeze",
@@ -94,49 +87,6 @@ func (c EnvironmentItemStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *EnvironmentItemStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type EnvironmentItemType struct {
-	value string
-}
-
-type EnvironmentItemTypeEnum struct {
-	EXCLUSIVE EnvironmentItemType
-}
-
-func GetEnvironmentItemTypeEnum() EnvironmentItemTypeEnum {
-	return EnvironmentItemTypeEnum{
-		EXCLUSIVE: EnvironmentItemType{
-			value: "exclusive",
-		},
-	}
-}
-
-func (c EnvironmentItemType) Value() string {
-	return c.value
-}
-
-func (c EnvironmentItemType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *EnvironmentItemType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

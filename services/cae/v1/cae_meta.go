@@ -22,11 +22,11 @@ func GenReqDefForCreateAgency() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowAgency() *def.HttpRequestDef {
+func GenReqDefForListAgencies() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cae/agencies").
-		WithResponse(new(model.ShowAgencyResponse)).
+		WithResponse(new(model.ListAgenciesResponse)).
 		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
@@ -41,12 +41,12 @@ func GenReqDefForCreateApplication() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -70,12 +70,12 @@ func GenReqDefForDeleteApplication() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -90,12 +90,12 @@ func GenReqDefForListApplications() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -115,13 +115,111 @@ func GenReqDefForShowApplication() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnvironmentID").
 		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateCertificate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cae/certificates").
+		WithResponse(new(model.CreateCertificateResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteCertificate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/cae/certificates/{certificate_id}").
+		WithResponse(new(model.DeleteCertificateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCertificates() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cae/certificates").
+		WithResponse(new(model.ListCertificatesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateCertificate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/cae/certificates/{certificate_id}").
+		WithResponse(new(model.UpdateCertificateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -140,12 +238,12 @@ func GenReqDefForCreateComponent() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -164,21 +262,21 @@ func GenReqDefForDeleteComponent() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -193,26 +291,84 @@ func GenReqDefForExecuteAction() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListComponentEvents() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cae/applications/{application_id}/components/{component_id}/events").
+		WithResponse(new(model.ListComponentEventsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ApplicationId").
+		WithJsonTag("application_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListComponentInstances() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cae/applications/{application_id}/components/{component_id}/instances").
+		WithResponse(new(model.ListComponentInstancesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ApplicationId").
+		WithJsonTag("application_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -226,21 +382,21 @@ func GenReqDefForListComponentSnapshots() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -269,70 +425,12 @@ func GenReqDefForListComponents() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListEvents() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/cae/applications/{application_id}/components/{component_id}/events").
-		WithResponse(new(model.ListEventsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ApplicationId").
-		WithJsonTag("application_id").
-		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnvironmentID").
 		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnterpriseProjectID").
-		WithJsonTag("X-Enterprise-Project-ID").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListInstances() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/cae/applications/{application_id}/components/{component_id}/instances").
-		WithResponse(new(model.ListInstancesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ApplicationId").
-		WithJsonTag("application_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnterpriseProjectID").
-		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -347,21 +445,21 @@ func GenReqDefForShowComponent() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -376,21 +474,21 @@ func GenReqDefForUpdateComponent() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -409,21 +507,21 @@ func GenReqDefForCreateComponentConfiguration() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -442,50 +540,119 @@ func GenReqDefForDeleteComponentConfiguration() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForListConfigurations() *def.HttpRequestDef {
+func GenReqDefForListComponentConfigurations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cae/applications/{application_id}/components/{component_id}/configurations").
-		WithResponse(new(model.ListConfigurationsResponse)).
+		WithResponse(new(model.ListComponentConfigurationsResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApplicationId").
 		WithJsonTag("application_id").
 		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ComponentId").
+		WithJsonTag("component_id").
+		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnvironmentID").
 		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateDomain() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cae/domains").
+		WithResponse(new(model.CreateDomainResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteDomain() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/cae/domains/{domain_id}").
+		WithResponse(new(model.DeleteDomainResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainId").
+		WithJsonTag("domain_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDomains() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cae/domains").
+		WithResponse(new(model.ListDomainsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -561,6 +728,15 @@ func GenReqDefForRetryJob() *def.HttpRequestDef {
 		WithJsonTag("job_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -581,6 +757,133 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateTimerRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cae/timer-rules").
+		WithResponse(new(model.CreateTimerRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteTimerRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/cae/timer-rules/{timer_rule_id}").
+		WithResponse(new(model.DeleteTimerRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TimerRuleId").
+		WithJsonTag("timer_rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListTimerRules() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cae/timer-rules").
+		WithResponse(new(model.ListTimerRulesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowExecutionResult() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cae/timer-rules/{timer_rule_id}/execution-results").
+		WithResponse(new(model.ShowExecutionResultResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TimerRuleId").
+		WithJsonTag("timer_rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateTimerRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/cae/timer-rules/{timer_rule_id}").
+		WithResponse(new(model.UpdateTimerRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TimerRuleId").
+		WithJsonTag("timer_rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -594,12 +897,12 @@ func GenReqDefForCreateVolume() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -623,12 +926,12 @@ func GenReqDefForDeleteVolume() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -648,12 +951,12 @@ func GenReqDefForListVolumes() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

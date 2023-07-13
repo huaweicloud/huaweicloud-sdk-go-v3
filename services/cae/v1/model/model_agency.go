@@ -3,21 +3,18 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 type Agency struct {
 
-	// API版本。
-	ApiVersion AgencyApiVersion `json:"api_version"`
+	// API版本，固定值“v1”，该值不可修改。
+	ApiVersion string `json:"api_version"`
 
-	// 资源类型。
-	Kind AgencyKind `json:"kind"`
+	// API类型，固定值“Agency”，该值不可修改。
+	Kind string `json:"kind"`
 
-	Metadata *AgencyMetadata `json:"metadata,omitempty"`
+	Metadata *AgencyMetadata `json:"metadata"`
 }
 
 func (o Agency) String() string {
@@ -27,90 +24,4 @@ func (o Agency) String() string {
 	}
 
 	return strings.Join([]string{"Agency", string(data)}, " ")
-}
-
-type AgencyApiVersion struct {
-	value string
-}
-
-type AgencyApiVersionEnum struct {
-	V1 AgencyApiVersion
-}
-
-func GetAgencyApiVersionEnum() AgencyApiVersionEnum {
-	return AgencyApiVersionEnum{
-		V1: AgencyApiVersion{
-			value: "v1",
-		},
-	}
-}
-
-func (c AgencyApiVersion) Value() string {
-	return c.value
-}
-
-func (c AgencyApiVersion) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AgencyApiVersion) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type AgencyKind struct {
-	value string
-}
-
-type AgencyKindEnum struct {
-	AGENCY AgencyKind
-}
-
-func GetAgencyKindEnum() AgencyKindEnum {
-	return AgencyKindEnum{
-		AGENCY: AgencyKind{
-			value: "Agency",
-		},
-	}
-}
-
-func (c AgencyKind) Value() string {
-	return c.value
-}
-
-func (c AgencyKind) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AgencyKind) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

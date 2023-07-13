@@ -9,22 +9,21 @@ import (
 
 type ComponentSnapshotItem struct {
 
-	// 组件id。
+	// 组件ID。
 	ComponentId *string `json:"component_id,omitempty"`
-
-	// 上下文信息。
-	Context *interface{} `json:"context,omitempty"`
-
-	// 创建时间。
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
-
-	// 描述。
-	Description *string `json:"description,omitempty"`
 
 	// 快照索引。
 	Index *int32 `json:"index,omitempty"`
 
-	// 修改时间。
+	// 描述信息。
+	Description *string `json:"description,omitempty"`
+
+	Context *ComponentSnapshotContext `json:"context,omitempty"`
+
+	// 创建时间。
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+
+	// 更新时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 }
 

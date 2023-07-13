@@ -137,6 +137,18 @@ func (i *BatchUnsetScalingInstancesStantbyInvoker) Invoke() (*model.BatchUnsetSc
 	}
 }
 
+type CreateGroupScheduledTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGroupScheduledTaskInvoker) Invoke() (*model.CreateGroupScheduledTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGroupScheduledTaskResponse), nil
+	}
+}
+
 type CreateLifyCycleHookInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +218,18 @@ func (i *CreateScalingTagInfoInvoker) Invoke() (*model.CreateScalingTagInfoRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateScalingTagInfoResponse), nil
+	}
+}
+
+type DeleteGroupScheduledTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGroupScheduledTaskInvoker) Invoke() (*model.DeleteGroupScheduledTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGroupScheduledTaskResponse), nil
 	}
 }
 
@@ -302,6 +326,18 @@ func (i *ExecuteScalingPolicyInvoker) Invoke() (*model.ExecuteScalingPolicyRespo
 		return nil, err
 	} else {
 		return result.(*model.ExecuteScalingPolicyResponse), nil
+	}
+}
+
+type ListGroupScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGroupScheduledTasksInvoker) Invoke() (*model.ListGroupScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGroupScheduledTasksResponse), nil
 	}
 }
 
@@ -578,6 +614,18 @@ func (i *ShowScalingPolicyInvoker) Invoke() (*model.ShowScalingPolicyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowScalingPolicyResponse), nil
+	}
+}
+
+type UpdateGroupScheduledTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGroupScheduledTaskInvoker) Invoke() (*model.UpdateGroupScheduledTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGroupScheduledTaskResponse), nil
 	}
 }
 

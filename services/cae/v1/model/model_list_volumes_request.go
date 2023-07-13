@@ -3,23 +3,20 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ListVolumesRequest Request Object
 type ListVolumesRequest struct {
 
-	// 环境id。
-	XEnvironmentID string `json:"X-Environment-ID"`
-
-	// 租户的企业项目id。
+	// 企业项目ID。  - 创建环境时，环境会绑定企业项目ID。      - 最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。     - 该字段不传（或传为字符串“0”）时，则查询默认企业项目下的资源。  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见《[企业管理服务用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)》。
 	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
 
-	// 资源类型。
-	ResourceType ListVolumesRequestResourceType `json:"resource_type"`
+	// 环境ID。      - 获取环境ID，通过《[云应用引擎API参考](https://support.huaweicloud.com/api-cae/ListEnvironments.html)》的“获取环境列表”章节获取环境信息。     - 请求响应成功后在响应体的items数组中的一个元素即为一个环境的信息，其中id字段即是环境ID。
+	XEnvironmentID string `json:"X-Environment-ID"`
+
+	// 资源类型，当前只支持“obs”。
+	ResourceType string `json:"resource_type"`
 }
 
 func (o ListVolumesRequest) String() string {
@@ -29,47 +26,4 @@ func (o ListVolumesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListVolumesRequest", string(data)}, " ")
-}
-
-type ListVolumesRequestResourceType struct {
-	value string
-}
-
-type ListVolumesRequestResourceTypeEnum struct {
-	OBS ListVolumesRequestResourceType
-}
-
-func GetListVolumesRequestResourceTypeEnum() ListVolumesRequestResourceTypeEnum {
-	return ListVolumesRequestResourceTypeEnum{
-		OBS: ListVolumesRequestResourceType{
-			value: "obs",
-		},
-	}
-}
-
-func (c ListVolumesRequestResourceType) Value() string {
-	return c.value
-}
-
-func (c ListVolumesRequestResourceType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListVolumesRequestResourceType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

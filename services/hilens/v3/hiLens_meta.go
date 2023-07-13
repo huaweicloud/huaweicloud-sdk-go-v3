@@ -1286,6 +1286,10 @@ func GenReqDefForUpdateNodeFirmware() *def.HttpRequestDef {
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("FirmwareName").
 		WithJsonTag("firmware_name").
 		WithKindName("string").

@@ -9,10 +9,10 @@ import (
 // CreateApplicationRequestBodyMetadata 请求数据。
 type CreateApplicationRequestBodyMetadata struct {
 
-	// 名称。
+	// 应用名称。
 	Name string `json:"name"`
 
-	// 应用信息。
+	// 创建应用附加参数，当前只支持description参数。
 	Annotations map[string]string `json:"annotations,omitempty"`
 }
 

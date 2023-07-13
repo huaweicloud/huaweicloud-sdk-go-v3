@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// ResourceLimit 实例规格。
 type ResourceLimit struct {
 
 	// cpu限额。

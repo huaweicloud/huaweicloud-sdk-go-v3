@@ -11,10 +11,10 @@ type ActionOnComponentSpec struct {
 	// 快照序号。
 	SnapshotIndex *int32 `json:"snapshot_index,omitempty"`
 
-	// 副本数目。
+	// 实例个数。
 	Replica *int32 `json:"replica,omitempty"`
 
-	Source *Source `json:"source,omitempty"`
+	Source *ActionOnComponentSource `json:"source,omitempty"`
 
 	ResourceLimit *ResourceLimitForUpgrade `json:"resource_limit,omitempty"`
 }

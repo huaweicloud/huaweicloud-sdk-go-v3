@@ -7,28 +7,20 @@ import (
 	"strings"
 )
 
+// MetadataResponse 响应数据。
 type MetadataResponse struct {
 
-	// 属性信息。
+	// 组件ID。
+	Id *string `json:"id,omitempty"`
+
+	// 组件名称。
+	Name *string `json:"name,omitempty"`
+
+	// 组件附加属性。 - log_group_id：LTS日志组的ID。 - log_stream_id：LTS日志流的ID。 - version：组件版本。
 	Annotations map[string]string `json:"annotations,omitempty"`
 
 	// 创建时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
-
-	// 组件id。
-	Id *string `json:"id,omitempty"`
-
-	// 任务id。
-	JodId *string `json:"jod_id,omitempty"`
-
-	// 名称。
-	Name *string `json:"name,omitempty"`
-
-	// 状态。
-	Status *string `json:"status,omitempty"`
-
-	// 组件类型。
-	Type *string `json:"type,omitempty"`
 
 	// 更新时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
