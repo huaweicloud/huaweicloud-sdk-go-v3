@@ -21,7 +21,7 @@ type ListEnterpriseResourceRequestBody struct {
 	Action *string `json:"action,omitempty"`
 
 	// 查询指定键值对
-	Matches *[]map[string]string `json:"matches,omitempty"`
+	Matches *[]KvItem `json:"matches,omitempty"`
 
 	// 查询指定系统标签列表
 	SysTags *[]TagItem `json:"sys_tags,omitempty"`

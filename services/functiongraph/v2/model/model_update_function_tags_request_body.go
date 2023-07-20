@@ -12,10 +12,10 @@ type UpdateFunctionTagsRequestBody struct {
 	Action *string `json:"action,omitempty"`
 
 	// 标签列表
-	Tags *[]map[string]string `json:"tags,omitempty"`
+	Tags *[]KvItem `json:"tags,omitempty"`
 
 	// 系统标签列表
-	SysTags *[]map[string]string `json:"sys_tags,omitempty"`
+	SysTags *[]KvItem `json:"sys_tags,omitempty"`
 }
 
 func (o UpdateFunctionTagsRequestBody) String() string {

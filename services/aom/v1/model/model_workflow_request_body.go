@@ -10,10 +10,10 @@ import (
 type WorkflowRequestBody struct {
 
 	// 工作流名称，需要满足中文、英文大小写、数字、中划线和下划线{1,64}。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 工作流类型，可以为cron、manual
-	Type *string `json:"type,omitempty"`
+	Type string `json:"type"`
 
 	// 工作流描述信息。
 	Description *string `json:"description,omitempty"`
@@ -25,10 +25,10 @@ type WorkflowRequestBody struct {
 	TemplateName *string `json:"template_name,omitempty"`
 
 	// 模板id。
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId string `json:"template_id"`
 
 	// 任务执行时需要的参数列表。
-	Input map[string]interface{} `json:"input,omitempty"`
+	Input map[string]interface{} `json:"input"`
 
 	// 引用，参数引用。
 	Quote *[]string `json:"quote,omitempty"`
@@ -46,7 +46,7 @@ type WorkflowRequestBody struct {
 	ServiceName *string `json:"service_name,omitempty"`
 
 	// 任务类型。package,script,job,cloud,standard,customize
-	TaskType *string `json:"task_type,omitempty"`
+	TaskType string `json:"task_type"`
 }
 
 func (o WorkflowRequestBody) String() string {

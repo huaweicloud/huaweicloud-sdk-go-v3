@@ -21,6 +21,12 @@ type ShowInstanceConfigurationResponse struct {
 	// 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
 	Updated *string `json:"updated,omitempty"`
 
+	// 参数模板ID。
+	Id *string `json:"id,omitempty"`
+
+	// 数据库实例类型。 GaussDB(for Cassandra)集群类型为\"Cluster\"。 GaussDB(for Mongo)副本集类型为\"ReplicaSet\"。 GaussDB(for Mongo)集群类型为\"Sharding\"。 GaussDB(for Influx)集群类型为\"Cluster\"。 GaussDB(for Influx)单节点类型为\"InfluxdbSingle\"。
+	Mode *string `json:"mode,omitempty"`
+
 	// 参数对象，用户基于默认参数模板自定义的参数配置。
 	ConfigurationParameters *[]ConfigurationParameterResult `json:"configuration_parameters,omitempty"`
 	HttpStatusCode          int                             `json:"-"`

@@ -274,6 +274,27 @@ func (c *IoTDAClient) CreateBatchTaskInvoker(request *model.CreateBatchTaskReque
 	return &CreateBatchTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBatchTask 删除批量任务
+//
+// 应用服务器可调用此接口删除物联网平台中已经完成（状态为成功，失败，部分成功，已停止）的批量任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteBatchTask(request *model.DeleteBatchTaskRequest) (*model.DeleteBatchTaskResponse, error) {
+	requestDef := GenReqDefForDeleteBatchTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBatchTaskResponse), nil
+	}
+}
+
+// DeleteBatchTaskInvoker 删除批量任务
+func (c *IoTDAClient) DeleteBatchTaskInvoker(request *model.DeleteBatchTaskRequest) *DeleteBatchTaskInvoker {
+	requestDef := GenReqDefForDeleteBatchTask()
+	return &DeleteBatchTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBatchTasks 查询批量任务列表
 //
 // 应用服务器可调用此接口查询物联网平台中批量任务列表，每一个任务又包括具体的任务内容、任务状态、任务完成情况统计等。

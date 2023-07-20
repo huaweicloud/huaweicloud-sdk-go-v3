@@ -413,6 +413,18 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 	}
 }
 
+type ListInstancesSupportFastRestoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesSupportFastRestoreInvoker) Invoke() (*model.ListInstancesSupportFastRestoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesSupportFastRestoreResponse), nil
+	}
+}
+
 type ListJobInfoInvoker struct {
 	*invoker.BaseInvoker
 }

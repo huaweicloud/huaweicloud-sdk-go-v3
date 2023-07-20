@@ -341,6 +341,30 @@ func (i *ListSinkTasksInvoker) Invoke() (*model.ListSinkTasksResponse, error) {
 	}
 }
 
+type ListTopicPartitionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopicPartitionsInvoker) Invoke() (*model.ListTopicPartitionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopicPartitionsResponse), nil
+	}
+}
+
+type ListTopicProducersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopicProducersInvoker) Invoke() (*model.ListTopicProducersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopicProducersResponse), nil
+	}
+}
+
 type ResetManagerPasswordInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -732,6 +732,29 @@ func (c *RdsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *L
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstancesSupportFastRestore 获取实例是否能使用极速恢复
+//
+// 批量获取实例是否能在库表恢复时使用极速恢复。
+//
+// - 调用接口前，您需要了解API 认证鉴权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesSupportFastRestore(request *model.ListInstancesSupportFastRestoreRequest) (*model.ListInstancesSupportFastRestoreResponse, error) {
+	requestDef := GenReqDefForListInstancesSupportFastRestore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesSupportFastRestoreResponse), nil
+	}
+}
+
+// ListInstancesSupportFastRestoreInvoker 获取实例是否能使用极速恢复
+func (c *RdsClient) ListInstancesSupportFastRestoreInvoker(request *model.ListInstancesSupportFastRestoreRequest) *ListInstancesSupportFastRestoreInvoker {
+	requestDef := GenReqDefForListInstancesSupportFastRestore()
+	return &ListInstancesSupportFastRestoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListJobInfo 获取指定ID的任务信息
 //
 // 获取指定ID的任务信息。

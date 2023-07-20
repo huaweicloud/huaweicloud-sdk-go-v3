@@ -11,6 +11,8 @@ type JobNodeInfo struct {
 	Spec *JobNodeSpecInfo `json:"spec"`
 
 	Vpc *JobNodeVpcInfo `json:"vpc,omitempty"`
+
+	BaseInfo *JobNodeBaseInfo `json:"base_info,omitempty"`
 }
 
 func (o JobNodeInfo) String() string {

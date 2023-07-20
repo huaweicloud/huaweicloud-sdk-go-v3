@@ -18,6 +18,9 @@ type UploadDbObjectTemplateRequest struct {
 	// 请求语言类型。
 	XLanguage *UploadDbObjectTemplateRequestXLanguage `json:"X-Language,omitempty"`
 
+	// 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+	FileImportDbLevel *UploadDbObjectTemplateRequestFileImportDbLevel `json:"file_import_db_level,omitempty"`
+
 	Body *UploadDbObjectTemplateRequestBody `json:"body,omitempty" type:"multipart"`
 }
 
@@ -59,6 +62,53 @@ func (c UploadDbObjectTemplateRequestXLanguage) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UploadDbObjectTemplateRequestXLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UploadDbObjectTemplateRequestFileImportDbLevel struct {
+	value string
+}
+
+type UploadDbObjectTemplateRequestFileImportDbLevelEnum struct {
+	DATABASE UploadDbObjectTemplateRequestFileImportDbLevel
+	TABLE    UploadDbObjectTemplateRequestFileImportDbLevel
+}
+
+func GetUploadDbObjectTemplateRequestFileImportDbLevelEnum() UploadDbObjectTemplateRequestFileImportDbLevelEnum {
+	return UploadDbObjectTemplateRequestFileImportDbLevelEnum{
+		DATABASE: UploadDbObjectTemplateRequestFileImportDbLevel{
+			value: "database",
+		},
+		TABLE: UploadDbObjectTemplateRequestFileImportDbLevel{
+			value: "table",
+		},
+	}
+}
+
+func (c UploadDbObjectTemplateRequestFileImportDbLevel) Value() string {
+	return c.value
+}
+
+func (c UploadDbObjectTemplateRequestFileImportDbLevel) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UploadDbObjectTemplateRequestFileImportDbLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

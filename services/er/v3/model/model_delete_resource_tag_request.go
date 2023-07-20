@@ -18,7 +18,7 @@ type DeleteResourceTagRequest struct {
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// - instance: 企业路由器实例 - route-table: 路由表 - vpc-attachment: VPC连接 - vgw-attachment: 虚拟网关连接 - peering-attachment: 对等连接（Peering）连接 - vpn-attachment: VPN网关连接 - attachments: 所有连接类型
+	// 标签资源类型: - instance: 企业路由器实例 - route-table: 路由表 - vpc-attachment: VPC连接 - vgw-attachment: 虚拟网关连接 - peering-attachment: 对等连接（Peering）连接 - vpn-attachment: VPN网关连接 -  -  -  -  - attachments: 所有连接类型
 	ResourceType DeleteResourceTagRequestResourceType `json:"resource_type"`
 }
 
@@ -44,7 +44,10 @@ type DeleteResourceTagRequestResourceTypeEnum struct {
 	PEERING_ATTACHMENT DeleteResourceTagRequestResourceType
 	VPN_ATTACHMENT     DeleteResourceTagRequestResourceType
 	CAN_ATTACHMENT     DeleteResourceTagRequestResourceType
+	ECN_ATTACHMENT     DeleteResourceTagRequestResourceType
 	GDGW_ATTACHMENT    DeleteResourceTagRequestResourceType
+	CONNECT_ATTACHMENT DeleteResourceTagRequestResourceType
+	CFW_ATTACHMENT     DeleteResourceTagRequestResourceType
 	ATTACHMENTS        DeleteResourceTagRequestResourceType
 }
 
@@ -74,8 +77,17 @@ func GetDeleteResourceTagRequestResourceTypeEnum() DeleteResourceTagRequestResou
 		CAN_ATTACHMENT: DeleteResourceTagRequestResourceType{
 			value: "can-attachment",
 		},
+		ECN_ATTACHMENT: DeleteResourceTagRequestResourceType{
+			value: "ecn-attachment",
+		},
 		GDGW_ATTACHMENT: DeleteResourceTagRequestResourceType{
 			value: "gdgw-attachment",
+		},
+		CONNECT_ATTACHMENT: DeleteResourceTagRequestResourceType{
+			value: "connect-attachment",
+		},
+		CFW_ATTACHMENT: DeleteResourceTagRequestResourceType{
+			value: "cfw-attachment",
 		},
 		ATTACHMENTS: DeleteResourceTagRequestResourceType{
 			value: "attachments",

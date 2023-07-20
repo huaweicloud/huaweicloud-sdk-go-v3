@@ -15,7 +15,7 @@ type CreateResourceTagRequest struct {
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// - instance: 企业路由器实例 - route-table: 路由表 - vpc-attachment: VPC连接 - vgw-attachment: 虚拟网关连接 - peering-attachment: 对等连接（Peering）连接 - vpn-attachment: VPN网关连接 - attachments: 所有连接类型
+	// 标签资源类型: - instance: 企业路由器实例 - route-table: 路由表 - vpc-attachment: VPC连接 - vgw-attachment: 虚拟网关连接 - peering-attachment: 对等连接（Peering）连接 - vpn-attachment: VPN网关连接 -  -  -  -  - attachments: 所有连接类型
 	ResourceType CreateResourceTagRequestResourceType `json:"resource_type"`
 
 	Body *CreateResourceTagRequestBody `json:"body,omitempty"`
@@ -43,7 +43,10 @@ type CreateResourceTagRequestResourceTypeEnum struct {
 	PEERING_ATTACHMENT CreateResourceTagRequestResourceType
 	VPN_ATTACHMENT     CreateResourceTagRequestResourceType
 	CAN_ATTACHMENT     CreateResourceTagRequestResourceType
+	ECN_ATTACHMENT     CreateResourceTagRequestResourceType
 	GDGW_ATTACHMENT    CreateResourceTagRequestResourceType
+	CONNECT_ATTACHMENT CreateResourceTagRequestResourceType
+	CFW_ATTACHMENT     CreateResourceTagRequestResourceType
 	ATTACHMENTS        CreateResourceTagRequestResourceType
 }
 
@@ -73,8 +76,17 @@ func GetCreateResourceTagRequestResourceTypeEnum() CreateResourceTagRequestResou
 		CAN_ATTACHMENT: CreateResourceTagRequestResourceType{
 			value: "can-attachment",
 		},
+		ECN_ATTACHMENT: CreateResourceTagRequestResourceType{
+			value: "ecn-attachment",
+		},
 		GDGW_ATTACHMENT: CreateResourceTagRequestResourceType{
 			value: "gdgw-attachment",
+		},
+		CONNECT_ATTACHMENT: CreateResourceTagRequestResourceType{
+			value: "connect-attachment",
+		},
+		CFW_ATTACHMENT: CreateResourceTagRequestResourceType{
+			value: "cfw-attachment",
 		},
 		ATTACHMENTS: CreateResourceTagRequestResourceType{
 			value: "attachments",

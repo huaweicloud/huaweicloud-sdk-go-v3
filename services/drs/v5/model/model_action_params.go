@@ -28,7 +28,7 @@ type ActionParams struct {
 	// 再编辑任务启动时取值true。
 	IsSyncReEdit *bool `json:"is_sync_re_edit,omitempty"`
 
-	// 强制结束任务时取值true。
+	// 强制结束时取值为true。
 	ForceDelete *bool `json:"force_delete,omitempty"`
 }
 

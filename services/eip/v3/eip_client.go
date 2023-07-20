@@ -19,6 +19,27 @@ func EipClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// ListBandwidth 查询带宽列表
+//
+// 查询带宽列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListBandwidth(request *model.ListBandwidthRequest) (*model.ListBandwidthResponse, error) {
+	requestDef := GenReqDefForListBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthResponse), nil
+	}
+}
+
+// ListBandwidthInvoker 查询带宽列表
+func (c *EipClient) ListBandwidthInvoker(request *model.ListBandwidthRequest) *ListBandwidthInvoker {
+	requestDef := GenReqDefForListBandwidth()
+	return &ListBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCommonPools 查询公共池列表
 //
 // 查询公共池列表
@@ -145,6 +166,48 @@ func (c *EipClient) AssociatePublicipsInvoker(request *model.AssociatePublicipsR
 	return &AssociatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AttachBatchPublicIp 共享带宽批量加入弹性公网IP
+//
+// 共享带宽批量加入弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) AttachBatchPublicIp(request *model.AttachBatchPublicIpRequest) (*model.AttachBatchPublicIpResponse, error) {
+	requestDef := GenReqDefForAttachBatchPublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachBatchPublicIpResponse), nil
+	}
+}
+
+// AttachBatchPublicIpInvoker 共享带宽批量加入弹性公网IP
+func (c *EipClient) AttachBatchPublicIpInvoker(request *model.AttachBatchPublicIpRequest) *AttachBatchPublicIpInvoker {
+	requestDef := GenReqDefForAttachBatchPublicIp()
+	return &AttachBatchPublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachShareBandwidth 共享带宽加入弹性公网IP
+//
+// 共享带宽加入弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) AttachShareBandwidth(request *model.AttachShareBandwidthRequest) (*model.AttachShareBandwidthResponse, error) {
+	requestDef := GenReqDefForAttachShareBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachShareBandwidthResponse), nil
+	}
+}
+
+// AttachShareBandwidthInvoker 共享带宽加入弹性公网IP
+func (c *EipClient) AttachShareBandwidthInvoker(request *model.AttachShareBandwidthRequest) *AttachShareBandwidthInvoker {
+	requestDef := GenReqDefForAttachShareBandwidth()
+	return &AttachShareBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountEipAvailableResources 查询弹性公网IP可用数
 //
 // IP池用于查询公网可用ip个数
@@ -166,6 +229,69 @@ func (c *EipClient) CountEipAvailableResourcesInvoker(request *model.CountEipAva
 	return &CountEipAvailableResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DetachBatchPublicIp 共享带宽批量移出弹性公网IP
+//
+// 共享带宽批量移出弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) DetachBatchPublicIp(request *model.DetachBatchPublicIpRequest) (*model.DetachBatchPublicIpResponse, error) {
+	requestDef := GenReqDefForDetachBatchPublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachBatchPublicIpResponse), nil
+	}
+}
+
+// DetachBatchPublicIpInvoker 共享带宽批量移出弹性公网IP
+func (c *EipClient) DetachBatchPublicIpInvoker(request *model.DetachBatchPublicIpRequest) *DetachBatchPublicIpInvoker {
+	requestDef := GenReqDefForDetachBatchPublicIp()
+	return &DetachBatchPublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachShareBandwidth 共享带宽移出弹性公网IP
+//
+// 共享带宽移出弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) DetachShareBandwidth(request *model.DetachShareBandwidthRequest) (*model.DetachShareBandwidthResponse, error) {
+	requestDef := GenReqDefForDetachShareBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachShareBandwidthResponse), nil
+	}
+}
+
+// DetachShareBandwidthInvoker 共享带宽移出弹性公网IP
+func (c *EipClient) DetachShareBandwidthInvoker(request *model.DetachShareBandwidthRequest) *DetachShareBandwidthInvoker {
+	requestDef := GenReqDefForDetachShareBandwidth()
+	return &DetachShareBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableNat64 弹性公网IP关闭NAT64
+//
+// 弹性公网IP关闭NAT64
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) DisableNat64(request *model.DisableNat64Request) (*model.DisableNat64Response, error) {
+	requestDef := GenReqDefForDisableNat64()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableNat64Response), nil
+	}
+}
+
+// DisableNat64Invoker 弹性公网IP关闭NAT64
+func (c *EipClient) DisableNat64Invoker(request *model.DisableNat64Request) *DisableNat64Invoker {
+	requestDef := GenReqDefForDisableNat64()
+	return &DisableNat64Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisassociatePublicips 解绑弹性公网IP
 //
 // 解绑弹性公网IP
@@ -185,6 +311,27 @@ func (c *EipClient) DisassociatePublicips(request *model.DisassociatePublicipsRe
 func (c *EipClient) DisassociatePublicipsInvoker(request *model.DisassociatePublicipsRequest) *DisassociatePublicipsInvoker {
 	requestDef := GenReqDefForDisassociatePublicips()
 	return &DisassociatePublicipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableNat64 弹性公网IP开启NAT64
+//
+// 弹性公网IP开启NAT64
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) EnableNat64(request *model.EnableNat64Request) (*model.EnableNat64Response, error) {
+	requestDef := GenReqDefForEnableNat64()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableNat64Response), nil
+	}
+}
+
+// EnableNat64Invoker 弹性公网IP开启NAT64
+func (c *EipClient) EnableNat64Invoker(request *model.EnableNat64Request) *EnableNat64Invoker {
+	requestDef := GenReqDefForEnableNat64()
+	return &EnableNat64Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPublicips 全量查询弹性公网IP列表

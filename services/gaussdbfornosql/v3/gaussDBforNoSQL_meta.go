@@ -1337,6 +1337,22 @@ func GenReqDefForShowHighRiskCommands() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowInstanceBiactiveRegions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/disaster-recovery/regions").
+		WithResponse(new(model.ShowInstanceBiactiveRegionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowInstanceConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1444,6 +1460,15 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/quotas").
 		WithResponse(new(model.ShowQuotasResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatastoreType").
+		WithJsonTag("datastore_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Mode").
+		WithJsonTag("mode").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

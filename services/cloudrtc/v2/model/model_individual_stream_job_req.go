@@ -30,8 +30,6 @@ type IndividualStreamJobReq struct {
 	// 最长空闲频道时间。  取值范围：[5，43200]，默认值为30。  单位：秒。  如果频道内无连麦方的状态持续超过该时间，录制程序会自动退出。退出后，再次调用start请求，会产生新的录制任务。  连麦方指：joiner或者publisher的用户。
 	MaxIdleTime *int32 `json:"max_idle_time,omitempty"`
 
-	PublishParam *PublishParam `json:"publish_param,omitempty"`
-
 	RecordParam *RecordParam `json:"record_param,omitempty"`
 }
 

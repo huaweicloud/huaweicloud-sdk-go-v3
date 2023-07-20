@@ -27,7 +27,7 @@ type ListPropagationsRequest struct {
 	// 连接ID
 	AttachmentId *[]string `json:"attachment_id,omitempty"`
 
-	// 连接资源类型:vpc|vpn|vgw|peering
+	// - vpc：虚拟私有云 - vpn：vpn网关 - vgw：云专线的虚拟网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  -  -
 	ResourceType *[]ListPropagationsRequestResourceType `json:"resource_type,omitempty"`
 
 	// 企业路由器实例状态
@@ -60,7 +60,10 @@ type ListPropagationsRequestResourceTypeEnum struct {
 	VGW     ListPropagationsRequestResourceType
 	PEERING ListPropagationsRequestResourceType
 	CAN     ListPropagationsRequestResourceType
+	ECN     ListPropagationsRequestResourceType
 	GDGW    ListPropagationsRequestResourceType
+	CONNECT ListPropagationsRequestResourceType
+	CFW     ListPropagationsRequestResourceType
 }
 
 func GetListPropagationsRequestResourceTypeEnum() ListPropagationsRequestResourceTypeEnum {
@@ -83,8 +86,17 @@ func GetListPropagationsRequestResourceTypeEnum() ListPropagationsRequestResourc
 		CAN: ListPropagationsRequestResourceType{
 			value: "can",
 		},
+		ECN: ListPropagationsRequestResourceType{
+			value: "ecn",
+		},
 		GDGW: ListPropagationsRequestResourceType{
 			value: "gdgw",
+		},
+		CONNECT: ListPropagationsRequestResourceType{
+			value: "connect",
+		},
+		CFW: ListPropagationsRequestResourceType{
+			value: "cfw",
 		},
 	}
 }

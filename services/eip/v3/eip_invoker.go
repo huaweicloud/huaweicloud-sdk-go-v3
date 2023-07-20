@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eip/v3/model"
 )
 
+type ListBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthInvoker) Invoke() (*model.ListBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthResponse), nil
+	}
+}
+
 type ListCommonPoolsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +89,30 @@ func (i *AssociatePublicipsInvoker) Invoke() (*model.AssociatePublicipsResponse,
 	}
 }
 
+type AttachBatchPublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachBatchPublicIpInvoker) Invoke() (*model.AttachBatchPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachBatchPublicIpResponse), nil
+	}
+}
+
+type AttachShareBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachShareBandwidthInvoker) Invoke() (*model.AttachShareBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachShareBandwidthResponse), nil
+	}
+}
+
 type CountEipAvailableResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -89,6 +125,42 @@ func (i *CountEipAvailableResourcesInvoker) Invoke() (*model.CountEipAvailableRe
 	}
 }
 
+type DetachBatchPublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachBatchPublicIpInvoker) Invoke() (*model.DetachBatchPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachBatchPublicIpResponse), nil
+	}
+}
+
+type DetachShareBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachShareBandwidthInvoker) Invoke() (*model.DetachShareBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachShareBandwidthResponse), nil
+	}
+}
+
+type DisableNat64Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableNat64Invoker) Invoke() (*model.DisableNat64Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableNat64Response), nil
+	}
+}
+
 type DisassociatePublicipsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +170,18 @@ func (i *DisassociatePublicipsInvoker) Invoke() (*model.DisassociatePublicipsRes
 		return nil, err
 	} else {
 		return result.(*model.DisassociatePublicipsResponse), nil
+	}
+}
+
+type EnableNat64Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableNat64Invoker) Invoke() (*model.EnableNat64Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableNat64Response), nil
 	}
 }
 

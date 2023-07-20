@@ -21,9 +21,6 @@ type CreatePictureModelingJobRequestBody struct {
 	// 数字人风格ID。 * system_male_001: 男性风格01 * system_female_001: 女性风格01 * system_male_002：男性风格02 * system_female_002: 女性风格02
 	StyleId *def.MultiPart `json:"style_id"`
 
-	// 数字人模型资产ID，重复创建时使用。
-	ModelAssetId *def.MultiPart `json:"model_asset_id,omitempty"`
-
 	// 数字人模型名称，首次创建时使用。
 	Name *def.MultiPart `json:"name"`
 

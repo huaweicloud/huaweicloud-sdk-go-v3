@@ -20,7 +20,7 @@ type UpdateInstanceReq struct {
 	// 维护时间窗结束时间，格式为HH:mm:ss。   - 维护时间窗开始和结束时间必须为指定的时间段。   - 结束时间在开始时间基础上加四个小时，即当开始时间为22:00:00时，结束时间为02:00:00。   - 该参数不能单独为空，若该值为空，则开始时间也为空。系统分配一个默认结束时间06:00:00。
 	MaintainEnd *string `json:"maintain_end,omitempty"`
 
-	// 安全组ID。
+	// 安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启

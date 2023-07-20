@@ -161,6 +161,90 @@ func (i *UpdateEnterpriseRouterInvoker) Invoke() (*model.UpdateEnterpriseRouterR
 	}
 }
 
+type CreateFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFlowLogInvoker) Invoke() (*model.CreateFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFlowLogResponse), nil
+	}
+}
+
+type DeleteFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFlowLogInvoker) Invoke() (*model.DeleteFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFlowLogResponse), nil
+	}
+}
+
+type DisableFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableFlowLogInvoker) Invoke() (*model.DisableFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableFlowLogResponse), nil
+	}
+}
+
+type EnableFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableFlowLogInvoker) Invoke() (*model.EnableFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableFlowLogResponse), nil
+	}
+}
+
+type ListFlowLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFlowLogsResponse), nil
+	}
+}
+
+type ShowFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlowLogInvoker) Invoke() (*model.ShowFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlowLogResponse), nil
+	}
+}
+
+type UpdateFlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFlowLogInvoker) Invoke() (*model.UpdateFlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFlowLogResponse), nil
+	}
+}
+
 type DisablePropagationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +278,18 @@ func (i *ListPropagationsInvoker) Invoke() (*model.ListPropagationsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListPropagationsResponse), nil
+	}
+}
+
+type ShowQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotasResponse), nil
 	}
 }
 
@@ -326,6 +422,18 @@ func (i *UpdateRouteTableInvoker) Invoke() (*model.UpdateRouteTableResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateRouteTableResponse), nil
+	}
+}
+
+type BatchCreateResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateResourceTagsResponse), nil
 	}
 }
 

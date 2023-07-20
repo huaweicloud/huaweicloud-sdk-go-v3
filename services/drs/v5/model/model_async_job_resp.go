@@ -15,7 +15,7 @@ type AsyncJobResp struct {
 	// 批量异步创建的任务ID。
 	AsyncJobId string `json:"async_job_id"`
 
-	// 批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - ASYNC_JOB_CREATING：批量异步任务创建中。 - ASYNC_JOB_CREATE_FAILED：批量异步任务创建失败。 - ASYNC_JOB_COMPLETED：批量异步任务创建完成。
+	// 批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
 	Status AsyncJobRespStatus `json:"status"`
 
 	// 批量异步创建的任务的租户名。
@@ -42,11 +42,10 @@ type AsyncJobRespStatus struct {
 }
 
 type AsyncJobRespStatusEnum struct {
-	ASYNC_JOB_VALIDATING      AsyncJobRespStatus
-	ASYNC_JOB_VALIDATE_FAILED AsyncJobRespStatus
-	ASYNC_JOB_CREATING        AsyncJobRespStatus
-	ASYNC_JOB_CREATE_FAILED   AsyncJobRespStatus
-	ASYNC_JOB_COMPLETED       AsyncJobRespStatus
+	ASYNC_JOB_VALIDATING        AsyncJobRespStatus
+	ASYNC_JOB_VALIDATE_FAILED   AsyncJobRespStatus
+	AUTO_PARAM_VALIDATE_SUCCESS AsyncJobRespStatus
+	COMMIT_SUCCESS              AsyncJobRespStatus
 }
 
 func GetAsyncJobRespStatusEnum() AsyncJobRespStatusEnum {
@@ -57,14 +56,11 @@ func GetAsyncJobRespStatusEnum() AsyncJobRespStatusEnum {
 		ASYNC_JOB_VALIDATE_FAILED: AsyncJobRespStatus{
 			value: "ASYNC_JOB_VALIDATE_FAILED",
 		},
-		ASYNC_JOB_CREATING: AsyncJobRespStatus{
-			value: "ASYNC_JOB_CREATING",
+		AUTO_PARAM_VALIDATE_SUCCESS: AsyncJobRespStatus{
+			value: "AUTO_PARAM_VALIDATE_SUCCESS",
 		},
-		ASYNC_JOB_CREATE_FAILED: AsyncJobRespStatus{
-			value: "ASYNC_JOB_CREATE_FAILED",
-		},
-		ASYNC_JOB_COMPLETED: AsyncJobRespStatus{
-			value: "ASYNC_JOB_COMPLETED",
+		COMMIT_SUCCESS: AsyncJobRespStatus{
+			value: "COMMIT_SUCCESS",
 		},
 	}
 }

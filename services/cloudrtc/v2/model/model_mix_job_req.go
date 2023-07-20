@@ -10,8 +10,6 @@ import (
 type MixJobReq struct {
 	MixParam *MixParam `json:"mix_param"`
 
-	PublishParam *PublishParam `json:"publish_param,omitempty"`
-
 	RecordParam *RecordParam `json:"record_param,omitempty"`
 }
 

@@ -18,7 +18,7 @@ type AttachmentDetails struct {
 	// 描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request
+	// 连接状态:pending|available|modifying|deleting|deleted|failed|pending_acceptance|rejected|initiating_request|freezed
 	State *string `json:"state,omitempty"`
 
 	// 创建时间
@@ -39,7 +39,7 @@ type AttachmentDetails struct {
 	// 内部连接关联的资源ID
 	ResourceId string `json:"resource_id"`
 
-	// - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
+	// 内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
 	ResourceType string `json:"resource_type"`
 
 	// 资源所属项目ID

@@ -1344,6 +1344,27 @@ func (c *GaussDBforNoSQLClient) ShowHighRiskCommandsInvoker(request *model.ShowH
 	return &ShowHighRiskCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceBiactiveRegions 查询实例可搭建双活关系的Region
+//
+// 查询实例可搭建双活关系的Region。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowInstanceBiactiveRegions(request *model.ShowInstanceBiactiveRegionsRequest) (*model.ShowInstanceBiactiveRegionsResponse, error) {
+	requestDef := GenReqDefForShowInstanceBiactiveRegions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceBiactiveRegionsResponse), nil
+	}
+}
+
+// ShowInstanceBiactiveRegionsInvoker 查询实例可搭建双活关系的Region
+func (c *GaussDBforNoSQLClient) ShowInstanceBiactiveRegionsInvoker(request *model.ShowInstanceBiactiveRegionsRequest) *ShowInstanceBiactiveRegionsInvoker {
+	requestDef := GenReqDefForShowInstanceBiactiveRegions()
+	return &ShowInstanceBiactiveRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceConfiguration 获取指定实例的参数
 //
 // 获取指定实例的参数信息。

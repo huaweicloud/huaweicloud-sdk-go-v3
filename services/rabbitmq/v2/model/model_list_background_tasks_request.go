@@ -18,10 +18,10 @@ type ListBackgroundTasksRequest struct {
 	// 查询的任务个数。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询任务的最小时间，格式为 YYYYMMDDHHmmss。
+	// 查询任务的最小时间，格式为YYYYMMDDHHmmss。
 	BeginTime *string `json:"begin_time,omitempty"`
 
-	// 查询任务的最大时间，格式为 YYYYMMDDHHmmss。
+	// 查询任务的最大时间，格式为YYYYMMDDHHmmss。
 	EndTime *string `json:"end_time,omitempty"`
 }
 

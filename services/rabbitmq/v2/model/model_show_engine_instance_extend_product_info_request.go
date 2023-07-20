@@ -13,7 +13,7 @@ import (
 type ShowEngineInstanceExtendProductInfoRequest struct {
 
 	// 消息引擎的类型。支持的类型为rabbitmq。
-	Engine string `json:"engine"`
+	Engine ShowEngineInstanceExtendProductInfoRequestEngine `json:"engine"`
 
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
@@ -29,6 +29,49 @@ func (o ShowEngineInstanceExtendProductInfoRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowEngineInstanceExtendProductInfoRequest", string(data)}, " ")
+}
+
+type ShowEngineInstanceExtendProductInfoRequestEngine struct {
+	value string
+}
+
+type ShowEngineInstanceExtendProductInfoRequestEngineEnum struct {
+	RABBITMQ ShowEngineInstanceExtendProductInfoRequestEngine
+}
+
+func GetShowEngineInstanceExtendProductInfoRequestEngineEnum() ShowEngineInstanceExtendProductInfoRequestEngineEnum {
+	return ShowEngineInstanceExtendProductInfoRequestEngineEnum{
+		RABBITMQ: ShowEngineInstanceExtendProductInfoRequestEngine{
+			value: "rabbitmq",
+		},
+	}
+}
+
+func (c ShowEngineInstanceExtendProductInfoRequestEngine) Value() string {
+	return c.value
+}
+
+func (c ShowEngineInstanceExtendProductInfoRequestEngine) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowEngineInstanceExtendProductInfoRequestEngine) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ShowEngineInstanceExtendProductInfoRequestType struct {

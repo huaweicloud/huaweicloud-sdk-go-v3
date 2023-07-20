@@ -149,6 +149,18 @@ func (i *CreateBatchTaskInvoker) Invoke() (*model.CreateBatchTaskResponse, error
 	}
 }
 
+type DeleteBatchTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBatchTaskInvoker) Invoke() (*model.DeleteBatchTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBatchTaskResponse), nil
+	}
+}
+
 type ListBatchTasksInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -761,6 +761,18 @@ func (i *ShowHighRiskCommandsInvoker) Invoke() (*model.ShowHighRiskCommandsRespo
 	}
 }
 
+type ShowInstanceBiactiveRegionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceBiactiveRegionsInvoker) Invoke() (*model.ShowInstanceBiactiveRegionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceBiactiveRegionsResponse), nil
+	}
+}
+
 type ShowInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }

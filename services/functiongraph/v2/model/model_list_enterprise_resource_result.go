@@ -14,10 +14,10 @@ type ListEnterpriseResourceResult struct {
 	ResourceDetail *ListFunctionResult `json:"resource_detail,omitempty"`
 
 	// 标签列表
-	Tags *[]map[string]string `json:"tags,omitempty"`
+	Tags *[]KvItem `json:"tags,omitempty"`
 
 	// 系统标签列表
-	SysTags *[]map[string]string `json:"sys_tags,omitempty"`
+	SysTags *[]KvItem `json:"sys_tags,omitempty"`
 
 	// 资源名称
 	ResourceName *string `json:"resource_name,omitempty"`

@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// CreateVpcAttachmentBody This is a auto create Body Object
 type CreateVpcAttachmentBody struct {
 	VpcAttachment *VpcAttachmentCreateRequest `json:"vpc_attachment"`
 }

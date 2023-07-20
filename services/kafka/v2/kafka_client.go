@@ -63,7 +63,7 @@ func (c *KafkaClient) BatchDeleteGroupInvoker(request *model.BatchDeleteGroupReq
 
 // BatchDeleteInstanceTopic Kafka实例批量删除Topic
 //
-// 该接口用于向Kafka实例批量删除Topic。批量删除多个消费组时，部分删除成功，部分失败，此时接口返回删除成功，并在返回中显示删除失败的消费组信息。
+// 该接口用于向Kafka实例批量删除Topic。批量删除多个Topic时，部分删除成功，部分失败，此时接口返回删除成功，并在返回中显示删除失败的Topic信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) BatchDeleteInstanceTopic(request *model.BatchDeleteInstanceTopicRequest) (*model.BatchDeleteInstanceTopicResponse, error) {
@@ -581,7 +581,7 @@ func (c *KafkaClient) ListInstancesInvoker(request *model.ListInstancesRequest) 
 //
 // 同时，unavailable_zones字段表示资源不足的可用区列表，如果为空，则表示所有可用区都有资源，如果不为空，则表示字段值的可用区没有资源。所以必须确保您购买的资源所在的可用区有资源，不在该字段列表内。
 //
-// [例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。](tag:hc,hws)
+// [例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。](tag:hws)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
@@ -619,6 +619,48 @@ func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model
 func (c *KafkaClient) ListSinkTasksInvoker(request *model.ListSinkTasksRequest) *ListSinkTasksInvoker {
 	requestDef := GenReqDefForListSinkTasks()
 	return &ListSinkTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopicPartitions 查询Topic的分区列表
+//
+// 查询Topic的分区列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ListTopicPartitions(request *model.ListTopicPartitionsRequest) (*model.ListTopicPartitionsResponse, error) {
+	requestDef := GenReqDefForListTopicPartitions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopicPartitionsResponse), nil
+	}
+}
+
+// ListTopicPartitionsInvoker 查询Topic的分区列表
+func (c *KafkaClient) ListTopicPartitionsInvoker(request *model.ListTopicPartitionsRequest) *ListTopicPartitionsInvoker {
+	requestDef := GenReqDefForListTopicPartitions()
+	return &ListTopicPartitionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopicProducers 查询Topic的当前生产者列表
+//
+// 查询Topic的当前生产者列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ListTopicProducers(request *model.ListTopicProducersRequest) (*model.ListTopicProducersResponse, error) {
+	requestDef := GenReqDefForListTopicProducers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopicProducersResponse), nil
+	}
+}
+
+// ListTopicProducersInvoker 查询Topic的当前生产者列表
+func (c *KafkaClient) ListTopicProducersInvoker(request *model.ListTopicProducersRequest) *ListTopicProducersInvoker {
+	requestDef := GenReqDefForListTopicProducers()
+	return &ListTopicProducersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetManagerPassword 重置Manager密码

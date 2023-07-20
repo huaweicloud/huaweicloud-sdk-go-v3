@@ -6,6 +6,8 @@ import (
 )
 
 var (
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://dws.eu-west-101.myhuaweicloud.eu")
 	CN_NORTH_9 = region.NewRegion("cn-north-9",
 		"https://dws.cn-north-9.myhuaweicloud.com")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
@@ -41,6 +43,7 @@ var (
 )
 
 var staticFields = map[string]*region.Region{
+	"eu-west-101":    EU_WEST_101,
 	"cn-north-9":     CN_NORTH_9,
 	"cn-east-3":      CN_EAST_3,
 	"cn-east-2":      CN_EAST_2,

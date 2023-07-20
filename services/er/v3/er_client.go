@@ -292,6 +292,153 @@ func (c *ErClient) UpdateEnterpriseRouterInvoker(request *model.UpdateEnterprise
 	return &UpdateEnterpriseRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFlowLog 创建流日志
+//
+// 给ER实例创建流日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) CreateFlowLog(request *model.CreateFlowLogRequest) (*model.CreateFlowLogResponse, error) {
+	requestDef := GenReqDefForCreateFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFlowLogResponse), nil
+	}
+}
+
+// CreateFlowLogInvoker 创建流日志
+func (c *ErClient) CreateFlowLogInvoker(request *model.CreateFlowLogRequest) *CreateFlowLogInvoker {
+	requestDef := GenReqDefForCreateFlowLog()
+	return &CreateFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFlowLog 删除流日志
+//
+// 删除流日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) DeleteFlowLog(request *model.DeleteFlowLogRequest) (*model.DeleteFlowLogResponse, error) {
+	requestDef := GenReqDefForDeleteFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFlowLogResponse), nil
+	}
+}
+
+// DeleteFlowLogInvoker 删除流日志
+func (c *ErClient) DeleteFlowLogInvoker(request *model.DeleteFlowLogRequest) *DeleteFlowLogInvoker {
+	requestDef := GenReqDefForDeleteFlowLog()
+	return &DeleteFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableFlowLog 关闭流日志
+//
+// 关闭流日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) DisableFlowLog(request *model.DisableFlowLogRequest) (*model.DisableFlowLogResponse, error) {
+	requestDef := GenReqDefForDisableFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableFlowLogResponse), nil
+	}
+}
+
+// DisableFlowLogInvoker 关闭流日志
+func (c *ErClient) DisableFlowLogInvoker(request *model.DisableFlowLogRequest) *DisableFlowLogInvoker {
+	requestDef := GenReqDefForDisableFlowLog()
+	return &DisableFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableFlowLog 开启流日志
+//
+// 开启流日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) EnableFlowLog(request *model.EnableFlowLogRequest) (*model.EnableFlowLogResponse, error) {
+	requestDef := GenReqDefForEnableFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableFlowLogResponse), nil
+	}
+}
+
+// EnableFlowLogInvoker 开启流日志
+func (c *ErClient) EnableFlowLogInvoker(request *model.EnableFlowLogRequest) *EnableFlowLogInvoker {
+	requestDef := GenReqDefForEnableFlowLog()
+	return &EnableFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlowLogs 查询流日志列表
+//
+// 查询企业路由器实例下的流日志列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) ListFlowLogs(request *model.ListFlowLogsRequest) (*model.ListFlowLogsResponse, error) {
+	requestDef := GenReqDefForListFlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlowLogsResponse), nil
+	}
+}
+
+// ListFlowLogsInvoker 查询流日志列表
+func (c *ErClient) ListFlowLogsInvoker(request *model.ListFlowLogsRequest) *ListFlowLogsInvoker {
+	requestDef := GenReqDefForListFlowLogs()
+	return &ListFlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlowLog 查询流日志详情
+//
+// 查询流日志详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) ShowFlowLog(request *model.ShowFlowLogRequest) (*model.ShowFlowLogResponse, error) {
+	requestDef := GenReqDefForShowFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlowLogResponse), nil
+	}
+}
+
+// ShowFlowLogInvoker 查询流日志详情
+func (c *ErClient) ShowFlowLogInvoker(request *model.ShowFlowLogRequest) *ShowFlowLogInvoker {
+	requestDef := GenReqDefForShowFlowLog()
+	return &ShowFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFlowLog 更新流日志基本信息
+//
+// 更新流日志基本信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) UpdateFlowLog(request *model.UpdateFlowLogRequest) (*model.UpdateFlowLogResponse, error) {
+	requestDef := GenReqDefForUpdateFlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFlowLogResponse), nil
+	}
+}
+
+// UpdateFlowLogInvoker 更新流日志基本信息
+func (c *ErClient) UpdateFlowLogInvoker(request *model.UpdateFlowLogRequest) *UpdateFlowLogInvoker {
+	requestDef := GenReqDefForUpdateFlowLog()
+	return &UpdateFlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisablePropagation 删除路由传播
 //
 // 解绑连接和路由表的传播关系。
@@ -353,6 +500,27 @@ func (c *ErClient) ListPropagations(request *model.ListPropagationsRequest) (*mo
 func (c *ErClient) ListPropagationsInvoker(request *model.ListPropagationsRequest) *ListPropagationsInvoker {
 	requestDef := GenReqDefForListPropagations()
 	return &ListPropagationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotas 查询配额
+//
+// 查询租户各类资源的使用情况，如企业路由器的使用量，VPC连接的使用量等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
+	requestDef := GenReqDefForShowQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotasResponse), nil
+	}
+}
+
+// ShowQuotasInvoker 查询配额
+func (c *ErClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateStaticRoute 创建静态路由
@@ -584,6 +752,29 @@ func (c *ErClient) UpdateRouteTable(request *model.UpdateRouteTableRequest) (*mo
 func (c *ErClient) UpdateRouteTableInvoker(request *model.UpdateRouteTableRequest) *UpdateRouteTableInvoker {
 	requestDef := GenReqDefForUpdateRouteTable()
 	return &UpdateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateResourceTags 批量添加删除资源标签
+//
+// - 为指定实例批量添加或删除标签
+// - 标签管理服务需要使用该接口批量管理实例的标签。
+// - 一个资源上最多有10个标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) BatchCreateResourceTags(request *model.BatchCreateResourceTagsRequest) (*model.BatchCreateResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateResourceTagsResponse), nil
+	}
+}
+
+// BatchCreateResourceTagsInvoker 批量添加删除资源标签
+func (c *ErClient) BatchCreateResourceTagsInvoker(request *model.BatchCreateResourceTagsRequest) *BatchCreateResourceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateResourceTags()
+	return &BatchCreateResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateResourceTag 创建资源标签

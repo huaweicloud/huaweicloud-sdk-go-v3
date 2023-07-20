@@ -30,6 +30,9 @@ type ListEnterpriseRoutersRequest struct {
 	// 连接对应的资源ID列表
 	ResourceId *[]string `json:"resource_id,omitempty"`
 
+	// 过滤资源是否属于当前租户；取值为true时，只查属于当前租户的资源，不包括共享资源；为false时，查询当前租户及共享给该租户的资源；
+	OwnedBySelf *bool `json:"owned_by_self,omitempty"`
+
 	// 按关键字排序，默认按照id排序，可选值:id|name|state
 	SortKey *[]string `json:"sort_key,omitempty"`
 

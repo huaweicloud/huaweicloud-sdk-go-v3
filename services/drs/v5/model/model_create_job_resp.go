@@ -20,6 +20,9 @@ type CreateJobResp struct {
 
 	// 任务创建时间。
 	CreateTime string `json:"create_time"`
+
+	// 是否为克隆任务。
+	IsCloneJob *string `json:"is_clone_job,omitempty"`
 }
 
 func (o CreateJobResp) String() string {
