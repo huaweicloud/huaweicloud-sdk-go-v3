@@ -16,13 +16,13 @@ type AggregateComplianceDetailRequest struct {
 	AggregatorId string `json:"aggregator_id"`
 
 	// 源帐号ID
-	AccountId string `json:"account_id"`
+	AccountId *string `json:"account_id,omitempty"`
 
 	// 合规结果。
 	ComplianceState *AggregateComplianceDetailRequestComplianceState `json:"compliance_state,omitempty"`
 
 	// 合规规则名称
-	PolicyAssignmentName string `json:"policy_assignment_name"`
+	PolicyAssignmentName *string `json:"policy_assignment_name,omitempty"`
 
 	// 资源名称
 	ResourceName *string `json:"resource_name,omitempty"`

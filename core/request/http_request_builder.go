@@ -21,6 +21,7 @@ package request
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/progress"
 	"reflect"
 	"strings"
 )
@@ -111,6 +112,16 @@ func (builder *HttpRequestBuilder) WithBody(kind string, body interface{}) *Http
 		builder.httpRequest.body = body
 	}
 
+	return builder
+}
+
+func (builder *HttpRequestBuilder) WithProgressListener(progressListener progress.Listener) *HttpRequestBuilder {
+	builder.httpRequest.progressListener = progressListener
+	return builder
+}
+
+func (builder *HttpRequestBuilder) WithProgressInterval(progressInterval int64) *HttpRequestBuilder {
+	builder.httpRequest.progressInterval = progressInterval
 	return builder
 }
 

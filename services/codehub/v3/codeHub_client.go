@@ -103,6 +103,69 @@ func (c *CodeHubClient) ShowSingleCommitInvoker(request *model.ShowSingleCommitR
 	return &ShowSingleCommitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateMergeRequestDiscussion 创建MR检视意见
+//
+// 创建MR检视意见
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateMergeRequestDiscussion(request *model.CreateMergeRequestDiscussionRequest) (*model.CreateMergeRequestDiscussionResponse, error) {
+	requestDef := GenReqDefForCreateMergeRequestDiscussion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMergeRequestDiscussionResponse), nil
+	}
+}
+
+// CreateMergeRequestDiscussionInvoker 创建MR检视意见
+func (c *CodeHubClient) CreateMergeRequestDiscussionInvoker(request *model.CreateMergeRequestDiscussionRequest) *CreateMergeRequestDiscussionInvoker {
+	requestDef := GenReqDefForCreateMergeRequestDiscussion()
+	return &CreateMergeRequestDiscussionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMergeRequestDiscussionNote 回复MR检视意见
+//
+// 回复MR检视意见
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateMergeRequestDiscussionNote(request *model.CreateMergeRequestDiscussionNoteRequest) (*model.CreateMergeRequestDiscussionNoteResponse, error) {
+	requestDef := GenReqDefForCreateMergeRequestDiscussionNote()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMergeRequestDiscussionNoteResponse), nil
+	}
+}
+
+// CreateMergeRequestDiscussionNoteInvoker 回复MR检视意见
+func (c *CodeHubClient) CreateMergeRequestDiscussionNoteInvoker(request *model.CreateMergeRequestDiscussionNoteRequest) *CreateMergeRequestDiscussionNoteInvoker {
+	requestDef := GenReqDefForCreateMergeRequestDiscussionNote()
+	return &CreateMergeRequestDiscussionNoteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReviewSetting 获取检视意见设置
+//
+// 获取检视意见设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowReviewSetting(request *model.ShowReviewSettingRequest) (*model.ShowReviewSettingResponse, error) {
+	requestDef := GenReqDefForShowReviewSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReviewSettingResponse), nil
+	}
+}
+
+// ShowReviewSettingInvoker 获取检视意见设置
+func (c *CodeHubClient) ShowReviewSettingInvoker(request *model.ShowReviewSettingRequest) *ShowReviewSettingInvoker {
+	requestDef := GenReqDefForShowReviewSetting()
+	return &ShowReviewSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFilesByQuery 查询某个仓库的文件信息
 //
 // 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
@@ -210,7 +273,7 @@ func (c *CodeHubClient) ListProductTwoTemplatesInvoker(request *model.ListProduc
 
 // ShowRepositoryNameExist 校验指定项目下的仓库名
 //
-// 一般创建仓库时调用。通过传入项目uuid,仓库名，来判断仓库是否重名。仓库存在result:false,仓库不存在result:true。
+// 一般创建仓库时调用。通过传入项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。,仓库名，来判断仓库是否重名。仓库存在result:false,仓库不存在result:true。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ShowRepositoryNameExist(request *model.ShowRepositoryNameExistRequest) (*model.ShowRepositoryNameExistResponse, error) {

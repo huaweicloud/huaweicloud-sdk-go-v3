@@ -145,6 +145,69 @@ func (c *CloudtestClient) DeleteServiceInvoker(request *model.DeleteServiceReque
 	return &DeleteServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBranches 获取分支列表
+//
+// 获取分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListBranches(request *model.ListBranchesRequest) (*model.ListBranchesResponse, error) {
+	requestDef := GenReqDefForListBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBranchesResponse), nil
+	}
+}
+
+// ListBranchesInvoker 获取分支列表
+func (c *CloudtestClient) ListBranchesInvoker(request *model.ListBranchesRequest) *ListBranchesInvoker {
+	requestDef := GenReqDefForListBranches()
+	return &ListBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTestCaseHistories 查询用例修改历史记录
+//
+// 查询用例修改历史记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTestCaseHistories(request *model.ListTestCaseHistoriesRequest) (*model.ListTestCaseHistoriesResponse, error) {
+	requestDef := GenReqDefForListTestCaseHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTestCaseHistoriesResponse), nil
+	}
+}
+
+// ListTestCaseHistoriesInvoker 查询用例修改历史记录
+func (c *CloudtestClient) ListTestCaseHistoriesInvoker(request *model.ListTestCaseHistoriesRequest) *ListTestCaseHistoriesInvoker {
+	requestDef := GenReqDefForListTestCaseHistories()
+	return &ListTestCaseHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTestCases 查询用例列表
+//
+// 查询用例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTestCases(request *model.ListTestCasesRequest) (*model.ListTestCasesResponse, error) {
+	requestDef := GenReqDefForListTestCases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTestCasesResponse), nil
+	}
+}
+
+// ListTestCasesInvoker 查询用例列表
+func (c *CloudtestClient) ListTestCasesInvoker(request *model.ListTestCasesRequest) *ListTestCasesInvoker {
+	requestDef := GenReqDefForListTestCases()
+	return &ListTestCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunTestCase 批量执行测试用例
 //
 // 批量执行测试用例
@@ -164,6 +227,27 @@ func (c *CloudtestClient) RunTestCase(request *model.RunTestCaseRequest) (*model
 func (c *CloudtestClient) RunTestCaseInvoker(request *model.RunTestCaseRequest) *RunTestCaseInvoker {
 	requestDef := GenReqDefForRunTestCase()
 	return &RunTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApiTestcaseHistories 获取用例历史执行数据
+//
+// 获取用例历史执行数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowApiTestcaseHistories(request *model.ShowApiTestcaseHistoriesRequest) (*model.ShowApiTestcaseHistoriesResponse, error) {
+	requestDef := GenReqDefForShowApiTestcaseHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowApiTestcaseHistoriesResponse), nil
+	}
+}
+
+// ShowApiTestcaseHistoriesInvoker 获取用例历史执行数据
+func (c *CloudtestClient) ShowApiTestcaseHistoriesInvoker(request *model.ShowApiTestcaseHistoriesRequest) *ShowApiTestcaseHistoriesInvoker {
+	requestDef := GenReqDefForShowApiTestcaseHistories()
+	return &ShowApiTestcaseHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIssuesByPlanId 查询某个测试计划下的需求树

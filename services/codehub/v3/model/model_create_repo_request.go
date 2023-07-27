@@ -14,7 +14,7 @@ type CreateRepoRequest struct {
 	// 仓库名称，取值范围：可以输入英文大小写字母、数字、连字符、下划线，且必须以字母开头
 	Name string `json:"name"`
 
-	// 指定项目的UUID
+	// 指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectUuid string `json:"project_uuid"`
 
 	// 复制模板的ID

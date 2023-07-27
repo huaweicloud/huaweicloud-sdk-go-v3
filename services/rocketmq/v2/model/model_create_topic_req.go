@@ -11,13 +11,13 @@ import (
 
 type CreateTopicReq struct {
 
-	// 主题名称。
+	// 主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
 	Name *string `json:"name,omitempty"`
 
 	// 关联的代理。
 	Brokers *[]string `json:"brokers,omitempty"`
 
-	// 队列数。
+	// 队列数，范围1~50。
 	QueueNum float32 `json:"queue_num,omitempty"`
 
 	// 权限。

@@ -53,6 +53,42 @@ func (i *ShowSingleCommitInvoker) Invoke() (*model.ShowSingleCommitResponse, err
 	}
 }
 
+type CreateMergeRequestDiscussionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMergeRequestDiscussionInvoker) Invoke() (*model.CreateMergeRequestDiscussionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMergeRequestDiscussionResponse), nil
+	}
+}
+
+type CreateMergeRequestDiscussionNoteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMergeRequestDiscussionNoteInvoker) Invoke() (*model.CreateMergeRequestDiscussionNoteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMergeRequestDiscussionNoteResponse), nil
+	}
+}
+
+type ShowReviewSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReviewSettingInvoker) Invoke() (*model.ShowReviewSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReviewSettingResponse), nil
+	}
+}
+
 type ListFilesByQueryInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -8,10 +8,10 @@ import (
 
 type ProjectRepository struct {
 
-	// 创建项目的UUID
+	// 项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectUuid *string `json:"projectUuid,omitempty"`
 
-	// 创建仓库的UUID
+	// 仓库UUID
 	RepositoryUuid *string `json:"repositoryUuid,omitempty"`
 }
 

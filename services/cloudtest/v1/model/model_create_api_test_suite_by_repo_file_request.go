@@ -8,6 +8,10 @@ import (
 
 // CreateApiTestSuiteByRepoFileRequest Request Object
 type CreateApiTestSuiteByRepoFileRequest struct {
+
+	// 项目ID，固定长度32位字符（字母和数字）。
+	ProjectId string `json:"project_id"`
+
 	Body *CreateTestSuitByRepoFileInfo `json:"body,omitempty"`
 }
 

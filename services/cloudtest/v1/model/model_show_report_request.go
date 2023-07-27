@@ -9,6 +9,9 @@ import (
 // ShowReportRequest Request Object
 type ShowReportRequest struct {
 
+	// 项目id
+	ProjectId string `json:"project_id"`
+
 	// 分支/计划id
 	PlanId string `json:"plan_id"`
 

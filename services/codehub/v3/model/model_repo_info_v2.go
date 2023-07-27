@@ -17,7 +17,7 @@ type RepoInfoV2 struct {
 	// 创建者的租户名
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 仓库组名(克隆地址中域名后面项目名前的一段 示例：git@repo.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228 )
+	// 仓库组名(克隆地址中域名后面仓库名前的一段 示例：git@repo.alpha.devcloud.inhuawei.com:Demo00228/testword.git  组名：Demo00228 )
 	GroupName *string `json:"group_name,omitempty"`
 
 	// 使用 https 克隆仓库时所使用的 url
@@ -35,7 +35,7 @@ type RepoInfoV2 struct {
 	// 项目是否被删除
 	ProjectIsDeleted *string `json:"project_is_deleted,omitempty"`
 
-	// 项目的uuid
+	// 项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectUuid *string `json:"project_uuid,omitempty"`
 
 	// 仓库主键id

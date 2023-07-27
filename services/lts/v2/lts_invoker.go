@@ -713,6 +713,18 @@ func (i *UpdateLogGroupInvoker) Invoke() (*model.UpdateLogGroupResponse, error) 
 	}
 }
 
+type UpdateLogStreamInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogStreamInvoker) Invoke() (*model.UpdateLogStreamResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogStreamResponse), nil
+	}
+}
+
 type UpdateNotificationTemplateInvoker struct {
 	*invoker.BaseInvoker
 }

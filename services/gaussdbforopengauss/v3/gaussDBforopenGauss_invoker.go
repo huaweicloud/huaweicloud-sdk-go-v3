@@ -197,6 +197,18 @@ func (i *DeleteManualBackupInvoker) Invoke() (*model.DeleteManualBackupResponse,
 	}
 }
 
+type DownloadBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadBackupInvoker) Invoke() (*model.DownloadBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadBackupResponse), nil
+	}
+}
+
 type ListApplicableInstancesInvoker struct {
 	*invoker.BaseInvoker
 }

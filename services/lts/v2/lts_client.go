@@ -1258,6 +1258,27 @@ func (c *LtsClient) UpdateLogGroupInvoker(request *model.UpdateLogGroupRequest) 
 	return &UpdateLogGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateLogStream 修改日志流
+//
+// 该接口用于修改指定日志流下的日志存储时长。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) UpdateLogStream(request *model.UpdateLogStreamRequest) (*model.UpdateLogStreamResponse, error) {
+	requestDef := GenReqDefForUpdateLogStream()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogStreamResponse), nil
+	}
+}
+
+// UpdateLogStreamInvoker 修改日志流
+func (c *LtsClient) UpdateLogStreamInvoker(request *model.UpdateLogStreamRequest) *UpdateLogStreamInvoker {
+	requestDef := GenReqDefForUpdateLogStream()
+	return &UpdateLogStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateNotificationTemplate 修改消息模板
 //
 // 该接口用于修改通知模板,根据名称进行修改。

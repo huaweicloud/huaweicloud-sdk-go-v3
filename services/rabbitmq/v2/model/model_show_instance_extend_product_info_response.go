@@ -9,15 +9,12 @@ import (
 // ShowInstanceExtendProductInfoResponse Response Object
 type ShowInstanceExtendProductInfoResponse struct {
 
-	// 消息引擎类型。
-	Engine *string `json:"engine,omitempty"`
+	// 表示按需付费的产品列表。
+	Hourly *[]ListProductsRespHourly `json:"hourly,omitempty"`
 
-	// 消息引擎支持的版本
-	Versions *[]string `json:"versions,omitempty"`
-
-	// 规格变更的产品信息。
-	Products       *[]RabbitMqExtendProductInfoEntity `json:"products,omitempty"`
-	HttpStatusCode int                                `json:"-"`
+	// 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
+	Monthly        *[]ListProductsRespHourly `json:"monthly,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ShowInstanceExtendProductInfoResponse) String() string {

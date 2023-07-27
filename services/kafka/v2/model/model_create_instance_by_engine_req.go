@@ -21,7 +21,7 @@ type CreateInstanceByEngineReq struct {
 	// 消息引擎。取值填写为：kafka。
 	Engine CreateInstanceByEngineReqEngine `json:"engine"`
 
-	// 消息引擎的版本。取值填写为：   - 1.1.0   - 2.3.0   - 2.7
+	// 消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
 	EngineVersion CreateInstanceByEngineReqEngineVersion `json:"engine_version"`
 
 	// 代理个数。
@@ -80,6 +80,12 @@ type CreateInstanceByEngineReq struct {
 
 	// 磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
 	RetentionPolicy *CreateInstanceByEngineReqRetentionPolicy `json:"retention_policy,omitempty"`
+
+	// 是否开启磁盘加密。
+	DiskEncryptedEnable *bool `json:"disk_encrypted_enable,omitempty"`
+
+	// 磁盘加密key，未开启磁盘加密时为空
+	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
 
 	// 是否开启消息转储功能。  默认不开启消息转储。
 	ConnectorEnable *bool `json:"connector_enable,omitempty"`

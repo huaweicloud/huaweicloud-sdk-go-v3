@@ -11,7 +11,7 @@ type AssociateIssuesRequestBody struct {
 	// 分支名
 	Branch string `json:"branch"`
 
-	// 项目id
+	// 项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectId string `json:"project_id"`
 
 	// 工作项集合

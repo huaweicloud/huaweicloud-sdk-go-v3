@@ -31,7 +31,7 @@ type TestPlanDetail struct {
 	CurrentStage *string `json:"current_stage,omitempty"`
 
 	// 获取超期时间,正值表示已超期
-	ExpireDay *string `json:"expire_day,omitempty"`
+	ExpireDay *int32 `json:"expire_day,omitempty"`
 
 	Creator *TestPlanDetailCreator `json:"creator,omitempty"`
 

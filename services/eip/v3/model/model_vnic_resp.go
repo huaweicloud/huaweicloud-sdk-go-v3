@@ -18,11 +18,20 @@ type VnicResp struct {
 	// - 功能说明：PORT的device_owner - 约束：存在PORT时，此字段和associate_instance_type都可区分实例类型
 	DeviceOwner *string `json:"device_owner,omitempty"`
 
+	// - 功能说明：VTEP IP
+	Vtep *string `json:"vtep,omitempty"`
+
+	// - 功能说明：VXLAN ID
+	Vni *string `json:"vni,omitempty"`
+
 	// - 功能说明：PORT所在VPC的ID
 	VpcId *string `json:"vpc_id,omitempty"`
 
 	// - 功能说明：PORT的唯一标识
 	PortId *string `json:"port_id,omitempty"`
+
+	// - 功能说明：端口profile信息
+	PortProfile *string `json:"port_profile,omitempty"`
 
 	// - 功能说明：PORT的MAC信息
 	Mac *string `json:"mac,omitempty"`

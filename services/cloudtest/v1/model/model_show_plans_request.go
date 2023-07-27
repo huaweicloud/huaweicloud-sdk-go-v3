@@ -9,6 +9,9 @@ import (
 // ShowPlansRequest Request Object
 type ShowPlansRequest struct {
 
+	// 项目id，项目唯一标识，固定长度32位字符
+	ProjectId string `json:"project_id"`
+
 	// 模糊查询使用(针对测试计划名称)
 	Name *string `json:"name,omitempty"`
 

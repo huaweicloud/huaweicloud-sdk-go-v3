@@ -8,6 +8,10 @@ import (
 
 // RunTestCaseRequest Request Object
 type RunTestCaseRequest struct {
+
+	// 项目唯一标识，固定长度32位字符
+	ProjectId string `json:"project_id"`
+
 	Body *RunTestCaseRequestBody `json:"body,omitempty"`
 }
 

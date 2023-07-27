@@ -9,7 +9,7 @@ import (
 // GetProductTemplatesRequest Request Object
 type GetProductTemplatesRequest struct {
 
-	// 项目ID
+	// 项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectUuid string `json:"project_uuid"`
 
 	// 分页页数

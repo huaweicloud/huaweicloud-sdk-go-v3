@@ -12,8 +12,8 @@ import (
 // ListInstancesRequest Request Object
 type ListInstancesRequest struct {
 
-	// 消息引擎：reliability。
-	Engine *string `json:"engine,omitempty"`
+	// 消息引擎。
+	Engine *ListInstancesRequestEngine `json:"engine,omitempty"`
 
 	// 实例名称。
 	Name *string `json:"name,omitempty"`
@@ -47,6 +47,49 @@ func (o ListInstancesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListInstancesRequest", string(data)}, " ")
+}
+
+type ListInstancesRequestEngine struct {
+	value string
+}
+
+type ListInstancesRequestEngineEnum struct {
+	RELIABILITY ListInstancesRequestEngine
+}
+
+func GetListInstancesRequestEngineEnum() ListInstancesRequestEngineEnum {
+	return ListInstancesRequestEngineEnum{
+		RELIABILITY: ListInstancesRequestEngine{
+			value: "reliability",
+		},
+	}
+}
+
+func (c ListInstancesRequestEngine) Value() string {
+	return c.value
+}
+
+func (c ListInstancesRequestEngine) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListInstancesRequestEngine) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListInstancesRequestStatus struct {

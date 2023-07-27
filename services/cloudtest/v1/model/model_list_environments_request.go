@@ -9,6 +9,9 @@ import (
 // ListEnvironmentsRequest Request Object
 type ListEnvironmentsRequest struct {
 
+	// 项目ID，固定长度32位字符（字母和数字）。
+	ProjectId string `json:"project_id"`
+
 	// 起始偏移量，表示从此偏移量开始查询， offset大于等于0
 	Offset int64 `json:"offset"`
 

@@ -15,6 +15,10 @@ func GenReqDefForRunAddPicture() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
 		WithLocationType(def.Path))
@@ -38,6 +42,10 @@ func GenReqDefForRunCheckPicture() *def.HttpRequestDef {
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
 		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -53,6 +61,11 @@ func GenReqDefForRunCreateInstance() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/service").
 		WithResponse(new(model.RunCreateInstanceResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -73,6 +86,10 @@ func GenReqDefForRunDeleteInstance() *def.HttpRequestDef {
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
 		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -88,6 +105,10 @@ func GenReqDefForRunDeletePicture() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -109,6 +130,10 @@ func GenReqDefForRunModifyPicture() *def.HttpRequestDef {
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
 		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -129,6 +154,10 @@ func GenReqDefForRunQueryInstance() *def.HttpRequestDef {
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
 		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -144,6 +173,10 @@ func GenReqDefForRunSearchPicture() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceName").
 		WithJsonTag("instance_name").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

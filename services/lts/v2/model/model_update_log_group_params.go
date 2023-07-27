@@ -11,6 +11,9 @@ type UpdateLogGroupParams struct {
 
 	// 日志存储时间 天。 取值范围为 [1, 30]
 	TtlInDays int32 `json:"ttl_in_days"`
+
+	// 标签字段信息
+	Tags *[]TagsBody `json:"tags,omitempty"`
 }
 
 func (o UpdateLogGroupParams) String() string {

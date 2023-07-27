@@ -77,6 +77,42 @@ func (i *DeleteServiceInvoker) Invoke() (*model.DeleteServiceResponse, error) {
 	}
 }
 
+type ListBranchesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBranchesInvoker) Invoke() (*model.ListBranchesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBranchesResponse), nil
+	}
+}
+
+type ListTestCaseHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestCaseHistoriesInvoker) Invoke() (*model.ListTestCaseHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestCaseHistoriesResponse), nil
+	}
+}
+
+type ListTestCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestCasesInvoker) Invoke() (*model.ListTestCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestCasesResponse), nil
+	}
+}
+
 type RunTestCaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +122,18 @@ func (i *RunTestCaseInvoker) Invoke() (*model.RunTestCaseResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RunTestCaseResponse), nil
+	}
+}
+
+type ShowApiTestcaseHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowApiTestcaseHistoriesInvoker) Invoke() (*model.ShowApiTestcaseHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowApiTestcaseHistoriesResponse), nil
 	}
 }
 

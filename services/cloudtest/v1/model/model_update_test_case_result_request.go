@@ -8,6 +8,10 @@ import (
 
 // UpdateTestCaseResultRequest Request Object
 type UpdateTestCaseResultRequest struct {
+
+	// 项目唯一标识，固定长度32位字符
+	ProjectId string `json:"project_id"`
+
 	Body *UpdateTestCaseResultRequestBody `json:"body,omitempty"`
 }
 

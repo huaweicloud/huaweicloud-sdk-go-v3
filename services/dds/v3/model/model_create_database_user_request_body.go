@@ -17,7 +17,7 @@ type CreateDatabaseUserRequestBody struct {
 	// 新用户所在的数据库，默认为“admin”。 - 长度为1~64位，可以包含大写字母（A~Z）、小写字母（a~z）、数字（0~9）、下划线。
 	DbName *string `json:"db_name,omitempty"`
 
-	// 新用户所拥有的角色。
+	// 新用户所拥有的角色。 roles限制了该帐户所具有的权限。若指定一个空数组，表示该帐户不具有任何权限。
 	Roles []RolesOption `json:"roles"`
 }
 

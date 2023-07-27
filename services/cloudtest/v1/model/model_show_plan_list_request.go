@@ -9,6 +9,9 @@ import (
 // ShowPlanListRequest Request Object
 type ShowPlanListRequest struct {
 
+	// 项目id，项目唯一标识，固定长度32位字符
+	ProjectId string `json:"project_id"`
+
 	// 起始偏移量，表示从此偏移量开始查询， offset大于等于0
 	Offset int64 `json:"offset"`
 

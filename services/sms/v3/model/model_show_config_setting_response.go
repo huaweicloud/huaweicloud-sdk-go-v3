@@ -16,8 +16,8 @@ type ShowConfigSettingResponse struct {
 	MigrateType *string `json:"migrate_type,omitempty"`
 
 	// 配置项的具体配置信息
-	Configurations *string `json:"configurations,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Configurations *[]ConfigBody `json:"configurations,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowConfigSettingResponse) String() string {

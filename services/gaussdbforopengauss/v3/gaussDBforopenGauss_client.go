@@ -355,6 +355,27 @@ func (c *GaussDBforopenGaussClient) DeleteManualBackupInvoker(request *model.Del
 	return &DeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadBackup 获取备份下载链接
+//
+// 获取备份下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DownloadBackup(request *model.DownloadBackupRequest) (*model.DownloadBackupResponse, error) {
+	requestDef := GenReqDefForDownloadBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadBackupResponse), nil
+	}
+}
+
+// DownloadBackupInvoker 获取备份下载链接
+func (c *GaussDBforopenGaussClient) DownloadBackupInvoker(request *model.DownloadBackupRequest) *DownloadBackupInvoker {
+	requestDef := GenReqDefForDownloadBackup()
+	return &DownloadBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApplicableInstances 查询可应用实例列表
 //
 // 查询可应用当前参数组模板的实例列表。

@@ -1823,3 +1823,108 @@ func (c *IoTDAClient) UntagDeviceInvoker(request *model.UntagDeviceRequest) *Unt
 	requestDef := GenReqDefForUntagDevice()
 	return &UntagDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// AddTunnel 创建设备隧道
+//
+// 创建设备隧道接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) AddTunnel(request *model.AddTunnelRequest) (*model.AddTunnelResponse, error) {
+	requestDef := GenReqDefForAddTunnel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddTunnelResponse), nil
+	}
+}
+
+// AddTunnelInvoker 创建设备隧道
+func (c *IoTDAClient) AddTunnelInvoker(request *model.AddTunnelRequest) *AddTunnelInvoker {
+	requestDef := GenReqDefForAddTunnel()
+	return &AddTunnelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CloseDeviceTunnel 关闭设备隧道
+//
+// 关闭设备隧道接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CloseDeviceTunnel(request *model.CloseDeviceTunnelRequest) (*model.CloseDeviceTunnelResponse, error) {
+	requestDef := GenReqDefForCloseDeviceTunnel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloseDeviceTunnelResponse), nil
+	}
+}
+
+// CloseDeviceTunnelInvoker 关闭设备隧道
+func (c *IoTDAClient) CloseDeviceTunnelInvoker(request *model.CloseDeviceTunnelRequest) *CloseDeviceTunnelInvoker {
+	requestDef := GenReqDefForCloseDeviceTunnel()
+	return &CloseDeviceTunnelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeviceTunnel 删除设备隧道
+//
+// 删除设备隧道接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteDeviceTunnel(request *model.DeleteDeviceTunnelRequest) (*model.DeleteDeviceTunnelResponse, error) {
+	requestDef := GenReqDefForDeleteDeviceTunnel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDeviceTunnelResponse), nil
+	}
+}
+
+// DeleteDeviceTunnelInvoker 删除设备隧道
+func (c *IoTDAClient) DeleteDeviceTunnelInvoker(request *model.DeleteDeviceTunnelRequest) *DeleteDeviceTunnelInvoker {
+	requestDef := GenReqDefForDeleteDeviceTunnel()
+	return &DeleteDeviceTunnelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDeviceTunnels 查询设备所有隧道
+//
+// 查询设备所有隧道接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListDeviceTunnels(request *model.ListDeviceTunnelsRequest) (*model.ListDeviceTunnelsResponse, error) {
+	requestDef := GenReqDefForListDeviceTunnels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeviceTunnelsResponse), nil
+	}
+}
+
+// ListDeviceTunnelsInvoker 查询设备所有隧道
+func (c *IoTDAClient) ListDeviceTunnelsInvoker(request *model.ListDeviceTunnelsRequest) *ListDeviceTunnelsInvoker {
+	requestDef := GenReqDefForListDeviceTunnels()
+	return &ListDeviceTunnelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeviceTunnel 查询设备隧道
+//
+// 查询设备隧道信息接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowDeviceTunnel(request *model.ShowDeviceTunnelRequest) (*model.ShowDeviceTunnelResponse, error) {
+	requestDef := GenReqDefForShowDeviceTunnel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeviceTunnelResponse), nil
+	}
+}
+
+// ShowDeviceTunnelInvoker 查询设备隧道
+func (c *IoTDAClient) ShowDeviceTunnelInvoker(request *model.ShowDeviceTunnelRequest) *ShowDeviceTunnelInvoker {
+	requestDef := GenReqDefForShowDeviceTunnel()
+	return &ShowDeviceTunnelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

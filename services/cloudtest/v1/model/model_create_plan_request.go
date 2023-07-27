@@ -8,6 +8,10 @@ import (
 
 // CreatePlanRequest Request Object
 type CreatePlanRequest struct {
+
+	// 项目唯一标识，固定长度32位字符
+	ProjectId string `json:"project_id"`
+
 	Body *CreatePlanRequestBody `json:"body,omitempty"`
 }
 

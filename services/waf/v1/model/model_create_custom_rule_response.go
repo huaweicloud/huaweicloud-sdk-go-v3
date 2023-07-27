@@ -41,10 +41,10 @@ type CreateCustomRuleResponse struct {
 	// 精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
 	Time *bool `json:"time,omitempty"`
 
-	// 精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
+	// 精准防护规则生效的起始时间戳（秒）。当time=true，才会返回该参数。
 	Start *int64 `json:"start,omitempty"`
 
-	// 精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
+	// 精准防护规则生效的终止时间戳（秒）。当time=true，才会返回该参数。
 	Terminal *int64 `json:"terminal,omitempty"`
 
 	// 规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数

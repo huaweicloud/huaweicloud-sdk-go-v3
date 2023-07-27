@@ -8,6 +8,10 @@ import (
 
 // BatchDeleteTestCaseRequest Request Object
 type BatchDeleteTestCaseRequest struct {
+
+	// 项目唯一标识，固定长度32位字符
+	ProjectId string `json:"project_id"`
+
 	Body *BatchDeleteTestCaseRequestBody `json:"body,omitempty"`
 }
 

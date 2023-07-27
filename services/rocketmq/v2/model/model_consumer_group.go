@@ -17,7 +17,7 @@ type ConsumerGroup struct {
 	// 关联的代理列表。
 	Brokers *[]string `json:"brokers,omitempty"`
 
-	// 消费组名称。
+	// 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
 	Name *string `json:"name,omitempty"`
 
 	// 最大重试次数。

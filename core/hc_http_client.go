@@ -30,6 +30,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/exchange"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/progress"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
@@ -153,6 +154,10 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 		WithEndpoint(endpoint).
 		WithMethod(reqDef.Method).
 		WithPath(reqDef.Path)
+
+	if pq, ok := req.(progress.Request); ok {
+		builder.WithProgressListener(pq.GetProgressListener()).WithProgressInterval(pq.GetProgressInterval())
+	}
 
 	if reqDef.ContentType != "" {
 		builder.AddHeaderParam(contentType, reqDef.ContentType)

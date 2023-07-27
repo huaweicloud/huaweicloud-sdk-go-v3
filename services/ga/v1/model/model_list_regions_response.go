@@ -10,7 +10,7 @@ import (
 type ListRegionsResponse struct {
 
 	// 区域列表。
-	AreaRegions *[]AreaRegion `json:"area_regions,omitempty"`
+	Regions *[]Region `json:"regions,omitempty"`
 
 	// 请求ID。
 	RequestId      *string `json:"request_id,omitempty"`

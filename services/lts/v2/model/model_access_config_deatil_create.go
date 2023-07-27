@@ -13,12 +13,12 @@ import (
 type AccessConfigDeatilCreate struct {
 
 	// 采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次`` CCE类型中 容器路径和主机路径必填，标准输出不用
-	Paths []string `json:"paths"`
+	Paths *[]string `json:"paths,omitempty"`
 
 	// 采集路径黑名单。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次
 	BlackPaths *[]string `json:"black_paths,omitempty"`
 
-	Format *AccessConfigFormatCreate `json:"format"`
+	Format *AccessConfigFormatCreate `json:"format,omitempty"`
 
 	WindowsLogInfo *AccessConfigWindowsLogInfoCreate `json:"windows_log_info,omitempty"`
 

@@ -15,7 +15,7 @@ type GetAllRepositoryByProjectIdRequest struct {
 	// 每页条目数
 	PageSize *int32 `json:"page_size,omitempty"`
 
-	// 项目的uuid
+	// 项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectUuid string `json:"project_uuid"`
 
 	// 搜索关键字
