@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// Build 构建信息。
-type Build struct {
-	Archive *Archive `json:"archive"`
+// ActionOnComponentBuild 构建信息。
+type ActionOnComponentBuild struct {
+	Archive *Archive `json:"archive,omitempty"`
 
 	// 构建附加参数。 - base_image：基础镜像地址。 - build_cmd：自定义构建命令。 - dockerfile_path：自定义dockerfile文件路径 - dockerfile_content：自定义dockerfile内容
-	Parameters map[string]string `json:"parameters"`
+	Parameters map[string]string `json:"parameters,omitempty"`
 }
 
-func (o Build) String() string {
+func (o ActionOnComponentBuild) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Build struct{}"
+		return "ActionOnComponentBuild struct{}"
 	}
 
-	return strings.Join([]string{"Build", string(data)}, " ")
+	return strings.Join([]string{"ActionOnComponentBuild", string(data)}, " ")
 }

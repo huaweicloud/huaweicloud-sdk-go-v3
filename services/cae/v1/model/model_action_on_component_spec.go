@@ -17,6 +17,8 @@ type ActionOnComponentSpec struct {
 	Source *ActionOnComponentSource `json:"source,omitempty"`
 
 	ResourceLimit *ResourceLimitForUpgrade `json:"resource_limit,omitempty"`
+
+	Build *ActionOnComponentBuild `json:"build,omitempty"`
 }
 
 func (o ActionOnComponentSpec) String() string {

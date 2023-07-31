@@ -649,9 +649,9 @@ func (c *CaeClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTimerRule 创建定时启停任务
+// CreateTimerRule 创建定时启停规则
 //
-// 创建定时启停任务。
+// 创建定时启停规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) CreateTimerRule(request *model.CreateTimerRuleRequest) (*model.CreateTimerRuleResponse, error) {
@@ -664,7 +664,7 @@ func (c *CaeClient) CreateTimerRule(request *model.CreateTimerRuleRequest) (*mod
 	}
 }
 
-// CreateTimerRuleInvoker 创建定时启停任务
+// CreateTimerRuleInvoker 创建定时启停规则
 func (c *CaeClient) CreateTimerRuleInvoker(request *model.CreateTimerRuleRequest) *CreateTimerRuleInvoker {
 	requestDef := GenReqDefForCreateTimerRule()
 	return &CreateTimerRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

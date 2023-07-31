@@ -59,9 +59,19 @@ type ListIssueItemResponse struct {
 
 	Priority *IssueItemSfV4Priority `json:"priority,omitempty"`
 
+	Order *IssueResponseV4Order `json:"order,omitempty"`
+
 	Severity *IssueItemSfV4Severity `json:"severity,omitempty"`
 
 	Status *IssueItemSfV4Status `json:"status,omitempty"`
+
+	// 工作项发布版本号
+	ReleaseDev *string `json:"release_dev,omitempty"`
+
+	// 缺陷发现版本号（仅Bug类型工作项具备该字段）
+	FindReleaseDev *string `json:"find_release_dev,omitempty"`
+
+	Env *IssueResponseV4Env `json:"env,omitempty"`
 
 	Tracker *CreateIssueResponseV4Tracker `json:"tracker,omitempty"`
 

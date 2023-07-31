@@ -23,13 +23,13 @@ type ShowResourceGroupResponse struct {
 	// 资源分组归属企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源分组创建方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
+	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加）
 	Type *ShowResourceGroupResponseType `json:"type,omitempty"`
 
 	// 该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
 	AssociationEpIds *[]string `json:"association_ep_ids,omitempty"`
 
-	// 标签动态匹配时的关联标签,type为TAG时必传
+	// 标签动态匹配时的关联标签,type为TAG时该字段不为空
 	Tags           *[]ResourceGroupTagRelation `json:"tags,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

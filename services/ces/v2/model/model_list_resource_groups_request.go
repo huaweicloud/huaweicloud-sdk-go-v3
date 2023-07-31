@@ -27,7 +27,7 @@ type ListResourceGroupsRequest struct {
 	// 分页查询时每页的条目数，取值[1,100]，默认值为100
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 资源分组创建方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
 	Type *ListResourceGroupsRequestType `json:"type,omitempty"`
 }
 

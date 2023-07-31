@@ -24,7 +24,7 @@ type ListAlarmTemplatesRequest struct {
 	// 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
 	DimName *string `json:"dim_name,omitempty"`
 
-	// 模板类型(system代表默认自定义模板，custom代表系统模板),不传自定义和系统均需返回
+	// 模板类型(custom代表默认自定义模板，system代表系统模板),不传自定义和系统均需返回
 	TemplateType *ListAlarmTemplatesRequestTemplateType `json:"template_type,omitempty"`
 
 	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
