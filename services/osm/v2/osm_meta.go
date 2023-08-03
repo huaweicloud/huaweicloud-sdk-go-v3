@@ -166,26 +166,6 @@ func GenReqDefForCreateAskQuestion() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateAuthorization() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/servicerequest/cases/{case_id}/authorizations").
-		WithResponse(new(model.CreateAuthorizationResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("CaseId").
-		WithJsonTag("case_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCreateCaseExtendsParam() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

@@ -15,7 +15,7 @@ type MaterialComponentInfo struct {
 	// 素材组件名称。
 	ComponentName string `json:"component_name"`
 
-	// 素材组件类型。 * CLOTHES： 衣服 * PANTS： 裤子 * SHOES： 鞋子 * HAIR： 头发 * EYELASH： 睫毛 * EYEBROW： 眉毛
+	// 素材组件类型。 * CLOTHES：衣服 * PANTS：裤子 * SHOES：鞋子 * HAIR：头发 * EYELASH：睫毛 * EYEBROW：眉毛
 	ComponentType MaterialComponentInfoComponentType `json:"component_type"`
 
 	// 素材组件描述。

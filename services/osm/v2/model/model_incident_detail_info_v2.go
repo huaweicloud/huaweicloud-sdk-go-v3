@@ -51,9 +51,6 @@ type IncidentDetailInfoV2 struct {
 	// 满意度列表
 	IncidentSatisfaction []IncidentSatisfactionV2Do `json:"incident_satisfaction"`
 
-	// 是否授权
-	IsAuthorized int32 `json:"is_authorized"`
-
 	// 严重性名称
 	SeverityName *string `json:"severity_name,omitempty"`
 

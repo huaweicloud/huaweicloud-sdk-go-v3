@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -21,13 +24,13 @@ type SourceKafkaMqParameters struct {
 	Topic string `json:"topic"`
 
 	// 消费点位
-	SeekTo *string `json:"seek_to,omitempty"`
+	SeekTo *SourceKafkaMqParametersSeekTo `json:"seek_to,omitempty"`
 
 	// SASL_SSL是否开启
 	EnableSaslSsl *bool `json:"enable_sasl_ssl,omitempty"`
 
 	// SASL认证机制
-	SaslMechanism *string `json:"sasl_mechanism,omitempty"`
+	SaslMechanism *SourceKafkaMqParametersSaslMechanism `json:"sasl_mechanism,omitempty"`
 
 	// SASL证书地址，配置的obs地址
 	SslCertificateUrl *string `json:"ssl_certificate_url,omitempty"`
@@ -49,4 +52,98 @@ func (o SourceKafkaMqParameters) String() string {
 	}
 
 	return strings.Join([]string{"SourceKafkaMqParameters", string(data)}, " ")
+}
+
+type SourceKafkaMqParametersSeekTo struct {
+	value string
+}
+
+type SourceKafkaMqParametersSeekToEnum struct {
+	LATEST   SourceKafkaMqParametersSeekTo
+	EARLIEST SourceKafkaMqParametersSeekTo
+}
+
+func GetSourceKafkaMqParametersSeekToEnum() SourceKafkaMqParametersSeekToEnum {
+	return SourceKafkaMqParametersSeekToEnum{
+		LATEST: SourceKafkaMqParametersSeekTo{
+			value: "latest",
+		},
+		EARLIEST: SourceKafkaMqParametersSeekTo{
+			value: "earliest",
+		},
+	}
+}
+
+func (c SourceKafkaMqParametersSeekTo) Value() string {
+	return c.value
+}
+
+func (c SourceKafkaMqParametersSeekTo) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SourceKafkaMqParametersSeekTo) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SourceKafkaMqParametersSaslMechanism struct {
+	value string
+}
+
+type SourceKafkaMqParametersSaslMechanismEnum struct {
+	SCRAM_SHA_512 SourceKafkaMqParametersSaslMechanism
+	PLAIN         SourceKafkaMqParametersSaslMechanism
+}
+
+func GetSourceKafkaMqParametersSaslMechanismEnum() SourceKafkaMqParametersSaslMechanismEnum {
+	return SourceKafkaMqParametersSaslMechanismEnum{
+		SCRAM_SHA_512: SourceKafkaMqParametersSaslMechanism{
+			value: "SCRAM-SHA-512",
+		},
+		PLAIN: SourceKafkaMqParametersSaslMechanism{
+			value: "PLAIN",
+		},
+	}
+}
+
+func (c SourceKafkaMqParametersSaslMechanism) Value() string {
+	return c.value
+}
+
+func (c SourceKafkaMqParametersSaslMechanism) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SourceKafkaMqParametersSaslMechanism) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

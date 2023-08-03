@@ -18,7 +18,7 @@ type SceneComponentInfo struct {
 	// 组件名称。
 	ComponentName string `json:"component_name"`
 
-	// 组件类型。 * CAMERA： 摄像机 * PANEL： 屏幕 * LIGHT： 灯光
+	// 组件类型。 * CAMERA：摄像机 * PANEL：屏幕 * LIGHT：灯光
 	ComponentType SceneComponentInfoComponentType `json:"component_type"`
 
 	// 组件描述。

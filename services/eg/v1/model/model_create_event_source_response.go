@@ -51,6 +51,8 @@ type CreateEventSourceResponse struct {
 	// 自定义事件源状态
 	Status *CreateEventSourceResponseStatus `json:"status,omitempty"`
 
+	ErrorInfo *ErrorInfo `json:"error_info,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

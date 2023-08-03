@@ -42,7 +42,7 @@ func (c *MetaStudioClient) CreateDigitalAssetInvoker(request *model.CreateDigita
 
 // DeleteAsset 删除资产
 //
-// 该接口用于删除资产库中的媒体资产列表。第一次调用删除接口，将指定资产放入回收站；第二次调用删除接口，将指定资产彻底删除。
+// 该接口用于删除资产库中的媒体资产。第一次调用删除接口，将指定资产放入回收站；第二次调用删除接口，将指定资产彻底删除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteAsset(request *model.DeleteAssetRequest) (*model.DeleteAssetResponse, error) {
@@ -147,7 +147,7 @@ func (c *MetaStudioClient) ShowAssetInvoker(request *model.ShowAssetRequest) *Sh
 
 // UpdateDigitalAsset 更新资产
 //
-// 该接口用于更新资产库中的媒体资产列表。
+// 该接口用于更新资产库中的媒体资产信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateDigitalAsset(request *model.UpdateDigitalAssetRequest) (*model.UpdateDigitalAssetResponse, error) {
@@ -332,27 +332,6 @@ func (c *MetaStudioClient) ListStyles(request *model.ListStylesRequest) (*model.
 func (c *MetaStudioClient) ListStylesInvoker(request *model.ListStylesRequest) *ListStylesInvoker {
 	requestDef := GenReqDefForListStyles()
 	return &ListStylesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSelfPrivileges 查看租户自己权限列表
-//
-// 查看租户自己权限列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ListSelfPrivileges(request *model.ListSelfPrivilegesRequest) (*model.ListSelfPrivilegesResponse, error) {
-	requestDef := GenReqDefForListSelfPrivileges()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSelfPrivilegesResponse), nil
-	}
-}
-
-// ListSelfPrivilegesInvoker 查看租户自己权限列表
-func (c *MetaStudioClient) ListSelfPrivilegesInvoker(request *model.ListSelfPrivilegesRequest) *ListSelfPrivilegesInvoker {
-	requestDef := GenReqDefForListSelfPrivileges()
-	return &ListSelfPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTtsa 创建语音驱动任务

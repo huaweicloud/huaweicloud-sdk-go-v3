@@ -43,7 +43,7 @@ type AimResolveDetail struct {
 	ResolvedTime *string `json:"resolved_time,omitempty"`
 
 	// 解析状态。 - success：解析成功 - fail：解析失败 - unresolved：未解析
-	ResolvedStatus *interface{} `json:"resolved_status,omitempty"`
+	ResolvedStatus *string `json:"resolved_status,omitempty"`
 }
 
 func (o AimResolveDetail) String() string {

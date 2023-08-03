@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// StyleExtraMetaAdditionalProperties 可替换组件
 type StyleExtraMetaAdditionalProperties struct {
 
 	// 图标url

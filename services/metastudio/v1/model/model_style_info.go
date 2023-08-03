@@ -18,7 +18,7 @@ type StyleInfo struct {
 	// 数字人风格化描述
 	Description *string `json:"description,omitempty"`
 
-	// 租户id
+	// 租户ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 状态
@@ -38,13 +38,13 @@ type StyleInfo struct {
 	// 数字人风格ID
 	StyleId *string `json:"style_id,omitempty"`
 
-	// 数字人风格创建时间,格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+	// 数字人风格创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 数字人风格更新时间,格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+	// 数字人风格更新时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 数字人风格状态枚举
+	// 数字人风格状态枚举 * CREATING：创建中 * PUBLISHED：已发布 * DELETED：已删除 * UNPUBLISHED：未发布 * PUBLISHING：发布中
 	State *StyleInfoState `json:"state,omitempty"`
 }
 

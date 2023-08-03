@@ -11,13 +11,13 @@ import (
 
 type DigitalAssetSummary struct {
 
-	// 资产Id。
+	// 资产ID。
 	AssetId *string `json:"asset_id,omitempty"`
 
 	// 资产名称。
 	AssetName *string `json:"asset_name,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL:数字人模型 * VOICE_MODEL:音色模型 * SCENE:场景模型 * ANIMATION:动作动画 * VIDEO:视频文件 * IMAGE:图片文件 * PPT:幻灯片文件 * MATERIAL:风格化素材
+	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
 	AssetType *DigitalAssetSummaryAssetType `json:"asset_type,omitempty"`
 
 	// 封面图片路径。
@@ -38,15 +38,17 @@ type DigitalAssetSummaryAssetType struct {
 }
 
 type DigitalAssetSummaryAssetTypeEnum struct {
-	HUMAN_MODEL DigitalAssetSummaryAssetType
-	MODEL       DigitalAssetSummaryAssetType
-	ANIMATION   DigitalAssetSummaryAssetType
-	SCENE       DigitalAssetSummaryAssetType
-	PPT         DigitalAssetSummaryAssetType
-	VIDEO       DigitalAssetSummaryAssetType
-	IMAGE       DigitalAssetSummaryAssetType
-	MATERIAL    DigitalAssetSummaryAssetType
-	VOICE_MODEL DigitalAssetSummaryAssetType
+	HUMAN_MODEL           DigitalAssetSummaryAssetType
+	MODEL                 DigitalAssetSummaryAssetType
+	ANIMATION             DigitalAssetSummaryAssetType
+	SCENE                 DigitalAssetSummaryAssetType
+	PPT                   DigitalAssetSummaryAssetType
+	VIDEO                 DigitalAssetSummaryAssetType
+	IMAGE                 DigitalAssetSummaryAssetType
+	MATERIAL              DigitalAssetSummaryAssetType
+	VOICE_MODEL           DigitalAssetSummaryAssetType
+	HUMAN_MODEL_2_D       DigitalAssetSummaryAssetType
+	BUSINESS_CARD_TEMPLET DigitalAssetSummaryAssetType
 }
 
 func GetDigitalAssetSummaryAssetTypeEnum() DigitalAssetSummaryAssetTypeEnum {
@@ -77,6 +79,12 @@ func GetDigitalAssetSummaryAssetTypeEnum() DigitalAssetSummaryAssetTypeEnum {
 		},
 		VOICE_MODEL: DigitalAssetSummaryAssetType{
 			value: "VOICE_MODEL",
+		},
+		HUMAN_MODEL_2_D: DigitalAssetSummaryAssetType{
+			value: "HUMAN_MODEL_2D",
+		},
+		BUSINESS_CARD_TEMPLET: DigitalAssetSummaryAssetType{
+			value: "BUSINESS_CARD_TEMPLET",
 		},
 	}
 }

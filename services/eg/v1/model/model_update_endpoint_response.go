@@ -33,6 +33,8 @@ type UpdateEndpointResponse struct {
 	// 访问端点状态
 	Status *UpdateEndpointResponseStatus `json:"status,omitempty"`
 
+	ErrorInfo *ErrorInfo `json:"error_info,omitempty"`
+
 	// 访问端点类型
 	Type *UpdateEndpointResponseType `json:"type,omitempty"`
 

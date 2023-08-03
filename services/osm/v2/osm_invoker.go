@@ -65,18 +65,6 @@ func (i *CreateAskQuestionInvoker) Invoke() (*model.CreateAskQuestionResponse, e
 	}
 }
 
-type CreateAuthorizationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAuthorizationInvoker) Invoke() (*model.CreateAuthorizationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAuthorizationResponse), nil
-	}
-}
-
 type CreateCaseExtendsParamInvoker struct {
 	*invoker.BaseInvoker
 }

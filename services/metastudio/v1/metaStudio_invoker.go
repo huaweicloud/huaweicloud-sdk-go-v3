@@ -185,18 +185,6 @@ func (i *ListStylesInvoker) Invoke() (*model.ListStylesResponse, error) {
 	}
 }
 
-type ListSelfPrivilegesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSelfPrivilegesInvoker) Invoke() (*model.ListSelfPrivilegesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSelfPrivilegesResponse), nil
-	}
-}
-
 type CreateTtsaInvoker struct {
 	*invoker.BaseInvoker
 }

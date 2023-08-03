@@ -149,6 +149,54 @@ func (i *UpdateClusterNameInvoker) Invoke() (*model.UpdateClusterNameResponse, e
 	}
 }
 
+type CreateDataConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDataConnectorInvoker) Invoke() (*model.CreateDataConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDataConnectorResponse), nil
+	}
+}
+
+type DeleteDataConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDataConnectorInvoker) Invoke() (*model.DeleteDataConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDataConnectorResponse), nil
+	}
+}
+
+type ListDataConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataConnectorInvoker) Invoke() (*model.ListDataConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataConnectorResponse), nil
+	}
+}
+
+type UpdateDataConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDataConnectorInvoker) Invoke() (*model.UpdateDataConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDataConnectorResponse), nil
+	}
+}
+
 type ShowHdfsFileListInvoker struct {
 	*invoker.BaseInvoker
 }

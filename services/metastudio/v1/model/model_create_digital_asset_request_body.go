@@ -18,10 +18,10 @@ type CreateDigitalAssetRequestBody struct {
 	// 资产描述。
 	AssetDescription *string `json:"asset_description,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL:数字人模型 * VOICE_MODEL:音色模型(仅系统管理员可上传) * SCENE:场景模型 * ANIMATION:动作动画 * VIDEO:视频文件 * IMAGE:图片文件 * PPT:幻灯片文件 * MATERIAL:风格化素材
+	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
 	AssetType CreateDigitalAssetRequestBodyAssetType `json:"asset_type"`
 
-	// 资产所属者。填租户的project id。
+	// 项目ID。
 	AssetOwner *string `json:"asset_owner,omitempty"`
 
 	// 标签列表。
@@ -47,15 +47,17 @@ type CreateDigitalAssetRequestBodyAssetType struct {
 }
 
 type CreateDigitalAssetRequestBodyAssetTypeEnum struct {
-	HUMAN_MODEL  CreateDigitalAssetRequestBodyAssetType
-	VOICE_MODEL  CreateDigitalAssetRequestBodyAssetType
-	SCENE        CreateDigitalAssetRequestBodyAssetType
-	ANIMATION    CreateDigitalAssetRequestBodyAssetType
-	VIDEO        CreateDigitalAssetRequestBodyAssetType
-	IMAGE        CreateDigitalAssetRequestBodyAssetType
-	PPT          CreateDigitalAssetRequestBodyAssetType
-	NORMAL_MODEL CreateDigitalAssetRequestBodyAssetType
-	COMMON_FILE  CreateDigitalAssetRequestBodyAssetType
+	HUMAN_MODEL           CreateDigitalAssetRequestBodyAssetType
+	VOICE_MODEL           CreateDigitalAssetRequestBodyAssetType
+	SCENE                 CreateDigitalAssetRequestBodyAssetType
+	ANIMATION             CreateDigitalAssetRequestBodyAssetType
+	VIDEO                 CreateDigitalAssetRequestBodyAssetType
+	IMAGE                 CreateDigitalAssetRequestBodyAssetType
+	PPT                   CreateDigitalAssetRequestBodyAssetType
+	NORMAL_MODEL          CreateDigitalAssetRequestBodyAssetType
+	COMMON_FILE           CreateDigitalAssetRequestBodyAssetType
+	HUMAN_MODEL_2_D       CreateDigitalAssetRequestBodyAssetType
+	BUSINESS_CARD_TEMPLET CreateDigitalAssetRequestBodyAssetType
 }
 
 func GetCreateDigitalAssetRequestBodyAssetTypeEnum() CreateDigitalAssetRequestBodyAssetTypeEnum {
@@ -86,6 +88,12 @@ func GetCreateDigitalAssetRequestBodyAssetTypeEnum() CreateDigitalAssetRequestBo
 		},
 		COMMON_FILE: CreateDigitalAssetRequestBodyAssetType{
 			value: "COMMON_FILE",
+		},
+		HUMAN_MODEL_2_D: CreateDigitalAssetRequestBodyAssetType{
+			value: "HUMAN_MODEL_2D",
+		},
+		BUSINESS_CARD_TEMPLET: CreateDigitalAssetRequestBodyAssetType{
+			value: "BUSINESS_CARD_TEMPLET",
 		},
 	}
 }

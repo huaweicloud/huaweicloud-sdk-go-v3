@@ -18,7 +18,7 @@ type CreateStyleRequestBody struct {
 	// 数字人风格化描述
 	Description *string `json:"description,omitempty"`
 
-	// 租户id
+	// 租户ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 状态

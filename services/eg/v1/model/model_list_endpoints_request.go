@@ -32,6 +32,9 @@ type ListEndpointsRequest struct {
 
 	// 指定查询访问端点的名称,模糊查询
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
+
+	// 指定查询访问端点的SubnetId
+	SubnetId *string `json:"subnet_id,omitempty"`
 }
 
 func (o ListEndpointsRequest) String() string {

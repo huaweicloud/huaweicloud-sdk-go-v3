@@ -42,7 +42,7 @@ func (c *DnsClient) CreateCustomLineInvoker(request *model.CreateCustomLineReque
 
 // CreateLineGroup 创建线路分组
 //
-// 创建一个线路分组。
+// 创建一个线路分组。 该接口部分区域未上线、如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateLineGroup(request *model.CreateLineGroupRequest) (*model.CreateLineGroupResponse, error) {
@@ -84,7 +84,7 @@ func (c *DnsClient) DeleteCustomLineInvoker(request *model.DeleteCustomLineReque
 
 // DeleteLineGroup 删除线路分组
 //
-// 删除单个线路分组。
+// 删除单个线路分组。该接口部分区域未上线、如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteLineGroup(request *model.DeleteLineGroupRequest) (*model.DeleteLineGroupResponse, error) {
@@ -147,7 +147,7 @@ func (c *DnsClient) ListCustomLineInvoker(request *model.ListCustomLineRequest) 
 
 // ListLineGroups 查询线路分组列表
 //
-// 查询线路分组列表。
+// 查询线路分组列表。该接口部分区域未上线、如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListLineGroups(request *model.ListLineGroupsRequest) (*model.ListLineGroupsResponse, error) {
@@ -231,7 +231,7 @@ func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest
 
 // ShowLineGroup 查询线路分组
 //
-// 查询线路分组。
+// 查询线路分组。该接口部分区域未上线、如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowLineGroup(request *model.ShowLineGroupRequest) (*model.ShowLineGroupResponse, error) {
@@ -273,7 +273,7 @@ func (c *DnsClient) UpdateCustomLineInvoker(request *model.UpdateCustomLineReque
 
 // UpdateLineGroups 更新线路分组
 //
-// 更新单个线路分组。
+// 更新单个线路分组。该接口部分区域未上线、如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdateLineGroups(request *model.UpdateLineGroupsRequest) (*model.UpdateLineGroupsResponse, error) {
@@ -527,7 +527,7 @@ func (c *DnsClient) CreateRecordSetWithLineInvoker(request *model.CreateRecordSe
 
 // DeleteRecordSet 删除单个Record Set
 //
-// 删除单个Record Set
+// 删除单个Record Set. 删除有添加智能解析的记录集时、需要用Record Set多线路管理模块中删除接口进行删除.
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteRecordSet(request *model.DeleteRecordSetRequest) (*model.DeleteRecordSetResponse, error) {

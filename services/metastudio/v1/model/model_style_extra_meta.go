@@ -18,6 +18,9 @@ type StyleExtraMeta struct {
 	// 编辑使用引擎
 	EditEngine *string `json:"edit_engine,omitempty"`
 
+	// 照片建模算法调用的模型类型
+	ModelId *string `json:"model_id,omitempty"`
+
 	// 值可设置条目列表
 	EditValueItems map[string]StyleExtraMetaEditValueItems `json:"edit_value_items,omitempty"`
 
@@ -27,6 +30,7 @@ type StyleExtraMeta struct {
 	// 可替换组件列表
 	EditComponents map[string]StyleExtraMetaEditComponents `json:"edit_components,omitempty"`
 
+	// 分类算法列表
 	ModellingAlgorithm map[string]StyleExtraMetaModellingAlgorithm `json:"modelling_algorithm,omitempty"`
 }
 

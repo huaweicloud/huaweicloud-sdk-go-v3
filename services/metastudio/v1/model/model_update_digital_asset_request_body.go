@@ -18,13 +18,13 @@ type UpdateDigitalAssetRequestBody struct {
 	// 资产描述。
 	AssetDescription *string `json:"asset_description,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL:数字人模型 * VOICE_MODEL:音色模型(仅系统管理员可更新) * SCENE:场景模型 * ANIMATION:动作动画 * VIDEO:视频文件 * IMAGE:图片文件 * PPT:幻灯片文件 * MATERIAL:风格化素材
+	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可更新） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
 	AssetType *UpdateDigitalAssetRequestBodyAssetType `json:"asset_type,omitempty"`
 
-	// 资产状态。 * UNACTIVED: 取消激活。未激活的资产不可用于其他业务 * ACTIVED: 激活。激活后的资产科用于其他业务
+	// 资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
 	AssetState *UpdateDigitalAssetRequestBodyAssetState `json:"asset_state,omitempty"`
 
-	// 资产所属者。填租户的project id。
+	// 项目ID。
 	AssetOwner *string `json:"asset_owner,omitempty"`
 
 	// 标签列表。
@@ -50,16 +50,18 @@ type UpdateDigitalAssetRequestBodyAssetType struct {
 }
 
 type UpdateDigitalAssetRequestBodyAssetTypeEnum struct {
-	HUMAN_MODEL  UpdateDigitalAssetRequestBodyAssetType
-	VOICE_MODEL  UpdateDigitalAssetRequestBodyAssetType
-	SCENE        UpdateDigitalAssetRequestBodyAssetType
-	ANIMATION    UpdateDigitalAssetRequestBodyAssetType
-	VIDEO        UpdateDigitalAssetRequestBodyAssetType
-	IMAGE        UpdateDigitalAssetRequestBodyAssetType
-	PPT          UpdateDigitalAssetRequestBodyAssetType
-	MATERIAL     UpdateDigitalAssetRequestBodyAssetType
-	NORMAL_MODEL UpdateDigitalAssetRequestBodyAssetType
-	COMMON_FILE  UpdateDigitalAssetRequestBodyAssetType
+	HUMAN_MODEL           UpdateDigitalAssetRequestBodyAssetType
+	VOICE_MODEL           UpdateDigitalAssetRequestBodyAssetType
+	SCENE                 UpdateDigitalAssetRequestBodyAssetType
+	ANIMATION             UpdateDigitalAssetRequestBodyAssetType
+	VIDEO                 UpdateDigitalAssetRequestBodyAssetType
+	IMAGE                 UpdateDigitalAssetRequestBodyAssetType
+	PPT                   UpdateDigitalAssetRequestBodyAssetType
+	MATERIAL              UpdateDigitalAssetRequestBodyAssetType
+	NORMAL_MODEL          UpdateDigitalAssetRequestBodyAssetType
+	COMMON_FILE           UpdateDigitalAssetRequestBodyAssetType
+	HUMAN_MODEL_2_D       UpdateDigitalAssetRequestBodyAssetType
+	BUSINESS_CARD_TEMPLET UpdateDigitalAssetRequestBodyAssetType
 }
 
 func GetUpdateDigitalAssetRequestBodyAssetTypeEnum() UpdateDigitalAssetRequestBodyAssetTypeEnum {
@@ -93,6 +95,12 @@ func GetUpdateDigitalAssetRequestBodyAssetTypeEnum() UpdateDigitalAssetRequestBo
 		},
 		COMMON_FILE: UpdateDigitalAssetRequestBodyAssetType{
 			value: "COMMON_FILE",
+		},
+		HUMAN_MODEL_2_D: UpdateDigitalAssetRequestBodyAssetType{
+			value: "HUMAN_MODEL_2D",
+		},
+		BUSINESS_CARD_TEMPLET: UpdateDigitalAssetRequestBodyAssetType{
+			value: "BUSINESS_CARD_TEMPLET",
 		},
 	}
 }

@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
-// UnfreezePubResponseModel 解绑服务号返回体。
 type UnfreezePubResponseModel struct {
-	Data *FreezePubResponseModelData `json:"data,omitempty"`
+
+	// 服务号ID。
+	PubId *string `json:"pub_id,omitempty"`
 }
 
 func (o UnfreezePubResponseModel) String() string {

@@ -9,7 +9,7 @@ import (
 // UrlAuthGetBody URL鉴权查询响应体。
 type UrlAuthGetBody struct {
 
-	// 是否开启URL鉴权，off：开启,on：关闭。
+	// 是否开启URL鉴权，on：开启,off：关闭。
 	Status string `json:"status"`
 
 	// 鉴权方式， type_a：鉴权方式A， type_b：鉴权方式B， type_c1：鉴权方式C1， type_c2：鉴权方式C2。
@@ -23,6 +23,8 @@ type UrlAuthGetBody struct {
 
 	// 鉴权范围。
 	MatchType *string `json:"match_type,omitempty"`
+
+	InheritConfig *InheritConfigQuery `json:"inherit_config,omitempty"`
 
 	// 鉴权KEY。
 	Key *string `json:"key,omitempty"`

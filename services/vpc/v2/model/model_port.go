@@ -76,6 +76,9 @@ type Port struct {
 
 	// 功能说明：port所属的可用分区
 	ZoneId string `json:"zone_id"`
+
+	// 功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
+	EnableEfi bool `json:"enable_efi"`
 }
 
 func (o Port) String() string {

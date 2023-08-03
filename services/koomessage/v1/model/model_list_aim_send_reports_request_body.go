@@ -10,7 +10,7 @@ import (
 type ListAimSendReportsRequestBody struct {
 
 	// 报表类型。  - 1：日报表 - 2：月报表  > 若不填，默认是1，即查询日报表。
-	ReportType string `json:"report_type"`
+	ReportType *string `json:"report_type,omitempty"`
 
 	// 智能信息模板ID。
 	TplId *string `json:"tpl_id,omitempty"`

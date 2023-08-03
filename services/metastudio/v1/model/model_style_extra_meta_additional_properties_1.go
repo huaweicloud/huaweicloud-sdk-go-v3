@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// StyleExtraMetaAdditionalProperties1 分类算法
 type StyleExtraMetaAdditionalProperties1 struct {
 
 	// 算法类型枚举，\"CREATE\"还是\"CLASSIFY\"

@@ -32,6 +32,8 @@ type EndpointInfo struct {
 	// 访问端点状态
 	Status *EndpointInfoStatus `json:"status,omitempty"`
 
+	ErrorInfo *ErrorInfo `json:"error_info,omitempty"`
+
 	// 访问端点类型
 	Type *EndpointInfoType `json:"type,omitempty"`
 

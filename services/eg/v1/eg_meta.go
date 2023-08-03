@@ -396,6 +396,10 @@ func GenReqDefForListConnections() *def.HttpRequestDef {
 		WithName("FuzzyName").
 		WithJsonTag("fuzzy_name").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -435,6 +439,10 @@ func GenReqDefForListEndpoints() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FuzzyName").
 		WithJsonTag("fuzzy_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubnetId").
+		WithJsonTag("subnet_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().

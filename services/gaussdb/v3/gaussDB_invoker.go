@@ -461,6 +461,18 @@ func (i *ListScheduleJobsInvoker) Invoke() (*model.ListScheduleJobsResponse, err
 	}
 }
 
+type ModifyGaussMySqlProxyRouteModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyGaussMySqlProxyRouteModeInvoker) Invoke() (*model.ModifyGaussMySqlProxyRouteModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyGaussMySqlProxyRouteModeResponse), nil
+	}
+}
+
 type ResetGaussMySqlDatabasePasswordInvoker struct {
 	*invoker.BaseInvoker
 }

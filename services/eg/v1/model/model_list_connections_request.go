@@ -23,6 +23,9 @@ type ListConnectionsRequest struct {
 
 	// 指定查询的目标连接名称，模糊匹配
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
+
+	// 指定查询的目标连接，队列的实例id
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o ListConnectionsRequest) String() string {

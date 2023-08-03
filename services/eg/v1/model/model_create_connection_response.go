@@ -24,6 +24,8 @@ type CreateConnectionResponse struct {
 	// 目标连接状态
 	Status *CreateConnectionResponseStatus `json:"status,omitempty"`
 
+	ErrorInfo *ErrorInfo `json:"error_info,omitempty"`
+
 	// 待连接的VPC ID
 	VpcId *string `json:"vpc_id,omitempty"`
 

@@ -15,7 +15,7 @@ type StyleAssetItem struct {
 	// 资产ID
 	AssetId *string `json:"asset_id,omitempty"`
 
-	// 资产类型
+	// 资产类型 * ANIMATION：动作 * MATERIAL：素材
 	AssetType *StyleAssetItemAssetType `json:"asset_type,omitempty"`
 
 	// 封面图URL

@@ -71,6 +71,9 @@ type ResFeeRecordV2 struct {
 	// 订单ID或交易ID，扣费维度的唯一标识。
 	TradeId *string `json:"trade_id,omitempty"`
 
+	// |参数名称：唯一标识。|
+	Id *string `json:"id,omitempty"`
+
 	// 交易时间。
 	TradeTime *string `json:"trade_time,omitempty"`
 

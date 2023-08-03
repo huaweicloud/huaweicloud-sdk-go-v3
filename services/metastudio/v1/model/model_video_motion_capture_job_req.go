@@ -12,7 +12,7 @@ import (
 // VideoMotionCaptureJobReq 视频驱动动作任务请求。
 type VideoMotionCaptureJobReq struct {
 
-	// 视频驱动模式。 * HEAD: 头部 * HALF_BODY: 半身 * FULL_BODY: 全身 * AUTO: 自动
+	// 视频驱动模式。 * HEAD：头部 * HALF_BODY：半身 * FULL_BODY：全身 * AUTO：自动
 	MotionCaptureMode *VideoMotionCaptureJobReqMotionCaptureMode `json:"motion_capture_mode,omitempty"`
 
 	InputInfo *InputInfo `json:"input_info,omitempty"`

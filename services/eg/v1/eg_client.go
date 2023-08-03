@@ -21,7 +21,7 @@ func EgClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CheckPutEvents 预校验指定事件源发布事件成功
 //
-// 发布事件到事件源成功需要有订阅等条件，预先校验
+// 发布事件到事件源成功需要有订阅等条件，预先校验。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CheckPutEvents(request *model.CheckPutEventsRequest) (*model.CheckPutEventsResponse, error) {
@@ -42,7 +42,7 @@ func (c *EgClient) CheckPutEventsInvoker(request *model.CheckPutEventsRequest) *
 
 // CreateAgencies 创建服务委托
 //
-// 按照业务场景，一键创建服务委托授权
+// 按照业务场景，一键创建服务委托授权。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateAgencies(request *model.CreateAgenciesRequest) (*model.CreateAgenciesResponse, error) {
@@ -63,7 +63,7 @@ func (c *EgClient) CreateAgenciesInvoker(request *model.CreateAgenciesRequest) *
 
 // CreateChannel 创建自定义事件通道
 //
-// 创建自定义事件通道
+// 创建自定义事件通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateChannel(request *model.CreateChannelRequest) (*model.CreateChannelResponse, error) {
@@ -84,7 +84,7 @@ func (c *EgClient) CreateChannelInvoker(request *model.CreateChannelRequest) *Cr
 
 // CreateConnection 创建目标连接
 //
-// 创建目标连接
+// 创建目标连接。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
@@ -105,7 +105,7 @@ func (c *EgClient) CreateConnectionInvoker(request *model.CreateConnectionReques
 
 // CreateEndpoint 创建访问端点
 //
-// 创建访问端点
+// 创建访问端点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
@@ -126,7 +126,7 @@ func (c *EgClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *
 
 // CreateEventSource 创建自定义事件源
 //
-// 创建用户自定义类型的事件源，只能指定自定义通道，不能指定系统通道
+// 创建用户自定义类型的事件源，只能指定自定义通道，不能指定系统通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEventSource(request *model.CreateEventSourceRequest) (*model.CreateEventSourceResponse, error) {
@@ -147,7 +147,7 @@ func (c *EgClient) CreateEventSourceInvoker(request *model.CreateEventSourceRequ
 
 // CreateEventStreaming 创建事件流
 //
-// 创建事件流
+// 创建事件流。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateEventStreaming(request *model.CreateEventStreamingRequest) (*model.CreateEventStreamingResponse, error) {
@@ -168,7 +168,7 @@ func (c *EgClient) CreateEventStreamingInvoker(request *model.CreateEventStreami
 
 // CreateSubscription 创建事件订阅
 //
-// 创建事件订阅
+// 创建事件订阅。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateSubscription(request *model.CreateSubscriptionRequest) (*model.CreateSubscriptionResponse, error) {
@@ -189,7 +189,7 @@ func (c *EgClient) CreateSubscriptionInvoker(request *model.CreateSubscriptionRe
 
 // CreateSubscriptionTarget 创建事件订阅目标
 //
-// 创建单个事件订阅目标
+// 创建单个事件订阅目标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) CreateSubscriptionTarget(request *model.CreateSubscriptionTargetRequest) (*model.CreateSubscriptionTargetResponse, error) {
@@ -210,7 +210,7 @@ func (c *EgClient) CreateSubscriptionTargetInvoker(request *model.CreateSubscrip
 
 // DeleteChannel 删除自定义事件通道
 //
-// 删除指定自定义事件通道
+// 删除指定自定义事件通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteChannel(request *model.DeleteChannelRequest) (*model.DeleteChannelResponse, error) {
@@ -231,7 +231,7 @@ func (c *EgClient) DeleteChannelInvoker(request *model.DeleteChannelRequest) *De
 
 // DeleteConnection 删除目标连接
 //
-// 删除目标连接
+// 删除目标连接。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteConnection(request *model.DeleteConnectionRequest) (*model.DeleteConnectionResponse, error) {
@@ -252,7 +252,7 @@ func (c *EgClient) DeleteConnectionInvoker(request *model.DeleteConnectionReques
 
 // DeleteEndpoint 删除访问端点
 //
-// 删除访问端点
+// 删除访问端点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
@@ -273,7 +273,7 @@ func (c *EgClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *
 
 // DeleteEventSource 删除自定义事件源
 //
-// 删除指定的自定义事件源
+// 删除指定的自定义事件源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEventSource(request *model.DeleteEventSourceRequest) (*model.DeleteEventSourceResponse, error) {
@@ -294,7 +294,7 @@ func (c *EgClient) DeleteEventSourceInvoker(request *model.DeleteEventSourceRequ
 
 // DeleteEventStreaming 删除事件流
 //
-// 删除事件流
+// 删除事件流。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteEventStreaming(request *model.DeleteEventStreamingRequest) (*model.DeleteEventStreamingResponse, error) {
@@ -315,7 +315,7 @@ func (c *EgClient) DeleteEventStreamingInvoker(request *model.DeleteEventStreami
 
 // DeleteSubscription 删除事件订阅
 //
-// 删除事件订阅
+// 删除事件订阅。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteSubscription(request *model.DeleteSubscriptionRequest) (*model.DeleteSubscriptionResponse, error) {
@@ -336,7 +336,7 @@ func (c *EgClient) DeleteSubscriptionInvoker(request *model.DeleteSubscriptionRe
 
 // DeleteSubscriptionTarget 删除事件订阅目标
 //
-// 删除事件订阅目标
+// 删除事件订阅目标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) DeleteSubscriptionTarget(request *model.DeleteSubscriptionTargetRequest) (*model.DeleteSubscriptionTargetResponse, error) {
@@ -357,7 +357,7 @@ func (c *EgClient) DeleteSubscriptionTargetInvoker(request *model.DeleteSubscrip
 
 // ListAgencies 查询服务委托
 //
-// 查询服务委托
+// 查询服务委托。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
@@ -378,7 +378,7 @@ func (c *EgClient) ListAgenciesInvoker(request *model.ListAgenciesRequest) *List
 
 // ListChannels 查询事件通道列表
 //
-// 查询事件通道列表，包括系统通道和自定义通道
+// 查询事件通道列表，包括系统通道和自定义通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListChannels(request *model.ListChannelsRequest) (*model.ListChannelsResponse, error) {
@@ -399,7 +399,7 @@ func (c *EgClient) ListChannelsInvoker(request *model.ListChannelsRequest) *List
 
 // ListConnections 查询目标连接列表
 //
-// 查询目标连接列表
+// 查询目标连接列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
@@ -420,7 +420,7 @@ func (c *EgClient) ListConnectionsInvoker(request *model.ListConnectionsRequest)
 
 // ListEndpoints 查询访问端点
 //
-// 查询访问端点
+// 查询访问端点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
@@ -441,7 +441,7 @@ func (c *EgClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *Li
 
 // ListEventSources 查询事件源列表
 //
-// 支持条件查询，如可以指定事件通道ID来查询某个事件通道下的所有事件源
+// 支持条件查询，如可以指定事件通道ID来查询某个事件通道下的所有事件源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventSources(request *model.ListEventSourcesRequest) (*model.ListEventSourcesResponse, error) {
@@ -462,7 +462,7 @@ func (c *EgClient) ListEventSourcesInvoker(request *model.ListEventSourcesReques
 
 // ListEventStreaming 查询事件流列表
 //
-// 查询事件流列表
+// 查询事件流列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventStreaming(request *model.ListEventStreamingRequest) (*model.ListEventStreamingResponse, error) {
@@ -483,7 +483,7 @@ func (c *EgClient) ListEventStreamingInvoker(request *model.ListEventStreamingRe
 
 // ListEventTarget 查询事件目标分类
 //
-// 查询预置的事件目标分类，获取每个事件目标分类的字段定义
+// 查询预置的事件目标分类，获取每个事件目标分类的字段定义。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListEventTarget(request *model.ListEventTargetRequest) (*model.ListEventTargetResponse, error) {
@@ -504,7 +504,7 @@ func (c *EgClient) ListEventTargetInvoker(request *model.ListEventTargetRequest)
 
 // ListPubMetrics 查询事件通道监控指标数据
 //
-// 查询事件通道监控指标数据
+// 查询事件通道监控指标数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListPubMetrics(request *model.ListPubMetricsRequest) (*model.ListPubMetricsResponse, error) {
@@ -525,7 +525,7 @@ func (c *EgClient) ListPubMetricsInvoker(request *model.ListPubMetricsRequest) *
 
 // ListQuotas 查询配额
 //
-// 查询当前租户的配额，未特殊配置过的会返回默认配额
+// 查询当前租户的配额，未特殊配置过的会返回默认配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
@@ -546,7 +546,7 @@ func (c *EgClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuot
 
 // ListSubMetrics 查询事件订阅监控指标数据
 //
-// 查询事件订阅监控指标数据
+// 查询事件订阅监控指标数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListSubMetrics(request *model.ListSubMetricsRequest) (*model.ListSubMetricsResponse, error) {
@@ -567,7 +567,7 @@ func (c *EgClient) ListSubMetricsInvoker(request *model.ListSubMetricsRequest) *
 
 // ListSubscriptions 查询事件订阅列表
 //
-// 查询事件订阅列表，支持指定事件通道
+// 查询事件订阅列表，支持指定事件通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListSubscriptions(request *model.ListSubscriptionsRequest) (*model.ListSubscriptionsResponse, error) {
@@ -588,7 +588,7 @@ func (c *EgClient) ListSubscriptionsInvoker(request *model.ListSubscriptionsRequ
 
 // ListTracedEvents 查询事件追踪列表
 //
-// 查询事件追踪列表
+// 查询事件追踪列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListTracedEvents(request *model.ListTracedEventsRequest) (*model.ListTracedEventsResponse, error) {
@@ -609,7 +609,7 @@ func (c *EgClient) ListTracedEventsInvoker(request *model.ListTracedEventsReques
 
 // ListTriggers 查询单个函数的EG触发器
 //
-// 查询触发器，支持指定函数urn。一个以函数urn为目标的订阅为一个触发器。
+// 查询触发器，支持指定函数urn，一个以函数urn为目标的订阅为一个触发器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListTriggers(request *model.ListTriggersRequest) (*model.ListTriggersResponse, error) {
@@ -630,7 +630,7 @@ func (c *EgClient) ListTriggersInvoker(request *model.ListTriggersRequest) *List
 
 // ListWorkflowTriggers 查询单个函数流的EG触发器
 //
-// 查询触发器，支持指定函数流id。一个以函数流id为目标的订阅为一个触发器。
+// 查询触发器，支持指定函数流id，一个以函数流id为目标的订阅为一个触发器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListWorkflowTriggers(request *model.ListWorkflowTriggersRequest) (*model.ListWorkflowTriggersResponse, error) {
@@ -651,7 +651,7 @@ func (c *EgClient) ListWorkflowTriggersInvoker(request *model.ListWorkflowTrigge
 
 // OperateSubscription 操作事件订阅
 //
-// 操作事件订阅，支持启用、禁用
+// 操作事件订阅，支持启用、禁用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) OperateSubscription(request *model.OperateSubscriptionRequest) (*model.OperateSubscriptionResponse, error) {
@@ -672,7 +672,7 @@ func (c *EgClient) OperateSubscriptionInvoker(request *model.OperateSubscription
 
 // PutEvents 发布事件到事件通道
 //
-// 发布事件到事件通道
+// 发布事件到事件通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) PutEvents(request *model.PutEventsRequest) (*model.PutEventsResponse, error) {
@@ -693,7 +693,7 @@ func (c *EgClient) PutEventsInvoker(request *model.PutEventsRequest) *PutEventsI
 
 // PutOfficialEvents 发布官方事件到事件通道
 //
-// 发布官方事件到事件通道
+// 发布官方事件到事件通道。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) PutOfficialEvents(request *model.PutOfficialEventsRequest) (*model.PutOfficialEventsResponse, error) {
@@ -714,7 +714,7 @@ func (c *EgClient) PutOfficialEventsInvoker(request *model.PutOfficialEventsRequ
 
 // ResumeEventStreaming 操作事件流
 //
-// 操作事件流
+// 操作事件流。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ResumeEventStreaming(request *model.ResumeEventStreamingRequest) (*model.ResumeEventStreamingResponse, error) {
@@ -735,7 +735,7 @@ func (c *EgClient) ResumeEventStreamingInvoker(request *model.ResumeEventStreami
 
 // ShowDetailOfChannel 查询事件通道详情
 //
-// 查询指定事件通道详情
+// 查询指定事件通道详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfChannel(request *model.ShowDetailOfChannelRequest) (*model.ShowDetailOfChannelResponse, error) {
@@ -756,7 +756,7 @@ func (c *EgClient) ShowDetailOfChannelInvoker(request *model.ShowDetailOfChannel
 
 // ShowDetailOfConnection 查询目标连接详情
 //
-// 查询目标连接详情
+// 查询目标连接详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfConnection(request *model.ShowDetailOfConnectionRequest) (*model.ShowDetailOfConnectionResponse, error) {
@@ -777,7 +777,7 @@ func (c *EgClient) ShowDetailOfConnectionInvoker(request *model.ShowDetailOfConn
 
 // ShowDetailOfEvent 查询发送事件的内容
 //
-// 根据事件ID查询事件详情
+// 根据事件ID查询事件详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfEvent(request *model.ShowDetailOfEventRequest) (*model.ShowDetailOfEventResponse, error) {
@@ -798,7 +798,7 @@ func (c *EgClient) ShowDetailOfEventInvoker(request *model.ShowDetailOfEventRequ
 
 // ShowDetailOfEventSource 查询事件源详情
 //
-// 查询事件源详情信息
+// 查询事件源详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfEventSource(request *model.ShowDetailOfEventSourceRequest) (*model.ShowDetailOfEventSourceResponse, error) {
@@ -819,7 +819,7 @@ func (c *EgClient) ShowDetailOfEventSourceInvoker(request *model.ShowDetailOfEve
 
 // ShowDetailOfEventTrace 事件轨迹详情
 //
-// 事件轨迹详情，展示事件源到投递目标的投递情况
+// 事件轨迹详情，展示事件源到投递目标的投递情况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfEventTrace(request *model.ShowDetailOfEventTraceRequest) (*model.ShowDetailOfEventTraceResponse, error) {
@@ -840,7 +840,7 @@ func (c *EgClient) ShowDetailOfEventTraceInvoker(request *model.ShowDetailOfEven
 
 // ShowDetailOfSubscription 查询事件订阅详情
 //
-// 查询事件订阅详情
+// 查询事件订阅详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfSubscription(request *model.ShowDetailOfSubscriptionRequest) (*model.ShowDetailOfSubscriptionResponse, error) {
@@ -861,7 +861,7 @@ func (c *EgClient) ShowDetailOfSubscriptionInvoker(request *model.ShowDetailOfSu
 
 // ShowDetailOfSubscriptionTarget 查询事件订阅目标详情
 //
-// 查询事件订阅目标详情
+// 查询事件订阅目标详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowDetailOfSubscriptionTarget(request *model.ShowDetailOfSubscriptionTargetRequest) (*model.ShowDetailOfSubscriptionTargetResponse, error) {
@@ -882,7 +882,7 @@ func (c *EgClient) ShowDetailOfSubscriptionTargetInvoker(request *model.ShowDeta
 
 // ShowEventStreaming 查询事件流详情
 //
-// 查询事件流详情
+// 查询事件流详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ShowEventStreaming(request *model.ShowEventStreamingRequest) (*model.ShowEventStreamingResponse, error) {
@@ -903,7 +903,7 @@ func (c *EgClient) ShowEventStreamingInvoker(request *model.ShowEventStreamingRe
 
 // UpdateChannel 更新自定义事件通道
 //
-// 更新自定义事件通道定义
+// 更新自定义事件通道定义。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateChannel(request *model.UpdateChannelRequest) (*model.UpdateChannelResponse, error) {
@@ -924,7 +924,7 @@ func (c *EgClient) UpdateChannelInvoker(request *model.UpdateChannelRequest) *Up
 
 // UpdateConnection 更新目标连接
 //
-// 更新目标连接
+// 更新目标连接。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateConnection(request *model.UpdateConnectionRequest) (*model.UpdateConnectionResponse, error) {
@@ -945,7 +945,7 @@ func (c *EgClient) UpdateConnectionInvoker(request *model.UpdateConnectionReques
 
 // UpdateEndpoint 更新访问端点
 //
-// 更新访问端点
+// 更新访问端点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
@@ -966,7 +966,7 @@ func (c *EgClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *
 
 // UpdateEventSource 更新自定义事件源
 //
-// 更新自定义事件源定义
+// 更新自定义事件源定义。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEventSource(request *model.UpdateEventSourceRequest) (*model.UpdateEventSourceResponse, error) {
@@ -987,7 +987,7 @@ func (c *EgClient) UpdateEventSourceInvoker(request *model.UpdateEventSourceRequ
 
 // UpdateEventStreaming 更新事件流
 //
-// 更新事件流
+// 更新事件流。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateEventStreaming(request *model.UpdateEventStreamingRequest) (*model.UpdateEventStreamingResponse, error) {
@@ -1008,7 +1008,7 @@ func (c *EgClient) UpdateEventStreamingInvoker(request *model.UpdateEventStreami
 
 // UpdateSubscription 更新事件订阅
 //
-// 更新事件订阅定义
+// 更新事件订阅定义。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateSubscription(request *model.UpdateSubscriptionRequest) (*model.UpdateSubscriptionResponse, error) {
@@ -1050,7 +1050,7 @@ func (c *EgClient) UpdateSubscriptionSourceInvoker(request *model.UpdateSubscrip
 
 // UpdateSubscriptionTarget 更新事件订阅目标
 //
-// 更新事件订阅目标定义
+// 更新事件订阅目标定义。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateSubscriptionTarget(request *model.UpdateSubscriptionTargetRequest) (*model.UpdateSubscriptionTargetResponse, error) {
@@ -1071,7 +1071,7 @@ func (c *EgClient) UpdateSubscriptionTargetInvoker(request *model.UpdateSubscrip
 
 // ListApiVersions 获取API版本列表
 //
-// 获取服务支持的API版本列表
+// 获取服务支持的API版本列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
@@ -1092,7 +1092,7 @@ func (c *EgClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest)
 
 // ListObsBuckets 获取obs桶列表
 //
-// 获取obs桶列表
+// 获取obs桶列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) ListObsBuckets(request *model.ListObsBucketsRequest) (*model.ListObsBucketsResponse, error) {

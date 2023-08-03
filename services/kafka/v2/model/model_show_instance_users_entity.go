@@ -8,7 +8,7 @@ import (
 
 type ShowInstanceUsersEntity struct {
 
-	// 用户名称。
+	// 用户名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
 	UserName *string `json:"user_name,omitempty"`
 
 	// 用户角色。

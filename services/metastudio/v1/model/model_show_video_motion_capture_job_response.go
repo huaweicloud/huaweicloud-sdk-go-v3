@@ -12,7 +12,7 @@ import (
 // ShowVideoMotionCaptureJobResponse Response Object
 type ShowVideoMotionCaptureJobResponse struct {
 
-	// 视频驱动模式。 * HEAD: 头部 * HALF_BODY: 半身 * FULL_BODY: 全身 * AUTO: 自动
+	// 视频驱动模式。 * HEAD：头部 * HALF_BODY：半身 * FULL_BODY：全身 * AUTO：自动
 	MotionCaptureMode *ShowVideoMotionCaptureJobResponseMotionCaptureMode `json:"motion_capture_mode,omitempty"`
 
 	InputInfo *InputInfo `json:"input_info,omitempty"`
@@ -22,13 +22,13 @@ type ShowVideoMotionCaptureJobResponse struct {
 	// 视频驱动任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 任务的状态。 * WAITING: 等待中 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+	// 任务的状态。 * WAITING：等待中 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
 	State *ShowVideoMotionCaptureJobResponseState `json:"state,omitempty"`
 
-	// 任务开始时间,格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+	// 任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 任务结束时间,格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+	// 任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
 	EndTime        *string `json:"end_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -576,6 +576,14 @@ func GenReqDefForListComponentInfos() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ComponentType").
+		WithJsonTag("component_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AvailabilityZoneId").
+		WithJsonTag("availability_zone_id").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").

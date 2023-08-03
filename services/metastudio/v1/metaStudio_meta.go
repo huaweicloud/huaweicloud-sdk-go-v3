@@ -48,6 +48,11 @@ func GenReqDefForDeleteAsset() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Mode").
+		WithJsonTag("mode").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
 		WithJsonTag("Authorization").
 		WithLocationType(def.Header))
@@ -156,8 +161,8 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 		WithJsonTag("sex").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Lanuage").
-		WithJsonTag("lanuage").
+		WithName("Language").
+		WithJsonTag("language").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SystemProperty").
@@ -577,47 +582,6 @@ func GenReqDefForListStyles() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListSelfPrivileges() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/privileges").
-		WithResponse(new(model.ListSelfPrivilegesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PrivilegeType").
-		WithJsonTag("privilege_type").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Authorization").
-		WithJsonTag("Authorization").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSdkDate").
-		WithJsonTag("X-Sdk-Date").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XProjectId").
-		WithJsonTag("X-Project-Id").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XAppUserId").
-		WithJsonTag("X-App-UserId").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCreateTtsa() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -636,6 +600,14 @@ func GenReqDefForCreateTtsa() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XProjectId").
 		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XUserPrivilege").
+		WithJsonTag("X-User-Privilege").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -707,6 +679,10 @@ func GenReqDefForListTtsaJobs() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XProjectId").
 		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

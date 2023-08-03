@@ -21,10 +21,10 @@ type AnimationAssetMeta struct {
 	// 动作是否需要自动解析。
 	AutoAnalysis *bool `json:"auto_analysis,omitempty"`
 
-	// 语音延迟播放时长，单位秒。使用场景举例：入场动画3秒，voice_delay设置成4秒，则语音从入场动画开始后第4秒开始播放。
+	// 语音延迟播放时长。  单位秒。  使用场景举例：入场动画3秒，voice_delay设置成4秒，则语音从入场动画开始后第4秒开始播放。
 	VoiceDelay *float32 `json:"voice_delay,omitempty"`
 
-	// 动画插入位置限制。 * ONLY_BEGINNING： 视频制作时，动画只允许出现在起始位置。 * ONLY_END： 视频制作时，动画只允许许出现在结束位置。
+	// 动画插入位置限制。 * ONLY_BEGINNING：视频制作时，动画只允许出现在起始位置。 * ONLY_END：视频制作时，动画只允许出现在结束位置。
 	AnimationInsertRestriction *AnimationAssetMetaAnimationInsertRestriction `json:"animation_insert_restriction,omitempty"`
 }
 

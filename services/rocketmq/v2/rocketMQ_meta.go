@@ -474,6 +474,10 @@ func GenReqDefForListMessages() *def.HttpRequestDef {
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Key").
+		WithJsonTag("key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))

@@ -95,6 +95,9 @@ type ListInstanceResult struct {
 
 	// 实例磁盘的可使用率，值范围[0-1]，值保留四位小数。
 	DiskUsage *string `json:"disk_usage,omitempty"`
+
+	// 备份空间使用量，单位KB。
+	BackupUsedSpace *string `json:"backup_used_space,omitempty"`
 }
 
 func (o ListInstanceResult) String() string {

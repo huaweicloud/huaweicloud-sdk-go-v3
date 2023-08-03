@@ -233,6 +233,126 @@ func (i *UpdateConfigurationAggregatorInvoker) Invoke() (*model.UpdateConfigurat
 	}
 }
 
+type CollectConformancePackComplianceSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectConformancePackComplianceSummaryInvoker) Invoke() (*model.CollectConformancePackComplianceSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectConformancePackComplianceSummaryResponse), nil
+	}
+}
+
+type CreateConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConformancePackInvoker) Invoke() (*model.CreateConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConformancePackResponse), nil
+	}
+}
+
+type DeleteConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConformancePackInvoker) Invoke() (*model.DeleteConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConformancePackResponse), nil
+	}
+}
+
+type ListBuiltInConformancePackTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBuiltInConformancePackTemplatesInvoker) Invoke() (*model.ListBuiltInConformancePackTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBuiltInConformancePackTemplatesResponse), nil
+	}
+}
+
+type ListConformancePackComplianceByPackIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConformancePackComplianceByPackIdInvoker) Invoke() (*model.ListConformancePackComplianceByPackIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConformancePackComplianceByPackIdResponse), nil
+	}
+}
+
+type ListConformancePackComplianceDetailsByPackIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConformancePackComplianceDetailsByPackIdInvoker) Invoke() (*model.ListConformancePackComplianceDetailsByPackIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConformancePackComplianceDetailsByPackIdResponse), nil
+	}
+}
+
+type ListConformancePackComplianceScoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConformancePackComplianceScoresInvoker) Invoke() (*model.ListConformancePackComplianceScoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConformancePackComplianceScoresResponse), nil
+	}
+}
+
+type ListConformancePacksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConformancePacksInvoker) Invoke() (*model.ListConformancePacksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConformancePacksResponse), nil
+	}
+}
+
+type ShowBuiltInConformancePackTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuiltInConformancePackTemplateInvoker) Invoke() (*model.ShowBuiltInConformancePackTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuiltInConformancePackTemplateResponse), nil
+	}
+}
+
+type ShowConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConformancePackInvoker) Invoke() (*model.ShowConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConformancePackResponse), nil
+	}
+}
+
 type ShowResourceHistoryInvoker struct {
 	*invoker.BaseInvoker
 }

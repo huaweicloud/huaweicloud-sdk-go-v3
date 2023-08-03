@@ -23,6 +23,9 @@ type OpenMysqlProxyRequestBody struct {
 	// 代理实例类型。默认类型为readwrite。
 	ProxyMode *OpenMysqlProxyRequestBodyProxyMode `json:"proxy_mode,omitempty"`
 
+	// 数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+	RouteMode *int32 `json:"route_mode,omitempty"`
+
 	// 数据库节点的读权重设置。
 	NodesReadWeight *[]NodesWeight `json:"nodes_read_weight,omitempty"`
 }

@@ -14,16 +14,16 @@ type TtsaJob struct {
 	// 语音驱动任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 任务的状态。 * WAITING * PROCESSING * SUCCEED * FAILED
+	// 任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败
 	State *TtsaJobState `json:"state,omitempty"`
 
-	// 任务开始时间,格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+	// 任务开始时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 任务结束时间,格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
+	// 任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 语音驱动内容时长，单位:秒。
+	// 语音驱动内容时长。  单位:秒。
 	ContentDuration *float32 `json:"content_duration,omitempty"`
 }
 

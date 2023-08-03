@@ -26,6 +26,8 @@ type ShowDetailOfSubscriptionTargetResponse struct {
 
 	Transform *TransForm `json:"transform,omitempty"`
 
+	DeadLetterQueue *DeadLetterQueue `json:"dead_letter_queue,omitempty"`
+
 	// 创建时间
 	CreatedTime *string `json:"created_time,omitempty"`
 

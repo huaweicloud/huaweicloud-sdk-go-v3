@@ -49,8 +49,10 @@ type ShowDetailOfEventSourceResponse struct {
 	Detail *interface{} `json:"detail,omitempty"`
 
 	// 自定义事件源状态
-	Status         *ShowDetailOfEventSourceResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                                    `json:"-"`
+	Status *ShowDetailOfEventSourceResponseStatus `json:"status,omitempty"`
+
+	ErrorInfo      *ErrorInfo `json:"error_info,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ShowDetailOfEventSourceResponse) String() string {

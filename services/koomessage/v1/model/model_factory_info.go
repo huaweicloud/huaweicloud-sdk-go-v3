@@ -14,6 +14,9 @@ type FactoryInfo struct {
 
 	// 模板状态。  - 1：激活  - 其他：未激活
 	State int32 `json:"state"`
+
+	// 厂商版本
+	Version *string `json:"version,omitempty"`
 }
 
 func (o FactoryInfo) String() string {

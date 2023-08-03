@@ -66,6 +66,14 @@ type ShowIssueV4Response struct {
 
 	Status *IssueItemSfV4Status `json:"status,omitempty"`
 
+	// 工作项发布版本号
+	ReleaseDev *string `json:"release_dev,omitempty"`
+
+	// 缺陷发现版本号（仅Bug类型工作项具备该字段）
+	FindReleaseDev *string `json:"find_release_dev,omitempty"`
+
+	Env *IssueDetailResponseV4Env `json:"env,omitempty"`
+
 	Tracker *CreateIssueResponseV4Tracker `json:"tracker,omitempty"`
 
 	// 更新时间 年-月-日 时:分:秒

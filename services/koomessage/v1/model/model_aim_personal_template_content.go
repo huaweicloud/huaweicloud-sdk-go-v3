@@ -51,7 +51,7 @@ type AimPersonalTemplateContent struct {
 	// 表示短剧视频模板视频和封面的宽高比。即card_id为ShortVideo时，此项有值。 - threeToFour: 宽高比为3:4 - oneToOne: 宽高比为1:1
 	Ratio *string `json:"ratio,omitempty"`
 
-	Action *AimPersonalTemplateContentAction `json:"action"`
+	Action *AimPersonalTemplateContentAction `json:"action,omitempty"`
 }
 
 func (o AimPersonalTemplateContent) String() string {

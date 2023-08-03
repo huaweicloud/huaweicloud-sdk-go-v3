@@ -24,9 +24,6 @@ type CreateVmsTemplateRequestBody struct {
 	// 智能信息基础版模板备注信息，用于填写对模板审核的期望或要求，最大不超过200个字。例如：希望这个模板绑定的通道类型是三网合一通道，默认优先绑定三网合一通道。
 	Remarks *string `json:"remarks,omitempty"`
 
-	// 用于发送提醒短信，将智能信息基础版模板审批的结果和意见及时通知到指定对象，目前仅支持11位纯数字国内手机号码，多个号码用英文逗号分隔，最多支持5个手机号。
-	Reminders *string `json:"reminders,omitempty"`
-
 	// 客户系统回调URL，可用于通知对端模板审核状态信息。  > 接口规格需参照定义智能信息基础版模板状态回执完成实现。
 	Callbackurl *string `json:"callbackurl,omitempty"`
 }

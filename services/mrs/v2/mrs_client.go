@@ -285,6 +285,90 @@ func (c *MrsClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameReq
 	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDataConnector 创建数据连接
+//
+// 创建数据连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) CreateDataConnector(request *model.CreateDataConnectorRequest) (*model.CreateDataConnectorResponse, error) {
+	requestDef := GenReqDefForCreateDataConnector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDataConnectorResponse), nil
+	}
+}
+
+// CreateDataConnectorInvoker 创建数据连接
+func (c *MrsClient) CreateDataConnectorInvoker(request *model.CreateDataConnectorRequest) *CreateDataConnectorInvoker {
+	requestDef := GenReqDefForCreateDataConnector()
+	return &CreateDataConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDataConnector 删除数据连接
+//
+// 删除数据连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) DeleteDataConnector(request *model.DeleteDataConnectorRequest) (*model.DeleteDataConnectorResponse, error) {
+	requestDef := GenReqDefForDeleteDataConnector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDataConnectorResponse), nil
+	}
+}
+
+// DeleteDataConnectorInvoker 删除数据连接
+func (c *MrsClient) DeleteDataConnectorInvoker(request *model.DeleteDataConnectorRequest) *DeleteDataConnectorInvoker {
+	requestDef := GenReqDefForDeleteDataConnector()
+	return &DeleteDataConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDataConnector 查询数据连接列表
+//
+// 查询数据连接列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListDataConnector(request *model.ListDataConnectorRequest) (*model.ListDataConnectorResponse, error) {
+	requestDef := GenReqDefForListDataConnector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataConnectorResponse), nil
+	}
+}
+
+// ListDataConnectorInvoker 查询数据连接列表
+func (c *MrsClient) ListDataConnectorInvoker(request *model.ListDataConnectorRequest) *ListDataConnectorInvoker {
+	requestDef := GenReqDefForListDataConnector()
+	return &ListDataConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDataConnector 更新数据连接
+//
+// 更新数据连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) UpdateDataConnector(request *model.UpdateDataConnectorRequest) (*model.UpdateDataConnectorResponse, error) {
+	requestDef := GenReqDefForUpdateDataConnector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDataConnectorResponse), nil
+	}
+}
+
+// UpdateDataConnectorInvoker 更新数据连接
+func (c *MrsClient) UpdateDataConnectorInvoker(request *model.UpdateDataConnectorRequest) *UpdateDataConnectorInvoker {
+	requestDef := GenReqDefForUpdateDataConnector()
+	return &UpdateDataConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHdfsFileList 获取指定目录文件列表
 //
 // 在MRS集群中获取指定目录文件列表。

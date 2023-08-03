@@ -13,6 +13,12 @@ type MysqlEngineVersionInfo struct {
 
 	// 数据库版本号，只返回两位数的大版本号
 	Name string `json:"name"`
+
+	// 兼容的开源数据库版本号，返回三位开源版本号。
+	Version *string `json:"version,omitempty"`
+
+	// 数据库版本号，返回完整的四位版本号。
+	KernelVersion *string `json:"kernel_version,omitempty"`
 }
 
 func (o MysqlEngineVersionInfo) String() string {

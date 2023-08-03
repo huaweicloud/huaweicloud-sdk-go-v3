@@ -15,7 +15,7 @@ type PptAssetMeta struct {
 	// PPT是否需要自动解析。
 	AutoAnalysis *bool `json:"auto_analysis,omitempty"`
 
-	// PPT解析状态。 * INITIALIZE： 初始 * WAITING： 等待 * CONVERTING： 解析中 * FAILED： 失败 * SUCCEEDED： 成功 * CANCELED： 取消
+	// PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
 	PptAnalysisStatus *PptAssetMetaPptAnalysisStatus `json:"ppt_analysis_status,omitempty"`
 
 	// PPT页面总数。

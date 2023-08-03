@@ -15,8 +15,8 @@ type PictureModelingByUrlReq struct {
 	// 风格ID
 	StyleId string `json:"style_id"`
 
-	// 风格ID
-	Name *string `json:"name,omitempty"`
+	// 模型名称
+	Name string `json:"name"`
 
 	// 照片建模任务结束的回调地址。
 	NotifyUrl *string `json:"notify_url,omitempty"`

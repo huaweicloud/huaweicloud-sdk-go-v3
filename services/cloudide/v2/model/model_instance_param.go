@@ -35,7 +35,7 @@ type InstanceParam struct {
 	// 预装插件列表
 	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
 
-	// 预装插件参数
+	// 预装插件参数，请注意敏感信息保护，若涉及敏感信息，请自行加密
 	PluginVars map[string]string `json:"plugin_vars,omitempty"`
 
 	// 云服务器对应的portId，小网连接ecs的场景下使用

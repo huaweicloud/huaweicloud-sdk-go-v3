@@ -128,6 +128,6 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 		}
 	}
 
-	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoints(builder.endpoints).WithCredential(builder.credentials)
+	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoints(builder.endpoints).WithCredential(builder.credentials).WithHttpConfig(*builder.httpConfig)
 	return hcHttpClient
 }

@@ -12,7 +12,7 @@ import (
 // HumanModelAssetMeta 数字人模型元数据。
 type HumanModelAssetMeta struct {
 
-	// 数字人模型风格ID。 * system_male_001: 男性风格01 * system_female_001: 女性风格01 * system_male_002：男性风格02  * system_female_002: 女性风格02
+	// 数字人模型风格ID。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
 	StyleId *string `json:"style_id,omitempty"`
 
 	// 数字人模型建模类型。 * UPLOADED：租户上传的模型 * PICTURE_MODELING：照片建模生成的模型 * CHARACTER_CUSTOMIZATION_MODELING：捏脸生成的模型
@@ -20,6 +20,8 @@ type HumanModelAssetMeta struct {
 
 	// 建模任务ID。
 	ModelingJobId *string `json:"modeling_job_id,omitempty"`
+
+	ModelProperties *HumanModelMetaProperties `json:"model_properties,omitempty"`
 
 	// 可替换组件列表。
 	Components *[]ComponentInfo `json:"components,omitempty"`

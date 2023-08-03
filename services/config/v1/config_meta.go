@@ -374,6 +374,233 @@ func GenReqDefForUpdateConfigurationAggregator() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCollectConformancePackComplianceSummary() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/compliance/summary").
+		WithResponse(new(model.CollectConformancePackComplianceSummaryResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackName").
+		WithJsonTag("conformance_pack_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateConformancePack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs").
+		WithResponse(new(model.CreateConformancePackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteConformancePack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/{conformance_pack_id}").
+		WithResponse(new(model.DeleteConformancePackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackId").
+		WithJsonTag("conformance_pack_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListBuiltInConformancePackTemplates() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/conformance-packs/templates").
+		WithResponse(new(model.ListBuiltInConformancePackTemplatesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TemplateKey").
+		WithJsonTag("template_key").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListConformancePackComplianceByPackId() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/{conformance_pack_id}/compliance").
+		WithResponse(new(model.ListConformancePackComplianceByPackIdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackId").
+		WithJsonTag("conformance_pack_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyAssignmentName").
+		WithJsonTag("policy_assignment_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListConformancePackComplianceDetailsByPackId() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/{conformance_pack_id}/compliance/details").
+		WithResponse(new(model.ListConformancePackComplianceDetailsByPackIdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackId").
+		WithJsonTag("conformance_pack_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyAssignmentName").
+		WithJsonTag("policy_assignment_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListConformancePackComplianceScores() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/scores").
+		WithResponse(new(model.ListConformancePackComplianceScoresResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackName").
+		WithJsonTag("conformance_pack_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListConformancePacks() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs").
+		WithResponse(new(model.ListConformancePacksResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackName").
+		WithJsonTag("conformance_pack_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowBuiltInConformancePackTemplate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/conformance-packs/templates/{template_id}").
+		WithResponse(new(model.ShowBuiltInConformancePackTemplateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TemplateId").
+		WithJsonTag("template_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowConformancePack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/{conformance_pack_id}").
+		WithResponse(new(model.ShowConformancePackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackId").
+		WithJsonTag("conformance_pack_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowResourceHistory() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

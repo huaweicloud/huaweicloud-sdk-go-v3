@@ -13,8 +13,11 @@ type DeleteTemplateMaterialResponse struct {
 	Status *string `json:"status,omitempty"`
 
 	// 响应消息。
-	Message        *string `json:"message,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Message *string `json:"message,omitempty"`
+
+	// 固定为null
+	Data           *interface{} `json:"data,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o DeleteTemplateMaterialResponse) String() string {

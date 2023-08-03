@@ -818,6 +818,27 @@ func (c *GaussDBClient) ListScheduleJobsInvoker(request *model.ListScheduleJobsR
 	return &ListScheduleJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyGaussMySqlProxyRouteMode 设置读写分离路由模式
+//
+// 设置读写分离路由模式。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ModifyGaussMySqlProxyRouteMode(request *model.ModifyGaussMySqlProxyRouteModeRequest) (*model.ModifyGaussMySqlProxyRouteModeResponse, error) {
+	requestDef := GenReqDefForModifyGaussMySqlProxyRouteMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyGaussMySqlProxyRouteModeResponse), nil
+	}
+}
+
+// ModifyGaussMySqlProxyRouteModeInvoker 设置读写分离路由模式
+func (c *GaussDBClient) ModifyGaussMySqlProxyRouteModeInvoker(request *model.ModifyGaussMySqlProxyRouteModeRequest) *ModifyGaussMySqlProxyRouteModeInvoker {
+	requestDef := GenReqDefForModifyGaussMySqlProxyRouteMode()
+	return &ModifyGaussMySqlProxyRouteModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetGaussMySqlDatabasePassword 修改数据库用户密码
 //
 // 修改云数据库 GaussDB(for MySQL)实例数据库用户密码。
@@ -1618,7 +1639,7 @@ func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstan
 
 // UpdateProxyConnectionPoolType 更改数据库代理连接池类型
 //
-// 更改数据库代理连接池类型
+// 更改数据库代理连接池类型。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) UpdateProxyConnectionPoolType(request *model.UpdateProxyConnectionPoolTypeRequest) (*model.UpdateProxyConnectionPoolTypeResponse, error) {

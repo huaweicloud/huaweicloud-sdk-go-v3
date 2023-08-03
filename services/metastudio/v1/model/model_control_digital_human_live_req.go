@@ -12,7 +12,7 @@ import (
 // ControlDigitalHumanLiveReq 控制命令。
 type ControlDigitalHumanLiveReq struct {
 
-	// 命令名称。 - BODY_POS_RESET: 视觉驱动复位 - HIPS_POS_ADJUST: 模型位移调整 - EYE_POS: 眼神锁定/解锁 - SKELETON_ROTATION_ADJUST: 骨骼旋转 - LOCK_SKELETONS: 骨骼锁定 - UNLOCK_SKELETONS: 骨骼解锁
+	// 命令名称。 - BODY_POS_RESET：视觉驱动复位 - HIPS_POS_ADJUST：模型位移调整 - EYE_POS：眼神锁定/解锁 - SKELETON_ROTATION_ADJUST：骨骼旋转 - LOCK_SKELETONS：骨骼锁定 - UNLOCK_SKELETONS：骨骼解锁
 	Command ControlDigitalHumanLiveReqCommand `json:"command"`
 
 	// 命令参数。

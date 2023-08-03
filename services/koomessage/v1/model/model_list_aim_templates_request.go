@@ -18,7 +18,7 @@ type ListAimTemplatesRequest struct {
 	// 模板分类。  - public：查公共模板 - private：查个人模板  > 不传查全部模板。
 	TplType *string `json:"tpl_type,omitempty"`
 
-	// 厂商类型。 - HUAWEI：华为 - Xiaomi：小米 - OPPO：OPPO - MEIZU：魅族 - VIVO：VIVO
+	// 厂商类型。 - HUAWEI：华为 - XIAOMI：小米 - OPPO：OPPO - MEIZU：魅族 - VIVO：VIVO
 	FactoryType *[]string `json:"factory_type,omitempty"`
 
 	// 模板是否携带参数。  - true：是 - false：否

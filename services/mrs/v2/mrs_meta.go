@@ -278,6 +278,93 @@ func GenReqDefForUpdateClusterName() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateDataConnector() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/data-connectors").
+		WithResponse(new(model.CreateDataConnectorResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteDataConnector() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/data-connectors/{connector_id}").
+		WithResponse(new(model.DeleteDataConnectorResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectorId").
+		WithJsonTag("connector_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDataConnector() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/data-connectors").
+		WithResponse(new(model.ListDataConnectorResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectorId").
+		WithJsonTag("connector_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SourceType").
+		WithJsonTag("source_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectorName").
+		WithJsonTag("connector_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Available").
+		WithJsonTag("available").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateDataConnector() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/data-connectors/{connector_id}").
+		WithResponse(new(model.UpdateDataConnectorResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectorId").
+		WithJsonTag("connector_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowHdfsFileList() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

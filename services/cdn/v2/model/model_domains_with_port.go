@@ -28,7 +28,7 @@ type DomainsWithPort struct {
 	Cname *string `json:"cname,omitempty"`
 
 	// 源站配置。
-	Sources *[]SourcesConfig `json:"sources,omitempty"`
+	Sources *[]SourcesDomainConfig `json:"sources,omitempty"`
 
 	// 是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
 	HttpsStatus *int32 `json:"https_status,omitempty"`

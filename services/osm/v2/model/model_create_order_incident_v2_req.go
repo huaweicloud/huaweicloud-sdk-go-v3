@@ -26,12 +26,6 @@ type CreateOrderIncidentV2Req struct {
 	// 工单来源，当前固定为83aeb0f2834c4df49826c781d32a963e
 	SourceId string `json:"source_id"`
 
-	// 是否授权
-	IsAuthorized *int32 `json:"is_authorized,omitempty"`
-
-	// 机密信息内容
-	AuthorizationContent *string `json:"authorization_content,omitempty"`
-
 	// 提醒手机号
 	RemindMobile *string `json:"remind_mobile,omitempty"`
 

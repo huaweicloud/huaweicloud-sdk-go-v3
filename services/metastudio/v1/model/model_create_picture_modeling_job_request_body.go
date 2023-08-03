@@ -18,7 +18,7 @@ type CreatePictureModelingJobRequestBody struct {
 	// 照片文件。 > 只能上传jpg/jpeg/png格式文件， 最大分辨率为3840*2160
 	File *def.FilePart `json:"file"`
 
-	// 数字人风格ID。 * system_male_001: 男性风格01 * system_female_001: 女性风格01 * system_male_002：男性风格02 * system_female_002: 女性风格02
+	// 数字人风格ID。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02 * system_female_002：女性风格02
 	StyleId *def.MultiPart `json:"style_id"`
 
 	// 数字人模型名称，首次创建时使用。

@@ -11,7 +11,7 @@ type StartInstanceParam struct {
 	// 插件列表
 	PluginEnableList *[]string `json:"plugin_enable_list,omitempty"`
 
-	// 插件参数
+	// 插件参数，请注意敏感信息保护，若涉及敏感信息，请自行加密
 	PluginVars map[string]string `json:"plugin_vars,omitempty"`
 }
 

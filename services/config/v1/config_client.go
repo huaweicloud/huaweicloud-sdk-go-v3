@@ -418,6 +418,216 @@ func (c *ConfigClient) UpdateConfigurationAggregatorInvoker(request *model.Updat
 	return &UpdateConfigurationAggregatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectConformancePackComplianceSummary 列举合规规则包的结果概览
+//
+// 列举用户的合规规则包的合规结果概览。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CollectConformancePackComplianceSummary(request *model.CollectConformancePackComplianceSummaryRequest) (*model.CollectConformancePackComplianceSummaryResponse, error) {
+	requestDef := GenReqDefForCollectConformancePackComplianceSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectConformancePackComplianceSummaryResponse), nil
+	}
+}
+
+// CollectConformancePackComplianceSummaryInvoker 列举合规规则包的结果概览
+func (c *ConfigClient) CollectConformancePackComplianceSummaryInvoker(request *model.CollectConformancePackComplianceSummaryRequest) *CollectConformancePackComplianceSummaryInvoker {
+	requestDef := GenReqDefForCollectConformancePackComplianceSummary()
+	return &CollectConformancePackComplianceSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConformancePack 创建合规规则包
+//
+// 创建新的合规规则包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CreateConformancePack(request *model.CreateConformancePackRequest) (*model.CreateConformancePackResponse, error) {
+	requestDef := GenReqDefForCreateConformancePack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConformancePackResponse), nil
+	}
+}
+
+// CreateConformancePackInvoker 创建合规规则包
+func (c *ConfigClient) CreateConformancePackInvoker(request *model.CreateConformancePackRequest) *CreateConformancePackInvoker {
+	requestDef := GenReqDefForCreateConformancePack()
+	return &CreateConformancePackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConformancePack 删除合规规则包
+//
+// 删除用户的合规规则包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) DeleteConformancePack(request *model.DeleteConformancePackRequest) (*model.DeleteConformancePackResponse, error) {
+	requestDef := GenReqDefForDeleteConformancePack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConformancePackResponse), nil
+	}
+}
+
+// DeleteConformancePackInvoker 删除合规规则包
+func (c *ConfigClient) DeleteConformancePackInvoker(request *model.DeleteConformancePackRequest) *DeleteConformancePackInvoker {
+	requestDef := GenReqDefForDeleteConformancePack()
+	return &DeleteConformancePackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBuiltInConformancePackTemplates 列举预定义合规规则包模板
+//
+// 列举预定义的合规规则包的模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListBuiltInConformancePackTemplates(request *model.ListBuiltInConformancePackTemplatesRequest) (*model.ListBuiltInConformancePackTemplatesResponse, error) {
+	requestDef := GenReqDefForListBuiltInConformancePackTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBuiltInConformancePackTemplatesResponse), nil
+	}
+}
+
+// ListBuiltInConformancePackTemplatesInvoker 列举预定义合规规则包模板
+func (c *ConfigClient) ListBuiltInConformancePackTemplatesInvoker(request *model.ListBuiltInConformancePackTemplatesRequest) *ListBuiltInConformancePackTemplatesInvoker {
+	requestDef := GenReqDefForListBuiltInConformancePackTemplates()
+	return &ListBuiltInConformancePackTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConformancePackComplianceByPackId 列举合规规则包的评估结果
+//
+// 列举合规规则包的合规规则评估结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListConformancePackComplianceByPackId(request *model.ListConformancePackComplianceByPackIdRequest) (*model.ListConformancePackComplianceByPackIdResponse, error) {
+	requestDef := GenReqDefForListConformancePackComplianceByPackId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConformancePackComplianceByPackIdResponse), nil
+	}
+}
+
+// ListConformancePackComplianceByPackIdInvoker 列举合规规则包的评估结果
+func (c *ConfigClient) ListConformancePackComplianceByPackIdInvoker(request *model.ListConformancePackComplianceByPackIdRequest) *ListConformancePackComplianceByPackIdInvoker {
+	requestDef := GenReqDefForListConformancePackComplianceByPackId()
+	return &ListConformancePackComplianceByPackIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConformancePackComplianceDetailsByPackId 列举合规规则包的评估结果详情
+//
+// 列举合规规则包的合规规则评估结果详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListConformancePackComplianceDetailsByPackId(request *model.ListConformancePackComplianceDetailsByPackIdRequest) (*model.ListConformancePackComplianceDetailsByPackIdResponse, error) {
+	requestDef := GenReqDefForListConformancePackComplianceDetailsByPackId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConformancePackComplianceDetailsByPackIdResponse), nil
+	}
+}
+
+// ListConformancePackComplianceDetailsByPackIdInvoker 列举合规规则包的评估结果详情
+func (c *ConfigClient) ListConformancePackComplianceDetailsByPackIdInvoker(request *model.ListConformancePackComplianceDetailsByPackIdRequest) *ListConformancePackComplianceDetailsByPackIdInvoker {
+	requestDef := GenReqDefForListConformancePackComplianceDetailsByPackId()
+	return &ListConformancePackComplianceDetailsByPackIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConformancePackComplianceScores 列举合规规则包分数
+//
+// 列举用户的合规规则包分数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListConformancePackComplianceScores(request *model.ListConformancePackComplianceScoresRequest) (*model.ListConformancePackComplianceScoresResponse, error) {
+	requestDef := GenReqDefForListConformancePackComplianceScores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConformancePackComplianceScoresResponse), nil
+	}
+}
+
+// ListConformancePackComplianceScoresInvoker 列举合规规则包分数
+func (c *ConfigClient) ListConformancePackComplianceScoresInvoker(request *model.ListConformancePackComplianceScoresRequest) *ListConformancePackComplianceScoresInvoker {
+	requestDef := GenReqDefForListConformancePackComplianceScores()
+	return &ListConformancePackComplianceScoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConformancePacks 列举合规规则包
+//
+// 列举用户的合规规则包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListConformancePacks(request *model.ListConformancePacksRequest) (*model.ListConformancePacksResponse, error) {
+	requestDef := GenReqDefForListConformancePacks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConformancePacksResponse), nil
+	}
+}
+
+// ListConformancePacksInvoker 列举合规规则包
+func (c *ConfigClient) ListConformancePacksInvoker(request *model.ListConformancePacksRequest) *ListConformancePacksInvoker {
+	requestDef := GenReqDefForListConformancePacks()
+	return &ListConformancePacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBuiltInConformancePackTemplate 查看预定义合规规则包模板
+//
+// 根据ID获取单个预定义合规规则包模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ShowBuiltInConformancePackTemplate(request *model.ShowBuiltInConformancePackTemplateRequest) (*model.ShowBuiltInConformancePackTemplateResponse, error) {
+	requestDef := GenReqDefForShowBuiltInConformancePackTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBuiltInConformancePackTemplateResponse), nil
+	}
+}
+
+// ShowBuiltInConformancePackTemplateInvoker 查看预定义合规规则包模板
+func (c *ConfigClient) ShowBuiltInConformancePackTemplateInvoker(request *model.ShowBuiltInConformancePackTemplateRequest) *ShowBuiltInConformancePackTemplateInvoker {
+	requestDef := GenReqDefForShowBuiltInConformancePackTemplate()
+	return &ShowBuiltInConformancePackTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConformancePack 查看合规规则包
+//
+// 根据ID获取单个合规规则包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ShowConformancePack(request *model.ShowConformancePackRequest) (*model.ShowConformancePackResponse, error) {
+	requestDef := GenReqDefForShowConformancePack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConformancePackResponse), nil
+	}
+}
+
+// ShowConformancePackInvoker 查看合规规则包
+func (c *ConfigClient) ShowConformancePackInvoker(request *model.ShowConformancePackRequest) *ShowConformancePackInvoker {
+	requestDef := GenReqDefForShowConformancePack()
+	return &ShowConformancePackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceHistory 查询资源历史
 //
 // 查询资源与资源关系的变更历史

@@ -15,6 +15,7 @@ type RtcRoomInfoList struct {
 	// RTC房间ID。
 	RoomId *string `json:"room_id,omitempty"`
 
+	// 接入RTC的用户信息。
 	Users *[]RtcUserInfo `json:"users,omitempty"`
 }
 

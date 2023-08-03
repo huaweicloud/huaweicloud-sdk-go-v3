@@ -15,7 +15,7 @@ type BackSources struct {
 	// 源站IP或者域名。
 	IpOrDomain string `json:"ip_or_domain"`
 
-	// obs桶类型， “private”： 私有桶， “public”： 公有桶。
+	// OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
 	ObsBucketType *string `json:"obs_bucket_type,omitempty"`
 
 	// HTTP端口，取值范围：1-65535。

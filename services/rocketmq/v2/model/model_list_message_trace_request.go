@@ -19,7 +19,7 @@ type ListMessageTraceRequest struct {
 	InstanceId string `json:"instance_id"`
 
 	// 消息ID。
-	MsgId *string `json:"msg_id,omitempty"`
+	MsgId string `json:"msg_id"`
 }
 
 func (o ListMessageTraceRequest) String() string {

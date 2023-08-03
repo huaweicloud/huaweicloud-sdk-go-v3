@@ -11,7 +11,7 @@ import (
 
 type ConfirmFileUploadRequestBody struct {
 
-	// 文件上传状态。 - CREATED： 上传完成 - FAILED： 上传失败 - CANCELLED： 取消上传
+	// 文件上传状态。 - CREATED：上传完成 - FAILED：上传失败 - CANCELLED：取消上传
 	State ConfirmFileUploadRequestBodyState `json:"state"`
 }
 

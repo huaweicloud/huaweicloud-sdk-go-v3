@@ -7,7 +7,9 @@ import (
 )
 
 type FreezePubResponseModel struct {
-	Data *FreezePubResponseModelData `json:"data,omitempty"`
+
+	// 服务号ID。
+	PubId *string `json:"pub_id,omitempty"`
 }
 
 func (o FreezePubResponseModel) String() string {

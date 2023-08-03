@@ -21,13 +21,13 @@ type CreateInstanceReq struct {
 	// 消息引擎：rabbitmq。
 	Engine CreateInstanceReqEngine `json:"engine"`
 
-	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35和3.7.17
+	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:g42,hk_g42,tm,hk_tm)。
 	EngineVersion CreateInstanceReqEngineVersion `json:"engine_version"`
 
 	// 消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。
 	StorageSpace int32 `json:"storage_space"`
 
-	// 认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
+	// 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
 	AccessUser string `json:"access_user"`
 
 	// 实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）

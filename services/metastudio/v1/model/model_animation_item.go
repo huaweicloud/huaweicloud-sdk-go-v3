@@ -11,7 +11,7 @@ type AnimationItem struct {
 	// 动作资产ID。
 	AnimationAssetId *string `json:"animation_asset_id,omitempty"`
 
-	// 时间戳，相对时间戳，单位S，保留3位小数。
+	// 时间戳，相对时间戳。  单位秒。  保留3位小数。
 	Timestamp *float32 `json:"timestamp,omitempty"`
 }
 

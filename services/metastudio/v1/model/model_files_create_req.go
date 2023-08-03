@@ -9,7 +9,7 @@ import (
 // FilesCreateReq 创建文件请求。
 type FilesCreateReq struct {
 
-	// 文件名。创建文件时候不区分大小写，最大长度256，最小长度1。
+	// 文件名，不区分大小写，最大长度256，最小长度1。
 	FileName string `json:"file_name"`
 
 	// 文件内容MD5值，MD5值需要进行Base64编码。
@@ -24,7 +24,7 @@ type FilesCreateReq struct {
 	// 资产ID。
 	AssetId string `json:"asset_id"`
 
-	// 文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN： 主文件 * COVER： 封面文件 * PAGE: 内容页图片 * SAMPLE：样例音频 * OTHER： 其他文件 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE和OTHER
+	// 文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE和OTHER
 	AssetFileCategory string `json:"asset_file_category"`
 }
 

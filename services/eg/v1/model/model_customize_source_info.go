@@ -49,6 +49,8 @@ type CustomizeSourceInfo struct {
 
 	// 自定义事件源状态
 	Status *CustomizeSourceInfoStatus `json:"status,omitempty"`
+
+	ErrorInfo *ErrorInfo `json:"error_info,omitempty"`
 }
 
 func (o CustomizeSourceInfo) String() string {

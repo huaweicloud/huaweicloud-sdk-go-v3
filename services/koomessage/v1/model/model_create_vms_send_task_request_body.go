@@ -19,7 +19,7 @@ type CreateVmsSendTaskRequestBody struct {
 	ExpirationTime *int32 `json:"expiration_time,omitempty"`
 
 	// 群发手机号码列表，最多支持5000个号码。  > 长度指的是单个号码的长度。 > mobiles和individual_params字段只能二选一。
-	Mobiles []string `json:"mobiles"`
+	Mobiles *[]string `json:"mobiles,omitempty"`
 
 	// 群发动态参数数组。 - 参数顺序按照模板创建时参数占位符的顺序传入，例如创建模板时设置动参有#p_1#、#p_2#、#p_3#，则传入的参数数组顺序第一个元素为#p_1#，第二个元素是#p_2#，第三个元素为#p_3#。 - mobiles不填时，此字段被忽略。
 	DyncParams *[]ContentParam `json:"dync_params,omitempty"`

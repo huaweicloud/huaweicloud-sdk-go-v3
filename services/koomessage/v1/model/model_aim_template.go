@@ -18,7 +18,7 @@ type AimTemplate struct {
 	// 场景类型。
 	Scene *string `json:"scene,omitempty"`
 
-	// 模板状态。  - 0：禁用 - 1：启用  > 智能信息模板启动、禁用暂为运营管理功能，Console页面与API暂未开放此功能。
+	// 模板状态。  - 0：禁用 - 1：启用
 	TplState *int32 `json:"tpl_state,omitempty"`
 
 	// 禁用原因。

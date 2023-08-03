@@ -15,7 +15,7 @@ type PptPageInfo struct {
 	// 页面对应图片文件ID。
 	FileId *string `json:"file_id,omitempty"`
 
-	// 讲解词 (从备注中提取)。
+	// 讲解词（从备注中提取）。
 	PageContent *string `json:"page_content,omitempty"`
 }
 

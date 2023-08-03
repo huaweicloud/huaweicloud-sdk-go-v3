@@ -9,11 +9,14 @@ import (
 // ConfigsGetBody 配置项。
 type ConfigsGetBody struct {
 
-	// 业务类型，web：网站加速，download：文件下载加速，video：点播加速，wholesit：全站加速。
+	// 业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
 	BusinessType *string `json:"business_type,omitempty"`
 
-	// 服务区域，mainland_china：中国大陆，global：全球，outside_mainland_china：中国大陆境外。
+	// 服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
 	ServiceArea *string `json:"service_area,omitempty"`
+
+	// 域名备注。
+	Remark *string `json:"remark,omitempty"`
 
 	// 回源请求头配置
 	OriginRequestHeader *[]OriginRequestHeader `json:"origin_request_header,omitempty"`
@@ -45,7 +48,7 @@ type ConfigsGetBody struct {
 
 	Compress *Compress `json:"compress,omitempty"`
 
-	CacheUrlParameterFilter *CacheUrlParameterFilter `json:"cache_url_parameter_filter,omitempty"`
+	CacheUrlParameterFilter *CacheUrlParameterFilterGetBody `json:"cache_url_parameter_filter,omitempty"`
 
 	// ipv6设置，1：打开；0：关闭。
 	Ipv6Accelerate *int32 `json:"ipv6_accelerate,omitempty"`
@@ -78,6 +81,12 @@ type ConfigsGetBody struct {
 
 	// 请求限速。
 	RequestLimitRules *[]RequestLimitRules `json:"request_limit_rules,omitempty"`
+
+	IpFrequencyLimit *IpFrequencyLimitQuery `json:"ip_frequency_limit,omitempty"`
+
+	Hsts *HstsQuery `json:"hsts,omitempty"`
+
+	Quic *Quic `json:"quic,omitempty"`
 
 	// 自定义错误页面
 	ErrorCodeRedirectRules *[]ErrorCodeRedirectRules `json:"error_code_redirect_rules,omitempty"`

@@ -92,6 +92,9 @@ type ListInstanceResponse struct {
 
 	// 标签列表，没有标签不返回该参数。
 	Tags []interface{} `json:"tags"`
+
+	// 备份空间使用量，单位KB。
+	BackupUsedSpace *string `json:"backup_used_space,omitempty"`
 }
 
 func (o ListInstanceResponse) String() string {

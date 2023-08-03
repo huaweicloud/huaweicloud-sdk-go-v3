@@ -61,6 +61,12 @@ type MysqlProxyV3 struct {
 
 	// 数据库代理版本是否支持会话级连接池。  取值范围: - true: 支持。 - false: 不支持。
 	SwitchConnectionPoolTypeEnabled *bool `json:"switch_connection_pool_type_enabled,omitempty"`
+
+	// 数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
+	RouteMode *int32 `json:"route_mode,omitempty"`
+
+	// 数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
+	BalanceRouteModeEnabled *bool `json:"balance_route_mode_enabled,omitempty"`
 }
 
 func (o MysqlProxyV3) String() string {

@@ -124,27 +124,6 @@ func (c *OsmClient) CreateAskQuestionInvoker(request *model.CreateAskQuestionReq
 	return &CreateAskQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAuthorization 创建授权
-//
-// 创建授权
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *OsmClient) CreateAuthorization(request *model.CreateAuthorizationRequest) (*model.CreateAuthorizationResponse, error) {
-	requestDef := GenReqDefForCreateAuthorization()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAuthorizationResponse), nil
-	}
-}
-
-// CreateAuthorizationInvoker 创建授权
-func (c *OsmClient) CreateAuthorizationInvoker(request *model.CreateAuthorizationRequest) *CreateAuthorizationInvoker {
-	requestDef := GenReqDefForCreateAuthorization()
-	return &CreateAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateCaseExtendsParam 提交工单扩展参数
 //
 // 提交工单扩展参数
