@@ -35,7 +35,7 @@ type Backups struct {
 	// 备份大小，(单位：MB)
 	Size *int64 `json:"size,omitempty"`
 
-	Datastore *MysqlDatastore `json:"datastore,omitempty"`
+	Datastore *MysqlDatastoreInBackup `json:"datastore,omitempty"`
 
 	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`

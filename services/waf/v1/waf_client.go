@@ -43,9 +43,9 @@ func (c *WafClient) ApplyCertificateToHostInvoker(request *model.ApplyCertificat
 // ChangePrepaidCloudWaf 变更包周期云模式waf规格
 //
 // 变更包周期云模式waf规格。注：
-//  - 1.变更某产品规格的前提是必须已购买该产品
-//  - 2.waf版本只支持升配，不支持降配；扩展包数量可以增加或者减少，但不支持数量减少为0
-//  - 3.不支持同时升降配，如增加域名扩展包数量，同时减少规则扩展包数量
+//   - 1.变更某产品规格的前提是必须已购买该产品
+//   - 2.waf版本只支持升配，不支持降配；扩展包数量可以增加或者减少，但不支持数量减少为0
+//   - 3.不支持同时升降配，如增加域名扩展包数量，同时减少规则扩展包数量
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ChangePrepaidCloudWaf(request *model.ChangePrepaidCloudWafRequest) (*model.ChangePrepaidCloudWafResponse, error) {

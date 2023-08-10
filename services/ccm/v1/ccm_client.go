@@ -235,22 +235,25 @@ func (c *CcmClient) CreateCertificateAuthorityObsAgencyInvoker(request *model.Cr
 // 通过CSR签发证书。功能约束如下：
 // - 1、当前默认参数如下：
 //   - CA 默认参数：
-//       - **keyUsage**: digitalSignature, keyCertSign, cRLSign，优先采用CSR中的参数；
-//       - **SignatureHashAlgorithm**: SHA384；
-//       - **PathLength**：0 （可自定义）。
+//   - **keyUsage**: digitalSignature, keyCertSign, cRLSign，优先采用CSR中的参数；
+//   - **SignatureHashAlgorithm**: SHA384；
+//   - **PathLength**：0 （可自定义）。
 //   - 私有证书：
-//       - **keyUsage**: digitalSignature keyAgreement，优先采用CSR中的参数；
-//       - **SignatureHashAlgorithm**: SHA384；
+//   - **keyUsage**: digitalSignature keyAgreement，优先采用CSR中的参数；
+//   - **SignatureHashAlgorithm**: SHA384；
+//
 // - 2、当传入的type为**INTERMEDIATE_CA**时，创建出的从属CA证书，有以下限制：
 //   - 不占用CA配额。在查询CA列表时，不会返回该证书；
 //   - 只支持通过以下两个接口获取其信息：
-//       - GET /v1/private-certificate-authorities/{ca_id} 获取证书详情
-//       - POST /v1/private-certificate-authorities/{ca_id}/export 导出证书
+//   - GET /v1/private-certificate-authorities/{ca_id} 获取证书详情
+//   - POST /v1/private-certificate-authorities/{ca_id}/export 导出证书
 //   - 本接口返回的**certificate_id**即代表从属CA的**ca_id**；
 //   - 无法用于签发证书，密钥在用户侧。
+//
 // - 3、当type为**ENTITY_CERT**时，创建出的私有证书，有以下特点：
 //   - 占用私有证书配额。在查询私有证书列表时，会返回该证书；
 //   - 除了导出时不包含密钥信息（密钥在用户端），其余用法与其它私有证书一致。
+//
 // &gt; 注：需要使用“\\r\\n”或“\\n”代替换行符，将CSR转换成一串字符，可参考示例请求。注：目前，证书的组织信息、公钥算法以及公钥内容等均来自CSR文件，暂不支持API传入。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -337,77 +340,78 @@ func (c *CcmClient) EnableCertificateAuthorityCrlInvoker(request *model.EnableCe
 //
 // 导出证书。
 //   - 国际算法
-//     - 选择是否压缩时，分以下两种情况：
-//       - is_compressed为true时，返回文件压缩包，命名为：证书名称_type字段小写字母.zip，如”test_apache.zip“。
-//         - 系统生成密钥签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;时，压缩包中包含三个文件：**server.key**（密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**chain.crt**（证书链，内容为PEM格式）、**server.crt**（证书，内容为PEM格式）；
-//           - type &#x3D; \&quot;**IIS**\&quot;时，压缩包中包含两个文件：**keystorePass.txt**（keystore口令，若导出证书时设置密码，则无此密码文件）、**server.pfx**（PFX证书，证书与证书链包含在同一个文件）；
-//           - type &#x3D; \&quot;**NGINX**\&quot;时，压缩包中包含两个文件：**server.key**（密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**server.crt**（内容为PEM格式，证书与证书链包含在同一个文件）；
-//           - type &#x3D; \&quot;**TOMCAT**\&quot;时，压缩包中包含两个文件：**keystorePass.txt**（keystore口令，若导出证书时设置密码，则无此密码文件）、**server.jks**（JKX证书，证书与证书链包含在同一个文件）；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含三个文件：**server.key**（密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**chain.pem**（证书链）、**server.pem**（证书）。
-//         - 导入CSR签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;时，压缩包中包含两个文件：**chain.crt**（证书链，内容为PEM格式）、**server.crt**（证书，内容为PEM格式）；
-//           - type &#x3D; \&quot;**NGINX**\&quot;时，压缩包中包含一个文件：**server.crt**（证书，内容为PEM格式）；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含两个文件：**chain.pem**（证书链，内容为PEM格式）、**cert.pem**（证书，内容为PEM格式）。
-//       - is_compressed为false时，返回json格式，返回的具体参数如下：
-//         - 系统生成密钥签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**OTHER**\&quot;时，返回参数如下：
-//             - **certificate**（证书内容，PEM格式）；
-//             - **certificate_chain**（证书链，PEM格式）；
-//             - **private_key**（证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）；
-//           - type &#x3D; \&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义。
-//         - 导入CSR签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;或\&quot;**OTHER**\&quot;时，返回参数如下：
-//             - **certificate**（证书内容，PEM格式）；
-//             - **certificate_chain**（证书链，PEM格式）；
+//   - 选择是否压缩时，分以下两种情况：
+//   - is_compressed为true时，返回文件压缩包，命名为：证书名称_type字段小写字母.zip，如”test_apache.zip“。
+//   - 系统生成密钥签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;时，压缩包中包含三个文件：**server.key**（密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**chain.crt**（证书链，内容为PEM格式）、**server.crt**（证书，内容为PEM格式）；
+//   - type &#x3D; \&quot;**IIS**\&quot;时，压缩包中包含两个文件：**keystorePass.txt**（keystore口令，若导出证书时设置密码，则无此密码文件）、**server.pfx**（PFX证书，证书与证书链包含在同一个文件）；
+//   - type &#x3D; \&quot;**NGINX**\&quot;时，压缩包中包含两个文件：**server.key**（密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**server.crt**（内容为PEM格式，证书与证书链包含在同一个文件）；
+//   - type &#x3D; \&quot;**TOMCAT**\&quot;时，压缩包中包含两个文件：**keystorePass.txt**（keystore口令，若导出证书时设置密码，则无此密码文件）、**server.jks**（JKX证书，证书与证书链包含在同一个文件）；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含三个文件：**server.key**（密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**chain.pem**（证书链）、**server.pem**（证书）。
+//   - 导入CSR签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;时，压缩包中包含两个文件：**chain.crt**（证书链，内容为PEM格式）、**server.crt**（证书，内容为PEM格式）；
+//   - type &#x3D; \&quot;**NGINX**\&quot;时，压缩包中包含一个文件：**server.crt**（证书，内容为PEM格式）；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含两个文件：**chain.pem**（证书链，内容为PEM格式）、**cert.pem**（证书，内容为PEM格式）。
+//   - is_compressed为false时，返回json格式，返回的具体参数如下：
+//   - 系统生成密钥签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**OTHER**\&quot;时，返回参数如下：
+//   - **certificate**（证书内容，PEM格式）；
+//   - **certificate_chain**（证书链，PEM格式）；
+//   - **private_key**（证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）；
+//   - type &#x3D; \&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义。
+//   - 导入CSR签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**IIS**\&quot;或\&quot;**TOMCAT**\&quot;或\&quot;**OTHER**\&quot;时，返回参数如下：
+//   - **certificate**（证书内容，PEM格式）；
+//   - **certificate_chain**（证书链，PEM格式）；
 //   - 国密算法（中国站）
-//     - 选择是否压缩和是否国密标准时，分以下四种情况：
-//       - is_compressed为true、is_sm_standard为true时，返回文件压缩包，命名为：证书名称_type字段小写字母.zip，如”test_apache.zip“。
-//         - 系统生成密钥签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含五个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.key**（签名证书密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**signCert.pem**（签名证书，内容为PEM格式）、**encSm2EnvelopedKey.key**（加密证书的国密标准SM2数字信封文件，内容为BASE64编码）、**encCert.pem**（加密证书，内容为PEM格式）。
-//         - 导入CSR签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含四个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.pem**（签名证书，内容为PEM格式）、**encSm2EnvelopedKey.key**（加密证书的国密标准SM2数字信封文件，内容为BASE64编码）、**encCert.pem**（加密证书，内容为PEM格式）。
-//       - is_compressed为true、is_sm_standard为false时，返回文件压缩包，命名为：证书名称_type字段小写字母.zip，如”test_apache.zip“。
-//         - 系统生成密钥签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含五个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.key**（签名证书密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**signCert.pem**（签名证书，内容为PEM格式）、**encCert.key**（加密证书密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**encCert.pem**（加密证书，内容为PEM格式）。
-//         - 导入CSR签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含四个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.pem**（签名证书，内容为PEM格式）、**encCert.key**（加密证书密钥文件，内容为PEM格式）、**encCert.pem**（加密证书，内容为PEM格式）。
-//       - is_compressed为false、is_sm_standard为true时，返回json格式，返回的具体参数如下：
-//         - 系统生成密钥签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
-//             - **certificate_chain**（证书链，PEM格式）；
-//             - **certificate**（签名证书内容，PEM格式）；
-//             - **private_key**（签名证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）；
-//             - **enc_certificate**（加密证书内容，PEM格式）；
-//             - **enc_sm2_enveloped_key**（加密证书的国密GMT0009标准规范SM2数字信封文件，BASE64编码）。
-//         - 导入CSR签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
-//             - **certificate_chain**（证书链，PEM格式）；
-//             - **certificate**（签名证书内容，PEM格式）；
-//             - **enc_certificate**（加密证书内容，PEM格式）；
-//             - **enc_sm2_enveloped_key**（加密证书的国密GMT0009标准规范SM2数字信封文件，BASE64编码）。
-//       - is_compressed为false、is_sm_standard为false时，返回json格式，返回的具体参数如下：
-//         - 系统生成密钥签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
-//             - **certificate_chain**（证书链，PEM格式）；
-//             - **certificate**（签名证书内容，PEM格式）；
-//             - **private_key**（签名证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）；
-//             - **enc_certificate**（加密证书内容，PEM格式）；
-//             - **enc_private_key**（加密证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）。
-//         - 导入CSR签发证书
-//           - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
-//           - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
-//             - **certificate_chain**（证书链，PEM格式）；
-//             - **certificate**（签名证书内容，PEM格式）；
-//             - **enc_certificate**（加密证书内容，PEM格式）；
-//             - **enc_private_key**（加密证书私钥，PEM格式）。
+//   - 选择是否压缩和是否国密标准时，分以下四种情况：
+//   - is_compressed为true、is_sm_standard为true时，返回文件压缩包，命名为：证书名称_type字段小写字母.zip，如”test_apache.zip“。
+//   - 系统生成密钥签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含五个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.key**（签名证书密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**signCert.pem**（签名证书，内容为PEM格式）、**encSm2EnvelopedKey.key**（加密证书的国密标准SM2数字信封文件，内容为BASE64编码）、**encCert.pem**（加密证书，内容为PEM格式）。
+//   - 导入CSR签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含四个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.pem**（签名证书，内容为PEM格式）、**encSm2EnvelopedKey.key**（加密证书的国密标准SM2数字信封文件，内容为BASE64编码）、**encCert.pem**（加密证书，内容为PEM格式）。
+//   - is_compressed为true、is_sm_standard为false时，返回文件压缩包，命名为：证书名称_type字段小写字母.zip，如”test_apache.zip“。
+//   - 系统生成密钥签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含五个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.key**（签名证书密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**signCert.pem**（签名证书，内容为PEM格式）、**encCert.key**（加密证书密钥文件，内容为PEM格式，若导出证书时设置密码，则为加密后的私钥）、**encCert.pem**（加密证书，内容为PEM格式）。
+//   - 导入CSR签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，压缩包中包含四个文件：**chain.pem**（证书链，内容为PEM格式）、**signCert.pem**（签名证书，内容为PEM格式）、**encCert.key**（加密证书密钥文件，内容为PEM格式）、**encCert.pem**（加密证书，内容为PEM格式）。
+//   - is_compressed为false、is_sm_standard为true时，返回json格式，返回的具体参数如下：
+//   - 系统生成密钥签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
+//   - **certificate_chain**（证书链，PEM格式）；
+//   - **certificate**（签名证书内容，PEM格式）；
+//   - **private_key**（签名证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）；
+//   - **enc_certificate**（加密证书内容，PEM格式）；
+//   - **enc_sm2_enveloped_key**（加密证书的国密GMT0009标准规范SM2数字信封文件，BASE64编码）。
+//   - 导入CSR签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
+//   - **certificate_chain**（证书链，PEM格式）；
+//   - **certificate**（签名证书内容，PEM格式）；
+//   - **enc_certificate**（加密证书内容，PEM格式）；
+//   - **enc_sm2_enveloped_key**（加密证书的国密GMT0009标准规范SM2数字信封文件，BASE64编码）。
+//   - is_compressed为false、is_sm_standard为false时，返回json格式，返回的具体参数如下：
+//   - 系统生成密钥签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
+//   - **certificate_chain**（证书链，PEM格式）；
+//   - **certificate**（签名证书内容，PEM格式）；
+//   - **private_key**（签名证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）；
+//   - **enc_certificate**（加密证书内容，PEM格式）；
+//   - **enc_private_key**（加密证书私钥，PEM格式，若导出证书时设置密码，则为加密后的私钥）。
+//   - 导入CSR签发证书
+//   - type &#x3D; \&quot;**APACHE**\&quot;或\&quot;**IIS**\&quot;或\&quot;**NGINX**\&quot;或\&quot;**TOMCAT**\&quot;时，暂时未定义；
+//   - type &#x3D; \&quot;**OTHER**\&quot;时，返回参数如下：
+//   - **certificate_chain**（证书链，PEM格式）；
+//   - **certificate**（签名证书内容，PEM格式）；
+//   - **enc_certificate**（加密证书内容，PEM格式）；
+//   - **enc_private_key**（加密证书私钥，PEM格式）。
+//
 // &gt; 只有当证书状态为“已签发”时，可进行导出操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -842,9 +846,9 @@ func (c *CcmClient) ExportCertificateAuthorityCsrInvoker(request *model.ExportCe
 // 导入CA证书，使用本接口需要满足以下条件：
 //   - （1）证书为“待激活”状态的从属CA；
 //   - （2）导入的证书体必须满足以下条件：
-//       - a、该证书被签发时的证书签名请求必须是从PCA系统中导出；
-//       - b、其证书链虽然允许不上传，但后期若想要导出完整的证书链，应导入完整的证书链；
-//       - c、证书体与证书链必须为PEM编码。
+//   - a、该证书被签发时的证书签名请求必须是从PCA系统中导出；
+//   - b、其证书链虽然允许不上传，但后期若想要导出完整的证书链，应导入完整的证书链；
+//   - c、证书体与证书链必须为PEM编码。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcmClient) ImportCertificateAuthorityCertificate(request *model.ImportCertificateAuthorityCertificateRequest) (*model.ImportCertificateAuthorityCertificateResponse, error) {

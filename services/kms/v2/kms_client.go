@@ -44,7 +44,7 @@ func (c *KmsClient) BatchCreateKmsTagsInvoker(request *model.BatchCreateKmsTagsR
 //
 // - 功能介绍：撤销授权，授权用户撤销被授权用户操作密钥的权限。
 // - 说明：
-//    - 创建密钥的用户才能撤销该密钥授权。
+//   - 创建密钥的用户才能撤销该密钥授权。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CancelGrant(request *model.CancelGrantRequest) (*model.CancelGrantResponse, error) {
@@ -87,14 +87,14 @@ func (c *KmsClient) CancelKeyDeletionInvoker(request *model.CancelKeyDeletionReq
 
 // CancelSelfGrant 退役授权
 //
-// - 功能介绍：退役授权，表示被授权用户不再具有授权密钥的操作权。
-//   例如：用户A授权用户B可以操作密钥A/key，同时授权用户C可以撤销该授权，
-//   那么用户A、B、C均可退役该授权，退役授权后，用户B不再可以使用A/key。
-// - 须知：
-//      可执行退役授权的主体包括：
-//    - 创建授权的用户；
-//    - 授权中retiring_principal指向的用户；
-//    - 当授权的操作列表中包含retire-grant时，grantee_principal指向的用户。
+//   - 功能介绍：退役授权，表示被授权用户不再具有授权密钥的操作权。
+//     例如：用户A授权用户B可以操作密钥A/key，同时授权用户C可以撤销该授权，
+//     那么用户A、B、C均可退役该授权，退役授权后，用户B不再可以使用A/key。
+//   - 须知：
+//     可执行退役授权的主体包括：
+//   - 创建授权的用户；
+//   - 授权中retiring_principal指向的用户；
+//   - 当授权的操作列表中包含retire-grant时，grantee_principal指向的用户。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CancelSelfGrant(request *model.CancelSelfGrantRequest) (*model.CancelSelfGrantResponse, error) {
@@ -159,7 +159,7 @@ func (c *KmsClient) CreateDatakeyWithoutPlaintextInvoker(request *model.CreateDa
 //
 // - 功能介绍：创建授权，被授权用户可以对授权密钥进行操作。
 // - 说明：
-//    - 服务默认主密钥（密钥别名后缀为“/default”）不可以授权。
+//   - 服务默认主密钥（密钥别名后缀为“/default”）不可以授权。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateGrant(request *model.CreateGrantRequest) (*model.CreateGrantResponse, error) {
@@ -267,8 +267,8 @@ func (c *KmsClient) CreateParametersForImportInvoker(request *model.CreateParame
 
 // CreateRandom 创建随机数
 //
-// - 功能介绍：
-//   生成8~8192bit范围内的随机数。
+//   - 功能介绍：
+//     生成8~8192bit范围内的随机数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.CreateRandomResponse, error) {
@@ -905,8 +905,8 @@ func (c *KmsClient) SignInvoker(request *model.SignRequest) *SignInvoker {
 //
 // - 功能介绍：修改用户主密钥别名。
 // - 说明：
-//    - 服务默认主密钥（密钥别名后缀为“/default”）不可以修改。
-//    - 密钥处于“计划删除”状态，密钥别名不可以修改。
+//   - 服务默认主密钥（密钥别名后缀为“/default”）不可以修改。
+//   - 密钥处于“计划删除”状态，密钥别名不可以修改。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) UpdateKeyAlias(request *model.UpdateKeyAliasRequest) (*model.UpdateKeyAliasResponse, error) {
@@ -929,8 +929,8 @@ func (c *KmsClient) UpdateKeyAliasInvoker(request *model.UpdateKeyAliasRequest) 
 //
 // - 功能介绍：修改用户主密钥描述信息。
 // - 说明：
-//    - 服务默认主密钥（密钥别名后缀为“/default”）不可以修改。
-//    - 密钥处于“计划删除”状态，密钥描述不可以修改。
+//   - 服务默认主密钥（密钥别名后缀为“/default”）不可以修改。
+//   - 密钥处于“计划删除”状态，密钥描述不可以修改。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KmsClient) UpdateKeyDescription(request *model.UpdateKeyDescriptionRequest) (*model.UpdateKeyDescriptionResponse, error) {

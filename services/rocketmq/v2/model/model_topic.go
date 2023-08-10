@@ -25,6 +25,9 @@ type Topic struct {
 
 	// 关联的代理。
 	Brokers *[]TopicBrokers `json:"brokers,omitempty"`
+
+	// 消息类型。
+	MessageType *TopicMessageType `json:"message_type,omitempty"`
 }
 
 func (o Topic) String() string {
@@ -69,6 +72,61 @@ func (c TopicPermission) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TopicPermission) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TopicMessageType struct {
+	value string
+}
+
+type TopicMessageTypeEnum struct {
+	NORMAL      TopicMessageType
+	FIFO        TopicMessageType
+	DELAY       TopicMessageType
+	TRANSACTION TopicMessageType
+}
+
+func GetTopicMessageTypeEnum() TopicMessageTypeEnum {
+	return TopicMessageTypeEnum{
+		NORMAL: TopicMessageType{
+			value: "NORMAL",
+		},
+		FIFO: TopicMessageType{
+			value: "FIFO",
+		},
+		DELAY: TopicMessageType{
+			value: "DELAY",
+		},
+		TRANSACTION: TopicMessageType{
+			value: "TRANSACTION",
+		},
+	}
+}
+
+func (c TopicMessageType) Value() string {
+	return c.value
+}
+
+func (c TopicMessageType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TopicMessageType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

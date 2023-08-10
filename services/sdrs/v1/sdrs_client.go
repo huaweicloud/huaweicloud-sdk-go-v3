@@ -369,7 +369,9 @@ func (c *SdrsClient) DeleteProtectedInstanceNicInvoker(request *model.DeleteProt
 // DeleteProtectedInstanceTag 删除保护实例标签
 //
 // 幂等接口：删除时，不对标签字符集做校验，调用接口前必须要做encodeURI，服务端需要对接口URI做decodeURI。
-//  说明:请自行选择工具执行URI编码。
+//
+//	说明:请自行选择工具执行URI编码。
+//
 // 删除的key不存在报404，Key不能为空或者空字符串。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -710,7 +712,9 @@ func (c *SdrsClient) ListRpoStatisticsInvoker(request *model.ListRpoStatisticsRe
 // 仅变更生产站点云服务器的规格，容灾站点云服务器规格不变。
 // 生产站点云服务器规格不变，仅变更容灾站点云服务器的规格。
 // 当且仅当待变更规格的云服务器处于关机状态时，才能执行此操作。
-//  说明：不同规格的云服务器在性能上存在差异，可能会对云服务器上运行的应用产生影响。
+//
+//	说明：不同规格的云服务器在性能上存在差异，可能会对云服务器上运行的应用产生影响。
+//
 // 为保证切换/故障切换后云服务器的性能，建议容灾站点服务器的规格（CPU、内存）不低于生产站点云服务器的规格（CPU、内存）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.

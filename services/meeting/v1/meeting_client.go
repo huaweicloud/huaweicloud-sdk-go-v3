@@ -1224,6 +1224,7 @@ func (c *MeetingClient) InviteShareInvoker(request *model.InviteShareRequest) *I
 // * 若被邀请用户在华为云会议系统中不存在，则：
 //   - 华为云会议免费版和华为云会议标准版发送短信/邮件邀请用户完成注册后加入企业。用户注册成功后，加入该企业。
 //   - 华为云会议旗舰版在企业内直接添加该用户。用户会收到华为云会议的初始密码，用户第一次以手机号或者邮箱登录时，需要修改密码。
+//
 // * 若被邀请用户在华为云会议系统中存在，则该用户会收到短信或者邮件确认。确认完成后改用户加入企业内。该用户的密码保持原来的密码不变。
 //
 // Please refer to HUAWEI cloud API Explorer for details.

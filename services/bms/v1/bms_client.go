@@ -21,7 +21,6 @@ func BmsClientBuilder() *http_client.HcHttpClientBuilder {
 
 // AddServerNics 裸金属服务器绑定弹性网卡
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BmsClient) AddServerNics(request *model.AddServerNicsRequest) (*model.AddServerNicsResponse, error) {
 	requestDef := GenReqDefForAddServerNics()
@@ -229,7 +228,6 @@ func (c *BmsClient) CreateBareMetalServersInvoker(request *model.CreateBareMetal
 }
 
 // DeleteServerNics 裸金属服务器解绑弹性网卡
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BmsClient) DeleteServerNics(request *model.DeleteServerNicsRequest) (*model.DeleteServerNicsResponse, error) {
@@ -481,7 +479,6 @@ func (c *BmsClient) ShowResetPwdInvoker(request *model.ShowResetPwdRequest) *Sho
 
 // ShowServerRemoteConsole 获取裸金属服务器远程登录地址
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BmsClient) ShowServerRemoteConsole(request *model.ShowServerRemoteConsoleRequest) (*model.ShowServerRemoteConsoleResponse, error) {
 	requestDef := GenReqDefForShowServerRemoteConsole()
@@ -542,7 +539,6 @@ func (c *BmsClient) ShowWindowsBaremetalServerPwdInvoker(request *model.ShowWind
 }
 
 // UpdateBaremetalServerInterfaceAttachments 修改裸金属服务器弹性网卡的属性
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BmsClient) UpdateBaremetalServerInterfaceAttachments(request *model.UpdateBaremetalServerInterfaceAttachmentsRequest) (*model.UpdateBaremetalServerInterfaceAttachmentsResponse, error) {

@@ -30,7 +30,7 @@ type BackPoolVo struct {
 	// 账期
 	BillingCycle *string `json:"billing_cycle,omitempty"`
 
-	// 流量池状态: 2-在用,-1-欠费停用
+	// 流量池状态: 2-在用,-1-已停用,-2已废弃
 	PoolStatus *int32 `json:"pool_status,omitempty"`
 
 	// 已用流量(查询账期所在月份), 单位MB

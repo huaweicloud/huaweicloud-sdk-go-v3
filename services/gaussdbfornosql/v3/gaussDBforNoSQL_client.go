@@ -1221,7 +1221,6 @@ func (c *GaussDBforNoSQLClient) ShowApplicableInstancesInvoker(request *model.Sh
 
 // ShowApplyHistory 查询参数模板应用历史
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowApplyHistory(request *model.ShowApplyHistoryRequest) (*model.ShowApplyHistoryResponse, error) {
 	requestDef := GenReqDefForShowApplyHistory()

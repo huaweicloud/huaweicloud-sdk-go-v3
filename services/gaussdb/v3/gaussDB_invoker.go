@@ -269,6 +269,18 @@ func (i *DeleteTaskRecordInvoker) Invoke() (*model.DeleteTaskRecordResponse, err
 	}
 }
 
+type DescribeBackupEncryptStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DescribeBackupEncryptStatusInvoker) Invoke() (*model.DescribeBackupEncryptStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DescribeBackupEncryptStatusResponse), nil
+	}
+}
+
 type ExpandGaussMySqlInstanceVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +470,18 @@ func (i *ListScheduleJobsInvoker) Invoke() (*model.ListScheduleJobsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListScheduleJobsResponse), nil
+	}
+}
+
+type ModifyBackupEncryptStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyBackupEncryptStatusInvoker) Invoke() (*model.ModifyBackupEncryptStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyBackupEncryptStatusResponse), nil
 	}
 }
 
@@ -938,6 +962,18 @@ func (i *UpdateProxyConnectionPoolTypeInvoker) Invoke() (*model.UpdateProxyConne
 		return nil, err
 	} else {
 		return result.(*model.UpdateProxyConnectionPoolTypeResponse), nil
+	}
+}
+
+type UpdateProxyPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProxyPortInvoker) Invoke() (*model.UpdateProxyPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProxyPortResponse), nil
 	}
 }
 

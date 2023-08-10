@@ -45,7 +45,7 @@ type ShowRecordSetByZoneRequest struct {
 	// 查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
 	SearchMode *string `json:"search_mode,omitempty"`
 }
 

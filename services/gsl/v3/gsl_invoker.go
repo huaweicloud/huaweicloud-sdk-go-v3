@@ -5,42 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gsl/v3/model"
 )
 
-type ListBackPoolMembersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBackPoolMembersInvoker) Invoke() (*model.ListBackPoolMembersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBackPoolMembersResponse), nil
-	}
-}
-
-type ListBackPoolsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBackPoolsInvoker) Invoke() (*model.ListBackPoolsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBackPoolsResponse), nil
-	}
-}
-
-type ListProPricePlansInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListProPricePlansInvoker) Invoke() (*model.ListProPricePlansResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListProPricePlansResponse), nil
-	}
-}
-
 type BatchSetAttributesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +74,42 @@ func (i *UpdateAttributeInvoker) Invoke() (*model.UpdateAttributeResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateAttributeResponse), nil
+	}
+}
+
+type ListBackPoolMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackPoolMembersInvoker) Invoke() (*model.ListBackPoolMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackPoolMembersResponse), nil
+	}
+}
+
+type ListBackPoolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackPoolsInvoker) Invoke() (*model.ListBackPoolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackPoolsResponse), nil
+	}
+}
+
+type ListProPricePlansInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProPricePlansInvoker) Invoke() (*model.ListProPricePlansResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProPricePlansResponse), nil
 	}
 }
 
@@ -374,5 +374,29 @@ func (i *SendSmsInvoker) Invoke() (*model.SendSmsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SendSmsResponse), nil
+	}
+}
+
+type ListWorkOrderDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkOrderDetailsInvoker) Invoke() (*model.ListWorkOrderDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkOrderDetailsResponse), nil
+	}
+}
+
+type ListWorkOrdersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkOrdersInvoker) Invoke() (*model.ListWorkOrdersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkOrdersResponse), nil
 	}
 }

@@ -60,6 +60,8 @@ type MyanmarIdcardResult struct {
 
 	// 身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
 	IdcardType *string `json:"idcard_type,omitempty"`
+
+	TranslationInfo *MyanmarIdcardTranslationInfo `json:"translation_info,omitempty"`
 }
 
 func (o MyanmarIdcardResult) String() string {

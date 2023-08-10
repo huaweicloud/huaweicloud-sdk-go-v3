@@ -155,6 +155,12 @@ type ShowInstanceResp struct {
 	// 公网业务数据地址。
 	PublicBrokerAddress *string `json:"public_broker_address,omitempty"`
 
+	// grpc连接地址。
+	GrpcAddress *string `json:"grpc_address,omitempty"`
+
+	// 公网grpc连接地址。
+	PublicGrpcAddress *string `json:"public_grpc_address,omitempty"`
+
 	// 标签列表。
 	Tags *[]TagEntity `json:"tags,omitempty"`
 

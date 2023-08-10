@@ -28,6 +28,9 @@ type MyanmarIdcardRequestBody struct {
 
 	// 是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
 	ReturnIdcardType *bool `json:"return_idcard_type,omitempty"`
+
+	// 是否返回转译信息的开关，可选值如下所示： - true: 返回转译信息。 - false：不返回转译信息。
+	ReturnTranslation *bool `json:"return_translation,omitempty"`
 }
 
 func (o MyanmarIdcardRequestBody) String() string {

@@ -2474,7 +2474,6 @@ func (c *DliClient) ShowJobProgressInvoker(request *model.ShowJobProgressRequest
 
 // ShowPartitions 获取分区信息列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DliClient) ShowPartitions(request *model.ShowPartitionsRequest) (*model.ShowPartitionsResponse, error) {
 	requestDef := GenReqDefForShowPartitions()

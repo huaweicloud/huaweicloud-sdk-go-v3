@@ -32,13 +32,13 @@ func AosClientBuilder() *http_client.HcHttpClientBuilder {
 // 如果不希望通过执行计划进行部署操作，也可以选择调用DeployStack进行直接部署
 //
 // 关于执行计划的过期失效：
-//   1. 若指定资源栈下有多个执行计划，则在执行某个执行计划后（无论结果是否成功），剩余所有的执行计划将过期失效；
-//   2. 若调用ApplyExecutionPlan时，指定的执行计划已经过期失效，则返回403
+//  1. 若指定资源栈下有多个执行计划，则在执行某个执行计划后（无论结果是否成功），剩余所有的执行计划将过期失效；
+//  2. 若调用ApplyExecutionPlan时，指定的执行计划已经过期失效，则返回403
 //
 // 若资源栈状态处于非终态（即以&#x60;IN_PROGRESS&#x60;结尾，详细见下方）状态时，则不允许执行执行计划，并返回403。非终态状态包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ApplyExecutionPlan(request *model.ApplyExecutionPlanRequest) (*model.ApplyExecutionPlanResponse, error) {
@@ -69,11 +69,11 @@ func (c *AosClient) ApplyExecutionPlanInvoker(request *model.ApplyExecutionPlanR
 // 执行计划不会做过多深层的检查和校验，如用户是否有权限生成、修改资源等
 //
 // **注意：**
-//   * 若指定资源栈不存在，则返回404
-//   * 若请求中不含有template_body和template_uri，则返回400
-//   * 若资源栈进行了某次部署操作，则在该次部署操作前生成的执行计划将全部失效
-//   * 执行计划只代表生成时刻的结果，若执行计划生成后，用户手动修改资源状态，则执行计划不会自动更新
-//   * 若资源栈状态处于&#x60;DEPLOYMENT_IN_PROGRESS&#x60;、&#x60;ROLLBACK_IN_PROGRESS&#x60;、&#x60;DELETION_IN_PROGRESS&#x60;等状态时，则不允许创建执行计划，并返回403
+//   - 若指定资源栈不存在，则返回404
+//   - 若请求中不含有template_body和template_uri，则返回400
+//   - 若资源栈进行了某次部署操作，则在该次部署操作前生成的执行计划将全部失效
+//   - 执行计划只代表生成时刻的结果，若执行计划生成后，用户手动修改资源状态，则执行计划不会自动更新
+//   - 若资源栈状态处于&#x60;DEPLOYMENT_IN_PROGRESS&#x60;、&#x60;ROLLBACK_IN_PROGRESS&#x60;、&#x60;DELETION_IN_PROGRESS&#x60;等状态时，则不允许创建执行计划，并返回403
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) CreateExecutionPlan(request *model.CreateExecutionPlanRequest) (*model.CreateExecutionPlanResponse, error) {
@@ -124,52 +124,52 @@ func (c *AosClient) DeleteExecutionPlanInvoker(request *model.DeleteExecutionPla
 // 此API可以基于一份已有的执行计划中增量的资源进行询价，当前支持询价的计费模式有包周期计费、按需计费、免费，暂不支持其他形式的计费模式，例如竞价计费模式等。
 //
 // 注：
-//   * 由于某些资源的属性值含有默认值，且该属性和询价参数相关。若用户的模板中描述的资源没有声明这些属性，则询价结果可能存在偏差。
-//   * 询价结果仅为预估结果，具体请以实际为准。
-//   * 若用户在模板中使用了depends_on参数，如A资源询价必要字段依赖于B资源的创建，则A资源不支持询价。
-//   * 暂不支持传入data sources的flavor.id的场景的询价。
-//   * 暂不支持镜像询价。
-//   * 模板中询价的资源的个数是有限制的。当前一个模板中最多支持12个包周期计费资源和24个按需计费资源。
-//   * 支持询价的资源列表和询价必要参数
-//       * huaweicloud_cce_cluster:
-//           * 支持的计费模式：包周期、按需
-//       * huaweicloud_css_cluster:
-//           * 支持的计费模式：按需
-//       * huaweicloud_evs_volume:
-//           * 支持的计费模式：包周期、按需
-//           * 询价必要参数：size（磁盘规格）
-//       * huaweicloud_compute_instance:
-//           * 支持的计费模式：包周期、按需
-//           * 询价必要参数：flavor_id（规格ID）、flavor_name（规格名称，flavor_id和flavor_name至少给出一个）、system_disk_size（系统磁盘大小）
-//       * huaweicloud_vpc_bandwidth:
-//           * 支持的计费模式：按需
-//           * 询价必要参数：charge_mode仅支持bandwidth
-//       * huaweicloud_vpc_eip:
-//           * 支持的计费模式：包周期、按需
-//           * 询价必要参数：bandwidth.size（带宽大小）
-//       * huaweicloud_gaussdb_redis_instance:
-//           * 支持的计费模式：包周期、按需
-//       * huaweicloud_nat_gateway:
-//           * 支持的计费模式：按需
-//       * huaweicloud_rds_instance:
-//           * 支持的计费模式：包周期、按需
-//       * huaweicloud_sfs_turbo:
-//           * 支持的计费模式：按需
-//           * 询价必要参数：share_type（文件系统类型）
-//       * huaweicloud_dms_kafka_instance:
-//           * 支持的计费模式：按需
-//           * 询价必要参数：flavor_id（规格ID）、product_id（产品ID。flavor_id和product_id至少给出一个。）、storage_space（存储容量）
-//       * huaweicloud_dcs_instance:
-//           * 支持的计费模式：包周期、按需
-//       * huaweicloud_gaussdb_mysql_instance:
-//           * 支持的计费模式：包周期、按需
-//           * 询价必要参数：proxy_node_number（代理节点数量）、volume_size（挂载卷的存储空间）
-//       * huaweicloud_vpc:
-//           * 支持的计费模式：免费
-//       * huaweicloud_drs_job:
-//           * 支持的计费模式：按需
-//       * huaweicloud_apig_instance:
-//           * 支持的计费模式：按需
+//   - 由于某些资源的属性值含有默认值，且该属性和询价参数相关。若用户的模板中描述的资源没有声明这些属性，则询价结果可能存在偏差。
+//   - 询价结果仅为预估结果，具体请以实际为准。
+//   - 若用户在模板中使用了depends_on参数，如A资源询价必要字段依赖于B资源的创建，则A资源不支持询价。
+//   - 暂不支持传入data sources的flavor.id的场景的询价。
+//   - 暂不支持镜像询价。
+//   - 模板中询价的资源的个数是有限制的。当前一个模板中最多支持12个包周期计费资源和24个按需计费资源。
+//   - 支持询价的资源列表和询价必要参数
+//   - huaweicloud_cce_cluster:
+//   - 支持的计费模式：包周期、按需
+//   - huaweicloud_css_cluster:
+//   - 支持的计费模式：按需
+//   - huaweicloud_evs_volume:
+//   - 支持的计费模式：包周期、按需
+//   - 询价必要参数：size（磁盘规格）
+//   - huaweicloud_compute_instance:
+//   - 支持的计费模式：包周期、按需
+//   - 询价必要参数：flavor_id（规格ID）、flavor_name（规格名称，flavor_id和flavor_name至少给出一个）、system_disk_size（系统磁盘大小）
+//   - huaweicloud_vpc_bandwidth:
+//   - 支持的计费模式：按需
+//   - 询价必要参数：charge_mode仅支持bandwidth
+//   - huaweicloud_vpc_eip:
+//   - 支持的计费模式：包周期、按需
+//   - 询价必要参数：bandwidth.size（带宽大小）
+//   - huaweicloud_gaussdb_redis_instance:
+//   - 支持的计费模式：包周期、按需
+//   - huaweicloud_nat_gateway:
+//   - 支持的计费模式：按需
+//   - huaweicloud_rds_instance:
+//   - 支持的计费模式：包周期、按需
+//   - huaweicloud_sfs_turbo:
+//   - 支持的计费模式：按需
+//   - 询价必要参数：share_type（文件系统类型）
+//   - huaweicloud_dms_kafka_instance:
+//   - 支持的计费模式：按需
+//   - 询价必要参数：flavor_id（规格ID）、product_id（产品ID。flavor_id和product_id至少给出一个。）、storage_space（存储容量）
+//   - huaweicloud_dcs_instance:
+//   - 支持的计费模式：包周期、按需
+//   - huaweicloud_gaussdb_mysql_instance:
+//   - 支持的计费模式：包周期、按需
+//   - 询价必要参数：proxy_node_number（代理节点数量）、volume_size（挂载卷的存储空间）
+//   - huaweicloud_vpc:
+//   - 支持的计费模式：免费
+//   - huaweicloud_drs_job:
+//   - 支持的计费模式：按需
+//   - huaweicloud_apig_instance:
+//   - 支持的计费模式：按需
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) EstimateExecutionPlanPrice(request *model.EstimateExecutionPlanPriceRequest) (*model.EstimateExecutionPlanPriceResponse, error) {
@@ -246,12 +246,12 @@ func (c *AosClient) GetExecutionPlanMetadataInvoker(request *model.GetExecutionP
 //
 // 列举当前局点下用户指定资源栈下所有的执行计划
 //
-//   * 默认按照生成时间排序，最早生成的在最前
-//   * 注意：目前暂时返回全量执行计划信息，即不支持分页
-//   * 如果指定的资源栈下没有任何执行计划，则返回空list
-//   * 如果指定的资源栈不存在，则返回404
+//   - 默认按照生成时间排序，最早生成的在最前
+//   - 注意：目前暂时返回全量执行计划信息，即不支持分页
+//   - 如果指定的资源栈下没有任何执行计划，则返回空list
+//   - 如果指定的资源栈不存在，则返回404
 //
-// ListExecutionPlans返回的只有摘要信息（具体摘要信息见ListExecutionPlansResponseBody），如果用户需要详细的执行计划元数据请调用GetExecutionPlanMetadata
+// # ListExecutionPlans返回的只有摘要信息（具体摘要信息见ListExecutionPlansResponseBody），如果用户需要详细的执行计划元数据请调用GetExecutionPlanMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListExecutionPlans(request *model.ListExecutionPlansRequest) (*model.ListExecutionPlansResponse, error) {
@@ -327,7 +327,7 @@ func (c *AosClient) ContinueRollbackStackInvoker(request *model.ContinueRollback
 
 // CreateStack 创建资源栈
 //
-// CreateStack用于生成一个资源栈
+// # CreateStack用于生成一个资源栈
 //
 // * 当请求中不含有模板（template）、参数（vars）等信息，将生成一个无任何资源的空资源栈，返回资源栈ID（stack_id）
 // * 当请求中携带了模板（template）、参数（vars）等信息，则会同时创建并部署资源栈，返回资源栈ID（stack_id）和部署ID（deployment_id）
@@ -358,13 +358,14 @@ func (c *AosClient) CreateStackInvoker(request *model.CreateStackRequest) *Creat
 //
 // * 此API会触发删除资源栈，并以最终一致性删除所有数据，用户可以调用GetStackMetadata或ListStacks跟踪资源栈删除情况
 // * 如果资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，则不允许删除。包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//
 // * 如果资源栈开启了删除保护，则不允许删除。用户可调用GetStackMetadata，查看返回中的&#x60;enable_deletion_protection&#x60;字段判断删除保护是否开启。用户可通过调用UpdateStack关闭删除保护。
 // * 如果资源栈删除失败，可以根据StackEvents提示信息修复当前模板中的错误后，部署成功后再次删除资源栈。有以下两种方式触发部署：
-//   * 调用CreateExecutionPlan创建执行计划，执行计划创建成功后调用ApplyExecutionPlan部署资源栈。
-//   * 调用DeployStack部署资源栈
+//   - 调用CreateExecutionPlan创建执行计划，执行计划创建成功后调用ApplyExecutionPlan部署资源栈。
+//   - 调用DeployStack部署资源栈
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.DeleteStackResponse, error) {
@@ -427,17 +428,17 @@ func (c *AosClient) DeployStackInvoker(request *model.DeployStackRequest) *Deplo
 // 只有当资源栈状态处于终态（即以&#x60;COMPLETE&#x60;或&#x60;FAILED&#x60;结尾，详细见下方）时，资源栈的元数据信息才是部署后的状态
 //
 // 非终态状态包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
 //
 // 终态状态包括但不限于以下状态：
-//   * 生成空资源栈完成（CREATION_COMPLETE）
-//   * 部署失败（DEPLOYMENT_FAILED）
-//   * 部署完成（DEPLOYMENT_COMPLETE）
-//   * 回滚失败（ROLLBACK_FAILED）
-//   * 回滚完成（ROLLBACK_COMPLETE）
-//   * 删除失败（DELETION_FAILED）
+//   - 生成空资源栈完成（CREATION_COMPLETE）
+//   - 部署失败（DEPLOYMENT_FAILED）
+//   - 部署完成（DEPLOYMENT_COMPLETE）
+//   - 回滚失败（ROLLBACK_FAILED）
+//   - 回滚完成（ROLLBACK_COMPLETE）
+//   - 删除失败（DELETION_FAILED）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) GetStackMetadata(request *model.GetStackMetadataRequest) (*model.GetStackMetadataResponse, error) {
@@ -467,17 +468,17 @@ func (c *AosClient) GetStackMetadataInvoker(request *model.GetStackMetadataReque
 // 只有当资源栈状态处于终态（即以&#x60;COMPLETE&#x60;或&#x60;FAILED&#x60;结尾，详细见下方）时，此API获取当前最新一次部署使用的模板。CREATION_COMPLETE除外，此时资源栈没有模板，返回404，并提示模板不存在
 //
 // 非终态状态包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
 //
 // 终态状态包括但不限于以下状态：
-//   * 生成空资源栈完成（CREATION_COMPLETE）
-//   * 部署失败（DEPLOYMENT_FAILED）
-//   * 部署完成（DEPLOYMENT_COMPLETE）
-//   * 回滚失败（ROLLBACK_FAILED）
-//   * 回滚完成（ROLLBACK_COMPLETE）
-//   * 删除失败（DELETION_FAILED）
+//   - 生成空资源栈完成（CREATION_COMPLETE）
+//   - 部署失败（DEPLOYMENT_FAILED）
+//   - 部署完成（DEPLOYMENT_COMPLETE）
+//   - 回滚失败（ROLLBACK_FAILED）
+//   - 回滚完成（ROLLBACK_COMPLETE）
+//   - 删除失败（DELETION_FAILED）
 //
 // 如果获取成功，则以临时重定向形式返回模板下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载模板；
 // 若未进行自动重定向，请参考HTTP的重定向规则获取模板下载链接，手动下载模板。
@@ -537,9 +538,9 @@ func (c *AosClient) ListStackEventsInvoker(request *model.ListStackEventsRequest
 // 资源栈输出为用户在模板中定义的 output 语句块在部署结束后所产生的返回信息，用户可在部署结束后，调用此API获取其具体的输出信息
 //
 // 当资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，此API将返回空。非终态包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // output为HCL官方定义的语法，其返回信息类似于常见编程语言中的返回值，详细定义请参考HCL官方的说明
 //
@@ -569,9 +570,9 @@ func (c *AosClient) ListStackOutputsInvoker(request *model.ListStackOutputsReque
 // 当资源栈处于非终态时，仅输出资源栈下资源的简要信息，包含逻辑资源名称（logical_resource_name），逻辑资源类型（logical_resource_type），物理资源id（physical_resource_id），物理资源名称（physical_resource_name），资源状态（status）等信息；当资源栈处于终态时，将额外输出具体信息，如资源属性（resource_attributes）
 //
 // 非终态包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackResources(request *model.ListStackResourcesRequest) (*model.ListStackResourcesResponse, error) {
@@ -596,11 +597,11 @@ func (c *AosClient) ListStackResourcesInvoker(request *model.ListStackResourcesR
 //
 // 此API用于列举当前局点下用户所有的资源栈
 //
-//   * 默认按照生成时间排序，最早生成的在最前
-//   * 注意：目前暂时返回全量资源栈信息，即不支持分页
-//   * 如果没有任何资源栈，则返回空list
+//   - 默认按照生成时间排序，最早生成的在最前
+//   - 注意：目前暂时返回全量资源栈信息，即不支持分页
+//   - 如果没有任何资源栈，则返回空list
 //
-// ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
+// # ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStacks(request *model.ListStacksRequest) (*model.ListStacksResponse, error) {
@@ -630,14 +631,14 @@ func (c *AosClient) ListStacksInvoker(request *model.ListStacksRequest) *ListSta
 // 例如，若要新增agencies，请通过GetStackMetadata获取该资源栈原有的agencies信息，将新旧agencies信息进行整合后再调用UpdateStack
 //
 // * 如果资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，则不允许更新。包括但不限于以下状态：
-//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   * 正在删除（DELETION_IN_PROGRESS）
-//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   - 正在删除（DELETION_IN_PROGRESS）
+//   - 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // * 对于“enable_auto_rollback”属性从false到true的更新操作，资源栈状态判定将更加严格，在失败（状态以&#x60;_FAILED&#x60;结尾）状态时也不允许更新，包括但不限于以下状态：
-//   * 部署失败（DEPLOYMENT_FAILED）
-//   * 回滚失败（ROLLBACK_FAILED）
-//   * 删除失败（DELETION_FAILED）
+//   - 部署失败（DEPLOYMENT_FAILED）
+//   - 回滚失败（ROLLBACK_FAILED）
+//   - 删除失败（DELETION_FAILED）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) UpdateStack(request *model.UpdateStackRequest) (*model.UpdateStackResponse, error) {
@@ -690,7 +691,7 @@ func (c *AosClient) ParseTemplateVariablesInvoker(request *model.ParseTemplateVa
 // 此API用于删除某个模板以及模板下的全部模板版本
 // **请谨慎操作，删除模板将会删除模板下的所有模板版本。**
 //
-//   * tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
+//   - tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
@@ -715,8 +716,8 @@ func (c *AosClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequest) 
 //
 // 此API用于删除某个模板版本
 //
-//   * tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
-//   * 若模板下只存在唯一模板版本，此模板版本将无法被删除，如果需要删除此模板版本，请调用DeleteTemplate。模板服务不允许存在没有模板版本的模板
+//   - tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
+//   - 若模板下只存在唯一模板版本，此模板版本将无法被删除，如果需要删除此模板版本，请调用DeleteTemplate。模板服务不允许存在没有模板版本的模板
 //
 // **请谨慎操作**
 //
@@ -743,13 +744,13 @@ func (c *AosClient) DeleteTemplateVersionInvoker(request *model.DeleteTemplateVe
 //
 // 此API用于列举模板下所有的模板版本信息
 //
-//   * 默认按照生成时间排序，最早生成的模板排列在最前面
-//   * 注意：目前返回全量模板版本信息，即不支持分页
-//   * 如果没有任何模板版本，则返回空list
-//   * tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
-//   * 若模板不存在则返回404
+//   - 默认按照生成时间排序，最早生成的模板排列在最前面
+//   - 注意：目前返回全量模板版本信息，即不支持分页
+//   - 如果没有任何模板版本，则返回空list
+//   - tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
+//   - 若模板不存在则返回404
 //
-// ListTemplateVersions返回的信息只包含模板版本摘要信息（具体摘要信息见ListTemplateVersionsResponseBody），若用户需要了解模板版本内容，请调用ShowTemplateVersionContent
+// # ListTemplateVersions返回的信息只包含模板版本摘要信息（具体摘要信息见ListTemplateVersionsResponseBody），若用户需要了解模板版本内容，请调用ShowTemplateVersionContent
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListTemplateVersions(request *model.ListTemplateVersionsRequest) (*model.ListTemplateVersionsResponse, error) {
@@ -774,12 +775,12 @@ func (c *AosClient) ListTemplateVersionsInvoker(request *model.ListTemplateVersi
 //
 // 此API用于列举当前局点下用户所有的模板
 //
-//   * 默认按照生成时间排序，最早生成的模板排列在最前面
-//   * 注意：目前返回全量模板信息，即不支持分页
-//   * 如果没有任何模板，则返回空list
-//   * 若用户需要详细的模板版本信息，请调用ListTemplateVersions
+//   - 默认按照生成时间排序，最早生成的模板排列在最前面
+//   - 注意：目前返回全量模板信息，即不支持分页
+//   - 如果没有任何模板，则返回空list
+//   - 若用户需要详细的模板版本信息，请调用ListTemplateVersions
 //
-// ListTemplates返回的信息只包含模板摘要信息（具体摘要信息见ListTemplatesResponseBody），若用户需要详细的某个模板信息，请调用ShowTemplateMetadata
+// # ListTemplates返回的信息只包含模板摘要信息（具体摘要信息见ListTemplatesResponseBody），若用户需要详细的某个模板信息，请调用ShowTemplateMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
@@ -806,7 +807,7 @@ func (c *AosClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *L
 //
 // 具体信息见ShowTemplateMetadataResponseBody，若想查看模板下全部模板版本，请调用ListTemplateVersions。
 //
-//   * tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
+//   - tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowTemplateMetadata(request *model.ShowTemplateMetadataRequest) (*model.ShowTemplateMetadataResponse, error) {
@@ -831,10 +832,10 @@ func (c *AosClient) ShowTemplateMetadataInvoker(request *model.ShowTemplateMetad
 //
 // 此API用于获取用户的模板版本内容
 //
-//   * tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
-//   * 此api会以临时重定向形式返回模板内容的下载链接，用户通过下载获取模板版本内容（OBS Pre Signed地址，有效期为5分钟）
+//   - tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
+//   - 此api会以临时重定向形式返回模板内容的下载链接，用户通过下载获取模板版本内容（OBS Pre Signed地址，有效期为5分钟）
 //
-// ShowTemplateVersionContent返回的信息只包含模板版本内容，若想知道模板版本的元数据，请调用ShowTemplateVersionMetadata
+// # ShowTemplateVersionContent返回的信息只包含模板版本内容，若想知道模板版本的元数据，请调用ShowTemplateVersionMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowTemplateVersionContent(request *model.ShowTemplateVersionContentRequest) (*model.ShowTemplateVersionContentResponse, error) {
@@ -859,9 +860,9 @@ func (c *AosClient) ShowTemplateVersionContentInvoker(request *model.ShowTemplat
 //
 // 此API用于展示某一版本模板的元数据
 //
-//   * tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
+//   - tempate_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给与的template_id和当前模板管理的ID不一致，则返回400
 //
-// ShowTemplateVersionMetadata返回的信息只包含模板版本元数据信息（具体摘要信息见ShowTemplateVersionMetadataResponseBody），若用户需要了解模板版本内容，请调用ShowTemplateVersionContent
+// # ShowTemplateVersionMetadata返回的信息只包含模板版本元数据信息（具体摘要信息见ShowTemplateVersionMetadataResponseBody），若用户需要了解模板版本内容，请调用ShowTemplateVersionContent
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowTemplateVersionMetadata(request *model.ShowTemplateVersionMetadataRequest) (*model.ShowTemplateVersionMetadataResponse, error) {

@@ -149,21 +149,6 @@ func GenReqDefForShowPermission() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForSearchDistinctPrincipals() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/shared-principals/search-distinct-principal").
-		WithResponse(new(model.SearchDistinctPrincipalsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForSearchSharedPrincipals() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -185,21 +170,6 @@ func GenReqDefForListQuota() *def.HttpRequestDef {
 		WithPath("/v1/resource-shares/quotas").
 		WithResponse(new(model.ListQuotaResponse)).
 		WithContentType("application/json")
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForSearchDistinctSharedResources() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/shared-resources/search-distinct-resource").
-		WithResponse(new(model.SearchDistinctSharedResourcesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

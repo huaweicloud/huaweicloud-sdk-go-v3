@@ -22,6 +22,9 @@ type CreateTopicReq struct {
 
 	// 权限。
 	Permission *CreateTopicReqPermission `json:"permission,omitempty"`
+
+	// 消息类型。
+	MessageType *CreateTopicReqMessageType `json:"message_type,omitempty"`
 }
 
 func (o CreateTopicReq) String() string {
@@ -66,6 +69,61 @@ func (c CreateTopicReqPermission) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateTopicReqPermission) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateTopicReqMessageType struct {
+	value string
+}
+
+type CreateTopicReqMessageTypeEnum struct {
+	NORMAL      CreateTopicReqMessageType
+	FIFO        CreateTopicReqMessageType
+	DELAY       CreateTopicReqMessageType
+	TRANSACTION CreateTopicReqMessageType
+}
+
+func GetCreateTopicReqMessageTypeEnum() CreateTopicReqMessageTypeEnum {
+	return CreateTopicReqMessageTypeEnum{
+		NORMAL: CreateTopicReqMessageType{
+			value: "NORMAL",
+		},
+		FIFO: CreateTopicReqMessageType{
+			value: "FIFO",
+		},
+		DELAY: CreateTopicReqMessageType{
+			value: "DELAY",
+		},
+		TRANSACTION: CreateTopicReqMessageType{
+			value: "TRANSACTION",
+		},
+	}
+}
+
+func (c CreateTopicReqMessageType) Value() string {
+	return c.value
+}
+
+func (c CreateTopicReqMessageType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateTopicReqMessageType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

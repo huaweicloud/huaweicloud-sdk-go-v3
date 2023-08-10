@@ -173,6 +173,18 @@ func (i *CreateRestoreInstanceInvoker) Invoke() (*model.CreateRestoreInstanceRes
 	}
 }
 
+type CreateXelLogDownloadInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateXelLogDownloadInvoker) Invoke() (*model.CreateXelLogDownloadResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateXelLogDownloadResponse), nil
+	}
+}
+
 type DeleteConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -638,6 +650,18 @@ func (i *ListStorageTypesInvoker) Invoke() (*model.ListStorageTypesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListStorageTypesResponse), nil
+	}
+}
+
+type ListXellogFilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListXellogFilesInvoker) Invoke() (*model.ListXellogFilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListXellogFilesResponse), nil
 	}
 }
 

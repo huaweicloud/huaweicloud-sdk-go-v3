@@ -32,6 +32,9 @@ type ComputingResourceFlavorsRsp struct {
 	// 是否售罄
 	SoldOut bool `json:"sold_out"`
 
+	// 可用区
+	Az *string `json:"az,omitempty"`
+
 	// CPU物理规格描述信息
 	CpuDetail *string `json:"cpu_detail,omitempty"`
 

@@ -2121,7 +2121,6 @@ func (c *DataArtsStudioClient) ListQualityTaskInvoker(request *model.ListQuality
 
 // ListQualityTaskLists 获取质量作业列表V1
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListQualityTaskLists(request *model.ListQualityTaskListsRequest) (*model.ListQualityTaskListsResponse, error) {
 	requestDef := GenReqDefForListQualityTaskLists()
@@ -2393,7 +2392,7 @@ func (c *DataArtsStudioClient) ModifyCustomizedFieldsInvoker(request *model.Modi
 
 // PayForDgcOneKey DataArtsStudio实例一键购买接口
 //
-// DataArtsStudio实例一键购买接口
+// # DataArtsStudio实例一键购买接口
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) PayForDgcOneKey(request *model.PayForDgcOneKeyRequest) (*model.PayForDgcOneKeyResponse, error) {

@@ -21,7 +21,6 @@ func MasClientBuilder() *http_client.HcHttpClientBuilder {
 
 // ShowNameSpaceList 查询命名空间列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MasClient) ShowNameSpaceList(request *model.ShowNameSpaceListRequest) (*model.ShowNameSpaceListResponse, error) {
 	requestDef := GenReqDefForShowNameSpaceList()

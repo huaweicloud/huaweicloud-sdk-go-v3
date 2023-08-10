@@ -14,6 +14,9 @@ type ComputingResourceRsp struct {
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
+	// 额外盘资源ID
+	EvsResourceId *string `json:"evs_resource_id,omitempty"`
+
 	// 实例名称
 	Name string `json:"name"`
 

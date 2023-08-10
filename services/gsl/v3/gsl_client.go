@@ -19,69 +19,6 @@ func GslClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// ListBackPoolMembers 查询后向流量池成员列表
-//
-// 查询后向流量池成员列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GslClient) ListBackPoolMembers(request *model.ListBackPoolMembersRequest) (*model.ListBackPoolMembersResponse, error) {
-	requestDef := GenReqDefForListBackPoolMembers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListBackPoolMembersResponse), nil
-	}
-}
-
-// ListBackPoolMembersInvoker 查询后向流量池成员列表
-func (c *GslClient) ListBackPoolMembersInvoker(request *model.ListBackPoolMembersRequest) *ListBackPoolMembersInvoker {
-	requestDef := GenReqDefForListBackPoolMembers()
-	return &ListBackPoolMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListBackPools 查询后向流量池列表
-//
-// 查询后向流量池列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GslClient) ListBackPools(request *model.ListBackPoolsRequest) (*model.ListBackPoolsResponse, error) {
-	requestDef := GenReqDefForListBackPools()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListBackPoolsResponse), nil
-	}
-}
-
-// ListBackPoolsInvoker 查询后向流量池列表
-func (c *GslClient) ListBackPoolsInvoker(request *model.ListBackPoolsRequest) *ListBackPoolsInvoker {
-	requestDef := GenReqDefForListBackPools()
-	return &ListBackPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProPricePlans 查询套餐列表信息
-//
-// 查询套餐列表信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GslClient) ListProPricePlans(request *model.ListProPricePlansRequest) (*model.ListProPricePlansResponse, error) {
-	requestDef := GenReqDefForListProPricePlans()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProPricePlansResponse), nil
-	}
-}
-
-// ListProPricePlansInvoker 查询套餐列表信息
-func (c *GslClient) ListProPricePlansInvoker(request *model.ListProPricePlansRequest) *ListProPricePlansInvoker {
-	requestDef := GenReqDefForListProPricePlans()
-	return &ListProPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchSetAttributes 批量设置自定义属性接口
 //
 // 批量设置自定义属性接口
@@ -208,9 +145,72 @@ func (c *GslClient) UpdateAttributeInvoker(request *model.UpdateAttributeRequest
 	return &UpdateAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBackPoolMembers 查询后向流量池成员列表
+//
+// 查询后向流量池成员列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListBackPoolMembers(request *model.ListBackPoolMembersRequest) (*model.ListBackPoolMembersResponse, error) {
+	requestDef := GenReqDefForListBackPoolMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackPoolMembersResponse), nil
+	}
+}
+
+// ListBackPoolMembersInvoker 查询后向流量池成员列表
+func (c *GslClient) ListBackPoolMembersInvoker(request *model.ListBackPoolMembersRequest) *ListBackPoolMembersInvoker {
+	requestDef := GenReqDefForListBackPoolMembers()
+	return &ListBackPoolMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackPools 查询后向流量池列表
+//
+// 查询后向流量池列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListBackPools(request *model.ListBackPoolsRequest) (*model.ListBackPoolsResponse, error) {
+	requestDef := GenReqDefForListBackPools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackPoolsResponse), nil
+	}
+}
+
+// ListBackPoolsInvoker 查询后向流量池列表
+func (c *GslClient) ListBackPoolsInvoker(request *model.ListBackPoolsRequest) *ListBackPoolsInvoker {
+	requestDef := GenReqDefForListBackPools()
+	return &ListBackPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProPricePlans 查询套餐列表信息
+//
+// 查询套餐列表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListProPricePlans(request *model.ListProPricePlansRequest) (*model.ListProPricePlansResponse, error) {
+	requestDef := GenReqDefForListProPricePlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProPricePlansResponse), nil
+	}
+}
+
+// ListProPricePlansInvoker 查询套餐列表信息
+func (c *GslClient) ListProPricePlansInvoker(request *model.ListProPricePlansRequest) *ListProPricePlansInvoker {
+	requestDef := GenReqDefForListProPricePlans()
+	return &ListProPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRealName 清除实名认证信息
 //
-// 清除实名认证信息，接口只支持电信卡调用
+// 清除实名认证信息，接口仅支持中国电信卡调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) DeleteRealName(request *model.DeleteRealNameRequest) (*model.DeleteRealNameResponse, error) {
@@ -273,7 +273,7 @@ func (c *GslClient) ListSimCardsInvoker(request *model.ListSimCardsRequest) *Lis
 
 // RegisterImei SIM卡机卡重绑
 //
-// 支持固定机卡重绑(需要上传IMEI，将SIM卡绑定到指定IMEI的设备)和普通机卡重绑(会清除之前绑定的设备,将SIM卡绑定到正在使用的设备)，单卡每月只允许重绑2次，接口只支持电信卡调用。
+// 支持固定机卡重绑(需要上传IMEI，将SIM卡绑定到指定IMEI的设备)和普通机卡重绑(会清除之前绑定的设备,将SIM卡绑定到正在使用的设备)，接口仅支持中国电信卡，中国移动卡调用。中国电信卡单卡每月只允许重绑2次，中国移动卡仅支持普通机卡重绑。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) RegisterImei(request *model.RegisterImeiRequest) (*model.RegisterImeiResponse, error) {
@@ -313,9 +313,9 @@ func (c *GslClient) ResetSimCardInvoker(request *model.ResetSimCardRequest) *Res
 	return &ResetSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetExceedCutNet SIM卡达量断网/恢复在用
+// SetExceedCutNet SIM卡达量断网/取消达量断网
 //
-// SIM卡达量断网/恢复在用,只支持电信卡。
+// SIM卡达量断网/取消达量断网，接口仅支持中国电信的卡以及中国联通、中国移动的组池卡调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) SetExceedCutNet(request *model.SetExceedCutNetRequest) (*model.SetExceedCutNetResponse, error) {
@@ -328,7 +328,7 @@ func (c *GslClient) SetExceedCutNet(request *model.SetExceedCutNetRequest) (*mod
 	}
 }
 
-// SetExceedCutNetInvoker SIM卡达量断网/恢复在用
+// SetExceedCutNetInvoker SIM卡达量断网/取消达量断网
 func (c *GslClient) SetExceedCutNetInvoker(request *model.SetExceedCutNetRequest) *SetExceedCutNetInvoker {
 	requestDef := GenReqDefForSetExceedCutNet()
 	return &SetExceedCutNetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -336,7 +336,7 @@ func (c *GslClient) SetExceedCutNetInvoker(request *model.SetExceedCutNetRequest
 
 // SetSpeedValue 实体卡限速
 //
-// 实体卡限速接口,支持电信和联通实体卡调用。联通卡需要个人实名认证后才能使用限速功能。
+// 实体卡限速接口，接口仅支持中国电信和中国联通实体卡调用。中国联通卡需要个人实名认证后才能使用限速功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) SetSpeedValue(request *model.SetSpeedValueRequest) (*model.SetSpeedValueResponse, error) {
@@ -378,7 +378,7 @@ func (c *GslClient) ShowMonthUsagesInvoker(request *model.ShowMonthUsagesRequest
 
 // ShowRealNamed 查询SIM卡实名认证信息
 //
-// 实时查询SIM卡实名认证信息。
+// 实时查询SIM卡实名认证信息，接口仅支持查询中国大陆运营商卡片的实名认证信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ShowRealNamed(request *model.ShowRealNamedRequest) (*model.ShowRealNamedResponse, error) {
@@ -420,7 +420,7 @@ func (c *GslClient) ShowSimCardInvoker(request *model.ShowSimCardRequest) *ShowS
 
 // StartStopNet SIM卡申请断网/恢复在用
 //
-// SIM卡申请断网/恢复在用,只支持电信卡。
+// SIM卡申请断网/恢复在用，接口仅支持中国电信卡调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) StartStopNet(request *model.StartStopNetRequest) (*model.StartStopNetResponse, error) {
@@ -630,7 +630,7 @@ func (c *GslClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInv
 
 // ListSmsDetails 短信发送详情
 //
-// 短信发送详情
+// 短信发送详情，接口仅支持开通短信套餐的中国移动与中国电信卡调用
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) ListSmsDetails(request *model.ListSmsDetailsRequest) (*model.ListSmsDetailsResponse, error) {
@@ -651,7 +651,7 @@ func (c *GslClient) ListSmsDetailsInvoker(request *model.ListSmsDetailsRequest) 
 
 // SendSms 发送短信
 //
-// 发送短信
+// 发送短信，接口仅支持开通短信套餐的中国移动与中国电信卡调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GslClient) SendSms(request *model.SendSmsRequest) (*model.SendSmsResponse, error) {
@@ -668,4 +668,46 @@ func (c *GslClient) SendSms(request *model.SendSmsRequest) (*model.SendSmsRespon
 func (c *GslClient) SendSmsInvoker(request *model.SendSmsRequest) *SendSmsInvoker {
 	requestDef := GenReqDefForSendSms()
 	return &SendSmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkOrderDetails 分页查询业务受理明细
+//
+// 分页查询业务受理明细
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListWorkOrderDetails(request *model.ListWorkOrderDetailsRequest) (*model.ListWorkOrderDetailsResponse, error) {
+	requestDef := GenReqDefForListWorkOrderDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkOrderDetailsResponse), nil
+	}
+}
+
+// ListWorkOrderDetailsInvoker 分页查询业务受理明细
+func (c *GslClient) ListWorkOrderDetailsInvoker(request *model.ListWorkOrderDetailsRequest) *ListWorkOrderDetailsInvoker {
+	requestDef := GenReqDefForListWorkOrderDetails()
+	return &ListWorkOrderDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkOrders 分页查询业务受理单
+//
+// 分页查询业务受理单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListWorkOrders(request *model.ListWorkOrdersRequest) (*model.ListWorkOrdersResponse, error) {
+	requestDef := GenReqDefForListWorkOrders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkOrdersResponse), nil
+	}
+}
+
+// ListWorkOrdersInvoker 分页查询业务受理单
+func (c *GslClient) ListWorkOrdersInvoker(request *model.ListWorkOrdersRequest) *ListWorkOrdersInvoker {
+	requestDef := GenReqDefForListWorkOrders()
+	return &ListWorkOrdersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

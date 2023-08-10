@@ -17,7 +17,7 @@ type MysqlInstanceResponse struct {
 	// 实例状态。
 	Status *string `json:"status,omitempty"`
 
-	Datastore *MysqlDatastore `json:"datastore,omitempty"`
+	Datastore *MysqlDatastoreInRes `json:"datastore,omitempty"`
 
 	// 实例类型，仅支持Cluster。
 	Mode *string `json:"mode,omitempty"`

@@ -481,6 +481,27 @@ func (c *GaussDBClient) DeleteTaskRecordInvoker(request *model.DeleteTaskRecordR
 	return &DeleteTaskRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DescribeBackupEncryptStatus 查询实例是否开启备份加密功能
+//
+// 查询实例是否开启备份加密功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DescribeBackupEncryptStatus(request *model.DescribeBackupEncryptStatusRequest) (*model.DescribeBackupEncryptStatusResponse, error) {
+	requestDef := GenReqDefForDescribeBackupEncryptStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DescribeBackupEncryptStatusResponse), nil
+	}
+}
+
+// DescribeBackupEncryptStatusInvoker 查询实例是否开启备份加密功能
+func (c *GaussDBClient) DescribeBackupEncryptStatusInvoker(request *model.DescribeBackupEncryptStatusRequest) *DescribeBackupEncryptStatusInvoker {
+	requestDef := GenReqDefForDescribeBackupEncryptStatus()
+	return &DescribeBackupEncryptStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandGaussMySqlInstanceVolume 包周期存储扩容
 //
 // 包周期存储扩容。
@@ -816,6 +837,27 @@ func (c *GaussDBClient) ListScheduleJobs(request *model.ListScheduleJobsRequest)
 func (c *GaussDBClient) ListScheduleJobsInvoker(request *model.ListScheduleJobsRequest) *ListScheduleJobsInvoker {
 	requestDef := GenReqDefForListScheduleJobs()
 	return &ListScheduleJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyBackupEncryptStatus 打开或关闭备份加密
+//
+// 打开或关闭备份加密。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ModifyBackupEncryptStatus(request *model.ModifyBackupEncryptStatusRequest) (*model.ModifyBackupEncryptStatusResponse, error) {
+	requestDef := GenReqDefForModifyBackupEncryptStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyBackupEncryptStatusResponse), nil
+	}
+}
+
+// ModifyBackupEncryptStatusInvoker 打开或关闭备份加密
+func (c *GaussDBClient) ModifyBackupEncryptStatusInvoker(request *model.ModifyBackupEncryptStatusRequest) *ModifyBackupEncryptStatusInvoker {
+	requestDef := GenReqDefForModifyBackupEncryptStatus()
+	return &ModifyBackupEncryptStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyGaussMySqlProxyRouteMode 设置读写分离路由模式
@@ -1656,6 +1698,27 @@ func (c *GaussDBClient) UpdateProxyConnectionPoolType(request *model.UpdateProxy
 func (c *GaussDBClient) UpdateProxyConnectionPoolTypeInvoker(request *model.UpdateProxyConnectionPoolTypeRequest) *UpdateProxyConnectionPoolTypeInvoker {
 	requestDef := GenReqDefForUpdateProxyConnectionPoolType()
 	return &UpdateProxyConnectionPoolTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProxyPort 修改读写分离端口号
+//
+// 修改读写分离端口号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateProxyPort(request *model.UpdateProxyPortRequest) (*model.UpdateProxyPortResponse, error) {
+	requestDef := GenReqDefForUpdateProxyPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProxyPortResponse), nil
+	}
+}
+
+// UpdateProxyPortInvoker 修改读写分离端口号
+func (c *GaussDBClient) UpdateProxyPortInvoker(request *model.UpdateProxyPortRequest) *UpdateProxyPortInvoker {
+	requestDef := GenReqDefForUpdateProxyPort()
+	return &UpdateProxyPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateProxySessionConsistence 修改代理会话一致性

@@ -25,7 +25,7 @@ type Message struct {
 	BornTimestamp float32 `json:"born_timestamp,omitempty"`
 
 	// 重试次数。
-	ReconsumeTimes *string `json:"reconsume_times,omitempty"`
+	ReconsumeTimes *int32 `json:"reconsume_times,omitempty"`
 
 	// 消息体。
 	Body *string `json:"body,omitempty"`
@@ -46,10 +46,10 @@ type Message struct {
 	StoreHost *string `json:"store_host,omitempty"`
 
 	// 队列ID。
-	QueueId *string `json:"queue_id,omitempty"`
+	QueueId *int32 `json:"queue_id,omitempty"`
 
 	// 在队列中的偏移量。
-	QueueOffset *string `json:"queue_offset,omitempty"`
+	QueueOffset *int32 `json:"queue_offset,omitempty"`
 }
 
 func (o Message) String() string {

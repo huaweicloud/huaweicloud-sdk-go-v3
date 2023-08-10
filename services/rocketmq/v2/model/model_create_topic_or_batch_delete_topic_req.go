@@ -23,6 +23,9 @@ type CreateTopicOrBatchDeleteTopicReq struct {
 	// 权限。
 	Permission *CreateTopicOrBatchDeleteTopicReqPermission `json:"permission,omitempty"`
 
+	// 消息类型。
+	MessageType *CreateTopicOrBatchDeleteTopicReqMessageType `json:"message_type,omitempty"`
+
 	// 主题列表，当批量删除主题时使用。
 	Topics *[]string `json:"topics,omitempty"`
 }
@@ -69,6 +72,61 @@ func (c CreateTopicOrBatchDeleteTopicReqPermission) MarshalJSON() ([]byte, error
 }
 
 func (c *CreateTopicOrBatchDeleteTopicReqPermission) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateTopicOrBatchDeleteTopicReqMessageType struct {
+	value string
+}
+
+type CreateTopicOrBatchDeleteTopicReqMessageTypeEnum struct {
+	NORMAL      CreateTopicOrBatchDeleteTopicReqMessageType
+	FIFO        CreateTopicOrBatchDeleteTopicReqMessageType
+	DELAY       CreateTopicOrBatchDeleteTopicReqMessageType
+	TRANSACTION CreateTopicOrBatchDeleteTopicReqMessageType
+}
+
+func GetCreateTopicOrBatchDeleteTopicReqMessageTypeEnum() CreateTopicOrBatchDeleteTopicReqMessageTypeEnum {
+	return CreateTopicOrBatchDeleteTopicReqMessageTypeEnum{
+		NORMAL: CreateTopicOrBatchDeleteTopicReqMessageType{
+			value: "NORMAL",
+		},
+		FIFO: CreateTopicOrBatchDeleteTopicReqMessageType{
+			value: "FIFO",
+		},
+		DELAY: CreateTopicOrBatchDeleteTopicReqMessageType{
+			value: "DELAY",
+		},
+		TRANSACTION: CreateTopicOrBatchDeleteTopicReqMessageType{
+			value: "TRANSACTION",
+		},
+	}
+}
+
+func (c CreateTopicOrBatchDeleteTopicReqMessageType) Value() string {
+	return c.value
+}
+
+func (c CreateTopicOrBatchDeleteTopicReqMessageType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateTopicOrBatchDeleteTopicReqMessageType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

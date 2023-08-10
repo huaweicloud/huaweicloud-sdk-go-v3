@@ -603,9 +603,10 @@ func (c *RomaClient) CreateEnvironmentV2Invoker(request *model.CreateEnvironment
 //
 // 环境变量定义在API分组上，该分组下的所有API都可以使用这些变量。
 // &gt; 1.环境变量的变量名称必须保持唯一，即一个分组在同一个环境上不能有两个同名的变量
-//   2.环境变量区分大小写，即变量ABC与变量abc是两个不同的变量
-//   3.设置了环境变量后，使用到该变量的API的调试功能将不可使用。
-//   4.定义了环境变量后，使用到环境变量的地方应该以对称的#标识环境变量，当API发布到相应的环境后，会对环境变量的值进行替换，如：定义的API的URL为：https://#address#:8080，环境变量address在RELEASE环境上的值为：192.168.1.5，则API发布到RELEASE环境后的真实的URL为：https://192.168.1.5:8080。
+//
+//	2.环境变量区分大小写，即变量ABC与变量abc是两个不同的变量
+//	3.设置了环境变量后，使用到该变量的API的调试功能将不可使用。
+//	4.定义了环境变量后，使用到环境变量的地方应该以对称的#标识环境变量，当API发布到相应的环境后，会对环境变量的值进行替换，如：定义的API的URL为：https://#address#:8080，环境变量address在RELEASE环境上的值为：192.168.1.5，则API发布到RELEASE环境后的真实的URL为：https://192.168.1.5:8080。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmentVariableV2Request) (*model.CreateEnvironmentVariableV2Response, error) {

@@ -21,7 +21,6 @@ func DlfClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CancelScript 停止脚本实例的执行
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) CancelScript(request *model.CancelScriptRequest) (*model.CancelScriptResponse, error) {
 	requestDef := GenReqDefForCancelScript()
@@ -40,7 +39,6 @@ func (c *DlfClient) CancelScriptInvoker(request *model.CancelScriptRequest) *Can
 }
 
 // CreateConnection 创建连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
@@ -61,7 +59,6 @@ func (c *DlfClient) CreateConnectionInvoker(request *model.CreateConnectionReque
 
 // CreateJob 创建作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJobResponse, error) {
 	requestDef := GenReqDefForCreateJob()
@@ -80,7 +77,6 @@ func (c *DlfClient) CreateJobInvoker(request *model.CreateJobRequest) *CreateJob
 }
 
 // CreateResource 创建资源
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) CreateResource(request *model.CreateResourceRequest) (*model.CreateResourceResponse, error) {
@@ -101,7 +97,6 @@ func (c *DlfClient) CreateResourceInvoker(request *model.CreateResourceRequest) 
 
 // CreateScript 创建脚本
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) CreateScript(request *model.CreateScriptRequest) (*model.CreateScriptResponse, error) {
 	requestDef := GenReqDefForCreateScript()
@@ -120,7 +115,6 @@ func (c *DlfClient) CreateScriptInvoker(request *model.CreateScriptRequest) *Cre
 }
 
 // DeleteConnction 删除连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) DeleteConnction(request *model.DeleteConnctionRequest) (*model.DeleteConnctionResponse, error) {
@@ -141,7 +135,6 @@ func (c *DlfClient) DeleteConnctionInvoker(request *model.DeleteConnctionRequest
 
 // DeleteJob 删除作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
 	requestDef := GenReqDefForDeleteJob()
@@ -160,7 +153,6 @@ func (c *DlfClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJob
 }
 
 // DeleteResource 删除资源
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) DeleteResource(request *model.DeleteResourceRequest) (*model.DeleteResourceResponse, error) {
@@ -181,7 +173,6 @@ func (c *DlfClient) DeleteResourceInvoker(request *model.DeleteResourceRequest) 
 
 // DeleteScript 删除脚本
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) DeleteScript(request *model.DeleteScriptRequest) (*model.DeleteScriptResponse, error) {
 	requestDef := GenReqDefForDeleteScript()
@@ -200,7 +191,6 @@ func (c *DlfClient) DeleteScriptInvoker(request *model.DeleteScriptRequest) *Del
 }
 
 // ExecuteScript 执行脚本
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ExecuteScript(request *model.ExecuteScriptRequest) (*model.ExecuteScriptResponse, error) {
@@ -221,7 +211,6 @@ func (c *DlfClient) ExecuteScriptInvoker(request *model.ExecuteScriptRequest) *E
 
 // ExportConnections 导出连接
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ExportConnections(request *model.ExportConnectionsRequest) (*model.ExportConnectionsResponse, error) {
 	requestDef := GenReqDefForExportConnections()
@@ -240,7 +229,6 @@ func (c *DlfClient) ExportConnectionsInvoker(request *model.ExportConnectionsReq
 }
 
 // ExportJob 导出作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ExportJob(request *model.ExportJobRequest) (*model.ExportJobResponse, error) {
@@ -261,7 +249,6 @@ func (c *DlfClient) ExportJobInvoker(request *model.ExportJobRequest) *ExportJob
 
 // ExportJobList 批量导出作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ExportJobList(request *model.ExportJobListRequest) (*model.ExportJobListResponse, error) {
 	requestDef := GenReqDefForExportJobList()
@@ -280,7 +267,6 @@ func (c *DlfClient) ExportJobListInvoker(request *model.ExportJobListRequest) *E
 }
 
 // ImportConnections 导入连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ImportConnections(request *model.ImportConnectionsRequest) (*model.ImportConnectionsResponse, error) {
@@ -301,7 +287,6 @@ func (c *DlfClient) ImportConnectionsInvoker(request *model.ImportConnectionsReq
 
 // ImportJob 导入作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ImportJob(request *model.ImportJobRequest) (*model.ImportJobResponse, error) {
 	requestDef := GenReqDefForImportJob()
@@ -320,7 +305,6 @@ func (c *DlfClient) ImportJobInvoker(request *model.ImportJobRequest) *ImportJob
 }
 
 // ListConnections 查询连接列表
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
@@ -341,7 +325,6 @@ func (c *DlfClient) ListConnectionsInvoker(request *model.ListConnectionsRequest
 
 // ListJobInstances 查询作业实例列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListJobInstances(request *model.ListJobInstancesRequest) (*model.ListJobInstancesResponse, error) {
 	requestDef := GenReqDefForListJobInstances()
@@ -360,7 +343,6 @@ func (c *DlfClient) ListJobInstancesInvoker(request *model.ListJobInstancesReque
 }
 
 // ListJobs 查询作业列表
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
@@ -381,7 +363,6 @@ func (c *DlfClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInv
 
 // ListResources 查询资源列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
@@ -400,7 +381,6 @@ func (c *DlfClient) ListResourcesInvoker(request *model.ListResourcesRequest) *L
 }
 
 // ListScriptResults 查询脚本实例执行结果
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListScriptResults(request *model.ListScriptResultsRequest) (*model.ListScriptResultsResponse, error) {
@@ -421,7 +401,6 @@ func (c *DlfClient) ListScriptResultsInvoker(request *model.ListScriptResultsReq
 
 // ListScripts 查询脚本列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListScripts(request *model.ListScriptsRequest) (*model.ListScriptsResponse, error) {
 	requestDef := GenReqDefForListScripts()
@@ -440,7 +419,6 @@ func (c *DlfClient) ListScriptsInvoker(request *model.ListScriptsRequest) *ListS
 }
 
 // ListSystemTasks 查询系统任务详情
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ListSystemTasks(request *model.ListSystemTasksRequest) (*model.ListSystemTasksResponse, error) {
@@ -461,7 +439,6 @@ func (c *DlfClient) ListSystemTasksInvoker(request *model.ListSystemTasksRequest
 
 // RestoreJobInstance 重跑作业实例
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) RestoreJobInstance(request *model.RestoreJobInstanceRequest) (*model.RestoreJobInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreJobInstance()
@@ -480,7 +457,6 @@ func (c *DlfClient) RestoreJobInstanceInvoker(request *model.RestoreJobInstanceR
 }
 
 // RunOnce 单次执行作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceResponse, error) {
@@ -501,7 +477,6 @@ func (c *DlfClient) RunOnceInvoker(request *model.RunOnceRequest) *RunOnceInvoke
 
 // ShowConnection 查询连接详情
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowConnection(request *model.ShowConnectionRequest) (*model.ShowConnectionResponse, error) {
 	requestDef := GenReqDefForShowConnection()
@@ -520,7 +495,6 @@ func (c *DlfClient) ShowConnectionInvoker(request *model.ShowConnectionRequest) 
 }
 
 // ShowDirectoryTree 查询目录树
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowDirectoryTree(request *model.ShowDirectoryTreeRequest) (*model.ShowDirectoryTreeResponse, error) {
@@ -541,7 +515,6 @@ func (c *DlfClient) ShowDirectoryTreeInvoker(request *model.ShowDirectoryTreeReq
 
 // ShowFileInfo 检查导入作业文件中的作业和脚本
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.ShowFileInfoResponse, error) {
 	requestDef := GenReqDefForShowFileInfo()
@@ -560,7 +533,6 @@ func (c *DlfClient) ShowFileInfoInvoker(request *model.ShowFileInfoRequest) *Sho
 }
 
 // ShowJob 查询作业详情
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
@@ -581,7 +553,6 @@ func (c *DlfClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 
 // ShowJobInstance 查询作业实例详情
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowJobInstance(request *model.ShowJobInstanceRequest) (*model.ShowJobInstanceResponse, error) {
 	requestDef := GenReqDefForShowJobInstance()
@@ -600,7 +571,6 @@ func (c *DlfClient) ShowJobInstanceInvoker(request *model.ShowJobInstanceRequest
 }
 
 // ShowJobStatus 查询实时作业的运行状态
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
@@ -621,7 +591,6 @@ func (c *DlfClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *S
 
 // ShowResource 查询资源详情
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowResource(request *model.ShowResourceRequest) (*model.ShowResourceResponse, error) {
 	requestDef := GenReqDefForShowResource()
@@ -640,7 +609,6 @@ func (c *DlfClient) ShowResourceInvoker(request *model.ShowResourceRequest) *Sho
 }
 
 // ShowScript 查询脚本信息
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) ShowScript(request *model.ShowScriptRequest) (*model.ShowScriptResponse, error) {
@@ -661,7 +629,6 @@ func (c *DlfClient) ShowScriptInvoker(request *model.ShowScriptRequest) *ShowScr
 
 // StartJob 启动作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) StartJob(request *model.StartJobRequest) (*model.StartJobResponse, error) {
 	requestDef := GenReqDefForStartJob()
@@ -680,7 +647,6 @@ func (c *DlfClient) StartJobInvoker(request *model.StartJobRequest) *StartJobInv
 }
 
 // StopJob 停止作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) StopJob(request *model.StopJobRequest) (*model.StopJobResponse, error) {
@@ -701,7 +667,6 @@ func (c *DlfClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoke
 
 // StopJobInstance 停止作业实例
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) StopJobInstance(request *model.StopJobInstanceRequest) (*model.StopJobInstanceResponse, error) {
 	requestDef := GenReqDefForStopJobInstance()
@@ -720,7 +685,6 @@ func (c *DlfClient) StopJobInstanceInvoker(request *model.StopJobInstanceRequest
 }
 
 // UpdateConnection 修改连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) UpdateConnection(request *model.UpdateConnectionRequest) (*model.UpdateConnectionResponse, error) {
@@ -741,7 +705,6 @@ func (c *DlfClient) UpdateConnectionInvoker(request *model.UpdateConnectionReque
 
 // UpdateJob 修改作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {
 	requestDef := GenReqDefForUpdateJob()
@@ -761,7 +724,6 @@ func (c *DlfClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJob
 
 // UpdateResource 修改资源
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) UpdateResource(request *model.UpdateResourceRequest) (*model.UpdateResourceResponse, error) {
 	requestDef := GenReqDefForUpdateResource()
@@ -780,7 +742,6 @@ func (c *DlfClient) UpdateResourceInvoker(request *model.UpdateResourceRequest) 
 }
 
 // UpdateScript 修改脚本内容
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DlfClient) UpdateScript(request *model.UpdateScriptRequest) (*model.UpdateScriptResponse, error) {

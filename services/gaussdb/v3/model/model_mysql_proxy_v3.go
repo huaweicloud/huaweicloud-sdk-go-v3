@@ -67,6 +67,9 @@ type MysqlProxyV3 struct {
 
 	// 数据库代理版本是否支持负载均衡模式。  取值范围: - true 支持; - false 不支持。
 	BalanceRouteModeEnabled *bool `json:"balance_route_mode_enabled,omitempty"`
+
+	// 一致性模式。默认值为空，此时以会话一致性参数session_consistence为准。 - session: 会话一致性 - global: 全局一致性 - eventual: 最终一致性
+	ConsistenceMode *string `json:"consistence_mode,omitempty"`
 }
 
 func (o MysqlProxyV3) String() string {

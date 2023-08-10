@@ -30,7 +30,7 @@ type ListPublicZonesRequest struct {
 	// 资源状态。
 	Status *string `json:"status,omitempty"`
 
-	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
 	SearchMode *string `json:"search_mode,omitempty"`
 
 	// 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。

@@ -313,6 +313,27 @@ func (c *RdsClient) CreateRestoreInstanceInvoker(request *model.CreateRestoreIns
 	return &CreateRestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateXelLogDownload 获取扩展日志下载信息
+//
+// 获取扩展日志下载信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateXelLogDownload(request *model.CreateXelLogDownloadRequest) (*model.CreateXelLogDownloadResponse, error) {
+	requestDef := GenReqDefForCreateXelLogDownload()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateXelLogDownloadResponse), nil
+	}
+}
+
+// CreateXelLogDownloadInvoker 获取扩展日志下载信息
+func (c *RdsClient) CreateXelLogDownloadInvoker(request *model.CreateXelLogDownloadRequest) *CreateXelLogDownloadInvoker {
+	requestDef := GenReqDefForCreateXelLogDownload()
+	return &CreateXelLogDownloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConfiguration 删除参数模板
 //
 // 删除参数模板。
@@ -356,7 +377,6 @@ func (c *RdsClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 }
 
 // DeleteJob 删除即时任务
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RdsClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
@@ -1136,6 +1156,28 @@ func (c *RdsClient) ListStorageTypesInvoker(request *model.ListStorageTypesReque
 	return &ListStorageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListXellogFiles 查询扩展日志文件列表
+//
+// 查询扩展日志文件列表。
+// 查询扩展日志文件列表，可以调用接口/v3/{project_id}/instances/{instance_id}/xellog-download 获取扩展日志下载链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListXellogFiles(request *model.ListXellogFilesRequest) (*model.ListXellogFilesResponse, error) {
+	requestDef := GenReqDefForListXellogFiles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListXellogFilesResponse), nil
+	}
+}
+
+// ListXellogFilesInvoker 查询扩展日志文件列表
+func (c *RdsClient) ListXellogFilesInvoker(request *model.ListXellogFilesRequest) *ListXellogFilesInvoker {
+	requestDef := GenReqDefForListXellogFiles()
+	return &ListXellogFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // MigrateFollower 迁移主备实例的备机
 //
 // 迁移主备实例的备机
@@ -1373,7 +1415,7 @@ func (c *RdsClient) SetSecurityGroupInvoker(request *model.SetSecurityGroupReque
 
 // SetSensitiveSlowLog 慢日志敏感信息的开关
 //
-// V3慢日志敏感信息的开关
+// # V3慢日志敏感信息的开关
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RdsClient) SetSensitiveSlowLog(request *model.SetSensitiveSlowLogRequest) (*model.SetSensitiveSlowLogResponse, error) {

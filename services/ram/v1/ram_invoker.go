@@ -101,18 +101,6 @@ func (i *ShowPermissionInvoker) Invoke() (*model.ShowPermissionResponse, error) 
 	}
 }
 
-type SearchDistinctPrincipalsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SearchDistinctPrincipalsInvoker) Invoke() (*model.SearchDistinctPrincipalsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SearchDistinctPrincipalsResponse), nil
-	}
-}
-
 type SearchSharedPrincipalsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,18 +122,6 @@ func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListQuotaResponse), nil
-	}
-}
-
-type SearchDistinctSharedResourcesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SearchDistinctSharedResourcesInvoker) Invoke() (*model.SearchDistinctSharedResourcesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SearchDistinctSharedResourcesResponse), nil
 	}
 }
 

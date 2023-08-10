@@ -12,7 +12,7 @@ type ListScaleOutPolicyResponse struct {
 	// 总数
 	Count *int32 `json:"count,omitempty"`
 
-	// 计算资源列表
+	// 扩容策略列表
 	Policies       *[]ScaleOutPolicyRsp `json:"policies,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

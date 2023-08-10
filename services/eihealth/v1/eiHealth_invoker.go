@@ -1109,6 +1109,258 @@ func (i *ListDatabaseResourceFlavorInvoker) Invoke() (*model.ListDatabaseResourc
 	}
 }
 
+type CreateDockingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDockingJobInvoker) Invoke() (*model.CreateDockingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDockingJobResponse), nil
+	}
+}
+
+type ShowDockingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDockingJobInvoker) Invoke() (*model.ShowDockingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDockingJobResponse), nil
+	}
+}
+
+type CheckDrugLigandDifferenceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDrugLigandDifferenceInvoker) Invoke() (*model.CheckDrugLigandDifferenceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDrugLigandDifferenceResponse), nil
+	}
+}
+
+type CreateDrugLigandInteraction2dSvgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrugLigandInteraction2dSvgInvoker) Invoke() (*model.CreateDrugLigandInteraction2dSvgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrugLigandInteraction2dSvgResponse), nil
+	}
+}
+
+type CreateDrugLigandPreviewTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrugLigandPreviewTaskInvoker) Invoke() (*model.CreateDrugLigandPreviewTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrugLigandPreviewTaskResponse), nil
+	}
+}
+
+type CreateDrugLigandSdfInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrugLigandSdfInvoker) Invoke() (*model.CreateDrugLigandSdfResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrugLigandSdfResponse), nil
+	}
+}
+
+type CreateDrugLigandSimilarityGraphTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrugLigandSimilarityGraphTaskInvoker) Invoke() (*model.CreateDrugLigandSimilarityGraphTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrugLigandSimilarityGraphTaskResponse), nil
+	}
+}
+
+type CreateDrugLigandSvgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrugLigandSvgInvoker) Invoke() (*model.CreateDrugLigandSvgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrugLigandSvgResponse), nil
+	}
+}
+
+type DeleteDrugLigandPreviewTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDrugLigandPreviewTaskInvoker) Invoke() (*model.DeleteDrugLigandPreviewTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDrugLigandPreviewTaskResponse), nil
+	}
+}
+
+type DeleteDrugLigandSimilarityGraphTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDrugLigandSimilarityGraphTaskInvoker) Invoke() (*model.DeleteDrugLigandSimilarityGraphTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDrugLigandSimilarityGraphTaskResponse), nil
+	}
+}
+
+type ParseDrugReceptorInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ParseDrugReceptorInfoInvoker) Invoke() (*model.ParseDrugReceptorInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ParseDrugReceptorInfoResponse), nil
+	}
+}
+
+type RecognizeDrugReceptorPocketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeDrugReceptorPocketInvoker) Invoke() (*model.RecognizeDrugReceptorPocketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeDrugReceptorPocketResponse), nil
+	}
+}
+
+type RunDrugLigandToSmilesConversionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunDrugLigandToSmilesConversionInvoker) Invoke() (*model.RunDrugLigandToSmilesConversionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunDrugLigandToSmilesConversionResponse), nil
+	}
+}
+
+type RunDrugReceptorPreprocessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunDrugReceptorPreprocessInvoker) Invoke() (*model.RunDrugReceptorPreprocessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunDrugReceptorPreprocessResponse), nil
+	}
+}
+
+type ShowDrugLigandPreviewTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDrugLigandPreviewTaskInvoker) Invoke() (*model.ShowDrugLigandPreviewTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDrugLigandPreviewTaskResponse), nil
+	}
+}
+
+type ShowDrugLigandSimilarityGraphTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDrugLigandSimilarityGraphTaskInvoker) Invoke() (*model.ShowDrugLigandSimilarityGraphTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDrugLigandSimilarityGraphTaskResponse), nil
+	}
+}
+
+type CancelDrugJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelDrugJobInvoker) Invoke() (*model.CancelDrugJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelDrugJobResponse), nil
+	}
+}
+
+type DeleteDrugJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDrugJobInvoker) Invoke() (*model.DeleteDrugJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDrugJobResponse), nil
+	}
+}
+
+type ListDrugJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDrugJobInvoker) Invoke() (*model.ListDrugJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDrugJobResponse), nil
+	}
+}
+
+type CreateFepJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFepJobInvoker) Invoke() (*model.CreateFepJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFepJobResponse), nil
+	}
+}
+
+type ShowFepJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFepJobInvoker) Invoke() (*model.ShowFepJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFepJobResponse), nil
+	}
+}
+
 type ListIamGroupUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1709,15 +1961,15 @@ func (i *ShowMessageReceiveConfigInvoker) Invoke() (*model.ShowMessageReceiveCon
 	}
 }
 
-type UpdateMessageClearRuleInvoker struct {
+type UpdateMessageClearRuleRequestBodyInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateMessageClearRuleInvoker) Invoke() (*model.UpdateMessageClearRuleResponse, error) {
+func (i *UpdateMessageClearRuleRequestBodyInvoker) Invoke() (*model.UpdateMessageClearRuleRequestBodyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateMessageClearRuleResponse), nil
+		return result.(*model.UpdateMessageClearRuleRequestBodyResponse), nil
 	}
 }
 
@@ -2141,6 +2393,18 @@ func (i *UpdateNotebookInvoker) Invoke() (*model.UpdateNotebookResponse, error) 
 	}
 }
 
+type DownloadDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadDataInvoker) Invoke() (*model.DownloadDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadDataResponse), nil
+	}
+}
+
 type ListObsBucketInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2162,6 +2426,30 @@ func (i *ListObsBucketObjectInvoker) Invoke() (*model.ListObsBucketObjectRespons
 		return nil, err
 	} else {
 		return result.(*model.ListObsBucketObjectResponse), nil
+	}
+}
+
+type CreateOptmJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOptmJobInvoker) Invoke() (*model.CreateOptmJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOptmJobResponse), nil
+	}
+}
+
+type ShowOptmJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOptmJobInvoker) Invoke() (*model.ShowOptmJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOptmJobResponse), nil
 	}
 }
 
@@ -2582,6 +2870,30 @@ func (i *ShowExtremumInfoInvoker) Invoke() (*model.ShowExtremumInfoResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowExtremumInfoResponse), nil
+	}
+}
+
+type CreateSynthesisJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSynthesisJobInvoker) Invoke() (*model.CreateSynthesisJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSynthesisJobResponse), nil
+	}
+}
+
+type ShowSynthesisJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSynthesisJobInvoker) Invoke() (*model.ShowSynthesisJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSynthesisJobResponse), nil
 	}
 }
 

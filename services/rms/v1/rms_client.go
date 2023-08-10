@@ -924,7 +924,7 @@ func (c *RmsClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQueryReq
 
 // ListSchemas 列举高级查询Schema
 //
-// List Schemas
+// # List Schemas
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ListSchemas(request *model.ListSchemasRequest) (*model.ListSchemasResponse, error) {
@@ -987,7 +987,7 @@ func (c *RmsClient) RunQueryInvoker(request *model.RunQueryRequest) *RunQueryInv
 
 // ShowStoredQuery 查询单个高级查询
 //
-// Show Resource Query Language
+// # Show Resource Query Language
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RmsClient) ShowStoredQuery(request *model.ShowStoredQueryRequest) (*model.ShowStoredQueryResponse, error) {

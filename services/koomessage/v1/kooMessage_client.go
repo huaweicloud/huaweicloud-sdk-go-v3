@@ -214,7 +214,6 @@ func (c *KooMessageClient) ListAimSendReportsInvoker(request *model.ListAimSendR
 
 // ListAimSendTasks 查询智能信息发送任务
 //
-//
 // 根据用户提供的过滤条件查询智能信息发送任务列表，包括：发送任务名称、智能信息模板ID等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -343,7 +342,6 @@ func (c *KooMessageClient) ListAimTemplateReportsInvoker(request *model.ListAimT
 
 // ListAimTemplates 查询模板
 //
-//
 // 根据客户提供的过滤条件查询智能信息模板列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -430,7 +428,6 @@ func (c *KooMessageClient) ListMenusInvoker(request *model.ListMenusRequest) *Li
 }
 
 // UpdateMenu 修改智能信息服务号菜单
-//
 //
 // 支持用户修改所属企业的指定菜单。
 //
@@ -558,7 +555,6 @@ func (c *KooMessageClient) UnlockPortInvoker(request *model.UnlockPortRequest) *
 
 // ListPortalInfos 查询主页列表
 //
-//
 // 根据用户提供的过滤条件查找用户管理的主页列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -579,7 +575,6 @@ func (c *KooMessageClient) ListPortalInfosInvoker(request *model.ListPortalInfos
 }
 
 // UpdatePortalInfo 修改主页信息
-//
 //
 // 用户对已创建的主页进行信息的修改。
 //
@@ -622,7 +617,6 @@ func (c *KooMessageClient) FreezePubInvoker(request *model.FreezePubRequest) *Fr
 }
 
 // ListPubInfos 查询服务号列表
-//
 //
 // 支持根据用户提供的过滤条件查询服务号列表。
 //

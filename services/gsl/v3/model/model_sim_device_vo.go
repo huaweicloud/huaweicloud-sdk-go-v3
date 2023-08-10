@@ -108,10 +108,10 @@ type SimDeviceVo struct {
 	// 是否已实名认证: true表示是，false表示否，系统SIM卡实名认证状态非实时。
 	RealNamed *bool `json:"real_named,omitempty"`
 
-	// 是否单独断网 true:断网，false:未断网 （当前仅电信卡支持）
+	// 是否单独断网 true:断网，false:未断网 （当前只支持联通、移动的组池卡，电信卡不限制）
 	CutNetFlag *bool `json:"cut_net_flag,omitempty"`
 
-	// 是否达量断网 true:达量断网，false:未达量断网 （当前仅电信卡支持）
+	// 是否达量断网 true:达量断网，false:未达量断网 （当前只支持联通、移动的组池卡，电信卡不限制）
 	ExceedCutNetFlag *bool `json:"exceed_cut_net_flag,omitempty"`
 
 	// 达量断网阈值（单位MB 当前仅电信卡支持）

@@ -12,6 +12,8 @@ type ExecuteJobResponse struct {
 	// 作业id
 	Id *string `json:"id,omitempty"`
 
+	MaxPlatformFlavor *TaskResourceDto `json:"max_platform_flavor,omitempty"`
+
 	// 筛选后的app集合
 	AppInfos *[]AppFilterDto `json:"app_infos,omitempty"`
 

@@ -9,6 +9,12 @@ import (
 // ShowTopicStatusResponse Response Object
 type ShowTopicStatusResponse struct {
 
+	// 最大偏移量。
+	MaxOffset *int32 `json:"max_offset,omitempty"`
+
+	// 最小偏移量。
+	MinOffset *int32 `json:"min_offset,omitempty"`
+
 	// 代理。
 	Brokers        *[]ShowTopicStatusRespBrokers `json:"brokers,omitempty"`
 	HttpStatusCode int                           `json:"-"`

@@ -110,7 +110,6 @@ func (c *CceClient) CreateAddonInstanceInvoker(request *model.CreateAddonInstanc
 //
 // 该API用于在指定的Namespace下通过云存储服务中的云存储（EVS、SFS、OBS）去创建PVC（PersistentVolumeClaim）。该API待废弃，请使用Kubernetes PVC相关接口。
 //
-//
 // &gt;存储管理的URL格式为：https://{clusterid}.Endpoint/uri。其中{clusterid}为集群ID，uri为资源路径，也即API访问的路径。如果使用https://Endpoint/uri，则必须指定请求header中的X-Cluster-ID参数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -133,7 +132,6 @@ func (c *CceClient) CreateCloudPersistentVolumeClaimsInvoker(request *model.Crea
 // CreateCluster 创建集群
 //
 // 该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[创建节点](cce_02_0242.xml)添加节点。
-//
 //
 // &gt;   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 // &gt;   - 调用该接口创建集群时，默认不安装ICAgent，若需安装ICAgent，可在请求Body参数的annotations中加入\&quot;cluster.install.addons.external/install\&quot;:\&quot;[{\&quot;addonTemplateName\&quot;:\&quot;icagent\&quot;}]\&quot;的集群注解，将在创建集群时自动安装ICAgent。ICAgent是应用性能管理APM的采集代理，运行在应用所在的服务器上，用于实时采集探针所获取的数据，安装ICAgent是使用应用性能管理APM的前提。
@@ -848,7 +846,6 @@ func (c *CceClient) UpdateNodeInvoker(request *model.UpdateNodeRequest) *UpdateN
 // UpdateNodePool 更新指定节点池
 //
 // 该API用于更新指定的节点池。仅支持集群在处于可用、扩容、缩容状态时调用。
-//
 //
 // &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
 //

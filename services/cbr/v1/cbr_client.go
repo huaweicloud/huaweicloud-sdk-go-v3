@@ -109,10 +109,11 @@ func (c *CbrClient) AssociateVaultPolicyInvoker(request *model.AssociateVaultPol
 // 标签管理服务需要使用该接口批量管理实例的标签。
 // 一个资源上最多有10个标签。
 // 此接口为幂等接口：
-//     创建时如果请求体中存在重复key则报错。
-//     创建时，不允许重复key，如果数据库存在就覆盖。
-//     删除时，允许重复key。
-//     删除时，如果删除的标签不存在，默认处理成功,删除时不对标签字符集范围做校验。key长度127个字符，value为255个字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+//
+//	创建时如果请求体中存在重复key则报错。
+//	创建时，不允许重复key，如果数据库存在就覆盖。
+//	删除时，允许重复key。
+//	删除时，如果删除的标签不存在，默认处理成功,删除时不对标签字符集范围做校验。key长度127个字符，value为255个字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndDeleteVaultTagsRequest) (*model.BatchCreateAndDeleteVaultTagsResponse, error) {

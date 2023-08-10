@@ -9,7 +9,7 @@ import (
 // ModifyProxyRouteWeightReadonlyNode 只读节点权重配置信息。
 type ModifyProxyRouteWeightReadonlyNode struct {
 
-	// 只读节点id
+	// 只读节点ID。
 	Id string `json:"id"`
 
 	// 只读节点权重： - 如果路由模式为0，取值为0~1000； - 如果路由模式为1或2，取值为0或1。

@@ -187,27 +187,6 @@ func (c *RamClient) ShowPermissionInvoker(request *model.ShowPermissionRequest) 
 	return &ShowPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchDistinctPrincipals 检索去重的共享的角色
-//
-// 检索您正在共享资源的不同角色或被共享资源给您的不同角色。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RamClient) SearchDistinctPrincipals(request *model.SearchDistinctPrincipalsRequest) (*model.SearchDistinctPrincipalsResponse, error) {
-	requestDef := GenReqDefForSearchDistinctPrincipals()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SearchDistinctPrincipalsResponse), nil
-	}
-}
-
-// SearchDistinctPrincipalsInvoker 检索去重的共享的角色
-func (c *RamClient) SearchDistinctPrincipalsInvoker(request *model.SearchDistinctPrincipalsRequest) *SearchDistinctPrincipalsInvoker {
-	requestDef := GenReqDefForSearchDistinctPrincipals()
-	return &SearchDistinctPrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // SearchSharedPrincipals 检索资源使用者
 //
 // 检索共享资源的使用者。
@@ -248,27 +227,6 @@ func (c *RamClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuota
 func (c *RamClient) ListQuotaInvoker(request *model.ListQuotaRequest) *ListQuotaInvoker {
 	requestDef := GenReqDefForListQuota()
 	return &ListQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SearchDistinctSharedResources 检索去重的共享的资源
-//
-// 检索您添加到资源共享或被共享给您的不同资源。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RamClient) SearchDistinctSharedResources(request *model.SearchDistinctSharedResourcesRequest) (*model.SearchDistinctSharedResourcesResponse, error) {
-	requestDef := GenReqDefForSearchDistinctSharedResources()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SearchDistinctSharedResourcesResponse), nil
-	}
-}
-
-// SearchDistinctSharedResourcesInvoker 检索去重的共享的资源
-func (c *RamClient) SearchDistinctSharedResourcesInvoker(request *model.SearchDistinctSharedResourcesRequest) *SearchDistinctSharedResourcesInvoker {
-	requestDef := GenReqDefForSearchDistinctSharedResources()
-	return &SearchDistinctSharedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchSharedResources 检索共享的资源

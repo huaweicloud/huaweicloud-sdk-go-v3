@@ -21,7 +21,6 @@ func DgcClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CancelScript 停止脚本实例的执行
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) CancelScript(request *model.CancelScriptRequest) (*model.CancelScriptResponse, error) {
 	requestDef := GenReqDefForCancelScript()
@@ -40,7 +39,6 @@ func (c *DgcClient) CancelScriptInvoker(request *model.CancelScriptRequest) *Can
 }
 
 // CreateConnection 创建连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
@@ -61,7 +59,6 @@ func (c *DgcClient) CreateConnectionInvoker(request *model.CreateConnectionReque
 
 // CreateJob 创建作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) CreateJob(request *model.CreateJobRequest) (*model.CreateJobResponse, error) {
 	requestDef := GenReqDefForCreateJob()
@@ -80,7 +77,6 @@ func (c *DgcClient) CreateJobInvoker(request *model.CreateJobRequest) *CreateJob
 }
 
 // CreateResource 创建资源
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) CreateResource(request *model.CreateResourceRequest) (*model.CreateResourceResponse, error) {
@@ -101,7 +97,6 @@ func (c *DgcClient) CreateResourceInvoker(request *model.CreateResourceRequest) 
 
 // CreateScript 创建脚本
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) CreateScript(request *model.CreateScriptRequest) (*model.CreateScriptResponse, error) {
 	requestDef := GenReqDefForCreateScript()
@@ -120,7 +115,6 @@ func (c *DgcClient) CreateScriptInvoker(request *model.CreateScriptRequest) *Cre
 }
 
 // DeleteConnction 删除连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) DeleteConnction(request *model.DeleteConnctionRequest) (*model.DeleteConnctionResponse, error) {
@@ -141,7 +135,6 @@ func (c *DgcClient) DeleteConnctionInvoker(request *model.DeleteConnctionRequest
 
 // DeleteJob 删除作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
 	requestDef := GenReqDefForDeleteJob()
@@ -160,7 +153,6 @@ func (c *DgcClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJob
 }
 
 // DeleteResource 删除资源
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) DeleteResource(request *model.DeleteResourceRequest) (*model.DeleteResourceResponse, error) {
@@ -181,7 +173,6 @@ func (c *DgcClient) DeleteResourceInvoker(request *model.DeleteResourceRequest) 
 
 // DeleteScript 删除脚本
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) DeleteScript(request *model.DeleteScriptRequest) (*model.DeleteScriptResponse, error) {
 	requestDef := GenReqDefForDeleteScript()
@@ -200,7 +191,6 @@ func (c *DgcClient) DeleteScriptInvoker(request *model.DeleteScriptRequest) *Del
 }
 
 // ExecuteScript 执行脚本
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ExecuteScript(request *model.ExecuteScriptRequest) (*model.ExecuteScriptResponse, error) {
@@ -221,7 +211,6 @@ func (c *DgcClient) ExecuteScriptInvoker(request *model.ExecuteScriptRequest) *E
 
 // ExportConnections 导出连接
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ExportConnections(request *model.ExportConnectionsRequest) (*model.ExportConnectionsResponse, error) {
 	requestDef := GenReqDefForExportConnections()
@@ -240,7 +229,6 @@ func (c *DgcClient) ExportConnectionsInvoker(request *model.ExportConnectionsReq
 }
 
 // ExportJob 导出作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ExportJob(request *model.ExportJobRequest) (*model.ExportJobResponse, error) {
@@ -261,7 +249,6 @@ func (c *DgcClient) ExportJobInvoker(request *model.ExportJobRequest) *ExportJob
 
 // ExportJobList 批量导出作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ExportJobList(request *model.ExportJobListRequest) (*model.ExportJobListResponse, error) {
 	requestDef := GenReqDefForExportJobList()
@@ -280,7 +267,6 @@ func (c *DgcClient) ExportJobListInvoker(request *model.ExportJobListRequest) *E
 }
 
 // ImportConnections 导入连接
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ImportConnections(request *model.ImportConnectionsRequest) (*model.ImportConnectionsResponse, error) {
@@ -301,7 +287,6 @@ func (c *DgcClient) ImportConnectionsInvoker(request *model.ImportConnectionsReq
 
 // ImportJob 导入作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ImportJob(request *model.ImportJobRequest) (*model.ImportJobResponse, error) {
 	requestDef := GenReqDefForImportJob()
@@ -320,7 +305,6 @@ func (c *DgcClient) ImportJobInvoker(request *model.ImportJobRequest) *ImportJob
 }
 
 // ListConnections 查询连接列表
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
@@ -341,7 +325,6 @@ func (c *DgcClient) ListConnectionsInvoker(request *model.ListConnectionsRequest
 
 // ListJobInstances 查询作业实例列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListJobInstances(request *model.ListJobInstancesRequest) (*model.ListJobInstancesResponse, error) {
 	requestDef := GenReqDefForListJobInstances()
@@ -361,7 +344,6 @@ func (c *DgcClient) ListJobInstancesInvoker(request *model.ListJobInstancesReque
 
 // ListJobs 查询作业列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
 	requestDef := GenReqDefForListJobs()
@@ -380,7 +362,6 @@ func (c *DgcClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInv
 }
 
 // ListResources 查询资源列表
-//
 func (c *DgcClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
 	requestDef := GenReqDefForListResources()
 
@@ -398,7 +379,6 @@ func (c *DgcClient) ListResourcesInvoker(request *model.ListResourcesRequest) *L
 }
 
 // ListScriptResults 查询脚本实例执行结果
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListScriptResults(request *model.ListScriptResultsRequest) (*model.ListScriptResultsResponse, error) {
@@ -419,7 +399,6 @@ func (c *DgcClient) ListScriptResultsInvoker(request *model.ListScriptResultsReq
 
 // ListScripts 查询脚本列表
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListScripts(request *model.ListScriptsRequest) (*model.ListScriptsResponse, error) {
 	requestDef := GenReqDefForListScripts()
@@ -438,7 +417,6 @@ func (c *DgcClient) ListScriptsInvoker(request *model.ListScriptsRequest) *ListS
 }
 
 // ListSystemTasks 查询系统任务详情
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListSystemTasks(request *model.ListSystemTasksRequest) (*model.ListSystemTasksResponse, error) {
@@ -459,7 +437,6 @@ func (c *DgcClient) ListSystemTasksInvoker(request *model.ListSystemTasksRequest
 
 // RestoreJobInstance 重跑作业实例
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) RestoreJobInstance(request *model.RestoreJobInstanceRequest) (*model.RestoreJobInstanceResponse, error) {
 	requestDef := GenReqDefForRestoreJobInstance()
@@ -478,7 +455,6 @@ func (c *DgcClient) RestoreJobInstanceInvoker(request *model.RestoreJobInstanceR
 }
 
 // RunOnce 单次执行作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceResponse, error) {
@@ -499,7 +475,6 @@ func (c *DgcClient) RunOnceInvoker(request *model.RunOnceRequest) *RunOnceInvoke
 
 // ShowConnection 查询连接详情
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowConnection(request *model.ShowConnectionRequest) (*model.ShowConnectionResponse, error) {
 	requestDef := GenReqDefForShowConnection()
@@ -518,7 +493,6 @@ func (c *DgcClient) ShowConnectionInvoker(request *model.ShowConnectionRequest) 
 }
 
 // ShowFileInfo 检查导入作业文件中的作业和脚本
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.ShowFileInfoResponse, error) {
@@ -539,7 +513,6 @@ func (c *DgcClient) ShowFileInfoInvoker(request *model.ShowFileInfoRequest) *Sho
 
 // ShowJob 查询作业详情
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
 	requestDef := GenReqDefForShowJob()
@@ -558,7 +531,6 @@ func (c *DgcClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 }
 
 // ShowJobInstance 查询作业实例详情
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowJobInstance(request *model.ShowJobInstanceRequest) (*model.ShowJobInstanceResponse, error) {
@@ -579,7 +551,6 @@ func (c *DgcClient) ShowJobInstanceInvoker(request *model.ShowJobInstanceRequest
 
 // ShowJobStatus 查询实时作业的运行状态
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowJobStatus(request *model.ShowJobStatusRequest) (*model.ShowJobStatusResponse, error) {
 	requestDef := GenReqDefForShowJobStatus()
@@ -598,7 +569,6 @@ func (c *DgcClient) ShowJobStatusInvoker(request *model.ShowJobStatusRequest) *S
 }
 
 // ShowResource 查询资源详情
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowResource(request *model.ShowResourceRequest) (*model.ShowResourceResponse, error) {
@@ -619,7 +589,6 @@ func (c *DgcClient) ShowResourceInvoker(request *model.ShowResourceRequest) *Sho
 
 // ShowScript 查询脚本信息
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowScript(request *model.ShowScriptRequest) (*model.ShowScriptResponse, error) {
 	requestDef := GenReqDefForShowScript()
@@ -638,7 +607,6 @@ func (c *DgcClient) ShowScriptInvoker(request *model.ShowScriptRequest) *ShowScr
 }
 
 // StartJob 启动作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) StartJob(request *model.StartJobRequest) (*model.StartJobResponse, error) {
@@ -659,7 +627,6 @@ func (c *DgcClient) StartJobInvoker(request *model.StartJobRequest) *StartJobInv
 
 // StopJob 停止作业
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) StopJob(request *model.StopJobRequest) (*model.StopJobResponse, error) {
 	requestDef := GenReqDefForStopJob()
@@ -678,7 +645,6 @@ func (c *DgcClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoke
 }
 
 // StopJobInstance 停止作业实例
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) StopJobInstance(request *model.StopJobInstanceRequest) (*model.StopJobInstanceResponse, error) {
@@ -699,7 +665,6 @@ func (c *DgcClient) StopJobInstanceInvoker(request *model.StopJobInstanceRequest
 
 // UpdateConnection 修改连接
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) UpdateConnection(request *model.UpdateConnectionRequest) (*model.UpdateConnectionResponse, error) {
 	requestDef := GenReqDefForUpdateConnection()
@@ -718,7 +683,6 @@ func (c *DgcClient) UpdateConnectionInvoker(request *model.UpdateConnectionReque
 }
 
 // UpdateJob 修改作业
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJobResponse, error) {
@@ -739,7 +703,6 @@ func (c *DgcClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJob
 
 // UpdateResource 修改资源
 //
-//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) UpdateResource(request *model.UpdateResourceRequest) (*model.UpdateResourceResponse, error) {
 	requestDef := GenReqDefForUpdateResource()
@@ -758,7 +721,6 @@ func (c *DgcClient) UpdateResourceInvoker(request *model.UpdateResourceRequest) 
 }
 
 // UpdateScript 修改脚本内容
-//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) UpdateScript(request *model.UpdateScriptRequest) (*model.UpdateScriptResponse, error) {

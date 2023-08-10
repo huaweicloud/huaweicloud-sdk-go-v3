@@ -17,6 +17,8 @@ type AppFilterDto struct {
 	// 应用版本
 	AppVersion *string `json:"app_version,omitempty"`
 
+	AppResource *TaskResourceDto `json:"app_resource,omitempty"`
+
 	// 计算节点标签
 	AppNodeLabels *[]string `json:"app_node_labels,omitempty"`
 }

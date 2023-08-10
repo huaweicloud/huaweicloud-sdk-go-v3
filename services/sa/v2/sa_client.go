@@ -21,7 +21,7 @@ func SaClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CreateAlertRule 创建告警规则（仅支持华东-上海一使用）
 //
-// Create alert rule
+// # Create alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) CreateAlertRule(request *model.CreateAlertRuleRequest) (*model.CreateAlertRuleResponse, error) {
@@ -42,7 +42,7 @@ func (c *SaClient) CreateAlertRuleInvoker(request *model.CreateAlertRuleRequest)
 
 // CreateAlertRuleSimulation 模拟告警规则（仅支持华东-上海一使用）
 //
-// Simulate alert rule
+// # Simulate alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) CreateAlertRuleSimulation(request *model.CreateAlertRuleSimulationRequest) (*model.CreateAlertRuleSimulationResponse, error) {
@@ -63,7 +63,7 @@ func (c *SaClient) CreateAlertRuleSimulationInvoker(request *model.CreateAlertRu
 
 // DeleteAlertRule 删除告警规则（仅支持华东-上海一使用）
 //
-// Delete alert rule
+// # Delete alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) DeleteAlertRule(request *model.DeleteAlertRuleRequest) (*model.DeleteAlertRuleResponse, error) {
@@ -84,7 +84,7 @@ func (c *SaClient) DeleteAlertRuleInvoker(request *model.DeleteAlertRuleRequest)
 
 // DisableAlertRule 停用告警规则（仅支持华东-上海一使用）
 //
-// Disable alert rule
+// # Disable alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) DisableAlertRule(request *model.DisableAlertRuleRequest) (*model.DisableAlertRuleResponse, error) {
@@ -105,7 +105,7 @@ func (c *SaClient) DisableAlertRuleInvoker(request *model.DisableAlertRuleReques
 
 // EnableAlertRule 启用告警规则（仅支持华东-上海一使用）
 //
-// Enable alert rule
+// # Enable alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) EnableAlertRule(request *model.EnableAlertRuleRequest) (*model.EnableAlertRuleResponse, error) {
@@ -126,7 +126,7 @@ func (c *SaClient) EnableAlertRuleInvoker(request *model.EnableAlertRuleRequest)
 
 // ListAlertRuleMetrics 告警规则总览（仅支持华东-上海一使用）
 //
-// List alert rule metrics
+// # List alert rule metrics
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ListAlertRuleMetrics(request *model.ListAlertRuleMetricsRequest) (*model.ListAlertRuleMetricsResponse, error) {
@@ -147,7 +147,7 @@ func (c *SaClient) ListAlertRuleMetricsInvoker(request *model.ListAlertRuleMetri
 
 // ListAlertRuleTemplates 列出告警规则模板（仅支持华东-上海一使用）
 //
-// List alert rule templates
+// # List alert rule templates
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ListAlertRuleTemplates(request *model.ListAlertRuleTemplatesRequest) (*model.ListAlertRuleTemplatesResponse, error) {
@@ -168,7 +168,7 @@ func (c *SaClient) ListAlertRuleTemplatesInvoker(request *model.ListAlertRuleTem
 
 // ListAlertRules 列出告警规则（仅支持华东-上海一使用）
 //
-// List alert rules
+// # List alert rules
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ListAlertRules(request *model.ListAlertRulesRequest) (*model.ListAlertRulesResponse, error) {
@@ -189,7 +189,7 @@ func (c *SaClient) ListAlertRulesInvoker(request *model.ListAlertRulesRequest) *
 
 // ShowAlertRule 查看告警规则（仅支持华东-上海一使用）
 //
-// Get alert rule
+// # Get alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ShowAlertRule(request *model.ShowAlertRuleRequest) (*model.ShowAlertRuleResponse, error) {
@@ -210,7 +210,7 @@ func (c *SaClient) ShowAlertRuleInvoker(request *model.ShowAlertRuleRequest) *Sh
 
 // ShowAlertRuleTemplate 查看告警规则模板（仅支持华东-上海一使用）
 //
-// List alert rule templates
+// # List alert rule templates
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ShowAlertRuleTemplate(request *model.ShowAlertRuleTemplateRequest) (*model.ShowAlertRuleTemplateResponse, error) {
@@ -231,7 +231,7 @@ func (c *SaClient) ShowAlertRuleTemplateInvoker(request *model.ShowAlertRuleTemp
 
 // UpdateAlertRule 更新告警规则（仅支持华东-上海一使用）
 //
-// Update alert rule
+// # Update alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) UpdateAlertRule(request *model.UpdateAlertRuleRequest) (*model.UpdateAlertRuleResponse, error) {
@@ -546,7 +546,7 @@ func (c *SaClient) DeleteIndicatorInvoker(request *model.DeleteIndicatorRequest)
 
 // ListIndicators 查询指标列表（仅支持华东-上海一使用）
 //
-// List all indicators
+// # List all indicators
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ListIndicators(request *model.ListIndicatorsRequest) (*model.ListIndicatorsResponse, error) {
@@ -672,7 +672,7 @@ func (c *SaClient) ListPlaybooksInvoker(request *model.ListPlaybooksRequest) *Li
 
 // ShowPlaybook 查询剧本详情（仅支持华东-上海一使用）
 //
-// Show playbook
+// # Show playbook
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ShowPlaybook(request *model.ShowPlaybookRequest) (*model.ShowPlaybookResponse, error) {
@@ -924,7 +924,7 @@ func (c *SaClient) ListPlaybookAuditLogsInvoker(request *model.ListPlaybookAudit
 
 // ListPlaybookInstances 查询剧本实例列表（仅支持华东-上海一使用）
 //
-// List playbook instances
+// # List playbook instances
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ListPlaybookInstances(request *model.ListPlaybookInstancesRequest) (*model.ListPlaybookInstancesResponse, error) {
@@ -945,7 +945,7 @@ func (c *SaClient) ListPlaybookInstancesInvoker(request *model.ListPlaybookInsta
 
 // ShowPlaybookInstance 查询剧本实例详情（仅支持华东-上海一使用）
 //
-// Show playbook instance
+// # Show playbook instance
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ShowPlaybookInstance(request *model.ShowPlaybookInstanceRequest) (*model.ShowPlaybookInstanceResponse, error) {
@@ -966,7 +966,7 @@ func (c *SaClient) ShowPlaybookInstanceInvoker(request *model.ShowPlaybookInstan
 
 // ShowPlaybookTopology 查询剧本拓扑关系（仅支持华东-上海一使用）
 //
-// Show playbook Topology
+// # Show playbook Topology
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ShowPlaybookTopology(request *model.ShowPlaybookTopologyRequest) (*model.ShowPlaybookTopologyResponse, error) {
@@ -1071,7 +1071,7 @@ func (c *SaClient) UpdatePlaybookRuleInvoker(request *model.UpdatePlaybookRuleRe
 
 // CopyPlaybookVersion 克隆剧本及版本（仅支持华东-上海一使用）
 //
-// Copy Playbook and version to a new one
+// # Copy Playbook and version to a new one
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) CopyPlaybookVersion(request *model.CopyPlaybookVersionRequest) (*model.CopyPlaybookVersionResponse, error) {
@@ -1155,7 +1155,7 @@ func (c *SaClient) ListPlaybookVersionsInvoker(request *model.ListPlaybookVersio
 
 // ShowPlaybookVersion 查询剧本版本详情（仅支持华东-上海一使用）
 //
-// Show playbook version version
+// # Show playbook version version
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ShowPlaybookVersion(request *model.ShowPlaybookVersionRequest) (*model.ShowPlaybookVersionResponse, error) {
@@ -1197,7 +1197,7 @@ func (c *SaClient) UpdatePlaybookVersionInvoker(request *model.UpdatePlaybookVer
 
 // CreateDataobjectRelation 创建Dataobject关系
 //
-// Create Dataobject Relation
+// # Create Dataobject Relation
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) CreateDataobjectRelation(request *model.CreateDataobjectRelationRequest) (*model.CreateDataobjectRelationResponse, error) {
@@ -1218,7 +1218,7 @@ func (c *SaClient) CreateDataobjectRelationInvoker(request *model.CreateDataobje
 
 // DeleteDataobjectRelation 删除Dataobject关系
 //
-// Delete Dataobject Relation
+// # Delete Dataobject Relation
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) DeleteDataobjectRelation(request *model.DeleteDataobjectRelationRequest) (*model.DeleteDataobjectRelationResponse, error) {
@@ -1239,7 +1239,7 @@ func (c *SaClient) DeleteDataobjectRelationInvoker(request *model.DeleteDataobje
 
 // ListDataobjectRelation 查询Dataobject关系列表
 //
-// List Dataobject Relation
+// # List Dataobject Relation
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SaClient) ListDataobjectRelation(request *model.ListDataobjectRelationRequest) (*model.ListDataobjectRelationResponse, error) {

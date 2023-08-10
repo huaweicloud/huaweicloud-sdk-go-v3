@@ -399,7 +399,7 @@ func (c *DscClient) ListDbMaskTaskInvoker(request *model.ListDbMaskTaskRequest) 
 
 // ListRelationBuckets OBS血缘图桶级查询
 //
-// OBS血缘图桶级查询
+// # OBS血缘图桶级查询
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DscClient) ListRelationBuckets(request *model.ListRelationBucketsRequest) (*model.ListRelationBucketsResponse, error) {
@@ -462,7 +462,7 @@ func (c *DscClient) ListRelationDbInvoker(request *model.ListRelationDbRequest) 
 
 // ListRelationFile OBS血缘图文件分页查询
 //
-// OBS血缘图文件分页查询
+// # OBS血缘图文件分页查询
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DscClient) ListRelationFile(request *model.ListRelationFileRequest) (*model.ListRelationFileResponse, error) {
