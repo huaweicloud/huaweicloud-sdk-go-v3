@@ -25,6 +25,7 @@ import (
 	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth/global"
 	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/sdkerr"
+	"gopkg.in/ini.v1"
 	"os"
 	"path/filepath"
 	"strings"
