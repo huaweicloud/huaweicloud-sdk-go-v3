@@ -17,7 +17,7 @@ type TokenAuthIdentity struct {
 
 	Token *IdentityToken `json:"token,omitempty"`
 
-	Policy *ServicePolicy `json:"policy,omitempty"`
+	Policy *ServicePolicy `json:"Policy,omitempty"`
 }
 
 func (o TokenAuthIdentity) String() string {
