@@ -20,8 +20,8 @@
 package provider
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth/global"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

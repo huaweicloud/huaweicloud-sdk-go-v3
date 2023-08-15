@@ -20,7 +20,7 @@
 package retry
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 )
 
 // EqualJitter 等抖动指数退避 delay = Exponential/2 + random(0, Exponential/2)

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 	"github.com/shopspring/decimal"
 
 	"strings"

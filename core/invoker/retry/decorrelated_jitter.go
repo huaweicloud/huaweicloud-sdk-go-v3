@@ -20,7 +20,7 @@
 package retry
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 )
 
 // DecorRelatedJitter 去相关抖动退避 delay = min(最大等待时间, random(基础等待时间, 基础等待时间 * 3);

@@ -1,8 +1,8 @@
 package v3
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/scm/v3/model"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/invoker"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/services/scm/v3/model"
 )
 
 type DeleteCertificateInvoker struct {

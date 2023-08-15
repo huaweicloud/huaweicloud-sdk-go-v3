@@ -21,7 +21,7 @@ package request
 
 import (
 	"bytes"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/progress"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/progress"
 )
 
 type HttpRequest interface {

@@ -22,7 +22,7 @@ package config
 import (
 	"context"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/httphandler"
 	"net"
 	"net/http"
 	"time"

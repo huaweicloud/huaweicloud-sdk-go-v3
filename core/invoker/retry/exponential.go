@@ -20,7 +20,7 @@
 package retry
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 )
 
 // Exponential 指数退避 delay = min(最大等待时间, 基础等待时间 * (2^已重试次数))

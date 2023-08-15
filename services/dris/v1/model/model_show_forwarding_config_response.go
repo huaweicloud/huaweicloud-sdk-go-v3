@@ -2,9 +2,9 @@ package model
 
 import (
 	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/converter"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 

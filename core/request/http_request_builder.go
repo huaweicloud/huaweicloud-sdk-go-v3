@@ -20,8 +20,8 @@
 package request
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/progress"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/def"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/progress"
 	"reflect"
 	"strings"
 )

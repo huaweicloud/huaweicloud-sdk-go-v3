@@ -20,7 +20,7 @@
 package retry
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 )
 
 // RandomJitter 全抖动指数退避 delay = random(0, Exponential)

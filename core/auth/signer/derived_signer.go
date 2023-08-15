@@ -24,7 +24,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/request"
 	"golang.org/x/crypto/hkdf"
 	"io"
 	"strings"

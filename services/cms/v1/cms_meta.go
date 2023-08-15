@@ -1,9 +1,9 @@
 package v1
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/def"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cms/v1/model"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/services/cms/v1/model"
 	"net/http"
 )
 

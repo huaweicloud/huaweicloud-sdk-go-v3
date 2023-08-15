@@ -1,9 +1,9 @@
 package v3
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/impl"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/request"
 )
 
 const xAuthToken = "X-Auth-Token"

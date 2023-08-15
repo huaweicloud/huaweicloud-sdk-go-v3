@@ -21,11 +21,10 @@ package provider
 
 import (
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
-	"gopkg.in/ini.v1"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth/basic"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/auth/global"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/sdkerr"
 	"os"
 	"path/filepath"
 	"strings"

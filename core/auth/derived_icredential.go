@@ -20,7 +20,7 @@
 package auth
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/request"
 	"regexp"
 	"strings"
 )

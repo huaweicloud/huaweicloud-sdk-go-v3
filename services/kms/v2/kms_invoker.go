@@ -1,8 +1,8 @@
 package v2
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/kms/v2/model"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/invoker"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/services/kms/v2/model"
 )
 
 type BatchCreateKmsTagsInvoker struct {

@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cbr/v1/model"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/invoker"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/services/cbr/v1/model"
 )
 
 type AddAgentPathInvoker struct {

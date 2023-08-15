@@ -20,8 +20,8 @@
 package auth
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/impl"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/request"
 )
 
 type ICredential interface {

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/utils"
 )
 
 type Converter interface {

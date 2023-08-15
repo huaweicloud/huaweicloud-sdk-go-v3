@@ -1,9 +1,9 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eg/v1/model"
+	http_client "github.com/dysodeng/huaweicloud-sdk-go-v3/core"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/invoker"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/services/eg/v1/model"
 )
 
 type EgClient struct {

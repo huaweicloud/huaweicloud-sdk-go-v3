@@ -20,7 +20,7 @@
 package basic
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/sdkerr"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"

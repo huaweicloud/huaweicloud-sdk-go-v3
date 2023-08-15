@@ -2,7 +2,7 @@ package region
 
 import (
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+	"github.com/dysodeng/huaweicloud-sdk-go-v3/core/region"
 )
 
 var (
