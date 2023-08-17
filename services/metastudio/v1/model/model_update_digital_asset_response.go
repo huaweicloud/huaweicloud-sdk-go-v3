@@ -27,10 +27,10 @@ type UpdateDigitalAssetResponse struct {
 	// 资产更新时间。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
 	AssetType *UpdateDigitalAssetResponseAssetType `json:"asset_type,omitempty"`
 
-	// 资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复
+	// 资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
 	AssetState *UpdateDigitalAssetResponseAssetState `json:"asset_state,omitempty"`
 
 	// 标签列表。
@@ -72,6 +72,7 @@ type UpdateDigitalAssetResponseAssetTypeEnum struct {
 	COMMON_FILE           UpdateDigitalAssetResponseAssetType
 	HUMAN_MODEL_2_D       UpdateDigitalAssetResponseAssetType
 	BUSINESS_CARD_TEMPLET UpdateDigitalAssetResponseAssetType
+	MUSIC                 UpdateDigitalAssetResponseAssetType
 }
 
 func GetUpdateDigitalAssetResponseAssetTypeEnum() UpdateDigitalAssetResponseAssetTypeEnum {
@@ -111,6 +112,9 @@ func GetUpdateDigitalAssetResponseAssetTypeEnum() UpdateDigitalAssetResponseAsse
 		},
 		BUSINESS_CARD_TEMPLET: UpdateDigitalAssetResponseAssetType{
 			value: "BUSINESS_CARD_TEMPLET",
+		},
+		MUSIC: UpdateDigitalAssetResponseAssetType{
+			value: "MUSIC",
 		},
 	}
 }
@@ -153,6 +157,7 @@ type UpdateDigitalAssetResponseAssetStateEnum struct {
 	ACTIVED   UpdateDigitalAssetResponseAssetState
 	DELETING  UpdateDigitalAssetResponseAssetState
 	DELETED   UpdateDigitalAssetResponseAssetState
+	BLOCK     UpdateDigitalAssetResponseAssetState
 }
 
 func GetUpdateDigitalAssetResponseAssetStateEnum() UpdateDigitalAssetResponseAssetStateEnum {
@@ -174,6 +179,9 @@ func GetUpdateDigitalAssetResponseAssetStateEnum() UpdateDigitalAssetResponseAss
 		},
 		DELETED: UpdateDigitalAssetResponseAssetState{
 			value: "DELETED",
+		},
+		BLOCK: UpdateDigitalAssetResponseAssetState{
+			value: "BLOCK",
 		},
 	}
 }

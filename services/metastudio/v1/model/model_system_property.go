@@ -14,7 +14,7 @@ type SystemProperty struct {
 	// 操作。 - ADD：增加 - DELETE：删除
 	Action *SystemPropertyAction `json:"action,omitempty"`
 
-	// 系统属性。 * STYLE_ID：风格Id。 * DH_ID：数字人ID(尚未启用)。 * PLATFORM_AVAILABLE：是否平台可用(尚未启用)。 * RENDER_ENGINE：引擎类型。value可选UE或MetaEngine。 * BACKGROUND_IMG：视频制作的2D背景图片。value设置成Yes * BACKGROUND_SCENE：视频制作的2D背景场景。value可选Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM： 是否平台生成
+	// 系统属性。 * STYLE_ID：风格Id。 * DH_ID：数字人ID(尚未启用)。 * PLATFORM_AVAILABLE：是否平台可用(尚未启用)。 * RENDER_ENGINE：引擎类型。value可选UE或MetaEngine。 * BACKGROUND_IMG：视频制作的2D背景图片。value设置成Yes。 * BACKGROUND_SCENE：视频制作的2D背景场景。value可选Horizontal（横屏）或者Vertical（竖屏）。 * CREATED_BY_PLATFORM：是否平台生成
 	Key *SystemPropertyKey `json:"key,omitempty"`
 
 	// 属性值。

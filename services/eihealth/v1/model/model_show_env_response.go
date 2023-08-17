@@ -26,7 +26,10 @@ type ShowEnvResponse struct {
 
 	// 是否支持归档类型存储
 	EnableColdArchive *bool `json:"enable_cold_archive,omitempty"`
-	HttpStatusCode    int   `json:"-"`
+
+	// 医疗智能体公共数据桶https路径
+	PublicBucketPath *string `json:"public_bucket_path,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o ShowEnvResponse) String() string {

@@ -1314,6 +1314,29 @@ func (c *DcsClient) ShowMigrationTaskStatsInvoker(request *model.ShowMigrationTa
 	return &ShowMigrationTaskStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowNodesInformation 查询实例节点信息
+//
+// 查询指定实例的节点信息。
+// 仅支持Redis4.0和Redis5.0实例查询。
+// 创建中实例不返回节点信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowNodesInformation(request *model.ShowNodesInformationRequest) (*model.ShowNodesInformationResponse, error) {
+	requestDef := GenReqDefForShowNodesInformation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNodesInformationResponse), nil
+	}
+}
+
+// ShowNodesInformationInvoker 查询实例节点信息
+func (c *DcsClient) ShowNodesInformationInvoker(request *model.ShowNodesInformationRequest) *ShowNodesInformationInvoker {
+	requestDef := GenReqDefForShowNodesInformation()
+	return &ShowNodesInformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotaOfTenant 查询租户配额
 //
 // 查询租户默认可以创建的实例数和总内存的配额限制，以及可以申请配额的最大值和最小值。不同的租户在不同的区域配额可能不同。

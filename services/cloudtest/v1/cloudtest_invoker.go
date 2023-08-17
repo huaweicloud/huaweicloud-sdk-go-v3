@@ -209,6 +209,18 @@ func (i *ShowReportInvoker) Invoke() (*model.ShowReportResponse, error) {
 	}
 }
 
+type ShowTestCaseAndDefectInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestCaseAndDefectInfoInvoker) Invoke() (*model.ShowTestCaseAndDefectInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestCaseAndDefectInfoResponse), nil
+	}
+}
+
 type ShowTestCaseDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +242,18 @@ func (i *ShowTestCaseDetailV2Invoker) Invoke() (*model.ShowTestCaseDetailV2Respo
 		return nil, err
 	} else {
 		return result.(*model.ShowTestCaseDetailV2Response), nil
+	}
+}
+
+type ShowUserExecuteTestCaseInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUserExecuteTestCaseInfoInvoker) Invoke() (*model.ShowUserExecuteTestCaseInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUserExecuteTestCaseInfoResponse), nil
 	}
 }
 

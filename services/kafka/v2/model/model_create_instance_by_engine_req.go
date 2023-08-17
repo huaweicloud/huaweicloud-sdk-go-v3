@@ -169,7 +169,6 @@ type CreateInstanceByEngineReqEngineVersion struct {
 
 type CreateInstanceByEngineReqEngineVersionEnum struct {
 	E_1_1_0 CreateInstanceByEngineReqEngineVersion
-	E_2_3_0 CreateInstanceByEngineReqEngineVersion
 	E_2_7   CreateInstanceByEngineReqEngineVersion
 }
 
@@ -177,9 +176,6 @@ func GetCreateInstanceByEngineReqEngineVersionEnum() CreateInstanceByEngineReqEn
 	return CreateInstanceByEngineReqEngineVersionEnum{
 		E_1_1_0: CreateInstanceByEngineReqEngineVersion{
 			value: "1.1.0",
-		},
-		E_2_3_0: CreateInstanceByEngineReqEngineVersion{
-			value: "2.3.0",
 		},
 		E_2_7: CreateInstanceByEngineReqEngineVersion{
 			value: "2.7",

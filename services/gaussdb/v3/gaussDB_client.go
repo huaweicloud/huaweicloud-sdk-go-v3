@@ -292,6 +292,27 @@ func (c *GaussDBClient) CreateGaussMySqlReadonlyNodeInvoker(request *model.Creat
 	return &CreateGaussMySqlReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGaussMysqlDns 申请内网域名
+//
+// 申请内网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CreateGaussMysqlDns(request *model.CreateGaussMysqlDnsRequest) (*model.CreateGaussMysqlDnsResponse, error) {
+	requestDef := GenReqDefForCreateGaussMysqlDns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGaussMysqlDnsResponse), nil
+	}
+}
+
+// CreateGaussMysqlDnsInvoker 申请内网域名
+func (c *GaussDBClient) CreateGaussMysqlDnsInvoker(request *model.CreateGaussMysqlDnsRequest) *CreateGaussMysqlDnsInvoker {
+	requestDef := GenReqDefForCreateGaussMysqlDns()
+	return &CreateGaussMysqlDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDatabasePermission 删除数据库用户的数据库权限
 //
 // 删除云数据库 GaussDB(for MySQL)实例数据库用户的数据库权限。
@@ -879,6 +900,27 @@ func (c *GaussDBClient) ModifyGaussMySqlProxyRouteMode(request *model.ModifyGaus
 func (c *GaussDBClient) ModifyGaussMySqlProxyRouteModeInvoker(request *model.ModifyGaussMySqlProxyRouteModeRequest) *ModifyGaussMySqlProxyRouteModeInvoker {
 	requestDef := GenReqDefForModifyGaussMySqlProxyRouteMode()
 	return &ModifyGaussMySqlProxyRouteModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyGaussMysqlDns 修改内网域名
+//
+// 修改内网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ModifyGaussMysqlDns(request *model.ModifyGaussMysqlDnsRequest) (*model.ModifyGaussMysqlDnsResponse, error) {
+	requestDef := GenReqDefForModifyGaussMysqlDns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyGaussMysqlDnsResponse), nil
+	}
+}
+
+// ModifyGaussMysqlDnsInvoker 修改内网域名
+func (c *GaussDBClient) ModifyGaussMysqlDnsInvoker(request *model.ModifyGaussMysqlDnsRequest) *ModifyGaussMysqlDnsInvoker {
+	requestDef := GenReqDefForModifyGaussMysqlDns()
+	return &ModifyGaussMysqlDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetGaussMySqlDatabasePassword 修改数据库用户密码

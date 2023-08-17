@@ -161,6 +161,18 @@ func (i *CreateGaussMySqlReadonlyNodeInvoker) Invoke() (*model.CreateGaussMySqlR
 	}
 }
 
+type CreateGaussMysqlDnsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGaussMysqlDnsInvoker) Invoke() (*model.CreateGaussMysqlDnsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGaussMysqlDnsResponse), nil
+	}
+}
+
 type DeleteDatabasePermissionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -494,6 +506,18 @@ func (i *ModifyGaussMySqlProxyRouteModeInvoker) Invoke() (*model.ModifyGaussMySq
 		return nil, err
 	} else {
 		return result.(*model.ModifyGaussMySqlProxyRouteModeResponse), nil
+	}
+}
+
+type ModifyGaussMysqlDnsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyGaussMysqlDnsInvoker) Invoke() (*model.ModifyGaussMysqlDnsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyGaussMysqlDnsResponse), nil
 	}
 }
 

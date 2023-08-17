@@ -9,7 +9,7 @@ import (
 type MetadataDeleteReq struct {
 
 	// 需要删除的任务列表。
-	TaskIds *[]string `json:"taskIds,omitempty"`
+	TaskIds []string `json:"taskIds"`
 }
 
 func (o MetadataDeleteReq) String() string {

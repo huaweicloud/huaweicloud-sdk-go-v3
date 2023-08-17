@@ -180,8 +180,17 @@ type ShowInstanceResponse struct {
 	// 集群实例分片个数
 	ShardingCount *int32 `json:"sharding_count,omitempty"`
 
-	BandwidthInfo  *BandwidthInfo `json:"bandwidth_info,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	BandwidthInfo *BandwidthInfo `json:"bandwidth_info,omitempty"`
+
+	// 云服务类型编码。
+	CloudServiceTypeCode *string `json:"cloud_service_type_code,omitempty"`
+
+	// 云资源类型编码。
+	CloudResourceTypeCode *string `json:"cloud_resource_type_code,omitempty"`
+
+	// 运营系统中的规格编码
+	InquerySpecCode *string `json:"inquery_spec_code,omitempty"`
+	HttpStatusCode  int     `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

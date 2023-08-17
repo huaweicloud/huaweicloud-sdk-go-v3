@@ -39,7 +39,7 @@ type ListAssetsRequest struct {
 	// 结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+	// 资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
 	AssetType *string `json:"asset_type,omitempty"`
 
 	// 排序字段，目前只支持create_time。
@@ -54,11 +54,14 @@ type ListAssetsRequest struct {
 	// 资产管理分类。 * UPLOAD：我的上传 * UPLOADED：已上传 * UPLOADING：UPLOADING * UPLOAD_FAILED：上传失败 * DOWNLOAD：我的下载 * COLLECTION：我的收藏 * DRAFT：草稿箱 * RECYCLE：回收站
 	AssetManageType *ListAssetsRequestAssetManageType `json:"asset_manage_type,omitempty"`
 
-	// 资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复  默认查询所有状态的资产。
+	// 资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
 	AssetState *string `json:"asset_state,omitempty"`
 
 	// 基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
 	StyleId *string `json:"style_id,omitempty"`
+
+	// 玄天引擎测试用户字段。
+	XUserMePrivilege *string `json:"X-User-MePrivilege,omitempty"`
 
 	// 可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
 	RenderEngine *string `json:"render_engine,omitempty"`
@@ -69,8 +72,11 @@ type ListAssetsRequest struct {
 	// 语言。多选使用英文逗号分隔。
 	Language *string `json:"language,omitempty"`
 
-	// 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
+	// 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏） * CREATED_BY_PLATFORM：是否平台生成，可取值Yes
 	SystemProperty *string `json:"system_property,omitempty"`
+
+	// 动作是否可编辑。仅在分身数字人模型查询时有效。
+	ActionEditable *bool `json:"action_editable,omitempty"`
 }
 
 func (o ListAssetsRequest) String() string {

@@ -170,7 +170,6 @@ type CreatePostPaidInstanceReqEngineVersion struct {
 
 type CreatePostPaidInstanceReqEngineVersionEnum struct {
 	E_1_1_0 CreatePostPaidInstanceReqEngineVersion
-	E_2_3_0 CreatePostPaidInstanceReqEngineVersion
 	E_2_7   CreatePostPaidInstanceReqEngineVersion
 }
 
@@ -178,9 +177,6 @@ func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEn
 	return CreatePostPaidInstanceReqEngineVersionEnum{
 		E_1_1_0: CreatePostPaidInstanceReqEngineVersion{
 			value: "1.1.0",
-		},
-		E_2_3_0: CreatePostPaidInstanceReqEngineVersion{
-			value: "2.3.0",
 		},
 		E_2_7: CreatePostPaidInstanceReqEngineVersion{
 			value: "2.7",

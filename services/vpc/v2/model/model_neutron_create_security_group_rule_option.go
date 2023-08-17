@@ -36,6 +36,9 @@ type NeutronCreateSecurityGroupRuleOption struct {
 	// 功能说明：目的端ip网段 取值范围：cidr格式，如10.10.0.0/16
 	RemoteIpPrefix *string `json:"remote_ip_prefix,omitempty"`
 
+	// 功能说明：远端地址组的ID
+	RemoteAddressGroupId *string `json:"remote_address_group_id,omitempty"`
+
 	// 所属安全组ID
 	SecurityGroupId string `json:"security_group_id"`
 }

@@ -136,16 +136,12 @@ type CreateInstanceReqEngineVersion struct {
 
 type CreateInstanceReqEngineVersionEnum struct {
 	E_3_8_35 CreateInstanceReqEngineVersion
-	E_3_7_17 CreateInstanceReqEngineVersion
 }
 
 func GetCreateInstanceReqEngineVersionEnum() CreateInstanceReqEngineVersionEnum {
 	return CreateInstanceReqEngineVersionEnum{
 		E_3_8_35: CreateInstanceReqEngineVersion{
 			value: "3.8.35",
-		},
-		E_3_7_17: CreateInstanceReqEngineVersion{
-			value: "3.7.17",
 		},
 	}
 }

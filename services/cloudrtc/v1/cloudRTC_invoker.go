@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudrtc/v1/model"
 )
 
+type ListRtcAbnormalEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRtcAbnormalEventInvoker) Invoke() (*model.ListRtcAbnormalEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRtcAbnormalEventResponse), nil
+	}
+}
+
+type ListRtcEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRtcEventInvoker) Invoke() (*model.ListRtcEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRtcEventResponse), nil
+	}
+}
+
 type ListRtcAbnormalEventDimensionInvoker struct {
 	*invoker.BaseInvoker
 }

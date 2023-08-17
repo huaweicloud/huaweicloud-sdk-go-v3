@@ -48,6 +48,9 @@ type MysqlInstanceInfoDetail struct {
 	// 实例的写内网IP。
 	PrivateWriteIps *[]string `json:"private_write_ips,omitempty"`
 
+	// 实例内网域名列表。实例创建成功后，需要手动申请内网域名，否则查询内网域名为空。
+	PrivateDnsNames *[]string `json:"private_dns_names,omitempty"`
+
 	// 实例的公网IP。
 	PublicIps *string `json:"public_ips,omitempty"`
 

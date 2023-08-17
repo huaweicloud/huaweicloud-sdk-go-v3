@@ -19,6 +19,8 @@ type AssetExtraMeta struct {
 	SceneMeta *SceneAssetMeta `json:"scene_meta,omitempty"`
 
 	MaterialMeta *MaterialAssetMeta `json:"material_meta,omitempty"`
+
+	HumanModel2dMeta *HumanModel2DAssetMeta `json:"human_model_2d_meta,omitempty"`
 }
 
 func (o AssetExtraMeta) String() string {

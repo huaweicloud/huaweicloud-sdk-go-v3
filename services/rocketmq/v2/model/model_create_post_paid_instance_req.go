@@ -21,7 +21,7 @@ type CreatePostPaidInstanceReq struct {
 	// 消息引擎。取值填写为：reliability。
 	Engine CreatePostPaidInstanceReqEngine `json:"engine"`
 
-	// 消息引擎的版本。取值填写为：4.8.0[和5.x](tag:hws)。
+	// 消息引擎的版本。取值填写为：4.8.0。
 	EngineVersion CreatePostPaidInstanceReqEngineVersion `json:"engine_version"`
 
 	// 存储空间。
@@ -125,16 +125,12 @@ type CreatePostPaidInstanceReqEngineVersion struct {
 
 type CreatePostPaidInstanceReqEngineVersionEnum struct {
 	E_4_8_0 CreatePostPaidInstanceReqEngineVersion
-	E_5_X   CreatePostPaidInstanceReqEngineVersion
 }
 
 func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEngineVersionEnum {
 	return CreatePostPaidInstanceReqEngineVersionEnum{
 		E_4_8_0: CreatePostPaidInstanceReqEngineVersion{
 			value: "4.8.0",
-		},
-		E_5_X: CreatePostPaidInstanceReqEngineVersion{
-			value: "5.x",
 		},
 	}
 }

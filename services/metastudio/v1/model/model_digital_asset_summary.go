@@ -17,7 +17,7 @@ type DigitalAssetSummary struct {
 	// 资产名称。
 	AssetName *string `json:"asset_name,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
 	AssetType *DigitalAssetSummaryAssetType `json:"asset_type,omitempty"`
 
 	// 封面图片路径。
@@ -49,6 +49,7 @@ type DigitalAssetSummaryAssetTypeEnum struct {
 	VOICE_MODEL           DigitalAssetSummaryAssetType
 	HUMAN_MODEL_2_D       DigitalAssetSummaryAssetType
 	BUSINESS_CARD_TEMPLET DigitalAssetSummaryAssetType
+	MUSIC                 DigitalAssetSummaryAssetType
 }
 
 func GetDigitalAssetSummaryAssetTypeEnum() DigitalAssetSummaryAssetTypeEnum {
@@ -85,6 +86,9 @@ func GetDigitalAssetSummaryAssetTypeEnum() DigitalAssetSummaryAssetTypeEnum {
 		},
 		BUSINESS_CARD_TEMPLET: DigitalAssetSummaryAssetType{
 			value: "BUSINESS_CARD_TEMPLET",
+		},
+		MUSIC: DigitalAssetSummaryAssetType{
+			value: "MUSIC",
 		},
 	}
 }

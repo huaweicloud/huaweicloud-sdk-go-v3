@@ -18,7 +18,7 @@ type CreateDigitalAssetRequestBody struct {
 	// 资产描述。
 	AssetDescription *string `json:"asset_description,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
+	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
 	AssetType CreateDigitalAssetRequestBodyAssetType `json:"asset_type"`
 
 	// 项目ID。
@@ -54,10 +54,12 @@ type CreateDigitalAssetRequestBodyAssetTypeEnum struct {
 	VIDEO                 CreateDigitalAssetRequestBodyAssetType
 	IMAGE                 CreateDigitalAssetRequestBodyAssetType
 	PPT                   CreateDigitalAssetRequestBodyAssetType
+	MATERIAL              CreateDigitalAssetRequestBodyAssetType
 	NORMAL_MODEL          CreateDigitalAssetRequestBodyAssetType
 	COMMON_FILE           CreateDigitalAssetRequestBodyAssetType
 	HUMAN_MODEL_2_D       CreateDigitalAssetRequestBodyAssetType
 	BUSINESS_CARD_TEMPLET CreateDigitalAssetRequestBodyAssetType
+	MUSIC                 CreateDigitalAssetRequestBodyAssetType
 }
 
 func GetCreateDigitalAssetRequestBodyAssetTypeEnum() CreateDigitalAssetRequestBodyAssetTypeEnum {
@@ -83,6 +85,9 @@ func GetCreateDigitalAssetRequestBodyAssetTypeEnum() CreateDigitalAssetRequestBo
 		PPT: CreateDigitalAssetRequestBodyAssetType{
 			value: "PPT",
 		},
+		MATERIAL: CreateDigitalAssetRequestBodyAssetType{
+			value: "MATERIAL",
+		},
 		NORMAL_MODEL: CreateDigitalAssetRequestBodyAssetType{
 			value: "NORMAL_MODEL",
 		},
@@ -94,6 +99,9 @@ func GetCreateDigitalAssetRequestBodyAssetTypeEnum() CreateDigitalAssetRequestBo
 		},
 		BUSINESS_CARD_TEMPLET: CreateDigitalAssetRequestBodyAssetType{
 			value: "BUSINESS_CARD_TEMPLET",
+		},
+		MUSIC: CreateDigitalAssetRequestBodyAssetType{
+			value: "MUSIC",
 		},
 	}
 }

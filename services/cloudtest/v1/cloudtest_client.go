@@ -376,6 +376,27 @@ func (c *CloudtestClient) ShowReportInvoker(request *model.ShowReportRequest) *S
 	return &ShowReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTestCaseAndDefectInfo 查询用户用例关联缺陷的统计信息
+//
+// 查询用户用例关联缺陷的统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTestCaseAndDefectInfo(request *model.ShowTestCaseAndDefectInfoRequest) (*model.ShowTestCaseAndDefectInfoResponse, error) {
+	requestDef := GenReqDefForShowTestCaseAndDefectInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTestCaseAndDefectInfoResponse), nil
+	}
+}
+
+// ShowTestCaseAndDefectInfoInvoker 查询用户用例关联缺陷的统计信息
+func (c *CloudtestClient) ShowTestCaseAndDefectInfoInvoker(request *model.ShowTestCaseAndDefectInfoRequest) *ShowTestCaseAndDefectInfoInvoker {
+	requestDef := GenReqDefForShowTestCaseAndDefectInfo()
+	return &ShowTestCaseAndDefectInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTestCaseDetail 获取测试用例详情
 //
 // 获取测试用例详情
@@ -416,6 +437,27 @@ func (c *CloudtestClient) ShowTestCaseDetailV2(request *model.ShowTestCaseDetail
 func (c *CloudtestClient) ShowTestCaseDetailV2Invoker(request *model.ShowTestCaseDetailV2Request) *ShowTestCaseDetailV2Invoker {
 	requestDef := GenReqDefForShowTestCaseDetailV2()
 	return &ShowTestCaseDetailV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUserExecuteTestCaseInfo 查询时段内用例的执行情况
+//
+// 查询时段内用例的执行情况
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowUserExecuteTestCaseInfo(request *model.ShowUserExecuteTestCaseInfoRequest) (*model.ShowUserExecuteTestCaseInfoResponse, error) {
+	requestDef := GenReqDefForShowUserExecuteTestCaseInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUserExecuteTestCaseInfoResponse), nil
+	}
+}
+
+// ShowUserExecuteTestCaseInfoInvoker 查询时段内用例的执行情况
+func (c *CloudtestClient) ShowUserExecuteTestCaseInfoInvoker(request *model.ShowUserExecuteTestCaseInfoRequest) *ShowUserExecuteTestCaseInfoInvoker {
+	requestDef := GenReqDefForShowUserExecuteTestCaseInfo()
+	return &ShowUserExecuteTestCaseInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateService 更新已注册服务

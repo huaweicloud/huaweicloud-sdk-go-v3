@@ -737,6 +737,18 @@ func (i *ShowMigrationTaskStatsInvoker) Invoke() (*model.ShowMigrationTaskStatsR
 	}
 }
 
+type ShowNodesInformationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNodesInformationInvoker) Invoke() (*model.ShowNodesInformationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNodesInformationResponse), nil
+	}
+}
+
 type ShowQuotaOfTenantInvoker struct {
 	*invoker.BaseInvoker
 }

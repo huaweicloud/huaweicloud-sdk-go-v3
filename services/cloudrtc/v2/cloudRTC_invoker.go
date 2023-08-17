@@ -328,3 +328,39 @@ func (i *UpdateUrlAuthInvoker) Invoke() (*model.UpdateUrlAuthResponse, error) {
 		return result.(*model.UpdateUrlAuthResponse), nil
 	}
 }
+
+type ListObsBucketObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListObsBucketObjectsInvoker) Invoke() (*model.ListObsBucketObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListObsBucketObjectsResponse), nil
+	}
+}
+
+type ListObsBucketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListObsBucketsInvoker) Invoke() (*model.ListObsBucketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListObsBucketsResponse), nil
+	}
+}
+
+type UpdateObsBucketAuthorityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateObsBucketAuthorityInvoker) Invoke() (*model.UpdateObsBucketAuthorityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateObsBucketAuthorityResponse), nil
+	}
+}

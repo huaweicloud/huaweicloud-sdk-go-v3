@@ -375,7 +375,7 @@ func (c *LiveClient) ListSingleStreamBitrateInvoker(request *model.ListSingleStr
 	return &ListSingleStreamBitrateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSingleStreamDetail 查询流监控数据接口
+// ListSingleStreamDetail 查询推流监控数据接口
 //
 // 查询流监控数据接口，包括帧率码率断流情况。
 //
@@ -394,7 +394,7 @@ func (c *LiveClient) ListSingleStreamDetail(request *model.ListSingleStreamDetai
 	}
 }
 
-// ListSingleStreamDetailInvoker 查询流监控数据接口
+// ListSingleStreamDetailInvoker 查询推流监控数据接口
 func (c *LiveClient) ListSingleStreamDetailInvoker(request *model.ListSingleStreamDetailRequest) *ListSingleStreamDetailInvoker {
 	requestDef := GenReqDefForListSingleStreamDetail()
 	return &ListSingleStreamDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

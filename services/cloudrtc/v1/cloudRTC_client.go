@@ -19,6 +19,48 @@ func CloudRTCClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// ListRtcAbnormalEvent 查询用户异常体验事件接口
+//
+// 查询指定APP下通话的异常明细数据。可查询5天内的数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudRTCClient) ListRtcAbnormalEvent(request *model.ListRtcAbnormalEventRequest) (*model.ListRtcAbnormalEventResponse, error) {
+	requestDef := GenReqDefForListRtcAbnormalEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRtcAbnormalEventResponse), nil
+	}
+}
+
+// ListRtcAbnormalEventInvoker 查询用户异常体验事件接口
+func (c *CloudRTCClient) ListRtcAbnormalEventInvoker(request *model.ListRtcAbnormalEventRequest) *ListRtcAbnormalEventInvoker {
+	requestDef := GenReqDefForListRtcAbnormalEvent()
+	return &ListRtcAbnormalEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRtcEvent 查询详情事件接口
+//
+// 查询指定APP下通话的异常明细数据。可查询5天内的数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudRTCClient) ListRtcEvent(request *model.ListRtcEventRequest) (*model.ListRtcEventResponse, error) {
+	requestDef := GenReqDefForListRtcEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRtcEventResponse), nil
+	}
+}
+
+// ListRtcEventInvoker 查询详情事件接口
+func (c *CloudRTCClient) ListRtcEventInvoker(request *model.ListRtcEventRequest) *ListRtcEventInvoker {
+	requestDef := GenReqDefForListRtcEvent()
+	return &ListRtcEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRtcAbnormalEventDimension 查询异常事件用户分布
 //
 // 查询指定APP下指定时间内的通话异常明细数据分布情况。

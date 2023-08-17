@@ -618,3 +618,66 @@ func (c *CloudRTCClient) UpdateUrlAuthInvoker(request *model.UpdateUrlAuthReques
 	requestDef := GenReqDefForUpdateUrlAuth()
 	return &UpdateUrlAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ListObsBucketObjects 查询OBS桶下对象列表
+//
+// 查询OBS桶下对象列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudRTCClient) ListObsBucketObjects(request *model.ListObsBucketObjectsRequest) (*model.ListObsBucketObjectsResponse, error) {
+	requestDef := GenReqDefForListObsBucketObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListObsBucketObjectsResponse), nil
+	}
+}
+
+// ListObsBucketObjectsInvoker 查询OBS桶下对象列表
+func (c *CloudRTCClient) ListObsBucketObjectsInvoker(request *model.ListObsBucketObjectsRequest) *ListObsBucketObjectsInvoker {
+	requestDef := GenReqDefForListObsBucketObjects()
+	return &ListObsBucketObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListObsBuckets 查询OBS桶列表
+//
+// 查询OBS桶列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudRTCClient) ListObsBuckets(request *model.ListObsBucketsRequest) (*model.ListObsBucketsResponse, error) {
+	requestDef := GenReqDefForListObsBuckets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListObsBucketsResponse), nil
+	}
+}
+
+// ListObsBucketsInvoker 查询OBS桶列表
+func (c *CloudRTCClient) ListObsBucketsInvoker(request *model.ListObsBucketsRequest) *ListObsBucketsInvoker {
+	requestDef := GenReqDefForListObsBuckets()
+	return &ListObsBucketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateObsBucketAuthority OBS桶授权及取消授权
+//
+// # OBS桶授权及取消授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudRTCClient) UpdateObsBucketAuthority(request *model.UpdateObsBucketAuthorityRequest) (*model.UpdateObsBucketAuthorityResponse, error) {
+	requestDef := GenReqDefForUpdateObsBucketAuthority()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateObsBucketAuthorityResponse), nil
+	}
+}
+
+// UpdateObsBucketAuthorityInvoker OBS桶授权及取消授权
+func (c *CloudRTCClient) UpdateObsBucketAuthorityInvoker(request *model.UpdateObsBucketAuthorityRequest) *UpdateObsBucketAuthorityInvoker {
+	requestDef := GenReqDefForUpdateObsBucketAuthority()
+	return &UpdateObsBucketAuthorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

@@ -20,16 +20,16 @@ type UpdateApiV2Response struct {
 	// API的版本
 	Version *string `json:"version,omitempty"`
 
-	// API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS
+	// API的请求协议 - HTTP - HTTPS - BOTH：同时支持HTTP和HTTPS - GRPCS
 	ReqProtocol UpdateApiV2ResponseReqProtocol `json:"req_protocol"`
 
-	// API的请求方式
+	// API的请求方式，当API的请求协议为GRPC类型协议时请求方式固定为POST。
 	ReqMethod UpdateApiV2ResponseReqMethod `json:"req_method"`
 
 	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
-	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
+	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证  当API的请求协议为GRPC类型时不支持自定义认证。
 	AuthType UpdateApiV2ResponseAuthType `json:"auth_type"`
 
 	AuthOpt *AuthOpt `json:"auth_opt,omitempty"`
@@ -40,7 +40,7 @@ type UpdateApiV2Response struct {
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
 	MatchMode *UpdateApiV2ResponseMatchMode `json:"match_mode,omitempty"`
 
-	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端
+	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端 - GRPC：grpc后端
 	BackendType UpdateApiV2ResponseBackendType `json:"backend_type"`
 
 	// API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -52,13 +52,13 @@ type UpdateApiV2Response struct {
 	// API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
 	BodyRemark *string `json:"body_remark,omitempty"`
 
-	// 正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
+	// 正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
 	ResultNormalSample *string `json:"result_normal_sample,omitempty"`
 
-	// 失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
+	// 失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
 	ResultFailureSample *string `json:"result_failure_sample,omitempty"`
 
-	// 前端自定义认证对象的ID
+	// 前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	// 标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
@@ -206,6 +206,7 @@ type UpdateApiV2ResponseReqProtocolEnum struct {
 	HTTP  UpdateApiV2ResponseReqProtocol
 	HTTPS UpdateApiV2ResponseReqProtocol
 	BOTH  UpdateApiV2ResponseReqProtocol
+	GRPCS UpdateApiV2ResponseReqProtocol
 }
 
 func GetUpdateApiV2ResponseReqProtocolEnum() UpdateApiV2ResponseReqProtocolEnum {
@@ -218,6 +219,9 @@ func GetUpdateApiV2ResponseReqProtocolEnum() UpdateApiV2ResponseReqProtocolEnum 
 		},
 		BOTH: UpdateApiV2ResponseReqProtocol{
 			value: "BOTH",
+		},
+		GRPCS: UpdateApiV2ResponseReqProtocol{
+			value: "GRPCS",
 		},
 	}
 }
@@ -430,6 +434,7 @@ type UpdateApiV2ResponseBackendTypeEnum struct {
 	HTTP     UpdateApiV2ResponseBackendType
 	FUNCTION UpdateApiV2ResponseBackendType
 	MOCK     UpdateApiV2ResponseBackendType
+	GRPC     UpdateApiV2ResponseBackendType
 }
 
 func GetUpdateApiV2ResponseBackendTypeEnum() UpdateApiV2ResponseBackendTypeEnum {
@@ -442,6 +447,9 @@ func GetUpdateApiV2ResponseBackendTypeEnum() UpdateApiV2ResponseBackendTypeEnum 
 		},
 		MOCK: UpdateApiV2ResponseBackendType{
 			value: "MOCK",
+		},
+		GRPC: UpdateApiV2ResponseBackendType{
+			value: "GRPC",
 		},
 	}
 }

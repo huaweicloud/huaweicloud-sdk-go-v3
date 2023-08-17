@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// XimalayaVoiceAssetMeta 喜马拉雅TTS音色元数据。此参数仅内部使用，不对外开放。
+// XimalayaVoiceAssetMeta 喜马拉雅TTS音色元数据。此参数仅TTSA内部使用，不对外开放。
 type XimalayaVoiceAssetMeta struct {
 
 	// 音色适用领域。

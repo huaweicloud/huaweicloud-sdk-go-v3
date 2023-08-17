@@ -168,6 +168,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 		WithName("SystemProperty").
 		WithJsonTag("system_property").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ActionEditable").
+		WithJsonTag("action_editable").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
@@ -180,6 +184,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XAppUserId").
 		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XUserMePrivilege").
+		WithJsonTag("X-User-MePrivilege").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

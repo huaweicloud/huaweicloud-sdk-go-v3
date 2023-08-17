@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ExternalVoiceAssetMeta 第三方TTS音色元数据。此参数仅内部使用，不对外开放。
+// ExternalVoiceAssetMeta 第三方TTS音色元数据。此参数仅TTSA内部使用，不对外开放。
 type ExternalVoiceAssetMeta struct {
 
 	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS
