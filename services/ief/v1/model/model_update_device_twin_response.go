@@ -8,10 +8,13 @@ import (
 
 // UpdateDeviceTwinResponse Response Object
 type UpdateDeviceTwinResponse struct {
-	PropertyVisitors *ValueInPropertyVisitors `json:"property_visitors,omitempty"`
 
-	Twin           *ValueInTwinResponse `json:"twin,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	// 孪生属性配置
+	PropertyVisitors map[string]ValueInPropertyVisitors `json:"property_visitors,omitempty"`
+
+	// 终端设备动态属性
+	Twin           map[string]ValueInTwinResponse `json:"twin,omitempty"`
+	HttpStatusCode int                            `json:"-"`
 }
 
 func (o UpdateDeviceTwinResponse) String() string {

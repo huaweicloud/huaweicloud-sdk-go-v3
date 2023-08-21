@@ -22,7 +22,7 @@ type CreateDashBoardResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 最近修改时间
-	LastUpdateTime *string `json:"last_update_time,omitempty"`
+	LastUpdateTime *int64 `json:"last_update_time,omitempty"`
 
 	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
@@ -31,8 +31,8 @@ type CreateDashBoardResponse struct {
 	Title *string `json:"title,omitempty"`
 
 	// 是否使用模板
-	UseSystemTemplate *string `json:"useSystemTemplate,omitempty"`
-	HttpStatusCode    int     `json:"-"`
+	UseSystemTemplate *bool `json:"useSystemTemplate,omitempty"`
+	HttpStatusCode    int   `json:"-"`
 }
 
 func (o CreateDashBoardResponse) String() string {

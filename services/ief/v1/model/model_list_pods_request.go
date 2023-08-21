@@ -21,6 +21,9 @@ type ListPodsRequest struct {
 	// 指定应用部署ID列表查询应用实例，多个ID使用逗号分隔，可选， 与node_id、group_id、deployment_id四选一
 	DeploymentIds *string `json:"deployment_ids,omitempty"`
 
+	// 指定插件实例名称查询对应的应用实例列表，可选
+	PluginInstanceName *string `json:"plugin_instance_name,omitempty"`
+
 	// 查询返回记录的数量限制
 	Limit *int32 `json:"limit,omitempty"`
 

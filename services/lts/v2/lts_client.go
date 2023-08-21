@@ -376,6 +376,27 @@ func (c *LtsClient) DeleteActiveAlarmsInvoker(request *model.DeleteActiveAlarmsR
 	return &DeleteActiveAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDashboard 删除仪表盘
+//
+// 删除仪表盘
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) DeleteDashboard(request *model.DeleteDashboardRequest) (*model.DeleteDashboardResponse, error) {
+	requestDef := GenReqDefForDeleteDashboard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDashboardResponse), nil
+	}
+}
+
+// DeleteDashboardInvoker 删除仪表盘
+func (c *LtsClient) DeleteDashboardInvoker(request *model.DeleteDashboardRequest) *DeleteDashboardInvoker {
+	requestDef := GenReqDefForDeleteDashboard()
+	return &DeleteDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteHostGroup 删除主机组
 //
 // 删除主机组

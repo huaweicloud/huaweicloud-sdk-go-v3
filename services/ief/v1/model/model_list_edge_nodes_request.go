@@ -41,6 +41,9 @@ type ListEdgeNodesRequest struct {
 
 	// 标签的key和value通过点连接， 多个标签通过逗号连接，如：tags=key1.value1,key2.value2
 	Tags *string `json:"tags,omitempty"`
+
+	// 按边缘节点组ID查找。仅支持在铂金版实例中使用
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o ListEdgeNodesRequest) String() string {

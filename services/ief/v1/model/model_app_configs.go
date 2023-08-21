@@ -26,6 +26,9 @@ type AppConfigs struct {
 
 	// 应用实例是否与主机共PID命名空间，默认值false
 	HostPid *bool `json:"host_pid,omitempty"`
+
+	// 应用实例DNS策略，可选值Default、ClusterFirst、ClusterFirstWithHostNet，默认为Default。应用实例启用主机网络时只能选填Default、ClusterFirstWithHostNet，不启用主机网络时只能选填Default、ClusterFirst
+	DnsPolicy *string `json:"dns_policy,omitempty"`
 }
 
 func (o AppConfigs) String() string {

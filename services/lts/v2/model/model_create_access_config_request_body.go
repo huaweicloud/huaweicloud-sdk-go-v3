@@ -32,6 +32,9 @@ type CreateAccessConfigRequestBody struct {
 
 	// 日志拆分
 	LogSplit *bool `json:"log_split,omitempty"`
+
+	// CCE集群ID，当CCE类型时，为必填
+	ClusterId *string `json:"cluster_id,omitempty"`
 }
 
 func (o CreateAccessConfigRequestBody) String() string {

@@ -37,8 +37,11 @@ type UpdateAccessConfigResponse struct {
 	LogSplit *bool `json:"log_split,omitempty"`
 
 	// 日志拆分
-	BinaryCollect  *bool `json:"binary_collect,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	BinaryCollect *bool `json:"binary_collect,omitempty"`
+
+	// CCE集群ID
+	ClusterId      *string `json:"cluster_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateAccessConfigResponse) String() string {

@@ -38,6 +38,9 @@ type AccessConfigInfo struct {
 
 	// 日志拆分
 	BinaryCollect *bool `json:"binary_collect,omitempty"`
+
+	// CCE集群ID
+	ClusterId *string `json:"cluster_id,omitempty"`
 }
 
 func (o AccessConfigInfo) String() string {

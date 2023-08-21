@@ -23,6 +23,9 @@ type PodConfigs struct {
 
 	// 应用实例故障容忍时间，容忍时间到达后迁移应用实例，只在指定节点组部署时生效
 	TolerationSeconds *int32 `json:"toleration_seconds,omitempty"`
+
+	// 应用实例DNS策略，可选值Default、ClusterFirst、ClusterFirstWithHostNet，默认为Default。应用实例启用主机网络时只能选填Default、ClusterFirstWithHostNet，不启用主机网络时只能选填Default、ClusterFirst
+	DnsPolicy *string `json:"dns_policy,omitempty"`
 }
 
 func (o PodConfigs) String() string {

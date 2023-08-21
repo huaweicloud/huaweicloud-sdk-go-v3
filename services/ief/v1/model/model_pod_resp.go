@@ -40,7 +40,7 @@ type PodResp struct {
 	// 应用实例创建时间
 	CreatedAt string `json:"created_at"`
 
-	// 应用实例状态
+	// 应用实例状态： - RUNNING：实例运行中 - PENDING：实例等待创建 - SUCCEEDED：实例执行成功 - FAILED：实例运行失败 - CREATE_FAIL：实例创建失败 - TERMINATING：实例终止中 - PENDING_DELETE：实例等待删除 - DELETE_FAILED：实例删除失败 - FREEZE：实例冻结 - UNKNOWN：实例状态未知
 	State string `json:"state"`
 }
 

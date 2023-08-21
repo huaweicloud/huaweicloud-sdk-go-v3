@@ -24,6 +24,9 @@ type UpdateAccessConfigRequestBody struct {
 
 	// 二进制采集
 	BinaryCollect *bool `json:"binary_collect,omitempty"`
+
+	// CCE集群ID，CCE类型时，为必填
+	ClusterId *string `json:"cluster_id,omitempty"`
 }
 
 func (o UpdateAccessConfigRequestBody) String() string {

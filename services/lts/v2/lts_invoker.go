@@ -209,6 +209,18 @@ func (i *DeleteActiveAlarmsInvoker) Invoke() (*model.DeleteActiveAlarmsResponse,
 	}
 }
 
+type DeleteDashboardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDashboardInvoker) Invoke() (*model.DeleteDashboardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDashboardResponse), nil
+	}
+}
+
 type DeleteHostGroupInvoker struct {
 	*invoker.BaseInvoker
 }
