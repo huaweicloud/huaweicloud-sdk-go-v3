@@ -21,10 +21,10 @@ type UpdateInstanceV2Response struct {
 	// 实例名称
 	InstanceName *string `json:"instance_name,omitempty"`
 
-	// 实例状态： - Creating：创建中 - CreateSuccess：创建成功 - CreateFail：创建失败 - Initing：初始化中 - Registering：注册中 - Running：运行中 - InitingFailed：初始化失败 - RegisterFailed：注册失败 - Installing：安装中 - InstallFailed：安装失败 - Updating：升级中 - UpdateFailed：升级失败 - Rollbacking：回滚中 - RollbackSuccess：回滚成功 - RollbackFailed：回滚失败 - Deleting：删除中 - DeleteFailed：删除失败 - Unregistering：注销中 - UnRegisterFailed：注销失败 - CreateTimeout：创建超时 - InitTimeout：初始化超时 - RegisterTimeout：注册超时 - InstallTimeout：安装超时 - UpdateTimeout：升级超时 - RollbackTimeout：回滚超时 - DeleteTimeout：删除超时 - UnregisterTimeout：注销超时 - Starting：启动中 - Freezing：冻结中 - Frozen：已冻结 - Restarting：重启中 - RestartFail：重启失败 - Unhealthy：实例异常 - RestartTimeout：重启超时
+	// 实例状态： - Creating：创建中 - CreateSuccess：创建成功 - CreateFail：创建失败 - Initing：初始化中 - Registering：注册中 - Running：运行中 - InitingFailed：初始化失败 - RegisterFailed：注册失败 - Installing：安装中 - InstallFailed：安装失败 - Updating：升级中 - UpdateFailed：升级失败 - Rollbacking：回滚中 - RollbackSuccess：回滚成功 - RollbackFailed：回滚失败 - Deleting：删除中 - DeleteFailed：删除失败 - Unregistering：注销中 - UnRegisterFailed：注销失败 - CreateTimeout：创建超时 - InitTimeout：初始化超时 - RegisterTimeout：注册超时 - InstallTimeout：安装超时 - UpdateTimeout：升级超时 - RollbackTimeout：回滚超时 - DeleteTimeout：删除超时 - UnregisterTimeout：注销超时 - Starting：启动中 - Freezing：冻结中 - Frozen：已冻结 - Restarting：重启中 - RestartFail：重启失败 - Unhealthy：实例异常 - RestartTimeout：重启超时 - Resizing：规格变更中 - ResizeFailed：规格变更失败 - ResizeTimeout：规格变更超时
 	Status *UpdateInstanceV2ResponseStatus `json:"status,omitempty"`
 
-	// 实例状态对应编号 - 1：创建中 - 2：创建成功 - 3：创建失败 - 4：初始化中 - 5：注册中 - 6：运行中 - 7：初始化失败 - 8：注册失败 - 10：安装中 - 11：安装失败 - 12：升级中 - 13：升级失败 - 20：回滚中 - 21：回滚成功 - 22：回滚失败 - 23：删除中 - 24：删除失败 - 25：注销中 - 26：注销失败 - 27：创建超时 - 28：初始化超时 - 29：注册超时 - 30：安装超时 - 31：升级超时 - 32：回滚超时 - 33：删除超时 - 34：注销超时 - 35：启动中 - 36：冻结中 - 37：已冻结 - 38：重启中 - 39：重启失败 - 40：实例异常 - 41：重启超时
+	// 实例状态对应编号 - 1：创建中 - 2：创建成功 - 3：创建失败 - 4：初始化中 - 5：注册中 - 6：运行中 - 7：初始化失败 - 8：注册失败 - 10：安装中 - 11：安装失败 - 12：升级中 - 13：升级失败 - 20：回滚中 - 21：回滚成功 - 22：回滚失败 - 23：删除中 - 24：删除失败 - 25：注销中 - 26：注销失败 - 27：创建超时 - 28：初始化超时 - 29：注册超时 - 30：安装超时 - 31：升级超时 - 32：回滚超时 - 33：删除超时 - 34：注销超时 - 35：启动中 - 36：冻结中 - 37：已冻结 - 38：重启中 - 39：重启失败 - 40：实例异常 - 41：重启超时 - 42：规格变更中 - 43：规格变更失败 - 44：规格变更超时
 	InstanceStatus *UpdateInstanceV2ResponseInstanceStatus `json:"instance_status,omitempty"`
 
 	// 实例类型  默认apig
@@ -50,6 +50,9 @@ type UpdateInstanceV2Response struct {
 
 	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
 	LoadbalancerProvider *UpdateInstanceV2ResponseLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
+
+	// 云运营限制操作锁
+	CbcOperationLocks *[]CbcOperationLock `json:"cbc_operation_locks,omitempty"`
 
 	// 实例描述
 	Description *string `json:"description,omitempty"`
@@ -180,6 +183,9 @@ type UpdateInstanceV2ResponseStatusEnum struct {
 	RESTART_FAIL       UpdateInstanceV2ResponseStatus
 	UNHEALTHY          UpdateInstanceV2ResponseStatus
 	RESTART_TIMEOUT    UpdateInstanceV2ResponseStatus
+	RESIZING           UpdateInstanceV2ResponseStatus
+	RESIZE_FAILED      UpdateInstanceV2ResponseStatus
+	RESIZE_TIMEOUT     UpdateInstanceV2ResponseStatus
 }
 
 func GetUpdateInstanceV2ResponseStatusEnum() UpdateInstanceV2ResponseStatusEnum {
@@ -286,6 +292,15 @@ func GetUpdateInstanceV2ResponseStatusEnum() UpdateInstanceV2ResponseStatusEnum 
 		RESTART_TIMEOUT: UpdateInstanceV2ResponseStatus{
 			value: "RestartTimeout",
 		},
+		RESIZING: UpdateInstanceV2ResponseStatus{
+			value: "Resizing",
+		},
+		RESIZE_FAILED: UpdateInstanceV2ResponseStatus{
+			value: "ResizeFailed",
+		},
+		RESIZE_TIMEOUT: UpdateInstanceV2ResponseStatus{
+			value: "ResizeTimeout",
+		},
 	}
 }
 
@@ -355,6 +370,9 @@ type UpdateInstanceV2ResponseInstanceStatusEnum struct {
 	E_39 UpdateInstanceV2ResponseInstanceStatus
 	E_40 UpdateInstanceV2ResponseInstanceStatus
 	E_41 UpdateInstanceV2ResponseInstanceStatus
+	E_42 UpdateInstanceV2ResponseInstanceStatus
+	E_43 UpdateInstanceV2ResponseInstanceStatus
+	E_44 UpdateInstanceV2ResponseInstanceStatus
 }
 
 func GetUpdateInstanceV2ResponseInstanceStatusEnum() UpdateInstanceV2ResponseInstanceStatusEnum {
@@ -427,6 +445,12 @@ func GetUpdateInstanceV2ResponseInstanceStatusEnum() UpdateInstanceV2ResponseIns
 			value: 40,
 		}, E_41: UpdateInstanceV2ResponseInstanceStatus{
 			value: 41,
+		}, E_42: UpdateInstanceV2ResponseInstanceStatus{
+			value: 42,
+		}, E_43: UpdateInstanceV2ResponseInstanceStatus{
+			value: 43,
+		}, E_44: UpdateInstanceV2ResponseInstanceStatus{
+			value: 44,
 		},
 	}
 }
@@ -471,6 +495,13 @@ type UpdateInstanceV2ResponseSpecEnum struct {
 	PROFESSIONAL_IPV6 UpdateInstanceV2ResponseSpec
 	ENTERPRISE_IPV6   UpdateInstanceV2ResponseSpec
 	PLATINUM_IPV6     UpdateInstanceV2ResponseSpec
+	PLATINUM_X2       UpdateInstanceV2ResponseSpec
+	PLATINUM_X3       UpdateInstanceV2ResponseSpec
+	PLATINUM_X4       UpdateInstanceV2ResponseSpec
+	PLATINUM_X5       UpdateInstanceV2ResponseSpec
+	PLATINUM_X6       UpdateInstanceV2ResponseSpec
+	PLATINUM_X7       UpdateInstanceV2ResponseSpec
+	PLATINUM_X8       UpdateInstanceV2ResponseSpec
 }
 
 func GetUpdateInstanceV2ResponseSpecEnum() UpdateInstanceV2ResponseSpecEnum {
@@ -498,6 +529,27 @@ func GetUpdateInstanceV2ResponseSpecEnum() UpdateInstanceV2ResponseSpecEnum {
 		},
 		PLATINUM_IPV6: UpdateInstanceV2ResponseSpec{
 			value: "PLATINUM_IPV6",
+		},
+		PLATINUM_X2: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X2",
+		},
+		PLATINUM_X3: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X3",
+		},
+		PLATINUM_X4: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X4",
+		},
+		PLATINUM_X5: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X5",
+		},
+		PLATINUM_X6: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X6",
+		},
+		PLATINUM_X7: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X7",
+		},
+		PLATINUM_X8: UpdateInstanceV2ResponseSpec{
+			value: "PLATINUM_X8",
 		},
 	}
 }

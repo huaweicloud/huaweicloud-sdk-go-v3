@@ -1,9 +1,10 @@
 package model
 
 import (
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"strings"
 )
 
@@ -44,6 +45,9 @@ type SignApiBindingBase struct {
 
 	// 签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
 	SignName *string `json:"sign_name,omitempty"`
+
+	// API请求方法
+	ReqMethod *SignApiBindingBaseReqMethod `json:"req_method,omitempty"`
 }
 
 func (o SignApiBindingBase) String() string {
@@ -53,4 +57,75 @@ func (o SignApiBindingBase) String() string {
 	}
 
 	return strings.Join([]string{"SignApiBindingBase", string(data)}, " ")
+}
+
+type SignApiBindingBaseReqMethod struct {
+	value string
+}
+
+type SignApiBindingBaseReqMethodEnum struct {
+	GET     SignApiBindingBaseReqMethod
+	POST    SignApiBindingBaseReqMethod
+	DELETE  SignApiBindingBaseReqMethod
+	PUT     SignApiBindingBaseReqMethod
+	PATCH   SignApiBindingBaseReqMethod
+	HEAD    SignApiBindingBaseReqMethod
+	OPTIONS SignApiBindingBaseReqMethod
+	ANY     SignApiBindingBaseReqMethod
+}
+
+func GetSignApiBindingBaseReqMethodEnum() SignApiBindingBaseReqMethodEnum {
+	return SignApiBindingBaseReqMethodEnum{
+		GET: SignApiBindingBaseReqMethod{
+			value: "GET",
+		},
+		POST: SignApiBindingBaseReqMethod{
+			value: "POST",
+		},
+		DELETE: SignApiBindingBaseReqMethod{
+			value: "DELETE",
+		},
+		PUT: SignApiBindingBaseReqMethod{
+			value: "PUT",
+		},
+		PATCH: SignApiBindingBaseReqMethod{
+			value: "PATCH",
+		},
+		HEAD: SignApiBindingBaseReqMethod{
+			value: "HEAD",
+		},
+		OPTIONS: SignApiBindingBaseReqMethod{
+			value: "OPTIONS",
+		},
+		ANY: SignApiBindingBaseReqMethod{
+			value: "ANY",
+		},
+	}
+}
+
+func (c SignApiBindingBaseReqMethod) Value() string {
+	return c.value
+}
+
+func (c SignApiBindingBaseReqMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SignApiBindingBaseReqMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

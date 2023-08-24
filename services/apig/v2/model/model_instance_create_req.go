@@ -26,7 +26,7 @@ type InstanceCreateReq struct {
 	// 实例编号，不填写自动生成
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例
+	// 实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例 - PLATINUM_X2：铂金版 x2实例 - PLATINUM_X3：铂金版 x3实例 - PLATINUM_X4：铂金版 x4实例 - PLATINUM_X5：铂金版 x5实例 - PLATINUM_X6：铂金版 x6实例 - PLATINUM_X7：铂金版 x7实例 - PLATINUM_X8：铂金版 x8实例  当前仅部分region支持铂金版 x2、铂金版 x3、铂金版 x4、铂金版 x5、铂金版 x6、铂金版 x7、铂金版 x8
 	SpecId *InstanceCreateReqSpecId `json:"spec_id,omitempty"`
 
 	// 虚拟私有云ID。  获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体方法请参见《虚拟私有云服务API参考》的“查询VPC列表”章节。
@@ -62,7 +62,7 @@ type InstanceCreateReq struct {
 	// 标签列表。  一个实例默认最多支持创建20个标签
 	Tags *[]TmsKeyValue `json:"tags,omitempty"`
 
-	// 终端节点服务的名称。  长度不超过16个字符，允许输入大小写字母、数字、下划线、中划线。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
+	// 终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您填写该参数为空，系统生成的终端节点服务的名称为{region}.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
 	VpcepServiceName *string `json:"vpcep_service_name,omitempty"`
 
 	// 入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源
@@ -94,6 +94,13 @@ type InstanceCreateReqSpecIdEnum struct {
 	PROFESSIONAL_IPV6 InstanceCreateReqSpecId
 	ENTERPRISE_IPV6   InstanceCreateReqSpecId
 	PLATINUM_IPV6     InstanceCreateReqSpecId
+	PLATINUM_X2       InstanceCreateReqSpecId
+	PLATINUM_X3       InstanceCreateReqSpecId
+	PLATINUM_X4       InstanceCreateReqSpecId
+	PLATINUM_X5       InstanceCreateReqSpecId
+	PLATINUM_X6       InstanceCreateReqSpecId
+	PLATINUM_X7       InstanceCreateReqSpecId
+	PLATINUM_X8       InstanceCreateReqSpecId
 }
 
 func GetInstanceCreateReqSpecIdEnum() InstanceCreateReqSpecIdEnum {
@@ -121,6 +128,27 @@ func GetInstanceCreateReqSpecIdEnum() InstanceCreateReqSpecIdEnum {
 		},
 		PLATINUM_IPV6: InstanceCreateReqSpecId{
 			value: "PLATINUM_IPV6",
+		},
+		PLATINUM_X2: InstanceCreateReqSpecId{
+			value: "PLATINUM_X2",
+		},
+		PLATINUM_X3: InstanceCreateReqSpecId{
+			value: "PLATINUM_X3",
+		},
+		PLATINUM_X4: InstanceCreateReqSpecId{
+			value: "PLATINUM_X4",
+		},
+		PLATINUM_X5: InstanceCreateReqSpecId{
+			value: "PLATINUM_X5",
+		},
+		PLATINUM_X6: InstanceCreateReqSpecId{
+			value: "PLATINUM_X6",
+		},
+		PLATINUM_X7: InstanceCreateReqSpecId{
+			value: "PLATINUM_X7",
+		},
+		PLATINUM_X8: InstanceCreateReqSpecId{
+			value: "PLATINUM_X8",
 		},
 	}
 }

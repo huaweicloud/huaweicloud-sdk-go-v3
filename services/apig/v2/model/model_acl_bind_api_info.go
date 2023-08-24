@@ -1,9 +1,10 @@
 package model
 
 import (
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"strings"
 )
 
@@ -38,6 +39,9 @@ type AclBindApiInfo struct {
 
 	// API发布记录编号
 	PublishId *string `json:"publish_id,omitempty"`
+
+	// API请求方法
+	ReqMethod *AclBindApiInfoReqMethod `json:"req_method,omitempty"`
 }
 
 func (o AclBindApiInfo) String() string {
@@ -47,4 +51,75 @@ func (o AclBindApiInfo) String() string {
 	}
 
 	return strings.Join([]string{"AclBindApiInfo", string(data)}, " ")
+}
+
+type AclBindApiInfoReqMethod struct {
+	value string
+}
+
+type AclBindApiInfoReqMethodEnum struct {
+	GET     AclBindApiInfoReqMethod
+	POST    AclBindApiInfoReqMethod
+	DELETE  AclBindApiInfoReqMethod
+	PUT     AclBindApiInfoReqMethod
+	PATCH   AclBindApiInfoReqMethod
+	HEAD    AclBindApiInfoReqMethod
+	OPTIONS AclBindApiInfoReqMethod
+	ANY     AclBindApiInfoReqMethod
+}
+
+func GetAclBindApiInfoReqMethodEnum() AclBindApiInfoReqMethodEnum {
+	return AclBindApiInfoReqMethodEnum{
+		GET: AclBindApiInfoReqMethod{
+			value: "GET",
+		},
+		POST: AclBindApiInfoReqMethod{
+			value: "POST",
+		},
+		DELETE: AclBindApiInfoReqMethod{
+			value: "DELETE",
+		},
+		PUT: AclBindApiInfoReqMethod{
+			value: "PUT",
+		},
+		PATCH: AclBindApiInfoReqMethod{
+			value: "PATCH",
+		},
+		HEAD: AclBindApiInfoReqMethod{
+			value: "HEAD",
+		},
+		OPTIONS: AclBindApiInfoReqMethod{
+			value: "OPTIONS",
+		},
+		ANY: AclBindApiInfoReqMethod{
+			value: "ANY",
+		},
+	}
+}
+
+func (c AclBindApiInfoReqMethod) Value() string {
+	return c.value
+}
+
+func (c AclBindApiInfoReqMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AclBindApiInfoReqMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

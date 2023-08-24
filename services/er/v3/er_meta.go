@@ -115,6 +115,26 @@ func GenReqDefForListAssociations() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAcceptAttachment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/enterprise-router/{er_id}/attachments/{attachment_id}/accept").
+		WithResponse(new(model.AcceptAttachmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ErId").
+		WithJsonTag("er_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AttachmentId").
+		WithJsonTag("attachment_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAttachments() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -155,6 +175,26 @@ func GenReqDefForListAttachments() *def.HttpRequestDef {
 		WithName("SortDir").
 		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRejectAttachment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/enterprise-router/{er_id}/attachments/{attachment_id}/reject").
+		WithResponse(new(model.RejectAttachmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ErId").
+		WithJsonTag("er_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AttachmentId").
+		WithJsonTag("attachment_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

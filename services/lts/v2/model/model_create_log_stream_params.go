@@ -15,7 +15,8 @@ type CreateLogStreamParams struct {
 	// 日志存储时间 说明： 该参数仅对华东-上海一、华北-北京四、华南-广州用户开放。
 	TtlInDays *int32 `json:"ttl_in_days,omitempty"`
 
-	Tags *TagsBody `json:"tags,omitempty"`
+	// 标签字段信息
+	Tags *[]TagsBody `json:"tags,omitempty"`
 }
 
 func (o CreateLogStreamParams) String() string {

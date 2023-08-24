@@ -989,6 +989,18 @@ func (i *ShowLatestPublishedAgreementInvoker) Invoke() (*model.ShowLatestPublish
 	}
 }
 
+type ShowLoginTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLoginTypeInvoker) Invoke() (*model.ShowLoginTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLoginTypeResponse), nil
+	}
+}
+
 type ShowPartnersCasesPrivilegeInvoker struct {
 	*invoker.BaseInvoker
 }

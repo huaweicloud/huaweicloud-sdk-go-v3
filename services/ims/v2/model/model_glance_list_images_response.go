@@ -13,7 +13,7 @@ type GlanceListImagesResponse struct {
 	First *string `json:"first,omitempty"`
 
 	// 资源类型。
-	Images *[]GlanceShowImageResponseBody `json:"images,omitempty"`
+	Images *[]GlanceShowImageListResponseBody `json:"images,omitempty"`
 
 	// 描述镜像列表模式的URL。
 	Schema *string `json:"schema,omitempty"`

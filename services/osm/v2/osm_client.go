@@ -1741,6 +1741,27 @@ func (c *OsmClient) ShowLatestPublishedAgreementInvoker(request *model.ShowLates
 	return &ShowLatestPublishedAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLoginType 查询登录类型
+//
+// 查询登录类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) ShowLoginType(request *model.ShowLoginTypeRequest) (*model.ShowLoginTypeResponse, error) {
+	requestDef := GenReqDefForShowLoginType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLoginTypeResponse), nil
+	}
+}
+
+// ShowLoginTypeInvoker 查询登录类型
+func (c *OsmClient) ShowLoginTypeInvoker(request *model.ShowLoginTypeRequest) *ShowLoginTypeInvoker {
+	requestDef := GenReqDefForShowLoginType()
+	return &ShowLoginTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPartnersCasesPrivilege 查询伙伴工单权限
 //
 // 查询伙伴工单权限

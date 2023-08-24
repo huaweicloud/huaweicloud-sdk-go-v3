@@ -12,6 +12,9 @@ type ListResolveTasksRequest struct {
 	// 解析任务ID。
 	TaskId *string `json:"task_id,omitempty"`
 
+	// 任务名称。
+	TaskName *string `json:"task_name,omitempty"`
+
 	// 智能信息模板ID。
 	TplId *string `json:"tpl_id,omitempty"`
 

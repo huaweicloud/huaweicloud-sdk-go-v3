@@ -82,6 +82,27 @@ func (c *ErClient) ListAssociationsInvoker(request *model.ListAssociationsReques
 	return &ListAssociationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AcceptAttachment 接受共享连接创建
+//
+// 接受共享连接创建
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) AcceptAttachment(request *model.AcceptAttachmentRequest) (*model.AcceptAttachmentResponse, error) {
+	requestDef := GenReqDefForAcceptAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptAttachmentResponse), nil
+	}
+}
+
+// AcceptAttachmentInvoker 接受共享连接创建
+func (c *ErClient) AcceptAttachmentInvoker(request *model.AcceptAttachmentRequest) *AcceptAttachmentInvoker {
+	requestDef := GenReqDefForAcceptAttachment()
+	return &AcceptAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAttachments 查询连接列表
 //
 // 查询企业路由器实例下的连接列表。
@@ -101,6 +122,27 @@ func (c *ErClient) ListAttachments(request *model.ListAttachmentsRequest) (*mode
 func (c *ErClient) ListAttachmentsInvoker(request *model.ListAttachmentsRequest) *ListAttachmentsInvoker {
 	requestDef := GenReqDefForListAttachments()
 	return &ListAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RejectAttachment 拒绝共享连接创建
+//
+// 拒绝共享连接创建
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) RejectAttachment(request *model.RejectAttachmentRequest) (*model.RejectAttachmentResponse, error) {
+	requestDef := GenReqDefForRejectAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RejectAttachmentResponse), nil
+	}
+}
+
+// RejectAttachmentInvoker 拒绝共享连接创建
+func (c *ErClient) RejectAttachmentInvoker(request *model.RejectAttachmentRequest) *RejectAttachmentInvoker {
+	requestDef := GenReqDefForRejectAttachment()
+	return &RejectAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAttachment 查询连接详情

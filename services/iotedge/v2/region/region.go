@@ -7,11 +7,14 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://iotedge-api.cn-north-4.myhuaweicloud.cn")
+		"https://iotedge-api.cn-north-4.myhuaweicloud.com")
+	CN_EAST_3 = region.NewRegion("cn-east-3",
+		"https://iotedge-api.cn-east-3.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4": CN_NORTH_4,
+	"cn-east-3":  CN_EAST_3,
 }
 
 var provider = region.DefaultProviderChain("IOTEDGE")

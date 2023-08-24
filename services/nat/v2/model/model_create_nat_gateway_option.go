@@ -29,6 +29,8 @@ type CreateNatGatewayOption struct {
 
 	// 企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	SessionConf *SessionConfiguration `json:"session_conf,omitempty"`
 }
 
 func (o CreateNatGatewayOption) String() string {

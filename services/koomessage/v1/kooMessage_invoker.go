@@ -425,6 +425,234 @@ func (i *UploadMediaInvoker) Invoke() (*model.UploadMediaResponse, error) {
 	}
 }
 
+type CreateSmsAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSmsAppInvoker) Invoke() (*model.CreateSmsAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSmsAppResponse), nil
+	}
+}
+
+type ListAimMsgAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgAppInvoker) Invoke() (*model.ListAimMsgAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAimMsgAppResponse), nil
+	}
+}
+
+type ListAimMsgAppDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgAppDetailInvoker) Invoke() (*model.ListAimMsgAppDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAimMsgAppDetailResponse), nil
+	}
+}
+
+type UpdateAimMsgAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAimMsgAppInvoker) Invoke() (*model.UpdateAimMsgAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAimMsgAppResponse), nil
+	}
+}
+
+type SendAimBatchDifferentMessagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SendAimBatchDifferentMessagesInvoker) Invoke() (*model.SendAimBatchDifferentMessagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SendAimBatchDifferentMessagesResponse), nil
+	}
+}
+
+type SendAimBatchMessagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SendAimBatchMessagesInvoker) Invoke() (*model.SendAimBatchMessagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SendAimBatchMessagesResponse), nil
+	}
+}
+
+type AddAimMsgSignatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddAimMsgSignatureInvoker) Invoke() (*model.AddAimMsgSignatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddAimMsgSignatureResponse), nil
+	}
+}
+
+type DeleteAimMsgSignatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAimMsgSignatureInvoker) Invoke() (*model.DeleteAimMsgSignatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAimMsgSignatureResponse), nil
+	}
+}
+
+type ListAimMsgSignatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgSignatureInvoker) Invoke() (*model.ListAimMsgSignatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAimMsgSignatureResponse), nil
+	}
+}
+
+type ListAimMsgSignatureDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgSignatureDetailInvoker) Invoke() (*model.ListAimMsgSignatureDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAimMsgSignatureDetailResponse), nil
+	}
+}
+
+type ShowAimMsgSignatureFileInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAimMsgSignatureFileInfoInvoker) Invoke() (*model.ShowAimMsgSignatureFileInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAimMsgSignatureFileInfoResponse), nil
+	}
+}
+
+type UpdateAimMsgSignatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAimMsgSignatureInvoker) Invoke() (*model.UpdateAimMsgSignatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAimMsgSignatureResponse), nil
+	}
+}
+
+type UploadAimMsgSignatureFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadAimMsgSignatureFileInvoker) Invoke() (*model.UploadAimMsgSignatureFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadAimMsgSignatureFileResponse), nil
+	}
+}
+
+type CreateAimMsgTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAimMsgTemplateInvoker) Invoke() (*model.CreateAimMsgTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAimMsgTemplateResponse), nil
+	}
+}
+
+type DeleteAimMsgTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAimMsgTemplateInvoker) Invoke() (*model.DeleteAimMsgTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAimMsgTemplateResponse), nil
+	}
+}
+
+type ListAimMsgTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgTemplateInvoker) Invoke() (*model.ListAimMsgTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAimMsgTemplateResponse), nil
+	}
+}
+
+type ShowAimMsgTemplateDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAimMsgTemplateDetailInvoker) Invoke() (*model.ShowAimMsgTemplateDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAimMsgTemplateDetailResponse), nil
+	}
+}
+
+type ShowAimMsgTemplateVariableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAimMsgTemplateVariableInvoker) Invoke() (*model.ShowAimMsgTemplateVariableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAimMsgTemplateVariableResponse), nil
+	}
+}
+
+type UpdateAimMsgTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAimMsgTemplateInvoker) Invoke() (*model.UpdateAimMsgTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAimMsgTemplateResponse), nil
+	}
+}
+
 type AddVmsCallBackInvoker struct {
 	*invoker.BaseInvoker
 }

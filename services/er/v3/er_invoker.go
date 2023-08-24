@@ -41,6 +41,18 @@ func (i *ListAssociationsInvoker) Invoke() (*model.ListAssociationsResponse, err
 	}
 }
 
+type AcceptAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptAttachmentInvoker) Invoke() (*model.AcceptAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptAttachmentResponse), nil
+	}
+}
+
 type ListAttachmentsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +62,18 @@ func (i *ListAttachmentsInvoker) Invoke() (*model.ListAttachmentsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListAttachmentsResponse), nil
+	}
+}
+
+type RejectAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RejectAttachmentInvoker) Invoke() (*model.RejectAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RejectAttachmentResponse), nil
 	}
 }
 

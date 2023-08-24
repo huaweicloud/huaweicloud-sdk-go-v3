@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -43,6 +46,9 @@ type UnbindApiForAcl struct {
 
 	// API的认证方式
 	AuthType *string `json:"auth_type,omitempty"`
+
+	// API请求方法
+	ReqMethod *UnbindApiForAclReqMethod `json:"req_method,omitempty"`
 }
 
 func (o UnbindApiForAcl) String() string {
@@ -52,4 +58,75 @@ func (o UnbindApiForAcl) String() string {
 	}
 
 	return strings.Join([]string{"UnbindApiForAcl", string(data)}, " ")
+}
+
+type UnbindApiForAclReqMethod struct {
+	value string
+}
+
+type UnbindApiForAclReqMethodEnum struct {
+	GET     UnbindApiForAclReqMethod
+	POST    UnbindApiForAclReqMethod
+	DELETE  UnbindApiForAclReqMethod
+	PUT     UnbindApiForAclReqMethod
+	PATCH   UnbindApiForAclReqMethod
+	HEAD    UnbindApiForAclReqMethod
+	OPTIONS UnbindApiForAclReqMethod
+	ANY     UnbindApiForAclReqMethod
+}
+
+func GetUnbindApiForAclReqMethodEnum() UnbindApiForAclReqMethodEnum {
+	return UnbindApiForAclReqMethodEnum{
+		GET: UnbindApiForAclReqMethod{
+			value: "GET",
+		},
+		POST: UnbindApiForAclReqMethod{
+			value: "POST",
+		},
+		DELETE: UnbindApiForAclReqMethod{
+			value: "DELETE",
+		},
+		PUT: UnbindApiForAclReqMethod{
+			value: "PUT",
+		},
+		PATCH: UnbindApiForAclReqMethod{
+			value: "PATCH",
+		},
+		HEAD: UnbindApiForAclReqMethod{
+			value: "HEAD",
+		},
+		OPTIONS: UnbindApiForAclReqMethod{
+			value: "OPTIONS",
+		},
+		ANY: UnbindApiForAclReqMethod{
+			value: "ANY",
+		},
+	}
+}
+
+func (c UnbindApiForAclReqMethod) Value() string {
+	return c.value
+}
+
+func (c UnbindApiForAclReqMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UnbindApiForAclReqMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

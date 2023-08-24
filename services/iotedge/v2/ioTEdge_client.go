@@ -229,6 +229,111 @@ func (c *IoTEdgeClient) UpdateDeviceInvoker(request *model.UpdateDeviceRequest) 
 	return &UpdateDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddAppConfigsTemplates 添加应用配置模板
+//
+// 添加应用配置模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) AddAppConfigsTemplates(request *model.AddAppConfigsTemplatesRequest) (*model.AddAppConfigsTemplatesResponse, error) {
+	requestDef := GenReqDefForAddAppConfigsTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddAppConfigsTemplatesResponse), nil
+	}
+}
+
+// AddAppConfigsTemplatesInvoker 添加应用配置模板
+func (c *IoTEdgeClient) AddAppConfigsTemplatesInvoker(request *model.AddAppConfigsTemplatesRequest) *AddAppConfigsTemplatesInvoker {
+	requestDef := GenReqDefForAddAppConfigsTemplates()
+	return &AddAppConfigsTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddGeneralAppConfigsTemplate 导入标准应用配置模板
+//
+// 导入标准应用配置模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) AddGeneralAppConfigsTemplate(request *model.AddGeneralAppConfigsTemplateRequest) (*model.AddGeneralAppConfigsTemplateResponse, error) {
+	requestDef := GenReqDefForAddGeneralAppConfigsTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddGeneralAppConfigsTemplateResponse), nil
+	}
+}
+
+// AddGeneralAppConfigsTemplateInvoker 导入标准应用配置模板
+func (c *IoTEdgeClient) AddGeneralAppConfigsTemplateInvoker(request *model.AddGeneralAppConfigsTemplateRequest) *AddGeneralAppConfigsTemplateInvoker {
+	requestDef := GenReqDefForAddGeneralAppConfigsTemplate()
+	return &AddGeneralAppConfigsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListAppConfigsTemplates 查询应用配置模板列表
+//
+// 查询应用配置模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BatchListAppConfigsTemplates(request *model.BatchListAppConfigsTemplatesRequest) (*model.BatchListAppConfigsTemplatesResponse, error) {
+	requestDef := GenReqDefForBatchListAppConfigsTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListAppConfigsTemplatesResponse), nil
+	}
+}
+
+// BatchListAppConfigsTemplatesInvoker 查询应用配置模板列表
+func (c *IoTEdgeClient) BatchListAppConfigsTemplatesInvoker(request *model.BatchListAppConfigsTemplatesRequest) *BatchListAppConfigsTemplatesInvoker {
+	requestDef := GenReqDefForBatchListAppConfigsTemplates()
+	return &BatchListAppConfigsTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppConfigsTemplate 删除应用配置模板
+//
+// 删除应用配置模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeleteAppConfigsTemplate(request *model.DeleteAppConfigsTemplateRequest) (*model.DeleteAppConfigsTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteAppConfigsTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppConfigsTemplateResponse), nil
+	}
+}
+
+// DeleteAppConfigsTemplateInvoker 删除应用配置模板
+func (c *IoTEdgeClient) DeleteAppConfigsTemplateInvoker(request *model.DeleteAppConfigsTemplateRequest) *DeleteAppConfigsTemplateInvoker {
+	requestDef := GenReqDefForDeleteAppConfigsTemplate()
+	return &DeleteAppConfigsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAppConfigsTemplate 查询应用配置模板详情
+//
+// 查询应用配置模板详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowAppConfigsTemplate(request *model.ShowAppConfigsTemplateRequest) (*model.ShowAppConfigsTemplateResponse, error) {
+	requestDef := GenReqDefForShowAppConfigsTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppConfigsTemplateResponse), nil
+	}
+}
+
+// ShowAppConfigsTemplateInvoker 查询应用配置模板详情
+func (c *IoTEdgeClient) ShowAppConfigsTemplateInvoker(request *model.ShowAppConfigsTemplateRequest) *ShowAppConfigsTemplateInvoker {
+	requestDef := GenReqDefForShowAppConfigsTemplate()
+	return &ShowAppConfigsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchListEdgeApps 查询应用列表
 //
 // 查询应用列表
@@ -899,6 +1004,48 @@ func (c *IoTEdgeClient) UpdateModuleState(request *model.UpdateModuleStateReques
 func (c *IoTEdgeClient) UpdateModuleStateInvoker(request *model.UpdateModuleStateRequest) *UpdateModuleStateInvoker {
 	requestDef := GenReqDefForUpdateModuleState()
 	return &UpdateModuleStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModuleShadow 获取模块影子
+//
+// 获取模块影子信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowModuleShadow(request *model.ShowModuleShadowRequest) (*model.ShowModuleShadowResponse, error) {
+	requestDef := GenReqDefForShowModuleShadow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModuleShadowResponse), nil
+	}
+}
+
+// ShowModuleShadowInvoker 获取模块影子
+func (c *IoTEdgeClient) ShowModuleShadowInvoker(request *model.ShowModuleShadowRequest) *ShowModuleShadowInvoker {
+	requestDef := GenReqDefForShowModuleShadow()
+	return &ShowModuleShadowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateModuleShadow 更新模块影子
+//
+// 更新模块影子信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateModuleShadow(request *model.UpdateModuleShadowRequest) (*model.UpdateModuleShadowResponse, error) {
+	requestDef := GenReqDefForUpdateModuleShadow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateModuleShadowResponse), nil
+	}
+}
+
+// UpdateModuleShadowInvoker 更新模块影子
+func (c *IoTEdgeClient) UpdateModuleShadowInvoker(request *model.UpdateModuleShadowRequest) *UpdateModuleShadowInvoker {
+	requestDef := GenReqDefForUpdateModuleShadow()
+	return &UpdateModuleShadowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRoutes 查询边缘路由列表

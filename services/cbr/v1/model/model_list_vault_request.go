@@ -42,7 +42,7 @@ type ListVaultRequest struct {
 	// 状态
 	Status *string `json:"status,omitempty"`
 
-	// 资源id
+	// 资源id，支持多资源，以英文逗号分割
 	ResourceIds *string `json:"resource_ids,omitempty"`
 }
 

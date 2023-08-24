@@ -46,6 +46,9 @@ type SignApiBindingInfo struct {
 	// 签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
 	SignName *string `json:"sign_name,omitempty"`
 
+	// API请求方法
+	ReqMethod *SignApiBindingInfoReqMethod `json:"req_method,omitempty"`
+
 	// 签名密钥的key。 - hmac类型的签名密钥key：支持英文，数字，下划线，中划线，且只能以英文字母或数字开头，8 ~ 32字符。未填写时后台自动生成。 - basic类型的签名密钥key：支持英文，数字，下划线，中划线，且只能以英文字母开头，4 ~ 32字符。未填写时后台自动生成。 - public_key类型的签名密钥key：支持英文，数字，下划线，中划线，+，/，=，可以英文字母，数字，+，/开头，8 ~ 512字符。未填写时后台自动生成。 - aes类型的签名密钥key：支持英文，数字，下划线，中划线，!，@，#，$，%，+，/，=，可以英文字母，数字，+，/开头，签名算法为aes-128-cfb时为16个字符，签名算法为aes-256-cfb时为32个字符。未填写时后台自动生成。
 	SignKey *string `json:"sign_key,omitempty"`
 
@@ -63,6 +66,77 @@ func (o SignApiBindingInfo) String() string {
 	}
 
 	return strings.Join([]string{"SignApiBindingInfo", string(data)}, " ")
+}
+
+type SignApiBindingInfoReqMethod struct {
+	value string
+}
+
+type SignApiBindingInfoReqMethodEnum struct {
+	GET     SignApiBindingInfoReqMethod
+	POST    SignApiBindingInfoReqMethod
+	DELETE  SignApiBindingInfoReqMethod
+	PUT     SignApiBindingInfoReqMethod
+	PATCH   SignApiBindingInfoReqMethod
+	HEAD    SignApiBindingInfoReqMethod
+	OPTIONS SignApiBindingInfoReqMethod
+	ANY     SignApiBindingInfoReqMethod
+}
+
+func GetSignApiBindingInfoReqMethodEnum() SignApiBindingInfoReqMethodEnum {
+	return SignApiBindingInfoReqMethodEnum{
+		GET: SignApiBindingInfoReqMethod{
+			value: "GET",
+		},
+		POST: SignApiBindingInfoReqMethod{
+			value: "POST",
+		},
+		DELETE: SignApiBindingInfoReqMethod{
+			value: "DELETE",
+		},
+		PUT: SignApiBindingInfoReqMethod{
+			value: "PUT",
+		},
+		PATCH: SignApiBindingInfoReqMethod{
+			value: "PATCH",
+		},
+		HEAD: SignApiBindingInfoReqMethod{
+			value: "HEAD",
+		},
+		OPTIONS: SignApiBindingInfoReqMethod{
+			value: "OPTIONS",
+		},
+		ANY: SignApiBindingInfoReqMethod{
+			value: "ANY",
+		},
+	}
+}
+
+func (c SignApiBindingInfoReqMethod) Value() string {
+	return c.value
+}
+
+func (c SignApiBindingInfoReqMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SignApiBindingInfoReqMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type SignApiBindingInfoSignType struct {

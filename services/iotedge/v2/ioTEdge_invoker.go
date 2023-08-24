@@ -125,6 +125,66 @@ func (i *UpdateDeviceInvoker) Invoke() (*model.UpdateDeviceResponse, error) {
 	}
 }
 
+type AddAppConfigsTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddAppConfigsTemplatesInvoker) Invoke() (*model.AddAppConfigsTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddAppConfigsTemplatesResponse), nil
+	}
+}
+
+type AddGeneralAppConfigsTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddGeneralAppConfigsTemplateInvoker) Invoke() (*model.AddGeneralAppConfigsTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddGeneralAppConfigsTemplateResponse), nil
+	}
+}
+
+type BatchListAppConfigsTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListAppConfigsTemplatesInvoker) Invoke() (*model.BatchListAppConfigsTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListAppConfigsTemplatesResponse), nil
+	}
+}
+
+type DeleteAppConfigsTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppConfigsTemplateInvoker) Invoke() (*model.DeleteAppConfigsTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppConfigsTemplateResponse), nil
+	}
+}
+
+type ShowAppConfigsTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppConfigsTemplateInvoker) Invoke() (*model.ShowAppConfigsTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppConfigsTemplateResponse), nil
+	}
+}
+
 type BatchListEdgeAppsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -506,6 +566,30 @@ func (i *UpdateModuleStateInvoker) Invoke() (*model.UpdateModuleStateResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateModuleStateResponse), nil
+	}
+}
+
+type ShowModuleShadowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowModuleShadowInvoker) Invoke() (*model.ShowModuleShadowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowModuleShadowResponse), nil
+	}
+}
+
+type UpdateModuleShadowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateModuleShadowInvoker) Invoke() (*model.UpdateModuleShadowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateModuleShadowResponse), nil
 	}
 }
 

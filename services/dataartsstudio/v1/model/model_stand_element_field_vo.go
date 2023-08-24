@@ -20,7 +20,7 @@ type StandElementFieldVo struct {
 	Id *int64 `json:"id,omitempty"`
 
 	// 是否显示，系统默认项必然显示不允许修改
-	Actived *bool `json:"actived,omitempty"`
+	Actived bool `json:"actived"`
 
 	// 是否必填
 	Required *bool `json:"required,omitempty"`

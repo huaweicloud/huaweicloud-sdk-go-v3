@@ -56,6 +56,15 @@ type AgentConfig struct {
 
 	// mock规则列表
 	MockRuleList *[]MockRuleConfig `json:"mock_rule_list,omitempty"`
+
+	// clickhouse影子规则开关
+	ClickhouseEnable *bool `json:"clickhouse_enable,omitempty"`
+
+	// clickhouse影子规则类型
+	ClickhouseShadowType *string `json:"clickhouse_shadow_type,omitempty"`
+
+	// clickhouse影子库映射信息
+	ClickhouseShadowRepository *string `json:"clickhouse_shadow_repository,omitempty"`
 }
 
 func (o AgentConfig) String() string {

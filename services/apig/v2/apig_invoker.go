@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/apig/v2/model"
 )
 
+type AcceptOrRejectEndpointConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptOrRejectEndpointConnectionsInvoker) Invoke() (*model.AcceptOrRejectEndpointConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptOrRejectEndpointConnectionsResponse), nil
+	}
+}
+
 type AddEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -14,6 +26,18 @@ func (i *AddEipV2Invoker) Invoke() (*model.AddEipV2Response, error) {
 		return nil, err
 	} else {
 		return result.(*model.AddEipV2Response), nil
+	}
+}
+
+type AddEndpointPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddEndpointPermissionsInvoker) Invoke() (*model.AddEndpointPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddEndpointPermissionsResponse), nil
 	}
 }
 
@@ -242,6 +266,18 @@ func (i *DeleteCustomAuthorizerV2Invoker) Invoke() (*model.DeleteCustomAuthorize
 		return nil, err
 	} else {
 		return result.(*model.DeleteCustomAuthorizerV2Response), nil
+	}
+}
+
+type DeleteEndpointPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEndpointPermissionsInvoker) Invoke() (*model.DeleteEndpointPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEndpointPermissionsResponse), nil
 	}
 }
 
@@ -530,6 +566,30 @@ func (i *ListCustomAuthorizersV2Invoker) Invoke() (*model.ListCustomAuthorizersV
 		return nil, err
 	} else {
 		return result.(*model.ListCustomAuthorizersV2Response), nil
+	}
+}
+
+type ListEndpointConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointConnectionsInvoker) Invoke() (*model.ListEndpointConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndpointConnectionsResponse), nil
+	}
+}
+
+type ListEndpointPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointPermissionsInvoker) Invoke() (*model.ListEndpointPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndpointPermissionsResponse), nil
 	}
 }
 

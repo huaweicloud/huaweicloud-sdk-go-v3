@@ -376,6 +376,216 @@ func (c *VpcClient) UpdateSubNetworkInterfaceInvoker(request *model.UpdateSubNet
 	return &UpdateSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddFirewallRules 网络ACL插入规则
+//
+// 网络ACL插入规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) AddFirewallRules(request *model.AddFirewallRulesRequest) (*model.AddFirewallRulesResponse, error) {
+	requestDef := GenReqDefForAddFirewallRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFirewallRulesResponse), nil
+	}
+}
+
+// AddFirewallRulesInvoker 网络ACL插入规则
+func (c *VpcClient) AddFirewallRulesInvoker(request *model.AddFirewallRulesRequest) *AddFirewallRulesInvoker {
+	requestDef := GenReqDefForAddFirewallRules()
+	return &AddFirewallRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateSubnetFirewall 网络ACL绑定子网
+//
+// 网络ACL绑定子网
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) AssociateSubnetFirewall(request *model.AssociateSubnetFirewallRequest) (*model.AssociateSubnetFirewallResponse, error) {
+	requestDef := GenReqDefForAssociateSubnetFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateSubnetFirewallResponse), nil
+	}
+}
+
+// AssociateSubnetFirewallInvoker 网络ACL绑定子网
+func (c *VpcClient) AssociateSubnetFirewallInvoker(request *model.AssociateSubnetFirewallRequest) *AssociateSubnetFirewallInvoker {
+	requestDef := GenReqDefForAssociateSubnetFirewall()
+	return &AssociateSubnetFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFirewall 创建网络ACL
+//
+// 创建网络ACL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreateFirewall(request *model.CreateFirewallRequest) (*model.CreateFirewallResponse, error) {
+	requestDef := GenReqDefForCreateFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFirewallResponse), nil
+	}
+}
+
+// CreateFirewallInvoker 创建网络ACL
+func (c *VpcClient) CreateFirewallInvoker(request *model.CreateFirewallRequest) *CreateFirewallInvoker {
+	requestDef := GenReqDefForCreateFirewall()
+	return &CreateFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFirewall 删除网络ACL
+//
+// 删除网络ACL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeleteFirewall(request *model.DeleteFirewallRequest) (*model.DeleteFirewallResponse, error) {
+	requestDef := GenReqDefForDeleteFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFirewallResponse), nil
+	}
+}
+
+// DeleteFirewallInvoker 删除网络ACL
+func (c *VpcClient) DeleteFirewallInvoker(request *model.DeleteFirewallRequest) *DeleteFirewallInvoker {
+	requestDef := GenReqDefForDeleteFirewall()
+	return &DeleteFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateSubnetFirewall 网络ACL解绑子网
+//
+// 网络ACL解绑子网
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DisassociateSubnetFirewall(request *model.DisassociateSubnetFirewallRequest) (*model.DisassociateSubnetFirewallResponse, error) {
+	requestDef := GenReqDefForDisassociateSubnetFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateSubnetFirewallResponse), nil
+	}
+}
+
+// DisassociateSubnetFirewallInvoker 网络ACL解绑子网
+func (c *VpcClient) DisassociateSubnetFirewallInvoker(request *model.DisassociateSubnetFirewallRequest) *DisassociateSubnetFirewallInvoker {
+	requestDef := GenReqDefForDisassociateSubnetFirewall()
+	return &DisassociateSubnetFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFirewall 查询网络ACL列表
+//
+// 查询网络ACL列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListFirewall(request *model.ListFirewallRequest) (*model.ListFirewallResponse, error) {
+	requestDef := GenReqDefForListFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFirewallResponse), nil
+	}
+}
+
+// ListFirewallInvoker 查询网络ACL列表
+func (c *VpcClient) ListFirewallInvoker(request *model.ListFirewallRequest) *ListFirewallInvoker {
+	requestDef := GenReqDefForListFirewall()
+	return &ListFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveFirewallRules 网络ACL移除规则
+//
+// 网络ACL移除规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) RemoveFirewallRules(request *model.RemoveFirewallRulesRequest) (*model.RemoveFirewallRulesResponse, error) {
+	requestDef := GenReqDefForRemoveFirewallRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveFirewallRulesResponse), nil
+	}
+}
+
+// RemoveFirewallRulesInvoker 网络ACL移除规则
+func (c *VpcClient) RemoveFirewallRulesInvoker(request *model.RemoveFirewallRulesRequest) *RemoveFirewallRulesInvoker {
+	requestDef := GenReqDefForRemoveFirewallRules()
+	return &RemoveFirewallRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFirewall 查询网络ACL详情
+//
+// 查询网络ACL详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowFirewall(request *model.ShowFirewallRequest) (*model.ShowFirewallResponse, error) {
+	requestDef := GenReqDefForShowFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFirewallResponse), nil
+	}
+}
+
+// ShowFirewallInvoker 查询网络ACL详情
+func (c *VpcClient) ShowFirewallInvoker(request *model.ShowFirewallRequest) *ShowFirewallInvoker {
+	requestDef := GenReqDefForShowFirewall()
+	return &ShowFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFirewall 更新网络ACL
+//
+// 更新网络ACL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) UpdateFirewall(request *model.UpdateFirewallRequest) (*model.UpdateFirewallResponse, error) {
+	requestDef := GenReqDefForUpdateFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFirewallResponse), nil
+	}
+}
+
+// UpdateFirewallInvoker 更新网络ACL
+func (c *VpcClient) UpdateFirewallInvoker(request *model.UpdateFirewallRequest) *UpdateFirewallInvoker {
+	requestDef := GenReqDefForUpdateFirewall()
+	return &UpdateFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFirewallRules 网络ACL更新规则
+//
+// 网络ACL更新规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) UpdateFirewallRules(request *model.UpdateFirewallRulesRequest) (*model.UpdateFirewallRulesResponse, error) {
+	requestDef := GenReqDefForUpdateFirewallRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFirewallRulesResponse), nil
+	}
+}
+
+// UpdateFirewallRulesInvoker 网络ACL更新规则
+func (c *VpcClient) UpdateFirewallRulesInvoker(request *model.UpdateFirewallRulesRequest) *UpdateFirewallRulesInvoker {
+	requestDef := GenReqDefForUpdateFirewallRules()
+	return &UpdateFirewallRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAddressGroup 创建地址组
 //
 // 创建地址组

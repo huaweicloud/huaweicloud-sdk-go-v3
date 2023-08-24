@@ -1,9 +1,10 @@
 package model
 
 import (
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"strings"
 )
 
@@ -50,6 +51,9 @@ type ApiForThrottle struct {
 
 	// API编号
 	Id *string `json:"id,omitempty"`
+
+	// API请求方法
+	ReqMethod *ApiForThrottleReqMethod `json:"req_method,omitempty"`
 }
 
 func (o ApiForThrottle) String() string {
@@ -59,4 +63,75 @@ func (o ApiForThrottle) String() string {
 	}
 
 	return strings.Join([]string{"ApiForThrottle", string(data)}, " ")
+}
+
+type ApiForThrottleReqMethod struct {
+	value string
+}
+
+type ApiForThrottleReqMethodEnum struct {
+	GET     ApiForThrottleReqMethod
+	POST    ApiForThrottleReqMethod
+	DELETE  ApiForThrottleReqMethod
+	PUT     ApiForThrottleReqMethod
+	PATCH   ApiForThrottleReqMethod
+	HEAD    ApiForThrottleReqMethod
+	OPTIONS ApiForThrottleReqMethod
+	ANY     ApiForThrottleReqMethod
+}
+
+func GetApiForThrottleReqMethodEnum() ApiForThrottleReqMethodEnum {
+	return ApiForThrottleReqMethodEnum{
+		GET: ApiForThrottleReqMethod{
+			value: "GET",
+		},
+		POST: ApiForThrottleReqMethod{
+			value: "POST",
+		},
+		DELETE: ApiForThrottleReqMethod{
+			value: "DELETE",
+		},
+		PUT: ApiForThrottleReqMethod{
+			value: "PUT",
+		},
+		PATCH: ApiForThrottleReqMethod{
+			value: "PATCH",
+		},
+		HEAD: ApiForThrottleReqMethod{
+			value: "HEAD",
+		},
+		OPTIONS: ApiForThrottleReqMethod{
+			value: "OPTIONS",
+		},
+		ANY: ApiForThrottleReqMethod{
+			value: "ANY",
+		},
+	}
+}
+
+func (c ApiForThrottleReqMethod) Value() string {
+	return c.value
+}
+
+func (c ApiForThrottleReqMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiForThrottleReqMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

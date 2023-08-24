@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -43,6 +46,9 @@ type ApiForSign struct {
 
 	// 已绑定的签名密钥名称
 	SignatureName *string `json:"signature_name,omitempty"`
+
+	// API请求方法
+	ReqMethod *ApiForSignReqMethod `json:"req_method,omitempty"`
 }
 
 func (o ApiForSign) String() string {
@@ -52,4 +58,75 @@ func (o ApiForSign) String() string {
 	}
 
 	return strings.Join([]string{"ApiForSign", string(data)}, " ")
+}
+
+type ApiForSignReqMethod struct {
+	value string
+}
+
+type ApiForSignReqMethodEnum struct {
+	GET     ApiForSignReqMethod
+	POST    ApiForSignReqMethod
+	DELETE  ApiForSignReqMethod
+	PUT     ApiForSignReqMethod
+	PATCH   ApiForSignReqMethod
+	HEAD    ApiForSignReqMethod
+	OPTIONS ApiForSignReqMethod
+	ANY     ApiForSignReqMethod
+}
+
+func GetApiForSignReqMethodEnum() ApiForSignReqMethodEnum {
+	return ApiForSignReqMethodEnum{
+		GET: ApiForSignReqMethod{
+			value: "GET",
+		},
+		POST: ApiForSignReqMethod{
+			value: "POST",
+		},
+		DELETE: ApiForSignReqMethod{
+			value: "DELETE",
+		},
+		PUT: ApiForSignReqMethod{
+			value: "PUT",
+		},
+		PATCH: ApiForSignReqMethod{
+			value: "PATCH",
+		},
+		HEAD: ApiForSignReqMethod{
+			value: "HEAD",
+		},
+		OPTIONS: ApiForSignReqMethod{
+			value: "OPTIONS",
+		},
+		ANY: ApiForSignReqMethod{
+			value: "ANY",
+		},
+	}
+}
+
+func (c ApiForSignReqMethod) Value() string {
+	return c.value
+}
+
+func (c ApiForSignReqMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiForSignReqMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -9,10 +9,10 @@ import (
 type AccessoryJsonFormatReq struct {
 
 	// 文件名称
-	AccessoryName *string `json:"accessory_name,omitempty"`
+	AccessoryName string `json:"accessory_name"`
 
 	// 文件来源
-	AccessoryFrom *string `json:"accessory_from,omitempty"`
+	AccessoryFrom string `json:"accessory_from"`
 
 	// 上传类型
 	UploadType *int32 `json:"upload_type,omitempty"`

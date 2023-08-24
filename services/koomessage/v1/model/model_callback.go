@@ -15,7 +15,7 @@ type Callback struct {
 	// 注册回调的唯一标识ID。
 	Id *string `json:"id,omitempty"`
 
-	// 回调类型。  - 0：智能信息发送回调 - 1：模板状态回调
+	// 回调类型。  - 0：智能信息单条发送回调 - 1：模板状态回调 - 2：智能信息批量发送回调
 	UrlType *int32 `json:"url_type,omitempty"`
 }
 

@@ -29,7 +29,7 @@ type ApiCreate struct {
 	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
-	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证  当API的请求协议为GRPC类型时不支持自定义认证。
+	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
 	AuthType ApiCreateAuthType `json:"auth_type"`
 
 	AuthOpt *AuthOpt `json:"auth_opt,omitempty"`
@@ -40,7 +40,7 @@ type ApiCreate struct {
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
 	MatchMode *ApiCreateMatchMode `json:"match_mode,omitempty"`
 
-	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端 - GRPC：grpc后端
+	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
 	BackendType ApiCreateBackendType `json:"backend_type"`
 
 	// API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -76,7 +76,7 @@ type ApiCreate struct {
 	// 标签  待废弃，优先使用tags字段
 	Tag *string `json:"tag,omitempty"`
 
-	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+	// 请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
 	ContentType *ApiCreateContentType `json:"content_type,omitempty"`
 
 	MockInfo *ApiMockCreate `json:"mock_info,omitempty"`
@@ -446,7 +446,7 @@ type ApiCreateContentType struct {
 type ApiCreateContentTypeEnum struct {
 	APPLICATION_JSON    ApiCreateContentType
 	APPLICATION_XML     ApiCreateContentType
-	MULTIPART_FORM_DATE ApiCreateContentType
+	MULTIPART_FORM_DATA ApiCreateContentType
 	TEXT_PLAIN          ApiCreateContentType
 }
 
@@ -458,8 +458,8 @@ func GetApiCreateContentTypeEnum() ApiCreateContentTypeEnum {
 		APPLICATION_XML: ApiCreateContentType{
 			value: "application/xml",
 		},
-		MULTIPART_FORM_DATE: ApiCreateContentType{
-			value: "multipart/form-date",
+		MULTIPART_FORM_DATA: ApiCreateContentType{
+			value: "multipart/form-data",
 		},
 		TEXT_PLAIN: ApiCreateContentType{
 			value: "text/plain",

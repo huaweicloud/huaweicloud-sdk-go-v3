@@ -763,6 +763,425 @@ func (c *KooMessageClient) UploadMediaInvoker(request *model.UploadMediaRequest)
 	return &UploadMediaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSmsApp 创建短信应用
+//
+// 该接口用于用户创建短信应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) CreateSmsApp(request *model.CreateSmsAppRequest) (*model.CreateSmsAppResponse, error) {
+	requestDef := GenReqDefForCreateSmsApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSmsAppResponse), nil
+	}
+}
+
+// CreateSmsAppInvoker 创建短信应用
+func (c *KooMessageClient) CreateSmsAppInvoker(request *model.CreateSmsAppRequest) *CreateSmsAppInvoker {
+	requestDef := GenReqDefForCreateSmsApp()
+	return &CreateSmsAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAimMsgApp 查询短信应用
+//
+// 该接口用于用户查询已创建的短信应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ListAimMsgApp(request *model.ListAimMsgAppRequest) (*model.ListAimMsgAppResponse, error) {
+	requestDef := GenReqDefForListAimMsgApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAimMsgAppResponse), nil
+	}
+}
+
+// ListAimMsgAppInvoker 查询短信应用
+func (c *KooMessageClient) ListAimMsgAppInvoker(request *model.ListAimMsgAppRequest) *ListAimMsgAppInvoker {
+	requestDef := GenReqDefForListAimMsgApp()
+	return &ListAimMsgAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAimMsgAppDetail 获取短信应用详情
+//
+// 该接口用于用户获取已创建的短信应用详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ListAimMsgAppDetail(request *model.ListAimMsgAppDetailRequest) (*model.ListAimMsgAppDetailResponse, error) {
+	requestDef := GenReqDefForListAimMsgAppDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAimMsgAppDetailResponse), nil
+	}
+}
+
+// ListAimMsgAppDetailInvoker 获取短信应用详情
+func (c *KooMessageClient) ListAimMsgAppDetailInvoker(request *model.ListAimMsgAppDetailRequest) *ListAimMsgAppDetailInvoker {
+	requestDef := GenReqDefForListAimMsgAppDetail()
+	return &ListAimMsgAppDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAimMsgApp 修改短信应用
+//
+// 该接口用于用户修改短信应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) UpdateAimMsgApp(request *model.UpdateAimMsgAppRequest) (*model.UpdateAimMsgAppResponse, error) {
+	requestDef := GenReqDefForUpdateAimMsgApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAimMsgAppResponse), nil
+	}
+}
+
+// UpdateAimMsgAppInvoker 修改短信应用
+func (c *KooMessageClient) UpdateAimMsgAppInvoker(request *model.UpdateAimMsgAppRequest) *UpdateAimMsgAppInvoker {
+	requestDef := GenReqDefForUpdateAimMsgApp()
+	return &UpdateAimMsgAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendAimBatchDifferentMessages 发送分批短信
+//
+// 该接口用于向不同用户发送不同内容的短信。
+//
+// - 前提条件
+//
+// 1. 已创建短信应用。
+// 2. 已申请短信签名，获取签名通道号。
+// 3. 已申请短信模板，获取模板ID。
+//
+// - 注意事项
+//
+// 单条短信最多允许携带500个号码，每个号码最大长度为21位。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) SendAimBatchDifferentMessages(request *model.SendAimBatchDifferentMessagesRequest) (*model.SendAimBatchDifferentMessagesResponse, error) {
+	requestDef := GenReqDefForSendAimBatchDifferentMessages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SendAimBatchDifferentMessagesResponse), nil
+	}
+}
+
+// SendAimBatchDifferentMessagesInvoker 发送分批短信
+func (c *KooMessageClient) SendAimBatchDifferentMessagesInvoker(request *model.SendAimBatchDifferentMessagesRequest) *SendAimBatchDifferentMessagesInvoker {
+	requestDef := GenReqDefForSendAimBatchDifferentMessages()
+	return &SendAimBatchDifferentMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendAimBatchMessages 发送短信
+//
+// 向单个或多个用户发送相同内容的短信。
+//
+// - 前提条件
+//
+// 1. 已创建短信应用。
+// 2. 已申请短信签名，获取签名通道号。
+// 3. 已申请短信模板，获取模板ID。
+//
+// - 注意事项
+//
+// 最多允许携带500个号码，每个号码最大长度为21位。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) SendAimBatchMessages(request *model.SendAimBatchMessagesRequest) (*model.SendAimBatchMessagesResponse, error) {
+	requestDef := GenReqDefForSendAimBatchMessages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SendAimBatchMessagesResponse), nil
+	}
+}
+
+// SendAimBatchMessagesInvoker 发送短信
+func (c *KooMessageClient) SendAimBatchMessagesInvoker(request *model.SendAimBatchMessagesRequest) *SendAimBatchMessagesInvoker {
+	requestDef := GenReqDefForSendAimBatchMessages()
+	return &SendAimBatchMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddAimMsgSignature 创建短信签名
+//
+// 该接口用于用户创建短信签名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) AddAimMsgSignature(request *model.AddAimMsgSignatureRequest) (*model.AddAimMsgSignatureResponse, error) {
+	requestDef := GenReqDefForAddAimMsgSignature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddAimMsgSignatureResponse), nil
+	}
+}
+
+// AddAimMsgSignatureInvoker 创建短信签名
+func (c *KooMessageClient) AddAimMsgSignatureInvoker(request *model.AddAimMsgSignatureRequest) *AddAimMsgSignatureInvoker {
+	requestDef := GenReqDefForAddAimMsgSignature()
+	return &AddAimMsgSignatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAimMsgSignature 删除短信签名
+//
+// 该接口用于用户删除已创建的短信签名。删除已审核通过的签名，会同步删除该签名对应的通道号和该签名下的所有短信模板，请谨慎操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) DeleteAimMsgSignature(request *model.DeleteAimMsgSignatureRequest) (*model.DeleteAimMsgSignatureResponse, error) {
+	requestDef := GenReqDefForDeleteAimMsgSignature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAimMsgSignatureResponse), nil
+	}
+}
+
+// DeleteAimMsgSignatureInvoker 删除短信签名
+func (c *KooMessageClient) DeleteAimMsgSignatureInvoker(request *model.DeleteAimMsgSignatureRequest) *DeleteAimMsgSignatureInvoker {
+	requestDef := GenReqDefForDeleteAimMsgSignature()
+	return &DeleteAimMsgSignatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAimMsgSignature 查询短信签名
+//
+// 该接口用于用户查询已创建的短信签名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ListAimMsgSignature(request *model.ListAimMsgSignatureRequest) (*model.ListAimMsgSignatureResponse, error) {
+	requestDef := GenReqDefForListAimMsgSignature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAimMsgSignatureResponse), nil
+	}
+}
+
+// ListAimMsgSignatureInvoker 查询短信签名
+func (c *KooMessageClient) ListAimMsgSignatureInvoker(request *model.ListAimMsgSignatureRequest) *ListAimMsgSignatureInvoker {
+	requestDef := GenReqDefForListAimMsgSignature()
+	return &ListAimMsgSignatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAimMsgSignatureDetail 获取短信签名详情
+//
+// 该接口用于用户获取已创建的短信签名详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ListAimMsgSignatureDetail(request *model.ListAimMsgSignatureDetailRequest) (*model.ListAimMsgSignatureDetailResponse, error) {
+	requestDef := GenReqDefForListAimMsgSignatureDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAimMsgSignatureDetailResponse), nil
+	}
+}
+
+// ListAimMsgSignatureDetailInvoker 获取短信签名详情
+func (c *KooMessageClient) ListAimMsgSignatureDetailInvoker(request *model.ListAimMsgSignatureDetailRequest) *ListAimMsgSignatureDetailInvoker {
+	requestDef := GenReqDefForListAimMsgSignatureDetail()
+	return &ListAimMsgSignatureDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAimMsgSignatureFileInfo 查询申请文件
+//
+// 该接口用于用户查询创建短信签名时上传的营业执照/授权委托书文件信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ShowAimMsgSignatureFileInfo(request *model.ShowAimMsgSignatureFileInfoRequest) (*model.ShowAimMsgSignatureFileInfoResponse, error) {
+	requestDef := GenReqDefForShowAimMsgSignatureFileInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAimMsgSignatureFileInfoResponse), nil
+	}
+}
+
+// ShowAimMsgSignatureFileInfoInvoker 查询申请文件
+func (c *KooMessageClient) ShowAimMsgSignatureFileInfoInvoker(request *model.ShowAimMsgSignatureFileInfoRequest) *ShowAimMsgSignatureFileInfoInvoker {
+	requestDef := GenReqDefForShowAimMsgSignatureFileInfo()
+	return &ShowAimMsgSignatureFileInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAimMsgSignature 修改短信签名
+//
+// 该接口用于用户更新短信签名信息，目前仅支持审核不通过的短信签名重新修改。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) UpdateAimMsgSignature(request *model.UpdateAimMsgSignatureRequest) (*model.UpdateAimMsgSignatureResponse, error) {
+	requestDef := GenReqDefForUpdateAimMsgSignature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAimMsgSignatureResponse), nil
+	}
+}
+
+// UpdateAimMsgSignatureInvoker 修改短信签名
+func (c *KooMessageClient) UpdateAimMsgSignatureInvoker(request *model.UpdateAimMsgSignatureRequest) *UpdateAimMsgSignatureInvoker {
+	requestDef := GenReqDefForUpdateAimMsgSignature()
+	return &UpdateAimMsgSignatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadAimMsgSignatureFile 上传申请文件
+//
+// 该接口用于用户上传创建短信签名所需的营业执照/授权委托书文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) UploadAimMsgSignatureFile(request *model.UploadAimMsgSignatureFileRequest) (*model.UploadAimMsgSignatureFileResponse, error) {
+	requestDef := GenReqDefForUploadAimMsgSignatureFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadAimMsgSignatureFileResponse), nil
+	}
+}
+
+// UploadAimMsgSignatureFileInvoker 上传申请文件
+func (c *KooMessageClient) UploadAimMsgSignatureFileInvoker(request *model.UploadAimMsgSignatureFileRequest) *UploadAimMsgSignatureFileInvoker {
+	requestDef := GenReqDefForUploadAimMsgSignatureFile()
+	return &UploadAimMsgSignatureFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAimMsgTemplate 创建短信模板
+//
+// 该接口用于用户创建短信模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) CreateAimMsgTemplate(request *model.CreateAimMsgTemplateRequest) (*model.CreateAimMsgTemplateResponse, error) {
+	requestDef := GenReqDefForCreateAimMsgTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAimMsgTemplateResponse), nil
+	}
+}
+
+// CreateAimMsgTemplateInvoker 创建短信模板
+func (c *KooMessageClient) CreateAimMsgTemplateInvoker(request *model.CreateAimMsgTemplateRequest) *CreateAimMsgTemplateInvoker {
+	requestDef := GenReqDefForCreateAimMsgTemplate()
+	return &CreateAimMsgTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAimMsgTemplate 删除短信模板
+//
+// 该接口用于用户删除已创建的短信模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) DeleteAimMsgTemplate(request *model.DeleteAimMsgTemplateRequest) (*model.DeleteAimMsgTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteAimMsgTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAimMsgTemplateResponse), nil
+	}
+}
+
+// DeleteAimMsgTemplateInvoker 删除短信模板
+func (c *KooMessageClient) DeleteAimMsgTemplateInvoker(request *model.DeleteAimMsgTemplateRequest) *DeleteAimMsgTemplateInvoker {
+	requestDef := GenReqDefForDeleteAimMsgTemplate()
+	return &DeleteAimMsgTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAimMsgTemplate 查询短信模板
+//
+// 该接口用于用户查询已创建的短信模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ListAimMsgTemplate(request *model.ListAimMsgTemplateRequest) (*model.ListAimMsgTemplateResponse, error) {
+	requestDef := GenReqDefForListAimMsgTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAimMsgTemplateResponse), nil
+	}
+}
+
+// ListAimMsgTemplateInvoker 查询短信模板
+func (c *KooMessageClient) ListAimMsgTemplateInvoker(request *model.ListAimMsgTemplateRequest) *ListAimMsgTemplateInvoker {
+	requestDef := GenReqDefForListAimMsgTemplate()
+	return &ListAimMsgTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAimMsgTemplateDetail 获取短信模板详情
+//
+// 该接口用于用户获取已创建的短信模板详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ShowAimMsgTemplateDetail(request *model.ShowAimMsgTemplateDetailRequest) (*model.ShowAimMsgTemplateDetailResponse, error) {
+	requestDef := GenReqDefForShowAimMsgTemplateDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAimMsgTemplateDetailResponse), nil
+	}
+}
+
+// ShowAimMsgTemplateDetailInvoker 获取短信模板详情
+func (c *KooMessageClient) ShowAimMsgTemplateDetailInvoker(request *model.ShowAimMsgTemplateDetailRequest) *ShowAimMsgTemplateDetailInvoker {
+	requestDef := GenReqDefForShowAimMsgTemplateDetail()
+	return &ShowAimMsgTemplateDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAimMsgTemplateVariable 查询短信模板变量
+//
+// 该接口用于用户查询短信模板变量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ShowAimMsgTemplateVariable(request *model.ShowAimMsgTemplateVariableRequest) (*model.ShowAimMsgTemplateVariableResponse, error) {
+	requestDef := GenReqDefForShowAimMsgTemplateVariable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAimMsgTemplateVariableResponse), nil
+	}
+}
+
+// ShowAimMsgTemplateVariableInvoker 查询短信模板变量
+func (c *KooMessageClient) ShowAimMsgTemplateVariableInvoker(request *model.ShowAimMsgTemplateVariableRequest) *ShowAimMsgTemplateVariableInvoker {
+	requestDef := GenReqDefForShowAimMsgTemplateVariable()
+	return &ShowAimMsgTemplateVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAimMsgTemplate 修改短信模板
+//
+// 该接口用于用户修改短信模板信息，目前仅支持审核不通过的短信模板重新修改。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) UpdateAimMsgTemplate(request *model.UpdateAimMsgTemplateRequest) (*model.UpdateAimMsgTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateAimMsgTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAimMsgTemplateResponse), nil
+	}
+}
+
+// UpdateAimMsgTemplateInvoker 修改短信模板
+func (c *KooMessageClient) UpdateAimMsgTemplateInvoker(request *model.UpdateAimMsgTemplateRequest) *UpdateAimMsgTemplateInvoker {
+	requestDef := GenReqDefForUpdateAimMsgTemplate()
+	return &UpdateAimMsgTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddVmsCallBack 注册智能信息基础版回执URL
 //
 // 用户根据要求创建智能信息基础版回执接口后，可以调用此接口进行注册。

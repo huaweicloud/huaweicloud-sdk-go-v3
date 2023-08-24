@@ -2691,6 +2691,26 @@ func GenReqDefForShowLatestPublishedAgreement() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowLoginType() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/servicerequest/authorizations/login-type").
+		WithResponse(new(model.ShowLoginTypeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XTimeZone").
+		WithJsonTag("X-Time-Zone").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowPartnersCasesPrivilege() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

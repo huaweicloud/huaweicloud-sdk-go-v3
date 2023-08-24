@@ -209,6 +209,126 @@ func (i *UpdateSubNetworkInterfaceInvoker) Invoke() (*model.UpdateSubNetworkInte
 	}
 }
 
+type AddFirewallRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFirewallRulesInvoker) Invoke() (*model.AddFirewallRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFirewallRulesResponse), nil
+	}
+}
+
+type AssociateSubnetFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateSubnetFirewallInvoker) Invoke() (*model.AssociateSubnetFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateSubnetFirewallResponse), nil
+	}
+}
+
+type CreateFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFirewallInvoker) Invoke() (*model.CreateFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFirewallResponse), nil
+	}
+}
+
+type DeleteFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFirewallInvoker) Invoke() (*model.DeleteFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFirewallResponse), nil
+	}
+}
+
+type DisassociateSubnetFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateSubnetFirewallInvoker) Invoke() (*model.DisassociateSubnetFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateSubnetFirewallResponse), nil
+	}
+}
+
+type ListFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFirewallInvoker) Invoke() (*model.ListFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFirewallResponse), nil
+	}
+}
+
+type RemoveFirewallRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveFirewallRulesInvoker) Invoke() (*model.RemoveFirewallRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveFirewallRulesResponse), nil
+	}
+}
+
+type ShowFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFirewallInvoker) Invoke() (*model.ShowFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFirewallResponse), nil
+	}
+}
+
+type UpdateFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFirewallInvoker) Invoke() (*model.UpdateFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFirewallResponse), nil
+	}
+}
+
+type UpdateFirewallRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFirewallRulesInvoker) Invoke() (*model.UpdateFirewallRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFirewallRulesResponse), nil
+	}
+}
+
 type CreateAddressGroupInvoker struct {
 	*invoker.BaseInvoker
 }

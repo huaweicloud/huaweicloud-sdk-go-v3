@@ -20,6 +20,9 @@ type VatInvoiceRequestBody struct {
 
 	// 识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
 	ReturnTextLocation *bool `json:"return_text_location,omitempty"`
+
+	// 页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
+	PageNum *int32 `json:"page_num,omitempty"`
 }
 
 func (o VatInvoiceRequestBody) String() string {

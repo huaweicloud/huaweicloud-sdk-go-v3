@@ -57,7 +57,10 @@ type ShowCertificateAuthorityResponse struct {
 	DistinguishedName *DistinguishedName `json:"distinguished_name,omitempty"`
 
 	CrlConfiguration *ListCrlConfiguration `json:"crl_configuration,omitempty"`
-	HttpStatusCode   int                   `json:"-"`
+
+	// 企业项目ID，默认为“0”。 对于开通企业项目的用户，表示资源处于默认企业项目下。 对于未开通企业项目的用户，表示资源未处于企业项目下。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	HttpStatusCode      int     `json:"-"`
 }
 
 func (o ShowCertificateAuthorityResponse) String() string {

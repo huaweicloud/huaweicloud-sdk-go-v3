@@ -18,7 +18,7 @@ type CustomizeSourceCreateReq struct {
 	Description *string `json:"description,omitempty"`
 
 	// 指导事件源归属的事件通道ID
-	ChannelId string `json:"channel_id"`
+	ChannelId *string `json:"channel_id,omitempty"`
 
 	// 事件源类型
 	Type *CustomizeSourceCreateReqType `json:"type,omitempty"`

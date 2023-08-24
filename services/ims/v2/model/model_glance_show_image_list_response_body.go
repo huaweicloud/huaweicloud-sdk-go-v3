@@ -9,8 +9,8 @@ import (
 	"strings"
 )
 
-// GlanceShowImageResponseBody 镜像信息响应体
-type GlanceShowImageResponseBody struct {
+// GlanceShowImageListResponseBody
+type GlanceShowImageListResponseBody struct {
 
 	// 备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
 	BackupId *string `json:"__backup_id,omitempty"`
@@ -25,28 +25,28 @@ type GlanceShowImageResponseBody struct {
 	ImageSize string `json:"__image_size"`
 
 	// 镜像后端存储类型，目前只支持uds
-	ImageSourceType GlanceShowImageResponseBodyImageSourceType `json:"__image_source_type"`
+	ImageSourceType GlanceShowImageListResponseBodyImageSourceType `json:"__image_source_type"`
 
 	// 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
-	Imagetype GlanceShowImageResponseBodyImagetype `json:"__imagetype"`
+	Imagetype GlanceShowImageListResponseBodyImagetype `json:"__imagetype"`
 
 	// 是否是注册过的镜像，取值为“true”或者“false”。
-	Isregistered GlanceShowImageResponseBodyIsregistered `json:"__isregistered"`
+	Isregistered GlanceShowImageListResponseBodyIsregistered `json:"__isregistered"`
 
 	// 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
 	Originalimagename *string `json:"__originalimagename,omitempty"`
 
 	// 操作系统位数，一般取值为“32”或者“64”。
-	OsBit *GlanceShowImageResponseBodyOsBit `json:"__os_bit,omitempty"`
+	OsBit *GlanceShowImageListResponseBodyOsBit `json:"__os_bit,omitempty"`
 
 	// 操作系统类型，目前取值Linux， Windows，Other。
-	OsType GlanceShowImageResponseBodyOsType `json:"__os_type"`
+	OsType GlanceShowImageListResponseBodyOsType `json:"__os_type"`
 
 	// 操作系统具体版本。
 	OsVersion *string `json:"__os_version,omitempty"`
 
 	// 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
-	Platform *GlanceShowImageResponseBodyPlatform `json:"__platform,omitempty"`
+	Platform *GlanceShowImageListResponseBodyPlatform `json:"__platform,omitempty"`
 
 	// 市场镜像的产品ID。
 	Productcode *string `json:"__productcode,omitempty"`
@@ -88,7 +88,7 @@ type GlanceShowImageResponseBody struct {
 	CreatedAt string `json:"created_at"`
 
 	// 镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
-	DiskFormat GlanceShowImageResponseBodyDiskFormat `json:"disk_format"`
+	DiskFormat GlanceShowImageListResponseBodyDiskFormat `json:"disk_format"`
 
 	// 镜像文件下载和上传链接。
 	File string `json:"file"`
@@ -121,7 +121,7 @@ type GlanceShowImageResponseBody struct {
 	Size *int64 `json:"size,omitempty"`
 
 	// 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
-	Status GlanceShowImageResponseBodyStatus `json:"status"`
+	Status GlanceShowImageListResponseBodyStatus `json:"status"`
 
 	// 镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
 	Tags []string `json:"tags"`
@@ -130,28 +130,31 @@ type GlanceShowImageResponseBody struct {
 	UpdatedAt string `json:"updated_at"`
 
 	// 镜像使用环境类型：FusionCompute，Ironic，DataImage。
-	VirtualEnvType GlanceShowImageResponseBodyVirtualEnvType `json:"virtual_env_type"`
+	VirtualEnvType GlanceShowImageListResponseBodyVirtualEnvType `json:"virtual_env_type"`
 
 	// 目前暂时不使用。
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 
 	// 是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
-	Visibility GlanceShowImageResponseBodyVisibility `json:"visibility"`
+	Visibility GlanceShowImageListResponseBodyVisibility `json:"visibility"`
 
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
-	SupportFcInject *GlanceShowImageResponseBodySupportFcInject `json:"__support_fc_inject,omitempty"`
+	SupportFcInject *GlanceShowImageListResponseBodySupportFcInject `json:"__support_fc_inject,omitempty"`
 
 	// 表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+	SysEnterpriseProjectId *string `json:"_sys_enterprise_project_id,omitempty"`
+
 	// 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
-	HwFirmwareType *GlanceShowImageResponseBodyHwFirmwareType `json:"hw_firmware_type,omitempty"`
+	HwFirmwareType *GlanceShowImageListResponseBodyHwFirmwareType `json:"hw_firmware_type,omitempty"`
 
 	// 是否为ARM架构类型的镜像，取值为“true”或者“false”。
-	SupportArm *GlanceShowImageResponseBodySupportArm `json:"__support_arm,omitempty"`
+	SupportArm *GlanceShowImageListResponseBodySupportArm `json:"__support_arm,omitempty"`
 
 	// 表示当前市场镜像是否下架。 true：已下架 false：未下架
-	IsOffshelved *GlanceShowImageResponseBodyIsOffshelved `json:"__is_offshelved,omitempty"`
+	IsOffshelved *GlanceShowImageListResponseBodyIsOffshelved `json:"__is_offshelved,omitempty"`
 
 	// 镜像是否支持延迟加载。取值为True或False。
 	Lazyloading *string `json:"__lazyloading,omitempty"`
@@ -193,44 +196,44 @@ type GlanceShowImageResponseBody struct {
 	SupportAmd *string `json:"__support_amd,omitempty"`
 }
 
-func (o GlanceShowImageResponseBody) String() string {
+func (o GlanceShowImageListResponseBody) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "GlanceShowImageResponseBody struct{}"
+		return "GlanceShowImageListResponseBody struct{}"
 	}
 
-	return strings.Join([]string{"GlanceShowImageResponseBody", string(data)}, " ")
+	return strings.Join([]string{"GlanceShowImageListResponseBody", string(data)}, " ")
 }
 
-type GlanceShowImageResponseBodyImageSourceType struct {
+type GlanceShowImageListResponseBodyImageSourceType struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyImageSourceTypeEnum struct {
-	UDS   GlanceShowImageResponseBodyImageSourceType
-	SWIFT GlanceShowImageResponseBodyImageSourceType
+type GlanceShowImageListResponseBodyImageSourceTypeEnum struct {
+	UDS   GlanceShowImageListResponseBodyImageSourceType
+	SWIFT GlanceShowImageListResponseBodyImageSourceType
 }
 
-func GetGlanceShowImageResponseBodyImageSourceTypeEnum() GlanceShowImageResponseBodyImageSourceTypeEnum {
-	return GlanceShowImageResponseBodyImageSourceTypeEnum{
-		UDS: GlanceShowImageResponseBodyImageSourceType{
+func GetGlanceShowImageListResponseBodyImageSourceTypeEnum() GlanceShowImageListResponseBodyImageSourceTypeEnum {
+	return GlanceShowImageListResponseBodyImageSourceTypeEnum{
+		UDS: GlanceShowImageListResponseBodyImageSourceType{
 			value: "uds",
 		},
-		SWIFT: GlanceShowImageResponseBodyImageSourceType{
+		SWIFT: GlanceShowImageListResponseBodyImageSourceType{
 			value: "swift",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyImageSourceType) Value() string {
+func (c GlanceShowImageListResponseBodyImageSourceType) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyImageSourceType) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyImageSourceType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyImageSourceType) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyImageSourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -249,43 +252,43 @@ func (c *GlanceShowImageResponseBodyImageSourceType) UnmarshalJSON(b []byte) err
 	}
 }
 
-type GlanceShowImageResponseBodyImagetype struct {
+type GlanceShowImageListResponseBodyImagetype struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyImagetypeEnum struct {
-	GOLD    GlanceShowImageResponseBodyImagetype
-	PRIVATE GlanceShowImageResponseBodyImagetype
-	SHARED  GlanceShowImageResponseBodyImagetype
-	MARKET  GlanceShowImageResponseBodyImagetype
+type GlanceShowImageListResponseBodyImagetypeEnum struct {
+	GOLD    GlanceShowImageListResponseBodyImagetype
+	PRIVATE GlanceShowImageListResponseBodyImagetype
+	SHARED  GlanceShowImageListResponseBodyImagetype
+	MARKET  GlanceShowImageListResponseBodyImagetype
 }
 
-func GetGlanceShowImageResponseBodyImagetypeEnum() GlanceShowImageResponseBodyImagetypeEnum {
-	return GlanceShowImageResponseBodyImagetypeEnum{
-		GOLD: GlanceShowImageResponseBodyImagetype{
+func GetGlanceShowImageListResponseBodyImagetypeEnum() GlanceShowImageListResponseBodyImagetypeEnum {
+	return GlanceShowImageListResponseBodyImagetypeEnum{
+		GOLD: GlanceShowImageListResponseBodyImagetype{
 			value: "gold",
 		},
-		PRIVATE: GlanceShowImageResponseBodyImagetype{
+		PRIVATE: GlanceShowImageListResponseBodyImagetype{
 			value: "private",
 		},
-		SHARED: GlanceShowImageResponseBodyImagetype{
+		SHARED: GlanceShowImageListResponseBodyImagetype{
 			value: "shared",
 		},
-		MARKET: GlanceShowImageResponseBodyImagetype{
+		MARKET: GlanceShowImageListResponseBodyImagetype{
 			value: "market",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyImagetype) Value() string {
+func (c GlanceShowImageListResponseBodyImagetype) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyImagetype) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyImagetype) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyImagetype) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyImagetype) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -304,35 +307,35 @@ func (c *GlanceShowImageResponseBodyImagetype) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyIsregistered struct {
+type GlanceShowImageListResponseBodyIsregistered struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyIsregisteredEnum struct {
-	TRUE  GlanceShowImageResponseBodyIsregistered
-	FALSE GlanceShowImageResponseBodyIsregistered
+type GlanceShowImageListResponseBodyIsregisteredEnum struct {
+	TRUE  GlanceShowImageListResponseBodyIsregistered
+	FALSE GlanceShowImageListResponseBodyIsregistered
 }
 
-func GetGlanceShowImageResponseBodyIsregisteredEnum() GlanceShowImageResponseBodyIsregisteredEnum {
-	return GlanceShowImageResponseBodyIsregisteredEnum{
-		TRUE: GlanceShowImageResponseBodyIsregistered{
+func GetGlanceShowImageListResponseBodyIsregisteredEnum() GlanceShowImageListResponseBodyIsregisteredEnum {
+	return GlanceShowImageListResponseBodyIsregisteredEnum{
+		TRUE: GlanceShowImageListResponseBodyIsregistered{
 			value: "true",
 		},
-		FALSE: GlanceShowImageResponseBodyIsregistered{
+		FALSE: GlanceShowImageListResponseBodyIsregistered{
 			value: "false",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyIsregistered) Value() string {
+func (c GlanceShowImageListResponseBodyIsregistered) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyIsregistered) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyIsregistered) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyIsregistered) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyIsregistered) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -351,35 +354,35 @@ func (c *GlanceShowImageResponseBodyIsregistered) UnmarshalJSON(b []byte) error 
 	}
 }
 
-type GlanceShowImageResponseBodyOsBit struct {
+type GlanceShowImageListResponseBodyOsBit struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyOsBitEnum struct {
-	E_32 GlanceShowImageResponseBodyOsBit
-	E_64 GlanceShowImageResponseBodyOsBit
+type GlanceShowImageListResponseBodyOsBitEnum struct {
+	E_32 GlanceShowImageListResponseBodyOsBit
+	E_64 GlanceShowImageListResponseBodyOsBit
 }
 
-func GetGlanceShowImageResponseBodyOsBitEnum() GlanceShowImageResponseBodyOsBitEnum {
-	return GlanceShowImageResponseBodyOsBitEnum{
-		E_32: GlanceShowImageResponseBodyOsBit{
+func GetGlanceShowImageListResponseBodyOsBitEnum() GlanceShowImageListResponseBodyOsBitEnum {
+	return GlanceShowImageListResponseBodyOsBitEnum{
+		E_32: GlanceShowImageListResponseBodyOsBit{
 			value: "32",
 		},
-		E_64: GlanceShowImageResponseBodyOsBit{
+		E_64: GlanceShowImageListResponseBodyOsBit{
 			value: "64",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyOsBit) Value() string {
+func (c GlanceShowImageListResponseBodyOsBit) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyOsBit) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyOsBit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyOsBit) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyOsBit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -398,39 +401,39 @@ func (c *GlanceShowImageResponseBodyOsBit) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyOsType struct {
+type GlanceShowImageListResponseBodyOsType struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyOsTypeEnum struct {
-	LINUX   GlanceShowImageResponseBodyOsType
-	WINDOWS GlanceShowImageResponseBodyOsType
-	OTHER   GlanceShowImageResponseBodyOsType
+type GlanceShowImageListResponseBodyOsTypeEnum struct {
+	LINUX   GlanceShowImageListResponseBodyOsType
+	WINDOWS GlanceShowImageListResponseBodyOsType
+	OTHER   GlanceShowImageListResponseBodyOsType
 }
 
-func GetGlanceShowImageResponseBodyOsTypeEnum() GlanceShowImageResponseBodyOsTypeEnum {
-	return GlanceShowImageResponseBodyOsTypeEnum{
-		LINUX: GlanceShowImageResponseBodyOsType{
+func GetGlanceShowImageListResponseBodyOsTypeEnum() GlanceShowImageListResponseBodyOsTypeEnum {
+	return GlanceShowImageListResponseBodyOsTypeEnum{
+		LINUX: GlanceShowImageListResponseBodyOsType{
 			value: "Linux",
 		},
-		WINDOWS: GlanceShowImageResponseBodyOsType{
+		WINDOWS: GlanceShowImageListResponseBodyOsType{
 			value: "Windows",
 		},
-		OTHER: GlanceShowImageResponseBodyOsType{
+		OTHER: GlanceShowImageListResponseBodyOsType{
 			value: "Other",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyOsType) Value() string {
+func (c GlanceShowImageListResponseBodyOsType) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyOsType) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyOsType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyOsType) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyOsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -449,75 +452,75 @@ func (c *GlanceShowImageResponseBodyOsType) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyPlatform struct {
+type GlanceShowImageListResponseBodyPlatform struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyPlatformEnum struct {
-	WINDOWS      GlanceShowImageResponseBodyPlatform
-	UBUNTU       GlanceShowImageResponseBodyPlatform
-	RED_HAT      GlanceShowImageResponseBodyPlatform
-	SUSE         GlanceShowImageResponseBodyPlatform
-	CENT_OS      GlanceShowImageResponseBodyPlatform
-	DEBIAN       GlanceShowImageResponseBodyPlatform
-	OPEN_SUSE    GlanceShowImageResponseBodyPlatform
-	ORACLE_LINUX GlanceShowImageResponseBodyPlatform
-	FEDORA       GlanceShowImageResponseBodyPlatform
-	OTHER        GlanceShowImageResponseBodyPlatform
-	CORE_OS      GlanceShowImageResponseBodyPlatform
-	EULER_OS     GlanceShowImageResponseBodyPlatform
+type GlanceShowImageListResponseBodyPlatformEnum struct {
+	WINDOWS      GlanceShowImageListResponseBodyPlatform
+	UBUNTU       GlanceShowImageListResponseBodyPlatform
+	RED_HAT      GlanceShowImageListResponseBodyPlatform
+	SUSE         GlanceShowImageListResponseBodyPlatform
+	CENT_OS      GlanceShowImageListResponseBodyPlatform
+	DEBIAN       GlanceShowImageListResponseBodyPlatform
+	OPEN_SUSE    GlanceShowImageListResponseBodyPlatform
+	ORACLE_LINUX GlanceShowImageListResponseBodyPlatform
+	FEDORA       GlanceShowImageListResponseBodyPlatform
+	OTHER        GlanceShowImageListResponseBodyPlatform
+	CORE_OS      GlanceShowImageListResponseBodyPlatform
+	EULER_OS     GlanceShowImageListResponseBodyPlatform
 }
 
-func GetGlanceShowImageResponseBodyPlatformEnum() GlanceShowImageResponseBodyPlatformEnum {
-	return GlanceShowImageResponseBodyPlatformEnum{
-		WINDOWS: GlanceShowImageResponseBodyPlatform{
+func GetGlanceShowImageListResponseBodyPlatformEnum() GlanceShowImageListResponseBodyPlatformEnum {
+	return GlanceShowImageListResponseBodyPlatformEnum{
+		WINDOWS: GlanceShowImageListResponseBodyPlatform{
 			value: "Windows",
 		},
-		UBUNTU: GlanceShowImageResponseBodyPlatform{
+		UBUNTU: GlanceShowImageListResponseBodyPlatform{
 			value: "Ubuntu",
 		},
-		RED_HAT: GlanceShowImageResponseBodyPlatform{
+		RED_HAT: GlanceShowImageListResponseBodyPlatform{
 			value: "RedHat",
 		},
-		SUSE: GlanceShowImageResponseBodyPlatform{
+		SUSE: GlanceShowImageListResponseBodyPlatform{
 			value: "SUSE",
 		},
-		CENT_OS: GlanceShowImageResponseBodyPlatform{
+		CENT_OS: GlanceShowImageListResponseBodyPlatform{
 			value: "CentOS",
 		},
-		DEBIAN: GlanceShowImageResponseBodyPlatform{
+		DEBIAN: GlanceShowImageListResponseBodyPlatform{
 			value: "Debian",
 		},
-		OPEN_SUSE: GlanceShowImageResponseBodyPlatform{
+		OPEN_SUSE: GlanceShowImageListResponseBodyPlatform{
 			value: "OpenSUSE",
 		},
-		ORACLE_LINUX: GlanceShowImageResponseBodyPlatform{
+		ORACLE_LINUX: GlanceShowImageListResponseBodyPlatform{
 			value: "OracleLinux",
 		},
-		FEDORA: GlanceShowImageResponseBodyPlatform{
+		FEDORA: GlanceShowImageListResponseBodyPlatform{
 			value: "Fedora",
 		},
-		OTHER: GlanceShowImageResponseBodyPlatform{
+		OTHER: GlanceShowImageListResponseBodyPlatform{
 			value: "Other",
 		},
-		CORE_OS: GlanceShowImageResponseBodyPlatform{
+		CORE_OS: GlanceShowImageListResponseBodyPlatform{
 			value: "CoreOS",
 		},
-		EULER_OS: GlanceShowImageResponseBodyPlatform{
+		EULER_OS: GlanceShowImageListResponseBodyPlatform{
 			value: "EulerOS",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyPlatform) Value() string {
+func (c GlanceShowImageListResponseBodyPlatform) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyPlatform) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyPlatform) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyPlatform) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyPlatform) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -536,47 +539,47 @@ func (c *GlanceShowImageResponseBodyPlatform) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyDiskFormat struct {
+type GlanceShowImageListResponseBodyDiskFormat struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyDiskFormatEnum struct {
-	VHD   GlanceShowImageResponseBodyDiskFormat
-	ZVHD  GlanceShowImageResponseBodyDiskFormat
-	RAW   GlanceShowImageResponseBodyDiskFormat
-	QCOW2 GlanceShowImageResponseBodyDiskFormat
-	ZVHD2 GlanceShowImageResponseBodyDiskFormat
+type GlanceShowImageListResponseBodyDiskFormatEnum struct {
+	VHD   GlanceShowImageListResponseBodyDiskFormat
+	ZVHD  GlanceShowImageListResponseBodyDiskFormat
+	RAW   GlanceShowImageListResponseBodyDiskFormat
+	QCOW2 GlanceShowImageListResponseBodyDiskFormat
+	ZVHD2 GlanceShowImageListResponseBodyDiskFormat
 }
 
-func GetGlanceShowImageResponseBodyDiskFormatEnum() GlanceShowImageResponseBodyDiskFormatEnum {
-	return GlanceShowImageResponseBodyDiskFormatEnum{
-		VHD: GlanceShowImageResponseBodyDiskFormat{
+func GetGlanceShowImageListResponseBodyDiskFormatEnum() GlanceShowImageListResponseBodyDiskFormatEnum {
+	return GlanceShowImageListResponseBodyDiskFormatEnum{
+		VHD: GlanceShowImageListResponseBodyDiskFormat{
 			value: "vhd",
 		},
-		ZVHD: GlanceShowImageResponseBodyDiskFormat{
+		ZVHD: GlanceShowImageListResponseBodyDiskFormat{
 			value: "zvhd",
 		},
-		RAW: GlanceShowImageResponseBodyDiskFormat{
+		RAW: GlanceShowImageListResponseBodyDiskFormat{
 			value: "raw",
 		},
-		QCOW2: GlanceShowImageResponseBodyDiskFormat{
+		QCOW2: GlanceShowImageListResponseBodyDiskFormat{
 			value: "qcow2",
 		},
-		ZVHD2: GlanceShowImageResponseBodyDiskFormat{
+		ZVHD2: GlanceShowImageListResponseBodyDiskFormat{
 			value: "zvhd2",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyDiskFormat) Value() string {
+func (c GlanceShowImageListResponseBodyDiskFormat) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyDiskFormat) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyDiskFormat) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyDiskFormat) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyDiskFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -595,47 +598,47 @@ func (c *GlanceShowImageResponseBodyDiskFormat) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyStatus struct {
+type GlanceShowImageListResponseBodyStatus struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyStatusEnum struct {
-	QUEUED  GlanceShowImageResponseBodyStatus
-	SAVING  GlanceShowImageResponseBodyStatus
-	DELETED GlanceShowImageResponseBodyStatus
-	KILLED  GlanceShowImageResponseBodyStatus
-	ACTIVE  GlanceShowImageResponseBodyStatus
+type GlanceShowImageListResponseBodyStatusEnum struct {
+	QUEUED  GlanceShowImageListResponseBodyStatus
+	SAVING  GlanceShowImageListResponseBodyStatus
+	DELETED GlanceShowImageListResponseBodyStatus
+	KILLED  GlanceShowImageListResponseBodyStatus
+	ACTIVE  GlanceShowImageListResponseBodyStatus
 }
 
-func GetGlanceShowImageResponseBodyStatusEnum() GlanceShowImageResponseBodyStatusEnum {
-	return GlanceShowImageResponseBodyStatusEnum{
-		QUEUED: GlanceShowImageResponseBodyStatus{
+func GetGlanceShowImageListResponseBodyStatusEnum() GlanceShowImageListResponseBodyStatusEnum {
+	return GlanceShowImageListResponseBodyStatusEnum{
+		QUEUED: GlanceShowImageListResponseBodyStatus{
 			value: "queued",
 		},
-		SAVING: GlanceShowImageResponseBodyStatus{
+		SAVING: GlanceShowImageListResponseBodyStatus{
 			value: "saving",
 		},
-		DELETED: GlanceShowImageResponseBodyStatus{
+		DELETED: GlanceShowImageListResponseBodyStatus{
 			value: "deleted",
 		},
-		KILLED: GlanceShowImageResponseBodyStatus{
+		KILLED: GlanceShowImageListResponseBodyStatus{
 			value: "killed",
 		},
-		ACTIVE: GlanceShowImageResponseBodyStatus{
+		ACTIVE: GlanceShowImageListResponseBodyStatus{
 			value: "active",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyStatus) Value() string {
+func (c GlanceShowImageListResponseBodyStatus) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyStatus) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyStatus) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -654,39 +657,39 @@ func (c *GlanceShowImageResponseBodyStatus) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyVirtualEnvType struct {
+type GlanceShowImageListResponseBodyVirtualEnvType struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyVirtualEnvTypeEnum struct {
-	FUSION_COMPUTE GlanceShowImageResponseBodyVirtualEnvType
-	IRONIC         GlanceShowImageResponseBodyVirtualEnvType
-	DATA_IMAGE     GlanceShowImageResponseBodyVirtualEnvType
+type GlanceShowImageListResponseBodyVirtualEnvTypeEnum struct {
+	FUSION_COMPUTE GlanceShowImageListResponseBodyVirtualEnvType
+	IRONIC         GlanceShowImageListResponseBodyVirtualEnvType
+	DATA_IMAGE     GlanceShowImageListResponseBodyVirtualEnvType
 }
 
-func GetGlanceShowImageResponseBodyVirtualEnvTypeEnum() GlanceShowImageResponseBodyVirtualEnvTypeEnum {
-	return GlanceShowImageResponseBodyVirtualEnvTypeEnum{
-		FUSION_COMPUTE: GlanceShowImageResponseBodyVirtualEnvType{
+func GetGlanceShowImageListResponseBodyVirtualEnvTypeEnum() GlanceShowImageListResponseBodyVirtualEnvTypeEnum {
+	return GlanceShowImageListResponseBodyVirtualEnvTypeEnum{
+		FUSION_COMPUTE: GlanceShowImageListResponseBodyVirtualEnvType{
 			value: "FusionCompute",
 		},
-		IRONIC: GlanceShowImageResponseBodyVirtualEnvType{
+		IRONIC: GlanceShowImageListResponseBodyVirtualEnvType{
 			value: "Ironic",
 		},
-		DATA_IMAGE: GlanceShowImageResponseBodyVirtualEnvType{
+		DATA_IMAGE: GlanceShowImageListResponseBodyVirtualEnvType{
 			value: "DataImage",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyVirtualEnvType) Value() string {
+func (c GlanceShowImageListResponseBodyVirtualEnvType) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyVirtualEnvType) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyVirtualEnvType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyVirtualEnvType) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyVirtualEnvType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -705,39 +708,39 @@ func (c *GlanceShowImageResponseBodyVirtualEnvType) UnmarshalJSON(b []byte) erro
 	}
 }
 
-type GlanceShowImageResponseBodyVisibility struct {
+type GlanceShowImageListResponseBodyVisibility struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyVisibilityEnum struct {
-	PRIVATE GlanceShowImageResponseBodyVisibility
-	PUBLIC  GlanceShowImageResponseBodyVisibility
-	SHARED  GlanceShowImageResponseBodyVisibility
+type GlanceShowImageListResponseBodyVisibilityEnum struct {
+	PRIVATE GlanceShowImageListResponseBodyVisibility
+	PUBLIC  GlanceShowImageListResponseBodyVisibility
+	SHARED  GlanceShowImageListResponseBodyVisibility
 }
 
-func GetGlanceShowImageResponseBodyVisibilityEnum() GlanceShowImageResponseBodyVisibilityEnum {
-	return GlanceShowImageResponseBodyVisibilityEnum{
-		PRIVATE: GlanceShowImageResponseBodyVisibility{
+func GetGlanceShowImageListResponseBodyVisibilityEnum() GlanceShowImageListResponseBodyVisibilityEnum {
+	return GlanceShowImageListResponseBodyVisibilityEnum{
+		PRIVATE: GlanceShowImageListResponseBodyVisibility{
 			value: "private",
 		},
-		PUBLIC: GlanceShowImageResponseBodyVisibility{
+		PUBLIC: GlanceShowImageListResponseBodyVisibility{
 			value: "public",
 		},
-		SHARED: GlanceShowImageResponseBodyVisibility{
+		SHARED: GlanceShowImageListResponseBodyVisibility{
 			value: "shared",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyVisibility) Value() string {
+func (c GlanceShowImageListResponseBodyVisibility) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyVisibility) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyVisibility) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyVisibility) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyVisibility) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -756,35 +759,35 @@ func (c *GlanceShowImageResponseBodyVisibility) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodySupportFcInject struct {
+type GlanceShowImageListResponseBodySupportFcInject struct {
 	value string
 }
 
-type GlanceShowImageResponseBodySupportFcInjectEnum struct {
-	TRUE  GlanceShowImageResponseBodySupportFcInject
-	FALSE GlanceShowImageResponseBodySupportFcInject
+type GlanceShowImageListResponseBodySupportFcInjectEnum struct {
+	TRUE  GlanceShowImageListResponseBodySupportFcInject
+	FALSE GlanceShowImageListResponseBodySupportFcInject
 }
 
-func GetGlanceShowImageResponseBodySupportFcInjectEnum() GlanceShowImageResponseBodySupportFcInjectEnum {
-	return GlanceShowImageResponseBodySupportFcInjectEnum{
-		TRUE: GlanceShowImageResponseBodySupportFcInject{
+func GetGlanceShowImageListResponseBodySupportFcInjectEnum() GlanceShowImageListResponseBodySupportFcInjectEnum {
+	return GlanceShowImageListResponseBodySupportFcInjectEnum{
+		TRUE: GlanceShowImageListResponseBodySupportFcInject{
 			value: "true",
 		},
-		FALSE: GlanceShowImageResponseBodySupportFcInject{
+		FALSE: GlanceShowImageListResponseBodySupportFcInject{
 			value: "false",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodySupportFcInject) Value() string {
+func (c GlanceShowImageListResponseBodySupportFcInject) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodySupportFcInject) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodySupportFcInject) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodySupportFcInject) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodySupportFcInject) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -803,35 +806,35 @@ func (c *GlanceShowImageResponseBodySupportFcInject) UnmarshalJSON(b []byte) err
 	}
 }
 
-type GlanceShowImageResponseBodyHwFirmwareType struct {
+type GlanceShowImageListResponseBodyHwFirmwareType struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyHwFirmwareTypeEnum struct {
-	BIOS GlanceShowImageResponseBodyHwFirmwareType
-	UEFI GlanceShowImageResponseBodyHwFirmwareType
+type GlanceShowImageListResponseBodyHwFirmwareTypeEnum struct {
+	BIOS GlanceShowImageListResponseBodyHwFirmwareType
+	UEFI GlanceShowImageListResponseBodyHwFirmwareType
 }
 
-func GetGlanceShowImageResponseBodyHwFirmwareTypeEnum() GlanceShowImageResponseBodyHwFirmwareTypeEnum {
-	return GlanceShowImageResponseBodyHwFirmwareTypeEnum{
-		BIOS: GlanceShowImageResponseBodyHwFirmwareType{
+func GetGlanceShowImageListResponseBodyHwFirmwareTypeEnum() GlanceShowImageListResponseBodyHwFirmwareTypeEnum {
+	return GlanceShowImageListResponseBodyHwFirmwareTypeEnum{
+		BIOS: GlanceShowImageListResponseBodyHwFirmwareType{
 			value: "bios",
 		},
-		UEFI: GlanceShowImageResponseBodyHwFirmwareType{
+		UEFI: GlanceShowImageListResponseBodyHwFirmwareType{
 			value: "uefi",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyHwFirmwareType) Value() string {
+func (c GlanceShowImageListResponseBodyHwFirmwareType) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyHwFirmwareType) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyHwFirmwareType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyHwFirmwareType) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyHwFirmwareType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -850,35 +853,35 @@ func (c *GlanceShowImageResponseBodyHwFirmwareType) UnmarshalJSON(b []byte) erro
 	}
 }
 
-type GlanceShowImageResponseBodySupportArm struct {
+type GlanceShowImageListResponseBodySupportArm struct {
 	value string
 }
 
-type GlanceShowImageResponseBodySupportArmEnum struct {
-	TRUE  GlanceShowImageResponseBodySupportArm
-	FALSE GlanceShowImageResponseBodySupportArm
+type GlanceShowImageListResponseBodySupportArmEnum struct {
+	TRUE  GlanceShowImageListResponseBodySupportArm
+	FALSE GlanceShowImageListResponseBodySupportArm
 }
 
-func GetGlanceShowImageResponseBodySupportArmEnum() GlanceShowImageResponseBodySupportArmEnum {
-	return GlanceShowImageResponseBodySupportArmEnum{
-		TRUE: GlanceShowImageResponseBodySupportArm{
+func GetGlanceShowImageListResponseBodySupportArmEnum() GlanceShowImageListResponseBodySupportArmEnum {
+	return GlanceShowImageListResponseBodySupportArmEnum{
+		TRUE: GlanceShowImageListResponseBodySupportArm{
 			value: "true",
 		},
-		FALSE: GlanceShowImageResponseBodySupportArm{
+		FALSE: GlanceShowImageListResponseBodySupportArm{
 			value: "false",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodySupportArm) Value() string {
+func (c GlanceShowImageListResponseBodySupportArm) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodySupportArm) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodySupportArm) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodySupportArm) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodySupportArm) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -897,35 +900,35 @@ func (c *GlanceShowImageResponseBodySupportArm) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type GlanceShowImageResponseBodyIsOffshelved struct {
+type GlanceShowImageListResponseBodyIsOffshelved struct {
 	value string
 }
 
-type GlanceShowImageResponseBodyIsOffshelvedEnum struct {
-	TRUE  GlanceShowImageResponseBodyIsOffshelved
-	FALSE GlanceShowImageResponseBodyIsOffshelved
+type GlanceShowImageListResponseBodyIsOffshelvedEnum struct {
+	TRUE  GlanceShowImageListResponseBodyIsOffshelved
+	FALSE GlanceShowImageListResponseBodyIsOffshelved
 }
 
-func GetGlanceShowImageResponseBodyIsOffshelvedEnum() GlanceShowImageResponseBodyIsOffshelvedEnum {
-	return GlanceShowImageResponseBodyIsOffshelvedEnum{
-		TRUE: GlanceShowImageResponseBodyIsOffshelved{
+func GetGlanceShowImageListResponseBodyIsOffshelvedEnum() GlanceShowImageListResponseBodyIsOffshelvedEnum {
+	return GlanceShowImageListResponseBodyIsOffshelvedEnum{
+		TRUE: GlanceShowImageListResponseBodyIsOffshelved{
 			value: "true",
 		},
-		FALSE: GlanceShowImageResponseBodyIsOffshelved{
+		FALSE: GlanceShowImageListResponseBodyIsOffshelved{
 			value: "false",
 		},
 	}
 }
 
-func (c GlanceShowImageResponseBodyIsOffshelved) Value() string {
+func (c GlanceShowImageListResponseBodyIsOffshelved) Value() string {
 	return c.value
 }
 
-func (c GlanceShowImageResponseBodyIsOffshelved) MarshalJSON() ([]byte, error) {
+func (c GlanceShowImageListResponseBodyIsOffshelved) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *GlanceShowImageResponseBodyIsOffshelved) UnmarshalJSON(b []byte) error {
+func (c *GlanceShowImageListResponseBodyIsOffshelved) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

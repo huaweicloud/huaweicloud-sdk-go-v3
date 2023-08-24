@@ -14,6 +14,15 @@ type VatInvoiceResult struct {
 	// 增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
 	Type *string `json:"type,omitempty"`
 
+	// 增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+	InvoiceTag *string `json:"invoice_tag,omitempty"`
+
+	// 小计金额，当传入多页PDF时返回此字段。
+	SumAmount *string `json:"sum_amount,omitempty"`
+
+	// 小计税额，当传入多页PDF时返回此字段。
+	SumTax *string `json:"sum_tax,omitempty"`
+
 	// 发票联次。 当“advanced_mode”设置为“true”时才返回。
 	SerialNumber *string `json:"serial_number,omitempty"`
 

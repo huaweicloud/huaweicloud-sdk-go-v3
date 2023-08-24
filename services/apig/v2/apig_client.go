@@ -19,6 +19,27 @@ func ApigClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AcceptOrRejectEndpointConnections 接受或拒绝终端节点连接
+//
+// 接受或拒绝实例节点连接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) AcceptOrRejectEndpointConnections(request *model.AcceptOrRejectEndpointConnectionsRequest) (*model.AcceptOrRejectEndpointConnectionsResponse, error) {
+	requestDef := GenReqDefForAcceptOrRejectEndpointConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptOrRejectEndpointConnectionsResponse), nil
+	}
+}
+
+// AcceptOrRejectEndpointConnectionsInvoker 接受或拒绝终端节点连接
+func (c *ApigClient) AcceptOrRejectEndpointConnectionsInvoker(request *model.AcceptOrRejectEndpointConnectionsRequest) *AcceptOrRejectEndpointConnectionsInvoker {
+	requestDef := GenReqDefForAcceptOrRejectEndpointConnections()
+	return &AcceptOrRejectEndpointConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddEipV2 实例更新或绑定EIP
 //
 // 实例更新或绑定EIP
@@ -38,6 +59,27 @@ func (c *ApigClient) AddEipV2(request *model.AddEipV2Request) (*model.AddEipV2Re
 func (c *ApigClient) AddEipV2Invoker(request *model.AddEipV2Request) *AddEipV2Invoker {
 	requestDef := GenReqDefForAddEipV2()
 	return &AddEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddEndpointPermissions 批量添加实例终端节点连接白名单
+//
+// 批量添加实例终端节点连接白名单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) AddEndpointPermissions(request *model.AddEndpointPermissionsRequest) (*model.AddEndpointPermissionsResponse, error) {
+	requestDef := GenReqDefForAddEndpointPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddEndpointPermissionsResponse), nil
+	}
+}
+
+// AddEndpointPermissionsInvoker 批量添加实例终端节点连接白名单
+func (c *ApigClient) AddEndpointPermissionsInvoker(request *model.AddEndpointPermissionsRequest) *AddEndpointPermissionsInvoker {
+	requestDef := GenReqDefForAddEndpointPermissions()
+	return &AddEndpointPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddEngressEipV2 开启实例公网出口
@@ -478,6 +520,27 @@ func (c *ApigClient) DeleteCustomAuthorizerV2(request *model.DeleteCustomAuthori
 func (c *ApigClient) DeleteCustomAuthorizerV2Invoker(request *model.DeleteCustomAuthorizerV2Request) *DeleteCustomAuthorizerV2Invoker {
 	requestDef := GenReqDefForDeleteCustomAuthorizerV2()
 	return &DeleteCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEndpointPermissions 批量删除实例终端节点连接白名单
+//
+// 批量删除实例终端节点连接白名单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteEndpointPermissions(request *model.DeleteEndpointPermissionsRequest) (*model.DeleteEndpointPermissionsResponse, error) {
+	requestDef := GenReqDefForDeleteEndpointPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEndpointPermissionsResponse), nil
+	}
+}
+
+// DeleteEndpointPermissionsInvoker 批量删除实例终端节点连接白名单
+func (c *ApigClient) DeleteEndpointPermissionsInvoker(request *model.DeleteEndpointPermissionsRequest) *DeleteEndpointPermissionsInvoker {
+	requestDef := GenReqDefForDeleteEndpointPermissions()
+	return &DeleteEndpointPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteEnvironmentV2 删除环境
@@ -994,6 +1057,48 @@ func (c *ApigClient) ListCustomAuthorizersV2(request *model.ListCustomAuthorizer
 func (c *ApigClient) ListCustomAuthorizersV2Invoker(request *model.ListCustomAuthorizersV2Request) *ListCustomAuthorizersV2Invoker {
 	requestDef := GenReqDefForListCustomAuthorizersV2()
 	return &ListCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpointConnections 查询实例终端节点连接列表
+//
+// 查询实例终端节点连接列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListEndpointConnections(request *model.ListEndpointConnectionsRequest) (*model.ListEndpointConnectionsResponse, error) {
+	requestDef := GenReqDefForListEndpointConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointConnectionsResponse), nil
+	}
+}
+
+// ListEndpointConnectionsInvoker 查询实例终端节点连接列表
+func (c *ApigClient) ListEndpointConnectionsInvoker(request *model.ListEndpointConnectionsRequest) *ListEndpointConnectionsInvoker {
+	requestDef := GenReqDefForListEndpointConnections()
+	return &ListEndpointConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpointPermissions 查询实例的终端节点服务的白名单列表
+//
+// 查询当前实例终端节点服务的白名单列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListEndpointPermissions(request *model.ListEndpointPermissionsRequest) (*model.ListEndpointPermissionsResponse, error) {
+	requestDef := GenReqDefForListEndpointPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointPermissionsResponse), nil
+	}
+}
+
+// ListEndpointPermissionsInvoker 查询实例的终端节点服务的白名单列表
+func (c *ApigClient) ListEndpointPermissionsInvoker(request *model.ListEndpointPermissionsRequest) *ListEndpointPermissionsInvoker {
+	requestDef := GenReqDefForListEndpointPermissions()
+	return &ListEndpointPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEnvironmentVariablesV2 查询变量列表

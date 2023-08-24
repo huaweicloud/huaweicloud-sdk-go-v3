@@ -29,7 +29,7 @@ type UpdateApiV2Response struct {
 	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
-	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证  当API的请求协议为GRPC类型时不支持自定义认证。
+	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
 	AuthType UpdateApiV2ResponseAuthType `json:"auth_type"`
 
 	AuthOpt *AuthOpt `json:"auth_opt,omitempty"`
@@ -40,7 +40,7 @@ type UpdateApiV2Response struct {
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
 	MatchMode *UpdateApiV2ResponseMatchMode `json:"match_mode,omitempty"`
 
-	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端 - GRPC：grpc后端
+	// 后端类型 - HTTP：web后端 - FUNCTION：函数工作流，当backend_type取值为FUNCTION时，func_info字段必须传入 - MOCK：模拟的后端，当backend_type取值为MOCK时，mock_info字段必须传入 - GRPC：grpc后端
 	BackendType UpdateApiV2ResponseBackendType `json:"backend_type"`
 
 	// API描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -76,7 +76,7 @@ type UpdateApiV2Response struct {
 	// 标签  待废弃，优先使用tags字段
 	Tag *string `json:"tag,omitempty"`
 
-	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain  暂不支持
+	// 请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
 	ContentType *UpdateApiV2ResponseContentType `json:"content_type,omitempty"`
 
 	// API编号
@@ -488,7 +488,7 @@ type UpdateApiV2ResponseContentType struct {
 type UpdateApiV2ResponseContentTypeEnum struct {
 	APPLICATION_JSON    UpdateApiV2ResponseContentType
 	APPLICATION_XML     UpdateApiV2ResponseContentType
-	MULTIPART_FORM_DATE UpdateApiV2ResponseContentType
+	MULTIPART_FORM_DATA UpdateApiV2ResponseContentType
 	TEXT_PLAIN          UpdateApiV2ResponseContentType
 }
 
@@ -500,8 +500,8 @@ func GetUpdateApiV2ResponseContentTypeEnum() UpdateApiV2ResponseContentTypeEnum 
 		APPLICATION_XML: UpdateApiV2ResponseContentType{
 			value: "application/xml",
 		},
-		MULTIPART_FORM_DATE: UpdateApiV2ResponseContentType{
-			value: "multipart/form-date",
+		MULTIPART_FORM_DATA: UpdateApiV2ResponseContentType{
+			value: "multipart/form-data",
 		},
 		TEXT_PLAIN: UpdateApiV2ResponseContentType{
 			value: "text/plain",

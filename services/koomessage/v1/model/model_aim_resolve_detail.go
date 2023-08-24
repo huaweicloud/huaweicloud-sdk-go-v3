@@ -15,6 +15,9 @@ type AimResolveDetail struct {
 	// 任务ID。
 	TaskId *string `json:"task_id,omitempty"`
 
+	// 任务名称。
+	TaskName *string `json:"task_name,omitempty"`
+
 	// 发送的用户名。
 	SendAccount *string `json:"send_account,omitempty"`
 

@@ -22,6 +22,8 @@ type BackupRestore struct {
 
 	// 待恢复的目标资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
+
+	Details *RestoreDetails `json:"details,omitempty"`
 }
 
 func (o BackupRestore) String() string {

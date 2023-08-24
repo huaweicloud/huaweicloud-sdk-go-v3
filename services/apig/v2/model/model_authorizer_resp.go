@@ -22,6 +22,9 @@ type AuthorizerResp struct {
 	// 函数地址。
 	AuthorizerUri string `json:"authorizer_uri"`
 
+	// 对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
+	NetworkType *AuthorizerRespNetworkType `json:"network_type,omitempty"`
+
 	// 函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	AuthorizerVersion *string `json:"authorizer_version,omitempty"`
 
@@ -137,6 +140,53 @@ func (c AuthorizerRespAuthorizerType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *AuthorizerRespAuthorizerType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type AuthorizerRespNetworkType struct {
+	value string
+}
+
+type AuthorizerRespNetworkTypeEnum struct {
+	V1 AuthorizerRespNetworkType
+	V2 AuthorizerRespNetworkType
+}
+
+func GetAuthorizerRespNetworkTypeEnum() AuthorizerRespNetworkTypeEnum {
+	return AuthorizerRespNetworkTypeEnum{
+		V1: AuthorizerRespNetworkType{
+			value: "V1",
+		},
+		V2: AuthorizerRespNetworkType{
+			value: "V2",
+		},
+	}
+}
+
+func (c AuthorizerRespNetworkType) Value() string {
+	return c.value
+}
+
+func (c AuthorizerRespNetworkType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AuthorizerRespNetworkType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

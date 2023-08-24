@@ -44,6 +44,8 @@ type NatGatewayResponseBody struct {
 
 	// 企业项目ID。 创建公网NAT网关实例时，关联的企业项目ID。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	SessionConf *SessionConfiguration `json:"session_conf"`
 }
 
 func (o NatGatewayResponseBody) String() string {
