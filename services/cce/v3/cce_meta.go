@@ -43,6 +43,46 @@ func GenReqDefForAwakeCluster() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateClusterTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/projects/{project_id}/clusters/{cluster_id}/tags/create").
+		WithResponse(new(model.BatchCreateClusterTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteClusterTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/projects/{project_id}/clusters/{cluster_id}/tags/delete").
+		WithResponse(new(model.BatchDeleteClusterTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForContinueUpgradeClusterTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -577,6 +617,31 @@ func GenReqDefForResetNode() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForResizeCluster() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/projects/{project_id}/clusters/{cluster_id}/operation/resize").
+		WithResponse(new(model.ResizeClusterResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ErrorStatus").
+		WithJsonTag("errorStatus").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRetryUpgradeClusterTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -588,6 +653,26 @@ func GenReqDefForRetryUpgradeClusterTask() *def.HttpRequestDef {
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRollbackAddonInstance() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/addons/{id}/operation/rollback").
+		WithResponse(new(model.RollbackAddonInstanceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

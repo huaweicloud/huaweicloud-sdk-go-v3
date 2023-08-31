@@ -544,6 +544,48 @@ func (c *GslClient) ListSimPricePlansInvoker(request *model.ListSimPricePlansReq
 	return &ListSimPricePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSmsDetails 短信发送详情
+//
+// 短信发送详情，接口仅支持开通短信套餐的中国移动与中国电信卡调用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListSmsDetails(request *model.ListSmsDetailsRequest) (*model.ListSmsDetailsResponse, error) {
+	requestDef := GenReqDefForListSmsDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmsDetailsResponse), nil
+	}
+}
+
+// ListSmsDetailsInvoker 短信发送详情
+func (c *GslClient) ListSmsDetailsInvoker(request *model.ListSmsDetailsRequest) *ListSmsDetailsInvoker {
+	requestDef := GenReqDefForListSmsDetails()
+	return &ListSmsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendSms 发送短信
+//
+// 发送短信，接口仅支持开通短信套餐的中国移动与中国电信卡调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) SendSms(request *model.SendSmsRequest) (*model.SendSmsResponse, error) {
+	requestDef := GenReqDefForSendSms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SendSmsResponse), nil
+	}
+}
+
+// SendSmsInvoker 发送短信
+func (c *GslClient) SendSmsInvoker(request *model.SendSmsRequest) *SendSmsInvoker {
+	requestDef := GenReqDefForSendSms()
+	return &SendSmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchSetTags 批量设置/取消设置标签接口
 //
 // 批量设置/取消设置标签接口
@@ -626,48 +668,6 @@ func (c *GslClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsRes
 func (c *GslClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
 	requestDef := GenReqDefForListTags()
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSmsDetails 短信发送详情
-//
-// 短信发送详情，接口仅支持开通短信套餐的中国移动与中国电信卡调用
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GslClient) ListSmsDetails(request *model.ListSmsDetailsRequest) (*model.ListSmsDetailsResponse, error) {
-	requestDef := GenReqDefForListSmsDetails()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSmsDetailsResponse), nil
-	}
-}
-
-// ListSmsDetailsInvoker 短信发送详情
-func (c *GslClient) ListSmsDetailsInvoker(request *model.ListSmsDetailsRequest) *ListSmsDetailsInvoker {
-	requestDef := GenReqDefForListSmsDetails()
-	return &ListSmsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SendSms 发送短信
-//
-// 发送短信，接口仅支持开通短信套餐的中国移动与中国电信卡调用。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GslClient) SendSms(request *model.SendSmsRequest) (*model.SendSmsResponse, error) {
-	requestDef := GenReqDefForSendSms()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SendSmsResponse), nil
-	}
-}
-
-// SendSmsInvoker 发送短信
-func (c *GslClient) SendSmsInvoker(request *model.SendSmsRequest) *SendSmsInvoker {
-	requestDef := GenReqDefForSendSms()
-	return &SendSmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWorkOrderDetails 分页查询业务受理明细

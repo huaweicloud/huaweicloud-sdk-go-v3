@@ -18,7 +18,7 @@ type ListHostsRequest struct {
 	// 是否为代理机
 	AsProxy *bool `json:"as_proxy,omitempty"`
 
-	// 偏移量,表示从此偏移量开始查询,offset大于等于0
+	// 偏移量，表示从此偏移量开始查询，offset大于等于0
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示的条目数量，默认为1000

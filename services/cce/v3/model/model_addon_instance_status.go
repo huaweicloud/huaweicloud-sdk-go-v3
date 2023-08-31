@@ -25,6 +25,12 @@ type AddonInstanceStatus struct {
 	TargetVersions *[]string `json:"targetVersions,omitempty"`
 
 	CurrentVersion *Versions `json:"currentVersion"`
+
+	// 是否支持回滚到插件升级前的插件版本
+	IsRollbackable *bool `json:"isRollbackable,omitempty"`
+
+	// 插件升级或回滚前的版本
+	PreviousVersion *string `json:"previousVersion,omitempty"`
 }
 
 func (o AddonInstanceStatus) String() string {
@@ -41,17 +47,18 @@ type AddonInstanceStatusStatus struct {
 }
 
 type AddonInstanceStatusStatusEnum struct {
-	RUNNING        AddonInstanceStatusStatus
-	ABNORMAL       AddonInstanceStatusStatus
-	INSTALLING     AddonInstanceStatusStatus
-	INSTALL_FAILED AddonInstanceStatusStatus
-	UPGRADING      AddonInstanceStatusStatus
-	UPGRADE_FAILED AddonInstanceStatusStatus
-	DELETING       AddonInstanceStatusStatus
-	DELETE_SUCCESS AddonInstanceStatusStatus
-	DELETE_FAILED  AddonInstanceStatusStatus
-	AVAILABLE      AddonInstanceStatusStatus
-	ROLLBACKING    AddonInstanceStatusStatus
+	RUNNING         AddonInstanceStatusStatus
+	ABNORMAL        AddonInstanceStatusStatus
+	INSTALLING      AddonInstanceStatusStatus
+	INSTALL_FAILED  AddonInstanceStatusStatus
+	UPGRADING       AddonInstanceStatusStatus
+	UPGRADE_FAILED  AddonInstanceStatusStatus
+	DELETING        AddonInstanceStatusStatus
+	DELETE_SUCCESS  AddonInstanceStatusStatus
+	DELETE_FAILED   AddonInstanceStatusStatus
+	AVAILABLE       AddonInstanceStatusStatus
+	ROLLBACKING     AddonInstanceStatusStatus
+	ROLLBACK_FAILED AddonInstanceStatusStatus
 }
 
 func GetAddonInstanceStatusStatusEnum() AddonInstanceStatusStatusEnum {
@@ -88,6 +95,9 @@ func GetAddonInstanceStatusStatusEnum() AddonInstanceStatusStatusEnum {
 		},
 		ROLLBACKING: AddonInstanceStatusStatus{
 			value: "rollbacking",
+		},
+		ROLLBACK_FAILED: AddonInstanceStatusStatus{
+			value: "rollbackFailed",
 		},
 	}
 }

@@ -197,6 +197,28 @@ func (c *DasClient) CreateSqlLimitRulesInvoker(request *model.CreateSqlLimitRule
 	return &CreateSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTuning 执行SQL诊断
+//
+// 执行SQL诊断，
+// 用于用户执行SQL诊断。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateTuning(request *model.CreateTuningRequest) (*model.CreateTuningResponse, error) {
+	requestDef := GenReqDefForCreateTuning()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTuningResponse), nil
+	}
+}
+
+// CreateTuningInvoker 执行SQL诊断
+func (c *DasClient) CreateTuningInvoker(request *model.CreateTuningRequest) *CreateTuningInvoker {
+	requestDef := GenReqDefForCreateTuning()
+	return &CreateTuningInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDbUser 删除数据库用户
 //
 // 删除注册在DAS里的数据库用户。此接口只是将注册的数据库用户在DAS系统里删除，不会真正删除数据库用户对象。
@@ -668,6 +690,27 @@ func (c *DasClient) ShowSqlSwitchStatus(request *model.ShowSqlSwitchStatusReques
 func (c *DasClient) ShowSqlSwitchStatusInvoker(request *model.ShowSqlSwitchStatusRequest) *ShowSqlSwitchStatusInvoker {
 	requestDef := GenReqDefForShowSqlSwitchStatus()
 	return &ShowSqlSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTuning 获取诊断结果
+//
+// 获取诊断结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowTuning(request *model.ShowTuningRequest) (*model.ShowTuningResponse, error) {
+	requestDef := GenReqDefForShowTuning()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTuningResponse), nil
+	}
+}
+
+// ShowTuningInvoker 获取诊断结果
+func (c *DasClient) ShowTuningInvoker(request *model.ShowTuningRequest) *ShowTuningInvoker {
+	requestDef := GenReqDefForShowTuning()
+	return &ShowTuningInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDbUser 修改数据库用户

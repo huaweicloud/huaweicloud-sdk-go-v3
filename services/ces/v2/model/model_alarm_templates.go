@@ -21,19 +21,7 @@ type AlarmTemplates struct {
 	CreateTime *sdktime.SdkTime `json:"create_time"`
 
 	// 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
-	TemplateDescription string `json:"template_description"`
-
-	// 告警模板关联的告警规则数目
-	AssociationAlarmTotal *int32 `json:"association_alarm_total,omitempty"`
-
-	// 告警模板的告警策略总数
-	PolicyTotal int32 `json:"policy_total"`
-
-	// 服务列表告警策略数目统计
-	PolicyStatistics []PolicyStatistics `json:"policy_statistics"`
-
-	// 关联的资源分组
-	AssociationResourceGroups *[]AssociationResourceGroup `json:"association_resource_groups,omitempty"`
+	TemplateDescription *string `json:"template_description,omitempty"`
 }
 
 func (o AlarmTemplates) String() string {

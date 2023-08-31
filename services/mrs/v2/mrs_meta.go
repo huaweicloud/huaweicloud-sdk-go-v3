@@ -461,3 +461,14 @@ func GenReqDefForShowSqlResult() *def.HttpRequestDef {
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
+
+func GenReqDefForShowMrsVersionList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/metadata/versions").
+		WithResponse(new(model.ShowMrsVersionListResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}

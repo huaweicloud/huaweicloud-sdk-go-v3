@@ -65,6 +65,18 @@ func (i *CreateScriptInvoker) Invoke() (*model.CreateScriptResponse, error) {
 	}
 }
 
+type CreateSupplementdataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSupplementdataInvoker) Invoke() (*model.CreateSupplementdataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSupplementdataResponse), nil
+	}
+}
+
 type DeleteConnctionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -257,6 +269,18 @@ func (i *ListScriptsInvoker) Invoke() (*model.ListScriptsResponse, error) {
 	}
 }
 
+type ListSupplementdataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupplementdataInvoker) Invoke() (*model.ListSupplementdataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupplementdataResponse), nil
+	}
+}
+
 type ListSystemTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +434,18 @@ func (i *StopJobInstanceInvoker) Invoke() (*model.StopJobInstanceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.StopJobInstanceResponse), nil
+	}
+}
+
+type StopSupplementdataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopSupplementdataInvoker) Invoke() (*model.StopSupplementdataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopSupplementdataResponse), nil
 	}
 }
 

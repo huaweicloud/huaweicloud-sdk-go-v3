@@ -237,7 +237,7 @@ func (c *KooMessageClient) ListAimSendTasksInvoker(request *model.ListAimSendTas
 //
 // 用于用户创建个人模板。
 //
-// &gt; 请求中所有字符串不允许携带“&lt;”、“&gt;”或多个空格。
+// &gt; 请求中所有字符串不允许携带“&lt;”、“&gt;”、“\\&amp;amp;amp;”或多个空格。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KooMessageClient) CreateAimPersonalTemplate(request *model.CreateAimPersonalTemplateRequest) (*model.CreateAimPersonalTemplateResponse, error) {
@@ -258,7 +258,7 @@ func (c *KooMessageClient) CreateAimPersonalTemplateInvoker(request *model.Creat
 
 // DeleteAimPersonalTemplate 删除模板实例
 //
-// 根据客户提供的模板ID，删除智能信息个人模板。
+// 根据用户提供的模板ID，删除智能信息个人模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KooMessageClient) DeleteAimPersonalTemplate(request *model.DeleteAimPersonalTemplateRequest) (*model.DeleteAimPersonalTemplateResponse, error) {
@@ -279,7 +279,7 @@ func (c *KooMessageClient) DeleteAimPersonalTemplateInvoker(request *model.Delet
 
 // DeleteTemplateMaterial 删除模板素材
 //
-// 根据客户提供的模板ID，删除模板素材。
+// 根据用户提供的模板ID，删除模板素材。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KooMessageClient) DeleteTemplateMaterial(request *model.DeleteTemplateMaterialRequest) (*model.DeleteTemplateMaterialResponse, error) {
@@ -300,7 +300,7 @@ func (c *KooMessageClient) DeleteTemplateMaterialInvoker(request *model.DeleteTe
 
 // ListAimTemplateMaterials 查询智能消息模板素材列表
 //
-// 根据客户提供的过滤条件，查询模板素材列表。
+// 根据用户提供的过滤条件，查询模板素材列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KooMessageClient) ListAimTemplateMaterials(request *model.ListAimTemplateMaterialsRequest) (*model.ListAimTemplateMaterialsResponse, error) {
@@ -361,9 +361,51 @@ func (c *KooMessageClient) ListAimTemplatesInvoker(request *model.ListAimTemplat
 	return &ListAimTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetPrimaryVideoThumbnail 设置视频模板封面图
+//
+// 根据用户提供的视频封面图资源ID和AIM视频资源ID设置视频模板的封面图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) SetPrimaryVideoThumbnail(request *model.SetPrimaryVideoThumbnailRequest) (*model.SetPrimaryVideoThumbnailResponse, error) {
+	requestDef := GenReqDefForSetPrimaryVideoThumbnail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetPrimaryVideoThumbnailResponse), nil
+	}
+}
+
+// SetPrimaryVideoThumbnailInvoker 设置视频模板封面图
+func (c *KooMessageClient) SetPrimaryVideoThumbnailInvoker(request *model.SetPrimaryVideoThumbnailRequest) *SetPrimaryVideoThumbnailInvoker {
+	requestDef := GenReqDefForSetPrimaryVideoThumbnail()
+	return &SetPrimaryVideoThumbnailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTemplateVideoThumbnail 查询视频模板封面图
+//
+// 根据用户提供的过滤条件，查询视频模板封面图资源列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KooMessageClient) ShowTemplateVideoThumbnail(request *model.ShowTemplateVideoThumbnailRequest) (*model.ShowTemplateVideoThumbnailResponse, error) {
+	requestDef := GenReqDefForShowTemplateVideoThumbnail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTemplateVideoThumbnailResponse), nil
+	}
+}
+
+// ShowTemplateVideoThumbnailInvoker 查询视频模板封面图
+func (c *KooMessageClient) ShowTemplateVideoThumbnailInvoker(request *model.ShowTemplateVideoThumbnailRequest) *ShowTemplateVideoThumbnailInvoker {
+	requestDef := GenReqDefForShowTemplateVideoThumbnail()
+	return &ShowTemplateVideoThumbnailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePersonalTemplateState 启用或禁用模板实例
 //
-// 根据客户提供的模板ID，启用或禁用智能信息个人模板。
+// 根据用户提供的模板ID，启用或禁用智能信息个人模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KooMessageClient) UpdatePersonalTemplateState(request *model.UpdatePersonalTemplateStateRequest) (*model.UpdatePersonalTemplateStateResponse, error) {

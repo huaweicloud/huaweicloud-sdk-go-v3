@@ -13,6 +13,9 @@ type RegisterImeiReq struct {
 
 	// 设备IMEI,84584xxxxxx
 	Imei *string `json:"imei,omitempty"`
+
+	// iccid，传入的sim_card_id为0,则根据iccid进行处理
+	Iccid *string `json:"iccid,omitempty"`
 }
 
 func (o RegisterImeiReq) String() string {

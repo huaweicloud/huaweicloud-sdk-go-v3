@@ -46,6 +46,7 @@ type VolumeResourceSubType struct {
 type VolumeResourceSubTypeEnum struct {
 	PARALLEL_FILE_SYSTEM VolumeResourceSubType
 	OBJECT_BUCKET        VolumeResourceSubType
+	SFS3_0               VolumeResourceSubType
 }
 
 func GetVolumeResourceSubTypeEnum() VolumeResourceSubTypeEnum {
@@ -55,6 +56,9 @@ func GetVolumeResourceSubTypeEnum() VolumeResourceSubTypeEnum {
 		},
 		OBJECT_BUCKET: VolumeResourceSubType{
 			value: "object_bucket",
+		},
+		SFS3_0: VolumeResourceSubType{
+			value: "sfs3.0",
 		},
 	}
 }

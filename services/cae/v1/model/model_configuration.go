@@ -19,7 +19,7 @@ type Configuration struct {
 	// 操作ID。
 	OperationId *string `json:"operation_id,omitempty"`
 
-	// 组件配置类型，当前CAE支持组件配置如下8类。  - rds：云数据库RDS。  - cse：微服务引擎CSE。  - env：环境变量。  - access：访问方式。  - scaling：伸缩策略。  - volume：云存储配置。  - healthCheck：健康检查。  - lifecycle：生命周期管理。
+	// 组件配置类型，当前CAE支持组件配置如下8类。  - rds：云数据库RDS。  - cse：微服务引擎CSE。  - env：环境变量。  - access：访问方式。  - scaling：伸缩策略。  - volume：云存储配置。  - healthCheck：健康检查。  - lifecycle：生命周期管理。  - apm2：性能管理。  - log: 自定义日志路径。
 	Type *ConfigurationType `json:"type,omitempty"`
 
 	// 配置是否生效。
@@ -48,6 +48,8 @@ type ConfigurationTypeEnum struct {
 	VOLUME       ConfigurationType
 	HEALTH_CHECK ConfigurationType
 	LIFECYCLE    ConfigurationType
+	APM2         ConfigurationType
+	LOG          ConfigurationType
 }
 
 func GetConfigurationTypeEnum() ConfigurationTypeEnum {
@@ -75,6 +77,12 @@ func GetConfigurationTypeEnum() ConfigurationTypeEnum {
 		},
 		LIFECYCLE: ConfigurationType{
 			value: "lifecycle",
+		},
+		APM2: ConfigurationType{
+			value: "apm2",
+		},
+		LOG: ConfigurationType{
+			value: "log",
 		},
 	}
 }

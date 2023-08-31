@@ -29,6 +29,9 @@ type Environment struct {
 	// 收费模式。
 	ChargeMode *string `json:"charge_mode,omitempty"`
 
+	// 环境类型
+	DeployMode *string `json:"deploy_mode,omitempty"`
+
 	// 虚拟私有云ID。
 	VpcId *string `json:"vpc_id,omitempty"`
 

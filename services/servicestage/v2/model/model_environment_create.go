@@ -22,6 +22,8 @@ type EnvironmentCreate struct {
 
 	ChargeMode *ChargeMode `json:"charge_mode,omitempty"`
 
+	DeployMode string `json:"deploy_mode"`
+
 	// 虚拟私有云ID。
 	VpcId string `json:"vpc_id"`
 

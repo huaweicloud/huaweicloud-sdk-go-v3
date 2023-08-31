@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsdeploy/v2/model"
 )
 
+type CreateAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAppResponse), nil
+	}
+}
+
 type CreateDeployTaskByTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -17,6 +29,18 @@ func (i *CreateDeployTaskByTemplateInvoker) Invoke() (*model.CreateDeployTaskByT
 	}
 }
 
+type DeleteApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteApplicationInvoker) Invoke() (*model.DeleteApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteApplicationResponse), nil
+	}
+}
+
 type DeleteDeployTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -26,6 +50,18 @@ func (i *DeleteDeployTaskInvoker) Invoke() (*model.DeleteDeployTaskResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteDeployTaskResponse), nil
+	}
+}
+
+type ListAllAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllAppInvoker) Invoke() (*model.ListAllAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllAppResponse), nil
 	}
 }
 
@@ -53,6 +89,18 @@ func (i *ListDeployTasksInvoker) Invoke() (*model.ListDeployTasksResponse, error
 	}
 }
 
+type ShowAppDetailByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppDetailByIdInvoker) Invoke() (*model.ShowAppDetailByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppDetailByIdResponse), nil
+	}
+}
+
 type ShowDeployTaskDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +125,78 @@ func (i *StartDeployTaskInvoker) Invoke() (*model.StartDeployTaskResponse, error
 	}
 }
 
+type CreateEnvironmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEnvironmentInvoker) Invoke() (*model.CreateEnvironmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEnvironmentResponse), nil
+	}
+}
+
+type DeleteEnvironmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnvironmentInvoker) Invoke() (*model.DeleteEnvironmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEnvironmentResponse), nil
+	}
+}
+
+type DeleteHostFromEnvironmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHostFromEnvironmentInvoker) Invoke() (*model.DeleteHostFromEnvironmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHostFromEnvironmentResponse), nil
+	}
+}
+
+type ImportHostToEnvironmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportHostToEnvironmentInvoker) Invoke() (*model.ImportHostToEnvironmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportHostToEnvironmentResponse), nil
+	}
+}
+
+type ListEnvironmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEnvironmentsInvoker) Invoke() (*model.ListEnvironmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEnvironmentsResponse), nil
+	}
+}
+
+type ShowEnvironmentDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEnvironmentDetailInvoker) Invoke() (*model.ShowEnvironmentDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEnvironmentDetailResponse), nil
+	}
+}
+
 type CreateDeploymentHostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +206,18 @@ func (i *CreateDeploymentHostInvoker) Invoke() (*model.CreateDeploymentHostRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateDeploymentHostResponse), nil
+	}
+}
+
+type CreateHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHostInvoker) Invoke() (*model.CreateHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHostResponse), nil
 	}
 }
 
@@ -113,6 +245,18 @@ func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
 	}
 }
 
+type ListNewHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNewHostsInvoker) Invoke() (*model.ListNewHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNewHostsResponse), nil
+	}
+}
+
 type ShowDeploymentHostDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +266,18 @@ func (i *ShowDeploymentHostDetailInvoker) Invoke() (*model.ShowDeploymentHostDet
 		return nil, err
 	} else {
 		return result.(*model.ShowDeploymentHostDetailResponse), nil
+	}
+}
+
+type ShowHostDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHostDetailInvoker) Invoke() (*model.ShowHostDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHostDetailResponse), nil
 	}
 }
 
@@ -149,6 +305,18 @@ func (i *CreateDeploymentGroupInvoker) Invoke() (*model.CreateDeploymentGroupRes
 	}
 }
 
+type CreateHostClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHostClusterInvoker) Invoke() (*model.CreateHostClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHostClusterResponse), nil
+	}
+}
+
 type DeleteDeploymentGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,6 +326,18 @@ func (i *DeleteDeploymentGroupInvoker) Invoke() (*model.DeleteDeploymentGroupRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteDeploymentGroupResponse), nil
+	}
+}
+
+type ListHostClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostClustersInvoker) Invoke() (*model.ListHostClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostClustersResponse), nil
 	}
 }
 
@@ -182,6 +362,18 @@ func (i *ShowDeploymentGroupDetailInvoker) Invoke() (*model.ShowDeploymentGroupD
 		return nil, err
 	} else {
 		return result.(*model.ShowDeploymentGroupDetailResponse), nil
+	}
+}
+
+type ShowHostClusterDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHostClusterDetailInvoker) Invoke() (*model.ShowHostClusterDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHostClusterDetailResponse), nil
 	}
 }
 

@@ -29,6 +29,30 @@ func (i *AwakeClusterInvoker) Invoke() (*model.AwakeClusterResponse, error) {
 	}
 }
 
+type BatchCreateClusterTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateClusterTagsInvoker) Invoke() (*model.BatchCreateClusterTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateClusterTagsResponse), nil
+	}
+}
+
+type BatchDeleteClusterTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteClusterTagsInvoker) Invoke() (*model.BatchDeleteClusterTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteClusterTagsResponse), nil
+	}
+}
+
 type ContinueUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +317,18 @@ func (i *ResetNodeInvoker) Invoke() (*model.ResetNodeResponse, error) {
 	}
 }
 
+type ResizeClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeClusterInvoker) Invoke() (*model.ResizeClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeClusterResponse), nil
+	}
+}
+
 type RetryUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +338,18 @@ func (i *RetryUpgradeClusterTaskInvoker) Invoke() (*model.RetryUpgradeClusterTas
 		return nil, err
 	} else {
 		return result.(*model.RetryUpgradeClusterTaskResponse), nil
+	}
+}
+
+type RollbackAddonInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RollbackAddonInstanceInvoker) Invoke() (*model.RollbackAddonInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RollbackAddonInstanceResponse), nil
 	}
 }
 

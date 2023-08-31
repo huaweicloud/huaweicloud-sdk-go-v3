@@ -42,14 +42,17 @@ type CreateComponentRequestBodySpecRuntime struct {
 }
 
 type CreateComponentRequestBodySpecRuntimeEnum struct {
-	DOCKER  CreateComponentRequestBodySpecRuntime
-	JAVA8   CreateComponentRequestBodySpecRuntime
-	JAVA11  CreateComponentRequestBodySpecRuntime
-	TOMCAT8 CreateComponentRequestBodySpecRuntime
-	TOMCAT9 CreateComponentRequestBodySpecRuntime
-	PYTHON3 CreateComponentRequestBodySpecRuntime
-	NODEJS8 CreateComponentRequestBodySpecRuntime
-	PHP7    CreateComponentRequestBodySpecRuntime
+	DOCKER   CreateComponentRequestBodySpecRuntime
+	JAVA8    CreateComponentRequestBodySpecRuntime
+	JAVA11   CreateComponentRequestBodySpecRuntime
+	JAVA17   CreateComponentRequestBodySpecRuntime
+	TOMCAT8  CreateComponentRequestBodySpecRuntime
+	TOMCAT9  CreateComponentRequestBodySpecRuntime
+	PYTHON3  CreateComponentRequestBodySpecRuntime
+	NODEJS8  CreateComponentRequestBodySpecRuntime
+	NODEJS14 CreateComponentRequestBodySpecRuntime
+	NODEJS16 CreateComponentRequestBodySpecRuntime
+	PHP7     CreateComponentRequestBodySpecRuntime
 }
 
 func GetCreateComponentRequestBodySpecRuntimeEnum() CreateComponentRequestBodySpecRuntimeEnum {
@@ -63,6 +66,9 @@ func GetCreateComponentRequestBodySpecRuntimeEnum() CreateComponentRequestBodySp
 		JAVA11: CreateComponentRequestBodySpecRuntime{
 			value: "Java11",
 		},
+		JAVA17: CreateComponentRequestBodySpecRuntime{
+			value: "Java17",
+		},
 		TOMCAT8: CreateComponentRequestBodySpecRuntime{
 			value: "Tomcat8",
 		},
@@ -74,6 +80,12 @@ func GetCreateComponentRequestBodySpecRuntimeEnum() CreateComponentRequestBodySp
 		},
 		NODEJS8: CreateComponentRequestBodySpecRuntime{
 			value: "Nodejs8",
+		},
+		NODEJS14: CreateComponentRequestBodySpecRuntime{
+			value: "Nodejs14",
+		},
+		NODEJS16: CreateComponentRequestBodySpecRuntime{
+			value: "Nodejs16",
 		},
 		PHP7: CreateComponentRequestBodySpecRuntime{
 			value: "Php7",

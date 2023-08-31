@@ -20,6 +20,8 @@ type ExportGraphReq struct {
 
 	// 导出元数据文件名。
 	SchemaName string `json:"schema_name"`
+
+	Paginate *ExportGraphReqPaginate `json:"paginate,omitempty"`
 }
 
 func (o ExportGraphReq) String() string {

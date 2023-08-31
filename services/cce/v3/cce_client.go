@@ -62,6 +62,51 @@ func (c *CceClient) AwakeClusterInvoker(request *model.AwakeClusterRequest) *Awa
 	return &AwakeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateClusterTags 批量添加指定集群的资源标签
+//
+// 该API用于批量添加指定集群的资源标签。
+// &gt; - 每个集群支持最多20个资源标签。
+// &gt; - 此接口为幂等接口：创建时，如果创建的标签已经存在（key/value均相同视为重复），默认处理成功；key相同，value不同时会覆盖原有标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) BatchCreateClusterTags(request *model.BatchCreateClusterTagsRequest) (*model.BatchCreateClusterTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateClusterTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateClusterTagsResponse), nil
+	}
+}
+
+// BatchCreateClusterTagsInvoker 批量添加指定集群的资源标签
+func (c *CceClient) BatchCreateClusterTagsInvoker(request *model.BatchCreateClusterTagsRequest) *BatchCreateClusterTagsInvoker {
+	requestDef := GenReqDefForBatchCreateClusterTags()
+	return &BatchCreateClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteClusterTags 批量删除指定集群的资源标签
+//
+// 该API用于批量删除指定集群的资源标签。
+// &gt; - 此接口为幂等接口：删除时，如果删除的标签key不存在，默认处理成功。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) BatchDeleteClusterTags(request *model.BatchDeleteClusterTagsRequest) (*model.BatchDeleteClusterTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteClusterTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteClusterTagsResponse), nil
+	}
+}
+
+// BatchDeleteClusterTagsInvoker 批量删除指定集群的资源标签
+func (c *CceClient) BatchDeleteClusterTagsInvoker(request *model.BatchDeleteClusterTagsRequest) *BatchDeleteClusterTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteClusterTags()
+	return &BatchDeleteClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ContinueUpgradeClusterTask 继续执行集群升级任务
 //
 // 继续执行被暂停的集群升级任务。
@@ -554,6 +599,30 @@ func (c *CceClient) ResetNodeInvoker(request *model.ResetNodeRequest) *ResetNode
 	return &ResetNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResizeCluster 变更集群规格
+//
+// 该API用于变更一个指定集群的规格。
+//
+// &gt;   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// &gt;   - 使用限制请参考：[[变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html)。](tag:hws)[[变更集群规格](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0403.html)](tag:hws_hk)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ResizeCluster(request *model.ResizeClusterRequest) (*model.ResizeClusterResponse, error) {
+	requestDef := GenReqDefForResizeCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeClusterResponse), nil
+	}
+}
+
+// ResizeClusterInvoker 变更集群规格
+func (c *CceClient) ResizeClusterInvoker(request *model.ResizeClusterRequest) *ResizeClusterInvoker {
+	requestDef := GenReqDefForResizeCluster()
+	return &ResizeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RetryUpgradeClusterTask 重试集群升级任务
 //
 // 重新执行失败的集群升级任务。
@@ -575,6 +644,27 @@ func (c *CceClient) RetryUpgradeClusterTask(request *model.RetryUpgradeClusterTa
 func (c *CceClient) RetryUpgradeClusterTaskInvoker(request *model.RetryUpgradeClusterTaskRequest) *RetryUpgradeClusterTaskInvoker {
 	requestDef := GenReqDefForRetryUpgradeClusterTask()
 	return &RetryUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RollbackAddonInstance 回滚AddonInstance
+//
+// 将插件实例回滚到升级前的版本。只有在当前插件实例版本支持回滚到升级前的版本（status.isRollbackable为true），且插件实例状态为running（运行中）、available（可用）、abnormal（不可用）、upgradeFailed（升级失败）、rollbackFailed（回滚失败）时支持回滚。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) RollbackAddonInstance(request *model.RollbackAddonInstanceRequest) (*model.RollbackAddonInstanceResponse, error) {
+	requestDef := GenReqDefForRollbackAddonInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RollbackAddonInstanceResponse), nil
+	}
+}
+
+// RollbackAddonInstanceInvoker 回滚AddonInstance
+func (c *CceClient) RollbackAddonInstanceInvoker(request *model.RollbackAddonInstanceRequest) *RollbackAddonInstanceInvoker {
+	requestDef := GenReqDefForRollbackAddonInstance()
+	return &RollbackAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAddonInstance 获取AddonInstance详情

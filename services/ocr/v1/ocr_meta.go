@@ -587,6 +587,26 @@ func GenReqDefForRecognizeQuotaInvoice() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRecognizeSmartDocumentRecognizer() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/ocr/smart-document-recognizer").
+		WithResponse(new(model.RecognizeSmartDocumentRecognizerResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRecognizeTaxiInvoice() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

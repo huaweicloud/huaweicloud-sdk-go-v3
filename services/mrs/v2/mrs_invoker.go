@@ -244,3 +244,15 @@ func (i *ShowSqlResultInvoker) Invoke() (*model.ShowSqlResultResponse, error) {
 		return result.(*model.ShowSqlResultResponse), nil
 	}
 }
+
+type ShowMrsVersionListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMrsVersionListInvoker) Invoke() (*model.ShowMrsVersionListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMrsVersionListResponse), nil
+	}
+}

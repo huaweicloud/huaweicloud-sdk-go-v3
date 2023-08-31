@@ -68,6 +68,9 @@ type ShowInstanceResponse struct {
 	// 实例所在的可用区。返回“可用区Code”
 	AzCodes *[]string `json:"az_codes,omitempty"`
 
+	// 实例所在的可用区id。返回\"可用区ID\"
+	AvailableZones *[]string `json:"available_zones,omitempty"`
+
 	// 通过密码认证访问缓存实例的认证用户名。
 	AccessUser *string `json:"access_user,omitempty"`
 

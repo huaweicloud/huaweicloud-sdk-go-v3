@@ -8,8 +8,11 @@ import (
 
 type AttributeReq struct {
 
-	// SIM卡标识
+	// SIM卡标识，如果SIM卡标识传0则表示需要根据iccid处理。
 	SimCardId int64 `json:"sim_card_id"`
+
+	// iccid，如果SIM卡标识传0则表示需要根据iccid处理。
+	Iccid *string `json:"iccid,omitempty"`
 
 	// 自定义属性一
 	CustomerAttribute1 *string `json:"customer_attribute1,omitempty"`

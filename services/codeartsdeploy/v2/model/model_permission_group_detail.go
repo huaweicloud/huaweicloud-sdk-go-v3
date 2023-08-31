@@ -21,7 +21,7 @@ type PermissionGroupDetail struct {
 	// 是否有添加主机权限
 	CanAddHost *bool `json:"can_add_host,omitempty"`
 
-	// 是否有管理权限
+	// 是否有编辑主机集群权限矩阵的权限
 	CanManage *bool `json:"can_manage,omitempty"`
 }
 

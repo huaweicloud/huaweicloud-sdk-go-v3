@@ -22,7 +22,7 @@ type CreateInstanceByEngineReq struct {
 	Engine CreateInstanceByEngineReqEngine `json:"engine"`
 
 	// 消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
-	EngineVersion CreateInstanceByEngineReqEngineVersion `json:"engine_version"`
+	EngineVersion string `json:"engine_version"`
 
 	// 代理个数。
 	BrokerNum int32 `json:"broker_num"`
@@ -145,53 +145,6 @@ func (c CreateInstanceByEngineReqEngine) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateInstanceByEngineReqEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type CreateInstanceByEngineReqEngineVersion struct {
-	value string
-}
-
-type CreateInstanceByEngineReqEngineVersionEnum struct {
-	E_1_1_0 CreateInstanceByEngineReqEngineVersion
-	E_2_7   CreateInstanceByEngineReqEngineVersion
-}
-
-func GetCreateInstanceByEngineReqEngineVersionEnum() CreateInstanceByEngineReqEngineVersionEnum {
-	return CreateInstanceByEngineReqEngineVersionEnum{
-		E_1_1_0: CreateInstanceByEngineReqEngineVersion{
-			value: "1.1.0",
-		},
-		E_2_7: CreateInstanceByEngineReqEngineVersion{
-			value: "2.7",
-		},
-	}
-}
-
-func (c CreateInstanceByEngineReqEngineVersion) Value() string {
-	return c.value
-}
-
-func (c CreateInstanceByEngineReqEngineVersion) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateInstanceByEngineReqEngineVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

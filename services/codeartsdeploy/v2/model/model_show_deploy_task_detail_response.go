@@ -84,7 +84,7 @@ type ShowDeployTaskDetailResponse struct {
 	// 是否有复制权限
 	CanCopy *bool `json:"can_copy,omitempty"`
 
-	// 是否有管理权限，包含增删改查部署以及权限修改
+	// 是否有编辑应用权限矩阵的权限
 	CanManage *bool `json:"can_manage,omitempty"`
 
 	// 应用和AOM应用组件对应关系

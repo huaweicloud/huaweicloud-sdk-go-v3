@@ -353,6 +353,18 @@ func (i *RecognizeQuotaInvoiceInvoker) Invoke() (*model.RecognizeQuotaInvoiceRes
 	}
 }
 
+type RecognizeSmartDocumentRecognizerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeSmartDocumentRecognizerInvoker) Invoke() (*model.RecognizeSmartDocumentRecognizerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeSmartDocumentRecognizerResponse), nil
+	}
+}
+
 type RecognizeTaxiInvoiceInvoker struct {
 	*invoker.BaseInvoker
 }

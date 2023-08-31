@@ -13,7 +13,7 @@ import (
 type ListHostGroupsRequest struct {
 
 	// 项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId string `json:"project_id"`
 
 	// 局点信息
 	RegionName string `json:"region_name"`

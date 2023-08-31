@@ -16,9 +16,6 @@ type RouteAttachment struct {
 
 	// 连接ID
 	AttachmentId string `json:"attachment_id"`
-
-	// 路由优先级，普通路由固定值为1
-	Priority *int32 `json:"priority,omitempty"`
 }
 
 func (o RouteAttachment) String() string {

@@ -7,6 +7,10 @@ import (
 )
 
 type Attributes struct {
+
+	// 性别： • male：男性 • female：女性
+	Gender string `json:"gender"`
+
 	Dress *Dress `json:"dress"`
 
 	// 是否带眼镜： • yes：带眼镜 • dark：带墨镜 • none：未戴眼镜 • unknown：未知

@@ -681,6 +681,27 @@ func (c *OcrClient) RecognizeQuotaInvoiceInvoker(request *model.RecognizeQuotaIn
 	return &RecognizeQuotaInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizeSmartDocumentRecognizer 智能文档解析
+//
+// 对证件、票据、表单等任意版式文档进行键值对提取、文字识别、以及表格识别等任务，实现进阶高效的自动化结构化返回。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section11)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeSmartDocumentRecognizer(request *model.RecognizeSmartDocumentRecognizerRequest) (*model.RecognizeSmartDocumentRecognizerResponse, error) {
+	requestDef := GenReqDefForRecognizeSmartDocumentRecognizer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeSmartDocumentRecognizerResponse), nil
+	}
+}
+
+// RecognizeSmartDocumentRecognizerInvoker 智能文档解析
+func (c *OcrClient) RecognizeSmartDocumentRecognizerInvoker(request *model.RecognizeSmartDocumentRecognizerRequest) *RecognizeSmartDocumentRecognizerInvoker {
+	requestDef := GenReqDefForRecognizeSmartDocumentRecognizer()
+	return &RecognizeSmartDocumentRecognizerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeTaxiInvoice 出租车发票识别
 //
 // 识别出租车发票中的文字信息，并返回识别的结构化结果。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section18)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。

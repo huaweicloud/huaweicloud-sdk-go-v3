@@ -11,6 +11,9 @@ type MonthUsageVo struct {
 	// SIM卡ID
 	SimCardId *int64 `json:"sim_card_id,omitempty"`
 
+	// iccid
+	Iccid *string `json:"iccid,omitempty"`
+
 	// 月用量
 	FlowUsages *[]FlowUsageVo `json:"flow_usages,omitempty"`
 }

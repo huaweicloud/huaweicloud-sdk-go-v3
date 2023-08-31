@@ -12,6 +12,12 @@ type ResourceGroupInfo struct {
 	// 资源分组的名称，如：ResourceGroup-Test01。
 	GroupName *string `json:"group_name,omitempty"`
 
+	// 资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+	Type *string `json:"type,omitempty"`
+
+	// 企业项目ID列表
+	RelationIds *[]string `json:"relation_ids,omitempty"`
+
 	// 资源分组的ID，如：rg1603786526428bWbVmk4rP。
 	GroupId *string `json:"group_id,omitempty"`
 
@@ -25,6 +31,9 @@ type ResourceGroupInfo struct {
 
 	// 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 一组或者多个资源信息，默认为空。
+	Resources *[]Resource `json:"resources,omitempty"`
 }
 
 func (o ResourceGroupInfo) String() string {

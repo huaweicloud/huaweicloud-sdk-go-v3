@@ -23,9 +23,6 @@ type EffectiveRoute struct {
 
 	// 路由类型
 	RouteType *string `json:"route_type,omitempty"`
-
-	// IP地址组id
-	AddressGroupId *string `json:"address_group_id,omitempty"`
 }
 
 func (o EffectiveRoute) String() string {

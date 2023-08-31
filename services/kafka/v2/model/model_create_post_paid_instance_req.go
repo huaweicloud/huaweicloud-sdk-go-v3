@@ -22,7 +22,7 @@ type CreatePostPaidInstanceReq struct {
 	Engine CreatePostPaidInstanceReqEngine `json:"engine"`
 
 	// 消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,otc,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
-	EngineVersion CreatePostPaidInstanceReqEngineVersion `json:"engine_version"`
+	EngineVersion string `json:"engine_version"`
 
 	//  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hc,hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
 	Specification *CreatePostPaidInstanceReqSpecification `json:"specification,omitempty"`
@@ -146,53 +146,6 @@ func (c CreatePostPaidInstanceReqEngine) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreatePostPaidInstanceReqEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type CreatePostPaidInstanceReqEngineVersion struct {
-	value string
-}
-
-type CreatePostPaidInstanceReqEngineVersionEnum struct {
-	E_1_1_0 CreatePostPaidInstanceReqEngineVersion
-	E_2_7   CreatePostPaidInstanceReqEngineVersion
-}
-
-func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEngineVersionEnum {
-	return CreatePostPaidInstanceReqEngineVersionEnum{
-		E_1_1_0: CreatePostPaidInstanceReqEngineVersion{
-			value: "1.1.0",
-		},
-		E_2_7: CreatePostPaidInstanceReqEngineVersion{
-			value: "2.7",
-		},
-	}
-}
-
-func (c CreatePostPaidInstanceReqEngineVersion) Value() string {
-	return c.value
-}
-
-func (c CreatePostPaidInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreatePostPaidInstanceReqEngineVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -17,7 +17,7 @@ type Policy struct {
 	// 聚合方式, 支持的值为(average|min|max|sum)
 	Filter string `json:"filter"`
 
-	// 阈值符号, 支持的值为(>|<|>=|<=|=|><)
+	// 告警阈值的比较条件，支持的值为(>|<|>=|<=|=|><|cycle_decrease|cycle_increase|cycle_wave)，cycle_decrease为环比下降，cycle_increase为环比上升，cycle_wave为环比波动
 	ComparisonOperator string `json:"comparison_operator"`
 
 	// 阈值

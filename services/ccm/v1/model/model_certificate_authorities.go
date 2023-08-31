@@ -58,7 +58,7 @@ type CertificateAuthorities struct {
 	CrlConfiguration *ListCrlConfiguration `json:"crl_configuration"`
 
 	// 企业项目ID，默认为“0”。 对于开通企业项目的用户，表示资源处于默认企业项目下。 对于未开通企业项目的用户，表示资源未处于企业项目下。
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CertificateAuthorities) String() string {

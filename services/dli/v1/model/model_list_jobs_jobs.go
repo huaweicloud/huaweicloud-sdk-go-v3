@@ -68,6 +68,12 @@ type ListJobsJobs struct {
 
 	// 作业结束的时间。是单位为“毫秒”的时间戳。
 	EndTime *int64 `json:"end_time,omitempty"`
+
+	// 作业的CPU累计使用量
+	CpuCost *string `json:"cpu_cost,omitempty"`
+
+	// 作业的输出字节数
+	OutputByte *string `json:"output_byte,omitempty"`
 }
 
 func (o ListJobsJobs) String() string {

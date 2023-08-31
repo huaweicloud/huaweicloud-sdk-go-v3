@@ -15,9 +15,6 @@ type SpecCert struct {
 	// 私钥内容。
 	Key *string `json:"key,omitempty"`
 
-	// 安全策略。 - tls-1-2-strict - tls-1-2 - tls-1-1 - tls-1-0
-	Policy *string `json:"policy,omitempty"`
-
 	// 创建时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 }

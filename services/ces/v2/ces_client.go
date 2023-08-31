@@ -166,6 +166,27 @@ func (c *CesClient) BatchEnableAlarmRulesInvoker(request *model.BatchEnableAlarm
 	return &BatchEnableAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateWidgets 批量更新监控视图
+//
+// 批量更新监控视图
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchUpdateWidgets(request *model.BatchUpdateWidgetsRequest) (*model.BatchUpdateWidgetsResponse, error) {
+	requestDef := GenReqDefForBatchUpdateWidgets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateWidgetsResponse), nil
+	}
+}
+
+// BatchUpdateWidgetsInvoker 批量更新监控视图
+func (c *CesClient) BatchUpdateWidgetsInvoker(request *model.BatchUpdateWidgetsRequest) *BatchUpdateWidgetsInvoker {
+	requestDef := GenReqDefForBatchUpdateWidgets()
+	return &BatchUpdateWidgetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAlarmRules 创建告警规则
 //
 // 创建告警规则
@@ -208,6 +229,48 @@ func (c *CesClient) CreateAlarmTemplateInvoker(request *model.CreateAlarmTemplat
 	return &CreateAlarmTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDashboardWidgets 创建/复制/批量创建监控视图到指定的监控面板
+//
+// 创建/复制/批量创建监控视图到指定的监控面板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) CreateDashboardWidgets(request *model.CreateDashboardWidgetsRequest) (*model.CreateDashboardWidgetsResponse, error) {
+	requestDef := GenReqDefForCreateDashboardWidgets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDashboardWidgetsResponse), nil
+	}
+}
+
+// CreateDashboardWidgetsInvoker 创建/复制/批量创建监控视图到指定的监控面板
+func (c *CesClient) CreateDashboardWidgetsInvoker(request *model.CreateDashboardWidgetsRequest) *CreateDashboardWidgetsInvoker {
+	requestDef := GenReqDefForCreateDashboardWidgets()
+	return &CreateDashboardWidgetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOneDashboard 创建/复制监控面板
+//
+// 创建/复制监控面板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) CreateOneDashboard(request *model.CreateOneDashboardRequest) (*model.CreateOneDashboardResponse, error) {
+	requestDef := GenReqDefForCreateOneDashboard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOneDashboardResponse), nil
+	}
+}
+
+// CreateOneDashboardInvoker 创建/复制监控面板
+func (c *CesClient) CreateOneDashboardInvoker(request *model.CreateOneDashboardRequest) *CreateOneDashboardInvoker {
+	requestDef := GenReqDefForCreateOneDashboard()
+	return &CreateOneDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateResourceGroup 创建资源分组
 //
 // 创建资源分组
@@ -248,6 +311,48 @@ func (c *CesClient) DeleteAlarmRuleResources(request *model.DeleteAlarmRuleResou
 func (c *CesClient) DeleteAlarmRuleResourcesInvoker(request *model.DeleteAlarmRuleResourcesRequest) *DeleteAlarmRuleResourcesInvoker {
 	requestDef := GenReqDefForDeleteAlarmRuleResources()
 	return &DeleteAlarmRuleResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDashboards 批量删除监控面板
+//
+// 批量删除监控面板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) DeleteDashboards(request *model.DeleteDashboardsRequest) (*model.DeleteDashboardsResponse, error) {
+	requestDef := GenReqDefForDeleteDashboards()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDashboardsResponse), nil
+	}
+}
+
+// DeleteDashboardsInvoker 批量删除监控面板
+func (c *CesClient) DeleteDashboardsInvoker(request *model.DeleteDashboardsRequest) *DeleteDashboardsInvoker {
+	requestDef := GenReqDefForDeleteDashboards()
+	return &DeleteDashboardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOneWidget 删除指定监控视图
+//
+// 删除指定监控视图
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) DeleteOneWidget(request *model.DeleteOneWidgetRequest) (*model.DeleteOneWidgetResponse, error) {
+	requestDef := GenReqDefForDeleteOneWidget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOneWidgetResponse), nil
+	}
+}
+
+// DeleteOneWidgetInvoker 删除指定监控视图
+func (c *CesClient) DeleteOneWidgetInvoker(request *model.DeleteOneWidgetRequest) *DeleteOneWidgetInvoker {
+	requestDef := GenReqDefForDeleteOneWidget()
+	return &DeleteOneWidgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAgentDimensionInfo 查询主机监控维度指标信息
@@ -397,6 +502,48 @@ func (c *CesClient) ListAlarmTemplatesInvoker(request *model.ListAlarmTemplatesR
 	return &ListAlarmTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDashboardInfos 查询监控面板列表
+//
+// 查询监控面板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListDashboardInfos(request *model.ListDashboardInfosRequest) (*model.ListDashboardInfosResponse, error) {
+	requestDef := GenReqDefForListDashboardInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDashboardInfosResponse), nil
+	}
+}
+
+// ListDashboardInfosInvoker 查询监控面板列表
+func (c *CesClient) ListDashboardInfosInvoker(request *model.ListDashboardInfosRequest) *ListDashboardInfosInvoker {
+	requestDef := GenReqDefForListDashboardInfos()
+	return &ListDashboardInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDashboardWidgets 查询指定监控面板下的监控视图列表
+//
+// 查询指定监控面板下的监控视图列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListDashboardWidgets(request *model.ListDashboardWidgetsRequest) (*model.ListDashboardWidgetsResponse, error) {
+	requestDef := GenReqDefForListDashboardWidgets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDashboardWidgetsResponse), nil
+	}
+}
+
+// ListDashboardWidgetsInvoker 查询指定监控面板下的监控视图列表
+func (c *CesClient) ListDashboardWidgetsInvoker(request *model.ListDashboardWidgetsRequest) *ListDashboardWidgetsInvoker {
+	requestDef := GenReqDefForListDashboardWidgets()
+	return &ListDashboardWidgetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResourceGroups 查询资源分组列表
 //
 // 查询资源分组列表
@@ -481,6 +628,27 @@ func (c *CesClient) ShowResourceGroupInvoker(request *model.ShowResourceGroupReq
 	return &ShowResourceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowWidget 查询指定监控视图信息
+//
+// 查询指定监控视图信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ShowWidget(request *model.ShowWidgetRequest) (*model.ShowWidgetResponse, error) {
+	requestDef := GenReqDefForShowWidget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWidgetResponse), nil
+	}
+}
+
+// ShowWidgetInvoker 查询指定监控视图信息
+func (c *CesClient) ShowWidgetInvoker(request *model.ShowWidgetRequest) *ShowWidgetInvoker {
+	requestDef := GenReqDefForShowWidget()
+	return &ShowWidgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAlarmRulePolicies 修改告警规则策略(全量修改)
 //
 // 修改告警规则策略(全量修改)
@@ -521,6 +689,27 @@ func (c *CesClient) UpdateAlarmTemplate(request *model.UpdateAlarmTemplateReques
 func (c *CesClient) UpdateAlarmTemplateInvoker(request *model.UpdateAlarmTemplateRequest) *UpdateAlarmTemplateInvoker {
 	requestDef := GenReqDefForUpdateAlarmTemplate()
 	return &UpdateAlarmTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDashboard 修改监控面板
+//
+// 修改监控面板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) UpdateDashboard(request *model.UpdateDashboardRequest) (*model.UpdateDashboardResponse, error) {
+	requestDef := GenReqDefForUpdateDashboard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDashboardResponse), nil
+	}
+}
+
+// UpdateDashboardInvoker 修改监控面板
+func (c *CesClient) UpdateDashboardInvoker(request *model.UpdateDashboardRequest) *UpdateDashboardInvoker {
+	requestDef := GenReqDefForUpdateDashboard()
+	return &UpdateDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateResourceGroup 修改资源分组

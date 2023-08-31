@@ -17,9 +17,6 @@ type BatchOperateResourceTagsRequestBody struct {
 
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
-
-	// 标签列表。
-	SysTags *[]Tag `json:"sys_tags,omitempty"`
 }
 
 func (o BatchOperateResourceTagsRequestBody) String() string {

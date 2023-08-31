@@ -101,6 +101,18 @@ func (i *CreateSqlLimitRulesInvoker) Invoke() (*model.CreateSqlLimitRulesRespons
 	}
 }
 
+type CreateTuningInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTuningInvoker) Invoke() (*model.CreateTuningResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTuningResponse), nil
+	}
+}
+
 type DeleteDbUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +374,18 @@ func (i *ShowSqlSwitchStatusInvoker) Invoke() (*model.ShowSqlSwitchStatusRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowSqlSwitchStatusResponse), nil
+	}
+}
+
+type ShowTuningInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTuningInvoker) Invoke() (*model.ShowTuningResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTuningResponse), nil
 	}
 }
 

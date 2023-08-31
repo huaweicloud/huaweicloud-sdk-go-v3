@@ -452,3 +452,24 @@ func (c *MrsClient) ShowSqlResultInvoker(request *model.ShowSqlResultRequest) *S
 	requestDef := GenReqDefForShowSqlResult()
 	return &ShowSqlResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ShowMrsVersionList 展示MRS版本列表
+//
+// 展示MRS版本列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowMrsVersionList(request *model.ShowMrsVersionListRequest) (*model.ShowMrsVersionListResponse, error) {
+	requestDef := GenReqDefForShowMrsVersionList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMrsVersionListResponse), nil
+	}
+}
+
+// ShowMrsVersionListInvoker 展示MRS版本列表
+func (c *MrsClient) ShowMrsVersionListInvoker(request *model.ShowMrsVersionListRequest) *ShowMrsVersionListInvoker {
+	requestDef := GenReqDefForShowMrsVersionList()
+	return &ShowMrsVersionListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

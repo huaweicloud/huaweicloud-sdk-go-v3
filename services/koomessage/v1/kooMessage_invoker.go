@@ -197,6 +197,30 @@ func (i *ListAimTemplatesInvoker) Invoke() (*model.ListAimTemplatesResponse, err
 	}
 }
 
+type SetPrimaryVideoThumbnailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetPrimaryVideoThumbnailInvoker) Invoke() (*model.SetPrimaryVideoThumbnailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetPrimaryVideoThumbnailResponse), nil
+	}
+}
+
+type ShowTemplateVideoThumbnailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateVideoThumbnailInvoker) Invoke() (*model.ShowTemplateVideoThumbnailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateVideoThumbnailResponse), nil
+	}
+}
+
 type UpdatePersonalTemplateStateInvoker struct {
 	*invoker.BaseInvoker
 }

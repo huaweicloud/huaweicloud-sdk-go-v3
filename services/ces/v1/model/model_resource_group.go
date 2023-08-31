@@ -17,6 +17,9 @@ type ResourceGroup struct {
 
 	// 资源分组中该资源的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
 	Status *string `json:"status,omitempty"`
+
+	// 事件类型，默认为0。
+	EventType *int32 `json:"event_type,omitempty"`
 }
 
 func (o ResourceGroup) String() string {

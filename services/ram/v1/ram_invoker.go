@@ -41,6 +41,30 @@ func (i *ListResourceSharePermissionsInvoker) Invoke() (*model.ListResourceShare
 	}
 }
 
+type ListQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotaResponse), nil
+	}
+}
+
+type ListResourceTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceTypesInvoker) Invoke() (*model.ListResourceTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceTypesResponse), nil
+	}
+}
+
 type DisableOrganizationShareInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,18 +134,6 @@ func (i *SearchSharedPrincipalsInvoker) Invoke() (*model.SearchSharedPrincipalsR
 		return nil, err
 	} else {
 		return result.(*model.SearchSharedPrincipalsResponse), nil
-	}
-}
-
-type ListQuotaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListQuotaResponse), nil
 	}
 }
 

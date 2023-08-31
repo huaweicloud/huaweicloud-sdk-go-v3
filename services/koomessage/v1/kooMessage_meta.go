@@ -486,6 +486,47 @@ func GenReqDefForListAimTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSetPrimaryVideoThumbnail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/aim/template-material-thumbnails").
+		WithResponse(new(model.SetPrimaryVideoThumbnailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowTemplateVideoThumbnail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/aim/template-material-thumbnails").
+		WithResponse(new(model.ShowTemplateVideoThumbnailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AimResourceId").
+		WithJsonTag("aim_resource_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdatePersonalTemplateState() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
