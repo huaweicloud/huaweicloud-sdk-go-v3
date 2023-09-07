@@ -10,19 +10,37 @@ import (
 )
 
 type JobInfo struct {
-	Name *string `json:"name,omitempty"`
 
-	Nodes *[]Node `json:"nodes,omitempty"`
+	// 作业名称
+	Name string `json:"name"`
 
-	Schedule *Schedule `json:"schedule,omitempty"`
+	// 节点定义
+	Nodes []Node `json:"nodes"`
 
+	Schedule *Schedule `json:"schedule"`
+
+	// 作业参数定义
 	Params *[]JobParam `json:"params,omitempty"`
 
+	// 作业在目录树上的路径。创建作业时如果路径目录不存在，会自动创建目录，如/dir/a/，默认在根目录/。
 	Directory *string `json:"directory,omitempty"`
 
-	JobType *JobInfoJobType `json:"jobType,omitempty"`
+	// 作业类型，REAL_TIME： 实时处理，BATCH：批处理
+	ProcessType JobInfoProcessType `json:"processType"`
 
-	BasicConfig *BasicInfo `json:"basicConfig,omitempty"`
+	// 作业最后修改人
+	LastUpdateUser *string `json:"lastUpdateUser,omitempty"`
+
+	// 作业运行日志存放的OBS路径。
+	LogPath *string `json:"logPath,omitempty"`
+
+	BasicConfig *BasicConfig `json:"basicConfig,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段。表示创建作业的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示作业创建后是保存态，提交态，生产态。
+	TargetStatus *JobInfoTargetStatus `json:"targetStatus,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段，表示作业审批人。
+	Approvers *[]JobApprover `json:"approvers,omitempty"`
 }
 
 func (o JobInfo) String() string {
@@ -34,35 +52,86 @@ func (o JobInfo) String() string {
 	return strings.Join([]string{"JobInfo", string(data)}, " ")
 }
 
-type JobInfoJobType struct {
+type JobInfoProcessType struct {
 	value string
 }
 
-type JobInfoJobTypeEnum struct {
-	BATCH     JobInfoJobType
-	REAL_TIME JobInfoJobType
+type JobInfoProcessTypeEnum struct {
+	BATCH     JobInfoProcessType
+	REAL_TIME JobInfoProcessType
 }
 
-func GetJobInfoJobTypeEnum() JobInfoJobTypeEnum {
-	return JobInfoJobTypeEnum{
-		BATCH: JobInfoJobType{
+func GetJobInfoProcessTypeEnum() JobInfoProcessTypeEnum {
+	return JobInfoProcessTypeEnum{
+		BATCH: JobInfoProcessType{
 			value: "BATCH",
 		},
-		REAL_TIME: JobInfoJobType{
+		REAL_TIME: JobInfoProcessType{
 			value: "REAL_TIME",
 		},
 	}
 }
 
-func (c JobInfoJobType) Value() string {
+func (c JobInfoProcessType) Value() string {
 	return c.value
 }
 
-func (c JobInfoJobType) MarshalJSON() ([]byte, error) {
+func (c JobInfoProcessType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *JobInfoJobType) UnmarshalJSON(b []byte) error {
+func (c *JobInfoProcessType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type JobInfoTargetStatus struct {
+	value string
+}
+
+type JobInfoTargetStatusEnum struct {
+	SAVED      JobInfoTargetStatus
+	SUBMITTED  JobInfoTargetStatus
+	PRODUCTION JobInfoTargetStatus
+}
+
+func GetJobInfoTargetStatusEnum() JobInfoTargetStatusEnum {
+	return JobInfoTargetStatusEnum{
+		SAVED: JobInfoTargetStatus{
+			value: "SAVED",
+		},
+		SUBMITTED: JobInfoTargetStatus{
+			value: "SUBMITTED",
+		},
+		PRODUCTION: JobInfoTargetStatus{
+			value: "PRODUCTION",
+		},
+	}
+}
+
+func (c JobInfoTargetStatus) Value() string {
+	return c.value
+}
+
+func (c JobInfoTargetStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *JobInfoTargetStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

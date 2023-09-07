@@ -8,12 +8,9 @@ import (
 
 // ListVolumesResponse Response Object
 type ListVolumesResponse struct {
+	ApiVersion *ApiVersionObj `json:"api_version,omitempty"`
 
-	// API版本，固定值“v1”，该值不可修改。
-	ApiVersion *string `json:"api_version,omitempty"`
-
-	// API类型，固定值“Volume”，该值不可修改。
-	Kind *string `json:"kind,omitempty"`
+	Kind *VolumeKindObj `json:"kind,omitempty"`
 
 	// 云存储列表。
 	Items          *[]Volume `json:"items,omitempty"`

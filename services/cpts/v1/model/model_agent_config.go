@@ -65,6 +65,12 @@ type AgentConfig struct {
 
 	// clickhouse影子库映射信息
 	ClickhouseShadowRepository *string `json:"clickhouse_shadow_repository,omitempty"`
+
+	// 是否开启pulsar影子库规则
+	PulsarEnable *bool `json:"pulsar_enable,omitempty"`
+
+	// pulsar影子库前缀
+	PulsarShadowTopicPrefix *string `json:"pulsar_shadow_topic_prefix,omitempty"`
 }
 
 func (o AgentConfig) String() string {

@@ -10,11 +10,12 @@ import (
 )
 
 type JobParam struct {
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 
-	ParamType *JobParamParamType `json:"paramType,omitempty"`
+	// 参数类型
+	Type *JobParamType `json:"type,omitempty"`
 }
 
 func (o JobParam) String() string {
@@ -26,35 +27,35 @@ func (o JobParam) String() string {
 	return strings.Join([]string{"JobParam", string(data)}, " ")
 }
 
-type JobParamParamType struct {
+type JobParamType struct {
 	value string
 }
 
-type JobParamParamTypeEnum struct {
-	VARIABLE  JobParamParamType
-	CONSTANTS JobParamParamType
+type JobParamTypeEnum struct {
+	PROCEDURE JobParamType
+	VARIABLE  JobParamType
 }
 
-func GetJobParamParamTypeEnum() JobParamParamTypeEnum {
-	return JobParamParamTypeEnum{
-		VARIABLE: JobParamParamType{
-			value: "variable",
+func GetJobParamTypeEnum() JobParamTypeEnum {
+	return JobParamTypeEnum{
+		PROCEDURE: JobParamType{
+			value: "procedure",
 		},
-		CONSTANTS: JobParamParamType{
-			value: "constants",
+		VARIABLE: JobParamType{
+			value: "variable",
 		},
 	}
 }
 
-func (c JobParamParamType) Value() string {
+func (c JobParamType) Value() string {
 	return c.value
 }
 
-func (c JobParamParamType) MarshalJSON() ([]byte, error) {
+func (c JobParamType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *JobParamParamType) UnmarshalJSON(b []byte) error {
+func (c *JobParamType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

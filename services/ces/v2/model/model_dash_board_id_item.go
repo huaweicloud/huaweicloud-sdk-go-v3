@@ -8,7 +8,7 @@ import (
 
 type DashBoardIdItem struct {
 
-	// 监控面板id
+	// 监控看板id
 	DashboardId *string `json:"dashboard_id,omitempty"`
 }
 

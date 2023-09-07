@@ -44,6 +44,12 @@ type ListJobsRequest struct {
 
 	// 降序或升序（分别对应desc和asc，默认为“desc”）。
 	SortDir *string `json:"sort_dir,omitempty"`
+
+	// 数据库实例ID列表，最多支持10个
+	InstanceIds *[]string `json:"instance_ids,omitempty"`
+
+	// 数据库实例IP
+	InstanceIp *string `json:"instance_ip,omitempty"`
 }
 
 func (o ListJobsRequest) String() string {

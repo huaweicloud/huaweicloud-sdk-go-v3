@@ -752,6 +752,48 @@ func (c *RdsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *L
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstancesRecommendation 查询购买推荐
+//
+// 查询购买推荐
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesRecommendation(request *model.ListInstancesRecommendationRequest) (*model.ListInstancesRecommendationResponse, error) {
+	requestDef := GenReqDefForListInstancesRecommendation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesRecommendationResponse), nil
+	}
+}
+
+// ListInstancesRecommendationInvoker 查询购买推荐
+func (c *RdsClient) ListInstancesRecommendationInvoker(request *model.ListInstancesRecommendationRequest) *ListInstancesRecommendationInvoker {
+	requestDef := GenReqDefForListInstancesRecommendation()
+	return &ListInstancesRecommendationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesResourceMetrics 查询监控大盘列表
+//
+// 查询监控大盘列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesResourceMetrics(request *model.ListInstancesResourceMetricsRequest) (*model.ListInstancesResourceMetricsResponse, error) {
+	requestDef := GenReqDefForListInstancesResourceMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesResourceMetricsResponse), nil
+	}
+}
+
+// ListInstancesResourceMetricsInvoker 查询监控大盘列表
+func (c *RdsClient) ListInstancesResourceMetricsInvoker(request *model.ListInstancesResourceMetricsRequest) *ListInstancesResourceMetricsInvoker {
+	requestDef := GenReqDefForListInstancesResourceMetrics()
+	return &ListInstancesResourceMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstancesSupportFastRestore 获取实例是否能使用极速恢复
 //
 // 批量获取实例是否能在库表恢复时使用极速恢复。

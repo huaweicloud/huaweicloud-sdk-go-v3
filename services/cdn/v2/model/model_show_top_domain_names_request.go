@@ -18,7 +18,7 @@ type ShowTopDomainNamesRequest struct {
 	// - 统计类型 - 目前只支持bw（带宽），flux（流量），req_num（请求总数）
 	StatType string `json:"stat_type"`
 
-	// 服务区域：mainland_china（默认）、outside_mainland_china，当查询回源类指标时该参数无效。
+	// 服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china，当查询回源类指标时该参数无效。
 	ServiceArea *string `json:"service_area,omitempty"`
 
 	// top域名查询数量,默认为20,最大为500，最小为0

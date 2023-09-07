@@ -12,13 +12,13 @@ type ListDashboardInfosRequest struct {
 	// 企业项目Id
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
 
-	// 指定企业项目下监控面板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
+	// 指定企业项目下监控看板是否收藏，true:收藏，false:未收藏，填此参数时，enterprise_id必填
 	IsFavorite *bool `json:"is_favorite,omitempty"`
 
-	// 监控面板名称
+	// 监控看板名称
 	DashboardName *string `json:"dashboard_name,omitempty"`
 
-	// 监控面板id
+	// 监控看板id
 	DashboardId *string `json:"dashboard_id,omitempty"`
 }
 

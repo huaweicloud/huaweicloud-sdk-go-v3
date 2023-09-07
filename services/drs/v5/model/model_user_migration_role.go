@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UserMigrationRole 用户迁移信息角色列表字段。当前支持的场景： - 实时迁移场景：MongoDB迁移。
+// UserMigrationRole 用户迁移信息角色列表字段。当前支持的场景：  - 实时迁移场景：MongoDB迁移。
 type UserMigrationRole struct {
 
 	// 角色。

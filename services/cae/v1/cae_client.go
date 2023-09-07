@@ -544,6 +544,48 @@ func (c *CaeClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListD
 	return &ListDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEips 获取集群节点弹性公网IP列表
+//
+// 获取集群节点弹性公网IP列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ListEips(request *model.ListEipsRequest) (*model.ListEipsResponse, error) {
+	requestDef := GenReqDefForListEips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEipsResponse), nil
+	}
+}
+
+// ListEipsInvoker 获取集群节点弹性公网IP列表
+func (c *CaeClient) ListEipsInvoker(request *model.ListEipsRequest) *ListEipsInvoker {
+	requestDef := GenReqDefForListEips()
+	return &ListEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEip 修改带宽
+//
+// 修改带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) UpdateEip(request *model.UpdateEipRequest) (*model.UpdateEipResponse, error) {
+	requestDef := GenReqDefForUpdateEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEipResponse), nil
+	}
+}
+
+// UpdateEipInvoker 修改带宽
+func (c *CaeClient) UpdateEipInvoker(request *model.UpdateEipRequest) *UpdateEipInvoker {
+	requestDef := GenReqDefForUpdateEip()
+	return &UpdateEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEnvironment 创建环境
 //
 // 创建环境。

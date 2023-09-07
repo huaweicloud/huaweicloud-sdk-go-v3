@@ -9,10 +9,10 @@ import (
 type Event struct {
 
 	// 事件类型
-	EventType *string `json:"eventType,omitempty"`
+	EventType string `json:"eventType"`
 
 	// DIS通道名称
-	Channel *string `json:"channel,omitempty"`
+	Channel string `json:"channel"`
 
 	// 执行失败处理策略
 	FailPolicy *string `json:"failPolicy,omitempty"`
@@ -20,7 +20,7 @@ type Event struct {
 	// 调度并发数
 	Concurrent *int32 `json:"concurrent,omitempty"`
 
-	// 读取策略
+	// 读取策略，LAST ：从上次位置读取，NEW- 从最新位置读取，默认为LAST
 	ReadPolicy *string `json:"readPolicy,omitempty"`
 }
 

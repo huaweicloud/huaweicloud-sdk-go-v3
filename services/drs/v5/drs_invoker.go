@@ -41,6 +41,54 @@ func (i *BatchExecuteJobActionsInvoker) Invoke() (*model.BatchExecuteJobActionsR
 	}
 }
 
+type BatchStopJobsActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchStopJobsActionInvoker) Invoke() (*model.BatchStopJobsActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchStopJobsActionResponse), nil
+	}
+}
+
+type BatchTagActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchTagActionResponse), nil
+	}
+}
+
+type CheckDataFilterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDataFilterInvoker) Invoke() (*model.CheckDataFilterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDataFilterResponse), nil
+	}
+}
+
+type CollectColumnsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectColumnsInvoker) Invoke() (*model.CollectColumnsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectColumnsResponse), nil
+	}
+}
+
 type CollectDbObjectsAsyncInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +98,18 @@ func (i *CollectDbObjectsAsyncInvoker) Invoke() (*model.CollectDbObjectsAsyncRes
 		return nil, err
 	} else {
 		return result.(*model.CollectDbObjectsAsyncResponse), nil
+	}
+}
+
+type CollectDbObjectsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectDbObjectsInfoInvoker) Invoke() (*model.CollectDbObjectsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectDbObjectsInfoResponse), nil
 	}
 }
 
@@ -137,6 +197,18 @@ func (i *ExecuteJobActionInvoker) Invoke() (*model.ExecuteJobActionResponse, err
 	}
 }
 
+type ExportOperationInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportOperationInfoInvoker) Invoke() (*model.ExportOperationInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportOperationInfoResponse), nil
+	}
+}
+
 type ImportBatchCreateJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,6 +281,18 @@ func (i *ListLinksInvoker) Invoke() (*model.ListLinksResponse, error) {
 	}
 }
 
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
 type ShowActionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -221,6 +305,18 @@ func (i *ShowActionsInvoker) Invoke() (*model.ShowActionsResponse, error) {
 	}
 }
 
+type ShowColumnInfoResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowColumnInfoResultInvoker) Invoke() (*model.ShowColumnInfoResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowColumnInfoResultResponse), nil
+	}
+}
+
 type ShowComparePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +326,42 @@ func (i *ShowComparePolicyInvoker) Invoke() (*model.ShowComparePolicyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowComparePolicyResponse), nil
+	}
+}
+
+type ShowDataFilteringResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataFilteringResultInvoker) Invoke() (*model.ShowDataFilteringResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataFilteringResultResponse), nil
+	}
+}
+
+type ShowDataProcessingRulesResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataProcessingRulesResultInvoker) Invoke() (*model.ShowDataProcessingRulesResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataProcessingRulesResultResponse), nil
+	}
+}
+
+type ShowDataProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataProgressInvoker) Invoke() (*model.ShowDataProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataProgressResponse), nil
 	}
 }
 
@@ -269,6 +401,18 @@ func (i *ShowDbObjectTemplateResultInvoker) Invoke() (*model.ShowDbObjectTemplat
 	}
 }
 
+type ShowDbObjectsListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDbObjectsListInvoker) Invoke() (*model.ShowDbObjectsListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDbObjectsListResponse), nil
+	}
+}
+
 type ShowDirtyDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -305,6 +449,30 @@ func (i *ShowHealthCompareJobListInvoker) Invoke() (*model.ShowHealthCompareJobL
 	}
 }
 
+type ShowIncrementComponentsDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIncrementComponentsDetailInvoker) Invoke() (*model.ShowIncrementComponentsDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIncrementComponentsDetailResponse), nil
+	}
+}
+
+type ShowInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceTagsInvoker) Invoke() (*model.ShowInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceTagsResponse), nil
+	}
+}
+
 type ShowJobDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +494,18 @@ func (i *ShowMeteringInvoker) Invoke() (*model.ShowMeteringResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowMeteringResponse), nil
+	}
+}
+
+type ShowMonitorDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMonitorDataInvoker) Invoke() (*model.ShowMonitorDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMonitorDataResponse), nil
 	}
 }
 
@@ -353,6 +533,18 @@ func (i *ShowProgressDataInvoker) Invoke() (*model.ShowProgressDataResponse, err
 	}
 }
 
+type ShowSupportObjectTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSupportObjectTypeInvoker) Invoke() (*model.ShowSupportObjectTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSupportObjectTypeResponse), nil
+	}
+}
+
 type ShowUpdateObjectSavingStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +554,18 @@ func (i *ShowUpdateObjectSavingStatusInvoker) Invoke() (*model.ShowUpdateObjectS
 		return nil, err
 	} else {
 		return result.(*model.ShowUpdateObjectSavingStatusResponse), nil
+	}
+}
+
+type StopJobActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopJobActionInvoker) Invoke() (*model.StopJobActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopJobActionResponse), nil
 	}
 }
 
@@ -377,6 +581,18 @@ func (i *UpdateBatchAsyncJobsInvoker) Invoke() (*model.UpdateBatchAsyncJobsRespo
 	}
 }
 
+type UpdateDataProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDataProgressInvoker) Invoke() (*model.UpdateDataProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDataProgressResponse), nil
+	}
+}
+
 type UpdateJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +602,18 @@ func (i *UpdateJobInvoker) Invoke() (*model.UpdateJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateJobResponse), nil
+	}
+}
+
+type UpdateStartPositionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStartPositionInvoker) Invoke() (*model.UpdateStartPositionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStartPositionResponse), nil
 	}
 }
 

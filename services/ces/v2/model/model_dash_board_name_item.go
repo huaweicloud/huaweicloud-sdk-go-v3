@@ -8,7 +8,7 @@ import (
 
 type DashBoardNameItem struct {
 
-	// 自定义监控面板名称
+	// 自定义监控看板名称
 	DashboardName *string `json:"dashboard_name,omitempty"`
 }
 

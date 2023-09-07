@@ -82,6 +82,90 @@ func (c *DrsClient) BatchExecuteJobActionsInvoker(request *model.BatchExecuteJob
 	return &BatchExecuteJobActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchStopJobsAction 批量结束任务
+//
+// 批量结束租户指定ID任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) BatchStopJobsAction(request *model.BatchStopJobsActionRequest) (*model.BatchStopJobsActionResponse, error) {
+	requestDef := GenReqDefForBatchStopJobsAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchStopJobsActionResponse), nil
+	}
+}
+
+// BatchStopJobsActionInvoker 批量结束任务
+func (c *DrsClient) BatchStopJobsActionInvoker(request *model.BatchStopJobsActionRequest) *BatchStopJobsActionInvoker {
+	requestDef := GenReqDefForBatchStopJobsAction()
+	return &BatchStopJobsActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchTagAction 批量添加或删除资源标签
+//
+// 批量添加删除资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) BatchTagAction(request *model.BatchTagActionRequest) (*model.BatchTagActionResponse, error) {
+	requestDef := GenReqDefForBatchTagAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchTagActionResponse), nil
+	}
+}
+
+// BatchTagActionInvoker 批量添加或删除资源标签
+func (c *DrsClient) BatchTagActionInvoker(request *model.BatchTagActionRequest) *BatchTagActionInvoker {
+	requestDef := GenReqDefForBatchTagAction()
+	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckDataFilter 数据过滤规则校验
+//
+// 数据过滤规则校验
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CheckDataFilter(request *model.CheckDataFilterRequest) (*model.CheckDataFilterResponse, error) {
+	requestDef := GenReqDefForCheckDataFilter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckDataFilterResponse), nil
+	}
+}
+
+// CheckDataFilterInvoker 数据过滤规则校验
+func (c *DrsClient) CheckDataFilterInvoker(request *model.CheckDataFilterRequest) *CheckDataFilterInvoker {
+	requestDef := GenReqDefForCheckDataFilter()
+	return &CheckDataFilterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CollectColumns 采集指定数据库表的列信息
+//
+// 采集指定数据库表的列信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CollectColumns(request *model.CollectColumnsRequest) (*model.CollectColumnsResponse, error) {
+	requestDef := GenReqDefForCollectColumns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectColumnsResponse), nil
+	}
+}
+
+// CollectColumnsInvoker 采集指定数据库表的列信息
+func (c *DrsClient) CollectColumnsInvoker(request *model.CollectColumnsRequest) *CollectColumnsInvoker {
+	requestDef := GenReqDefForCollectColumns()
+	return &CollectColumnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CollectDbObjectsAsync 提交查询数据库对象信息
 //
 // 提交查询数据库对象信息。例如：
@@ -104,6 +188,30 @@ func (c *DrsClient) CollectDbObjectsAsync(request *model.CollectDbObjectsAsyncRe
 func (c *DrsClient) CollectDbObjectsAsyncInvoker(request *model.CollectDbObjectsAsyncRequest) *CollectDbObjectsAsyncInvoker {
 	requestDef := GenReqDefForCollectDbObjectsAsync()
 	return &CollectDbObjectsAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CollectDbObjectsInfo 提交查询数据库对象信息
+//
+// 提交查询数据库对象信息。例如：
+// - 当type取值为source时，表示查询源库库表信息。
+// - 当源库库表信息有变化时，则type取值为source，is_refresh取值为true。
+// - 当已同步到目标库的库表信息过大，需要提前将数据加载到缓存中时，type取值为synchronized。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CollectDbObjectsInfo(request *model.CollectDbObjectsInfoRequest) (*model.CollectDbObjectsInfoResponse, error) {
+	requestDef := GenReqDefForCollectDbObjectsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectDbObjectsInfoResponse), nil
+	}
+}
+
+// CollectDbObjectsInfoInvoker 提交查询数据库对象信息
+func (c *DrsClient) CollectDbObjectsInfoInvoker(request *model.CollectDbObjectsInfoRequest) *CollectDbObjectsInfoInvoker {
+	requestDef := GenReqDefForCollectDbObjectsInfo()
+	return &CollectDbObjectsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CommitAsyncJob 提交批量创建异步任务
@@ -253,6 +361,27 @@ func (c *DrsClient) ExecuteJobActionInvoker(request *model.ExecuteJobActionReque
 	return &ExecuteJobActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportOperationInfo 导出任务操作统计信息
+//
+// 导出指定任务操作统计信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ExportOperationInfo(request *model.ExportOperationInfoRequest) (*model.ExportOperationInfoResponse, error) {
+	requestDef := GenReqDefForExportOperationInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportOperationInfoResponse), nil
+	}
+}
+
+// ExportOperationInfoInvoker 导出任务操作统计信息
+func (c *DrsClient) ExportOperationInfoInvoker(request *model.ExportOperationInfoRequest) *ExportOperationInfoInvoker {
+	requestDef := GenReqDefForExportOperationInfo()
+	return &ExportOperationInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportBatchCreateJobs 批量导入任务
 //
 // 批量导入任务
@@ -379,6 +508,27 @@ func (c *DrsClient) ListLinksInvoker(request *model.ListLinksRequest) *ListLinks
 	return &ListLinksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectTags 查询项目标签
+//
+// 查询指定project ID下不同任务类型的所有标签集合。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+// ListProjectTagsInvoker 查询项目标签
+func (c *DrsClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowActions 获取指定任务操作信息
 //
 // 获取指定任务允许、不允许、当前操作信息。
@@ -400,6 +550,27 @@ func (c *DrsClient) ShowActionsInvoker(request *model.ShowActionsRequest) *ShowA
 	return &ShowActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowColumnInfoResult 获取指定数据库表列信息
+//
+// 获取指定数据库表列信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowColumnInfoResult(request *model.ShowColumnInfoResultRequest) (*model.ShowColumnInfoResultResponse, error) {
+	requestDef := GenReqDefForShowColumnInfoResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowColumnInfoResultResponse), nil
+	}
+}
+
+// ShowColumnInfoResultInvoker 获取指定数据库表列信息
+func (c *DrsClient) ShowColumnInfoResultInvoker(request *model.ShowColumnInfoResultRequest) *ShowColumnInfoResultInvoker {
+	requestDef := GenReqDefForShowColumnInfoResult()
+	return &ShowColumnInfoResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowComparePolicy 查询对比策略
 //
 // 查询对比策略。
@@ -419,6 +590,69 @@ func (c *DrsClient) ShowComparePolicy(request *model.ShowComparePolicyRequest) (
 func (c *DrsClient) ShowComparePolicyInvoker(request *model.ShowComparePolicyRequest) *ShowComparePolicyInvoker {
 	requestDef := GenReqDefForShowComparePolicy()
 	return &ShowComparePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataFilteringResult 获取数据过滤校验结果
+//
+// 获取数据过滤校验结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowDataFilteringResult(request *model.ShowDataFilteringResultRequest) (*model.ShowDataFilteringResultResponse, error) {
+	requestDef := GenReqDefForShowDataFilteringResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataFilteringResultResponse), nil
+	}
+}
+
+// ShowDataFilteringResultInvoker 获取数据过滤校验结果
+func (c *DrsClient) ShowDataFilteringResultInvoker(request *model.ShowDataFilteringResultRequest) *ShowDataFilteringResultInvoker {
+	requestDef := GenReqDefForShowDataFilteringResult()
+	return &ShowDataFilteringResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataProcessingRulesResult 获取指定任务数据加工规则更新结果
+//
+// 获取指定任务数据加工规则更新结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowDataProcessingRulesResult(request *model.ShowDataProcessingRulesResultRequest) (*model.ShowDataProcessingRulesResultResponse, error) {
+	requestDef := GenReqDefForShowDataProcessingRulesResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataProcessingRulesResultResponse), nil
+	}
+}
+
+// ShowDataProcessingRulesResultInvoker 获取指定任务数据加工规则更新结果
+func (c *DrsClient) ShowDataProcessingRulesResultInvoker(request *model.ShowDataProcessingRulesResultRequest) *ShowDataProcessingRulesResultInvoker {
+	requestDef := GenReqDefForShowDataProcessingRulesResult()
+	return &ShowDataProcessingRulesResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataProgress 查询数据加工规则
+//
+// 查询数据加工规则:包含数据库表的映射信息、列信息、数据过滤信息、附加列信息、DDL以及DML信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowDataProgress(request *model.ShowDataProgressRequest) (*model.ShowDataProgressResponse, error) {
+	requestDef := GenReqDefForShowDataProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataProgressResponse), nil
+	}
+}
+
+// ShowDataProgressInvoker 查询数据加工规则
+func (c *DrsClient) ShowDataProgressInvoker(request *model.ShowDataProgressRequest) *ShowDataProgressInvoker {
+	requestDef := GenReqDefForShowDataProgress()
+	return &ShowDataProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDbObjectCollectionStatus 获取提交查询数据库对象信息的结果
@@ -484,6 +718,27 @@ func (c *DrsClient) ShowDbObjectTemplateResultInvoker(request *model.ShowDbObjec
 	return &ShowDbObjectTemplateResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDbObjectsList 查询数据库对象信息
+//
+// 查询数据库对象信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowDbObjectsList(request *model.ShowDbObjectsListRequest) (*model.ShowDbObjectsListResponse, error) {
+	requestDef := GenReqDefForShowDbObjectsList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDbObjectsListResponse), nil
+	}
+}
+
+// ShowDbObjectsListInvoker 查询数据库对象信息
+func (c *DrsClient) ShowDbObjectsListInvoker(request *model.ShowDbObjectsListRequest) *ShowDbObjectsListInvoker {
+	requestDef := GenReqDefForShowDbObjectsList()
+	return &ShowDbObjectsListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDirtyData 查询异常数据列表
 //
 // 查询异常数据列表。
@@ -547,6 +802,49 @@ func (c *DrsClient) ShowHealthCompareJobListInvoker(request *model.ShowHealthCom
 	return &ShowHealthCompareJobListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowIncrementComponentsDetail 查询增量组件详情
+//
+// 查询任务同步的增量组件的详细信息，实时同步任务，任务模式为增量或者全量+增量才支持。具体介绍可以参考：[查询同步进度](https://support.huaweicloud.com/realtimesyn-drs/drs_10_0007.html)
+// - 支持的引擎：oracle-to-gaussdbv5，oracle-to-gaussdbv5ha，gaussdbv5，gaussdbv5-to-mysql，gaussdbv5-to-gaussdbv5ha，gaussdbv5ha，gaussdbv5ha-to-gaussdbv5，gaussdbv5-to-dws，gaussdbv5ha-to-dws，gaussdbv5-to-oracle，gaussdbv5ha-to-oracle，oracle-to-dws，oracle-to-mysql
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowIncrementComponentsDetail(request *model.ShowIncrementComponentsDetailRequest) (*model.ShowIncrementComponentsDetailResponse, error) {
+	requestDef := GenReqDefForShowIncrementComponentsDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIncrementComponentsDetailResponse), nil
+	}
+}
+
+// ShowIncrementComponentsDetailInvoker 查询增量组件详情
+func (c *DrsClient) ShowIncrementComponentsDetailInvoker(request *model.ShowIncrementComponentsDetailRequest) *ShowIncrementComponentsDetailInvoker {
+	requestDef := GenReqDefForShowIncrementComponentsDetail()
+	return &ShowIncrementComponentsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceTags 查询资源标签
+//
+// 查询指定实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (*model.ShowInstanceTagsResponse, error) {
+	requestDef := GenReqDefForShowInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceTagsResponse), nil
+	}
+}
+
+// ShowInstanceTagsInvoker 查询资源标签
+func (c *DrsClient) ShowInstanceTagsInvoker(request *model.ShowInstanceTagsRequest) *ShowInstanceTagsInvoker {
+	requestDef := GenReqDefForShowInstanceTags()
+	return &ShowInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobDetail 查询任务详情
 //
 // 查询任务详情。
@@ -587,6 +885,28 @@ func (c *DrsClient) ShowMetering(request *model.ShowMeteringRequest) (*model.Sho
 func (c *DrsClient) ShowMeteringInvoker(request *model.ShowMeteringRequest) *ShowMeteringInvoker {
 	requestDef := GenReqDefForShowMetering()
 	return &ShowMeteringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMonitorData 查询监控数据
+//
+// 获取任务监控数据。
+// - Cassandra灾备不支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowMonitorData(request *model.ShowMonitorDataRequest) (*model.ShowMonitorDataResponse, error) {
+	requestDef := GenReqDefForShowMonitorData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMonitorDataResponse), nil
+	}
+}
+
+// ShowMonitorDataInvoker 查询监控数据
+func (c *DrsClient) ShowMonitorDataInvoker(request *model.ShowMonitorDataRequest) *ShowMonitorDataInvoker {
+	requestDef := GenReqDefForShowMonitorData()
+	return &ShowMonitorDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowObjectMapping 查询同步映射列表
@@ -635,6 +955,27 @@ func (c *DrsClient) ShowProgressDataInvoker(request *model.ShowProgressDataReque
 	return &ShowProgressDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSupportObjectType 查询是否支持对象选择和列映射
+//
+// 查询任务支持的对象选择类型、列映射、支持搜索的对象类型等信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowSupportObjectType(request *model.ShowSupportObjectTypeRequest) (*model.ShowSupportObjectTypeResponse, error) {
+	requestDef := GenReqDefForShowSupportObjectType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSupportObjectTypeResponse), nil
+	}
+}
+
+// ShowSupportObjectTypeInvoker 查询是否支持对象选择和列映射
+func (c *DrsClient) ShowSupportObjectTypeInvoker(request *model.ShowSupportObjectTypeRequest) *ShowSupportObjectTypeInvoker {
+	requestDef := GenReqDefForShowSupportObjectType()
+	return &ShowSupportObjectTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUpdateObjectSavingStatus 获取对象保存进度
 //
 // 获取对象保存进度。
@@ -654,6 +995,27 @@ func (c *DrsClient) ShowUpdateObjectSavingStatus(request *model.ShowUpdateObject
 func (c *DrsClient) ShowUpdateObjectSavingStatusInvoker(request *model.ShowUpdateObjectSavingStatusRequest) *ShowUpdateObjectSavingStatusInvoker {
 	requestDef := GenReqDefForShowUpdateObjectSavingStatus()
 	return &ShowUpdateObjectSavingStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopJobAction 结束任务
+//
+// 结束租户指定ID任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) StopJobAction(request *model.StopJobActionRequest) (*model.StopJobActionResponse, error) {
+	requestDef := GenReqDefForStopJobAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopJobActionResponse), nil
+	}
+}
+
+// StopJobActionInvoker 结束任务
+func (c *DrsClient) StopJobActionInvoker(request *model.StopJobActionRequest) *StopJobActionInvoker {
+	requestDef := GenReqDefForStopJobAction()
+	return &StopJobActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBatchAsyncJobs 更新指定ID批量异步任务详情
@@ -677,6 +1039,27 @@ func (c *DrsClient) UpdateBatchAsyncJobsInvoker(request *model.UpdateBatchAsyncJ
 	return &UpdateBatchAsyncJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDataProgress 更新指定任务数据加工规则
+//
+// 更新指定任务数据加工规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UpdateDataProgress(request *model.UpdateDataProgressRequest) (*model.UpdateDataProgressResponse, error) {
+	requestDef := GenReqDefForUpdateDataProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDataProgressResponse), nil
+	}
+}
+
+// UpdateDataProgressInvoker 更新指定任务数据加工规则
+func (c *DrsClient) UpdateDataProgressInvoker(request *model.UpdateDataProgressRequest) *UpdateDataProgressInvoker {
+	requestDef := GenReqDefForUpdateDataProgress()
+	return &UpdateDataProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateJob 更新指定ID任务详情
 //
 // 更新租户指定ID任务详情。
@@ -697,6 +1080,28 @@ func (c *DrsClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJob
 func (c *DrsClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJobInvoker {
 	requestDef := GenReqDefForUpdateJob()
 	return &UpdateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStartPosition 更新增量任务启动位点
+//
+// 更新增量任务的启动位点。
+// - 仅engine_type为mysql,mysql-to-dws,mysql-to-taurus,taurus,mysql-to-oracle,taurus-to-oracle,taurus-to-mysql,mysql-to-kafka,taurus-to-kafka,mongodb-to-kafka,mongodb且为单增量实时同步任务支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UpdateStartPosition(request *model.UpdateStartPositionRequest) (*model.UpdateStartPositionResponse, error) {
+	requestDef := GenReqDefForUpdateStartPosition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStartPositionResponse), nil
+	}
+}
+
+// UpdateStartPositionInvoker 更新增量任务启动位点
+func (c *DrsClient) UpdateStartPositionInvoker(request *model.UpdateStartPositionRequest) *UpdateStartPositionInvoker {
+	requestDef := GenReqDefForUpdateStartPosition()
+	return &UpdateStartPositionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadDbObjectTemplate 对象选择（文件导入 - 模板上传）

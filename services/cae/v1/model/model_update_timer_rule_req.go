@@ -7,12 +7,9 @@ import (
 )
 
 type UpdateTimerRuleReq struct {
+	ApiVersion *ApiVersionObj `json:"api_version"`
 
-	// API版本，固定值“v1”，该值不可修改。
-	ApiVersion string `json:"api_version"`
-
-	// 资源种类。
-	Kind string `json:"kind"`
+	Kind *TimeRuleKindObj `json:"kind"`
 
 	Spec *UpdateTimerRuleDetails `json:"spec"`
 }

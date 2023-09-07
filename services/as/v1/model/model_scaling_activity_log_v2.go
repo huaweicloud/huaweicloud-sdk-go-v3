@@ -39,7 +39,7 @@ type ScalingActivityLogV2 struct {
 	InstanceStandbyList *[]ScalingInstance `json:"instance_standby_list,omitempty"`
 
 	// 伸缩活动中变化（增加或减少）的云服务器数量。
-	ScalingValue *string `json:"scaling_value,omitempty"`
+	ScalingValue *int32 `json:"scaling_value,omitempty"`
 
 	// 伸缩活动的描述信息。
 	Description *string `json:"description,omitempty"`

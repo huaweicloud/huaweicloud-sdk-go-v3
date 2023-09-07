@@ -305,6 +305,30 @@ func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 	}
 }
 
+type ListEipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEipsInvoker) Invoke() (*model.ListEipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEipsResponse), nil
+	}
+}
+
+type UpdateEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEipInvoker) Invoke() (*model.UpdateEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEipResponse), nil
+	}
+}
+
 type CreateEnvironmentInvoker struct {
 	*invoker.BaseInvoker
 }

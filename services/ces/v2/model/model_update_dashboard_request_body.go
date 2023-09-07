@@ -8,10 +8,10 @@ import (
 
 type UpdateDashboardRequestBody struct {
 
-	// 自定义监控面板名称
+	// 自定义监控看板名称
 	DashboardName *string `json:"dashboard_name,omitempty"`
 
-	// 监控面板是否标记收藏, true: 收藏, false: 未收藏
+	// 监控看板是否标记收藏, true: 收藏, false: 未收藏
 	IsFavorite *bool `json:"is_favorite,omitempty"`
 
 	// 监控视图展示模式，0表示自定义坐标，1代表每行一个

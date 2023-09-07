@@ -10,21 +10,23 @@ import (
 )
 
 type Node struct {
-	Name *string `json:"name,omitempty"`
+
+	// 节点名称，只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号，且长度小于等于128个字符。同一个作业中节点名称不能重复。
+	Name string `json:"name"`
 
 	// 节点的类型
-	NodeType *NodeNodeType `json:"nodeType,omitempty"`
+	Type NodeType `json:"type"`
 
-	Location *Location `json:"location,omitempty"`
+	Location *Location `json:"location"`
 
-	// 本节点依赖的前一个节点名称
-	PreNodeNames *string `json:"preNodeNames,omitempty"`
+	// 本本节点依赖的前面的节点名称列表
+	PreNodeName *[]string `json:"preNodeName,omitempty"`
 
-	// 节点执行条件
-	Condition *[]Condition `json:"condition,omitempty"`
+	// 节点执行条件，如果配置此参数，本节点是否执行由condition的字段expression所保存的EL表达式计算结果决定
+	Conditions *[]Condition `json:"conditions,omitempty"`
 
-	// 节点的属性
-	NodeProperties *string `json:"nodeProperties,omitempty"`
+	// 节点属性
+	Properties []Property `json:"properties"`
 
 	// 轮询节点执行结果时间间隔
 	PollingInterval *int32 `json:"pollingInterval,omitempty"`
@@ -43,7 +45,7 @@ type Node struct {
 
 	EventTrigger *Event `json:"eventTrigger,omitempty"`
 
-	CronTrigger *Cron `json:"cronTrigger,omitempty"`
+	CronTrigger *CronTrigger `json:"cronTrigger,omitempty"`
 }
 
 func (o Node) String() string {
@@ -55,91 +57,103 @@ func (o Node) String() string {
 	return strings.Join([]string{"Node", string(data)}, " ")
 }
 
-type NodeNodeType struct {
+type NodeType struct {
 	value string
 }
 
-type NodeNodeTypeEnum struct {
-	HIVE_SQL           NodeNodeType
-	SPARK_SQL          NodeNodeType
-	DWSSQL             NodeNodeType
-	DLISQL             NodeNodeType
-	SHELL              NodeNodeType
-	CDM_JOB            NodeNodeType
-	DIS_TRANSFER_TASK  NodeNodeType
-	CS_JOB             NodeNodeType
-	CLOUD_TABLE_MANAGE NodeNodeType
-	OBS_MANAGER        NodeNodeType
-	RESTAPI            NodeNodeType
-	MACHINE_LEARNING   NodeNodeType
-	SMN                NodeNodeType
-	MRS_SPARK          NodeNodeType
-	MAP_REDUCE         NodeNodeType
-	DLI_SPARK          NodeNodeType
+type NodeTypeEnum struct {
+	HIVE_SQL           NodeType
+	SPARK_SQL          NodeType
+	DWSSQL             NodeType
+	DLISQL             NodeType
+	SHELL              NodeType
+	CDM_JOB            NodeType
+	DIS_TRANSFER_TASK  NodeType
+	CS_JOB             NodeType
+	CLOUD_TABLE_MANAGE NodeType
+	OBS_MANAGER        NodeType
+	RESTAPI            NodeType
+	MACHINE_LEARNING   NodeType
+	SMN                NodeType
+	MRS_SPARK          NodeType
+	MAP_REDUCE         NodeType
+	DLI_SPARK          NodeType
+	MRS_FLINK          NodeType
+	MRS_HETU_ENGINE    NodeType
+	RDS_SQL            NodeType
 }
 
-func GetNodeNodeTypeEnum() NodeNodeTypeEnum {
-	return NodeNodeTypeEnum{
-		HIVE_SQL: NodeNodeType{
+func GetNodeTypeEnum() NodeTypeEnum {
+	return NodeTypeEnum{
+		HIVE_SQL: NodeType{
 			value: "HiveSQL",
 		},
-		SPARK_SQL: NodeNodeType{
+		SPARK_SQL: NodeType{
 			value: "SparkSQL",
 		},
-		DWSSQL: NodeNodeType{
+		DWSSQL: NodeType{
 			value: "DWSSQL",
 		},
-		DLISQL: NodeNodeType{
+		DLISQL: NodeType{
 			value: "DLISQL",
 		},
-		SHELL: NodeNodeType{
+		SHELL: NodeType{
 			value: "Shell",
 		},
-		CDM_JOB: NodeNodeType{
+		CDM_JOB: NodeType{
 			value: "CDMJob",
 		},
-		DIS_TRANSFER_TASK: NodeNodeType{
+		DIS_TRANSFER_TASK: NodeType{
 			value: "DISTransferTask",
 		},
-		CS_JOB: NodeNodeType{
+		CS_JOB: NodeType{
 			value: "CSJob",
 		},
-		CLOUD_TABLE_MANAGE: NodeNodeType{
+		CLOUD_TABLE_MANAGE: NodeType{
 			value: "CloudTableManage",
 		},
-		OBS_MANAGER: NodeNodeType{
+		OBS_MANAGER: NodeType{
 			value: "OBSManager",
 		},
-		RESTAPI: NodeNodeType{
+		RESTAPI: NodeType{
 			value: "RESTAPI",
 		},
-		MACHINE_LEARNING: NodeNodeType{
+		MACHINE_LEARNING: NodeType{
 			value: "MachineLearning",
 		},
-		SMN: NodeNodeType{
+		SMN: NodeType{
 			value: "SMN",
 		},
-		MRS_SPARK: NodeNodeType{
+		MRS_SPARK: NodeType{
 			value: "MRSSpark",
 		},
-		MAP_REDUCE: NodeNodeType{
+		MAP_REDUCE: NodeType{
 			value: "MapReduce",
 		},
-		DLI_SPARK: NodeNodeType{
+		DLI_SPARK: NodeType{
 			value: "DLISpark",
+		},
+		MRS_FLINK: NodeType{
+			value: "MRSFlink",
+		},
+		MRS_HETU_ENGINE: NodeType{
+			value: "MRSHetuEngine",
+		},
+		RDS_SQL: NodeType{
+			value: "RDS SQL",
 		},
 	}
 }
 
-func (c NodeNodeType) Value() string {
+func (c NodeType) Value() string {
 	return c.value
 }
 
-func (c NodeNodeType) MarshalJSON() ([]byte, error) {
+func (c NodeType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *NodeNodeType) UnmarshalJSON(b []byte) error {
+func (c *NodeType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -163,9 +177,10 @@ type NodeFailPolicy struct {
 }
 
 type NodeFailPolicyEnum struct {
-	FAIL    NodeFailPolicy
-	IGNORE  NodeFailPolicy
-	SUSPEND NodeFailPolicy
+	FAIL       NodeFailPolicy
+	IGNORE     NodeFailPolicy
+	SUSPEND    NodeFailPolicy
+	FAIL_CHILD NodeFailPolicy
 }
 
 func GetNodeFailPolicyEnum() NodeFailPolicyEnum {
@@ -178,6 +193,9 @@ func GetNodeFailPolicyEnum() NodeFailPolicyEnum {
 		},
 		SUSPEND: NodeFailPolicy{
 			value: "SUSPEND",
+		},
+		FAIL_CHILD: NodeFailPolicy{
+			value: "FAIL_CHILD",
 		},
 	}
 }

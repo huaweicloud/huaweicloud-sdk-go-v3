@@ -59,7 +59,6 @@ type ThumbnailParaType struct {
 }
 
 type ThumbnailParaTypeEnum struct {
-	PERCENT ThumbnailParaType
 	TIME    ThumbnailParaType
 	DOTS    ThumbnailParaType
 	DOTS_MS ThumbnailParaType
@@ -67,9 +66,6 @@ type ThumbnailParaTypeEnum struct {
 
 func GetThumbnailParaTypeEnum() ThumbnailParaTypeEnum {
 	return ThumbnailParaTypeEnum{
-		PERCENT: ThumbnailParaType{
-			value: "PERCENT",
-		},
 		TIME: ThumbnailParaType{
 			value: "TIME",
 		},

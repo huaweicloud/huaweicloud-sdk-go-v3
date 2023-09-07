@@ -18,7 +18,7 @@ type ShowDbObjectTemplateResultRequest struct {
 	// 请求语言类型。
 	XLanguage *ShowDbObjectTemplateResultRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。
+	// 导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
 	Type ShowDbObjectTemplateResultRequestType `json:"type"`
 }
 
@@ -85,6 +85,7 @@ type ShowDbObjectTemplateResultRequestType struct {
 type ShowDbObjectTemplateResultRequestTypeEnum struct {
 	DETAIL       ShowDbObjectTemplateResultRequestType
 	SYNCHRONIZED ShowDbObjectTemplateResultRequestType
+	CHANGE       ShowDbObjectTemplateResultRequestType
 }
 
 func GetShowDbObjectTemplateResultRequestTypeEnum() ShowDbObjectTemplateResultRequestTypeEnum {
@@ -94,6 +95,9 @@ func GetShowDbObjectTemplateResultRequestTypeEnum() ShowDbObjectTemplateResultRe
 		},
 		SYNCHRONIZED: ShowDbObjectTemplateResultRequestType{
 			value: "synchronized",
+		},
+		CHANGE: ShowDbObjectTemplateResultRequestType{
+			value: "change",
 		},
 	}
 }

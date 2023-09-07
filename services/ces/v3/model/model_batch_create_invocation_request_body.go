@@ -12,7 +12,7 @@ import (
 type BatchCreateInvocationRequestBody struct {
 
 	// 主机id列表（INSTALL和UPDATE时必须）
-	InstanceIds []string `json:"instance_ids"`
+	InstanceIds *[]string `json:"instance_ids,omitempty"`
 
 	// 任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
 	InvocationType BatchCreateInvocationRequestBodyInvocationType `json:"invocation_type"`

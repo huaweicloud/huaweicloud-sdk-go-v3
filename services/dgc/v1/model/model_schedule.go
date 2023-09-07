@@ -10,7 +10,7 @@ import (
 )
 
 type Schedule struct {
-	ScheType *ScheduleScheType `json:"scheType,omitempty"`
+	Type *ScheduleType `json:"type,omitempty"`
 
 	Cron *Cron `json:"cron,omitempty"`
 
@@ -26,39 +26,51 @@ func (o Schedule) String() string {
 	return strings.Join([]string{"Schedule", string(data)}, " ")
 }
 
-type ScheduleScheType struct {
+type ScheduleType struct {
 	value string
 }
 
-type ScheduleScheTypeEnum struct {
-	EXECUTE_ONCE ScheduleScheType
-	CRON         ScheduleScheType
-	EVENT        ScheduleScheType
+type ScheduleTypeEnum struct {
+	EXECUTE_ONCE  ScheduleType
+	EVENT_TRIGGER ScheduleType
+	RUN_ONCE      ScheduleType
+	CRON          ScheduleType
+	EVENT         ScheduleType
+	SCHEDULE      ScheduleType
 }
 
-func GetScheduleScheTypeEnum() ScheduleScheTypeEnum {
-	return ScheduleScheTypeEnum{
-		EXECUTE_ONCE: ScheduleScheType{
+func GetScheduleTypeEnum() ScheduleTypeEnum {
+	return ScheduleTypeEnum{
+		EXECUTE_ONCE: ScheduleType{
 			value: "EXECUTE_ONCE",
 		},
-		CRON: ScheduleScheType{
+		EVENT_TRIGGER: ScheduleType{
+			value: "EVENT_TRIGGER",
+		},
+		RUN_ONCE: ScheduleType{
+			value: "RUN_ONCE",
+		},
+		CRON: ScheduleType{
 			value: "CRON",
 		},
-		EVENT: ScheduleScheType{
+		EVENT: ScheduleType{
 			value: "EVENT",
+		},
+		SCHEDULE: ScheduleType{
+			value: "SCHEDULE",
 		},
 	}
 }
 
-func (c ScheduleScheType) Value() string {
+func (c ScheduleType) Value() string {
 	return c.value
 }
 
-func (c ScheduleScheType) MarshalJSON() ([]byte, error) {
+func (c ScheduleType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *ScheduleScheType) UnmarshalJSON(b []byte) error {
+func (c *ScheduleType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

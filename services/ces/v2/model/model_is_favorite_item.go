@@ -8,7 +8,7 @@ import (
 
 type IsFavoriteItem struct {
 
-	// 监控面板是否标记收藏, true: 收藏, false: 未收藏
+	// 监控看板是否标记收藏, true: 收藏, false: 未收藏
 	IsFavorite *bool `json:"is_favorite,omitempty"`
 }
 

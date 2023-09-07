@@ -7,9 +7,9 @@ import (
 )
 
 type Location struct {
-	X *int32 `json:"x,omitempty"`
+	X string `json:"x"`
 
-	Y *int32 `json:"y,omitempty"`
+	Y string `json:"y"`
 }
 
 func (o Location) String() string {

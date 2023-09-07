@@ -8,7 +8,7 @@ import (
 
 type BatchDeleteDashboardRequestBody struct {
 
-	// 监控面板id列表
+	// 监控看板id列表
 	DashboardIds *[]string `json:"dashboard_ids,omitempty"`
 }
 

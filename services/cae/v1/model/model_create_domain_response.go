@@ -8,9 +8,7 @@ import (
 
 // CreateDomainResponse Response Object
 type CreateDomainResponse struct {
-
-	// API版本，固定值“v1”，该值不可修改。
-	ApiVersion *string `json:"api_version,omitempty"`
+	ApiVersion *ApiVersionObj `json:"api_version,omitempty"`
 
 	// 域名列表。
 	Items *[]DomainItem `json:"items,omitempty"`

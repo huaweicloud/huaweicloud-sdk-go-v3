@@ -8,12 +8,9 @@ import (
 
 // ListEnvironmentsResponse Response Object
 type ListEnvironmentsResponse struct {
+	ApiVersion *ApiVersionObj `json:"api_version,omitempty"`
 
-	// API版本，固定值“v1”，该值不可修改。
-	ApiVersion *string `json:"api_version,omitempty"`
-
-	// API类型，固定值“Environment”，该值不可修改。
-	Kind *string `json:"Kind,omitempty"`
+	Kind *EnvironmentKindObj `json:"kind,omitempty"`
 
 	// 环境列表。
 	Items          *[]EnvironmentItem `json:"items,omitempty"`

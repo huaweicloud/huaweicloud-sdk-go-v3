@@ -39,7 +39,7 @@ type WidgetInfoWithId struct {
 	// 单位
 	Unit *string `json:"unit,omitempty"`
 
-	// 监控面板创建时间
+	// 监控看板创建时间
 	CreateTime *int64 `json:"create_time,omitempty"`
 }
 

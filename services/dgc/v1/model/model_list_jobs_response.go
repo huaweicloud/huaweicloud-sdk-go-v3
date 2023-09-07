@@ -8,10 +8,13 @@ import (
 
 // ListJobsResponse Response Object
 type ListJobsResponse struct {
+
+	// 作业数量
 	Total *int32 `json:"total,omitempty"`
 
-	Jobs           *[]JobInfo `json:"jobs,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	// 作业信息
+	Jobs           *[]JobResult `json:"jobs,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListJobsResponse) String() string {

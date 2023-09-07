@@ -8,13 +8,13 @@ import (
 
 type CreateDashboardRequestBody struct {
 
-	// 自定义监控面板名称
+	// 自定义监控看板名称
 	DashboardName *string `json:"dashboard_name,omitempty"`
 
 	// 企业项目Id
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
 
-	// 监控面板id
+	// 监控看板id
 	DashboardId *string `json:"dashboard_id,omitempty"`
 
 	// 监控视图展示模式，0表示自定义坐标，1代表每行一个

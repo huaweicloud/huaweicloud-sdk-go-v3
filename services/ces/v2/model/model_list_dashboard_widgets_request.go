@@ -9,7 +9,7 @@ import (
 // ListDashboardWidgetsRequest Request Object
 type ListDashboardWidgetsRequest struct {
 
-	// 监控面板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+	// 监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
 	DashboardId string `json:"dashboard_id"`
 }
 

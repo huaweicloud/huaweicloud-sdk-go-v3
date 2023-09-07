@@ -33,7 +33,7 @@ type ShowJobDetailRequest struct {
 	// 对比任务类型 - object_compare：对象对比。 - line_compare：行对比。 - content_compare：内容对比。 - data_compare：数据对比。
 	CompareType *ShowJobDetailRequestCompareType `json:"compare_type,omitempty"`
 
-	// 查询对比内容。取值： - overview：对比任务概览。 - list：数据对比任务列表。 - detail：对比详情。
+	// 查询对比内容。取值： - overview：对比任务概览。 - list：数据对比任务列表。 - detail：对比详情。 - diff：不一致详情。
 	QueryType *ShowJobDetailRequestQueryType `json:"query_type,omitempty"`
 
 	// 查询对象对比详情类型。取值： - DB：库级对比详情。 - TABLE：表级对比详情。 - INDEX：索引对比详情。

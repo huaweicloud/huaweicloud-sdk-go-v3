@@ -425,6 +425,30 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 	}
 }
 
+type ListInstancesRecommendationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesRecommendationInvoker) Invoke() (*model.ListInstancesRecommendationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesRecommendationResponse), nil
+	}
+}
+
+type ListInstancesResourceMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesResourceMetricsInvoker) Invoke() (*model.ListInstancesResourceMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesResourceMetricsResponse), nil
+	}
+}
+
 type ListInstancesSupportFastRestoreInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -137,6 +137,18 @@ func (i *DeleteStackInvoker) Invoke() (*model.DeleteStackResponse, error) {
 	}
 }
 
+type DeleteStackEnhancedInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStackEnhancedInvoker) Invoke() (*model.DeleteStackEnhancedResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStackEnhancedResponse), nil
+	}
+}
+
 type DeployStackInvoker struct {
 	*invoker.BaseInvoker
 }

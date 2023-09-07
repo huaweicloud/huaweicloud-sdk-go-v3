@@ -7,12 +7,9 @@ import (
 )
 
 type CertReq struct {
+	ApiVersion *ApiVersionObj `json:"api_version"`
 
-	// API版本。
-	ApiVersion string `json:"api_version"`
-
-	// API类型，固定值“Certificate”，该值不可修改。
-	Kind string `json:"kind"`
+	Kind *CertificateKindObj `json:"kind"`
 
 	Metadata *CreateMetaCert `json:"metadata"`
 

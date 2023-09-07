@@ -27,10 +27,8 @@ type ListEventDetailResponse struct {
 	// 一条或者多条事件详细信息。
 	EventInfo *[]EventInfoDetail `json:"event_info,omitempty"`
 
-	MetaData *TotalMetaData `json:"meta_data,omitempty"`
-
-	Dimensions     *MetricsDimension `json:"dimensions,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	MetaData       *TotalMetaData `json:"meta_data,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListEventDetailResponse) String() string {

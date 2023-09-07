@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type BasicInfo struct {
+type BasicConfig struct {
 
 	// 作业责任人
 	Owner *string `json:"owner,omitempty"`
@@ -24,11 +24,11 @@ type BasicInfo struct {
 	CustomFields *interface{} `json:"customFields,omitempty"`
 }
 
-func (o BasicInfo) String() string {
+func (o BasicConfig) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "BasicInfo struct{}"
+		return "BasicConfig struct{}"
 	}
 
-	return strings.Join([]string{"BasicInfo", string(data)}, " ")
+	return strings.Join([]string{"BasicConfig", string(data)}, " ")
 }

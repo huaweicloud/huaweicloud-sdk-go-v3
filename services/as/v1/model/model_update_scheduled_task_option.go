@@ -11,7 +11,7 @@ type UpdateScheduledTaskOption struct {
 	// 计划任务名称
 	Name *string `json:"name,omitempty"`
 
-	ScheduledPolicy *ScheduledPolicy `json:"scheduled_policy,omitempty"`
+	ScheduledPolicy *ScheduledTaskPolicy `json:"scheduled_policy,omitempty"`
 
 	InstanceNumber *IntegerRange `json:"instance_number,omitempty"`
 }
