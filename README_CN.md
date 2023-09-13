@@ -55,7 +55,7 @@ func main() {
 	// 配置认证信息
 	auth := basic.NewCredentialsBuilder().
 		WithAk("{your ak string}").
-		WithSk("{your ak string}").
+		WithSk("{your sk string}").
 		Build()
 
 	// 创建服务客户端
