@@ -56,7 +56,7 @@ func main() {
 	// Configure authentication
 	auth := basic.NewCredentialsBuilder().
 		WithAk("{your ak string}").
-		WithSk("{your ak string}").
+		WithSk("{your sk string}").
 		Build()
 
 	// Create a service client
