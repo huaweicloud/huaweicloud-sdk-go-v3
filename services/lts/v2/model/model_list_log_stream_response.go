@@ -8,10 +8,8 @@ import (
 
 // ListLogStreamResponse Response Object
 type ListLogStreamResponse struct {
-
-	// 日志组数组。
-	LogStreams     *[]LogStream `json:"log_streams,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	LogStreams     *[]LogStreamResBody `json:"log_streams,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListLogStreamResponse) String() string {

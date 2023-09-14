@@ -1300,6 +1300,27 @@ func (c *KafkaClient) UpdateInstanceAutoCreateTopicInvoker(request *model.Update
 	return &UpdateInstanceAutoCreateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateInstanceConsumerGroup 编辑消费组
+//
+// 编辑消费组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) UpdateInstanceConsumerGroup(request *model.UpdateInstanceConsumerGroupRequest) (*model.UpdateInstanceConsumerGroupResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceConsumerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceConsumerGroupResponse), nil
+	}
+}
+
+// UpdateInstanceConsumerGroupInvoker 编辑消费组
+func (c *KafkaClient) UpdateInstanceConsumerGroupInvoker(request *model.UpdateInstanceConsumerGroupRequest) *UpdateInstanceConsumerGroupInvoker {
+	requestDef := GenReqDefForUpdateInstanceConsumerGroup()
+	return &UpdateInstanceConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateInstanceCrossVpcIp 修改实例跨VPC访问的内网IP
 //
 // 修改实例跨VPC访问的内网IP。
@@ -1340,6 +1361,27 @@ func (c *KafkaClient) UpdateInstanceTopic(request *model.UpdateInstanceTopicRequ
 func (c *KafkaClient) UpdateInstanceTopicInvoker(request *model.UpdateInstanceTopicRequest) *UpdateInstanceTopicInvoker {
 	requestDef := GenReqDefForUpdateInstanceTopic()
 	return &UpdateInstanceTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceUser 修改用户参数
+//
+// 修改用户参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) UpdateInstanceUser(request *model.UpdateInstanceUserRequest) (*model.UpdateInstanceUserResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceUserResponse), nil
+	}
+}
+
+// UpdateInstanceUserInvoker 修改用户参数
+func (c *KafkaClient) UpdateInstanceUserInvoker(request *model.UpdateInstanceUserRequest) *UpdateInstanceUserInvoker {
+	requestDef := GenReqDefForUpdateInstanceUser()
+	return &UpdateInstanceUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSinkTaskQuota 修改转储任务的配额

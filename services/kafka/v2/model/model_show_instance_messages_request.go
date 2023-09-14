@@ -38,6 +38,9 @@ type ShowInstanceMessagesRequest struct {
 
 	// 分区。  **查询消息内容时，为必选参数。**  若start_time、end_time参数不为空，该参数无效。
 	Partition *string `json:"partition,omitempty"`
+
+	// 关键词。 取值范围为0~50。
+	Keyword *string `json:"keyword,omitempty"`
 }
 
 func (o ShowInstanceMessagesRequest) String() string {

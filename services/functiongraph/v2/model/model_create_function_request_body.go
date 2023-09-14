@@ -21,10 +21,10 @@ type CreateFunctionRequestBody struct {
 	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
 	Runtime CreateFunctionRequestBodyRuntime `json:"runtime"`
 
-	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询华为云函数工作流服务进行配置
+	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
 	Timeout int32 `json:"timeout"`
 
-	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
+	// 函数执行入口 规则：xx.xx，必须包含“. ”；自定义镜像函数handler为“-” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
 	Handler string `json:"handler"`
 
 	// 依赖版本id列表
@@ -44,8 +44,10 @@ type CreateFunctionRequestBody struct {
 	// 当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
 	CodeUrl *string `json:"code_url,omitempty"`
 
-	// 函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
+	// 函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
 	CodeFilename *string `json:"code_filename,omitempty"`
+
+	CustomImage *CustomImage `json:"custom_image,omitempty"`
 
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 	UserData *string `json:"user_data,omitempty"`
@@ -203,10 +205,11 @@ type CreateFunctionRequestBodyCodeType struct {
 }
 
 type CreateFunctionRequestBodyCodeTypeEnum struct {
-	INLINE CreateFunctionRequestBodyCodeType
-	ZIP    CreateFunctionRequestBodyCodeType
-	OBS    CreateFunctionRequestBodyCodeType
-	JAR    CreateFunctionRequestBodyCodeType
+	INLINE           CreateFunctionRequestBodyCodeType
+	ZIP              CreateFunctionRequestBodyCodeType
+	OBS              CreateFunctionRequestBodyCodeType
+	JAR              CreateFunctionRequestBodyCodeType
+	CUSTOM_IMAGE_SWR CreateFunctionRequestBodyCodeType
 }
 
 func GetCreateFunctionRequestBodyCodeTypeEnum() CreateFunctionRequestBodyCodeTypeEnum {
@@ -222,6 +225,9 @@ func GetCreateFunctionRequestBodyCodeTypeEnum() CreateFunctionRequestBodyCodeTyp
 		},
 		JAR: CreateFunctionRequestBodyCodeType{
 			value: "jar",
+		},
+		CUSTOM_IMAGE_SWR: CreateFunctionRequestBodyCodeType{
+			value: "Custom-Image-Swr",
 		},
 	}
 }

@@ -1281,6 +1281,26 @@ func GenReqDefForDeleteResource() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteToken() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/usg/acs/token").
+		WithResponse(new(model.DeleteTokenResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XRequestID").
+		WithJsonTag("X-Request-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AcceptLanguage").
+		WithJsonTag("Accept-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteVisionActiveCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).

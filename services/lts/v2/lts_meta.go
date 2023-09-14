@@ -727,11 +727,6 @@ func GenReqDefForListLogStream() *def.HttpRequestDef {
 		WithJsonTag("log_group_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Tag").
-		WithJsonTag("tag").
-		WithLocationType(def.Query))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -922,10 +917,6 @@ func GenReqDefForListStructuredLogsWithTimeRange() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

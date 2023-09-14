@@ -20,7 +20,7 @@ type CreateTransferResponseBodyLogTransferInfo struct {
 	LogStorageFormat CreateTransferResponseBodyLogTransferInfoLogStorageFormat `json:"log_storage_format"`
 
 	// 日志转储详细信息
-	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`
+	LogTransferDetail *interface{} `json:"log_transfer_detail"`
 
 	// 日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
 	LogTransferMode CreateTransferResponseBodyLogTransferInfoLogTransferMode `json:"log_transfer_mode"`

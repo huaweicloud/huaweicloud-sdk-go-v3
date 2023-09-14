@@ -237,6 +237,27 @@ func (c *FunctionGraphClient) CreateFunctionTriggerInvoker(request *model.Create
 	return &CreateFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFunctionUrl 创建函数URL
+//
+// 创建函数URL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateFunctionUrl(request *model.CreateFunctionUrlRequest) (*model.CreateFunctionUrlResponse, error) {
+	requestDef := GenReqDefForCreateFunctionUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFunctionUrlResponse), nil
+	}
+}
+
+// CreateFunctionUrlInvoker 创建函数URL
+func (c *FunctionGraphClient) CreateFunctionUrlInvoker(request *model.CreateFunctionUrlRequest) *CreateFunctionUrlInvoker {
+	requestDef := GenReqDefForCreateFunctionUrl()
+	return &CreateFunctionUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFunctionVersion 发布函数版本
 //
 // 发布函数版本。
@@ -469,6 +490,27 @@ func (c *FunctionGraphClient) DeleteFunctionTrigger(request *model.DeleteFunctio
 func (c *FunctionGraphClient) DeleteFunctionTriggerInvoker(request *model.DeleteFunctionTriggerRequest) *DeleteFunctionTriggerInvoker {
 	requestDef := GenReqDefForDeleteFunctionTrigger()
 	return &DeleteFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFunctionUrl 删除函数URL
+//
+// 删除函数URL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) DeleteFunctionUrl(request *model.DeleteFunctionUrlRequest) (*model.DeleteFunctionUrlResponse, error) {
+	requestDef := GenReqDefForDeleteFunctionUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFunctionUrlResponse), nil
+	}
+}
+
+// DeleteFunctionUrlInvoker 删除函数URL
+func (c *FunctionGraphClient) DeleteFunctionUrlInvoker(request *model.DeleteFunctionUrlRequest) *DeleteFunctionUrlInvoker {
+	requestDef := GenReqDefForDeleteFunctionUrl()
+	return &DeleteFunctionUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteTags 删除资源标签
@@ -1169,6 +1211,27 @@ func (c *FunctionGraphClient) ShowFunctionTriggerInvoker(request *model.ShowFunc
 	return &ShowFunctionTriggerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFunctionUrl 获取指定函数的URL
+//
+// 获取指定函数的URL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFunctionUrl(request *model.ShowFunctionUrlRequest) (*model.ShowFunctionUrlResponse, error) {
+	requestDef := GenReqDefForShowFunctionUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFunctionUrlResponse), nil
+	}
+}
+
+// ShowFunctionUrlInvoker 获取指定函数的URL
+func (c *FunctionGraphClient) ShowFunctionUrlInvoker(request *model.ShowFunctionUrlRequest) *ShowFunctionUrlInvoker {
+	requestDef := GenReqDefForShowFunctionUrl()
+	return &ShowFunctionUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLtsLogDetails 获取指定函数的lts日志组日志流配置
 //
 // 获取指定函数的lts日志组日志流配置。
@@ -1608,6 +1671,27 @@ func (c *FunctionGraphClient) UpdateFunctionReservedInstancesCount(request *mode
 func (c *FunctionGraphClient) UpdateFunctionReservedInstancesCountInvoker(request *model.UpdateFunctionReservedInstancesCountRequest) *UpdateFunctionReservedInstancesCountInvoker {
 	requestDef := GenReqDefForUpdateFunctionReservedInstancesCount()
 	return &UpdateFunctionReservedInstancesCountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFunctionUrl 更新函数URL
+//
+// 更新函数URL
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) UpdateFunctionUrl(request *model.UpdateFunctionUrlRequest) (*model.UpdateFunctionUrlResponse, error) {
+	requestDef := GenReqDefForUpdateFunctionUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFunctionUrlResponse), nil
+	}
+}
+
+// UpdateFunctionUrlInvoker 更新函数URL
+func (c *FunctionGraphClient) UpdateFunctionUrlInvoker(request *model.UpdateFunctionUrlRequest) *UpdateFunctionUrlInvoker {
+	requestDef := GenReqDefForUpdateFunctionUrl()
+	return &UpdateFunctionUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTracing 修改函数调用链配置

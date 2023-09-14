@@ -24,7 +24,7 @@ type SqlAlarmRuleRespList struct {
 	SqlRequests []SqlRequest `json:"sql_requests"`
 
 	// 告警统计周期
-	Frequency *Frequency `json:"frequency"`
+	Frequency *interface{} `json:"frequency"`
 
 	// 条件表达式
 	ConditionExpression string `json:"condition_expression"`

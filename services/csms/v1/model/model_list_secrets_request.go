@@ -14,6 +14,9 @@ type ListSecretsRequest struct {
 
 	// 分页查询起始的凭据名称，为空时为查询第一页
 	Marker *string `json:"marker,omitempty"`
+
+	// 指定事件名称时，仅返回关联该事件的凭据
+	EventName *string `json:"event_name,omitempty"`
 }
 
 func (o ListSecretsRequest) String() string {

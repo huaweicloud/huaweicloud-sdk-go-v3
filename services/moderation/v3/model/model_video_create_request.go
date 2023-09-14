@@ -12,11 +12,14 @@ import (
 type VideoCreateRequest struct {
 	Data *VideoCreateRequestData `json:"data"`
 
+	// 用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和image_categories必须传。
+	BizType *string `json:"biz_type,omitempty"`
+
 	// 事件类型，可选值如下： default：默认事件
-	EventType VideoCreateRequestEventType `json:"event_type"`
+	EventType *VideoCreateRequestEventType `json:"event_type,omitempty"`
 
 	// 视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
-	ImageCategories []VideoCreateRequestImageCategories `json:"image_categories"`
+	ImageCategories *[]VideoCreateRequestImageCategories `json:"image_categories,omitempty"`
 
 	// 视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
 	AudioCategories *[]VideoCreateRequestAudioCategories `json:"audio_categories,omitempty"`

@@ -65,6 +65,30 @@ func (i *ShowEdgeNodeInvoker) Invoke() (*model.ShowEdgeNodeResponse, error) {
 	}
 }
 
+type ExecuteDeviceControlsReleaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteDeviceControlsReleaseInvoker) Invoke() (*model.ExecuteDeviceControlsReleaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteDeviceControlsReleaseResponse), nil
+	}
+}
+
+type ExecuteDeviceControlsSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteDeviceControlsSetInvoker) Invoke() (*model.ExecuteDeviceControlsSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteDeviceControlsSetResponse), nil
+	}
+}
+
 type AddDeviceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -710,6 +734,42 @@ func (i *ShowPointsInvoker) Invoke() (*model.ShowPointsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowPointsResponse), nil
+	}
+}
+
+type CreateScheduleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateScheduleInvoker) Invoke() (*model.CreateScheduleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateScheduleResponse), nil
+	}
+}
+
+type DeleteScheduleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScheduleInvoker) Invoke() (*model.DeleteScheduleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScheduleResponse), nil
+	}
+}
+
+type UpdateScheduleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScheduleInvoker) Invoke() (*model.UpdateScheduleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScheduleResponse), nil
 	}
 }
 

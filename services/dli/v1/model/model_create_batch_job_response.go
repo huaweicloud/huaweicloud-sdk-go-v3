@@ -48,6 +48,9 @@ type CreateBatchJobResponse struct {
 	// 自定义镜像。格式为：组织名/镜像名:镜像版本。
 	Image *string `json:"image,omitempty"`
 
+	// 请求参数详情
+	ReqBody *string `json:"req_body,omitempty"`
+
 	// 更新时间
 	UpdateTime *int64 `json:"update_time,omitempty"`
 

@@ -329,6 +329,18 @@ func (i *InvokeGaussMySqlInstanceSwitchOverInvoker) Invoke() (*model.InvokeGauss
 	}
 }
 
+type ListAuditLogDownloadLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAuditLogDownloadLinkInvoker) Invoke() (*model.ListAuditLogDownloadLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAuditLogDownloadLinkResponse), nil
+	}
+}
+
 type ListGaussMySqlConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }

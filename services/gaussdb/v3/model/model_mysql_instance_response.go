@@ -55,6 +55,8 @@ type MysqlInstanceResponse struct {
 	FlavorRef *string `json:"flavor_ref,omitempty"`
 
 	ChargeInfo *MysqlChargeInfo `json:"charge_info,omitempty"`
+
+	Volume *MysqlVolumeResp `json:"volume,omitempty"`
 }
 
 func (o MysqlInstanceResponse) String() string {

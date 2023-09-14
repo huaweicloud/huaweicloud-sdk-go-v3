@@ -17,6 +17,9 @@ type CreateSecretVersionRequestBody struct {
 
 	// 凭据版本在存入时需要被同时标记的版本状态。如果您不指定此参数，凭据管家默认为新版本标记SYSCURRENT  约束：数组大小：最小1，最大12。stage长度：最小1字节，最大64字节。
 	VersionStages *[]string `json:"version_stages,omitempty"`
+
+	// 凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
+	ExpireTime *int64 `json:"expire_time,omitempty"`
 }
 
 func (o CreateSecretVersionRequestBody) String() string {

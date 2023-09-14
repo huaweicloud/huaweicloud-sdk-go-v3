@@ -15,6 +15,9 @@ type VersionMetadata struct {
 	// 凭据版本创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
 	CreateTime *int64 `json:"create_time,omitempty"`
 
+	// 凭据版本过期时间，时间戳，即从1970年1月1日至该时间的总秒数。默认为空，凭据订阅“版本过期”事件类型时，有效期判断所依据的值。
+	ExpireTime *int64 `json:"expire_time,omitempty"`
+
 	// 加密版本凭据值的KMS主密钥ID。
 	KmsKeyId *string `json:"kms_key_id,omitempty"`
 

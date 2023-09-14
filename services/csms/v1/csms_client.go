@@ -65,9 +65,30 @@ func (c *CsmsClient) CreateSecretInvoker(request *model.CreateSecretRequest) *Cr
 	return &CreateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSecretEvent 创建事件
+//
+// 创建事件，事件可配置在一个或多个凭据对象上。当事件为启用状态且包含的基础事件类型在凭据对象上触发时，云服务会将对应的事件通知发送至事件指定的通知主题上。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) CreateSecretEvent(request *model.CreateSecretEventRequest) (*model.CreateSecretEventResponse, error) {
+	requestDef := GenReqDefForCreateSecretEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecretEventResponse), nil
+	}
+}
+
+// CreateSecretEventInvoker 创建事件
+func (c *CsmsClient) CreateSecretEventInvoker(request *model.CreateSecretEventRequest) *CreateSecretEventInvoker {
+	requestDef := GenReqDefForCreateSecretEvent()
+	return &CreateSecretEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSecretTag 添加凭据标签
 //
-// - 功能介绍：添加凭据标签。
+// 添加凭据标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) CreateSecretTag(request *model.CreateSecretTagRequest) (*model.CreateSecretTagResponse, error) {
@@ -128,6 +149,27 @@ func (c *CsmsClient) DeleteSecretInvoker(request *model.DeleteSecretRequest) *De
 	return &DeleteSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSecretEvent 立即删除事件
+//
+// 立即删除指定的事件，且无法恢复。如事件存在凭据引用，则无法删除，请先解除关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) DeleteSecretEvent(request *model.DeleteSecretEventRequest) (*model.DeleteSecretEventResponse, error) {
+	requestDef := GenReqDefForDeleteSecretEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecretEventResponse), nil
+	}
+}
+
+// DeleteSecretEventInvoker 立即删除事件
+func (c *CsmsClient) DeleteSecretEventInvoker(request *model.DeleteSecretEventRequest) *DeleteSecretEventInvoker {
+	requestDef := GenReqDefForDeleteSecretEvent()
+	return &DeleteSecretEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSecretForSchedule 创建凭据的定时删除任务
 //
 // 指定延迟删除时间，创建删除凭据的定时任务，可设置7~30天的的延迟删除时间。
@@ -172,7 +214,7 @@ func (c *CsmsClient) DeleteSecretStageInvoker(request *model.DeleteSecretStageRe
 
 // DeleteSecretTag 删除凭据标签
 //
-// - 功能介绍：删除凭据标签。
+// 删除凭据标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) DeleteSecretTag(request *model.DeleteSecretTagRequest) (*model.DeleteSecretTagResponse, error) {
@@ -212,9 +254,30 @@ func (c *CsmsClient) DownloadSecretBlobInvoker(request *model.DownloadSecretBlob
 	return &DownloadSecretBlobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNotificationRecords 查询已触发的事件通知记录
+//
+// 查询三个月内所有已触发的事件通知记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ListNotificationRecords(request *model.ListNotificationRecordsRequest) (*model.ListNotificationRecordsResponse, error) {
+	requestDef := GenReqDefForListNotificationRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationRecordsResponse), nil
+	}
+}
+
+// ListNotificationRecordsInvoker 查询已触发的事件通知记录
+func (c *CsmsClient) ListNotificationRecordsInvoker(request *model.ListNotificationRecordsRequest) *ListNotificationRecordsInvoker {
+	requestDef := GenReqDefForListNotificationRecords()
+	return &ListNotificationRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectSecretsTags 查询项目标签
 //
-// - 功能介绍：查询用户在指定项目下的所有凭据标签集合。
+// 查询用户在指定项目下的所有凭据标签集合。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListProjectSecretsTags(request *model.ListProjectSecretsTagsRequest) (*model.ListProjectSecretsTagsResponse, error) {
@@ -235,7 +298,7 @@ func (c *CsmsClient) ListProjectSecretsTagsInvoker(request *model.ListProjectSec
 
 // ListResourceInstances 查询凭据实例
 //
-// - 功能介绍：查询凭据实例。通过标签过滤，筛选用户凭据,返回凭据列表。
+// 查询凭据实例。通过标签过滤，筛选用户凭据，返回凭据列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListResourceInstances(request *model.ListResourceInstancesRequest) (*model.ListResourceInstancesResponse, error) {
@@ -254,9 +317,30 @@ func (c *CsmsClient) ListResourceInstancesInvoker(request *model.ListResourceIns
 	return &ListResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecretEvents 查询事件列表
+//
+// 查询当前用户在本项目下创建的所有事件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ListSecretEvents(request *model.ListSecretEventsRequest) (*model.ListSecretEventsResponse, error) {
+	requestDef := GenReqDefForListSecretEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecretEventsResponse), nil
+	}
+}
+
+// ListSecretEventsInvoker 查询事件列表
+func (c *CsmsClient) ListSecretEventsInvoker(request *model.ListSecretEventsRequest) *ListSecretEventsInvoker {
+	requestDef := GenReqDefForListSecretEvents()
+	return &ListSecretEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecretTags 查询凭据标签
 //
-// - 功能介绍：查询凭据标签。
+// 查询凭据标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CsmsClient) ListSecretTags(request *model.ListSecretTagsRequest) (*model.ListSecretTagsResponse, error) {
@@ -359,6 +443,27 @@ func (c *CsmsClient) ShowSecretInvoker(request *model.ShowSecretRequest) *ShowSe
 	return &ShowSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecretEvent 查询事件
+//
+// 查询指定事件的信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ShowSecretEvent(request *model.ShowSecretEventRequest) (*model.ShowSecretEventResponse, error) {
+	requestDef := GenReqDefForShowSecretEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecretEventResponse), nil
+	}
+}
+
+// ShowSecretEventInvoker 查询事件
+func (c *CsmsClient) ShowSecretEventInvoker(request *model.ShowSecretEventRequest) *ShowSecretEventInvoker {
+	requestDef := GenReqDefForShowSecretEvent()
+	return &ShowSecretEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecretStage 查询凭据的版本状态
 //
 // 查询指定凭据版本状态标记的版本信息。
@@ -423,6 +528,27 @@ func (c *CsmsClient) UpdateSecretInvoker(request *model.UpdateSecretRequest) *Up
 	return &UpdateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateSecretEvent 更新事件
+//
+// 更新指定事件的元数据信息。支持更新的元数据包含事件启用状态、基础类型列表、通知主题。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) UpdateSecretEvent(request *model.UpdateSecretEventRequest) (*model.UpdateSecretEventResponse, error) {
+	requestDef := GenReqDefForUpdateSecretEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecretEventResponse), nil
+	}
+}
+
+// UpdateSecretEventInvoker 更新事件
+func (c *CsmsClient) UpdateSecretEventInvoker(request *model.UpdateSecretEventRequest) *UpdateSecretEventInvoker {
+	requestDef := GenReqDefForUpdateSecretEvent()
+	return &UpdateSecretEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSecretStage 更新凭据的版本状态
 //
 // 更新凭据的版本状态。
@@ -442,6 +568,27 @@ func (c *CsmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) 
 func (c *CsmsClient) UpdateSecretStageInvoker(request *model.UpdateSecretStageRequest) *UpdateSecretStageInvoker {
 	requestDef := GenReqDefForUpdateSecretStage()
 	return &UpdateSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVersion 更新凭据版本
+//
+// 当前支持更新指定凭据版本的有效期，只能更新ENABLED状态的凭据。在关联订阅的事件包含“版本过期”基础事件类型时，每次更新版本有效期后仅会触发一次事件通知。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) UpdateVersion(request *model.UpdateVersionRequest) (*model.UpdateVersionResponse, error) {
+	requestDef := GenReqDefForUpdateVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVersionResponse), nil
+	}
+}
+
+// UpdateVersionInvoker 更新凭据版本
+func (c *CsmsClient) UpdateVersionInvoker(request *model.UpdateVersionRequest) *UpdateVersionInvoker {
+	requestDef := GenReqDefForUpdateVersion()
+	return &UpdateVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadSecretBlob 恢复凭据对象

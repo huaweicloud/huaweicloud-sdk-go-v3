@@ -1029,6 +1029,27 @@ func (c *MeetingClient) DeleteResourceInvoker(request *model.DeleteResourceReque
 	return &DeleteResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteToken 注销登录
+//
+// 该接口提供注销功能。服务器收到请求后，删除该Token。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) DeleteToken(request *model.DeleteTokenRequest) (*model.DeleteTokenResponse, error) {
+	requestDef := GenReqDefForDeleteToken()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTokenResponse), nil
+	}
+}
+
+// DeleteTokenInvoker 注销登录
+func (c *MeetingClient) DeleteTokenInvoker(request *model.DeleteTokenRequest) *DeleteTokenInvoker {
+	requestDef := GenReqDefForDeleteToken()
+	return &DeleteTokenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteVisionActiveCode 企业管理员删除激活码
 //
 // 企业管理员批量删除激活码。

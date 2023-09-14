@@ -13,11 +13,14 @@ import (
 type AudioCreateRequest struct {
 	Data *AudioInputBody `json:"data"`
 
+	// 用户在控制台界面创建的biz_type名称，如果请求参数中传了biz_type则优先使用biz_type；如果用户没传biz_type则event_type和categories必须传。
+	BizType *string `json:"biz_type,omitempty"`
+
 	// 事件类型，可选值如下： default：默认事件 audiobook：有声书 education：教育音频 game：游戏语音房 live：秀场直播 ecommerce：电商直播 voiceroom：交友语音房 private：私密语音聊天
-	EventType AudioCreateRequestEventType `json:"event_type"`
+	EventType *AudioCreateRequestEventType `json:"event_type,omitempty"`
 
 	// 需要检测的风险类型，列表不能为空。 风险类型如下： - porn：涉黄检测 - ad：广告检测 - moan：娇喘检测 - abuse：辱骂检测
-	Categories []AudioCreateRequestCategories `json:"categories"`
+	Categories *[]AudioCreateRequestCategories `json:"categories,omitempty"`
 
 	// 回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
 	Callback *string `json:"callback,omitempty"`

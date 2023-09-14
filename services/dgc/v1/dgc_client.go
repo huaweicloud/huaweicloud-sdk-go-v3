@@ -363,6 +363,8 @@ func (c *DgcClient) ListJobInstancesInvoker(request *model.ListJobInstancesReque
 
 // ListJobs 查询作业列表
 //
+// 查询作业列表清单
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
 	requestDef := GenReqDefForListJobs()

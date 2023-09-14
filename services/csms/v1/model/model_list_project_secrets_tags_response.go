@@ -9,9 +9,9 @@ import (
 // ListProjectSecretsTagsResponse Response Object
 type ListProjectSecretsTagsResponse struct {
 
-	// 标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
-	Tags           *[]Tag `json:"tags,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	// 标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含20个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为128个字符。  - value：表示标签值。每个值最大长度255个字符，value之间为“与”的关系。
+	Tags           *[]TagResponse `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListProjectSecretsTagsResponse) String() string {

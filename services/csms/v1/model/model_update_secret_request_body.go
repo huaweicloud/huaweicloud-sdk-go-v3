@@ -14,6 +14,15 @@ type UpdateSecretRequestBody struct {
 
 	// 凭据的描述信息。 约束：2048字节。
 	Description *string `json:"description,omitempty"`
+
+	// 自动轮转  取值：true 开启 false 关
+	AutoRotation *bool `json:"auto_rotation,omitempty"`
+
+	// 轮转周期  约束：6小时-8,760小时 （365天）  类型：Integer[unit] ，Integer表示时间长度 。unit表示时间单位，d（天）、h（小时）、m（分钟）、s（秒）。例如 1d 表示一天，24h也表示一天  说明：当开启自动轮转时，必须填写该值
+	RotationPeriod *string `json:"rotation_period,omitempty"`
+
+	// 凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
+	EventSubscriptions *[]string `json:"event_subscriptions,omitempty"`
 }
 
 func (o UpdateSecretRequestBody) String() string {

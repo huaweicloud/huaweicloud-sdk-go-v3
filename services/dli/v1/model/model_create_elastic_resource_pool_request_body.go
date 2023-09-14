@@ -22,7 +22,7 @@ type CreateElasticResourcePoolRequestBody struct {
 	MaxCu int32 `json:"max_cu"`
 
 	// 计费类型 1、按需计费
-	ChargingMode int32 `json:"charging_mode"`
+	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// 最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
 	MinCu int32 `json:"min_cu"`

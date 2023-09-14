@@ -725,6 +725,18 @@ func (i *RestoreTablesInvoker) Invoke() (*model.RestoreTablesResponse, error) {
 	}
 }
 
+type RestoreTablesNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreTablesNewInvoker) Invoke() (*model.RestoreTablesNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreTablesNewResponse), nil
+	}
+}
+
 type RestoreToExistingInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1238,6 +1250,18 @@ func (i *UpgradeDbVersionInvoker) Invoke() (*model.UpgradeDbVersionResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpgradeDbVersionResponse), nil
+	}
+}
+
+type UpgradeDbVersionNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeDbVersionNewInvoker) Invoke() (*model.UpgradeDbVersionNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeDbVersionNewResponse), nil
 	}
 }
 

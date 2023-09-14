@@ -124,6 +124,48 @@ func (c *IoTEdgeClient) ShowEdgeNodeInvoker(request *model.ShowEdgeNodeRequest) 
 	return &ShowEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteDeviceControlsRelease 设备控制释放
+//
+// 设备控制释放
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ExecuteDeviceControlsRelease(request *model.ExecuteDeviceControlsReleaseRequest) (*model.ExecuteDeviceControlsReleaseResponse, error) {
+	requestDef := GenReqDefForExecuteDeviceControlsRelease()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDeviceControlsReleaseResponse), nil
+	}
+}
+
+// ExecuteDeviceControlsReleaseInvoker 设备控制释放
+func (c *IoTEdgeClient) ExecuteDeviceControlsReleaseInvoker(request *model.ExecuteDeviceControlsReleaseRequest) *ExecuteDeviceControlsReleaseInvoker {
+	requestDef := GenReqDefForExecuteDeviceControlsRelease()
+	return &ExecuteDeviceControlsReleaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteDeviceControlsSet 设备控制设置
+//
+// 设备控制设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ExecuteDeviceControlsSet(request *model.ExecuteDeviceControlsSetRequest) (*model.ExecuteDeviceControlsSetResponse, error) {
+	requestDef := GenReqDefForExecuteDeviceControlsSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDeviceControlsSetResponse), nil
+	}
+}
+
+// ExecuteDeviceControlsSetInvoker 设备控制设置
+func (c *IoTEdgeClient) ExecuteDeviceControlsSetInvoker(request *model.ExecuteDeviceControlsSetRequest) *ExecuteDeviceControlsSetInvoker {
+	requestDef := GenReqDefForExecuteDeviceControlsSet()
+	return &ExecuteDeviceControlsSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddDevice 添加设备
 //
 // 添加设备
@@ -1256,6 +1298,69 @@ func (c *IoTEdgeClient) ShowPoints(request *model.ShowPointsRequest) (*model.Sho
 func (c *IoTEdgeClient) ShowPointsInvoker(request *model.ShowPointsRequest) *ShowPointsInvoker {
 	requestDef := GenReqDefForShowPoints()
 	return &ShowPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSchedule 创建调度计划
+//
+// 用户通过北向接口在指定边缘节点上创建调度计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateSchedule(request *model.CreateScheduleRequest) (*model.CreateScheduleResponse, error) {
+	requestDef := GenReqDefForCreateSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScheduleResponse), nil
+	}
+}
+
+// CreateScheduleInvoker 创建调度计划
+func (c *IoTEdgeClient) CreateScheduleInvoker(request *model.CreateScheduleRequest) *CreateScheduleInvoker {
+	requestDef := GenReqDefForCreateSchedule()
+	return &CreateScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSchedule 删除调度计划
+//
+// 用户通过北向接口删除边缘节点上调度计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeleteSchedule(request *model.DeleteScheduleRequest) (*model.DeleteScheduleResponse, error) {
+	requestDef := GenReqDefForDeleteSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScheduleResponse), nil
+	}
+}
+
+// DeleteScheduleInvoker 删除调度计划
+func (c *IoTEdgeClient) DeleteScheduleInvoker(request *model.DeleteScheduleRequest) *DeleteScheduleInvoker {
+	requestDef := GenReqDefForDeleteSchedule()
+	return &DeleteScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSchedule 更新调度计划，机机接口，全量更新字段
+//
+// 用户通过北向接口修改边缘节点上调度计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateSchedule(request *model.UpdateScheduleRequest) (*model.UpdateScheduleResponse, error) {
+	requestDef := GenReqDefForUpdateSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScheduleResponse), nil
+	}
+}
+
+// UpdateScheduleInvoker 更新调度计划，机机接口，全量更新字段
+func (c *IoTEdgeClient) UpdateScheduleInvoker(request *model.UpdateScheduleRequest) *UpdateScheduleInvoker {
+	requestDef := GenReqDefForUpdateSchedule()
+	return &UpdateScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchConfirmConfigsNew 批量确认南向3rdIA配置项

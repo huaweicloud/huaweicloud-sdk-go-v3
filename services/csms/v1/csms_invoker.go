@@ -29,6 +29,18 @@ func (i *CreateSecretInvoker) Invoke() (*model.CreateSecretResponse, error) {
 	}
 }
 
+type CreateSecretEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecretEventInvoker) Invoke() (*model.CreateSecretEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecretEventResponse), nil
+	}
+}
+
 type CreateSecretTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +74,18 @@ func (i *DeleteSecretInvoker) Invoke() (*model.DeleteSecretResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteSecretResponse), nil
+	}
+}
+
+type DeleteSecretEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecretEventInvoker) Invoke() (*model.DeleteSecretEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecretEventResponse), nil
 	}
 }
 
@@ -113,6 +137,18 @@ func (i *DownloadSecretBlobInvoker) Invoke() (*model.DownloadSecretBlobResponse,
 	}
 }
 
+type ListNotificationRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationRecordsInvoker) Invoke() (*model.ListNotificationRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNotificationRecordsResponse), nil
+	}
+}
+
 type ListProjectSecretsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +170,18 @@ func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesRes
 		return nil, err
 	} else {
 		return result.(*model.ListResourceInstancesResponse), nil
+	}
+}
+
+type ListSecretEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecretEventsInvoker) Invoke() (*model.ListSecretEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecretEventsResponse), nil
 	}
 }
 
@@ -197,6 +245,18 @@ func (i *ShowSecretInvoker) Invoke() (*model.ShowSecretResponse, error) {
 	}
 }
 
+type ShowSecretEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecretEventInvoker) Invoke() (*model.ShowSecretEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecretEventResponse), nil
+	}
+}
+
 type ShowSecretStageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -233,6 +293,18 @@ func (i *UpdateSecretInvoker) Invoke() (*model.UpdateSecretResponse, error) {
 	}
 }
 
+type UpdateSecretEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecretEventInvoker) Invoke() (*model.UpdateSecretEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecretEventResponse), nil
+	}
+}
+
 type UpdateSecretStageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +314,18 @@ func (i *UpdateSecretStageInvoker) Invoke() (*model.UpdateSecretStageResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecretStageResponse), nil
+	}
+}
+
+type UpdateVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateVersionInvoker) Invoke() (*model.UpdateVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateVersionResponse), nil
 	}
 }
 

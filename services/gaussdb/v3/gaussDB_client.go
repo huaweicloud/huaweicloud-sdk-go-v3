@@ -587,6 +587,27 @@ func (c *GaussDBClient) InvokeGaussMySqlInstanceSwitchOverInvoker(request *model
 	return &InvokeGaussMySqlInstanceSwitchOverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAuditLogDownloadLink 获取全量SQL的临时下载链接
+//
+// 获取全量SQL的临时下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListAuditLogDownloadLink(request *model.ListAuditLogDownloadLinkRequest) (*model.ListAuditLogDownloadLinkResponse, error) {
+	requestDef := GenReqDefForListAuditLogDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAuditLogDownloadLinkResponse), nil
+	}
+}
+
+// ListAuditLogDownloadLinkInvoker 获取全量SQL的临时下载链接
+func (c *GaussDBClient) ListAuditLogDownloadLinkInvoker(request *model.ListAuditLogDownloadLinkRequest) *ListAuditLogDownloadLinkInvoker {
+	requestDef := GenReqDefForListAuditLogDownloadLink()
+	return &ListAuditLogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListGaussMySqlConfigurations 查询参数模板
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。

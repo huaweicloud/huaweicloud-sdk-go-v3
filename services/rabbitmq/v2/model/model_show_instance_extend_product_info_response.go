@@ -13,8 +13,8 @@ type ShowInstanceExtendProductInfoResponse struct {
 	Hourly *[]ShowInstanceExtendProductInfoRespHourly `json:"hourly,omitempty"`
 
 	// 表示包年包月的产品列表。当前暂不支持通过API创建包年包月的Rabbitmq实例。
-	Monthly        *[]ShowInstanceExtendProductInfoRespHourly `json:"monthly,omitempty"`
-	HttpStatusCode int                                        `json:"-"`
+	Monthly        *[]ShowInstanceExtendProductInfoRespMonthly `json:"monthly,omitempty"`
+	HttpStatusCode int                                         `json:"-"`
 }
 
 func (o ShowInstanceExtendProductInfoResponse) String() string {

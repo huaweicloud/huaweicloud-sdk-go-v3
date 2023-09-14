@@ -10,7 +10,7 @@ import (
 type TextDetectionReq struct {
 
 	// 事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
-	EventType string `json:"event_type"`
+	EventType *string `json:"event_type,omitempty"`
 
 	// 检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
 	GlossaryNames *[]string `json:"glossary_names,omitempty"`
@@ -19,6 +19,9 @@ type TextDetectionReq struct {
 
 	// 检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
 	WhiteGlossaryNames *[]string `json:"white_glossary_names,omitempty"`
+
+	// 自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type必须传。
+	BizType *string `json:"biz_type,omitempty"`
 }
 
 func (o TextDetectionReq) String() string {

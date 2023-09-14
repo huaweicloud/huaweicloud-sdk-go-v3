@@ -23,7 +23,7 @@ type HostInfo struct {
 
 	Authorization *HostAuthorizationBody `json:"authorization,omitempty"`
 
-	Permission *PermissionHostDetail `json:"permission,omitempty"`
+	Permission *PermissionHostDetailNew `json:"permission,omitempty"`
 
 	// 主机名称
 	HostName *string `json:"host_name,omitempty"`

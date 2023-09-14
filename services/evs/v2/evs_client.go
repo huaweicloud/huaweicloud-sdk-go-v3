@@ -406,6 +406,27 @@ func (c *EvsClient) ListVolumesByTagsInvoker(request *model.ListVolumesByTagsReq
 	return &ListVolumesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyVolumeQoS 修改云硬盘QoS
+//
+// 调整云硬盘的iops或者吞吐量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ModifyVolumeQoS(request *model.ModifyVolumeQoSRequest) (*model.ModifyVolumeQoSResponse, error) {
+	requestDef := GenReqDefForModifyVolumeQoS()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyVolumeQoSResponse), nil
+	}
+}
+
+// ModifyVolumeQoSInvoker 修改云硬盘QoS
+func (c *EvsClient) ModifyVolumeQoSInvoker(request *model.ModifyVolumeQoSRequest) *ModifyVolumeQoSInvoker {
+	requestDef := GenReqDefForModifyVolumeQoS()
+	return &ModifyVolumeQoSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResizeVolume 扩容云硬盘
 //
 // 对按需或者包周期云硬盘进行扩容。

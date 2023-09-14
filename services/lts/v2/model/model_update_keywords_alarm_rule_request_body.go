@@ -24,7 +24,7 @@ type UpdateKeywordsAlarmRuleRequestBody struct {
 	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
 
 	// 告警统计周期
-	Frequency *Frequency `json:"frequency"`
+	Frequency *interface{} `json:"frequency"`
 
 	// 告警级别
 	KeywordsAlarmLevel UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmLevel `json:"keywords_alarm_level"`
@@ -39,7 +39,7 @@ type UpdateKeywordsAlarmRuleRequestBody struct {
 	DomainId string `json:"domain_id"`
 
 	// 通知主题
-	NotificationSaveRule *SqlNotificationSaveRule `json:"notification_save_rule,omitempty"`
+	NotificationSaveRule *interface{} `json:"notification_save_rule,omitempty"`
 
 	// 触发条件：触发次数;默认为1
 	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`

@@ -18,7 +18,7 @@ type EventInfoDetail struct {
 	// 事件发生时间。UNIX时间戳，单位毫秒。  说明： 因为客户端到服务器端有延时，因此插入数据的时间戳应该在[当前时间-1小时+20秒，当前时间+10分钟-20秒]区间内，保证到达服务器时不会因为传输时延造成数据不能插入数据库。
 	Time int64 `json:"time"`
 
-	Detail *EventItemDetail `json:"detail"`
+	Detail *ShowEventItemDetail `json:"detail"`
 
 	// 事件ID。
 	EventId *string `json:"event_id,omitempty"`

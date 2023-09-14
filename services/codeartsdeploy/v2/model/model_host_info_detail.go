@@ -23,7 +23,7 @@ type HostInfoDetail struct {
 
 	Authorization *HostAuthorizationBody `json:"authorization,omitempty"`
 
-	Permission *PermissionHostDetail `json:"permission,omitempty"`
+	Permission *PermissionHostDetailNew `json:"permission,omitempty"`
 
 	// 主机集群id
 	GroupId *string `json:"group_id,omitempty"`
@@ -40,8 +40,7 @@ type HostInfoDetail struct {
 	// 主机所属人名称
 	OwnerName *string `json:"owner_name,omitempty"`
 
-	// 代理机
-	ProxyHost *string `json:"proxy_host,omitempty"`
+	ProxyHost *HostInfoDetail `json:"proxy_host,omitempty"`
 
 	// 连通性状态
 	ConnectionStatus *string `json:"connection_status,omitempty"`

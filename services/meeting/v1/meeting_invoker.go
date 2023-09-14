@@ -581,6 +581,18 @@ func (i *DeleteResourceInvoker) Invoke() (*model.DeleteResourceResponse, error) 
 	}
 }
 
+type DeleteTokenInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTokenInvoker) Invoke() (*model.DeleteTokenResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTokenResponse), nil
+	}
+}
+
 type DeleteVisionActiveCodeInvoker struct {
 	*invoker.BaseInvoker
 }

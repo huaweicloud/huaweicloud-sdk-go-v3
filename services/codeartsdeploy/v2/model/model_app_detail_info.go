@@ -76,7 +76,7 @@ type AppDetailInfo struct {
 	PermissionLevel *string `json:"permission_level,omitempty"`
 
 	// 部署任务信息
-	ArrangeInfos *interface{} `json:"arrange_infos,omitempty"`
+	ArrangeInfos *[]TaskV2Info `json:"arrange_infos,omitempty"`
 }
 
 func (o AppDetailInfo) String() string {

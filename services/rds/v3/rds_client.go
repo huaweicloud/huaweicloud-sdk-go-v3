@@ -1283,6 +1283,27 @@ func (c *RdsClient) RestoreTablesInvoker(request *model.RestoreTablesRequest) *R
 	return &RestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestoreTablesNew 表级时间点恢复(MySQL)
+//
+// 表级时间点恢复(MySQL)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) RestoreTablesNew(request *model.RestoreTablesNewRequest) (*model.RestoreTablesNewResponse, error) {
+	requestDef := GenReqDefForRestoreTablesNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreTablesNewResponse), nil
+	}
+}
+
+// RestoreTablesNewInvoker 表级时间点恢复(MySQL)
+func (c *RdsClient) RestoreTablesNewInvoker(request *model.RestoreTablesNewRequest) *RestoreTablesNewInvoker {
+	requestDef := GenReqDefForRestoreTablesNew()
+	return &RestoreTablesNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestoreToExistingInstance 恢复到已有实例
 //
 // 恢复到已有实例。
@@ -2188,6 +2209,27 @@ func (c *RdsClient) UpgradeDbVersion(request *model.UpgradeDbVersionRequest) (*m
 func (c *RdsClient) UpgradeDbVersionInvoker(request *model.UpgradeDbVersionRequest) *UpgradeDbVersionInvoker {
 	requestDef := GenReqDefForUpgradeDbVersion()
 	return &UpgradeDbVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeDbVersionNew 升级内核小版本
+//
+// 对实例进行小版本升级。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpgradeDbVersionNew(request *model.UpgradeDbVersionNewRequest) (*model.UpgradeDbVersionNewResponse, error) {
+	requestDef := GenReqDefForUpgradeDbVersionNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDbVersionNewResponse), nil
+	}
+}
+
+// UpgradeDbVersionNewInvoker 升级内核小版本
+func (c *RdsClient) UpgradeDbVersionNewInvoker(request *model.UpgradeDbVersionNewRequest) *UpgradeDbVersionNewInvoker {
+	requestDef := GenReqDefForUpgradeDbVersionNew()
+	return &UpgradeDbVersionNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersion 查询API版本列表

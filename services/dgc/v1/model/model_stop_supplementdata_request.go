@@ -13,7 +13,7 @@ type StopSupplementdataRequest struct {
 	Workspace *string `json:"workspace,omitempty"`
 
 	// 补数据名称.
-	InstanceName string `json:"instance_name"`
+	InstanceName string `json:"instanceName"`
 }
 
 func (o StopSupplementdataRequest) String() string {

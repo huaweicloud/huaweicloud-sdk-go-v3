@@ -5,30 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/image/v2/model"
 )
 
-type CreateImageHighresolutionMattingTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateImageHighresolutionMattingTaskInvoker) Invoke() (*model.CreateImageHighresolutionMattingTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateImageHighresolutionMattingTaskResponse), nil
-	}
-}
-
-type CreateVideoTaggingMediaTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVideoTaggingMediaTaskInvoker) Invoke() (*model.CreateVideoTaggingMediaTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVideoTaggingMediaTaskResponse), nil
-	}
-}
-
 type RunCelebrityRecognitionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,18 +14,6 @@ func (i *RunCelebrityRecognitionInvoker) Invoke() (*model.RunCelebrityRecognitio
 		return nil, err
 	} else {
 		return result.(*model.RunCelebrityRecognitionResponse), nil
-	}
-}
-
-type RunImageDescriptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunImageDescriptionInvoker) Invoke() (*model.RunImageDescriptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunImageDescriptionResponse), nil
 	}
 }
 
@@ -89,18 +53,6 @@ func (i *RunImageMediaTaggingDetInvoker) Invoke() (*model.RunImageMediaTaggingDe
 	}
 }
 
-type RunImageSuperResolutionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunImageSuperResolutionInvoker) Invoke() (*model.RunImageSuperResolutionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunImageSuperResolutionResponse), nil
-	}
-}
-
 type RunImageTaggingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,29 +74,5 @@ func (i *RunRecaptureDetectInvoker) Invoke() (*model.RunRecaptureDetectResponse,
 		return nil, err
 	} else {
 		return result.(*model.RunRecaptureDetectResponse), nil
-	}
-}
-
-type ShowImageHighresolutionMattingTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowImageHighresolutionMattingTaskInvoker) Invoke() (*model.ShowImageHighresolutionMattingTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowImageHighresolutionMattingTaskResponse), nil
-	}
-}
-
-type ShowVideoTaggingMediaTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVideoTaggingMediaTaskInvoker) Invoke() (*model.ShowVideoTaggingMediaTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVideoTaggingMediaTaskResponse), nil
 	}
 }

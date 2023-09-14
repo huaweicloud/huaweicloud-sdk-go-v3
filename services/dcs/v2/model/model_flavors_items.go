@@ -55,6 +55,9 @@ type FlavorsItems struct {
 
 	// 有资源的可用区。
 	FlavorsAvailableZones *[]FlavorAzObject `json:"flavors_available_zones,omitempty"`
+
+	// 副本数
+	ReplicaCount *int32 `json:"replica_count,omitempty"`
 }
 
 func (o FlavorsItems) String() string {

@@ -725,6 +725,18 @@ func (i *UpdateInstanceAutoCreateTopicInvoker) Invoke() (*model.UpdateInstanceAu
 	}
 }
 
+type UpdateInstanceConsumerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceConsumerGroupInvoker) Invoke() (*model.UpdateInstanceConsumerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceConsumerGroupResponse), nil
+	}
+}
+
 type UpdateInstanceCrossVpcIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -746,6 +758,18 @@ func (i *UpdateInstanceTopicInvoker) Invoke() (*model.UpdateInstanceTopicRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceTopicResponse), nil
+	}
+}
+
+type UpdateInstanceUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceUserInvoker) Invoke() (*model.UpdateInstanceUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceUserResponse), nil
 	}
 }
 

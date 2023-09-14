@@ -221,6 +221,18 @@ func (i *ListVolumesByTagsInvoker) Invoke() (*model.ListVolumesByTagsResponse, e
 	}
 }
 
+type ModifyVolumeQoSInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyVolumeQoSInvoker) Invoke() (*model.ModifyVolumeQoSResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyVolumeQoSResponse), nil
+	}
+}
+
 type ResizeVolumeInvoker struct {
 	*invoker.BaseInvoker
 }

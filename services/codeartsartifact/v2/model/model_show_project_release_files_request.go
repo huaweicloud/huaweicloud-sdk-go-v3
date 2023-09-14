@@ -18,7 +18,7 @@ type ShowProjectReleaseFilesRequest struct {
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 华为云devcloud的项目id
+	// 项目id
 	ProjectId string `json:"project_id"`
 }
 

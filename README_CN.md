@@ -99,7 +99,7 @@ func main() {
 	auth := basic.NewCredentialsBuilder().
 		// 鉴权使用的 Access Key 和 Secret Access Key
 		WithAk("{your ak string}").
-		WithSk("{your ak string}").
+		WithSk("{your sk string}").
 		// 如果未填写ProjectId，SDK会自动调用IAM服务查询所在region对应的项目id
 		WithProjectId("{your projectId string}").
 		// 配置SDK内置的IAM服务地址，默认为https://iam.myhuaweicloud.com
@@ -742,13 +742,13 @@ client := iam.NewIamClient(
 
 **注：**0.0.92版本起支持
 
-##### 3.3.1 IAM endpoint配置
+##### 3.3.1 IAM endpoint配置 [:top:](#用户手册-top)
 
 自动获取用户的 projectId 和 domainId 会分别调用统一身份认证服务的 [KeystoneListProjects](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListProjects) 和 [KeystoneListAuthDomains](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneListAuthDomains) 接口，默认访问的endpoint为 https://iam.myhuaweicloud.com，**欧洲站用户需要指定 endpoint 为 https://iam.eu-west-101.myhuaweicloud.com**
 
 用户可以通过以下两种方式来修改endpoint
 
-###### 3.3.1.1 全局级
+###### 3.3.1.1 全局级 [:top:](#用户手册-top)
 
 全局范围生效，通过环境变量`HUAWEICLOUD_SDK_IAM_ENDPOINT`指定
 
@@ -760,7 +760,7 @@ export HUAWEICLOUD_SDK_IAM_ENDPOINT=https://iam.cn-north-4.myhuaweicloud.com
 set HUAWEICLOUD_SDK_IAM_ENDPOINT=https://iam.cn-north-4.myhuaweicloud.com
 ```
 
-###### 3.3.1.2 凭证级
+###### 3.3.1.2 凭证级 [:top:](#用户手册-top)
 
 只对单个凭证生效，会覆盖全局配置
 
@@ -775,9 +775,9 @@ cred := basic.NewCredentialsBuilder().
 			Build()
 ```
 
-##### 3.3.2 Region配置
+##### 3.3.2 Region配置 [:top:](#用户手册-top)
 
-###### 3.3.2.1 环境变量
+###### 3.3.2.1 环境变量 [:top:](#用户手册-top)
 
 通过环境变量配置，格式为`HUAWEICLOUD_SDK_REGION_{SERIVCE_NAME}_{REGION_ID}={endpoint}`
 
@@ -795,7 +795,7 @@ set HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_99=https://ecs.cn-north-99.myhuaweicloud
 set HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_10=https://iotda.ap-southwest-10.myhuaweicloud.com
 ```
 
-###### 3.3.2.2 文件配置
+###### 3.3.2.2 文件配置 [:top:](#用户手册-top)
 
 通过yaml文件配置，默认会从用户主目录下读取region配置文件，linux为`~/.huaweicloud/regions.yaml`，windows为`C:\Users\USER_NAME\.huaweicloud\regions.yaml`，默认配置文件可以不存在，但是如果配置文件存在且内容格式不对会解析错误抛出异常。
 
@@ -815,7 +815,7 @@ IoTDA:
     endpoint: 'https://iotda.ap-southwest-9.myhuaweicloud.com'
 ```
 
-###### 3.3.2.3 Region提供链
+###### 3.3.2.3 Region提供链 [:top:](#用户手册-top)
 
 默认查找顺序为 **环境变量 -> 配置文件 -> SDK中已定义Region**，以上方式都找不到region会抛出异常，获取region示例：
 

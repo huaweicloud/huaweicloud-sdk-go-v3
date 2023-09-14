@@ -19,48 +19,6 @@ func ImageClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateImageHighresolutionMattingTask 创建图像高清抠图任务
-//
-// 创建图像高清抠图任务，将输入的高清图像中的商品主体从原图中扣取出来，输出商品主体图片或者蒙版。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) CreateImageHighresolutionMattingTask(request *model.CreateImageHighresolutionMattingTaskRequest) (*model.CreateImageHighresolutionMattingTaskResponse, error) {
-	requestDef := GenReqDefForCreateImageHighresolutionMattingTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateImageHighresolutionMattingTaskResponse), nil
-	}
-}
-
-// CreateImageHighresolutionMattingTaskInvoker 创建图像高清抠图任务
-func (c *ImageClient) CreateImageHighresolutionMattingTaskInvoker(request *model.CreateImageHighresolutionMattingTaskRequest) *CreateImageHighresolutionMattingTaskInvoker {
-	requestDef := GenReqDefForCreateImageHighresolutionMattingTask()
-	return &CreateImageHighresolutionMattingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateVideoTaggingMediaTask 创建视频标签任务
-//
-// 创建视频标签任务，输入一段视频，通过AI模型分析视频中的信息，输出视频所包含的媒资标签、名人标签、logo标签、语音标签、OCR标签等信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) CreateVideoTaggingMediaTask(request *model.CreateVideoTaggingMediaTaskRequest) (*model.CreateVideoTaggingMediaTaskResponse, error) {
-	requestDef := GenReqDefForCreateVideoTaggingMediaTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateVideoTaggingMediaTaskResponse), nil
-	}
-}
-
-// CreateVideoTaggingMediaTaskInvoker 创建视频标签任务
-func (c *ImageClient) CreateVideoTaggingMediaTaskInvoker(request *model.CreateVideoTaggingMediaTaskRequest) *CreateVideoTaggingMediaTaskInvoker {
-	requestDef := GenReqDefForCreateVideoTaggingMediaTask()
-	return &CreateVideoTaggingMediaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RunCelebrityRecognition 名人识别
 //
 // 分析并识别图片中包含的政治人物、明星及网红人物，返回人物信息及人脸坐标。
@@ -80,27 +38,6 @@ func (c *ImageClient) RunCelebrityRecognition(request *model.RunCelebrityRecogni
 func (c *ImageClient) RunCelebrityRecognitionInvoker(request *model.RunCelebrityRecognitionRequest) *RunCelebrityRecognitionInvoker {
 	requestDef := GenReqDefForRunCelebrityRecognition()
 	return &RunCelebrityRecognitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// RunImageDescription 图像描述
-//
-// 图像描述
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) RunImageDescription(request *model.RunImageDescriptionRequest) (*model.RunImageDescriptionResponse, error) {
-	requestDef := GenReqDefForRunImageDescription()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunImageDescriptionResponse), nil
-	}
-}
-
-// RunImageDescriptionInvoker 图像描述
-func (c *ImageClient) RunImageDescriptionInvoker(request *model.RunImageDescriptionRequest) *RunImageDescriptionInvoker {
-	requestDef := GenReqDefForRunImageDescription()
-	return &RunImageDescriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunImageMainObjectDetection 主体识别
@@ -166,27 +103,6 @@ func (c *ImageClient) RunImageMediaTaggingDetInvoker(request *model.RunImageMedi
 	return &RunImageMediaTaggingDetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunImageSuperResolution 图像超分
-//
-// 图像数据，base64编码，输入图像范围200px ~ 1080px，支持JPG/PNG/BMP/JPEG/WEBP格式
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) RunImageSuperResolution(request *model.RunImageSuperResolutionRequest) (*model.RunImageSuperResolutionResponse, error) {
-	requestDef := GenReqDefForRunImageSuperResolution()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunImageSuperResolutionResponse), nil
-	}
-}
-
-// RunImageSuperResolutionInvoker 图像超分
-func (c *ImageClient) RunImageSuperResolutionInvoker(request *model.RunImageSuperResolutionRequest) *RunImageSuperResolutionInvoker {
-	requestDef := GenReqDefForRunImageSuperResolution()
-	return &RunImageSuperResolutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RunImageTagging 图像标签
 //
 // 自然图像的语义内容非常丰富，一个图像包含多个标签内容，图像标签服务准确识别自然图片中数百种场景、上千种通用物体及其属性，让智能相册管理、照片检索和分类、基于场景内容或者物体的广告推荐等功能更加直观。使用时用户发送待处理图片，返回图片标签内容及相应置信度。
@@ -227,46 +143,4 @@ func (c *ImageClient) RunRecaptureDetect(request *model.RunRecaptureDetectReques
 func (c *ImageClient) RunRecaptureDetectInvoker(request *model.RunRecaptureDetectRequest) *RunRecaptureDetectInvoker {
 	requestDef := GenReqDefForRunRecaptureDetect()
 	return &RunRecaptureDetectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowImageHighresolutionMattingTask 查询图像高清抠图任务
-//
-// 查询图像高清抠图任务，返回参数配置以及任务状态信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) ShowImageHighresolutionMattingTask(request *model.ShowImageHighresolutionMattingTaskRequest) (*model.ShowImageHighresolutionMattingTaskResponse, error) {
-	requestDef := GenReqDefForShowImageHighresolutionMattingTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowImageHighresolutionMattingTaskResponse), nil
-	}
-}
-
-// ShowImageHighresolutionMattingTaskInvoker 查询图像高清抠图任务
-func (c *ImageClient) ShowImageHighresolutionMattingTaskInvoker(request *model.ShowImageHighresolutionMattingTaskRequest) *ShowImageHighresolutionMattingTaskInvoker {
-	requestDef := GenReqDefForShowImageHighresolutionMattingTask()
-	return &ShowImageHighresolutionMattingTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowVideoTaggingMediaTask 查询视频标签任务
-//
-// 查询视频标签任务详情，返回参数配置以及任务状态信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ImageClient) ShowVideoTaggingMediaTask(request *model.ShowVideoTaggingMediaTaskRequest) (*model.ShowVideoTaggingMediaTaskResponse, error) {
-	requestDef := GenReqDefForShowVideoTaggingMediaTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowVideoTaggingMediaTaskResponse), nil
-	}
-}
-
-// ShowVideoTaggingMediaTaskInvoker 查询视频标签任务
-func (c *ImageClient) ShowVideoTaggingMediaTaskInvoker(request *model.ShowVideoTaggingMediaTaskRequest) *ShowVideoTaggingMediaTaskInvoker {
-	requestDef := GenReqDefForShowVideoTaggingMediaTask()
-	return &ShowVideoTaggingMediaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
