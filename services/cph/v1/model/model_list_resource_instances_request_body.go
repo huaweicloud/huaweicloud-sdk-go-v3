@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ListResourceInstancesRequestBody 查询资源实例请求体
+// ListResourceInstancesRequestBody 查询资源实例请求体。
 type ListResourceInstancesRequestBody struct {
 
 	// 操作标识（仅限于filter，count）：filter（过滤），count(查询总条数)。 为filter时表示分页查询，为count只需按照条件将总条数返回即可。

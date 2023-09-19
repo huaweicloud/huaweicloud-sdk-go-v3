@@ -13,8 +13,10 @@ type ListAssetsResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 资产信息列表。
-	Assets         *[]DigitalAssetInfo `json:"assets,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Assets *[]DigitalAssetInfo `json:"assets,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListAssetsResponse) String() string {

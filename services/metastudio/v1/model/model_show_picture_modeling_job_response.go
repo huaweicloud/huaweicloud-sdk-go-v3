@@ -36,7 +36,9 @@ type ShowPictureModelingJobResponse struct {
 	StyleId *string `json:"style_id,omitempty"`
 
 	// 模型封面URL。
-	ModelCoverUrl  *string `json:"model_cover_url,omitempty"`
+	ModelCoverUrl *string `json:"model_cover_url,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

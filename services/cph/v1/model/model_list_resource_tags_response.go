@@ -9,7 +9,7 @@ import (
 // ListResourceTagsResponse Response Object
 type ListResourceTagsResponse struct {
 
-	// 资源标签列表
+	// 资源标签列表。
 	Tags           *[]Tag `json:"tags,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

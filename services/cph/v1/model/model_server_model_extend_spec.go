@@ -6,31 +6,31 @@ import (
 	"strings"
 )
 
-// ServerModelExtendSpec 云手机服务器的属性描述，不超过512个字节
+// ServerModelExtendSpec 云手机服务器的属性描述，不超过512个字节。
 type ServerModelExtendSpec struct {
 
-	// 云手机服务器cpu类型
+	// 云手机服务器cpu类型。
 	Cpu *string `json:"cpu,omitempty"`
 
-	// 云手机服务器内存类型
+	// 云手机服务器内存类型。
 	Memory *string `json:"memory,omitempty"`
 
-	// 云手机服务器磁盘类型
+	// 云手机服务器磁盘类型。
 	Disk *string `json:"disk,omitempty"`
 
-	// 云手机服务器网络类型
+	// 云手机服务器网络类型。
 	NetworkInterface *string `json:"network_interface,omitempty"`
 
-	// 云手机服务器gpu类型
+	// 云手机服务器gpu类型。
 	Gpu *string `json:"gpu,omitempty"`
 
-	// 云手机服务器bms规格
+	// 云手机服务器bms规格。
 	BmsFlavor *string `json:"bms_flavor,omitempty"`
 
-	// 云手机服务器gpu数量
+	// 云手机服务器gpu数量。
 	GpuCount *int32 `json:"gpu_count,omitempty"`
 
-	// 云手机服务器numa数量
+	// 云手机服务器numa数量。
 	NumaCount *int32 `json:"numa_count,omitempty"`
 }
 

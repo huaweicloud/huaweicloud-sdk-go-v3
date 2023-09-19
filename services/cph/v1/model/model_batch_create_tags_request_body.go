@@ -8,7 +8,7 @@ import (
 
 type BatchCreateTagsRequestBody struct {
 
-	// 操作标识： - create，创建
+	// 操作标识。 - create：创建
 	Action string `json:"action"`
 
 	// 标签列表。

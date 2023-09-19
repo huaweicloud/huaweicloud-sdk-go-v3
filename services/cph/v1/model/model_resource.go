@@ -18,7 +18,7 @@ type Resource struct {
 	// 资源名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 标签列表
+	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 }
 

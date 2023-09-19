@@ -9,10 +9,10 @@ import (
 // ResetCloudPhoneRequestBody 重置云手机请求体。
 type ResetCloudPhoneRequestBody struct {
 
-	// 云手机镜像
+	// 云手机镜像。
 	ImageId *string `json:"image_id,omitempty"`
 
-	// 云手机列表
+	// 云手机列表。
 	Phones []PhoneProperty `json:"phones"`
 }
 

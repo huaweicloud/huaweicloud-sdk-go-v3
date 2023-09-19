@@ -12,7 +12,7 @@ type ShowBandwidthDetailResponse struct {
 	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 带宽信息
+	// 带宽信息。
 	BandWidths     *[]Bandwidth `json:"band_widths,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

@@ -22,8 +22,10 @@ type ListTtsaDataResponse struct {
 	Animations *[]AnimationItem `json:"animations,omitempty"`
 
 	// 语义驱动的智能动作数据。
-	Motions        *[]MotionItem `json:"motions,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Motions *[]MotionItem `json:"motions,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTtsaDataResponse) String() string {

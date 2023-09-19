@@ -41,6 +41,18 @@ func (i *CreateMigprojectInvoker) Invoke() (*model.CreateMigprojectResponse, err
 	}
 }
 
+type CreatePrivacyAgreementsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivacyAgreementsInvoker) Invoke() (*model.CreatePrivacyAgreementsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivacyAgreementsResponse), nil
+	}
+}
+
 type CreateTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +302,18 @@ func (i *ShowPassphraseInvoker) Invoke() (*model.ShowPassphraseResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowPassphraseResponse), nil
+	}
+}
+
+type ShowPrivacyAgreementsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivacyAgreementsInvoker) Invoke() (*model.ShowPrivacyAgreementsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivacyAgreementsResponse), nil
 	}
 }
 

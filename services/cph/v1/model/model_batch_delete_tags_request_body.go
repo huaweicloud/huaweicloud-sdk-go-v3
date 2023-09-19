@@ -8,7 +8,7 @@ import (
 
 type BatchDeleteTagsRequestBody struct {
 
-	// 操作标识： - delete，刪除
+	// 操作标识。 - delete：刪除
 	Action string `json:"action"`
 
 	// 标签列表。

@@ -9,7 +9,7 @@ import (
 // UpdatePhoneNameResponse Response Object
 type UpdatePhoneNameResponse struct {
 
-	// 请求的唯一标识ID
+	// 请求的唯一标识ID。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

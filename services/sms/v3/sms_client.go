@@ -82,6 +82,27 @@ func (c *SmsClient) CreateMigprojectInvoker(request *model.CreateMigprojectReque
 	return &CreateMigprojectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePrivacyAgreements 同意隐私协议
+//
+// 同意隐私协议接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) CreatePrivacyAgreements(request *model.CreatePrivacyAgreementsRequest) (*model.CreatePrivacyAgreementsResponse, error) {
+	requestDef := GenReqDefForCreatePrivacyAgreements()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePrivacyAgreementsResponse), nil
+	}
+}
+
+// CreatePrivacyAgreementsInvoker 同意隐私协议
+func (c *SmsClient) CreatePrivacyAgreementsInvoker(request *model.CreatePrivacyAgreementsRequest) *CreatePrivacyAgreementsInvoker {
+	requestDef := GenReqDefForCreatePrivacyAgreements()
+	return &CreatePrivacyAgreementsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTask 创建迁移任务
 //
 // 根据源端服务器创建一个迁移任务。
@@ -523,6 +544,27 @@ func (c *SmsClient) ShowPassphraseInvoker(request *model.ShowPassphraseRequest) 
 	return &ShowPassphraseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPrivacyAgreements 查询用户是否同意隐私协议
+//
+// 查询用户是否同意隐私协议接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ShowPrivacyAgreements(request *model.ShowPrivacyAgreementsRequest) (*model.ShowPrivacyAgreementsResponse, error) {
+	requestDef := GenReqDefForShowPrivacyAgreements()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivacyAgreementsResponse), nil
+	}
+}
+
+// ShowPrivacyAgreementsInvoker 查询用户是否同意隐私协议
+func (c *SmsClient) ShowPrivacyAgreementsInvoker(request *model.ShowPrivacyAgreementsRequest) *ShowPrivacyAgreementsInvoker {
+	requestDef := GenReqDefForShowPrivacyAgreements()
+	return &ShowPrivacyAgreementsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowServer 查询指定ID的源端服务器
 //
 // 迁移Agent将源端服务器信息上报到主机迁移服务后，主机迁移服务会对迁移的可行性进行检测，该接口返回源端服务器的基本信息和检查结果。
@@ -546,7 +588,7 @@ func (c *SmsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowSer
 
 // ShowSha256 计算sha256
 //
-// 计算sha256
+// 计算sha256，加密字段值为uuid。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) ShowSha256(request *model.ShowSha256Request) (*model.ShowSha256Response, error) {

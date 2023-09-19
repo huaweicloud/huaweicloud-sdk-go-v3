@@ -14,7 +14,9 @@ type ListPictureModelingJobsResponse struct {
 
 	// 照片建模任务列表。
 	PictureModelingJobs *[]PictureModelingInfo `json:"picture_modeling_jobs,omitempty"`
-	HttpStatusCode      int                    `json:"-"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListPictureModelingJobsResponse) String() string {

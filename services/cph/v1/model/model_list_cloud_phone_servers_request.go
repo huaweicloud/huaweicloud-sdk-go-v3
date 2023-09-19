@@ -21,7 +21,7 @@ type ListCloudPhoneServersRequest struct {
 	// 云手机服务器的唯一标识。
 	ServerId *string `json:"server_id,omitempty"`
 
-	// 云手机服务器是否为自定义网络标识 - v1：系统定义网络的云手机服务器。 - v2：自定义网络的云手机服务器。
+	// 云手机服务器是否为自定义网络标识。 - v1：系统定义网络的云手机服务器 - v2：自定义网络的云手机服务器
 	NetworkVersion *string `json:"network_version,omitempty"`
 }
 

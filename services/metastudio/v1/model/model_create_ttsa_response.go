@@ -10,7 +10,9 @@ import (
 type CreateTtsaResponse struct {
 
 	// 任务ID。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,7 +8,8 @@ import (
 
 // RestoreAssetResponse Response Object
 type RestoreAssetResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RestoreAssetResponse) String() string {

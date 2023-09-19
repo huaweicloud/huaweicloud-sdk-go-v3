@@ -166,6 +166,237 @@ func (c *MetaStudioClient) UpdateDigitalAssetInvoker(request *model.UpdateDigita
 	return &UpdateDigitalAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDigitalHumanBusinessCard 创建数字人名片制作
+//
+// 该接口用于数字人名片制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateDigitalHumanBusinessCard(request *model.CreateDigitalHumanBusinessCardRequest) (*model.CreateDigitalHumanBusinessCardResponse, error) {
+	requestDef := GenReqDefForCreateDigitalHumanBusinessCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+// CreateDigitalHumanBusinessCardInvoker 创建数字人名片制作
+func (c *MetaStudioClient) CreateDigitalHumanBusinessCardInvoker(request *model.CreateDigitalHumanBusinessCardRequest) *CreateDigitalHumanBusinessCardInvoker {
+	requestDef := GenReqDefForCreateDigitalHumanBusinessCard()
+	return &CreateDigitalHumanBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDigitalHumanBusinessCard 删除数字人名片制作任务
+//
+// 该接口用于删除数字人名片制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteDigitalHumanBusinessCard(request *model.DeleteDigitalHumanBusinessCardRequest) (*model.DeleteDigitalHumanBusinessCardResponse, error) {
+	requestDef := GenReqDefForDeleteDigitalHumanBusinessCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+// DeleteDigitalHumanBusinessCardInvoker 删除数字人名片制作任务
+func (c *MetaStudioClient) DeleteDigitalHumanBusinessCardInvoker(request *model.DeleteDigitalHumanBusinessCardRequest) *DeleteDigitalHumanBusinessCardInvoker {
+	requestDef := GenReqDefForDeleteDigitalHumanBusinessCard()
+	return &DeleteDigitalHumanBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDigitalHumanBusinessCard 查询数字人名片制作任务列表
+//
+// 该接口用于查询数字人名片制作任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListDigitalHumanBusinessCard(request *model.ListDigitalHumanBusinessCardRequest) (*model.ListDigitalHumanBusinessCardResponse, error) {
+	requestDef := GenReqDefForListDigitalHumanBusinessCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+// ListDigitalHumanBusinessCardInvoker 查询数字人名片制作任务列表
+func (c *MetaStudioClient) ListDigitalHumanBusinessCardInvoker(request *model.ListDigitalHumanBusinessCardRequest) *ListDigitalHumanBusinessCardInvoker {
+	requestDef := GenReqDefForListDigitalHumanBusinessCard()
+	return &ListDigitalHumanBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDigitalHumanBusinessCard 查询数字人名片制作任务详情
+//
+// 该接口用于查询数字人名片制作任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowDigitalHumanBusinessCard(request *model.ShowDigitalHumanBusinessCardRequest) (*model.ShowDigitalHumanBusinessCardResponse, error) {
+	requestDef := GenReqDefForShowDigitalHumanBusinessCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+// ShowDigitalHumanBusinessCardInvoker 查询数字人名片制作任务详情
+func (c *MetaStudioClient) ShowDigitalHumanBusinessCardInvoker(request *model.ShowDigitalHumanBusinessCardRequest) *ShowDigitalHumanBusinessCardInvoker {
+	requestDef := GenReqDefForShowDigitalHumanBusinessCard()
+	return &ShowDigitalHumanBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDigitalHumanBusinessCard 更新数字人名片制作
+//
+// 该接口用于更新数字人名片制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateDigitalHumanBusinessCard(request *model.UpdateDigitalHumanBusinessCardRequest) (*model.UpdateDigitalHumanBusinessCardResponse, error) {
+	requestDef := GenReqDefForUpdateDigitalHumanBusinessCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+// UpdateDigitalHumanBusinessCardInvoker 更新数字人名片制作
+func (c *MetaStudioClient) UpdateDigitalHumanBusinessCardInvoker(request *model.UpdateDigitalHumanBusinessCardRequest) *UpdateDigitalHumanBusinessCardInvoker {
+	requestDef := GenReqDefForUpdateDigitalHumanBusinessCard()
+	return &UpdateDigitalHumanBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Cancel2DDigitalHumanVideo 取消等待中的分身数字人视频制作任务
+//
+// 该接口用于取消等待中的分身数字人视频制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Cancel2DDigitalHumanVideo(request *model.Cancel2DDigitalHumanVideoRequest) (*model.Cancel2DDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForCancel2DDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Cancel2DDigitalHumanVideoResponse), nil
+	}
+}
+
+// Cancel2DDigitalHumanVideoInvoker 取消等待中的分身数字人视频制作任务
+func (c *MetaStudioClient) Cancel2DDigitalHumanVideoInvoker(request *model.Cancel2DDigitalHumanVideoRequest) *Cancel2DDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForCancel2DDigitalHumanVideo()
+	return &Cancel2DDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Create2DDigitalHumanVideo 创建分身数字人视频制作任务
+//
+// 该接口用于创建分身数字人视频制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Create2DDigitalHumanVideo(request *model.Create2DDigitalHumanVideoRequest) (*model.Create2DDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForCreate2DDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Create2DDigitalHumanVideoResponse), nil
+	}
+}
+
+// Create2DDigitalHumanVideoInvoker 创建分身数字人视频制作任务
+func (c *MetaStudioClient) Create2DDigitalHumanVideoInvoker(request *model.Create2DDigitalHumanVideoRequest) *Create2DDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForCreate2DDigitalHumanVideo()
+	return &Create2DDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Show2DDigitalHumanVideo 查询分身数字人视频制作任务详情
+//
+// 该接口用于查询分身数字人视频制作任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Show2DDigitalHumanVideo(request *model.Show2DDigitalHumanVideoRequest) (*model.Show2DDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForShow2DDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Show2DDigitalHumanVideoResponse), nil
+	}
+}
+
+// Show2DDigitalHumanVideoInvoker 查询分身数字人视频制作任务详情
+func (c *MetaStudioClient) Show2DDigitalHumanVideoInvoker(request *model.Show2DDigitalHumanVideoRequest) *Show2DDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForShow2DDigitalHumanVideo()
+	return &Show2DDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelPhotoDigitalHumanVideo 取消等待中的照片分身数字人视频制作任务
+//
+// 该接口用于取消等待中的照片分身数字人视频制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CancelPhotoDigitalHumanVideo(request *model.CancelPhotoDigitalHumanVideoRequest) (*model.CancelPhotoDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForCancelPhotoDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelPhotoDigitalHumanVideoResponse), nil
+	}
+}
+
+// CancelPhotoDigitalHumanVideoInvoker 取消等待中的照片分身数字人视频制作任务
+func (c *MetaStudioClient) CancelPhotoDigitalHumanVideoInvoker(request *model.CancelPhotoDigitalHumanVideoRequest) *CancelPhotoDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForCancelPhotoDigitalHumanVideo()
+	return &CancelPhotoDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePhotoDigitalHumanVideo 创建照片分身数字人视频制作任务
+//
+// 该接口用于创建照片分身数字人视频制作任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreatePhotoDigitalHumanVideo(request *model.CreatePhotoDigitalHumanVideoRequest) (*model.CreatePhotoDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForCreatePhotoDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePhotoDigitalHumanVideoResponse), nil
+	}
+}
+
+// CreatePhotoDigitalHumanVideoInvoker 创建照片分身数字人视频制作任务
+func (c *MetaStudioClient) CreatePhotoDigitalHumanVideoInvoker(request *model.CreatePhotoDigitalHumanVideoRequest) *CreatePhotoDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForCreatePhotoDigitalHumanVideo()
+	return &CreatePhotoDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPhotoDigitalHumanVideo 查询照片分身数字人视频制作任务详情
+//
+// 该接口用于查询照片分身数字人视频制作任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPhotoDigitalHumanVideo(request *model.ShowPhotoDigitalHumanVideoRequest) (*model.ShowPhotoDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForShowPhotoDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPhotoDigitalHumanVideoResponse), nil
+	}
+}
+
+// ShowPhotoDigitalHumanVideoInvoker 查询照片分身数字人视频制作任务详情
+func (c *MetaStudioClient) ShowPhotoDigitalHumanVideoInvoker(request *model.ShowPhotoDigitalHumanVideoRequest) *ShowPhotoDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForShowPhotoDigitalHumanVideo()
+	return &ShowPhotoDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ConfirmFileUpload 确认文件已上传
 //
 // 资产文件上传完毕后，通过该接口确认上传完成。
@@ -311,6 +542,237 @@ func (c *MetaStudioClient) ShowPictureModelingJob(request *model.ShowPictureMode
 func (c *MetaStudioClient) ShowPictureModelingJobInvoker(request *model.ShowPictureModelingJobRequest) *ShowPictureModelingJobInvoker {
 	requestDef := GenReqDefForShowPictureModelingJob()
 	return &ShowPictureModelingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteSmartLiveCommand 控制数字人直播过程
+//
+// 该接口用于控制数字人直播过程。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ExecuteSmartLiveCommand(request *model.ExecuteSmartLiveCommandRequest) (*model.ExecuteSmartLiveCommandResponse, error) {
+	requestDef := GenReqDefForExecuteSmartLiveCommand()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteSmartLiveCommandResponse), nil
+	}
+}
+
+// ExecuteSmartLiveCommandInvoker 控制数字人直播过程
+func (c *MetaStudioClient) ExecuteSmartLiveCommandInvoker(request *model.ExecuteSmartLiveCommandRequest) *ExecuteSmartLiveCommandInvoker {
+	requestDef := GenReqDefForExecuteSmartLiveCommand()
+	return &ExecuteSmartLiveCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmartLive 查询数字人智能直播任务列表
+//
+// 该接口用于查询数字人智能直播任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartLive(request *model.ListSmartLiveRequest) (*model.ListSmartLiveResponse, error) {
+	requestDef := GenReqDefForListSmartLive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartLiveResponse), nil
+	}
+}
+
+// ListSmartLiveInvoker 查询数字人智能直播任务列表
+func (c *MetaStudioClient) ListSmartLiveInvoker(request *model.ListSmartLiveRequest) *ListSmartLiveInvoker {
+	requestDef := GenReqDefForListSmartLive()
+	return &ListSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// LiveEventReport 上报直播间事件
+//
+// 该接口用于上报直播间事件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) LiveEventReport(request *model.LiveEventReportRequest) (*model.LiveEventReportResponse, error) {
+	requestDef := GenReqDefForLiveEventReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LiveEventReportResponse), nil
+	}
+}
+
+// LiveEventReportInvoker 上报直播间事件
+func (c *MetaStudioClient) LiveEventReportInvoker(request *model.LiveEventReportRequest) *LiveEventReportInvoker {
+	requestDef := GenReqDefForLiveEventReport()
+	return &LiveEventReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSmartLive 查询数字人智能直播任务详情
+//
+// 该接口用于查询数字人智能直播任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowSmartLive(request *model.ShowSmartLiveRequest) (*model.ShowSmartLiveResponse, error) {
+	requestDef := GenReqDefForShowSmartLive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSmartLiveResponse), nil
+	}
+}
+
+// ShowSmartLiveInvoker 查询数字人智能直播任务详情
+func (c *MetaStudioClient) ShowSmartLiveInvoker(request *model.ShowSmartLiveRequest) *ShowSmartLiveInvoker {
+	requestDef := GenReqDefForShowSmartLive()
+	return &ShowSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartSmartLive 启动数字人智能直播任务
+//
+// 该接口用于启动数字人智能直播任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) StartSmartLive(request *model.StartSmartLiveRequest) (*model.StartSmartLiveResponse, error) {
+	requestDef := GenReqDefForStartSmartLive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartSmartLiveResponse), nil
+	}
+}
+
+// StartSmartLiveInvoker 启动数字人智能直播任务
+func (c *MetaStudioClient) StartSmartLiveInvoker(request *model.StartSmartLiveRequest) *StartSmartLiveInvoker {
+	requestDef := GenReqDefForStartSmartLive()
+	return &StartSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopSmartLive 结束数字人智能直播任务
+//
+// 该接口用于结束数字人智能直播任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) StopSmartLive(request *model.StopSmartLiveRequest) (*model.StopSmartLiveResponse, error) {
+	requestDef := GenReqDefForStopSmartLive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopSmartLiveResponse), nil
+	}
+}
+
+// StopSmartLiveInvoker 结束数字人智能直播任务
+func (c *MetaStudioClient) StopSmartLiveInvoker(request *model.StopSmartLiveRequest) *StopSmartLiveInvoker {
+	requestDef := GenReqDefForStopSmartLive()
+	return &StopSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSmartLiveRoom 创建智能直播间
+//
+// 该接口用于创建智能直播间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateSmartLiveRoom(request *model.CreateSmartLiveRoomRequest) (*model.CreateSmartLiveRoomResponse, error) {
+	requestDef := GenReqDefForCreateSmartLiveRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSmartLiveRoomResponse), nil
+	}
+}
+
+// CreateSmartLiveRoomInvoker 创建智能直播间
+func (c *MetaStudioClient) CreateSmartLiveRoomInvoker(request *model.CreateSmartLiveRoomRequest) *CreateSmartLiveRoomInvoker {
+	requestDef := GenReqDefForCreateSmartLiveRoom()
+	return &CreateSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSmartLiveRoom 删除智能直播间
+//
+// 该接口用于删除智能直播间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteSmartLiveRoom(request *model.DeleteSmartLiveRoomRequest) (*model.DeleteSmartLiveRoomResponse, error) {
+	requestDef := GenReqDefForDeleteSmartLiveRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSmartLiveRoomResponse), nil
+	}
+}
+
+// DeleteSmartLiveRoomInvoker 删除智能直播间
+func (c *MetaStudioClient) DeleteSmartLiveRoomInvoker(request *model.DeleteSmartLiveRoomRequest) *DeleteSmartLiveRoomInvoker {
+	requestDef := GenReqDefForDeleteSmartLiveRoom()
+	return &DeleteSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmartLiveRooms 查询智能直播间列表
+//
+// 该接口用于智能直播间列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartLiveRooms(request *model.ListSmartLiveRoomsRequest) (*model.ListSmartLiveRoomsResponse, error) {
+	requestDef := GenReqDefForListSmartLiveRooms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartLiveRoomsResponse), nil
+	}
+}
+
+// ListSmartLiveRoomsInvoker 查询智能直播间列表
+func (c *MetaStudioClient) ListSmartLiveRoomsInvoker(request *model.ListSmartLiveRoomsRequest) *ListSmartLiveRoomsInvoker {
+	requestDef := GenReqDefForListSmartLiveRooms()
+	return &ListSmartLiveRoomsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSmartLiveRoom 查询智能直播剧本详情
+//
+// 该接口用于查询智能直播剧本详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowSmartLiveRoom(request *model.ShowSmartLiveRoomRequest) (*model.ShowSmartLiveRoomResponse, error) {
+	requestDef := GenReqDefForShowSmartLiveRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSmartLiveRoomResponse), nil
+	}
+}
+
+// ShowSmartLiveRoomInvoker 查询智能直播剧本详情
+func (c *MetaStudioClient) ShowSmartLiveRoomInvoker(request *model.ShowSmartLiveRoomRequest) *ShowSmartLiveRoomInvoker {
+	requestDef := GenReqDefForShowSmartLiveRoom()
+	return &ShowSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSmartLiveRoom 更新智能直播间信息
+//
+// 该接口用于智能直播间信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateSmartLiveRoom(request *model.UpdateSmartLiveRoomRequest) (*model.UpdateSmartLiveRoomResponse, error) {
+	requestDef := GenReqDefForUpdateSmartLiveRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSmartLiveRoomResponse), nil
+	}
+}
+
+// UpdateSmartLiveRoomInvoker 更新智能直播间信息
+func (c *MetaStudioClient) UpdateSmartLiveRoomInvoker(request *model.UpdateSmartLiveRoomRequest) *UpdateSmartLiveRoomInvoker {
+	requestDef := GenReqDefForUpdateSmartLiveRoom()
+	return &UpdateSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStyles 查询数字人风格列表
@@ -500,4 +962,109 @@ func (c *MetaStudioClient) StopVideoMotionCaptureJob(request *model.StopVideoMot
 func (c *MetaStudioClient) StopVideoMotionCaptureJobInvoker(request *model.StopVideoMotionCaptureJobRequest) *StopVideoMotionCaptureJobInvoker {
 	requestDef := GenReqDefForStopVideoMotionCaptureJob()
 	return &StopVideoMotionCaptureJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVideoScripts 创建视频制作剧本
+//
+// 该接口用于创建视频制作剧本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateVideoScripts(request *model.CreateVideoScriptsRequest) (*model.CreateVideoScriptsResponse, error) {
+	requestDef := GenReqDefForCreateVideoScripts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVideoScriptsResponse), nil
+	}
+}
+
+// CreateVideoScriptsInvoker 创建视频制作剧本
+func (c *MetaStudioClient) CreateVideoScriptsInvoker(request *model.CreateVideoScriptsRequest) *CreateVideoScriptsInvoker {
+	requestDef := GenReqDefForCreateVideoScripts()
+	return &CreateVideoScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVideoScript 删除视频制作剧本
+//
+// 该接口用于删除视频制作剧本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteVideoScript(request *model.DeleteVideoScriptRequest) (*model.DeleteVideoScriptResponse, error) {
+	requestDef := GenReqDefForDeleteVideoScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVideoScriptResponse), nil
+	}
+}
+
+// DeleteVideoScriptInvoker 删除视频制作剧本
+func (c *MetaStudioClient) DeleteVideoScriptInvoker(request *model.DeleteVideoScriptRequest) *DeleteVideoScriptInvoker {
+	requestDef := GenReqDefForDeleteVideoScript()
+	return &DeleteVideoScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVideoScripts 查询视频制作剧本列表
+//
+// 该接口用于查询视频制作剧本列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListVideoScripts(request *model.ListVideoScriptsRequest) (*model.ListVideoScriptsResponse, error) {
+	requestDef := GenReqDefForListVideoScripts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVideoScriptsResponse), nil
+	}
+}
+
+// ListVideoScriptsInvoker 查询视频制作剧本列表
+func (c *MetaStudioClient) ListVideoScriptsInvoker(request *model.ListVideoScriptsRequest) *ListVideoScriptsInvoker {
+	requestDef := GenReqDefForListVideoScripts()
+	return &ListVideoScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVideoScript 查询视频制作剧本详情
+//
+// 该接口用于查询视频制作剧本详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowVideoScript(request *model.ShowVideoScriptRequest) (*model.ShowVideoScriptResponse, error) {
+	requestDef := GenReqDefForShowVideoScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVideoScriptResponse), nil
+	}
+}
+
+// ShowVideoScriptInvoker 查询视频制作剧本详情
+func (c *MetaStudioClient) ShowVideoScriptInvoker(request *model.ShowVideoScriptRequest) *ShowVideoScriptInvoker {
+	requestDef := GenReqDefForShowVideoScript()
+	return &ShowVideoScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVideoScript 更新视频制作剧本
+//
+// 该接口用于更新视频制作剧本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateVideoScript(request *model.UpdateVideoScriptRequest) (*model.UpdateVideoScriptResponse, error) {
+	requestDef := GenReqDefForUpdateVideoScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVideoScriptResponse), nil
+	}
+}
+
+// UpdateVideoScriptInvoker 更新视频制作剧本
+func (c *MetaStudioClient) UpdateVideoScriptInvoker(request *model.UpdateVideoScriptRequest) *UpdateVideoScriptInvoker {
+	requestDef := GenReqDefForUpdateVideoScript()
+	return &UpdateVideoScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

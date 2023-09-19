@@ -15,7 +15,7 @@ type UpdateConsumerGroupRequest struct {
 	// 消费组名称。
 	Group string `json:"group"`
 
-	Body *ConsumerGroup `json:"body,omitempty"`
+	Body *UpdateConsumerGroup `json:"body,omitempty"`
 }
 
 func (o UpdateConsumerGroupRequest) String() string {

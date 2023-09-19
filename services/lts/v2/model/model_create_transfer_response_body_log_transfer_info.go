@@ -19,8 +19,7 @@ type CreateTransferResponseBodyLogTransferInfo struct {
 	// 日志转储格式。只支持\"RAW\", \"JSON\"。RAW是指原始日志格式，JSON是指JSON日志格式。OBS转储和DIS转储支持JSON和RAW，DMS转储仅支持RAW
 	LogStorageFormat CreateTransferResponseBodyLogTransferInfoLogStorageFormat `json:"log_storage_format"`
 
-	// 日志转储详细信息
-	LogTransferDetail *interface{} `json:"log_transfer_detail"`
+	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`
 
 	// 日志转储方式。cycle是指周期性转储，realTime是指实时转储。OBS转储只支持\"cycle\"，DIS转储和DMS转储只支持\"realTime\"。
 	LogTransferMode CreateTransferResponseBodyLogTransferInfoLogTransferMode `json:"log_transfer_mode"`

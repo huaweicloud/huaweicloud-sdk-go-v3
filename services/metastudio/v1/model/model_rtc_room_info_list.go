@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RtcRoomInfoList RTC Animation加入房间信息。
+// RtcRoomInfoList RTC房间信息。
 type RtcRoomInfoList struct {
 
 	// RTC应用ID。
@@ -15,7 +15,7 @@ type RtcRoomInfoList struct {
 	// RTC房间ID。
 	RoomId *string `json:"room_id,omitempty"`
 
-	// 接入RTC的用户信息。
+	// 加入RTC房间用户信息。
 	Users *[]RtcUserInfo `json:"users,omitempty"`
 }
 

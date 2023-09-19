@@ -8,7 +8,9 @@ import (
 
 // CreateRocketMqMigrationTaskResponse Response Object
 type CreateRocketMqMigrationTaskResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 任务ID
+	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

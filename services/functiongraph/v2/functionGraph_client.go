@@ -660,6 +660,27 @@ func (c *FunctionGraphClient) InvokeFunctionInvoker(request *model.InvokeFunctio
 	return &InvokeFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListActiveAsyncInvocations 获取函数活跃异步调用请求列表
+//
+// 获取函数异步调用活跃请求列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListActiveAsyncInvocations(request *model.ListActiveAsyncInvocationsRequest) (*model.ListActiveAsyncInvocationsResponse, error) {
+	requestDef := GenReqDefForListActiveAsyncInvocations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListActiveAsyncInvocationsResponse), nil
+	}
+}
+
+// ListActiveAsyncInvocationsInvoker 获取函数活跃异步调用请求列表
+func (c *FunctionGraphClient) ListActiveAsyncInvocationsInvoker(request *model.ListActiveAsyncInvocationsRequest) *ListActiveAsyncInvocationsInvoker {
+	requestDef := GenReqDefForListActiveAsyncInvocations()
+	return &ListActiveAsyncInvocationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAsyncInvocations 获取函数异步调用请求列表
 //
 // 获取函数异步调用请求列表

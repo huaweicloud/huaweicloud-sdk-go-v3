@@ -9,7 +9,7 @@ import (
 // ShowSha256Request Request Object
 type ShowSha256Request struct {
 
-	// 关键字
+	// 关键字，加密字段值为uuid。
 	Key string `json:"key"`
 }
 

@@ -1489,6 +1489,111 @@ func (c *LtsClient) UpdateAomMappingRulesInvoker(request *model.UpdateAomMapping
 	return &UpdateAomMappingRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAdminConfig 获取日志汇聚开关
+//
+// 只能由管理员或者委托管理员调用    获取日志汇聚开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ShowAdminConfig(request *model.ShowAdminConfigRequest) (*model.ShowAdminConfigResponse, error) {
+	requestDef := GenReqDefForShowAdminConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAdminConfigResponse), nil
+	}
+}
+
+// ShowAdminConfigInvoker 获取日志汇聚开关
+func (c *LtsClient) ShowAdminConfigInvoker(request *model.ShowAdminConfigRequest) *ShowAdminConfigInvoker {
+	requestDef := GenReqDefForShowAdminConfig()
+	return &ShowAdminConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLogConvergeConfig 获取组织成员汇聚配置
+//
+// 只能由组织管理员或者委托管理员调用    获取组织成员汇聚配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ShowLogConvergeConfig(request *model.ShowLogConvergeConfigRequest) (*model.ShowLogConvergeConfigResponse, error) {
+	requestDef := GenReqDefForShowLogConvergeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogConvergeConfigResponse), nil
+	}
+}
+
+// ShowLogConvergeConfigInvoker 获取组织成员汇聚配置
+func (c *LtsClient) ShowLogConvergeConfigInvoker(request *model.ShowLogConvergeConfigRequest) *ShowLogConvergeConfigInvoker {
+	requestDef := GenReqDefForShowLogConvergeConfig()
+	return &ShowLogConvergeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMemberGroupAndStream 获取组织成员日志组日志流
+//
+// 只能由管理员或者委托管理员调用，获取组织成员日志组日志流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ShowMemberGroupAndStream(request *model.ShowMemberGroupAndStreamRequest) (*model.ShowMemberGroupAndStreamResponse, error) {
+	requestDef := GenReqDefForShowMemberGroupAndStream()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMemberGroupAndStreamResponse), nil
+	}
+}
+
+// ShowMemberGroupAndStreamInvoker 获取组织成员日志组日志流
+func (c *LtsClient) ShowMemberGroupAndStreamInvoker(request *model.ShowMemberGroupAndStreamRequest) *ShowMemberGroupAndStreamInvoker {
+	requestDef := GenReqDefForShowMemberGroupAndStream()
+	return &ShowMemberGroupAndStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogConvergeConfig 更新汇聚配置
+//
+// 只能由管理员或者委托管理员 ,更新汇聚配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) UpdateLogConvergeConfig(request *model.UpdateLogConvergeConfigRequest) (*model.UpdateLogConvergeConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLogConvergeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogConvergeConfigResponse), nil
+	}
+}
+
+// UpdateLogConvergeConfigInvoker 更新汇聚配置
+func (c *LtsClient) UpdateLogConvergeConfigInvoker(request *model.UpdateLogConvergeConfigRequest) *UpdateLogConvergeConfigInvoker {
+	requestDef := GenReqDefForUpdateLogConvergeConfig()
+	return &UpdateLogConvergeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSwitch 修改日志汇聚开关
+//
+// 只能由管理员或者委托管理员调用     修改日志汇聚开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) UpdateSwitch(request *model.UpdateSwitchRequest) (*model.UpdateSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSwitchResponse), nil
+	}
+}
+
+// UpdateSwitchInvoker 修改日志汇聚开关
+func (c *LtsClient) UpdateSwitchInvoker(request *model.UpdateSwitchRequest) *UpdateSwitchInvoker {
+	requestDef := GenReqDefForUpdateSwitch()
+	return &UpdateSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSqlAlarmRule 创建SQL告警规则
 //
 // 该接口用于创建SQL告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警

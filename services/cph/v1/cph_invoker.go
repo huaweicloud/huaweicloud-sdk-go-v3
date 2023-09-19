@@ -53,18 +53,6 @@ func (i *BatchImportCloudPhoneDataInvoker) Invoke() (*model.BatchImportCloudPhon
 	}
 }
 
-type BatchMigrateCloudPhoneInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchMigrateCloudPhoneInvoker) Invoke() (*model.BatchMigrateCloudPhoneResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchMigrateCloudPhoneResponse), nil
-	}
-}
-
 type ChangeCloudPhoneServerModelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,18 +62,6 @@ func (i *ChangeCloudPhoneServerModelInvoker) Invoke() (*model.ChangeCloudPhoneSe
 		return nil, err
 	} else {
 		return result.(*model.ChangeCloudPhoneServerModelResponse), nil
-	}
-}
-
-type CreateCloudPhoneServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateCloudPhoneServerInvoker) Invoke() (*model.CreateCloudPhoneServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateCloudPhoneServerResponse), nil
 	}
 }
 

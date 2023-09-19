@@ -365,6 +365,18 @@ func (i *InvokeFunctionInvoker) Invoke() (*model.InvokeFunctionResponse, error) 
 	}
 }
 
+type ListActiveAsyncInvocationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListActiveAsyncInvocationsInvoker) Invoke() (*model.ListActiveAsyncInvocationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListActiveAsyncInvocationsResponse), nil
+	}
+}
+
 type ListAsyncInvocationsInvoker struct {
 	*invoker.BaseInvoker
 }

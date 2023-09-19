@@ -85,41 +85,11 @@ func GenReqDefForBatchImportCloudPhoneData() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForBatchMigrateCloudPhone() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/cloud-phone/phones/batch-migrate").
-		WithResponse(new(model.BatchMigrateCloudPhoneResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForChangeCloudPhoneServerModel() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/cloud-phone/servers/change-server-model").
 		WithResponse(new(model.ChangeCloudPhoneServerModelResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateCloudPhoneServer() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/cloud-phone/phones").
-		WithResponse(new(model.CreateCloudPhoneServerResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

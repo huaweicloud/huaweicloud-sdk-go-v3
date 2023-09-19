@@ -8,7 +8,8 @@ import (
 
 // ConfirmFileUploadResponse Response Object
 type ConfirmFileUploadResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ConfirmFileUploadResponse) String() string {

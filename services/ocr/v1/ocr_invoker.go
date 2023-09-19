@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ocr/v1/model"
 )
 
+type RecognizeAcceptanceBillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeAcceptanceBillInvoker) Invoke() (*model.RecognizeAcceptanceBillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeAcceptanceBillResponse), nil
+	}
+}
+
 type RecognizeAutoClassificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -353,6 +365,18 @@ func (i *RecognizeQuotaInvoiceInvoker) Invoke() (*model.RecognizeQuotaInvoiceRes
 	}
 }
 
+type RecognizeRealEstateCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeRealEstateCertificateInvoker) Invoke() (*model.RecognizeRealEstateCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeRealEstateCertificateResponse), nil
+	}
+}
+
 type RecognizeSmartDocumentRecognizerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -449,6 +473,18 @@ func (i *RecognizeVatInvoiceInvoker) Invoke() (*model.RecognizeVatInvoiceRespons
 	}
 }
 
+type RecognizeVehicleCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeVehicleCertificateInvoker) Invoke() (*model.RecognizeVehicleCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeVehicleCertificateResponse), nil
+	}
+}
+
 type RecognizeVehicleLicenseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +494,18 @@ func (i *RecognizeVehicleLicenseInvoker) Invoke() (*model.RecognizeVehicleLicens
 		return nil, err
 	} else {
 		return result.(*model.RecognizeVehicleLicenseResponse), nil
+	}
+}
+
+type RecognizeVietnamIdCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeVietnamIdCardInvoker) Invoke() (*model.RecognizeVietnamIdCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeVietnamIdCardResponse), nil
 	}
 }
 

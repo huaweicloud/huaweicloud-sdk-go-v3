@@ -285,6 +285,48 @@ func (c *MrsClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameReq
 	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExpandCluster 扩容集群
+//
+// 对MRS集群进行扩容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ExpandCluster(request *model.ExpandClusterRequest) (*model.ExpandClusterResponse, error) {
+	requestDef := GenReqDefForExpandCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandClusterResponse), nil
+	}
+}
+
+// ExpandClusterInvoker 扩容集群
+func (c *MrsClient) ExpandClusterInvoker(request *model.ExpandClusterRequest) *ExpandClusterInvoker {
+	requestDef := GenReqDefForExpandCluster()
+	return &ExpandClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShrinkCluster 缩容集群
+//
+// 对MRS集群进行缩容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShrinkCluster(request *model.ShrinkClusterRequest) (*model.ShrinkClusterResponse, error) {
+	requestDef := GenReqDefForShrinkCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShrinkClusterResponse), nil
+	}
+}
+
+// ShrinkClusterInvoker 缩容集群
+func (c *MrsClient) ShrinkClusterInvoker(request *model.ShrinkClusterRequest) *ShrinkClusterInvoker {
+	requestDef := GenReqDefForShrinkCluster()
+	return &ShrinkClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDataConnector 创建数据连接
 //
 // 创建数据连接

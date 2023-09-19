@@ -12,7 +12,7 @@ type UpdateKeypairResponse struct {
 	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 任务信息
+	// 任务信息。
 	Jobs           *[]ServerJob `json:"jobs,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

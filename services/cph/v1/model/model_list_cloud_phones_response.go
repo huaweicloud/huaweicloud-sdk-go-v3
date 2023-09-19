@@ -9,12 +9,15 @@ import (
 // ListCloudPhonesResponse Response Object
 type ListCloudPhonesResponse struct {
 
-	// 云手机信息
+	// 云手机信息。
 	Phones *[]Phone `json:"phones,omitempty"`
 
 	// 请求的唯一标识ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 实例总数。
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListCloudPhonesResponse) String() string {

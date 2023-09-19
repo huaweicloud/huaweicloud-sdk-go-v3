@@ -12,7 +12,10 @@ type ListCloudPhoneServersResponse struct {
 	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 云手机服务器信息
+	// 实例总数。
+	Count *int32 `json:"count,omitempty"`
+
+	// 云手机服务器信息。
 	Servers        *[]Server `json:"servers,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

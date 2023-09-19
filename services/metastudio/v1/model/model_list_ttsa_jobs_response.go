@@ -13,8 +13,10 @@ type ListTtsaJobsResponse struct {
 	Total *int32 `json:"total,omitempty"`
 
 	// 语音驱动任务列表。
-	TtsaJobs       *[]TtsaJob `json:"ttsa_jobs,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	TtsaJobs *[]TtsaJob `json:"ttsa_jobs,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTtsaJobsResponse) String() string {

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Match 搜索字段
+// Match 搜索字段。
 type Match struct {
 
 	// 键。  当前key的参数值只能取“resource_name”，此时value的参数值为资源名称。

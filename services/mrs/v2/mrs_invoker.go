@@ -149,6 +149,30 @@ func (i *UpdateClusterNameInvoker) Invoke() (*model.UpdateClusterNameResponse, e
 	}
 }
 
+type ExpandClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandClusterInvoker) Invoke() (*model.ExpandClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandClusterResponse), nil
+	}
+}
+
+type ShrinkClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShrinkClusterInvoker) Invoke() (*model.ShrinkClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShrinkClusterResponse), nil
+	}
+}
+
 type CreateDataConnectorInvoker struct {
 	*invoker.BaseInvoker
 }

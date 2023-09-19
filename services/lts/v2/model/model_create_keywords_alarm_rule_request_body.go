@@ -31,8 +31,7 @@ type CreateKeywordsAlarmRuleRequestBody struct {
 	// domainId
 	DomainId string `json:"domain_id"`
 
-	// 通知主题
-	NotificationSaveRule *interface{} `json:"notification_save_rule,omitempty"`
+	NotificationSaveRule *SqlNotificationSaveRule `json:"notification_save_rule,omitempty"`
 
 	// 触发条件：触发次数;默认为1
 	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`

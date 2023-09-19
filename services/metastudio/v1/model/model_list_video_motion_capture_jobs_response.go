@@ -14,7 +14,9 @@ type ListVideoMotionCaptureJobsResponse struct {
 
 	// 视频驱动任务列表。
 	VideoMotionCaptureJobs *[]VideoMotionCaptureInfo `json:"video_motion_capture_jobs,omitempty"`
-	HttpStatusCode         int                       `json:"-"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListVideoMotionCaptureJobsResponse) String() string {

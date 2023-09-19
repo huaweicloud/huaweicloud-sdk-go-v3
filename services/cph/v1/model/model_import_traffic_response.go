@@ -12,7 +12,7 @@ type ImportTrafficResponse struct {
 	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 任务列表
+	// 任务列表。
 	Jobs           *[]PhoneJob `json:"jobs,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

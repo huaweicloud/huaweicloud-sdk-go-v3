@@ -17,13 +17,13 @@ type Volume struct {
 	// 存储资源详情。
 	ResourceInfo map[string]string `json:"resource_info,omitempty"`
 
-	// 并行文件系统或存储桶名称。
+	// 云存储名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 资源类型，当前只支持“obs”。
+	// 资源类型，当前只支持“obs”和“sfs”。
 	ResourceType *string `json:"resource_type,omitempty"`
 
-	// 存储资源子类型，例如：并行文件系统、存储桶。
+	// 存储资源子类型，包括：并行文件系统、存储桶、SFS3.0容量型。
 	ResourceSubType *VolumeResourceSubType `json:"resource_sub_type,omitempty"`
 
 	// 创建时间。

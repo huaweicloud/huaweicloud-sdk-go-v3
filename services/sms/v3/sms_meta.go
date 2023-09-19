@@ -71,6 +71,21 @@ func GenReqDefForCreateMigproject() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreatePrivacyAgreements() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/privacy-agreements").
+		WithResponse(new(model.CreatePrivacyAgreementsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -488,6 +503,17 @@ func GenReqDefForShowPassphrase() *def.HttpRequestDef {
 		WithName("TaskId").
 		WithJsonTag("task_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowPrivacyAgreements() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/privacy-agreements").
+		WithResponse(new(model.ShowPrivacyAgreementsResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -36,8 +36,7 @@ type ListChartsResponse struct {
 	// 日志流名称
 	LogStreamName *string `json:"log_stream_name,omitempty"`
 
-	// 图表配置详情
-	Config         *interface{} `json:"config,omitempty"`
+	Config         *ChartConfig `json:"config,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

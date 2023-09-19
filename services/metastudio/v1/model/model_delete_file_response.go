@@ -8,7 +8,8 @@ import (
 
 // DeleteFileResponse Response Object
 type DeleteFileResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteFileResponse) String() string {

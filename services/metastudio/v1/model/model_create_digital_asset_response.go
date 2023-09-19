@@ -10,7 +10,9 @@ import (
 type CreateDigitalAssetResponse struct {
 
 	// 数字资产ID。
-	AssetId        *string `json:"asset_id,omitempty"`
+	AssetId *string `json:"asset_id,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

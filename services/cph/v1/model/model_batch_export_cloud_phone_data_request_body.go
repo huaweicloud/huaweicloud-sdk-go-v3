@@ -9,7 +9,7 @@ import (
 // BatchExportCloudPhoneDataRequestBody 导出云手机数据请求体。
 type BatchExportCloudPhoneDataRequestBody struct {
 
-	// 待导出数据的云手机信息
+	// 待导出数据的云手机信息。
 	StorageInfos []StorageInfo `json:"storage_infos"`
 }
 

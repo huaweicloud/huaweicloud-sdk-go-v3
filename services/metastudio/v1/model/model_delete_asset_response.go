@@ -8,7 +8,8 @@ import (
 
 // DeleteAssetResponse Response Object
 type DeleteAssetResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteAssetResponse) String() string {

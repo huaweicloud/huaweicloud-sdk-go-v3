@@ -8,7 +8,7 @@ import (
 
 type RestartEncodeServerRequestBody struct {
 
-	// 待重启的编码服务的ID
+	// 待重启的编码服务的ID。
 	EncodeServerIds []string `json:"encode_server_ids"`
 }
 

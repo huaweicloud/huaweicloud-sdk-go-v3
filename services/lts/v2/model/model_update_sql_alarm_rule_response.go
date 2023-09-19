@@ -36,8 +36,7 @@ type UpdateSqlAlarmRuleResponse struct {
 	// SQL详细信息
 	SqlRequests *[]SqlRequest `json:"sql_requests,omitempty"`
 
-	// 告警统计周期
-	Frequency *interface{} `json:"frequency,omitempty"`
+	Frequency *Frequency `json:"frequency,omitempty"`
 
 	// 条件表达式
 	ConditionExpression *string `json:"condition_expression,omitempty"`

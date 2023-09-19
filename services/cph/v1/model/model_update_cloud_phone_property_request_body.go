@@ -9,7 +9,7 @@ import (
 // UpdateCloudPhonePropertyRequestBody 更新云手机属性请求体。
 type UpdateCloudPhonePropertyRequestBody struct {
 
-	// 手机列表
+	// 手机列表。
 	Phones []Property `json:"phones"`
 }
 

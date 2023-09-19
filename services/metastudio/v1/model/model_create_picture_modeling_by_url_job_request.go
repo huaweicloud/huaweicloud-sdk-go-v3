@@ -21,6 +21,9 @@ type CreatePictureModelingByUrlJobRequest struct {
 	// 开发者应用作为资产权属的可选字段。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
+	// 测试用户判断。
+	XUserPrivilege *string `json:"X-User-Privilege,omitempty"`
+
 	Body *PictureModelingByUrlReq `json:"body,omitempty"`
 }
 

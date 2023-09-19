@@ -89,6 +89,138 @@ func (i *UpdateDigitalAssetInvoker) Invoke() (*model.UpdateDigitalAssetResponse,
 	}
 }
 
+type CreateDigitalHumanBusinessCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDigitalHumanBusinessCardInvoker) Invoke() (*model.CreateDigitalHumanBusinessCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+type DeleteDigitalHumanBusinessCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDigitalHumanBusinessCardInvoker) Invoke() (*model.DeleteDigitalHumanBusinessCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+type ListDigitalHumanBusinessCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDigitalHumanBusinessCardInvoker) Invoke() (*model.ListDigitalHumanBusinessCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+type ShowDigitalHumanBusinessCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDigitalHumanBusinessCardInvoker) Invoke() (*model.ShowDigitalHumanBusinessCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+type UpdateDigitalHumanBusinessCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDigitalHumanBusinessCardInvoker) Invoke() (*model.UpdateDigitalHumanBusinessCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDigitalHumanBusinessCardResponse), nil
+	}
+}
+
+type Cancel2DDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Cancel2DDigitalHumanVideoInvoker) Invoke() (*model.Cancel2DDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Cancel2DDigitalHumanVideoResponse), nil
+	}
+}
+
+type Create2DDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Create2DDigitalHumanVideoInvoker) Invoke() (*model.Create2DDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Create2DDigitalHumanVideoResponse), nil
+	}
+}
+
+type Show2DDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Show2DDigitalHumanVideoInvoker) Invoke() (*model.Show2DDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Show2DDigitalHumanVideoResponse), nil
+	}
+}
+
+type CancelPhotoDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelPhotoDigitalHumanVideoInvoker) Invoke() (*model.CancelPhotoDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelPhotoDigitalHumanVideoResponse), nil
+	}
+}
+
+type CreatePhotoDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePhotoDigitalHumanVideoInvoker) Invoke() (*model.CreatePhotoDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePhotoDigitalHumanVideoResponse), nil
+	}
+}
+
+type ShowPhotoDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPhotoDigitalHumanVideoInvoker) Invoke() (*model.ShowPhotoDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPhotoDigitalHumanVideoResponse), nil
+	}
+}
+
 type ConfirmFileUploadInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,6 +302,138 @@ func (i *ShowPictureModelingJobInvoker) Invoke() (*model.ShowPictureModelingJobR
 		return nil, err
 	} else {
 		return result.(*model.ShowPictureModelingJobResponse), nil
+	}
+}
+
+type ExecuteSmartLiveCommandInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteSmartLiveCommandInvoker) Invoke() (*model.ExecuteSmartLiveCommandResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteSmartLiveCommandResponse), nil
+	}
+}
+
+type ListSmartLiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartLiveInvoker) Invoke() (*model.ListSmartLiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartLiveResponse), nil
+	}
+}
+
+type LiveEventReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LiveEventReportInvoker) Invoke() (*model.LiveEventReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LiveEventReportResponse), nil
+	}
+}
+
+type ShowSmartLiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmartLiveInvoker) Invoke() (*model.ShowSmartLiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmartLiveResponse), nil
+	}
+}
+
+type StartSmartLiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartSmartLiveInvoker) Invoke() (*model.StartSmartLiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartSmartLiveResponse), nil
+	}
+}
+
+type StopSmartLiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopSmartLiveInvoker) Invoke() (*model.StopSmartLiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopSmartLiveResponse), nil
+	}
+}
+
+type CreateSmartLiveRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSmartLiveRoomInvoker) Invoke() (*model.CreateSmartLiveRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSmartLiveRoomResponse), nil
+	}
+}
+
+type DeleteSmartLiveRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSmartLiveRoomInvoker) Invoke() (*model.DeleteSmartLiveRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSmartLiveRoomResponse), nil
+	}
+}
+
+type ListSmartLiveRoomsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartLiveRoomsInvoker) Invoke() (*model.ListSmartLiveRoomsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartLiveRoomsResponse), nil
+	}
+}
+
+type ShowSmartLiveRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmartLiveRoomInvoker) Invoke() (*model.ShowSmartLiveRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmartLiveRoomResponse), nil
+	}
+}
+
+type UpdateSmartLiveRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSmartLiveRoomInvoker) Invoke() (*model.UpdateSmartLiveRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSmartLiveRoomResponse), nil
 	}
 }
 
@@ -278,5 +542,65 @@ func (i *StopVideoMotionCaptureJobInvoker) Invoke() (*model.StopVideoMotionCaptu
 		return nil, err
 	} else {
 		return result.(*model.StopVideoMotionCaptureJobResponse), nil
+	}
+}
+
+type CreateVideoScriptsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVideoScriptsInvoker) Invoke() (*model.CreateVideoScriptsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVideoScriptsResponse), nil
+	}
+}
+
+type DeleteVideoScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVideoScriptInvoker) Invoke() (*model.DeleteVideoScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVideoScriptResponse), nil
+	}
+}
+
+type ListVideoScriptsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVideoScriptsInvoker) Invoke() (*model.ListVideoScriptsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVideoScriptsResponse), nil
+	}
+}
+
+type ShowVideoScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVideoScriptInvoker) Invoke() (*model.ShowVideoScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVideoScriptResponse), nil
+	}
+}
+
+type UpdateVideoScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateVideoScriptInvoker) Invoke() (*model.UpdateVideoScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateVideoScriptResponse), nil
 	}
 }

@@ -19,6 +19,27 @@ func OcrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// RecognizeAcceptanceBill 电子承兑汇票识别
+//
+// 识别电子承兑汇票识别中的关键字段, 并以json格式返回结构化结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeAcceptanceBill(request *model.RecognizeAcceptanceBillRequest) (*model.RecognizeAcceptanceBillResponse, error) {
+	requestDef := GenReqDefForRecognizeAcceptanceBill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeAcceptanceBillResponse), nil
+	}
+}
+
+// RecognizeAcceptanceBillInvoker 电子承兑汇票识别
+func (c *OcrClient) RecognizeAcceptanceBillInvoker(request *model.RecognizeAcceptanceBillRequest) *RecognizeAcceptanceBillInvoker {
+	requestDef := GenReqDefForRecognizeAcceptanceBill()
+	return &RecognizeAcceptanceBillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeAutoClassification 智能分类识别
 //
 // 检测定位图片上指定要识别的票证（票据、证件或其他文字载体），并对其进行结构化识别。接口以列表形式返回图片上要识别票证的位置坐标、结构化识别的内容以及对应的类别。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section3)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
@@ -681,6 +702,28 @@ func (c *OcrClient) RecognizeQuotaInvoiceInvoker(request *model.RecognizeQuotaIn
 	return &RecognizeQuotaInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizeRealEstateCertificate 不动产证识别
+//
+// 识别不动产证中的文字信息，并返回识别的结构化结果。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section11)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
+// 说明： 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeRealEstateCertificate(request *model.RecognizeRealEstateCertificateRequest) (*model.RecognizeRealEstateCertificateResponse, error) {
+	requestDef := GenReqDefForRecognizeRealEstateCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeRealEstateCertificateResponse), nil
+	}
+}
+
+// RecognizeRealEstateCertificateInvoker 不动产证识别
+func (c *OcrClient) RecognizeRealEstateCertificateInvoker(request *model.RecognizeRealEstateCertificateRequest) *RecognizeRealEstateCertificateInvoker {
+	requestDef := GenReqDefForRecognizeRealEstateCertificate()
+	return &RecognizeRealEstateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeSmartDocumentRecognizer 智能文档解析
 //
 // 对证件、票据、表单等任意版式文档进行键值对提取、文字识别、以及表格识别等任务，实现进阶高效的自动化结构化返回。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section11)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
@@ -861,6 +904,27 @@ func (c *OcrClient) RecognizeVatInvoiceInvoker(request *model.RecognizeVatInvoic
 	return &RecognizeVatInvoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizeVehicleCertificate 车辆合格证识别
+//
+// 识别车辆合格证中的文字信息，并返回识别的结构化结果。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section11)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeVehicleCertificate(request *model.RecognizeVehicleCertificateRequest) (*model.RecognizeVehicleCertificateResponse, error) {
+	requestDef := GenReqDefForRecognizeVehicleCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeVehicleCertificateResponse), nil
+	}
+}
+
+// RecognizeVehicleCertificateInvoker 车辆合格证识别
+func (c *OcrClient) RecognizeVehicleCertificateInvoker(request *model.RecognizeVehicleCertificateRequest) *RecognizeVehicleCertificateInvoker {
+	requestDef := GenReqDefForRecognizeVehicleCertificate()
+	return &RecognizeVehicleCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeVehicleLicense 行驶证识别
 //
 // 识别用户上传的行驶证图片（或者用户提供的华为云上OBS的行驶证图片文件的URL）中主页和副页的文字内容，并将识别的结果返回给用户。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section7)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
@@ -882,6 +946,27 @@ func (c *OcrClient) RecognizeVehicleLicense(request *model.RecognizeVehicleLicen
 func (c *OcrClient) RecognizeVehicleLicenseInvoker(request *model.RecognizeVehicleLicenseRequest) *RecognizeVehicleLicenseInvoker {
 	requestDef := GenReqDefForRecognizeVehicleLicense()
 	return &RecognizeVehicleLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeVietnamIdCard 越南身份证识别
+//
+// 识别越南身份证中的文字信息，并将识别的结构化结果返回给用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeVietnamIdCard(request *model.RecognizeVietnamIdCardRequest) (*model.RecognizeVietnamIdCardResponse, error) {
+	requestDef := GenReqDefForRecognizeVietnamIdCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeVietnamIdCardResponse), nil
+	}
+}
+
+// RecognizeVietnamIdCardInvoker 越南身份证识别
+func (c *OcrClient) RecognizeVietnamIdCardInvoker(request *model.RecognizeVietnamIdCardRequest) *RecognizeVietnamIdCardInvoker {
+	requestDef := GenReqDefForRecognizeVietnamIdCard()
+	return &RecognizeVietnamIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RecognizeWaybillElectronic 电子面单识别

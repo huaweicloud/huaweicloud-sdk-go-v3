@@ -8,7 +8,7 @@ import (
 
 type UpdateKeypairRequestBody struct {
 
-	// 待更改密钥对的云手机服务器信息
+	// 待更改密钥对的云手机服务器信息。
 	Servers []ServerKeypair `json:"servers"`
 }
 

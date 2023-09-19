@@ -9,10 +9,10 @@ import (
 // RestartEncodeServerResponse Response Object
 type RestartEncodeServerResponse struct {
 
-	// 请求的唯一标识ID
+	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 任务信息
+	// 任务信息。
 	Jobs           *[]EncodeServerJob `json:"jobs,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

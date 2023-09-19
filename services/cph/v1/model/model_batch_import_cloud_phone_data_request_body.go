@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BatchImportCloudPhoneDataRequestBody 导入云手机数据请求体
+// BatchImportCloudPhoneDataRequestBody 导入云手机数据请求体。
 type BatchImportCloudPhoneDataRequestBody struct {
 
-	// 待导入数据的云手机信息
+	// 待导入数据的云手机信息。
 	RestoreInfos []RestoreInfo `json:"restore_infos"`
 }
 

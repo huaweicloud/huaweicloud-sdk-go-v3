@@ -23,8 +23,7 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	// SQL详细信息
 	SqlRequests []SqlRequest `json:"sql_requests"`
 
-	// 告警统计周期
-	Frequency *interface{} `json:"frequency"`
+	Frequency *Frequency `json:"frequency"`
 
 	// 条件表达式
 	ConditionExpression string `json:"condition_expression"`
@@ -41,8 +40,7 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	// domainId
 	DomainId string `json:"domain_id"`
 
-	// 通知主题
-	NotificationSaveRule *interface{} `json:"notification_save_rule,omitempty"`
+	NotificationSaveRule *SqlNotificationSaveRule `json:"notification_save_rule,omitempty"`
 
 	// 触发条件：触发次数;默认为1
 	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`

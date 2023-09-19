@@ -9,10 +9,10 @@ import (
 // ListCloudPhoneServerModelsResponse Response Object
 type ListCloudPhoneServerModelsResponse struct {
 
-	// 请求的唯一标识ID
+	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 云手机服务器的规格信息
+	// 云手机服务器的规格信息。
 	ServerModels   *[]ServerModel `json:"server_models,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

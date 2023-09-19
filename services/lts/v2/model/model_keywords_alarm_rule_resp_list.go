@@ -29,8 +29,7 @@ type KeywordsAlarmRuleRespList struct {
 	// 关键词详细信息
 	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
 
-	// 告警统计周期
-	Frequency *interface{} `json:"frequency"`
+	Frequency *Frequency `json:"frequency"`
 
 	// 告警级别
 	KeywordsAlarmLevel KeywordsAlarmRuleRespListKeywordsAlarmLevel `json:"keywords_alarm_level"`

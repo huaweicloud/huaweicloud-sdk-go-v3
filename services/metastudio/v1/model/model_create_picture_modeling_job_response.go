@@ -13,7 +13,9 @@ type CreatePictureModelingJobResponse struct {
 	JobId *string `json:"job_id,omitempty"`
 
 	// 数字人资产ID。
-	ModelAssetId   *string `json:"model_asset_id,omitempty"`
+	ModelAssetId *string `json:"model_asset_id,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

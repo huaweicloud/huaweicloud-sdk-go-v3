@@ -9,10 +9,10 @@ import (
 // Property 云手机属性信息。
 type Property struct {
 
-	// 云手机id
+	// 云手机id，不超过32个字节。
 	PhoneId string `json:"phone_id"`
 
-	// 云手机属性列表
+	// 云手机属性列表，为Json格式字符串。
 	Property string `json:"property"`
 }
 

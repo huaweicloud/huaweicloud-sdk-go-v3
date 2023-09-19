@@ -13,7 +13,7 @@ type BaremetalServerTag struct {
 	Key string `json:"key"`
 
 	// 值列表。  - 最多20个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
-	Value string `json:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o BaremetalServerTag) String() string {

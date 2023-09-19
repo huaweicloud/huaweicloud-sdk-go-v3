@@ -42,8 +42,10 @@ type ShowAssetResponse struct {
 	SystemProperties *[]SystemProperty `json:"system_properties,omitempty"`
 
 	// 资产下的文件。
-	Files          *[]AssetFileInfo `json:"files,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Files *[]AssetFileInfo `json:"files,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowAssetResponse) String() string {

@@ -29,7 +29,9 @@ type ShowVideoMotionCaptureJobResponse struct {
 	StartTime *string `json:"start_time,omitempty"`
 
 	// 任务结束时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。
-	EndTime        *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -35,7 +35,7 @@ type PassportResult struct {
 	// 护照有效期（英文）。
 	DateOfExpiry *string `json:"date_of_expiry,omitempty"`
 
-	// 护照签发日期（英文）。
+	// 护照签发日期（英文）。只有中国护照才返回此字段。
 	DateOfIssue *string `json:"date_of_issue,omitempty"`
 
 	// 出生地（英文）。

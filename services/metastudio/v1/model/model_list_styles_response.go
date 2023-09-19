@@ -13,8 +13,10 @@ type ListStylesResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 风格信息列表
-	Styles         *[]StyleInfo `json:"styles,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Styles *[]StyleInfo `json:"styles,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListStylesResponse) String() string {

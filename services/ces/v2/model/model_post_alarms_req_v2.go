@@ -24,7 +24,7 @@ type PostAlarmsReqV2 struct {
 	Resources [][]Dimension `json:"resources"`
 
 	// 告警策略
-	Policies []Policy `json:"policies"`
+	Policies *[]Policy `json:"policies,omitempty"`
 
 	Type *AlarmType `json:"type"`
 

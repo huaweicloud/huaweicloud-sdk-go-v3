@@ -12,10 +12,10 @@ type ChangeCloudPhoneServerModelResponse struct {
 	// 请求的唯一标识ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 订单ID，不超过64个字节
+	// 订单ID，不超过64个字节。
 	OrderId *string `json:"order_id,omitempty"`
 
-	// 产品ID，不超过64个字节
+	// 产品ID，不超过64个字节。
 	ProductId      *string `json:"product_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

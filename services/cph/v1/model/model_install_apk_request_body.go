@@ -9,7 +9,7 @@ import (
 // InstallApkRequestBody 安装应用请求体。
 type InstallApkRequestBody struct {
 
-	// 安装应用固定填写install。
+	// 安装单apk场景填写install，多apk场景填写install-multiple。
 	Command string `json:"command"`
 
 	// 指定OBS桶中的apk文件（需要提前上传到指定桶中）。 只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。推送的文件只支持apk文件类型。  单apk场景，只能传一个apk，最大长度为1024字节；多apk场景，最多传50个apk，中间用空格分开，最大长度8100字节。

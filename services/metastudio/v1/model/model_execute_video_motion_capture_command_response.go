@@ -8,7 +8,8 @@ import (
 
 // ExecuteVideoMotionCaptureCommandResponse Response Object
 type ExecuteVideoMotionCaptureCommandResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ExecuteVideoMotionCaptureCommandResponse) String() string {
