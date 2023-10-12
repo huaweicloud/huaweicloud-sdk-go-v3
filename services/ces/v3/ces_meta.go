@@ -49,10 +49,6 @@ func GenReqDefForListAgentInvocations() *def.HttpRequestDef {
 		WithJsonTag("instance_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceName").
-		WithJsonTag("instance_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceType").
 		WithJsonTag("instance_type").
 		WithLocationType(def.Query))

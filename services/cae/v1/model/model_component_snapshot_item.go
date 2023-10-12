@@ -15,9 +15,6 @@ type ComponentSnapshotItem struct {
 	// 快照索引。
 	Index *int32 `json:"index,omitempty"`
 
-	// 描述信息。
-	Description *string `json:"description,omitempty"`
-
 	Context *ComponentSnapshotContext `json:"context,omitempty"`
 
 	// 创建时间。

@@ -13,10 +13,13 @@ import (
 type ListAppsTopRequest struct {
 
 	// 工作空间id
-	Workspace *string `json:"workspace,omitempty"`
+	Workspace string `json:"workspace"`
 
 	// dlm版本类型
 	DlmType ListAppsTopRequestDlmType `json:"Dlm-Type"`
+
+	// 资源类型
+	ContentType string `json:"Content-Type"`
 
 	// 开始时间（13位时间戳）
 	StartTime int64 `json:"start_time"`

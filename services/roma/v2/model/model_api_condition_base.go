@@ -14,19 +14,19 @@ type ApiConditionBase struct {
 	// 关联的请求参数对象名称。策略类型为param时必选
 	ReqParamName *string `json:"req_param_name,omitempty"`
 
-	// 系统参数名称。策略类型为system时必选。支持以下系统参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
+	// 系统参数名称。策略类型为system时必选。支持以下系统参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET - reqPath：请求路径，废弃。如 /a/b - reqMethod：请求方法，废弃。如 GET
 	SysParamName *ApiConditionBaseSysParamName `json:"sys_param_name,omitempty"`
 
 	// COOKIE参数名称;策略类型为cookie时必选
 	CookieParamName *string `json:"cookie_param_name,omitempty"`
 
-	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param时必选
+	// 策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param或cookie时必选
 	ConditionType *ApiConditionBaseConditionType `json:"condition_type,omitempty"`
 
-	// 策略类型 - param：参数 - source：源IP - system：系统参数
+	// 策略类型 - param：参数 - source：源IP - system：系统参数 - cookie: COOKIE参数
 	ConditionOrigin ApiConditionBaseConditionOrigin `json:"condition_origin"`
 
-	// 策略值
+	// 策略值;策略类型为param，source,cookie时必填
 	ConditionValue string `json:"condition_value"`
 }
 

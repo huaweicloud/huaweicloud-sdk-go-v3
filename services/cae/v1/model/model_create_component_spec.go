@@ -48,14 +48,17 @@ type CreateComponentSpecRuntime struct {
 }
 
 type CreateComponentSpecRuntimeEnum struct {
-	DOCKER  CreateComponentSpecRuntime
-	JAVA8   CreateComponentSpecRuntime
-	JAVA11  CreateComponentSpecRuntime
-	TOMCAT8 CreateComponentSpecRuntime
-	TOMCAT9 CreateComponentSpecRuntime
-	PYTHON3 CreateComponentSpecRuntime
-	NODEJS8 CreateComponentSpecRuntime
-	PHP7    CreateComponentSpecRuntime
+	DOCKER   CreateComponentSpecRuntime
+	JAVA8    CreateComponentSpecRuntime
+	JAVA11   CreateComponentSpecRuntime
+	JAVA17   CreateComponentSpecRuntime
+	TOMCAT8  CreateComponentSpecRuntime
+	TOMCAT9  CreateComponentSpecRuntime
+	PYTHON3  CreateComponentSpecRuntime
+	NODEJS8  CreateComponentSpecRuntime
+	NODEJS14 CreateComponentSpecRuntime
+	NODEJS16 CreateComponentSpecRuntime
+	PHP7     CreateComponentSpecRuntime
 }
 
 func GetCreateComponentSpecRuntimeEnum() CreateComponentSpecRuntimeEnum {
@@ -69,6 +72,9 @@ func GetCreateComponentSpecRuntimeEnum() CreateComponentSpecRuntimeEnum {
 		JAVA11: CreateComponentSpecRuntime{
 			value: "Java11",
 		},
+		JAVA17: CreateComponentSpecRuntime{
+			value: "Java17",
+		},
 		TOMCAT8: CreateComponentSpecRuntime{
 			value: "Tomcat8",
 		},
@@ -80,6 +86,12 @@ func GetCreateComponentSpecRuntimeEnum() CreateComponentSpecRuntimeEnum {
 		},
 		NODEJS8: CreateComponentSpecRuntime{
 			value: "Nodejs8",
+		},
+		NODEJS14: CreateComponentSpecRuntime{
+			value: "Nodejs14",
+		},
+		NODEJS16: CreateComponentSpecRuntime{
+			value: "Nodejs16",
 		},
 		PHP7: CreateComponentSpecRuntime{
 			value: "Php7",

@@ -86,6 +86,10 @@ func NewDefaultHttpClient(httpConfig *config.HttpConfig) *DefaultHttpClient {
 	return client
 }
 
+func (client *DefaultHttpClient) GetHttpConfig() config.HttpConfig {
+	return *client.httpConfig
+}
+
 func (client *DefaultHttpClient) SyncInvokeHttp(request *request.DefaultHttpRequest) (*response.DefaultHttpResponse,
 	error) {
 	exch := &exchange.SdkExchange{

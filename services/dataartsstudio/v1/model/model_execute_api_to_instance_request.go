@@ -13,7 +13,7 @@ import (
 type ExecuteApiToInstanceRequest struct {
 
 	// 工作空间id
-	Workspace *string `json:"workspace,omitempty"`
+	Workspace string `json:"workspace"`
 
 	// dlm版本类型
 	DlmType ExecuteApiToInstanceRequestDlmType `json:"Dlm-Type"`

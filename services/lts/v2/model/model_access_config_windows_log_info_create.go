@@ -13,12 +13,12 @@ import (
 type AccessConfigWindowsLogInfoCreate struct {
 
 	// 采集Windows事件日志类型。Application：应用系统，System：系统，Security：安全，Setup：启动
-	Categorys *[]AccessConfigWindowsLogInfoCreateCategorys `json:"categorys,omitempty"`
+	Categorys []AccessConfigWindowsLogInfoCreateCategorys `json:"categorys"`
 
-	TimeOffset *AccessConfigTimeOffsetCreate `json:"time_offset,omitempty"`
+	TimeOffset *AccessConfigTimeOffset `json:"time_offset"`
 
 	// 事件等级。information：info，warning：告警，error：错误，critical：关键，verbose：冗长
-	EventLevel *[]AccessConfigWindowsLogInfoCreateEventLevel `json:"event_level,omitempty"`
+	EventLevel []AccessConfigWindowsLogInfoCreateEventLevel `json:"event_level"`
 }
 
 func (o AccessConfigWindowsLogInfoCreate) String() string {

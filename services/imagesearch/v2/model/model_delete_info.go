@@ -10,10 +10,10 @@ import (
 type DeleteInfo struct {
 
 	// 符合条件的结果总数。
-	TotalNum float32 `json:"total_num,omitempty"`
+	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 本次删除的结果总数，目前一次请求最多删除100条结果。
-	DeleteNum float32 `json:"delete_num,omitempty"`
+	DeleteNum *int32 `json:"delete_num,omitempty"`
 }
 
 func (o DeleteInfo) String() string {

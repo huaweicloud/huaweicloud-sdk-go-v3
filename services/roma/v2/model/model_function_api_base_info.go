@@ -15,19 +15,22 @@ type FunctionApiBaseInfo struct {
 	// 函数URN
 	FunctionUrn string `json:"function_urn"`
 
+	// 对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
+	NetworkType *FunctionApiBaseInfoNetworkType `json:"network_type,omitempty"`
+
 	// 描述信息。 > 中文字符必须为UTF-8或者unicode编码。
 	Remark *string `json:"remark,omitempty"`
 
 	// 调用类型 - async： 异步 - sync：同步
 	InvocationType FunctionApiBaseInfoInvocationType `json:"invocation_type"`
 
-	// 版本。
+	// 函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	Version *string `json:"version,omitempty"`
 
-	// 函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	// 函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	AliasUrn *string `json:"alias_urn,omitempty"`
 
-	// ROMA Connect APIC请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
+	// 服务集成请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
 	Timeout int32 `json:"timeout"`
 
 	// 后端自定义认证ID
@@ -41,6 +44,53 @@ func (o FunctionApiBaseInfo) String() string {
 	}
 
 	return strings.Join([]string{"FunctionApiBaseInfo", string(data)}, " ")
+}
+
+type FunctionApiBaseInfoNetworkType struct {
+	value string
+}
+
+type FunctionApiBaseInfoNetworkTypeEnum struct {
+	V1 FunctionApiBaseInfoNetworkType
+	V2 FunctionApiBaseInfoNetworkType
+}
+
+func GetFunctionApiBaseInfoNetworkTypeEnum() FunctionApiBaseInfoNetworkTypeEnum {
+	return FunctionApiBaseInfoNetworkTypeEnum{
+		V1: FunctionApiBaseInfoNetworkType{
+			value: "V1",
+		},
+		V2: FunctionApiBaseInfoNetworkType{
+			value: "V2",
+		},
+	}
+}
+
+func (c FunctionApiBaseInfoNetworkType) Value() string {
+	return c.value
+}
+
+func (c FunctionApiBaseInfoNetworkType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *FunctionApiBaseInfoNetworkType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type FunctionApiBaseInfoInvocationType struct {

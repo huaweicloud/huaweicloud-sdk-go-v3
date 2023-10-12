@@ -16,7 +16,7 @@ type ApiGroupInfo struct {
 	// API分组名称
 	Name string `json:"name"`
 
-	// 状态   - 1： 有效
+	// 状态   - 1： 有效   - 2:  锁定
 	Status ApiGroupInfoStatus `json:"status"`
 
 	// 系统默认分配的子域名
@@ -28,7 +28,7 @@ type ApiGroupInfo struct {
 	// 最近修改时间
 	UpdateTime *sdktime.SdkTime `json:"update_time"`
 
-	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  ROMAConnect暂未对接云市场，此字段默认返回2
+	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  [ROMA Connect](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[ROMA Site](tag:Site)暂未对接云市场，此字段默认返回2
 	OnSellStatus int32 `json:"on_sell_status"`
 
 	// 分组上绑定的独立域名列表
@@ -77,12 +77,15 @@ type ApiGroupInfoStatus struct {
 
 type ApiGroupInfoStatusEnum struct {
 	E_1 ApiGroupInfoStatus
+	E_2 ApiGroupInfoStatus
 }
 
 func GetApiGroupInfoStatusEnum() ApiGroupInfoStatusEnum {
 	return ApiGroupInfoStatusEnum{
 		E_1: ApiGroupInfoStatus{
 			value: 1,
+		}, E_2: ApiGroupInfoStatus{
+			value: 2,
 		},
 	}
 }

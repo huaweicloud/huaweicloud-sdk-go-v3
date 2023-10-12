@@ -80,7 +80,7 @@ type ScalingGroups struct {
 	// 移除策略。
 	InstanceTerminatePolicy *ScalingGroupsInstanceTerminatePolicy `json:"instance_terminate_policy,omitempty"`
 
-	// 通知方式：EMAIL为发送邮件通知。该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
+	// 通知方式：  EMAIL为发送邮件通知。  该通知方式已经被废除，建议给弹性伸缩组配置通知功能。请参考[通知](https://support.huaweicloud.com/api-as/as_06_0800.html)。
 	Notifications *[]string `json:"notifications,omitempty"`
 
 	// 删除云服务器是否删除云服务器绑定的弹性IP。

@@ -118,6 +118,7 @@ type AlarmConditionSuppressDurationEnum struct {
 	E_10800 AlarmConditionSuppressDuration
 	E_21600 AlarmConditionSuppressDuration
 	E_43200 AlarmConditionSuppressDuration
+	E_86400 AlarmConditionSuppressDuration
 }
 
 func GetAlarmConditionSuppressDurationEnum() AlarmConditionSuppressDurationEnum {
@@ -140,6 +141,8 @@ func GetAlarmConditionSuppressDurationEnum() AlarmConditionSuppressDurationEnum 
 			value: 21600,
 		}, E_43200: AlarmConditionSuppressDuration{
 			value: 43200,
+		}, E_86400: AlarmConditionSuppressDuration{
+			value: 86400,
 		},
 	}
 }

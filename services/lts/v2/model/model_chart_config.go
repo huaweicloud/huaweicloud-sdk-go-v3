@@ -9,13 +9,13 @@ import (
 type ChartConfig struct {
 
 	// 是否开启排序
-	CanSort bool `json:"can_sort"`
+	CanSort bool `json:"canSort"`
 
 	// 是否开启搜索
-	CanSearch bool `json:"can_search"`
+	CanSearch bool `json:"canSearch"`
 
 	// 每页显示数量
-	PageSize int32 `json:"page_size"`
+	PageSize int32 `json:"pageSize"`
 }
 
 func (o ChartConfig) String() string {

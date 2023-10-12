@@ -27,7 +27,7 @@ type ListAclStrategiesV2Request struct {
 	// 类型 - PERMIT (白名单类型) - DENY (黑名单类型)
 	AclType *string `json:"acl_type,omitempty"`
 
-	// 作用的对象类型： - IP - DOMAIN
+	// 作用的对象类型： - IP - DOMAIN [Site不支持DOMAIN类型。](tag:Site)
 	EntityType *string `json:"entity_type,omitempty"`
 
 	// 指定需要精确匹配查找的参数名称，多个参数需要支持精确匹配时参数之间使用“,”隔开。  目前仅支持name。

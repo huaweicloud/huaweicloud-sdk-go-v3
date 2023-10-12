@@ -22,6 +22,9 @@ type ProjectVpcChannelInfo struct {
 	// VPC通道的成员类型。[site场景必须修改成IP类型](tag:Site) - ip - ecs
 	MemberType ProjectVpcChannelInfoMemberType `json:"member_type"`
 
+	// vpc通道类型。 - BUILTIN：BUILTIN通道类型 - MICROSERVICE：微服务类型
+	Type *ProjectVpcChannelInfoType `json:"type,omitempty"`
+
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
 	DictCode *string `json:"dict_code,omitempty"`
 
@@ -32,7 +35,7 @@ type ProjectVpcChannelInfo struct {
 	Id *string `json:"id,omitempty"`
 
 	// VPC通道的状态。 - 1：正常 - 2：异常
-	Status *ProjectVpcChannelInfoStatus `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 后端云服务器组列表。
 	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
@@ -49,9 +52,6 @@ type ProjectVpcChannelInfo struct {
 	VpcHealthConfig *VpcHealthConfigInfo `json:"vpc_health_config,omitempty"`
 
 	MicroserviceInfo *MicroServiceInfo `json:"microservice_info,omitempty"`
-
-	// vpc通道类型。 - BUILTIN：BUILTIN通道类型 - MICROSERVICE：微服务类型
-	Type *ProjectVpcChannelInfoType `json:"type,omitempty"`
 }
 
 func (o ProjectVpcChannelInfo) String() string {
@@ -159,52 +159,6 @@ func (c *ProjectVpcChannelInfoMemberType) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ProjectVpcChannelInfoStatus struct {
-	value int32
-}
-
-type ProjectVpcChannelInfoStatusEnum struct {
-	E_1 ProjectVpcChannelInfoStatus
-	E_2 ProjectVpcChannelInfoStatus
-}
-
-func GetProjectVpcChannelInfoStatusEnum() ProjectVpcChannelInfoStatusEnum {
-	return ProjectVpcChannelInfoStatusEnum{
-		E_1: ProjectVpcChannelInfoStatus{
-			value: 1,
-		}, E_2: ProjectVpcChannelInfoStatus{
-			value: 2,
-		},
-	}
-}
-
-func (c ProjectVpcChannelInfoStatus) Value() int32 {
-	return c.value
-}
-
-func (c ProjectVpcChannelInfoStatus) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ProjectVpcChannelInfoStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

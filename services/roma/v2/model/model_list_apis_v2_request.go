@@ -53,6 +53,12 @@ type ListApisV2Request struct {
 
 	// 负载通道名称。
 	VpcChannelName *string `json:"vpc_channel_name,omitempty"`
+
+	// 集成应用名称
+	RomaAppName *string `json:"roma_app_name,omitempty"`
+
+	// 集成应用编号
+	RomaAppId *string `json:"roma_app_id,omitempty"`
 }
 
 func (o ListApisV2Request) String() string {

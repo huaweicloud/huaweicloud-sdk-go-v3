@@ -11,6 +11,9 @@ type LayerPath struct {
 	// 目录编号
 	CatalogId *string `json:"catalog_id,omitempty"`
 
+	// 路径名
+	Name *string `json:"name,omitempty"`
+
 	// 路径层级
 	Order *int32 `json:"order,omitempty"`
 }

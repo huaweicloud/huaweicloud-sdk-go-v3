@@ -73,6 +73,9 @@ type FeatureInfoV2NameEnum struct {
 	APP_ACL                     FeatureInfoV2Name
 	VPC_BACKUP                  FeatureInfoV2Name
 	THROTTLE_STRATEGY           FeatureInfoV2Name
+	KAFKA_LOG_PLUGIN_OPTIONS    FeatureInfoV2Name
+	GZIP                        FeatureInfoV2Name
+	JS_INVOCABLE_CACHE_SIZE     FeatureInfoV2Name
 }
 
 func GetFeatureInfoV2NameEnum() FeatureInfoV2NameEnum {
@@ -166,6 +169,15 @@ func GetFeatureInfoV2NameEnum() FeatureInfoV2NameEnum {
 		},
 		THROTTLE_STRATEGY: FeatureInfoV2Name{
 			value: "throttle_strategy",
+		},
+		KAFKA_LOG_PLUGIN_OPTIONS: FeatureInfoV2Name{
+			value: "kafka_log_plugin_options",
+		},
+		GZIP: FeatureInfoV2Name{
+			value: "gzip",
+		},
+		JS_INVOCABLE_CACHE_SIZE: FeatureInfoV2Name{
+			value: "js_invocable_cache_size",
 		},
 	}
 }

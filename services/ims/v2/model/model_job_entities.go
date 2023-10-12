@@ -18,6 +18,21 @@ type JobEntities struct {
 	// 镜像名称
 	ImageName *string `json:"image_name,omitempty"`
 
+	// 添加错误码
+	AdditionErrorCode *string `json:"addition_error_code,omitempty"`
+
+	// 添加错误消息
+	AdditionErrorMsg *string `json:"addition_error_msg,omitempty"`
+
+	// 错误码
+	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 错误消息
+	Error *string `json:"error,omitempty"`
+
+	// 告警代码
+	AlarmCode *string `json:"alarm_code,omitempty"`
+
 	// 任务执行进度
 	ProcessPercent *float64 `json:"process_percent,omitempty"`
 

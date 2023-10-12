@@ -11,6 +11,9 @@ import (
 
 type LdApiDeploy struct {
 
+	// 后端API的编号
+	LdApiId *string `json:"ld_api_id,omitempty"`
+
 	// 是否自动发布API - true：部署完成后自动创建并发布前端API。此时auth_type，group_id，env_id，protocol必填。 - false：部署完成后不创建前端API
 	DeployFrontApi *bool `json:"deploy_front_api,omitempty"`
 
@@ -44,7 +47,7 @@ type LdApiDeploy struct {
 	// 部署到前端的api归属的应用编号，与后端归属的应用编号保持一致
 	RomaAppId *string `json:"roma_app_id,omitempty"`
 
-	// ROMA Connect APIC请求后端服务的重试次数，默认为-1，范围[-1,10]
+	// 服务集成请求后端服务的重试次数，默认为-1，范围[-1,10]
 	RetryCount *string `json:"retry_count,omitempty"`
 }
 

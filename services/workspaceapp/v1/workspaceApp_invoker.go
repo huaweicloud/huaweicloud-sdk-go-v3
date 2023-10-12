@@ -29,6 +29,18 @@ func (i *PublishAppInvoker) Invoke() (*model.PublishAppResponse, error) {
 	}
 }
 
+type ShowPublishableAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPublishableAppInvoker) Invoke() (*model.ShowPublishableAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPublishableAppResponse), nil
+	}
+}
+
 type UnpublishAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +62,18 @@ func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateAppResponse), nil
+	}
+}
+
+type UploadAppIconInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadAppIconInvoker) Invoke() (*model.UploadAppIconResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadAppIconResponse), nil
 	}
 }
 
@@ -113,6 +137,18 @@ func (i *ListProductInvoker) Invoke() (*model.ListProductResponse, error) {
 	}
 }
 
+type ListSessionTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSessionTypeInvoker) Invoke() (*model.ListSessionTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSessionTypeResponse), nil
+	}
+}
+
 type AddAppGroupAuthorizationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,6 +206,18 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowJobResponse), nil
+	}
+}
+
+type CreateOrUpdateStoragePolicyStatementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrUpdateStoragePolicyStatementInvoker) Invoke() (*model.CreateOrUpdateStoragePolicyStatementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrUpdateStoragePolicyStatementResponse), nil
 	}
 }
 
@@ -641,6 +689,18 @@ func (i *ListAppConnectionInvoker) Invoke() (*model.ListAppConnectionResponse, e
 	}
 }
 
+type ListSessionByUserNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSessionByUserNameInvoker) Invoke() (*model.ListSessionByUserNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSessionByUserNameResponse), nil
+	}
+}
+
 type ListUserConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -650,6 +710,18 @@ func (i *ListUserConnectionInvoker) Invoke() (*model.ListUserConnectionResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListUserConnectionResponse), nil
+	}
+}
+
+type LogoffUserSessionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LogoffUserSessionInvoker) Invoke() (*model.LogoffUserSessionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LogoffUserSessionResponse), nil
 	}
 }
 

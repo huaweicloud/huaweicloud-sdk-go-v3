@@ -17,11 +17,17 @@ type ShowDetailsOfCustomAuthorizersV2Response struct {
 	// 自定义认证类型  - FRONTEND：前端 - BACKEND：后端
 	Type ShowDetailsOfCustomAuthorizersV2ResponseType `json:"type"`
 
-	// 自定义认证函数类型： - LD：自定义后端函数 - FUNC：函数服务函数
+	// 自定义认证函数类型： - LD：自定义后端函数 - FUNC：[函数服务函数](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[暂不支持](tag:Site)
 	AuthorizerType ShowDetailsOfCustomAuthorizersV2ResponseAuthorizerType `json:"authorizer_type"`
 
 	// 函数地址。  注意：使用自定义后端的函数API，API请求方法必须为POST，且API状态必须为已部署。
 	AuthorizerUri string `json:"authorizer_uri"`
+
+	// 函数版本。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	AuthorizerVersion *string `json:"authorizer_version,omitempty"`
+
+	// 函数别名地址。  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	AuthorizerAliasUri *string `json:"authorizer_alias_uri,omitempty"`
 
 	// 认证来源
 	Identities *[]Identity `json:"identities,omitempty"`

@@ -15,7 +15,7 @@ type DiskInfo struct {
 	// 磁盘大小，容量单位为GB。系统盘输入大小范围为1~1024，且不小于镜像中系统盘的最小(min_disk属性)值。数据盘输入大小范围为10~32768。
 	Size int32 `json:"size"`
 
-	// 云服务器系统盘对应的磁盘类型，需要与系统所提供的磁盘类型相匹配。SATA：普通IO磁盘类型。SAS：高IO磁盘类型。SSD：超高IO磁盘类型。GPSSD：通用型SSD磁盘类型。co-p1：高IO (性能优化Ⅰ型)uh-l1：超高IO (时延优化)当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。说明：对于HANA云服务器、HL1型云服务器、HL2型云服务器，需使用co-p1和uh-l1两种磁盘类型。对于其他类型的云服务器，不能使用co-p1和uh-l1两种磁盘类型。了解不同磁盘类型的详细信息，请参见[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+	// 云服务器系统盘对应的磁盘类型，需要与系统所提供的磁盘类型相匹配。  SATA：普通IO磁盘类型。 SAS：高IO磁盘类型。 SSD：超高IO磁盘类型。 GPSSD：通用型SSD磁盘类型。 co-p1：高IO (性能优化Ⅰ型) uh-l1：超高IO (时延优化) 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 对于HANA云服务器、HL1型云服务器、HL2型云服务器，需使用co-p1和uh-l1两种磁盘类型。对于其他类型的云服务器，不能使用co-p1和uh-l1两种磁盘类型。  了解不同磁盘类型的详细信息，请参见[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
 	VolumeType DiskInfoVolumeType `json:"volume_type"`
 
 	// 系统盘还是数据盘，DATA表示为数据盘，SYS表示为系统盘。 说明： 系统盘不支持加密。

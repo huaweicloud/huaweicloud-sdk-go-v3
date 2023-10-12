@@ -24,12 +24,12 @@ type RespInstanceBase struct {
 	Status *RespInstanceBaseStatus `json:"status,omitempty"`
 
 	// 实例状态对应编号 - 1：创建中 - 2：创建成功 - 3：创建失败 - 4：初始化中 - 5：注册中 - 6：运行中 - 7：初始化失败 - 8：注册失败 - 10：安装中 - 11：安装失败 - 12：升级中 - 13：升级失败 - 20：回滚中 - 21：回滚成功 - 22：回滚失败 - 23：删除中 - 24：删除失败 - 25：注销中 - 26：注销失败 - 27：创建超时 - 28：初始化超时 - 29：注册超时 - 30：安装超时 - 31：升级超时 - 32：回滚超时 - 33：删除超时 - 34：注销超时 - 35：启动中 - 36：冻结中 - 37：已冻结 - 38：重启中 - 39：重启失败 - 40：实例异常 - 41：重启超时
-	InstanceStatus *RespInstanceBaseInstanceStatus `json:"instance_status,omitempty"`
+	InstanceStatus *int32 `json:"instance_status,omitempty"`
 
 	// 实例类型  暂不支持
 	Type *string `json:"type,omitempty"`
 
-	// 实例规格： - ROMA_BASIC：基础版实例 - ROMA_PROFESSIONAL：专业版实例 - ROMA_ENTERPRISE：企业版实例 - ROMA_PLATINUM：铂金版实例 [- ROMA_BASIC_IPV6：基础版IPV6实例](tag:hcs) [- ROMA_PROFESSIONAL_IPV6：专业版IPV6实例](tag:hcs) [- ROMA_ENTERPRISE_IPV6：企业版IPV6实例](tag:hcs) [- ROMA_PLATINUM_IPV6：铂金版IPV6实例](tag:hcs)
+	// 实例规格：  [- ROMA_BASIC：基础版实例](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)  [- ROMA_PROFESSIONAL：专业版实例](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)  [- ROMA_ENTERPRISE：企业版实例](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)  [- ROMA_PLATINUM：铂金版实例](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)  [- ROMA_BASIC_IPV6：基础版IPv6实例](tag:hcs,hcs_sm)  [- ROMA_PROFESSIONAL_IPV6：专业版IPv6实例](tag:hcs,hcs_sm)  [- ROMA_ENTERPRISE_IPV6：企业版IPv6实例](tag:hcs,hcs_sm)  [- ROMA_PLATINUM_IPV6：铂金版IPv6实例](tag:hcs,hcs_sm)  [ROMASITE_BASIC：Site版实例](tag:Site)
 	Spec *RespInstanceBaseSpec `json:"spec,omitempty"`
 
 	// 实例创建时间。unix时间戳格式。
@@ -41,10 +41,10 @@ type RespInstanceBase struct {
 	// 实例绑定的弹性IP地址
 	EipAddress *string `json:"eip_address,omitempty"`
 
-	// 实例计费方式： - 0：按需计费 - 1：包周期计费
-	ChargingMode *RespInstanceBaseChargingMode `json:"charging_mode,omitempty"`
+	// 实例计费方式[，暂未使用](tag:fcs,hcs,hcs_sm,Site) [0：按需计费](tag:hws,hws_hk,g42) [1：包周期计费](tag:hws,hws_hk)
+	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
-	// 包周期计费订单编号
+	// 计费订单编号，[包周期计费时使用。](tag:hws,hws_hk)[暂未使用。](tag:fcs,hcs,hcs_sm,g42,Site)
 	CbcMetadata *string `json:"cbc_metadata,omitempty"`
 }
 
@@ -232,148 +232,6 @@ func (c *RespInstanceBaseStatus) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type RespInstanceBaseInstanceStatus struct {
-	value int32
-}
-
-type RespInstanceBaseInstanceStatusEnum struct {
-	E_1  RespInstanceBaseInstanceStatus
-	E_2  RespInstanceBaseInstanceStatus
-	E_3  RespInstanceBaseInstanceStatus
-	E_4  RespInstanceBaseInstanceStatus
-	E_5  RespInstanceBaseInstanceStatus
-	E_6  RespInstanceBaseInstanceStatus
-	E_7  RespInstanceBaseInstanceStatus
-	E_8  RespInstanceBaseInstanceStatus
-	E_10 RespInstanceBaseInstanceStatus
-	E_11 RespInstanceBaseInstanceStatus
-	E_12 RespInstanceBaseInstanceStatus
-	E_13 RespInstanceBaseInstanceStatus
-	E_20 RespInstanceBaseInstanceStatus
-	E_21 RespInstanceBaseInstanceStatus
-	E_22 RespInstanceBaseInstanceStatus
-	E_23 RespInstanceBaseInstanceStatus
-	E_24 RespInstanceBaseInstanceStatus
-	E_25 RespInstanceBaseInstanceStatus
-	E_26 RespInstanceBaseInstanceStatus
-	E_27 RespInstanceBaseInstanceStatus
-	E_28 RespInstanceBaseInstanceStatus
-	E_29 RespInstanceBaseInstanceStatus
-	E_30 RespInstanceBaseInstanceStatus
-	E_31 RespInstanceBaseInstanceStatus
-	E_32 RespInstanceBaseInstanceStatus
-	E_33 RespInstanceBaseInstanceStatus
-	E_34 RespInstanceBaseInstanceStatus
-	E_35 RespInstanceBaseInstanceStatus
-	E_36 RespInstanceBaseInstanceStatus
-	E_37 RespInstanceBaseInstanceStatus
-	E_38 RespInstanceBaseInstanceStatus
-	E_39 RespInstanceBaseInstanceStatus
-	E_40 RespInstanceBaseInstanceStatus
-	E_41 RespInstanceBaseInstanceStatus
-}
-
-func GetRespInstanceBaseInstanceStatusEnum() RespInstanceBaseInstanceStatusEnum {
-	return RespInstanceBaseInstanceStatusEnum{
-		E_1: RespInstanceBaseInstanceStatus{
-			value: 1,
-		}, E_2: RespInstanceBaseInstanceStatus{
-			value: 2,
-		}, E_3: RespInstanceBaseInstanceStatus{
-			value: 3,
-		}, E_4: RespInstanceBaseInstanceStatus{
-			value: 4,
-		}, E_5: RespInstanceBaseInstanceStatus{
-			value: 5,
-		}, E_6: RespInstanceBaseInstanceStatus{
-			value: 6,
-		}, E_7: RespInstanceBaseInstanceStatus{
-			value: 7,
-		}, E_8: RespInstanceBaseInstanceStatus{
-			value: 8,
-		}, E_10: RespInstanceBaseInstanceStatus{
-			value: 10,
-		}, E_11: RespInstanceBaseInstanceStatus{
-			value: 11,
-		}, E_12: RespInstanceBaseInstanceStatus{
-			value: 12,
-		}, E_13: RespInstanceBaseInstanceStatus{
-			value: 13,
-		}, E_20: RespInstanceBaseInstanceStatus{
-			value: 20,
-		}, E_21: RespInstanceBaseInstanceStatus{
-			value: 21,
-		}, E_22: RespInstanceBaseInstanceStatus{
-			value: 22,
-		}, E_23: RespInstanceBaseInstanceStatus{
-			value: 23,
-		}, E_24: RespInstanceBaseInstanceStatus{
-			value: 24,
-		}, E_25: RespInstanceBaseInstanceStatus{
-			value: 25,
-		}, E_26: RespInstanceBaseInstanceStatus{
-			value: 26,
-		}, E_27: RespInstanceBaseInstanceStatus{
-			value: 27,
-		}, E_28: RespInstanceBaseInstanceStatus{
-			value: 28,
-		}, E_29: RespInstanceBaseInstanceStatus{
-			value: 29,
-		}, E_30: RespInstanceBaseInstanceStatus{
-			value: 30,
-		}, E_31: RespInstanceBaseInstanceStatus{
-			value: 31,
-		}, E_32: RespInstanceBaseInstanceStatus{
-			value: 32,
-		}, E_33: RespInstanceBaseInstanceStatus{
-			value: 33,
-		}, E_34: RespInstanceBaseInstanceStatus{
-			value: 34,
-		}, E_35: RespInstanceBaseInstanceStatus{
-			value: 35,
-		}, E_36: RespInstanceBaseInstanceStatus{
-			value: 36,
-		}, E_37: RespInstanceBaseInstanceStatus{
-			value: 37,
-		}, E_38: RespInstanceBaseInstanceStatus{
-			value: 38,
-		}, E_39: RespInstanceBaseInstanceStatus{
-			value: 39,
-		}, E_40: RespInstanceBaseInstanceStatus{
-			value: 40,
-		}, E_41: RespInstanceBaseInstanceStatus{
-			value: 41,
-		},
-	}
-}
-
-func (c RespInstanceBaseInstanceStatus) Value() int32 {
-	return c.value
-}
-
-func (c RespInstanceBaseInstanceStatus) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *RespInstanceBaseInstanceStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
-}
-
 type RespInstanceBaseSpec struct {
 	value string
 }
@@ -387,6 +245,7 @@ type RespInstanceBaseSpecEnum struct {
 	ROMA_PROFESSIONAL_IPV6 RespInstanceBaseSpec
 	ROMA_ENTERPRISE_IPV6   RespInstanceBaseSpec
 	ROMA_PLATINUM_IPV6     RespInstanceBaseSpec
+	ROMASITE_BASIC         RespInstanceBaseSpec
 }
 
 func GetRespInstanceBaseSpecEnum() RespInstanceBaseSpecEnum {
@@ -415,6 +274,9 @@ func GetRespInstanceBaseSpecEnum() RespInstanceBaseSpecEnum {
 		ROMA_PLATINUM_IPV6: RespInstanceBaseSpec{
 			value: "ROMA_PLATINUM_IPV6",
 		},
+		ROMASITE_BASIC: RespInstanceBaseSpec{
+			value: "ROMASITE_BASIC",
+		},
 	}
 }
 
@@ -442,51 +304,5 @@ func (c *RespInstanceBaseSpec) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type RespInstanceBaseChargingMode struct {
-	value int32
-}
-
-type RespInstanceBaseChargingModeEnum struct {
-	E_0 RespInstanceBaseChargingMode
-	E_1 RespInstanceBaseChargingMode
-}
-
-func GetRespInstanceBaseChargingModeEnum() RespInstanceBaseChargingModeEnum {
-	return RespInstanceBaseChargingModeEnum{
-		E_0: RespInstanceBaseChargingMode{
-			value: 0,
-		}, E_1: RespInstanceBaseChargingMode{
-			value: 1,
-		},
-	}
-}
-
-func (c RespInstanceBaseChargingMode) Value() int32 {
-	return c.value
-}
-
-func (c RespInstanceBaseChargingMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *RespInstanceBaseChargingMode) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }

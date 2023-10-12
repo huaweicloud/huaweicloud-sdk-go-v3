@@ -10,8 +10,8 @@ import (
 type RunOnceResponse struct {
 
 	// 作业实例id
-	InstanceId     *string `json:"instanceId,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	InstanceId     *int64 `json:"instanceId,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o RunOnceResponse) String() string {

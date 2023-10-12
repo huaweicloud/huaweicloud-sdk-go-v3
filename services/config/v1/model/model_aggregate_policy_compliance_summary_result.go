@@ -14,6 +14,9 @@ type AggregatePolicyComplianceSummaryResult struct {
 
 	// 分组名称
 	GroupName *string `json:"group_name,omitempty"`
+
+	// 账号名称
+	GroupAccountName *string `json:"group_account_name,omitempty"`
 }
 
 func (o AggregatePolicyComplianceSummaryResult) String() string {

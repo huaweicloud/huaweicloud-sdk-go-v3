@@ -35,7 +35,6 @@ type ListTagResourceInstancesRequestResourceTypeEnum struct {
 	DC_DIRECTCONNECT ListTagResourceInstancesRequestResourceType
 	DC_VGW           ListTagResourceInstancesRequestResourceType
 	DC_VIF           ListTagResourceInstancesRequestResourceType
-	DC_LAG           ListTagResourceInstancesRequestResourceType
 }
 
 func GetListTagResourceInstancesRequestResourceTypeEnum() ListTagResourceInstancesRequestResourceTypeEnum {
@@ -48,9 +47,6 @@ func GetListTagResourceInstancesRequestResourceTypeEnum() ListTagResourceInstanc
 		},
 		DC_VIF: ListTagResourceInstancesRequestResourceType{
 			value: "dc-vif",
-		},
-		DC_LAG: ListTagResourceInstancesRequestResourceType{
-			value: "dc-lag",
 		},
 	}
 }

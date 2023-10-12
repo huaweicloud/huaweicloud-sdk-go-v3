@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// VehicleLicenseResult
 type VehicleLicenseResult struct {
 
 	// 号牌号码。
@@ -73,6 +74,13 @@ type VehicleLicenseResult struct {
 
 	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
 	TextLocation *interface{} `json:"text_location,omitempty"`
+
+	// 能源类型。
+	EnergyType *string `json:"energy_type,omitempty"`
+
+	Front *VehicleLicenseFront `json:"front,omitempty"`
+
+	Back *VehicleLicenseback `json:"back,omitempty"`
 }
 
 func (o VehicleLicenseResult) String() string {

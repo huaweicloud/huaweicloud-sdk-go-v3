@@ -49,7 +49,7 @@ type ListAlarmResponseAlarms struct {
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
+	// 告警规则关联告警模板ID
 	AlarmTemplateId *string `json:"alarm_template_id,omitempty"`
 }
 

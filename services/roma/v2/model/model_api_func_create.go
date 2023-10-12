@@ -9,11 +9,14 @@ import (
 	"strings"
 )
 
-// ApiFuncCreate [函数工作流后端详情](tag:hws;hws_hk;hcs;fcs;g42;)[暂不支持](tag:Site)
+// ApiFuncCreate [函数工作流后端详情](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[暂不支持](tag:Site)
 type ApiFuncCreate struct {
 
 	// 函数URN
 	FunctionUrn string `json:"function_urn"`
+
+	// 对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
+	NetworkType *ApiFuncCreateNetworkType `json:"network_type,omitempty"`
 
 	// 描述信息。 > 中文字符必须为UTF-8或者unicode编码。
 	Remark *string `json:"remark,omitempty"`
@@ -21,13 +24,13 @@ type ApiFuncCreate struct {
 	// 调用类型 - async： 异步 - sync：同步
 	InvocationType ApiFuncCreateInvocationType `json:"invocation_type"`
 
-	// 版本。
+	// 函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	Version *string `json:"version,omitempty"`
 
-	// 函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	// 函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	AliasUrn *string `json:"alias_urn,omitempty"`
 
-	// ROMA Connect APIC请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
+	// 服务集成请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
 	Timeout int32 `json:"timeout"`
 
 	// 后端自定义认证ID
@@ -41,6 +44,53 @@ func (o ApiFuncCreate) String() string {
 	}
 
 	return strings.Join([]string{"ApiFuncCreate", string(data)}, " ")
+}
+
+type ApiFuncCreateNetworkType struct {
+	value string
+}
+
+type ApiFuncCreateNetworkTypeEnum struct {
+	V1 ApiFuncCreateNetworkType
+	V2 ApiFuncCreateNetworkType
+}
+
+func GetApiFuncCreateNetworkTypeEnum() ApiFuncCreateNetworkTypeEnum {
+	return ApiFuncCreateNetworkTypeEnum{
+		V1: ApiFuncCreateNetworkType{
+			value: "V1",
+		},
+		V2: ApiFuncCreateNetworkType{
+			value: "V2",
+		},
+	}
+}
+
+func (c ApiFuncCreateNetworkType) Value() string {
+	return c.value
+}
+
+func (c ApiFuncCreateNetworkType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiFuncCreateNetworkType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiFuncCreateInvocationType struct {

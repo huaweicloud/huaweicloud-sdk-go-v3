@@ -19,7 +19,7 @@ type SearchOptionalParam struct {
 	DoCls *bool `json:"do_cls,omitempty"`
 
 	// 对象类目，如给定则不进行对象分类，直接使用该category作为类目。具体类目信息可参见对应的服务类型说明。
-	Category float32 `json:"category,omitempty"`
+	Category *int32 `json:"category,omitempty"`
 
 	// 去重标签名，必须为服务实例custom_tags中已存在的key。 - 如给定则会对该key下相同value的数据进行去重，仅保留得分最高的数据。 - 针对没有设置该标签的数据，会直接过滤。
 	CollapseKey *string `json:"collapse_key,omitempty"`

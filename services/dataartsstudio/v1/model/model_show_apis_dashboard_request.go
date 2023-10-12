@@ -13,10 +13,13 @@ import (
 type ShowApisDashboardRequest struct {
 
 	// 工作空间id
-	Workspace *string `json:"workspace,omitempty"`
+	Workspace string `json:"workspace"`
 
 	// dlm版本类型
 	DlmType ShowApisDashboardRequestDlmType `json:"Dlm-Type"`
+
+	// 资源类型
+	ContentType string `json:"Content-Type"`
 
 	// 集群编号
 	InstanceId *string `json:"instance_id,omitempty"`

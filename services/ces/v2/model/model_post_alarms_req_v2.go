@@ -23,7 +23,10 @@ type PostAlarmsReqV2 struct {
 	// 资源列表，监控范围为指定资源时必传
 	Resources [][]Dimension `json:"resources"`
 
-	// 告警策略
+	// 告警规则关联告警模板ID
+	AlarmTemplateId *string `json:"alarm_template_id,omitempty"`
+
+	// 告警策略，当alarm_template_id字段为空时必填，不为空时不填
 	Policies *[]Policy `json:"policies,omitempty"`
 
 	Type *AlarmType `json:"type"`
@@ -48,9 +51,6 @@ type PostAlarmsReqV2 struct {
 
 	// 是否开启告警通知
 	NotificationEnabled bool `json:"notification_enabled"`
-
-	// 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化
-	AlarmTemplateId *string `json:"alarm_template_id,omitempty"`
 }
 
 func (o PostAlarmsReqV2) String() string {

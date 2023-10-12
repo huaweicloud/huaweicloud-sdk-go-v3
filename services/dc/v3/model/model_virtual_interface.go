@@ -94,22 +94,18 @@ type VirtualInterfaceServiceType struct {
 }
 
 type VirtualInterfaceServiceTypeEnum struct {
-	VPC  VirtualInterfaceServiceType
 	VGW  VirtualInterfaceServiceType
-	GDWW VirtualInterfaceServiceType
+	GDGW VirtualInterfaceServiceType
 	LGW  VirtualInterfaceServiceType
 }
 
 func GetVirtualInterfaceServiceTypeEnum() VirtualInterfaceServiceTypeEnum {
 	return VirtualInterfaceServiceTypeEnum{
-		VPC: VirtualInterfaceServiceType{
-			value: "vpc",
-		},
 		VGW: VirtualInterfaceServiceType{
 			value: "VGW",
 		},
-		GDWW: VirtualInterfaceServiceType{
-			value: "GDWW",
+		GDGW: VirtualInterfaceServiceType{
+			value: "GDGW",
 		},
 		LGW: VirtualInterfaceServiceType{
 			value: "LGW",

@@ -557,6 +557,18 @@ func (i *SetPartitionColumnStatisticsInvoker) Invoke() (*model.SetPartitionColum
 	}
 }
 
+type ListQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQuotasResponse), nil
+	}
+}
+
 type CreateRoleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -830,6 +842,18 @@ func (i *BatchUpdateLakeFormationInstanceTagsInvoker) Invoke() (*model.BatchUpda
 		return nil, err
 	} else {
 		return result.(*model.BatchUpdateLakeFormationInstanceTagsResponse), nil
+	}
+}
+
+type ListLakeFormationInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLakeFormationInstanceTagsInvoker) Invoke() (*model.ListLakeFormationInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLakeFormationInstanceTagsResponse), nil
 	}
 }
 

@@ -9,11 +9,14 @@ import (
 // PolicyStatement 支持的访问策略
 type PolicyStatement struct {
 
-	// 支持的访问策略,内置如下三种策略 * `读写` - 上传、编辑、下载 policy_statement_id: DEFAULT_1 * `只读` - 下载 policy_statement_id: DEFAULT_2 * `只写` - 上传、编辑 policy_statement_id: DEFAULT_3
+	// 支持的访问策略，内置如下四种策略: * `DEFAULT_1`：`客户端访问存储` - 上传、下载; `云端访问存储` - 读写   - action: PutObject、DeleteObject、GetObject   - roam_action: PutObject、DeleteObject、GetObject * `DEFAULT_2`：`客户端访问存储` - 下载; `云端访问存储` - 读写   - action: GetObject   - roam_action: PutObject、DeleteObject、GetObject * `DEFAULT_3`：`客户端访问存储` - 上传; `云端访问存储` - 读写   - action: PutObject、DeleteObject   - roam_action: PutObject、DeleteObject、GetObject * `DEFAULT_4`：`客户端访问存储` - 仅可查看列表,不允许上传下载; `云端访问存储` - 只读   - action:    - roam_action: GetObject
 	PolicyStatementId *string `json:"policy_statement_id,omitempty"`
 
-	// 可以进行操作的权限合集 * `PutObject` -  上传、修改、重命名、移动 * `GetObject` - 下载 * `DeleteObject` - 删除
+	// 客户端访问存储可操作的权限合集 * `PutObject` -  上传、修改、重命名、移动 * `GetObject` - 下载 * `DeleteObject` - 删除
 	Actions *[]string `json:"actions,omitempty"`
+
+	// 云端访问存储可操作的权限合集 * `PutObject` -  上传、修改、重命名、移动 * `GetObject` - 下载 * `DeleteObject` - 删除
+	RoamActions *[]string `json:"roam_actions,omitempty"`
 }
 
 func (o PolicyStatement) String() string {

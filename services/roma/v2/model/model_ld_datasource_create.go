@@ -14,7 +14,7 @@ type LdDatasourceCreate struct {
 	// 数据源名称
 	Name *string `json:"name,omitempty"`
 
-	// 数据源类型： - oracle：oracle数据源类型 - mysql：mysql数据源类型 - mongodb：mongodb数据源类型 - redis：redis数据源类型 - postgresql：postgresql数据源类型 - hive：hive数据源类型 - mssql：sqlserver数据源类型 - sqlserver：sqlserver数据源类型 - gauss200：gauss200数据源类型 - dws：dws数据源类型 - gauss100：gauss100数据源类型 - zenith：zenith数据源类型
+	// 数据源类型：  - oracle：oracle数据源类型  - mysql：mysql数据源类型  - mongodb：mongodb数据源类型  - redis：redis数据源类型  - postgresql：postgresql/opengauss数据源类型  - hive：hive数据源类型  - mssql：sqlserver数据源类型  - sqlserver：sqlserver数据源类型  - dws：dws数据源类型  - gauss100：gauss100数据源类型  - zenith：zenith数据源类型
 	Type *LdDatasourceCreateType `json:"type,omitempty"`
 
 	// 数据源描述
@@ -55,7 +55,6 @@ type LdDatasourceCreateTypeEnum struct {
 	HIVE       LdDatasourceCreateType
 	MSSQL      LdDatasourceCreateType
 	SQLSERVER  LdDatasourceCreateType
-	GAUSS200   LdDatasourceCreateType
 	DWS        LdDatasourceCreateType
 	GAUSS100   LdDatasourceCreateType
 	ZENITH     LdDatasourceCreateType
@@ -86,9 +85,6 @@ func GetLdDatasourceCreateTypeEnum() LdDatasourceCreateTypeEnum {
 		},
 		SQLSERVER: LdDatasourceCreateType{
 			value: "sqlserver",
-		},
-		GAUSS200: LdDatasourceCreateType{
-			value: "gauss200",
 		},
 		DWS: LdDatasourceCreateType{
 			value: "dws",

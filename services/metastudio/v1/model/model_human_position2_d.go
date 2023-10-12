@@ -15,10 +15,10 @@ type HumanPosition2D struct {
 	// 分身数字人在背景图片中的位置。 * LEFT： 左 * MIDDLE： 中 * RIGHT： 右 > 当position_x和position_y参数值存在时，position不生效
 	Position *HumanPosition2DPosition `json:"position,omitempty"`
 
-	// 分身数字人X轴位置，即分身数字图片底边中心点像素的X轴的像素值。 > 横屏（16:9）背景图片像素为1920*1080；竖屏（9:16）背景图片像素为1080*1920。
+	// 分身数字人X轴位置，即分身数字图片底边中心点像素的X轴的像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
 	PositionX *int32 `json:"position_x,omitempty"`
 
-	// 分身数字Y轴位置，即分身数字图片底边中心点像素的Y轴的像素值。 > 横屏（16:9）背景图片像素为1920*1080；竖屏（9:16）背景图片像素为1080*1920。
+	// 分身数字Y轴位置，即分身数字图片底边中心点像素的Y轴的像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
 	PositionY *int32 `json:"position_y,omitempty"`
 }
 

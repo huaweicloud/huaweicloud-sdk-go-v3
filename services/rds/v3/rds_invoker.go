@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/rds/v3/model"
 )
 
+type AddPostgresqlHbaConfInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddPostgresqlHbaConfInvoker) Invoke() (*model.AddPostgresqlHbaConfResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddPostgresqlHbaConfResponse), nil
+	}
+}
+
 type ApplyConfigurationAsyncInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +242,18 @@ func (i *DeleteManualBackupInvoker) Invoke() (*model.DeleteManualBackupResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteManualBackupResponse), nil
+	}
+}
+
+type DeletePostgresqlHbaConfInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePostgresqlHbaConfInvoker) Invoke() (*model.DeletePostgresqlHbaConfResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePostgresqlHbaConfResponse), nil
 	}
 }
 
@@ -521,6 +545,30 @@ func (i *ListOffSiteRestoreTimesInvoker) Invoke() (*model.ListOffSiteRestoreTime
 	}
 }
 
+type ListPostgresqlHbaInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPostgresqlHbaInfoInvoker) Invoke() (*model.ListPostgresqlHbaInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPostgresqlHbaInfoResponse), nil
+	}
+}
+
+type ListPostgresqlHbaInfoHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPostgresqlHbaInfoHistoryInvoker) Invoke() (*model.ListPostgresqlHbaInfoHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPostgresqlHbaInfoHistoryResponse), nil
+	}
+}
+
 type ListPredefinedTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -698,6 +746,18 @@ func (i *MigrateFollowerInvoker) Invoke() (*model.MigrateFollowerResponse, error
 		return nil, err
 	} else {
 		return result.(*model.MigrateFollowerResponse), nil
+	}
+}
+
+type ModifyPostgresqlHbaConfInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyPostgresqlHbaConfInvoker) Invoke() (*model.ModifyPostgresqlHbaConfResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyPostgresqlHbaConfResponse), nil
 	}
 }
 

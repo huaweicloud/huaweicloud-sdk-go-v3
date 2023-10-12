@@ -12,7 +12,7 @@ type PoliciesCustom struct {
 	// 自定义策略配置项1： false: 表示关闭 true: 表示开启
 	CustomConfiguration1Enable *bool `json:"custom_configuration1_enable,omitempty"`
 
-	Options *PoliciesCustomOptions `json:"options,omitempty"`
+	Options *CustomOptions `json:"options,omitempty"`
 }
 
 func (o PoliciesCustom) String() string {

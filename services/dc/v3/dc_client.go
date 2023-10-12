@@ -190,7 +190,7 @@ func (c *DcClient) UpdateDirectConnectInvoker(request *model.UpdateDirectConnect
 
 // UpdateHostedDirectConnect 更新托管专线连接
 //
-// 合作伙伴创建托管专线.
+// 合作伙伴更新托管专线.
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcClient) UpdateHostedDirectConnect(request *model.UpdateHostedDirectConnectRequest) (*model.UpdateHostedDirectConnectResponse, error) {
@@ -207,6 +207,27 @@ func (c *DcClient) UpdateHostedDirectConnect(request *model.UpdateHostedDirectCo
 func (c *DcClient) UpdateHostedDirectConnectInvoker(request *model.UpdateHostedDirectConnectRequest) *UpdateHostedDirectConnectInvoker {
 	requestDef := GenReqDefForUpdateHostedDirectConnect()
 	return &UpdateHostedDirectConnectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotas 查询配额
+//
+// 查询租户各类资源的使用情况，如Directconnect的使用量，虚拟接口的使用量等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
+	requestDef := GenReqDefForShowQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotasResponse), nil
+	}
+}
+
+// ShowQuotasInvoker 查询配额
+func (c *DcClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateResourceTags 批量添加删除资源标签
@@ -445,6 +466,27 @@ func (c *DcClient) UpdateVirtualGatewayInvoker(request *model.UpdateVirtualGatew
 	return &UpdateVirtualGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVifPeer 创建虚拟接口对等体
+//
+// 每个虚拟接口可支持两个对等体，IPv4和IPv6对等体，在创建虚拟接口时默认创建IPv4对等体， 本接口一般用于增加ipv6对等体。创建虚拟接口对接体之后，可以通过虚拟接口查询配置结果 本接口只在支持Ipv6的区域开放，如需要使用请联系客服
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) CreateVifPeer(request *model.CreateVifPeerRequest) (*model.CreateVifPeerResponse, error) {
+	requestDef := GenReqDefForCreateVifPeer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVifPeerResponse), nil
+	}
+}
+
+// CreateVifPeerInvoker 创建虚拟接口对等体
+func (c *DcClient) CreateVifPeerInvoker(request *model.CreateVifPeerRequest) *CreateVifPeerInvoker {
+	requestDef := GenReqDefForCreateVifPeer()
+	return &CreateVifPeerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVirtualInterface 创建虚拟接口
 //
 // 虚拟接口配置物理专线上与客户互联的IP和路由等相关信息
@@ -466,6 +508,27 @@ func (c *DcClient) CreateVirtualInterfaceInvoker(request *model.CreateVirtualInt
 	return &CreateVirtualInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteVifPeer 删除虚拟接口对应的对等体
+//
+// 删除虚拟接口对等体信息,虚拟接口到少要含一个对等体,最后一个对等体不能删除 本接口只在支持Ipv6的区域开放，如需要使用请联系客服
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) DeleteVifPeer(request *model.DeleteVifPeerRequest) (*model.DeleteVifPeerResponse, error) {
+	requestDef := GenReqDefForDeleteVifPeer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVifPeerResponse), nil
+	}
+}
+
+// DeleteVifPeerInvoker 删除虚拟接口对应的对等体
+func (c *DcClient) DeleteVifPeerInvoker(request *model.DeleteVifPeerRequest) *DeleteVifPeerInvoker {
+	requestDef := GenReqDefForDeleteVifPeer()
+	return &DeleteVifPeerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteVirtualInterface 删除虚拟接口
 //
 // 删除虚拟接口
@@ -485,6 +548,27 @@ func (c *DcClient) DeleteVirtualInterface(request *model.DeleteVirtualInterfaceR
 func (c *DcClient) DeleteVirtualInterfaceInvoker(request *model.DeleteVirtualInterfaceRequest) *DeleteVirtualInterfaceInvoker {
 	requestDef := GenReqDefForDeleteVirtualInterface()
 	return &DeleteVirtualInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSwitchoverTestRecords 查询虚拟接口倒换测试记录列表
+//
+// 查询倒换测试记录列表，只展示operate_status为COMPELTE的记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListSwitchoverTestRecords(request *model.ListSwitchoverTestRecordsRequest) (*model.ListSwitchoverTestRecordsResponse, error) {
+	requestDef := GenReqDefForListSwitchoverTestRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSwitchoverTestRecordsResponse), nil
+	}
+}
+
+// ListSwitchoverTestRecordsInvoker 查询虚拟接口倒换测试记录列表
+func (c *DcClient) ListSwitchoverTestRecordsInvoker(request *model.ListSwitchoverTestRecordsRequest) *ListSwitchoverTestRecordsInvoker {
+	requestDef := GenReqDefForListSwitchoverTestRecords()
+	return &ListSwitchoverTestRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVirtualInterfaces 查询虚拟接口列表
@@ -527,6 +611,48 @@ func (c *DcClient) ShowVirtualInterface(request *model.ShowVirtualInterfaceReque
 func (c *DcClient) ShowVirtualInterfaceInvoker(request *model.ShowVirtualInterfaceRequest) *ShowVirtualInterfaceInvoker {
 	requestDef := GenReqDefForShowVirtualInterface()
 	return &ShowVirtualInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchoverTest 执行虚拟接口倒换测试
+//
+// 客户双专线接入，需要支持双线自动倒换，方便进行功能测试。 虚拟接口进行倒换测试会导致接口关闭，业务流量中断。 对于虚拟接口，支持“关闭接口”和“开放接口”两种操作。 1、关闭接口：下发shutdown命令，关闭接口； 2、开放接口：下发undo_shutdown命令，使能接口。 倒换测试选择shutdown时，虚拟接口的状态为ADMIN_SHUTDOWN，此状态不允许虚拟接口的其他操作。 倒换测试选择undo_shutdown时，虚拟接口的状态为ACTIVE。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) SwitchoverTest(request *model.SwitchoverTestRequest) (*model.SwitchoverTestResponse, error) {
+	requestDef := GenReqDefForSwitchoverTest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchoverTestResponse), nil
+	}
+}
+
+// SwitchoverTestInvoker 执行虚拟接口倒换测试
+func (c *DcClient) SwitchoverTestInvoker(request *model.SwitchoverTestRequest) *SwitchoverTestInvoker {
+	requestDef := GenReqDefForSwitchoverTest()
+	return &SwitchoverTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVifPeer 更新虚拟接口对等体
+//
+// 更新虚拟接口对等体信息,包括远端子网，名字和描述等。 本接口只在支持Ipv6的区域开放，如需要使用请联系客服
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UpdateVifPeer(request *model.UpdateVifPeerRequest) (*model.UpdateVifPeerResponse, error) {
+	requestDef := GenReqDefForUpdateVifPeer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVifPeerResponse), nil
+	}
+}
+
+// UpdateVifPeerInvoker 更新虚拟接口对等体
+func (c *DcClient) UpdateVifPeerInvoker(request *model.UpdateVifPeerRequest) *UpdateVifPeerInvoker {
+	requestDef := GenReqDefForUpdateVifPeer()
+	return &UpdateVifPeerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateVirtualInterface 更新虚拟接口

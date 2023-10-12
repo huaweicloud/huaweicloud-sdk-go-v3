@@ -125,18 +125,6 @@ func (i *CreateFunctionTriggerInvoker) Invoke() (*model.CreateFunctionTriggerRes
 	}
 }
 
-type CreateFunctionUrlInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateFunctionUrlInvoker) Invoke() (*model.CreateFunctionUrlResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateFunctionUrlResponse), nil
-	}
-}
-
 type CreateFunctionVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,18 +254,6 @@ func (i *DeleteFunctionTriggerInvoker) Invoke() (*model.DeleteFunctionTriggerRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteFunctionTriggerResponse), nil
-	}
-}
-
-type DeleteFunctionUrlInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteFunctionUrlInvoker) Invoke() (*model.DeleteFunctionUrlResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteFunctionUrlResponse), nil
 	}
 }
 
@@ -689,18 +665,6 @@ func (i *ShowFunctionTriggerInvoker) Invoke() (*model.ShowFunctionTriggerRespons
 	}
 }
 
-type ShowFunctionUrlInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowFunctionUrlInvoker) Invoke() (*model.ShowFunctionUrlResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowFunctionUrlResponse), nil
-	}
-}
-
 type ShowLtsLogDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -950,18 +914,6 @@ func (i *UpdateFunctionReservedInstancesCountInvoker) Invoke() (*model.UpdateFun
 		return nil, err
 	} else {
 		return result.(*model.UpdateFunctionReservedInstancesCountResponse), nil
-	}
-}
-
-type UpdateFunctionUrlInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateFunctionUrlInvoker) Invoke() (*model.UpdateFunctionUrlResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateFunctionUrlResponse), nil
 	}
 }
 

@@ -9,7 +9,7 @@ import (
 // PostPaidServer 创建弹性云服务器（按需）接口Body体。
 type PostPaidServer struct {
 
-	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+	// 弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
 	AutoTerminateTime *string `json:"auto_terminate_time,omitempty"`
 
 	// 如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。具体使用方法请参见接口描述信息（设置登录鉴权方式）。  密码复杂度要求：   - 长度为8-26位。  - 密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。 - 密码不能包含用户名或用户名的逆序。  - Windows系统密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。

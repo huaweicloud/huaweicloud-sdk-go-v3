@@ -723,6 +723,27 @@ func (c *DwsClient) DisassociateElbInvoker(request *model.DisassociateElbRequest
 	return &DisassociateElbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteDatabaseOmUserAction 执行运维用户操作
+//
+// 进行数据库运维账户操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ExecuteDatabaseOmUserAction(request *model.ExecuteDatabaseOmUserActionRequest) (*model.ExecuteDatabaseOmUserActionResponse, error) {
+	requestDef := GenReqDefForExecuteDatabaseOmUserAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDatabaseOmUserActionResponse), nil
+	}
+}
+
+// ExecuteDatabaseOmUserActionInvoker 执行运维用户操作
+func (c *DwsClient) ExecuteDatabaseOmUserActionInvoker(request *model.ExecuteDatabaseOmUserActionRequest) *ExecuteDatabaseOmUserActionInvoker {
+	requestDef := GenReqDefForExecuteDatabaseOmUserAction()
+	return &ExecuteDatabaseOmUserActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteRedistributionCluster 下发重分布
 //
 // 下发重分布
@@ -1101,6 +1122,27 @@ func (c *DwsClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 func (c *DwsClient) ListClustersInvoker(request *model.ListClustersRequest) *ListClustersInvoker {
 	requestDef := GenReqDefForListClusters()
 	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConfigurationsAuditRecords 查询参数修改审计记录
+//
+// 查询参数修改审计记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListConfigurationsAuditRecords(request *model.ListConfigurationsAuditRecordsRequest) (*model.ListConfigurationsAuditRecordsResponse, error) {
+	requestDef := GenReqDefForListConfigurationsAuditRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigurationsAuditRecordsResponse), nil
+	}
+}
+
+// ListConfigurationsAuditRecordsInvoker 查询参数修改审计记录
+func (c *DwsClient) ListConfigurationsAuditRecordsInvoker(request *model.ListConfigurationsAuditRecordsRequest) *ListConfigurationsAuditRecordsInvoker {
+	requestDef := GenReqDefForListConfigurationsAuditRecords()
+	return &ListConfigurationsAuditRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDataSource 查询数据源
@@ -1712,6 +1754,48 @@ func (c *DwsClient) RestoreDisasterInvoker(request *model.RestoreDisasterRequest
 	return &RestoreDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveClusterDescriptionInfo 保存集群描述信息
+//
+// 保存集群描述信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) SaveClusterDescriptionInfo(request *model.SaveClusterDescriptionInfoRequest) (*model.SaveClusterDescriptionInfoResponse, error) {
+	requestDef := GenReqDefForSaveClusterDescriptionInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveClusterDescriptionInfoResponse), nil
+	}
+}
+
+// SaveClusterDescriptionInfoInvoker 保存集群描述信息
+func (c *DwsClient) SaveClusterDescriptionInfoInvoker(request *model.SaveClusterDescriptionInfoRequest) *SaveClusterDescriptionInfoInvoker {
+	requestDef := GenReqDefForSaveClusterDescriptionInfo()
+	return &SaveClusterDescriptionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterRedistribution 查询重分布详情
+//
+// 查询重分布详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowClusterRedistribution(request *model.ShowClusterRedistributionRequest) (*model.ShowClusterRedistributionResponse, error) {
+	requestDef := GenReqDefForShowClusterRedistribution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterRedistributionResponse), nil
+	}
+}
+
+// ShowClusterRedistributionInvoker 查询重分布详情
+func (c *DwsClient) ShowClusterRedistributionInvoker(request *model.ShowClusterRedistributionRequest) *ShowClusterRedistributionInvoker {
+	requestDef := GenReqDefForShowClusterRedistribution()
+	return &ShowClusterRedistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDatabaseAuthority 查询数据库对象权限
 //
 // 查询数据库对象权限
@@ -1731,6 +1815,27 @@ func (c *DwsClient) ShowDatabaseAuthority(request *model.ShowDatabaseAuthorityRe
 func (c *DwsClient) ShowDatabaseAuthorityInvoker(request *model.ShowDatabaseAuthorityRequest) *ShowDatabaseAuthorityInvoker {
 	requestDef := GenReqDefForShowDatabaseAuthority()
 	return &ShowDatabaseAuthorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDatabaseOmUserStatus 获得集群运维账户状态
+//
+// 获得数据库运维账户状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowDatabaseOmUserStatus(request *model.ShowDatabaseOmUserStatusRequest) (*model.ShowDatabaseOmUserStatusResponse, error) {
+	requestDef := GenReqDefForShowDatabaseOmUserStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatabaseOmUserStatusResponse), nil
+	}
+}
+
+// ShowDatabaseOmUserStatusInvoker 获得集群运维账户状态
+func (c *DwsClient) ShowDatabaseOmUserStatusInvoker(request *model.ShowDatabaseOmUserStatusRequest) *ShowDatabaseOmUserStatusInvoker {
+	requestDef := GenReqDefForShowDatabaseOmUserStatus()
+	return &ShowDatabaseOmUserStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDatabaseUser 查询指定用户信息
@@ -1794,6 +1899,27 @@ func (c *DwsClient) ShowDisasterProgress(request *model.ShowDisasterProgressRequ
 func (c *DwsClient) ShowDisasterProgressInvoker(request *model.ShowDisasterProgressRequest) *ShowDisasterProgressInvoker {
 	requestDef := GenReqDefForShowDisasterProgress()
 	return &ShowDisasterProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstance 查询单个实例
+//
+// 查询单个实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
+	requestDef := GenReqDefForShowInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceResponse), nil
+	}
+}
+
+// ShowInstanceInvoker 查询单个实例
+func (c *DwsClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
+	requestDef := GenReqDefForShowInstance()
+	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkCluster 集群缩容

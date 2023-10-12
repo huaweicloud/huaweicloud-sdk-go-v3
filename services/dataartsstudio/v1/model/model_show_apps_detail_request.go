@@ -13,10 +13,13 @@ import (
 type ShowAppsDetailRequest struct {
 
 	// 工作空间id
-	Workspace *string `json:"workspace,omitempty"`
+	Workspace string `json:"workspace"`
 
 	// dlm版本类型
 	DlmType ShowAppsDetailRequestDlmType `json:"Dlm-Type"`
+
+	// 资源类型
+	ContentType string `json:"Content-Type"`
 
 	// app编号
 	AppId string `json:"app_id"`

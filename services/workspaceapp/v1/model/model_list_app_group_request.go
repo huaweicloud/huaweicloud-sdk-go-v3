@@ -10,10 +10,10 @@ import (
 type ListAppGroupRequest struct {
 
 	// 单次查询的大小[1-100]
-	Limit int32 `json:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询的偏移量
-	Offset int32 `json:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 应用服务器组ID
 	AppServerGroupId *string `json:"app_server_group_id,omitempty"`
@@ -26,6 +26,9 @@ type ListAppGroupRequest struct {
 
 	// 授权类型(APP、APP_GROUP)
 	AuthorizationType *string `json:"authorization_type,omitempty"`
+
+	// 应用组类型(SESSION_DESKTOP_APP、COMMON_APP)
+	AppType *string `json:"app_type,omitempty"`
 }
 
 func (o ListAppGroupRequest) String() string {

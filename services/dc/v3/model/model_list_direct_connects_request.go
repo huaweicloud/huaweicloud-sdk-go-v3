@@ -30,7 +30,7 @@ type ListDirectConnectsRequest struct {
 	// 根椐运营专线ID过滤托管专线列表
 	HostingId *[]string `json:"hosting_id,omitempty"`
 
-	// 根据企业项目ID过滤中心网络列表。
+	// 根据企业项目ID过滤资源实例
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
 	// 根据资源ID过滤实例

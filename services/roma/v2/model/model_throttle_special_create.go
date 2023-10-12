@@ -14,7 +14,7 @@ type ThrottleSpecialCreate struct {
 	// 流控时间内特殊对象能够访问API的最大次数限制
 	CallLimits int32 `json:"call_limits"`
 
-	// 特殊APP的编号[或特殊租户的帐号ID](tag:hws;hws_hk;hcs;fcs;g42;)
+	// 特殊APP的编号[或特殊租户的帐号ID](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)
 	ObjectId string `json:"object_id"`
 
 	// 特殊对象类型

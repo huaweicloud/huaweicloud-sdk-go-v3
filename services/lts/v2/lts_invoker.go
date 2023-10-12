@@ -653,6 +653,42 @@ func (i *RegisterDmsKafkaInstanceInvoker) Invoke() (*model.RegisterDmsKafkaInsta
 	}
 }
 
+type ShowAdminConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAdminConfigInvoker) Invoke() (*model.ShowAdminConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAdminConfigResponse), nil
+	}
+}
+
+type ShowLogConvergeConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLogConvergeConfigInvoker) Invoke() (*model.ShowLogConvergeConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLogConvergeConfigResponse), nil
+	}
+}
+
+type ShowMemberGroupAndStreamInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMemberGroupAndStreamInvoker) Invoke() (*model.ShowMemberGroupAndStreamResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMemberGroupAndStreamResponse), nil
+	}
+}
+
 type ShowNotificationTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -713,6 +749,18 @@ func (i *UpdateKeywordsAlarmRuleInvoker) Invoke() (*model.UpdateKeywordsAlarmRul
 	}
 }
 
+type UpdateLogConvergeConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogConvergeConfigInvoker) Invoke() (*model.UpdateLogConvergeConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogConvergeConfigResponse), nil
+	}
+}
+
 type UpdateLogGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,6 +818,18 @@ func (i *UpdateStructTemplateInvoker) Invoke() (*model.UpdateStructTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateStructTemplateResponse), nil
+	}
+}
+
+type UpdateSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSwitchInvoker) Invoke() (*model.UpdateSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSwitchResponse), nil
 	}
 }
 
@@ -842,66 +902,6 @@ func (i *UpdateAomMappingRulesInvoker) Invoke() (*model.UpdateAomMappingRulesRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateAomMappingRulesResponse), nil
-	}
-}
-
-type ShowAdminConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAdminConfigInvoker) Invoke() (*model.ShowAdminConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAdminConfigResponse), nil
-	}
-}
-
-type ShowLogConvergeConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowLogConvergeConfigInvoker) Invoke() (*model.ShowLogConvergeConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowLogConvergeConfigResponse), nil
-	}
-}
-
-type ShowMemberGroupAndStreamInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMemberGroupAndStreamInvoker) Invoke() (*model.ShowMemberGroupAndStreamResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMemberGroupAndStreamResponse), nil
-	}
-}
-
-type UpdateLogConvergeConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateLogConvergeConfigInvoker) Invoke() (*model.UpdateLogConvergeConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateLogConvergeConfigResponse), nil
-	}
-}
-
-type UpdateSwitchInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateSwitchInvoker) Invoke() (*model.UpdateSwitchResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateSwitchResponse), nil
 	}
 }
 

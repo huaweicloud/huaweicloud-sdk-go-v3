@@ -29,7 +29,7 @@ type InvocationInfo struct {
 	// 弹性公网ip列表
 	ElasticIps *[]string `json:"elastic_ips,omitempty"`
 
-	// 任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚)
+	// 任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
 	InvocationType *InvocationInfoInvocationType `json:"invocation_type,omitempty"`
 
 	// 任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
@@ -115,6 +115,7 @@ type InvocationInfoInvocationTypeEnum struct {
 	INSTALL  InvocationInfoInvocationType
 	UPDATE   InvocationInfoInvocationType
 	ROLLBACK InvocationInfoInvocationType
+	RETRY    InvocationInfoInvocationType
 }
 
 func GetInvocationInfoInvocationTypeEnum() InvocationInfoInvocationTypeEnum {
@@ -127,6 +128,9 @@ func GetInvocationInfoInvocationTypeEnum() InvocationInfoInvocationTypeEnum {
 		},
 		ROLLBACK: InvocationInfoInvocationType{
 			value: "ROLLBACK",
+		},
+		RETRY: InvocationInfoInvocationType{
+			value: "RETRY",
 		},
 	}
 }

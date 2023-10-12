@@ -19,7 +19,7 @@ type ShowDetailsOfAclPolicyV2Response struct {
 	// ACL策略值
 	AclValue *string `json:"acl_value,omitempty"`
 
-	// 对象类型： - IP - DOMAIN
+	// 对象类型： - IP - DOMAIN [Site自治版不支持DOMAIN类型。](tag:Site)
 	EntityType *string `json:"entity_type,omitempty"`
 
 	// 编号

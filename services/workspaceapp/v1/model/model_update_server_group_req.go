@@ -17,6 +17,8 @@ type UpdateServerGroupReq struct {
 
 	RoutePolicy *RoutePolicy `json:"route_policy,omitempty"`
 
+	StorageMountPolicy *StorageFolderMountType `json:"storage_mount_policy,omitempty"`
+
 	// 服务器组关联的镜像ID，更新镜像ID只对组下新创建的云服务器生效
 	ImageId *string `json:"image_id,omitempty"`
 
@@ -32,6 +34,8 @@ type UpdateServerGroupReq struct {
 
 	// 默认组织名称
 	OuName *string `json:"ou_name,omitempty"`
+
+	AppType *AppTypeEnum `json:"app_type,omitempty"`
 }
 
 func (o UpdateServerGroupReq) String() string {

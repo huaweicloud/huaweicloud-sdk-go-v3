@@ -25,7 +25,7 @@ type UpdateScalingPolicyOption struct {
 
 	ScalingPolicyAction *ScalingPolicyActionV1 `json:"scaling_policy_action,omitempty"`
 
-	// 冷却时间，取值范围0-86400，默认为900，单位是秒。
+	// 冷却时间，取值范围0-86400，默认为300，单位是秒。
 	CoolDownTime *int32 `json:"cool_down_time,omitempty"`
 }
 

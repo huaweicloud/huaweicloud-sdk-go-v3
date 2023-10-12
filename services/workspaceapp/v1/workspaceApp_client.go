@@ -61,6 +61,27 @@ func (c *WorkspaceAppClient) PublishAppInvoker(request *model.PublishAppRequest)
 	return &PublishAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPublishableApp 可发布应用列表
+//
+// 查询应用组下可发布的应用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowPublishableApp(request *model.ShowPublishableAppRequest) (*model.ShowPublishableAppResponse, error) {
+	requestDef := GenReqDefForShowPublishableApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublishableAppResponse), nil
+	}
+}
+
+// ShowPublishableAppInvoker 可发布应用列表
+func (c *WorkspaceAppClient) ShowPublishableAppInvoker(request *model.ShowPublishableAppRequest) *ShowPublishableAppInvoker {
+	requestDef := GenReqDefForShowPublishableApp()
+	return &ShowPublishableAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UnpublishApp 批量取消应用发布
 //
 // 批量取消应用发布。
@@ -102,6 +123,27 @@ func (c *WorkspaceAppClient) UpdateApp(request *model.UpdateAppRequest) (*model.
 func (c *WorkspaceAppClient) UpdateAppInvoker(request *model.UpdateAppRequest) *UpdateAppInvoker {
 	requestDef := GenReqDefForUpdateApp()
 	return &UpdateAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadAppIcon 修改自定义应用图标
+//
+// 修改自定义应用图标
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UploadAppIcon(request *model.UploadAppIconRequest) (*model.UploadAppIconResponse, error) {
+	requestDef := GenReqDefForUploadAppIcon()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadAppIconResponse), nil
+	}
+}
+
+// UploadAppIconInvoker 修改自定义应用图标
+func (c *WorkspaceAppClient) UploadAppIconInvoker(request *model.UploadAppIconRequest) *UploadAppIconInvoker {
+	requestDef := GenReqDefForUploadAppIcon()
+	return &UploadAppIconInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteAppGroup 批量删除应用组
@@ -210,6 +252,27 @@ func (c *WorkspaceAppClient) ListProductInvoker(request *model.ListProductReques
 	return &ListProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSessionType 查询会话套餐列表
+//
+// 该接口用于查询会话套餐列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListSessionType(request *model.ListSessionTypeRequest) (*model.ListSessionTypeResponse, error) {
+	requestDef := GenReqDefForListSessionType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionTypeResponse), nil
+	}
+}
+
+// ListSessionTypeInvoker 查询会话套餐列表
+func (c *WorkspaceAppClient) ListSessionTypeInvoker(request *model.ListSessionTypeRequest) *ListSessionTypeInvoker {
+	requestDef := GenReqDefForListSessionType()
+	return &ListSessionTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddAppGroupAuthorization 增加应用组授权
 //
 // 应用组添加用户授权，授权后用户就获得应用组下所有已发布应用的权限访问。
@@ -315,6 +378,27 @@ func (c *WorkspaceAppClient) ShowJob(request *model.ShowJobRequest) (*model.Show
 func (c *WorkspaceAppClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrUpdateStoragePolicyStatement 新增或更新存储目录访问权限自定义策略
+//
+// 新增或更新存储目录访问权限自定义策略(已存在自定义策略时会对已有策略更新)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CreateOrUpdateStoragePolicyStatement(request *model.CreateOrUpdateStoragePolicyStatementRequest) (*model.CreateOrUpdateStoragePolicyStatementResponse, error) {
+	requestDef := GenReqDefForCreateOrUpdateStoragePolicyStatement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOrUpdateStoragePolicyStatementResponse), nil
+	}
+}
+
+// CreateOrUpdateStoragePolicyStatementInvoker 新增或更新存储目录访问权限自定义策略
+func (c *WorkspaceAppClient) CreateOrUpdateStoragePolicyStatementInvoker(request *model.CreateOrUpdateStoragePolicyStatementRequest) *CreateOrUpdateStoragePolicyStatementInvoker {
+	requestDef := GenReqDefForCreateOrUpdateStoragePolicyStatement()
+	return &CreateOrUpdateStoragePolicyStatementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePersistentStorage 创建WKS存储
@@ -1144,6 +1228,27 @@ func (c *WorkspaceAppClient) ListAppConnectionInvoker(request *model.ListAppConn
 	return &ListAppConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSessionByUserName 根据用户名查询当前会话
+//
+// 根据用户名查询当前会话
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListSessionByUserName(request *model.ListSessionByUserNameRequest) (*model.ListSessionByUserNameResponse, error) {
+	requestDef := GenReqDefForListSessionByUserName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionByUserNameResponse), nil
+	}
+}
+
+// ListSessionByUserNameInvoker 根据用户名查询当前会话
+func (c *WorkspaceAppClient) ListSessionByUserNameInvoker(request *model.ListSessionByUserNameRequest) *ListSessionByUserNameInvoker {
+	requestDef := GenReqDefForListSessionByUserName()
+	return &ListSessionByUserNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUserConnection 查询用户登录记录
 //
 // 查询用户登录记录
@@ -1163,6 +1268,27 @@ func (c *WorkspaceAppClient) ListUserConnection(request *model.ListUserConnectio
 func (c *WorkspaceAppClient) ListUserConnectionInvoker(request *model.ListUserConnectionRequest) *ListUserConnectionInvoker {
 	requestDef := GenReqDefForListUserConnection()
 	return &ListUserConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// LogoffUserSession 用户会话注销
+//
+// 用户会话注销
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) LogoffUserSession(request *model.LogoffUserSessionRequest) (*model.LogoffUserSessionResponse, error) {
+	requestDef := GenReqDefForLogoffUserSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LogoffUserSessionResponse), nil
+	}
+}
+
+// LogoffUserSessionInvoker 用户会话注销
+func (c *WorkspaceAppClient) LogoffUserSessionInvoker(request *model.LogoffUserSessionRequest) *LogoffUserSessionInvoker {
+	requestDef := GenReqDefForLogoffUserSession()
+	return &LogoffUserSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVolumeType 查询可用磁盘类型

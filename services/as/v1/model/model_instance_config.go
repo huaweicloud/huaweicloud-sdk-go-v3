@@ -24,7 +24,7 @@ type InstanceConfig struct {
 	// 磁盘组信息，系统盘必选，数据盘可选。
 	Disk *[]DiskInfo `json:"disk,omitempty"`
 
-	// 登录云服务器的SSH密钥名称。获取密钥对方式请参考[创建及导入SSH密钥对](https://support.huaweicloud.com/api-dew/CreateKeypair.html)。说明：当key_name与user_data同时指定时，user_data只做用户数据注入。
+	// 登录云服务器的SSH密钥名称。  获取密钥对方式请参考[创建及导入SSH密钥对](https://support.huaweicloud.com/api-dew/CreateKeypair.html)。  说明： 当key_name与user_data同时指定时，user_data只做用户数据注入。
 	KeyName *string `json:"key_name,omitempty"`
 
 	// 注入文件信息。仅支持注入文本文件，最大支持注入5个文件，每个文件最大1KB。

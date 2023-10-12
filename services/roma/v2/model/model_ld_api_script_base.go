@@ -17,14 +17,14 @@ type LdApiScriptBase struct {
 	// 数据源名称
 	DsName *string `json:"ds_name,omitempty"`
 
-	// 数据源类型： - oracle：oracle数据源类型 - mysql：mysql数据源类型 - mongodb：mongodb数据源类型 - redis：redis数据源类型 - postgresql：postgresql数据源类型 - hive：hive数据源类型 - mssql：sqlserver数据源类型 - sqlserver：sqlserver数据源类型 - gauss200：gauss200数据源类型 - dws：dws数据源类型 - gauss100：gauss100数据源类型 - zenith：zenith数据源类型
+	// 数据源类型：  - oracle：oracle数据源类型  - mysql：mysql数据源类型  - mongodb：mongodb数据源类型  - redis：redis数据源类型  - postgresql：postgresql/opengauss数据源类型  - hive：hive数据源类型  - mssql：sqlserver数据源类型  - sqlserver：sqlserver数据源类型  - dws：dws数据源类型  - gauss100：gauss100数据源类型  - zenith：zenith数据源类型
 	DsType *LdApiScriptBaseDsType `json:"ds_type,omitempty"`
 
 	// 脚本类型 - SQL：sql语句 - SP：存储过程
 	Type *string `json:"type,omitempty"`
 
-	// 返回对象。  当api_type = data时，必选
-	ObjectName *string `json:"object_name,omitempty"`
+	// 返回对象。
+	ObjectName string `json:"object_name"`
 
 	// API脚本内容  请对脚本进行base64编码
 	Content string `json:"content"`
@@ -58,7 +58,6 @@ type LdApiScriptBaseDsTypeEnum struct {
 	HIVE       LdApiScriptBaseDsType
 	MSSQL      LdApiScriptBaseDsType
 	SQLSERVER  LdApiScriptBaseDsType
-	GAUSS200   LdApiScriptBaseDsType
 	DWS        LdApiScriptBaseDsType
 	GAUSS100   LdApiScriptBaseDsType
 	ZENITH     LdApiScriptBaseDsType
@@ -89,9 +88,6 @@ func GetLdApiScriptBaseDsTypeEnum() LdApiScriptBaseDsTypeEnum {
 		},
 		SQLSERVER: LdApiScriptBaseDsType{
 			value: "sqlserver",
-		},
-		GAUSS200: LdApiScriptBaseDsType{
-			value: "gauss200",
 		},
 		DWS: LdApiScriptBaseDsType{
 			value: "dws",

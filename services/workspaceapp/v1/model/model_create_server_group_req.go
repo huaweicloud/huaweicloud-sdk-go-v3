@@ -25,7 +25,7 @@ type CreateServerGroupReq struct {
 	// 服务器组描述
 	Description *string `json:"description,omitempty"`
 
-	RoutePolicy *RoutePolicy `json:"route_policy"`
+	RoutePolicy *RoutePolicy `json:"route_policy,omitempty"`
 
 	// 产品ID。 > - 获取方式详见产品套餐管理ListProduct：\"GET  /v1/{project_id}/product\"。
 	ProductId string `json:"product_id"`
@@ -54,6 +54,13 @@ type CreateServerGroupReq struct {
 
 	// 是否为vdi单会话模式
 	IsVdi *bool `json:"is_vdi,omitempty"`
+
+	AppType *AppTypeEnum `json:"app_type,omitempty"`
+
+	ExtraSessionType *ExtraSessionTypeEnum `json:"extra_session_type,omitempty"`
+
+	// 付费会话数，单位/个
+	ExtraSessionSize *int32 `json:"extra_session_size,omitempty"`
 }
 
 func (o CreateServerGroupReq) String() string {

@@ -12,7 +12,7 @@ type PoliciesPeripheralsUsbPortRedirection struct {
 	// 是否开启USB端口重定向。 - false：表示关闭。 - true：表示开启。
 	UsbEnable *bool `json:"usb_enable,omitempty"`
 
-	Options *PoliciesPeripheralsUsbPortRedirectionOptions `json:"options,omitempty"`
+	Options *UsbPortRedirectionOptions `json:"options,omitempty"`
 }
 
 func (o PoliciesPeripheralsUsbPortRedirection) String() string {

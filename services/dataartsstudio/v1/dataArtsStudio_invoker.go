@@ -341,6 +341,30 @@ func (i *CreateDirectoryInvoker) Invoke() (*model.CreateDirectoryResponse, error
 	}
 }
 
+type CreateFactoryEnvInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFactoryEnvInvoker) Invoke() (*model.CreateFactoryEnvResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFactoryEnvResponse), nil
+	}
+}
+
+type CreateFactorySupplementDataInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFactorySupplementDataInstanceInvoker) Invoke() (*model.CreateFactorySupplementDataInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFactorySupplementDataInstanceResponse), nil
+	}
+}
+
 type CreateManagerWorkSpaceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1889,6 +1913,30 @@ func (i *ShowFactLogicTableByIdInvoker) Invoke() (*model.ShowFactLogicTableByIdR
 	}
 }
 
+type ShowFactoryEnvInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactoryEnvInvoker) Invoke() (*model.ShowFactoryEnvResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactoryEnvResponse), nil
+	}
+}
+
+type ShowFactorySupplementDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactorySupplementDataInvoker) Invoke() (*model.ShowFactorySupplementDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactorySupplementDataResponse), nil
+	}
+}
+
 type ShowGlossaryListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2126,6 +2174,18 @@ func (i *ShowWorkspaceDetailByIdInvoker) Invoke() (*model.ShowWorkspaceDetailByI
 		return nil, err
 	} else {
 		return result.(*model.ShowWorkspaceDetailByIdResponse), nil
+	}
+}
+
+type StopFactorySupplementDataInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopFactorySupplementDataInstanceInvoker) Invoke() (*model.StopFactorySupplementDataInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopFactorySupplementDataInstanceResponse), nil
 	}
 }
 

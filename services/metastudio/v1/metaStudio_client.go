@@ -355,6 +355,27 @@ func (c *MetaStudioClient) CancelPhotoDigitalHumanVideoInvoker(request *model.Ca
 	return &CancelPhotoDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePhotoDetection 创建照片检测任务
+//
+// 该接口用于创建照片检测任务，检测照片是否满足制作照片数字人的要求。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreatePhotoDetection(request *model.CreatePhotoDetectionRequest) (*model.CreatePhotoDetectionResponse, error) {
+	requestDef := GenReqDefForCreatePhotoDetection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePhotoDetectionResponse), nil
+	}
+}
+
+// CreatePhotoDetectionInvoker 创建照片检测任务
+func (c *MetaStudioClient) CreatePhotoDetectionInvoker(request *model.CreatePhotoDetectionRequest) *CreatePhotoDetectionInvoker {
+	requestDef := GenReqDefForCreatePhotoDetection()
+	return &CreatePhotoDetectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePhotoDigitalHumanVideo 创建照片分身数字人视频制作任务
 //
 // 该接口用于创建照片分身数字人视频制作任务。
@@ -374,6 +395,27 @@ func (c *MetaStudioClient) CreatePhotoDigitalHumanVideo(request *model.CreatePho
 func (c *MetaStudioClient) CreatePhotoDigitalHumanVideoInvoker(request *model.CreatePhotoDigitalHumanVideoRequest) *CreatePhotoDigitalHumanVideoInvoker {
 	requestDef := GenReqDefForCreatePhotoDigitalHumanVideo()
 	return &CreatePhotoDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPhotoDetection 查询照片检测任务详情
+//
+// 该接口用于查询照片检测任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPhotoDetection(request *model.ShowPhotoDetectionRequest) (*model.ShowPhotoDetectionResponse, error) {
+	requestDef := GenReqDefForShowPhotoDetection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPhotoDetectionResponse), nil
+	}
+}
+
+// ShowPhotoDetectionInvoker 查询照片检测任务详情
+func (c *MetaStudioClient) ShowPhotoDetectionInvoker(request *model.ShowPhotoDetectionRequest) *ShowPhotoDetectionInvoker {
+	requestDef := GenReqDefForShowPhotoDetection()
+	return &ShowPhotoDetectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPhotoDigitalHumanVideo 查询照片分身数字人视频制作任务详情

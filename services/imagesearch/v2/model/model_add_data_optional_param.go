@@ -19,7 +19,7 @@ type AddDataOptionalParam struct {
 	DoCls *bool `json:"do_cls,omitempty"`
 
 	// 对象类目，如给定则不进行对象分类，直接使用该category作为类目。具体类目信息可参见对应的服务类型说明。
-	Category float32 `json:"category,omitempty"`
+	Category *int32 `json:"category,omitempty"`
 }
 
 func (o AddDataOptionalParam) String() string {

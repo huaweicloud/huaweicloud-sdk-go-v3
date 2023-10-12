@@ -1501,6 +1501,31 @@ func (c *BssClient) ListSubCustomerCouponsInvoker(request *model.ListSubCustomer
 	return &ListSubCustomerCouponsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubCustomerNewTag 查询客户新客标签
+//
+// 伙伴通过该接口可以查询客户的新客标签。
+//
+// &gt;![](public_sys-resources/icon-caution.gif) **注意：**
+// &gt;-   新客标签失效后，new\\_customer\\_tag会变成N，且有效期过期。
+// &gt;-   客户如果没有实名认证，则新客标签为空。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListSubCustomerNewTag(request *model.ListSubCustomerNewTagRequest) (*model.ListSubCustomerNewTagResponse, error) {
+	requestDef := GenReqDefForListSubCustomerNewTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubCustomerNewTagResponse), nil
+	}
+}
+
+// ListSubCustomerNewTagInvoker 查询客户新客标签
+func (c *BssClient) ListSubCustomerNewTagInvoker(request *model.ListSubCustomerNewTagRequest) *ListSubCustomerNewTagInvoker {
+	requestDef := GenReqDefForListSubCustomerNewTag()
+	return &ListSubCustomerNewTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSubCustomers 查询客户列表
 //
 // 伙伴可以查询合作伙伴的客户信息列表。

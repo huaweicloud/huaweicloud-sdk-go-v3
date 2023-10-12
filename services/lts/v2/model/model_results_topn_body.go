@@ -28,6 +28,15 @@ type ResultsTopnBody struct {
 
 	// 日志流名称，资源类型为日志流时返回
 	LogStreamName *string `json:"log_stream_name,omitempty"`
+
+	// 基础转储流量，byte, 查询数据类型中包含basicTransfer时返回
+	BasicTransfer *float64 `json:"basic_transfer,omitempty"`
+
+	// 基础转储流量，byte, 查询数据类型中包含seniorTransfer时返回
+	SeniorTransfer *float64 `json:"senior_transfer,omitempty"`
+
+	// 不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
+	IsAgencyTransfer *bool `json:"is_agency_transfer,omitempty"`
 }
 
 func (o ResultsTopnBody) String() string {

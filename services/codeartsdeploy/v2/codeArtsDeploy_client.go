@@ -105,7 +105,7 @@ func (c *CodeArtsDeployClient) DeleteDeployTaskInvoker(request *model.DeleteDepl
 
 // ListAllApp 获取应用列表
 //
-// 查询项目下应用列表
+// 查询项目下应用列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ListAllApp(request *model.ListAllAppRequest) (*model.ListAllAppResponse, error) {
@@ -126,7 +126,7 @@ func (c *CodeArtsDeployClient) ListAllAppInvoker(request *model.ListAllAppReques
 
 // ListDeployTaskHistoryByDate 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
 //
-// 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表
+// 根据开始时间和结束时间查询项目下指定应用的历史部署记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ListDeployTaskHistoryByDate(request *model.ListDeployTaskHistoryByDateRequest) (*model.ListDeployTaskHistoryByDateResponse, error) {
@@ -208,6 +208,27 @@ func (c *CodeArtsDeployClient) ShowDeployTaskDetailInvoker(request *model.ShowDe
 	return &ShowDeployTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowExecutionParams 查询部署记录的执行参数
+//
+// 查询部署记录的执行参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ShowExecutionParams(request *model.ShowExecutionParamsRequest) (*model.ShowExecutionParamsResponse, error) {
+	requestDef := GenReqDefForShowExecutionParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExecutionParamsResponse), nil
+	}
+}
+
+// ShowExecutionParamsInvoker 查询部署记录的执行参数
+func (c *CodeArtsDeployClient) ShowExecutionParamsInvoker(request *model.ShowExecutionParamsRequest) *ShowExecutionParamsInvoker {
+	requestDef := GenReqDefForShowExecutionParams()
+	return &ShowExecutionParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartDeployTask 部署应用
 //
 // 根据部署任务id部署应用。
@@ -231,7 +252,7 @@ func (c *CodeArtsDeployClient) StartDeployTaskInvoker(request *model.StartDeploy
 
 // CreateEnvironment 应用下创建环境
 //
-// 应用下创建环境
+// 应用下创建环境。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) CreateEnvironment(request *model.CreateEnvironmentRequest) (*model.CreateEnvironmentResponse, error) {
@@ -252,7 +273,7 @@ func (c *CodeArtsDeployClient) CreateEnvironmentInvoker(request *model.CreateEnv
 
 // DeleteEnvironment 删除应用下的环境
 //
-// 删除应用下的环境
+// 删除应用下的环境。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) DeleteEnvironment(request *model.DeleteEnvironmentRequest) (*model.DeleteEnvironmentResponse, error) {
@@ -273,7 +294,7 @@ func (c *CodeArtsDeployClient) DeleteEnvironmentInvoker(request *model.DeleteEnv
 
 // DeleteHostFromEnvironment 环境下删除主机
 //
-// 环境下删除主机
+// 环境下删除主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) DeleteHostFromEnvironment(request *model.DeleteHostFromEnvironmentRequest) (*model.DeleteHostFromEnvironmentResponse, error) {
@@ -294,7 +315,7 @@ func (c *CodeArtsDeployClient) DeleteHostFromEnvironmentInvoker(request *model.D
 
 // ImportHostToEnvironment 环境下导入主机
 //
-// 环境下导入主机
+// 环境下导入主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ImportHostToEnvironment(request *model.ImportHostToEnvironmentRequest) (*model.ImportHostToEnvironmentResponse, error) {
@@ -315,7 +336,7 @@ func (c *CodeArtsDeployClient) ImportHostToEnvironmentInvoker(request *model.Imp
 
 // ListEnvironments 查询应用下环境列表
 //
-// 查询应用下环境列表
+// 查询应用下环境列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ListEnvironments(request *model.ListEnvironmentsRequest) (*model.ListEnvironmentsResponse, error) {
@@ -336,7 +357,7 @@ func (c *CodeArtsDeployClient) ListEnvironmentsInvoker(request *model.ListEnviro
 
 // ShowEnvironmentDetail 查询环境详情
 //
-// 查询环境详情
+// 查询环境详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ShowEnvironmentDetail(request *model.ShowEnvironmentDetailRequest) (*model.ShowEnvironmentDetailResponse, error) {
@@ -628,7 +649,7 @@ func (c *CodeArtsDeployClient) ListHostGroupsInvoker(request *model.ListHostGrou
 	return &ListHostGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDeploymentGroupDetail 查询主机集群
+// ShowDeploymentGroupDetail 查询主机集群详情
 //
 // 根据主机集群id查询主机集群详情。该接口于2024年09月30日后不再维护，推荐使用新版ShowHostClusterDetail接口。
 //
@@ -643,13 +664,13 @@ func (c *CodeArtsDeployClient) ShowDeploymentGroupDetail(request *model.ShowDepl
 	}
 }
 
-// ShowDeploymentGroupDetailInvoker 查询主机集群
+// ShowDeploymentGroupDetailInvoker 查询主机集群详情
 func (c *CodeArtsDeployClient) ShowDeploymentGroupDetailInvoker(request *model.ShowDeploymentGroupDetailRequest) *ShowDeploymentGroupDetailInvoker {
 	requestDef := GenReqDefForShowDeploymentGroupDetail()
 	return &ShowDeploymentGroupDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowHostClusterDetail 查询主机集群
+// ShowHostClusterDetail 查询主机集群详情
 //
 // 根据主机集群id查询主机集群详情。
 //
@@ -664,7 +685,7 @@ func (c *CodeArtsDeployClient) ShowHostClusterDetail(request *model.ShowHostClus
 	}
 }
 
-// ShowHostClusterDetailInvoker 查询主机集群
+// ShowHostClusterDetailInvoker 查询主机集群详情
 func (c *CodeArtsDeployClient) ShowHostClusterDetailInvoker(request *model.ShowHostClusterDetailRequest) *ShowHostClusterDetailInvoker {
 	requestDef := GenReqDefForShowHostClusterDetail()
 	return &ShowHostClusterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -693,7 +714,7 @@ func (c *CodeArtsDeployClient) UpdateDeploymentGroupInvoker(request *model.Updat
 
 // ListTaskSuccessRate 获取指定应用的应用部署成功率
 //
-// 获取指定应用的应用部署成功率
+// 获取指定应用的应用部署成功率。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ListTaskSuccessRate(request *model.ListTaskSuccessRateRequest) (*model.ListTaskSuccessRateResponse, error) {
@@ -714,7 +735,7 @@ func (c *CodeArtsDeployClient) ListTaskSuccessRateInvoker(request *model.ListTas
 
 // ShowProjectSuccessRate 获取指定项目的应用部署成功率
 //
-// 获取指定项目的应用部署成功率
+// 获取指定项目的应用部署成功率。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ShowProjectSuccessRate(request *model.ShowProjectSuccessRateRequest) (*model.ShowProjectSuccessRateResponse, error) {

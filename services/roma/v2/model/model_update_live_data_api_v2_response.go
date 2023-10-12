@@ -14,10 +14,10 @@ type UpdateLiveDataApiV2Response struct {
 	// 后端API名称。  支持汉字、英文、数字、中划线、下划线、点、斜杠、中英文格式下的小括号和冒号、中文格式下的顿号，且只能以英文、汉字和数字开头。
 	Name string `json:"name"`
 
-	// 后端API请求路径。  支持英文、数字、中划线、下划线、点等，且以斜杠（/）开头。
+	// 后端API请求路径。  支持英文、数字、中划线、下划线、点等，且以斜杠（/）开头。  更新后端API时，status=4为后端API的已部署状态，该状态下后端API请求路径不能修改。
 	Path string `json:"path"`
 
-	// 后端API请求方法。  支持GET、PUT、POST、DELETE
+	// 后端API请求方法。  支持GET、PUT、POST、DELETE  更新后端API时，status=4为后端API的已部署状态，该状态下后端API请求方法不能修改。
 	Method UpdateLiveDataApiV2ResponseMethod `json:"method"`
 
 	// 后端API描述。  不支持<，>字符
@@ -32,7 +32,7 @@ type UpdateLiveDataApiV2Response struct {
 	// 后端API为签名认证时绑定的签名密钥编号
 	ApiSignatureId *string `json:"api_signature_id,omitempty"`
 
-	// 后端API归属的集成应用编号
+	// 后端API归属的集成应用编号  更新后端API时，status=4为后端API的已部署状态，该状态下后端API归属的集成应用编号不能修改。
 	RomaAppId string `json:"roma_app_id"`
 
 	// API响应信息是否格式化  true： 对响应信息进行格式化  false：对响应信息格式化不进行格式化

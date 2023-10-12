@@ -92,14 +92,17 @@ type ComponentSnapshotContextRuntime struct {
 }
 
 type ComponentSnapshotContextRuntimeEnum struct {
-	DOCKER  ComponentSnapshotContextRuntime
-	JAVA8   ComponentSnapshotContextRuntime
-	JAVA11  ComponentSnapshotContextRuntime
-	TOMCAT8 ComponentSnapshotContextRuntime
-	TOMCAT9 ComponentSnapshotContextRuntime
-	PYTHON3 ComponentSnapshotContextRuntime
-	NODEJS8 ComponentSnapshotContextRuntime
-	PHP7    ComponentSnapshotContextRuntime
+	DOCKER   ComponentSnapshotContextRuntime
+	JAVA8    ComponentSnapshotContextRuntime
+	JAVA11   ComponentSnapshotContextRuntime
+	JAVA17   ComponentSnapshotContextRuntime
+	TOMCAT8  ComponentSnapshotContextRuntime
+	TOMCAT9  ComponentSnapshotContextRuntime
+	PYTHON3  ComponentSnapshotContextRuntime
+	NODEJS8  ComponentSnapshotContextRuntime
+	NODEJS14 ComponentSnapshotContextRuntime
+	NODEJS16 ComponentSnapshotContextRuntime
+	PHP7     ComponentSnapshotContextRuntime
 }
 
 func GetComponentSnapshotContextRuntimeEnum() ComponentSnapshotContextRuntimeEnum {
@@ -113,6 +116,9 @@ func GetComponentSnapshotContextRuntimeEnum() ComponentSnapshotContextRuntimeEnu
 		JAVA11: ComponentSnapshotContextRuntime{
 			value: "Java11",
 		},
+		JAVA17: ComponentSnapshotContextRuntime{
+			value: "Java17",
+		},
 		TOMCAT8: ComponentSnapshotContextRuntime{
 			value: "Tomcat8",
 		},
@@ -124,6 +130,12 @@ func GetComponentSnapshotContextRuntimeEnum() ComponentSnapshotContextRuntimeEnu
 		},
 		NODEJS8: ComponentSnapshotContextRuntime{
 			value: "Nodejs8",
+		},
+		NODEJS14: ComponentSnapshotContextRuntime{
+			value: "Nodejs14",
+		},
+		NODEJS16: ComponentSnapshotContextRuntime{
+			value: "Nodejs16",
 		},
 		PHP7: ComponentSnapshotContextRuntime{
 			value: "Php7",

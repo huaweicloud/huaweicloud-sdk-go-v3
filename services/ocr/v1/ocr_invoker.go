@@ -89,6 +89,18 @@ func (i *RecognizeChileIdCardInvoker) Invoke() (*model.RecognizeChileIdCardRespo
 	}
 }
 
+type RecognizeColombiaIdCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeColombiaIdCardInvoker) Invoke() (*model.RecognizeColombiaIdCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeColombiaIdCardResponse), nil
+	}
+}
+
 type RecognizeDriverLicenseInvoker struct {
 	*invoker.BaseInvoker
 }

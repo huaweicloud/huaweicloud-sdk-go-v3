@@ -13,7 +13,7 @@ type SearchRestInfoImageInfo struct {
 	Box *string `json:"box,omitempty"`
 
 	// 用于搜索的主体类目序号。
-	Category float32 `json:"category,omitempty"`
+	Category *int32 `json:"category,omitempty"`
 
 	// 用于搜索的主体类目名称。
 	CategoryName *string `json:"category_name,omitempty"`

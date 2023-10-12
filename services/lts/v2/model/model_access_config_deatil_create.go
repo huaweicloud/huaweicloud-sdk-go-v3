@@ -12,13 +12,13 @@ import (
 // AccessConfigDeatilCreate 日志接入详细信息
 type AccessConfigDeatilCreate struct {
 
-	// 采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次`` CCE类型中 容器路径和主机路径必填，标准输出不用
+	// 采集路径。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次`` CCE类型中 容器路径和主机路径必填，标准输出不用 最小长度：1 最大长度：128
 	Paths *[]string `json:"paths,omitempty"`
 
-	// 采集路径黑名单。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次
+	// 采集路径黑名单。 1. 路径必须以/或者字母:\\\\开头 2. 不能包含特殊字符<> ' | \" 且不能只输入/ 3. 第一级目录不支持通配符*：不能以/_**   /_*开头 4.**只能出现一次 最小长度：1 最大长度：128
 	BlackPaths *[]string `json:"black_paths,omitempty"`
 
-	Format *AccessConfigFormatCreate `json:"format,omitempty"`
+	Format *AccessConfigFormatCreate `json:"format"`
 
 	WindowsLogInfo *AccessConfigWindowsLogInfoCreate `json:"windows_log_info,omitempty"`
 

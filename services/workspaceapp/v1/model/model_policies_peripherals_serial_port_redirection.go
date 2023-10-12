@@ -12,7 +12,7 @@ type PoliciesPeripheralsSerialPortRedirection struct {
 	// 是否开启串口重定向。取值为： false：表示关闭。 true：表示开启。
 	SerialPortEnable *bool `json:"serial_port_enable,omitempty"`
 
-	Options *PoliciesPeripheralsSerialPortRedirectionOptions `json:"options,omitempty"`
+	Options *SerialPortRedirectionOptions `json:"options,omitempty"`
 }
 
 func (o PoliciesPeripheralsSerialPortRedirection) String() string {

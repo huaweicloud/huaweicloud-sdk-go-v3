@@ -41,6 +41,9 @@ type ConformancePack struct {
 
 	// 合规规则包参数。
 	VarsStructure *[]VarsStructure `json:"vars_structure,omitempty"`
+
+	// 创建者
+	CreatedBy *string `json:"created_by,omitempty"`
 }
 
 func (o ConformancePack) String() string {

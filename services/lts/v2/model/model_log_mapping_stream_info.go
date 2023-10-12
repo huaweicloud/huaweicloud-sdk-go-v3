@@ -9,19 +9,19 @@ import (
 type LogMappingStreamInfo struct {
 
 	// 源日志流ID
-	SourceLogStreamId *string `json:"source_log_stream_id,omitempty"`
+	SourceLogStreamId string `json:"source_log_stream_id"`
 
 	// 目标日志流ID
 	TargetLogStreamId *string `json:"target_log_stream_id,omitempty"`
 
 	// 目标日志流名称
-	TargetLogStreamName *string `json:"target_log_stream_name,omitempty"`
+	TargetLogStreamName string `json:"target_log_stream_name"`
 
 	// 目标日志流EPS ID
 	TargetLogStreamEpsId *string `json:"target_log_stream_eps_id,omitempty"`
 
 	// 目标日志流ttl
-	TargetLogStreamTtl *int32 `json:"target_log_stream_ttl,omitempty"`
+	TargetLogStreamTtl int32 `json:"target_log_stream_ttl"`
 }
 
 func (o LogMappingStreamInfo) String() string {

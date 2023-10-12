@@ -113,6 +113,18 @@ func (i *ShowDeployTaskDetailInvoker) Invoke() (*model.ShowDeployTaskDetailRespo
 	}
 }
 
+type ShowExecutionParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExecutionParamsInvoker) Invoke() (*model.ShowExecutionParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExecutionParamsResponse), nil
+	}
+}
+
 type StartDeployTaskInvoker struct {
 	*invoker.BaseInvoker
 }

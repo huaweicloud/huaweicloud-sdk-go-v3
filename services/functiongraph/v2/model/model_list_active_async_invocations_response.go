@@ -10,8 +10,14 @@ import (
 type ListActiveAsyncInvocationsResponse struct {
 
 	// 异步调用记录列表。
-	Invocations    *[]ListFunctionAsyncInvocationsResult `json:"invocations,omitempty"`
-	HttpStatusCode int                                   `json:"-"`
+	Invocations *[]ListFunctionAsyncInvocationsResult `json:"invocations,omitempty"`
+
+	// 查询数据总条数
+	Count *int32 `json:"count,omitempty"`
+
+	// 查询下一页的起始位置
+	NextMarker     *int32 `json:"next_marker,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListActiveAsyncInvocationsResponse) String() string {

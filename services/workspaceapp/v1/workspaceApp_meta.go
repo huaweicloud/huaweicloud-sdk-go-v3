@@ -64,6 +64,22 @@ func GenReqDefForPublishApp() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowPublishableApp() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/app-groups/{app_group_id}/publishable-app").
+		WithResponse(new(model.ShowPublishableAppResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppGroupId").
+		WithJsonTag("app_group_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUnpublishApp() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -90,6 +106,30 @@ func GenReqDefForUpdateApp() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/app-groups/{app_group_id}/apps/{app_id}").
 		WithResponse(new(model.UpdateAppResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppGroupId").
+		WithJsonTag("app_group_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUploadAppIcon() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/app-groups/{app_group_id}/apps/{app_id}/icon").
+		WithResponse(new(model.UploadAppIconResponse)).
+		WithContentType("multipart/form-data")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppGroupId").
@@ -169,6 +209,10 @@ func GenReqDefForListAppGroup() *def.HttpRequestDef {
 		WithName("AuthorizationType").
 		WithJsonTag("authorization_type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppType").
+		WithJsonTag("app_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -225,6 +269,17 @@ func GenReqDefForListProduct() *def.HttpRequestDef {
 		WithName("PackageType").
 		WithJsonTag("package_type").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSessionType() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/session-type").
+		WithResponse(new(model.ListSessionTypeResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -320,6 +375,21 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithName("JobId").
 		WithJsonTag("job_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateOrUpdateStoragePolicyStatement() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/storages-policy/actions/create-statements").
+		WithResponse(new(model.CreateOrUpdateStoragePolicyStatementResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1076,6 +1146,10 @@ func GenReqDefForListServerGroups() *def.HttpRequestDef {
 		WithName("ServerGroupId").
 		WithJsonTag("server_group_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppType").
+		WithJsonTag("app_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1125,6 +1199,22 @@ func GenReqDefForListAppConnection() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSessionByUserName() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/session/user-session-info").
+		WithResponse(new(model.ListSessionByUserNameResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UserName").
+		WithJsonTag("user_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListUserConnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1140,6 +1230,21 @@ func GenReqDefForListUserConnection() *def.HttpRequestDef {
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForLogoffUserSession() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/session/logoff").
+		WithResponse(new(model.LogoffUserSessionResponse)).
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

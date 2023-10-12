@@ -761,6 +761,18 @@ func (i *ListSubCustomerCouponsInvoker) Invoke() (*model.ListSubCustomerCouponsR
 	}
 }
 
+type ListSubCustomerNewTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubCustomerNewTagInvoker) Invoke() (*model.ListSubCustomerNewTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubCustomerNewTagResponse), nil
+	}
+}
+
 type ListSubCustomersInvoker struct {
 	*invoker.BaseInvoker
 }

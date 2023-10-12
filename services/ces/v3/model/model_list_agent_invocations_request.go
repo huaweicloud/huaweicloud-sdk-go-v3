@@ -15,16 +15,13 @@ type ListAgentInvocationsRequest struct {
 	// 主机id
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 主机名称
-	InstanceName *string `json:"instance_name,omitempty"`
-
 	// 主机类型，ECS弹性云服务器，BMS裸金属服务器
 	InstanceType *ListAgentInvocationsRequestInstanceType `json:"instance_type,omitempty"`
 
 	// 任务id
 	InvocationId *string `json:"invocation_id,omitempty"`
 
-	// 任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退
+	// 任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
 	InvocationType *ListAgentInvocationsRequestInvocationType `json:"invocation_type,omitempty"`
 
 	// 任务对象，目前仅支持telescope
@@ -101,6 +98,7 @@ type ListAgentInvocationsRequestInvocationTypeEnum struct {
 	INSTALL  ListAgentInvocationsRequestInvocationType
 	UPDATE   ListAgentInvocationsRequestInvocationType
 	ROLLBACK ListAgentInvocationsRequestInvocationType
+	RETRY    ListAgentInvocationsRequestInvocationType
 }
 
 func GetListAgentInvocationsRequestInvocationTypeEnum() ListAgentInvocationsRequestInvocationTypeEnum {
@@ -113,6 +111,9 @@ func GetListAgentInvocationsRequestInvocationTypeEnum() ListAgentInvocationsRequ
 		},
 		ROLLBACK: ListAgentInvocationsRequestInvocationType{
 			value: "ROLLBACK",
+		},
+		RETRY: ListAgentInvocationsRequestInvocationType{
+			value: "RETRY",
 		},
 	}
 }

@@ -39,7 +39,6 @@ type DeleteResourceTagRequestResourceTypeEnum struct {
 	DC_DIRECTCONNECT DeleteResourceTagRequestResourceType
 	DC_VGW           DeleteResourceTagRequestResourceType
 	DC_VIF           DeleteResourceTagRequestResourceType
-	DC_LAG           DeleteResourceTagRequestResourceType
 }
 
 func GetDeleteResourceTagRequestResourceTypeEnum() DeleteResourceTagRequestResourceTypeEnum {
@@ -52,9 +51,6 @@ func GetDeleteResourceTagRequestResourceTypeEnum() DeleteResourceTagRequestResou
 		},
 		DC_VIF: DeleteResourceTagRequestResourceType{
 			value: "dc-vif",
-		},
-		DC_LAG: DeleteResourceTagRequestResourceType{
-			value: "dc-lag",
 		},
 	}
 }

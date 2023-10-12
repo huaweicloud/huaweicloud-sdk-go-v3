@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -28,7 +25,7 @@ type VirtualGateway struct {
 	Description *string `json:"description,omitempty"`
 
 	// 虚拟网关类型：default
-	Type *VirtualGatewayType `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 
 	// 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
 	LocalEpGroup *[]string `json:"local_ep_group,omitempty"`
@@ -59,47 +56,4 @@ func (o VirtualGateway) String() string {
 	}
 
 	return strings.Join([]string{"VirtualGateway", string(data)}, " ")
-}
-
-type VirtualGatewayType struct {
-	value string
-}
-
-type VirtualGatewayTypeEnum struct {
-	DEFAULT VirtualGatewayType
-}
-
-func GetVirtualGatewayTypeEnum() VirtualGatewayTypeEnum {
-	return VirtualGatewayTypeEnum{
-		DEFAULT: VirtualGatewayType{
-			value: "default",
-		},
-	}
-}
-
-func (c VirtualGatewayType) Value() string {
-	return c.value
-}
-
-func (c VirtualGatewayType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *VirtualGatewayType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

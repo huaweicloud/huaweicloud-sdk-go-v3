@@ -12,7 +12,7 @@ type UpdateAccessConfigRequestBody struct {
 	// 日志接入ID
 	AccessConfigId string `json:"access_config_id"`
 
-	AccessConfigDetail *AccessConfigDeatilCreate `json:"access_config_detail,omitempty"`
+	AccessConfigDetail *AccessConfigDeatilUpdate `json:"access_config_detail,omitempty"`
 
 	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`
 

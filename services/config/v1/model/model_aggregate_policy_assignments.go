@@ -19,6 +19,9 @@ type AggregatePolicyAssignments struct {
 
 	// 源帐号ID。
 	AccountId *string `json:"account_id,omitempty"`
+
+	// 帐户名称
+	AccountName *string `json:"account_name,omitempty"`
 }
 
 func (o AggregatePolicyAssignments) String() string {

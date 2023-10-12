@@ -12,7 +12,7 @@ type PublishAppResponse struct {
 	// 总数
 	Count *int32 `json:"count,omitempty"`
 
-	// 发布的应用列表。
+	// 查发布的应用列表。
 	Items          *[]App `json:"items,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

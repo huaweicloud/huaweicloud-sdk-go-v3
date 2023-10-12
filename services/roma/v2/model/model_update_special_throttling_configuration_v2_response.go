@@ -31,7 +31,7 @@ type UpdateSpecialThrottlingConfigurationV2Response struct {
 	// 特殊对象类型：APP、USER
 	ObjectType *string `json:"object_type,omitempty"`
 
-	// [作用的APP或租户的名称](tag:hws;hws_hk;hcs;fcs;g42;)[作用的APP或租户ID](tag:Site)
+	// [作用的APP或租户的名称](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[作用的APP或租户ID](tag:Site)
 	ObjectName *string `json:"object_name,omitempty"`
 
 	// 流控策略编号

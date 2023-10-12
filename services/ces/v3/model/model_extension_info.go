@@ -16,6 +16,9 @@ type ExtensionInfo struct {
 
 	// 插件状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
 	Status *ExtensionInfoStatus `json:"status,omitempty"`
+
+	// 插件版本
+	Version *string `json:"version,omitempty"`
 }
 
 func (o ExtensionInfo) String() string {

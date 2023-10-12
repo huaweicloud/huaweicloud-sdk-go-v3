@@ -10,13 +10,13 @@ import (
 type SearchInfo struct {
 
 	// 搜索结果总数。
-	TotalNum float32 `json:"total_num,omitempty"`
+	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 返回结果总数。
-	ReturnNum float32 `json:"return_num,omitempty"`
+	ReturnNum *int32 `json:"return_num,omitempty"`
 
 	// 搜索过程耗时，单位为毫秒。
-	SearchTime float32 `json:"search_time,omitempty"`
+	SearchTime *int32 `json:"search_time,omitempty"`
 
 	LastItem *SearchAfterParam `json:"last_item,omitempty"`
 }

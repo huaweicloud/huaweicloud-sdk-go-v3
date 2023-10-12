@@ -42,6 +42,12 @@ var (
 		"https://kms.cn-north-9.myhuaweicloud.com")
 	CN_SOUTH_4 = region.NewRegion("cn-south-4",
 		"https://kms.cn-south-4.myhuaweicloud.com")
+	CN_SOUTH_2 = region.NewRegion("cn-south-2",
+		"https://kms.cn-south-2.myhuaweicloud.com")
+	ME_EAST_1 = region.NewRegion("me-east-1",
+		"https://kms.me-east-1.myhuaweicloud.com")
+	TR_WEST_1 = region.NewRegion("tr-west-1",
+		"https://kms.tr-west-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -63,6 +69,9 @@ var staticFields = map[string]*region.Region{
 	"af-south-1":     AF_SOUTH_1,
 	"cn-north-9":     CN_NORTH_9,
 	"cn-south-4":     CN_SOUTH_4,
+	"cn-south-2":     CN_SOUTH_2,
+	"me-east-1":      ME_EAST_1,
+	"tr-west-1":      TR_WEST_1,
 }
 
 var provider = region.DefaultProviderChain("KPS")

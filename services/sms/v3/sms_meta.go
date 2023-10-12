@@ -424,6 +424,11 @@ func GenReqDefForShowCertKey() *def.HttpRequestDef {
 		WithJsonTag("task_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnableCaCert").
+		WithJsonTag("enable_ca_cert").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

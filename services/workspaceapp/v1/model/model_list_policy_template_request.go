@@ -10,10 +10,10 @@ import (
 type ListPolicyTemplateRequest struct {
 
 	// 查询的偏移量
-	Offset int32 `json:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询的数量，值区间[1-100]
-	Limit int32 `json:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 根据策略模板名字过滤结果。
 	PolicyGroupName *string `json:"policy_group_name,omitempty"`

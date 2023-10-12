@@ -23,6 +23,9 @@ type CreateVpcChannelV2Response struct {
 	// VPC通道的成员类型。[site场景必须修改成IP类型](tag:Site) - ip - ecs
 	MemberType CreateVpcChannelV2ResponseMemberType `json:"member_type"`
 
+	// vpc通道类型：[暂不支持](tag:Site)  [2：BUILTIN通道类型](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)  [3：微服务类型](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)
+	Type *int32 `json:"type,omitempty"`
+
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
 	DictCode *string `json:"dict_code,omitempty"`
 
@@ -35,14 +38,11 @@ type CreateVpcChannelV2Response struct {
 	// VPC通道的状态。 - 1：正常 - 2：异常
 	Status *CreateVpcChannelV2ResponseStatus `json:"status,omitempty"`
 
-	// 后端云服务器组列表。  [暂不支持](tag:Site)
+	// 后端云服务器组列表。[暂不支持。](tag:Site)
 	MemberGroups *[]MemberGroupInfo `json:"member_groups,omitempty"`
 
 	MicroserviceInfo *MicroServiceInfo `json:"microservice_info,omitempty"`
-
-	// vpc通道类型。 - BUILTIN：BUILTIN通道类型 - MICROSERVICE：微服务类型
-	Type           *CreateVpcChannelV2ResponseType `json:"type,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	HttpStatusCode   int               `json:"-"`
 }
 
 func (o CreateVpcChannelV2Response) String() string {
@@ -196,52 +196,5 @@ func (c *CreateVpcChannelV2ResponseStatus) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type CreateVpcChannelV2ResponseType struct {
-	value string
-}
-
-type CreateVpcChannelV2ResponseTypeEnum struct {
-	BUILTIN      CreateVpcChannelV2ResponseType
-	MICROSERVICE CreateVpcChannelV2ResponseType
-}
-
-func GetCreateVpcChannelV2ResponseTypeEnum() CreateVpcChannelV2ResponseTypeEnum {
-	return CreateVpcChannelV2ResponseTypeEnum{
-		BUILTIN: CreateVpcChannelV2ResponseType{
-			value: "BUILTIN",
-		},
-		MICROSERVICE: CreateVpcChannelV2ResponseType{
-			value: "MICROSERVICE",
-		},
-	}
-}
-
-func (c CreateVpcChannelV2ResponseType) Value() string {
-	return c.value
-}
-
-func (c CreateVpcChannelV2ResponseType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateVpcChannelV2ResponseType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
 	}
 }

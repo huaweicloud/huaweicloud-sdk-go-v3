@@ -65,6 +65,30 @@ func (i *AssociateSignatureKeyV2Invoker) Invoke() (*model.AssociateSignatureKeyV
 	}
 }
 
+type AttachApiToPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachApiToPluginInvoker) Invoke() (*model.AttachApiToPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachApiToPluginResponse), nil
+	}
+}
+
+type AttachPluginToApiInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachPluginToApiInvoker) Invoke() (*model.AttachPluginToApiResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachPluginToApiResponse), nil
+	}
+}
+
 type BatchAddDeviceToGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,6 +446,18 @@ func (i *CreateNotificationInvoker) Invoke() (*model.CreateNotificationResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateNotificationResponse), nil
+	}
+}
+
+type CreatePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePluginInvoker) Invoke() (*model.CreatePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePluginResponse), nil
 	}
 }
 
@@ -797,6 +833,18 @@ func (i *DeleteNotificationInvoker) Invoke() (*model.DeleteNotificationResponse,
 	}
 }
 
+type DeletePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePluginInvoker) Invoke() (*model.DeletePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePluginResponse), nil
+	}
+}
+
 type DeleteProductInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -953,6 +1001,30 @@ func (i *DeleteTaskInvoker) Invoke() (*model.DeleteTaskResponse, error) {
 	}
 }
 
+type DetachApiFromPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachApiFromPluginInvoker) Invoke() (*model.DetachApiFromPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachApiFromPluginResponse), nil
+	}
+}
+
+type DetachPluginFromApiInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachPluginFromApiInvoker) Invoke() (*model.DetachPluginFromApiResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachPluginFromApiResponse), nil
+	}
+}
+
 type DisassociateAppQuotaWithAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1046,6 +1118,30 @@ func (i *InstallMultiTasksInvoker) Invoke() (*model.InstallMultiTasksResponse, e
 		return nil, err
 	} else {
 		return result.(*model.InstallMultiTasksResponse), nil
+	}
+}
+
+type ListApiAttachablePluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiAttachablePluginsInvoker) Invoke() (*model.ListApiAttachablePluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiAttachablePluginsResponse), nil
+	}
+}
+
+type ListApiAttachedPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiAttachedPluginsInvoker) Invoke() (*model.ListApiAttachedPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiAttachedPluginsResponse), nil
 	}
 }
 
@@ -1394,6 +1490,42 @@ func (i *ListNotificationInvoker) Invoke() (*model.ListNotificationResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListNotificationResponse), nil
+	}
+}
+
+type ListPluginAttachableApisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginAttachableApisInvoker) Invoke() (*model.ListPluginAttachableApisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginAttachableApisResponse), nil
+	}
+}
+
+type ListPluginAttachedApisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginAttachedApisInvoker) Invoke() (*model.ListPluginAttachedApisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginAttachedApisResponse), nil
+	}
+}
+
+type ListPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginsResponse), nil
 	}
 }
 
@@ -1985,6 +2117,18 @@ func (i *ShowMqsInstanceTopicAccessPolicyInvoker) Invoke() (*model.ShowMqsInstan
 	}
 }
 
+type ShowPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginInvoker) Invoke() (*model.ShowPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginResponse), nil
+	}
+}
+
 type ShowProductInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2330,6 +2474,18 @@ func (i *UpdateNotificationInvoker) Invoke() (*model.UpdateNotificationResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateNotificationResponse), nil
+	}
+}
+
+type UpdatePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePluginInvoker) Invoke() (*model.UpdatePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePluginResponse), nil
 	}
 }
 
@@ -3374,6 +3530,126 @@ func (i *ImportLiveDataApiDefinitionsV2Invoker) Invoke() (*model.ImportLiveDataA
 		return nil, err
 	} else {
 		return result.(*model.ImportLiveDataApiDefinitionsV2Response), nil
+	}
+}
+
+type BatchAssociateCertsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAssociateCertsV2Invoker) Invoke() (*model.BatchAssociateCertsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAssociateCertsV2Response), nil
+	}
+}
+
+type BatchAssociateDomainsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAssociateDomainsV2Invoker) Invoke() (*model.BatchAssociateDomainsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAssociateDomainsV2Response), nil
+	}
+}
+
+type BatchDisassociateCertsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateCertsV2Invoker) Invoke() (*model.BatchDisassociateCertsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisassociateCertsV2Response), nil
+	}
+}
+
+type BatchDisassociateDomainsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateDomainsV2Invoker) Invoke() (*model.BatchDisassociateDomainsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDisassociateDomainsV2Response), nil
+	}
+}
+
+type CreateCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateV2Invoker) Invoke() (*model.CreateCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateV2Response), nil
+	}
+}
+
+type DeleteCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCertificateV2Invoker) Invoke() (*model.DeleteCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCertificateV2Response), nil
+	}
+}
+
+type ListAttachedDomainsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAttachedDomainsV2Invoker) Invoke() (*model.ListAttachedDomainsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAttachedDomainsV2Response), nil
+	}
+}
+
+type ListCertificatesV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertificatesV2Invoker) Invoke() (*model.ListCertificatesV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertificatesV2Response), nil
+	}
+}
+
+type ShowDetailsOfCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfCertificateV2Invoker) Invoke() (*model.ShowDetailsOfCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfCertificateV2Response), nil
+	}
+}
+
+type UpdateCertificateV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCertificateV2Invoker) Invoke() (*model.UpdateCertificateV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCertificateV2Response), nil
 	}
 }
 

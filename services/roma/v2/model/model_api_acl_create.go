@@ -17,7 +17,7 @@ type ApiAclCreate struct {
 	// ACL策略值，支持一个或多个值，使用英文半角逗号分隔
 	AclValue string `json:"acl_value"`
 
-	// 对象类型： - IP - DOMAIN
+	// 对象类型： - IP - DOMAIN [Site自治版不支持DOMAIN类型。](tag:Site)
 	EntityType string `json:"entity_type"`
 }
 

@@ -113,6 +113,18 @@ func (i *UpdateHostedDirectConnectInvoker) Invoke() (*model.UpdateHostedDirectCo
 	}
 }
 
+type ShowQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
 type BatchCreateResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +257,18 @@ func (i *UpdateVirtualGatewayInvoker) Invoke() (*model.UpdateVirtualGatewayRespo
 	}
 }
 
+type CreateVifPeerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVifPeerInvoker) Invoke() (*model.CreateVifPeerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVifPeerResponse), nil
+	}
+}
+
 type CreateVirtualInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -257,6 +281,18 @@ func (i *CreateVirtualInterfaceInvoker) Invoke() (*model.CreateVirtualInterfaceR
 	}
 }
 
+type DeleteVifPeerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVifPeerInvoker) Invoke() (*model.DeleteVifPeerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVifPeerResponse), nil
+	}
+}
+
 type DeleteVirtualInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +302,18 @@ func (i *DeleteVirtualInterfaceInvoker) Invoke() (*model.DeleteVirtualInterfaceR
 		return nil, err
 	} else {
 		return result.(*model.DeleteVirtualInterfaceResponse), nil
+	}
+}
+
+type ListSwitchoverTestRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSwitchoverTestRecordsInvoker) Invoke() (*model.ListSwitchoverTestRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSwitchoverTestRecordsResponse), nil
 	}
 }
 
@@ -290,6 +338,30 @@ func (i *ShowVirtualInterfaceInvoker) Invoke() (*model.ShowVirtualInterfaceRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowVirtualInterfaceResponse), nil
+	}
+}
+
+type SwitchoverTestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchoverTestInvoker) Invoke() (*model.SwitchoverTestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchoverTestResponse), nil
+	}
+}
+
+type UpdateVifPeerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateVifPeerInvoker) Invoke() (*model.UpdateVifPeerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateVifPeerResponse), nil
 	}
 }
 

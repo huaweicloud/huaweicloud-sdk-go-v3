@@ -19,9 +19,9 @@ func OcrClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// RecognizeAcceptanceBill 电子承兑汇票识别
+// RecognizeAcceptanceBill 承兑汇票识别
 //
-// 识别电子承兑汇票识别中的关键字段, 并以json格式返回结构化结果
+// 识别承兑汇票中的关键信息, 并以json格式返回结构化结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeAcceptanceBill(request *model.RecognizeAcceptanceBillRequest) (*model.RecognizeAcceptanceBillResponse, error) {
@@ -34,7 +34,7 @@ func (c *OcrClient) RecognizeAcceptanceBill(request *model.RecognizeAcceptanceBi
 	}
 }
 
-// RecognizeAcceptanceBillInvoker 电子承兑汇票识别
+// RecognizeAcceptanceBillInvoker 承兑汇票识别
 func (c *OcrClient) RecognizeAcceptanceBillInvoker(request *model.RecognizeAcceptanceBillRequest) *RecognizeAcceptanceBillInvoker {
 	requestDef := GenReqDefForRecognizeAcceptanceBill()
 	return &RecognizeAcceptanceBillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -172,6 +172,27 @@ func (c *OcrClient) RecognizeChileIdCard(request *model.RecognizeChileIdCardRequ
 func (c *OcrClient) RecognizeChileIdCardInvoker(request *model.RecognizeChileIdCardRequest) *RecognizeChileIdCardInvoker {
 	requestDef := GenReqDefForRecognizeChileIdCard()
 	return &RecognizeChileIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeColombiaIdCard 哥伦比亚身份证识别
+//
+// 识别哥伦比亚身份证中的文字信息，并将识别的结构化结果返回给用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeColombiaIdCard(request *model.RecognizeColombiaIdCardRequest) (*model.RecognizeColombiaIdCardResponse, error) {
+	requestDef := GenReqDefForRecognizeColombiaIdCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeColombiaIdCardResponse), nil
+	}
+}
+
+// RecognizeColombiaIdCardInvoker 哥伦比亚身份证识别
+func (c *OcrClient) RecognizeColombiaIdCardInvoker(request *model.RecognizeColombiaIdCardRequest) *RecognizeColombiaIdCardInvoker {
+	requestDef := GenReqDefForRecognizeColombiaIdCard()
+	return &RecognizeColombiaIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RecognizeDriverLicense 驾驶证识别
@@ -971,7 +992,7 @@ func (c *OcrClient) RecognizeVietnamIdCardInvoker(request *model.RecognizeVietna
 
 // RecognizeWaybillElectronic 电子面单识别
 //
-// 识别用户上传的韵达电子面单图片中的文字内容，并将识别的结果以json格式返回给用户。
+// 识别用户上传的电子面单图片中的文字内容，并将识别的结果以json格式返回给用户。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OcrClient) RecognizeWaybillElectronic(request *model.RecognizeWaybillElectronicRequest) (*model.RecognizeWaybillElectronicResponse, error) {

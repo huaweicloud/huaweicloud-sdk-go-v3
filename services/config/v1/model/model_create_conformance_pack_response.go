@@ -40,8 +40,11 @@ type CreateConformancePackResponse struct {
 	ErrorMessage *string `json:"error_message,omitempty"`
 
 	// 合规规则包参数。
-	VarsStructure  *[]VarsStructure `json:"vars_structure,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	VarsStructure *[]VarsStructure `json:"vars_structure,omitempty"`
+
+	// 创建者
+	CreatedBy      *string `json:"created_by,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateConformancePackResponse) String() string {

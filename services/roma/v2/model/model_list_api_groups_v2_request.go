@@ -27,7 +27,7 @@ type ListApiGroupsV2Request struct {
 	// 集成应用编号
 	RomaAppId *string `json:"roma_app_id,omitempty"`
 
-	// 指定需要精确匹配查找的参数名称，多个参数需要支持精确匹配时参数之间使用“,”隔开。  [当前支持name，domain_name。](tag:hws;hws_hk;hcs;fcs;g42;)[目前仅支持API分组名称](tag:Site)
+	// 指定需要精确匹配查找的参数名称，多个参数需要支持精确匹配时参数之间使用“,”隔开。  [当前支持name，domain_name。](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[目前仅支持API分组名称](tag:Site)
 	PreciseSearch *string `json:"precise_search,omitempty"`
 
 	// 域名

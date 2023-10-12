@@ -12,7 +12,7 @@ type PoliciesPeripheralsDeviceRedirectionCameraRedirection struct {
 	// 是否开启摄像头设备重定向。取值为： false：表示关闭。 true：表示开启。
 	VideoCompressEnable *bool `json:"video_compress_enable,omitempty"`
 
-	Options *PoliciesPeripheralsDeviceRedirectionCameraRedirectionOptions `json:"options,omitempty"`
+	Options *CameraRedirectionOptions `json:"options,omitempty"`
 }
 
 func (o PoliciesPeripheralsDeviceRedirectionCameraRedirection) String() string {

@@ -85,7 +85,8 @@ func (c *RomaClient) AssociateCertificateV2Invoker(request *model.AssociateCerti
 
 // AssociateDomainV2 绑定域名
 //
-// 用户自定义的域名，需要CNAME到API分组的子域名上才能生效。 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
+// 用户自定义的域名，需要CNAME到API分组的子域名上才能生效。
+// 每个API分组下最多可绑定5个域名。绑定域名后，用户可通过自定义域名调用API。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) AssociateDomainV2(request *model.AssociateDomainV2Request) (*model.AssociateDomainV2Response, error) {
@@ -108,7 +109,7 @@ func (c *RomaClient) AssociateDomainV2Invoker(request *model.AssociateDomainV2Re
 //
 // 签名密钥创建后，需要绑定到API才能生效。
 //
-// 将签名密钥绑定到API后，则ROMA Connect APIC请求后端服务时就会使用这个签名密钥进行加密签名，后端服务可以校验这个签名来验证请求来源。
+// 将签名密钥绑定到API后，则服务集成请求后端服务时就会使用这个签名密钥进行加密签名，后端服务可以校验这个签名来验证请求来源。
 //
 // 将指定的签名密钥绑定到一个或多个已发布的API上。同一个API发布到不同的环境可以绑定不同的签名密钥；一个API在发布到特定环境后只能绑定一个签名密钥。
 //
@@ -127,6 +128,56 @@ func (c *RomaClient) AssociateSignatureKeyV2(request *model.AssociateSignatureKe
 func (c *RomaClient) AssociateSignatureKeyV2Invoker(request *model.AssociateSignatureKeyV2Request) *AssociateSignatureKeyV2Invoker {
 	requestDef := GenReqDefForAssociateSignatureKeyV2()
 	return &AssociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachApiToPlugin 插件绑定API
+//
+// 绑定插件到API上。
+// - 只能选择发布状态的API
+// - 绑定以后及时生效
+// - 修改插件后及时生效
+// - 相同类型的插件只能绑定一个，原来已经绑定的同类型插件，会直接覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) AttachApiToPlugin(request *model.AttachApiToPluginRequest) (*model.AttachApiToPluginResponse, error) {
+	requestDef := GenReqDefForAttachApiToPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachApiToPluginResponse), nil
+	}
+}
+
+// AttachApiToPluginInvoker 插件绑定API
+func (c *RomaClient) AttachApiToPluginInvoker(request *model.AttachApiToPluginRequest) *AttachApiToPluginInvoker {
+	requestDef := GenReqDefForAttachApiToPlugin()
+	return &AttachApiToPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachPluginToApi API绑定插件
+//
+// 绑定插件到API上。
+// - 只能选择发布状态的API
+// - 绑定以后及时生效
+// - 修改插件后及时生效
+// - 相同类型的插件只能绑定一个，原来已经绑定的同类型插件，会直接覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) AttachPluginToApi(request *model.AttachPluginToApiRequest) (*model.AttachPluginToApiResponse, error) {
+	requestDef := GenReqDefForAttachPluginToApi()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachPluginToApiResponse), nil
+	}
+}
+
+// AttachPluginToApiInvoker API绑定插件
+func (c *RomaClient) AttachPluginToApiInvoker(request *model.AttachPluginToApiRequest) *AttachPluginToApiInvoker {
+	requestDef := GenReqDefForAttachPluginToApi()
+	return &AttachPluginToApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchAddDeviceToGroup 批量添加设备到设备分组
@@ -576,7 +627,7 @@ func (c *RomaClient) CreateDispatchesInvoker(request *model.CreateDispatchesRequ
 //
 // 对于不同的环境，API的版本、请求地址甚至于包括请求消息等均有可能不同。如：某个API，v1.0的版本为稳定版本，发布到了生产环境供生产使用，同时，该API正处于迭代中，v1.1的版本是开发人员交付测试人员进行测试的版本，发布在测试环境上，而v1.2的版本目前开发团队正处于开发过程中，可以发布到开发环境进行自测等。
 //
-// 为此，ROMA Connect APIC提供多环境管理功能，使租户能够最大化的模拟实际场景，低成本的接入ROMA Connect APIC。
+// 为此，服务集成提供多环境管理功能，使租户能够最大化的模拟实际场景，低成本的接服务集成。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateEnvironmentV2(request *model.CreateEnvironmentV2Request) (*model.CreateEnvironmentV2Response, error) {
@@ -599,9 +650,10 @@ func (c *RomaClient) CreateEnvironmentV2Invoker(request *model.CreateEnvironment
 //
 // 将API发布到不同的环境后，对于不同的环境，可能会有不同的环境变量，比如，API的服务部署地址，请求的版本号等。
 //
-// 用户可以定义不同的环境变量，用户在定义API时，在API的定义中使用这些变量，当调用API时，ROMA Connect APIC会将这些变量替换成真实的变量值，以达到不同环境的区分效果。
+// 用户可以定义不同的环境变量，用户在定义API时，在API的定义中使用这些变量，当调用API时，服务集成会将这些变量替换成真实的变量值，以达到不同环境的区分效果。
 //
 // 环境变量定义在API分组上，该分组下的所有API都可以使用这些变量。
+//
 // &gt; 1.环境变量的变量名称必须保持唯一，即一个分组在同一个环境上不能有两个同名的变量
 //
 //	2.环境变量区分大小写，即变量ABC与变量abc是两个不同的变量
@@ -774,6 +826,29 @@ func (c *RomaClient) CreateNotificationInvoker(request *model.CreateNotification
 	return &CreateNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePlugin 创建插件
+//
+// 创建插件信息。
+// - 插件不允许重名
+// - 插件创建后未绑定API前是无意义的，绑定API后，对绑定的API即时生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) CreatePlugin(request *model.CreatePluginRequest) (*model.CreatePluginResponse, error) {
+	requestDef := GenReqDefForCreatePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePluginResponse), nil
+	}
+}
+
+// CreatePluginInvoker 创建插件
+func (c *RomaClient) CreatePluginInvoker(request *model.CreatePluginRequest) *CreatePluginInvoker {
+	requestDef := GenReqDefForCreatePlugin()
+	return &CreatePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateProduct 创建产品
 //
 // 创建产品
@@ -881,7 +956,8 @@ func (c *RomaClient) CreateRequestPropertyInvoker(request *model.CreateRequestPr
 
 // CreateRequestThrottlingPolicyV2 创建流控策略
 //
-// 当API上线后，系统会默认给每个API提供一个流控策略，API提供者可以根据自身API的服务能力及负载情况变更这个流控策略。 流控策略即限制API在一定长度的时间内，能够允许被访问的最大次数。
+// 当API上线后，系统会默认给每个API提供一个流控策略，API提供者可以根据自身API的服务能力及负载情况变更这个流控策略。
+// 流控策略即限制API在一定长度的时间内，能够允许被访问的最大次数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateRequestThrottlingPolicyV2(request *model.CreateRequestThrottlingPolicyV2Request) (*model.CreateRequestThrottlingPolicyV2Response, error) {
@@ -969,7 +1045,7 @@ func (c *RomaClient) CreateServiceInvoker(request *model.CreateServiceRequest) *
 //
 // 其中，签名密钥就是API安全保护机制的一种。
 //
-// 租户创建一个签名密钥，并将签名密钥与API进行绑定，则ROMA Connect APIC在请求这个API时，就会使用绑定的签名密钥对请求参数进行数据加密，生成签名。当租户的后端服务收到请求时，可以校验这个签名，如果签名校验不通过，则该请求不是ROMA Connect APIC发出的请求，租户可以拒绝这个请求，从而保证API的安全性，避免API被未知来源的请求攻击。
+// 租户创建一个签名密钥，并将签名密钥与API进行绑定，则服务集成在请求这个API时，就会使用绑定的签名密钥对请求参数进行数据加密，生成签名。当租户的后端服务收到请求时，可以校验这个签名，如果签名校验不通过，则该请求不是服务集成发出的请求，租户可以拒绝这个请求，从而保证API的安全性，避免API被未知来源的请求攻击。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateSignatureKeyV2(request *model.CreateSignatureKeyV2Request) (*model.CreateSignatureKeyV2Response, error) {
@@ -1015,7 +1091,7 @@ func (c *RomaClient) CreateSourceInvoker(request *model.CreateSourceRequest) *Cr
 //
 // 如果想要对某个特定的APP进行特殊设置，例如设置所有APP每分钟的访问次数为500次，但想设置APP1每分钟的访问次数为800次，可以通过在流控策略中设置特殊APP来实现该功能。
 //
-// 为流控策略添加一个特殊设置的对象，可以是APP，也可以是租户。
+// 为流控策略添加一个特殊设置的对象，[可以是APP，也可以是租户。](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[对象为APP。](tag:Site)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateSpecialThrottlingConfigurationV2(request *model.CreateSpecialThrottlingConfigurationV2Request) (*model.CreateSpecialThrottlingConfigurationV2Response, error) {
@@ -1434,6 +1510,28 @@ func (c *RomaClient) DeleteNotificationInvoker(request *model.DeleteNotification
 	return &DeleteNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePlugin 删除插件
+//
+// 删除插件。
+// - 必须先解除API和插件的绑定关系，否则删除报错
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) DeletePlugin(request *model.DeletePluginRequest) (*model.DeletePluginResponse, error) {
+	requestDef := GenReqDefForDeletePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePluginResponse), nil
+	}
+}
+
+// DeletePluginInvoker 删除插件
+func (c *RomaClient) DeletePluginInvoker(request *model.DeletePluginRequest) *DeletePluginInvoker {
+	requestDef := GenReqDefForDeletePlugin()
+	return &DeletePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteProduct 删除产品
 //
 // 删除产品
@@ -1707,6 +1805,50 @@ func (c *RomaClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *Delete
 	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DetachApiFromPlugin 解除绑定插件的API
+//
+// 解除绑定在插件上的API
+// - 解绑及时生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) DetachApiFromPlugin(request *model.DetachApiFromPluginRequest) (*model.DetachApiFromPluginResponse, error) {
+	requestDef := GenReqDefForDetachApiFromPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachApiFromPluginResponse), nil
+	}
+}
+
+// DetachApiFromPluginInvoker 解除绑定插件的API
+func (c *RomaClient) DetachApiFromPluginInvoker(request *model.DetachApiFromPluginRequest) *DetachApiFromPluginInvoker {
+	requestDef := GenReqDefForDetachApiFromPlugin()
+	return &DetachApiFromPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachPluginFromApi 解除绑定API的插件
+//
+// 解除绑定在API上的插件
+// - 解绑及时生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) DetachPluginFromApi(request *model.DetachPluginFromApiRequest) (*model.DetachPluginFromApiResponse, error) {
+	requestDef := GenReqDefForDetachPluginFromApi()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachPluginFromApiResponse), nil
+	}
+}
+
+// DetachPluginFromApiInvoker 解除绑定API的插件
+func (c *RomaClient) DetachPluginFromApiInvoker(request *model.DetachPluginFromApiRequest) *DetachPluginFromApiInvoker {
+	requestDef := GenReqDefForDetachPluginFromApi()
+	return &DetachPluginFromApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisassociateAppQuotaWithApp 解除客户端配额和客户端应用的绑定
 //
 // 解除客户端配额和客户端应用的绑定
@@ -1873,6 +2015,53 @@ func (c *RomaClient) InstallMultiTasks(request *model.InstallMultiTasksRequest) 
 func (c *RomaClient) InstallMultiTasksInvoker(request *model.InstallMultiTasksRequest) *InstallMultiTasksInvoker {
 	requestDef := GenReqDefForInstallMultiTasks()
 	return &InstallMultiTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiAttachablePlugins 查询可绑定当前API的插件
+//
+// 查询可绑定当前API的插件信息。
+// - 支持分页返回
+// - 支持插件名称模糊查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListApiAttachablePlugins(request *model.ListApiAttachablePluginsRequest) (*model.ListApiAttachablePluginsResponse, error) {
+	requestDef := GenReqDefForListApiAttachablePlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiAttachablePluginsResponse), nil
+	}
+}
+
+// ListApiAttachablePluginsInvoker 查询可绑定当前API的插件
+func (c *RomaClient) ListApiAttachablePluginsInvoker(request *model.ListApiAttachablePluginsRequest) *ListApiAttachablePluginsInvoker {
+	requestDef := GenReqDefForListApiAttachablePlugins()
+	return &ListApiAttachablePluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApiAttachedPlugins 查询API下绑定的插件
+//
+// 查询指定API下绑定的插件信息
+// - 用于查询指定API下已经绑定的插件列表信息
+// - 支持分页返回
+// - 支持插件名称模糊查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListApiAttachedPlugins(request *model.ListApiAttachedPluginsRequest) (*model.ListApiAttachedPluginsResponse, error) {
+	requestDef := GenReqDefForListApiAttachedPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiAttachedPluginsResponse), nil
+	}
+}
+
+// ListApiAttachedPluginsInvoker 查询API下绑定的插件
+func (c *RomaClient) ListApiAttachedPluginsInvoker(request *model.ListApiAttachedPluginsRequest) *ListApiAttachedPluginsInvoker {
+	requestDef := GenReqDefForListApiAttachedPlugins()
+	return &ListApiAttachedPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApisBindedToSignatureKeyV2 查看签名密钥绑定的API列表
@@ -2485,6 +2674,83 @@ func (c *RomaClient) ListNotification(request *model.ListNotificationRequest) (*
 func (c *RomaClient) ListNotificationInvoker(request *model.ListNotificationRequest) *ListNotificationInvoker {
 	requestDef := GenReqDefForListNotification()
 	return &ListNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPluginAttachableApis 查询可绑定当前插件的API
+//
+// 查询可绑定当前插件的API信息。
+// - 支持分页返回
+// - 支持API名称模糊查询
+// - 支持已绑定其他插件的API查询返回
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListPluginAttachableApis(request *model.ListPluginAttachableApisRequest) (*model.ListPluginAttachableApisResponse, error) {
+	requestDef := GenReqDefForListPluginAttachableApis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginAttachableApisResponse), nil
+	}
+}
+
+// ListPluginAttachableApisInvoker 查询可绑定当前插件的API
+func (c *RomaClient) ListPluginAttachableApisInvoker(request *model.ListPluginAttachableApisRequest) *ListPluginAttachableApisInvoker {
+	requestDef := GenReqDefForListPluginAttachableApis()
+	return &ListPluginAttachableApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPluginAttachedApis 查询插件下绑定的API
+//
+// 查询指定插件下绑定的API信息
+// - 用于查询指定插件下已经绑定的API列表信息
+// - 支持分页返回
+// - 支持API名称模糊查询
+// - 绑定关系列表中返回的API在对应的环境中可能已经下线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListPluginAttachedApis(request *model.ListPluginAttachedApisRequest) (*model.ListPluginAttachedApisResponse, error) {
+	requestDef := GenReqDefForListPluginAttachedApis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginAttachedApisResponse), nil
+	}
+}
+
+// ListPluginAttachedApisInvoker 查询插件下绑定的API
+func (c *RomaClient) ListPluginAttachedApisInvoker(request *model.ListPluginAttachedApisRequest) *ListPluginAttachedApisInvoker {
+	requestDef := GenReqDefForListPluginAttachedApis()
+	return &ListPluginAttachedApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPlugins 查询插件列表
+//
+// 查询一组符合条件的API网关插件详情。
+// - 支持分页
+// - 支持根据插件类型查询
+// - 支持根据插件可见范围查询
+// - 支持根据插件编码查询
+// - 支持根据名称模糊查询
+// - 支持根据集成应用编号查询
+// - 支持根据集成应用名称查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListPlugins(request *model.ListPluginsRequest) (*model.ListPluginsResponse, error) {
+	requestDef := GenReqDefForListPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginsResponse), nil
+	}
+}
+
+// ListPluginsInvoker 查询插件列表
+func (c *RomaClient) ListPluginsInvoker(request *model.ListPluginsRequest) *ListPluginsInvoker {
+	requestDef := GenReqDefForListPlugins()
+	return &ListPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProductTemplates 查询产品模板
@@ -3306,9 +3572,9 @@ func (c *RomaClient) ShowDetailsOfEnvironmentVariableV2Invoker(request *model.Sh
 	return &ShowDetailsOfEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfInstanceV2 查看ROMA Connect实例详情
+// ShowDetailsOfInstanceV2 查看实例详情
 //
-// 查看ROMA Connect实例详情
+// 查看实例详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanceV2Request) (*model.ShowDetailsOfInstanceV2Response, error) {
@@ -3321,7 +3587,7 @@ func (c *RomaClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanc
 	}
 }
 
-// ShowDetailsOfInstanceV2Invoker 查看ROMA Connect实例详情
+// ShowDetailsOfInstanceV2Invoker 查看实例详情
 func (c *RomaClient) ShowDetailsOfInstanceV2Invoker(request *model.ShowDetailsOfInstanceV2Request) *ShowDetailsOfInstanceV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfInstanceV2()
 	return &ShowDetailsOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3517,6 +3783,27 @@ func (c *RomaClient) ShowMqsInstanceTopicAccessPolicyInvoker(request *model.Show
 	return &ShowMqsInstanceTopicAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPlugin 查询插件详情
+//
+// 查询插件详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ShowPlugin(request *model.ShowPluginRequest) (*model.ShowPluginResponse, error) {
+	requestDef := GenReqDefForShowPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPluginResponse), nil
+	}
+}
+
+// ShowPluginInvoker 查询插件详情
+func (c *RomaClient) ShowPluginInvoker(request *model.ShowPluginRequest) *ShowPluginInvoker {
+	requestDef := GenReqDefForShowPlugin()
+	return &ShowPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProduct 查询产品详情
 //
 // 查询产品详情
@@ -3643,9 +3930,9 @@ func (c *RomaClient) ShowResponsePropertyInvoker(request *model.ShowResponseProp
 	return &ShowResponsePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRestrictionOfInstanceV2 查看ROMA Connect实例约束信息
+// ShowRestrictionOfInstanceV2 查看实例约束信息
 //
-// 查看ROMA Connect实例约束信息
+// 查看实例约束信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) ShowRestrictionOfInstanceV2(request *model.ShowRestrictionOfInstanceV2Request) (*model.ShowRestrictionOfInstanceV2Response, error) {
@@ -3658,7 +3945,7 @@ func (c *RomaClient) ShowRestrictionOfInstanceV2(request *model.ShowRestrictionO
 	}
 }
 
-// ShowRestrictionOfInstanceV2Invoker 查看ROMA Connect实例约束信息
+// ShowRestrictionOfInstanceV2Invoker 查看实例约束信息
 func (c *RomaClient) ShowRestrictionOfInstanceV2Invoker(request *model.ShowRestrictionOfInstanceV2Request) *ShowRestrictionOfInstanceV2Invoker {
 	requestDef := GenReqDefForShowRestrictionOfInstanceV2()
 	return &ShowRestrictionOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4126,6 +4413,29 @@ func (c *RomaClient) UpdateNotificationInvoker(request *model.UpdateNotification
 	return &UpdateNotificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePlugin 修改插件
+//
+// 修改插件信息。
+// - 插件不允许重名
+// - 插件不支持修改类型和可见范围
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) UpdatePlugin(request *model.UpdatePluginRequest) (*model.UpdatePluginResponse, error) {
+	requestDef := GenReqDefForUpdatePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePluginResponse), nil
+	}
+}
+
+// UpdatePluginInvoker 修改插件
+func (c *RomaClient) UpdatePluginInvoker(request *model.UpdatePluginRequest) *UpdatePluginInvoker {
+	requestDef := GenReqDefForUpdatePlugin()
+	return &UpdatePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateProduct 修改产品信息
 //
 // 修改产品信息
@@ -4445,7 +4755,7 @@ func (c *RomaClient) BatchDeleteAclV2Invoker(request *model.BatchDeleteAclV2Requ
 
 // CreateAclStrategyV2 创建ACL策略
 //
-// 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP[或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。](tag:hws;hws_hk;hcs;fcs;g42;)
+// 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP[或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateAclStrategyV2(request *model.CreateAclStrategyV2Request) (*model.CreateAclStrategyV2Response, error) {
@@ -4706,8 +5016,7 @@ func (c *RomaClient) CreateApiGroupV2Invoker(request *model.CreateApiGroupV2Requ
 // CreateApiV2 创建API
 //
 // 添加一个API，API即一个服务接口，具体的服务能力。
-//
-// API分为两部分，第一部分为面向API使用者的API接口，定义了使用者如何调用这个API。第二部分面向API提供者，由API提供者定义这个API的真实的后端情况，定义了ROMA Connect如何去访问真实的后端服务。API的真实后端服务目前支持三种类型：传统的HTTP/HTTPS形式的web后端、[函数工作流、](tag:hws;hws_hk;hcs;fcs;g42;)MOCK。
+// API分为两部分，第一部分为面向API使用者的API接口，定义了使用者如何调用这个API。第二部分面向API提供者，由API提供者定义这个API的真实的后端情况，定义了[ROMA Connect](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[ROMA Site](tag:Site)如何去访问真实的后端服务。API的真实后端服务目前支持的类型：传统的HTTP/HTTPS形式的web后端、[函数工作流、](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)MOCK。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateApiV2(request *model.CreateApiV2Request) (*model.CreateApiV2Response, error) {
@@ -4796,7 +5105,9 @@ func (c *RomaClient) DeleteApiByVersionIdV2Invoker(request *model.DeleteApiByVer
 // DeleteApiGroupV2 删除API分组
 //
 // 删除指定的API分组。
+//
 // 分组下存在API时分组无法删除，需要删除所有分组下的API后，再删除分组。
+//
 // 删除分组时，会一并删除直接或间接关联到该分组下的所有资源，包括独立域名、SSL证书等等。并会将外部域名与子域名的绑定关系进行解除（取决于域名cname方式）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -5993,7 +6304,217 @@ func (c *RomaClient) ImportLiveDataApiDefinitionsV2Invoker(request *model.Import
 	return &ImportLiveDataApiDefinitionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AddingBackendInstancesV2 添加或更新后端实例
+// BatchAssociateCertsV2 域名绑定SSL证书
+//
+// 域名绑定SSL证书。[目前暂时仅支持单个绑定,请求体当中的certificate_ids里面有且只能有一个证书ID](tag:hws,hws_hk,fcs,g42,Site)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) BatchAssociateCertsV2(request *model.BatchAssociateCertsV2Request) (*model.BatchAssociateCertsV2Response, error) {
+	requestDef := GenReqDefForBatchAssociateCertsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAssociateCertsV2Response), nil
+	}
+}
+
+// BatchAssociateCertsV2Invoker 域名绑定SSL证书
+func (c *RomaClient) BatchAssociateCertsV2Invoker(request *model.BatchAssociateCertsV2Request) *BatchAssociateCertsV2Invoker {
+	requestDef := GenReqDefForBatchAssociateCertsV2()
+	return &BatchAssociateCertsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAssociateDomainsV2 SSL证书绑定域名
+//
+// # SSL证书绑定域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) BatchAssociateDomainsV2(request *model.BatchAssociateDomainsV2Request) (*model.BatchAssociateDomainsV2Response, error) {
+	requestDef := GenReqDefForBatchAssociateDomainsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAssociateDomainsV2Response), nil
+	}
+}
+
+// BatchAssociateDomainsV2Invoker SSL证书绑定域名
+func (c *RomaClient) BatchAssociateDomainsV2Invoker(request *model.BatchAssociateDomainsV2Request) *BatchAssociateDomainsV2Invoker {
+	requestDef := GenReqDefForBatchAssociateDomainsV2()
+	return &BatchAssociateDomainsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateCertsV2 域名解绑SSL证书
+//
+// 域名解绑SSL证书。目前暂时仅支持单个解绑,请求体当中的certificate_ids里面有且只能有一个证书ID
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) BatchDisassociateCertsV2(request *model.BatchDisassociateCertsV2Request) (*model.BatchDisassociateCertsV2Response, error) {
+	requestDef := GenReqDefForBatchDisassociateCertsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisassociateCertsV2Response), nil
+	}
+}
+
+// BatchDisassociateCertsV2Invoker 域名解绑SSL证书
+func (c *RomaClient) BatchDisassociateCertsV2Invoker(request *model.BatchDisassociateCertsV2Request) *BatchDisassociateCertsV2Invoker {
+	requestDef := GenReqDefForBatchDisassociateCertsV2()
+	return &BatchDisassociateCertsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisassociateDomainsV2 SSL证书解绑域名
+//
+// # SSL证书解绑域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) BatchDisassociateDomainsV2(request *model.BatchDisassociateDomainsV2Request) (*model.BatchDisassociateDomainsV2Response, error) {
+	requestDef := GenReqDefForBatchDisassociateDomainsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisassociateDomainsV2Response), nil
+	}
+}
+
+// BatchDisassociateDomainsV2Invoker SSL证书解绑域名
+func (c *RomaClient) BatchDisassociateDomainsV2Invoker(request *model.BatchDisassociateDomainsV2Request) *BatchDisassociateDomainsV2Invoker {
+	requestDef := GenReqDefForBatchDisassociateDomainsV2()
+	return &BatchDisassociateDomainsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertificateV2 创建SSL证书
+//
+// 创建SSL证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) CreateCertificateV2(request *model.CreateCertificateV2Request) (*model.CreateCertificateV2Response, error) {
+	requestDef := GenReqDefForCreateCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCertificateV2Response), nil
+	}
+}
+
+// CreateCertificateV2Invoker 创建SSL证书
+func (c *RomaClient) CreateCertificateV2Invoker(request *model.CreateCertificateV2Request) *CreateCertificateV2Invoker {
+	requestDef := GenReqDefForCreateCertificateV2()
+	return &CreateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCertificateV2 删除SSL证书
+//
+// 删除ssl证书接口,删除时只有没有关联域名的证书才能被删除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) DeleteCertificateV2(request *model.DeleteCertificateV2Request) (*model.DeleteCertificateV2Response, error) {
+	requestDef := GenReqDefForDeleteCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCertificateV2Response), nil
+	}
+}
+
+// DeleteCertificateV2Invoker 删除SSL证书
+func (c *RomaClient) DeleteCertificateV2Invoker(request *model.DeleteCertificateV2Request) *DeleteCertificateV2Invoker {
+	requestDef := GenReqDefForDeleteCertificateV2()
+	return &DeleteCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAttachedDomainsV2 获取SSL证书已绑定域名列表
+//
+// 获取SSL证书已绑定域名列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListAttachedDomainsV2(request *model.ListAttachedDomainsV2Request) (*model.ListAttachedDomainsV2Response, error) {
+	requestDef := GenReqDefForListAttachedDomainsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAttachedDomainsV2Response), nil
+	}
+}
+
+// ListAttachedDomainsV2Invoker 获取SSL证书已绑定域名列表
+func (c *RomaClient) ListAttachedDomainsV2Invoker(request *model.ListAttachedDomainsV2Request) *ListAttachedDomainsV2Invoker {
+	requestDef := GenReqDefForListAttachedDomainsV2()
+	return &ListAttachedDomainsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCertificatesV2 获取SSL证书列表
+//
+// 获取SSL证书列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ListCertificatesV2(request *model.ListCertificatesV2Request) (*model.ListCertificatesV2Response, error) {
+	requestDef := GenReqDefForListCertificatesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCertificatesV2Response), nil
+	}
+}
+
+// ListCertificatesV2Invoker 获取SSL证书列表
+func (c *RomaClient) ListCertificatesV2Invoker(request *model.ListCertificatesV2Request) *ListCertificatesV2Invoker {
+	requestDef := GenReqDefForListCertificatesV2()
+	return &ListCertificatesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfCertificateV2 查看证书详情
+//
+// 查看证书详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) ShowDetailsOfCertificateV2(request *model.ShowDetailsOfCertificateV2Request) (*model.ShowDetailsOfCertificateV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfCertificateV2Response), nil
+	}
+}
+
+// ShowDetailsOfCertificateV2Invoker 查看证书详情
+func (c *RomaClient) ShowDetailsOfCertificateV2Invoker(request *model.ShowDetailsOfCertificateV2Request) *ShowDetailsOfCertificateV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfCertificateV2()
+	return &ShowDetailsOfCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCertificateV2 修改SSL证书
+//
+// 修改SSL证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RomaClient) UpdateCertificateV2(request *model.UpdateCertificateV2Request) (*model.UpdateCertificateV2Response, error) {
+	requestDef := GenReqDefForUpdateCertificateV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCertificateV2Response), nil
+	}
+}
+
+// UpdateCertificateV2Invoker 修改SSL证书
+func (c *RomaClient) UpdateCertificateV2Invoker(request *model.UpdateCertificateV2Request) *UpdateCertificateV2Invoker {
+	requestDef := GenReqDefForUpdateCertificateV2()
+	return &UpdateCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddingBackendInstancesV2 添加后端实例
 //
 // 为指定的VPC通道添加后端实例
 //
@@ -6010,7 +6531,7 @@ func (c *RomaClient) AddingBackendInstancesV2(request *model.AddingBackendInstan
 	}
 }
 
-// AddingBackendInstancesV2Invoker 添加或更新后端实例
+// AddingBackendInstancesV2Invoker 添加后端实例
 func (c *RomaClient) AddingBackendInstancesV2Invoker(request *model.AddingBackendInstancesV2Request) *AddingBackendInstancesV2Invoker {
 	requestDef := GenReqDefForAddingBackendInstancesV2()
 	return &AddingBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -6058,9 +6579,9 @@ func (c *RomaClient) BatchEnableMembersInvoker(request *model.BatchEnableMembers
 	return &BatchEnableMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateMemberGroup 添加或更新VPC通道后端服务器组
+// CreateMemberGroup 添加VPC通道后端服务器组
 //
-// 在ROMA Connect APIC中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
+// 在服务集成中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
 //
 // 若指定名称的后端服务器组已存在，则更新对应后端服务器组信息。若请求体中包含多个重复名称的后端服务器定义，则使用第一个定义。
 //
@@ -6075,7 +6596,7 @@ func (c *RomaClient) CreateMemberGroup(request *model.CreateMemberGroupRequest) 
 	}
 }
 
-// CreateMemberGroupInvoker 添加或更新VPC通道后端服务器组
+// CreateMemberGroupInvoker 添加VPC通道后端服务器组
 func (c *RomaClient) CreateMemberGroupInvoker(request *model.CreateMemberGroupRequest) *CreateMemberGroupInvoker {
 	requestDef := GenReqDefForCreateMemberGroup()
 	return &CreateMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -6125,7 +6646,7 @@ func (c *RomaClient) CreateProjectVpcChannelSyncsInvoker(request *model.CreatePr
 
 // CreateVpcChannelV2 创建VPC通道
 //
-// 在ROMA Connect APIC中创建连接私有VPC资源的通道，并在创建API时将后端节点配置为使用这些VPC通道，以便ROMA Connect APIC直接访问私有VPC资源。
+// 在服务集成中创建连接私有VPC资源的通道，并在创建API时将后端节点配置为使用这些VPC通道，以便服务集成直接访问私有VPC资源。
 // &gt; 每个用户默认最多创建200个VPC通道，如需支持更多请联系技术支持调整配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -6334,7 +6855,7 @@ func (c *RomaClient) ShowDetailsOfVpcChannelV2Invoker(request *model.ShowDetails
 	return &ShowDetailsOfVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateBackendInstancesV2 更新后端实例
+// UpdateBackendInstancesV2 修改后端实例
 //
 // 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。若未指定修改的云服务器组，则进行全量覆盖。
 //
@@ -6349,7 +6870,7 @@ func (c *RomaClient) UpdateBackendInstancesV2(request *model.UpdateBackendInstan
 	}
 }
 
-// UpdateBackendInstancesV2Invoker 更新后端实例
+// UpdateBackendInstancesV2Invoker 修改后端实例
 func (c *RomaClient) UpdateBackendInstancesV2Invoker(request *model.UpdateBackendInstancesV2Request) *UpdateBackendInstancesV2Invoker {
 	requestDef := GenReqDefForUpdateBackendInstancesV2()
 	return &UpdateBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -6376,7 +6897,7 @@ func (c *RomaClient) UpdateHealthCheckInvoker(request *model.UpdateHealthCheckRe
 	return &UpdateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateMemberGroup 更新VPC通道后端服务器组
+// UpdateMemberGroup 修改VPC通道后端服务器组
 //
 // 更新指定VPC通道后端服务器组
 //
@@ -6391,7 +6912,7 @@ func (c *RomaClient) UpdateMemberGroup(request *model.UpdateMemberGroupRequest) 
 	}
 }
 
-// UpdateMemberGroupInvoker 更新VPC通道后端服务器组
+// UpdateMemberGroupInvoker 修改VPC通道后端服务器组
 func (c *RomaClient) UpdateMemberGroupInvoker(request *model.UpdateMemberGroupRequest) *UpdateMemberGroupInvoker {
 	requestDef := GenReqDefForUpdateMemberGroup()
 	return &UpdateMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -6418,13 +6939,13 @@ func (c *RomaClient) UpdateProjectVpcChannelInvoker(request *model.UpdateProject
 	return &UpdateProjectVpcChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateVpcChannelV2 更新VPC通道
+// UpdateVpcChannelV2 修改VPC通道
 //
 // 更新指定VPC通道的参数
 //
-// 使用传入的后端实例列表对VPC通道进行全量覆盖，若后端实例列表为空，则会全量删除已有的后端实例；
-//
 // 使用传入的后端服务器组列表对VPC通道进行全量覆盖，若后端服务器组列表为空，则会全量删除已有的服务器组；
+//
+// 为保持兼容，传入的后端服务器列表为空时，不会删除已有的后端服务器，需要使用删除后端服务器接口进行删除；
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) UpdateVpcChannelV2(request *model.UpdateVpcChannelV2Request) (*model.UpdateVpcChannelV2Response, error) {
@@ -6437,7 +6958,7 @@ func (c *RomaClient) UpdateVpcChannelV2(request *model.UpdateVpcChannelV2Request
 	}
 }
 
-// UpdateVpcChannelV2Invoker 更新VPC通道
+// UpdateVpcChannelV2Invoker 修改VPC通道
 func (c *RomaClient) UpdateVpcChannelV2Invoker(request *model.UpdateVpcChannelV2Request) *UpdateVpcChannelV2Invoker {
 	requestDef := GenReqDefForUpdateVpcChannelV2()
 	return &UpdateVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

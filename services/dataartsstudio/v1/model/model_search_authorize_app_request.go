@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -10,7 +13,13 @@ import (
 type SearchAuthorizeAppRequest struct {
 
 	// 工作空间id
-	Workspace *string `json:"workspace,omitempty"`
+	Workspace string `json:"workspace"`
+
+	// dlm版本类型
+	DlmType SearchAuthorizeAppRequestDlmType `json:"Dlm-Type"`
+
+	// 资源类型
+	ContentType string `json:"Content-Type"`
 
 	// api编号
 	ApiId string `json:"api_id"`
@@ -29,4 +38,51 @@ func (o SearchAuthorizeAppRequest) String() string {
 	}
 
 	return strings.Join([]string{"SearchAuthorizeAppRequest", string(data)}, " ")
+}
+
+type SearchAuthorizeAppRequestDlmType struct {
+	value string
+}
+
+type SearchAuthorizeAppRequestDlmTypeEnum struct {
+	SHARED    SearchAuthorizeAppRequestDlmType
+	EXCLUSIVE SearchAuthorizeAppRequestDlmType
+}
+
+func GetSearchAuthorizeAppRequestDlmTypeEnum() SearchAuthorizeAppRequestDlmTypeEnum {
+	return SearchAuthorizeAppRequestDlmTypeEnum{
+		SHARED: SearchAuthorizeAppRequestDlmType{
+			value: "SHARED",
+		},
+		EXCLUSIVE: SearchAuthorizeAppRequestDlmType{
+			value: "EXCLUSIVE",
+		},
+	}
+}
+
+func (c SearchAuthorizeAppRequestDlmType) Value() string {
+	return c.value
+}
+
+func (c SearchAuthorizeAppRequestDlmType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SearchAuthorizeAppRequestDlmType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

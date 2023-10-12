@@ -27,7 +27,7 @@ type ListVirtualInterfacesRequest struct {
 	// 排序字段。
 	SortKey *string `json:"sort_key,omitempty"`
 
-	// 根据企业项目ID过滤中心网络列表。
+	// 根据企业项目ID过滤资源实例
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
 	// 根据资源ID过滤实例

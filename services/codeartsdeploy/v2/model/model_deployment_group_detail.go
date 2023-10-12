@@ -36,7 +36,7 @@ type DeploymentGroupDetail struct {
 	// 操作系统：windows|linux
 	Os *string `json:"os,omitempty"`
 
-	// 自动连通性验证 0不执行 1每日 2每周
+	// 自动测试功能已下架，该字段已失效
 	AutoConnectionTestSwitch *int32 `json:"auto_connection_test_switch,omitempty"`
 
 	// slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id

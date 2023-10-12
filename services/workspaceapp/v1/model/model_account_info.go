@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// AccountInfo 账户详细信息
+// AccountInfo 用户详细信息
 type AccountInfo struct {
 
-	// 账户，账户的格式必须为:<i>账户(组)</i>的形式
+	// 用户(组)
 	Account string `json:"account"`
 
 	AccountType *AccountTypeEnum `json:"account_type"`
@@ -19,6 +19,9 @@ type AccountInfo struct {
 
 	// 邮箱
 	Email *string `json:"email,omitempty"`
+
+	// 手机
+	TelephoneNumber *string `json:"telephone_number,omitempty"`
 }
 
 func (o AccountInfo) String() string {

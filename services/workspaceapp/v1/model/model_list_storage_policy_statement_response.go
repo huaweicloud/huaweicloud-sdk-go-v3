@@ -12,7 +12,7 @@ type ListStoragePolicyStatementResponse struct {
 	// 总数
 	Count *int32 `json:"count,omitempty"`
 
-	// 支持的访问策略,内置如下三种策略 * `读写` - 上传、编辑、下载 policy_statement_id: DEFAULT_1 action: PutObject、DeleteObject、GetObject * `只读` - 下载 policy_statement_id: DEFAULT_2 action: GetObject * `只写` - 上传、编辑 policy_statement_id: DEFAULT_3 action: PutObject、DeleteObject
+	// 支持的访问策略。
 	Items          *[]PolicyStatement `json:"items,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

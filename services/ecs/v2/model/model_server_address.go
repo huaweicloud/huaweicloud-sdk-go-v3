@@ -15,6 +15,9 @@ type ServerAddress struct {
 	// IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
 	Version string `json:"version"`
 
+	// 是否主网卡。  - true：是主网卡 - false：辅助网卡
+	Primary *bool `json:"primary,omitempty"`
+
 	// IP地址。
 	Addr string `json:"addr"`
 

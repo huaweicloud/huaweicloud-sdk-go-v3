@@ -607,6 +607,48 @@ func (c *DataArtsStudioClient) CreateDirectoryInvoker(request *model.CreateDirec
 	return &CreateDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFactoryEnv 创建环境变量
+//
+// 创建环境变量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateFactoryEnv(request *model.CreateFactoryEnvRequest) (*model.CreateFactoryEnvResponse, error) {
+	requestDef := GenReqDefForCreateFactoryEnv()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFactoryEnvResponse), nil
+	}
+}
+
+// CreateFactoryEnvInvoker 创建环境变量
+func (c *DataArtsStudioClient) CreateFactoryEnvInvoker(request *model.CreateFactoryEnvRequest) *CreateFactoryEnvInvoker {
+	requestDef := GenReqDefForCreateFactoryEnv()
+	return &CreateFactoryEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFactorySupplementDataInstance 创建补数据实例的接口
+//
+// 创建一个补数据实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateFactorySupplementDataInstance(request *model.CreateFactorySupplementDataInstanceRequest) (*model.CreateFactorySupplementDataInstanceResponse, error) {
+	requestDef := GenReqDefForCreateFactorySupplementDataInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFactorySupplementDataInstanceResponse), nil
+	}
+}
+
+// CreateFactorySupplementDataInstanceInvoker 创建补数据实例的接口
+func (c *DataArtsStudioClient) CreateFactorySupplementDataInstanceInvoker(request *model.CreateFactorySupplementDataInstanceRequest) *CreateFactorySupplementDataInstanceInvoker {
+	requestDef := GenReqDefForCreateFactorySupplementDataInstance()
+	return &CreateFactorySupplementDataInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateManagerWorkSpace 创建工作空间
 //
 // 创建工作空间
@@ -3314,6 +3356,48 @@ func (c *DataArtsStudioClient) ShowFactLogicTableByIdInvoker(request *model.Show
 	return &ShowFactLogicTableByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFactoryEnv 查询环境变量信息
+//
+// 查询环境变量信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowFactoryEnv(request *model.ShowFactoryEnvRequest) (*model.ShowFactoryEnvResponse, error) {
+	requestDef := GenReqDefForShowFactoryEnv()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFactoryEnvResponse), nil
+	}
+}
+
+// ShowFactoryEnvInvoker 查询环境变量信息
+func (c *DataArtsStudioClient) ShowFactoryEnvInvoker(request *model.ShowFactoryEnvRequest) *ShowFactoryEnvInvoker {
+	requestDef := GenReqDefForShowFactoryEnv()
+	return &ShowFactoryEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFactorySupplementData 查询所有的补数据实例
+//
+// 查询所有的补数据实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowFactorySupplementData(request *model.ShowFactorySupplementDataRequest) (*model.ShowFactorySupplementDataResponse, error) {
+	requestDef := GenReqDefForShowFactorySupplementData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFactorySupplementDataResponse), nil
+	}
+}
+
+// ShowFactorySupplementDataInvoker 查询所有的补数据实例
+func (c *DataArtsStudioClient) ShowFactorySupplementDataInvoker(request *model.ShowFactorySupplementDataRequest) *ShowFactorySupplementDataInvoker {
+	requestDef := GenReqDefForShowFactorySupplementData()
+	return &ShowFactorySupplementDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGlossaryList 查询标签列表
 //
 // 查询标签列表
@@ -3732,6 +3816,27 @@ func (c *DataArtsStudioClient) ShowWorkspaceDetailById(request *model.ShowWorksp
 func (c *DataArtsStudioClient) ShowWorkspaceDetailByIdInvoker(request *model.ShowWorkspaceDetailByIdRequest) *ShowWorkspaceDetailByIdInvoker {
 	requestDef := GenReqDefForShowWorkspaceDetailById()
 	return &ShowWorkspaceDetailByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopFactorySupplementDataInstance 停止一个补数据实例
+//
+// 停止一个补数据实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) StopFactorySupplementDataInstance(request *model.StopFactorySupplementDataInstanceRequest) (*model.StopFactorySupplementDataInstanceResponse, error) {
+	requestDef := GenReqDefForStopFactorySupplementDataInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopFactorySupplementDataInstanceResponse), nil
+	}
+}
+
+// StopFactorySupplementDataInstanceInvoker 停止一个补数据实例
+func (c *DataArtsStudioClient) StopFactorySupplementDataInstanceInvoker(request *model.StopFactorySupplementDataInstanceRequest) *StopFactorySupplementDataInstanceInvoker {
+	requestDef := GenReqDefForStopFactorySupplementDataInstance()
+	return &StopFactorySupplementDataInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateApp 更新应用

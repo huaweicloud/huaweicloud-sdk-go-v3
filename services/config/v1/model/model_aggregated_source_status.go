@@ -24,6 +24,9 @@ type AggregatedSourceStatus struct {
 	// 源帐号ID或组织。
 	SourceId *string `json:"source_id,omitempty"`
 
+	// 账号名。
+	SourceName *string `json:"source_name,omitempty"`
+
 	// 源帐号类型（ACCOUNT | ORGANIZATION）。
 	SourceType *string `json:"source_type,omitempty"`
 }

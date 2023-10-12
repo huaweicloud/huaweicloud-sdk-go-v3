@@ -996,6 +996,27 @@ func (c *LakeFormationClient) SetPartitionColumnStatisticsInvoker(request *model
 	return &SetPartitionColumnStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListQuotas 查询配额
+//
+// 查询用户的配额信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
+	requestDef := GenReqDefForListQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuotasResponse), nil
+	}
+}
+
+// ListQuotasInvoker 查询配额
+func (c *LakeFormationClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
+	requestDef := GenReqDefForListQuotas()
+	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRole 创建role
 //
 // 创建role
@@ -1479,6 +1500,27 @@ func (c *LakeFormationClient) BatchUpdateLakeFormationInstanceTags(request *mode
 func (c *LakeFormationClient) BatchUpdateLakeFormationInstanceTagsInvoker(request *model.BatchUpdateLakeFormationInstanceTagsRequest) *BatchUpdateLakeFormationInstanceTagsInvoker {
 	requestDef := GenReqDefForBatchUpdateLakeFormationInstanceTags()
 	return &BatchUpdateLakeFormationInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLakeFormationInstanceTags 查询资源标签集合
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListLakeFormationInstanceTags(request *model.ListLakeFormationInstanceTagsRequest) (*model.ListLakeFormationInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListLakeFormationInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLakeFormationInstanceTagsResponse), nil
+	}
+}
+
+// ListLakeFormationInstanceTagsInvoker 查询资源标签集合
+func (c *LakeFormationClient) ListLakeFormationInstanceTagsInvoker(request *model.ListLakeFormationInstanceTagsRequest) *ListLakeFormationInstanceTagsInvoker {
+	requestDef := GenReqDefForListLakeFormationInstanceTags()
+	return &ListLakeFormationInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListGroupsForDomain 获取租户的用户组

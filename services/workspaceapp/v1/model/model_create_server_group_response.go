@@ -38,11 +38,20 @@ type CreateServerGroupResponse struct {
 	// 是否为vdi单会话模式
 	IsVdi *bool `json:"is_vdi,omitempty"`
 
+	ExtraSessionType *ExtraSessionTypeEnum `json:"extra_session_type,omitempty"`
+
+	// 付费会话个数
+	ExtraSessionSize *int32 `json:"extra_session_size,omitempty"`
+
+	AppType *AppTypeEnum `json:"app_type,omitempty"`
+
 	// 服务器组创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 服务器组更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+
+	StorageMountPolicy *StorageFolderMountType `json:"storage_mount_policy,omitempty"`
 
 	// 服务器配置总数量
 	AppServerFlavorCount *int32 `json:"app_server_flavor_count,omitempty"`

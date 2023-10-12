@@ -115,6 +115,10 @@ func GenReqDefForBatchApproveApply() *def.HttpRequestDef {
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
@@ -349,6 +353,10 @@ func GenReqDefForConfirmMessage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
@@ -590,6 +598,71 @@ func GenReqDefForCreateDirectory() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateFactoryEnv() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/factory/env").
+		WithResponse(new(model.CreateFactoryEnvResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Workspace").
+		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("StatusCode").
+		WithJsonTag("status_code").
+		WithKindName("int32").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("IsSuccess").
+		WithJsonTag("is_success").
+		WithKindName("bool").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateFactorySupplementDataInstance() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/factory/supplement-data").
+		WithResponse(new(model.CreateFactorySupplementDataInstanceResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Workspace").
+		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateManagerWorkSpace() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -640,6 +713,14 @@ func GenReqDefForCreateServiceCatalog() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1060,6 +1141,14 @@ func GenReqDefForDeleteServiceCatalog() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1402,6 +1491,14 @@ func GenReqDefForListAllCatalogList() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1469,6 +1566,14 @@ func GenReqDefForListApiCatalogList() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1518,6 +1623,10 @@ func GenReqDefForListApiTopN() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -1643,6 +1752,10 @@ func GenReqDefForListApisTop() *def.HttpRequestDef {
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1675,6 +1788,14 @@ func GenReqDefForListApply() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -1786,6 +1907,10 @@ func GenReqDefForListAppsTop() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -1952,6 +2077,14 @@ func GenReqDefForListCatalogList() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -2769,6 +2902,14 @@ func GenReqDefForListMessage() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -3250,6 +3391,14 @@ func GenReqDefForMigrateApi() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -3274,6 +3423,14 @@ func GenReqDefForMigrateCatalog() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3507,6 +3664,14 @@ func GenReqDefForSearchAuthorizeApp() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -3536,6 +3701,14 @@ func GenReqDefForSearchBindApi() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -3755,6 +3928,14 @@ func GenReqDefForSearchIdByPath() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -3979,6 +4160,10 @@ func GenReqDefForShowApiDashboard() *def.HttpRequestDef {
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4024,6 +4209,10 @@ func GenReqDefForShowApisDashboard() *def.HttpRequestDef {
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4066,6 +4255,10 @@ func GenReqDefForShowApisDetail() *def.HttpRequestDef {
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4098,6 +4291,10 @@ func GenReqDefForShowApisOverview() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -4149,6 +4346,14 @@ func GenReqDefForShowApplyDetail() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4190,6 +4395,10 @@ func GenReqDefForShowAppsDashboard() *def.HttpRequestDef {
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4228,6 +4437,10 @@ func GenReqDefForShowAppsDetail() *def.HttpRequestDef {
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4260,6 +4473,10 @@ func GenReqDefForShowAppsOverview() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DlmType").
 		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -4399,6 +4616,14 @@ func GenReqDefForShowCatalogDetail() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -4698,6 +4923,77 @@ func GenReqDefForShowFactLogicTableById() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowFactoryEnv() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/factory/env").
+		WithResponse(new(model.ShowFactoryEnvResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Workspace").
+		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowFactorySupplementData() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/factory/supplement-data").
+		WithResponse(new(model.ShowFactorySupplementDataResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Page").
+		WithJsonTag("page").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Size").
+		WithJsonTag("size").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UserName").
+		WithJsonTag("user_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StartDate").
+		WithJsonTag("start_date").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndDate").
+		WithJsonTag("end_date").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Workspace").
+		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowGlossaryList() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -4817,6 +5113,14 @@ func GenReqDefForShowMessageDetail() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4883,6 +5187,14 @@ func GenReqDefForShowPathById() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4912,6 +5224,14 @@ func GenReqDefForShowPathObjectById() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -5189,6 +5509,33 @@ func GenReqDefForShowWorkspaceDetailById() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForStopFactorySupplementDataInstance() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/factory/supplement-data/{instance_name}/stop").
+		WithResponse(new(model.StopFactorySupplementDataInstanceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceName").
+		WithJsonTag("instance_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Workspace").
+		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateApp() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -5257,6 +5604,14 @@ func GenReqDefForUpdateCatalog() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5776,6 +6131,14 @@ func GenReqDefForListApis() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -5849,6 +6212,10 @@ func GenReqDefForPublishApi() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
@@ -5992,6 +6359,14 @@ func GenReqDefForShowApi() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -6012,6 +6387,10 @@ func GenReqDefForUpdateApi() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").
 		WithJsonTag("workspace").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DlmType").
+		WithJsonTag("Dlm-Type").
 		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").

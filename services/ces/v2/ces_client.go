@@ -103,6 +103,48 @@ func (c *CesClient) BatchDeleteAlarmTemplatesInvoker(request *model.BatchDeleteA
 	return &BatchDeleteAlarmTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteNotificationMasks 批量删除告警通知屏蔽规则
+//
+// 批量删除告警通知屏蔽规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchDeleteNotificationMasks(request *model.BatchDeleteNotificationMasksRequest) (*model.BatchDeleteNotificationMasksResponse, error) {
+	requestDef := GenReqDefForBatchDeleteNotificationMasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteNotificationMasksResponse), nil
+	}
+}
+
+// BatchDeleteNotificationMasksInvoker 批量删除告警通知屏蔽规则
+func (c *CesClient) BatchDeleteNotificationMasksInvoker(request *model.BatchDeleteNotificationMasksRequest) *BatchDeleteNotificationMasksInvoker {
+	requestDef := GenReqDefForBatchDeleteNotificationMasks()
+	return &BatchDeleteNotificationMasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteOneClickAlarms 批量删除一键告警
+//
+// 批量删除一键告警
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchDeleteOneClickAlarms(request *model.BatchDeleteOneClickAlarmsRequest) (*model.BatchDeleteOneClickAlarmsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteOneClickAlarms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteOneClickAlarmsResponse), nil
+	}
+}
+
+// BatchDeleteOneClickAlarmsInvoker 批量删除一键告警
+func (c *CesClient) BatchDeleteOneClickAlarmsInvoker(request *model.BatchDeleteOneClickAlarmsRequest) *BatchDeleteOneClickAlarmsInvoker {
+	requestDef := GenReqDefForBatchDeleteOneClickAlarms()
+	return &BatchDeleteOneClickAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteResourceGroups 批量删除资源分组
 //
 // 批量删除资源分组
@@ -164,6 +206,90 @@ func (c *CesClient) BatchEnableAlarmRules(request *model.BatchEnableAlarmRulesRe
 func (c *CesClient) BatchEnableAlarmRulesInvoker(request *model.BatchEnableAlarmRulesRequest) *BatchEnableAlarmRulesInvoker {
 	requestDef := GenReqDefForBatchEnableAlarmRules()
 	return &BatchEnableAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateNotificationMaskTime 批量修改告警通知屏蔽规则的屏蔽时间
+//
+// 批量修改告警通知屏蔽规则的屏蔽时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchUpdateNotificationMaskTime(request *model.BatchUpdateNotificationMaskTimeRequest) (*model.BatchUpdateNotificationMaskTimeResponse, error) {
+	requestDef := GenReqDefForBatchUpdateNotificationMaskTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateNotificationMaskTimeResponse), nil
+	}
+}
+
+// BatchUpdateNotificationMaskTimeInvoker 批量修改告警通知屏蔽规则的屏蔽时间
+func (c *CesClient) BatchUpdateNotificationMaskTimeInvoker(request *model.BatchUpdateNotificationMaskTimeRequest) *BatchUpdateNotificationMaskTimeInvoker {
+	requestDef := GenReqDefForBatchUpdateNotificationMaskTime()
+	return &BatchUpdateNotificationMaskTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateNotificationMasks 批量设置告警通知屏蔽规则
+//
+// 批量设置告警通知屏蔽规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchUpdateNotificationMasks(request *model.BatchUpdateNotificationMasksRequest) (*model.BatchUpdateNotificationMasksResponse, error) {
+	requestDef := GenReqDefForBatchUpdateNotificationMasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateNotificationMasksResponse), nil
+	}
+}
+
+// BatchUpdateNotificationMasksInvoker 批量设置告警通知屏蔽规则
+func (c *CesClient) BatchUpdateNotificationMasksInvoker(request *model.BatchUpdateNotificationMasksRequest) *BatchUpdateNotificationMasksInvoker {
+	requestDef := GenReqDefForBatchUpdateNotificationMasks()
+	return &BatchUpdateNotificationMasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateOneClickAlarmPoliciesEnabledState 批量修改一键告警关联告警规则策略的启用状态
+//
+// 批量修改一键告警关联告警规则策略的启用状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchUpdateOneClickAlarmPoliciesEnabledState(request *model.BatchUpdateOneClickAlarmPoliciesEnabledStateRequest) (*model.BatchUpdateOneClickAlarmPoliciesEnabledStateResponse, error) {
+	requestDef := GenReqDefForBatchUpdateOneClickAlarmPoliciesEnabledState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateOneClickAlarmPoliciesEnabledStateResponse), nil
+	}
+}
+
+// BatchUpdateOneClickAlarmPoliciesEnabledStateInvoker 批量修改一键告警关联告警规则策略的启用状态
+func (c *CesClient) BatchUpdateOneClickAlarmPoliciesEnabledStateInvoker(request *model.BatchUpdateOneClickAlarmPoliciesEnabledStateRequest) *BatchUpdateOneClickAlarmPoliciesEnabledStateInvoker {
+	requestDef := GenReqDefForBatchUpdateOneClickAlarmPoliciesEnabledState()
+	return &BatchUpdateOneClickAlarmPoliciesEnabledStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateOneClickAlarmsEnabledState 批量修改一键告警关联告警规则的启用状态
+//
+// 批量修改一键告警关联告警规则的启用状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchUpdateOneClickAlarmsEnabledState(request *model.BatchUpdateOneClickAlarmsEnabledStateRequest) (*model.BatchUpdateOneClickAlarmsEnabledStateResponse, error) {
+	requestDef := GenReqDefForBatchUpdateOneClickAlarmsEnabledState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateOneClickAlarmsEnabledStateResponse), nil
+	}
+}
+
+// BatchUpdateOneClickAlarmsEnabledStateInvoker 批量修改一键告警关联告警规则的启用状态
+func (c *CesClient) BatchUpdateOneClickAlarmsEnabledStateInvoker(request *model.BatchUpdateOneClickAlarmsEnabledStateRequest) *BatchUpdateOneClickAlarmsEnabledStateInvoker {
+	requestDef := GenReqDefForBatchUpdateOneClickAlarmsEnabledState()
+	return &BatchUpdateOneClickAlarmsEnabledStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchUpdateWidgets 批量更新监控视图
@@ -248,6 +374,27 @@ func (c *CesClient) CreateDashboardWidgets(request *model.CreateDashboardWidgets
 func (c *CesClient) CreateDashboardWidgetsInvoker(request *model.CreateDashboardWidgetsRequest) *CreateDashboardWidgetsInvoker {
 	requestDef := GenReqDefForCreateDashboardWidgets()
 	return &CreateDashboardWidgetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOneClickAlarm 创建一键告警
+//
+// 创建一键告警
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) CreateOneClickAlarm(request *model.CreateOneClickAlarmRequest) (*model.CreateOneClickAlarmResponse, error) {
+	requestDef := GenReqDefForCreateOneClickAlarm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOneClickAlarmResponse), nil
+	}
+}
+
+// CreateOneClickAlarmInvoker 创建一键告警
+func (c *CesClient) CreateOneClickAlarmInvoker(request *model.CreateOneClickAlarmRequest) *CreateOneClickAlarmInvoker {
+	requestDef := GenReqDefForCreateOneClickAlarm()
+	return &CreateOneClickAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateOneDashboard 创建/复制监控看板
@@ -502,6 +649,27 @@ func (c *CesClient) ListAlarmTemplatesInvoker(request *model.ListAlarmTemplatesR
 	return &ListAlarmTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCesTargetProjectTags 查询CES指定项目指定资源类型标签列表
+//
+// 查询CES指定项目指定资源类型标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListCesTargetProjectTags(request *model.ListCesTargetProjectTagsRequest) (*model.ListCesTargetProjectTagsResponse, error) {
+	requestDef := GenReqDefForListCesTargetProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCesTargetProjectTagsResponse), nil
+	}
+}
+
+// ListCesTargetProjectTagsInvoker 查询CES指定项目指定资源类型标签列表
+func (c *CesClient) ListCesTargetProjectTagsInvoker(request *model.ListCesTargetProjectTagsRequest) *ListCesTargetProjectTagsInvoker {
+	requestDef := GenReqDefForListCesTargetProjectTags()
+	return &ListCesTargetProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDashboardInfos 查询监控看板列表
 //
 // 查询监控看板列表
@@ -542,6 +710,90 @@ func (c *CesClient) ListDashboardWidgets(request *model.ListDashboardWidgetsRequ
 func (c *CesClient) ListDashboardWidgetsInvoker(request *model.ListDashboardWidgetsRequest) *ListDashboardWidgetsInvoker {
 	requestDef := GenReqDefForListDashboardWidgets()
 	return &ListDashboardWidgetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationMaskResources 查询告警通知屏蔽资源列表
+//
+// 查询告警通知屏蔽资源列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListNotificationMaskResources(request *model.ListNotificationMaskResourcesRequest) (*model.ListNotificationMaskResourcesResponse, error) {
+	requestDef := GenReqDefForListNotificationMaskResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationMaskResourcesResponse), nil
+	}
+}
+
+// ListNotificationMaskResourcesInvoker 查询告警通知屏蔽资源列表
+func (c *CesClient) ListNotificationMaskResourcesInvoker(request *model.ListNotificationMaskResourcesRequest) *ListNotificationMaskResourcesInvoker {
+	requestDef := GenReqDefForListNotificationMaskResources()
+	return &ListNotificationMaskResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationMasks 查询告警通知屏蔽列表
+//
+// 批量查询指定类型的通知屏蔽规则，目前最多支持100个通知屏蔽规则的批量查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListNotificationMasks(request *model.ListNotificationMasksRequest) (*model.ListNotificationMasksResponse, error) {
+	requestDef := GenReqDefForListNotificationMasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationMasksResponse), nil
+	}
+}
+
+// ListNotificationMasksInvoker 查询告警通知屏蔽列表
+func (c *CesClient) ListNotificationMasksInvoker(request *model.ListNotificationMasksRequest) *ListNotificationMasksInvoker {
+	requestDef := GenReqDefForListNotificationMasks()
+	return &ListNotificationMasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOneClickAlarmRules 查询一键告警关联告警规则列表
+//
+// 查询一键告警关联告警规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListOneClickAlarmRules(request *model.ListOneClickAlarmRulesRequest) (*model.ListOneClickAlarmRulesResponse, error) {
+	requestDef := GenReqDefForListOneClickAlarmRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOneClickAlarmRulesResponse), nil
+	}
+}
+
+// ListOneClickAlarmRulesInvoker 查询一键告警关联告警规则列表
+func (c *CesClient) ListOneClickAlarmRulesInvoker(request *model.ListOneClickAlarmRulesRequest) *ListOneClickAlarmRulesInvoker {
+	requestDef := GenReqDefForListOneClickAlarmRules()
+	return &ListOneClickAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOneClickAlarms 查询一键告警列表
+//
+// 查询一键告警列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) ListOneClickAlarms(request *model.ListOneClickAlarmsRequest) (*model.ListOneClickAlarmsResponse, error) {
+	requestDef := GenReqDefForListOneClickAlarms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOneClickAlarmsResponse), nil
+	}
+}
+
+// ListOneClickAlarmsInvoker 查询一键告警列表
+func (c *CesClient) ListOneClickAlarmsInvoker(request *model.ListOneClickAlarmsRequest) *ListOneClickAlarmsInvoker {
+	requestDef := GenReqDefForListOneClickAlarms()
+	return &ListOneClickAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResourceGroups 查询资源分组列表
@@ -649,6 +901,27 @@ func (c *CesClient) ShowWidgetInvoker(request *model.ShowWidgetRequest) *ShowWid
 	return &ShowWidgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAlarmNotifications 修改告警规则告警通知信息
+//
+// 修改告警规则告警通知信息，告警策略&amp;资源请使用对应接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) UpdateAlarmNotifications(request *model.UpdateAlarmNotificationsRequest) (*model.UpdateAlarmNotificationsResponse, error) {
+	requestDef := GenReqDefForUpdateAlarmNotifications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmNotificationsResponse), nil
+	}
+}
+
+// UpdateAlarmNotificationsInvoker 修改告警规则告警通知信息
+func (c *CesClient) UpdateAlarmNotificationsInvoker(request *model.UpdateAlarmNotificationsRequest) *UpdateAlarmNotificationsInvoker {
+	requestDef := GenReqDefForUpdateAlarmNotifications()
+	return &UpdateAlarmNotificationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAlarmRulePolicies 修改告警规则策略(全量修改)
 //
 // 修改告警规则策略(全量修改)
@@ -710,6 +983,48 @@ func (c *CesClient) UpdateDashboard(request *model.UpdateDashboardRequest) (*mod
 func (c *CesClient) UpdateDashboardInvoker(request *model.UpdateDashboardRequest) *UpdateDashboardInvoker {
 	requestDef := GenReqDefForUpdateDashboard()
 	return &UpdateDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNotificationMasks 修改告警通知屏蔽规则
+//
+// 修改告警通知屏蔽规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) UpdateNotificationMasks(request *model.UpdateNotificationMasksRequest) (*model.UpdateNotificationMasksResponse, error) {
+	requestDef := GenReqDefForUpdateNotificationMasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNotificationMasksResponse), nil
+	}
+}
+
+// UpdateNotificationMasksInvoker 修改告警通知屏蔽规则
+func (c *CesClient) UpdateNotificationMasksInvoker(request *model.UpdateNotificationMasksRequest) *UpdateNotificationMasksInvoker {
+	requestDef := GenReqDefForUpdateNotificationMasks()
+	return &UpdateNotificationMasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOneClickAlarmNotifications 批量修改开启状态的一键告警关联告警规则的告警通知
+//
+// 批量修改开启状态的一键告警关联告警规则的告警通知
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) UpdateOneClickAlarmNotifications(request *model.UpdateOneClickAlarmNotificationsRequest) (*model.UpdateOneClickAlarmNotificationsResponse, error) {
+	requestDef := GenReqDefForUpdateOneClickAlarmNotifications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOneClickAlarmNotificationsResponse), nil
+	}
+}
+
+// UpdateOneClickAlarmNotificationsInvoker 批量修改开启状态的一键告警关联告警规则的告警通知
+func (c *CesClient) UpdateOneClickAlarmNotificationsInvoker(request *model.UpdateOneClickAlarmNotificationsRequest) *UpdateOneClickAlarmNotificationsInvoker {
+	requestDef := GenReqDefForUpdateOneClickAlarmNotifications()
+	return &UpdateOneClickAlarmNotificationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateResourceGroup 修改资源分组

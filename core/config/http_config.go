@@ -22,6 +22,7 @@ package config
 import (
 	"context"
 	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer/algorithm"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"net"
 	"net/http"
@@ -54,6 +55,7 @@ type HttpConfig struct {
 	// IgnoreContentTypeForGetRequest Ignore the request header Content-Type when sending a GET request,
 	// the default value is false
 	IgnoreContentTypeForGetRequest bool
+	SigningAlgorithm               algorithm.SigningAlgorithm
 }
 
 func DefaultHttpConfig() *HttpConfig {
@@ -62,7 +64,13 @@ func DefaultHttpConfig() *HttpConfig {
 		Retries:                        DefaultRetries,
 		IgnoreSSLVerification:          DefaultIgnoreSSLVerification,
 		IgnoreContentTypeForGetRequest: DefaultIgnoreContentTypeForGetRequest,
+		SigningAlgorithm:               algorithm.GetDefaultSigningAlgorithm(),
 	}
+}
+
+func (config *HttpConfig) WithSigningAlgorithm(signingAlgorithm algorithm.SigningAlgorithm) *HttpConfig {
+	config.SigningAlgorithm = signingAlgorithm
+	return config
 }
 
 func (config *HttpConfig) WithDialContext(dial DialContext) *HttpConfig {

@@ -16,3 +16,15 @@ func (i *PutEventsInvoker) Invoke() (*model.PutEventsResponse, error) {
 		return result.(*model.PutEventsResponse), nil
 	}
 }
+
+type PutOfficialEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PutOfficialEventsInvoker) Invoke() (*model.PutOfficialEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PutOfficialEventsResponse), nil
+	}
+}

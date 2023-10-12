@@ -105,6 +105,12 @@ type FlavorExtraSpec struct {
 	//
 	Quotagpu *string `json:"quota:gpu,omitempty"`
 
+	// 最多支持的弹性网卡个数
+	QuotavifMaxNum *string `json:"quota:vif_max_num,omitempty"`
+
+	// 最多支持的辅助弹性网卡个数
+	QuotasubNetworkInterfaceMaxNum *string `json:"quota:sub_network_interface_max_num,omitempty"`
+
 	// 该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
 	EcsinstanceArchitecture *string `json:"ecs:instance_architecture,omitempty"`
 }

@@ -14,16 +14,19 @@ type ApiPolicyFunctionCreate struct {
 	// 函数URN
 	FunctionUrn string `json:"function_urn"`
 
+	// 对接函数的网络架构类型 - V1：非VPC网络架构 - V2：VPC网络架构
+	NetworkType *ApiPolicyFunctionCreateNetworkType `json:"network_type,omitempty"`
+
 	// 调用类型 - async： 异步 - sync：同步
 	InvocationType ApiPolicyFunctionCreateInvocationType `json:"invocation_type"`
 
-	// ROMA Connect APIC请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
+	// 服务集成请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000  单位：毫秒。
 	Timeout int32 `json:"timeout"`
 
-	// 版本。字符长度不超过64
+	// 函数版本   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	Version *string `json:"version,omitempty"`
 
-	// 函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
+	// 函数别名URN   当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
 	AliasUrn *string `json:"alias_urn,omitempty"`
 
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
@@ -49,6 +52,53 @@ func (o ApiPolicyFunctionCreate) String() string {
 	}
 
 	return strings.Join([]string{"ApiPolicyFunctionCreate", string(data)}, " ")
+}
+
+type ApiPolicyFunctionCreateNetworkType struct {
+	value string
+}
+
+type ApiPolicyFunctionCreateNetworkTypeEnum struct {
+	V1 ApiPolicyFunctionCreateNetworkType
+	V2 ApiPolicyFunctionCreateNetworkType
+}
+
+func GetApiPolicyFunctionCreateNetworkTypeEnum() ApiPolicyFunctionCreateNetworkTypeEnum {
+	return ApiPolicyFunctionCreateNetworkTypeEnum{
+		V1: ApiPolicyFunctionCreateNetworkType{
+			value: "V1",
+		},
+		V2: ApiPolicyFunctionCreateNetworkType{
+			value: "V2",
+		},
+	}
+}
+
+func (c ApiPolicyFunctionCreateNetworkType) Value() string {
+	return c.value
+}
+
+func (c ApiPolicyFunctionCreateNetworkType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiPolicyFunctionCreateNetworkType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ApiPolicyFunctionCreateInvocationType struct {

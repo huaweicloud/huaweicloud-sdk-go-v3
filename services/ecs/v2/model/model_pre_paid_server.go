@@ -9,7 +9,7 @@ import (
 // PrePaidServer 创建弹性云服务器（包周期）接口Body体。
 type PrePaidServer struct {
 
-	// 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+	// 弹性云服务器定时删除时间。  时间格式例如：2020-01-19T03:30:52Z
 	AutoTerminateTime *string `json:"auto_terminate_time,omitempty"`
 
 	// 待创建云服务器的系统镜像，需要指定已创建镜像的ID，ID格式为通用唯一识别码（Universally Unique Identifier，简称UUID）。  镜像的ID可以从镜像服务的 [查询镜像列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IMS&api=ListImages) 接口获取，该接口可根据 __imagetype、__os_type 等参数过滤选择合适镜像。

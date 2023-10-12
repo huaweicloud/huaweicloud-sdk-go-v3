@@ -189,26 +189,6 @@ func GenReqDefForCreateFunctionTrigger() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateFunctionUrl() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/function-url").
-		WithResponse(new(model.CreateFunctionUrlResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FunctionUrn").
-		WithJsonTag("function_urn").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCreateFunctionVersion() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -409,22 +389,6 @@ func GenReqDefForDeleteFunctionTrigger() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TriggerId").
 		WithJsonTag("trigger_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteFunctionUrl() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/function-url").
-		WithResponse(new(model.DeleteFunctionUrlResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FunctionUrn").
-		WithJsonTag("function_urn").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -1226,22 +1190,6 @@ func GenReqDefForShowFunctionTrigger() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowFunctionUrl() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/function-url").
-		WithResponse(new(model.ShowFunctionUrlResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FunctionUrn").
-		WithJsonTag("function_urn").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowLtsLogDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1687,26 +1635,6 @@ func GenReqDefForUpdateFunctionReservedInstancesCount() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/reservedinstances").
 		WithResponse(new(model.UpdateFunctionReservedInstancesCountResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FunctionUrn").
-		WithJsonTag("function_urn").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateFunctionUrl() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v2/{project_id}/fgs/functions/{function_urn}/function-url").
-		WithResponse(new(model.UpdateFunctionUrlResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

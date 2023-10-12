@@ -12,7 +12,7 @@ type AddDataRestInfoImageInfoObjects struct {
 	Box *string `json:"box,omitempty"`
 
 	// 主体类目序号。
-	Category float32 `json:"category,omitempty"`
+	Category *int32 `json:"category,omitempty"`
 
 	// 主体类目名称。
 	CategoryName *string `json:"category_name,omitempty"`

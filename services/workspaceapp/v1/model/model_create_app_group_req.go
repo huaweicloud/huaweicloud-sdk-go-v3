@@ -19,6 +19,8 @@ type CreateAppGroupReq struct {
 	Description *string `json:"description,omitempty"`
 
 	AuthorizationType *AuthorizationTypeEnum `json:"authorization_type,omitempty"`
+
+	AppType *AppTypeEnum `json:"app_type,omitempty"`
 }
 
 func (o CreateAppGroupReq) String() string {

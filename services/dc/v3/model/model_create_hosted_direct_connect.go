@@ -16,7 +16,7 @@ type CreateHostedDirectConnect struct {
 	Description *string `json:"description,omitempty"`
 
 	// 指定托管专线接入带宽,单位Mbps
-	Bandwidth *int32 `json:"bandwidth,omitempty"`
+	Bandwidth int32 `json:"bandwidth"`
 
 	// hosted物理专线对应的hosting物理专线的ID
 	HostingId string `json:"hosting_id"`

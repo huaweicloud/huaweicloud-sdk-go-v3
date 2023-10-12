@@ -17,7 +17,7 @@ type CreateApiGroupV2Response struct {
 	// API分组名称
 	Name string `json:"name"`
 
-	// 状态   - 1： 有效
+	// 状态   - 1： 有效   - 2:  锁定
 	Status CreateApiGroupV2ResponseStatus `json:"status"`
 
 	// 系统默认分配的子域名
@@ -29,7 +29,7 @@ type CreateApiGroupV2Response struct {
 	// 最近修改时间
 	UpdateTime *sdktime.SdkTime `json:"update_time"`
 
-	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  ROMAConnect暂未对接云市场，此字段默认返回2
+	// 是否已上架云市场： - 1：已上架 - 2：未上架 - 3：审核中  [ROMA Connect](tag:hws,hws_hk,hcs,hcs_sm,fcs,g42)[ROMA Site](tag:Site)暂未对接云市场，此字段默认返回2
 	OnSellStatus int32 `json:"on_sell_status"`
 
 	// 分组上绑定的独立域名列表
@@ -79,12 +79,15 @@ type CreateApiGroupV2ResponseStatus struct {
 
 type CreateApiGroupV2ResponseStatusEnum struct {
 	E_1 CreateApiGroupV2ResponseStatus
+	E_2 CreateApiGroupV2ResponseStatus
 }
 
 func GetCreateApiGroupV2ResponseStatusEnum() CreateApiGroupV2ResponseStatusEnum {
 	return CreateApiGroupV2ResponseStatusEnum{
 		E_1: CreateApiGroupV2ResponseStatus{
 			value: 1,
+		}, E_2: CreateApiGroupV2ResponseStatus{
+			value: 2,
 		},
 	}
 }

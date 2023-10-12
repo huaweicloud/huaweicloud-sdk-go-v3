@@ -15,7 +15,7 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// API名称。  支持汉字、英文、数字、中划线、下划线、点、斜杠、中英文格式下的小括号和冒号、中文格式下的顿号，且只能以英文、汉字和数字开头。 > 中文字符必须为UTF-8或者unicode编码。
 	Name string `json:"name"`
 
-	// API类型[，该参数暂未使用](tag:hcs;fcs;) - 1：公有API - 2：私有API
+	// API类型[，该参数暂未使用](tag:hcs,hcs_sm,fcs) - 1：公有API - 2：私有API
 	Type ListApiRuntimeDefinitionV2ResponseType `json:"type"`
 
 	// API的版本
@@ -27,7 +27,7 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// API的请求方式
 	ReqMethod ListApiRuntimeDefinitionV2ResponseReqMethod `json:"req_method"`
 
-	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。 > 需要服从URI规范。
+	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ .等特殊字符，总长度不超过512，且满足URI规范。  /apic/health_check为服务集成预置的健康检查路径，当req_method=GET时不支持req_uri=/apic/health_check。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
 	// API的认证方式[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
@@ -41,7 +41,7 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
 	MatchMode *ListApiRuntimeDefinitionV2ResponseMatchMode `json:"match_mode,omitempty"`
 
-	// 后端类型[，site暂不支持函数工作流。](tag:Site) - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端
+	// 后端类型[，site暂不支持函数工作流。](tag:Site) - HTTP：web后端 - FUNCTION：函数工作流 - MOCK：模拟的后端  仅控制默认后端类型，策略后端不受此字段控制
 	BackendType ListApiRuntimeDefinitionV2ResponseBackendType `json:"backend_type"`
 
 	// API描述。  不允许带有<、>字符 > 中文字符必须为UTF-8或者unicode编码。
@@ -62,7 +62,7 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// 前端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
-	// 标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。支持输入多个标签，不同标签以英文逗号分割。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
+	// 标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
 	Tags *[]string `json:"tags,omitempty"`
 
 	// 分组自定义响应ID  暂不支持
@@ -77,7 +77,7 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// 标签  待废弃，优先使用tags字段
 	Tag *string `json:"tag,omitempty"`
 
-	// 请求内容格式类型：  application/json application/xml multipart/form-date text/plain
+	// 请求内容格式类型：  application/json application/xml multipart/form-data text/plain
 	ContentType *ListApiRuntimeDefinitionV2ResponseContentType `json:"content_type,omitempty"`
 
 	// API编号
@@ -443,7 +443,7 @@ type ListApiRuntimeDefinitionV2ResponseContentType struct {
 type ListApiRuntimeDefinitionV2ResponseContentTypeEnum struct {
 	APPLICATION_JSON    ListApiRuntimeDefinitionV2ResponseContentType
 	APPLICATION_XML     ListApiRuntimeDefinitionV2ResponseContentType
-	MULTIPART_FORM_DATE ListApiRuntimeDefinitionV2ResponseContentType
+	MULTIPART_FORM_DATA ListApiRuntimeDefinitionV2ResponseContentType
 	TEXT_PLAIN          ListApiRuntimeDefinitionV2ResponseContentType
 }
 
@@ -455,8 +455,8 @@ func GetListApiRuntimeDefinitionV2ResponseContentTypeEnum() ListApiRuntimeDefini
 		APPLICATION_XML: ListApiRuntimeDefinitionV2ResponseContentType{
 			value: "application/xml",
 		},
-		MULTIPART_FORM_DATE: ListApiRuntimeDefinitionV2ResponseContentType{
-			value: "multipart/form-date",
+		MULTIPART_FORM_DATA: ListApiRuntimeDefinitionV2ResponseContentType{
+			value: "multipart/form-data",
 		},
 		TEXT_PLAIN: ListApiRuntimeDefinitionV2ResponseContentType{
 			value: "text/plain",

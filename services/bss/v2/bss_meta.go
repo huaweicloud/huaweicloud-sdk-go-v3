@@ -1801,6 +1801,21 @@ func GenReqDefForListSubCustomerCoupons() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSubCustomerNewTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/partners/sub-customers/new-customers-tags/batch-query").
+		WithResponse(new(model.ListSubCustomerNewTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSubCustomers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

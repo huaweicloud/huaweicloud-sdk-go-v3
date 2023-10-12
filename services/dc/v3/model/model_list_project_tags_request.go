@@ -33,7 +33,6 @@ type ListProjectTagsRequestResourceTypeEnum struct {
 	DC_DIRECTCONNECT ListProjectTagsRequestResourceType
 	DC_VGW           ListProjectTagsRequestResourceType
 	DC_VIF           ListProjectTagsRequestResourceType
-	DC_LAG           ListProjectTagsRequestResourceType
 }
 
 func GetListProjectTagsRequestResourceTypeEnum() ListProjectTagsRequestResourceTypeEnum {
@@ -46,9 +45,6 @@ func GetListProjectTagsRequestResourceTypeEnum() ListProjectTagsRequestResourceT
 		},
 		DC_VIF: ListProjectTagsRequestResourceType{
 			value: "dc-vif",
-		},
-		DC_LAG: ListProjectTagsRequestResourceType{
-			value: "dc-lag",
 		},
 	}
 }

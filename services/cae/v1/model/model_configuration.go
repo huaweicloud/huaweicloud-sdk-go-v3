@@ -9,9 +9,7 @@ import (
 )
 
 type Configuration struct {
-
-	// 组件配置数据。
-	Data *interface{} `json:"data,omitempty"`
+	Data *ListComponentConfigurationsResponseData `json:"data,omitempty"`
 
 	// 操作时间。
 	OperatedAt *sdktime.SdkTime `json:"operated_at,omitempty"`

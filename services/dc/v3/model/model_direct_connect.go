@@ -174,11 +174,9 @@ type DirectConnectType struct {
 }
 
 type DirectConnectTypeEnum struct {
-	STANDARD         DirectConnectType
-	HOSTING          DirectConnectType
-	HOSTED           DirectConnectType
-	ONESTOP_STANDARD DirectConnectType
-	ONESTOP_HOSTED   DirectConnectType
+	STANDARD DirectConnectType
+	HOSTING  DirectConnectType
+	HOSTED   DirectConnectType
 }
 
 func GetDirectConnectTypeEnum() DirectConnectTypeEnum {
@@ -191,12 +189,6 @@ func GetDirectConnectTypeEnum() DirectConnectTypeEnum {
 		},
 		HOSTED: DirectConnectType{
 			value: "hosted",
-		},
-		ONESTOP_STANDARD: DirectConnectType{
-			value: "onestop_standard",
-		},
-		ONESTOP_HOSTED: DirectConnectType{
-			value: "onestop_hosted",
 		},
 	}
 }
@@ -236,7 +228,6 @@ type DirectConnectChargeModeEnum struct {
 	PREPAYMENT DirectConnectChargeMode
 	BANDWIDTH  DirectConnectChargeMode
 	TRAFFIC    DirectConnectChargeMode
-	PORT       DirectConnectChargeMode
 }
 
 func GetDirectConnectChargeModeEnum() DirectConnectChargeModeEnum {
@@ -249,9 +240,6 @@ func GetDirectConnectChargeModeEnum() DirectConnectChargeModeEnum {
 		},
 		TRAFFIC: DirectConnectChargeMode{
 			value: "traffic",
-		},
-		PORT: DirectConnectChargeMode{
-			value: "port",
 		},
 	}
 }

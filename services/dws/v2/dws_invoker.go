@@ -401,6 +401,18 @@ func (i *DisassociateElbInvoker) Invoke() (*model.DisassociateElbResponse, error
 	}
 }
 
+type ExecuteDatabaseOmUserActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteDatabaseOmUserActionInvoker) Invoke() (*model.ExecuteDatabaseOmUserActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteDatabaseOmUserActionResponse), nil
+	}
+}
+
 type ExecuteRedistributionClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -614,6 +626,18 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListClustersResponse), nil
+	}
+}
+
+type ListConfigurationsAuditRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigurationsAuditRecordsInvoker) Invoke() (*model.ListConfigurationsAuditRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigurationsAuditRecordsResponse), nil
 	}
 }
 
@@ -965,6 +989,30 @@ func (i *RestoreDisasterInvoker) Invoke() (*model.RestoreDisasterResponse, error
 	}
 }
 
+type SaveClusterDescriptionInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveClusterDescriptionInfoInvoker) Invoke() (*model.SaveClusterDescriptionInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveClusterDescriptionInfoResponse), nil
+	}
+}
+
+type ShowClusterRedistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterRedistributionInvoker) Invoke() (*model.ShowClusterRedistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterRedistributionResponse), nil
+	}
+}
+
 type ShowDatabaseAuthorityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -974,6 +1022,18 @@ func (i *ShowDatabaseAuthorityInvoker) Invoke() (*model.ShowDatabaseAuthorityRes
 		return nil, err
 	} else {
 		return result.(*model.ShowDatabaseAuthorityResponse), nil
+	}
+}
+
+type ShowDatabaseOmUserStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatabaseOmUserStatusInvoker) Invoke() (*model.ShowDatabaseOmUserStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatabaseOmUserStatusResponse), nil
 	}
 }
 
@@ -1010,6 +1070,18 @@ func (i *ShowDisasterProgressInvoker) Invoke() (*model.ShowDisasterProgressRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowDisasterProgressResponse), nil
+	}
+}
+
+type ShowInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceResponse), nil
 	}
 }
 

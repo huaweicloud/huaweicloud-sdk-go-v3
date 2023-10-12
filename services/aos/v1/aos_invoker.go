@@ -245,6 +245,150 @@ func (i *UpdateStackInvoker) Invoke() (*model.UpdateStackResponse, error) {
 	}
 }
 
+type CreateStackInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStackInstanceInvoker) Invoke() (*model.CreateStackInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStackInstanceResponse), nil
+	}
+}
+
+type CreateStackSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStackSetInvoker) Invoke() (*model.CreateStackSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStackSetResponse), nil
+	}
+}
+
+type DeleteStackInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStackInstanceInvoker) Invoke() (*model.DeleteStackInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStackInstanceResponse), nil
+	}
+}
+
+type DeleteStackSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStackSetInvoker) Invoke() (*model.DeleteStackSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStackSetResponse), nil
+	}
+}
+
+type DeployStackSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeployStackSetInvoker) Invoke() (*model.DeployStackSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeployStackSetResponse), nil
+	}
+}
+
+type ListStackInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStackInstancesInvoker) Invoke() (*model.ListStackInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStackInstancesResponse), nil
+	}
+}
+
+type ListStackSetOperationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStackSetOperationsInvoker) Invoke() (*model.ListStackSetOperationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStackSetOperationsResponse), nil
+	}
+}
+
+type ListStackSetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStackSetsInvoker) Invoke() (*model.ListStackSetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStackSetsResponse), nil
+	}
+}
+
+type ShowStackSetMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStackSetMetadataInvoker) Invoke() (*model.ShowStackSetMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStackSetMetadataResponse), nil
+	}
+}
+
+type ShowStackSetOperationMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStackSetOperationMetadataInvoker) Invoke() (*model.ShowStackSetOperationMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStackSetOperationMetadataResponse), nil
+	}
+}
+
+type ShowStackSetTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStackSetTemplateInvoker) Invoke() (*model.ShowStackSetTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStackSetTemplateResponse), nil
+	}
+}
+
+type UpdateStackSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStackSetInvoker) Invoke() (*model.UpdateStackSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStackSetResponse), nil
+	}
+}
+
 type ParseTemplateVariablesInvoker struct {
 	*invoker.BaseInvoker
 }

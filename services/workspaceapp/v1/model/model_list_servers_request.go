@@ -10,10 +10,10 @@ import (
 type ListServersRequest struct {
 
 	// 查询的偏移量
-	Offset int32 `json:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询的数量，值区间[1-100]
-	Limit int32 `json:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 服务器组唯一标识
 	ServerGroupId *string `json:"server_group_id,omitempty"`

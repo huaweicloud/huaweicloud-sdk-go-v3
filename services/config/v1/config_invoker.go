@@ -257,6 +257,18 @@ func (i *CreateConformancePackInvoker) Invoke() (*model.CreateConformancePackRes
 	}
 }
 
+type CreateOrganizationConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrganizationConformancePackInvoker) Invoke() (*model.CreateOrganizationConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrganizationConformancePackResponse), nil
+	}
+}
+
 type DeleteConformancePackInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +278,18 @@ func (i *DeleteConformancePackInvoker) Invoke() (*model.DeleteConformancePackRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteConformancePackResponse), nil
+	}
+}
+
+type DeleteOrganizationConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOrganizationConformancePackInvoker) Invoke() (*model.DeleteOrganizationConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOrganizationConformancePackResponse), nil
 	}
 }
 
@@ -329,6 +353,30 @@ func (i *ListConformancePacksInvoker) Invoke() (*model.ListConformancePacksRespo
 	}
 }
 
+type ListOrganizationConformancePackStatusesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationConformancePackStatusesInvoker) Invoke() (*model.ListOrganizationConformancePackStatusesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrganizationConformancePackStatusesResponse), nil
+	}
+}
+
+type ListOrganizationConformancePacksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationConformancePacksInvoker) Invoke() (*model.ListOrganizationConformancePacksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrganizationConformancePacksResponse), nil
+	}
+}
+
 type ShowBuiltInConformancePackTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -350,6 +398,30 @@ func (i *ShowConformancePackInvoker) Invoke() (*model.ShowConformancePackRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowConformancePackResponse), nil
+	}
+}
+
+type ShowOrganizationConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOrganizationConformancePackInvoker) Invoke() (*model.ShowOrganizationConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOrganizationConformancePackResponse), nil
+	}
+}
+
+type ShowOrganizationConformancePackDetailedStatusesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOrganizationConformancePackDetailedStatusesInvoker) Invoke() (*model.ShowOrganizationConformancePackDetailedStatusesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOrganizationConformancePackDetailedStatusesResponse), nil
 	}
 }
 

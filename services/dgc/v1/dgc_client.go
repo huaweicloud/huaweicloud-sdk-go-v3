@@ -532,7 +532,7 @@ func (c *DgcClient) ShowConnectionInvoker(request *model.ShowConnectionRequest) 
 	return &ShowConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowFileInfo 检查导入作业文件中的作业和脚本
+// ShowFileInfo 查询作业文件
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.ShowFileInfoResponse, error) {
@@ -545,7 +545,7 @@ func (c *DgcClient) ShowFileInfo(request *model.ShowFileInfoRequest) (*model.Sho
 	}
 }
 
-// ShowFileInfoInvoker 检查导入作业文件中的作业和脚本
+// ShowFileInfoInvoker 查询作业文件
 func (c *DgcClient) ShowFileInfoInvoker(request *model.ShowFileInfoRequest) *ShowFileInfoInvoker {
 	requestDef := GenReqDefForShowFileInfo()
 	return &ShowFileInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

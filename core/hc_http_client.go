@@ -26,7 +26,6 @@ import (
 	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/exchange"
@@ -59,7 +58,6 @@ type HcHttpClient struct {
 	credential    auth.ICredential
 	extraHeader   map[string]string
 	httpClient    *impl.DefaultHttpClient
-	httpConfig    config.HttpConfig
 }
 
 func NewHcHttpClient(httpClient *impl.DefaultHttpClient) *HcHttpClient {
@@ -73,11 +71,6 @@ func (hc *HcHttpClient) WithEndpoints(endpoints []string) *HcHttpClient {
 
 func (hc *HcHttpClient) WithCredential(credential auth.ICredential) *HcHttpClient {
 	hc.credential = credential
-	return hc
-}
-
-func (hc *HcHttpClient) WithHttpConfig(httpConfig config.HttpConfig) *HcHttpClient {
-	hc.httpConfig = httpConfig
 	return hc
 }
 
@@ -157,10 +150,8 @@ func (hc *HcHttpClient) buildRequest(req interface{}, reqDef *def.HttpRequestDef
 		return nil, err
 	}
 
-	builder := request.NewHttpRequestBuilder().
-		WithEndpoint(endpoint).
-		WithMethod(reqDef.Method).
-		WithPath(reqDef.Path)
+	builder := request.NewHttpRequestBuilder().WithEndpoint(endpoint).WithMethod(reqDef.Method).WithPath(reqDef.Path).
+		WithSigningAlgorithm(hc.httpClient.GetHttpConfig().SigningAlgorithm)
 
 	if pq, ok := req.(progress.Request); ok {
 		builder.WithProgressListener(pq.GetProgressListener()).WithProgressInterval(pq.GetProgressInterval())
@@ -231,7 +222,7 @@ func (hc *HcHttpClient) fillParamsFromReq(req interface{}, t reflect.Type, reqDe
 		}
 	}
 
-	if reqDef.ContentType != "" && !(hc.httpConfig.IgnoreContentTypeForGetRequest && reqDef.Method == "GET" && !hasBody) {
+	if reqDef.ContentType != "" && !(hc.httpClient.GetHttpConfig().IgnoreContentTypeForGetRequest && reqDef.Method == "GET" && !hasBody) {
 		builder.AddHeaderParam(contentType, reqDef.ContentType)
 	}
 

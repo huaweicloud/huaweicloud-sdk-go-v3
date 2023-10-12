@@ -21,7 +21,7 @@ type DeploymentGroupUpdateRequest struct {
 	// 自定义slave资源池id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
-	// 自动连通性验证 0不执行 1每日 2每周
+	// 自动测试功能已下架，该字段已失效
 	AutoConnectionTestSwitch *DeploymentGroupUpdateRequestAutoConnectionTestSwitch `json:"auto_connection_test_switch,omitempty"`
 }
 

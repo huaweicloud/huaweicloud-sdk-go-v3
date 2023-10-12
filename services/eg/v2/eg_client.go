@@ -39,3 +39,24 @@ func (c *EgClient) PutEventsInvoker(request *model.PutEventsRequest) *PutEventsI
 	requestDef := GenReqDefForPutEvents()
 	return &PutEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// PutOfficialEvents 发布官方事件到事件通道
+//
+// 发布官方事件到事件通道。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) PutOfficialEvents(request *model.PutOfficialEventsRequest) (*model.PutOfficialEventsResponse, error) {
+	requestDef := GenReqDefForPutOfficialEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PutOfficialEventsResponse), nil
+	}
+}
+
+// PutOfficialEventsInvoker 发布官方事件到事件通道
+func (c *EgClient) PutOfficialEventsInvoker(request *model.PutOfficialEventsRequest) *PutOfficialEventsInvoker {
+	requestDef := GenReqDefForPutOfficialEvents()
+	return &PutOfficialEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

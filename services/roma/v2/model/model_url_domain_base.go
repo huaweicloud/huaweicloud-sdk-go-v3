@@ -13,6 +13,9 @@ type UrlDomainBase struct {
 
 	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
 	MinSslVersion *UrlDomainBaseMinSslVersion `json:"min_ssl_version,omitempty"`
+
+	// 是否开启http到https的重定向，false为关闭，true为开启，默认为false
+	IsHttpRedirectToHttps *bool `json:"is_http_redirect_to_https,omitempty"`
 }
 
 func (o UrlDomainBase) String() string {

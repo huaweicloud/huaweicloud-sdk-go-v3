@@ -15,7 +15,7 @@ type PoliciesDisplay struct {
 	// 显示级别。取值为： LEVEL1：表示等级1。 LEVEL2：表示等级2。 LEVEL3：表示等级3。 LEVEL4：表示等级4（默认/推荐）。 LEVEL5：表示等级5。
 	DisplayLevel *PoliciesDisplayDisplayLevel `json:"display_level,omitempty"`
 
-	Options *PoliciesDisplayOptions `json:"options,omitempty"`
+	Options *DisplayOptions `json:"options,omitempty"`
 
 	// 是否开启渲染加速。取值为： false：表示关闭。 true：表示开启。
 	RenderingAccelerationEnable *bool `json:"rendering_acceleration_enable,omitempty"`

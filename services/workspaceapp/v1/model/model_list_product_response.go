@@ -12,7 +12,7 @@ type ListProductResponse struct {
 	// 可用分区。将服务创建到指定的可用分区。如果不指定则使用系统随机的可用分区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// 系统类型，当前仅支持Windows。 * `Linux` - * `Windows` - * `Other` - minLength: 0 maxLength: 32 example: Windows
+	// 系统类型，当前仅支持Windows。 * `Linux` - * `Windows` - * `Other` -
 	OsType *string `json:"os_type,omitempty"`
 
 	// 产品列表

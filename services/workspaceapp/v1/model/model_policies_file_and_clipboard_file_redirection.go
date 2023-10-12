@@ -15,7 +15,7 @@ type PoliciesFileAndClipboardFileRedirection struct {
 	// 文件重定向。取值为： DISABLED：表示禁用。（默认） READ_ONLY：表示只读。 READ_AND_WRITE：表示读写。
 	RedirectionMode *PoliciesFileAndClipboardFileRedirectionRedirectionMode `json:"redirection_mode,omitempty"`
 
-	Options *PoliciesFileAndClipboardFileRedirectionOptions `json:"options,omitempty"`
+	Options *FileRedirectionOptions `json:"options,omitempty"`
 
 	// 是否开启发送文件（虚机到客户端）。取值为： false：表示关闭。 true：表示开启。
 	VmSendFileClient *bool `json:"vm_send_file_client,omitempty"`

@@ -38,14 +38,17 @@ type UpdateComponentRequestSpecRuntime struct {
 }
 
 type UpdateComponentRequestSpecRuntimeEnum struct {
-	DOCKER  UpdateComponentRequestSpecRuntime
-	JAVA8   UpdateComponentRequestSpecRuntime
-	JAVA11  UpdateComponentRequestSpecRuntime
-	TOMCAT8 UpdateComponentRequestSpecRuntime
-	TOMCAT9 UpdateComponentRequestSpecRuntime
-	PYTHON3 UpdateComponentRequestSpecRuntime
-	NODEJS8 UpdateComponentRequestSpecRuntime
-	PHP7    UpdateComponentRequestSpecRuntime
+	DOCKER   UpdateComponentRequestSpecRuntime
+	JAVA8    UpdateComponentRequestSpecRuntime
+	JAVA11   UpdateComponentRequestSpecRuntime
+	JAVA17   UpdateComponentRequestSpecRuntime
+	TOMCAT8  UpdateComponentRequestSpecRuntime
+	TOMCAT9  UpdateComponentRequestSpecRuntime
+	PYTHON3  UpdateComponentRequestSpecRuntime
+	NODEJS8  UpdateComponentRequestSpecRuntime
+	NODEJS14 UpdateComponentRequestSpecRuntime
+	NODEJS16 UpdateComponentRequestSpecRuntime
+	PHP7     UpdateComponentRequestSpecRuntime
 }
 
 func GetUpdateComponentRequestSpecRuntimeEnum() UpdateComponentRequestSpecRuntimeEnum {
@@ -59,6 +62,9 @@ func GetUpdateComponentRequestSpecRuntimeEnum() UpdateComponentRequestSpecRuntim
 		JAVA11: UpdateComponentRequestSpecRuntime{
 			value: "Java11",
 		},
+		JAVA17: UpdateComponentRequestSpecRuntime{
+			value: "Java17",
+		},
 		TOMCAT8: UpdateComponentRequestSpecRuntime{
 			value: "Tomcat8",
 		},
@@ -70,6 +76,12 @@ func GetUpdateComponentRequestSpecRuntimeEnum() UpdateComponentRequestSpecRuntim
 		},
 		NODEJS8: UpdateComponentRequestSpecRuntime{
 			value: "Nodejs8",
+		},
+		NODEJS14: UpdateComponentRequestSpecRuntime{
+			value: "Nodejs14",
+		},
+		NODEJS16: UpdateComponentRequestSpecRuntime{
+			value: "Nodejs16",
 		},
 		PHP7: UpdateComponentRequestSpecRuntime{
 			value: "Php7",

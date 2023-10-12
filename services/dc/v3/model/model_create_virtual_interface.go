@@ -148,7 +148,7 @@ type CreateVirtualInterfaceServiceType struct {
 type CreateVirtualInterfaceServiceTypeEnum struct {
 	VPC  CreateVirtualInterfaceServiceType
 	VGW  CreateVirtualInterfaceServiceType
-	GDWW CreateVirtualInterfaceServiceType
+	GDGW CreateVirtualInterfaceServiceType
 	LGW  CreateVirtualInterfaceServiceType
 }
 
@@ -160,8 +160,8 @@ func GetCreateVirtualInterfaceServiceTypeEnum() CreateVirtualInterfaceServiceTyp
 		VGW: CreateVirtualInterfaceServiceType{
 			value: "VGW",
 		},
-		GDWW: CreateVirtualInterfaceServiceType{
-			value: "GDWW",
+		GDGW: CreateVirtualInterfaceServiceType{
+			value: "GDGW",
 		},
 		LGW: CreateVirtualInterfaceServiceType{
 			value: "LGW",

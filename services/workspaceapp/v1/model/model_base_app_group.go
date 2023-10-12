@@ -30,6 +30,8 @@ type BaseAppGroup struct {
 	// 租户ID
 	TenantId *string `json:"tenant_id,omitempty"`
 
+	AppType *AppTypeEnum `json:"app_type,omitempty"`
+
 	// 发布时间
 	CreateAt *sdktime.SdkTime `json:"create_at,omitempty"`
 }

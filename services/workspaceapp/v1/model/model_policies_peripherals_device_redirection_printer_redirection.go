@@ -12,7 +12,7 @@ type PoliciesPeripheralsDeviceRedirectionPrinterRedirection struct {
 	// 是否开启打印机设备重定向。取值为： - false：表示关闭。 - true：表示开启。
 	PrinterEnable *bool `json:"printer_enable,omitempty"`
 
-	Options *PoliciesPeripheralsDeviceRedirectionPrinterRedirectionOptions `json:"options,omitempty"`
+	Options *PrinterRedirectionOptions `json:"options,omitempty"`
 }
 
 func (o PoliciesPeripheralsDeviceRedirectionPrinterRedirection) String() string {

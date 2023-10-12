@@ -20,7 +20,7 @@ type TimelineTrafficStatisticsRequestBody struct {
 	// 资源类型，log_group / log_stream / tenant
 	ResourceType string `json:"resource_type"`
 
-	// 查询流量类型值为：write，index，storage
+	// 查询流量类型值为：write，index，storage,basicTransfer，seniorTransfer
 	SearchType string `json:"search_type"`
 
 	// 资源ID

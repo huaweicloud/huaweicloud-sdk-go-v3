@@ -19,6 +19,27 @@ func RdsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddPostgresqlHbaConf 在pg_hba.conf文件最后新增单个或多个配置
+//
+// 以传入配置全量覆盖当前pg_hba.conf文件内容，入参为空时用默认配置覆盖当前文件内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) AddPostgresqlHbaConf(request *model.AddPostgresqlHbaConfRequest) (*model.AddPostgresqlHbaConfResponse, error) {
+	requestDef := GenReqDefForAddPostgresqlHbaConf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddPostgresqlHbaConfResponse), nil
+	}
+}
+
+// AddPostgresqlHbaConfInvoker 在pg_hba.conf文件最后新增单个或多个配置
+func (c *RdsClient) AddPostgresqlHbaConfInvoker(request *model.AddPostgresqlHbaConfRequest) *AddPostgresqlHbaConfInvoker {
+	requestDef := GenReqDefForAddPostgresqlHbaConf()
+	return &AddPostgresqlHbaConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ApplyConfigurationAsync 应用参数模板
 //
 // 应用参数模板。
@@ -414,6 +435,27 @@ func (c *RdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 func (c *RdsClient) DeleteManualBackupInvoker(request *model.DeleteManualBackupRequest) *DeleteManualBackupInvoker {
 	requestDef := GenReqDefForDeleteManualBackup()
 	return &DeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePostgresqlHbaConf 删除pg_hba.conf文件的单个或多个配置
+//
+// 删除pg_hba.conf文件的单个或多个配置，以priority做唯一标识
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeletePostgresqlHbaConf(request *model.DeletePostgresqlHbaConfRequest) (*model.DeletePostgresqlHbaConfResponse, error) {
+	requestDef := GenReqDefForDeletePostgresqlHbaConf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePostgresqlHbaConfResponse), nil
+	}
+}
+
+// DeletePostgresqlHbaConfInvoker 删除pg_hba.conf文件的单个或多个配置
+func (c *RdsClient) DeletePostgresqlHbaConfInvoker(request *model.DeletePostgresqlHbaConfRequest) *DeletePostgresqlHbaConfInvoker {
+	requestDef := GenReqDefForDeletePostgresqlHbaConf()
+	return &DeletePostgresqlHbaConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadSlowlog 获取慢日志下载链接
@@ -923,6 +965,48 @@ func (c *RdsClient) ListOffSiteRestoreTimesInvoker(request *model.ListOffSiteRes
 	return &ListOffSiteRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPostgresqlHbaInfo 查询实例的pg_hba.conf文件配置
+//
+// 查询实例的pg_hba.conf文件配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListPostgresqlHbaInfo(request *model.ListPostgresqlHbaInfoRequest) (*model.ListPostgresqlHbaInfoResponse, error) {
+	requestDef := GenReqDefForListPostgresqlHbaInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlHbaInfoResponse), nil
+	}
+}
+
+// ListPostgresqlHbaInfoInvoker 查询实例的pg_hba.conf文件配置
+func (c *RdsClient) ListPostgresqlHbaInfoInvoker(request *model.ListPostgresqlHbaInfoRequest) *ListPostgresqlHbaInfoInvoker {
+	requestDef := GenReqDefForListPostgresqlHbaInfo()
+	return &ListPostgresqlHbaInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPostgresqlHbaInfoHistory 查询实例的pg_hba.conf文件修改历史
+//
+// 查询实例的pg_hba.conf文件修改历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListPostgresqlHbaInfoHistory(request *model.ListPostgresqlHbaInfoHistoryRequest) (*model.ListPostgresqlHbaInfoHistoryResponse, error) {
+	requestDef := GenReqDefForListPostgresqlHbaInfoHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlHbaInfoHistoryResponse), nil
+	}
+}
+
+// ListPostgresqlHbaInfoHistoryInvoker 查询实例的pg_hba.conf文件修改历史
+func (c *RdsClient) ListPostgresqlHbaInfoHistoryInvoker(request *model.ListPostgresqlHbaInfoHistoryRequest) *ListPostgresqlHbaInfoHistoryInvoker {
+	requestDef := GenReqDefForListPostgresqlHbaInfoHistory()
+	return &ListPostgresqlHbaInfoHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPredefinedTag
 //
 // 查询预定义标签
@@ -1239,6 +1323,27 @@ func (c *RdsClient) MigrateFollower(request *model.MigrateFollowerRequest) (*mod
 func (c *RdsClient) MigrateFollowerInvoker(request *model.MigrateFollowerRequest) *MigrateFollowerInvoker {
 	requestDef := GenReqDefForMigrateFollower()
 	return &MigrateFollowerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyPostgresqlHbaConf 修改pg_hba.conf文件的单个或多个配置
+//
+// 修改/新增pg_hba.conf文件的单个或多个配置，以priority做唯一标识，priority不存在的新增，存在的修改
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifyPostgresqlHbaConf(request *model.ModifyPostgresqlHbaConfRequest) (*model.ModifyPostgresqlHbaConfResponse, error) {
+	requestDef := GenReqDefForModifyPostgresqlHbaConf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyPostgresqlHbaConfResponse), nil
+	}
+}
+
+// ModifyPostgresqlHbaConfInvoker 修改pg_hba.conf文件的单个或多个配置
+func (c *RdsClient) ModifyPostgresqlHbaConfInvoker(request *model.ModifyPostgresqlHbaConfRequest) *ModifyPostgresqlHbaConfInvoker {
+	requestDef := GenReqDefForModifyPostgresqlHbaConf()
+	return &ModifyPostgresqlHbaConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestoreExistInstance 恢复到已有实例

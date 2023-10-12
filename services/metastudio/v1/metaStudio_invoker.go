@@ -197,6 +197,18 @@ func (i *CancelPhotoDigitalHumanVideoInvoker) Invoke() (*model.CancelPhotoDigita
 	}
 }
 
+type CreatePhotoDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePhotoDetectionInvoker) Invoke() (*model.CreatePhotoDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePhotoDetectionResponse), nil
+	}
+}
+
 type CreatePhotoDigitalHumanVideoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +218,18 @@ func (i *CreatePhotoDigitalHumanVideoInvoker) Invoke() (*model.CreatePhotoDigita
 		return nil, err
 	} else {
 		return result.(*model.CreatePhotoDigitalHumanVideoResponse), nil
+	}
+}
+
+type ShowPhotoDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPhotoDetectionInvoker) Invoke() (*model.ShowPhotoDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPhotoDetectionResponse), nil
 	}
 }
 

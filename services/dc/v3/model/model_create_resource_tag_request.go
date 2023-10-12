@@ -38,7 +38,6 @@ type CreateResourceTagRequestResourceTypeEnum struct {
 	DC_DIRECTCONNECT CreateResourceTagRequestResourceType
 	DC_VGW           CreateResourceTagRequestResourceType
 	DC_VIF           CreateResourceTagRequestResourceType
-	DC_LAG           CreateResourceTagRequestResourceType
 }
 
 func GetCreateResourceTagRequestResourceTypeEnum() CreateResourceTagRequestResourceTypeEnum {
@@ -51,9 +50,6 @@ func GetCreateResourceTagRequestResourceTypeEnum() CreateResourceTagRequestResou
 		},
 		DC_VIF: CreateResourceTagRequestResourceType{
 			value: "dc-vif",
-		},
-		DC_LAG: CreateResourceTagRequestResourceType{
-			value: "dc-lag",
 		},
 	}
 }

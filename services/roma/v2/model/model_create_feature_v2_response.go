@@ -75,6 +75,9 @@ type CreateFeatureV2ResponseNameEnum struct {
 	APP_ACL                     CreateFeatureV2ResponseName
 	VPC_BACKUP                  CreateFeatureV2ResponseName
 	THROTTLE_STRATEGY           CreateFeatureV2ResponseName
+	KAFKA_LOG_PLUGIN_OPTIONS    CreateFeatureV2ResponseName
+	GZIP                        CreateFeatureV2ResponseName
+	JS_INVOCABLE_CACHE_SIZE     CreateFeatureV2ResponseName
 }
 
 func GetCreateFeatureV2ResponseNameEnum() CreateFeatureV2ResponseNameEnum {
@@ -168,6 +171,15 @@ func GetCreateFeatureV2ResponseNameEnum() CreateFeatureV2ResponseNameEnum {
 		},
 		THROTTLE_STRATEGY: CreateFeatureV2ResponseName{
 			value: "throttle_strategy",
+		},
+		KAFKA_LOG_PLUGIN_OPTIONS: CreateFeatureV2ResponseName{
+			value: "kafka_log_plugin_options",
+		},
+		GZIP: CreateFeatureV2ResponseName{
+			value: "gzip",
+		},
+		JS_INVOCABLE_CACHE_SIZE: CreateFeatureV2ResponseName{
+			value: "js_invocable_cache_size",
 		},
 	}
 }

@@ -58,6 +58,9 @@ type ReqParamBase struct {
 
 	// 是否透传 - 1：是 - 2：否
 	PassThrough *ReqParamBasePassThrough `json:"pass_through,omitempty"`
+
+	// 请求参数编排规则列表[，该参数暂不支持](tag:hws,hws_hk,fcs,g42,Site)  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高  每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节
+	Orchestrations *[]string `json:"orchestrations,omitempty"`
 }
 
 func (o ReqParamBase) String() string {

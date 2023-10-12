@@ -15,9 +15,6 @@ type ApplicationMetadata struct {
 	// 应用名称。
 	Name *string `json:"name,omitempty"`
 
-	// 应用附加属性，当前只支持description参数。
-	Annotations map[string]string `json:"annotations,omitempty"`
-
 	// 创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
 

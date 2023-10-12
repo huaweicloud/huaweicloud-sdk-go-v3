@@ -10,10 +10,10 @@ import (
 type ListUserConnectionRequest struct {
 
 	// 单次查询的大小[1-100]
-	Limit int32 `json:"limit"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询的偏移量
-	Offset int32 `json:"offset"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	Body *ListUserConnectionReq `json:"body,omitempty"`
 }
