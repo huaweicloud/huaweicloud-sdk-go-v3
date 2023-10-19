@@ -8,11 +8,12 @@ import (
 
 // UpdateCloudConnectionResponse Response Object
 type UpdateCloudConnectionResponse struct {
-	CloudConnection *CloudConnection `json:"cloud_connection,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
+
+	CloudConnection *CloudConnection `json:"cloud_connection"`
+	HttpStatusCode  int              `json:"-"`
 }
 
 func (o UpdateCloudConnectionResponse) String() string {

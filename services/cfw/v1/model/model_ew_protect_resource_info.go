@@ -26,6 +26,9 @@ type EwProtectResourceInfo struct {
 
 	// 防护资源租户id
 	ProtectedResourceProjectId *string `json:"protected_resource_project_id,omitempty"`
+
+	// 防护资源模式
+	ProtectedResourceMode *string `json:"protected_resource_mode,omitempty"`
 }
 
 func (o EwProtectResourceInfo) String() string {

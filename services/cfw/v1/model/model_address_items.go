@@ -10,6 +10,9 @@ type AddressItems struct {
 
 	// 地址组成员id列表
 	Items *[]IdObject `json:"items,omitempty"`
+
+	// 覆盖ip列表
+	CoveredIp *[]CoveredIpvo `json:"covered_ip,omitempty"`
 }
 
 func (o AddressItems) String() string {

@@ -26,7 +26,10 @@ type ExportCertificateResponse struct {
 
 	// 加密私钥的国密GMT0009标准规范SM2数字信封。
 	EncSm2EnvelopedKey *string `json:"enc_sm2_enveloped_key,omitempty"`
-	HttpStatusCode     int     `json:"-"`
+
+	// 加密私钥的国密GMT0010标准规范签名数字信封。
+	SignedAndEnvelopedData *string `json:"signed_and_enveloped_data,omitempty"`
+	HttpStatusCode         int     `json:"-"`
 }
 
 func (o ExportCertificateResponse) String() string {

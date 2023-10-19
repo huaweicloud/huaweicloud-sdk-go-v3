@@ -125,6 +125,18 @@ func (i *BatchPublishInvoker) Invoke() (*model.BatchPublishResponse, error) {
 	}
 }
 
+type BatchSyncMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSyncMetadataInvoker) Invoke() (*model.BatchSyncMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSyncMetadataResponse), nil
+	}
+}
+
 type ChangeCatalogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1385,6 +1397,18 @@ func (i *ModifyCustomizedFieldsInvoker) Invoke() (*model.ModifyCustomizedFieldsR
 	}
 }
 
+type ParseUserBehaviorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ParseUserBehaviorInvoker) Invoke() (*model.ParseUserBehaviorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ParseUserBehaviorResponse), nil
+	}
+}
+
 type PayForDgcOneKeyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1829,6 +1853,18 @@ func (i *ShowDataProfileInvoker) Invoke() (*model.ShowDataProfileResponse, error
 	}
 }
 
+type ShowDataSetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataSetsInvoker) Invoke() (*model.ShowDataSetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataSetsResponse), nil
+	}
+}
+
 type ShowDataconnectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2090,6 +2126,18 @@ func (i *ShowTableModelByIdInvoker) Invoke() (*model.ShowTableModelByIdResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowTableModelByIdResponse), nil
+	}
+}
+
+type ShowTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTagsInvoker) Invoke() (*model.ShowTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTagsResponse), nil
 	}
 }
 

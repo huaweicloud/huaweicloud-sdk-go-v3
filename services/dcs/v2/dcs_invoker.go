@@ -77,6 +77,18 @@ func (i *CopyInstanceInvoker) Invoke() (*model.CopyInstanceResponse, error) {
 	}
 }
 
+type CreateAclAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAclAccountInvoker) Invoke() (*model.CreateAclAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAclAccountResponse), nil
+	}
+}
+
 type CreateAutoExpireScanTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +110,18 @@ func (i *CreateBigkeyScanTaskInvoker) Invoke() (*model.CreateBigkeyScanTaskRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateBigkeyScanTaskResponse), nil
+	}
+}
+
+type CreateConnectivityTestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectivityTestInvoker) Invoke() (*model.CreateConnectivityTestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConnectivityTestResponse), nil
 	}
 }
 
@@ -197,6 +221,18 @@ func (i *CreateRedislogDownloadLinkInvoker) Invoke() (*model.CreateRedislogDownl
 	}
 }
 
+type DeleteAclAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAclAccountInvoker) Invoke() (*model.DeleteAclAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAclAccountResponse), nil
+	}
+}
+
 type DeleteBackgroundTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -230,6 +266,18 @@ func (i *DeleteBigkeyScanTaskInvoker) Invoke() (*model.DeleteBigkeyScanTaskRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteBigkeyScanTaskResponse), nil
+	}
+}
+
+type DeleteConfigTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConfigTemplateInvoker) Invoke() (*model.DeleteConfigTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConfigTemplateResponse), nil
 	}
 }
 
@@ -290,6 +338,18 @@ func (i *ExecuteClusterSwitchoverInvoker) Invoke() (*model.ExecuteClusterSwitcho
 		return nil, err
 	} else {
 		return result.(*model.ExecuteClusterSwitchoverResponse), nil
+	}
+}
+
+type ListAclAccountsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAclAccountsInvoker) Invoke() (*model.ListAclAccountsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAclAccountsResponse), nil
 	}
 }
 
@@ -569,6 +629,18 @@ func (i *ListTagsOfTenantInvoker) Invoke() (*model.ListTagsOfTenantResponse, err
 	}
 }
 
+type ResetAclAccountPassWordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetAclAccountPassWordInvoker) Invoke() (*model.ResetAclAccountPassWordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetAclAccountPassWordResponse), nil
+	}
+}
+
 type ResetPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -650,6 +722,18 @@ func (i *ShowBigkeyScanTaskDetailsInvoker) Invoke() (*model.ShowBigkeyScanTaskDe
 		return nil, err
 	} else {
 		return result.(*model.ShowBigkeyScanTaskDetailsResponse), nil
+	}
+}
+
+type ShowConfigTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigTemplateInvoker) Invoke() (*model.ShowConfigTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigTemplateResponse), nil
 	}
 }
 
@@ -761,6 +845,18 @@ func (i *ShowQuotaOfTenantInvoker) Invoke() (*model.ShowQuotaOfTenantResponse, e
 	}
 }
 
+type ShowReplicationStatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplicationStatesInvoker) Invoke() (*model.ShowReplicationStatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplicationStatesResponse), nil
+	}
+}
+
 type ShowTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -797,6 +893,42 @@ func (i *StopMigrationTaskSyncInvoker) Invoke() (*model.StopMigrationTaskSyncRes
 	}
 }
 
+type UpdateAclAccountPassWordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAclAccountPassWordInvoker) Invoke() (*model.UpdateAclAccountPassWordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAclAccountPassWordResponse), nil
+	}
+}
+
+type UpdateAclAccountRemarkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAclAccountRemarkInvoker) Invoke() (*model.UpdateAclAccountRemarkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAclAccountRemarkResponse), nil
+	}
+}
+
+type UpdateAclAccountRoleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAclAccountRoleInvoker) Invoke() (*model.UpdateAclAccountRoleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAclAccountRoleResponse), nil
+	}
+}
+
 type UpdateBigkeyAutoscanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -806,6 +938,18 @@ func (i *UpdateBigkeyAutoscanConfigInvoker) Invoke() (*model.UpdateBigkeyAutosca
 		return nil, err
 	} else {
 		return result.(*model.UpdateBigkeyAutoscanConfigResponse), nil
+	}
+}
+
+type UpdateConfigTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateConfigTemplateInvoker) Invoke() (*model.UpdateConfigTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateConfigTemplateResponse), nil
 	}
 }
 

@@ -41,6 +41,18 @@ func (i *CreateEnvInvoker) Invoke() (*model.CreateEnvResponse, error) {
 	}
 }
 
+type CreateSubAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubAppInvoker) Invoke() (*model.CreateSubAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubAppResponse), nil
+	}
+}
+
 type DeleteAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *DeleteEnvInvoker) Invoke() (*model.DeleteEnvResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteEnvResponse), nil
+	}
+}
+
+type DeleteSubAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubAppInvoker) Invoke() (*model.DeleteSubAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubAppResponse), nil
 	}
 }
 
@@ -194,5 +218,17 @@ func (i *UpdateEnvInvoker) Invoke() (*model.UpdateEnvResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateEnvResponse), nil
+	}
+}
+
+type UpdateSubAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubAppInvoker) Invoke() (*model.UpdateSubAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSubAppResponse), nil
 	}
 }

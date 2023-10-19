@@ -52,6 +52,8 @@ type AddRuleAclDtoRules struct {
 	Destination *RuleAddressDto `json:"destination"`
 
 	Service *RuleServiceDto `json:"service"`
+
+	Tag *TagsVo `json:"tag,omitempty"`
 }
 
 func (o AddRuleAclDtoRules) String() string {

@@ -56,6 +56,25 @@ func GenReqDefForCreateEnv() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateSubApp() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/sub-applications").
+		WithResponse(new(model.CreateSubAppResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteApp() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -107,6 +126,26 @@ func GenReqDefForDeleteEnv() *def.HttpRequestDef {
 		WithName("EnvironmentId").
 		WithJsonTag("environment_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteSubApp() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/sub-applications/{sub_app_id}").
+		WithResponse(new(model.DeleteSubAppResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubAppId").
+		WithJsonTag("sub_app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -299,6 +338,26 @@ func GenReqDefForUpdateEnv() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnvironmentId").
 		WithJsonTag("environment_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateSubApp() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/sub-applications/{sub_app_id}").
+		WithResponse(new(model.UpdateSubAppResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubAppId").
+		WithJsonTag("sub_app_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

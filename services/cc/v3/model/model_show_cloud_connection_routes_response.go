@@ -8,11 +8,12 @@ import (
 
 // ShowCloudConnectionRoutesResponse Response Object
 type ShowCloudConnectionRoutesResponse struct {
-	CloudConnectionRoute *CloudConnectionRoute `json:"cloud_connection_route,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
+
+	CloudConnectionRoute *CloudConnectionRoute `json:"cloud_connection_route"`
+	HttpStatusCode       int                   `json:"-"`
 }
 
 func (o ShowCloudConnectionRoutesResponse) String() string {

@@ -9,7 +9,7 @@ import (
 // AssociateBandwidthPackageRequest Request Object
 type AssociateBandwidthPackageRequest struct {
 
-	// 带宽包实例ID。
+	// 资源的Id。
 	Id string `json:"id"`
 
 	Body *AssociateBandwidthPackageRequestBody `json:"body,omitempty"`

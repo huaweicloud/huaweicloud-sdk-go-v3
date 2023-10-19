@@ -47,6 +47,21 @@ type EipResource struct {
 
 	// Eip绑定的防火墙企业项目id
 	FwEnterpriseProjectId *string `json:"fw_enterprise_project_id,omitempty"`
+
+	// 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+	ObjectId *string `json:"object_id,omitempty"`
+
+	// 标签列表
+	Tags *string `json:"tags,omitempty"`
+
+	// EIP所属用户
+	DomainId *string `json:"domain_id,omitempty"`
+
+	// 所属用户的名称
+	Owner *string `json:"owner,omitempty"`
+
+	// 防火墙所属用户
+	FwDomainId *string `json:"fw_domain_id,omitempty"`
 }
 
 func (o EipResource) String() string {

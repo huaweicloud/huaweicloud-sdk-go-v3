@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsbuild/v3/model"
 )
 
+type DeleteBuildJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBuildJobInvoker) Invoke() (*model.DeleteBuildJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBuildJobResponse), nil
+	}
+}
+
+type DisableBuildJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableBuildJobInvoker) Invoke() (*model.DisableBuildJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableBuildJobResponse), nil
+	}
+}
+
 type DownloadKeystoreInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -14,6 +38,30 @@ func (i *DownloadKeystoreInvoker) Invoke() (*model.DownloadKeystoreResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DownloadKeystoreResponse), nil
+	}
+}
+
+type DownloadLogByRecordIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadLogByRecordIdInvoker) Invoke() (*model.DownloadLogByRecordIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadLogByRecordIdResponse), nil
+	}
+}
+
+type ResumeBuildJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumeBuildJobInvoker) Invoke() (*model.ResumeBuildJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumeBuildJobResponse), nil
 	}
 }
 
@@ -110,5 +158,29 @@ func (i *ShowListPeriodHistoryInvoker) Invoke() (*model.ShowListPeriodHistoryRes
 		return nil, err
 	} else {
 		return result.(*model.ShowListPeriodHistoryResponse), nil
+	}
+}
+
+type ShowRecordInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordInfoInvoker) Invoke() (*model.ShowRecordInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecordInfoResponse), nil
+	}
+}
+
+type StopBuildJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopBuildJobInvoker) Invoke() (*model.StopBuildJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopBuildJobResponse), nil
 	}
 }

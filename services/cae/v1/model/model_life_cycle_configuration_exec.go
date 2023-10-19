@@ -10,7 +10,7 @@ import (
 type LifeCycleConfigurationExec struct {
 
 	// shell语句。
-	Command *[]interface{} `json:"command,omitempty"`
+	Command *[]string `json:"command,omitempty"`
 }
 
 func (o LifeCycleConfigurationExec) String() string {

@@ -54,6 +54,10 @@ func GenReqDefForPutOfficialEvents() *def.HttpRequestDef {
 		WithLocationType(def.Body))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-Request-Id").
 		WithKindName("string").

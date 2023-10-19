@@ -8,6 +8,9 @@ import (
 
 type PolicyDelta struct {
 	Policy *Policy `json:"policy,omitempty"`
+
+	// 变更类型
+	ChangeType *int32 `json:"change_type,omitempty"`
 }
 
 func (o PolicyDelta) String() string {

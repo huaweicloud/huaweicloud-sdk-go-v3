@@ -124,6 +124,27 @@ func (c *ApigClient) AddIngressEipV2Invoker(request *model.AddIngressEipV2Reques
 	return &AddIngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssociateAppsForAppQuota 凭据配额绑定凭据列表
+//
+// 凭据配额绑定凭据列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) AssociateAppsForAppQuota(request *model.AssociateAppsForAppQuotaRequest) (*model.AssociateAppsForAppQuotaResponse, error) {
+	requestDef := GenReqDefForAssociateAppsForAppQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateAppsForAppQuotaResponse), nil
+	}
+}
+
+// AssociateAppsForAppQuotaInvoker 凭据配额绑定凭据列表
+func (c *ApigClient) AssociateAppsForAppQuotaInvoker(request *model.AssociateAppsForAppQuotaRequest) *AssociateAppsForAppQuotaInvoker {
+	requestDef := GenReqDefForAssociateAppsForAppQuota()
+	return &AssociateAppsForAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AssociateCertificateV2 绑定域名证书
 //
 // 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
@@ -200,7 +221,7 @@ func (c *ApigClient) AssociateSignatureKeyV2Invoker(request *model.AssociateSign
 // - 只能选择发布状态的API
 // - 绑定以后及时生效
 // - 修改插件后及时生效
-// - 相同类型的插件只能绑定一个，原来已经绑定的通类型插件，会直接覆盖。
+// - 相同类型的插件只能绑定一个，如果再次绑定同类型的插件，那么已绑定的同类型插件将直接被覆盖。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AttachApiToPlugin(request *model.AttachApiToPluginRequest) (*model.AttachApiToPluginResponse, error) {
@@ -225,7 +246,7 @@ func (c *ApigClient) AttachApiToPluginInvoker(request *model.AttachApiToPluginRe
 // - 只能选择发布状态的API
 // - 绑定以后及时生效
 // - 修改插件后及时生效
-// - 相同类型的插件只能绑定一个，原来已经绑定的通类型插件，会直接覆盖。
+// - 相同类型的插件只能绑定一个，如果再次绑定同类型的插件，那么已绑定的同类型插件将直接被覆盖。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) AttachPluginToApi(request *model.AttachPluginToApiRequest) (*model.AttachPluginToApiResponse, error) {
@@ -263,6 +284,113 @@ func (c *ApigClient) BatchCreateOrDeleteInstanceTags(request *model.BatchCreateO
 func (c *ApigClient) BatchCreateOrDeleteInstanceTagsInvoker(request *model.BatchCreateOrDeleteInstanceTagsRequest) *BatchCreateOrDeleteInstanceTagsInvoker {
 	requestDef := GenReqDefForBatchCreateOrDeleteInstanceTags()
 	return &BatchCreateOrDeleteInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckAppV2 校验APP
+//
+// 校验app是否存在，非APP所有者可以调用该接口校验APP是否真实存在。这个接口只展示app的基本信息id 、name、
+// remark，其他信息不显示。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CheckAppV2(request *model.CheckAppV2Request) (*model.CheckAppV2Response, error) {
+	requestDef := GenReqDefForCheckAppV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckAppV2Response), nil
+	}
+}
+
+// CheckAppV2Invoker 校验APP
+func (c *ApigClient) CheckAppV2Invoker(request *model.CheckAppV2Request) *CheckAppV2Invoker {
+	requestDef := GenReqDefForCheckAppV2()
+	return &CheckAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAnAppV2 创建APP
+//
+// APP即应用，是一个可以访问API的身份标识。将API授权给APP后，APP即可调用API。
+// 创建一个APP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.CreateAnAppV2Response, error) {
+	requestDef := GenReqDefForCreateAnAppV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAnAppV2Response), nil
+	}
+}
+
+// CreateAnAppV2Invoker 创建APP
+func (c *ApigClient) CreateAnAppV2Invoker(request *model.CreateAnAppV2Request) *CreateAnAppV2Invoker {
+	requestDef := GenReqDefForCreateAnAppV2()
+	return &CreateAnAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppCodeAutoV2 自动生成APP Code
+//
+// 创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreateAppCodeAutoV2(request *model.CreateAppCodeAutoV2Request) (*model.CreateAppCodeAutoV2Response, error) {
+	requestDef := GenReqDefForCreateAppCodeAutoV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAppCodeAutoV2Response), nil
+	}
+}
+
+// CreateAppCodeAutoV2Invoker 自动生成APP Code
+func (c *ApigClient) CreateAppCodeAutoV2Invoker(request *model.CreateAppCodeAutoV2Request) *CreateAppCodeAutoV2Invoker {
+	requestDef := GenReqDefForCreateAppCodeAutoV2()
+	return &CreateAppCodeAutoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppCodeV2 创建APP Code
+//
+// App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreateAppCodeV2(request *model.CreateAppCodeV2Request) (*model.CreateAppCodeV2Response, error) {
+	requestDef := GenReqDefForCreateAppCodeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAppCodeV2Response), nil
+	}
+}
+
+// CreateAppCodeV2Invoker 创建APP Code
+func (c *ApigClient) CreateAppCodeV2Invoker(request *model.CreateAppCodeV2Request) *CreateAppCodeV2Invoker {
+	requestDef := GenReqDefForCreateAppCodeV2()
+	return &CreateAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAppQuota 创建凭据配额
+//
+// 创建凭据配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreateAppQuota(request *model.CreateAppQuotaRequest) (*model.CreateAppQuotaResponse, error) {
+	requestDef := GenReqDefForCreateAppQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAppQuotaResponse), nil
+	}
+}
+
+// CreateAppQuotaInvoker 创建凭据配额
+func (c *ApigClient) CreateAppQuotaInvoker(request *model.CreateAppQuotaRequest) *CreateAppQuotaInvoker {
+	requestDef := GenReqDefForCreateAppQuota()
+	return &CreateAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateCustomAuthorizerV2 创建自定义认证
@@ -385,9 +513,9 @@ func (c *ApigClient) CreateGatewayResponseV2Invoker(request *model.CreateGateway
 	return &CreateGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateInstanceV2 创建专享版实例
+// CreateInstanceV2 创建专享版实例（按需）
 //
-// 创建专享版实例
+// 创建按需专享版实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateInstanceV2(request *model.CreateInstanceV2Request) (*model.CreateInstanceV2Response, error) {
@@ -400,10 +528,31 @@ func (c *ApigClient) CreateInstanceV2(request *model.CreateInstanceV2Request) (*
 	}
 }
 
-// CreateInstanceV2Invoker 创建专享版实例
+// CreateInstanceV2Invoker 创建专享版实例（按需）
 func (c *ApigClient) CreateInstanceV2Invoker(request *model.CreateInstanceV2Request) *CreateInstanceV2Invoker {
 	requestDef := GenReqDefForCreateInstanceV2()
 	return &CreateInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrder 创建专享版实例（包周期）
+//
+// 创建包周期专享版实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreateOrder(request *model.CreateOrderRequest) (*model.CreateOrderResponse, error) {
+	requestDef := GenReqDefForCreateOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOrderResponse), nil
+	}
+}
+
+// CreateOrderInvoker 创建专享版实例（包周期）
+func (c *ApigClient) CreateOrderInvoker(request *model.CreateOrderRequest) *CreateOrderInvoker {
+	requestDef := GenReqDefForCreateOrder()
+	return &CreateOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePlugin 创建插件
@@ -427,6 +576,48 @@ func (c *ApigClient) CreatePlugin(request *model.CreatePluginRequest) (*model.Cr
 func (c *ApigClient) CreatePluginInvoker(request *model.CreatePluginRequest) *CreatePluginInvoker {
 	requestDef := GenReqDefForCreatePlugin()
 	return &CreatePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePostPayResizeOrder 按需规格变更
+//
+// 创建按需规格变更订单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreatePostPayResizeOrder(request *model.CreatePostPayResizeOrderRequest) (*model.CreatePostPayResizeOrderResponse, error) {
+	requestDef := GenReqDefForCreatePostPayResizeOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostPayResizeOrderResponse), nil
+	}
+}
+
+// CreatePostPayResizeOrderInvoker 按需规格变更
+func (c *ApigClient) CreatePostPayResizeOrderInvoker(request *model.CreatePostPayResizeOrderRequest) *CreatePostPayResizeOrderInvoker {
+	requestDef := GenReqDefForCreatePostPayResizeOrder()
+	return &CreatePostPayResizeOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrepayResize 创建包周期规格变更订单
+//
+// 创建包周期规格变更订单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreatePrepayResize(request *model.CreatePrepayResizeRequest) (*model.CreatePrepayResizeResponse, error) {
+	requestDef := GenReqDefForCreatePrepayResize()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePrepayResizeResponse), nil
+	}
+}
+
+// CreatePrepayResizeInvoker 创建包周期规格变更订单
+func (c *ApigClient) CreatePrepayResizeInvoker(request *model.CreatePrepayResizeRequest) *CreatePrepayResizeInvoker {
+	requestDef := GenReqDefForCreatePrepayResize()
+	return &CreatePrepayResizeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRequestThrottlingPolicyV2 创建流控策略
@@ -499,6 +690,91 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 func (c *ApigClient) CreateSpecialThrottlingConfigurationV2Invoker(request *model.CreateSpecialThrottlingConfigurationV2Request) *CreateSpecialThrottlingConfigurationV2Invoker {
 	requestDef := GenReqDefForCreateSpecialThrottlingConfigurationV2()
 	return &CreateSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppAcl 删除APP的访问控制
+//
+// 删除凭据的访问控制信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteAppAcl(request *model.DeleteAppAclRequest) (*model.DeleteAppAclResponse, error) {
+	requestDef := GenReqDefForDeleteAppAcl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppAclResponse), nil
+	}
+}
+
+// DeleteAppAclInvoker 删除APP的访问控制
+func (c *ApigClient) DeleteAppAclInvoker(request *model.DeleteAppAclRequest) *DeleteAppAclInvoker {
+	requestDef := GenReqDefForDeleteAppAcl()
+	return &DeleteAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppCodeV2 删除APP Code
+//
+// 删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteAppCodeV2(request *model.DeleteAppCodeV2Request) (*model.DeleteAppCodeV2Response, error) {
+	requestDef := GenReqDefForDeleteAppCodeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppCodeV2Response), nil
+	}
+}
+
+// DeleteAppCodeV2Invoker 删除APP Code
+func (c *ApigClient) DeleteAppCodeV2Invoker(request *model.DeleteAppCodeV2Request) *DeleteAppCodeV2Invoker {
+	requestDef := GenReqDefForDeleteAppCodeV2()
+	return &DeleteAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppQuota 删除凭据配额
+//
+// 删除凭据配额。删除凭据配额时，同时删除凭据配额和凭据的关联关系
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteAppQuota(request *model.DeleteAppQuotaRequest) (*model.DeleteAppQuotaResponse, error) {
+	requestDef := GenReqDefForDeleteAppQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppQuotaResponse), nil
+	}
+}
+
+// DeleteAppQuotaInvoker 删除凭据配额
+func (c *ApigClient) DeleteAppQuotaInvoker(request *model.DeleteAppQuotaRequest) *DeleteAppQuotaInvoker {
+	requestDef := GenReqDefForDeleteAppQuota()
+	return &DeleteAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppV2 删除APP
+//
+// 删除指定的APP。
+// APP删除后，将无法再调用任何API[；其中，云商店自动创建的APP无法被删除](tag:hws)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteAppV2(request *model.DeleteAppV2Request) (*model.DeleteAppV2Response, error) {
+	requestDef := GenReqDefForDeleteAppV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppV2Response), nil
+	}
+}
+
+// DeleteAppV2Invoker 删除APP
+func (c *ApigClient) DeleteAppV2Invoker(request *model.DeleteAppV2Request) *DeleteAppV2Invoker {
+	requestDef := GenReqDefForDeleteAppV2()
+	return &DeleteAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteCustomAuthorizerV2 删除自定义认证
@@ -781,6 +1057,27 @@ func (c *ApigClient) DetachPluginFromApiInvoker(request *model.DetachPluginFromA
 	return &DetachPluginFromApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DisassociateAppQuotaWithApp 解除凭据配额和凭据的绑定
+//
+// 解除凭据配额和凭据的绑定
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DisassociateAppQuotaWithApp(request *model.DisassociateAppQuotaWithAppRequest) (*model.DisassociateAppQuotaWithAppResponse, error) {
+	requestDef := GenReqDefForDisassociateAppQuotaWithApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateAppQuotaWithAppResponse), nil
+	}
+}
+
+// DisassociateAppQuotaWithAppInvoker 解除凭据配额和凭据的绑定
+func (c *ApigClient) DisassociateAppQuotaWithAppInvoker(request *model.DisassociateAppQuotaWithAppRequest) *DisassociateAppQuotaWithAppInvoker {
+	requestDef := GenReqDefForDisassociateAppQuotaWithApp()
+	return &DisassociateAppQuotaWithAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisassociateCertificateV2 删除域名证书
 //
 // 如果域名证书不再需要或者已过期，则可以删除证书内容。
@@ -996,6 +1293,27 @@ func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2Invoker(request *model.Li
 	return &ListApisNotBoundWithSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAppCodesV2 查询APP Code列表
+//
+// 查询App Code列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListAppCodesV2(request *model.ListAppCodesV2Request) (*model.ListAppCodesV2Response, error) {
+	requestDef := GenReqDefForListAppCodesV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppCodesV2Response), nil
+	}
+}
+
+// ListAppCodesV2Invoker 查询APP Code列表
+func (c *ApigClient) ListAppCodesV2Invoker(request *model.ListAppCodesV2Request) *ListAppCodesV2Invoker {
+	requestDef := GenReqDefForListAppCodesV2()
+	return &ListAppCodesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAppQuantitiesV2 查询APP概况
 //
 // 查询租户名下的APP概况：已进行API访问授权的APP个数，未进行API访问授权的APP个数。
@@ -1015,6 +1333,90 @@ func (c *ApigClient) ListAppQuantitiesV2(request *model.ListAppQuantitiesV2Reque
 func (c *ApigClient) ListAppQuantitiesV2Invoker(request *model.ListAppQuantitiesV2Request) *ListAppQuantitiesV2Invoker {
 	requestDef := GenReqDefForListAppQuantitiesV2()
 	return &ListAppQuantitiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuotaBindableApps 查询凭据配额可绑定的凭据列表
+//
+// 查询凭据配额可绑定的凭据列表。支持按凭据名称模糊搜索
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListAppQuotaBindableApps(request *model.ListAppQuotaBindableAppsRequest) (*model.ListAppQuotaBindableAppsResponse, error) {
+	requestDef := GenReqDefForListAppQuotaBindableApps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppQuotaBindableAppsResponse), nil
+	}
+}
+
+// ListAppQuotaBindableAppsInvoker 查询凭据配额可绑定的凭据列表
+func (c *ApigClient) ListAppQuotaBindableAppsInvoker(request *model.ListAppQuotaBindableAppsRequest) *ListAppQuotaBindableAppsInvoker {
+	requestDef := GenReqDefForListAppQuotaBindableApps()
+	return &ListAppQuotaBindableAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuotaBoundApps 查询凭据配额已绑定的凭据列表
+//
+// 查询凭据配额已绑定的凭据列表。支持按凭据名称模糊匹配
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListAppQuotaBoundApps(request *model.ListAppQuotaBoundAppsRequest) (*model.ListAppQuotaBoundAppsResponse, error) {
+	requestDef := GenReqDefForListAppQuotaBoundApps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppQuotaBoundAppsResponse), nil
+	}
+}
+
+// ListAppQuotaBoundAppsInvoker 查询凭据配额已绑定的凭据列表
+func (c *ApigClient) ListAppQuotaBoundAppsInvoker(request *model.ListAppQuotaBoundAppsRequest) *ListAppQuotaBoundAppsInvoker {
+	requestDef := GenReqDefForListAppQuotaBoundApps()
+	return &ListAppQuotaBoundAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppQuotas 获取凭据配额列表
+//
+// 获取凭据配额列表。支持根据名称模糊查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListAppQuotas(request *model.ListAppQuotasRequest) (*model.ListAppQuotasResponse, error) {
+	requestDef := GenReqDefForListAppQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppQuotasResponse), nil
+	}
+}
+
+// ListAppQuotasInvoker 获取凭据配额列表
+func (c *ApigClient) ListAppQuotasInvoker(request *model.ListAppQuotasRequest) *ListAppQuotasInvoker {
+	requestDef := GenReqDefForListAppQuotas()
+	return &ListAppQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppsV2 查询APP列表
+//
+// 查询APP列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAppsV2Response, error) {
+	requestDef := GenReqDefForListAppsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppsV2Response), nil
+	}
+}
+
+// ListAppsV2Invoker 查询APP列表
+func (c *ApigClient) ListAppsV2Invoker(request *model.ListAppsV2Request) *ListAppsV2Invoker {
+	requestDef := GenReqDefForListAppsV2()
+	return &ListAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZonesV2 查看可用区信息
@@ -1600,6 +2002,132 @@ func (c *ApigClient) RemoveIngressEipV2Invoker(request *model.RemoveIngressEipV2
 	return &RemoveIngressEipV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResettingAppSecretV2 重置密钥
+//
+// 重置指定APP的密钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Request) (*model.ResettingAppSecretV2Response, error) {
+	requestDef := GenReqDefForResettingAppSecretV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResettingAppSecretV2Response), nil
+	}
+}
+
+// ResettingAppSecretV2Invoker 重置密钥
+func (c *ApigClient) ResettingAppSecretV2Invoker(request *model.ResettingAppSecretV2Request) *ResettingAppSecretV2Invoker {
+	requestDef := GenReqDefForResettingAppSecretV2()
+	return &ResettingAppSecretV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAppBoundAppQuota 查询凭据关联的凭据配额
+//
+// 查看指定凭据关联的凭据配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowAppBoundAppQuota(request *model.ShowAppBoundAppQuotaRequest) (*model.ShowAppBoundAppQuotaResponse, error) {
+	requestDef := GenReqDefForShowAppBoundAppQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppBoundAppQuotaResponse), nil
+	}
+}
+
+// ShowAppBoundAppQuotaInvoker 查询凭据关联的凭据配额
+func (c *ApigClient) ShowAppBoundAppQuotaInvoker(request *model.ShowAppBoundAppQuotaRequest) *ShowAppBoundAppQuotaInvoker {
+	requestDef := GenReqDefForShowAppBoundAppQuota()
+	return &ShowAppBoundAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAppQuota 获取凭据配额详情
+//
+// 获取凭据配额详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowAppQuota(request *model.ShowAppQuotaRequest) (*model.ShowAppQuotaResponse, error) {
+	requestDef := GenReqDefForShowAppQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppQuotaResponse), nil
+	}
+}
+
+// ShowAppQuotaInvoker 获取凭据配额详情
+func (c *ApigClient) ShowAppQuotaInvoker(request *model.ShowAppQuotaRequest) *ShowAppQuotaInvoker {
+	requestDef := GenReqDefForShowAppQuota()
+	return &ShowAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppAcl 查看APP的访问控制详情
+//
+// 查看APP的访问控制详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowDetailsOfAppAcl(request *model.ShowDetailsOfAppAclRequest) (*model.ShowDetailsOfAppAclResponse, error) {
+	requestDef := GenReqDefForShowDetailsOfAppAcl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfAppAclResponse), nil
+	}
+}
+
+// ShowDetailsOfAppAclInvoker 查看APP的访问控制详情
+func (c *ApigClient) ShowDetailsOfAppAclInvoker(request *model.ShowDetailsOfAppAclRequest) *ShowDetailsOfAppAclInvoker {
+	requestDef := GenReqDefForShowDetailsOfAppAcl()
+	return &ShowDetailsOfAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppCodeV2 查看APP Code详情
+//
+// App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV2Request) (*model.ShowDetailsOfAppCodeV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfAppCodeV2Response), nil
+	}
+}
+
+// ShowDetailsOfAppCodeV2Invoker 查看APP Code详情
+func (c *ApigClient) ShowDetailsOfAppCodeV2Invoker(request *model.ShowDetailsOfAppCodeV2Request) *ShowDetailsOfAppCodeV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
+	return &ShowDetailsOfAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppV2 查看APP详情
+//
+// 查看指定APP的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request) (*model.ShowDetailsOfAppV2Response, error) {
+	requestDef := GenReqDefForShowDetailsOfAppV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfAppV2Response), nil
+	}
+}
+
+// ShowDetailsOfAppV2Invoker 查看APP详情
+func (c *ApigClient) ShowDetailsOfAppV2Invoker(request *model.ShowDetailsOfAppV2Request) *ShowDetailsOfAppV2Invoker {
+	requestDef := GenReqDefForShowDetailsOfAppV2()
+	return &ShowDetailsOfAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDetailsOfCustomAuthorizersV2 查看自定义认证详情
 //
 // 查看自定义认证详情
@@ -1789,6 +2317,90 @@ func (c *ApigClient) ShowPluginInvoker(request *model.ShowPluginRequest) *ShowPl
 	return &ShowPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRestrictionOfInstanceV2 查看实例约束信息
+//
+// 查看实例约束信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowRestrictionOfInstanceV2(request *model.ShowRestrictionOfInstanceV2Request) (*model.ShowRestrictionOfInstanceV2Response, error) {
+	requestDef := GenReqDefForShowRestrictionOfInstanceV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRestrictionOfInstanceV2Response), nil
+	}
+}
+
+// ShowRestrictionOfInstanceV2Invoker 查看实例约束信息
+func (c *ApigClient) ShowRestrictionOfInstanceV2Invoker(request *model.ShowRestrictionOfInstanceV2Request) *ShowRestrictionOfInstanceV2Invoker {
+	requestDef := GenReqDefForShowRestrictionOfInstanceV2()
+	return &ShowRestrictionOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppAcl 设置APP的访问控制
+//
+// 设置凭据的访问控制。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) UpdateAppAcl(request *model.UpdateAppAclRequest) (*model.UpdateAppAclResponse, error) {
+	requestDef := GenReqDefForUpdateAppAcl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppAclResponse), nil
+	}
+}
+
+// UpdateAppAclInvoker 设置APP的访问控制
+func (c *ApigClient) UpdateAppAclInvoker(request *model.UpdateAppAclRequest) *UpdateAppAclInvoker {
+	requestDef := GenReqDefForUpdateAppAcl()
+	return &UpdateAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppQuota 修改凭据配额
+//
+// 修改凭据配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) UpdateAppQuota(request *model.UpdateAppQuotaRequest) (*model.UpdateAppQuotaResponse, error) {
+	requestDef := GenReqDefForUpdateAppQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppQuotaResponse), nil
+	}
+}
+
+// UpdateAppQuotaInvoker 修改凭据配额
+func (c *ApigClient) UpdateAppQuotaInvoker(request *model.UpdateAppQuotaRequest) *UpdateAppQuotaInvoker {
+	requestDef := GenReqDefForUpdateAppQuota()
+	return &UpdateAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppV2 修改APP
+//
+// 修改指定APP的信息。其中可修改的属性为：name、remark，当支持用户自定义key和secret的开关开启时，app_key和app_secret也支持修改，其它属性不可修改。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.UpdateAppV2Response, error) {
+	requestDef := GenReqDefForUpdateAppV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppV2Response), nil
+	}
+}
+
+// UpdateAppV2Invoker 修改APP
+func (c *ApigClient) UpdateAppV2Invoker(request *model.UpdateAppV2Request) *UpdateAppV2Invoker {
+	requestDef := GenReqDefForUpdateAppV2()
+	return &UpdateAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateCustomAuthorizerV2 修改自定义认证
 //
 // 修改自定义认证
@@ -1871,6 +2483,27 @@ func (c *ApigClient) UpdateEnvironmentV2(request *model.UpdateEnvironmentV2Reque
 func (c *ApigClient) UpdateEnvironmentV2Invoker(request *model.UpdateEnvironmentV2Request) *UpdateEnvironmentV2Invoker {
 	requestDef := GenReqDefForUpdateEnvironmentV2()
 	return &UpdateEnvironmentV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnvironmentVariableV2 修改变量
+//
+// 修改环境变量。环境变量引用位置为api的后端服务地址时，修改对应环境变量会将使用该变量的所有api重新发布。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) UpdateEnvironmentVariableV2(request *model.UpdateEnvironmentVariableV2Request) (*model.UpdateEnvironmentVariableV2Response, error) {
+	requestDef := GenReqDefForUpdateEnvironmentVariableV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEnvironmentVariableV2Response), nil
+	}
+}
+
+// UpdateEnvironmentVariableV2Invoker 修改变量
+func (c *ApigClient) UpdateEnvironmentVariableV2Invoker(request *model.UpdateEnvironmentVariableV2Request) *UpdateEnvironmentVariableV2Invoker {
+	requestDef := GenReqDefForUpdateEnvironmentVariableV2()
+	return &UpdateEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGatewayResponseTypeV2 修改分组下指定错误类型的自定义响应
@@ -2261,6 +2894,27 @@ func (c *ApigClient) ChangeApiVersionV2Invoker(request *model.ChangeApiVersionV2
 	return &ChangeApiVersionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckApisV2 校验API定义
+//
+// 校验API定义。校验API的路径或名称是否已存在
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CheckApisV2(request *model.CheckApisV2Request) (*model.CheckApisV2Response, error) {
+	requestDef := GenReqDefForCheckApisV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckApisV2Response), nil
+	}
+}
+
+// CheckApisV2Invoker 校验API定义
+func (c *ApigClient) CheckApisV2Invoker(request *model.CheckApisV2Request) *CheckApisV2Invoker {
+	requestDef := GenReqDefForCheckApisV2()
+	return &CheckApisV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateApiGroupV2 创建API分组
 //
 // API分组是API的管理单元，一个API分组等同于一个服务入口，创建API分组时，返回一个子域名作为访问入口。建议一个API分组下的API具有一定的相关性。
@@ -2286,7 +2940,7 @@ func (c *ApigClient) CreateApiGroupV2Invoker(request *model.CreateApiGroupV2Requ
 //
 // 添加一个API，API即一个服务接口，具体的服务能力。
 //
-// API分为两部分，第一部分为面向API使用者的API接口，定义了使用者如何调用这个API。第二部分面向API提供者，由API提供者定义这个API的真实的后端情况，定义了API网关如何去访问真实的后端服务。API的真实后端服务目前支持三种类型：传统的HTTP/HTTPS形式的web后端、函数工作流、MOCK。
+// API分为两部分，第一部分为面向API使用者的API接口，定义了使用者如何调用这个API。第二部分面向API提供者，由API提供者定义这个API的真实的后端情况，定义了API网关如何去访问真实的后端服务。API的真实后端服务目前支持四种类型：传统的HTTP/HTTPS形式的web后端、GRPC后端、函数工作流、MOCK。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateApiV2(request *model.CreateApiV2Request) (*model.CreateApiV2Response, error) {
@@ -2850,92 +3504,6 @@ func (c *ApigClient) CancelingAuthorizationV2Invoker(request *model.CancelingAut
 	return &CancelingAuthorizationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckAppV2 校验APP
-//
-// 校验app是否存在，非APP所有者可以调用该接口校验APP是否真实存在。这个接口只展示app的基本信息id 、name、
-// remark，其他信息不显示。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) CheckAppV2(request *model.CheckAppV2Request) (*model.CheckAppV2Response, error) {
-	requestDef := GenReqDefForCheckAppV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckAppV2Response), nil
-	}
-}
-
-// CheckAppV2Invoker 校验APP
-func (c *ApigClient) CheckAppV2Invoker(request *model.CheckAppV2Request) *CheckAppV2Invoker {
-	requestDef := GenReqDefForCheckAppV2()
-	return &CheckAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateAnAppV2 创建APP
-//
-// APP即应用，是一个可以访问API的身份标识。将API授权给APP后，APP即可调用API。
-// 创建一个APP。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) CreateAnAppV2(request *model.CreateAnAppV2Request) (*model.CreateAnAppV2Response, error) {
-	requestDef := GenReqDefForCreateAnAppV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAnAppV2Response), nil
-	}
-}
-
-// CreateAnAppV2Invoker 创建APP
-func (c *ApigClient) CreateAnAppV2Invoker(request *model.CreateAnAppV2Request) *CreateAnAppV2Invoker {
-	requestDef := GenReqDefForCreateAnAppV2()
-	return &CreateAnAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateAppCodeAutoV2 自动生成APP Code
-//
-// 创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) CreateAppCodeAutoV2(request *model.CreateAppCodeAutoV2Request) (*model.CreateAppCodeAutoV2Response, error) {
-	requestDef := GenReqDefForCreateAppCodeAutoV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAppCodeAutoV2Response), nil
-	}
-}
-
-// CreateAppCodeAutoV2Invoker 自动生成APP Code
-func (c *ApigClient) CreateAppCodeAutoV2Invoker(request *model.CreateAppCodeAutoV2Request) *CreateAppCodeAutoV2Invoker {
-	requestDef := GenReqDefForCreateAppCodeAutoV2()
-	return &CreateAppCodeAutoV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateAppCodeV2 创建APP Code
-//
-// App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) CreateAppCodeV2(request *model.CreateAppCodeV2Request) (*model.CreateAppCodeV2Response, error) {
-	requestDef := GenReqDefForCreateAppCodeV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAppCodeV2Response), nil
-	}
-}
-
-// CreateAppCodeV2Invoker 创建APP Code
-func (c *ApigClient) CreateAppCodeV2Invoker(request *model.CreateAppCodeV2Request) *CreateAppCodeV2Invoker {
-	requestDef := GenReqDefForCreateAppCodeV2()
-	return &CreateAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateAuthorizingAppsV2 APP授权
 //
 // APP创建成功后，还不能访问API，如果想要访问某个环境上的API，需要将该API在该环境上授权给APP。授权成功后，APP即可访问该环境上的这个API。
@@ -2955,49 +3523,6 @@ func (c *ApigClient) CreateAuthorizingAppsV2(request *model.CreateAuthorizingApp
 func (c *ApigClient) CreateAuthorizingAppsV2Invoker(request *model.CreateAuthorizingAppsV2Request) *CreateAuthorizingAppsV2Invoker {
 	requestDef := GenReqDefForCreateAuthorizingAppsV2()
 	return &CreateAuthorizingAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteAppCodeV2 删除APP Code
-//
-// 删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) DeleteAppCodeV2(request *model.DeleteAppCodeV2Request) (*model.DeleteAppCodeV2Response, error) {
-	requestDef := GenReqDefForDeleteAppCodeV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteAppCodeV2Response), nil
-	}
-}
-
-// DeleteAppCodeV2Invoker 删除APP Code
-func (c *ApigClient) DeleteAppCodeV2Invoker(request *model.DeleteAppCodeV2Request) *DeleteAppCodeV2Invoker {
-	requestDef := GenReqDefForDeleteAppCodeV2()
-	return &DeleteAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteAppV2 删除APP
-//
-// 删除指定的APP。
-// APP删除后，将无法再调用任何API[；其中，云商店自动创建的APP无法被删除](tag:hws)。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) DeleteAppV2(request *model.DeleteAppV2Request) (*model.DeleteAppV2Response, error) {
-	requestDef := GenReqDefForDeleteAppV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteAppV2Response), nil
-	}
-}
-
-// DeleteAppV2Invoker 删除APP
-func (c *ApigClient) DeleteAppV2Invoker(request *model.DeleteAppV2Request) *DeleteAppV2Invoker {
-	requestDef := GenReqDefForDeleteAppV2()
-	return &DeleteAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApisBindedToAppV2 查看APP已绑定的API列表
@@ -3042,27 +3567,6 @@ func (c *ApigClient) ListApisUnbindedToAppV2Invoker(request *model.ListApisUnbin
 	return &ListApisUnbindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAppCodesV2 查询APP Code列表
-//
-// 查询App Code列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) ListAppCodesV2(request *model.ListAppCodesV2Request) (*model.ListAppCodesV2Response, error) {
-	requestDef := GenReqDefForListAppCodesV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAppCodesV2Response), nil
-	}
-}
-
-// ListAppCodesV2Invoker 查询APP Code列表
-func (c *ApigClient) ListAppCodesV2Invoker(request *model.ListAppCodesV2Request) *ListAppCodesV2Invoker {
-	requestDef := GenReqDefForListAppCodesV2()
-	return &ListAppCodesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListAppsBindedToApiV2 查看API已绑定的APP列表
 //
 // 查询API绑定的APP列表。
@@ -3082,111 +3586,6 @@ func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2R
 func (c *ApigClient) ListAppsBindedToApiV2Invoker(request *model.ListAppsBindedToApiV2Request) *ListAppsBindedToApiV2Invoker {
 	requestDef := GenReqDefForListAppsBindedToApiV2()
 	return &ListAppsBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAppsV2 查询APP列表
-//
-// 查询APP列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) ListAppsV2(request *model.ListAppsV2Request) (*model.ListAppsV2Response, error) {
-	requestDef := GenReqDefForListAppsV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAppsV2Response), nil
-	}
-}
-
-// ListAppsV2Invoker 查询APP列表
-func (c *ApigClient) ListAppsV2Invoker(request *model.ListAppsV2Request) *ListAppsV2Invoker {
-	requestDef := GenReqDefForListAppsV2()
-	return &ListAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ResettingAppSecretV2 重置密钥
-//
-// 重置指定APP的密钥。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) ResettingAppSecretV2(request *model.ResettingAppSecretV2Request) (*model.ResettingAppSecretV2Response, error) {
-	requestDef := GenReqDefForResettingAppSecretV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ResettingAppSecretV2Response), nil
-	}
-}
-
-// ResettingAppSecretV2Invoker 重置密钥
-func (c *ApigClient) ResettingAppSecretV2Invoker(request *model.ResettingAppSecretV2Request) *ResettingAppSecretV2Invoker {
-	requestDef := GenReqDefForResettingAppSecretV2()
-	return &ResettingAppSecretV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowDetailsOfAppCodeV2 查看APP Code详情
-//
-// App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV2Request) (*model.ShowDetailsOfAppCodeV2Response, error) {
-	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowDetailsOfAppCodeV2Response), nil
-	}
-}
-
-// ShowDetailsOfAppCodeV2Invoker 查看APP Code详情
-func (c *ApigClient) ShowDetailsOfAppCodeV2Invoker(request *model.ShowDetailsOfAppCodeV2Request) *ShowDetailsOfAppCodeV2Invoker {
-	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
-	return &ShowDetailsOfAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowDetailsOfAppV2 查看APP详情
-//
-// 查看指定APP的详细信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request) (*model.ShowDetailsOfAppV2Response, error) {
-	requestDef := GenReqDefForShowDetailsOfAppV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowDetailsOfAppV2Response), nil
-	}
-}
-
-// ShowDetailsOfAppV2Invoker 查看APP详情
-func (c *ApigClient) ShowDetailsOfAppV2Invoker(request *model.ShowDetailsOfAppV2Request) *ShowDetailsOfAppV2Invoker {
-	requestDef := GenReqDefForShowDetailsOfAppV2()
-	return &ShowDetailsOfAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateAppV2 修改APP
-//
-// 修改指定APP的信息。其中可修改的属性为：name、remark，当支持用户自定义key和secret的开关开启时，app_key和app_secret也支持修改，其它属性不可修改。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.UpdateAppV2Response, error) {
-	requestDef := GenReqDefForUpdateAppV2()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAppV2Response), nil
-	}
-}
-
-// UpdateAppV2Invoker 修改APP
-func (c *ApigClient) UpdateAppV2Invoker(request *model.UpdateAppV2Request) *UpdateAppV2Invoker {
-	requestDef := GenReqDefForUpdateAppV2()
-	return &UpdateAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExportApiDefinitionsV2 导出API

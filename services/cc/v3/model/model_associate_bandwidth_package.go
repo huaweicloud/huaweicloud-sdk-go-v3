@@ -12,10 +12,10 @@ import (
 // AssociateBandwidthPackage 将带宽包实例关联到资源的详细信息。
 type AssociateBandwidthPackage struct {
 
-	// 带宽包实例待关联的资源实例ID。
+	// 带宽包实例绑定的资源ID。
 	ResourceId string `json:"resource_id"`
 
-	// 带宽包实例待关联的资源实例类型，cloud_connection：表示云连接实例。
+	// 带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
 	ResourceType AssociateBandwidthPackageResourceType `json:"resource_type"`
 }
 

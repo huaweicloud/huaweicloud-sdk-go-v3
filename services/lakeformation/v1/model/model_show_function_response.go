@@ -11,23 +11,26 @@ import (
 // ShowFunctionResponse Response Object
 type ShowFunctionResponse struct {
 
-	// catalog名字
+	// catalog名称
 	CatalogName *string `json:"catalog_name,omitempty"`
 
-	// 数据库名字
+	// 数据库名称
 	DatabaseName *string `json:"database_name,omitempty"`
 
-	// 函数名
+	// 函数名称。只能包含字母、数字和下划线，且长度为1~256个字符。
 	FunctionName *string `json:"function_name,omitempty"`
 
-	// 函数类型
+	// 函数类型,JAVA
 	FunctionType *ShowFunctionResponseFunctionType `json:"function_type,omitempty"`
 
-	// 函数所有者
+	// 函数所有者。只能包含字母、数字和下划线，且长度为1~256个字符。
 	Owner *string `json:"owner,omitempty"`
 
-	// 所有者类型
+	// 所有者类型,USER-用户,GROUP-组,ROLE-角色
 	OwnerType *ShowFunctionResponseOwnerType `json:"owner_type,omitempty"`
+
+	// 所有者授权来源类型,IAM-云用户,SAML-联邦,LDAP-ld用户,LOCAL-本地用户,AGENTTENANT-委托,OTHER-其它。LakeFormation服务分为一期和二期，一期响应Body无该参数。
+	OwnerAuthSourceType *ShowFunctionResponseOwnerAuthSourceType `json:"owner_auth_source_type,omitempty"`
 
 	// 函数类名
 	ClassName *string `json:"class_name,omitempty"`
@@ -125,6 +128,69 @@ func (c ShowFunctionResponseOwnerType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowFunctionResponseOwnerType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowFunctionResponseOwnerAuthSourceType struct {
+	value string
+}
+
+type ShowFunctionResponseOwnerAuthSourceTypeEnum struct {
+	IAM         ShowFunctionResponseOwnerAuthSourceType
+	SAML        ShowFunctionResponseOwnerAuthSourceType
+	LDAP        ShowFunctionResponseOwnerAuthSourceType
+	LOCAL       ShowFunctionResponseOwnerAuthSourceType
+	AGENTTENANT ShowFunctionResponseOwnerAuthSourceType
+	OTHER       ShowFunctionResponseOwnerAuthSourceType
+}
+
+func GetShowFunctionResponseOwnerAuthSourceTypeEnum() ShowFunctionResponseOwnerAuthSourceTypeEnum {
+	return ShowFunctionResponseOwnerAuthSourceTypeEnum{
+		IAM: ShowFunctionResponseOwnerAuthSourceType{
+			value: "IAM",
+		},
+		SAML: ShowFunctionResponseOwnerAuthSourceType{
+			value: "SAML",
+		},
+		LDAP: ShowFunctionResponseOwnerAuthSourceType{
+			value: "LDAP",
+		},
+		LOCAL: ShowFunctionResponseOwnerAuthSourceType{
+			value: "LOCAL",
+		},
+		AGENTTENANT: ShowFunctionResponseOwnerAuthSourceType{
+			value: "AGENTTENANT",
+		},
+		OTHER: ShowFunctionResponseOwnerAuthSourceType{
+			value: "OTHER",
+		},
+	}
+}
+
+func (c ShowFunctionResponseOwnerAuthSourceType) Value() string {
+	return c.value
+}
+
+func (c ShowFunctionResponseOwnerAuthSourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowFunctionResponseOwnerAuthSourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

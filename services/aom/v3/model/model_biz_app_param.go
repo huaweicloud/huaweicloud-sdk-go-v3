@@ -11,19 +11,19 @@ import (
 
 type BizAppParam struct {
 
-	// 应用描述
+	// 描述：最大255字符
 	Description *string `json:"description,omitempty"`
 
-	// 应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+	// 显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
 	DisplayName *string `json:"display_name,omitempty"`
 
 	// 应用关联的企业项目id。企业级用户必传
 	EpsId *string `json:"eps_id,omitempty"`
 
-	// 唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+	// 名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
 	Name string `json:"name"`
 
-	// 前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
+	// 前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
 	RegisterType *BizAppParamRegisterType `json:"register_type,omitempty"`
 }
 
@@ -41,8 +41,9 @@ type BizAppParamRegisterType struct {
 }
 
 type BizAppParamRegisterTypeEnum struct {
-	API                      BizAppParamRegisterType
-	CONSOLESERVICE_DISCOVERY BizAppParamRegisterType
+	API               BizAppParamRegisterType
+	CONSOLE           BizAppParamRegisterType
+	SERVICE_DISCOVERY BizAppParamRegisterType
 }
 
 func GetBizAppParamRegisterTypeEnum() BizAppParamRegisterTypeEnum {
@@ -50,8 +51,11 @@ func GetBizAppParamRegisterTypeEnum() BizAppParamRegisterTypeEnum {
 		API: BizAppParamRegisterType{
 			value: "API",
 		},
-		CONSOLESERVICE_DISCOVERY: BizAppParamRegisterType{
-			value: "CONSOLESERVICE_DISCOVERY",
+		CONSOLE: BizAppParamRegisterType{
+			value: "CONSOLE",
+		},
+		SERVICE_DISCOVERY: BizAppParamRegisterType{
+			value: "SERVICE_DISCOVERY",
 		},
 	}
 }

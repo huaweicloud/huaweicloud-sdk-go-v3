@@ -11,20 +11,29 @@ import (
 // CloudConnection 云连接实例。
 type CloudConnection struct {
 
-	// 云连接实例的ID。
-	Id *string `json:"id,omitempty"`
+	// 资源ID标识符。
+	Id string `json:"id"`
 
-	// 云连接实例的名字。
-	Name *string `json:"name,omitempty"`
+	// 实例名字。
+	Name string `json:"name"`
 
-	// 云连接实例的描述。
+	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	// 实例所属帐号ID。
+	DomainId string `json:"domain_id"`
 
-	// 云连接实例的企业项目ID。
+	// 实例所属企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
+
+	// 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+
+	// 实例标签。
+	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 云连接实例的状态。ACTIVE：表示状态可用。
 	Status *CloudConnectionStatus `json:"status,omitempty"`
@@ -32,17 +41,8 @@ type CloudConnection struct {
 	// 云连接实例的管理状态。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
-	// 云连接实例的创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
-
-	// 云连接实例的更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
-
 	// 云连接使用场景。 - VPC：虚拟私有云。
 	UsedScene *CloudConnectionUsedScene `json:"used_scene,omitempty"`
-
-	// 标签列表。
-	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 云连接实例关联网络实例的个数。
 	NetworkInstanceNumber *int32 `json:"network_instance_number,omitempty"`

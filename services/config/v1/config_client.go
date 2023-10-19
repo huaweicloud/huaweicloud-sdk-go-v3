@@ -735,7 +735,7 @@ func (c *ConfigClient) ShowOrganizationConformancePackInvoker(request *model.Sho
 
 // ShowOrganizationConformancePackDetailedStatuses 查看组织合规规则包部署详细状态
 //
-// 查看指定组织合规规则包在成员账户中的部署状态详情。
+// 查看指定组织合规规则包在成员帐号中的部署状态详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ConfigClient) ShowOrganizationConformancePackDetailedStatuses(request *model.ShowOrganizationConformancePackDetailedStatusesRequest) (*model.ShowOrganizationConformancePackDetailedStatusesResponse, error) {

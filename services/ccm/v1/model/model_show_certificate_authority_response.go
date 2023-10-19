@@ -60,7 +60,13 @@ type ShowCertificateAuthorityResponse struct {
 
 	// 企业项目ID，默认为“0”。 对于开通企业项目的用户，表示资源处于默认企业项目下。 对于未开通企业项目的用户，表示资源未处于企业项目下。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// 免费证书配额。
+	FreeQuota *int32 `json:"free_quota,omitempty"`
+
+	// 计费模式:   - **0** : 包周期；   - **1** : 按需。
+	ChargingMode   *int32 `json:"charging_mode,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowCertificateAuthorityResponse) String() string {

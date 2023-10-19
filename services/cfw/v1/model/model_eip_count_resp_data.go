@@ -15,8 +15,11 @@ type EipCountRespData struct {
 	// EIP总数
 	EipTotal *int32 `json:"eip_total,omitempty"`
 
-	// EIP防护数
+	// 该账号下所有墙防护EIP总数量
 	EipProtected *int32 `json:"eip_protected,omitempty"`
+
+	// 该当前防火墙防护EIP数量
+	EipProtectedSelf *int32 `json:"eip_protected_self,omitempty"`
 }
 
 func (o EipCountRespData) String() string {

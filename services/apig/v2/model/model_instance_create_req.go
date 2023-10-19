@@ -62,7 +62,7 @@ type InstanceCreateReq struct {
 	// 标签列表。  一个实例默认最多支持创建20个标签
 	Tags *[]TmsKeyValue `json:"tags,omitempty"`
 
-	// 终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您填写该参数为空，系统生成的终端节点服务的名称为{region}.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
+	// 终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
 	VpcepServiceName *string `json:"vpcep_service_name,omitempty"`
 
 	// 入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源

@@ -231,6 +231,21 @@ func GenReqDefForBatchPublish() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchSyncMetadata() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/metadata/async-bulk").
+		WithResponse(new(model.BatchSyncMetadataResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForChangeCatalog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -3461,6 +3476,30 @@ func GenReqDefForModifyCustomizedFields() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForParseUserBehavior() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/datamap/uba").
+		WithResponse(new(model.ParseUserBehaviorResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Instance").
+		WithJsonTag("instance").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForPayForDgcOneKey() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -4757,6 +4796,26 @@ func GenReqDefForShowDataProfile() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowDataSets() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/datamap/entities/search").
+		WithResponse(new(model.ShowDataSetsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Instance").
+		WithJsonTag("instance").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowDataconnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -5352,6 +5411,26 @@ func GenReqDefForShowTableModelById() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/datamap/tags/search").
+		WithResponse(new(model.ShowTagsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Instance").
+		WithJsonTag("instance").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

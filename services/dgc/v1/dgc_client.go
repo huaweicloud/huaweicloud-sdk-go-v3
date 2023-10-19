@@ -494,7 +494,7 @@ func (c *DgcClient) RestoreJobInstanceInvoker(request *model.RestoreJobInstanceR
 	return &RestoreJobInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunOnce 单次执行作业
+// RunOnce 立即执行作业
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceResponse, error) {
@@ -507,7 +507,7 @@ func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceRespon
 	}
 }
 
-// RunOnceInvoker 单次执行作业
+// RunOnceInvoker 立即执行作业
 func (c *DgcClient) RunOnceInvoker(request *model.RunOnceRequest) *RunOnceInvoker {
 	requestDef := GenReqDefForRunOnce()
 	return &RunOnceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

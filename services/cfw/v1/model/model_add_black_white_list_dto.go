@@ -29,6 +29,9 @@ type AddBlackWhiteListDto struct {
 
 	// 目的端口
 	Port string `json:"port"`
+
+	// 描述
+	Description *string `json:"description,omitempty"`
 }
 
 func (o AddBlackWhiteListDto) String() string {

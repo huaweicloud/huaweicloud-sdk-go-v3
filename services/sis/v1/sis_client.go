@@ -155,48 +155,6 @@ func (c *SisClient) RecognizeShortAudioInvoker(request *model.RecognizeShortAudi
 	return &RecognizeShortAudioInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunAudioAssessment 语音评测
-//
-// 口语评测接口，基于一小段朗读语音和预期文本，评价朗读者发音质量。当前仅支持华北-北京四。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SisClient) RunAudioAssessment(request *model.RunAudioAssessmentRequest) (*model.RunAudioAssessmentResponse, error) {
-	requestDef := GenReqDefForRunAudioAssessment()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunAudioAssessmentResponse), nil
-	}
-}
-
-// RunAudioAssessmentInvoker 语音评测
-func (c *SisClient) RunAudioAssessmentInvoker(request *model.RunAudioAssessmentRequest) *RunAudioAssessmentInvoker {
-	requestDef := GenReqDefForRunAudioAssessment()
-	return &RunAudioAssessmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// RunMultiModalAssessment 多模态评测
-//
-// 多模态评测接口，根据朗读视频数据、视频对应的音频数据和试题文本，综合给出朗读者口语的评测分数。当前仅支持华北-北京四。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SisClient) RunMultiModalAssessment(request *model.RunMultiModalAssessmentRequest) (*model.RunMultiModalAssessmentResponse, error) {
-	requestDef := GenReqDefForRunMultiModalAssessment()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunMultiModalAssessmentResponse), nil
-	}
-}
-
-// RunMultiModalAssessmentInvoker 多模态评测
-func (c *SisClient) RunMultiModalAssessmentInvoker(request *model.RunMultiModalAssessmentRequest) *RunMultiModalAssessmentInvoker {
-	requestDef := GenReqDefForRunMultiModalAssessment()
-	return &RunMultiModalAssessmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RunTts 语音合成
 //
 // 语音合成，是一种将文本转换成逼真语音的服务。用户通过实时访问和调用API获取语音合成结果，将用户输入的文字合成为音频。通过音色选择、自定义音量、语速，为企业和个人提供个性化的发音服务

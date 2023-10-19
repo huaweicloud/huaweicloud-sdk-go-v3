@@ -9,7 +9,7 @@ import (
 // DeleteInterRegionBandwidthRequest Request Object
 type DeleteInterRegionBandwidthRequest struct {
 
-	// 域间带宽实例ID。
+	// 资源的Id。
 	Id string `json:"id"`
 }
 

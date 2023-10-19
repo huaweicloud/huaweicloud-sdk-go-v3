@@ -8,11 +8,12 @@ import (
 
 // UpdateNetworkInstanceResponse Response Object
 type UpdateNetworkInstanceResponse struct {
-	NetworkInstance *NetworkInstance `json:"network_instance,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
+
+	NetworkInstance *NetworkInstance `json:"network_instance"`
+	HttpStatusCode  int              `json:"-"`
 }
 
 func (o UpdateNetworkInstanceResponse) String() string {

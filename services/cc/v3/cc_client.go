@@ -210,6 +210,27 @@ func (c *CcClient) DisassociateBandwidthPackageInvoker(request *model.Disassocia
 	return &DisassociateBandwidthPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBandwidthPackageTags 查询带宽包的标签信息
+//
+// 查询带宽包的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListBandwidthPackageTags(request *model.ListBandwidthPackageTagsRequest) (*model.ListBandwidthPackageTagsResponse, error) {
+	requestDef := GenReqDefForListBandwidthPackageTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthPackageTagsResponse), nil
+	}
+}
+
+// ListBandwidthPackageTagsInvoker 查询带宽包的标签信息
+func (c *CcClient) ListBandwidthPackageTagsInvoker(request *model.ListBandwidthPackageTagsRequest) *ListBandwidthPackageTagsInvoker {
+	requestDef := GenReqDefForListBandwidthPackageTags()
+	return &ListBandwidthPackageTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBandwidthPackages 查询带宽包列表
 //
 // 查询带宽包列表。
@@ -230,6 +251,27 @@ func (c *CcClient) ListBandwidthPackages(request *model.ListBandwidthPackagesReq
 func (c *CcClient) ListBandwidthPackagesInvoker(request *model.ListBandwidthPackagesRequest) *ListBandwidthPackagesInvoker {
 	requestDef := GenReqDefForListBandwidthPackages()
 	return &ListBandwidthPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidthPackagesByTags 通过标签过滤带宽包实例
+//
+// 通过标签过滤带宽包实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListBandwidthPackagesByTags(request *model.ListBandwidthPackagesByTagsRequest) (*model.ListBandwidthPackagesByTagsResponse, error) {
+	requestDef := GenReqDefForListBandwidthPackagesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthPackagesByTagsResponse), nil
+	}
+}
+
+// ListBandwidthPackagesByTagsInvoker 通过标签过滤带宽包实例
+func (c *CcClient) ListBandwidthPackagesByTagsInvoker(request *model.ListBandwidthPackagesByTagsRequest) *ListBandwidthPackagesByTagsInvoker {
+	requestDef := GenReqDefForListBandwidthPackagesByTags()
+	return &ListBandwidthPackagesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBandwidthPackage 查询带宽包实例
@@ -253,6 +295,48 @@ func (c *CcClient) ShowBandwidthPackageInvoker(request *model.ShowBandwidthPacka
 	return &ShowBandwidthPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// TagBandwidthPackage 创建带宽包标签
+//
+// 创建带宽包标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) TagBandwidthPackage(request *model.TagBandwidthPackageRequest) (*model.TagBandwidthPackageResponse, error) {
+	requestDef := GenReqDefForTagBandwidthPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TagBandwidthPackageResponse), nil
+	}
+}
+
+// TagBandwidthPackageInvoker 创建带宽包标签
+func (c *CcClient) TagBandwidthPackageInvoker(request *model.TagBandwidthPackageRequest) *TagBandwidthPackageInvoker {
+	requestDef := GenReqDefForTagBandwidthPackage()
+	return &TagBandwidthPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UntagBandwidthPackage 删除带宽包标签
+//
+// 删除带宽包标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UntagBandwidthPackage(request *model.UntagBandwidthPackageRequest) (*model.UntagBandwidthPackageResponse, error) {
+	requestDef := GenReqDefForUntagBandwidthPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UntagBandwidthPackageResponse), nil
+	}
+}
+
+// UntagBandwidthPackageInvoker 删除带宽包标签
+func (c *CcClient) UntagBandwidthPackageInvoker(request *model.UntagBandwidthPackageRequest) *UntagBandwidthPackageInvoker {
+	requestDef := GenReqDefForUntagBandwidthPackage()
+	return &UntagBandwidthPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateBandwidthPackage 更新带宽包实例
 //
 // 更新带宽包实例。
@@ -272,6 +356,472 @@ func (c *CcClient) UpdateBandwidthPackage(request *model.UpdateBandwidthPackageR
 func (c *CcClient) UpdateBandwidthPackageInvoker(request *model.UpdateBandwidthPackageRequest) *UpdateBandwidthPackageInvoker {
 	requestDef := GenReqDefForUpdateBandwidthPackage()
 	return &UpdateBandwidthPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ApplyCentralNetworkPolicy 应用中心网络策略
+//
+// 应用中心网络策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ApplyCentralNetworkPolicy(request *model.ApplyCentralNetworkPolicyRequest) (*model.ApplyCentralNetworkPolicyResponse, error) {
+	requestDef := GenReqDefForApplyCentralNetworkPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyCentralNetworkPolicyResponse), nil
+	}
+}
+
+// ApplyCentralNetworkPolicyInvoker 应用中心网络策略
+func (c *CcClient) ApplyCentralNetworkPolicyInvoker(request *model.ApplyCentralNetworkPolicyRequest) *ApplyCentralNetworkPolicyInvoker {
+	requestDef := GenReqDefForApplyCentralNetworkPolicy()
+	return &ApplyCentralNetworkPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCentralNetwork 创建中心网络
+//
+// 创建中心网络。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) CreateCentralNetwork(request *model.CreateCentralNetworkRequest) (*model.CreateCentralNetworkResponse, error) {
+	requestDef := GenReqDefForCreateCentralNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCentralNetworkResponse), nil
+	}
+}
+
+// CreateCentralNetworkInvoker 创建中心网络
+func (c *CcClient) CreateCentralNetworkInvoker(request *model.CreateCentralNetworkRequest) *CreateCentralNetworkInvoker {
+	requestDef := GenReqDefForCreateCentralNetwork()
+	return &CreateCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCentralNetworkPolicy 创建一个新版本的中心网络策略
+//
+// 创建一份只读的中心网络的策略。如果您有策略文档内容改动，需要基于此版本重新创建一个新版本的策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) CreateCentralNetworkPolicy(request *model.CreateCentralNetworkPolicyRequest) (*model.CreateCentralNetworkPolicyResponse, error) {
+	requestDef := GenReqDefForCreateCentralNetworkPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCentralNetworkPolicyResponse), nil
+	}
+}
+
+// CreateCentralNetworkPolicyInvoker 创建一个新版本的中心网络策略
+func (c *CcClient) CreateCentralNetworkPolicyInvoker(request *model.CreateCentralNetworkPolicyRequest) *CreateCentralNetworkPolicyInvoker {
+	requestDef := GenReqDefForCreateCentralNetworkPolicy()
+	return &CreateCentralNetworkPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCentralNetwork 删除中心网络
+//
+// 删除中心网络，请先清除附件后再删除中心网络。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DeleteCentralNetwork(request *model.DeleteCentralNetworkRequest) (*model.DeleteCentralNetworkResponse, error) {
+	requestDef := GenReqDefForDeleteCentralNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCentralNetworkResponse), nil
+	}
+}
+
+// DeleteCentralNetworkInvoker 删除中心网络
+func (c *CcClient) DeleteCentralNetworkInvoker(request *model.DeleteCentralNetworkRequest) *DeleteCentralNetworkInvoker {
+	requestDef := GenReqDefForDeleteCentralNetwork()
+	return &DeleteCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCentralNetworkPolicy 删除中心网络策略版本
+//
+// 删除中心网络策略版本。您无法删除正在被应用的中心策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DeleteCentralNetworkPolicy(request *model.DeleteCentralNetworkPolicyRequest) (*model.DeleteCentralNetworkPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteCentralNetworkPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCentralNetworkPolicyResponse), nil
+	}
+}
+
+// DeleteCentralNetworkPolicyInvoker 删除中心网络策略版本
+func (c *CcClient) DeleteCentralNetworkPolicyInvoker(request *model.DeleteCentralNetworkPolicyRequest) *DeleteCentralNetworkPolicyInvoker {
+	requestDef := GenReqDefForDeleteCentralNetworkPolicy()
+	return &DeleteCentralNetworkPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkPolicies 查询所有版本的中心网络策略列表
+//
+// 查询所有版本的中心网络策略列表。
+// 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkPolicies(request *model.ListCentralNetworkPoliciesRequest) (*model.ListCentralNetworkPoliciesResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkPoliciesResponse), nil
+	}
+}
+
+// ListCentralNetworkPoliciesInvoker 查询所有版本的中心网络策略列表
+func (c *CcClient) ListCentralNetworkPoliciesInvoker(request *model.ListCentralNetworkPoliciesRequest) *ListCentralNetworkPoliciesInvoker {
+	requestDef := GenReqDefForListCentralNetworkPolicies()
+	return &ListCentralNetworkPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkPolicyChangeSet 查询中心网络策略变化集
+//
+// 查询与当前应用中心网络策略的变化集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkPolicyChangeSet(request *model.ListCentralNetworkPolicyChangeSetRequest) (*model.ListCentralNetworkPolicyChangeSetResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkPolicyChangeSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkPolicyChangeSetResponse), nil
+	}
+}
+
+// ListCentralNetworkPolicyChangeSetInvoker 查询中心网络策略变化集
+func (c *CcClient) ListCentralNetworkPolicyChangeSetInvoker(request *model.ListCentralNetworkPolicyChangeSetRequest) *ListCentralNetworkPolicyChangeSetInvoker {
+	requestDef := GenReqDefForListCentralNetworkPolicyChangeSet()
+	return &ListCentralNetworkPolicyChangeSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkTags 查询中心网络的标签信息
+//
+// 查询中心网络的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkTags(request *model.ListCentralNetworkTagsRequest) (*model.ListCentralNetworkTagsResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkTagsResponse), nil
+	}
+}
+
+// ListCentralNetworkTagsInvoker 查询中心网络的标签信息
+func (c *CcClient) ListCentralNetworkTagsInvoker(request *model.ListCentralNetworkTagsRequest) *ListCentralNetworkTagsInvoker {
+	requestDef := GenReqDefForListCentralNetworkTags()
+	return &ListCentralNetworkTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworks 查询中心网络列表
+//
+// 查询中心网络列表。
+// 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworks(request *model.ListCentralNetworksRequest) (*model.ListCentralNetworksResponse, error) {
+	requestDef := GenReqDefForListCentralNetworks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworksResponse), nil
+	}
+}
+
+// ListCentralNetworksInvoker 查询中心网络列表
+func (c *CcClient) ListCentralNetworksInvoker(request *model.ListCentralNetworksRequest) *ListCentralNetworksInvoker {
+	requestDef := GenReqDefForListCentralNetworks()
+	return &ListCentralNetworksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCentralNetwork 查询中心网络详情
+//
+// 查询中心网络详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ShowCentralNetwork(request *model.ShowCentralNetworkRequest) (*model.ShowCentralNetworkResponse, error) {
+	requestDef := GenReqDefForShowCentralNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCentralNetworkResponse), nil
+	}
+}
+
+// ShowCentralNetworkInvoker 查询中心网络详情
+func (c *CcClient) ShowCentralNetworkInvoker(request *model.ShowCentralNetworkRequest) *ShowCentralNetworkInvoker {
+	requestDef := GenReqDefForShowCentralNetwork()
+	return &ShowCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TagCentralNetwork 创建中心网络标签
+//
+// 创建中心网络标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) TagCentralNetwork(request *model.TagCentralNetworkRequest) (*model.TagCentralNetworkResponse, error) {
+	requestDef := GenReqDefForTagCentralNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TagCentralNetworkResponse), nil
+	}
+}
+
+// TagCentralNetworkInvoker 创建中心网络标签
+func (c *CcClient) TagCentralNetworkInvoker(request *model.TagCentralNetworkRequest) *TagCentralNetworkInvoker {
+	requestDef := GenReqDefForTagCentralNetwork()
+	return &TagCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UntagCentralNetwork 删除中心网络标签
+//
+// 删除中心网络标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UntagCentralNetwork(request *model.UntagCentralNetworkRequest) (*model.UntagCentralNetworkResponse, error) {
+	requestDef := GenReqDefForUntagCentralNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UntagCentralNetworkResponse), nil
+	}
+}
+
+// UntagCentralNetworkInvoker 删除中心网络标签
+func (c *CcClient) UntagCentralNetworkInvoker(request *model.UntagCentralNetworkRequest) *UntagCentralNetworkInvoker {
+	requestDef := GenReqDefForUntagCentralNetwork()
+	return &UntagCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCentralNetwork 更新中心网络详情
+//
+// 更新中心网络详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateCentralNetwork(request *model.UpdateCentralNetworkRequest) (*model.UpdateCentralNetworkResponse, error) {
+	requestDef := GenReqDefForUpdateCentralNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCentralNetworkResponse), nil
+	}
+}
+
+// UpdateCentralNetworkInvoker 更新中心网络详情
+func (c *CcClient) UpdateCentralNetworkInvoker(request *model.UpdateCentralNetworkRequest) *UpdateCentralNetworkInvoker {
+	requestDef := GenReqDefForUpdateCentralNetwork()
+	return &UpdateCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCentralNetworkGdgwAttachment 创建中心网络GDGW附件
+//
+// 创建中心网络的GDGW附件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) CreateCentralNetworkGdgwAttachment(request *model.CreateCentralNetworkGdgwAttachmentRequest) (*model.CreateCentralNetworkGdgwAttachmentResponse, error) {
+	requestDef := GenReqDefForCreateCentralNetworkGdgwAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCentralNetworkGdgwAttachmentResponse), nil
+	}
+}
+
+// CreateCentralNetworkGdgwAttachmentInvoker 创建中心网络GDGW附件
+func (c *CcClient) CreateCentralNetworkGdgwAttachmentInvoker(request *model.CreateCentralNetworkGdgwAttachmentRequest) *CreateCentralNetworkGdgwAttachmentInvoker {
+	requestDef := GenReqDefForCreateCentralNetworkGdgwAttachment()
+	return &CreateCentralNetworkGdgwAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCentralNetworkAttachment 删除中心网络附件
+//
+// 删除中心网络附件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DeleteCentralNetworkAttachment(request *model.DeleteCentralNetworkAttachmentRequest) (*model.DeleteCentralNetworkAttachmentResponse, error) {
+	requestDef := GenReqDefForDeleteCentralNetworkAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCentralNetworkAttachmentResponse), nil
+	}
+}
+
+// DeleteCentralNetworkAttachmentInvoker 删除中心网络附件
+func (c *CcClient) DeleteCentralNetworkAttachmentInvoker(request *model.DeleteCentralNetworkAttachmentRequest) *DeleteCentralNetworkAttachmentInvoker {
+	requestDef := GenReqDefForDeleteCentralNetworkAttachment()
+	return &DeleteCentralNetworkAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkAttachments 查询中心网络附件列表
+//
+// 查询中心网络附件列表，分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkAttachments(request *model.ListCentralNetworkAttachmentsRequest) (*model.ListCentralNetworkAttachmentsResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkAttachmentsResponse), nil
+	}
+}
+
+// ListCentralNetworkAttachmentsInvoker 查询中心网络附件列表
+func (c *CcClient) ListCentralNetworkAttachmentsInvoker(request *model.ListCentralNetworkAttachmentsRequest) *ListCentralNetworkAttachmentsInvoker {
+	requestDef := GenReqDefForListCentralNetworkAttachments()
+	return &ListCentralNetworkAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkGdgwAttachments 查询中心网络GDGW附件列表
+//
+// 查询中心网络GDGW附件列表。
+// 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkGdgwAttachments(request *model.ListCentralNetworkGdgwAttachmentsRequest) (*model.ListCentralNetworkGdgwAttachmentsResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkGdgwAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkGdgwAttachmentsResponse), nil
+	}
+}
+
+// ListCentralNetworkGdgwAttachmentsInvoker 查询中心网络GDGW附件列表
+func (c *CcClient) ListCentralNetworkGdgwAttachmentsInvoker(request *model.ListCentralNetworkGdgwAttachmentsRequest) *ListCentralNetworkGdgwAttachmentsInvoker {
+	requestDef := GenReqDefForListCentralNetworkGdgwAttachments()
+	return &ListCentralNetworkGdgwAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCentralNetworkGdgwAttachment 查询中心网络GDGW附件详情
+//
+// 查询中心网络GDGW附件详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ShowCentralNetworkGdgwAttachment(request *model.ShowCentralNetworkGdgwAttachmentRequest) (*model.ShowCentralNetworkGdgwAttachmentResponse, error) {
+	requestDef := GenReqDefForShowCentralNetworkGdgwAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCentralNetworkGdgwAttachmentResponse), nil
+	}
+}
+
+// ShowCentralNetworkGdgwAttachmentInvoker 查询中心网络GDGW附件详情
+func (c *CcClient) ShowCentralNetworkGdgwAttachmentInvoker(request *model.ShowCentralNetworkGdgwAttachmentRequest) *ShowCentralNetworkGdgwAttachmentInvoker {
+	requestDef := GenReqDefForShowCentralNetworkGdgwAttachment()
+	return &ShowCentralNetworkGdgwAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCentralNetworkGdgwAttachment 更新中心网络GDGW附件
+//
+// 更新中心网络GDGW附件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateCentralNetworkGdgwAttachment(request *model.UpdateCentralNetworkGdgwAttachmentRequest) (*model.UpdateCentralNetworkGdgwAttachmentResponse, error) {
+	requestDef := GenReqDefForUpdateCentralNetworkGdgwAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCentralNetworkGdgwAttachmentResponse), nil
+	}
+}
+
+// UpdateCentralNetworkGdgwAttachmentInvoker 更新中心网络GDGW附件
+func (c *CcClient) UpdateCentralNetworkGdgwAttachmentInvoker(request *model.UpdateCentralNetworkGdgwAttachmentRequest) *UpdateCentralNetworkGdgwAttachmentInvoker {
+	requestDef := GenReqDefForUpdateCentralNetworkGdgwAttachment()
+	return &UpdateCentralNetworkGdgwAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkConnections 查询中心网络连接列表
+//
+// 查询中心网络连接列表接口。
+// 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkConnections(request *model.ListCentralNetworkConnectionsRequest) (*model.ListCentralNetworkConnectionsResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkConnectionsResponse), nil
+	}
+}
+
+// ListCentralNetworkConnectionsInvoker 查询中心网络连接列表
+func (c *CcClient) ListCentralNetworkConnectionsInvoker(request *model.ListCentralNetworkConnectionsRequest) *ListCentralNetworkConnectionsInvoker {
+	requestDef := GenReqDefForListCentralNetworkConnections()
+	return &ListCentralNetworkConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCentralNetworkConnection 更新中心网络连接接口
+//
+// 更新中心网络连接接口（仅支持更新带宽）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateCentralNetworkConnection(request *model.UpdateCentralNetworkConnectionRequest) (*model.UpdateCentralNetworkConnectionResponse, error) {
+	requestDef := GenReqDefForUpdateCentralNetworkConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCentralNetworkConnectionResponse), nil
+	}
+}
+
+// UpdateCentralNetworkConnectionInvoker 更新中心网络连接接口
+func (c *CcClient) UpdateCentralNetworkConnectionInvoker(request *model.UpdateCentralNetworkConnectionRequest) *UpdateCentralNetworkConnectionInvoker {
+	requestDef := GenReqDefForUpdateCentralNetworkConnection()
+	return &UpdateCentralNetworkConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCentralNetworkQuotas 查询中心网络配额
+//
+// 查询中心网络配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkQuotas(request *model.ListCentralNetworkQuotasRequest) (*model.ListCentralNetworkQuotasResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkQuotasResponse), nil
+	}
+}
+
+// ListCentralNetworkQuotasInvoker 查询中心网络配额
+func (c *CcClient) ListCentralNetworkQuotasInvoker(request *model.ListCentralNetworkQuotasRequest) *ListCentralNetworkQuotasInvoker {
+	requestDef := GenReqDefForListCentralNetworkQuotas()
+	return &ListCentralNetworkQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateCloudConnection 创建云连接实例
@@ -316,6 +866,27 @@ func (c *CcClient) DeleteCloudConnectionInvoker(request *model.DeleteCloudConnec
 	return &DeleteCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCloudConnectionTags 查询云连接实例的标签信息
+//
+// 查询云连接实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCloudConnectionTags(request *model.ListCloudConnectionTagsRequest) (*model.ListCloudConnectionTagsResponse, error) {
+	requestDef := GenReqDefForListCloudConnectionTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudConnectionTagsResponse), nil
+	}
+}
+
+// ListCloudConnectionTagsInvoker 查询云连接实例的标签信息
+func (c *CcClient) ListCloudConnectionTagsInvoker(request *model.ListCloudConnectionTagsRequest) *ListCloudConnectionTagsInvoker {
+	requestDef := GenReqDefForListCloudConnectionTags()
+	return &ListCloudConnectionTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCloudConnections 查询云连接列表
 //
 // 查询云连接列表。
@@ -336,6 +907,27 @@ func (c *CcClient) ListCloudConnections(request *model.ListCloudConnectionsReque
 func (c *CcClient) ListCloudConnectionsInvoker(request *model.ListCloudConnectionsRequest) *ListCloudConnectionsInvoker {
 	requestDef := GenReqDefForListCloudConnections()
 	return &ListCloudConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudConnectionsByTags 通过标签过滤云连接实例
+//
+// 通过标签过滤云连接实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCloudConnectionsByTags(request *model.ListCloudConnectionsByTagsRequest) (*model.ListCloudConnectionsByTagsResponse, error) {
+	requestDef := GenReqDefForListCloudConnectionsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudConnectionsByTagsResponse), nil
+	}
+}
+
+// ListCloudConnectionsByTagsInvoker 通过标签过滤云连接实例
+func (c *CcClient) ListCloudConnectionsByTagsInvoker(request *model.ListCloudConnectionsByTagsRequest) *ListCloudConnectionsByTagsInvoker {
+	requestDef := GenReqDefForListCloudConnectionsByTags()
+	return &ListCloudConnectionsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowCloudConnection 查询云连接实例
@@ -359,6 +951,48 @@ func (c *CcClient) ShowCloudConnectionInvoker(request *model.ShowCloudConnection
 	return &ShowCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// TagCloudConnection 创建云连接实例标签
+//
+// 创建云连接实例标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) TagCloudConnection(request *model.TagCloudConnectionRequest) (*model.TagCloudConnectionResponse, error) {
+	requestDef := GenReqDefForTagCloudConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TagCloudConnectionResponse), nil
+	}
+}
+
+// TagCloudConnectionInvoker 创建云连接实例标签
+func (c *CcClient) TagCloudConnectionInvoker(request *model.TagCloudConnectionRequest) *TagCloudConnectionInvoker {
+	requestDef := GenReqDefForTagCloudConnection()
+	return &TagCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UntagCloudConnection 删除云连接实例标签
+//
+// 删除云连接实例标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UntagCloudConnection(request *model.UntagCloudConnectionRequest) (*model.UntagCloudConnectionResponse, error) {
+	requestDef := GenReqDefForUntagCloudConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UntagCloudConnectionResponse), nil
+	}
+}
+
+// UntagCloudConnectionInvoker 删除云连接实例标签
+func (c *CcClient) UntagCloudConnectionInvoker(request *model.UntagCloudConnectionRequest) *UntagCloudConnectionInvoker {
+	requestDef := GenReqDefForUntagCloudConnection()
+	return &UntagCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateCloudConnection 更新云连接实例
 //
 // 更新云连接实例。
@@ -378,6 +1012,27 @@ func (c *CcClient) UpdateCloudConnection(request *model.UpdateCloudConnectionReq
 func (c *CcClient) UpdateCloudConnectionInvoker(request *model.UpdateCloudConnectionRequest) *UpdateCloudConnectionInvoker {
 	requestDef := GenReqDefForUpdateCloudConnection()
 	return &UpdateCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudConnectionQuotas 查询云连接配额
+//
+// 查询云连接配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCloudConnectionQuotas(request *model.ListCloudConnectionQuotasRequest) (*model.ListCloudConnectionQuotasResponse, error) {
+	requestDef := GenReqDefForListCloudConnectionQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudConnectionQuotasResponse), nil
+	}
+}
+
+// ListCloudConnectionQuotasInvoker 查询云连接配额
+func (c *CcClient) ListCloudConnectionQuotasInvoker(request *model.ListCloudConnectionQuotasRequest) *ListCloudConnectionQuotasInvoker {
+	requestDef := GenReqDefForListCloudConnectionQuotas()
+	return &ListCloudConnectionQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCloudConnectionRoutes 查询云连接路由条目列表
@@ -634,151 +1289,4 @@ func (c *CcClient) UpdateNetworkInstance(request *model.UpdateNetworkInstanceReq
 func (c *CcClient) UpdateNetworkInstanceInvoker(request *model.UpdateNetworkInstanceRequest) *UpdateNetworkInstanceInvoker {
 	requestDef := GenReqDefForUpdateNetworkInstance()
 	return &UpdateNetworkInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListQuotas 查询配额
-//
-// 查询配额
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuotasResponse, error) {
-	requestDef := GenReqDefForListQuotas()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListQuotasResponse), nil
-	}
-}
-
-// ListQuotasInvoker 查询配额
-func (c *CcClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
-	requestDef := GenReqDefForListQuotas()
-	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchCreateDeleteTags 批量创建和删除资源标签
-//
-// 批量创建和删除标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) BatchCreateDeleteTags(request *model.BatchCreateDeleteTagsRequest) (*model.BatchCreateDeleteTagsResponse, error) {
-	requestDef := GenReqDefForBatchCreateDeleteTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchCreateDeleteTagsResponse), nil
-	}
-}
-
-// BatchCreateDeleteTagsInvoker 批量创建和删除资源标签
-func (c *CcClient) BatchCreateDeleteTagsInvoker(request *model.BatchCreateDeleteTagsRequest) *BatchCreateDeleteTagsInvoker {
-	requestDef := GenReqDefForBatchCreateDeleteTags()
-	return &BatchCreateDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateTag 添加资源标签
-//
-// 添加资源标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
-	requestDef := GenReqDefForCreateTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTagResponse), nil
-	}
-}
-
-// CreateTagInvoker 添加资源标签
-func (c *CcClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
-	requestDef := GenReqDefForCreateTag()
-	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteTag 删除资源标签
-//
-// 删除资源标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
-	requestDef := GenReqDefForDeleteTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteTagResponse), nil
-	}
-}
-
-// DeleteTagInvoker 删除资源标签
-func (c *CcClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
-	requestDef := GenReqDefForDeleteTag()
-	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDomainTags 查询账户资源标签
-//
-// 查询账户资源标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) ListDomainTags(request *model.ListDomainTagsRequest) (*model.ListDomainTagsResponse, error) {
-	requestDef := GenReqDefForListDomainTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDomainTagsResponse), nil
-	}
-}
-
-// ListDomainTagsInvoker 查询账户资源标签
-func (c *CcClient) ListDomainTagsInvoker(request *model.ListDomainTagsRequest) *ListDomainTagsInvoker {
-	requestDef := GenReqDefForListDomainTags()
-	return &ListDomainTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListResourceByFilterTag 查询资源实例
-//
-// 查询资源实例
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) ListResourceByFilterTag(request *model.ListResourceByFilterTagRequest) (*model.ListResourceByFilterTagResponse, error) {
-	requestDef := GenReqDefForListResourceByFilterTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListResourceByFilterTagResponse), nil
-	}
-}
-
-// ListResourceByFilterTagInvoker 查询资源实例
-func (c *CcClient) ListResourceByFilterTagInvoker(request *model.ListResourceByFilterTagRequest) *ListResourceByFilterTagInvoker {
-	requestDef := GenReqDefForListResourceByFilterTag()
-	return &ListResourceByFilterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListTags 查询资源标签
-//
-// 查询资源标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CcClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
-	requestDef := GenReqDefForListTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTagsResponse), nil
-	}
-}
-
-// ListTagsInvoker 查询资源标签
-func (c *CcClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
-	requestDef := GenReqDefForListTags()
-	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

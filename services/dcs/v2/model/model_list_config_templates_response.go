@@ -13,8 +13,8 @@ type ListConfigTemplatesResponse struct {
 	TemplateNum *int32 `json:"template_num,omitempty"`
 
 	// 模板的详情数组。
-	ConfigTemplates *[]ConfigTemplatesListInfo `json:"config_templates,omitempty"`
-	HttpStatusCode  int                        `json:"-"`
+	Templates      *[]ConfigTemplatesListInfo `json:"templates,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ListConfigTemplatesResponse) String() string {

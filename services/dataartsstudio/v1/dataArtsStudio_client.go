@@ -229,6 +229,27 @@ func (c *DataArtsStudioClient) BatchPublishInvoker(request *model.BatchPublishRe
 	return &BatchPublishInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchSyncMetadata 元数据实时同步接口(邀测)
+//
+// 元数据实时同步接口，支持批量。该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchSyncMetadata(request *model.BatchSyncMetadataRequest) (*model.BatchSyncMetadataResponse, error) {
+	requestDef := GenReqDefForBatchSyncMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSyncMetadataResponse), nil
+	}
+}
+
+// BatchSyncMetadataInvoker 元数据实时同步接口(邀测)
+func (c *DataArtsStudioClient) BatchSyncMetadataInvoker(request *model.BatchSyncMetadataRequest) *BatchSyncMetadataInvoker {
+	requestDef := GenReqDefForBatchSyncMetadata()
+	return &BatchSyncMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeCatalog 修改流程架构
 //
 // 修改流程架构
@@ -2432,6 +2453,27 @@ func (c *DataArtsStudioClient) ModifyCustomizedFieldsInvoker(request *model.Modi
 	return &ModifyCustomizedFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ParseUserBehavior 用户行为分析
+//
+// 用户行为分析
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ParseUserBehavior(request *model.ParseUserBehaviorRequest) (*model.ParseUserBehaviorResponse, error) {
+	requestDef := GenReqDefForParseUserBehavior()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ParseUserBehaviorResponse), nil
+	}
+}
+
+// ParseUserBehaviorInvoker 用户行为分析
+func (c *DataArtsStudioClient) ParseUserBehaviorInvoker(request *model.ParseUserBehaviorRequest) *ParseUserBehaviorInvoker {
+	requestDef := GenReqDefForParseUserBehavior()
+	return &ParseUserBehaviorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PayForDgcOneKey DataArtsStudio实例一键购买接口
 //
 // # DataArtsStudio实例一键购买接口
@@ -3209,6 +3251,27 @@ func (c *DataArtsStudioClient) ShowDataProfileInvoker(request *model.ShowDataPro
 	return &ShowDataProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDataSets 资产搜索
+//
+// 资产搜索
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDataSets(request *model.ShowDataSetsRequest) (*model.ShowDataSetsResponse, error) {
+	requestDef := GenReqDefForShowDataSets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataSetsResponse), nil
+	}
+}
+
+// ShowDataSetsInvoker 资产搜索
+func (c *DataArtsStudioClient) ShowDataSetsInvoker(request *model.ShowDataSetsRequest) *ShowDataSetsInvoker {
+	requestDef := GenReqDefForShowDataSets()
+	return &ShowDataSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDataconnection 查询单个数据连接信息
 //
 // 查询单个数据连接信息
@@ -3669,6 +3732,27 @@ func (c *DataArtsStudioClient) ShowTableModelById(request *model.ShowTableModelB
 func (c *DataArtsStudioClient) ShowTableModelByIdInvoker(request *model.ShowTableModelByIdRequest) *ShowTableModelByIdInvoker {
 	requestDef := GenReqDefForShowTableModelById()
 	return &ShowTableModelByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTags 搜索查询标签分页展示
+//
+// 搜索查询标签分页展示
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowTags(request *model.ShowTagsRequest) (*model.ShowTagsResponse, error) {
+	requestDef := GenReqDefForShowTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagsResponse), nil
+	}
+}
+
+// ShowTagsInvoker 搜索查询标签分页展示
+func (c *DataArtsStudioClient) ShowTagsInvoker(request *model.ShowTagsRequest) *ShowTagsInvoker {
+	requestDef := GenReqDefForShowTags()
+	return &ShowTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTaskInfo 查询采集任务详情

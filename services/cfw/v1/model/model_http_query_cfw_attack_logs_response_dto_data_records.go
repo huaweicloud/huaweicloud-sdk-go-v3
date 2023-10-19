@@ -66,6 +66,21 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 
 	// 攻击报文信息
 	PacketMessages *[]PacketMessage `json:"packetMessages,omitempty"`
+
+	// 目标主机
+	DstHost *string `json:"dst_host,omitempty"`
+
+	// 源区域id
+	SrcRegionId *string `json:"src_region_id,omitempty"`
+
+	// 源区域名称
+	SrcRegionName *string `json:"src_region_name,omitempty"`
+
+	// 目的区域id
+	DstRegionId *string `json:"dst_region_id,omitempty"`
+
+	// 目的区域名称
+	DstRegionName *string `json:"dst_region_name,omitempty"`
 }
 
 func (o HttpQueryCfwAttackLogsResponseDtoDataRecords) String() string {

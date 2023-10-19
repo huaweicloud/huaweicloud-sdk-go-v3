@@ -45,7 +45,7 @@ type ListAttackLogsRequest struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页显示个数
+	// 每页显示个数，范围为1-1024
 	Limit int32 `json:"limit"`
 
 	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
@@ -71,6 +71,12 @@ type ListAttackLogsRequest struct {
 
 	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 目标主机
+	DstHost *string `json:"dst_host,omitempty"`
+
+	// log_type
+	LogType *ListAttackLogsRequestLogType `json:"log_type,omitempty"`
 }
 
 func (o ListAttackLogsRequest) String() string {
@@ -213,6 +219,57 @@ func (c ListAttackLogsRequestDirection) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListAttackLogsRequestDirection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListAttackLogsRequestLogType struct {
+	value string
+}
+
+type ListAttackLogsRequestLogTypeEnum struct {
+	INTERNET ListAttackLogsRequestLogType
+	NAT      ListAttackLogsRequestLogType
+	VPC      ListAttackLogsRequestLogType
+}
+
+func GetListAttackLogsRequestLogTypeEnum() ListAttackLogsRequestLogTypeEnum {
+	return ListAttackLogsRequestLogTypeEnum{
+		INTERNET: ListAttackLogsRequestLogType{
+			value: "internet",
+		},
+		NAT: ListAttackLogsRequestLogType{
+			value: "nat",
+		},
+		VPC: ListAttackLogsRequestLogType{
+			value: "vpc",
+		},
+	}
+}
+
+func (c ListAttackLogsRequestLogType) Value() string {
+	return c.value
+}
+
+func (c ListAttackLogsRequestLogType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAttackLogsRequestLogType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

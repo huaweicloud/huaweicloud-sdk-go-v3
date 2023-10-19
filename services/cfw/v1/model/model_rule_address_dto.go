@@ -26,6 +26,27 @@ type RuleAddressDto struct {
 
 	// 域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
 	DomainAddressName *string `json:"domain_address_name,omitempty"`
+
+	// 规则region列表json值
+	RegionListJson *string `json:"region_list_json,omitempty"`
+
+	// 规则region列表
+	RegionList *[]IpRegionDto `json:"region_list,omitempty"`
+
+	// 域名组id
+	DomainSetId *string `json:"domain_set_id,omitempty"`
+
+	// 域名组名称
+	DomainSetName *string `json:"domain_set_name,omitempty"`
+
+	// IP地址列表
+	IpAddress *[]string `json:"ip_address,omitempty"`
+
+	// 地址组列表
+	AddressGroup *[]string `json:"address_group,omitempty"`
+
+	// 地址组名称列表
+	AddressGroupNames *[]AddressGroupVo `json:"address_group_names,omitempty"`
 }
 
 func (o RuleAddressDto) String() string {

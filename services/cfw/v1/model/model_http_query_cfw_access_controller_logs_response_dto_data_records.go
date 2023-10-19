@@ -20,6 +20,18 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 	// 命中时间
 	HitTime *int32 `json:"hit_time,omitempty"`
 
+	// 源区域id
+	SrcRegionId *string `json:"src_region_id,omitempty"`
+
+	// 源区域name
+	SrcRegionName *string `json:"src_region_name,omitempty"`
+
+	// 目的区域id
+	DstRegionId *string `json:"dst_region_id,omitempty"`
+
+	// 目的区域name
+	DstRegionName *string `json:"dst_region_name,omitempty"`
+
 	// 文档ID
 	LogId *string `json:"log_id,omitempty"`
 
@@ -40,6 +52,9 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 
 	// 应用协议
 	App *string `json:"app,omitempty"`
+
+	// 目标主机
+	DstHost *string `json:"dst_host,omitempty"`
 }
 
 func (o HttpQueryCfwAccessControllerLogsResponseDtoDataRecords) String() string {

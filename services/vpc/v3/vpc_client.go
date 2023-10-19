@@ -40,6 +40,27 @@ func (c *VpcClient) AddSourcesToTrafficMirrorSessionInvoker(request *model.AddSo
 	return &AddSourcesToTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateSecurityGroupRules 批量创建安全组规则
+//
+// 在特定安全组下批量创建安全组规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchCreateSecurityGroupRules(request *model.BatchCreateSecurityGroupRulesRequest) (*model.BatchCreateSecurityGroupRulesResponse, error) {
+	requestDef := GenReqDefForBatchCreateSecurityGroupRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSecurityGroupRulesResponse), nil
+	}
+}
+
+// BatchCreateSecurityGroupRulesInvoker 批量创建安全组规则
+func (c *VpcClient) BatchCreateSecurityGroupRulesInvoker(request *model.BatchCreateSecurityGroupRulesRequest) *BatchCreateSecurityGroupRulesInvoker {
+	requestDef := GenReqDefForBatchCreateSecurityGroupRules()
+	return &BatchCreateSecurityGroupRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateSubNetworkInterface 批量创建辅助弹性网卡
 //
 // 批量创建辅助弹性网卡

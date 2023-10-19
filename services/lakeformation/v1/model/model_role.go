@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// Role role 响应
+// Role 角色响应
 type Role struct {
 
-	// role名字
+	// 角色名称。只能包含字母、数字和下划线，且长度为1~255个字符。
 	RoleName string `json:"role_name"`
 
-	// 描述信息
+	// 描述信息。最大长度为4000个字符。当无描述信息时，则description值为null，当值为null时，响应Body无该参数。
 	Description *string `json:"description,omitempty"`
 
-	// 主体来源 IAM云用户 SAML联邦 LDAP ld用户 LOCAL 本地用户 OTHER 其它
+	// 主体来源 IAM云用户 SAML联邦 LDAP ld用户 LOCAL 本地用户 AGENTTENANT 委托 OTHER 其它
 	PrincipalSource RolePrincipalSource `json:"principal_source"`
 }
 
@@ -36,11 +36,12 @@ type RolePrincipalSource struct {
 }
 
 type RolePrincipalSourceEnum struct {
-	IAM   RolePrincipalSource
-	SAML  RolePrincipalSource
-	LDAP  RolePrincipalSource
-	LOCAL RolePrincipalSource
-	OTHER RolePrincipalSource
+	IAM         RolePrincipalSource
+	SAML        RolePrincipalSource
+	LDAP        RolePrincipalSource
+	LOCAL       RolePrincipalSource
+	AGENTTENANT RolePrincipalSource
+	OTHER       RolePrincipalSource
 }
 
 func GetRolePrincipalSourceEnum() RolePrincipalSourceEnum {
@@ -56,6 +57,9 @@ func GetRolePrincipalSourceEnum() RolePrincipalSourceEnum {
 		},
 		LOCAL: RolePrincipalSource{
 			value: "LOCAL",
+		},
+		AGENTTENANT: RolePrincipalSource{
+			value: "AGENTTENANT",
 		},
 		OTHER: RolePrincipalSource{
 			value: "OTHER",

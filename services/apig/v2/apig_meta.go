@@ -119,6 +119,30 @@ func GenReqDefForAddIngressEipV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAssociateAppsForAppQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}/binding-apps").
+		WithResponse(new(model.AssociateAppsForAppQuotaResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAssociateCertificateV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -259,6 +283,110 @@ func GenReqDefForBatchCreateOrDeleteInstanceTags() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckAppV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/validation/{app_id}").
+		WithResponse(new(model.CheckAppV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateAnAppV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps").
+		WithResponse(new(model.CreateAnAppV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateAppCodeAutoV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes").
+		WithResponse(new(model.CreateAppCodeAutoV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateAppCodeV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes").
+		WithResponse(new(model.CreateAppCodeV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateAppQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas").
+		WithResponse(new(model.CreateAppQuotaResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateCustomAuthorizerV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -378,11 +506,66 @@ func GenReqDefForCreateInstanceV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/prepay-instances").
+		WithResponse(new(model.CreateOrderResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreatePlugin() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/plugins").
 		WithResponse(new(model.CreatePluginResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreatePostPayResizeOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/postpaid-resize").
+		WithResponse(new(model.CreatePostPayResizeOrderResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreatePrepayResize() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/prepay-resize").
+		WithResponse(new(model.CreatePrepayResizeResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -457,6 +640,90 @@ func GenReqDefForCreateSpecialThrottlingConfigurationV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAppAcl() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-acl").
+		WithResponse(new(model.DeleteAppAclResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAppCodeV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes/{app_code_id}").
+		WithResponse(new(model.DeleteAppCodeV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppCodeId").
+		WithJsonTag("app_code_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAppQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}").
+		WithResponse(new(model.DeleteAppQuotaResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAppV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
+		WithResponse(new(model.DeleteAppV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -743,6 +1010,30 @@ func GenReqDefForDetachPluginFromApi() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDisassociateAppQuotaWithApp() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}/bound-apps/{app_id}").
+		WithResponse(new(model.DisassociateAppQuotaWithAppResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1056,6 +1347,35 @@ func GenReqDefForListApisNotBoundWithSignatureKeyV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListAppCodesV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes").
+		WithResponse(new(model.ListAppCodesV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAppQuantitiesV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1067,6 +1387,150 @@ func GenReqDefForListAppQuantitiesV2() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListAppQuotaBindableApps() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}/bindable-apps").
+		WithResponse(new(model.ListAppQuotaBindableAppsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppName").
+		WithJsonTag("app_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListAppQuotaBoundApps() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}/bound-apps").
+		WithResponse(new(model.ListAppQuotaBoundAppsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppName").
+		WithJsonTag("app_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListAppQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas").
+		WithResponse(new(model.ListAppQuotasResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListAppsV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps").
+		WithResponse(new(model.ListAppsV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppKey").
+		WithJsonTag("app_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Creator").
+		WithJsonTag("creator").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PreciseSearch").
+		WithJsonTag("precise_search").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1893,6 +2357,134 @@ func GenReqDefForRemoveIngressEipV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForResettingAppSecretV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/secret/{app_id}").
+		WithResponse(new(model.ResettingAppSecretV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowAppBoundAppQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/bound-quota").
+		WithResponse(new(model.ShowAppBoundAppQuotaResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowAppQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}").
+		WithResponse(new(model.ShowAppQuotaResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowDetailsOfAppAcl() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-acl").
+		WithResponse(new(model.ShowDetailsOfAppAclResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowDetailsOfAppCodeV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes/{app_code_id}").
+		WithResponse(new(model.ShowDetailsOfAppCodeV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppCodeId").
+		WithJsonTag("app_code_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowDetailsOfAppV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
+		WithResponse(new(model.ShowDetailsOfAppV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowDetailsOfCustomAuthorizersV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2089,6 +2681,94 @@ func GenReqDefForShowPlugin() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowRestrictionOfInstanceV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/restriction").
+		WithResponse(new(model.ShowRestrictionOfInstanceV2Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAppAcl() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-acl").
+		WithResponse(new(model.UpdateAppAclResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAppQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/app-quotas/{app_quota_id}").
+		WithResponse(new(model.UpdateAppQuotaResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppQuotaId").
+		WithJsonTag("app_quota_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAppV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
+		WithResponse(new(model.UpdateAppV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateCustomAuthorizerV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -2175,6 +2855,30 @@ func GenReqDefForUpdateEnvironmentV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnvId").
 		WithJsonTag("env_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateEnvironmentVariableV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/env-variables/{env_variable_id}").
+		WithResponse(new(model.UpdateEnvironmentVariableV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnvVariableId").
+		WithJsonTag("env_variable_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2627,6 +3331,26 @@ func GenReqDefForChangeApiVersionV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApiId").
 		WithJsonTag("api_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCheckApisV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apis/check").
+		WithResponse(new(model.CheckApisV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3424,90 +4148,6 @@ func GenReqDefForCancelingAuthorizationV2() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCheckAppV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/validation/{app_id}").
-		WithResponse(new(model.CheckAppV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateAnAppV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps").
-		WithResponse(new(model.CreateAnAppV2Response)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateAppCodeAutoV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes").
-		WithResponse(new(model.CreateAppCodeAutoV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateAppCodeV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes").
-		WithResponse(new(model.CreateAppCodeV2Response)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCreateAuthorizingAppsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -3523,50 +4163,6 @@ func GenReqDefForCreateAuthorizingAppsV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteAppCodeV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes/{app_code_id}").
-		WithResponse(new(model.DeleteAppCodeV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppCodeId").
-		WithJsonTag("app_code_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteAppV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
-		WithResponse(new(model.DeleteAppV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -3666,35 +4262,6 @@ func GenReqDefForListApisUnbindedToAppV2() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListAppCodesV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes").
-		WithResponse(new(model.ListAppCodesV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListAppsBindedToApiV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3731,147 +4298,6 @@ func GenReqDefForListAppsBindedToApiV2() *def.HttpRequestDef {
 		WithName("EnvId").
 		WithJsonTag("env_id").
 		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListAppsV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps").
-		WithResponse(new(model.ListAppsV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Id").
-		WithJsonTag("id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Name").
-		WithJsonTag("name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Status").
-		WithJsonTag("status").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppKey").
-		WithJsonTag("app_key").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Creator").
-		WithJsonTag("creator").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PreciseSearch").
-		WithJsonTag("precise_search").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForResettingAppSecretV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/secret/{app_id}").
-		WithResponse(new(model.ResettingAppSecretV2Response)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowDetailsOfAppCodeV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes/{app_code_id}").
-		WithResponse(new(model.ShowDetailsOfAppCodeV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppCodeId").
-		WithJsonTag("app_code_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowDetailsOfAppV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
-		WithResponse(new(model.ShowDetailsOfAppV2Response)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateAppV2() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}").
-		WithResponse(new(model.UpdateAppV2Response)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AppId").
-		WithJsonTag("app_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

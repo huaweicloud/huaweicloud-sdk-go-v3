@@ -11,23 +11,26 @@ import (
 // Function 函数信息
 type Function struct {
 
-	// catalog名字
+	// catalog名称
 	CatalogName string `json:"catalog_name"`
 
-	// 数据库名字
+	// 数据库名称
 	DatabaseName string `json:"database_name"`
 
-	// 函数名
+	// 函数名称。只能包含字母、数字和下划线，且长度为1~256个字符。
 	FunctionName string `json:"function_name"`
 
-	// 函数类型
+	// 函数类型,JAVA
 	FunctionType FunctionFunctionType `json:"function_type"`
 
-	// 函数所有者
+	// 函数所有者。只能包含字母、数字和下划线，且长度为1~256个字符。
 	Owner string `json:"owner"`
 
-	// 所有者类型
+	// 所有者类型,USER-用户,GROUP-组,ROLE-角色
 	OwnerType FunctionOwnerType `json:"owner_type"`
+
+	// 所有者授权来源类型,IAM-云用户,SAML-联邦,LDAP-ld用户,LOCAL-本地用户,AGENTTENANT-委托,OTHER-其它。LakeFormation服务分为一期和二期，一期响应Body无该参数。
+	OwnerAuthSourceType *FunctionOwnerAuthSourceType `json:"owner_auth_source_type,omitempty"`
 
 	// 函数类名
 	ClassName string `json:"class_name"`
@@ -124,6 +127,69 @@ func (c FunctionOwnerType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *FunctionOwnerType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type FunctionOwnerAuthSourceType struct {
+	value string
+}
+
+type FunctionOwnerAuthSourceTypeEnum struct {
+	IAM         FunctionOwnerAuthSourceType
+	SAML        FunctionOwnerAuthSourceType
+	LDAP        FunctionOwnerAuthSourceType
+	LOCAL       FunctionOwnerAuthSourceType
+	AGENTTENANT FunctionOwnerAuthSourceType
+	OTHER       FunctionOwnerAuthSourceType
+}
+
+func GetFunctionOwnerAuthSourceTypeEnum() FunctionOwnerAuthSourceTypeEnum {
+	return FunctionOwnerAuthSourceTypeEnum{
+		IAM: FunctionOwnerAuthSourceType{
+			value: "IAM",
+		},
+		SAML: FunctionOwnerAuthSourceType{
+			value: "SAML",
+		},
+		LDAP: FunctionOwnerAuthSourceType{
+			value: "LDAP",
+		},
+		LOCAL: FunctionOwnerAuthSourceType{
+			value: "LOCAL",
+		},
+		AGENTTENANT: FunctionOwnerAuthSourceType{
+			value: "AGENTTENANT",
+		},
+		OTHER: FunctionOwnerAuthSourceType{
+			value: "OTHER",
+		},
+	}
+}
+
+func (c FunctionOwnerAuthSourceType) Value() string {
+	return c.value
+}
+
+func (c FunctionOwnerAuthSourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *FunctionOwnerAuthSourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

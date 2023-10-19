@@ -9,14 +9,14 @@ import (
 // ListBandwidthPackagesResponse Response Object
 type ListBandwidthPackagesResponse struct {
 
-	// 带宽包实例列表。
-	BandwidthPackages *[]BandwidthPackage `json:"bandwidth_packages,omitempty"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 带宽包实例列表。
+	BandwidthPackages []BandwidthPackage `json:"bandwidth_packages"`
+	HttpStatusCode    int                `json:"-"`
 }
 
 func (o ListBandwidthPackagesResponse) String() string {

@@ -58,6 +58,7 @@ type HcHttpClient struct {
 	credential    auth.ICredential
 	extraHeader   map[string]string
 	httpClient    *impl.DefaultHttpClient
+	errorHandler  sdkerr.ErrorHandler
 }
 
 func NewHcHttpClient(httpClient *impl.DefaultHttpClient) *HcHttpClient {
@@ -71,6 +72,11 @@ func (hc *HcHttpClient) WithEndpoints(endpoints []string) *HcHttpClient {
 
 func (hc *HcHttpClient) WithCredential(credential auth.ICredential) *HcHttpClient {
 	hc.credential = credential
+	return hc
+}
+
+func (hc *HcHttpClient) WithErrorHandler(errorHandler sdkerr.ErrorHandler) *HcHttpClient {
+	hc.errorHandler = errorHandler
 	return hc
 }
 
@@ -93,9 +99,14 @@ func (hc *HcHttpClient) Sync(req interface{}, reqDef *def.HttpRequestDef) (inter
 
 func (hc *HcHttpClient) SyncInvoke(req interface{}, reqDef *def.HttpRequestDef,
 	exchange *exchange.SdkExchange) (interface{}, error) {
-	var resp *response.DefaultHttpResponse
+	var (
+		httpRequest *request.DefaultHttpRequest
+		resp        *response.DefaultHttpResponse
+		err         error
+	)
+
 	for {
-		httpRequest, err := hc.buildRequest(req, reqDef)
+		httpRequest, err = hc.buildRequest(req, reqDef)
 		if err != nil {
 			return nil, err
 		}
@@ -112,7 +123,7 @@ func (hc *HcHttpClient) SyncInvoke(req interface{}, reqDef *def.HttpRequestDef,
 		}
 	}
 
-	return hc.extractResponse(resp, reqDef)
+	return hc.extractResponse(httpRequest, resp, reqDef)
 }
 
 func (hc *HcHttpClient) extractEndpoint(req interface{}, reqDef *def.HttpRequestDef, attrMaps map[string]string) (string, error) {
@@ -286,14 +297,17 @@ func flattenEnumStruct(value reflect.Value) (reflect.Value, error) {
 	return value, nil
 }
 
-func (hc *HcHttpClient) extractResponse(resp *response.DefaultHttpResponse, reqDef *def.HttpRequestDef) (interface{},
+func (hc *HcHttpClient) extractResponse(req *request.DefaultHttpRequest, resp *response.DefaultHttpResponse, reqDef *def.HttpRequestDef) (interface{},
 	error) {
-	if resp.GetStatusCode() >= 400 {
-		return nil, sdkerr.NewServiceResponseError(resp.Response)
+	if hc.errorHandler == nil {
+		hc.errorHandler = sdkerr.DefaultErrorHandler{}
+	}
+	err := hc.errorHandler.HandleError(req, resp)
+	if err != nil {
+		return nil, err
 	}
 
-	if err := hc.deserializeResponse(resp, reqDef); err != nil {
-
+	if err = hc.deserializeResponse(resp, reqDef); err != nil {
 		return nil, err
 	}
 

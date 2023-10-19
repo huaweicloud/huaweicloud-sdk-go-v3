@@ -28,6 +28,12 @@ func GenReqDefForAddFacesByBase64() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -52,6 +58,12 @@ func GenReqDefForAddFacesByFile() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -78,6 +90,12 @@ func GenReqDefForAddFacesByUrl() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -103,6 +121,12 @@ func GenReqDefForBatchDeleteFaces() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -122,6 +146,12 @@ func GenReqDefForCompareFaceByBase64() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -143,6 +173,12 @@ func GenReqDefForCompareFaceByFile() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -163,6 +199,12 @@ func GenReqDefForCompareFaceByUrl() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -182,6 +224,12 @@ func GenReqDefForCreateFaceSet() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -207,6 +255,12 @@ func GenReqDefForDeleteFaceByExternalImageId() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -235,6 +289,12 @@ func GenReqDefForDeleteFaceByFaceId() *def.HttpRequestDef {
 		WithJsonTag("Enterprise-Project-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -254,6 +314,12 @@ func GenReqDefForDeleteFaceSet() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -276,6 +342,12 @@ func GenReqDefForDetectFaceByBase64() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -295,6 +367,12 @@ func GenReqDefForDetectFaceByBase64Intl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -316,6 +394,12 @@ func GenReqDefForDetectFaceByFile() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -335,6 +419,12 @@ func GenReqDefForDetectFaceByFileIntl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -356,6 +446,12 @@ func GenReqDefForDetectFaceByUrl() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -375,6 +471,12 @@ func GenReqDefForDetectFaceByUrlIntl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -396,6 +498,12 @@ func GenReqDefForDetectLiveByBase64() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -415,6 +523,12 @@ func GenReqDefForDetectLiveByBase64Intl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -436,6 +550,12 @@ func GenReqDefForDetectLiveByFile() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -455,6 +575,12 @@ func GenReqDefForDetectLiveByFileIntl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -476,6 +602,12 @@ func GenReqDefForDetectLiveByUrl() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -495,6 +627,12 @@ func GenReqDefForDetectLiveByUrlIntl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -516,6 +654,12 @@ func GenReqDefForDetectLiveFaceByBase64() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -536,6 +680,12 @@ func GenReqDefForDetectLiveFaceByFile() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -555,6 +705,12 @@ func GenReqDefForDetectLiveFaceByUrl() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -581,6 +737,12 @@ func GenReqDefForSearchFaceByBase64() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -605,6 +767,12 @@ func GenReqDefForSearchFaceByFaceId() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -631,6 +799,12 @@ func GenReqDefForSearchFaceByFile() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -656,6 +830,12 @@ func GenReqDefForSearchFaceByUrl() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -670,6 +850,12 @@ func GenReqDefForShowAllFaceSets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -691,6 +877,12 @@ func GenReqDefForShowFaceSet() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -717,6 +909,12 @@ func GenReqDefForShowFacesByFaceId() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -749,6 +947,12 @@ func GenReqDefForShowFacesByLimit() *def.HttpRequestDef {
 		WithJsonTag("Enterprise-Project-Id").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -773,6 +977,12 @@ func GenReqDefForUpdateFace() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -9,14 +9,14 @@ import (
 // ListPermissionsResponse Response Object
 type ListPermissionsResponse struct {
 
-	// 权限的详细信息。
-	Permissions *[]Permission `json:"permissions,omitempty"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 权限实例列表。
+	Permissions    []Permission `json:"permissions"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListPermissionsResponse) String() string {

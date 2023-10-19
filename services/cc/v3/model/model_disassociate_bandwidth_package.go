@@ -12,10 +12,10 @@ import (
 // DisassociateBandwidthPackage 解关联带宽包实例的详细信息。
 type DisassociateBandwidthPackage struct {
 
-	// 带宽包实例待解关联的资源实例ID。
+	// 带宽包实例绑定的资源ID。
 	ResourceId string `json:"resource_id"`
 
-	// 带宽包实例待解关联的资源实例类型，cloud_connection：表示为云连接实例。
+	// 带宽包实例绑定的资源类型。 cloud_connection: 云连接实例。
 	ResourceType DisassociateBandwidthPackageResourceType `json:"resource_type"`
 }
 

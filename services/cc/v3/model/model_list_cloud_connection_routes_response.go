@@ -9,14 +9,14 @@ import (
 // ListCloudConnectionRoutesResponse Response Object
 type ListCloudConnectionRoutesResponse struct {
 
-	// 云连接路由实例列表。
-	CloudConnectionRoutes *[]CloudConnectionRoute `json:"cloud_connection_routes,omitempty"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 云连接路由实例列表。
+	CloudConnectionRoutes []CloudConnectionRoute `json:"cloud_connection_routes"`
+	HttpStatusCode        int                    `json:"-"`
 }
 
 func (o ListCloudConnectionRoutesResponse) String() string {

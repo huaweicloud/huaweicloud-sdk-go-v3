@@ -21,7 +21,7 @@ type CreateEndpointGroupOption struct {
 	// 终端节点组所属区域ID。
 	RegionId string `json:"region_id"`
 
-	// 关联监听器列表。
+	// 关联监听器列表。一个终端节点组下仅支持关联一个监听器。
 	Listeners []Id `json:"listeners"`
 }
 

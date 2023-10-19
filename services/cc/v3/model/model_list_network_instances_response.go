@@ -9,14 +9,14 @@ import (
 // ListNetworkInstancesResponse Response Object
 type ListNetworkInstancesResponse struct {
 
-	// 网络实例列表。
-	NetworkInstances *[]NetworkInstance `json:"network_instances,omitempty"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 网络实例列表。
+	NetworkInstances []NetworkInstance `json:"network_instances"`
+	HttpStatusCode   int               `json:"-"`
 }
 
 func (o ListNetworkInstancesResponse) String() string {

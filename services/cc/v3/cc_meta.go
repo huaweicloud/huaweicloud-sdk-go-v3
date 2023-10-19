@@ -209,6 +209,17 @@ func GenReqDefForDisassociateBandwidthPackage() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListBandwidthPackageTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/ccaas/bandwidth-packages/tags").
+		WithResponse(new(model.ListBandwidthPackageTagsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListBandwidthPackages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -233,12 +244,16 @@ func GenReqDefForListBandwidthPackages() *def.HttpRequestDef {
 		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Status").
-		WithJsonTag("status").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CloudConnectionId").
+		WithJsonTag("cloud_connection_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BillingMode").
@@ -248,6 +263,21 @@ func GenReqDefForListBandwidthPackages() *def.HttpRequestDef {
 		WithName("ResourceId").
 		WithJsonTag("resource_id").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListBandwidthPackagesByTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/ccaas/bandwidth-packages/filter").
+		WithResponse(new(model.ListBandwidthPackagesByTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -269,6 +299,58 @@ func GenReqDefForShowBandwidthPackage() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForTagBandwidthPackage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/ccaas/bandwidth-packages/{id}/tag").
+		WithResponse(new(model.TagBandwidthPackageResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUntagBandwidthPackage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/ccaas/bandwidth-packages/{id}/untag").
+		WithResponse(new(model.UntagBandwidthPackageResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateBandwidthPackage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -284,6 +366,626 @@ func GenReqDefForUpdateBandwidthPackage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForApplyCentralNetworkPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/policies/{policy_id}/apply").
+		WithResponse(new(model.ApplyCentralNetworkPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateCentralNetwork() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/gcn/central-networks").
+		WithResponse(new(model.CreateCentralNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateCentralNetworkPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/policies").
+		WithResponse(new(model.CreateCentralNetworkPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteCentralNetwork() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{domain_id}/gcn/central-networks/{central_network_id}").
+		WithResponse(new(model.DeleteCentralNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteCentralNetworkPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/policies/{policy_id}").
+		WithResponse(new(model.DeleteCentralNetworkPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkPolicies() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/policies").
+		WithResponse(new(model.ListCentralNetworkPoliciesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Version").
+		WithJsonTag("version").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsApplied").
+		WithJsonTag("is_applied").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkPolicyChangeSet() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/policies/{policy_id}/change-set").
+		WithResponse(new(model.ListCentralNetworkPolicyChangeSetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-networks/tags").
+		WithResponse(new(model.ListCentralNetworkTagsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworks() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-networks").
+		WithResponse(new(model.ListCentralNetworksResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseRouterId").
+		WithJsonTag("enterprise_router_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AttachmentInstanceId").
+		WithJsonTag("attachment_instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GlobalConnectionBandwidthId").
+		WithJsonTag("global_connection_bandwidth_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionId").
+		WithJsonTag("connection_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowCentralNetwork() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-networks/{central_network_id}").
+		WithResponse(new(model.ShowCentralNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForTagCentralNetwork() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/gcn/central-networks/{central_network_id}/tag").
+		WithResponse(new(model.TagCentralNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUntagCentralNetwork() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/gcn/central-networks/{central_network_id}/untag").
+		WithResponse(new(model.UntagCentralNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateCentralNetwork() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{domain_id}/gcn/central-networks/{central_network_id}").
+		WithResponse(new(model.UpdateCentralNetworkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateCentralNetworkGdgwAttachment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments").
+		WithResponse(new(model.CreateCentralNetworkGdgwAttachmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteCentralNetworkAttachment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/attachments/{attachment_id}").
+		WithResponse(new(model.DeleteCentralNetworkAttachmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AttachmentId").
+		WithJsonTag("attachment_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkAttachments() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/attachments").
+		WithResponse(new(model.ListCentralNetworkAttachmentsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AttachmentInstanceType").
+		WithJsonTag("attachment_instance_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AttachmentInstanceId").
+		WithJsonTag("attachment_instance_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkGdgwAttachments() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments").
+		WithResponse(new(model.ListCentralNetworkGdgwAttachmentsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GlobalDcGatewayId").
+		WithJsonTag("global_dc_gateway_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowCentralNetworkGdgwAttachment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments/{gdgw_attachment_id}").
+		WithResponse(new(model.ShowCentralNetworkGdgwAttachmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GdgwAttachmentId").
+		WithJsonTag("gdgw_attachment_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateCentralNetworkGdgwAttachment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/gdgw-attachments/{gdgw_attachment_id}").
+		WithResponse(new(model.UpdateCentralNetworkGdgwAttachmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GdgwAttachmentId").
+		WithJsonTag("gdgw_attachment_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkConnections() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/connections").
+		WithResponse(new(model.ListCentralNetworkConnectionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GlobalConnectionBandwidthId").
+		WithJsonTag("global_connection_bandwidth_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BandwidthType").
+		WithJsonTag("bandwidth_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionType").
+		WithJsonTag("connection_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsCrossRegion").
+		WithJsonTag("is_cross_region").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateCentralNetworkConnection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{domain_id}/gcn/central-network/{central_network_id}/connections/{connection_id}").
+		WithResponse(new(model.UpdateCentralNetworkConnectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CentralNetworkId").
+		WithJsonTag("central_network_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionId").
+		WithJsonTag("connection_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCentralNetworkQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/quotas").
+		WithResponse(new(model.ListCentralNetworkQuotasResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QuotaType").
+		WithJsonTag("quota_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -320,6 +1022,17 @@ func GenReqDefForDeleteCloudConnection() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCloudConnectionTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/ccaas/cloud-connections/tags").
+		WithResponse(new(model.ListCloudConnectionTagsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCloudConnections() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -348,12 +1061,12 @@ func GenReqDefForListCloudConnections() *def.HttpRequestDef {
 		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Status").
-		WithJsonTag("status").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Type").
@@ -363,6 +1076,21 @@ func GenReqDefForListCloudConnections() *def.HttpRequestDef {
 		WithName("UsedScene").
 		WithJsonTag("used_scene").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCloudConnectionsByTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/ccaas/cloud-connections/filter").
+		WithResponse(new(model.ListCloudConnectionsByTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -379,6 +1107,58 @@ func GenReqDefForShowCloudConnection() *def.HttpRequestDef {
 		WithName("Id").
 		WithJsonTag("id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForTagCloudConnection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/ccaas/cloud-connections/{id}/tag").
+		WithResponse(new(model.TagCloudConnectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUntagCloudConnection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{domain_id}/ccaas/cloud-connections/{id}/untag").
+		WithResponse(new(model.UntagCloudConnectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("x-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -404,6 +1184,38 @@ func GenReqDefForUpdateCloudConnection() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCloudConnectionQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/ccaas/quotas").
+		WithResponse(new(model.ListCloudConnectionQuotasResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QuotaType").
+		WithJsonTag("quota_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CloudConnectionId").
+		WithJsonTag("cloud_connection_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RegionId").
+		WithJsonTag("region_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCloudConnectionRoutes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -420,10 +1232,6 @@ func GenReqDefForListCloudConnectionRoutes() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Id").
-		WithJsonTag("id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CloudConnectionId").
 		WithJsonTag("cloud_connection_id").
 		WithLocationType(def.Query))
@@ -434,6 +1242,10 @@ func GenReqDefForListCloudConnectionRoutes() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RegionId").
 		WithJsonTag("region_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -618,16 +1430,16 @@ func GenReqDefForListNetworkInstances() *def.HttpRequestDef {
 		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CloudConnectionId").
+		WithJsonTag("cloud_connection_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Status").
 		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Type").
 		WithJsonTag("type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("CloudConnectionId").
-		WithJsonTag("cloud_connection_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
@@ -673,158 +1485,6 @@ func GenReqDefForUpdateNetworkInstance() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListQuotas() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v3/{domain_id}/ccaas/quotas").
-		WithResponse(new(model.ListQuotasResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Marker").
-		WithJsonTag("marker").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("QuotaType").
-		WithJsonTag("quota_type").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForBatchCreateDeleteTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags/action").
-		WithResponse(new(model.BatchCreateDeleteTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceId").
-		WithJsonTag("resource_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags").
-		WithResponse(new(model.CreateTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceId").
-		WithJsonTag("resource_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags/{tag_key}").
-		WithResponse(new(model.DeleteTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceId").
-		WithJsonTag("resource_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagKey").
-		WithJsonTag("tag_key").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListDomainTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v3/{domain_id}/ccaas/{resource_type}/tags").
-		WithResponse(new(model.ListDomainTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListResourceByFilterTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{domain_id}/ccaas/{resource_type}/resource-instances/action").
-		WithResponse(new(model.ListResourceByFilterTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v3/{domain_id}/ccaas/{resource_type}/{resource_id}/tags").
-		WithResponse(new(model.ListTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceId").
-		WithJsonTag("resource_id").
-		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

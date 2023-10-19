@@ -22,52 +22,49 @@ package region
 import (
 	"github.com/stretchr/testify/assert"
 	"os"
-	"path/filepath"
-	"strings"
+	"path"
 	"testing"
 )
 
-var regionStr = `
-SERVICE:
-  - id: region-id-1
-    endpoint: 'https://service.region-id-1.myhuaweicloud.com'
-`
-
 func TestNewProfileProvider(t *testing.T) {
-	p := NewProfileProvider(serviceName)
-	assert.Equal(t, &ProfileProvider{serviceName: strings.ToUpper(serviceName)}, p)
+	err := setRegionsFileEnv()
+	assert.Nil(t, err)
+
+	p := NewProfileProvider("Service")
+	assert.Equal(t, "SERVICE", p.serviceName)
 }
 
 func TestProfileProvider_GetRegion(t *testing.T) {
-	dir, err := os.UserHomeDir()
-	assert.Nil(t, err)
-	filename := "test_regions.yaml"
-	path := filepath.Join(dir, ".huaweicloud", filename)
-	err = os.Setenv("HUAWEICLOUD_SDK_REGIONS_FILE", path)
+	err := setRegionsFileEnv()
 	assert.Nil(t, err)
 
-	file, err := os.Create(path)
-	assert.Nil(t, err)
-	err = file.Chmod(0600)
-	assert.Nil(t, err)
-	_, err = file.WriteString(regionStr)
-	assert.Nil(t, err)
-	err = file.Close()
-	assert.Nil(t, err)
-	defer func(name string) {
-		err = os.Remove(name)
-		assert.Nil(t, err)
-	}(path)
+	p := NewProfileProvider("Service1")
+	region := p.GetRegion("region-id-1")
+	assert.NotNil(t, region)
+	assert.Equal(t, "region-id-1", region.Id)
+	assert.Equal(t, []string{"https://service1.region-id-1.com"}, region.Endpoints)
+}
 
-	p1 := NewProfileProvider("NotExist")
-	reg1 := p1.GetRegion(serviceName)
-	assert.Nil(t, reg1)
+func TestProfileProvider_GetRegion2(t *testing.T) {
+	err := setRegionsFileEnv()
+	assert.Nil(t, err)
 
-	p2 := NewProfileProvider(serviceName)
-	reg2 := p2.GetRegion("not-exist-3")
-	assert.Nil(t, reg2)
+	p := NewProfileProvider("Service2")
+	region := p.GetRegion("region-id-2")
+	assert.NotNil(t, region)
+	assert.Equal(t, "region-id-2", region.Id)
+	assert.Equal(t, []string{"https://service2.region-id-2.com", "https://service2.region-id-2.cn"}, region.Endpoints)
+}
 
-	p3 := NewProfileProvider(serviceName)
-	reg3 := p3.GetRegion(regionId)
-	assert.Equal(t, NewRegion(regionId, endpoint), reg3)
+func setRegionsFileEnv() error {
+	absPath, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+	file := path.Join(absPath, "regions.yaml")
+	err = os.Setenv("HUAWEICLOUD_SDK_REGIONS_FILE", file)
+	if err != nil {
+		return err
+	}
+	return nil
 }

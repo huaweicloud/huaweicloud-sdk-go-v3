@@ -16,6 +16,9 @@ type Features struct {
 
 	// 是否支持SSL - true：是 - false：否
 	SupportSsl *bool `json:"support_ssl,omitempty"`
+
+	// 是否支持审计日志 - true: 是 - false: 否
+	SupportAuditLog *bool `json:"support_audit_log,omitempty"`
 }
 
 func (o Features) String() string {

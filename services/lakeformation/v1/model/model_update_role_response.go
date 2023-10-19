@@ -12,13 +12,13 @@ import (
 // UpdateRoleResponse Response Object
 type UpdateRoleResponse struct {
 
-	// role名字
+	// 角色名称。只能包含字母、数字和下划线，且长度为1~255个字符。
 	RoleName *string `json:"role_name,omitempty"`
 
-	// 描述信息
+	// 描述信息。最大长度为4000个字符。当无描述信息时，则description值为null，当值为null时，响应Body无该参数。
 	Description *string `json:"description,omitempty"`
 
-	// 主体来源 IAM云用户 SAML联邦 LDAP ld用户 LOCAL 本地用户 OTHER 其它
+	// 主体来源 IAM云用户 SAML联邦 LDAP ld用户 LOCAL 本地用户 AGENTTENANT 委托 OTHER 其它
 	PrincipalSource *UpdateRoleResponsePrincipalSource `json:"principal_source,omitempty"`
 	HttpStatusCode  int                                `json:"-"`
 }
@@ -37,11 +37,12 @@ type UpdateRoleResponsePrincipalSource struct {
 }
 
 type UpdateRoleResponsePrincipalSourceEnum struct {
-	IAM   UpdateRoleResponsePrincipalSource
-	SAML  UpdateRoleResponsePrincipalSource
-	LDAP  UpdateRoleResponsePrincipalSource
-	LOCAL UpdateRoleResponsePrincipalSource
-	OTHER UpdateRoleResponsePrincipalSource
+	IAM         UpdateRoleResponsePrincipalSource
+	SAML        UpdateRoleResponsePrincipalSource
+	LDAP        UpdateRoleResponsePrincipalSource
+	LOCAL       UpdateRoleResponsePrincipalSource
+	AGENTTENANT UpdateRoleResponsePrincipalSource
+	OTHER       UpdateRoleResponsePrincipalSource
 }
 
 func GetUpdateRoleResponsePrincipalSourceEnum() UpdateRoleResponsePrincipalSourceEnum {
@@ -57,6 +58,9 @@ func GetUpdateRoleResponsePrincipalSourceEnum() UpdateRoleResponsePrincipalSourc
 		},
 		LOCAL: UpdateRoleResponsePrincipalSource{
 			value: "LOCAL",
+		},
+		AGENTTENANT: UpdateRoleResponsePrincipalSource{
+			value: "AGENTTENANT",
 		},
 		OTHER: UpdateRoleResponsePrincipalSource{
 			value: "OTHER",

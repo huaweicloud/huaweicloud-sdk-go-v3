@@ -113,6 +113,18 @@ func (i *DisassociateBandwidthPackageInvoker) Invoke() (*model.DisassociateBandw
 	}
 }
 
+type ListBandwidthPackageTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthPackageTagsInvoker) Invoke() (*model.ListBandwidthPackageTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthPackageTagsResponse), nil
+	}
+}
+
 type ListBandwidthPackagesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +134,18 @@ func (i *ListBandwidthPackagesInvoker) Invoke() (*model.ListBandwidthPackagesRes
 		return nil, err
 	} else {
 		return result.(*model.ListBandwidthPackagesResponse), nil
+	}
+}
+
+type ListBandwidthPackagesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthPackagesByTagsInvoker) Invoke() (*model.ListBandwidthPackagesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthPackagesByTagsResponse), nil
 	}
 }
 
@@ -137,6 +161,30 @@ func (i *ShowBandwidthPackageInvoker) Invoke() (*model.ShowBandwidthPackageRespo
 	}
 }
 
+type TagBandwidthPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TagBandwidthPackageInvoker) Invoke() (*model.TagBandwidthPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TagBandwidthPackageResponse), nil
+	}
+}
+
+type UntagBandwidthPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UntagBandwidthPackageInvoker) Invoke() (*model.UntagBandwidthPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UntagBandwidthPackageResponse), nil
+	}
+}
+
 type UpdateBandwidthPackageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +194,270 @@ func (i *UpdateBandwidthPackageInvoker) Invoke() (*model.UpdateBandwidthPackageR
 		return nil, err
 	} else {
 		return result.(*model.UpdateBandwidthPackageResponse), nil
+	}
+}
+
+type ApplyCentralNetworkPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyCentralNetworkPolicyInvoker) Invoke() (*model.ApplyCentralNetworkPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyCentralNetworkPolicyResponse), nil
+	}
+}
+
+type CreateCentralNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCentralNetworkInvoker) Invoke() (*model.CreateCentralNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCentralNetworkResponse), nil
+	}
+}
+
+type CreateCentralNetworkPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCentralNetworkPolicyInvoker) Invoke() (*model.CreateCentralNetworkPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCentralNetworkPolicyResponse), nil
+	}
+}
+
+type DeleteCentralNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCentralNetworkInvoker) Invoke() (*model.DeleteCentralNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCentralNetworkResponse), nil
+	}
+}
+
+type DeleteCentralNetworkPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCentralNetworkPolicyInvoker) Invoke() (*model.DeleteCentralNetworkPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCentralNetworkPolicyResponse), nil
+	}
+}
+
+type ListCentralNetworkPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkPoliciesInvoker) Invoke() (*model.ListCentralNetworkPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkPoliciesResponse), nil
+	}
+}
+
+type ListCentralNetworkPolicyChangeSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkPolicyChangeSetInvoker) Invoke() (*model.ListCentralNetworkPolicyChangeSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkPolicyChangeSetResponse), nil
+	}
+}
+
+type ListCentralNetworkTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkTagsInvoker) Invoke() (*model.ListCentralNetworkTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkTagsResponse), nil
+	}
+}
+
+type ListCentralNetworksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworksInvoker) Invoke() (*model.ListCentralNetworksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworksResponse), nil
+	}
+}
+
+type ShowCentralNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCentralNetworkInvoker) Invoke() (*model.ShowCentralNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCentralNetworkResponse), nil
+	}
+}
+
+type TagCentralNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TagCentralNetworkInvoker) Invoke() (*model.TagCentralNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TagCentralNetworkResponse), nil
+	}
+}
+
+type UntagCentralNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UntagCentralNetworkInvoker) Invoke() (*model.UntagCentralNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UntagCentralNetworkResponse), nil
+	}
+}
+
+type UpdateCentralNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCentralNetworkInvoker) Invoke() (*model.UpdateCentralNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCentralNetworkResponse), nil
+	}
+}
+
+type CreateCentralNetworkGdgwAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCentralNetworkGdgwAttachmentInvoker) Invoke() (*model.CreateCentralNetworkGdgwAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCentralNetworkGdgwAttachmentResponse), nil
+	}
+}
+
+type DeleteCentralNetworkAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCentralNetworkAttachmentInvoker) Invoke() (*model.DeleteCentralNetworkAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCentralNetworkAttachmentResponse), nil
+	}
+}
+
+type ListCentralNetworkAttachmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkAttachmentsInvoker) Invoke() (*model.ListCentralNetworkAttachmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkAttachmentsResponse), nil
+	}
+}
+
+type ListCentralNetworkGdgwAttachmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkGdgwAttachmentsInvoker) Invoke() (*model.ListCentralNetworkGdgwAttachmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkGdgwAttachmentsResponse), nil
+	}
+}
+
+type ShowCentralNetworkGdgwAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCentralNetworkGdgwAttachmentInvoker) Invoke() (*model.ShowCentralNetworkGdgwAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCentralNetworkGdgwAttachmentResponse), nil
+	}
+}
+
+type UpdateCentralNetworkGdgwAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCentralNetworkGdgwAttachmentInvoker) Invoke() (*model.UpdateCentralNetworkGdgwAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCentralNetworkGdgwAttachmentResponse), nil
+	}
+}
+
+type ListCentralNetworkConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkConnectionsInvoker) Invoke() (*model.ListCentralNetworkConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkConnectionsResponse), nil
+	}
+}
+
+type UpdateCentralNetworkConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCentralNetworkConnectionInvoker) Invoke() (*model.UpdateCentralNetworkConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCentralNetworkConnectionResponse), nil
+	}
+}
+
+type ListCentralNetworkQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkQuotasInvoker) Invoke() (*model.ListCentralNetworkQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkQuotasResponse), nil
 	}
 }
 
@@ -173,6 +485,18 @@ func (i *DeleteCloudConnectionInvoker) Invoke() (*model.DeleteCloudConnectionRes
 	}
 }
 
+type ListCloudConnectionTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudConnectionTagsInvoker) Invoke() (*model.ListCloudConnectionTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudConnectionTagsResponse), nil
+	}
+}
+
 type ListCloudConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -182,6 +506,18 @@ func (i *ListCloudConnectionsInvoker) Invoke() (*model.ListCloudConnectionsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListCloudConnectionsResponse), nil
+	}
+}
+
+type ListCloudConnectionsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudConnectionsByTagsInvoker) Invoke() (*model.ListCloudConnectionsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudConnectionsByTagsResponse), nil
 	}
 }
 
@@ -197,6 +533,30 @@ func (i *ShowCloudConnectionInvoker) Invoke() (*model.ShowCloudConnectionRespons
 	}
 }
 
+type TagCloudConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TagCloudConnectionInvoker) Invoke() (*model.TagCloudConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TagCloudConnectionResponse), nil
+	}
+}
+
+type UntagCloudConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UntagCloudConnectionInvoker) Invoke() (*model.UntagCloudConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UntagCloudConnectionResponse), nil
+	}
+}
+
 type UpdateCloudConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +566,18 @@ func (i *UpdateCloudConnectionInvoker) Invoke() (*model.UpdateCloudConnectionRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateCloudConnectionResponse), nil
+	}
+}
+
+type ListCloudConnectionQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudConnectionQuotasInvoker) Invoke() (*model.ListCloudConnectionQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudConnectionQuotasResponse), nil
 	}
 }
 
@@ -350,89 +722,5 @@ func (i *UpdateNetworkInstanceInvoker) Invoke() (*model.UpdateNetworkInstanceRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateNetworkInstanceResponse), nil
-	}
-}
-
-type ListQuotasInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListQuotasResponse), nil
-	}
-}
-
-type BatchCreateDeleteTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateDeleteTagsInvoker) Invoke() (*model.BatchCreateDeleteTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateDeleteTagsResponse), nil
-	}
-}
-
-type CreateTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateTagInvoker) Invoke() (*model.CreateTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateTagResponse), nil
-	}
-}
-
-type DeleteTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteTagResponse), nil
-	}
-}
-
-type ListDomainTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDomainTagsInvoker) Invoke() (*model.ListDomainTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDomainTagsResponse), nil
-	}
-}
-
-type ListResourceByFilterTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListResourceByFilterTagInvoker) Invoke() (*model.ListResourceByFilterTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListResourceByFilterTagResponse), nil
-	}
-}
-
-type ListTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTagsResponse), nil
 	}
 }

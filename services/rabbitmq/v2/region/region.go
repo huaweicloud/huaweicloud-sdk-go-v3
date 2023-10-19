@@ -48,6 +48,8 @@ var (
 		"https://dms.ap-southeast-4.myhuaweicloud.com")
 	TR_WEST_1 = region.NewRegion("tr-west-1",
 		"https://dms.tr-west-1.myhuaweicloud.com")
+	AE_AD_1 = region.NewRegion("ae-ad-1",
+		"https://dms.ae-ad-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -72,6 +74,7 @@ var staticFields = map[string]*region.Region{
 	"na-mexico-1":    NA_MEXICO_1,
 	"ap-southeast-4": AP_SOUTHEAST_4,
 	"tr-west-1":      TR_WEST_1,
+	"ae-ad-1":        AE_AD_1,
 }
 
 var provider = region.DefaultProviderChain("RABBITMQ")

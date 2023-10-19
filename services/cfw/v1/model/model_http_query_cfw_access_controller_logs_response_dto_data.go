@@ -12,7 +12,7 @@ type HttpQueryCfwAccessControllerLogsResponseDtoData struct {
 	// 返回数量
 	Total *int32 `json:"total,omitempty"`
 
-	// 每页显示个数
+	// 每页显示个数，范围为1-1024
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 记录

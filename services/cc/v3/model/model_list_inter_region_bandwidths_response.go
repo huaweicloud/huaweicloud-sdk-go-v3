@@ -9,14 +9,14 @@ import (
 // ListInterRegionBandwidthsResponse Response Object
 type ListInterRegionBandwidthsResponse struct {
 
-	// 域间带宽实例列表。
-	InterRegionBandwidths *[]InterRegionBandwidth `json:"inter_region_bandwidths,omitempty"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 域间带宽实例列表。
+	InterRegionBandwidths []InterRegionBandwidth `json:"inter_region_bandwidths"`
+	HttpStatusCode        int                    `json:"-"`
 }
 
 func (o ListInterRegionBandwidthsResponse) String() string {

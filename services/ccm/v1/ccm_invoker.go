@@ -125,6 +125,18 @@ func (i *CreateCertificateAuthorityObsAgencyInvoker) Invoke() (*model.CreateCert
 	}
 }
 
+type CreateCertificateAuthorityOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateAuthorityOrderInvoker) Invoke() (*model.CreateCertificateAuthorityOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateAuthorityOrderResponse), nil
+	}
+}
+
 type CreateCertificateByCsrInvoker struct {
 	*invoker.BaseInvoker
 }

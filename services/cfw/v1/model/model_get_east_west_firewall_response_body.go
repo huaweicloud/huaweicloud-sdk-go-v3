@@ -36,8 +36,14 @@ type GetEastWestFirewallResponseBody struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页显示个数
+	// 每页显示个数，范围为1-1024
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 防护模式
+	Mode *string `json:"mode,omitempty"`
+
+	// 东西向路由限制
+	EwVpcRouteLimit *int32 `json:"ew_vpc_route_limit,omitempty"`
 }
 
 func (o GetEastWestFirewallResponseBody) String() string {

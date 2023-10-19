@@ -8,8 +8,10 @@ import (
 
 // ShowFaceSetResponse Response Object
 type ShowFaceSetResponse struct {
-	FaceSetInfo    *FaceSetInfo `json:"face_set_info,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	FaceSetInfo *FaceSetInfo `json:"face_set_info,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowFaceSetResponse) String() string {

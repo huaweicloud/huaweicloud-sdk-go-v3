@@ -19,6 +19,9 @@ type DnsServersResponseDto struct {
 
 	// DNS服务器IP
 	ServerIp *string `json:"server_ip,omitempty"`
+
+	// 健康检查域名
+	HealthCheckDomainName *string `json:"health_check_domain_name,omitempty"`
 }
 
 func (o DnsServersResponseDto) String() string {

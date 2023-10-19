@@ -9,10 +9,10 @@ import (
 // UpdateNetworkInstance 更新网络实例的详细信息。
 type UpdateNetworkInstance struct {
 
-	// 网络实例的名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+	// 实例名字。
 	Name *string `json:"name,omitempty"`
 
-	// 网络实例的描述。不支持 <>。
+	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
 	// 网络实例发布的网段路由列表。

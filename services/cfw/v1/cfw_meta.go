@@ -7,11 +7,11 @@ import (
 	"net/http"
 )
 
-func GenReqDefForAddAddressItemsUsingPost() *def.HttpRequestDef {
+func GenReqDefForAddAddressItem() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/address-items").
-		WithResponse(new(model.AddAddressItemsUsingPostResponse)).
+		WithResponse(new(model.AddAddressItemResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -31,11 +31,11 @@ func GenReqDefForAddAddressItemsUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAddAddressSetInfoUsingPost() *def.HttpRequestDef {
+func GenReqDefForAddAddressSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/address-set").
-		WithResponse(new(model.AddAddressSetInfoUsingPostResponse)).
+		WithResponse(new(model.AddAddressSetResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -55,11 +55,11 @@ func GenReqDefForAddAddressSetInfoUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAddBlackWhiteListUsingPost() *def.HttpRequestDef {
+func GenReqDefForAddBlackWhiteList() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/black-white-list").
-		WithResponse(new(model.AddBlackWhiteListUsingPostResponse)).
+		WithResponse(new(model.AddBlackWhiteListResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -79,11 +79,59 @@ func GenReqDefForAddBlackWhiteListUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAddServiceItemsUsingPost() *def.HttpRequestDef {
+func GenReqDefForAddDomainSet() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/domain-set").
+		WithResponse(new(model.AddDomainSetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForAddDomains() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/domain-set/domains").
+		WithResponse(new(model.AddDomainsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForAddServiceItems() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/service-items").
-		WithResponse(new(model.AddServiceItemsUsingPostResponse)).
+		WithResponse(new(model.AddServiceItemsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -103,11 +151,11 @@ func GenReqDefForAddServiceItemsUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAddServiceSetUsingPost() *def.HttpRequestDef {
+func GenReqDefForAddServiceSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/service-set").
-		WithResponse(new(model.AddServiceSetUsingPostResponse)).
+		WithResponse(new(model.AddServiceSetResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -127,11 +175,59 @@ func GenReqDefForAddServiceSetUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForChangeEwProtectStatus() *def.HttpRequestDef {
+func GenReqDefForBatchDeleteAddressItems() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/address-items").
+		WithResponse(new(model.BatchDeleteAddressItemsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteServiceItems() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/service-items").
+		WithResponse(new(model.BatchDeleteServiceItemsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForChangeEastWestFirewallStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/firewall/east-west/protect").
-		WithResponse(new(model.ChangeEwProtectStatusResponse)).
+		WithResponse(new(model.ChangeEastWestFirewallStatusResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -151,63 +247,11 @@ func GenReqDefForChangeEwProtectStatus() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForChangeIpsProtectModeUsingPost() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/ips/protect").
-		WithResponse(new(model.ChangeIpsProtectModeUsingPostResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FwInstanceId").
-		WithJsonTag("fw_instance_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteAclRuleCount() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/acl-rule/count").
-		WithResponse(new(model.DeleteAclRuleCountResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FwInstanceId").
-		WithJsonTag("fw_instance_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteAddressItemUsingDelete() *def.HttpRequestDef {
+func GenReqDefForDeleteAddressItem() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/address-items/{item_id}").
-		WithResponse(new(model.DeleteAddressItemUsingDeleteResponse)).
+		WithResponse(new(model.DeleteAddressItemResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -228,11 +272,11 @@ func GenReqDefForDeleteAddressItemUsingDelete() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteAddressSetInfoUsingDelete() *def.HttpRequestDef {
+func GenReqDefForDeleteAddressSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/address-sets/{set_id}").
-		WithResponse(new(model.DeleteAddressSetInfoUsingDeleteResponse)).
+		WithResponse(new(model.DeleteAddressSetResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -253,11 +297,11 @@ func GenReqDefForDeleteAddressSetInfoUsingDelete() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteBlackWhiteListUsingDelete() *def.HttpRequestDef {
+func GenReqDefForDeleteBlackWhiteList() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/black-white-list/{list_id}").
-		WithResponse(new(model.DeleteBlackWhiteListUsingDeleteResponse)).
+		WithResponse(new(model.DeleteBlackWhiteListResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -278,11 +322,56 @@ func GenReqDefForDeleteBlackWhiteListUsingDelete() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteServiceItemUsingDelete() *def.HttpRequestDef {
+func GenReqDefForDeleteDomainSet() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/domain-set/{set_id}").
+		WithResponse(new(model.DeleteDomainSetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SetId").
+		WithJsonTag("set_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteDomains() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/domain-set/domains").
+		WithResponse(new(model.DeleteDomainsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteServiceItem() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/service-items/{item_id}").
-		WithResponse(new(model.DeleteServiceItemUsingDeleteResponse)).
+		WithResponse(new(model.DeleteServiceItemResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -303,11 +392,11 @@ func GenReqDefForDeleteServiceItemUsingDelete() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteServiceSetUsingDelete() *def.HttpRequestDef {
+func GenReqDefForDeleteServiceSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/service-sets/{set_id}").
-		WithResponse(new(model.DeleteServiceSetUsingDeleteResponse)).
+		WithResponse(new(model.DeleteServiceSetResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -399,16 +488,28 @@ func GenReqDefForListAccessControlLogs() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DstHost").
+		WithJsonTag("dst_host").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RuleName").
+		WithJsonTag("rule_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Action").
+		WithJsonTag("action").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForListAddressItemsUsingGet() *def.HttpRequestDef {
+func GenReqDefForListAddressItems() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/address-items").
-		WithResponse(new(model.ListAddressItemsUsingGetResponse)).
+		WithResponse(new(model.ListAddressItemsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -444,11 +545,11 @@ func GenReqDefForListAddressItemsUsingGet() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListAddressSetDetailUsingGet() *def.HttpRequestDef {
+func GenReqDefForListAddressSetDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/address-sets/{set_id}").
-		WithResponse(new(model.ListAddressSetDetailUsingGetResponse)).
+		WithResponse(new(model.ListAddressSetDetailResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -469,11 +570,11 @@ func GenReqDefForListAddressSetDetailUsingGet() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListAddressSetListUsingGet() *def.HttpRequestDef {
+func GenReqDefForListAddressSets() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/address-sets").
-		WithResponse(new(model.ListAddressSetListUsingGetResponse)).
+		WithResponse(new(model.ListAddressSetsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -600,16 +701,24 @@ func GenReqDefForListAttackLogs() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DstHost").
+		WithJsonTag("dst_host").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LogType").
+		WithJsonTag("log_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForListBlackWhiteListsUsingGet() *def.HttpRequestDef {
+func GenReqDefForListBlackWhiteLists() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/black-white-lists").
-		WithResponse(new(model.ListBlackWhiteListsUsingGetResponse)).
+		WithResponse(new(model.ListBlackWhiteListsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -681,6 +790,128 @@ func GenReqDefForListDnsServers() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListDomainParseDetail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/domain/parse/{domain_name}").
+		WithResponse(new(model.ListDomainParseDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainName").
+		WithJsonTag("domain_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AddressType").
+		WithJsonTag("address_type").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDomainSets() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/domain-sets").
+		WithResponse(new(model.ListDomainSetsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ObjectId").
+		WithJsonTag("object_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("KeyWord").
+		WithJsonTag("key_word").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainSetType").
+		WithJsonTag("domain_set_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigStatus").
+		WithJsonTag("config_status").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDomains() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/domain-set/domains/{domain_set_id}").
+		WithResponse(new(model.ListDomainsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainSetId").
+		WithJsonTag("domain_set_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainName").
+		WithJsonTag("domain_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Description").
+		WithJsonTag("description").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SetId").
+		WithJsonTag("set_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ObjectId").
+		WithJsonTag("object_Id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListEastWestFirewall() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -709,11 +940,11 @@ func GenReqDefForListEastWestFirewall() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListFirewallUsingGet() *def.HttpRequestDef {
+func GenReqDefForListFirewallDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/firewall/exist").
-		WithResponse(new(model.ListFirewallUsingGetResponse)).
+		WithResponse(new(model.ListFirewallDetailResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -736,6 +967,26 @@ func GenReqDefForListFirewallUsingGet() *def.HttpRequestDef {
 		WithName("FwInstanceId").
 		WithJsonTag("fw_instance_id").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListFirewallList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/firewalls/list").
+		WithResponse(new(model.ListFirewallListResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -812,16 +1063,20 @@ func GenReqDefForListFlowLogs() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DstHost").
+		WithJsonTag("dst_host").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForListIpsProtectModeUsingPost() *def.HttpRequestDef {
+func GenReqDefForListProtectedVpcs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/ips/protect").
-		WithResponse(new(model.ListIpsProtectModeUsingPostResponse)).
+		WithPath("/v1/{project_id}/vpcs/protection").
+		WithResponse(new(model.ListProtectedVpcsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -841,60 +1096,11 @@ func GenReqDefForListIpsProtectModeUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListParseDomainDetails() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/domain/parse/{domain_name}").
-		WithResponse(new(model.ListParseDomainDetailsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DomainName").
-		WithJsonTag("domain_name").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FwInstanceId").
-		WithJsonTag("fw_instance_id").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListRuleHitCount() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/acl-rule/count").
-		WithResponse(new(model.ListRuleHitCountResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FwInstanceId").
-		WithJsonTag("fw_instance_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListServiceItemsDetails() *def.HttpRequestDef {
+func GenReqDefForListServiceItems() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/service-items").
-		WithResponse(new(model.ListServiceItemsDetailsResponse)).
+		WithResponse(new(model.ListServiceItemsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -926,11 +1132,36 @@ func GenReqDefForListServiceItemsDetails() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListServiceSet() *def.HttpRequestDef {
+func GenReqDefForListServiceSetDetail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/service-sets/{set_id}").
+		WithResponse(new(model.ListServiceSetDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SetId").
+		WithJsonTag("set_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListServiceSets() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/service-sets").
-		WithResponse(new(model.ListServiceSetResponse)).
+		WithResponse(new(model.ListServiceSetsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -962,36 +1193,11 @@ func GenReqDefForListServiceSet() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListServiceSetDetails() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/service-sets/{set_id}").
-		WithResponse(new(model.ListServiceSetDetailsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SetId").
-		WithJsonTag("set_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FwInstanceId").
-		WithJsonTag("fw_instance_id").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateAddressSetInfoUsingPut() *def.HttpRequestDef {
+func GenReqDefForUpdateAddressSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/address-sets/{set_id}").
-		WithResponse(new(model.UpdateAddressSetInfoUsingPutResponse)).
+		WithResponse(new(model.UpdateAddressSetResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1016,11 +1222,11 @@ func GenReqDefForUpdateAddressSetInfoUsingPut() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateBlackWhiteListUsingPut() *def.HttpRequestDef {
+func GenReqDefForUpdateBlackWhiteList() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/black-white-list/{list_id}").
-		WithResponse(new(model.UpdateBlackWhiteListUsingPutResponse)).
+		WithResponse(new(model.UpdateBlackWhiteListResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1069,11 +1275,11 @@ func GenReqDefForUpdateDnsServers() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateServiceSetUsingPut() *def.HttpRequestDef {
+func GenReqDefForUpdateDomainSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v1/{project_id}/service-sets/{set_id}").
-		WithResponse(new(model.UpdateServiceSetUsingPutResponse)).
+		WithPath("/v1/{project_id}/domain-set/{set_id}").
+		WithResponse(new(model.UpdateDomainSetResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1098,11 +1304,40 @@ func GenReqDefForUpdateServiceSetUsingPut() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAddRuleAclUsingPost() *def.HttpRequestDef {
+func GenReqDefForUpdateServiceSet() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/service-sets/{set_id}").
+		WithResponse(new(model.UpdateServiceSetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SetId").
+		WithJsonTag("set_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForAddAclRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/acl-rule").
-		WithResponse(new(model.AddRuleAclUsingPostResponse)).
+		WithResponse(new(model.AddAclRuleResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1122,11 +1357,55 @@ func GenReqDefForAddRuleAclUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteRuleAclUsingDelete() *def.HttpRequestDef {
+func GenReqDefForBatchDeleteAclRules() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/acl-rule").
+		WithResponse(new(model.BatchDeleteAclRulesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchUpdateAclRuleActions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/acl-rule/action").
+		WithResponse(new(model.BatchUpdateAclRuleActionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAclRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/acl-rule/{acl_rule_id}").
-		WithResponse(new(model.DeleteRuleAclUsingDeleteResponse)).
+		WithResponse(new(model.DeleteAclRuleResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1147,17 +1426,40 @@ func GenReqDefForDeleteRuleAclUsingDelete() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListRuleAclUsingPut() *def.HttpRequestDef {
+func GenReqDefForDeleteAclRuleHitCount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v1/{project_id}/acl-rule/order/{acl_rule_id}").
-		WithResponse(new(model.ListRuleAclUsingPutResponse)).
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/acl-rule/count").
+		WithResponse(new(model.DeleteAclRuleHitCountResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AclRuleId").
-		WithJsonTag("acl_rule_id").
-		WithLocationType(def.Path))
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListAclRuleHitCount() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/acl-rule/count").
+		WithResponse(new(model.ListAclRuleHitCountResponse)).
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
@@ -1176,11 +1478,11 @@ func GenReqDefForListRuleAclUsingPut() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListRuleAclsUsingGet() *def.HttpRequestDef {
+func GenReqDefForListAclRules() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/acl-rules").
-		WithResponse(new(model.ListRuleAclsUsingGetResponse)).
+		WithResponse(new(model.ListAclRulesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1235,16 +1537,60 @@ func GenReqDefForListRuleAclsUsingGet() *def.HttpRequestDef {
 		WithName("FwInstanceId").
 		WithJsonTag("fw_instance_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagsId").
+		WithJsonTag("tags_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Source").
+		WithJsonTag("source").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Destination").
+		WithJsonTag("destination").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Service").
+		WithJsonTag("service").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForUpdateRuleAclUsingPut() *def.HttpRequestDef {
+func GenReqDefForListRuleAclTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/cfw-acl/tags").
+		WithResponse(new(model.ListRuleAclTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAclRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/acl-rule/{acl_rule_id}").
-		WithResponse(new(model.UpdateRuleAclUsingPutResponse)).
+		WithResponse(new(model.UpdateAclRuleResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1269,11 +1615,40 @@ func GenReqDefForUpdateRuleAclUsingPut() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForChangeProtectEip() *def.HttpRequestDef {
+func GenReqDefForUpdateAclRuleOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/acl-rule/order/{acl_rule_id}").
+		WithResponse(new(model.UpdateAclRuleOrderResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AclRuleId").
+		WithJsonTag("acl_rule_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForChangeEipStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/eip/protect").
-		WithResponse(new(model.ChangeProtectEipResponse)).
+		WithResponse(new(model.ChangeEipStatusResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1293,11 +1668,11 @@ func GenReqDefForChangeProtectEip() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCountEips() *def.HttpRequestDef {
+func GenReqDefForListEipCount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/eip-count/{object_id}").
-		WithResponse(new(model.CountEipsResponse)).
+		WithResponse(new(model.ListEipCountResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1318,11 +1693,11 @@ func GenReqDefForCountEips() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListEipResources() *def.HttpRequestDef {
+func GenReqDefForListEips() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/eips/protect").
-		WithResponse(new(model.ListEipResourcesResponse)).
+		WithResponse(new(model.ListEipsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1373,16 +1748,20 @@ func GenReqDefForListEipResources() *def.HttpRequestDef {
 		WithName("EpsId").
 		WithJsonTag("eps_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForChangeIpsSwitchUsingPost() *def.HttpRequestDef {
+func GenReqDefForChangeIpsProtectMode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/ips/switch").
-		WithResponse(new(model.ChangeIpsSwitchUsingPostResponse)).
+		WithPath("/v1/{project_id}/ips/protect").
+		WithResponse(new(model.ChangeIpsProtectModeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1402,11 +1781,35 @@ func GenReqDefForChangeIpsSwitchUsingPost() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListIpsSwitchStatusUsingGet() *def.HttpRequestDef {
+func GenReqDefForChangeIpsSwitchStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/ips/switch").
+		WithResponse(new(model.ChangeIpsSwitchStatusResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListIpsProtectMode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/ips/switch").
-		WithResponse(new(model.ListIpsSwitchStatusUsingGetResponse)).
+		WithPath("/v1/{project_id}/ips/protect").
+		WithResponse(new(model.ListIpsProtectModeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1426,11 +1829,11 @@ func GenReqDefForListIpsSwitchStatusUsingGet() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListVpcProtects() *def.HttpRequestDef {
+func GenReqDefForListIpsSwitchStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/vpcs/protection").
-		WithResponse(new(model.ListVpcProtectsResponse)).
+		WithPath("/v1/{project_id}/ips/switch").
+		WithResponse(new(model.ListIpsSwitchStatusResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

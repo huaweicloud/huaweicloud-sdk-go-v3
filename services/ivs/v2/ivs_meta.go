@@ -23,6 +23,12 @@ func GenReqDefForDetectExtentionByIdCardImage() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -42,6 +48,12 @@ func GenReqDefForDetectExtentionByNameAndId() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -63,6 +75,12 @@ func GenReqDefForDetectStandardByIdCardImage() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -82,6 +100,12 @@ func GenReqDefForDetectStandardByNameAndId() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -103,6 +127,12 @@ func GenReqDefForDetectStandardByVideoAndIdCardImage() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -122,6 +152,12 @@ func GenReqDefForDetectStandardByVideoAndNameAndId() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

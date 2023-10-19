@@ -20,6 +20,12 @@ type ListGaussMySqlDatabaseRequest struct {
 
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 数据库名称。
+	Name *string `json:"name,omitempty"`
+
+	// 数据库使用的字符集，如utf8mb4、gbk等。
+	Charset *string `json:"charset,omitempty"`
 }
 
 func (o ListGaussMySqlDatabaseRequest) String() string {

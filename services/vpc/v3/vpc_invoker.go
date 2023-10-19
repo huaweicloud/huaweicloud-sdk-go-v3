@@ -17,6 +17,18 @@ func (i *AddSourcesToTrafficMirrorSessionInvoker) Invoke() (*model.AddSourcesToT
 	}
 }
 
+type BatchCreateSecurityGroupRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSecurityGroupRulesInvoker) Invoke() (*model.BatchCreateSecurityGroupRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSecurityGroupRulesResponse), nil
+	}
+}
+
 type BatchCreateSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }

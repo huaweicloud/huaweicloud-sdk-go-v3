@@ -27,6 +27,26 @@ func GenReqDefForAddSourcesToTrafficMirrorSession() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateSecurityGroupRules() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/vpc/security-groups/{security_group_id}/security-group-rules/batch-create").
+		WithResponse(new(model.BatchCreateSecurityGroupRulesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroupId").
+		WithJsonTag("security_group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchCreateSubNetworkInterface() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

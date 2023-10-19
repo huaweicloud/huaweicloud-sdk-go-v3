@@ -58,6 +58,8 @@ type RuleAclListResponseDtoDataRecords struct {
 
 	// 规则type，0：互联网规则，1：vpc规则，2nat规则
 	Type *RuleAclListResponseDtoDataRecordsType `json:"type,omitempty"`
+
+	Tag *TagsVo `json:"tag,omitempty"`
 }
 
 func (o RuleAclListResponseDtoDataRecords) String() string {

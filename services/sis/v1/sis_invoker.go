@@ -77,30 +77,6 @@ func (i *RecognizeShortAudioInvoker) Invoke() (*model.RecognizeShortAudioRespons
 	}
 }
 
-type RunAudioAssessmentInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunAudioAssessmentInvoker) Invoke() (*model.RunAudioAssessmentResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunAudioAssessmentResponse), nil
-	}
-}
-
-type RunMultiModalAssessmentInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunMultiModalAssessmentInvoker) Invoke() (*model.RunMultiModalAssessmentResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunMultiModalAssessmentResponse), nil
-	}
-}
-
 type RunTtsInvoker struct {
 	*invoker.BaseInvoker
 }

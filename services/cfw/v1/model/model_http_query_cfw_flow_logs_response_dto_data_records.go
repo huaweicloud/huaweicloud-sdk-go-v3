@@ -46,6 +46,9 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 
 	// 协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
 	Protocol *string `json:"protocol,omitempty"`
+
+	// 目标主机
+	DstHost *string `json:"dst_host,omitempty"`
 }
 
 func (o HttpQueryCfwFlowLogsResponseDtoDataRecords) String() string {

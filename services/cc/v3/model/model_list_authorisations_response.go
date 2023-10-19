@@ -9,14 +9,14 @@ import (
 // ListAuthorisationsResponse Response Object
 type ListAuthorisationsResponse struct {
 
-	// 授权的详细信息。
-	Authorisations *[]Authorisation `json:"authorisations,omitempty"`
+	// 资源ID标识符。
+	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 授权实例列表。
+	Authorisations []Authorisation `json:"authorisations"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListAuthorisationsResponse) String() string {

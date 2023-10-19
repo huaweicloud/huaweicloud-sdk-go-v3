@@ -137,36 +137,6 @@ func GenReqDefForRecognizeShortAudio() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForRunAudioAssessment() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/assessment/audio").
-		WithResponse(new(model.RunAudioAssessmentResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForRunMultiModalAssessment() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/assessment/video").
-		WithResponse(new(model.RunMultiModalAssessmentResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForRunTts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

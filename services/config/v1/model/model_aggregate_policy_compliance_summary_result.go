@@ -15,7 +15,7 @@ type AggregatePolicyComplianceSummaryResult struct {
 	// 分组名称
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 账号名称
+	// 帐号名称
 	GroupAccountName *string `json:"group_account_name,omitempty"`
 }
 

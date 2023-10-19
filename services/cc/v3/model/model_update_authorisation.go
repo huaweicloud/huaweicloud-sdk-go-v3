@@ -9,10 +9,10 @@ import (
 // UpdateAuthorisation 更新授权的详细信息。
 type UpdateAuthorisation struct {
 
-	// 授权的名称。
+	// 实例名字。
 	Name *string `json:"name,omitempty"`
 
-	// 授权的描述信息。
+	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 }
 

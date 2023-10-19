@@ -10,8 +10,10 @@ import (
 type DetectExtentionByNameAndIdResponse struct {
 	Meta *Meta `json:"meta,omitempty"`
 
-	Result         *IvsExtentionByNameAndIdResponseBodyResult `json:"result,omitempty"`
-	HttpStatusCode int                                        `json:"-"`
+	Result *IvsExtentionByNameAndIdResponseBodyResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DetectExtentionByNameAndIdResponse) String() string {

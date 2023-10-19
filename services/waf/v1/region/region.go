@@ -42,6 +42,8 @@ var (
 		"https://waf.la-north-2.myhuaweicloud.com")
 	NA_MEXICO_1 = region.NewRegion("na-mexico-1",
 		"https://waf.na-mexico-1.myhuaweicloud.com")
+	AE_AD_1 = region.NewRegion("ae-ad-1",
+		"https://waf.ae-ad-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -63,6 +65,7 @@ var staticFields = map[string]*region.Region{
 	"sa-brazil-1":    SA_BRAZIL_1,
 	"la-north-2":     LA_NORTH_2,
 	"na-mexico-1":    NA_MEXICO_1,
+	"ae-ad-1":        AE_AD_1,
 }
 
 var provider = region.DefaultProviderChain("WAF")

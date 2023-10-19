@@ -10,8 +10,10 @@ import (
 type DetectStandardByVideoAndNameAndIdResponse struct {
 	Meta *Meta `json:"meta,omitempty"`
 
-	Result         *IvsStandardByVideoAndNameAndIdResponseBodyResult `json:"result,omitempty"`
-	HttpStatusCode int                                               `json:"-"`
+	Result *IvsStandardByVideoAndNameAndIdResponseBodyResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DetectStandardByVideoAndNameAndIdResponse) String() string {

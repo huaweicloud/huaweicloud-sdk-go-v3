@@ -82,6 +82,93 @@ func (c *LakeFormationClient) BatchCancelAuthorizationInterfaceInvoker(request *
 	return &BatchCancelAuthorizationInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCheckPermission 批量鉴权
+//
+// 批量鉴权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) BatchCheckPermission(request *model.BatchCheckPermissionRequest) (*model.BatchCheckPermissionResponse, error) {
+	requestDef := GenReqDefForBatchCheckPermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCheckPermissionResponse), nil
+	}
+}
+
+// BatchCheckPermissionInvoker 批量鉴权
+func (c *LakeFormationClient) BatchCheckPermissionInvoker(request *model.BatchCheckPermissionRequest) *BatchCheckPermissionInvoker {
+	requestDef := GenReqDefForBatchCheckPermission()
+	return &BatchCheckPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAccessClient 创建服务接入客户端
+//
+// 创建服务接入客户端。
+// 其他限制：
+//
+//	同一个实例下默认最多创建20个接入客户端。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) CreateAccessClient(request *model.CreateAccessClientRequest) (*model.CreateAccessClientResponse, error) {
+	requestDef := GenReqDefForCreateAccessClient()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccessClientResponse), nil
+	}
+}
+
+// CreateAccessClientInvoker 创建服务接入客户端
+func (c *LakeFormationClient) CreateAccessClientInvoker(request *model.CreateAccessClientRequest) *CreateAccessClientInvoker {
+	requestDef := GenReqDefForCreateAccessClient()
+	return &CreateAccessClientInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAccessClient 删除服务接入客户端
+//
+// 根据ID删除服务接入客户端
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) DeleteAccessClient(request *model.DeleteAccessClientRequest) (*model.DeleteAccessClientResponse, error) {
+	requestDef := GenReqDefForDeleteAccessClient()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAccessClientResponse), nil
+	}
+}
+
+// DeleteAccessClientInvoker 删除服务接入客户端
+func (c *LakeFormationClient) DeleteAccessClientInvoker(request *model.DeleteAccessClientRequest) *DeleteAccessClientInvoker {
+	requestDef := GenReqDefForDeleteAccessClient()
+	return &DeleteAccessClientInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccessClientInfos 获取服务接入客户端信息列表
+//
+// 根据LakeFormation实例获取服务实例相关的接入客户端信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListAccessClientInfos(request *model.ListAccessClientInfosRequest) (*model.ListAccessClientInfosResponse, error) {
+	requestDef := GenReqDefForListAccessClientInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessClientInfosResponse), nil
+	}
+}
+
+// ListAccessClientInfosInvoker 获取服务接入客户端信息列表
+func (c *LakeFormationClient) ListAccessClientInfosInvoker(request *model.ListAccessClientInfosRequest) *ListAccessClientInfosInvoker {
+	requestDef := GenReqDefForListAccessClientInfos()
+	return &ListAccessClientInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAccessInfos 获取服务接入信息
 //
 // 根据LakeFormation实例获取服务实例相关的接入信息。
@@ -145,6 +232,27 @@ func (c *LakeFormationClient) ListPolicyInvoker(request *model.ListPolicyRequest
 	return &ListPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAccessClient 获取服务接入客户端详情
+//
+// 根据ID获取服务接入客户端详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ShowAccessClient(request *model.ShowAccessClientRequest) (*model.ShowAccessClientResponse, error) {
+	requestDef := GenReqDefForShowAccessClient()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAccessClientResponse), nil
+	}
+}
+
+// ShowAccessClientInvoker 获取服务接入客户端详情
+func (c *LakeFormationClient) ShowAccessClientInvoker(request *model.ShowAccessClientRequest) *ShowAccessClientInvoker {
+	requestDef := GenReqDefForShowAccessClient()
+	return &ShowAccessClientInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSyncPolicy 获取同步权限策略
 //
 // 获取同步权限策略
@@ -166,9 +274,93 @@ func (c *LakeFormationClient) ShowSyncPolicyInvoker(request *model.ShowSyncPolic
 	return &ShowSyncPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAccessClient 更新服务接入客户端
+//
+// 根据ID更新服务接入客户端
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) UpdateAccessClient(request *model.UpdateAccessClientRequest) (*model.UpdateAccessClientResponse, error) {
+	requestDef := GenReqDefForUpdateAccessClient()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAccessClientResponse), nil
+	}
+}
+
+// UpdateAccessClientInvoker 更新服务接入客户端
+func (c *LakeFormationClient) UpdateAccessClientInvoker(request *model.UpdateAccessClientRequest) *UpdateAccessClientInvoker {
+	requestDef := GenReqDefForUpdateAccessClient()
+	return &UpdateAccessClientInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAgency 创建委托
+//
+// 创建委托
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
+	requestDef := GenReqDefForCreateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyResponse), nil
+	}
+}
+
+// CreateAgencyInvoker 创建委托
+func (c *LakeFormationClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *CreateAgencyInvoker {
+	requestDef := GenReqDefForCreateAgency()
+	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAgency 删除委托
+//
+// 删除委托
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) DeleteAgency(request *model.DeleteAgencyRequest) (*model.DeleteAgencyResponse, error) {
+	requestDef := GenReqDefForDeleteAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAgencyResponse), nil
+	}
+}
+
+// DeleteAgencyInvoker 删除委托
+func (c *LakeFormationClient) DeleteAgencyInvoker(request *model.DeleteAgencyRequest) *DeleteAgencyInvoker {
+	requestDef := GenReqDefForDeleteAgency()
+	return &DeleteAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgency 委托查询
+//
+// 委托查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
+	requestDef := GenReqDefForShowAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyResponse), nil
+	}
+}
+
+// ShowAgencyInvoker 委托查询
+func (c *LakeFormationClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *ShowAgencyInvoker {
+	requestDef := GenReqDefForShowAgency()
+	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCatalog 创建catalog
 //
-// 创建catalog，会在catalog下创建默认数据库，默认数据库名字为：default
+// 创建catalog，会在catalog下创建默认数据库，默认数据库名称为：default
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) CreateCatalog(request *model.CreateCatalogRequest) (*model.CreateCatalogResponse, error) {
@@ -270,6 +462,48 @@ func (c *LakeFormationClient) UpdateCatalog(request *model.UpdateCatalogRequest)
 func (c *LakeFormationClient) UpdateCatalogInvoker(request *model.UpdateCatalogRequest) *UpdateCatalogInvoker {
 	requestDef := GenReqDefForUpdateCatalog()
 	return &UpdateCatalogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConfigs 获取所有用户可见的租户面配置
+//
+// 获取所有用户可见的租户面配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListConfigs(request *model.ListConfigsRequest) (*model.ListConfigsResponse, error) {
+	requestDef := GenReqDefForListConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigsResponse), nil
+	}
+}
+
+// ListConfigsInvoker 获取所有用户可见的租户面配置
+func (c *LakeFormationClient) ListConfigsInvoker(request *model.ListConfigsRequest) *ListConfigsInvoker {
+	requestDef := GenReqDefForListConfigs()
+	return &ListConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCredential 获取临时密钥和securityToken
+//
+// 获取临时密钥和securityToken，失效时间大于等于1小时，请在1小时内更新
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ShowCredential(request *model.ShowCredentialRequest) (*model.ShowCredentialResponse, error) {
+	requestDef := GenReqDefForShowCredential()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCredentialResponse), nil
+	}
+}
+
+// ShowCredentialInvoker 获取临时密钥和securityToken
+func (c *LakeFormationClient) ShowCredentialInvoker(request *model.ShowCredentialRequest) *ShowCredentialInvoker {
+	requestDef := GenReqDefForShowCredential()
+	return &ShowCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDatabase 创建数据库
@@ -464,6 +698,27 @@ func (c *LakeFormationClient) ListAllFunctionsInvoker(request *model.ListAllFunc
 	return &ListAllFunctionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFunctionNames 列举库下所有函数名称
+//
+// 查询数据库下的所有函数名称列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListFunctionNames(request *model.ListFunctionNamesRequest) (*model.ListFunctionNamesResponse, error) {
+	requestDef := GenReqDefForListFunctionNames()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionNamesResponse), nil
+	}
+}
+
+// ListFunctionNamesInvoker 列举库下所有函数名称
+func (c *LakeFormationClient) ListFunctionNamesInvoker(request *model.ListFunctionNamesRequest) *ListFunctionNamesInvoker {
+	requestDef := GenReqDefForListFunctionNames()
+	return &ListFunctionNamesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFunctions 列举函数
 //
 // 列举函数
@@ -527,6 +782,27 @@ func (c *LakeFormationClient) UpdateFunctionInvoker(request *model.UpdateFunctio
 	return &UpdateFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AuthorizeAccessService 接入服务授权
+//
+// 接入服务授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) AuthorizeAccessService(request *model.AuthorizeAccessServiceRequest) (*model.AuthorizeAccessServiceResponse, error) {
+	requestDef := GenReqDefForAuthorizeAccessService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AuthorizeAccessServiceResponse), nil
+	}
+}
+
+// AuthorizeAccessServiceInvoker 接入服务授权
+func (c *LakeFormationClient) AuthorizeAccessServiceInvoker(request *model.AuthorizeAccessServiceRequest) *AuthorizeAccessServiceInvoker {
+	requestDef := GenReqDefForAuthorizeAccessService()
+	return &AuthorizeAccessServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAgreement 注册租户协议
 //
 // 用户授权并委托
@@ -546,6 +822,48 @@ func (c *LakeFormationClient) CreateAgreement(request *model.CreateAgreementRequ
 func (c *LakeFormationClient) CreateAgreementInvoker(request *model.CreateAgreementRequest) *CreateAgreementInvoker {
 	requestDef := GenReqDefForCreateAgreement()
 	return &CreateAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAgreement 删除租户协议
+//
+// 用户取消授权，同时有权限用户删除委托
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) DeleteAgreement(request *model.DeleteAgreementRequest) (*model.DeleteAgreementResponse, error) {
+	requestDef := GenReqDefForDeleteAgreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAgreementResponse), nil
+	}
+}
+
+// DeleteAgreementInvoker 删除租户协议
+func (c *LakeFormationClient) DeleteAgreementInvoker(request *model.DeleteAgreementRequest) *DeleteAgreementInvoker {
+	requestDef := GenReqDefForDeleteAgreement()
+	return &DeleteAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAccessService 查询租户当前的接入服务授权
+//
+// 查询租户当前的接入服务授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ShowAccessService(request *model.ShowAccessServiceRequest) (*model.ShowAccessServiceResponse, error) {
+	requestDef := GenReqDefForShowAccessService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAccessServiceResponse), nil
+	}
+}
+
+// ShowAccessServiceInvoker 查询租户当前的接入服务授权
+func (c *LakeFormationClient) ShowAccessServiceInvoker(request *model.ShowAccessServiceRequest) *ShowAccessServiceInvoker {
+	requestDef := GenReqDefForShowAccessService()
+	return &ShowAccessServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAgreement 查询租户是否注册协议
@@ -737,6 +1055,48 @@ func (c *LakeFormationClient) UpdateLakeFormationInstanceInvoker(request *model.
 	return &UpdateLakeFormationInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateLakeFormationInstanceDefault 设为默认实例
+//
+// 设为默认实例，只有非默认实例可以设置为默认实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) UpdateLakeFormationInstanceDefault(request *model.UpdateLakeFormationInstanceDefaultRequest) (*model.UpdateLakeFormationInstanceDefaultResponse, error) {
+	requestDef := GenReqDefForUpdateLakeFormationInstanceDefault()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLakeFormationInstanceDefaultResponse), nil
+	}
+}
+
+// UpdateLakeFormationInstanceDefaultInvoker 设为默认实例
+func (c *LakeFormationClient) UpdateLakeFormationInstanceDefaultInvoker(request *model.UpdateLakeFormationInstanceDefaultRequest) *UpdateLakeFormationInstanceDefaultInvoker {
+	requestDef := GenReqDefForUpdateLakeFormationInstanceDefault()
+	return &UpdateLakeFormationInstanceDefaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLakeFormationInstanceScale 变更实例规格
+//
+// 变更LakeFormation实例规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) UpdateLakeFormationInstanceScale(request *model.UpdateLakeFormationInstanceScaleRequest) (*model.UpdateLakeFormationInstanceScaleResponse, error) {
+	requestDef := GenReqDefForUpdateLakeFormationInstanceScale()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLakeFormationInstanceScaleResponse), nil
+	}
+}
+
+// UpdateLakeFormationInstanceScaleInvoker 变更实例规格
+func (c *LakeFormationClient) UpdateLakeFormationInstanceScaleInvoker(request *model.UpdateLakeFormationInstanceScaleRequest) *UpdateLakeFormationInstanceScaleInvoker {
+	requestDef := GenReqDefForUpdateLakeFormationInstanceScale()
+	return &UpdateLakeFormationInstanceScaleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListObsBuckets 查询OBS桶列表
 //
 // 查询OBS桶列表
@@ -909,6 +1269,28 @@ func (c *LakeFormationClient) ListPartitionNamesInvoker(request *model.ListParti
 	return &ListPartitionNamesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPartitionNamesWithoutLimit 列举全量分区值列表
+//
+// 遍历分区名称列表信息,返回全量的数据。
+// 对于事务表，支持基于表的特定版本遍历分区名称列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListPartitionNamesWithoutLimit(request *model.ListPartitionNamesWithoutLimitRequest) (*model.ListPartitionNamesWithoutLimitResponse, error) {
+	requestDef := GenReqDefForListPartitionNamesWithoutLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPartitionNamesWithoutLimitResponse), nil
+	}
+}
+
+// ListPartitionNamesWithoutLimitInvoker 列举全量分区值列表
+func (c *LakeFormationClient) ListPartitionNamesWithoutLimitInvoker(request *model.ListPartitionNamesWithoutLimitRequest) *ListPartitionNamesWithoutLimitInvoker {
+	requestDef := GenReqDefForListPartitionNamesWithoutLimit()
+	return &ListPartitionNamesWithoutLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPartitions 列举分区信息
 //
 // 遍历指定数据表下的分区列表，对于事务表，支持基于表的特定版本遍历分区列表。
@@ -1017,6 +1399,27 @@ func (c *LakeFormationClient) ListQuotasInvoker(request *model.ListQuotasRequest
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssociatePrincipals 将一个或者多个用户/用户组加入角色
+//
+// 将一个或者多个用户/用户组加入角色
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) AssociatePrincipals(request *model.AssociatePrincipalsRequest) (*model.AssociatePrincipalsResponse, error) {
+	requestDef := GenReqDefForAssociatePrincipals()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociatePrincipalsResponse), nil
+	}
+}
+
+// AssociatePrincipalsInvoker 将一个或者多个用户/用户组加入角色
+func (c *LakeFormationClient) AssociatePrincipalsInvoker(request *model.AssociatePrincipalsRequest) *AssociatePrincipalsInvoker {
+	requestDef := GenReqDefForAssociatePrincipals()
+	return &AssociatePrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRole 创建role
 //
 // 创建role
@@ -1057,6 +1460,27 @@ func (c *LakeFormationClient) DeleteRole(request *model.DeleteRoleRequest) (*mod
 func (c *LakeFormationClient) DeleteRoleInvoker(request *model.DeleteRoleRequest) *DeleteRoleInvoker {
 	requestDef := GenReqDefForDeleteRole()
 	return &DeleteRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrincipals 查询角色下的用户/用户组
+//
+// 查询角色下的用户/用户组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListPrincipals(request *model.ListPrincipalsRequest) (*model.ListPrincipalsResponse, error) {
+	requestDef := GenReqDefForListPrincipals()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPrincipalsResponse), nil
+	}
+}
+
+// ListPrincipalsInvoker 查询角色下的用户/用户组
+func (c *LakeFormationClient) ListPrincipalsInvoker(request *model.ListPrincipalsRequest) *ListPrincipalsInvoker {
+	requestDef := GenReqDefForListPrincipals()
+	return &ListPrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRoleNames 列举所有角色名
@@ -1101,6 +1525,27 @@ func (c *LakeFormationClient) ListRolesInvoker(request *model.ListRolesRequest) 
 	return &ListRolesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RevokePrincipals 将一个或者多个用户/用户组从角色移除
+//
+// 将一个或者多个用户/用户组从角色移除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) RevokePrincipals(request *model.RevokePrincipalsRequest) (*model.RevokePrincipalsResponse, error) {
+	requestDef := GenReqDefForRevokePrincipals()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevokePrincipalsResponse), nil
+	}
+}
+
+// RevokePrincipalsInvoker 将一个或者多个用户/用户组从角色移除
+func (c *LakeFormationClient) RevokePrincipalsInvoker(request *model.RevokePrincipalsRequest) *RevokePrincipalsInvoker {
+	requestDef := GenReqDefForRevokePrincipals()
+	return &RevokePrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRole 获取角色
 //
 // 获取角色
@@ -1120,6 +1565,27 @@ func (c *LakeFormationClient) ShowRole(request *model.ShowRoleRequest) (*model.S
 func (c *LakeFormationClient) ShowRoleInvoker(request *model.ShowRoleRequest) *ShowRoleInvoker {
 	requestDef := GenReqDefForShowRole()
 	return &ShowRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrincipals 更新角色中的principals
+//
+// 更新角色中的principals
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) UpdatePrincipals(request *model.UpdatePrincipalsRequest) (*model.UpdatePrincipalsResponse, error) {
+	requestDef := GenReqDefForUpdatePrincipals()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrincipalsResponse), nil
+	}
+}
+
+// UpdatePrincipalsInvoker 更新角色中的principals
+func (c *LakeFormationClient) UpdatePrincipalsInvoker(request *model.UpdatePrincipalsRequest) *UpdatePrincipalsInvoker {
+	requestDef := GenReqDefForUpdatePrincipals()
+	return &UpdatePrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateRole 修改角色信息
@@ -1521,6 +1987,111 @@ func (c *LakeFormationClient) ListLakeFormationInstanceTags(request *model.ListL
 func (c *LakeFormationClient) ListLakeFormationInstanceTagsInvoker(request *model.ListLakeFormationInstanceTagsRequest) *ListLakeFormationInstanceTagsInvoker {
 	requestDef := GenReqDefForListLakeFormationInstanceTags()
 	return &ListLakeFormationInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateRoles 将多个角色授予User
+//
+// 将多个角色授予User
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) AssociateRoles(request *model.AssociateRolesRequest) (*model.AssociateRolesResponse, error) {
+	requestDef := GenReqDefForAssociateRoles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateRolesResponse), nil
+	}
+}
+
+// AssociateRolesInvoker 将多个角色授予User
+func (c *LakeFormationClient) AssociateRolesInvoker(request *model.AssociateRolesRequest) *AssociateRolesInvoker {
+	requestDef := GenReqDefForAssociateRoles()
+	return &AssociateRolesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserRoles 查询用户的角色列表
+//
+// 查询用户的角色列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListUserRoles(request *model.ListUserRolesRequest) (*model.ListUserRolesResponse, error) {
+	requestDef := GenReqDefForListUserRoles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserRolesResponse), nil
+	}
+}
+
+// ListUserRolesInvoker 查询用户的角色列表
+func (c *LakeFormationClient) ListUserRolesInvoker(request *model.ListUserRolesRequest) *ListUserRolesInvoker {
+	requestDef := GenReqDefForListUserRoles()
+	return &ListUserRolesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUsers 获取用户列表
+//
+// 获取用户列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
+	requestDef := GenReqDefForListUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsersResponse), nil
+	}
+}
+
+// ListUsersInvoker 获取用户列表
+func (c *LakeFormationClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
+	requestDef := GenReqDefForListUsers()
+	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RevokeRoles 将一个或者多个角色从用户移除
+//
+// 将一个或者多个角色从用户移除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) RevokeRoles(request *model.RevokeRolesRequest) (*model.RevokeRolesResponse, error) {
+	requestDef := GenReqDefForRevokeRoles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevokeRolesResponse), nil
+	}
+}
+
+// RevokeRolesInvoker 将一个或者多个角色从用户移除
+func (c *LakeFormationClient) RevokeRolesInvoker(request *model.RevokeRolesRequest) *RevokeRolesInvoker {
+	requestDef := GenReqDefForRevokeRoles()
+	return &RevokeRolesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRoles 更新用户中的角色
+//
+// 更新用户中的角色
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) UpdateRoles(request *model.UpdateRolesRequest) (*model.UpdateRolesResponse, error) {
+	requestDef := GenReqDefForUpdateRoles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRolesResponse), nil
+	}
+}
+
+// UpdateRolesInvoker 更新用户中的角色
+func (c *LakeFormationClient) UpdateRolesInvoker(request *model.UpdateRolesRequest) *UpdateRolesInvoker {
+	requestDef := GenReqDefForUpdateRoles()
+	return &UpdateRolesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListGroupsForDomain 获取租户的用户组

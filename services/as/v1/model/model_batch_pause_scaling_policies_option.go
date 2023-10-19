@@ -21,7 +21,7 @@ type BatchPauseScalingPoliciesOption struct {
 	// 批量操作伸缩策略action标识：删除：delete。启用：resume。停止：pause。
 	Action BatchPauseScalingPoliciesOptionAction `json:"action"`
 
-	// 是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。  只有action为delete时，该字段才生效。
+	// 是否删除告警策略使用的告警规则。可选值为yes或no，默认为no。 只有action为delete时，该字段才生效。
 	DeleteAlarm *string `json:"delete_alarm,omitempty"`
 }
 

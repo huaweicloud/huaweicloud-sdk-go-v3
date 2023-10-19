@@ -3,35 +3,32 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ListAuthorisationsRequest Request Object
 type ListAuthorisationsRequest struct {
 
-	// 分页查询时，每页返回的个数。
+	// 每页返回的个数。 取值范围：1~1000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 分页查询时，上一页最后一条记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
+	// 翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
 	Marker *string `json:"marker,omitempty"`
 
-	// 根据ID过滤授权列表。
+	// 根据id查询，可查询多个id。
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据名称过滤授权列表。
+	// 根据名字查询，可查询多个名字。
 	Name *[]string `json:"name,omitempty"`
 
-	// 根据描述过滤授权列表。
+	// 根据描述查询，可查询多个描述。
 	Description *[]string `json:"description,omitempty"`
 
-	// 根据云连接实例ID过滤授权列表。
+	// 根据云连接的ID过滤列表。
 	CloudConnectionId *[]string `json:"cloud_connection_id,omitempty"`
 
 	// 根据实例ID过滤授权列表。
-	InstanceId *[]ListAuthorisationsRequestInstanceId `json:"instance_id,omitempty"`
+	InstanceId *[]string `json:"instance_id,omitempty"`
 }
 
 func (o ListAuthorisationsRequest) String() string {
@@ -41,47 +38,4 @@ func (o ListAuthorisationsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListAuthorisationsRequest", string(data)}, " ")
-}
-
-type ListAuthorisationsRequestInstanceId struct {
-	value string
-}
-
-type ListAuthorisationsRequestInstanceIdEnum struct {
-	ACTIVE ListAuthorisationsRequestInstanceId
-}
-
-func GetListAuthorisationsRequestInstanceIdEnum() ListAuthorisationsRequestInstanceIdEnum {
-	return ListAuthorisationsRequestInstanceIdEnum{
-		ACTIVE: ListAuthorisationsRequestInstanceId{
-			value: "ACTIVE",
-		},
-	}
-}
-
-func (c ListAuthorisationsRequestInstanceId) Value() string {
-	return c.value
-}
-
-func (c ListAuthorisationsRequestInstanceId) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListAuthorisationsRequestInstanceId) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

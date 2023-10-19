@@ -11,16 +11,16 @@ import (
 // TableInput 表输入模型
 type TableInput struct {
 
-	// 表名字
+	// 表名称。只能包含中文、字母、数字和下划线，且长度为1~256个字符。
 	TableName string `json:"table_name"`
 
-	// 表类型
+	// 表类型,MANAGED_TABLE-内表,EXTERNAL_TABLE-外表,VIRTUAL_VIEW-视图,MATERIALIZED_VIEW-物化视图
 	TableType TableInputTableType `json:"table_type"`
 
-	// 表所有者
+	// 表所有者。只能包含字母、数字和下划线，且长度为1~49个字符。
 	Owner string `json:"owner"`
 
-	// 所有者类型
+	// 所有者类型,USER-用户,GROUP-组,ROLE-角色
 	OwnerType TableInputOwnerType `json:"owner_type"`
 
 	// 表创建时间
@@ -43,7 +43,7 @@ type TableInput struct {
 	// 表参数信息，每个键是一个键字符串，不少于 1 个字节或超过 255 个字节 每个值是一个 UTF-8 字符串，不超过 4000 个字节
 	Parameters map[string]string `json:"parameters,omitempty"`
 
-	// 表描述信息
+	// 表描述信息。由用户创建表时输入，最大长度为4000个字符。
 	Comments *string `json:"comments,omitempty"`
 
 	// 如果表是视图，则为视图的扩展文本；否则为 null
@@ -51,6 +51,9 @@ type TableInput struct {
 
 	// 如果表是视图，则为视图的原始文本；否则为 null
 	ViewOriginalText *string `json:"view_original_text,omitempty"`
+
+	// 是否忽略内表建表时对Obs路径的限制
+	IgnoreObsChecked *bool `json:"ignore_obs_checked,omitempty"`
 }
 
 func (o TableInput) String() string {

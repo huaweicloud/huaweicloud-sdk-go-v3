@@ -41,6 +41,54 @@ func (i *BatchCancelAuthorizationInterfaceInvoker) Invoke() (*model.BatchCancelA
 	}
 }
 
+type BatchCheckPermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCheckPermissionInvoker) Invoke() (*model.BatchCheckPermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCheckPermissionResponse), nil
+	}
+}
+
+type CreateAccessClientInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAccessClientInvoker) Invoke() (*model.CreateAccessClientResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAccessClientResponse), nil
+	}
+}
+
+type DeleteAccessClientInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAccessClientInvoker) Invoke() (*model.DeleteAccessClientResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAccessClientResponse), nil
+	}
+}
+
+type ListAccessClientInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessClientInfosInvoker) Invoke() (*model.ListAccessClientInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessClientInfosResponse), nil
+	}
+}
+
 type ListAccessInfosInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +125,18 @@ func (i *ListPolicyInvoker) Invoke() (*model.ListPolicyResponse, error) {
 	}
 }
 
+type ShowAccessClientInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAccessClientInvoker) Invoke() (*model.ShowAccessClientResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAccessClientResponse), nil
+	}
+}
+
 type ShowSyncPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +146,54 @@ func (i *ShowSyncPolicyInvoker) Invoke() (*model.ShowSyncPolicyResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowSyncPolicyResponse), nil
+	}
+}
+
+type UpdateAccessClientInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAccessClientInvoker) Invoke() (*model.UpdateAccessClientResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAccessClientResponse), nil
+	}
+}
+
+type CreateAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyResponse), nil
+	}
+}
+
+type DeleteAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgencyInvoker) Invoke() (*model.DeleteAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAgencyResponse), nil
+	}
+}
+
+type ShowAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyResponse), nil
 	}
 }
 
@@ -146,6 +254,30 @@ func (i *UpdateCatalogInvoker) Invoke() (*model.UpdateCatalogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateCatalogResponse), nil
+	}
+}
+
+type ListConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigsInvoker) Invoke() (*model.ListConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigsResponse), nil
+	}
+}
+
+type ShowCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCredentialInvoker) Invoke() (*model.ShowCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCredentialResponse), nil
 	}
 }
 
@@ -257,6 +389,18 @@ func (i *ListAllFunctionsInvoker) Invoke() (*model.ListAllFunctionsResponse, err
 	}
 }
 
+type ListFunctionNamesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionNamesInvoker) Invoke() (*model.ListFunctionNamesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionNamesResponse), nil
+	}
+}
+
 type ListFunctionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +437,18 @@ func (i *UpdateFunctionInvoker) Invoke() (*model.UpdateFunctionResponse, error) 
 	}
 }
 
+type AuthorizeAccessServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeAccessServiceInvoker) Invoke() (*model.AuthorizeAccessServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AuthorizeAccessServiceResponse), nil
+	}
+}
+
 type CreateAgreementInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +458,30 @@ func (i *CreateAgreementInvoker) Invoke() (*model.CreateAgreementResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateAgreementResponse), nil
+	}
+}
+
+type DeleteAgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgreementInvoker) Invoke() (*model.DeleteAgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAgreementResponse), nil
+	}
+}
+
+type ShowAccessServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAccessServiceInvoker) Invoke() (*model.ShowAccessServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAccessServiceResponse), nil
 	}
 }
 
@@ -413,6 +593,30 @@ func (i *UpdateLakeFormationInstanceInvoker) Invoke() (*model.UpdateLakeFormatio
 	}
 }
 
+type UpdateLakeFormationInstanceDefaultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLakeFormationInstanceDefaultInvoker) Invoke() (*model.UpdateLakeFormationInstanceDefaultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLakeFormationInstanceDefaultResponse), nil
+	}
+}
+
+type UpdateLakeFormationInstanceScaleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLakeFormationInstanceScaleInvoker) Invoke() (*model.UpdateLakeFormationInstanceScaleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLakeFormationInstanceScaleResponse), nil
+	}
+}
+
 type ListObsBucketsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -509,6 +713,18 @@ func (i *ListPartitionNamesInvoker) Invoke() (*model.ListPartitionNamesResponse,
 	}
 }
 
+type ListPartitionNamesWithoutLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPartitionNamesWithoutLimitInvoker) Invoke() (*model.ListPartitionNamesWithoutLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPartitionNamesWithoutLimitResponse), nil
+	}
+}
+
 type ListPartitionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -569,6 +785,18 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	}
 }
 
+type AssociatePrincipalsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociatePrincipalsInvoker) Invoke() (*model.AssociatePrincipalsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociatePrincipalsResponse), nil
+	}
+}
+
 type CreateRoleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -590,6 +818,18 @@ func (i *DeleteRoleInvoker) Invoke() (*model.DeleteRoleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteRoleResponse), nil
+	}
+}
+
+type ListPrincipalsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPrincipalsInvoker) Invoke() (*model.ListPrincipalsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPrincipalsResponse), nil
 	}
 }
 
@@ -617,6 +857,18 @@ func (i *ListRolesInvoker) Invoke() (*model.ListRolesResponse, error) {
 	}
 }
 
+type RevokePrincipalsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevokePrincipalsInvoker) Invoke() (*model.RevokePrincipalsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevokePrincipalsResponse), nil
+	}
+}
+
 type ShowRoleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +878,18 @@ func (i *ShowRoleInvoker) Invoke() (*model.ShowRoleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowRoleResponse), nil
+	}
+}
+
+type UpdatePrincipalsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrincipalsInvoker) Invoke() (*model.UpdatePrincipalsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrincipalsResponse), nil
 	}
 }
 
@@ -854,6 +1118,66 @@ func (i *ListLakeFormationInstanceTagsInvoker) Invoke() (*model.ListLakeFormatio
 		return nil, err
 	} else {
 		return result.(*model.ListLakeFormationInstanceTagsResponse), nil
+	}
+}
+
+type AssociateRolesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateRolesInvoker) Invoke() (*model.AssociateRolesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateRolesResponse), nil
+	}
+}
+
+type ListUserRolesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserRolesInvoker) Invoke() (*model.ListUserRolesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserRolesResponse), nil
+	}
+}
+
+type ListUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsersResponse), nil
+	}
+}
+
+type RevokeRolesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevokeRolesInvoker) Invoke() (*model.RevokeRolesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevokeRolesResponse), nil
+	}
+}
+
+type UpdateRolesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRolesInvoker) Invoke() (*model.UpdateRolesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRolesResponse), nil
 	}
 }
 

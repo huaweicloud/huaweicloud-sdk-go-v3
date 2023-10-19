@@ -12,7 +12,7 @@ type AddServiceItemsUsingPostRequestBodyServiceItems struct {
 	// 服务成员id
 	ItemId *string `json:"item_id,omitempty"`
 
-	// 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+	// 协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
 	Protocol int32 `json:"protocol"`
 
 	// 源端口

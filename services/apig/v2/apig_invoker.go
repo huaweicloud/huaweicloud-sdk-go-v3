@@ -65,6 +65,18 @@ func (i *AddIngressEipV2Invoker) Invoke() (*model.AddIngressEipV2Response, error
 	}
 }
 
+type AssociateAppsForAppQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateAppsForAppQuotaInvoker) Invoke() (*model.AssociateAppsForAppQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateAppsForAppQuotaResponse), nil
+	}
+}
+
 type AssociateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,66 @@ func (i *BatchCreateOrDeleteInstanceTagsInvoker) Invoke() (*model.BatchCreateOrD
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateOrDeleteInstanceTagsResponse), nil
+	}
+}
+
+type CheckAppV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckAppV2Invoker) Invoke() (*model.CheckAppV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckAppV2Response), nil
+	}
+}
+
+type CreateAnAppV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAnAppV2Invoker) Invoke() (*model.CreateAnAppV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAnAppV2Response), nil
+	}
+}
+
+type CreateAppCodeAutoV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAppCodeAutoV2Invoker) Invoke() (*model.CreateAppCodeAutoV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAppCodeAutoV2Response), nil
+	}
+}
+
+type CreateAppCodeV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAppCodeV2Invoker) Invoke() (*model.CreateAppCodeV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAppCodeV2Response), nil
+	}
+}
+
+type CreateAppQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAppQuotaInvoker) Invoke() (*model.CreateAppQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAppQuotaResponse), nil
 	}
 }
 
@@ -209,6 +281,18 @@ func (i *CreateInstanceV2Invoker) Invoke() (*model.CreateInstanceV2Response, err
 	}
 }
 
+type CreateOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrderInvoker) Invoke() (*model.CreateOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrderResponse), nil
+	}
+}
+
 type CreatePluginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +302,30 @@ func (i *CreatePluginInvoker) Invoke() (*model.CreatePluginResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreatePluginResponse), nil
+	}
+}
+
+type CreatePostPayResizeOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePostPayResizeOrderInvoker) Invoke() (*model.CreatePostPayResizeOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePostPayResizeOrderResponse), nil
+	}
+}
+
+type CreatePrepayResizeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrepayResizeInvoker) Invoke() (*model.CreatePrepayResizeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrepayResizeResponse), nil
 	}
 }
 
@@ -254,6 +362,54 @@ func (i *CreateSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.CreateS
 		return nil, err
 	} else {
 		return result.(*model.CreateSpecialThrottlingConfigurationV2Response), nil
+	}
+}
+
+type DeleteAppAclInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppAclInvoker) Invoke() (*model.DeleteAppAclResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppAclResponse), nil
+	}
+}
+
+type DeleteAppCodeV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppCodeV2Invoker) Invoke() (*model.DeleteAppCodeV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppCodeV2Response), nil
+	}
+}
+
+type DeleteAppQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppQuotaInvoker) Invoke() (*model.DeleteAppQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppQuotaResponse), nil
+	}
+}
+
+type DeleteAppV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppV2Invoker) Invoke() (*model.DeleteAppV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppV2Response), nil
 	}
 }
 
@@ -413,6 +569,18 @@ func (i *DetachPluginFromApiInvoker) Invoke() (*model.DetachPluginFromApiRespons
 	}
 }
 
+type DisassociateAppQuotaWithAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateAppQuotaWithAppInvoker) Invoke() (*model.DisassociateAppQuotaWithAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateAppQuotaWithAppResponse), nil
+	}
+}
+
 type DisassociateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -533,6 +701,18 @@ func (i *ListApisNotBoundWithSignatureKeyV2Invoker) Invoke() (*model.ListApisNot
 	}
 }
 
+type ListAppCodesV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppCodesV2Invoker) Invoke() (*model.ListAppCodesV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppCodesV2Response), nil
+	}
+}
+
 type ListAppQuantitiesV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -542,6 +722,54 @@ func (i *ListAppQuantitiesV2Invoker) Invoke() (*model.ListAppQuantitiesV2Respons
 		return nil, err
 	} else {
 		return result.(*model.ListAppQuantitiesV2Response), nil
+	}
+}
+
+type ListAppQuotaBindableAppsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppQuotaBindableAppsInvoker) Invoke() (*model.ListAppQuotaBindableAppsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppQuotaBindableAppsResponse), nil
+	}
+}
+
+type ListAppQuotaBoundAppsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppQuotaBoundAppsInvoker) Invoke() (*model.ListAppQuotaBoundAppsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppQuotaBoundAppsResponse), nil
+	}
+}
+
+type ListAppQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppQuotasInvoker) Invoke() (*model.ListAppQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppQuotasResponse), nil
+	}
+}
+
+type ListAppsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppsV2Invoker) Invoke() (*model.ListAppsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppsV2Response), nil
 	}
 }
 
@@ -869,6 +1097,78 @@ func (i *RemoveIngressEipV2Invoker) Invoke() (*model.RemoveIngressEipV2Response,
 	}
 }
 
+type ResettingAppSecretV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResettingAppSecretV2Invoker) Invoke() (*model.ResettingAppSecretV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResettingAppSecretV2Response), nil
+	}
+}
+
+type ShowAppBoundAppQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppBoundAppQuotaInvoker) Invoke() (*model.ShowAppBoundAppQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppBoundAppQuotaResponse), nil
+	}
+}
+
+type ShowAppQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppQuotaInvoker) Invoke() (*model.ShowAppQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppQuotaResponse), nil
+	}
+}
+
+type ShowDetailsOfAppAclInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfAppAclInvoker) Invoke() (*model.ShowDetailsOfAppAclResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfAppAclResponse), nil
+	}
+}
+
+type ShowDetailsOfAppCodeV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfAppCodeV2Invoker) Invoke() (*model.ShowDetailsOfAppCodeV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfAppCodeV2Response), nil
+	}
+}
+
+type ShowDetailsOfAppV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfAppV2Invoker) Invoke() (*model.ShowDetailsOfAppV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfAppV2Response), nil
+	}
+}
+
 type ShowDetailsOfCustomAuthorizersV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -977,6 +1277,54 @@ func (i *ShowPluginInvoker) Invoke() (*model.ShowPluginResponse, error) {
 	}
 }
 
+type ShowRestrictionOfInstanceV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRestrictionOfInstanceV2Invoker) Invoke() (*model.ShowRestrictionOfInstanceV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRestrictionOfInstanceV2Response), nil
+	}
+}
+
+type UpdateAppAclInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppAclInvoker) Invoke() (*model.UpdateAppAclResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppAclResponse), nil
+	}
+}
+
+type UpdateAppQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppQuotaInvoker) Invoke() (*model.UpdateAppQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppQuotaResponse), nil
+	}
+}
+
+type UpdateAppV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppV2Invoker) Invoke() (*model.UpdateAppV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppV2Response), nil
+	}
+}
+
 type UpdateCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1022,6 +1370,18 @@ func (i *UpdateEnvironmentV2Invoker) Invoke() (*model.UpdateEnvironmentV2Respons
 		return nil, err
 	} else {
 		return result.(*model.UpdateEnvironmentV2Response), nil
+	}
+}
+
+type UpdateEnvironmentVariableV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnvironmentVariableV2Invoker) Invoke() (*model.UpdateEnvironmentVariableV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEnvironmentVariableV2Response), nil
 	}
 }
 
@@ -1238,6 +1598,18 @@ func (i *ChangeApiVersionV2Invoker) Invoke() (*model.ChangeApiVersionV2Response,
 		return nil, err
 	} else {
 		return result.(*model.ChangeApiVersionV2Response), nil
+	}
+}
+
+type CheckApisV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckApisV2Invoker) Invoke() (*model.CheckApisV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckApisV2Response), nil
 	}
 }
 
@@ -1565,54 +1937,6 @@ func (i *CancelingAuthorizationV2Invoker) Invoke() (*model.CancelingAuthorizatio
 	}
 }
 
-type CheckAppV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CheckAppV2Invoker) Invoke() (*model.CheckAppV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckAppV2Response), nil
-	}
-}
-
-type CreateAnAppV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAnAppV2Invoker) Invoke() (*model.CreateAnAppV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAnAppV2Response), nil
-	}
-}
-
-type CreateAppCodeAutoV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAppCodeAutoV2Invoker) Invoke() (*model.CreateAppCodeAutoV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAppCodeAutoV2Response), nil
-	}
-}
-
-type CreateAppCodeV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAppCodeV2Invoker) Invoke() (*model.CreateAppCodeV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAppCodeV2Response), nil
-	}
-}
-
 type CreateAuthorizingAppsV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1622,30 +1946,6 @@ func (i *CreateAuthorizingAppsV2Invoker) Invoke() (*model.CreateAuthorizingAppsV
 		return nil, err
 	} else {
 		return result.(*model.CreateAuthorizingAppsV2Response), nil
-	}
-}
-
-type DeleteAppCodeV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAppCodeV2Invoker) Invoke() (*model.DeleteAppCodeV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAppCodeV2Response), nil
-	}
-}
-
-type DeleteAppV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAppV2Invoker) Invoke() (*model.DeleteAppV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAppV2Response), nil
 	}
 }
 
@@ -1673,18 +1973,6 @@ func (i *ListApisUnbindedToAppV2Invoker) Invoke() (*model.ListApisUnbindedToAppV
 	}
 }
 
-type ListAppCodesV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAppCodesV2Invoker) Invoke() (*model.ListAppCodesV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAppCodesV2Response), nil
-	}
-}
-
 type ListAppsBindedToApiV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1694,66 +1982,6 @@ func (i *ListAppsBindedToApiV2Invoker) Invoke() (*model.ListAppsBindedToApiV2Res
 		return nil, err
 	} else {
 		return result.(*model.ListAppsBindedToApiV2Response), nil
-	}
-}
-
-type ListAppsV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAppsV2Invoker) Invoke() (*model.ListAppsV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAppsV2Response), nil
-	}
-}
-
-type ResettingAppSecretV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ResettingAppSecretV2Invoker) Invoke() (*model.ResettingAppSecretV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ResettingAppSecretV2Response), nil
-	}
-}
-
-type ShowDetailsOfAppCodeV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDetailsOfAppCodeV2Invoker) Invoke() (*model.ShowDetailsOfAppCodeV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDetailsOfAppCodeV2Response), nil
-	}
-}
-
-type ShowDetailsOfAppV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDetailsOfAppV2Invoker) Invoke() (*model.ShowDetailsOfAppV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDetailsOfAppV2Response), nil
-	}
-}
-
-type UpdateAppV2Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAppV2Invoker) Invoke() (*model.UpdateAppV2Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAppV2Response), nil
 	}
 }
 

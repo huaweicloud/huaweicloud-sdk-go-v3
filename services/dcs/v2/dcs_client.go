@@ -148,6 +148,29 @@ func (c *DcsClient) CopyInstanceInvoker(request *model.CopyInstanceRequest) *Cop
 	return &CopyInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAclAccount 创建ACL账号
+//
+// \&quot;为redis4.0/5.0实例（Cluster集群实例除外）创建权限访问账号，包含读写和只读权限。
+// 如果实例默认账号已开启免密访问，您创建的普通账号不能使用，如需使用普通账号请先关闭默认账号的免密访问。
+// 单机、主备实例默认账号的密码不能带有冒号(:)，否则无法创建普通账号。\&quot;
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) CreateAclAccount(request *model.CreateAclAccountRequest) (*model.CreateAclAccountResponse, error) {
+	requestDef := GenReqDefForCreateAclAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAclAccountResponse), nil
+	}
+}
+
+// CreateAclAccountInvoker 创建ACL账号
+func (c *DcsClient) CreateAclAccountInvoker(request *model.CreateAclAccountRequest) *CreateAclAccountInvoker {
+	requestDef := GenReqDefForCreateAclAccount()
+	return &CreateAclAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAutoExpireScanTask 创建过期key扫描任务
 //
 // 创建过期key扫描任务（Redis 3.0 不支持过期key扫描）。
@@ -190,6 +213,27 @@ func (c *DcsClient) CreateBigkeyScanTask(request *model.CreateBigkeyScanTaskRequ
 func (c *DcsClient) CreateBigkeyScanTaskInvoker(request *model.CreateBigkeyScanTaskRequest) *CreateBigkeyScanTaskInvoker {
 	requestDef := GenReqDefForCreateBigkeyScanTask()
 	return &CreateBigkeyScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnectivityTest 创建备份导入页面实例连接测试
+//
+// 创建备份导入页面实例连接测试
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) CreateConnectivityTest(request *model.CreateConnectivityTestRequest) (*model.CreateConnectivityTestResponse, error) {
+	requestDef := GenReqDefForCreateConnectivityTest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConnectivityTestResponse), nil
+	}
+}
+
+// CreateConnectivityTestInvoker 创建备份导入页面实例连接测试
+func (c *DcsClient) CreateConnectivityTestInvoker(request *model.CreateConnectivityTestRequest) *CreateConnectivityTestInvoker {
+	requestDef := GenReqDefForCreateConnectivityTest()
+	return &CreateConnectivityTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateCustomTemplate 创建自定义模板
@@ -362,6 +406,27 @@ func (c *DcsClient) CreateRedislogDownloadLinkInvoker(request *model.CreateRedis
 	return &CreateRedislogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAclAccount 删除ACL账号
+//
+// 删除所创建的ACL普通账号
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeleteAclAccount(request *model.DeleteAclAccountRequest) (*model.DeleteAclAccountResponse, error) {
+	requestDef := GenReqDefForDeleteAclAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAclAccountResponse), nil
+	}
+}
+
+// DeleteAclAccountInvoker 删除ACL账号
+func (c *DcsClient) DeleteAclAccountInvoker(request *model.DeleteAclAccountRequest) *DeleteAclAccountInvoker {
+	requestDef := GenReqDefForDeleteAclAccount()
+	return &DeleteAclAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteBackgroundTask 删除后台任务
 //
 // 删除后台任务
@@ -423,6 +488,27 @@ func (c *DcsClient) DeleteBigkeyScanTask(request *model.DeleteBigkeyScanTaskRequ
 func (c *DcsClient) DeleteBigkeyScanTaskInvoker(request *model.DeleteBigkeyScanTaskRequest) *DeleteBigkeyScanTaskInvoker {
 	requestDef := GenReqDefForDeleteBigkeyScanTask()
 	return &DeleteBigkeyScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConfigTemplate 删除自定义模板
+//
+// 删除自定义模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeleteConfigTemplate(request *model.DeleteConfigTemplateRequest) (*model.DeleteConfigTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteConfigTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConfigTemplateResponse), nil
+	}
+}
+
+// DeleteConfigTemplateInvoker 删除自定义模板
+func (c *DcsClient) DeleteConfigTemplateInvoker(request *model.DeleteConfigTemplateRequest) *DeleteConfigTemplateInvoker {
+	requestDef := GenReqDefForDeleteConfigTemplate()
+	return &DeleteConfigTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteHotkeyScanTask 删除热key分析任务
@@ -530,6 +616,27 @@ func (c *DcsClient) ExecuteClusterSwitchover(request *model.ExecuteClusterSwitch
 func (c *DcsClient) ExecuteClusterSwitchoverInvoker(request *model.ExecuteClusterSwitchoverRequest) *ExecuteClusterSwitchoverInvoker {
 	requestDef := GenReqDefForExecuteClusterSwitchover()
 	return &ExecuteClusterSwitchoverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAclAccounts 查询ACL账户列表
+//
+// 查询ACL账户列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ListAclAccounts(request *model.ListAclAccountsRequest) (*model.ListAclAccountsResponse, error) {
+	requestDef := GenReqDefForListAclAccounts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAclAccountsResponse), nil
+	}
+}
+
+// ListAclAccountsInvoker 查询ACL账户列表
+func (c *DcsClient) ListAclAccountsInvoker(request *model.ListAclAccountsRequest) *ListAclAccountsInvoker {
+	requestDef := GenReqDefForListAclAccounts()
+	return &ListAclAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息
@@ -1017,6 +1124,27 @@ func (c *DcsClient) ListTagsOfTenantInvoker(request *model.ListTagsOfTenantReque
 	return &ListTagsOfTenantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetAclAccountPassWord 重置ACL账号密码
+//
+// 重置ACL账号密码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ResetAclAccountPassWord(request *model.ResetAclAccountPassWordRequest) (*model.ResetAclAccountPassWordResponse, error) {
+	requestDef := GenReqDefForResetAclAccountPassWord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetAclAccountPassWordResponse), nil
+	}
+}
+
+// ResetAclAccountPassWordInvoker 重置ACL账号密码
+func (c *DcsClient) ResetAclAccountPassWordInvoker(request *model.ResetAclAccountPassWordRequest) *ResetAclAccountPassWordInvoker {
+	requestDef := GenReqDefForResetAclAccountPassWord()
+	return &ResetAclAccountPassWordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPassword 重置密码
 //
 // 重置缓存实例的密码。
@@ -1165,6 +1293,27 @@ func (c *DcsClient) ShowBigkeyScanTaskDetails(request *model.ShowBigkeyScanTaskD
 func (c *DcsClient) ShowBigkeyScanTaskDetailsInvoker(request *model.ShowBigkeyScanTaskDetailsRequest) *ShowBigkeyScanTaskDetailsInvoker {
 	requestDef := GenReqDefForShowBigkeyScanTaskDetails()
 	return &ShowBigkeyScanTaskDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConfigTemplate 查询参数模板详情
+//
+// 查询参数模板详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowConfigTemplate(request *model.ShowConfigTemplateRequest) (*model.ShowConfigTemplateResponse, error) {
+	requestDef := GenReqDefForShowConfigTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigTemplateResponse), nil
+	}
+}
+
+// ShowConfigTemplateInvoker 查询参数模板详情
+func (c *DcsClient) ShowConfigTemplateInvoker(request *model.ShowConfigTemplateRequest) *ShowConfigTemplateInvoker {
+	requestDef := GenReqDefForShowConfigTemplate()
+	return &ShowConfigTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDiagnosisTaskDetails 查询指定诊断报告
@@ -1358,6 +1507,27 @@ func (c *DcsClient) ShowQuotaOfTenantInvoker(request *model.ShowQuotaOfTenantReq
 	return &ShowQuotaOfTenantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowReplicationStates 获取副本状态
+//
+// 获取副本状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowReplicationStates(request *model.ShowReplicationStatesRequest) (*model.ShowReplicationStatesResponse, error) {
+	requestDef := GenReqDefForShowReplicationStates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplicationStatesResponse), nil
+	}
+}
+
+// ShowReplicationStatesInvoker 获取副本状态
+func (c *DcsClient) ShowReplicationStatesInvoker(request *model.ShowReplicationStatesRequest) *ShowReplicationStatesInvoker {
+	requestDef := GenReqDefForShowReplicationStates()
+	return &ShowReplicationStatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTags 查询单个实例标签
 //
 // 通过实例ID查询标签。
@@ -1421,6 +1591,69 @@ func (c *DcsClient) StopMigrationTaskSyncInvoker(request *model.StopMigrationTas
 	return &StopMigrationTaskSyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAclAccountPassWord 修改ACL账号密码
+//
+// 修改ACL账号密码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateAclAccountPassWord(request *model.UpdateAclAccountPassWordRequest) (*model.UpdateAclAccountPassWordResponse, error) {
+	requestDef := GenReqDefForUpdateAclAccountPassWord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAclAccountPassWordResponse), nil
+	}
+}
+
+// UpdateAclAccountPassWordInvoker 修改ACL账号密码
+func (c *DcsClient) UpdateAclAccountPassWordInvoker(request *model.UpdateAclAccountPassWordRequest) *UpdateAclAccountPassWordInvoker {
+	requestDef := GenReqDefForUpdateAclAccountPassWord()
+	return &UpdateAclAccountPassWordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAclAccountRemark ACL账号修改备注
+//
+// # ACL账号修改备注
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateAclAccountRemark(request *model.UpdateAclAccountRemarkRequest) (*model.UpdateAclAccountRemarkResponse, error) {
+	requestDef := GenReqDefForUpdateAclAccountRemark()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAclAccountRemarkResponse), nil
+	}
+}
+
+// UpdateAclAccountRemarkInvoker ACL账号修改备注
+func (c *DcsClient) UpdateAclAccountRemarkInvoker(request *model.UpdateAclAccountRemarkRequest) *UpdateAclAccountRemarkInvoker {
+	requestDef := GenReqDefForUpdateAclAccountRemark()
+	return &UpdateAclAccountRemarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAclAccountRole 修改ACL角色
+//
+// 修改用户的类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateAclAccountRole(request *model.UpdateAclAccountRoleRequest) (*model.UpdateAclAccountRoleResponse, error) {
+	requestDef := GenReqDefForUpdateAclAccountRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAclAccountRoleResponse), nil
+	}
+}
+
+// UpdateAclAccountRoleInvoker 修改ACL角色
+func (c *DcsClient) UpdateAclAccountRoleInvoker(request *model.UpdateAclAccountRoleRequest) *UpdateAclAccountRoleInvoker {
+	requestDef := GenReqDefForUpdateAclAccountRole()
+	return &UpdateAclAccountRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateBigkeyAutoscanConfig 设置大key自动分析配置
 //
 // 设置大key自动分析配置。
@@ -1440,6 +1673,27 @@ func (c *DcsClient) UpdateBigkeyAutoscanConfig(request *model.UpdateBigkeyAutosc
 func (c *DcsClient) UpdateBigkeyAutoscanConfigInvoker(request *model.UpdateBigkeyAutoscanConfigRequest) *UpdateBigkeyAutoscanConfigInvoker {
 	requestDef := GenReqDefForUpdateBigkeyAutoscanConfig()
 	return &UpdateBigkeyAutoscanConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateConfigTemplate 修改自定义模板
+//
+// 修改自定义模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateConfigTemplate(request *model.UpdateConfigTemplateRequest) (*model.UpdateConfigTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateConfigTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateConfigTemplateResponse), nil
+	}
+}
+
+// UpdateConfigTemplateInvoker 修改自定义模板
+func (c *DcsClient) UpdateConfigTemplateInvoker(request *model.UpdateConfigTemplateRequest) *UpdateConfigTemplateInvoker {
+	requestDef := GenReqDefForUpdateConfigTemplate()
+	return &UpdateConfigTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateConfigurations 修改实例配置参数

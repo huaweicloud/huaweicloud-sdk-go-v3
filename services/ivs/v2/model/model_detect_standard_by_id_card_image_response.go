@@ -10,8 +10,10 @@ import (
 type DetectStandardByIdCardImageResponse struct {
 	Meta *Meta `json:"meta,omitempty"`
 
-	Result         *IvsStandardByIdCardImageResponseBodyResult `json:"result,omitempty"`
-	HttpStatusCode int                                         `json:"-"`
+	Result *IvsStandardByIdCardImageResponseBodyResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DetectStandardByIdCardImageResponse) String() string {

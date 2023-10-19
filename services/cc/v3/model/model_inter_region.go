@@ -8,16 +8,16 @@ import (
 
 type InterRegion struct {
 
-	// 域间实例的ID。
-	Id *string `json:"id,omitempty"`
+	// 资源ID标识符。
+	Id string `json:"id"`
 
-	// 域间实例本段的项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
+	// 实例所属项目ID。
+	ProjectId string `json:"project_id"`
 
-	// 域间实例本段的RegionID。
+	// 域间实例本端的RegionID。
 	LocalRegionId *string `json:"local_region_id,omitempty"`
 
-	// 域间实例对段的RegionID。
+	// 域间实例对端的RegionID。
 	RemoteRegionId *string `json:"remote_region_id,omitempty"`
 }
 

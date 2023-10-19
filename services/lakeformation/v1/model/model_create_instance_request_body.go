@@ -12,25 +12,28 @@ import (
 // CreateInstanceRequestBody 创建LakeFormation实例请求体
 type CreateInstanceRequestBody struct {
 
-	// 实例名
+	// 实例名称。只能包含字母、数字、下划线和中划线，且长度为4到32个字符。
 	Name string `json:"name"`
 
-	// 支付类型，postPaid为按需期
+	// 支付类型，postPaid为按需期，prePaid为包周期
 	ChargeMode CreateInstanceRequestBodyChargeMode `json:"charge_mode"`
 
-	// 企业项目id，只有对接了企业项目才可以填写
+	// 企业项目ID，只有对接了企业项目才可以填写。只能包含字母、数字和中划线，且长度为1到64个字符。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 描述
+	// 实例描述。用户输入的描述，最长为255个字符。
 	Description *string `json:"description,omitempty"`
 
-	// false:物理多租 true:逻辑多租
+	// false为物理多租；true为逻辑多租。默认为true。
 	Shared bool `json:"shared"`
 
-	// 规格列表
-	Specs []CreateSpec `json:"specs"`
+	// 包周期订购时的订单ID。
+	OrderId *string `json:"order_id,omitempty"`
 
-	// 标签列表
+	// 规格列表
+	Specs *[]CreateSpec `json:"specs,omitempty"`
+
+	// 标签列表，最多添加20个标签。
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
@@ -49,12 +52,16 @@ type CreateInstanceRequestBodyChargeMode struct {
 
 type CreateInstanceRequestBodyChargeModeEnum struct {
 	POST_PAID CreateInstanceRequestBodyChargeMode
+	PRE_PAID  CreateInstanceRequestBodyChargeMode
 }
 
 func GetCreateInstanceRequestBodyChargeModeEnum() CreateInstanceRequestBodyChargeModeEnum {
 	return CreateInstanceRequestBodyChargeModeEnum{
 		POST_PAID: CreateInstanceRequestBodyChargeMode{
 			value: "postPaid",
+		},
+		PRE_PAID: CreateInstanceRequestBodyChargeMode{
+			value: "prePaid",
 		},
 	}
 }

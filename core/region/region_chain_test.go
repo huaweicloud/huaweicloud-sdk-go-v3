@@ -21,71 +21,28 @@ package region
 
 import (
 	"github.com/stretchr/testify/assert"
-	"os"
-	"path/filepath"
-	"strings"
 	"testing"
 )
 
-func TestNewProviderChain(t *testing.T) {
-	chain := NewProviderChain(serviceName, []IRegionProvider{
-		&EnvProvider{serviceName: strings.ToUpper(serviceName)},
-		&ProfileProvider{serviceName: strings.ToUpper(serviceName)},
-	})
-	assert.Equal(t, &ProviderChain{
-		serviceName: serviceName,
-		providers: []IRegionProvider{
-			&EnvProvider{serviceName: strings.ToUpper(serviceName)},
-			&ProfileProvider{serviceName: strings.ToUpper(serviceName)},
-		},
-	}, chain)
-}
-
-func TestDefaultProviderChain(t *testing.T) {
-	chain := DefaultProviderChain(serviceName)
-	assert.Equal(t, &ProviderChain{
-		serviceName: serviceName,
-		providers: []IRegionProvider{
-			&EnvProvider{serviceName: strings.ToUpper(serviceName)},
-			&ProfileProvider{serviceName: strings.ToUpper(serviceName)},
-		},
-	}, chain)
-}
-
 func TestProviderChain_GetRegion(t *testing.T) {
-	chain := DefaultProviderChain(serviceName)
+	chain := DefaultProviderChain("Service1")
 	reg := chain.GetRegion("not-exist-1")
 	assert.Nil(t, reg)
 }
 
 func TestProviderChain_GetRegion2(t *testing.T) {
 	chain := DefaultProviderChain("NotExist")
-	reg := chain.GetRegion(serviceName)
+	reg := chain.GetRegion("region-id-1")
 	assert.Nil(t, reg)
 }
 
 func TestProviderChain_GetRegion3(t *testing.T) {
-	dir, err := os.UserHomeDir()
-	assert.Nil(t, err)
-	filename := "test_regions.yaml"
-	path := filepath.Join(dir, filename)
-	err = os.Setenv("HUAWEICLOUD_SDK_REGIONS_FILE", path)
+	err := setRegionsFileEnv()
 	assert.Nil(t, err)
 
-	file, err := os.Create(path)
-	assert.Nil(t, err)
-	err = file.Chmod(0600)
-	assert.Nil(t, err)
-	_, err = file.WriteString(regionStr)
-	assert.Nil(t, err)
-	err = file.Close()
-	assert.Nil(t, err)
-	defer func(name string) {
-		err = os.Remove(name)
-		assert.Nil(t, err)
-	}(path)
-
-	chain := DefaultProviderChain(serviceName)
-	reg := chain.GetRegion(regionId)
-	assert.Equal(t, NewRegion(regionId, endpoint), reg)
+	chain := DefaultProviderChain("Service1")
+	reg := chain.GetRegion("region-id-1")
+	assert.NotNil(t, reg)
+	assert.Equal(t, "region-id-1", reg.Id)
+	assert.Equal(t, []string{"https://service1.region-id-1.com"}, reg.Endpoints)
 }

@@ -12,10 +12,10 @@ import (
 // UpdateBandwidthPackage 更新带宽包实例的请求体
 type UpdateBandwidthPackage struct {
 
-	// 带宽包实例的名字。
+	// 实例名字。
 	Name *string `json:"name,omitempty"`
 
-	// 带宽包实例的描述。
+	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
 	// 带宽包实例中的带宽值。

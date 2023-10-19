@@ -26,6 +26,15 @@ type RuleServiceDto struct {
 
 	// 服务组名称
 	ServiceSetName *string `json:"service_set_name,omitempty"`
+
+	// 自定义服务
+	CustomService *[]ServiceItem `json:"custom_service,omitempty"`
+
+	// 服务组列表
+	ServiceGroup *[]string `json:"service_group,omitempty"`
+
+	// 服务组名称列表
+	ServiceGroupNames *[]AddressGroupVo `json:"service_group_names,omitempty"`
 }
 
 func (o RuleServiceDto) String() string {

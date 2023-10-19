@@ -7,6 +7,38 @@ import (
 	"net/http"
 )
 
+func GenReqDefForDeleteBuildJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/jobs/{job_id}/delete").
+		WithResponse(new(model.DeleteBuildJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDisableBuildJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/jobs/{job_id}/disable").
+		WithResponse(new(model.DisableBuildJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDownloadKeystore() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -22,6 +54,38 @@ func GenReqDefForDownloadKeystore() *def.HttpRequestDef {
 		WithName("DomainId").
 		WithJsonTag("domain_id").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDownloadLogByRecordId() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{record_id}/download-log").
+		WithResponse(new(model.DownloadLogByRecordIdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RecordId").
+		WithJsonTag("record_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForResumeBuildJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/jobs/{job_id}/recover").
+		WithResponse(new(model.ResumeBuildJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -206,6 +270,46 @@ func GenReqDefForShowListPeriodHistory() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRecordInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/jobs/{job_id}/{build_no}/record-info").
+		WithResponse(new(model.ShowRecordInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BuildNo").
+		WithJsonTag("build_no").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForStopBuildJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/jobs/{job_id}/{build_no}/stop").
+		WithResponse(new(model.StopBuildJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BuildNo").
+		WithJsonTag("build_no").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

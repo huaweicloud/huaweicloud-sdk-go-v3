@@ -11,44 +11,44 @@ import (
 // NetworkInstance 网络实例。
 type NetworkInstance struct {
 
-	// 网络实例的ID。
-	Id *string `json:"id,omitempty"`
+	// 资源ID标识符。
+	Id string `json:"id"`
 
-	// 网络实例的名字。
-	Name *string `json:"name,omitempty"`
+	// 实例名字。
+	Name string `json:"name"`
 
-	// 网络实例的描述。
+	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	// 实例所属帐号ID。
+	DomainId string `json:"domain_id"`
+
+	// 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
+
+	// 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+
+	// 资源ID标识符。
+	CloudConnectionId string `json:"cloud_connection_id"`
+
+	// 资源ID标识符。
+	InstanceId string `json:"instance_id"`
+
+	// 实例所属帐号ID。
+	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
+
+	// RegionID。
+	RegionId string `json:"region_id"`
+
+	// 实例所属项目ID。
+	ProjectId string `json:"project_id"`
 
 	// 网络实例的状态。 - ACTIVE：处理成功。 - PENDING：处理中。 - ERROR：处理失败。
 	Status *NetworkInstanceStatus `json:"status,omitempty"`
 
-	// 网络实例的创建时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
-
-	// 网络实例的更新时间。 UTC时间格式，yyyy-MM-ddTHH:mm:ss
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
-
 	// 网络实例的类型。 - vpc：虚拟私有云。 - vgw：虚拟网关。
 	Type *NetworkInstanceType `json:"type,omitempty"`
-
-	// 云连接实例ID。
-	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
-
-	// 网络实例的ID。
-	InstanceId *string `json:"instance_id,omitempty"`
-
-	// 网络实例所属账户ID。
-	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
-
-	// 网络实例所在Region的ID。
-	RegionId *string `json:"region_id,omitempty"`
-
-	// 网络实例所在租户的项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
 
 	// 网络实例发布的网段路由列表。
 	Cidrs *[]string `json:"cidrs,omitempty"`

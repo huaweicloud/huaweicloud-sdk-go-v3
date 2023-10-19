@@ -8,10 +8,10 @@ import (
 
 type MemberGroupCreate struct {
 
-	// VPC通道后端服务器组名称
+	// VPC通道后端服务器组名称。支持汉字、英文、数字、下划线、中划线、点，且只能以英文和汉字开头，3-64字符。 > 中文字符必须为UTF-8或者unicode编码。
 	MemberGroupName string `json:"member_group_name"`
 
-	// VPC通道后端服务器组描述
+	// VPC通道后端服务器组描述。
 	MemberGroupRemark *string `json:"member_group_remark,omitempty"`
 
 	// VPC通道后端服务器组权重值。  当前服务器组存在服务器且此权重值存在时，自动使用此权重值分配权重。

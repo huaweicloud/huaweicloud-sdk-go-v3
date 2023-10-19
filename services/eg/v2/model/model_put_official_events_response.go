@@ -8,12 +8,7 @@ import (
 
 // PutOfficialEventsResponse Response Object
 type PutOfficialEventsResponse struct {
-
-	// 发布失败的事件个数
-	FailedCount *int32 `json:"failed_count,omitempty"`
-
-	// putevent返回事件
-	Events *[]PutEventsRespEvents `json:"events,omitempty"`
+	Body *string `json:"body,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

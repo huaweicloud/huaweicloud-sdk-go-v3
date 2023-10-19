@@ -13,10 +13,10 @@ type SubnetInfo struct {
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// vpc cidr
-	Cidr string `json:"cidr"`
+	Cidr *string `json:"cidr,omitempty"`
 
 	// 子网名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 子网id
 	Id *string `json:"id,omitempty"`
@@ -29,6 +29,9 @@ type SubnetInfo struct {
 
 	// 子网的状态
 	Status *string `json:"status,omitempty"`
+
+	// 是否支持ipv6，boolean值为true表示是，false表示否
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 }
 
 func (o SubnetInfo) String() string {

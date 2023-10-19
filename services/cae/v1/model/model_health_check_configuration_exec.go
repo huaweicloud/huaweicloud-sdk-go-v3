@@ -10,7 +10,7 @@ import (
 type HealthCheckConfigurationExec struct {
 
 	// shell语句。
-	Command *[]interface{} `json:"command,omitempty"`
+	Command *[]string `json:"command,omitempty"`
 }
 
 func (o HealthCheckConfigurationExec) String() string {

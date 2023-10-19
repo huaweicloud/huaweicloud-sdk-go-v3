@@ -12,10 +12,10 @@ import (
 // ScaleConfigurationDataTrigger 伸缩策略触发器。
 type ScaleConfigurationDataTrigger struct {
 
-	// 指标类型，支持cpu、memory。
+	// 指标类型，支持cpu、memory、cron。
 	Type *ScaleConfigurationDataTriggerType `json:"type,omitempty"`
 
-	Metadata *ScaleConfigurationDataTriggerMetadata `json:"metadata,omitempty"`
+	Metadata *ScalingTriggerMeta `json:"metadata,omitempty"`
 }
 
 func (o ScaleConfigurationDataTrigger) String() string {
@@ -34,6 +34,7 @@ type ScaleConfigurationDataTriggerType struct {
 type ScaleConfigurationDataTriggerTypeEnum struct {
 	CPU    ScaleConfigurationDataTriggerType
 	MEMORY ScaleConfigurationDataTriggerType
+	CRON   ScaleConfigurationDataTriggerType
 }
 
 func GetScaleConfigurationDataTriggerTypeEnum() ScaleConfigurationDataTriggerTypeEnum {
@@ -43,6 +44,9 @@ func GetScaleConfigurationDataTriggerTypeEnum() ScaleConfigurationDataTriggerTyp
 		},
 		MEMORY: ScaleConfigurationDataTriggerType{
 			value: "memory",
+		},
+		CRON: ScaleConfigurationDataTriggerType{
+			value: "cron",
 		},
 	}
 }

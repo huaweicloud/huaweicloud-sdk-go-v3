@@ -12,7 +12,7 @@ import (
 // ShowAppByNameResponse Response Object
 type ShowAppByNameResponse struct {
 
-	// aomId
+	// aomId，如果为空则不显示
 	AomId *string `json:"aom_id,omitempty"`
 
 	// 应用ID

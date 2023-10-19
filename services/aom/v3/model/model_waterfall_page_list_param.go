@@ -8,10 +8,10 @@ import (
 
 type WaterfallPageListParam struct {
 
-	// 页面的分页标志位；为分页的最后一条记录的id
+	// 页面的分页标志位,为分页的最后一条记录的id
 	Marker *string `json:"marker,omitempty"`
 
-	// 查询返回记录的数量限制
+	// 查询返回记录的数量限制。limit可以为空，如果值小于1或者大于100，则会使用默认值100
 	Limit *int32 `json:"limit,omitempty"`
 }
 

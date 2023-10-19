@@ -8,10 +8,13 @@ import (
 
 type CreateSpec struct {
 
-	// 规格编码
+	// 商品ID。由系统自动生成，如OFFI8XXXXXXXXXXXXXXXX4。
+	ProductId *string `json:"product_id,omitempty"`
+
+	// 规格编码。由系统自动生成，例如lakeformation.unit.basic.qps。
 	SpecCode string `json:"spec_code"`
 
-	// 步数
+	// 步数。QPS为每秒最大请求数步长，最小为5，步长为1。
 	StrideNum int32 `json:"stride_num"`
 }
 

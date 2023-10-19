@@ -34,6 +34,9 @@ type CreateCertificateAuthorityRequestBody struct {
 
 	// 企业多项目ID。用户未开通企业多项目时，不需要输入该字段。 用户开通企业多项目时，查询资源可以输入该字段。 若用户不输入该字段，默认查询租户所有有权限的企业多项目下的资源。 此时“enterprise_project_id”取值为“all”。 若用户输入该字段，取值满足以下任一条件.   取值为“all”   取值为“0”   满足正则匹配：“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// CA证书ID。如果为空，则创建按需CA；如果不为空，则保存包周期CA信息。
+	CaId *string `json:"ca_id,omitempty"`
 }
 
 func (o CreateCertificateAuthorityRequestBody) String() string {

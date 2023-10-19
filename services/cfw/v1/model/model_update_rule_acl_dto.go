@@ -55,6 +55,8 @@ type UpdateRuleAclDto struct {
 
 	// 规则type，0：互联网规则，1:vpc规则，2：nat规则
 	Type *UpdateRuleAclDtoType `json:"type,omitempty"`
+
+	Tag *TagsVo `json:"tag,omitempty"`
 }
 
 func (o UpdateRuleAclDto) String() string {

@@ -44,6 +44,8 @@ var (
 		"https://hss.tr-west-1.myhuaweicloud.com")
 	CN_NORTH_2 = region.NewRegion("cn-north-2",
 		"https://hss.cn-north-2.myhuaweicloud.com")
+	AE_AD_1 = region.NewRegion("ae-ad-1",
+		"https://hss.ae-ad-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -66,6 +68,7 @@ var staticFields = map[string]*region.Region{
 	"la-north-2":     LA_NORTH_2,
 	"tr-west-1":      TR_WEST_1,
 	"cn-north-2":     CN_NORTH_2,
+	"ae-ad-1":        AE_AD_1,
 }
 
 var provider = region.DefaultProviderChain("HSS")

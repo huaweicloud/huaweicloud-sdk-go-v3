@@ -54,6 +54,12 @@ type GetFirewallInstanceResponseRecord struct {
 
 	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 资源id
+	ResourceId *string `json:"resource_id,omitempty"`
+
+	// 是否支持url过滤，true表示是，false表示不是
+	SupportUrlFiltering *bool `json:"support_url_filtering,omitempty"`
 }
 
 func (o GetFirewallInstanceResponseRecord) String() string {

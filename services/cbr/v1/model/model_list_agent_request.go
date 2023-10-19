@@ -19,7 +19,7 @@ type ListAgentRequest struct {
 	Status *string `json:"status,omitempty"`
 
 	// 客户端ID
-	AgentId *string `json:"agent_id,omitempty"`
+	AgentId *[]string `json:"agent_id,omitempty"`
 }
 
 func (o ListAgentRequest) String() string {

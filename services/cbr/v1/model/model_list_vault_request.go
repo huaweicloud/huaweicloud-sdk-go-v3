@@ -34,7 +34,7 @@ type ListVaultRequest struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 存储库ID
-	Id *string `json:"id,omitempty"`
+	Id *[]string `json:"id,omitempty"`
 
 	// 策略ID
 	PolicyId *string `json:"policy_id,omitempty"`

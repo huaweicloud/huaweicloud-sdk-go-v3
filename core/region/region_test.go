@@ -20,31 +20,28 @@
 package region
 
 import (
-	"fmt"
 	"github.com/stretchr/testify/assert"
-	"strings"
 	"testing"
 )
 
-const (
-	serviceName = "Service"
-	regionId    = "region-id-1"
-)
-
-var endpoint = fmt.Sprintf("https://%s.%s.myhuaweicloud.com", strings.ToLower(serviceName), regionId)
-
 func TestNewRegion(t *testing.T) {
-	reg := NewRegion(regionId, endpoint)
-	assert.Equal(t, &Region{
-		Id:        regionId,
-		Endpoints: []string{endpoint},
-	}, reg)
+	reg := NewRegion("region-id-1", "https://service1.region-id-1.com")
+	assert.NotNil(t, reg)
+	assert.Equal(t, "region-id-1", reg.Id)
+	assert.Equal(t, []string{"https://service1.region-id-1.com"}, reg.Endpoints)
+}
+
+func TestNewRegion2(t *testing.T) {
+	reg := NewRegion("region-id-2", "https://service2.region-id-2.com", "https://service2.region-id-2.cn")
+	assert.NotNil(t, reg)
+	assert.Equal(t, "region-id-2", reg.Id)
+	assert.Equal(t, []string{"https://service2.region-id-2.com", "https://service2.region-id-2.cn"}, reg.Endpoints)
 }
 
 func TestRegion_WithEndpointsOverride(t *testing.T) {
-	testEndpoints := []string{"test"}
-	reg := NewRegion(regionId, endpoint)
-	assert.Equal(t, endpoint, reg.Endpoints[0])
-	reg.WithEndpointsOverride(testEndpoints)
-	assert.Equal(t, testEndpoints, reg.Endpoints)
+	reg := NewRegion("region-id-1", "https://service1.region-id-1.com")
+	assert.Equal(t, []string{"https://service1.region-id-1.com"}, reg.Endpoints)
+
+	reg.WithEndpointsOverride([]string{"https://service1.region-id-1.cn"})
+	assert.Equal(t, []string{"https://service1.region-id-1.cn"}, reg.Endpoints)
 }

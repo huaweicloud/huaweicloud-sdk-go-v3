@@ -7,32 +7,31 @@ import (
 	"strings"
 )
 
-// InterRegionBandwidth 域间带宽实例。
 type InterRegionBandwidth struct {
 
-	// 域间带宽实例的ID。
-	Id *string `json:"id,omitempty"`
+	// 资源ID标识符。
+	Id string `json:"id"`
 
-	// 域间带宽实例的名字。
-	Name *string `json:"name,omitempty"`
+	// 实例名字。
+	Name string `json:"name"`
 
-	// 域间带宽实例的描述。
+	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 帐号ID。
-	DomainId *string `json:"domain_id,omitempty"`
+	// 实例所属帐号ID。
+	DomainId string `json:"domain_id"`
 
-	// 带宽包实例的ID。
-	BandwidthPackageId *string `json:"bandwidth_package_id,omitempty"`
+	// 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
-	// 域间带宽实例的创建时间。
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	// 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
+	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
-	// 域间带宽实例的更新时间。
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	// 资源ID标识符。
+	CloudConnectionId string `json:"cloud_connection_id"`
 
-	// 云连接实例的ID。
-	CloudConnectionId *string `json:"cloud_connection_id,omitempty"`
+	// 资源ID标识符。
+	BandwidthPackageId string `json:"bandwidth_package_id"`
 
 	// 域间实例信息。
 	InterRegions *[]InterRegion `json:"inter_regions,omitempty"`

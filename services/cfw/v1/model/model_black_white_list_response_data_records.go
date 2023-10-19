@@ -26,6 +26,9 @@ type BlackWhiteListResponseDataRecords struct {
 
 	// 端口
 	Port *string `json:"port,omitempty"`
+
+	// 描述
+	Description *string `json:"description,omitempty"`
 }
 
 func (o BlackWhiteListResponseDataRecords) String() string {
