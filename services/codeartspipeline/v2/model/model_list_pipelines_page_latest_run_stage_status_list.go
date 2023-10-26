@@ -22,6 +22,9 @@ type ListPipelinesPageLatestRunStageStatusList struct {
 
 	// 结束时间
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 阶段ID
+	Id *string `json:"id,omitempty"`
 }
 
 func (o ListPipelinesPageLatestRunStageStatusList) String() string {

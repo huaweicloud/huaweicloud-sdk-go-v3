@@ -29,6 +29,9 @@ type GeneralTableRequestBody struct {
 
 	// 可选值包括： - true：返回透视变换矩阵 - false：不返回  未传入该参数时默认为false，即不返回透视变换矩阵。
 	ReturnRectificationMatrix *bool `json:"return_rectification_matrix,omitempty"`
+
+	// 可选值包括： - true：输入图像仅包含有线表格，仅进行有线表格识别。 - false: 输入图像可能包含无线表格，同时进行有线表格与无线表格识别。  未传入该参数时默认为false，即同时进行有线表格与无线表格识别。当确认输入仅包含有线表格时，该参数设为true可达到更优识别效果。
+	WithBorders *bool `json:"with_borders,omitempty"`
 }
 
 func (o GeneralTableRequestBody) String() string {

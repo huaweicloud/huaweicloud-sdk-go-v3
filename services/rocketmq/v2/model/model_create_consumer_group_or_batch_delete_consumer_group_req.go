@@ -23,6 +23,9 @@ type CreateConsumerGroupOrBatchDeleteConsumerGroupReq struct {
 	// 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
 	Name *string `json:"name,omitempty"`
 
+	// 消费组描述，长度0~200个字符。
+	GroupDesc *string `json:"group_desc,omitempty"`
+
 	// 最大重试次数。
 	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
 

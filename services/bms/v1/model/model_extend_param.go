@@ -12,7 +12,7 @@ import (
 // ExtendParam 创建裸金属服务器的extendparam字段数据结构说明
 type ExtendParam struct {
 
-	// 计费模式。取值范围：prePaid：预付费，即包年包月。默认值是prePaid。
+	// 计费模式。取值范围：prePaid：预付费，即包年包月; postPaid-后付费，即按需付费。默认值是prePaid。
 	ChargingMode *ExtendParamChargingMode `json:"chargingMode,omitempty"`
 
 	// 裸金属服务器所在区域ID。请参考地区和终端节点获取。
@@ -48,13 +48,17 @@ type ExtendParamChargingMode struct {
 }
 
 type ExtendParamChargingModeEnum struct {
-	PRE_PAID ExtendParamChargingMode
+	PRE_PAID  ExtendParamChargingMode
+	POST_PAID ExtendParamChargingMode
 }
 
 func GetExtendParamChargingModeEnum() ExtendParamChargingModeEnum {
 	return ExtendParamChargingModeEnum{
 		PRE_PAID: ExtendParamChargingMode{
 			value: "prePaid",
+		},
+		POST_PAID: ExtendParamChargingMode{
+			value: "postPaid",
 		},
 	}
 }

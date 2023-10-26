@@ -413,6 +413,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	}
 }
 
+type ListInstanceDiagnosisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceDiagnosisInvoker) Invoke() (*model.ListInstanceDiagnosisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceDiagnosisResponse), nil
+	}
+}
+
 type ListInstanceParamHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,6 +458,18 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListInstancesResponse), nil
+	}
+}
+
+type ListInstancesInfoDiagnosisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesInfoDiagnosisInvoker) Invoke() (*model.ListInstancesInfoDiagnosisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesInfoDiagnosisResponse), nil
 	}
 }
 

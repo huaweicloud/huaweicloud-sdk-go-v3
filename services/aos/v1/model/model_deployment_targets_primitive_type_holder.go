@@ -7,7 +7,7 @@ import (
 )
 
 type DeploymentTargetsPrimitiveTypeHolder struct {
-	DeploymentTargets *DeploymentTargetsPrimitiveTypeHolderDeploymentTargets `json:"deployment_targets"`
+	DeploymentTargets *DeploymentTargets `json:"deployment_targets"`
 }
 
 func (o DeploymentTargetsPrimitiveTypeHolder) String() string {

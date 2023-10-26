@@ -985,25 +985,25 @@ func (c *CesClient) UpdateDashboardInvoker(request *model.UpdateDashboardRequest
 	return &UpdateDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateNotificationMasks 修改告警通知屏蔽规则
+// UpdateNotificationMask 修改告警通知屏蔽规则
 //
 // 修改告警通知屏蔽规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CesClient) UpdateNotificationMasks(request *model.UpdateNotificationMasksRequest) (*model.UpdateNotificationMasksResponse, error) {
-	requestDef := GenReqDefForUpdateNotificationMasks()
+func (c *CesClient) UpdateNotificationMask(request *model.UpdateNotificationMaskRequest) (*model.UpdateNotificationMaskResponse, error) {
+	requestDef := GenReqDefForUpdateNotificationMask()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateNotificationMasksResponse), nil
+		return resp.(*model.UpdateNotificationMaskResponse), nil
 	}
 }
 
-// UpdateNotificationMasksInvoker 修改告警通知屏蔽规则
-func (c *CesClient) UpdateNotificationMasksInvoker(request *model.UpdateNotificationMasksRequest) *UpdateNotificationMasksInvoker {
-	requestDef := GenReqDefForUpdateNotificationMasks()
-	return &UpdateNotificationMasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateNotificationMaskInvoker 修改告警通知屏蔽规则
+func (c *CesClient) UpdateNotificationMaskInvoker(request *model.UpdateNotificationMaskRequest) *UpdateNotificationMaskInvoker {
+	requestDef := GenReqDefForUpdateNotificationMask()
+	return &UpdateNotificationMaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateOneClickAlarmNotifications 批量修改开启状态的一键告警关联告警规则的告警通知

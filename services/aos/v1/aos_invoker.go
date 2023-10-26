@@ -341,6 +341,18 @@ func (i *ListStackSetsInvoker) Invoke() (*model.ListStackSetsResponse, error) {
 	}
 }
 
+type ShowStackInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStackInstanceInvoker) Invoke() (*model.ShowStackInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStackInstanceResponse), nil
+	}
+}
+
 type ShowStackSetMetadataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +386,18 @@ func (i *ShowStackSetTemplateInvoker) Invoke() (*model.ShowStackSetTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowStackSetTemplateResponse), nil
+	}
+}
+
+type UpdateStackInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStackInstancesInvoker) Invoke() (*model.UpdateStackInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStackInstancesResponse), nil
 	}
 }
 

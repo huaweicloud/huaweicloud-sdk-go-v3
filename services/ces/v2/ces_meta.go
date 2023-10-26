@@ -969,11 +969,11 @@ func GenReqDefForUpdateDashboard() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateNotificationMasks() *def.HttpRequestDef {
+func GenReqDefForUpdateNotificationMask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/notification-masks/{notification_mask_id}").
-		WithResponse(new(model.UpdateNotificationMasksResponse)).
+		WithResponse(new(model.UpdateNotificationMaskResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

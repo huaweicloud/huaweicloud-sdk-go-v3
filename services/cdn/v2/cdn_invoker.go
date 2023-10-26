@@ -17,6 +17,30 @@ func (i *BatchCopyDomainInvoker) Invoke() (*model.BatchCopyDomainResponse, error
 	}
 }
 
+type CreatePreheatingTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePreheatingTasksInvoker) Invoke() (*model.CreatePreheatingTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePreheatingTasksResponse), nil
+	}
+}
+
+type CreateRefreshTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRefreshTasksInvoker) Invoke() (*model.CreateRefreshTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRefreshTasksResponse), nil
+	}
+}
+
 type DownloadRegionCarrierExcelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -137,6 +161,30 @@ func (i *ShowDomainStatsInvoker) Invoke() (*model.ShowDomainStatsResponse, error
 	}
 }
 
+type ShowHistoryTaskDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHistoryTaskDetailsInvoker) Invoke() (*model.ShowHistoryTaskDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHistoryTaskDetailsResponse), nil
+	}
+}
+
+type ShowHistoryTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHistoryTasksInvoker) Invoke() (*model.ShowHistoryTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHistoryTasksResponse), nil
+	}
+}
+
 type ShowTopDomainNamesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,6 +206,18 @@ func (i *ShowTopUrlInvoker) Invoke() (*model.ShowTopUrlResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTopUrlResponse), nil
+	}
+}
+
+type ShowUrlTaskInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUrlTaskInfoInvoker) Invoke() (*model.ShowUrlTaskInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUrlTaskInfoResponse), nil
 	}
 }
 

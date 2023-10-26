@@ -8,7 +8,7 @@ import (
 
 type DefaultTopicRequest struct {
 
-	// 告警主题id
+	// DSC告警主题ID（非消息通知服务主题ID）
 	Id *string `json:"id,omitempty"`
 
 	// 项目ID

@@ -8,7 +8,8 @@ import (
 	"strings"
 )
 
-type Shares struct {
+// ShareInfo 文件系统详情
+type ShareInfo struct {
 	ActionProgress *ActionProgress `json:"action_progress,omitempty"`
 
 	// SFS Turbo文件系统的版本号。
@@ -42,7 +43,7 @@ type Shares struct {
 	Name *string `json:"name,omitempty"`
 
 	// SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
-	PayModel *SharesPayModel `json:"pay_model,omitempty"`
+	PayModel *ShareInfoPayModel `json:"pay_model,omitempty"`
 
 	// SFS Turbo文件系统所在区域。
 	Region *string `json:"region,omitempty"`
@@ -59,10 +60,10 @@ type Shares struct {
 	// SFS Turbo文件系统总容量，单位GB。
 	Size *string `json:"size,omitempty"`
 
-	// SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败。
+	// SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
 	Status *string `json:"status,omitempty"`
 
-	// SFS Turbo文件系统的子状态。'121'表示扩容中，'221'表示扩容成功，'321'表示扩容失败。
+	// SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
 	SubStatus *string `json:"sub_status,omitempty"`
 
 	// 用户指定的子网的网络ID。
@@ -72,44 +73,44 @@ type Shares struct {
 	VpcId *string `json:"vpc_id,omitempty"`
 }
 
-func (o Shares) String() string {
+func (o ShareInfo) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Shares struct{}"
+		return "ShareInfo struct{}"
 	}
 
-	return strings.Join([]string{"Shares", string(data)}, " ")
+	return strings.Join([]string{"ShareInfo", string(data)}, " ")
 }
 
-type SharesPayModel struct {
+type ShareInfoPayModel struct {
 	value string
 }
 
-type SharesPayModelEnum struct {
-	E_0 SharesPayModel
-	E_1 SharesPayModel
+type ShareInfoPayModelEnum struct {
+	E_0 ShareInfoPayModel
+	E_1 ShareInfoPayModel
 }
 
-func GetSharesPayModelEnum() SharesPayModelEnum {
-	return SharesPayModelEnum{
-		E_0: SharesPayModel{
+func GetShareInfoPayModelEnum() ShareInfoPayModelEnum {
+	return ShareInfoPayModelEnum{
+		E_0: ShareInfoPayModel{
 			value: "0",
 		},
-		E_1: SharesPayModel{
+		E_1: ShareInfoPayModel{
 			value: "1",
 		},
 	}
 }
 
-func (c SharesPayModel) Value() string {
+func (c ShareInfoPayModel) Value() string {
 	return c.value
 }
 
-func (c SharesPayModel) MarshalJSON() ([]byte, error) {
+func (c ShareInfoPayModel) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *SharesPayModel) UnmarshalJSON(b []byte) error {
+func (c *ShareInfoPayModel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

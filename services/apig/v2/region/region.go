@@ -47,7 +47,7 @@ var (
 	EU_WEST_101 = region.NewRegion("eu-west-101",
 		"https://apig.eu-west-101.myhuaweicloud.eu")
 	AE_AD_1 = region.NewRegion("ae-ad-1",
-		"https://apig.ae-ad-1.g42cloud.com")
+		"https://apig.ae-ad-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{

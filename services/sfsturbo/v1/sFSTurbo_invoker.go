@@ -41,6 +41,18 @@ func (i *ChangeShareNameInvoker) Invoke() (*model.ChangeShareNameResponse, error
 	}
 }
 
+type CreateBackendTargetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBackendTargetInvoker) Invoke() (*model.CreateBackendTargetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBackendTargetResponse), nil
+	}
+}
+
 type CreateFsDirInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -62,6 +74,42 @@ func (i *CreateFsDirQuotaInvoker) Invoke() (*model.CreateFsDirQuotaResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateFsDirQuotaResponse), nil
+	}
+}
+
+type CreateFsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFsTaskInvoker) Invoke() (*model.CreateFsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFsTaskResponse), nil
+	}
+}
+
+type CreateHpcCacheTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHpcCacheTaskInvoker) Invoke() (*model.CreateHpcCacheTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHpcCacheTaskResponse), nil
+	}
+}
+
+type CreatePermRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePermRuleInvoker) Invoke() (*model.CreatePermRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePermRuleResponse), nil
 	}
 }
 
@@ -89,6 +137,18 @@ func (i *CreateSharedTagInvoker) Invoke() (*model.CreateSharedTagResponse, error
 	}
 }
 
+type DeleteBackendTargetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBackendTargetInvoker) Invoke() (*model.DeleteBackendTargetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBackendTargetResponse), nil
+	}
+}
+
 type DeleteFsDirInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +170,30 @@ func (i *DeleteFsDirQuotaInvoker) Invoke() (*model.DeleteFsDirQuotaResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteFsDirQuotaResponse), nil
+	}
+}
+
+type DeleteFsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFsTaskInvoker) Invoke() (*model.DeleteFsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFsTaskResponse), nil
+	}
+}
+
+type DeletePermRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePermRuleInvoker) Invoke() (*model.DeletePermRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePermRuleResponse), nil
 	}
 }
 
@@ -149,6 +233,54 @@ func (i *ExpandShareInvoker) Invoke() (*model.ExpandShareResponse, error) {
 	}
 }
 
+type ListBackendTargetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackendTargetsInvoker) Invoke() (*model.ListBackendTargetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackendTargetsResponse), nil
+	}
+}
+
+type ListFsTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFsTasksInvoker) Invoke() (*model.ListFsTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFsTasksResponse), nil
+	}
+}
+
+type ListHpcCacheTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHpcCacheTasksInvoker) Invoke() (*model.ListHpcCacheTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHpcCacheTasksResponse), nil
+	}
+}
+
+type ListPermRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPermRulesInvoker) Invoke() (*model.ListPermRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPermRulesResponse), nil
+	}
+}
+
 type ListSharedTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -173,6 +305,30 @@ func (i *ListSharesInvoker) Invoke() (*model.ListSharesResponse, error) {
 	}
 }
 
+type SetHpcCacheBackendInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetHpcCacheBackendInvoker) Invoke() (*model.SetHpcCacheBackendResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetHpcCacheBackendResponse), nil
+	}
+}
+
+type ShowBackendTargetInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackendTargetInfoInvoker) Invoke() (*model.ShowBackendTargetInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackendTargetInfoResponse), nil
+	}
+}
+
 type ShowFsDirInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +350,54 @@ func (i *ShowFsDirQuotaInvoker) Invoke() (*model.ShowFsDirQuotaResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowFsDirQuotaResponse), nil
+	}
+}
+
+type ShowFsDirUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFsDirUsageInvoker) Invoke() (*model.ShowFsDirUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFsDirUsageResponse), nil
+	}
+}
+
+type ShowFsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFsTaskInvoker) Invoke() (*model.ShowFsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFsTaskResponse), nil
+	}
+}
+
+type ShowHpcCacheTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHpcCacheTaskInvoker) Invoke() (*model.ShowHpcCacheTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHpcCacheTaskResponse), nil
+	}
+}
+
+type ShowPermRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPermRuleInvoker) Invoke() (*model.ShowPermRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPermRuleResponse), nil
 	}
 }
 
@@ -230,5 +434,29 @@ func (i *UpdateFsDirQuotaInvoker) Invoke() (*model.UpdateFsDirQuotaResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateFsDirQuotaResponse), nil
+	}
+}
+
+type UpdateHpcShareInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHpcShareInvoker) Invoke() (*model.UpdateHpcShareResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHpcShareResponse), nil
+	}
+}
+
+type UpdatePermRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePermRuleInvoker) Invoke() (*model.UpdatePermRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePermRuleResponse), nil
 	}
 }

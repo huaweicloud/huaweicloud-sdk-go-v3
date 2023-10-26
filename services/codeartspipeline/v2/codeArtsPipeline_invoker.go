@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartspipeline/v2/model"
 )
 
+type AcceptManualReviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptManualReviewInvoker) Invoke() (*model.AcceptManualReviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptManualReviewResponse), nil
+	}
+}
+
 type BatchShowPipelinesLatestStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +62,18 @@ func (i *CreatePipelineByTemplateIdInvoker) Invoke() (*model.CreatePipelineByTem
 		return nil, err
 	} else {
 		return result.(*model.CreatePipelineByTemplateIdResponse), nil
+	}
+}
+
+type CreatePipelineNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineNewInvoker) Invoke() (*model.CreatePipelineNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePipelineNewResponse), nil
 	}
 }
 
@@ -137,6 +161,18 @@ func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
 	}
 }
 
+type RejectManualReviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RejectManualReviewInvoker) Invoke() (*model.RejectManualReviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RejectManualReviewResponse), nil
+	}
+}
+
 type RemovePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +182,18 @@ func (i *RemovePipelineInvoker) Invoke() (*model.RemovePipelineResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.RemovePipelineResponse), nil
+	}
+}
+
+type RetryPipelineRunInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryPipelineRunInvoker) Invoke() (*model.RetryPipelineRunResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryPipelineRunResponse), nil
 	}
 }
 

@@ -12,7 +12,7 @@ type ShowOpenApiCalledRecordsRequest struct {
 	// 分页大小，默认1000，最大2000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 需要查询调用记录的URL，例如：/v1/{project_id}/sdg/database/watermark/embed。
+	// 需要查询调用记录的URL，例如：/v1/{project_id}/sdg/database/watermark/embed
 	CalledUrl *string `json:"called_url,omitempty"`
 
 	// 开始时间（Unix timestamp），单位：毫秒，例如：0

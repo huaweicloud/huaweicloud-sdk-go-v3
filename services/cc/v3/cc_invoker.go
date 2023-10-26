@@ -425,6 +425,18 @@ func (i *UpdateCentralNetworkGdgwAttachmentInvoker) Invoke() (*model.UpdateCentr
 	}
 }
 
+type ListCentralNetworkCapabilitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCentralNetworkCapabilitiesInvoker) Invoke() (*model.ListCentralNetworkCapabilitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCentralNetworkCapabilitiesResponse), nil
+	}
+}
+
 type ListCentralNetworkConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }

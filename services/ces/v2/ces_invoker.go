@@ -557,15 +557,15 @@ func (i *UpdateDashboardInvoker) Invoke() (*model.UpdateDashboardResponse, error
 	}
 }
 
-type UpdateNotificationMasksInvoker struct {
+type UpdateNotificationMaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateNotificationMasksInvoker) Invoke() (*model.UpdateNotificationMasksResponse, error) {
+func (i *UpdateNotificationMaskInvoker) Invoke() (*model.UpdateNotificationMaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateNotificationMasksResponse), nil
+		return result.(*model.UpdateNotificationMaskResponse), nil
 	}
 }
 

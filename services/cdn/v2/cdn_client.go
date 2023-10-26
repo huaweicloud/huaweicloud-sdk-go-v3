@@ -42,6 +42,48 @@ func (c *CdnClient) BatchCopyDomainInvoker(request *model.BatchCopyDomainRequest
 	return &BatchCopyDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePreheatingTasks 创建预热缓存任务
+//
+// 创建预热任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreatePreheatingTasks(request *model.CreatePreheatingTasksRequest) (*model.CreatePreheatingTasksResponse, error) {
+	requestDef := GenReqDefForCreatePreheatingTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePreheatingTasksResponse), nil
+	}
+}
+
+// CreatePreheatingTasksInvoker 创建预热缓存任务
+func (c *CdnClient) CreatePreheatingTasksInvoker(request *model.CreatePreheatingTasksRequest) *CreatePreheatingTasksInvoker {
+	requestDef := GenReqDefForCreatePreheatingTasks()
+	return &CreatePreheatingTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRefreshTasks 创建刷新缓存任务
+//
+// 创建刷新缓存任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateRefreshTasks(request *model.CreateRefreshTasksRequest) (*model.CreateRefreshTasksResponse, error) {
+	requestDef := GenReqDefForCreateRefreshTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRefreshTasksResponse), nil
+	}
+}
+
+// CreateRefreshTasksInvoker 创建刷新缓存任务
+func (c *CdnClient) CreateRefreshTasksInvoker(request *model.CreateRefreshTasksRequest) *CreateRefreshTasksInvoker {
+	requestDef := GenReqDefForCreateRefreshTasks()
+	return &CreateRefreshTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadRegionCarrierExcel 下载区域运营商指标数据表格文件
 //
 // - 下载区域运营商指标数据表格文件。
@@ -324,6 +366,48 @@ func (c *CdnClient) ShowDomainStatsInvoker(request *model.ShowDomainStatsRequest
 	return &ShowDomainStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHistoryTaskDetails 查询刷新预热任务详情
+//
+// 查询刷新预热任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowHistoryTaskDetails(request *model.ShowHistoryTaskDetailsRequest) (*model.ShowHistoryTaskDetailsResponse, error) {
+	requestDef := GenReqDefForShowHistoryTaskDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistoryTaskDetailsResponse), nil
+	}
+}
+
+// ShowHistoryTaskDetailsInvoker 查询刷新预热任务详情
+func (c *CdnClient) ShowHistoryTaskDetailsInvoker(request *model.ShowHistoryTaskDetailsRequest) *ShowHistoryTaskDetailsInvoker {
+	requestDef := GenReqDefForShowHistoryTaskDetails()
+	return &ShowHistoryTaskDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHistoryTasks 查询刷新预热任务
+//
+// 查询刷新预热任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowHistoryTasks(request *model.ShowHistoryTasksRequest) (*model.ShowHistoryTasksResponse, error) {
+	requestDef := GenReqDefForShowHistoryTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistoryTasksResponse), nil
+	}
+}
+
+// ShowHistoryTasksInvoker 查询刷新预热任务
+func (c *CdnClient) ShowHistoryTasksInvoker(request *model.ShowHistoryTasksRequest) *ShowHistoryTasksInvoker {
+	requestDef := GenReqDefForShowHistoryTasks()
+	return &ShowHistoryTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTopDomainNames 查询TOP域名
 //
 // - 查询TOP域名。
@@ -388,6 +472,27 @@ func (c *CdnClient) ShowTopUrl(request *model.ShowTopUrlRequest) (*model.ShowTop
 func (c *CdnClient) ShowTopUrlInvoker(request *model.ShowTopUrlRequest) *ShowTopUrlInvoker {
 	requestDef := GenReqDefForShowTopUrl()
 	return &ShowTopUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUrlTaskInfo 查询刷新预热URL记录
+//
+// 查询刷新预热URL记录。如需此接口，请提交工单开通。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowUrlTaskInfo(request *model.ShowUrlTaskInfoRequest) (*model.ShowUrlTaskInfoResponse, error) {
+	requestDef := GenReqDefForShowUrlTaskInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUrlTaskInfoResponse), nil
+	}
+}
+
+// ShowUrlTaskInfoInvoker 查询刷新预热URL记录
+func (c *CdnClient) ShowUrlTaskInfoInvoker(request *model.ShowUrlTaskInfoRequest) *ShowUrlTaskInfoInvoker {
+	requestDef := GenReqDefForShowUrlTaskInfo()
+	return &ShowUrlTaskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDomainFullConfig 修改域名全量配置接口

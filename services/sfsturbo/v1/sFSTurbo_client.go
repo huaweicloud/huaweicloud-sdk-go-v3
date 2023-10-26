@@ -86,9 +86,30 @@ func (c *SFSTurboClient) ChangeShareNameInvoker(request *model.ChangeShareNameRe
 	return &ChangeShareNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateBackendTarget 创建文件系统后端存储库
+//
+// 创建文件系统后端存储库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreateBackendTarget(request *model.CreateBackendTargetRequest) (*model.CreateBackendTargetResponse, error) {
+	requestDef := GenReqDefForCreateBackendTarget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBackendTargetResponse), nil
+	}
+}
+
+// CreateBackendTargetInvoker 创建文件系统后端存储库
+func (c *SFSTurboClient) CreateBackendTargetInvoker(request *model.CreateBackendTargetRequest) *CreateBackendTargetInvoker {
+	requestDef := GenReqDefForCreateBackendTarget()
+	return &CreateBackendTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFsDir 创建目录
 //
-// 创建目录 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 创建目录
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateFsDir(request *model.CreateFsDirRequest) (*model.CreateFsDirResponse, error) {
@@ -109,7 +130,7 @@ func (c *SFSTurboClient) CreateFsDirInvoker(request *model.CreateFsDirRequest) *
 
 // CreateFsDirQuota 创建目标文件夹quota
 //
-// 创建目标文件夹quota。只支持对空目录设置目录quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 创建目标文件夹quota。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateFsDirQuota(request *model.CreateFsDirQuotaRequest) (*model.CreateFsDirQuotaResponse, error) {
@@ -126,6 +147,69 @@ func (c *SFSTurboClient) CreateFsDirQuota(request *model.CreateFsDirQuotaRequest
 func (c *SFSTurboClient) CreateFsDirQuotaInvoker(request *model.CreateFsDirQuotaRequest) *CreateFsDirQuotaInvoker {
 	requestDef := GenReqDefForCreateFsDirQuota()
 	return &CreateFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFsTask 创建文件系统异步任务
+//
+// 创建文件系统异步任务（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreateFsTask(request *model.CreateFsTaskRequest) (*model.CreateFsTaskResponse, error) {
+	requestDef := GenReqDefForCreateFsTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFsTaskResponse), nil
+	}
+}
+
+// CreateFsTaskInvoker 创建文件系统异步任务
+func (c *SFSTurboClient) CreateFsTaskInvoker(request *model.CreateFsTaskRequest) *CreateFsTaskInvoker {
+	requestDef := GenReqDefForCreateFsTask()
+	return &CreateFsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHpcCacheTask 创建SFSTurbo 和 OBS 之间的联动任务
+//
+// 创建SFSTurbo 和 OBS 之间的联动任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreateHpcCacheTask(request *model.CreateHpcCacheTaskRequest) (*model.CreateHpcCacheTaskResponse, error) {
+	requestDef := GenReqDefForCreateHpcCacheTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHpcCacheTaskResponse), nil
+	}
+}
+
+// CreateHpcCacheTaskInvoker 创建SFSTurbo 和 OBS 之间的联动任务
+func (c *SFSTurboClient) CreateHpcCacheTaskInvoker(request *model.CreateHpcCacheTaskRequest) *CreateHpcCacheTaskInvoker {
+	requestDef := GenReqDefForCreateHpcCacheTask()
+	return &CreateHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePermRule 创建权限规则
+//
+// 创建权限规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreatePermRule(request *model.CreatePermRuleRequest) (*model.CreatePermRuleResponse, error) {
+	requestDef := GenReqDefForCreatePermRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePermRuleResponse), nil
+	}
+}
+
+// CreatePermRuleInvoker 创建权限规则
+func (c *SFSTurboClient) CreatePermRuleInvoker(request *model.CreatePermRuleRequest) *CreatePermRuleInvoker {
+	requestDef := GenReqDefForCreatePermRule()
+	return &CreatePermRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateShare 创建文件系统
@@ -173,9 +257,30 @@ func (c *SFSTurboClient) CreateSharedTagInvoker(request *model.CreateSharedTagRe
 	return &CreateSharedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBackendTarget 删除文件系统后端存储库
+//
+// 删除文件系统后端存储库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeleteBackendTarget(request *model.DeleteBackendTargetRequest) (*model.DeleteBackendTargetResponse, error) {
+	requestDef := GenReqDefForDeleteBackendTarget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBackendTargetResponse), nil
+	}
+}
+
+// DeleteBackendTargetInvoker 删除文件系统后端存储库
+func (c *SFSTurboClient) DeleteBackendTargetInvoker(request *model.DeleteBackendTargetRequest) *DeleteBackendTargetInvoker {
+	requestDef := GenReqDefForDeleteBackendTarget()
+	return &DeleteBackendTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteFsDir 删除文件系统目录
 //
-// 删除文件系统目录 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 删除文件系统目录
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteFsDir(request *model.DeleteFsDirRequest) (*model.DeleteFsDirResponse, error) {
@@ -196,7 +301,7 @@ func (c *SFSTurboClient) DeleteFsDirInvoker(request *model.DeleteFsDirRequest) *
 
 // DeleteFsDirQuota 删除目标文件夹quota
 //
-// 删除目标文件夹quota。只支持对空目录进行删除quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 删除目标文件夹quota。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteFsDirQuota(request *model.DeleteFsDirQuotaRequest) (*model.DeleteFsDirQuotaResponse, error) {
@@ -213,6 +318,48 @@ func (c *SFSTurboClient) DeleteFsDirQuota(request *model.DeleteFsDirQuotaRequest
 func (c *SFSTurboClient) DeleteFsDirQuotaInvoker(request *model.DeleteFsDirQuotaRequest) *DeleteFsDirQuotaInvoker {
 	requestDef := GenReqDefForDeleteFsDirQuota()
 	return &DeleteFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFsTask 取消/删除文件系统异步任务
+//
+// 如果异步任务正在执行，则取消并删除任务；否则，删除任务。（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeleteFsTask(request *model.DeleteFsTaskRequest) (*model.DeleteFsTaskResponse, error) {
+	requestDef := GenReqDefForDeleteFsTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFsTaskResponse), nil
+	}
+}
+
+// DeleteFsTaskInvoker 取消/删除文件系统异步任务
+func (c *SFSTurboClient) DeleteFsTaskInvoker(request *model.DeleteFsTaskRequest) *DeleteFsTaskInvoker {
+	requestDef := GenReqDefForDeleteFsTask()
+	return &DeleteFsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePermRule 删除权限规则
+//
+// 删除权限规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeletePermRule(request *model.DeletePermRuleRequest) (*model.DeletePermRuleResponse, error) {
+	requestDef := GenReqDefForDeletePermRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePermRuleResponse), nil
+	}
+}
+
+// DeletePermRuleInvoker 删除权限规则
+func (c *SFSTurboClient) DeletePermRuleInvoker(request *model.DeletePermRuleRequest) *DeletePermRuleInvoker {
+	requestDef := GenReqDefForDeletePermRule()
+	return &DeletePermRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteShare 删除文件系统
@@ -278,6 +425,90 @@ func (c *SFSTurboClient) ExpandShareInvoker(request *model.ExpandShareRequest) *
 	return &ExpandShareInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBackendTargets 查询文件系统后端存储库列表
+//
+// 查询文件系统后端存储库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ListBackendTargets(request *model.ListBackendTargetsRequest) (*model.ListBackendTargetsResponse, error) {
+	requestDef := GenReqDefForListBackendTargets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackendTargetsResponse), nil
+	}
+}
+
+// ListBackendTargetsInvoker 查询文件系统后端存储库列表
+func (c *SFSTurboClient) ListBackendTargetsInvoker(request *model.ListBackendTargetsRequest) *ListBackendTargetsInvoker {
+	requestDef := GenReqDefForListBackendTargets()
+	return &ListBackendTargetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFsTasks 获取文件系统异步任务列表
+//
+// 获取文件系统异步任务列表（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ListFsTasks(request *model.ListFsTasksRequest) (*model.ListFsTasksResponse, error) {
+	requestDef := GenReqDefForListFsTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFsTasksResponse), nil
+	}
+}
+
+// ListFsTasksInvoker 获取文件系统异步任务列表
+func (c *SFSTurboClient) ListFsTasksInvoker(request *model.ListFsTasksRequest) *ListFsTasksInvoker {
+	requestDef := GenReqDefForListFsTasks()
+	return &ListFsTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHpcCacheTasks 查询联动任务详情列表
+//
+// 查询联动任务详情列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ListHpcCacheTasks(request *model.ListHpcCacheTasksRequest) (*model.ListHpcCacheTasksResponse, error) {
+	requestDef := GenReqDefForListHpcCacheTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHpcCacheTasksResponse), nil
+	}
+}
+
+// ListHpcCacheTasksInvoker 查询联动任务详情列表
+func (c *SFSTurboClient) ListHpcCacheTasksInvoker(request *model.ListHpcCacheTasksRequest) *ListHpcCacheTasksInvoker {
+	requestDef := GenReqDefForListHpcCacheTasks()
+	return &ListHpcCacheTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPermRules 查询文件系统的权限规则列表
+//
+// 查询文件系统的权限规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ListPermRules(request *model.ListPermRulesRequest) (*model.ListPermRulesResponse, error) {
+	requestDef := GenReqDefForListPermRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPermRulesResponse), nil
+	}
+}
+
+// ListPermRulesInvoker 查询文件系统的权限规则列表
+func (c *SFSTurboClient) ListPermRulesInvoker(request *model.ListPermRulesRequest) *ListPermRulesInvoker {
+	requestDef := GenReqDefForListPermRules()
+	return &ListPermRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSharedTags 查询租户所有共享的标签
 //
 // 查询租户所有共享的标签集合。
@@ -320,9 +551,51 @@ func (c *SFSTurboClient) ListSharesInvoker(request *model.ListSharesRequest) *Li
 	return &ListSharesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetHpcCacheBackend 配置hpc缓存型后端信息
+//
+// 配置hpc缓存型后端信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) SetHpcCacheBackend(request *model.SetHpcCacheBackendRequest) (*model.SetHpcCacheBackendResponse, error) {
+	requestDef := GenReqDefForSetHpcCacheBackend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetHpcCacheBackendResponse), nil
+	}
+}
+
+// SetHpcCacheBackendInvoker 配置hpc缓存型后端信息
+func (c *SFSTurboClient) SetHpcCacheBackendInvoker(request *model.SetHpcCacheBackendRequest) *SetHpcCacheBackendInvoker {
+	requestDef := GenReqDefForSetHpcCacheBackend()
+	return &SetHpcCacheBackendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackendTargetInfo 获取文件系统后端存储库详细信息
+//
+// 获取文件系统后端存储库详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowBackendTargetInfo(request *model.ShowBackendTargetInfoRequest) (*model.ShowBackendTargetInfoResponse, error) {
+	requestDef := GenReqDefForShowBackendTargetInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackendTargetInfoResponse), nil
+	}
+}
+
+// ShowBackendTargetInfoInvoker 获取文件系统后端存储库详细信息
+func (c *SFSTurboClient) ShowBackendTargetInfoInvoker(request *model.ShowBackendTargetInfoRequest) *ShowBackendTargetInfoInvoker {
+	requestDef := GenReqDefForShowBackendTargetInfo()
+	return &ShowBackendTargetInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFsDir 查询目录是否存在
 //
-// 查询目录是否存在 (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 查询目录是否存在
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowFsDir(request *model.ShowFsDirRequest) (*model.ShowFsDirResponse, error) {
@@ -343,7 +616,7 @@ func (c *SFSTurboClient) ShowFsDirInvoker(request *model.ShowFsDirRequest) *Show
 
 // ShowFsDirQuota 查询目标文件夹quota
 //
-// 查询目标文件夹quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 查询目标文件夹quota
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowFsDirQuota(request *model.ShowFsDirQuotaRequest) (*model.ShowFsDirQuotaResponse, error) {
@@ -360,6 +633,90 @@ func (c *SFSTurboClient) ShowFsDirQuota(request *model.ShowFsDirQuotaRequest) (*
 func (c *SFSTurboClient) ShowFsDirQuotaInvoker(request *model.ShowFsDirQuotaRequest) *ShowFsDirQuotaInvoker {
 	requestDef := GenReqDefForShowFsDirQuota()
 	return &ShowFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFsDirUsage 查询目录资源使用情况
+//
+// 查询目录资源使用情况(包括子目录的资源)。后端有5min的缓存时间，查询的数据可能有延迟。（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowFsDirUsage(request *model.ShowFsDirUsageRequest) (*model.ShowFsDirUsageResponse, error) {
+	requestDef := GenReqDefForShowFsDirUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFsDirUsageResponse), nil
+	}
+}
+
+// ShowFsDirUsageInvoker 查询目录资源使用情况
+func (c *SFSTurboClient) ShowFsDirUsageInvoker(request *model.ShowFsDirUsageRequest) *ShowFsDirUsageInvoker {
+	requestDef := GenReqDefForShowFsDirUsage()
+	return &ShowFsDirUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFsTask 获取文件系统异步任务详情
+//
+// 获取文件系统异步任务详情（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowFsTask(request *model.ShowFsTaskRequest) (*model.ShowFsTaskResponse, error) {
+	requestDef := GenReqDefForShowFsTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFsTaskResponse), nil
+	}
+}
+
+// ShowFsTaskInvoker 获取文件系统异步任务详情
+func (c *SFSTurboClient) ShowFsTaskInvoker(request *model.ShowFsTaskRequest) *ShowFsTaskInvoker {
+	requestDef := GenReqDefForShowFsTask()
+	return &ShowFsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHpcCacheTask 查询联动任务详情
+//
+// 查询联动任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowHpcCacheTask(request *model.ShowHpcCacheTaskRequest) (*model.ShowHpcCacheTaskResponse, error) {
+	requestDef := GenReqDefForShowHpcCacheTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHpcCacheTaskResponse), nil
+	}
+}
+
+// ShowHpcCacheTaskInvoker 查询联动任务详情
+func (c *SFSTurboClient) ShowHpcCacheTaskInvoker(request *model.ShowHpcCacheTaskRequest) *ShowHpcCacheTaskInvoker {
+	requestDef := GenReqDefForShowHpcCacheTask()
+	return &ShowHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPermRule 查询文件系统的某一个权限规则
+//
+// 查询文件系统的某一个权限规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowPermRule(request *model.ShowPermRuleRequest) (*model.ShowPermRuleResponse, error) {
+	requestDef := GenReqDefForShowPermRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPermRuleResponse), nil
+	}
+}
+
+// ShowPermRuleInvoker 查询文件系统的某一个权限规则
+func (c *SFSTurboClient) ShowPermRuleInvoker(request *model.ShowPermRuleRequest) *ShowPermRuleInvoker {
+	requestDef := GenReqDefForShowPermRule()
+	return &ShowPermRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowShare 查询文件系统详细信息
@@ -406,7 +763,7 @@ func (c *SFSTurboClient) ShowSharedTagsInvoker(request *model.ShowSharedTagsRequ
 
 // UpdateFsDirQuota 更新目标文件夹quota
 //
-// 更新目标文件夹quota (目前已上线的局点：上海一、上海二、北京二、北京四、乌兰察布一、广州、贵阳一、中国-香港、亚太-新加坡、亚太-曼谷)
+// 更新目标文件夹quota
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) UpdateFsDirQuota(request *model.UpdateFsDirQuotaRequest) (*model.UpdateFsDirQuotaResponse, error) {
@@ -423,4 +780,46 @@ func (c *SFSTurboClient) UpdateFsDirQuota(request *model.UpdateFsDirQuotaRequest
 func (c *SFSTurboClient) UpdateFsDirQuotaInvoker(request *model.UpdateFsDirQuotaRequest) *UpdateFsDirQuotaInvoker {
 	requestDef := GenReqDefForUpdateFsDirQuota()
 	return &UpdateFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHpcShare 更新文件系统
+//
+// 设置文件系统冷数据淘汰时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) UpdateHpcShare(request *model.UpdateHpcShareRequest) (*model.UpdateHpcShareResponse, error) {
+	requestDef := GenReqDefForUpdateHpcShare()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHpcShareResponse), nil
+	}
+}
+
+// UpdateHpcShareInvoker 更新文件系统
+func (c *SFSTurboClient) UpdateHpcShareInvoker(request *model.UpdateHpcShareRequest) *UpdateHpcShareInvoker {
+	requestDef := GenReqDefForUpdateHpcShare()
+	return &UpdateHpcShareInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePermRule 修改权限规则
+//
+// 修改权限规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) UpdatePermRule(request *model.UpdatePermRuleRequest) (*model.UpdatePermRuleResponse, error) {
+	requestDef := GenReqDefForUpdatePermRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePermRuleResponse), nil
+	}
+}
+
+// UpdatePermRuleInvoker 修改权限规则
+func (c *SFSTurboClient) UpdatePermRuleInvoker(request *model.UpdatePermRuleRequest) *UpdatePermRuleInvoker {
+	requestDef := GenReqDefForUpdatePermRule()
+	return &UpdatePermRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

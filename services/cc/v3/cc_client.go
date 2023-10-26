@@ -760,6 +760,27 @@ func (c *CcClient) UpdateCentralNetworkGdgwAttachmentInvoker(request *model.Upda
 	return &UpdateCentralNetworkGdgwAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCentralNetworkCapabilities 查询中心网络能力列表
+//
+// 查询中心网络能力列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkCapabilities(request *model.ListCentralNetworkCapabilitiesRequest) (*model.ListCentralNetworkCapabilitiesResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkCapabilities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkCapabilitiesResponse), nil
+	}
+}
+
+// ListCentralNetworkCapabilitiesInvoker 查询中心网络能力列表
+func (c *CcClient) ListCentralNetworkCapabilitiesInvoker(request *model.ListCentralNetworkCapabilitiesRequest) *ListCentralNetworkCapabilitiesInvoker {
+	requestDef := GenReqDefForListCentralNetworkCapabilities()
+	return &ListCentralNetworkCapabilitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCentralNetworkConnections 查询中心网络连接列表
 //
 // 查询中心网络连接列表接口。

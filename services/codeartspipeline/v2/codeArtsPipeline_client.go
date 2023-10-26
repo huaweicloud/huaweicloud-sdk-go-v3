@@ -19,6 +19,27 @@ func CodeArtsPipelineClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AcceptManualReview 通过人工审核
+//
+// 通过人工审核
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) AcceptManualReview(request *model.AcceptManualReviewRequest) (*model.AcceptManualReviewResponse, error) {
+	requestDef := GenReqDefForAcceptManualReview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptManualReviewResponse), nil
+	}
+}
+
+// AcceptManualReviewInvoker 通过人工审核
+func (c *CodeArtsPipelineClient) AcceptManualReviewInvoker(request *model.AcceptManualReviewRequest) *AcceptManualReviewInvoker {
+	requestDef := GenReqDefForAcceptManualReview()
+	return &AcceptManualReviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchShowPipelinesLatestStatus 批量获取流水线状态
 //
 // 批量获取流水线状态
@@ -101,6 +122,27 @@ func (c *CodeArtsPipelineClient) CreatePipelineByTemplateId(request *model.Creat
 func (c *CodeArtsPipelineClient) CreatePipelineByTemplateIdInvoker(request *model.CreatePipelineByTemplateIdRequest) *CreatePipelineByTemplateIdInvoker {
 	requestDef := GenReqDefForCreatePipelineByTemplateId()
 	return &CreatePipelineByTemplateIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePipelineNew 创建流水线
+//
+// 创建流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreatePipelineNew(request *model.CreatePipelineNewRequest) (*model.CreatePipelineNewResponse, error) {
+	requestDef := GenReqDefForCreatePipelineNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePipelineNewResponse), nil
+	}
+}
+
+// CreatePipelineNewInvoker 创建流水线
+func (c *CodeArtsPipelineClient) CreatePipelineNewInvoker(request *model.CreatePipelineNewRequest) *CreatePipelineNewInvoker {
+	requestDef := GenReqDefForCreatePipelineNew()
+	return &CreatePipelineNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePipeline 删除流水线
@@ -250,6 +292,27 @@ func (c *CodeArtsPipelineClient) ListTemplatesInvoker(request *model.ListTemplat
 	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RejectManualReview 驳回人工审核
+//
+// 驳回人工审核
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) RejectManualReview(request *model.RejectManualReviewRequest) (*model.RejectManualReviewResponse, error) {
+	requestDef := GenReqDefForRejectManualReview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RejectManualReviewResponse), nil
+	}
+}
+
+// RejectManualReviewInvoker 驳回人工审核
+func (c *CodeArtsPipelineClient) RejectManualReviewInvoker(request *model.RejectManualReviewRequest) *RejectManualReviewInvoker {
+	requestDef := GenReqDefForRejectManualReview()
+	return &RejectManualReviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RemovePipeline 删除流水线
 //
 // 根据id删除流水线
@@ -269,6 +332,27 @@ func (c *CodeArtsPipelineClient) RemovePipeline(request *model.RemovePipelineReq
 func (c *CodeArtsPipelineClient) RemovePipelineInvoker(request *model.RemovePipelineRequest) *RemovePipelineInvoker {
 	requestDef := GenReqDefForRemovePipeline()
 	return &RemovePipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryPipelineRun 重试运行流水线
+//
+// 重试运行流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) RetryPipelineRun(request *model.RetryPipelineRunRequest) (*model.RetryPipelineRunResponse, error) {
+	requestDef := GenReqDefForRetryPipelineRun()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryPipelineRunResponse), nil
+	}
+}
+
+// RetryPipelineRunInvoker 重试运行流水线
+func (c *CodeArtsPipelineClient) RetryPipelineRunInvoker(request *model.RetryPipelineRunRequest) *RetryPipelineRunInvoker {
+	requestDef := GenReqDefForRetryPipelineRun()
+	return &RetryPipelineRunInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunPipeline 启动流水线

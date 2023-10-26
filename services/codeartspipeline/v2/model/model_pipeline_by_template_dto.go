@@ -19,6 +19,9 @@ type PipelineByTemplateDto struct {
 
 	// 流水线源
 	Sources *[]CodeSource `json:"sources,omitempty"`
+
+	// 流水线参数
+	Variables *[]PipelineByTemplateDtoVariables `json:"variables,omitempty"`
 }
 
 func (o PipelineByTemplateDto) String() string {

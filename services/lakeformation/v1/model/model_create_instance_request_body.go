@@ -27,9 +27,6 @@ type CreateInstanceRequestBody struct {
 	// false为物理多租；true为逻辑多租。默认为true。
 	Shared bool `json:"shared"`
 
-	// 包周期订购时的订单ID。
-	OrderId *string `json:"order_id,omitempty"`
-
 	// 规格列表
 	Specs *[]CreateSpec `json:"specs,omitempty"`
 

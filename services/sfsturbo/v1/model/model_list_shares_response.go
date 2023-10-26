@@ -10,7 +10,7 @@ import (
 type ListSharesResponse struct {
 
 	// SFS Turbo文件系统的列表。
-	Shares *[]Shares `json:"shares,omitempty"`
+	Shares *[]ShareInfo `json:"shares,omitempty"`
 
 	// SFS Turbo文件系统的数量。
 	Count          *int32 `json:"count,omitempty"`

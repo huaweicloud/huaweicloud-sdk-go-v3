@@ -756,7 +756,7 @@ func (c *AosClient) CreateStackSetInvoker(request *model.CreateStackSetRequest) 
 //
 // 此API用于删除指定资源栈集下指定局点（region）或指定成员账户（domain_id）的资源栈实例，并返回资源栈集操作ID（stack_set_operation_id）
 //
-// **请谨慎操作，删除资源栈实例将会删除与该资源栈实例相关的堆栈以及堆栈所管理的一切资源。
+// **请谨慎操作，删除资源栈实例将会删除与该资源栈实例相关的堆栈以及堆栈所管理的一切资源。**
 //
 // * 用户可以根据资源栈集操作ID（stack_set_operation_id），通过ShowStackSetOperationMetadata API获取资源栈集操作状态
 //
@@ -919,6 +919,29 @@ func (c *AosClient) ListStackSetsInvoker(request *model.ListStackSetsRequest) *L
 	return &ListStackSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowStackInstance 获取资源栈实例
+//
+// 获取资源栈实例（ShowStackInstance）
+//
+// 用户可以使用此API获取资源栈实例的详细信息，包括关联资源栈名称与id，创建时间，参数覆盖等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ShowStackInstance(request *model.ShowStackInstanceRequest) (*model.ShowStackInstanceResponse, error) {
+	requestDef := GenReqDefForShowStackInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStackInstanceResponse), nil
+	}
+}
+
+// ShowStackInstanceInvoker 获取资源栈实例
+func (c *AosClient) ShowStackInstanceInvoker(request *model.ShowStackInstanceRequest) *ShowStackInstanceInvoker {
+	requestDef := GenReqDefForShowStackInstance()
+	return &ShowStackInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowStackSetMetadata 获取资源栈集元数据
 //
 // 获取资源栈集元数据（ShowStackSetMetadata）
@@ -991,6 +1014,39 @@ func (c *AosClient) ShowStackSetTemplate(request *model.ShowStackSetTemplateRequ
 func (c *AosClient) ShowStackSetTemplateInvoker(request *model.ShowStackSetTemplateRequest) *ShowStackSetTemplateInvoker {
 	requestDef := GenReqDefForShowStackSetTemplate()
 	return &ShowStackSetTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStackInstances 更新资源栈实例
+//
+// 更新资源栈实例（UpdateStackInstances）
+//
+// 此API用于更新并部署指定资源栈实例集合，并返回资源栈集操作ID（stack_set_operation_id）
+//
+// 此API可以通过var_overrides参数，更新指定资源栈实例的参数值，进行参数覆盖。若var_overrides参数未给与，则默认使用当前资源栈集中记录的参数进行部署，详见：var_overrides参数描述。用户只可以更新已经存在的资源栈实例，如果用户想要增加额外的资源栈实例，请使用CreateStackInstances API。
+//
+// 通过DeployStackSet API更新资源栈集参数后，资源栈实例中已经被覆盖的参数不会被更新，仍然保留覆盖值。
+//
+// 用户只能覆盖已经在资源栈集中记录的参数，如果用户想要增加可以覆盖的参数，需要先通过DeployStackSet API更新资源栈集记录的参数集合。
+//
+// * 当触发的部署失败时，资源栈实例不会自动回滚参数覆盖，但部署失败的资源栈会默认自动回滚，已经部署成功的资源栈不会触发回滚。
+//
+// * 用户可以根据资源栈集操作ID（stack_set_operation_id），通过ShowStackSetOperationMetadata API获取资源栈集操作状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) UpdateStackInstances(request *model.UpdateStackInstancesRequest) (*model.UpdateStackInstancesResponse, error) {
+	requestDef := GenReqDefForUpdateStackInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStackInstancesResponse), nil
+	}
+}
+
+// UpdateStackInstancesInvoker 更新资源栈实例
+func (c *AosClient) UpdateStackInstancesInvoker(request *model.UpdateStackInstancesRequest) *UpdateStackInstancesInvoker {
+	requestDef := GenReqDefForUpdateStackInstances()
+	return &UpdateStackInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateStackSet 更新资源栈集

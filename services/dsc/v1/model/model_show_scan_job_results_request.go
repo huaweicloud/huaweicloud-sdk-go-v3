@@ -24,10 +24,10 @@ type ShowScanJobResultsRequest struct {
 	// 资产类型
 	Type *ShowScanJobResultsRequestType `json:"type,omitempty"`
 
-	// 预留，待启用
+	// 起始时间（预留，待启用）
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 预留，待启用
+	// 结束时间（预留，待启用）
 	EndTime *string `json:"end_time,omitempty"`
 }
 

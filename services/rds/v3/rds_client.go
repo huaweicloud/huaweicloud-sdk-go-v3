@@ -731,6 +731,27 @@ func (c *RdsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListF
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceDiagnosis 获取诊断后的实例数量
+//
+// 获取诊断后的实例数量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstanceDiagnosis(request *model.ListInstanceDiagnosisRequest) (*model.ListInstanceDiagnosisResponse, error) {
+	requestDef := GenReqDefForListInstanceDiagnosis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceDiagnosisResponse), nil
+	}
+}
+
+// ListInstanceDiagnosisInvoker 获取诊断后的实例数量
+func (c *RdsClient) ListInstanceDiagnosisInvoker(request *model.ListInstanceDiagnosisRequest) *ListInstanceDiagnosisInvoker {
+	requestDef := GenReqDefForListInstanceDiagnosis()
+	return &ListInstanceDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceParamHistories 查询实例参数修改历史
 //
 // 实例参数修改历史。
@@ -792,6 +813,27 @@ func (c *RdsClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 func (c *RdsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
 	requestDef := GenReqDefForListInstances()
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesInfoDiagnosis 获取指定诊断项的诊断结果
+//
+// 获取指定诊断项的诊断结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesInfoDiagnosis(request *model.ListInstancesInfoDiagnosisRequest) (*model.ListInstancesInfoDiagnosisResponse, error) {
+	requestDef := GenReqDefForListInstancesInfoDiagnosis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesInfoDiagnosisResponse), nil
+	}
+}
+
+// ListInstancesInfoDiagnosisInvoker 获取指定诊断项的诊断结果
+func (c *RdsClient) ListInstancesInfoDiagnosisInvoker(request *model.ListInstancesInfoDiagnosisRequest) *ListInstancesInfoDiagnosisInvoker {
+	requestDef := GenReqDefForListInstancesInfoDiagnosis()
+	return &ListInstancesInfoDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstancesRecommendation 查询购买推荐

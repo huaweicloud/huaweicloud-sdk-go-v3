@@ -18,6 +18,9 @@ type ListBatchesRequest struct {
 	// 起始批处理作业的索引号，默认从0开始。
 	From *int32 `json:"from,omitempty"`
 
+	// 批处理作业的名称。
+	JobName *string `json:"job-name,omitempty"`
+
 	JobId *string `json:"job-id,omitempty"`
 
 	// 指定作业排序方式，默认为CREATE_TIME_DESC（作业提交时间降序），支持DURATION_DESC（作业运行时长降序）、DURATION_ASC（作业运行时长升序）、CREATE_TIME_DESC（作业提交时间降序）、CREATE_TIME_ASC（作业提交时间升序）四种排序方式。

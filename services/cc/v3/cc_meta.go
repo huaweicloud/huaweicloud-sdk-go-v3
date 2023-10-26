@@ -882,6 +882,22 @@ func GenReqDefForUpdateCentralNetworkGdgwAttachment() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCentralNetworkCapabilities() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{domain_id}/gcn/capabilities").
+		WithResponse(new(model.ListCentralNetworkCapabilitiesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Capability").
+		WithJsonTag("capability").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCentralNetworkConnections() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

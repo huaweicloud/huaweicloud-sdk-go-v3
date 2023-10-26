@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// UpdateNotificationMasksRequest Request Object
-type UpdateNotificationMasksRequest struct {
+// UpdateNotificationMaskRequest Request Object
+type UpdateNotificationMaskRequest struct {
 
 	// 屏蔽规则ID
 	NotificationMaskId string `json:"notification_mask_id"`
@@ -15,11 +15,11 @@ type UpdateNotificationMasksRequest struct {
 	Body *UpdateNotificationMasksRequestBody `json:"body,omitempty"`
 }
 
-func (o UpdateNotificationMasksRequest) String() string {
+func (o UpdateNotificationMaskRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UpdateNotificationMasksRequest struct{}"
+		return "UpdateNotificationMaskRequest struct{}"
 	}
 
-	return strings.Join([]string{"UpdateNotificationMasksRequest", string(data)}, " ")
+	return strings.Join([]string{"UpdateNotificationMaskRequest", string(data)}, " ")
 }

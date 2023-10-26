@@ -65,6 +65,18 @@ func (i *ChangeMasterStandbyInvoker) Invoke() (*model.ChangeMasterStandbyRespons
 	}
 }
 
+type CheckMigrationConnectivityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckMigrationConnectivityInvoker) Invoke() (*model.CheckMigrationConnectivityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckMigrationConnectivityResponse), nil
+	}
+}
+
 type CopyInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +206,18 @@ func (i *CreateOnlineMigrationTaskInvoker) Invoke() (*model.CreateOnlineMigratio
 		return nil, err
 	} else {
 		return result.(*model.CreateOnlineMigrationTaskResponse), nil
+	}
+}
+
+type CreateOrUpdateBackUpInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrUpdateBackUpInfoInvoker) Invoke() (*model.CreateOrUpdateBackUpInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrUpdateBackUpInfoResponse), nil
 	}
 }
 
@@ -329,6 +353,18 @@ func (i *DeleteSingleInstanceInvoker) Invoke() (*model.DeleteSingleInstanceRespo
 	}
 }
 
+type ExchangeInstanceIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExchangeInstanceIpInvoker) Invoke() (*model.ExchangeInstanceIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExchangeInstanceIpResponse), nil
+	}
+}
+
 type ExecuteClusterSwitchoverInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +374,18 @@ func (i *ExecuteClusterSwitchoverInvoker) Invoke() (*model.ExecuteClusterSwitcho
 		return nil, err
 	} else {
 		return result.(*model.ExecuteClusterSwitchoverResponse), nil
+	}
+}
+
+type ExecuteCommandMobilizationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCommandMobilizationInvoker) Invoke() (*model.ExecuteCommandMobilizationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCommandMobilizationResponse), nil
 	}
 }
 
@@ -410,6 +458,18 @@ func (i *ListBigkeyScanTasksInvoker) Invoke() (*model.ListBigkeyScanTasksRespons
 		return nil, err
 	} else {
 		return result.(*model.ListBigkeyScanTasksResponse), nil
+	}
+}
+
+type ListCenterTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCenterTaskInvoker) Invoke() (*model.ListCenterTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCenterTaskResponse), nil
 	}
 }
 
@@ -533,6 +593,18 @@ func (i *ListMigrationTaskInvoker) Invoke() (*model.ListMigrationTaskResponse, e
 	}
 }
 
+type ListMigrationTaskLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMigrationTaskLogsInvoker) Invoke() (*model.ListMigrationTaskLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMigrationTaskLogsResponse), nil
+	}
+}
+
 type ListMonitoredObjectsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -629,6 +701,18 @@ func (i *ListTagsOfTenantInvoker) Invoke() (*model.ListTagsOfTenantResponse, err
 	}
 }
 
+type LoginWebCliInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LoginWebCliInvoker) Invoke() (*model.LoginWebCliResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LoginWebCliResponse), nil
+	}
+}
+
 type ResetAclAccountPassWordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -689,6 +773,18 @@ func (i *RestoreInstanceInvoker) Invoke() (*model.RestoreInstanceResponse, error
 	}
 }
 
+type ScanExpireKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ScanExpireKeyInvoker) Invoke() (*model.ScanExpireKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ScanExpireKeyResponse), nil
+	}
+}
+
 type SetOnlineMigrationTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -698,6 +794,30 @@ func (i *SetOnlineMigrationTaskInvoker) Invoke() (*model.SetOnlineMigrationTaskR
 		return nil, err
 	} else {
 		return result.(*model.SetOnlineMigrationTaskResponse), nil
+	}
+}
+
+type ShowBackUpInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackUpInfoInvoker) Invoke() (*model.ShowBackUpInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackUpInfoResponse), nil
+	}
+}
+
+type ShowBackgroundTaskProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackgroundTaskProgressInvoker) Invoke() (*model.ShowBackgroundTaskProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackgroundTaskProgressResponse), nil
 	}
 }
 
@@ -746,6 +866,18 @@ func (i *ShowDiagnosisTaskDetailsInvoker) Invoke() (*model.ShowDiagnosisTaskDeta
 		return nil, err
 	} else {
 		return result.(*model.ShowDiagnosisTaskDetailsResponse), nil
+	}
+}
+
+type ShowExpireKeyScanInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExpireKeyScanInfoInvoker) Invoke() (*model.ShowExpireKeyScanInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExpireKeyScanInfoResponse), nil
 	}
 }
 
@@ -866,6 +998,18 @@ func (i *ShowTagsInvoker) Invoke() (*model.ShowTagsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTagsResponse), nil
+	}
+}
+
+type StartInstanceResizeCheckJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartInstanceResizeCheckJobInvoker) Invoke() (*model.StartInstanceResizeCheckJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartInstanceResizeCheckJobResponse), nil
 	}
 }
 
@@ -998,6 +1142,18 @@ func (i *UpdateInstanceBandwidthInvoker) Invoke() (*model.UpdateInstanceBandwidt
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceBandwidthResponse), nil
+	}
+}
+
+type UpdateMigrationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMigrationTaskInvoker) Invoke() (*model.UpdateMigrationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMigrationTaskResponse), nil
 	}
 }
 

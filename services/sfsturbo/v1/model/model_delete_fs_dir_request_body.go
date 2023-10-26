@@ -9,7 +9,7 @@ import (
 // DeleteFsDirRequestBody 删除目录请求
 type DeleteFsDirRequestBody struct {
 
-	// 合法的的目录全路径
+	// 合法的目录全路径
 	Path string `json:"path"`
 }
 

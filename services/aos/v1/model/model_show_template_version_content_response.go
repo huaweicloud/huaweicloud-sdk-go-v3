@@ -8,6 +8,10 @@ import (
 
 // ShowTemplateVersionContentResponse Response Object
 type ShowTemplateVersionContentResponse struct {
+
+	// 空响应体
+	Body *string `json:"body,omitempty"`
+
 	Location       *string `json:"Location,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

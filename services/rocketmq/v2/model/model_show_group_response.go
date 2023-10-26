@@ -21,6 +21,9 @@ type ShowGroupResponse struct {
 	// 消费组名称。
 	Name *string `json:"name,omitempty"`
 
+	// 消费组描述。
+	GroupDesc *string `json:"group_desc,omitempty"`
+
 	// 最大重试次数。
 	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
 

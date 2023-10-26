@@ -17,6 +17,30 @@ func (i *CheckImageModerationInvoker) Invoke() (*model.CheckImageModerationRespo
 	}
 }
 
+type RunCloseAudioStreamModerationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunCloseAudioStreamModerationJobInvoker) Invoke() (*model.RunCloseAudioStreamModerationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunCloseAudioStreamModerationJobResponse), nil
+	}
+}
+
+type RunCloseVideoStreamModerationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunCloseVideoStreamModerationJobInvoker) Invoke() (*model.RunCloseVideoStreamModerationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunCloseVideoStreamModerationJobResponse), nil
+	}
+}
+
 type RunCreateAudioModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -29,6 +53,18 @@ func (i *RunCreateAudioModerationJobInvoker) Invoke() (*model.RunCreateAudioMode
 	}
 }
 
+type RunCreateAudioStreamModerationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunCreateAudioStreamModerationJobInvoker) Invoke() (*model.RunCreateAudioStreamModerationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunCreateAudioStreamModerationJobResponse), nil
+	}
+}
+
 type RunCreateVideoModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +74,18 @@ func (i *RunCreateVideoModerationJobInvoker) Invoke() (*model.RunCreateVideoMode
 		return nil, err
 	} else {
 		return result.(*model.RunCreateVideoModerationJobResponse), nil
+	}
+}
+
+type RunCreateVideoStreamModerationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunCreateVideoStreamModerationJobInvoker) Invoke() (*model.RunCreateVideoStreamModerationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunCreateVideoStreamModerationJobResponse), nil
 	}
 }
 

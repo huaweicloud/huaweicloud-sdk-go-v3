@@ -1846,6 +1846,10 @@ func GenReqDefForListBatches() *def.HttpRequestDef {
 		WithJsonTag("from").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobName").
+		WithJsonTag("job-name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job-id").
 		WithLocationType(def.Query))
