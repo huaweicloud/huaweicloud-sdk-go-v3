@@ -145,6 +145,27 @@ func (c *GaussDBClient) ChangeGaussMySqlProxySpecificationInvoker(request *model
 	return &ChangeGaussMySqlProxySpecificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckResource 资源预校验
+//
+// 资源预校验。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CheckResource(request *model.CheckResourceRequest) (*model.CheckResourceResponse, error) {
+	requestDef := GenReqDefForCheckResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckResourceResponse), nil
+	}
+}
+
+// CheckResourceInvoker 资源预校验
+func (c *GaussDBClient) CheckResourceInvoker(request *model.CheckResourceRequest) *CheckResourceInvoker {
+	requestDef := GenReqDefForCheckResource()
+	return &CheckResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyConfigurations 复制参数组
 //
 // 复制参数组。
@@ -164,6 +185,27 @@ func (c *GaussDBClient) CopyConfigurations(request *model.CopyConfigurationsRequ
 func (c *GaussDBClient) CopyConfigurationsInvoker(request *model.CopyConfigurationsRequest) *CopyConfigurationsInvoker {
 	requestDef := GenReqDefForCopyConfigurations()
 	return &CopyConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyInstanceConfigurations 复制实例参数组
+//
+// 复制实例参数组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CopyInstanceConfigurations(request *model.CopyInstanceConfigurationsRequest) (*model.CopyInstanceConfigurationsResponse, error) {
+	requestDef := GenReqDefForCopyInstanceConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyInstanceConfigurationsResponse), nil
+	}
+}
+
+// CopyInstanceConfigurationsInvoker 复制实例参数组
+func (c *GaussDBClient) CopyInstanceConfigurationsInvoker(request *model.CopyInstanceConfigurationsRequest) *CopyInstanceConfigurationsInvoker {
+	requestDef := GenReqDefForCopyInstanceConfigurations()
+	return &CopyInstanceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAccessControl 设置访问控制规则
@@ -1301,6 +1343,27 @@ func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) 
 	return &ShowAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAutoScalingPolicy 查询自动变配
+//
+// 查询自动变配。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowAutoScalingPolicy(request *model.ShowAutoScalingPolicyRequest) (*model.ShowAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoScalingPolicyResponse), nil
+	}
+}
+
+// ShowAutoScalingPolicyInvoker 查询自动变配
+func (c *GaussDBClient) ShowAutoScalingPolicyInvoker(request *model.ShowAutoScalingPolicyRequest) *ShowAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForShowAutoScalingPolicy()
+	return &ShowAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBackupRestoreTime 查询可恢复时间段
 //
 // 查询实例的可恢复时间段。
@@ -1343,9 +1406,9 @@ func (c *GaussDBClient) ShowDedicatedResourceInfoInvoker(request *model.ShowDedi
 	return &ShowDedicatedResourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowGaussMySqlBackupList 查询备份列表
+// ShowGaussMySqlBackupList 查询全量备份列表
 //
-// 查询备份列表。
+// 查询全量备份列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBClient) ShowGaussMySqlBackupList(request *model.ShowGaussMySqlBackupListRequest) (*model.ShowGaussMySqlBackupListResponse, error) {
@@ -1358,7 +1421,7 @@ func (c *GaussDBClient) ShowGaussMySqlBackupList(request *model.ShowGaussMySqlBa
 	}
 }
 
-// ShowGaussMySqlBackupListInvoker 查询备份列表
+// ShowGaussMySqlBackupListInvoker 查询全量备份列表
 func (c *GaussDBClient) ShowGaussMySqlBackupListInvoker(request *model.ShowGaussMySqlBackupListRequest) *ShowGaussMySqlBackupListInvoker {
 	requestDef := GenReqDefForShowGaussMySqlBackupList()
 	return &ShowGaussMySqlBackupListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1595,6 +1658,27 @@ func (c *GaussDBClient) ShowGaussMySqlQuotasInvoker(request *model.ShowGaussMySq
 	return &ShowGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceDatabaseVersion 查询内核版本信息
+//
+// 查询内核版本信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowInstanceDatabaseVersion(request *model.ShowInstanceDatabaseVersionRequest) (*model.ShowInstanceDatabaseVersionResponse, error) {
+	requestDef := GenReqDefForShowInstanceDatabaseVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceDatabaseVersionResponse), nil
+	}
+}
+
+// ShowInstanceDatabaseVersionInvoker 查询内核版本信息
+func (c *GaussDBClient) ShowInstanceDatabaseVersionInvoker(request *model.ShowInstanceDatabaseVersionRequest) *ShowInstanceDatabaseVersionInvoker {
+	requestDef := GenReqDefForShowInstanceDatabaseVersion()
+	return &ShowInstanceDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceMonitorExtend 查询实例秒级监控
 //
 // 查询实例秒级监控信息。
@@ -1614,6 +1698,70 @@ func (c *GaussDBClient) ShowInstanceMonitorExtend(request *model.ShowInstanceMon
 func (c *GaussDBClient) ShowInstanceMonitorExtendInvoker(request *model.ShowInstanceMonitorExtendRequest) *ShowInstanceMonitorExtendInvoker {
 	requestDef := GenReqDefForShowInstanceMonitorExtend()
 	return &ShowInstanceMonitorExtendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIntelligentDiagnosisAbnormalCountOfInstances 获取各指标的异常实例数
+//
+// 获取各指标的异常实例数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowIntelligentDiagnosisAbnormalCountOfInstances(request *model.ShowIntelligentDiagnosisAbnormalCountOfInstancesRequest) (*model.ShowIntelligentDiagnosisAbnormalCountOfInstancesResponse, error) {
+	requestDef := GenReqDefForShowIntelligentDiagnosisAbnormalCountOfInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIntelligentDiagnosisAbnormalCountOfInstancesResponse), nil
+	}
+}
+
+// ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker 获取各指标的异常实例数
+func (c *GaussDBClient) ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker(request *model.ShowIntelligentDiagnosisAbnormalCountOfInstancesRequest) *ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker {
+	requestDef := GenReqDefForShowIntelligentDiagnosisAbnormalCountOfInstances()
+	return &ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIntelligentDiagnosisInstanceInfosPerMetric 获取某个指标的异常实例信息
+//
+// 获取某个指标的异常实例信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowIntelligentDiagnosisInstanceInfosPerMetric(request *model.ShowIntelligentDiagnosisInstanceInfosPerMetricRequest) (*model.ShowIntelligentDiagnosisInstanceInfosPerMetricResponse, error) {
+	requestDef := GenReqDefForShowIntelligentDiagnosisInstanceInfosPerMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIntelligentDiagnosisInstanceInfosPerMetricResponse), nil
+	}
+}
+
+// ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker 获取某个指标的异常实例信息
+func (c *GaussDBClient) ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker(request *model.ShowIntelligentDiagnosisInstanceInfosPerMetricRequest) *ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker {
+	requestDef := GenReqDefForShowIntelligentDiagnosisInstanceInfosPerMetric()
+	return &ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShrinkGaussMySqlProxy 减少数据库代理节点的数量
+//
+// 缩容数据库代理节点的数量。
+// DeC专属云账号暂不支持数据库代理。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShrinkGaussMySqlProxy(request *model.ShrinkGaussMySqlProxyRequest) (*model.ShrinkGaussMySqlProxyResponse, error) {
+	requestDef := GenReqDefForShrinkGaussMySqlProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShrinkGaussMySqlProxyResponse), nil
+	}
+}
+
+// ShrinkGaussMySqlProxyInvoker 减少数据库代理节点的数量
+func (c *GaussDBClient) ShrinkGaussMySqlProxyInvoker(request *model.ShrinkGaussMySqlProxyRequest) *ShrinkGaussMySqlProxyInvoker {
+	requestDef := GenReqDefForShrinkGaussMySqlProxy()
+	return &ShrinkGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchAccessControl 开启或关闭访问控制
@@ -1698,6 +1846,27 @@ func (c *GaussDBClient) UpdateAuditLog(request *model.UpdateAuditLogRequest) (*m
 func (c *GaussDBClient) UpdateAuditLogInvoker(request *model.UpdateAuditLogRequest) *UpdateAuditLogInvoker {
 	requestDef := GenReqDefForUpdateAuditLog()
 	return &UpdateAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAutoScalingPolicy 设置自动变配
+//
+// 设置自动变配。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateAutoScalingPolicy(request *model.UpdateAutoScalingPolicyRequest) (*model.UpdateAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutoScalingPolicyResponse), nil
+	}
+}
+
+// UpdateAutoScalingPolicyInvoker 设置自动变配
+func (c *GaussDBClient) UpdateAutoScalingPolicyInvoker(request *model.UpdateAutoScalingPolicyRequest) *UpdateAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForUpdateAutoScalingPolicy()
+	return &UpdateAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBackupOffsitePolicy 设置跨区备份策略
@@ -1971,6 +2140,27 @@ func (c *GaussDBClient) UpdateGaussMySqlQuotas(request *model.UpdateGaussMySqlQu
 func (c *GaussDBClient) UpdateGaussMySqlQuotasInvoker(request *model.UpdateGaussMySqlQuotasRequest) *UpdateGaussMySqlQuotasInvoker {
 	requestDef := GenReqDefForUpdateGaussMySqlQuotas()
 	return &UpdateGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceConfigurations 修改指定实例的参数
+//
+// 修改指定实例的参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateInstanceConfigurations(request *model.UpdateInstanceConfigurationsRequest) (*model.UpdateInstanceConfigurationsResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceConfigurationsResponse), nil
+	}
+}
+
+// UpdateInstanceConfigurationsInvoker 修改指定实例的参数
+func (c *GaussDBClient) UpdateInstanceConfigurationsInvoker(request *model.UpdateInstanceConfigurationsRequest) *UpdateInstanceConfigurationsInvoker {
+	requestDef := GenReqDefForUpdateInstanceConfigurations()
+	return &UpdateInstanceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceMonitor 设置实例秒级监控

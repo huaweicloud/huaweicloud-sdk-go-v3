@@ -9,22 +9,22 @@ import (
 // ListAlertsResponse Response Object
 type ListAlertsResponse struct {
 
-	// Id value
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
-	// tatal count
+	// 告警总数
 	Total *int32 `json:"total,omitempty"`
 
-	// 当前页大小
+	// 分页大小
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 当前页码
+	// 偏移量
 	Offset *int32 `json:"offset,omitempty"`
 
-	// success
+	// 是否成功
 	Success *bool `json:"success,omitempty"`
 
 	// 告警列表

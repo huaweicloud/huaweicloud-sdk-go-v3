@@ -26,6 +26,9 @@ type CreateNatGatewaySnatRuleOption struct {
 
 	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。
 	FloatingIpId string `json:"floating_ip_id"`
+
+	// 全域弹性公网IP的id。
+	GlobalEipId *string `json:"global_eip_id,omitempty"`
 }
 
 func (o CreateNatGatewaySnatRuleOption) String() string {

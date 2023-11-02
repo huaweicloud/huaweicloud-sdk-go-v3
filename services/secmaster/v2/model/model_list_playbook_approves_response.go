@@ -9,12 +9,13 @@ import (
 // ListPlaybookApprovesResponse Response Object
 type ListPlaybookApprovesResponse struct {
 
-	// Error code
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 响应消息
 	Message *string `json:"message,omitempty"`
 
+	// 剧本审核详情
 	Data *[]ApproveOpinionDetail `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

@@ -9,29 +9,32 @@ import (
 // IndicatorListSearchRequest indicator list query request
 type IndicatorListSearchRequest struct {
 
-	// id list
+	// 指标ID列表
 	Ids *[]string `json:"ids,omitempty"`
 
 	// 指标名称
 	Name *string `json:"name,omitempty"`
 
-	// 类型（SIMULATION,PLAYBOOK,MANUAL,INSTANCE,DATA_SOURCE）
-	Type *string `json:"type,omitempty"`
-
 	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
-	// search condition
-	Condition *string `json:"condition,omitempty"`
+	// 查询条件
+	Condition string `json:"condition"`
 
 	// request offset, from 0
-	Offset *int32 `json:"offset,omitempty"`
+	Offset int32 `json:"offset"`
 
 	// request limit size
-	Limit *int32 `json:"limit,omitempty"`
+	Limit int32 `json:"limit"`
 
 	// sort by property, create_time.
 	SortBy *string `json:"sort_by,omitempty"`
+
+	// 查询起始时间
+	FromDate *string `json:"from_date,omitempty"`
+
+	// 查询截止时间
+	ToDate *string `json:"to_date,omitempty"`
 }
 
 func (o IndicatorListSearchRequest) String() string {

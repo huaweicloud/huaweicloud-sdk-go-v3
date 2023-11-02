@@ -292,6 +292,27 @@ func (c *GaussDBforopenGaussClient) DeleteConfigurationInvoker(request *model.De
 	return &DeleteConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDatabase 删除数据库
+//
+// 删除指定实例的数据库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DeleteDatabase(request *model.DeleteDatabaseRequest) (*model.DeleteDatabaseResponse, error) {
+	requestDef := GenReqDefForDeleteDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatabaseResponse), nil
+	}
+}
+
+// DeleteDatabaseInvoker 删除数据库
+func (c *GaussDBforopenGaussClient) DeleteDatabaseInvoker(request *model.DeleteDatabaseRequest) *DeleteDatabaseInvoker {
+	requestDef := GenReqDefForDeleteDatabase()
+	return &DeleteDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteInstance 删除实例
 //
 // 删除数据库实例。

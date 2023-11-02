@@ -12,10 +12,10 @@ type UpdatePlaybookRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// ID of playbook
+	// 剧本ID
 	PlaybookId string `json:"playbook_id"`
 
 	Body *ModifyPlaybookInfo `json:"body,omitempty"`

@@ -11,45 +11,42 @@ import (
 
 type UpdateAlertRuleRequestBody struct {
 
-	// rule_name
+	// 告警规则名称。Alert rule name.
 	RuleName *string `json:"rule_name,omitempty"`
 
-	// description
+	// 描述。Description.
 	Description *string `json:"description,omitempty"`
 
-	// query
+	// 查询语句。Query.
 	Query *string `json:"query,omitempty"`
 
-	// query_type. SQL, CBSL.
+	// 查询语法，SQL。Query type. SQL.
 	QueryType *UpdateAlertRuleRequestBodyQueryType `json:"query_type,omitempty"`
 
-	// status. ENABLED, DISABLED
+	// 启用状态，启用、停用。Status, enabled, disabled.
 	Status *UpdateAlertRuleRequestBodyStatus `json:"status,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *UpdateAlertRuleRequestBodySeverity `json:"severity,omitempty"`
 
-	// accumulated_times
-	AccumulatedTimes *int32 `json:"accumulated_times,omitempty"`
-
-	// custom_properties
+	// 自定义扩展信息。Custom properties.
 	CustomProperties map[string]string `json:"custom_properties,omitempty"`
 
-	// alert_type
+	// 告警类型。Alert type.
 	AlertType map[string]string `json:"alert_type,omitempty"`
 
-	// event_grouping
+	// 告警分组。Event grouping.
 	EventGrouping *bool `json:"event_grouping,omitempty"`
 
-	// suppression
+	// 告警抑制。Suppression
 	Suppression *bool `json:"suppression,omitempty"`
 
-	// simulation
+	// 模拟告警。Simulation.
 	Simulation *bool `json:"simulation,omitempty"`
 
 	Schedule *Schedule `json:"schedule,omitempty"`
 
-	// triggers
+	// 告警触发规则。Alert triggers.
 	Triggers *[]AlertRuleTrigger `json:"triggers,omitempty"`
 }
 
@@ -67,17 +64,13 @@ type UpdateAlertRuleRequestBodyQueryType struct {
 }
 
 type UpdateAlertRuleRequestBodyQueryTypeEnum struct {
-	SQL  UpdateAlertRuleRequestBodyQueryType
-	CBSL UpdateAlertRuleRequestBodyQueryType
+	SQL UpdateAlertRuleRequestBodyQueryType
 }
 
 func GetUpdateAlertRuleRequestBodyQueryTypeEnum() UpdateAlertRuleRequestBodyQueryTypeEnum {
 	return UpdateAlertRuleRequestBodyQueryTypeEnum{
 		SQL: UpdateAlertRuleRequestBodyQueryType{
 			value: "SQL",
-		},
-		CBSL: UpdateAlertRuleRequestBodyQueryType{
-			value: "CBSL",
 		},
 	}
 }

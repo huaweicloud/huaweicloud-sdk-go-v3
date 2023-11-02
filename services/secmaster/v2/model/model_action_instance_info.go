@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ActionInstanceInfo Action Instance
+// ActionInstanceInfo 流程实例
 type ActionInstanceInfo struct {
 	Action *ActionInfo `json:"action,omitempty"`
 

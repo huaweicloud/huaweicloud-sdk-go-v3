@@ -9,10 +9,10 @@ import (
 // ShowIncidentRequest Request Object
 type ShowIncidentRequest struct {
 
-	// application/json;charset=UTF-8
+	// 内容类型
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间id
 	WorkspaceId string `json:"workspace_id"`
 
 	// 事件ID

@@ -9,10 +9,10 @@ import (
 // ListPlaybookAuditLogsResponse Response Object
 type ListPlaybookAuditLogsResponse struct {
 
-	// tatal count
+	// 总条数
 	Count *int32 `json:"count,omitempty"`
 
-	// list of informations of Audit Log Info
+	// 审计日志列表信息
 	AuditLogs *[]AuditLogInfo `json:"audit_logs,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

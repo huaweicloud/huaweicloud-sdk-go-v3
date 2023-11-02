@@ -12,10 +12,10 @@ type UpdateIndicatorRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// workspace id
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// ID of indicator
+	// 情报ID
 	IndicatorId string `json:"indicator_id"`
 
 	Body *UpdateIndicatorRequestBody `json:"body,omitempty"`

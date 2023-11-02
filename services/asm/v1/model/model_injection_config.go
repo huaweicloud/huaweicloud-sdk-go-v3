@@ -8,10 +8,6 @@ import (
 
 // InjectionConfig 集群注入信息
 type InjectionConfig struct {
-
-	// 是否重启pod
-	RestartPod *bool `json:"restartPod,omitempty"`
-
 	Namespaces *Selector `json:"namespaces,omitempty"`
 }
 

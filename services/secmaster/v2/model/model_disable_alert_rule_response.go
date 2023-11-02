@@ -12,10 +12,10 @@ import (
 // DisableAlertRuleResponse Response Object
 type DisableAlertRuleResponse struct {
 
-	// rule_id
+	// 告警规则 ID。Alert rule ID.
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// status. ENABLED, DISABLED
+	// 启用状态，启用、停用。Status, enabled, disabled.
 	Status *DisableAlertRuleResponseStatus `json:"status,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

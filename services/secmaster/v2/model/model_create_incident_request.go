@@ -9,10 +9,10 @@ import (
 // CreateIncidentRequest Request Object
 type CreateIncidentRequest struct {
 
-	// application/json;charset=UTF-8
+	// 内容类型
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间id
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *CreateIncidentRequestBody `json:"body,omitempty"`

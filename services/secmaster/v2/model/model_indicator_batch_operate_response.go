@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// IndicatorBatchOperateResponse indicator batch operation response
+// IndicatorBatchOperateResponse 情报响应参数
 type IndicatorBatchOperateResponse struct {
 
-	// id list
+	// 成功ID列表
 	SuccessIds []string `json:"success_ids"`
 
-	// id list
+	// 失败ID列表
 	ErrorIds *[]string `json:"error_ids,omitempty"`
 }
 

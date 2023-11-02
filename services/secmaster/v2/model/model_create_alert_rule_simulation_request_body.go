@@ -11,25 +11,25 @@ import (
 
 type CreateAlertRuleSimulationRequestBody struct {
 
-	// pipe_id
+	// 数据管道 ID。Pipe ID.
 	PipeId string `json:"pipe_id"`
 
-	// query
+	// 查询语句。Query.
 	Query string `json:"query"`
 
-	// query_type. SQL, CBSL.
+	// 查询语法，SQL。Query type. SQL.
 	QueryType *CreateAlertRuleSimulationRequestBodyQueryType `json:"query_type,omitempty"`
 
-	// from
+	// 开始时间。Start time.
 	From int64 `json:"from"`
 
-	// from
+	// 结束时间。End time.
 	To int64 `json:"to"`
 
-	// event_grouping
+	// 告警分组。Event grouping.
 	EventGrouping *bool `json:"event_grouping,omitempty"`
 
-	// triggers
+	// 告警触发规则。Alert triggers.
 	Triggers []AlertRuleTrigger `json:"triggers"`
 }
 
@@ -47,17 +47,13 @@ type CreateAlertRuleSimulationRequestBodyQueryType struct {
 }
 
 type CreateAlertRuleSimulationRequestBodyQueryTypeEnum struct {
-	SQL  CreateAlertRuleSimulationRequestBodyQueryType
-	CBSL CreateAlertRuleSimulationRequestBodyQueryType
+	SQL CreateAlertRuleSimulationRequestBodyQueryType
 }
 
 func GetCreateAlertRuleSimulationRequestBodyQueryTypeEnum() CreateAlertRuleSimulationRequestBodyQueryTypeEnum {
 	return CreateAlertRuleSimulationRequestBodyQueryTypeEnum{
 		SQL: CreateAlertRuleSimulationRequestBodyQueryType{
 			value: "SQL",
-		},
-		CBSL: CreateAlertRuleSimulationRequestBodyQueryType{
-			value: "CBSL",
 		},
 	}
 }

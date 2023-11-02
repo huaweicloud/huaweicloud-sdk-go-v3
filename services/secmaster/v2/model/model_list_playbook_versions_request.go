@@ -12,10 +12,10 @@ type ListPlaybookVersionsRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// ID of playbook
+	// 剧本ID
 	PlaybookId string `json:"playbook_id"`
 
 	// 剧本版本状态，编辑中：EDITING  审核中：APPROVING  不通过：UNPASSED 已发布：PUBLISHED
@@ -27,13 +27,10 @@ type ListPlaybookVersionsRequest struct {
 	// 版本类型， 草稿版本：0  正式版本：1
 	VersionType *int32 `json:"version_type,omitempty"`
 
-	// 审核角色
-	ApproveRole *string `json:"approve_role,omitempty"`
-
-	// request offset, from 0
+	// 分页查询参数。用于指定查询结果的起始位置，从0开始
 	Offset *int32 `json:"offset,omitempty"`
 
-	// request limit size
+	// 分页查询参数，用于指定一次查询最多的结果数，从1开始
 	Limit *int32 `json:"limit,omitempty"`
 }
 

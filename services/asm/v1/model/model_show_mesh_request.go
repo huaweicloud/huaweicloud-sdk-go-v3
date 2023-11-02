@@ -12,9 +12,6 @@ type ShowMeshRequest struct {
 	// 网格ID
 	MeshId string `json:"mesh_id"`
 
-	// 网格所属DomainID
-	XApplyDomainID *string `json:"X-Apply-DomainID,omitempty"`
-
 	// 网格所属ProjectID
 	XApplyProjectID *string `json:"X-Apply-ProjectID,omitempty"`
 }

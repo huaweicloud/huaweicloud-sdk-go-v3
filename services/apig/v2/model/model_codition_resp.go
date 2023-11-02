@@ -29,7 +29,7 @@ type CoditionResp struct {
 	// 策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
 	ConditionOrigin CoditionRespConditionOrigin `json:"condition_origin"`
 
-	// 策略值;策略类型为param,source,cookie,frontend_authorizer时必填
+	// 策略值;
 	ConditionValue string `json:"condition_value"`
 
 	// 编号

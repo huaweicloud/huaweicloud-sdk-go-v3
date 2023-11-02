@@ -137,18 +137,6 @@ func (i *CreatePersonalRealnameAuthInvoker) Invoke() (*model.CreatePersonalRealn
 	}
 }
 
-type CreatePostalInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePostalInvoker) Invoke() (*model.CreatePostalResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePostalResponse), nil
-	}
-}
-
 type CreateSubCustomerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,18 +158,6 @@ func (i *CreateSubEnterpriseAccountInvoker) Invoke() (*model.CreateSubEnterprise
 		return nil, err
 	} else {
 		return result.(*model.CreateSubEnterpriseAccountResponse), nil
-	}
-}
-
-type DeletePostalInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeletePostalInvoker) Invoke() (*model.DeletePostalResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeletePostalResponse), nil
 	}
 }
 
@@ -602,18 +578,6 @@ func (i *ListPayPerUseCustomerResourcesInvoker) Invoke() (*model.ListPayPerUseCu
 		return nil, err
 	} else {
 		return result.(*model.ListPayPerUseCustomerResourcesResponse), nil
-	}
-}
-
-type ListPostalAddressInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPostalAddressInvoker) Invoke() (*model.ListPostalAddressResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPostalAddressResponse), nil
 	}
 }
 
@@ -1046,18 +1010,6 @@ func (i *UpdatePeriodToOnDemandInvoker) Invoke() (*model.UpdatePeriodToOnDemandR
 		return nil, err
 	} else {
 		return result.(*model.UpdatePeriodToOnDemandResponse), nil
-	}
-}
-
-type UpdatePostalInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePostalInvoker) Invoke() (*model.UpdatePostalResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePostalResponse), nil
 	}
 }
 

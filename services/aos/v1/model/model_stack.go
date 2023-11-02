@@ -11,8 +11,8 @@ import (
 
 type Stack struct {
 
-	// 资源栈的名称。此名字在domain_id + 区域 + project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
-	StackName *string `json:"stack_name,omitempty"`
+	// 资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+	StackName string `json:"stack_name"`
 
 	// 资源栈的描述。可用于客户识别自己的资源栈。
 	Description *string `json:"description,omitempty"`

@@ -9,14 +9,14 @@ import (
 // ShowIncidentResponse Response Object
 type ShowIncidentResponse struct {
 
-	// Id value
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
-	Data           *ShowIncidentDetail `json:"data,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Data           *IncidentDetail `json:"data,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ShowIncidentResponse) String() string {

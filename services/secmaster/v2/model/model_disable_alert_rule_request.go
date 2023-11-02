@@ -9,7 +9,7 @@ import (
 // DisableAlertRuleRequest Request Object
 type DisableAlertRuleRequest struct {
 
-	// workspace_id
+	// 工作空间 ID。Workspace ID.
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *[]string `json:"body,omitempty"`

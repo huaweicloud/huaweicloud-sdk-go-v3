@@ -9,10 +9,10 @@ import (
 // ListPlaybookInstancesResponse Response Object
 type ListPlaybookInstancesResponse struct {
 
-	// tatal count
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
-	// list of informations of PlaybookInstanceInfo
+	// 剧本实例列表信息
 	Instances *[]PlaybookInstanceInfo `json:"instances,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

@@ -9,13 +9,13 @@ import (
 // CreateBatchOrderAlertsResponse Response Object
 type CreateBatchOrderAlertsResponse struct {
 
-	// Id value
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
-	Data *BatchOrderAlertResult `json:"data,omitempty"`
+	Data *BatchOperateAlertResult `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`

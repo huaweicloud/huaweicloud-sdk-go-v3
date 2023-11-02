@@ -11,7 +11,9 @@ type CreateOptmJobReq struct {
 	BasicInfo *CreateDrugJobBasicInfo `json:"basic_info"`
 
 	// 分子SMILES表达式
-	Smiles string `json:"smiles"`
+	Smiles *string `json:"smiles,omitempty"`
+
+	MoleculeFile *DrugFile `json:"molecule_file,omitempty"`
 
 	BindingSite *BindSiteDto `json:"binding_site,omitempty"`
 
@@ -20,6 +22,12 @@ type CreateOptmJobReq struct {
 
 	// 强约束集合
 	StrongConstraints *[]StrongConstraintDto `json:"strong_constraints,omitempty"`
+
+	// 初始化采样权重，参数范围(0.5, 1)，不包含0.5和1，默认为0.6
+	SamplerMixinWeight *float32 `json:"sampler_mixin_weight,omitempty"`
+
+	// 模型id列表
+	ModelIds *[]string `json:"model_ids,omitempty"`
 
 	// 生成分子数量
 	NumTrials *int32 `json:"num_trials,omitempty"`

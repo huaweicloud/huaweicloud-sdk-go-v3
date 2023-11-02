@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-// CreateIndicatorDetail indicator detail
+// CreateIndicatorDetail 情报详情信息
 type CreateIndicatorDetail struct {
-	DataSource *CreateAlertDataSource `json:"data_source,omitempty"`
+	DataSource *CreateIndicatorDetailDataSource `json:"data_source"`
 
 	// 威胁度
-	Verdict *string `json:"verdict,omitempty"`
+	Verdict string `json:"verdict"`
 
 	// 置信度
 	Confidence *int32 `json:"confidence,omitempty"`
@@ -23,26 +23,26 @@ type CreateIndicatorDetail struct {
 	Labels *string `json:"labels,omitempty"`
 
 	// 值
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 
 	// 粒度（保密等级），由高到低：1（首次发现）、2（自产数据）、3（需购买）、4（外网直接查询）
-	GranularMarking *string `json:"granular_marking,omitempty"`
+	GranularMarking string `json:"granular_marking"`
 
-	Environment *ShowAlertRspEnvironment `json:"environment,omitempty"`
+	Environment *CreateIndicatorDetailEnvironment `json:"environment"`
 
 	// 是否失效
-	Defanged *bool `json:"defanged,omitempty"`
+	Defanged bool `json:"defanged"`
 
-	// Create time
-	FirstReportTime *string `json:"first_report_time,omitempty"`
+	// 首次发生时间
+	FirstReportTime string `json:"first_report_time"`
 
-	// Update time
+	// 最近发生时间
 	LastReportTime *string `json:"last_report_time,omitempty"`
 
 	// 指标ID
 	Id *string `json:"id,omitempty"`
 
-	IndicatorType *CreateIndicatorDetailIndicatorType `json:"indicator_type,omitempty"`
+	IndicatorType *CreateIndicatorDetailIndicatorType `json:"indicator_type"`
 
 	// 指标名称
 	Name string `json:"name"`
@@ -50,13 +50,10 @@ type CreateIndicatorDetail struct {
 	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
-	// 类型（SIMULATION,PLAYBOOK,MANUAL,INSTANCE,DATA_SOURCE）
-	Type *string `json:"type,omitempty"`
-
 	DataObject *IndicatorDataObjectDetail `json:"data_object,omitempty"`
 
 	// workspace id
-	WorkspaceId *string `json:"workspace_id,omitempty"`
+	WorkspaceId string `json:"workspace_id"`
 
 	// Project id value
 	ProjectId *string `json:"project_id,omitempty"`

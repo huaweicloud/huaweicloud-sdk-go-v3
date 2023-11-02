@@ -233,6 +233,18 @@ func (i *RestoreSecretInvoker) Invoke() (*model.RestoreSecretResponse, error) {
 	}
 }
 
+type RotateSecretInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RotateSecretInvoker) Invoke() (*model.RotateSecretResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RotateSecretResponse), nil
+	}
+}
+
 type ShowSecretInvoker struct {
 	*invoker.BaseInvoker
 }

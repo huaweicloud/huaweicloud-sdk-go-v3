@@ -12,6 +12,9 @@ type CreateLigandSvgReq struct {
 	// 分子SMILES表达式
 	Smiles string `json:"smiles"`
 
+	// 分子骨架smiles表达式
+	Scaffold *string `json:"scaffold,omitempty"`
+
 	// 尺寸
 	Size *int32 `json:"size,omitempty"`
 
@@ -21,28 +24,28 @@ type CreateLigandSvgReq struct {
 	// svg宽度
 	Width *int32 `json:"width,omitempty"`
 
-	// alerts
+	// 高亮子结构编号
 	Alerts *string `json:"alerts,omitempty"`
 
-	// ncols
+	// 显示的列数
 	Ncols *int32 `json:"ncols,omitempty"`
 
-	// bgopacity
+	// 背景透明度
 	Bgopacity *float32 `json:"bgopacity,omitempty"`
 
-	// bgcolor
+	// 背景颜色
 	Bgcolor *string `json:"bgcolor,omitempty"`
 
-	// fgcolor
+	// 前景色
 	Fgcolor *string `json:"fgcolor,omitempty"`
 
-	// ccolor
+	// 碳颜色
 	Ccolor *string `json:"ccolor,omitempty"`
 
-	// ncolor
+	// 氮颜色
 	Ncolor *string `json:"ncolor,omitempty"`
 
-	// ocolor
+	// 氧颜色
 	Ocolor *string `json:"ocolor,omitempty"`
 }
 

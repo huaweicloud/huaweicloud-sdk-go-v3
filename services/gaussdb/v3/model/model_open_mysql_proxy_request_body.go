@@ -26,8 +26,11 @@ type OpenMysqlProxyRequestBody struct {
 	// 数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
 	RouteMode *int32 `json:"route_mode,omitempty"`
 
-	// 数据库节点的读权重设置。
+	// 数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
 	NodesReadWeight *[]NodesWeight `json:"nodes_read_weight,omitempty"`
+
+	// 数据库VPC下的子网ID。
+	SubnetId *string `json:"subnet_id,omitempty"`
 }
 
 func (o OpenMysqlProxyRequestBody) String() string {

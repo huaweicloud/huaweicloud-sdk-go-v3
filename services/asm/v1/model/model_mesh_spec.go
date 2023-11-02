@@ -9,19 +9,22 @@ import (
 	"strings"
 )
 
-// MeshSpec 网格参数定义。
+// MeshSpec 网格参数定义
 type MeshSpec struct {
 
-	// 网格控制面组件所在的region。 创建企业版网格时需要填写该参数，选择控制面组件所在的region； 创建基础版时网格组件安装在用户所提供的集群中，不需要填写该参数。
+	// 网格控制面组件所在的region 可选参数
 	Region *string `json:"region,omitempty"`
 
-	// 网格类型：  Managed：企业版网格  InCluster：基础版网格
+	// 网格类型： InCluster：基础版网格
 	Type MeshSpecType `json:"type"`
 
 	// 网格版本
 	Version string `json:"version"`
 
 	ExtendParams *MeshExtendParams `json:"extendParams,omitempty"`
+
+	// 网格资源标签
+	Tags *[]MeshTags `json:"tags,omitempty"`
 }
 
 func (o MeshSpec) String() string {
@@ -38,15 +41,11 @@ type MeshSpecType struct {
 }
 
 type MeshSpecTypeEnum struct {
-	MANAGED    MeshSpecType
 	IN_CLUSTER MeshSpecType
 }
 
 func GetMeshSpecTypeEnum() MeshSpecTypeEnum {
 	return MeshSpecTypeEnum{
-		MANAGED: MeshSpecType{
-			value: "Managed",
-		},
 		IN_CLUSTER: MeshSpecType{
 			value: "InCluster",
 		},

@@ -6,10 +6,9 @@ import (
 	"strings"
 )
 
+// Selector 选择器
 type Selector struct {
 	FieldSelector *FieldSelector `json:"fieldSelector,omitempty"`
-
-	LabelSelector *LabelSelector `json:"labelSelector,omitempty"`
 }
 
 func (o Selector) String() string {

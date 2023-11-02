@@ -6,46 +6,46 @@ import (
 	"strings"
 )
 
-// ModifyPlaybookVersionInfo Information of playbook version
+// ModifyPlaybookVersionInfo 剧本版本信息
 type ModifyPlaybookVersionInfo struct {
 
-	// The description, display only
+	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 工作空间id
+	// 工作空间ID
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// Playbook id.
+	// 剧本ID
 	PlaybookId *string `json:"playbook_id,omitempty"`
 
-	// dataclass id.
+	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
-	// If the condition filter is enabled.
+	// 是否启用触发条件过滤器
 	RuleEnable *bool `json:"rule_enable,omitempty"`
 
-	// If is enabled, false for disenabled, true for enabled
+	// 是否激活。(false:未激活, true:已激活)
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 状态
+	// 状态(APPROVING:审核中，EDITING-编辑中，UNPASSED-审核未通过，PUBLISHED-已发布)
 	Status *string `json:"status,omitempty"`
 
 	// 规则ID
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// Strategy of action. event, timer
+	// 触发方式. EVENT--事件触发, TIMER--定时触发
 	TriggerType *string `json:"trigger_type,omitempty"`
 
-	// if trigger when dataobject is created
+	// 数据对象是否创建时触发剧本
 	DataobjectCreate *bool `json:"dataobject_create,omitempty"`
 
-	// if trigger when dataobject is updated
+	// 数据对象是否更新时触发剧本
 	DataobjectUpdate *bool `json:"dataobject_update,omitempty"`
 
-	// if trigger when dataobject is deleted
+	// 数据对象是否删除时触发剧本
 	DataobjectDelete *bool `json:"dataobject_delete,omitempty"`
 
-	// Strategy of action. sync or async
+	// 执行策略. 目前仅支持异步并发执行，对应值为ASYNC
 	ActionStrategy *string `json:"action_strategy,omitempty"`
 }
 

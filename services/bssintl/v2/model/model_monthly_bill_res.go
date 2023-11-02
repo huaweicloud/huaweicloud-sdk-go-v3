@@ -107,6 +107,9 @@ type MonthlyBillRes struct {
 	// 订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
 	TradeId *string `json:"trade_id,omitempty"`
 
+	// |参数名称：唯一标识。| |参数约束及描述：该字段为预留字段。|
+	Id *string `json:"id,omitempty"`
+
 	// 产品的规格描述。
 	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
 

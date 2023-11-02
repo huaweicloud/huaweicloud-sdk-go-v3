@@ -9,11 +9,14 @@ import (
 // BoundingBoxDto 结合口袋，包含口袋中心位置和尺寸大小
 type BoundingBoxDto struct {
 
-	// 口袋中心坐标; x, y, z轴的坐标
+	// 口袋中心坐标； x, y, z轴的坐标
 	Center []float32 `json:"center"`
 
-	// 口袋尺寸大小;  x, y, z轴的大小
+	// 口袋尺寸大小；  x, y, z轴的大小
 	Size []float32 `json:"size"`
+
+	// 填充
+	Padding *int32 `json:"padding,omitempty"`
 }
 
 func (o BoundingBoxDto) String() string {

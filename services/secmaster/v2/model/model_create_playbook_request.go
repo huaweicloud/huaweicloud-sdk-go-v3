@@ -12,7 +12,7 @@ type CreatePlaybookRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *CreatePlaybookInfo `json:"body,omitempty"`

@@ -348,6 +348,22 @@ func GenReqDefForRestoreSecret() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRotateSecret() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/secrets/{secret_name}/rotate").
+		WithResponse(new(model.RotateSecretResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecretName").
+		WithJsonTag("secret_name").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowSecret() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

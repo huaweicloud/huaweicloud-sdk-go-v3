@@ -11,22 +11,22 @@ import (
 
 type Schedule struct {
 
-	// frequency_interval
+	// 调度间隔。Frequency interval.
 	FrequencyInterval int32 `json:"frequency_interval"`
 
-	// frequency_unit. MINUTE, HOUR, DAY.
+	// 调度间隔单位，分钟、小时、天。Frequency unit. MINUTE, HOUR, DAY.
 	FrequencyUnit ScheduleFrequencyUnit `json:"frequency_unit"`
 
-	// frequency_interval
+	// 时间窗口间隔。Period interval.
 	PeriodInterval int32 `json:"period_interval"`
 
-	// period_unit. MINUTE, HOUR, DAY.
+	// 时间窗口单位，分钟、小时、天。Period unit. MINUTE, HOUR, DAY.
 	PeriodUnit SchedulePeriodUnit `json:"period_unit"`
 
-	// delay_interval
+	// 延迟间隔。Delay interval
 	DelayInterval *int32 `json:"delay_interval,omitempty"`
 
-	// overtime_interval
+	// 超时间隔。Overtime interval
 	OvertimeInterval *int32 `json:"overtime_interval,omitempty"`
 }
 

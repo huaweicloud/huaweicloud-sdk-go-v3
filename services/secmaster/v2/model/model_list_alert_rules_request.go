@@ -12,34 +12,34 @@ import (
 // ListAlertRulesRequest Request Object
 type ListAlertRulesRequest struct {
 
-	// workspace_id
+	// 工作空间 ID。Workspace ID.
 	WorkspaceId string `json:"workspace_id"`
 
-	// offset
+	// 偏移量。Offset.
 	Offset int64 `json:"offset"`
 
-	// limit
+	// 条数。Limit.
 	Limit int64 `json:"limit"`
 
-	// sort_key
+	// 排序字段。Sort key
 	SortKey *string `json:"sort_key,omitempty"`
 
-	// sort_dir. asc, desc
+	// 排序顺序，顺序、逆序。Sort direction, asc, desc。
 	SortDir *ListAlertRulesRequestSortDir `json:"sort_dir,omitempty"`
 
-	// pipe_id
+	// 数据管道 ID。Pipe ID.
 	PipeId *string `json:"pipe_id,omitempty"`
 
-	// rule_name
+	// 告警规则名称。Alert rule name.
 	RuleName *string `json:"rule_name,omitempty"`
 
-	// rule_id
+	// 告警规则 ID。Alert rule ID.
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// status. ENABLED, DISABLED
+	// 启用状态，启用、停用。Status, enabled, disabled.
 	Status *[]ListAlertRulesRequestStatus `json:"status,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *[]ListAlertRulesRequestSeverity `json:"severity,omitempty"`
 }
 

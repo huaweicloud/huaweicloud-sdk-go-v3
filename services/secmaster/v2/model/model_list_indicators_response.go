@@ -9,16 +9,16 @@ import (
 // ListIndicatorsResponse Response Object
 type ListIndicatorsResponse struct {
 
-	// Id value
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
-	// tatal count
+	// 总数
 	Total *int32 `json:"total,omitempty"`
 
-	// list of informations of indicator
+	// 指标列表数据
 	Data *[]IndicatorDetail `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

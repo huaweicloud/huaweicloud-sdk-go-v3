@@ -6,31 +6,19 @@ import (
 	"strings"
 )
 
-// CreatePlaybookInfo Information of playbook
+// CreatePlaybookInfo 剧本创建参数信息
 type CreatePlaybookInfo struct {
 
-	// The name, display only
-	Name *string `json:"name,omitempty"`
+	// 剧本名称
+	Name string `json:"name"`
 
-	// The description, display only
+	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 工作空间id
-	WorkspaceId *string `json:"workspace_id,omitempty"`
+	// 工作空间ID
+	WorkspaceId string `json:"workspace_id"`
 
-	// Role required for approve
-	ApproveRole *string `json:"approve_role,omitempty"`
-
-	// Role required for use
-	UserRole *string `json:"user_role,omitempty"`
-
-	// Role required for edit
-	EditRole *string `json:"edit_role,omitempty"`
-
-	// Owner id
-	OwnerId *string `json:"owner_id,omitempty"`
-
-	// If is enabled, false for disenabled, true for enabled
+	// 是否启用，默认传false
 	Enabled *bool `json:"enabled,omitempty"`
 }
 

@@ -26,7 +26,7 @@ type ReceptorLigandInfoDto struct {
 
 	Structure *LigandStructureDto `json:"structure,omitempty"`
 
-	BoundingBox *BoundingBoxDto `json:"bounding_box,omitempty"`
+	BoundingBox *DrugBoundingBoxDto `json:"bounding_box,omitempty"`
 }
 
 func (o ReceptorLigandInfoDto) String() string {

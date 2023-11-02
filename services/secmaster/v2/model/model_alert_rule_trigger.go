@@ -11,16 +11,16 @@ import (
 
 type AlertRuleTrigger struct {
 
-	// mode. COUNT.
+	// 模式，数量。Mode. COUNT.
 	Mode *AlertRuleTriggerMode `json:"mode,omitempty"`
 
-	// operator. EQ equal, NE not equal, GT greater than, LT less than.
+	// 操作符，等于、不等于、大于、小于。 operator. EQ equal, NE not equal, GT greater than, LT less than.
 	Operator *AlertRuleTriggerOperator `json:"operator,omitempty"`
 
 	// expression
 	Expression string `json:"expression"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *AlertRuleTriggerSeverity `json:"severity,omitempty"`
 
 	// accumulated_times

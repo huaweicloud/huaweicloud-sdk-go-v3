@@ -9,10 +9,10 @@ import (
 // DeletePlaybookActionResponse Response Object
 type DeletePlaybookActionResponse struct {
 
-	// Error code
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 响应消息
 	Message *string `json:"message,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

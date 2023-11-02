@@ -3794,6 +3794,10 @@ func GenReqDefForListApisV2() *def.HttpRequestDef {
 		WithName("PreciseSearch").
 		WithJsonTag("precise_search").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VpcChannelName").
+		WithJsonTag("vpc_channel_name").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

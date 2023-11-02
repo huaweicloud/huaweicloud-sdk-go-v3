@@ -9,31 +9,31 @@ import (
 // ChangePlaybookInstanceResponse Response Object
 type ChangePlaybookInstanceResponse struct {
 
-	// Id value
+	// 剧本实例ID
 	Id *string `json:"id,omitempty"`
 
-	// The name, display only
+	// 剧本实例名称
 	Name *string `json:"name,omitempty"`
 
-	// Project id value
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	Playbook *PlaybookInfoRef `json:"playbook,omitempty"`
 
 	Dataclass *DataclassInfoRef `json:"dataclass,omitempty"`
 
-	Dataobject *DataclassInfoRef `json:"dataobject,omitempty"`
+	Dataobject *DataobjectInfo `json:"dataobject,omitempty"`
 
-	// Playbook instance status. RUNNING、FINISHED、FAILED、RETRYING、 TERMINATING、TERMINATED
+	// 剧本实例状态. (RUNNING--运行中、FINISHED--成功、FAILED--失败、RETRYING--重试中、TERMINATING--终止中、TERMINATED--已终止)
 	Status *string `json:"status,omitempty"`
 
-	// trigger type. DEBUG, TIMER, EVENT, MANUAL
+	// 触发类型. TIMER--定时触发, EVENT--事件触发
 	TriggerType *string `json:"trigger_type,omitempty"`
 
-	// Create time
+	// 创建时间
 	StartTime *string `json:"start_time,omitempty"`
 
-	// Update time
+	// 更新时间
 	EndTime *string `json:"end_time,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

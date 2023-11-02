@@ -12,17 +12,8 @@ type ListIndicatorsRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// workspace id
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
-
-	// sort order, ASC, DESC.
-	Order *string `json:"order,omitempty"`
-
-	// 起始时间
-	FromDate *string `json:"from_date,omitempty"`
-
-	// 结束时间
-	ToDate *string `json:"to_date,omitempty"`
 
 	Body *IndicatorListSearchRequest `json:"body,omitempty"`
 }

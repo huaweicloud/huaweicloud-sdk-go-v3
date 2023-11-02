@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// CreateAlertRequestBody CreateAlertRequestBody
+// CreateAlertRequestBody 创建告警请求body体
 type CreateAlertRequestBody struct {
-	DataObject *CreateAlert `json:"data_object,omitempty"`
+	DataObject *Alert `json:"data_object"`
 }
 
 func (o CreateAlertRequestBody) String() string {

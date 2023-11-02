@@ -9,7 +9,7 @@ import (
 // UpdatePlaybookVersionResponse Response Object
 type UpdatePlaybookVersionResponse struct {
 
-	// Error code
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
 	// Error message

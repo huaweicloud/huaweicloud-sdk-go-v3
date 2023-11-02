@@ -9,7 +9,7 @@ import (
 // ShowFepJobRequest Request Object
 type ShowFepJobRequest struct {
 
-	// 盘古辅助制药平台项目ID。
+	// 平台项目ID。
 	EihealthProjectId string `json:"eihealth_project_id"`
 
 	// 作业id

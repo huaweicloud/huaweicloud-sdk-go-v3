@@ -125,18 +125,6 @@ func (i *CreateBigkeyScanTaskInvoker) Invoke() (*model.CreateBigkeyScanTaskRespo
 	}
 }
 
-type CreateConnectivityTestInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateConnectivityTestInvoker) Invoke() (*model.CreateConnectivityTestResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateConnectivityTestResponse), nil
-	}
-}
-
 type CreateCustomTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,18 +197,6 @@ func (i *CreateOnlineMigrationTaskInvoker) Invoke() (*model.CreateOnlineMigratio
 	}
 }
 
-type CreateOrUpdateBackUpInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateOrUpdateBackUpInfoInvoker) Invoke() (*model.CreateOrUpdateBackUpInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateOrUpdateBackUpInfoResponse), nil
-	}
-}
-
 type CreateRedislogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +218,18 @@ func (i *CreateRedislogDownloadLinkInvoker) Invoke() (*model.CreateRedislogDownl
 		return nil, err
 	} else {
 		return result.(*model.CreateRedislogDownloadLinkResponse), nil
+	}
+}
+
+type CreateResizeOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateResizeOrderInvoker) Invoke() (*model.CreateResizeOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateResizeOrderResponse), nil
 	}
 }
 
@@ -386,6 +374,30 @@ func (i *ExecuteCommandMobilizationInvoker) Invoke() (*model.ExecuteCommandMobil
 		return nil, err
 	} else {
 		return result.(*model.ExecuteCommandMobilizationResponse), nil
+	}
+}
+
+type ExportExcelJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportExcelJobInvoker) Invoke() (*model.ExportExcelJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportExcelJobResponse), nil
+	}
+}
+
+type ExportInstancesTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportInstancesTaskInvoker) Invoke() (*model.ExportInstancesTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportInstancesTaskResponse), nil
 	}
 }
 
@@ -554,6 +566,18 @@ func (i *ListHotKeyScanTasksInvoker) Invoke() (*model.ListHotKeyScanTasksRespons
 		return nil, err
 	} else {
 		return result.(*model.ListHotKeyScanTasksResponse), nil
+	}
+}
+
+type ListInstanceOperationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceOperationsInvoker) Invoke() (*model.ListInstanceOperationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceOperationsResponse), nil
 	}
 }
 
@@ -797,18 +821,6 @@ func (i *SetOnlineMigrationTaskInvoker) Invoke() (*model.SetOnlineMigrationTaskR
 	}
 }
 
-type ShowBackUpInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowBackUpInfoInvoker) Invoke() (*model.ShowBackUpInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowBackUpInfoResponse), nil
-	}
-}
-
 type ShowBackgroundTaskProgressInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -845,6 +857,18 @@ func (i *ShowBigkeyScanTaskDetailsInvoker) Invoke() (*model.ShowBigkeyScanTaskDe
 	}
 }
 
+type ShowConfigHistoryDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigHistoryDetailInvoker) Invoke() (*model.ShowConfigHistoryDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigHistoryDetailResponse), nil
+	}
+}
+
 type ShowConfigTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -866,6 +890,18 @@ func (i *ShowDiagnosisTaskDetailsInvoker) Invoke() (*model.ShowDiagnosisTaskDeta
 		return nil, err
 	} else {
 		return result.(*model.ShowDiagnosisTaskDetailsResponse), nil
+	}
+}
+
+type ShowExpireAutoScanConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExpireAutoScanConfigInvoker) Invoke() (*model.ShowExpireAutoScanConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExpireAutoScanConfigResponse), nil
 	}
 }
 
@@ -953,18 +989,6 @@ func (i *ShowMigrationTaskStatsInvoker) Invoke() (*model.ShowMigrationTaskStatsR
 	}
 }
 
-type ShowNodesInformationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNodesInformationInvoker) Invoke() (*model.ShowNodesInformationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNodesInformationResponse), nil
-	}
-}
-
 type ShowQuotaOfTenantInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1037,6 +1061,18 @@ func (i *StopMigrationTaskSyncInvoker) Invoke() (*model.StopMigrationTaskSyncRes
 	}
 }
 
+type UpdateAclAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAclAccountInvoker) Invoke() (*model.UpdateAclAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAclAccountResponse), nil
+	}
+}
+
 type UpdateAclAccountPassWordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1061,18 +1097,6 @@ func (i *UpdateAclAccountRemarkInvoker) Invoke() (*model.UpdateAclAccountRemarkR
 	}
 }
 
-type UpdateAclAccountRoleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAclAccountRoleInvoker) Invoke() (*model.UpdateAclAccountRoleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAclAccountRoleResponse), nil
-	}
-}
-
 type UpdateBigkeyAutoscanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1082,6 +1106,18 @@ func (i *UpdateBigkeyAutoscanConfigInvoker) Invoke() (*model.UpdateBigkeyAutosca
 		return nil, err
 	} else {
 		return result.(*model.UpdateBigkeyAutoscanConfigResponse), nil
+	}
+}
+
+type UpdateClientIpTransparentTransmissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClientIpTransparentTransmissionInvoker) Invoke() (*model.UpdateClientIpTransparentTransmissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClientIpTransparentTransmissionResponse), nil
 	}
 }
 
@@ -1106,6 +1142,18 @@ func (i *UpdateConfigurationsInvoker) Invoke() (*model.UpdateConfigurationsRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateConfigurationsResponse), nil
+	}
+}
+
+type UpdateExpireAutoScanConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateExpireAutoScanConfigInvoker) Invoke() (*model.UpdateExpireAutoScanConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateExpireAutoScanConfigResponse), nil
 	}
 }
 
@@ -1142,6 +1190,18 @@ func (i *UpdateInstanceBandwidthInvoker) Invoke() (*model.UpdateInstanceBandwidt
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceBandwidthResponse), nil
+	}
+}
+
+type UpdateInstanceConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceConfigInvoker) Invoke() (*model.UpdateInstanceConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceConfigResponse), nil
 	}
 }
 

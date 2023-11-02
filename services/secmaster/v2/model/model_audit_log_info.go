@@ -6,46 +6,46 @@ import (
 	"strings"
 )
 
-// AuditLogInfo Audit Log Info
+// AuditLogInfo 剧本实例审计日志信息
 type AuditLogInfo struct {
 
-	// instance type.
+	// 实例类型（AOP_WORKFLOW--流程, SCRIPT--脚本, PLAYBOOK--剧本）
 	InstanceType *string `json:"instance_type,omitempty"`
 
-	// Action id.
+	// 流程ID
 	ActionId *string `json:"action_id,omitempty"`
 
-	// action name.
+	// 流程名称
 	ActionName *string `json:"action_name,omitempty"`
 
-	// Instance id.
+	// 实例ID
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// parent instance id.
+	// 父节点实例ID
 	ParentInstanceId *string `json:"parent_instance_id,omitempty"`
 
-	// log level.
+	// 日志级别
 	LogLevel *string `json:"log_level,omitempty"`
 
-	// input.
+	// 输入
 	Input *string `json:"input,omitempty"`
 
-	// output.
+	// 输出
 	Output *string `json:"output,omitempty"`
 
-	// error_msg.
+	// 错误信息
 	ErrorMsg *string `json:"error_msg,omitempty"`
 
-	// start_time.
+	// 开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
-	// end_time.
+	// 结束时间
 	EndTime *string `json:"end_time,omitempty"`
 
-	// status.
+	// 状态。(RUNNING--运行中、FINISHED--成功、FAILED--失败、RETRYING--重试中、TERMINATING--终止中、TERMINATED--已终止)
 	Status *string `json:"status,omitempty"`
 
-	// trigger type.
+	// 触发类型. TIMER--定时触发, EVENT--事件触发
 	TriggerType *string `json:"trigger_type,omitempty"`
 }
 

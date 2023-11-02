@@ -12,22 +12,22 @@ import (
 // ListAlertRuleTemplatesRequest Request Object
 type ListAlertRuleTemplatesRequest struct {
 
-	// workspace_id
+	// 工作空间 ID。Workspace ID.
 	WorkspaceId string `json:"workspace_id"`
 
-	// offset
+	// 偏移量。Offset.
 	Offset int64 `json:"offset"`
 
-	// limit
+	// 条数。Limit.
 	Limit int64 `json:"limit"`
 
-	// sort_key
+	// 排序字段。Sort key
 	SortKey *string `json:"sort_key,omitempty"`
 
-	// sort_dir. asc, desc
+	// 排序顺序，顺序、逆序。Sort direction, asc, desc。
 	SortDir *ListAlertRuleTemplatesRequestSortDir `json:"sort_dir,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *[]ListAlertRuleTemplatesRequestSeverity `json:"severity,omitempty"`
 }
 

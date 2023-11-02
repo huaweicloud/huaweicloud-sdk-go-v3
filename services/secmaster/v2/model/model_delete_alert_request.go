@@ -9,13 +9,13 @@ import (
 // DeleteAlertRequest Request Object
 type DeleteAlertRequest struct {
 
-	// application/json;charset=UTF-8
+	// 内容类型
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间id
 	WorkspaceId string `json:"workspace_id"`
 
-	Body *DeleteAlert `json:"body,omitempty"`
+	Body *DeleteAlertRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteAlertRequest) String() string {

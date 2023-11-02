@@ -15,7 +15,7 @@ type UpdateBackupOffsitePolicyInfo struct {
 	// 是否开启跨区域增量备份。 - true：开启跨区域增量备份，当open_auto_backup开启时才可以开启。 - false：关闭跨区域增量备份。
 	OpenIncrementalBackup bool `json:"open_incremental_backup"`
 
-	// 设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdb/gaussdb_10_0004.html)。
+	// 设置跨区域备份策略的目标project ID。    租户在某一Region下的project ID。                              获取方法请参见[获取项目ID](https://support.huaweicloud.com/api-gaussdbformysql/gaussdbformysql_10_0004.html)。
 	DestinationProjectId string `json:"destination_project_id"`
 
 	// 设置跨区域备份策略的目标区域。

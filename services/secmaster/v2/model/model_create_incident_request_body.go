@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// CreateIncidentRequestBody CreateIncidentRequestBody
+// CreateIncidentRequestBody 创建事件请求body体
 type CreateIncidentRequestBody struct {
-	DataObject *CreateIncident `json:"data_object,omitempty"`
+	DataObject *Incident `json:"data_object,omitempty"`
 }
 
 func (o CreateIncidentRequestBody) String() string {

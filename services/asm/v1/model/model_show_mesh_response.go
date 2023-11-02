@@ -9,10 +9,10 @@ import (
 // ShowMeshResponse Response Object
 type ShowMeshResponse struct {
 
-	// API版本，固定值“v1”，该值不可修改。
+	// API版本，固定值“v1”，该值不可修改
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	// API类型，固定值“Mesh”或“mesh”，该值不可修改。
+	// API类型，固定值“Mesh”或“mesh”，该值不可修改
 	Kind *string `json:"kind,omitempty"`
 
 	Metadata *MeshMetadata `json:"metadata,omitempty"`

@@ -12,13 +12,13 @@ type ListPlaybookApprovesRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// Resource Id, PlaybookId or AopworkflowId
+	// 资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// PLAYBOOK, AOP_WORKFLOW
+	// 审核类型。（PLAYBOOK-剧本, AOP_WORKFLOW--流程)
 	ApproveType *string `json:"approve_type,omitempty"`
 }
 

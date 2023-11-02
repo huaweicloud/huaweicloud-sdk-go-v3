@@ -47,6 +47,9 @@ type ListApisV2Request struct {
 
 	// 指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
 	PreciseSearch *string `json:"precise_search,omitempty"`
+
+	// 负载通道名称。
+	VpcChannelName *string `json:"vpc_channel_name,omitempty"`
 }
 
 func (o ListApisV2Request) String() string {

@@ -9,13 +9,13 @@ import (
 // BatchUpdateMembersOption 批量添加member请求参数。
 type BatchUpdateMembersOption struct {
 
-	// 后端服务器端口
+	// 后端服务器ID。 >此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
 	Id string `json:"id"`
 
 	// 后端云服务器的管理状态。取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
-	// 后端服务器名称。
+	// 后端服务器名称。注意：该名称并非ECS名称。
 	Name *string `json:"name,omitempty"`
 
 	// 后端服务器端口号。

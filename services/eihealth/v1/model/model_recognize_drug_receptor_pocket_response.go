@@ -11,8 +11,8 @@ type RecognizeDrugReceptorPocketResponse struct {
 	Mode *RecognizeReceptorPocketMode `json:"mode,omitempty"`
 
 	// 口袋列表
-	Pockets        *[]BoundingBoxDto `json:"pockets,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Pockets        *[]DrugBoundingBoxDto `json:"pockets,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o RecognizeDrugReceptorPocketResponse) String() string {

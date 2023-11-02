@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// CreateRuleInfo Information of rule
+// CreateRuleInfo 创建剧本触发规则参数
 type CreateRuleInfo struct {
-	Rule *ConditionInfo `json:"rule,omitempty"`
+	Rule *ConditionInfo `json:"rule"`
 }
 
 func (o CreateRuleInfo) String() string {

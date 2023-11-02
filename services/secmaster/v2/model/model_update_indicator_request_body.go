@@ -8,10 +8,6 @@ import (
 
 // UpdateIndicatorRequestBody update indicator request body
 type UpdateIndicatorRequestBody struct {
-
-	// 触发标志
-	TriggerFlag *bool `json:"trigger_flag,omitempty"`
-
 	DataObject *IndicatorDataObjectDetail `json:"data_object,omitempty"`
 }
 

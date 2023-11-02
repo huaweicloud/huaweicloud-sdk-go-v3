@@ -6,22 +6,9 @@ import (
 	"strings"
 )
 
-// IndicatorCreateRequest indicator create request
+// IndicatorCreateRequest 创建指标请求参数
 type IndicatorCreateRequest struct {
-
-	// 指标名称
-	Name *string `json:"name,omitempty"`
-
-	// 版本号
-	FormatVersion *int32 `json:"format_version,omitempty"`
-
-	// 类型（SIMULATION,PLAYBOOK,MANUAL,INSTANCE,DATA_SOURCE）
-	Type *string `json:"type,omitempty"`
-
-	// 触发标志
-	TriggerFlag *bool `json:"trigger_flag,omitempty"`
-
-	DataObject *CreateIndicatorDetail `json:"data_object,omitempty"`
+	DataObject *CreateIndicatorDetail `json:"data_object"`
 }
 
 func (o IndicatorCreateRequest) String() string {

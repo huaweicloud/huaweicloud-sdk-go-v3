@@ -12,10 +12,10 @@ type ShowIndicatorDetailRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// workspace id
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// ID of indicator
+	// 情报指标ID
 	IndicatorId string `json:"indicator_id"`
 }
 

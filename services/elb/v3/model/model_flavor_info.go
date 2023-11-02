@@ -18,7 +18,7 @@ type FlavorInfo struct {
 	// 每秒查询数。单位：个。仅7层LB有该指标。
 	Qps *int32 `json:"qps,omitempty"`
 
-	// 带宽。单位：Mbit/s。
+	// 带宽。单位：Kbit/s。
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
 	// 当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个

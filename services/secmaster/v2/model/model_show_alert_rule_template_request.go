@@ -9,10 +9,10 @@ import (
 // ShowAlertRuleTemplateRequest Request Object
 type ShowAlertRuleTemplateRequest struct {
 
-	// workspace_id
+	// 工作空间 ID。Workspace ID.
 	WorkspaceId string `json:"workspace_id"`
 
-	// template_id
+	// 告警规则模板 ID。Alert rule template ID.
 	TemplateId string `json:"template_id"`
 }
 

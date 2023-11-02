@@ -9,10 +9,10 @@ import (
 // DataClassRefPojo 数据类对象信息
 type DataClassRefPojo struct {
 
-	// 唯一标识ID
+	// 数据类ID
 	Id string `json:"id"`
 
-	// 唯一标识ID
+	// 数据类名称
 	Name *string `json:"name,omitempty"`
 }
 

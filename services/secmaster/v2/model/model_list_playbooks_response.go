@@ -9,22 +9,22 @@ import (
 // ListPlaybooksResponse Response Object
 type ListPlaybooksResponse struct {
 
-	// Error code
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 响应消息信息
 	Message *string `json:"message,omitempty"`
 
-	// tatal count
+	// 总条数
 	Total *int32 `json:"total,omitempty"`
 
-	// current page count
+	// 分页查询数据大小
 	Size *int32 `json:"size,omitempty"`
 
-	// current page size
+	// 当前页码
 	Page *int32 `json:"page,omitempty"`
 
-	// list of informations of playbook
+	// 剧本列表信息
 	Data *[]PlaybookInfo `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

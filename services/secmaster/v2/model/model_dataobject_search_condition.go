@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// DataobjectSearchCondition search condition
+// DataobjectSearchCondition 搜索条件表达式
 type DataobjectSearchCondition struct {
 
-	// conditions
-	Conditions *[]ConditonInfo `json:"conditions,omitempty"`
+	// 表达式列表
+	Conditions *[]DataobjectSearchConditionConditions `json:"conditions,omitempty"`
 
-	// conditions
-	Logics *[]string `json:"logics,omitempty"`
+	// 表达式逻辑
+	Logics *[]DataobjectSearchConditionLogics `json:"logics,omitempty"`
 }
 
 func (o DataobjectSearchCondition) String() string {

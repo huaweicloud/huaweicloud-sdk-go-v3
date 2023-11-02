@@ -19,6 +19,27 @@ func DwsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddSnapshotCrossRegionPolicy 设置跨区域备份配置
+//
+// 该接口用于设置跨区域备份配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) AddSnapshotCrossRegionPolicy(request *model.AddSnapshotCrossRegionPolicyRequest) (*model.AddSnapshotCrossRegionPolicyResponse, error) {
+	requestDef := GenReqDefForAddSnapshotCrossRegionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
+// AddSnapshotCrossRegionPolicyInvoker 设置跨区域备份配置
+func (c *DwsClient) AddSnapshotCrossRegionPolicyInvoker(request *model.AddSnapshotCrossRegionPolicyRequest) *AddSnapshotCrossRegionPolicyInvoker {
+	requestDef := GenReqDefForAddSnapshotCrossRegionPolicy()
+	return &AddSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddWorkloadQueue 添加工作负载队列
 //
 // 添加工作负载队列
@@ -234,6 +255,27 @@ func (c *DwsClient) CheckDisasterName(request *model.CheckDisasterNameRequest) (
 func (c *DwsClient) CheckDisasterNameInvoker(request *model.CheckDisasterNameRequest) *CheckDisasterNameInvoker {
 	requestDef := GenReqDefForCheckDisasterName()
 	return &CheckDisasterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckTableRestore 用户恢复表名检测
+//
+// 该接口用于用户恢复表名检测
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) CheckTableRestore(request *model.CheckTableRestoreRequest) (*model.CheckTableRestoreResponse, error) {
+	requestDef := GenReqDefForCheckTableRestore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckTableRestoreResponse), nil
+	}
+}
+
+// CheckTableRestoreInvoker 用户恢复表名检测
+func (c *DwsClient) CheckTableRestoreInvoker(request *model.CheckTableRestoreRequest) *CheckTableRestoreInvoker {
+	requestDef := GenReqDefForCheckTableRestore()
+	return &CheckTableRestoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CopySnapshot 复制快照
@@ -639,6 +681,27 @@ func (c *DwsClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) 
 	return &DeleteSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSnapshotCrossRegionPolicy 删除跨区域备份配置
+//
+// 该接口用于删除跨区域备份配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteSnapshotCrossRegionPolicy(request *model.DeleteSnapshotCrossRegionPolicyRequest) (*model.DeleteSnapshotCrossRegionPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteSnapshotCrossRegionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
+// DeleteSnapshotCrossRegionPolicyInvoker 删除跨区域备份配置
+func (c *DwsClient) DeleteSnapshotCrossRegionPolicyInvoker(request *model.DeleteSnapshotCrossRegionPolicyRequest) *DeleteSnapshotCrossRegionPolicyInvoker {
+	requestDef := GenReqDefForDeleteSnapshotCrossRegionPolicy()
+	return &DeleteSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSnapshotPolicy 删除快照策略
 //
 // 该接口用于删除一个快照策略。
@@ -658,6 +721,27 @@ func (c *DwsClient) DeleteSnapshotPolicy(request *model.DeleteSnapshotPolicyRequ
 func (c *DwsClient) DeleteSnapshotPolicyInvoker(request *model.DeleteSnapshotPolicyRequest) *DeleteSnapshotPolicyInvoker {
 	requestDef := GenReqDefForDeleteSnapshotPolicy()
 	return &DeleteSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWorkloadPlan 删除工作负载计划
+//
+// 删除工作负载计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteWorkloadPlan(request *model.DeleteWorkloadPlanRequest) (*model.DeleteWorkloadPlanResponse, error) {
+	requestDef := GenReqDefForDeleteWorkloadPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWorkloadPlanResponse), nil
+	}
+}
+
+// DeleteWorkloadPlanInvoker 删除工作负载计划
+func (c *DwsClient) DeleteWorkloadPlanInvoker(request *model.DeleteWorkloadPlanRequest) *DeleteWorkloadPlanInvoker {
+	requestDef := GenReqDefForDeleteWorkloadPlan()
+	return &DeleteWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteWorkloadQueue 删除工作负载队列
@@ -721,6 +805,27 @@ func (c *DwsClient) DisassociateElb(request *model.DisassociateElbRequest) (*mod
 func (c *DwsClient) DisassociateElbInvoker(request *model.DisassociateElbRequest) *DisassociateElbInvoker {
 	requestDef := GenReqDefForDisassociateElb()
 	return &DisassociateElbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteClusterUpgradeAction 下发集群升级相关操作
+//
+// 下发集群升级相关操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ExecuteClusterUpgradeAction(request *model.ExecuteClusterUpgradeActionRequest) (*model.ExecuteClusterUpgradeActionResponse, error) {
+	requestDef := GenReqDefForExecuteClusterUpgradeAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteClusterUpgradeActionResponse), nil
+	}
+}
+
+// ExecuteClusterUpgradeActionInvoker 下发集群升级相关操作
+func (c *DwsClient) ExecuteClusterUpgradeActionInvoker(request *model.ExecuteClusterUpgradeActionRequest) *ExecuteClusterUpgradeActionInvoker {
+	requestDef := GenReqDefForExecuteClusterUpgradeAction()
+	return &ExecuteClusterUpgradeActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteDatabaseOmUserAction 执行运维用户操作
@@ -1481,6 +1586,48 @@ func (c *DwsClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuo
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSnapshotCrossRegion 获取跨区域快照可用region
+//
+// 该接口用于获取跨区域快照可用region
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListSnapshotCrossRegion(request *model.ListSnapshotCrossRegionRequest) (*model.ListSnapshotCrossRegionResponse, error) {
+	requestDef := GenReqDefForListSnapshotCrossRegion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotCrossRegionResponse), nil
+	}
+}
+
+// ListSnapshotCrossRegionInvoker 获取跨区域快照可用region
+func (c *DwsClient) ListSnapshotCrossRegionInvoker(request *model.ListSnapshotCrossRegionRequest) *ListSnapshotCrossRegionInvoker {
+	requestDef := GenReqDefForListSnapshotCrossRegion()
+	return &ListSnapshotCrossRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotCrossRegionPolicy 查询所有跨区域快照配置
+//
+// 该接口用于查询所有跨区域快照配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListSnapshotCrossRegionPolicy(request *model.ListSnapshotCrossRegionPolicyRequest) (*model.ListSnapshotCrossRegionPolicyResponse, error) {
+	requestDef := GenReqDefForListSnapshotCrossRegionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
+// ListSnapshotCrossRegionPolicyInvoker 查询所有跨区域快照配置
+func (c *DwsClient) ListSnapshotCrossRegionPolicyInvoker(request *model.ListSnapshotCrossRegionPolicyRequest) *ListSnapshotCrossRegionPolicyInvoker {
+	requestDef := GenReqDefForListSnapshotCrossRegionPolicy()
+	return &ListSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSnapshotDetails 查询快照详情
 //
 // 该接口用于使用快照ID查询快照详情。
@@ -1605,6 +1752,48 @@ func (c *DwsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsRes
 func (c *DwsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
 	requestDef := GenReqDefForListTags()
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUpdatableVersion 获取集群可升级的目标版本
+//
+// 获取集群可升级的目标版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListUpdatableVersion(request *model.ListUpdatableVersionRequest) (*model.ListUpdatableVersionResponse, error) {
+	requestDef := GenReqDefForListUpdatableVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUpdatableVersionResponse), nil
+	}
+}
+
+// ListUpdatableVersionInvoker 获取集群可升级的目标版本
+func (c *DwsClient) ListUpdatableVersionInvoker(request *model.ListUpdatableVersionRequest) *ListUpdatableVersionInvoker {
+	requestDef := GenReqDefForListUpdatableVersion()
+	return &ListUpdatableVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUpdateRecord 获取集群升级记录
+//
+// 通过此api获取当前集群升级记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListUpdateRecord(request *model.ListUpdateRecordRequest) (*model.ListUpdateRecordResponse, error) {
+	requestDef := GenReqDefForListUpdateRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUpdateRecordResponse), nil
+	}
+}
+
+// ListUpdateRecordInvoker 获取集群升级记录
+func (c *DwsClient) ListUpdateRecordInvoker(request *model.ListUpdateRecordRequest) *ListUpdateRecordInvoker {
+	requestDef := GenReqDefForListUpdateRecord()
+	return &ListUpdateRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWorkloadQueue 查询工作负载队列
@@ -1752,6 +1941,27 @@ func (c *DwsClient) RestoreDisaster(request *model.RestoreDisasterRequest) (*mod
 func (c *DwsClient) RestoreDisasterInvoker(request *model.RestoreDisasterRequest) *RestoreDisasterInvoker {
 	requestDef := GenReqDefForRestoreDisaster()
 	return &RestoreDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreTable 恢复表
+//
+// 该接口用于恢复表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) RestoreTable(request *model.RestoreTableRequest) (*model.RestoreTableResponse, error) {
+	requestDef := GenReqDefForRestoreTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreTableResponse), nil
+	}
+}
+
+// RestoreTableInvoker 恢复表
+func (c *DwsClient) RestoreTableInvoker(request *model.RestoreTableRequest) *RestoreTableInvoker {
+	requestDef := GenReqDefForRestoreTable()
+	return &RestoreTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SaveClusterDescriptionInfo 保存集群描述信息
@@ -1922,6 +2132,27 @@ func (c *DwsClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *Sho
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowWorkloadPlan 查询某个工作负载计划详细信息
+//
+// 查询某个工作负载计划详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowWorkloadPlan(request *model.ShowWorkloadPlanRequest) (*model.ShowWorkloadPlanResponse, error) {
+	requestDef := GenReqDefForShowWorkloadPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkloadPlanResponse), nil
+	}
+}
+
+// ShowWorkloadPlanInvoker 查询某个工作负载计划详细信息
+func (c *DwsClient) ShowWorkloadPlanInvoker(request *model.ShowWorkloadPlanRequest) *ShowWorkloadPlanInvoker {
+	requestDef := GenReqDefForShowWorkloadPlan()
+	return &ShowWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkCluster 集群缩容
 //
 // 该接口用于缩容集群。
@@ -1962,6 +2193,48 @@ func (c *DwsClient) StartDisasterRecovery(request *model.StartDisasterRecoveryRe
 func (c *DwsClient) StartDisasterRecoveryInvoker(request *model.StartDisasterRecoveryRequest) *StartDisasterRecoveryInvoker {
 	requestDef := GenReqDefForStartDisasterRecovery()
 	return &StartDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartWorkloadPlan 启动工作负载计划
+//
+// 启动工作负载计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) StartWorkloadPlan(request *model.StartWorkloadPlanRequest) (*model.StartWorkloadPlanResponse, error) {
+	requestDef := GenReqDefForStartWorkloadPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartWorkloadPlanResponse), nil
+	}
+}
+
+// StartWorkloadPlanInvoker 启动工作负载计划
+func (c *DwsClient) StartWorkloadPlanInvoker(request *model.StartWorkloadPlanRequest) *StartWorkloadPlanInvoker {
+	requestDef := GenReqDefForStartWorkloadPlan()
+	return &StartWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopWorkloadPlan 停止工作负载计划
+//
+// 停止工作负载计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) StopWorkloadPlan(request *model.StopWorkloadPlanRequest) (*model.StopWorkloadPlanResponse, error) {
+	requestDef := GenReqDefForStopWorkloadPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopWorkloadPlanResponse), nil
+	}
+}
+
+// StopWorkloadPlanInvoker 停止工作负载计划
+func (c *DwsClient) StopWorkloadPlanInvoker(request *model.StopWorkloadPlanRequest) *StopWorkloadPlanInvoker {
+	requestDef := GenReqDefForStopWorkloadPlan()
+	return &StopWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchFailoverDisaster 容灾异常切换

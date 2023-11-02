@@ -9,9 +9,6 @@ import (
 // ListMeshesRequest Request Object
 type ListMeshesRequest struct {
 
-	// 网格所属DomainID
-	XApplyDomainID *string `json:"X-Apply-DomainID,omitempty"`
-
 	// 网格所属ProjectID
 	XApplyProjectID *string `json:"X-Apply-ProjectID,omitempty"`
 }

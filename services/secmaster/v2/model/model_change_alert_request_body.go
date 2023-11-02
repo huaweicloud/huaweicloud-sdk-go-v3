@@ -6,8 +6,12 @@ import (
 	"strings"
 )
 
-// ChangeAlertRequestBody ChangeAlertRequestBody
+// ChangeAlertRequestBody 更新告警请求body体
 type ChangeAlertRequestBody struct {
+
+	// 更新告警的ID列表
+	BatchIds *[]string `json:"batch_ids,omitempty"`
+
 	DataObject *Alert `json:"data_object,omitempty"`
 }
 

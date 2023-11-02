@@ -9,10 +9,10 @@ import (
 // ShowPlaybookMonitorsResponse Response Object
 type ShowPlaybookMonitorsResponse struct {
 
-	// Error code
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
 	Data *PlaybookInstanceMonitorDetail `json:"data,omitempty"`

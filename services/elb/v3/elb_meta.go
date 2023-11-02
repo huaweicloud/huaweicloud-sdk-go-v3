@@ -962,6 +962,10 @@ func GenReqDefForListListeners() *def.HttpRequestDef {
 		WithJsonTag("transparent_client_ip_enable").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProxyProtocolEnable").
+		WithJsonTag("proxy_protocol_enable").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnhanceL7policyEnable").
 		WithJsonTag("enhance_l7policy_enable").
 		WithLocationType(def.Query))

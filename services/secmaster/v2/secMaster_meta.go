@@ -261,11 +261,11 @@ func GenReqDefForCreateBatchOrderAlerts() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateDataobjectRelation() *def.HttpRequestDef {
+func GenReqDefForCreateDataobjectRelations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/{dataclass_type}/{data_object_id}/{related_dataclass_type}").
-		WithResponse(new(model.CreateDataobjectRelationResponse)).
+		WithResponse(new(model.CreateDataobjectRelationsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -594,11 +594,11 @@ func GenReqDefForDeleteAlertRule() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteDataobjectRelation() *def.HttpRequestDef {
+func GenReqDefForDeleteDataobjectRelations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/{dataclass_type}/{data_object_id}/{related_dataclass_type}").
-		WithResponse(new(model.DeleteDataobjectRelationResponse)).
+		WithResponse(new(model.DeleteDataobjectRelationsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -896,10 +896,6 @@ func GenReqDefForListAlertRuleMetrics() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
 		WithKindName("string").
@@ -1042,11 +1038,11 @@ func GenReqDefForListAlerts() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListDataobjectRelation() *def.HttpRequestDef {
+func GenReqDefForListDataobjectRelations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/{dataclass_type}/{data_object_id}/{related_dataclass_type}/search").
-		WithResponse(new(model.ListDataobjectRelationResponse)).
+		WithResponse(new(model.ListDataobjectRelationsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1074,65 +1070,6 @@ func GenReqDefForListDataobjectRelation() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XRequestId").
-		WithJsonTag("X-request-id").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListIncidentTypes() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/incidents/types").
-		WithResponse(new(model.ListIncidentTypesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("WorkspaceId").
-		WithJsonTag("workspace_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ParentBusinessCode").
-		WithJsonTag("parent_business_code").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Order").
-		WithJsonTag("order").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sortby").
-		WithJsonTag("sortby").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Name").
-		WithJsonTag("name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Enabled").
-		WithJsonTag("enabled").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("LayoutName").
-		WithJsonTag("layout_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IsBuiltIn").
-		WithJsonTag("is_built_in").
-		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -1186,19 +1123,6 @@ func GenReqDefForListIndicators() *def.HttpRequestDef {
 		WithName("WorkspaceId").
 		WithJsonTag("workspace_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Order").
-		WithJsonTag("order").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FromDate").
-		WithJsonTag("from_date").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ToDate").
-		WithJsonTag("to_date").
-		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
@@ -1360,10 +1284,6 @@ func GenReqDefForListPlaybookInstances() *def.HttpRequestDef {
 		WithJsonTag("status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DateType").
-		WithJsonTag("date_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
 		WithJsonTag("name").
 		WithLocationType(def.Query))
@@ -1444,10 +1364,6 @@ func GenReqDefForListPlaybookVersions() *def.HttpRequestDef {
 		WithJsonTag("version_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ApproveRole").
-		WithJsonTag("approve_role").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
@@ -1486,10 +1402,6 @@ func GenReqDefForListPlaybooks() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SearchTxt").
 		WithJsonTag("search_txt").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Enabled").

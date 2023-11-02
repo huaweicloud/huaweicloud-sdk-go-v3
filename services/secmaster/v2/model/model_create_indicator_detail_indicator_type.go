@@ -9,17 +9,17 @@ import (
 // CreateIndicatorDetailIndicatorType 指标类型统计数据
 type CreateIndicatorDetailIndicatorType struct {
 
-	// indicator_type
-	IndicatorType *string `json:"indicator_type,omitempty"`
+	// 指标类型
+	IndicatorType string `json:"indicator_type"`
 
-	// id
-	Id *string `json:"id,omitempty"`
+	// 情报类型ID
+	Id string `json:"id"`
 
-	// category
-	Category *string `json:"category,omitempty"`
+	// 目录
+	Category string `json:"category"`
 
-	// layoutId
-	LayoutId *string `json:"layoutId,omitempty"`
+	// 布局ID
+	LayoutId string `json:"layout_id"`
 }
 
 func (o CreateIndicatorDetailIndicatorType) String() string {

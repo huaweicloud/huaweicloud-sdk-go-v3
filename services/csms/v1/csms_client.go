@@ -422,6 +422,27 @@ func (c *CsmsClient) RestoreSecretInvoker(request *model.RestoreSecretRequest) *
 	return &RestoreSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RotateSecret 轮转凭据
+//
+// 立即执行轮转凭据。在指定的凭据中，创建一个新的凭据版本，用于加密存储后台随机产生的凭据值。同时将新创建的凭据版本标记为SYSCURRENT状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) RotateSecret(request *model.RotateSecretRequest) (*model.RotateSecretResponse, error) {
+	requestDef := GenReqDefForRotateSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RotateSecretResponse), nil
+	}
+}
+
+// RotateSecretInvoker 轮转凭据
+func (c *CsmsClient) RotateSecretInvoker(request *model.RotateSecretRequest) *RotateSecretInvoker {
+	requestDef := GenReqDefForRotateSecret()
+	return &RotateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecret 查询凭据
 //
 // 查询指定凭据的信息。

@@ -9,7 +9,7 @@ import (
 // ListLabelPageRequest Request Object
 type ListLabelPageRequest struct {
 
-	// 华为云项目ID，您可以从[获取项目ID](eihealth_33_0044.xml)中获取。
+	// 平台项目ID，您可以在平台单击所需的项目名称，进入项目设置页面查看。
 	EihealthProjectId string `json:"eihealth_project_id"`
 }
 

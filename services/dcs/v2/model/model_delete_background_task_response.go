@@ -8,7 +8,10 @@ import (
 
 // DeleteBackgroundTaskResponse Response Object
 type DeleteBackgroundTaskResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 返回消息
+	Message        *string `json:"message,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteBackgroundTaskResponse) String() string {

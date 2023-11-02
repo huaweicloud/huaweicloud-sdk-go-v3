@@ -1505,7 +1505,7 @@ func (c *EcsClient) UpdateServerInvoker(request *model.UpdateServerRequest) *Upd
 
 // UpdateServerAutoTerminateTime 修改云服务器定时删除时间
 //
-// 修改按需服务器，设置定时删除时间。如果设置的定时删除时间为空，表示取消定时删除。
+// 修改按需服务器，设置定时删除时间。如果设置的定时删除时间为空字符串，表示取消定时删除。
 //
 // 该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ecs:cloudServers:put。
 //

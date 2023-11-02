@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// DataclassInfoRef Response of Dataclass Info Ref
+// DataclassInfoRef 数据类信息
 type DataclassInfoRef struct {
 
-	// Id value
+	// 数据类ID
 	Id *string `json:"id,omitempty"`
 
-	// Id value
+	// 数据类名称
 	Name *string `json:"name,omitempty"`
 }
 

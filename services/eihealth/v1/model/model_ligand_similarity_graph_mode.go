@@ -9,19 +9,23 @@ import (
 	"strings"
 )
 
-// LigandSimilarityGraphMode 创建配体相似度图的模式：中心模式
+// LigandSimilarityGraphMode 创建配体相似度图的模式：中心模式、自由模式
 type LigandSimilarityGraphMode struct {
 	value string
 }
 
 type LigandSimilarityGraphModeEnum struct {
 	CENTER LigandSimilarityGraphMode
+	FREE   LigandSimilarityGraphMode
 }
 
 func GetLigandSimilarityGraphModeEnum() LigandSimilarityGraphModeEnum {
 	return LigandSimilarityGraphModeEnum{
 		CENTER: LigandSimilarityGraphMode{
 			value: "CENTER",
+		},
+		FREE: LigandSimilarityGraphMode{
+			value: "FREE",
 		},
 	}
 }

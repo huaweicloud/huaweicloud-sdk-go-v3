@@ -9,10 +9,10 @@ import (
 // ListAlertRuleTemplatesResponse Response Object
 type ListAlertRuleTemplatesResponse struct {
 
-	// total count
+	// 总数量。Total count.
 	Count *int64 `json:"count,omitempty"`
 
-	// templates
+	// 告警规则模板。Alert rule templates.
 	Records *[]AlertRuleTemplate `json:"records,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

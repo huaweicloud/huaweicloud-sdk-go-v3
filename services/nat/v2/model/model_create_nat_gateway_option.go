@@ -31,6 +31,9 @@ type CreateNatGatewayOption struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	SessionConf *SessionConfiguration `json:"session_conf,omitempty"`
+
+	// 公网NAT网关私有IP地址，由VPC中子网分配。
+	NgportIpAddress *string `json:"ngport_ip_address,omitempty"`
 }
 
 func (o CreateNatGatewayOption) String() string {

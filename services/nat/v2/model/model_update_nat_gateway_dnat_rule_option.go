@@ -41,6 +41,9 @@ type UpdateNatGatewayDnatRuleOption struct {
 
 	// Floatingip对外提供服务的端口号范围。 功能说明：该端口范围与internal _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。
 	ExternalServicePortRange *string `json:"external_service_port_range,omitempty"`
+
+	// 全域弹性公网IP的id。
+	GlobalEipId *string `json:"global_eip_id,omitempty"`
 }
 
 func (o UpdateNatGatewayDnatRuleOption) String() string {

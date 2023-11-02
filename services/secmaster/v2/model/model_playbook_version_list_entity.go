@@ -6,64 +6,61 @@ import (
 	"strings"
 )
 
-// PlaybookVersionListEntity Information of playbook version
+// PlaybookVersionListEntity 剧本版本详情信息
 type PlaybookVersionListEntity struct {
 
-	// Id value
+	// 剧本版本ID
 	Id *string `json:"id,omitempty"`
 
-	// The description, display only
+	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// Create time
+	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// Update time
+	// 更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// Project id value
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// Creator id value
+	// 创建者ID
 	CreatorId *string `json:"creator_id,omitempty"`
 
-	// Modifier id value
+	// 修改者ID
 	ModifierId *string `json:"modifier_id,omitempty"`
 
-	// Playbook id.
+	// 剧本ID
 	PlaybookId *string `json:"playbook_id,omitempty"`
 
-	// version
+	// 版本号
 	Version *string `json:"version,omitempty"`
 
-	// Run mode of this playbook. automatic, manual
-	RunMode *string `json:"run_mode,omitempty"`
-
-	// If is enabled, false for disenabled, true for enabled
+	// 是否激活
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// Status of approvement. editing, approving, unpassed, published
+	// 状态. (EDITING--编辑中, APPROVING--审核中, UNPASSED--审核不通过, PUBLISHED--审核通过)
 	Status *string `json:"status,omitempty"`
 
-	// Strategy of action. sync or async
+	// 执行策略. 目前仅支持异步并发执行，对应值为ASYNC
 	ActionStrategy *string `json:"action_strategy,omitempty"`
 
-	// If the condition filter is enabled.
+	// 过滤规则是否启用
 	RuleEnable *bool `json:"rule_enable,omitempty"`
 
-	// bind dataclass id
+	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
-	// Strategy of action. event, timer
+	// 触发方式. EVENT--事件触发, TIMER--定时触发
 	TriggerType *string `json:"trigger_type,omitempty"`
 
-	// if trigger when dataobject is created
+	// 标识数据对象是否创建时触发剧本
 	DataobjectCreate *bool `json:"dataobject_create,omitempty"`
 
-	// if trigger when dataobject is updated
+	// 标识数据对象是否更新时触发剧本
 	DataobjectUpdate *bool `json:"dataobject_update,omitempty"`
 
-	// if trigger when dataobject is deleted
+	// 标识数据对象是否删除时触发剧本
 	DataobjectDelete *bool `json:"dataobject_delete,omitempty"`
 
 	// 版本类型
@@ -77,9 +74,6 @@ type PlaybookVersionListEntity struct {
 
 	// 审核者
 	ApproveName *string `json:"approve_name,omitempty"`
-
-	// dataobject id
-	DataobjectId *string `json:"dataobject_id,omitempty"`
 }
 
 func (o PlaybookVersionListEntity) String() string {

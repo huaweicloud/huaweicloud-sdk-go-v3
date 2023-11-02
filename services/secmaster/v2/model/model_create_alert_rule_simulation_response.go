@@ -9,10 +9,10 @@ import (
 // CreateAlertRuleSimulationResponse Response Object
 type CreateAlertRuleSimulationResponse struct {
 
-	// alert_count
+	// 告警数量。Alert count.
 	AlertCount *int32 `json:"alert_count,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *string `json:"severity,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

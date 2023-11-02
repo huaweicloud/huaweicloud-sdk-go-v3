@@ -9,13 +9,13 @@ import (
 // ModifyPlaybookInfo Information of playbook
 type ModifyPlaybookInfo struct {
 
-	// The name, display only
+	// 剧本名称
 	Name *string `json:"name,omitempty"`
 
-	// The description, display only
+	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// If is enabled, false for disenabled, true for enabled
+	// 是否启用
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 启用的剧本版本ID

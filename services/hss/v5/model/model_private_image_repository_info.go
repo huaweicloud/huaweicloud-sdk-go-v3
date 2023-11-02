@@ -61,7 +61,7 @@ type PrivateImageRepositoryInfo struct {
 	SharedStatus *string `json:"shared_status,omitempty"`
 
 	// 是否可扫描
-	Scanable *bool `json:"scanable,omitempty"`
+	Scannable *bool `json:"scannable,omitempty"`
 
 	// 多架构关联镜像信息
 	AssociationImages *[]AssociateImages `json:"association_images,omitempty"`

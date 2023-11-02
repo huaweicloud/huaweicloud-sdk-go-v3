@@ -341,6 +341,42 @@ func (i *ShowResultInvoker) Invoke() (*model.ShowResultResponse, error) {
 	}
 }
 
+type StartChatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartChatInvoker) Invoke() (*model.StartChatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartChatResponse), nil
+	}
+}
+
+type SyncChatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncChatInvoker) Invoke() (*model.SyncChatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncChatResponse), nil
+	}
+}
+
+type SyncGetChatResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncGetChatResultInvoker) Invoke() (*model.SyncGetChatResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncGetChatResultResponse), nil
+	}
+}
+
 type CheckInstanceAccessInvoker struct {
 	*invoker.BaseInvoker
 }

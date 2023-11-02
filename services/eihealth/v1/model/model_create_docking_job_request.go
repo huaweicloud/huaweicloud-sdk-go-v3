@@ -9,7 +9,7 @@ import (
 // CreateDockingJobRequest Request Object
 type CreateDockingJobRequest struct {
 
-	// 盘古辅助制药平台项目ID。
+	// 平台项目ID。
 	EihealthProjectId string `json:"eihealth_project_id"`
 
 	Body *CreateDockJobReq `json:"body,omitempty"`

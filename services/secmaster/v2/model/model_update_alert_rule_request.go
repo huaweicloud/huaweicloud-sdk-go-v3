@@ -9,10 +9,10 @@ import (
 // UpdateAlertRuleRequest Request Object
 type UpdateAlertRuleRequest struct {
 
-	// workspace_id
+	// 工作空间 ID。Workspace ID.
 	WorkspaceId string `json:"workspace_id"`
 
-	// rule_id
+	// 告警规则 ID。Alert rule ID.
 	RuleId string `json:"rule_id"`
 
 	Body *UpdateAlertRuleRequestBody `json:"body,omitempty"`

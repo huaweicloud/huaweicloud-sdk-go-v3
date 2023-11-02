@@ -6,49 +6,49 @@ import (
 	"strings"
 )
 
-// PlaybookInfo Information of playbook
+// PlaybookInfo 剧本详情信息
 type PlaybookInfo struct {
 
-	// Id value
+	// 剧本ID
 	Id *string `json:"id,omitempty"`
 
-	// The name, display only
+	// 剧本名称
 	Name *string `json:"name,omitempty"`
 
-	// The description, display only
+	// 描述信息
 	Description *string `json:"description,omitempty"`
 
-	// Create time
+	// 剧本创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// Update time
+	// 剧本更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// Project id value
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// version Id value
+	// 剧本版本ID
 	VersionId *string `json:"version_id,omitempty"`
 
-	// If is enabled, false for disenabled, true for enabled
+	// 是否启用
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 工作空间id
+	// 工作空间ID
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// Role required for approve
+	// 审核用户角色
 	ApproveRole *string `json:"approve_role,omitempty"`
 
 	// 用户角色
 	UserRole *string `json:"user_role,omitempty"`
 
-	// Role required for edit
+	// 编辑用户角色
 	EditRole *string `json:"edit_role,omitempty"`
 
-	// Owner id
+	// 所有者ID
 	OwnerId *string `json:"owner_id,omitempty"`
 
-	// version
+	// 版本号
 	Version *string `json:"version,omitempty"`
 
 	// 数据类名称

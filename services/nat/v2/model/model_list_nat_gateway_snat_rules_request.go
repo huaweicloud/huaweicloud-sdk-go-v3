@@ -21,7 +21,7 @@ type ListNatGatewaySnatRulesRequest struct {
 	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
 	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
 
 	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
@@ -45,7 +45,7 @@ type ListNatGatewaySnatRulesRequest struct {
 	// 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
 	SourceType *int32 `json:"source_type,omitempty"`
 
-	// 功能说明：SNAT规则的状态。
+	// SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
 	Status *ListNatGatewaySnatRulesRequestStatus `json:"status,omitempty"`
 }
 

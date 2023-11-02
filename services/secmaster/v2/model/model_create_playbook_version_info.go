@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// CreatePlaybookVersionInfo Information of playbook version
+// CreatePlaybookVersionInfo 创建剧本版本请求参数
 type CreatePlaybookVersionInfo struct {
 
-	// The description, display only
+	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 工作空间id
+	// 工作空间ID
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// Playbook id.
+	// 剧本ID
 	PlaybookId *string `json:"playbook_id,omitempty"`
 
-	// Information of actions.
+	// 关联流程列表
 	Actions *[]ActionInfo `json:"actions,omitempty"`
 
-	// dataclass id.
+	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
 	// 过滤规则是否启用
@@ -30,19 +30,19 @@ type CreatePlaybookVersionInfo struct {
 	// 过滤规则ID
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// Strategy of action. event, timer
+	// 触发方式. EVENT--事件触发, TIMER--定时触发
 	TriggerType *string `json:"trigger_type,omitempty"`
 
-	// if trigger when dataobject is created
+	// 标识数据对象是否创建时触发剧本
 	DataobjectCreate *bool `json:"dataobject_create,omitempty"`
 
-	// if trigger when dataobject is updated
+	// 标识数据对象是否更新时触发剧本
 	DataobjectUpdate *bool `json:"dataobject_update,omitempty"`
 
-	// if trigger when dataobject is deleted
+	// 标识数据对象是否删除时触发剧本
 	DataobjectDelete *bool `json:"dataobject_delete,omitempty"`
 
-	// Strategy of action. sync or async
+	// 执行策略. 目前仅支持异步并发执行，对应值为ASYNC
 	ActionStrategy *string `json:"action_strategy,omitempty"`
 }
 

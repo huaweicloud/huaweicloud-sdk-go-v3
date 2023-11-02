@@ -21,7 +21,7 @@ func AsmClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CreateMesh 新建网格
 //
-// 该API用于创建一个网格。
+// 该API用于创建一个网格
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsmClient) CreateMesh(request *model.CreateMeshRequest) (*model.CreateMeshResponse, error) {
@@ -42,7 +42,7 @@ func (c *AsmClient) CreateMeshInvoker(request *model.CreateMeshRequest) *CreateM
 
 // DeleteMesh 删除网格
 //
-// 该API用于删除一个指定的网格。
+// 该API用于删除一个指定的网格
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsmClient) DeleteMesh(request *model.DeleteMeshRequest) (*model.DeleteMeshResponse, error) {
@@ -63,7 +63,7 @@ func (c *AsmClient) DeleteMeshInvoker(request *model.DeleteMeshRequest) *DeleteM
 
 // ListMeshes 查询网格列表
 //
-// 该API用于获取用户所有网格的详细信息。
+// 该API用于获取用户所有网格的详细信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsmClient) ListMeshes(request *model.ListMeshesRequest) (*model.ListMeshesResponse, error) {
@@ -84,7 +84,7 @@ func (c *AsmClient) ListMeshesInvoker(request *model.ListMeshesRequest) *ListMes
 
 // ShowMesh 查询网格
 //
-// 该API用于获取指定网格的详细信息。
+// 该API用于获取指定网格的详细信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsmClient) ShowMesh(request *model.ShowMeshRequest) (*model.ShowMeshResponse, error) {

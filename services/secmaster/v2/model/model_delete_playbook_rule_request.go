@@ -12,13 +12,13 @@ type DeletePlaybookRuleRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// version Id value
+	// 剧本版本ID
 	VersionId string `json:"version_id"`
 
-	// rule_id
+	// 规则ID
 	RuleId string `json:"rule_id"`
 }
 

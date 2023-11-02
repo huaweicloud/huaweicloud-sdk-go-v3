@@ -9,10 +9,10 @@ import (
 // ShowPlaybookTopologyResponse Response Object
 type ShowPlaybookTopologyResponse struct {
 
-	// tatal count
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
-	// Playbook action instances list
+	// 流程实例列表
 	ActionInstances *[]ActionInstanceInfo `json:"action_instances,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

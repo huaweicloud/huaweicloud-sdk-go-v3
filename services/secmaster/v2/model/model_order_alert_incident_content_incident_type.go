@@ -9,17 +9,14 @@ import (
 // OrderAlertIncidentContentIncidentType 事件类型
 type OrderAlertIncidentContentIncidentType struct {
 
-	// Id value
+	// 事件类型id
 	Id *string `json:"id,omitempty"`
 
-	// Id value
-	LayoutId *string `json:"layoutId,omitempty"`
-
-	// Id value
-	IncidentType *string `json:"incident_type,omitempty"`
-
-	// Id value
+	// 事件类型父类
 	Category *string `json:"category,omitempty"`
+
+	// 事件类型子类
+	IncidentType *string `json:"incident_type,omitempty"`
 }
 
 func (o OrderAlertIncidentContentIncidentType) String() string {

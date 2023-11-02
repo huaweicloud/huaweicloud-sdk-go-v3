@@ -6,19 +6,22 @@ import (
 	"strings"
 )
 
-// IncidentEnvironment 环境信息
+// IncidentEnvironment 事件产生的环境坐标信息
 type IncidentEnvironment struct {
 
-	// The name, display only
+	// 环境供应商：HWCP/HWC/AWS/Azure/GCP
 	VendorType *string `json:"vendor_type,omitempty"`
 
-	// Id value
+	// 租户id
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// Id value
+	// 区域id，全局服务global
 	RegionId *string `json:"region_id,omitempty"`
 
-	// Id value
+	// 数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
+	CrossWorkspaceId *string `json:"cross_workspace_id,omitempty"`
+
+	// 项目id， 全局服务默认null
 	ProjectId *string `json:"project_id,omitempty"`
 }
 

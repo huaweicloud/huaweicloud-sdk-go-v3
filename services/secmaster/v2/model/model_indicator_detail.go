@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IndicatorDetail indicator detail
+// IndicatorDetail 情报详情信息
 type IndicatorDetail struct {
 
 	// 指标ID
@@ -15,29 +15,20 @@ type IndicatorDetail struct {
 	// 指标名称
 	Name string `json:"name"`
 
-	// 数据类ID
-	DataclassId *string `json:"dataclass_id,omitempty"`
-
-	// 类型（SIMULATION,PLAYBOOK,MANUAL,INSTANCE,DATA_SOURCE）
-	Type *string `json:"type,omitempty"`
-
 	DataObject *IndicatorDataObjectDetail `json:"data_object,omitempty"`
 
-	// workspace id
+	// 工作空间ID
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// Project id value
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 布局ID
-	LayoutId *string `json:"layout_id,omitempty"`
+	DataclassRef *DataClassRefPojo `json:"dataclass_ref,omitempty"`
 
-	Dataclass *DataClassRefPojo `json:"dataclass,omitempty"`
-
-	// Create time
+	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// Update time
+	// 更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 }
 

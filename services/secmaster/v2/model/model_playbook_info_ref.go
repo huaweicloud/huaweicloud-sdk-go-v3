@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// PlaybookInfoRef Response of Playbook Info Ref
+// PlaybookInfoRef 剧本信息
 type PlaybookInfoRef struct {
 
-	// Id value
+	// 剧本ID
 	Id *string `json:"id,omitempty"`
 
-	// Id value
+	// 剧本版本ID
 	VersionId *string `json:"version_id,omitempty"`
 
-	// Id value
+	// 名称
 	Name *string `json:"name,omitempty"`
 
-	// version
+	// 版本
 	Version *string `json:"version,omitempty"`
 }
 

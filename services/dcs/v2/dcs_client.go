@@ -236,27 +236,6 @@ func (c *DcsClient) CreateBigkeyScanTaskInvoker(request *model.CreateBigkeyScanT
 	return &CreateBigkeyScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateConnectivityTest 创建备份导入页面实例连接测试
-//
-// 创建备份导入页面实例连接测试
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DcsClient) CreateConnectivityTest(request *model.CreateConnectivityTestRequest) (*model.CreateConnectivityTestResponse, error) {
-	requestDef := GenReqDefForCreateConnectivityTest()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateConnectivityTestResponse), nil
-	}
-}
-
-// CreateConnectivityTestInvoker 创建备份导入页面实例连接测试
-func (c *DcsClient) CreateConnectivityTestInvoker(request *model.CreateConnectivityTestRequest) *CreateConnectivityTestInvoker {
-	requestDef := GenReqDefForCreateConnectivityTest()
-	return &CreateConnectivityTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateCustomTemplate 创建自定义模板
 //
 // 创建自定义模板
@@ -385,27 +364,6 @@ func (c *DcsClient) CreateOnlineMigrationTaskInvoker(request *model.CreateOnline
 	return &CreateOnlineMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateOrUpdateBackUpInfo 新增/修改高级备份信息
-//
-// 新增/修改高级备份信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DcsClient) CreateOrUpdateBackUpInfo(request *model.CreateOrUpdateBackUpInfoRequest) (*model.CreateOrUpdateBackUpInfoResponse, error) {
-	requestDef := GenReqDefForCreateOrUpdateBackUpInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateOrUpdateBackUpInfoResponse), nil
-	}
-}
-
-// CreateOrUpdateBackUpInfoInvoker 新增/修改高级备份信息
-func (c *DcsClient) CreateOrUpdateBackUpInfoInvoker(request *model.CreateOrUpdateBackUpInfoRequest) *CreateOrUpdateBackUpInfoInvoker {
-	requestDef := GenReqDefForCreateOrUpdateBackUpInfo()
-	return &CreateOrUpdateBackUpInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateRedislog 采集Redis运行日志
 //
 // 采集Redis运行日志。
@@ -446,6 +404,27 @@ func (c *DcsClient) CreateRedislogDownloadLink(request *model.CreateRedislogDown
 func (c *DcsClient) CreateRedislogDownloadLinkInvoker(request *model.CreateRedislogDownloadLinkRequest) *CreateRedislogDownloadLinkInvoker {
 	requestDef := GenReqDefForCreateRedislogDownloadLink()
 	return &CreateRedislogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResizeOrder 包周期实例变更规格
+//
+// 包周期实例变更规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) CreateResizeOrder(request *model.CreateResizeOrderRequest) (*model.CreateResizeOrderResponse, error) {
+	requestDef := GenReqDefForCreateResizeOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResizeOrderResponse), nil
+	}
+}
+
+// CreateResizeOrderInvoker 包周期实例变更规格
+func (c *DcsClient) CreateResizeOrderInvoker(request *model.CreateResizeOrderRequest) *CreateResizeOrderInvoker {
+	requestDef := GenReqDefForCreateResizeOrder()
+	return &CreateResizeOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAclAccount 删除ACL账号
@@ -700,6 +679,48 @@ func (c *DcsClient) ExecuteCommandMobilization(request *model.ExecuteCommandMobi
 func (c *DcsClient) ExecuteCommandMobilizationInvoker(request *model.ExecuteCommandMobilizationRequest) *ExecuteCommandMobilizationInvoker {
 	requestDef := GenReqDefForExecuteCommandMobilization()
 	return &ExecuteCommandMobilizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportExcelJob 查询实例列表导出任务详情
+//
+// 查询实例列表导出任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ExportExcelJob(request *model.ExportExcelJobRequest) (*model.ExportExcelJobResponse, error) {
+	requestDef := GenReqDefForExportExcelJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportExcelJobResponse), nil
+	}
+}
+
+// ExportExcelJobInvoker 查询实例列表导出任务详情
+func (c *DcsClient) ExportExcelJobInvoker(request *model.ExportExcelJobRequest) *ExportExcelJobInvoker {
+	requestDef := GenReqDefForExportExcelJob()
+	return &ExportExcelJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportInstancesTask 异步导出实例资源
+//
+// 异步导出实例资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ExportInstancesTask(request *model.ExportInstancesTaskRequest) (*model.ExportInstancesTaskResponse, error) {
+	requestDef := GenReqDefForExportInstancesTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportInstancesTaskResponse), nil
+	}
+}
+
+// ExportInstancesTaskInvoker 异步导出实例资源
+func (c *DcsClient) ExportInstancesTaskInvoker(request *model.ExportInstancesTaskRequest) *ExportInstancesTaskInvoker {
+	requestDef := GenReqDefForExportInstancesTask()
+	return &ExportInstancesTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAclAccounts 查询ACL账户列表
@@ -994,6 +1015,27 @@ func (c *DcsClient) ListHotKeyScanTasks(request *model.ListHotKeyScanTasksReques
 func (c *DcsClient) ListHotKeyScanTasksInvoker(request *model.ListHotKeyScanTasksRequest) *ListHotKeyScanTasksInvoker {
 	requestDef := GenReqDefForListHotKeyScanTasks()
 	return &ListHotKeyScanTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceOperations 查询实例是否可以扩容
+//
+// 查询实例是否可以扩容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ListInstanceOperations(request *model.ListInstanceOperationsRequest) (*model.ListInstanceOperationsResponse, error) {
+	requestDef := GenReqDefForListInstanceOperations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceOperationsResponse), nil
+	}
+}
+
+// ListInstanceOperationsInvoker 查询实例是否可以扩容
+func (c *DcsClient) ListInstanceOperationsInvoker(request *model.ListInstanceOperationsRequest) *ListInstanceOperationsInvoker {
+	requestDef := GenReqDefForListInstanceOperations()
+	return &ListInstanceOperationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstances 查询所有实例列表
@@ -1421,27 +1463,6 @@ func (c *DcsClient) SetOnlineMigrationTaskInvoker(request *model.SetOnlineMigrat
 	return &SetOnlineMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowBackUpInfo 查询高级备份信息
-//
-// 查询高级备份信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DcsClient) ShowBackUpInfo(request *model.ShowBackUpInfoRequest) (*model.ShowBackUpInfoResponse, error) {
-	requestDef := GenReqDefForShowBackUpInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowBackUpInfoResponse), nil
-	}
-}
-
-// ShowBackUpInfoInvoker 查询高级备份信息
-func (c *DcsClient) ShowBackUpInfoInvoker(request *model.ShowBackUpInfoRequest) *ShowBackUpInfoInvoker {
-	requestDef := GenReqDefForShowBackUpInfo()
-	return &ShowBackUpInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowBackgroundTaskProgress 查询后台任务详细信息
 //
 // 查询后台任务详细信息
@@ -1505,6 +1526,27 @@ func (c *DcsClient) ShowBigkeyScanTaskDetailsInvoker(request *model.ShowBigkeySc
 	return &ShowBigkeyScanTaskDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowConfigHistoryDetail 查询实例参数修改记录详情
+//
+// 查询实例参数修改记录详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowConfigHistoryDetail(request *model.ShowConfigHistoryDetailRequest) (*model.ShowConfigHistoryDetailResponse, error) {
+	requestDef := GenReqDefForShowConfigHistoryDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigHistoryDetailResponse), nil
+	}
+}
+
+// ShowConfigHistoryDetailInvoker 查询实例参数修改记录详情
+func (c *DcsClient) ShowConfigHistoryDetailInvoker(request *model.ShowConfigHistoryDetailRequest) *ShowConfigHistoryDetailInvoker {
+	requestDef := GenReqDefForShowConfigHistoryDetail()
+	return &ShowConfigHistoryDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowConfigTemplate 查询参数模板详情
 //
 // 查询参数模板详情
@@ -1545,6 +1587,27 @@ func (c *DcsClient) ShowDiagnosisTaskDetails(request *model.ShowDiagnosisTaskDet
 func (c *DcsClient) ShowDiagnosisTaskDetailsInvoker(request *model.ShowDiagnosisTaskDetailsRequest) *ShowDiagnosisTaskDetailsInvoker {
 	requestDef := GenReqDefForShowDiagnosisTaskDetails()
 	return &ShowDiagnosisTaskDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExpireAutoScanConfig 查询自动扫描配置
+//
+// 查询自动扫描配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowExpireAutoScanConfig(request *model.ShowExpireAutoScanConfigRequest) (*model.ShowExpireAutoScanConfigResponse, error) {
+	requestDef := GenReqDefForShowExpireAutoScanConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExpireAutoScanConfigResponse), nil
+	}
+}
+
+// ShowExpireAutoScanConfigInvoker 查询自动扫描配置
+func (c *DcsClient) ShowExpireAutoScanConfigInvoker(request *model.ShowExpireAutoScanConfigRequest) *ShowExpireAutoScanConfigInvoker {
+	requestDef := GenReqDefForShowExpireAutoScanConfig()
+	return &ShowExpireAutoScanConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowExpireKeyScanInfo 查询过期Key扫描记录
@@ -1694,29 +1757,6 @@ func (c *DcsClient) ShowMigrationTaskStatsInvoker(request *model.ShowMigrationTa
 	return &ShowMigrationTaskStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowNodesInformation 查询实例节点信息
-//
-// 查询指定实例的节点信息。
-// 仅支持Redis4.0和Redis5.0实例查询。
-// 创建中实例不返回节点信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DcsClient) ShowNodesInformation(request *model.ShowNodesInformationRequest) (*model.ShowNodesInformationResponse, error) {
-	requestDef := GenReqDefForShowNodesInformation()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowNodesInformationResponse), nil
-	}
-}
-
-// ShowNodesInformationInvoker 查询实例节点信息
-func (c *DcsClient) ShowNodesInformationInvoker(request *model.ShowNodesInformationRequest) *ShowNodesInformationInvoker {
-	requestDef := GenReqDefForShowNodesInformation()
-	return &ShowNodesInformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowQuotaOfTenant 查询租户配额
 //
 // 查询租户默认可以创建的实例数和总内存的配额限制，以及可以申请配额的最大值和最小值。不同的租户在不同的区域配额可能不同。
@@ -1843,6 +1883,27 @@ func (c *DcsClient) StopMigrationTaskSyncInvoker(request *model.StopMigrationTas
 	return &StopMigrationTaskSyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAclAccount 修改ACL角色
+//
+// 修改用户的类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateAclAccount(request *model.UpdateAclAccountRequest) (*model.UpdateAclAccountResponse, error) {
+	requestDef := GenReqDefForUpdateAclAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAclAccountResponse), nil
+	}
+}
+
+// UpdateAclAccountInvoker 修改ACL角色
+func (c *DcsClient) UpdateAclAccountInvoker(request *model.UpdateAclAccountRequest) *UpdateAclAccountInvoker {
+	requestDef := GenReqDefForUpdateAclAccount()
+	return &UpdateAclAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAclAccountPassWord 修改ACL账号密码
 //
 // 修改ACL账号密码。
@@ -1885,27 +1946,6 @@ func (c *DcsClient) UpdateAclAccountRemarkInvoker(request *model.UpdateAclAccoun
 	return &UpdateAclAccountRemarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAclAccountRole 修改ACL角色
-//
-// 修改用户的类型。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DcsClient) UpdateAclAccountRole(request *model.UpdateAclAccountRoleRequest) (*model.UpdateAclAccountRoleResponse, error) {
-	requestDef := GenReqDefForUpdateAclAccountRole()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAclAccountRoleResponse), nil
-	}
-}
-
-// UpdateAclAccountRoleInvoker 修改ACL角色
-func (c *DcsClient) UpdateAclAccountRoleInvoker(request *model.UpdateAclAccountRoleRequest) *UpdateAclAccountRoleInvoker {
-	requestDef := GenReqDefForUpdateAclAccountRole()
-	return &UpdateAclAccountRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateBigkeyAutoscanConfig 设置大key自动分析配置
 //
 // 设置大key自动分析配置。
@@ -1925,6 +1965,27 @@ func (c *DcsClient) UpdateBigkeyAutoscanConfig(request *model.UpdateBigkeyAutosc
 func (c *DcsClient) UpdateBigkeyAutoscanConfigInvoker(request *model.UpdateBigkeyAutoscanConfigRequest) *UpdateBigkeyAutoscanConfigInvoker {
 	requestDef := GenReqDefForUpdateBigkeyAutoscanConfig()
 	return &UpdateBigkeyAutoscanConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClientIpTransparentTransmission 开启或关闭客户端ip透传
+//
+// 开启或关闭客户端ip透传
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateClientIpTransparentTransmission(request *model.UpdateClientIpTransparentTransmissionRequest) (*model.UpdateClientIpTransparentTransmissionResponse, error) {
+	requestDef := GenReqDefForUpdateClientIpTransparentTransmission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClientIpTransparentTransmissionResponse), nil
+	}
+}
+
+// UpdateClientIpTransparentTransmissionInvoker 开启或关闭客户端ip透传
+func (c *DcsClient) UpdateClientIpTransparentTransmissionInvoker(request *model.UpdateClientIpTransparentTransmissionRequest) *UpdateClientIpTransparentTransmissionInvoker {
+	requestDef := GenReqDefForUpdateClientIpTransparentTransmission()
+	return &UpdateClientIpTransparentTransmissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateConfigTemplate 修改自定义模板
@@ -1967,6 +2028,27 @@ func (c *DcsClient) UpdateConfigurations(request *model.UpdateConfigurationsRequ
 func (c *DcsClient) UpdateConfigurationsInvoker(request *model.UpdateConfigurationsRequest) *UpdateConfigurationsInvoker {
 	requestDef := GenReqDefForUpdateConfigurations()
 	return &UpdateConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateExpireAutoScanConfig 修改自动扫描配置
+//
+// 修改自动扫描配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateExpireAutoScanConfig(request *model.UpdateExpireAutoScanConfigRequest) (*model.UpdateExpireAutoScanConfigResponse, error) {
+	requestDef := GenReqDefForUpdateExpireAutoScanConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateExpireAutoScanConfigResponse), nil
+	}
+}
+
+// UpdateExpireAutoScanConfigInvoker 修改自动扫描配置
+func (c *DcsClient) UpdateExpireAutoScanConfigInvoker(request *model.UpdateExpireAutoScanConfigRequest) *UpdateExpireAutoScanConfigInvoker {
+	requestDef := GenReqDefForUpdateExpireAutoScanConfig()
+	return &UpdateExpireAutoScanConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateHotkeyAutoScanConfig 设置热key自动分析配置
@@ -2030,6 +2112,27 @@ func (c *DcsClient) UpdateInstanceBandwidth(request *model.UpdateInstanceBandwid
 func (c *DcsClient) UpdateInstanceBandwidthInvoker(request *model.UpdateInstanceBandwidthRequest) *UpdateInstanceBandwidthInvoker {
 	requestDef := GenReqDefForUpdateInstanceBandwidth()
 	return &UpdateInstanceBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceConfig 异步修改实例配置参数
+//
+// 为了确保分布式缓存服务发挥出最优性能，您可以根据自己的业务情况对DCS缓存实例的运行参数进行调整。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateInstanceConfig(request *model.UpdateInstanceConfigRequest) (*model.UpdateInstanceConfigResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceConfigResponse), nil
+	}
+}
+
+// UpdateInstanceConfigInvoker 异步修改实例配置参数
+func (c *DcsClient) UpdateInstanceConfigInvoker(request *model.UpdateInstanceConfigRequest) *UpdateInstanceConfigInvoker {
+	requestDef := GenReqDefForUpdateInstanceConfig()
+	return &UpdateInstanceConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMigrationTask 设置迁移任务自动重连

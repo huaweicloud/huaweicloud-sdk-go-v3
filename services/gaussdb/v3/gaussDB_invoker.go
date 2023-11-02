@@ -77,6 +77,18 @@ func (i *ChangeGaussMySqlProxySpecificationInvoker) Invoke() (*model.ChangeGauss
 	}
 }
 
+type CheckResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckResourceInvoker) Invoke() (*model.CheckResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckResourceResponse), nil
+	}
+}
+
 type CopyConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +98,18 @@ func (i *CopyConfigurationsInvoker) Invoke() (*model.CopyConfigurationsResponse,
 		return nil, err
 	} else {
 		return result.(*model.CopyConfigurationsResponse), nil
+	}
+}
+
+type CopyInstanceConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyInstanceConfigurationsInvoker) Invoke() (*model.CopyInstanceConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyInstanceConfigurationsResponse), nil
 	}
 }
 
@@ -737,6 +761,18 @@ func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
 	}
 }
 
+type ShowAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoScalingPolicyInvoker) Invoke() (*model.ShowAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoScalingPolicyResponse), nil
+	}
+}
+
 type ShowBackupRestoreTimeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -905,6 +941,18 @@ func (i *ShowGaussMySqlQuotasInvoker) Invoke() (*model.ShowGaussMySqlQuotasRespo
 	}
 }
 
+type ShowInstanceDatabaseVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceDatabaseVersionInvoker) Invoke() (*model.ShowInstanceDatabaseVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceDatabaseVersionResponse), nil
+	}
+}
+
 type ShowInstanceMonitorExtendInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -914,6 +962,42 @@ func (i *ShowInstanceMonitorExtendInvoker) Invoke() (*model.ShowInstanceMonitorE
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceMonitorExtendResponse), nil
+	}
+}
+
+type ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker) Invoke() (*model.ShowIntelligentDiagnosisAbnormalCountOfInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIntelligentDiagnosisAbnormalCountOfInstancesResponse), nil
+	}
+}
+
+type ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker) Invoke() (*model.ShowIntelligentDiagnosisInstanceInfosPerMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIntelligentDiagnosisInstanceInfosPerMetricResponse), nil
+	}
+}
+
+type ShrinkGaussMySqlProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShrinkGaussMySqlProxyInvoker) Invoke() (*model.ShrinkGaussMySqlProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShrinkGaussMySqlProxyResponse), nil
 	}
 }
 
@@ -962,6 +1046,18 @@ func (i *UpdateAuditLogInvoker) Invoke() (*model.UpdateAuditLogResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateAuditLogResponse), nil
+	}
+}
+
+type UpdateAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoScalingPolicyInvoker) Invoke() (*model.UpdateAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutoScalingPolicyResponse), nil
 	}
 }
 
@@ -1118,6 +1214,18 @@ func (i *UpdateGaussMySqlQuotasInvoker) Invoke() (*model.UpdateGaussMySqlQuotasR
 		return nil, err
 	} else {
 		return result.(*model.UpdateGaussMySqlQuotasResponse), nil
+	}
+}
+
+type UpdateInstanceConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceConfigurationsInvoker) Invoke() (*model.UpdateInstanceConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceConfigurationsResponse), nil
 	}
 }
 

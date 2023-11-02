@@ -6,8 +6,12 @@ import (
 	"strings"
 )
 
-// ChangeIncidentRequestBody ChangeIncidentRequestBody
+// ChangeIncidentRequestBody 更新事件请求body体
 type ChangeIncidentRequestBody struct {
+
+	// 更新事件的ID列表
+	BatchIds *[]string `json:"batch_ids,omitempty"`
+
 	DataObject *Incident `json:"data_object,omitempty"`
 }
 

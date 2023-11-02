@@ -27,7 +27,7 @@ type NatGatewayResponseBody struct {
 	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
 	Spec NatGatewayResponseBodySpec `json:"spec"`
 
-	// 公网NAT网关实例的状态。
+	// 公网NAT网关实例的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"INACTIVE\"：不可用
 	Status NatGatewayResponseBodyStatus `json:"status"`
 
 	// 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
@@ -46,6 +46,18 @@ type NatGatewayResponseBody struct {
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	SessionConf *SessionConfiguration `json:"session_conf"`
+
+	// 公网NAT网关私有IP地址，由VPC中子网分配。
+	NgportIpAddress string `json:"ngport_ip_address"`
+
+	// 订单信息。
+	BillingInfo string `json:"billing_info"`
+
+	// 公网NAT网关下DNAT规则数量限制，默认为200。
+	DnatRulesLimit int64 `json:"dnat_rules_limit"`
+
+	// 公网NAT网关下SNAT规则EIP池中EIP数量限制，默认为20。
+	SnatRulePublicIpLimit int32 `json:"snat_rule_public_ip_limit"`
 }
 
 func (o NatGatewayResponseBody) String() string {

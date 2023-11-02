@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ApprovePlaybookInfo approve of playbook
+// ApprovePlaybookInfo 审核详情
 type ApprovePlaybookInfo struct {
 
 	// 审核结果  通过：PASS 不通过：UN_PASS

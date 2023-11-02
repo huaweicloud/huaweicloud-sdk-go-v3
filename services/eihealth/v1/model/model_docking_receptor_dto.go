@@ -8,7 +8,7 @@ import (
 
 // DockingReceptorDto 结合位点
 type DockingReceptorDto struct {
-	Receptor *DrugFile `json:"receptor"`
+	Receptor *ReceptorDrugFile `json:"receptor"`
 
 	BoundingBox *BoundingBoxDto `json:"bounding_box"`
 

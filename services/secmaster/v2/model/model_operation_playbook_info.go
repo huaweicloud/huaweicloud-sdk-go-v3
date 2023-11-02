@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// OperationPlaybookInfo operation of playbook
+// OperationPlaybookInfo 操作剧本实例请求参数
 type OperationPlaybookInfo struct {
 
-	// 重试： RETRY  终止： TERMINATE
+	// 操作类型。重试： RETRY  终止： TERMINATE
 	Operation *string `json:"operation,omitempty"`
 }
 

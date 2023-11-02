@@ -53,7 +53,7 @@ type ListAlertRsp struct {
 	AlertType *interface{} `json:"alert_type,omitempty"`
 
 	// network_list
-	NetworkList *[]ShowAlertRspNetworkList `json:"network_list,omitempty"`
+	NetworkList *[]ListAlertRspNetworkList `json:"network_list,omitempty"`
 
 	// network_list
 	ResourceList *[]ShowAlertRspResourceList `json:"resource_list,omitempty"`
@@ -67,7 +67,7 @@ type ListAlertRsp struct {
 	HandleStatus *string `json:"handle_status,omitempty"`
 
 	// sla
-	Sla *int32 `json:"sla,omitempty"`
+	Sla *string `json:"sla,omitempty"`
 
 	// Create time
 	UpdateTime *string `json:"update_time,omitempty"`
@@ -85,7 +85,7 @@ type ListAlertRsp struct {
 	PpdrPhase *string `json:"ppdr_phase,omitempty"`
 
 	// 是否为调试事件.
-	Simulation *bool `json:"simulation,omitempty"`
+	Simulation *string `json:"simulation,omitempty"`
 
 	// 委托人
 	Actor *string `json:"actor,omitempty"`
@@ -108,7 +108,7 @@ type ListAlertRsp struct {
 	SystemInfo *interface{} `json:"system_info,omitempty"`
 
 	// 进程信息
-	Process *[]ShowAlertRspProcess `json:"process,omitempty"`
+	Process *[]ListAlertRspProcess `json:"process,omitempty"`
 
 	// 用户信息
 	UserInfo *[]ShowAlertRspUserInfo `json:"user_info,omitempty"`

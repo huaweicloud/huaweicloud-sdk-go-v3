@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// RuleInfo Information of rule
+// RuleInfo 剧本触发规格信息
 type RuleInfo struct {
 
-	// Id value
+	// 规则ID
 	Id *string `json:"id,omitempty"`
 
-	// Project id value
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// Project id value
+	// 触发规则
 	Rule *string `json:"rule,omitempty"`
 }
 

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DeleteIndicatorRequestBody delete indicator request body
+// DeleteIndicatorRequestBody 删除指标请求参数
 type DeleteIndicatorRequestBody struct {
 
-	// id list
+	// 指标ID列表
 	BatchIds *[]string `json:"batch_ids,omitempty"`
 }
 

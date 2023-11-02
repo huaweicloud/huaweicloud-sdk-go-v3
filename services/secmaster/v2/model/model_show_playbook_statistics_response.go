@@ -9,10 +9,10 @@ import (
 // ShowPlaybookStatisticsResponse Response Object
 type ShowPlaybookStatisticsResponse struct {
 
-	// Error code
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
 	Data *PlaybookStatisticDetail `json:"data,omitempty"`

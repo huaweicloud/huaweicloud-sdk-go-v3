@@ -21,7 +21,7 @@ type ListNatGatewayDnatRulesRequest struct {
 	// 弹性公网的IP地址。
 	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
 
-	// Dnat规则的状态。
+	// DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
 	Status *[]ListNatGatewayDnatRulesRequestStatus `json:"status,omitempty"`
 
 	// 弹性公网IP的id。

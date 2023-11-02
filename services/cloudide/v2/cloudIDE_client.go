@@ -614,6 +614,73 @@ func (c *CloudIDEClient) ShowResultInvoker(request *model.ShowResultRequest) *Sh
 	return &ShowResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartChat start_chat_codebreezetsbot_v1_devmind_tsbot_start_chat_post接口
+//
+// 开启对话
+// :param data: example: {\&quot;user_type\&quot;: \&quot;IDE\&quot;}
+// :return:
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) StartChat(request *model.StartChatRequest) (*model.StartChatResponse, error) {
+	requestDef := GenReqDefForStartChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartChatResponse), nil
+	}
+}
+
+// StartChatInvoker start_chat_codebreezetsbot_v1_devmind_tsbot_start_chat_post接口
+func (c *CloudIDEClient) StartChatInvoker(request *model.StartChatRequest) *StartChatInvoker {
+	requestDef := GenReqDefForStartChat()
+	return &StartChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncChat async_chat_codebreezetsbot_v1_devmind_tsbot_async_chat_post接口
+//
+// 异步聊天请求
+// :param data: ChatRequestMessage
+// :return:
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) SyncChat(request *model.SyncChatRequest) (*model.SyncChatResponse, error) {
+	requestDef := GenReqDefForSyncChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncChatResponse), nil
+	}
+}
+
+// SyncChatInvoker async_chat_codebreezetsbot_v1_devmind_tsbot_async_chat_post接口
+func (c *CloudIDEClient) SyncChatInvoker(request *model.SyncChatRequest) *SyncChatInvoker {
+	requestDef := GenReqDefForSyncChat()
+	return &SyncChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncGetChatResult async_get_chat_result_codebreezetsbot_v1_devmind_tsbot_async_get_chat_result_post接口
+//
+// 异步聊天获取结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudIDEClient) SyncGetChatResult(request *model.SyncGetChatResultRequest) (*model.SyncGetChatResultResponse, error) {
+	requestDef := GenReqDefForSyncGetChatResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncGetChatResultResponse), nil
+	}
+}
+
+// SyncGetChatResultInvoker async_get_chat_result_codebreezetsbot_v1_devmind_tsbot_async_get_chat_result_post接口
+func (c *CloudIDEClient) SyncGetChatResultInvoker(request *model.SyncGetChatResultRequest) *SyncGetChatResultInvoker {
+	requestDef := GenReqDefForSyncGetChatResult()
+	return &SyncGetChatResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckInstanceAccess 查询用户是否有权限访问某个IDE实例
 //
 // 查询用户是否有权限访问某个IDE实例

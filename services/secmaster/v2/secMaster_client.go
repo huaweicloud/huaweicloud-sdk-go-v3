@@ -19,7 +19,7 @@ func SecMasterClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// ChangeAlert 更新告警（仅支持华东-上海一使用）
+// ChangeAlert 更新告警
 //
 // 编辑告警，根据实际修改的属性更新，未修改的列不更新
 //
@@ -34,13 +34,13 @@ func (c *SecMasterClient) ChangeAlert(request *model.ChangeAlertRequest) (*model
 	}
 }
 
-// ChangeAlertInvoker 更新告警（仅支持华东-上海一使用）
+// ChangeAlertInvoker 更新告警
 func (c *SecMasterClient) ChangeAlertInvoker(request *model.ChangeAlertRequest) *ChangeAlertInvoker {
 	requestDef := GenReqDefForChangeAlert()
 	return &ChangeAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ChangeIncident 更新事件（仅支持华东-上海一使用）
+// ChangeIncident 更新事件
 //
 // 编辑事件，根据实际修改的属性更新，未修改的列不更新
 //
@@ -55,15 +55,15 @@ func (c *SecMasterClient) ChangeIncident(request *model.ChangeIncidentRequest) (
 	}
 }
 
-// ChangeIncidentInvoker 更新事件（仅支持华东-上海一使用）
+// ChangeIncidentInvoker 更新事件
 func (c *SecMasterClient) ChangeIncidentInvoker(request *model.ChangeIncidentRequest) *ChangeIncidentInvoker {
 	requestDef := GenReqDefForChangeIncident()
 	return &ChangeIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ChangePlaybookInstance 操作剧本实例（仅支持华东-上海一使用）
+// ChangePlaybookInstance 操作剧本实例
 //
-// Operation Playbook Instance.
+// 操作剧本实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ChangePlaybookInstance(request *model.ChangePlaybookInstanceRequest) (*model.ChangePlaybookInstanceResponse, error) {
@@ -76,15 +76,15 @@ func (c *SecMasterClient) ChangePlaybookInstance(request *model.ChangePlaybookIn
 	}
 }
 
-// ChangePlaybookInstanceInvoker 操作剧本实例（仅支持华东-上海一使用）
+// ChangePlaybookInstanceInvoker 操作剧本实例
 func (c *SecMasterClient) ChangePlaybookInstanceInvoker(request *model.ChangePlaybookInstanceRequest) *ChangePlaybookInstanceInvoker {
 	requestDef := GenReqDefForChangePlaybookInstance()
 	return &ChangePlaybookInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CopyPlaybookVersion 克隆剧本及版本（仅支持华东-上海一使用）
+// CopyPlaybookVersion 克隆剧本及版本
 //
-// # Copy Playbook and version to a new one
+// 克隆剧本及版本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CopyPlaybookVersion(request *model.CopyPlaybookVersionRequest) (*model.CopyPlaybookVersionResponse, error) {
@@ -97,13 +97,13 @@ func (c *SecMasterClient) CopyPlaybookVersion(request *model.CopyPlaybookVersion
 	}
 }
 
-// CopyPlaybookVersionInvoker 克隆剧本及版本（仅支持华东-上海一使用）
+// CopyPlaybookVersionInvoker 克隆剧本及版本
 func (c *SecMasterClient) CopyPlaybookVersionInvoker(request *model.CopyPlaybookVersionRequest) *CopyPlaybookVersionInvoker {
 	requestDef := GenReqDefForCopyPlaybookVersion()
 	return &CopyPlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAlert 创建告警（仅支持华东-上海一使用）
+// CreateAlert 创建告警
 //
 // 创建告警
 //
@@ -118,13 +118,13 @@ func (c *SecMasterClient) CreateAlert(request *model.CreateAlertRequest) (*model
 	}
 }
 
-// CreateAlertInvoker 创建告警（仅支持华东-上海一使用）
+// CreateAlertInvoker 创建告警
 func (c *SecMasterClient) CreateAlertInvoker(request *model.CreateAlertRequest) *CreateAlertInvoker {
 	requestDef := GenReqDefForCreateAlert()
 	return &CreateAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAlertRule 创建告警规则（仅支持华东-上海一使用）
+// CreateAlertRule 创建告警规则
 //
 // # Create alert rule
 //
@@ -139,13 +139,13 @@ func (c *SecMasterClient) CreateAlertRule(request *model.CreateAlertRuleRequest)
 	}
 }
 
-// CreateAlertRuleInvoker 创建告警规则（仅支持华东-上海一使用）
+// CreateAlertRuleInvoker 创建告警规则
 func (c *SecMasterClient) CreateAlertRuleInvoker(request *model.CreateAlertRuleRequest) *CreateAlertRuleInvoker {
 	requestDef := GenReqDefForCreateAlertRule()
 	return &CreateAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAlertRuleSimulation 模拟告警规则（仅支持华东-上海一使用）
+// CreateAlertRuleSimulation 模拟告警规则
 //
 // # Simulate alert rule
 //
@@ -160,13 +160,13 @@ func (c *SecMasterClient) CreateAlertRuleSimulation(request *model.CreateAlertRu
 	}
 }
 
-// CreateAlertRuleSimulationInvoker 模拟告警规则（仅支持华东-上海一使用）
+// CreateAlertRuleSimulationInvoker 模拟告警规则
 func (c *SecMasterClient) CreateAlertRuleSimulationInvoker(request *model.CreateAlertRuleSimulationRequest) *CreateAlertRuleSimulationInvoker {
 	requestDef := GenReqDefForCreateAlertRuleSimulation()
 	return &CreateAlertRuleSimulationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateBatchOrderAlerts 告警转事件（仅支持华东-上海一使用）
+// CreateBatchOrderAlerts 告警转事件
 //
 // 告警转事件
 //
@@ -181,34 +181,34 @@ func (c *SecMasterClient) CreateBatchOrderAlerts(request *model.CreateBatchOrder
 	}
 }
 
-// CreateBatchOrderAlertsInvoker 告警转事件（仅支持华东-上海一使用）
+// CreateBatchOrderAlertsInvoker 告警转事件
 func (c *SecMasterClient) CreateBatchOrderAlertsInvoker(request *model.CreateBatchOrderAlertsRequest) *CreateBatchOrderAlertsInvoker {
 	requestDef := GenReqDefForCreateBatchOrderAlerts()
 	return &CreateBatchOrderAlertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateDataobjectRelation 创建Dataobject关系
+// CreateDataobjectRelations 关联Dataobject
 //
-// # Create Dataobject Relation
+// 关联Dataobject
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateDataobjectRelation(request *model.CreateDataobjectRelationRequest) (*model.CreateDataobjectRelationResponse, error) {
-	requestDef := GenReqDefForCreateDataobjectRelation()
+func (c *SecMasterClient) CreateDataobjectRelations(request *model.CreateDataobjectRelationsRequest) (*model.CreateDataobjectRelationsResponse, error) {
+	requestDef := GenReqDefForCreateDataobjectRelations()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateDataobjectRelationResponse), nil
+		return resp.(*model.CreateDataobjectRelationsResponse), nil
 	}
 }
 
-// CreateDataobjectRelationInvoker 创建Dataobject关系
-func (c *SecMasterClient) CreateDataobjectRelationInvoker(request *model.CreateDataobjectRelationRequest) *CreateDataobjectRelationInvoker {
-	requestDef := GenReqDefForCreateDataobjectRelation()
-	return &CreateDataobjectRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateDataobjectRelationsInvoker 关联Dataobject
+func (c *SecMasterClient) CreateDataobjectRelationsInvoker(request *model.CreateDataobjectRelationsRequest) *CreateDataobjectRelationsInvoker {
+	requestDef := GenReqDefForCreateDataobjectRelations()
+	return &CreateDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateIncident 创建事件（仅支持华东-上海一使用）
+// CreateIncident 创建事件
 //
 // 创建事件
 //
@@ -223,7 +223,7 @@ func (c *SecMasterClient) CreateIncident(request *model.CreateIncidentRequest) (
 	}
 }
 
-// CreateIncidentInvoker 创建事件（仅支持华东-上海一使用）
+// CreateIncidentInvoker 创建事件
 func (c *SecMasterClient) CreateIncidentInvoker(request *model.CreateIncidentRequest) *CreateIncidentInvoker {
 	requestDef := GenReqDefForCreateIncident()
 	return &CreateIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -231,7 +231,7 @@ func (c *SecMasterClient) CreateIncidentInvoker(request *model.CreateIncidentReq
 
 // CreateIndicator 创建指标
 //
-// 创建指标（仅支持华东-上海一使用）
+// 创建指标
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreateIndicator(request *model.CreateIndicatorRequest) (*model.CreateIndicatorResponse, error) {
@@ -250,9 +250,9 @@ func (c *SecMasterClient) CreateIndicatorInvoker(request *model.CreateIndicatorR
 	return &CreateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybook 创建剧本（仅支持华东-上海一使用）
+// CreatePlaybook 创建剧本
 //
-// Create playbook.
+// 创建剧本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePlaybook(request *model.CreatePlaybookRequest) (*model.CreatePlaybookResponse, error) {
@@ -265,15 +265,15 @@ func (c *SecMasterClient) CreatePlaybook(request *model.CreatePlaybookRequest) (
 	}
 }
 
-// CreatePlaybookInvoker 创建剧本（仅支持华东-上海一使用）
+// CreatePlaybookInvoker 创建剧本
 func (c *SecMasterClient) CreatePlaybookInvoker(request *model.CreatePlaybookRequest) *CreatePlaybookInvoker {
 	requestDef := GenReqDefForCreatePlaybook()
 	return &CreatePlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookAction 创建剧本动作（仅支持华东-上海一使用）
+// CreatePlaybookAction 创建剧本动作
 //
-// Create action.
+// 创建剧本动作
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePlaybookAction(request *model.CreatePlaybookActionRequest) (*model.CreatePlaybookActionResponse, error) {
@@ -286,15 +286,15 @@ func (c *SecMasterClient) CreatePlaybookAction(request *model.CreatePlaybookActi
 	}
 }
 
-// CreatePlaybookActionInvoker 创建剧本动作（仅支持华东-上海一使用）
+// CreatePlaybookActionInvoker 创建剧本动作
 func (c *SecMasterClient) CreatePlaybookActionInvoker(request *model.CreatePlaybookActionRequest) *CreatePlaybookActionInvoker {
 	requestDef := GenReqDefForCreatePlaybookAction()
 	return &CreatePlaybookActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookApprove 审核剧本（仅支持华东-上海一使用）
+// CreatePlaybookApprove 审核剧本
 //
-// Create playbook approve.
+// 审核剧本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePlaybookApprove(request *model.CreatePlaybookApproveRequest) (*model.CreatePlaybookApproveResponse, error) {
@@ -307,15 +307,15 @@ func (c *SecMasterClient) CreatePlaybookApprove(request *model.CreatePlaybookApp
 	}
 }
 
-// CreatePlaybookApproveInvoker 审核剧本（仅支持华东-上海一使用）
+// CreatePlaybookApproveInvoker 审核剧本
 func (c *SecMasterClient) CreatePlaybookApproveInvoker(request *model.CreatePlaybookApproveRequest) *CreatePlaybookApproveInvoker {
 	requestDef := GenReqDefForCreatePlaybookApprove()
 	return &CreatePlaybookApproveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookRule 创建剧本规则（仅支持华东-上海一使用）
+// CreatePlaybookRule 创建剧本规则
 //
-// Create rule.
+// 创建剧本规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePlaybookRule(request *model.CreatePlaybookRuleRequest) (*model.CreatePlaybookRuleResponse, error) {
@@ -328,15 +328,15 @@ func (c *SecMasterClient) CreatePlaybookRule(request *model.CreatePlaybookRuleRe
 	}
 }
 
-// CreatePlaybookRuleInvoker 创建剧本规则（仅支持华东-上海一使用）
+// CreatePlaybookRuleInvoker 创建剧本规则
 func (c *SecMasterClient) CreatePlaybookRuleInvoker(request *model.CreatePlaybookRuleRequest) *CreatePlaybookRuleInvoker {
 	requestDef := GenReqDefForCreatePlaybookRule()
 	return &CreatePlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookVersion 创建剧本版本（仅支持华东-上海一使用）
+// CreatePlaybookVersion 创建剧本版本
 //
-// Create playbook version.
+// 创建剧本版本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePlaybookVersion(request *model.CreatePlaybookVersionRequest) (*model.CreatePlaybookVersionResponse, error) {
@@ -349,13 +349,13 @@ func (c *SecMasterClient) CreatePlaybookVersion(request *model.CreatePlaybookVer
 	}
 }
 
-// CreatePlaybookVersionInvoker 创建剧本版本（仅支持华东-上海一使用）
+// CreatePlaybookVersionInvoker 创建剧本版本
 func (c *SecMasterClient) CreatePlaybookVersionInvoker(request *model.CreatePlaybookVersionRequest) *CreatePlaybookVersionInvoker {
 	requestDef := GenReqDefForCreatePlaybookVersion()
 	return &CreatePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteAlert 删除告警（仅支持华东-上海一使用）
+// DeleteAlert 删除告警
 //
 // 删除告警
 //
@@ -370,13 +370,13 @@ func (c *SecMasterClient) DeleteAlert(request *model.DeleteAlertRequest) (*model
 	}
 }
 
-// DeleteAlertInvoker 删除告警（仅支持华东-上海一使用）
+// DeleteAlertInvoker 删除告警
 func (c *SecMasterClient) DeleteAlertInvoker(request *model.DeleteAlertRequest) *DeleteAlertInvoker {
 	requestDef := GenReqDefForDeleteAlert()
 	return &DeleteAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteAlertRule 删除告警规则（仅支持华东-上海一使用）
+// DeleteAlertRule 删除告警规则
 //
 // # Delete alert rule
 //
@@ -391,36 +391,36 @@ func (c *SecMasterClient) DeleteAlertRule(request *model.DeleteAlertRuleRequest)
 	}
 }
 
-// DeleteAlertRuleInvoker 删除告警规则（仅支持华东-上海一使用）
+// DeleteAlertRuleInvoker 删除告警规则
 func (c *SecMasterClient) DeleteAlertRuleInvoker(request *model.DeleteAlertRuleRequest) *DeleteAlertRuleInvoker {
 	requestDef := GenReqDefForDeleteAlertRule()
 	return &DeleteAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteDataobjectRelation 删除Dataobject关系
+// DeleteDataobjectRelations 取消关联Dataobject
 //
-// # Delete Dataobject Relation
+// 取消关联Dataobject
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeleteDataobjectRelation(request *model.DeleteDataobjectRelationRequest) (*model.DeleteDataobjectRelationResponse, error) {
-	requestDef := GenReqDefForDeleteDataobjectRelation()
+func (c *SecMasterClient) DeleteDataobjectRelations(request *model.DeleteDataobjectRelationsRequest) (*model.DeleteDataobjectRelationsResponse, error) {
+	requestDef := GenReqDefForDeleteDataobjectRelations()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteDataobjectRelationResponse), nil
+		return resp.(*model.DeleteDataobjectRelationsResponse), nil
 	}
 }
 
-// DeleteDataobjectRelationInvoker 删除Dataobject关系
-func (c *SecMasterClient) DeleteDataobjectRelationInvoker(request *model.DeleteDataobjectRelationRequest) *DeleteDataobjectRelationInvoker {
-	requestDef := GenReqDefForDeleteDataobjectRelation()
-	return &DeleteDataobjectRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteDataobjectRelationsInvoker 取消关联Dataobject
+func (c *SecMasterClient) DeleteDataobjectRelationsInvoker(request *model.DeleteDataobjectRelationsRequest) *DeleteDataobjectRelationsInvoker {
+	requestDef := GenReqDefForDeleteDataobjectRelations()
+	return &DeleteDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteIncident 创建事件（仅支持华东-上海一使用）
+// DeleteIncident 删除事件
 //
-// 创建事件
+// 删除事件
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeleteIncident(request *model.DeleteIncidentRequest) (*model.DeleteIncidentResponse, error) {
@@ -433,7 +433,7 @@ func (c *SecMasterClient) DeleteIncident(request *model.DeleteIncidentRequest) (
 	}
 }
 
-// DeleteIncidentInvoker 创建事件（仅支持华东-上海一使用）
+// DeleteIncidentInvoker 删除事件
 func (c *SecMasterClient) DeleteIncidentInvoker(request *model.DeleteIncidentRequest) *DeleteIncidentInvoker {
 	requestDef := GenReqDefForDeleteIncident()
 	return &DeleteIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -441,7 +441,7 @@ func (c *SecMasterClient) DeleteIncidentInvoker(request *model.DeleteIncidentReq
 
 // DeleteIndicator 删除指标
 //
-// 删除指标（仅支持华东-上海一使用）
+// 删除指标
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeleteIndicator(request *model.DeleteIndicatorRequest) (*model.DeleteIndicatorResponse, error) {
@@ -460,9 +460,9 @@ func (c *SecMasterClient) DeleteIndicatorInvoker(request *model.DeleteIndicatorR
 	return &DeleteIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybook 删除剧本（仅支持华东-上海一使用）
+// DeletePlaybook 删除剧本
 //
-// Delete playbook.
+// 删除剧本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeletePlaybook(request *model.DeletePlaybookRequest) (*model.DeletePlaybookResponse, error) {
@@ -475,15 +475,15 @@ func (c *SecMasterClient) DeletePlaybook(request *model.DeletePlaybookRequest) (
 	}
 }
 
-// DeletePlaybookInvoker 删除剧本（仅支持华东-上海一使用）
+// DeletePlaybookInvoker 删除剧本
 func (c *SecMasterClient) DeletePlaybookInvoker(request *model.DeletePlaybookRequest) *DeletePlaybookInvoker {
 	requestDef := GenReqDefForDeletePlaybook()
 	return &DeletePlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybookAction 删除剧本动作（仅支持华东-上海一使用）
+// DeletePlaybookAction 删除剧本动作
 //
-// Delete action.
+// 删除剧本动作
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeletePlaybookAction(request *model.DeletePlaybookActionRequest) (*model.DeletePlaybookActionResponse, error) {
@@ -496,15 +496,15 @@ func (c *SecMasterClient) DeletePlaybookAction(request *model.DeletePlaybookActi
 	}
 }
 
-// DeletePlaybookActionInvoker 删除剧本动作（仅支持华东-上海一使用）
+// DeletePlaybookActionInvoker 删除剧本动作
 func (c *SecMasterClient) DeletePlaybookActionInvoker(request *model.DeletePlaybookActionRequest) *DeletePlaybookActionInvoker {
 	requestDef := GenReqDefForDeletePlaybookAction()
 	return &DeletePlaybookActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybookRule 删除剧本规则（仅支持华东-上海一使用）
+// DeletePlaybookRule 删除剧本规则
 //
-// Delete rule.
+// 删除剧本规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeletePlaybookRule(request *model.DeletePlaybookRuleRequest) (*model.DeletePlaybookRuleResponse, error) {
@@ -517,15 +517,15 @@ func (c *SecMasterClient) DeletePlaybookRule(request *model.DeletePlaybookRuleRe
 	}
 }
 
-// DeletePlaybookRuleInvoker 删除剧本规则（仅支持华东-上海一使用）
+// DeletePlaybookRuleInvoker 删除剧本规则
 func (c *SecMasterClient) DeletePlaybookRuleInvoker(request *model.DeletePlaybookRuleRequest) *DeletePlaybookRuleInvoker {
 	requestDef := GenReqDefForDeletePlaybookRule()
 	return &DeletePlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybookVersion 删除剧本版本（仅支持华东-上海一使用）
+// DeletePlaybookVersion 删除剧本版本
 //
-// Delete playbook version.
+// 删除剧本版本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeletePlaybookVersion(request *model.DeletePlaybookVersionRequest) (*model.DeletePlaybookVersionResponse, error) {
@@ -538,13 +538,13 @@ func (c *SecMasterClient) DeletePlaybookVersion(request *model.DeletePlaybookVer
 	}
 }
 
-// DeletePlaybookVersionInvoker 删除剧本版本（仅支持华东-上海一使用）
+// DeletePlaybookVersionInvoker 删除剧本版本
 func (c *SecMasterClient) DeletePlaybookVersionInvoker(request *model.DeletePlaybookVersionRequest) *DeletePlaybookVersionInvoker {
 	requestDef := GenReqDefForDeletePlaybookVersion()
 	return &DeletePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisableAlertRule 停用告警规则（仅支持华东-上海一使用）
+// DisableAlertRule 停用告警规则
 //
 // # Disable alert rule
 //
@@ -559,13 +559,13 @@ func (c *SecMasterClient) DisableAlertRule(request *model.DisableAlertRuleReques
 	}
 }
 
-// DisableAlertRuleInvoker 停用告警规则（仅支持华东-上海一使用）
+// DisableAlertRuleInvoker 停用告警规则
 func (c *SecMasterClient) DisableAlertRuleInvoker(request *model.DisableAlertRuleRequest) *DisableAlertRuleInvoker {
 	requestDef := GenReqDefForDisableAlertRule()
 	return &DisableAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// EnableAlertRule 启用告警规则（仅支持华东-上海一使用）
+// EnableAlertRule 启用告警规则
 //
 // # Enable alert rule
 //
@@ -580,13 +580,13 @@ func (c *SecMasterClient) EnableAlertRule(request *model.EnableAlertRuleRequest)
 	}
 }
 
-// EnableAlertRuleInvoker 启用告警规则（仅支持华东-上海一使用）
+// EnableAlertRuleInvoker 启用告警规则
 func (c *SecMasterClient) EnableAlertRuleInvoker(request *model.EnableAlertRuleRequest) *EnableAlertRuleInvoker {
 	requestDef := GenReqDefForEnableAlertRule()
 	return &EnableAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlertRuleMetrics 告警规则总览（仅支持华东-上海一使用）
+// ListAlertRuleMetrics 告警规则总览
 //
 // # List alert rule metrics
 //
@@ -601,13 +601,13 @@ func (c *SecMasterClient) ListAlertRuleMetrics(request *model.ListAlertRuleMetri
 	}
 }
 
-// ListAlertRuleMetricsInvoker 告警规则总览（仅支持华东-上海一使用）
+// ListAlertRuleMetricsInvoker 告警规则总览
 func (c *SecMasterClient) ListAlertRuleMetricsInvoker(request *model.ListAlertRuleMetricsRequest) *ListAlertRuleMetricsInvoker {
 	requestDef := GenReqDefForListAlertRuleMetrics()
 	return &ListAlertRuleMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlertRuleTemplates 列出告警规则模板（仅支持华东-上海一使用）
+// ListAlertRuleTemplates 列出告警规则模板
 //
 // # List alert rule templates
 //
@@ -622,13 +622,13 @@ func (c *SecMasterClient) ListAlertRuleTemplates(request *model.ListAlertRuleTem
 	}
 }
 
-// ListAlertRuleTemplatesInvoker 列出告警规则模板（仅支持华东-上海一使用）
+// ListAlertRuleTemplatesInvoker 列出告警规则模板
 func (c *SecMasterClient) ListAlertRuleTemplatesInvoker(request *model.ListAlertRuleTemplatesRequest) *ListAlertRuleTemplatesInvoker {
 	requestDef := GenReqDefForListAlertRuleTemplates()
 	return &ListAlertRuleTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlertRules 列出告警规则（仅支持华东-上海一使用）
+// ListAlertRules 列出告警规则
 //
 // # List alert rules
 //
@@ -643,13 +643,13 @@ func (c *SecMasterClient) ListAlertRules(request *model.ListAlertRulesRequest) (
 	}
 }
 
-// ListAlertRulesInvoker 列出告警规则（仅支持华东-上海一使用）
+// ListAlertRulesInvoker 列出告警规则
 func (c *SecMasterClient) ListAlertRulesInvoker(request *model.ListAlertRulesRequest) *ListAlertRulesInvoker {
 	requestDef := GenReqDefForListAlertRules()
 	return &ListAlertRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlerts 搜索告警列表（仅支持华东-上海一使用）
+// ListAlerts 搜索告警列表
 //
 // 搜索告警列表
 //
@@ -664,55 +664,34 @@ func (c *SecMasterClient) ListAlerts(request *model.ListAlertsRequest) (*model.L
 	}
 }
 
-// ListAlertsInvoker 搜索告警列表（仅支持华东-上海一使用）
+// ListAlertsInvoker 搜索告警列表
 func (c *SecMasterClient) ListAlertsInvoker(request *model.ListAlertsRequest) *ListAlertsInvoker {
 	requestDef := GenReqDefForListAlerts()
 	return &ListAlertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDataobjectRelation 查询Dataobject关系列表
+// ListDataobjectRelations 查询关联Dataobject列表
 //
-// # List Dataobject Relation
+// 查询关联Dataobject列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListDataobjectRelation(request *model.ListDataobjectRelationRequest) (*model.ListDataobjectRelationResponse, error) {
-	requestDef := GenReqDefForListDataobjectRelation()
+func (c *SecMasterClient) ListDataobjectRelations(request *model.ListDataobjectRelationsRequest) (*model.ListDataobjectRelationsResponse, error) {
+	requestDef := GenReqDefForListDataobjectRelations()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListDataobjectRelationResponse), nil
+		return resp.(*model.ListDataobjectRelationsResponse), nil
 	}
 }
 
-// ListDataobjectRelationInvoker 查询Dataobject关系列表
-func (c *SecMasterClient) ListDataobjectRelationInvoker(request *model.ListDataobjectRelationRequest) *ListDataobjectRelationInvoker {
-	requestDef := GenReqDefForListDataobjectRelation()
-	return &ListDataobjectRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListDataobjectRelationsInvoker 查询关联Dataobject列表
+func (c *SecMasterClient) ListDataobjectRelationsInvoker(request *model.ListDataobjectRelationsRequest) *ListDataobjectRelationsInvoker {
+	requestDef := GenReqDefForListDataobjectRelations()
+	return &ListDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIncidentTypes 获取事件的类型列表（仅支持华东-上海一使用）
-//
-// 获取事件的类型列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListIncidentTypes(request *model.ListIncidentTypesRequest) (*model.ListIncidentTypesResponse, error) {
-	requestDef := GenReqDefForListIncidentTypes()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListIncidentTypesResponse), nil
-	}
-}
-
-// ListIncidentTypesInvoker 获取事件的类型列表（仅支持华东-上海一使用）
-func (c *SecMasterClient) ListIncidentTypesInvoker(request *model.ListIncidentTypesRequest) *ListIncidentTypesInvoker {
-	requestDef := GenReqDefForListIncidentTypes()
-	return &ListIncidentTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListIncidents 搜索事件列表（仅支持华东-上海一使用）
+// ListIncidents 搜索事件列表
 //
 // 搜索事件列表
 //
@@ -727,15 +706,15 @@ func (c *SecMasterClient) ListIncidents(request *model.ListIncidentsRequest) (*m
 	}
 }
 
-// ListIncidentsInvoker 搜索事件列表（仅支持华东-上海一使用）
+// ListIncidentsInvoker 搜索事件列表
 func (c *SecMasterClient) ListIncidentsInvoker(request *model.ListIncidentsRequest) *ListIncidentsInvoker {
 	requestDef := GenReqDefForListIncidents()
 	return &ListIncidentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIndicators 查询指标列表（仅支持华东-上海一使用）
+// ListIndicators 查询指标列表
 //
-// # List all indicators
+// 查询指标列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListIndicators(request *model.ListIndicatorsRequest) (*model.ListIndicatorsResponse, error) {
@@ -748,15 +727,15 @@ func (c *SecMasterClient) ListIndicators(request *model.ListIndicatorsRequest) (
 	}
 }
 
-// ListIndicatorsInvoker 查询指标列表（仅支持华东-上海一使用）
+// ListIndicatorsInvoker 查询指标列表
 func (c *SecMasterClient) ListIndicatorsInvoker(request *model.ListIndicatorsRequest) *ListIndicatorsInvoker {
 	requestDef := GenReqDefForListIndicators()
 	return &ListIndicatorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookActions 查询剧本动作（仅支持华东-上海一使用）
+// ListPlaybookActions 查询剧本动作
 //
-// List all actions.
+// 查询剧本动作列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListPlaybookActions(request *model.ListPlaybookActionsRequest) (*model.ListPlaybookActionsResponse, error) {
@@ -769,15 +748,15 @@ func (c *SecMasterClient) ListPlaybookActions(request *model.ListPlaybookActions
 	}
 }
 
-// ListPlaybookActionsInvoker 查询剧本动作（仅支持华东-上海一使用）
+// ListPlaybookActionsInvoker 查询剧本动作
 func (c *SecMasterClient) ListPlaybookActionsInvoker(request *model.ListPlaybookActionsRequest) *ListPlaybookActionsInvoker {
 	requestDef := GenReqDefForListPlaybookActions()
 	return &ListPlaybookActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookApproves 查询剧本审核结果（仅支持华东-上海一使用）
+// ListPlaybookApproves 查询剧本审核结果
 //
-// List approves.
+// 查询剧本审核结果
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListPlaybookApproves(request *model.ListPlaybookApprovesRequest) (*model.ListPlaybookApprovesResponse, error) {
@@ -790,15 +769,15 @@ func (c *SecMasterClient) ListPlaybookApproves(request *model.ListPlaybookApprov
 	}
 }
 
-// ListPlaybookApprovesInvoker 查询剧本审核结果（仅支持华东-上海一使用）
+// ListPlaybookApprovesInvoker 查询剧本审核结果
 func (c *SecMasterClient) ListPlaybookApprovesInvoker(request *model.ListPlaybookApprovesRequest) *ListPlaybookApprovesInvoker {
 	requestDef := GenReqDefForListPlaybookApproves()
 	return &ListPlaybookApprovesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookAuditLogs 查询剧本实例审计日志（仅支持华东-上海一使用）
+// ListPlaybookAuditLogs 查询剧本实例审计日志
 //
-// List audit logs.
+// 查询剧本实例审计日志
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListPlaybookAuditLogs(request *model.ListPlaybookAuditLogsRequest) (*model.ListPlaybookAuditLogsResponse, error) {
@@ -811,15 +790,15 @@ func (c *SecMasterClient) ListPlaybookAuditLogs(request *model.ListPlaybookAudit
 	}
 }
 
-// ListPlaybookAuditLogsInvoker 查询剧本实例审计日志（仅支持华东-上海一使用）
+// ListPlaybookAuditLogsInvoker 查询剧本实例审计日志
 func (c *SecMasterClient) ListPlaybookAuditLogsInvoker(request *model.ListPlaybookAuditLogsRequest) *ListPlaybookAuditLogsInvoker {
 	requestDef := GenReqDefForListPlaybookAuditLogs()
 	return &ListPlaybookAuditLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookInstances 查询剧本实例列表（仅支持华东-上海一使用）
+// ListPlaybookInstances 查询剧本实例列表
 //
-// # List playbook instances
+// 查询剧本实例列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListPlaybookInstances(request *model.ListPlaybookInstancesRequest) (*model.ListPlaybookInstancesResponse, error) {
@@ -832,15 +811,15 @@ func (c *SecMasterClient) ListPlaybookInstances(request *model.ListPlaybookInsta
 	}
 }
 
-// ListPlaybookInstancesInvoker 查询剧本实例列表（仅支持华东-上海一使用）
+// ListPlaybookInstancesInvoker 查询剧本实例列表
 func (c *SecMasterClient) ListPlaybookInstancesInvoker(request *model.ListPlaybookInstancesRequest) *ListPlaybookInstancesInvoker {
 	requestDef := GenReqDefForListPlaybookInstances()
 	return &ListPlaybookInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookVersions 查询剧本版本列表（仅支持华东-上海一使用）
+// ListPlaybookVersions 查询剧本版本列表
 //
-// List all versions of playbook.
+// 查询剧本版本列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListPlaybookVersions(request *model.ListPlaybookVersionsRequest) (*model.ListPlaybookVersionsResponse, error) {
@@ -853,15 +832,15 @@ func (c *SecMasterClient) ListPlaybookVersions(request *model.ListPlaybookVersio
 	}
 }
 
-// ListPlaybookVersionsInvoker 查询剧本版本列表（仅支持华东-上海一使用）
+// ListPlaybookVersionsInvoker 查询剧本版本列表
 func (c *SecMasterClient) ListPlaybookVersionsInvoker(request *model.ListPlaybookVersionsRequest) *ListPlaybookVersionsInvoker {
 	requestDef := GenReqDefForListPlaybookVersions()
 	return &ListPlaybookVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybooks 查询剧本列表（仅支持华东-上海一使用）
+// ListPlaybooks 查询剧本列表
 //
-// List all playbooks.
+// 查询剧本列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListPlaybooks(request *model.ListPlaybooksRequest) (*model.ListPlaybooksResponse, error) {
@@ -874,13 +853,13 @@ func (c *SecMasterClient) ListPlaybooks(request *model.ListPlaybooksRequest) (*m
 	}
 }
 
-// ListPlaybooksInvoker 查询剧本列表（仅支持华东-上海一使用）
+// ListPlaybooksInvoker 查询剧本列表
 func (c *SecMasterClient) ListPlaybooksInvoker(request *model.ListPlaybooksRequest) *ListPlaybooksInvoker {
 	requestDef := GenReqDefForListPlaybooks()
 	return &ListPlaybooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAlert 获取告警详情（仅支持华东-上海一使用）
+// ShowAlert 获取告警详情
 //
 // 获取告警详情
 //
@@ -895,15 +874,15 @@ func (c *SecMasterClient) ShowAlert(request *model.ShowAlertRequest) (*model.Sho
 	}
 }
 
-// ShowAlertInvoker 获取告警详情（仅支持华东-上海一使用）
+// ShowAlertInvoker 获取告警详情
 func (c *SecMasterClient) ShowAlertInvoker(request *model.ShowAlertRequest) *ShowAlertInvoker {
 	requestDef := GenReqDefForShowAlert()
 	return &ShowAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAlertRule 查看告警规则（仅支持华东-上海一使用）
+// ShowAlertRule 查看告警规则
 //
-// # Get alert rule
+// 查看告警规则 Get alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowAlertRule(request *model.ShowAlertRuleRequest) (*model.ShowAlertRuleResponse, error) {
@@ -916,13 +895,13 @@ func (c *SecMasterClient) ShowAlertRule(request *model.ShowAlertRuleRequest) (*m
 	}
 }
 
-// ShowAlertRuleInvoker 查看告警规则（仅支持华东-上海一使用）
+// ShowAlertRuleInvoker 查看告警规则
 func (c *SecMasterClient) ShowAlertRuleInvoker(request *model.ShowAlertRuleRequest) *ShowAlertRuleInvoker {
 	requestDef := GenReqDefForShowAlertRule()
 	return &ShowAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAlertRuleTemplate 查看告警规则模板（仅支持华东-上海一使用）
+// ShowAlertRuleTemplate 查看告警规则模板
 //
 // # List alert rule templates
 //
@@ -937,13 +916,13 @@ func (c *SecMasterClient) ShowAlertRuleTemplate(request *model.ShowAlertRuleTemp
 	}
 }
 
-// ShowAlertRuleTemplateInvoker 查看告警规则模板（仅支持华东-上海一使用）
+// ShowAlertRuleTemplateInvoker 查看告警规则模板
 func (c *SecMasterClient) ShowAlertRuleTemplateInvoker(request *model.ShowAlertRuleTemplateRequest) *ShowAlertRuleTemplateInvoker {
 	requestDef := GenReqDefForShowAlertRuleTemplate()
 	return &ShowAlertRuleTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowIncident 获取事件详情（仅支持华东-上海一使用）
+// ShowIncident 获取事件详情
 //
 // 获取事件详情
 //
@@ -958,7 +937,7 @@ func (c *SecMasterClient) ShowIncident(request *model.ShowIncidentRequest) (*mod
 	}
 }
 
-// ShowIncidentInvoker 获取事件详情（仅支持华东-上海一使用）
+// ShowIncidentInvoker 获取事件详情
 func (c *SecMasterClient) ShowIncidentInvoker(request *model.ShowIncidentRequest) *ShowIncidentInvoker {
 	requestDef := GenReqDefForShowIncident()
 	return &ShowIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -966,7 +945,7 @@ func (c *SecMasterClient) ShowIncidentInvoker(request *model.ShowIncidentRequest
 
 // ShowIndicatorDetail 查询指标详情
 //
-// 查询指标详情（仅支持华东-上海一使用）
+// 查询指标详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowIndicatorDetail(request *model.ShowIndicatorDetailRequest) (*model.ShowIndicatorDetailResponse, error) {
@@ -985,9 +964,9 @@ func (c *SecMasterClient) ShowIndicatorDetailInvoker(request *model.ShowIndicato
 	return &ShowIndicatorDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybook 查询剧本详情（仅支持华东-上海一使用）
+// ShowPlaybook 查询剧本详情
 //
-// # Show playbook
+// 查询剧本详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowPlaybook(request *model.ShowPlaybookRequest) (*model.ShowPlaybookResponse, error) {
@@ -1000,13 +979,13 @@ func (c *SecMasterClient) ShowPlaybook(request *model.ShowPlaybookRequest) (*mod
 	}
 }
 
-// ShowPlaybookInvoker 查询剧本详情（仅支持华东-上海一使用）
+// ShowPlaybookInvoker 查询剧本详情
 func (c *SecMasterClient) ShowPlaybookInvoker(request *model.ShowPlaybookRequest) *ShowPlaybookInvoker {
 	requestDef := GenReqDefForShowPlaybook()
 	return &ShowPlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookInstance 查询剧本实例详情（仅支持华东-上海一使用）
+// ShowPlaybookInstance 查询剧本实例详情
 //
 // # Show playbook instance
 //
@@ -1021,13 +1000,13 @@ func (c *SecMasterClient) ShowPlaybookInstance(request *model.ShowPlaybookInstan
 	}
 }
 
-// ShowPlaybookInstanceInvoker 查询剧本实例详情（仅支持华东-上海一使用）
+// ShowPlaybookInstanceInvoker 查询剧本实例详情
 func (c *SecMasterClient) ShowPlaybookInstanceInvoker(request *model.ShowPlaybookInstanceRequest) *ShowPlaybookInstanceInvoker {
 	requestDef := GenReqDefForShowPlaybookInstance()
 	return &ShowPlaybookInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookMonitors 剧本运行监控（仅支持华东-上海一使用）
+// ShowPlaybookMonitors 剧本运行监控
 //
 // 剧本运行监控
 //
@@ -1042,15 +1021,15 @@ func (c *SecMasterClient) ShowPlaybookMonitors(request *model.ShowPlaybookMonito
 	}
 }
 
-// ShowPlaybookMonitorsInvoker 剧本运行监控（仅支持华东-上海一使用）
+// ShowPlaybookMonitorsInvoker 剧本运行监控
 func (c *SecMasterClient) ShowPlaybookMonitorsInvoker(request *model.ShowPlaybookMonitorsRequest) *ShowPlaybookMonitorsInvoker {
 	requestDef := GenReqDefForShowPlaybookMonitors()
 	return &ShowPlaybookMonitorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookRule 查询剧本规则详情（仅支持华东-上海一使用）
+// ShowPlaybookRule 查询剧本规则详情
 //
-// Show rule formation.
+// 查询剧本规则详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowPlaybookRule(request *model.ShowPlaybookRuleRequest) (*model.ShowPlaybookRuleResponse, error) {
@@ -1063,13 +1042,13 @@ func (c *SecMasterClient) ShowPlaybookRule(request *model.ShowPlaybookRuleReques
 	}
 }
 
-// ShowPlaybookRuleInvoker 查询剧本规则详情（仅支持华东-上海一使用）
+// ShowPlaybookRuleInvoker 查询剧本规则详情
 func (c *SecMasterClient) ShowPlaybookRuleInvoker(request *model.ShowPlaybookRuleRequest) *ShowPlaybookRuleInvoker {
 	requestDef := GenReqDefForShowPlaybookRule()
 	return &ShowPlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookStatistics 剧本数据统计（仅支持华东-上海一使用）
+// ShowPlaybookStatistics 剧本数据统计
 //
 // 剧本统计数据
 //
@@ -1084,15 +1063,15 @@ func (c *SecMasterClient) ShowPlaybookStatistics(request *model.ShowPlaybookStat
 	}
 }
 
-// ShowPlaybookStatisticsInvoker 剧本数据统计（仅支持华东-上海一使用）
+// ShowPlaybookStatisticsInvoker 剧本数据统计
 func (c *SecMasterClient) ShowPlaybookStatisticsInvoker(request *model.ShowPlaybookStatisticsRequest) *ShowPlaybookStatisticsInvoker {
 	requestDef := GenReqDefForShowPlaybookStatistics()
 	return &ShowPlaybookStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookTopology 查询剧本拓扑关系（仅支持华东-上海一使用）
+// ShowPlaybookTopology 查询剧本拓扑关系
 //
-// # Show playbook Topology
+// 查询剧本拓扑关系
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowPlaybookTopology(request *model.ShowPlaybookTopologyRequest) (*model.ShowPlaybookTopologyResponse, error) {
@@ -1105,13 +1084,13 @@ func (c *SecMasterClient) ShowPlaybookTopology(request *model.ShowPlaybookTopolo
 	}
 }
 
-// ShowPlaybookTopologyInvoker 查询剧本拓扑关系（仅支持华东-上海一使用）
+// ShowPlaybookTopologyInvoker 查询剧本拓扑关系
 func (c *SecMasterClient) ShowPlaybookTopologyInvoker(request *model.ShowPlaybookTopologyRequest) *ShowPlaybookTopologyInvoker {
 	requestDef := GenReqDefForShowPlaybookTopology()
 	return &ShowPlaybookTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookVersion 查询剧本版本详情（仅支持华东-上海一使用）
+// ShowPlaybookVersion 查询剧本版本详情
 //
 // # Show playbook version version
 //
@@ -1126,13 +1105,13 @@ func (c *SecMasterClient) ShowPlaybookVersion(request *model.ShowPlaybookVersion
 	}
 }
 
-// ShowPlaybookVersionInvoker 查询剧本版本详情（仅支持华东-上海一使用）
+// ShowPlaybookVersionInvoker 查询剧本版本详情
 func (c *SecMasterClient) ShowPlaybookVersionInvoker(request *model.ShowPlaybookVersionRequest) *ShowPlaybookVersionInvoker {
 	requestDef := GenReqDefForShowPlaybookVersion()
 	return &ShowPlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAlertRule 更新告警规则（仅支持华东-上海一使用）
+// UpdateAlertRule 更新告警规则
 //
 // # Update alert rule
 //
@@ -1147,7 +1126,7 @@ func (c *SecMasterClient) UpdateAlertRule(request *model.UpdateAlertRuleRequest)
 	}
 }
 
-// UpdateAlertRuleInvoker 更新告警规则（仅支持华东-上海一使用）
+// UpdateAlertRuleInvoker 更新告警规则
 func (c *SecMasterClient) UpdateAlertRuleInvoker(request *model.UpdateAlertRuleRequest) *UpdateAlertRuleInvoker {
 	requestDef := GenReqDefForUpdateAlertRule()
 	return &UpdateAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1155,7 +1134,7 @@ func (c *SecMasterClient) UpdateAlertRuleInvoker(request *model.UpdateAlertRuleR
 
 // UpdateIndicator 更新指标
 //
-// 更新指标（仅支持华东-上海一使用）
+// 更新指标
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdateIndicator(request *model.UpdateIndicatorRequest) (*model.UpdateIndicatorResponse, error) {
@@ -1174,9 +1153,9 @@ func (c *SecMasterClient) UpdateIndicatorInvoker(request *model.UpdateIndicatorR
 	return &UpdateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybook 修改剧本（仅支持华东-上海一使用）
+// UpdatePlaybook 修改剧本
 //
-// Update playbook.
+// 修改剧本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdatePlaybook(request *model.UpdatePlaybookRequest) (*model.UpdatePlaybookResponse, error) {
@@ -1189,15 +1168,15 @@ func (c *SecMasterClient) UpdatePlaybook(request *model.UpdatePlaybookRequest) (
 	}
 }
 
-// UpdatePlaybookInvoker 修改剧本（仅支持华东-上海一使用）
+// UpdatePlaybookInvoker 修改剧本
 func (c *SecMasterClient) UpdatePlaybookInvoker(request *model.UpdatePlaybookRequest) *UpdatePlaybookInvoker {
 	requestDef := GenReqDefForUpdatePlaybook()
 	return &UpdatePlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybookAction 更新剧本动作（仅支持华东-上海一使用）
+// UpdatePlaybookAction 更新剧本动作
 //
-// Update action.
+// 更新剧本动作
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdatePlaybookAction(request *model.UpdatePlaybookActionRequest) (*model.UpdatePlaybookActionResponse, error) {
@@ -1210,15 +1189,15 @@ func (c *SecMasterClient) UpdatePlaybookAction(request *model.UpdatePlaybookActi
 	}
 }
 
-// UpdatePlaybookActionInvoker 更新剧本动作（仅支持华东-上海一使用）
+// UpdatePlaybookActionInvoker 更新剧本动作
 func (c *SecMasterClient) UpdatePlaybookActionInvoker(request *model.UpdatePlaybookActionRequest) *UpdatePlaybookActionInvoker {
 	requestDef := GenReqDefForUpdatePlaybookAction()
 	return &UpdatePlaybookActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybookRule 更新剧本规则（仅支持华东-上海一使用）
+// UpdatePlaybookRule 更新剧本规则
 //
-// Update rule.
+// 更新剧本规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdatePlaybookRule(request *model.UpdatePlaybookRuleRequest) (*model.UpdatePlaybookRuleResponse, error) {
@@ -1231,15 +1210,15 @@ func (c *SecMasterClient) UpdatePlaybookRule(request *model.UpdatePlaybookRuleRe
 	}
 }
 
-// UpdatePlaybookRuleInvoker 更新剧本规则（仅支持华东-上海一使用）
+// UpdatePlaybookRuleInvoker 更新剧本规则
 func (c *SecMasterClient) UpdatePlaybookRuleInvoker(request *model.UpdatePlaybookRuleRequest) *UpdatePlaybookRuleInvoker {
 	requestDef := GenReqDefForUpdatePlaybookRule()
 	return &UpdatePlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybookVersion 更新剧本版本（仅支持华东-上海一使用）
+// UpdatePlaybookVersion 更新剧本版本
 //
-// Update playbook version.
+// 更新剧本版本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdatePlaybookVersion(request *model.UpdatePlaybookVersionRequest) (*model.UpdatePlaybookVersionResponse, error) {
@@ -1252,7 +1231,7 @@ func (c *SecMasterClient) UpdatePlaybookVersion(request *model.UpdatePlaybookVer
 	}
 }
 
-// UpdatePlaybookVersionInvoker 更新剧本版本（仅支持华东-上海一使用）
+// UpdatePlaybookVersionInvoker 更新剧本版本
 func (c *SecMasterClient) UpdatePlaybookVersionInvoker(request *model.UpdatePlaybookVersionRequest) *UpdatePlaybookVersionInvoker {
 	requestDef := GenReqDefForUpdatePlaybookVersion()
 	return &UpdatePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

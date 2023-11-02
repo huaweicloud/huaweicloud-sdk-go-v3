@@ -8,8 +8,7 @@ import (
 
 // UpdateDatabaseUserInfoResponse Response Object
 type UpdateDatabaseUserInfoResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateDatabaseUserInfoResponse) String() string {

@@ -298,29 +298,6 @@ func (c *BssClient) CreatePersonalRealnameAuthInvoker(request *model.CreatePerso
 	return &CreatePersonalRealnameAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePostal 新增邮寄地址
-//
-// 伙伴可以新增自己的邮寄地址信息。
-//
-// 伙伴登录伙伴中心新增邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，选择纸质发票，即可设置邮件地址。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *BssClient) CreatePostal(request *model.CreatePostalRequest) (*model.CreatePostalResponse, error) {
-	requestDef := GenReqDefForCreatePostal()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePostalResponse), nil
-	}
-}
-
-// CreatePostalInvoker 新增邮寄地址
-func (c *BssClient) CreatePostalInvoker(request *model.CreatePostalRequest) *CreatePostalInvoker {
-	requestDef := GenReqDefForCreatePostal()
-	return &CreatePostalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateSubCustomer 创建客户
 //
 // 在伙伴销售平台创建客户时同步创建华为云账号，并将客户在伙伴销售平台上的账号与华为云账号进行映射。同时，创建的华为云账号与伙伴账号关联绑定。
@@ -370,29 +347,6 @@ func (c *BssClient) CreateSubEnterpriseAccount(request *model.CreateSubEnterpris
 func (c *BssClient) CreateSubEnterpriseAccountInvoker(request *model.CreateSubEnterpriseAccountRequest) *CreateSubEnterpriseAccountInvoker {
 	requestDef := GenReqDefForCreateSubEnterpriseAccount()
 	return &CreateSubEnterpriseAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeletePostal 删除邮寄地址
-//
-// 伙伴可以删除自己的邮寄地址信息。
-//
-// 伙伴登录伙伴中心修改邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，选择删除邮寄地址，即可删除邮件地址。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *BssClient) DeletePostal(request *model.DeletePostalRequest) (*model.DeletePostalResponse, error) {
-	requestDef := GenReqDefForDeletePostal()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeletePostalResponse), nil
-	}
-}
-
-// DeletePostalInvoker 删除邮寄地址
-func (c *BssClient) DeletePostalInvoker(request *model.DeletePostalRequest) *DeletePostalInvoker {
-	requestDef := GenReqDefForDeletePostal()
-	return &DeletePostalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCities 查询城市信息
@@ -1199,29 +1153,6 @@ func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseC
 func (c *BssClient) ListPayPerUseCustomerResourcesInvoker(request *model.ListPayPerUseCustomerResourcesRequest) *ListPayPerUseCustomerResourcesInvoker {
 	requestDef := GenReqDefForListPayPerUseCustomerResources()
 	return &ListPayPerUseCustomerResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPostalAddress 查询邮寄地址
-//
-// 伙伴可以查询自己的邮寄地址信息。
-//
-// 伙伴登录伙伴中心查询邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，即可查看邮寄地址。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *BssClient) ListPostalAddress(request *model.ListPostalAddressRequest) (*model.ListPostalAddressResponse, error) {
-	requestDef := GenReqDefForListPostalAddress()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPostalAddressResponse), nil
-	}
-}
-
-// ListPostalAddressInvoker 查询邮寄地址
-func (c *BssClient) ListPostalAddressInvoker(request *model.ListPostalAddressRequest) *ListPostalAddressInvoker {
-	requestDef := GenReqDefForListPostalAddress()
-	return &ListPostalAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProvinces 查询省份信息
@@ -2078,29 +2009,6 @@ func (c *BssClient) UpdatePeriodToOnDemand(request *model.UpdatePeriodToOnDemand
 func (c *BssClient) UpdatePeriodToOnDemandInvoker(request *model.UpdatePeriodToOnDemandRequest) *UpdatePeriodToOnDemandInvoker {
 	requestDef := GenReqDefForUpdatePeriodToOnDemand()
 	return &UpdatePeriodToOnDemandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdatePostal 修改邮寄地址
-//
-// 伙伴可以修改自己的邮寄地址信息。
-//
-// 伙伴登录伙伴中心修改邮寄地址请参见[向华为云索取发票](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072435143.html)，进入索取发票页面，选择修改邮寄地址，即可修改邮件地址。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *BssClient) UpdatePostal(request *model.UpdatePostalRequest) (*model.UpdatePostalResponse, error) {
-	requestDef := GenReqDefForUpdatePostal()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdatePostalResponse), nil
-	}
-}
-
-// UpdatePostalInvoker 修改邮寄地址
-func (c *BssClient) UpdatePostalInvoker(request *model.UpdatePostalRequest) *UpdatePostalInvoker {
-	requestDef := GenReqDefForUpdatePostal()
-	return &UpdatePostalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSubEnterpriseAmount 企业主账号向企业子账号拨款

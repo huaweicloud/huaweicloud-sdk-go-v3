@@ -6,31 +6,28 @@ import (
 	"strings"
 )
 
-// DataobjectInfo Information of dataobject
+// DataobjectInfo 数据对象详情
 type DataobjectInfo struct {
 
-	// Id value
+	// ID值
 	Id *string `json:"id,omitempty"`
 
-	// Create time
+	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// Update time
+	// 更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// Project id value
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// dataclass id.
+	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
-	// The name, display only
+	// 名称
 	Name *string `json:"name,omitempty"`
 
-	// SIMULATION,PLAYBOOK,MANUAL,INSTANCE,DATA_SOURCE
-	Type *string `json:"type,omitempty"`
-
-	// data
+	// 数据内容
 	Content *string `json:"content,omitempty"`
 }
 

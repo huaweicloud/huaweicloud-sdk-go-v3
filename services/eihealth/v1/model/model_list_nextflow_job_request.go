@@ -9,7 +9,7 @@ import (
 // ListNextflowJobRequest Request Object
 type ListNextflowJobRequest struct {
 
-	// 医疗智能体平台项目ID，您可以在EIHealth平台单击所需的项目名称，进入项目设置页面查看。
+	// 平台项目ID，您可以在平台单击所需的项目名称，进入项目设置页面查看。
 	EihealthProjectId string `json:"eihealth_project_id"`
 
 	// 限制量，单次查询总量，必须由数字组成，默认为100，取值范围[1,1000]

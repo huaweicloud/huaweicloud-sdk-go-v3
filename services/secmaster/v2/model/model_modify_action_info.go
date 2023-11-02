@@ -9,19 +9,19 @@ import (
 // ModifyActionInfo Action info
 type ModifyActionInfo struct {
 
-	// The name, display only
+	// 名称
 	Name *string `json:"name,omitempty"`
 
-	// The description, display only
+	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// Type of this action, script or aopworkflow.
+	// 类型，默认AOP_WORKFLOW.
 	ActionType *string `json:"action_type,omitempty"`
 
-	// action id.
+	// 剧本动作ID
 	ActionId *string `json:"action_id,omitempty"`
 
-	// sort_order
+	// 排序方式
 	SortOrder *string `json:"sort_order,omitempty"`
 }
 

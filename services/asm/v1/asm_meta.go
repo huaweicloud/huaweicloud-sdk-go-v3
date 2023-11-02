@@ -56,10 +56,6 @@ func GenReqDefForListMeshes() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XApplyDomainID").
-		WithJsonTag("X-Apply-DomainID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XApplyProjectID").
 		WithJsonTag("X-Apply-ProjectID").
 		WithLocationType(def.Header))
@@ -80,10 +76,6 @@ func GenReqDefForShowMesh() *def.HttpRequestDef {
 		WithJsonTag("mesh_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XApplyDomainID").
-		WithJsonTag("X-Apply-DomainID").
-		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XApplyProjectID").
 		WithJsonTag("X-Apply-ProjectID").

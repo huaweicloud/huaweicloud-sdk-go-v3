@@ -33,7 +33,7 @@ type NatGatewaySnatRuleResponseBody struct {
 	// SNAT规则的描述，长度限制为255。
 	Description string `json:"description"`
 
-	// 功能说明：SNAT规则的状态。
+	// SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
 	Status NatGatewaySnatRuleResponseBodyStatus `json:"status"`
 
 	// SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
@@ -45,11 +45,17 @@ type NatGatewaySnatRuleResponseBody struct {
 	// 解冻/冻结状态。 取值范围： - \"true\"：解冻 - \"false\"：冻结
 	AdminStateUp bool `json:"admin_state_up"`
 
-	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
 	FloatingIpAddress string `json:"floating_ip_address"`
 
-	// 功能说明：冻结的弹性公网IP，多个冻结的弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+	// 功能说明：冻结的弹性公网IP，多个冻结的弹性公网IP使用逗号分隔。
 	FreezedIpAddress string `json:"freezed_ip_address"`
+
+	// 全域弹性公网IP的id。
+	GlobalEipId string `json:"global_eip_id"`
+
+	// 全域弹性公网IP的地址。
+	GlobalEipAddress string `json:"global_eip_address"`
 }
 
 func (o NatGatewaySnatRuleResponseBody) String() string {

@@ -9,13 +9,13 @@ import (
 // DeleteIncidentRequest Request Object
 type DeleteIncidentRequest struct {
 
-	// application/json;charset=UTF-8
+	// 内容类型
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间id
 	WorkspaceId string `json:"workspace_id"`
 
-	Body *DeleteIncident `json:"body,omitempty"`
+	Body *DeleteIncidentRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteIncidentRequest) String() string {

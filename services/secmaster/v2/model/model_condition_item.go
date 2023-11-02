@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// ConditionItem Condition define
+// ConditionItem 条件定义
 type ConditionItem struct {
 
-	// Name of the condition.
+	// 条件名称
 	Name *string `json:"name,omitempty"`
 
-	// Detail of the condition.
+	// 条件详情
 	Detail *string `json:"detail,omitempty"`
 
-	// Detail of the condition.
+	// 条件表达式数据
 	Data *[]string `json:"data,omitempty"`
 }
 

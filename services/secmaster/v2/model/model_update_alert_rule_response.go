@@ -12,57 +12,54 @@ import (
 // UpdateAlertRuleResponse Response Object
 type UpdateAlertRuleResponse struct {
 
-	// rule_id
+	// 告警规则 ID。Alert rule ID.
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// pipe_id
+	// 数据管道 ID。Pipe ID.
 	PipeId *string `json:"pipe_id,omitempty"`
 
-	// pipe_name
+	// 数据管道名称。Pipe name.
 	PipeName *string `json:"pipe_name,omitempty"`
 
-	// create_by
+	// 创建人。Create by.
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// create_time
+	// 创建时间。Create time.
 	CreateTime *int64 `json:"create_time,omitempty"`
 
-	// update_by
+	// 更新人。Update by.
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// update_time
+	// 更新时间。Update time.
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// delete_time
+	// 删除时间。Delete time.
 	DeleteTime *int64 `json:"delete_time,omitempty"`
 
-	// rule_name
+	// 告警规则名称。Alert rule name.
 	RuleName *string `json:"rule_name,omitempty"`
 
-	// query
+	// 查询语句。Query.
 	Query *string `json:"query,omitempty"`
 
-	// query_type. SQL, CBSL.
+	// 查询语法，SQL。Query type. SQL.
 	QueryType *UpdateAlertRuleResponseQueryType `json:"query_type,omitempty"`
 
-	// status. ENABLED, DISABLED
+	// 启用状态，启用、停用。Status, enabled, disabled.
 	Status *UpdateAlertRuleResponseStatus `json:"status,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *UpdateAlertRuleResponseSeverity `json:"severity,omitempty"`
 
-	// accumulated_times
-	AccumulatedTimes *int32 `json:"accumulated_times,omitempty"`
-
-	// custom_properties
+	// 自定义扩展信息。Custom properties.
 	CustomProperties map[string]string `json:"custom_properties,omitempty"`
 
-	// event_grouping
+	// 告警分组。Event grouping.
 	EventGrouping *bool `json:"event_grouping,omitempty"`
 
 	Schedule *Schedule `json:"schedule,omitempty"`
 
-	// triggers
+	// 告警触发规则。Alert triggers.
 	Triggers *[]AlertRuleTrigger `json:"triggers,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
@@ -83,17 +80,13 @@ type UpdateAlertRuleResponseQueryType struct {
 }
 
 type UpdateAlertRuleResponseQueryTypeEnum struct {
-	SQL  UpdateAlertRuleResponseQueryType
-	CBSL UpdateAlertRuleResponseQueryType
+	SQL UpdateAlertRuleResponseQueryType
 }
 
 func GetUpdateAlertRuleResponseQueryTypeEnum() UpdateAlertRuleResponseQueryTypeEnum {
 	return UpdateAlertRuleResponseQueryTypeEnum{
 		SQL: UpdateAlertRuleResponseQueryType{
 			value: "SQL",
-		},
-		CBSL: UpdateAlertRuleResponseQueryType{
-			value: "CBSL",
 		},
 	}
 }

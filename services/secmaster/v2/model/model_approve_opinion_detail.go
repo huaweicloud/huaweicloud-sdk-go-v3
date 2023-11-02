@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// ApproveOpinionDetail Approve Detail
+// ApproveOpinionDetail 审核详情信息
 type ApproveOpinionDetail struct {
 
-	// Approve Result.
+	// 审核结果
 	Result *string `json:"result,omitempty"`
 
-	// Approve content.
+	// 审核内容
 	Content *string `json:"content,omitempty"`
 }
 

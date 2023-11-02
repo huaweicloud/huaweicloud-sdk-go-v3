@@ -113,6 +113,18 @@ func (i *CollectDbObjectsInfoInvoker) Invoke() (*model.CollectDbObjectsInfoRespo
 	}
 }
 
+type CollectPositionAsyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectPositionAsyncInvoker) Invoke() (*model.CollectPositionAsyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectPositionAsyncResponse), nil
+	}
+}
+
 type CommitAsyncJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +530,18 @@ func (i *ShowObjectMappingInvoker) Invoke() (*model.ShowObjectMappingResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowObjectMappingResponse), nil
+	}
+}
+
+type ShowPositionResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPositionResultInvoker) Invoke() (*model.ShowPositionResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPositionResultResponse), nil
 	}
 }
 

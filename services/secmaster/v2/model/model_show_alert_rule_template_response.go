@@ -12,39 +12,39 @@ import (
 // ShowAlertRuleTemplateResponse Response Object
 type ShowAlertRuleTemplateResponse struct {
 
-	// template_id
+	// 告警规则模板 ID。Alert rule template ID.
 	TemplateId *string `json:"template_id,omitempty"`
 
-	// update_time
+	// 更新时间。Update time.
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// template_name
+	// 告警规则模板名称。Alert rule template name.
 	TemplateName *string `json:"template_name,omitempty"`
 
-	// data_source
+	// 数据源。Data source.
 	DataSource *string `json:"data_source,omitempty"`
 
-	// version
+	// 版本。Version
 	Version *string `json:"version,omitempty"`
 
-	// query
+	// 查询语句。Query.
 	Query *string `json:"query,omitempty"`
 
-	// query_type. SQL, CBSL.
+	// 查询语法，SQL。Query type. SQL.
 	QueryType *ShowAlertRuleTemplateResponseQueryType `json:"query_type,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity *ShowAlertRuleTemplateResponseSeverity `json:"severity,omitempty"`
 
-	// custom_properties
+	// 自定义扩展信息。Custom properties.
 	CustomProperties map[string]string `json:"custom_properties,omitempty"`
 
-	// event_grouping
+	// 告警分组。Event grouping.
 	EventGrouping *bool `json:"event_grouping,omitempty"`
 
 	Schedule *Schedule `json:"schedule,omitempty"`
 
-	// triggers
+	// 告警触发规则。Alert triggers.
 	Triggers *[]AlertRuleTrigger `json:"triggers,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
@@ -65,17 +65,13 @@ type ShowAlertRuleTemplateResponseQueryType struct {
 }
 
 type ShowAlertRuleTemplateResponseQueryTypeEnum struct {
-	SQL  ShowAlertRuleTemplateResponseQueryType
-	CBSL ShowAlertRuleTemplateResponseQueryType
+	SQL ShowAlertRuleTemplateResponseQueryType
 }
 
 func GetShowAlertRuleTemplateResponseQueryTypeEnum() ShowAlertRuleTemplateResponseQueryTypeEnum {
 	return ShowAlertRuleTemplateResponseQueryTypeEnum{
 		SQL: ShowAlertRuleTemplateResponseQueryType{
 			value: "SQL",
-		},
-		CBSL: ShowAlertRuleTemplateResponseQueryType{
-			value: "CBSL",
 		},
 	}
 }

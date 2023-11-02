@@ -19,8 +19,11 @@ type ShowFepJobResponse struct {
 
 	Params *FepParamDto `json:"params,omitempty"`
 
-	JobResult      *JobResult `json:"job_result,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	JobResult *JobResult `json:"job_result,omitempty"`
+
+	// 部分失败原因和数量
+	PartFailedReason *[]FailedReasonRecord `json:"part_failed_reason,omitempty"`
+	HttpStatusCode   int                   `json:"-"`
 }
 
 func (o ShowFepJobResponse) String() string {

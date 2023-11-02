@@ -11,39 +11,39 @@ import (
 
 type AlertRuleTemplate struct {
 
-	// template_id
+	// 告警规则模板 ID。Alert rule template ID.
 	TemplateId string `json:"template_id"`
 
-	// update_time
+	// 更新时间。Update time.
 	UpdateTime int64 `json:"update_time"`
 
-	// template_name
+	// 告警规则模板名称。Alert rule template name.
 	TemplateName string `json:"template_name"`
 
-	// data_source
+	// 数据源。Data source.
 	DataSource string `json:"data_source"`
 
-	// version
+	// 版本。Version
 	Version string `json:"version"`
 
-	// query
+	// 查询语句。Query.
 	Query *string `json:"query,omitempty"`
 
-	// query_type. SQL, CBSL.
+	// 查询语法，SQL。Query type. SQL.
 	QueryType *AlertRuleTemplateQueryType `json:"query_type,omitempty"`
 
-	// severity. TIPS, LOW, MEDIUM, HIGH, FATAL
+	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
 	Severity AlertRuleTemplateSeverity `json:"severity"`
 
-	// custom_properties
+	// 自定义扩展信息。Custom properties.
 	CustomProperties map[string]string `json:"custom_properties,omitempty"`
 
-	// event_grouping
+	// 告警分组。Event grouping.
 	EventGrouping *bool `json:"event_grouping,omitempty"`
 
 	Schedule *Schedule `json:"schedule,omitempty"`
 
-	// triggers
+	// 告警触发规则。Alert triggers.
 	Triggers *[]AlertRuleTrigger `json:"triggers,omitempty"`
 }
 
@@ -61,17 +61,13 @@ type AlertRuleTemplateQueryType struct {
 }
 
 type AlertRuleTemplateQueryTypeEnum struct {
-	SQL  AlertRuleTemplateQueryType
-	CBSL AlertRuleTemplateQueryType
+	SQL AlertRuleTemplateQueryType
 }
 
 func GetAlertRuleTemplateQueryTypeEnum() AlertRuleTemplateQueryTypeEnum {
 	return AlertRuleTemplateQueryTypeEnum{
 		SQL: AlertRuleTemplateQueryType{
 			value: "SQL",
-		},
-		CBSL: AlertRuleTemplateQueryType{
-			value: "CBSL",
 		},
 	}
 }

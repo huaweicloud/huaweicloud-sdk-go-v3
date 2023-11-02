@@ -101,15 +101,15 @@ func (i *CreateBatchOrderAlertsInvoker) Invoke() (*model.CreateBatchOrderAlertsR
 	}
 }
 
-type CreateDataobjectRelationInvoker struct {
+type CreateDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateDataobjectRelationInvoker) Invoke() (*model.CreateDataobjectRelationResponse, error) {
+func (i *CreateDataobjectRelationsInvoker) Invoke() (*model.CreateDataobjectRelationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateDataobjectRelationResponse), nil
+		return result.(*model.CreateDataobjectRelationsResponse), nil
 	}
 }
 
@@ -221,15 +221,15 @@ func (i *DeleteAlertRuleInvoker) Invoke() (*model.DeleteAlertRuleResponse, error
 	}
 }
 
-type DeleteDataobjectRelationInvoker struct {
+type DeleteDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteDataobjectRelationInvoker) Invoke() (*model.DeleteDataobjectRelationResponse, error) {
+func (i *DeleteDataobjectRelationsInvoker) Invoke() (*model.DeleteDataobjectRelationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteDataobjectRelationResponse), nil
+		return result.(*model.DeleteDataobjectRelationsResponse), nil
 	}
 }
 
@@ -377,27 +377,15 @@ func (i *ListAlertsInvoker) Invoke() (*model.ListAlertsResponse, error) {
 	}
 }
 
-type ListDataobjectRelationInvoker struct {
+type ListDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListDataobjectRelationInvoker) Invoke() (*model.ListDataobjectRelationResponse, error) {
+func (i *ListDataobjectRelationsInvoker) Invoke() (*model.ListDataobjectRelationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListDataobjectRelationResponse), nil
-	}
-}
-
-type ListIncidentTypesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListIncidentTypesInvoker) Invoke() (*model.ListIncidentTypesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListIncidentTypesResponse), nil
+		return result.(*model.ListDataobjectRelationsResponse), nil
 	}
 }
 

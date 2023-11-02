@@ -333,7 +333,7 @@ func (c *CdnClient) ShowDomainLocationStatsInvoker(request *model.ShowDomainLoca
 	return &ShowDomainLocationStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDomainStats 查询域名统计基础数据
+// ShowDomainStats 查询域名统计数据
 //
 // - 支持查询90天内的数据。
 //
@@ -360,7 +360,7 @@ func (c *CdnClient) ShowDomainStats(request *model.ShowDomainStatsRequest) (*mod
 	}
 }
 
-// ShowDomainStatsInvoker 查询域名统计基础数据
+// ShowDomainStatsInvoker 查询域名统计数据
 func (c *CdnClient) ShowDomainStatsInvoker(request *model.ShowDomainStatsRequest) *ShowDomainStatsInvoker {
 	requestDef := GenReqDefForShowDomainStats()
 	return &ShowDomainStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

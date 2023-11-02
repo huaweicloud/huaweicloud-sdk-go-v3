@@ -12,10 +12,10 @@ type ShowPlaybookTopologyRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// instance _id
+	// 剧本实例ID
 	InstanceId string `json:"instance_id"`
 }
 

@@ -9,7 +9,7 @@ import (
 // ListDrugJobRequest Request Object
 type ListDrugJobRequest struct {
 
-	// 盘古辅助制药平台项目ID。
+	// 平台项目ID。
 	EihealthProjectId string `json:"eihealth_project_id"`
 
 	// 限制量，单次查询总量，必须由数字组成，默认为100，取值范围[1,1000]
@@ -21,7 +21,7 @@ type ListDrugJobRequest struct {
 	// 排序规则 目前默认时间降序
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// 排序规则 目前默认时间降序，支持根据status
+	// 排序规则 目前默认时间降序，支持根据create_time|finish_time|running_time|total_time排序
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 作业名称
@@ -33,7 +33,7 @@ type ListDrugJobRequest struct {
 	// 作业运行状态列表, 支持WAITING|RUNNING|FINISHED|FAILED|CANCELLED
 	StatusList *[]string `json:"status_list,omitempty"`
 
-	// 作业类型列表, 支持DOCKING|OPTIMIZATION|SYNTHESIS|FEP
+	// 作业类型列表, 支持DOCKING|OPTIMIZATION|SYNTHESIS|FEP|POCKET_DETECTION|ADMET
 	TypeList *[]string `json:"type_list,omitempty"`
 
 	// 最小创建时间

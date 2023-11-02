@@ -41,6 +41,9 @@ type ListInstancesRequest struct {
 
 	// 根据实例标签键值对进行查询。  {key}表示标签键，不可以为空或重复。最大长度127个unicode字符。key不能为空或者空字符串，不能为空格，使用之前先trim前后半角空格。不能包含+/?#&=,%特殊字符。  {value}表示标签值，可以为空。最大长度255个unicode字符，使用之前先trim 前后半角空格。不能包含+/?#&=,%特殊字符。  如果value为空，则表示any_value（查询任意value）。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，最多包含10组。
 	Tags *[]string `json:"tags,omitempty"`
+
+	// 计费模式。  取值范围：   postPaid：后付费，即按需付费。  prePaid：预付费，即包年/包月。
+	ChargeMode *ListInstancesRequestChargeMode `json:"charge_mode,omitempty"`
 }
 
 func (o ListInstancesRequest) String() string {
@@ -128,6 +131,53 @@ func (c ListInstancesRequestDatastoreType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListInstancesRequestDatastoreType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListInstancesRequestChargeMode struct {
+	value string
+}
+
+type ListInstancesRequestChargeModeEnum struct {
+	POST_PAID ListInstancesRequestChargeMode
+	PRE_PAID  ListInstancesRequestChargeMode
+}
+
+func GetListInstancesRequestChargeModeEnum() ListInstancesRequestChargeModeEnum {
+	return ListInstancesRequestChargeModeEnum{
+		POST_PAID: ListInstancesRequestChargeMode{
+			value: "postPaid",
+		},
+		PRE_PAID: ListInstancesRequestChargeMode{
+			value: "prePaid",
+		},
+	}
+}
+
+func (c ListInstancesRequestChargeMode) Value() string {
+	return c.value
+}
+
+func (c ListInstancesRequestChargeMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListInstancesRequestChargeMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

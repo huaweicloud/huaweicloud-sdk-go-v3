@@ -214,6 +214,27 @@ func (c *DrsClient) CollectDbObjectsInfoInvoker(request *model.CollectDbObjectsI
 	return &CollectDbObjectsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectPositionAsync 采集数据库位点信息
+//
+// 采集数据库位点信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CollectPositionAsync(request *model.CollectPositionAsyncRequest) (*model.CollectPositionAsyncResponse, error) {
+	requestDef := GenReqDefForCollectPositionAsync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectPositionAsyncResponse), nil
+	}
+}
+
+// CollectPositionAsyncInvoker 采集数据库位点信息
+func (c *DrsClient) CollectPositionAsyncInvoker(request *model.CollectPositionAsyncRequest) *CollectPositionAsyncInvoker {
+	requestDef := GenReqDefForCollectPositionAsync()
+	return &CollectPositionAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CommitAsyncJob 提交批量创建异步任务
 //
 // 提交批量创建异步任务，当批量异步任务创建或更新参数后，系统会自动开始进行参数校验，待所有任务成功完成参数校验后并且无报错时，可调用此接口开始创建DRS任务实例。
@@ -928,6 +949,27 @@ func (c *DrsClient) ShowObjectMapping(request *model.ShowObjectMappingRequest) (
 func (c *DrsClient) ShowObjectMappingInvoker(request *model.ShowObjectMappingRequest) *ShowObjectMappingInvoker {
 	requestDef := GenReqDefForShowObjectMapping()
 	return &ShowObjectMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPositionResult 获取查询数据库位点的结果
+//
+// 获取查询数据库位点的结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowPositionResult(request *model.ShowPositionResultRequest) (*model.ShowPositionResultResponse, error) {
+	requestDef := GenReqDefForShowPositionResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPositionResultResponse), nil
+	}
+}
+
+// ShowPositionResultInvoker 获取查询数据库位点的结果
+func (c *DrsClient) ShowPositionResultInvoker(request *model.ShowPositionResultRequest) *ShowPositionResultInvoker {
+	requestDef := GenReqDefForShowPositionResult()
+	return &ShowPositionResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowProgressData 查询数据级流式对比列表

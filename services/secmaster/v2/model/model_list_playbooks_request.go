@@ -12,23 +12,20 @@ type ListPlaybooksRequest struct {
 	// application/json;charset=UTF-8
 	ContentType string `json:"content-type"`
 
-	// ID of workspace
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	// 搜索关键字
 	SearchTxt *string `json:"search_txt,omitempty"`
 
-	// component id.
-	ComponentId *string `json:"component_id,omitempty"`
-
 	// 是否启用
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// request offset, from 0
-	Offset *int32 `json:"offset,omitempty"`
+	// 分页查询参数。用于指定查询结果的起始位置，从0开始
+	Offset int32 `json:"offset"`
 
-	// request limit size
-	Limit *int32 `json:"limit,omitempty"`
+	// 分页查询参数，用于指定一次查询最多的结果数，从1开始
+	Limit int32 `json:"limit"`
 
 	// 剧本描述
 	Description *string `json:"description,omitempty"`

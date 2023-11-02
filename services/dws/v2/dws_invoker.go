@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dws/v2/model"
 )
 
+type AddSnapshotCrossRegionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddSnapshotCrossRegionPolicyInvoker) Invoke() (*model.AddSnapshotCrossRegionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
 type AddWorkloadQueueInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +134,18 @@ func (i *CheckDisasterNameInvoker) Invoke() (*model.CheckDisasterNameResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CheckDisasterNameResponse), nil
+	}
+}
+
+type CheckTableRestoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckTableRestoreInvoker) Invoke() (*model.CheckTableRestoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckTableRestoreResponse), nil
 	}
 }
 
@@ -353,6 +377,18 @@ func (i *DeleteSnapshotInvoker) Invoke() (*model.DeleteSnapshotResponse, error) 
 	}
 }
 
+type DeleteSnapshotCrossRegionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSnapshotCrossRegionPolicyInvoker) Invoke() (*model.DeleteSnapshotCrossRegionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
 type DeleteSnapshotPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +398,18 @@ func (i *DeleteSnapshotPolicyInvoker) Invoke() (*model.DeleteSnapshotPolicyRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteSnapshotPolicyResponse), nil
+	}
+}
+
+type DeleteWorkloadPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWorkloadPlanInvoker) Invoke() (*model.DeleteWorkloadPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWorkloadPlanResponse), nil
 	}
 }
 
@@ -398,6 +446,18 @@ func (i *DisassociateElbInvoker) Invoke() (*model.DisassociateElbResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DisassociateElbResponse), nil
+	}
+}
+
+type ExecuteClusterUpgradeActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteClusterUpgradeActionInvoker) Invoke() (*model.ExecuteClusterUpgradeActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteClusterUpgradeActionResponse), nil
 	}
 }
 
@@ -833,6 +893,30 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	}
 }
 
+type ListSnapshotCrossRegionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotCrossRegionInvoker) Invoke() (*model.ListSnapshotCrossRegionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotCrossRegionResponse), nil
+	}
+}
+
+type ListSnapshotCrossRegionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotCrossRegionPolicyInvoker) Invoke() (*model.ListSnapshotCrossRegionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
 type ListSnapshotDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -902,6 +986,30 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTagsResponse), nil
+	}
+}
+
+type ListUpdatableVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUpdatableVersionInvoker) Invoke() (*model.ListUpdatableVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUpdatableVersionResponse), nil
+	}
+}
+
+type ListUpdateRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUpdateRecordInvoker) Invoke() (*model.ListUpdateRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUpdateRecordResponse), nil
 	}
 }
 
@@ -986,6 +1094,18 @@ func (i *RestoreDisasterInvoker) Invoke() (*model.RestoreDisasterResponse, error
 		return nil, err
 	} else {
 		return result.(*model.RestoreDisasterResponse), nil
+	}
+}
+
+type RestoreTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreTableInvoker) Invoke() (*model.RestoreTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreTableResponse), nil
 	}
 }
 
@@ -1085,6 +1205,18 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	}
 }
 
+type ShowWorkloadPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkloadPlanInvoker) Invoke() (*model.ShowWorkloadPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkloadPlanResponse), nil
+	}
+}
+
 type ShrinkClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1106,6 +1238,30 @@ func (i *StartDisasterRecoveryInvoker) Invoke() (*model.StartDisasterRecoveryRes
 		return nil, err
 	} else {
 		return result.(*model.StartDisasterRecoveryResponse), nil
+	}
+}
+
+type StartWorkloadPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartWorkloadPlanInvoker) Invoke() (*model.StartWorkloadPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartWorkloadPlanResponse), nil
+	}
+}
+
+type StopWorkloadPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopWorkloadPlanInvoker) Invoke() (*model.StopWorkloadPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopWorkloadPlanResponse), nil
 	}
 }
 

@@ -9,10 +9,10 @@ import (
 // CreateIncidentResponse Response Object
 type CreateIncidentResponse struct {
 
-	// Id value
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
 	Data *IncidentDetail `json:"data,omitempty"`

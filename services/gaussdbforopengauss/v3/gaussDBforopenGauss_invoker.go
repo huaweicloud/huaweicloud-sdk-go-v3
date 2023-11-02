@@ -161,6 +161,18 @@ func (i *DeleteConfigurationInvoker) Invoke() (*model.DeleteConfigurationRespons
 	}
 }
 
+type DeleteDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDatabaseInvoker) Invoke() (*model.DeleteDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDatabaseResponse), nil
+	}
+}
+
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

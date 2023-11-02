@@ -29,6 +29,9 @@ type CreateNextflowJobRequestBody struct {
 
 	// 流程参数列表文件，取值范围[0, 10M]
 	Params *def.FilePart `json:"params,omitempty"`
+
+	// 作业的优先级,取值范围[0,9]，0最低，默认数值0
+	Priority *def.MultiPart `json:"priority,omitempty"`
 }
 
 func (o CreateNextflowJobRequestBody) String() string {

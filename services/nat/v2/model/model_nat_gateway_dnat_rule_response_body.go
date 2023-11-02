@@ -42,7 +42,7 @@ type NatGatewayDnatRuleResponseBody struct {
 	// Floatingip对外提供服务的端口号。 取值范围：0~65535。
 	ExternalServicePort int32 `json:"external_service_port"`
 
-	// 功能说明：DNAT规则的状态。
+	// DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
 	Status NatGatewayDnatRuleResponseBodyStatus `json:"status"`
 
 	// 解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
@@ -59,6 +59,12 @@ type NatGatewayDnatRuleResponseBody struct {
 
 	// DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
 	CreatedAt string `json:"created_at"`
+
+	// 全域弹性公网IP的id。
+	GlobalEipId string `json:"global_eip_id"`
+
+	// 全域弹性公网IP的地址。
+	GlobalEipAddress string `json:"global_eip_address"`
 }
 
 func (o NatGatewayDnatRuleResponseBody) String() string {

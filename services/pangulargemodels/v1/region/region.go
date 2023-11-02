@@ -10,11 +10,14 @@ var (
 		"https://pangu.cn-north-4.myhuaweicloud.com")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
 		"https://pangu.cn-east-3.myhuaweicloud.com")
+	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
+		"https://pangu.cn-southwest-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4": CN_NORTH_4,
-	"cn-east-3":  CN_EAST_3,
+	"cn-north-4":     CN_NORTH_4,
+	"cn-east-3":      CN_EAST_3,
+	"cn-southwest-2": CN_SOUTHWEST_2,
 }
 
 var provider = region.DefaultProviderChain("PANGULARGEMODELS")

@@ -9,16 +9,16 @@ import (
 // ShowGaussMySqlBackupListRequest Request Object
 type ShowGaussMySqlBackupListRequest struct {
 
-	// 语言。
+	// 请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 实例ID。
+	// 实例ID，严格匹配UUID规则。
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 备份ID。
 	BackupId *string `json:"backup_id,omitempty"`
 
-	// 备份类型，取值：  - \"auto\"：自动全量备份。 - \"manual\"：手动全量备份。
+	// 备份类型。  取值范围： - auto：自动全量备份。 - manual：手动全量备份。
 	BackupType *string `json:"backup_type,omitempty"`
 
 	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
@@ -32,6 +32,12 @@ type ShowGaussMySqlBackupListRequest struct {
 
 	// 查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 备份名称。
+	Name *string `json:"name,omitempty"`
+
+	// 实例名称。
+	InstanceName *string `json:"instance_name,omitempty"`
 }
 
 func (o ShowGaussMySqlBackupListRequest) String() string {

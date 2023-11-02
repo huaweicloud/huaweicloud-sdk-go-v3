@@ -9,6 +9,9 @@ import (
 // WeakConstraintDto 分子约束
 type WeakConstraintDto struct {
 
+	// 自定义模型id，仅弱约束为模型时填写
+	Id *string `json:"id,omitempty"`
+
 	// 属性名称
 	Name *string `json:"name,omitempty"`
 
