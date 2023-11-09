@@ -26,6 +26,12 @@ type ListDesktopsRequest struct {
 
 	// 桌面池ID,多个桌面池ID用逗号隔开。
 	PoolId *string `json:"pool_id,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 桌面类型，为空时查所有桌面。查询多个类型时用,隔开。 - DEDICATED：普通桌面，包括专享桌面、专属桌面等。 - SHARED: 多用户共享桌面。
+	DesktopType *string `json:"desktop_type,omitempty"`
 }
 
 func (o ListDesktopsRequest) String() string {

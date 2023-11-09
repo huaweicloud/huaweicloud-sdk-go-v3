@@ -24,6 +24,12 @@ type DesktopDetailInfo struct {
 	// IP地址列表。
 	IpAddresses *[]string `json:"ip_addresses,omitempty"`
 
+	// 用户列表
+	UserList *[]string `json:"user_list,omitempty"`
+
+	// 用户组列表
+	UserGroupList *[]string `json:"user_group_list,omitempty"`
+
 	// 桌面类型。  - DEDICATED：专属桌面。
 	DesktopType *string `json:"desktop_type,omitempty"`
 
@@ -49,6 +55,9 @@ type DesktopDetailInfo struct {
 
 	// 桌面所属用户。
 	UserName *string `json:"user_name,omitempty"`
+
+	// 桌面已分配的用户信息列表。
+	AttachUserInfos *[]AttachInstancesUserInfo `json:"attach_user_infos,omitempty"`
 
 	// 产品ID。
 	ProductId *string `json:"product_id,omitempty"`
@@ -92,6 +101,12 @@ type DesktopDetailInfo struct {
 
 	// 桌面是否正在绑定EIP。
 	IsAttachingEip *bool `json:"is_attaching_eip,omitempty"`
+
+	// 分配状态。 - ATTACHED：已分配。 - UNATTACH：未分配 表示未关联。 - DEATTACHED：已解分配。 - ATTACHING：分配中。 - DEATTACHING：解分配中。 - ATTACHFAIL：分配失败。 - DEATTACHFAIL：解分配失败。 - WAITING：等待被分配中,描述从批量分配（解分配）下发到转入分配（解分配）的中间状态 同时方便单个关联流程的状态独立性。 - ATTACH_FAIL_CAN_ATTACH_AGAIN：分配失败,还可以再关联。 - DEATTACH_FAIL_CAN_DEATTACH_AGAIN：解分配失败,还可以再解分配。
+	AttachState *DesktopDetailInfoAttachState `json:"attach_state,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o DesktopDetailInfo) String() string {
@@ -136,6 +151,85 @@ func (c DesktopDetailInfoInternetMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DesktopDetailInfoInternetMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DesktopDetailInfoAttachState struct {
+	value string
+}
+
+type DesktopDetailInfoAttachStateEnum struct {
+	ATTACHED                         DesktopDetailInfoAttachState
+	UNATTACH                         DesktopDetailInfoAttachState
+	DEATTACHED                       DesktopDetailInfoAttachState
+	ATTACHING                        DesktopDetailInfoAttachState
+	DEATTACHING                      DesktopDetailInfoAttachState
+	ATTACHFAIL                       DesktopDetailInfoAttachState
+	DEATTACHFAIL                     DesktopDetailInfoAttachState
+	WAITING                          DesktopDetailInfoAttachState
+	ATTACH_FAIL_CAN_ATTACH_AGAIN     DesktopDetailInfoAttachState
+	DEATTACH_FAIL_CAN_DEATTACH_AGAIN DesktopDetailInfoAttachState
+}
+
+func GetDesktopDetailInfoAttachStateEnum() DesktopDetailInfoAttachStateEnum {
+	return DesktopDetailInfoAttachStateEnum{
+		ATTACHED: DesktopDetailInfoAttachState{
+			value: "ATTACHED",
+		},
+		UNATTACH: DesktopDetailInfoAttachState{
+			value: "UNATTACH",
+		},
+		DEATTACHED: DesktopDetailInfoAttachState{
+			value: "DEATTACHED",
+		},
+		ATTACHING: DesktopDetailInfoAttachState{
+			value: "ATTACHING",
+		},
+		DEATTACHING: DesktopDetailInfoAttachState{
+			value: "DEATTACHING",
+		},
+		ATTACHFAIL: DesktopDetailInfoAttachState{
+			value: "ATTACHFAIL",
+		},
+		DEATTACHFAIL: DesktopDetailInfoAttachState{
+			value: "DEATTACHFAIL",
+		},
+		WAITING: DesktopDetailInfoAttachState{
+			value: "WAITING",
+		},
+		ATTACH_FAIL_CAN_ATTACH_AGAIN: DesktopDetailInfoAttachState{
+			value: "ATTACH_FAIL_CAN_ATTACH_AGAIN",
+		},
+		DEATTACH_FAIL_CAN_DEATTACH_AGAIN: DesktopDetailInfoAttachState{
+			value: "DEATTACH_FAIL_CAN_DEATTACH_AGAIN",
+		},
+	}
+}
+
+func (c DesktopDetailInfoAttachState) Value() string {
+	return c.value
+}
+
+func (c DesktopDetailInfoAttachState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DesktopDetailInfoAttachState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

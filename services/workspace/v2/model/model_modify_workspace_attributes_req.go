@@ -31,6 +31,9 @@ type ModifyWorkspaceAttributesReq struct {
 
 	// 桌面退订是否发送邮件通知。
 	IsSendEmail *bool `json:"is_send_email,omitempty"`
+
+	// 开通专线访问VNC功能，如果传入的是default则自动创建，如果传入的自定义的dc_vnc_ip则直接使用，如果传入的是close表示关闭自定义VNC
+	DcVncIp *string `json:"dc_vnc_ip,omitempty"`
 }
 
 func (o ModifyWorkspaceAttributesReq) String() string {

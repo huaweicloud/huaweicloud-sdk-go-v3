@@ -305,6 +305,18 @@ func (i *CreateQueuePlanInvoker) Invoke() (*model.CreateQueuePlanResponse, error
 	}
 }
 
+type CreateQueuePropertyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateQueuePropertyInvoker) Invoke() (*model.CreateQueuePropertyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateQueuePropertyResponse), nil
+	}
+}
+
 type DeleteAuthInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,6 +410,18 @@ func (i *DeleteQueuePlanInvoker) Invoke() (*model.DeleteQueuePlanResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteQueuePlanResponse), nil
+	}
+}
+
+type DeleteQueuePropertyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteQueuePropertyInvoker) Invoke() (*model.DeleteQueuePropertyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteQueuePropertyResponse), nil
 	}
 }
 
@@ -530,6 +554,18 @@ func (i *ListQueuePlansInvoker) Invoke() (*model.ListQueuePlansResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListQueuePlansResponse), nil
+	}
+}
+
+type ListQueuePropertyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueuePropertyInvoker) Invoke() (*model.ListQueuePropertyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueuePropertyResponse), nil
 	}
 }
 
@@ -794,6 +830,18 @@ func (i *UpdateQueueCidrInvoker) Invoke() (*model.UpdateQueueCidrResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateQueueCidrResponse), nil
+	}
+}
+
+type UpdateQueuePropertyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateQueuePropertyInvoker) Invoke() (*model.UpdateQueuePropertyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateQueuePropertyResponse), nil
 	}
 }
 

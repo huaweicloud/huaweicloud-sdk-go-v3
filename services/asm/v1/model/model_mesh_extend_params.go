@@ -8,7 +8,7 @@ import (
 
 type MeshExtendParams struct {
 
-	// 网格内集群信息，仅基础版使用
+	// 网格内集群信息
 	Clusters *[]MeshCluster `json:"clusters,omitempty"`
 }
 

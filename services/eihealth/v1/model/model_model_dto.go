@@ -37,7 +37,7 @@ type ModelDto struct {
 
 	File *ModelFile `json:"file,omitempty"`
 
-	ValueRange *ValueRange `json:"value_range,omitempty"`
+	ValueRange *ValueRange2 `json:"value_range,omitempty"`
 
 	// 模型描述信息
 	Description *string `json:"description,omitempty"`

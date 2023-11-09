@@ -54,6 +54,9 @@ type ShowSqlJobStatusResponse struct {
 	// SQL查询的相关列信息的Json字符串。
 	Detail *string `json:"detail,omitempty"`
 
+	// SQL配置参数信息Json字符串。
+	UserConf *string `json:"user_conf,omitempty"`
+
 	// 作业执行的SQL语句。
 	Statement *string `json:"statement,omitempty"`
 

@@ -23,6 +23,9 @@ type ListUsersRequest struct {
 
 	// 激活类型，默认为用户激活。 * USER_ACTIVATE： 用户激活 * ADMIN_ACTIVATE： 管理员激活
 	ActiveType *string `json:"active_type,omitempty"`
+
+	// 桌面用户组名，精确匹配。
+	GroupName *string `json:"group_name,omitempty"`
 }
 
 func (o ListUsersRequest) String() string {

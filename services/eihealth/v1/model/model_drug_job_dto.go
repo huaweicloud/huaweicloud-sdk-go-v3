@@ -17,9 +17,6 @@ type DrugJobDto struct {
 	// 作业标签
 	Labels *[]string `json:"labels,omitempty"`
 
-	// 作业的优先级,取值范围[0,9]，0最低，默认数值0
-	Priority *int32 `json:"priority,omitempty"`
-
 	// 作业状态
 	Status *string `json:"status,omitempty"`
 

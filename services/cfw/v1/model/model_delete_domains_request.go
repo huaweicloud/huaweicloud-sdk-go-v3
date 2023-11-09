@@ -9,6 +9,9 @@ import (
 // DeleteDomainsRequest Request Object
 type DeleteDomainsRequest struct {
 
+	// 域名组id
+	SetId string `json:"set_id"`
+
 	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 

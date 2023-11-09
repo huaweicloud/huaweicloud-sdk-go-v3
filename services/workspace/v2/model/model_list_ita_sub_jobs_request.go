@@ -18,6 +18,9 @@ type ListItaSubJobsRequest struct {
 	// 任务类型  - createDesktops：创建桌面任务。  - applyWorkspace：开通云桌面服务。  - cancelWorkspace：注销云桌面服务。  - expandVolumes:  扩容磁盘。  - addVolumes: 添加磁盘。
 	JobType *string `json:"job_type,omitempty"`
 
+	// 桌面池ID。
+	DesktopPoolId *string `json:"desktop_pool_id,omitempty"`
+
 	// 用于分页查询，取值范围0~1000，默认1000。
 	Limit *int32 `json:"limit,omitempty"`
 

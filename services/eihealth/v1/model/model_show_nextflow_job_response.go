@@ -15,6 +15,9 @@ type ShowNextflowJobResponse struct {
 	// 作业的名称
 	Name *string `json:"name,omitempty"`
 
+	// 作业的优先级,取值范围[0,9]，0最低，默认数值0
+	Priority *int32 `json:"priority,omitempty"`
+
 	// 作业的描述
 	Description *string `json:"description,omitempty"`
 

@@ -12,7 +12,7 @@ import (
 // NodeStatus
 type NodeStatus struct {
 
-	// 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现。
+	// 节点状态：节点资源生命周期管理（如安装卸载等）状态和集群内k8s node状态的综合体现，取值如下 - Build：创建中，表示节点正处于创建过程中。 - Installing：纳管中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：正常，表示节点处于正常状态。 - Abnormal：异常，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：故障，表示节点处于故障状态。
 	Phase *NodeStatusPhase `json:"phase,omitempty"`
 
 	// 节点最近一次状态检查时间。集群处于异常、冻结或者中间态（例如创建中）时，节点的状态检查动作可能受影响。检查时间超过5分的节点状态不具有参考意义。
@@ -52,8 +52,6 @@ type NodeStatusPhase struct {
 type NodeStatusPhaseEnum struct {
 	BUILD      NodeStatusPhase
 	INSTALLING NodeStatusPhase
-	INSTALLED  NodeStatusPhase
-	SHUT_DOWN  NodeStatusPhase
 	UPGRADING  NodeStatusPhase
 	ACTIVE     NodeStatusPhase
 	ABNORMAL   NodeStatusPhase
@@ -68,12 +66,6 @@ func GetNodeStatusPhaseEnum() NodeStatusPhaseEnum {
 		},
 		INSTALLING: NodeStatusPhase{
 			value: "Installing",
-		},
-		INSTALLED: NodeStatusPhase{
-			value: "Installed",
-		},
-		SHUT_DOWN: NodeStatusPhase{
-			value: "ShutDown",
 		},
 		UPGRADING: NodeStatusPhase{
 			value: "Upgrading",

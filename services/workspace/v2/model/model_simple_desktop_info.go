@@ -23,6 +23,9 @@ type SimpleDesktopInfo struct {
 	// 用户名。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 桌面已分配的用户信息列表。
+	AttachUserInfos *[]AttachInstancesUserInfo `json:"attach_user_infos,omitempty"`
+
 	// 权限组。
 	UserGroup *string `json:"user_group,omitempty"`
 
@@ -31,6 +34,12 @@ type SimpleDesktopInfo struct {
 
 	// ou名称。
 	OuName *string `json:"ou_name,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 是否处于管理员维护模式
+	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 }
 
 func (o SimpleDesktopInfo) String() string {

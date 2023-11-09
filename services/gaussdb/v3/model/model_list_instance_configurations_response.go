@@ -10,7 +10,7 @@ import (
 type ListInstanceConfigurationsResponse struct {
 	Configurations *ParameterConfigurationInfo `json:"configurations,omitempty"`
 
-	// 配置信息的总数。
+	// 参数信息的总数。
 	TotalCount *int64 `json:"total_count,omitempty"`
 
 	// 参数对象。

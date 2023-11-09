@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -25,6 +28,9 @@ type ImageDetectionReq struct {
 
 	// 自定义审核策略名称，可在控制台配置;如果请求参数中传了biz_type则优先使用biz_type,如果用户没传biz_type则event_type和categories必须传。
 	BizType *string `json:"biz_type,omitempty"`
+
+	// 可指定图片中文字语种类型
+	Language *ImageDetectionReqLanguage `json:"language,omitempty"`
 }
 
 func (o ImageDetectionReq) String() string {
@@ -34,4 +40,47 @@ func (o ImageDetectionReq) String() string {
 	}
 
 	return strings.Join([]string{"ImageDetectionReq", string(data)}, " ")
+}
+
+type ImageDetectionReqLanguage struct {
+	value string
+}
+
+type ImageDetectionReqLanguageEnum struct {
+	ZH ImageDetectionReqLanguage
+}
+
+func GetImageDetectionReqLanguageEnum() ImageDetectionReqLanguageEnum {
+	return ImageDetectionReqLanguageEnum{
+		ZH: ImageDetectionReqLanguage{
+			value: "zh",
+		},
+	}
+}
+
+func (c ImageDetectionReqLanguage) Value() string {
+	return c.value
+}
+
+func (c ImageDetectionReqLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ImageDetectionReqLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

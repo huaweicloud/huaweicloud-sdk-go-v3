@@ -76,8 +76,11 @@ type ListWorkspacesResponse struct {
 	EnterpriseId *string `json:"enterprise_id,omitempty"`
 
 	// 桌面退订是否发送邮件通知。
-	IsSendEmail    *bool `json:"is_send_email,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	IsSendEmail *bool `json:"is_send_email,omitempty"`
+
+	// 自定义的专线VNC地址
+	DcVncIp        *string `json:"dc_vnc_ip,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListWorkspacesResponse) String() string {

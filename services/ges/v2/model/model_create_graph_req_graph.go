@@ -61,6 +61,9 @@ type CreateGraphReqGraph struct {
 	ProductType *string `json:"product_type,omitempty"`
 
 	VertexIdType *CreateGraphReqGraphVertexIdType `json:"vertex_id_type,omitempty"`
+
+	// 是否启用多标签
+	EnableMultiLabel *bool `json:"enable_multi_label,omitempty"`
 }
 
 func (o CreateGraphReqGraph) String() string {

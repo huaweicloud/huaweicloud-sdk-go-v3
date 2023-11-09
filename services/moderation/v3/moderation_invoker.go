@@ -65,6 +65,18 @@ func (i *RunCreateAudioStreamModerationJobInvoker) Invoke() (*model.RunCreateAud
 	}
 }
 
+type RunCreateDocumentModerationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunCreateDocumentModerationJobInvoker) Invoke() (*model.RunCreateDocumentModerationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunCreateDocumentModerationJobResponse), nil
+	}
+}
+
 type RunCreateVideoModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +110,18 @@ func (i *RunQueryAudioModerationJobInvoker) Invoke() (*model.RunQueryAudioModera
 		return nil, err
 	} else {
 		return result.(*model.RunQueryAudioModerationJobResponse), nil
+	}
+}
+
+type RunQueryDocumentModerationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunQueryDocumentModerationJobInvoker) Invoke() (*model.RunQueryDocumentModerationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunQueryDocumentModerationJobResponse), nil
 	}
 }
 

@@ -663,6 +663,27 @@ func (c *KafkaClient) ListTopicProducersInvoker(request *model.ListTopicProducer
 	return &ListTopicProducersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyInstanceConfigs 修改实例配置
+//
+// 修改实例配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ModifyInstanceConfigs(request *model.ModifyInstanceConfigsRequest) (*model.ModifyInstanceConfigsResponse, error) {
+	requestDef := GenReqDefForModifyInstanceConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyInstanceConfigsResponse), nil
+	}
+}
+
+// ModifyInstanceConfigsInvoker 修改实例配置
+func (c *KafkaClient) ModifyInstanceConfigsInvoker(request *model.ModifyInstanceConfigsRequest) *ModifyInstanceConfigsInvoker {
+	requestDef := GenReqDefForModifyInstanceConfigs()
+	return &ModifyInstanceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetManagerPassword 重置Manager密码
 //
 // 重置Manager密码。
@@ -957,6 +978,27 @@ func (c *KafkaClient) ShowInstance(request *model.ShowInstanceRequest) (*model.S
 func (c *KafkaClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
 	requestDef := GenReqDefForShowInstance()
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceConfigs 获取实例配置
+//
+// 获取实例配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ShowInstanceConfigs(request *model.ShowInstanceConfigsRequest) (*model.ShowInstanceConfigsResponse, error) {
+	requestDef := GenReqDefForShowInstanceConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceConfigsResponse), nil
+	}
+}
+
+// ShowInstanceConfigsInvoker 获取实例配置
+func (c *KafkaClient) ShowInstanceConfigsInvoker(request *model.ShowInstanceConfigsRequest) *ShowInstanceConfigsInvoker {
+	requestDef := GenReqDefForShowInstanceConfigs()
+	return &ShowInstanceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceExtendProductInfo 查询实例的扩容规格列表

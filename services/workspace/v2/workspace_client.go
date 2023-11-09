@@ -292,6 +292,27 @@ func (c *WorkspaceClient) BatchLogoffDesktopsInvoker(request *model.BatchLogoffD
 	return &BatchLogoffDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchRebuildDesktopsSystemDisk 重建桌面
+//
+// 批量重建桌面系统盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchRebuildDesktopsSystemDisk(request *model.BatchRebuildDesktopsSystemDiskRequest) (*model.BatchRebuildDesktopsSystemDiskResponse, error) {
+	requestDef := GenReqDefForBatchRebuildDesktopsSystemDisk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRebuildDesktopsSystemDiskResponse), nil
+	}
+}
+
+// BatchRebuildDesktopsSystemDiskInvoker 重建桌面
+func (c *WorkspaceClient) BatchRebuildDesktopsSystemDiskInvoker(request *model.BatchRebuildDesktopsSystemDiskRequest) *BatchRebuildDesktopsSystemDiskInvoker {
+	requestDef := GenReqDefForBatchRebuildDesktopsSystemDisk()
+	return &BatchRebuildDesktopsSystemDiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchRunDesktops 操作桌面
 //
 // 批量操作桌面，用于批量开机、关机和重启。
@@ -311,6 +332,27 @@ func (c *WorkspaceClient) BatchRunDesktops(request *model.BatchRunDesktopsReques
 func (c *WorkspaceClient) BatchRunDesktopsInvoker(request *model.BatchRunDesktopsRequest) *BatchRunDesktopsInvoker {
 	requestDef := GenReqDefForBatchRunDesktops()
 	return &BatchRunDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeDesktopNetwork 切换桌面网络
+//
+// 切换桌面vpc、子网、ip、安全组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ChangeDesktopNetwork(request *model.ChangeDesktopNetworkRequest) (*model.ChangeDesktopNetworkResponse, error) {
+	requestDef := GenReqDefForChangeDesktopNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeDesktopNetworkResponse), nil
+	}
+}
+
+// ChangeDesktopNetworkInvoker 切换桌面网络
+func (c *WorkspaceClient) ChangeDesktopNetworkInvoker(request *model.ChangeDesktopNetworkRequest) *ChangeDesktopNetworkInvoker {
+	requestDef := GenReqDefForChangeDesktopNetwork()
+	return &ChangeDesktopNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDesktop 创建桌面
@@ -439,6 +481,27 @@ func (c *WorkspaceClient) ShowDesktopDetailInvoker(request *model.ShowDesktopDet
 	return &ShowDesktopDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDesktopNetwork 查询桌面网络
+//
+// 查询桌面vpc、子网、privateIp、EIP、安全组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowDesktopNetwork(request *model.ShowDesktopNetworkRequest) (*model.ShowDesktopNetworkResponse, error) {
+	requestDef := GenReqDefForShowDesktopNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDesktopNetworkResponse), nil
+	}
+}
+
+// ShowDesktopNetworkInvoker 查询桌面网络
+func (c *WorkspaceClient) ShowDesktopNetworkInvoker(request *model.ShowDesktopNetworkRequest) *ShowDesktopNetworkInvoker {
+	requestDef := GenReqDefForShowDesktopNetwork()
+	return &ShowDesktopNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUnusedDesktops 查询在指定时间段未使用的桌面
 //
 // 查询在指定时间段未使用的桌面。
@@ -479,6 +542,132 @@ func (c *WorkspaceClient) ListUsedDesktopInfo(request *model.ListUsedDesktopInfo
 func (c *WorkspaceClient) ListUsedDesktopInfoInvoker(request *model.ListUsedDesktopInfoRequest) *ListUsedDesktopInfoInvoker {
 	requestDef := GenReqDefForListUsedDesktopInfo()
 	return &ListUsedDesktopInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchChangeTags 批量添加删除标签
+//
+// 为指定桌面批量添加或删除标签。创建时，如果创建的标签已经存在（key相同），则覆盖。删除时，如果删除的标签不存在，默认处理成功
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchChangeTags(request *model.BatchChangeTagsRequest) (*model.BatchChangeTagsResponse, error) {
+	requestDef := GenReqDefForBatchChangeTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchChangeTagsResponse), nil
+	}
+}
+
+// BatchChangeTagsInvoker 批量添加删除标签
+func (c *WorkspaceClient) BatchChangeTagsInvoker(request *model.BatchChangeTagsRequest) *BatchChangeTagsInvoker {
+	requestDef := GenReqDefForBatchChangeTags()
+	return &BatchChangeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 创建桌面标签
+//
+// 该接口用于为桌面创建标签，一个桌面上最多有10个标签。创建时，如果创建的标签已经存在（key相同），则覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
+	requestDef := GenReqDefForCreateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagResponse), nil
+	}
+}
+
+// CreateTagInvoker 创建桌面标签
+func (c *WorkspaceClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除桌面标签
+//
+// 该接口用于删除桌面标签。删除时，如果删除的标签不存在，默认处理成功。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
+	requestDef := GenReqDefForDeleteTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagResponse), nil
+	}
+}
+
+// DeleteTagInvoker 删除桌面标签
+func (c *WorkspaceClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopByTags 使用标签过滤桌面
+//
+// 使用标签过滤桌面
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopByTags(request *model.ListDesktopByTagsRequest) (*model.ListDesktopByTagsResponse, error) {
+	requestDef := GenReqDefForListDesktopByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopByTagsResponse), nil
+	}
+}
+
+// ListDesktopByTagsInvoker 使用标签过滤桌面
+func (c *WorkspaceClient) ListDesktopByTagsInvoker(request *model.ListDesktopByTagsRequest) *ListDesktopByTagsInvoker {
+	requestDef := GenReqDefForListDesktopByTags()
+	return &ListDesktopByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTags 查询项目标签
+//
+// 查询租户的所有标签集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+// ListProjectTagsInvoker 查询项目标签
+func (c *WorkspaceClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTagByDesktopId 查询桌面标签
+//
+// 查询指定桌面的标签信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowTagByDesktopId(request *model.ShowTagByDesktopIdRequest) (*model.ShowTagByDesktopIdResponse, error) {
+	requestDef := GenReqDefForShowTagByDesktopId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagByDesktopIdResponse), nil
+	}
+}
+
+// ShowTagByDesktopIdInvoker 查询桌面标签
+func (c *WorkspaceClient) ShowTagByDesktopIdInvoker(request *model.ShowTagByDesktopIdRequest) *ShowTagByDesktopIdInvoker {
+	requestDef := GenReqDefForShowTagByDesktopId()
+	return &ShowTagByDesktopIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteUserGroups 批量删除用户组

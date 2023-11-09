@@ -124,6 +124,27 @@ func (c *ModerationClient) RunCreateAudioStreamModerationJobInvoker(request *mod
 	return &RunCreateAudioStreamModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunCreateDocumentModerationJob 创建文档内容审核作业
+//
+// 创建文档内容审核作业，创建成功会将作业ID返回给用户
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModerationClient) RunCreateDocumentModerationJob(request *model.RunCreateDocumentModerationJobRequest) (*model.RunCreateDocumentModerationJobResponse, error) {
+	requestDef := GenReqDefForRunCreateDocumentModerationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunCreateDocumentModerationJobResponse), nil
+	}
+}
+
+// RunCreateDocumentModerationJobInvoker 创建文档内容审核作业
+func (c *ModerationClient) RunCreateDocumentModerationJobInvoker(request *model.RunCreateDocumentModerationJobRequest) *RunCreateDocumentModerationJobInvoker {
+	requestDef := GenReqDefForRunCreateDocumentModerationJob()
+	return &RunCreateDocumentModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunCreateVideoModerationJob 创建视频内容审核作业
 //
 // 创建视频内容审核作业，创建成功会将作业ID返回给用户
@@ -183,6 +204,27 @@ func (c *ModerationClient) RunQueryAudioModerationJob(request *model.RunQueryAud
 func (c *ModerationClient) RunQueryAudioModerationJobInvoker(request *model.RunQueryAudioModerationJobRequest) *RunQueryAudioModerationJobInvoker {
 	requestDef := GenReqDefForRunQueryAudioModerationJob()
 	return &RunQueryAudioModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunQueryDocumentModerationJob 查询文档审核作业结果
+//
+// 查询文档审核结果接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModerationClient) RunQueryDocumentModerationJob(request *model.RunQueryDocumentModerationJobRequest) (*model.RunQueryDocumentModerationJobResponse, error) {
+	requestDef := GenReqDefForRunQueryDocumentModerationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunQueryDocumentModerationJobResponse), nil
+	}
+}
+
+// RunQueryDocumentModerationJobInvoker 查询文档审核作业结果
+func (c *ModerationClient) RunQueryDocumentModerationJobInvoker(request *model.RunQueryDocumentModerationJobRequest) *RunQueryDocumentModerationJobInvoker {
+	requestDef := GenReqDefForRunQueryDocumentModerationJob()
+	return &RunQueryDocumentModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunQueryVideoModerationJob 查询视频内容审核作业

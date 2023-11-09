@@ -12,7 +12,7 @@ import (
 // CreateDesktopReq 创建桌面请求。
 type CreateDesktopReq struct {
 
-	// 云桌面类型。  - DEDICATED：专属桌面。
+	// 云桌面类型。 - DEDICATED：专属桌面，单用户。 - SHARED: 多用户共享桌面。
 	DesktopType CreateDesktopReqDesktopType `json:"desktop_type"`
 
 	// 可用分区。将桌面创建到指定的可用分区。如果不指定则使用系统随机的可用分区。
@@ -41,8 +41,17 @@ type CreateDesktopReq struct {
 	// 创建桌面使用的参数列表。长度为1-100。  当前不支持一批桌面不同配置，所有桌面的配置和第一台的一致，如果第一台未设置参数，则取外层的同名参数。
 	Desktops []Desktop `json:"desktops"`
 
+	// 搭配size使用，当size为1时代表桌面名，位数1-15，当size大于1时代表桌面名前缀，位数：1-13。
+	DesktopName *string `json:"desktop_name,omitempty"`
+
+	// 创建不分配用户的桌面的个数，和desktops不能同时生效，搭配desktop_name使用。
+	Size *int32 `json:"size,omitempty"`
+
 	// 创建成功后是否发送邮件通知桌面用户，默认为true。
 	EmailNotification *bool `json:"email_notification,omitempty"`
+
+	// 企业项目ID，默认\"0\"
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
@@ -65,12 +74,16 @@ type CreateDesktopReqDesktopType struct {
 
 type CreateDesktopReqDesktopTypeEnum struct {
 	DEDICATED CreateDesktopReqDesktopType
+	SHARED    CreateDesktopReqDesktopType
 }
 
 func GetCreateDesktopReqDesktopTypeEnum() CreateDesktopReqDesktopTypeEnum {
 	return CreateDesktopReqDesktopTypeEnum{
 		DEDICATED: CreateDesktopReqDesktopType{
 			value: "DEDICATED",
+		},
+		SHARED: CreateDesktopReqDesktopType{
+			value: "SHARED",
 		},
 	}
 }

@@ -11,9 +11,6 @@ type MeshCluster struct {
 	// 集群ID，资源唯一标识，通过该ID查询需要添加的集群
 	ClusterID string `json:"clusterID"`
 
-	// 集群所在的Region
-	Region string `json:"region"`
-
 	// 集群所属的projectID
 	ProjectID string `json:"projectID"`
 

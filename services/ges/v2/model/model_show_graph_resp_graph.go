@@ -124,6 +124,18 @@ type ShowGraphRespGraph struct {
 	ProductType *string `json:"product_type,omitempty"`
 
 	VertexIdType *ListGraphsRespVertexIdType `json:"vertex_id_type,omitempty"`
+
+	// 图的初始规格。该参数从2.3.15版本后开始支持。
+	OriginGraphSizeTypeIndex *string `json:"origin_graph_size_type_index,omitempty"`
+
+	// 图扩副本的时间。
+	ExpandTime *string `json:"expand_time,omitempty"`
+
+	// 图扩容的时间。
+	ResizeTime *string `json:"resize_time,omitempty"`
+
+	// 是否启用多标签。
+	EnableMultiLabel *bool `json:"enable_multi_label,omitempty"`
 }
 
 func (o ShowGraphRespGraph) String() string {

@@ -20,6 +20,9 @@ type UserInGroup struct {
 
 	// 用户手机号。
 	UserPhone *string `json:"user_phone,omitempty"`
+
+	// 用户描述。
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UserInGroup) String() string {

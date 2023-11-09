@@ -161,6 +161,18 @@ func (i *BatchLogoffDesktopsInvoker) Invoke() (*model.BatchLogoffDesktopsRespons
 	}
 }
 
+type BatchRebuildDesktopsSystemDiskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRebuildDesktopsSystemDiskInvoker) Invoke() (*model.BatchRebuildDesktopsSystemDiskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRebuildDesktopsSystemDiskResponse), nil
+	}
+}
+
 type BatchRunDesktopsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,6 +182,18 @@ func (i *BatchRunDesktopsInvoker) Invoke() (*model.BatchRunDesktopsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.BatchRunDesktopsResponse), nil
+	}
+}
+
+type ChangeDesktopNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeDesktopNetworkInvoker) Invoke() (*model.ChangeDesktopNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeDesktopNetworkResponse), nil
 	}
 }
 
@@ -245,6 +269,18 @@ func (i *ShowDesktopDetailInvoker) Invoke() (*model.ShowDesktopDetailResponse, e
 	}
 }
 
+type ShowDesktopNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDesktopNetworkInvoker) Invoke() (*model.ShowDesktopNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDesktopNetworkResponse), nil
+	}
+}
+
 type ListUnusedDesktopsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +302,78 @@ func (i *ListUsedDesktopInfoInvoker) Invoke() (*model.ListUsedDesktopInfoRespons
 		return nil, err
 	} else {
 		return result.(*model.ListUsedDesktopInfoResponse), nil
+	}
+}
+
+type BatchChangeTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchChangeTagsInvoker) Invoke() (*model.BatchChangeTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchChangeTagsResponse), nil
+	}
+}
+
+type CreateTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTagInvoker) Invoke() (*model.CreateTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTagResponse), nil
+	}
+}
+
+type DeleteTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTagResponse), nil
+	}
+}
+
+type ListDesktopByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopByTagsInvoker) Invoke() (*model.ListDesktopByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopByTagsResponse), nil
+	}
+}
+
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ShowTagByDesktopIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTagByDesktopIdInvoker) Invoke() (*model.ShowTagByDesktopIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTagByDesktopIdResponse), nil
 	}
 }
 

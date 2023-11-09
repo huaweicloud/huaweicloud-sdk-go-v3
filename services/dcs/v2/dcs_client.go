@@ -126,27 +126,6 @@ func (c *DcsClient) ChangeMasterStandbyInvoker(request *model.ChangeMasterStandb
 	return &ChangeMasterStandbyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckMigrationConnectivity 数据迁移配置页实例连接测试
-//
-// 数据迁移配置页实例连接测试
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DcsClient) CheckMigrationConnectivity(request *model.CheckMigrationConnectivityRequest) (*model.CheckMigrationConnectivityResponse, error) {
-	requestDef := GenReqDefForCheckMigrationConnectivity()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckMigrationConnectivityResponse), nil
-	}
-}
-
-// CheckMigrationConnectivityInvoker 数据迁移配置页实例连接测试
-func (c *DcsClient) CheckMigrationConnectivityInvoker(request *model.CheckMigrationConnectivityRequest) *CheckMigrationConnectivityInvoker {
-	requestDef := GenReqDefForCheckMigrationConnectivity()
-	return &CheckMigrationConnectivityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CopyInstance 备份指定实例
 //
 // 备份指定的缓存实例。

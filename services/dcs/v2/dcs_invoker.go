@@ -65,18 +65,6 @@ func (i *ChangeMasterStandbyInvoker) Invoke() (*model.ChangeMasterStandbyRespons
 	}
 }
 
-type CheckMigrationConnectivityInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CheckMigrationConnectivityInvoker) Invoke() (*model.CheckMigrationConnectivityResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckMigrationConnectivityResponse), nil
-	}
-}
-
 type CopyInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -19,9 +19,30 @@ func ScmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchPushCertificate 批量推送证书
+//
+// 批量推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品多个region中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) BatchPushCertificate(request *model.BatchPushCertificateRequest) (*model.BatchPushCertificateResponse, error) {
+	requestDef := GenReqDefForBatchPushCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchPushCertificateResponse), nil
+	}
+}
+
+// BatchPushCertificateInvoker 批量推送证书
+func (c *ScmClient) BatchPushCertificateInvoker(request *model.BatchPushCertificateRequest) *BatchPushCertificateInvoker {
+	requestDef := GenReqDefForBatchPushCertificate()
+	return &BatchPushCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteCertificate 删除证书
 //
-// 删除证书实例，即将证书资源从华为云系统中删除。
+// 删除证书实例，即将证书资源从系统中删除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
@@ -105,7 +126,7 @@ func (c *ScmClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 
 // PushCertificate 推送证书
 //
-// 推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
+// 推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它云产品中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) PushCertificate(request *model.PushCertificateRequest) (*model.PushCertificateResponse, error) {

@@ -19,7 +19,7 @@ func AsmClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateMesh 新建网格
+// CreateMesh 创建网格
 //
 // 该API用于创建一个网格
 //
@@ -34,7 +34,7 @@ func (c *AsmClient) CreateMesh(request *model.CreateMeshRequest) (*model.CreateM
 	}
 }
 
-// CreateMeshInvoker 新建网格
+// CreateMeshInvoker 创建网格
 func (c *AsmClient) CreateMeshInvoker(request *model.CreateMeshRequest) *CreateMeshInvoker {
 	requestDef := GenReqDefForCreateMesh()
 	return &CreateMeshInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

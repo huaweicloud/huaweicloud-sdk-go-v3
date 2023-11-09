@@ -18,7 +18,7 @@ type UpdateAutoScalingPolicyRequestBody struct {
 	// 静默周期（单位：秒）。 两次自动扩容或自动回缩的最小间隔时间。  取值范围：300、600、1800、3600、7200、10800、86400、604800。  status为ON时必填。
 	SilenceCycle *int32 `json:"silence_cycle,omitempty"`
 
-	// 扩容阈值（百分比数值）。  取值范围：50-100。  status为ON时必填。
+	// CPU平均使用率（百分比数值）。  取值范围：50-100。  status为ON时必填。
 	EnlargeThreshold *int32 `json:"enlarge_threshold,omitempty"`
 
 	// 扩容规格上限。开启扩缩规格时必填。

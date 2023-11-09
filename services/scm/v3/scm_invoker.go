@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/scm/v3/model"
 )
 
+type BatchPushCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchPushCertificateInvoker) Invoke() (*model.BatchPushCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchPushCertificateResponse), nil
+	}
+}
+
 type DeleteCertificateInvoker struct {
 	*invoker.BaseInvoker
 }

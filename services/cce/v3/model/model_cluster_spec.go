@@ -45,6 +45,8 @@ type ClusterSpec struct {
 
 	EniNetwork *EniNetwork `json:"eniNetwork,omitempty"`
 
+	ServiceNetwork *ServiceNetwork `json:"serviceNetwork,omitempty"`
+
 	Authentication *Authentication `json:"authentication,omitempty"`
 
 	// 集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
@@ -53,7 +55,7 @@ type ClusterSpec struct {
 	// 控制节点的高级配置
 	Masters *[]MasterSpec `json:"masters,omitempty"`
 
-	// 服务网段参数，kubernetes clusterIp取值范围，1.11.7版本及以上支持。
+	// 服务网段参数，kubernetes clusterIP取值范围，1.11.7版本及以上支持。创建集群时如若未传参，默认为\"10.247.0.0/16\"。该参数废弃中，推荐使用新字段serviceNetwork，包含IPv4服务网段。
 	KubernetesSvcIpRange *string `json:"kubernetesSvcIpRange,omitempty"`
 
 	// 集群资源标签

@@ -38,6 +38,9 @@ type ProductInfo struct {
 	// 系统盘大小，单位GB。
 	SystemDiskSize *string `json:"system_disk_size,omitempty"`
 
+	// 数据盘大小，单位GB。
+	DataDiskSize *string `json:"data_disk_size,omitempty"`
+
 	// GPU描述。
 	GpuDesc *string `json:"gpu_desc,omitempty"`
 
@@ -70,6 +73,12 @@ type ProductInfo struct {
 
 	// 专属主机的子产品。
 	SubProductList *[]string `json:"sub_product_list,omitempty"`
+
+	// 专享主机套餐默认的桌面数。
+	DefaultDesktopNum *int32 `json:"default_desktop_num,omitempty"`
+
+	// 专享主机支持创建的最大桌面数。
+	MaxApplyDesktopNum *int32 `json:"max_apply_desktop_num,omitempty"`
 }
 
 func (o ProductInfo) String() string {

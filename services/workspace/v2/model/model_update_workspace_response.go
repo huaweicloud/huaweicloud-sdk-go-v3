@@ -13,7 +13,10 @@ type UpdateWorkspaceResponse struct {
 	JobId *string `json:"job_id,omitempty"`
 
 	// 企业ID
-	EnterpriseId   *string `json:"enterprise_id,omitempty"`
+	EnterpriseId *string `json:"enterprise_id,omitempty"`
+
+	// 专线vnc访问的ip
+	DcVncIp        *string `json:"dc_vnc_ip,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

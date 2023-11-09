@@ -24,6 +24,9 @@ type ApplyDesktopsInternetReq struct {
 	// 带宽大小，单位Mbit/s。默认1Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
 	BandwidthSize int32 `json:"bandwidth_size"`
 
+	// 企业项目ID，默认\"0\"
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 需要购买EIP的数量，当desktop_ids为空时需要填，兼容单独购买EIP场景。
 	Count *int32 `json:"count,omitempty"`
 }

@@ -549,6 +549,27 @@ func (c *DliClient) CreateQueuePlanInvoker(request *model.CreateQueuePlanRequest
 	return &CreateQueuePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateQueueProperty 新增队列属性
+//
+// 该接口用于增加队列属性, 一次可增加多个属性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateQueueProperty(request *model.CreateQueuePropertyRequest) (*model.CreateQueuePropertyResponse, error) {
+	requestDef := GenReqDefForCreateQueueProperty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateQueuePropertyResponse), nil
+	}
+}
+
+// CreateQueuePropertyInvoker 新增队列属性
+func (c *DliClient) CreateQueuePropertyInvoker(request *model.CreateQueuePropertyRequest) *CreateQueuePropertyInvoker {
+	requestDef := GenReqDefForCreateQueueProperty()
+	return &CreateQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAuthInfo 删除跨源认证
 //
 // 该API用于删除跨源认证信息。
@@ -719,6 +740,27 @@ func (c *DliClient) DeleteQueuePlan(request *model.DeleteQueuePlanRequest) (*mod
 func (c *DliClient) DeleteQueuePlanInvoker(request *model.DeleteQueuePlanRequest) *DeleteQueuePlanInvoker {
 	requestDef := GenReqDefForDeleteQueuePlan()
 	return &DeleteQueuePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteQueueProperty 删除队列的属性
+//
+// 该接口用于删除队列的属性，一次可删除多个属性值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) DeleteQueueProperty(request *model.DeleteQueuePropertyRequest) (*model.DeleteQueuePropertyResponse, error) {
+	requestDef := GenReqDefForDeleteQueueProperty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteQueuePropertyResponse), nil
+	}
+}
+
+// DeleteQueuePropertyInvoker 删除队列的属性
+func (c *DliClient) DeleteQueuePropertyInvoker(request *model.DeleteQueuePropertyRequest) *DeleteQueuePropertyInvoker {
+	requestDef := GenReqDefForDeleteQueueProperty()
+	return &DeleteQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteResource 删除组内资源包
@@ -950,6 +992,27 @@ func (c *DliClient) ListQueuePlans(request *model.ListQueuePlansRequest) (*model
 func (c *DliClient) ListQueuePlansInvoker(request *model.ListQueuePlansRequest) *ListQueuePlansInvoker {
 	requestDef := GenReqDefForListQueuePlans()
 	return &ListQueuePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueueProperty 获取队列属性
+//
+// 获取队列配置的属性
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListQueueProperty(request *model.ListQueuePropertyRequest) (*model.ListQueuePropertyResponse, error) {
+	requestDef := GenReqDefForListQueueProperty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueuePropertyResponse), nil
+	}
+}
+
+// ListQueuePropertyInvoker 获取队列属性
+func (c *DliClient) ListQueuePropertyInvoker(request *model.ListQueuePropertyRequest) *ListQueuePropertyInvoker {
+	requestDef := GenReqDefForListQueueProperty()
+	return &ListQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListQueueUsers 查看队列的使用者
@@ -1414,6 +1477,27 @@ func (c *DliClient) UpdateQueueCidr(request *model.UpdateQueueCidrRequest) (*mod
 func (c *DliClient) UpdateQueueCidrInvoker(request *model.UpdateQueueCidrRequest) *UpdateQueueCidrInvoker {
 	requestDef := GenReqDefForUpdateQueueCidr()
 	return &UpdateQueueCidrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateQueueProperty 更新队列属性
+//
+// 更新队列属性
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) UpdateQueueProperty(request *model.UpdateQueuePropertyRequest) (*model.UpdateQueuePropertyResponse, error) {
+	requestDef := GenReqDefForUpdateQueueProperty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateQueuePropertyResponse), nil
+	}
+}
+
+// UpdateQueuePropertyInvoker 更新队列属性
+func (c *DliClient) UpdateQueuePropertyInvoker(request *model.UpdateQueuePropertyRequest) *UpdateQueuePropertyInvoker {
+	requestDef := GenReqDefForUpdateQueueProperty()
+	return &UpdateQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadFiles 上传file类型分组资源

@@ -50,6 +50,12 @@ type BackupRecordResponse struct {
 
 	// 是否可以进行恢复操作，取值为TRUE或FALSE。
 	IsSupportRestore *string `json:"is_support_restore,omitempty"`
+
+	// 备份类型。
+	BackupFormat *BackupRecordResponseBackupFormat `json:"backup_format,omitempty"`
+
+	// 执行时间.
+	ExecutionAt *string `json:"execution_at,omitempty"`
 }
 
 func (o BackupRecordResponse) String() string {
@@ -153,6 +159,53 @@ func (c BackupRecordResponseStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BackupRecordResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BackupRecordResponseBackupFormat struct {
+	value string
+}
+
+type BackupRecordResponseBackupFormatEnum struct {
+	AOF BackupRecordResponseBackupFormat
+	RDB BackupRecordResponseBackupFormat
+}
+
+func GetBackupRecordResponseBackupFormatEnum() BackupRecordResponseBackupFormatEnum {
+	return BackupRecordResponseBackupFormatEnum{
+		AOF: BackupRecordResponseBackupFormat{
+			value: "aof",
+		},
+		RDB: BackupRecordResponseBackupFormat{
+			value: "rdb",
+		},
+	}
+}
+
+func (c BackupRecordResponseBackupFormat) Value() string {
+	return c.value
+}
+
+func (c BackupRecordResponseBackupFormat) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *BackupRecordResponseBackupFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

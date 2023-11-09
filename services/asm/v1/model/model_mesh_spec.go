@@ -12,10 +12,7 @@ import (
 // MeshSpec 网格参数定义
 type MeshSpec struct {
 
-	// 网格控制面组件所在的region 可选参数
-	Region *string `json:"region,omitempty"`
-
-	// 网格类型： InCluster：基础版网格
+	// 网格类型： InCluster: 集群内控制平面形态，基础版网格取值为InCluster
 	Type MeshSpecType `json:"type"`
 
 	// 网格版本

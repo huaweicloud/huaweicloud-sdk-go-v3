@@ -36,7 +36,8 @@ go get github.com/huaweicloud/huaweicloud-sdk-go-v3
 - 使用如下代码在指定 Region 下查询 VPC 列表，实际使用中请将 `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"`
   替换为您使用的产品/服务相应的 `{service} "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/{service}/{version}"`
   ，且初始化为 `{service}.New{Service}Client` 。
-- 调用前请根据实际情况替换如下变量： `{your ak string}`和`{your sk string}`。
+- 认证用的ak和sk直接写到代码中有很大的安全风险，建议在配置文件或者环境变量中密文存放，使用时解密，确保安全。
+- 本示例中的ak和sk保存在环境变量中，运行本示例前请先在本地环境中配置环境变量`HUAWEICLOUD_SDK_AK`和`HUAWEICLOUD_SDK_SK`。
 
 **精简示例**
 
@@ -44,6 +45,7 @@ go get github.com/huaweicloud/huaweicloud-sdk-go-v3
 package main
 
 import (
+    "os"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
@@ -53,9 +55,10 @@ import (
 
 func main() {
 	// 配置认证信息
+    // 可通过环境变量等方式配置认证信息，参考2.4认证信息管理章节
 	auth := basic.NewCredentialsBuilder().
-		WithAk("{your ak string}").
-		WithSk("{your sk string}").
+		WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+		WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
 		Build()
 
 	// 创建服务客户端
@@ -84,6 +87,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
@@ -97,9 +101,9 @@ import (
 func main() {
 	// 配置认证信息
 	auth := basic.NewCredentialsBuilder().
-		// 鉴权使用的 Access Key 和 Secret Access Key
-		WithAk("{your ak string}").
-		WithSk("{your sk string}").
+        // 可通过环境变量等方式配置认证信息，参考2.4认证信息管理章节
+		WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+		WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
 		// 如果未填写ProjectId，SDK会自动调用IAM服务查询所在region对应的项目id
 		WithProjectId("{your projectId string}").
 		// 配置SDK内置的IAM服务地址，默认为https://iam.myhuaweicloud.com
@@ -112,13 +116,15 @@ func main() {
 	httpConfig.WithIgnoreSSLVerification(true)
 	// 默认超时时间为120秒，可根据需要配置
 	httpConfig.WithTimeout(120)
-	// 根据需要配置网络代理
+    // 根据需要配置网络代理
 	proxy := config.NewProxy().
+		// 请根据实际情况替换示例中的代理协议、地址和端口号
 		WithSchema("http").
 		WithHost("proxy.huaweicloud.com").
 		WithPort(80).
-		WithUsername("testuser").
-		WithPassword("password")
+		// 如果代理需要认证，请配置用户名和密码
+		WithUsername(os.Getenv("PROXY_USERNAME")).
+		WithPassword(os.Getenv("PROXY_PASSWORD"))
 	httpConfig.WithProxy(proxy)
 	// 根据需要配置如何创建网络连接
 	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
@@ -224,11 +230,13 @@ client := vpc.NewVpcClient(
 ``` go
 // 根据需要配置网络代理
 proxy := config.NewProxy().
+	// 请根据实际情况替换示例中的代理协议、地址和端口号
     WithSchema("http").
     WithHost("proxy.huaweicloud.com").
     WithPort(80).
-    WithUsername("testuser").
-    WithPassword("password")
+    // 如果代理需要认证，请配置用户名和密码
+    WithUsername(os.Getenv("PROXY_USERNAME")).
+    WithPassword(os.Getenv("PROXY_PASSWORD"))
 httpConfig := config.DefaultHttpConfig().WithProxy(proxy)
 
 client := vpc.NewVpcClient(
@@ -321,9 +329,14 @@ Global 级服务使用 global.NewCredentialsBuilder() 初始化，需要提供 d
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+	"os"
 )
 
 // Region 级服务
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+projectId := "{your projectId string}"
+
 basicAuth := basic.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
@@ -331,6 +344,10 @@ basicAuth := basic.NewCredentialsBuilder().
     Build()
 
 // Global 级服务
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+domainId := "{your domainId string}"
+
 globalAuth := global.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
@@ -367,22 +384,33 @@ globalAuth := global.NewCredentialsBuilder().
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+	"os"
 )
 
 // Region级服务
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+securityToken := os.Getenv("HUAWEICLOUD_SDK_SECURITY_TOKEN")
+projectId := "{your projectId string}"
+
 basicAuth := basic.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
-    WithProjectId(projectId).
     WithSecurityToken(securityToken).
+    WithProjectId(projectId).
     Build()
 
 // Global级服务
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+securityToken := os.Getenv("HUAWEICLOUD_SDK_SECURITY_TOKEN")
+domainId := "{your domainId string}"
+
 globalAuth := global.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
-    WithDomainId(domainId).
     WithSecurityToken(securityToken).
+    WithDomainId(domainId).
     Build()
 ```
 
@@ -673,15 +701,16 @@ cred, err := chain.GetCredentials()
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+	"os"
 )
 
 // 指定终端节点，以 VPC 服务北京四的 endpoint 为例
 endpoint := "https://vpc.cn-north-4.myhuaweicloud.com"
 // 初始化客户端认证信息，需要填写相应 projectId/domainId，以初始化 basic.NewCredentialsBuilder() 为例
 basicAuth := basic.NewCredentialsBuilder().
-    WithAk(ak).
-    WithSk(sk).
-    WithProjectId(projectId).
+    WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+    WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+    WithProjectId("{your projectId string}").
     Build()
  
 // 初始化指定云服务的客户端 New{Service}Client ，以初始化 Region 级服务 VPC 的 NewVpcClient 为例
@@ -704,12 +733,13 @@ client := vpc.NewVpcClient(
 import (
     // 增加region依赖
     "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
+    "os"
 )
 
 // 初始化客户端认证信息，使用当前客户端初始化方式可不填 projectId/domainId，以初始化 global.NewCredentialsBuilder() 为例
 globalAuth := global.NewCredentialsBuilder().
-            WithAk(ak).
-            WithSk(sk).
+            WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+            WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
             // 可不填 domainId
             Build()
 
@@ -769,8 +799,8 @@ import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 
 iamEndpoint := "https://iam.cn-north-4.myhuaweicloud.com"
 cred := basic.NewCredentialsBuilder().
-			WithAk(ak).
-			WithSk(sk).
+			WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+			WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
 			WithIamEndpointOverride(iamEndpoint).
 			Build()
 ```
@@ -962,8 +992,8 @@ func createImageWatermark(client *dsc.DscClient) {
 }
 
 func main() {
-	ak := "{your ak string}"
-	sk := "{your sk string}"
+	ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+	sk := os.Getenv("HUAWEICLOUD_SDK_SK")
 	endpoint := "{your endpoint string}"
 	projectId := "{your project id}"
 
@@ -1001,8 +1031,8 @@ client := vpc.NewVpcClient(
 		WithEndpoint("<input your endpoint>").
 		WithCredential(
 			basic.NewCredentialsBuilder().
-				WithAk("<input your ak>").
-				WithSk("<input your sk>").
+				WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+				WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
 				WithProjectId("<input your project id>").
 				Build()).
 		Build())

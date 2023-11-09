@@ -365,6 +365,18 @@ func (i *ListTopicProducersInvoker) Invoke() (*model.ListTopicProducersResponse,
 	}
 }
 
+type ModifyInstanceConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyInstanceConfigsInvoker) Invoke() (*model.ModifyInstanceConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyInstanceConfigsResponse), nil
+	}
+}
+
 type ResetManagerPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +542,18 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowInstanceConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceConfigsInvoker) Invoke() (*model.ShowInstanceConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceConfigsResponse), nil
 	}
 }
 

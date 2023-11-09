@@ -106,9 +106,14 @@ func GenReqDefForAddDomainSet() *def.HttpRequestDef {
 func GenReqDefForAddDomains() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/domain-set/domains").
+		WithPath("/v1/{project_id}/domain-set/domains/{set_id}").
 		WithResponse(new(model.AddDomainsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SetId").
+		WithJsonTag("set_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
@@ -350,9 +355,14 @@ func GenReqDefForDeleteDomainSet() *def.HttpRequestDef {
 func GenReqDefForDeleteDomains() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/domain-set/domains").
+		WithPath("/v1/{project_id}/domain-set/domains/{set_id}").
 		WithResponse(new(model.DeleteDomainsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SetId").
+		WithJsonTag("set_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").

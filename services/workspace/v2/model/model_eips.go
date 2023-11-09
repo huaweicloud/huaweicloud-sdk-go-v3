@@ -29,6 +29,9 @@ type Eips struct {
 
 	// 绑定的桌面名称。
 	AttachedDesktopName *string `json:"attached_desktop_name,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o Eips) String() string {
