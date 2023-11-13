@@ -490,6 +490,27 @@ func (c *DcsClient) DeleteBigkeyScanTaskInvoker(request *model.DeleteBigkeyScanT
 	return &DeleteBigkeyScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteCenterTask 删除任务中心任务
+//
+// 删除任务中心任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeleteCenterTask(request *model.DeleteCenterTaskRequest) (*model.DeleteCenterTaskResponse, error) {
+	requestDef := GenReqDefForDeleteCenterTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCenterTaskResponse), nil
+	}
+}
+
+// DeleteCenterTaskInvoker 删除任务中心任务
+func (c *DcsClient) DeleteCenterTaskInvoker(request *model.DeleteCenterTaskRequest) *DeleteCenterTaskInvoker {
+	requestDef := GenReqDefForDeleteCenterTask()
+	return &DeleteCenterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConfigTemplate 删除自定义模板
 //
 // 删除自定义模板
@@ -509,6 +530,27 @@ func (c *DcsClient) DeleteConfigTemplate(request *model.DeleteConfigTemplateRequ
 func (c *DcsClient) DeleteConfigTemplateInvoker(request *model.DeleteConfigTemplateRequest) *DeleteConfigTemplateInvoker {
 	requestDef := GenReqDefForDeleteConfigTemplate()
 	return &DeleteConfigTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDiagnosisTask 删除诊断记录
+//
+// 删除诊断记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeleteDiagnosisTask(request *model.DeleteDiagnosisTaskRequest) (*model.DeleteDiagnosisTaskResponse, error) {
+	requestDef := GenReqDefForDeleteDiagnosisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDiagnosisTaskResponse), nil
+	}
+}
+
+// DeleteDiagnosisTaskInvoker 删除诊断记录
+func (c *DcsClient) DeleteDiagnosisTaskInvoker(request *model.DeleteDiagnosisTaskRequest) *DeleteDiagnosisTaskInvoker {
+	requestDef := GenReqDefForDeleteDiagnosisTask()
+	return &DeleteDiagnosisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteHotkeyScanTask 删除热key分析任务
@@ -1734,6 +1776,29 @@ func (c *DcsClient) ShowMigrationTaskStats(request *model.ShowMigrationTaskStats
 func (c *DcsClient) ShowMigrationTaskStatsInvoker(request *model.ShowMigrationTaskStatsRequest) *ShowMigrationTaskStatsInvoker {
 	requestDef := GenReqDefForShowMigrationTaskStats()
 	return &ShowMigrationTaskStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNodesInformation 查询实例节点信息
+//
+// 查询指定实例的节点信息。
+// 仅支持Redis4.0和Redis5.0实例查询。
+// 创建中实例不返回节点信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowNodesInformation(request *model.ShowNodesInformationRequest) (*model.ShowNodesInformationResponse, error) {
+	requestDef := GenReqDefForShowNodesInformation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNodesInformationResponse), nil
+	}
+}
+
+// ShowNodesInformationInvoker 查询实例节点信息
+func (c *DcsClient) ShowNodesInformationInvoker(request *model.ShowNodesInformationRequest) *ShowNodesInformationInvoker {
+	requestDef := GenReqDefForShowNodesInformation()
+	return &ShowNodesInformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowQuotaOfTenant 查询租户配额

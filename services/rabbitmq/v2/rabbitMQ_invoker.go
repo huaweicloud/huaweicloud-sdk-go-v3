@@ -197,6 +197,18 @@ func (i *ShowBackgroundTaskInvoker) Invoke() (*model.ShowBackgroundTaskResponse,
 	}
 }
 
+type ShowCesHierarchyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCesHierarchyInvoker) Invoke() (*model.ShowCesHierarchyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCesHierarchyResponse), nil
+	}
+}
+
 type ShowEngineInstanceExtendProductInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +254,18 @@ func (i *ShowMaintainWindowsInvoker) Invoke() (*model.ShowMaintainWindowsRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowMaintainWindowsResponse), nil
+	}
+}
+
+type ShowRabbitMqProductCoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRabbitMqProductCoresInvoker) Invoke() (*model.ShowRabbitMqProductCoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRabbitMqProductCoresResponse), nil
 	}
 }
 

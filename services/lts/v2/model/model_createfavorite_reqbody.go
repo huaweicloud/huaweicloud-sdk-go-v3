@@ -28,6 +28,9 @@ type CreatefavoriteReqbody struct {
 
 	// 日志流名称
 	LogStreamName *string `json:"log_stream_name,omitempty"`
+
+	// 是否支持全局化，必填true，否则创建不了收藏
+	IsGlobal bool `json:"is_global"`
 }
 
 func (o CreatefavoriteReqbody) String() string {

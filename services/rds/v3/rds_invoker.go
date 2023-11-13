@@ -53,6 +53,30 @@ func (i *BatchDeleteManualBackupInvoker) Invoke() (*model.BatchDeleteManualBacku
 	}
 }
 
+type BatchRestoreDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRestoreDatabaseInvoker) Invoke() (*model.BatchRestoreDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRestoreDatabaseResponse), nil
+	}
+}
+
+type BatchRestorePostgreSqlTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRestorePostgreSqlTablesInvoker) Invoke() (*model.BatchRestorePostgreSqlTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRestorePostgreSqlTablesResponse), nil
+	}
+}
+
 type BatchTagAddActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -413,6 +437,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	}
 }
 
+type ListHistoryDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryDatabaseInvoker) Invoke() (*model.ListHistoryDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistoryDatabaseResponse), nil
+	}
+}
+
 type ListInstanceDiagnosisInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -470,30 +506,6 @@ func (i *ListInstancesInfoDiagnosisInvoker) Invoke() (*model.ListInstancesInfoDi
 		return nil, err
 	} else {
 		return result.(*model.ListInstancesInfoDiagnosisResponse), nil
-	}
-}
-
-type ListInstancesRecommendationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstancesRecommendationInvoker) Invoke() (*model.ListInstancesRecommendationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstancesRecommendationResponse), nil
-	}
-}
-
-type ListInstancesResourceMetricsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstancesResourceMetricsInvoker) Invoke() (*model.ListInstancesResourceMetricsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstancesResourceMetricsResponse), nil
 	}
 }
 
@@ -590,6 +602,18 @@ func (i *ListPostgresqlHbaInfoHistoryInvoker) Invoke() (*model.ListPostgresqlHba
 		return nil, err
 	} else {
 		return result.(*model.ListPostgresqlHbaInfoHistoryResponse), nil
+	}
+}
+
+type ListPostgresqlListHistoryTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPostgresqlListHistoryTablesInvoker) Invoke() (*model.ListPostgresqlListHistoryTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPostgresqlListHistoryTablesResponse), nil
 	}
 }
 

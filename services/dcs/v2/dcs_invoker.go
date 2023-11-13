@@ -269,6 +269,18 @@ func (i *DeleteBigkeyScanTaskInvoker) Invoke() (*model.DeleteBigkeyScanTaskRespo
 	}
 }
 
+type DeleteCenterTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCenterTaskInvoker) Invoke() (*model.DeleteCenterTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCenterTaskResponse), nil
+	}
+}
+
 type DeleteConfigTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -278,6 +290,18 @@ func (i *DeleteConfigTemplateInvoker) Invoke() (*model.DeleteConfigTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteConfigTemplateResponse), nil
+	}
+}
+
+type DeleteDiagnosisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDiagnosisTaskInvoker) Invoke() (*model.DeleteDiagnosisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDiagnosisTaskResponse), nil
 	}
 }
 
@@ -974,6 +998,18 @@ func (i *ShowMigrationTaskStatsInvoker) Invoke() (*model.ShowMigrationTaskStatsR
 		return nil, err
 	} else {
 		return result.(*model.ShowMigrationTaskStatsResponse), nil
+	}
+}
+
+type ShowNodesInformationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNodesInformationInvoker) Invoke() (*model.ShowNodesInformationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNodesInformationResponse), nil
 	}
 }
 

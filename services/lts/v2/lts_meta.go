@@ -1172,7 +1172,7 @@ func GenReqDefForUpdateLogGroup() *def.HttpRequestDef {
 func GenReqDefForUpdateLogStream() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v2/{project_id}/groups/{log_group_id}/streams_ttl/{log_stream_id}").
+		WithPath("/v2/{project_id}/groups/{log_group_id}/streams-ttl/{log_stream_id}").
 		WithResponse(new(model.UpdateLogStreamResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

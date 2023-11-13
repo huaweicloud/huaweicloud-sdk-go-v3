@@ -103,6 +103,48 @@ func (c *RdsClient) BatchDeleteManualBackupInvoker(request *model.BatchDeleteMan
 	return &BatchDeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchRestoreDatabase 库级时间点恢复
+//
+// 库级时间点恢复
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) BatchRestoreDatabase(request *model.BatchRestoreDatabaseRequest) (*model.BatchRestoreDatabaseResponse, error) {
+	requestDef := GenReqDefForBatchRestoreDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRestoreDatabaseResponse), nil
+	}
+}
+
+// BatchRestoreDatabaseInvoker 库级时间点恢复
+func (c *RdsClient) BatchRestoreDatabaseInvoker(request *model.BatchRestoreDatabaseRequest) *BatchRestoreDatabaseInvoker {
+	requestDef := GenReqDefForBatchRestoreDatabase()
+	return &BatchRestoreDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRestorePostgreSqlTables 表级时间点恢复（PostgreSQL）
+//
+// 表级时间点恢复（PostgreSQL）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) BatchRestorePostgreSqlTables(request *model.BatchRestorePostgreSqlTablesRequest) (*model.BatchRestorePostgreSqlTablesResponse, error) {
+	requestDef := GenReqDefForBatchRestorePostgreSqlTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRestorePostgreSqlTablesResponse), nil
+	}
+}
+
+// BatchRestorePostgreSqlTablesInvoker 表级时间点恢复（PostgreSQL）
+func (c *RdsClient) BatchRestorePostgreSqlTablesInvoker(request *model.BatchRestorePostgreSqlTablesRequest) *BatchRestorePostgreSqlTablesInvoker {
+	requestDef := GenReqDefForBatchRestorePostgreSqlTables()
+	return &BatchRestorePostgreSqlTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAddAction 批量添加标签
 //
 // 批量添加标签。
@@ -731,6 +773,27 @@ func (c *RdsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListF
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListHistoryDatabase 查询指定时间点可恢复的库
+//
+// 查询指定时间点可恢复的库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListHistoryDatabase(request *model.ListHistoryDatabaseRequest) (*model.ListHistoryDatabaseResponse, error) {
+	requestDef := GenReqDefForListHistoryDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistoryDatabaseResponse), nil
+	}
+}
+
+// ListHistoryDatabaseInvoker 查询指定时间点可恢复的库
+func (c *RdsClient) ListHistoryDatabaseInvoker(request *model.ListHistoryDatabaseRequest) *ListHistoryDatabaseInvoker {
+	requestDef := GenReqDefForListHistoryDatabase()
+	return &ListHistoryDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceDiagnosis 获取诊断后的实例数量
 //
 // 获取诊断后的实例数量
@@ -834,48 +897,6 @@ func (c *RdsClient) ListInstancesInfoDiagnosis(request *model.ListInstancesInfoD
 func (c *RdsClient) ListInstancesInfoDiagnosisInvoker(request *model.ListInstancesInfoDiagnosisRequest) *ListInstancesInfoDiagnosisInvoker {
 	requestDef := GenReqDefForListInstancesInfoDiagnosis()
 	return &ListInstancesInfoDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListInstancesRecommendation 查询购买推荐
-//
-// 查询购买推荐
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) ListInstancesRecommendation(request *model.ListInstancesRecommendationRequest) (*model.ListInstancesRecommendationResponse, error) {
-	requestDef := GenReqDefForListInstancesRecommendation()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListInstancesRecommendationResponse), nil
-	}
-}
-
-// ListInstancesRecommendationInvoker 查询购买推荐
-func (c *RdsClient) ListInstancesRecommendationInvoker(request *model.ListInstancesRecommendationRequest) *ListInstancesRecommendationInvoker {
-	requestDef := GenReqDefForListInstancesRecommendation()
-	return &ListInstancesRecommendationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListInstancesResourceMetrics 查询监控大盘列表
-//
-// 查询监控大盘列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) ListInstancesResourceMetrics(request *model.ListInstancesResourceMetricsRequest) (*model.ListInstancesResourceMetricsResponse, error) {
-	requestDef := GenReqDefForListInstancesResourceMetrics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListInstancesResourceMetricsResponse), nil
-	}
-}
-
-// ListInstancesResourceMetricsInvoker 查询监控大盘列表
-func (c *RdsClient) ListInstancesResourceMetricsInvoker(request *model.ListInstancesResourceMetricsRequest) *ListInstancesResourceMetricsInvoker {
-	requestDef := GenReqDefForListInstancesResourceMetrics()
-	return &ListInstancesResourceMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstancesSupportFastRestore 获取实例是否能使用极速恢复
@@ -1047,6 +1068,27 @@ func (c *RdsClient) ListPostgresqlHbaInfoHistory(request *model.ListPostgresqlHb
 func (c *RdsClient) ListPostgresqlHbaInfoHistoryInvoker(request *model.ListPostgresqlHbaInfoHistoryRequest) *ListPostgresqlHbaInfoHistoryInvoker {
 	requestDef := GenReqDefForListPostgresqlHbaInfoHistory()
 	return &ListPostgresqlHbaInfoHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPostgresqlListHistoryTables 查询指定时间点可恢复的表(PostgreSQL)
+//
+// 查询指定时间点可恢复的表(PostgreSQL)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListPostgresqlListHistoryTables(request *model.ListPostgresqlListHistoryTablesRequest) (*model.ListPostgresqlListHistoryTablesResponse, error) {
+	requestDef := GenReqDefForListPostgresqlListHistoryTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPostgresqlListHistoryTablesResponse), nil
+	}
+}
+
+// ListPostgresqlListHistoryTablesInvoker 查询指定时间点可恢复的表(PostgreSQL)
+func (c *RdsClient) ListPostgresqlListHistoryTablesInvoker(request *model.ListPostgresqlListHistoryTablesRequest) *ListPostgresqlListHistoryTablesInvoker {
+	requestDef := GenReqDefForListPostgresqlListHistoryTables()
+	return &ListPostgresqlListHistoryTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPredefinedTag

@@ -363,6 +363,27 @@ func (c *RabbitMQClient) ShowBackgroundTaskInvoker(request *model.ShowBackground
 	return &ShowBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCesHierarchy 查询实例在CES的监控层级关系
+//
+// 查询实例在CES的监控层级关系。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowCesHierarchy(request *model.ShowCesHierarchyRequest) (*model.ShowCesHierarchyResponse, error) {
+	requestDef := GenReqDefForShowCesHierarchy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCesHierarchyResponse), nil
+	}
+}
+
+// ShowCesHierarchyInvoker 查询实例在CES的监控层级关系
+func (c *RabbitMQClient) ShowCesHierarchyInvoker(request *model.ShowCesHierarchyRequest) *ShowCesHierarchyInvoker {
+	requestDef := GenReqDefForShowCesHierarchy()
+	return &ShowCesHierarchyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEngineInstanceExtendProductInfo 查询新规格可扩容规格列表
 //
 // 查询新规格实例可扩容列表
@@ -447,6 +468,27 @@ func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsR
 func (c *RabbitMQClient) ShowMaintainWindowsInvoker(request *model.ShowMaintainWindowsRequest) *ShowMaintainWindowsInvoker {
 	requestDef := GenReqDefForShowMaintainWindows()
 	return &ShowMaintainWindowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRabbitMqProductCores 查询RabbitMQ产品规格核数
+//
+// 查询RabbitMQ产品规格核数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowRabbitMqProductCores(request *model.ShowRabbitMqProductCoresRequest) (*model.ShowRabbitMqProductCoresResponse, error) {
+	requestDef := GenReqDefForShowRabbitMqProductCores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRabbitMqProductCoresResponse), nil
+	}
+}
+
+// ShowRabbitMqProductCoresInvoker 查询RabbitMQ产品规格核数
+func (c *RabbitMQClient) ShowRabbitMqProductCoresInvoker(request *model.ShowRabbitMqProductCoresRequest) *ShowRabbitMqProductCoresInvoker {
+	requestDef := GenReqDefForShowRabbitMqProductCores()
+	return &ShowRabbitMqProductCoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRabbitMqProjectTags 查询项目标签

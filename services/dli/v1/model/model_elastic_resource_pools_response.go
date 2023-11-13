@@ -9,6 +9,12 @@ import (
 // ElasticResourcePoolsResponse 弹性资源池列表
 type ElasticResourcePoolsResponse struct {
 
+	// 资源池名称
+	ElasticResourcePoolName *string `json:"elastic_resource_pool_name,omitempty"`
+
+	// 资源池id
+	Id *int32 `json:"id,omitempty"`
+
 	// 更新时间
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
@@ -17,9 +23,6 @@ type ElasticResourcePoolsResponse struct {
 
 	// 用户名
 	Owner *string `json:"owner,omitempty"`
-
-	// 资源池名称
-	ElasticResourcePoolName *string `json:"elastic_resource_pool_name,omitempty"`
 
 	// 资源池描述
 	Description *string `json:"description,omitempty"`

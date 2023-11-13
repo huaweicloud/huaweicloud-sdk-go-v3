@@ -18,9 +18,6 @@ type ListElasticResourcePoolsResponse struct {
 	// 数量
 	Count *int32 `json:"count,omitempty"`
 
-	// 弹性资源池名称
-	ElasticResourcePoolName *string `json:"elastic_resource_pool_name,omitempty"`
-
 	// 弹性资源池列表
 	ElasticResourcePools *[]ElasticResourcePoolsResponse `json:"elastic_resource_pools,omitempty"`
 	HttpStatusCode       int                             `json:"-"`

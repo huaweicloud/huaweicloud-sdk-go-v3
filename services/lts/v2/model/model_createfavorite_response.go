@@ -34,8 +34,11 @@ type CreatefavoriteResponse struct {
 	LogStreamName *string `json:"log_stream_name,omitempty"`
 
 	// 项目id
-	ProjectId      *string `json:"project_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ProjectId *string `json:"project_id,omitempty"`
+
+	// 是否开启日志收藏
+	IsGlobal       *bool `json:"is_global,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o CreatefavoriteResponse) String() string {

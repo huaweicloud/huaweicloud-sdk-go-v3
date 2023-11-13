@@ -10,11 +10,14 @@ var (
 		"https://tms.myhuaweicloud.com")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
 		"https://tms.ap-southeast-1.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://tms.eu-west-101.myhuaweicloud.eu")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
 	"ap-southeast-1": AP_SOUTHEAST_1,
+	"eu-west-101":    EU_WEST_101,
 }
 
 var provider = region.DefaultProviderChain("TMS")
