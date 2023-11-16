@@ -11,6 +11,12 @@ import (
 // ShowFunctionConfigResponse Response Object
 type ShowFunctionConfigResponse struct {
 
+	// 函数id，唯一标识函数。
+	FuncId *string `json:"func_id,omitempty"`
+
+	// 资源id。
+	ResourceId *string `json:"resource_id,omitempty"`
+
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
 	FuncUrn *string `json:"func_urn,omitempty"`
 

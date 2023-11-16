@@ -2321,6 +2321,18 @@ func (i *UpdateDirectoryInvoker) Invoke() (*model.UpdateDirectoryResponse, error
 	}
 }
 
+type UpdateFactoryJobNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFactoryJobNameInvoker) Invoke() (*model.UpdateFactoryJobNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFactoryJobNameResponse), nil
+	}
+}
+
 type UpdateStandardInvoker struct {
 	*invoker.BaseInvoker
 }

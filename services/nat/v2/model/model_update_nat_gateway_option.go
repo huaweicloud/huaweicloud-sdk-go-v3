@@ -15,7 +15,7 @@ type UpdateNatGatewayOption struct {
 	// 公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
 	Name *string `json:"name,omitempty"`
 
-	// 公网NAT网关的描述，长度限制为255。
+	// 公网NAT网关的描述，长度范围小于等于255个字符，不能包含<>
 	Description *string `json:"description,omitempty"`
 
 	// 公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000

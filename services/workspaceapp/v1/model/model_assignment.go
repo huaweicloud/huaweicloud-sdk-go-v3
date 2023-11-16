@@ -9,13 +9,13 @@ import (
 // Assignment 授权描述
 type Assignment struct {
 
+	// 策略ID
+	PolicyStatementId string `json:"policy_statement_id"`
+
 	// 目标
 	Attach string `json:"attach"`
 
 	AttachType *AttachType `json:"attach_type"`
-
-	// 策略ID
-	PolicyStatementId *string `json:"policy_statement_id,omitempty"`
 }
 
 func (o Assignment) String() string {

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// PolicyGroupForUpdate 修改的策略组详情
 type PolicyGroupForUpdate struct {
 
 	// 策略组名称，名称需要满足如下规则 1. 由英文、数字或者下划线组成，不能有空格 2. 字符长度范围1-55

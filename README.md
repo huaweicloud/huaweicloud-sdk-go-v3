@@ -205,10 +205,12 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [3.3.2 Region configuration](#332-region-configuration-top)
 * [4. Send Request and Handle response](#4-send-requests-and-handle-responses-top)
     * [4.1 Exceptions](#41-exceptions-top)
-* [5.Troubleshooting](#5-troubleshooting-top)
+* [5. Troubleshooting](#5-troubleshooting-top)
     * [5.1 Original HTTP Listener](#51-original-http-listener-top)
 * [6. Upload and download files](#6-upload-and-download-files-top)
-* [7. Retry For Request](#7-retry-for-request-top)
+* [7. API Invoker](#7-api-invoker-top)
+    * [7.1 Custom request headers](#71-custom-request-headers-top)
+    * [7.2 Retry for request](#72-retry-for-request-top)
 
 ### 1. Client Configuration [:top:](#user-manual-top)
 
@@ -999,7 +1001,38 @@ func main() {
 }
 ```
 
-### 7. Retry For Request [:top:](#user-manual-top)
+### 7. API Invoker [:top:](#user-manual-top)
+
+#### 7.1 Custom request headers [:top:](#user-manual-top)
+
+You can flexibly configure request headers as needed. **Do not** specify common request headers such as `Host`, `Authorization`, `User-Agent`, `Content-Type` unless necessary, as this may cause the errors.
+
+```go
+client := vpc.NewVpcClient(
+	vpc.VpcClientBuilder().
+		WithEndpoint("<input your endpoint>").
+		WithCredential(
+			basic.NewCredentialsBuilder().
+				WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+				WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+				WithProjectId("<input your project id>").
+				Build()).
+		Build())
+
+request := &model.ListVpcsRequest{}
+response, err := client.ListVpcsInvoker(request).
+	// custom request headers
+	AddHeader(map[string]string{"key1": "value1", "key2": "value2"}).
+	Invoke()
+
+if err == nil {
+	fmt.Printf("%+v\n", response)
+} else {
+	fmt.Printf("%+v\n", err)
+}
+```
+
+#### 7.2 Retry for request [:top:](#user-manual-top)
 
 When a request encounters a network exception or flow control on the interface, the request needs to be retried. The
 Go SDK provides the retry method for our users which could be used to the requests of `GET` HTTP method. 

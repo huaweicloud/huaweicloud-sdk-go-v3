@@ -353,6 +353,18 @@ func (i *RecognizePcrTestRecordInvoker) Invoke() (*model.RecognizePcrTestRecordR
 	}
 }
 
+type RecognizePeruIdCardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizePeruIdCardInvoker) Invoke() (*model.RecognizePeruIdCardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizePeruIdCardResponse), nil
+	}
+}
+
 type RecognizeQualificationCertificateInvoker struct {
 	*invoker.BaseInvoker
 }

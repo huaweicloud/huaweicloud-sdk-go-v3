@@ -17,6 +17,18 @@ func (i *AcceptManualReviewInvoker) Invoke() (*model.AcceptManualReviewResponse,
 	}
 }
 
+type BatchMovePipelineToGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchMovePipelineToGroupInvoker) Invoke() (*model.BatchMovePipelineToGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchMovePipelineToGroupResponse), nil
+	}
+}
+
 type BatchShowPipelinesLatestStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +50,30 @@ func (i *BatchShowPipelinesStatusInvoker) Invoke() (*model.BatchShowPipelinesSta
 		return nil, err
 	} else {
 		return result.(*model.BatchShowPipelinesStatusResponse), nil
+	}
+}
+
+type CreateBasicPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBasicPluginInvoker) Invoke() (*model.CreateBasicPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBasicPluginResponse), nil
+	}
+}
+
+type CreateOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOpenSourceStrategyInvoker) Invoke() (*model.CreateOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOpenSourceStrategyResponse), nil
 	}
 }
 
@@ -65,6 +101,18 @@ func (i *CreatePipelineByTemplateIdInvoker) Invoke() (*model.CreatePipelineByTem
 	}
 }
 
+type CreatePipelineGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineGroupInvoker) Invoke() (*model.CreatePipelineGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePipelineGroupResponse), nil
+	}
+}
+
 type CreatePipelineNewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +125,66 @@ func (i *CreatePipelineNewInvoker) Invoke() (*model.CreatePipelineNewResponse, e
 	}
 }
 
+type CreatePipelineTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineTemplateInvoker) Invoke() (*model.CreatePipelineTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePipelineTemplateResponse), nil
+	}
+}
+
+type CreateRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRuleInvoker) Invoke() (*model.CreateRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRuleResponse), nil
+	}
+}
+
+type CreateStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStrategyInvoker) Invoke() (*model.CreateStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStrategyResponse), nil
+	}
+}
+
+type DeleteBasicPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBasicPluginInvoker) Invoke() (*model.DeleteBasicPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBasicPluginResponse), nil
+	}
+}
+
+type DeleteOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOpenSourceStrategyInvoker) Invoke() (*model.DeleteOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOpenSourceStrategyResponse), nil
+	}
+}
+
 type DeletePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -86,6 +194,138 @@ func (i *DeletePipelineInvoker) Invoke() (*model.DeletePipelineResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeletePipelineResponse), nil
+	}
+}
+
+type DeletePipelineGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePipelineGroupInvoker) Invoke() (*model.DeletePipelineGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePipelineGroupResponse), nil
+	}
+}
+
+type DeletePipelineTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePipelineTemplateInvoker) Invoke() (*model.DeletePipelineTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePipelineTemplateResponse), nil
+	}
+}
+
+type DeletePluginDraftInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePluginDraftInvoker) Invoke() (*model.DeletePluginDraftResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePluginDraftResponse), nil
+	}
+}
+
+type DeletePublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePublisherInvoker) Invoke() (*model.DeletePublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePublisherResponse), nil
+	}
+}
+
+type DeleteRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRuleInvoker) Invoke() (*model.DeleteRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRuleResponse), nil
+	}
+}
+
+type DeleteStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStrategyInvoker) Invoke() (*model.DeleteStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStrategyResponse), nil
+	}
+}
+
+type ListAvailablePublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailablePublisherInvoker) Invoke() (*model.ListAvailablePublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailablePublisherResponse), nil
+	}
+}
+
+type ListBasePluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBasePluginsInvoker) Invoke() (*model.ListBasePluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBasePluginsResponse), nil
+	}
+}
+
+type ListBasePluginsNewPostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBasePluginsNewPostInvoker) Invoke() (*model.ListBasePluginsNewPostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBasePluginsNewPostResponse), nil
+	}
+}
+
+type ListOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOpenSourceStrategyInvoker) Invoke() (*model.ListOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOpenSourceStrategyResponse), nil
+	}
+}
+
+type ListPLuginVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPLuginVersionInvoker) Invoke() (*model.ListPLuginVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPLuginVersionResponse), nil
 	}
 }
 
@@ -149,6 +389,102 @@ func (i *ListPipleineBuildResultInvoker) Invoke() (*model.ListPipleineBuildResul
 	}
 }
 
+type ListPluginVersionNumberInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginVersionNumberInvoker) Invoke() (*model.ListPluginVersionNumberResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginVersionNumberResponse), nil
+	}
+}
+
+type ListPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginsResponse), nil
+	}
+}
+
+type ListProjectOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectOpenSourceStrategyInvoker) Invoke() (*model.ListProjectOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectOpenSourceStrategyResponse), nil
+	}
+}
+
+type ListProjectStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectStrategyInvoker) Invoke() (*model.ListProjectStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectStrategyResponse), nil
+	}
+}
+
+type ListPublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublisherInvoker) Invoke() (*model.ListPublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublisherResponse), nil
+	}
+}
+
+type ListRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRuleInvoker) Invoke() (*model.ListRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRuleResponse), nil
+	}
+}
+
+type ListStagePluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStagePluginsInvoker) Invoke() (*model.ListStagePluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStagePluginsResponse), nil
+	}
+}
+
+type ListStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStrategyInvoker) Invoke() (*model.ListStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStrategyResponse), nil
+	}
+}
+
 type ListTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,6 +494,30 @@ func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTemplatesResponse), nil
+	}
+}
+
+type PublishPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishPluginInvoker) Invoke() (*model.PublishPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishPluginResponse), nil
+	}
+}
+
+type PublishPluginBindInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishPluginBindInvoker) Invoke() (*model.PublishPluginBindResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishPluginBindResponse), nil
 	}
 }
 
@@ -209,6 +569,18 @@ func (i *RunPipelineInvoker) Invoke() (*model.RunPipelineResponse, error) {
 	}
 }
 
+type ShowBasicPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBasicPluginInvoker) Invoke() (*model.ShowBasicPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBasicPluginResponse), nil
+	}
+}
+
 type ShowInstanceStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +590,30 @@ func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceStatusResponse), nil
+	}
+}
+
+type ShowOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOpenSourceStrategyInvoker) Invoke() (*model.ShowOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOpenSourceStrategyResponse), nil
+	}
+}
+
+type ShowPipelineGroupTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineGroupTreeInvoker) Invoke() (*model.ShowPipelineGroupTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPipelineGroupTreeResponse), nil
 	}
 }
 
@@ -254,6 +650,114 @@ func (i *ShowPipleineStatusInvoker) Invoke() (*model.ShowPipleineStatusResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowPipleineStatusResponse), nil
+	}
+}
+
+type ShowPluginInputsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginInputsInvoker) Invoke() (*model.ShowPluginInputsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginInputsResponse), nil
+	}
+}
+
+type ShowPluginMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginMetricsInvoker) Invoke() (*model.ShowPluginMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginMetricsResponse), nil
+	}
+}
+
+type ShowPluginOutputsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginOutputsInvoker) Invoke() (*model.ShowPluginOutputsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginOutputsResponse), nil
+	}
+}
+
+type ShowPluginVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginVersionInvoker) Invoke() (*model.ShowPluginVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginVersionResponse), nil
+	}
+}
+
+type ShowProjectOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectOpenSourceStrategyInvoker) Invoke() (*model.ShowProjectOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectOpenSourceStrategyResponse), nil
+	}
+}
+
+type ShowProjectStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectStrategyInvoker) Invoke() (*model.ShowProjectStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectStrategyResponse), nil
+	}
+}
+
+type ShowPublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPublisherInvoker) Invoke() (*model.ShowPublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPublisherResponse), nil
+	}
+}
+
+type ShowRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRuleInvoker) Invoke() (*model.ShowRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRuleResponse), nil
+	}
+}
+
+type ShowStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStrategyInvoker) Invoke() (*model.ShowStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStrategyResponse), nil
 	}
 }
 
@@ -302,5 +806,137 @@ func (i *StopPipelineRunInvoker) Invoke() (*model.StopPipelineRunResponse, error
 		return nil, err
 	} else {
 		return result.(*model.StopPipelineRunResponse), nil
+	}
+}
+
+type SwitchOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchOpenSourceStrategyInvoker) Invoke() (*model.SwitchOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchOpenSourceStrategyResponse), nil
+	}
+}
+
+type SwitchStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchStrategyInvoker) Invoke() (*model.SwitchStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchStrategyResponse), nil
+	}
+}
+
+type UpdateBasicPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBasicPluginInvoker) Invoke() (*model.UpdateBasicPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBasicPluginResponse), nil
+	}
+}
+
+type UpdateOpenSourceStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOpenSourceStrategyInvoker) Invoke() (*model.UpdateOpenSourceStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOpenSourceStrategyResponse), nil
+	}
+}
+
+type UpdatePipelineGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipelineGroupInvoker) Invoke() (*model.UpdatePipelineGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePipelineGroupResponse), nil
+	}
+}
+
+type UpdatePipelineTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipelineTemplateInvoker) Invoke() (*model.UpdatePipelineTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePipelineTemplateResponse), nil
+	}
+}
+
+type UpdateRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRuleInvoker) Invoke() (*model.UpdateRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRuleResponse), nil
+	}
+}
+
+type UpdateStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStrategyInvoker) Invoke() (*model.UpdateStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStrategyResponse), nil
+	}
+}
+
+type UploadBasicPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadBasicPluginInvoker) Invoke() (*model.UploadBasicPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadBasicPluginResponse), nil
+	}
+}
+
+type UploadPluginIconInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadPluginIconInvoker) Invoke() (*model.UploadPluginIconResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadPluginIconResponse), nil
+	}
+}
+
+type UploadPublisherIconInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadPublisherIconInvoker) Invoke() (*model.UploadPublisherIconResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadPublisherIconResponse), nil
 	}
 }

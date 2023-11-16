@@ -37,6 +37,9 @@ type ResultsTopnBody struct {
 
 	// 不是委托转储，true，是委托转储，则前端资源统计展示的流不能跳
 	IsAgencyTransfer *bool `json:"is_agency_transfer,omitempty"`
+
+	// 冷存储量
+	ColdStorage *float64 `json:"cold_storage,omitempty"`
 }
 
 func (o ResultsTopnBody) String() string {

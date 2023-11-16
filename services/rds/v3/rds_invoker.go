@@ -1757,6 +1757,18 @@ func (i *ListPostgresqlExtensionInvoker) Invoke() (*model.ListPostgresqlExtensio
 	}
 }
 
+type RevokePostgresqlDbPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevokePostgresqlDbPrivilegeInvoker) Invoke() (*model.RevokePostgresqlDbPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevokePostgresqlDbPrivilegeResponse), nil
+	}
+}
+
 type SearchQueryScaleComputeFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }

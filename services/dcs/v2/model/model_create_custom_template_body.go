@@ -9,13 +9,13 @@ import (
 type CreateCustomTemplateBody struct {
 
 	// 来源系统模板ID
-	TemplateId *string `json:"template_id,omitempty"`
+	TemplateId string `json:"template_id"`
 
 	// 模板名称
 	Name string `json:"name"`
 
 	// 模板类型
-	Type *string `json:"type,omitempty"`
+	Type string `json:"type"`
 
 	// 缓存引擎：Redis[和Memcached](tag:hws,hws_hk,ocb,sbc,tm,ctc,cmcc)。
 	Engine *string `json:"engine,omitempty"`
@@ -30,7 +30,7 @@ type CreateCustomTemplateBody struct {
 	EngineVersion *string `json:"engine_version,omitempty"`
 
 	// 参数配置信息
-	Params map[string]string `json:"params,omitempty"`
+	Params map[string]string `json:"params"`
 }
 
 func (o CreateCustomTemplateBody) String() string {

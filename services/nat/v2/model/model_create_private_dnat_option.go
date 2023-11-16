@@ -12,7 +12,7 @@ import (
 // CreatePrivateDnatOption 创建DNAT规则的请求体。
 type CreatePrivateDnatOption struct {
 
-	// DNAT规则的描述。
+	// DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
 	Description *string `json:"description,omitempty"`
 
 	// 中转IP的ID。

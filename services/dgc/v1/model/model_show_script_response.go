@@ -32,8 +32,17 @@ type ShowScriptResponse struct {
 	QueueName *string `json:"queueName,omitempty"`
 
 	// 脚本的配置项参数
-	Configuration  *string `json:"configuration,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Configuration *string `json:"configuration,omitempty"`
+
+	// 脚本描述，长度不能超过255个字符
+	Description *string `json:"description,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段。表示创建脚本的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示脚本创建后是保存态，提交态，生产态。
+	TargetStatus *ShowScriptResponseTargetStatus `json:"targetStatus,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段，表示脚本审批人
+	Approvers      *[]JobApprover `json:"approvers,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowScriptResponse) String() string {
@@ -50,12 +59,19 @@ type ShowScriptResponseType struct {
 }
 
 type ShowScriptResponseTypeEnum struct {
-	FLINK_SQL ShowScriptResponseType
-	DLISQL    ShowScriptResponseType
-	SPARK_SQL ShowScriptResponseType
-	HIVE_SQL  ShowScriptResponseType
-	DWSSQL    ShowScriptResponseType
-	SHELL     ShowScriptResponseType
+	FLINK_SQL       ShowScriptResponseType
+	DLISQL          ShowScriptResponseType
+	SPARK_SQL       ShowScriptResponseType
+	HIVE_SQL        ShowScriptResponseType
+	DWSSQL          ShowScriptResponseType
+	RDSSQL          ShowScriptResponseType
+	SHELL           ShowScriptResponseType
+	PRESTO          ShowScriptResponseType
+	CLICK_HOUSE_SQL ShowScriptResponseType
+	HETU_ENGINE_SQL ShowScriptResponseType
+	PYTHON          ShowScriptResponseType
+	IMPALA_SQL      ShowScriptResponseType
+	SPARK_PYTHON    ShowScriptResponseType
 }
 
 func GetShowScriptResponseTypeEnum() ShowScriptResponseTypeEnum {
@@ -75,8 +91,29 @@ func GetShowScriptResponseTypeEnum() ShowScriptResponseTypeEnum {
 		DWSSQL: ShowScriptResponseType{
 			value: "DWSSQL",
 		},
+		RDSSQL: ShowScriptResponseType{
+			value: "RDSSQL",
+		},
 		SHELL: ShowScriptResponseType{
 			value: "Shell",
+		},
+		PRESTO: ShowScriptResponseType{
+			value: "PRESTO",
+		},
+		CLICK_HOUSE_SQL: ShowScriptResponseType{
+			value: "ClickHouseSQL",
+		},
+		HETU_ENGINE_SQL: ShowScriptResponseType{
+			value: "HetuEngineSQL",
+		},
+		PYTHON: ShowScriptResponseType{
+			value: "PYTHON",
+		},
+		IMPALA_SQL: ShowScriptResponseType{
+			value: "ImpalaSQL",
+		},
+		SPARK_PYTHON: ShowScriptResponseType{
+			value: "SparkPython",
 		},
 	}
 }
@@ -90,6 +127,57 @@ func (c ShowScriptResponseType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowScriptResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowScriptResponseTargetStatus struct {
+	value string
+}
+
+type ShowScriptResponseTargetStatusEnum struct {
+	SAVED      ShowScriptResponseTargetStatus
+	SUBMITTED  ShowScriptResponseTargetStatus
+	PRODUCTION ShowScriptResponseTargetStatus
+}
+
+func GetShowScriptResponseTargetStatusEnum() ShowScriptResponseTargetStatusEnum {
+	return ShowScriptResponseTargetStatusEnum{
+		SAVED: ShowScriptResponseTargetStatus{
+			value: "SAVED",
+		},
+		SUBMITTED: ShowScriptResponseTargetStatus{
+			value: "SUBMITTED",
+		},
+		PRODUCTION: ShowScriptResponseTargetStatus{
+			value: "PRODUCTION",
+		},
+	}
+}
+
+func (c ShowScriptResponseTargetStatus) Value() string {
+	return c.value
+}
+
+func (c ShowScriptResponseTargetStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowScriptResponseTargetStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

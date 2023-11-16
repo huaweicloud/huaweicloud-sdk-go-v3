@@ -187,6 +187,27 @@ func (c *EdgeSecClient) ApplyWafPolicyInvoker(request *model.ApplyWafPolicyReque
 	return &ApplyWafPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCertificate 创建证书
+//
+// 创建证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
+	requestDef := GenReqDefForCreateCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCertificateResponse), nil
+	}
+}
+
+// CreateCertificateInvoker 创建证书
+func (c *EdgeSecClient) CreateCertificateInvoker(request *model.CreateCertificateRequest) *CreateCertificateInvoker {
+	requestDef := GenReqDefForCreateCertificate()
+	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEdgeWafDomains 创建防护域名
 //
 // 创建防护域名
@@ -227,6 +248,27 @@ func (c *EdgeSecClient) CreatePolicy(request *model.CreatePolicyRequest) (*model
 func (c *EdgeSecClient) CreatePolicyInvoker(request *model.CreatePolicyRequest) *CreatePolicyInvoker {
 	requestDef := GenReqDefForCreatePolicy()
 	return &CreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCertificate 删除证书
+//
+// 删除证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) DeleteCertificate(request *model.DeleteCertificateRequest) (*model.DeleteCertificateResponse, error) {
+	requestDef := GenReqDefForDeleteCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCertificateResponse), nil
+	}
+}
+
+// DeleteCertificateInvoker 删除证书
+func (c *EdgeSecClient) DeleteCertificateInvoker(request *model.DeleteCertificateRequest) *DeleteCertificateInvoker {
+	requestDef := GenReqDefForDeleteCertificate()
+	return &DeleteCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteEdgeWafDomains 删除防护域名
@@ -292,6 +334,27 @@ func (c *EdgeSecClient) ListCdnDomainsInvoker(request *model.ListCdnDomainsReque
 	return &ListCdnDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCertificates 查询证书列表
+//
+// 查询证书列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) ListCertificates(request *model.ListCertificatesRequest) (*model.ListCertificatesResponse, error) {
+	requestDef := GenReqDefForListCertificates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCertificatesResponse), nil
+	}
+}
+
+// ListCertificatesInvoker 查询证书列表
+func (c *EdgeSecClient) ListCertificatesInvoker(request *model.ListCertificatesRequest) *ListCertificatesInvoker {
+	requestDef := GenReqDefForListCertificates()
+	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListEdgeWafDomains 查询WAF防护域名列表
 //
 // 查询WAF防护域名列表
@@ -334,6 +397,27 @@ func (c *EdgeSecClient) ListPolicyInvoker(request *model.ListPolicyRequest) *Lis
 	return &ListPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCertificate 查询证书
+//
+// 查询证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
+	requestDef := GenReqDefForShowCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCertificateResponse), nil
+	}
+}
+
+// ShowCertificateInvoker 查询证书
+func (c *EdgeSecClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
+	requestDef := GenReqDefForShowCertificate()
+	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEdgeWafDomains 查询防护域名
 //
 // 查询防护域名
@@ -353,6 +437,27 @@ func (c *EdgeSecClient) ShowEdgeWafDomains(request *model.ShowEdgeWafDomainsRequ
 func (c *EdgeSecClient) ShowEdgeWafDomainsInvoker(request *model.ShowEdgeWafDomainsRequest) *ShowEdgeWafDomainsInvoker {
 	requestDef := GenReqDefForShowEdgeWafDomains()
 	return &ShowEdgeWafDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCertificate 修改证书
+//
+// 修改证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) UpdateCertificate(request *model.UpdateCertificateRequest) (*model.UpdateCertificateResponse, error) {
+	requestDef := GenReqDefForUpdateCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCertificateResponse), nil
+	}
+}
+
+// UpdateCertificateInvoker 修改证书
+func (c *EdgeSecClient) UpdateCertificateInvoker(request *model.UpdateCertificateRequest) *UpdateCertificateInvoker {
+	requestDef := GenReqDefForUpdateCertificate()
+	return &UpdateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateEdgeWafDomains 更新防护域名

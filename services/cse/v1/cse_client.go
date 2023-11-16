@@ -40,6 +40,48 @@ func (c *CseClient) CreateEngineInvoker(request *model.CreateEngineRequest) *Cre
 	return &CreateEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGovernancePolicy 创建治理策略
+//
+// 创建治理策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) CreateGovernancePolicy(request *model.CreateGovernancePolicyRequest) (*model.CreateGovernancePolicyResponse, error) {
+	requestDef := GenReqDefForCreateGovernancePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGovernancePolicyResponse), nil
+	}
+}
+
+// CreateGovernancePolicyInvoker 创建治理策略
+func (c *CseClient) CreateGovernancePolicyInvoker(request *model.CreateGovernancePolicyRequest) *CreateGovernancePolicyInvoker {
+	requestDef := GenReqDefForCreateGovernancePolicy()
+	return &CreateGovernancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMicroserviceRouteRule 创建灰度发布策略
+//
+// 创建灰度发布策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) CreateMicroserviceRouteRule(request *model.CreateMicroserviceRouteRuleRequest) (*model.CreateMicroserviceRouteRuleResponse, error) {
+	requestDef := GenReqDefForCreateMicroserviceRouteRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMicroserviceRouteRuleResponse), nil
+	}
+}
+
+// CreateMicroserviceRouteRuleInvoker 创建灰度发布策略
+func (c *CseClient) CreateMicroserviceRouteRuleInvoker(request *model.CreateMicroserviceRouteRuleRequest) *CreateMicroserviceRouteRuleInvoker {
+	requestDef := GenReqDefForCreateMicroserviceRouteRule()
+	return &CreateMicroserviceRouteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteEngine 删除微服务引擎专享版
 //
 // 删除微服务引擎专享版。
@@ -59,6 +101,48 @@ func (c *CseClient) DeleteEngine(request *model.DeleteEngineRequest) (*model.Del
 func (c *CseClient) DeleteEngineInvoker(request *model.DeleteEngineRequest) *DeleteEngineInvoker {
 	requestDef := GenReqDefForDeleteEngine()
 	return &DeleteEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGovernancePolicy 删除治理策略
+//
+// 删除治理策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) DeleteGovernancePolicy(request *model.DeleteGovernancePolicyRequest) (*model.DeleteGovernancePolicyResponse, error) {
+	requestDef := GenReqDefForDeleteGovernancePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGovernancePolicyResponse), nil
+	}
+}
+
+// DeleteGovernancePolicyInvoker 删除治理策略
+func (c *CseClient) DeleteGovernancePolicyInvoker(request *model.DeleteGovernancePolicyRequest) *DeleteGovernancePolicyInvoker {
+	requestDef := GenReqDefForDeleteGovernancePolicy()
+	return &DeleteGovernancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMicroserviceRouteRule 删除灰度发布策略
+//
+// 删除灰度发布策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) DeleteMicroserviceRouteRule(request *model.DeleteMicroserviceRouteRuleRequest) (*model.DeleteMicroserviceRouteRuleResponse, error) {
+	requestDef := GenReqDefForDeleteMicroserviceRouteRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMicroserviceRouteRuleResponse), nil
+	}
+}
+
+// DeleteMicroserviceRouteRuleInvoker 删除灰度发布策略
+func (c *CseClient) DeleteMicroserviceRouteRuleInvoker(request *model.DeleteMicroserviceRouteRuleRequest) *DeleteMicroserviceRouteRuleInvoker {
+	requestDef := GenReqDefForDeleteMicroserviceRouteRule()
+	return &DeleteMicroserviceRouteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadKie 导出kie配置
@@ -124,6 +208,111 @@ func (c *CseClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListF
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGovernancePolicy 查询指定类型治理策略列表
+//
+// 查询指定类型治理策略列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ListGovernancePolicy(request *model.ListGovernancePolicyRequest) (*model.ListGovernancePolicyResponse, error) {
+	requestDef := GenReqDefForListGovernancePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGovernancePolicyResponse), nil
+	}
+}
+
+// ListGovernancePolicyInvoker 查询指定类型治理策略列表
+func (c *CseClient) ListGovernancePolicyInvoker(request *model.ListGovernancePolicyRequest) *ListGovernancePolicyInvoker {
+	requestDef := GenReqDefForListGovernancePolicy()
+	return &ListGovernancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGovernancePolicyByPolicyId 查询治理策略详情
+//
+// 查询治理策略详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ListGovernancePolicyByPolicyId(request *model.ListGovernancePolicyByPolicyIdRequest) (*model.ListGovernancePolicyByPolicyIdResponse, error) {
+	requestDef := GenReqDefForListGovernancePolicyByPolicyId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGovernancePolicyByPolicyIdResponse), nil
+	}
+}
+
+// ListGovernancePolicyByPolicyIdInvoker 查询治理策略详情
+func (c *CseClient) ListGovernancePolicyByPolicyIdInvoker(request *model.ListGovernancePolicyByPolicyIdRequest) *ListGovernancePolicyByPolicyIdInvoker {
+	requestDef := GenReqDefForListGovernancePolicyByPolicyId()
+	return &ListGovernancePolicyByPolicyIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGovernancePolicys 查询治理策略列表
+//
+// 查询治理策略列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ListGovernancePolicys(request *model.ListGovernancePolicysRequest) (*model.ListGovernancePolicysResponse, error) {
+	requestDef := GenReqDefForListGovernancePolicys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGovernancePolicysResponse), nil
+	}
+}
+
+// ListGovernancePolicysInvoker 查询治理策略列表
+func (c *CseClient) ListGovernancePolicysInvoker(request *model.ListGovernancePolicysRequest) *ListGovernancePolicysInvoker {
+	requestDef := GenReqDefForListGovernancePolicys()
+	return &ListGovernancePolicysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMicroserviceRouteRule 查询微服务的灰度发布规则
+//
+// 查询微服务的灰度发布规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ListMicroserviceRouteRule(request *model.ListMicroserviceRouteRuleRequest) (*model.ListMicroserviceRouteRuleResponse, error) {
+	requestDef := GenReqDefForListMicroserviceRouteRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMicroserviceRouteRuleResponse), nil
+	}
+}
+
+// ListMicroserviceRouteRuleInvoker 查询微服务的灰度发布规则
+func (c *CseClient) ListMicroserviceRouteRuleInvoker(request *model.ListMicroserviceRouteRuleRequest) *ListMicroserviceRouteRuleInvoker {
+	requestDef := GenReqDefForListMicroserviceRouteRule()
+	return &ListMicroserviceRouteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeEngine 变更微服务引擎规格
+//
+// 变更微服务引擎规格。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ResizeEngine(request *model.ResizeEngineRequest) (*model.ResizeEngineResponse, error) {
+	requestDef := GenReqDefForResizeEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeEngineResponse), nil
+	}
+}
+
+// ResizeEngineInvoker 变更微服务引擎规格
+func (c *CseClient) ResizeEngineInvoker(request *model.ResizeEngineRequest) *ResizeEngineInvoker {
+	requestDef := GenReqDefForResizeEngine()
+	return &ResizeEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RetryEngine 对微服务引擎专享版进行重试
 //
 // 对微服务引擎专享版进行重试
@@ -187,6 +376,27 @@ func (c *CseClient) ShowEngineJobInvoker(request *model.ShowEngineJobRequest) *S
 	return &ShowEngineJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateGovernancePolicy 修改治理策略
+//
+// 修改治理策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) UpdateGovernancePolicy(request *model.UpdateGovernancePolicyRequest) (*model.UpdateGovernancePolicyResponse, error) {
+	requestDef := GenReqDefForUpdateGovernancePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGovernancePolicyResponse), nil
+	}
+}
+
+// UpdateGovernancePolicyInvoker 修改治理策略
+func (c *CseClient) UpdateGovernancePolicyInvoker(request *model.UpdateGovernancePolicyRequest) *UpdateGovernancePolicyInvoker {
+	requestDef := GenReqDefForUpdateGovernancePolicy()
+	return &UpdateGovernancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpgradeEngine 升级微服务引擎专享版
 //
 // 升级微服务引擎专享版
@@ -208,6 +418,27 @@ func (c *CseClient) UpgradeEngineInvoker(request *model.UpgradeEngineRequest) *U
 	return &UpgradeEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpgradeEngineConfig 更新微服务引擎专享版配置
+//
+// 更新微服务引擎专享版配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) UpgradeEngineConfig(request *model.UpgradeEngineConfigRequest) (*model.UpgradeEngineConfigResponse, error) {
+	requestDef := GenReqDefForUpgradeEngineConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeEngineConfigResponse), nil
+	}
+}
+
+// UpgradeEngineConfigInvoker 更新微服务引擎专享版配置
+func (c *CseClient) UpgradeEngineConfigInvoker(request *model.UpgradeEngineConfigRequest) *UpgradeEngineConfigInvoker {
+	requestDef := GenReqDefForUpgradeEngineConfig()
+	return &UpgradeEngineConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UploadKie 导入kie配置
 //
 // 导入kie配置
@@ -227,4 +458,88 @@ func (c *CseClient) UploadKie(request *model.UploadKieRequest) (*model.UploadKie
 func (c *CseClient) UploadKieInvoker(request *model.UploadKieRequest) *UploadKieInvoker {
 	requestDef := GenReqDefForUploadKie()
 	return &UploadKieInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNacosNamespaces 创建nacos命名空间
+//
+// 创建nacos命名空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) CreateNacosNamespaces(request *model.CreateNacosNamespacesRequest) (*model.CreateNacosNamespacesResponse, error) {
+	requestDef := GenReqDefForCreateNacosNamespaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNacosNamespacesResponse), nil
+	}
+}
+
+// CreateNacosNamespacesInvoker 创建nacos命名空间
+func (c *CseClient) CreateNacosNamespacesInvoker(request *model.CreateNacosNamespacesRequest) *CreateNacosNamespacesInvoker {
+	requestDef := GenReqDefForCreateNacosNamespaces()
+	return &CreateNacosNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNacosNamespaces 删除nacos命名空间
+//
+// 删除nacos命名空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) DeleteNacosNamespaces(request *model.DeleteNacosNamespacesRequest) (*model.DeleteNacosNamespacesResponse, error) {
+	requestDef := GenReqDefForDeleteNacosNamespaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNacosNamespacesResponse), nil
+	}
+}
+
+// DeleteNacosNamespacesInvoker 删除nacos命名空间
+func (c *CseClient) DeleteNacosNamespacesInvoker(request *model.DeleteNacosNamespacesRequest) *DeleteNacosNamespacesInvoker {
+	requestDef := GenReqDefForDeleteNacosNamespaces()
+	return &DeleteNacosNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNacosNamespaces 查询nacos命名空间
+//
+// 查询nacos命名空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ListNacosNamespaces(request *model.ListNacosNamespacesRequest) (*model.ListNacosNamespacesResponse, error) {
+	requestDef := GenReqDefForListNacosNamespaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNacosNamespacesResponse), nil
+	}
+}
+
+// ListNacosNamespacesInvoker 查询nacos命名空间
+func (c *CseClient) ListNacosNamespacesInvoker(request *model.ListNacosNamespacesRequest) *ListNacosNamespacesInvoker {
+	requestDef := GenReqDefForListNacosNamespaces()
+	return &ListNacosNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNacosNamespaces 更新nacos命名空间
+//
+// 更新nacos命名空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) UpdateNacosNamespaces(request *model.UpdateNacosNamespacesRequest) (*model.UpdateNacosNamespacesResponse, error) {
+	requestDef := GenReqDefForUpdateNacosNamespaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNacosNamespacesResponse), nil
+	}
+}
+
+// UpdateNacosNamespacesInvoker 更新nacos命名空间
+func (c *CseClient) UpdateNacosNamespacesInvoker(request *model.UpdateNacosNamespacesRequest) *UpdateNacosNamespacesInvoker {
+	requestDef := GenReqDefForUpdateNacosNamespaces()
+	return &UpdateNacosNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -313,7 +313,7 @@ func (c *LtsClient) CreateTransferInvoker(request *model.CreateTransferRequest) 
 	return &CreateTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// Createfavorite 查询Demo
+// Createfavorite 创建日志收藏
 //
 // 创建日志收藏
 //
@@ -328,7 +328,7 @@ func (c *LtsClient) Createfavorite(request *model.CreatefavoriteRequest) (*model
 	}
 }
 
-// CreatefavoriteInvoker 查询Demo
+// CreatefavoriteInvoker 创建日志收藏
 func (c *LtsClient) CreatefavoriteInvoker(request *model.CreatefavoriteRequest) *CreatefavoriteInvoker {
 	requestDef := GenReqDefForCreatefavorite()
 	return &CreatefavoriteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

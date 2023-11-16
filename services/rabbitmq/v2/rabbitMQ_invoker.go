@@ -257,18 +257,6 @@ func (i *ShowMaintainWindowsInvoker) Invoke() (*model.ShowMaintainWindowsRespons
 	}
 }
 
-type ShowRabbitMqProductCoresInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRabbitMqProductCoresInvoker) Invoke() (*model.ShowRabbitMqProductCoresResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRabbitMqProductCoresResponse), nil
-	}
-}
-
 type ShowRabbitMqProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }

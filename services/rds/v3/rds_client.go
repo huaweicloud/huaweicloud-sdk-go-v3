@@ -3095,6 +3095,27 @@ func (c *RdsClient) ListPostgresqlExtensionInvoker(request *model.ListPostgresql
 	return &ListPostgresqlExtensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RevokePostgresqlDbPrivilege 解除数据库帐号权限
+//
+// 解除数据库帐号权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) RevokePostgresqlDbPrivilege(request *model.RevokePostgresqlDbPrivilegeRequest) (*model.RevokePostgresqlDbPrivilegeResponse, error) {
+	requestDef := GenReqDefForRevokePostgresqlDbPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevokePostgresqlDbPrivilegeResponse), nil
+	}
+}
+
+// RevokePostgresqlDbPrivilegeInvoker 解除数据库帐号权限
+func (c *RdsClient) RevokePostgresqlDbPrivilegeInvoker(request *model.RevokePostgresqlDbPrivilegeRequest) *RevokePostgresqlDbPrivilegeInvoker {
+	requestDef := GenReqDefForRevokePostgresqlDbPrivilege()
+	return &RevokePostgresqlDbPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchQueryScaleComputeFlavors 查询数据库代理可变更的规格
 //
 // 查询数据库代理可变更的规格信息。

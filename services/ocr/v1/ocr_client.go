@@ -677,6 +677,27 @@ func (c *OcrClient) RecognizePcrTestRecordInvoker(request *model.RecognizePcrTes
 	return &RecognizePcrTestRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizePeruIdCard 秘鲁身份证识别
+//
+// 识别秘鲁身份证图片中的文字内容，并将识别的结构化结果返回给用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizePeruIdCard(request *model.RecognizePeruIdCardRequest) (*model.RecognizePeruIdCardResponse, error) {
+	requestDef := GenReqDefForRecognizePeruIdCard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizePeruIdCardResponse), nil
+	}
+}
+
+// RecognizePeruIdCardInvoker 秘鲁身份证识别
+func (c *OcrClient) RecognizePeruIdCardInvoker(request *model.RecognizePeruIdCardRequest) *RecognizePeruIdCardInvoker {
+	requestDef := GenReqDefForRecognizePeruIdCard()
+	return &RecognizePeruIdCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeQualificationCertificate 道路运输从业资格证识别
 //
 // 识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html#section25)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。

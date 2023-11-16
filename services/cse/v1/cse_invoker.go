@@ -17,6 +17,30 @@ func (i *CreateEngineInvoker) Invoke() (*model.CreateEngineResponse, error) {
 	}
 }
 
+type CreateGovernancePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGovernancePolicyInvoker) Invoke() (*model.CreateGovernancePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGovernancePolicyResponse), nil
+	}
+}
+
+type CreateMicroserviceRouteRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMicroserviceRouteRuleInvoker) Invoke() (*model.CreateMicroserviceRouteRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMicroserviceRouteRuleResponse), nil
+	}
+}
+
 type DeleteEngineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -26,6 +50,30 @@ func (i *DeleteEngineInvoker) Invoke() (*model.DeleteEngineResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteEngineResponse), nil
+	}
+}
+
+type DeleteGovernancePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGovernancePolicyInvoker) Invoke() (*model.DeleteGovernancePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGovernancePolicyResponse), nil
+	}
+}
+
+type DeleteMicroserviceRouteRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMicroserviceRouteRuleInvoker) Invoke() (*model.DeleteMicroserviceRouteRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMicroserviceRouteRuleResponse), nil
 	}
 }
 
@@ -65,6 +113,66 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	}
 }
 
+type ListGovernancePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGovernancePolicyInvoker) Invoke() (*model.ListGovernancePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGovernancePolicyResponse), nil
+	}
+}
+
+type ListGovernancePolicyByPolicyIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGovernancePolicyByPolicyIdInvoker) Invoke() (*model.ListGovernancePolicyByPolicyIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGovernancePolicyByPolicyIdResponse), nil
+	}
+}
+
+type ListGovernancePolicysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGovernancePolicysInvoker) Invoke() (*model.ListGovernancePolicysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGovernancePolicysResponse), nil
+	}
+}
+
+type ListMicroserviceRouteRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMicroserviceRouteRuleInvoker) Invoke() (*model.ListMicroserviceRouteRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMicroserviceRouteRuleResponse), nil
+	}
+}
+
+type ResizeEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeEngineInvoker) Invoke() (*model.ResizeEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeEngineResponse), nil
+	}
+}
+
 type RetryEngineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -101,6 +209,18 @@ func (i *ShowEngineJobInvoker) Invoke() (*model.ShowEngineJobResponse, error) {
 	}
 }
 
+type UpdateGovernancePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGovernancePolicyInvoker) Invoke() (*model.UpdateGovernancePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGovernancePolicyResponse), nil
+	}
+}
+
 type UpgradeEngineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -113,6 +233,18 @@ func (i *UpgradeEngineInvoker) Invoke() (*model.UpgradeEngineResponse, error) {
 	}
 }
 
+type UpgradeEngineConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeEngineConfigInvoker) Invoke() (*model.UpgradeEngineConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeEngineConfigResponse), nil
+	}
+}
+
 type UploadKieInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,5 +254,53 @@ func (i *UploadKieInvoker) Invoke() (*model.UploadKieResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UploadKieResponse), nil
+	}
+}
+
+type CreateNacosNamespacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNacosNamespacesInvoker) Invoke() (*model.CreateNacosNamespacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNacosNamespacesResponse), nil
+	}
+}
+
+type DeleteNacosNamespacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNacosNamespacesInvoker) Invoke() (*model.DeleteNacosNamespacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNacosNamespacesResponse), nil
+	}
+}
+
+type ListNacosNamespacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNacosNamespacesInvoker) Invoke() (*model.ListNacosNamespacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNacosNamespacesResponse), nil
+	}
+}
+
+type UpdateNacosNamespacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNacosNamespacesInvoker) Invoke() (*model.UpdateNacosNamespacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNacosNamespacesResponse), nil
 	}
 }

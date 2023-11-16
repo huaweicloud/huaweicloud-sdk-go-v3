@@ -149,6 +149,18 @@ func (i *UpdateClusterNameInvoker) Invoke() (*model.UpdateClusterNameResponse, e
 	}
 }
 
+type AddComponentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddComponentInvoker) Invoke() (*model.AddComponentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddComponentResponse), nil
+	}
+}
+
 type ExpandClusterInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -24,7 +24,7 @@ type ListPrivateDnatsRequest struct {
 	// 企业项目ID。创建DNAT规则时，关联的企业项目ID。
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
-	// DNAT规则的描述。
+	// DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
 	Description *[]string `json:"description,omitempty"`
 
 	// 私网NAT网关实例的ID。

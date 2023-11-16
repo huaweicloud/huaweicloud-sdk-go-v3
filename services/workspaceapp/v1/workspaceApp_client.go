@@ -294,7 +294,7 @@ func (c *WorkspaceAppClient) AddAppGroupAuthorizationInvoker(request *model.AddA
 	return &AddAppGroupAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteAppGroupAuthorization 移除授权
+// BatchDeleteAppGroupAuthorization 移除应用组授权
 //
 // 移除应用组内的指定用户的授权，用户授权删除后，用户将没有权限访问应用组内的任何应用。注意：重复执行会按照操作成功处理。
 //
@@ -309,13 +309,13 @@ func (c *WorkspaceAppClient) BatchDeleteAppGroupAuthorization(request *model.Bat
 	}
 }
 
-// BatchDeleteAppGroupAuthorizationInvoker 移除授权
+// BatchDeleteAppGroupAuthorizationInvoker 移除应用组授权
 func (c *WorkspaceAppClient) BatchDeleteAppGroupAuthorizationInvoker(request *model.BatchDeleteAppGroupAuthorizationRequest) *BatchDeleteAppGroupAuthorizationInvoker {
 	requestDef := GenReqDefForBatchDeleteAppGroupAuthorization()
 	return &BatchDeleteAppGroupAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAppGroupAuthorization 查询授权记录
+// ListAppGroupAuthorization 查询应用组授权记录
 //
 // 查询应用内已授权的用户列表。
 //
@@ -330,7 +330,7 @@ func (c *WorkspaceAppClient) ListAppGroupAuthorization(request *model.ListAppGro
 	}
 }
 
-// ListAppGroupAuthorizationInvoker 查询授权记录
+// ListAppGroupAuthorizationInvoker 查询应用组授权记录
 func (c *WorkspaceAppClient) ListAppGroupAuthorizationInvoker(request *model.ListAppGroupAuthorizationRequest) *ListAppGroupAuthorizationInvoker {
 	requestDef := GenReqDefForListAppGroupAuthorization()
 	return &ListAppGroupAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -614,7 +614,7 @@ func (c *WorkspaceAppClient) UpdateShareFolderAssignmentInvoker(request *model.U
 
 // UpdateUserFolderAssignment 创建个人存储目录
 //
-// 创建个人存储目录
+// 创建个人存储目录,已存在对应目录时,仅更新策略不会重复创建目录
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateUserFolderAssignment(request *model.UpdateUserFolderAssignmentRequest) (*model.UpdateUserFolderAssignmentResponse, error) {

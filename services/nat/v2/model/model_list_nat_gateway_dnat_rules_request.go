@@ -36,7 +36,7 @@ type ListNatGatewayDnatRulesRequest struct {
 	// DNAT规则的ID。
 	Id *string `json:"id,omitempty"`
 
-	// DNAT规则的描述，长度限制为255。
+	// DNAT规则的描述，长度范围小于等于255个字符，不能包含<>
 	Description *string `json:"description,omitempty"`
 
 	// DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。

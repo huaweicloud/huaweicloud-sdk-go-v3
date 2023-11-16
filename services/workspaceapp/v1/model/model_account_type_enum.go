@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AccountTypeEnum 用户类型 * 'USER' - 用户 * 'USER_GROUP' - 用户组
+// AccountTypeEnum 用户类型 * `USER` - 用户 * `USER_GROUP` - 用户组
 type AccountTypeEnum struct {
 	value string
 }

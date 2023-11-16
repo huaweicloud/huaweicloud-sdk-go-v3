@@ -18,8 +18,11 @@ type ListAppGroupAuthorizationRequest struct {
 	// 应用组ID
 	AppGroupId *string `json:"app_group_id,omitempty"`
 
-	// 应用授权的用户(组)，精确查询。
+	// 应用授权的用户(组)名称，精确查询。
 	Account *string `json:"account,omitempty"`
+
+	// 应用授权的用户(组)类型 * 'USER' - 用户 * 'USER_GROUP' - 用户组
+	AccountType *string `json:"account_type,omitempty"`
 }
 
 func (o ListAppGroupAuthorizationRequest) String() string {

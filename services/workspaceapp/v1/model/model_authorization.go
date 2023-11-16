@@ -10,7 +10,13 @@ import (
 // Authorization 用户授权信息
 type Authorization struct {
 
-	// 用户(组)
+	// 授权ID
+	Id *string `json:"id,omitempty"`
+
+	// 用户ID(或用户组ID)
+	AccountId *string `json:"account_id,omitempty"`
+
+	// 用户名(或用户组名)
 	Account *string `json:"account,omitempty"`
 
 	// 应用ID (按照组授权时,该字段为空)
@@ -28,6 +34,8 @@ type Authorization struct {
 	AuthorizationType *AuthorizationTypeEnum `json:"authorization_type,omitempty"`
 
 	AccountType *AccountTypeEnum `json:"account_type,omitempty"`
+
+	PlatformType *PlatformTypeEnum `json:"platform_type,omitempty"`
 
 	// 域名城
 	Domain *string `json:"domain,omitempty"`

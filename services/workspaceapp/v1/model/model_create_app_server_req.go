@@ -45,6 +45,8 @@ type CreateAppServerReq struct {
 
 	// 是否自动升级hda版本
 	UpdateAccessAgent *bool `json:"update_access_agent,omitempty"`
+
+	CreateServerExtendParam *CreateServerExtendParam `json:"create_server_extend_param,omitempty"`
 }
 
 func (o CreateAppServerReq) String() string {

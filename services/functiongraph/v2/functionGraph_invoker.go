@@ -293,6 +293,18 @@ func (i *DeleteVpcEndpointInvoker) Invoke() (*model.DeleteVpcEndpointResponse, e
 	}
 }
 
+type EnableAsyncStatusLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableAsyncStatusLogInvoker) Invoke() (*model.EnableAsyncStatusLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableAsyncStatusLogResponse), nil
+	}
+}
+
 type EnableLtsLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +374,30 @@ func (i *ListAsyncInvocationsInvoker) Invoke() (*model.ListAsyncInvocationsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListAsyncInvocationsResponse), nil
+	}
+}
+
+type ListBridgeFunctionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBridgeFunctionsInvoker) Invoke() (*model.ListBridgeFunctionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBridgeFunctionsResponse), nil
+	}
+}
+
+type ListBridgeVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBridgeVersionsInvoker) Invoke() (*model.ListBridgeVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBridgeVersionsResponse), nil
 	}
 }
 
@@ -446,6 +482,30 @@ func (i *ListFunctionStatisticsInvoker) Invoke() (*model.ListFunctionStatisticsR
 		return nil, err
 	} else {
 		return result.(*model.ListFunctionStatisticsResponse), nil
+	}
+}
+
+type ListFunctionTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionTagsInvoker) Invoke() (*model.ListFunctionTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionTagsResponse), nil
+	}
+}
+
+type ListFunctionTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionTemplateInvoker) Invoke() (*model.ListFunctionTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionTemplateResponse), nil
 	}
 }
 
@@ -605,6 +665,18 @@ func (i *ShowEventInvoker) Invoke() (*model.ShowEventResponse, error) {
 	}
 }
 
+type ShowFuncReservedInstanceMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFuncReservedInstanceMetricsInvoker) Invoke() (*model.ShowFuncReservedInstanceMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFuncReservedInstanceMetricsResponse), nil
+	}
+}
+
 type ShowFuncSnapshotStateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -653,6 +725,30 @@ func (i *ShowFunctionConfigInvoker) Invoke() (*model.ShowFunctionConfigResponse,
 	}
 }
 
+type ShowFunctionMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFunctionMetricsInvoker) Invoke() (*model.ShowFunctionMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFunctionMetricsResponse), nil
+	}
+}
+
+type ShowFunctionTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFunctionTemplateInvoker) Invoke() (*model.ShowFunctionTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFunctionTemplateResponse), nil
+	}
+}
+
 type ShowFunctionTriggerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +770,18 @@ func (i *ShowLtsLogDetailsInvoker) Invoke() (*model.ShowLtsLogDetailsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowLtsLogDetailsResponse), nil
+	}
+}
+
+type ShowProjectAsyncStatusLogInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectAsyncStatusLogInfoInvoker) Invoke() (*model.ShowProjectAsyncStatusLogInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectAsyncStatusLogInfoResponse), nil
 	}
 }
 
@@ -878,6 +986,18 @@ func (i *UpdateFunctionCodeInvoker) Invoke() (*model.UpdateFunctionCodeResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateFunctionCodeResponse), nil
+	}
+}
+
+type UpdateFunctionCollectStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFunctionCollectStateInvoker) Invoke() (*model.UpdateFunctionCollectStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFunctionCollectStateResponse), nil
 	}
 }
 

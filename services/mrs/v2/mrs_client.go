@@ -285,6 +285,27 @@ func (c *MrsClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameReq
 	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddComponent 集群添加组件
+//
+// 集群添加组件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) AddComponent(request *model.AddComponentRequest) (*model.AddComponentResponse, error) {
+	requestDef := GenReqDefForAddComponent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddComponentResponse), nil
+	}
+}
+
+// AddComponentInvoker 集群添加组件
+func (c *MrsClient) AddComponentInvoker(request *model.AddComponentRequest) *AddComponentInvoker {
+	requestDef := GenReqDefForAddComponent()
+	return &AddComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandCluster 扩容集群
 //
 // 对MRS集群进行扩容。

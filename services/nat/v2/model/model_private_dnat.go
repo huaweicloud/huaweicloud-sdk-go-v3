@@ -17,7 +17,7 @@ type PrivateDnat struct {
 	// 项目的ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// DNAT规则的描述。
+	// DNAT规则的描述。长度范围小于等于255个字符，不能包含<>
 	Description *string `json:"description,omitempty"`
 
 	// 中转IP的ID。

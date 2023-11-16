@@ -21,6 +21,9 @@ type TemplateParameterDefinition struct {
 	// 预定义合规包模板参数默认值。
 	DefaultValue *interface{} `json:"default_value,omitempty"`
 
+	// 预定义合规包模板参数允许值列表
+	AllowedValues *[]interface{} `json:"allowed_values,omitempty"`
+
 	// 预定义合规包模板参数类型。
 	Type *TemplateParameterDefinitionType `json:"type,omitempty"`
 }

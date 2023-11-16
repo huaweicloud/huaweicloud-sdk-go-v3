@@ -12,7 +12,7 @@ type SysTag struct {
 	Key *string `json:"key,omitempty"`
 
 	// 标签值。
-	Values *string `json:"values,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o SysTag) String() string {

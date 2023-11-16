@@ -8,8 +8,11 @@ import (
 
 type ListFlowBySimCardsReq struct {
 
-	// ICCID列表,最大支持50
-	Iccids []string `json:"iccids"`
+	// iccid列表（三网卡不支持），最大支持50，且iccid和sim_card_id列表二选一
+	Iccids *[]string `json:"iccids,omitempty"`
+
+	// sim_card_id列表，最大支持50，且iccid和sim_card_id列表二选一
+	SimCardIds *[]int64 `json:"sim_card_ids,omitempty"`
 }
 
 func (o ListFlowBySimCardsReq) String() string {

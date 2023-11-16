@@ -9,7 +9,7 @@ import (
 // DeleteUserStorageAttachmentReq 删除个人存储及关联
 type DeleteUserStorageAttachmentReq struct {
 
-	// 批量唯一标识请求列表，一次请求数量区间 [1, 200]
+	// 用户名，请求数量区间 [1, 200]
 	Items *[]string `json:"items,omitempty"`
 }
 

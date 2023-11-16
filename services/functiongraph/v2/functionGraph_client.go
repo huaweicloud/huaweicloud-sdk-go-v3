@@ -534,6 +534,27 @@ func (c *FunctionGraphClient) DeleteVpcEndpointInvoker(request *model.DeleteVpcE
 	return &DeleteVpcEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// EnableAsyncStatusLog 允许异步状态通知
+//
+// 允许异步状态通知。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) EnableAsyncStatusLog(request *model.EnableAsyncStatusLogRequest) (*model.EnableAsyncStatusLogResponse, error) {
+	requestDef := GenReqDefForEnableAsyncStatusLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableAsyncStatusLogResponse), nil
+	}
+}
+
+// EnableAsyncStatusLogInvoker 允许异步状态通知
+func (c *FunctionGraphClient) EnableAsyncStatusLogInvoker(request *model.EnableAsyncStatusLogRequest) *EnableAsyncStatusLogInvoker {
+	requestDef := GenReqDefForEnableAsyncStatusLog()
+	return &EnableAsyncStatusLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // EnableLtsLogs 开通lts日志上报功能
 //
 // 开通lts日志上报功能。
@@ -658,6 +679,48 @@ func (c *FunctionGraphClient) ListAsyncInvocations(request *model.ListAsyncInvoc
 func (c *FunctionGraphClient) ListAsyncInvocationsInvoker(request *model.ListAsyncInvocationsRequest) *ListAsyncInvocationsInvoker {
 	requestDef := GenReqDefForListAsyncInvocations()
 	return &ListAsyncInvocationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBridgeFunctions 获取指定函数绑定的servicebridge函数列表
+//
+// 获取指定函数绑定的servicebridge函数列表信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListBridgeFunctions(request *model.ListBridgeFunctionsRequest) (*model.ListBridgeFunctionsResponse, error) {
+	requestDef := GenReqDefForListBridgeFunctions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBridgeFunctionsResponse), nil
+	}
+}
+
+// ListBridgeFunctionsInvoker 获取指定函数绑定的servicebridge函数列表
+func (c *FunctionGraphClient) ListBridgeFunctionsInvoker(request *model.ListBridgeFunctionsRequest) *ListBridgeFunctionsInvoker {
+	requestDef := GenReqDefForListBridgeFunctions()
+	return &ListBridgeFunctionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBridgeVersions 获取servicebridge可用的版本
+//
+// 获取servicebridge可用的版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListBridgeVersions(request *model.ListBridgeVersionsRequest) (*model.ListBridgeVersionsResponse, error) {
+	requestDef := GenReqDefForListBridgeVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBridgeVersionsResponse), nil
+	}
+}
+
+// ListBridgeVersionsInvoker 获取servicebridge可用的版本
+func (c *FunctionGraphClient) ListBridgeVersionsInvoker(request *model.ListBridgeVersionsRequest) *ListBridgeVersionsInvoker {
+	requestDef := GenReqDefForListBridgeVersions()
+	return &ListBridgeVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDependencies 获取依赖包列表
@@ -807,6 +870,48 @@ func (c *FunctionGraphClient) ListFunctionStatistics(request *model.ListFunction
 func (c *FunctionGraphClient) ListFunctionStatisticsInvoker(request *model.ListFunctionStatisticsRequest) *ListFunctionStatisticsInvoker {
 	requestDef := GenReqDefForListFunctionStatistics()
 	return &ListFunctionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFunctionTags 查询函数标签列表
+//
+// 查询函数标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListFunctionTags(request *model.ListFunctionTagsRequest) (*model.ListFunctionTagsResponse, error) {
+	requestDef := GenReqDefForListFunctionTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionTagsResponse), nil
+	}
+}
+
+// ListFunctionTagsInvoker 查询函数标签列表
+func (c *FunctionGraphClient) ListFunctionTagsInvoker(request *model.ListFunctionTagsRequest) *ListFunctionTagsInvoker {
+	requestDef := GenReqDefForListFunctionTags()
+	return &ListFunctionTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFunctionTemplate 获取函数模板列表
+//
+// 获取函数模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListFunctionTemplate(request *model.ListFunctionTemplateRequest) (*model.ListFunctionTemplateResponse, error) {
+	requestDef := GenReqDefForListFunctionTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionTemplateResponse), nil
+	}
+}
+
+// ListFunctionTemplateInvoker 获取函数模板列表
+func (c *FunctionGraphClient) ListFunctionTemplateInvoker(request *model.ListFunctionTemplateRequest) *ListFunctionTemplateInvoker {
+	requestDef := GenReqDefForListFunctionTemplate()
+	return &ListFunctionTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFunctionTriggers 获取指定函数的所有触发器
@@ -1085,6 +1190,33 @@ func (c *FunctionGraphClient) ShowEventInvoker(request *model.ShowEventRequest) 
 	return &ShowEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFuncReservedInstanceMetrics 查询函数实例使用情况指标
+//
+// 查询函数实例使用情况指标。
+//
+//   - 指标单位为分钟：
+//     当查询时间范围小于1小时,指标周期为1分钟
+//     当查询时间范围小于1天,指标周期为30分钟
+//     当查询时间范围大于1天,指标周期为180分钟
+//   - 指标分为如下几类：reservedinstancenum（预留实例使用）、concurrency（实例使用/并发）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFuncReservedInstanceMetrics(request *model.ShowFuncReservedInstanceMetricsRequest) (*model.ShowFuncReservedInstanceMetricsResponse, error) {
+	requestDef := GenReqDefForShowFuncReservedInstanceMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFuncReservedInstanceMetricsResponse), nil
+	}
+}
+
+// ShowFuncReservedInstanceMetricsInvoker 查询函数实例使用情况指标
+func (c *FunctionGraphClient) ShowFuncReservedInstanceMetricsInvoker(request *model.ShowFuncReservedInstanceMetricsRequest) *ShowFuncReservedInstanceMetricsInvoker {
+	requestDef := GenReqDefForShowFuncReservedInstanceMetrics()
+	return &ShowFuncReservedInstanceMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFuncSnapshotState 查询函数快照制作状态
 //
 // 查询函数快照制作状态。
@@ -1169,6 +1301,48 @@ func (c *FunctionGraphClient) ShowFunctionConfigInvoker(request *model.ShowFunct
 	return &ShowFunctionConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFunctionMetrics 查询函数实例流量指标
+//
+// 查询函数流量指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFunctionMetrics(request *model.ShowFunctionMetricsRequest) (*model.ShowFunctionMetricsResponse, error) {
+	requestDef := GenReqDefForShowFunctionMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFunctionMetricsResponse), nil
+	}
+}
+
+// ShowFunctionMetricsInvoker 查询函数实例流量指标
+func (c *FunctionGraphClient) ShowFunctionMetricsInvoker(request *model.ShowFunctionMetricsRequest) *ShowFunctionMetricsInvoker {
+	requestDef := GenReqDefForShowFunctionMetrics()
+	return &ShowFunctionMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFunctionTemplate 获取指定函数模板
+//
+// 获取指定函数模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFunctionTemplate(request *model.ShowFunctionTemplateRequest) (*model.ShowFunctionTemplateResponse, error) {
+	requestDef := GenReqDefForShowFunctionTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFunctionTemplateResponse), nil
+	}
+}
+
+// ShowFunctionTemplateInvoker 获取指定函数模板
+func (c *FunctionGraphClient) ShowFunctionTemplateInvoker(request *model.ShowFunctionTemplateRequest) *ShowFunctionTemplateInvoker {
+	requestDef := GenReqDefForShowFunctionTemplate()
+	return &ShowFunctionTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFunctionTrigger 获取指定触发器的信息
 //
 // 获取特定触发器的信息。
@@ -1209,6 +1383,27 @@ func (c *FunctionGraphClient) ShowLtsLogDetails(request *model.ShowLtsLogDetails
 func (c *FunctionGraphClient) ShowLtsLogDetailsInvoker(request *model.ShowLtsLogDetailsRequest) *ShowLtsLogDetailsInvoker {
 	requestDef := GenReqDefForShowLtsLogDetails()
 	return &ShowLtsLogDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectAsyncStatusLogInfo 查询异步日志详情
+//
+// 查询异步日志详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowProjectAsyncStatusLogInfo(request *model.ShowProjectAsyncStatusLogInfoRequest) (*model.ShowProjectAsyncStatusLogInfoResponse, error) {
+	requestDef := GenReqDefForShowProjectAsyncStatusLogInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectAsyncStatusLogInfoResponse), nil
+	}
+}
+
+// ShowProjectAsyncStatusLogInfoInvoker 查询异步日志详情
+func (c *FunctionGraphClient) ShowProjectAsyncStatusLogInfoInvoker(request *model.ShowProjectAsyncStatusLogInfoRequest) *ShowProjectAsyncStatusLogInfoInvoker {
+	requestDef := GenReqDefForShowProjectAsyncStatusLogInfo()
+	return &ShowProjectAsyncStatusLogInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowProjectTagsList 查询资源标签
@@ -1566,6 +1761,27 @@ func (c *FunctionGraphClient) UpdateFunctionCode(request *model.UpdateFunctionCo
 func (c *FunctionGraphClient) UpdateFunctionCodeInvoker(request *model.UpdateFunctionCodeRequest) *UpdateFunctionCodeInvoker {
 	requestDef := GenReqDefForUpdateFunctionCode()
 	return &UpdateFunctionCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFunctionCollectState 更新函数收藏状态
+//
+// 更新函数收藏状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) UpdateFunctionCollectState(request *model.UpdateFunctionCollectStateRequest) (*model.UpdateFunctionCollectStateResponse, error) {
+	requestDef := GenReqDefForUpdateFunctionCollectState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFunctionCollectStateResponse), nil
+	}
+}
+
+// UpdateFunctionCollectStateInvoker 更新函数收藏状态
+func (c *FunctionGraphClient) UpdateFunctionCollectStateInvoker(request *model.UpdateFunctionCollectStateRequest) *UpdateFunctionCollectStateInvoker {
+	requestDef := GenReqDefForUpdateFunctionCollectState()
+	return &UpdateFunctionCollectStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateFunctionConfig 修改函数的metadata信息

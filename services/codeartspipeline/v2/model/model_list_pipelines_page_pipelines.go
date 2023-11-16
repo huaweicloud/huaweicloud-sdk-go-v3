@@ -17,6 +17,9 @@ type ListPipelinesPagePipelines struct {
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
+	// 项目名称
+	ProjectName *string `json:"project_name,omitempty"`
+
 	// 组件ID
 	ComponentId *string `json:"component_id,omitempty"`
 

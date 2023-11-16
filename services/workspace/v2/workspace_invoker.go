@@ -305,6 +305,18 @@ func (i *ListUsedDesktopInfoInvoker) Invoke() (*model.ListUsedDesktopInfoRespons
 	}
 }
 
+type BatchAddDesktopsTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddDesktopsTagsInvoker) Invoke() (*model.BatchAddDesktopsTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddDesktopsTagsResponse), nil
+	}
+}
+
 type BatchChangeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +326,18 @@ func (i *BatchChangeTagsInvoker) Invoke() (*model.BatchChangeTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.BatchChangeTagsResponse), nil
+	}
+}
+
+type BatchDeleteDesktopsTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteDesktopsTagsInvoker) Invoke() (*model.BatchDeleteDesktopsTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteDesktopsTagsResponse), nil
 	}
 }
 

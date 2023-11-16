@@ -90,6 +90,9 @@ type RecordInfoResult struct {
 	// 构建结束时间
 	FinishTime *string `json:"finish_time,omitempty"`
 
+	// 构建时长
+	Duration *float32 `json:"duration,omitempty"`
+
 	// record状态
 	RecordStatus *string `json:"record_status,omitempty"`
 

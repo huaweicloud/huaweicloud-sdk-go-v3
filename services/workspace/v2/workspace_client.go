@@ -544,6 +544,27 @@ func (c *WorkspaceClient) ListUsedDesktopInfoInvoker(request *model.ListUsedDesk
 	return &ListUsedDesktopInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchAddDesktopsTags 批量添加多个桌面标签
+//
+// 同时对多个桌面批量添加标签，如果创建的标签已经存在（key相同）则覆，最大支持100个桌面，每个桌面最大20个标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchAddDesktopsTags(request *model.BatchAddDesktopsTagsRequest) (*model.BatchAddDesktopsTagsResponse, error) {
+	requestDef := GenReqDefForBatchAddDesktopsTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddDesktopsTagsResponse), nil
+	}
+}
+
+// BatchAddDesktopsTagsInvoker 批量添加多个桌面标签
+func (c *WorkspaceClient) BatchAddDesktopsTagsInvoker(request *model.BatchAddDesktopsTagsRequest) *BatchAddDesktopsTagsInvoker {
+	requestDef := GenReqDefForBatchAddDesktopsTags()
+	return &BatchAddDesktopsTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchChangeTags 批量添加删除标签
 //
 // 为指定桌面批量添加或删除标签。创建时，如果创建的标签已经存在（key相同），则覆盖。删除时，如果删除的标签不存在，默认处理成功
@@ -563,6 +584,27 @@ func (c *WorkspaceClient) BatchChangeTags(request *model.BatchChangeTagsRequest)
 func (c *WorkspaceClient) BatchChangeTagsInvoker(request *model.BatchChangeTagsRequest) *BatchChangeTagsInvoker {
 	requestDef := GenReqDefForBatchChangeTags()
 	return &BatchChangeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteDesktopsTags 批量删除多个桌面标签
+//
+// 同时对多个桌面批量添加标签，删除时，如果删除的标签不存在默认处理成功，最大支持100个桌面，每个桌面最大20个标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteDesktopsTags(request *model.BatchDeleteDesktopsTagsRequest) (*model.BatchDeleteDesktopsTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteDesktopsTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteDesktopsTagsResponse), nil
+	}
+}
+
+// BatchDeleteDesktopsTagsInvoker 批量删除多个桌面标签
+func (c *WorkspaceClient) BatchDeleteDesktopsTagsInvoker(request *model.BatchDeleteDesktopsTagsRequest) *BatchDeleteDesktopsTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteDesktopsTags()
+	return &BatchDeleteDesktopsTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTag 创建桌面标签

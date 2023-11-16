@@ -348,6 +348,10 @@ func GenReqDefForListAppGroupAuthorization() *def.HttpRequestDef {
 		WithName("Account").
 		WithJsonTag("account").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccountType").
+		WithJsonTag("account_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

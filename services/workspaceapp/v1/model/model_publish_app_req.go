@@ -9,9 +9,6 @@ import (
 // PublishAppReq 发布应用请求
 type PublishAppReq struct {
 
-	// 用户(组),单次最多允许操作100个用户(组)
-	Accounts *[]AccountInfo `json:"accounts,omitempty"`
-
 	// 发布应用列表(单次最多20个应用)
 	Items []PublishApp `json:"items"`
 }

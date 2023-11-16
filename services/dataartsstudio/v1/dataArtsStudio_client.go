@@ -4070,6 +4070,27 @@ func (c *DataArtsStudioClient) UpdateDirectoryInvoker(request *model.UpdateDirec
 	return &UpdateDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateFactoryJobName 修改作业名称
+//
+// 修改作业名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateFactoryJobName(request *model.UpdateFactoryJobNameRequest) (*model.UpdateFactoryJobNameResponse, error) {
+	requestDef := GenReqDefForUpdateFactoryJobName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFactoryJobNameResponse), nil
+	}
+}
+
+// UpdateFactoryJobNameInvoker 修改作业名称
+func (c *DataArtsStudioClient) UpdateFactoryJobNameInvoker(request *model.UpdateFactoryJobNameRequest) *UpdateFactoryJobNameInvoker {
+	requestDef := GenReqDefForUpdateFactoryJobName()
+	return &UpdateFactoryJobNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateStandard 修改数据标准
 //
 // 修改数据标准

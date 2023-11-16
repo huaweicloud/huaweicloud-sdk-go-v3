@@ -101,6 +101,18 @@ func (i *ApplyWafPolicyInvoker) Invoke() (*model.ApplyWafPolicyResponse, error) 
 	}
 }
 
+type CreateCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateResponse), nil
+	}
+}
+
 type CreateEdgeWafDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +134,18 @@ func (i *CreatePolicyInvoker) Invoke() (*model.CreatePolicyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreatePolicyResponse), nil
+	}
+}
+
+type DeleteCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCertificateResponse), nil
 	}
 }
 
@@ -161,6 +185,18 @@ func (i *ListCdnDomainsInvoker) Invoke() (*model.ListCdnDomainsResponse, error) 
 	}
 }
 
+type ListCertificatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertificatesResponse), nil
+	}
+}
+
 type ListEdgeWafDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +221,18 @@ func (i *ListPolicyInvoker) Invoke() (*model.ListPolicyResponse, error) {
 	}
 }
 
+type ShowCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertificateResponse), nil
+	}
+}
+
 type ShowEdgeWafDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +242,18 @@ func (i *ShowEdgeWafDomainsInvoker) Invoke() (*model.ShowEdgeWafDomainsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowEdgeWafDomainsResponse), nil
+	}
+}
+
+type UpdateCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCertificateInvoker) Invoke() (*model.UpdateCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCertificateResponse), nil
 	}
 }
 

@@ -21,7 +21,7 @@ type NatGatewayResponseBody struct {
 	// 公网NAT网关实例的名字，长度限制为64。
 	Name string `json:"name"`
 
-	// 公网NAT网关实例的描述，长度限制为255。
+	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
 	Description string `json:"description"`
 
 	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
@@ -50,7 +50,7 @@ type NatGatewayResponseBody struct {
 	// 公网NAT网关私有IP地址，由VPC中子网分配。
 	NgportIpAddress string `json:"ngport_ip_address"`
 
-	// 订单信息。
+	// 订单信息。此字段只有在订购包周期资源时才会有订单信息，而在订购按需资源时则为空。
 	BillingInfo string `json:"billing_info"`
 
 	// 公网NAT网关下DNAT规则数量限制，默认为200。

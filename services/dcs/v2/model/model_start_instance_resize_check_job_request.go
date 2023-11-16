@@ -11,6 +11,8 @@ type StartInstanceResizeCheckJobRequest struct {
 
 	// 实例ID
 	InstanceId string `json:"instance_id"`
+
+	Body *StartInstanceResizeCheckJobRequestBody `json:"body,omitempty"`
 }
 
 func (o StartInstanceResizeCheckJobRequest) String() string {

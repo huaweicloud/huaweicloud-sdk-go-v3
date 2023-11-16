@@ -1813,12 +1813,16 @@ func GenReqDefForStartInstanceResizeCheckJob() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/instances/{instance_id}/resize/check-job").
 		WithResponse(new(model.StartInstanceResizeCheckJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

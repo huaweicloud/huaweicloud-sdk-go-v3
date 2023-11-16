@@ -11,6 +11,9 @@ import (
 // ListFunctionResult 函数属性结构体。
 type ListFunctionResult struct {
 
+	// 资源id。
+	ResourceId *string `json:"resource_id,omitempty"`
+
 	// 函数的URN（Uniform Resource Name），唯一标识函数。
 	FuncUrn string `json:"func_urn"`
 

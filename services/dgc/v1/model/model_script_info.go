@@ -32,6 +32,15 @@ type ScriptInfo struct {
 
 	// 脚本的配置项参数
 	Configuration *string `json:"configuration,omitempty"`
+
+	// 脚本描述，长度不能超过255个字符
+	Description *string `json:"description,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段。表示创建脚本的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示脚本创建后是保存态，提交态，生产态。
+	TargetStatus *ScriptInfoTargetStatus `json:"targetStatus,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段，表示脚本审批人
+	Approvers *[]JobApprover `json:"approvers,omitempty"`
 }
 
 func (o ScriptInfo) String() string {
@@ -48,12 +57,19 @@ type ScriptInfoType struct {
 }
 
 type ScriptInfoTypeEnum struct {
-	FLINK_SQL ScriptInfoType
-	DLISQL    ScriptInfoType
-	SPARK_SQL ScriptInfoType
-	HIVE_SQL  ScriptInfoType
-	DWSSQL    ScriptInfoType
-	SHELL     ScriptInfoType
+	FLINK_SQL       ScriptInfoType
+	DLISQL          ScriptInfoType
+	SPARK_SQL       ScriptInfoType
+	HIVE_SQL        ScriptInfoType
+	DWSSQL          ScriptInfoType
+	RDSSQL          ScriptInfoType
+	SHELL           ScriptInfoType
+	PRESTO          ScriptInfoType
+	CLICK_HOUSE_SQL ScriptInfoType
+	HETU_ENGINE_SQL ScriptInfoType
+	PYTHON          ScriptInfoType
+	IMPALA_SQL      ScriptInfoType
+	SPARK_PYTHON    ScriptInfoType
 }
 
 func GetScriptInfoTypeEnum() ScriptInfoTypeEnum {
@@ -73,8 +89,29 @@ func GetScriptInfoTypeEnum() ScriptInfoTypeEnum {
 		DWSSQL: ScriptInfoType{
 			value: "DWSSQL",
 		},
+		RDSSQL: ScriptInfoType{
+			value: "RDSSQL",
+		},
 		SHELL: ScriptInfoType{
 			value: "Shell",
+		},
+		PRESTO: ScriptInfoType{
+			value: "PRESTO",
+		},
+		CLICK_HOUSE_SQL: ScriptInfoType{
+			value: "ClickHouseSQL",
+		},
+		HETU_ENGINE_SQL: ScriptInfoType{
+			value: "HetuEngineSQL",
+		},
+		PYTHON: ScriptInfoType{
+			value: "PYTHON",
+		},
+		IMPALA_SQL: ScriptInfoType{
+			value: "ImpalaSQL",
+		},
+		SPARK_PYTHON: ScriptInfoType{
+			value: "SparkPython",
 		},
 	}
 }
@@ -88,6 +125,57 @@ func (c ScriptInfoType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ScriptInfoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ScriptInfoTargetStatus struct {
+	value string
+}
+
+type ScriptInfoTargetStatusEnum struct {
+	SAVED      ScriptInfoTargetStatus
+	SUBMITTED  ScriptInfoTargetStatus
+	PRODUCTION ScriptInfoTargetStatus
+}
+
+func GetScriptInfoTargetStatusEnum() ScriptInfoTargetStatusEnum {
+	return ScriptInfoTargetStatusEnum{
+		SAVED: ScriptInfoTargetStatus{
+			value: "SAVED",
+		},
+		SUBMITTED: ScriptInfoTargetStatus{
+			value: "SUBMITTED",
+		},
+		PRODUCTION: ScriptInfoTargetStatus{
+			value: "PRODUCTION",
+		},
+	}
+}
+
+func (c ScriptInfoTargetStatus) Value() string {
+	return c.value
+}
+
+func (c ScriptInfoTargetStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ScriptInfoTargetStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

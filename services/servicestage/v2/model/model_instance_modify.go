@@ -16,8 +16,7 @@ type InstanceModify struct {
 	// 组件部署件。key为组件component_name，对于Docker多容器场景，key为容器名称。
 	Artifacts map[string]interface{} `json:"artifacts,omitempty"`
 
-	// 应用配置，如环境变量。
-	Configuration map[string]interface{} `json:"configuration,omitempty"`
+	Configuration *InstanceConfiguration `json:"configuration,omitempty"`
 
 	// 描述。
 	Description *string `json:"description,omitempty"`

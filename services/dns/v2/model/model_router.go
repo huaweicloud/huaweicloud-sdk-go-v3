@@ -13,6 +13,9 @@ type Router struct {
 
 	// Router(VPC)所在的region。
 	RouterRegion *string `json:"router_region,omitempty"`
+
+	// 资源状态。
+	Status *string `json:"status,omitempty"`
 }
 
 func (o Router) String() string {

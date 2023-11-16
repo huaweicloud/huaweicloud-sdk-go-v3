@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AuthorizationTypeEnum 授权类型，基于应用(组)授权，默认为APP_GROUP授权。 * 'APP' - 按照应用授权 * 'APP_GROUP' - 按照应用组授权
+// AuthorizationTypeEnum 授权类型，基于应用(组)授权，默认为APP_GROUP授权。 * ~~`APP`~~ - 按照应用授权（***尚未支持***） * `APP_GROUP` - 按照应用组授权
 type AuthorizationTypeEnum struct {
 	value string
 }
