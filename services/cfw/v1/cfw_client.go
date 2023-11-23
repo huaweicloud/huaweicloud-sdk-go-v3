@@ -84,6 +84,8 @@ func (c *CfwClient) AddBlackWhiteListInvoker(request *model.AddBlackWhiteListReq
 
 // AddDomainSet 添加域名组
 //
+// 添加域名组
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) AddDomainSet(request *model.AddDomainSetRequest) (*model.AddDomainSetResponse, error) {
 	requestDef := GenReqDefForAddDomainSet()
@@ -120,6 +122,27 @@ func (c *CfwClient) AddDomains(request *model.AddDomainsRequest) (*model.AddDoma
 func (c *CfwClient) AddDomainsInvoker(request *model.AddDomainsRequest) *AddDomainsInvoker {
 	requestDef := GenReqDefForAddDomains()
 	return &AddDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddLogConfig 创建日志配置
+//
+// 创建日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) AddLogConfig(request *model.AddLogConfigRequest) (*model.AddLogConfigResponse, error) {
+	requestDef := GenReqDefForAddLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddLogConfigResponse), nil
+	}
+}
+
+// AddLogConfigInvoker 创建日志配置
+func (c *CfwClient) AddLogConfigInvoker(request *model.AddLogConfigRequest) *AddLogConfigInvoker {
+	requestDef := GenReqDefForAddLogConfig()
+	return &AddLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddServiceItems 新建服务成员
@@ -166,6 +189,8 @@ func (c *CfwClient) AddServiceSetInvoker(request *model.AddServiceSetRequest) *A
 
 // BatchDeleteAddressItems 批量删除地址组成员
 //
+// 批量删除地址组成员
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) BatchDeleteAddressItems(request *model.BatchDeleteAddressItemsRequest) (*model.BatchDeleteAddressItemsResponse, error) {
 	requestDef := GenReqDefForBatchDeleteAddressItems()
@@ -184,6 +209,8 @@ func (c *CfwClient) BatchDeleteAddressItemsInvoker(request *model.BatchDeleteAdd
 }
 
 // BatchDeleteServiceItems 批量删除服务组成员信息
+//
+// 批量删除服务组成员信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) BatchDeleteServiceItems(request *model.BatchDeleteServiceItemsRequest) (*model.BatchDeleteServiceItemsResponse, error) {
@@ -221,6 +248,27 @@ func (c *CfwClient) ChangeEastWestFirewallStatus(request *model.ChangeEastWestFi
 func (c *CfwClient) ChangeEastWestFirewallStatusInvoker(request *model.ChangeEastWestFirewallStatusRequest) *ChangeEastWestFirewallStatusInvoker {
 	requestDef := GenReqDefForChangeEastWestFirewallStatus()
 	return &ChangeEastWestFirewallStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEastWestFirewall 创建东西向防火墙
+//
+// 创建东西向防火墙
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) CreateEastWestFirewall(request *model.CreateEastWestFirewallRequest) (*model.CreateEastWestFirewallResponse, error) {
+	requestDef := GenReqDefForCreateEastWestFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEastWestFirewallResponse), nil
+	}
+}
+
+// CreateEastWestFirewallInvoker 创建东西向防火墙
+func (c *CfwClient) CreateEastWestFirewallInvoker(request *model.CreateEastWestFirewallRequest) *CreateEastWestFirewallInvoker {
+	requestDef := GenReqDefForCreateEastWestFirewall()
+	return &CreateEastWestFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAddressItem 删除地址组成员
@@ -287,6 +335,8 @@ func (c *CfwClient) DeleteBlackWhiteListInvoker(request *model.DeleteBlackWhiteL
 }
 
 // DeleteDomainSet 删除域名组
+//
+// 删除域名组
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteDomainSet(request *model.DeleteDomainSetRequest) (*model.DeleteDomainSetResponse, error) {
@@ -662,6 +712,27 @@ func (c *CfwClient) ListFlowLogsInvoker(request *model.ListFlowLogsRequest) *Lis
 	return &ListFlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLogConfig 获取日志配置
+//
+// 获取日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListLogConfig(request *model.ListLogConfigRequest) (*model.ListLogConfigResponse, error) {
+	requestDef := GenReqDefForListLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogConfigResponse), nil
+	}
+}
+
+// ListLogConfigInvoker 获取日志配置
+func (c *CfwClient) ListLogConfigInvoker(request *model.ListLogConfigRequest) *ListLogConfigInvoker {
+	requestDef := GenReqDefForListLogConfig()
+	return &ListLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProtectedVpcs 查询防护VPC数
 //
 // 查询防护vpc信息
@@ -811,6 +882,8 @@ func (c *CfwClient) UpdateDnsServersInvoker(request *model.UpdateDnsServersReque
 
 // UpdateDomainSet 更新域名组
 //
+// 更新域名组
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateDomainSet(request *model.UpdateDomainSetRequest) (*model.UpdateDomainSetResponse, error) {
 	requestDef := GenReqDefForUpdateDomainSet()
@@ -826,6 +899,27 @@ func (c *CfwClient) UpdateDomainSet(request *model.UpdateDomainSetRequest) (*mod
 func (c *CfwClient) UpdateDomainSetInvoker(request *model.UpdateDomainSetRequest) *UpdateDomainSetInvoker {
 	requestDef := GenReqDefForUpdateDomainSet()
 	return &UpdateDomainSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogConfig 更新日志配置
+//
+// 更新日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) UpdateLogConfig(request *model.UpdateLogConfigRequest) (*model.UpdateLogConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogConfigResponse), nil
+	}
+}
+
+// UpdateLogConfigInvoker 更新日志配置
+func (c *CfwClient) UpdateLogConfigInvoker(request *model.UpdateLogConfigRequest) *UpdateLogConfigInvoker {
+	requestDef := GenReqDefForUpdateLogConfig()
+	return &UpdateLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServiceSet 修改服务组
@@ -892,6 +986,8 @@ func (c *CfwClient) BatchDeleteAclRulesInvoker(request *model.BatchDeleteAclRule
 }
 
 // BatchUpdateAclRuleActions 批量更新规则动作
+//
+// 批量更新规则动作
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) BatchUpdateAclRuleActions(request *model.BatchUpdateAclRuleActionsRequest) (*model.BatchUpdateAclRuleActionsResponse, error) {
@@ -996,6 +1092,8 @@ func (c *CfwClient) ListAclRulesInvoker(request *model.ListAclRulesRequest) *Lis
 
 // ListRuleAclTags 查询规则标签
 //
+// 查询规则标签
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ListRuleAclTags(request *model.ListRuleAclTagsRequest) (*model.ListRuleAclTagsResponse, error) {
 	requestDef := GenReqDefForListRuleAclTags()
@@ -1057,7 +1155,7 @@ func (c *CfwClient) UpdateAclRuleOrderInvoker(request *model.UpdateAclRuleOrderR
 
 // ChangeEipStatus 弹性IP开启关闭
 //
-// 开启关闭EIP,客户购买EIP后首次开启EIP防护前需使用ListEips同步EIP资产，sync字段设置为1。
+// 开启关闭EIP，客户购买EIP后首次开启EIP防护前需使用ListEips同步EIP资产，sync字段设置为1。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ChangeEipStatus(request *model.ChangeEipStatusRequest) (*model.ChangeEipStatusResponse, error) {

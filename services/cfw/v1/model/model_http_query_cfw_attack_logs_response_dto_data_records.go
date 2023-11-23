@@ -18,7 +18,7 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	Action *string `json:"action,omitempty"`
 
 	// 事件时间
-	EventTime *string `json:"event_time,omitempty"`
+	EventTime *int64 `json:"event_time,omitempty"`
 
 	// 攻击类型
 	AttackType *string `json:"attack_type,omitempty"`
@@ -36,7 +36,7 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	PacketLength *int64 `json:"packet_length,omitempty"`
 
 	// 攻击规则id
-	AttackRuleId *int32 `json:"attack_rule_id,omitempty"`
+	AttackRuleId *string `json:"attack_rule_id,omitempty"`
 
 	// 命中时间
 	HitTime *int32 `json:"hit_time,omitempty"`
@@ -59,7 +59,8 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	// 协议
 	Protocol *string `json:"protocol,omitempty"`
 
-	Packet *Packet `json:"packet,omitempty"`
+	// 攻击日志报文
+	Packet *string `json:"packet,omitempty"`
 
 	// 应用协议
 	App *string `json:"app,omitempty"`

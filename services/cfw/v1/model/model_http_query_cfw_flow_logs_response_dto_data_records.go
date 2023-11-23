@@ -21,10 +21,10 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	Packets *int32 `json:"packets,omitempty"`
 
 	// 开始时间
-	StartTime *int32 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// 结束时间
-	EndTime *int32 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 文档ID
 	LogId *string `json:"log_id,omitempty"`
@@ -33,7 +33,7 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	SrcIp *string `json:"src_ip,omitempty"`
 
 	// 源端口
-	SrcPort *string `json:"src_port,omitempty"`
+	SrcPort *int32 `json:"src_port,omitempty"`
 
 	// 目的IP
 	DstIp *string `json:"dst_ip,omitempty"`
@@ -42,7 +42,7 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	App *string `json:"app,omitempty"`
 
 	// 目的端口
-	DstPort *string `json:"dst_port,omitempty"`
+	DstPort *int32 `json:"dst_port,omitempty"`
 
 	// 协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
 	Protocol *string `json:"protocol,omitempty"`

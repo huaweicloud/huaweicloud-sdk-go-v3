@@ -18,7 +18,7 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 	RuleId *string `json:"rule_id,omitempty"`
 
 	// 命中时间
-	HitTime *int32 `json:"hit_time,omitempty"`
+	HitTime *int64 `json:"hit_time,omitempty"`
 
 	// 源区域id
 	SrcRegionId *string `json:"src_region_id,omitempty"`
@@ -39,13 +39,13 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 	SrcIp *string `json:"src_ip,omitempty"`
 
 	// 源端口
-	SrcPort *string `json:"src_port,omitempty"`
+	SrcPort *int32 `json:"src_port,omitempty"`
 
 	// 目的IP
 	DstIp *string `json:"dst_ip,omitempty"`
 
 	// 目的端口
-	DstPort *string `json:"dst_port,omitempty"`
+	DstPort *int32 `json:"dst_port,omitempty"`
 
 	// 协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
 	Protocol *string `json:"protocol,omitempty"`

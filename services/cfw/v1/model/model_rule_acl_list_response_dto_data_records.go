@@ -56,7 +56,7 @@ type RuleAclListResponseDtoDataRecords struct {
 
 	Service *RuleServiceDto `json:"service,omitempty"`
 
-	// 规则type，0：互联网规则，1：vpc规则，2nat规则
+	// 规则type，0：互联网规则，1：vpc规则，2：nat规则
 	Type *RuleAclListResponseDtoDataRecordsType `json:"type,omitempty"`
 
 	Tag *TagsVo `json:"tag,omitempty"`

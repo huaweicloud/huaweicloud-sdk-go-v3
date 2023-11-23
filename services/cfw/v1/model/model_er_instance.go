@@ -8,13 +8,13 @@ import (
 
 type ErInstance struct {
 
-	// Er实例id
+	// ER实例id
 	Id *string `json:"id,omitempty"`
 
-	// Er名称
+	// ER名称
 	Name *string `json:"name,omitempty"`
 
-	// Er状态
+	// ER状态
 	State *string `json:"state,omitempty"`
 
 	// 企业租户id

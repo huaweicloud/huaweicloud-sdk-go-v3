@@ -38,6 +38,8 @@ var (
 		"https://cfw.af-south-1.myhuaweicloud.com")
 	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
 		"https://cfw.sa-brazil-1.myhuaweicloud.com")
+	TR_WEST_1 = region.NewRegion("tr-west-1",
+		"https://cfw.tr-west-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -57,6 +59,7 @@ var staticFields = map[string]*region.Region{
 	"cn-east-2":      CN_EAST_2,
 	"af-south-1":     AF_SOUTH_1,
 	"sa-brazil-1":    SA_BRAZIL_1,
+	"tr-west-1":      TR_WEST_1,
 }
 
 var provider = region.DefaultProviderChain("CFW")

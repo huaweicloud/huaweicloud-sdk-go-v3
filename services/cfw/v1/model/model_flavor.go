@@ -11,7 +11,7 @@ import (
 
 type Flavor struct {
 
-	// 防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版
+	// 防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
 	Version *FlavorVersion `json:"version,omitempty"`
 
 	// eip数量

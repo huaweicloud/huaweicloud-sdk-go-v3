@@ -20,7 +20,7 @@ type UpdateRuleAclDto struct {
 
 	Sequence *OrderRuleAclDto `json:"sequence,omitempty"`
 
-	// 规则方向
+	// 方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
 	Direction *UpdateRuleAclDtoDirection `json:"direction,omitempty"`
 
 	// 动作0：permit,1：deny
@@ -53,7 +53,7 @@ type UpdateRuleAclDto struct {
 
 	Service *RuleServiceDto `json:"service,omitempty"`
 
-	// 规则type，0：互联网规则，1:vpc规则，2：nat规则
+	// 规则type，0：互联网规则，1：vpc规则，2：nat规则
 	Type *UpdateRuleAclDtoType `json:"type,omitempty"`
 
 	Tag *TagsVo `json:"tag,omitempty"`

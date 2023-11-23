@@ -65,6 +65,18 @@ func (i *AddDomainsInvoker) Invoke() (*model.AddDomainsResponse, error) {
 	}
 }
 
+type AddLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddLogConfigInvoker) Invoke() (*model.AddLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddLogConfigResponse), nil
+	}
+}
+
 type AddServiceItemsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +134,18 @@ func (i *ChangeEastWestFirewallStatusInvoker) Invoke() (*model.ChangeEastWestFir
 		return nil, err
 	} else {
 		return result.(*model.ChangeEastWestFirewallStatusResponse), nil
+	}
+}
+
+type CreateEastWestFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEastWestFirewallInvoker) Invoke() (*model.CreateEastWestFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEastWestFirewallResponse), nil
 	}
 }
 
@@ -377,6 +401,18 @@ func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
 	}
 }
 
+type ListLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogConfigInvoker) Invoke() (*model.ListLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogConfigResponse), nil
+	}
+}
+
 type ListProtectedVpcsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -470,6 +506,18 @@ func (i *UpdateDomainSetInvoker) Invoke() (*model.UpdateDomainSetResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateDomainSetResponse), nil
+	}
+}
+
+type UpdateLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogConfigInvoker) Invoke() (*model.UpdateLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogConfigResponse), nil
 	}
 }
 
