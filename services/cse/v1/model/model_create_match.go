@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateMatch 请求匹配规则。0..N个，不配置表示匹配。
 type CreateMatch struct {
 	Headers *CreateMatchHeaders `json:"headers,omitempty"`
 }

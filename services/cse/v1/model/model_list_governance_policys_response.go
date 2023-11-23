@@ -9,9 +9,9 @@ import (
 // ListGovernancePolicysResponse Response Object
 type ListGovernancePolicysResponse struct {
 
-	// 查询治理策略列表响应结构体
-	Body           *[]ListGovernancePolicyResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                                 `json:"-"`
+	// 查询治理策略列表响应结构体。
+	Body           *[]GovPolicyDetail `json:"body,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListGovernancePolicysResponse) String() string {

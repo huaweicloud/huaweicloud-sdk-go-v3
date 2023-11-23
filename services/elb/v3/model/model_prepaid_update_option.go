@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// PrepaidUpdateOption 负载均衡器的包周期规格变更信息。  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs,ctc,cmcc)
+// PrepaidUpdateOption 负载均衡器的包周期规格变更信息
 type PrepaidUpdateOption struct {
 
 	// 下单订购后，是否自动从客户的账户中支付； true：自动支付； false：不自动支付（默认）。 自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。

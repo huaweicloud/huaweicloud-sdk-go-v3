@@ -129,7 +129,7 @@ func main() {
 	httpConfig.WithProxy(proxy)
 	// Configure how to create network connections as needed
 	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
-		return net.Dial(network, addr)
+		// You need to implement this function
 	}
 	httpConfig.WithDialContext(dialContext)
 	// Configure HTTP handler for debugging, do not use in production environment

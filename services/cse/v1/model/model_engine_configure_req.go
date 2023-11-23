@@ -6,11 +6,11 @@ import (
 	"strings"
 )
 
-// EngineConfigureReq 更新微服务引擎专享版配置请求体
+// EngineConfigureReq 更新微服务引擎专享版配置请求体。
 type EngineConfigureReq struct {
 
-	// 版本号
-	Version string `json:"version"`
+	// authType安全认证类型，支持填写NONE和RBAC。
+	AuthType string `json:"authType"`
 }
 
 func (o EngineConfigureReq) String() string {

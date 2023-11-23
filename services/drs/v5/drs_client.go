@@ -298,6 +298,27 @@ func (c *DrsClient) CreateJobInvoker(request *model.CreateJobRequest) *CreateJob
 	return &CreateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteJdbcDriver 删除驱动文件
+//
+// 删除驱动文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) DeleteJdbcDriver(request *model.DeleteJdbcDriverRequest) (*model.DeleteJdbcDriverResponse, error) {
+	requestDef := GenReqDefForDeleteJdbcDriver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteJdbcDriverResponse), nil
+	}
+}
+
+// DeleteJdbcDriverInvoker 删除驱动文件
+func (c *DrsClient) DeleteJdbcDriverInvoker(request *model.DeleteJdbcDriverRequest) *DeleteJdbcDriverInvoker {
+	requestDef := GenReqDefForDeleteJdbcDriver()
+	return &DeleteJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteJob 删除指定ID任务
 //
 // 删除租户指定ID任务。
@@ -485,6 +506,27 @@ func (c *DrsClient) ListDbObjects(request *model.ListDbObjectsRequest) (*model.L
 func (c *DrsClient) ListDbObjectsInvoker(request *model.ListDbObjectsRequest) *ListDbObjectsInvoker {
 	requestDef := GenReqDefForListDbObjects()
 	return &ListDbObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJdbcDrivers 查询驱动文件列表
+//
+// 查询驱动文件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListJdbcDrivers(request *model.ListJdbcDriversRequest) (*model.ListJdbcDriversResponse, error) {
+	requestDef := GenReqDefForListJdbcDrivers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJdbcDriversResponse), nil
+	}
+}
+
+// ListJdbcDriversInvoker 查询驱动文件列表
+func (c *DrsClient) ListJdbcDriversInvoker(request *model.ListJdbcDriversRequest) *ListJdbcDriversInvoker {
+	requestDef := GenReqDefForListJdbcDrivers()
+	return &ListJdbcDriversInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListJobs 查询任务列表
@@ -1060,6 +1102,27 @@ func (c *DrsClient) StopJobActionInvoker(request *model.StopJobActionRequest) *S
 	return &StopJobActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SyncJdbcDriver 同步驱动文件
+//
+// 同步驱动文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) SyncJdbcDriver(request *model.SyncJdbcDriverRequest) (*model.SyncJdbcDriverResponse, error) {
+	requestDef := GenReqDefForSyncJdbcDriver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncJdbcDriverResponse), nil
+	}
+}
+
+// SyncJdbcDriverInvoker 同步驱动文件
+func (c *DrsClient) SyncJdbcDriverInvoker(request *model.SyncJdbcDriverRequest) *SyncJdbcDriverInvoker {
+	requestDef := GenReqDefForSyncJdbcDriver()
+	return &SyncJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateBatchAsyncJobs 更新指定ID批量异步任务详情
 //
 // 更新租户指定ID批量异步任务详情。
@@ -1165,6 +1228,27 @@ func (c *DrsClient) UploadDbObjectTemplate(request *model.UploadDbObjectTemplate
 func (c *DrsClient) UploadDbObjectTemplateInvoker(request *model.UploadDbObjectTemplateRequest) *UploadDbObjectTemplateInvoker {
 	requestDef := GenReqDefForUploadDbObjectTemplate()
 	return &UploadDbObjectTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadJdbcDriver 上传驱动文件
+//
+// 上传驱动文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UploadJdbcDriver(request *model.UploadJdbcDriverRequest) (*model.UploadJdbcDriverResponse, error) {
+	requestDef := GenReqDefForUploadJdbcDriver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadJdbcDriverResponse), nil
+	}
+}
+
+// UploadJdbcDriverInvoker 上传驱动文件
+func (c *DrsClient) UploadJdbcDriverInvoker(request *model.UploadJdbcDriverRequest) *UploadJdbcDriverInvoker {
+	requestDef := GenReqDefForUploadJdbcDriver()
+	return &UploadJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateJobName 任务名称校验

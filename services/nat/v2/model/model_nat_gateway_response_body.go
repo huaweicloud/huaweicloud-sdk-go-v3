@@ -21,7 +21,7 @@ type NatGatewayResponseBody struct {
 	// 公网NAT网关实例的名字，长度限制为64。
 	Name string `json:"name"`
 
-	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description string `json:"description"`
 
 	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000

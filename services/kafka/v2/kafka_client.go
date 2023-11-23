@@ -279,6 +279,27 @@ func (c *KafkaClient) CreateKafkaConsumerGroupInvoker(request *model.CreateKafka
 	return &CreateKafkaConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateKafkaUserClientQuotaTask 创建客户端流控配置
+//
+// 该接口用于向Kafka实例提交创建user、client级别的流控任务，若成功则返回流控任务的job id。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) CreateKafkaUserClientQuotaTask(request *model.CreateKafkaUserClientQuotaTaskRequest) (*model.CreateKafkaUserClientQuotaTaskResponse, error) {
+	requestDef := GenReqDefForCreateKafkaUserClientQuotaTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKafkaUserClientQuotaTaskResponse), nil
+	}
+}
+
+// CreateKafkaUserClientQuotaTaskInvoker 创建客户端流控配置
+func (c *KafkaClient) CreateKafkaUserClientQuotaTaskInvoker(request *model.CreateKafkaUserClientQuotaTaskRequest) *CreateKafkaUserClientQuotaTaskInvoker {
+	requestDef := GenReqDefForCreateKafkaUserClientQuotaTask()
+	return &CreateKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePartition 新增Kafka实例指定Topic分区
 //
 // 新增Kafka实例指定Topic分区。
@@ -424,6 +445,27 @@ func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*mod
 func (c *KafkaClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
 	requestDef := GenReqDefForDeleteInstance()
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKafkaUserClientQuotaTask 删除客户端流控设置
+//
+// 该接口用于向Kafka实例提交删除user、client级别的流控任务，若成功则返回流控任务的job id。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) DeleteKafkaUserClientQuotaTask(request *model.DeleteKafkaUserClientQuotaTaskRequest) (*model.DeleteKafkaUserClientQuotaTaskResponse, error) {
+	requestDef := GenReqDefForDeleteKafkaUserClientQuotaTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKafkaUserClientQuotaTaskResponse), nil
+	}
+}
+
+// DeleteKafkaUserClientQuotaTaskInvoker 删除客户端流控设置
+func (c *KafkaClient) DeleteKafkaUserClientQuotaTaskInvoker(request *model.DeleteKafkaUserClientQuotaTaskRequest) *DeleteKafkaUserClientQuotaTaskInvoker {
+	requestDef := GenReqDefForDeleteKafkaUserClientQuotaTask()
+	return &DeleteKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSinkTask 删除单个转储任务
@@ -1151,6 +1193,27 @@ func (c *KafkaClient) ShowKafkaTopicPartitionDiskusageInvoker(request *model.Sho
 	return &ShowKafkaTopicPartitionDiskusageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowKafkaUserClientQuota 查询客户端流控配置
+//
+// 该接口用于向Kafka实例查询流控的配置，若成功则返回流控配置的列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ShowKafkaUserClientQuota(request *model.ShowKafkaUserClientQuotaRequest) (*model.ShowKafkaUserClientQuotaResponse, error) {
+	requestDef := GenReqDefForShowKafkaUserClientQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKafkaUserClientQuotaResponse), nil
+	}
+}
+
+// ShowKafkaUserClientQuotaInvoker 查询客户端流控配置
+func (c *KafkaClient) ShowKafkaUserClientQuotaInvoker(request *model.ShowKafkaUserClientQuotaRequest) *ShowKafkaUserClientQuotaInvoker {
+	requestDef := GenReqDefForShowKafkaUserClientQuota()
+	return &ShowKafkaUserClientQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMaintainWindows 查询维护时间窗时间段
 //
 // 查询维护时间窗开始时间和结束时间。
@@ -1424,6 +1487,27 @@ func (c *KafkaClient) UpdateInstanceUser(request *model.UpdateInstanceUserReques
 func (c *KafkaClient) UpdateInstanceUserInvoker(request *model.UpdateInstanceUserRequest) *UpdateInstanceUserInvoker {
 	requestDef := GenReqDefForUpdateInstanceUser()
 	return &UpdateInstanceUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKafkaUserClientQuotaTask 修改客户端流控设置
+//
+// 该接口用于向Kafka实例提交修改user、client级别的流控任务，若成功则返回流控任务的job id。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) UpdateKafkaUserClientQuotaTask(request *model.UpdateKafkaUserClientQuotaTaskRequest) (*model.UpdateKafkaUserClientQuotaTaskResponse, error) {
+	requestDef := GenReqDefForUpdateKafkaUserClientQuotaTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKafkaUserClientQuotaTaskResponse), nil
+	}
+}
+
+// UpdateKafkaUserClientQuotaTaskInvoker 修改客户端流控设置
+func (c *KafkaClient) UpdateKafkaUserClientQuotaTaskInvoker(request *model.UpdateKafkaUserClientQuotaTaskRequest) *UpdateKafkaUserClientQuotaTaskInvoker {
+	requestDef := GenReqDefForUpdateKafkaUserClientQuotaTask()
+	return &UpdateKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSinkTaskQuota 修改转储任务的配额

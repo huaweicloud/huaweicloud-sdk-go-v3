@@ -27,7 +27,7 @@ type ListPrivateNatsRequest struct {
 	// 私网NAT网关实例的名字。
 	Name *[]string `json:"name,omitempty"`
 
-	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含<>
+	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *[]string `json:"description,omitempty"`
 
 	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型

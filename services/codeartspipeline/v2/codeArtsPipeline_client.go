@@ -250,6 +250,69 @@ func (c *CodeArtsPipelineClient) CreatePipelineTemplateInvoker(request *model.Cr
 	return &CreatePipelineTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePluginDraft 创建插件草稿版本
+//
+// 创建插件草稿版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreatePluginDraft(request *model.CreatePluginDraftRequest) (*model.CreatePluginDraftResponse, error) {
+	requestDef := GenReqDefForCreatePluginDraft()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePluginDraftResponse), nil
+	}
+}
+
+// CreatePluginDraftInvoker 创建插件草稿版本
+func (c *CodeArtsPipelineClient) CreatePluginDraftInvoker(request *model.CreatePluginDraftRequest) *CreatePluginDraftInvoker {
+	requestDef := GenReqDefForCreatePluginDraft()
+	return &CreatePluginDraftInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePluginVersion 创建插件版本
+//
+// 创建插件版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreatePluginVersion(request *model.CreatePluginVersionRequest) (*model.CreatePluginVersionResponse, error) {
+	requestDef := GenReqDefForCreatePluginVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePluginVersionResponse), nil
+	}
+}
+
+// CreatePluginVersionInvoker 创建插件版本
+func (c *CodeArtsPipelineClient) CreatePluginVersionInvoker(request *model.CreatePluginVersionRequest) *CreatePluginVersionInvoker {
+	requestDef := GenReqDefForCreatePluginVersion()
+	return &CreatePluginVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePublisher 创建发布商
+//
+// 创建发布商
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreatePublisher(request *model.CreatePublisherRequest) (*model.CreatePublisherResponse, error) {
+	requestDef := GenReqDefForCreatePublisher()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePublisherResponse), nil
+	}
+}
+
+// CreatePublisherInvoker 创建发布商
+func (c *CodeArtsPipelineClient) CreatePublisherInvoker(request *model.CreatePublisherRequest) *CreatePublisherInvoker {
+	requestDef := GenReqDefForCreatePublisher()
+	return &CreatePublisherInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRule 创建规则
 //
 // 创建规则
@@ -922,6 +985,27 @@ func (c *CodeArtsPipelineClient) PublishPluginBindInvoker(request *model.Publish
 	return &PublishPluginBindInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PublishPluginDraft 发布插件草稿
+//
+// 发布插件草稿
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) PublishPluginDraft(request *model.PublishPluginDraftRequest) (*model.PublishPluginDraftResponse, error) {
+	requestDef := GenReqDefForPublishPluginDraft()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishPluginDraftResponse), nil
+	}
+}
+
+// PublishPluginDraftInvoker 发布插件草稿
+func (c *CodeArtsPipelineClient) PublishPluginDraftInvoker(request *model.PublishPluginDraftRequest) *PublishPluginDraftInvoker {
+	requestDef := GenReqDefForPublishPluginDraft()
+	return &PublishPluginDraftInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RejectManualReview 驳回人工审核
 //
 // 驳回人工审核
@@ -1550,6 +1634,48 @@ func (c *CodeArtsPipelineClient) UpdatePipelineTemplate(request *model.UpdatePip
 func (c *CodeArtsPipelineClient) UpdatePipelineTemplateInvoker(request *model.UpdatePipelineTemplateRequest) *UpdatePipelineTemplateInvoker {
 	requestDef := GenReqDefForUpdatePipelineTemplate()
 	return &UpdatePipelineTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePluginBaseInfo 更新插件基本信息
+//
+// 更新插件基本信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) UpdatePluginBaseInfo(request *model.UpdatePluginBaseInfoRequest) (*model.UpdatePluginBaseInfoResponse, error) {
+	requestDef := GenReqDefForUpdatePluginBaseInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePluginBaseInfoResponse), nil
+	}
+}
+
+// UpdatePluginBaseInfoInvoker 更新插件基本信息
+func (c *CodeArtsPipelineClient) UpdatePluginBaseInfoInvoker(request *model.UpdatePluginBaseInfoRequest) *UpdatePluginBaseInfoInvoker {
+	requestDef := GenReqDefForUpdatePluginBaseInfo()
+	return &UpdatePluginBaseInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePluginDraft 更新插件草稿
+//
+// 更新插件草稿
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) UpdatePluginDraft(request *model.UpdatePluginDraftRequest) (*model.UpdatePluginDraftResponse, error) {
+	requestDef := GenReqDefForUpdatePluginDraft()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePluginDraftResponse), nil
+	}
+}
+
+// UpdatePluginDraftInvoker 更新插件草稿
+func (c *CodeArtsPipelineClient) UpdatePluginDraftInvoker(request *model.UpdatePluginDraftRequest) *UpdatePluginDraftInvoker {
+	requestDef := GenReqDefForUpdatePluginDraft()
+	return &UpdatePluginDraftInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateRule 更新规则

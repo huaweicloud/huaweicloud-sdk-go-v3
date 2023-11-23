@@ -12,7 +12,7 @@ type CreateOrDeleteInstanceTags struct {
 	Action string `json:"action"`
 
 	// 标签列表。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o CreateOrDeleteInstanceTags) String() string {

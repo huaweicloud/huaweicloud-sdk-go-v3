@@ -18,7 +18,7 @@ type ListNatGatewaysRequest struct {
 	// 企业项目ID。创建公网NAT网关实例时，关联的企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
 	// 公网NAT网关实例的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。

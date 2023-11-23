@@ -12,7 +12,7 @@ type IpGroup struct {
 	// IP地址组的创建时间。
 	CreatedAt string `json:"created_at"`
 
-	// IP地址组的更新时间。
+	// IP地址组的描述信息。
 	Description string `json:"description"`
 
 	// IP地址组的ID。

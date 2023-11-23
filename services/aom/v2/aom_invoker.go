@@ -389,6 +389,66 @@ func (i *UpdateMuteRuleInvoker) Invoke() (*model.UpdateMuteRuleResponse, error) 
 	}
 }
 
+type CreatePromInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePromInstanceInvoker) Invoke() (*model.CreatePromInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePromInstanceResponse), nil
+	}
+}
+
+type CreateRecordingRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRecordingRuleInvoker) Invoke() (*model.CreateRecordingRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRecordingRuleResponse), nil
+	}
+}
+
+type DeletePromInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePromInstanceInvoker) Invoke() (*model.DeletePromInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePromInstanceResponse), nil
+	}
+}
+
+type ListAccessCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessCodeInvoker) Invoke() (*model.ListAccessCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessCodeResponse), nil
+	}
+}
+
+type ListAgentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgentsInvoker) Invoke() (*model.ListAgentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgentsResponse), nil
+	}
+}
+
 type ListInstantQueryAomPromGetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +518,30 @@ func (i *ListMetadataAomPromGetInvoker) Invoke() (*model.ListMetadataAomPromGetR
 		return nil, err
 	} else {
 		return result.(*model.ListMetadataAomPromGetResponse), nil
+	}
+}
+
+type ListPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPermissionsInvoker) Invoke() (*model.ListPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPermissionsResponse), nil
+	}
+}
+
+type ListPromInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPromInstanceInvoker) Invoke() (*model.ListPromInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPromInstanceResponse), nil
 	}
 }
 

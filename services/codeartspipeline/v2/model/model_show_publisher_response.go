@@ -8,6 +8,8 @@ import (
 
 // ShowPublisherResponse Response Object
 type ShowPublisherResponse struct {
+
+	// 发布商详情
 	Body           map[string]PublisherVo `json:"body,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

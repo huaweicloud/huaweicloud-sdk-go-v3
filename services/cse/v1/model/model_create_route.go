@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// CreateRoute 路由规则。
 type CreateRoute struct {
 
-	// name
+	// 规则名称。
 	Name *string `json:"name,omitempty"`
 
-	// weight
+	// 权重值。
 	Weight *int32 `json:"weight,omitempty"`
 
 	Tags *CreateRouteTags `json:"tags,omitempty"`

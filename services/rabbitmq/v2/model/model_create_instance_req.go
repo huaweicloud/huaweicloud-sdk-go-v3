@@ -69,7 +69,7 @@ type CreateInstanceReq struct {
 	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
 	StorageSpecCode CreateInstanceReqStorageSpecCode `json:"storage_spec_code"`
 
-	// 企业项目ID。若为企业项目帐号，该参数必填。
+	// 企业项目ID。若为企业项目账号，该参数必填。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 标签列表。

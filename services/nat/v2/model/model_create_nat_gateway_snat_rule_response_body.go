@@ -30,7 +30,7 @@ type CreateNatGatewaySnatRuleResponseBody struct {
 	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
 	FloatingIpId string `json:"floating_ip_id"`
 
-	// SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+	// SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description string `json:"description"`
 
 	// SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用

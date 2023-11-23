@@ -9,16 +9,16 @@ import (
 type EngineExternalEntrypoint struct {
 
 	// 微服务引擎专享版暴露的IP地址。
-	ExternalAddress *string `json:"external_address,omitempty"`
+	ExternalAddress *string `json:"externalAddress,omitempty"`
 
 	// 微服务引擎专享版的公网地址。
-	PublicAddress *string `json:"public_address,omitempty"`
+	PublicAddress *string `json:"publicAddress,omitempty"`
 
 	// 微服务引擎专享版组件的访问地址。
-	ServiceEndpoint map[string]EntrypointItem `json:"service_endpoint,omitempty"`
+	ServiceEndpoint map[string]EntrypointItem `json:"serviceEndpoint,omitempty"`
 
 	// 微服务引擎专享版组件的公网地址。
-	PublicServiceEndpoint map[string]EntrypointItem `json:"public_service_endpoint,omitempty"`
+	PublicServiceEndpoint map[string]EntrypointItem `json:"publicServiceEndpoint,omitempty"`
 }
 
 func (o EngineExternalEntrypoint) String() string {

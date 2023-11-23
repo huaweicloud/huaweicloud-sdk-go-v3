@@ -13,7 +13,7 @@ import (
 type Task struct {
 
 	// 子任务所属任务ID
-	JobId *int32 `json:"job_id,omitempty"`
+	JobId *int32 `json:"jobId,omitempty"`
 
 	// 子任务ID，使用uuid
 	Id *int64 `json:"id,omitempty"`
@@ -25,28 +25,28 @@ type Task struct {
 	Assigned *string `json:"assigned,omitempty"`
 
 	// 子任务名称
-	TaskName *string `json:"task_name,omitempty"`
+	TaskName *string `json:"taskName,omitempty"`
 
 	// 子任务所属引擎名称
-	EngineName *string `json:"engine_name,omitempty"`
+	EngineName *string `json:"engineName,omitempty"`
 
 	// 子任务执行的顺序, 从小到大
-	TaskOrder *int32 `json:"task_order,omitempty"`
+	TaskOrder *int32 `json:"taskOrder,omitempty"`
 
 	// 子任务状态
 	Status *TaskStatus `json:"status,omitempty"`
 
 	// 子任务开始时间
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"startTime,omitempty"`
 
 	// 子任务结束时间
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"endTime,omitempty"`
 
 	// 子任务创建时间
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"createTime,omitempty"`
 
 	// 子任务更新时间
-	UpdateTime *int64 `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"updateTime,omitempty"`
 
 	// 子任务是否超时
 	Timeout *int32 `json:"timeout,omitempty"`
@@ -57,7 +57,7 @@ type Task struct {
 	// 子任务输出信息
 	Output *string `json:"output,omitempty"`
 
-	TaskExecutorBrief *TaskExecutorBrief `json:"task_executor_brief,omitempty"`
+	TaskExecutorBrief *TaskExecutorBrief `json:"taskExecutorBrief,omitempty"`
 }
 
 func (o Task) String() string {

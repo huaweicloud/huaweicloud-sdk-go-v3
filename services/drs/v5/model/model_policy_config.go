@@ -35,6 +35,9 @@ type PolicyConfig struct {
 
 	// oracle-gausssdb增量读取方式：logminer，xstream
 	IncrementReadMode *string `json:"increment_read_mode,omitempty"`
+
+	// DML同步类型。
+	DmlTypes *string `json:"dml_types,omitempty"`
 }
 
 func (o PolicyConfig) String() string {

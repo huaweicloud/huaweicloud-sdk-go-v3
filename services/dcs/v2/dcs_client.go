@@ -1334,6 +1334,27 @@ func (c *DcsClient) LoginWebCliInvoker(request *model.LoginWebCliRequest) *Login
 	return &LoginWebCliInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// LogoffWebCli 登出webCli
+//
+// 登出webCli
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) LogoffWebCli(request *model.LogoffWebCliRequest) (*model.LogoffWebCliResponse, error) {
+	requestDef := GenReqDefForLogoffWebCli()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LogoffWebCliResponse), nil
+	}
+}
+
+// LogoffWebCliInvoker 登出webCli
+func (c *DcsClient) LogoffWebCliInvoker(request *model.LogoffWebCliRequest) *LogoffWebCliInvoker {
+	requestDef := GenReqDefForLogoffWebCli()
+	return &LogoffWebCliInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetAclAccountPassWord 重置ACL账号密码
 //
 // 重置ACL账号密码。

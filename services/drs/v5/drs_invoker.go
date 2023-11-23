@@ -161,6 +161,18 @@ func (i *CreateJobInvoker) Invoke() (*model.CreateJobResponse, error) {
 	}
 }
 
+type DeleteJdbcDriverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteJdbcDriverInvoker) Invoke() (*model.DeleteJdbcDriverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteJdbcDriverResponse), nil
+	}
+}
+
 type DeleteJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +278,18 @@ func (i *ListDbObjectsInvoker) Invoke() (*model.ListDbObjectsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDbObjectsResponse), nil
+	}
+}
+
+type ListJdbcDriversInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListJdbcDriversInvoker) Invoke() (*model.ListJdbcDriversResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListJdbcDriversResponse), nil
 	}
 }
 
@@ -593,6 +617,18 @@ func (i *StopJobActionInvoker) Invoke() (*model.StopJobActionResponse, error) {
 	}
 }
 
+type SyncJdbcDriverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncJdbcDriverInvoker) Invoke() (*model.SyncJdbcDriverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncJdbcDriverResponse), nil
+	}
+}
+
 type UpdateBatchAsyncJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -650,6 +686,18 @@ func (i *UploadDbObjectTemplateInvoker) Invoke() (*model.UploadDbObjectTemplateR
 		return nil, err
 	} else {
 		return result.(*model.UploadDbObjectTemplateResponse), nil
+	}
+}
+
+type UploadJdbcDriverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadJdbcDriverInvoker) Invoke() (*model.UploadJdbcDriverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadJdbcDriverResponse), nil
 	}
 }
 

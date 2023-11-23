@@ -18,7 +18,7 @@ type ListInstancesNodeResult struct {
 	// 节点状态。
 	Status string `json:"status"`
 
-	// 节点角色。 该参数仅对GaussDB(for Mongo)引擎的副本集实例有效。
+	// 节点角色。 该参数仅对GeminiDB Mongo引擎的副本集实例有效。
 	Role string `json:"role"`
 
 	// 节点所在的子网的ID。

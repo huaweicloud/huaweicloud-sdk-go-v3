@@ -17,6 +17,9 @@ type DeleteJobReq struct {
 
 	// 任务ID
 	JobId string `json:"job_id"`
+
+	// MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
+	IsShowBreakpointPosition *bool `json:"is_show_breakpoint_position,omitempty"`
 }
 
 func (o DeleteJobReq) String() string {

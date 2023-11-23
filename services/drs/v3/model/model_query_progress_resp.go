@@ -18,8 +18,11 @@ type QueryProgressResp struct {
 	// 迁移百分比
 	Progress *string `json:"progress,omitempty"`
 
-	// 增量迁移时延
+	// 增量迁移时延。单位：s
 	IncreTransDelay *string `json:"incre_trans_delay,omitempty"`
+
+	// 增量迁移时延。单位：ms
+	IncreTransDelayMillis *string `json:"incre_trans_delay_millis,omitempty"`
 
 	// 迁移模式。 - FULL_TRANS: 全量 - INCR_TRANS: 增量 - FULL_INCR_TRANS: 全量+增量
 	TaskMode *QueryProgressRespTaskMode `json:"task_mode,omitempty"`

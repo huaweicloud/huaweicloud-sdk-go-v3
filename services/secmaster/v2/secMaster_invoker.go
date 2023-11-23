@@ -113,6 +113,18 @@ func (i *CreateDataobjectRelationsInvoker) Invoke() (*model.CreateDataobjectRela
 	}
 }
 
+type CreateDataspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDataspaceInvoker) Invoke() (*model.CreateDataspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDataspaceResponse), nil
+	}
+}
+
 type CreateIncidentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *CreateIndicatorInvoker) Invoke() (*model.CreateIndicatorResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateIndicatorResponse), nil
+	}
+}
+
+type CreatePipeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePipeInvoker) Invoke() (*model.CreatePipeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePipeResponse), nil
 	}
 }
 
@@ -377,6 +401,30 @@ func (i *ListAlertsInvoker) Invoke() (*model.ListAlertsResponse, error) {
 	}
 }
 
+type ListDataclassInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataclassInvoker) Invoke() (*model.ListDataclassResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataclassResponse), nil
+	}
+}
+
+type ListDataclassFieldsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataclassFieldsInvoker) Invoke() (*model.ListDataclassFieldsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataclassFieldsResponse), nil
+	}
+}
+
 type ListDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +530,18 @@ func (i *ListPlaybooksInvoker) Invoke() (*model.ListPlaybooksResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListPlaybooksResponse), nil
+	}
+}
+
+type ListWorkflowsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkflowsResponse), nil
 	}
 }
 

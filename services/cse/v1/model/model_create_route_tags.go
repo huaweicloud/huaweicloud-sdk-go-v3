@@ -6,11 +6,11 @@ import (
 	"strings"
 )
 
-// CreateRouteTags tags
+// CreateRouteTags 匹配的实例标记列表。
 type CreateRouteTags struct {
 
-	// version
-	Version *string `json:"version,omitempty"`
+	// 实例标记。满足标记条件的实例放到这一组。
+	Tag *string `json:"&lt;tag&gt;,omitempty"`
 }
 
 func (o CreateRouteTags) String() string {

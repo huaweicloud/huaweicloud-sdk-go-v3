@@ -398,6 +398,48 @@ func (c *GaussDBforNoSQLClient) DeleteInstanceInvoker(request *model.DeleteInsta
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteInstancesSession 关闭实例节点会话
+//
+// 关闭实例节点会话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteInstancesSession(request *model.DeleteInstancesSessionRequest) (*model.DeleteInstancesSessionResponse, error) {
+	requestDef := GenReqDefForDeleteInstancesSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstancesSessionResponse), nil
+	}
+}
+
+// DeleteInstancesSessionInvoker 关闭实例节点会话
+func (c *GaussDBforNoSQLClient) DeleteInstancesSessionInvoker(request *model.DeleteInstancesSessionRequest) *DeleteInstancesSessionInvoker {
+	requestDef := GenReqDefForDeleteInstancesSession()
+	return &DeleteInstancesSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLtsConfigs 解除关联LTS日志流
+//
+// 将实例日志与LTS日志流解除关联，后台将取消上传实例日志到的LTS日志流里。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteLtsConfigs(request *model.DeleteLtsConfigsRequest) (*model.DeleteLtsConfigsResponse, error) {
+	requestDef := GenReqDefForDeleteLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLtsConfigsResponse), nil
+	}
+}
+
+// DeleteLtsConfigsInvoker 解除关联LTS日志流
+func (c *GaussDBforNoSQLClient) DeleteLtsConfigsInvoker(request *model.DeleteLtsConfigsRequest) *DeleteLtsConfigsInvoker {
+	requestDef := GenReqDefForDeleteLtsConfigs()
+	return &DeleteLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandInstanceNode 扩容指定集群实例的节点数量
 //
 // 扩容指定集群实例的节点数量。
@@ -438,6 +480,27 @@ func (c *GaussDBforNoSQLClient) ListAvailableFlavorInfos(request *model.ListAvai
 func (c *GaussDBforNoSQLClient) ListAvailableFlavorInfosInvoker(request *model.ListAvailableFlavorInfosRequest) *ListAvailableFlavorInfosInvoker {
 	requestDef := GenReqDefForListAvailableFlavorInfos()
 	return &ListAvailableFlavorInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCassandraSlowLogs 查询GeminiDB(for Cassandra)数据库慢日志
+//
+// 查询GeminiDB(for Cassandra)数据库慢日志信息，支持日志关键字搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListCassandraSlowLogs(request *model.ListCassandraSlowLogsRequest) (*model.ListCassandraSlowLogsResponse, error) {
+	requestDef := GenReqDefForListCassandraSlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCassandraSlowLogsResponse), nil
+	}
+}
+
+// ListCassandraSlowLogsInvoker 查询GeminiDB(for Cassandra)数据库慢日志
+func (c *GaussDBforNoSQLClient) ListCassandraSlowLogsInvoker(request *model.ListCassandraSlowLogsRequest) *ListCassandraSlowLogsInvoker {
+	requestDef := GenReqDefForListCassandraSlowLogs()
+	return &ListCassandraSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListConfigurationDatastores 查询支持参数模板的引擎信息
@@ -734,6 +797,111 @@ func (c *GaussDBforNoSQLClient) ListInstancesByTagsInvoker(request *model.ListIn
 	return &ListInstancesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstancesSession 获取节点会话列表
+//
+// 获取节点会话列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListInstancesSession(request *model.ListInstancesSessionRequest) (*model.ListInstancesSessionResponse, error) {
+	requestDef := GenReqDefForListInstancesSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesSessionResponse), nil
+	}
+}
+
+// ListInstancesSessionInvoker 获取节点会话列表
+func (c *GaussDBforNoSQLClient) ListInstancesSessionInvoker(request *model.ListInstancesSessionRequest) *ListInstancesSessionInvoker {
+	requestDef := GenReqDefForListInstancesSession()
+	return &ListInstancesSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesSessionStatistics 查询实例节点会话统计信息
+//
+// 查询实例节点会话统计信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListInstancesSessionStatistics(request *model.ListInstancesSessionStatisticsRequest) (*model.ListInstancesSessionStatisticsResponse, error) {
+	requestDef := GenReqDefForListInstancesSessionStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesSessionStatisticsResponse), nil
+	}
+}
+
+// ListInstancesSessionStatisticsInvoker 查询实例节点会话统计信息
+func (c *GaussDBforNoSQLClient) ListInstancesSessionStatisticsInvoker(request *model.ListInstancesSessionStatisticsRequest) *ListInstancesSessionStatisticsInvoker {
+	requestDef := GenReqDefForListInstancesSessionStatistics()
+	return &ListInstancesSessionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLtsConfigs 查询LTS日志配置信息
+//
+// 分页查询实例关联的LTS日志配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListLtsConfigs(request *model.ListLtsConfigsRequest) (*model.ListLtsConfigsResponse, error) {
+	requestDef := GenReqDefForListLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLtsConfigsResponse), nil
+	}
+}
+
+// ListLtsConfigsInvoker 查询LTS日志配置信息
+func (c *GaussDBforNoSQLClient) ListLtsConfigsInvoker(request *model.ListLtsConfigsRequest) *ListLtsConfigsInvoker {
+	requestDef := GenReqDefForListLtsConfigs()
+	return &ListLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMongodbErrorLogs 查询GeminiDB(for Mongo)数据库错误日志
+//
+// 查询GeminiDB(for Mongo)数据库错误日志信息，支持日志关键字搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListMongodbErrorLogs(request *model.ListMongodbErrorLogsRequest) (*model.ListMongodbErrorLogsResponse, error) {
+	requestDef := GenReqDefForListMongodbErrorLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMongodbErrorLogsResponse), nil
+	}
+}
+
+// ListMongodbErrorLogsInvoker 查询GeminiDB(for Mongo)数据库错误日志
+func (c *GaussDBforNoSQLClient) ListMongodbErrorLogsInvoker(request *model.ListMongodbErrorLogsRequest) *ListMongodbErrorLogsInvoker {
+	requestDef := GenReqDefForListMongodbErrorLogs()
+	return &ListMongodbErrorLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMongodbSlowLogs 查询GeminiDB(for Mongo)数据库慢日志
+//
+// 查询GeminiDB(for Mongo)数据库慢日志信息，支持日志关键字搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListMongodbSlowLogs(request *model.ListMongodbSlowLogsRequest) (*model.ListMongodbSlowLogsResponse, error) {
+	requestDef := GenReqDefForListMongodbSlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMongodbSlowLogsResponse), nil
+	}
+}
+
+// ListMongodbSlowLogsInvoker 查询GeminiDB(for Mongo)数据库慢日志
+func (c *GaussDBforNoSQLClient) ListMongodbSlowLogsInvoker(request *model.ListMongodbSlowLogsRequest) *ListMongodbSlowLogsInvoker {
+	requestDef := GenReqDefForListMongodbSlowLogs()
+	return &ListMongodbSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectTags 查询项目标签
 //
 // 查询指定项目的标签信息。
@@ -774,6 +942,69 @@ func (c *GaussDBforNoSQLClient) ListRecycleInstances(request *model.ListRecycleI
 func (c *GaussDBforNoSQLClient) ListRecycleInstancesInvoker(request *model.ListRecycleInstancesRequest) *ListRecycleInstancesInvoker {
 	requestDef := GenReqDefForListRecycleInstances()
 	return &ListRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRedisSlowLogs 查询GeminiDB(for Redis)数据库慢日志
+//
+// 查询GeminiDB(for Redis)数据库慢日志信息，支持日志关键字搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListRedisSlowLogs(request *model.ListRedisSlowLogsRequest) (*model.ListRedisSlowLogsResponse, error) {
+	requestDef := GenReqDefForListRedisSlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRedisSlowLogsResponse), nil
+	}
+}
+
+// ListRedisSlowLogsInvoker 查询GeminiDB(for Redis)数据库慢日志
+func (c *GaussDBforNoSQLClient) ListRedisSlowLogsInvoker(request *model.ListRedisSlowLogsRequest) *ListRedisSlowLogsInvoker {
+	requestDef := GenReqDefForListRedisSlowLogs()
+	return &ListRedisSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRestoreDatabases 获取GeminiDB(for Cassandra)实例表级恢复的数据库信息
+//
+// 获取GeminiDB(for Cassandra)实例表级恢复的数据库信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListRestoreDatabases(request *model.ListRestoreDatabasesRequest) (*model.ListRestoreDatabasesResponse, error) {
+	requestDef := GenReqDefForListRestoreDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreDatabasesResponse), nil
+	}
+}
+
+// ListRestoreDatabasesInvoker 获取GeminiDB(for Cassandra)实例表级恢复的数据库信息
+func (c *GaussDBforNoSQLClient) ListRestoreDatabasesInvoker(request *model.ListRestoreDatabasesRequest) *ListRestoreDatabasesInvoker {
+	requestDef := GenReqDefForListRestoreDatabases()
+	return &ListRestoreDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRestoreTables 获取GeminiDB(for Cassandra)实例表级恢复的表信息
+//
+// 获取GeminiDB(for Cassandra)实例表级恢复的表信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListRestoreTables(request *model.ListRestoreTablesRequest) (*model.ListRestoreTablesResponse, error) {
+	requestDef := GenReqDefForListRestoreTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRestoreTablesResponse), nil
+	}
+}
+
+// ListRestoreTablesInvoker 获取GeminiDB(for Cassandra)实例表级恢复的表信息
+func (c *GaussDBforNoSQLClient) ListRestoreTablesInvoker(request *model.ListRestoreTablesRequest) *ListRestoreTablesInvoker {
+	requestDef := GenReqDefForListRestoreTables()
+	return &ListRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRestoreTime 查询实例可恢复的时间段
@@ -967,6 +1198,27 @@ func (c *GaussDBforNoSQLClient) ResetDbUserPasswordInvoker(request *model.ResetD
 	return &ResetDbUserPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetParamGroupTemplate 重置自定义参数模板
+//
+// 重置自定义参数模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ResetParamGroupTemplate(request *model.ResetParamGroupTemplateRequest) (*model.ResetParamGroupTemplateResponse, error) {
+	requestDef := GenReqDefForResetParamGroupTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetParamGroupTemplateResponse), nil
+	}
+}
+
+// ResetParamGroupTemplateInvoker 重置自定义参数模板
+func (c *GaussDBforNoSQLClient) ResetParamGroupTemplateInvoker(request *model.ResetParamGroupTemplateRequest) *ResetParamGroupTemplateInvoker {
+	requestDef := GenReqDefForResetParamGroupTemplate()
+	return &ResetParamGroupTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPassword 修改实例的管理员密码
 //
 // 修改实例的管理员密码。
@@ -1091,6 +1343,29 @@ func (c *GaussDBforNoSQLClient) RestoreExistingInstance(request *model.RestoreEx
 func (c *GaussDBforNoSQLClient) RestoreExistingInstanceInvoker(request *model.RestoreExistingInstanceRequest) *RestoreExistingInstanceInvoker {
 	requestDef := GenReqDefForRestoreExistingInstance()
 	return &RestoreExistingInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SaveLtsConfigs 关联LTS日志流
+//
+// - 将实例日志与LTS日志流关联，后台将自动上传实例日志到关联的LTS日志流里。
+// - 关联成功后，会产生一定费用，具体计费可参考云日志服务（LTS）的定价详情。
+// - 系统会为当前选择的日志流创建对应日志类型的结构化配置，若该日志流已存在其他日志类型的结构化配置，系统会进行覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SaveLtsConfigs(request *model.SaveLtsConfigsRequest) (*model.SaveLtsConfigsResponse, error) {
+	requestDef := GenReqDefForSaveLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveLtsConfigsResponse), nil
+	}
+}
+
+// SaveLtsConfigsInvoker 关联LTS日志流
+func (c *GaussDBforNoSQLClient) SaveLtsConfigsInvoker(request *model.SaveLtsConfigsRequest) *SaveLtsConfigsInvoker {
+	requestDef := GenReqDefForSaveLtsConfigs()
+	return &SaveLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetAutoEnlargePolicy 设置磁盘自动扩容策略
@@ -1301,6 +1576,27 @@ func (c *GaussDBforNoSQLClient) ShowConfigurationDetailInvoker(request *model.Sh
 	return &ShowConfigurationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowElbIpGroup 查询实例负载均衡的IP访问黑白名单
+//
+// 查询实例负载均衡的IP访问黑白名单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowElbIpGroup(request *model.ShowElbIpGroupRequest) (*model.ShowElbIpGroupResponse, error) {
+	requestDef := GenReqDefForShowElbIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowElbIpGroupResponse), nil
+	}
+}
+
+// ShowElbIpGroupInvoker 查询实例负载均衡的IP访问黑白名单
+func (c *GaussDBforNoSQLClient) ShowElbIpGroupInvoker(request *model.ShowElbIpGroupRequest) *ShowElbIpGroupInvoker {
+	requestDef := GenReqDefForShowElbIpGroup()
+	return &ShowElbIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowErrorLog 查询数据库错误日志信息
 //
 // 查询数据库错误日志
@@ -1471,7 +1767,7 @@ func (c *GaussDBforNoSQLClient) ShowPauseResumeStutusInvoker(request *model.Show
 
 // ShowQuotas 查询配额
 //
-// 查询单租户在GaussDBforNoSQL服务下的资源配额。
+// 查询单租户在GeminiDB服务下的资源配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
@@ -1572,6 +1868,27 @@ func (c *GaussDBforNoSQLClient) ShrinkInstanceNode(request *model.ShrinkInstance
 func (c *GaussDBforNoSQLClient) ShrinkInstanceNodeInvoker(request *model.ShrinkInstanceNodeRequest) *ShrinkInstanceNodeInvoker {
 	requestDef := GenReqDefForShrinkInstanceNode()
 	return &ShrinkInstanceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchIpGroup 设置实例负载均衡的IP访问黑白名单
+//
+// 设置实例负载均衡的IP访问黑白名单，黑名单、白名单只能选一种，每次调用此接口覆盖之前的设置。关闭后不限制连接的源IP地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchIpGroup(request *model.SwitchIpGroupRequest) (*model.SwitchIpGroupResponse, error) {
+	requestDef := GenReqDefForSwitchIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchIpGroupResponse), nil
+	}
+}
+
+// SwitchIpGroupInvoker 设置实例负载均衡的IP访问黑白名单
+func (c *GaussDBforNoSQLClient) SwitchIpGroupInvoker(request *model.SwitchIpGroupRequest) *SwitchIpGroupInvoker {
+	requestDef := GenReqDefForSwitchIpGroup()
+	return &SwitchIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSlowlogDesensitization 设置慢日志脱敏状态

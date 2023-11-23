@@ -37,6 +37,12 @@ type PipelineDto struct {
 
 	// 项目名称
 	ProjectName *string `json:"project_name,omitempty"`
+
+	// 流水线组ID
+	GroupId *string `json:"group_id,omitempty"`
+
+	// 若为复制场景，则为原流水线ID
+	Id *string `json:"id,omitempty"`
 }
 
 func (o PipelineDto) String() string {

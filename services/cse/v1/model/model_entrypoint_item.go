@@ -12,16 +12,16 @@ import (
 type EntrypointItem struct {
 
 	// 微服务引擎专享版组件的ipv4主接入地址
-	MasterEntrypoint *string `json:"master_entrypoint,omitempty"`
+	MasterEntrypoint *string `json:"masterEntrypoint,omitempty"`
 
 	// 微服务引擎专享版组件的ipv6主接入地址
-	MasterEntrypointIpv6 *string `json:"master_entrypoint_ipv6,omitempty"`
+	MasterEntrypointIpv6 *string `json:"masterEntrypointIpv6,omitempty"`
 
 	// 微服务引擎专享版组件的ipv4备接入地址
 	SlaveEntrypoint *string `json:"slave_entrypoint,omitempty"`
 
 	// 微服务引擎专享版组件的ipv6备接入地址
-	SlaveEntrypointIpv6 *string `json:"slave_entrypoint_ipv6,omitempty"`
+	SlaveEntrypointIpv6 *string `json:"slaveEntrypointIpv6,omitempty"`
 
 	// 微服务引擎专享版组件类型
 	Type *EntrypointItemType `json:"type,omitempty"`

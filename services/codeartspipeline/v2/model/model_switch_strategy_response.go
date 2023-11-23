@@ -12,9 +12,9 @@ type SwitchStrategyResponse struct {
 	// 状态
 	Status *bool `json:"status,omitempty"`
 
-	// 规则模版实例ID
-	RuleTemplateInstanceId *string `json:"rule_template_instance_id,omitempty"`
-	HttpStatusCode         int     `json:"-"`
+	// 规则集ID
+	RuleSetId      *string `json:"rule_set_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o SwitchStrategyResponse) String() string {

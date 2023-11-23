@@ -19,10 +19,10 @@ type EngineSimpleInfo struct {
 	Name *string `json:"name,omitempty"`
 
 	// 微服务引擎专享版所属企业项目ID
-	EnterprisProjectId *string `json:"enterpris_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterpriseProjectId,omitempty"`
 
 	// 微服务引擎专享版所属企业项目名称
-	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
+	EnterpriseProjectName *string `json:"enterpriseProjectName,omitempty"`
 
 	// 微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
 	Type *EngineSimpleInfoType `json:"type,omitempty"`
@@ -37,52 +37,52 @@ type EngineSimpleInfo struct {
 	Payment *string `json:"payment,omitempty"`
 
 	// 微服务引擎专享版的认证方式，RBAC/NONE
-	AuthType *EngineSimpleInfoAuthType `json:"auth_type,omitempty"`
+	AuthType *EngineSimpleInfoAuthType `json:"authType,omitempty"`
 
 	// 微服务引擎专享版当前的状态
 	Status *EngineSimpleInfoStatus `json:"status,omitempty"`
 
 	// 微服务引擎专享版暴露的IP地址
-	ExternalAddress *string `json:"external_address,omitempty"`
+	ExternalAddress *string `json:"externalAddress,omitempty"`
 
 	// 微服务引擎专享版组件的访问地址。
-	ServiceEndpoint map[string]EntrypointItem `json:"service_endpoint,omitempty"`
+	ServiceEndpoint map[string]EntrypointItem `json:"serviceEndpoint,omitempty"`
 
 	// 微服务引擎专享版的公网IP地址
-	PublicAddress *string `json:"public_address,omitempty"`
+	PublicAddress *string `json:"publicAddress,omitempty"`
 
 	// 微服务引擎专享版的公网接入地址
-	PublicServiceEndpoint map[string]EntrypointItem `json:"public_service_endpoint,omitempty"`
+	PublicServiceEndpoint map[string]EntrypointItem `json:"publicServiceEndpoint,omitempty"`
 
 	// 微服务引擎专享版可支持的实例总数
-	TotalInstance *int32 `json:"total_instance,omitempty"`
+	TotalInstance *int32 `json:"totalInstance,omitempty"`
 
 	// 已使用的实例总数
-	UsedInstance *int32 `json:"used_instance,omitempty"`
+	UsedInstance *int32 `json:"usedInstance,omitempty"`
 
 	// 可用实例总数
-	AvailableInstance *int32 `json:"available_instance,omitempty"`
+	AvailableInstance *int32 `json:"availableInstance,omitempty"`
 
 	// 微服务引擎专享版当前版本
 	Version *string `json:"version,omitempty"`
 
 	// 微服务引擎专享版最新版本
-	LatestVersion *string `json:"latest_version,omitempty"`
+	LatestVersion *string `json:"latestVersion,omitempty"`
 
 	// 微服务引擎专享版创建时间
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"createTime,omitempty"`
 
 	// 微服务引擎专享版到期时间
-	DueTo *int64 `json:"due_to,omitempty"`
+	DueTo *int64 `json:"dueTo,omitempty"`
 
 	// 微服务引擎专享版最近的任务ID
-	LatestJobId *int32 `json:"latest_job_id,omitempty"`
+	LatestJobId *int32 `json:"latestJobId,omitempty"`
 
 	// 微服务引擎专享版允许的附加操作
-	EngineAdditionalActions *[]EngineSimpleInfoEngineAdditionalActions `json:"engine_additional_actions,omitempty"`
+	EngineAdditionalActions *[]EngineSimpleInfoEngineAdditionalActions `json:"engineAdditionalActions,omitempty"`
 
 	// 微服务引擎专享版应用部署类型
-	SpecType *EngineSimpleInfoSpecType `json:"spec_type,omitempty"`
+	SpecType *EngineSimpleInfoSpecType `json:"specType,omitempty"`
 
 	Reference *EngineReference `json:"reference,omitempty"`
 }

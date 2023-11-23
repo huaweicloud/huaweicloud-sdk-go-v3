@@ -29,6 +29,9 @@ type IdCardRequestBody struct {
 
 	// 返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
 	DetectCopy *bool `json:"detect_copy,omitempty"`
+
+	// 返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
+	ReturnPortraitLocation *bool `json:"return_portrait_location,omitempty"`
 }
 
 func (o IdCardRequestBody) String() string {

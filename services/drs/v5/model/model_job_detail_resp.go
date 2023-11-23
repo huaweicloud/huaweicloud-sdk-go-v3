@@ -72,6 +72,8 @@ type JobDetailResp struct {
 
 	// 任务版本。
 	TaskVersion *string `json:"task_version,omitempty"`
+
+	ConnectionManagement *ConnectionManagement `json:"connection_management,omitempty"`
 }
 
 func (o JobDetailResp) String() string {

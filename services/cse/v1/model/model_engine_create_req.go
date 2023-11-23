@@ -33,6 +33,9 @@ type EngineCreateReq struct {
 	// vpc名称
 	Vpc string `json:"vpc"`
 
+	// vpc标识
+	VpcId *string `json:"vpcId,omitempty"`
+
 	// 微服务引擎专享版子网ID
 	NetworkId string `json:"networkId"`
 

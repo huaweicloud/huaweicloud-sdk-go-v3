@@ -16,7 +16,7 @@ type ShowEngineJobResponse struct {
 	Id *int32 `json:"id,omitempty"`
 
 	// 任务所属引擎ID
-	EngineId *string `json:"engine_id,omitempty"`
+	EngineId *string `json:"engineId,omitempty"`
 
 	// 任务类型
 	Type *ShowEngineJobResponseType `json:"type,omitempty"`
@@ -31,13 +31,13 @@ type ShowEngineJobResponse struct {
 	Scheduling *int32 `json:"scheduling,omitempty"`
 
 	// 任务创建者
-	CreateUser *string `json:"create_user,omitempty"`
+	CreateUser *string `json:"createUser,omitempty"`
 
 	// 任务开始时间
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime *int64 `json:"startTime,omitempty"`
 
 	// 任务结束时间
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime *int64 `json:"endTime,omitempty"`
 
 	// 任务执行上下文
 	Context *string `json:"context,omitempty"`

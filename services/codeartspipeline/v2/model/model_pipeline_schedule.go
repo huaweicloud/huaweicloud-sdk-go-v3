@@ -21,7 +21,7 @@ type PipelineSchedule struct {
 	Enable *string `json:"enable,omitempty"`
 
 	// 一周内具体时间
-	DaysOfWeek *string `json:"days_of_week,omitempty"`
+	DaysOfWeek *[]int32 `json:"days_of_week,omitempty"`
 
 	// 时区
 	TimeZone *string `json:"time_zone,omitempty"`

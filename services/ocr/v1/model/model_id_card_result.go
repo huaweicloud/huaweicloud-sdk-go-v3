@@ -46,6 +46,9 @@ type IdCardResult struct {
 
 	// 判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
 	DetectCopyResult *bool `json:"detect_copy_result,omitempty"`
+
+	// 身份证头像位置信息的结果，仅在输入参数“return_portrait_location”为true时，返回该字段，当输入身份证背面时返回为空列表。
+	PortraitLocation *[][]int32 `json:"portrait_location,omitempty"`
 }
 
 func (o IdCardResult) String() string {

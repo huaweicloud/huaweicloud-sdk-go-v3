@@ -1742,6 +1742,27 @@ func (c *GaussDBClient) ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker(re
 	return &ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRestoreTables 查询表级时间点恢复可选表
+//
+// 查询表级时间点恢复可选表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowRestoreTables(request *model.ShowRestoreTablesRequest) (*model.ShowRestoreTablesResponse, error) {
+	requestDef := GenReqDefForShowRestoreTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRestoreTablesResponse), nil
+	}
+}
+
+// ShowRestoreTablesInvoker 查询表级时间点恢复可选表
+func (c *GaussDBClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTablesRequest) *ShowRestoreTablesInvoker {
+	requestDef := GenReqDefForShowRestoreTables()
+	return &ShowRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkGaussMySqlProxy 减少数据库代理节点的数量
 //
 // 缩容数据库代理节点的数量。

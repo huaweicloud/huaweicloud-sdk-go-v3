@@ -29,6 +29,18 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 	}
 }
 
+type DeployCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeployCertificateInvoker) Invoke() (*model.DeployCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeployCertificateResponse), nil
+	}
+}
+
 type ExportCertificateInvoker struct {
 	*invoker.BaseInvoker
 }

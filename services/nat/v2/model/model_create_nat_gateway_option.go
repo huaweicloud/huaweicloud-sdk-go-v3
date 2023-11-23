@@ -21,7 +21,7 @@ type CreateNatGatewayOption struct {
 	// 公网NAT网关下行口（DVR的下一跳）所属的network id。
 	InternalNetworkId string `json:"internal_network_id"`
 
-	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含<>
+	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
 	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000

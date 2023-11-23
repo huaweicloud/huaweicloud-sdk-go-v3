@@ -22,7 +22,7 @@ type ShowEngineResponse struct {
 	Description *string `json:"description,omitempty"`
 
 	// 微服务引擎专享版认证类型
-	AuthType *ShowEngineResponseAuthType `json:"auth_type,omitempty"`
+	AuthType *ShowEngineResponseAuthType `json:"authType,omitempty"`
 
 	// 微服务引擎专享版规格
 	Flavor *string `json:"flavor,omitempty"`
@@ -34,49 +34,49 @@ type ShowEngineResponse struct {
 	Version *string `json:"version,omitempty"`
 
 	// 微服务引擎专享版最新版本
-	LatestVersion *string `json:"latest_version,omitempty"`
+	LatestVersion *string `json:"latestVersion,omitempty"`
 
 	// 微服务引擎专享版状态
 	Status *ShowEngineResponseStatus `json:"status,omitempty"`
 
 	// engine 是否是默认引擎
-	BeDefault *bool `json:"be_default,omitempty"`
+	BeDefault *bool `json:"beDefault,omitempty"`
 
 	// 微服务引擎专享版创建者
-	CreateUser *string `json:"create_user,omitempty"`
+	CreateUser *string `json:"createUser,omitempty"`
 
 	// 微服务引擎专享版创建时间
-	CreateTime *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"createTime,omitempty"`
 
-	CceSpec *Spec `json:"cce_spec,omitempty"`
+	CceSpec *Spec `json:"cceSpec,omitempty"`
 
-	ExternalEntrypoint *EngineExternalEntrypoint `json:"external_entrypoint,omitempty"`
+	ExternalEntrypoint *EngineExternalEntrypoint `json:"externalEntrypoint,omitempty"`
 
 	Reference *EngineReference `json:"reference,omitempty"`
 
 	// 微服务引擎专享版最近的任务ID
-	LatestJobId *int32 `json:"latest_job_id,omitempty"`
+	LatestJobId *int32 `json:"latestJobId,omitempty"`
 
 	// 微服务引擎专享版所属企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterpriseProjectId,omitempty"`
 
 	// 微服务引擎专享版所属企业项目名称
-	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
+	EnterpriseProjectName *string `json:"enterpriseProjectName,omitempty"`
 
 	// 微服务引擎专享版允许的附加操作
-	EngineAdditionalActions *[]ShowEngineResponseEngineAdditionalActions `json:"engine_additional_actions,omitempty"`
+	EngineAdditionalActions *[]ShowEngineResponseEngineAdditionalActions `json:"engineAdditionalActions,omitempty"`
 
 	// 微服务引擎专享版应用部署类型
-	SpecType *ShowEngineResponseSpecType `json:"spec_type,omitempty"`
+	SpecType *ShowEngineResponseSpecType `json:"specType,omitempty"`
 
 	// 微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
 	Type *ShowEngineResponseType `json:"type,omitempty"`
 
 	// 微服务引擎专享版所属项目ID
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId *string `json:"projectId,omitempty"`
 
 	// 当前引擎在资源租户侧使用的虚拟机 id 列表
-	VmIds          *[]string `json:"vm_ids,omitempty"`
+	VmIds          *[]string `json:"vmIds,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

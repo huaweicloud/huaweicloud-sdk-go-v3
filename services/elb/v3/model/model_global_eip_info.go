@@ -14,7 +14,7 @@ type GlobalEipInfo struct {
 	// global eip的ip地址
 	GlobalEipAddress *string `json:"global_eip_address,omitempty"`
 
-	// IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。]
+	// IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
 	IpVersion *int32 `json:"ip_version,omitempty"`
 }
 

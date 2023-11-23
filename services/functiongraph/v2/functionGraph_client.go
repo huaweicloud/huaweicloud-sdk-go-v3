@@ -109,7 +109,7 @@ func (c *FunctionGraphClient) BatchDeleteWorkflowsInvoker(request *model.BatchDe
 
 // CancelAsyncInvocation 停止函数异步调用请求
 //
-// -| 停止函数异步调用请求 当前仅支持recursive为false且force为true的参数。针对1：N的函数做并发异步调用 停止异步请求时实例同时在执行的其他请求也会被一并停止并返回4208 function invocation canceled 目前仅支持广州和贵阳一
+// -| 当前仅支持参数recursive为false且force为true的函数。 在1：N的函数做并发异步调用的场景下调用停止异步请求接口时，同一函数实例同时在执行的其他请求也会被一并停止并返回4208 function invocation canceled
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *FunctionGraphClient) CancelAsyncInvocation(request *model.CancelAsyncInvocationRequest) (*model.CancelAsyncInvocationResponse, error) {
@@ -126,6 +126,27 @@ func (c *FunctionGraphClient) CancelAsyncInvocation(request *model.CancelAsyncIn
 func (c *FunctionGraphClient) CancelAsyncInvocationInvoker(request *model.CancelAsyncInvocationRequest) *CancelAsyncInvocationInvoker {
 	requestDef := GenReqDefForCancelAsyncInvocation()
 	return &CancelAsyncInvocationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCallbackWorkflow 回调工作流
+//
+// 回调工作流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateCallbackWorkflow(request *model.CreateCallbackWorkflowRequest) (*model.CreateCallbackWorkflowResponse, error) {
+	requestDef := GenReqDefForCreateCallbackWorkflow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCallbackWorkflowResponse), nil
+	}
+}
+
+// CreateCallbackWorkflowInvoker 回调工作流
+func (c *FunctionGraphClient) CreateCallbackWorkflowInvoker(request *model.CreateCallbackWorkflowRequest) *CreateCallbackWorkflowInvoker {
+	requestDef := GenReqDefForCreateCallbackWorkflow()
+	return &CreateCallbackWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDependency 创建依赖包
@@ -210,6 +231,27 @@ func (c *FunctionGraphClient) CreateFunction(request *model.CreateFunctionReques
 func (c *FunctionGraphClient) CreateFunctionInvoker(request *model.CreateFunctionRequest) *CreateFunctionInvoker {
 	requestDef := GenReqDefForCreateFunction()
 	return &CreateFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFunctionApp 创建应用程序
+//
+// 创建应用程序
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) CreateFunctionApp(request *model.CreateFunctionAppRequest) (*model.CreateFunctionAppResponse, error) {
+	requestDef := GenReqDefForCreateFunctionApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFunctionAppResponse), nil
+	}
+}
+
+// CreateFunctionAppInvoker 创建应用程序
+func (c *FunctionGraphClient) CreateFunctionAppInvoker(request *model.CreateFunctionAppRequest) *CreateFunctionAppInvoker {
+	requestDef := GenReqDefForCreateFunctionApp()
+	return &CreateFunctionAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateFunctionTrigger 创建触发器
@@ -427,6 +469,27 @@ func (c *FunctionGraphClient) DeleteFunction(request *model.DeleteFunctionReques
 func (c *FunctionGraphClient) DeleteFunctionInvoker(request *model.DeleteFunctionRequest) *DeleteFunctionInvoker {
 	requestDef := GenReqDefForDeleteFunction()
 	return &DeleteFunctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFunctionApp 删除应用程序
+//
+// 删除应用程序
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) DeleteFunctionApp(request *model.DeleteFunctionAppRequest) (*model.DeleteFunctionAppResponse, error) {
+	requestDef := GenReqDefForDeleteFunctionApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFunctionAppResponse), nil
+	}
+}
+
+// DeleteFunctionAppInvoker 删除应用程序
+func (c *FunctionGraphClient) DeleteFunctionAppInvoker(request *model.DeleteFunctionAppRequest) *DeleteFunctionAppInvoker {
+	requestDef := GenReqDefForDeleteFunctionApp()
+	return &DeleteFunctionAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteFunctionAsyncInvokeConfig 删除函数异步配置信息
@@ -660,6 +723,27 @@ func (c *FunctionGraphClient) ListActiveAsyncInvocationsInvoker(request *model.L
 	return &ListActiveAsyncInvocationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAppTemplates 查询应用程序模板列表
+//
+// 查询应用程序模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListAppTemplates(request *model.ListAppTemplatesRequest) (*model.ListAppTemplatesResponse, error) {
+	requestDef := GenReqDefForListAppTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppTemplatesResponse), nil
+	}
+}
+
+// ListAppTemplatesInvoker 查询应用程序模板列表
+func (c *FunctionGraphClient) ListAppTemplatesInvoker(request *model.ListAppTemplatesRequest) *ListAppTemplatesInvoker {
+	requestDef := GenReqDefForListAppTemplates()
+	return &ListAppTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAsyncInvocations 获取函数异步调用请求列表
 //
 // 获取函数异步调用请求列表
@@ -784,6 +868,27 @@ func (c *FunctionGraphClient) ListEvents(request *model.ListEventsRequest) (*mod
 func (c *FunctionGraphClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEventsInvoker {
 	requestDef := GenReqDefForListEvents()
 	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFunctionApplications 查询应用程序列表
+//
+// 查询应用程序列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ListFunctionApplications(request *model.ListFunctionApplicationsRequest) (*model.ListFunctionApplicationsResponse, error) {
+	requestDef := GenReqDefForListFunctionApplications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionApplicationsResponse), nil
+	}
+}
+
+// ListFunctionApplicationsInvoker 查询应用程序列表
+func (c *FunctionGraphClient) ListFunctionApplicationsInvoker(request *model.ListFunctionApplicationsRequest) *ListFunctionApplicationsInvoker {
+	requestDef := GenReqDefForListFunctionApplications()
+	return &ListFunctionApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFunctionAsMetric 获取按指定指标排序的函数列表
@@ -1127,6 +1232,27 @@ func (c *FunctionGraphClient) RetryWorkFlowInvoker(request *model.RetryWorkFlowR
 	return &RetryWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAppTemplate 查询应用程序模板详情
+//
+// 查询应用程序模板详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowAppTemplate(request *model.ShowAppTemplateRequest) (*model.ShowAppTemplateResponse, error) {
+	requestDef := GenReqDefForShowAppTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppTemplateResponse), nil
+	}
+}
+
+// ShowAppTemplateInvoker 查询应用程序模板详情
+func (c *FunctionGraphClient) ShowAppTemplateInvoker(request *model.ShowAppTemplateRequest) *ShowAppTemplateInvoker {
+	requestDef := GenReqDefForShowAppTemplate()
+	return &ShowAppTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDependcy 获取指定依赖包
 //
 // 获取指定依赖包
@@ -1236,6 +1362,27 @@ func (c *FunctionGraphClient) ShowFuncSnapshotState(request *model.ShowFuncSnaps
 func (c *FunctionGraphClient) ShowFuncSnapshotStateInvoker(request *model.ShowFuncSnapshotStateRequest) *ShowFuncSnapshotStateInvoker {
 	requestDef := GenReqDefForShowFuncSnapshotState()
 	return &ShowFuncSnapshotStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFunctionApp 查询应用程序详情
+//
+// 查询应用程序详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *FunctionGraphClient) ShowFunctionApp(request *model.ShowFunctionAppRequest) (*model.ShowFunctionAppResponse, error) {
+	requestDef := GenReqDefForShowFunctionApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFunctionAppResponse), nil
+	}
+}
+
+// ShowFunctionAppInvoker 查询应用程序详情
+func (c *FunctionGraphClient) ShowFunctionAppInvoker(request *model.ShowFunctionAppRequest) *ShowFunctionAppInvoker {
+	requestDef := GenReqDefForShowFunctionApp()
+	return &ShowFunctionAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFunctionAsyncInvokeConfig 获取函数异步配置信息
@@ -1702,7 +1849,7 @@ func (c *FunctionGraphClient) UpdateEventInvoker(request *model.UpdateEventReque
 
 // UpdateFuncSnapshot 禁用/启动函数快照
 //
-// 禁用/启动函数快照
+// 禁用/启动函数快照，仅支持java运行时函数，且为非latest版本才能开启函数快照功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateFuncSnapshot(request *model.UpdateFuncSnapshotRequest) (*model.UpdateFuncSnapshotResponse, error) {
@@ -1763,9 +1910,9 @@ func (c *FunctionGraphClient) UpdateFunctionCodeInvoker(request *model.UpdateFun
 	return &UpdateFunctionCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFunctionCollectState 更新函数收藏状态
+// UpdateFunctionCollectState 更新函数置顶状态
 //
-// 更新函数收藏状态
+// 更新函数置顶状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *FunctionGraphClient) UpdateFunctionCollectState(request *model.UpdateFunctionCollectStateRequest) (*model.UpdateFunctionCollectStateResponse, error) {
@@ -1778,7 +1925,7 @@ func (c *FunctionGraphClient) UpdateFunctionCollectState(request *model.UpdateFu
 	}
 }
 
-// UpdateFunctionCollectStateInvoker 更新函数收藏状态
+// UpdateFunctionCollectStateInvoker 更新函数置顶状态
 func (c *FunctionGraphClient) UpdateFunctionCollectStateInvoker(request *model.UpdateFunctionCollectStateRequest) *UpdateFunctionCollectStateInvoker {
 	requestDef := GenReqDefForUpdateFunctionCollectState()
 	return &UpdateFunctionCollectStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

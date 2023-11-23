@@ -7,41 +7,11 @@ import (
 	"net/http"
 )
 
-func GenReqDefForCreateJobTemplates() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/templates").
-		WithResponse(new(model.CreateJobTemplatesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateSqlTemplates() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1.0/{project_id}/sqls").
-		WithResponse(new(model.CreateSqlTemplatesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteSqlTemplates() *def.HttpRequestDef {
+func GenReqDefForBatchDeleteSqlJobTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/sqls-deletion").
-		WithResponse(new(model.DeleteSqlTemplatesResponse)).
+		WithResponse(new(model.BatchDeleteSqlJobTemplatesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -52,11 +22,41 @@ func GenReqDefForDeleteSqlTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListJobTemplates() *def.HttpRequestDef {
+func GenReqDefForCreateSparkJobTemplate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/templates").
+		WithResponse(new(model.CreateSparkJobTemplateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateSqlJobTemplate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1.0/{project_id}/sqls").
+		WithResponse(new(model.CreateSqlJobTemplateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSparkJobTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/templates").
-		WithResponse(new(model.ListJobTemplatesResponse)).
+		WithResponse(new(model.ListSparkJobTemplatesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -80,11 +80,27 @@ func GenReqDefForListJobTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowJobTemplate() *def.HttpRequestDef {
+func GenReqDefForListSqlJobTemplates() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/{project_id}/sqls").
+		WithResponse(new(model.ListSqlJobTemplatesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Keyword").
+		WithJsonTag("keyword").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowSparkJobTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/templates/{template_id}").
-		WithResponse(new(model.ShowJobTemplateResponse)).
+		WithResponse(new(model.ShowSparkJobTemplateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -107,27 +123,11 @@ func GenReqDefForShowSqlSampleTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowSqlTemplates() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/sqls").
-		WithResponse(new(model.ShowSqlTemplatesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Keyword").
-		WithJsonTag("keyword").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateJobTemplates() *def.HttpRequestDef {
+func GenReqDefForUpdateSparkJobTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/{project_id}/templates/{template_id}").
-		WithResponse(new(model.UpdateJobTemplatesResponse)).
+		WithResponse(new(model.UpdateSparkJobTemplateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -143,36 +143,16 @@ func GenReqDefForUpdateJobTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateSqlTemplates() *def.HttpRequestDef {
+func GenReqDefForUpdateSqlJobTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/sqls/{sql_id}").
-		WithResponse(new(model.UpdateSqlTemplatesResponse)).
+		WithResponse(new(model.UpdateSqlJobTemplateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SqlId").
 		WithJsonTag("sql_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForAssociateConnectionQueue() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/associate-queue").
-		WithResponse(new(model.AssociateConnectionQueueResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ConnectionId").
-		WithJsonTag("connection_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -203,12 +183,17 @@ func GenReqDefForAssociateQueueToElasticResourcePool() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAuthorizeResource() *def.HttpRequestDef {
+func GenReqDefForAssociateQueueToEnhancedConnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v1.0/{project_id}/authorization").
-		WithResponse(new(model.AuthorizeResourceResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/associate-queue").
+		WithResponse(new(model.AssociateQueueToEnhancedConnectionResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionId").
+		WithJsonTag("connection_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -277,17 +262,12 @@ func GenReqDefForChangeQueuePlan() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCheckConnection() *def.HttpRequestDef {
+func GenReqDefForCreateAuthInfo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1.0/{project_id}/queues/{queue_name}/connection-test").
-		WithResponse(new(model.CheckConnectionResponse)).
+		WithPath("/v2.0/{project_id}/datasource/auth-infos").
+		WithResponse(new(model.CreateAuthInfoResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("QueueName").
-		WithJsonTag("queue_name").
-		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -297,12 +277,17 @@ func GenReqDefForCheckConnection() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateAuthInfo() *def.HttpRequestDef {
+func GenReqDefForCreateConnectivityTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2.0/{project_id}/datasource/auth-infos").
-		WithResponse(new(model.CreateAuthInfoResponse)).
+		WithPath("/v1.0/{project_id}/queues/{queue_name}/connection-test").
+		WithResponse(new(model.CreateConnectivityTaskResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueueName").
+		WithJsonTag("queue_name").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -392,11 +377,11 @@ func GenReqDefForCreateEnhancedConnectionRoutes() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateGlobalValue() *def.HttpRequestDef {
+func GenReqDefForCreateGlobalVariable() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/variables").
-		WithResponse(new(model.CreateGlobalValueResponse)).
+		WithResponse(new(model.CreateGlobalVariableResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -546,11 +531,11 @@ func GenReqDefForDeleteEnhancedConnectionRoutes() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteGlobalValue() *def.HttpRequestDef {
+func GenReqDefForDeleteGlobalVariable() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1.0/{project_id}/variables/{var_name}").
-		WithResponse(new(model.DeleteGlobalValueResponse)).
+		WithResponse(new(model.DeleteGlobalVariableResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -639,11 +624,11 @@ func GenReqDefForDeleteResource() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDisassociateConnectionQueue() *def.HttpRequestDef {
+func GenReqDefForDisassociateQueueFromEnhancedConnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/disassociate-queue").
-		WithResponse(new(model.DisassociateConnectionQueueResponse)).
+		WithResponse(new(model.DisassociateQueueFromEnhancedConnectionResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -677,6 +662,22 @@ func GenReqDefForListAuthInfo() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListAuthorizationPrivileges() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/{project_id}/authorization/privileges").
+		WithResponse(new(model.ListAuthorizationPrivilegesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Object").
+		WithJsonTag("object").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -851,11 +852,11 @@ func GenReqDefForListEnhancedConnections() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListGlobalValues() *def.HttpRequestDef {
+func GenReqDefForListGlobalVariables() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/{project_id}/variables").
-		WithResponse(new(model.ListGlobalValuesResponse)).
+		WithResponse(new(model.ListGlobalVariablesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -887,11 +888,11 @@ func GenReqDefForListQueuePlans() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListQueueProperty() *def.HttpRequestDef {
+func GenReqDefForListQueueProperties() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/queues/{queue_name}/properties").
-		WithResponse(new(model.ListQueuePropertyResponse)).
+		WithResponse(new(model.ListQueuePropertiesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1035,6 +1036,21 @@ func GenReqDefForRegisterAuthorizedQueue() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRunAuthorizationAction() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1.0/{project_id}/authorization").
+		WithResponse(new(model.RunAuthorizationActionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRunQueueAction() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -1050,6 +1066,26 @@ func GenReqDefForRunQueueAction() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowConnectivityTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/{project_id}/queues/{queue_name}/connection-test/{task_id}").
+		WithResponse(new(model.ShowConnectivityTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueueName").
+		WithJsonTag("queue_name").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskId").
+		WithJsonTag("task_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1098,11 +1134,11 @@ func GenReqDefForShowEnhancedConnection() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowEnhancedPrivilege() *def.HttpRequestDef {
+func GenReqDefForShowEnhancedConnectionPrivilege() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}/privileges").
-		WithResponse(new(model.ShowEnhancedPrivilegeResponse)).
+		WithResponse(new(model.ShowEnhancedConnectionPrivilegeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1114,47 +1150,11 @@ func GenReqDefForShowEnhancedPrivilege() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowNodeConnectivity() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/queues/{queue_name}/connection-test/{task_id}").
-		WithResponse(new(model.ShowNodeConnectivityResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("QueueName").
-		WithJsonTag("queue_name").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TaskId").
-		WithJsonTag("task_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowObjectUser() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/authorization/privileges").
-		WithResponse(new(model.ShowObjectUserResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Object").
-		WithJsonTag("object").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowQueueDetail() *def.HttpRequestDef {
+func GenReqDefForShowQueue() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/{project_id}/queues/{queue_name}").
-		WithResponse(new(model.ShowQueueDetailResponse)).
+		WithResponse(new(model.ShowQueueResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1222,11 +1222,11 @@ func GenReqDefForUpdateElasticResourcePool() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateElasticResourcePoolQueueInfo() *def.HttpRequestDef {
+func GenReqDefForUpdateElasticResourcePoolQueue() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v3/{project_id}/elastic-resource-pools/{elastic_resource_pool_name}/queues/{queue_name}").
-		WithResponse(new(model.UpdateElasticResourcePoolQueueInfoResponse)).
+		WithResponse(new(model.UpdateElasticResourcePoolQueueResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1246,11 +1246,31 @@ func GenReqDefForUpdateElasticResourcePoolQueueInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateGlobalValue() *def.HttpRequestDef {
+func GenReqDefForUpdateEnhancedConnection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}").
+		WithResponse(new(model.UpdateEnhancedConnectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionId").
+		WithJsonTag("connection_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateGlobalVariable() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/variables/{var_name}").
-		WithResponse(new(model.UpdateGlobalValueResponse)).
+		WithResponse(new(model.UpdateGlobalVariableResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1272,26 +1292,6 @@ func GenReqDefForUpdateGroupOrResourceOwner() *def.HttpRequestDef {
 		WithPath("/v2.0/{project_id}/resources/owner").
 		WithResponse(new(model.UpdateGroupOrResourceOwnerResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateHostMassage() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v2.0/{project_id}/datasource/enhanced-connections/{connection_id}").
-		WithResponse(new(model.UpdateHostMassageResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ConnectionId").
-		WithJsonTag("connection_id").
-		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1470,11 +1470,11 @@ func GenReqDefForChangeFlinkJobStatusReport() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateFlinkJar() *def.HttpRequestDef {
+func GenReqDefForCreateFlinkJarJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/streaming/flink-jobs").
-		WithResponse(new(model.CreateFlinkJarResponse)).
+		WithResponse(new(model.CreateFlinkJarJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1500,11 +1500,31 @@ func GenReqDefForCreateFlinkSqlJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateFlinkTemplate() *def.HttpRequestDef {
+func GenReqDefForCreateFlinkSqlJobGraph() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/streaming/jobs/{job_id}/gen-graph").
+		WithResponse(new(model.CreateFlinkSqlJobGraphResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateFlinkSqlJobTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/streaming/job-templates").
-		WithResponse(new(model.CreateFlinkTemplateResponse)).
+		WithResponse(new(model.CreateFlinkSqlJobTemplateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1545,26 +1565,6 @@ func GenReqDefForCreateIefSystemEvents() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateStreamGraph() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/streaming/jobs/{job_id}/gen-graph").
-		WithResponse(new(model.CreateStreamGraphResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("JobId").
-		WithJsonTag("job_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForDeleteFlinkJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -1581,11 +1581,11 @@ func GenReqDefForDeleteFlinkJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteFlinkTemplate() *def.HttpRequestDef {
+func GenReqDefForDeleteFlinkSqlJobTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1.0/{project_id}/streaming/job-templates/{template_id}").
-		WithResponse(new(model.DeleteFlinkTemplateResponse)).
+		WithResponse(new(model.DeleteFlinkSqlJobTemplateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1597,11 +1597,11 @@ func GenReqDefForDeleteFlinkTemplate() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForExportFlinkJob() *def.HttpRequestDef {
+func GenReqDefForExportFlinkJobs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/streaming/jobs/export").
-		WithResponse(new(model.ExportFlinkJobResponse)).
+		WithResponse(new(model.ExportFlinkJobsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1612,11 +1612,11 @@ func GenReqDefForExportFlinkJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForImportFlinkJob() *def.HttpRequestDef {
+func GenReqDefForImportFlinkJobs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/streaming/jobs/import").
-		WithResponse(new(model.ImportFlinkJobResponse)).
+		WithResponse(new(model.ImportFlinkJobsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1687,11 +1687,11 @@ func GenReqDefForListFlinkJobs() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListFlinkTemplates() *def.HttpRequestDef {
+func GenReqDefForListFlinkSqlJobTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/{project_id}/streaming/job-templates").
-		WithResponse(new(model.ListFlinkTemplatesResponse)).
+		WithResponse(new(model.ListFlinkSqlJobTemplatesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1749,11 +1749,11 @@ func GenReqDefForRunIefJobActionCallBack() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowFlinkExecuteGraph() *def.HttpRequestDef {
+func GenReqDefForShowFlinkJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/streaming/jobs/{job_id}/execute-graph").
-		WithResponse(new(model.ShowFlinkExecuteGraphResponse)).
+		WithPath("/v1.0/{project_id}/streaming/jobs/{job_id}").
+		WithResponse(new(model.ShowFlinkJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1765,11 +1765,11 @@ func GenReqDefForShowFlinkExecuteGraph() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowFlinkJob() *def.HttpRequestDef {
+func GenReqDefForShowFlinkJobExecutionGraph() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1.0/{project_id}/streaming/jobs/{job_id}").
-		WithResponse(new(model.ShowFlinkJobResponse)).
+		WithPath("/v1.0/{project_id}/streaming/jobs/{job_id}/execute-graph").
+		WithResponse(new(model.ShowFlinkJobExecutionGraphResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1815,11 +1815,11 @@ func GenReqDefForStopFlinkJobs() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateFlinkJar() *def.HttpRequestDef {
+func GenReqDefForUpdateFlinkJarJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/streaming/flink-jobs/{job_id}").
-		WithResponse(new(model.UpdateFlinkJarResponse)).
+		WithResponse(new(model.UpdateFlinkJarJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1835,11 +1835,11 @@ func GenReqDefForUpdateFlinkJar() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateFlinkSql() *def.HttpRequestDef {
+func GenReqDefForUpdateFlinkSqlJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/streaming/sql-jobs/{job_id}").
-		WithResponse(new(model.UpdateFlinkSqlResponse)).
+		WithResponse(new(model.UpdateFlinkSqlJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1855,11 +1855,11 @@ func GenReqDefForUpdateFlinkSql() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateFlinkTemplate() *def.HttpRequestDef {
+func GenReqDefForUpdateFlinkSqlJobTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/streaming/job-templates/{template_id}").
-		WithResponse(new(model.UpdateFlinkTemplateResponse)).
+		WithResponse(new(model.UpdateFlinkSqlJobTemplateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1875,11 +1875,11 @@ func GenReqDefForUpdateFlinkTemplate() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCancelBatchJob() *def.HttpRequestDef {
+func GenReqDefForCancelSparkJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v2.0/{project_id}/batches/{batch_id}").
-		WithResponse(new(model.CancelBatchJobResponse)).
+		WithResponse(new(model.CancelSparkJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1891,11 +1891,11 @@ func GenReqDefForCancelBatchJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateBatchJob() *def.HttpRequestDef {
+func GenReqDefForCreateSparkJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v2.0/{project_id}/batches").
-		WithResponse(new(model.CreateBatchJobResponse)).
+		WithResponse(new(model.CreateSparkJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1911,11 +1911,11 @@ func GenReqDefForCreateBatchJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListBatches() *def.HttpRequestDef {
+func GenReqDefForListSparkJobs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/{project_id}/batches").
-		WithResponse(new(model.ListBatchesResponse)).
+		WithResponse(new(model.ListSparkJobsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1963,22 +1963,6 @@ func GenReqDefForListBatches() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowBatchInfo() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2.0/{project_id}/batches/{batch_id}").
-		WithResponse(new(model.ShowBatchInfoResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BatchId").
-		WithJsonTag("batch_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowBatchLog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2012,11 +1996,27 @@ func GenReqDefForShowBatchLog() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowBatchState() *def.HttpRequestDef {
+func GenReqDefForShowSparkJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/{project_id}/batches/{batch_id}").
+		WithResponse(new(model.ShowSparkJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BatchId").
+		WithJsonTag("batch_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowSparkJobStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v2.0/{project_id}/batches/{batch_id}/state").
-		WithResponse(new(model.ShowBatchStateResponse)).
+		WithResponse(new(model.ShowSparkJobStatusResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2350,11 +2350,11 @@ func GenReqDefForListSqlJobs() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForPreviewJobResult() *def.HttpRequestDef {
+func GenReqDefForPreviewSqlJobResult() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/{project_id}/jobs/{job_id}/preview").
-		WithResponse(new(model.PreviewJobResultResponse)).
+		WithResponse(new(model.PreviewSqlJobResultResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2385,22 +2385,6 @@ func GenReqDefForShowDescribeTable() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TableName").
 		WithJsonTag("table_name").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowJobProgress() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/jobs/{job_id}/progress").
-		WithResponse(new(model.ShowJobProgressResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("JobId").
-		WithJsonTag("job_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -2441,6 +2425,22 @@ func GenReqDefForShowSqlJobDetail() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/{project_id}/jobs/{job_id}/detail").
 		WithResponse(new(model.ShowSqlJobDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowSqlJobProgress() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/jobs/{job_id}/progress").
+		WithResponse(new(model.ShowSqlJobProgressResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

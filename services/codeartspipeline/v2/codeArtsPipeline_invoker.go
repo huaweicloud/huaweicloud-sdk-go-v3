@@ -137,6 +137,42 @@ func (i *CreatePipelineTemplateInvoker) Invoke() (*model.CreatePipelineTemplateR
 	}
 }
 
+type CreatePluginDraftInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePluginDraftInvoker) Invoke() (*model.CreatePluginDraftResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePluginDraftResponse), nil
+	}
+}
+
+type CreatePluginVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePluginVersionInvoker) Invoke() (*model.CreatePluginVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePluginVersionResponse), nil
+	}
+}
+
+type CreatePublisherInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePublisherInvoker) Invoke() (*model.CreatePublisherResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePublisherResponse), nil
+	}
+}
+
 type CreateRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -521,6 +557,18 @@ func (i *PublishPluginBindInvoker) Invoke() (*model.PublishPluginBindResponse, e
 	}
 }
 
+type PublishPluginDraftInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishPluginDraftInvoker) Invoke() (*model.PublishPluginDraftResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishPluginDraftResponse), nil
+	}
+}
+
 type RejectManualReviewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -878,6 +926,30 @@ func (i *UpdatePipelineTemplateInvoker) Invoke() (*model.UpdatePipelineTemplateR
 		return nil, err
 	} else {
 		return result.(*model.UpdatePipelineTemplateResponse), nil
+	}
+}
+
+type UpdatePluginBaseInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePluginBaseInfoInvoker) Invoke() (*model.UpdatePluginBaseInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePluginBaseInfoResponse), nil
+	}
+}
+
+type UpdatePluginDraftInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePluginDraftInvoker) Invoke() (*model.UpdatePluginDraftResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePluginDraftResponse), nil
 	}
 }
 

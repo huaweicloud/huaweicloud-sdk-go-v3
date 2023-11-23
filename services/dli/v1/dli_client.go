@@ -19,109 +19,130 @@ func DliClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateJobTemplates 创建作业模板
-//
-// 该API用于创建作业模板。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateJobTemplates(request *model.CreateJobTemplatesRequest) (*model.CreateJobTemplatesResponse, error) {
-	requestDef := GenReqDefForCreateJobTemplates()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateJobTemplatesResponse), nil
-	}
-}
-
-// CreateJobTemplatesInvoker 创建作业模板
-func (c *DliClient) CreateJobTemplatesInvoker(request *model.CreateJobTemplatesRequest) *CreateJobTemplatesInvoker {
-	requestDef := GenReqDefForCreateJobTemplates()
-	return &CreateJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateSqlTemplates 存储指定SQL语句
-//
-// 该API用于存储指定的SQL语句，后续可以重复使用。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateSqlTemplates(request *model.CreateSqlTemplatesRequest) (*model.CreateSqlTemplatesResponse, error) {
-	requestDef := GenReqDefForCreateSqlTemplates()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateSqlTemplatesResponse), nil
-	}
-}
-
-// CreateSqlTemplatesInvoker 存储指定SQL语句
-func (c *DliClient) CreateSqlTemplatesInvoker(request *model.CreateSqlTemplatesRequest) *CreateSqlTemplatesInvoker {
-	requestDef := GenReqDefForCreateSqlTemplates()
-	return &CreateSqlTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteSqlTemplates 批量删除SQL模板
+// BatchDeleteSqlJobTemplates 批量删除SQL模板
 //
 // 该API用于批量删除SQL模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) DeleteSqlTemplates(request *model.DeleteSqlTemplatesRequest) (*model.DeleteSqlTemplatesResponse, error) {
-	requestDef := GenReqDefForDeleteSqlTemplates()
+func (c *DliClient) BatchDeleteSqlJobTemplates(request *model.BatchDeleteSqlJobTemplatesRequest) (*model.BatchDeleteSqlJobTemplatesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSqlJobTemplates()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteSqlTemplatesResponse), nil
+		return resp.(*model.BatchDeleteSqlJobTemplatesResponse), nil
 	}
 }
 
-// DeleteSqlTemplatesInvoker 批量删除SQL模板
-func (c *DliClient) DeleteSqlTemplatesInvoker(request *model.DeleteSqlTemplatesRequest) *DeleteSqlTemplatesInvoker {
-	requestDef := GenReqDefForDeleteSqlTemplates()
-	return &DeleteSqlTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// BatchDeleteSqlJobTemplatesInvoker 批量删除SQL模板
+func (c *DliClient) BatchDeleteSqlJobTemplatesInvoker(request *model.BatchDeleteSqlJobTemplatesRequest) *BatchDeleteSqlJobTemplatesInvoker {
+	requestDef := GenReqDefForBatchDeleteSqlJobTemplates()
+	return &BatchDeleteSqlJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListJobTemplates 查询作业模板列表
+// CreateSparkJobTemplate 创建作业模板
+//
+// 该API用于创建作业模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateSparkJobTemplate(request *model.CreateSparkJobTemplateRequest) (*model.CreateSparkJobTemplateResponse, error) {
+	requestDef := GenReqDefForCreateSparkJobTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSparkJobTemplateResponse), nil
+	}
+}
+
+// CreateSparkJobTemplateInvoker 创建作业模板
+func (c *DliClient) CreateSparkJobTemplateInvoker(request *model.CreateSparkJobTemplateRequest) *CreateSparkJobTemplateInvoker {
+	requestDef := GenReqDefForCreateSparkJobTemplate()
+	return &CreateSparkJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSqlJobTemplate 存储指定SQL语句
+//
+// 该API用于存储指定的SQL语句，后续可以重复使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateSqlJobTemplate(request *model.CreateSqlJobTemplateRequest) (*model.CreateSqlJobTemplateResponse, error) {
+	requestDef := GenReqDefForCreateSqlJobTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlJobTemplateResponse), nil
+	}
+}
+
+// CreateSqlJobTemplateInvoker 存储指定SQL语句
+func (c *DliClient) CreateSqlJobTemplateInvoker(request *model.CreateSqlJobTemplateRequest) *CreateSqlJobTemplateInvoker {
+	requestDef := GenReqDefForCreateSqlJobTemplate()
+	return &CreateSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSparkJobTemplates 查询作业模板列表
 //
 // 该API用于查询作业模板列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ListJobTemplates(request *model.ListJobTemplatesRequest) (*model.ListJobTemplatesResponse, error) {
-	requestDef := GenReqDefForListJobTemplates()
+func (c *DliClient) ListSparkJobTemplates(request *model.ListSparkJobTemplatesRequest) (*model.ListSparkJobTemplatesResponse, error) {
+	requestDef := GenReqDefForListSparkJobTemplates()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListJobTemplatesResponse), nil
+		return resp.(*model.ListSparkJobTemplatesResponse), nil
 	}
 }
 
-// ListJobTemplatesInvoker 查询作业模板列表
-func (c *DliClient) ListJobTemplatesInvoker(request *model.ListJobTemplatesRequest) *ListJobTemplatesInvoker {
-	requestDef := GenReqDefForListJobTemplates()
-	return &ListJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListSparkJobTemplatesInvoker 查询作业模板列表
+func (c *DliClient) ListSparkJobTemplatesInvoker(request *model.ListSparkJobTemplatesRequest) *ListSparkJobTemplatesInvoker {
+	requestDef := GenReqDefForListSparkJobTemplates()
+	return &ListSparkJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowJobTemplate 获取作业模板
+// ListSqlJobTemplates 查看所有SQL模板
+//
+// 该API用查看用户保存的所有SQL模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListSqlJobTemplates(request *model.ListSqlJobTemplatesRequest) (*model.ListSqlJobTemplatesResponse, error) {
+	requestDef := GenReqDefForListSqlJobTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlJobTemplatesResponse), nil
+	}
+}
+
+// ListSqlJobTemplatesInvoker 查看所有SQL模板
+func (c *DliClient) ListSqlJobTemplatesInvoker(request *model.ListSqlJobTemplatesRequest) *ListSqlJobTemplatesInvoker {
+	requestDef := GenReqDefForListSqlJobTemplates()
+	return &ListSqlJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSparkJobTemplate 获取作业模板
 //
 // 该API用于获取作业模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowJobTemplate(request *model.ShowJobTemplateRequest) (*model.ShowJobTemplateResponse, error) {
-	requestDef := GenReqDefForShowJobTemplate()
+func (c *DliClient) ShowSparkJobTemplate(request *model.ShowSparkJobTemplateRequest) (*model.ShowSparkJobTemplateResponse, error) {
+	requestDef := GenReqDefForShowSparkJobTemplate()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowJobTemplateResponse), nil
+		return resp.(*model.ShowSparkJobTemplateResponse), nil
 	}
 }
 
-// ShowJobTemplateInvoker 获取作业模板
-func (c *DliClient) ShowJobTemplateInvoker(request *model.ShowJobTemplateRequest) *ShowJobTemplateInvoker {
-	requestDef := GenReqDefForShowJobTemplate()
-	return &ShowJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowSparkJobTemplateInvoker 获取作业模板
+func (c *DliClient) ShowSparkJobTemplateInvoker(request *model.ShowSparkJobTemplateRequest) *ShowSparkJobTemplateInvoker {
+	requestDef := GenReqDefForShowSparkJobTemplate()
+	return &ShowSparkJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSqlSampleTemplates 查询所有SQL样例模板
@@ -145,88 +166,46 @@ func (c *DliClient) ShowSqlSampleTemplatesInvoker(request *model.ShowSqlSampleTe
 	return &ShowSqlSampleTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSqlTemplates 查看所有SQL模板
-//
-// 该API用查看用户保存的所有SQL模板。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowSqlTemplates(request *model.ShowSqlTemplatesRequest) (*model.ShowSqlTemplatesResponse, error) {
-	requestDef := GenReqDefForShowSqlTemplates()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSqlTemplatesResponse), nil
-	}
-}
-
-// ShowSqlTemplatesInvoker 查看所有SQL模板
-func (c *DliClient) ShowSqlTemplatesInvoker(request *model.ShowSqlTemplatesRequest) *ShowSqlTemplatesInvoker {
-	requestDef := GenReqDefForShowSqlTemplates()
-	return &ShowSqlTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateJobTemplates 修改作业模板
+// UpdateSparkJobTemplate 修改作业模板
 //
 // 该API用于修改作业模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateJobTemplates(request *model.UpdateJobTemplatesRequest) (*model.UpdateJobTemplatesResponse, error) {
-	requestDef := GenReqDefForUpdateJobTemplates()
+func (c *DliClient) UpdateSparkJobTemplate(request *model.UpdateSparkJobTemplateRequest) (*model.UpdateSparkJobTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateSparkJobTemplate()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateJobTemplatesResponse), nil
+		return resp.(*model.UpdateSparkJobTemplateResponse), nil
 	}
 }
 
-// UpdateJobTemplatesInvoker 修改作业模板
-func (c *DliClient) UpdateJobTemplatesInvoker(request *model.UpdateJobTemplatesRequest) *UpdateJobTemplatesInvoker {
-	requestDef := GenReqDefForUpdateJobTemplates()
-	return &UpdateJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateSparkJobTemplateInvoker 修改作业模板
+func (c *DliClient) UpdateSparkJobTemplateInvoker(request *model.UpdateSparkJobTemplateRequest) *UpdateSparkJobTemplateInvoker {
+	requestDef := GenReqDefForUpdateSparkJobTemplate()
+	return &UpdateSparkJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateSqlTemplates 更新SQL模板
+// UpdateSqlJobTemplate 更新SQL模板
 //
 // 该API用于更新SQL模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateSqlTemplates(request *model.UpdateSqlTemplatesRequest) (*model.UpdateSqlTemplatesResponse, error) {
-	requestDef := GenReqDefForUpdateSqlTemplates()
+func (c *DliClient) UpdateSqlJobTemplate(request *model.UpdateSqlJobTemplateRequest) (*model.UpdateSqlJobTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateSqlJobTemplate()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateSqlTemplatesResponse), nil
+		return resp.(*model.UpdateSqlJobTemplateResponse), nil
 	}
 }
 
-// UpdateSqlTemplatesInvoker 更新SQL模板
-func (c *DliClient) UpdateSqlTemplatesInvoker(request *model.UpdateSqlTemplatesRequest) *UpdateSqlTemplatesInvoker {
-	requestDef := GenReqDefForUpdateSqlTemplates()
-	return &UpdateSqlTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// AssociateConnectionQueue 绑定队列
-//
-// 该API用于在已创建的增强型跨源中绑定队列。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) AssociateConnectionQueue(request *model.AssociateConnectionQueueRequest) (*model.AssociateConnectionQueueResponse, error) {
-	requestDef := GenReqDefForAssociateConnectionQueue()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AssociateConnectionQueueResponse), nil
-	}
-}
-
-// AssociateConnectionQueueInvoker 绑定队列
-func (c *DliClient) AssociateConnectionQueueInvoker(request *model.AssociateConnectionQueueRequest) *AssociateConnectionQueueInvoker {
-	requestDef := GenReqDefForAssociateConnectionQueue()
-	return &AssociateConnectionQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateSqlJobTemplateInvoker 更新SQL模板
+func (c *DliClient) UpdateSqlJobTemplateInvoker(request *model.UpdateSqlJobTemplateRequest) *UpdateSqlJobTemplateInvoker {
+	requestDef := GenReqDefForUpdateSqlJobTemplate()
+	return &UpdateSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AssociateQueueToElasticResourcePool 关联队列到弹性资源池
@@ -250,25 +229,25 @@ func (c *DliClient) AssociateQueueToElasticResourcePoolInvoker(request *model.As
 	return &AssociateQueueToElasticResourcePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AuthorizeResource 数据赋权（用户、项目）
+// AssociateQueueToEnhancedConnection 绑定队列
 //
-// 该API用于将DLI资源权限赋给、回收、更新指定的其他用户或项目。
+// 该API用于在已创建的增强型跨源中绑定队列。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) AuthorizeResource(request *model.AuthorizeResourceRequest) (*model.AuthorizeResourceResponse, error) {
-	requestDef := GenReqDefForAuthorizeResource()
+func (c *DliClient) AssociateQueueToEnhancedConnection(request *model.AssociateQueueToEnhancedConnectionRequest) (*model.AssociateQueueToEnhancedConnectionResponse, error) {
+	requestDef := GenReqDefForAssociateQueueToEnhancedConnection()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.AuthorizeResourceResponse), nil
+		return resp.(*model.AssociateQueueToEnhancedConnectionResponse), nil
 	}
 }
 
-// AuthorizeResourceInvoker 数据赋权（用户、项目）
-func (c *DliClient) AuthorizeResourceInvoker(request *model.AuthorizeResourceRequest) *AuthorizeResourceInvoker {
-	requestDef := GenReqDefForAuthorizeResource()
-	return &AuthorizeResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// AssociateQueueToEnhancedConnectionInvoker 绑定队列
+func (c *DliClient) AssociateQueueToEnhancedConnectionInvoker(request *model.AssociateQueueToEnhancedConnectionRequest) *AssociateQueueToEnhancedConnectionInvoker {
+	requestDef := GenReqDefForAssociateQueueToEnhancedConnection()
+	return &AssociateQueueToEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteQueuePlans 批量删除队列定时扩缩容计划
@@ -336,27 +315,6 @@ func (c *DliClient) ChangeQueuePlanInvoker(request *model.ChangeQueuePlanRequest
 	return &ChangeQueuePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckConnection 创建地址连通性请求
-//
-// 创建地址连通性请求API接口，往指定集群发送地址连通性测试请求，并将测试地址插入表内
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CheckConnection(request *model.CheckConnectionRequest) (*model.CheckConnectionResponse, error) {
-	requestDef := GenReqDefForCheckConnection()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckConnectionResponse), nil
-	}
-}
-
-// CheckConnectionInvoker 创建地址连通性请求
-func (c *DliClient) CheckConnectionInvoker(request *model.CheckConnectionRequest) *CheckConnectionInvoker {
-	requestDef := GenReqDefForCheckConnection()
-	return &CheckConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateAuthInfo 创建跨源认证
 //
 // 该API用于创建跨源认证。
@@ -376,6 +334,27 @@ func (c *DliClient) CreateAuthInfo(request *model.CreateAuthInfoRequest) (*model
 func (c *DliClient) CreateAuthInfoInvoker(request *model.CreateAuthInfoRequest) *CreateAuthInfoInvoker {
 	requestDef := GenReqDefForCreateAuthInfo()
 	return &CreateAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnectivityTask 创建地址连通性请求
+//
+// 创建地址连通性请求API接口，往指定集群发送地址连通性测试请求，并将测试地址插入表内
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateConnectivityTask(request *model.CreateConnectivityTaskRequest) (*model.CreateConnectivityTaskResponse, error) {
+	requestDef := GenReqDefForCreateConnectivityTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConnectivityTaskResponse), nil
+	}
+}
+
+// CreateConnectivityTaskInvoker 创建地址连通性请求
+func (c *DliClient) CreateConnectivityTaskInvoker(request *model.CreateConnectivityTaskRequest) *CreateConnectivityTaskInvoker {
+	requestDef := GenReqDefForCreateConnectivityTask()
+	return &CreateConnectivityTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDatasourceConnection 创建经典型跨源连接
@@ -486,25 +465,25 @@ func (c *DliClient) CreateEnhancedConnectionRoutesInvoker(request *model.CreateE
 	return &CreateEnhancedConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateGlobalValue 创建DLI全局变量
+// CreateGlobalVariable 创建DLI全局变量
 //
 // 创建全局变量。全局变量用于替换SQL作业中的敏感数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateGlobalValue(request *model.CreateGlobalValueRequest) (*model.CreateGlobalValueResponse, error) {
-	requestDef := GenReqDefForCreateGlobalValue()
+func (c *DliClient) CreateGlobalVariable(request *model.CreateGlobalVariableRequest) (*model.CreateGlobalVariableResponse, error) {
+	requestDef := GenReqDefForCreateGlobalVariable()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateGlobalValueResponse), nil
+		return resp.(*model.CreateGlobalVariableResponse), nil
 	}
 }
 
-// CreateGlobalValueInvoker 创建DLI全局变量
-func (c *DliClient) CreateGlobalValueInvoker(request *model.CreateGlobalValueRequest) *CreateGlobalValueInvoker {
-	requestDef := GenReqDefForCreateGlobalValue()
-	return &CreateGlobalValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateGlobalVariableInvoker 创建DLI全局变量
+func (c *DliClient) CreateGlobalVariableInvoker(request *model.CreateGlobalVariableRequest) *CreateGlobalVariableInvoker {
+	requestDef := GenReqDefForCreateGlobalVariable()
+	return &CreateGlobalVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateQueue 创建队列
@@ -677,25 +656,25 @@ func (c *DliClient) DeleteEnhancedConnectionRoutesInvoker(request *model.DeleteE
 	return &DeleteEnhancedConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteGlobalValue 删除DLI全局变量
+// DeleteGlobalVariable 删除DLI全局变量
 //
 // 删除全局变量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) DeleteGlobalValue(request *model.DeleteGlobalValueRequest) (*model.DeleteGlobalValueResponse, error) {
-	requestDef := GenReqDefForDeleteGlobalValue()
+func (c *DliClient) DeleteGlobalVariable(request *model.DeleteGlobalVariableRequest) (*model.DeleteGlobalVariableResponse, error) {
+	requestDef := GenReqDefForDeleteGlobalVariable()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteGlobalValueResponse), nil
+		return resp.(*model.DeleteGlobalVariableResponse), nil
 	}
 }
 
-// DeleteGlobalValueInvoker 删除DLI全局变量
-func (c *DliClient) DeleteGlobalValueInvoker(request *model.DeleteGlobalValueRequest) *DeleteGlobalValueInvoker {
-	requestDef := GenReqDefForDeleteGlobalValue()
-	return &DeleteGlobalValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteGlobalVariableInvoker 删除DLI全局变量
+func (c *DliClient) DeleteGlobalVariableInvoker(request *model.DeleteGlobalVariableRequest) *DeleteGlobalVariableInvoker {
+	requestDef := GenReqDefForDeleteGlobalVariable()
+	return &DeleteGlobalVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteQueue 删除队列
@@ -784,25 +763,25 @@ func (c *DliClient) DeleteResourceInvoker(request *model.DeleteResourceRequest) 
 	return &DeleteResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisassociateConnectionQueue 解绑队列
+// DisassociateQueueFromEnhancedConnection 解绑队列
 //
 // 该API用于在增强型跨源中解绑已绑定的队列。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) DisassociateConnectionQueue(request *model.DisassociateConnectionQueueRequest) (*model.DisassociateConnectionQueueResponse, error) {
-	requestDef := GenReqDefForDisassociateConnectionQueue()
+func (c *DliClient) DisassociateQueueFromEnhancedConnection(request *model.DisassociateQueueFromEnhancedConnectionRequest) (*model.DisassociateQueueFromEnhancedConnectionResponse, error) {
+	requestDef := GenReqDefForDisassociateQueueFromEnhancedConnection()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DisassociateConnectionQueueResponse), nil
+		return resp.(*model.DisassociateQueueFromEnhancedConnectionResponse), nil
 	}
 }
 
-// DisassociateConnectionQueueInvoker 解绑队列
-func (c *DliClient) DisassociateConnectionQueueInvoker(request *model.DisassociateConnectionQueueRequest) *DisassociateConnectionQueueInvoker {
-	requestDef := GenReqDefForDisassociateConnectionQueue()
-	return &DisassociateConnectionQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DisassociateQueueFromEnhancedConnectionInvoker 解绑队列
+func (c *DliClient) DisassociateQueueFromEnhancedConnectionInvoker(request *model.DisassociateQueueFromEnhancedConnectionRequest) *DisassociateQueueFromEnhancedConnectionInvoker {
+	requestDef := GenReqDefForDisassociateQueueFromEnhancedConnection()
+	return &DisassociateQueueFromEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAuthInfo 获取跨源认证列表
@@ -824,6 +803,27 @@ func (c *DliClient) ListAuthInfo(request *model.ListAuthInfoRequest) (*model.Lis
 func (c *DliClient) ListAuthInfoInvoker(request *model.ListAuthInfoRequest) *ListAuthInfoInvoker {
 	requestDef := GenReqDefForListAuthInfo()
 	return &ListAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAuthorizationPrivileges 查看赋权对象的用者权限信息
+//
+// 获取对象赋权用户的权限信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListAuthorizationPrivileges(request *model.ListAuthorizationPrivilegesRequest) (*model.ListAuthorizationPrivilegesResponse, error) {
+	requestDef := GenReqDefForListAuthorizationPrivileges()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAuthorizationPrivilegesResponse), nil
+	}
+}
+
+// ListAuthorizationPrivilegesInvoker 查看赋权对象的用者权限信息
+func (c *DliClient) ListAuthorizationPrivilegesInvoker(request *model.ListAuthorizationPrivilegesRequest) *ListAuthorizationPrivilegesInvoker {
+	requestDef := GenReqDefForListAuthorizationPrivileges()
+	return &ListAuthorizationPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDatabaseUsers 查看数据库的使用者
@@ -952,25 +952,25 @@ func (c *DliClient) ListEnhancedConnectionsInvoker(request *model.ListEnhancedCo
 	return &ListEnhancedConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListGlobalValues 查询DLI全局变量列表
+// ListGlobalVariables 查询DLI全局变量列表
 //
 // 查询全局变量列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ListGlobalValues(request *model.ListGlobalValuesRequest) (*model.ListGlobalValuesResponse, error) {
-	requestDef := GenReqDefForListGlobalValues()
+func (c *DliClient) ListGlobalVariables(request *model.ListGlobalVariablesRequest) (*model.ListGlobalVariablesResponse, error) {
+	requestDef := GenReqDefForListGlobalVariables()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListGlobalValuesResponse), nil
+		return resp.(*model.ListGlobalVariablesResponse), nil
 	}
 }
 
-// ListGlobalValuesInvoker 查询DLI全局变量列表
-func (c *DliClient) ListGlobalValuesInvoker(request *model.ListGlobalValuesRequest) *ListGlobalValuesInvoker {
-	requestDef := GenReqDefForListGlobalValues()
-	return &ListGlobalValuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListGlobalVariablesInvoker 查询DLI全局变量列表
+func (c *DliClient) ListGlobalVariablesInvoker(request *model.ListGlobalVariablesRequest) *ListGlobalVariablesInvoker {
+	requestDef := GenReqDefForListGlobalVariables()
+	return &ListGlobalVariablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListQueuePlans 查看队列定时扩缩容计划
@@ -994,25 +994,25 @@ func (c *DliClient) ListQueuePlansInvoker(request *model.ListQueuePlansRequest) 
 	return &ListQueuePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListQueueProperty 获取队列属性
+// ListQueueProperties 获取队列属性
 //
 // 获取队列配置的属性
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ListQueueProperty(request *model.ListQueuePropertyRequest) (*model.ListQueuePropertyResponse, error) {
-	requestDef := GenReqDefForListQueueProperty()
+func (c *DliClient) ListQueueProperties(request *model.ListQueuePropertiesRequest) (*model.ListQueuePropertiesResponse, error) {
+	requestDef := GenReqDefForListQueueProperties()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListQueuePropertyResponse), nil
+		return resp.(*model.ListQueuePropertiesResponse), nil
 	}
 }
 
-// ListQueuePropertyInvoker 获取队列属性
-func (c *DliClient) ListQueuePropertyInvoker(request *model.ListQueuePropertyRequest) *ListQueuePropertyInvoker {
-	requestDef := GenReqDefForListQueueProperty()
-	return &ListQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListQueuePropertiesInvoker 获取队列属性
+func (c *DliClient) ListQueuePropertiesInvoker(request *model.ListQueuePropertiesRequest) *ListQueuePropertiesInvoker {
+	requestDef := GenReqDefForListQueueProperties()
+	return &ListQueuePropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListQueueUsers 查看队列的使用者
@@ -1141,6 +1141,27 @@ func (c *DliClient) RegisterAuthorizedQueueInvoker(request *model.RegisterAuthor
 	return &RegisterAuthorizedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunAuthorizationAction 数据赋权（用户、项目）
+//
+// 该API用于将DLI资源权限赋给、回收、更新指定的其他用户或项目。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) RunAuthorizationAction(request *model.RunAuthorizationActionRequest) (*model.RunAuthorizationActionResponse, error) {
+	requestDef := GenReqDefForRunAuthorizationAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunAuthorizationActionResponse), nil
+	}
+}
+
+// RunAuthorizationActionInvoker 数据赋权（用户、项目）
+func (c *DliClient) RunAuthorizationActionInvoker(request *model.RunAuthorizationActionRequest) *RunAuthorizationActionInvoker {
+	requestDef := GenReqDefForRunAuthorizationAction()
+	return &RunAuthorizationActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunQueueAction 重启/扩容/缩容队列
 //
 // 该功能用于重新启动队列、扩容队列、缩容队列。
@@ -1160,6 +1181,27 @@ func (c *DliClient) RunQueueAction(request *model.RunQueueActionRequest) (*model
 func (c *DliClient) RunQueueActionInvoker(request *model.RunQueueActionRequest) *RunQueueActionInvoker {
 	requestDef := GenReqDefForRunQueueAction()
 	return &RunQueueActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConnectivityTask 查询指定地址连通性测试详情
+//
+// 该API用于在连通性测试提交后查询连通性结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowConnectivityTask(request *model.ShowConnectivityTaskRequest) (*model.ShowConnectivityTaskResponse, error) {
+	requestDef := GenReqDefForShowConnectivityTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConnectivityTaskResponse), nil
+	}
+}
+
+// ShowConnectivityTaskInvoker 查询指定地址连通性测试详情
+func (c *DliClient) ShowConnectivityTaskInvoker(request *model.ShowConnectivityTaskRequest) *ShowConnectivityTaskInvoker {
+	requestDef := GenReqDefForShowConnectivityTask()
+	return &ShowConnectivityTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDatasourceConnection 查询经典型跨源连接
@@ -1225,88 +1267,46 @@ func (c *DliClient) ShowEnhancedConnectionInvoker(request *model.ShowEnhancedCon
 	return &ShowEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowEnhancedPrivilege 查询增强型跨源授权信息
+// ShowEnhancedConnectionPrivilege 查询增强型跨源授权信息
 //
 // 该API用于查询增强型跨源连接授权的信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowEnhancedPrivilege(request *model.ShowEnhancedPrivilegeRequest) (*model.ShowEnhancedPrivilegeResponse, error) {
-	requestDef := GenReqDefForShowEnhancedPrivilege()
+func (c *DliClient) ShowEnhancedConnectionPrivilege(request *model.ShowEnhancedConnectionPrivilegeRequest) (*model.ShowEnhancedConnectionPrivilegeResponse, error) {
+	requestDef := GenReqDefForShowEnhancedConnectionPrivilege()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowEnhancedPrivilegeResponse), nil
+		return resp.(*model.ShowEnhancedConnectionPrivilegeResponse), nil
 	}
 }
 
-// ShowEnhancedPrivilegeInvoker 查询增强型跨源授权信息
-func (c *DliClient) ShowEnhancedPrivilegeInvoker(request *model.ShowEnhancedPrivilegeRequest) *ShowEnhancedPrivilegeInvoker {
-	requestDef := GenReqDefForShowEnhancedPrivilege()
-	return &ShowEnhancedPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowEnhancedConnectionPrivilegeInvoker 查询增强型跨源授权信息
+func (c *DliClient) ShowEnhancedConnectionPrivilegeInvoker(request *model.ShowEnhancedConnectionPrivilegeRequest) *ShowEnhancedConnectionPrivilegeInvoker {
+	requestDef := GenReqDefForShowEnhancedConnectionPrivilege()
+	return &ShowEnhancedConnectionPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowNodeConnectivity 查询指定地址连通性测试详情
-//
-// 该API用于在连通性测试提交后查询连通性结果。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowNodeConnectivity(request *model.ShowNodeConnectivityRequest) (*model.ShowNodeConnectivityResponse, error) {
-	requestDef := GenReqDefForShowNodeConnectivity()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowNodeConnectivityResponse), nil
-	}
-}
-
-// ShowNodeConnectivityInvoker 查询指定地址连通性测试详情
-func (c *DliClient) ShowNodeConnectivityInvoker(request *model.ShowNodeConnectivityRequest) *ShowNodeConnectivityInvoker {
-	requestDef := GenReqDefForShowNodeConnectivity()
-	return &ShowNodeConnectivityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowObjectUser 查看赋权对象的用者权限信息
-//
-// 获取对象赋权用户的权限信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowObjectUser(request *model.ShowObjectUserRequest) (*model.ShowObjectUserResponse, error) {
-	requestDef := GenReqDefForShowObjectUser()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowObjectUserResponse), nil
-	}
-}
-
-// ShowObjectUserInvoker 查看赋权对象的用者权限信息
-func (c *DliClient) ShowObjectUserInvoker(request *model.ShowObjectUserRequest) *ShowObjectUserInvoker {
-	requestDef := GenReqDefForShowObjectUser()
-	return &ShowObjectUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowQueueDetail 查询队列详情
+// ShowQueue 查询队列详情
 //
 // 该API用于列出该project下指定的队列详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowQueueDetail(request *model.ShowQueueDetailRequest) (*model.ShowQueueDetailResponse, error) {
-	requestDef := GenReqDefForShowQueueDetail()
+func (c *DliClient) ShowQueue(request *model.ShowQueueRequest) (*model.ShowQueueResponse, error) {
+	requestDef := GenReqDefForShowQueue()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowQueueDetailResponse), nil
+		return resp.(*model.ShowQueueResponse), nil
 	}
 }
 
-// ShowQueueDetailInvoker 查询队列详情
-func (c *DliClient) ShowQueueDetailInvoker(request *model.ShowQueueDetailRequest) *ShowQueueDetailInvoker {
-	requestDef := GenReqDefForShowQueueDetail()
-	return &ShowQueueDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowQueueInvoker 查询队列详情
+func (c *DliClient) ShowQueueInvoker(request *model.ShowQueueRequest) *ShowQueueInvoker {
+	requestDef := GenReqDefForShowQueue()
+	return &ShowQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResourceInfo 查看组内资源包
@@ -1372,46 +1372,67 @@ func (c *DliClient) UpdateElasticResourcePoolInvoker(request *model.UpdateElasti
 	return &UpdateElasticResourcePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateElasticResourcePoolQueueInfo 修改弹性资源池关联的队列优先级
+// UpdateElasticResourcePoolQueue 修改弹性资源池关联的队列优先级
 //
 // 设置弹性资源池指定队列的扩缩容策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateElasticResourcePoolQueueInfo(request *model.UpdateElasticResourcePoolQueueInfoRequest) (*model.UpdateElasticResourcePoolQueueInfoResponse, error) {
-	requestDef := GenReqDefForUpdateElasticResourcePoolQueueInfo()
+func (c *DliClient) UpdateElasticResourcePoolQueue(request *model.UpdateElasticResourcePoolQueueRequest) (*model.UpdateElasticResourcePoolQueueResponse, error) {
+	requestDef := GenReqDefForUpdateElasticResourcePoolQueue()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateElasticResourcePoolQueueInfoResponse), nil
+		return resp.(*model.UpdateElasticResourcePoolQueueResponse), nil
 	}
 }
 
-// UpdateElasticResourcePoolQueueInfoInvoker 修改弹性资源池关联的队列优先级
-func (c *DliClient) UpdateElasticResourcePoolQueueInfoInvoker(request *model.UpdateElasticResourcePoolQueueInfoRequest) *UpdateElasticResourcePoolQueueInfoInvoker {
-	requestDef := GenReqDefForUpdateElasticResourcePoolQueueInfo()
-	return &UpdateElasticResourcePoolQueueInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateElasticResourcePoolQueueInvoker 修改弹性资源池关联的队列优先级
+func (c *DliClient) UpdateElasticResourcePoolQueueInvoker(request *model.UpdateElasticResourcePoolQueueRequest) *UpdateElasticResourcePoolQueueInvoker {
+	requestDef := GenReqDefForUpdateElasticResourcePoolQueue()
+	return &UpdateElasticResourcePoolQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateGlobalValue 修改DLI全局变量
+// UpdateEnhancedConnection 修改增强型跨源主机信息
+//
+// 该API用于在跨源中修改数据源主机信息，仅支持全量覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) UpdateEnhancedConnection(request *model.UpdateEnhancedConnectionRequest) (*model.UpdateEnhancedConnectionResponse, error) {
+	requestDef := GenReqDefForUpdateEnhancedConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEnhancedConnectionResponse), nil
+	}
+}
+
+// UpdateEnhancedConnectionInvoker 修改增强型跨源主机信息
+func (c *DliClient) UpdateEnhancedConnectionInvoker(request *model.UpdateEnhancedConnectionRequest) *UpdateEnhancedConnectionInvoker {
+	requestDef := GenReqDefForUpdateEnhancedConnection()
+	return &UpdateEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGlobalVariable 修改DLI全局变量
 //
 // 修改全局变量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateGlobalValue(request *model.UpdateGlobalValueRequest) (*model.UpdateGlobalValueResponse, error) {
-	requestDef := GenReqDefForUpdateGlobalValue()
+func (c *DliClient) UpdateGlobalVariable(request *model.UpdateGlobalVariableRequest) (*model.UpdateGlobalVariableResponse, error) {
+	requestDef := GenReqDefForUpdateGlobalVariable()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateGlobalValueResponse), nil
+		return resp.(*model.UpdateGlobalVariableResponse), nil
 	}
 }
 
-// UpdateGlobalValueInvoker 修改DLI全局变量
-func (c *DliClient) UpdateGlobalValueInvoker(request *model.UpdateGlobalValueRequest) *UpdateGlobalValueInvoker {
-	requestDef := GenReqDefForUpdateGlobalValue()
-	return &UpdateGlobalValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateGlobalVariableInvoker 修改DLI全局变量
+func (c *DliClient) UpdateGlobalVariableInvoker(request *model.UpdateGlobalVariableRequest) *UpdateGlobalVariableInvoker {
+	requestDef := GenReqDefForUpdateGlobalVariable()
+	return &UpdateGlobalVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGroupOrResourceOwner 修改组或者资源包拥有者
@@ -1433,27 +1454,6 @@ func (c *DliClient) UpdateGroupOrResourceOwner(request *model.UpdateGroupOrResou
 func (c *DliClient) UpdateGroupOrResourceOwnerInvoker(request *model.UpdateGroupOrResourceOwnerRequest) *UpdateGroupOrResourceOwnerInvoker {
 	requestDef := GenReqDefForUpdateGroupOrResourceOwner()
 	return &UpdateGroupOrResourceOwnerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateHostMassage 修改增强型跨源主机信息
-//
-// 该API用于在跨源中修改数据源主机信息，仅支持全量覆盖。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateHostMassage(request *model.UpdateHostMassageRequest) (*model.UpdateHostMassageResponse, error) {
-	requestDef := GenReqDefForUpdateHostMassage()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateHostMassageResponse), nil
-	}
-}
-
-// UpdateHostMassageInvoker 修改增强型跨源主机信息
-func (c *DliClient) UpdateHostMassageInvoker(request *model.UpdateHostMassageRequest) *UpdateHostMassageInvoker {
-	requestDef := GenReqDefForUpdateHostMassage()
-	return &UpdateHostMassageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateQueueCidr 修改队列网段
@@ -1650,25 +1650,25 @@ func (c *DliClient) ChangeFlinkJobStatusReportInvoker(request *model.ChangeFlink
 	return &ChangeFlinkJobStatusReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateFlinkJar 新建Flink Jar作业
+// CreateFlinkJarJob 新建Flink Jar作业
 //
 // 用户自定义作业目前支持jar格式，运行在独享集群中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateFlinkJar(request *model.CreateFlinkJarRequest) (*model.CreateFlinkJarResponse, error) {
-	requestDef := GenReqDefForCreateFlinkJar()
+func (c *DliClient) CreateFlinkJarJob(request *model.CreateFlinkJarJobRequest) (*model.CreateFlinkJarJobResponse, error) {
+	requestDef := GenReqDefForCreateFlinkJarJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateFlinkJarResponse), nil
+		return resp.(*model.CreateFlinkJarJobResponse), nil
 	}
 }
 
-// CreateFlinkJarInvoker 新建Flink Jar作业
-func (c *DliClient) CreateFlinkJarInvoker(request *model.CreateFlinkJarRequest) *CreateFlinkJarInvoker {
-	requestDef := GenReqDefForCreateFlinkJar()
-	return &CreateFlinkJarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateFlinkJarJobInvoker 新建Flink Jar作业
+func (c *DliClient) CreateFlinkJarJobInvoker(request *model.CreateFlinkJarJobRequest) *CreateFlinkJarJobInvoker {
+	requestDef := GenReqDefForCreateFlinkJarJob()
+	return &CreateFlinkJarJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateFlinkSqlJob 新建Flink SQL作业
@@ -1692,25 +1692,46 @@ func (c *DliClient) CreateFlinkSqlJobInvoker(request *model.CreateFlinkSqlJobReq
 	return &CreateFlinkSqlJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateFlinkTemplate 新建Flink作业模板
+// CreateFlinkSqlJobGraph 生成flink SQL作业的静态流图
 //
-// 在DLI服务中新建一个Flink作业模板，最多100个。
+// 生成flink SQL作业的静态流图
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateFlinkTemplate(request *model.CreateFlinkTemplateRequest) (*model.CreateFlinkTemplateResponse, error) {
-	requestDef := GenReqDefForCreateFlinkTemplate()
+func (c *DliClient) CreateFlinkSqlJobGraph(request *model.CreateFlinkSqlJobGraphRequest) (*model.CreateFlinkSqlJobGraphResponse, error) {
+	requestDef := GenReqDefForCreateFlinkSqlJobGraph()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateFlinkTemplateResponse), nil
+		return resp.(*model.CreateFlinkSqlJobGraphResponse), nil
 	}
 }
 
-// CreateFlinkTemplateInvoker 新建Flink作业模板
-func (c *DliClient) CreateFlinkTemplateInvoker(request *model.CreateFlinkTemplateRequest) *CreateFlinkTemplateInvoker {
-	requestDef := GenReqDefForCreateFlinkTemplate()
-	return &CreateFlinkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateFlinkSqlJobGraphInvoker 生成flink SQL作业的静态流图
+func (c *DliClient) CreateFlinkSqlJobGraphInvoker(request *model.CreateFlinkSqlJobGraphRequest) *CreateFlinkSqlJobGraphInvoker {
+	requestDef := GenReqDefForCreateFlinkSqlJobGraph()
+	return &CreateFlinkSqlJobGraphInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFlinkSqlJobTemplate 新建Flink作业模板
+//
+// 在DLI服务中新建一个Flink作业模板，最多100个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateFlinkSqlJobTemplate(request *model.CreateFlinkSqlJobTemplateRequest) (*model.CreateFlinkSqlJobTemplateResponse, error) {
+	requestDef := GenReqDefForCreateFlinkSqlJobTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFlinkSqlJobTemplateResponse), nil
+	}
+}
+
+// CreateFlinkSqlJobTemplateInvoker 新建Flink作业模板
+func (c *DliClient) CreateFlinkSqlJobTemplateInvoker(request *model.CreateFlinkSqlJobTemplateRequest) *CreateFlinkSqlJobTemplateInvoker {
+	requestDef := GenReqDefForCreateFlinkSqlJobTemplate()
+	return &CreateFlinkSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateIefMessageChannel 创建IEF消息通道
@@ -1755,27 +1776,6 @@ func (c *DliClient) CreateIefSystemEventsInvoker(request *model.CreateIefSystemE
 	return &CreateIefSystemEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateStreamGraph 生成flink SQL作业的静态流图
-//
-// 生成flink SQL作业的静态流图
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateStreamGraph(request *model.CreateStreamGraphRequest) (*model.CreateStreamGraphResponse, error) {
-	requestDef := GenReqDefForCreateStreamGraph()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateStreamGraphResponse), nil
-	}
-}
-
-// CreateStreamGraphInvoker 生成flink SQL作业的静态流图
-func (c *DliClient) CreateStreamGraphInvoker(request *model.CreateStreamGraphRequest) *CreateStreamGraphInvoker {
-	requestDef := GenReqDefForCreateStreamGraph()
-	return &CreateStreamGraphInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteFlinkJob 删除作业
 //
 // 删除任何状态的作业。
@@ -1797,67 +1797,67 @@ func (c *DliClient) DeleteFlinkJobInvoker(request *model.DeleteFlinkJobRequest) 
 	return &DeleteFlinkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteFlinkTemplate 删除Flink作业模板
+// DeleteFlinkSqlJobTemplate 删除Flink作业模板
 //
 // 删除一个Flink作业模板，即使当前模板正在被作业使用，也允许删除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) DeleteFlinkTemplate(request *model.DeleteFlinkTemplateRequest) (*model.DeleteFlinkTemplateResponse, error) {
-	requestDef := GenReqDefForDeleteFlinkTemplate()
+func (c *DliClient) DeleteFlinkSqlJobTemplate(request *model.DeleteFlinkSqlJobTemplateRequest) (*model.DeleteFlinkSqlJobTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteFlinkSqlJobTemplate()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteFlinkTemplateResponse), nil
+		return resp.(*model.DeleteFlinkSqlJobTemplateResponse), nil
 	}
 }
 
-// DeleteFlinkTemplateInvoker 删除Flink作业模板
-func (c *DliClient) DeleteFlinkTemplateInvoker(request *model.DeleteFlinkTemplateRequest) *DeleteFlinkTemplateInvoker {
-	requestDef := GenReqDefForDeleteFlinkTemplate()
-	return &DeleteFlinkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteFlinkSqlJobTemplateInvoker 删除Flink作业模板
+func (c *DliClient) DeleteFlinkSqlJobTemplateInvoker(request *model.DeleteFlinkSqlJobTemplateRequest) *DeleteFlinkSqlJobTemplateInvoker {
+	requestDef := GenReqDefForDeleteFlinkSqlJobTemplate()
+	return &DeleteFlinkSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportFlinkJob flink作业导出
+// ExportFlinkJobs flink作业导出
 //
 // 通过POST方式，导出flink作业，请求体为JSON格式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ExportFlinkJob(request *model.ExportFlinkJobRequest) (*model.ExportFlinkJobResponse, error) {
-	requestDef := GenReqDefForExportFlinkJob()
+func (c *DliClient) ExportFlinkJobs(request *model.ExportFlinkJobsRequest) (*model.ExportFlinkJobsResponse, error) {
+	requestDef := GenReqDefForExportFlinkJobs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ExportFlinkJobResponse), nil
+		return resp.(*model.ExportFlinkJobsResponse), nil
 	}
 }
 
-// ExportFlinkJobInvoker flink作业导出
-func (c *DliClient) ExportFlinkJobInvoker(request *model.ExportFlinkJobRequest) *ExportFlinkJobInvoker {
-	requestDef := GenReqDefForExportFlinkJob()
-	return &ExportFlinkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ExportFlinkJobsInvoker flink作业导出
+func (c *DliClient) ExportFlinkJobsInvoker(request *model.ExportFlinkJobsRequest) *ExportFlinkJobsInvoker {
+	requestDef := GenReqDefForExportFlinkJobs()
+	return &ExportFlinkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ImportFlinkJob flink作业导入
+// ImportFlinkJobs flink作业导入
 //
 // 通过POST方式，导入flink作业，请求体为JSON格式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ImportFlinkJob(request *model.ImportFlinkJobRequest) (*model.ImportFlinkJobResponse, error) {
-	requestDef := GenReqDefForImportFlinkJob()
+func (c *DliClient) ImportFlinkJobs(request *model.ImportFlinkJobsRequest) (*model.ImportFlinkJobsResponse, error) {
+	requestDef := GenReqDefForImportFlinkJobs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ImportFlinkJobResponse), nil
+		return resp.(*model.ImportFlinkJobsResponse), nil
 	}
 }
 
-// ImportFlinkJobInvoker flink作业导入
-func (c *DliClient) ImportFlinkJobInvoker(request *model.ImportFlinkJobRequest) *ImportFlinkJobInvoker {
-	requestDef := GenReqDefForImportFlinkJob()
-	return &ImportFlinkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ImportFlinkJobsInvoker flink作业导入
+func (c *DliClient) ImportFlinkJobsInvoker(request *model.ImportFlinkJobsRequest) *ImportFlinkJobsInvoker {
+	requestDef := GenReqDefForImportFlinkJobs()
+	return &ImportFlinkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFlinkJobs 查询Flink作业列表
@@ -1881,25 +1881,25 @@ func (c *DliClient) ListFlinkJobsInvoker(request *model.ListFlinkJobsRequest) *L
 	return &ListFlinkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFlinkTemplates 查询Flink作业模板列表
+// ListFlinkSqlJobTemplates 查询Flink作业模板列表
 //
 // 查询Flink作业模板列表。当前只支持查询用户自定义模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ListFlinkTemplates(request *model.ListFlinkTemplatesRequest) (*model.ListFlinkTemplatesResponse, error) {
-	requestDef := GenReqDefForListFlinkTemplates()
+func (c *DliClient) ListFlinkSqlJobTemplates(request *model.ListFlinkSqlJobTemplatesRequest) (*model.ListFlinkSqlJobTemplatesResponse, error) {
+	requestDef := GenReqDefForListFlinkSqlJobTemplates()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListFlinkTemplatesResponse), nil
+		return resp.(*model.ListFlinkSqlJobTemplatesResponse), nil
 	}
 }
 
-// ListFlinkTemplatesInvoker 查询Flink作业模板列表
-func (c *DliClient) ListFlinkTemplatesInvoker(request *model.ListFlinkTemplatesRequest) *ListFlinkTemplatesInvoker {
-	requestDef := GenReqDefForListFlinkTemplates()
-	return &ListFlinkTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListFlinkSqlJobTemplatesInvoker 查询Flink作业模板列表
+func (c *DliClient) ListFlinkSqlJobTemplatesInvoker(request *model.ListFlinkSqlJobTemplatesRequest) *ListFlinkSqlJobTemplatesInvoker {
+	requestDef := GenReqDefForListFlinkSqlJobTemplates()
+	return &ListFlinkSqlJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RegisterBucket OBS授权给DLI服务
@@ -1944,27 +1944,6 @@ func (c *DliClient) RunIefJobActionCallBackInvoker(request *model.RunIefJobActio
 	return &RunIefJobActionCallBackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowFlinkExecuteGraph 查询Flink作业执行计划
-//
-// 查询Flink作业执行计划。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowFlinkExecuteGraph(request *model.ShowFlinkExecuteGraphRequest) (*model.ShowFlinkExecuteGraphResponse, error) {
-	requestDef := GenReqDefForShowFlinkExecuteGraph()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowFlinkExecuteGraphResponse), nil
-	}
-}
-
-// ShowFlinkExecuteGraphInvoker 查询Flink作业执行计划
-func (c *DliClient) ShowFlinkExecuteGraphInvoker(request *model.ShowFlinkExecuteGraphRequest) *ShowFlinkExecuteGraphInvoker {
-	requestDef := GenReqDefForShowFlinkExecuteGraph()
-	return &ShowFlinkExecuteGraphInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowFlinkJob 查询Flink作业详情
 //
 // 查看一个Flink作业的详情信息。
@@ -1984,6 +1963,27 @@ func (c *DliClient) ShowFlinkJob(request *model.ShowFlinkJobRequest) (*model.Sho
 func (c *DliClient) ShowFlinkJobInvoker(request *model.ShowFlinkJobRequest) *ShowFlinkJobInvoker {
 	requestDef := GenReqDefForShowFlinkJob()
 	return &ShowFlinkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlinkJobExecutionGraph 查询Flink作业执行计划
+//
+// 查询Flink作业执行计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowFlinkJobExecutionGraph(request *model.ShowFlinkJobExecutionGraphRequest) (*model.ShowFlinkJobExecutionGraphResponse, error) {
+	requestDef := GenReqDefForShowFlinkJobExecutionGraph()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlinkJobExecutionGraphResponse), nil
+	}
+}
+
+// ShowFlinkJobExecutionGraphInvoker 查询Flink作业执行计划
+func (c *DliClient) ShowFlinkJobExecutionGraphInvoker(request *model.ShowFlinkJobExecutionGraphRequest) *ShowFlinkJobExecutionGraphInvoker {
+	requestDef := GenReqDefForShowFlinkJobExecutionGraph()
+	return &ShowFlinkJobExecutionGraphInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFlinkMetric 查询Flink作业监控信息
@@ -2028,151 +2028,130 @@ func (c *DliClient) StopFlinkJobsInvoker(request *model.StopFlinkJobsRequest) *S
 	return &StopFlinkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFlinkJar 更新Flink Jar作业
+// UpdateFlinkJarJob 更新Flink Jar作业
 //
 // 更新用户自定义作业，目前支持jar格式，运行在独享集群中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateFlinkJar(request *model.UpdateFlinkJarRequest) (*model.UpdateFlinkJarResponse, error) {
-	requestDef := GenReqDefForUpdateFlinkJar()
+func (c *DliClient) UpdateFlinkJarJob(request *model.UpdateFlinkJarJobRequest) (*model.UpdateFlinkJarJobResponse, error) {
+	requestDef := GenReqDefForUpdateFlinkJarJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateFlinkJarResponse), nil
+		return resp.(*model.UpdateFlinkJarJobResponse), nil
 	}
 }
 
-// UpdateFlinkJarInvoker 更新Flink Jar作业
-func (c *DliClient) UpdateFlinkJarInvoker(request *model.UpdateFlinkJarRequest) *UpdateFlinkJarInvoker {
-	requestDef := GenReqDefForUpdateFlinkJar()
-	return &UpdateFlinkJarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateFlinkJarJobInvoker 更新Flink Jar作业
+func (c *DliClient) UpdateFlinkJarJobInvoker(request *model.UpdateFlinkJarJobRequest) *UpdateFlinkJarJobInvoker {
+	requestDef := GenReqDefForUpdateFlinkJarJob()
+	return &UpdateFlinkJarJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFlinkSql 更新Flink SQL作业
+// UpdateFlinkSqlJob 更新Flink SQL作业
 //
 // Stream SQL的语法扩展了Apache Flink SQL。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateFlinkSql(request *model.UpdateFlinkSqlRequest) (*model.UpdateFlinkSqlResponse, error) {
-	requestDef := GenReqDefForUpdateFlinkSql()
+func (c *DliClient) UpdateFlinkSqlJob(request *model.UpdateFlinkSqlJobRequest) (*model.UpdateFlinkSqlJobResponse, error) {
+	requestDef := GenReqDefForUpdateFlinkSqlJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateFlinkSqlResponse), nil
+		return resp.(*model.UpdateFlinkSqlJobResponse), nil
 	}
 }
 
-// UpdateFlinkSqlInvoker 更新Flink SQL作业
-func (c *DliClient) UpdateFlinkSqlInvoker(request *model.UpdateFlinkSqlRequest) *UpdateFlinkSqlInvoker {
-	requestDef := GenReqDefForUpdateFlinkSql()
-	return &UpdateFlinkSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateFlinkSqlJobInvoker 更新Flink SQL作业
+func (c *DliClient) UpdateFlinkSqlJobInvoker(request *model.UpdateFlinkSqlJobRequest) *UpdateFlinkSqlJobInvoker {
+	requestDef := GenReqDefForUpdateFlinkSqlJob()
+	return &UpdateFlinkSqlJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFlinkTemplate 更新Flink作业模板
+// UpdateFlinkSqlJobTemplate 更新Flink作业模板
 //
 // 对DLI服务中已有的Flink作业模板进行更新。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) UpdateFlinkTemplate(request *model.UpdateFlinkTemplateRequest) (*model.UpdateFlinkTemplateResponse, error) {
-	requestDef := GenReqDefForUpdateFlinkTemplate()
+func (c *DliClient) UpdateFlinkSqlJobTemplate(request *model.UpdateFlinkSqlJobTemplateRequest) (*model.UpdateFlinkSqlJobTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateFlinkSqlJobTemplate()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateFlinkTemplateResponse), nil
+		return resp.(*model.UpdateFlinkSqlJobTemplateResponse), nil
 	}
 }
 
-// UpdateFlinkTemplateInvoker 更新Flink作业模板
-func (c *DliClient) UpdateFlinkTemplateInvoker(request *model.UpdateFlinkTemplateRequest) *UpdateFlinkTemplateInvoker {
-	requestDef := GenReqDefForUpdateFlinkTemplate()
-	return &UpdateFlinkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateFlinkSqlJobTemplateInvoker 更新Flink作业模板
+func (c *DliClient) UpdateFlinkSqlJobTemplateInvoker(request *model.UpdateFlinkSqlJobTemplateRequest) *UpdateFlinkSqlJobTemplateInvoker {
+	requestDef := GenReqDefForUpdateFlinkSqlJobTemplate()
+	return &UpdateFlinkSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CancelBatchJob 取消批处理作业
+// CancelSparkJob 取消批处理作业
 //
 // 该API用于取消批处理作业。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CancelBatchJob(request *model.CancelBatchJobRequest) (*model.CancelBatchJobResponse, error) {
-	requestDef := GenReqDefForCancelBatchJob()
+func (c *DliClient) CancelSparkJob(request *model.CancelSparkJobRequest) (*model.CancelSparkJobResponse, error) {
+	requestDef := GenReqDefForCancelSparkJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CancelBatchJobResponse), nil
+		return resp.(*model.CancelSparkJobResponse), nil
 	}
 }
 
-// CancelBatchJobInvoker 取消批处理作业
-func (c *DliClient) CancelBatchJobInvoker(request *model.CancelBatchJobRequest) *CancelBatchJobInvoker {
-	requestDef := GenReqDefForCancelBatchJob()
-	return &CancelBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CancelSparkJobInvoker 取消批处理作业
+func (c *DliClient) CancelSparkJobInvoker(request *model.CancelSparkJobRequest) *CancelSparkJobInvoker {
+	requestDef := GenReqDefForCancelSparkJob()
+	return &CancelSparkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateBatchJob 创建批处理作业
+// CreateSparkJob 创建批处理作业
 //
 // 该API用于在某个队列上创建作业。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) CreateBatchJob(request *model.CreateBatchJobRequest) (*model.CreateBatchJobResponse, error) {
-	requestDef := GenReqDefForCreateBatchJob()
+func (c *DliClient) CreateSparkJob(request *model.CreateSparkJobRequest) (*model.CreateSparkJobResponse, error) {
+	requestDef := GenReqDefForCreateSparkJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateBatchJobResponse), nil
+		return resp.(*model.CreateSparkJobResponse), nil
 	}
 }
 
-// CreateBatchJobInvoker 创建批处理作业
-func (c *DliClient) CreateBatchJobInvoker(request *model.CreateBatchJobRequest) *CreateBatchJobInvoker {
-	requestDef := GenReqDefForCreateBatchJob()
-	return &CreateBatchJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateSparkJobInvoker 创建批处理作业
+func (c *DliClient) CreateSparkJobInvoker(request *model.CreateSparkJobRequest) *CreateSparkJobInvoker {
+	requestDef := GenReqDefForCreateSparkJob()
+	return &CreateSparkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListBatches 查询批处理作业列表
+// ListSparkJobs 查询批处理作业列表
 //
 // 该API用于查询Project下某队列批处理作业的列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ListBatches(request *model.ListBatchesRequest) (*model.ListBatchesResponse, error) {
-	requestDef := GenReqDefForListBatches()
+func (c *DliClient) ListSparkJobs(request *model.ListSparkJobsRequest) (*model.ListSparkJobsResponse, error) {
+	requestDef := GenReqDefForListSparkJobs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListBatchesResponse), nil
+		return resp.(*model.ListSparkJobsResponse), nil
 	}
 }
 
-// ListBatchesInvoker 查询批处理作业列表
-func (c *DliClient) ListBatchesInvoker(request *model.ListBatchesRequest) *ListBatchesInvoker {
-	requestDef := GenReqDefForListBatches()
-	return &ListBatchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowBatchInfo 查询批处理作业详情
-//
-// 该API用于根据批处理作业的id查询作业详情。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowBatchInfo(request *model.ShowBatchInfoRequest) (*model.ShowBatchInfoResponse, error) {
-	requestDef := GenReqDefForShowBatchInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowBatchInfoResponse), nil
-	}
-}
-
-// ShowBatchInfoInvoker 查询批处理作业详情
-func (c *DliClient) ShowBatchInfoInvoker(request *model.ShowBatchInfoRequest) *ShowBatchInfoInvoker {
-	requestDef := GenReqDefForShowBatchInfo()
-	return &ShowBatchInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListSparkJobsInvoker 查询批处理作业列表
+func (c *DliClient) ListSparkJobsInvoker(request *model.ListSparkJobsRequest) *ListSparkJobsInvoker {
+	requestDef := GenReqDefForListSparkJobs()
+	return &ListSparkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBatchLog 查询批处理作业日志
@@ -2196,25 +2175,46 @@ func (c *DliClient) ShowBatchLogInvoker(request *model.ShowBatchLogRequest) *Sho
 	return &ShowBatchLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowBatchState 查询批处理作业状态
+// ShowSparkJob 查询批处理作业详情
 //
-// 该API用于查询批处理作业的状态。
+// 该API用于根据批处理作业的id查询作业详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowBatchState(request *model.ShowBatchStateRequest) (*model.ShowBatchStateResponse, error) {
-	requestDef := GenReqDefForShowBatchState()
+func (c *DliClient) ShowSparkJob(request *model.ShowSparkJobRequest) (*model.ShowSparkJobResponse, error) {
+	requestDef := GenReqDefForShowSparkJob()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowBatchStateResponse), nil
+		return resp.(*model.ShowSparkJobResponse), nil
 	}
 }
 
-// ShowBatchStateInvoker 查询批处理作业状态
-func (c *DliClient) ShowBatchStateInvoker(request *model.ShowBatchStateRequest) *ShowBatchStateInvoker {
-	requestDef := GenReqDefForShowBatchState()
-	return &ShowBatchStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowSparkJobInvoker 查询批处理作业详情
+func (c *DliClient) ShowSparkJobInvoker(request *model.ShowSparkJobRequest) *ShowSparkJobInvoker {
+	requestDef := GenReqDefForShowSparkJob()
+	return &ShowSparkJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSparkJobStatus 查询批处理作业状态
+//
+// 该API用于查询批处理作业的状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowSparkJobStatus(request *model.ShowSparkJobStatusRequest) (*model.ShowSparkJobStatusResponse, error) {
+	requestDef := GenReqDefForShowSparkJobStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSparkJobStatusResponse), nil
+	}
+}
+
+// ShowSparkJobStatusInvoker 查询批处理作业状态
+func (c *DliClient) ShowSparkJobStatusInvoker(request *model.ShowSparkJobStatusRequest) *ShowSparkJobStatusInvoker {
+	requestDef := GenReqDefForShowSparkJobStatus()
+	return &ShowSparkJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelSqlJob 取消作业
@@ -2492,26 +2492,26 @@ func (c *DliClient) ListSqlJobsInvoker(request *model.ListSqlJobsRequest) *ListS
 	return &ListSqlJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// PreviewJobResult 预览SQL作业查询结果
+// PreviewSqlJobResult 预览SQL作业查询结果
 //
 // 该API用于在执行SQL查询语句的作业完成后，查看该作业执行的结果。目前仅支持查看“QUERY”类型作业的执行结果。
 // 该API只能查看前1000条的结果记录，若要查看全部的结果记录，需要先导出查询结果再进行查看。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) PreviewJobResult(request *model.PreviewJobResultRequest) (*model.PreviewJobResultResponse, error) {
-	requestDef := GenReqDefForPreviewJobResult()
+func (c *DliClient) PreviewSqlJobResult(request *model.PreviewSqlJobResultRequest) (*model.PreviewSqlJobResultResponse, error) {
+	requestDef := GenReqDefForPreviewSqlJobResult()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.PreviewJobResultResponse), nil
+		return resp.(*model.PreviewSqlJobResultResponse), nil
 	}
 }
 
-// PreviewJobResultInvoker 预览SQL作业查询结果
-func (c *DliClient) PreviewJobResultInvoker(request *model.PreviewJobResultRequest) *PreviewJobResultInvoker {
-	requestDef := GenReqDefForPreviewJobResult()
-	return &PreviewJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// PreviewSqlJobResultInvoker 预览SQL作业查询结果
+func (c *DliClient) PreviewSqlJobResultInvoker(request *model.PreviewSqlJobResultRequest) *PreviewSqlJobResultInvoker {
+	requestDef := GenReqDefForPreviewSqlJobResult()
+	return &PreviewSqlJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDescribeTable 描述表信息
@@ -2533,27 +2533,6 @@ func (c *DliClient) ShowDescribeTable(request *model.ShowDescribeTableRequest) (
 func (c *DliClient) ShowDescribeTableInvoker(request *model.ShowDescribeTableRequest) *ShowDescribeTableInvoker {
 	requestDef := GenReqDefForShowDescribeTable()
 	return &ShowDescribeTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowJobProgress 查询作业执行进度信息
-//
-// 该API用于获取作业执行进度信息，如果作业正在执行，可以获取到子作业的信息，如果作业刚开始或者已经结束，不可以获取到子作业信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DliClient) ShowJobProgress(request *model.ShowJobProgressRequest) (*model.ShowJobProgressResponse, error) {
-	requestDef := GenReqDefForShowJobProgress()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowJobProgressResponse), nil
-	}
-}
-
-// ShowJobProgressInvoker 查询作业执行进度信息
-func (c *DliClient) ShowJobProgressInvoker(request *model.ShowJobProgressRequest) *ShowJobProgressInvoker {
-	requestDef := GenReqDefForShowJobProgress()
-	return &ShowJobProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPartitions 获取分区信息列表
@@ -2594,6 +2573,27 @@ func (c *DliClient) ShowSqlJobDetail(request *model.ShowSqlJobDetailRequest) (*m
 func (c *DliClient) ShowSqlJobDetailInvoker(request *model.ShowSqlJobDetailRequest) *ShowSqlJobDetailInvoker {
 	requestDef := GenReqDefForShowSqlJobDetail()
 	return &ShowSqlJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlJobProgress 查询作业执行进度信息
+//
+// 该API用于获取作业执行进度信息，如果作业正在执行，可以获取到子作业的信息，如果作业刚开始或者已经结束，不可以获取到子作业信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowSqlJobProgress(request *model.ShowSqlJobProgressRequest) (*model.ShowSqlJobProgressResponse, error) {
+	requestDef := GenReqDefForShowSqlJobProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlJobProgressResponse), nil
+	}
+}
+
+// ShowSqlJobProgressInvoker 查询作业执行进度信息
+func (c *DliClient) ShowSqlJobProgressInvoker(request *model.ShowSqlJobProgressRequest) *ShowSqlJobProgressInvoker {
+	requestDef := GenReqDefForShowSqlJobProgress()
+	return &ShowSqlJobProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSqlJobStatus 查询作业状态

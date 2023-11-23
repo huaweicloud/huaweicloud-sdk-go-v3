@@ -17,7 +17,7 @@ type UpdateNatGatewaySnatRuleOption struct {
 	// 全域弹性公网IP的id。
 	GlobalEipId *string `json:"global_eip_id,omitempty"`
 
-	// SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+	// SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 }
 

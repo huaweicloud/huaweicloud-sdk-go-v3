@@ -19,9 +19,30 @@ func ElbClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchAddAvailableZones 新增负载均衡器可用区
+//
+// 给负载均衡器新增可用区。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchAddAvailableZones(request *model.BatchAddAvailableZonesRequest) (*model.BatchAddAvailableZonesResponse, error) {
+	requestDef := GenReqDefForBatchAddAvailableZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddAvailableZonesResponse), nil
+	}
+}
+
+// BatchAddAvailableZonesInvoker 新增负载均衡器可用区
+func (c *ElbClient) BatchAddAvailableZonesInvoker(request *model.BatchAddAvailableZonesRequest) *BatchAddAvailableZonesInvoker {
+	requestDef := GenReqDefForBatchAddAvailableZones()
+	return &BatchAddAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateMembers 批量创建后端服务器
 //
-// 在指定pool下批量创建后端服务器。一次最多添加200个。
+// 在指定pool下批量创建后端服务器。一次最多创建200个。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchCreateMembers(request *model.BatchCreateMembersRequest) (*model.BatchCreateMembersResponse, error) {
@@ -42,7 +63,7 @@ func (c *ElbClient) BatchCreateMembersInvoker(request *model.BatchCreateMembersR
 
 // BatchDeleteMembers 批量删除后端服务器
 //
-// 在指定pool下批量删除后端服务器。一次最多删除200个。
+// 在指定pool下批量删除后端服务器。一次最多添加200个。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest) (*model.BatchDeleteMembersResponse, error) {
@@ -61,9 +82,31 @@ func (c *ElbClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersR
 	return &BatchDeleteMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchRemoveAvailableZones 移除负载均衡器可用区
+//
+// 移除负载均衡器的可用区。
+// &gt; 移除可用区可能导致已有链接断开，请谨慎操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchRemoveAvailableZones(request *model.BatchRemoveAvailableZonesRequest) (*model.BatchRemoveAvailableZonesResponse, error) {
+	requestDef := GenReqDefForBatchRemoveAvailableZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRemoveAvailableZonesResponse), nil
+	}
+}
+
+// BatchRemoveAvailableZonesInvoker 移除负载均衡器可用区
+func (c *ElbClient) BatchRemoveAvailableZonesInvoker(request *model.BatchRemoveAvailableZonesRequest) *BatchRemoveAvailableZonesInvoker {
+	requestDef := GenReqDefForBatchRemoveAvailableZones()
+	return &BatchRemoveAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateMembers 批量更新后端服务器
 //
-// 在指定pool下批量更新后端服务器。一次最多更新200个。
+// 在指定pool下批量更新后端服务器。一次最多添加200个。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchUpdateMembers(request *model.BatchUpdateMembersRequest) (*model.BatchUpdateMembersResponse, error) {
@@ -243,6 +286,11 @@ func (c *ElbClient) CreateListenerInvoker(request *model.CreateListenerRequest) 
 // 5. 若要创建公网双栈负载均衡器，则需要设置ipv6_vip_virsubnet_id和ipv6_bandwidth。
 // 6. 不支持绑定已有未使用的内网IPv4、内网IPv6或公网IPv6地址。
 //
+// [&gt; 关于计费：
+// - 若billing_info非空时，包周期。
+// - 若billing_info为空，autoscaling.enable&#x3D;true时，弹性计费。
+// - 若billing_info为空，autoscaling.enable&#x3D;false或未设置，charge_mode&#x3D;lcu，按量计费。
+// - 若billing_info为空，autoscaling.enable&#x3D;false或未设置，charge_mode&#x3D;flavor，固定规格按需计费。](tag:hws)
 // [&gt; 不支持创建IPv6地址负载均衡器](tag:dt,dt_test)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -264,7 +312,7 @@ func (c *ElbClient) CreateLoadBalancerInvoker(request *model.CreateLoadBalancerR
 
 // CreateLogtank 创建云日志
 //
-// 创建云日志。
+// 创建云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.CreateLogtankResponse, error) {
@@ -281,6 +329,27 @@ func (c *ElbClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.C
 func (c *ElbClient) CreateLogtankInvoker(request *model.CreateLogtankRequest) *CreateLogtankInvoker {
 	requestDef := GenReqDefForCreateLogtank()
 	return &CreateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMasterSlavePool 创建主备后端服务器组
+//
+// 创建主备后端服务器组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) CreateMasterSlavePool(request *model.CreateMasterSlavePoolRequest) (*model.CreateMasterSlavePoolResponse, error) {
+	requestDef := GenReqDefForCreateMasterSlavePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMasterSlavePoolResponse), nil
+	}
+}
+
+// CreateMasterSlavePoolInvoker 创建主备后端服务器组
+func (c *ElbClient) CreateMasterSlavePoolInvoker(request *model.CreateMasterSlavePoolRequest) *CreateMasterSlavePoolInvoker {
+	requestDef := GenReqDefForCreateMasterSlavePool()
+	return &CreateMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateMember 创建后端服务器
@@ -328,6 +397,8 @@ func (c *ElbClient) CreatePoolInvoker(request *model.CreatePoolRequest) *CreateP
 // CreateSecurityPolicy 创建自定义安全策略
 //
 // 创建自定义安全策略。用于在创建HTTPS监听器时，请求参数中指定security_policy_id来设置监听器的自定义安全策略。
+//
+// [荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CreateSecurityPolicy(request *model.CreateSecurityPolicyRequest) (*model.CreateSecurityPolicyResponse, error) {
@@ -516,7 +587,7 @@ func (c *ElbClient) DeleteLoadBalancerForceInvoker(request *model.DeleteLoadBala
 
 // DeleteLogtank 删除云日志
 //
-// 删除云日志。
+// 删除云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.DeleteLogtankResponse, error) {
@@ -533,6 +604,27 @@ func (c *ElbClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.D
 func (c *ElbClient) DeleteLogtankInvoker(request *model.DeleteLogtankRequest) *DeleteLogtankInvoker {
 	requestDef := GenReqDefForDeleteLogtank()
 	return &DeleteLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMasterSlavePool 删除主备后端服务器组
+//
+// 删除主备后端服务器组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) DeleteMasterSlavePool(request *model.DeleteMasterSlavePoolRequest) (*model.DeleteMasterSlavePoolResponse, error) {
+	requestDef := GenReqDefForDeleteMasterSlavePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMasterSlavePoolResponse), nil
+	}
+}
+
+// DeleteMasterSlavePoolInvoker 删除主备后端服务器组
+func (c *ElbClient) DeleteMasterSlavePoolInvoker(request *model.DeleteMasterSlavePoolRequest) *DeleteMasterSlavePoolInvoker {
+	requestDef := GenReqDefForDeleteMasterSlavePool()
+	return &DeleteMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteMember 删除后端服务器
@@ -579,7 +671,7 @@ func (c *ElbClient) DeletePoolInvoker(request *model.DeletePoolRequest) *DeleteP
 
 // DeleteSecurityPolicy 删除自定义安全策略
 //
-// 删除自定义安全策略。
+// 删除自定义安全策略。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) DeleteSecurityPolicy(request *model.DeleteSecurityPolicyRequest) (*model.DeleteSecurityPolicyResponse, error) {
@@ -797,7 +889,7 @@ func (c *ElbClient) ListLoadBalancersInvoker(request *model.ListLoadBalancersReq
 
 // ListLogtanks 查询云日志列表
 //
-// 查询云日志列表。
+// 查询云日志列表。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.ListLogtanksResponse, error) {
@@ -814,6 +906,27 @@ func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.Lis
 func (c *ElbClient) ListLogtanksInvoker(request *model.ListLogtanksRequest) *ListLogtanksInvoker {
 	requestDef := GenReqDefForListLogtanks()
 	return &ListLogtanksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMasterSlavePools 查询主备后端服务器组列表
+//
+// 主备后端服务器组列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListMasterSlavePools(request *model.ListMasterSlavePoolsRequest) (*model.ListMasterSlavePoolsResponse, error) {
+	requestDef := GenReqDefForListMasterSlavePools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMasterSlavePoolsResponse), nil
+	}
+}
+
+// ListMasterSlavePoolsInvoker 查询主备后端服务器组列表
+func (c *ElbClient) ListMasterSlavePoolsInvoker(request *model.ListMasterSlavePoolsRequest) *ListMasterSlavePoolsInvoker {
+	requestDef := GenReqDefForListMasterSlavePools()
+	return &ListMasterSlavePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListMembers 查询后端服务器列表
@@ -881,7 +994,7 @@ func (c *ElbClient) ListQuotaDetailsInvoker(request *model.ListQuotaDetailsReque
 
 // ListSecurityPolicies 查询自定义安全策略列表
 //
-// 查询自定义安全策略列表。
+// 查询自定义安全策略列表。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListSecurityPolicies(request *model.ListSecurityPoliciesRequest) (*model.ListSecurityPoliciesResponse, error) {
@@ -1096,7 +1209,7 @@ func (c *ElbClient) ShowLoadBalancerStatusInvoker(request *model.ShowLoadBalance
 
 // ShowLogtank 查询云日志详情
 //
-// 云日志详情。
+// 云日志详情。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowLogtankResponse, error) {
@@ -1113,6 +1226,27 @@ func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowL
 func (c *ElbClient) ShowLogtankInvoker(request *model.ShowLogtankRequest) *ShowLogtankInvoker {
 	requestDef := GenReqDefForShowLogtank()
 	return &ShowLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMasterSlavePool 查询主备后端服务器组详情
+//
+// 主备后端服务器组详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowMasterSlavePool(request *model.ShowMasterSlavePoolRequest) (*model.ShowMasterSlavePoolResponse, error) {
+	requestDef := GenReqDefForShowMasterSlavePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMasterSlavePoolResponse), nil
+	}
+}
+
+// ShowMasterSlavePoolInvoker 查询主备后端服务器组详情
+func (c *ElbClient) ShowMasterSlavePoolInvoker(request *model.ShowMasterSlavePoolRequest) *ShowMasterSlavePoolInvoker {
+	requestDef := GenReqDefForShowMasterSlavePool()
+	return &ShowMasterSlavePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMember 查询后端服务器详情
@@ -1180,7 +1314,7 @@ func (c *ElbClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuota
 
 // ShowSecurityPolicy 查询自定义安全策略详情
 //
-// 查询自定义安全策略详情。
+// 查询自定义安全策略详情。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ShowSecurityPolicy(request *model.ShowSecurityPolicyRequest) (*model.ShowSecurityPolicyResponse, error) {
@@ -1327,7 +1461,7 @@ func (c *ElbClient) UpdateLoadBalancerInvoker(request *model.UpdateLoadBalancerR
 
 // UpdateLogtank 更新云日志
 //
-// 更新云日志。
+// 更新云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateLogtank(request *model.UpdateLogtankRequest) (*model.UpdateLogtankResponse, error) {
@@ -1390,7 +1524,7 @@ func (c *ElbClient) UpdatePoolInvoker(request *model.UpdatePoolRequest) *UpdateP
 
 // UpdateSecurityPolicy 更新自定义安全策略
 //
-// 更新自定义安全策略。
+// 更新自定义安全策略。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateSecurityPolicy(request *model.UpdateSecurityPolicyRequest) (*model.UpdateSecurityPolicyResponse, error) {
@@ -1430,9 +1564,9 @@ func (c *ElbClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteIpList 批量删除IP地址组的IP地址
+// BatchDeleteIpList 删除IP地址组的IP列表项
 //
-// 批量删除IP地址组的IP地址。
+// 批量删除IP地址组的IP列表信息。[荷兰region不支持该API](tag:dt,dt_test)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchDeleteIpList(request *model.BatchDeleteIpListRequest) (*model.BatchDeleteIpListResponse, error) {
@@ -1445,7 +1579,7 @@ func (c *ElbClient) BatchDeleteIpList(request *model.BatchDeleteIpListRequest) (
 	}
 }
 
-// BatchDeleteIpListInvoker 批量删除IP地址组的IP地址
+// BatchDeleteIpListInvoker 删除IP地址组的IP列表项
 func (c *ElbClient) BatchDeleteIpListInvoker(request *model.BatchDeleteIpListRequest) *BatchDeleteIpListInvoker {
 	requestDef := GenReqDefForBatchDeleteIpList()
 	return &BatchDeleteIpListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1493,7 +1627,7 @@ func (c *ElbClient) CountPreoccupyIpNumInvoker(request *model.CountPreoccupyIpNu
 //
 // 需要注意0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，只会保存其中一个。
 //
-// [不支持IPv6。](tag:dt,dt_test)
+// [荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CreateIpGroup(request *model.CreateIpGroupRequest) (*model.CreateIpGroupResponse, error) {
@@ -1514,7 +1648,7 @@ func (c *ElbClient) CreateIpGroupInvoker(request *model.CreateIpGroupRequest) *C
 
 // DeleteIpGroup 删除IP地址组
 //
-// 删除IP地址组。
+// 删除ip地址组。[荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) DeleteIpGroup(request *model.DeleteIpGroupRequest) (*model.DeleteIpGroupResponse, error) {
@@ -1535,7 +1669,7 @@ func (c *ElbClient) DeleteIpGroupInvoker(request *model.DeleteIpGroupRequest) *D
 
 // ListIpGroups 查询IP地址组列表
 //
-// 查询IP地址组列表。
+// 查询IP地址组列表。[荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListIpGroups(request *model.ListIpGroupsRequest) (*model.ListIpGroupsResponse, error) {
@@ -1556,7 +1690,7 @@ func (c *ElbClient) ListIpGroupsInvoker(request *model.ListIpGroupsRequest) *Lis
 
 // ShowIpGroup 查询IP地址组详情
 //
-// 获取IP地址组详情。
+// 获取IP地址组详情。[荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowIpGroupResponse, error) {
@@ -1582,7 +1716,7 @@ func (c *ElbClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowI
 //
 // 需要注意0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，只会保存其中一个。
 //
-// [不支持IPv6。](tag:dt,dt_test)
+// [荷兰region不支持IP地址组功能，请勿使用。](tag:dt)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateIpGroup(request *model.UpdateIpGroupRequest) (*model.UpdateIpGroupResponse, error) {
@@ -1601,9 +1735,9 @@ func (c *ElbClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *U
 	return &UpdateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateIpList 更新IP地址组的IP列表
+// UpdateIpList 更新IP地址组的IP列表项
 //
-// 更新IP地址组的IP列表。
+// 添加新的IP地址到IP地址组的IP列表信息，或更新已有IP地址的描述。[荷兰region不支持该API](tag:dt,dt_test)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateIpList(request *model.UpdateIpListRequest) (*model.UpdateIpListResponse, error) {
@@ -1616,7 +1750,7 @@ func (c *ElbClient) UpdateIpList(request *model.UpdateIpListRequest) (*model.Upd
 	}
 }
 
-// UpdateIpListInvoker 更新IP地址组的IP列表
+// UpdateIpListInvoker 更新IP地址组的IP列表项
 func (c *ElbClient) UpdateIpListInvoker(request *model.UpdateIpListRequest) *UpdateIpListInvoker {
 	requestDef := GenReqDefForUpdateIpList()
 	return &UpdateIpListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

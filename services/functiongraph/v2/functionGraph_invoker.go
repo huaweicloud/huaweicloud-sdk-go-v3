@@ -65,6 +65,18 @@ func (i *CancelAsyncInvocationInvoker) Invoke() (*model.CancelAsyncInvocationRes
 	}
 }
 
+type CreateCallbackWorkflowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCallbackWorkflowInvoker) Invoke() (*model.CreateCallbackWorkflowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCallbackWorkflowResponse), nil
+	}
+}
+
 type CreateDependencyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -110,6 +122,18 @@ func (i *CreateFunctionInvoker) Invoke() (*model.CreateFunctionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateFunctionResponse), nil
+	}
+}
+
+type CreateFunctionAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFunctionAppInvoker) Invoke() (*model.CreateFunctionAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFunctionAppResponse), nil
 	}
 }
 
@@ -230,6 +254,18 @@ func (i *DeleteFunctionInvoker) Invoke() (*model.DeleteFunctionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteFunctionResponse), nil
+	}
+}
+
+type DeleteFunctionAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFunctionAppInvoker) Invoke() (*model.DeleteFunctionAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFunctionAppResponse), nil
 	}
 }
 
@@ -365,6 +401,18 @@ func (i *ListActiveAsyncInvocationsInvoker) Invoke() (*model.ListActiveAsyncInvo
 	}
 }
 
+type ListAppTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppTemplatesInvoker) Invoke() (*model.ListAppTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppTemplatesResponse), nil
+	}
+}
+
 type ListAsyncInvocationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +482,18 @@ func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListEventsResponse), nil
+	}
+}
+
+type ListFunctionApplicationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionApplicationsInvoker) Invoke() (*model.ListFunctionApplicationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionApplicationsResponse), nil
 	}
 }
 
@@ -629,6 +689,18 @@ func (i *RetryWorkFlowInvoker) Invoke() (*model.RetryWorkFlowResponse, error) {
 	}
 }
 
+type ShowAppTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppTemplateInvoker) Invoke() (*model.ShowAppTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppTemplateResponse), nil
+	}
+}
+
 type ShowDependcyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -686,6 +758,18 @@ func (i *ShowFuncSnapshotStateInvoker) Invoke() (*model.ShowFuncSnapshotStateRes
 		return nil, err
 	} else {
 		return result.(*model.ShowFuncSnapshotStateResponse), nil
+	}
+}
+
+type ShowFunctionAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFunctionAppInvoker) Invoke() (*model.ShowFunctionAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFunctionAppResponse), nil
 	}
 }
 

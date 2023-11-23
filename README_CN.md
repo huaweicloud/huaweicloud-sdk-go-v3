@@ -128,7 +128,7 @@ func main() {
 	httpConfig.WithProxy(proxy)
 	// 根据需要配置如何创建网络连接
 	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
-		return net.Dial(network, addr)
+		// 此处需自行实现
 	}
 	httpConfig.WithDialContext(dialContext)
 	// 配置HTTP监听器进行调试，请勿用于生产环境

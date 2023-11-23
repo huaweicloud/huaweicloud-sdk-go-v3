@@ -25,7 +25,7 @@ type PrivateSnat struct {
 	// 功能说明：规则匹配的子网的ID。 取值约束：与cidr参数二选一。
 	VirsubnetId *string `json:"virsubnet_id,omitempty"`
 
-	// SNAT规则的描述。长度范围小于等于255个字符，不能包含<>
+	// SNAT规则的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
 	// 关联的中转IP详情列表。

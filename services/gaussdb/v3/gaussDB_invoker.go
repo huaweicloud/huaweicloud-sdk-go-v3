@@ -989,6 +989,18 @@ func (i *ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker) Invoke() (*model
 	}
 }
 
+type ShowRestoreTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRestoreTablesInvoker) Invoke() (*model.ShowRestoreTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRestoreTablesResponse), nil
+	}
+}
+
 type ShrinkGaussMySqlProxyInvoker struct {
 	*invoker.BaseInvoker
 }

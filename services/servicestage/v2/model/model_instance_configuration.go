@@ -21,6 +21,8 @@ type InstanceConfiguration struct {
 	Scheduler *ConfigurationScheduler `json:"scheduler,omitempty"`
 
 	Probes *ConfigurationProbes `json:"probes,omitempty"`
+
+	ContainerSpec *ConfigurationContainerSpec `json:"container_spec,omitempty"`
 }
 
 func (o InstanceConfiguration) String() string {

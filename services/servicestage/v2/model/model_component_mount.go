@@ -9,13 +9,13 @@ import (
 type ComponentMount struct {
 
 	// 挂载路径
-	Path *string `json:"path,omitempty"`
+	Path string `json:"path"`
 
 	// 挂载路径的子路径
 	SubPath *string `json:"subPath,omitempty"`
 
 	// 是否只读
-	ReadOnly *bool `json:"readOnly,omitempty"`
+	ReadOnly bool `json:"readOnly"`
 }
 
 func (o ComponentMount) String() string {

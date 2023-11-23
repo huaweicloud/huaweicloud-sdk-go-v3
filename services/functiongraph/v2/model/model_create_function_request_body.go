@@ -69,6 +69,12 @@ type CreateFunctionRequestBody struct {
 	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
 
+	// 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+	PreStopHandler *string `json:"pre_stop_handler,omitempty"`
+
+	// 初始化超时时间，超时函数将被强行停止，范围1～90秒。
+	PreStopTimeout *int32 `json:"pre_stop_timeout,omitempty"`
+
 	// 企业项目ID，在企业用户创建函数时必填。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 

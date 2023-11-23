@@ -9,7 +9,7 @@ import (
 // BatchCreateMembersOption 批量添加member请求参数。
 type BatchCreateMembersOption struct {
 
-	// 后端服务器名称。注意：该名称并非ECS名称。
+	// 后端服务器名称。
 	Name *string `json:"name,omitempty"`
 
 	// 后端云服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为ipv4地址。

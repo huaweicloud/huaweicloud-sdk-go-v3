@@ -355,6 +355,27 @@ func (c *DdsClient) CreateIpInvoker(request *model.CreateIpRequest) *CreateIpInv
 	return &CreateIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateKillOpRule 创建killOp规则
+//
+// 创建killOp规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) CreateKillOpRule(request *model.CreateKillOpRuleRequest) (*model.CreateKillOpRuleResponse, error) {
+	requestDef := GenReqDefForCreateKillOpRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKillOpRuleResponse), nil
+	}
+}
+
+// CreateKillOpRuleInvoker 创建killOp规则
+func (c *DdsClient) CreateKillOpRuleInvoker(request *model.CreateKillOpRuleRequest) *CreateKillOpRuleInvoker {
+	requestDef := GenReqDefForCreateKillOpRule()
+	return &CreateKillOpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateManualBackup 创建手动备份
 //
 // 创建数据库实例的手动备份。
@@ -481,6 +502,48 @@ func (c *DdsClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteKillOpRuleList 删除killOp规则
+//
+// 删除killOp规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) DeleteKillOpRuleList(request *model.DeleteKillOpRuleListRequest) (*model.DeleteKillOpRuleListResponse, error) {
+	requestDef := GenReqDefForDeleteKillOpRuleList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKillOpRuleListResponse), nil
+	}
+}
+
+// DeleteKillOpRuleListInvoker 删除killOp规则
+func (c *DdsClient) DeleteKillOpRuleListInvoker(request *model.DeleteKillOpRuleListRequest) *DeleteKillOpRuleListInvoker {
+	requestDef := GenReqDefForDeleteKillOpRuleList()
+	return &DeleteKillOpRuleListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLtsConfig 解除关联LTS日志流
+//
+// 将实例日志与LTS日志流解除关联，后台将取消上传实例日志到的LTS日志流里。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) DeleteLtsConfig(request *model.DeleteLtsConfigRequest) (*model.DeleteLtsConfigResponse, error) {
+	requestDef := GenReqDefForDeleteLtsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLtsConfigResponse), nil
+	}
+}
+
+// DeleteLtsConfigInvoker 解除关联LTS日志流
+func (c *DdsClient) DeleteLtsConfigInvoker(request *model.DeleteLtsConfigRequest) *DeleteLtsConfigInvoker {
+	requestDef := GenReqDefForDeleteLtsConfig()
+	return &DeleteLtsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteManualBackup 删除手动备份
 //
 // 删除数据库实例的手动备份。
@@ -500,6 +563,27 @@ func (c *DdsClient) DeleteManualBackup(request *model.DeleteManualBackupRequest)
 func (c *DdsClient) DeleteManualBackupInvoker(request *model.DeleteManualBackupRequest) *DeleteManualBackupInvoker {
 	requestDef := GenReqDefForDeleteManualBackup()
 	return &DeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteReadonlyNode 删除只读节点
+//
+// 当副本集添加了只读节点后，需要删除对应的只读节点需要调用此API。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) DeleteReadonlyNode(request *model.DeleteReadonlyNodeRequest) (*model.DeleteReadonlyNodeResponse, error) {
+	requestDef := GenReqDefForDeleteReadonlyNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteReadonlyNodeResponse), nil
+	}
+}
+
+// DeleteReadonlyNodeInvoker 删除只读节点
+func (c *DdsClient) DeleteReadonlyNodeInvoker(request *model.DeleteReadonlyNodeRequest) *DeleteReadonlyNodeInvoker {
+	requestDef := GenReqDefForDeleteReadonlyNode()
+	return &DeleteReadonlyNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSession 终结实例节点会话
@@ -899,6 +983,48 @@ func (c *DdsClient) ListInstancesByTags(request *model.ListInstancesByTagsReques
 func (c *DdsClient) ListInstancesByTagsInvoker(request *model.ListInstancesByTagsRequest) *ListInstancesByTagsInvoker {
 	requestDef := GenReqDefForListInstancesByTags()
 	return &ListInstancesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLtsConfigs 查询LTS日志配置信息
+//
+// 查询LTS日志配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ListLtsConfigs(request *model.ListLtsConfigsRequest) (*model.ListLtsConfigsResponse, error) {
+	requestDef := GenReqDefForListLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLtsConfigsResponse), nil
+	}
+}
+
+// ListLtsConfigsInvoker 查询LTS日志配置信息
+func (c *DdsClient) ListLtsConfigsInvoker(request *model.ListLtsConfigsRequest) *ListLtsConfigsInvoker {
+	requestDef := GenReqDefForListLtsConfigs()
+	return &ListLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLtsErrorLogs 查询数据库错误日志
+//
+// 查询数据库错误日志信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ListLtsErrorLogs(request *model.ListLtsErrorLogsRequest) (*model.ListLtsErrorLogsResponse, error) {
+	requestDef := GenReqDefForListLtsErrorLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLtsErrorLogsResponse), nil
+	}
+}
+
+// ListLtsErrorLogsInvoker 查询数据库错误日志
+func (c *DdsClient) ListLtsErrorLogsInvoker(request *model.ListLtsErrorLogsRequest) *ListLtsErrorLogsInvoker {
+	requestDef := GenReqDefForListLtsErrorLogs()
+	return &ListLtsErrorLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLtsSlowLogs 查询数据库慢日志
@@ -1636,6 +1762,27 @@ func (c *DdsClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *S
 	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowKillOpRuleRuleList 获取killOp规则列表
+//
+// 获取killOp规则列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ShowKillOpRuleRuleList(request *model.ShowKillOpRuleRuleListRequest) (*model.ShowKillOpRuleRuleListResponse, error) {
+	requestDef := GenReqDefForShowKillOpRuleRuleList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKillOpRuleRuleListResponse), nil
+	}
+}
+
+// ShowKillOpRuleRuleListInvoker 获取killOp规则列表
+func (c *DdsClient) ShowKillOpRuleRuleListInvoker(request *model.ShowKillOpRuleRuleListRequest) *ShowKillOpRuleRuleListInvoker {
+	requestDef := GenReqDefForShowKillOpRuleRuleList()
+	return &ShowKillOpRuleRuleListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查询配额
 //
 // 查询单租户在DDS服务下的资源配额，包括单节点实例配额、副本集实例配额、集群实例配额等。
@@ -1804,6 +1951,27 @@ func (c *DdsClient) ShrinkInstanceNodesInvoker(request *model.ShrinkInstanceNode
 	return &ShrinkInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StopBackup 停止备份
+//
+// 支持紧急情况下停止备份功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) StopBackup(request *model.StopBackupRequest) (*model.StopBackupResponse, error) {
+	requestDef := GenReqDefForStopBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopBackupResponse), nil
+	}
+}
+
+// StopBackupInvoker 停止备份
+func (c *DdsClient) StopBackupInvoker(request *model.StopBackupRequest) *StopBackupInvoker {
+	requestDef := GenReqDefForStopBackup()
+	return &StopBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchConfiguration 应用参数模板
 //
 // 指定实例变更参数模板。
@@ -1823,6 +1991,27 @@ func (c *DdsClient) SwitchConfiguration(request *model.SwitchConfigurationReques
 func (c *DdsClient) SwitchConfigurationInvoker(request *model.SwitchConfigurationRequest) *SwitchConfigurationInvoker {
 	requestDef := GenReqDefForSwitchConfiguration()
 	return &SwitchConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchInstancePrimary 强制备节点升主
+//
+// 支持副本集、shard和config备节点强制升主。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) SwitchInstancePrimary(request *model.SwitchInstancePrimaryRequest) (*model.SwitchInstancePrimaryResponse, error) {
+	requestDef := GenReqDefForSwitchInstancePrimary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchInstancePrimaryResponse), nil
+	}
+}
+
+// SwitchInstancePrimaryInvoker 强制备节点升主
+func (c *DdsClient) SwitchInstancePrimaryInvoker(request *model.SwitchInstancePrimaryRequest) *SwitchInstancePrimaryInvoker {
+	requestDef := GenReqDefForSwitchInstancePrimary()
+	return &SwitchInstancePrimaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSecondLevelMonitoring 开启/关闭秒级监控
@@ -2033,6 +2222,50 @@ func (c *DdsClient) UpdateInstanceRemark(request *model.UpdateInstanceRemarkRequ
 func (c *DdsClient) UpdateInstanceRemarkInvoker(request *model.UpdateInstanceRemarkRequest) *UpdateInstanceRemarkInvoker {
 	requestDef := GenReqDefForUpdateInstanceRemark()
 	return &UpdateInstanceRemarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKillOpRule 启用/禁用killOp规则
+//
+// 启用/禁用killOp规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) UpdateKillOpRule(request *model.UpdateKillOpRuleRequest) (*model.UpdateKillOpRuleResponse, error) {
+	requestDef := GenReqDefForUpdateKillOpRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKillOpRuleResponse), nil
+	}
+}
+
+// UpdateKillOpRuleInvoker 启用/禁用killOp规则
+func (c *DdsClient) UpdateKillOpRuleInvoker(request *model.UpdateKillOpRuleRequest) *UpdateKillOpRuleInvoker {
+	requestDef := GenReqDefForUpdateKillOpRule()
+	return &UpdateKillOpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLtsConfig 关联LTS日志流
+//
+// 将实例日志与LTS日志流关联，后台将自动上传实例日志到关联的LTS日志流里。
+// 关联成功后，会产生一定费用，具体计费可参考云日志服务（LTS）的定价详情。
+// 系统会为当前选择的日志流创建对应日志类型的结构化配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) UpdateLtsConfig(request *model.UpdateLtsConfigRequest) (*model.UpdateLtsConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLtsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLtsConfigResponse), nil
+	}
+}
+
+// UpdateLtsConfigInvoker 关联LTS日志流
+func (c *DdsClient) UpdateLtsConfigInvoker(request *model.UpdateLtsConfigRequest) *UpdateLtsConfigInvoker {
+	requestDef := GenReqDefForUpdateLtsConfig()
+	return &UpdateLtsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateReplSetName 修改数据库复制集名称

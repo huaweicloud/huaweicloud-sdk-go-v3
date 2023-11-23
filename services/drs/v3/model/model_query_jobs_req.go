@@ -41,6 +41,12 @@ type QueryJobsReq struct {
 
 	// 标签
 	Tags map[string]string `json:"tags,omitempty"`
+
+	// 数据库实例ID列表，最多支持10个
+	InstanceIds *[]string `json:"instance_ids,omitempty"`
+
+	// DRS绑定数据库实例IP
+	InstanceIp *string `json:"instance_ip,omitempty"`
 }
 
 func (o QueryJobsReq) String() string {

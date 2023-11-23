@@ -40,7 +40,7 @@ type ListFunctionVersionResult struct {
 	// 函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
 	MemorySize int32 `json:"memory_size"`
 
-	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
 	Cpu int32 `json:"cpu"`
 
 	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
@@ -95,6 +95,12 @@ type ListFunctionVersionResult struct {
 
 	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
+
+	// 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+	PreStopHandler *string `json:"pre_stop_handler,omitempty"`
+
+	// 初始化超时时间，超时函数将被强行停止，范围1～90秒。
+	PreStopTimeout *int32 `json:"pre_stop_timeout,omitempty"`
 
 	// 是否是支持长时间运行
 	LongTime *bool `json:"long_time,omitempty"`

@@ -30,7 +30,7 @@ type ListNatGatewaySnatRulesRequest struct {
 	// SNAT规则的ID。
 	Id *string `json:"id,omitempty"`
 
-	// SNAT规则的描述，长度范围小于等于255个字符，不能包含<>
+	// SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
 	// SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。

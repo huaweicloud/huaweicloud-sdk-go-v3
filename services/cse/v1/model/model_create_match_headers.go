@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-// CreateMatchHeaders headers
+// CreateMatchHeaders 匹配的Headers。
 type CreateMatchHeaders struct {
-	Aaaa *CreateMatchHeadersAaaa `json:"aaaa,omitempty"`
+	Header *CreateMatchHeadersHeader `json:"&lt;header&gt;,omitempty"`
 }
 
 func (o CreateMatchHeaders) String() string {

@@ -11,13 +11,13 @@ import (
 
 type CreateDependencyRequestBody struct {
 
-	// depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。
+	// depend_type为zip类型时必填，为文件流格式,需要base64编码zip文件。上传的文件大小限制为40M，如超过40M，请通过OBS上传。
 	DependFile *string `json:"depend_file,omitempty"`
 
 	// depend_type为obs类型时，依赖包在obs的存储地址。
 	DependLink *string `json:"depend_link,omitempty"`
 
-	// 导入类型,目前支持obs和zip。
+	// 导入类型，目前支持obs和zip。
 	DependType string `json:"depend_type"`
 
 	// 运行时语言，Java11、Nodejs14:、Python3:在type为v2时支持。

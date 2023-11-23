@@ -449,6 +449,18 @@ func (i *ListHistoryDatabaseInvoker) Invoke() (*model.ListHistoryDatabaseRespons
 	}
 }
 
+type ListInspectionHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInspectionHistoriesInvoker) Invoke() (*model.ListInspectionHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInspectionHistoriesResponse), nil
+	}
+}
+
 type ListInstanceDiagnosisInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,6 +785,18 @@ func (i *ListStorageTypesInvoker) Invoke() (*model.ListStorageTypesResponse, err
 	}
 }
 
+type ListUpgradeHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUpgradeHistoriesInvoker) Invoke() (*model.ListUpgradeHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUpgradeHistoriesResponse), nil
+	}
+}
+
 type ListXellogFilesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -989,6 +1013,18 @@ func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyRes
 	}
 }
 
+type ShowAvailableVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailableVersionInvoker) Invoke() (*model.ShowAvailableVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAvailableVersionResponse), nil
+	}
+}
+
 type ShowBackupDownloadLinkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1142,6 +1178,30 @@ func (i *ShowSecondLevelMonitoringInvoker) Invoke() (*model.ShowSecondLevelMonit
 		return nil, err
 	} else {
 		return result.(*model.ShowSecondLevelMonitoringResponse), nil
+	}
+}
+
+type ShowTdeStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTdeStatusInvoker) Invoke() (*model.ShowTdeStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTdeStatusResponse), nil
+	}
+}
+
+type ShowUpgradeDbMajorVersionStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUpgradeDbMajorVersionStatusInvoker) Invoke() (*model.ShowUpgradeDbMajorVersionStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUpgradeDbMajorVersionStatusResponse), nil
 	}
 }
 
@@ -1346,6 +1406,42 @@ func (i *UpdatePostgresqlInstanceAliasInvoker) Invoke() (*model.UpdatePostgresql
 		return nil, err
 	} else {
 		return result.(*model.UpdatePostgresqlInstanceAliasResponse), nil
+	}
+}
+
+type UpdateTdeStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTdeStatusInvoker) Invoke() (*model.UpdateTdeStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTdeStatusResponse), nil
+	}
+}
+
+type UpgradeDbMajorVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeDbMajorVersionInvoker) Invoke() (*model.UpgradeDbMajorVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeDbMajorVersionResponse), nil
+	}
+}
+
+type UpgradeDbMajorVersionPreCheckInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeDbMajorVersionPreCheckInvoker) Invoke() (*model.UpgradeDbMajorVersionPreCheckResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeDbMajorVersionPreCheckResponse), nil
 	}
 }
 

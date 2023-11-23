@@ -44,7 +44,7 @@ type CreateFunctionResponse struct {
 	// 函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
 	GpuMemory *int32 `json:"gpu_memory,omitempty"`
 
-	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。 函数占用的CPU为基础CPU：200 millicores，再加上内存按比例占用的CPU，计算方法：内存/128 *100 + 200。
+	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
 	Cpu *int32 `json:"cpu,omitempty"`
 
 	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
@@ -106,6 +106,12 @@ type CreateFunctionResponse struct {
 
 	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
+
+	// 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
+	PreStopHandler *string `json:"pre_stop_handler,omitempty"`
+
+	// 初始化超时时间，超时函数将被强行停止，范围1～90秒。
+	PreStopTimeout *int32 `json:"pre_stop_timeout,omitempty"`
 
 	// 企业项目ID，在企业用户创建函数时必填。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

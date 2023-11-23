@@ -794,6 +794,27 @@ func (c *RdsClient) ListHistoryDatabaseInvoker(request *model.ListHistoryDatabas
 	return &ListHistoryDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInspectionHistories
+//
+// 查询实例大版本升级检查历史。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInspectionHistories(request *model.ListInspectionHistoriesRequest) (*model.ListInspectionHistoriesResponse, error) {
+	requestDef := GenReqDefForListInspectionHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInspectionHistoriesResponse), nil
+	}
+}
+
+// ListInspectionHistoriesInvoker
+func (c *RdsClient) ListInspectionHistoriesInvoker(request *model.ListInspectionHistoriesRequest) *ListInspectionHistoriesInvoker {
+	requestDef := GenReqDefForListInspectionHistories()
+	return &ListInspectionHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceDiagnosis 获取诊断后的实例数量
 //
 // 获取诊断后的实例数量
@@ -1366,6 +1387,27 @@ func (c *RdsClient) ListStorageTypesInvoker(request *model.ListStorageTypesReque
 	return &ListStorageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUpgradeHistories
+//
+// 查询实例大版本升级历史信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListUpgradeHistories(request *model.ListUpgradeHistoriesRequest) (*model.ListUpgradeHistoriesResponse, error) {
+	requestDef := GenReqDefForListUpgradeHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUpgradeHistoriesResponse), nil
+	}
+}
+
+// ListUpgradeHistoriesInvoker
+func (c *RdsClient) ListUpgradeHistoriesInvoker(request *model.ListUpgradeHistoriesRequest) *ListUpgradeHistoriesInvoker {
+	requestDef := GenReqDefForListUpgradeHistories()
+	return &ListUpgradeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListXellogFiles 查询扩展日志文件列表
 //
 // 查询扩展日志文件列表。
@@ -1749,6 +1791,27 @@ func (c *RdsClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargeP
 	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAvailableVersion
+//
+// 查询实例可升级的目标版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowAvailableVersion(request *model.ShowAvailableVersionRequest) (*model.ShowAvailableVersionResponse, error) {
+	requestDef := GenReqDefForShowAvailableVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvailableVersionResponse), nil
+	}
+}
+
+// ShowAvailableVersionInvoker
+func (c *RdsClient) ShowAvailableVersionInvoker(request *model.ShowAvailableVersionRequest) *ShowAvailableVersionInvoker {
+	requestDef := GenReqDefForShowAvailableVersion()
+	return &ShowAvailableVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBackupDownloadLink 获取备份下载链接
 //
 // 获取备份下载链接。
@@ -2020,6 +2083,48 @@ func (c *RdsClient) ShowSecondLevelMonitoring(request *model.ShowSecondLevelMoni
 func (c *RdsClient) ShowSecondLevelMonitoringInvoker(request *model.ShowSecondLevelMonitoringRequest) *ShowSecondLevelMonitoringInvoker {
 	requestDef := GenReqDefForShowSecondLevelMonitoring()
 	return &ShowSecondLevelMonitoringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTdeStatus 根据实例id查询sqlserver TDE状态
+//
+// 根据实例id查询sqlserver TDE状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowTdeStatus(request *model.ShowTdeStatusRequest) (*model.ShowTdeStatusResponse, error) {
+	requestDef := GenReqDefForShowTdeStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTdeStatusResponse), nil
+	}
+}
+
+// ShowTdeStatusInvoker 根据实例id查询sqlserver TDE状态
+func (c *RdsClient) ShowTdeStatusInvoker(request *model.ShowTdeStatusRequest) *ShowTdeStatusInvoker {
+	requestDef := GenReqDefForShowTdeStatus()
+	return &ShowTdeStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUpgradeDbMajorVersionStatus
+//
+// 查询大版本检查状态或升级状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowUpgradeDbMajorVersionStatus(request *model.ShowUpgradeDbMajorVersionStatusRequest) (*model.ShowUpgradeDbMajorVersionStatusResponse, error) {
+	requestDef := GenReqDefForShowUpgradeDbMajorVersionStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUpgradeDbMajorVersionStatusResponse), nil
+	}
+}
+
+// ShowUpgradeDbMajorVersionStatusInvoker
+func (c *RdsClient) ShowUpgradeDbMajorVersionStatusInvoker(request *model.ShowUpgradeDbMajorVersionStatusRequest) *ShowUpgradeDbMajorVersionStatusInvoker {
+	requestDef := GenReqDefForShowUpgradeDbMajorVersionStatus()
+	return &ShowUpgradeDbMajorVersionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StartFailover 手动倒换主备
@@ -2377,6 +2482,69 @@ func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresq
 func (c *RdsClient) UpdatePostgresqlInstanceAliasInvoker(request *model.UpdatePostgresqlInstanceAliasRequest) *UpdatePostgresqlInstanceAliasInvoker {
 	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
 	return &UpdatePostgresqlInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTdeStatus sqlserverTDE开关
+//
+// sqlserverTDE开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateTdeStatus(request *model.UpdateTdeStatusRequest) (*model.UpdateTdeStatusResponse, error) {
+	requestDef := GenReqDefForUpdateTdeStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTdeStatusResponse), nil
+	}
+}
+
+// UpdateTdeStatusInvoker sqlserverTDE开关
+func (c *RdsClient) UpdateTdeStatusInvoker(request *model.UpdateTdeStatusRequest) *UpdateTdeStatusInvoker {
+	requestDef := GenReqDefForUpdateTdeStatus()
+	return &UpdateTdeStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeDbMajorVersion
+//
+// PostgreSQL数据库升级大版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpgradeDbMajorVersion(request *model.UpgradeDbMajorVersionRequest) (*model.UpgradeDbMajorVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeDbMajorVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDbMajorVersionResponse), nil
+	}
+}
+
+// UpgradeDbMajorVersionInvoker
+func (c *RdsClient) UpgradeDbMajorVersionInvoker(request *model.UpgradeDbMajorVersionRequest) *UpgradeDbMajorVersionInvoker {
+	requestDef := GenReqDefForUpgradeDbMajorVersion()
+	return &UpgradeDbMajorVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeDbMajorVersionPreCheck
+//
+// 大版本升级前进行升级检查。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpgradeDbMajorVersionPreCheck(request *model.UpgradeDbMajorVersionPreCheckRequest) (*model.UpgradeDbMajorVersionPreCheckResponse, error) {
+	requestDef := GenReqDefForUpgradeDbMajorVersionPreCheck()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDbMajorVersionPreCheckResponse), nil
+	}
+}
+
+// UpgradeDbMajorVersionPreCheckInvoker
+func (c *RdsClient) UpgradeDbMajorVersionPreCheckInvoker(request *model.UpgradeDbMajorVersionPreCheckRequest) *UpgradeDbMajorVersionPreCheckInvoker {
+	requestDef := GenReqDefForUpgradeDbMajorVersionPreCheck()
+	return &UpgradeDbMajorVersionPreCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeDbVersion 升级内核小版本

@@ -16,18 +16,18 @@ type Spec struct {
 	Id *int64 `json:"id,omitempty"`
 
 	// 微服务引擎专享版ID
-	EngineId *string `json:"engine_id,omitempty"`
+	EngineId *string `json:"engineId,omitempty"`
 
 	// 微服务引擎专享版CCE集群部署类型
-	SpecType *SpecSpecType `json:"spec_type,omitempty"`
+	SpecType *SpecSpecType `json:"specType,omitempty"`
 
 	// 微服务引擎专享版CCE集群信息，目前为null
 	Cluster *string `json:"cluster,omitempty"`
 
 	// 微服务引擎专享版CCE集群ID
-	ClusterId *string `json:"cluster_id,omitempty"`
+	ClusterId *string `json:"clusterId,omitempty"`
 
-	ClusterNodes *SpecClusterNode `json:"cluster_nodes,omitempty"`
+	ClusterNodes *SpecClusterNode `json:"clusterNodes,omitempty"`
 
 	// 微服务引擎专享版CCE集群规格
 	Flavor *string `json:"flavor,omitempty"`
@@ -39,7 +39,7 @@ type Spec struct {
 	Version *string `json:"version,omitempty"`
 
 	// 微服务引擎专享版CCE集群附加参数
-	ExtendParam *string `json:"extend_param,omitempty"`
+	ExtendParam *string `json:"extendParam,omitempty"`
 }
 
 func (o Spec) String() string {

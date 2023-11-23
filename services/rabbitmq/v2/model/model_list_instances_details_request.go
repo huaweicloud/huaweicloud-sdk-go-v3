@@ -54,14 +54,23 @@ type ListInstancesDetailsRequestStatus struct {
 }
 
 type ListInstancesDetailsRequestStatusEnum struct {
-	CREATING     ListInstancesDetailsRequestStatus
-	CREATEFAILED ListInstancesDetailsRequestStatus
-	RUNNING      ListInstancesDetailsRequestStatus
-	ERROR        ListInstancesDetailsRequestStatus
-	STARTING     ListInstancesDetailsRequestStatus
-	RESTARTING   ListInstancesDetailsRequestStatus
-	CLOSING      ListInstancesDetailsRequestStatus
-	FROZEN       ListInstancesDetailsRequestStatus
+	CREATING           ListInstancesDetailsRequestStatus
+	RUNNING            ListInstancesDetailsRequestStatus
+	RESTARTING         ListInstancesDetailsRequestStatus
+	DELETING           ListInstancesDetailsRequestStatus
+	ERROR              ListInstancesDetailsRequestStatus
+	CREATEFAILED       ListInstancesDetailsRequestStatus
+	FREEZING           ListInstancesDetailsRequestStatus
+	FROZEN             ListInstancesDetailsRequestStatus
+	EXTENDING          ListInstancesDetailsRequestStatus
+	SHRINKING          ListInstancesDetailsRequestStatus
+	EXTENDEDFAILED     ListInstancesDetailsRequestStatus
+	CONFIGURING        ListInstancesDetailsRequestStatus
+	UPGRADING          ListInstancesDetailsRequestStatus
+	UPGRADINGFAILED    ListInstancesDetailsRequestStatus
+	ROLLBACK           ListInstancesDetailsRequestStatus
+	ROLLBACKFAILED     ListInstancesDetailsRequestStatus
+	VOLUMETYPECHANGING ListInstancesDetailsRequestStatus
 }
 
 func GetListInstancesDetailsRequestStatusEnum() ListInstancesDetailsRequestStatusEnum {
@@ -69,26 +78,53 @@ func GetListInstancesDetailsRequestStatusEnum() ListInstancesDetailsRequestStatu
 		CREATING: ListInstancesDetailsRequestStatus{
 			value: "CREATING",
 		},
-		CREATEFAILED: ListInstancesDetailsRequestStatus{
-			value: "CREATEFAILED",
-		},
 		RUNNING: ListInstancesDetailsRequestStatus{
 			value: "RUNNING",
-		},
-		ERROR: ListInstancesDetailsRequestStatus{
-			value: "ERROR",
-		},
-		STARTING: ListInstancesDetailsRequestStatus{
-			value: "STARTING",
 		},
 		RESTARTING: ListInstancesDetailsRequestStatus{
 			value: "RESTARTING",
 		},
-		CLOSING: ListInstancesDetailsRequestStatus{
-			value: "CLOSING",
+		DELETING: ListInstancesDetailsRequestStatus{
+			value: "DELETING",
+		},
+		ERROR: ListInstancesDetailsRequestStatus{
+			value: "ERROR",
+		},
+		CREATEFAILED: ListInstancesDetailsRequestStatus{
+			value: "CREATEFAILED",
+		},
+		FREEZING: ListInstancesDetailsRequestStatus{
+			value: "FREEZING",
 		},
 		FROZEN: ListInstancesDetailsRequestStatus{
 			value: "FROZEN",
+		},
+		EXTENDING: ListInstancesDetailsRequestStatus{
+			value: "EXTENDING",
+		},
+		SHRINKING: ListInstancesDetailsRequestStatus{
+			value: "SHRINKING",
+		},
+		EXTENDEDFAILED: ListInstancesDetailsRequestStatus{
+			value: "EXTENDEDFAILED",
+		},
+		CONFIGURING: ListInstancesDetailsRequestStatus{
+			value: "CONFIGURING",
+		},
+		UPGRADING: ListInstancesDetailsRequestStatus{
+			value: "UPGRADING",
+		},
+		UPGRADINGFAILED: ListInstancesDetailsRequestStatus{
+			value: "UPGRADINGFAILED",
+		},
+		ROLLBACK: ListInstancesDetailsRequestStatus{
+			value: "ROLLBACK",
+		},
+		ROLLBACKFAILED: ListInstancesDetailsRequestStatus{
+			value: "ROLLBACKFAILED",
+		},
+		VOLUMETYPECHANGING: ListInstancesDetailsRequestStatus{
+			value: "VOLUMETYPECHANGING",
 		},
 	}
 }

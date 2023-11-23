@@ -208,6 +208,27 @@ func (c *SecMasterClient) CreateDataobjectRelationsInvoker(request *model.Create
 	return &CreateDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDataspace create dataspace (创建数据空间)
+//
+// create dataspace
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateDataspace(request *model.CreateDataspaceRequest) (*model.CreateDataspaceResponse, error) {
+	requestDef := GenReqDefForCreateDataspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDataspaceResponse), nil
+	}
+}
+
+// CreateDataspaceInvoker create dataspace (创建数据空间)
+func (c *SecMasterClient) CreateDataspaceInvoker(request *model.CreateDataspaceRequest) *CreateDataspaceInvoker {
+	requestDef := GenReqDefForCreateDataspace()
+	return &CreateDataspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateIncident 创建事件
 //
 // 创建事件
@@ -248,6 +269,27 @@ func (c *SecMasterClient) CreateIndicator(request *model.CreateIndicatorRequest)
 func (c *SecMasterClient) CreateIndicatorInvoker(request *model.CreateIndicatorRequest) *CreateIndicatorInvoker {
 	requestDef := GenReqDefForCreateIndicator()
 	return &CreateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePipe create pipe (创建数据管道)
+//
+// create pipe
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreatePipe(request *model.CreatePipeRequest) (*model.CreatePipeResponse, error) {
+	requestDef := GenReqDefForCreatePipe()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePipeResponse), nil
+	}
+}
+
+// CreatePipeInvoker create pipe (创建数据管道)
+func (c *SecMasterClient) CreatePipeInvoker(request *model.CreatePipeRequest) *CreatePipeInvoker {
+	requestDef := GenReqDefForCreatePipe()
+	return &CreatePipeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePlaybook 创建剧本
@@ -670,6 +712,48 @@ func (c *SecMasterClient) ListAlertsInvoker(request *model.ListAlertsRequest) *L
 	return &ListAlertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDataclass 查询数据类列表
+//
+// 查询数据类列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListDataclass(request *model.ListDataclassRequest) (*model.ListDataclassResponse, error) {
+	requestDef := GenReqDefForListDataclass()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataclassResponse), nil
+	}
+}
+
+// ListDataclassInvoker 查询数据类列表
+func (c *SecMasterClient) ListDataclassInvoker(request *model.ListDataclassRequest) *ListDataclassInvoker {
+	requestDef := GenReqDefForListDataclass()
+	return &ListDataclassInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDataclassFields 查询字段列表
+//
+// 查询字段列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListDataclassFields(request *model.ListDataclassFieldsRequest) (*model.ListDataclassFieldsResponse, error) {
+	requestDef := GenReqDefForListDataclassFields()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataclassFieldsResponse), nil
+	}
+}
+
+// ListDataclassFieldsInvoker 查询字段列表
+func (c *SecMasterClient) ListDataclassFieldsInvoker(request *model.ListDataclassFieldsRequest) *ListDataclassFieldsInvoker {
+	requestDef := GenReqDefForListDataclassFields()
+	return &ListDataclassFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDataobjectRelations 查询关联Dataobject列表
 //
 // 查询关联Dataobject列表
@@ -857,6 +941,27 @@ func (c *SecMasterClient) ListPlaybooks(request *model.ListPlaybooksRequest) (*m
 func (c *SecMasterClient) ListPlaybooksInvoker(request *model.ListPlaybooksRequest) *ListPlaybooksInvoker {
 	requestDef := GenReqDefForListPlaybooks()
 	return &ListPlaybooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkflows 查询流程列表
+//
+// 查询流程列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListWorkflows(request *model.ListWorkflowsRequest) (*model.ListWorkflowsResponse, error) {
+	requestDef := GenReqDefForListWorkflows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkflowsResponse), nil
+	}
+}
+
+// ListWorkflowsInvoker 查询流程列表
+func (c *SecMasterClient) ListWorkflowsInvoker(request *model.ListWorkflowsRequest) *ListWorkflowsInvoker {
+	requestDef := GenReqDefForListWorkflows()
+	return &ListWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAlert 获取告警详情

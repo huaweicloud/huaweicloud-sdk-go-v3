@@ -12,7 +12,7 @@ type UpdateFunctionCollectStateRequest struct {
 	// 函数URN
 	FuncUrn string `json:"func_urn"`
 
-	// 收藏状态
+	// 置顶状态
 	State string `json:"state"`
 }
 

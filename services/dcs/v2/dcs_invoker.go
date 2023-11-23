@@ -749,6 +749,18 @@ func (i *LoginWebCliInvoker) Invoke() (*model.LoginWebCliResponse, error) {
 	}
 }
 
+type LogoffWebCliInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LogoffWebCliInvoker) Invoke() (*model.LogoffWebCliResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LogoffWebCliResponse), nil
+	}
+}
+
 type ResetAclAccountPassWordInvoker struct {
 	*invoker.BaseInvoker
 }

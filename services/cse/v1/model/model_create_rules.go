@@ -9,12 +9,12 @@ import (
 // CreateRules 灰度发布规则
 type CreateRules struct {
 
-	// precedence
+	// 优先级，数字越大，优先级越高。
 	Precedence *int32 `json:"precedence,omitempty"`
 
 	Match *CreateMatch `json:"match,omitempty"`
 
-	// route
+	// 路由规则列表。
 	Route *[]CreateRoute `json:"route,omitempty"`
 }
 
