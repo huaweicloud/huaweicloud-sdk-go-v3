@@ -8,13 +8,13 @@ import (
 
 type ApplicationModel struct {
 
-	// 应用id
+	// 应用id。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 应用名称
+	// 应用名称。
 	AppName *string `json:"app_name,omitempty"`
 
-	// 应用来源
+	// 应用来源。
 	AppType *string `json:"app_type,omitempty"`
 }
 

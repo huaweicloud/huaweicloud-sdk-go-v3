@@ -13,8 +13,8 @@ type ListBandwidthPackageTagsResponse struct {
 	RequestId string `json:"request_id"`
 
 	// 带宽包的所有标签。
-	Tags           []Tag `json:"tags"`
-	HttpStatusCode int   `json:"-"`
+	Tags           []MultivaluedTag `json:"tags"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListBandwidthPackageTagsResponse) String() string {

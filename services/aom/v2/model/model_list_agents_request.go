@@ -9,10 +9,10 @@ import (
 // ListAgentsRequest Request Object
 type ListAgentsRequest struct {
 
-	// 集群id
+	// 集群id。
 	ClusterId string `json:"cluster_id"`
 
-	// 命名空间
+	// 命名空间。
 	Namespace string `json:"namespace"`
 }
 

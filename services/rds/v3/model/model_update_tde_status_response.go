@@ -8,7 +8,10 @@ import (
 
 // UpdateTdeStatusResponse Response Object
 type UpdateTdeStatusResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 任务ID
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateTdeStatusResponse) String() string {

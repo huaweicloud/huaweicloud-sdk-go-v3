@@ -8,10 +8,8 @@ import (
 
 // SearchAtomicIndexesResponse Response Object
 type SearchAtomicIndexesResponse struct {
-
-	// 返回的数据信息
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *AtomicIndexVoSearchResultData `json:"data,omitempty"`
+	HttpStatusCode int                            `json:"-"`
 }
 
 func (o SearchAtomicIndexesResponse) String() string {

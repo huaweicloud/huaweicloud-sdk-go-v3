@@ -270,6 +270,48 @@ func (c *CceClient) CreateNodePoolInvoker(request *model.CreateNodePoolRequest) 
 	return &CreateNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePartition 创建分区
+//
+// 创建分区
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) CreatePartition(request *model.CreatePartitionRequest) (*model.CreatePartitionResponse, error) {
+	requestDef := GenReqDefForCreatePartition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePartitionResponse), nil
+	}
+}
+
+// CreatePartitionInvoker 创建分区
+func (c *CceClient) CreatePartitionInvoker(request *model.CreatePartitionRequest) *CreatePartitionInvoker {
+	requestDef := GenReqDefForCreatePartition()
+	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRelease 创建模板实例
+//
+// 创建模板实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) CreateRelease(request *model.CreateReleaseRequest) (*model.CreateReleaseResponse, error) {
+	requestDef := GenReqDefForCreateRelease()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateReleaseResponse), nil
+	}
+}
+
+// CreateReleaseInvoker 创建模板实例
+func (c *CceClient) CreateReleaseInvoker(request *model.CreateReleaseRequest) *CreateReleaseInvoker {
+	requestDef := GenReqDefForCreateRelease()
+	return &CreateReleaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAddonInstance 删除AddonInstance
 //
 // 删除插件实例的功能。
@@ -289,6 +331,27 @@ func (c *CceClient) DeleteAddonInstance(request *model.DeleteAddonInstanceReques
 func (c *CceClient) DeleteAddonInstanceInvoker(request *model.DeleteAddonInstanceRequest) *DeleteAddonInstanceInvoker {
 	requestDef := GenReqDefForDeleteAddonInstance()
 	return &DeleteAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteChart 删除模板
+//
+// 删除模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DeleteChart(request *model.DeleteChartRequest) (*model.DeleteChartResponse, error) {
+	requestDef := GenReqDefForDeleteChart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteChartResponse), nil
+	}
+}
+
+// DeleteChartInvoker 删除模板
+func (c *CceClient) DeleteChartInvoker(request *model.DeleteChartRequest) *DeleteChartInvoker {
+	requestDef := GenReqDefForDeleteChart()
+	return &DeleteChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteCloudPersistentVolumeClaims 删除PVC（待废弃）
@@ -379,6 +442,48 @@ func (c *CceClient) DeleteNodePoolInvoker(request *model.DeleteNodePoolRequest) 
 	return &DeleteNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteRelease 删除指定模板实例
+//
+// 删除指定模板实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DeleteRelease(request *model.DeleteReleaseRequest) (*model.DeleteReleaseResponse, error) {
+	requestDef := GenReqDefForDeleteRelease()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteReleaseResponse), nil
+	}
+}
+
+// DeleteReleaseInvoker 删除指定模板实例
+func (c *CceClient) DeleteReleaseInvoker(request *model.DeleteReleaseRequest) *DeleteReleaseInvoker {
+	requestDef := GenReqDefForDeleteRelease()
+	return &DeleteReleaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadChart 下载模板
+//
+// 下载模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DownloadChart(request *model.DownloadChartRequest) (*model.DownloadChartResponse, error) {
+	requestDef := GenReqDefForDownloadChart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadChartResponse), nil
+	}
+}
+
+// DownloadChartInvoker 下载模板
+func (c *CceClient) DownloadChartInvoker(request *model.DownloadChartRequest) *DownloadChartInvoker {
+	requestDef := GenReqDefForDownloadChart()
+	return &DownloadChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // HibernateCluster 集群休眠
 //
 // 集群休眠用于将运行中的集群置于休眠状态，休眠后，将不再收取控制节点资源费用。
@@ -440,6 +545,27 @@ func (c *CceClient) ListAddonTemplates(request *model.ListAddonTemplatesRequest)
 func (c *CceClient) ListAddonTemplatesInvoker(request *model.ListAddonTemplatesRequest) *ListAddonTemplatesInvoker {
 	requestDef := GenReqDefForListAddonTemplates()
 	return &ListAddonTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCharts 获取模板列表
+//
+// 获取模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListCharts(request *model.ListChartsRequest) (*model.ListChartsResponse, error) {
+	requestDef := GenReqDefForListCharts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListChartsResponse), nil
+	}
+}
+
+// ListChartsInvoker 获取模板列表
+func (c *CceClient) ListChartsInvoker(request *model.ListChartsRequest) *ListChartsInvoker {
+	requestDef := GenReqDefForListCharts()
+	return &ListChartsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListClusters 获取指定项目下的集群
@@ -508,10 +634,51 @@ func (c *CceClient) ListNodesInvoker(request *model.ListNodesRequest) *ListNodes
 	return &ListNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPartitions 获取分区列表
+//
+// 获取分区列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListPartitions(request *model.ListPartitionsRequest) (*model.ListPartitionsResponse, error) {
+	requestDef := GenReqDefForListPartitions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPartitionsResponse), nil
+	}
+}
+
+// ListPartitionsInvoker 获取分区列表
+func (c *CceClient) ListPartitionsInvoker(request *model.ListPartitionsRequest) *ListPartitionsInvoker {
+	requestDef := GenReqDefForListPartitions()
+	return &ListPartitionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListReleases 获取模板实例列表
+//
+// 获取模板实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListReleases(request *model.ListReleasesRequest) (*model.ListReleasesResponse, error) {
+	requestDef := GenReqDefForListReleases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReleasesResponse), nil
+	}
+}
+
+// ListReleasesInvoker 获取模板实例列表
+func (c *CceClient) ListReleasesInvoker(request *model.ListReleasesRequest) *ListReleasesInvoker {
+	requestDef := GenReqDefForListReleases()
+	return &ListReleasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // MigrateNode 节点迁移
 //
-// 该API用于在指定集群下迁移节点到另一集群（仅支持在同一VPC、同一项目下的不同集群之间进行迁移，且迁移前后的集群类型需相同）。
-// [CCE Turbo集群下弹性云服务-物理机类型节点不支持迁移。](tag:hws,hws_hk,dt)
+// 该API用于在指定集群下迁移节点到另一集群。
 //
 // &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 //
@@ -604,7 +771,8 @@ func (c *CceClient) ResetNodeInvoker(request *model.ResetNodeRequest) *ResetNode
 // 该API用于变更一个指定集群的规格。
 //
 // &gt;   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
-// &gt;   - 使用限制请参考：[[变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html)。](tag:hws)[[变更集群规格](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0403.html)](tag:hws_hk)
+// &gt;   [- 使用限制请参考[变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html)。](tag:hws)
+// &gt;   [- 使用限制请参考[变更集群规格](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0403.html)](tag:hws_hk)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CceClient) ResizeCluster(request *model.ResizeClusterRequest) (*model.ResizeClusterResponse, error) {
@@ -688,6 +856,48 @@ func (c *CceClient) ShowAddonInstanceInvoker(request *model.ShowAddonInstanceReq
 	return &ShowAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowChart 获取模板
+//
+// 获取模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowChart(request *model.ShowChartRequest) (*model.ShowChartResponse, error) {
+	requestDef := GenReqDefForShowChart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowChartResponse), nil
+	}
+}
+
+// ShowChartInvoker 获取模板
+func (c *CceClient) ShowChartInvoker(request *model.ShowChartRequest) *ShowChartInvoker {
+	requestDef := GenReqDefForShowChart()
+	return &ShowChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowChartValues 获取模板Values
+//
+// 获取模板Values
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowChartValues(request *model.ShowChartValuesRequest) (*model.ShowChartValuesResponse, error) {
+	requestDef := GenReqDefForShowChartValues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowChartValuesResponse), nil
+	}
+}
+
+// ShowChartValuesInvoker 获取模板Values
+func (c *CceClient) ShowChartValuesInvoker(request *model.ShowChartValuesRequest) *ShowChartValuesInvoker {
+	requestDef := GenReqDefForShowChartValues()
+	return &ShowChartValuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCluster 获取指定的集群
 //
 // 该API用于获取指定集群的详细信息。
@@ -708,6 +918,48 @@ func (c *CceClient) ShowCluster(request *model.ShowClusterRequest) (*model.ShowC
 func (c *CceClient) ShowClusterInvoker(request *model.ShowClusterRequest) *ShowClusterInvoker {
 	requestDef := GenReqDefForShowCluster()
 	return &ShowClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterConfig 查询集群日志配置信息
+//
+// 获取集群组件上报的LTS的配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowClusterConfig(request *model.ShowClusterConfigRequest) (*model.ShowClusterConfigResponse, error) {
+	requestDef := GenReqDefForShowClusterConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterConfigResponse), nil
+	}
+}
+
+// ShowClusterConfigInvoker 查询集群日志配置信息
+func (c *CceClient) ShowClusterConfigInvoker(request *model.ShowClusterConfigRequest) *ShowClusterConfigInvoker {
+	requestDef := GenReqDefForShowClusterConfig()
+	return &ShowClusterConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterConfigurationDetails 查询指定集群支持配置的参数列表
+//
+// 该API用于查询CCE服务下指定集群支持配置的参数列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowClusterConfigurationDetails(request *model.ShowClusterConfigurationDetailsRequest) (*model.ShowClusterConfigurationDetailsResponse, error) {
+	requestDef := GenReqDefForShowClusterConfigurationDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterConfigurationDetailsResponse), nil
+	}
+}
+
+// ShowClusterConfigurationDetailsInvoker 查询指定集群支持配置的参数列表
+func (c *CceClient) ShowClusterConfigurationDetailsInvoker(request *model.ShowClusterConfigurationDetailsRequest) *ShowClusterConfigurationDetailsInvoker {
+	requestDef := GenReqDefForShowClusterConfigurationDetails()
+	return &ShowClusterConfigurationDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowClusterEndpoints 获取集群访问的地址
@@ -801,6 +1053,48 @@ func (c *CceClient) ShowNodePoolInvoker(request *model.ShowNodePoolRequest) *Sho
 	return &ShowNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowNodePoolConfigurations 查询指定节点池支持配置的参数内容
+//
+// 该API用于查询指定节点池支持配置的参数内容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowNodePoolConfigurations(request *model.ShowNodePoolConfigurationsRequest) (*model.ShowNodePoolConfigurationsResponse, error) {
+	requestDef := GenReqDefForShowNodePoolConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNodePoolConfigurationsResponse), nil
+	}
+}
+
+// ShowNodePoolConfigurationsInvoker 查询指定节点池支持配置的参数内容
+func (c *CceClient) ShowNodePoolConfigurationsInvoker(request *model.ShowNodePoolConfigurationsRequest) *ShowNodePoolConfigurationsInvoker {
+	requestDef := GenReqDefForShowNodePoolConfigurations()
+	return &ShowNodePoolConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPartition 获取分区详情
+//
+// 获取分区详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowPartition(request *model.ShowPartitionRequest) (*model.ShowPartitionResponse, error) {
+	requestDef := GenReqDefForShowPartition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPartitionResponse), nil
+	}
+}
+
+// ShowPartitionInvoker 获取分区详情
+func (c *CceClient) ShowPartitionInvoker(request *model.ShowPartitionRequest) *ShowPartitionInvoker {
+	requestDef := GenReqDefForShowPartition()
+	return &ShowPartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查询CCE服务下的资源配额
 //
 // 该API用于查询CCE服务下的资源配额。
@@ -820,6 +1114,48 @@ func (c *CceClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 func (c *CceClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
 	requestDef := GenReqDefForShowQuotas()
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRelease 获取指定模板实例
+//
+// 获取指定模板实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowRelease(request *model.ShowReleaseRequest) (*model.ShowReleaseResponse, error) {
+	requestDef := GenReqDefForShowRelease()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReleaseResponse), nil
+	}
+}
+
+// ShowReleaseInvoker 获取指定模板实例
+func (c *CceClient) ShowReleaseInvoker(request *model.ShowReleaseRequest) *ShowReleaseInvoker {
+	requestDef := GenReqDefForShowRelease()
+	return &ShowReleaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReleaseHistory 查询指定模板实例历史记录
+//
+// 查询指定模板实例历史记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowReleaseHistory(request *model.ShowReleaseHistoryRequest) (*model.ShowReleaseHistoryResponse, error) {
+	requestDef := GenReqDefForShowReleaseHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReleaseHistoryResponse), nil
+	}
+}
+
+// ShowReleaseHistoryInvoker 查询指定模板实例历史记录
+func (c *CceClient) ShowReleaseHistoryInvoker(request *model.ShowReleaseHistoryRequest) *ShowReleaseHistoryInvoker {
+	requestDef := GenReqDefForShowReleaseHistory()
+	return &ShowReleaseHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowUpgradeClusterTask 获取集群升级任务详情
@@ -845,6 +1181,27 @@ func (c *CceClient) ShowUpgradeClusterTaskInvoker(request *model.ShowUpgradeClus
 	return &ShowUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowUserChartsQuotas 获取用户模板配额
+//
+// 获取用户模板配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowUserChartsQuotas(request *model.ShowUserChartsQuotasRequest) (*model.ShowUserChartsQuotasResponse, error) {
+	requestDef := GenReqDefForShowUserChartsQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUserChartsQuotasResponse), nil
+	}
+}
+
+// ShowUserChartsQuotasInvoker 获取用户模板配额
+func (c *CceClient) ShowUserChartsQuotasInvoker(request *model.ShowUserChartsQuotasRequest) *ShowUserChartsQuotasInvoker {
+	requestDef := GenReqDefForShowUserChartsQuotas()
+	return &ShowUserChartsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAddonInstance 更新AddonInstance
 //
 // 更新插件实例的功能。
@@ -864,6 +1221,27 @@ func (c *CceClient) UpdateAddonInstance(request *model.UpdateAddonInstanceReques
 func (c *CceClient) UpdateAddonInstanceInvoker(request *model.UpdateAddonInstanceRequest) *UpdateAddonInstanceInvoker {
 	requestDef := GenReqDefForUpdateAddonInstance()
 	return &UpdateAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateChart 更新模板
+//
+// 更新模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateChart(request *model.UpdateChartRequest) (*model.UpdateChartResponse, error) {
+	requestDef := GenReqDefForUpdateChart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateChartResponse), nil
+	}
+}
+
+// UpdateChartInvoker 更新模板
+func (c *CceClient) UpdateChartInvoker(request *model.UpdateChartRequest) *UpdateChartInvoker {
+	requestDef := GenReqDefForUpdateChart()
+	return &UpdateChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCluster 更新指定的集群
@@ -908,6 +1286,27 @@ func (c *CceClient) UpdateClusterEip(request *model.UpdateClusterEipRequest) (*m
 func (c *CceClient) UpdateClusterEipInvoker(request *model.UpdateClusterEipRequest) *UpdateClusterEipInvoker {
 	requestDef := GenReqDefForUpdateClusterEip()
 	return &UpdateClusterEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClusterLogConfig 配置集群日志
+//
+// 用户可以选择集群管理节点上哪些组件的日志上报LTS
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateClusterLogConfig(request *model.UpdateClusterLogConfigRequest) (*model.UpdateClusterLogConfigResponse, error) {
+	requestDef := GenReqDefForUpdateClusterLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClusterLogConfigResponse), nil
+	}
+}
+
+// UpdateClusterLogConfigInvoker 配置集群日志
+func (c *CceClient) UpdateClusterLogConfigInvoker(request *model.UpdateClusterLogConfigRequest) *UpdateClusterLogConfigInvoker {
+	requestDef := GenReqDefForUpdateClusterLogConfig()
+	return &UpdateClusterLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateNode 更新指定的节点
@@ -958,6 +1357,69 @@ func (c *CceClient) UpdateNodePoolInvoker(request *model.UpdateNodePoolRequest) 
 	return &UpdateNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateNodePoolConfiguration 修改指定节点池配置参数的值
+//
+// 该API用于修改CCE服务下指定节点池配置参数的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateNodePoolConfiguration(request *model.UpdateNodePoolConfigurationRequest) (*model.UpdateNodePoolConfigurationResponse, error) {
+	requestDef := GenReqDefForUpdateNodePoolConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNodePoolConfigurationResponse), nil
+	}
+}
+
+// UpdateNodePoolConfigurationInvoker 修改指定节点池配置参数的值
+func (c *CceClient) UpdateNodePoolConfigurationInvoker(request *model.UpdateNodePoolConfigurationRequest) *UpdateNodePoolConfigurationInvoker {
+	requestDef := GenReqDefForUpdateNodePoolConfiguration()
+	return &UpdateNodePoolConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePartition 更新分区
+//
+// 更新分区
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdatePartition(request *model.UpdatePartitionRequest) (*model.UpdatePartitionResponse, error) {
+	requestDef := GenReqDefForUpdatePartition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePartitionResponse), nil
+	}
+}
+
+// UpdatePartitionInvoker 更新分区
+func (c *CceClient) UpdatePartitionInvoker(request *model.UpdatePartitionRequest) *UpdatePartitionInvoker {
+	requestDef := GenReqDefForUpdatePartition()
+	return &UpdatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRelease 更新指定模板实例
+//
+// 更新指定模板实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateRelease(request *model.UpdateReleaseRequest) (*model.UpdateReleaseResponse, error) {
+	requestDef := GenReqDefForUpdateRelease()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateReleaseResponse), nil
+	}
+}
+
+// UpdateReleaseInvoker 更新指定模板实例
+func (c *CceClient) UpdateReleaseInvoker(request *model.UpdateReleaseRequest) *UpdateReleaseInvoker {
+	requestDef := GenReqDefForUpdateRelease()
+	return &UpdateReleaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpgradeCluster 集群升级
 //
 // 集群升级。
@@ -981,7 +1443,28 @@ func (c *CceClient) UpgradeClusterInvoker(request *model.UpgradeClusterRequest) 
 	return &UpgradeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowVersion 查询API版本信息列表。
+// UploadChart 上传模板
+//
+// 上传模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UploadChart(request *model.UploadChartRequest) (*model.UploadChartResponse, error) {
+	requestDef := GenReqDefForUploadChart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadChartResponse), nil
+	}
+}
+
+// UploadChartInvoker 上传模板
+func (c *CceClient) UploadChartInvoker(request *model.UploadChartRequest) *UploadChartInvoker {
+	requestDef := GenReqDefForUploadChart()
+	return &UploadChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVersion 查询API版本信息列表
 //
 // 该API用于查询CCE服务当前支持的API版本信息列表。
 //
@@ -996,7 +1479,7 @@ func (c *CceClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowV
 	}
 }
 
-// ShowVersionInvoker 查询API版本信息列表。
+// ShowVersionInvoker 查询API版本信息列表
 func (c *CceClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowVersionInvoker {
 	requestDef := GenReqDefForShowVersion()
 	return &ShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

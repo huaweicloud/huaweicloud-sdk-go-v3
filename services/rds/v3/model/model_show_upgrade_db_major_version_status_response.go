@@ -19,7 +19,7 @@ type ShowUpgradeDbMajorVersionStatusResponse struct {
 	StartTime *string `json:"start_time,omitempty"`
 
 	// 检查成功时，检查报告到期时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。 该字段仅在action为check时返回。
-	ReportExpirationTime *string `json:"report_expiration_time,omitempty"`
+	CheckExpirationTime *string `json:"check_expiration_time,omitempty"`
 
 	// 预检查或升级报告信息。
 	Detail         *string `json:"detail,omitempty"`

@@ -42,6 +42,21 @@ func GenReqDefForBatchCreateSharedBandwidths() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchModifyBandwidth() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/batch-bandwidths/modify").
+		WithResponse(new(model.BatchModifyBandwidthResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForChangeBandwidthToPeriod() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// MasterEipResponseStatus 状态信息
 type MasterEipResponseStatus struct {
 
 	// 集群访问的PrivateIP(HA集群返回VIP)

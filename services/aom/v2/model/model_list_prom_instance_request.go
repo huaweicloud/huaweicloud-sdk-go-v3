@@ -12,16 +12,16 @@ import (
 // ListPromInstanceRequest Request Object
 type ListPromInstanceRequest struct {
 
-	// 普罗实例ID
+	// Prometheus实例id。
 	PromId *string `json:"prom_id,omitempty"`
 
-	// 普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
+	// Prometheus实例类型。
 	PromType *ListPromInstanceRequestPromType `json:"prom_type,omitempty"`
 
-	// cce集群开关 true/false
+	// cce集群开关。
 	CceClusterEnable *ListPromInstanceRequestCceClusterEnable `json:"cce_cluster_enable,omitempty"`
 
-	// 普罗实例状态 true/false
+	// Prometheus实例状态。
 	PromStatus *ListPromInstanceRequestPromStatus `json:"prom_status,omitempty"`
 }
 

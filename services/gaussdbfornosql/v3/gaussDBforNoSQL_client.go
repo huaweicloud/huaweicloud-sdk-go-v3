@@ -692,6 +692,27 @@ func (c *GaussDBforNoSQLClient) ListFlavorsInvoker(request *model.ListFlavorsReq
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInfluxdbSlowLogs 查询GeminiDB(for influxdb)数据库慢日志
+//
+// 查询GeminiDB(for influxdb)数据库慢日志信息，支持日志关键字搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListInfluxdbSlowLogs(request *model.ListInfluxdbSlowLogsRequest) (*model.ListInfluxdbSlowLogsResponse, error) {
+	requestDef := GenReqDefForListInfluxdbSlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInfluxdbSlowLogsResponse), nil
+	}
+}
+
+// ListInfluxdbSlowLogsInvoker 查询GeminiDB(for influxdb)数据库慢日志
+func (c *GaussDBforNoSQLClient) ListInfluxdbSlowLogsInvoker(request *model.ListInfluxdbSlowLogsRequest) *ListInfluxdbSlowLogsInvoker {
+	requestDef := GenReqDefForListInfluxdbSlowLogs()
+	return &ListInfluxdbSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceDatabases 获取Redis实例数据库列表
 //
 // 获取Redis实例数据库列表。

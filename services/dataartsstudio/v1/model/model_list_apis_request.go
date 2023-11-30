@@ -21,6 +21,9 @@ type ListApisRequest struct {
 	// 资源类型
 	ContentType string `json:"Content-Type"`
 
+	// 是否返回专享版API的发布信息
+	XReturnPublishMessages *string `json:"x-return-publish-messages,omitempty"`
+
 	// 查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整
 	Offset *int32 `json:"offset,omitempty"`
 

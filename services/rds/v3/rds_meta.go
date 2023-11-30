@@ -898,13 +898,13 @@ func GenReqDefForListFlavors() *def.HttpRequestDef {
 func GenReqDefForListHistoryDatabase() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/{database_name}/instances/history/databases").
+		WithPath("/v3/{project_id}/{engine}/instances/history/databases").
 		WithResponse(new(model.ListHistoryDatabaseResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DatabaseName").
-		WithJsonTag("database_name").
+		WithName("Engine").
+		WithJsonTag("engine").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2041,6 +2041,26 @@ func GenReqDefForSetBinlogClearPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSetInstancesDbShrink() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/db_shrink").
+		WithResponse(new(model.SetInstancesDbShrinkResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSetOffSiteBackupPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -2993,10 +3013,6 @@ func GenReqDefForUpgradeDbMajorVersion() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

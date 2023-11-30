@@ -9,7 +9,7 @@ import (
 // DocumentQueryResponseRequestParamsData 创建作业时传的data参数
 type DocumentQueryResponseRequestParamsData struct {
 
-	// 创建作业时传的url参数
+	// 创建作业时传的url参数。目前支持：公网HTTP/HTTPS URL。
 	Url string `json:"url"`
 
 	// 创建作业时传的format参数

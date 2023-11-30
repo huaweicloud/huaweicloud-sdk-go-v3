@@ -9,7 +9,7 @@ import (
 // DeletePromInstanceRequest Request Object
 type DeletePromInstanceRequest struct {
 
-	// 普罗实例id。
+	// Prometheus实例id。
 	PromId string `json:"prom_id"`
 }
 

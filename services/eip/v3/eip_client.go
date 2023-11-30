@@ -40,6 +40,27 @@ func (c *EipClient) ListBandwidthInvoker(request *model.ListBandwidthRequest) *L
 	return &ListBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBandwidthsLimit 查看租户带宽限制
+//
+// 获取EIP带宽限制列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListBandwidthsLimit(request *model.ListBandwidthsLimitRequest) (*model.ListBandwidthsLimitResponse, error) {
+	requestDef := GenReqDefForListBandwidthsLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthsLimitResponse), nil
+	}
+}
+
+// ListBandwidthsLimitInvoker 查看租户带宽限制
+func (c *EipClient) ListBandwidthsLimitInvoker(request *model.ListBandwidthsLimitRequest) *ListBandwidthsLimitInvoker {
+	requestDef := GenReqDefForListBandwidthsLimit()
+	return &ListBandwidthsLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCommonPools 查询公共池列表
 //
 // 查询公共池列表
@@ -59,6 +80,27 @@ func (c *EipClient) ListCommonPools(request *model.ListCommonPoolsRequest) (*mod
 func (c *EipClient) ListCommonPoolsInvoker(request *model.ListCommonPoolsRequest) *ListCommonPoolsInvoker {
 	requestDef := GenReqDefForListCommonPools()
 	return &ListCommonPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEipBandwidths 查询带宽列表
+//
+// 查询带宽列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListEipBandwidths(request *model.ListEipBandwidthsRequest) (*model.ListEipBandwidthsResponse, error) {
+	requestDef := GenReqDefForListEipBandwidths()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEipBandwidthsResponse), nil
+	}
+}
+
+// ListEipBandwidthsInvoker 查询带宽列表
+func (c *EipClient) ListEipBandwidthsInvoker(request *model.ListEipBandwidthsRequest) *ListEipBandwidthsInvoker {
+	requestDef := GenReqDefForListEipBandwidths()
+	return &ListEipBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPublicBorderGroups 查询公共池分组列表
@@ -416,4 +458,25 @@ func (c *EipClient) UpdateDisassociatePublicip(request *model.UpdateDisassociate
 func (c *EipClient) UpdateDisassociatePublicipInvoker(request *model.UpdateDisassociatePublicipRequest) *UpdateDisassociatePublicipInvoker {
 	requestDef := GenReqDefForUpdateDisassociatePublicip()
 	return &UpdateDisassociatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicip 更新弹性公网IP
+//
+// 更新弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) UpdatePublicip(request *model.UpdatePublicipRequest) (*model.UpdatePublicipResponse, error) {
+	requestDef := GenReqDefForUpdatePublicip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePublicipResponse), nil
+	}
+}
+
+// UpdatePublicipInvoker 更新弹性公网IP
+func (c *EipClient) UpdatePublicipInvoker(request *model.UpdatePublicipRequest) *UpdatePublicipInvoker {
+	requestDef := GenReqDefForUpdatePublicip()
+	return &UpdatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

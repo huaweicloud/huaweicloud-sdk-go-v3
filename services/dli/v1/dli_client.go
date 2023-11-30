@@ -1309,6 +1309,27 @@ func (c *DliClient) ShowQueueInvoker(request *model.ShowQueueRequest) *ShowQueue
 	return &ShowQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowQuota 查询配额
+//
+// 该API用于获取用户配额信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
+	requestDef := GenReqDefForShowQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotaResponse), nil
+	}
+}
+
+// ShowQuotaInvoker 查询配额
+func (c *DliClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceInfo 查看组内资源包
 //
 // 该API用于查看某个project某个分组下的具体资源信息。

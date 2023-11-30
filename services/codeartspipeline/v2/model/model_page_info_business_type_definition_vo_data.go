@@ -9,13 +9,13 @@ import (
 type PageInfoBusinessTypeDefinitionVoData struct {
 
 	// 业务类型
-	BusinessType *string `json:"businessType,omitempty"`
+	BusinessType *string `json:"business_type,omitempty"`
 
 	// 展示名
-	DisplayName *string `json:"displayName,omitempty"`
+	DisplayName *string `json:"display_name,omitempty"`
 
 	// 唯一ID
-	UniqueId *string `json:"uniqueId,omitempty"`
+	UniqueId *string `json:"unique_id,omitempty"`
 
 	// 可编辑
 	Editable *bool `json:"editable,omitempty"`

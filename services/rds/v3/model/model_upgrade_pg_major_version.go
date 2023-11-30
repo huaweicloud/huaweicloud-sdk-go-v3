@@ -15,7 +15,7 @@ type UpgradePgMajorVersion struct {
 	IsChangePrivateIp bool `json:"is_change_private_ip"`
 
 	// 统计信息收集方式。is_change_private_ip为true时必选  before_change_private_ip：将实例内网IP切换到大版本实例前收集  after_change_private_ip：将实例内网IP切换到大版本实例后收集
-	StatisticsCollectionMode string `json:"statistics_collection_mode"`
+	StatisticsCollectionMode *string `json:"statistics_collection_mode,omitempty"`
 }
 
 func (o UpgradePgMajorVersion) String() string {

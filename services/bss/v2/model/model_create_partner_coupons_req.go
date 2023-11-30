@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -15,7 +16,7 @@ type CreatePartnerCouponsReq struct {
 	CustomerIds []string `json:"customer_ids"`
 
 	// 代金券面值。 单位：元。取值大于0且精确到小数点后2位。
-	FaceValue float64 `json:"face_value"`
+	FaceValue *decimal.Decimal `json:"face_value"`
 
 	// 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 此参数不携带或携带值为null时，赋值为发放优惠券额度的生效时间。
 	ValidTime *string `json:"valid_time,omitempty"`

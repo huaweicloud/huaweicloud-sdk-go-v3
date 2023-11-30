@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// MasterEipRequestSpecSpec 待绑定的弹性IP配置属性
 type MasterEipRequestSpecSpec struct {
 
-	// 弹性网卡ID，必选参数
+	// 弹性网卡ID，绑定时必选，解绑时该字段无效
 	Id *string `json:"id,omitempty"`
 }
 

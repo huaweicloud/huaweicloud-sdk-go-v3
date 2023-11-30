@@ -389,6 +389,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	}
 }
 
+type ListInfluxdbSlowLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInfluxdbSlowLogsInvoker) Invoke() (*model.ListInfluxdbSlowLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInfluxdbSlowLogsResponse), nil
+	}
+}
+
 type ListInstanceDatabasesInvoker struct {
 	*invoker.BaseInvoker
 }

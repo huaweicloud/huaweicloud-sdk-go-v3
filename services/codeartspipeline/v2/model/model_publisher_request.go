@@ -14,6 +14,9 @@ type PublisherRequest struct {
 	// 用户ID
 	UserId *string `json:"user_id,omitempty"`
 
+	// 描述
+	Description *string `json:"description,omitempty"`
+
 	// 图标URL
 	LogoUrl *string `json:"logo_url,omitempty"`
 

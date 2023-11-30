@@ -16,8 +16,8 @@ type ListHistoryDatabaseResponse struct {
 	TableLimit *int32 `json:"table_limit,omitempty"`
 
 	// 实例信息
-	Instances      *[]PostgreSqlHistoryDatabaseInstance `json:"instances,omitempty"`
-	HttpStatusCode int                                  `json:"-"`
+	Instances      *[]HistoryDatabaseInstance `json:"instances,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ListHistoryDatabaseResponse) String() string {

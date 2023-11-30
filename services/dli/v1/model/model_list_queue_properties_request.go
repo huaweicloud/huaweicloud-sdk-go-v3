@@ -12,11 +12,11 @@ type ListQueuePropertiesRequest struct {
 	// 队列名称
 	QueueName string `json:"queue_name"`
 
-	// 列表当前页
-	Page *int32 `json:"page,omitempty"`
+	// 偏移量
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示条数
-	PageSize *int32 `json:"page_size,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListQueuePropertiesRequest) String() string {

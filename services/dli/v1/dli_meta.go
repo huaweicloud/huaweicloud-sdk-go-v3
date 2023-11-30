@@ -901,12 +901,12 @@ func GenReqDefForListQueueProperties() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Page").
-		WithJsonTag("page").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1161,6 +1161,17 @@ func GenReqDefForShowQueue() *def.HttpRequestDef {
 		WithName("QueueName").
 		WithJsonTag("queue_name").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/quotas").
+		WithResponse(new(model.ShowQuotaResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

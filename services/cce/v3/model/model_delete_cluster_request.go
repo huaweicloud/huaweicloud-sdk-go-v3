@@ -41,6 +41,12 @@ type DeleteClusterRequest struct {
 
 	// 是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
 	Tobedeleted *DeleteClusterRequestTobedeleted `json:"tobedeleted,omitempty"`
+
+	// 集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+	OndemandNodePolicy *DeleteClusterRequestOndemandNodePolicy `json:"ondemand_node_policy,omitempty"`
+
+	// 集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
+	PeriodicNodePolicy *DeleteClusterRequestPeriodicNodePolicy `json:"periodic_node_policy,omitempty"`
 }
 
 func (o DeleteClusterRequest) String() string {
@@ -490,6 +496,104 @@ func (c DeleteClusterRequestTobedeleted) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DeleteClusterRequestTobedeleted) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DeleteClusterRequestOndemandNodePolicy struct {
+	value string
+}
+
+type DeleteClusterRequestOndemandNodePolicyEnum struct {
+	DELETE DeleteClusterRequestOndemandNodePolicy
+	RESET  DeleteClusterRequestOndemandNodePolicy
+	RETAIN DeleteClusterRequestOndemandNodePolicy
+}
+
+func GetDeleteClusterRequestOndemandNodePolicyEnum() DeleteClusterRequestOndemandNodePolicyEnum {
+	return DeleteClusterRequestOndemandNodePolicyEnum{
+		DELETE: DeleteClusterRequestOndemandNodePolicy{
+			value: "delete",
+		},
+		RESET: DeleteClusterRequestOndemandNodePolicy{
+			value: "reset",
+		},
+		RETAIN: DeleteClusterRequestOndemandNodePolicy{
+			value: "retain",
+		},
+	}
+}
+
+func (c DeleteClusterRequestOndemandNodePolicy) Value() string {
+	return c.value
+}
+
+func (c DeleteClusterRequestOndemandNodePolicy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeleteClusterRequestOndemandNodePolicy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DeleteClusterRequestPeriodicNodePolicy struct {
+	value string
+}
+
+type DeleteClusterRequestPeriodicNodePolicyEnum struct {
+	RESET  DeleteClusterRequestPeriodicNodePolicy
+	RETAIN DeleteClusterRequestPeriodicNodePolicy
+}
+
+func GetDeleteClusterRequestPeriodicNodePolicyEnum() DeleteClusterRequestPeriodicNodePolicyEnum {
+	return DeleteClusterRequestPeriodicNodePolicyEnum{
+		RESET: DeleteClusterRequestPeriodicNodePolicy{
+			value: "reset",
+		},
+		RETAIN: DeleteClusterRequestPeriodicNodePolicy{
+			value: "retain",
+		},
+	}
+}
+
+func (c DeleteClusterRequestPeriodicNodePolicy) Value() string {
+	return c.value
+}
+
+func (c DeleteClusterRequestPeriodicNodePolicy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeleteClusterRequestPeriodicNodePolicy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

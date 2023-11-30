@@ -15,7 +15,7 @@ type NodePoolMetadata struct {
 	// 节点池的uid。创建成功后自动生成，填写无效
 	Uid *string `json:"uid,omitempty"`
 
-	// 节点池的注解，以key value对表示。
+	// 节点池的注解，以key value对表示。仅用于查询，不支持请求时传入，填写无效。
 	Annotations map[string]string `json:"annotations,omitempty"`
 
 	// 更新时间

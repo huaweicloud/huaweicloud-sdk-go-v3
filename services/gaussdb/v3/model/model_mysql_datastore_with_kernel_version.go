@@ -12,7 +12,7 @@ type MysqlDatastoreWithKernelVersion struct {
 	// 数据库引擎，现在只支持gaussdb-mysql。
 	Type string `json:"type"`
 
-	// 数据库版本。  数据库支持的详细版本信息，可调用查询数据库引擎的版本接口获取。
+	// 兼容的开源数据库版本号，返回三位开源版本号。
 	Version string `json:"version"`
 
 	// 数据库内核版本

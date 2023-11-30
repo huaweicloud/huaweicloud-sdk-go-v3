@@ -9,7 +9,7 @@ import (
 // DocumentCreateRequestData 文档数据输入
 type DocumentCreateRequestData struct {
 
-	// 文档url
+	// 文档url。目前支持：公网HTTP/HTTPS URL。
 	Url string `json:"url"`
 
 	// 文档格式。可选值： docx pdf doc xls xlsx ppt pptx pps ppsx xltx xltm xlsb xlsm txt csv epub webpage 若format与文档实际格式不一致，则返回报错参数错误

@@ -17,17 +17,20 @@ type ApiOverview struct {
 	// API名称
 	Name *string `json:"name,omitempty"`
 
-	// API分组ID
+	// API分组ID（共享版）
 	GroupId *string `json:"group_id,omitempty"`
 
 	// API描述
 	Description *string `json:"description,omitempty"`
 
-	// API状态
+	// API状态（共享版）
 	Status *ApiOverviewStatus `json:"status,omitempty"`
 
-	// API调试状态
+	// API调试状态（共享版）
 	DebugStatus *ApiOverviewDebugStatus `json:"debug_status,omitempty"`
+
+	// 发布信息列表（专享版）
+	PublishMessages *[]ApiPublishDto `json:"publish_messages,omitempty"`
 
 	// API 类型
 	Type *ApiOverviewType `json:"type,omitempty"`

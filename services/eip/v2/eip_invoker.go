@@ -29,6 +29,18 @@ func (i *BatchCreateSharedBandwidthsInvoker) Invoke() (*model.BatchCreateSharedB
 	}
 }
 
+type BatchModifyBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchModifyBandwidthInvoker) Invoke() (*model.BatchModifyBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchModifyBandwidthResponse), nil
+	}
+}
+
 type ChangeBandwidthToPeriodInvoker struct {
 	*invoker.BaseInvoker
 }

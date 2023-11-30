@@ -665,6 +665,18 @@ func (i *ShowPipelineGroupTreeInvoker) Invoke() (*model.ShowPipelineGroupTreeRes
 	}
 }
 
+type ShowPipelineLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineLogInvoker) Invoke() (*model.ShowPipelineLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPipelineLogResponse), nil
+	}
+}
+
 type ShowPipelineRunDetailInvoker struct {
 	*invoker.BaseInvoker
 }

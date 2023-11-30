@@ -23,7 +23,7 @@ type CreateTopicOrBatchDeleteTopicReq struct {
 	// 权限。
 	Permission *CreateTopicOrBatchDeleteTopicReqPermission `json:"permission,omitempty"`
 
-	// 消息类型。
+	// 消息类型（RocketMQ实例5.x版本才包含此参数）。
 	MessageType *CreateTopicOrBatchDeleteTopicReqMessageType `json:"message_type,omitempty"`
 
 	// 主题列表，当批量删除主题时使用。

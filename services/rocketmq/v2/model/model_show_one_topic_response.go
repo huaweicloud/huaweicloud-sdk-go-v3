@@ -27,7 +27,7 @@ type ShowOneTopicResponse struct {
 	// 关联的代理。
 	Brokers *[]TopicBrokers `json:"brokers,omitempty"`
 
-	// 消息类型。
+	// 消息类型（RocketMQ实例5.x版本才包含此参数）。
 	MessageType    *ShowOneTopicResponseMessageType `json:"message_type,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

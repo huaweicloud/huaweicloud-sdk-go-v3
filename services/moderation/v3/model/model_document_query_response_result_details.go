@@ -20,8 +20,17 @@ type DocumentQueryResponseResultDetails struct {
 	// 当前处理的片段索引
 	Index *int32 `json:"index,omitempty"`
 
-	// 当前内容片段中的文本内容
+	// 当前内容片段中的文本内容，仅当type为text时存在
 	Text *string `json:"text,omitempty"`
+
+	// 当前文本内容片段在输入中的起始位置，仅当type为text时存在
+	StartPosition *int32 `json:"start_position,omitempty"`
+
+	// 当前文本内容片段在输入中的结束位置，仅当type为text时存在
+	EndPosition *int32 `json:"end_position,omitempty"`
+
+	// 网页图片url，仅当type为image且文档格式为webpage时存在
+	ImageUrl *string `json:"image_url,omitempty"`
 
 	// 命中的风险片段信息列表，仅在有命中敏感词时才返回
 	Segments *[]DocumentQueryResponseResultSegments `json:"segments,omitempty"`

@@ -17,10 +17,10 @@ type UpdateConsumerGroup struct {
 	// 关联的代理列表。
 	Brokers *[]string `json:"brokers,omitempty"`
 
-	// 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+	// 待修改参数的消费组（消费组名称不支持修改）。
 	Name *string `json:"name,omitempty"`
 
-	// 最大重试次数。
+	// 最大重试次数，取值范围为1~16。
 	RetryMaxTime float32 `json:"retry_max_time"`
 
 	// 是否重头消费。

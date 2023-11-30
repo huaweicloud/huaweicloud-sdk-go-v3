@@ -23,7 +23,7 @@ type ConsumerGroup struct {
 	// 消费组描述，长度0~200个字符。
 	GroupDesc *string `json:"group_desc,omitempty"`
 
-	// 最大重试次数。
+	// 最大重试次数，取值范围为1~16。
 	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
 
 	// 是否重头消费。

@@ -10,8 +10,8 @@ import (
 type ShowPublisherResponse struct {
 
 	// 发布商详情
-	Body           map[string]PublisherVo `json:"body,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	PublisherDetailMap map[string]PublisherVo `json:"publisher_detail_map,omitempty"`
+	HttpStatusCode     int                    `json:"-"`
 }
 
 func (o ShowPublisherResponse) String() string {

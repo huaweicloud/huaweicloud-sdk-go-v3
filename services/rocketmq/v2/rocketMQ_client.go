@@ -524,6 +524,29 @@ func (c *RocketMQClient) ResetConsumeOffsetInvoker(request *model.ResetConsumeOf
 	return &ResetConsumeOffsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResizeInstance 实例规格变更
+//
+// 实例规格变更。
+//
+// [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,hws_hk,ctc)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
+	requestDef := GenReqDefForResizeInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeInstanceResponse), nil
+	}
+}
+
+// ResizeInstanceInvoker 实例规格变更
+func (c *RocketMQClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
+	requestDef := GenReqDefForResizeInstance()
+	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SendDlqMessage 重发死信消息
 //
 // 重发死信消息。
@@ -585,6 +608,27 @@ func (c *RocketMQClient) ShowConsumerListOrDetails(request *model.ShowConsumerLi
 func (c *RocketMQClient) ShowConsumerListOrDetailsInvoker(request *model.ShowConsumerListOrDetailsRequest) *ShowConsumerListOrDetailsInvoker {
 	requestDef := GenReqDefForShowConsumerListOrDetails()
 	return &ShowConsumerListOrDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEngineInstanceExtendProductInfo 查询实例的扩容规格列表
+//
+// 查询实例的扩容规格列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowEngineInstanceExtendProductInfo(request *model.ShowEngineInstanceExtendProductInfoRequest) (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
+	requestDef := GenReqDefForShowEngineInstanceExtendProductInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
+	}
+}
+
+// ShowEngineInstanceExtendProductInfoInvoker 查询实例的扩容规格列表
+func (c *RocketMQClient) ShowEngineInstanceExtendProductInfoInvoker(request *model.ShowEngineInstanceExtendProductInfoRequest) *ShowEngineInstanceExtendProductInfoInvoker {
+	requestDef := GenReqDefForShowEngineInstanceExtendProductInfo()
+	return &ShowEngineInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGroup 查询指定消费组

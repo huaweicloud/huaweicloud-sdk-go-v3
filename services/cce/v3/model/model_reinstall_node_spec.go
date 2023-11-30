@@ -14,7 +14,7 @@ type ReinstallNodeSpec struct {
 
 	Login *Login `json:"login"`
 
-	// 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。
+	// 节点名称 > 重装时指定将修改节点名称，且服务器名称会同步修改。默认以服务器当前名称作为节点名称。 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位。
 	Name *string `json:"name,omitempty"`
 
 	ServerConfig *ReinstallServerConfig `json:"serverConfig,omitempty"`
@@ -31,6 +31,8 @@ type ReinstallNodeSpec struct {
 	InitializedConditions *[]string `json:"initializedConditions,omitempty"`
 
 	ExtendParam *ReinstallExtendParam `json:"extendParam,omitempty"`
+
+	HostnameConfig *HostnameConfig `json:"hostnameConfig,omitempty"`
 }
 
 func (o ReinstallNodeSpec) String() string {

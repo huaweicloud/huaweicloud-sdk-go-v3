@@ -8,7 +8,9 @@ import (
 
 // UpgradeDbMajorVersionResponse Response Object
 type UpgradeDbMajorVersionResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 任务ID。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -59,7 +59,6 @@ type AddonInstanceStatusStatusEnum struct {
 	AVAILABLE       AddonInstanceStatusStatus
 	ROLLBACKING     AddonInstanceStatusStatus
 	ROLLBACK_FAILED AddonInstanceStatusStatus
-	UNKNOWN         AddonInstanceStatusStatus
 }
 
 func GetAddonInstanceStatusStatusEnum() AddonInstanceStatusStatusEnum {
@@ -99,9 +98,6 @@ func GetAddonInstanceStatusStatusEnum() AddonInstanceStatusStatusEnum {
 		},
 		ROLLBACK_FAILED: AddonInstanceStatusStatus{
 			value: "rollbackFailed",
-		},
-		UNKNOWN: AddonInstanceStatusStatus{
-			value: "unknown",
 		},
 	}
 }

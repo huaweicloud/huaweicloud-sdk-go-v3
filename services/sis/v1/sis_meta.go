@@ -90,6 +90,14 @@ func GenReqDefForRecognizeFlashAsr() *def.HttpRequestDef {
 		WithJsonTag("audio_format").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ObsBucketName").
+		WithJsonTag("obs_bucket_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ObsObjectKey").
+		WithJsonTag("obs_object_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AddPunc").
 		WithJsonTag("add_punc").
 		WithLocationType(def.Query))
@@ -104,14 +112,6 @@ func GenReqDefForRecognizeFlashAsr() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VocabularyId").
 		WithJsonTag("vocabulary_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ObsBucketName").
-		WithJsonTag("obs_bucket_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ObsObjectKey").
-		WithJsonTag("obs_object_key").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FirstChannelOnly").

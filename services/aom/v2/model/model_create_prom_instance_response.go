@@ -9,7 +9,7 @@ import (
 // CreatePromInstanceResponse Response Object
 type CreatePromInstanceResponse struct {
 
-	// 普罗实例列表名称
+	// Prometheus实例名称列表。
 	Prometheus     *[]PromInstanceEpsModel `json:"prometheus,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

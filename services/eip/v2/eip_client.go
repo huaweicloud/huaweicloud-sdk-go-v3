@@ -61,6 +61,27 @@ func (c *EipClient) BatchCreateSharedBandwidthsInvoker(request *model.BatchCreat
 	return &BatchCreateSharedBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchModifyBandwidth 批量更新带宽
+//
+// 批量更新带宽，共享带宽和包周期带宽该接口不适用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) BatchModifyBandwidth(request *model.BatchModifyBandwidthRequest) (*model.BatchModifyBandwidthResponse, error) {
+	requestDef := GenReqDefForBatchModifyBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchModifyBandwidthResponse), nil
+	}
+}
+
+// BatchModifyBandwidthInvoker 批量更新带宽
+func (c *EipClient) BatchModifyBandwidthInvoker(request *model.BatchModifyBandwidthRequest) *BatchModifyBandwidthInvoker {
+	requestDef := GenReqDefForBatchModifyBandwidth()
+	return &BatchModifyBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeBandwidthToPeriod 按需转包API
 //
 // 租户按需转包接口。

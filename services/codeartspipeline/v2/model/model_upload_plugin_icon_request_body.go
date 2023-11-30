@@ -16,7 +16,7 @@ import (
 type UploadPluginIconRequestBody struct {
 
 	// 图标文件
-	UploadFile *def.FilePart `json:"upload_file,omitempty"`
+	UploadFile *def.FilePart `json:"upload_file"`
 }
 
 func (o UploadPluginIconRequestBody) String() string {

@@ -313,6 +313,27 @@ func (c *AomClient) ListActionRuleInvoker(request *model.ListActionRuleRequest) 
 	return &ListActionRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAgents 查询集群主机安装的ICAgent信息
+//
+// 该接口用于查询集群主机安装的ICAgent信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListAgents(request *model.ListAgentsRequest) (*model.ListAgentsResponse, error) {
+	requestDef := GenReqDefForListAgents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAgentsResponse), nil
+	}
+}
+
+// ListAgentsInvoker 查询集群主机安装的ICAgent信息
+func (c *AomClient) ListAgentsInvoker(request *model.ListAgentsRequest) *ListAgentsInvoker {
+	requestDef := GenReqDefForListAgents()
+	return &ListAgentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlarmRule 查询阈值规则列表
 //
 // 该接口用于查询阈值规则列表。
@@ -458,6 +479,27 @@ func (c *AomClient) ListNotifiedHistories(request *model.ListNotifiedHistoriesRe
 func (c *AomClient) ListNotifiedHistoriesInvoker(request *model.ListNotifiedHistoriesRequest) *ListNotifiedHistoriesInvoker {
 	requestDef := GenReqDefForListNotifiedHistories()
 	return &ListNotifiedHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPermissions 查询aom2.0相关云服务授权信息
+//
+// 该接口用于查询aom2.0相关云服务授权信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListPermissions(request *model.ListPermissionsRequest) (*model.ListPermissionsResponse, error) {
+	requestDef := GenReqDefForListPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPermissionsResponse), nil
+	}
+}
+
+// ListPermissionsInvoker 查询aom2.0相关云服务授权信息
+func (c *AomClient) ListPermissionsInvoker(request *model.ListPermissionsRequest) *ListPermissionsInvoker {
+	requestDef := GenReqDefForListPermissions()
+	return &ListPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSample 查询时序数据
@@ -691,9 +733,9 @@ func (c *AomClient) UpdateMuteRuleInvoker(request *model.UpdateMuteRuleRequest) 
 	return &UpdateMuteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePromInstance 新增Prometheus实例数据源
+// CreatePromInstance 新增Prometheus实例
 //
-// 该接口用于新增Prometheus实例数据源
+// 该接口用于新增Prometheus实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) CreatePromInstance(request *model.CreatePromInstanceRequest) (*model.CreatePromInstanceResponse, error) {
@@ -706,15 +748,15 @@ func (c *AomClient) CreatePromInstance(request *model.CreatePromInstanceRequest)
 	}
 }
 
-// CreatePromInstanceInvoker 新增Prometheus实例数据源
+// CreatePromInstanceInvoker 新增Prometheus实例
 func (c *AomClient) CreatePromInstanceInvoker(request *model.CreatePromInstanceRequest) *CreatePromInstanceInvoker {
 	requestDef := GenReqDefForCreatePromInstance()
 	return &CreatePromInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateRecordingRule 创建预汇聚规则
+// CreateRecordingRule 创建Prometheus实例的预聚合规则
 //
-// 该接口用于创建预汇聚规则
+// 该接口用于给Prometheus实例创建预聚合规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) CreateRecordingRule(request *model.CreateRecordingRuleRequest) (*model.CreateRecordingRuleResponse, error) {
@@ -727,15 +769,15 @@ func (c *AomClient) CreateRecordingRule(request *model.CreateRecordingRuleReques
 	}
 }
 
-// CreateRecordingRuleInvoker 创建预汇聚规则
+// CreateRecordingRuleInvoker 创建Prometheus实例的预聚合规则
 func (c *AomClient) CreateRecordingRuleInvoker(request *model.CreateRecordingRuleRequest) *CreateRecordingRuleInvoker {
 	requestDef := GenReqDefForCreateRecordingRule()
 	return &CreateRecordingRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePromInstance 卸载托管Prometheus
+// DeletePromInstance 卸载托管Prometheus实例
 //
-// 该接口用于卸载托管Prometheus
+// 该接口用于卸载托管Prometheus实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeletePromInstance(request *model.DeletePromInstanceRequest) (*model.DeletePromInstanceResponse, error) {
@@ -748,15 +790,15 @@ func (c *AomClient) DeletePromInstance(request *model.DeletePromInstanceRequest)
 	}
 }
 
-// DeletePromInstanceInvoker 卸载托管Prometheus
+// DeletePromInstanceInvoker 卸载托管Prometheus实例
 func (c *AomClient) DeletePromInstanceInvoker(request *model.DeletePromInstanceRequest) *DeletePromInstanceInvoker {
 	requestDef := GenReqDefForDeletePromInstance()
 	return &DeletePromInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAccessCode 获取Prometheus监控所需Token-access code
+// ListAccessCode 获取Prometheus实例调用凭证
 //
-// 该接口用于获取Prometheus监控所需Token-access code
+// 该接口用于获取Prometheus实例调用凭证。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListAccessCode(request *model.ListAccessCodeRequest) (*model.ListAccessCodeResponse, error) {
@@ -769,31 +811,10 @@ func (c *AomClient) ListAccessCode(request *model.ListAccessCodeRequest) (*model
 	}
 }
 
-// ListAccessCodeInvoker 获取Prometheus监控所需Token-access code
+// ListAccessCodeInvoker 获取Prometheus实例调用凭证
 func (c *AomClient) ListAccessCodeInvoker(request *model.ListAccessCodeRequest) *ListAccessCodeInvoker {
 	requestDef := GenReqDefForListAccessCode()
 	return &ListAccessCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAgents 查询集群Agent信息
-//
-// 该接口用于查询集群Agent信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AomClient) ListAgents(request *model.ListAgentsRequest) (*model.ListAgentsResponse, error) {
-	requestDef := GenReqDefForListAgents()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAgentsResponse), nil
-	}
-}
-
-// ListAgentsInvoker 查询集群Agent信息
-func (c *AomClient) ListAgentsInvoker(request *model.ListAgentsRequest) *ListAgentsInvoker {
-	requestDef := GenReqDefForListAgents()
-	return &ListAgentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstantQueryAomPromGet 瞬时数据查询
@@ -922,30 +943,9 @@ func (c *AomClient) ListMetadataAomPromGetInvoker(request *model.ListMetadataAom
 	return &ListMetadataAomPromGetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPermissions 是否开通aom2.0
+// ListPromInstance 查询Prometheus实例
 //
-// 该接口用于查询用户是否已经完成aom2.0授权
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AomClient) ListPermissions(request *model.ListPermissionsRequest) (*model.ListPermissionsResponse, error) {
-	requestDef := GenReqDefForListPermissions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPermissionsResponse), nil
-	}
-}
-
-// ListPermissionsInvoker 是否开通aom2.0
-func (c *AomClient) ListPermissionsInvoker(request *model.ListPermissionsRequest) *ListPermissionsInvoker {
-	requestDef := GenReqDefForListPermissions()
-	return &ListPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPromInstance 获取所有正常实例
-//
-// 该接口用于获取所有正常prometheus实例
+// 该接口用于查询Prometheus实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListPromInstance(request *model.ListPromInstanceRequest) (*model.ListPromInstanceResponse, error) {
@@ -958,7 +958,7 @@ func (c *AomClient) ListPromInstance(request *model.ListPromInstanceRequest) (*m
 	}
 }
 
-// ListPromInstanceInvoker 获取所有正常实例
+// ListPromInstanceInvoker 查询Prometheus实例
 func (c *AomClient) ListPromInstanceInvoker(request *model.ListPromInstanceRequest) *ListPromInstanceInvoker {
 	requestDef := GenReqDefForListPromInstance()
 	return &ListPromInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

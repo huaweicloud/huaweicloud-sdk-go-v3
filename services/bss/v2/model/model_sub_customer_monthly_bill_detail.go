@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -72,52 +73,52 @@ type SubCustomerMonthlyBillDetail struct {
 	UsageType *string `json:"usage_type,omitempty"`
 
 	// 资源的使用量。
-	UsageAmount *float64 `json:"usage_amount,omitempty"`
+	UsageAmount *decimal.Decimal `json:"usage_amount,omitempty"`
 
 	// 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
 
 	// 套餐内使用量。
-	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
+	FreeResourceUsage *decimal.Decimal `json:"free_resource_usage,omitempty"`
 
 	// 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
 
 	// 预留实例使用量。
-	RiUsage *float64 `json:"ri_usage,omitempty"`
+	RiUsage *decimal.Decimal `json:"ri_usage,omitempty"`
 
 	// 预留实例使用量单位。
 	RiUsageMeasureId *int32 `json:"ri_usage_measure_id,omitempty"`
 
 	// 官网价。
-	OfficialAmount *float64 `json:"official_amount,omitempty"`
+	OfficialAmount *decimal.Decimal `json:"official_amount,omitempty"`
 
 	// 对应官网价折扣金额。
-	OfficialDiscountAmount *float64 `json:"official_discount_amount,omitempty"`
+	OfficialDiscountAmount *decimal.Decimal `json:"official_discount_amount,omitempty"`
 
 	// 应付金额。
-	PaymentAmount *float64 `json:"payment_amount,omitempty"`
+	PaymentAmount *decimal.Decimal `json:"payment_amount,omitempty"`
 
 	// 现金支付金额。
-	CashAmount *float64 `json:"cash_amount,omitempty"`
+	CashAmount *decimal.Decimal `json:"cash_amount,omitempty"`
 
 	// 信用额度支付金额。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *decimal.Decimal `json:"credit_amount,omitempty"`
 
 	// 代金券支付金额。
-	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	CouponAmount *decimal.Decimal `json:"coupon_amount,omitempty"`
 
 	// 现金券支付金额。
-	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty"`
+	FlexipurchaseCouponAmount *decimal.Decimal `json:"flexipurchase_coupon_amount,omitempty"`
 
 	// 储值卡支付金额。
-	StoredValueCardAmount *float64 `json:"stored_value_card_amount,omitempty"`
+	StoredValueCardAmount *decimal.Decimal `json:"stored_value_card_amount,omitempty"`
 
 	// 欠费金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 欠费核销金额。
-	WriteoffAmount *float64 `json:"writeoff_amount,omitempty"`
+	WriteoffAmount *decimal.Decimal `json:"writeoff_amount,omitempty"`
 
 	// 周期类型： 19：年20：月24：天25：小时5：一次性
 	PeriodType *int32 `json:"period_type,omitempty"`

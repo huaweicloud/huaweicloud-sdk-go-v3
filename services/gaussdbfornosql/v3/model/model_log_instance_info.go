@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -27,6 +30,9 @@ type LogInstanceInfo struct {
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 日志类型。slow_log表示慢日志，audit_log表示审计日志。
+	SupportedLogTypes *LogInstanceInfoSupportedLogTypes `json:"supported_log_types,omitempty"`
 }
 
 func (o LogInstanceInfo) String() string {
@@ -36,4 +42,51 @@ func (o LogInstanceInfo) String() string {
 	}
 
 	return strings.Join([]string{"LogInstanceInfo", string(data)}, " ")
+}
+
+type LogInstanceInfoSupportedLogTypes struct {
+	value string
+}
+
+type LogInstanceInfoSupportedLogTypesEnum struct {
+	SLOW_LOG  LogInstanceInfoSupportedLogTypes
+	AUDIT_LOG LogInstanceInfoSupportedLogTypes
+}
+
+func GetLogInstanceInfoSupportedLogTypesEnum() LogInstanceInfoSupportedLogTypesEnum {
+	return LogInstanceInfoSupportedLogTypesEnum{
+		SLOW_LOG: LogInstanceInfoSupportedLogTypes{
+			value: "slow_log",
+		},
+		AUDIT_LOG: LogInstanceInfoSupportedLogTypes{
+			value: "audit_log",
+		},
+	}
+}
+
+func (c LogInstanceInfoSupportedLogTypes) Value() string {
+	return c.value
+}
+
+func (c LogInstanceInfoSupportedLogTypes) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LogInstanceInfoSupportedLogTypes) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

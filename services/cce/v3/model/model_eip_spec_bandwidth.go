@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// EipSpecBandwidth 带宽信息
 type EipSpecBandwidth struct {
 
 	// 带宽大小

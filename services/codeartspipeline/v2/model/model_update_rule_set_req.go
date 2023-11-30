@@ -11,9 +11,6 @@ type UpdateRuleSetReq struct {
 	// 规则模版实例名称
 	Name *string `json:"name,omitempty"`
 
-	// 规则类型
-	ParentId *string `json:"parent_id,omitempty"`
-
 	// 规则实例列表
 	Rules *[]UpdateRuleInstance `json:"rules,omitempty"`
 }

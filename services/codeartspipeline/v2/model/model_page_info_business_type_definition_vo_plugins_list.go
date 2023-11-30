@@ -54,10 +54,10 @@ type PageInfoBusinessTypeDefinitionVoPluginsList struct {
 	Location *string `json:"location,omitempty"`
 
 	// 发布商ID
-	PublisherUniqueId *string `json:"publisherUniqueId,omitempty"`
+	PublisherUniqueId *string `json:"publisher_unique_id,omitempty"`
 
 	// 版本
-	ManifestVersion *string `json:"manifestVersion,omitempty"`
+	ManifestVersion *string `json:"manifest_version,omitempty"`
 }
 
 func (o PageInfoBusinessTypeDefinitionVoPluginsList) String() string {

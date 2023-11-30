@@ -10,7 +10,7 @@ import (
 type ShowClusterEndpointsResponse struct {
 	Metadata *Metadata `json:"metadata,omitempty"`
 
-	Spec *OpenApiResponseSpec `json:"spec,omitempty"`
+	Spec *OpenApiSpec `json:"spec,omitempty"`
 
 	Status         *MasterEipResponseStatus `json:"status,omitempty"`
 	HttpStatusCode int                      `json:"-"`

@@ -293,6 +293,18 @@ func (i *ResetConsumeOffsetInvoker) Invoke() (*model.ResetConsumeOffsetResponse,
 	}
 }
 
+type ResizeInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeInstanceResponse), nil
+	}
+}
+
 type SendDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +338,18 @@ func (i *ShowConsumerListOrDetailsInvoker) Invoke() (*model.ShowConsumerListOrDe
 		return nil, err
 	} else {
 		return result.(*model.ShowConsumerListOrDetailsResponse), nil
+	}
+}
+
+type ShowEngineInstanceExtendProductInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEngineInstanceExtendProductInfoInvoker) Invoke() (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
 	}
 }
 

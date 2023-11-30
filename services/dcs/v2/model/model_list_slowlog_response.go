@@ -9,6 +9,9 @@ import (
 // ListSlowlogResponse Response Object
 type ListSlowlogResponse struct {
 
+	// 慢日志总条数
+	TotalNum *int32 `json:"total_num,omitempty"`
+
 	// 总数
 	Count *int32 `json:"count,omitempty"`
 

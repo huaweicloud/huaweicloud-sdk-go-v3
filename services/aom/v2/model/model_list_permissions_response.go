@@ -8,8 +8,8 @@ import (
 
 // ListPermissionsResponse Response Object
 type ListPermissionsResponse struct {
-	Body           map[string]AuthModel `json:"body,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListPermissionsResponse) String() string {

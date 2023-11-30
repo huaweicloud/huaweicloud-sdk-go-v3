@@ -9,8 +9,8 @@ import (
 // ListHistoryDatabaseRequest Request Object
 type ListHistoryDatabaseRequest struct {
 
-	// 数据库引擎。支持的引擎如下，不区分大小写：postgresql
-	DatabaseName string `json:"database_name"`
+	// 数据库引擎。支持的引擎如下，不区分大小写：postgresql,mysql
+	Engine string `json:"engine"`
 
 	// 语言
 	XLanguage *string `json:"X-Language,omitempty"`

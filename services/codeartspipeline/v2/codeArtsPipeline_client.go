@@ -1174,6 +1174,27 @@ func (c *CodeArtsPipelineClient) ShowPipelineGroupTreeInvoker(request *model.Sho
 	return &ShowPipelineGroupTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPipelineLog 查询流水线日志
+//
+// 查询流水线日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowPipelineLog(request *model.ShowPipelineLogRequest) (*model.ShowPipelineLogResponse, error) {
+	requestDef := GenReqDefForShowPipelineLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPipelineLogResponse), nil
+	}
+}
+
+// ShowPipelineLogInvoker 查询流水线日志
+func (c *CodeArtsPipelineClient) ShowPipelineLogInvoker(request *model.ShowPipelineLogRequest) *ShowPipelineLogInvoker {
+	requestDef := GenReqDefForShowPipelineLog()
+	return &ShowPipelineLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPipelineRunDetail 获取流水线状态/获取流水线执行详情
 //
 // 获取流水线状态/获取流水线执行详情

@@ -6255,6 +6255,10 @@ func GenReqDefForListApis() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XReturnPublishMessages").
+		WithJsonTag("x-return-publish-messages").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

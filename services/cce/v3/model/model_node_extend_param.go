@@ -12,7 +12,7 @@ type NodeExtendParam struct {
 	// 云服务器规格的分类。响应中会返回此字段。
 	Ecsperformancetype *string `json:"ecs:performancetype,omitempty"`
 
-	// 订单ID，节点付费类型为自动付费包周期类型时，响应中会返回此字段。
+	// 订单ID，节点付费类型为自动付费包周期类型时，响应中会返回此字段(仅创建场景涉及)。
 	OrderID *string `json:"orderID,omitempty"`
 
 	// 产品ID，节点付费类型为自动付费包周期类型时，响应中会返回此字段。
@@ -21,10 +21,10 @@ type NodeExtendParam struct {
 	// 节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
 	MaxPods *int32 `json:"maxPods,omitempty"`
 
-	// - month：月 - year：年 > billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。
+	// - month：月 - year：年 > 作为请求参数，billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
 	PeriodType *string `json:"periodType,omitempty"`
 
-	// 订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > billingMode为1或2（已废弃）时生效，且为必选。
+	// 订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > 作为请求参数，billingMode为1或2（已废弃）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
 	PeriodNum *int32 `json:"periodNum,omitempty"`
 
 	// 是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
@@ -63,14 +63,17 @@ type NodeExtendParam struct {
 	// 节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
 	ChargingMode *int32 `json:"chargingMode,omitempty"`
 
-	// 委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。
+	// 委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
 	AgencyName *string `json:"agency_name,omitempty"`
 
-	// 节点内存预留，Kubernetes相关组件预留值。
-	KubeReservedMem *int32 `json:"kube-reserved-mem,omitempty"`
+	// 节点内存预留，Kubernetes相关组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
+	KubeReservedMem *int32 `json:"kubeReservedMem,omitempty"`
 
-	// 节点内存预留，系统组件预留值。
-	SystemReservedMem *int32 `json:"system-reserved-mem,omitempty"`
+	// 节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
+	SystemReservedMem *int32 `json:"systemReservedMem,omitempty"`
+
+	// 节点密码，作为响应参数时，固定展示星号。
+	InitNodePassword *string `json:"init-node-password,omitempty"`
 }
 
 func (o NodeExtendParam) String() string {

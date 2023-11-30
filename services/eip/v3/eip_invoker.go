@@ -17,6 +17,18 @@ func (i *ListBandwidthInvoker) Invoke() (*model.ListBandwidthResponse, error) {
 	}
 }
 
+type ListBandwidthsLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthsLimitInvoker) Invoke() (*model.ListBandwidthsLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthsLimitResponse), nil
+	}
+}
+
 type ListCommonPoolsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -26,6 +38,18 @@ func (i *ListCommonPoolsInvoker) Invoke() (*model.ListCommonPoolsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListCommonPoolsResponse), nil
+	}
+}
+
+type ListEipBandwidthsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEipBandwidthsInvoker) Invoke() (*model.ListEipBandwidthsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEipBandwidthsResponse), nil
 	}
 }
 
@@ -230,5 +254,17 @@ func (i *UpdateDisassociatePublicipInvoker) Invoke() (*model.UpdateDisassociateP
 		return nil, err
 	} else {
 		return result.(*model.UpdateDisassociatePublicipResponse), nil
+	}
+}
+
+type UpdatePublicipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePublicipInvoker) Invoke() (*model.UpdatePublicipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePublicipResponse), nil
 	}
 }

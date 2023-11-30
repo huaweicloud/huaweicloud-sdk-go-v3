@@ -232,6 +232,30 @@ func GenReqDefForListActionRule() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListAgents() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/{cluster_id}/{namespace}/agents").
+		WithResponse(new(model.ListAgentsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Namespace").
+		WithJsonTag("namespace").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAlarmRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -361,6 +385,21 @@ func GenReqDefForListNotifiedHistories() *def.HttpRequestDef {
 		WithName("EventSn").
 		WithJsonTag("event_sn").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListPermissions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/aom/auth/grant").
+		WithResponse(new(model.ListPermissionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -637,30 +676,6 @@ func GenReqDefForListAccessCode() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListAgents() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/{cluster_id}/{namespace}/agents").
-		WithResponse(new(model.ListAgentsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClusterId").
-		WithJsonTag("cluster_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Namespace").
-		WithJsonTag("namespace").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListInstantQueryAomPromGet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -745,21 +760,6 @@ func GenReqDefForListMetadataAomPromGet() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/aom/api/v1/metadata").
 		WithResponse(new(model.ListMetadataAomPromGetResponse)).
 		WithContentType("application/json")
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListPermissions() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/aom/auth/grant").
-		WithResponse(new(model.ListPermissionsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

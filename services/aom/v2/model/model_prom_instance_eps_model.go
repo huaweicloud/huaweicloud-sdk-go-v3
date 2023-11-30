@@ -11,47 +11,47 @@ import (
 
 type PromInstanceEpsModel struct {
 
-	// 普罗实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100
+	// Prometheus实例名称 名称不能以下划线或中划线开头结尾，只含有中文、英文、数字、下划线、中划线、长度1-100。
 	PromName string `json:"prom_name"`
 
-	// 普罗实例ID
+	// Prometheus实例id。
 	PromId *string `json:"prom_id,omitempty"`
 
-	// 普罗实例类型,DEFAULT,ECS,VPC,CCE,REMOTE_WRITE,KUBERNETES,CLOUD_SERVICE,ACROSS_ACCOUNT
+	// Prometheus实例类型。
 	PromType PromInstanceEpsModelPromType `json:"prom_type"`
 
-	// 普罗实例版本号
+	// Prometheus实例版本号。
 	PromVersion *string `json:"prom_version,omitempty"`
 
-	// CCE场景特殊字段
+	// CCE场景特殊字段。
 	CceSpec *string `json:"cce_spec,omitempty"`
 
 	PromConfig *PromConfigModel `json:"prom_config,omitempty"`
 
-	// 普罗实例创建时间戳
+	// Prometheus实例创建时间戳。
 	PromCreateTimestamp *int64 `json:"prom_create_timestamp,omitempty"`
 
-	// 普罗实例更新时间戳
+	// Prometheus实例更新时间戳。
 	PromUpdateTimestamp *int64 `json:"prom_update_timestamp,omitempty"`
 
-	// 普罗实例状态 true/false
+	// Prometheus实例状态。
 	PromStatus *string `json:"prom_status,omitempty"`
 
-	// 普罗实例所属的企业项目
+	// Prometheus实例所属的企业项目。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 普罗实例所属projectId
+	// Prometheus实例所属projectId。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 删除标记
+	// 删除标记。
 	IsDeletedTag *int64 `json:"is_deleted_tag,omitempty"`
 
-	// 删除时间
+	// 删除时间。
 	DeletedTime *int64 `json:"deleted_time,omitempty"`
 
 	PromSpecConfig *PromConfigModel `json:"prom_spec_config,omitempty"`
 
-	// 普罗实例所属CCE特殊配置
+	// Prometheus实例所属CCE特殊配置。
 	CceSpecConfig *string `json:"cce_spec_config,omitempty"`
 
 	Application *ApplicationModel `json:"application,omitempty"`

@@ -18,7 +18,7 @@ type ShowApiResponse struct {
 	// API名称
 	Name *string `json:"name,omitempty"`
 
-	// API所属分组的ID
+	// API所属分组的ID（共享版）
 	GroupId *string `json:"group_id,omitempty"`
 
 	// API 描述
@@ -56,14 +56,17 @@ type ShowApiResponse struct {
 	// API 审核人名称
 	Manager *string `json:"manager,omitempty"`
 
-	// API的状态
+	// API的状态（共享版）
 	Status *ShowApiResponseStatus `json:"status,omitempty"`
 
 	// API 类型
 	Type *ShowApiResponseType `json:"type,omitempty"`
 
-	// API调试状态
+	// API调试状态（共享版）
 	DebugStatus *ShowApiResponseDebugStatus `json:"debug_status,omitempty"`
+
+	// 发布信息列表（专享版）
+	PublishMessages *[]ApiPublishDto `json:"publish_messages,omitempty"`
 
 	// API请求参数
 	RequestParas *[]RequestPara `json:"request_paras,omitempty"`

@@ -16,7 +16,7 @@ type ShowDataSetsResponse struct {
 	Entities *[]Entity `json:"entities,omitempty"`
 
 	// 资产分类facets维度信息列表，数据结构List<Map<String, List<Aggregation>>> 取值为count
-	Facets *interface{} `json:"facets,omitempty"`
+	Facets *[]interface{} `json:"facets,omitempty"`
 
 	// 资产分类metrics维度信息列表，数据结构List<Map<String, List<Aggregation>>>  取值为aggregation
 	Metrics *interface{} `json:"metrics,omitempty"`

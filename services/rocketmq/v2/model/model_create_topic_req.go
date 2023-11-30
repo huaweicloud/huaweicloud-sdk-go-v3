@@ -23,7 +23,7 @@ type CreateTopicReq struct {
 	// 权限。
 	Permission *CreateTopicReqPermission `json:"permission,omitempty"`
 
-	// 消息类型。
+	// 消息类型（RocketMQ实例5.x版本才包含此参数）。
 	MessageType *CreateTopicReqMessageType `json:"message_type,omitempty"`
 }
 

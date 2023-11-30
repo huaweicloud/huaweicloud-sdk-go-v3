@@ -8,7 +8,7 @@ import (
 
 type RecordingRuleRequest struct {
 
-	// recordingRule
+	// 预聚合规则。
 	RecordingRule string `json:"recording_rule"`
 }
 

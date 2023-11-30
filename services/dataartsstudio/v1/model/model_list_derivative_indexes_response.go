@@ -8,10 +8,8 @@ import (
 
 // ListDerivativeIndexesResponse Response Object
 type ListDerivativeIndexesResponse struct {
-
-	// 返回的数据信息
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *DerivativeIndexVoSearchResultData `json:"data,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o ListDerivativeIndexesResponse) String() string {

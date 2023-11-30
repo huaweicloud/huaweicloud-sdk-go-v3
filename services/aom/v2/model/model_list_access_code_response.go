@@ -9,7 +9,7 @@ import (
 // ListAccessCodeResponse Response Object
 type ListAccessCodeResponse struct {
 
-	// accessCodes
+	// accessCodes。
 	AccessCodes    *[]AccessCodeModel `json:"access_codes,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

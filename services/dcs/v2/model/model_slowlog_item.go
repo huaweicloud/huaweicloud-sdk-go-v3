@@ -24,10 +24,10 @@ type SlowlogItem struct {
 	// 慢命令所在的分片名称，仅在实例类型为集群时支持
 	ShardName *string `json:"shard_name,omitempty"`
 
-	// 慢日志数据库id
+	// 数据库id，当前只对指定客户开放
 	DatabaseId *int32 `json:"database_id,omitempty"`
 
-	// 慢日志名称
+	// 操作慢日志的账号名称，当前只对指定客户开放
 	Username *string `json:"username,omitempty"`
 }
 

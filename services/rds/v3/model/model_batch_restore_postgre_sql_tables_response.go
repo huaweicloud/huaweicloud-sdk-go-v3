@@ -10,8 +10,8 @@ import (
 type BatchRestorePostgreSqlTablesResponse struct {
 
 	// 表信息
-	RestoreResult  *[]PostgreSqlRestoreResult `json:"restore_result,omitempty"`
-	HttpStatusCode int                        `json:"-"`
+	RestoreResult  *[]RestoreResult `json:"restore_result,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o BatchRestorePostgreSqlTablesResponse) String() string {

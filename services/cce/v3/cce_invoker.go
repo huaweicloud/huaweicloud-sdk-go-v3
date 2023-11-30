@@ -137,6 +137,30 @@ func (i *CreateNodePoolInvoker) Invoke() (*model.CreateNodePoolResponse, error) 
 	}
 }
 
+type CreatePartitionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePartitionResponse), nil
+	}
+}
+
+type CreateReleaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateReleaseInvoker) Invoke() (*model.CreateReleaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateReleaseResponse), nil
+	}
+}
+
 type DeleteAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +170,18 @@ func (i *DeleteAddonInstanceInvoker) Invoke() (*model.DeleteAddonInstanceRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteAddonInstanceResponse), nil
+	}
+}
+
+type DeleteChartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteChartInvoker) Invoke() (*model.DeleteChartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteChartResponse), nil
 	}
 }
 
@@ -197,6 +233,30 @@ func (i *DeleteNodePoolInvoker) Invoke() (*model.DeleteNodePoolResponse, error) 
 	}
 }
 
+type DeleteReleaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteReleaseInvoker) Invoke() (*model.DeleteReleaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteReleaseResponse), nil
+	}
+}
+
+type DownloadChartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadChartInvoker) Invoke() (*model.DownloadChartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadChartResponse), nil
+	}
+}
+
 type HibernateClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -233,6 +293,18 @@ func (i *ListAddonTemplatesInvoker) Invoke() (*model.ListAddonTemplatesResponse,
 	}
 }
 
+type ListChartsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListChartsInvoker) Invoke() (*model.ListChartsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListChartsResponse), nil
+	}
+}
+
 type ListClustersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +338,30 @@ func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListNodesResponse), nil
+	}
+}
+
+type ListPartitionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPartitionsInvoker) Invoke() (*model.ListPartitionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPartitionsResponse), nil
+	}
+}
+
+type ListReleasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReleasesInvoker) Invoke() (*model.ListReleasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReleasesResponse), nil
 	}
 }
 
@@ -365,6 +461,30 @@ func (i *ShowAddonInstanceInvoker) Invoke() (*model.ShowAddonInstanceResponse, e
 	}
 }
 
+type ShowChartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowChartInvoker) Invoke() (*model.ShowChartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowChartResponse), nil
+	}
+}
+
+type ShowChartValuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowChartValuesInvoker) Invoke() (*model.ShowChartValuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowChartValuesResponse), nil
+	}
+}
+
 type ShowClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +494,30 @@ func (i *ShowClusterInvoker) Invoke() (*model.ShowClusterResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterResponse), nil
+	}
+}
+
+type ShowClusterConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterConfigInvoker) Invoke() (*model.ShowClusterConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterConfigResponse), nil
+	}
+}
+
+type ShowClusterConfigurationDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterConfigurationDetailsInvoker) Invoke() (*model.ShowClusterConfigurationDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterConfigurationDetailsResponse), nil
 	}
 }
 
@@ -425,6 +569,30 @@ func (i *ShowNodePoolInvoker) Invoke() (*model.ShowNodePoolResponse, error) {
 	}
 }
 
+type ShowNodePoolConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNodePoolConfigurationsInvoker) Invoke() (*model.ShowNodePoolConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNodePoolConfigurationsResponse), nil
+	}
+}
+
+type ShowPartitionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPartitionInvoker) Invoke() (*model.ShowPartitionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPartitionResponse), nil
+	}
+}
+
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +602,30 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
+type ShowReleaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReleaseInvoker) Invoke() (*model.ShowReleaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReleaseResponse), nil
+	}
+}
+
+type ShowReleaseHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReleaseHistoryInvoker) Invoke() (*model.ShowReleaseHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReleaseHistoryResponse), nil
 	}
 }
 
@@ -449,6 +641,18 @@ func (i *ShowUpgradeClusterTaskInvoker) Invoke() (*model.ShowUpgradeClusterTaskR
 	}
 }
 
+type ShowUserChartsQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUserChartsQuotasInvoker) Invoke() (*model.ShowUserChartsQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUserChartsQuotasResponse), nil
+	}
+}
+
 type UpdateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +662,18 @@ func (i *UpdateAddonInstanceInvoker) Invoke() (*model.UpdateAddonInstanceRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateAddonInstanceResponse), nil
+	}
+}
+
+type UpdateChartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateChartInvoker) Invoke() (*model.UpdateChartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateChartResponse), nil
 	}
 }
 
@@ -485,6 +701,18 @@ func (i *UpdateClusterEipInvoker) Invoke() (*model.UpdateClusterEipResponse, err
 	}
 }
 
+type UpdateClusterLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterLogConfigInvoker) Invoke() (*model.UpdateClusterLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterLogConfigResponse), nil
+	}
+}
+
 type UpdateNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -509,6 +737,42 @@ func (i *UpdateNodePoolInvoker) Invoke() (*model.UpdateNodePoolResponse, error) 
 	}
 }
 
+type UpdateNodePoolConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNodePoolConfigurationInvoker) Invoke() (*model.UpdateNodePoolConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNodePoolConfigurationResponse), nil
+	}
+}
+
+type UpdatePartitionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePartitionInvoker) Invoke() (*model.UpdatePartitionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePartitionResponse), nil
+	}
+}
+
+type UpdateReleaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateReleaseInvoker) Invoke() (*model.UpdateReleaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateReleaseResponse), nil
+	}
+}
+
 type UpgradeClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +782,18 @@ func (i *UpgradeClusterInvoker) Invoke() (*model.UpgradeClusterResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpgradeClusterResponse), nil
+	}
+}
+
+type UploadChartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadChartInvoker) Invoke() (*model.UploadChartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadChartResponse), nil
 	}
 }
 

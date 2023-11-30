@@ -8,10 +8,8 @@ import (
 
 // ShowCompoundMetricByIdResponse Response Object
 type ShowCompoundMetricByIdResponse struct {
-
-	// 返回的数据信息
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CompoundMetricVoDetailData `json:"data,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o ShowCompoundMetricByIdResponse) String() string {

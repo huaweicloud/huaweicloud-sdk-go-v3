@@ -19,8 +19,8 @@ type ListPluginsResponse struct {
 	Total *int32 `json:"total,omitempty"`
 
 	// 结果集
-	Data           *[]PageInfoResponseListPluginBasicVoData `json:"data,omitempty"`
-	HttpStatusCode int                                      `json:"-"`
+	Data           *[]PluginBasicVo `json:"data,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListPluginsResponse) String() string {

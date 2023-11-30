@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// MasterEipResponseSpecSpec 待绑定的弹性IP配置属性
 type MasterEipResponseSpecSpec struct {
 
 	// 弹性网卡ID

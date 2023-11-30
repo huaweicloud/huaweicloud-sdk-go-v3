@@ -173,6 +173,18 @@ func (i *ListActionRuleInvoker) Invoke() (*model.ListActionRuleResponse, error) 
 	}
 }
 
+type ListAgentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgentsInvoker) Invoke() (*model.ListAgentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgentsResponse), nil
+	}
+}
+
 type ListAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -254,6 +266,18 @@ func (i *ListNotifiedHistoriesInvoker) Invoke() (*model.ListNotifiedHistoriesRes
 		return nil, err
 	} else {
 		return result.(*model.ListNotifiedHistoriesResponse), nil
+	}
+}
+
+type ListPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPermissionsInvoker) Invoke() (*model.ListPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPermissionsResponse), nil
 	}
 }
 
@@ -437,18 +461,6 @@ func (i *ListAccessCodeInvoker) Invoke() (*model.ListAccessCodeResponse, error) 
 	}
 }
 
-type ListAgentsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAgentsInvoker) Invoke() (*model.ListAgentsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAgentsResponse), nil
-	}
-}
-
 type ListInstantQueryAomPromGetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,18 +530,6 @@ func (i *ListMetadataAomPromGetInvoker) Invoke() (*model.ListMetadataAomPromGetR
 		return nil, err
 	} else {
 		return result.(*model.ListMetadataAomPromGetResponse), nil
-	}
-}
-
-type ListPermissionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPermissionsInvoker) Invoke() (*model.ListPermissionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPermissionsResponse), nil
 	}
 }
 

@@ -40,6 +40,9 @@ type PluginBasicDto struct {
 
 	// 维护者
 	Maintainers *string `json:"maintainers,omitempty"`
+
+	// 组合插件类型
+	PluginCompositionType *string `json:"plugin_composition_type,omitempty"`
 }
 
 func (o PluginBasicDto) String() string {

@@ -18,6 +18,12 @@ type RecognizeFlashAsrRequest struct {
 	// 音频格式，audio_format取值范围： wav,mp3,m4a,aac,opus
 	AudioFormat RecognizeFlashAsrRequestAudioFormat `json:"audio_format"`
 
+	// obs桶名
+	ObsBucketName string `json:"obs_bucket_name"`
+
+	// obs对象key，经过urlencode编码，长度不超过1024个字符
+	ObsObjectKey string `json:"obs_object_key"`
+
 	// 是否加标点， 可以为 yes, 默认no
 	AddPunc *RecognizeFlashAsrRequestAddPunc `json:"add_punc,omitempty"`
 
@@ -29,12 +35,6 @@ type RecognizeFlashAsrRequest struct {
 
 	// 热词表id
 	VocabularyId *string `json:"vocabulary_id,omitempty"`
-
-	// obs桶名
-	ObsBucketName *string `json:"obs_bucket_name,omitempty"`
-
-	// obs对象key，经过urlencode编码，长度不超过1024个字符
-	ObsObjectKey *string `json:"obs_object_key,omitempty"`
 
 	// 表示是否在识别中只识别首个声道的音频数据，取值为“yes”和“no”，默认为“no”。
 	FirstChannelOnly *RecognizeFlashAsrRequestFirstChannelOnly `json:"first_channel_only,omitempty"`

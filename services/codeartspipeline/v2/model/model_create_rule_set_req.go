@@ -11,9 +11,6 @@ type CreateRuleSetReq struct {
 	// 规则集名称
 	Name string `json:"name"`
 
-	// 规则集类型
-	Type string `json:"type"`
-
 	// 规则集合
 	Rules []RequestRuleInstance `json:"rules"`
 }
