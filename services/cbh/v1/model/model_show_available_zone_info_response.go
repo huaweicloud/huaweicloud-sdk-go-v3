@@ -8,8 +8,10 @@ import (
 
 // ShowAvailableZoneInfoResponse Response Object
 type ShowAvailableZoneInfoResponse struct {
-	AvailabilityZone *AvailabilityZones `json:"availability_zone,omitempty"`
-	HttpStatusCode   int                `json:"-"`
+
+	// 可用区信息。
+	AvailabilityZone *[]AvailabilityZones `json:"availability_zone,omitempty"`
+	HttpStatusCode   int                  `json:"-"`
 }
 
 func (o ShowAvailableZoneInfoResponse) String() string {

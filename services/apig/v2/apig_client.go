@@ -2701,7 +2701,7 @@ func (c *ApigClient) BatchDeleteAclV2Invoker(request *model.BatchDeleteAclV2Requ
 
 // CreateAclStrategyV2 创建ACL策略
 //
-// 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com\&quot;之类的网络域名。
+// 增加一个ACL策略，策略类型通过字段acl_type来确定（permit或者deny），限制的对象的类型可以为IP或者DOMAIN，这里的DOMAIN对应的acl_value的值为租户名称，而非“www.exampleDomain.com”之类的网络域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) CreateAclStrategyV2(request *model.CreateAclStrategyV2Request) (*model.CreateAclStrategyV2Response, error) {
@@ -2892,6 +2892,27 @@ func (c *ApigClient) ChangeApiVersionV2(request *model.ChangeApiVersionV2Request
 func (c *ApigClient) ChangeApiVersionV2Invoker(request *model.ChangeApiVersionV2Request) *ChangeApiVersionV2Invoker {
 	requestDef := GenReqDefForChangeApiVersionV2()
 	return &ChangeApiVersionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckApiGroupsV2 校验API分组名称是否存在
+//
+// 校验API分组名称是否存在。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CheckApiGroupsV2(request *model.CheckApiGroupsV2Request) (*model.CheckApiGroupsV2Response, error) {
+	requestDef := GenReqDefForCheckApiGroupsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckApiGroupsV2Response), nil
+	}
+}
+
+// CheckApiGroupsV2Invoker 校验API分组名称是否存在
+func (c *ApigClient) CheckApiGroupsV2Invoker(request *model.CheckApiGroupsV2Request) *CheckApiGroupsV2Invoker {
+	requestDef := GenReqDefForCheckApiGroupsV2()
+	return &CheckApiGroupsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckApisV2 校验API定义
@@ -3099,7 +3120,7 @@ func (c *ApigClient) DisassociateRequestThrottlingPolicyV2Invoker(request *model
 //
 // 查询API分组列表。
 //
-// 如果是租户操作，则查询该租户下所有的分组；如果是管理员权限帐号操作，则查询的是所有租户的分组。
+// 如果是租户操作，则查询该租户下所有的分组；如果是管理员权限账号操作，则查询的是所有租户的分组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApiGroupsV2(request *model.ListApiGroupsV2Request) (*model.ListApiGroupsV2Response, error) {
@@ -3231,7 +3252,7 @@ func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2Invoker(request 
 
 // ListApisV2 查询API列表
 //
-// 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息。
+// 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息和API请求参数信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisV2(request *model.ListApisV2Request) (*model.ListApisV2Response, error) {

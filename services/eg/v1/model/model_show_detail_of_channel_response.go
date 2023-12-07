@@ -28,7 +28,10 @@ type ShowDetailOfChannelResponse struct {
 	CreatedTime *string `json:"created_time,omitempty"`
 
 	// 更新UTC时间
-	UpdatedTime    *string `json:"updated_time,omitempty"`
+	UpdatedTime *string `json:"updated_time,omitempty"`
+
+	// 企业项目id
+	EpsId          *string `json:"eps_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

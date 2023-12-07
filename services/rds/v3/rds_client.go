@@ -1642,27 +1642,6 @@ func (c *RdsClient) SetBinlogClearPolicyInvoker(request *model.SetBinlogClearPol
 	return &SetBinlogClearPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetInstancesDbShrink 收缩数据库日志
-//
-// 收缩数据库日志
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) SetInstancesDbShrink(request *model.SetInstancesDbShrinkRequest) (*model.SetInstancesDbShrinkResponse, error) {
-	requestDef := GenReqDefForSetInstancesDbShrink()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetInstancesDbShrinkResponse), nil
-	}
-}
-
-// SetInstancesDbShrinkInvoker 收缩数据库日志
-func (c *RdsClient) SetInstancesDbShrinkInvoker(request *model.SetInstancesDbShrinkRequest) *SetInstancesDbShrinkInvoker {
-	requestDef := GenReqDefForSetInstancesDbShrink()
-	return &SetInstancesDbShrinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // SetOffSiteBackupPolicy 设置跨区域备份策略
 //
 // 设置跨区域备份策略。
@@ -3853,4 +3832,25 @@ func (c *RdsClient) RevokeSqlserverDbUserPrivilege(request *model.RevokeSqlserve
 func (c *RdsClient) RevokeSqlserverDbUserPrivilegeInvoker(request *model.RevokeSqlserverDbUserPrivilegeRequest) *RevokeSqlserverDbUserPrivilegeInvoker {
 	requestDef := GenReqDefForRevokeSqlserverDbUserPrivilege()
 	return &RevokeSqlserverDbUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetInstancesDbShrink 收缩数据库日志
+//
+// 收缩数据库日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetInstancesDbShrink(request *model.SetInstancesDbShrinkRequest) (*model.SetInstancesDbShrinkResponse, error) {
+	requestDef := GenReqDefForSetInstancesDbShrink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInstancesDbShrinkResponse), nil
+	}
+}
+
+// SetInstancesDbShrinkInvoker 收缩数据库日志
+func (c *RdsClient) SetInstancesDbShrinkInvoker(request *model.SetInstancesDbShrinkRequest) *SetInstancesDbShrinkInvoker {
+	requestDef := GenReqDefForSetInstancesDbShrink()
+	return &SetInstancesDbShrinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -105,6 +105,7 @@ type ShowFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowFileInvoker) Invoke() (*model.ShowFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -117,6 +118,7 @@ type GetAllRepositoryByProjectIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *GetAllRepositoryByProjectIdInvoker) Invoke() (*model.GetAllRepositoryByProjectIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -129,6 +131,7 @@ type GetProductTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *GetProductTemplatesInvoker) Invoke() (*model.GetProductTemplatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -213,6 +216,7 @@ type AddDeployKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *AddDeployKeyInvoker) Invoke() (*model.AddDeployKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -273,6 +277,7 @@ type DeleteDeployKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteDeployKeyInvoker) Invoke() (*model.DeleteDeployKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -309,6 +314,7 @@ type GetRepositoryByProjectIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *GetRepositoryByProjectIdInvoker) Invoke() (*model.GetRepositoryByProjectIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -321,6 +327,7 @@ type GetTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *GetTemplatesInvoker) Invoke() (*model.GetTemplatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -429,6 +436,7 @@ type ShareTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShareTemplatesInvoker) Invoke() (*model.ShareTemplatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -585,6 +593,7 @@ type ShowStatisticCommitInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowStatisticCommitInvoker) Invoke() (*model.ShowStatisticCommitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -633,6 +642,7 @@ type DeleteSShkeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteSShkeyInvoker) Invoke() (*model.DeleteSShkeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -669,6 +679,7 @@ type ValidateHttpsInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ValidateHttpsInfoInvoker) Invoke() (*model.ValidateHttpsInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

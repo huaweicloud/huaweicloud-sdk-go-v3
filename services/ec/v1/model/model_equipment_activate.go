@@ -39,12 +39,16 @@ type EquipmentActivateType struct {
 
 type EquipmentActivateTypeEnum struct {
 	STANDARD EquipmentActivateType
+	SOHO     EquipmentActivateType
 }
 
 func GetEquipmentActivateTypeEnum() EquipmentActivateTypeEnum {
 	return EquipmentActivateTypeEnum{
 		STANDARD: EquipmentActivateType{
 			value: "standard",
+		},
+		SOHO: EquipmentActivateType{
+			value: "soho",
 		},
 	}
 }

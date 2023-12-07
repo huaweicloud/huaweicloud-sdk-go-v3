@@ -929,18 +929,6 @@ func (i *SetBinlogClearPolicyInvoker) Invoke() (*model.SetBinlogClearPolicyRespo
 	}
 }
 
-type SetInstancesDbShrinkInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetInstancesDbShrinkInvoker) Invoke() (*model.SetInstancesDbShrinkResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetInstancesDbShrinkResponse), nil
-	}
-}
-
 type SetOffSiteBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2186,5 +2174,17 @@ func (i *RevokeSqlserverDbUserPrivilegeInvoker) Invoke() (*model.RevokeSqlserver
 		return nil, err
 	} else {
 		return result.(*model.RevokeSqlserverDbUserPrivilegeResponse), nil
+	}
+}
+
+type SetInstancesDbShrinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstancesDbShrinkInvoker) Invoke() (*model.SetInstancesDbShrinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstancesDbShrinkResponse), nil
 	}
 }

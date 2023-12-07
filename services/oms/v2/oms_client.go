@@ -19,6 +19,27 @@ func OmsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchUpdateTasks 批量更新任务
+//
+// 批量更新迁移任务，可指定单个迁移任务组下所有的迁移任务或通过迁移任务ID来执行。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OmsClient) BatchUpdateTasks(request *model.BatchUpdateTasksRequest) (*model.BatchUpdateTasksResponse, error) {
+	requestDef := GenReqDefForBatchUpdateTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateTasksResponse), nil
+	}
+}
+
+// BatchUpdateTasksInvoker 批量更新任务
+func (c *OmsClient) BatchUpdateTasksInvoker(request *model.BatchUpdateTasksRequest) *BatchUpdateTasksInvoker {
+	requestDef := GenReqDefForBatchUpdateTasks()
+	return &BatchUpdateTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckPrefix 检查前缀是否在源端桶中存在
 //
 // 检查前缀是否在源端桶中存在
@@ -127,7 +148,7 @@ func (c *OmsClient) CreateTaskGroupInvoker(request *model.CreateTaskGroupRequest
 // DeleteSyncTask 删除同步任务
 //
 // 调用该接口删除同步任务。
-// 正在同步的任务不允许删除，如果删除会返回失败；若要删除，请先行暂停任务(目前只支持华北-北京四、华东-上海一地区)。
+// 正在同步的任务不允许删除，如果删除会返回失败；若要删除，请先行暂停任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OmsClient) DeleteSyncTask(request *model.DeleteSyncTaskRequest) (*model.DeleteSyncTaskResponse, error) {
@@ -213,7 +234,7 @@ func (c *OmsClient) ListSyncTaskStatisticInvoker(request *model.ListSyncTaskStat
 
 // ListSyncTasks 查询同步任务列表
 //
-// 查询用户名下所有同步任务信息(目前只支持华北-北京四、华东-上海一地区)。
+// 查询用户名下所有同步任务信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OmsClient) ListSyncTasks(request *model.ListSyncTasksRequest) (*model.ListSyncTasksResponse, error) {
@@ -423,7 +444,7 @@ func (c *OmsClient) ShowRegionInfoInvoker(request *model.ShowRegionInfoRequest) 
 
 // ShowSyncTask 查询指定ID的同步任务详情
 //
-// 查询指定ID的同步任务详情(目前只支持华北-北京四、华东-上海一地区)。
+// 查询指定ID的同步任务详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OmsClient) ShowSyncTask(request *model.ShowSyncTaskRequest) (*model.ShowSyncTaskResponse, error) {

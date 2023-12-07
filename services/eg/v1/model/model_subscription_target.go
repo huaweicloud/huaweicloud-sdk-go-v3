@@ -23,11 +23,14 @@ type SubscriptionTarget struct {
 	// 订阅的事件目标使用的目标链接ID
 	ConnectionId *string `json:"connection_id,omitempty"`
 
-	Detail *Detail `json:"detail,omitempty"`
+	// 订阅的事件目标参数列表，该字段序列化后总长度不超过1024字节，函数(urn、invoke_type、agency_name)、函数流（workflow_id、agency_name）、webhook（url）订阅目标必填，其中函数、函数流委托名称必填
+	Detail *interface{} `json:"detail,omitempty"`
 
 	KafkaDetail *KafkaTargetDetail `json:"kafka_detail,omitempty"`
 
 	SmnDetail *SmnTargetDetail `json:"smn_detail,omitempty"`
+
+	EgDetail *EgTargetDetail `json:"eg_detail,omitempty"`
 
 	Transform *TransForm `json:"transform"`
 

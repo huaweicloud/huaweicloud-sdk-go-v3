@@ -16,7 +16,7 @@ type SearchAuthorizeAppRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType SearchAuthorizeAppRequestDlmType `json:"Dlm-Type"`
+	DlmType *SearchAuthorizeAppRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

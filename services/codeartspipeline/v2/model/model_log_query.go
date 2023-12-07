@@ -20,10 +20,6 @@ type LogQuery struct {
 
 	// 排序规则[\"asc\",\"desc\"]
 	Sort string `json:"sort"`
-
-	Level *string `json:"level,omitempty"`
-
-	JobRunId *string `json:"job_run_id,omitempty"`
 }
 
 func (o LogQuery) String() string {

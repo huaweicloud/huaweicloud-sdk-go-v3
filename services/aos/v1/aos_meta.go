@@ -605,9 +605,34 @@ func GenReqDefForCreateStackSet() *def.HttpRequestDef {
 
 func GenReqDefForDeleteStackInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/stack-sets/{stack_set_name}/stack-instances/deletion").
+		WithResponse(new(model.DeleteStackInstanceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StackSetName").
+		WithJsonTag("stack_set_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClientRequestId").
+		WithJsonTag("Client-Request-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteStackInstanceDeprecated() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/stack-sets/{stack_set_name}/stack-instances").
-		WithResponse(new(model.DeleteStackInstanceResponse)).
+		WithResponse(new(model.DeleteStackInstanceDeprecatedResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

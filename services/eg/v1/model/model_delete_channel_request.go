@@ -11,6 +11,9 @@ type DeleteChannelRequest struct {
 
 	// 指定查询的事件通道ID
 	ChannelId string `json:"channel_id"`
+
+	// 企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o DeleteChannelRequest) String() string {

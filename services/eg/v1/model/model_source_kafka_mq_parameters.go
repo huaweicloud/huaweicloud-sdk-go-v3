@@ -17,6 +17,9 @@ type SourceKafkaMqParameters struct {
 	// kafka实例名称
 	InstanceName *string `json:"instance_name,omitempty"`
 
+	// 安全协议
+	SecurityProtocol *string `json:"security_protocol,omitempty"`
+
 	// kafka实例ID
 	InstanceId *string `json:"instance_id,omitempty"`
 

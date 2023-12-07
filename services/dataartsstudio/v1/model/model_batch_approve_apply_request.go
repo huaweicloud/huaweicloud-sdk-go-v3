@@ -16,7 +16,7 @@ type BatchApproveApplyRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType BatchApproveApplyRequestDlmType `json:"Dlm-Type"`
+	DlmType *BatchApproveApplyRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

@@ -923,6 +923,27 @@ func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoInvoker(request *model.L
 	return &ListGaussMySqlInstanceDetailInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGaussMySqlInstanceDetailInfoUnifyStatus 批量查询实例详情
+//
+// 批量查询实例详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoUnifyStatus(request *model.ListGaussMySqlInstanceDetailInfoUnifyStatusRequest) (*model.ListGaussMySqlInstanceDetailInfoUnifyStatusResponse, error) {
+	requestDef := GenReqDefForListGaussMySqlInstanceDetailInfoUnifyStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGaussMySqlInstanceDetailInfoUnifyStatusResponse), nil
+	}
+}
+
+// ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker 批量查询实例详情
+func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker(request *model.ListGaussMySqlInstanceDetailInfoUnifyStatusRequest) *ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker {
+	requestDef := GenReqDefForListGaussMySqlInstanceDetailInfoUnifyStatus()
+	return &ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListGaussMySqlInstances 查询实例列表
 //
 // 根据指定条件查询实例列表。
@@ -942,6 +963,27 @@ func (c *GaussDBClient) ListGaussMySqlInstances(request *model.ListGaussMySqlIns
 func (c *GaussDBClient) ListGaussMySqlInstancesInvoker(request *model.ListGaussMySqlInstancesRequest) *ListGaussMySqlInstancesInvoker {
 	requestDef := GenReqDefForListGaussMySqlInstances()
 	return &ListGaussMySqlInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGaussMySqlInstancesUnifyStatus 查询实例列表
+//
+// 根据指定条件查询实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListGaussMySqlInstancesUnifyStatus(request *model.ListGaussMySqlInstancesUnifyStatusRequest) (*model.ListGaussMySqlInstancesUnifyStatusResponse, error) {
+	requestDef := GenReqDefForListGaussMySqlInstancesUnifyStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGaussMySqlInstancesUnifyStatusResponse), nil
+	}
+}
+
+// ListGaussMySqlInstancesUnifyStatusInvoker 查询实例列表
+func (c *GaussDBClient) ListGaussMySqlInstancesUnifyStatusInvoker(request *model.ListGaussMySqlInstancesUnifyStatusRequest) *ListGaussMySqlInstancesUnifyStatusInvoker {
+	requestDef := GenReqDefForListGaussMySqlInstancesUnifyStatus()
+	return &ListGaussMySqlInstancesUnifyStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListImmediateJobs 获取即时任务列表
@@ -1553,6 +1595,27 @@ func (c *GaussDBClient) ShowGaussMySqlInstanceInfoInvoker(request *model.ShowGau
 	return &ShowGaussMySqlInstanceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGaussMySqlInstanceInfoUnifyStatus 查询实例详情信息
+//
+// 查询实例详情信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowGaussMySqlInstanceInfoUnifyStatus(request *model.ShowGaussMySqlInstanceInfoUnifyStatusRequest) (*model.ShowGaussMySqlInstanceInfoUnifyStatusResponse, error) {
+	requestDef := GenReqDefForShowGaussMySqlInstanceInfoUnifyStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGaussMySqlInstanceInfoUnifyStatusResponse), nil
+	}
+}
+
+// ShowGaussMySqlInstanceInfoUnifyStatusInvoker 查询实例详情信息
+func (c *GaussDBClient) ShowGaussMySqlInstanceInfoUnifyStatusInvoker(request *model.ShowGaussMySqlInstanceInfoUnifyStatusRequest) *ShowGaussMySqlInstanceInfoUnifyStatusInvoker {
+	requestDef := GenReqDefForShowGaussMySqlInstanceInfoUnifyStatus()
+	return &ShowGaussMySqlInstanceInfoUnifyStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGaussMySqlJobInfo 获取指定ID的任务信息
 //
 // 获取GaussDB(for MySQL)任务中心指定ID的任务信息。
@@ -1846,6 +1909,27 @@ func (c *GaussDBClient) SwitchGaussMySqlInstanceSsl(request *model.SwitchGaussMy
 func (c *GaussDBClient) SwitchGaussMySqlInstanceSslInvoker(request *model.SwitchGaussMySqlInstanceSslRequest) *SwitchGaussMySqlInstanceSslInvoker {
 	requestDef := GenReqDefForSwitchGaussMySqlInstanceSsl()
 	return &SwitchGaussMySqlInstanceSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchGaussMySqlProxySsl 开关数据库代理SSL
+//
+// 为数据库代理设置SSL数据加密。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchGaussMySqlProxySsl(request *model.SwitchGaussMySqlProxySslRequest) (*model.SwitchGaussMySqlProxySslResponse, error) {
+	requestDef := GenReqDefForSwitchGaussMySqlProxySsl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchGaussMySqlProxySslResponse), nil
+	}
+}
+
+// SwitchGaussMySqlProxySslInvoker 开关数据库代理SSL
+func (c *GaussDBClient) SwitchGaussMySqlProxySslInvoker(request *model.SwitchGaussMySqlProxySslRequest) *SwitchGaussMySqlProxySslInvoker {
+	requestDef := GenReqDefForSwitchGaussMySqlProxySsl()
+	return &SwitchGaussMySqlProxySslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAuditLog 开启或者关闭全量SQL

@@ -16,7 +16,7 @@ type UpdateApiRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType UpdateApiRequestDlmType `json:"Dlm-Type"`
+	DlmType *UpdateApiRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

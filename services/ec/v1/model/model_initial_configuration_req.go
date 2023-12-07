@@ -9,7 +9,7 @@ import (
 type InitialConfigurationReq struct {
 
 	// 加密URL的密码。由8-12位字符，包含数字、大写字母、小写字母，每种字符至少出现一次
-	Password string `json:"password"`
+	Password *string `json:"password,omitempty"`
 }
 
 func (o InitialConfigurationReq) String() string {

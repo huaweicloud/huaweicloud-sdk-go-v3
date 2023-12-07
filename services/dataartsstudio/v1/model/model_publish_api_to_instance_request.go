@@ -16,7 +16,7 @@ type PublishApiToInstanceRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType PublishApiToInstanceRequestDlmType `json:"Dlm-Type"`
+	DlmType *PublishApiToInstanceRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

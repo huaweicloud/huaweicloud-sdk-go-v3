@@ -16,7 +16,7 @@ type ShowApisDetailRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ShowApisDetailRequestDlmType `json:"Dlm-Type"`
+	DlmType *ShowApisDetailRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

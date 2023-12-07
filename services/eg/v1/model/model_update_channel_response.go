@@ -30,6 +30,9 @@ type UpdateChannelResponse struct {
 	// 更新UTC时间
 	UpdatedTime *string `json:"updated_time,omitempty"`
 
+	// 企业项目id
+	EpsId *string `json:"eps_id,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -377,6 +377,18 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	}
 }
 
+type ShowRocketMqConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRocketMqConfigsInvoker) Invoke() (*model.ShowRocketMqConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRocketMqConfigsResponse), nil
+	}
+}
+
 type ShowRocketmqProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +446,18 @@ func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceResponse), nil
+	}
+}
+
+type UpdateRocketMqConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRocketMqConfigsInvoker) Invoke() (*model.UpdateRocketMqConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRocketMqConfigsResponse), nil
 	}
 }
 

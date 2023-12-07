@@ -64,12 +64,16 @@ type ShowEquipmentInfoResponseType struct {
 
 type ShowEquipmentInfoResponseTypeEnum struct {
 	STANDARD ShowEquipmentInfoResponseType
+	SOHO     ShowEquipmentInfoResponseType
 }
 
 func GetShowEquipmentInfoResponseTypeEnum() ShowEquipmentInfoResponseTypeEnum {
 	return ShowEquipmentInfoResponseTypeEnum{
 		STANDARD: ShowEquipmentInfoResponseType{
 			value: "standard",
+		},
+		SOHO: ShowEquipmentInfoResponseType{
+			value: "soho",
 		},
 	}
 }

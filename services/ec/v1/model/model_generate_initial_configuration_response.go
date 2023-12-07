@@ -13,7 +13,10 @@ type GenerateInitialConfigurationResponse struct {
 	EquipmentId *string `json:"equipment_id,omitempty"`
 
 	// 初始配置URL
-	ConfigContent *string `json:"config_content,omitempty"`
+	UrlConfigContent *string `json:"url_config_content,omitempty"`
+
+	// 初始配置文件
+	ScriptConfigContent *string `json:"script_config_content,omitempty"`
 
 	// URL失效时间
 	ExpireAt       *string `json:"expire_at,omitempty"`

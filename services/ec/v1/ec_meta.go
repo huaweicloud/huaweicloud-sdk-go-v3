@@ -351,13 +351,13 @@ func GenReqDefForShowEquipmentInfo() *def.HttpRequestDef {
 func GenReqDefForShowEquipmentSpecificConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{domain_id}/enterprise-connect/equipment-specification/{equipment_type}").
+		WithPath("/v1/{domain_id}/enterprise-connect/equipment-specification/{equipment_id}").
 		WithResponse(new(model.ShowEquipmentSpecificConfigResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EquipmentType").
-		WithJsonTag("equipment_type").
+		WithName("EquipmentId").
+		WithJsonTag("equipment_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -743,6 +743,50 @@ func GenReqDefForUpdateEquipmentWanConfig() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{domain_id}/enterprise-connect/intelligent-enterprise-gateway/{ieg_id}/equipment/{equipment_id}/wan-interface").
 		WithResponse(new(model.UpdateEquipmentWanConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IegId").
+		WithJsonTag("ieg_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EquipmentId").
+		WithJsonTag("equipment_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowEquipmentWlan() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{domain_id}/enterprise-connect/intelligent-enterprise-gateway/{ieg_id}/equipment/{equipment_id}/wlan").
+		WithResponse(new(model.ShowEquipmentWlanResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IegId").
+		WithJsonTag("ieg_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EquipmentId").
+		WithJsonTag("equipment_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateEquipmentWlan() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{domain_id}/enterprise-connect/intelligent-enterprise-gateway/{ieg_id}/equipment/{equipment_id}/wlan").
+		WithResponse(new(model.UpdateEquipmentWlanResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

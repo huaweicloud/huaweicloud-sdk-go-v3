@@ -21,7 +21,7 @@ type ListFsTasksRequest struct {
 	// marker，取值为task_id
 	Marker *string `json:"marker,omitempty"`
 
-	// limit, 取值为正整数
+	// limit, 取值为正整数. 默认为20，最大值为100
 	Limit *int32 `json:"limit,omitempty"`
 }
 

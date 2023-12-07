@@ -14,7 +14,7 @@ type BatchWindow struct {
 	// 重试次数
 	Time *int32 `json:"time,omitempty"`
 
-	// 批量推送间隔[0,15](时间：秒)
+	// 批量推送间隔[0,15]，单位秒
 	Interval *int32 `json:"interval,omitempty"`
 }
 

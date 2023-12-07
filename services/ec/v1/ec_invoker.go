@@ -425,6 +425,30 @@ func (i *UpdateEquipmentWanConfigInvoker) Invoke() (*model.UpdateEquipmentWanCon
 	}
 }
 
+type ShowEquipmentWlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentWlanInvoker) Invoke() (*model.ShowEquipmentWlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEquipmentWlanResponse), nil
+	}
+}
+
+type UpdateEquipmentWlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEquipmentWlanInvoker) Invoke() (*model.UpdateEquipmentWlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEquipmentWlanResponse), nil
+	}
+}
+
 type AddEcnWithErInvoker struct {
 	*invoker.BaseInvoker
 }

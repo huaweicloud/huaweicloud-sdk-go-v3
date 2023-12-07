@@ -145,6 +145,7 @@ func (c *DliClient) ShowSparkJobTemplateInvoker(request *model.ShowSparkJobTempl
 	return &ShowSparkJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowSqlSampleTemplates 查询所有SQL样例模板
 //
 // 该API用于查询所有SQL样例模板。
@@ -160,6 +161,7 @@ func (c *DliClient) ShowSqlSampleTemplates(request *model.ShowSqlSampleTemplates
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowSqlSampleTemplatesInvoker 查询所有SQL样例模板
 func (c *DliClient) ShowSqlSampleTemplatesInvoker(request *model.ShowSqlSampleTemplatesRequest) *ShowSqlSampleTemplatesInvoker {
 	requestDef := GenReqDefForShowSqlSampleTemplates()
@@ -250,6 +252,7 @@ func (c *DliClient) AssociateQueueToEnhancedConnectionInvoker(request *model.Ass
 	return &AssociateQueueToEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteQueuePlans 批量删除队列定时扩缩容计划
 //
 // 该API用于批量删除队列定时扩缩容计划。
@@ -265,12 +268,14 @@ func (c *DliClient) BatchDeleteQueuePlans(request *model.BatchDeleteQueuePlansRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteQueuePlansInvoker 批量删除队列定时扩缩容计划
 func (c *DliClient) BatchDeleteQueuePlansInvoker(request *model.BatchDeleteQueuePlansRequest) *BatchDeleteQueuePlansInvoker {
 	requestDef := GenReqDefForBatchDeleteQueuePlans()
 	return &BatchDeleteQueuePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeAuthorization 数据赋权（用户）
 //
 // 该API用于将数据库或数据表的数据权限赋给指定的其他用户。
@@ -288,12 +293,14 @@ func (c *DliClient) ChangeAuthorization(request *model.ChangeAuthorizationReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeAuthorizationInvoker 数据赋权（用户）
 func (c *DliClient) ChangeAuthorizationInvoker(request *model.ChangeAuthorizationRequest) *ChangeAuthorizationInvoker {
 	requestDef := GenReqDefForChangeAuthorization()
 	return &ChangeAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeQueuePlan 修改队列定时扩缩容计划
 //
 // 该API用于修改指定ID的队列定时扩缩容计划。
@@ -309,12 +316,14 @@ func (c *DliClient) ChangeQueuePlan(request *model.ChangeQueuePlanRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeQueuePlanInvoker 修改队列定时扩缩容计划
 func (c *DliClient) ChangeQueuePlanInvoker(request *model.ChangeQueuePlanRequest) *ChangeQueuePlanInvoker {
 	requestDef := GenReqDefForChangeQueuePlan()
 	return &ChangeQueuePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateAuthInfo 创建跨源认证
 //
 // 该API用于创建跨源认证。
@@ -330,6 +339,7 @@ func (c *DliClient) CreateAuthInfo(request *model.CreateAuthInfoRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateAuthInfoInvoker 创建跨源认证
 func (c *DliClient) CreateAuthInfoInvoker(request *model.CreateAuthInfoRequest) *CreateAuthInfoInvoker {
 	requestDef := GenReqDefForCreateAuthInfo()
@@ -357,6 +367,7 @@ func (c *DliClient) CreateConnectivityTaskInvoker(request *model.CreateConnectiv
 	return &CreateConnectivityTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDatasourceConnection 创建经典型跨源连接
 //
 // 该API用于创建与其他服务的经典型跨源连接。
@@ -375,12 +386,14 @@ func (c *DliClient) CreateDatasourceConnection(request *model.CreateDatasourceCo
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDatasourceConnectionInvoker 创建经典型跨源连接
 func (c *DliClient) CreateDatasourceConnectionInvoker(request *model.CreateDatasourceConnectionRequest) *CreateDatasourceConnectionInvoker {
 	requestDef := GenReqDefForCreateDatasourceConnection()
 	return &CreateDatasourceConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDliAgency 创建DLI委托
 //
 // 创建DLI委托
@@ -396,6 +409,7 @@ func (c *DliClient) CreateDliAgency(request *model.CreateDliAgencyRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDliAgencyInvoker 创建DLI委托
 func (c *DliClient) CreateDliAgencyInvoker(request *model.CreateDliAgencyRequest) *CreateDliAgencyInvoker {
 	requestDef := GenReqDefForCreateDliAgency()
@@ -444,6 +458,7 @@ func (c *DliClient) CreateEnhancedConnectionInvoker(request *model.CreateEnhance
 	return &CreateEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateEnhancedConnectionRoutes 创建路由
 //
 // 该API用于创建跨源需要的路由。
@@ -459,6 +474,7 @@ func (c *DliClient) CreateEnhancedConnectionRoutes(request *model.CreateEnhanced
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateEnhancedConnectionRoutesInvoker 创建路由
 func (c *DliClient) CreateEnhancedConnectionRoutesInvoker(request *model.CreateEnhancedConnectionRoutesRequest) *CreateEnhancedConnectionRoutesInvoker {
 	requestDef := GenReqDefForCreateEnhancedConnectionRoutes()
@@ -486,6 +502,27 @@ func (c *DliClient) CreateGlobalVariableInvoker(request *model.CreateGlobalVaria
 	return &CreateGlobalVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateJobAuthInfo 创建跨源认证
+//
+// 该API用于创建跨源认证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateJobAuthInfo(request *model.CreateJobAuthInfoRequest) (*model.CreateJobAuthInfoResponse, error) {
+	requestDef := GenReqDefForCreateJobAuthInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateJobAuthInfoResponse), nil
+	}
+}
+
+// CreateJobAuthInfoInvoker 创建跨源认证
+func (c *DliClient) CreateJobAuthInfoInvoker(request *model.CreateJobAuthInfoRequest) *CreateJobAuthInfoInvoker {
+	requestDef := GenReqDefForCreateJobAuthInfo()
+	return &CreateJobAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateQueue 创建队列
 //
 // 该API用于创建队列，该队列将会绑定用户指定的计算资源。
@@ -507,6 +544,7 @@ func (c *DliClient) CreateQueueInvoker(request *model.CreateQueueRequest) *Creat
 	return &CreateQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateQueuePlan 创建队列定时扩缩容计划
 //
 // 创建队列定时扩缩容计划接口，对指定的队列创建定时规格变更计划。
@@ -522,6 +560,7 @@ func (c *DliClient) CreateQueuePlan(request *model.CreateQueuePlanRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateQueuePlanInvoker 创建队列定时扩缩容计划
 func (c *DliClient) CreateQueuePlanInvoker(request *model.CreateQueuePlanRequest) *CreateQueuePlanInvoker {
 	requestDef := GenReqDefForCreateQueuePlan()
@@ -549,6 +588,7 @@ func (c *DliClient) CreateQueuePropertyInvoker(request *model.CreateQueuePropert
 	return &CreateQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteAuthInfo 删除跨源认证
 //
 // 该API用于删除跨源认证信息。
@@ -564,12 +604,14 @@ func (c *DliClient) DeleteAuthInfo(request *model.DeleteAuthInfoRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteAuthInfoInvoker 删除跨源认证
 func (c *DliClient) DeleteAuthInfoInvoker(request *model.DeleteAuthInfoRequest) *DeleteAuthInfoInvoker {
 	requestDef := GenReqDefForDeleteAuthInfo()
 	return &DeleteAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteDatasourceConnection 删除经典型跨源连接
 //
 // 该API用于删除已创建的经典型跨源连接。
@@ -587,6 +629,7 @@ func (c *DliClient) DeleteDatasourceConnection(request *model.DeleteDatasourceCo
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteDatasourceConnectionInvoker 删除经典型跨源连接
 func (c *DliClient) DeleteDatasourceConnectionInvoker(request *model.DeleteDatasourceConnectionRequest) *DeleteDatasourceConnectionInvoker {
 	requestDef := GenReqDefForDeleteDatasourceConnection()
@@ -635,6 +678,7 @@ func (c *DliClient) DeleteEnhancedConnectionInvoker(request *model.DeleteEnhance
 	return &DeleteEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteEnhancedConnectionRoutes 删除路由
 //
 // 该API用于删除跨源需要的路由。
@@ -650,6 +694,7 @@ func (c *DliClient) DeleteEnhancedConnectionRoutes(request *model.DeleteEnhanced
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteEnhancedConnectionRoutesInvoker 删除路由
 func (c *DliClient) DeleteEnhancedConnectionRoutesInvoker(request *model.DeleteEnhancedConnectionRoutesRequest) *DeleteEnhancedConnectionRoutesInvoker {
 	requestDef := GenReqDefForDeleteEnhancedConnectionRoutes()
@@ -677,6 +722,27 @@ func (c *DliClient) DeleteGlobalVariableInvoker(request *model.DeleteGlobalVaria
 	return &DeleteGlobalVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteJobAuthInfo 删除跨源认证
+//
+// 该API用于删除跨源认证信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) DeleteJobAuthInfo(request *model.DeleteJobAuthInfoRequest) (*model.DeleteJobAuthInfoResponse, error) {
+	requestDef := GenReqDefForDeleteJobAuthInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteJobAuthInfoResponse), nil
+	}
+}
+
+// DeleteJobAuthInfoInvoker 删除跨源认证
+func (c *DliClient) DeleteJobAuthInfoInvoker(request *model.DeleteJobAuthInfoRequest) *DeleteJobAuthInfoInvoker {
+	requestDef := GenReqDefForDeleteJobAuthInfo()
+	return &DeleteJobAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteQueue 删除队列
 //
 // 该API用于删除指定队列。
@@ -700,6 +766,7 @@ func (c *DliClient) DeleteQueueInvoker(request *model.DeleteQueueRequest) *Delet
 	return &DeleteQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteQueuePlan 单个删除队列定时扩缩容计划
 //
 // 该API用于删除指定ID的队列定时扩缩容计划。
@@ -715,6 +782,7 @@ func (c *DliClient) DeleteQueuePlan(request *model.DeleteQueuePlanRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteQueuePlanInvoker 单个删除队列定时扩缩容计划
 func (c *DliClient) DeleteQueuePlanInvoker(request *model.DeleteQueuePlanRequest) *DeleteQueuePlanInvoker {
 	requestDef := GenReqDefForDeleteQueuePlan()
@@ -742,6 +810,7 @@ func (c *DliClient) DeleteQueuePropertyInvoker(request *model.DeleteQueuePropert
 	return &DeleteQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteResource 删除组内资源包
 //
 // 该API用于删除某个project某个分组下的资源包
@@ -757,6 +826,7 @@ func (c *DliClient) DeleteResource(request *model.DeleteResourceRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteResourceInvoker 删除组内资源包
 func (c *DliClient) DeleteResourceInvoker(request *model.DeleteResourceRequest) *DeleteResourceInvoker {
 	requestDef := GenReqDefForDeleteResource()
@@ -784,6 +854,7 @@ func (c *DliClient) DisassociateQueueFromEnhancedConnectionInvoker(request *mode
 	return &DisassociateQueueFromEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListAuthInfo 获取跨源认证列表
 //
 // 该API用于查询跨源认证信息。
@@ -799,6 +870,7 @@ func (c *DliClient) ListAuthInfo(request *model.ListAuthInfoRequest) (*model.Lis
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListAuthInfoInvoker 获取跨源认证列表
 func (c *DliClient) ListAuthInfoInvoker(request *model.ListAuthInfoRequest) *ListAuthInfoInvoker {
 	requestDef := GenReqDefForListAuthInfo()
@@ -826,6 +898,7 @@ func (c *DliClient) ListAuthorizationPrivilegesInvoker(request *model.ListAuthor
 	return &ListAuthorizationPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatabaseUsers 查看数据库的使用者
 //
 // 该API用于查询可以使用的指定队列的所有用户名称。
@@ -841,12 +914,14 @@ func (c *DliClient) ListDatabaseUsers(request *model.ListDatabaseUsersRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatabaseUsersInvoker 查看数据库的使用者
 func (c *DliClient) ListDatabaseUsersInvoker(request *model.ListDatabaseUsersRequest) *ListDatabaseUsersInvoker {
 	requestDef := GenReqDefForListDatabaseUsers()
 	return &ListDatabaseUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatasourceConnections 查询经典型跨源连接列表
 //
 // 该API用于查询该用户已创建的经典型跨源连接列表。
@@ -862,6 +937,7 @@ func (c *DliClient) ListDatasourceConnections(request *model.ListDatasourceConne
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatasourceConnectionsInvoker 查询经典型跨源连接列表
 func (c *DliClient) ListDatasourceConnectionsInvoker(request *model.ListDatasourceConnectionsRequest) *ListDatasourceConnectionsInvoker {
 	requestDef := GenReqDefForListDatasourceConnections()
@@ -973,6 +1049,28 @@ func (c *DliClient) ListGlobalVariablesInvoker(request *model.ListGlobalVariable
 	return &ListGlobalVariablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListJobAuthInfos 查询增强型跨源授权信息
+//
+// 该API用于查询跨源认证信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListJobAuthInfos(request *model.ListJobAuthInfosRequest) (*model.ListJobAuthInfosResponse, error) {
+	requestDef := GenReqDefForListJobAuthInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobAuthInfosResponse), nil
+	}
+}
+
+// ListJobAuthInfosInvoker 查询增强型跨源授权信息
+func (c *DliClient) ListJobAuthInfosInvoker(request *model.ListJobAuthInfosRequest) *ListJobAuthInfosInvoker {
+	requestDef := GenReqDefForListJobAuthInfos()
+	return &ListJobAuthInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQueuePlans 查看队列定时扩缩容计划
 //
 // 查看队列定时扩缩容计划接口，列出指定队列定时规格变更计划。
@@ -988,6 +1086,7 @@ func (c *DliClient) ListQueuePlans(request *model.ListQueuePlansRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQueuePlansInvoker 查看队列定时扩缩容计划
 func (c *DliClient) ListQueuePlansInvoker(request *model.ListQueuePlansRequest) *ListQueuePlansInvoker {
 	requestDef := GenReqDefForListQueuePlans()
@@ -1015,6 +1114,7 @@ func (c *DliClient) ListQueuePropertiesInvoker(request *model.ListQueuePropertie
 	return &ListQueuePropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQueueUsers 查看队列的使用者
 //
 // 该API用于查询可以使用的指定队列的所有用户名称。
@@ -1030,6 +1130,7 @@ func (c *DliClient) ListQueueUsers(request *model.ListQueueUsersRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQueueUsersInvoker 查看队列的使用者
 func (c *DliClient) ListQueueUsersInvoker(request *model.ListQueueUsersRequest) *ListQueueUsersInvoker {
 	requestDef := GenReqDefForListQueueUsers()
@@ -1057,6 +1158,7 @@ func (c *DliClient) ListQueuesInvoker(request *model.ListQueuesRequest) *ListQue
 	return &ListQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListResources 查看分组资源列表
 //
 // 该API用于查看某个project下的所有资源，其中包含Group。
@@ -1072,12 +1174,14 @@ func (c *DliClient) ListResources(request *model.ListResourcesRequest) (*model.L
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListResourcesInvoker 查看分组资源列表
 func (c *DliClient) ListResourcesInvoker(request *model.ListResourcesRequest) *ListResourcesInvoker {
 	requestDef := GenReqDefForListResources()
 	return &ListResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTablePrivileges 查看表的用户权限
 //
 // 该API用于查询指定用户在表上的权限。
@@ -1093,12 +1197,14 @@ func (c *DliClient) ListTablePrivileges(request *model.ListTablePrivilegesReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTablePrivilegesInvoker 查看表的用户权限
 func (c *DliClient) ListTablePrivilegesInvoker(request *model.ListTablePrivilegesRequest) *ListTablePrivilegesInvoker {
 	requestDef := GenReqDefForListTablePrivileges()
 	return &ListTablePrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTableUsers 查看表的使用者
 //
 // 该API用于查看有权访问指定表或表的列的所有用户。
@@ -1114,12 +1220,14 @@ func (c *DliClient) ListTableUsers(request *model.ListTableUsersRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTableUsersInvoker 查看表的使用者
 func (c *DliClient) ListTableUsersInvoker(request *model.ListTableUsersRequest) *ListTableUsersInvoker {
 	requestDef := GenReqDefForListTableUsers()
 	return &ListTableUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RegisterAuthorizedQueue 队列赋权
 //
 // 该API用于与其他用户共享指定的队列，可以给用户赋使用指定的队列的权限或者收回使用权限。
@@ -1135,6 +1243,7 @@ func (c *DliClient) RegisterAuthorizedQueue(request *model.RegisterAuthorizedQue
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RegisterAuthorizedQueueInvoker 队列赋权
 func (c *DliClient) RegisterAuthorizedQueueInvoker(request *model.RegisterAuthorizedQueueRequest) *RegisterAuthorizedQueueInvoker {
 	requestDef := GenReqDefForRegisterAuthorizedQueue()
@@ -1204,6 +1313,7 @@ func (c *DliClient) ShowConnectivityTaskInvoker(request *model.ShowConnectivityT
 	return &ShowConnectivityTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDatasourceConnection 查询经典型跨源连接
 //
 // 该API用于查询该用户指定的已创建的经典型跨源连接。
@@ -1219,12 +1329,14 @@ func (c *DliClient) ShowDatasourceConnection(request *model.ShowDatasourceConnec
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDatasourceConnectionInvoker 查询经典型跨源连接
 func (c *DliClient) ShowDatasourceConnectionInvoker(request *model.ShowDatasourceConnectionRequest) *ShowDatasourceConnectionInvoker {
 	requestDef := GenReqDefForShowDatasourceConnection()
 	return &ShowDatasourceConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDliAgency 获取dli委托信息
 //
 // 获取dli委托信息
@@ -1240,6 +1352,7 @@ func (c *DliClient) ShowDliAgency(request *model.ShowDliAgencyRequest) (*model.S
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDliAgencyInvoker 获取dli委托信息
 func (c *DliClient) ShowDliAgencyInvoker(request *model.ShowDliAgencyRequest) *ShowDliAgencyInvoker {
 	requestDef := GenReqDefForShowDliAgency()
@@ -1330,6 +1443,7 @@ func (c *DliClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuota
 	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowResourceInfo 查看组内资源包
 //
 // 该API用于查看某个project某个分组下的具体资源信息。
@@ -1345,12 +1459,14 @@ func (c *DliClient) ShowResourceInfo(request *model.ShowResourceInfoRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowResourceInfoInvoker 查看组内资源包
 func (c *DliClient) ShowResourceInfoInvoker(request *model.ShowResourceInfoRequest) *ShowResourceInfoInvoker {
 	requestDef := GenReqDefForShowResourceInfo()
 	return &ShowResourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateAuthInfo 更新跨源认证
 //
 // 该API用于更新跨源认证信息。
@@ -1366,6 +1482,7 @@ func (c *DliClient) UpdateAuthInfo(request *model.UpdateAuthInfoRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateAuthInfoInvoker 更新跨源认证
 func (c *DliClient) UpdateAuthInfoInvoker(request *model.UpdateAuthInfoRequest) *UpdateAuthInfoInvoker {
 	requestDef := GenReqDefForUpdateAuthInfo()
@@ -1456,6 +1573,7 @@ func (c *DliClient) UpdateGlobalVariableInvoker(request *model.UpdateGlobalVaria
 	return &UpdateGlobalVariableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateGroupOrResourceOwner 修改组或者资源包拥有者
 //
 // 用于修改程序包的owner。
@@ -1471,12 +1589,35 @@ func (c *DliClient) UpdateGroupOrResourceOwner(request *model.UpdateGroupOrResou
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateGroupOrResourceOwnerInvoker 修改组或者资源包拥有者
 func (c *DliClient) UpdateGroupOrResourceOwnerInvoker(request *model.UpdateGroupOrResourceOwnerRequest) *UpdateGroupOrResourceOwnerInvoker {
 	requestDef := GenReqDefForUpdateGroupOrResourceOwner()
 	return &UpdateGroupOrResourceOwnerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateJobAuthInfo 更新跨源认证
+//
+// 该API用于更新跨源认证信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) UpdateJobAuthInfo(request *model.UpdateJobAuthInfoRequest) (*model.UpdateJobAuthInfoResponse, error) {
+	requestDef := GenReqDefForUpdateJobAuthInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateJobAuthInfoResponse), nil
+	}
+}
+
+// UpdateJobAuthInfoInvoker 更新跨源认证
+func (c *DliClient) UpdateJobAuthInfoInvoker(request *model.UpdateJobAuthInfoRequest) *UpdateJobAuthInfoInvoker {
+	requestDef := GenReqDefForUpdateJobAuthInfo()
+	return &UpdateJobAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateQueueCidr 修改队列网段
 //
 // 该功能用于修改包年包月队列网段。
@@ -1494,6 +1635,7 @@ func (c *DliClient) UpdateQueueCidr(request *model.UpdateQueueCidrRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateQueueCidrInvoker 修改队列网段
 func (c *DliClient) UpdateQueueCidrInvoker(request *model.UpdateQueueCidrRequest) *UpdateQueueCidrInvoker {
 	requestDef := GenReqDefForUpdateQueueCidr()
@@ -1521,6 +1663,7 @@ func (c *DliClient) UpdateQueuePropertyInvoker(request *model.UpdateQueuePropert
 	return &UpdateQueuePropertyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadFiles 上传file类型分组资源
 //
 // 该API用于在project下上传file类型模块。
@@ -1537,12 +1680,14 @@ func (c *DliClient) UploadFiles(request *model.UploadFilesRequest) (*model.Uploa
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadFilesInvoker 上传file类型分组资源
 func (c *DliClient) UploadFilesInvoker(request *model.UploadFilesRequest) *UploadFilesInvoker {
 	requestDef := GenReqDefForUploadFiles()
 	return &UploadFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadJars 上传jar类型分组资源
 //
 // 该API用于在project下上传jar类型分组资源。
@@ -1559,12 +1704,14 @@ func (c *DliClient) UploadJars(request *model.UploadJarsRequest) (*model.UploadJ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadJarsInvoker 上传jar类型分组资源
 func (c *DliClient) UploadJarsInvoker(request *model.UploadJarsRequest) *UploadJarsInvoker {
 	requestDef := GenReqDefForUploadJars()
 	return &UploadJarsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadPythonFiles 上传pyfile类型分组资源
 //
 // 该API用于在project下的上传pyfile类型模块。
@@ -1581,12 +1728,14 @@ func (c *DliClient) UploadPythonFiles(request *model.UploadPythonFilesRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadPythonFilesInvoker 上传pyfile类型分组资源
 func (c *DliClient) UploadPythonFilesInvoker(request *model.UploadPythonFilesRequest) *UploadPythonFilesInvoker {
 	requestDef := GenReqDefForUploadPythonFiles()
 	return &UploadPythonFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadResources 上传分组资源
 //
 // 该API用于上传分组资源到某个project下。
@@ -1602,6 +1751,7 @@ func (c *DliClient) UploadResources(request *model.UploadResourcesRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UploadResourcesInvoker 上传分组资源
 func (c *DliClient) UploadResourcesInvoker(request *model.UploadResourcesRequest) *UploadResourcesInvoker {
 	requestDef := GenReqDefForUploadResources()
@@ -1650,6 +1800,7 @@ func (c *DliClient) BatchRunFlinkJobsInvoker(request *model.BatchRunFlinkJobsReq
 	return &BatchRunFlinkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeFlinkJobStatusReport 边缘Flink作业状态信息上报
 //
 // 该API用于处理边缘Flink作业状态上报信息
@@ -1665,6 +1816,7 @@ func (c *DliClient) ChangeFlinkJobStatusReport(request *model.ChangeFlinkJobStat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeFlinkJobStatusReportInvoker 边缘Flink作业状态信息上报
 func (c *DliClient) ChangeFlinkJobStatusReportInvoker(request *model.ChangeFlinkJobStatusReportRequest) *ChangeFlinkJobStatusReportInvoker {
 	requestDef := GenReqDefForChangeFlinkJobStatusReport()
@@ -1755,6 +1907,7 @@ func (c *DliClient) CreateFlinkSqlJobTemplateInvoker(request *model.CreateFlinkS
 	return &CreateFlinkSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateIefMessageChannel 创建IEF消息通道
 //
 // 该API用于创建IEF消息通道
@@ -1770,12 +1923,14 @@ func (c *DliClient) CreateIefMessageChannel(request *model.CreateIefMessageChann
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateIefMessageChannelInvoker 创建IEF消息通道
 func (c *DliClient) CreateIefMessageChannelInvoker(request *model.CreateIefMessageChannelRequest) *CreateIefMessageChannelInvoker {
 	requestDef := GenReqDefForCreateIefMessageChannel()
 	return &CreateIefMessageChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateIefSystemEvents IEF系统事件上报
 //
 // 该API用于处理IEF系统事件上报
@@ -1791,6 +1946,7 @@ func (c *DliClient) CreateIefSystemEvents(request *model.CreateIefSystemEventsRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateIefSystemEventsInvoker IEF系统事件上报
 func (c *DliClient) CreateIefSystemEventsInvoker(request *model.CreateIefSystemEventsRequest) *CreateIefSystemEventsInvoker {
 	requestDef := GenReqDefForCreateIefSystemEvents()
@@ -1923,6 +2079,7 @@ func (c *DliClient) ListFlinkSqlJobTemplatesInvoker(request *model.ListFlinkSqlJ
 	return &ListFlinkSqlJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RegisterBucket OBS授权给DLI服务
 //
 // 用户主动授权OBS桶的操作权限给DLI服务, 用于保存用户作业的checkpoint、作业的运行日志等。
@@ -1938,12 +2095,14 @@ func (c *DliClient) RegisterBucket(request *model.RegisterBucketRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RegisterBucketInvoker OBS授权给DLI服务
 func (c *DliClient) RegisterBucketInvoker(request *model.RegisterBucketRequest) *RegisterBucketInvoker {
 	requestDef := GenReqDefForRegisterBucket()
 	return &RegisterBucketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RunIefJobActionCallBack 边缘Flink作业Action状态回调
 //
 // 该API用于处理IEF Flink作业action回调信息
@@ -1959,6 +2118,7 @@ func (c *DliClient) RunIefJobActionCallBack(request *model.RunIefJobActionCallBa
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RunIefJobActionCallBackInvoker 边缘Flink作业Action状态回调
 func (c *DliClient) RunIefJobActionCallBackInvoker(request *model.RunIefJobActionCallBackRequest) *RunIefJobActionCallBackInvoker {
 	requestDef := GenReqDefForRunIefJobActionCallBack()
@@ -2007,6 +2167,7 @@ func (c *DliClient) ShowFlinkJobExecutionGraphInvoker(request *model.ShowFlinkJo
 	return &ShowFlinkJobExecutionGraphInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowFlinkMetric 查询Flink作业监控信息
 //
 // 查询Flink作业监控信息, 支持同时查询多个Flink作业的监控信息。
@@ -2022,6 +2183,7 @@ func (c *DliClient) ShowFlinkMetric(request *model.ShowFlinkMetricRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowFlinkMetricInvoker 查询Flink作业监控信息
 func (c *DliClient) ShowFlinkMetricInvoker(request *model.ShowFlinkMetricRequest) *ShowFlinkMetricInvoker {
 	requestDef := GenReqDefForShowFlinkMetric()
@@ -2175,6 +2337,7 @@ func (c *DliClient) ListSparkJobsInvoker(request *model.ListSparkJobsRequest) *L
 	return &ListSparkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBatchLog 查询批处理作业日志
 //
 // 该API用于查询批处理作业的后台日志。
@@ -2190,6 +2353,7 @@ func (c *DliClient) ShowBatchLog(request *model.ShowBatchLogRequest) (*model.Sho
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBatchLogInvoker 查询批处理作业日志
 func (c *DliClient) ShowBatchLogInvoker(request *model.ShowBatchLogRequest) *ShowBatchLogInvoker {
 	requestDef := GenReqDefForShowBatchLog()
@@ -2280,6 +2444,7 @@ func (c *DliClient) CheckSqlInvoker(request *model.CheckSqlRequest) *CheckSqlInv
 	return &CheckSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDatabase 创建数据库
 //
 // 该API用于新增数据库。
@@ -2295,6 +2460,7 @@ func (c *DliClient) CreateDatabase(request *model.CreateDatabaseRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDatabaseInvoker 创建数据库
 func (c *DliClient) CreateDatabaseInvoker(request *model.CreateDatabaseRequest) *CreateDatabaseInvoker {
 	requestDef := GenReqDefForCreateDatabase()
@@ -2324,6 +2490,7 @@ func (c *DliClient) CreateSqlJobInvoker(request *model.CreateSqlJobRequest) *Cre
 	return &CreateSqlJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateTable 创建表
 //
 // 该API用于创建新的表。
@@ -2339,12 +2506,14 @@ func (c *DliClient) CreateTable(request *model.CreateTableRequest) (*model.Creat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateTableInvoker 创建表
 func (c *DliClient) CreateTableInvoker(request *model.CreateTableRequest) *CreateTableInvoker {
 	requestDef := GenReqDefForCreateTable()
 	return &CreateTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteDatabase 删除数据库
 //
 // 该API用于删除空数据库，若待删除的数据库中存在表，则需先删除其中的所有表。
@@ -2360,12 +2529,14 @@ func (c *DliClient) DeleteDatabase(request *model.DeleteDatabaseRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteDatabaseInvoker 删除数据库
 func (c *DliClient) DeleteDatabaseInvoker(request *model.DeleteDatabaseRequest) *DeleteDatabaseInvoker {
 	requestDef := GenReqDefForDeleteDatabase()
 	return &DeleteDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteTable 删除表
 //
 // 该API用于删除指定的表。
@@ -2381,12 +2552,14 @@ func (c *DliClient) DeleteTable(request *model.DeleteTableRequest) (*model.Delet
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteTableInvoker 删除表
 func (c *DliClient) DeleteTableInvoker(request *model.DeleteTableRequest) *DeleteTableInvoker {
 	requestDef := GenReqDefForDeleteTable()
 	return &DeleteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExportSqlJobResult 导出查询结果
 //
 // 该API用于将SQL语句的查询结果导出到OBS对象存储中，只支持导出“QUERY”类型作业的查询结果。
@@ -2402,12 +2575,14 @@ func (c *DliClient) ExportSqlJobResult(request *model.ExportSqlJobResultRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExportSqlJobResultInvoker 导出查询结果
 func (c *DliClient) ExportSqlJobResultInvoker(request *model.ExportSqlJobResultRequest) *ExportSqlJobResultInvoker {
 	requestDef := GenReqDefForExportSqlJobResult()
 	return &ExportSqlJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExportTable 导出查询结果
 //
 // 该API用于将SQL语句的查询结果导出到OBS对象存储中，只支持导出“QUERY”类型作业的查询结果。
@@ -2423,12 +2598,14 @@ func (c *DliClient) ExportTable(request *model.ExportTableRequest) (*model.Expor
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExportTableInvoker 导出查询结果
 func (c *DliClient) ExportTableInvoker(request *model.ExportTableRequest) *ExportTableInvoker {
 	requestDef := GenReqDefForExportTable()
 	return &ExportTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ImportTable 导入数据
 //
 // 该API用于将数据从文件导入DLI或OBS表，目前仅支持将OBS上的数据导入DLI或OBS中。
@@ -2444,12 +2621,14 @@ func (c *DliClient) ImportTable(request *model.ImportTableRequest) (*model.Impor
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ImportTableInvoker 导入数据
 func (c *DliClient) ImportTableInvoker(request *model.ImportTableRequest) *ImportTableInvoker {
 	requestDef := GenReqDefForImportTable()
 	return &ImportTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListAllTables 查询所有表
 //
 // 该API用于查询指定数据库下符合过滤条件的或所有的表信息。
@@ -2465,12 +2644,14 @@ func (c *DliClient) ListAllTables(request *model.ListAllTablesRequest) (*model.L
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListAllTablesInvoker 查询所有表
 func (c *DliClient) ListAllTablesInvoker(request *model.ListAllTablesRequest) *ListAllTablesInvoker {
 	requestDef := GenReqDefForListAllTables()
 	return &ListAllTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatabases 查询所有数据库
 //
 // 该API用于查询出所有的数据库信息。
@@ -2486,6 +2667,7 @@ func (c *DliClient) ListDatabases(request *model.ListDatabasesRequest) (*model.L
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatabasesInvoker 查询所有数据库
 func (c *DliClient) ListDatabasesInvoker(request *model.ListDatabasesRequest) *ListDatabasesInvoker {
 	requestDef := GenReqDefForListDatabases()
@@ -2535,6 +2717,7 @@ func (c *DliClient) PreviewSqlJobResultInvoker(request *model.PreviewSqlJobResul
 	return &PreviewSqlJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDescribeTable 描述表信息
 //
 // 该API用于描述指定表的元数据信息。
@@ -2550,12 +2733,14 @@ func (c *DliClient) ShowDescribeTable(request *model.ShowDescribeTableRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDescribeTableInvoker 描述表信息
 func (c *DliClient) ShowDescribeTableInvoker(request *model.ShowDescribeTableRequest) *ShowDescribeTableInvoker {
 	requestDef := GenReqDefForShowDescribeTable()
 	return &ShowDescribeTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowPartitions 获取分区信息列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -2569,6 +2754,7 @@ func (c *DliClient) ShowPartitions(request *model.ShowPartitionsRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowPartitionsInvoker 获取分区信息列表
 func (c *DliClient) ShowPartitionsInvoker(request *model.ShowPartitionsRequest) *ShowPartitionsInvoker {
 	requestDef := GenReqDefForShowPartitions()
@@ -2638,6 +2824,7 @@ func (c *DliClient) ShowSqlJobStatusInvoker(request *model.ShowSqlJobStatusReque
 	return &ShowSqlJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowTableContent 预览表内容
 //
 // 该API用于用于预览表中前10行的内容。
@@ -2653,12 +2840,14 @@ func (c *DliClient) ShowTableContent(request *model.ShowTableContentRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowTableContentInvoker 预览表内容
 func (c *DliClient) ShowTableContentInvoker(request *model.ShowTableContentRequest) *ShowTableContentInvoker {
 	requestDef := GenReqDefForShowTableContent()
 	return &ShowTableContentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateDatabaseOwner 修改数据库用户
 //
 // 用于修改数据库的owner。
@@ -2674,12 +2863,14 @@ func (c *DliClient) UpdateDatabaseOwner(request *model.UpdateDatabaseOwnerReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateDatabaseOwnerInvoker 修改数据库用户
 func (c *DliClient) UpdateDatabaseOwnerInvoker(request *model.UpdateDatabaseOwnerRequest) *UpdateDatabaseOwnerInvoker {
 	requestDef := GenReqDefForUpdateDatabaseOwner()
 	return &UpdateDatabaseOwnerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateTableOwner 修改表用户
 //
 // 用于修改表的owner。
@@ -2695,6 +2886,7 @@ func (c *DliClient) UpdateTableOwner(request *model.UpdateTableOwnerRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateTableOwnerInvoker 修改表用户
 func (c *DliClient) UpdateTableOwnerInvoker(request *model.UpdateTableOwnerRequest) *UpdateTableOwnerInvoker {
 	requestDef := GenReqDefForUpdateTableOwner()

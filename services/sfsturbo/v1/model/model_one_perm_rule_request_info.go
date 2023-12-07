@@ -9,7 +9,7 @@ import (
 // OnePermRuleRequestInfo 权限规格信息
 type OnePermRuleRequestInfo struct {
 
-	// 授权对象的IP地址或网段
+	// 授权对象的IP地址或网段，设置后不支持修改
 	IpCidr *string `json:"ip_cidr,omitempty"`
 
 	// -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享

@@ -209,6 +209,78 @@ func (i *ShowTransitIpTagsInvoker) Invoke() (*model.ShowTransitIpTagsResponse, e
 	}
 }
 
+type BatchCreateDeleteNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateDeleteNatGatewayTagInvoker) Invoke() (*model.BatchCreateDeleteNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateDeleteNatGatewayTagResponse), nil
+	}
+}
+
+type CreateNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNatGatewayTagInvoker) Invoke() (*model.CreateNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNatGatewayTagResponse), nil
+	}
+}
+
+type DeleteNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNatGatewayTagInvoker) Invoke() (*model.DeleteNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNatGatewayTagResponse), nil
+	}
+}
+
+type ListNatGatewayByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNatGatewayByTagInvoker) Invoke() (*model.ListNatGatewayByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNatGatewayByTagResponse), nil
+	}
+}
+
+type ListNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNatGatewayTagInvoker) Invoke() (*model.ListNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNatGatewayTagResponse), nil
+	}
+}
+
+type ShowNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNatGatewayTagInvoker) Invoke() (*model.ShowNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNatGatewayTagResponse), nil
+	}
+}
+
 type BatchCreateDeletePrivateNatTagsInvoker struct {
 	*invoker.BaseInvoker
 }

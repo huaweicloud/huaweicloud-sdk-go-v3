@@ -9,9 +9,11 @@ import (
 	"strings"
 )
 
-// EventStreamingSink 事件目标，一个事件流中只有一个
+// EventStreamingSink 事件目标，一个事件流中只有一个事件目标，sink_fg、sink_kafka值能选择其中一个参数
 type EventStreamingSink struct {
 	SinkFg *SinkFgParameters `json:"sink_fg,omitempty"`
+
+	SinkKafka *SinkKafkaParameters `json:"sink_kafka,omitempty"`
 
 	// 事件目标类型名称
 	Name *EventStreamingSinkName `json:"name,omitempty"`
@@ -31,13 +33,17 @@ type EventStreamingSinkName struct {
 }
 
 type EventStreamingSinkNameEnum struct {
-	HC_FG EventStreamingSinkName
+	HC_FUNCTION_GRAPH EventStreamingSinkName
+	HC_KAFKA          EventStreamingSinkName
 }
 
 func GetEventStreamingSinkNameEnum() EventStreamingSinkNameEnum {
 	return EventStreamingSinkNameEnum{
-		HC_FG: EventStreamingSinkName{
-			value: "HC.FG",
+		HC_FUNCTION_GRAPH: EventStreamingSinkName{
+			value: "HC.FunctionGraph",
+		},
+		HC_KAFKA: EventStreamingSinkName{
+			value: "HC.Kafka",
 		},
 	}
 }

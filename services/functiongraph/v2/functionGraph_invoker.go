@@ -17,18 +17,6 @@ func (i *AsyncInvokeFunctionInvoker) Invoke() (*model.AsyncInvokeFunctionRespons
 	}
 }
 
-type AsyncInvokeReservedFunctionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AsyncInvokeReservedFunctionInvoker) Invoke() (*model.AsyncInvokeReservedFunctionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AsyncInvokeReservedFunctionResponse), nil
-	}
-}
-
 type BatchDeleteFunctionTriggersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,18 +62,6 @@ func (i *CreateCallbackWorkflowInvoker) Invoke() (*model.CreateCallbackWorkflowR
 		return nil, err
 	} else {
 		return result.(*model.CreateCallbackWorkflowResponse), nil
-	}
-}
-
-type CreateDependencyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDependencyInvoker) Invoke() (*model.CreateDependencyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDependencyResponse), nil
 	}
 }
 
@@ -206,18 +182,6 @@ func (i *CreateWorkflowInvoker) Invoke() (*model.CreateWorkflowResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateWorkflowResponse), nil
-	}
-}
-
-type DeleteDependencyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDependencyInvoker) Invoke() (*model.DeleteDependencyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDependencyResponse), nil
 	}
 }
 
@@ -701,18 +665,6 @@ func (i *ShowAppTemplateInvoker) Invoke() (*model.ShowAppTemplateResponse, error
 	}
 }
 
-type ShowDependcyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDependcyInvoker) Invoke() (*model.ShowDependcyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDependcyResponse), nil
-	}
-}
-
 type ShowDependencyVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1010,18 +962,6 @@ func (i *StopWorkFlowInvoker) Invoke() (*model.StopWorkFlowResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopWorkFlowResponse), nil
-	}
-}
-
-type UpdateDependcyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDependcyInvoker) Invoke() (*model.UpdateDependcyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDependcyResponse), nil
 	}
 }
 

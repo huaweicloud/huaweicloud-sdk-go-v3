@@ -64,12 +64,16 @@ type CreateEquipmentResponseType struct {
 
 type CreateEquipmentResponseTypeEnum struct {
 	STANDARD CreateEquipmentResponseType
+	SOHO     CreateEquipmentResponseType
 }
 
 func GetCreateEquipmentResponseTypeEnum() CreateEquipmentResponseTypeEnum {
 	return CreateEquipmentResponseTypeEnum{
 		STANDARD: CreateEquipmentResponseType{
 			value: "standard",
+		},
+		SOHO: CreateEquipmentResponseType{
+			value: "soho",
 		},
 	}
 }

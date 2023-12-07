@@ -10,13 +10,13 @@ import (
 type ShowJobInstanceResponse struct {
 	Status *string `json:"status,omitempty"`
 
-	PlanTime *int32 `json:"planTime,omitempty"`
+	PlanTime *int64 `json:"planTime,omitempty"`
 
-	StartTime *int32 `json:"startTime,omitempty"`
+	StartTime *int64 `json:"startTime,omitempty"`
 
-	EndTime *int32 `json:"endTime,omitempty"`
+	EndTime *int64 `json:"endTime,omitempty"`
 
-	ExecuteTime *int32 `json:"executeTime,omitempty"`
+	ExecuteTime *int64 `json:"executeTime,omitempty"`
 
 	InstancesId *string `json:"instancesId,omitempty"`
 

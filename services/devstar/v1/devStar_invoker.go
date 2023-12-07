@@ -285,6 +285,7 @@ type ListPublishedTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListPublishedTemplatesInvoker) Invoke() (*model.ListPublishedTemplatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -321,6 +322,7 @@ type ListTemplatesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListTemplatesV2Invoker) Invoke() (*model.ListTemplatesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

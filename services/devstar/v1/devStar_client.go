@@ -540,6 +540,7 @@ func (c *DevStarClient) CreateTemplateViewHistoriesInvoker(request *model.Create
 	return &CreateTemplateViewHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListPublishedTemplates 查询模板列表（V1）
 //
 // 查询模板列表，推荐使用/v1/templates/query接口。
@@ -555,6 +556,7 @@ func (c *DevStarClient) ListPublishedTemplates(request *model.ListPublishedTempl
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListPublishedTemplatesInvoker 查询模板列表（V1）
 func (c *DevStarClient) ListPublishedTemplatesInvoker(request *model.ListPublishedTemplatesRequest) *ListPublishedTemplatesInvoker {
 	requestDef := GenReqDefForListPublishedTemplates()
@@ -603,6 +605,7 @@ func (c *DevStarClient) ListTemplatesInvoker(request *model.ListTemplatesRequest
 	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTemplatesV2 查询模板列表（V2）
 //
 // 查询模板列表。
@@ -618,6 +621,7 @@ func (c *DevStarClient) ListTemplatesV2(request *model.ListTemplatesV2Request) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTemplatesV2Invoker 查询模板列表（V2）
 func (c *DevStarClient) ListTemplatesV2Invoker(request *model.ListTemplatesV2Request) *ListTemplatesV2Invoker {
 	requestDef := GenReqDefForListTemplatesV2()

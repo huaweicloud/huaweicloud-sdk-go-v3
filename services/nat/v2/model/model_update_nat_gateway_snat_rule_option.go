@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// UpdateNatGatewaySnatRuleOption 更新SNAT规则的请求体。
 type UpdateNatGatewaySnatRuleOption struct {
 
 	// 公网NAT网关的id。

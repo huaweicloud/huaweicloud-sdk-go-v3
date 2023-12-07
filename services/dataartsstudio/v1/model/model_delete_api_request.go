@@ -16,7 +16,7 @@ type DeleteApiRequest struct {
 	Workspace *string `json:"workspace,omitempty"`
 
 	// dlm版本类型
-	DlmType DeleteApiRequestDlmType `json:"Dlm-Type"`
+	DlmType *DeleteApiRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

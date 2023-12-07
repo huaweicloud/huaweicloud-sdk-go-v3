@@ -40,6 +40,7 @@ func (c *CodeArtsArtifactClient) ShowProjectReleaseFilesInvoker(request *model.S
 	return &ShowProjectReleaseFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowReleaseProjectFiles 获取项目下文件版本信息列表
 //
 // 获取项目下文件版本信息列表
@@ -55,6 +56,7 @@ func (c *CodeArtsArtifactClient) ShowReleaseProjectFiles(request *model.ShowRele
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowReleaseProjectFilesInvoker 获取项目下文件版本信息列表
 func (c *CodeArtsArtifactClient) ShowReleaseProjectFilesInvoker(request *model.ShowReleaseProjectFilesRequest) *ShowReleaseProjectFilesInvoker {
 	requestDef := GenReqDefForShowReleaseProjectFiles()

@@ -281,6 +281,18 @@ func (i *DeleteStackInstanceInvoker) Invoke() (*model.DeleteStackInstanceRespons
 	}
 }
 
+type DeleteStackInstanceDeprecatedInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStackInstanceDeprecatedInvoker) Invoke() (*model.DeleteStackInstanceDeprecatedResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStackInstanceDeprecatedResponse), nil
+	}
+}
+
 type DeleteStackSetInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -15,7 +15,7 @@ type ListSubMetricsRequest struct {
 	// 指标数据统计方式
 	Filter *ListSubMetricsRequestFilter `json:"filter,omitempty"`
 
-	// 指标数据统计周期（单位minute）
+	// 指标数据统计周期，单位minute。
 	Period *int32 `json:"period,omitempty"`
 
 	// 获取指标数据起始时间

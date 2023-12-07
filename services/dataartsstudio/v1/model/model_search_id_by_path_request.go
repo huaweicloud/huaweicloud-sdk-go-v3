@@ -16,7 +16,7 @@ type SearchIdByPathRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType SearchIdByPathRequestDlmType `json:"Dlm-Type"`
+	DlmType *SearchIdByPathRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

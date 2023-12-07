@@ -1601,6 +1601,18 @@ func (i *ChangeApiVersionV2Invoker) Invoke() (*model.ChangeApiVersionV2Response,
 	}
 }
 
+type CheckApiGroupsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckApiGroupsV2Invoker) Invoke() (*model.CheckApiGroupsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckApiGroupsV2Response), nil
+	}
+}
+
 type CheckApisV2Invoker struct {
 	*invoker.BaseInvoker
 }

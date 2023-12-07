@@ -35,7 +35,7 @@ type RespInstanceBase struct {
 	// 实例创建时间。unix时间戳格式。
 	CreateTime *int64 `json:"create_time,omitempty"`
 
-	// 企业项目ID，企业帐号必填
+	// 企业项目ID，企业账号必填
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 实例绑定的弹性IP地址

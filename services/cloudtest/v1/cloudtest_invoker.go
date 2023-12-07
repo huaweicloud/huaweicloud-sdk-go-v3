@@ -185,6 +185,18 @@ func (i *ShowPlansInvoker) Invoke() (*model.ShowPlansResponse, error) {
 	}
 }
 
+type ShowProjectDataDashboardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectDataDashboardInvoker) Invoke() (*model.ShowProjectDataDashboardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectDataDashboardResponse), nil
+	}
+}
+
 type ShowRegisterServiceInvoker struct {
 	*invoker.BaseInvoker
 }

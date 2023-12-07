@@ -9,7 +9,7 @@ import (
 // ShowTemplateVideoThumbnailRequest Request Object
 type ShowTemplateVideoThumbnailRequest struct {
 
-	// 目标资源ID
+	// 目标资源ID。
 	AimResourceId string `json:"aim_resource_id"`
 
 	// 请求体参数类型，该字段必须设置为：application/json。

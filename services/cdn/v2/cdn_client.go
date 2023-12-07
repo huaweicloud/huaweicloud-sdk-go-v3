@@ -84,6 +84,7 @@ func (c *CdnClient) CreateRefreshTasksInvoker(request *model.CreateRefreshTasksR
 	return &CreateRefreshTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DownloadRegionCarrierExcel 下载区域运营商指标数据表格文件
 //
 // - 下载区域运营商指标数据表格文件。
@@ -109,12 +110,14 @@ func (c *CdnClient) DownloadRegionCarrierExcel(request *model.DownloadRegionCarr
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DownloadRegionCarrierExcelInvoker 下载区域运营商指标数据表格文件
 func (c *CdnClient) DownloadRegionCarrierExcelInvoker(request *model.DownloadRegionCarrierExcelRequest) *DownloadRegionCarrierExcelInvoker {
 	requestDef := GenReqDefForDownloadRegionCarrierExcel()
 	return &DownloadRegionCarrierExcelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DownloadStatisticsExcel 下载统计指标数据表格文件
 //
 // - 下载统计指标数据表格文件。
@@ -140,6 +143,7 @@ func (c *CdnClient) DownloadStatisticsExcel(request *model.DownloadStatisticsExc
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DownloadStatisticsExcelInvoker 下载统计指标数据表格文件
 func (c *CdnClient) DownloadStatisticsExcelInvoker(request *model.DownloadStatisticsExcelRequest) *DownloadStatisticsExcelInvoker {
 	requestDef := GenReqDefForDownloadStatisticsExcel()
@@ -196,6 +200,7 @@ func (c *CdnClient) SetChargeModesInvoker(request *model.SetChargeModesRequest) 
 	return &SetChargeModesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBandwidthCalc 查询域名带宽峰值类数据
 //
 // - 查询域名带宽峰值类数据。
@@ -223,6 +228,7 @@ func (c *CdnClient) ShowBandwidthCalc(request *model.ShowBandwidthCalcRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBandwidthCalcInvoker 查询域名带宽峰值类数据
 func (c *CdnClient) ShowBandwidthCalcInvoker(request *model.ShowBandwidthCalcRequest) *ShowBandwidthCalcInvoker {
 	requestDef := GenReqDefForShowBandwidthCalc()
@@ -408,6 +414,7 @@ func (c *CdnClient) ShowHistoryTasksInvoker(request *model.ShowHistoryTasksReque
 	return &ShowHistoryTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowTopDomainNames 查询TOP域名
 //
 // - 查询TOP域名。
@@ -435,6 +442,7 @@ func (c *CdnClient) ShowTopDomainNames(request *model.ShowTopDomainNamesRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowTopDomainNamesInvoker 查询TOP域名
 func (c *CdnClient) ShowTopDomainNamesInvoker(request *model.ShowTopDomainNamesRequest) *ShowTopDomainNamesInvoker {
 	requestDef := GenReqDefForShowTopDomainNames()

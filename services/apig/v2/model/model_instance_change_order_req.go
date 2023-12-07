@@ -8,6 +8,9 @@ import (
 
 type InstanceChangeOrderReq struct {
 
+	// 实例ID
+	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 产品编号
 	ProductId *string `json:"product_id,omitempty"`
 

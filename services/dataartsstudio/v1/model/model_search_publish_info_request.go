@@ -16,7 +16,7 @@ type SearchPublishInfoRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType SearchPublishInfoRequestDlmType `json:"Dlm-Type"`
+	DlmType *SearchPublishInfoRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

@@ -774,6 +774,7 @@ func (c *EcsClient) ListServerTagsInvoker(request *model.ListServerTagsRequest) 
 	return &ListServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServersByTag 按标签查询云服务器列表
 //
 // 使用标签过滤弹性云服务器，并返回云服务器使用的所有标签和资源列表。
@@ -789,6 +790,7 @@ func (c *EcsClient) ListServersByTag(request *model.ListServersByTagRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServersByTagInvoker 按标签查询云服务器列表
 func (c *EcsClient) ListServersByTagInvoker(request *model.ListServersByTagRequest) *ListServersByTagInvoker {
 	requestDef := GenReqDefForListServersByTag()

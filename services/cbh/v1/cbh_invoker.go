@@ -208,3 +208,15 @@ func (i *UpgradeCbhInstanceInvoker) Invoke() (*model.UpgradeCbhInstanceResponse,
 		return result.(*model.UpgradeCbhInstanceResponse), nil
 	}
 }
+
+type LoginCbhInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LoginCbhInvoker) Invoke() (*model.LoginCbhResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LoginCbhResponse), nil
+	}
+}

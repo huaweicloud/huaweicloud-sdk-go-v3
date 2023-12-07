@@ -20,6 +20,12 @@ type ListStatisticsRequest struct {
 
 	// 月度统计的维度，filter参数取值为monthly_report时才生效。 当取值不在以上范围时，默认取\"0\"。 - \"0\": 表示统计本月。 - \"1\": 表示统计上月。 - \"2\": 表示统计最近三个月。 - \"3\": 表示统计最近六个月。
 	Option *string `json:"option,omitempty"`
+
+	// 本次查询最大返回的数据条数，最大值500，默认值100
+	Limit *string `json:"limit,omitempty"`
+
+	// 本次查询起始位置，默认值0
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListStatisticsRequest) String() string {

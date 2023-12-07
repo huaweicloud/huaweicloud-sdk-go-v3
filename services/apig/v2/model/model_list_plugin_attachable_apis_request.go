@@ -22,7 +22,7 @@ type ListPluginAttachableApisRequest struct {
 	PluginId string `json:"plugin_id"`
 
 	// 发布的环境编号
-	EnvId *string `json:"env_id,omitempty"`
+	EnvId string `json:"env_id"`
 
 	// API名称
 	ApiName *string `json:"api_name,omitempty"`

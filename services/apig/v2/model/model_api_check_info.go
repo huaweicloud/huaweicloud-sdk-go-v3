@@ -26,7 +26,7 @@ type ApiCheckInfo struct {
 	// 分组ID。  校验分组下API定义是否重复时必填
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 集成应用ID。  校验应用下API定义是否重复时必填
+	// 集成应用ID  暂不支持
 	RomaAppId *string `json:"roma_app_id,omitempty"`
 
 	// 需要对比的API ID

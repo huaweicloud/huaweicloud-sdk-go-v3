@@ -16,7 +16,7 @@ type SearchBindApiRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType SearchBindApiRequestDlmType `json:"Dlm-Type"`
+	DlmType *SearchBindApiRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

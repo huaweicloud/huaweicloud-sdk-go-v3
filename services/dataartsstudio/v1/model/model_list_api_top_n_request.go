@@ -16,7 +16,7 @@ type ListApiTopNRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ListApiTopNRequestDlmType `json:"Dlm-Type"`
+	DlmType *ListApiTopNRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

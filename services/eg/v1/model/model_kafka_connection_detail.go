@@ -17,6 +17,9 @@ type KafkaConnectionDetail struct {
 	// kafka连接地址。
 	Addr string `json:"addr"`
 
+	// 安全协议。
+	SecurityProtocol *string `json:"security_protocol,omitempty"`
+
 	// kafka实例是否开启了SASL_SSL。
 	SaslSsl bool `json:"sasl_ssl"`
 

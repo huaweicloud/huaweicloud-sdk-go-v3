@@ -33,6 +33,7 @@ type CreateAndExecuteJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateAndExecuteJobInvoker) Invoke() (*model.CreateAndExecuteJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -105,6 +106,7 @@ type DeleteJobExecutionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteJobExecutionInvoker) Invoke() (*model.DeleteJobExecutionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -165,6 +167,7 @@ type ListExecuteJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListExecuteJobInvoker) Invoke() (*model.ListExecuteJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -201,6 +204,7 @@ type ShowJobExesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowJobExesInvoker) Invoke() (*model.ShowJobExesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

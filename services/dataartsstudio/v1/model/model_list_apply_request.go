@@ -16,7 +16,7 @@ type ListApplyRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ListApplyRequestDlmType `json:"Dlm-Type"`
+	DlmType *ListApplyRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

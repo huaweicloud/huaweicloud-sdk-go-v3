@@ -16,7 +16,7 @@ type UpdateCatalogRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType UpdateCatalogRequestDlmType `json:"Dlm-Type"`
+	DlmType *UpdateCatalogRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

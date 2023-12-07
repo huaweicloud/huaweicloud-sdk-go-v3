@@ -754,6 +754,48 @@ func (c *EcClient) UpdateEquipmentWanConfigInvoker(request *model.UpdateEquipmen
 	return &UpdateEquipmentWanConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEquipmentWlan 查询智能企业网关设备Wlan配置
+//
+// 查询智能企业网关设备Wlan配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcClient) ShowEquipmentWlan(request *model.ShowEquipmentWlanRequest) (*model.ShowEquipmentWlanResponse, error) {
+	requestDef := GenReqDefForShowEquipmentWlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEquipmentWlanResponse), nil
+	}
+}
+
+// ShowEquipmentWlanInvoker 查询智能企业网关设备Wlan配置
+func (c *EcClient) ShowEquipmentWlanInvoker(request *model.ShowEquipmentWlanRequest) *ShowEquipmentWlanInvoker {
+	requestDef := GenReqDefForShowEquipmentWlan()
+	return &ShowEquipmentWlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEquipmentWlan 配置智能企业网关设备Wlan
+//
+// 配置智能企业网关设备Wlan
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcClient) UpdateEquipmentWlan(request *model.UpdateEquipmentWlanRequest) (*model.UpdateEquipmentWlanResponse, error) {
+	requestDef := GenReqDefForUpdateEquipmentWlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEquipmentWlanResponse), nil
+	}
+}
+
+// UpdateEquipmentWlanInvoker 配置智能企业网关设备Wlan
+func (c *EcClient) UpdateEquipmentWlanInvoker(request *model.UpdateEquipmentWlanRequest) *UpdateEquipmentWlanInvoker {
+	requestDef := GenReqDefForUpdateEquipmentWlan()
+	return &UpdateEquipmentWlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddEcnWithEr 关联企业路由器到企业连接网络
 //
 // 关联企业路由器到企业连接网络

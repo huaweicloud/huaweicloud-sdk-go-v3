@@ -26,6 +26,9 @@ type ListJobsRequest struct {
 
 	// 作业名称
 	JobName *string `json:"jobName,omitempty"`
+
+	// 作业标签
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o ListJobsRequest) String() string {

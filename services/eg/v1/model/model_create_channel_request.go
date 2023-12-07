@@ -8,6 +8,10 @@ import (
 
 // CreateChannelRequest Request Object
 type CreateChannelRequest struct {
+
+	// 创建通道时所使用的企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *ChannelCreateReq `json:"body,omitempty"`
 }
 

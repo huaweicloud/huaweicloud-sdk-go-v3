@@ -11,7 +11,7 @@ import (
 type EquipmentItem struct {
 
 	// 智能企业网关设备ID
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 智能企业网关ID
 	IegId *string `json:"ieg_id,omitempty"`
@@ -62,12 +62,16 @@ type EquipmentItemType struct {
 
 type EquipmentItemTypeEnum struct {
 	STANDARD EquipmentItemType
+	SOHO     EquipmentItemType
 }
 
 func GetEquipmentItemTypeEnum() EquipmentItemTypeEnum {
 	return EquipmentItemTypeEnum{
 		STANDARD: EquipmentItemType{
 			value: "standard",
+		},
+		SOHO: EquipmentItemType{
+			value: "soho",
 		},
 	}
 }

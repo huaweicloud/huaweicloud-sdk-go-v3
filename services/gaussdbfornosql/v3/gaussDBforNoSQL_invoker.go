@@ -665,6 +665,18 @@ func (i *ModifyVolumeInvoker) Invoke() (*model.ModifyVolumeResponse, error) {
 	}
 }
 
+type OfflineNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *OfflineNodesInvoker) Invoke() (*model.OfflineNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.OfflineNodesResponse), nil
+	}
+}
+
 type PauseResumeDataSynchronizationInvoker struct {
 	*invoker.BaseInvoker
 }

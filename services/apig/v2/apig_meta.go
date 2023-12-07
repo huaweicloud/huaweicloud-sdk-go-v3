@@ -3341,6 +3341,26 @@ func GenReqDefForChangeApiVersionV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckApiGroupsV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/apigw/instances/{instance_id}/api-groups/check").
+		WithResponse(new(model.CheckApiGroupsV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckApisV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -3797,6 +3817,10 @@ func GenReqDefForListApisV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcChannelName").
 		WithJsonTag("vpc_channel_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ReturnDataMode").
+		WithJsonTag("return_data_mode").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

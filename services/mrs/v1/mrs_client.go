@@ -74,6 +74,7 @@ func (c *MrsClient) BatchDeleteClusterTagsInvoker(request *model.BatchDeleteClus
 	return &BatchDeleteClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateAndExecuteJob 新增作业并执行（废弃）
 //
 // 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
@@ -91,6 +92,7 @@ func (c *MrsClient) CreateAndExecuteJob(request *model.CreateAndExecuteJobReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateAndExecuteJobInvoker 新增作业并执行（废弃）
 func (c *MrsClient) CreateAndExecuteJobInvoker(request *model.CreateAndExecuteJobRequest) *CreateAndExecuteJobInvoker {
 	requestDef := GenReqDefForCreateAndExecuteJob()
@@ -219,6 +221,7 @@ func (c *MrsClient) DeleteClusterTagInvoker(request *model.DeleteClusterTagReque
 	return &DeleteClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteJobExecution 删除作业执行对象（废弃）
 //
 // 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
@@ -235,6 +238,7 @@ func (c *MrsClient) DeleteJobExecution(request *model.DeleteJobExecutionRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteJobExecutionInvoker 删除作业执行对象（废弃）
 func (c *MrsClient) DeleteJobExecutionInvoker(request *model.DeleteJobExecutionRequest) *DeleteJobExecutionInvoker {
 	requestDef := GenReqDefForDeleteJobExecution()
@@ -327,6 +331,7 @@ func (c *MrsClient) ListClustersByTagsInvoker(request *model.ListClustersByTagsR
 	return &ListClustersByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListExecuteJob 查询作业exe对象列表（废弃）
 //
 // 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
@@ -343,6 +348,7 @@ func (c *MrsClient) ListExecuteJob(request *model.ListExecuteJobRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListExecuteJobInvoker 查询作业exe对象列表（废弃）
 func (c *MrsClient) ListExecuteJobInvoker(request *model.ListExecuteJobRequest) *ListExecuteJobInvoker {
 	requestDef := GenReqDefForListExecuteJob()
@@ -391,6 +397,7 @@ func (c *MrsClient) ShowClusterDetailsInvoker(request *model.ShowClusterDetailsR
 	return &ShowClusterDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJobExes 查询作业exe对象详情（废弃）
 //
 // 如需使用作业管理接口请参考apiv2接口使用，本接口后续不再进行维护。
@@ -407,6 +414,7 @@ func (c *MrsClient) ShowJobExes(request *model.ShowJobExesRequest) (*model.ShowJ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJobExesInvoker 查询作业exe对象详情（废弃）
 func (c *MrsClient) ShowJobExesInvoker(request *model.ShowJobExesRequest) *ShowJobExesInvoker {
 	requestDef := GenReqDefForShowJobExes()

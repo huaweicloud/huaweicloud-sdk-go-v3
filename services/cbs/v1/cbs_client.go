@@ -105,6 +105,7 @@ func (c *CbsClient) CollectSessionStatsInvoker(request *model.CollectSessionStat
 	return &CollectSessionStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateSession 开启会话
 //
 // 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口创建会话。该接口仅支持老用户，新用户请优先使用问答机器人API接口进行调用。
@@ -120,12 +121,14 @@ func (c *CbsClient) CreateSession(request *model.CreateSessionRequest) (*model.C
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateSessionInvoker 开启会话
 func (c *CbsClient) CreateSessionInvoker(request *model.CreateSessionRequest) *CreateSessionInvoker {
 	requestDef := GenReqDefForCreateSession()
 	return &CreateSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteSession 关闭会话
 //
 // 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口关闭会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
@@ -141,6 +144,7 @@ func (c *CbsClient) DeleteSession(request *model.DeleteSessionRequest) (*model.D
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteSessionInvoker 关闭会话
 func (c *CbsClient) DeleteSessionInvoker(request *model.DeleteSessionRequest) *DeleteSessionInvoker {
 	requestDef := GenReqDefForDeleteSession()
@@ -404,6 +408,7 @@ func (c *CbsClient) ExecuteQaChatInvoker(request *model.ExecuteQaChatRequest) *E
 	return &ExecuteQaChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExecuteSession 处理会话
 //
 // 问答会话API由开启会话、处理会话、关闭会话三个接口组成。用户可通过调用该接口与机器人进行会话。该接口即将下线，请优先使用问答机器人API接口进行调用。
@@ -419,6 +424,7 @@ func (c *CbsClient) ExecuteSession(request *model.ExecuteSessionRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExecuteSessionInvoker 处理会话
 func (c *CbsClient) ExecuteSessionInvoker(request *model.ExecuteSessionRequest) *ExecuteSessionInvoker {
 	requestDef := GenReqDefForExecuteSession()
@@ -592,6 +598,7 @@ func (c *CbsClient) TagSatisfactionInvoker(request *model.TagSatisfactionRequest
 	return &TagSatisfactionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // PostRequests PostRequests
 //
 // 问答服务的输入为用户提问，输出是与输入最匹配的Top N(默认为top5)个知识点，知识点按得分从高到低排序。
@@ -610,6 +617,7 @@ func (c *CbsClient) PostRequests(request *model.PostRequestsRequest) (*model.Pos
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // PostRequestsInvoker PostRequests
 func (c *CbsClient) PostRequestsInvoker(request *model.PostRequestsRequest) *PostRequestsInvoker {
 	requestDef := GenReqDefForPostRequests()

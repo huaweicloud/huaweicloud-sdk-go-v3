@@ -12,9 +12,6 @@ type ShowEquipmentSpecificConfigResponse struct {
 	// 设备类型
 	Type *string `json:"type,omitempty"`
 
-	// 设备型号
-	Model *string `json:"model,omitempty"`
-
 	// WAN口列表
 	WanInterfaces *[]string `json:"wan_interfaces,omitempty"`
 

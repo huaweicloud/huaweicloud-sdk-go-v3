@@ -16,7 +16,7 @@ type MigrateCatalogRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType MigrateCatalogRequestDlmType `json:"Dlm-Type"`
+	DlmType *MigrateCatalogRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

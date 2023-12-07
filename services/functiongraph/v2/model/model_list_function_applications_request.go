@@ -8,6 +8,12 @@ import (
 
 // ListFunctionApplicationsRequest Request Object
 type ListFunctionApplicationsRequest struct {
+
+	// 本次查询最大返回的数据条数，最大值500，默认值100
+	Limit *string `json:"limit,omitempty"`
+
+	// 本次查询起始位置，默认值0
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListFunctionApplicationsRequest) String() string {

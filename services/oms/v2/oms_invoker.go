@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/oms/v2/model"
 )
 
+type BatchUpdateTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateTasksInvoker) Invoke() (*model.BatchUpdateTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateTasksResponse), nil
+	}
+}
+
 type CheckPrefixInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -334,6 +334,27 @@ func (c *CloudtestClient) ShowPlansInvoker(request *model.ShowPlansRequest) *Sho
 	return &ShowPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowProjectDataDashboard 查询质量报告看板统计信息
+//
+// 查询质量报告看板统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowProjectDataDashboard(request *model.ShowProjectDataDashboardRequest) (*model.ShowProjectDataDashboardResponse, error) {
+	requestDef := GenReqDefForShowProjectDataDashboard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectDataDashboardResponse), nil
+	}
+}
+
+// ShowProjectDataDashboardInvoker 查询质量报告看板统计信息
+func (c *CloudtestClient) ShowProjectDataDashboardInvoker(request *model.ShowProjectDataDashboardRequest) *ShowProjectDataDashboardInvoker {
+	requestDef := GenReqDefForShowProjectDataDashboard()
+	return &ShowProjectDataDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRegisterService 用户获取自己当前已经注册的服务
 //
 // 用户获取自己当前已经注册的服务

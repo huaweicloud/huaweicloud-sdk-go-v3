@@ -187,6 +187,7 @@ func (c *CodeHubClient) ListFilesByQueryInvoker(request *model.ListFilesByQueryR
 	return &ListFilesByQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowFile 查询某个仓库的文件信息
 //
 // 获取仓库中文件的信息，如名称、大小、内容。请注意，文件内容是Base64编码的。
@@ -202,12 +203,14 @@ func (c *CodeHubClient) ShowFile(request *model.ShowFileRequest) (*model.ShowFil
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowFileInvoker 查询某个仓库的文件信息
 func (c *CodeHubClient) ShowFileInvoker(request *model.ShowFileRequest) *ShowFileInvoker {
 	requestDef := GenReqDefForShowFile()
 	return &ShowFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetAllRepositoryByProjectId 获取项目下所有仓库信息
 //
 // 获取仓库列表 模糊查询支持范围,如果未传入project_id，则支持按仓库名或项目名模糊查询，否则，只按仓库名模糊匹配。
@@ -223,12 +226,14 @@ func (c *CodeHubClient) GetAllRepositoryByProjectId(request *model.GetAllReposit
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetAllRepositoryByProjectIdInvoker 获取项目下所有仓库信息
 func (c *CodeHubClient) GetAllRepositoryByProjectIdInvoker(request *model.GetAllRepositoryByProjectIdRequest) *GetAllRepositoryByProjectIdInvoker {
 	requestDef := GenReqDefForGetAllRepositoryByProjectId()
 	return &GetAllRepositoryByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetProductTemplates 获取一个项目下可以设置为公开状态的仓库列表
 //
 // 获取一个项目下可以设置为公开状态的仓库列表
@@ -244,6 +249,7 @@ func (c *CodeHubClient) GetProductTemplates(request *model.GetProductTemplatesRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetProductTemplatesInvoker 获取一个项目下可以设置为公开状态的仓库列表
 func (c *CodeHubClient) GetProductTemplatesInvoker(request *model.GetProductTemplatesRequest) *GetProductTemplatesInvoker {
 	requestDef := GenReqDefForGetProductTemplates()
@@ -376,6 +382,7 @@ func (c *CodeHubClient) SetRepoRoleInvoker(request *model.SetRepoRoleRequest) *S
 	return &SetRepoRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // AddDeployKey 添加部署密钥
 //
 // 添加部署密钥
@@ -391,6 +398,7 @@ func (c *CodeHubClient) AddDeployKey(request *model.AddDeployKeyRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // AddDeployKeyInvoker 添加部署密钥
 func (c *CodeHubClient) AddDeployKeyInvoker(request *model.AddDeployKeyRequest) *AddDeployKeyInvoker {
 	requestDef := GenReqDefForAddDeployKey()
@@ -481,6 +489,7 @@ func (c *CodeHubClient) CreateRepositoryInvoker(request *model.CreateRepositoryR
 	return &CreateRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteDeployKey 删除仓库部署密钥
 //
 // 删除仓库部署密钥
@@ -496,6 +505,7 @@ func (c *CodeHubClient) DeleteDeployKey(request *model.DeleteDeployKeyRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteDeployKeyInvoker 删除仓库部署密钥
 func (c *CodeHubClient) DeleteDeployKeyInvoker(request *model.DeleteDeployKeyRequest) *DeleteDeployKeyInvoker {
 	requestDef := GenReqDefForDeleteDeployKey()
@@ -544,6 +554,7 @@ func (c *CodeHubClient) DeleteRepositoryInvoker(request *model.DeleteRepositoryR
 	return &DeleteRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetRepositoryByProjectId 查询项目下的某个仓库
 //
 // 不建议再使用,建议使用/{repository_uuid}/status
@@ -559,12 +570,14 @@ func (c *CodeHubClient) GetRepositoryByProjectId(request *model.GetRepositoryByP
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetRepositoryByProjectIdInvoker 查询项目下的某个仓库
 func (c *CodeHubClient) GetRepositoryByProjectIdInvoker(request *model.GetRepositoryByProjectIdRequest) *GetRepositoryByProjectIdInvoker {
 	requestDef := GenReqDefForGetRepositoryByProjectId()
 	return &GetRepositoryByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetTemplates 获取公开示例模板列表
 //
 // 获取公开示例模板列表
@@ -580,6 +593,7 @@ func (c *CodeHubClient) GetTemplates(request *model.GetTemplatesRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GetTemplatesInvoker 获取公开示例模板列表
 func (c *CodeHubClient) GetTemplatesInvoker(request *model.GetTemplatesRequest) *GetTemplatesInvoker {
 	requestDef := GenReqDefForGetTemplates()
@@ -754,6 +768,7 @@ func (c *CodeHubClient) ListTwoTemplatesInvoker(request *model.ListTwoTemplatesR
 	return &ListTwoTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShareTemplates 设置仓库是公开状态还是私有状态
 //
 // 设置仓库是公开状态还是私有状态
@@ -769,6 +784,7 @@ func (c *CodeHubClient) ShareTemplates(request *model.ShareTemplatesRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShareTemplatesInvoker 设置仓库是公开状态还是私有状态
 func (c *CodeHubClient) ShareTemplatesInvoker(request *model.ShareTemplatesRequest) *ShareTemplatesInvoker {
 	requestDef := GenReqDefForShareTemplates()
@@ -1027,6 +1043,7 @@ func (c *CodeHubClient) ShowRepositoryStatisticsInvoker(request *model.ShowRepos
 	return &ShowRepositoryStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowStatisticCommit 获取代码提交行数
 //
 // 获取指定日期内代码仓指定分支的代码提交行数
@@ -1042,6 +1059,7 @@ func (c *CodeHubClient) ShowStatisticCommit(request *model.ShowStatisticCommitRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowStatisticCommitInvoker 获取代码提交行数
 func (c *CodeHubClient) ShowStatisticCommitInvoker(request *model.ShowStatisticCommitRequest) *ShowStatisticCommitInvoker {
 	requestDef := GenReqDefForShowStatisticCommit()
@@ -1111,6 +1129,7 @@ func (c *CodeHubClient) AddSshKeyInvoker(request *model.AddSshKeyRequest) *AddSs
 	return &AddSshKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteSShkey 删除用户公钥
 //
 // 删除用户公钥。
@@ -1126,6 +1145,7 @@ func (c *CodeHubClient) DeleteSShkey(request *model.DeleteSShkeyRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteSShkeyInvoker 删除用户公钥
 func (c *CodeHubClient) DeleteSShkeyInvoker(request *model.DeleteSShkeyRequest) *DeleteSShkeyInvoker {
 	requestDef := GenReqDefForDeleteSShkey()
@@ -1174,6 +1194,7 @@ func (c *CodeHubClient) ShowPrivateKeyVerifyInvoker(request *model.ShowPrivateKe
 	return &ShowPrivateKeyVerifyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ValidateHttpsInfo  https账号密码校验
 //
 // 判断用户使用 https 上传/下载代码时输入的用户名和密码是否合法。
@@ -1189,6 +1210,7 @@ func (c *CodeHubClient) ValidateHttpsInfo(request *model.ValidateHttpsInfoReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ValidateHttpsInfoInvoker  https账号密码校验
 func (c *CodeHubClient) ValidateHttpsInfoInvoker(request *model.ValidateHttpsInfoRequest) *ValidateHttpsInfoInvoker {
 	requestDef := GenReqDefForValidateHttpsInfo()

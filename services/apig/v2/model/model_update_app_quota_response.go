@@ -20,7 +20,7 @@ type UpdateAppQuotaResponse struct {
 	// 凭据配额的访问次数限制
 	CallLimits *int32 `json:"call_limits,omitempty"`
 
-	// 限定时间单位：SECOND:秒、MINUTE:分、HOURE:时、DAY:天
+	// 限定时间单位：SECOND:秒、MINUTE:分、HOUR:时、DAY:天
 	TimeUnit *UpdateAppQuotaResponseTimeUnit `json:"time_unit,omitempty"`
 
 	// 配额的限定时间值

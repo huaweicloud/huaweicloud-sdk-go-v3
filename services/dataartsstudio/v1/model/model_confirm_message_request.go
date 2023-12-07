@@ -16,7 +16,7 @@ type ConfirmMessageRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ConfirmMessageRequestDlmType `json:"Dlm-Type"`
+	DlmType *ConfirmMessageRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

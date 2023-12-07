@@ -375,3 +375,24 @@ func (c *CbhClient) UpgradeCbhInstanceInvoker(request *model.UpgradeCbhInstanceR
 	requestDef := GenReqDefForUpgradeCbhInstance()
 	return &UpgradeCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// LoginCbh 获取IAM登录实例链接
+//
+// 获取当前IAM用户登录堡垒机的免登录链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbhClient) LoginCbh(request *model.LoginCbhRequest) (*model.LoginCbhResponse, error) {
+	requestDef := GenReqDefForLoginCbh()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LoginCbhResponse), nil
+	}
+}
+
+// LoginCbhInvoker 获取IAM登录实例链接
+func (c *CbhClient) LoginCbhInvoker(request *model.LoginCbhRequest) *LoginCbhInvoker {
+	requestDef := GenReqDefForLoginCbh()
+	return &LoginCbhInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

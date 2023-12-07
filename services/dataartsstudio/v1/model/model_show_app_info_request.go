@@ -16,7 +16,7 @@ type ShowAppInfoRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ShowAppInfoRequestDlmType `json:"Dlm-Type"`
+	DlmType *ShowAppInfoRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

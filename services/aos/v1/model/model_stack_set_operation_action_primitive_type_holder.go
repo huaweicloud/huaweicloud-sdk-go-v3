@@ -11,7 +11,7 @@ import (
 
 type StackSetOperationActionPrimitiveTypeHolder struct {
 
-	// 用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例
+	// 用户当前的操作   * `CREATE_STACK_INSTANCES` - 创建资源栈实例   * `DELETE_STACK_INSTANCES` - 删除资源栈实例   * `DEPLOY_STACK_SET` - 部署资源栈集   * `DEPLOY_STACK_INSTANCES` - 部署资源栈实例   * `UPDATE_STACK_INSTANCES` - 更新资源栈实例
 	Action *StackSetOperationActionPrimitiveTypeHolderAction `json:"action,omitempty"`
 }
 
@@ -33,6 +33,7 @@ type StackSetOperationActionPrimitiveTypeHolderActionEnum struct {
 	DELETE_STACK_INSTANCES StackSetOperationActionPrimitiveTypeHolderAction
 	DEPLOY_STACK_SET       StackSetOperationActionPrimitiveTypeHolderAction
 	DEPLOY_STACK_INSTANCES StackSetOperationActionPrimitiveTypeHolderAction
+	UPDATE_STACK_INSTANCES StackSetOperationActionPrimitiveTypeHolderAction
 }
 
 func GetStackSetOperationActionPrimitiveTypeHolderActionEnum() StackSetOperationActionPrimitiveTypeHolderActionEnum {
@@ -48,6 +49,9 @@ func GetStackSetOperationActionPrimitiveTypeHolderActionEnum() StackSetOperation
 		},
 		DEPLOY_STACK_INSTANCES: StackSetOperationActionPrimitiveTypeHolderAction{
 			value: "DEPLOY_STACK_INSTANCES",
+		},
+		UPDATE_STACK_INSTANCES: StackSetOperationActionPrimitiveTypeHolderAction{
+			value: "UPDATE_STACK_INSTANCES",
 		},
 	}
 }

@@ -673,6 +673,27 @@ func (c *RocketMQClient) ShowInstanceInvoker(request *model.ShowInstanceRequest)
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRocketMqConfigs 查询RocketMQ配置
+//
+// 该接口用于查询RocketMQ配置，若成功则返回配置的相关信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowRocketMqConfigs(request *model.ShowRocketMqConfigsRequest) (*model.ShowRocketMqConfigsResponse, error) {
+	requestDef := GenReqDefForShowRocketMqConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRocketMqConfigsResponse), nil
+	}
+}
+
+// ShowRocketMqConfigsInvoker 查询RocketMQ配置
+func (c *RocketMQClient) ShowRocketMqConfigsInvoker(request *model.ShowRocketMqConfigsRequest) *ShowRocketMqConfigsInvoker {
+	requestDef := GenReqDefForShowRocketMqConfigs()
+	return &ShowRocketMqConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRocketmqProjectTags 查询项目标签
 //
 // 查询项目标签。
@@ -776,6 +797,27 @@ func (c *RocketMQClient) UpdateInstance(request *model.UpdateInstanceRequest) (*
 func (c *RocketMQClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
 	requestDef := GenReqDefForUpdateInstance()
 	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRocketMqConfigs 修改RocketMQ配置
+//
+// 该接口用于修改RocketMQ配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) UpdateRocketMqConfigs(request *model.UpdateRocketMqConfigsRequest) (*model.UpdateRocketMqConfigsResponse, error) {
+	requestDef := GenReqDefForUpdateRocketMqConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRocketMqConfigsResponse), nil
+	}
+}
+
+// UpdateRocketMqConfigsInvoker 修改RocketMQ配置
+func (c *RocketMQClient) UpdateRocketMqConfigsInvoker(request *model.UpdateRocketMqConfigsRequest) *UpdateRocketMqConfigsInvoker {
+	requestDef := GenReqDefForUpdateRocketMqConfigs()
+	return &UpdateRocketMqConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateUser 修改用户参数

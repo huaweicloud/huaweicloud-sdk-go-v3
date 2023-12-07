@@ -8,7 +8,7 @@ import (
 
 type ResponseInfoResp struct {
 
-	// 响应的HTTP状态码
+	// 响应的HTTP状态码。范围为200-599，但不允许为444。
 	Status *int32 `json:"status,omitempty"`
 
 	// 响应的Body模板

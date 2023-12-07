@@ -13,6 +13,8 @@ import (
 type EventStreamingSource struct {
 	SourceKafka *SourceKafkaMqParameters `json:"source_kafka,omitempty"`
 
+	SourceMobileRocketmq *SourceMobileMqParameters `json:"source_mobile_rocketmq,omitempty"`
+
 	// 事件源类型名称
 	Name *EventStreamingSourceName `json:"name,omitempty"`
 }

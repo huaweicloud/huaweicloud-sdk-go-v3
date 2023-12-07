@@ -521,6 +521,18 @@ func (i *ListGaussMySqlInstanceDetailInfoInvoker) Invoke() (*model.ListGaussMySq
 	}
 }
 
+type ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker) Invoke() (*model.ListGaussMySqlInstanceDetailInfoUnifyStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGaussMySqlInstanceDetailInfoUnifyStatusResponse), nil
+	}
+}
+
 type ListGaussMySqlInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +542,18 @@ func (i *ListGaussMySqlInstancesInvoker) Invoke() (*model.ListGaussMySqlInstance
 		return nil, err
 	} else {
 		return result.(*model.ListGaussMySqlInstancesResponse), nil
+	}
+}
+
+type ListGaussMySqlInstancesUnifyStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGaussMySqlInstancesUnifyStatusInvoker) Invoke() (*model.ListGaussMySqlInstancesUnifyStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGaussMySqlInstancesUnifyStatusResponse), nil
 	}
 }
 
@@ -881,6 +905,18 @@ func (i *ShowGaussMySqlInstanceInfoInvoker) Invoke() (*model.ShowGaussMySqlInsta
 	}
 }
 
+type ShowGaussMySqlInstanceInfoUnifyStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGaussMySqlInstanceInfoUnifyStatusInvoker) Invoke() (*model.ShowGaussMySqlInstanceInfoUnifyStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGaussMySqlInstanceInfoUnifyStatusResponse), nil
+	}
+}
+
 type ShowGaussMySqlJobInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1046,6 +1082,18 @@ func (i *SwitchGaussMySqlInstanceSslInvoker) Invoke() (*model.SwitchGaussMySqlIn
 		return nil, err
 	} else {
 		return result.(*model.SwitchGaussMySqlInstanceSslResponse), nil
+	}
+}
+
+type SwitchGaussMySqlProxySslInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlProxySslInvoker) Invoke() (*model.SwitchGaussMySqlProxySslResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchGaussMySqlProxySslResponse), nil
 	}
 }
 

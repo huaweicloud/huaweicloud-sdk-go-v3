@@ -73,6 +73,9 @@ type MysqlProxyV3 struct {
 
 	// 数据库代理所属的子网ID。
 	SubnetId *string `json:"subnet_id,omitempty"`
+
+	// SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
+	SslOption *string `json:"ssl_option,omitempty"`
 }
 
 func (o MysqlProxyV3) String() string {

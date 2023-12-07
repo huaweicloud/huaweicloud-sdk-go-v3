@@ -12,7 +12,7 @@ type ObsBucketInfoOwner struct {
 	// 显示名称
 	DisplayName *string `json:"displayName,omitempty"`
 
-	// 用户的DomainID（帐号ID）
+	// 用户的DomainID，即帐号ID
 	Id *string `json:"id,omitempty"`
 }
 

@@ -13,10 +13,10 @@ type ConfigNasTarget struct {
 	Name string `json:"name"`
 
 	// nas 配置协议类型
-	Type *interface{} `json:"type"`
+	Type string `json:"type"`
 
 	// nas 配置 ip
-	Url *interface{} `json:"url"`
+	Url string `json:"url"`
 }
 
 func (o ConfigNasTarget) String() string {

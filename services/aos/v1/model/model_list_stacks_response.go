@@ -9,7 +9,7 @@ import (
 // ListStacksResponse Response Object
 type ListStacksResponse struct {
 
-	// 资源栈列表。默认按照生成时间排序，最早生成的在最前
+	// 资源栈列表。默认按照生成时间降序排序，最新生成的在最前
 	Stacks         *[]Stack `json:"stacks,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

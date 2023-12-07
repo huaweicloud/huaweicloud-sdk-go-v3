@@ -29,6 +29,9 @@ type ListChannelsRequest struct {
 
 	// 指定查询的事件通道名称，模糊匹配
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
+
+	// 指定查询的企业项目id，精确匹配
+	EpsId *string `json:"eps_id,omitempty"`
 }
 
 func (o ListChannelsRequest) String() string {

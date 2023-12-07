@@ -17,6 +17,18 @@ func (i *BatchDeleteJobsInvoker) Invoke() (*model.BatchDeleteJobsResponse, error
 	}
 }
 
+type CreateAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAutoScalingPolicyInvoker) Invoke() (*model.CreateAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAutoScalingPolicyResponse), nil
+	}
+}
+
 type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +50,18 @@ func (i *CreateExecuteJobInvoker) Invoke() (*model.CreateExecuteJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateExecuteJobResponse), nil
+	}
+}
+
+type DeleteAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutoScalingPolicyInvoker) Invoke() (*model.DeleteAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAutoScalingPolicyResponse), nil
 	}
 }
 
@@ -134,6 +158,18 @@ func (i *UpdateAgencyMappingInvoker) Invoke() (*model.UpdateAgencyMappingRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateAgencyMappingResponse), nil
+	}
+}
+
+type UpdateAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoScalingPolicyInvoker) Invoke() (*model.UpdateAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutoScalingPolicyResponse), nil
 	}
 }
 

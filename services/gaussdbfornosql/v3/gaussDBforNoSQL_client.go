@@ -1175,6 +1175,27 @@ func (c *GaussDBforNoSQLClient) ModifyVolumeInvoker(request *model.ModifyVolumeR
 	return &ModifyVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// OfflineNodes 支持节点的开关机
+//
+// 当底层故障导致节点无法正常工作时，可以对该节点执行关机操作，关机后会由其他节点接管业务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) OfflineNodes(request *model.OfflineNodesRequest) (*model.OfflineNodesResponse, error) {
+	requestDef := GenReqDefForOfflineNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.OfflineNodesResponse), nil
+	}
+}
+
+// OfflineNodesInvoker 支持节点的开关机
+func (c *GaussDBforNoSQLClient) OfflineNodesInvoker(request *model.OfflineNodesRequest) *OfflineNodesInvoker {
+	requestDef := GenReqDefForOfflineNodes()
+	return &OfflineNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PauseResumeDataSynchronization 暂停/恢复具备容灾关系的实例数据同步
 //
 // 该接口用于暂停/恢复具备容灾关系的实例数据同步。

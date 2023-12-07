@@ -16,7 +16,7 @@ type ListMessageRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ListMessageRequestDlmType `json:"Dlm-Type"`
+	DlmType *ListMessageRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

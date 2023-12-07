@@ -40,6 +40,27 @@ func (c *MrsClient) BatchDeleteJobsInvoker(request *model.BatchDeleteJobsRequest
 	return &BatchDeleteJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAutoScalingPolicy 创建弹性伸缩策略
+//
+// 创建弹性伸缩策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) CreateAutoScalingPolicy(request *model.CreateAutoScalingPolicyRequest) (*model.CreateAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForCreateAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAutoScalingPolicyResponse), nil
+	}
+}
+
+// CreateAutoScalingPolicyInvoker 创建弹性伸缩策略
+func (c *MrsClient) CreateAutoScalingPolicyInvoker(request *model.CreateAutoScalingPolicyRequest) *CreateAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForCreateAutoScalingPolicy()
+	return &CreateAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCluster 创建集群
 //
 // 创建一个MRS集群。使用接口前，您需要先获取下的资源信息。
@@ -90,6 +111,27 @@ func (c *MrsClient) CreateExecuteJob(request *model.CreateExecuteJobRequest) (*m
 func (c *MrsClient) CreateExecuteJobInvoker(request *model.CreateExecuteJobRequest) *CreateExecuteJobInvoker {
 	requestDef := GenReqDefForCreateExecuteJob()
 	return &CreateExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAutoScalingPolicy 删除弹性伸缩策略
+//
+// 删除弹性伸缩策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) DeleteAutoScalingPolicy(request *model.DeleteAutoScalingPolicyRequest) (*model.DeleteAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAutoScalingPolicyResponse), nil
+	}
+}
+
+// DeleteAutoScalingPolicyInvoker 删除弹性伸缩策略
+func (c *MrsClient) DeleteAutoScalingPolicyInvoker(request *model.DeleteAutoScalingPolicyRequest) *DeleteAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForDeleteAutoScalingPolicy()
+	return &DeleteAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunJobFlow 创建集群并提交作业
@@ -262,6 +304,27 @@ func (c *MrsClient) UpdateAgencyMapping(request *model.UpdateAgencyMappingReques
 func (c *MrsClient) UpdateAgencyMappingInvoker(request *model.UpdateAgencyMappingRequest) *UpdateAgencyMappingInvoker {
 	requestDef := GenReqDefForUpdateAgencyMapping()
 	return &UpdateAgencyMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAutoScalingPolicy 更新弹性伸缩策略
+//
+// 更新弹性伸缩策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) UpdateAutoScalingPolicy(request *model.UpdateAutoScalingPolicyRequest) (*model.UpdateAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutoScalingPolicyResponse), nil
+	}
+}
+
+// UpdateAutoScalingPolicyInvoker 更新弹性伸缩策略
+func (c *MrsClient) UpdateAutoScalingPolicyInvoker(request *model.UpdateAutoScalingPolicyRequest) *UpdateAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForUpdateAutoScalingPolicy()
+	return &UpdateAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateClusterName 修改集群名称

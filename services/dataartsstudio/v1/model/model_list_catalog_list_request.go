@@ -16,7 +16,7 @@ type ListCatalogListRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType ListCatalogListRequestDlmType `json:"Dlm-Type"`
+	DlmType *ListCatalogListRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`

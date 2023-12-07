@@ -8,7 +8,7 @@ import (
 
 type InstanceAbstractReq struct {
 
-	// 实例描述
+	// 实例描述。支持除>和<以外的字符，长度为0~255。
 	Description *string `json:"description,omitempty"`
 
 	// 维护时间窗开始时间。时间格式为 xx:00:00，xx取值为02,06,10,14,18,22。  在这个时间段内，运维人员可以对该实例的节点进行维护操作。维护期间，业务可以正常使用，可能会发生闪断。维护操作通常几个月一次。

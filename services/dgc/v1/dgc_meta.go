@@ -443,6 +443,10 @@ func GenReqDefForListJobs() *def.HttpRequestDef {
 		WithName("JobName").
 		WithJsonTag("jobName").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").

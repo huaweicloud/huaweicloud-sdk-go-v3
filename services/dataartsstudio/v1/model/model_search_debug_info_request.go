@@ -16,7 +16,7 @@ type SearchDebugInfoRequest struct {
 	Workspace string `json:"workspace"`
 
 	// dlm版本类型
-	DlmType SearchDebugInfoRequestDlmType `json:"Dlm-Type"`
+	DlmType *SearchDebugInfoRequestDlmType `json:"Dlm-Type,omitempty"`
 
 	// 资源类型
 	ContentType string `json:"Content-Type"`
