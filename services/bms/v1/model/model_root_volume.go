@@ -39,13 +39,17 @@ type RootVolumeVolumetype struct {
 }
 
 type RootVolumeVolumetypeEnum struct {
-	SATA RootVolumeVolumetype
-	SAS  RootVolumeVolumetype
-	SSD  RootVolumeVolumetype
+	GPSSD RootVolumeVolumetype
+	SATA  RootVolumeVolumetype
+	SAS   RootVolumeVolumetype
+	SSD   RootVolumeVolumetype
 }
 
 func GetRootVolumeVolumetypeEnum() RootVolumeVolumetypeEnum {
 	return RootVolumeVolumetypeEnum{
+		GPSSD: RootVolumeVolumetype{
+			value: "GPSSD",
+		},
 		SATA: RootVolumeVolumetype{
 			value: "SATA",
 		},

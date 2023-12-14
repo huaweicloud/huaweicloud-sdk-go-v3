@@ -317,6 +317,42 @@ func (i *ShowSqlResultInvoker) Invoke() (*model.ShowSqlResultResponse, error) {
 	}
 }
 
+type ShowTagQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTagQuotaInvoker) Invoke() (*model.ShowTagQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTagQuotaResponse), nil
+	}
+}
+
+type ShowTagStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTagStatusInvoker) Invoke() (*model.ShowTagStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTagStatusResponse), nil
+	}
+}
+
+type SwitchClusterTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchClusterTagsInvoker) Invoke() (*model.SwitchClusterTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchClusterTagsResponse), nil
+	}
+}
+
 type ShowMrsVersionListInvoker struct {
 	*invoker.BaseInvoker
 }

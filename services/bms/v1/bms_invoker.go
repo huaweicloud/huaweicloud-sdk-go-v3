@@ -125,6 +125,18 @@ func (i *CreateBareMetalServersInvoker) Invoke() (*model.CreateBareMetalServersR
 	}
 }
 
+type DeleteBaremetalServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBaremetalServerInvoker) Invoke() (*model.DeleteBaremetalServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBaremetalServerResponse), nil
+	}
+}
+
 type DeleteServerNicsInvoker struct {
 	*invoker.BaseInvoker
 }

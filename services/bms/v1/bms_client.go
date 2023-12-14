@@ -227,6 +227,27 @@ func (c *BmsClient) CreateBareMetalServersInvoker(request *model.CreateBareMetal
 	return &CreateBareMetalServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBaremetalServer 删除裸金属服务器裸金属服务器物理机
+//
+// 删除裸金属服务器裸金属服务器物理机
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BmsClient) DeleteBaremetalServer(request *model.DeleteBaremetalServerRequest) (*model.DeleteBaremetalServerResponse, error) {
+	requestDef := GenReqDefForDeleteBaremetalServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBaremetalServerResponse), nil
+	}
+}
+
+// DeleteBaremetalServerInvoker 删除裸金属服务器裸金属服务器物理机
+func (c *BmsClient) DeleteBaremetalServerInvoker(request *model.DeleteBaremetalServerRequest) *DeleteBaremetalServerInvoker {
+	requestDef := GenReqDefForDeleteBaremetalServer()
+	return &DeleteBaremetalServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteServerNics 裸金属服务器解绑弹性网卡
 //
 // Please refer to HUAWEI cloud API Explorer for details.

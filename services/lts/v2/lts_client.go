@@ -40,6 +40,27 @@ func (c *LtsClient) CreateAccessConfigInvoker(request *model.CreateAccessConfigR
 	return &CreateAccessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAgencyAccess 新建跨账号日志接入
+//
+// 新建跨账号日志接入
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateAgencyAccess(request *model.CreateAgencyAccessRequest) (*model.CreateAgencyAccessResponse, error) {
+	requestDef := GenReqDefForCreateAgencyAccess()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyAccessResponse), nil
+	}
+}
+
+// CreateAgencyAccessInvoker 新建跨账号日志接入
+func (c *LtsClient) CreateAgencyAccessInvoker(request *model.CreateAgencyAccessRequest) *CreateAgencyAccessInvoker {
+	requestDef := GenReqDefForCreateAgencyAccess()
+	return &CreateAgencyAccessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDashBoard 创建仪表盘
 //
 // 创建仪表盘

@@ -236,3 +236,15 @@ func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse,
 		return result.(*model.ListAvailableZonesResponse), nil
 	}
 }
+
+type ShowMrsVersionMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMrsVersionMetadataInvoker) Invoke() (*model.ShowMrsVersionMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMrsVersionMetadataResponse), nil
+	}
+}

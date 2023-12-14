@@ -579,6 +579,69 @@ func (c *MrsClient) ShowSqlResultInvoker(request *model.ShowSqlResultRequest) *S
 	return &ShowSqlResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTagQuota 查询标签配额
+//
+// 查询标签配额信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowTagQuota(request *model.ShowTagQuotaRequest) (*model.ShowTagQuotaResponse, error) {
+	requestDef := GenReqDefForShowTagQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagQuotaResponse), nil
+	}
+}
+
+// ShowTagQuotaInvoker 查询标签配额
+func (c *MrsClient) ShowTagQuotaInvoker(request *model.ShowTagQuotaRequest) *ShowTagQuotaInvoker {
+	requestDef := GenReqDefForShowTagQuota()
+	return &ShowTagQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTagStatus 查询默认标签状态
+//
+// 查询集群默认标签状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowTagStatus(request *model.ShowTagStatusRequest) (*model.ShowTagStatusResponse, error) {
+	requestDef := GenReqDefForShowTagStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagStatusResponse), nil
+	}
+}
+
+// ShowTagStatusInvoker 查询默认标签状态
+func (c *MrsClient) ShowTagStatusInvoker(request *model.ShowTagStatusRequest) *ShowTagStatusInvoker {
+	requestDef := GenReqDefForShowTagStatus()
+	return &ShowTagStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchClusterTags 集群操作默认标签
+//
+// 对已有集群启用或关闭集群默认标签。开启后，集群内节点会打上集群默认标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) SwitchClusterTags(request *model.SwitchClusterTagsRequest) (*model.SwitchClusterTagsResponse, error) {
+	requestDef := GenReqDefForSwitchClusterTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchClusterTagsResponse), nil
+	}
+}
+
+// SwitchClusterTagsInvoker 集群操作默认标签
+func (c *MrsClient) SwitchClusterTagsInvoker(request *model.SwitchClusterTagsRequest) *SwitchClusterTagsInvoker {
+	requestDef := GenReqDefForSwitchClusterTags()
+	return &SwitchClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMrsVersionList 展示MRS版本列表
 //
 // 展示MRS版本列表

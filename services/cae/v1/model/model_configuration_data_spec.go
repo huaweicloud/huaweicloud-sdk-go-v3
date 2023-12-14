@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -70,20 +67,38 @@ type ConfigurationDataSpec struct {
 	// - type为\"log\"时，配置此参数。 - 参数含义：自定义日志路径数组。
 	LogPaths *[]string `json:"log_paths,omitempty"`
 
-	// - type为\"apm2\"时，配置此参数。 - 参数含义：性能管理配置访问密钥Key。
+	// - type为\"apm2\"时，配置此参数。 - 参数含义：探针注入方式。
+	Instrumentation *string `json:"instrumentation,omitempty"`
+
+	// - 参数含义：type为\"apm2\"时，性能管理配置应用。
+	ApmApplication *string `json:"apm_application,omitempty"`
+
+	// - 参数含义：type为\"apm2\"时，监控系统类别，包括apm2和opentelemetry。
+	Type *string `json:"type,omitempty"`
+
+	// - 参数含义：type为\"apm2\"时，apm2组件。
+	AppName *string `json:"app_name,omitempty"`
+
+	// - 参数含义：type为\"apm2\"时，apm2实例。
+	InstanceName *string `json:"instance_name,omitempty"`
+
+	// - 参数含义：type为\"apm2\"时，apm2环境。
+	EnvName *string `json:"env_name,omitempty"`
+
+	// - 参数含义：已废弃，迁移到监控系统，type为\"apm2\"时，性能管理配置升级策略。 - Always，重启自动升级：每次都尝试重新下载镜像。 - IfNotPresent，手动升级: 如果本地有该镜像，则继续使用本地镜像，不下载镜像。
+	ImagePullPolicy *string `json:"image_pull_policy,omitempty"`
+
+	// - type为\"apm2\"时，配置此参数。 - 参数含义：已废弃，迁移到监控系统，type为\"apm2\"时，性能管理配置探针版本。
+	Version *string `json:"version,omitempty"`
+
+	// - 参数含义：已废弃，迁移到监控系统，type为\"apm2\"时，性能管理配置访问密钥Key。
 	AccessKey *string `json:"access_key,omitempty"`
 
-	// - type为\"apm2\"时，配置此参数。 - 参数含义：性能管理配置访问密钥value。
+	// - 参数含义：已废弃，迁移到监控系统，type为\"apm2\"时，性能管理配置访问密钥value。
 	AccessValue *string `json:"access_value,omitempty"`
 
-	// - type为\"apm2\"时，配置此参数。 - 参数含义：性能管理配置应用。
+	// - 参数含义：已废弃，type为\"apm2\"时，性能管理配置应用，同apm_application。
 	Business *string `json:"business,omitempty"`
-
-	// - type为\"apm2\"时，配置此参数。 - 参数含义：性能管理配置升级策略。 - 重启自动升级：每次都尝试重新下载镜像。 - 手动升级: 如果本地有该镜像，则继续使用本地镜像，不下载镜像。
-	ImagePullPolicy *ConfigurationDataSpecImagePullPolicy `json:"image_pull_policy,omitempty"`
-
-	// - type为\"apm2\"时，配置此参数。 - 参数含义：性能管理配置探针版本。
-	Version *string `json:"version,omitempty"`
 
 	// - type为\"customMetric\"时，配置此参数。 - 参数含义：自定义监控指标配置采集路径。
 	Path *string `json:"path,omitempty"`
@@ -102,51 +117,4 @@ func (o ConfigurationDataSpec) String() string {
 	}
 
 	return strings.Join([]string{"ConfigurationDataSpec", string(data)}, " ")
-}
-
-type ConfigurationDataSpecImagePullPolicy struct {
-	value string
-}
-
-type ConfigurationDataSpecImagePullPolicyEnum struct {
-	ALWAYS         ConfigurationDataSpecImagePullPolicy
-	IF_NOT_PRESENT ConfigurationDataSpecImagePullPolicy
-}
-
-func GetConfigurationDataSpecImagePullPolicyEnum() ConfigurationDataSpecImagePullPolicyEnum {
-	return ConfigurationDataSpecImagePullPolicyEnum{
-		ALWAYS: ConfigurationDataSpecImagePullPolicy{
-			value: "Always",
-		},
-		IF_NOT_PRESENT: ConfigurationDataSpecImagePullPolicy{
-			value: "IfNotPresent",
-		},
-	}
-}
-
-func (c ConfigurationDataSpecImagePullPolicy) Value() string {
-	return c.value
-}
-
-func (c ConfigurationDataSpecImagePullPolicy) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ConfigurationDataSpecImagePullPolicy) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

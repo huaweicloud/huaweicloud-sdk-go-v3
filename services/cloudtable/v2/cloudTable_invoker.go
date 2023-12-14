@@ -112,3 +112,15 @@ func (i *UpdateClusterSettingInvoker) Invoke() (*model.UpdateClusterSettingRespo
 		return result.(*model.UpdateClusterSettingResponse), nil
 	}
 }
+
+type CreateCloudTableClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCloudTableClusterInvoker) Invoke() (*model.CreateCloudTableClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCloudTableClusterResponse), nil
+	}
+}

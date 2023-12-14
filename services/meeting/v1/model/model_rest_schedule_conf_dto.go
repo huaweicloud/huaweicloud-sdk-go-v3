@@ -66,6 +66,9 @@ type RestScheduleConfDto struct {
 
 	// 会议最大与会人数。默认值0。 * 0：无限制 * 大于0：会议最大与会人数
 	ConcurrentParticipants *int32 `json:"concurrentParticipants,omitempty"`
+
+	// 会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
+	SupportSimultaneousInterpretation *bool `json:"supportSimultaneousInterpretation,omitempty"`
 }
 
 func (o RestScheduleConfDto) String() string {

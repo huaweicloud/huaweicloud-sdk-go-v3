@@ -149,6 +149,18 @@ func (i *CreateEastWestFirewallInvoker) Invoke() (*model.CreateEastWestFirewallR
 	}
 }
 
+type CreateFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFirewallInvoker) Invoke() (*model.CreateFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFirewallResponse), nil
+	}
+}
+
 type DeleteAddressItemInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +218,18 @@ func (i *DeleteDomainsInvoker) Invoke() (*model.DeleteDomainsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDomainsResponse), nil
+	}
+}
+
+type DeleteFirewallInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFirewallInvoker) Invoke() (*model.DeleteFirewallResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFirewallResponse), nil
 	}
 }
 
@@ -398,6 +422,18 @@ func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlowLogsResponse), nil
+	}
+}
+
+type ListJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListJobInvoker) Invoke() (*model.ListJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListJobResponse), nil
 	}
 }
 

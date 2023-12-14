@@ -50,6 +50,12 @@ type UpdateKeywordsAlarmRuleRequestBody struct {
 
 	// 恢复策略周期;默认为3
 	RecoveryPolicy *int32 `json:"recovery_policy,omitempty"`
+
+	// 通知频率,单位(分钟)
+	NotificationFrequency UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency `json:"notification_frequency"`
+
+	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
 }
 
 func (o UpdateKeywordsAlarmRuleRequestBody) String() string {
@@ -150,6 +156,70 @@ func (c UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode) MarshalJSON() (
 }
 
 func (c *UpdateKeywordsAlarmRuleRequestBodyKeywordsAlarmSendCode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency struct {
+	value int32
+}
+
+type UpdateKeywordsAlarmRuleRequestBodyNotificationFrequencyEnum struct {
+	E_0   UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_5   UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_10  UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_15  UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_30  UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_60  UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_180 UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+	E_360 UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency
+}
+
+func GetUpdateKeywordsAlarmRuleRequestBodyNotificationFrequencyEnum() UpdateKeywordsAlarmRuleRequestBodyNotificationFrequencyEnum {
+	return UpdateKeywordsAlarmRuleRequestBodyNotificationFrequencyEnum{
+		E_0: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 0,
+		}, E_5: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 5,
+		}, E_10: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 10,
+		}, E_15: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 15,
+		}, E_30: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 30,
+		}, E_60: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 60,
+		}, E_180: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 180,
+		}, E_360: UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency{
+			value: 360,
+		},
+	}
+}
+
+func (c UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency) Value() int32 {
+	return c.value
+}
+
+func (c UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateKeywordsAlarmRuleRequestBodyNotificationFrequency) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: int32")

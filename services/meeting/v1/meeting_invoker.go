@@ -917,6 +917,18 @@ func (i *ResetVisionActiveCodeInvoker) Invoke() (*model.ResetVisionActiveCodeRes
 	}
 }
 
+type ResumeSimultaneousInterpretationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumeSimultaneousInterpretationInvoker) Invoke() (*model.ResumeSimultaneousInterpretationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumeSimultaneousInterpretationResponse), nil
+	}
+}
+
 type RollcallParticipantInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1253,6 +1265,18 @@ func (i *SendVeriCodeForUpdateUserInfoInvoker) Invoke() (*model.SendVeriCodeForU
 	}
 }
 
+type SetAttendeeLanChannelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAttendeeLanChannelInvoker) Invoke() (*model.SetAttendeeLanChannelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAttendeeLanChannelResponse), nil
+	}
+}
+
 type SetCohostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1286,6 +1310,18 @@ func (i *SetHostViewInvoker) Invoke() (*model.SetHostViewResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SetHostViewResponse), nil
+	}
+}
+
+type SetInterpreterGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInterpreterGroupInvoker) Invoke() (*model.SetInterpreterGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInterpreterGroupResponse), nil
 	}
 }
 

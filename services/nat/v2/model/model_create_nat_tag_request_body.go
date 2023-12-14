@@ -8,9 +8,7 @@ import (
 
 // CreateNatTagRequestBody 请求参数。
 type CreateNatTagRequestBody struct {
-
-	// 标签列表。请参考表TagBody字段数据结构说明。
-	Tag *interface{} `json:"tag"`
+	Tag *TagBody `json:"tag"`
 }
 
 func (o CreateNatTagRequestBody) String() string {

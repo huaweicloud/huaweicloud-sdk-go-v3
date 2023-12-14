@@ -215,3 +215,29 @@ func (c *CloudTableClient) UpdateClusterSettingInvoker(request *model.UpdateClus
 	requestDef := GenReqDefForUpdateClusterSetting()
 	return &UpdateClusterSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// CreateCloudTableCluster 创建CloudTable集群
+//
+// 创建一个CloudTable集群。
+// 使用接口前，您需要先获取如下资源信息。
+// - 通过VPC创建或查询VPC、子网
+// - 通过安全组创建或查询可用的security_group_id
+//
+// 本接口是一个同步接口，当创建CloudTable集群成功后会返回集群id。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudTableClient) CreateCloudTableCluster(request *model.CreateCloudTableClusterRequest) (*model.CreateCloudTableClusterResponse, error) {
+	requestDef := GenReqDefForCreateCloudTableCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCloudTableClusterResponse), nil
+	}
+}
+
+// CreateCloudTableClusterInvoker 创建CloudTable集群
+func (c *CloudTableClient) CreateCloudTableClusterInvoker(request *model.CreateCloudTableClusterRequest) *CreateCloudTableClusterInvoker {
+	requestDef := GenReqDefForCreateCloudTableCluster()
+	return &CreateCloudTableClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

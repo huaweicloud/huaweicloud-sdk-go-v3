@@ -12,6 +12,9 @@ type ListHostDiskRequest struct {
 	// 集群ID。获取方法，请参见9.6-获取集群ID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
+	// 实例ID。
+	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 实例名称。
 	InstanceName *string `json:"instance_name,omitempty"`
 

@@ -2039,6 +2039,31 @@ func GenReqDefForResetVisionActiveCode() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForResumeSimultaneousInterpretation() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/simultaneousInterpretation").
+		WithResponse(new(model.ResumeSimultaneousInterpretationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRollcallParticipant() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -3166,6 +3191,31 @@ func GenReqDefForSendVeriCodeForUpdateUserInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSetAttendeeLanChannel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/setAttendeeLanChannel").
+		WithResponse(new(model.SetAttendeeLanChannelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSetCohost() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -3225,6 +3275,31 @@ func GenReqDefForSetHostView() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1/mmc/control/conferences/chairView").
 		WithResponse(new(model.SetHostViewResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSetInterpreterGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/mmc/control/conferences/interpreterGroup").
+		WithResponse(new(model.SetInterpreterGroupResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

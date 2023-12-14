@@ -19,7 +19,7 @@ type MultiPicDisplayDo struct {
 	SubscriberInPics *[]PicInfoNotify `json:"subscriberInPics,omitempty"`
 
 	// 表示轮询间隔，单位：秒。当同一个子画面中包含有多个视频源时，此参数有效。
-	SwitchTime *string `json:"switchTime,omitempty"`
+	SwitchTime *int32 `json:"switchTime,omitempty"`
 
 	PicLayoutInfo *PicLayoutInfo `json:"picLayoutInfo,omitempty"`
 }

@@ -458,6 +458,27 @@ func (c *RdsClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJob
 	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteLogLtsConfigs
+//
+// 解除LTS配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteLogLtsConfigs(request *model.DeleteLogLtsConfigsRequest) (*model.DeleteLogLtsConfigsResponse, error) {
+	requestDef := GenReqDefForDeleteLogLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogLtsConfigsResponse), nil
+	}
+}
+
+// DeleteLogLtsConfigsInvoker
+func (c *RdsClient) DeleteLogLtsConfigsInvoker(request *model.DeleteLogLtsConfigsRequest) *DeleteLogLtsConfigsInvoker {
+	requestDef := GenReqDefForDeleteLogLtsConfigs()
+	return &DeleteLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteManualBackup 删除手动备份
 //
 // 删除手动备份。
@@ -983,6 +1004,27 @@ func (c *RdsClient) ListJobInfoDetail(request *model.ListJobInfoDetailRequest) (
 func (c *RdsClient) ListJobInfoDetailInvoker(request *model.ListJobInfoDetailRequest) *ListJobInfoDetailInvoker {
 	requestDef := GenReqDefForListJobInfoDetail()
 	return &ListJobInfoDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogLtsConfigs
+//
+// 获取LTS配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListLogLtsConfigs(request *model.ListLogLtsConfigsRequest) (*model.ListLogLtsConfigsResponse, error) {
+	requestDef := GenReqDefForListLogLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogLtsConfigsResponse), nil
+	}
+}
+
+// ListLogLtsConfigsInvoker
+func (c *RdsClient) ListLogLtsConfigsInvoker(request *model.ListLogLtsConfigsRequest) *ListLogLtsConfigsInvoker {
+	requestDef := GenReqDefForListLogLtsConfigs()
+	return &ListLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListOffSiteBackups 查询跨区域备份列表
@@ -1640,6 +1682,27 @@ func (c *RdsClient) SetBinlogClearPolicy(request *model.SetBinlogClearPolicyRequ
 func (c *RdsClient) SetBinlogClearPolicyInvoker(request *model.SetBinlogClearPolicyRequest) *SetBinlogClearPolicyInvoker {
 	requestDef := GenReqDefForSetBinlogClearPolicy()
 	return &SetBinlogClearPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetLogLtsConfigs
+//
+// 关联LTS配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetLogLtsConfigs(request *model.SetLogLtsConfigsRequest) (*model.SetLogLtsConfigsResponse, error) {
+	requestDef := GenReqDefForSetLogLtsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetLogLtsConfigsResponse), nil
+	}
+}
+
+// SetLogLtsConfigsInvoker
+func (c *RdsClient) SetLogLtsConfigsInvoker(request *model.SetLogLtsConfigsRequest) *SetLogLtsConfigsInvoker {
+	requestDef := GenReqDefForSetLogLtsConfigs()
+	return &SetLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetOffSiteBackupPolicy 设置跨区域备份策略

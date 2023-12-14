@@ -41,6 +41,9 @@ type ListServersRequest struct {
 
 	// 需要查询的企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 是否存在一致性校验结果
+	IsConsistencyResultExist *bool `json:"is_consistency_result_exist,omitempty"`
 }
 
 func (o ListServersRequest) String() string {

@@ -17,13 +17,16 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	// SQL告警名称
 	SqlAlarmRuleName string `json:"sql_alarm_rule_name"`
 
+	// 是否管道符sql查询
+	IsCssSql *bool `json:"is_css_sql,omitempty"`
+
 	// SQL告警信息描述
 	SqlAlarmRuleDescription *string `json:"sql_alarm_rule_description,omitempty"`
 
 	// SQL详细信息
 	SqlRequests []SqlRequest `json:"sql_requests"`
 
-	Frequency *Frequency `json:"frequency"`
+	Frequency *CreateSqlAlarmRuleFrequency `json:"frequency"`
 
 	// 条件表达式
 	ConditionExpression string `json:"condition_expression"`
@@ -53,6 +56,12 @@ type UpdateSqlAlarmRuleRequestBody struct {
 
 	// 恢复策略周期;默认为3
 	RecoveryPolicy *int32 `json:"recovery_policy,omitempty"`
+
+	// 通知频率,单位(分钟)
+	NotificationFrequency UpdateSqlAlarmRuleRequestBodyNotificationFrequency `json:"notification_frequency"`
+
+	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
+	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
 }
 
 func (o UpdateSqlAlarmRuleRequestBody) String() string {
@@ -153,6 +162,70 @@ func (c UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) MarshalJSON() ([]byte, er
 }
 
 func (c *UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdateSqlAlarmRuleRequestBodyNotificationFrequency struct {
+	value int32
+}
+
+type UpdateSqlAlarmRuleRequestBodyNotificationFrequencyEnum struct {
+	E_0   UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_5   UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_10  UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_15  UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_30  UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_60  UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_180 UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+	E_360 UpdateSqlAlarmRuleRequestBodyNotificationFrequency
+}
+
+func GetUpdateSqlAlarmRuleRequestBodyNotificationFrequencyEnum() UpdateSqlAlarmRuleRequestBodyNotificationFrequencyEnum {
+	return UpdateSqlAlarmRuleRequestBodyNotificationFrequencyEnum{
+		E_0: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 0,
+		}, E_5: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 5,
+		}, E_10: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 10,
+		}, E_15: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 15,
+		}, E_30: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 30,
+		}, E_60: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 60,
+		}, E_180: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 180,
+		}, E_360: UpdateSqlAlarmRuleRequestBodyNotificationFrequency{
+			value: 360,
+		},
+	}
+}
+
+func (c UpdateSqlAlarmRuleRequestBodyNotificationFrequency) Value() int32 {
+	return c.value
+}
+
+func (c UpdateSqlAlarmRuleRequestBodyNotificationFrequency) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateSqlAlarmRuleRequestBodyNotificationFrequency) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("int32")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: int32")

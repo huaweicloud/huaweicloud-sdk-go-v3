@@ -10,10 +10,10 @@ import (
 type RestoreDatabaseInfo struct {
 
 	// 恢复前库名
-	OldName *string `json:"old_name,omitempty"`
+	OldName string `json:"old_name"`
 
 	// 恢复后库名
-	NewName *string `json:"new_name,omitempty"`
+	NewName string `json:"new_name"`
 }
 
 func (o RestoreDatabaseInfo) String() string {

@@ -269,6 +269,18 @@ func (i *ShowConfigSettingInvoker) Invoke() (*model.ShowConfigSettingResponse, e
 	}
 }
 
+type ShowConsistencyResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConsistencyResultInvoker) Invoke() (*model.ShowConsistencyResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConsistencyResultResponse), nil
+	}
+}
+
 type ShowMigprojectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +422,18 @@ func (i *UpdateCommandResultInvoker) Invoke() (*model.UpdateCommandResultRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateCommandResultResponse), nil
+	}
+}
+
+type UpdateConsistencyResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateConsistencyResultInvoker) Invoke() (*model.UpdateConsistencyResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateConsistencyResultResponse), nil
 	}
 }
 

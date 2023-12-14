@@ -407,115 +407,6 @@ func (c *NatClient) BatchCreateDeleteNatGatewayTagInvoker(request *model.BatchCr
 	return &BatchCreateDeleteNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateNatGatewayTag 添加公网NAT网关资源标签
-//
-// - 添加公网NAT网关资源标签。一个资源上最多有10个标签。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *NatClient) CreateNatGatewayTag(request *model.CreateNatGatewayTagRequest) (*model.CreateNatGatewayTagResponse, error) {
-	requestDef := GenReqDefForCreateNatGatewayTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateNatGatewayTagResponse), nil
-	}
-}
-
-// CreateNatGatewayTagInvoker 添加公网NAT网关资源标签
-func (c *NatClient) CreateNatGatewayTagInvoker(request *model.CreateNatGatewayTagRequest) *CreateNatGatewayTagInvoker {
-	requestDef := GenReqDefForCreateNatGatewayTag()
-	return &CreateNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteNatGatewayTag 删除公网NAT网关资源标签
-//
-// - 删除指定公网NAT网关资源实例的标签信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *NatClient) DeleteNatGatewayTag(request *model.DeleteNatGatewayTagRequest) (*model.DeleteNatGatewayTagResponse, error) {
-	requestDef := GenReqDefForDeleteNatGatewayTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteNatGatewayTagResponse), nil
-	}
-}
-
-// DeleteNatGatewayTagInvoker 删除公网NAT网关资源标签
-func (c *NatClient) DeleteNatGatewayTagInvoker(request *model.DeleteNatGatewayTagRequest) *DeleteNatGatewayTagInvoker {
-	requestDef := GenReqDefForDeleteNatGatewayTag()
-	return &DeleteNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListNatGatewayByTag 查询公网NAT网关资源实例
-//
-// - 使用标签过滤公网NAT网关资源实例。
-// - 标签管理服务需要提供按标签过滤公网NAT网关服务实例并汇总显示在列表中，需要公网NAT网关服务提供查询能力。
-// - 资源默认按照创建时间倒序，资源tag也按照创建时间倒序。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *NatClient) ListNatGatewayByTag(request *model.ListNatGatewayByTagRequest) (*model.ListNatGatewayByTagResponse, error) {
-	requestDef := GenReqDefForListNatGatewayByTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListNatGatewayByTagResponse), nil
-	}
-}
-
-// ListNatGatewayByTagInvoker 查询公网NAT网关资源实例
-func (c *NatClient) ListNatGatewayByTagInvoker(request *model.ListNatGatewayByTagRequest) *ListNatGatewayByTagInvoker {
-	requestDef := GenReqDefForListNatGatewayByTag()
-	return &ListNatGatewayByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListNatGatewayTag 查询公网NAT网关项目标签
-//
-// - 查询租户在指定项目和公网NAT网关实例类型的所有标签集合。
-// - 标签管理服务需要能够列出当前租户全部已使用的标签集合，为各服务Console打标签和过滤实例时提供标签联想功能。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *NatClient) ListNatGatewayTag(request *model.ListNatGatewayTagRequest) (*model.ListNatGatewayTagResponse, error) {
-	requestDef := GenReqDefForListNatGatewayTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListNatGatewayTagResponse), nil
-	}
-}
-
-// ListNatGatewayTagInvoker 查询公网NAT网关项目标签
-func (c *NatClient) ListNatGatewayTagInvoker(request *model.ListNatGatewayTagRequest) *ListNatGatewayTagInvoker {
-	requestDef := GenReqDefForListNatGatewayTag()
-	return &ListNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowNatGatewayTag 查询公网NAT网关资源标签
-//
-// - 查询指定公网NAT网关实例的标签信息。
-// - 标签管理服务需要使用该接口查询指定公网NAT网关实例的全部标签数据。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *NatClient) ShowNatGatewayTag(request *model.ShowNatGatewayTagRequest) (*model.ShowNatGatewayTagResponse, error) {
-	requestDef := GenReqDefForShowNatGatewayTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowNatGatewayTagResponse), nil
-	}
-}
-
-// ShowNatGatewayTagInvoker 查询公网NAT网关资源标签
-func (c *NatClient) ShowNatGatewayTagInvoker(request *model.ShowNatGatewayTagRequest) *ShowNatGatewayTagInvoker {
-	requestDef := GenReqDefForShowNatGatewayTag()
-	return &ShowNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchCreateDeletePrivateNatTags 批量添加删除私网NAT网关标签
 //
 // - 为指定私网NAT网关实例批量添加或删除标签
@@ -558,6 +449,27 @@ func (c *NatClient) CreateNatGateway(request *model.CreateNatGatewayRequest) (*m
 func (c *NatClient) CreateNatGatewayInvoker(request *model.CreateNatGatewayRequest) *CreateNatGatewayInvoker {
 	requestDef := GenReqDefForCreateNatGateway()
 	return &CreateNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNatGatewayTag 添加公网NAT网关资源标签
+//
+// - 添加公网NAT网关资源标签。一个资源上最多有10个标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) CreateNatGatewayTag(request *model.CreateNatGatewayTagRequest) (*model.CreateNatGatewayTagResponse, error) {
+	requestDef := GenReqDefForCreateNatGatewayTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNatGatewayTagResponse), nil
+	}
+}
+
+// CreateNatGatewayTagInvoker 添加公网NAT网关资源标签
+func (c *NatClient) CreateNatGatewayTagInvoker(request *model.CreateNatGatewayTagRequest) *CreateNatGatewayTagInvoker {
+	requestDef := GenReqDefForCreateNatGatewayTag()
+	return &CreateNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePrivateNat 创建私网NAT网关
@@ -625,6 +537,27 @@ func (c *NatClient) DeleteNatGatewayInvoker(request *model.DeleteNatGatewayReque
 	return &DeleteNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteNatGatewayTag 删除公网NAT网关资源标签
+//
+// - 删除指定公网NAT网关资源实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) DeleteNatGatewayTag(request *model.DeleteNatGatewayTagRequest) (*model.DeleteNatGatewayTagResponse, error) {
+	requestDef := GenReqDefForDeleteNatGatewayTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNatGatewayTagResponse), nil
+	}
+}
+
+// DeleteNatGatewayTagInvoker 删除公网NAT网关资源标签
+func (c *NatClient) DeleteNatGatewayTagInvoker(request *model.DeleteNatGatewayTagRequest) *DeleteNatGatewayTagInvoker {
+	requestDef := GenReqDefForDeleteNatGatewayTag()
+	return &DeleteNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeletePrivateNat 删除私网NAT网关
 //
 // 删除私网NAT网关实例。
@@ -666,6 +599,51 @@ func (c *NatClient) DeletePrivateNatTag(request *model.DeletePrivateNatTagReques
 func (c *NatClient) DeletePrivateNatTagInvoker(request *model.DeletePrivateNatTagRequest) *DeletePrivateNatTagInvoker {
 	requestDef := GenReqDefForDeletePrivateNatTag()
 	return &DeletePrivateNatTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNatGatewayByTag 查询公网NAT网关资源实例
+//
+// - 使用标签过滤公网NAT网关资源实例。
+// - 标签管理服务需要提供按标签过滤公网NAT网关服务实例并汇总显示在列表中，需要公网NAT网关服务提供查询能力。
+// - 资源默认按照创建时间倒序，资源tag也按照创建时间倒序。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListNatGatewayByTag(request *model.ListNatGatewayByTagRequest) (*model.ListNatGatewayByTagResponse, error) {
+	requestDef := GenReqDefForListNatGatewayByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNatGatewayByTagResponse), nil
+	}
+}
+
+// ListNatGatewayByTagInvoker 查询公网NAT网关资源实例
+func (c *NatClient) ListNatGatewayByTagInvoker(request *model.ListNatGatewayByTagRequest) *ListNatGatewayByTagInvoker {
+	requestDef := GenReqDefForListNatGatewayByTag()
+	return &ListNatGatewayByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNatGatewayTag 查询公网NAT网关项目标签
+//
+// - 查询租户在指定项目和公网NAT网关实例类型的所有标签集合。
+// - 标签管理服务需要能够列出当前租户全部已使用的标签集合，为各服务Console打标签和过滤实例时提供标签联想功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListNatGatewayTag(request *model.ListNatGatewayTagRequest) (*model.ListNatGatewayTagResponse, error) {
+	requestDef := GenReqDefForListNatGatewayTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNatGatewayTagResponse), nil
+	}
+}
+
+// ListNatGatewayTagInvoker 查询公网NAT网关项目标签
+func (c *NatClient) ListNatGatewayTagInvoker(request *model.ListNatGatewayTagRequest) *ListNatGatewayTagInvoker {
+	requestDef := GenReqDefForListNatGatewayTag()
+	return &ListNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListNatGateways 查询公网NAT网关列表
@@ -773,6 +751,28 @@ func (c *NatClient) ShowNatGateway(request *model.ShowNatGatewayRequest) (*model
 func (c *NatClient) ShowNatGatewayInvoker(request *model.ShowNatGatewayRequest) *ShowNatGatewayInvoker {
 	requestDef := GenReqDefForShowNatGateway()
 	return &ShowNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNatGatewayTag 查询公网NAT网关资源标签
+//
+// - 查询指定公网NAT网关实例的标签信息。
+// - 标签管理服务需要使用该接口查询指定公网NAT网关实例的全部标签数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ShowNatGatewayTag(request *model.ShowNatGatewayTagRequest) (*model.ShowNatGatewayTagResponse, error) {
+	requestDef := GenReqDefForShowNatGatewayTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNatGatewayTagResponse), nil
+	}
+}
+
+// ShowNatGatewayTagInvoker 查询公网NAT网关资源标签
+func (c *NatClient) ShowNatGatewayTagInvoker(request *model.ShowNatGatewayTagRequest) *ShowNatGatewayTagInvoker {
+	requestDef := GenReqDefForShowNatGatewayTag()
+	return &ShowNatGatewayTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPrivateNat 查询指定的私网NAT网关详情

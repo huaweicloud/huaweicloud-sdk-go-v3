@@ -18,8 +18,7 @@ type IndicatorListSearchRequest struct {
 	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
 
-	// 查询条件
-	Condition string `json:"condition"`
+	Condition *DataobjectSearchCondition `json:"condition"`
 
 	// request offset, from 0
 	Offset int32 `json:"offset"`

@@ -12,8 +12,8 @@ type DataobjectSearchCondition struct {
 	// 表达式列表
 	Conditions *[]DataobjectSearchConditionConditions `json:"conditions,omitempty"`
 
-	// 表达式逻辑
-	Logics *[]DataobjectSearchConditionLogics `json:"logics,omitempty"`
+	// 表达式名称列表
+	Logics *[]string `json:"logics,omitempty"`
 }
 
 func (o DataobjectSearchCondition) String() string {

@@ -463,3 +463,24 @@ func (c *MrsClient) ListAvailableZonesInvoker(request *model.ListAvailableZonesR
 	requestDef := GenReqDefForListAvailableZones()
 	return &ListAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ShowMrsVersionMetadata 查询对应版本元数据
+//
+// 查询对应版本元数据。如果参数里指定集群id，则可查询集群更新过补丁之后的最新元数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowMrsVersionMetadata(request *model.ShowMrsVersionMetadataRequest) (*model.ShowMrsVersionMetadataResponse, error) {
+	requestDef := GenReqDefForShowMrsVersionMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMrsVersionMetadataResponse), nil
+	}
+}
+
+// ShowMrsVersionMetadataInvoker 查询对应版本元数据
+func (c *MrsClient) ShowMrsVersionMetadataInvoker(request *model.ShowMrsVersionMetadataRequest) *ShowMrsVersionMetadataInvoker {
+	requestDef := GenReqDefForShowMrsVersionMetadata()
+	return &ShowMrsVersionMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

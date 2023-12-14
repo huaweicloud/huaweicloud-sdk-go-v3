@@ -73,6 +73,15 @@ type ShowWebinarResponse struct {
 
 	EnableRecording *YesNoEnum `json:"enableRecording,omitempty"`
 
+	// 主流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+	LiveAddress *string `json:"liveAddress,omitempty"`
+
+	// 辅流直播推流地址，在录播类型为 :直播、直播+录播时有效。最大不超过255个字符。
+	AuxAddress *string `json:"auxAddress,omitempty"`
+
+	// 直播房间地址，在录播类型为录播+直播推流时有效。最大不超过255个字符。
+	LiveUrl *string `json:"liveUrl,omitempty"`
+
 	NotifySetting *OpenNotifySetting `json:"notifySetting,omitempty"`
 
 	// 与会嘉宾名称列表。

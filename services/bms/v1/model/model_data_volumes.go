@@ -42,13 +42,17 @@ type DataVolumesVolumetype struct {
 }
 
 type DataVolumesVolumetypeEnum struct {
-	SATA DataVolumesVolumetype
-	SAS  DataVolumesVolumetype
-	SSD  DataVolumesVolumetype
+	GPSSD DataVolumesVolumetype
+	SATA  DataVolumesVolumetype
+	SAS   DataVolumesVolumetype
+	SSD   DataVolumesVolumetype
 }
 
 func GetDataVolumesVolumetypeEnum() DataVolumesVolumetypeEnum {
 	return DataVolumesVolumetypeEnum{
+		GPSSD: DataVolumesVolumetype{
+			value: "GPSSD",
+		},
 		SATA: DataVolumesVolumetype{
 			value: "SATA",
 		},

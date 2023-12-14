@@ -691,6 +691,69 @@ func (c *CaeClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoke
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateMonitorSystem 创建监控系统配置
+//
+// 创建监控系统配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) CreateMonitorSystem(request *model.CreateMonitorSystemRequest) (*model.CreateMonitorSystemResponse, error) {
+	requestDef := GenReqDefForCreateMonitorSystem()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMonitorSystemResponse), nil
+	}
+}
+
+// CreateMonitorSystemInvoker 创建监控系统配置
+func (c *CaeClient) CreateMonitorSystemInvoker(request *model.CreateMonitorSystemRequest) *CreateMonitorSystemInvoker {
+	requestDef := GenReqDefForCreateMonitorSystem()
+	return &CreateMonitorSystemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMonitorSystem 获取监控系统配置
+//
+// 获取监控系统配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ShowMonitorSystem(request *model.ShowMonitorSystemRequest) (*model.ShowMonitorSystemResponse, error) {
+	requestDef := GenReqDefForShowMonitorSystem()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMonitorSystemResponse), nil
+	}
+}
+
+// ShowMonitorSystemInvoker 获取监控系统配置
+func (c *CaeClient) ShowMonitorSystemInvoker(request *model.ShowMonitorSystemRequest) *ShowMonitorSystemInvoker {
+	requestDef := GenReqDefForShowMonitorSystem()
+	return &ShowMonitorSystemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMonitorSystem 更新监控系统配置
+//
+// 更新监控系统配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) UpdateMonitorSystem(request *model.UpdateMonitorSystemRequest) (*model.UpdateMonitorSystemResponse, error) {
+	requestDef := GenReqDefForUpdateMonitorSystem()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMonitorSystemResponse), nil
+	}
+}
+
+// UpdateMonitorSystemInvoker 更新监控系统配置
+func (c *CaeClient) UpdateMonitorSystemInvoker(request *model.UpdateMonitorSystemRequest) *UpdateMonitorSystemInvoker {
+	requestDef := GenReqDefForUpdateMonitorSystem()
+	return &UpdateMonitorSystemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTimerRule 创建定时启停规则
 //
 // 创建定时启停规则。

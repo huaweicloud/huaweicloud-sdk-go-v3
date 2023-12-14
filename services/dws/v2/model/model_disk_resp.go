@@ -11,6 +11,9 @@ type DiskResp struct {
 	// 实例名称
 	InstanceName *string `json:"instance_name,omitempty"`
 
+	// 实例ID
+	InstanceId *string `json:"instance_id,omitempty"`
+
 	// 主机名称
 	HostName *string `json:"host_name,omitempty"`
 

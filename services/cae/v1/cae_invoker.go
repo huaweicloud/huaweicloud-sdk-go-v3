@@ -389,6 +389,42 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 	}
 }
 
+type CreateMonitorSystemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMonitorSystemInvoker) Invoke() (*model.CreateMonitorSystemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMonitorSystemResponse), nil
+	}
+}
+
+type ShowMonitorSystemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMonitorSystemInvoker) Invoke() (*model.ShowMonitorSystemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMonitorSystemResponse), nil
+	}
+}
+
+type UpdateMonitorSystemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMonitorSystemInvoker) Invoke() (*model.UpdateMonitorSystemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMonitorSystemResponse), nil
+	}
+}
+
 type CreateTimerRuleInvoker struct {
 	*invoker.BaseInvoker
 }

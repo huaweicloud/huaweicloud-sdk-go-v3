@@ -11,8 +11,8 @@ type DataobjectSearchConditionConditions struct {
 	// 表达式名称
 	Name *string `json:"name,omitempty"`
 
-	// 表达式内容
-	Data *[]DataobjectSearchConditionData `json:"data,omitempty"`
+	// 表达式内容列表
+	Data *[]string `json:"data,omitempty"`
 }
 
 func (o DataobjectSearchConditionConditions) String() string {

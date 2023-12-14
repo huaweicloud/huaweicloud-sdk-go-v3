@@ -17,6 +17,18 @@ func (i *CreateAccessConfigInvoker) Invoke() (*model.CreateAccessConfigResponse,
 	}
 }
 
+type CreateAgencyAccessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyAccessInvoker) Invoke() (*model.CreateAgencyAccessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyAccessResponse), nil
+	}
+}
+
 type CreateDashBoardInvoker struct {
 	*invoker.BaseInvoker
 }

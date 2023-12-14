@@ -24,8 +24,7 @@ type CreateRocketMqMigrationTaskRequest struct {
 	// 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)
 	Type CreateRocketMqMigrationTaskRequestType `json:"type"`
 
-	// 元数据json文件。
-	Body map[string]interface{} `json:"body,omitempty"`
+	Body *CreateRocketMqMigrationTaskReq `json:"body,omitempty"`
 }
 
 func (o CreateRocketMqMigrationTaskRequest) String() string {

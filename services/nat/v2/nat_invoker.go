@@ -221,66 +221,6 @@ func (i *BatchCreateDeleteNatGatewayTagInvoker) Invoke() (*model.BatchCreateDele
 	}
 }
 
-type CreateNatGatewayTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateNatGatewayTagInvoker) Invoke() (*model.CreateNatGatewayTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateNatGatewayTagResponse), nil
-	}
-}
-
-type DeleteNatGatewayTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteNatGatewayTagInvoker) Invoke() (*model.DeleteNatGatewayTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteNatGatewayTagResponse), nil
-	}
-}
-
-type ListNatGatewayByTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNatGatewayByTagInvoker) Invoke() (*model.ListNatGatewayByTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNatGatewayByTagResponse), nil
-	}
-}
-
-type ListNatGatewayTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNatGatewayTagInvoker) Invoke() (*model.ListNatGatewayTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNatGatewayTagResponse), nil
-	}
-}
-
-type ShowNatGatewayTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNatGatewayTagInvoker) Invoke() (*model.ShowNatGatewayTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNatGatewayTagResponse), nil
-	}
-}
-
 type BatchCreateDeletePrivateNatTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +242,18 @@ func (i *CreateNatGatewayInvoker) Invoke() (*model.CreateNatGatewayResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateNatGatewayResponse), nil
+	}
+}
+
+type CreateNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNatGatewayTagInvoker) Invoke() (*model.CreateNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNatGatewayTagResponse), nil
 	}
 }
 
@@ -341,6 +293,18 @@ func (i *DeleteNatGatewayInvoker) Invoke() (*model.DeleteNatGatewayResponse, err
 	}
 }
 
+type DeleteNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNatGatewayTagInvoker) Invoke() (*model.DeleteNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNatGatewayTagResponse), nil
+	}
+}
+
 type DeletePrivateNatInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +326,30 @@ func (i *DeletePrivateNatTagInvoker) Invoke() (*model.DeletePrivateNatTagRespons
 		return nil, err
 	} else {
 		return result.(*model.DeletePrivateNatTagResponse), nil
+	}
+}
+
+type ListNatGatewayByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNatGatewayByTagInvoker) Invoke() (*model.ListNatGatewayByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNatGatewayByTagResponse), nil
+	}
+}
+
+type ListNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNatGatewayTagInvoker) Invoke() (*model.ListNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNatGatewayTagResponse), nil
 	}
 }
 
@@ -422,6 +410,18 @@ func (i *ShowNatGatewayInvoker) Invoke() (*model.ShowNatGatewayResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowNatGatewayResponse), nil
+	}
+}
+
+type ShowNatGatewayTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNatGatewayTagInvoker) Invoke() (*model.ShowNatGatewayTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNatGatewayTagResponse), nil
 	}
 }
 

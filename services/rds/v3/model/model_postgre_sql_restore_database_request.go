@@ -10,7 +10,7 @@ import (
 type PostgreSqlRestoreDatabaseRequest struct {
 
 	// 库级恢复实例信息
-	Instances *[]RestoreDatabaseInstance `json:"instances,omitempty"`
+	Instances []RestoreDatabaseInstance `json:"instances"`
 }
 
 func (o PostgreSqlRestoreDatabaseRequest) String() string {

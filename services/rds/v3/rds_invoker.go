@@ -257,6 +257,18 @@ func (i *DeleteJobInvoker) Invoke() (*model.DeleteJobResponse, error) {
 	}
 }
 
+type DeleteLogLtsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogLtsConfigsInvoker) Invoke() (*model.DeleteLogLtsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLogLtsConfigsResponse), nil
+	}
+}
+
 type DeleteManualBackupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +566,18 @@ func (i *ListJobInfoDetailInvoker) Invoke() (*model.ListJobInfoDetailResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListJobInfoDetailResponse), nil
+	}
+}
+
+type ListLogLtsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogLtsConfigsInvoker) Invoke() (*model.ListLogLtsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogLtsConfigsResponse), nil
 	}
 }
 
@@ -926,6 +950,18 @@ func (i *SetBinlogClearPolicyInvoker) Invoke() (*model.SetBinlogClearPolicyRespo
 		return nil, err
 	} else {
 		return result.(*model.SetBinlogClearPolicyResponse), nil
+	}
+}
+
+type SetLogLtsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetLogLtsConfigsInvoker) Invoke() (*model.SetLogLtsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetLogLtsConfigsResponse), nil
 	}
 }
 

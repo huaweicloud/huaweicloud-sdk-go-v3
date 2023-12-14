@@ -20,6 +20,9 @@ type UpdateTaskStatusReq struct {
 
 	// 是否切换hce
 	SwitchHce *bool `json:"switch_hce,omitempty"`
+
+	// 是否进行一致性校验
+	IsNeedConsistencyCheck *bool `json:"is_need_consistency_check,omitempty"`
 }
 
 func (o UpdateTaskStatusReq) String() string {

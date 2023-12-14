@@ -653,6 +653,18 @@ func (i *ShowOpenSourceStrategyInvoker) Invoke() (*model.ShowOpenSourceStrategyR
 	}
 }
 
+type ShowPipelineDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineDetailInvoker) Invoke() (*model.ShowPipelineDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPipelineDetailResponse), nil
+	}
+}
+
 type ShowPipelineGroupTreeInvoker struct {
 	*invoker.BaseInvoker
 }

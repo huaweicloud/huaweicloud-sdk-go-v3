@@ -5,115 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dli/v1/model"
 )
 
-type BatchDeleteSqlJobTemplatesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteSqlJobTemplatesInvoker) Invoke() (*model.BatchDeleteSqlJobTemplatesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteSqlJobTemplatesResponse), nil
-	}
-}
-
-type CreateSparkJobTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSparkJobTemplateInvoker) Invoke() (*model.CreateSparkJobTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSparkJobTemplateResponse), nil
-	}
-}
-
-type CreateSqlJobTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSqlJobTemplateInvoker) Invoke() (*model.CreateSqlJobTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSqlJobTemplateResponse), nil
-	}
-}
-
-type ListSparkJobTemplatesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSparkJobTemplatesInvoker) Invoke() (*model.ListSparkJobTemplatesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSparkJobTemplatesResponse), nil
-	}
-}
-
-type ListSqlJobTemplatesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSqlJobTemplatesInvoker) Invoke() (*model.ListSqlJobTemplatesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSqlJobTemplatesResponse), nil
-	}
-}
-
-type ShowSparkJobTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSparkJobTemplateInvoker) Invoke() (*model.ShowSparkJobTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSparkJobTemplateResponse), nil
-	}
-}
-
-type ShowSqlSampleTemplatesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ShowSqlSampleTemplatesInvoker) Invoke() (*model.ShowSqlSampleTemplatesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSqlSampleTemplatesResponse), nil
-	}
-}
-
-type UpdateSparkJobTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateSparkJobTemplateInvoker) Invoke() (*model.UpdateSparkJobTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateSparkJobTemplateResponse), nil
-	}
-}
-
-type UpdateSqlJobTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateSqlJobTemplateInvoker) Invoke() (*model.UpdateSqlJobTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateSqlJobTemplateResponse), nil
-	}
-}
-
 type AssociateQueueToElasticResourcePoolInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +217,18 @@ func (i *CreateQueuePropertyInvoker) Invoke() (*model.CreateQueuePropertyRespons
 	}
 }
 
+type CreateRouteToEnhancedConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRouteToEnhancedConnectionInvoker) Invoke() (*model.CreateRouteToEnhancedConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRouteToEnhancedConnectionResponse), nil
+	}
+}
+
 type DeleteAuthInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -460,6 +363,18 @@ func (i *DeleteResourceInvoker) Invoke() (*model.DeleteResourceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteResourceResponse), nil
+	}
+}
+
+type DeleteRouteFromEnhancedConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRouteFromEnhancedConnectionInvoker) Invoke() (*model.DeleteRouteFromEnhancedConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRouteFromEnhancedConnectionResponse), nil
 	}
 }
 
@@ -1304,6 +1219,30 @@ func (i *CreateSparkJobInvoker) Invoke() (*model.CreateSparkJobResponse, error) 
 	}
 }
 
+type CreateSparkJobTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSparkJobTemplateInvoker) Invoke() (*model.CreateSparkJobTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSparkJobTemplateResponse), nil
+	}
+}
+
+type ListSparkJobTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSparkJobTemplatesInvoker) Invoke() (*model.ListSparkJobTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSparkJobTemplatesResponse), nil
+	}
+}
+
 type ListSparkJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1353,6 +1292,42 @@ func (i *ShowSparkJobStatusInvoker) Invoke() (*model.ShowSparkJobStatusResponse,
 	}
 }
 
+type ShowSparkJobTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSparkJobTemplateInvoker) Invoke() (*model.ShowSparkJobTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSparkJobTemplateResponse), nil
+	}
+}
+
+type UpdateSparkJobTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSparkJobTemplateInvoker) Invoke() (*model.UpdateSparkJobTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSparkJobTemplateResponse), nil
+	}
+}
+
+type BatchDeleteSqlJobTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSqlJobTemplatesInvoker) Invoke() (*model.BatchDeleteSqlJobTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSqlJobTemplatesResponse), nil
+	}
+}
+
 type CancelSqlJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1399,6 +1374,18 @@ func (i *CreateSqlJobInvoker) Invoke() (*model.CreateSqlJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateSqlJobResponse), nil
+	}
+}
+
+type CreateSqlJobTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSqlJobTemplateInvoker) Invoke() (*model.CreateSqlJobTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSqlJobTemplateResponse), nil
 	}
 }
 
@@ -1506,6 +1493,18 @@ func (i *ListDatabasesInvoker) Invoke() (*model.ListDatabasesResponse, error) {
 	}
 }
 
+type ListSqlJobTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlJobTemplatesInvoker) Invoke() (*model.ListSqlJobTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlJobTemplatesResponse), nil
+	}
+}
+
 type ListSqlJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1592,6 +1591,19 @@ func (i *ShowSqlJobStatusInvoker) Invoke() (*model.ShowSqlJobStatusResponse, err
 	}
 }
 
+type ShowSqlSampleTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowSqlSampleTemplatesInvoker) Invoke() (*model.ShowSqlSampleTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlSampleTemplatesResponse), nil
+	}
+}
+
 type ShowTableContentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1615,6 +1627,18 @@ func (i *UpdateDatabaseOwnerInvoker) Invoke() (*model.UpdateDatabaseOwnerRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateDatabaseOwnerResponse), nil
+	}
+}
+
+type UpdateSqlJobTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSqlJobTemplateInvoker) Invoke() (*model.UpdateSqlJobTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSqlJobTemplateResponse), nil
 	}
 }
 

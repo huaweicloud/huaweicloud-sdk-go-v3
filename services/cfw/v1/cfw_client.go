@@ -271,6 +271,27 @@ func (c *CfwClient) CreateEastWestFirewallInvoker(request *model.CreateEastWestF
 	return &CreateEastWestFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFirewall 创建防火墙
+//
+// 创建防火墙
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) CreateFirewall(request *model.CreateFirewallRequest) (*model.CreateFirewallResponse, error) {
+	requestDef := GenReqDefForCreateFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFirewallResponse), nil
+	}
+}
+
+// CreateFirewallInvoker 创建防火墙
+func (c *CfwClient) CreateFirewallInvoker(request *model.CreateFirewallRequest) *CreateFirewallInvoker {
+	requestDef := GenReqDefForCreateFirewall()
+	return &CreateFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAddressItem 删除地址组成员
 //
 // 删除地址组成员
@@ -374,6 +395,27 @@ func (c *CfwClient) DeleteDomains(request *model.DeleteDomainsRequest) (*model.D
 func (c *CfwClient) DeleteDomainsInvoker(request *model.DeleteDomainsRequest) *DeleteDomainsInvoker {
 	requestDef := GenReqDefForDeleteDomains()
 	return &DeleteDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFirewall 删除防火墙
+//
+// 删除防火墙，仅按需生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) DeleteFirewall(request *model.DeleteFirewallRequest) (*model.DeleteFirewallResponse, error) {
+	requestDef := GenReqDefForDeleteFirewall()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFirewallResponse), nil
+	}
+}
+
+// DeleteFirewallInvoker 删除防火墙
+func (c *CfwClient) DeleteFirewallInvoker(request *model.DeleteFirewallRequest) *DeleteFirewallInvoker {
+	requestDef := GenReqDefForDeleteFirewall()
+	return &DeleteFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteServiceItem 删除服务成员
@@ -710,6 +752,27 @@ func (c *CfwClient) ListFlowLogs(request *model.ListFlowLogsRequest) (*model.Lis
 func (c *CfwClient) ListFlowLogsInvoker(request *model.ListFlowLogsRequest) *ListFlowLogsInvoker {
 	requestDef := GenReqDefForListFlowLogs()
 	return &ListFlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJob 获取CFW任务执行状态
+//
+// 获取CFW任务执行状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListJob(request *model.ListJobRequest) (*model.ListJobResponse, error) {
+	requestDef := GenReqDefForListJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobResponse), nil
+	}
+}
+
+// ListJobInvoker 获取CFW任务执行状态
+func (c *CfwClient) ListJobInvoker(request *model.ListJobRequest) *ListJobInvoker {
+	requestDef := GenReqDefForListJob()
+	return &ListJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLogConfig 获取日志配置

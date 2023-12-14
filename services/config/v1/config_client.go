@@ -1447,6 +1447,27 @@ func (c *ConfigClient) CollectAllResourcesSummaryInvoker(request *model.CollectA
 	return &CollectAllResourcesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectTrackedResourcesSummary 列举资源记录器收集的资源概要
+//
+// 查询当前用户资源记录器收集的资源概览。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CollectTrackedResourcesSummary(request *model.CollectTrackedResourcesSummaryRequest) (*model.CollectTrackedResourcesSummaryResponse, error) {
+	requestDef := GenReqDefForCollectTrackedResourcesSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectTrackedResourcesSummaryResponse), nil
+	}
+}
+
+// CollectTrackedResourcesSummaryInvoker 列举资源记录器收集的资源概要
+func (c *ConfigClient) CollectTrackedResourcesSummaryInvoker(request *model.CollectTrackedResourcesSummaryRequest) *CollectTrackedResourcesSummaryInvoker {
+	requestDef := GenReqDefForCollectTrackedResourcesSummary()
+	return &CollectTrackedResourcesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountAllResources 查询资源数量
 //
 // 查询当前帐号的资源数量。
@@ -1466,6 +1487,27 @@ func (c *ConfigClient) CountAllResources(request *model.CountAllResourcesRequest
 func (c *ConfigClient) CountAllResourcesInvoker(request *model.CountAllResourcesRequest) *CountAllResourcesInvoker {
 	requestDef := GenReqDefForCountAllResources()
 	return &CountAllResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountTrackedResources 查询资源记录器收集的资源数量
+//
+// 查询当前用户资源记录器收集的资源数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CountTrackedResources(request *model.CountTrackedResourcesRequest) (*model.CountTrackedResourcesResponse, error) {
+	requestDef := GenReqDefForCountTrackedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountTrackedResourcesResponse), nil
+	}
+}
+
+// CountTrackedResourcesInvoker 查询资源记录器收集的资源数量
+func (c *ConfigClient) CountTrackedResourcesInvoker(request *model.CountTrackedResourcesRequest) *CountTrackedResourcesInvoker {
+	requestDef := GenReqDefForCountTrackedResources()
+	return &CountTrackedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAllResources 列举所有资源
@@ -1552,6 +1594,48 @@ func (c *ConfigClient) ListResourcesInvoker(request *model.ListResourcesRequest)
 	return &ListResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTrackedResourceTags 列举资源记录器收集的资源标签
+//
+// 查询当前用户资源记录器收集的资源的标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListTrackedResourceTags(request *model.ListTrackedResourceTagsRequest) (*model.ListTrackedResourceTagsResponse, error) {
+	requestDef := GenReqDefForListTrackedResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTrackedResourceTagsResponse), nil
+	}
+}
+
+// ListTrackedResourceTagsInvoker 列举资源记录器收集的资源标签
+func (c *ConfigClient) ListTrackedResourceTagsInvoker(request *model.ListTrackedResourceTagsRequest) *ListTrackedResourceTagsInvoker {
+	requestDef := GenReqDefForListTrackedResourceTags()
+	return &ListTrackedResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTrackedResources 列举资源记录器收集的全部资源
+//
+// 查询当前用户资源记录器收集的全部资源，需要当前用户有rms:resources:list权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListTrackedResources(request *model.ListTrackedResourcesRequest) (*model.ListTrackedResourcesResponse, error) {
+	requestDef := GenReqDefForListTrackedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTrackedResourcesResponse), nil
+	}
+}
+
+// ListTrackedResourcesInvoker 列举资源记录器收集的全部资源
+func (c *ConfigClient) ListTrackedResourcesInvoker(request *model.ListTrackedResourcesRequest) *ListTrackedResourcesInvoker {
+	requestDef := GenReqDefForListTrackedResources()
+	return &ListTrackedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceById 查询单个资源
 //
 // 指定资源ID，返回该资源的详细信息，需要当前用户有rms:resources:get权限。比如查询云服务器，对应的Config资源类型是ecs.cloudservers，其中provider为ecs，type为cloudservers。Config支持的服务和资源类型参见[支持的服务和区域](https://console.huaweicloud.com/eps/#/resources/supported)。
@@ -1592,6 +1676,27 @@ func (c *ConfigClient) ShowResourceDetail(request *model.ShowResourceDetailReque
 func (c *ConfigClient) ShowResourceDetailInvoker(request *model.ShowResourceDetailRequest) *ShowResourceDetailInvoker {
 	requestDef := GenReqDefForShowResourceDetail()
 	return &ShowResourceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTrackedResourceDetail 查询资源记录器收集的单个资源
+//
+// 查询当前用户资源记录器收集的单个资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ShowTrackedResourceDetail(request *model.ShowTrackedResourceDetailRequest) (*model.ShowTrackedResourceDetailResponse, error) {
+	requestDef := GenReqDefForShowTrackedResourceDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrackedResourceDetailResponse), nil
+	}
+}
+
+// ShowTrackedResourceDetailInvoker 查询资源记录器收集的单个资源
+func (c *ConfigClient) ShowTrackedResourceDetailInvoker(request *model.ShowTrackedResourceDetailRequest) *ShowTrackedResourceDetailInvoker {
+	requestDef := GenReqDefForShowTrackedResourceDetail()
+	return &ShowTrackedResourceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTrackerConfig 创建或更新记录器

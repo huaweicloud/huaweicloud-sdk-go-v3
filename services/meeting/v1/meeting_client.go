@@ -1623,6 +1623,27 @@ func (c *MeetingClient) ResetVisionActiveCodeInvoker(request *model.ResetVisionA
 	return &ResetVisionActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResumeSimultaneousInterpretation 开启/关闭同声传译
+//
+// 该接口用于会议主席可以通过该接口开启/关闭同声传译。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) ResumeSimultaneousInterpretation(request *model.ResumeSimultaneousInterpretationRequest) (*model.ResumeSimultaneousInterpretationResponse, error) {
+	requestDef := GenReqDefForResumeSimultaneousInterpretation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResumeSimultaneousInterpretationResponse), nil
+	}
+}
+
+// ResumeSimultaneousInterpretationInvoker 开启/关闭同声传译
+func (c *MeetingClient) ResumeSimultaneousInterpretationInvoker(request *model.ResumeSimultaneousInterpretationRequest) *ResumeSimultaneousInterpretationInvoker {
+	requestDef := GenReqDefForResumeSimultaneousInterpretation()
+	return &ResumeSimultaneousInterpretationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RollcallParticipant 点名会场
 //
 // 该接口用于点名指定与会者。点名会场的效果是除了主持人外，点名与会者为非静音状态，未点名的与会者统一为静音状态。同一时间，只允许一个与会者被点名。
@@ -2217,6 +2238,27 @@ func (c *MeetingClient) SendVeriCodeForUpdateUserInfoInvoker(request *model.Send
 	return &SendVeriCodeForUpdateUserInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAttendeeLanChannel 设置普通与会人的语言频道
+//
+// 主持人通过该接口设置某些普通与会者(包括主持人)加入哪个语言频道。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) SetAttendeeLanChannel(request *model.SetAttendeeLanChannelRequest) (*model.SetAttendeeLanChannelResponse, error) {
+	requestDef := GenReqDefForSetAttendeeLanChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAttendeeLanChannelResponse), nil
+	}
+}
+
+// SetAttendeeLanChannelInvoker 设置普通与会人的语言频道
+func (c *MeetingClient) SetAttendeeLanChannelInvoker(request *model.SetAttendeeLanChannelRequest) *SetAttendeeLanChannelInvoker {
+	requestDef := GenReqDefForSetAttendeeLanChannel()
+	return &SetAttendeeLanChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetCohost 申请联席主持人
 //
 // 该接口用于设置联席主持人或释放联席主持人。只能将来宾设置为联席主持人。
@@ -2278,6 +2320,27 @@ func (c *MeetingClient) SetHostView(request *model.SetHostViewRequest) (*model.S
 func (c *MeetingClient) SetHostViewInvoker(request *model.SetHostViewRequest) *SetHostViewInvoker {
 	requestDef := GenReqDefForSetHostView()
 	return &SetHostViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetInterpreterGroup 设置传译组
+//
+// 主持人通过该接口设置传译组，每个传译组支持两种语言，传译组内支持多个传译员。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) SetInterpreterGroup(request *model.SetInterpreterGroupRequest) (*model.SetInterpreterGroupResponse, error) {
+	requestDef := GenReqDefForSetInterpreterGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInterpreterGroupResponse), nil
+	}
+}
+
+// SetInterpreterGroupInvoker 设置传译组
+func (c *MeetingClient) SetInterpreterGroupInvoker(request *model.SetInterpreterGroupRequest) *SetInterpreterGroupInvoker {
+	requestDef := GenReqDefForSetInterpreterGroup()
+	return &SetInterpreterGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetMultiPicture 设置多画面

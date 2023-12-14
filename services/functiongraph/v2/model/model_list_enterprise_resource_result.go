@@ -11,7 +11,7 @@ type ListEnterpriseResourceResult struct {
 	// 资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	ResourceDetail *ListFunctionResult `json:"resource_detail,omitempty"`
+	ResourceDetail *ListEnterpriseResourceDetail `json:"resource_detail,omitempty"`
 
 	// 标签列表
 	Tags *[]KvItem `json:"tags,omitempty"`

@@ -821,6 +821,18 @@ func (i *CollectAllResourcesSummaryInvoker) Invoke() (*model.CollectAllResources
 	}
 }
 
+type CollectTrackedResourcesSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectTrackedResourcesSummaryInvoker) Invoke() (*model.CollectTrackedResourcesSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectTrackedResourcesSummaryResponse), nil
+	}
+}
+
 type CountAllResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -830,6 +842,18 @@ func (i *CountAllResourcesInvoker) Invoke() (*model.CountAllResourcesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CountAllResourcesResponse), nil
+	}
+}
+
+type CountTrackedResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountTrackedResourcesInvoker) Invoke() (*model.CountTrackedResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountTrackedResourcesResponse), nil
 	}
 }
 
@@ -881,6 +905,30 @@ func (i *ListResourcesInvoker) Invoke() (*model.ListResourcesResponse, error) {
 	}
 }
 
+type ListTrackedResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTrackedResourceTagsInvoker) Invoke() (*model.ListTrackedResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTrackedResourceTagsResponse), nil
+	}
+}
+
+type ListTrackedResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTrackedResourcesInvoker) Invoke() (*model.ListTrackedResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTrackedResourcesResponse), nil
+	}
+}
+
 type ShowResourceByIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -902,6 +950,18 @@ func (i *ShowResourceDetailInvoker) Invoke() (*model.ShowResourceDetailResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowResourceDetailResponse), nil
+	}
+}
+
+type ShowTrackedResourceDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTrackedResourceDetailInvoker) Invoke() (*model.ShowTrackedResourceDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTrackedResourceDetailResponse), nil
 	}
 }
 

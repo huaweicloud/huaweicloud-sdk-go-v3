@@ -1153,6 +1153,27 @@ func (c *CodeArtsPipelineClient) ShowOpenSourceStrategyInvoker(request *model.Sh
 	return &ShowOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPipelineDetail 查询流水线详情
+//
+// 查询流水线详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowPipelineDetail(request *model.ShowPipelineDetailRequest) (*model.ShowPipelineDetailResponse, error) {
+	requestDef := GenReqDefForShowPipelineDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPipelineDetailResponse), nil
+	}
+}
+
+// ShowPipelineDetailInvoker 查询流水线详情
+func (c *CodeArtsPipelineClient) ShowPipelineDetailInvoker(request *model.ShowPipelineDetailRequest) *ShowPipelineDetailInvoker {
+	requestDef := GenReqDefForShowPipelineDetail()
+	return &ShowPipelineDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPipelineGroupTree 查询流水线分组树
 //
 // 查询流水线分组树

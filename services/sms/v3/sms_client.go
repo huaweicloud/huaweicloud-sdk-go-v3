@@ -481,6 +481,27 @@ func (c *SmsClient) ShowConfigSettingInvoker(request *model.ShowConfigSettingReq
 	return &ShowConfigSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowConsistencyResult 获取一致性校验结果
+//
+// 获取一致性校验结果简报
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ShowConsistencyResult(request *model.ShowConsistencyResultRequest) (*model.ShowConsistencyResultResponse, error) {
+	requestDef := GenReqDefForShowConsistencyResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConsistencyResultResponse), nil
+	}
+}
+
+// ShowConsistencyResultInvoker 获取一致性校验结果
+func (c *SmsClient) ShowConsistencyResultInvoker(request *model.ShowConsistencyResultRequest) *ShowConsistencyResultInvoker {
+	requestDef := GenReqDefForShowConsistencyResult()
+	return &ShowConsistencyResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMigproject 查询指定ID迁移项目详情
 //
 // 查询指定ID的迁移项目详情。
@@ -731,6 +752,27 @@ func (c *SmsClient) UpdateCommandResult(request *model.UpdateCommandResultReques
 func (c *SmsClient) UpdateCommandResultInvoker(request *model.UpdateCommandResultRequest) *UpdateCommandResultInvoker {
 	requestDef := GenReqDefForUpdateCommandResult()
 	return &UpdateCommandResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateConsistencyResult 上传一致性校验结果
+//
+// # Agent 上传一致性校验结果简报
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) UpdateConsistencyResult(request *model.UpdateConsistencyResultRequest) (*model.UpdateConsistencyResultResponse, error) {
+	requestDef := GenReqDefForUpdateConsistencyResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateConsistencyResultResponse), nil
+	}
+}
+
+// UpdateConsistencyResultInvoker 上传一致性校验结果
+func (c *SmsClient) UpdateConsistencyResultInvoker(request *model.UpdateConsistencyResultRequest) *UpdateConsistencyResultInvoker {
+	requestDef := GenReqDefForUpdateConsistencyResult()
+	return &UpdateConsistencyResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCopyState 更新任务对应源端复制状态

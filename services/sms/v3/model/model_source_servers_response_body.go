@@ -72,6 +72,9 @@ type SourceServersResponseBody struct {
 
 	// 源端状态（state）上次发生变化的时间
 	StateActionTime *int64 `json:"state_action_time,omitempty"`
+
+	// 是否有一致性校验结果
+	IsConsistencyResultExist *bool `json:"is_consistency_result_exist,omitempty"`
 }
 
 func (o SourceServersResponseBody) String() string {

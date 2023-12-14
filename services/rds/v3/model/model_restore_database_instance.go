@@ -10,13 +10,13 @@ import (
 type RestoreDatabaseInstance struct {
 
 	// 恢复时间
-	RestoreTime *int64 `json:"restore_time,omitempty"`
+	RestoreTime int64 `json:"restore_time"`
 
 	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty"`
+	InstanceId string `json:"instance_id"`
 
 	// 库信息
-	Databases *[]RestoreDatabaseInfo `json:"databases,omitempty"`
+	Databases []RestoreDatabaseInfo `json:"databases"`
 }
 
 func (o RestoreDatabaseInstance) String() string {

@@ -18,7 +18,7 @@ type EntrypointItem struct {
 	MasterEntrypointIpv6 *string `json:"masterEntrypointIpv6,omitempty"`
 
 	// 微服务引擎专享版组件的ipv4备接入地址
-	SlaveEntrypoint *string `json:"slave_entrypoint,omitempty"`
+	SlaveEntrypoint *string `json:"slaveEntrypoint,omitempty"`
 
 	// 微服务引擎专享版组件的ipv6备接入地址
 	SlaveEntrypointIpv6 *string `json:"slaveEntrypointIpv6,omitempty"`
