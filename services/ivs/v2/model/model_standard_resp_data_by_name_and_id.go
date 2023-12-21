@@ -17,7 +17,7 @@ type StandardRespDataByNameAndId struct {
 	// 审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
 	VerificationCode int32 `json:"verification_code"`
 
-	// 人像相识度。取值范围[0,100]
+	// 人像相识度，取值默认范围为[0,100]，当入参detail为true时，取值范围为[0,1000]。
 	Similarity string `json:"similarity"`
 }
 

@@ -13,7 +13,7 @@ type ConsistencyResultRequestBody struct {
 	ConsistencyResult []ConsistencyResult `json:"consistency_result"`
 
 	// 检验完成时间
-	FinishedTime int64 `json:"finished_time"`
+	FinishedTime *int64 `json:"finished_time,omitempty"`
 }
 
 func (o ConsistencyResultRequestBody) String() string {

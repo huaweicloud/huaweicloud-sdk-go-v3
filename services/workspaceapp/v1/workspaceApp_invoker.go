@@ -209,6 +209,18 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 	}
 }
 
+type ShowJobDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobDetailResponse), nil
+	}
+}
+
 type CreateOrUpdateStoragePolicyStatementInvoker struct {
 	*invoker.BaseInvoker
 }

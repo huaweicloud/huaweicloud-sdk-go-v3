@@ -10,7 +10,11 @@ import (
 type CreateCloudTableClusterResponse struct {
 
 	// 集群ID
-	ClusterId      *string `json:"cluster_id,omitempty"`
+	ClusterId *string `json:"cluster_id,omitempty"`
+
+	JobId *string `json:"jobId,omitempty"`
+
+	GetJobEndpoint *string `json:"getJobEndpoint,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

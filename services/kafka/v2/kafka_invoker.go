@@ -161,18 +161,6 @@ func (i *CreateKafkaUserClientQuotaTaskInvoker) Invoke() (*model.CreateKafkaUser
 	}
 }
 
-type CreatePartitionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePartitionResponse), nil
-	}
-}
-
 type CreatePostPaidInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +470,18 @@ func (i *RestartManagerInvoker) Invoke() (*model.RestartManagerResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.RestartManagerResponse), nil
+	}
+}
+
+type SendKafkaMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SendKafkaMessageInvoker) Invoke() (*model.SendKafkaMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SendKafkaMessageResponse), nil
 	}
 }
 

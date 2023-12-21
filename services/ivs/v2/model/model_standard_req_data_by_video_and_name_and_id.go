@@ -22,6 +22,9 @@ type StandardReqDataByVideoAndNameAndId struct {
 
 	// 该参数为点头动作幅度的判断门限，取值范围：[1,90]，默认为10，单位为度。该值设置越大，则越难判断为点头。
 	NodThreshold *float64 `json:"nod_threshold,omitempty"`
+
+	// 响应参数similarity是否详细显示，默认为false。 - true表示响应中的similarity为0~1000的小数。 - false表示响应中的similarity为0~100的整数。
+	Detail *bool `json:"detail,omitempty"`
 }
 
 func (o StandardReqDataByVideoAndNameAndId) String() string {

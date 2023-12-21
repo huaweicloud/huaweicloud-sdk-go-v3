@@ -47,11 +47,11 @@ func GenReqDefForChangeInstanceOrder() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateInstance() *def.HttpRequestDef {
+func GenReqDefForCreateCbh() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/cbs/instance/create").
-		WithResponse(new(model.CreateInstanceResponse)).
+		WithResponse(new(model.CreateCbhResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -77,11 +77,11 @@ func GenReqDefForCreateInstanceOrder() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForInstallInstanceEip() *def.HttpRequestDef {
+func GenReqDefForInstallCbhEip() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/cbs/instance/{server_id}/eip/bind").
-		WithResponse(new(model.InstallInstanceEipResponse)).
+		WithResponse(new(model.InstallCbhEipResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -241,11 +241,11 @@ func GenReqDefForStopCbhInstance() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUninstallInstanceEip() *def.HttpRequestDef {
+func GenReqDefForUninstallCbhEip() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/cbs/instance/{server_id}/eip/unbind").
-		WithResponse(new(model.UninstallInstanceEipResponse)).
+		WithResponse(new(model.UninstallCbhEipResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

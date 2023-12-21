@@ -9,7 +9,7 @@ import (
 // CreateHpcCacheTaskResponse Response Object
 type CreateHpcCacheTaskResponse struct {
 
-	// 任务任务id
+	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

@@ -128,9 +128,9 @@ func (c *KafkaClient) BatchRestartOrDeleteInstancesInvoker(request *model.BatchR
 	return &BatchRestartOrDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CloseKafkaManager 关闭kafka manager
+// CloseKafkaManager 关闭Kafka Manager
 //
-// 关闭kafka manager，相应的原来开放出的management相关接口也将不可用
+// 关闭Kafka Manager，相应的原来开放出的management相关接口也将不可用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) CloseKafkaManager(request *model.CloseKafkaManagerRequest) (*model.CloseKafkaManagerResponse, error) {
@@ -143,7 +143,7 @@ func (c *KafkaClient) CloseKafkaManager(request *model.CloseKafkaManagerRequest)
 	}
 }
 
-// CloseKafkaManagerInvoker 关闭kafka manager
+// CloseKafkaManagerInvoker 关闭Kafka Manager
 func (c *KafkaClient) CloseKafkaManagerInvoker(request *model.CloseKafkaManagerRequest) *CloseKafkaManagerInvoker {
 	requestDef := GenReqDefForCloseKafkaManager()
 	return &CloseKafkaManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -279,9 +279,9 @@ func (c *KafkaClient) CreateKafkaConsumerGroupInvoker(request *model.CreateKafka
 	return &CreateKafkaConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateKafkaUserClientQuotaTask 创建客户端流控配置
+// CreateKafkaUserClientQuotaTask 创建用户/客户端流控配置
 //
-// 该接口用于向Kafka实例提交创建user、client级别的流控任务，若成功则返回流控任务的job id。
+// 该接口用于向Kafka实例提交创建用户、客户端级别的流控任务，若成功则返回流控任务的job_id。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) CreateKafkaUserClientQuotaTask(request *model.CreateKafkaUserClientQuotaTaskRequest) (*model.CreateKafkaUserClientQuotaTaskResponse, error) {
@@ -294,31 +294,10 @@ func (c *KafkaClient) CreateKafkaUserClientQuotaTask(request *model.CreateKafkaU
 	}
 }
 
-// CreateKafkaUserClientQuotaTaskInvoker 创建客户端流控配置
+// CreateKafkaUserClientQuotaTaskInvoker 创建用户/客户端流控配置
 func (c *KafkaClient) CreateKafkaUserClientQuotaTaskInvoker(request *model.CreateKafkaUserClientQuotaTaskRequest) *CreateKafkaUserClientQuotaTaskInvoker {
 	requestDef := GenReqDefForCreateKafkaUserClientQuotaTask()
 	return &CreateKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreatePartition 新增Kafka实例指定Topic分区
-//
-// 新增Kafka实例指定Topic分区。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*model.CreatePartitionResponse, error) {
-	requestDef := GenReqDefForCreatePartition()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePartitionResponse), nil
-	}
-}
-
-// CreatePartitionInvoker 新增Kafka实例指定Topic分区
-func (c *KafkaClient) CreatePartitionInvoker(request *model.CreatePartitionRequest) *CreatePartitionInvoker {
-	requestDef := GenReqDefForCreatePartition()
-	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePostPaidInstance 创建实例
@@ -405,9 +384,9 @@ func (c *KafkaClient) DeleteBackgroundTaskInvoker(request *model.DeleteBackgroun
 	return &DeleteBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteConnector 关闭实例转储节点
+// DeleteConnector 关闭Smart Connect（按需实例）
 //
-// 关闭实例转储节点。
+// 介绍按需实例如何关闭Smart Connect。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) DeleteConnector(request *model.DeleteConnectorRequest) (*model.DeleteConnectorResponse, error) {
@@ -420,7 +399,7 @@ func (c *KafkaClient) DeleteConnector(request *model.DeleteConnectorRequest) (*m
 	}
 }
 
-// DeleteConnectorInvoker 关闭实例转储节点
+// DeleteConnectorInvoker 关闭Smart Connect（按需实例）
 func (c *KafkaClient) DeleteConnectorInvoker(request *model.DeleteConnectorRequest) *DeleteConnectorInvoker {
 	requestDef := GenReqDefForDeleteConnector()
 	return &DeleteConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -447,9 +426,9 @@ func (c *KafkaClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteKafkaUserClientQuotaTask 删除客户端流控设置
+// DeleteKafkaUserClientQuotaTask 删除用户/客户端流控配置
 //
-// 该接口用于向Kafka实例提交删除user、client级别的流控任务，若成功则返回流控任务的job id。
+// 该接口用于向Kafka实例提交删除用户、客户端级别的流控任务，若成功则返回流控任务的job_id。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) DeleteKafkaUserClientQuotaTask(request *model.DeleteKafkaUserClientQuotaTaskRequest) (*model.DeleteKafkaUserClientQuotaTaskResponse, error) {
@@ -462,7 +441,7 @@ func (c *KafkaClient) DeleteKafkaUserClientQuotaTask(request *model.DeleteKafkaU
 	}
 }
 
-// DeleteKafkaUserClientQuotaTaskInvoker 删除客户端流控设置
+// DeleteKafkaUserClientQuotaTaskInvoker 删除用户/客户端流控配置
 func (c *KafkaClient) DeleteKafkaUserClientQuotaTaskInvoker(request *model.DeleteKafkaUserClientQuotaTaskRequest) *DeleteKafkaUserClientQuotaTaskInvoker {
 	requestDef := GenReqDefForDeleteKafkaUserClientQuotaTask()
 	return &DeleteKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -772,7 +751,7 @@ func (c *KafkaClient) ResetMessageOffsetInvoker(request *model.ResetMessageOffse
 
 // ResetPassword 重置密码
 //
-// 重置密码。
+// 重置密码（只针对开通SSL的实例）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
@@ -812,9 +791,9 @@ func (c *KafkaClient) ResetUserPasswrodInvoker(request *model.ResetUserPasswrodR
 	return &ResetUserPasswrodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizeEngineInstance 实例规格变更
+// ResizeEngineInstance 实例扩容
 //
-// 实例规格变更。[当前通过调用API，只支持按需实例进行实例规格变更。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+// 实例规格变更。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ResizeEngineInstance(request *model.ResizeEngineInstanceRequest) (*model.ResizeEngineInstanceResponse, error) {
@@ -827,15 +806,15 @@ func (c *KafkaClient) ResizeEngineInstance(request *model.ResizeEngineInstanceRe
 	}
 }
 
-// ResizeEngineInstanceInvoker 实例规格变更
+// ResizeEngineInstanceInvoker 实例扩容
 func (c *KafkaClient) ResizeEngineInstanceInvoker(request *model.ResizeEngineInstanceRequest) *ResizeEngineInstanceInvoker {
 	requestDef := GenReqDefForResizeEngineInstance()
 	return &ResizeEngineInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizeInstance 实例规格变更
+// ResizeInstance 实例扩容
 //
-// 实例规格变更。[当前通过调用API，只支持按需实例进行实例规格变更。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+// 实例扩容。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
@@ -848,7 +827,7 @@ func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*mod
 	}
 }
 
-// ResizeInstanceInvoker 实例规格变更
+// ResizeInstanceInvoker 实例扩容
 func (c *KafkaClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
 	requestDef := GenReqDefForResizeInstance()
 	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -873,6 +852,27 @@ func (c *KafkaClient) RestartManager(request *model.RestartManagerRequest) (*mod
 func (c *KafkaClient) RestartManagerInvoker(request *model.RestartManagerRequest) *RestartManagerInvoker {
 	requestDef := GenReqDefForRestartManager()
 	return &RestartManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SendKafkaMessage Kafka生产消息
+//
+// 在控制台发送指定消息到Kafka实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) SendKafkaMessage(request *model.SendKafkaMessageRequest) (*model.SendKafkaMessageResponse, error) {
+	requestDef := GenReqDefForSendKafkaMessage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SendKafkaMessageResponse), nil
+	}
+}
+
+// SendKafkaMessageInvoker Kafka生产消息
+func (c *KafkaClient) SendKafkaMessageInvoker(request *model.SendKafkaMessageRequest) *SendKafkaMessageInvoker {
+	requestDef := GenReqDefForSendKafkaMessage()
+	return &SendKafkaMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackgroundTask 查询后台任务管理中的指定记录
@@ -1193,7 +1193,7 @@ func (c *KafkaClient) ShowKafkaTopicPartitionDiskusageInvoker(request *model.Sho
 	return &ShowKafkaTopicPartitionDiskusageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowKafkaUserClientQuota 查询客户端流控配置
+// ShowKafkaUserClientQuota 查询用户/客户端流控配置
 //
 // 该接口用于向Kafka实例查询流控的配置，若成功则返回流控配置的列表。
 //
@@ -1208,7 +1208,7 @@ func (c *KafkaClient) ShowKafkaUserClientQuota(request *model.ShowKafkaUserClien
 	}
 }
 
-// ShowKafkaUserClientQuotaInvoker 查询客户端流控配置
+// ShowKafkaUserClientQuotaInvoker 查询用户/客户端流控配置
 func (c *KafkaClient) ShowKafkaUserClientQuotaInvoker(request *model.ShowKafkaUserClientQuotaRequest) *ShowKafkaUserClientQuotaInvoker {
 	requestDef := GenReqDefForShowKafkaUserClientQuota()
 	return &ShowKafkaUserClientQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1489,9 +1489,9 @@ func (c *KafkaClient) UpdateInstanceUserInvoker(request *model.UpdateInstanceUse
 	return &UpdateInstanceUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateKafkaUserClientQuotaTask 修改客户端流控设置
+// UpdateKafkaUserClientQuotaTask 修改用户/客户端流控配置
 //
-// 该接口用于向Kafka实例提交修改user、client级别的流控任务，若成功则返回流控任务的job id。
+// 该接口用于向Kafka实例提交修改用户、客户端级别的流控任务，若成功则返回流控任务的job_id。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) UpdateKafkaUserClientQuotaTask(request *model.UpdateKafkaUserClientQuotaTaskRequest) (*model.UpdateKafkaUserClientQuotaTaskResponse, error) {
@@ -1504,7 +1504,7 @@ func (c *KafkaClient) UpdateKafkaUserClientQuotaTask(request *model.UpdateKafkaU
 	}
 }
 
-// UpdateKafkaUserClientQuotaTaskInvoker 修改客户端流控设置
+// UpdateKafkaUserClientQuotaTaskInvoker 修改用户/客户端流控配置
 func (c *KafkaClient) UpdateKafkaUserClientQuotaTaskInvoker(request *model.UpdateKafkaUserClientQuotaTaskRequest) *UpdateKafkaUserClientQuotaTaskInvoker {
 	requestDef := GenReqDefForUpdateKafkaUserClientQuotaTask()
 	return &UpdateKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -15,7 +15,7 @@ type ListHpcCacheTasksRequest struct {
 	// 文件系统ID
 	ShareId string `json:"share_id"`
 
-	// 操作类型
+	// 任务类型
 	Type *string `json:"type,omitempty"`
 
 	// 任务状态

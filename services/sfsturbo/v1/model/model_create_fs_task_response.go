@@ -9,7 +9,7 @@ import (
 // CreateFsTaskResponse Response Object
 type CreateFsTaskResponse struct {
 
-	// 任务id
+	// 任务ID
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

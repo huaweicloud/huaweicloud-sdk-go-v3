@@ -10,16 +10,15 @@ import (
 type FsDuInfo struct {
 
 	// 文件系统内合法的目录全路径
-	Path string `json:"path"`
+	Path *string `json:"path,omitempty"`
 
 	// 占用容量，单位：byte
-	UsedCapacity int64 `json:"used_capacity"`
+	UsedCapacity *int64 `json:"used_capacity,omitempty"`
 
-	// 该目录下所有文件数目
-	FileCount *FsFileCount `json:"file_count"`
+	FileCount *FsFileCount `json:"file_count,omitempty"`
 
 	// 错误信息
-	Message string `json:"message"`
+	Message *string `json:"message,omitempty"`
 }
 
 func (o FsDuInfo) String() string {

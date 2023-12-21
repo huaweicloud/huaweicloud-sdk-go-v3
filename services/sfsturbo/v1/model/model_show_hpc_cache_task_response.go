@@ -9,7 +9,7 @@ import (
 // ShowHpcCacheTaskResponse Response Object
 type ShowHpcCacheTaskResponse struct {
 
-	// 任务id
+	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 
 	// 任务类型
@@ -18,16 +18,16 @@ type ShowHpcCacheTaskResponse struct {
 	// 任务状态
 	Status *string `json:"status,omitempty"`
 
-	// 源端对象
+	// 联动目录名称
 	SrcTarget *string `json:"src_target,omitempty"`
 
-	// 源端路径
+	// 导入导出任务的源端路径前缀
 	SrcPrefix *string `json:"src_prefix,omitempty"`
 
-	// 目的端对象
+	// 和src_target保持一致
 	DestTarget *string `json:"dest_target,omitempty"`
 
-	// 目的端路径
+	// 和src_prefix保持一致
 	DestPrefix *string `json:"dest_prefix,omitempty"`
 
 	// 任务开始时间

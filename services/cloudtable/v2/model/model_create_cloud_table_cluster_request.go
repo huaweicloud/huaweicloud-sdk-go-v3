@@ -12,7 +12,7 @@ type CreateCloudTableClusterRequest struct {
 	// 语言类型
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	Body *CreateClusterRequestBody `json:"body,omitempty"`
+	Body *CreateClusterReqBody `json:"body,omitempty"`
 }
 
 func (o CreateCloudTableClusterRequest) String() string {

@@ -31,6 +31,9 @@ type Node struct {
 	// 轮询节点执行结果时间间隔
 	PollingInterval *int32 `json:"pollingInterval,omitempty"`
 
+	// 节点是否超时重试
+	ExecTimeOutRetry *string `json:"execTimeOutRetry,omitempty"`
+
 	// 节点最大执行时间
 	MaxExecutionTime *int32 `json:"maxExecutionTime,omitempty"`
 

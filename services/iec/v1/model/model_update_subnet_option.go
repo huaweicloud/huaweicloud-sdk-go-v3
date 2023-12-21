@@ -23,6 +23,12 @@ type UpdateSubnetOption struct {
 
 	// 子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。  约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集
 	DnsList *[]string `json:"dnsList,omitempty"`
+
+	// 是否创建IPv6子网  取值范围：  - true：开启  - false：关闭  约束：   1、若该字段为true，则pool_id字段必填；若该字段为false，则pool_id字段不生效。   2、子网开启IPv6后不支持关闭。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// IPv6线路ID。
+	PoolId *string `json:"pool_id,omitempty"`
 }
 
 func (o UpdateSubnetOption) String() string {

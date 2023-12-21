@@ -418,48 +418,6 @@ func (c *EipClient) ShowPublicipInvoker(request *model.ShowPublicipRequest) *Sho
 	return &ShowPublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAssociatePublicip 绑定弹性公网IP
-//
-// 绑定弹性公网IP
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EipClient) UpdateAssociatePublicip(request *model.UpdateAssociatePublicipRequest) (*model.UpdateAssociatePublicipResponse, error) {
-	requestDef := GenReqDefForUpdateAssociatePublicip()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAssociatePublicipResponse), nil
-	}
-}
-
-// UpdateAssociatePublicipInvoker 绑定弹性公网IP
-func (c *EipClient) UpdateAssociatePublicipInvoker(request *model.UpdateAssociatePublicipRequest) *UpdateAssociatePublicipInvoker {
-	requestDef := GenReqDefForUpdateAssociatePublicip()
-	return &UpdateAssociatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateDisassociatePublicip 解绑弹性公网IP
-//
-// 解绑弹性公网IP
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EipClient) UpdateDisassociatePublicip(request *model.UpdateDisassociatePublicipRequest) (*model.UpdateDisassociatePublicipResponse, error) {
-	requestDef := GenReqDefForUpdateDisassociatePublicip()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateDisassociatePublicipResponse), nil
-	}
-}
-
-// UpdateDisassociatePublicipInvoker 解绑弹性公网IP
-func (c *EipClient) UpdateDisassociatePublicipInvoker(request *model.UpdateDisassociatePublicipRequest) *UpdateDisassociatePublicipInvoker {
-	requestDef := GenReqDefForUpdateDisassociatePublicip()
-	return &UpdateDisassociatePublicipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdatePublicip 更新弹性公网IP
 //
 // 更新弹性公网IP

@@ -17,6 +17,12 @@ type UpdateSubnetResponseObject struct {
 
 	// 子网的状态  取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
 	Status *UpdateSubnetResponseObjectStatus `json:"status,omitempty"`
+
+	// 是否开启IPv6
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// 对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数。
+	NeutronSubnetIdV6 *string `json:"neutron_subnet_id_v6,omitempty"`
 }
 
 func (o UpdateSubnetResponseObject) String() string {

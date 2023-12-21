@@ -143,6 +143,7 @@ type TestEndPointDbTypeEnum struct {
 	POSTGRESQL  TestEndPointDbType
 	KAFKA       TestEndPointDbType
 	GAUSSDBV5HA TestEndPointDbType
+	TAURUS      TestEndPointDbType
 }
 
 func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
@@ -164,6 +165,9 @@ func GetTestEndPointDbTypeEnum() TestEndPointDbTypeEnum {
 		},
 		GAUSSDBV5HA: TestEndPointDbType{
 			value: "gaussdbv5ha",
+		},
+		TAURUS: TestEndPointDbType{
+			value: "taurus",
 		},
 	}
 }

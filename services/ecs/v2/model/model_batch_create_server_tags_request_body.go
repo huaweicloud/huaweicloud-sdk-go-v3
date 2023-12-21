@@ -16,7 +16,7 @@ type BatchCreateServerTagsRequestBody struct {
 	Action BatchCreateServerTagsRequestBodyAction `json:"action"`
 
 	// 标签列表。
-	Tags []ServerTag `json:"tags"`
+	Tags []BatchAddServerTag `json:"tags"`
 }
 
 func (o BatchCreateServerTagsRequestBody) String() string {

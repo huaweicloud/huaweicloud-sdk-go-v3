@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PrepaidOptions 包年/包月计费信息
+// PrepaidOptions 包周期计费信息
 type PrepaidOptions struct {
 
 	// 订单ID

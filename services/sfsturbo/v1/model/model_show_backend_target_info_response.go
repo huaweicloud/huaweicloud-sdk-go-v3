@@ -12,18 +12,18 @@ import (
 // ShowBackendTargetInfoResponse Response Object
 type ShowBackendTargetInfoResponse struct {
 
-	// 后端存储库 id
+	// 绑定关系id
 	TargetId *string `json:"target_id,omitempty"`
 
-	// 后端存储库创建时间
+	// 绑定关系创建时间
 	CreationTime *string `json:"creation_time,omitempty"`
 
-	// 文件系统路径
+	// 联动目录名称
 	FileSystemPath *string `json:"file_system_path,omitempty"`
 
 	FailureDetails *FailureDetailsMessage `json:"failure_details,omitempty"`
 
-	// 后端存储库生命周期描述信息
+	// 绑定状态
 	Lifecycle *ShowBackendTargetInfoResponseLifecycle `json:"lifecycle,omitempty"`
 
 	Obs *ObsDataRepository `json:"obs,omitempty"`

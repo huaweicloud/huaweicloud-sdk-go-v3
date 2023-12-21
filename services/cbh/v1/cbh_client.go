@@ -61,25 +61,25 @@ func (c *CbhClient) ChangeInstanceOrderInvoker(request *model.ChangeInstanceOrde
 	return &ChangeInstanceOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateInstance 创建云堡垒机实例
+// CreateCbh 创建云堡垒机实例
 //
 // 创建云堡垒机实例。（创建云堡垒机实例订单前，先调用此接口）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CbhClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
-	requestDef := GenReqDefForCreateInstance()
+func (c *CbhClient) CreateCbh(request *model.CreateCbhRequest) (*model.CreateCbhResponse, error) {
+	requestDef := GenReqDefForCreateCbh()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateInstanceResponse), nil
+		return resp.(*model.CreateCbhResponse), nil
 	}
 }
 
-// CreateInstanceInvoker 创建云堡垒机实例
-func (c *CbhClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
-	requestDef := GenReqDefForCreateInstance()
-	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateCbhInvoker 创建云堡垒机实例
+func (c *CbhClient) CreateCbhInvoker(request *model.CreateCbhRequest) *CreateCbhInvoker {
+	requestDef := GenReqDefForCreateCbh()
+	return &CreateCbhInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInstanceOrder 创建云堡垒机实例订单
@@ -103,25 +103,25 @@ func (c *CbhClient) CreateInstanceOrderInvoker(request *model.CreateInstanceOrde
 	return &CreateInstanceOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// InstallInstanceEip 绑定弹性公网IP
+// InstallCbhEip 绑定弹性公网IP
 //
 // 云堡垒机实例绑定弹性公网IP
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CbhClient) InstallInstanceEip(request *model.InstallInstanceEipRequest) (*model.InstallInstanceEipResponse, error) {
-	requestDef := GenReqDefForInstallInstanceEip()
+func (c *CbhClient) InstallCbhEip(request *model.InstallCbhEipRequest) (*model.InstallCbhEipResponse, error) {
+	requestDef := GenReqDefForInstallCbhEip()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.InstallInstanceEipResponse), nil
+		return resp.(*model.InstallCbhEipResponse), nil
 	}
 }
 
-// InstallInstanceEipInvoker 绑定弹性公网IP
-func (c *CbhClient) InstallInstanceEipInvoker(request *model.InstallInstanceEipRequest) *InstallInstanceEipInvoker {
-	requestDef := GenReqDefForInstallInstanceEip()
-	return &InstallInstanceEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// InstallCbhEipInvoker 绑定弹性公网IP
+func (c *CbhClient) InstallCbhEipInvoker(request *model.InstallCbhEipRequest) *InstallCbhEipInvoker {
+	requestDef := GenReqDefForInstallCbhEip()
+	return &InstallCbhEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCbhInstance 获取CBH实例列表
@@ -334,25 +334,25 @@ func (c *CbhClient) StopCbhInstanceInvoker(request *model.StopCbhInstanceRequest
 	return &StopCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UninstallInstanceEip 解绑弹性公网IP
+// UninstallCbhEip 解绑弹性公网IP
 //
 // 云堡垒机实例解绑弹性公网IP。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CbhClient) UninstallInstanceEip(request *model.UninstallInstanceEipRequest) (*model.UninstallInstanceEipResponse, error) {
-	requestDef := GenReqDefForUninstallInstanceEip()
+func (c *CbhClient) UninstallCbhEip(request *model.UninstallCbhEipRequest) (*model.UninstallCbhEipResponse, error) {
+	requestDef := GenReqDefForUninstallCbhEip()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UninstallInstanceEipResponse), nil
+		return resp.(*model.UninstallCbhEipResponse), nil
 	}
 }
 
-// UninstallInstanceEipInvoker 解绑弹性公网IP
-func (c *CbhClient) UninstallInstanceEipInvoker(request *model.UninstallInstanceEipRequest) *UninstallInstanceEipInvoker {
-	requestDef := GenReqDefForUninstallInstanceEip()
-	return &UninstallInstanceEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UninstallCbhEipInvoker 解绑弹性公网IP
+func (c *CbhClient) UninstallCbhEipInvoker(request *model.UninstallCbhEipRequest) *UninstallCbhEipInvoker {
+	requestDef := GenReqDefForUninstallCbhEip()
+	return &UninstallCbhEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeCbhInstance 升级云堡垒机实例

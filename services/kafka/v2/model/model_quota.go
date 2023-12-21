@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Quota 客户端流控配置
+// Quota 用户/客户端流控配置
 type Quota struct {
 
 	// 用户名

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// StoragePoolStatus 机柜状态。 - CREATING：创建中 - AVAILABLE：可用 - EXPANDING：扩容中 - PENDING_PAYMENT：待支付
+// StoragePoolStatus 存储池状态。 - CREATING：创建中 - AVAILABLE：可用 - EXPANDING：扩容中 - PENDING_PAYMENT：待支付
 type StoragePoolStatus struct {
 	value string
 }

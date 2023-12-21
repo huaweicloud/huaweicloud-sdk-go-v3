@@ -45,7 +45,7 @@ type Port struct {
 	// DHCP的扩展属性。
 	ExtraDhcpOpts *[]ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
 
-	// IP/Mac对列表。  约束：IP地址不允许为 “0.0.0.0/0”  建议：如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+	// - 功能说明：IP/Mac对列表，allow_address_pair参见表3。 - 约束：   IP地址不允许为 “0.0.0.0/0”   如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。   如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。
 	AllowedAddressPairs *[]AllowedAddressPair `json:"allowed_address_pairs,omitempty"`
 
 	// 站点ID
@@ -56,6 +56,12 @@ type Port struct {
 
 	// 主网卡默认内网DNS名称  约束：不支持设置和更新，由系统自动维护
 	DnsName *string `json:"dns_name,omitempty"`
+
+	// IPv6带宽ID
+	Ipv6BandwidthId *string `json:"ipv6_bandwidth_id,omitempty"`
+
+	// 功能说明：提供用户设置自定义信息(扩展属性)
+	Bindingprofile *interface{} `json:"binding:profile,omitempty"`
 }
 
 func (o Port) String() string {

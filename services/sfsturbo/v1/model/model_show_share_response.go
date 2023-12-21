@@ -70,8 +70,14 @@ type ShowShareResponse struct {
 	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 用户指定的VPC ID。
-	VpcId          *string `json:"vpc_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	VpcId *string `json:"vpc_id,omitempty"`
+
+	// SFS Turbo文件系统绑定的企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// tag标签的列表。
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowShareResponse) String() string {

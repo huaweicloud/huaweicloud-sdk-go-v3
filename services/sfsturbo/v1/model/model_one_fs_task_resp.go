@@ -12,13 +12,12 @@ import (
 // OneFsTaskResp 查询任务详情
 type OneFsTaskResp struct {
 
-	// 任务id
+	// 任务ID
 	TaskId string `json:"task_id"`
 
 	// 任务状态, SUCCESS表示成功，DOING表示正在执行，FAIL表示失败
 	Status OneFsTaskRespStatus `json:"status"`
 
-	// 目录资源使用情况(包含子目录)
 	DirUsage *FsDuInfo `json:"dir_usage,omitempty"`
 
 	// 任务开始时间，UTC时间，例如：2006-01-02 15:04:05'

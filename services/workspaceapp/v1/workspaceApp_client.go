@@ -359,7 +359,7 @@ func (c *WorkspaceAppClient) ListAvailabilityZoneInvoker(request *model.ListAvai
 
 // ShowJob 查询任务的执行状态
 //
-// 查询Job的执行状态。
+// 查询Job的执行状态，即将下线。
 //
 // 对于创建云应用服务器命令下发后会返回job_id，通过job_id可以查询任务的执行状态。
 //
@@ -378,6 +378,29 @@ func (c *WorkspaceAppClient) ShowJob(request *model.ShowJobRequest) (*model.Show
 func (c *WorkspaceAppClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobDetail 查询任务的执行状态
+//
+// 查询Job的执行状态。
+//
+// 对于创建云服务器、删除云服务器、重装服务器等异步API，下发命令后会返回job_id，通过job_id可以查询任务的执行状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
+	requestDef := GenReqDefForShowJobDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobDetailResponse), nil
+	}
+}
+
+// ShowJobDetailInvoker 查询任务的执行状态
+func (c *WorkspaceAppClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *ShowJobDetailInvoker {
+	requestDef := GenReqDefForShowJobDetail()
+	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateOrUpdateStoragePolicyStatement 新增或更新存储目录访问权限自定义策略

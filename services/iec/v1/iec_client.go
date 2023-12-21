@@ -195,6 +195,27 @@ func (c *IecClient) CreateImageInvoker(request *model.CreateImageRequest) *Creat
 	return &CreateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateInstance 创建边缘实例
+//
+// 创建边缘实例。单租户默认可创建50个边缘实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
+	requestDef := GenReqDefForCreateInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstanceResponse), nil
+	}
+}
+
+// CreateInstanceInvoker 创建边缘实例
+func (c *IecClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
+	requestDef := GenReqDefForCreateInstance()
+	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateKeypair 创建和导入密钥
 //
 // 创建SSH密钥，或把公钥导入系统，生成密钥对。
@@ -699,6 +720,27 @@ func (c *IecClient) ExpandEdgecloud(request *model.ExpandEdgecloudRequest) (*mod
 func (c *IecClient) ExpandEdgecloudInvoker(request *model.ExpandEdgecloudRequest) *ExpandEdgecloudInvoker {
 	requestDef := GenReqDefForExpandEdgecloud()
 	return &ExpandEdgecloudInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidthTypes 查询共享带宽类型列表
+//
+// 查询共享带宽类型列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) ListBandwidthTypes(request *model.ListBandwidthTypesRequest) (*model.ListBandwidthTypesResponse, error) {
+	requestDef := GenReqDefForListBandwidthTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthTypesResponse), nil
+	}
+}
+
+// ListBandwidthTypesInvoker 查询共享带宽类型列表
+func (c *IecClient) ListBandwidthTypesInvoker(request *model.ListBandwidthTypesRequest) *ListBandwidthTypesInvoker {
+	requestDef := GenReqDefForListBandwidthTypes()
+	return &ListBandwidthTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListBandwidths 查询带宽列表
@@ -1777,4 +1819,25 @@ func (c *IecClient) UpdatePublicIp(request *model.UpdatePublicIpRequest) (*model
 func (c *IecClient) UpdatePublicIpInvoker(request *model.UpdatePublicIpRequest) *UpdatePublicIpInvoker {
 	requestDef := GenReqDefForUpdatePublicIp()
 	return &UpdatePublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSubnet 创建子网
+//
+// 根据用户的请求内容，创建子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) CreateSubnet(request *model.CreateSubnetRequest) (*model.CreateSubnetResponse, error) {
+	requestDef := GenReqDefForCreateSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubnetResponse), nil
+	}
+}
+
+// CreateSubnetInvoker 创建子网
+func (c *IecClient) CreateSubnetInvoker(request *model.CreateSubnetRequest) *CreateSubnetInvoker {
+	requestDef := GenReqDefForCreateSubnet()
+	return &CreateSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

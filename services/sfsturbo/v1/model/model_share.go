@@ -32,7 +32,7 @@ type Share struct {
 	// 文件系统类型，有效值为STANDARD或者PERFORMANCE。 通用型：标准型和标准型增强版填写STANDARD，性能型和性能型增强版填写PERFORMANCE。 HPC型：不校验该字段，可填写STANDARD或者PERFORMANCE。 HPC缓存型：不校验该字段，可填写STANDARD或者PERFORMANCE。
 	ShareType string `json:"share_type"`
 
-	// 通用型-普通文件系统容量，取值范围500~32768，单位GB。 通用型-增强版文件系统，即在“metadata”字段中设置了expand_type=\"bandwidth\"，则容量范围是10240~327680，单位GiB。 HPC型文件系统，即在“metadata”字段中设置了expand_type=\"hpc\"，则容量范围是3686~1048576，单位GiB。HPC型文件系统的容量必须为1.2TiB的倍数，换算为GiB后需要向下取整。如3.6TiB->3686GiB, 4.8TiB->4915GiB，8.4TiB->8601GiB。 HPC缓存型文件系统，即在“metadata”字段中设置了expand_type=\"hpc_cache\"，则容量范围是4096~1048576，单位GiB。不同带宽，起步容量不一样，步长均为1TiB。如2GB/s带宽，起步容量为4TiB，即4096GiB；4GB/s带宽，起步容量为8TiB，即8192GiB；8GB/s带宽，起步容量为16TiB，即16384GiB。
+	// 通用型-普通文件系统容量，取值范围500~32768，单位GB。 通用型-增强版文件系统，即在“metadata”字段中设置了expand_type=\"bandwidth\"，则容量范围是10240~327680，单位GiB。 HPC型文件系统，即在“metadata”字段中设置了expand_type=\"hpc\"，则容量范围是3686(或1228)~1048576，单位GiB。对于20MB/s/TiB的规格，起步容量为3686GiB；对于HPC其他规格，起步容量为1228GiB。HPC型文件系统的容量必须为1.2TiB的倍数，换算为GiB后需要向下取整。如3.6TiB->3686GiB, 4.8TiB->4915GiB，8.4TiB->8601GiB。 HPC缓存型文件系统，即在“metadata”字段中设置了expand_type=\"hpc_cache\"，则容量范围是4096~1048576，单位GiB。不同带宽，起步容量不一样，步长均为1TiB。如2GB/s带宽，起步容量为4TiB，即4096GiB；4GB/s带宽，起步容量为8TiB，即8192GiB；8GB/s带宽，起步容量为16TiB，即16384GiB。
 	Size int32 `json:"size"`
 
 	// 用户在VPC下面的子网的网络ID。
@@ -43,6 +43,9 @@ type Share struct {
 
 	// 备份ID，从备份创建文件系统时为必选。
 	BackupId *string `json:"backup_id,omitempty"`
+
+	// tag标签的列表。
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o Share) String() string {

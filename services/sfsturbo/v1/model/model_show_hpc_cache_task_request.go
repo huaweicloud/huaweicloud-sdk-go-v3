@@ -15,7 +15,7 @@ type ShowHpcCacheTaskRequest struct {
 	// 文件系统ID
 	ShareId string `json:"share_id"`
 
-	// 任务id
+	// 任务ID
 	TaskId string `json:"task_id"`
 }
 

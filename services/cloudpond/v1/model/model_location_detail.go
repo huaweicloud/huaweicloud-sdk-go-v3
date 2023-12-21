@@ -12,10 +12,16 @@ type LocationDetail struct {
 	// 场地名称（已废弃），传入该参数不会再生效，新建站点也不会再返回该字段
 	Name *string `json:"name,omitempty"`
 
+	// 场地所在地区
+	ZoneCode *string `json:"zone_code,omitempty"`
+
+	// 部署位置
+	Address *string `json:"address,omitempty"`
+
 	// 场地描述
 	Description *string `json:"description,omitempty"`
 
-	// 场地所在国家
+	// 场地所在国家（逐步下线，使用zone_code替代）
 	Country *string `json:"country,omitempty"`
 
 	// 场地所在省/自治区/直辖市

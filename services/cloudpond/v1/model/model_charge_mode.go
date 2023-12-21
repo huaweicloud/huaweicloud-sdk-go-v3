@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ChargeMode 计费模式。 - prepaid：包年/包月
+// ChargeMode 计费模式。 - prepaid：包周期
 type ChargeMode struct {
 	value string
 }

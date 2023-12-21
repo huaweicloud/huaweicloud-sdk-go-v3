@@ -13,7 +13,7 @@ type InterpreterGroupInfo struct {
 	GroupID string `json:"groupID"`
 
 	// 传译组名称。
-	GroupName string `json:"groupName"`
+	GroupName *string `json:"groupName,omitempty"`
 
 	// 传译组支持的第一种语言。
 	FirstLanguage string `json:"firstLanguage"`

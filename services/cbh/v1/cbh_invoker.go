@@ -29,15 +29,15 @@ func (i *ChangeInstanceOrderInvoker) Invoke() (*model.ChangeInstanceOrderRespons
 	}
 }
 
-type CreateInstanceInvoker struct {
+type CreateCbhInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
+func (i *CreateCbhInvoker) Invoke() (*model.CreateCbhResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateInstanceResponse), nil
+		return result.(*model.CreateCbhResponse), nil
 	}
 }
 
@@ -53,15 +53,15 @@ func (i *CreateInstanceOrderInvoker) Invoke() (*model.CreateInstanceOrderRespons
 	}
 }
 
-type InstallInstanceEipInvoker struct {
+type InstallCbhEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *InstallInstanceEipInvoker) Invoke() (*model.InstallInstanceEipResponse, error) {
+func (i *InstallCbhEipInvoker) Invoke() (*model.InstallCbhEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.InstallInstanceEipResponse), nil
+		return result.(*model.InstallCbhEipResponse), nil
 	}
 }
 
@@ -185,15 +185,15 @@ func (i *StopCbhInstanceInvoker) Invoke() (*model.StopCbhInstanceResponse, error
 	}
 }
 
-type UninstallInstanceEipInvoker struct {
+type UninstallCbhEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UninstallInstanceEipInvoker) Invoke() (*model.UninstallInstanceEipResponse, error) {
+func (i *UninstallCbhEipInvoker) Invoke() (*model.UninstallCbhEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UninstallInstanceEipResponse), nil
+		return result.(*model.UninstallCbhEipResponse), nil
 	}
 }
 

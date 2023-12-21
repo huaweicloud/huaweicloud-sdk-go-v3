@@ -45,7 +45,7 @@ type HostedDirectConnect struct {
 	// hosted物理专线预分配的vlan。
 	Vlan *int32 `json:"vlan,omitempty"`
 
-	// 操作状态，合法值是：ACTIVE， ERROR，PENDING_CREATE，PENDING_UPDATE。ACTIVE：虚拟网关正常ERROR： 虚拟网关异常PENDING_CREATE：创建中PENDING_UPDATE：更新中
+	// 操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
 	Status *HostedDirectConnectStatus `json:"status,omitempty"`
 
 	// 物理专线申请时间
@@ -56,6 +56,12 @@ type HostedDirectConnect struct {
 
 	// 物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
 	ProviderStatus *HostedDirectConnectProviderStatus `json:"provider_status,omitempty"`
+
+	// 物理专线接入接口的类型，支持1G 10G 40G 100G
+	PortType *HostedDirectConnectPortType `json:"port_type,omitempty"`
+
+	// 物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+	Type *HostedDirectConnectType `json:"type,omitempty"`
 }
 
 func (o HostedDirectConnect) String() string {
@@ -73,34 +79,18 @@ type HostedDirectConnectStatus struct {
 
 type HostedDirectConnectStatusEnum struct {
 	BUILD          HostedDirectConnectStatus
-	PAID           HostedDirectConnectStatus
-	APPLY          HostedDirectConnectStatus
-	PENDING_SURVEY HostedDirectConnectStatus
 	ACTIVE         HostedDirectConnectStatus
 	DOWN           HostedDirectConnectStatus
 	ERROR          HostedDirectConnectStatus
 	PENDING_DELETE HostedDirectConnectStatus
-	DELETED        HostedDirectConnectStatus
-	DENY           HostedDirectConnectStatus
-	PENDING_PAY    HostedDirectConnectStatus
-	ORDERING       HostedDirectConnectStatus
-	ACCEPT         HostedDirectConnectStatus
-	REJECTED       HostedDirectConnectStatus
+	PENDING_UPDATE HostedDirectConnectStatus
+	PENDING_CREATE HostedDirectConnectStatus
 }
 
 func GetHostedDirectConnectStatusEnum() HostedDirectConnectStatusEnum {
 	return HostedDirectConnectStatusEnum{
 		BUILD: HostedDirectConnectStatus{
 			value: "BUILD",
-		},
-		PAID: HostedDirectConnectStatus{
-			value: "PAID",
-		},
-		APPLY: HostedDirectConnectStatus{
-			value: "APPLY",
-		},
-		PENDING_SURVEY: HostedDirectConnectStatus{
-			value: "PENDING_SURVEY",
 		},
 		ACTIVE: HostedDirectConnectStatus{
 			value: "ACTIVE",
@@ -114,23 +104,11 @@ func GetHostedDirectConnectStatusEnum() HostedDirectConnectStatusEnum {
 		PENDING_DELETE: HostedDirectConnectStatus{
 			value: "PENDING_DELETE",
 		},
-		DELETED: HostedDirectConnectStatus{
-			value: "DELETED",
+		PENDING_UPDATE: HostedDirectConnectStatus{
+			value: "PENDING_UPDATE",
 		},
-		DENY: HostedDirectConnectStatus{
-			value: "DENY",
-		},
-		PENDING_PAY: HostedDirectConnectStatus{
-			value: "PENDING_PAY",
-		},
-		ORDERING: HostedDirectConnectStatus{
-			value: "ORDERING",
-		},
-		ACCEPT: HostedDirectConnectStatus{
-			value: "ACCEPT",
-		},
-		REJECTED: HostedDirectConnectStatus{
-			value: "REJECTED",
+		PENDING_CREATE: HostedDirectConnectStatus{
+			value: "PENDING_CREATE",
 		},
 	}
 }
@@ -191,6 +169,120 @@ func (c HostedDirectConnectProviderStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *HostedDirectConnectProviderStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type HostedDirectConnectPortType struct {
+	value string
+}
+
+type HostedDirectConnectPortTypeEnum struct {
+	E_1_G   HostedDirectConnectPortType
+	E_10_G  HostedDirectConnectPortType
+	E_40_G  HostedDirectConnectPortType
+	E_100_G HostedDirectConnectPortType
+}
+
+func GetHostedDirectConnectPortTypeEnum() HostedDirectConnectPortTypeEnum {
+	return HostedDirectConnectPortTypeEnum{
+		E_1_G: HostedDirectConnectPortType{
+			value: "1G",
+		},
+		E_10_G: HostedDirectConnectPortType{
+			value: "10G",
+		},
+		E_40_G: HostedDirectConnectPortType{
+			value: "40G",
+		},
+		E_100_G: HostedDirectConnectPortType{
+			value: "100G",
+		},
+	}
+}
+
+func (c HostedDirectConnectPortType) Value() string {
+	return c.value
+}
+
+func (c HostedDirectConnectPortType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *HostedDirectConnectPortType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type HostedDirectConnectType struct {
+	value string
+}
+
+type HostedDirectConnectTypeEnum struct {
+	STANDARD         HostedDirectConnectType
+	HOSTING          HostedDirectConnectType
+	HOSTED           HostedDirectConnectType
+	ONESTOP_STANDARD HostedDirectConnectType
+	ONESTOP_HOSTED   HostedDirectConnectType
+}
+
+func GetHostedDirectConnectTypeEnum() HostedDirectConnectTypeEnum {
+	return HostedDirectConnectTypeEnum{
+		STANDARD: HostedDirectConnectType{
+			value: "standard",
+		},
+		HOSTING: HostedDirectConnectType{
+			value: "hosting",
+		},
+		HOSTED: HostedDirectConnectType{
+			value: "hosted",
+		},
+		ONESTOP_STANDARD: HostedDirectConnectType{
+			value: "onestop_standard",
+		},
+		ONESTOP_HOSTED: HostedDirectConnectType{
+			value: "onestop_hosted",
+		},
+	}
+}
+
+func (c HostedDirectConnectType) Value() string {
+	return c.value
+}
+
+func (c HostedDirectConnectType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *HostedDirectConnectType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

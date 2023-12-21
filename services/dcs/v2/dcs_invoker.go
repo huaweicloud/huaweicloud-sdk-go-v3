@@ -1277,6 +1277,18 @@ func (i *UpdateSlavePriorityInvoker) Invoke() (*model.UpdateSlavePriorityRespons
 	}
 }
 
+type ValidateDeletableReplicaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateDeletableReplicaInvoker) Invoke() (*model.ValidateDeletableReplicaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateDeletableReplicaResponse), nil
+	}
+}
+
 type ShowIpWhitelistInvoker struct {
 	*invoker.BaseInvoker
 }

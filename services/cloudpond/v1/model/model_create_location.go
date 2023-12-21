@@ -16,15 +16,21 @@ type CreateLocation struct {
 	Name *string `json:"name,omitempty"`
 
 	// 场地所在省/自治区/直辖市
-	Province string `json:"province"`
+	Address *string `json:"address,omitempty"`
+
+	// 场地所在地区
+	ZoneCode *string `json:"zone_code,omitempty"`
+
+	// 场地所在省/自治区/直辖市
+	Province *string `json:"province,omitempty"`
 
 	// 场地所在市/区
-	City string `json:"city"`
+	City *string `json:"city,omitempty"`
 
 	// 场地所在区/县
-	District string `json:"district"`
+	District *string `json:"district,omitempty"`
 
-	// 场地所在国家
+	// 场地所在国家（逐步下线，使用zone_code替代）
 	Country *CreateLocationCountry `json:"country,omitempty"`
 
 	Condition *Condition `json:"condition"`

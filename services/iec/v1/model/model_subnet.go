@@ -53,6 +53,21 @@ type Subnet struct {
 
 	// 对应子网（OpenStack Neutron接口） id。
 	NeutronSubnetId *string `json:"neutron_subnet_id,omitempty"`
+
+	// IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
+	CidrV6 *string `json:"cidr_v6,omitempty"`
+
+	// 是否是IPv6子网  取值范围：true，false
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// IPv6线路ID，如果子网为IPv4子网，则不返回此参数。
+	PoolId *string `json:"pool_id,omitempty"`
+
+	// 对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数。
+	NeutronSubnetIdV6 *string `json:"neutron_subnet_id_v6,omitempty"`
+
+	// IPv6子网的网关，如果子网为IPv4子网，则不返回此参数。
+	GatewayIpV6 *string `json:"gateway_ip_v6,omitempty"`
 }
 
 func (o Subnet) String() string {

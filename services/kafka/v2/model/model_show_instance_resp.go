@@ -95,7 +95,7 @@ type ShowInstanceResp struct {
 	// 是否开启安全认证。 - true：开启 - false：未开启
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
-	// 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持帐号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持帐号密码认证，性能更好，仅支持SCRAM-SHA-512机制。
+	// 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
 	KafkaSecurityProtocol *string `json:"kafka_security_protocol,omitempty"`
 
 	// 开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。

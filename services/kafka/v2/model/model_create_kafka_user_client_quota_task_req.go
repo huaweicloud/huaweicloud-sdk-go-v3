@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateKafkaUserClientQuotaTaskReq 客户端流控配置
+// CreateKafkaUserClientQuotaTaskReq 用户/客户端流控配置
 type CreateKafkaUserClientQuotaTaskReq struct {
 
 	// 用户名

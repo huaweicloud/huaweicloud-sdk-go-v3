@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// ObsDataRepository 文件系统 obs 数据存储库
+// ObsDataRepository OBS类型后端存储
 type ObsDataRepository struct {
 
-	// obs 桶名称
+	// OBS桶名称
 	Bucket string `json:"bucket"`
 
-	// obs 桶 endpoint
+	// OBS桶所在的区域域名
 	Endpoint string `json:"endpoint"`
 }
 

@@ -8,8 +8,6 @@ import (
 
 // ShowFsDirUsageResponse Response Object
 type ShowFsDirUsageResponse struct {
-
-	// 消息描述
 	DirUsage *FsDirUasge `json:"dir_usage,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

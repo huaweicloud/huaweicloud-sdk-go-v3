@@ -18,7 +18,7 @@ type DeleteFsTaskRequest struct {
 	// 任务类型。例，DU任务取值为dir-usage
 	Feature string `json:"feature"`
 
-	// 任务id
+	// 任务ID
 	TaskId string `json:"task_id"`
 }
 

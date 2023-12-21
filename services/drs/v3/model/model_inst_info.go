@@ -51,6 +51,11 @@ type InstInfoEngineTypeEnum struct {
 	MYSQL                  InstInfoEngineType
 	MONGODB                InstInfoEngineType
 	CLOUD_DATA_GUARD_MYSQL InstInfoEngineType
+	GAUSSDBV5              InstInfoEngineType
+	POSTGRESQL             InstInfoEngineType
+	MYSQL_TO_KAFKA         InstInfoEngineType
+	TAURUS_TO_KAFKA        InstInfoEngineType
+	GAUSSDBV5HA_TO_KAFKA   InstInfoEngineType
 }
 
 func GetInstInfoEngineTypeEnum() InstInfoEngineTypeEnum {
@@ -63,6 +68,21 @@ func GetInstInfoEngineTypeEnum() InstInfoEngineTypeEnum {
 		},
 		CLOUD_DATA_GUARD_MYSQL: InstInfoEngineType{
 			value: "cloudDataGuard-mysql",
+		},
+		GAUSSDBV5: InstInfoEngineType{
+			value: "gaussdbv5",
+		},
+		POSTGRESQL: InstInfoEngineType{
+			value: "postgresql",
+		},
+		MYSQL_TO_KAFKA: InstInfoEngineType{
+			value: "mysql-to-kafka",
+		},
+		TAURUS_TO_KAFKA: InstInfoEngineType{
+			value: "taurus-to-kafka",
+		},
+		GAUSSDBV5HA_TO_KAFKA: InstInfoEngineType{
+			value: "gaussdbv5ha-to-kafka",
 		},
 	}
 }

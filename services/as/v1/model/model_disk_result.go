@@ -31,6 +31,12 @@ type DiskResult struct {
 	SnapshotId *string `json:"snapshot_id,omitempty"`
 
 	Metadata *MetaData `json:"metadata,omitempty"`
+
+	// 云硬盘iops
+	Iops *int32 `json:"iops,omitempty"`
+
+	// 云硬盘吞吐量
+	Throughput *int32 `json:"throughput,omitempty"`
 }
 
 func (o DiskResult) String() string {
@@ -47,11 +53,13 @@ type DiskResultVolumeType struct {
 }
 
 type DiskResultVolumeTypeEnum struct {
-	SATA  DiskResultVolumeType
-	SAS   DiskResultVolumeType
-	SSD   DiskResultVolumeType
-	CO_PL DiskResultVolumeType
-	UH_11 DiskResultVolumeType
+	SATA   DiskResultVolumeType
+	SAS    DiskResultVolumeType
+	SSD    DiskResultVolumeType
+	CO_PL  DiskResultVolumeType
+	UH_11  DiskResultVolumeType
+	GPSSD2 DiskResultVolumeType
+	ESSD2  DiskResultVolumeType
 }
 
 func GetDiskResultVolumeTypeEnum() DiskResultVolumeTypeEnum {
@@ -70,6 +78,12 @@ func GetDiskResultVolumeTypeEnum() DiskResultVolumeTypeEnum {
 		},
 		UH_11: DiskResultVolumeType{
 			value: "uh-11",
+		},
+		GPSSD2: DiskResultVolumeType{
+			value: "GPSSD2",
+		},
+		ESSD2: DiskResultVolumeType{
+			value: "ESSD2",
 		},
 	}
 }

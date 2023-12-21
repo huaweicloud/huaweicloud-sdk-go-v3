@@ -15,10 +15,10 @@ type DeleteBackendTargetRequest struct {
 	// 文件系统id
 	ShareId string `json:"share_id"`
 
-	// 数据存储库 id
+	// 绑定关系id
 	TargetId string `json:"target_id"`
 
-	// 删除后端存储库时是否删除文件系统对应目录文件，默认为 false
+	// 删除后端存储时是否同时删除文件系统内的联动目录及其数据文件，默认为 false。数据删除后无法恢复，请谨慎操作。
 	DeleteDataInFileSystem *bool `json:"delete_data_in_file_system,omitempty"`
 }
 

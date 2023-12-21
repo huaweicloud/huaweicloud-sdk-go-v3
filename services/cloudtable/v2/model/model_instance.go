@@ -19,7 +19,7 @@ type Instance struct {
 	LemonNum *int32 `json:"lemon_num,omitempty"`
 
 	// 集群所在网络信息。
-	Nics []Nics `json:"nics"`
+	Nics []Nic `json:"nics"`
 
 	// CloudTable集群TSD节点数目，至少为2。
 	TsdNum int32 `json:"tsd_num"`

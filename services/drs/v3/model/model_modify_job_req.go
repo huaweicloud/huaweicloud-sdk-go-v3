@@ -175,6 +175,11 @@ type ModifyJobReqEngineTypeEnum struct {
 	MYSQL                  ModifyJobReqEngineType
 	MONGODB                ModifyJobReqEngineType
 	CLOUD_DATA_GUARD_MYSQL ModifyJobReqEngineType
+	GAUSSDBV5              ModifyJobReqEngineType
+	POSTGRESQL             ModifyJobReqEngineType
+	MYSQL_TO_KAFKA         ModifyJobReqEngineType
+	TAURUS_TO_KAFKA        ModifyJobReqEngineType
+	GAUSSDBV5HA_TO_KAFKA   ModifyJobReqEngineType
 }
 
 func GetModifyJobReqEngineTypeEnum() ModifyJobReqEngineTypeEnum {
@@ -187,6 +192,21 @@ func GetModifyJobReqEngineTypeEnum() ModifyJobReqEngineTypeEnum {
 		},
 		CLOUD_DATA_GUARD_MYSQL: ModifyJobReqEngineType{
 			value: "cloudDataGuard-mysql",
+		},
+		GAUSSDBV5: ModifyJobReqEngineType{
+			value: "gaussdbv5",
+		},
+		POSTGRESQL: ModifyJobReqEngineType{
+			value: "postgresql",
+		},
+		MYSQL_TO_KAFKA: ModifyJobReqEngineType{
+			value: "mysql-to-kafka",
+		},
+		TAURUS_TO_KAFKA: ModifyJobReqEngineType{
+			value: "taurus-to-kafka",
+		},
+		GAUSSDBV5HA_TO_KAFKA: ModifyJobReqEngineType{
+			value: "gaussdbv5ha-to-kafka",
 		},
 	}
 }

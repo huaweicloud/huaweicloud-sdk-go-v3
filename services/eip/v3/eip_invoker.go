@@ -233,30 +233,6 @@ func (i *ShowPublicipInvoker) Invoke() (*model.ShowPublicipResponse, error) {
 	}
 }
 
-type UpdateAssociatePublicipInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAssociatePublicipInvoker) Invoke() (*model.UpdateAssociatePublicipResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAssociatePublicipResponse), nil
-	}
-}
-
-type UpdateDisassociatePublicipInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDisassociatePublicipInvoker) Invoke() (*model.UpdateDisassociatePublicipResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDisassociatePublicipResponse), nil
-	}
-}
-
 type UpdatePublicipInvoker struct {
 	*invoker.BaseInvoker
 }

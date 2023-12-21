@@ -23,7 +23,7 @@ type AuthorizeConfigInfoRequestBody struct {
 	// APP ID。 > 开启SSO登录时必填
 	ClientId *string `json:"clientId,omitempty"`
 
-	// APP秘钥。 > 开启SSO登录时，若不修改APP秘钥，则置空即可
+	// APP秘钥。 > 开启SSO登录时，当getTokenUrl或者getUserInfoUrl有变更时必填 > 开启SSO登录时，当getTokenUrl和getUserInfoUrl未变更时，且不修改APP秘钥，则置空即可
 	ClientSecret *string `json:"clientSecret,omitempty"`
 
 	// 授权范围。 * openid：OAuth2.0的OIDC

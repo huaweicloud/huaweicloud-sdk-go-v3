@@ -18,7 +18,7 @@ type FirewallRule struct {
 	// 网络ACL规则描述。
 	Description *string `json:"description,omitempty"`
 
-	// 目的地IP地址，IPv4[或IPv6](tag:hide)的CIDR格式
+	// 目的地IP地址，IPv4或IPv6的CIDR格式
 	DestinationIpAddress string `json:"destination_ip_address"`
 
 	// 目的地端口范围  取值范围：整数，比如80，或者以\"-\"隔开的范围，比如80-90
@@ -30,7 +30,7 @@ type FirewallRule struct {
 	// 网络ACL规则ID。  进行更新规则时，如果operate_type为add，则该值为空。
 	Id string `json:"id"`
 
-	// IP协议版本  取值范围：4[、6](tag:hide)
+	// IP协议版本  取值范围：4、6
 	IpVersion int32 `json:"ip_version"`
 
 	// 网络ACL规则名称。
@@ -42,7 +42,7 @@ type FirewallRule struct {
 	// IP协议，为any时代表所有协议  取值范围：icmp，tcp，udp，[icmpv6，](tag:hide)any
 	Protocol FirewallRuleProtocol `json:"protocol"`
 
-	// 源IP地址，IPv4[或IPv6](tag:hide)的CIDR格式
+	// 源IP地址，IPv4或IPv6的CIDR格式
 	SourceIpAddress string `json:"source_ip_address"`
 
 	// 源地端口范围  取值范围：整数，比如80，或者以\"-\"隔开的范围，比如80-90

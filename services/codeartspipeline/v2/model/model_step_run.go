@@ -37,7 +37,7 @@ type StepRun struct {
 	Id *string `json:"id,omitempty"`
 
 	// 扩展点
-	EndpointIds *string `json:"endpoint_ids,omitempty"`
+	EndpointIds *[]string `json:"endpoint_ids,omitempty"`
 
 	// 上次下发任务ID
 	LastDispatchId *string `json:"last_dispatch_id,omitempty"`

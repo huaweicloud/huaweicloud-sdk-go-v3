@@ -86,9 +86,9 @@ func (c *SFSTurboClient) ChangeShareNameInvoker(request *model.ChangeShareNameRe
 	return &ChangeShareNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateBackendTarget 创建文件系统后端存储库
+// CreateBackendTarget 绑定后端存储
 //
-// 创建文件系统后端存储库
+// 为SFS Turbo HPC型文件系统绑定后端存储
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateBackendTarget(request *model.CreateBackendTargetRequest) (*model.CreateBackendTargetResponse, error) {
@@ -101,7 +101,7 @@ func (c *SFSTurboClient) CreateBackendTarget(request *model.CreateBackendTargetR
 	}
 }
 
-// CreateBackendTargetInvoker 创建文件系统后端存储库
+// CreateBackendTargetInvoker 绑定后端存储
 func (c *SFSTurboClient) CreateBackendTargetInvoker(request *model.CreateBackendTargetRequest) *CreateBackendTargetInvoker {
 	requestDef := GenReqDefForCreateBackendTarget()
 	return &CreateBackendTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -151,7 +151,7 @@ func (c *SFSTurboClient) CreateFsDirQuotaInvoker(request *model.CreateFsDirQuota
 
 // CreateFsTask 创建文件系统异步任务
 //
-// 创建文件系统异步任务（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+// 创建文件系统异步任务
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateFsTask(request *model.CreateFsTaskRequest) (*model.CreateFsTaskResponse, error) {
@@ -170,9 +170,9 @@ func (c *SFSTurboClient) CreateFsTaskInvoker(request *model.CreateFsTaskRequest)
 	return &CreateFsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateHpcCacheTask 创建SFSTurbo 和 OBS 之间的联动任务
+// CreateHpcCacheTask 创建数据导入导出任务
 //
-// 创建SFSTurbo 和 OBS 之间的联动任务
+// 创建数据导入导出任务
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateHpcCacheTask(request *model.CreateHpcCacheTaskRequest) (*model.CreateHpcCacheTaskResponse, error) {
@@ -185,7 +185,7 @@ func (c *SFSTurboClient) CreateHpcCacheTask(request *model.CreateHpcCacheTaskReq
 	}
 }
 
-// CreateHpcCacheTaskInvoker 创建SFSTurbo 和 OBS 之间的联动任务
+// CreateHpcCacheTaskInvoker 创建数据导入导出任务
 func (c *SFSTurboClient) CreateHpcCacheTaskInvoker(request *model.CreateHpcCacheTaskRequest) *CreateHpcCacheTaskInvoker {
 	requestDef := GenReqDefForCreateHpcCacheTask()
 	return &CreateHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -257,9 +257,9 @@ func (c *SFSTurboClient) CreateSharedTagInvoker(request *model.CreateSharedTagRe
 	return &CreateSharedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteBackendTarget 删除文件系统后端存储库
+// DeleteBackendTarget 删除后端存储
 //
-// 删除文件系统后端存储库
+// 删除后端存储
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteBackendTarget(request *model.DeleteBackendTargetRequest) (*model.DeleteBackendTargetResponse, error) {
@@ -272,7 +272,7 @@ func (c *SFSTurboClient) DeleteBackendTarget(request *model.DeleteBackendTargetR
 	}
 }
 
-// DeleteBackendTargetInvoker 删除文件系统后端存储库
+// DeleteBackendTargetInvoker 删除后端存储
 func (c *SFSTurboClient) DeleteBackendTargetInvoker(request *model.DeleteBackendTargetRequest) *DeleteBackendTargetInvoker {
 	requestDef := GenReqDefForDeleteBackendTarget()
 	return &DeleteBackendTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -322,7 +322,7 @@ func (c *SFSTurboClient) DeleteFsDirQuotaInvoker(request *model.DeleteFsDirQuota
 
 // DeleteFsTask 取消/删除文件系统异步任务
 //
-// 如果异步任务正在执行，则取消并删除任务；否则，删除任务。（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+// 如果异步任务正在执行，则取消并删除任务；否则，删除任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteFsTask(request *model.DeleteFsTaskRequest) (*model.DeleteFsTaskResponse, error) {
@@ -425,9 +425,9 @@ func (c *SFSTurboClient) ExpandShareInvoker(request *model.ExpandShareRequest) *
 	return &ExpandShareInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListBackendTargets 查询文件系统后端存储库列表
+// ListBackendTargets 查询后端存储列表
 //
-// 查询文件系统后端存储库列表
+// 查询后端存储列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ListBackendTargets(request *model.ListBackendTargetsRequest) (*model.ListBackendTargetsResponse, error) {
@@ -440,7 +440,7 @@ func (c *SFSTurboClient) ListBackendTargets(request *model.ListBackendTargetsReq
 	}
 }
 
-// ListBackendTargetsInvoker 查询文件系统后端存储库列表
+// ListBackendTargetsInvoker 查询后端存储列表
 func (c *SFSTurboClient) ListBackendTargetsInvoker(request *model.ListBackendTargetsRequest) *ListBackendTargetsInvoker {
 	requestDef := GenReqDefForListBackendTargets()
 	return &ListBackendTargetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -448,7 +448,7 @@ func (c *SFSTurboClient) ListBackendTargetsInvoker(request *model.ListBackendTar
 
 // ListFsTasks 获取文件系统异步任务列表
 //
-// 获取文件系统异步任务列表（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+// 获取文件系统异步任务列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ListFsTasks(request *model.ListFsTasksRequest) (*model.ListFsTasksResponse, error) {
@@ -467,9 +467,9 @@ func (c *SFSTurboClient) ListFsTasksInvoker(request *model.ListFsTasksRequest) *
 	return &ListFsTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListHpcCacheTasks 查询联动任务详情列表
+// ListHpcCacheTasks 查询数据导入导出任务列表
 //
-// 查询联动任务详情列表
+// 查询数据导入导出任务列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ListHpcCacheTasks(request *model.ListHpcCacheTasksRequest) (*model.ListHpcCacheTasksResponse, error) {
@@ -482,7 +482,7 @@ func (c *SFSTurboClient) ListHpcCacheTasks(request *model.ListHpcCacheTasksReque
 	}
 }
 
-// ListHpcCacheTasksInvoker 查询联动任务详情列表
+// ListHpcCacheTasksInvoker 查询数据导入导出任务列表
 func (c *SFSTurboClient) ListHpcCacheTasksInvoker(request *model.ListHpcCacheTasksRequest) *ListHpcCacheTasksInvoker {
 	requestDef := GenReqDefForListHpcCacheTasks()
 	return &ListHpcCacheTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -572,9 +572,9 @@ func (c *SFSTurboClient) SetHpcCacheBackendInvoker(request *model.SetHpcCacheBac
 	return &SetHpcCacheBackendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowBackendTargetInfo 获取文件系统后端存储库详细信息
+// ShowBackendTargetInfo 获取后端存储详细信息
 //
-// 获取文件系统后端存储库详细信息
+// 获取后端存储详细信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowBackendTargetInfo(request *model.ShowBackendTargetInfoRequest) (*model.ShowBackendTargetInfoResponse, error) {
@@ -587,7 +587,7 @@ func (c *SFSTurboClient) ShowBackendTargetInfo(request *model.ShowBackendTargetI
 	}
 }
 
-// ShowBackendTargetInfoInvoker 获取文件系统后端存储库详细信息
+// ShowBackendTargetInfoInvoker 获取后端存储详细信息
 func (c *SFSTurboClient) ShowBackendTargetInfoInvoker(request *model.ShowBackendTargetInfoRequest) *ShowBackendTargetInfoInvoker {
 	requestDef := GenReqDefForShowBackendTargetInfo()
 	return &ShowBackendTargetInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -637,7 +637,7 @@ func (c *SFSTurboClient) ShowFsDirQuotaInvoker(request *model.ShowFsDirQuotaRequ
 
 // ShowFsDirUsage 查询目录资源使用情况
 //
-// 查询目录资源使用情况(包括子目录的资源)。后端有5min的缓存时间，查询的数据可能有延迟。（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+// 查询目录资源使用情况(包括子目录的资源)。后端有5min的缓存时间，查询的数据可能有延迟。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowFsDirUsage(request *model.ShowFsDirUsageRequest) (*model.ShowFsDirUsageResponse, error) {
@@ -658,7 +658,7 @@ func (c *SFSTurboClient) ShowFsDirUsageInvoker(request *model.ShowFsDirUsageRequ
 
 // ShowFsTask 获取文件系统异步任务详情
 //
-// 获取文件系统异步任务详情（该接口目前仅支持“华南-广州-友好用户环境”，“华南-广州”，“华南-深圳”，“西南-贵阳一”，“华北-乌兰察布一”，“华北-北京一”，“华北-北京二”，“华北-北京四”，“华东-上海一”）
+// 获取文件系统异步任务详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowFsTask(request *model.ShowFsTaskRequest) (*model.ShowFsTaskResponse, error) {
@@ -677,9 +677,9 @@ func (c *SFSTurboClient) ShowFsTaskInvoker(request *model.ShowFsTaskRequest) *Sh
 	return &ShowFsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowHpcCacheTask 查询联动任务详情
+// ShowHpcCacheTask 查询数据导入导出任务详情
 //
-// 查询联动任务详情
+// 查询数据导入导出任务详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowHpcCacheTask(request *model.ShowHpcCacheTaskRequest) (*model.ShowHpcCacheTaskResponse, error) {
@@ -692,7 +692,7 @@ func (c *SFSTurboClient) ShowHpcCacheTask(request *model.ShowHpcCacheTaskRequest
 	}
 }
 
-// ShowHpcCacheTaskInvoker 查询联动任务详情
+// ShowHpcCacheTaskInvoker 查询数据导入导出任务详情
 func (c *SFSTurboClient) ShowHpcCacheTaskInvoker(request *model.ShowHpcCacheTaskRequest) *ShowHpcCacheTaskInvoker {
 	requestDef := GenReqDefForShowHpcCacheTask()
 	return &ShowHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -784,7 +784,7 @@ func (c *SFSTurboClient) UpdateFsDirQuotaInvoker(request *model.UpdateFsDirQuota
 
 // UpdateHpcShare 更新文件系统
 //
-// 设置文件系统冷数据淘汰时间
+// 更新文件系统冷数据淘汰时间
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) UpdateHpcShare(request *model.UpdateHpcShareRequest) (*model.UpdateHpcShareResponse, error) {

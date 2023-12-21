@@ -24,7 +24,7 @@ type CreateJobReq struct {
 	// 任务描述。  **约束**：任务描述不能超过256位，且不能包含!<>&'\"\\特殊字符。
 	Description *string `json:"description,omitempty"`
 
-	// 引擎类型 - mysql：迁移，同步使用 - mongodb：迁移使用 - cloudDataGuard-mysql：灾备使用 - gaussdbv5，postgresql：同步使用
+	// 引擎类型 - mysql：MySQL到MySQL迁移，MySQL到MySQL同步 - mongodb：MongoDB到DDS迁移 - cloudDataGuard-mysql：MySQL到MySQL灾备 - gaussdbv5：GaussDB同步 - mysql-to-kafka：MySQL到Kafka同步 - taurus-to-kafka：GaussDB(for MySQL)到Kafka同步 - gaussdbv5ha-to-kafka：GaussDB主备版到Kafka同步 - postgresql：PostgreSQL到PostgreSQL同步
 	EngineType CreateJobReqEngineType `json:"engine_type"`
 
 	// 指定目标实例是否限制为只读，MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
@@ -149,6 +149,9 @@ type CreateJobReqEngineTypeEnum struct {
 	CLOUD_DATA_GUARD_MYSQL CreateJobReqEngineType
 	GAUSSDBV5              CreateJobReqEngineType
 	POSTGRESQL             CreateJobReqEngineType
+	MYSQL_TO_KAFKA         CreateJobReqEngineType
+	TAURUS_TO_KAFKA        CreateJobReqEngineType
+	GAUSSDBV5HA_TO_KAFKA   CreateJobReqEngineType
 }
 
 func GetCreateJobReqEngineTypeEnum() CreateJobReqEngineTypeEnum {
@@ -167,6 +170,15 @@ func GetCreateJobReqEngineTypeEnum() CreateJobReqEngineTypeEnum {
 		},
 		POSTGRESQL: CreateJobReqEngineType{
 			value: "postgresql",
+		},
+		MYSQL_TO_KAFKA: CreateJobReqEngineType{
+			value: "mysql-to-kafka",
+		},
+		TAURUS_TO_KAFKA: CreateJobReqEngineType{
+			value: "taurus-to-kafka",
+		},
+		GAUSSDBV5HA_TO_KAFKA: CreateJobReqEngineType{
+			value: "gaussdbv5ha-to-kafka",
 		},
 	}
 }

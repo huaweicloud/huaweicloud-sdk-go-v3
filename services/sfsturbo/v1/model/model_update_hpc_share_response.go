@@ -9,7 +9,7 @@ import (
 // UpdateHpcShareResponse Response Object
 type UpdateHpcShareResponse struct {
 
-	// 文件系统 gc_time
+	// 文件系统冷数据淘汰时间
 	GcTime *int32 `json:"gc_time,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

@@ -9,10 +9,10 @@ import (
 // ListBackendTargetsResponse Response Object
 type ListBackendTargetsResponse struct {
 
-	// 文件系统后端存储库列表元素个数
+	// 后端存储列表个数
 	Count *int32 `json:"count,omitempty"`
 
-	// 文件系统后端存储库列表
+	// 后端存储列表
 	Targets *[]ShowBackendTargetInfoResponseBody `json:"targets,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

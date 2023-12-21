@@ -38,7 +38,7 @@ type DirectConnect struct {
 	// 物理专线连接的设备的标识ID
 	DeviceId *string `json:"device_id,omitempty"`
 
-	// 物理专线的类型，类似包括标准(standard),运营专线(hosting),托管专线（hosted）
+	// 物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
 	Type *DirectConnectType `json:"type,omitempty"`
 
 	// hosted物理专线对应的hosting物理专线的ID
@@ -47,7 +47,7 @@ type DirectConnect struct {
 	// 计费模式：prepayment/bandwidth/traffic
 	ChargeMode *DirectConnectChargeMode `json:"charge_mode,omitempty"`
 
-	// 物理专线连接的线路运营商如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商
+	// 物理专线连接的线路运营商 [如：中国电信 中国联通 中国移动 中国其他 境外其他专线归属的运营商](tag:hws,hws_hk)
 	Provider *string `json:"provider,omitempty"`
 
 	// 管理状态：true或false
@@ -56,7 +56,7 @@ type DirectConnect struct {
 	// 为托管hosted物理专线分配的vlan。
 	Vlan *int32 `json:"vlan,omitempty"`
 
-	// 资源状态，合法值是：ACTIVE，DOWN，BUILD，ERROR，PENDING_DELETE，DELETED，APPLY，DENY，PENDING_PAY，PAID，ORDERING，ACCEPT，REJECTED
+	// 资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
 	Status *DirectConnectStatus `json:"status,omitempty"`
 
 	// 物理专线的申请时间
@@ -98,11 +98,58 @@ type DirectConnect struct {
 	// 专线协议的签暑状态
 	SignedAgreementStatus *DirectConnectSignedAgreementStatus `json:"signed_agreement_status,omitempty"`
 
+	// 专线协议的签暑时间
+	SignedAgreementTime *sdktime.SdkTime `json:"signed_agreement_time,omitempty"`
+
 	// 实例所属企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 标签信息
 	Tags *[]Tag `json:"tags,omitempty"`
+
+	Locales *LocalesBody `json:"locales,omitempty"`
+
+	// 用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
+	SupportFeature *[]string `json:"support_feature,omitempty"`
+
+	// 归属的IES站点的ID[（功能暂不支持）](tag:dt)
+	IesId *string `json:"ies_id,omitempty"`
+
+	// 如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
+	Reason *string `json:"reason,omitempty"`
+
+	// 客户邮箱信息[（功能暂不支持）](tag:dt)
+	Email *string `json:"email,omitempty"`
+
+	// 该参数用于销售线路场景，标识一站式专线产品ID[（功能暂不支持）](tag:dt)
+	OnestopProductId *string `json:"onestop_product_id,omitempty"`
+
+	// 该参数用于销售线路场景，标识机房内部线路资源产品ID[（功能暂不支持）](tag:dt)
+	BuildingLineProductId *string `json:"building_line_product_id,omitempty"`
+
+	// 该参数用于销售线路场景，标识变更前的一站式专线产品ID，用于在做线路带宽变更时保存上一次的记录。[（功能暂不支持）](tag:dt)
+	LastOnestopProductId *string `json:"last_onestop_product_id,omitempty"`
+
+	// 该参数用于销售线路场景，标识变更前机房内部线路资源产品ID，用于在做线路带宽变更时保存上一次的记录。[（功能暂不支持）](tag:dt)
+	LastBuildingLineProductId *string `json:"last_building_line_product_id,omitempty"`
+
+	// 线路带宽变更后的带宽值[（功能暂不支持）](tag:dt)
+	ModifiedBandwidth *int32 `json:"modified_bandwidth,omitempty"`
+
+	// 标识续费变更的一种状态[（功能暂不支持）](tag:dt)
+	ChangeMode *int32 `json:"change_mode,omitempty"`
+
+	// 一站式专线状态[（功能暂不支持）](tag:dt)
+	OnestopdcStatus *string `json:"onestopdc_status,omitempty"`
+
+	// 归属的可用区对应的边界组(public border group)，标识是否homezone局点。[（功能暂不支持）](tag:dt)
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+
+	// 用于标识包周期产品是否自动续订[（功能暂不支持）](tag:dt)
+	AutoRenew *int32 `json:"auto_renew,omitempty"`
+
+	// 95计费保底带宽率[（功能暂不支持）](tag:dt)
+	Ratio95peak *int32 `json:"ratio_95peak,omitempty"`
 }
 
 func (o DirectConnect) String() string {
@@ -174,9 +221,11 @@ type DirectConnectType struct {
 }
 
 type DirectConnectTypeEnum struct {
-	STANDARD DirectConnectType
-	HOSTING  DirectConnectType
-	HOSTED   DirectConnectType
+	STANDARD         DirectConnectType
+	HOSTING          DirectConnectType
+	HOSTED           DirectConnectType
+	ONESTOP_STANDARD DirectConnectType
+	ONESTOP_HOSTED   DirectConnectType
 }
 
 func GetDirectConnectTypeEnum() DirectConnectTypeEnum {
@@ -189,6 +238,12 @@ func GetDirectConnectTypeEnum() DirectConnectTypeEnum {
 		},
 		HOSTED: DirectConnectType{
 			value: "hosted",
+		},
+		ONESTOP_STANDARD: DirectConnectType{
+			value: "onestop_standard",
+		},
+		ONESTOP_HOSTED: DirectConnectType{
+			value: "onestop_hosted",
 		},
 	}
 }
@@ -287,9 +342,6 @@ type DirectConnectStatusEnum struct {
 	DELETED        DirectConnectStatus
 	DENY           DirectConnectStatus
 	PENDING_PAY    DirectConnectStatus
-	ORDERING       DirectConnectStatus
-	ACCEPT         DirectConnectStatus
-	REJECTED       DirectConnectStatus
 }
 
 func GetDirectConnectStatusEnum() DirectConnectStatusEnum {
@@ -326,15 +378,6 @@ func GetDirectConnectStatusEnum() DirectConnectStatusEnum {
 		},
 		PENDING_PAY: DirectConnectStatus{
 			value: "PENDING_PAY",
-		},
-		ORDERING: DirectConnectStatus{
-			value: "ORDERING",
-		},
-		ACCEPT: DirectConnectStatus{
-			value: "ACCEPT",
-		},
-		REJECTED: DirectConnectStatus{
-			value: "REJECTED",
 		},
 	}
 }

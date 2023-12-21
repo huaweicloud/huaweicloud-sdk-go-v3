@@ -35,6 +35,15 @@ type Location struct {
 
 	// 城市简称。
 	CityShortName *string `json:"city_short_name,omitempty"`
+
+	// 创建边缘实例是否开启IPv6。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// 创建IPv6边缘实例是否支持公网访问。
+	Ipv6BandwidthEnable *bool `json:"ipv6_bandwidth_enable,omitempty"`
+
+	// IPv6线路ID。IPv6场景下，使用该线路下的子网分配IPv6端口。
+	PoolIdV6 *string `json:"pool_id_v6,omitempty"`
 }
 
 func (o Location) String() string {

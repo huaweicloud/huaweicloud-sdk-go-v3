@@ -85,8 +85,8 @@ type ShowPipelineRunDetailResponse struct {
 	DetailUrl *string `json:"detail_url,omitempty"`
 
 	// 当前系统时间
-	CurrentSystemTime *string `json:"current_system_time,omitempty"`
-	HttpStatusCode    int     `json:"-"`
+	CurrentSystemTime *int64 `json:"current_system_time,omitempty"`
+	HttpStatusCode    int    `json:"-"`
 }
 
 func (o ShowPipelineRunDetailResponse) String() string {

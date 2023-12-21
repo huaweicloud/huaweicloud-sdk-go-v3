@@ -21,10 +21,10 @@ type CreateSecurityGroupRuleOption struct {
 	// 出入控制方向。  取值范围：  - egress：出方向  - ingress：入方向
 	Direction CreateSecurityGroupRuleOptionDirection `json:"direction"`
 
-	// IP协议类型。  取值范围：IPv4[,IPv6](tag:hide)
+	// IP协议类型。  取值范围：IPv4,IPv6
 	Ethertype *CreateSecurityGroupRuleOptionEthertype `json:"ethertype,omitempty"`
 
-	// 协议类型。  取值范围：icmp、tcp、udp等  约束：为空表示支持所有协议
+	// 协议类型。  取值范围：icmp、tcp、udp、icmpv6或IP协议号（0~255）  约束：为空表示支持所有协议
 	Protocol *string `json:"protocol,omitempty"`
 
 	// 起始端口值。  取值范围：1~65535  约束：取值不能大于port_range_max的值，为空表示所有端口。
@@ -108,12 +108,16 @@ type CreateSecurityGroupRuleOptionEthertype struct {
 
 type CreateSecurityGroupRuleOptionEthertypeEnum struct {
 	I_PV4 CreateSecurityGroupRuleOptionEthertype
+	I_PV6 CreateSecurityGroupRuleOptionEthertype
 }
 
 func GetCreateSecurityGroupRuleOptionEthertypeEnum() CreateSecurityGroupRuleOptionEthertypeEnum {
 	return CreateSecurityGroupRuleOptionEthertypeEnum{
 		I_PV4: CreateSecurityGroupRuleOptionEthertype{
 			value: "IPv4",
+		},
+		I_PV6: CreateSecurityGroupRuleOptionEthertype{
+			value: "IPv6",
 		},
 	}
 }

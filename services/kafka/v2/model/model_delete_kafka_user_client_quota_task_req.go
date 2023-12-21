@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DeleteKafkaUserClientQuotaTaskReq 要删除的客户端流控配置
+// DeleteKafkaUserClientQuotaTaskReq 待删除的用户/客户端流控配置
 type DeleteKafkaUserClientQuotaTaskReq struct {
 
 	// 用户名

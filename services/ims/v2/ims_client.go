@@ -507,7 +507,7 @@ func (c *ImsClient) ShowImageQuotaInvoker(request *model.ShowImageQuotaRequest) 
 	return &ShowImageQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowJob 查询job状态
+// ShowJob 异步任务查询
 //
 // 该接口为扩展接口，主要用于查询异步接口执行情况，比如查询导出镜像任务的执行状态。
 //
@@ -522,7 +522,7 @@ func (c *ImsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
-// ShowJobInvoker 查询job状态
+// ShowJobInvoker 异步任务查询
 func (c *ImsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

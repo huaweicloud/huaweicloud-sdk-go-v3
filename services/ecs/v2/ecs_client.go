@@ -686,7 +686,7 @@ func (c *EcsClient) ListResizeFlavorsInvoker(request *model.ListResizeFlavorsReq
 	return &ListResizeFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListServerBlockDevices 查询弹性云服务器磁盘信息
+// ListServerBlockDevices 查询弹性云服务器挂载磁盘列表详情信息
 //
 // 查询弹性云服务器挂载的磁盘信息。
 //
@@ -701,7 +701,7 @@ func (c *EcsClient) ListServerBlockDevices(request *model.ListServerBlockDevices
 	}
 }
 
-// ListServerBlockDevicesInvoker 查询弹性云服务器磁盘信息
+// ListServerBlockDevicesInvoker 查询弹性云服务器挂载磁盘列表详情信息
 func (c *EcsClient) ListServerBlockDevicesInvoker(request *model.ListServerBlockDevicesRequest) *ListServerBlockDevicesInvoker {
 	requestDef := GenReqDefForListServerBlockDevices()
 	return &ListServerBlockDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

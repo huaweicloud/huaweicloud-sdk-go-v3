@@ -15,7 +15,7 @@ type ShowBackendTargetInfoRequest struct {
 	// 文件系统id
 	ShareId string `json:"share_id"`
 
-	// 数据存储库 id
+	// 绑定关系id
 	TargetId string `json:"target_id"`
 }
 

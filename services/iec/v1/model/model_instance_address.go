@@ -21,7 +21,7 @@ type InstanceAddress struct {
 	// IP地址。
 	Addr *string `json:"addr,omitempty"`
 
-	// IP地址版本。  - “4”：代表IPv4。 [- “6”：代表IPv6。](tag:hide)
+	// IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
 	Version *string `json:"version,omitempty"`
 }
 

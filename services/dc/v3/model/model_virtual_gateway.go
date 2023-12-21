@@ -45,6 +45,15 @@ type VirtualGateway struct {
 	// 实例所属企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 归属的设备ID
+	DeviceId *string `json:"device_id,omitempty"`
+
+	// 归属的冗余设备ID
+	RedundantDeviceId *string `json:"redundant_device_id,omitempty"`
+
+	// 归属的可用区对应的边界组(public border group)，标识是否homezone局点。
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+
 	// 标签信息
 	Tags *[]Tag `json:"tags,omitempty"`
 }

@@ -2263,6 +2263,27 @@ func (c *DcsClient) UpdateSlavePriorityInvoker(request *model.UpdateSlavePriorit
 	return &UpdateSlavePriorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ValidateDeletableReplica 校验集群副本是否支持删除
+//
+// 校验集群副本是否支持删除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ValidateDeletableReplica(request *model.ValidateDeletableReplicaRequest) (*model.ValidateDeletableReplicaResponse, error) {
+	requestDef := GenReqDefForValidateDeletableReplica()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateDeletableReplicaResponse), nil
+	}
+}
+
+// ValidateDeletableReplicaInvoker 校验集群副本是否支持删除
+func (c *DcsClient) ValidateDeletableReplicaInvoker(request *model.ValidateDeletableReplicaRequest) *ValidateDeletableReplicaInvoker {
+	requestDef := GenReqDefForValidateDeletableReplica()
+	return &ValidateDeletableReplicaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIpWhitelist 查询指定实例的IP白名单
 //
 // 查询指定实例的IP白名单。

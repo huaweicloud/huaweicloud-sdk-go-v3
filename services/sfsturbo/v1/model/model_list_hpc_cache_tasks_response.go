@@ -12,7 +12,7 @@ type ListHpcCacheTasksResponse struct {
 	// 任务详情
 	Tasks *[]OneHpcCacheTaskInfoResp `json:"tasks,omitempty"`
 
-	// 联动任务数量
+	// 任务数量
 	Count *int64 `json:"count,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

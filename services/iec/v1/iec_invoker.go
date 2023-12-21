@@ -101,6 +101,18 @@ func (i *CreateImageInvoker) Invoke() (*model.CreateImageResponse, error) {
 	}
 }
 
+type CreateInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceResponse), nil
+	}
+}
+
 type CreateKeypairInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +398,18 @@ func (i *ExpandEdgecloudInvoker) Invoke() (*model.ExpandEdgecloudResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ExpandEdgecloudResponse), nil
+	}
+}
+
+type ListBandwidthTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthTypesInvoker) Invoke() (*model.ListBandwidthTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthTypesResponse), nil
 	}
 }
 
@@ -998,5 +1022,17 @@ func (i *UpdatePublicIpInvoker) Invoke() (*model.UpdatePublicIpResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdatePublicIpResponse), nil
+	}
+}
+
+type CreateSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubnetInvoker) Invoke() (*model.CreateSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubnetResponse), nil
 	}
 }
