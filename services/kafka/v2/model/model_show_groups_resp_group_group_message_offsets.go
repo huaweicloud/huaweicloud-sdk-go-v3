@@ -12,7 +12,7 @@ type ShowGroupsRespGroupGroupMessageOffsets struct {
 	Partition *int32 `json:"partition,omitempty"`
 
 	// 剩余可消费消息数，即消息堆积数。
-	Lag *int32 `json:"lag,omitempty"`
+	Lag *int64 `json:"lag,omitempty"`
 
 	// topic名称。
 	Topic *string `json:"topic,omitempty"`
