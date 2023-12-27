@@ -1325,6 +1325,18 @@ func (i *StartupInstanceInvoker) Invoke() (*model.StartupInstanceResponse, error
 	}
 }
 
+type StopBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopBackupInvoker) Invoke() (*model.StopBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopBackupResponse), nil
+	}
+}
+
 type StopInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2222,5 +2234,17 @@ func (i *SetInstancesDbShrinkInvoker) Invoke() (*model.SetInstancesDbShrinkRespo
 		return nil, err
 	} else {
 		return result.(*model.SetInstancesDbShrinkResponse), nil
+	}
+}
+
+type SetInstancesNewDbShrinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstancesNewDbShrinkInvoker) Invoke() (*model.SetInstancesNewDbShrinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstancesNewDbShrinkResponse), nil
 	}
 }

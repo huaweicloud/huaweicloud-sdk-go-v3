@@ -66,6 +66,15 @@ type PrivateImageRepositoryInfo struct {
 	// 是否可扫描
 	Scannable *bool `json:"scannable,omitempty"`
 
+	// 企业实例名称
+	InstanceName *string `json:"instance_name,omitempty"`
+
+	// 企业实例ID
+	InstanceId *string `json:"instance_id,omitempty"`
+
+	// 企业镜像URL
+	InstanceUrl *string `json:"instance_url,omitempty"`
+
 	// 多架构关联镜像信息
 	AssociationImages *[]AssociateImages `json:"association_images,omitempty"`
 }

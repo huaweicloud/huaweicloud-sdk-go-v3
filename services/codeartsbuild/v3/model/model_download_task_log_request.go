@@ -12,7 +12,7 @@ type DownloadTaskLogRequest struct {
 	// 记录ID,36位数字、小写字母、'-'组组合。
 	RecordId string `json:"record_id"`
 
-	// 记录ID,36位数字、小写字母、'-'组组合。
+	// 步骤名称
 	TaskName string `json:"task_name"`
 
 	// 日志等级 值为INFO | DEBUG。

@@ -20,6 +20,9 @@ type PlayPolicy struct {
 
 	// 驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
 	PlayMode *PlayPolicyPlayMode `json:"play_mode,omitempty"`
+
+	// 随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+	RandomPlayMode *PlayPolicyRandomPlayMode `json:"random_play_mode,omitempty"`
 }
 
 func (o PlayPolicy) String() string {
@@ -60,6 +63,61 @@ func (c PlayPolicyPlayMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PlayPolicyPlayMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PlayPolicyRandomPlayMode struct {
+	value string
+}
+
+type PlayPolicyRandomPlayModeEnum struct {
+	NONE                  PlayPolicyRandomPlayMode
+	SCENE                 PlayPolicyRandomPlayMode
+	SCRIPT_ITEM           PlayPolicyRandomPlayMode
+	SCENE_AND_SCRIPT_ITEM PlayPolicyRandomPlayMode
+}
+
+func GetPlayPolicyRandomPlayModeEnum() PlayPolicyRandomPlayModeEnum {
+	return PlayPolicyRandomPlayModeEnum{
+		NONE: PlayPolicyRandomPlayMode{
+			value: "NONE",
+		},
+		SCENE: PlayPolicyRandomPlayMode{
+			value: "SCENE",
+		},
+		SCRIPT_ITEM: PlayPolicyRandomPlayMode{
+			value: "SCRIPT_ITEM",
+		},
+		SCENE_AND_SCRIPT_ITEM: PlayPolicyRandomPlayMode{
+			value: "SCENE_AND_SCRIPT_ITEM",
+		},
+	}
+}
+
+func (c PlayPolicyRandomPlayMode) Value() string {
+	return c.value
+}
+
+func (c PlayPolicyRandomPlayMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PlayPolicyRandomPlayMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

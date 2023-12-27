@@ -21,7 +21,7 @@ type ListSmartLiveRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 开发者应用作为资产权属的可选字段。
+	// 第三方用户ID。 > *不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询。
@@ -39,11 +39,11 @@ type ListSmartLiveRequest struct {
 	// 排序方式。 * asc：升序 * desc：降序  默认asc升序。
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// 过滤创建时间<=输入时间的记录。
-	CreateUntil *string `json:"create_until,omitempty"`
-
 	// 过滤创建时间>=输入时间的记录。
 	CreateSince *string `json:"create_since,omitempty"`
+
+	// 过滤创建时间<=输入时间的记录。
+	CreateUntil *string `json:"create_until,omitempty"`
 }
 
 func (o ListSmartLiveRequest) String() string {

@@ -187,9 +187,9 @@ func (c *CodeArtsBuildClient) DownloadKeystoreInvoker(request *model.DownloadKey
 	return &DownloadKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DownloadTaskLog 下载全量构建步骤日志
+// DownloadTaskLog 下载构建步骤日志
 //
-// 下载全量构建步骤日志
+// 下载构建步骤日志
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsBuildClient) DownloadTaskLog(request *model.DownloadTaskLogRequest) (*model.DownloadTaskLogResponse, error) {
@@ -202,7 +202,7 @@ func (c *CodeArtsBuildClient) DownloadTaskLog(request *model.DownloadTaskLogRequ
 	}
 }
 
-// DownloadTaskLogInvoker 下载全量构建步骤日志
+// DownloadTaskLogInvoker 下载构建步骤日志
 func (c *CodeArtsBuildClient) DownloadTaskLogInvoker(request *model.DownloadTaskLogRequest) *DownloadTaskLogInvoker {
 	requestDef := GenReqDefForDownloadTaskLog()
 	return &DownloadTaskLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

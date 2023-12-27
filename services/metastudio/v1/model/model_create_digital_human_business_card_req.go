@@ -22,17 +22,25 @@ type CreateDigitalHumanBusinessCardReq struct {
 
 	CardImageConfig *BusinessCardImageConfig `json:"card_image_config"`
 
+	// 自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音。文本驱动需要填写introduction_text和voice_asset_id参数。 * AUDIO: 语音驱动，需要在资产库中先上传语音资产。语音驱动需要填写introduction_audio_asset_id参数。
+	IntroductionType *CreateDigitalHumanBusinessCardReqIntroductionType `json:"introduction_type,omitempty"`
+
 	// 自我介绍文本，用于驱动数字人口型。
-	IntroductionText string `json:"introduction_text"`
+	IntroductionText *string `json:"introduction_text,omitempty"`
 
 	// 音色资产ID。
-	VoiceAssetId string `json:"voice_asset_id"`
+	VoiceAssetId *string `json:"voice_asset_id,omitempty"`
+
+	// 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+	IntroductionAudioAssetId *string `json:"introduction_audio_asset_id,omitempty"`
 
 	// 输出名片视频资产名称。默认取card_name的值
 	VideoAssetName *string `json:"video_asset_name,omitempty"`
 
 	// 性别。 * MALE：男性 * FEMALE：女性
 	Gender *CreateDigitalHumanBusinessCardReqGender `json:"gender,omitempty"`
+
+	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 }
 
 func (o CreateDigitalHumanBusinessCardReq) String() string {
@@ -69,6 +77,53 @@ func (c CreateDigitalHumanBusinessCardReqBusinessCardType) MarshalJSON() ([]byte
 }
 
 func (c *CreateDigitalHumanBusinessCardReqBusinessCardType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateDigitalHumanBusinessCardReqIntroductionType struct {
+	value string
+}
+
+type CreateDigitalHumanBusinessCardReqIntroductionTypeEnum struct {
+	TEXT  CreateDigitalHumanBusinessCardReqIntroductionType
+	AUDIO CreateDigitalHumanBusinessCardReqIntroductionType
+}
+
+func GetCreateDigitalHumanBusinessCardReqIntroductionTypeEnum() CreateDigitalHumanBusinessCardReqIntroductionTypeEnum {
+	return CreateDigitalHumanBusinessCardReqIntroductionTypeEnum{
+		TEXT: CreateDigitalHumanBusinessCardReqIntroductionType{
+			value: "TEXT",
+		},
+		AUDIO: CreateDigitalHumanBusinessCardReqIntroductionType{
+			value: "AUDIO",
+		},
+	}
+}
+
+func (c CreateDigitalHumanBusinessCardReqIntroductionType) Value() string {
+	return c.value
+}
+
+func (c CreateDigitalHumanBusinessCardReqIntroductionType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateDigitalHumanBusinessCardReqIntroductionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

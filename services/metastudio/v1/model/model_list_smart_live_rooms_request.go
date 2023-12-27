@@ -18,7 +18,7 @@ type ListSmartLiveRoomsRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 开发者应用作为资产权属的可选字段。
+	// 第三方用户ID。 > *不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询。
@@ -36,7 +36,7 @@ type ListSmartLiveRoomsRequest struct {
 	// 按形象名称模糊查询。
 	ModelName *string `json:"model_name,omitempty"`
 
-	// 当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
+	// 当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
 	LiveState *string `json:"live_state,omitempty"`
 
 	// 最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -44,6 +44,9 @@ type ListSmartLiveRoomsRequest struct {
 
 	// 最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+	RoomType *string `json:"room_type,omitempty"`
 }
 
 func (o ListSmartLiveRoomsRequest) String() string {

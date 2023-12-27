@@ -12,14 +12,19 @@ import (
 // TriggerProcess 触发器处理
 type TriggerProcess struct {
 
-	// 处理抑制时长。单位秒。  -1 表示整场直播 0 表示无抑制，每次都触发
+	// 处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
 	TimeWindow *int32 `json:"time_window,omitempty"`
 
-	// 回复类型。 SYSTEM_REPLY：系统自动回复设置的话术
+	// 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
 	ReplyMode *TriggerProcessReplyMode `json:"reply_mode,omitempty"`
+
+	LayerConfig *SmartLayerConfig `json:"layer_config,omitempty"`
 
 	// 回复话术集
 	ReplyTexts *[]string `json:"reply_texts,omitempty"`
+
+	// 回复音频集。填写audio_url。
+	ReplyAudios *[]ReplyAudioInfo `json:"reply_audios,omitempty"`
 
 	// 回复次序 - RANDOM：随机 - ORDER：顺序循环
 	ReplyOrder *TriggerProcessReplyOrder `json:"reply_order,omitempty"`
@@ -40,12 +45,20 @@ type TriggerProcessReplyMode struct {
 
 type TriggerProcessReplyModeEnum struct {
 	SYSTEM_REPLY TriggerProcessReplyMode
+	CALLBACK     TriggerProcessReplyMode
+	SHOW_LAYER   TriggerProcessReplyMode
 }
 
 func GetTriggerProcessReplyModeEnum() TriggerProcessReplyModeEnum {
 	return TriggerProcessReplyModeEnum{
 		SYSTEM_REPLY: TriggerProcessReplyMode{
 			value: "SYSTEM_REPLY",
+		},
+		CALLBACK: TriggerProcessReplyMode{
+			value: "CALLBACK",
+		},
+		SHOW_LAYER: TriggerProcessReplyMode{
+			value: "SHOW_LAYER",
 		},
 	}
 }

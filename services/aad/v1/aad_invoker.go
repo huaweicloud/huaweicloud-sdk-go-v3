@@ -65,6 +65,18 @@ func (i *ShowUnblockRecordInvoker) Invoke() (*model.ShowUnblockRecordResponse, e
 	}
 }
 
+type AddBlackWhiteIpListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddBlackWhiteIpListInvoker) Invoke() (*model.AddBlackWhiteIpListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddBlackWhiteIpListResponse), nil
+	}
+}
+
 type AddPolicyBlackAndWhiteIpListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -113,6 +125,30 @@ func (i *BatchDeleteInstanceIpRuleInvoker) Invoke() (*model.BatchDeleteInstanceI
 	}
 }
 
+type CreateAadDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAadDomainInvoker) Invoke() (*model.CreateAadDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAadDomainResponse), nil
+	}
+}
+
+type CreateCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateResponse), nil
+	}
+}
+
 type CreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +170,18 @@ func (i *DeleteAlarmConfigInvoker) Invoke() (*model.DeleteAlarmConfigResponse, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteAlarmConfigResponse), nil
+	}
+}
+
+type DeleteBlackWhiteIpListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBlackWhiteIpListInvoker) Invoke() (*model.DeleteBlackWhiteIpListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBlackWhiteIpListResponse), nil
 	}
 }
 
@@ -269,6 +317,18 @@ func (i *ListProtectedIpInvoker) Invoke() (*model.ListProtectedIpResponse, error
 	}
 }
 
+type ListSourceIpsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSourceIpsInvoker) Invoke() (*model.ListSourceIpsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSourceIpsResponse), nil
+	}
+}
+
 type ListUnboundProtectedIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -278,6 +338,18 @@ func (i *ListUnboundProtectedIpInvoker) Invoke() (*model.ListUnboundProtectedIpR
 		return nil, err
 	} else {
 		return result.(*model.ListUnboundProtectedIpResponse), nil
+	}
+}
+
+type ModifyDomainWebSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyDomainWebSwitchInvoker) Invoke() (*model.ModifyDomainWebSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyDomainWebSwitchResponse), nil
 	}
 }
 

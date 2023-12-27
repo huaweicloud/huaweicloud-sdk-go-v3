@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateBuildJobRequestBody 更新构建作业配置接口请求体
+// UpdateBuildJobRequestBody 更新构建任务请求体
 type UpdateBuildJobRequestBody struct {
 
 	// 使用机器的架构

@@ -1615,6 +1615,27 @@ func (c *DdsClient) ShowBackupPolicyInvoker(request *model.ShowBackupPolicyReque
 	return &ShowBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowClientNetwork 查询副本集跨网段访问配置
+//
+// 查询副本集跨网段访问配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ShowClientNetwork(request *model.ShowClientNetworkRequest) (*model.ShowClientNetworkResponse, error) {
+	requestDef := GenReqDefForShowClientNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClientNetworkResponse), nil
+	}
+}
+
+// ShowClientNetworkInvoker 查询副本集跨网段访问配置
+func (c *DdsClient) ShowClientNetworkInvoker(request *model.ShowClientNetworkRequest) *ShowClientNetworkInvoker {
+	requestDef := GenReqDefForShowClientNetwork()
+	return &ShowClientNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowConfigurationAppliedHistory 查询参数模板被应用历史
 //
 // 查询参数模板应用历史

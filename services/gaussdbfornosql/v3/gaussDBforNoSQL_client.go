@@ -860,6 +860,27 @@ func (c *GaussDBforNoSQLClient) ListInstancesSessionStatisticsInvoker(request *m
 	return &ListInstancesSessionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListJobs 查询任务列表和详情
+//
+// 查询任务列表和详情，默认查询任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
+	requestDef := GenReqDefForListJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobsResponse), nil
+	}
+}
+
+// ListJobsInvoker 查询任务列表和详情
+func (c *GaussDBforNoSQLClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInvoker {
+	requestDef := GenReqDefForListJobs()
+	return &ListJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListLtsConfigs 查询LTS日志配置信息
 //
 // 分页查询实例关联的LTS日志配置信息。

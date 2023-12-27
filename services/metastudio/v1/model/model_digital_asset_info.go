@@ -27,11 +27,20 @@ type DigitalAssetInfo struct {
 	// 资产更新时间。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 资产类型。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型 * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型 * COMMON_FILE：通用文件 * HUMAN_MODEL_2D:2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐
+	// 资产类型。  公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产类型： * HUMAN_MODEL_2D：分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产类型： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
 	AssetType *DigitalAssetInfoAssetType `json:"asset_type,omitempty"`
 
 	// 资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
 	AssetState *DigitalAssetInfoAssetState `json:"asset_state,omitempty"`
+
+	// 失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
+	FailType *DigitalAssetInfoFailType `json:"fail_type,omitempty"`
+
+	// 冻结/解冻/失败 原因。
+	Reason *string `json:"reason,omitempty"`
+
+	// 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
+	IsNeedGenerateCover *bool `json:"is_need_generate_cover,omitempty"`
 
 	// 标签列表。
 	Tags *[]string `json:"tags,omitempty"`
@@ -72,6 +81,7 @@ type DigitalAssetInfoAssetTypeEnum struct {
 	HUMAN_MODEL_2_D       DigitalAssetInfoAssetType
 	BUSINESS_CARD_TEMPLET DigitalAssetInfoAssetType
 	MUSIC                 DigitalAssetInfoAssetType
+	AUDIO                 DigitalAssetInfoAssetType
 }
 
 func GetDigitalAssetInfoAssetTypeEnum() DigitalAssetInfoAssetTypeEnum {
@@ -114,6 +124,9 @@ func GetDigitalAssetInfoAssetTypeEnum() DigitalAssetInfoAssetTypeEnum {
 		},
 		MUSIC: DigitalAssetInfoAssetType{
 			value: "MUSIC",
+		},
+		AUDIO: DigitalAssetInfoAssetType{
+			value: "AUDIO",
 		},
 	}
 }
@@ -194,6 +207,53 @@ func (c DigitalAssetInfoAssetState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DigitalAssetInfoAssetState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DigitalAssetInfoFailType struct {
+	value string
+}
+
+type DigitalAssetInfoFailTypeEnum struct {
+	AUTOMATIC_REVIEW_REJECT DigitalAssetInfoFailType
+	MANUAL_REVIEW_REJECT    DigitalAssetInfoFailType
+}
+
+func GetDigitalAssetInfoFailTypeEnum() DigitalAssetInfoFailTypeEnum {
+	return DigitalAssetInfoFailTypeEnum{
+		AUTOMATIC_REVIEW_REJECT: DigitalAssetInfoFailType{
+			value: "AUTOMATIC_REVIEW_REJECT",
+		},
+		MANUAL_REVIEW_REJECT: DigitalAssetInfoFailType{
+			value: "MANUAL_REVIEW_REJECT",
+		},
+	}
+}
+
+func (c DigitalAssetInfoFailType) Value() string {
+	return c.value
+}
+
+func (c DigitalAssetInfoFailType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DigitalAssetInfoFailType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

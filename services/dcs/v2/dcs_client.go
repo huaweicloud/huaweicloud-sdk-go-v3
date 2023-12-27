@@ -639,6 +639,27 @@ func (c *DcsClient) DeleteSingleInstanceInvoker(request *model.DeleteSingleInsta
 	return &DeleteSingleInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadSslCert 下载实例SSL证书
+//
+// 下载实例SSL证书。该接口目前仅针对Redis 6.0[基础版](tag:hws,hws_hk)版本实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DownloadSslCert(request *model.DownloadSslCertRequest) (*model.DownloadSslCertResponse, error) {
+	requestDef := GenReqDefForDownloadSslCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadSslCertResponse), nil
+	}
+}
+
+// DownloadSslCertInvoker 下载实例SSL证书
+func (c *DcsClient) DownloadSslCertInvoker(request *model.DownloadSslCertRequest) *DownloadSslCertInvoker {
+	requestDef := GenReqDefForDownloadSslCert()
+	return &DownloadSslCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExchangeInstanceIp 进行IP交换
 //
 // 进行IP交换
@@ -1736,6 +1757,27 @@ func (c *DcsClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *Sho
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceSslDetail 查询实例SSL信息
+//
+// 查询实例SSL信息。该接口目前仅针对Redis 6.0[基础版](tag:hws,hws_hk)版本实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowInstanceSslDetail(request *model.ShowInstanceSslDetailRequest) (*model.ShowInstanceSslDetailResponse, error) {
+	requestDef := GenReqDefForShowInstanceSslDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceSslDetailResponse), nil
+	}
+}
+
+// ShowInstanceSslDetailInvoker 查询实例SSL信息
+func (c *DcsClient) ShowInstanceSslDetailInvoker(request *model.ShowInstanceSslDetailRequest) *ShowInstanceSslDetailInvoker {
+	requestDef := GenReqDefForShowInstanceSslDetail()
+	return &ShowInstanceSslDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobInfo 查询租户Job执行结果
 //
 // 查询租户Job执行结果
@@ -2261,6 +2303,27 @@ func (c *DcsClient) UpdateSlavePriority(request *model.UpdateSlavePriorityReques
 func (c *DcsClient) UpdateSlavePriorityInvoker(request *model.UpdateSlavePriorityRequest) *UpdateSlavePriorityInvoker {
 	requestDef := GenReqDefForUpdateSlavePriority()
 	return &UpdateSlavePriorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSslSwitch 开启/关闭SSL
+//
+// 开启/关闭SSL。该接口目前仅针对Redis 6.0[基础版](tag:hws,hws_hk)版本实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateSslSwitch(request *model.UpdateSslSwitchRequest) (*model.UpdateSslSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateSslSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSslSwitchResponse), nil
+	}
+}
+
+// UpdateSslSwitchInvoker 开启/关闭SSL
+func (c *DcsClient) UpdateSslSwitchInvoker(request *model.UpdateSslSwitchRequest) *UpdateSslSwitchInvoker {
+	requestDef := GenReqDefForUpdateSslSwitch()
+	return &UpdateSslSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateDeletableReplica 校验集群副本是否支持删除

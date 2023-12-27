@@ -12,13 +12,7 @@ type ShootScriptItem struct {
 	// 剧本序号。
 	SequenceNo *int32 `json:"sequence_no,omitempty"`
 
-	// 开始时间。  单位秒。  相对于内容的开始时间。 > 预留字段。当前只需要填sequence_no即可。
-	StartTime *float32 `json:"start_time,omitempty"`
-
-	// 结束时间。  单位秒。  相对于内容的结束时间。 > 预留字段。当前只需要填sequence_no即可。
-	EndTime *float32 `json:"end_time,omitempty"`
-
-	ShootScript *ShootScript `json:"shoot_script"`
+	ShootScript *ShootScript `json:"shoot_script,omitempty"`
 }
 
 func (o ShootScriptItem) String() string {

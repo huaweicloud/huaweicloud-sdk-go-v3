@@ -342,6 +342,27 @@ func (c *KafkaClient) CreateReassignmentTaskInvoker(request *model.CreateReassig
 	return &CreateReassignmentTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateShrinkageJob 实例缩容
+//
+// 实例缩容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) CreateShrinkageJob(request *model.CreateShrinkageJobRequest) (*model.CreateShrinkageJobResponse, error) {
+	requestDef := GenReqDefForCreateShrinkageJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateShrinkageJobResponse), nil
+	}
+}
+
+// CreateShrinkageJobInvoker 实例缩容
+func (c *KafkaClient) CreateShrinkageJobInvoker(request *model.CreateShrinkageJobRequest) *CreateShrinkageJobInvoker {
+	requestDef := GenReqDefForCreateShrinkageJob()
+	return &CreateShrinkageJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSinkTask 创建转储任务
 //
 // 创建转储任务。
@@ -1317,6 +1338,27 @@ func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRe
 func (c *KafkaClient) ShowPartitionMessageInvoker(request *model.ShowPartitionMessageRequest) *ShowPartitionMessageInvoker {
 	requestDef := GenReqDefForShowPartitionMessage()
 	return &ShowPartitionMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowShrinkCheckResult 实例缩容前置检查
+//
+// 实例缩容前置检查。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ShowShrinkCheckResult(request *model.ShowShrinkCheckResultRequest) (*model.ShowShrinkCheckResultResponse, error) {
+	requestDef := GenReqDefForShowShrinkCheckResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowShrinkCheckResultResponse), nil
+	}
+}
+
+// ShowShrinkCheckResultInvoker 实例缩容前置检查
+func (c *KafkaClient) ShowShrinkCheckResultInvoker(request *model.ShowShrinkCheckResultRequest) *ShowShrinkCheckResultInvoker {
+	requestDef := GenReqDefForShowShrinkCheckResult()
+	return &ShowShrinkCheckResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSinkTaskDetail 查询单个转储任务

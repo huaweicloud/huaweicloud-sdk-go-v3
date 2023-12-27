@@ -14,6 +14,9 @@ type ModelInfo struct {
 
 	// 资产名称
 	AssetName *string `json:"asset_name,omitempty"`
+
+	// 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+	BackupModelAssetIds *[]string `json:"backup_model_asset_ids,omitempty"`
 }
 
 func (o ModelInfo) String() string {

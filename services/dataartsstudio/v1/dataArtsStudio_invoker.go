@@ -401,6 +401,18 @@ func (i *CreateFactoryEnvInvoker) Invoke() (*model.CreateFactoryEnvResponse, err
 	}
 }
 
+type CreateFactoryJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFactoryJobInvoker) Invoke() (*model.CreateFactoryJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFactoryJobResponse), nil
+	}
+}
+
 type CreateFactorySupplementDataInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1289,6 +1301,30 @@ func (i *ListFactLogicTablesInvoker) Invoke() (*model.ListFactLogicTablesRespons
 	}
 }
 
+type ListFactoryAlarmInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryAlarmInfoInvoker) Invoke() (*model.ListFactoryAlarmInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryAlarmInfoResponse), nil
+	}
+}
+
+type ListFactoryJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryJobsInvoker) Invoke() (*model.ListFactoryJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryJobsResponse), nil
+	}
+}
+
 type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2174,6 +2210,18 @@ func (i *ShowInstanceResultInvoker) Invoke() (*model.ShowInstanceResultResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResultResponse), nil
+	}
+}
+
+type ShowLineageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLineageInvoker) Invoke() (*model.ShowLineageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLineageResponse), nil
 	}
 }
 

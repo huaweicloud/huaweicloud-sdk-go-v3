@@ -18,6 +18,8 @@ type PptAssetMeta struct {
 	// PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
 	PptAnalysisStatus *PptAssetMetaPptAnalysisStatus `json:"ppt_analysis_status,omitempty"`
 
+	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
+
 	// PPT页面总数。
 	PageCount *int32 `json:"page_count,omitempty"`
 

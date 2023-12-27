@@ -21,7 +21,7 @@ type CreateBuildJobScm struct {
 	// 代码仓http地址
 	WebUrl *string `json:"web_url,omitempty"`
 
-	// 仓库类别，codehub还是github等等
+	// 仓库类别，Repo、Github等
 	ScmType string `json:"scm_type"`
 
 	// 是否自动构建

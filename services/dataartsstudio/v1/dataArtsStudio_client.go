@@ -712,6 +712,27 @@ func (c *DataArtsStudioClient) CreateFactoryEnvInvoker(request *model.CreateFact
 	return &CreateFactoryEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFactoryJob 创建作业
+//
+// 创建作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateFactoryJob(request *model.CreateFactoryJobRequest) (*model.CreateFactoryJobResponse, error) {
+	requestDef := GenReqDefForCreateFactoryJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFactoryJobResponse), nil
+	}
+}
+
+// CreateFactoryJobInvoker 创建作业
+func (c *DataArtsStudioClient) CreateFactoryJobInvoker(request *model.CreateFactoryJobRequest) *CreateFactoryJobInvoker {
+	requestDef := GenReqDefForCreateFactoryJob()
+	return &CreateFactoryJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFactorySupplementDataInstance 创建补数据实例的接口
 //
 // 创建一个补数据实例
@@ -2266,6 +2287,48 @@ func (c *DataArtsStudioClient) ListFactLogicTablesInvoker(request *model.ListFac
 	return &ListFactLogicTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFactoryAlarmInfo 查询告警通知记录
+//
+// 查询告警通知记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryAlarmInfo(request *model.ListFactoryAlarmInfoRequest) (*model.ListFactoryAlarmInfoResponse, error) {
+	requestDef := GenReqDefForListFactoryAlarmInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryAlarmInfoResponse), nil
+	}
+}
+
+// ListFactoryAlarmInfoInvoker 查询告警通知记录
+func (c *DataArtsStudioClient) ListFactoryAlarmInfoInvoker(request *model.ListFactoryAlarmInfoRequest) *ListFactoryAlarmInfoInvoker {
+	requestDef := GenReqDefForListFactoryAlarmInfo()
+	return &ListFactoryAlarmInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFactoryJobs 查询作业列表
+//
+// 查询作业列表清单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryJobs(request *model.ListFactoryJobsRequest) (*model.ListFactoryJobsResponse, error) {
+	requestDef := GenReqDefForListFactoryJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryJobsResponse), nil
+	}
+}
+
+// ListFactoryJobsInvoker 查询作业列表
+func (c *DataArtsStudioClient) ListFactoryJobsInvoker(request *model.ListFactoryJobsRequest) *ListFactoryJobsInvoker {
+	requestDef := GenReqDefForListFactoryJobs()
+	return &ListFactoryJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstances 获取任务执行结果列表
 //
 // 获取任务执行结果列表
@@ -3816,6 +3879,27 @@ func (c *DataArtsStudioClient) ShowInstanceResult(request *model.ShowInstanceRes
 func (c *DataArtsStudioClient) ShowInstanceResultInvoker(request *model.ShowInstanceResultRequest) *ShowInstanceResultInvoker {
 	requestDef := GenReqDefForShowInstanceResult()
 	return &ShowInstanceResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLineage 血缘查询
+//
+// 血缘查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowLineage(request *model.ShowLineageRequest) (*model.ShowLineageResponse, error) {
+	requestDef := GenReqDefForShowLineage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLineageResponse), nil
+	}
+}
+
+// ShowLineageInvoker 血缘查询
+func (c *DataArtsStudioClient) ShowLineageInvoker(request *model.ShowLineageRequest) *ShowLineageInvoker {
+	requestDef := GenReqDefForShowLineage()
+	return &ShowLineageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMessageDetail 获取消息详情

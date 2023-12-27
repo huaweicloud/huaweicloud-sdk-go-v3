@@ -18,6 +18,9 @@ type ActionResources struct {
 
 	// 标签列表，没有标签，数组默认为空。
 	Tags *[]TagItem `json:"tags,omitempty"`
+
+	// 系统标签列表，没有标签，数组默认为空
+	SysTags *[]SysTag `json:"sys_tags,omitempty"`
 }
 
 func (o ActionResources) String() string {

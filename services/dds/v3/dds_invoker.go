@@ -917,6 +917,18 @@ func (i *ShowBackupPolicyInvoker) Invoke() (*model.ShowBackupPolicyResponse, err
 	}
 }
 
+type ShowClientNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClientNetworkInvoker) Invoke() (*model.ShowClientNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClientNetworkResponse), nil
+	}
+}
+
 type ShowConfigurationAppliedHistoryInvoker struct {
 	*invoker.BaseInvoker
 }

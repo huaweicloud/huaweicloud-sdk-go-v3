@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// PhotoVideoConfig 视频输出配置。
+// PhotoVideoConfig 视频输出配置。照片数字人支持该输出配置查询，不支持修改。
 type PhotoVideoConfig struct {
 
 	// 视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
@@ -20,9 +20,6 @@ type PhotoVideoConfig struct {
 
 	// 帧率。  单位：FPS。
 	FrameRate *PhotoVideoConfigFrameRate `json:"frame_rate,omitempty"`
-
-	// 输出的视频是否关闭系统水印。目前该参数需要白名单的租户才起作用。 > true: 关闭系统水印 > false: 不关闭系统水印
-	DisableSystemWatermark *bool `json:"disable_system_watermark,omitempty"`
 }
 
 func (o PhotoVideoConfig) String() string {

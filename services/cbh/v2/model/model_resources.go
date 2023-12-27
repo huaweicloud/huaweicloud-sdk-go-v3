@@ -12,8 +12,7 @@ type Resources struct {
 	// 实例ID。
 	ResourceId string `json:"resource_id"`
 
-	// 资源详情。预留用于扩展，默认为空。
-	ResourceDetail *interface{} `json:"resource_detail"`
+	ResourceDetail *InstanceDetail `json:"resource_detail"`
 
 	// tags。
 	Tags []ResourceTag `json:"tags"`

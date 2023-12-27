@@ -25,6 +25,9 @@ type TtsaJob struct {
 
 	// 语音驱动内容时长。  单位:秒。
 	ContentDuration *float32 `json:"content_duration,omitempty"`
+
+	// 任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
+	JobType *TtsaJobJobType `json:"job_type,omitempty"`
 }
 
 func (o TtsaJob) String() string {
@@ -73,6 +76,53 @@ func (c TtsaJobState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TtsaJobState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TtsaJobJobType struct {
+	value string
+}
+
+type TtsaJobJobTypeEnum struct {
+	REAL_JOB   TtsaJobJobType
+	UNREAL_JOB TtsaJobJobType
+}
+
+func GetTtsaJobJobTypeEnum() TtsaJobJobTypeEnum {
+	return TtsaJobJobTypeEnum{
+		REAL_JOB: TtsaJobJobType{
+			value: "REAL_JOB",
+		},
+		UNREAL_JOB: TtsaJobJobType{
+			value: "UNREAL_JOB",
+		},
+	}
+}
+
+func (c TtsaJobJobType) Value() string {
+	return c.value
+}
+
+func (c TtsaJobJobType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TtsaJobJobType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

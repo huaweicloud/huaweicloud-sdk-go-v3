@@ -8,10 +8,8 @@ import (
 
 // ShowAuthorizationResponse Response Object
 type ShowAuthorizationResponse struct {
-
-	// 委托授权信息。
-	Authorization  *interface{} `json:"authorization,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Authorization  *AgencyAuthorizeInfo `json:"authorization,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ShowAuthorizationResponse) String() string {

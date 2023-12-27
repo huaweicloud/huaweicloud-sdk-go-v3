@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// HumanModel2DAssetMeta 分身模型元数据
 type HumanModel2DAssetMeta struct {
 
 	// 分身数字人的动作是否可编辑。默认不可编辑。
@@ -20,11 +21,11 @@ type HumanModel2DAssetMeta struct {
 	// 是否支持直播
 	SupportLive *bool `json:"support_live,omitempty"`
 
-	// V3模型分身数字人是否需要实时抠图。
-	IsRealtimeMatting *bool `json:"is_realtime_matting,omitempty"`
-
 	// 分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型
 	ModelVersion *HumanModel2DAssetMetaModelVersion `json:"model_version,omitempty"`
+
+	// 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+	ModelResolution *string `json:"model_resolution,omitempty"`
 }
 
 func (o HumanModel2DAssetMeta) String() string {

@@ -15,7 +15,7 @@ type SmartLiveJob struct {
 	// 数字人直播任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败
+	// 数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
 	State *SmartLiveJobState `json:"state,omitempty"`
 
 	// 数字人直播时长，单位秒。
@@ -39,6 +39,14 @@ type SmartLiveJob struct {
 
 	// 直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
 	LiveEventReportUrl *string `json:"live_event_report_url,omitempty"`
+
+	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
+
+	// 数字人直播推流时长，单位秒
+	StreamDuration *float32 `json:"stream_duration,omitempty"`
+
+	// 封禁信息
+	BlockReason *string `json:"block_reason,omitempty"`
 }
 
 func (o SmartLiveJob) String() string {
@@ -59,6 +67,7 @@ type SmartLiveJobStateEnum struct {
 	PROCESSING SmartLiveJobState
 	SUCCEED    SmartLiveJobState
 	FAILED     SmartLiveJobState
+	BLOCKED    SmartLiveJobState
 }
 
 func GetSmartLiveJobStateEnum() SmartLiveJobStateEnum {
@@ -74,6 +83,9 @@ func GetSmartLiveJobStateEnum() SmartLiveJobStateEnum {
 		},
 		FAILED: SmartLiveJobState{
 			value: "FAILED",
+		},
+		BLOCKED: SmartLiveJobState{
+			value: "BLOCKED",
 		},
 	}
 }

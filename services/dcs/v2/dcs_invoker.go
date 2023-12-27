@@ -353,6 +353,18 @@ func (i *DeleteSingleInstanceInvoker) Invoke() (*model.DeleteSingleInstanceRespo
 	}
 }
 
+type DownloadSslCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadSslCertInvoker) Invoke() (*model.DownloadSslCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadSslCertResponse), nil
+	}
+}
+
 type ExchangeInstanceIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -977,6 +989,18 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	}
 }
 
+type ShowInstanceSslDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceSslDetailInvoker) Invoke() (*model.ShowInstanceSslDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceSslDetailResponse), nil
+	}
+}
+
 type ShowJobInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1274,6 +1298,18 @@ func (i *UpdateSlavePriorityInvoker) Invoke() (*model.UpdateSlavePriorityRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateSlavePriorityResponse), nil
+	}
+}
+
+type UpdateSslSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSslSwitchInvoker) Invoke() (*model.UpdateSslSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSslSwitchResponse), nil
 	}
 }
 

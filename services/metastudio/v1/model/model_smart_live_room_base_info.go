@@ -17,6 +17,14 @@ type SmartLiveRoomBaseInfo struct {
 	// 直播间名称
 	RoomName *string `json:"room_name,omitempty"`
 
+	// 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+	RoomType *SmartLiveRoomBaseInfoRoomType `json:"room_type,omitempty"`
+
+	// 直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
+	RoomState *SmartLiveRoomBaseInfoRoomState `json:"room_state,omitempty"`
+
+	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
+
 	// 直播间描述。
 	RoomDescription *string `json:"room_description,omitempty"`
 
@@ -49,6 +57,108 @@ func (o SmartLiveRoomBaseInfo) String() string {
 	}
 
 	return strings.Join([]string{"SmartLiveRoomBaseInfo", string(data)}, " ")
+}
+
+type SmartLiveRoomBaseInfoRoomType struct {
+	value string
+}
+
+type SmartLiveRoomBaseInfoRoomTypeEnum struct {
+	NORMAL   SmartLiveRoomBaseInfoRoomType
+	TEMP     SmartLiveRoomBaseInfoRoomType
+	TEMPLATE SmartLiveRoomBaseInfoRoomType
+}
+
+func GetSmartLiveRoomBaseInfoRoomTypeEnum() SmartLiveRoomBaseInfoRoomTypeEnum {
+	return SmartLiveRoomBaseInfoRoomTypeEnum{
+		NORMAL: SmartLiveRoomBaseInfoRoomType{
+			value: "NORMAL",
+		},
+		TEMP: SmartLiveRoomBaseInfoRoomType{
+			value: "TEMP",
+		},
+		TEMPLATE: SmartLiveRoomBaseInfoRoomType{
+			value: "TEMPLATE",
+		},
+	}
+}
+
+func (c SmartLiveRoomBaseInfoRoomType) Value() string {
+	return c.value
+}
+
+func (c SmartLiveRoomBaseInfoRoomType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartLiveRoomBaseInfoRoomType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SmartLiveRoomBaseInfoRoomState struct {
+	value string
+}
+
+type SmartLiveRoomBaseInfoRoomStateEnum struct {
+	ENABLE  SmartLiveRoomBaseInfoRoomState
+	DISABLE SmartLiveRoomBaseInfoRoomState
+	BLOCKED SmartLiveRoomBaseInfoRoomState
+}
+
+func GetSmartLiveRoomBaseInfoRoomStateEnum() SmartLiveRoomBaseInfoRoomStateEnum {
+	return SmartLiveRoomBaseInfoRoomStateEnum{
+		ENABLE: SmartLiveRoomBaseInfoRoomState{
+			value: "ENABLE",
+		},
+		DISABLE: SmartLiveRoomBaseInfoRoomState{
+			value: "DISABLE",
+		},
+		BLOCKED: SmartLiveRoomBaseInfoRoomState{
+			value: "BLOCKED",
+		},
+	}
+}
+
+func (c SmartLiveRoomBaseInfoRoomState) Value() string {
+	return c.value
+}
+
+func (c SmartLiveRoomBaseInfoRoomState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartLiveRoomBaseInfoRoomState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type SmartLiveRoomBaseInfoLastJobStatus struct {

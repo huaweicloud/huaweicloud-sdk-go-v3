@@ -13,6 +13,8 @@ type ReportLiveEventReq struct {
 
 	// 事件内容。
 	Events *[]LiveEvent `json:"events,omitempty"`
+
+	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 }
 
 func (o ReportLiveEventReq) String() string {

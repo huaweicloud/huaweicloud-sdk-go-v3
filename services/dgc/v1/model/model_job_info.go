@@ -28,6 +28,12 @@ type JobInfo struct {
 	// 作业类型，REAL_TIME： 实时处理，BATCH：批处理
 	ProcessType JobInfoProcessType `json:"processType"`
 
+	// 是否选择单任务，默认为false
+	SingleNodeJobFlag *bool `json:"singleNodeJobFlag,omitempty"`
+
+	// 单任务类型
+	SingleNodeJobType *JobInfoSingleNodeJobType `json:"singleNodeJobType,omitempty"`
+
 	// 作业最后修改人
 	LastUpdateUser *string `json:"lastUpdateUser,omitempty"`
 
@@ -81,6 +87,101 @@ func (c JobInfoProcessType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *JobInfoProcessType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type JobInfoSingleNodeJobType struct {
+	value string
+}
+
+type JobInfoSingleNodeJobTypeEnum struct {
+	DLI_SQL        JobInfoSingleNodeJobType
+	DWS_SQL        JobInfoSingleNodeJobType
+	HIVE_SQL       JobInfoSingleNodeJobType
+	SPARK_SQL      JobInfoSingleNodeJobType
+	RDS_SQL        JobInfoSingleNodeJobType
+	DORIS_SQL      JobInfoSingleNodeJobType
+	ASSIGNMENT     JobInfoSingleNodeJobType
+	BRANCH         JobInfoSingleNodeJobType
+	MERGE          JobInfoSingleNodeJobType
+	DATA_MIGRATION JobInfoSingleNodeJobType
+	MRS_FLINK      JobInfoSingleNodeJobType
+	FLINK_SQL      JobInfoSingleNodeJobType
+	FLINK_JAR      JobInfoSingleNodeJobType
+	DLI_SPARK      JobInfoSingleNodeJobType
+}
+
+func GetJobInfoSingleNodeJobTypeEnum() JobInfoSingleNodeJobTypeEnum {
+	return JobInfoSingleNodeJobTypeEnum{
+		DLI_SQL: JobInfoSingleNodeJobType{
+			value: "DliSQL",
+		},
+		DWS_SQL: JobInfoSingleNodeJobType{
+			value: "DwsSQL",
+		},
+		HIVE_SQL: JobInfoSingleNodeJobType{
+			value: "HiveSQL",
+		},
+		SPARK_SQL: JobInfoSingleNodeJobType{
+			value: "SparkSQL",
+		},
+		RDS_SQL: JobInfoSingleNodeJobType{
+			value: "RdsSQL",
+		},
+		DORIS_SQL: JobInfoSingleNodeJobType{
+			value: "DorisSQL",
+		},
+		ASSIGNMENT: JobInfoSingleNodeJobType{
+			value: "ASSIGNMENT",
+		},
+		BRANCH: JobInfoSingleNodeJobType{
+			value: "BRANCH",
+		},
+		MERGE: JobInfoSingleNodeJobType{
+			value: "MERGE",
+		},
+		DATA_MIGRATION: JobInfoSingleNodeJobType{
+			value: "DataMigration",
+		},
+		MRS_FLINK: JobInfoSingleNodeJobType{
+			value: "MrsFlink",
+		},
+		FLINK_SQL: JobInfoSingleNodeJobType{
+			value: "FlinkSQL",
+		},
+		FLINK_JAR: JobInfoSingleNodeJobType{
+			value: "FlinkJar",
+		},
+		DLI_SPARK: JobInfoSingleNodeJobType{
+			value: "DLISpark",
+		},
+	}
+}
+
+func (c JobInfoSingleNodeJobType) Value() string {
+	return c.value
+}
+
+func (c JobInfoSingleNodeJobType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *JobInfoSingleNodeJobType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

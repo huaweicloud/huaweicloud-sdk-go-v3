@@ -149,6 +149,18 @@ func (i *UpdateDigitalHumanBusinessCardInvoker) Invoke() (*model.UpdateDigitalHu
 	}
 }
 
+type ListDigitalHumanVideoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDigitalHumanVideoInvoker) Invoke() (*model.ListDigitalHumanVideoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDigitalHumanVideoResponse), nil
+	}
+}
+
 type Cancel2DDigitalHumanVideoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -401,6 +413,30 @@ func (i *StopSmartLiveInvoker) Invoke() (*model.StopSmartLiveResponse, error) {
 	}
 }
 
+type CheckTextLanguageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckTextLanguageInvoker) Invoke() (*model.CheckTextLanguageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckTextLanguageResponse), nil
+	}
+}
+
+type CreateInteractionRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInteractionRuleGroupInvoker) Invoke() (*model.CreateInteractionRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInteractionRuleGroupResponse), nil
+	}
+}
+
 type CreateSmartLiveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -413,6 +449,18 @@ func (i *CreateSmartLiveRoomInvoker) Invoke() (*model.CreateSmartLiveRoomRespons
 	}
 }
 
+type DeleteInteractionRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInteractionRuleGroupInvoker) Invoke() (*model.DeleteInteractionRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInteractionRuleGroupResponse), nil
+	}
+}
+
 type DeleteSmartLiveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -422,6 +470,18 @@ func (i *DeleteSmartLiveRoomInvoker) Invoke() (*model.DeleteSmartLiveRoomRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteSmartLiveRoomResponse), nil
+	}
+}
+
+type ListInteractionRuleGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInteractionRuleGroupsInvoker) Invoke() (*model.ListInteractionRuleGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInteractionRuleGroupsResponse), nil
 	}
 }
 
@@ -449,6 +509,18 @@ func (i *ShowSmartLiveRoomInvoker) Invoke() (*model.ShowSmartLiveRoomResponse, e
 	}
 }
 
+type UpdateInteractionRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInteractionRuleGroupInvoker) Invoke() (*model.UpdateInteractionRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInteractionRuleGroupResponse), nil
+	}
+}
+
 type UpdateSmartLiveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -473,6 +545,18 @@ func (i *ListStylesInvoker) Invoke() (*model.ListStylesResponse, error) {
 	}
 }
 
+type CreateFacialAnimationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFacialAnimationsInvoker) Invoke() (*model.CreateFacialAnimationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFacialAnimationsResponse), nil
+	}
+}
+
 type CreateTtsaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +566,18 @@ func (i *CreateTtsaInvoker) Invoke() (*model.CreateTtsaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateTtsaResponse), nil
+	}
+}
+
+type ListFacialAnimationsDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFacialAnimationsDataInvoker) Invoke() (*model.ListFacialAnimationsDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFacialAnimationsDataResponse), nil
 	}
 }
 

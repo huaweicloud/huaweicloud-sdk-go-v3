@@ -20,11 +20,17 @@ type ShowDigitalHumanBusinessCardResponse struct {
 
 	CardImageUrl *BusinessCardImageUrl `json:"card_image_url,omitempty"`
 
+	// 自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
+	IntroductionType *ShowDigitalHumanBusinessCardResponseIntroductionType `json:"introduction_type,omitempty"`
+
 	// 自我介绍文本，用于驱动数字人口型。
 	IntroductionText *string `json:"introduction_text,omitempty"`
 
 	// 音色资产ID。
 	VoiceAssetId *string `json:"voice_asset_id,omitempty"`
+
+	// 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+	IntroductionAudioAssetId *string `json:"introduction_audio_asset_id,omitempty"`
 
 	// 性别。 * MALE：男性 * FEMALE：女性
 	Gender *ShowDigitalHumanBusinessCardResponseGender `json:"gender,omitempty"`
@@ -40,6 +46,53 @@ func (o ShowDigitalHumanBusinessCardResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowDigitalHumanBusinessCardResponse", string(data)}, " ")
+}
+
+type ShowDigitalHumanBusinessCardResponseIntroductionType struct {
+	value string
+}
+
+type ShowDigitalHumanBusinessCardResponseIntroductionTypeEnum struct {
+	TEXT  ShowDigitalHumanBusinessCardResponseIntroductionType
+	AUDIO ShowDigitalHumanBusinessCardResponseIntroductionType
+}
+
+func GetShowDigitalHumanBusinessCardResponseIntroductionTypeEnum() ShowDigitalHumanBusinessCardResponseIntroductionTypeEnum {
+	return ShowDigitalHumanBusinessCardResponseIntroductionTypeEnum{
+		TEXT: ShowDigitalHumanBusinessCardResponseIntroductionType{
+			value: "TEXT",
+		},
+		AUDIO: ShowDigitalHumanBusinessCardResponseIntroductionType{
+			value: "AUDIO",
+		},
+	}
+}
+
+func (c ShowDigitalHumanBusinessCardResponseIntroductionType) Value() string {
+	return c.value
+}
+
+func (c ShowDigitalHumanBusinessCardResponseIntroductionType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowDigitalHumanBusinessCardResponseIntroductionType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ShowDigitalHumanBusinessCardResponseGender struct {

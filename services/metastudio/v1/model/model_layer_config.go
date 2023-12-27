@@ -12,8 +12,11 @@ import (
 // LayerConfig 图层配置。
 type LayerConfig struct {
 
-	// 图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+	// 图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
 	LayerType LayerConfigLayerType `json:"layer_type"`
+
+	// 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
+	GroupId *string `json:"group_id,omitempty"`
 
 	Position *LayerPositionConfig `json:"position"`
 
@@ -43,6 +46,7 @@ type LayerConfigLayerTypeEnum struct {
 	HUMAN LayerConfigLayerType
 	IMAGE LayerConfigLayerType
 	VIDEO LayerConfigLayerType
+	TEXT  LayerConfigLayerType
 }
 
 func GetLayerConfigLayerTypeEnum() LayerConfigLayerTypeEnum {
@@ -55,6 +59,9 @@ func GetLayerConfigLayerTypeEnum() LayerConfigLayerTypeEnum {
 		},
 		VIDEO: LayerConfigLayerType{
 			value: "VIDEO",
+		},
+		TEXT: LayerConfigLayerType{
+			value: "TEXT",
 		},
 	}
 }

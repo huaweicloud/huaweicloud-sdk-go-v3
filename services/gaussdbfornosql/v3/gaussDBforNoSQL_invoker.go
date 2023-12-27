@@ -485,6 +485,18 @@ func (i *ListInstancesSessionStatisticsInvoker) Invoke() (*model.ListInstancesSe
 	}
 }
 
+type ListJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListJobsResponse), nil
+	}
+}
+
 type ListLtsConfigsInvoker struct {
 	*invoker.BaseInvoker
 }

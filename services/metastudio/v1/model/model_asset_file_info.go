@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -29,6 +32,12 @@ type AssetFileInfo struct {
 
 	// 文件下载URL，有效期为24小时。
 	DownloadUrl *string `json:"download_url,omitempty"`
+
+	// 文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+	State *AssetFileInfoState `json:"state,omitempty"`
+
+	// 审核失败原因
+	Reason *string `json:"reason,omitempty"`
 }
 
 func (o AssetFileInfo) String() string {
@@ -38,4 +47,75 @@ func (o AssetFileInfo) String() string {
 	}
 
 	return strings.Join([]string{"AssetFileInfo", string(data)}, " ")
+}
+
+type AssetFileInfoState struct {
+	value string
+}
+
+type AssetFileInfoStateEnum struct {
+	CREATING  AssetFileInfoState
+	CREATED   AssetFileInfoState
+	FAILED    AssetFileInfoState
+	CANCELLED AssetFileInfoState
+	DELETING  AssetFileInfoState
+	DELETED   AssetFileInfoState
+	UPLOADED  AssetFileInfoState
+	REVIEW    AssetFileInfoState
+}
+
+func GetAssetFileInfoStateEnum() AssetFileInfoStateEnum {
+	return AssetFileInfoStateEnum{
+		CREATING: AssetFileInfoState{
+			value: "CREATING",
+		},
+		CREATED: AssetFileInfoState{
+			value: "CREATED",
+		},
+		FAILED: AssetFileInfoState{
+			value: "FAILED",
+		},
+		CANCELLED: AssetFileInfoState{
+			value: "CANCELLED",
+		},
+		DELETING: AssetFileInfoState{
+			value: "DELETING",
+		},
+		DELETED: AssetFileInfoState{
+			value: "DELETED",
+		},
+		UPLOADED: AssetFileInfoState{
+			value: "UPLOADED",
+		},
+		REVIEW: AssetFileInfoState{
+			value: "REVIEW",
+		},
+	}
+}
+
+func (c AssetFileInfoState) Value() string {
+	return c.value
+}
+
+func (c AssetFileInfoState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AssetFileInfoState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

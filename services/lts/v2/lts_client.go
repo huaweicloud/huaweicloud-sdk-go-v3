@@ -208,6 +208,27 @@ func (c *LtsClient) CreateLogStreamInvoker(request *model.CreateLogStreamRequest
 	return &CreateLogStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLogStreamIndex 向指定流创建索引
+//
+// 向指定流创建索引
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateLogStreamIndex(request *model.CreateLogStreamIndexRequest) (*model.CreateLogStreamIndexResponse, error) {
+	requestDef := GenReqDefForCreateLogStreamIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLogStreamIndexResponse), nil
+	}
+}
+
+// CreateLogStreamIndexInvoker 向指定流创建索引
+func (c *LtsClient) CreateLogStreamIndexInvoker(request *model.CreateLogStreamIndexRequest) *CreateLogStreamIndexInvoker {
+	requestDef := GenReqDefForCreateLogStreamIndex()
+	return &CreateLogStreamIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateNotificationTemplate 创建消息模板
 //
 // 该接口用于创建通知模板，目前每个帐户最多可以创建共100个通知模板，创建后名称不可修改。

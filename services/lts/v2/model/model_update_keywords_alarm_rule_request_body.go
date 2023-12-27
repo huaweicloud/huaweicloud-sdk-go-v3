@@ -17,6 +17,9 @@ type UpdateKeywordsAlarmRuleRequestBody struct {
 	// 关键词告警名称
 	KeywordsAlarmRuleName string `json:"keywords_alarm_rule_name"`
 
+	// 规则名称
+	AlarmRuleAlias *string `json:"alarm_rule_alias,omitempty"`
+
 	// 关键词告警信息描述
 	KeywordsAlarmRuleDescription *string `json:"keywords_alarm_rule_description,omitempty"`
 

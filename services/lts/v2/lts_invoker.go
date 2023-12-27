@@ -113,6 +113,18 @@ func (i *CreateLogStreamInvoker) Invoke() (*model.CreateLogStreamResponse, error
 	}
 }
 
+type CreateLogStreamIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLogStreamIndexInvoker) Invoke() (*model.CreateLogStreamIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLogStreamIndexResponse), nil
+	}
+}
+
 type CreateNotificationTemplateInvoker struct {
 	*invoker.BaseInvoker
 }

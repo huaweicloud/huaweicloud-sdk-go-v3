@@ -8,7 +8,7 @@ import (
 
 type CreatePhotoDigitalHumanVideoReq struct {
 
-	// 剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
+	// 剧本ID。 > * 如果shoot_scripts中shoot_script.script_type为\"TEXT\"，则台词以shoot_scripts中的文本为准； > * 如果shoot_scripts中shoot_script.script_type为\"AUDIO\"，则台词以script_id对应剧本中的音频为准。
 	ScriptId *string `json:"script_id,omitempty"`
 
 	// 人物照片，需要Base64编码。照片分辨率不超过1080P。
@@ -18,12 +18,14 @@ type CreatePhotoDigitalHumanVideoReq struct {
 
 	VideoConfig *PhotoVideoConfig `json:"video_config,omitempty"`
 
-	// 拍摄脚本列表。
+	// 剧本列表。照片数字人仅支持传入一个剧本shoot_script，剧本参数仅支持shoot_script.script_type、shoot_script.text_config；
 	ShootScripts []ShootScriptItem `json:"shoot_scripts"`
 
 	OutputAssetConfig *OutputAssetConfig `json:"output_asset_config"`
 
 	BackgroundMusicConfig *BackgroundMusicConfig `json:"background_music_config,omitempty"`
+
+	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 }
 
 func (o CreatePhotoDigitalHumanVideoReq) String() string {

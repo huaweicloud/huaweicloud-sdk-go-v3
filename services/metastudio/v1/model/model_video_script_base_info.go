@@ -20,17 +20,20 @@ type VideoScriptBaseInfo struct {
 	// 剧本描述。
 	ScriptDescription *string `json:"script_description,omitempty"`
 
-	// 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
-	VideoMakingType *VideoScriptBaseInfoVideoMakingType `json:"video_making_type,omitempty"`
-
-	// 人物照片，需要Base64编码。
-	HumanImage *string `json:"human_image,omitempty"`
-
 	// 数字人模型资产ID。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	// 数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
 	ModelAssetType *VideoScriptBaseInfoModelAssetType `json:"model_asset_type,omitempty"`
+
+	// 剧本封面下载url。
+	ScriptCoverUrl *string `json:"script_cover_url,omitempty"`
+
+	// 脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+	ScriptType *string `json:"script_type,omitempty"`
+
+	// 台词脚本。
+	Text *string `json:"text,omitempty"`
 
 	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	CreateTime *string `json:"create_time,omitempty"`
@@ -46,53 +49,6 @@ func (o VideoScriptBaseInfo) String() string {
 	}
 
 	return strings.Join([]string{"VideoScriptBaseInfo", string(data)}, " ")
-}
-
-type VideoScriptBaseInfoVideoMakingType struct {
-	value string
-}
-
-type VideoScriptBaseInfoVideoMakingTypeEnum struct {
-	MODEL   VideoScriptBaseInfoVideoMakingType
-	PICTURE VideoScriptBaseInfoVideoMakingType
-}
-
-func GetVideoScriptBaseInfoVideoMakingTypeEnum() VideoScriptBaseInfoVideoMakingTypeEnum {
-	return VideoScriptBaseInfoVideoMakingTypeEnum{
-		MODEL: VideoScriptBaseInfoVideoMakingType{
-			value: "MODEL",
-		},
-		PICTURE: VideoScriptBaseInfoVideoMakingType{
-			value: "PICTURE",
-		},
-	}
-}
-
-func (c VideoScriptBaseInfoVideoMakingType) Value() string {
-	return c.value
-}
-
-func (c VideoScriptBaseInfoVideoMakingType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *VideoScriptBaseInfoVideoMakingType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type VideoScriptBaseInfoModelAssetType struct {

@@ -8,9 +8,7 @@ import (
 
 // AuthorizeCsmsAndKmsRequestBody 云堡垒机设置委托授权请求体。
 type AuthorizeCsmsAndKmsRequestBody struct {
-
-	// 委托授权信息。
-	Authorization *interface{} `json:"authorization"`
+	Authorization *AgencyAuthorizeInfo `json:"authorization"`
 }
 
 func (o AuthorizeCsmsAndKmsRequestBody) String() string {

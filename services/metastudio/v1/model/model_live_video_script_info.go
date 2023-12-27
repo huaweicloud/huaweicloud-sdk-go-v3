@@ -30,7 +30,7 @@ type LiveVideoScriptInfo struct {
 	LayerConfig *[]LayerConfig `json:"layer_config,omitempty"`
 
 	// 拍摄脚本列表。
-	ShootScripts *[]LiveShootScriptItem `json:"shoot_scripts,omitempty"`
+	ShootScripts []LiveShootScriptItem `json:"shoot_scripts"`
 }
 
 func (o LiveVideoScriptInfo) String() string {

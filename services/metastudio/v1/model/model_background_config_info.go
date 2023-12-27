@@ -15,17 +15,17 @@ type BackgroundConfigInfo struct {
 	// 背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
 	BackgroundType BackgroundConfigInfoBackgroundType `json:"background_type"`
 
-	// 背景标题。
+	// 背景标题。 > * 分身数字人视频制作此参数不生效。
 	BackgroundTitle *string `json:"background_title,omitempty"`
 
 	HumanPosition2d *HumanPosition2D `json:"human_position_2d,omitempty"`
 
 	HumanSize2d *HumanSize2D `json:"human_size_2d,omitempty"`
 
-	// 视频文件封面图片的下载URL。  演示素材为视频时有效。
+	// 视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
 	BackgroundCoverUrl *string `json:"background_cover_url,omitempty"`
 
-	// 背景文件的URL。
+	// 背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
 	BackgroundConfig string `json:"background_config"`
 
 	// 背景资产ID。 > * 背景是背景图片时，填图片资产ID。

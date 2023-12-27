@@ -40,10 +40,10 @@ type Show2DDigitalHumanVideoResponse struct {
 	// 剧本ID。
 	ScriptId *string `json:"script_id,omitempty"`
 
-	// 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频
+	// 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
 	VideoMakingType *Show2DDigitalHumanVideoResponseVideoMakingType `json:"video_making_type,omitempty"`
 
-	// 人物照片，需要Base64编码。
+	// 人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
 	HumanImage *string `json:"human_image,omitempty"`
 
 	// 分身数字人模型资产ID。

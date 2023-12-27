@@ -8,9 +8,7 @@ import (
 
 // ListJobConfigResponse Response Object
 type ListJobConfigResponse struct {
-
-	// 查询模板结果
-	Result *[]CreateBuildJobRequestBody `json:"result,omitempty"`
+	Result *CreateBuildJobRequestBody `json:"result,omitempty"`
 
 	// 返回错误信息
 	Error *string `json:"error,omitempty"`

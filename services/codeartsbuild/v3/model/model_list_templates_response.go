@@ -8,9 +8,7 @@ import (
 
 // ListTemplatesResponse Response Object
 type ListTemplatesResponse struct {
-
-	// 查询模板结果
-	Result *[]QueryTemplatesResult `json:"result,omitempty"`
+	Result *QueryTemplatesResult `json:"result,omitempty"`
 
 	// 返回错误信息
 	Error *string `json:"error,omitempty"`

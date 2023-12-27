@@ -17,6 +17,9 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	// SQL告警名称
 	SqlAlarmRuleName string `json:"sql_alarm_rule_name"`
 
+	// 规则名称
+	AlarmRuleAlias *string `json:"alarm_rule_alias,omitempty"`
+
 	// 是否管道符sql查询
 	IsCssSql *bool `json:"is_css_sql,omitempty"`
 

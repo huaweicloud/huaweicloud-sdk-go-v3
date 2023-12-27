@@ -18,13 +18,14 @@ type VoiceModelAssetMeta struct {
 	// 音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
 	Sex *VoiceModelAssetMetaSex `json:"sex,omitempty"`
 
-	// 音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文  默认UNKNOW。
+	// 音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
 	Language *VoiceModelAssetMetaLanguage `json:"language,omitempty"`
 
-	// 自研TTS运行模式，包括CPU模式和GPU模式。此参数仅内部使用，不对外开放。 * UNKNOW：未知 * TTS_V1：V1版本TTS，运行在CPU上 * TTS_V2：V2版本TTS，运行在GPU上  默认UNKNOW。
-	TtsMode *VoiceModelAssetMetaTtsMode `json:"tts_mode,omitempty"`
+	// 语速缩放比例
+	SpeedRatio *float32 `json:"speed_ratio,omitempty"`
 
-	ExternalVoiceMeta *ExternalVoiceAssetMeta `json:"external_voice_meta,omitempty"`
+	// 音量缩放比例
+	VolumeRatio *float32 `json:"volume_ratio,omitempty"`
 }
 
 func (o VoiceModelAssetMeta) String() string {
@@ -139,9 +140,33 @@ type VoiceModelAssetMetaLanguage struct {
 }
 
 type VoiceModelAssetMetaLanguageEnum struct {
-	UNKNOW VoiceModelAssetMetaLanguage
-	CN     VoiceModelAssetMetaLanguage
-	EN     VoiceModelAssetMetaLanguage
+	UNKNOW     VoiceModelAssetMetaLanguage
+	CN         VoiceModelAssetMetaLanguage
+	EN         VoiceModelAssetMetaLanguage
+	GER        VoiceModelAssetMetaLanguage
+	FR         VoiceModelAssetMetaLanguage
+	KR         VoiceModelAssetMetaLanguage
+	POR        VoiceModelAssetMetaLanguage
+	JPN        VoiceModelAssetMetaLanguage
+	ITA        VoiceModelAssetMetaLanguage
+	ESP        VoiceModelAssetMetaLanguage
+	DBH        VoiceModelAssetMetaLanguage
+	GT         VoiceModelAssetMetaLanguage
+	GXH        VoiceModelAssetMetaLanguage
+	HBH        VoiceModelAssetMetaLanguage
+	SXH        VoiceModelAssetMetaLanguage
+	SCH        VoiceModelAssetMetaLanguage
+	YY         VoiceModelAssetMetaLanguage
+	RUSSIAN    VoiceModelAssetMetaLanguage
+	FILIPINO   VoiceModelAssetMetaLanguage
+	DUTCH      VoiceModelAssetMetaLanguage
+	INDONESIAN VoiceModelAssetMetaLanguage
+	VIETNAMESE VoiceModelAssetMetaLanguage
+	ARABIC     VoiceModelAssetMetaLanguage
+	TURKISH    VoiceModelAssetMetaLanguage
+	MALAY      VoiceModelAssetMetaLanguage
+	THAI       VoiceModelAssetMetaLanguage
+	FINNISH    VoiceModelAssetMetaLanguage
 }
 
 func GetVoiceModelAssetMetaLanguageEnum() VoiceModelAssetMetaLanguageEnum {
@@ -155,6 +180,78 @@ func GetVoiceModelAssetMetaLanguageEnum() VoiceModelAssetMetaLanguageEnum {
 		EN: VoiceModelAssetMetaLanguage{
 			value: "EN",
 		},
+		GER: VoiceModelAssetMetaLanguage{
+			value: "GER",
+		},
+		FR: VoiceModelAssetMetaLanguage{
+			value: "fr",
+		},
+		KR: VoiceModelAssetMetaLanguage{
+			value: "Kr",
+		},
+		POR: VoiceModelAssetMetaLanguage{
+			value: "por",
+		},
+		JPN: VoiceModelAssetMetaLanguage{
+			value: "JPN",
+		},
+		ITA: VoiceModelAssetMetaLanguage{
+			value: "Ita",
+		},
+		ESP: VoiceModelAssetMetaLanguage{
+			value: "ESP",
+		},
+		DBH: VoiceModelAssetMetaLanguage{
+			value: "DBH",
+		},
+		GT: VoiceModelAssetMetaLanguage{
+			value: "GT",
+		},
+		GXH: VoiceModelAssetMetaLanguage{
+			value: "GXH",
+		},
+		HBH: VoiceModelAssetMetaLanguage{
+			value: "HBH",
+		},
+		SXH: VoiceModelAssetMetaLanguage{
+			value: "SXH",
+		},
+		SCH: VoiceModelAssetMetaLanguage{
+			value: "SCH",
+		},
+		YY: VoiceModelAssetMetaLanguage{
+			value: "YY",
+		},
+		RUSSIAN: VoiceModelAssetMetaLanguage{
+			value: "Russian",
+		},
+		FILIPINO: VoiceModelAssetMetaLanguage{
+			value: "Filipino",
+		},
+		DUTCH: VoiceModelAssetMetaLanguage{
+			value: "Dutch",
+		},
+		INDONESIAN: VoiceModelAssetMetaLanguage{
+			value: "Indonesian",
+		},
+		VIETNAMESE: VoiceModelAssetMetaLanguage{
+			value: "Vietnamese",
+		},
+		ARABIC: VoiceModelAssetMetaLanguage{
+			value: "Arabic",
+		},
+		TURKISH: VoiceModelAssetMetaLanguage{
+			value: "Turkish",
+		},
+		MALAY: VoiceModelAssetMetaLanguage{
+			value: "Malay",
+		},
+		THAI: VoiceModelAssetMetaLanguage{
+			value: "Thai",
+		},
+		FINNISH: VoiceModelAssetMetaLanguage{
+			value: "Finnish",
+		},
 	}
 }
 
@@ -167,57 +264,6 @@ func (c VoiceModelAssetMetaLanguage) MarshalJSON() ([]byte, error) {
 }
 
 func (c *VoiceModelAssetMetaLanguage) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type VoiceModelAssetMetaTtsMode struct {
-	value string
-}
-
-type VoiceModelAssetMetaTtsModeEnum struct {
-	UNKNOW VoiceModelAssetMetaTtsMode
-	TTS_V1 VoiceModelAssetMetaTtsMode
-	TTS_V2 VoiceModelAssetMetaTtsMode
-}
-
-func GetVoiceModelAssetMetaTtsModeEnum() VoiceModelAssetMetaTtsModeEnum {
-	return VoiceModelAssetMetaTtsModeEnum{
-		UNKNOW: VoiceModelAssetMetaTtsMode{
-			value: "UNKNOW",
-		},
-		TTS_V1: VoiceModelAssetMetaTtsMode{
-			value: "TTS_V1",
-		},
-		TTS_V2: VoiceModelAssetMetaTtsMode{
-			value: "TTS_V2",
-		},
-	}
-}
-
-func (c VoiceModelAssetMetaTtsMode) Value() string {
-	return c.value
-}
-
-func (c VoiceModelAssetMetaTtsMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *VoiceModelAssetMetaTtsMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

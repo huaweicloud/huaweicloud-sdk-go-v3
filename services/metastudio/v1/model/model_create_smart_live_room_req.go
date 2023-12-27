@@ -18,7 +18,7 @@ type CreateSmartLiveRoomReq struct {
 	// 直播间描述。
 	RoomDescription *string `json:"room_description,omitempty"`
 
-	// 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。
+	// 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
 	RoomType *CreateSmartLiveRoomReqRoomType `json:"room_type,omitempty"`
 
 	// 默认直播剧本列表。
@@ -31,8 +31,20 @@ type CreateSmartLiveRoomReq struct {
 
 	VideoConfig *VideoConfig `json:"video_config,omitempty"`
 
-	// 视频推流第三方直播平台地址。
+	// RTMP视频推流第三方直播平台地址。
 	OutputUrls *[]string `json:"output_urls,omitempty"`
+
+	// RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+	StreamKeys *[]string `json:"stream_keys,omitempty"`
+
+	// 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+	BackupModelAssetIds *[]string `json:"backup_model_asset_ids,omitempty"`
+
+	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
+
+	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
+
+	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
 }
 
 func (o CreateSmartLiveRoomReq) String() string {
@@ -49,8 +61,9 @@ type CreateSmartLiveRoomReqRoomType struct {
 }
 
 type CreateSmartLiveRoomReqRoomTypeEnum struct {
-	NORMAL CreateSmartLiveRoomReqRoomType
-	TEMP   CreateSmartLiveRoomReqRoomType
+	NORMAL   CreateSmartLiveRoomReqRoomType
+	TEMP     CreateSmartLiveRoomReqRoomType
+	TEMPLATE CreateSmartLiveRoomReqRoomType
 }
 
 func GetCreateSmartLiveRoomReqRoomTypeEnum() CreateSmartLiveRoomReqRoomTypeEnum {
@@ -60,6 +73,9 @@ func GetCreateSmartLiveRoomReqRoomTypeEnum() CreateSmartLiveRoomReqRoomTypeEnum 
 		},
 		TEMP: CreateSmartLiveRoomReqRoomType{
 			value: "TEMP",
+		},
+		TEMPLATE: CreateSmartLiveRoomReqRoomType{
+			value: "TEMPLATE",
 		},
 	}
 }

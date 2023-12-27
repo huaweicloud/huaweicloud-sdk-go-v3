@@ -43,7 +43,13 @@ type ShowAssetStatisticResponse struct {
 	WebAppNum *int64 `json:"web_app_num,omitempty"`
 
 	// 数据库数量
-	DatabaseNum    *int64 `json:"database_num,omitempty"`
+	DatabaseNum *int64 `json:"database_num,omitempty"`
+
+	// 关键配置文件数量
+	CoreConfFileNum *int64 `json:"core_conf_file_num,omitempty"`
+
+	// 环境变量数量
+	EnvironmentNum *int64 `json:"environment_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

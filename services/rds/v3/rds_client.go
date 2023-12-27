@@ -2337,6 +2337,27 @@ func (c *RdsClient) StartupInstanceInvoker(request *model.StartupInstanceRequest
 	return &StartupInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StopBackup 停止备份
+//
+// 停止创建备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) StopBackup(request *model.StopBackupRequest) (*model.StopBackupResponse, error) {
+	requestDef := GenReqDefForStopBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopBackupResponse), nil
+	}
+}
+
+// StopBackupInvoker 停止备份
+func (c *RdsClient) StopBackupInvoker(request *model.StopBackupRequest) *StopBackupInvoker {
+	requestDef := GenReqDefForStopBackup()
+	return &StopBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StopInstance 停止实例
 //
 // 实例进行关机，通过暂时停止按需实例以节省费用，实例默认停止七天。
@@ -3916,4 +3937,25 @@ func (c *RdsClient) SetInstancesDbShrink(request *model.SetInstancesDbShrinkRequ
 func (c *RdsClient) SetInstancesDbShrinkInvoker(request *model.SetInstancesDbShrinkRequest) *SetInstancesDbShrinkInvoker {
 	requestDef := GenReqDefForSetInstancesDbShrink()
 	return &SetInstancesDbShrinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetInstancesNewDbShrink 收缩数据库日志
+//
+// 收缩数据库日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetInstancesNewDbShrink(request *model.SetInstancesNewDbShrinkRequest) (*model.SetInstancesNewDbShrinkResponse, error) {
+	requestDef := GenReqDefForSetInstancesNewDbShrink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInstancesNewDbShrinkResponse), nil
+	}
+}
+
+// SetInstancesNewDbShrinkInvoker 收缩数据库日志
+func (c *RdsClient) SetInstancesNewDbShrinkInvoker(request *model.SetInstancesNewDbShrinkRequest) *SetInstancesNewDbShrinkInvoker {
+	requestDef := GenReqDefForSetInstancesNewDbShrink()
+	return &SetInstancesNewDbShrinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

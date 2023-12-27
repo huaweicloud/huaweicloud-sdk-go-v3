@@ -24,7 +24,7 @@ type MetricData struct {
 	Variance *int32 `json:"variance,omitempty"`
 
 	// 指标采集时间，UNIX时间戳，单位毫秒。
-	Timestamp *int32 `json:"timestamp,omitempty"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 指标单位。
 	Unit *string `json:"unit,omitempty"`

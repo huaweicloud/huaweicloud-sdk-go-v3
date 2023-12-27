@@ -9,9 +9,9 @@ import (
 // ListStructuredLogsWithTimeRangeResponse Response Object
 type ListStructuredLogsWithTimeRangeResponse struct {
 
-	// 查询结构化日志结果信息。 此处仅为示例，具体参数名称取决于查询的字段。
-	Result         *[]interface{} `json:"result,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	// 此参数在请求实体中，采用json字符串格式。
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListStructuredLogsWithTimeRangeResponse) String() string {

@@ -9,10 +9,10 @@ import (
 type ResetConsumeOffsetReq struct {
 
 	// 重置的主题。
-	Topic *string `json:"topic,omitempty"`
+	Topic string `json:"topic"`
 
 	// 重置的时间。
-	Timestamp float32 `json:"timestamp,omitempty"`
+	Timestamp float32 `json:"timestamp"`
 }
 
 func (o ResetConsumeOffsetReq) String() string {

@@ -124,6 +124,27 @@ func (c *AadClient) ShowUnblockRecordInvoker(request *model.ShowUnblockRecordReq
 	return &ShowUnblockRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddBlackWhiteIpList 高防实例添加黑白名单
+//
+// 高防实例添加黑白名单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) AddBlackWhiteIpList(request *model.AddBlackWhiteIpListRequest) (*model.AddBlackWhiteIpListResponse, error) {
+	requestDef := GenReqDefForAddBlackWhiteIpList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddBlackWhiteIpListResponse), nil
+	}
+}
+
+// AddBlackWhiteIpListInvoker 高防实例添加黑白名单
+func (c *AadClient) AddBlackWhiteIpListInvoker(request *model.AddBlackWhiteIpListRequest) *AddBlackWhiteIpListInvoker {
+	requestDef := GenReqDefForAddBlackWhiteIpList()
+	return &AddBlackWhiteIpListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddPolicyBlackAndWhiteIpList 策略添加黑白名单
 //
 // 策略添加黑白名单
@@ -208,6 +229,48 @@ func (c *AadClient) BatchDeleteInstanceIpRuleInvoker(request *model.BatchDeleteI
 	return &BatchDeleteInstanceIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAadDomain 创建防护域名
+//
+// 创建防护域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) CreateAadDomain(request *model.CreateAadDomainRequest) (*model.CreateAadDomainResponse, error) {
+	requestDef := GenReqDefForCreateAadDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAadDomainResponse), nil
+	}
+}
+
+// CreateAadDomainInvoker 创建防护域名
+func (c *AadClient) CreateAadDomainInvoker(request *model.CreateAadDomainRequest) *CreateAadDomainInvoker {
+	requestDef := GenReqDefForCreateAadDomain()
+	return &CreateAadDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertificate 上传/修改域名对应证书
+//
+// 上传/修改域名对应证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
+	requestDef := GenReqDefForCreateCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCertificateResponse), nil
+	}
+}
+
+// CreateCertificateInvoker 上传/修改域名对应证书
+func (c *AadClient) CreateCertificateInvoker(request *model.CreateCertificateRequest) *CreateCertificateInvoker {
+	requestDef := GenReqDefForCreateCertificate()
+	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePolicy 创建策略
 //
 // 创建策略
@@ -248,6 +311,27 @@ func (c *AadClient) DeleteAlarmConfig(request *model.DeleteAlarmConfigRequest) (
 func (c *AadClient) DeleteAlarmConfigInvoker(request *model.DeleteAlarmConfigRequest) *DeleteAlarmConfigInvoker {
 	requestDef := GenReqDefForDeleteAlarmConfig()
 	return &DeleteAlarmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBlackWhiteIpList 高防实例删除黑白名单
+//
+// 高防实例删除黑白名单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) DeleteBlackWhiteIpList(request *model.DeleteBlackWhiteIpListRequest) (*model.DeleteBlackWhiteIpListResponse, error) {
+	requestDef := GenReqDefForDeleteBlackWhiteIpList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBlackWhiteIpListResponse), nil
+	}
+}
+
+// DeleteBlackWhiteIpListInvoker 高防实例删除黑白名单
+func (c *AadClient) DeleteBlackWhiteIpListInvoker(request *model.DeleteBlackWhiteIpListRequest) *DeleteBlackWhiteIpListInvoker {
+	requestDef := GenReqDefForDeleteBlackWhiteIpList()
+	return &DeleteBlackWhiteIpListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePolicy 删除策略
@@ -481,6 +565,27 @@ func (c *AadClient) ListProtectedIpInvoker(request *model.ListProtectedIpRequest
 	return &ListProtectedIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSourceIps 查询高防回源IP段列表
+//
+// 查询高防回源IP段列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ListSourceIps(request *model.ListSourceIpsRequest) (*model.ListSourceIpsResponse, error) {
+	requestDef := GenReqDefForListSourceIps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSourceIpsResponse), nil
+	}
+}
+
+// ListSourceIpsInvoker 查询高防回源IP段列表
+func (c *AadClient) ListSourceIpsInvoker(request *model.ListSourceIpsRequest) *ListSourceIpsInvoker {
+	requestDef := GenReqDefForListSourceIps()
+	return &ListSourceIpsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUnboundProtectedIp 查询可绑定的防护对象列表
 //
 // 查询可绑定的防护对象列表
@@ -500,6 +605,27 @@ func (c *AadClient) ListUnboundProtectedIp(request *model.ListUnboundProtectedIp
 func (c *AadClient) ListUnboundProtectedIpInvoker(request *model.ListUnboundProtectedIpRequest) *ListUnboundProtectedIpInvoker {
 	requestDef := GenReqDefForListUnboundProtectedIp()
 	return &ListUnboundProtectedIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyDomainWebSwitch 修改域名WEB基础防护开关/CC防护开关
+//
+// 修改域名WEB基础防护开关/CC防护开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ModifyDomainWebSwitch(request *model.ModifyDomainWebSwitchRequest) (*model.ModifyDomainWebSwitchResponse, error) {
+	requestDef := GenReqDefForModifyDomainWebSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyDomainWebSwitchResponse), nil
+	}
+}
+
+// ModifyDomainWebSwitchInvoker 修改域名WEB基础防护开关/CC防护开关
+func (c *AadClient) ModifyDomainWebSwitchInvoker(request *model.ModifyDomainWebSwitchRequest) *ModifyDomainWebSwitchInvoker {
+	requestDef := GenReqDefForModifyDomainWebSwitch()
+	return &ModifyDomainWebSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAlarmConfig 查询告警配置

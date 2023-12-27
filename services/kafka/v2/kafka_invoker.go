@@ -185,6 +185,18 @@ func (i *CreateReassignmentTaskInvoker) Invoke() (*model.CreateReassignmentTaskR
 	}
 }
 
+type CreateShrinkageJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateShrinkageJobInvoker) Invoke() (*model.CreateShrinkageJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateShrinkageJobResponse), nil
+	}
+}
+
 type CreateSinkTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -734,6 +746,18 @@ func (i *ShowPartitionMessageInvoker) Invoke() (*model.ShowPartitionMessageRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowPartitionMessageResponse), nil
+	}
+}
+
+type ShowShrinkCheckResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowShrinkCheckResultInvoker) Invoke() (*model.ShowShrinkCheckResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowShrinkCheckResultResponse), nil
 	}
 }
 

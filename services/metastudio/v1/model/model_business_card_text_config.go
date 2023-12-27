@@ -33,10 +33,10 @@ type BusinessCardTextConfig struct {
 	// 其他信息1。可填写一些公司广告语等
 	Other1 *string `json:"other1,omitempty"`
 
-	// 其他信息1。可填写一些公司广告语等
+	// 其他信息2。可填写一些公司广告语等
 	Other2 *string `json:"other2,omitempty"`
 
-	// 其他信息1。可填写一些公司广告语等
+	// 其他信息3。可填写一些公司广告语等
 	Other3 *string `json:"other3,omitempty"`
 }
 

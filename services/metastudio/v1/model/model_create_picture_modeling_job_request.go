@@ -18,11 +18,8 @@ type CreatePictureModelingJobRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 开发者应用作为资产权属的可选字段。
+	// 第三方用户ID。 > *不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
-
-	// 测试用户判断。
-	XUserPrivilege *string `json:"X-User-Privilege,omitempty"`
 
 	Body *CreatePictureModelingJobRequestBody `json:"body,omitempty" type:"multipart"`
 }

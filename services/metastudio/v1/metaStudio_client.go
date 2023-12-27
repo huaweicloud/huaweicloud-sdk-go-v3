@@ -21,7 +21,10 @@ func MetaStudioClientBuilder() *http_client.HcHttpClientBuilder {
 
 // CreateDigitalAsset 创建资产
 //
-// 该接口用于在资产库中添加上传新的媒体资产。可上传的资产类型包括：数字人模型、素材、视频、图片、场景等。
+// 该接口用于在资产库中添加上传新的媒体资产。可上传的资产类型包括：分身数字人模型、背景图片、素材图片、素材视频、PPT等。
+// * &gt; 资产类型是IMAGE时，通过system_properties来区分背景图片（BACKGROUND_IMG）、素材图片（MATERIAL_IMG）。
+// * &gt; 资产类型是VIDEO时，通过system_properties来区分素材视频（MATERIAL_VIDEO）、名片视频（BUSSINESS_CARD_VIDEO）。
+// * &gt; MetaStudio平台生成的视频，system_properties带CREATED_BY_PLATFORM。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateDigitalAsset(request *model.CreateDigitalAssetRequest) (*model.CreateDigitalAssetResponse, error) {
@@ -269,6 +272,27 @@ func (c *MetaStudioClient) UpdateDigitalHumanBusinessCard(request *model.UpdateD
 func (c *MetaStudioClient) UpdateDigitalHumanBusinessCardInvoker(request *model.UpdateDigitalHumanBusinessCardRequest) *UpdateDigitalHumanBusinessCardInvoker {
 	requestDef := GenReqDefForUpdateDigitalHumanBusinessCard()
 	return &UpdateDigitalHumanBusinessCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDigitalHumanVideo 查询视频制作任务列表
+//
+// 该接口用于查询视频制作任务列表。可查询分身数字人视频制作列表，照片数字人视频制作列表等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListDigitalHumanVideo(request *model.ListDigitalHumanVideoRequest) (*model.ListDigitalHumanVideoResponse, error) {
+	requestDef := GenReqDefForListDigitalHumanVideo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDigitalHumanVideoResponse), nil
+	}
+}
+
+// ListDigitalHumanVideoInvoker 查询视频制作任务列表
+func (c *MetaStudioClient) ListDigitalHumanVideoInvoker(request *model.ListDigitalHumanVideoRequest) *ListDigitalHumanVideoInvoker {
+	requestDef := GenReqDefForListDigitalHumanVideo()
+	return &ListDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Cancel2DDigitalHumanVideo 取消等待中的分身数字人视频制作任务
@@ -712,6 +736,48 @@ func (c *MetaStudioClient) StopSmartLiveInvoker(request *model.StopSmartLiveRequ
 	return &StopSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckTextLanguage 检测音色与文本的语言一致性
+//
+// 检测音色与文本的语言一致性，音色与文本不一致会导致报错
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CheckTextLanguage(request *model.CheckTextLanguageRequest) (*model.CheckTextLanguageResponse, error) {
+	requestDef := GenReqDefForCheckTextLanguage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckTextLanguageResponse), nil
+	}
+}
+
+// CheckTextLanguageInvoker 检测音色与文本的语言一致性
+func (c *MetaStudioClient) CheckTextLanguageInvoker(request *model.CheckTextLanguageRequest) *CheckTextLanguageInvoker {
+	requestDef := GenReqDefForCheckTextLanguage()
+	return &CheckTextLanguageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInteractionRuleGroup 创建智能直播间互动规则库
+//
+// 该接口用于创建智能直播间互动规则库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateInteractionRuleGroup(request *model.CreateInteractionRuleGroupRequest) (*model.CreateInteractionRuleGroupResponse, error) {
+	requestDef := GenReqDefForCreateInteractionRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInteractionRuleGroupResponse), nil
+	}
+}
+
+// CreateInteractionRuleGroupInvoker 创建智能直播间互动规则库
+func (c *MetaStudioClient) CreateInteractionRuleGroupInvoker(request *model.CreateInteractionRuleGroupRequest) *CreateInteractionRuleGroupInvoker {
+	requestDef := GenReqDefForCreateInteractionRuleGroup()
+	return &CreateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSmartLiveRoom 创建智能直播间
 //
 // 该接口用于创建智能直播间。
@@ -733,6 +799,27 @@ func (c *MetaStudioClient) CreateSmartLiveRoomInvoker(request *model.CreateSmart
 	return &CreateSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteInteractionRuleGroup 删除智能直播间互动规则库
+//
+// 该接口用于删除智能直播间互动规则库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteInteractionRuleGroup(request *model.DeleteInteractionRuleGroupRequest) (*model.DeleteInteractionRuleGroupResponse, error) {
+	requestDef := GenReqDefForDeleteInteractionRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInteractionRuleGroupResponse), nil
+	}
+}
+
+// DeleteInteractionRuleGroupInvoker 删除智能直播间互动规则库
+func (c *MetaStudioClient) DeleteInteractionRuleGroupInvoker(request *model.DeleteInteractionRuleGroupRequest) *DeleteInteractionRuleGroupInvoker {
+	requestDef := GenReqDefForDeleteInteractionRuleGroup()
+	return &DeleteInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSmartLiveRoom 删除智能直播间
 //
 // 该接口用于删除智能直播间。
@@ -752,6 +839,27 @@ func (c *MetaStudioClient) DeleteSmartLiveRoom(request *model.DeleteSmartLiveRoo
 func (c *MetaStudioClient) DeleteSmartLiveRoomInvoker(request *model.DeleteSmartLiveRoomRequest) *DeleteSmartLiveRoomInvoker {
 	requestDef := GenReqDefForDeleteSmartLiveRoom()
 	return &DeleteSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInteractionRuleGroups 查询智能直播间互动规则库列表
+//
+// 该接口用于智能直播间互动规则库列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListInteractionRuleGroups(request *model.ListInteractionRuleGroupsRequest) (*model.ListInteractionRuleGroupsResponse, error) {
+	requestDef := GenReqDefForListInteractionRuleGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInteractionRuleGroupsResponse), nil
+	}
+}
+
+// ListInteractionRuleGroupsInvoker 查询智能直播间互动规则库列表
+func (c *MetaStudioClient) ListInteractionRuleGroupsInvoker(request *model.ListInteractionRuleGroupsRequest) *ListInteractionRuleGroupsInvoker {
+	requestDef := GenReqDefForListInteractionRuleGroups()
+	return &ListInteractionRuleGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSmartLiveRooms 查询智能直播间列表
@@ -796,6 +904,27 @@ func (c *MetaStudioClient) ShowSmartLiveRoomInvoker(request *model.ShowSmartLive
 	return &ShowSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateInteractionRuleGroup 更新智能直播间互动规则库
+//
+// 该接口用于更新智能直播间互动规则库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateInteractionRuleGroup(request *model.UpdateInteractionRuleGroupRequest) (*model.UpdateInteractionRuleGroupResponse, error) {
+	requestDef := GenReqDefForUpdateInteractionRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInteractionRuleGroupResponse), nil
+	}
+}
+
+// UpdateInteractionRuleGroupInvoker 更新智能直播间互动规则库
+func (c *MetaStudioClient) UpdateInteractionRuleGroupInvoker(request *model.UpdateInteractionRuleGroupRequest) *UpdateInteractionRuleGroupInvoker {
+	requestDef := GenReqDefForUpdateInteractionRuleGroup()
+	return &UpdateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSmartLiveRoom 更新智能直播间信息
 //
 // 该接口用于智能直播间信息。
@@ -838,6 +967,27 @@ func (c *MetaStudioClient) ListStylesInvoker(request *model.ListStylesRequest) *
 	return &ListStylesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFacialAnimations 创建语音驱动表情动画任务
+//
+// 该接口用于创建驱动数字人表情的任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateFacialAnimations(request *model.CreateFacialAnimationsRequest) (*model.CreateFacialAnimationsResponse, error) {
+	requestDef := GenReqDefForCreateFacialAnimations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFacialAnimationsResponse), nil
+	}
+}
+
+// CreateFacialAnimationsInvoker 创建语音驱动表情动画任务
+func (c *MetaStudioClient) CreateFacialAnimationsInvoker(request *model.CreateFacialAnimationsRequest) *CreateFacialAnimationsInvoker {
+	requestDef := GenReqDefForCreateFacialAnimations()
+	return &CreateFacialAnimationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTtsa 创建语音驱动任务
 //
 // 该接口用于创建驱动数字人表情、动作及语音的任务。
@@ -857,6 +1007,27 @@ func (c *MetaStudioClient) CreateTtsa(request *model.CreateTtsaRequest) (*model.
 func (c *MetaStudioClient) CreateTtsaInvoker(request *model.CreateTtsaRequest) *CreateTtsaInvoker {
 	requestDef := GenReqDefForCreateTtsa()
 	return &CreateTtsaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFacialAnimationsData 获取语音驱动表情数据
+//
+// 该接口用于获取生成的数字人表情驱动数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListFacialAnimationsData(request *model.ListFacialAnimationsDataRequest) (*model.ListFacialAnimationsDataResponse, error) {
+	requestDef := GenReqDefForListFacialAnimationsData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFacialAnimationsDataResponse), nil
+	}
+}
+
+// ListFacialAnimationsDataInvoker 获取语音驱动表情数据
+func (c *MetaStudioClient) ListFacialAnimationsDataInvoker(request *model.ListFacialAnimationsDataRequest) *ListFacialAnimationsDataInvoker {
+	requestDef := GenReqDefForListFacialAnimationsData()
+	return &ListFacialAnimationsDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTtsaData 获取语音驱动数据
