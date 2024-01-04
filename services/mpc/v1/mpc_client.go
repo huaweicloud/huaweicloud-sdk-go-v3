@@ -1027,6 +1027,48 @@ func (c *MpcClient) UpdateTemplateGroupInvoker(request *model.UpdateTemplateGrou
 	return &UpdateTemplateGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTenantAccessInfo 租户查询服务开通状态信息
+//
+// 租户查询媒体转码服务开通状态信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MpcClient) ShowTenantAccessInfo(request *model.ShowTenantAccessInfoRequest) (*model.ShowTenantAccessInfoResponse, error) {
+	requestDef := GenReqDefForShowTenantAccessInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantAccessInfoResponse), nil
+	}
+}
+
+// ShowTenantAccessInfoInvoker 租户查询服务开通状态信息
+func (c *MpcClient) ShowTenantAccessInfoInvoker(request *model.ShowTenantAccessInfoRequest) *ShowTenantAccessInfoInvoker {
+	requestDef := GenReqDefForShowTenantAccessInfo()
+	return &ShowTenantAccessInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTenantAccessInfo 租户开通媒体转码服务
+//
+// 租户开通媒体转码服务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MpcClient) UpdateTenantAccessInfo(request *model.UpdateTenantAccessInfoRequest) (*model.UpdateTenantAccessInfoResponse, error) {
+	requestDef := GenReqDefForUpdateTenantAccessInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTenantAccessInfoResponse), nil
+	}
+}
+
+// UpdateTenantAccessInfoInvoker 租户开通媒体转码服务
+func (c *MpcClient) UpdateTenantAccessInfoInvoker(request *model.UpdateTenantAccessInfoRequest) *UpdateTenantAccessInfoInvoker {
+	requestDef := GenReqDefForUpdateTenantAccessInfo()
+	return &UpdateTenantAccessInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateThumbnailsTask 新建截图任务
 //
 // 新建截图任务，视频截图将从首帧开始，按设置的时间间隔截图，最后截取末帧。

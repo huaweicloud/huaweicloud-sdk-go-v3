@@ -2329,6 +2329,48 @@ func (c *DataArtsStudioClient) ListFactoryJobsInvoker(request *model.ListFactory
 	return &ListFactoryJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFactoryTaskCompletion 查询任务完成情况
+//
+// 查询任务完成情况
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryTaskCompletion(request *model.ListFactoryTaskCompletionRequest) (*model.ListFactoryTaskCompletionResponse, error) {
+	requestDef := GenReqDefForListFactoryTaskCompletion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryTaskCompletionResponse), nil
+	}
+}
+
+// ListFactoryTaskCompletionInvoker 查询任务完成情况
+func (c *DataArtsStudioClient) ListFactoryTaskCompletionInvoker(request *model.ListFactoryTaskCompletionRequest) *ListFactoryTaskCompletionInvoker {
+	requestDef := GenReqDefForListFactoryTaskCompletion()
+	return &ListFactoryTaskCompletionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFactoryTaskOverview 查询实例运行状态
+//
+// 查询实例运行状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryTaskOverview(request *model.ListFactoryTaskOverviewRequest) (*model.ListFactoryTaskOverviewResponse, error) {
+	requestDef := GenReqDefForListFactoryTaskOverview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryTaskOverviewResponse), nil
+	}
+}
+
+// ListFactoryTaskOverviewInvoker 查询实例运行状态
+func (c *DataArtsStudioClient) ListFactoryTaskOverviewInvoker(request *model.ListFactoryTaskOverviewRequest) *ListFactoryTaskOverviewInvoker {
+	requestDef := GenReqDefForListFactoryTaskOverview()
+	return &ListFactoryTaskOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstances 获取任务执行结果列表
 //
 // 获取任务执行结果列表

@@ -40,11 +40,9 @@ func (c *RabbitMQClient) BatchCreateOrDeleteRabbitMqTagInvoker(request *model.Ba
 	return &BatchCreateOrDeleteRabbitMqTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchRestartOrDeleteInstances 批量重启或删除实例
+// BatchRestartOrDeleteInstances 批量删除实例
 //
-// 批量重启或删除实例。
-//
-// 在实例重启过程中，客户端的生产与消费消息等请求会被拒绝。
+// 批量删除实例。
 //
 // 实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。
 //
@@ -59,7 +57,7 @@ func (c *RabbitMQClient) BatchRestartOrDeleteInstances(request *model.BatchResta
 	}
 }
 
-// BatchRestartOrDeleteInstancesInvoker 批量重启或删除实例
+// BatchRestartOrDeleteInstancesInvoker 批量删除实例
 func (c *RabbitMQClient) BatchRestartOrDeleteInstancesInvoker(request *model.BatchRestartOrDeleteInstancesRequest) *BatchRestartOrDeleteInstancesInvoker {
 	requestDef := GenReqDefForBatchRestartOrDeleteInstances()
 	return &BatchRestartOrDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -18,7 +18,7 @@ type VolumeConfigurationMountInfo struct {
 	// 子路径。
 	SubPath *string `json:"sub_path,omitempty"`
 
-	// 读写权限，支持读写、只读。
+	// 读写权限。
 	AccessMode *VolumeConfigurationMountInfoAccessMode `json:"access_mode,omitempty"`
 }
 

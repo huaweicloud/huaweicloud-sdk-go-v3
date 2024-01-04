@@ -21,11 +21,14 @@ type ListTopicsRequest struct {
 	// 检索的主题名称，完全匹配。
 	Name *string `json:"name,omitempty"`
 
-	// 检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+	// 检索的主题名称，模糊匹配。
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
 
 	// 检索的主题ID，完全匹配。
 	TopicId *string `json:"topic_id,omitempty"`
+
+	// 检索的主题显示名。模糊匹配。参数字节长度不能大于192字节。
+	FuzzyDisplayName *string `json:"fuzzy_display_name,omitempty"`
 }
 
 func (o ListTopicsRequest) String() string {

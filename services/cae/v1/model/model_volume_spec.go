@@ -14,7 +14,7 @@ type VolumeSpec struct {
 	// 资源类型，当前只支持“obs”和“sfs”。
 	ResourceType string `json:"resource_type"`
 
-	// 对象存储类型，包括：并行文件系统、存储桶、SFS3.0容量型。
+	// 对象存储类型。
 	ResourceSubType VolumeSpecResourceSubType `json:"resource_sub_type"`
 
 	// 云存储名称。

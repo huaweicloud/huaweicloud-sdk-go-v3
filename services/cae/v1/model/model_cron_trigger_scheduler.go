@@ -8,7 +8,7 @@ import (
 
 type CronTriggerScheduler struct {
 
-	// 触发触发时间点，以五位cron表达式表示。
+	// 触发时间点，以五位cron表达式表示。
 	Cron *string `json:"cron,omitempty"`
 
 	// 要求达到的实例数。

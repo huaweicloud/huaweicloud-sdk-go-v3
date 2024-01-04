@@ -22,8 +22,7 @@ type CronTrigger struct {
 	// 是否依赖本作业上一个运行周期任务的执行结果
 	DependPrePeriod *bool `json:"dependPrePeriod,omitempty"`
 
-	// 依赖其它作业列表
-	DependJobs *[]DependJobs `json:"dependJobs,omitempty"`
+	DependJobs *DependJob `json:"dependJobs,omitempty"`
 
 	// 并发调用数
 	Concurrent *int32 `json:"concurrent,omitempty"`

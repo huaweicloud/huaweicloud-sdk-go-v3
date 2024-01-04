@@ -20,6 +20,9 @@ type ResizeEngineInstanceReq struct {
 
 	// 代理数量  当oper_type参数为horizontal时，该参数必填。
 	NewBrokerNum *int32 `json:"new_broker_num,omitempty"`
+
+	// 实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 当oper_type参数为horizontal且开启了公网访问时，此参数必填。
+	PublicipId *string `json:"publicip_id,omitempty"`
 }
 
 func (o ResizeEngineInstanceReq) String() string {

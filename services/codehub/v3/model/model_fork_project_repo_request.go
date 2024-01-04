@@ -20,10 +20,10 @@ type ForkProjectRepoRequest struct {
 	// 复制模板的ID
 	TemplateId string `json:"template_id"`
 
-	// 项目类型，normal|scrum
+	// 项目类型，scrum
 	Type *string `json:"type,omitempty"`
 
-	// 是否是公仓
+	// 仓库可见性：  *私有仓库：仓库仅对仓库成员可见，仓库成员可读写和访问仓库，取值范围为0  *公开仓库：   1.项目内成员只读仓库：仓库对项目内成员公开只读，并项目内成员可在项目下和代码组下的仓库列表中查看和搜索，取值范围为10   2.租户内成员只读仓库：仓库对租户内成员公开只读，并租户内成员可在项目下和代码组下的仓库列表中查看和搜索，取值范围为10   3.所有访客只读仓库：仓库对所有访客公开只读，并所有访客可在项目下和代码组下的仓库列表中查看和搜索，取值范围为20
 	VisibilityLevel *int32 `json:"visibility_level,omitempty"`
 
 	ExternalProjectInfo *ExternalKeyMessage `json:"external_project_info,omitempty"`

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ConfigurationDataMetadata 转发策略类型访问方式的负载均衡策略配置。
+// ConfigurationDataMetadata 组件配置元数据。
 type ConfigurationDataMetadata struct {
 
-	// 如下配置表示：负载均衡分配策略使用加权轮询算法，不启用健康检查。 - \"kubernetes.io/elb.health-check-flag\": \"off\" - \"kubernetes.io/elb.lb-algorithm\": \"ROUND_ROBIN\"
+	// 附加参数。  举例：负载均衡分配策略使用加权轮询算法，不启用健康检查。配置如下： - \"kubernetes.io/elb.health-check-flag\": \"off\" - \"kubernetes.io/elb.lb-algorithm\": \"ROUND_ROBIN\"
 	Annotations map[string]string `json:"annotations,omitempty"`
 }
 

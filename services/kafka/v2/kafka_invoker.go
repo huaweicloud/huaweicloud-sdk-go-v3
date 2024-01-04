@@ -425,6 +425,18 @@ func (i *ResetMessageOffsetInvoker) Invoke() (*model.ResetMessageOffsetResponse,
 	}
 }
 
+type ResetMessageOffsetWithEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetMessageOffsetWithEngineInvoker) Invoke() (*model.ResetMessageOffsetWithEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetMessageOffsetWithEngineResponse), nil
+	}
+}
+
 type ResetPasswordInvoker struct {
 	*invoker.BaseInvoker
 }

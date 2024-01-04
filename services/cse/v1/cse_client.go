@@ -376,6 +376,27 @@ func (c *CseClient) ShowEngineJobInvoker(request *model.ShowEngineJobRequest) *S
 	return &ShowEngineJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEngineQuotas 查询微服务引擎配额
+//
+// 查询微服务引擎配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ShowEngineQuotas(request *model.ShowEngineQuotasRequest) (*model.ShowEngineQuotasResponse, error) {
+	requestDef := GenReqDefForShowEngineQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEngineQuotasResponse), nil
+	}
+}
+
+// ShowEngineQuotasInvoker 查询微服务引擎配额
+func (c *CseClient) ShowEngineQuotasInvoker(request *model.ShowEngineQuotasRequest) *ShowEngineQuotasInvoker {
+	requestDef := GenReqDefForShowEngineQuotas()
+	return &ShowEngineQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateGovernancePolicy 修改治理策略
 //
 // 修改治理策略。

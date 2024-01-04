@@ -9,10 +9,10 @@ import (
 // AccessControl 访问控制配置，允许配置黑名单、白名单。
 type AccessControl struct {
 
-	// 黑名单数组。 1.每行一个IP地址或网段，以回车结束。 2.每个IP地址组最多可添加300个IP地址或网段。
+	// 黑名单数组。 - 每行一个IP地址或网段，以回车结束。 - 每个IP地址组最多可添加300个IP地址或网段。
 	Black *[]string `json:"black,omitempty"`
 
-	// 白名单数组。 1.每行一个IP地址或网段，以回车结束。 2.每个IP地址组最多可添加300个IP地址或网段。
+	// 白名单数组。 - 每行一个IP地址或网段，以回车结束。 - 每个IP地址组最多可添加300个IP地址或网段。
 	White *[]string `json:"white,omitempty"`
 }
 

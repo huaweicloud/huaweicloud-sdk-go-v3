@@ -11,6 +11,9 @@ import (
 
 type SourceKafkaMqParameters struct {
 
+	// kafka连接地址
+	Addr *string `json:"addr,omitempty"`
+
 	// kafka消费组
 	Group string `json:"group"`
 

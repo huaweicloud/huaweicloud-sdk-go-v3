@@ -101,6 +101,18 @@ func (i *CreateHpcCacheTaskInvoker) Invoke() (*model.CreateHpcCacheTaskResponse,
 	}
 }
 
+type CreateLdapConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLdapConfigInvoker) Invoke() (*model.CreateLdapConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLdapConfigResponse), nil
+	}
+}
+
 type CreatePermRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -182,6 +194,18 @@ func (i *DeleteFsTaskInvoker) Invoke() (*model.DeleteFsTaskResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteFsTaskResponse), nil
+	}
+}
+
+type DeleteLdapConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLdapConfigInvoker) Invoke() (*model.DeleteLdapConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLdapConfigResponse), nil
 	}
 }
 
@@ -389,6 +413,30 @@ func (i *ShowHpcCacheTaskInvoker) Invoke() (*model.ShowHpcCacheTaskResponse, err
 	}
 }
 
+type ShowJobDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobDetailResponse), nil
+	}
+}
+
+type ShowLdapConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLdapConfigInvoker) Invoke() (*model.ShowLdapConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLdapConfigResponse), nil
+	}
+}
+
 type ShowPermRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,6 +494,18 @@ func (i *UpdateHpcShareInvoker) Invoke() (*model.UpdateHpcShareResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateHpcShareResponse), nil
+	}
+}
+
+type UpdateLdapConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLdapConfigInvoker) Invoke() (*model.UpdateLdapConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLdapConfigResponse), nil
 	}
 }
 

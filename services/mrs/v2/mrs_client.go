@@ -516,6 +516,69 @@ func (c *MrsClient) ShowHdfsFileListInvoker(request *model.ShowHdfsFileListReque
 	return &ShowHdfsFileListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelSyncIamUser 指定用户、用户组取消同步
+//
+// 指定用户、用户组取消同步
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) CancelSyncIamUser(request *model.CancelSyncIamUserRequest) (*model.CancelSyncIamUserResponse, error) {
+	requestDef := GenReqDefForCancelSyncIamUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelSyncIamUserResponse), nil
+	}
+}
+
+// CancelSyncIamUserInvoker 指定用户、用户组取消同步
+func (c *MrsClient) CancelSyncIamUserInvoker(request *model.CancelSyncIamUserRequest) *CancelSyncIamUserInvoker {
+	requestDef := GenReqDefForCancelSyncIamUser()
+	return &CancelSyncIamUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSyncIamUser 获取已经同步的IAM用户和用户组
+//
+// 获取已经同步的IAM用户和用户组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowSyncIamUser(request *model.ShowSyncIamUserRequest) (*model.ShowSyncIamUserResponse, error) {
+	requestDef := GenReqDefForShowSyncIamUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSyncIamUserResponse), nil
+	}
+}
+
+// ShowSyncIamUserInvoker 获取已经同步的IAM用户和用户组
+func (c *MrsClient) ShowSyncIamUserInvoker(request *model.ShowSyncIamUserRequest) *ShowSyncIamUserInvoker {
+	requestDef := GenReqDefForShowSyncIamUser()
+	return &ShowSyncIamUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSyncIamUser IAM同步
+//
+// 将IAM用户和用户组同步到manager，指定用户的情况下，会将该用户关联的IAM用户组也同步到manager。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) UpdateSyncIamUser(request *model.UpdateSyncIamUserRequest) (*model.UpdateSyncIamUserResponse, error) {
+	requestDef := GenReqDefForUpdateSyncIamUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSyncIamUserResponse), nil
+	}
+}
+
+// UpdateSyncIamUserInvoker IAM同步
+func (c *MrsClient) UpdateSyncIamUserInvoker(request *model.UpdateSyncIamUserRequest) *UpdateSyncIamUserInvoker {
+	requestDef := GenReqDefForUpdateSyncIamUser()
+	return &UpdateSyncIamUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelSql 取消SQL执行任务
 //
 // 在MRS集群中取消一条SQL的执行任务。
@@ -640,6 +703,27 @@ func (c *MrsClient) SwitchClusterTags(request *model.SwitchClusterTagsRequest) (
 func (c *MrsClient) SwitchClusterTagsInvoker(request *model.SwitchClusterTagsRequest) *SwitchClusterTagsInvoker {
 	requestDef := GenReqDefForSwitchClusterTags()
 	return &SwitchClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMrsFlavors 查询MRS集群版本可用的规格
+//
+// 查询MRS集群版本可用的规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ShowMrsFlavors(request *model.ShowMrsFlavorsRequest) (*model.ShowMrsFlavorsResponse, error) {
+	requestDef := GenReqDefForShowMrsFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMrsFlavorsResponse), nil
+	}
+}
+
+// ShowMrsFlavorsInvoker 查询MRS集群版本可用的规格
+func (c *MrsClient) ShowMrsFlavorsInvoker(request *model.ShowMrsFlavorsRequest) *ShowMrsFlavorsInvoker {
+	requestDef := GenReqDefForShowMrsFlavors()
+	return &ShowMrsFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMrsVersionList 展示MRS版本列表

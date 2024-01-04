@@ -25,6 +25,9 @@ type PublishMessageRequestBody struct {
 
 	// 指消息在SMN系统内部的最长存留时间。超过该存留时间，系统将不再发送该消息。单位是s，变量默认值是3600s，即一小时。值为正整数且小于等于3600*24。
 	TimeToLive *string `json:"time_to_live,omitempty"`
+
+	// 消息属性列表
+	MessageAttributes *[]MessageAttribute `json:"message_attributes,omitempty"`
 }
 
 func (o PublishMessageRequestBody) String() string {

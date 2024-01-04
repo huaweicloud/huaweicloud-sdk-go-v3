@@ -21,8 +21,10 @@ type ShowCesHierarchyResponse struct {
 	// 队列信息。
 	Queues *[]ShowCeshierarchyRespQueues `json:"queues,omitempty"`
 
+	// vhost信息
 	Vhosts *[]ShowCeshierarchyRespVhosts `json:"vhosts,omitempty"`
 
+	// exchange信息
 	Exchanges *[]ShowCeshierarchyRespExchanges `json:"exchanges,omitempty"`
 
 	// 消费组信息。

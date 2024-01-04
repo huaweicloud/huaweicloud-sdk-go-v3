@@ -23,6 +23,9 @@ type ListSubscriptionsRequest struct {
 
 	// 订阅终端。
 	Endpoint *string `json:"endpoint,omitempty"`
+
+	// 检索的订阅备注字段，模糊匹配。最大长度限制为128个字节。
+	FuzzyRemark *string `json:"fuzzy_remark,omitempty"`
 }
 
 func (o ListSubscriptionsRequest) String() string {

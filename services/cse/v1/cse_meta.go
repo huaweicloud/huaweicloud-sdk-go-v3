@@ -520,6 +520,17 @@ func GenReqDefForShowEngineJob() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowEngineQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/enginemgr/quotas").
+		WithResponse(new(model.ShowEngineQuotasResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateGovernancePolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

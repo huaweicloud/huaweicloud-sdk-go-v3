@@ -1325,6 +1325,30 @@ func (i *ListFactoryJobsInvoker) Invoke() (*model.ListFactoryJobsResponse, error
 	}
 }
 
+type ListFactoryTaskCompletionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryTaskCompletionInvoker) Invoke() (*model.ListFactoryTaskCompletionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryTaskCompletionResponse), nil
+	}
+}
+
+type ListFactoryTaskOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryTaskOverviewInvoker) Invoke() (*model.ListFactoryTaskOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryTaskOverviewResponse), nil
+	}
+}
+
 type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
 }

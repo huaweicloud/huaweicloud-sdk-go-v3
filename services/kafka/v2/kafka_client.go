@@ -770,6 +770,29 @@ func (c *KafkaClient) ResetMessageOffsetInvoker(request *model.ResetMessageOffse
 	return &ResetMessageOffsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetMessageOffsetWithEngine 重置消费组消费进度到指定位置
+//
+// Kafka实例不支持在线重置消费进度。在执行重置消费进度之前，必须停止被重置消费组客户端。
+//
+// 停止待重置消费组客户端，然后等待一段时间（即ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG配置的时间，默认为1000毫秒）后，服务端才认为此消费组客户端已下线。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ResetMessageOffsetWithEngine(request *model.ResetMessageOffsetWithEngineRequest) (*model.ResetMessageOffsetWithEngineResponse, error) {
+	requestDef := GenReqDefForResetMessageOffsetWithEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetMessageOffsetWithEngineResponse), nil
+	}
+}
+
+// ResetMessageOffsetWithEngineInvoker 重置消费组消费进度到指定位置
+func (c *KafkaClient) ResetMessageOffsetWithEngineInvoker(request *model.ResetMessageOffsetWithEngineRequest) *ResetMessageOffsetWithEngineInvoker {
+	requestDef := GenReqDefForResetMessageOffsetWithEngine()
+	return &ResetMessageOffsetWithEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPassword 重置密码
 //
 // 重置密码（只针对开通SSL的实例）。

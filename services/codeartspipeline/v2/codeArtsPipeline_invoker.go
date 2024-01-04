@@ -65,18 +65,6 @@ func (i *CreateBasicPluginInvoker) Invoke() (*model.CreateBasicPluginResponse, e
 	}
 }
 
-type CreateOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateOpenSourceStrategyInvoker) Invoke() (*model.CreateOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateOpenSourceStrategyResponse), nil
-	}
-}
-
 type CreatePipelineByTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,18 +197,6 @@ func (i *DeleteBasicPluginInvoker) Invoke() (*model.DeleteBasicPluginResponse, e
 	}
 }
 
-type DeleteOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteOpenSourceStrategyInvoker) Invoke() (*model.DeleteOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteOpenSourceStrategyResponse), nil
-	}
-}
-
 type DeletePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -341,18 +317,6 @@ func (i *ListBasePluginsNewPostInvoker) Invoke() (*model.ListBasePluginsNewPostR
 	}
 }
 
-type ListOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListOpenSourceStrategyInvoker) Invoke() (*model.ListOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListOpenSourceStrategyResponse), nil
-	}
-}
-
 type ListPLuginVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,18 +410,6 @@ func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListPluginsResponse), nil
-	}
-}
-
-type ListProjectOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListProjectOpenSourceStrategyInvoker) Invoke() (*model.ListProjectOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListProjectOpenSourceStrategyResponse), nil
 	}
 }
 
@@ -641,18 +593,6 @@ func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse,
 	}
 }
 
-type ShowOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowOpenSourceStrategyInvoker) Invoke() (*model.ShowOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowOpenSourceStrategyResponse), nil
-	}
-}
-
 type ShowPipelineDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,18 +713,6 @@ func (i *ShowPluginVersionInvoker) Invoke() (*model.ShowPluginVersionResponse, e
 	}
 }
 
-type ShowProjectOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowProjectOpenSourceStrategyInvoker) Invoke() (*model.ShowProjectOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowProjectOpenSourceStrategyResponse), nil
-	}
-}
-
 type ShowProjectStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -881,18 +809,6 @@ func (i *StopPipelineRunInvoker) Invoke() (*model.StopPipelineRunResponse, error
 	}
 }
 
-type SwitchOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SwitchOpenSourceStrategyInvoker) Invoke() (*model.SwitchOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SwitchOpenSourceStrategyResponse), nil
-	}
-}
-
 type SwitchStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -914,18 +830,6 @@ func (i *UpdateBasicPluginInvoker) Invoke() (*model.UpdateBasicPluginResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateBasicPluginResponse), nil
-	}
-}
-
-type UpdateOpenSourceStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateOpenSourceStrategyInvoker) Invoke() (*model.UpdateOpenSourceStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateOpenSourceStrategyResponse), nil
 	}
 }
 

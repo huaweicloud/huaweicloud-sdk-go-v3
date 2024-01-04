@@ -124,27 +124,6 @@ func (c *CodeArtsPipelineClient) CreateBasicPluginInvoker(request *model.CreateB
 	return &CreateBasicPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateOpenSourceStrategy 创建租户级开源治理策略
-//
-// 创建租户级开源治理策略
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) CreateOpenSourceStrategy(request *model.CreateOpenSourceStrategyRequest) (*model.CreateOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForCreateOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateOpenSourceStrategyResponse), nil
-	}
-}
-
-// CreateOpenSourceStrategyInvoker 创建租户级开源治理策略
-func (c *CodeArtsPipelineClient) CreateOpenSourceStrategyInvoker(request *model.CreateOpenSourceStrategyRequest) *CreateOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForCreateOpenSourceStrategy()
-	return &CreateOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreatePipelineByTemplate 基于模板快速创建流水线及流水线内任务
 //
 // 基于模板快速创建流水线及流水线内任务
@@ -376,27 +355,6 @@ func (c *CodeArtsPipelineClient) DeleteBasicPluginInvoker(request *model.DeleteB
 	return &DeleteBasicPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteOpenSourceStrategy 删除租户级开源治理策略
-//
-// 删除租户级开源治理策略
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) DeleteOpenSourceStrategy(request *model.DeleteOpenSourceStrategyRequest) (*model.DeleteOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForDeleteOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteOpenSourceStrategyResponse), nil
-	}
-}
-
-// DeleteOpenSourceStrategyInvoker 删除租户级开源治理策略
-func (c *CodeArtsPipelineClient) DeleteOpenSourceStrategyInvoker(request *model.DeleteOpenSourceStrategyRequest) *DeleteOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForDeleteOpenSourceStrategy()
-	return &DeleteOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeletePipeline 删除流水线
 //
 // 删除流水线
@@ -607,27 +565,6 @@ func (c *CodeArtsPipelineClient) ListBasePluginsNewPostInvoker(request *model.Li
 	return &ListBasePluginsNewPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListOpenSourceStrategy 查询租户级开源治理策略列表
-//
-// 查询租户级开源治理策略列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) ListOpenSourceStrategy(request *model.ListOpenSourceStrategyRequest) (*model.ListOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForListOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListOpenSourceStrategyResponse), nil
-	}
-}
-
-// ListOpenSourceStrategyInvoker 查询租户级开源治理策略列表
-func (c *CodeArtsPipelineClient) ListOpenSourceStrategyInvoker(request *model.ListOpenSourceStrategyRequest) *ListOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForListOpenSourceStrategy()
-	return &ListOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListPLuginVersion 查询插件所有版本信息
 //
 // 查询插件所有版本信息
@@ -794,27 +731,6 @@ func (c *CodeArtsPipelineClient) ListPlugins(request *model.ListPluginsRequest) 
 func (c *CodeArtsPipelineClient) ListPluginsInvoker(request *model.ListPluginsRequest) *ListPluginsInvoker {
 	requestDef := GenReqDefForListPlugins()
 	return &ListPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProjectOpenSourceStrategy 查询项目级开源治理策略列表
-//
-// 查询项目级开源治理策略列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) ListProjectOpenSourceStrategy(request *model.ListProjectOpenSourceStrategyRequest) (*model.ListProjectOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForListProjectOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProjectOpenSourceStrategyResponse), nil
-	}
-}
-
-// ListProjectOpenSourceStrategyInvoker 查询项目级开源治理策略列表
-func (c *CodeArtsPipelineClient) ListProjectOpenSourceStrategyInvoker(request *model.ListProjectOpenSourceStrategyRequest) *ListProjectOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForListProjectOpenSourceStrategy()
-	return &ListProjectOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectStrategy 获取规则模板实例列表
@@ -1132,27 +1048,6 @@ func (c *CodeArtsPipelineClient) ShowInstanceStatusInvoker(request *model.ShowIn
 	return &ShowInstanceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowOpenSourceStrategy 查询租户级开源治理策略详情
-//
-// 查询租户级开源治理策略详情
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) ShowOpenSourceStrategy(request *model.ShowOpenSourceStrategyRequest) (*model.ShowOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForShowOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowOpenSourceStrategyResponse), nil
-	}
-}
-
-// ShowOpenSourceStrategyInvoker 查询租户级开源治理策略详情
-func (c *CodeArtsPipelineClient) ShowOpenSourceStrategyInvoker(request *model.ShowOpenSourceStrategyRequest) *ShowOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForShowOpenSourceStrategy()
-	return &ShowOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowPipelineDetail 查询流水线详情
 //
 // 查询流水线详情
@@ -1363,27 +1258,6 @@ func (c *CodeArtsPipelineClient) ShowPluginVersionInvoker(request *model.ShowPlu
 	return &ShowPluginVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowProjectOpenSourceStrategy 查询项目级开源治理策略详情
-//
-// 查询项目级开源治理策略详情
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) ShowProjectOpenSourceStrategy(request *model.ShowProjectOpenSourceStrategyRequest) (*model.ShowProjectOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForShowProjectOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProjectOpenSourceStrategyResponse), nil
-	}
-}
-
-// ShowProjectOpenSourceStrategyInvoker 查询项目级开源治理策略详情
-func (c *CodeArtsPipelineClient) ShowProjectOpenSourceStrategyInvoker(request *model.ShowProjectOpenSourceStrategyRequest) *ShowProjectOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForShowProjectOpenSourceStrategy()
-	return &ShowProjectOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowProjectStrategy
 //
 // 查询项目级策略详情
@@ -1552,27 +1426,6 @@ func (c *CodeArtsPipelineClient) StopPipelineRunInvoker(request *model.StopPipel
 	return &StopPipelineRunInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SwitchOpenSourceStrategy 修改租户级开源治理策略启用状态
-//
-// 修改租户级开源治理策略启用状态
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) SwitchOpenSourceStrategy(request *model.SwitchOpenSourceStrategyRequest) (*model.SwitchOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForSwitchOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SwitchOpenSourceStrategyResponse), nil
-	}
-}
-
-// SwitchOpenSourceStrategyInvoker 修改租户级开源治理策略启用状态
-func (c *CodeArtsPipelineClient) SwitchOpenSourceStrategyInvoker(request *model.SwitchOpenSourceStrategyRequest) *SwitchOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForSwitchOpenSourceStrategy()
-	return &SwitchOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // SwitchStrategy 开关规则集
 //
 // 修改规则集状态
@@ -1613,27 +1466,6 @@ func (c *CodeArtsPipelineClient) UpdateBasicPlugin(request *model.UpdateBasicPlu
 func (c *CodeArtsPipelineClient) UpdateBasicPluginInvoker(request *model.UpdateBasicPluginRequest) *UpdateBasicPluginInvoker {
 	requestDef := GenReqDefForUpdateBasicPlugin()
 	return &UpdateBasicPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateOpenSourceStrategy 修改租户级开源治理策略
-//
-// 修改租户级开源治理策略
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) UpdateOpenSourceStrategy(request *model.UpdateOpenSourceStrategyRequest) (*model.UpdateOpenSourceStrategyResponse, error) {
-	requestDef := GenReqDefForUpdateOpenSourceStrategy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateOpenSourceStrategyResponse), nil
-	}
-}
-
-// UpdateOpenSourceStrategyInvoker 修改租户级开源治理策略
-func (c *CodeArtsPipelineClient) UpdateOpenSourceStrategyInvoker(request *model.UpdateOpenSourceStrategyRequest) *UpdateOpenSourceStrategyInvoker {
-	requestDef := GenReqDefForUpdateOpenSourceStrategy()
-	return &UpdateOpenSourceStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePipelineGroup 更新流水线分组

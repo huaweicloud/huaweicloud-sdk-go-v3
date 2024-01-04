@@ -18,7 +18,7 @@ type AccessConfigurationPort struct {
 	// 访问端口。
 	Port *string `json:"port,omitempty"`
 
-	// 协议。
+	// 协议，负载均衡支持TCP，负载均衡与路由配置支持HTTP、HTTPS。
 	Protocol *AccessConfigurationPortProtocol `json:"protocol,omitempty"`
 
 	// 默认证书，访问方式配置为转发策略且协议为HTTPS时配置，未配置域名证书对时使用默认证书。
@@ -31,6 +31,9 @@ type AccessConfigurationPort struct {
 	Policy *AccessConfigurationPortPolicy `json:"policy,omitempty"`
 
 	Path *[]AccessConfigurationHttpPath `json:"path,omitempty"`
+
+	// 用户选择的elb的ID。
+	ElbId *string `json:"elb_id,omitempty"`
 }
 
 func (o AccessConfigurationPort) String() string {

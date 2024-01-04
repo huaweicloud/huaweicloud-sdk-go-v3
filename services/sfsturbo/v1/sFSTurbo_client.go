@@ -191,6 +191,27 @@ func (c *SFSTurboClient) CreateHpcCacheTaskInvoker(request *model.CreateHpcCache
 	return &CreateHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLdapConfig 创建并绑定ldap配置
+//
+// 创建并绑定ldap配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) CreateLdapConfig(request *model.CreateLdapConfigRequest) (*model.CreateLdapConfigResponse, error) {
+	requestDef := GenReqDefForCreateLdapConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLdapConfigResponse), nil
+	}
+}
+
+// CreateLdapConfigInvoker 创建并绑定ldap配置
+func (c *SFSTurboClient) CreateLdapConfigInvoker(request *model.CreateLdapConfigRequest) *CreateLdapConfigInvoker {
+	requestDef := GenReqDefForCreateLdapConfig()
+	return &CreateLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePermRule 创建权限规则
 //
 // 创建权限规则
@@ -339,6 +360,27 @@ func (c *SFSTurboClient) DeleteFsTask(request *model.DeleteFsTaskRequest) (*mode
 func (c *SFSTurboClient) DeleteFsTaskInvoker(request *model.DeleteFsTaskRequest) *DeleteFsTaskInvoker {
 	requestDef := GenReqDefForDeleteFsTask()
 	return &DeleteFsTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLdapConfig 删除ldap配置
+//
+// 删除ldap配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeleteLdapConfig(request *model.DeleteLdapConfigRequest) (*model.DeleteLdapConfigResponse, error) {
+	requestDef := GenReqDefForDeleteLdapConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLdapConfigResponse), nil
+	}
+}
+
+// DeleteLdapConfigInvoker 删除ldap配置
+func (c *SFSTurboClient) DeleteLdapConfigInvoker(request *model.DeleteLdapConfigRequest) *DeleteLdapConfigInvoker {
+	requestDef := GenReqDefForDeleteLdapConfig()
+	return &DeleteLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePermRule 删除权限规则
@@ -698,6 +740,48 @@ func (c *SFSTurboClient) ShowHpcCacheTaskInvoker(request *model.ShowHpcCacheTask
 	return &ShowHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowJobDetail 查询job的状态详情
+//
+// 查询job的执行状态。 可用于查询SFS Turbo异步API的执行状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
+	requestDef := GenReqDefForShowJobDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobDetailResponse), nil
+	}
+}
+
+// ShowJobDetailInvoker 查询job的状态详情
+func (c *SFSTurboClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *ShowJobDetailInvoker {
+	requestDef := GenReqDefForShowJobDetail()
+	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLdapConfig 查询Ldap的配置
+//
+// 查询Ldap的配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowLdapConfig(request *model.ShowLdapConfigRequest) (*model.ShowLdapConfigResponse, error) {
+	requestDef := GenReqDefForShowLdapConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLdapConfigResponse), nil
+	}
+}
+
+// ShowLdapConfigInvoker 查询Ldap的配置
+func (c *SFSTurboClient) ShowLdapConfigInvoker(request *model.ShowLdapConfigRequest) *ShowLdapConfigInvoker {
+	requestDef := GenReqDefForShowLdapConfig()
+	return &ShowLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPermRule 查询文件系统的某一个权限规则
 //
 // 查询文件系统的某一个权限规则
@@ -801,6 +885,27 @@ func (c *SFSTurboClient) UpdateHpcShare(request *model.UpdateHpcShareRequest) (*
 func (c *SFSTurboClient) UpdateHpcShareInvoker(request *model.UpdateHpcShareRequest) *UpdateHpcShareInvoker {
 	requestDef := GenReqDefForUpdateHpcShare()
 	return &UpdateHpcShareInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLdapConfig 修改ldap配置
+//
+// 修改ldap配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) UpdateLdapConfig(request *model.UpdateLdapConfigRequest) (*model.UpdateLdapConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLdapConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLdapConfigResponse), nil
+	}
+}
+
+// UpdateLdapConfigInvoker 修改ldap配置
+func (c *SFSTurboClient) UpdateLdapConfigInvoker(request *model.UpdateLdapConfigRequest) *UpdateLdapConfigInvoker {
+	requestDef := GenReqDefForUpdateLdapConfig()
+	return &UpdateLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePermRule 修改权限规则

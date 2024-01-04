@@ -8,7 +8,15 @@ import (
 
 // ListEventStreamingResponse Response Object
 type ListEventStreamingResponse struct {
-	Body *[]EventStreamingDetail `json:"body,omitempty"`
+
+	// 总数
+	Total *int32 `json:"total,omitempty"`
+
+	// 本页数量
+	Size *int32 `json:"size,omitempty"`
+
+	// 对象列表
+	Items *[]EventStreamingDetail `json:"items,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

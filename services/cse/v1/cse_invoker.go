@@ -209,6 +209,18 @@ func (i *ShowEngineJobInvoker) Invoke() (*model.ShowEngineJobResponse, error) {
 	}
 }
 
+type ShowEngineQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEngineQuotasInvoker) Invoke() (*model.ShowEngineQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEngineQuotasResponse), nil
+	}
+}
+
 type UpdateGovernancePolicyInvoker struct {
 	*invoker.BaseInvoker
 }

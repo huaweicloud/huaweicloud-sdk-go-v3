@@ -102,6 +102,8 @@ type CreateClusterReqV2 struct {
 
 	// 集群组件自定义配置。 该参数只适用于支持“自定义组件配置创建集群”特性的集群版本。
 	ComponentConfigs *[]ComponentConfig `json:"component_configs,omitempty"`
+
+	SmnNotify *SmnNotify `json:"smn_notify,omitempty"`
 }
 
 func (o CreateClusterReqV2) String() string {

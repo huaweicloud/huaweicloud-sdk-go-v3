@@ -47,6 +47,9 @@ type ComponentSpec struct {
 
 	// 构建日志ID。
 	BuildLogId *string `json:"build_log_id,omitempty"`
+
+	// 组件最新配置的操作ID。
+	ConfigurationOperationId *string `json:"configuration_operation_id,omitempty"`
 }
 
 func (o ComponentSpec) String() string {

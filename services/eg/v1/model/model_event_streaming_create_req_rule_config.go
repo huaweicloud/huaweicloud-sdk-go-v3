@@ -11,7 +11,7 @@ type EventStreamingCreateReqRuleConfig struct {
 	Transform *TransForm `json:"transform,omitempty"`
 
 	// 过滤规则
-	Filter *string `json:"filter,omitempty"`
+	Filter *interface{} `json:"filter,omitempty"`
 }
 
 func (o EventStreamingCreateReqRuleConfig) String() string {

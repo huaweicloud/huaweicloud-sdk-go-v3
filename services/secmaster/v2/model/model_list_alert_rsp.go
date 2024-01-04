@@ -14,7 +14,7 @@ type ListAlertRsp struct {
 
 	Environment *ShowAlertRspEnvironment `json:"environment,omitempty"`
 
-	Datasource *ShowAlertRspDatasource `json:"datasource,omitempty"`
+	DataSource *ShowAlertRspDatasource `json:"data_source,omitempty"`
 
 	// Update time
 	FirstObservedTime *string `json:"first_observed_time,omitempty"`
@@ -44,7 +44,7 @@ type ListAlertRsp struct {
 	Confidence *int32 `json:"confidence,omitempty"`
 
 	// 严重性等级
-	Serverity *string `json:"serverity,omitempty"`
+	Severity *string `json:"severity,omitempty"`
 
 	// 关键性，是指事件涉及的资源的重要性级别。
 	Criticality *int32 `json:"criticality,omitempty"`
@@ -94,7 +94,7 @@ type ListAlertRsp struct {
 	Owner *string `json:"owner,omitempty"`
 
 	// The name, display only
-	Cteator *string `json:"cteator,omitempty"`
+	Creator *string `json:"creator,omitempty"`
 
 	// 关闭原因
 	CloseReason *string `json:"close_reason,omitempty"`

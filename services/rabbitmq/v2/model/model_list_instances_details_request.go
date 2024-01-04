@@ -66,8 +66,6 @@ type ListInstancesDetailsRequestStatusEnum struct {
 	SHRINKING          ListInstancesDetailsRequestStatus
 	EXTENDEDFAILED     ListInstancesDetailsRequestStatus
 	CONFIGURING        ListInstancesDetailsRequestStatus
-	UPGRADING          ListInstancesDetailsRequestStatus
-	UPGRADINGFAILED    ListInstancesDetailsRequestStatus
 	ROLLBACK           ListInstancesDetailsRequestStatus
 	ROLLBACKFAILED     ListInstancesDetailsRequestStatus
 	VOLUMETYPECHANGING ListInstancesDetailsRequestStatus
@@ -110,12 +108,6 @@ func GetListInstancesDetailsRequestStatusEnum() ListInstancesDetailsRequestStatu
 		},
 		CONFIGURING: ListInstancesDetailsRequestStatus{
 			value: "CONFIGURING",
-		},
-		UPGRADING: ListInstancesDetailsRequestStatus{
-			value: "UPGRADING",
-		},
-		UPGRADINGFAILED: ListInstancesDetailsRequestStatus{
-			value: "UPGRADINGFAILED",
 		},
 		ROLLBACK: ListInstancesDetailsRequestStatus{
 			value: "ROLLBACK",

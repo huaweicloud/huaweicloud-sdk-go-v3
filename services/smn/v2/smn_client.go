@@ -40,6 +40,27 @@ func (c *SmnClient) AddSubscriptionInvoker(request *model.AddSubscriptionRequest
 	return &AddSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddSubscriptionFromSubscriptionUser 导入订阅
+//
+// 为指定的Topic添加订阅者，订阅者信息来源为订阅用户列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) AddSubscriptionFromSubscriptionUser(request *model.AddSubscriptionFromSubscriptionUserRequest) (*model.AddSubscriptionFromSubscriptionUserResponse, error) {
+	requestDef := GenReqDefForAddSubscriptionFromSubscriptionUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddSubscriptionFromSubscriptionUserResponse), nil
+	}
+}
+
+// AddSubscriptionFromSubscriptionUserInvoker 导入订阅
+func (c *SmnClient) AddSubscriptionFromSubscriptionUserInvoker(request *model.AddSubscriptionFromSubscriptionUserRequest) *AddSubscriptionFromSubscriptionUserInvoker {
+	requestDef := GenReqDefForAddSubscriptionFromSubscriptionUser()
+	return &AddSubscriptionFromSubscriptionUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateOrDeleteResourceTags 批量添加删除资源标签
 //
 // 为指定实例批量添加或删除标签。一个资源上最多有10个标签。
@@ -62,6 +83,69 @@ func (c *SmnClient) BatchCreateOrDeleteResourceTags(request *model.BatchCreateOr
 func (c *SmnClient) BatchCreateOrDeleteResourceTagsInvoker(request *model.BatchCreateOrDeleteResourceTagsRequest) *BatchCreateOrDeleteResourceTagsInvoker {
 	requestDef := GenReqDefForBatchCreateOrDeleteResourceTags()
 	return &BatchCreateOrDeleteResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSubscriptionsFilterPolices 批量创建订阅过滤策略
+//
+// 创建订阅者的消息过滤策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) BatchCreateSubscriptionsFilterPolices(request *model.BatchCreateSubscriptionsFilterPolicesRequest) (*model.BatchCreateSubscriptionsFilterPolicesResponse, error) {
+	requestDef := GenReqDefForBatchCreateSubscriptionsFilterPolices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSubscriptionsFilterPolicesResponse), nil
+	}
+}
+
+// BatchCreateSubscriptionsFilterPolicesInvoker 批量创建订阅过滤策略
+func (c *SmnClient) BatchCreateSubscriptionsFilterPolicesInvoker(request *model.BatchCreateSubscriptionsFilterPolicesRequest) *BatchCreateSubscriptionsFilterPolicesInvoker {
+	requestDef := GenReqDefForBatchCreateSubscriptionsFilterPolices()
+	return &BatchCreateSubscriptionsFilterPolicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSubscriptionsFilterPolices 批量删除订阅过滤策略
+//
+// 删除订阅者的消息过滤策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) BatchDeleteSubscriptionsFilterPolices(request *model.BatchDeleteSubscriptionsFilterPolicesRequest) (*model.BatchDeleteSubscriptionsFilterPolicesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSubscriptionsFilterPolices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSubscriptionsFilterPolicesResponse), nil
+	}
+}
+
+// BatchDeleteSubscriptionsFilterPolicesInvoker 批量删除订阅过滤策略
+func (c *SmnClient) BatchDeleteSubscriptionsFilterPolicesInvoker(request *model.BatchDeleteSubscriptionsFilterPolicesRequest) *BatchDeleteSubscriptionsFilterPolicesInvoker {
+	requestDef := GenReqDefForBatchDeleteSubscriptionsFilterPolices()
+	return &BatchDeleteSubscriptionsFilterPolicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateSubscriptionsFilterPolices 批量更新订阅过滤策略
+//
+// 更新订阅者的消息过滤策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) BatchUpdateSubscriptionsFilterPolices(request *model.BatchUpdateSubscriptionsFilterPolicesRequest) (*model.BatchUpdateSubscriptionsFilterPolicesResponse, error) {
+	requestDef := GenReqDefForBatchUpdateSubscriptionsFilterPolices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateSubscriptionsFilterPolicesResponse), nil
+	}
+}
+
+// BatchUpdateSubscriptionsFilterPolicesInvoker 批量更新订阅过滤策略
+func (c *SmnClient) BatchUpdateSubscriptionsFilterPolicesInvoker(request *model.BatchUpdateSubscriptionsFilterPolicesRequest) *BatchUpdateSubscriptionsFilterPolicesInvoker {
+	requestDef := GenReqDefForBatchUpdateSubscriptionsFilterPolices()
+	return &BatchUpdateSubscriptionsFilterPolicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelSubscription 取消订阅
@@ -570,6 +654,27 @@ func (c *SmnClient) ListVersionsInvoker(request *model.ListVersionsRequest) *Lis
 	return &ListVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PublishHttpDetect 发布探测消息
+//
+// 基于主题发送http/https探测消息，探测当前http/https 终端是否可用，SMN出口是否能够正常访问该终端。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) PublishHttpDetect(request *model.PublishHttpDetectRequest) (*model.PublishHttpDetectResponse, error) {
+	requestDef := GenReqDefForPublishHttpDetect()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishHttpDetectResponse), nil
+	}
+}
+
+// PublishHttpDetectInvoker 发布探测消息
+func (c *SmnClient) PublishHttpDetectInvoker(request *model.PublishHttpDetectRequest) *PublishHttpDetectInvoker {
+	requestDef := GenReqDefForPublishHttpDetect()
+	return &PublishHttpDetectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PublishMessage 消息发布
 //
 // 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。三种消息发送方式
@@ -598,6 +703,27 @@ func (c *SmnClient) PublishMessage(request *model.PublishMessageRequest) (*model
 func (c *SmnClient) PublishMessageInvoker(request *model.PublishMessageRequest) *PublishMessageInvoker {
 	requestDef := GenReqDefForPublishMessage()
 	return &PublishMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHttpDetectResult 获取http探测结果
+//
+// 根据http探测发送返回的task_id查询探测结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ShowHttpDetectResult(request *model.ShowHttpDetectResultRequest) (*model.ShowHttpDetectResultResponse, error) {
+	requestDef := GenReqDefForShowHttpDetectResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHttpDetectResultResponse), nil
+	}
+}
+
+// ShowHttpDetectResultInvoker 获取http探测结果
+func (c *SmnClient) ShowHttpDetectResultInvoker(request *model.ShowHttpDetectResultRequest) *ShowHttpDetectResultInvoker {
+	requestDef := GenReqDefForShowHttpDetectResult()
+	return &ShowHttpDetectResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateLogtank 更新云日志
@@ -705,6 +831,7 @@ func (c *SmnClient) UpdateTopicAttributeInvoker(request *model.UpdateTopicAttrib
 	return &UpdateTopicAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateApplication 创建Application
 //
 // 创建平台应用。
@@ -720,12 +847,14 @@ func (c *SmnClient) CreateApplication(request *model.CreateApplicationRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateApplicationInvoker 创建Application
 func (c *SmnClient) CreateApplicationInvoker(request *model.CreateApplicationRequest) *CreateApplicationInvoker {
 	requestDef := GenReqDefForCreateApplication()
 	return &CreateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteApplication 删除Application
 //
 // 删除平台应用。
@@ -741,12 +870,14 @@ func (c *SmnClient) DeleteApplication(request *model.DeleteApplicationRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteApplicationInvoker 删除Application
 func (c *SmnClient) DeleteApplicationInvoker(request *model.DeleteApplicationRequest) *DeleteApplicationInvoker {
 	requestDef := GenReqDefForDeleteApplication()
 	return &DeleteApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationAttributes 查询Application属性
 //
 // 获取应用平台属性。
@@ -762,12 +893,14 @@ func (c *SmnClient) ListApplicationAttributes(request *model.ListApplicationAttr
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationAttributesInvoker 查询Application属性
 func (c *SmnClient) ListApplicationAttributesInvoker(request *model.ListApplicationAttributesRequest) *ListApplicationAttributesInvoker {
 	requestDef := GenReqDefForListApplicationAttributes()
 	return &ListApplicationAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplications 查询Application
 //
 // 查询应用平台列表。
@@ -783,12 +916,14 @@ func (c *SmnClient) ListApplications(request *model.ListApplicationsRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationsInvoker 查询Application
 func (c *SmnClient) ListApplicationsInvoker(request *model.ListApplicationsRequest) *ListApplicationsInvoker {
 	requestDef := GenReqDefForListApplications()
 	return &ListApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // PublishAppMessage App消息发布
 //
 // 将消息直发给endpoint设备。
@@ -804,12 +939,14 @@ func (c *SmnClient) PublishAppMessage(request *model.PublishAppMessageRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // PublishAppMessageInvoker App消息发布
 func (c *SmnClient) PublishAppMessageInvoker(request *model.PublishAppMessageRequest) *PublishAppMessageInvoker {
 	requestDef := GenReqDefForPublishAppMessage()
 	return &PublishAppMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateApplication 更新Application
 //
 // 更新应用平台。
@@ -825,12 +962,14 @@ func (c *SmnClient) UpdateApplication(request *model.UpdateApplicationRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateApplicationInvoker 更新Application
 func (c *SmnClient) UpdateApplicationInvoker(request *model.UpdateApplicationRequest) *UpdateApplicationInvoker {
 	requestDef := GenReqDefForUpdateApplication()
 	return &UpdateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateApplicationEndpoint 创建Application endpoint
 //
 // 创建应用平台的endpoint终端。
@@ -846,12 +985,14 @@ func (c *SmnClient) CreateApplicationEndpoint(request *model.CreateApplicationEn
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateApplicationEndpointInvoker 创建Application endpoint
 func (c *SmnClient) CreateApplicationEndpointInvoker(request *model.CreateApplicationEndpointRequest) *CreateApplicationEndpointInvoker {
 	requestDef := GenReqDefForCreateApplicationEndpoint()
 	return &CreateApplicationEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteApplicationEndpoint 删除Application endpoint
 //
 // 删除设备。
@@ -867,12 +1008,14 @@ func (c *SmnClient) DeleteApplicationEndpoint(request *model.DeleteApplicationEn
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteApplicationEndpointInvoker 删除Application endpoint
 func (c *SmnClient) DeleteApplicationEndpointInvoker(request *model.DeleteApplicationEndpointRequest) *DeleteApplicationEndpointInvoker {
 	requestDef := GenReqDefForDeleteApplicationEndpoint()
 	return &DeleteApplicationEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationEndpointAttributes 查询Application的Endpoint属性
 //
 // 获取endpoint的属性。
@@ -888,12 +1031,14 @@ func (c *SmnClient) ListApplicationEndpointAttributes(request *model.ListApplica
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationEndpointAttributesInvoker 查询Application的Endpoint属性
 func (c *SmnClient) ListApplicationEndpointAttributesInvoker(request *model.ListApplicationEndpointAttributesRequest) *ListApplicationEndpointAttributesInvoker {
 	requestDef := GenReqDefForListApplicationEndpointAttributes()
 	return &ListApplicationEndpointAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationEndpoints 查询Application的Endpoint列表
 //
 // 查询平台的endpoint列表。
@@ -909,12 +1054,14 @@ func (c *SmnClient) ListApplicationEndpoints(request *model.ListApplicationEndpo
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListApplicationEndpointsInvoker 查询Application的Endpoint列表
 func (c *SmnClient) ListApplicationEndpointsInvoker(request *model.ListApplicationEndpointsRequest) *ListApplicationEndpointsInvoker {
 	requestDef := GenReqDefForListApplicationEndpoints()
 	return &ListApplicationEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateApplicationEndpoint 更新Application endpoint
 //
 // 更新设备属性。
@@ -930,6 +1077,7 @@ func (c *SmnClient) UpdateApplicationEndpoint(request *model.UpdateApplicationEn
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateApplicationEndpointInvoker 更新Application endpoint
 func (c *SmnClient) UpdateApplicationEndpointInvoker(request *model.UpdateApplicationEndpointRequest) *UpdateApplicationEndpointInvoker {
 	requestDef := GenReqDefForUpdateApplicationEndpoint()

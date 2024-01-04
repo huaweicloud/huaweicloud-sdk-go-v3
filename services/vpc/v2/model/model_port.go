@@ -79,6 +79,9 @@ type Port struct {
 
 	// 功能说明：是否使能efi，使能则表示端口支持vRoCE能力，默认为false
 	EnableEfi bool `json:"enable_efi"`
+
+	// 功能说明：IPv6网卡绑定的共享带宽ID 约束：只有IPv6网卡绑定了共享带宽，才会显示此参数
+	Ipv6BandwidthId string `json:"ipv6_bandwidth_id"`
 }
 
 func (o Port) String() string {

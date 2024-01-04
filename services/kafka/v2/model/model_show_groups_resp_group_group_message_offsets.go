@@ -18,10 +18,10 @@ type ShowGroupsRespGroupGroupMessageOffsets struct {
 	Topic *string `json:"topic,omitempty"`
 
 	// 当前消费进度。
-	MessageCurrentOffset *int32 `json:"message_current_offset,omitempty"`
+	MessageCurrentOffset *int64 `json:"message_current_offset,omitempty"`
 
 	// 最大消息位置（LEO）。
-	MessageLogEndOffset *int32 `json:"message_log_end_offset,omitempty"`
+	MessageLogEndOffset *int64 `json:"message_log_end_offset,omitempty"`
 }
 
 func (o ShowGroupsRespGroupGroupMessageOffsets) String() string {

@@ -967,6 +967,379 @@ func (c *MetaStudioClient) ListStylesInvoker(request *model.ListStylesRequest) *
 	return &ListStylesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CommitVoiceTrainingJob 提交语音训练任务
+//
+// 提交训练任务,执行该接口后,任务会进入审核状态,审核完成后会等待训练。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CommitVoiceTrainingJob(request *model.CommitVoiceTrainingJobRequest) (*model.CommitVoiceTrainingJobResponse, error) {
+	requestDef := GenReqDefForCommitVoiceTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CommitVoiceTrainingJobResponse), nil
+	}
+}
+
+// CommitVoiceTrainingJobInvoker 提交语音训练任务
+func (c *MetaStudioClient) CommitVoiceTrainingJobInvoker(request *model.CommitVoiceTrainingJobRequest) *CommitVoiceTrainingJobInvoker {
+	requestDef := GenReqDefForCommitVoiceTrainingJob()
+	return &CommitVoiceTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmTrainingSegment 确认在线录音结果
+//
+// 确认在线录音结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ConfirmTrainingSegment(request *model.ConfirmTrainingSegmentRequest) (*model.ConfirmTrainingSegmentResponse, error) {
+	requestDef := GenReqDefForConfirmTrainingSegment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmTrainingSegmentResponse), nil
+	}
+}
+
+// ConfirmTrainingSegmentInvoker 确认在线录音结果
+func (c *MetaStudioClient) ConfirmTrainingSegmentInvoker(request *model.ConfirmTrainingSegmentRequest) *ConfirmTrainingSegmentInvoker {
+	requestDef := GenReqDefForConfirmTrainingSegment()
+	return &ConfirmTrainingSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTrainingAdvanceJob 创建高级版语音训练任务
+//
+// 用户创建语音训练基础版任务,该接口会返回一个obs上传地址，用于上传语音文件。
+// 仅支持zip包方式上传语音文件：
+// * 语音文件打包成zip上传：上传的训练数据为一个zip格式压缩文件,其中包含一段wav格式的长音频文件。
+//
+// &gt; * 文件上传后，调用“提交语音训练任务”接口，启动审核和训练。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTrainingAdvanceJob(request *model.CreateTrainingAdvanceJobRequest) (*model.CreateTrainingAdvanceJobResponse, error) {
+	requestDef := GenReqDefForCreateTrainingAdvanceJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTrainingAdvanceJobResponse), nil
+	}
+}
+
+// CreateTrainingAdvanceJobInvoker 创建高级版语音训练任务
+func (c *MetaStudioClient) CreateTrainingAdvanceJobInvoker(request *model.CreateTrainingAdvanceJobRequest) *CreateTrainingAdvanceJobInvoker {
+	requestDef := GenReqDefForCreateTrainingAdvanceJob()
+	return &CreateTrainingAdvanceJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTrainingBasicJob 创建基础版语音训练任务
+//
+// 用户创建语音训练基础版任务,该接口会返回一个obs上传地址，用于上传语音文件。
+// 支持2种方式上传语音文件：
+// * 语音文件和文本文件打包成zip上传：语音文件已经切分成20个wav文件，每个语音文件对应一个txt文本文件，所有文件打包成zip文件。语音文件命名规则：0.wav~19.wav；文本文件命名规则：0.txt~19.txt。
+// * 语音文件和文本文件逐句上传：每次上传一句语料的语音文件和文本文件，再调用“确认在线录音结果”接口确认语音和文本内容是否一致。确认成功后再上传和确认下一句。
+//
+// &gt; * 文件上传后，调用“提交语音训练任务”接口，启动审核和训练。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTrainingBasicJob(request *model.CreateTrainingBasicJobRequest) (*model.CreateTrainingBasicJobResponse, error) {
+	requestDef := GenReqDefForCreateTrainingBasicJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTrainingBasicJobResponse), nil
+	}
+}
+
+// CreateTrainingBasicJobInvoker 创建基础版语音训练任务
+func (c *MetaStudioClient) CreateTrainingBasicJobInvoker(request *model.CreateTrainingBasicJobRequest) *CreateTrainingBasicJobInvoker {
+	requestDef := GenReqDefForCreateTrainingBasicJob()
+	return &CreateTrainingBasicJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTrainingMiddleJob 创建进阶版语音训练任务
+//
+// 用户创建语音训练基础版任务,该接口会返回一个obs上传地址，用于上传语音文件。
+// 支持2种方式上传语音文件：
+// * 语音文件和文本文件打包成zip上传：语音文件已经切分成100个wav文件，每个语音文件对应一个txt文本文件，所有文件打包成zip文件。语音文件命名规则：0.wav~99.wav；文本文件命名规则：0.txt~99.txt。
+// * 语音文件和文本文件逐句上传：每次上传一句语料的语音文件和文本文件，再调用“确认在线录音结果”接口确认语音和文本内容是否一致。确认成功后再上传和确认下一句。
+//
+// &gt; * 文件上传后，调用“提交语音训练任务”接口，启动审核和训练。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTrainingMiddleJob(request *model.CreateTrainingMiddleJobRequest) (*model.CreateTrainingMiddleJobResponse, error) {
+	requestDef := GenReqDefForCreateTrainingMiddleJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTrainingMiddleJobResponse), nil
+	}
+}
+
+// CreateTrainingMiddleJobInvoker 创建进阶版语音训练任务
+func (c *MetaStudioClient) CreateTrainingMiddleJobInvoker(request *model.CreateTrainingMiddleJobRequest) *CreateTrainingMiddleJobInvoker {
+	requestDef := GenReqDefForCreateTrainingMiddleJob()
+	return &CreateTrainingMiddleJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVoiceTrainingJob 删除语音训练任务
+//
+// 删除语音训练任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteVoiceTrainingJob(request *model.DeleteVoiceTrainingJobRequest) (*model.DeleteVoiceTrainingJobResponse, error) {
+	requestDef := GenReqDefForDeleteVoiceTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVoiceTrainingJobResponse), nil
+	}
+}
+
+// DeleteVoiceTrainingJobInvoker 删除语音训练任务
+func (c *MetaStudioClient) DeleteVoiceTrainingJobInvoker(request *model.DeleteVoiceTrainingJobRequest) *DeleteVoiceTrainingJobInvoker {
+	requestDef := GenReqDefForDeleteVoiceTrainingJob()
+	return &DeleteVoiceTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVoiceTrainingJob 查询语音训练任务列表
+//
+// 查询语音训练任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListVoiceTrainingJob(request *model.ListVoiceTrainingJobRequest) (*model.ListVoiceTrainingJobResponse, error) {
+	requestDef := GenReqDefForListVoiceTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVoiceTrainingJobResponse), nil
+	}
+}
+
+// ListVoiceTrainingJobInvoker 查询语音训练任务列表
+func (c *MetaStudioClient) ListVoiceTrainingJobInvoker(request *model.ListVoiceTrainingJobRequest) *ListVoiceTrainingJobInvoker {
+	requestDef := GenReqDefForListVoiceTrainingJob()
+	return &ListVoiceTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobAuditResult 获取语音训练任务审核结果
+//
+// 获取语音训练任务审核结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowJobAuditResult(request *model.ShowJobAuditResultRequest) (*model.ShowJobAuditResultResponse, error) {
+	requestDef := GenReqDefForShowJobAuditResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobAuditResultResponse), nil
+	}
+}
+
+// ShowJobAuditResultInvoker 获取语音训练任务审核结果
+func (c *MetaStudioClient) ShowJobAuditResultInvoker(request *model.ShowJobAuditResultRequest) *ShowJobAuditResultInvoker {
+	requestDef := GenReqDefForShowJobAuditResult()
+	return &ShowJobAuditResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobUploadingAddress 获取语音文件上传地址
+//
+// 获取语音文件上传地址
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowJobUploadingAddress(request *model.ShowJobUploadingAddressRequest) (*model.ShowJobUploadingAddressResponse, error) {
+	requestDef := GenReqDefForShowJobUploadingAddress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobUploadingAddressResponse), nil
+	}
+}
+
+// ShowJobUploadingAddressInvoker 获取语音文件上传地址
+func (c *MetaStudioClient) ShowJobUploadingAddressInvoker(request *model.ShowJobUploadingAddressRequest) *ShowJobUploadingAddressInvoker {
+	requestDef := GenReqDefForShowJobUploadingAddress()
+	return &ShowJobUploadingAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTrainingSegmentInfo 获取在线录音确认结果
+//
+// 获取在线录音确认结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTrainingSegmentInfo(request *model.ShowTrainingSegmentInfoRequest) (*model.ShowTrainingSegmentInfoResponse, error) {
+	requestDef := GenReqDefForShowTrainingSegmentInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrainingSegmentInfoResponse), nil
+	}
+}
+
+// ShowTrainingSegmentInfoInvoker 获取在线录音确认结果
+func (c *MetaStudioClient) ShowTrainingSegmentInfoInvoker(request *model.ShowTrainingSegmentInfoRequest) *ShowTrainingSegmentInfoInvoker {
+	requestDef := GenReqDefForShowTrainingSegmentInfo()
+	return &ShowTrainingSegmentInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVoiceTrainingJob 查询语音训练任务详情
+//
+// 查询语音训练任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowVoiceTrainingJob(request *model.ShowVoiceTrainingJobRequest) (*model.ShowVoiceTrainingJobResponse, error) {
+	requestDef := GenReqDefForShowVoiceTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVoiceTrainingJobResponse), nil
+	}
+}
+
+// ShowVoiceTrainingJobInvoker 查询语音训练任务详情
+func (c *MetaStudioClient) ShowVoiceTrainingJobInvoker(request *model.ShowVoiceTrainingJobRequest) *ShowVoiceTrainingJobInvoker {
+	requestDef := GenReqDefForShowVoiceTrainingJob()
+	return &ShowVoiceTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Create2dModelTrainingJob 创建分身数字人模型训练任务
+//
+// 该接口用于创建分身数字人模型训练任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Create2dModelTrainingJob(request *model.Create2dModelTrainingJobRequest) (*model.Create2dModelTrainingJobResponse, error) {
+	requestDef := GenReqDefForCreate2dModelTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Create2dModelTrainingJobResponse), nil
+	}
+}
+
+// Create2dModelTrainingJobInvoker 创建分身数字人模型训练任务
+func (c *MetaStudioClient) Create2dModelTrainingJobInvoker(request *model.Create2dModelTrainingJobRequest) *Create2dModelTrainingJobInvoker {
+	requestDef := GenReqDefForCreate2dModelTrainingJob()
+	return &Create2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Delete2dModelTrainingJob 删除分身数字人模型训练任务
+//
+// 该接口用于删除分身数字人模型训练任务。同时需要删除训练任务相关的训练视频、身份证照片、授权文件、模型资产等。
+// &gt; * 该接口应当在任务处于以下状态时调用：WAIT_FILE_UPLOAD、AUTO_VERIFY_FAILED、MANUAL_VERIFYING、MANUAL_VERIFY_FAILED、TRAINING_DATA_PREPROCESS_FAILED、TRAIN_FAILED、INFERENCE_DATA_PREPROCESS_FAILED、JOB_SUCCESS、WAIT_USER_CONFIRM、JOB_REJECT、JOB_FINISH
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Delete2dModelTrainingJob(request *model.Delete2dModelTrainingJobRequest) (*model.Delete2dModelTrainingJobResponse, error) {
+	requestDef := GenReqDefForDelete2dModelTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Delete2dModelTrainingJobResponse), nil
+	}
+}
+
+// Delete2dModelTrainingJobInvoker 删除分身数字人模型训练任务
+func (c *MetaStudioClient) Delete2dModelTrainingJobInvoker(request *model.Delete2dModelTrainingJobRequest) *Delete2dModelTrainingJobInvoker {
+	requestDef := GenReqDefForDelete2dModelTrainingJob()
+	return &Delete2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Execute2dModelTrainingCommandByUser 租户执行分身数字人模型训练任务命令
+//
+// 该接口用于租户执行分身数字人模型训练任务命令，如提交训练审核等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Execute2dModelTrainingCommandByUser(request *model.Execute2dModelTrainingCommandByUserRequest) (*model.Execute2dModelTrainingCommandByUserResponse, error) {
+	requestDef := GenReqDefForExecute2dModelTrainingCommandByUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Execute2dModelTrainingCommandByUserResponse), nil
+	}
+}
+
+// Execute2dModelTrainingCommandByUserInvoker 租户执行分身数字人模型训练任务命令
+func (c *MetaStudioClient) Execute2dModelTrainingCommandByUserInvoker(request *model.Execute2dModelTrainingCommandByUserRequest) *Execute2dModelTrainingCommandByUserInvoker {
+	requestDef := GenReqDefForExecute2dModelTrainingCommandByUser()
+	return &Execute2dModelTrainingCommandByUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// List2dModelTrainingJob 查询分身数字人模型训练任务列表
+//
+// 该接口用于查询分身数字人模型训练任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) List2dModelTrainingJob(request *model.List2dModelTrainingJobRequest) (*model.List2dModelTrainingJobResponse, error) {
+	requestDef := GenReqDefForList2dModelTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.List2dModelTrainingJobResponse), nil
+	}
+}
+
+// List2dModelTrainingJobInvoker 查询分身数字人模型训练任务列表
+func (c *MetaStudioClient) List2dModelTrainingJobInvoker(request *model.List2dModelTrainingJobRequest) *List2dModelTrainingJobInvoker {
+	requestDef := GenReqDefForList2dModelTrainingJob()
+	return &List2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Show2dModelTrainingJob 查询分身数字人模型训练任务详情
+//
+// 该接口用于查询分身数字人模型训练任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Show2dModelTrainingJob(request *model.Show2dModelTrainingJobRequest) (*model.Show2dModelTrainingJobResponse, error) {
+	requestDef := GenReqDefForShow2dModelTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Show2dModelTrainingJobResponse), nil
+	}
+}
+
+// Show2dModelTrainingJobInvoker 查询分身数字人模型训练任务详情
+func (c *MetaStudioClient) Show2dModelTrainingJobInvoker(request *model.Show2dModelTrainingJobRequest) *Show2dModelTrainingJobInvoker {
+	requestDef := GenReqDefForShow2dModelTrainingJob()
+	return &Show2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Update2dModelTrainingJob 更新分身数字人模型训练任务
+//
+// 该接口用于更新分身数字人模型训练任务。用于在自动审核或者人工审核不通过情况下，更新训练视频、身份证照片等。
+// &gt; * 该接口只能在AUTO_VERIFY_FAILED或者MANUAL_VERIFY_FAILED状态下调用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Update2dModelTrainingJob(request *model.Update2dModelTrainingJobRequest) (*model.Update2dModelTrainingJobResponse, error) {
+	requestDef := GenReqDefForUpdate2dModelTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Update2dModelTrainingJobResponse), nil
+	}
+}
+
+// Update2dModelTrainingJobInvoker 更新分身数字人模型训练任务
+func (c *MetaStudioClient) Update2dModelTrainingJobInvoker(request *model.Update2dModelTrainingJobRequest) *Update2dModelTrainingJobInvoker {
+	requestDef := GenReqDefForUpdate2dModelTrainingJob()
+	return &Update2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFacialAnimations 创建语音驱动表情动画任务
 //
 // 该接口用于创建驱动数字人表情的任务。
@@ -1070,6 +1443,48 @@ func (c *MetaStudioClient) ListTtsaJobs(request *model.ListTtsaJobsRequest) (*mo
 func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsRequest) *ListTtsaJobsInvoker {
 	requestDef := GenReqDefForListTtsaJobs()
 	return &ListTtsaJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTtsAudition 创建TTS试听任务
+//
+// 该接口用于创建生成播报内容的语音试听文件任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTtsAudition(request *model.CreateTtsAuditionRequest) (*model.CreateTtsAuditionResponse, error) {
+	requestDef := GenReqDefForCreateTtsAudition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTtsAuditionResponse), nil
+	}
+}
+
+// CreateTtsAuditionInvoker 创建TTS试听任务
+func (c *MetaStudioClient) CreateTtsAuditionInvoker(request *model.CreateTtsAuditionRequest) *CreateTtsAuditionInvoker {
+	requestDef := GenReqDefForCreateTtsAudition()
+	return &CreateTtsAuditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTtsAuditionFile 获取TTS试听文件
+//
+// 该接口用于获取TTS试听文件下载链接，返回List中包含当前已生产的试听文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTtsAuditionFile(request *model.ShowTtsAuditionFileRequest) (*model.ShowTtsAuditionFileResponse, error) {
+	requestDef := GenReqDefForShowTtsAuditionFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTtsAuditionFileResponse), nil
+	}
+}
+
+// ShowTtsAuditionFileInvoker 获取TTS试听文件
+func (c *MetaStudioClient) ShowTtsAuditionFileInvoker(request *model.ShowTtsAuditionFileRequest) *ShowTtsAuditionFileInvoker {
+	requestDef := GenReqDefForShowTtsAuditionFile()
+	return &ShowTtsAuditionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVideoMotionCaptureJob 创建视频驱动任务

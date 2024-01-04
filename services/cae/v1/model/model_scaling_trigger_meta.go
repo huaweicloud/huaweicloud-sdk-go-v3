@@ -9,19 +9,19 @@ import (
 	"strings"
 )
 
-// ScalingTriggerMeta 参数含义：trigger元数据。
+// ScalingTriggerMeta trigger元数据。
 type ScalingTriggerMeta struct {
 
-	// - type为\"cpu、memory\"时，配置此参数。 - 参数含义：数据类型，当前只支持利用率，默认值为Utilization。
+	// 数据类型，当前只支持利用率，默认值为Utilization。  type为\"cpu、memory\"时，配置此参数。
 	Type *string `json:"type,omitempty"`
 
-	// - type为\"cpu、memory\"时，配置此参数。 - 参数含义：触发指标的期望值。
+	// 触发指标的阈值。  type为\"cpu、memory\"时，配置此参数。
 	Value *string `json:"value,omitempty"`
 
-	// - type为\"cron\"时，配置此参数。 - 参数含义：生效周期，只支持day、week、month。
+	// 生效周期。  type为\"cron\"时，配置此参数。
 	PeriodType *ScalingTriggerMetaPeriodType `json:"period_type,omitempty"`
 
-	// - type为\"cron\"时，配置此参数。 - 参数含义：每个周期内触发的时间点和实例数。
+	// 每个周期内触发的时间点和实例数。  type为\"cron\"时，配置此参数。
 	Schedulers *[]CronTriggerScheduler `json:"schedulers,omitempty"`
 }
 

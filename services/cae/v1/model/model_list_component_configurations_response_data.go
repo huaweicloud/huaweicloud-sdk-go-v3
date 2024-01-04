@@ -8,7 +8,7 @@ import (
 
 // ListComponentConfigurationsResponseData 组件配置数据。
 type ListComponentConfigurationsResponseData struct {
-	Spec *ConfigurationDataSpec `json:"spec,omitempty"`
+	Spec *ConfigurationResponseDataSpec `json:"spec,omitempty"`
 
 	Metadata *ConfigurationDataMetadata `json:"metadata,omitempty"`
 }

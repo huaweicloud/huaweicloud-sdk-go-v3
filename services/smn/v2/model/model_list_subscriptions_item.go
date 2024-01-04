@@ -28,6 +28,8 @@ type ListSubscriptionsItem struct {
 
 	// 订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
 	Status int32 `json:"status"`
+
+	FilterPolices *[]SubscriptionsFilterPolicy `json:"filter_polices,omitempty"`
 }
 
 func (o ListSubscriptionsItem) String() string {

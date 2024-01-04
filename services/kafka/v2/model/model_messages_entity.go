@@ -30,7 +30,7 @@ type MessagesEntity struct {
 	HugeMessage *bool `json:"huge_message,omitempty"`
 
 	// 消息偏移量。
-	MessageOffset *int32 `json:"message_offset,omitempty"`
+	MessageOffset *int64 `json:"message_offset,omitempty"`
 
 	// 消息ID。
 	MessageId *string `json:"message_id,omitempty"`

@@ -545,6 +545,210 @@ func (i *ListStylesInvoker) Invoke() (*model.ListStylesResponse, error) {
 	}
 }
 
+type CommitVoiceTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CommitVoiceTrainingJobInvoker) Invoke() (*model.CommitVoiceTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CommitVoiceTrainingJobResponse), nil
+	}
+}
+
+type ConfirmTrainingSegmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmTrainingSegmentInvoker) Invoke() (*model.ConfirmTrainingSegmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmTrainingSegmentResponse), nil
+	}
+}
+
+type CreateTrainingAdvanceJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTrainingAdvanceJobInvoker) Invoke() (*model.CreateTrainingAdvanceJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTrainingAdvanceJobResponse), nil
+	}
+}
+
+type CreateTrainingBasicJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTrainingBasicJobInvoker) Invoke() (*model.CreateTrainingBasicJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTrainingBasicJobResponse), nil
+	}
+}
+
+type CreateTrainingMiddleJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTrainingMiddleJobInvoker) Invoke() (*model.CreateTrainingMiddleJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTrainingMiddleJobResponse), nil
+	}
+}
+
+type DeleteVoiceTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVoiceTrainingJobInvoker) Invoke() (*model.DeleteVoiceTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVoiceTrainingJobResponse), nil
+	}
+}
+
+type ListVoiceTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVoiceTrainingJobInvoker) Invoke() (*model.ListVoiceTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVoiceTrainingJobResponse), nil
+	}
+}
+
+type ShowJobAuditResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobAuditResultInvoker) Invoke() (*model.ShowJobAuditResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobAuditResultResponse), nil
+	}
+}
+
+type ShowJobUploadingAddressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobUploadingAddressInvoker) Invoke() (*model.ShowJobUploadingAddressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobUploadingAddressResponse), nil
+	}
+}
+
+type ShowTrainingSegmentInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTrainingSegmentInfoInvoker) Invoke() (*model.ShowTrainingSegmentInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTrainingSegmentInfoResponse), nil
+	}
+}
+
+type ShowVoiceTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVoiceTrainingJobInvoker) Invoke() (*model.ShowVoiceTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVoiceTrainingJobResponse), nil
+	}
+}
+
+type Create2dModelTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Create2dModelTrainingJobInvoker) Invoke() (*model.Create2dModelTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Create2dModelTrainingJobResponse), nil
+	}
+}
+
+type Delete2dModelTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Delete2dModelTrainingJobInvoker) Invoke() (*model.Delete2dModelTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Delete2dModelTrainingJobResponse), nil
+	}
+}
+
+type Execute2dModelTrainingCommandByUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Execute2dModelTrainingCommandByUserInvoker) Invoke() (*model.Execute2dModelTrainingCommandByUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Execute2dModelTrainingCommandByUserResponse), nil
+	}
+}
+
+type List2dModelTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *List2dModelTrainingJobInvoker) Invoke() (*model.List2dModelTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.List2dModelTrainingJobResponse), nil
+	}
+}
+
+type Show2dModelTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Show2dModelTrainingJobInvoker) Invoke() (*model.Show2dModelTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Show2dModelTrainingJobResponse), nil
+	}
+}
+
+type Update2dModelTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Update2dModelTrainingJobInvoker) Invoke() (*model.Update2dModelTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Update2dModelTrainingJobResponse), nil
+	}
+}
+
 type CreateFacialAnimationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -602,6 +806,30 @@ func (i *ListTtsaJobsInvoker) Invoke() (*model.ListTtsaJobsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTtsaJobsResponse), nil
+	}
+}
+
+type CreateTtsAuditionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTtsAuditionInvoker) Invoke() (*model.CreateTtsAuditionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTtsAuditionResponse), nil
+	}
+}
+
+type ShowTtsAuditionFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTtsAuditionFileInvoker) Invoke() (*model.ShowTtsAuditionFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTtsAuditionFileResponse), nil
 	}
 }
 

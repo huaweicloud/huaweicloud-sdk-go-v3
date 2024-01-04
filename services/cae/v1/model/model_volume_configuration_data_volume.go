@@ -18,10 +18,10 @@ type VolumeConfigurationDataVolume struct {
 	// 云存储名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 云存储类型，支持obs、sfs。
+	// 云存储类型。
 	ResourceType *VolumeConfigurationDataVolumeResourceType `json:"resource_type,omitempty"`
 
-	// 云存储子类型，支持object_bucket、parallel_file_system、sfs3.0。
+	// 云存储子类型。
 	ResourceSubType *VolumeConfigurationDataVolumeResourceSubType `json:"resource_sub_type,omitempty"`
 
 	MountInfo *[]VolumeConfigurationMountInfo `json:"mount_info,omitempty"`

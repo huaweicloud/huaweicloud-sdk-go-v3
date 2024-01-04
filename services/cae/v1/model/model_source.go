@@ -16,7 +16,7 @@ type Source struct {
 	// 源类型。
 	Type SourceType `json:"type"`
 
-	// 源子类型。 - 源类型为code时，子类型表示不同的代码仓库，如DevCloud（CodeArts)、GitLab、GitHub、Gitee、Bitbucket。 - 源类型为softwarePackage时，子类型表示不同的软件包仓库，如BinObs、BinDevCloud（CodeArts软件发布库)。
+	// 源子类型。 - 源类型为code时，子类型表示不同的代码仓库，如DevCloud（CodeArts）、GitLab、GitHub、Gitee、Bitbucket。 - 源类型为softwarePackage时，子类型表示不同的软件包仓库，如BinObs、BinDevCloud（CodeArts软件发布库）。
 	SubType *SourceSubType `json:"sub_type,omitempty"`
 
 	// url地址。 - 源类型为image时，url地址为镜像地址。 - 源类型为code时，url地址为git地址。 - 源类型为softwarePackage时，url地址为软件包地址。

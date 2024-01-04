@@ -12,7 +12,7 @@ import (
 // ScaleConfigurationDataTrigger 伸缩策略触发器。
 type ScaleConfigurationDataTrigger struct {
 
-	// 指标类型，支持cpu、memory、cron。
+	// 指标类型。
 	Type *ScaleConfigurationDataTriggerType `json:"type,omitempty"`
 
 	Metadata *ScalingTriggerMeta `json:"metadata,omitempty"`

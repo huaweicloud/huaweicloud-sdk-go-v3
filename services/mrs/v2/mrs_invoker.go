@@ -281,6 +281,42 @@ func (i *ShowHdfsFileListInvoker) Invoke() (*model.ShowHdfsFileListResponse, err
 	}
 }
 
+type CancelSyncIamUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelSyncIamUserInvoker) Invoke() (*model.CancelSyncIamUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelSyncIamUserResponse), nil
+	}
+}
+
+type ShowSyncIamUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSyncIamUserInvoker) Invoke() (*model.ShowSyncIamUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSyncIamUserResponse), nil
+	}
+}
+
+type UpdateSyncIamUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSyncIamUserInvoker) Invoke() (*model.UpdateSyncIamUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSyncIamUserResponse), nil
+	}
+}
+
 type CancelSqlInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -350,6 +386,18 @@ func (i *SwitchClusterTagsInvoker) Invoke() (*model.SwitchClusterTagsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.SwitchClusterTagsResponse), nil
+	}
+}
+
+type ShowMrsFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMrsFlavorsInvoker) Invoke() (*model.ShowMrsFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMrsFlavorsResponse), nil
 	}
 }
 

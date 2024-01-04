@@ -532,10 +532,6 @@ func GenReqDefForListEventStreaming() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-Request-Id").
 		WithKindName("string").

@@ -17,6 +17,9 @@ type ListSubscriptionsByTopicRequest struct {
 
 	// 查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 检索的订阅备注字段，模糊匹配。最大长度限制为128字节。
+	FuzzyRemark *string `json:"fuzzy_remark,omitempty"`
 }
 
 func (o ListSubscriptionsByTopicRequest) String() string {

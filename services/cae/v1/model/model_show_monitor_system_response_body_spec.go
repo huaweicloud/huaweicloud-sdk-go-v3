@@ -9,31 +9,34 @@ import (
 	"strings"
 )
 
+// ShowMonitorSystemResponseBodySpec 查询监控系统详情。
 type ShowMonitorSystemResponseBodySpec struct {
+
+	// 监控系统id。
 	Id *string `json:"id,omitempty"`
 
-	// 采集方式，包括apm2和opentelemetry。
+	// 采集方式。
 	Type *ShowMonitorSystemResponseBodySpecType `json:"type,omitempty"`
 
-	// 探针注入方式，包括automatic和manual。
+	// 探针注入方式。
 	Instrumentation *ShowMonitorSystemResponseBodySpecInstrumentation `json:"instrumentation,omitempty"`
 
-	// apm2 access_key。
+	// apm2访问密钥Key。
 	AccessKey *string `json:"access_key,omitempty"`
 
-	// apm2 access_value。
+	// apm2访问密钥value。
 	AccessValue *string `json:"access_value,omitempty"`
 
-	// apm opentelemetry接入token。
+	// apm2 opentelemetry接入token。
 	AccessToken *string `json:"access_token,omitempty"`
 
 	// 探针接入点。
 	MasterAddress *string `json:"master_address,omitempty"`
 
-	// apm应用名。
+	// apm2应用。
 	ApmApplication *string `json:"apm_application,omitempty"`
 
-	// apm-agent/opentelemetry-agent探针版本。
+	// 增强型探针/opentelemetry探针版本。
 	Version *string `json:"version,omitempty"`
 
 	// 探针镜像更新策略。

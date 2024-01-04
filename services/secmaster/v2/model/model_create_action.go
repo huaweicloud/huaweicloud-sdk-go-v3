@@ -15,10 +15,10 @@ type CreateAction struct {
 	Description *string `json:"description,omitempty"`
 
 	// 类型，默认AOP_WORKFLOW.
-	ActionType *string `json:"action_type,omitempty"`
+	ActionType string `json:"action_type"`
 
 	// 剧本动作ID
-	ActionId *string `json:"action_id,omitempty"`
+	ActionId string `json:"action_id"`
 
 	// 排序方式
 	SortOrder *string `json:"sort_order,omitempty"`

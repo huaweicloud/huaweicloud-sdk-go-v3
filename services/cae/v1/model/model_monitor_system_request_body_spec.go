@@ -9,27 +9,28 @@ import (
 	"strings"
 )
 
+// MonitorSystemRequestBodySpec 创建或更新监控系统配置。
 type MonitorSystemRequestBodySpec struct {
 
-	// 采集方式，包括apm2和opentelemetry。
+	// 采集方式。
 	Type MonitorSystemRequestBodySpecType `json:"type"`
 
-	// 探针注入方式，包括automatic和manual。
+	// 探针注入方式。
 	Instrumentation MonitorSystemRequestBodySpecInstrumentation `json:"instrumentation"`
 
-	// apm2 access_key。
+	// apm2访问密钥Key。
 	AccessKey *string `json:"access_key,omitempty"`
 
-	// apm2 access_value。
+	// apm2访问密钥value。
 	AccessValue *string `json:"access_value,omitempty"`
 
-	// apm opentelemetry接入token。
+	// apm2 opentelemetry接入token。
 	AccessToken *string `json:"access_token,omitempty"`
 
-	// apm应用名。
+	// apm2应用。
 	ApmApplication string `json:"apm_application"`
 
-	// apm-agent/opentelemetry-agent探针版本。
+	// 增强型探针/opentelemetry探针版本。
 	Version string `json:"version"`
 
 	// 探针镜像更新策略。

@@ -11,7 +11,7 @@ import (
 
 type CreateTtsaReq struct {
 
-	// 音色模型ID
+	// 音色模型ID。需要使用MetaStudio的数字资产管理相关接口从资产库查出。
 	VoiceAssetId string `json:"voice_asset_id"`
 
 	// 脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
@@ -35,7 +35,7 @@ type CreateTtsaReq struct {
 	// 情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
 	Emotion *string `json:"emotion,omitempty"`
 
-	// 风格化ID。
+	// 风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
 	StyleId string `json:"style_id"`
 
 	// 人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。

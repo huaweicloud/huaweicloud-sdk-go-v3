@@ -13,6 +13,9 @@ type CreateFasReq struct {
 
 	// 期望的输出帧率
 	FrameRate int32 `json:"frame_rate"`
+
+	// 情绪： 0：平静（默认） 1：开心 2：哀伤 3：愤怒
+	Emotion *int32 `json:"emotion,omitempty"`
 }
 
 func (o CreateFasReq) String() string {
