@@ -12,7 +12,7 @@ type ShowQualityTaskDetailRequest struct {
 	// 质量作业ID
 	Id string `json:"id"`
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 }
 

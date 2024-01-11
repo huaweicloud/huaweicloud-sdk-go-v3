@@ -1332,6 +1332,10 @@ func GenReqDefForListMasterSlavePools() *def.HttpRequestDef {
 		WithName("Type").
 		WithJsonTag("type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionDrain").
+		WithJsonTag("connection_drain").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1504,6 +1508,10 @@ func GenReqDefForListPools() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProtectionStatus").
 		WithJsonTag("protection_status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConnectionDrain").
+		WithJsonTag("connection_drain").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

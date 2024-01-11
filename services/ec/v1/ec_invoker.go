@@ -557,6 +557,54 @@ func (i *ShowQuotasInfoInvoker) Invoke() (*model.ShowQuotasInfoResponse, error) 
 	}
 }
 
+type AddEcnWithVpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddEcnWithVpcInvoker) Invoke() (*model.AddEcnWithVpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddEcnWithVpcResponse), nil
+	}
+}
+
+type DeleteEcnWithVpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEcnWithVpcInvoker) Invoke() (*model.DeleteEcnWithVpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEcnWithVpcResponse), nil
+	}
+}
+
+type ListEcnWithVpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEcnWithVpcInvoker) Invoke() (*model.ListEcnWithVpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEcnWithVpcResponse), nil
+	}
+}
+
+type UpdateEcnWithVpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEcnWithVpcInvoker) Invoke() (*model.UpdateEcnWithVpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEcnWithVpcResponse), nil
+	}
+}
+
 type AddVrrpConfigInvoker struct {
 	*invoker.BaseInvoker
 }

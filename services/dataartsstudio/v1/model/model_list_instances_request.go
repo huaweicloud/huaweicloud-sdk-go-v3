@@ -12,7 +12,7 @@ import (
 // ListInstancesRequest Request Object
 type ListInstancesRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	// 规则名称

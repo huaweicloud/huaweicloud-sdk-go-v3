@@ -9,7 +9,7 @@ import (
 // CreateSecurityDataClassificationRuleRequest Request Object
 type CreateSecurityDataClassificationRuleRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	Body *DataClassificationRuleOperateDto `json:"body,omitempty"`

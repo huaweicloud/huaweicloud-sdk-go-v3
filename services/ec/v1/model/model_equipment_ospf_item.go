@@ -34,6 +34,9 @@ type EquipmentOspfItem struct {
 
 	// 黑名单列表
 	BlockList *[]string `json:"block_list,omitempty"`
+
+	// 上云子网列表
+	CloudSubnetList *[]string `json:"cloud_subnet_list,omitempty"`
 }
 
 func (o EquipmentOspfItem) String() string {

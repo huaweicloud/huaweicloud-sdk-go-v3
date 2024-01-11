@@ -1821,6 +1821,48 @@ func (c *IecClient) UpdatePublicIpInvoker(request *model.UpdatePublicIpRequest) 
 	return &UpdatePublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AttachVipBandwidth 端口绑定带宽
+//
+// IPv6虚拟IP或者IPv6私网IP绑定带宽，支持公网访问。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) AttachVipBandwidth(request *model.AttachVipBandwidthRequest) (*model.AttachVipBandwidthResponse, error) {
+	requestDef := GenReqDefForAttachVipBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachVipBandwidthResponse), nil
+	}
+}
+
+// AttachVipBandwidthInvoker 端口绑定带宽
+func (c *IecClient) AttachVipBandwidthInvoker(request *model.AttachVipBandwidthRequest) *AttachVipBandwidthInvoker {
+	requestDef := GenReqDefForAttachVipBandwidth()
+	return &AttachVipBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachVipBandwidth 端口解绑带宽
+//
+// IPv6虚拟IP或者IPv6私网IP解绑带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) DetachVipBandwidth(request *model.DetachVipBandwidthRequest) (*model.DetachVipBandwidthResponse, error) {
+	requestDef := GenReqDefForDetachVipBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachVipBandwidthResponse), nil
+	}
+}
+
+// DetachVipBandwidthInvoker 端口解绑带宽
+func (c *IecClient) DetachVipBandwidthInvoker(request *model.DetachVipBandwidthRequest) *DetachVipBandwidthInvoker {
+	requestDef := GenReqDefForDetachVipBandwidth()
+	return &DetachVipBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSubnet 创建子网
 //
 // 根据用户的请求内容，创建子网。

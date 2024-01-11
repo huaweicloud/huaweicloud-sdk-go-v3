@@ -11,6 +11,9 @@ type IpDetails struct {
 	// IP地址
 	IpAddress *string `json:"ip_address,omitempty"`
 
+	// IPV6地址
+	Ipv6Address *string `json:"ipv6_address,omitempty"`
+
 	// 带宽大小
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 }

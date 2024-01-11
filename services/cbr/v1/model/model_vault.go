@@ -52,6 +52,9 @@ type Vault struct {
 
 	// 存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
 	Threshold *int32 `json:"threshold,omitempty"`
+
+	// 用于标识SMB服务
+	SysLockSourceService *string `json:"sys_lock_source_service,omitempty"`
 }
 
 func (o Vault) String() string {

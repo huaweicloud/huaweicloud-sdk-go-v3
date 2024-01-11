@@ -36,7 +36,7 @@ type ListConsistencyTaskRequest struct {
 	// 分页偏移量,最小值0
 	Offset *int64 `json:"offset,omitempty"`
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 }
 

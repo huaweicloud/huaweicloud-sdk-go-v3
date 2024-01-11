@@ -22,6 +22,9 @@ type UpdateEcnAccessPointResponse struct {
 	// 绑定智能企业网关数量
 	BindIegCount *int32 `json:"bind_ieg_count,omitempty"`
 
+	// 关联VPC数量
+	AttachVpcCount *int32 `json:"attach_vpc_count,omitempty"`
+
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 

@@ -27,7 +27,7 @@ type JobListResp struct {
 	// 任务创建时间。
 	CreateTime string `json:"create_time"`
 
-	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：redis集群同步到GeminiDB Redis，实时迁移场景使用。
 	EngineType JobListRespEngineType `json:"engine_type"`
 
 	// 网络类型。取值： - eip：公网网络。 - vpc：VPC网络，灾备场景不支持选择VPC网络。 - vpn：VPN、专线网络。
@@ -213,13 +213,21 @@ type JobListRespEngineType struct {
 }
 
 type JobListRespEngineTypeEnum struct {
-	ORACLE_TO_GAUSSDBV5 JobListRespEngineType
+	ORACLE_TO_GAUSSDBV5        JobListRespEngineType
+	REDIS_TO_GAUSSREDIS        JobListRespEngineType
+	REDISCLUSTER_TO_GAUSSREDIS JobListRespEngineType
 }
 
 func GetJobListRespEngineTypeEnum() JobListRespEngineTypeEnum {
 	return JobListRespEngineTypeEnum{
 		ORACLE_TO_GAUSSDBV5: JobListRespEngineType{
 			value: "oracle-to-gaussdbv5",
+		},
+		REDIS_TO_GAUSSREDIS: JobListRespEngineType{
+			value: "redis-to-gaussredis",
+		},
+		REDISCLUSTER_TO_GAUSSREDIS: JobListRespEngineType{
+			value: "rediscluster-to-gaussredis",
 		},
 	}
 }

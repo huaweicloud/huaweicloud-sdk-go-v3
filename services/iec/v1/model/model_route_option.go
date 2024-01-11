@@ -41,6 +41,8 @@ type RouteOptionType struct {
 type RouteOptionTypeEnum struct {
 	ECS RouteOptionType
 	VIP RouteOptionType
+	CC  RouteOptionType
+	IGW RouteOptionType
 }
 
 func GetRouteOptionTypeEnum() RouteOptionTypeEnum {
@@ -50,6 +52,12 @@ func GetRouteOptionTypeEnum() RouteOptionTypeEnum {
 		},
 		VIP: RouteOptionType{
 			value: "vip",
+		},
+		CC: RouteOptionType{
+			value: "cc",
+		},
+		IGW: RouteOptionType{
+			value: "igw",
 		},
 	}
 }

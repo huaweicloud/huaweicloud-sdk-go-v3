@@ -9,10 +9,10 @@ import (
 type ResetMessageOffsetReq struct {
 
 	// topic名称。
-	Topic string `json:"topic"`
+	Topic *string `json:"topic,omitempty"`
 
 	// 分区编号，默认值为-1，若传入值为-1，则重置所有分区。
-	Partition *int32 `json:"partition,omitempty"`
+	Partition int32 `json:"partition"`
 
 	// 重置消费进度到指定偏移量。 - 如果传入offset小于当前最小的offset，则重置到最小的offset。 - 如果大于最大的offset，则重置到最大的offset。  **message_offset、timestamp二者必选其一。**
 	MessageOffset *int64 `json:"message_offset,omitempty"`

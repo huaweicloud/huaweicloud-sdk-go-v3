@@ -49,6 +49,9 @@ type ShowEcnInfoResponse struct {
 	// 企业路由器列表
 	EnterpriseRouterIds *[]string `json:"enterprise_router_ids,omitempty"`
 
+	// 虚拟私有云列表
+	VpcIds *[]string `json:"vpc_ids,omitempty"`
+
 	// 绑定智能企业网关数量
 	BindIegCount *int32 `json:"bind_ieg_count,omitempty"`
 

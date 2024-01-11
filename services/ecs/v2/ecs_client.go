@@ -1124,6 +1124,27 @@ func (c *EcsClient) NovaShowServerInvoker(request *model.NovaShowServerRequest) 
 	return &NovaShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// NovaShowServerInterface 查询指定云服务器网卡信息
+//
+// 根据网卡ID，查询云服务器网卡信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) NovaShowServerInterface(request *model.NovaShowServerInterfaceRequest) (*model.NovaShowServerInterfaceResponse, error) {
+	requestDef := GenReqDefForNovaShowServerInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NovaShowServerInterfaceResponse), nil
+	}
+}
+
+// NovaShowServerInterfaceInvoker 查询指定云服务器网卡信息
+func (c *EcsClient) NovaShowServerInterfaceInvoker(request *model.NovaShowServerInterfaceRequest) *NovaShowServerInterfaceInvoker {
+	requestDef := GenReqDefForNovaShowServerInterface()
+	return &NovaShowServerInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RegisterServerAutoRecovery 管理云服务器自动恢复动作
 //
 // 配置、删除云服务器自动恢复动作。

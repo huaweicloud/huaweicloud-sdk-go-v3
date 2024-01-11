@@ -49,6 +49,12 @@ type PoolResp struct {
 
 	// 后端云服务器组的负载均衡算法，取值：ROUND_ROBIN：加权轮询算法；LEAST_CONNECTIONS：加权最少连接算法；SOURCE_IP：源IP算法。当该字段的取值为SOURCE_IP时，后端云服务器组绑定的后端云服务器的weight字段无效。
 	LbAlgorithm PoolRespLbAlgorithm `json:"lb_algorithm"`
+
+	// 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+	ProtectionStatus PoolRespProtectionStatus `json:"protection_status"`
+
+	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+	ProtectionReason string `json:"protection_reason"`
 }
 
 func (o PoolResp) String() string {
@@ -144,6 +150,53 @@ func (c PoolRespLbAlgorithm) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PoolRespLbAlgorithm) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PoolRespProtectionStatus struct {
+	value string
+}
+
+type PoolRespProtectionStatusEnum struct {
+	NON_PROTECTION     PoolRespProtectionStatus
+	CONSOLE_PROTECTION PoolRespProtectionStatus
+}
+
+func GetPoolRespProtectionStatusEnum() PoolRespProtectionStatusEnum {
+	return PoolRespProtectionStatusEnum{
+		NON_PROTECTION: PoolRespProtectionStatus{
+			value: "nonProtection",
+		},
+		CONSOLE_PROTECTION: PoolRespProtectionStatus{
+			value: "consoleProtection",
+		},
+	}
+}
+
+func (c PoolRespProtectionStatus) Value() string {
+	return c.value
+}
+
+func (c PoolRespProtectionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PoolRespProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

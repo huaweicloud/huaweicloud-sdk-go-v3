@@ -8,7 +8,13 @@ import (
 
 // CreateUserGroupResponse Response Object
 type CreateUserGroupResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 错误码。
+	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 错误描述。
+	ErrorMsg       *string `json:"error_msg,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateUserGroupResponse) String() string {

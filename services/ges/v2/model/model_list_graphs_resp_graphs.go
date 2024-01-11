@@ -135,6 +135,9 @@ type ListGraphsRespGraphs struct {
 
 	// 是否启用多标签。
 	EnableMultiLabel *bool `json:"enable_multi_label,omitempty"`
+
+	// 图的容量倍率。只有持久化版百亿规格图支持该参数，该参数从2.3.18版本后开始支持。
+	CapacityRatio *int32 `json:"capacity_ratio,omitempty"`
 }
 
 func (o ListGraphsRespGraphs) String() string {

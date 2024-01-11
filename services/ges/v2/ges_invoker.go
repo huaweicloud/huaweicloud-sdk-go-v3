@@ -125,6 +125,18 @@ func (i *ExpandGraph2Invoker) Invoke() (*model.ExpandGraph2Response, error) {
 	}
 }
 
+type ExportBackup2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportBackup2Invoker) Invoke() (*model.ExportBackup2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportBackup2Response), nil
+	}
+}
+
 type ExportGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *ExportGraph2Invoker) Invoke() (*model.ExportGraph2Response, error) {
 		return nil, err
 	} else {
 		return result.(*model.ExportGraph2Response), nil
+	}
+}
+
+type ImportBackup2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportBackup2Invoker) Invoke() (*model.ImportBackup2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportBackup2Response), nil
 	}
 }
 

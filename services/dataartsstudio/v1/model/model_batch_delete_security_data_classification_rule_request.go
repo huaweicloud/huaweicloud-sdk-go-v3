@@ -9,7 +9,7 @@ import (
 // BatchDeleteSecurityDataClassificationRuleRequest Request Object
 type BatchDeleteSecurityDataClassificationRuleRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	Body *BatchDeleteRulesBaseDto `json:"body,omitempty"`

@@ -75,6 +75,8 @@ type Pool struct {
 
 	// 后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
 	AnyPortEnable *bool `json:"any_port_enable,omitempty"`
+
+	ConnectionDrain *ConnectionDrain `json:"connection_drain,omitempty"`
 }
 
 func (o Pool) String() string {

@@ -57,6 +57,9 @@ type CreateDesktopReq struct {
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	Eip *Eip `json:"eip,omitempty"`
+
+	// 策略id，用于指定生成桌面名称策略，如果指定了桌面名称则优先使用指定的桌面名称。
+	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`
 }
 
 func (o CreateDesktopReq) String() string {

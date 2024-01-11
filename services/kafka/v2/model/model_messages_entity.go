@@ -23,7 +23,7 @@ type MessagesEntity struct {
 	// 消息大小。
 	Size *int32 `json:"size,omitempty"`
 
-	// topic名称。
+	// 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
 	// 大数据标识。

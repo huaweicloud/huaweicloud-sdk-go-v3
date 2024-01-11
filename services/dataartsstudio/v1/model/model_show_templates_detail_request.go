@@ -12,7 +12,7 @@ type ShowTemplatesDetailRequest struct {
 	// id
 	Id int64 `json:"id"`
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 }
 

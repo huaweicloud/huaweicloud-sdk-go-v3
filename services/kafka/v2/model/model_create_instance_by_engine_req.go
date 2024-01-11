@@ -21,13 +21,13 @@ type CreateInstanceByEngineReq struct {
 	// 消息引擎。取值填写为：kafka。
 	Engine CreateInstanceByEngineReqEngine `json:"engine"`
 
-	// 消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm)   - 2.7
+	// 消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt)   - 2.7
 	EngineVersion string `json:"engine_version"`
 
 	// 代理个数。
 	BrokerNum int32 `json:"broker_num"`
 
-	// 消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb,ctc)[900000](tag:g42,tm,hk_g42,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb,ctc)[900000](tag:g42,tm,hk_g42,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb,ctc)[900000](tag:g42,tm,hk_g42,hk_tm,hws_eu)GB。
+	// 消息存储空间，单位GB。   - Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb,ctc,dt)[900000](tag:g42,tm,hk_g42,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb,ctc,dt)[900000](tag:g42,tm,hk_g42,hk_tm,hws_eu)GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ [1500000](tag:hws,hws_hk,ocb,hws_ocb,ctc,dt)[900000](tag:g42,tm,hk_g42,hk_tm,hws_eu)GB。
 	StorageSpace int32 `json:"storage_space"`
 
 	// 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -48,7 +48,7 @@ type CreateInstanceByEngineReq struct {
 	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
-	// 产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ctc,cmcc,hws_eu,g42,hk_g42,tm,hk_tm,ocb,hws_ocb) [产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:hk_sbc,sbc,otc)
+	// 产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ctc,cmcc,hws_eu,g42,hk_g42,tm,hk_tm,ocb,hws_ocb,dt) [产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:hk_sbc,sbc)
 	ProductId string `json:"product_id"`
 
 	// 表示登录Kafka Manager的用户名。只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -93,7 +93,7 @@ type CreateInstanceByEngineReq struct {
 	// 是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
 	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty"`
 
-	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:otc,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
+	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。
 	StorageSpecCode CreateInstanceByEngineReqStorageSpecCode `json:"storage_spec_code"`
 
 	// 企业项目ID。若为企业项目账号，该参数必填。

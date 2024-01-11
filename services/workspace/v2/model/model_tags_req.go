@@ -15,7 +15,7 @@ type TagsReq struct {
 	// 标签对象
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 标签对象
+	// 标签对象（已废弃）
 	SysTags *[]Tag `json:"sys_tags,omitempty"`
 }
 

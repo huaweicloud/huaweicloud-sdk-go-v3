@@ -15,7 +15,7 @@ type UpdateSecurityPermissionSetPermissionRequest struct {
 	// 权限id
 	PermissionId string `json:"permission_id"`
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	Body *PermissionSetPermissionUpdateDto `json:"body,omitempty"`

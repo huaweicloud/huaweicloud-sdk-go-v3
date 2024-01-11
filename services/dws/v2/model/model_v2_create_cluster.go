@@ -36,7 +36,8 @@ type V2CreateCluster struct {
 	// 可用区列表。集群可用区选择详情请参见地区和终端节点地区和终端节点。
 	AvailabilityZones []string `json:"availability_zones"`
 
-	Tags *Tags `json:"tags,omitempty"`
+	// 标签列表
+	Tags *[]Tags `json:"tags,omitempty"`
 
 	// 指定虚拟私有云ID，用于集群网络配置。
 	VpcId string `json:"vpc_id"`

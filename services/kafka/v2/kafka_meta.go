@@ -757,14 +757,10 @@ func GenReqDefForResetMessageOffset() *def.HttpRequestDef {
 func GenReqDefForResetMessageOffsetWithEngine() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/groups/{group}/reset-message-offset").
+		WithPath("/v2/kafka/{project_id}/instances/{instance_id}/groups/{group}/reset-message-offset").
 		WithResponse(new(model.ResetMessageOffsetWithEngineResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Engine").
-		WithJsonTag("engine").
-		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("instance_id").

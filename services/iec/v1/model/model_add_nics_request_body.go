@@ -20,6 +20,11 @@ type AddNicsRequestBody struct {
 
 	// 待添加网卡数量。
 	NicNum int32 `json:"nic_num"`
+
+	// 是否支持IPv6  取值为true时，标识此网卡支持IPv6。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	Ipv6Bandwidth *Ipv6BandwidthForNic `json:"ipv6_bandwidth,omitempty"`
 }
 
 func (o AddNicsRequestBody) String() string {

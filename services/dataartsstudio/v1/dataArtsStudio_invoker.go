@@ -881,6 +881,42 @@ func (i *ExecuteTaskActionInvoker) Invoke() (*model.ExecuteTaskActionResponse, e
 	}
 }
 
+type ImportCatalogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportCatalogsInvoker) Invoke() (*model.ImportCatalogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportCatalogsResponse), nil
+	}
+}
+
+type ImportLineageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportLineageInvoker) Invoke() (*model.ImportLineageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportLineageResponse), nil
+	}
+}
+
+type ImportModelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportModelsInvoker) Invoke() (*model.ImportModelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportModelsResponse), nil
+	}
+}
+
 type ImportResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -938,6 +974,18 @@ func (i *ListAllStandardsInvoker) Invoke() (*model.ListAllStandardsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListAllStandardsResponse), nil
+	}
+}
+
+type ListAllTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllTablesInvoker) Invoke() (*model.ListAllTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllTablesResponse), nil
 	}
 }
 

@@ -973,6 +973,86 @@ func GenReqDefForShowQuotasInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAddEcnWithVpc() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{domain_id}/enterprise-connect/enterprise-connect-network/{ecn_id}/relationship/vpc").
+		WithResponse(new(model.AddEcnWithVpcResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EcnId").
+		WithJsonTag("ecn_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteEcnWithVpc() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{domain_id}/enterprise-connect/enterprise-connect-network/{ecn_id}/relationship/vpc/{relation_id}").
+		WithResponse(new(model.DeleteEcnWithVpcResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EcnId").
+		WithJsonTag("ecn_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RelationId").
+		WithJsonTag("relation_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListEcnWithVpc() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{domain_id}/enterprise-connect/enterprise-connect-network/{ecn_id}/relationship/vpc").
+		WithResponse(new(model.ListEcnWithVpcResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EcnId").
+		WithJsonTag("ecn_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateEcnWithVpc() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{domain_id}/enterprise-connect/enterprise-connect-network/{ecn_id}/relationship/vpc/{relation_id}").
+		WithResponse(new(model.UpdateEcnWithVpcResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EcnId").
+		WithJsonTag("ecn_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RelationId").
+		WithJsonTag("relation_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAddVrrpConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

@@ -12,7 +12,7 @@ import (
 type AccessPolicyDetailInfo struct {
 
 	// 策略名，当前只支持专线接入策略名。 * PRIVATE_ACCESS： 专线接入
-	PolicyName AccessPolicyDetailInfoPolicyName `json:"policy_name"`
+	PolicyName string `json:"policy_name"`
 
 	// 黑名单类型，当前黑名单只支持互联网。 * INTERNET： 互联网
 	BlacklistType AccessPolicyDetailInfoBlacklistType `json:"blacklist_type"`
@@ -31,49 +31,6 @@ func (o AccessPolicyDetailInfo) String() string {
 	}
 
 	return strings.Join([]string{"AccessPolicyDetailInfo", string(data)}, " ")
-}
-
-type AccessPolicyDetailInfoPolicyName struct {
-	value string
-}
-
-type AccessPolicyDetailInfoPolicyNameEnum struct {
-	PRIVATE_ACCESS AccessPolicyDetailInfoPolicyName
-}
-
-func GetAccessPolicyDetailInfoPolicyNameEnum() AccessPolicyDetailInfoPolicyNameEnum {
-	return AccessPolicyDetailInfoPolicyNameEnum{
-		PRIVATE_ACCESS: AccessPolicyDetailInfoPolicyName{
-			value: "PRIVATE_ACCESS",
-		},
-	}
-}
-
-func (c AccessPolicyDetailInfoPolicyName) Value() string {
-	return c.value
-}
-
-func (c AccessPolicyDetailInfoPolicyName) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AccessPolicyDetailInfoPolicyName) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type AccessPolicyDetailInfoBlacklistType struct {

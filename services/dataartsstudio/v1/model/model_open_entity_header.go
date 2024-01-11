@@ -11,8 +11,7 @@ type OpenEntityHeader struct {
 	// 属性
 	Attributes *interface{} `json:"attributes,omitempty"`
 
-	// 数据连接
-	Connection *[]Connection `json:"connection,omitempty"`
+	Connection *Connection `json:"connection,omitempty"`
 
 	// 展示文档
 	DisplayText *string `json:"display_text,omitempty"`

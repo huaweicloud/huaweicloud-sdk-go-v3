@@ -9,7 +9,7 @@ import (
 // CreateTemplateRequest Request Object
 type CreateTemplateRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	Body *TemplateRo `json:"body,omitempty"`

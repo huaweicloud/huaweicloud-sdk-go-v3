@@ -11,6 +11,9 @@ type BaseEndpointConfig struct {
 
 	// 目标实例是否设置为为只读。 - MySQL迁移和灾备，且job_direction为up时设置有效。（灾备场景下，单主灾备且本云为备为必填且为true，不填默认设置为true）。
 	IsTargetReadonly *bool `json:"is_target_readonly,omitempty"`
+
+	// Redis集群到GeminiDB Redis迁移场景填写，连接源端Redis集群的子任务个数，输入值在1到16之间，且输入值不能大于源端Redis集群的分片个数，请根据源端Redis集群的规模合理选择。建议集群的每4个分片设置1个源端分片个数，即每1个子任务连接源端集群的4个分片。
+	NodeNum *int32 `json:"node_num,omitempty"`
 }
 
 func (o BaseEndpointConfig) String() string {

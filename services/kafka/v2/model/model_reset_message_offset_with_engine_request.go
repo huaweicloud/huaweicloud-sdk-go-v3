@@ -9,9 +9,6 @@ import (
 // ResetMessageOffsetWithEngineRequest Request Object
 type ResetMessageOffsetWithEngineRequest struct {
 
-	// 引擎。
-	Engine string `json:"engine"`
-
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 

@@ -594,6 +594,18 @@ func (i *NovaShowServerInvoker) Invoke() (*model.NovaShowServerResponse, error) 
 	}
 }
 
+type NovaShowServerInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NovaShowServerInterfaceInvoker) Invoke() (*model.NovaShowServerInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NovaShowServerInterfaceResponse), nil
+	}
+}
+
 type RegisterServerAutoRecoveryInvoker struct {
 	*invoker.BaseInvoker
 }

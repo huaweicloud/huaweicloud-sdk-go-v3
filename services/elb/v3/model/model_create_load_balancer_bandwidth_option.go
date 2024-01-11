@@ -24,7 +24,7 @@ type CreateLoadBalancerBandwidthOption struct {
 	// 带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
 	ShareType *CreateLoadBalancerBandwidthOptionShareType `json:"share_type,omitempty"`
 
-	// 资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,tm,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
+	// 资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
 	BillingInfo *string `json:"billing_info,omitempty"`
 
 	// 功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。

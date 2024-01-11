@@ -12,7 +12,7 @@ import (
 // ListSecurityDataClassificationRuleGroupsRequest Request Object
 type ListSecurityDataClassificationRuleGroupsRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	// limit

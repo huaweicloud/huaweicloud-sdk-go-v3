@@ -9,7 +9,7 @@ import (
 // UpdateSecurityRuleEnableStatusRequest Request Object
 type UpdateSecurityRuleEnableStatusRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	// 识别规则id

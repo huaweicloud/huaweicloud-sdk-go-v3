@@ -232,6 +232,27 @@ func (c *GesClient) ExpandGraph2Invoker(request *model.ExpandGraph2Request) *Exp
 	return &ExpandGraph2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportBackup2 导出备份
+//
+// 导出备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GesClient) ExportBackup2(request *model.ExportBackup2Request) (*model.ExportBackup2Response, error) {
+	requestDef := GenReqDefForExportBackup2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportBackup2Response), nil
+	}
+}
+
+// ExportBackup2Invoker 导出备份
+func (c *GesClient) ExportBackup2Invoker(request *model.ExportBackup2Request) *ExportBackup2Invoker {
+	requestDef := GenReqDefForExportBackup2()
+	return &ExportBackup2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportGraph2 导出图
 //
 // 导出图。
@@ -251,6 +272,27 @@ func (c *GesClient) ExportGraph2(request *model.ExportGraph2Request) (*model.Exp
 func (c *GesClient) ExportGraph2Invoker(request *model.ExportGraph2Request) *ExportGraph2Invoker {
 	requestDef := GenReqDefForExportGraph2()
 	return &ExportGraph2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportBackup2 导入备份
+//
+// 导入备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GesClient) ImportBackup2(request *model.ImportBackup2Request) (*model.ImportBackup2Response, error) {
+	requestDef := GenReqDefForImportBackup2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportBackup2Response), nil
+	}
+}
+
+// ImportBackup2Invoker 导入备份
+func (c *GesClient) ImportBackup2Invoker(request *model.ImportBackup2Request) *ImportBackup2Invoker {
+	requestDef := GenReqDefForImportBackup2()
+	return &ImportBackup2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ImportGraph2 增量导入图

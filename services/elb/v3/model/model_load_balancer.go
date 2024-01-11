@@ -21,7 +21,7 @@ type LoadBalancer struct {
 	// 负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
 	ProvisioningStatus string `json:"provisioning_status"`
 
-	// 负载均衡器的管理状态。取值：false停用，true启用。
+	// 负载均衡器的启用状态。取值：false停用，true启用。
 	AdminStateUp bool `json:"admin_state_up"`
 
 	// 负载均衡器的生产者名称。固定为vlb。
@@ -87,13 +87,13 @@ type LoadBalancer struct {
 	// 资源账单信息。  取值： - 空：按需计费。 [- 非空：包周期计费，  包周期计费billing_info字段的格式为：order_id:product_id:region_id:project_id，如：  CS2107161019CDJZZ:OFFI569702121789763584: az:057ef081eb00d2732fd1c01a9be75e6f  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	BillingInfo string `json:"billing_info"`
 
-	// 四层Flavor ID。  对于弹性扩缩容实例，表示上限规格。  当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+	// 网络型规格ID。  对于弹性扩缩容实例，表示上限规格。  当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费； 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	L4FlavorId string `json:"l4_flavor_id"`
 
 	// 四层弹性Flavor ID。  不支持该字段，请勿使用。
 	L4ScaleFlavorId string `json:"l4_scale_flavor_id"`
 
-	// 七层Flavor ID。 对于弹性扩缩容实例，表示上限规格ID。  当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+	// 应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费； 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	L7FlavorId string `json:"l7_flavor_id"`
 
 	// 七层弹性Flavor ID。  不支持该字段，请勿使用。

@@ -985,6 +985,90 @@ func (c *EcClient) ShowQuotasInfoInvoker(request *model.ShowQuotasInfoRequest) *
 	return &ShowQuotasInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddEcnWithVpc 关联虚拟私有云到企业连接网络
+//
+// 关联虚拟私有云到企业连接网络
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcClient) AddEcnWithVpc(request *model.AddEcnWithVpcRequest) (*model.AddEcnWithVpcResponse, error) {
+	requestDef := GenReqDefForAddEcnWithVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddEcnWithVpcResponse), nil
+	}
+}
+
+// AddEcnWithVpcInvoker 关联虚拟私有云到企业连接网络
+func (c *EcClient) AddEcnWithVpcInvoker(request *model.AddEcnWithVpcRequest) *AddEcnWithVpcInvoker {
+	requestDef := GenReqDefForAddEcnWithVpc()
+	return &AddEcnWithVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEcnWithVpc 解除虚拟私有云和企业连接网络的关联
+//
+// 解除虚拟私有云和企业连接网络的关联
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcClient) DeleteEcnWithVpc(request *model.DeleteEcnWithVpcRequest) (*model.DeleteEcnWithVpcResponse, error) {
+	requestDef := GenReqDefForDeleteEcnWithVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEcnWithVpcResponse), nil
+	}
+}
+
+// DeleteEcnWithVpcInvoker 解除虚拟私有云和企业连接网络的关联
+func (c *EcClient) DeleteEcnWithVpcInvoker(request *model.DeleteEcnWithVpcRequest) *DeleteEcnWithVpcInvoker {
+	requestDef := GenReqDefForDeleteEcnWithVpc()
+	return &DeleteEcnWithVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEcnWithVpc 查询企业连接网络与虚拟私有云关联关系
+//
+// 根据企业连接网络ID，查询企业连接网络与虚拟私有云关联关系
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcClient) ListEcnWithVpc(request *model.ListEcnWithVpcRequest) (*model.ListEcnWithVpcResponse, error) {
+	requestDef := GenReqDefForListEcnWithVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEcnWithVpcResponse), nil
+	}
+}
+
+// ListEcnWithVpcInvoker 查询企业连接网络与虚拟私有云关联关系
+func (c *EcClient) ListEcnWithVpcInvoker(request *model.ListEcnWithVpcRequest) *ListEcnWithVpcInvoker {
+	requestDef := GenReqDefForListEcnWithVpc()
+	return &ListEcnWithVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEcnWithVpc 更新虚拟私有云和企业连接网络的关联
+//
+// 更新虚拟私有云和企业连接网络的关联
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcClient) UpdateEcnWithVpc(request *model.UpdateEcnWithVpcRequest) (*model.UpdateEcnWithVpcResponse, error) {
+	requestDef := GenReqDefForUpdateEcnWithVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEcnWithVpcResponse), nil
+	}
+}
+
+// UpdateEcnWithVpcInvoker 更新虚拟私有云和企业连接网络的关联
+func (c *EcClient) UpdateEcnWithVpcInvoker(request *model.UpdateEcnWithVpcRequest) *UpdateEcnWithVpcInvoker {
+	requestDef := GenReqDefForUpdateEcnWithVpc()
+	return &UpdateEcnWithVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddVrrpConfig 创建vrrp配置
 //
 // 创建vrrp配置

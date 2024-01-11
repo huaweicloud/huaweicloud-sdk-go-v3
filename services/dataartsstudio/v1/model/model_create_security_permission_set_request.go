@@ -9,7 +9,7 @@ import (
 // CreateSecurityPermissionSetRequest Request Object
 type CreateSecurityPermissionSetRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	Body *PermissionSetCreateDto `json:"body,omitempty"`

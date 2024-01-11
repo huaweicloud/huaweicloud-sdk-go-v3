@@ -26,7 +26,7 @@ type InstanceCreateReqV2 struct {
 	// 实例编号，不填写自动生成
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - BASIC_IPV6：基础版IPV6实例 - PROFESSIONAL_IPV6：专业版IPV6实例 - ENTERPRISE_IPV6：企业版IPV6实例 - PLATINUM_IPV6：铂金版IPV6实例 - PLATINUM_X2：铂金版 x2实例 - PLATINUM_X3：铂金版 x3实例 - PLATINUM_X4：铂金版 x4实例 - PLATINUM_X5：铂金版 x5实例 - PLATINUM_X6：铂金版 x6实例 - PLATINUM_X7：铂金版 x7实例 - PLATINUM_X8：铂金版 x8实例  当前仅部分region支持铂金版 x2、铂金版 x3、铂金版 x4、铂金版 x5、铂金版 x6、铂金版 x7、铂金版 x8
+	// 实例规格： - BASIC：基础版实例 - PROFESSIONAL：专业版实例 - ENTERPRISE：企业版实例 - PLATINUM：铂金版实例 - PLATINUM_X2：铂金版 x2实例 - PLATINUM_X3：铂金版 x3实例 - PLATINUM_X4：铂金版 x4实例 - PLATINUM_X5：铂金版 x5实例 - PLATINUM_X6：铂金版 x6实例 - PLATINUM_X7：铂金版 x7实例 - PLATINUM_X8：铂金版 x8实例  当前仅部分region支持铂金版 x2、铂金版 x3、铂金版 x4、铂金版 x5、铂金版 x6、铂金版 x7、铂金版 x8
 	SpecId *InstanceCreateReqV2SpecId `json:"spec_id,omitempty"`
 
 	// 虚拟私有云ID。  获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体方法请参见《虚拟私有云服务API参考》的“查询VPC列表”章节。
@@ -53,7 +53,7 @@ type InstanceCreateReqV2 struct {
 	// 带宽收费模式： - bandwidth - traffic
 	BandwidthChargingMode *InstanceCreateReqV2BandwidthChargingMode `json:"bandwidth_charging_mode,omitempty"`
 
-	// 公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
+	// 实例是否支持IPv6。  当前仅部分region部分可用区支持IPv6
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	// 负载均衡器类型： - lvs - elb
@@ -86,21 +86,17 @@ type InstanceCreateReqV2SpecId struct {
 }
 
 type InstanceCreateReqV2SpecIdEnum struct {
-	BASIC             InstanceCreateReqV2SpecId
-	PROFESSIONAL      InstanceCreateReqV2SpecId
-	ENTERPRISE        InstanceCreateReqV2SpecId
-	PLATINUM          InstanceCreateReqV2SpecId
-	BASIC_IPV6        InstanceCreateReqV2SpecId
-	PROFESSIONAL_IPV6 InstanceCreateReqV2SpecId
-	ENTERPRISE_IPV6   InstanceCreateReqV2SpecId
-	PLATINUM_IPV6     InstanceCreateReqV2SpecId
-	PLATINUM_X2       InstanceCreateReqV2SpecId
-	PLATINUM_X3       InstanceCreateReqV2SpecId
-	PLATINUM_X4       InstanceCreateReqV2SpecId
-	PLATINUM_X5       InstanceCreateReqV2SpecId
-	PLATINUM_X6       InstanceCreateReqV2SpecId
-	PLATINUM_X7       InstanceCreateReqV2SpecId
-	PLATINUM_X8       InstanceCreateReqV2SpecId
+	BASIC        InstanceCreateReqV2SpecId
+	PROFESSIONAL InstanceCreateReqV2SpecId
+	ENTERPRISE   InstanceCreateReqV2SpecId
+	PLATINUM     InstanceCreateReqV2SpecId
+	PLATINUM_X2  InstanceCreateReqV2SpecId
+	PLATINUM_X3  InstanceCreateReqV2SpecId
+	PLATINUM_X4  InstanceCreateReqV2SpecId
+	PLATINUM_X5  InstanceCreateReqV2SpecId
+	PLATINUM_X6  InstanceCreateReqV2SpecId
+	PLATINUM_X7  InstanceCreateReqV2SpecId
+	PLATINUM_X8  InstanceCreateReqV2SpecId
 }
 
 func GetInstanceCreateReqV2SpecIdEnum() InstanceCreateReqV2SpecIdEnum {
@@ -116,18 +112,6 @@ func GetInstanceCreateReqV2SpecIdEnum() InstanceCreateReqV2SpecIdEnum {
 		},
 		PLATINUM: InstanceCreateReqV2SpecId{
 			value: "PLATINUM",
-		},
-		BASIC_IPV6: InstanceCreateReqV2SpecId{
-			value: "BASIC_IPV6",
-		},
-		PROFESSIONAL_IPV6: InstanceCreateReqV2SpecId{
-			value: "PROFESSIONAL_IPV6",
-		},
-		ENTERPRISE_IPV6: InstanceCreateReqV2SpecId{
-			value: "ENTERPRISE_IPV6",
-		},
-		PLATINUM_IPV6: InstanceCreateReqV2SpecId{
-			value: "PLATINUM_IPV6",
 		},
 		PLATINUM_X2: InstanceCreateReqV2SpecId{
 			value: "PLATINUM_X2",

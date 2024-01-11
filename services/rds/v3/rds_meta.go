@@ -1089,6 +1089,10 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 		WithJsonTag("datastore_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EpsId").
+		WithJsonTag("eps_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").
 		WithJsonTag("vpc_id").
 		WithLocationType(def.Query))

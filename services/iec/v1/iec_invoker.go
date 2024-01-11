@@ -1025,6 +1025,30 @@ func (i *UpdatePublicIpInvoker) Invoke() (*model.UpdatePublicIpResponse, error) 
 	}
 }
 
+type AttachVipBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachVipBandwidthInvoker) Invoke() (*model.AttachVipBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachVipBandwidthResponse), nil
+	}
+}
+
+type DetachVipBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachVipBandwidthInvoker) Invoke() (*model.DetachVipBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachVipBandwidthResponse), nil
+	}
+}
+
 type CreateSubnetInvoker struct {
 	*invoker.BaseInvoker
 }

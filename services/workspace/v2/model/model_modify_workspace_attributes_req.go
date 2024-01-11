@@ -34,6 +34,14 @@ type ModifyWorkspaceAttributesReq struct {
 
 	// 开通专线访问VNC功能，如果传入的是default则自动创建，如果传入的自定义的dc_vnc_ip则直接使用，如果传入的是close表示关闭自定义VNC
 	DcVncIp *string `json:"dc_vnc_ip,omitempty"`
+
+	// 是否授权收集日志。
+	AuthorizedCollectLog *bool `json:"authorized_collect_log,omitempty"`
+
+	// 是否授权hda升级。
+	AuthorizedHdaUpgrade *bool `json:"authorized_hda_upgrade,omitempty"`
+
+	ApplyDedicatedStandbyNetworkParam *ApplyDedicatedStandbyNetworkParam `json:"apply_dedicated_standby_network_param,omitempty"`
 }
 
 func (o ModifyWorkspaceAttributesReq) String() string {

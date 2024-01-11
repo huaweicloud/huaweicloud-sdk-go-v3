@@ -38,6 +38,9 @@ type OsExtraSpecs struct {
 
 	// 资源类型，resource_type是为了区分边缘实例的物理主机类型。
 	ResourceType *string `json:"resource_type,omitempty"`
+
+	// 网络约束  支持网络特性，不配置时以控制台默认配置为准。
+	Condnetwork *string `json:"cond:network,omitempty"`
 }
 
 func (o OsExtraSpecs) String() string {

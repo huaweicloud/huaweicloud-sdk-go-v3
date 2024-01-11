@@ -34,8 +34,11 @@ type ShowEquipmentOspfResponse struct {
 	TrustList *[]string `json:"trust_list,omitempty"`
 
 	// 黑名单列表
-	BlockList      *[]string `json:"block_list,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	BlockList *[]string `json:"block_list,omitempty"`
+
+	// 上云子网列表
+	CloudSubnetList *[]string `json:"cloud_subnet_list,omitempty"`
+	HttpStatusCode  int       `json:"-"`
 }
 
 func (o ShowEquipmentOspfResponse) String() string {

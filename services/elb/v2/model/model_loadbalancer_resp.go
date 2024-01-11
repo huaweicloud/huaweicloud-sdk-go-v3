@@ -65,6 +65,15 @@ type LoadbalancerResp struct {
 
 	// 负载均衡器的标签列表
 	Tags []string `json:"tags"`
+
+	// 负载均衡器绑定的公网IP。只支持绑定一个公网IP。
+	Publicips []PublicIpInfo `json:"publicips"`
+
+	// 收费模式。取值：  flavor：按规格计费 lcu：按使用量计费 说明：不影响弹性扩缩容实例、包周期实例的计费方式
+	ChargeMode string `json:"charge_mode"`
+
+	// 负载均衡器的冻结场景。若负载均衡器有多个冻结场景，用逗号分隔。取值：  POLICE：公安冻结场景。 ILLEGAL：违规冻结场景。 VERIFY：客户未实名认证冻结场景。 PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 AREAR：欠费冻结场景。
+	FrozenScene *string `json:"frozen_scene,omitempty"`
 }
 
 func (o LoadbalancerResp) String() string {

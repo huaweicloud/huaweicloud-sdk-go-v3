@@ -281,6 +281,54 @@ func (i *ShowDesktopNetworkInvoker) Invoke() (*model.ShowDesktopNetworkResponse,
 	}
 }
 
+type BatchDeleteDesktopNamePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteDesktopNamePolicyInvoker) Invoke() (*model.BatchDeleteDesktopNamePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteDesktopNamePolicyResponse), nil
+	}
+}
+
+type CreateDesktopNamePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesktopNamePolicyInvoker) Invoke() (*model.CreateDesktopNamePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesktopNamePolicyResponse), nil
+	}
+}
+
+type ListDesktopNamePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopNamePolicyInvoker) Invoke() (*model.ListDesktopNamePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopNamePolicyResponse), nil
+	}
+}
+
+type UpdateDesktopNamePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesktopNamePolicyInvoker) Invoke() (*model.UpdateDesktopNamePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesktopNamePolicyResponse), nil
+	}
+}
+
 type ListUnusedDesktopsInvoker struct {
 	*invoker.BaseInvoker
 }

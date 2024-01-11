@@ -9,7 +9,7 @@ import (
 // ListCategoryRequest Request Object
 type ListCategoryRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	// 分页时每页的条数,最大值为100

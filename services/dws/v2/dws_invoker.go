@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dws/v2/model"
 )
 
+type AddQueueUserListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddQueueUserListInvoker) Invoke() (*model.AddQueueUserListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddQueueUserListResponse), nil
+	}
+}
+
 type AddSnapshotCrossRegionPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -14,6 +26,18 @@ func (i *AddSnapshotCrossRegionPolicyInvoker) Invoke() (*model.AddSnapshotCrossR
 		return nil, err
 	} else {
 		return result.(*model.AddSnapshotCrossRegionPolicyResponse), nil
+	}
+}
+
+type AddWorkloadPlanStageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddWorkloadPlanStageInvoker) Invoke() (*model.AddWorkloadPlanStageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddWorkloadPlanStageResponse), nil
 	}
 }
 
@@ -413,6 +437,18 @@ func (i *DeleteLogicalClusterInvoker) Invoke() (*model.DeleteLogicalClusterRespo
 	}
 }
 
+type DeleteQueueUserListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteQueueUserListInvoker) Invoke() (*model.DeleteQueueUserListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteQueueUserListResponse), nil
+	}
+}
+
 type DeleteSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +494,18 @@ func (i *DeleteWorkloadPlanInvoker) Invoke() (*model.DeleteWorkloadPlanResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteWorkloadPlanResponse), nil
+	}
+}
+
+type DeleteWorkloadPlanStageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWorkloadPlanStageInvoker) Invoke() (*model.DeleteWorkloadPlanStageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWorkloadPlanStageResponse), nil
 	}
 }
 
@@ -1037,6 +1085,18 @@ func (i *ListNodeTypesInvoker) Invoke() (*model.ListNodeTypesResponse, error) {
 	}
 }
 
+type ListPlanExecLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPlanExecLogsInvoker) Invoke() (*model.ListPlanExecLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPlanExecLogsResponse), nil
+	}
+}
+
 type ListQueriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1058,6 +1118,18 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListQuotasResponse), nil
+	}
+}
+
+type ListSchemasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSchemasResponse), nil
 	}
 }
 
@@ -1214,6 +1286,18 @@ func (i *ListWorkloadQueueInvoker) Invoke() (*model.ListWorkloadQueueResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListWorkloadQueueResponse), nil
+	}
+}
+
+type ListWorkloadQueueUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkloadQueueUsersInvoker) Invoke() (*model.ListWorkloadQueueUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkloadQueueUsersResponse), nil
 	}
 }
 
@@ -1445,6 +1529,18 @@ func (i *ShowQueryDetailInvoker) Invoke() (*model.ShowQueryDetailResponse, error
 	}
 }
 
+type ShowResourceStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceStatisticsInvoker) Invoke() (*model.ShowResourceStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceStatisticsResponse), nil
+	}
+}
+
 type ShowWorkloadPlanInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1454,6 +1550,30 @@ func (i *ShowWorkloadPlanInvoker) Invoke() (*model.ShowWorkloadPlanResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowWorkloadPlanResponse), nil
+	}
+}
+
+type ShowWorkloadPlanStageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkloadPlanStageInvoker) Invoke() (*model.ShowWorkloadPlanStageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkloadPlanStageResponse), nil
+	}
+}
+
+type ShowWorkloadQueueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkloadQueueInvoker) Invoke() (*model.ShowWorkloadQueueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkloadQueueResponse), nil
 	}
 }
 
@@ -1538,6 +1658,18 @@ func (i *SwitchOverClusterInvoker) Invoke() (*model.SwitchOverClusterResponse, e
 		return nil, err
 	} else {
 		return result.(*model.SwitchOverClusterResponse), nil
+	}
+}
+
+type SwitchPlanStageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchPlanStageInvoker) Invoke() (*model.SwitchPlanStageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchPlanStageResponse), nil
 	}
 }
 
@@ -1682,5 +1814,29 @@ func (i *UpdateMaintenanceWindowInvoker) Invoke() (*model.UpdateMaintenanceWindo
 		return nil, err
 	} else {
 		return result.(*model.UpdateMaintenanceWindowResponse), nil
+	}
+}
+
+type UpdateQueueResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateQueueResourcesInvoker) Invoke() (*model.UpdateQueueResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateQueueResourcesResponse), nil
+	}
+}
+
+type UpdateSchemasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSchemasInvoker) Invoke() (*model.UpdateSchemasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSchemasResponse), nil
 	}
 }

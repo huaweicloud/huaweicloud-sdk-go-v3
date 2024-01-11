@@ -1045,6 +1045,26 @@ func GenReqDefForNovaShowServer() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForNovaShowServerInterface() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.1/{project_id}/servers/{server_id}/os-interface/{port_id}").
+		WithResponse(new(model.NovaShowServerInterfaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PortId").
+		WithJsonTag("port_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRegisterServerAutoRecovery() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

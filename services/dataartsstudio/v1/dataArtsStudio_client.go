@@ -1552,6 +1552,69 @@ func (c *DataArtsStudioClient) ExecuteTaskActionInvoker(request *model.ExecuteTa
 	return &ExecuteTaskActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ImportCatalogs 导入主题
+//
+// 用于导入主题
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ImportCatalogs(request *model.ImportCatalogsRequest) (*model.ImportCatalogsResponse, error) {
+	requestDef := GenReqDefForImportCatalogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportCatalogsResponse), nil
+	}
+}
+
+// ImportCatalogsInvoker 导入主题
+func (c *DataArtsStudioClient) ImportCatalogsInvoker(request *model.ImportCatalogsRequest) *ImportCatalogsInvoker {
+	requestDef := GenReqDefForImportCatalogs()
+	return &ImportCatalogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportLineage 血缘导入
+//
+// 血缘查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ImportLineage(request *model.ImportLineageRequest) (*model.ImportLineageResponse, error) {
+	requestDef := GenReqDefForImportLineage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportLineageResponse), nil
+	}
+}
+
+// ImportLineageInvoker 血缘导入
+func (c *DataArtsStudioClient) ImportLineageInvoker(request *model.ImportLineageRequest) *ImportLineageInvoker {
+	requestDef := GenReqDefForImportLineage()
+	return &ImportLineageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportModels 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+//
+// 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ImportModels(request *model.ImportModelsRequest) (*model.ImportModelsResponse, error) {
+	requestDef := GenReqDefForImportModels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportModelsResponse), nil
+	}
+}
+
+// ImportModelsInvoker 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+func (c *DataArtsStudioClient) ImportModelsInvoker(request *model.ImportModelsRequest) *ImportModelsInvoker {
+	requestDef := GenReqDefForImportModels()
+	return &ImportModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportResult 查询导入结果
 //
 // 查询导入excel的处理结果
@@ -1655,6 +1718,27 @@ func (c *DataArtsStudioClient) ListAllStandards(request *model.ListAllStandardsR
 func (c *DataArtsStudioClient) ListAllStandardsInvoker(request *model.ListAllStandardsRequest) *ListAllStandardsInvoker {
 	requestDef := GenReqDefForListAllStandards()
 	return &ListAllStandardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllTables 查询多种类型的表信息
+//
+// 从信息架构中查询多种类型的表信息，包括逻辑实体、物理表、维度表、事实表、汇总表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListAllTables(request *model.ListAllTablesRequest) (*model.ListAllTablesResponse, error) {
+	requestDef := GenReqDefForListAllTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllTablesResponse), nil
+	}
+}
+
+// ListAllTablesInvoker 查询多种类型的表信息
+func (c *DataArtsStudioClient) ListAllTablesInvoker(request *model.ListAllTablesRequest) *ListAllTablesInvoker {
+	requestDef := GenReqDefForListAllTables()
+	return &ListAllTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiCatalogList 获取当前目录下的api列表

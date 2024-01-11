@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -40,6 +43,12 @@ type UpdateListenerReq struct {
 
 	// 监听器的管理状态。  该字段为预留字段，暂未启动。只支持设定为true
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	// 修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
+	ProtectionStatus *UpdateListenerReqProtectionStatus `json:"protection_status,omitempty"`
+
+	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+	ProtectionReason *string `json:"protection_reason,omitempty"`
 }
 
 func (o UpdateListenerReq) String() string {
@@ -49,4 +58,51 @@ func (o UpdateListenerReq) String() string {
 	}
 
 	return strings.Join([]string{"UpdateListenerReq", string(data)}, " ")
+}
+
+type UpdateListenerReqProtectionStatus struct {
+	value string
+}
+
+type UpdateListenerReqProtectionStatusEnum struct {
+	NON_PROTECTION     UpdateListenerReqProtectionStatus
+	CONSOLE_PROTECTION UpdateListenerReqProtectionStatus
+}
+
+func GetUpdateListenerReqProtectionStatusEnum() UpdateListenerReqProtectionStatusEnum {
+	return UpdateListenerReqProtectionStatusEnum{
+		NON_PROTECTION: UpdateListenerReqProtectionStatus{
+			value: "nonProtection",
+		},
+		CONSOLE_PROTECTION: UpdateListenerReqProtectionStatus{
+			value: "consoleProtection",
+		},
+	}
+}
+
+func (c UpdateListenerReqProtectionStatus) Value() string {
+	return c.value
+}
+
+func (c UpdateListenerReqProtectionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateListenerReqProtectionStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

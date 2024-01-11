@@ -25,6 +25,9 @@ type IpPool struct {
 
 	// 线路的显示名称。
 	DisplayName *string `json:"display_name,omitempty"`
+
+	// 功能说明：表示此线路可以使用的带宽类型列表，如果列表为空，则表示该线路不能使用任何带宽  约束：线路下的ip只能加入到带宽类型在allow_share_bandwidth_types中带宽
+	AllowShareBandwidthTypes *[]string `json:"allow_share_bandwidth_types,omitempty"`
 }
 
 func (o IpPool) String() string {

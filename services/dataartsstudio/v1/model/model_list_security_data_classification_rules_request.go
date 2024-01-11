@@ -12,7 +12,7 @@ import (
 // ListSecurityDataClassificationRulesRequest Request Object
 type ListSecurityDataClassificationRulesRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	// 查询偏移

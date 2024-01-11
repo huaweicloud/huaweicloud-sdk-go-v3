@@ -19,6 +19,27 @@ func DwsClientBuilder() *http_client.HcHttpClientBuilder {
 	return builder
 }
 
+// AddQueueUserList 添加工作负载队列的绑定用户
+//
+// 添加工作负载队列的绑定用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) AddQueueUserList(request *model.AddQueueUserListRequest) (*model.AddQueueUserListResponse, error) {
+	requestDef := GenReqDefForAddQueueUserList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddQueueUserListResponse), nil
+	}
+}
+
+// AddQueueUserListInvoker 添加工作负载队列的绑定用户
+func (c *DwsClient) AddQueueUserListInvoker(request *model.AddQueueUserListRequest) *AddQueueUserListInvoker {
+	requestDef := GenReqDefForAddQueueUserList()
+	return &AddQueueUserListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddSnapshotCrossRegionPolicy 设置跨区域备份配置
 //
 // 该接口用于设置跨区域备份配置
@@ -38,6 +59,27 @@ func (c *DwsClient) AddSnapshotCrossRegionPolicy(request *model.AddSnapshotCross
 func (c *DwsClient) AddSnapshotCrossRegionPolicyInvoker(request *model.AddSnapshotCrossRegionPolicyRequest) *AddSnapshotCrossRegionPolicyInvoker {
 	requestDef := GenReqDefForAddSnapshotCrossRegionPolicy()
 	return &AddSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddWorkloadPlanStage 添加工作负载计划阶段
+//
+// 添加工作负载计划阶段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) AddWorkloadPlanStage(request *model.AddWorkloadPlanStageRequest) (*model.AddWorkloadPlanStageResponse, error) {
+	requestDef := GenReqDefForAddWorkloadPlanStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddWorkloadPlanStageResponse), nil
+	}
+}
+
+// AddWorkloadPlanStageInvoker 添加工作负载计划阶段
+func (c *DwsClient) AddWorkloadPlanStageInvoker(request *model.AddWorkloadPlanStageRequest) *AddWorkloadPlanStageInvoker {
+	requestDef := GenReqDefForAddWorkloadPlanStage()
+	return &AddWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddWorkloadQueue 添加工作负载队列
@@ -744,6 +786,27 @@ func (c *DwsClient) DeleteLogicalClusterInvoker(request *model.DeleteLogicalClus
 	return &DeleteLogicalClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteQueueUserList 删除工作负载队列的绑定用户
+//
+// 删除工作负载队列的绑定用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteQueueUserList(request *model.DeleteQueueUserListRequest) (*model.DeleteQueueUserListResponse, error) {
+	requestDef := GenReqDefForDeleteQueueUserList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteQueueUserListResponse), nil
+	}
+}
+
+// DeleteQueueUserListInvoker 删除工作负载队列的绑定用户
+func (c *DwsClient) DeleteQueueUserListInvoker(request *model.DeleteQueueUserListRequest) *DeleteQueueUserListInvoker {
+	requestDef := GenReqDefForDeleteQueueUserList()
+	return &DeleteQueueUserListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSnapshot 删除快照
 //
 // 该接口用于删除一个指定手动快照。
@@ -826,6 +889,27 @@ func (c *DwsClient) DeleteWorkloadPlan(request *model.DeleteWorkloadPlanRequest)
 func (c *DwsClient) DeleteWorkloadPlanInvoker(request *model.DeleteWorkloadPlanRequest) *DeleteWorkloadPlanInvoker {
 	requestDef := GenReqDefForDeleteWorkloadPlan()
 	return &DeleteWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWorkloadPlanStage 删除工作负载计划阶段
+//
+// 删除工作负载计划删除工作负载计划阶段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteWorkloadPlanStage(request *model.DeleteWorkloadPlanStageRequest) (*model.DeleteWorkloadPlanStageResponse, error) {
+	requestDef := GenReqDefForDeleteWorkloadPlanStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWorkloadPlanStageResponse), nil
+	}
+}
+
+// DeleteWorkloadPlanStageInvoker 删除工作负载计划阶段
+func (c *DwsClient) DeleteWorkloadPlanStageInvoker(request *model.DeleteWorkloadPlanStageRequest) *DeleteWorkloadPlanStageInvoker {
+	requestDef := GenReqDefForDeleteWorkloadPlanStage()
+	return &DeleteWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteWorkloadQueue 删除工作负载队列
@@ -1838,6 +1922,27 @@ func (c *DwsClient) ListNodeTypesInvoker(request *model.ListNodeTypesRequest) *L
 	return &ListNodeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPlanExecLogs 查看计划执行日志
+//
+// 查看计划执行日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListPlanExecLogs(request *model.ListPlanExecLogsRequest) (*model.ListPlanExecLogsResponse, error) {
+	requestDef := GenReqDefForListPlanExecLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPlanExecLogsResponse), nil
+	}
+}
+
+// ListPlanExecLogsInvoker 查看计划执行日志
+func (c *DwsClient) ListPlanExecLogsInvoker(request *model.ListPlanExecLogsRequest) *ListPlanExecLogsInvoker {
+	requestDef := GenReqDefForListPlanExecLogs()
+	return &ListPlanExecLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListQueries 查询SQL列表
 //
 // 该接口用于查询实时SQL列表。
@@ -1878,6 +1983,27 @@ func (c *DwsClient) ListQuotas(request *model.ListQuotasRequest) (*model.ListQuo
 func (c *DwsClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuotasInvoker {
 	requestDef := GenReqDefForListQuotas()
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSchemas 查询集群模式空间信息
+//
+// 查询集群模式空间信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListSchemas(request *model.ListSchemasRequest) (*model.ListSchemasResponse, error) {
+	requestDef := GenReqDefForListSchemas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSchemasResponse), nil
+	}
+}
+
+// ListSchemasInvoker 查询集群模式空间信息
+func (c *DwsClient) ListSchemasInvoker(request *model.ListSchemasRequest) *ListSchemasInvoker {
+	requestDef := GenReqDefForListSchemas()
+	return &ListSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSnapshotCrossRegion 获取跨区域快照可用region
@@ -2151,6 +2277,27 @@ func (c *DwsClient) ListWorkloadQueue(request *model.ListWorkloadQueueRequest) (
 func (c *DwsClient) ListWorkloadQueueInvoker(request *model.ListWorkloadQueueRequest) *ListWorkloadQueueInvoker {
 	requestDef := GenReqDefForListWorkloadQueue()
 	return &ListWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkloadQueueUsers 获得工作负载队列的绑定用户列表
+//
+// 获得工作负载队列的绑定用户列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListWorkloadQueueUsers(request *model.ListWorkloadQueueUsersRequest) (*model.ListWorkloadQueueUsersResponse, error) {
+	requestDef := GenReqDefForListWorkloadQueueUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkloadQueueUsersResponse), nil
+	}
+}
+
+// ListWorkloadQueueUsersInvoker 获得工作负载队列的绑定用户列表
+func (c *DwsClient) ListWorkloadQueueUsersInvoker(request *model.ListWorkloadQueueUsersRequest) *ListWorkloadQueueUsersInvoker {
+	requestDef := GenReqDefForListWorkloadQueueUsers()
+	return &ListWorkloadQueueUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PauseDisasterRecovery 停止容灾
@@ -2552,6 +2699,27 @@ func (c *DwsClient) ShowQueryDetailInvoker(request *model.ShowQueryDetailRequest
 	return &ShowQueryDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowResourceStatistics 查询资源统计
+//
+// 该接口用于查询资源统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowResourceStatistics(request *model.ShowResourceStatisticsRequest) (*model.ShowResourceStatisticsResponse, error) {
+	requestDef := GenReqDefForShowResourceStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceStatisticsResponse), nil
+	}
+}
+
+// ShowResourceStatisticsInvoker 查询资源统计
+func (c *DwsClient) ShowResourceStatisticsInvoker(request *model.ShowResourceStatisticsRequest) *ShowResourceStatisticsInvoker {
+	requestDef := GenReqDefForShowResourceStatistics()
+	return &ShowResourceStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowWorkloadPlan 查询某个工作负载计划详细信息
 //
 // 查询某个工作负载计划详细信息。
@@ -2571,6 +2739,48 @@ func (c *DwsClient) ShowWorkloadPlan(request *model.ShowWorkloadPlanRequest) (*m
 func (c *DwsClient) ShowWorkloadPlanInvoker(request *model.ShowWorkloadPlanRequest) *ShowWorkloadPlanInvoker {
 	requestDef := GenReqDefForShowWorkloadPlan()
 	return &ShowWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkloadPlanStage 查询工作负载计划阶段详细信息
+//
+// 查询工作负载计划阶段详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowWorkloadPlanStage(request *model.ShowWorkloadPlanStageRequest) (*model.ShowWorkloadPlanStageResponse, error) {
+	requestDef := GenReqDefForShowWorkloadPlanStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkloadPlanStageResponse), nil
+	}
+}
+
+// ShowWorkloadPlanStageInvoker 查询工作负载计划阶段详细信息
+func (c *DwsClient) ShowWorkloadPlanStageInvoker(request *model.ShowWorkloadPlanStageRequest) *ShowWorkloadPlanStageInvoker {
+	requestDef := GenReqDefForShowWorkloadPlanStage()
+	return &ShowWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkloadQueue 获得工作负载队列详细信息
+//
+// 获得工作负载队列详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowWorkloadQueue(request *model.ShowWorkloadQueueRequest) (*model.ShowWorkloadQueueResponse, error) {
+	requestDef := GenReqDefForShowWorkloadQueue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkloadQueueResponse), nil
+	}
+}
+
+// ShowWorkloadQueueInvoker 获得工作负载队列详细信息
+func (c *DwsClient) ShowWorkloadQueueInvoker(request *model.ShowWorkloadQueueRequest) *ShowWorkloadQueueInvoker {
+	requestDef := GenReqDefForShowWorkloadQueue()
+	return &ShowWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkCluster 集群缩容
@@ -2720,6 +2930,27 @@ func (c *DwsClient) SwitchOverCluster(request *model.SwitchOverClusterRequest) (
 func (c *DwsClient) SwitchOverClusterInvoker(request *model.SwitchOverClusterRequest) *SwitchOverClusterInvoker {
 	requestDef := GenReqDefForSwitchOverCluster()
 	return &SwitchOverClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchPlanStage 切换工作负载计划阶段
+//
+// 切换工作负载计划阶段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) SwitchPlanStage(request *model.SwitchPlanStageRequest) (*model.SwitchPlanStageResponse, error) {
+	requestDef := GenReqDefForSwitchPlanStage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchPlanStageResponse), nil
+	}
+}
+
+// SwitchPlanStageInvoker 切换工作负载计划阶段
+func (c *DwsClient) SwitchPlanStageInvoker(request *model.SwitchPlanStageRequest) *SwitchPlanStageInvoker {
+	requestDef := GenReqDefForSwitchPlanStage()
+	return &SwitchPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchoverDisasterRecovery 灾备切换
@@ -2972,4 +3203,46 @@ func (c *DwsClient) UpdateMaintenanceWindow(request *model.UpdateMaintenanceWind
 func (c *DwsClient) UpdateMaintenanceWindowInvoker(request *model.UpdateMaintenanceWindowRequest) *UpdateMaintenanceWindowInvoker {
 	requestDef := GenReqDefForUpdateMaintenanceWindow()
 	return &UpdateMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateQueueResources 更新工作负载队列资源配置信息
+//
+// 更新工作负载队列资源配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateQueueResources(request *model.UpdateQueueResourcesRequest) (*model.UpdateQueueResourcesResponse, error) {
+	requestDef := GenReqDefForUpdateQueueResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateQueueResourcesResponse), nil
+	}
+}
+
+// UpdateQueueResourcesInvoker 更新工作负载队列资源配置信息
+func (c *DwsClient) UpdateQueueResourcesInvoker(request *model.UpdateQueueResourcesRequest) *UpdateQueueResourcesInvoker {
+	requestDef := GenReqDefForUpdateQueueResources()
+	return &UpdateQueueResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSchemas 更新模式空间限额
+//
+// 更新模式空间限额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateSchemas(request *model.UpdateSchemasRequest) (*model.UpdateSchemasResponse, error) {
+	requestDef := GenReqDefForUpdateSchemas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSchemasResponse), nil
+	}
+}
+
+// UpdateSchemasInvoker 更新模式空间限额
+func (c *DwsClient) UpdateSchemasInvoker(request *model.UpdateSchemasRequest) *UpdateSchemasInvoker {
+	requestDef := GenReqDefForUpdateSchemas()
+	return &UpdateSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

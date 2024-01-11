@@ -15,7 +15,7 @@ type JobLinkResp struct {
 	// 任务场景。取值： - migration：实时迁移。 - sync：实时同步。 - cloudDataGuard：实时灾备。
 	JobType JobLinkRespJobType `json:"job_type"`
 
-	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。
+	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：Redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：Redis集群同步到GeminiDB Redis，实时迁移场景使用。
 	EngineType JobLinkRespEngineType `json:"engine_type"`
 
 	// 源数据库实例类型。取值： - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
@@ -105,13 +105,21 @@ type JobLinkRespEngineType struct {
 }
 
 type JobLinkRespEngineTypeEnum struct {
-	ORACLE_TO_GAUSSDBV5 JobLinkRespEngineType
+	ORACLE_TO_GAUSSDBV5        JobLinkRespEngineType
+	REDIS_TO_GAUSSREDIS        JobLinkRespEngineType
+	REDISCLUSTER_TO_GAUSSREDIS JobLinkRespEngineType
 }
 
 func GetJobLinkRespEngineTypeEnum() JobLinkRespEngineTypeEnum {
 	return JobLinkRespEngineTypeEnum{
 		ORACLE_TO_GAUSSDBV5: JobLinkRespEngineType{
 			value: "oracle-to-gaussdbv5",
+		},
+		REDIS_TO_GAUSSREDIS: JobLinkRespEngineType{
+			value: "redis-to-gaussredis",
+		},
+		REDISCLUSTER_TO_GAUSSREDIS: JobLinkRespEngineType{
+			value: "rediscluster-to-gaussredis",
 		},
 	}
 }

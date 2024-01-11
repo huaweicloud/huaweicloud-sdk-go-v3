@@ -302,7 +302,7 @@ func (c *KafkaClient) CreateKafkaUserClientQuotaTaskInvoker(request *model.Creat
 
 // CreatePostPaidInstance 创建实例
 //
-// [创建按需计费类型的Kafka实例。](tag:sbc,hk_sbc,cmcc)[创建kafka实例。](tag:otc)
+// 创建按需计费类型的Kafka实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {

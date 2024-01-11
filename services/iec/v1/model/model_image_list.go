@@ -98,6 +98,9 @@ type ImageList struct {
 
 	// 如果镜像支持GPU T4类型，取值为true，否则无该属性。
 	SupportGpuT4 *string `json:"__support_gpu_t4,omitempty"`
+
+	// 是否是AMD架构类型的镜像。取值为“true”或者“false”。
+	SupportAmd *string `json:"__support_amd,omitempty"`
 }
 
 func (o ImageList) String() string {

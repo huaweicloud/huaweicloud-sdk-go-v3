@@ -40,6 +40,27 @@ func (c *DrsClient) BatchCreateJobsAsyncInvoker(request *model.BatchCreateJobsAs
 	return &BatchCreateJobsAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateTags 批量添加资源标签
+//
+// 批量添加资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) BatchCreateTags(request *model.BatchCreateTagsRequest) (*model.BatchCreateTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateTagsResponse), nil
+	}
+}
+
+// BatchCreateTagsInvoker 批量添加资源标签
+func (c *DrsClient) BatchCreateTagsInvoker(request *model.BatchCreateTagsRequest) *BatchCreateTagsInvoker {
+	requestDef := GenReqDefForBatchCreateTags()
+	return &BatchCreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteJobsById 批量删除任务
 //
 // 批量删除租户指定ID任务。
@@ -59,6 +80,27 @@ func (c *DrsClient) BatchDeleteJobsById(request *model.BatchDeleteJobsByIdReques
 func (c *DrsClient) BatchDeleteJobsByIdInvoker(request *model.BatchDeleteJobsByIdRequest) *BatchDeleteJobsByIdInvoker {
 	requestDef := GenReqDefForBatchDeleteJobsById()
 	return &BatchDeleteJobsByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteTags 批量删除资源标签
+//
+// 为指定实例批量删除标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*model.BatchDeleteTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
+// BatchDeleteTagsInvoker 批量删除资源标签
+func (c *DrsClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest) *BatchDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteTags()
+	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchExecuteJobActions 批量操作指定ID任务
@@ -275,6 +317,27 @@ func (c *DrsClient) CopyJob(request *model.CopyJobRequest) (*model.CopyJobRespon
 func (c *DrsClient) CopyJobInvoker(request *model.CopyJobRequest) *CopyJobInvoker {
 	requestDef := GenReqDefForCopyJob()
 	return &CopyJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountInstanceByTags 查询资源实例数量
+//
+// 查询资源实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CountInstanceByTags(request *model.CountInstanceByTagsRequest) (*model.CountInstanceByTagsResponse, error) {
+	requestDef := GenReqDefForCountInstanceByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountInstanceByTagsResponse), nil
+	}
+}
+
+// CountInstanceByTagsInvoker 查询资源实例数量
+func (c *DrsClient) CountInstanceByTagsInvoker(request *model.CountInstanceByTagsRequest) *CountInstanceByTagsInvoker {
+	requestDef := GenReqDefForCountInstanceByTags()
+	return &CountInstanceByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateJob 创建任务
@@ -508,6 +571,48 @@ func (c *DrsClient) ListDbObjectsInvoker(request *model.ListDbObjectsRequest) *L
 	return &ListDbObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceByTags 查询资源实例列表
+//
+// 查询资源实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListInstanceByTags(request *model.ListInstanceByTagsRequest) (*model.ListInstanceByTagsResponse, error) {
+	requestDef := GenReqDefForListInstanceByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceByTagsResponse), nil
+	}
+}
+
+// ListInstanceByTagsInvoker 查询资源实例列表
+func (c *DrsClient) ListInstanceByTagsInvoker(request *model.ListInstanceByTagsRequest) *ListInstanceByTagsInvoker {
+	requestDef := GenReqDefForListInstanceByTags()
+	return &ListInstanceByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceTags 查询资源标签
+//
+// 查询指定实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
+// ListInstanceTagsInvoker 查询资源标签
+func (c *DrsClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsRequest) *ListInstanceTagsInvoker {
+	requestDef := GenReqDefForListInstanceTags()
+	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListJdbcDrivers 查询驱动文件列表
 //
 // 查询驱动文件列表。
@@ -527,6 +632,50 @@ func (c *DrsClient) ListJdbcDrivers(request *model.ListJdbcDriversRequest) (*mod
 func (c *DrsClient) ListJdbcDriversInvoker(request *model.ListJdbcDriversRequest) *ListJdbcDriversInvoker {
 	requestDef := GenReqDefForListJdbcDrivers()
 	return &ListJdbcDriversInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobHistoryParameters 查询任务的参数配置修改历史
+//
+// 查询任务的参数配置修改历史
+// - 仅engine_type为mysql、mysql-to-pgl、mysql-to-gaussdbv5、mysql-to-gaussdbv5ha、mysql-to-dws、mysql-to-taurus、mysql-to-kafka、mysql-to-elasticsearch、mysql-to-oracle且任务状态只能为配置中、全量中、增量中、全量失败、增量失败、暂停中的实时同步任务支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListJobHistoryParameters(request *model.ListJobHistoryParametersRequest) (*model.ListJobHistoryParametersResponse, error) {
+	requestDef := GenReqDefForListJobHistoryParameters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobHistoryParametersResponse), nil
+	}
+}
+
+// ListJobHistoryParametersInvoker 查询任务的参数配置修改历史
+func (c *DrsClient) ListJobHistoryParametersInvoker(request *model.ListJobHistoryParametersRequest) *ListJobHistoryParametersInvoker {
+	requestDef := GenReqDefForListJobHistoryParameters()
+	return &ListJobHistoryParametersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobParameters 查询任务参数配置列表
+//
+// 查询任务的参数配置列表信息
+// - 仅engine_type为mysql、mysql-to-pgl、mysql-to-gaussdbv5、mysql-to-gaussdbv5ha、mysql-to-dws、mysql-to-taurus、mysql-to-kafka、mysql-to-elasticsearch、mysql-to-oracle且任务状态只能为配置中、全量中、增量中、全量失败、增量失败、暂停中的实时同步任务支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListJobParameters(request *model.ListJobParametersRequest) (*model.ListJobParametersResponse, error) {
+	requestDef := GenReqDefForListJobParameters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobParametersResponse), nil
+	}
+}
+
+// ListJobParametersInvoker 查询任务参数配置列表
+func (c *DrsClient) ListJobParametersInvoker(request *model.ListJobParametersRequest) *ListJobParametersInvoker {
+	requestDef := GenReqDefForListJobParameters()
+	return &ListJobParametersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListJobs 查询任务列表
@@ -590,6 +739,27 @@ func (c *DrsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 func (c *DrsClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
 	requestDef := GenReqDefForListProjectTags()
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 查询项目标签
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
+	requestDef := GenReqDefForListTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsResponse), nil
+	}
+}
+
+// ListTagsInvoker 查询项目标签
+func (c *DrsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowActions 获取指定任务操作信息
@@ -1018,7 +1188,7 @@ func (c *DrsClient) ShowPositionResultInvoker(request *model.ShowPositionResultR
 //
 // 查询不同迁移对象类型的迁移进度。
 // 说明：
-// - 目前仅MySQL-&gt;MySQL、MySQL-&gt;GaussDB(for MySQL)、MongoDB-&gt;DDS、DDS-&gt;MongoDB的迁移支持查看迁移明细。
+// - 目前仅MySQL-&gt;MySQL、MySQL-&gt;GaussDB(for MySQL)、MongoDB-&gt;DDS、DDS-&gt;MongoDB的实时迁移和所有实时同步链路支持查看迁移明细。
 // - 在任务未结束前，不能修改源库和目标库的所有用户、密码和用户权限等。
 // - 全量、增量完成不代表任务结束，如果存在触发器和事件将会进行迁移。
 //
@@ -1185,6 +1355,28 @@ func (c *DrsClient) UpdateJob(request *model.UpdateJobRequest) (*model.UpdateJob
 func (c *DrsClient) UpdateJobInvoker(request *model.UpdateJobRequest) *UpdateJobInvoker {
 	requestDef := GenReqDefForUpdateJob()
 	return &UpdateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateJobConfigurations 更新任务的参数信息
+//
+// 更新任务的参数信息。
+// - 仅engine_type为mysql、mysql-to-pgl、mysql-to-gaussdbv5、mysql-to-gaussdbv5ha、mysql-to-dws、mysql-to-taurus、mysql-to-kafka、mysql-to-elasticsearch、mysql-to-oracle且任务状态只能为配置中、全量中、增量中、全量失败、增量失败、暂停中的实时同步任务支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UpdateJobConfigurations(request *model.UpdateJobConfigurationsRequest) (*model.UpdateJobConfigurationsResponse, error) {
+	requestDef := GenReqDefForUpdateJobConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateJobConfigurationsResponse), nil
+	}
+}
+
+// UpdateJobConfigurationsInvoker 更新任务的参数信息
+func (c *DrsClient) UpdateJobConfigurationsInvoker(request *model.UpdateJobConfigurationsRequest) *UpdateJobConfigurationsInvoker {
+	requestDef := GenReqDefForUpdateJobConfigurations()
+	return &UpdateJobConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateStartPosition 更新增量任务启动位点

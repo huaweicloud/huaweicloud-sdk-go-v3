@@ -70,6 +70,8 @@ type TestEndPoint struct {
 	DbName *string `json:"db_name,omitempty"`
 
 	KafkaSecurityConfig *KafkaSecurity `json:"kafka_security_config,omitempty"`
+
+	CustomizedDns *CustomizedDns `json:"customized_dns,omitempty"`
 }
 
 func (o TestEndPoint) String() string {

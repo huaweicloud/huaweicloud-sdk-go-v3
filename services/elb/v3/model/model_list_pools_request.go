@@ -71,6 +71,9 @@ type ListPoolsRequest struct {
 
 	// 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
 	ProtectionStatus *[]string `json:"protection_status,omitempty"`
+
+	// 查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
+	ConnectionDrain *bool `json:"connection_drain,omitempty"`
 }
 
 func (o ListPoolsRequest) String() string {

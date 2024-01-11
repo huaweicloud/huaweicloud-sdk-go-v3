@@ -30,7 +30,7 @@ type ShowEventStreamingResponse struct {
 	Status *ShowEventStreamingResponseStatus `json:"status,omitempty"`
 
 	// 事件流ID
-	StreamingId *string `json:"streaming_id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 创建时间
 	CreatedTime *string `json:"created_time,omitempty"`

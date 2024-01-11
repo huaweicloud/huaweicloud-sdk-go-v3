@@ -53,6 +53,9 @@ type VaultGet struct {
 	// 存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
 	Threshold *int32 `json:"threshold,omitempty"`
 
+	// 用于标识SMB服务
+	SysLockSourceService *string `json:"sys_lock_source_service,omitempty"`
+
 	// 更新时间,例如:\"2020-02-05T10:38:34.209782\"
 	UpdatedAt string `json:"updated_at"`
 

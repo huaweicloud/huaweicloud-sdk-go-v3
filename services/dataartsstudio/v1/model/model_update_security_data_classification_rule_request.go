@@ -9,7 +9,7 @@ import (
 // UpdateSecurityDataClassificationRuleRequest Request Object
 type UpdateSecurityDataClassificationRuleRequest struct {
 
-	// workspace 信息
+	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
 
 	// 识别规则id

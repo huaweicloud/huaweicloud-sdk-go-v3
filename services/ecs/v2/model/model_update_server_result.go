@@ -68,6 +68,9 @@ type UpdateServerResult struct {
 	// 弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
 	Status string `json:"status"`
 
+	// 创建弹性云服务器时指定的user_data（编码过后的信息）。
+	OSEXTSRVATTRuserData *string `json:"OS-EXT-SRV-ATTR:user_data,omitempty"`
+
 	// 弹性云服务器的主机名。
 	OSEXTSRVATTRhostname string `json:"OS-EXT-SRV-ATTR:hostname"`
 }

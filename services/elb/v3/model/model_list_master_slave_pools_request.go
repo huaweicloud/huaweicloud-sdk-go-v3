@@ -62,6 +62,9 @@ type ListMasterSlavePoolsRequest struct {
 
 	// 后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端
 	Type *[]string `json:"type,omitempty"`
+
+	// 查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false
+	ConnectionDrain *bool `json:"connection_drain,omitempty"`
 }
 
 func (o ListMasterSlavePoolsRequest) String() string {

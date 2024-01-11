@@ -73,6 +73,9 @@ type VaultCreateResource struct {
 
 	// 存储库是否冻结
 	Frozen *bool `json:"frozen,omitempty"`
+
+	// 用于标识SMB服务
+	SysLockSourceService *string `json:"sys_lock_source_service,omitempty"`
 }
 
 func (o VaultCreateResource) String() string {

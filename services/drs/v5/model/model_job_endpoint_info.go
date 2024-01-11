@@ -12,7 +12,7 @@ import (
 // JobEndpointInfo 创建任务数据库信息体。
 type JobEndpointInfo struct {
 
-	// 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。
+	// 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
 	DbType JobEndpointInfoDbType `json:"db_type"`
 
 	// 数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
@@ -30,6 +30,8 @@ type JobEndpointInfo struct {
 	Config *BaseEndpointConfig `json:"config,omitempty"`
 
 	Ssl *EndpointSslConfig `json:"ssl,omitempty"`
+
+	CustomizedDns *CustomizedDns `json:"customized_dns,omitempty"`
 }
 
 func (o JobEndpointInfo) String() string {
@@ -46,8 +48,11 @@ type JobEndpointInfoDbType struct {
 }
 
 type JobEndpointInfoDbTypeEnum struct {
-	ORACLE    JobEndpointInfoDbType
-	GAUSSDBV5 JobEndpointInfoDbType
+	ORACLE       JobEndpointInfoDbType
+	GAUSSDBV5    JobEndpointInfoDbType
+	REDIS        JobEndpointInfoDbType
+	REDISCLUSTER JobEndpointInfoDbType
+	GAUSSREDIS   JobEndpointInfoDbType
 }
 
 func GetJobEndpointInfoDbTypeEnum() JobEndpointInfoDbTypeEnum {
@@ -57,6 +62,15 @@ func GetJobEndpointInfoDbTypeEnum() JobEndpointInfoDbTypeEnum {
 		},
 		GAUSSDBV5: JobEndpointInfoDbType{
 			value: "gaussdbv5",
+		},
+		REDIS: JobEndpointInfoDbType{
+			value: "redis",
+		},
+		REDISCLUSTER: JobEndpointInfoDbType{
+			value: "rediscluster",
+		},
+		GAUSSREDIS: JobEndpointInfoDbType{
+			value: "gaussredis",
 		},
 	}
 }

@@ -502,6 +502,90 @@ func (c *WorkspaceClient) ShowDesktopNetworkInvoker(request *model.ShowDesktopNe
 	return &ShowDesktopNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteDesktopNamePolicy 批量删除桌面名称策略
+//
+// 批量删除桌面名称策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteDesktopNamePolicy(request *model.BatchDeleteDesktopNamePolicyRequest) (*model.BatchDeleteDesktopNamePolicyResponse, error) {
+	requestDef := GenReqDefForBatchDeleteDesktopNamePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteDesktopNamePolicyResponse), nil
+	}
+}
+
+// BatchDeleteDesktopNamePolicyInvoker 批量删除桌面名称策略
+func (c *WorkspaceClient) BatchDeleteDesktopNamePolicyInvoker(request *model.BatchDeleteDesktopNamePolicyRequest) *BatchDeleteDesktopNamePolicyInvoker {
+	requestDef := GenReqDefForBatchDeleteDesktopNamePolicy()
+	return &BatchDeleteDesktopNamePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesktopNamePolicy 创建桌面名称策略
+//
+// 创建桌面名称策略，用于自动生成桌面名称，最多允许50个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateDesktopNamePolicy(request *model.CreateDesktopNamePolicyRequest) (*model.CreateDesktopNamePolicyResponse, error) {
+	requestDef := GenReqDefForCreateDesktopNamePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesktopNamePolicyResponse), nil
+	}
+}
+
+// CreateDesktopNamePolicyInvoker 创建桌面名称策略
+func (c *WorkspaceClient) CreateDesktopNamePolicyInvoker(request *model.CreateDesktopNamePolicyRequest) *CreateDesktopNamePolicyInvoker {
+	requestDef := GenReqDefForCreateDesktopNamePolicy()
+	return &CreateDesktopNamePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopNamePolicy 获取桌面名称策略
+//
+// 获取桌面名称策略，用于自动生成桌面名称。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopNamePolicy(request *model.ListDesktopNamePolicyRequest) (*model.ListDesktopNamePolicyResponse, error) {
+	requestDef := GenReqDefForListDesktopNamePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopNamePolicyResponse), nil
+	}
+}
+
+// ListDesktopNamePolicyInvoker 获取桌面名称策略
+func (c *WorkspaceClient) ListDesktopNamePolicyInvoker(request *model.ListDesktopNamePolicyRequest) *ListDesktopNamePolicyInvoker {
+	requestDef := GenReqDefForListDesktopNamePolicy()
+	return &ListDesktopNamePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesktopNamePolicy 更新桌面名称策略
+//
+// 更新桌面名称策略，用于自动生成桌面名称。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateDesktopNamePolicy(request *model.UpdateDesktopNamePolicyRequest) (*model.UpdateDesktopNamePolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDesktopNamePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesktopNamePolicyResponse), nil
+	}
+}
+
+// UpdateDesktopNamePolicyInvoker 更新桌面名称策略
+func (c *WorkspaceClient) UpdateDesktopNamePolicyInvoker(request *model.UpdateDesktopNamePolicyRequest) *UpdateDesktopNamePolicyInvoker {
+	requestDef := GenReqDefForUpdateDesktopNamePolicy()
+	return &UpdateDesktopNamePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUnusedDesktops 查询在指定时间段未使用的桌面
 //
 // 查询在指定时间段未使用的桌面。
