@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudrtc/v1/model"
 )
 
 type CloudRTCClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCloudRTCClient(hcClient *http_client.HcHttpClient) *CloudRTCClient {
+func NewCloudRTCClient(hcClient *httpclient.HcHttpClient) *CloudRTCClient {
 	return &CloudRTCClient{HcClient: hcClient}
 }
 
-func CloudRTCClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CloudRTCClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

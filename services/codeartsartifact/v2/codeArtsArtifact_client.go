@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsartifact/v2/model"
 )
 
 type CodeArtsArtifactClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCodeArtsArtifactClient(hcClient *http_client.HcHttpClient) *CodeArtsArtifactClient {
+func NewCodeArtsArtifactClient(hcClient *httpclient.HcHttpClient) *CodeArtsArtifactClient {
 	return &CodeArtsArtifactClient{HcClient: hcClient}
 }
 
-func CodeArtsArtifactClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CodeArtsArtifactClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

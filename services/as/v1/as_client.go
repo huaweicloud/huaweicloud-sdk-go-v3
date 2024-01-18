@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/as/v1/model"
 )
 
 type AsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewAsClient(hcClient *http_client.HcHttpClient) *AsClient {
+func NewAsClient(hcClient *httpclient.HcHttpClient) *AsClient {
 	return &AsClient{HcClient: hcClient}
 }
 
-func AsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func AsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

@@ -32,10 +32,13 @@ type ShowScriptResponse struct {
 	QueueName *string `json:"queueName,omitempty"`
 
 	// 脚本的配置项参数
-	Configuration *string `json:"configuration,omitempty"`
+	Configuration map[string]interface{} `json:"configuration,omitempty"`
 
 	// 脚本描述，长度不能超过255个字符
 	Description *string `json:"description,omitempty"`
+
+	// 责任人名称
+	Owner *string `json:"owner,omitempty"`
 
 	// 在开启审批开关后，需要填写该字段。表示创建脚本的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示脚本创建后是保存态，提交态，生产态。
 	TargetStatus *ShowScriptResponseTargetStatus `json:"targetStatus,omitempty"`

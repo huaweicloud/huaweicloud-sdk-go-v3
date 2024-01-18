@@ -10,7 +10,7 @@ import (
 type WorkloadPlanInfo struct {
 
 	// 计划状态。
-	Status *string `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
 
 	// 项目ID。
 	ProjectId string `json:"project_id"`

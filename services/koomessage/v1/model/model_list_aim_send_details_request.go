@@ -21,7 +21,7 @@ type ListAimSendDetailsRequest struct {
 	// 创建解析任务时填写用户唯一标识。  > 手机号码或者任何的唯一标识，唯一标识不超过64个字符。发送智能信息时则必须填客户的手机号码。此处为手机号。样例为：130****0001。
 	CustFlag *string `json:"cust_flag,omitempty"`
 
-	//  发送开始时间。格式为：2019-10-12T07:20:50Z。  > 需同时传入end_time才能生效，单独传begin_time不会作为过滤条件。
+	//  发送开始时间。格式为：2019-10-12T07:20:50Z。  > 需同时传入end_time才能生效，单独传begin_time不会作为过滤条件。 > > 仅支持查询最近1年内的发送明细。
 	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 发送结束时间。格式为：2019-10-12T07:20:50Z。  > 需同时传入begin_time才能生效，单独传end_time不会作为过滤条件。

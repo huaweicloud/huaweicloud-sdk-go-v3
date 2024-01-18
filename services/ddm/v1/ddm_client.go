@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ddm/v1/model"
 )
 
 type DdmClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewDdmClient(hcClient *http_client.HcHttpClient) *DdmClient {
+func NewDdmClient(hcClient *httpclient.HcHttpClient) *DdmClient {
 	return &DdmClient{HcClient: hcClient}
 }
 
-func DdmClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func DdmClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

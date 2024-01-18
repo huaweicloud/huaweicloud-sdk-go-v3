@@ -8,10 +8,10 @@ import (
 
 type Flavor struct {
 
-	// 服务器对应的规格ID
+	// 服务器对应的规格ID。
 	Id *string `json:"id,omitempty"`
 
-	// 服务器对应规格的相关标记快捷链接信息
+	// 服务器对应规格的相关标记快捷链接信息。
 	Links *[]FlavorLink `json:"links,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ServerStatus 实例的状态 * `UNREGISTER` - 未就绪 * `REGISTERED` - 就绪状态 * `MAINTAINING` - 维护中 * `FREEZE` - 冻结 * `STOPPED` - 停止 * `NONE` - 异常状态
+// ServerStatus 实例的状态： * `UNREGISTER` - 未就绪 * `REGISTERED` - 就绪状态 * `MAINTAINING` - 维护中 * `FREEZE` - 冻结 * `STOPPED` - 停止 * `NONE` - 异常状态
 type ServerStatus struct {
 	value string
 }

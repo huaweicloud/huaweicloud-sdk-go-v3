@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/devstar/v1/model"
 )
 
 type DevStarClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewDevStarClient(hcClient *http_client.HcHttpClient) *DevStarClient {
+func NewDevStarClient(hcClient *httpclient.HcHttpClient) *DevStarClient {
 	return &DevStarClient{HcClient: hcClient}
 }
 
-func DevStarClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func DevStarClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

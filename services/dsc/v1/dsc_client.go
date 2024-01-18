@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
 )
 
 type DscClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewDscClient(hcClient *http_client.HcHttpClient) *DscClient {
+func NewDscClient(hcClient *httpclient.HcHttpClient) *DscClient {
 	return &DscClient{HcClient: hcClient}
 }
 
-func DscClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func DscClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
@@ -353,6 +353,27 @@ func (c *DscClient) DeleteRuleGroup(request *model.DeleteRuleGroupRequest) (*mod
 func (c *DscClient) DeleteRuleGroupInvoker(request *model.DeleteRuleGroupRequest) *DeleteRuleGroupInvoker {
 	requestDef := GenReqDefForDeleteRuleGroup()
 	return &DeleteRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScanJob 删除扫描任务
+//
+// 删除扫描任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DscClient) DeleteScanJob(request *model.DeleteScanJobRequest) (*model.DeleteScanJobResponse, error) {
+	requestDef := GenReqDefForDeleteScanJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScanJobResponse), nil
+	}
+}
+
+// DeleteScanJobInvoker 删除扫描任务
+func (c *DscClient) DeleteScanJobInvoker(request *model.DeleteScanJobRequest) *DeleteScanJobInvoker {
+	requestDef := GenReqDefForDeleteScanJob()
+	return &DeleteScanJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListBuckets 查看资产列表

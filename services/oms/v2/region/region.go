@@ -3,6 +3,8 @@ package region
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+	"sort"
+	"strings"
 )
 
 var (
@@ -64,6 +66,15 @@ var staticFields = map[string]*region.Region{
 
 var provider = region.DefaultProviderChain("OMS")
 
+func getRegionIds() []string {
+	ids := make([]string, 0, len(staticFields))
+	for key := range staticFields {
+		ids = append(ids, key)
+	}
+	sort.Strings(ids)
+	return ids
+}
+
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
 		panic("unexpected empty parameter: regionId")
@@ -77,5 +88,5 @@ func ValueOf(regionId string) *region.Region {
 	if _, ok := staticFields[regionId]; ok {
 		return staticFields[regionId]
 	}
-	panic(fmt.Sprintf("unexpected regionId: %s", regionId))
+	panic(fmt.Sprintf("region id '%s' is not in the following supported regions of service 'OMS': [%s]", regionId, strings.Join(getRegionIds(), ", ")))
 }

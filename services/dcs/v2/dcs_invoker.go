@@ -65,6 +65,18 @@ func (i *ChangeMasterStandbyInvoker) Invoke() (*model.ChangeMasterStandbyRespons
 	}
 }
 
+type ChangeMasterStandbyAsyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeMasterStandbyAsyncInvoker) Invoke() (*model.ChangeMasterStandbyAsyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeMasterStandbyAsyncResponse), nil
+	}
+}
+
 type CopyInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

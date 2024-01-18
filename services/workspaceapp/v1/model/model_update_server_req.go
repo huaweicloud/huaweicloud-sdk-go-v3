@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// UpdateServerReq 更新服务器请求
+// UpdateServerReq 更新服务器请求。
 type UpdateServerReq struct {
 
-	// 服务器名称，名称需满足如下规则: 1. 由中文，英文大小写，数字，_-空格组成，不能全为空格, 首位不为空 2. 长度范围1~64个字符
+	// 服务器名称，名称需满足如下规则: 1. 由中文，英文大小写，数字，_-组成。 2. 长度范围1~64个字符。
 	Name *string `json:"name,omitempty"`
 
-	// 服务器描述
+	// 服务器描述。
 	Description *string `json:"description,omitempty"`
 
-	// 服务器维护状态标识 * `true` - 添加标记 * `false` - 移除标记
+	// 服务器维护状态标识： * `true` - 添加标记 * `false` - 移除标记
 	MaintainStatus *bool `json:"maintain_status,omitempty"`
 }
 

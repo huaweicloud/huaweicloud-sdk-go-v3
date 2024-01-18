@@ -9,7 +9,7 @@ import (
 // CreateAccountResponse Response Object
 type CreateAccountResponse struct {
 
-	// 创建账号、纳管账号、纳管OU的操作ID。
+	// 创建账号、纳管账号、纳管注册OU的操作ID。
 	OperationId    *string `json:"operation_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

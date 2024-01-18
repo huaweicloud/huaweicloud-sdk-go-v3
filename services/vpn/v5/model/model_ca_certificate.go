@@ -10,6 +10,9 @@ import (
 // CaCertificate 对端网关CA证书信息
 type CaCertificate struct {
 
+	// 证书ID
+	Id *string `json:"id,omitempty"`
+
 	// 证书序列号
 	SerialNumber *string `json:"serial_number,omitempty"`
 

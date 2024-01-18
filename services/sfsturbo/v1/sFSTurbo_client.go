@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sfsturbo/v1/model"
 )
 
 type SFSTurboClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewSFSTurboClient(hcClient *http_client.HcHttpClient) *SFSTurboClient {
+func NewSFSTurboClient(hcClient *httpclient.HcHttpClient) *SFSTurboClient {
 	return &SFSTurboClient{HcClient: hcClient}
 }
 
-func SFSTurboClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func SFSTurboClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

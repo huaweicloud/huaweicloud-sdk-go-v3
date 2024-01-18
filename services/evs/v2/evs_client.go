@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/evs/v2/model"
 )
 
 type EvsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewEvsClient(hcClient *http_client.HcHttpClient) *EvsClient {
+func NewEvsClient(hcClient *httpclient.HcHttpClient) *EvsClient {
 	return &EvsClient{HcClient: hcClient}
 }
 
-func EvsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func EvsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudtable/v2/model"
 )
 
 type CloudTableClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCloudTableClient(hcClient *http_client.HcHttpClient) *CloudTableClient {
+func NewCloudTableClient(hcClient *httpclient.HcHttpClient) *CloudTableClient {
 	return &CloudTableClient{HcClient: hcClient}
 }
 
-func CloudTableClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CloudTableClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

@@ -113,6 +113,78 @@ func (i *UpdateCgwInvoker) Invoke() (*model.UpdateCgwResponse, error) {
 	}
 }
 
+type BatchCreateResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateResourceTagsResponse), nil
+	}
+}
+
+type BatchDeleteResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteResourceTagsInvoker) Invoke() (*model.BatchDeleteResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteResourceTagsResponse), nil
+	}
+}
+
+type CountResourcesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountResourcesByTagsInvoker) Invoke() (*model.CountResourcesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountResourcesByTagsResponse), nil
+	}
+}
+
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ListResourcesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesByTagsInvoker) Invoke() (*model.ListResourcesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourcesByTagsResponse), nil
+	}
+}
+
+type ShowResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceTagsResponse), nil
+	}
+}
+
 type CreateVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,10 +9,10 @@ import (
 // ListPolicyTemplateRequest Request Object
 type ListPolicyTemplateRequest struct {
 
-	// 查询的偏移量
+	// 查询的偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询的数量，值区间[1-100]
+	// 查询的数量，值区间[1-100]。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 根据策略模板名字过滤结果。

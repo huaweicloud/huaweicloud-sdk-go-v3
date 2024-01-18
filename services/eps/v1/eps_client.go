@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/eps/v1/model"
 )
 
 type EpsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewEpsClient(hcClient *http_client.HcHttpClient) *EpsClient {
+func NewEpsClient(hcClient *httpclient.HcHttpClient) *EpsClient {
 	return &EpsClient{HcClient: hcClient}
 }
 
-func EpsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func EpsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

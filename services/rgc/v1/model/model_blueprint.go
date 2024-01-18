@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Blueprint 蓝图。
+// Blueprint 模板。
 type Blueprint struct {
 
-	// 蓝图ID。
+	// 模板ID。
 	BlueprintProductId *string `json:"blueprint_product_id,omitempty"`
 
-	// 蓝图版本。
+	// 模板版本。
 	BlueprintProductVersion *string `json:"blueprint_product_version,omitempty"`
 }
 

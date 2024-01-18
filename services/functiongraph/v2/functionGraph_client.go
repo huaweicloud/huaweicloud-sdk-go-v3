@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/functiongraph/v2/model"
 )
 
 type FunctionGraphClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewFunctionGraphClient(hcClient *http_client.HcHttpClient) *FunctionGraphClient {
+func NewFunctionGraphClient(hcClient *httpclient.HcHttpClient) *FunctionGraphClient {
 	return &FunctionGraphClient{HcClient: hcClient}
 }
 
-func FunctionGraphClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func FunctionGraphClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

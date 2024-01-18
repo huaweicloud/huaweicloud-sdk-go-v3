@@ -3,6 +3,8 @@ package region
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+	"sort"
+	"strings"
 )
 
 var (
@@ -73,6 +75,8 @@ var (
 		"https://cts.tr-west-1.myhuaweicloud.cn")
 	ME_EAST_1 = region.NewRegion("me-east-1",
 		"https://cts.me-east-1.myhuaweicloud.com")
+	EU_WEST_0 = region.NewRegion("eu-west-0",
+		"https://cts.eu-west-0.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -99,9 +103,19 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-4": AP_SOUTHEAST_4,
 	"tr-west-1":      TR_WEST_1,
 	"me-east-1":      ME_EAST_1,
+	"eu-west-0":      EU_WEST_0,
 }
 
 var provider = region.DefaultProviderChain("CTS")
+
+func getRegionIds() []string {
+	ids := make([]string, 0, len(staticFields))
+	for key := range staticFields {
+		ids = append(ids, key)
+	}
+	sort.Strings(ids)
+	return ids
+}
 
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
@@ -116,5 +130,5 @@ func ValueOf(regionId string) *region.Region {
 	if _, ok := staticFields[regionId]; ok {
 		return staticFields[regionId]
 	}
-	panic(fmt.Sprintf("unexpected regionId: %s", regionId))
+	panic(fmt.Sprintf("region id '%s' is not in the following supported regions of service 'CTS': [%s]", regionId, strings.Join(getRegionIds(), ", ")))
 }

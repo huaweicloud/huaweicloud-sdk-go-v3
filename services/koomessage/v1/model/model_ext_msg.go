@@ -26,7 +26,7 @@ type ExtMsg struct {
 	// 依赖的快应用引擎版本号，长度范围为1-50个字符。 > action_type=OPEN_QUICK必填，其他不填。
 	DependEngineVer *string `json:"depend_engine_ver,omitempty"`
 
-	// 第三方服务名，长度范围为1-50个字符。 > action_type=OPEN_QUICK必填，其他不填。
+	// 第三方服务名，长度范围为1-50个字符。 > action_type=OPEN_QUICK或OPEN_APP必填，其他不填。
 	ThirdServiceName *string `json:"third_service_name,omitempty"`
 }
 

@@ -1,22 +1,106 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/metastudio/v1/model"
 )
 
 type MetaStudioClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewMetaStudioClient(hcClient *http_client.HcHttpClient) *MetaStudioClient {
+func NewMetaStudioClient(hcClient *httpclient.HcHttpClient) *MetaStudioClient {
 	return &MetaStudioClient{HcClient: hcClient}
 }
 
-func MetaStudioClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func MetaStudioClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
+}
+
+// CreateDialogUrl 创建对话链接
+//
+// 该接口用于创建对话链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateDialogUrl(request *model.CreateDialogUrlRequest) (*model.CreateDialogUrlResponse, error) {
+	requestDef := GenReqDefForCreateDialogUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDialogUrlResponse), nil
+	}
+}
+
+// CreateDialogUrlInvoker 创建对话链接
+func (c *MetaStudioClient) CreateDialogUrlInvoker(request *model.CreateDialogUrlRequest) *CreateDialogUrlInvoker {
+	requestDef := GenReqDefForCreateDialogUrl()
+	return &CreateDialogUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSmartChatJob 查询数字人智能交互任务
+//
+// 该接口用于查询数字人智能交互任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowSmartChatJob(request *model.ShowSmartChatJobRequest) (*model.ShowSmartChatJobResponse, error) {
+	requestDef := GenReqDefForShowSmartChatJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSmartChatJobResponse), nil
+	}
+}
+
+// ShowSmartChatJobInvoker 查询数字人智能交互任务
+func (c *MetaStudioClient) ShowSmartChatJobInvoker(request *model.ShowSmartChatJobRequest) *ShowSmartChatJobInvoker {
+	requestDef := GenReqDefForShowSmartChatJob()
+	return &ShowSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartSmartChatJob 启动数字人智能交互任务
+//
+// 该接口用于启动数字人智能交互任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) StartSmartChatJob(request *model.StartSmartChatJobRequest) (*model.StartSmartChatJobResponse, error) {
+	requestDef := GenReqDefForStartSmartChatJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartSmartChatJobResponse), nil
+	}
+}
+
+// StartSmartChatJobInvoker 启动数字人智能交互任务
+func (c *MetaStudioClient) StartSmartChatJobInvoker(request *model.StartSmartChatJobRequest) *StartSmartChatJobInvoker {
+	requestDef := GenReqDefForStartSmartChatJob()
+	return &StartSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopSmartChatJob 结束数字人智能交互任务
+//
+// 该接口用于结束数字人智能交互任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) StopSmartChatJob(request *model.StopSmartChatJobRequest) (*model.StopSmartChatJobResponse, error) {
+	requestDef := GenReqDefForStopSmartChatJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopSmartChatJobResponse), nil
+	}
+}
+
+// StopSmartChatJobInvoker 结束数字人智能交互任务
+func (c *MetaStudioClient) StopSmartChatJobInvoker(request *model.StopSmartChatJobRequest) *StopSmartChatJobInvoker {
+	requestDef := GenReqDefForStopSmartChatJob()
+	return &StopSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDigitalAsset 创建资产
@@ -526,6 +610,27 @@ func (c *MetaStudioClient) DeleteFileInvoker(request *model.DeleteFileRequest) *
 	return &DeleteFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateOnceCode 创建一次性鉴权码
+//
+// 该接口用于创建一次性鉴权码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateOnceCode(request *model.CreateOnceCodeRequest) (*model.CreateOnceCodeResponse, error) {
+	requestDef := GenReqDefForCreateOnceCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOnceCodeResponse), nil
+	}
+}
+
+// CreateOnceCodeInvoker 创建一次性鉴权码
+func (c *MetaStudioClient) CreateOnceCodeInvoker(request *model.CreateOnceCodeRequest) *CreateOnceCodeInvoker {
+	requestDef := GenReqDefForCreateOnceCode()
+	return &CreateOnceCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePictureModelingByUrlJob 基于图片URL创建照片建模任务
 //
 // 该接口用于从URL中获取图片进行照片建模任务。
@@ -608,6 +713,216 @@ func (c *MetaStudioClient) ShowPictureModelingJob(request *model.ShowPictureMode
 func (c *MetaStudioClient) ShowPictureModelingJobInvoker(request *model.ShowPictureModelingJobRequest) *ShowPictureModelingJobInvoker {
 	requestDef := GenReqDefForShowPictureModelingJob()
 	return &ShowPictureModelingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRobot 创建应用
+//
+// 该接口用于创建应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateRobot(request *model.CreateRobotRequest) (*model.CreateRobotResponse, error) {
+	requestDef := GenReqDefForCreateRobot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRobotResponse), nil
+	}
+}
+
+// CreateRobotInvoker 创建应用
+func (c *MetaStudioClient) CreateRobotInvoker(request *model.CreateRobotRequest) *CreateRobotInvoker {
+	requestDef := GenReqDefForCreateRobot()
+	return &CreateRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRobot 删除应用
+//
+// 该接口用于删除应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteRobot(request *model.DeleteRobotRequest) (*model.DeleteRobotResponse, error) {
+	requestDef := GenReqDefForDeleteRobot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRobotResponse), nil
+	}
+}
+
+// DeleteRobotInvoker 删除应用
+func (c *MetaStudioClient) DeleteRobotInvoker(request *model.DeleteRobotRequest) *DeleteRobotInvoker {
+	requestDef := GenReqDefForDeleteRobot()
+	return &DeleteRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRobot 查询应用列表
+//
+// 该接口用于查询应用列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListRobot(request *model.ListRobotRequest) (*model.ListRobotResponse, error) {
+	requestDef := GenReqDefForListRobot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRobotResponse), nil
+	}
+}
+
+// ListRobotInvoker 查询应用列表
+func (c *MetaStudioClient) ListRobotInvoker(request *model.ListRobotRequest) *ListRobotInvoker {
+	requestDef := GenReqDefForListRobot()
+	return &ListRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRobot 查询应用详情
+//
+// 该接口用于查询应用详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowRobot(request *model.ShowRobotRequest) (*model.ShowRobotResponse, error) {
+	requestDef := GenReqDefForShowRobot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRobotResponse), nil
+	}
+}
+
+// ShowRobotInvoker 查询应用详情
+func (c *MetaStudioClient) ShowRobotInvoker(request *model.ShowRobotRequest) *ShowRobotInvoker {
+	requestDef := GenReqDefForShowRobot()
+	return &ShowRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRobot 修改应用
+//
+// 该接口用于修改应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateRobot(request *model.UpdateRobotRequest) (*model.UpdateRobotResponse, error) {
+	requestDef := GenReqDefForUpdateRobot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRobotResponse), nil
+	}
+}
+
+// UpdateRobotInvoker 修改应用
+func (c *MetaStudioClient) UpdateRobotInvoker(request *model.UpdateRobotRequest) *UpdateRobotInvoker {
+	requestDef := GenReqDefForUpdateRobot()
+	return &UpdateRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSmartChatRoom 创建智能交互对话直播间
+//
+// 该接口用于创建智能交互对话直播间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateSmartChatRoom(request *model.CreateSmartChatRoomRequest) (*model.CreateSmartChatRoomResponse, error) {
+	requestDef := GenReqDefForCreateSmartChatRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSmartChatRoomResponse), nil
+	}
+}
+
+// CreateSmartChatRoomInvoker 创建智能交互对话直播间
+func (c *MetaStudioClient) CreateSmartChatRoomInvoker(request *model.CreateSmartChatRoomRequest) *CreateSmartChatRoomInvoker {
+	requestDef := GenReqDefForCreateSmartChatRoom()
+	return &CreateSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSmartChatRoom 删除智能交互对话直播间
+//
+// 该接口用于删除智能交互对话直播间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteSmartChatRoom(request *model.DeleteSmartChatRoomRequest) (*model.DeleteSmartChatRoomResponse, error) {
+	requestDef := GenReqDefForDeleteSmartChatRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSmartChatRoomResponse), nil
+	}
+}
+
+// DeleteSmartChatRoomInvoker 删除智能交互对话直播间
+func (c *MetaStudioClient) DeleteSmartChatRoomInvoker(request *model.DeleteSmartChatRoomRequest) *DeleteSmartChatRoomInvoker {
+	requestDef := GenReqDefForDeleteSmartChatRoom()
+	return &DeleteSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmartChatRooms 查询智能交互对话直播间列表
+//
+// 该接口用于智能交互对话直播间列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartChatRooms(request *model.ListSmartChatRoomsRequest) (*model.ListSmartChatRoomsResponse, error) {
+	requestDef := GenReqDefForListSmartChatRooms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartChatRoomsResponse), nil
+	}
+}
+
+// ListSmartChatRoomsInvoker 查询智能交互对话直播间列表
+func (c *MetaStudioClient) ListSmartChatRoomsInvoker(request *model.ListSmartChatRoomsRequest) *ListSmartChatRoomsInvoker {
+	requestDef := GenReqDefForListSmartChatRooms()
+	return &ListSmartChatRoomsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSmartChatRoom 查询智能交互对话直播间详情
+//
+// 该接口用于查询智能交互对话直播间详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowSmartChatRoom(request *model.ShowSmartChatRoomRequest) (*model.ShowSmartChatRoomResponse, error) {
+	requestDef := GenReqDefForShowSmartChatRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSmartChatRoomResponse), nil
+	}
+}
+
+// ShowSmartChatRoomInvoker 查询智能交互对话直播间详情
+func (c *MetaStudioClient) ShowSmartChatRoomInvoker(request *model.ShowSmartChatRoomRequest) *ShowSmartChatRoomInvoker {
+	requestDef := GenReqDefForShowSmartChatRoom()
+	return &ShowSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSmartChatRoom 更新智能交互对话直播间信息
+//
+// 该接口用于智能交互对话直播间信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateSmartChatRoom(request *model.UpdateSmartChatRoomRequest) (*model.UpdateSmartChatRoomResponse, error) {
+	requestDef := GenReqDefForUpdateSmartChatRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSmartChatRoomResponse), nil
+	}
+}
+
+// UpdateSmartChatRoomInvoker 更新智能交互对话直播间信息
+func (c *MetaStudioClient) UpdateSmartChatRoomInvoker(request *model.UpdateSmartChatRoomRequest) *UpdateSmartChatRoomInvoker {
+	requestDef := GenReqDefForUpdateSmartChatRoom()
+	return &UpdateSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteSmartLiveCommand 控制数字人直播过程

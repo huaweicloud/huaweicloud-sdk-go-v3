@@ -1,21 +1,21 @@
 package v3
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/classroom/v3/model"
 )
 
 type ClassroomClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewClassroomClient(hcClient *http_client.HcHttpClient) *ClassroomClient {
+func NewClassroomClient(hcClient *httpclient.HcHttpClient) *ClassroomClient {
 	return &ClassroomClient{HcClient: hcClient}
 }
 
-func ClassroomClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func ClassroomClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

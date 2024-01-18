@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// CreatePersistentStorageReq 创建WKS存储
+// CreatePersistentStorageReq 创建WKS存储。
 type CreatePersistentStorageReq struct {
 
-	// WKS存储名称,名称需满足如下规则: 1. 名称允许可见字符或空格，不可为全空格 2. 长度1~128个字符
+	// WKS存储名称,名称需满足如下规则: 1. 名称允许可见字符或空格，不可为全空格。 2. 长度1~128个字符。
 	Name string `json:"name"`
 
 	StorageMetadata *Storage `json:"storage_metadata"`

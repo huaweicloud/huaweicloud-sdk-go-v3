@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DeleteUserStorageAttachmentReq 删除个人存储及关联
+// DeleteUserStorageAttachmentReq 删除个人存储及关联。
 type DeleteUserStorageAttachmentReq struct {
 
-	// 用户名，请求数量区间 [1, 200]
+	// 用户名，请求数量区间 [1, 200]。
 	Items *[]string `json:"items,omitempty"`
 }
 

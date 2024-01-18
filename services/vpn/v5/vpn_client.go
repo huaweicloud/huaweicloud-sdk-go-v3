@@ -1,21 +1,21 @@
 package v5
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpn/v5/model"
 )
 
 type VpnClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewVpnClient(hcClient *http_client.HcHttpClient) *VpnClient {
+func NewVpnClient(hcClient *httpclient.HcHttpClient) *VpnClient {
 	return &VpnClient{HcClient: hcClient}
 }
 
-func VpnClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func VpnClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
@@ -206,6 +206,132 @@ func (c *VpnClient) UpdateCgw(request *model.UpdateCgwRequest) (*model.UpdateCgw
 func (c *VpnClient) UpdateCgwInvoker(request *model.UpdateCgwRequest) *UpdateCgwInvoker {
 	requestDef := GenReqDefForUpdateCgw()
 	return &UpdateCgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateResourceTags 批量添加资源标签
+//
+// 为指定实例批量添加标签,标签管理服务需要使用该接口批量管理实例的标签.一个资源上最多有20个标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) BatchCreateResourceTags(request *model.BatchCreateResourceTagsRequest) (*model.BatchCreateResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateResourceTagsResponse), nil
+	}
+}
+
+// BatchCreateResourceTagsInvoker 批量添加资源标签
+func (c *VpnClient) BatchCreateResourceTagsInvoker(request *model.BatchCreateResourceTagsRequest) *BatchCreateResourceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateResourceTags()
+	return &BatchCreateResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteResourceTags 批量删除资源标签
+//
+// 为指定实例批量删除标签,标签管理服务需要使用该接口批量管理实例的标签.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) BatchDeleteResourceTags(request *model.BatchDeleteResourceTagsRequest) (*model.BatchDeleteResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteResourceTagsResponse), nil
+	}
+}
+
+// BatchDeleteResourceTagsInvoker 批量删除资源标签
+func (c *VpnClient) BatchDeleteResourceTagsInvoker(request *model.BatchDeleteResourceTagsRequest) *BatchDeleteResourceTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteResourceTags()
+	return &BatchDeleteResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountResourcesByTags 查询标签下资源实例数量
+//
+// 使用标签过滤实例,并查询实例数量,需要各服务提供查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) CountResourcesByTags(request *model.CountResourcesByTagsRequest) (*model.CountResourcesByTagsResponse, error) {
+	requestDef := GenReqDefForCountResourcesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountResourcesByTagsResponse), nil
+	}
+}
+
+// CountResourcesByTagsInvoker 查询标签下资源实例数量
+func (c *VpnClient) CountResourcesByTagsInvoker(request *model.CountResourcesByTagsRequest) *CountResourcesByTagsInvoker {
+	requestDef := GenReqDefForCountResourcesByTags()
+	return &CountResourcesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectTags 查询项目下标签
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
+	requestDef := GenReqDefForListProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+// ListProjectTagsInvoker 查询项目下标签
+func (c *VpnClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
+	requestDef := GenReqDefForListProjectTags()
+	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourcesByTags 按标签查询资源
+//
+// 使用标签过滤实例,并查询实例数量,需要各服务提供查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListResourcesByTags(request *model.ListResourcesByTagsRequest) (*model.ListResourcesByTagsResponse, error) {
+	requestDef := GenReqDefForListResourcesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesByTagsResponse), nil
+	}
+}
+
+// ListResourcesByTagsInvoker 按标签查询资源
+func (c *VpnClient) ListResourcesByTagsInvoker(request *model.ListResourcesByTagsRequest) *ListResourcesByTagsInvoker {
+	requestDef := GenReqDefForListResourcesByTags()
+	return &ListResourcesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceTags 查询资源标签
+//
+// 查询指定实例的标签信息,标签管理服务需要使用该接口查询指定实例的全部标签数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*model.ShowResourceTagsResponse, error) {
+	requestDef := GenReqDefForShowResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceTagsResponse), nil
+	}
+}
+
+// ShowResourceTagsInvoker 查询资源标签
+func (c *VpnClient) ShowResourceTagsInvoker(request *model.ShowResourceTagsRequest) *ShowResourceTagsInvoker {
+	requestDef := GenReqDefForShowResourceTags()
+	return &ShowResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVpnConnection 创建VPN连接

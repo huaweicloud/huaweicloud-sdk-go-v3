@@ -9,7 +9,7 @@ import (
 // DeleteStorageClaimRequest Request Object
 type DeleteStorageClaimRequest struct {
 
-	// WKS存储ID
+	// WKS存储ID。
 	StorageId string `json:"storage_id"`
 
 	Body *DeleteStorageClaimReq `json:"body,omitempty"`

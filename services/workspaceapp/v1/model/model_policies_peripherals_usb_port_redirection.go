@@ -9,7 +9,7 @@ import (
 // PoliciesPeripheralsUsbPortRedirection USB端口重定向。
 type PoliciesPeripheralsUsbPortRedirection struct {
 
-	// 是否开启USB端口重定向。 - false：表示关闭。 - true：表示开启。
+	// 是否开启USB端口重定向。取值为： - false：表示关闭。 - true：表示开启。
 	UsbEnable *bool `json:"usb_enable,omitempty"`
 
 	Options *UsbPortRedirectionOptions `json:"options,omitempty"`

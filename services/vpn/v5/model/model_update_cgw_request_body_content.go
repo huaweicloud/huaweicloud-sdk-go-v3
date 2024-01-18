@@ -10,6 +10,8 @@ type UpdateCgwRequestBodyContent struct {
 
 	// 网关名称
 	Name *string `json:"name,omitempty"`
+
+	CaCertificate *CaCertificateRequest `json:"ca_certificate,omitempty"`
 }
 
 func (o UpdateCgwRequestBodyContent) String() string {

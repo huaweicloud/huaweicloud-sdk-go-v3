@@ -9,7 +9,7 @@ import (
 // ReinstallServerRequest Request Object
 type ReinstallServerRequest struct {
 
-	// 服务器唯一标识
+	// 服务器唯一标识。
 	ServerId string `json:"server_id"`
 
 	Body *ReinstallServerReq `json:"body,omitempty"`

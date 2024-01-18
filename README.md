@@ -238,6 +238,7 @@ proxy := config.NewProxy().
     WithHost("proxy.huaweicloud.com").
     WithPort(80).
     // Configure the username and password if the proxy requires authentication
+    // In this example, username and password are stored in environment variables. Please configure the environment variables PROXY_USERNAME and PROXY_PASSWORD before running this example.
     WithUsername(os.Getenv("PROXY_USERNAME")).
     WithPassword(os.Getenv("PROXY_PASSWORD"))
 httpConfig := config.DefaultHttpConfig().WithProxy(proxy)
@@ -468,8 +469,8 @@ Getting Authentication from providers is supported since `v0.0.96`
 
 | Environment Variables  |  Notice |
 | ------------ | ------------ |
-| HUAWEICLOUD_SDK_AK  | Required，AccessKey  |
-| HUAWEICLOUD_SDK_SK  |  Required，SecretKey |
+| HUAWEICLOUD_SDK_AK  | Required, AccessKey  |
+| HUAWEICLOUD_SDK_SK  |  Required, SecretKey |
 | HUAWEICLOUD_SDK_SECURITY_TOKEN  | Optional, this parameter needs to be specified when using temporary ak/sk  |
 | HUAWEICLOUD_SDK_PROJECT_ID  | Optional, used for regional services, required in multi-ProjectId scenarios  |
 | HUAWEICLOUD_SDK_DOMAIN_ID  | Optional, used for global services  |
@@ -551,8 +552,8 @@ The profile will be read from the user's home directory by default, linux`~/.hua
 
 | Configuration Parameters  |  Notice |
 | ------------ | ------------ |
-| ak  | Required，AccessKey  |
-| sk  |  Required，SecretKey |
+| ak  | Required, AccessKey  |
+| sk  |  Required, SecretKey |
 | security_token  | Optional, this parameter needs to be specified when using temporary ak/sk  |
 | project_id  | Optional, used for regional services, required in multi-ProjectId scenarios  |
 | domain_id  | Optional, used for global services  |
@@ -794,7 +795,25 @@ cred := basic.NewCredentialsBuilder().
 
 ##### 3.3.2 Region configuration [:top:](#user-manual-top)
 
-###### 3.3.2.1 Environment variable [:top:](#user-manual-top)
+###### 3.3.2.1 Code [:top:](#user-manual-top)
+
+```go
+import (
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+)
+
+// Create a region with custom region id and endpoint
+reg := region.NewRegion("cn-north-9", "https://ecs.cn-north-9.myhuaweicloud.com")
+
+client := ecs.NewEcsClient(
+    ecs.EcsClientBuilder().
+    WithRegion(reg).
+    WithCredential(auth).
+    Build())
+```
+
+###### 3.3.2.2 Environment variable [:top:](#user-manual-top)
 
 Specified by environment variable, the format is `HUAWEICLOUD_SDK_REGION_{SERVICE_NAME}_{REGION_ID}={endpoint}`
 
@@ -816,7 +835,7 @@ A region corresponding to multiple endpoints is supported since **v0.1.60**, if 
 
 The format is `HUAWEICLOUD_SDK_REGION_{SERVICE_NAME}_{REGION_ID}={endpoint1},{endpoint2}`, separate multiple endpoints with commas, such as `HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_9=https://ecs.cn-north-9.myhuaweicloud.com,https://ecs.cn-north-9.myhuaweicloud.cn`
 
-###### 3.3.2.2 Profile [:top:](#user-manual-top)
+###### 3.3.2.3 Profile [:top:](#user-manual-top)
 
 The profile will be read from the user's home directory by default, linux`~/.huaweicloud/regions.yaml`, windows`C:\Users\USER_NAME\.huaweicloud\regions.yaml`, the default file may not exist, but if the file exists and the content format is incorrect, an exception will be thrown for parsing errors.
 
@@ -825,7 +844,7 @@ The path to the profile can be modified by configuring the environment variable 
 The file content format is as follows:
 
 ```yaml
-# Serivce name is case-insensitive
+# Service name is case-insensitive
 ECS:
   - id: 'cn-north-1'
     endpoint: 'https://ecs.cn-north-1.myhuaweicloud.com'
@@ -846,9 +865,9 @@ ECS:
       - 'https://ecs.cn-north-1.myhuaweicloud.cn'
 ```
 
-###### 3.3.2.3 Region supply chain [:top:](#user-manual-top)
+###### 3.3.2.4 Region supply chain [:top:](#user-manual-top)
 
-The default order is **environment variables -> profile -> region defined in SDK**, if the region is not found in the above ways, an exception will be thrown.
+The default lookup order is **environment variables -> profile -> region defined in SDK** of method **region.ValueOf(regionId)**, if the region is not found in the above ways, an exception will be thrown.
 
 ```go
 import "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/region"

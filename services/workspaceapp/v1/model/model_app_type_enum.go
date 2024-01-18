@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AppTypeEnum 服务器组应用类型 * `SESSION_DESKTOP_APP` - 会话桌面app * `COMMON_APP` - 普通app
+// AppTypeEnum 服务器组应用类型： * `SESSION_DESKTOP_APP` - 会话桌面app * `COMMON_APP` - 普通app
 type AppTypeEnum struct {
 	value string
 }

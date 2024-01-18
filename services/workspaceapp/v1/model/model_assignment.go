@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Assignment 授权描述
+// Assignment 授权描述。
 type Assignment struct {
 
-	// 策略ID
+	// 策略ID。
 	PolicyStatementId string `json:"policy_statement_id"`
 
-	// 目标
+	// 目标。
 	Attach string `json:"attach"`
 
 	AttachType *AttachType `json:"attach_type"`

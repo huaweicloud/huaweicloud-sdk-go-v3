@@ -9,7 +9,7 @@ import (
 // ListManagedAccountsForParentResponse Response Object
 type ListManagedAccountsForParentResponse struct {
 
-	// 纳管的Account。
+	// 纳管的账号信息。
 	ManagedAccounts *[]ManagedAccount `json:"managed_accounts,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

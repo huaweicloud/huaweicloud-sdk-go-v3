@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ConfigurationRequestDataSpecPostStart 生命周期管理组件配置启动后处理。  type为\"lifecycle\"时，配置此参数。
+// ConfigurationRequestDataSpecPostStart 生命周期管理组件配置启动后处理。  ConfigurationItem.type为\"lifecycle\"时，配置此参数。
 type ConfigurationRequestDataSpecPostStart struct {
 	Exec *LifeCycleConfigurationExec `json:"exec,omitempty"`
 }

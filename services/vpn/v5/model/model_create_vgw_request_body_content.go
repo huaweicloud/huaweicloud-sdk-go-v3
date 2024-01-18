@@ -41,13 +41,15 @@ type CreateVgwRequestBodyContent struct {
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	MasterEip *CreateRequestEip `json:"master_eip,omitempty"`
-
-	SlaveEip *CreateRequestEip `json:"slave_eip,omitempty"`
-
 	Eip1 *CreateRequestEip `json:"eip1,omitempty"`
 
 	Eip2 *CreateRequestEip `json:"eip2,omitempty"`
+
+	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
+	AccessPrivateIp1 *string `json:"access_private_ip_1,omitempty"`
+
+	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+	AccessPrivateIp2 *string `json:"access_private_ip_2,omitempty"`
 
 	// VPN网关北向类型，默认为公网(public)
 	NetworkType *CreateVgwRequestBodyContentNetworkType `json:"network_type,omitempty"`
@@ -60,6 +62,9 @@ type CreateVgwRequestBodyContent struct {
 
 	// ha模式
 	HaMode *CreateVgwRequestBodyContentHaMode `json:"ha_mode,omitempty"`
+
+	// 标签
+	Tags *[]VpnResourceTag `json:"tags,omitempty"`
 }
 
 func (o CreateVgwRequestBodyContent) String() string {
@@ -123,9 +128,11 @@ type CreateVgwRequestBodyContentFlavor struct {
 }
 
 type CreateVgwRequestBodyContentFlavorEnum struct {
-	BASIC         CreateVgwRequestBodyContentFlavor
-	PROFESSIONAL1 CreateVgwRequestBodyContentFlavor
-	PROFESSIONAL2 CreateVgwRequestBodyContentFlavor
+	BASIC                      CreateVgwRequestBodyContentFlavor
+	PROFESSIONAL1              CreateVgwRequestBodyContentFlavor
+	PROFESSIONAL2              CreateVgwRequestBodyContentFlavor
+	PROFESSIONAL1_NON_FIXED_IP CreateVgwRequestBodyContentFlavor
+	PROFESSIONAL2_NON_FIXED_IP CreateVgwRequestBodyContentFlavor
 }
 
 func GetCreateVgwRequestBodyContentFlavorEnum() CreateVgwRequestBodyContentFlavorEnum {
@@ -138,6 +145,12 @@ func GetCreateVgwRequestBodyContentFlavorEnum() CreateVgwRequestBodyContentFlavo
 		},
 		PROFESSIONAL2: CreateVgwRequestBodyContentFlavor{
 			value: "Professional2",
+		},
+		PROFESSIONAL1_NON_FIXED_IP: CreateVgwRequestBodyContentFlavor{
+			value: "Professional1-NonFixedIP",
+		},
+		PROFESSIONAL2_NON_FIXED_IP: CreateVgwRequestBodyContentFlavor{
+			value: "Professional2-NonFixedIP",
 		},
 	}
 }

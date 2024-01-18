@@ -197,6 +197,18 @@ func (i *DeleteRuleGroupInvoker) Invoke() (*model.DeleteRuleGroupResponse, error
 	}
 }
 
+type DeleteScanJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScanJobInvoker) Invoke() (*model.DeleteScanJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScanJobResponse), nil
+	}
+}
+
 type ListBucketsInvoker struct {
 	*invoker.BaseInvoker
 }

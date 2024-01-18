@@ -12,7 +12,7 @@ type ListTargetsOfPolicyGroupRequest struct {
 	// 策略组id。
 	PolicyGroupId string `json:"policy_group_id"`
 
-	// 应用对象的类型。 - USER：表示用户 - USERGROUP：表示用户组。 - APPGROUP：应用组。 - OU：组织单元。 - ALl：所有类型
+	// 应用对象的类型： - USER：表示用户。 - USERGROUP：表示用户组。 - APPGROUP：应用组。 - OU：组织单元。 - ALl：所有类型
 	TargetType *string `json:"target_type,omitempty"`
 }
 

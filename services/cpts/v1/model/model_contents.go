@@ -11,13 +11,13 @@ type Contents struct {
 	// 事务id，若不为0表示此卡片为事务；为0表示非事务
 	ContentId *int32 `json:"content_id,omitempty"`
 
-	// content
+	// 内容
 	Content *[]Content `json:"content,omitempty"`
 
 	// 排序索引标识
 	Index *int32 `json:"index,omitempty"`
 
-	// selected_temp_name
+	// 选择的事务或者用例名称
 	SelectedTempName *string `json:"selected_temp_name,omitempty"`
 
 	// 数据（循环、条件控制器作用的数据）

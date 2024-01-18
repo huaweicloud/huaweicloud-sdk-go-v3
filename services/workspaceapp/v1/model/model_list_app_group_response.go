@@ -9,10 +9,10 @@ import (
 // ListAppGroupResponse Response Object
 type ListAppGroupResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 应用组列表
+	// 应用组列表。
 	Items          *[]AppGroup `json:"items,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// IdentityCenterGroup Identity Center的group信息。
+// IdentityCenterGroup Identity Center的用户组信息。
 type IdentityCenterGroup struct {
 
-	// Identity Center的group ID。
+	// Identity Center的用户组ID。
 	GroupId *string `json:"group_id,omitempty"`
 
-	// group name。
+	// 用户组名称。
 	GroupName *string `json:"group_name,omitempty"`
 
-	// Identity Center的group描述信息。
+	// Identity Center的用户组描述信息。
 	Description *string `json:"description,omitempty"`
 }
 

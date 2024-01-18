@@ -1,21 +1,21 @@
 package v3
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/gaussdbforopengauss/v3/model"
 )
 
 type GaussDBforopenGaussClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewGaussDBforopenGaussClient(hcClient *http_client.HcHttpClient) *GaussDBforopenGaussClient {
+func NewGaussDBforopenGaussClient(hcClient *httpclient.HcHttpClient) *GaussDBforopenGaussClient {
 	return &GaussDBforopenGaussClient{HcClient: hcClient}
 }
 
-func GaussDBforopenGaussClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func GaussDBforopenGaussClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

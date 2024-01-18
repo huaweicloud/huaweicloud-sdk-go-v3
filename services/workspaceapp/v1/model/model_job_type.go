@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// JobType job类型 * `CREATE_SERVER` - 创建服务器 * `DELETE_SERVER` - 删除服务器 * `UPDATE_FREEZE_STATUS` - 修改服务器冻结状态 * `CREATE_SERVER_IMAGE` - 构建镜像 * `REINSTALL_OS` - 重装操作系统 * `CHANGE_SERVER_IMAGE` - 更换镜像 * `REJOIN_DOMAIN` - 重新加域 * `MIGRATE_SERVER` - 迁移服务器 * `UPGRADE_ACCESS_AGENT` - hda升级 * `UPDATE_SERVER_TSVI` - 更新虚拟会话IP * `SCHEDULED_TASK` - 定时任务job * `COLLECT_APS_LOG` - 收集aps日志
+// JobType job类型： * `CREATE_SERVER` - 创建服务器 * `DELETE_SERVER` - 删除服务器 * `UPDATE_FREEZE_STATUS` - 修改服务器冻结状态 * `CREATE_SERVER_IMAGE` - 构建镜像 * `REINSTALL_OS` - 重装操作系统 * `CHANGE_SERVER_IMAGE` - 更换镜像 * `REJOIN_DOMAIN` - 重新加域 * `MIGRATE_SERVER` - 迁移服务器 * `UPGRADE_ACCESS_AGENT` - hda升级 * `UPDATE_SERVER_TSVI` - 更新虚拟会话IP * `SCHEDULED_TASK` - 定时任务job * `COLLECT_HDA_LOG` - 收集hda日志 * `COLLECT_APS_LOG` - 收集aps日志
 type JobType struct {
 	value string
 }
@@ -26,6 +26,7 @@ type JobTypeEnum struct {
 	UPGRADE_ACCESS_AGENT JobType
 	UPDATE_SERVER_TSVI   JobType
 	SCHEDULED_TASK       JobType
+	COLLECT_HDA_LOG      JobType
 	COLLECT_APS_LOG      JobType
 }
 
@@ -63,6 +64,9 @@ func GetJobTypeEnum() JobTypeEnum {
 		},
 		SCHEDULED_TASK: JobType{
 			value: "SCHEDULED_TASK",
+		},
+		COLLECT_HDA_LOG: JobType{
+			value: "COLLECT_HDA_LOG",
 		},
 		COLLECT_APS_LOG: JobType{
 			value: "COLLECT_APS_LOG",

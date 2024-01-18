@@ -9,10 +9,10 @@ import (
 // ListStorageAssignmentResponse Response Object
 type ListStorageAssignmentResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 查询用户存储声明配置
+	// 查询用户存储声明配置。
 	Items          *[]PersistentStorageAssignment `json:"items,omitempty"`
 	HttpStatusCode int                            `json:"-"`
 }

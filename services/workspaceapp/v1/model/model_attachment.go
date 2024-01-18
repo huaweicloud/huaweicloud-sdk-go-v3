@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Attachment 配置关联成员
+// Attachment 配置关联成员。
 type Attachment struct {
 
-	// 目标
+	// 目标。
 	Attach string `json:"attach"`
 
 	AttachType *AttachType `json:"attach_type"`

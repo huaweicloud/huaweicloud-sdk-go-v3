@@ -1,21 +1,21 @@
 package v3
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsinspector/v3/model"
 )
 
 type CodeArtsInspectorClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCodeArtsInspectorClient(hcClient *http_client.HcHttpClient) *CodeArtsInspectorClient {
+func NewCodeArtsInspectorClient(hcClient *httpclient.HcHttpClient) *CodeArtsInspectorClient {
 	return &CodeArtsInspectorClient{HcClient: hcClient}
 }
 
-func CodeArtsInspectorClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CodeArtsInspectorClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

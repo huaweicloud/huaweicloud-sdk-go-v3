@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ServerHaltType 停机类型 * `SOFT` - 普通 * `HARD` - 强制
+// ServerHaltType 停机类型： * `SOFT` - 普通 * `HARD` - 强制
 type ServerHaltType struct {
 	value string
 }

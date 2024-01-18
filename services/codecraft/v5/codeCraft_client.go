@@ -1,21 +1,21 @@
 package v5
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codecraft/v5/model"
 )
 
 type CodeCraftClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCodeCraftClient(hcClient *http_client.HcHttpClient) *CodeCraftClient {
+func NewCodeCraftClient(hcClient *httpclient.HcHttpClient) *CodeCraftClient {
 	return &CodeCraftClient{HcClient: hcClient}
 }
 
-func CodeCraftClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CodeCraftClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

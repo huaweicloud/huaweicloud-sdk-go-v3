@@ -1,21 +1,21 @@
 package v3
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codehub/v3/model"
 )
 
 type CodeHubClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCodeHubClient(hcClient *http_client.HcHttpClient) *CodeHubClient {
+func NewCodeHubClient(hcClient *httpclient.HcHttpClient) *CodeHubClient {
 	return &CodeHubClient{HcClient: hcClient}
 }
 
-func CodeHubClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CodeHubClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

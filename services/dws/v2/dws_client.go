@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dws/v2/model"
 )
 
 type DwsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewDwsClient(hcClient *http_client.HcHttpClient) *DwsClient {
+func NewDwsClient(hcClient *httpclient.HcHttpClient) *DwsClient {
 	return &DwsClient{HcClient: hcClient}
 }
 
-func DwsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func DwsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
@@ -2256,6 +2256,27 @@ func (c *DwsClient) ListUpdateRecord(request *model.ListUpdateRecordRequest) (*m
 func (c *DwsClient) ListUpdateRecordInvoker(request *model.ListUpdateRecordRequest) *ListUpdateRecordInvoker {
 	requestDef := GenReqDefForListUpdateRecord()
 	return &ListUpdateRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWorkloadPlans 查询资源管理计划列表
+//
+// 查询集群中所有资源管理计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListWorkloadPlans(request *model.ListWorkloadPlansRequest) (*model.ListWorkloadPlansResponse, error) {
+	requestDef := GenReqDefForListWorkloadPlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkloadPlansResponse), nil
+	}
+}
+
+// ListWorkloadPlansInvoker 查询资源管理计划列表
+func (c *DwsClient) ListWorkloadPlansInvoker(request *model.ListWorkloadPlansRequest) *ListWorkloadPlansInvoker {
+	requestDef := GenReqDefForListWorkloadPlans()
+	return &ListWorkloadPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWorkloadQueue 查询工作负载队列

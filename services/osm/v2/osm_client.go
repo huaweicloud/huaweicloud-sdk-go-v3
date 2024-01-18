@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/osm/v2/model"
 )
 
 type OsmClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewOsmClient(hcClient *http_client.HcHttpClient) *OsmClient {
+func NewOsmClient(hcClient *httpclient.HcHttpClient) *OsmClient {
 	return &OsmClient{HcClient: hcClient}
 }
 
-func OsmClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func OsmClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

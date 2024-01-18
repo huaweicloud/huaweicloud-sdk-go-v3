@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Content policy content。
+// Content 控制策略内容。
 type Content struct {
 
 	// 英文策略内容。

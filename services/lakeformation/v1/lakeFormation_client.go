@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/lakeformation/v1/model"
 )
 
 type LakeFormationClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewLakeFormationClient(hcClient *http_client.HcHttpClient) *LakeFormationClient {
+func NewLakeFormationClient(hcClient *httpclient.HcHttpClient) *LakeFormationClient {
 	return &LakeFormationClient{HcClient: hcClient}
 }
 
-func LakeFormationClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func LakeFormationClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// StorageFolderMountType 用户访问APS的应用时,对应NAS存储目录在APS上的挂载策略 * `USER` - 仅挂载个人目录 * `SHARE` - 仅挂载共享目录 * `ANY` - 挂载目录不做限制(个人和共享NAS存储目录都会自动挂载)
+// StorageFolderMountType 用户访问APS的应用时，对应NAS存储目录在APS上的挂载策略。 * `USER` - 仅挂载个人目录。 * `SHARE` - 仅挂载共享目录。 * `ANY` - 挂载目录不做限制(个人和共享NAS存储目录都会自动挂载)。
 type StorageFolderMountType struct {
 	value string
 }

@@ -9,11 +9,8 @@ import (
 // ListConfigRuleComplianceRequest Request Object
 type ListConfigRuleComplianceRequest struct {
 
-	// 账号ID。
-	AccountId string `json:"account_id"`
-
-	// 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-	XSecurityToken *string `json:"X-Security-Token,omitempty"`
+	// 纳管账号ID。
+	ManagedAccountId string `json:"managed_account_id"`
 }
 
 func (o ListConfigRuleComplianceRequest) String() string {

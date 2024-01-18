@@ -8,7 +8,7 @@ import (
 
 type AutoLogoutOptions struct {
 
-	// 会话断连保留时长（分钟）
+	// 会话断连保留时长（分钟）。
 	SbcLogoutWaitingTime *int32 `json:"sbc_logout_waiting_time,omitempty"`
 }
 

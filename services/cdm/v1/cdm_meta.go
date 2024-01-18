@@ -322,7 +322,7 @@ func GenReqDefForStartJob() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1.1/{project_id}/clusters/{cluster_id}/cdm/job/{job_name}/start").
 		WithResponse(new(model.StartJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
@@ -332,6 +332,10 @@ func GenReqDefForStartJob() *def.HttpRequestDef {
 		WithName("JobName").
 		WithJsonTag("job_name").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

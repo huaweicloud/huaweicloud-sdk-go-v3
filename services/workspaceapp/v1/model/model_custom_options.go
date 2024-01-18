@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// CustomOptions 自定义策略设置项
+// CustomOptions 自定义策略设置项。
 type CustomOptions struct {
 
-	// 配置项1内容
+	// 配置项1内容。
 	CustomConfiguration1Rule *string `json:"custom_configuration1_rule,omitempty"`
 }
 

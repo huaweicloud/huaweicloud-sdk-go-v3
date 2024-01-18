@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/organizations/v1/model"
 )
 
 type OrganizationsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewOrganizationsClient(hcClient *http_client.HcHttpClient) *OrganizationsClient {
+func NewOrganizationsClient(hcClient *httpclient.HcHttpClient) *OrganizationsClient {
 	return &OrganizationsClient{HcClient: hcClient}
 }
 
-func OrganizationsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func OrganizationsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

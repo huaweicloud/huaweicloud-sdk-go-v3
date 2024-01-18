@@ -14,7 +14,7 @@ type SmsTemplateVariableAttrReq struct {
 	// 变量索引，对应模板内容变量索引
 	VariableIndex int32 `json:"variable_index"`
 
-	// 变量类型，目前支持：PHONE|CHARDIGIT|DATETIME|MONEY|TEXT|NEWTEXT
+	// 变量类型，目前支持：PHONE|CHARDIGIT|DATETIME|MONEY|TEXT|NEWTEXT|LONGTEXT
 	VariableType string `json:"variable_type"`
 }
 

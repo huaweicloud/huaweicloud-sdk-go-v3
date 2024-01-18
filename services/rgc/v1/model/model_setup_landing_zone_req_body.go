@@ -9,7 +9,7 @@ import (
 // SetupLandingZoneReqBody The request body of the CreateResourceShare operation.
 type SetupLandingZoneReqBody struct {
 
-	// 管理员账号创建Identity Center用户所用邮箱。
+	// 管理员纳管账号创建Identity Center用户所用邮箱。
 	IdentityStoreEmail string `json:"identity_store_email"`
 
 	// 主区域。
@@ -18,10 +18,10 @@ type SetupLandingZoneReqBody struct {
 	// 设置Landing Zone的类型。包括CREATE、REPAIR以及UPDATE。
 	SetupLandingZoneActionType string `json:"setup_landing_zone_action_type"`
 
-	// 当前账号纳管的区域。
+	// 当前纳管账号纳管的区域。
 	RegionConfigurationList []RegionConfigurationList `json:"region_configuration_list"`
 
-	// 基础环境的账号体系。
+	// 基础环境的纳管账号体系。
 	OrganizationStructure []OrganizationStructureBaseLine `json:"organization_structure"`
 
 	// 是否允许区域拒绝，默认false。

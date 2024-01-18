@@ -9,7 +9,7 @@ import (
 // BatchUpdateTsviResponse Response Object
 type BatchUpdateTsviResponse struct {
 
-	// 任务ID
+	// 任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 // EnabledControl 开启控制策略信息。
 type EnabledControl struct {
 
-	// 管理账号ID。
+	// 管理纳管账号ID。
 	ManageAccountId *string `json:"manage_account_id,omitempty"`
 
 	// 控制策略标识。
@@ -27,10 +27,10 @@ type EnabledControl struct {
 	// 控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
 	Behavior *string `json:"behavior,omitempty"`
 
-	// 账号的创建来源，包括CUSTOM和RGC。
+	// 纳管账号的创建来源，包括CUSTOM和RGC。
 	Owner *string `json:"owner,omitempty"`
 
-	// regional/global。
+	// 区域选项，取值有两种分别是：区域的regional和全局的global。
 	RegionalPreference *string `json:"regional_preference,omitempty"`
 }
 

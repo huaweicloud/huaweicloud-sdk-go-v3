@@ -9,7 +9,7 @@ import (
 // LandingZoneErrorMessage Landing Zone错误信息。
 type LandingZoneErrorMessage struct {
 
-	// Landing Zone的错误级别。包括致命fatal和错误error。
+	// Landing Zone的错误级别。
 	Level *string `json:"level,omitempty"`
 
 	// Landing Zone详细的错误信息。

@@ -9,11 +9,11 @@ import (
 // ShowComplianceStatusForOrganizationUnitRequest Request Object
 type ShowComplianceStatusForOrganizationUnitRequest struct {
 
-	// OU ID。
+	// 注册OU ID。
 	ManagedOrganizationUnitId string `json:"managed_organization_unit_id"`
 
-	// 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
-	XSecurityToken *string `json:"X-Security-Token,omitempty"`
+	// 启用的控制策略信息。
+	ControlId *string `json:"control_id,omitempty"`
 }
 
 func (o ShowComplianceStatusForOrganizationUnitRequest) String() string {

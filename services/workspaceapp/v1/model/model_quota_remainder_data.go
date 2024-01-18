@@ -10,10 +10,10 @@ import (
 type QuotaRemainderData struct {
 	Type *QuotaResourceTypeEnum `json:"type,omitempty"`
 
-	// 剩余配额
+	// 剩余配额。
 	Remainder *int32 `json:"remainder,omitempty"`
 
-	// 所需配额
+	// 所需配额。
 	Need *int32 `json:"need,omitempty"`
 }
 

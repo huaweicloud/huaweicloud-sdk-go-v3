@@ -22,7 +22,7 @@ type JobInfo struct {
 
 	Status *JobStatus `json:"status,omitempty"`
 
-	// 子任务总数
+	// 子任务总数。
 	SubJobsTotal *int32 `json:"sub_jobs_total,omitempty"`
 }
 

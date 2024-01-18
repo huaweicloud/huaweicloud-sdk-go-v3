@@ -9,19 +9,19 @@ import (
 // ListServerGroupsRequest Request Object
 type ListServerGroupsRequest struct {
 
-	// 查询的偏移量
+	// 查询的偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询的数量，值区间[1-100]
+	// 查询的数量，值区间[1-100]。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 服务器组名称
+	// 服务器组名称。
 	ServerGroupName *string `json:"server_group_name,omitempty"`
 
-	// 服务器组唯一标识
+	// 服务器组唯一标识。
 	ServerGroupId *string `json:"server_group_id,omitempty"`
 
-	// 应用组类型(SESSION_DESKTOP_APP、COMMON_APP)
+	// 应用组类型： * `SESSION_DESKTOP_APP` - 会话桌面app * `COMMON_APP` - 普通app
 	AppType *string `json:"app_type,omitempty"`
 }
 

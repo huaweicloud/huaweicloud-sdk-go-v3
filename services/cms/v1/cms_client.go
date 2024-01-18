@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cms/v1/model"
 )
 
 type CmsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCmsClient(hcClient *http_client.HcHttpClient) *CmsClient {
+func NewCmsClient(hcClient *httpclient.HcHttpClient) *CmsClient {
 	return &CmsClient{HcClient: hcClient}
 }
 
-func CmsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func CmsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

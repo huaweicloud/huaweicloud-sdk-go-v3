@@ -9,7 +9,7 @@ import (
 // UnpublishAppRequest Request Object
 type UnpublishAppRequest struct {
 
-	// 应用组ID
+	// 应用组ID。
 	AppGroupId string `json:"app_group_id"`
 
 	Body *UnpublishAppReq `json:"body,omitempty"`

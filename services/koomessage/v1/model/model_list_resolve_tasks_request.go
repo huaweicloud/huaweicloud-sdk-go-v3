@@ -27,7 +27,7 @@ type ListResolveTasksRequest struct {
 	// 完整的短链连接地址。样例：km2g.cn/PDiWqc。
 	AimUrl *string `json:"aim_url,omitempty"`
 
-	//  智能信息解析任务创建开始时间。格式为：2019-10-12T07:20:50.522Z。  > 需同时传入end_time才能生效，单独传begin_time不会作为过滤条件。 > > 若不填，则默认查询24小时内创建的解析任务。
+	//  智能信息解析任务创建开始时间。格式为：2019-10-12T07:20:50.522Z。  > 需同时传入end_time才能生效，单独传begin_time不会作为过滤条件。 > > 若不填，则默认查询24小时内创建的解析任务。 > > 仅支持查询最近1年内创建的解析任务。
 	BeginTime *string `json:"begin_time,omitempty"`
 
 	//  智能信息解析任务创建结束时间。格式为：2019-10-12T07:20:50.522Z。  > 需同时传入begin_time才能生效，单独传end_time不会作为过滤条件。 > > 若不填，则默认查询24小时内创建的解析任务。

@@ -60,6 +60,27 @@ type FlightItineraryResult struct {
 	// 填开日期。
 	IssueDate *string `json:"issue_date,omitempty"`
 
+	// 增值税税额
+	Tax *string `json:"tax,omitempty"`
+
+	// 增值税税率
+	TaxRate *string `json:"tax_rate,omitempty"`
+
+	// 购买方名称
+	BuyerName *string `json:"buyer_name,omitempty"`
+
+	// 购买方纳税人识别号
+	BuyerId *string `json:"buyer_id,omitempty"`
+
+	// 发票号码
+	Number *string `json:"number,omitempty"`
+
+	// 国内国际标签
+	InternationalFlag *string `json:"international_flag,omitempty"`
+
+	// 开具状态
+	IssueStatus *string `json:"issue_status,omitempty"`
+
 	// 机票行程列表。
 	ItineraryList *[]ItineraryList `json:"itinerary_list,omitempty"`
 

@@ -1277,6 +1277,18 @@ func (i *ListUpdateRecordInvoker) Invoke() (*model.ListUpdateRecordResponse, err
 	}
 }
 
+type ListWorkloadPlansInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkloadPlansInvoker) Invoke() (*model.ListWorkloadPlansResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkloadPlansResponse), nil
+	}
+}
+
 type ListWorkloadQueueInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,7 +9,7 @@ import (
 // ShowPublishableAppRequest Request Object
 type ShowPublishableAppRequest struct {
 
-	// 应用组ID
+	// 应用组ID。
 	AppGroupId string `json:"app_group_id"`
 }
 

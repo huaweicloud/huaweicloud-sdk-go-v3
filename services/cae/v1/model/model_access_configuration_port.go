@@ -30,7 +30,7 @@ type AccessConfigurationPort struct {
 	// 安全策略。
 	Policy *AccessConfigurationPortPolicy `json:"policy,omitempty"`
 
-	Path *[]AccessConfigurationHttpPath `json:"path,omitempty"`
+	Paths *[]AccessConfigurationHttpPath `json:"paths,omitempty"`
 
 	// 用户选择的elb的ID。
 	ElbId *string `json:"elb_id,omitempty"`

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// PublishAppReq 发布应用请求
+// PublishAppReq 发布应用请求。
 type PublishAppReq struct {
 
-	// 发布应用列表(单次最多20个应用)
+	// 发布应用列表(单次最多20个应用)。
 	Items []PublishApp `json:"items"`
 }
 

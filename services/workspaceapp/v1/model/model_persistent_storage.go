@@ -7,24 +7,24 @@ import (
 	"strings"
 )
 
-// PersistentStorage WKS存储
+// PersistentStorage WKS存储。
 type PersistentStorage struct {
 
-	// WKS存储ID
+	// WKS存储ID。
 	Id *string `json:"id,omitempty"`
 
-	// 名称
+	// 名称。
 	Name *string `json:"name,omitempty"`
 
 	StorageMetadata *StorageMetadata `json:"storage_metadata,omitempty"`
 
-	// 创建时间
+	// 创建时间。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 个人目录声明数量
+	// 个人目录声明数量。
 	UserClaimCount *int32 `json:"user_claim_count,omitempty"`
 
-	// 共享目录声明数量
+	// 共享目录声明数量。
 	ShareClaimCount *int32 `json:"share_claim_count,omitempty"`
 }
 

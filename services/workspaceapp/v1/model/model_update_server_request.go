@@ -9,7 +9,7 @@ import (
 // UpdateServerRequest Request Object
 type UpdateServerRequest struct {
 
-	// 服务器唯一标识
+	// 服务器唯一标识。
 	ServerId string `json:"server_id"`
 
 	Body *UpdateServerReq `json:"body,omitempty"`

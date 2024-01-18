@@ -54,7 +54,7 @@ type Quota struct {
 	// 自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	SecurityPolicy int32 `json:"security_policy"`
 
-	// 单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个 LB下监听器配额实际未限制，但建议不要超过默认配额。
+	// 单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
 	ListenersPerLoadbalancer int32 `json:"listeners_per_loadbalancer"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// OrganizationalUnitType OU类型。 * CORE - 核心OU * CUSTOM - 自定义OU * ROOT - 根OU
+// OrganizationalUnitType 组织单元类型。 * CORE - 基础组织单元 * CUSTOM - 组织单元 * ROOT - ROOT
 type OrganizationalUnitType struct {
 	value string
 }

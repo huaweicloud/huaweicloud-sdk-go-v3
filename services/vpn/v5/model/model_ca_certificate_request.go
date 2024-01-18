@@ -9,6 +9,9 @@ import (
 // CaCertificateRequest 对端网关CA证书
 type CaCertificateRequest struct {
 
+	// 使用已有证书ID
+	Id *string `json:"id,omitempty"`
+
 	// 对端网关CA证书内容
 	Content *string `json:"content,omitempty"`
 }

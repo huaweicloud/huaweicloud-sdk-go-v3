@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartspipeline/v2/model"
 )
 
 type CodeArtsPipelineClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCodeArtsPipelineClient(hcClient *http_client.HcHttpClient) *CodeArtsPipelineClient {
+func NewCodeArtsPipelineClient(hcClient *httpclient.HcHttpClient) *CodeArtsPipelineClient {
 	return &CodeArtsPipelineClient{HcClient: hcClient}
 }
 
-func CodeArtsPipelineClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func CodeArtsPipelineClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

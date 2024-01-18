@@ -9,11 +9,11 @@ import (
 // CreateManagedAccountRequest 创建账号的基本信息。
 type CreateManagedAccountRequest struct {
 
-	// 账号名。
+	// 纳管账号名。
 	AccountName string `json:"account_name"`
 
-	// 账号邮箱。
-	AccountEmail string `json:"account_email"`
+	// 纳管账号邮箱。
+	AccountEmail *string `json:"account_email,omitempty"`
 
 	// 手机号码。
 	Phone *string `json:"phone,omitempty"`
@@ -24,10 +24,10 @@ type CreateManagedAccountRequest struct {
 	// Identity Center邮箱。
 	IdentityStoreEmail string `json:"identity_store_email"`
 
-	// 父OU ID。
+	// 父注册OU ID。
 	ParentOrganizationUnitId string `json:"parent_organization_unit_id"`
 
-	// 父OU名称。
+	// 父注册OU名称。
 	ParentOrganizationUnitName string `json:"parent_organization_unit_name"`
 
 	Blueprint *Blueprint `json:"blueprint,omitempty"`

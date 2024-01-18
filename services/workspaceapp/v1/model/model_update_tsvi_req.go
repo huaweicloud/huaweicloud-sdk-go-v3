@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// UpdateTsviReq 批量服务器更新虚拟会话IP配置请求内容
+// UpdateTsviReq 批量服务器更新虚拟会话IP配置请求内容。
 type UpdateTsviReq struct {
 
-	// 批量请求列表，一次请求数量区间 [1, 20]
+	// 批量请求列表，一次请求数量区间 [1, 20]。
 	Items []UpdateTsvi `json:"items"`
 }
 

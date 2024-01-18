@@ -9,10 +9,10 @@ import (
 // ListAppGroupAuthorizationResponse Response Object
 type ListAppGroupAuthorizationResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 授权信息
+	// 授权信息。
 	Authorizations *[]Authorization `json:"authorizations,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AttachType 关联对象类型 * `USER` -  用户 * `USER_GROUP` - 用户组
+// AttachType 关联对象类型： * `USER` -  用户 * `USER_GROUP` - 用户组
 type AttachType struct {
 	value string
 }

@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/metastudio/v1/model"
 )
 
+type CreateDialogUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDialogUrlInvoker) Invoke() (*model.CreateDialogUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDialogUrlResponse), nil
+	}
+}
+
+type ShowSmartChatJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmartChatJobInvoker) Invoke() (*model.ShowSmartChatJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmartChatJobResponse), nil
+	}
+}
+
+type StartSmartChatJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartSmartChatJobInvoker) Invoke() (*model.StartSmartChatJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartSmartChatJobResponse), nil
+	}
+}
+
+type StopSmartChatJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopSmartChatJobInvoker) Invoke() (*model.StopSmartChatJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopSmartChatJobResponse), nil
+	}
+}
+
 type CreateDigitalAssetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +341,18 @@ func (i *DeleteFileInvoker) Invoke() (*model.DeleteFileResponse, error) {
 	}
 }
 
+type CreateOnceCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOnceCodeInvoker) Invoke() (*model.CreateOnceCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOnceCodeResponse), nil
+	}
+}
+
 type CreatePictureModelingByUrlJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +398,126 @@ func (i *ShowPictureModelingJobInvoker) Invoke() (*model.ShowPictureModelingJobR
 		return nil, err
 	} else {
 		return result.(*model.ShowPictureModelingJobResponse), nil
+	}
+}
+
+type CreateRobotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRobotInvoker) Invoke() (*model.CreateRobotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRobotResponse), nil
+	}
+}
+
+type DeleteRobotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRobotInvoker) Invoke() (*model.DeleteRobotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRobotResponse), nil
+	}
+}
+
+type ListRobotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRobotInvoker) Invoke() (*model.ListRobotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRobotResponse), nil
+	}
+}
+
+type ShowRobotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRobotInvoker) Invoke() (*model.ShowRobotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRobotResponse), nil
+	}
+}
+
+type UpdateRobotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRobotInvoker) Invoke() (*model.UpdateRobotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRobotResponse), nil
+	}
+}
+
+type CreateSmartChatRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSmartChatRoomInvoker) Invoke() (*model.CreateSmartChatRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSmartChatRoomResponse), nil
+	}
+}
+
+type DeleteSmartChatRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSmartChatRoomInvoker) Invoke() (*model.DeleteSmartChatRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSmartChatRoomResponse), nil
+	}
+}
+
+type ListSmartChatRoomsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartChatRoomsInvoker) Invoke() (*model.ListSmartChatRoomsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartChatRoomsResponse), nil
+	}
+}
+
+type ShowSmartChatRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmartChatRoomInvoker) Invoke() (*model.ShowSmartChatRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmartChatRoomResponse), nil
+	}
+}
+
+type UpdateSmartChatRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSmartChatRoomInvoker) Invoke() (*model.UpdateSmartChatRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSmartChatRoomResponse), nil
 	}
 }
 

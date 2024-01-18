@@ -237,6 +237,7 @@ proxy := config.NewProxy().
     WithHost("proxy.huaweicloud.com").
     WithPort(80).
     // 如果代理需要认证，请配置用户名和密码
+    // 本示例中的账号和密码保存在环境变量中，运行本示例前请先在本地环境中配置环境变量PROXY_USERNAME和PROXY_PASSWORD
     WithUsername(os.Getenv("PROXY_USERNAME")).
     WithPassword(os.Getenv("PROXY_PASSWORD"))
 httpConfig := config.DefaultHttpConfig().WithProxy(proxy)
@@ -809,7 +810,25 @@ cred := basic.NewCredentialsBuilder().
 
 ##### 3.3.2 Region配置 [:top:](#用户手册-top)
 
-###### 3.3.2.1 环境变量 [:top:](#用户手册-top)
+###### 3.3.2.1 代码配置  [:top:](#用户手册-top)
+
+```go
+import (
+    ecs "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+)
+
+// 使用自定义的regionId和endpoint创建一个region
+reg := region.NewRegion("cn-north-9", "https://ecs.cn-north-9.myhuaweicloud.com")
+
+client := ecs.NewEcsClient(
+    ecs.EcsClientBuilder().
+    WithRegion(reg).
+    WithCredential(auth).
+    Build())
+```
+
+###### 3.3.2.2 环境变量 [:top:](#用户手册-top)
 
 通过环境变量配置，格式为`HUAWEICLOUD_SDK_REGION_{SERVICE_NAME}_{REGION_ID}={endpoint}`
 
@@ -831,7 +850,7 @@ set HUAWEICLOUD_SDK_REGION_IOTDA_AP_SOUTHEAST_1=https://iotda.ap-southwest-1.myh
 
 格式为`HUAWEICLOUD_SDK_REGION_{SERVICE_NAME}_{REGION_ID}={endpoint1},{endpoint2}`, 多个endpoint之间用英文逗号隔开, 比如`HUAWEICLOUD_SDK_REGION_ECS_CN_NORTH_9=https://ecs.cn-north-9.myhuaweicloud.com,https://ecs.cn-north-9.myhuaweicloud.cn`
 
-###### 3.3.2.2 文件配置 [:top:](#用户手册-top)
+###### 3.3.2.3 文件配置 [:top:](#用户手册-top)
 
 通过yaml文件配置，默认会从用户主目录下读取region配置文件，linux为`~/.huaweicloud/regions.yaml`，windows为`C:\Users\USER_NAME\.huaweicloud\regions.yaml`，默认配置文件可以不存在，但是如果配置文件存在且内容格式不对会解析错误抛出异常。
 
@@ -861,9 +880,9 @@ ECS:
       - 'https://ecs.cn-north-1.myhuaweicloud.cn'
 ```
 
-###### 3.3.2.3 Region提供链 [:top:](#用户手册-top)
+###### 3.3.2.4 Region提供链 [:top:](#用户手册-top)
 
-默认查找顺序为 **环境变量 -> 配置文件 -> SDK中已定义Region**，以上方式都找不到region会抛出异常，获取region示例：
+**region.ValueOf(regionId)** 默认查找顺序为 **环境变量 -> 配置文件 -> SDK中已定义Region**，以上方式都找不到region会抛出异常，获取region示例：
 
 ```go
 import "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/region"

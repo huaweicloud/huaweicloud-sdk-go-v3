@@ -171,6 +171,7 @@ type SmartLiveRoomBaseInfoLastJobStatusEnum struct {
 	SUCCEED    SmartLiveRoomBaseInfoLastJobStatus
 	FAILED     SmartLiveRoomBaseInfoLastJobStatus
 	CANCELED   SmartLiveRoomBaseInfoLastJobStatus
+	BLOCKED    SmartLiveRoomBaseInfoLastJobStatus
 }
 
 func GetSmartLiveRoomBaseInfoLastJobStatusEnum() SmartLiveRoomBaseInfoLastJobStatusEnum {
@@ -189,6 +190,9 @@ func GetSmartLiveRoomBaseInfoLastJobStatusEnum() SmartLiveRoomBaseInfoLastJobSta
 		},
 		CANCELED: SmartLiveRoomBaseInfoLastJobStatus{
 			value: "CANCELED",
+		},
+		BLOCKED: SmartLiveRoomBaseInfoLastJobStatus{
+			value: "BLOCKED",
 		},
 	}
 }

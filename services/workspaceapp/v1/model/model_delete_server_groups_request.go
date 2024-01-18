@@ -9,7 +9,7 @@ import (
 // DeleteServerGroupsRequest Request Object
 type DeleteServerGroupsRequest struct {
 
-	// 服务器组唯一标识
+	// 服务器组唯一标识。
 	ServerGroupId string `json:"server_group_id"`
 }
 

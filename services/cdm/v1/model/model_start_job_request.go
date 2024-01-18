@@ -14,6 +14,8 @@ type StartJobRequest struct {
 
 	// 作业名称
 	JobName string `json:"job_name"`
+
+	Body *CdmStartJobReq `json:"body,omitempty"`
 }
 
 func (o StartJobRequest) String() string {

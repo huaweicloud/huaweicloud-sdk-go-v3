@@ -293,6 +293,18 @@ func (i *DeregisterOrganizationalUnitInvoker) Invoke() (*model.DeregisterOrganiz
 	}
 }
 
+type EnrollAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnrollAccountInvoker) Invoke() (*model.EnrollAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnrollAccountResponse), nil
+	}
+}
+
 type ListManagedAccountsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +338,18 @@ func (i *ListManagedOrganizationalUnitsInvoker) Invoke() (*model.ListManagedOrga
 		return nil, err
 	} else {
 		return result.(*model.ListManagedOrganizationalUnitsResponse), nil
+	}
+}
+
+type ReRegisterOrganizationalUnitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ReRegisterOrganizationalUnitInvoker) Invoke() (*model.ReRegisterOrganizationalUnitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ReRegisterOrganizationalUnitResponse), nil
 	}
 }
 
@@ -386,6 +410,18 @@ func (i *ShowOperationInvoker) Invoke() (*model.ShowOperationResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowOperationResponse), nil
+	}
+}
+
+type UnEnrollAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnEnrollAccountInvoker) Invoke() (*model.UnEnrollAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnEnrollAccountResponse), nil
 	}
 }
 

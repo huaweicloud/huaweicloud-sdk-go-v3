@@ -401,6 +401,18 @@ func (i *RecognizeRealEstateCertificateInvoker) Invoke() (*model.RecognizeRealEs
 	}
 }
 
+type RecognizeSealInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeSealInvoker) Invoke() (*model.RecognizeSealResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeSealResponse), nil
+	}
+}
+
 type RecognizeSmartDocumentRecognizerInvoker struct {
 	*invoker.BaseInvoker
 }

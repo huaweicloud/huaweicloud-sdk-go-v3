@@ -50,6 +50,9 @@ type CreateVpnConnectionRequestBodyContent struct {
 
 	// 连接的HA角色
 	HaRole *CreateVpnConnectionRequestBodyContentHaRole `json:"ha_role,omitempty"`
+
+	// 标签
+	Tags *[]VpnResourceTag `json:"tags,omitempty"`
 }
 
 func (o CreateVpnConnectionRequestBodyContent) String() string {

@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// ScalingPolicy 弹性伸缩策略
+// ScalingPolicy 弹性伸缩策略。
 type ScalingPolicy struct {
 
-	// 是否启用策略,默认启用 'true': 启用 'false': 禁用
+	// 是否启用策略,默认启用： 'true': 启用 'false': 禁用
 	Enable *bool `json:"enable,omitempty"`
 
-	// 最大扩容数量
+	// 最大扩容数量。
 	MaxScalingAmount int32 `json:"max_scaling_amount"`
 
-	// 单次扩容数量
+	// 单次扩容数量。
 	SingleExpansionCount int32 `json:"single_expansion_count"`
 
 	ScalingPolicyBySession *ScalingPolicyBySession `json:"scaling_policy_by_session"`

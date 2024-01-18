@@ -8,7 +8,7 @@ import (
 
 // CreatePromInstanceRequest Request Object
 type CreatePromInstanceRequest struct {
-	Body *PromInstanceEpsModel `json:"body,omitempty"`
+	Body *PromInstanceRequestModel `json:"body,omitempty"`
 }
 
 func (o CreatePromInstanceRequest) String() string {

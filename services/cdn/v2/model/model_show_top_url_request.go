@@ -21,7 +21,7 @@ type ShowTopUrlRequest struct {
 	// - 参数类型支持：flux(流量),req_num(请求数)
 	StatType string `json:"stat_type"`
 
-	// 服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
+	// 服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为global(全球)
 	ServiceArea *string `json:"service_area,omitempty"`
 
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。

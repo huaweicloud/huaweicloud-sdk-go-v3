@@ -14,6 +14,10 @@ type AvailabilityZones struct {
 
 	Professional2 *VpnGatewayAvailabilityZones `json:"professional2,omitempty"`
 
+	Professional1NonFixedIP *VpnGatewayAvailabilityZones `json:"Professional1-NonFixedIP,omitempty"`
+
+	Professional2NonFixedIP *VpnGatewayAvailabilityZones `json:"Professional2-NonFixedIP,omitempty"`
+
 	Gm *VpnGatewayAvailabilityZones `json:"gm,omitempty"`
 }
 

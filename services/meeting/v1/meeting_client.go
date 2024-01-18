@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/meeting/v1/model"
 )
 
 type MeetingClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewMeetingClient(hcClient *http_client.HcHttpClient) *MeetingClient {
+func NewMeetingClient(hcClient *httpclient.HcHttpClient) *MeetingClient {
 	return &MeetingClient{HcClient: hcClient}
 }
 
-func MeetingClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("v1.MeetingCredentials")
+func MeetingClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("v1.MeetingCredentials")
 	return builder
 }
 

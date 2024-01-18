@@ -11,7 +11,7 @@ import (
 
 type Bandwidth struct {
 
-	// 智能显示传输。取值为：DISABLE：表示关闭。ENABLE：表示开启。DIAGNOSTIC：诊断模式
+	// 智能显示传输。取值为：DISABLE：表示关闭。ENABLE：表示开启。DIAGNOSTIC：诊断模式。
 	IntelligentDataTransportFlag *BandwidthIntelligentDataTransportFlag `json:"intelligent_data_transport_flag,omitempty"`
 
 	// 是否开启总带宽控制。取值为：false：表示关闭。true：表示开启。

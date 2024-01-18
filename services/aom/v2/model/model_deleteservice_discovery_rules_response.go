@@ -15,7 +15,7 @@ type DeleteserviceDiscoveryRulesResponse struct {
 	// 响应信息描述。
 	ErrorMessage *string `json:"errorMessage,omitempty"`
 
-	// 响应状态码。
+	// 响应状态码（不再使用）。
 	ResponseStatus *int32 `json:"responseStatus,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

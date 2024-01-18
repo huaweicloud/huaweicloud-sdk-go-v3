@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/rabbitmq/v2/model"
 )
 
 type RabbitMQClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewRabbitMQClient(hcClient *http_client.HcHttpClient) *RabbitMQClient {
+func NewRabbitMQClient(hcClient *httpclient.HcHttpClient) *RabbitMQClient {
 	return &RabbitMQClient{HcClient: hcClient}
 }
 
-func RabbitMQClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func RabbitMQClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

@@ -8,10 +8,10 @@ import (
 
 type FlavorLink struct {
 
-	// 快捷链接标记名称
+	// 快捷链接标记名称。
 	Rel *string `json:"rel,omitempty"`
 
-	// 对应快捷链接
+	// 对应快捷链接。
 	Hrel *string `json:"hrel,omitempty"`
 }
 

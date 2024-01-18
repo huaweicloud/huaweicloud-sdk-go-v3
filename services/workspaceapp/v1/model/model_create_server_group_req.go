@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// CreateServerGroupReq 创建服务器组请求
+// CreateServerGroupReq 创建服务器组请求。
 type CreateServerGroupReq struct {
 
-	// 服务器组名称，名称需满足如下规则: 1. 由中文，英文大小写，数字，_-组成，不能有空格 2. 长度范围1~64个字符
+	// 服务器组名称，名称需满足如下规则: 1. 由中文，英文大小写，数字，_-组成，不能有空格。 2. 长度范围1~64个字符。
 	Name string `json:"name"`
 
-	// 服务器组关联的镜像ID，用于创建对应组下的云服务器
+	// 服务器组关联的镜像ID，用于创建对应组下的云服务器。
 	ImageId string `json:"image_id"`
 
 	// 服务器组的镜像产品ID，当镜像为云市场镜像时，该字段必填。
@@ -22,7 +22,7 @@ type CreateServerGroupReq struct {
 
 	OsType *OsTypeEnum `json:"os_type"`
 
-	// 服务器组描述
+	// 服务器组描述。
 	Description *string `json:"description,omitempty"`
 
 	RoutePolicy *RoutePolicy `json:"route_policy,omitempty"`
@@ -30,21 +30,21 @@ type CreateServerGroupReq struct {
 	// 产品ID。 > - 获取方式详见产品套餐管理ListProduct：\"GET  /v1/{project_id}/product\"。
 	ProductId string `json:"product_id"`
 
-	// 虚拟私有云ID
+	// 虚拟私有云ID。
 	VpcId string `json:"vpc_id"`
 
-	// 网卡对应的子网ID
+	// 网卡对应的子网ID。
 	SubnetId string `json:"subnet_id"`
 
 	SystemDiskType *VolumeType `json:"system_disk_type"`
 
-	// 磁盘容量，单位GB
+	// 磁盘容量，单位GB。
 	SystemDiskSize int32 `json:"system_disk_size"`
 
-	// 默认组织名称
+	// 默认组织名称。
 	OuName *string `json:"ou_name,omitempty"`
 
-	// 云服务器系统盘对应的存储池的ID
+	// 云服务器系统盘对应的存储池的ID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 可用分区。 > - 将服务创建到指定的可用分区，如果不指定则使用系统随机的可用分区。 > - 获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone\"。
@@ -52,14 +52,14 @@ type CreateServerGroupReq struct {
 
 	IpVirtual *IpVirtual `json:"ip_virtual,omitempty"`
 
-	// 是否为vdi单会话模式
+	// 是否为vdi单会话模式。
 	IsVdi *bool `json:"is_vdi,omitempty"`
 
 	AppType *AppTypeEnum `json:"app_type,omitempty"`
 
 	ExtraSessionType *ExtraSessionTypeEnum `json:"extra_session_type,omitempty"`
 
-	// 付费会话数，单位/个
+	// 付费会话数，单位/个。
 	ExtraSessionSize *int32 `json:"extra_session_size,omitempty"`
 }
 

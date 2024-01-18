@@ -9,7 +9,7 @@ import (
 // ListSessionByUserNameRequest Request Object
 type ListSessionByUserNameRequest struct {
 
-	// 用户名
+	// 用户名。
 	UserName string `json:"user_name"`
 }
 

@@ -9,7 +9,7 @@ import (
 // UpdatePolicyGroupResponse Response Object
 type UpdatePolicyGroupResponse struct {
 
-	// 被修改策略主键
+	// 被修改策略主键。
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

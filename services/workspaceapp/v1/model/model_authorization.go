@@ -7,28 +7,28 @@ import (
 	"strings"
 )
 
-// Authorization 用户授权信息
+// Authorization 用户授权信息。
 type Authorization struct {
 
-	// 授权ID
+	// 授权ID。
 	Id *string `json:"id,omitempty"`
 
-	// 用户ID(或用户组ID)
+	// 用户ID(或用户组ID)。
 	AccountId *string `json:"account_id,omitempty"`
 
-	// 用户名(或用户组名)
+	// 用户名(或用户组名)。
 	Account *string `json:"account,omitempty"`
 
-	// 应用ID (按照组授权时,该字段为空)
+	// 应用ID (按照组授权时,该字段为空)。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 应用名称 (按照组授权时,该字段为空)
+	// 应用名称 (按照组授权时,该字段为空)。
 	AppName *string `json:"app_name,omitempty"`
 
-	// 应用组ID
+	// 应用组ID。
 	AppGroupId *string `json:"app_group_id,omitempty"`
 
-	// 应用组名称
+	// 应用组名称。
 	AppGroupName *string `json:"app_group_name,omitempty"`
 
 	AuthorizationType *AuthorizationTypeEnum `json:"authorization_type,omitempty"`
@@ -37,10 +37,10 @@ type Authorization struct {
 
 	PlatformType *PlatformTypeEnum `json:"platform_type,omitempty"`
 
-	// 域名城
+	// 域名城。
 	Domain *string `json:"domain,omitempty"`
 
-	// 发布时间
+	// 发布时间。
 	CreateAt *sdktime.SdkTime `json:"create_at,omitempty"`
 }
 

@@ -9,10 +9,10 @@ import (
 // CheckQuotaResponse Response Object
 type CheckQuotaResponse struct {
 
-	// 配额是否足够true：足够 false：不足
+	// 配额是否足够true：足够 false：不足。
 	IsEnough *bool `json:"is_enough,omitempty"`
 
-	// 配额剩余数量信息
+	// 配额剩余数量信息。
 	QuotaRemainder *[]QuotaRemainderData `json:"quota_remainder,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

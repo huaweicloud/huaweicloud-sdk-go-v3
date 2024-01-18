@@ -9,7 +9,7 @@ import (
 // UpdateShareFolderAssignmentRequest Request Object
 type UpdateShareFolderAssignmentRequest struct {
 
-	// WKS存储ID
+	// WKS存储ID。
 	StorageId string `json:"storage_id"`
 
 	Body *AssignShareFolderReq `json:"body,omitempty"`

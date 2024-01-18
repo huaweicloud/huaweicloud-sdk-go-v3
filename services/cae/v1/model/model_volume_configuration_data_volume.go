@@ -24,6 +24,9 @@ type VolumeConfigurationDataVolume struct {
 	// 云存储子类型。
 	ResourceSubType *VolumeConfigurationDataVolumeResourceSubType `json:"resource_sub_type,omitempty"`
 
+	// 设置目录或文件缺省权限，默认值0027，sfs3.0类型的云存储不支持配置此参数。
+	Umask *string `json:"umask,omitempty"`
+
 	MountInfo *[]VolumeConfigurationMountInfo `json:"mount_info,omitempty"`
 }
 

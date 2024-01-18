@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreatePolicyTemplateReq 创建策略模板的请求
+// CreatePolicyTemplateReq 创建策略模板的请求。
 type CreatePolicyTemplateReq struct {
 	PolicyGroup *PolicyTemplate `json:"policy_group"`
 }

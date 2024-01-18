@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Nic 云服务对应的网卡信息
+// Nic 云服务对应的网卡信息。
 type Nic struct {
 
-	// IP地址
+	// IP地址。
 	IpAddress *string `json:"ip_address,omitempty"`
 
-	// 网卡对应的子网ID
+	// 网卡对应的子网ID。
 	SubnetId *string `json:"subnet_id,omitempty"`
 }
 

@@ -18,7 +18,7 @@ type ListDigitalHumanVideoRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 第三方用户ID。 > *不允许输入中文。
+	// 第三方用户ID。 > * 不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询。
@@ -47,6 +47,9 @@ type ListDigitalHumanVideoRequest struct {
 
 	// 输出视频资产名称。
 	AssetName *string `json:"asset_name,omitempty"`
+
+	// 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+	JobType *string `json:"job_type,omitempty"`
 }
 
 func (o ListDigitalHumanVideoRequest) String() string {

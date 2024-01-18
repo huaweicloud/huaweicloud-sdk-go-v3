@@ -31,25 +31,25 @@ type Control struct {
 	// 控制策略所属服务。
 	Service *string `json:"service,omitempty"`
 
-	// 业务控制策略（SCP），配置规则。
+	// 服务控制策略（SCP），配置规则。
 	Implementation *string `json:"implementation,omitempty"`
 
 	// 控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
 	Behavior *string `json:"behavior,omitempty"`
 
-	// 账号的创建来源，包括CUSTOM和RGC。
+	// 纳管账号的创建来源，包括CUSTOM和RGC。
 	Owner *string `json:"owner,omitempty"`
 
-	// 严重性(High)。
+	// 控制策略严重性。
 	Severity *string `json:"severity,omitempty"`
 
 	// 控制策略目标。
 	ControlObjective *string `json:"control_objective,omitempty"`
 
-	// 版本。
+	// 控制策略版本。
 	Version *string `json:"version,omitempty"`
 
-	// 发布时间。
+	// 控制策略发布时间。
 	ReleaseDate *sdktime.SdkTime `json:"release_date,omitempty"`
 }
 

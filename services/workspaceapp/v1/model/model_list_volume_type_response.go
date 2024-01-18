@@ -9,7 +9,7 @@ import (
 // ListVolumeTypeResponse Response Object
 type ListVolumeTypeResponse struct {
 
-	// 磁盘列表
+	// 磁盘列表。
 	VolumeTypes    *[]VolumeTypeInfo `json:"volume_types,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

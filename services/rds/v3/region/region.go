@@ -3,6 +3,8 @@ package region
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
+	"sort"
+	"strings"
 )
 
 var (
@@ -16,6 +18,8 @@ var (
 		"https://rds.cn-east-2.myhuaweicloud.com")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
 		"https://rds.cn-east-3.myhuaweicloud.com")
+	CN_EAST_5 = region.NewRegion("cn-east-5",
+		"https://rds.cn-east-5.myhuaweicloud.com")
 	CN_SOUTH_1 = region.NewRegion("cn-south-1",
 		"https://rds.cn-south-1.myhuaweicloud.com")
 	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
@@ -50,6 +54,8 @@ var (
 		"https://rds.ae-ad-1.myhuaweicloud.com")
 	EU_WEST_101 = region.NewRegion("eu-west-101",
 		"https://rds.eu-west-101.myhuaweicloud.eu")
+	EU_WEST_0 = region.NewRegion("eu-west-0",
+		"https://rds.eu-west-0.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -58,6 +64,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-1":     CN_NORTH_1,
 	"cn-east-2":      CN_EAST_2,
 	"cn-east-3":      CN_EAST_3,
+	"cn-east-5":      CN_EAST_5,
 	"cn-south-1":     CN_SOUTH_1,
 	"cn-southwest-2": CN_SOUTHWEST_2,
 	"ap-southeast-2": AP_SOUTHEAST_2,
@@ -75,9 +82,19 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-4": AP_SOUTHEAST_4,
 	"ae-ad-1":        AE_AD_1,
 	"eu-west-101":    EU_WEST_101,
+	"eu-west-0":      EU_WEST_0,
 }
 
 var provider = region.DefaultProviderChain("RDS")
+
+func getRegionIds() []string {
+	ids := make([]string, 0, len(staticFields))
+	for key := range staticFields {
+		ids = append(ids, key)
+	}
+	sort.Strings(ids)
+	return ids
+}
 
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
@@ -92,5 +109,5 @@ func ValueOf(regionId string) *region.Region {
 	if _, ok := staticFields[regionId]; ok {
 		return staticFields[regionId]
 	}
-	panic(fmt.Sprintf("unexpected regionId: %s", regionId))
+	panic(fmt.Sprintf("region id '%s' is not in the following supported regions of service 'RDS': [%s]", regionId, strings.Join(getRegionIds(), ", ")))
 }

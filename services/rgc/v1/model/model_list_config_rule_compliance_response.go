@@ -9,9 +9,10 @@ import (
 // ListConfigRuleComplianceResponse Response Object
 type ListConfigRuleComplianceResponse struct {
 
-	// 账号ID
+	// 纳管账号ID
 	AccountId *string `json:"account_id,omitempty"`
 
+	// Config规则合规性信息
 	ConfigRuleCompliances *[]ConfigRuleCompliance `json:"config_rule_compliances,omitempty"`
 	HttpStatusCode        int                     `json:"-"`
 }

@@ -15,7 +15,7 @@ type RegionConfigurationList struct {
 	// 区域名字。
 	Region string `json:"region"`
 
-	// 账号类型logging,security。 * ENABLED - 开启 * DISABLED - 关闭
+	// 纳管账号类型LOGGING,SECURITY。
 	RegionConfigurationStatus RegionConfigurationListRegionConfigurationStatus `json:"region_configuration_status"`
 }
 

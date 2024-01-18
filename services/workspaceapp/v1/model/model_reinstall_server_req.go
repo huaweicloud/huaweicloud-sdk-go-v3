@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ReinstallServerReq 重建服务器的请求体
+// ReinstallServerReq 重建服务器的请求体。
 type ReinstallServerReq struct {
 
-	// 是否自动升级hda版本
+	// 是否自动升级hda版本。
 	UpdateAccessAgent *bool `json:"update_access_agent,omitempty"`
 }
 

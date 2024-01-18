@@ -9,7 +9,7 @@ import (
 // ListSessionTypeResponse Response Object
 type ListSessionTypeResponse struct {
 
-	// 会话列表
+	// 会话列表。
 	SessionTypes   *[]SessionTypeEntity `json:"session_types,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

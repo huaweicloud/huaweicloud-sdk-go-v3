@@ -11,7 +11,7 @@ import (
 
 type Sbc struct {
 
-	// 连接策略。 - DISABLED：已禁用 - AUTO_DISCONNECT：自动断开 - AUTO_LOCK：自动锁屏
+	// 连接策略： - DISABLED：已禁用 - AUTO_DISCONNECT：自动断开 - AUTO_LOCK：自动锁屏
 	SbcAutomaticDisconnection *SbcSbcAutomaticDisconnection `json:"sbc_automatic_disconnection,omitempty"`
 
 	SbcAutomaticDisconnectionOptions *SbcAutomaticDisconnectionOptions `json:"sbc_automatic_disconnection_options,omitempty"`

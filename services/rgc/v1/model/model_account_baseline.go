@@ -9,19 +9,22 @@ import (
 	"strings"
 )
 
-// AccountBaseline 账号基本信息。
+// AccountBaseline 纳管账号基本信息。
 type AccountBaseline struct {
 
-	// 账号名称。
+	// 纳管账号名称。
 	AccountName string `json:"account_name"`
+
+	// 纳管帐号的唯一标识符（ID）。
+	AccountId *string `json:"account_id,omitempty"`
 
 	// 手机号码。
 	Phone *string `json:"phone,omitempty"`
 
-	// 账号邮箱。
-	AccountEmail string `json:"account_email"`
+	// 纳管账号邮箱。
+	AccountEmail *string `json:"account_email,omitempty"`
 
-	// 账号类型logging,security。 * LOGGING - 日志账号 * SECURITY - 安全账号 * CUSTOM - 自定义账号
+	// 纳管账号类型。类型包括LOGGING，SECURITY和CUSTOM。
 	AccountType AccountBaselineAccountType `json:"account_type"`
 }
 

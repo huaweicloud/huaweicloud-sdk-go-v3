@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dataartsstudio/v1/model"
 )
 
 type DataArtsStudioClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewDataArtsStudioClient(hcClient *http_client.HcHttpClient) *DataArtsStudioClient {
+func NewDataArtsStudioClient(hcClient *httpclient.HcHttpClient) *DataArtsStudioClient {
 	return &DataArtsStudioClient{HcClient: hcClient}
 }
 
-func DataArtsStudioClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func DataArtsStudioClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
@@ -3713,6 +3713,27 @@ func (c *DataArtsStudioClient) ShowConsistencyTaskDetailInvoker(request *model.S
 	return &ShowConsistencyTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDataDetail 资产详情(邀测)
+//
+// 资产详情接口，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDataDetail(request *model.ShowDataDetailRequest) (*model.ShowDataDetailResponse, error) {
+	requestDef := GenReqDefForShowDataDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataDetailResponse), nil
+	}
+}
+
+// ShowDataDetailInvoker 资产详情(邀测)
+func (c *DataArtsStudioClient) ShowDataDetailInvoker(request *model.ShowDataDetailRequest) *ShowDataDetailInvoker {
+	requestDef := GenReqDefForShowDataDetail()
+	return &ShowDataDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDataProfile 资产信息
 //
 // 查询概要
@@ -3774,6 +3795,27 @@ func (c *DataArtsStudioClient) ShowDataconnection(request *model.ShowDataconnect
 func (c *DataArtsStudioClient) ShowDataconnectionInvoker(request *model.ShowDataconnectionRequest) *ShowDataconnectionInvoker {
 	requestDef := GenReqDefForShowDataconnection()
 	return &ShowDataconnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDatamapLineage 资产血缘(邀测)
+//
+// 资产血缘接口，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDatamapLineage(request *model.ShowDatamapLineageRequest) (*model.ShowDatamapLineageResponse, error) {
+	requestDef := GenReqDefForShowDatamapLineage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatamapLineageResponse), nil
+	}
+}
+
+// ShowDatamapLineageInvoker 资产血缘(邀测)
+func (c *DataArtsStudioClient) ShowDatamapLineageInvoker(request *model.ShowDatamapLineageRequest) *ShowDatamapLineageInvoker {
+	requestDef := GenReqDefForShowDatamapLineage()
+	return &ShowDatamapLineageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDerivativeIndexById 查看衍生指标详情
@@ -3965,6 +4007,27 @@ func (c *DataArtsStudioClient) ShowGlossaryListInvoker(request *model.ShowGlossa
 	return &ShowGlossaryListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceInfos 产出信息(邀测)
+//
+// 查询表相关的作业算子运行实例信息，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowInstanceInfos(request *model.ShowInstanceInfosRequest) (*model.ShowInstanceInfosResponse, error) {
+	requestDef := GenReqDefForShowInstanceInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceInfosResponse), nil
+	}
+}
+
+// ShowInstanceInfosInvoker 产出信息(邀测)
+func (c *DataArtsStudioClient) ShowInstanceInfosInvoker(request *model.ShowInstanceInfosRequest) *ShowInstanceInfosInvoker {
+	requestDef := GenReqDefForShowInstanceInfos()
+	return &ShowInstanceInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceLog 获取任务日志
 //
 // 获取任务日志
@@ -4028,6 +4091,27 @@ func (c *DataArtsStudioClient) ShowLineageInvoker(request *model.ShowLineageRequ
 	return &ShowLineageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLineageBulk 批量血缘(邀测)
+//
+// 批量血缘接口，根据作业算子分页批量查询血缘。该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowLineageBulk(request *model.ShowLineageBulkRequest) (*model.ShowLineageBulkResponse, error) {
+	requestDef := GenReqDefForShowLineageBulk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLineageBulkResponse), nil
+	}
+}
+
+// ShowLineageBulkInvoker 批量血缘(邀测)
+func (c *DataArtsStudioClient) ShowLineageBulkInvoker(request *model.ShowLineageBulkRequest) *ShowLineageBulkInvoker {
+	requestDef := GenReqDefForShowLineageBulk()
+	return &ShowLineageBulkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMessageDetail 获取消息详情
 //
 // 获取消息详情
@@ -4089,6 +4173,27 @@ func (c *DataArtsStudioClient) ShowMetricTree(request *model.ShowMetricTreeReque
 func (c *DataArtsStudioClient) ShowMetricTreeInvoker(request *model.ShowMetricTreeRequest) *ShowMetricTreeInvoker {
 	requestDef := GenReqDefForShowMetricTree()
 	return &ShowMetricTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNodes 表关联作业算子列表(邀测)
+//
+// 查询表相关的作业算子列表，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowNodes(request *model.ShowNodesRequest) (*model.ShowNodesResponse, error) {
+	requestDef := GenReqDefForShowNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNodesResponse), nil
+	}
+}
+
+// ShowNodesInvoker 表关联作业算子列表(邀测)
+func (c *DataArtsStudioClient) ShowNodesInvoker(request *model.ShowNodesRequest) *ShowNodesInvoker {
+	requestDef := GenReqDefForShowNodes()
+	return &ShowNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPathById 通过id获取路径

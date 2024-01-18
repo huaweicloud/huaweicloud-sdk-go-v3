@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ConfigurationRequestDataSpecPreStop 生命周期管理组件配置停止前处理。  type为\"lifecycle\"时，配置此参数。
+// ConfigurationRequestDataSpecPreStop 生命周期管理组件配置停止前处理。  ConfigurationItem.type为\"lifecycle\"时，配置此参数。
 type ConfigurationRequestDataSpecPreStop struct {
 	Exec *LifeCycleConfigurationExec `json:"exec,omitempty"`
 }

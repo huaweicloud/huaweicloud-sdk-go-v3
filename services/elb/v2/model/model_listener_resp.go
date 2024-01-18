@@ -72,10 +72,10 @@ type ListenerResp struct {
 	TlsCiphersPolicy string `json:"tls_ciphers_policy"`
 
 	// 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
-	ProtectionStatus ListenerRespProtectionStatus `json:"protection_status"`
+	ProtectionStatus *ListenerRespProtectionStatus `json:"protection_status,omitempty"`
 
 	// 设置保护的原因。 >仅当protection_status为consoleProtection时有效。
-	ProtectionReason string `json:"protection_reason"`
+	ProtectionReason *string `json:"protection_reason,omitempty"`
 }
 
 func (o ListenerResp) String() string {

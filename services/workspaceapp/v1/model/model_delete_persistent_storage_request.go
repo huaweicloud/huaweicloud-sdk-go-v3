@@ -9,7 +9,7 @@ import (
 // DeletePersistentStorageRequest Request Object
 type DeletePersistentStorageRequest struct {
 
-	// WKS存储ID
+	// WKS存储ID。
 	StorageId string `json:"storage_id"`
 }
 

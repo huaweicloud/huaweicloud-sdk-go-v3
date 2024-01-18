@@ -13,7 +13,7 @@ type ShowControlResponse struct {
 	// 控制策略ID。
 	Identifier *string `json:"identifier,omitempty"`
 
-	// 业务控制策略（SCP），配置规则。
+	// 服务控制策略（SCP），配置规则。
 	Implementation *string `json:"implementation,omitempty"`
 
 	// 控制策略必须性。
@@ -34,22 +34,22 @@ type ShowControlResponse struct {
 	// 治理策略来自的框架。
 	Framework *[]string `json:"framework,omitempty"`
 
-	// 策略内容。
+	// 控制策略内容。
 	Artifacts *[]Artifact `json:"artifacts,omitempty"`
 
-	// 别名列表。
+	// 控制策略别名。
 	Aliases *[]string `json:"aliases,omitempty"`
 
-	// 账号的创建来源，包括CUSTOM和RGC。
+	// 纳管账号的创建来源，包括CUSTOM和RGC。
 	Owner *string `json:"owner,omitempty"`
 
-	// 严重性(High)。
+	// 控制策略严重性。
 	Severity *string `json:"severity,omitempty"`
 
-	// 版本。
+	// 控制策略版本。
 	Version *string `json:"version,omitempty"`
 
-	// 发布时间。
+	// 控制策略发布时间。
 	ReleaseDate    *sdktime.SdkTime `json:"release_date,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

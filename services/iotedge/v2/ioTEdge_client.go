@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iotedge/v2/model"
 )
 
 type IoTEdgeClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewIoTEdgeClient(hcClient *http_client.HcHttpClient) *IoTEdgeClient {
+func NewIoTEdgeClient(hcClient *httpclient.HcHttpClient) *IoTEdgeClient {
 	return &IoTEdgeClient{HcClient: hcClient}
 }
 
-func IoTEdgeClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func IoTEdgeClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

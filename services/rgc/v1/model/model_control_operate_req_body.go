@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ControlOperateReqBody 操作control请求体。
+// ControlOperateReqBody 操作控制策略的请求体。
 type ControlOperateReqBody struct {
 
 	// 控制策略ID。

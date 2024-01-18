@@ -7,7 +7,7 @@ import (
 )
 
 type VpnGatewayCertificateRequestBody struct {
-	Certificate *VpnGatewayCertificateRequestBodyContent `json:"certificate,omitempty"`
+	Certificate *VpnGatewayCertificateRequestBodyContent `json:"certificate"`
 }
 
 func (o VpnGatewayCertificateRequestBody) String() string {

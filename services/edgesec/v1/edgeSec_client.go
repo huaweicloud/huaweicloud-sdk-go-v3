@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/edgesec/v1/model"
 )
 
 type EdgeSecClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewEdgeSecClient(hcClient *http_client.HcHttpClient) *EdgeSecClient {
+func NewEdgeSecClient(hcClient *httpclient.HcHttpClient) *EdgeSecClient {
 	return &EdgeSecClient{HcClient: hcClient}
 }
 
-func EdgeSecClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func EdgeSecClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

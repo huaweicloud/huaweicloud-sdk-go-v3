@@ -12,7 +12,7 @@ type RegionManagedList struct {
 	// 区域名字。
 	Region *string `json:"region,omitempty"`
 
-	// available or unavailable。
+	// 区域的状态，取值为可用或者不可用。
 	RegionStatus *string `json:"region_status,omitempty"`
 }
 

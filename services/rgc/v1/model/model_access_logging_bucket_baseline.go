@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AccessLoggingBucketBaseline Access日志基础设置。
+// AccessLoggingBucketBaseline 访问日志基础设置。
 type AccessLoggingBucketBaseline struct {
 
 	// 桶保留天数。

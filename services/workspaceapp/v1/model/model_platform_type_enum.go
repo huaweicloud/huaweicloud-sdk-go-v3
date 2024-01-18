@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// PlatformTypeEnum 平台类型 * `AD` - AD域 * `LOCAL` - LiteAs * `SYSTEM` - 系统内置
+// PlatformTypeEnum 平台类型： * `AD` - AD域 * `LOCAL` - LiteAs * `SYSTEM` - 系统内置
 type PlatformTypeEnum struct {
 	value string
 }

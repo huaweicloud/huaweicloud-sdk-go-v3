@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AppStateEnum 应用状态(正常、禁用) * `NORMAL` - 正常 * `FORBIDDEN` - 禁用状态
+// AppStateEnum 应用状态： * `NORMAL` - 正常状态。 * `FORBIDDEN` - 禁用状态。
 type AppStateEnum struct {
 	value string
 }

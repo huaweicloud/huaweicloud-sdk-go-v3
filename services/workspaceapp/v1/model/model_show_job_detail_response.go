@@ -23,10 +23,10 @@ type ShowJobDetailResponse struct {
 
 	Status *JobStatus `json:"status,omitempty"`
 
-	// 子任务总数
+	// 子任务总数。
 	SubJobsTotal *int32 `json:"sub_jobs_total,omitempty"`
 
-	// 子任务列表
+	// 子任务列表。
 	SubJobs        *[]JobDetailInfo `json:"sub_jobs,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ocr/v1/model"
 )
 
 type OcrClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewOcrClient(hcClient *http_client.HcHttpClient) *OcrClient {
+func NewOcrClient(hcClient *httpclient.HcHttpClient) *OcrClient {
 	return &OcrClient{HcClient: hcClient}
 }
 
-func OcrClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func OcrClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
@@ -764,6 +764,27 @@ func (c *OcrClient) RecognizeRealEstateCertificate(request *model.RecognizeRealE
 func (c *OcrClient) RecognizeRealEstateCertificateInvoker(request *model.RecognizeRealEstateCertificateRequest) *RecognizeRealEstateCertificateInvoker {
 	requestDef := GenReqDefForRecognizeRealEstateCertificate()
 	return &RecognizeRealEstateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecognizeSeal 印章识别
+//
+// 检测和识别合同文件或常用票据中的印章，并可擦除和提取图片中的印章，通过JSON格式返回印章检测、识别、擦除和提取的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeSeal(request *model.RecognizeSealRequest) (*model.RecognizeSealResponse, error) {
+	requestDef := GenReqDefForRecognizeSeal()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeSealResponse), nil
+	}
+}
+
+// RecognizeSealInvoker 印章识别
+func (c *OcrClient) RecognizeSealInvoker(request *model.RecognizeSealRequest) *RecognizeSealInvoker {
+	requestDef := GenReqDefForRecognizeSeal()
+	return &RecognizeSealInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RecognizeSmartDocumentRecognizer 智能文档解析

@@ -9,15 +9,13 @@ import (
 // ShowManagedCoreAccountResponse Response Object
 type ShowManagedCoreAccountResponse struct {
 
-	// 账号ID。
+	// 纳管账号ID。
 	AccountId *string `json:"account_id,omitempty"`
 
-	// 账号名称。
+	// 纳管账号名称。
 	AccountName *string `json:"account_name,omitempty"`
 
-	// 账号邮箱。
-	AccountEmail *string `json:"account_email,omitempty"`
-
+	// 核心资源映射。
 	CoreResourceMappings map[string]string `json:"core_resource_mappings,omitempty"`
 	HttpStatusCode       int               `json:"-"`
 }

@@ -9,10 +9,10 @@ import (
 // ListAppConnectionResponse Response Object
 type ListAppConnectionResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 应用使用记录列表
+	// 应用使用记录列表。
 	Items          *[]AppConnectionInfo `json:"items,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

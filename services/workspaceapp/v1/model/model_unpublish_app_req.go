@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// UnpublishAppReq 删除应用
+// UnpublishAppReq 删除应用。
 type UnpublishAppReq struct {
 
-	// 应用ID列表,单次最多允许操作50个应用
+	// 应用ID列表,单次最多允许操作50个应用。
 	Ids []string `json:"ids"`
 }
 

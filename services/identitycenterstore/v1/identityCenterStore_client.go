@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/identitycenterstore/v1/model"
 )
 
 type IdentityCenterStoreClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewIdentityCenterStoreClient(hcClient *http_client.HcHttpClient) *IdentityCenterStoreClient {
+func NewIdentityCenterStoreClient(hcClient *httpclient.HcHttpClient) *IdentityCenterStoreClient {
 	return &IdentityCenterStoreClient{HcClient: hcClient}
 }
 
-func IdentityCenterStoreClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func IdentityCenterStoreClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 

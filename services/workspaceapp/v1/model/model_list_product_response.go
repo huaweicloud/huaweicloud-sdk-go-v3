@@ -15,7 +15,7 @@ type ListProductResponse struct {
 	// 系统类型，当前仅支持Windows。 * `Linux` - * `Windows` - * `Other` -
 	OsType *string `json:"os_type,omitempty"`
 
-	// 产品列表
+	// 产品列表。
 	Products       *[]ProductInfo `json:"products,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

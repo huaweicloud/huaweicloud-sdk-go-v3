@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BatchDeleteServerReq 批量删除服务器请求
+// BatchDeleteServerReq 批量删除服务器请求。
 type BatchDeleteServerReq struct {
 
 	// 批量请求的服务器ID列表，一次请求数量区间 [1, 20]。

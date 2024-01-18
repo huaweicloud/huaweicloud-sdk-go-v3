@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ImageTypeEnum 镜像类型 * `gold` - 云市场镜像 * `public` - 公共镜像 * `private` - 私有镜像 * `shared` - 共享镜像 * `other` - 其他
+// ImageTypeEnum 镜像类型： * `gold` - 云市场镜像 * `public` - 公共镜像 * `private` - 私有镜像 * `shared` - 共享镜像 * `other` - 其他
 type ImageTypeEnum struct {
 	value string
 }

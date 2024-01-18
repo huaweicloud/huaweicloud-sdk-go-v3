@@ -9,7 +9,7 @@ import (
 // CreateShareFolderRequest Request Object
 type CreateShareFolderRequest struct {
 
-	// WKS存储ID
+	// WKS存储ID。
 	StorageId string `json:"storage_id"`
 
 	Body *CreateShareFolderReq `json:"body,omitempty"`

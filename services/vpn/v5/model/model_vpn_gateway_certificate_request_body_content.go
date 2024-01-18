@@ -12,19 +12,19 @@ type VpnGatewayCertificateRequestBodyContent struct {
 	Name *string `json:"name,omitempty"`
 
 	// 证书内容，国密证书时为签名证书内容
-	Certificate *string `json:"certificate,omitempty"`
+	Certificate string `json:"certificate"`
 
 	// 证书私钥，国密证书时为签名证书私钥
-	PrivateKey *string `json:"private_key,omitempty"`
+	PrivateKey string `json:"private_key"`
 
 	// VPN网关CA证书内容
-	CertificateChain *string `json:"certificate_chain,omitempty"`
+	CertificateChain string `json:"certificate_chain"`
 
 	// 国密证书的加密证书内容
-	EncCertificate *string `json:"enc_certificate,omitempty"`
+	EncCertificate string `json:"enc_certificate"`
 
 	// 国密证书的加密证书私钥
-	EncPrivateKey *string `json:"enc_private_key,omitempty"`
+	EncPrivateKey string `json:"enc_private_key"`
 }
 
 func (o VpnGatewayCertificateRequestBodyContent) String() string {

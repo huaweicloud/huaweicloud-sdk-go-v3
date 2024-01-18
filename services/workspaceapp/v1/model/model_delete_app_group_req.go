@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DeleteAppGroupReq 批量删除应用
+// DeleteAppGroupReq 批量删除应用。
 type DeleteAppGroupReq struct {
 
-	// 应用组ID,单次最多20个
+	// 应用组ID,单次最多20个。
 	Ids []string `json:"ids"`
 }
 

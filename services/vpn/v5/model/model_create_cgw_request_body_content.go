@@ -14,16 +14,19 @@ type CreateCgwRequestBodyContent struct {
 	// 网关名称
 	Name *string `json:"name,omitempty"`
 
-	// 网关路由模式
-	RouteMode *CreateCgwRequestBodyContentRouteMode `json:"route_mode,omitempty"`
+	// 对端网关标识类型
+	IdType *CreateCgwRequestBodyContentIdType `json:"id_type,omitempty"`
 
-	// 网关的bgp asn号，仅当route_mode为bgp时需要，默认值为65000
+	// 对端网关标识值
+	IdValue *string `json:"id_value,omitempty"`
+
+	// 网关的bgp asn号，默认值为65000
 	BgpAsn *int64 `json:"bgp_asn,omitempty"`
 
-	// 网关ip地址
-	Ip string `json:"ip"`
-
 	CaCertificate *CaCertificateRequest `json:"ca_certificate,omitempty"`
+
+	// 标签
+	Tags *[]VpnResourceTag `json:"tags,omitempty"`
 }
 
 func (o CreateCgwRequestBodyContent) String() string {
@@ -35,35 +38,35 @@ func (o CreateCgwRequestBodyContent) String() string {
 	return strings.Join([]string{"CreateCgwRequestBodyContent", string(data)}, " ")
 }
 
-type CreateCgwRequestBodyContentRouteMode struct {
+type CreateCgwRequestBodyContentIdType struct {
 	value string
 }
 
-type CreateCgwRequestBodyContentRouteModeEnum struct {
-	STATIC CreateCgwRequestBodyContentRouteMode
-	BGP    CreateCgwRequestBodyContentRouteMode
+type CreateCgwRequestBodyContentIdTypeEnum struct {
+	IP   CreateCgwRequestBodyContentIdType
+	FQDN CreateCgwRequestBodyContentIdType
 }
 
-func GetCreateCgwRequestBodyContentRouteModeEnum() CreateCgwRequestBodyContentRouteModeEnum {
-	return CreateCgwRequestBodyContentRouteModeEnum{
-		STATIC: CreateCgwRequestBodyContentRouteMode{
-			value: "static",
+func GetCreateCgwRequestBodyContentIdTypeEnum() CreateCgwRequestBodyContentIdTypeEnum {
+	return CreateCgwRequestBodyContentIdTypeEnum{
+		IP: CreateCgwRequestBodyContentIdType{
+			value: "ip",
 		},
-		BGP: CreateCgwRequestBodyContentRouteMode{
-			value: "bgp",
+		FQDN: CreateCgwRequestBodyContentIdType{
+			value: "fqdn",
 		},
 	}
 }
 
-func (c CreateCgwRequestBodyContentRouteMode) Value() string {
+func (c CreateCgwRequestBodyContentIdType) Value() string {
 	return c.value
 }
 
-func (c CreateCgwRequestBodyContentRouteMode) MarshalJSON() ([]byte, error) {
+func (c CreateCgwRequestBodyContentIdType) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *CreateCgwRequestBodyContentRouteMode) UnmarshalJSON(b []byte) error {
+func (c *CreateCgwRequestBodyContentIdType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

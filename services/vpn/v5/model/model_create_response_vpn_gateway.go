@@ -20,6 +20,8 @@ type CreateResponseVpnGateway struct {
 	// 关联模式
 	AttachmentType *CreateResponseVpnGatewayAttachmentType `json:"attachment_type,omitempty"`
 
+	CertificateId *string `json:"certificate_id,omitempty"`
+
 	// VPN网关所连接的ER实例的ID
 	ErId *string `json:"er_id,omitempty"`
 
@@ -58,6 +60,11 @@ type CreateResponseVpnGateway struct {
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// ha模式
+	HaMode *string `json:"ha_mode,omitempty"`
+
+	PolicyTemplate *PolicyTemplate `json:"policy_template,omitempty"`
 }
 
 func (o CreateResponseVpnGateway) String() string {

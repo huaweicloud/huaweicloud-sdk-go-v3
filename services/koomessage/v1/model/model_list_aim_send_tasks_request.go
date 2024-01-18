@@ -21,7 +21,7 @@ type ListAimSendTasksRequest struct {
 	// 智能信息模板名称。
 	TplName *string `json:"tpl_name,omitempty"`
 
-	// 智能信息发送任务创建开始时间。样例：2019-10-12T07:20:50.522Z。  > 需同时传入end_time才能生效，单独传begin_time不会作为过滤条件。缺省：查询最近7天（168小时）数据。
+	// 智能信息发送任务创建开始时间。样例：2019-10-12T07:20:50.522Z。  > 需同时传入end_time才能生效，单独传begin_time不会作为过滤条件。缺省：查询最近7天（168小时）数据。 > > 仅支持查询最近1年内创建的智能信息发送任务。
 	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 智能信息发送任务创建结束时间。样例：2019-10-12T07:20:50.522Z。  > 需同时传入begin_time才能生效，单独传end_time不会作为过滤条件。缺省：查询最近7天（168小时）数据。

@@ -10,7 +10,7 @@ import (
 type ControlOperation struct {
 
 	// 本次操作控制策略的ID。
-	ControlOperateRequestId *string `json:"control_operate_request_id,omitempty"`
+	OperationControlStatusId *string `json:"operation_control_status_id,omitempty"`
 
 	// 操作类型，启用控制策略或禁用控制策略。
 	OperationType *string `json:"operation_type,omitempty"`

@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/model"
 )
 
 type CdnClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewCdnClient(hcClient *http_client.HcHttpClient) *CdnClient {
+func NewCdnClient(hcClient *httpclient.HcHttpClient) *CdnClient {
 	return &CdnClient{HcClient: hcClient}
 }
 
-func CdnClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+func CdnClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
 	return builder
 }
 
@@ -148,6 +148,33 @@ func (c *CdnClient) DownloadStatisticsExcel(request *model.DownloadStatisticsExc
 func (c *CdnClient) DownloadStatisticsExcelInvoker(request *model.DownloadStatisticsExcelRequest) *DownloadStatisticsExcelInvoker {
 	requestDef := GenReqDefForDownloadStatisticsExcel()
 	return &DownloadStatisticsExcelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCdnDomainTopRefers 查询统计TOP100 referer数据明细
+//
+// - 查询TOP100 referer数据。
+//
+// - 支持查询90天内的数据。
+//
+// - 查询跨度不能超过31天。
+//
+// - 单租户调用频率：2次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListCdnDomainTopRefers(request *model.ListCdnDomainTopRefersRequest) (*model.ListCdnDomainTopRefersResponse, error) {
+	requestDef := GenReqDefForListCdnDomainTopRefers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCdnDomainTopRefersResponse), nil
+	}
+}
+
+// ListCdnDomainTopRefersInvoker 查询统计TOP100 referer数据明细
+func (c *CdnClient) ListCdnDomainTopRefersInvoker(request *model.ListCdnDomainTopRefersRequest) *ListCdnDomainTopRefersInvoker {
+	requestDef := GenReqDefForListCdnDomainTopRefers()
+	return &ListCdnDomainTopRefersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDomains 查询加速域名

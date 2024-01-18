@@ -2117,6 +2117,18 @@ func (i *ShowConsistencyTaskDetailInvoker) Invoke() (*model.ShowConsistencyTaskD
 	}
 }
 
+type ShowDataDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataDetailInvoker) Invoke() (*model.ShowDataDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataDetailResponse), nil
+	}
+}
+
 type ShowDataProfileInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2150,6 +2162,18 @@ func (i *ShowDataconnectionInvoker) Invoke() (*model.ShowDataconnectionResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDataconnectionResponse), nil
+	}
+}
+
+type ShowDatamapLineageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatamapLineageInvoker) Invoke() (*model.ShowDatamapLineageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatamapLineageResponse), nil
 	}
 }
 
@@ -2261,6 +2285,18 @@ func (i *ShowGlossaryListInvoker) Invoke() (*model.ShowGlossaryListResponse, err
 	}
 }
 
+type ShowInstanceInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceInfosInvoker) Invoke() (*model.ShowInstanceInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceInfosResponse), nil
+	}
+}
+
 type ShowInstanceLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2297,6 +2333,18 @@ func (i *ShowLineageInvoker) Invoke() (*model.ShowLineageResponse, error) {
 	}
 }
 
+type ShowLineageBulkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLineageBulkInvoker) Invoke() (*model.ShowLineageBulkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLineageBulkResponse), nil
+	}
+}
+
 type ShowMessageDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2330,6 +2378,18 @@ func (i *ShowMetricTreeInvoker) Invoke() (*model.ShowMetricTreeResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowMetricTreeResponse), nil
+	}
+}
+
+type ShowNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNodesInvoker) Invoke() (*model.ShowNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNodesResponse), nil
 	}
 }
 

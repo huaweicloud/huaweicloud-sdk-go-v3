@@ -10,14 +10,9 @@ import (
 func GenReqDefForDisableControl() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/governance/control/disable").
+		WithPath("/v1/governance/controls/disable").
 		WithResponse(new(model.DisableControlResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -30,14 +25,9 @@ func GenReqDefForDisableControl() *def.HttpRequestDef {
 func GenReqDefForEnableControl() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/governance/control/enable").
+		WithPath("/v1/governance/controls/enable").
 		WithResponse(new(model.EnableControlResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -50,19 +40,14 @@ func GenReqDefForEnableControl() *def.HttpRequestDef {
 func GenReqDefForListConfigRuleCompliance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/account/{account_id}/config-rule-compliances").
+		WithPath("/v1/governance/managed-accounts/{managed_account_id}/config-rule-compliances").
 		WithResponse(new(model.ListConfigRuleComplianceResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AccountId").
-		WithJsonTag("account_id").
+		WithName("ManagedAccountId").
+		WithJsonTag("managed_account_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -84,11 +69,6 @@ func GenReqDefForListControlViolations() *def.HttpRequestDef {
 		WithJsonTag("organization_unit_id").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -109,11 +89,6 @@ func GenReqDefForListControls() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -121,7 +96,7 @@ func GenReqDefForListControls() *def.HttpRequestDef {
 func GenReqDefForListControlsForAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/managed-account/{managed_account_id}/controls").
+		WithPath("/v1/governance/managed-accounts/{managed_account_id}/controls").
 		WithResponse(new(model.ListControlsForAccountResponse)).
 		WithContentType("application/json")
 
@@ -139,11 +114,6 @@ func GenReqDefForListControlsForAccount() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -151,7 +121,7 @@ func GenReqDefForListControlsForAccount() *def.HttpRequestDef {
 func GenReqDefForListControlsForOrganizationUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/managed-organization-unit/{managed_organization_unit_id}/controls").
+		WithPath("/v1/governance/managed-organization-units/{managed_organization_unit_id}/controls").
 		WithResponse(new(model.ListControlsForOrganizationUnitResponse)).
 		WithContentType("application/json")
 
@@ -169,11 +139,6 @@ func GenReqDefForListControlsForOrganizationUnit() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -184,11 +149,6 @@ func GenReqDefForListDriftDetails() *def.HttpRequestDef {
 		WithPath("/v1/governance/drift-details").
 		WithResponse(new(model.ListDriftDetailsResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -210,11 +170,6 @@ func GenReqDefForListEnabledControls() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -222,7 +177,7 @@ func GenReqDefForListEnabledControls() *def.HttpRequestDef {
 func GenReqDefForShowComplianceStatusForAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/managed-account/{managed_account_id}/compliance-status").
+		WithPath("/v1/governance/managed-accounts/{managed_account_id}/compliance-status").
 		WithResponse(new(model.ShowComplianceStatusForAccountResponse)).
 		WithContentType("application/json")
 
@@ -232,9 +187,9 @@ func GenReqDefForShowComplianceStatusForAccount() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
+		WithName("ControlId").
+		WithJsonTag("control_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -243,7 +198,7 @@ func GenReqDefForShowComplianceStatusForAccount() *def.HttpRequestDef {
 func GenReqDefForShowComplianceStatusForOrganizationUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/managed-organization-unit/{managed_organization_unit_id}/compliance-status").
+		WithPath("/v1/governance/managed-organization-units/{managed_organization_unit_id}/compliance-status").
 		WithResponse(new(model.ShowComplianceStatusForOrganizationUnitResponse)).
 		WithContentType("application/json")
 
@@ -253,9 +208,9 @@ func GenReqDefForShowComplianceStatusForOrganizationUnit() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
+		WithName("ControlId").
+		WithJsonTag("control_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -273,11 +228,6 @@ func GenReqDefForShowControl() *def.HttpRequestDef {
 		WithJsonTag("control_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -285,19 +235,14 @@ func GenReqDefForShowControl() *def.HttpRequestDef {
 func GenReqDefForShowControlOperate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/operated-controls/{control_operate_request_id}").
+		WithPath("/v1/governance/operation-control-status/{operation_control_status_id}").
 		WithResponse(new(model.ShowControlOperateResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ControlOperateRequestId").
-		WithJsonTag("control_operate_request_id").
+		WithName("OperationControlStatusId").
+		WithJsonTag("operation_control_status_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -306,7 +251,7 @@ func GenReqDefForShowControlOperate() *def.HttpRequestDef {
 func GenReqDefForShowControlsForOrganizationUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/managed-organization-unit/{managed_organization_unit_id}/controls/{control_id}").
+		WithPath("/v1/governance/managed-organization-units/{managed_organization_unit_id}/controls/{control_id}").
 		WithResponse(new(model.ShowControlsForOrganizationUnitResponse)).
 		WithContentType("application/json")
 
@@ -319,11 +264,6 @@ func GenReqDefForShowControlsForOrganizationUnit() *def.HttpRequestDef {
 		WithJsonTag("control_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -335,11 +275,6 @@ func GenReqDefForCheckLaunch() *def.HttpRequestDef {
 		WithResponse(new(model.CheckLaunchResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -350,11 +285,6 @@ func GenReqDefForSetupLandingZone() *def.HttpRequestDef {
 		WithPath("/v1/landing-zone/setup").
 		WithResponse(new(model.SetupLandingZoneResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -371,11 +301,6 @@ func GenReqDefForShowAvailableUpdates() *def.HttpRequestDef {
 		WithResponse(new(model.ShowAvailableUpdatesResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -386,11 +311,6 @@ func GenReqDefForShowHomeRegion() *def.HttpRequestDef {
 		WithPath("/v1/landing-zone/home-region").
 		WithResponse(new(model.ShowHomeRegionResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -403,11 +323,6 @@ func GenReqDefForShowLandingZoneConfiguration() *def.HttpRequestDef {
 		WithResponse(new(model.ShowLandingZoneConfigurationResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -419,11 +334,6 @@ func GenReqDefForShowLandingZoneIdentityCenter() *def.HttpRequestDef {
 		WithResponse(new(model.ShowLandingZoneIdentityCenterResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -434,11 +344,6 @@ func GenReqDefForShowLandingZoneStatus() *def.HttpRequestDef {
 		WithPath("/v1/landing-zone/status").
 		WithResponse(new(model.ShowLandingZoneStatusResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -452,11 +357,6 @@ func GenReqDefForCreateAccount() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -467,7 +367,7 @@ func GenReqDefForCreateAccount() *def.HttpRequestDef {
 func GenReqDefForDeleteManagedOrganizationalUnits() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/managed-organization/managed-organization-unit/{managed_organization_unit_id}").
+		WithPath("/v1/managed-organization/managed-organization-units/{managed_organization_unit_id}").
 		WithResponse(new(model.DeleteManagedOrganizationalUnitsResponse)).
 		WithContentType("application/json")
 
@@ -476,11 +376,6 @@ func GenReqDefForDeleteManagedOrganizationalUnits() *def.HttpRequestDef {
 		WithJsonTag("managed_organization_unit_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -488,7 +383,7 @@ func GenReqDefForDeleteManagedOrganizationalUnits() *def.HttpRequestDef {
 func GenReqDefForDeregisterOrganizationalUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/managed-organization/managed-organization-unit/{managed_organization_unit_id}/de-register").
+		WithPath("/v1/managed-organization/managed-organization-units/{managed_organization_unit_id}/de-register").
 		WithResponse(new(model.DeregisterOrganizationalUnitResponse)).
 		WithContentType("application/json")
 
@@ -497,10 +392,25 @@ func GenReqDefForDeregisterOrganizationalUnit() *def.HttpRequestDef {
 		WithJsonTag("managed_organization_unit_id").
 		WithLocationType(def.Path))
 
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForEnrollAccount() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/managed-organization/accounts/{managed_account_id}/enroll").
+		WithResponse(new(model.EnrollAccountResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
+		WithName("ManagedAccountId").
+		WithJsonTag("managed_account_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -526,11 +436,6 @@ func GenReqDefForListManagedAccounts() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -538,7 +443,7 @@ func GenReqDefForListManagedAccounts() *def.HttpRequestDef {
 func GenReqDefForListManagedAccountsForParent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/managed-organization/managed-organization-unit/{managed_organization_unit_id}/managed-accounts").
+		WithPath("/v1/managed-organization/managed-organization-units/{managed_organization_unit_id}/managed-accounts").
 		WithResponse(new(model.ListManagedAccountsForParentResponse)).
 		WithContentType("application/json")
 
@@ -555,11 +460,6 @@ func GenReqDefForListManagedAccountsForParent() *def.HttpRequestDef {
 		WithName("Marker").
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -585,10 +485,21 @@ func GenReqDefForListManagedOrganizationalUnits() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForReRegisterOrganizationalUnit() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/managed-organization/organization-units/{organization_unit_id}/re-register").
+		WithResponse(new(model.ReRegisterOrganizationalUnitResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
+		WithName("OrganizationUnitId").
+		WithJsonTag("organization_unit_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -597,7 +508,7 @@ func GenReqDefForListManagedOrganizationalUnits() *def.HttpRequestDef {
 func GenReqDefForRegisterOrganizationalUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/managed-organization/organization-unit/{organization_unit_id}/register").
+		WithPath("/v1/managed-organization/organization-units/{organization_unit_id}/register").
 		WithResponse(new(model.RegisterOrganizationalUnitResponse)).
 		WithContentType("application/json")
 
@@ -606,11 +517,6 @@ func GenReqDefForRegisterOrganizationalUnit() *def.HttpRequestDef {
 		WithJsonTag("organization_unit_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -618,7 +524,7 @@ func GenReqDefForRegisterOrganizationalUnit() *def.HttpRequestDef {
 func GenReqDefForShowManagedAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/managed-organization/managed-account/{managed_account_id}").
+		WithPath("/v1/managed-organization/managed-accounts/{managed_account_id}").
 		WithResponse(new(model.ShowManagedAccountResponse)).
 		WithContentType("application/json")
 
@@ -627,11 +533,6 @@ func GenReqDefForShowManagedAccount() *def.HttpRequestDef {
 		WithJsonTag("managed_account_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -639,7 +540,7 @@ func GenReqDefForShowManagedAccount() *def.HttpRequestDef {
 func GenReqDefForShowManagedCoreAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/managed-organization/managed-core-account").
+		WithPath("/v1/managed-organization/managed-core-accounts").
 		WithResponse(new(model.ShowManagedCoreAccountResponse)).
 		WithContentType("application/json")
 
@@ -648,11 +549,6 @@ func GenReqDefForShowManagedCoreAccount() *def.HttpRequestDef {
 		WithJsonTag("account_type").
 		WithLocationType(def.Query))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -660,7 +556,7 @@ func GenReqDefForShowManagedCoreAccount() *def.HttpRequestDef {
 func GenReqDefForShowManagedOrganizationalUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/managed-organization/managed-organization-unit/{managed_organization_unit_id}").
+		WithPath("/v1/managed-organization/managed-organization-units/{managed_organization_unit_id}").
 		WithResponse(new(model.ShowManagedOrganizationalUnitResponse)).
 		WithContentType("application/json")
 
@@ -668,11 +564,6 @@ func GenReqDefForShowManagedOrganizationalUnit() *def.HttpRequestDef {
 		WithName("ManagedOrganizationUnitId").
 		WithJsonTag("managed_organization_unit_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -690,10 +581,21 @@ func GenReqDefForShowOperation() *def.HttpRequestDef {
 		WithJsonTag("operation_id").
 		WithLocationType(def.Path))
 
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUnEnrollAccount() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/managed-organization/managed-accounts/{managed_account_id}/un-enroll").
+		WithResponse(new(model.UnEnrollAccountResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
+		WithName("ManagedAccountId").
+		WithJsonTag("managed_account_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -702,7 +604,7 @@ func GenReqDefForShowOperation() *def.HttpRequestDef {
 func GenReqDefForUpdateManagedAccount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/managed-organization/managed-account/{managed_account_id}/update").
+		WithPath("/v1/managed-organization/managed-accounts/{managed_account_id}/update").
 		WithResponse(new(model.UpdateManagedAccountResponse)).
 		WithContentType("application/json")
 
@@ -710,11 +612,6 @@ func GenReqDefForUpdateManagedAccount() *def.HttpRequestDef {
 		WithName("ManagedAccountId").
 		WithJsonTag("managed_account_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

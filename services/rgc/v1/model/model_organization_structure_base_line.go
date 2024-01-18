@@ -6,15 +6,15 @@ import (
 	"strings"
 )
 
-// OrganizationStructureBaseLine 账号体系基础设置。
+// OrganizationStructureBaseLine 纳管账号体系基础设置。
 type OrganizationStructureBaseLine struct {
 
-	// OU名称。
+	// 注册OU名称。
 	OrganizationalUnitName string `json:"organizational_unit_name"`
 
 	OrganizationalUnitType *OrganizationalUnitTypeForSetup `json:"organizational_unit_type"`
 
-	// 账号基本信息。
+	// 纳管账号基本信息。
 	Accounts *[]AccountBaseline `json:"accounts,omitempty"`
 }
 

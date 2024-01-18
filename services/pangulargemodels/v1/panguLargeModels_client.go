@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/pangulargemodels/v1/model"
 )
 
 type PanguLargeModelsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewPanguLargeModelsClient(hcClient *http_client.HcHttpClient) *PanguLargeModelsClient {
+func NewPanguLargeModelsClient(hcClient *httpclient.HcHttpClient) *PanguLargeModelsClient {
 	return &PanguLargeModelsClient{HcClient: hcClient}
 }
 
-func PanguLargeModelsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func PanguLargeModelsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

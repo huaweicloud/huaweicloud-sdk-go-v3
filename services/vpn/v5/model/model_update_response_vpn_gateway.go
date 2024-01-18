@@ -19,6 +19,8 @@ type UpdateResponseVpnGateway struct {
 	// 关联模式
 	AttachmentType *UpdateResponseVpnGatewayAttachmentType `json:"attachment_type,omitempty"`
 
+	CertificateId *string `json:"certificate_id,omitempty"`
+
 	// VPN网关所连接的ER实例的ID
 	ErId *string `json:"er_id,omitempty"`
 
@@ -40,13 +42,10 @@ type UpdateResponseVpnGateway struct {
 	// VPN网关北向接入VPC中的接入子网ID
 	AccessSubnetId *string `json:"access_subnet_id,omitempty"`
 
-	// VPN网关北向接入私网IP列表，当VPN网关的北向类型是私网(private)时有值
-	AccessPrivateIps *[]string `json:"access_private_ips,omitempty"`
-
-	// VPN网关北向接入私网IP列表，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
+	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
 	AccessPrivateIp1 *string `json:"access_private_ip_1,omitempty"`
 
-	// VPN网关北向接入私网IP列表，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
 	AccessPrivateIp2 *string `json:"access_private_ip_2,omitempty"`
 
 	// bgp所使用的asn号
@@ -73,10 +72,6 @@ type UpdateResponseVpnGateway struct {
 	// ha模式
 	HaMode *string `json:"ha_mode,omitempty"`
 
-	MasterEip *ResponseEip `json:"master_eip,omitempty"`
-
-	SlaveEip *ResponseEip `json:"slave_eip,omitempty"`
-
 	Eip1 *ResponseEip `json:"eip1,omitempty"`
 
 	Eip2 *ResponseEip `json:"eip2,omitempty"`
@@ -86,6 +81,8 @@ type UpdateResponseVpnGateway struct {
 
 	// 更新时间
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+
+	PolicyTemplate *PolicyTemplate `json:"policy_template,omitempty"`
 }
 
 func (o UpdateResponseVpnGateway) String() string {

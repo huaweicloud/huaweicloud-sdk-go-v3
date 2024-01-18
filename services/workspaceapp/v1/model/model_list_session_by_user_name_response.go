@@ -9,7 +9,7 @@ import (
 // ListSessionByUserNameResponse Response Object
 type ListSessionByUserNameResponse struct {
 
-	// 会话信息列表
+	// 会话信息列表。
 	SessionInfoList *[]AppSession `json:"session_info_list,omitempty"`
 	HttpStatusCode  int           `json:"-"`
 }

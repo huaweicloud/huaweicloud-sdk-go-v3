@@ -9,7 +9,7 @@ import (
 // ListManagedOrganizationalUnitsResponse Response Object
 type ListManagedOrganizationalUnitsResponse struct {
 
-	// 纳管的OU。
+	// 注册OU信息。
 	ManagedOrganizationUnits *[]ManagedOrganizationUnit `json:"managed_organization_units,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

@@ -12,7 +12,7 @@ type ShowAvailableUpdatesResponse struct {
 	// Landing Zone基础配置是否可用。
 	BaselineUpdateAvailable *bool `json:"baseline_update_available,omitempty"`
 
-	// 控制策略是否可用。
+	// 当前账号下是否有新的控制策略。
 	ControlUpdateAvailable *bool `json:"control_update_available,omitempty"`
 
 	// Landing Zone是否可更新。

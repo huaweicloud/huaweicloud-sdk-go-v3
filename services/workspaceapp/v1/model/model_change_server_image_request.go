@@ -9,7 +9,7 @@ import (
 // ChangeServerImageRequest Request Object
 type ChangeServerImageRequest struct {
 
-	// 服务器唯一标识
+	// 服务器唯一标识。
 	ServerId string `json:"server_id"`
 
 	Body *ChangeServerImageReq `json:"body,omitempty"`

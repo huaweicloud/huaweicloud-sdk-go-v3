@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ClaimMode 存储声明的类型 * `USER` -  用户目录 * `SHARE` - 共享目录
+// ClaimMode 存储声明的类型： * `USER` -  用户目录 * `SHARE` - 共享目录
 type ClaimMode struct {
 	value string
 }

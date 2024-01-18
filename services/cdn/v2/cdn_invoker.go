@@ -67,6 +67,18 @@ func (i *DownloadStatisticsExcelInvoker) Invoke() (*model.DownloadStatisticsExce
 	}
 }
 
+type ListCdnDomainTopRefersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCdnDomainTopRefersInvoker) Invoke() (*model.ListCdnDomainTopRefersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCdnDomainTopRefersResponse), nil
+	}
+}
+
 type ListDomainsInvoker struct {
 	*invoker.BaseInvoker
 }

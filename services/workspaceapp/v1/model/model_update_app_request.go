@@ -9,10 +9,10 @@ import (
 // UpdateAppRequest Request Object
 type UpdateAppRequest struct {
 
-	// 应用组ID
+	// 应用组ID。
 	AppGroupId string `json:"app_group_id"`
 
-	// 应用ID
+	// 应用ID。
 	AppId string `json:"app_id"`
 
 	Body *UpdateAppReq `json:"body,omitempty"`

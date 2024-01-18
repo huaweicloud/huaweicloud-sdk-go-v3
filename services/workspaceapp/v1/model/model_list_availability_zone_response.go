@@ -12,7 +12,7 @@ type ListAvailabilityZoneResponse struct {
 	// 云应用支持的可用分区列表。
 	AvailabilityZones *[]AvailabilityZoneInfo `json:"availability_zones,omitempty"`
 
-	// 总数
+	// 总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

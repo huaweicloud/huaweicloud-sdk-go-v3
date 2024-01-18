@@ -17,7 +17,7 @@ type ConfigRuleCompliance struct {
 	// 区域信息。
 	Region *string `json:"region,omitempty"`
 
-	// 控制策略Id。
+	// 控制策略ID。
 	ControlId *string `json:"control_id,omitempty"`
 }
 

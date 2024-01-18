@@ -12,14 +12,11 @@ type ShowLandingZoneConfigurationResponse struct {
 
 	LoggingConfiguration *LoggingConfiguration `json:"logging_configuration,omitempty"`
 
-	OrganizationStructure *[]OrganizationStructureBaseLine `json:"organization_structure,omitempty"`
+	OrganizationStructure *[]OrganizationStructureBaseLineRsp `json:"organization_structure,omitempty"`
 
-	// 纳管的区域
-	Regions *[]RegionConfigurationList `json:"regions,omitempty"`
-
-	// 管理员账号创建Identity Center用户所用邮箱
-	IdentityStoreEmail *string `json:"identity_store_email,omitempty"`
-	HttpStatusCode     int     `json:"-"`
+	// 纳管的区域信息。
+	Regions        *[]RegionConfigurationList `json:"regions,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ShowLandingZoneConfigurationResponse) String() string {

@@ -1,21 +1,21 @@
 package v2
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dcs/v2/model"
 )
 
 type DcsClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewDcsClient(hcClient *http_client.HcHttpClient) *DcsClient {
+func NewDcsClient(hcClient *httpclient.HcHttpClient) *DcsClient {
 	return &DcsClient{HcClient: hcClient}
 }
 
-func DcsClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func DcsClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
@@ -124,6 +124,27 @@ func (c *DcsClient) ChangeMasterStandby(request *model.ChangeMasterStandbyReques
 func (c *DcsClient) ChangeMasterStandbyInvoker(request *model.ChangeMasterStandbyRequest) *ChangeMasterStandbyInvoker {
 	requestDef := GenReqDefForChangeMasterStandby()
 	return &ChangeMasterStandbyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeMasterStandbyAsync 异步交换实例主备节点
+//
+// 异步交换实例主备节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ChangeMasterStandbyAsync(request *model.ChangeMasterStandbyAsyncRequest) (*model.ChangeMasterStandbyAsyncResponse, error) {
+	requestDef := GenReqDefForChangeMasterStandbyAsync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeMasterStandbyAsyncResponse), nil
+	}
+}
+
+// ChangeMasterStandbyAsyncInvoker 异步交换实例主备节点
+func (c *DcsClient) ChangeMasterStandbyAsyncInvoker(request *model.ChangeMasterStandbyAsyncRequest) *ChangeMasterStandbyAsyncInvoker {
+	requestDef := GenReqDefForChangeMasterStandbyAsync()
+	return &ChangeMasterStandbyAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CopyInstance 备份指定实例

@@ -1,27 +1,27 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/workspaceapp/v1/model"
 )
 
 type WorkspaceAppClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewWorkspaceAppClient(hcClient *http_client.HcHttpClient) *WorkspaceAppClient {
+func NewWorkspaceAppClient(hcClient *httpclient.HcHttpClient) *WorkspaceAppClient {
 	return &WorkspaceAppClient{HcClient: hcClient}
 }
 
-func WorkspaceAppClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder()
+func WorkspaceAppClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 
 // ListPublishedApp 查询已发布应用
 //
-// 查询已发布的应用
+// 查询已发布的应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListPublishedApp(request *model.ListPublishedAppRequest) (*model.ListPublishedAppResponse, error) {
@@ -42,7 +42,7 @@ func (c *WorkspaceAppClient) ListPublishedAppInvoker(request *model.ListPublishe
 
 // PublishApp 发布应用
 //
-// 批量发布应用,不允许发布同名的应用。
+// 批量发布应用，不允许发布同名的应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) PublishApp(request *model.PublishAppRequest) (*model.PublishAppResponse, error) {
@@ -63,7 +63,7 @@ func (c *WorkspaceAppClient) PublishAppInvoker(request *model.PublishAppRequest)
 
 // ShowPublishableApp 可发布应用列表
 //
-// 查询应用组下可发布的应用
+// 查询应用组下可发布的应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ShowPublishableApp(request *model.ShowPublishableAppRequest) (*model.ShowPublishableAppResponse, error) {
@@ -85,7 +85,7 @@ func (c *WorkspaceAppClient) ShowPublishableAppInvoker(request *model.ShowPublis
 // UnpublishApp 批量取消应用发布
 //
 // 批量取消应用发布。
-// &gt; - 批量取消应用组下已经发布的应用，应用对应的授权会一起删除，重复执行会按照成功处理(响应200)
+// &gt; - 批量取消应用组下已经发布的应用，应用对应的授权会一起删除，重复执行会按照成功处理(响应200)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UnpublishApp(request *model.UnpublishAppRequest) (*model.UnpublishAppResponse, error) {
@@ -106,7 +106,7 @@ func (c *WorkspaceAppClient) UnpublishAppInvoker(request *model.UnpublishAppRequ
 
 // UpdateApp 修改应用信息
 //
-// 编辑修改应用信息
+// 编辑修改应用信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateApp(request *model.UpdateAppRequest) (*model.UpdateAppResponse, error) {
@@ -127,7 +127,7 @@ func (c *WorkspaceAppClient) UpdateAppInvoker(request *model.UpdateAppRequest) *
 
 // UploadAppIcon 修改自定义应用图标
 //
-// 修改自定义应用图标
+// 修改自定义应用图标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UploadAppIcon(request *model.UploadAppIconRequest) (*model.UploadAppIconResponse, error) {
@@ -148,7 +148,7 @@ func (c *WorkspaceAppClient) UploadAppIconInvoker(request *model.UploadAppIconRe
 
 // BatchDeleteAppGroup 批量删除应用组
 //
-// 批量删除应用组,重复执行会按照成功处理(响应200)
+// 批量删除应用组,重复执行会按照成功处理(响应200)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchDeleteAppGroup(request *model.BatchDeleteAppGroupRequest) (*model.BatchDeleteAppGroupResponse, error) {
@@ -212,7 +212,7 @@ func (c *WorkspaceAppClient) ListAppGroupInvoker(request *model.ListAppGroupRequ
 
 // UpdateAppGroup 修改应用组
 //
-// 修改应用组
+// 修改应用组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateAppGroup(request *model.UpdateAppGroupRequest) (*model.UpdateAppGroupResponse, error) {
@@ -254,7 +254,7 @@ func (c *WorkspaceAppClient) ListProductInvoker(request *model.ListProductReques
 
 // ListSessionType 查询会话套餐列表
 //
-// 该接口用于查询会话套餐列表
+// 该接口用于查询会话套餐列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListSessionType(request *model.ListSessionTypeRequest) (*model.ListSessionTypeResponse, error) {
@@ -359,7 +359,7 @@ func (c *WorkspaceAppClient) ListAvailabilityZoneInvoker(request *model.ListAvai
 
 // ShowJob 查询任务的执行状态
 //
-// 查询Job的执行状态，即将下线。
+// 查询Job的执行状态。
 //
 // 对于创建云应用服务器命令下发后会返回job_id，通过job_id可以查询任务的执行状态。
 //
@@ -384,7 +384,7 @@ func (c *WorkspaceAppClient) ShowJobInvoker(request *model.ShowJobRequest) *Show
 //
 // 查询Job的执行状态。
 //
-// 对于创建云服务器、删除云服务器、重装服务器等异步API，下发命令后会返回job_id，通过job_id可以查询任务的执行状态。
+// 对于创建云服务器、删除云服务器、重建镜像等异步API，下发命令后会返回job_id，通过job_id可以查询任务的执行状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
@@ -405,7 +405,7 @@ func (c *WorkspaceAppClient) ShowJobDetailInvoker(request *model.ShowJobDetailRe
 
 // CreateOrUpdateStoragePolicyStatement 新增或更新存储目录访问权限自定义策略
 //
-// 新增或更新存储目录访问权限自定义策略(已存在自定义策略时会对已有策略更新)
+// 新增或更新存储目录访问权限自定义策略(已存在自定义策略时会对已有策略更新)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) CreateOrUpdateStoragePolicyStatement(request *model.CreateOrUpdateStoragePolicyStatementRequest) (*model.CreateOrUpdateStoragePolicyStatementResponse, error) {
@@ -532,7 +532,7 @@ func (c *WorkspaceAppClient) DeleteUserStorageAttachmentInvoker(request *model.D
 
 // ListPersistentStorage 查询WKS存储
 //
-// 查询WKS存储
+// 查询WKS存储。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListPersistentStorage(request *model.ListPersistentStorageRequest) (*model.ListPersistentStorageResponse, error) {
@@ -574,7 +574,7 @@ func (c *WorkspaceAppClient) ListShareFolderInvoker(request *model.ListShareFold
 
 // ListStorageAssignment 查询个人存储目录
 //
-// 查询个人存储目录
+// 查询个人存储目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListStorageAssignment(request *model.ListStorageAssignmentRequest) (*model.ListStorageAssignmentResponse, error) {
@@ -595,7 +595,7 @@ func (c *WorkspaceAppClient) ListStorageAssignmentInvoker(request *model.ListSto
 
 // ListStoragePolicyStatement 查询存储目录访问权限策略
 //
-// 查询存储目录访问权限策略
+// 查询存储目录访问权限策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListStoragePolicyStatement(request *model.ListStoragePolicyStatementRequest) (*model.ListStoragePolicyStatementResponse, error) {
@@ -616,7 +616,7 @@ func (c *WorkspaceAppClient) ListStoragePolicyStatementInvoker(request *model.Li
 
 // UpdateShareFolderAssignment 修改共享目录成员
 //
-// 批量添加或者移除共享目录成员
+// 批量添加或者移除共享目录成员。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateShareFolderAssignment(request *model.UpdateShareFolderAssignmentRequest) (*model.UpdateShareFolderAssignmentResponse, error) {
@@ -637,7 +637,7 @@ func (c *WorkspaceAppClient) UpdateShareFolderAssignmentInvoker(request *model.U
 
 // UpdateUserFolderAssignment 创建个人存储目录
 //
-// 创建个人存储目录,已存在对应目录时,仅更新策略不会重复创建目录
+// 创建个人存储目录，已存在对应目录时，仅更新策略不会重复创建目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateUserFolderAssignment(request *model.UpdateUserFolderAssignmentRequest) (*model.UpdateUserFolderAssignmentResponse, error) {
@@ -700,7 +700,7 @@ func (c *WorkspaceAppClient) CreatePolicyTemplateInvoker(request *model.CreatePo
 
 // DeletePolicyGroup 删除策略组
 //
-// 删除指定策略组，包含策略组对应的策略信息以及应用对象信息
+// 删除指定策略组，包含策略组对应的策略信息以及应用对象信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) DeletePolicyGroup(request *model.DeletePolicyGroupRequest) (*model.DeletePolicyGroupResponse, error) {
@@ -721,7 +721,7 @@ func (c *WorkspaceAppClient) DeletePolicyGroupInvoker(request *model.DeletePolic
 
 // DeletePolicyTemplate 删除策略模板
 //
-// 删除指定策略模板，包含策略模板对应的策略信息以及应用对象信息
+// 删除指定策略模板，包含策略模板对应的策略信息以及应用对象信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) DeletePolicyTemplate(request *model.DeletePolicyTemplateRequest) (*model.DeletePolicyTemplateResponse, error) {
@@ -826,7 +826,7 @@ func (c *WorkspaceAppClient) ShowOriginalPolicyInfoInvoker(request *model.ShowOr
 
 // UpdatePolicyGroup 修改策略组
 //
-// 修改指定策略组的信息
+// 修改指定策略组的信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdatePolicyGroup(request *model.UpdatePolicyGroupRequest) (*model.UpdatePolicyGroupResponse, error) {
@@ -847,7 +847,7 @@ func (c *WorkspaceAppClient) UpdatePolicyGroupInvoker(request *model.UpdatePolic
 
 // UpdatePolicyTemplate 修改策略模板
 //
-// 修改指定策略模板的信息
+// 修改指定策略模板的信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdatePolicyTemplate(request *model.UpdatePolicyTemplateRequest) (*model.UpdatePolicyTemplateResponse, error) {
@@ -889,7 +889,7 @@ func (c *WorkspaceAppClient) CheckQuotaInvoker(request *model.CheckQuotaRequest)
 
 // BatchDeleteServer 批量删除服务器
 //
-// 批量删除服务器
+// 批量删除服务器。
 // &gt; - 仅支持删除按需订购的服务器，包周期订购的服务器需要到Console界面进行退订，订单退订成功后服务器将会自动删除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -911,7 +911,7 @@ func (c *WorkspaceAppClient) BatchDeleteServerInvoker(request *model.BatchDelete
 
 // BatchMigrateHostsServer 迁移云办公主机下面的服务器到目标云办公主机
 //
-// 迁移云办公主机下面的服务器到目标云办公主机
+// 迁移云办公主机下面的服务器到目标云办公主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchMigrateHostsServer(request *model.BatchMigrateHostsServerRequest) (*model.BatchMigrateHostsServerResponse, error) {
@@ -932,7 +932,7 @@ func (c *WorkspaceAppClient) BatchMigrateHostsServerInvoker(request *model.Batch
 
 // BatchRebootServer 重启服务器
 //
-// 重启服务器
+// 重启服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchRebootServer(request *model.BatchRebootServerRequest) (*model.BatchRebootServerResponse, error) {
@@ -974,7 +974,7 @@ func (c *WorkspaceAppClient) BatchRejoinDomainInvoker(request *model.BatchRejoin
 
 // BatchStartServer 启动服务器
 //
-// 启动服务器
+// 启动服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchStartServer(request *model.BatchStartServerRequest) (*model.BatchStartServerResponse, error) {
@@ -995,7 +995,7 @@ func (c *WorkspaceAppClient) BatchStartServerInvoker(request *model.BatchStartSe
 
 // BatchStopServer 关闭服务器
 //
-// 关闭服务器
+// 关闭服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchStopServer(request *model.BatchStopServerRequest) (*model.BatchStopServerResponse, error) {
@@ -1037,7 +1037,7 @@ func (c *WorkspaceAppClient) BatchUpdateTsviInvoker(request *model.BatchUpdateTs
 
 // ChangeServerImage 修改服务器的镜像
 //
-// 修改服务器的镜像
+// 修改服务器的镜像。
 // &gt; - 服务器的镜像和服务器组的镜像不一样时，支持服务器的镜像切换为服务器组的镜像，并且仅允许同等镜像进行切换，例如：同操作系统，免费镜像切换，同源同价的付费镜像切换。如果服务器组的镜像和服务器的镜像为非同等镜像，建议您直接购买新的服务器，删除或者退订老的服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -1059,7 +1059,7 @@ func (c *WorkspaceAppClient) ChangeServerImageInvoker(request *model.ChangeServe
 
 // CreateAppServers 创建云服务器
 //
-// 创建云服务器接口
+// 创建云服务器接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) CreateAppServers(request *model.CreateAppServersRequest) (*model.CreateAppServersResponse, error) {
@@ -1080,7 +1080,7 @@ func (c *WorkspaceAppClient) CreateAppServersInvoker(request *model.CreateAppSer
 
 // ListServers 查询服务器列表
 //
-// 查询服务器列表
+// 查询服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListServers(request *model.ListServersRequest) (*model.ListServersResponse, error) {
@@ -1189,7 +1189,7 @@ func (c *WorkspaceAppClient) DeleteServerGroupsInvoker(request *model.DeleteServ
 
 // ListServerGroups 查询服务器组列表
 //
-// 查询服务器组列表
+// 查询服务器组列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListServerGroups(request *model.ListServerGroupsRequest) (*model.ListServerGroupsResponse, error) {
@@ -1232,7 +1232,7 @@ func (c *WorkspaceAppClient) UpdateServerGroupInvoker(request *model.UpdateServe
 
 // ListAppConnection 查询应用使用记录
 //
-// 查询应用使用记录
+// 查询应用使用记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListAppConnection(request *model.ListAppConnectionRequest) (*model.ListAppConnectionResponse, error) {
@@ -1253,7 +1253,7 @@ func (c *WorkspaceAppClient) ListAppConnectionInvoker(request *model.ListAppConn
 
 // ListSessionByUserName 根据用户名查询当前会话
 //
-// 根据用户名查询当前会话
+// 根据用户名查询当前会话。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListSessionByUserName(request *model.ListSessionByUserNameRequest) (*model.ListSessionByUserNameResponse, error) {
@@ -1274,7 +1274,7 @@ func (c *WorkspaceAppClient) ListSessionByUserNameInvoker(request *model.ListSes
 
 // ListUserConnection 查询用户登录记录
 //
-// 查询用户登录记录
+// 查询用户登录记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListUserConnection(request *model.ListUserConnectionRequest) (*model.ListUserConnectionResponse, error) {
@@ -1295,7 +1295,7 @@ func (c *WorkspaceAppClient) ListUserConnectionInvoker(request *model.ListUserCo
 
 // LogoffUserSession 用户会话注销
 //
-// 用户会话注销
+// 用户会话注销。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) LogoffUserSession(request *model.LogoffUserSessionRequest) (*model.LogoffUserSessionResponse, error) {

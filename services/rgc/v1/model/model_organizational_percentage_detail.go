@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// OrganizationalPercentageDetail 创建账号、纳管OU、纳管账号状态信息。
+// OrganizationalPercentageDetail 创建账号、纳管注册OU、纳管账号状态信息。
 type OrganizationalPercentageDetail struct {
 
 	// 进度名称。
 	PercentageName *string `json:"percentage_name,omitempty"`
 
-	// 进度完成状态。
+	// 创建账号、注册OU、纳管账号的进度完成状态。
 	PercentageStatus *string `json:"percentage_status,omitempty"`
 }
 

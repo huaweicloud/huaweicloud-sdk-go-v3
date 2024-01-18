@@ -55,6 +55,12 @@ type CreateListenerReq struct {
 
 	// 监听器使用的安全策略，仅对TERMINATED_HTTPS协议类型的监听器有效，且默认值为tls-1-0。  取值包括：tls-1-0, tls-1-1, tls-1-2, tls-1-2-strict多种安全策略。
 	TlsCiphersPolicy *CreateListenerReqTlsCiphersPolicy `json:"tls_ciphers_policy,omitempty"`
+
+	// 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+	ProtectionStatus *CreateListenerReqProtectionStatus `json:"protection_status,omitempty"`
+
+	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+	ProtectionReason *string `json:"protection_reason,omitempty"`
 }
 
 func (o CreateListenerReq) String() string {
@@ -158,6 +164,53 @@ func (c CreateListenerReqTlsCiphersPolicy) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateListenerReqTlsCiphersPolicy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateListenerReqProtectionStatus struct {
+	value string
+}
+
+type CreateListenerReqProtectionStatusEnum struct {
+	NON_PROTECTION     CreateListenerReqProtectionStatus
+	CONSOLE_PROTECTION CreateListenerReqProtectionStatus
+}
+
+func GetCreateListenerReqProtectionStatusEnum() CreateListenerReqProtectionStatusEnum {
+	return CreateListenerReqProtectionStatusEnum{
+		NON_PROTECTION: CreateListenerReqProtectionStatus{
+			value: "nonProtection",
+		},
+		CONSOLE_PROTECTION: CreateListenerReqProtectionStatus{
+			value: "consoleProtection",
+		},
+	}
+}
+
+func (c CreateListenerReqProtectionStatus) Value() string {
+	return c.value
+}
+
+func (c CreateListenerReqProtectionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateListenerReqProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

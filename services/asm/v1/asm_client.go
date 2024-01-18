@@ -1,21 +1,21 @@
 package v1
 
 import (
-	http_client "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	httpclient "github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/asm/v1/model"
 )
 
 type AsmClient struct {
-	HcClient *http_client.HcHttpClient
+	HcClient *httpclient.HcHttpClient
 }
 
-func NewAsmClient(hcClient *http_client.HcHttpClient) *AsmClient {
+func NewAsmClient(hcClient *httpclient.HcHttpClient) *AsmClient {
 	return &AsmClient{HcClient: hcClient}
 }
 
-func AsmClientBuilder() *http_client.HcHttpClientBuilder {
-	builder := http_client.NewHcHttpClientBuilder().WithCredentialsType("basic.Credentials")
+func AsmClientBuilder() *httpclient.HcHttpClientBuilder {
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("basic.Credentials")
 	return builder
 }
 

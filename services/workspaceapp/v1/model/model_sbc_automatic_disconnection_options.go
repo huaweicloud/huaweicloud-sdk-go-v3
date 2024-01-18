@@ -8,7 +8,7 @@ import (
 
 type SbcAutomaticDisconnectionOptions struct {
 
-	// 等待时间（分钟）
+	// 等待时间（分钟）。
 	DisconnectionWaitingTime *int32 `json:"disconnection_waiting_time,omitempty"`
 
 	// 是否自动注销。取值为：false：表示是。true：表示否。

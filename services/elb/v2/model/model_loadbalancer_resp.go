@@ -69,11 +69,20 @@ type LoadbalancerResp struct {
 	// 负载均衡器绑定的公网IP。只支持绑定一个公网IP。
 	Publicips []PublicIpInfo `json:"publicips"`
 
-	// 收费模式。取值：  flavor：按规格计费 lcu：按使用量计费 说明：不影响弹性扩缩容实例、包周期实例的计费方式
+	// 收费模式。取值：  flavor：按规格计费 lcu：按使用量计费 说明：弹性扩缩容实例该字段无效，按lcu收费；包周期实例该字段无效，预付费收费。
 	ChargeMode string `json:"charge_mode"`
+
+	// 资源账单信息，取值：     - 空：按需计费。     - 非空：包周期计费，  包周期计费billing_info字段的格式为：order_id:product_id:region_id:project_id。
+	BillingInfo string `json:"billing_info"`
 
 	// 负载均衡器的冻结场景。若负载均衡器有多个冻结场景，用逗号分隔。取值：  POLICE：公安冻结场景。 ILLEGAL：违规冻结场景。 VERIFY：客户未实名认证冻结场景。 PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 AREAR：欠费冻结场景。
 	FrozenScene *string `json:"frozen_scene,omitempty"`
+
+	// 修改保护状态, 取值： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
+	ProtectionStatus *LoadbalancerRespProtectionStatus `json:"protection_status,omitempty"`
+
+	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+	ProtectionReason *string `json:"protection_reason,omitempty"`
 }
 
 func (o LoadbalancerResp) String() string {
@@ -177,6 +186,53 @@ func (c LoadbalancerRespProvisioningStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *LoadbalancerRespProvisioningStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type LoadbalancerRespProtectionStatus struct {
+	value string
+}
+
+type LoadbalancerRespProtectionStatusEnum struct {
+	NON_PROTECTION     LoadbalancerRespProtectionStatus
+	CONSOLE_PROTECTION LoadbalancerRespProtectionStatus
+}
+
+func GetLoadbalancerRespProtectionStatusEnum() LoadbalancerRespProtectionStatusEnum {
+	return LoadbalancerRespProtectionStatusEnum{
+		NON_PROTECTION: LoadbalancerRespProtectionStatus{
+			value: "nonProtection",
+		},
+		CONSOLE_PROTECTION: LoadbalancerRespProtectionStatus{
+			value: "consoleProtection",
+		},
+	}
+}
+
+func (c LoadbalancerRespProtectionStatus) Value() string {
+	return c.value
+}
+
+func (c LoadbalancerRespProtectionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LoadbalancerRespProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

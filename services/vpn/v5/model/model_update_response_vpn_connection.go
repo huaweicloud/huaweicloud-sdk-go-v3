@@ -62,6 +62,9 @@ type UpdateResponseVpnConnection struct {
 
 	// 连接的HA角色
 	HaRole *string `json:"ha_role,omitempty"`
+
+	// 标签
+	Tags *[]VpnResourceTag `json:"tags,omitempty"`
 }
 
 func (o UpdateResponseVpnConnection) String() string {

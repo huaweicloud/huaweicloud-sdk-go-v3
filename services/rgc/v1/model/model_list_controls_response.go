@@ -9,7 +9,7 @@ import (
 // ListControlsResponse Response Object
 type ListControlsResponse struct {
 
-	// 纳管的OU。
+	// 控制策略信息。
 	Controls *[]Control `json:"controls,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

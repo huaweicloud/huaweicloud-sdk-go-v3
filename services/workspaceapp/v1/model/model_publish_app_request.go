@@ -9,7 +9,7 @@ import (
 // PublishAppRequest Request Object
 type PublishAppRequest struct {
 
-	// 应用组ID
+	// 应用组ID。
 	AppGroupId string `json:"app_group_id"`
 
 	Body *PublishAppReq `json:"body,omitempty"`

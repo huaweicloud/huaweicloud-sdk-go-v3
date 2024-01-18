@@ -15,7 +15,7 @@ type ShowLandingZoneStatusResponse struct {
 	// Landing Zone的设置状态，包括进行中，已完成。
 	LandingZoneStatus *string `json:"landing_zone_status,omitempty"`
 
-	// LandingZone的完成进度。
+	// Landing Zone的完成进度。
 	PercentageComplete *int32 `json:"percentage_complete,omitempty"`
 
 	// Landing Zone设置的详细进度信息。
