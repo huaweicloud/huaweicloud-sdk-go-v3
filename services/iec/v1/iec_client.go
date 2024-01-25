@@ -1106,6 +1106,27 @@ func (c *IecClient) ListSubnetsInvoker(request *model.ListSubnetsRequest) *ListS
 	return &ListSubnetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListVolume 查询硬盘列表
+//
+// 查询硬盘列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) ListVolume(request *model.ListVolumeRequest) (*model.ListVolumeResponse, error) {
+	requestDef := GenReqDefForListVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVolumeResponse), nil
+	}
+}
+
+// ListVolumeInvoker 查询硬盘列表
+func (c *IecClient) ListVolumeInvoker(request *model.ListVolumeRequest) *ListVolumeInvoker {
+	requestDef := GenReqDefForListVolume()
+	return &ListVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVpcs 查询虚拟私有云列表
 //
 // 获取虚拟私有云的列表。

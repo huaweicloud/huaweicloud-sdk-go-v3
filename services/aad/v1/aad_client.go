@@ -250,27 +250,6 @@ func (c *AadClient) CreateAadDomainInvoker(request *model.CreateAadDomainRequest
 	return &CreateAadDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateCertificate 上传/修改域名对应证书
-//
-// 上传/修改域名对应证书
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AadClient) CreateCertificate(request *model.CreateCertificateRequest) (*model.CreateCertificateResponse, error) {
-	requestDef := GenReqDefForCreateCertificate()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateCertificateResponse), nil
-	}
-}
-
-// CreateCertificateInvoker 上传/修改域名对应证书
-func (c *AadClient) CreateCertificateInvoker(request *model.CreateCertificateRequest) *CreateCertificateInvoker {
-	requestDef := GenReqDefForCreateCertificate()
-	return &CreateCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreatePolicy 创建策略
 //
 // 创建策略
@@ -626,6 +605,27 @@ func (c *AadClient) ModifyDomainWebSwitch(request *model.ModifyDomainWebSwitchRe
 func (c *AadClient) ModifyDomainWebSwitchInvoker(request *model.ModifyDomainWebSwitchRequest) *ModifyDomainWebSwitchInvoker {
 	requestDef := GenReqDefForModifyDomainWebSwitch()
 	return &ModifyDomainWebSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetCertForDomain 上传/修改域名对应证书
+//
+// 上传/修改域名对应证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) SetCertForDomain(request *model.SetCertForDomainRequest) (*model.SetCertForDomainResponse, error) {
+	requestDef := GenReqDefForSetCertForDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetCertForDomainResponse), nil
+	}
+}
+
+// SetCertForDomainInvoker 上传/修改域名对应证书
+func (c *AadClient) SetCertForDomainInvoker(request *model.SetCertForDomainRequest) *SetCertForDomainInvoker {
+	requestDef := GenReqDefForSetCertForDomain()
+	return &SetCertForDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAlarmConfig 查询告警配置

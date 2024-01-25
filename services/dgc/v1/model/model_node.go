@@ -82,6 +82,7 @@ type NodeTypeEnum struct {
 	MAP_REDUCE         NodeType
 	DLI_SPARK          NodeType
 	MRS_FLINK          NodeType
+	MRS_FLINK_JOB      NodeType
 	MRS_HETU_ENGINE    NodeType
 	RDS_SQL            NodeType
 }
@@ -138,6 +139,9 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		},
 		MRS_FLINK: NodeType{
 			value: "MRSFlink",
+		},
+		MRS_FLINK_JOB: NodeType{
+			value: "MRSFlinkJob",
 		},
 		MRS_HETU_ENGINE: NodeType{
 			value: "MRSHetuEngine",

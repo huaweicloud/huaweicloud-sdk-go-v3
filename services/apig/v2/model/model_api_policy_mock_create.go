@@ -26,7 +26,7 @@ type ApiPolicyMockCreate struct {
 	// 策略条件列表
 	Conditions []ApiConditionBase `json:"conditions"`
 
-	// 后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+	// 后端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 }
 

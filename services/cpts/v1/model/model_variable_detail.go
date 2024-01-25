@@ -23,7 +23,7 @@ type VariableDetail struct {
 	// 变量值
 	Variable *[]interface{} `json:"variable,omitempty"`
 
-	// 变量类型（1：整数；2：枚举；3：文件；5：文本（hcs暂无此类型））
+	// 变量类型（1：整数；2：枚举；3：文件[；5：文本](tag:hws,hws_hk)）
 	VariableType *int32 `json:"variable_type,omitempty"`
 
 	// 变量读取模式，0：顺序模式；1：随机模式

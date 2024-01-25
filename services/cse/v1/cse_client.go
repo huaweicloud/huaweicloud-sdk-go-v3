@@ -481,6 +481,195 @@ func (c *CseClient) UploadKieInvoker(request *model.UploadKieRequest) *UploadKie
 	return &UploadKieInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateHttp2Rpc 创建http转rpc方法
+//
+// 创建http转rpc方法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) CreateHttp2Rpc(request *model.CreateHttp2RpcRequest) (*model.CreateHttp2RpcResponse, error) {
+	requestDef := GenReqDefForCreateHttp2Rpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHttp2RpcResponse), nil
+	}
+}
+
+// CreateHttp2RpcInvoker 创建http转rpc方法
+func (c *CseClient) CreateHttp2RpcInvoker(request *model.CreateHttp2RpcRequest) *CreateHttp2RpcInvoker {
+	requestDef := GenReqDefForCreateHttp2Rpc()
+	return &CreateHttp2RpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePlugin 创建插件
+//
+// 创建插件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) CreatePlugin(request *model.CreatePluginRequest) (*model.CreatePluginResponse, error) {
+	requestDef := GenReqDefForCreatePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePluginResponse), nil
+	}
+}
+
+// CreatePluginInvoker 创建插件
+func (c *CseClient) CreatePluginInvoker(request *model.CreatePluginRequest) *CreatePluginInvoker {
+	requestDef := GenReqDefForCreatePlugin()
+	return &CreatePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHttp2Rpc 删除http转rpc方法
+//
+// 删除http转rpc方法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) DeleteHttp2Rpc(request *model.DeleteHttp2RpcRequest) (*model.DeleteHttp2RpcResponse, error) {
+	requestDef := GenReqDefForDeleteHttp2Rpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHttp2RpcResponse), nil
+	}
+}
+
+// DeleteHttp2RpcInvoker 删除http转rpc方法
+func (c *CseClient) DeleteHttp2RpcInvoker(request *model.DeleteHttp2RpcRequest) *DeleteHttp2RpcInvoker {
+	requestDef := GenReqDefForDeleteHttp2Rpc()
+	return &DeleteHttp2RpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePlugin 删除插件
+//
+// 删除插件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) DeletePlugin(request *model.DeletePluginRequest) (*model.DeletePluginResponse, error) {
+	requestDef := GenReqDefForDeletePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePluginResponse), nil
+	}
+}
+
+// DeletePluginInvoker 删除插件
+func (c *CseClient) DeletePluginInvoker(request *model.DeletePluginRequest) *DeletePluginInvoker {
+	requestDef := GenReqDefForDeletePlugin()
+	return &DeletePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyHttp2Rpc 修改http转rpc方法
+//
+// 修改http转rpc方法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ModifyHttp2Rpc(request *model.ModifyHttp2RpcRequest) (*model.ModifyHttp2RpcResponse, error) {
+	requestDef := GenReqDefForModifyHttp2Rpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyHttp2RpcResponse), nil
+	}
+}
+
+// ModifyHttp2RpcInvoker 修改http转rpc方法
+func (c *CseClient) ModifyHttp2RpcInvoker(request *model.ModifyHttp2RpcRequest) *ModifyHttp2RpcInvoker {
+	requestDef := GenReqDefForModifyHttp2Rpc()
+	return &ModifyHttp2RpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyPlugin 修改插件
+//
+// 修改插件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ModifyPlugin(request *model.ModifyPluginRequest) (*model.ModifyPluginResponse, error) {
+	requestDef := GenReqDefForModifyPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyPluginResponse), nil
+	}
+}
+
+// ModifyPluginInvoker 修改插件
+func (c *CseClient) ModifyPluginInvoker(request *model.ModifyPluginRequest) *ModifyPluginInvoker {
+	requestDef := GenReqDefForModifyPlugin()
+	return &ModifyPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHttp2Rpcs 查询http2rpc资源列表
+//
+// 查询http转rpc资源列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ShowHttp2Rpcs(request *model.ShowHttp2RpcsRequest) (*model.ShowHttp2RpcsResponse, error) {
+	requestDef := GenReqDefForShowHttp2Rpcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHttp2RpcsResponse), nil
+	}
+}
+
+// ShowHttp2RpcsInvoker 查询http2rpc资源列表
+func (c *CseClient) ShowHttp2RpcsInvoker(request *model.ShowHttp2RpcsRequest) *ShowHttp2RpcsInvoker {
+	requestDef := GenReqDefForShowHttp2Rpcs()
+	return &ShowHttp2RpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPlugins 查询插件列表
+//
+// 查询插件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ShowPlugins(request *model.ShowPluginsRequest) (*model.ShowPluginsResponse, error) {
+	requestDef := GenReqDefForShowPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPluginsResponse), nil
+	}
+}
+
+// ShowPluginsInvoker 查询插件列表
+func (c *CseClient) ShowPluginsInvoker(request *model.ShowPluginsRequest) *ShowPluginsInvoker {
+	requestDef := GenReqDefForShowPlugins()
+	return &ShowPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSinglePlugin 查询单个插件
+//
+// 查询单个插件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CseClient) ShowSinglePlugin(request *model.ShowSinglePluginRequest) (*model.ShowSinglePluginResponse, error) {
+	requestDef := GenReqDefForShowSinglePlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSinglePluginResponse), nil
+	}
+}
+
+// ShowSinglePluginInvoker 查询单个插件
+func (c *CseClient) ShowSinglePluginInvoker(request *model.ShowSinglePluginRequest) *ShowSinglePluginInvoker {
+	requestDef := GenReqDefForShowSinglePlugin()
+	return &ShowSinglePluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateNacosNamespaces 创建nacos命名空间
 //
 // 创建nacos命名空间。

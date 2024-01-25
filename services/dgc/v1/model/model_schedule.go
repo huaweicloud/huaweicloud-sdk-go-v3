@@ -10,6 +10,8 @@ import (
 )
 
 type Schedule struct {
+
+	// 调度类型 - EXECUTE_ONCE: 作业立即运行，只运行一次。 - CRON: 作业按指定频率周期执行。 - EVENT:  根据事件触发执行。
 	Type *ScheduleType `json:"type,omitempty"`
 
 	Cron *Cron `json:"cron,omitempty"`

@@ -15,7 +15,7 @@ type CreateVariableRequestBody struct {
 	// 变量名称
 	Name string `json:"name"`
 
-	// 变量类型（1：整数；2：枚举；3：文件；5：文本（hcs暂无此类型））
+	// 变量类型（1：整数；2：枚举；3：文件[；5：文本](tag:hws,hws_hk)
 	VariableType int32 `json:"variable_type"`
 
 	// 变量值

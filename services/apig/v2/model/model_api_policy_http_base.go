@@ -14,7 +14,7 @@ type ApiPolicyHttpBase struct {
 	// 策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
 	UrlDomain *string `json:"url_domain,omitempty"`
 
-	// 请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+	// 请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
 	ReqProtocol ApiPolicyHttpBaseReqProtocol `json:"req_protocol"`
 
 	// 请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
@@ -46,6 +46,7 @@ type ApiPolicyHttpBaseReqProtocol struct {
 type ApiPolicyHttpBaseReqProtocolEnum struct {
 	HTTP  ApiPolicyHttpBaseReqProtocol
 	HTTPS ApiPolicyHttpBaseReqProtocol
+	GRPC  ApiPolicyHttpBaseReqProtocol
 	GRPCS ApiPolicyHttpBaseReqProtocol
 }
 
@@ -56,6 +57,9 @@ func GetApiPolicyHttpBaseReqProtocolEnum() ApiPolicyHttpBaseReqProtocolEnum {
 		},
 		HTTPS: ApiPolicyHttpBaseReqProtocol{
 			value: "HTTPS",
+		},
+		GRPC: ApiPolicyHttpBaseReqProtocol{
+			value: "GRPC",
 		},
 		GRPCS: ApiPolicyHttpBaseReqProtocol{
 			value: "GRPCS",

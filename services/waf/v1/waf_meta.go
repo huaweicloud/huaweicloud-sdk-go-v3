@@ -1441,6 +1441,11 @@ func GenReqDefForListOverviewsClassification() *def.HttpRequestDef {
 		WithJsonTag("instances").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

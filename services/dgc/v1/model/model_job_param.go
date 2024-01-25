@@ -10,8 +10,11 @@ import (
 )
 
 type JobParam struct {
+
+	// 参数名称，只能包含英文字母、数字、中划线和下划线。
 	Name string `json:"name"`
 
+	// 参数值
 	Value string `json:"value"`
 
 	// 参数类型

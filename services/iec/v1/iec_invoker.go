@@ -617,6 +617,18 @@ func (i *ListSubnetsInvoker) Invoke() (*model.ListSubnetsResponse, error) {
 	}
 }
 
+type ListVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVolumeInvoker) Invoke() (*model.ListVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVolumeResponse), nil
+	}
+}
+
 type ListVpcsInvoker struct {
 	*invoker.BaseInvoker
 }

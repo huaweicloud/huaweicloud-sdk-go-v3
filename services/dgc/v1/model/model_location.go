@@ -7,8 +7,11 @@ import (
 )
 
 type Location struct {
+
+	// 节点在作业画布上的横轴位置
 	X string `json:"x"`
 
+	// 节点在作业画布上的纵轴位置
 	Y string `json:"y"`
 }
 

@@ -98,6 +98,9 @@ type PostSourceServerBody struct {
 
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
+
+	// 启动方式，可以取值MANUAL、MGC或者空。
+	StartType *PostSourceServerBodyStartType `json:"start_type,omitempty"`
 }
 
 func (o PostSourceServerBody) String() string {
@@ -382,6 +385,57 @@ func (c PostSourceServerBodyState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PostSourceServerBodyState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PostSourceServerBodyStartType struct {
+	value string
+}
+
+type PostSourceServerBodyStartTypeEnum struct {
+	MANUAL PostSourceServerBodyStartType
+	MGC    PostSourceServerBodyStartType
+	EMPTY  PostSourceServerBodyStartType
+}
+
+func GetPostSourceServerBodyStartTypeEnum() PostSourceServerBodyStartTypeEnum {
+	return PostSourceServerBodyStartTypeEnum{
+		MANUAL: PostSourceServerBodyStartType{
+			value: "MANUAL",
+		},
+		MGC: PostSourceServerBodyStartType{
+			value: "MGC",
+		},
+		EMPTY: PostSourceServerBodyStartType{
+			value: "",
+		},
+	}
+}
+
+func (c PostSourceServerBodyStartType) Value() string {
+	return c.value
+}
+
+func (c PostSourceServerBodyStartType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PostSourceServerBodyStartType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

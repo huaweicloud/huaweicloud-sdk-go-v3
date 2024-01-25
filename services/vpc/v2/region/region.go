@@ -54,6 +54,8 @@ var (
 		"https://vpc.ae-ad-1.myhuaweicloud.com")
 	EU_WEST_0 = region.NewRegion("eu-west-0",
 		"https://vpc.eu-west-0.myhuaweicloud.com")
+	RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2",
+		"https://vpc.ru-northwest-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -80,6 +82,7 @@ var staticFields = map[string]*region.Region{
 	"me-east-1":      ME_EAST_1,
 	"ae-ad-1":        AE_AD_1,
 	"eu-west-0":      EU_WEST_0,
+	"ru-northwest-2": RU_NORTHWEST_2,
 }
 
 var provider = region.DefaultProviderChain("VPC")

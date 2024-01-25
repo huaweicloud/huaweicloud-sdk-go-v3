@@ -11,13 +11,13 @@ import (
 
 type BackendApiBaseInfo struct {
 
-	// 后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+	// 后端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	// 后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
 	UrlDomain *string `json:"url_domain,omitempty"`
 
-	// 请求协议，后端类型为GRPC时请求协议可选GRPCS
+	// 请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
 	ReqProtocol BackendApiBaseInfoReqProtocol `json:"req_protocol"`
 
 	// 描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
@@ -58,6 +58,7 @@ type BackendApiBaseInfoReqProtocol struct {
 type BackendApiBaseInfoReqProtocolEnum struct {
 	HTTP  BackendApiBaseInfoReqProtocol
 	HTTPS BackendApiBaseInfoReqProtocol
+	GRPC  BackendApiBaseInfoReqProtocol
 	GRPCS BackendApiBaseInfoReqProtocol
 }
 
@@ -68,6 +69,9 @@ func GetBackendApiBaseInfoReqProtocolEnum() BackendApiBaseInfoReqProtocolEnum {
 		},
 		HTTPS: BackendApiBaseInfoReqProtocol{
 			value: "HTTPS",
+		},
+		GRPC: BackendApiBaseInfoReqProtocol{
+			value: "GRPC",
 		},
 		GRPCS: BackendApiBaseInfoReqProtocol{
 			value: "GRPCS",

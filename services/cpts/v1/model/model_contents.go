@@ -23,7 +23,7 @@ type Contents struct {
 	// 数据（循环、条件控制器作用的数据）
 	Data *interface{} `json:"data,omitempty"`
 
-	// 类型，0:默认请求；1:数据指令；201:循环指令； 202:条件指令；301:集合点
+	// 数据指令类型（0：默认请求卡片；1：数据指令；201：循环指令；202：条件指令；301：集合点[；203：vu百分比控制器；204：吞吐量控制器；302：插件请求](tag:hws,hws_hk)）
 	DataType *int32 `json:"data_type,omitempty"`
 
 	// 若类型为202:条件指令，该字段为条件配置

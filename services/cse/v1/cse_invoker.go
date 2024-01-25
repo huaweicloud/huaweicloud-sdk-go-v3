@@ -269,6 +269,114 @@ func (i *UploadKieInvoker) Invoke() (*model.UploadKieResponse, error) {
 	}
 }
 
+type CreateHttp2RpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHttp2RpcInvoker) Invoke() (*model.CreateHttp2RpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHttp2RpcResponse), nil
+	}
+}
+
+type CreatePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePluginInvoker) Invoke() (*model.CreatePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePluginResponse), nil
+	}
+}
+
+type DeleteHttp2RpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHttp2RpcInvoker) Invoke() (*model.DeleteHttp2RpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHttp2RpcResponse), nil
+	}
+}
+
+type DeletePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePluginInvoker) Invoke() (*model.DeletePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePluginResponse), nil
+	}
+}
+
+type ModifyHttp2RpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyHttp2RpcInvoker) Invoke() (*model.ModifyHttp2RpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyHttp2RpcResponse), nil
+	}
+}
+
+type ModifyPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyPluginInvoker) Invoke() (*model.ModifyPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyPluginResponse), nil
+	}
+}
+
+type ShowHttp2RpcsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHttp2RpcsInvoker) Invoke() (*model.ShowHttp2RpcsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHttp2RpcsResponse), nil
+	}
+}
+
+type ShowPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginsInvoker) Invoke() (*model.ShowPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPluginsResponse), nil
+	}
+}
+
+type ShowSinglePluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSinglePluginInvoker) Invoke() (*model.ShowSinglePluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSinglePluginResponse), nil
+	}
+}
+
 type CreateNacosNamespacesInvoker struct {
 	*invoker.BaseInvoker
 }

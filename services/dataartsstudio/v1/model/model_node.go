@@ -15,7 +15,7 @@ type Node struct {
 	// 节点名称。只能包含六种字符：英文字母、数字、中文、中划线、下划线和点号。同一个作业中节点名称不能重复。
 	Name string `json:"name"`
 
-	// 节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
+	// 节点类型： - HiveSQL：执行Hive SQL脚本 - SparkSQL：执行Spark SQL脚本 - DWSSQL：执行DWS SQL脚本 - DLISQL：执行DLI SQL脚本 - RDSSQL：执行RDS SQL脚本 - Shell：执行Shell脚本 - Python：执行Python脚本 - DISTransferTask：创建DIS转储任务 - CDMJob：执行CDM作业 - OBSManager：执行OBS相关操作 - Dummy：虚拟节点 - RESTAPI：执行Rest API调用 - DLISpark：执行DLI Spark作业 - SMN：执行SMN通知 - MRSSpark：执行MRS Spark作业 - MapReduce：执行MapReduce作业 - MRSFlink：执行MRS服务的FLlink作业 - MRSFlinkJob：执行MRS服务的FlinkJob作业 - MRSHetuEngine: 执行MRS服务的HetuEngine作业
 	Type NodeType `json:"type"`
 
 	Location *Location `json:"location"`
@@ -83,6 +83,7 @@ type NodeTypeEnum struct {
 	MRS_SPARK         NodeType
 	MAP_REDUCE        NodeType
 	MRS_FLINK         NodeType
+	MRS_FLINK_JOB     NodeType
 	MRS_HETU_ENGINE   NodeType
 }
 
@@ -138,6 +139,9 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		},
 		MRS_FLINK: NodeType{
 			value: "MRSFlink",
+		},
+		MRS_FLINK_JOB: NodeType{
+			value: "MRSFlinkJob",
 		},
 		MRS_HETU_ENGINE: NodeType{
 			value: "MRSHetuEngine",

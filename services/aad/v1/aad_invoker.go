@@ -137,18 +137,6 @@ func (i *CreateAadDomainInvoker) Invoke() (*model.CreateAadDomainResponse, error
 	}
 }
 
-type CreateCertificateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateCertificateResponse), nil
-	}
-}
-
 type CreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -350,6 +338,18 @@ func (i *ModifyDomainWebSwitchInvoker) Invoke() (*model.ModifyDomainWebSwitchRes
 		return nil, err
 	} else {
 		return result.(*model.ModifyDomainWebSwitchResponse), nil
+	}
+}
+
+type SetCertForDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetCertForDomainInvoker) Invoke() (*model.SetCertForDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetCertForDomainResponse), nil
 	}
 }
 

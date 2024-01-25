@@ -110,11 +110,65 @@ type VatInvoiceResult struct {
 	// 货物或应税劳务列表。
 	ItemList *[]ItemList `json:"item_list,omitempty"`
 
+	// 省。
+	Province *string `json:"province,omitempty"`
+
+	// 市。
+	City *string `json:"city,omitempty"`
+
 	// 各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
 	Confidence *interface{} `json:"confidence,omitempty"`
 
 	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
 	TextLocation *interface{} `json:"text_location,omitempty"`
+
+	// 销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
+	BelongBuyerName *string `json:"belong_buyer_name,omitempty"`
+
+	// 销货清单的销售方名称。 当传入图片为发票销货清单时返回此字段。
+	BelongSellerName *string `json:"belong_seller_name,omitempty"`
+
+	// 所属的增值税发票代码。 当传入图片为发票销货清单时返回此字段。
+	BelongVatCode *string `json:"belong_vat_code,omitempty"`
+
+	// 销货清单的开票号码。 当传入图片为发票销货清单时返回此字段。
+	BelongNumber *string `json:"belong_number,omitempty"`
+
+	// 销货清单的总页码数。 当传入图片为发票销货清单时返回此字段。
+	BelongPages *string `json:"belong_pages,omitempty"`
+
+	// 销货清单的当前页码。 当传入图片为发票销货清单时返回此字段。
+	BelongCurrentPage *string `json:"belong_current_page,omitempty"`
+
+	// 销货清单的备注。 当传入图片为发票销货清单时返回此字段。
+	BelongRemarks *string `json:"belong_remarks,omitempty"`
+
+	// 销货清单的填开日期。 当传入图片为发票销货清单时返回此字段。
+	BelongIssueDate *string `json:"belong_issue_date,omitempty"`
+
+	// 是否是销货清单，可选值为： - true：输入图片是销货清单。 - false：输入图片不是销货清单。
+	SalesMark *bool `json:"sales_mark,omitempty"`
+
+	// 销货清单的小计金额。 当传入图片为发票销货清单时返回此字段。
+	BelongSumAmount *string `json:"belong_sum_amount,omitempty"`
+
+	// 销货清单的小计税额。 当传入图片为发票销货清单时返回此字段。
+	BelongSumTax *string `json:"belong_sum_tax,omitempty"`
+
+	// 销货清单的总计或者合计金额。 当传入图片为发票销货清单时返回此字段。
+	BelongSubtotalAmount *string `json:"belong_subtotal_amount,omitempty"`
+
+	// 销货清单的总计税额。 当传入图片为发票销货清单时返回此字段。
+	BelongSubtotalTax *string `json:"belong_subtotal_tax,omitempty"`
+
+	// 销货清单的折扣金额。 当传入图片为发票销货清单时返回此字段。
+	BelongDiscountAmount *string `json:"belong_discount_amount,omitempty"`
+
+	// 销货清单的折扣税额。 当传入图片为发票销货清单时返回此字段。
+	BelongDiscountTax *string `json:"belong_discount_tax,omitempty"`
+
+	// 销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
+	BelongItemList *[]BelongItemList `json:"belong_item_list,omitempty"`
 }
 
 func (o VatInvoiceResult) String() string {

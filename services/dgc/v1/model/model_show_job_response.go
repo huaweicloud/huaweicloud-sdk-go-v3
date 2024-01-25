@@ -29,6 +29,12 @@ type ShowJobResponse struct {
 	// 作业类型，REAL_TIME： 实时处理，BATCH：批处理
 	ProcessType *ShowJobResponseProcessType `json:"processType,omitempty"`
 
+	// 作业Id, 用户查询作业时使用。
+	Id *int64 `json:"id,omitempty"`
+
+	// 作业创建时间.
+	CreateTime *int64 `json:"createTime,omitempty"`
+
 	// 是否选择单任务，默认为false
 	SingleNodeJobFlag *bool `json:"singleNodeJobFlag,omitempty"`
 
@@ -43,12 +49,21 @@ type ShowJobResponse struct {
 
 	BasicConfig *BasicConfig `json:"basicConfig,omitempty"`
 
-	// 在开启审批开关后，需要填写该字段。表示创建作业的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示作业创建后是保存态，提交态，生产态。
-	TargetStatus *ShowJobResponseTargetStatus `json:"targetStatus,omitempty"`
+	// 作业描述信息
+	Description *string `json:"description,omitempty"`
 
-	// 在开启审批开关后，需要填写该字段，表示作业审批人。
-	Approvers      *[]JobApprover `json:"approvers,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	// 设置作业的最大超时时间。
+	CleanOverdueDays *int32 `json:"cleanOverdueDays,omitempty"`
+
+	// 清除等待的作业。
+	CleanWaitingJob *string `json:"cleanWaitingJob,omitempty"`
+
+	// 是否空跑。
+	EmptyRunningJob *string `json:"emptyRunningJob,omitempty"`
+
+	// 作业版本信息。
+	Version        *string `json:"version,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowJobResponse) String() string {
@@ -184,57 +199,6 @@ func (c ShowJobResponseSingleNodeJobType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowJobResponseSingleNodeJobType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ShowJobResponseTargetStatus struct {
-	value string
-}
-
-type ShowJobResponseTargetStatusEnum struct {
-	SAVED      ShowJobResponseTargetStatus
-	SUBMITTED  ShowJobResponseTargetStatus
-	PRODUCTION ShowJobResponseTargetStatus
-}
-
-func GetShowJobResponseTargetStatusEnum() ShowJobResponseTargetStatusEnum {
-	return ShowJobResponseTargetStatusEnum{
-		SAVED: ShowJobResponseTargetStatus{
-			value: "SAVED",
-		},
-		SUBMITTED: ShowJobResponseTargetStatus{
-			value: "SUBMITTED",
-		},
-		PRODUCTION: ShowJobResponseTargetStatus{
-			value: "PRODUCTION",
-		},
-	}
-}
-
-func (c ShowJobResponseTargetStatus) Value() string {
-	return c.value
-}
-
-func (c ShowJobResponseTargetStatus) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ShowJobResponseTargetStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

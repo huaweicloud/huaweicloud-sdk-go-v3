@@ -10,17 +10,21 @@ import (
 )
 
 type SubTaskStatus struct {
+
+	// 作业ID
 	Id *string `json:"id,omitempty"`
 
+	// 作业名称
 	Name *string `json:"name,omitempty"`
 
-	StartTime *string `json:"startTime,omitempty"`
+	// 作业最后更新日期
+	LastUpdate *int64 `json:"lastUpdate,omitempty"`
 
-	EndTime *string `json:"endTime,omitempty"`
-
-	LastUpdate *string `json:"lastUpdate,omitempty"`
-
+	// 作业运行状态 RUNNING：运行中 SUCCESSFUL：运行成功 FAILED：运行失败
 	Status *SubTaskStatusStatus `json:"status,omitempty"`
+
+	// 作业消息
+	Message *string `json:"message,omitempty"`
 }
 
 func (o SubTaskStatus) String() string {

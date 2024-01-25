@@ -29,7 +29,7 @@ type ShowDetailsOfApiV2Response struct {
 	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。  > 需要服从URI规范。
 	ReqUri string `json:"req_uri"`
 
-	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入  当API的请求协议为GRPC类型时不支持自定义认证。
+	// API的认证方式 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证，当auth_type取值为AUTHORIZER时，authorizer_id字段必须传入
 	AuthType ShowDetailsOfApiV2ResponseAuthType `json:"auth_type"`
 
 	AuthOpt *AuthOpt `json:"auth_opt,omitempty"`

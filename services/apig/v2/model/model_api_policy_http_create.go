@@ -14,7 +14,7 @@ type ApiPolicyHttpCreate struct {
 	// 策略后端的Endpoint。  由域名（或IP地址）和端口号组成，总长度不超过255。格式为域名:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443， HTTP默认端口号为80。  支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、“_”、“-”组成，且只能以英文开头。
 	UrlDomain *string `json:"url_domain,omitempty"`
 
-	// 请求协议：HTTP、HTTPS、GRPCS，后端类型为GRPC时可选GRPCS
+	// 请求协议：HTTP、HTTPS、GRPC、GRPCS，后端类型为GRPC时可选GRPC、GRPCS
 	ReqProtocol ApiPolicyHttpCreateReqProtocol `json:"req_protocol"`
 
 	// 请求方式：GET、POST、PUT、DELETE、HEAD、PATCH、OPTIONS、ANY，后端类型为GRPC时固定为POST
@@ -41,7 +41,7 @@ type ApiPolicyHttpCreate struct {
 	// 策略条件列表
 	Conditions []ApiConditionBase `json:"conditions"`
 
-	// 后端自定义认证对象的ID，后端类型为GRPC时不支持后端自定义认证
+	// 后端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	VpcChannelInfo *ApiBackendVpcReq `json:"vpc_channel_info,omitempty"`
@@ -66,6 +66,7 @@ type ApiPolicyHttpCreateReqProtocol struct {
 type ApiPolicyHttpCreateReqProtocolEnum struct {
 	HTTP  ApiPolicyHttpCreateReqProtocol
 	HTTPS ApiPolicyHttpCreateReqProtocol
+	GRPC  ApiPolicyHttpCreateReqProtocol
 	GRPCS ApiPolicyHttpCreateReqProtocol
 }
 
@@ -76,6 +77,9 @@ func GetApiPolicyHttpCreateReqProtocolEnum() ApiPolicyHttpCreateReqProtocolEnum 
 		},
 		HTTPS: ApiPolicyHttpCreateReqProtocol{
 			value: "HTTPS",
+		},
+		GRPC: ApiPolicyHttpCreateReqProtocol{
+			value: "GRPC",
 		},
 		GRPCS: ApiPolicyHttpCreateReqProtocol{
 			value: "GRPCS",

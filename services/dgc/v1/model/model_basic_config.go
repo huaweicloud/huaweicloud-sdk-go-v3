@@ -28,6 +28,9 @@ type BasicConfig struct {
 
 	// 用户自定义属性字段
 	CustomFields *interface{} `json:"customFields,omitempty"`
+
+	// 作业标签列表
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o BasicConfig) String() string {
