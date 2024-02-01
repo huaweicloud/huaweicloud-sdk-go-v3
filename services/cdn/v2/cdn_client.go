@@ -441,6 +441,27 @@ func (c *CdnClient) ShowHistoryTasksInvoker(request *model.ShowHistoryTasksReque
 	return &ShowHistoryTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLogs 日志查询
+//
+// 查询日志下载链接，支持查询30天内的日志信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowLogs(request *model.ShowLogsRequest) (*model.ShowLogsResponse, error) {
+	requestDef := GenReqDefForShowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogsResponse), nil
+	}
+}
+
+// ShowLogsInvoker 日志查询
+func (c *CdnClient) ShowLogsInvoker(request *model.ShowLogsRequest) *ShowLogsInvoker {
+	requestDef := GenReqDefForShowLogs()
+	return &ShowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowTopDomainNames 查询TOP域名
 //

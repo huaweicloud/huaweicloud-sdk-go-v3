@@ -8,7 +8,7 @@ import (
 
 type UploadAimTemplateMaterialRequestBody struct {
 
-	// 资源类型。  - image：图片 - video：视频 - thumbnail：缩略图  > 图片支持png、jpeg、jpg格式，最大2M; > 视频支持格式mp4，大小不超过10M，建议时长不超过33S; > 缩略图支持png、jpeg、jpg格式，大小不超过100K。
+	// 资源类型。  - image：图片 - video：视频 - thumbnail：缩略图  > 图片支持png、jpeg、jpg格式，最大2M; > 视频支持格式mp4，大小不超过7M，建议时长不超过33S; > 缩略图支持png、jpeg、jpg格式，大小不超过100K。
 	ResourceType string `json:"resource_type"`
 
 	// 素材ID。 > resource_type=thumbnail时，material_id必填，填写内容为上传视频资源返回的material_id字段的值。

@@ -18,6 +18,9 @@ type DigitalHumanVideo struct {
 	// 任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
 	State DigitalHumanVideoState `json:"state"`
 
+	// 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+	JobType *DigitalHumanVideoJobType `json:"job_type,omitempty"`
+
 	// 数字人视频制作开始时间。
 	StartTime *string `json:"start_time,omitempty"`
 
@@ -88,6 +91,53 @@ func (c DigitalHumanVideoState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DigitalHumanVideoState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DigitalHumanVideoJobType struct {
+	value string
+}
+
+type DigitalHumanVideoJobTypeEnum struct {
+	E_2_D_DIGITAL_HUMAN_VIDEO DigitalHumanVideoJobType
+	DIGITAL_HUMAN_PHOTO_VIDEO DigitalHumanVideoJobType
+}
+
+func GetDigitalHumanVideoJobTypeEnum() DigitalHumanVideoJobTypeEnum {
+	return DigitalHumanVideoJobTypeEnum{
+		E_2_D_DIGITAL_HUMAN_VIDEO: DigitalHumanVideoJobType{
+			value: "2D_DIGITAL_HUMAN_VIDEO",
+		},
+		DIGITAL_HUMAN_PHOTO_VIDEO: DigitalHumanVideoJobType{
+			value: "DIGITAL_HUMAN_PHOTO_VIDEO",
+		},
+	}
+}
+
+func (c DigitalHumanVideoJobType) Value() string {
+	return c.value
+}
+
+func (c DigitalHumanVideoJobType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DigitalHumanVideoJobType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

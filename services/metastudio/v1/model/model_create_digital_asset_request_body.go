@@ -24,9 +24,6 @@ type CreateDigitalAssetRequestBody struct {
 	// 项目ID。 > * 仅管理员帐号可设置此参数。
 	AssetOwner *string `json:"asset_owner,omitempty"`
 
-	// 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO。
-	IsNeedGenerateCover *bool `json:"is_need_generate_cover,omitempty"`
-
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 
 	// 标签列表。
@@ -36,6 +33,8 @@ type CreateDigitalAssetRequestBody struct {
 
 	// 设置系统属性。
 	SystemProperties *[]SystemProperty `json:"system_properties,omitempty"`
+
+	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
 }
 
 func (o CreateDigitalAssetRequestBody) String() string {

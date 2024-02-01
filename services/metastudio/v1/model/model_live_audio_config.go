@@ -9,6 +9,9 @@ import (
 // LiveAudioConfig 直播音频配置
 type LiveAudioConfig struct {
 
+	// 插入音频资产的资产id，外部资产信息无需填写
+	AssetId *string `json:"asset_id,omitempty"`
+
 	// 音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
 	AudioUrl *string `json:"audio_url,omitempty"`
 

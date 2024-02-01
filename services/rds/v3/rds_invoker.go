@@ -197,6 +197,18 @@ func (i *CreateManualBackupInvoker) Invoke() (*model.CreateManualBackupResponse,
 	}
 }
 
+type CreateRdSforMySqlProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRdSforMySqlProxyInvoker) Invoke() (*model.CreateRdSforMySqlProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRdSforMySqlProxyResponse), nil
+	}
+}
+
 type CreateRestoreInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +302,18 @@ func (i *DeletePostgresqlHbaConfInvoker) Invoke() (*model.DeletePostgresqlHbaCon
 		return nil, err
 	} else {
 		return result.(*model.DeletePostgresqlHbaConfResponse), nil
+	}
+}
+
+type DeleteRdSforMySqlProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRdSforMySqlProxyInvoker) Invoke() (*model.DeleteRdSforMySqlProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRdSforMySqlProxyResponse), nil
 	}
 }
 
@@ -677,6 +701,30 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 	}
 }
 
+type ListRdSforMySqlProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRdSforMySqlProxyInvoker) Invoke() (*model.ListRdSforMySqlProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRdSforMySqlProxyResponse), nil
+	}
+}
+
+type ListRdSforMysqlProxyFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRdSforMysqlProxyFlavorsInvoker) Invoke() (*model.ListRdSforMysqlProxyFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRdSforMysqlProxyFlavorsResponse), nil
+	}
+}
+
 type ListRecycleInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -854,6 +902,30 @@ func (i *ModifyPostgresqlHbaConfInvoker) Invoke() (*model.ModifyPostgresqlHbaCon
 		return nil, err
 	} else {
 		return result.(*model.ModifyPostgresqlHbaConfResponse), nil
+	}
+}
+
+type ModifyRdSforMySqlProxyRouteModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyRdSforMySqlProxyRouteModeInvoker) Invoke() (*model.ModifyRdSforMySqlProxyRouteModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyRdSforMySqlProxyRouteModeResponse), nil
+	}
+}
+
+type RestartRdSforMysqlProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartRdSforMysqlProxyInvoker) Invoke() (*model.RestartRdSforMysqlProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartRdSforMysqlProxyResponse), nil
 	}
 }
 
@@ -1145,6 +1217,18 @@ func (i *ShowDrReplicaStatusInvoker) Invoke() (*model.ShowDrReplicaStatusRespons
 	}
 }
 
+type ShowIncreBackupPolicy1Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIncreBackupPolicy1Invoker) Invoke() (*model.ShowIncreBackupPolicy1Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIncreBackupPolicy1Response), nil
+	}
+}
+
 type ShowInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1262,6 +1346,18 @@ func (i *StartInstanceEnlargeVolumeActionInvoker) Invoke() (*model.StartInstance
 		return nil, err
 	} else {
 		return result.(*model.StartInstanceEnlargeVolumeActionResponse), nil
+	}
+}
+
+type StartInstanceReduceVolumeActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartInstanceReduceVolumeActionInvoker) Invoke() (*model.StartInstanceReduceVolumeActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartInstanceReduceVolumeActionResponse), nil
 	}
 }
 
@@ -1394,6 +1490,18 @@ func (i *UpdateDnsNameInvoker) Invoke() (*model.UpdateDnsNameResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateDnsNameResponse), nil
+	}
+}
+
+type UpdateIncreBackupPolicy1Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIncreBackupPolicy1Invoker) Invoke() (*model.UpdateIncreBackupPolicy1Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIncreBackupPolicy1Response), nil
 	}
 }
 
@@ -1730,6 +1838,18 @@ func (i *UpdateDbUserCommentInvoker) Invoke() (*model.UpdateDbUserCommentRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateDbUserCommentResponse), nil
+	}
+}
+
+type UpdateHostPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostPrivilegeInvoker) Invoke() (*model.UpdateHostPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHostPrivilegeResponse), nil
 	}
 }
 

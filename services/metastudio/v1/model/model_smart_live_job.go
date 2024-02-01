@@ -15,6 +15,12 @@ type SmartLiveJob struct {
 	// 数字人直播任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
+	// 直播间ID
+	RoomId *string `json:"room_id,omitempty"`
+
+	// 直播间名称
+	RoomName *string `json:"room_name,omitempty"`
+
 	// 数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
 	State *SmartLiveJobState `json:"state,omitempty"`
 
@@ -47,6 +53,9 @@ type SmartLiveJob struct {
 
 	// 封禁信息
 	BlockReason *string `json:"block_reason,omitempty"`
+
+	// 直播间封面图UR
+	CoverUrl *string `json:"cover_url,omitempty"`
 }
 
 func (o SmartLiveJob) String() string {

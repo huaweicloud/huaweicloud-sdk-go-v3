@@ -82,7 +82,7 @@ func (c *CbhClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) 
 	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteInstance 删除故障和按需云堡垒机实例
+// DeleteInstance 删除故障云堡垒机实例
 //
 // 删除云堡垒机故障实例。
 //
@@ -97,7 +97,7 @@ func (c *CbhClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model
 	}
 }
 
-// DeleteInstanceInvoker 删除故障和按需云堡垒机实例
+// DeleteInstanceInvoker 删除故障云堡垒机实例
 func (c *CbhClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
 	requestDef := GenReqDefForDeleteInstance()
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

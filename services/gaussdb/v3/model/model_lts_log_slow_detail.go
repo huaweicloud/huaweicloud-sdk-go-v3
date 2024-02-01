@@ -29,7 +29,7 @@ type LtsLogSlowDetail struct {
 	// 所属数据库。
 	Database *string `json:"database,omitempty"`
 
-	// 帐号。
+	// 账号。
 	Users *string `json:"users,omitempty"`
 
 	// 执行语法。

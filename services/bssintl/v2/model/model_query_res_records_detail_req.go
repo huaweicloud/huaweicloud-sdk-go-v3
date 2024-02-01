@@ -49,6 +49,15 @@ type QueryResRecordsDetailReq struct {
 
 	// 统计类型。默认值为1。 1：按账期2：按天
 	StatisticType *int32 `json:"statistic_type,omitempty"`
+
+	// |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
+	QueryType *string `json:"query_type,omitempty"`
+
+	// |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+	BillCycleBegin *string `json:"bill_cycle_begin,omitempty"`
+
+	// |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+	BillCycleEnd *string `json:"bill_cycle_end,omitempty"`
 }
 
 func (o QueryResRecordsDetailReq) String() string {

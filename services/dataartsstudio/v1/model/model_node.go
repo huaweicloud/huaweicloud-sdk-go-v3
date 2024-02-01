@@ -85,6 +85,7 @@ type NodeTypeEnum struct {
 	MRS_FLINK         NodeType
 	MRS_FLINK_JOB     NodeType
 	MRS_HETU_ENGINE   NodeType
+	DATA_MIGRATION    NodeType
 }
 
 func GetNodeTypeEnum() NodeTypeEnum {
@@ -145,6 +146,9 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		},
 		MRS_HETU_ENGINE: NodeType{
 			value: "MRSHetuEngine",
+		},
+		DATA_MIGRATION: NodeType{
+			value: "DataMigration",
 		},
 	}
 }

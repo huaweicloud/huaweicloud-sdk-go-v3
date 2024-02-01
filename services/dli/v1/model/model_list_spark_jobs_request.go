@@ -19,7 +19,7 @@ type ListSparkJobsRequest struct {
 	From *int32 `json:"from,omitempty"`
 
 	// 批处理作业的名称。
-	JobName *string `json:"job-name,omitempty"`
+	JobName *string `json:"job_name,omitempty"`
 
 	JobId *string `json:"job-id,omitempty"`
 

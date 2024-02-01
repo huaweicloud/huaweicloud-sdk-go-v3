@@ -22,6 +22,9 @@ type DigitalAssetSummary struct {
 
 	// 封面图片路径。
 	CoverUrl *string `json:"cover_url,omitempty"`
+
+	// 缩略图路径。
+	ThumbnailUrl *string `json:"thumbnail_url,omitempty"`
 }
 
 func (o DigitalAssetSummary) String() string {

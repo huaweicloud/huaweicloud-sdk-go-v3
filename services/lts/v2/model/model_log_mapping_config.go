@@ -9,13 +9,13 @@ import (
 type LogMappingConfig struct {
 
 	// 源日志组ID
-	SourceLogGroupId *string `json:"source_log_group_id,omitempty"`
+	SourceLogGroupId string `json:"source_log_group_id"`
 
 	// 目标日志组ID
 	TargetLogGroupId *string `json:"target_log_group_id,omitempty"`
 
 	// 目标日志组名称
-	TargetLogGroupName *string `json:"target_log_group_name,omitempty"`
+	TargetLogGroupName string `json:"target_log_group_name"`
 
 	// 日志流配置
 	LogStreamConfig *[]LogMappingStreamInfo `json:"log_stream_config,omitempty"`

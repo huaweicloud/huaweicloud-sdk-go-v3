@@ -545,6 +545,18 @@ func (i *ListSmartLiveInvoker) Invoke() (*model.ListSmartLiveResponse, error) {
 	}
 }
 
+type ListSmartLiveJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartLiveJobsInvoker) Invoke() (*model.ListSmartLiveJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartLiveJobsResponse), nil
+	}
+}
+
 type LiveEventReportInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1070,6 +1082,18 @@ func (i *StopVideoMotionCaptureJobInvoker) Invoke() (*model.StopVideoMotionCaptu
 		return nil, err
 	} else {
 		return result.(*model.StopVideoMotionCaptureJobResponse), nil
+	}
+}
+
+type CopyVideoScriptsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyVideoScriptsInvoker) Invoke() (*model.CopyVideoScriptsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyVideoScriptsResponse), nil
 	}
 }
 

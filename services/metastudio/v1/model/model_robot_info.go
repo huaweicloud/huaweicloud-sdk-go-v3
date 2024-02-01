@@ -18,11 +18,13 @@ type RobotInfo struct {
 	// 第三方应用ID。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
 	AppType *int32 `json:"app_type,omitempty"`
 
 	// 对话的并发数
 	Concurrency *int32 `json:"concurrency,omitempty"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
 
 	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	CreateTime *string `json:"create_time,omitempty"`
@@ -35,6 +37,15 @@ type RobotInfo struct {
 
 	// CBS所在区域的projectId
 	CbsProjectId *string `json:"cbs_project_id,omitempty"`
+
+	// 第三方语言模型地址。
+	LlmUrl *string `json:"llm_url,omitempty"`
+
+	// 是否采用流式响应。
+	IsStream *bool `json:"is_stream,omitempty"`
+
+	// 支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+	ChatRounds *int32 `json:"chat_rounds,omitempty"`
 }
 
 func (o RobotInfo) String() string {

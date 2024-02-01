@@ -21,7 +21,7 @@ type UpdateConsumerGroup struct {
 	Name *string `json:"name,omitempty"`
 
 	// 最大重试次数，取值范围为1~16。
-	RetryMaxTime float32 `json:"retry_max_time"`
+	RetryMaxTime int32 `json:"retry_max_time"`
 
 	// 是否重头消费。
 	FromBeginning *bool `json:"from_beginning,omitempty"`

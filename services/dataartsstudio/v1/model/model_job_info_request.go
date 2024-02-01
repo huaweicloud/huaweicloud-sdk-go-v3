@@ -120,20 +120,21 @@ type JobInfoRequestSingleNodeJobType struct {
 }
 
 type JobInfoRequestSingleNodeJobTypeEnum struct {
-	DLI_SQL        JobInfoRequestSingleNodeJobType
-	DWS_SQL        JobInfoRequestSingleNodeJobType
-	HIVE_SQL       JobInfoRequestSingleNodeJobType
-	SPARK_SQL      JobInfoRequestSingleNodeJobType
-	RDS_SQL        JobInfoRequestSingleNodeJobType
-	DORIS_SQL      JobInfoRequestSingleNodeJobType
-	ASSIGNMENT     JobInfoRequestSingleNodeJobType
-	BRANCH         JobInfoRequestSingleNodeJobType
-	MERGE          JobInfoRequestSingleNodeJobType
-	DATA_MIGRATION JobInfoRequestSingleNodeJobType
-	MRS_FLINK      JobInfoRequestSingleNodeJobType
-	FLINK_SQL      JobInfoRequestSingleNodeJobType
-	FLINK_JAR      JobInfoRequestSingleNodeJobType
-	DLI_SPARK      JobInfoRequestSingleNodeJobType
+	DLI_SQL    JobInfoRequestSingleNodeJobType
+	DWS_SQL    JobInfoRequestSingleNodeJobType
+	HIVE_SQL   JobInfoRequestSingleNodeJobType
+	SPARK_SQL  JobInfoRequestSingleNodeJobType
+	RDS_SQL    JobInfoRequestSingleNodeJobType
+	DORIS_SQL  JobInfoRequestSingleNodeJobType
+	ASSIGNMENT JobInfoRequestSingleNodeJobType
+	BRANCH     JobInfoRequestSingleNodeJobType
+	MERGE      JobInfoRequestSingleNodeJobType
+	NORMAL_JOB JobInfoRequestSingleNodeJobType
+	ONE_CLICK  JobInfoRequestSingleNodeJobType
+	MRS_FLINK  JobInfoRequestSingleNodeJobType
+	FLINK_SQL  JobInfoRequestSingleNodeJobType
+	FLINK_JAR  JobInfoRequestSingleNodeJobType
+	DLI_SPARK  JobInfoRequestSingleNodeJobType
 }
 
 func GetJobInfoRequestSingleNodeJobTypeEnum() JobInfoRequestSingleNodeJobTypeEnum {
@@ -165,8 +166,11 @@ func GetJobInfoRequestSingleNodeJobTypeEnum() JobInfoRequestSingleNodeJobTypeEnu
 		MERGE: JobInfoRequestSingleNodeJobType{
 			value: "MERGE",
 		},
-		DATA_MIGRATION: JobInfoRequestSingleNodeJobType{
-			value: "DataMigration",
+		NORMAL_JOB: JobInfoRequestSingleNodeJobType{
+			value: "NormalJob",
+		},
+		ONE_CLICK: JobInfoRequestSingleNodeJobType{
+			value: "OneClick",
 		},
 		MRS_FLINK: JobInfoRequestSingleNodeJobType{
 			value: "MrsFlink",

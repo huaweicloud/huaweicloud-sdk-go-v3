@@ -85,6 +85,7 @@ type NodeTypeEnum struct {
 	MRS_FLINK_JOB      NodeType
 	MRS_HETU_ENGINE    NodeType
 	RDS_SQL            NodeType
+	DATA_MIGRATION     NodeType
 }
 
 func GetNodeTypeEnum() NodeTypeEnum {
@@ -148,6 +149,9 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		},
 		RDS_SQL: NodeType{
 			value: "RDS SQL",
+		},
+		DATA_MIGRATION: NodeType{
+			value: "DataMigration",
 		},
 	}
 }

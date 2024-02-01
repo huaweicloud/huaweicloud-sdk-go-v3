@@ -12,7 +12,7 @@ type ResetConsumeOffsetReq struct {
 	Topic string `json:"topic"`
 
 	// 重置的时间。
-	Timestamp float32 `json:"timestamp"`
+	Timestamp string `json:"timestamp"`
 }
 
 func (o ResetConsumeOffsetReq) String() string {

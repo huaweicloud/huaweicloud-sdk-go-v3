@@ -9,7 +9,7 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://optverse.cn-north-4.huaweicloud.com")
+		"https://optverse.cn-north-4.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{

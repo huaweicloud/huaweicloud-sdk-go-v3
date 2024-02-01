@@ -129,7 +129,7 @@ func (c *MetaStudioClient) CreateDigitalAssetInvoker(request *model.CreateDigita
 
 // DeleteAsset 删除资产
 //
-// 该接口用于删除资产库中的媒体资产。第一次调用删除接口，将指定资产放入回收站；第二次调用删除接口，将指定资产彻底删除。
+// 该接口用于删除资产库中的媒体资产。调用该接口删除媒体资产时，媒体资产会放入回收站中，不会彻底删除。如需彻底删除资产，需增加“mode&#x3D;force”参数配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteAsset(request *model.DeleteAssetRequest) (*model.DeleteAssetResponse, error) {
@@ -612,7 +612,7 @@ func (c *MetaStudioClient) DeleteFileInvoker(request *model.DeleteFileRequest) *
 
 // CreateOnceCode 创建一次性鉴权码
 //
-// 该接口用于创建一次性鉴权码。
+// 该接口用于创建一次性鉴权码，有效期5分钟，鉴权码只能使用一次，每次使用后需要重新获取。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateOnceCode(request *model.CreateOnceCodeRequest) (*model.CreateOnceCodeResponse, error) {
@@ -965,6 +965,27 @@ func (c *MetaStudioClient) ListSmartLive(request *model.ListSmartLiveRequest) (*
 func (c *MetaStudioClient) ListSmartLiveInvoker(request *model.ListSmartLiveRequest) *ListSmartLiveInvoker {
 	requestDef := GenReqDefForListSmartLive()
 	return &ListSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmartLiveJobs 查询数字人智能直播任务列表
+//
+// 该接口用于查询数字人智能直播任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartLiveJobs(request *model.ListSmartLiveJobsRequest) (*model.ListSmartLiveJobsResponse, error) {
+	requestDef := GenReqDefForListSmartLiveJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartLiveJobsResponse), nil
+	}
+}
+
+// ListSmartLiveJobsInvoker 查询数字人智能直播任务列表
+func (c *MetaStudioClient) ListSmartLiveJobsInvoker(request *model.ListSmartLiveJobsRequest) *ListSmartLiveJobsInvoker {
+	requestDef := GenReqDefForListSmartLiveJobs()
+	return &ListSmartLiveJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // LiveEventReport 上报直播间事件
@@ -1762,7 +1783,7 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 
 // CreateTtsAudition 创建TTS试听任务
 //
-// 该接口用于创建生成播报内容的语音试听文件任务。
+// 该接口用于创建生成播报内容的语音试听文件任务。第三方音色试听需要收费，收费标准参考：https://marketplace.huaweicloud.com/product/OFFI919400645308506112#productid&#x3D;OFFI919400645308506112
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateTtsAudition(request *model.CreateTtsAuditionRequest) (*model.CreateTtsAuditionResponse, error) {
@@ -1905,6 +1926,27 @@ func (c *MetaStudioClient) StopVideoMotionCaptureJob(request *model.StopVideoMot
 func (c *MetaStudioClient) StopVideoMotionCaptureJobInvoker(request *model.StopVideoMotionCaptureJobRequest) *StopVideoMotionCaptureJobInvoker {
 	requestDef := GenReqDefForStopVideoMotionCaptureJob()
 	return &StopVideoMotionCaptureJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyVideoScripts 复制视频制作剧本
+//
+// 该接口用于复制视频制作剧本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CopyVideoScripts(request *model.CopyVideoScriptsRequest) (*model.CopyVideoScriptsResponse, error) {
+	requestDef := GenReqDefForCopyVideoScripts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyVideoScriptsResponse), nil
+	}
+}
+
+// CopyVideoScriptsInvoker 复制视频制作剧本
+func (c *MetaStudioClient) CopyVideoScriptsInvoker(request *model.CopyVideoScriptsRequest) *CopyVideoScriptsInvoker {
+	requestDef := GenReqDefForCopyVideoScripts()
+	return &CopyVideoScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVideoScripts 创建视频制作剧本

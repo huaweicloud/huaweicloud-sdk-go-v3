@@ -12,7 +12,7 @@ type CreateResolveTaskRequestBody struct {
 	// 智能信息模板ID，由9位数字组成。
 	TplId string `json:"tpl_id"`
 
-	// 短信签名列表，需要与最终发送短信的签名一致，才能解析。  > 最多传入10个签名。
+	// 短信签名列表，需要与最终发送短信的签名一致，才能解析。  > 最多传入5个签名，单个签名内容不包括中括号。
 	SmsSigns []string `json:"sms_signs"`
 
 	// 短链最大解析次数。  >个性化短链只支持最大解析数为1，设置其他值无效。
@@ -30,7 +30,7 @@ type CreateResolveTaskRequestBody struct {
 	// 失效时间（天）。aim_code_type为group时，取值范围为1~180；aim_code_type为individual个性化时，取值范围为1~7。  > 失效时间精确到秒，例如参数设置为1，创建时间为2022-07-22 21:10:12，过期时间为2022-07-23 21:10:12。
 	ExpirationTime int32 `json:"expiration_time"`
 
-	// 短链参数列表。一次请求最多生成100个短链。  > OPPO模板一次最多申请10个短链。
+	// 短链参数列表。一次请求最多生成100个短链。  > OPPO模板一次最多申请10个短链。 > 群发短链每次调用最多申请一条。
 	Params []CreateShortChainParam `json:"params"`
 }
 

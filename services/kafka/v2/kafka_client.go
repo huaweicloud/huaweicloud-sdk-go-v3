@@ -149,11 +149,11 @@ func (c *KafkaClient) CloseKafkaManagerInvoker(request *model.CloseKafkaManagerR
 	return &CloseKafkaManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateConnector 创建实例的转储节点
+// CreateConnector 创建实例的Smart Connect节点
 //
-// 创建实例的转储节点。
+// 创建Smart Connect节点。
 //
-// **当前通过调用API，只支持按需实例创建转储节点。**
+// **当前通过调用API，只支持按需实例创建Smart Connect节点。**
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
@@ -166,7 +166,7 @@ func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*m
 	}
 }
 
-// CreateConnectorInvoker 创建实例的转储节点
+// CreateConnectorInvoker 创建实例的Smart Connect节点
 func (c *KafkaClient) CreateConnectorInvoker(request *model.CreateConnectorRequest) *CreateConnectorInvoker {
 	requestDef := GenReqDefForCreateConnector()
 	return &CreateConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -340,27 +340,6 @@ func (c *KafkaClient) CreateReassignmentTask(request *model.CreateReassignmentTa
 func (c *KafkaClient) CreateReassignmentTaskInvoker(request *model.CreateReassignmentTaskRequest) *CreateReassignmentTaskInvoker {
 	requestDef := GenReqDefForCreateReassignmentTask()
 	return &CreateReassignmentTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateShrinkageJob 实例缩容
-//
-// 实例缩容
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreateShrinkageJob(request *model.CreateShrinkageJobRequest) (*model.CreateShrinkageJobResponse, error) {
-	requestDef := GenReqDefForCreateShrinkageJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateShrinkageJobResponse), nil
-	}
-}
-
-// CreateShrinkageJobInvoker 实例缩容
-func (c *KafkaClient) CreateShrinkageJobInvoker(request *model.CreateShrinkageJobRequest) *CreateShrinkageJobInvoker {
-	requestDef := GenReqDefForCreateShrinkageJob()
-	return &CreateShrinkageJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSinkTask 创建转储任务
@@ -1363,27 +1342,6 @@ func (c *KafkaClient) ShowPartitionMessageInvoker(request *model.ShowPartitionMe
 	return &ShowPartitionMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowShrinkCheckResult 实例缩容前置检查
-//
-// 实例缩容前置检查。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ShowShrinkCheckResult(request *model.ShowShrinkCheckResultRequest) (*model.ShowShrinkCheckResultResponse, error) {
-	requestDef := GenReqDefForShowShrinkCheckResult()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowShrinkCheckResultResponse), nil
-	}
-}
-
-// ShowShrinkCheckResultInvoker 实例缩容前置检查
-func (c *KafkaClient) ShowShrinkCheckResultInvoker(request *model.ShowShrinkCheckResultRequest) *ShowShrinkCheckResultInvoker {
-	requestDef := GenReqDefForShowShrinkCheckResult()
-	return &ShowShrinkCheckResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowSinkTaskDetail 查询单个转储任务
 //
 // 查询单个转储任务。
@@ -1573,29 +1531,6 @@ func (c *KafkaClient) UpdateKafkaUserClientQuotaTask(request *model.UpdateKafkaU
 func (c *KafkaClient) UpdateKafkaUserClientQuotaTaskInvoker(request *model.UpdateKafkaUserClientQuotaTaskRequest) *UpdateKafkaUserClientQuotaTaskInvoker {
 	requestDef := GenReqDefForUpdateKafkaUserClientQuotaTask()
 	return &UpdateKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateSinkTaskQuota 修改转储任务的配额
-//
-// 修改转储任务的配额。
-//
-// 2022年9月前创建的实例支持调用此接口新增转储任务配额，2022年9月及以后创建的实例，转储任务配额默认为最大值，由于转储任务配额不支持减少，调用此接口修改转储任务配额会报错。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) UpdateSinkTaskQuota(request *model.UpdateSinkTaskQuotaRequest) (*model.UpdateSinkTaskQuotaResponse, error) {
-	requestDef := GenReqDefForUpdateSinkTaskQuota()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateSinkTaskQuotaResponse), nil
-	}
-}
-
-// UpdateSinkTaskQuotaInvoker 修改转储任务的配额
-func (c *KafkaClient) UpdateSinkTaskQuotaInvoker(request *model.UpdateSinkTaskQuotaRequest) *UpdateSinkTaskQuotaInvoker {
-	requestDef := GenReqDefForUpdateSinkTaskQuota()
-	return &UpdateSinkTaskQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTopicAccessPolicy 设置用户权限

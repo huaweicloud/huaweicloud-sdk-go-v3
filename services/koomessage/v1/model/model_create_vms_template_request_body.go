@@ -26,6 +26,9 @@ type CreateVmsTemplateRequestBody struct {
 
 	// 客户系统回调URL，可用于通知对端模板审核状态信息。  > 接口规格需参照定义智能信息基础版模板状态回执完成实现。
 	Callbackurl *string `json:"callbackurl,omitempty"`
+
+	// 以草稿状态提交模板。 - 0：非草稿模板 - 1：草稿模板
+	IsDraft *int32 `json:"is_draft,omitempty"`
 }
 
 func (o CreateVmsTemplateRequestBody) String() string {

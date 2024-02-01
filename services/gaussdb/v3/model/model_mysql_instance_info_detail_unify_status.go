@@ -97,6 +97,8 @@ type MysqlInstanceInfoDetailUnifyStatus struct {
 
 	// 代理信息。
 	Proxies *[]MysqlProxyInfo `json:"proxies,omitempty"`
+
+	TdeInfo *MysqlTdeInfo `json:"tde_info,omitempty"`
 }
 
 func (o MysqlInstanceInfoDetailUnifyStatus) String() string {

@@ -18,6 +18,9 @@ type Show2DDigitalHumanVideoResponse struct {
 	// 任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
 	State Show2DDigitalHumanVideoResponseState `json:"state"`
 
+	// 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+	JobType *Show2DDigitalHumanVideoResponseJobType `json:"job_type,omitempty"`
+
 	// 数字人视频制作开始时间。
 	StartTime *string `json:"start_time,omitempty"`
 
@@ -40,7 +43,7 @@ type Show2DDigitalHumanVideoResponse struct {
 	// 剧本ID。
 	ScriptId *string `json:"script_id,omitempty"`
 
-	// 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分数数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
+	// 视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
 	VideoMakingType *Show2DDigitalHumanVideoResponseVideoMakingType `json:"video_making_type,omitempty"`
 
 	// 人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
@@ -112,6 +115,53 @@ func (c Show2DDigitalHumanVideoResponseState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *Show2DDigitalHumanVideoResponseState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type Show2DDigitalHumanVideoResponseJobType struct {
+	value string
+}
+
+type Show2DDigitalHumanVideoResponseJobTypeEnum struct {
+	E_2_D_DIGITAL_HUMAN_VIDEO Show2DDigitalHumanVideoResponseJobType
+	DIGITAL_HUMAN_PHOTO_VIDEO Show2DDigitalHumanVideoResponseJobType
+}
+
+func GetShow2DDigitalHumanVideoResponseJobTypeEnum() Show2DDigitalHumanVideoResponseJobTypeEnum {
+	return Show2DDigitalHumanVideoResponseJobTypeEnum{
+		E_2_D_DIGITAL_HUMAN_VIDEO: Show2DDigitalHumanVideoResponseJobType{
+			value: "2D_DIGITAL_HUMAN_VIDEO",
+		},
+		DIGITAL_HUMAN_PHOTO_VIDEO: Show2DDigitalHumanVideoResponseJobType{
+			value: "DIGITAL_HUMAN_PHOTO_VIDEO",
+		},
+	}
+}
+
+func (c Show2DDigitalHumanVideoResponseJobType) Value() string {
+	return c.value
+}
+
+func (c Show2DDigitalHumanVideoResponseJobType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *Show2DDigitalHumanVideoResponseJobType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

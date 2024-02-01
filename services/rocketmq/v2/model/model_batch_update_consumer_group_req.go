@@ -8,7 +8,7 @@ import (
 
 type BatchUpdateConsumerGroupReq struct {
 
-	// 消费组列表，当批量删除消费组时使用。
+	// 消费组列表。
 	Groups *[]ConsumerGroup `json:"groups,omitempty"`
 }
 

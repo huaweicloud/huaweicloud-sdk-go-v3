@@ -200,6 +200,18 @@ func (i *ShowHistoryTasksInvoker) Invoke() (*model.ShowHistoryTasksResponse, err
 	}
 }
 
+type ShowLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLogsInvoker) Invoke() (*model.ShowLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLogsResponse), nil
+	}
+}
+
 type ShowTopDomainNamesInvoker struct {
 	*invoker.BaseInvoker
 }

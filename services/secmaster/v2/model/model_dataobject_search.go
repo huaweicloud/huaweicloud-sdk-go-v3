@@ -24,10 +24,10 @@ type DataobjectSearch struct {
 	// 排序方式：DESC | ASC
 	Order *DataobjectSearchOrder `json:"order,omitempty"`
 
-	// 搜索开始时间
+	// 搜索开始时间，例如：2023-02-20T00:00:00.000Z
 	FromDate *string `json:"from_date,omitempty"`
 
-	// 搜索结束时间
+	// 搜索结束时间，例如：2023-02-27T23:59:59.999Z
 	ToDate *string `json:"to_date,omitempty"`
 
 	Condition *DataobjectSearchCondition `json:"condition,omitempty"`

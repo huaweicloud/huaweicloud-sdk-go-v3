@@ -1100,6 +1100,263 @@ func (c *CcClient) ShowCloudConnectionRoutesInvoker(request *model.ShowCloudConn
 	return &ShowCloudConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssociateGlobalConnectionBandwidthInstance 全域互联带宽绑定实例
+//
+// 全域互联带宽绑定实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) AssociateGlobalConnectionBandwidthInstance(request *model.AssociateGlobalConnectionBandwidthInstanceRequest) (*model.AssociateGlobalConnectionBandwidthInstanceResponse, error) {
+	requestDef := GenReqDefForAssociateGlobalConnectionBandwidthInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateGlobalConnectionBandwidthInstanceResponse), nil
+	}
+}
+
+// AssociateGlobalConnectionBandwidthInstanceInvoker 全域互联带宽绑定实例
+func (c *CcClient) AssociateGlobalConnectionBandwidthInstanceInvoker(request *model.AssociateGlobalConnectionBandwidthInstanceRequest) *AssociateGlobalConnectionBandwidthInstanceInvoker {
+	requestDef := GenReqDefForAssociateGlobalConnectionBandwidthInstance()
+	return &AssociateGlobalConnectionBandwidthInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGlobalConnectionBandwidth 创建全域互联带宽
+//
+// 创建全域互联带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) CreateGlobalConnectionBandwidth(request *model.CreateGlobalConnectionBandwidthRequest) (*model.CreateGlobalConnectionBandwidthResponse, error) {
+	requestDef := GenReqDefForCreateGlobalConnectionBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+// CreateGlobalConnectionBandwidthInvoker 创建全域互联带宽
+func (c *CcClient) CreateGlobalConnectionBandwidthInvoker(request *model.CreateGlobalConnectionBandwidthRequest) *CreateGlobalConnectionBandwidthInvoker {
+	requestDef := GenReqDefForCreateGlobalConnectionBandwidth()
+	return &CreateGlobalConnectionBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGlobalConnectionBandwidth 删除全域互联带宽
+//
+// 删除全域互联带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DeleteGlobalConnectionBandwidth(request *model.DeleteGlobalConnectionBandwidthRequest) (*model.DeleteGlobalConnectionBandwidthResponse, error) {
+	requestDef := GenReqDefForDeleteGlobalConnectionBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+// DeleteGlobalConnectionBandwidthInvoker 删除全域互联带宽
+func (c *CcClient) DeleteGlobalConnectionBandwidthInvoker(request *model.DeleteGlobalConnectionBandwidthRequest) *DeleteGlobalConnectionBandwidthInvoker {
+	requestDef := GenReqDefForDeleteGlobalConnectionBandwidth()
+	return &DeleteGlobalConnectionBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateGlobalConnectionBandwidthInstance 全域互联带宽解绑实例
+//
+// 全域互联带宽解绑实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DisassociateGlobalConnectionBandwidthInstance(request *model.DisassociateGlobalConnectionBandwidthInstanceRequest) (*model.DisassociateGlobalConnectionBandwidthInstanceResponse, error) {
+	requestDef := GenReqDefForDisassociateGlobalConnectionBandwidthInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateGlobalConnectionBandwidthInstanceResponse), nil
+	}
+}
+
+// DisassociateGlobalConnectionBandwidthInstanceInvoker 全域互联带宽解绑实例
+func (c *CcClient) DisassociateGlobalConnectionBandwidthInstanceInvoker(request *model.DisassociateGlobalConnectionBandwidthInstanceRequest) *DisassociateGlobalConnectionBandwidthInstanceInvoker {
+	requestDef := GenReqDefForDisassociateGlobalConnectionBandwidthInstance()
+	return &DisassociateGlobalConnectionBandwidthInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalConnectionBandwidthConfigs 查询全域互联带宽租户配置信息
+//
+// 查询全域互联带宽租户配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListGlobalConnectionBandwidthConfigs(request *model.ListGlobalConnectionBandwidthConfigsRequest) (*model.ListGlobalConnectionBandwidthConfigsResponse, error) {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalConnectionBandwidthConfigsResponse), nil
+	}
+}
+
+// ListGlobalConnectionBandwidthConfigsInvoker 查询全域互联带宽租户配置信息
+func (c *CcClient) ListGlobalConnectionBandwidthConfigsInvoker(request *model.ListGlobalConnectionBandwidthConfigsRequest) *ListGlobalConnectionBandwidthConfigsInvoker {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthConfigs()
+	return &ListGlobalConnectionBandwidthConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalConnectionBandwidthLineLevels 查询线路等级列表
+//
+// 查询线路等级列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListGlobalConnectionBandwidthLineLevels(request *model.ListGlobalConnectionBandwidthLineLevelsRequest) (*model.ListGlobalConnectionBandwidthLineLevelsResponse, error) {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthLineLevels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalConnectionBandwidthLineLevelsResponse), nil
+	}
+}
+
+// ListGlobalConnectionBandwidthLineLevelsInvoker 查询线路等级列表
+func (c *CcClient) ListGlobalConnectionBandwidthLineLevelsInvoker(request *model.ListGlobalConnectionBandwidthLineLevelsRequest) *ListGlobalConnectionBandwidthLineLevelsInvoker {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthLineLevels()
+	return &ListGlobalConnectionBandwidthLineLevelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalConnectionBandwidthSites 查询站点列表
+//
+// 查询站点列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListGlobalConnectionBandwidthSites(request *model.ListGlobalConnectionBandwidthSitesRequest) (*model.ListGlobalConnectionBandwidthSitesResponse, error) {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthSites()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalConnectionBandwidthSitesResponse), nil
+	}
+}
+
+// ListGlobalConnectionBandwidthSitesInvoker 查询站点列表
+func (c *CcClient) ListGlobalConnectionBandwidthSitesInvoker(request *model.ListGlobalConnectionBandwidthSitesRequest) *ListGlobalConnectionBandwidthSitesInvoker {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthSites()
+	return &ListGlobalConnectionBandwidthSitesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalConnectionBandwidthSpecCodes 查询线路规格列表
+//
+// 查询线路规格列表。租户白名单控制，默认为空。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListGlobalConnectionBandwidthSpecCodes(request *model.ListGlobalConnectionBandwidthSpecCodesRequest) (*model.ListGlobalConnectionBandwidthSpecCodesResponse, error) {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthSpecCodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalConnectionBandwidthSpecCodesResponse), nil
+	}
+}
+
+// ListGlobalConnectionBandwidthSpecCodesInvoker 查询线路规格列表
+func (c *CcClient) ListGlobalConnectionBandwidthSpecCodesInvoker(request *model.ListGlobalConnectionBandwidthSpecCodesRequest) *ListGlobalConnectionBandwidthSpecCodesInvoker {
+	requestDef := GenReqDefForListGlobalConnectionBandwidthSpecCodes()
+	return &ListGlobalConnectionBandwidthSpecCodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalConnectionBandwidths 查询全域互联带宽列表
+//
+// 查询全域互联带宽列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListGlobalConnectionBandwidths(request *model.ListGlobalConnectionBandwidthsRequest) (*model.ListGlobalConnectionBandwidthsResponse, error) {
+	requestDef := GenReqDefForListGlobalConnectionBandwidths()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalConnectionBandwidthsResponse), nil
+	}
+}
+
+// ListGlobalConnectionBandwidthsInvoker 查询全域互联带宽列表
+func (c *CcClient) ListGlobalConnectionBandwidthsInvoker(request *model.ListGlobalConnectionBandwidthsRequest) *ListGlobalConnectionBandwidthsInvoker {
+	requestDef := GenReqDefForListGlobalConnectionBandwidths()
+	return &ListGlobalConnectionBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSupportBindingConnectionBandwidths 查询符合绑定条件的全域互联带宽列表
+//
+// 查询符合绑定条件的全域互联带宽列表。
+// 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListSupportBindingConnectionBandwidths(request *model.ListSupportBindingConnectionBandwidthsRequest) (*model.ListSupportBindingConnectionBandwidthsResponse, error) {
+	requestDef := GenReqDefForListSupportBindingConnectionBandwidths()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupportBindingConnectionBandwidthsResponse), nil
+	}
+}
+
+// ListSupportBindingConnectionBandwidthsInvoker 查询符合绑定条件的全域互联带宽列表
+func (c *CcClient) ListSupportBindingConnectionBandwidthsInvoker(request *model.ListSupportBindingConnectionBandwidthsRequest) *ListSupportBindingConnectionBandwidthsInvoker {
+	requestDef := GenReqDefForListSupportBindingConnectionBandwidths()
+	return &ListSupportBindingConnectionBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGlobalConnectionBandwidth 查询全域互联带宽详情
+//
+// 查询全域互联带宽详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ShowGlobalConnectionBandwidth(request *model.ShowGlobalConnectionBandwidthRequest) (*model.ShowGlobalConnectionBandwidthResponse, error) {
+	requestDef := GenReqDefForShowGlobalConnectionBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+// ShowGlobalConnectionBandwidthInvoker 查询全域互联带宽详情
+func (c *CcClient) ShowGlobalConnectionBandwidthInvoker(request *model.ShowGlobalConnectionBandwidthRequest) *ShowGlobalConnectionBandwidthInvoker {
+	requestDef := GenReqDefForShowGlobalConnectionBandwidth()
+	return &ShowGlobalConnectionBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGlobalConnectionBandwidth 更新全域互联带宽详情
+//
+// 更新全域互联带宽详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateGlobalConnectionBandwidth(request *model.UpdateGlobalConnectionBandwidthRequest) (*model.UpdateGlobalConnectionBandwidthResponse, error) {
+	requestDef := GenReqDefForUpdateGlobalConnectionBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+// UpdateGlobalConnectionBandwidthInvoker 更新全域互联带宽详情
+func (c *CcClient) UpdateGlobalConnectionBandwidthInvoker(request *model.UpdateGlobalConnectionBandwidthRequest) *UpdateGlobalConnectionBandwidthInvoker {
+	requestDef := GenReqDefForUpdateGlobalConnectionBandwidth()
+	return &UpdateGlobalConnectionBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateInterRegionBandwidth 创建域间带宽实例
 //
 // 创建域间带宽实例。

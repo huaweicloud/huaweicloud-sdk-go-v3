@@ -67,6 +67,8 @@ type MysqlInstanceRequest struct {
 	DedicatedResourceId *string `json:"dedicated_resource_id,omitempty"`
 
 	RestorePoint *MysqlRestorePoint `json:"restore_point,omitempty"`
+
+	TdeInfo *MysqlTdeInfo `json:"tde_info,omitempty"`
 }
 
 func (o MysqlInstanceRequest) String() string {

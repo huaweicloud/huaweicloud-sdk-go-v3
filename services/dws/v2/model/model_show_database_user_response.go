@@ -9,6 +9,9 @@ import (
 // ShowDatabaseUserResponse Response Object
 type ShowDatabaseUserResponse struct {
 
+	// 用户名称
+	Name *string `json:"name,omitempty"`
+
 	// 是否可以登陆
 	Login *bool `json:"login,omitempty"`
 
@@ -43,8 +46,17 @@ type ShowDatabaseUserResponse struct {
 	ValidUntil *int64 `json:"valid_until,omitempty"`
 
 	// 是否锁定
-	Lock           *bool `json:"lock,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	Lock *bool `json:"lock,omitempty"`
+
+	// 描述
+	Desc *string `json:"desc,omitempty"`
+
+	// 用户类型
+	UserType *string `json:"user_type,omitempty"`
+
+	// 所属逻辑集群
+	LogicalCluster *string `json:"logical_cluster,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowDatabaseUserResponse) String() string {

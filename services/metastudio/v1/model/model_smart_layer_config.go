@@ -15,6 +15,9 @@ type SmartLayerConfig struct {
 	// 图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
 	LayerType SmartLayerConfigLayerType `json:"layer_type"`
 
+	// 图层所需资产的资产id，外部资产信息无需填写
+	AssetId *string `json:"asset_id,omitempty"`
+
 	Position *LayerPositionConfig `json:"position"`
 
 	Size *LayerSizeConfig `json:"size,omitempty"`

@@ -35,7 +35,7 @@ type ShowInstanceResp struct {
 	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb)
+	// [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// 私有云ID。
@@ -62,7 +62,7 @@ type ShowInstanceResp struct {
 	// 子网名称。
 	SubnetName *string `json:"subnet_name,omitempty"`
 
-	// 子网路由。
+	// 子网路由（仅RocketMQ 5.x版本会显示此字段）。
 	SubnetCidr *string `json:"subnet_cidr,omitempty"`
 
 	// IO未售罄的可用区列表。
@@ -140,7 +140,7 @@ type ShowInstanceResp struct {
 	// 是否开启访问控制列表。
 	EnableAcl *bool `json:"enable_acl,omitempty"`
 
-	// 节点数。
+	// 节点数（仅RocketMQ 4.8.0版本会显示此字段）。
 	BrokerNum *int32 `json:"broker_num,omitempty"`
 
 	// 元数据地址。
@@ -155,10 +155,10 @@ type ShowInstanceResp struct {
 	// 公网业务数据地址。
 	PublicBrokerAddress *string `json:"public_broker_address,omitempty"`
 
-	// grpc连接地址。
+	// grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
 	GrpcAddress *string `json:"grpc_address,omitempty"`
 
-	// 公网grpc连接地址。
+	// 公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
 	PublicGrpcAddress *string `json:"public_grpc_address,omitempty"`
 
 	// 标签列表。

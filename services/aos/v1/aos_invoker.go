@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/aos/v1/model"
 )
 
+type CreatePrivateProviderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivateProviderInvoker) Invoke() (*model.CreatePrivateProviderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivateProviderResponse), nil
+	}
+}
+
+type CreatePrivateProviderVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivateProviderVersionInvoker) Invoke() (*model.CreatePrivateProviderVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivateProviderVersionResponse), nil
+	}
+}
+
 type ApplyExecutionPlanInvoker struct {
 	*invoker.BaseInvoker
 }

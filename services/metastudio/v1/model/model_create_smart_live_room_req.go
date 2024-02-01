@@ -45,6 +45,9 @@ type CreateSmartLiveRoomReq struct {
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 
 	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
+
+	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+	ViewMode *CreateSmartLiveRoomReqViewMode `json:"view_mode,omitempty"`
 }
 
 func (o CreateSmartLiveRoomReq) String() string {
@@ -89,6 +92,53 @@ func (c CreateSmartLiveRoomReqRoomType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateSmartLiveRoomReqRoomType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateSmartLiveRoomReqViewMode struct {
+	value string
+}
+
+type CreateSmartLiveRoomReqViewModeEnum struct {
+	LANDSCAPE CreateSmartLiveRoomReqViewMode
+	VERTICAL  CreateSmartLiveRoomReqViewMode
+}
+
+func GetCreateSmartLiveRoomReqViewModeEnum() CreateSmartLiveRoomReqViewModeEnum {
+	return CreateSmartLiveRoomReqViewModeEnum{
+		LANDSCAPE: CreateSmartLiveRoomReqViewMode{
+			value: "LANDSCAPE",
+		},
+		VERTICAL: CreateSmartLiveRoomReqViewMode{
+			value: "VERTICAL",
+		},
+	}
+}
+
+func (c CreateSmartLiveRoomReqViewMode) Value() string {
+	return c.value
+}
+
+func (c CreateSmartLiveRoomReqViewMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSmartLiveRoomReqViewMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

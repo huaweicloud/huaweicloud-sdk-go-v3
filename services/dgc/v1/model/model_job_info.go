@@ -110,20 +110,21 @@ type JobInfoSingleNodeJobType struct {
 }
 
 type JobInfoSingleNodeJobTypeEnum struct {
-	DLI_SQL        JobInfoSingleNodeJobType
-	DWS_SQL        JobInfoSingleNodeJobType
-	HIVE_SQL       JobInfoSingleNodeJobType
-	SPARK_SQL      JobInfoSingleNodeJobType
-	RDS_SQL        JobInfoSingleNodeJobType
-	DORIS_SQL      JobInfoSingleNodeJobType
-	ASSIGNMENT     JobInfoSingleNodeJobType
-	BRANCH         JobInfoSingleNodeJobType
-	MERGE          JobInfoSingleNodeJobType
-	DATA_MIGRATION JobInfoSingleNodeJobType
-	MRS_FLINK      JobInfoSingleNodeJobType
-	FLINK_SQL      JobInfoSingleNodeJobType
-	FLINK_JAR      JobInfoSingleNodeJobType
-	DLI_SPARK      JobInfoSingleNodeJobType
+	DLI_SQL    JobInfoSingleNodeJobType
+	DWS_SQL    JobInfoSingleNodeJobType
+	HIVE_SQL   JobInfoSingleNodeJobType
+	SPARK_SQL  JobInfoSingleNodeJobType
+	RDS_SQL    JobInfoSingleNodeJobType
+	DORIS_SQL  JobInfoSingleNodeJobType
+	ASSIGNMENT JobInfoSingleNodeJobType
+	BRANCH     JobInfoSingleNodeJobType
+	MERGE      JobInfoSingleNodeJobType
+	NORMAL_JOB JobInfoSingleNodeJobType
+	ONE_CLICK  JobInfoSingleNodeJobType
+	MRS_FLINK  JobInfoSingleNodeJobType
+	FLINK_SQL  JobInfoSingleNodeJobType
+	FLINK_JAR  JobInfoSingleNodeJobType
+	DLI_SPARK  JobInfoSingleNodeJobType
 }
 
 func GetJobInfoSingleNodeJobTypeEnum() JobInfoSingleNodeJobTypeEnum {
@@ -155,8 +156,11 @@ func GetJobInfoSingleNodeJobTypeEnum() JobInfoSingleNodeJobTypeEnum {
 		MERGE: JobInfoSingleNodeJobType{
 			value: "MERGE",
 		},
-		DATA_MIGRATION: JobInfoSingleNodeJobType{
-			value: "DataMigration",
+		NORMAL_JOB: JobInfoSingleNodeJobType{
+			value: "NormalJob",
+		},
+		ONE_CLICK: JobInfoSingleNodeJobType{
+			value: "OneClick",
 		},
 		MRS_FLINK: JobInfoSingleNodeJobType{
 			value: "MrsFlink",

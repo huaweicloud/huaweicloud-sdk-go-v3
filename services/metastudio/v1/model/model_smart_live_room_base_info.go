@@ -14,6 +14,9 @@ type SmartLiveRoomBaseInfo struct {
 	// 直播间ID
 	RoomId *string `json:"room_id,omitempty"`
 
+	// 租户id
+	ProjectId *string `json:"project_id,omitempty"`
+
 	// 直播间名称
 	RoomName *string `json:"room_name,omitempty"`
 
@@ -24,6 +27,8 @@ type SmartLiveRoomBaseInfo struct {
 	RoomState *SmartLiveRoomBaseInfoRoomState `json:"room_state,omitempty"`
 
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
+
+	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
 
 	// 直播间描述。
 	RoomDescription *string `json:"room_description,omitempty"`

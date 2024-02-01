@@ -14,6 +14,9 @@ type VideoLayerConfig struct {
 
 	// 视频封面文件的URL。
 	VideoCoverUrl *string `json:"video_cover_url,omitempty"`
+
+	// 循环播放视频次数。
+	LoopCount *int32 `json:"loop_count,omitempty"`
 }
 
 func (o VideoLayerConfig) String() string {

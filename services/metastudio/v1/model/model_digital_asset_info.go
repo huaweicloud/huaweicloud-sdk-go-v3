@@ -21,6 +21,9 @@ type DigitalAssetInfo struct {
 	// 资产描述。
 	AssetDescription *string `json:"asset_description,omitempty"`
 
+	// 第三方用户ID。 > * 即创建资产是通过X-App-UserId头域传入的值。
+	AppUserId *string `json:"app_user_id,omitempty"`
+
 	// 资产创建时间。
 	CreateTime *string `json:"create_time,omitempty"`
 
@@ -38,9 +41,6 @@ type DigitalAssetInfo struct {
 
 	// 冻结/解冻/失败 原因。
 	Reason *string `json:"reason,omitempty"`
-
-	// 是否需要资产库生成封面图片。 > * 当前支持自动生成封面图片的资产类型包括VIDEO
-	IsNeedGenerateCover *bool `json:"is_need_generate_cover,omitempty"`
 
 	// 标签列表。
 	Tags *[]string `json:"tags,omitempty"`

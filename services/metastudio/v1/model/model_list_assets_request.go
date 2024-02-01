@@ -71,6 +71,15 @@ type ListAssetsRequest struct {
 
 	// 动作是否可编辑。仅在分身数字人模型查询时有效。
 	ActionEditable *bool `json:"action_editable,omitempty"`
+
+	// 分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+	IsMovable *bool `json:"is_movable,omitempty"`
+
+	// 可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+	VoiceProvider *string `json:"voice_provider,omitempty"`
+
+	// 角色。 SHARER：共享方，SHAREE：被共享方
+	Role *ListAssetsRequestRole `json:"role,omitempty"`
 }
 
 func (o ListAssetsRequest) String() string {
@@ -115,6 +124,53 @@ func (c ListAssetsRequestAssetSource) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListAssetsRequestAssetSource) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListAssetsRequestRole struct {
+	value string
+}
+
+type ListAssetsRequestRoleEnum struct {
+	SHARER ListAssetsRequestRole
+	SHAREE ListAssetsRequestRole
+}
+
+func GetListAssetsRequestRoleEnum() ListAssetsRequestRoleEnum {
+	return ListAssetsRequestRoleEnum{
+		SHARER: ListAssetsRequestRole{
+			value: "SHARER",
+		},
+		SHAREE: ListAssetsRequestRole{
+			value: "SHAREE",
+		},
+	}
+}
+
+func (c ListAssetsRequestRole) Value() string {
+	return c.value
+}
+
+func (c ListAssetsRequestRole) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAssetsRequestRole) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -1940,7 +1940,7 @@ func GenReqDefForListSparkJobs() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
-		WithJsonTag("job-name").
+		WithJsonTag("job_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").

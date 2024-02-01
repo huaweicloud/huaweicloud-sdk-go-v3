@@ -16,6 +16,9 @@ type ExecutionPlanSummary struct {
 
 	// 删除资源数
 	ResourceDelete *int32 `json:"resource_delete,omitempty"`
+
+	// 导入资源数
+	ResourceImport *int32 `json:"resource_import,omitempty"`
 }
 
 func (o ExecutionPlanSummary) String() string {

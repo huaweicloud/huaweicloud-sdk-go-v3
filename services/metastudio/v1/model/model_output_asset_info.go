@@ -18,7 +18,7 @@ type OutputAssetInfo struct {
 	// 视频封面URL。
 	CoverUrl *string `json:"cover_url,omitempty"`
 
-	// 预览视频下载URL。URL有效期24小时。 > * 分数数字人视频制作不支持预览。
+	// 预览视频下载URL。URL有效期24小时。 > * 分身数字人视频制作不支持预览。
 	PreviewVideoUrl *string `json:"preview_video_url,omitempty"`
 }
 

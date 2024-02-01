@@ -18,7 +18,7 @@ type PlayPolicy struct {
 	// 是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
 	AutoPlayScript *bool `json:"auto_play_script,omitempty"`
 
-	// 驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+	// 驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
 	PlayMode *PlayPolicyPlayMode `json:"play_mode,omitempty"`
 
 	// 随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
@@ -39,8 +39,9 @@ type PlayPolicyPlayMode struct {
 }
 
 type PlayPolicyPlayModeEnum struct {
-	TEXT  PlayPolicyPlayMode
-	AUDIO PlayPolicyPlayMode
+	TEXT      PlayPolicyPlayMode
+	AUDIO     PlayPolicyPlayMode
+	NO_PRESET PlayPolicyPlayMode
 }
 
 func GetPlayPolicyPlayModeEnum() PlayPolicyPlayModeEnum {
@@ -50,6 +51,9 @@ func GetPlayPolicyPlayModeEnum() PlayPolicyPlayModeEnum {
 		},
 		AUDIO: PlayPolicyPlayMode{
 			value: "AUDIO",
+		},
+		NO_PRESET: PlayPolicyPlayMode{
+			value: "NO_PRESET",
 		},
 	}
 }

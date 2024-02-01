@@ -24,6 +24,9 @@ type ListProcessesRequest struct {
 	// 数据库
 	Database *string `json:"database,omitempty"`
 
+	// 节点ID
+	NodeId *string `json:"node_id,omitempty"`
+
 	// 偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
 	Offset *int32 `json:"offset,omitempty"`
 

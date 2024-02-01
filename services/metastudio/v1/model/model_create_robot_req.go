@@ -12,17 +12,21 @@ type CreateRobotReq struct {
 	// 应用名称。
 	Name string `json:"name"`
 
-	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动
+	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
 	AppType int32 `json:"app_type"`
 
 	// 对话的并发数
 	Concurrency int32 `json:"concurrency"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
 
 	HuaweiEiCbs *HuaweiEiCbs `json:"huawei_ei_cbs,omitempty"`
 
 	IflytekAiuiConfig *IflytekAiuiConfig `json:"iflytek_aiui_config,omitempty"`
 
 	IflytekSpark *IflytekSpark `json:"iflytek_spark,omitempty"`
+
+	ThirdPartyModelConfig *ThirdPartyModelConfig `json:"third_party_model_config,omitempty"`
 }
 
 func (o CreateRobotReq) String() string {

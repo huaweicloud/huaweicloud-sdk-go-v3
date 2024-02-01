@@ -24,10 +24,16 @@ type ConsumerGroup struct {
 	GroupDesc *string `json:"group_desc,omitempty"`
 
 	// 最大重试次数，取值范围为1~16。
-	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
+	RetryMaxTime *int32 `json:"retry_max_time,omitempty"`
 
-	// 是否重头消费。
-	FromBeginning *bool `json:"from_beginning,omitempty"`
+	// 创建时间戳。
+	CreatedAt *string `json:"createdAt,omitempty"`
+
+	// 权限集。
+	Permissions *[]string `json:"permissions,omitempty"`
+
+	// 是否按序消费。
+	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
 }
 
 func (o ConsumerGroup) String() string {

@@ -12,6 +12,9 @@ import (
 // VoiceModelAssetMeta 音色模型元数据。
 type VoiceModelAssetMeta struct {
 
+	// 展示顺序
+	Order *int32 `json:"order,omitempty"`
+
 	// 音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
 	ModelType *VoiceModelAssetMetaModelType `json:"model_type,omitempty"`
 
@@ -26,6 +29,8 @@ type VoiceModelAssetMeta struct {
 
 	// 音量缩放比例
 	VolumeRatio *float32 `json:"volume_ratio,omitempty"`
+
+	ExternalVoiceMeta *ExternalVoiceAssetMeta `json:"external_voice_meta,omitempty"`
 }
 
 func (o VoiceModelAssetMeta) String() string {

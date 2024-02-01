@@ -1055,7 +1055,7 @@ client := vpc.NewVpcClient(
 request := &model.ListVpcsRequest{}
 response, err := client.ListVpcsInvoker(request).
 	// 自定义请求头
-	AddHeader(map[string]string{"key1": "value1", "key2": "value2"}).
+	AddHeaders(map[string]string{"key1": "value1", "key2": "value2"}).
 	Invoke()
 
 if err == nil {

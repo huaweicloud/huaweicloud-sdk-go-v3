@@ -617,6 +617,150 @@ func (i *ShowCloudConnectionRoutesInvoker) Invoke() (*model.ShowCloudConnectionR
 	}
 }
 
+type AssociateGlobalConnectionBandwidthInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateGlobalConnectionBandwidthInstanceInvoker) Invoke() (*model.AssociateGlobalConnectionBandwidthInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateGlobalConnectionBandwidthInstanceResponse), nil
+	}
+}
+
+type CreateGlobalConnectionBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGlobalConnectionBandwidthInvoker) Invoke() (*model.CreateGlobalConnectionBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+type DeleteGlobalConnectionBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGlobalConnectionBandwidthInvoker) Invoke() (*model.DeleteGlobalConnectionBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+type DisassociateGlobalConnectionBandwidthInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateGlobalConnectionBandwidthInstanceInvoker) Invoke() (*model.DisassociateGlobalConnectionBandwidthInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateGlobalConnectionBandwidthInstanceResponse), nil
+	}
+}
+
+type ListGlobalConnectionBandwidthConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalConnectionBandwidthConfigsInvoker) Invoke() (*model.ListGlobalConnectionBandwidthConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalConnectionBandwidthConfigsResponse), nil
+	}
+}
+
+type ListGlobalConnectionBandwidthLineLevelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalConnectionBandwidthLineLevelsInvoker) Invoke() (*model.ListGlobalConnectionBandwidthLineLevelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalConnectionBandwidthLineLevelsResponse), nil
+	}
+}
+
+type ListGlobalConnectionBandwidthSitesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalConnectionBandwidthSitesInvoker) Invoke() (*model.ListGlobalConnectionBandwidthSitesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalConnectionBandwidthSitesResponse), nil
+	}
+}
+
+type ListGlobalConnectionBandwidthSpecCodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalConnectionBandwidthSpecCodesInvoker) Invoke() (*model.ListGlobalConnectionBandwidthSpecCodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalConnectionBandwidthSpecCodesResponse), nil
+	}
+}
+
+type ListGlobalConnectionBandwidthsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalConnectionBandwidthsInvoker) Invoke() (*model.ListGlobalConnectionBandwidthsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalConnectionBandwidthsResponse), nil
+	}
+}
+
+type ListSupportBindingConnectionBandwidthsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupportBindingConnectionBandwidthsInvoker) Invoke() (*model.ListSupportBindingConnectionBandwidthsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupportBindingConnectionBandwidthsResponse), nil
+	}
+}
+
+type ShowGlobalConnectionBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGlobalConnectionBandwidthInvoker) Invoke() (*model.ShowGlobalConnectionBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+type UpdateGlobalConnectionBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGlobalConnectionBandwidthInvoker) Invoke() (*model.UpdateGlobalConnectionBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGlobalConnectionBandwidthResponse), nil
+	}
+}
+
 type CreateInterRegionBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }

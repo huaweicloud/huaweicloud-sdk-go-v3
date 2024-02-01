@@ -29,10 +29,10 @@ type IndicatorListSearchRequest struct {
 	// sort by property, create_time.
 	SortBy *string `json:"sort_by,omitempty"`
 
-	// 查询起始时间
+	// 查询起始时间，例如：2024-01-20T00:00:00.000Z+0800
 	FromDate *string `json:"from_date,omitempty"`
 
-	// 查询截止时间
+	// 查询截止时间，例如：2024-01-26T23:59:59.999Z+0800
 	ToDate *string `json:"to_date,omitempty"`
 }
 

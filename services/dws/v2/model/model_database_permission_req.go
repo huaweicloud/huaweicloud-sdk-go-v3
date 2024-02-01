@@ -27,6 +27,9 @@ type DatabasePermissionReq struct {
 	// 权限所属对象列表
 	ObjectList *interface{} `json:"object_list"`
 
+	// schema下所有数据库对象权限，默认false
+	AllObject *bool `json:"all_object,omitempty"`
+
 	// 撤销权限是否级联撤销 默认 true
 	Cascade *bool `json:"cascade,omitempty"`
 

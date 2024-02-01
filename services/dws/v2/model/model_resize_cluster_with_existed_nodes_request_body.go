@@ -10,35 +10,22 @@ import (
 type ResizeClusterWithExistedNodesRequestBody struct {
 	ScaleOut *ScaleOut `json:"scale_out"`
 
-	Resize *Resize `json:"resize,omitempty"`
-
 	// 是否强制备份
-	ForceBackup bool `json:"force_backup"`
+	ForceBackup *bool `json:"force_backup,omitempty"`
 
-	// 扩容模式
-	Mode string `json:"mode"`
+	// 扩容备份模式，不传默认离线read-only。
+	Mode *string `json:"mode,omitempty"`
 
-	// 逻辑集群名称
-	LogicalClusterName string `json:"logical_cluster_name"`
+	// 逻辑集群名称。非逻辑集群模式下该字段不填，逻辑集群模式下不传默认elastic_group。
+	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 
 	// 是否是使用已添加的空闲节点进行扩容
 	ExpandWithExistedNode bool `json:"expand_with_existed_node"`
 
-	// 否只是添加节点
-	CreateNodeOnly bool `json:"create_node_only"`
+	// 扩容完成后是否自动启动重分布，默认true
+	AutoRedistribute *bool `json:"auto_redistribute,omitempty"`
 
-	// 扩容完成后是否自动启动重分布，默认是
-	AutoRedistribute bool `json:"auto_redistribute"`
-
-	// 是否调度模式扩容加节点
-	IsSchedulerBuildMode bool `json:"is_scheduler_build_mode"`
-
-	RedisConf *RedisConf `json:"redis_conf"`
-
-	BuildTaskInfo *BuildTaskInfo `json:"build_task_info"`
-
-	// 扩容订单ID
-	OrderId *string `json:"order_id,omitempty"`
+	RedisConf *RedisConfReq `json:"redis_conf,omitempty"`
 }
 
 func (o ResizeClusterWithExistedNodesRequestBody) String() string {

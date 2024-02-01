@@ -27,7 +27,7 @@ type CbhInstances struct {
 	// 创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
 	SlaveAvailabilityZone *string `json:"slave_availability_zone,omitempty"`
 
-	// 计费模式。 - 0 包周期计费。 - 1 按需计费，部分局点支持。
+	// 计费模式。 - 0 包周期计费。
 	ChargingMode int32 `json:"charging_mode"`
 
 	// 订购周期类型。（包周期模式必传） - 2：月 - 3：年

@@ -46,6 +46,9 @@ type UpdateSmartLiveRoomResponse struct {
 
 	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
 
+	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+	ViewMode *UpdateSmartLiveRoomResponseViewMode `json:"view_mode,omitempty"`
+
 	// 直播间ID
 	RoomId *string `json:"room_id,omitempty"`
 
@@ -109,6 +112,53 @@ func (c UpdateSmartLiveRoomResponseRoomType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateSmartLiveRoomResponseRoomType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateSmartLiveRoomResponseViewMode struct {
+	value string
+}
+
+type UpdateSmartLiveRoomResponseViewModeEnum struct {
+	LANDSCAPE UpdateSmartLiveRoomResponseViewMode
+	VERTICAL  UpdateSmartLiveRoomResponseViewMode
+}
+
+func GetUpdateSmartLiveRoomResponseViewModeEnum() UpdateSmartLiveRoomResponseViewModeEnum {
+	return UpdateSmartLiveRoomResponseViewModeEnum{
+		LANDSCAPE: UpdateSmartLiveRoomResponseViewMode{
+			value: "LANDSCAPE",
+		},
+		VERTICAL: UpdateSmartLiveRoomResponseViewMode{
+			value: "VERTICAL",
+		},
+	}
+}
+
+func (c UpdateSmartLiveRoomResponseViewMode) Value() string {
+	return c.value
+}
+
+func (c UpdateSmartLiveRoomResponseViewMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateSmartLiveRoomResponseViewMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -25,7 +25,7 @@ type ShowGroupResponse struct {
 	GroupDesc *string `json:"group_desc,omitempty"`
 
 	// 最大重试次数。
-	RetryMaxTime float32 `json:"retry_max_time,omitempty"`
+	RetryMaxTime *int32 `json:"retry_max_time,omitempty"`
 
 	// 应用id。
 	AppId *string `json:"app_id,omitempty"`

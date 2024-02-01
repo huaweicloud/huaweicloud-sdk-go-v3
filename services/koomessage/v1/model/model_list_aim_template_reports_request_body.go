@@ -23,6 +23,9 @@ type ListAimTemplateReportsRequestBody struct {
 
 	// 每页显示的条目数量。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 厂商类型。不填时默认全厂商。列举值：\"huawei\", \"vivo\", \"oppo\", \"xiaomi\", \"meizu\", \"samsung\"。
+	FactoryType *[]string `json:"factory_type,omitempty"`
 }
 
 func (o ListAimTemplateReportsRequestBody) String() string {
