@@ -34,7 +34,7 @@ type CreateResponseVpnGateway struct {
 	// VPN网关所使用的VPC子网ID
 	ConnectSubnet *string `json:"connect_subnet,omitempty"`
 
-	// VPN网关北向类型，默认为公网(public)
+	// VPN网关的网络类型，默认为公网(public)
 	NetworkType *CreateResponseVpnGatewayNetworkType `json:"network_type,omitempty"`
 
 	// VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -65,6 +65,9 @@ type CreateResponseVpnGateway struct {
 	HaMode *string `json:"ha_mode,omitempty"`
 
 	PolicyTemplate *PolicyTemplate `json:"policy_template,omitempty"`
+
+	// 标签
+	Tags *[]VpnResourceTag `json:"tags,omitempty"`
 }
 
 func (o CreateResponseVpnGateway) String() string {

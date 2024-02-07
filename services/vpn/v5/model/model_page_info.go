@@ -9,7 +9,7 @@ import (
 // PageInfo 分页查询页的信息
 type PageInfo struct {
 
-	// 下一页的marker，值为上一次消息的最后一个id，为空时为查询第一页
+	// 下一页的marker，值为上一次查询响应中最后一个资源的创建时间
 	NextMarker *string `json:"next_marker,omitempty"`
 
 	// 当前列表中资源数量

@@ -8,7 +8,7 @@ import (
 
 // RunReceptorPreprocessReq 受体预处理请求体
 type RunReceptorPreprocessReq struct {
-	File *ReceptorDrugFile `json:"file"`
+	File *ReceptorDrugFileReq `json:"file"`
 
 	// 去除水分子
 	RemoveWater *bool `json:"remove_water,omitempty"`
@@ -18,6 +18,9 @@ type RunReceptorPreprocessReq struct {
 
 	// 去除配体分子
 	RemoveLigand *bool `json:"remove_ligand,omitempty"`
+
+	// 增加氢原子
+	AddHydrogen *bool `json:"add_hydrogen,omitempty"`
 }
 
 func (o RunReceptorPreprocessReq) String() string {

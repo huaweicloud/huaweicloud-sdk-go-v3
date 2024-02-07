@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// ResourceTag 在对接TMS服务的各个接口中使用，面向租户和EPS服务
 type ResourceTag struct {
 
 	// 标签的key

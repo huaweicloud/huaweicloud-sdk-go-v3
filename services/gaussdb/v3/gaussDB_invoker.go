@@ -1301,6 +1301,18 @@ func (i *UpdateInstanceMonitorInvoker) Invoke() (*model.UpdateInstanceMonitorRes
 	}
 }
 
+type UpdateNewNodeAutoAddSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNewNodeAutoAddSwitchInvoker) Invoke() (*model.UpdateNewNodeAutoAddSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNewNodeAutoAddSwitchResponse), nil
+	}
+}
+
 type UpdateProxyConnectionPoolTypeInvoker struct {
 	*invoker.BaseInvoker
 }

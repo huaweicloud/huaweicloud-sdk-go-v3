@@ -9,7 +9,7 @@ import (
 // OriginRequestUrlRewrite 改写回源URL，最多配置20条。
 type OriginRequestUrlRewrite struct {
 
-	// 回源URL改写规则的优先级。 优先级设置具有唯一性，不支持多条回源URL改写规则设置同一优先级，且优先级不能输入为空。 多条规则下，不同规则中的相同资源内容，CDN按照优先级高的规则执行URL改写。 取值为1~100之间的整数，数值越大优先级越高。
+	// 回源URL改写规则的优先级。 优先级设置具有唯一性，不支持多条回源URL改写规则设置同一优先级，且优先级不能输入为空。 多条规则下，不同规则中的相同资源内容，CDN按照优先级高的规则执行URL改写。 取值为1-100之间的整数，数值越大优先级越高。
 	Priority int32 `json:"priority"`
 
 	// 匹配类型， all：所有文件， file_path：URL路径， wildcard：通配符， full_path: 全路径。

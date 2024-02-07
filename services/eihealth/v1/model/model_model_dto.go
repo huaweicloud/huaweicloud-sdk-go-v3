@@ -44,6 +44,14 @@ type ModelDto struct {
 
 	// 失败提示，当作业执行失败时会返回
 	FailedMessage *string `json:"failed_message,omitempty"`
+
+	// 模型训练loss信息
+	Losses *[]float32 `json:"losses,omitempty"`
+
+	// 模型评估指标
+	Metrics *[]ModelMetric `json:"metrics,omitempty"`
+
+	ModelMetric *ModelDtoModelMetric `json:"ModelMetric,omitempty"`
 }
 
 func (o ModelDto) String() string {

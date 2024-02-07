@@ -49,6 +49,9 @@ type ComputingResourceFlavorsRsp struct {
 
 	// 裸金属服务器的CPU架构类型
 	CpuArch *string `json:"cpu_arch,omitempty"`
+
+	// GPU信息
+	GpuInfo *string `json:"gpu_info,omitempty"`
 }
 
 func (o ComputingResourceFlavorsRsp) String() string {

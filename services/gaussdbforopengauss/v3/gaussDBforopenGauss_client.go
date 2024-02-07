@@ -1446,6 +1446,27 @@ func (c *GaussDBforopenGaussClient) ShowSslCertDownloadLinkInvoker(request *mode
 	return &ShowSslCertDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StopBackup 停止备份
+//
+// 停止进行中的备份，包括全备和差备。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) StopBackup(request *model.StopBackupRequest) (*model.StopBackupResponse, error) {
+	requestDef := GenReqDefForStopBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopBackupResponse), nil
+	}
+}
+
+// StopBackupInvoker 停止备份
+func (c *GaussDBforopenGaussClient) StopBackupInvoker(request *model.StopBackupRequest) *StopBackupInvoker {
+	requestDef := GenReqDefForStopBackup()
+	return &StopBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchConfiguration 应用参数模板
 //
 // 指定实例变更参数模板。

@@ -25,19 +25,19 @@ type VpnGatewayCertificate struct {
 	// 网关证书状态
 	Status *VpnGatewayCertificateStatus `json:"status,omitempty"`
 
-	// 签名证书颁发者，国密证书时为签名证书颁发者
+	// 证书颁发者，国密证书时为签名证书颁发者
 	Issuer *string `json:"issuer,omitempty"`
 
-	// 签名证书签名算法，国密证书时为签名证书签名算法
+	// 证书签名算法，国密证书时为签名证书签名算法
 	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
 
 	// 证书序列号，国密证书时为签名证书序列号
 	CertificateSerialNumber *string `json:"certificate_serial_number,omitempty"`
 
-	// 签名证书主题，国密证书时为签名证书主题
+	// 证书主题，国密证书时为签名证书主题
 	CertificateSubject *string `json:"certificate_subject,omitempty"`
 
-	// 签名证书过期时间，国密证书时为签名证书过期时间
+	// 证书过期时间，国密证书时为签名证书过期时间
 	CertificateExpireTime *sdktime.SdkTime `json:"certificate_expire_time,omitempty"`
 
 	// CA证书序列号

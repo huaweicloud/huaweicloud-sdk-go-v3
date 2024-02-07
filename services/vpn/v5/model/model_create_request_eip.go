@@ -20,7 +20,7 @@ type CreateRequestEip struct {
 	// 功能说明：按流量计费还是按带宽计费  取值范围：  bandwidth：按带宽计费  traffic：按流量计费  95peak_plus：按增强型95计费
 	ChargeMode *CreateRequestEipChargeMode `json:"charge_mode,omitempty"`
 
-	// 带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1024
+	// 带宽大小Mbit/s。flavor为Basic时，取值不能大于100；flavor为Professional1时，取值不能大于300；flavor为Professional2时，取值不能大于1000
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
 	// 带宽名称

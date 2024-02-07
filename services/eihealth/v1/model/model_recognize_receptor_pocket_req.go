@@ -10,7 +10,7 @@ import (
 type RecognizeReceptorPocketReq struct {
 	Mode *RecognizeReceptorPocketMode `json:"mode"`
 
-	ReceptorFile *ReceptorDrugFile `json:"receptor_file"`
+	ReceptorFile *ReceptorDrugFileReq `json:"receptor_file"`
 
 	LigandFile *DrugFile `json:"ligand_file,omitempty"`
 

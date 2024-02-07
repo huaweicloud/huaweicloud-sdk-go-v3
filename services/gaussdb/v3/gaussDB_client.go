@@ -2289,6 +2289,27 @@ func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstan
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateNewNodeAutoAddSwitch 开启或关闭新增节点自动加入该Proxy
+//
+// 开启或关闭新增节点自动加入该Proxy。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateNewNodeAutoAddSwitch(request *model.UpdateNewNodeAutoAddSwitchRequest) (*model.UpdateNewNodeAutoAddSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateNewNodeAutoAddSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNewNodeAutoAddSwitchResponse), nil
+	}
+}
+
+// UpdateNewNodeAutoAddSwitchInvoker 开启或关闭新增节点自动加入该Proxy
+func (c *GaussDBClient) UpdateNewNodeAutoAddSwitchInvoker(request *model.UpdateNewNodeAutoAddSwitchRequest) *UpdateNewNodeAutoAddSwitchInvoker {
+	requestDef := GenReqDefForUpdateNewNodeAutoAddSwitch()
+	return &UpdateNewNodeAutoAddSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateProxyConnectionPoolType 更改数据库代理连接池类型
 //
 // 更改数据库代理连接池类型。

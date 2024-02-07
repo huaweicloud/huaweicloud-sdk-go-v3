@@ -281,6 +281,18 @@ func (i *CreateBackupInvoker) Invoke() (*model.CreateBackupResponse, error) {
 	}
 }
 
+type CreateClusterJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterJobInvoker) Invoke() (*model.CreateClusterJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateClusterJobResponse), nil
+	}
+}
+
 type CreateCodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -926,6 +938,42 @@ func (i *ExecuteJobInvoker) Invoke() (*model.ExecuteJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ExecuteJobResponse), nil
+	}
+}
+
+type GenerateComplexCombineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GenerateComplexCombineInvoker) Invoke() (*model.GenerateComplexCombineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GenerateComplexCombineResponse), nil
+	}
+}
+
+type GeneratePocketFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GeneratePocketFileInvoker) Invoke() (*model.GeneratePocketFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GeneratePocketFileResponse), nil
+	}
+}
+
+type GenerateSurfacePointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GenerateSurfacePointsInvoker) Invoke() (*model.GenerateSurfacePointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GenerateSurfacePointsResponse), nil
 	}
 }
 

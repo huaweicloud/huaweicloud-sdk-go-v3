@@ -12,7 +12,7 @@ type CreateVgwCertificateRequest struct {
 	// VPN网关实例ID
 	VgwId string `json:"vgw_id"`
 
-	Body *VpnGatewayCertificateRequestBody `json:"body,omitempty"`
+	Body *CreateVpnGatewayCertificateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateVgwCertificateRequest) String() string {

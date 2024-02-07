@@ -20,6 +20,9 @@ type DockingReceptorDto struct {
 
 	// 去除受体中的配体分子
 	RemoveLigand *bool `json:"remove_ligand,omitempty"`
+
+	// 增加氢原子
+	AddHydrogen *bool `json:"add_hydrogen,omitempty"`
 }
 
 func (o DockingReceptorDto) String() string {

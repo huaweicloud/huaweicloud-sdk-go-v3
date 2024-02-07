@@ -35,7 +35,7 @@ type CreateVgwRequestBodyContent struct {
 	// VPN网关的规格类型，当attachment_type为er时不能填写Basic
 	Flavor *CreateVgwRequestBodyContentFlavor `json:"flavor,omitempty"`
 
-	// 不填写则采用默认可用区。如果需要指定可用区可以调用查询VPN网关可用区接口来选择
+	// 部署VPN网关的可用区。不填时自动为VPN网关选择可用区。如果需要指定可用区可以通过查询VPN网关可用区查询可用区列表。
 	AvailabilityZoneIds *[]string `json:"availability_zone_ids,omitempty"`
 
 	// 企业项目ID
@@ -45,13 +45,13 @@ type CreateVgwRequestBodyContent struct {
 
 	Eip2 *CreateRequestEip `json:"eip2,omitempty"`
 
-	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
+	// 私网类型VPN网关的接入私网IP1，指定ip创建私网网关时设置，主备网关时为主ip，双活网关时为主ip1
 	AccessPrivateIp1 *string `json:"access_private_ip_1,omitempty"`
 
-	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+	// 私网类型VPN网关的接入私网IP2，指定ip创建私网网关时设置，主备网关时为备ip，双活网关时为主ip2
 	AccessPrivateIp2 *string `json:"access_private_ip_2,omitempty"`
 
-	// VPN网关北向类型，默认为公网(public)
+	// VPN网关的网络类型，默认为公网(public)
 	NetworkType *CreateVgwRequestBodyContentNetworkType `json:"network_type,omitempty"`
 
 	// VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值

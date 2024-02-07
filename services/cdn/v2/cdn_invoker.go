@@ -17,6 +17,30 @@ func (i *BatchCopyDomainInvoker) Invoke() (*model.BatchCopyDomainResponse, error
 	}
 }
 
+type BatchDeleteTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
+type CreateDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainResponse), nil
+	}
+}
+
 type CreatePreheatingTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +62,42 @@ func (i *CreateRefreshTasksInvoker) Invoke() (*model.CreateRefreshTasksResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateRefreshTasksResponse), nil
+	}
+}
+
+type CreateTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTagsResponse), nil
+	}
+}
+
+type DeleteDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainResponse), nil
+	}
+}
+
+type DisableDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableDomainInvoker) Invoke() (*model.DisableDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableDomainResponse), nil
 	}
 }
 
@@ -64,6 +124,18 @@ func (i *DownloadStatisticsExcelInvoker) Invoke() (*model.DownloadStatisticsExce
 		return nil, err
 	} else {
 		return result.(*model.DownloadStatisticsExcelResponse), nil
+	}
+}
+
+type EnableDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableDomainInvoker) Invoke() (*model.EnableDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableDomainResponse), nil
 	}
 }
 
@@ -113,6 +185,18 @@ func (i *ShowBandwidthCalcInvoker) Invoke() (*model.ShowBandwidthCalcResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowBandwidthCalcResponse), nil
+	}
+}
+
+type ShowCertificatesHttpsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificatesHttpsInfoInvoker) Invoke() (*model.ShowCertificatesHttpsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertificatesHttpsInfoResponse), nil
 	}
 }
 
@@ -200,6 +284,18 @@ func (i *ShowHistoryTasksInvoker) Invoke() (*model.ShowHistoryTasksResponse, err
 	}
 }
 
+type ShowIpInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpInfoInvoker) Invoke() (*model.ShowIpInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpInfoResponse), nil
+	}
+}
+
 type ShowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -209,6 +305,18 @@ func (i *ShowLogsInvoker) Invoke() (*model.ShowLogsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowLogsResponse), nil
+	}
+}
+
+type ShowTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTagsInvoker) Invoke() (*model.ShowTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTagsResponse), nil
 	}
 }
 
@@ -249,6 +357,18 @@ func (i *ShowUrlTaskInfoInvoker) Invoke() (*model.ShowUrlTaskInfoResponse, error
 	}
 }
 
+type ShowVerifyDomainOwnerInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVerifyDomainOwnerInfoInvoker) Invoke() (*model.ShowVerifyDomainOwnerInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVerifyDomainOwnerInfoResponse), nil
+	}
+}
+
 type UpdateDomainFullConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -258,5 +378,41 @@ func (i *UpdateDomainFullConfigInvoker) Invoke() (*model.UpdateDomainFullConfigR
 		return nil, err
 	} else {
 		return result.(*model.UpdateDomainFullConfigResponse), nil
+	}
+}
+
+type UpdateDomainMultiCertificatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainMultiCertificatesInvoker) Invoke() (*model.UpdateDomainMultiCertificatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainMultiCertificatesResponse), nil
+	}
+}
+
+type UpdatePrivateBucketAccessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrivateBucketAccessInvoker) Invoke() (*model.UpdatePrivateBucketAccessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrivateBucketAccessResponse), nil
+	}
+}
+
+type VerifyDomainOwnerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *VerifyDomainOwnerInvoker) Invoke() (*model.VerifyDomainOwnerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.VerifyDomainOwnerResponse), nil
 	}
 }

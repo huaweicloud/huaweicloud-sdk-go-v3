@@ -917,18 +917,6 @@ func (i *ModifyRdSforMySqlProxyRouteModeInvoker) Invoke() (*model.ModifyRdSforMy
 	}
 }
 
-type RestartRdSforMysqlProxyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RestartRdSforMysqlProxyInvoker) Invoke() (*model.RestartRdSforMysqlProxyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RestartRdSforMysqlProxyResponse), nil
-	}
-}
-
 type RestoreExistInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1022,6 +1010,18 @@ func (i *SetBinlogClearPolicyInvoker) Invoke() (*model.SetBinlogClearPolicyRespo
 		return nil, err
 	} else {
 		return result.(*model.SetBinlogClearPolicyResponse), nil
+	}
+}
+
+type SetInstancesProxyRestartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstancesProxyRestartInvoker) Invoke() (*model.SetInstancesProxyRestartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstancesProxyRestartResponse), nil
 	}
 }
 
@@ -1973,6 +1973,42 @@ func (i *DeletePostgresqlExtensionInvoker) Invoke() (*model.DeletePostgresqlExte
 	}
 }
 
+type ExecutePrivilegeDatabaseUserRoleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecutePrivilegeDatabaseUserRoleInvoker) Invoke() (*model.ExecutePrivilegeDatabaseUserRoleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecutePrivilegeDatabaseUserRoleResponse), nil
+	}
+}
+
+type ExecuteRevokeDatabaseUserRoleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteRevokeDatabaseUserRoleInvoker) Invoke() (*model.ExecuteRevokeDatabaseUserRoleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteRevokeDatabaseUserRoleResponse), nil
+	}
+}
+
+type ListDatabaseUserRoleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseUserRoleInvoker) Invoke() (*model.ListDatabaseUserRoleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseUserRoleResponse), nil
+	}
+}
+
 type ListPostgresqlDatabaseSchemasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2129,6 +2165,18 @@ func (i *StopDatabaseProxyInvoker) Invoke() (*model.StopDatabaseProxyResponse, e
 	}
 }
 
+type UpdateDatabaseOwnerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDatabaseOwnerInvoker) Invoke() (*model.UpdateDatabaseOwnerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDatabaseOwnerResponse), nil
+	}
+}
+
 type UpdateDbUserPrivilegeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2162,6 +2210,18 @@ func (i *UpdatePostgresqlDbUserCommentInvoker) Invoke() (*model.UpdatePostgresql
 		return nil, err
 	} else {
 		return result.(*model.UpdatePostgresqlDbUserCommentResponse), nil
+	}
+}
+
+type UpdatePostgresqlExtensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePostgresqlExtensionInvoker) Invoke() (*model.UpdatePostgresqlExtensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePostgresqlExtensionResponse), nil
 	}
 }
 

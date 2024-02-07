@@ -30,7 +30,7 @@ type ModUserDto struct {
 	// 个人会议ID，若不携带则后台默认生成。
 	VmrId *string `json:"vmrId,omitempty"`
 
-	// 个人会议ID，若不携带则后台默认生成。 默认值：1
+	// 部门编码，若不携带则默认根部门。 默认值：1
 	DeptCode *string `json:"deptCode,omitempty"`
 
 	// 签名。

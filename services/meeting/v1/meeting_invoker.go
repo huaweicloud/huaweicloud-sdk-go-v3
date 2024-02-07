@@ -1349,6 +1349,18 @@ func (i *SetParticipantViewInvoker) Invoke() (*model.SetParticipantViewResponse,
 	}
 }
 
+type SetProfileImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetProfileImageInvoker) Invoke() (*model.SetProfileImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetProfileImageResponse), nil
+	}
+}
+
 type SetRoleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1370,6 +1382,18 @@ func (i *SetSsoConfigInvoker) Invoke() (*model.SetSsoConfigResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SetSsoConfigResponse), nil
+	}
+}
+
+type SetUserProfileImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetUserProfileImageInvoker) Invoke() (*model.SetUserProfileImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetUserProfileImageResponse), nil
 	}
 }
 

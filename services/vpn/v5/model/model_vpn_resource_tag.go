@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// VpnResourceTag 在VPN服务的各个创建资源接口中使用，只面向租户
 type VpnResourceTag struct {
 
 	// 标签的key

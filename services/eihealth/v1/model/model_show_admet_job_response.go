@@ -18,8 +18,10 @@ type ShowAdmetJobResponse struct {
 	PartFailedReason *[]FailedReasonRecord `json:"part_failed_reason,omitempty"`
 
 	// 模型信息
-	Models         *[]BasicDrugModel `json:"models,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Models *[]BasicDrugModel `json:"models,omitempty"`
+
+	ClusterResult  *ClusterJobRsp `json:"cluster_result,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowAdmetJobResponse) String() string {

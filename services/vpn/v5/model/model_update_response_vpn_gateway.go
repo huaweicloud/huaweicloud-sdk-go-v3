@@ -33,7 +33,7 @@ type UpdateResponseVpnGateway struct {
 	// VPN网关所使用的VPC子网ID
 	ConnectSubnet *string `json:"connect_subnet,omitempty"`
 
-	// VPN网关北向类型，默认为公网(public)
+	// VPN网关的网络类型，默认为公网(public)
 	NetworkType *UpdateResponseVpnGatewayNetworkType `json:"network_type,omitempty"`
 
 	// VPN网关北向接入VPC ID，不填时默认使用vpc_id字段的值
@@ -42,10 +42,10 @@ type UpdateResponseVpnGateway struct {
 	// VPN网关北向接入VPC中的接入子网ID
 	AccessSubnetId *string `json:"access_subnet_id,omitempty"`
 
-	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表主worker的私网IP
+	// 私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第一个私网地址，主备表示主私网地址。
 	AccessPrivateIp1 *string `json:"access_private_ip_1,omitempty"`
 
-	// VPN网关北向接入私网IP，当VPN网关的北向类型是私网(private)时有值,主备模式代表备worker的私网IP
+	// 私网类型VPN网关的接入私网IP，VPN网关使用该私网IP与对端网关建连。双活网关表示使用的第二个私网地址，主备表示备私网地址。
 	AccessPrivateIp2 *string `json:"access_private_ip_2,omitempty"`
 
 	// bgp所使用的asn号
@@ -83,6 +83,9 @@ type UpdateResponseVpnGateway struct {
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
 	PolicyTemplate *PolicyTemplate `json:"policy_template,omitempty"`
+
+	// 标签
+	Tags *[]VpnResourceTag `json:"tags,omitempty"`
 }
 
 func (o UpdateResponseVpnGateway) String() string {

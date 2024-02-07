@@ -7,7 +7,7 @@ import (
 )
 
 type Quotas struct {
-	Resources *[]Quota `json:"resources,omitempty"`
+	Resources *[]QuotaInfo `json:"resources,omitempty"`
 }
 
 func (o Quotas) String() string {

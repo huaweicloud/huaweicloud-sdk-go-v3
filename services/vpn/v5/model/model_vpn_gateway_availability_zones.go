@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// VpnGatewayAvailabilityZones 指定规格的可用区情况
 type VpnGatewayAvailabilityZones struct {
 
 	// VPC关联类型的可用区列表

@@ -821,6 +821,18 @@ func (i *ShowSslCertDownloadLinkInvoker) Invoke() (*model.ShowSslCertDownloadLin
 	}
 }
 
+type StopBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopBackupInvoker) Invoke() (*model.StopBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopBackupResponse), nil
+	}
+}
+
 type SwitchConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }

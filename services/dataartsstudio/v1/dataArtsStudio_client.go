@@ -3293,6 +3293,25 @@ func (c *DataArtsStudioClient) SearchVersionsInvoker(request *model.SearchVersio
 	return &SearchVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetFactoryJobTags 设置作业标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) SetFactoryJobTags(request *model.SetFactoryJobTagsRequest) (*model.SetFactoryJobTagsResponse, error) {
+	requestDef := GenReqDefForSetFactoryJobTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetFactoryJobTagsResponse), nil
+	}
+}
+
+// SetFactoryJobTagsInvoker 设置作业标签
+func (c *DataArtsStudioClient) SetFactoryJobTagsInvoker(request *model.SetFactoryJobTagsRequest) *SetFactoryJobTagsInvoker {
+	requestDef := GenReqDefForSetFactoryJobTags()
+	return &SetFactoryJobTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAggregationLogicTableById 查看汇总表详情
 //
 // 通过id查看汇总表的详情信息
@@ -5286,25 +5305,6 @@ func (c *DataArtsStudioClient) SearchPublishInfo(request *model.SearchPublishInf
 func (c *DataArtsStudioClient) SearchPublishInfoInvoker(request *model.SearchPublishInfoRequest) *SearchPublishInfoInvoker {
 	requestDef := GenReqDefForSearchPublishInfo()
 	return &SearchPublishInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SetFactoryJobTags 设置作业标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DataArtsStudioClient) SetFactoryJobTags(request *model.SetFactoryJobTagsRequest) (*model.SetFactoryJobTagsResponse, error) {
-	requestDef := GenReqDefForSetFactoryJobTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetFactoryJobTagsResponse), nil
-	}
-}
-
-// SetFactoryJobTagsInvoker 设置作业标签
-func (c *DataArtsStudioClient) SetFactoryJobTagsInvoker(request *model.SetFactoryJobTagsRequest) *SetFactoryJobTagsInvoker {
-	requestDef := GenReqDefForSetFactoryJobTags()
-	return &SetFactoryJobTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowApi 查询API信息

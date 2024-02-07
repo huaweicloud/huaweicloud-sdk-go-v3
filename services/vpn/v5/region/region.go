@@ -24,6 +24,8 @@ var (
 		"https://vpn.ap-southeast-3.myhuaweicloud.com")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
 		"https://vpn.ap-southeast-1.myhuaweicloud.com")
+	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
+		"https://vpn.ap-southeast-4.myhuaweicloud.com")
 	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
 		"https://vpn.sa-brazil-1.myhuaweicloud.com")
 	LA_SOUTH_2 = region.NewRegion("la-south-2",
@@ -34,6 +36,20 @@ var (
 		"https://vpn.cn-north-9.myhuaweicloud.com")
 	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
 		"https://vpn.cn-southwest-2.myhuaweicloud.com")
+	AE_AD_1 = region.NewRegion("ae-ad-1",
+		"https://vpn.ae-ad-1.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://vpn.eu-west-101.myhuaweicloud.com")
+	TR_WEST_1 = region.NewRegion("tr-west-1",
+		"https://vpn.tr-west-1.myhuaweicloud.com")
+	NA_MEXICO_1 = region.NewRegion("na-mexico-1",
+		"https://vpn.na-mexico-1.myhuaweicloud.com")
+	ME_EAST_1 = region.NewRegion("me-east-1",
+		"https://vpn.me-east-1.myhuaweicloud.com")
+	CN_EAST_5 = region.NewRegion("cn-east-5",
+		"https://vpn.cn-east-5.myhuaweicloud.com")
+	AF_SOUTH_1 = region.NewRegion("af-south-1",
+		"https://vpn.af-south-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -45,11 +61,19 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-2": AP_SOUTHEAST_2,
 	"ap-southeast-3": AP_SOUTHEAST_3,
 	"ap-southeast-1": AP_SOUTHEAST_1,
+	"ap-southeast-4": AP_SOUTHEAST_4,
 	"sa-brazil-1":    SA_BRAZIL_1,
 	"la-south-2":     LA_SOUTH_2,
 	"la-north-2":     LA_NORTH_2,
 	"cn-north-9":     CN_NORTH_9,
 	"cn-southwest-2": CN_SOUTHWEST_2,
+	"ae-ad-1":        AE_AD_1,
+	"eu-west-101":    EU_WEST_101,
+	"tr-west-1":      TR_WEST_1,
+	"na-mexico-1":    NA_MEXICO_1,
+	"me-east-1":      ME_EAST_1,
+	"cn-east-5":      CN_EAST_5,
+	"af-south-1":     AF_SOUTH_1,
 }
 
 var provider = region.DefaultProviderChain("VPN")

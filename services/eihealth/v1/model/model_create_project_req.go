@@ -18,8 +18,14 @@ type CreateProjectReq struct {
 	// 标签
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 标签
+	// 是否核心项目
 	IsCore *bool `json:"is_core,omitempty"`
+
+	// 是否新桶, 仅气象支持该字段
+	IsNewBucket *bool `json:"is_new_bucket,omitempty"`
+
+	// 桶名, 仅气象支持该字段
+	BucketName *string `json:"bucket_name,omitempty"`
 }
 
 func (o CreateProjectReq) String() string {

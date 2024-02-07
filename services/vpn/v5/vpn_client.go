@@ -210,7 +210,7 @@ func (c *VpnClient) UpdateCgwInvoker(request *model.UpdateCgwRequest) *UpdateCgw
 
 // BatchCreateResourceTags 批量添加资源标签
 //
-// 为指定实例批量添加标签,标签管理服务需要使用该接口批量管理实例的标签.一个资源上最多有20个标签
+// 为指定实例批量添加标签
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) BatchCreateResourceTags(request *model.BatchCreateResourceTagsRequest) (*model.BatchCreateResourceTagsResponse, error) {
@@ -231,7 +231,7 @@ func (c *VpnClient) BatchCreateResourceTagsInvoker(request *model.BatchCreateRes
 
 // BatchDeleteResourceTags 批量删除资源标签
 //
-// 为指定实例批量删除标签,标签管理服务需要使用该接口批量管理实例的标签.
+// 为指定实例批量删除标签
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) BatchDeleteResourceTags(request *model.BatchDeleteResourceTagsRequest) (*model.BatchDeleteResourceTagsResponse, error) {
@@ -250,9 +250,9 @@ func (c *VpnClient) BatchDeleteResourceTagsInvoker(request *model.BatchDeleteRes
 	return &BatchDeleteResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CountResourcesByTags 查询标签下资源实例数量
+// CountResourcesByTags 查询资源实例数量
 //
-// 使用标签过滤实例,并查询实例数量,需要各服务提供查询
+// 根据标签查询资源实例数量
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) CountResourcesByTags(request *model.CountResourcesByTagsRequest) (*model.CountResourcesByTagsResponse, error) {
@@ -265,15 +265,15 @@ func (c *VpnClient) CountResourcesByTags(request *model.CountResourcesByTagsRequ
 	}
 }
 
-// CountResourcesByTagsInvoker 查询标签下资源实例数量
+// CountResourcesByTagsInvoker 查询资源实例数量
 func (c *VpnClient) CountResourcesByTagsInvoker(request *model.CountResourcesByTagsRequest) *CountResourcesByTagsInvoker {
 	requestDef := GenReqDefForCountResourcesByTags()
 	return &CountResourcesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListProjectTags 查询项目下标签
+// ListProjectTags 查询项目标签
 //
-// 查询租户在指定Project中实例类型的所有资源标签集合
+// 查询租户在指定项目中指定资源类型下的所有标签
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
@@ -286,15 +286,15 @@ func (c *VpnClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 	}
 }
 
-// ListProjectTagsInvoker 查询项目下标签
+// ListProjectTagsInvoker 查询项目标签
 func (c *VpnClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
 	requestDef := GenReqDefForListProjectTags()
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListResourcesByTags 按标签查询资源
+// ListResourcesByTags 查询资源实例列表
 //
-// 使用标签过滤实例,并查询实例数量,需要各服务提供查询
+// 根据标签查询资源实例列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) ListResourcesByTags(request *model.ListResourcesByTagsRequest) (*model.ListResourcesByTagsResponse, error) {
@@ -307,7 +307,7 @@ func (c *VpnClient) ListResourcesByTags(request *model.ListResourcesByTagsReques
 	}
 }
 
-// ListResourcesByTagsInvoker 按标签查询资源
+// ListResourcesByTagsInvoker 查询资源实例列表
 func (c *VpnClient) ListResourcesByTagsInvoker(request *model.ListResourcesByTagsRequest) *ListResourcesByTagsInvoker {
 	requestDef := GenReqDefForListResourcesByTags()
 	return &ListResourcesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -315,7 +315,7 @@ func (c *VpnClient) ListResourcesByTagsInvoker(request *model.ListResourcesByTag
 
 // ShowResourceTags 查询资源标签
 //
-// 查询指定实例的标签信息,标签管理服务需要使用该接口查询指定实例的全部标签数据
+// 查询指定实例的标签信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*model.ShowResourceTagsResponse, error) {

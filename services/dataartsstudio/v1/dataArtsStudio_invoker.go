@@ -1877,6 +1877,18 @@ func (i *SearchVersionsInvoker) Invoke() (*model.SearchVersionsResponse, error) 
 	}
 }
 
+type SetFactoryJobTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetFactoryJobTagsInvoker) Invoke() (*model.SetFactoryJobTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetFactoryJobTagsResponse), nil
+	}
+}
+
 type ShowAggregationLogicTableByIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3014,18 +3026,6 @@ func (i *SearchPublishInfoInvoker) Invoke() (*model.SearchPublishInfoResponse, e
 		return nil, err
 	} else {
 		return result.(*model.SearchPublishInfoResponse), nil
-	}
-}
-
-type SetFactoryJobTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetFactoryJobTagsInvoker) Invoke() (*model.SetFactoryJobTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetFactoryJobTagsResponse), nil
 	}
 }
 

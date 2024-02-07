@@ -20,7 +20,9 @@ type ShowDockingJobResponse struct {
 
 	// 部分失败原因和数量
 	PartFailedReason *[]FailedReasonRecord `json:"part_failed_reason,omitempty"`
-	HttpStatusCode   int                   `json:"-"`
+
+	ClusterResult  *ClusterJobRsp `json:"cluster_result,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowDockingJobResponse) String() string {

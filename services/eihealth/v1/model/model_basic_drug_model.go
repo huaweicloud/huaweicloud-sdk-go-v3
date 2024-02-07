@@ -23,7 +23,7 @@ type BasicDrugModel struct {
 	// 模型类型
 	Type *string `json:"type,omitempty"`
 
-	ValueRange *ValueRange2 `json:"value_range,omitempty"`
+	ValueRange *ValueRange `json:"value_range,omitempty"`
 
 	// 模型描述信息
 	Description *string `json:"description,omitempty"`

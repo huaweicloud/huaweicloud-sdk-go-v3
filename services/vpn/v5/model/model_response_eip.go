@@ -14,7 +14,7 @@ type ResponseEip struct {
 	// 功能说明：公网IP的唯一标识
 	Id *string `json:"id,omitempty"`
 
-	// 功能说明: 公网IP版本号  取值范围：4, 6
+	// 功能说明: 公网IP版本号  取值范围：4
 	IpVersion *int32 `json:"ip_version,omitempty"`
 
 	// 功能说明：公网IP的订单信息 约束：包周期才会有订单信息，按需资源此字段为空
@@ -32,7 +32,7 @@ type ResponseEip struct {
 	// 功能说明：带宽ID
 	BandwidthId *string `json:"bandwidth_id,omitempty"`
 
-	// 带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1024
+	// 带宽大小Mbit/s，flavor为V300时，取值不能大于300，flavor为V1G时，取值不能大于1000
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
 	// 带宽名称

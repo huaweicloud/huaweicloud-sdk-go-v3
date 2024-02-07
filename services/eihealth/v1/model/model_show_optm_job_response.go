@@ -30,8 +30,10 @@ type ShowOptmJobResponse struct {
 	SamplerMixinWeight *float32 `json:"sampler_mixin_weight,omitempty"`
 
 	// 模型列表
-	Models         *[]BasicDrugModel `json:"models,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Models *[]BasicDrugModel `json:"models,omitempty"`
+
+	ClusterResult  *ClusterJobRsp `json:"cluster_result,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowOptmJobResponse) String() string {

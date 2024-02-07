@@ -14,10 +14,10 @@ type UpdateVgwRequestBodyContent struct {
 	// 本端子网
 	LocalSubnets *[]string `json:"local_subnets,omitempty"`
 
-	// 主eip的ID。用于给VPN网关绑定新的主EIP，需要先解绑当前的主EIP
+	// 有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
 	EipId1 *string `json:"eip_id_1,omitempty"`
 
-	// 备eip的ID。用于给VPN网关绑定新的备EIP，需要先解绑当前的备EIP
+	// 有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第二个EIP或主备VPN网关的备EIP。
 	EipId2 *string `json:"eip_id_2,omitempty"`
 
 	PolicyTemplate *UpdateRequestPolicyTemplate `json:"policy_template,omitempty"`

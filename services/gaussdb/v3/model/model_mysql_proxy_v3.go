@@ -76,6 +76,12 @@ type MysqlProxyV3 struct {
 
 	// SSL数据加密开关设置。  取值范围： - true: 开启SSL数据加密。 - false: 关闭SSL数据加密。
 	SslOption *string `json:"ssl_option,omitempty"`
+
+	// 新增节点是否自动加入该Proxy。  取值范围： - ON：自动加入。 - OFF：不自动加入。
+	NewNodeAutoAddStatus *string `json:"new_node_auto_add_status,omitempty"`
+
+	// 新增节点的读权重。
+	NewNodeWeight *int32 `json:"new_node_weight,omitempty"`
 }
 
 func (o MysqlProxyV3) String() string {

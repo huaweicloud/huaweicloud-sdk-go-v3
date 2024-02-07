@@ -8,7 +8,7 @@ import (
 
 // CreateDrugLigandInteraction2dSvgReq 生成相互作用2D图请求体
 type CreateDrugLigandInteraction2dSvgReq struct {
-	ReceptorFile *ReceptorDrugFile `json:"receptor_file"`
+	ReceptorFile *ReceptorDrugFileReq `json:"receptor_file"`
 
 	LigandFile *DrugFile `json:"ligand_file,omitempty"`
 }

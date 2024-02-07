@@ -13,7 +13,10 @@ type ShowPocketMolDesignJobResponse struct {
 	Receptor *PocketMolDesignReceptorDto `json:"receptor,omitempty"`
 
 	// 配体文件列表
-	Ligands *[]DrugFile `json:"ligands,omitempty"`
+	Ligands *[]PocketFragment `json:"ligands,omitempty"`
+
+	// 生成分子数量
+	NumTrials *int32 `json:"num_trials,omitempty"`
 
 	// 模型列表
 	ModelList *[]BasicDrugModel `json:"model_list,omitempty"`
@@ -22,7 +25,9 @@ type ShowPocketMolDesignJobResponse struct {
 	MolecularWeight *[]int32 `json:"molecular_weight,omitempty"`
 
 	OptimizationMode *OptimizationMode `json:"optimization_mode,omitempty"`
-	HttpStatusCode   int               `json:"-"`
+
+	ClusterResult  *ClusterJobRsp `json:"cluster_result,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowPocketMolDesignJobResponse) String() string {

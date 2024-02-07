@@ -2385,6 +2385,27 @@ func (c *MeetingClient) SetParticipantViewInvoker(request *model.SetParticipantV
 	return &SetParticipantViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetProfileImage 用户设置头像
+//
+// 用户设置头像
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) SetProfileImage(request *model.SetProfileImageRequest) (*model.SetProfileImageResponse, error) {
+	requestDef := GenReqDefForSetProfileImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetProfileImageResponse), nil
+	}
+}
+
+// SetProfileImageInvoker 用户设置头像
+func (c *MeetingClient) SetProfileImageInvoker(request *model.SetProfileImageRequest) *SetProfileImageInvoker {
+	requestDef := GenReqDefForSetProfileImage()
+	return &SetProfileImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetRole 申请主持人
 //
 // 该接口用于设置主持人或释放主持人。
@@ -2425,6 +2446,27 @@ func (c *MeetingClient) SetSsoConfig(request *model.SetSsoConfigRequest) (*model
 func (c *MeetingClient) SetSsoConfigInvoker(request *model.SetSsoConfigRequest) *SetSsoConfigInvoker {
 	requestDef := GenReqDefForSetSsoConfig()
 	return &SetSsoConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetUserProfileImage 企业管理员设置企业成员头像
+//
+// 为企业内的用户设置头像（只允许管理员调用）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) SetUserProfileImage(request *model.SetUserProfileImageRequest) (*model.SetUserProfileImageResponse, error) {
+	requestDef := GenReqDefForSetUserProfileImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetUserProfileImageResponse), nil
+	}
+}
+
+// SetUserProfileImageInvoker 企业管理员设置企业成员头像
+func (c *MeetingClient) SetUserProfileImageInvoker(request *model.SetUserProfileImageRequest) *SetUserProfileImageInvoker {
+	requestDef := GenReqDefForSetUserProfileImage()
+	return &SetUserProfileImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetWebHookConfig 设置事件推送

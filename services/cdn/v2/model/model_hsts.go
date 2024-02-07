@@ -12,7 +12,7 @@ type Hsts struct {
 	// 状态，on：打开，off：关闭。
 	Status string `json:"status"`
 
-	// 过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0~63072000。  > status参数为on时，必传。
+	// 过期时间,即：响应头“Strict-Transport-Security”在客户端的缓存时间。单位:秒,取值范围:0-63072000。  > status参数为on时，必传。
 	MaxAge *int32 `json:"max_age,omitempty"`
 
 	// 包含子域名，on：包含，off：不包含。   > status参数为on时，必传。

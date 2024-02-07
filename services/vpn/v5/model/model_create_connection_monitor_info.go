@@ -14,7 +14,7 @@ type CreateConnectionMonitorInfo struct {
 	// VPN连接监控对应的VPN连接ID
 	VpnConnectionId *string `json:"vpn_connection_id,omitempty"`
 
-	// 网关连通性，取值范围：gateway
+	// 监控类型，取值范围：gateway
 	Type *string `json:"type,omitempty"`
 
 	// VPN连接监控的源地址

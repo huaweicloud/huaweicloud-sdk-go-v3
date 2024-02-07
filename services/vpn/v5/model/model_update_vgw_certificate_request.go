@@ -15,7 +15,7 @@ type UpdateVgwCertificateRequest struct {
 	// VPN网关证书ID
 	CertificateId string `json:"certificate_id"`
 
-	Body *VpnGatewayCertificateRequestBody `json:"body,omitempty"`
+	Body *UpdateVpnGatewayCertificateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateVgwCertificateRequest) String() string {

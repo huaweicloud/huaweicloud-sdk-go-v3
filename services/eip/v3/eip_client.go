@@ -187,6 +187,132 @@ func (c *EipClient) ShowPublicipPoolInvoker(request *model.ShowPublicipPoolReque
 	return &ShowPublicipPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectGeipBindings 查询GEIP与实例绑定关系的租户列表
+//
+// 查询GEIP与实例绑定关系的租户列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListProjectGeipBindings(request *model.ListProjectGeipBindingsRequest) (*model.ListProjectGeipBindingsResponse, error) {
+	requestDef := GenReqDefForListProjectGeipBindings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectGeipBindingsResponse), nil
+	}
+}
+
+// ListProjectGeipBindingsInvoker 查询GEIP与实例绑定关系的租户列表
+func (c *EipClient) ListProjectGeipBindingsInvoker(request *model.ListProjectGeipBindingsRequest) *ListProjectGeipBindingsInvoker {
+	requestDef := GenReqDefForListProjectGeipBindings()
+	return &ListProjectGeipBindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTenantVpcIgw 创建虚拟igw
+//
+// 创建虚拟igw
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) CreateTenantVpcIgw(request *model.CreateTenantVpcIgwRequest) (*model.CreateTenantVpcIgwResponse, error) {
+	requestDef := GenReqDefForCreateTenantVpcIgw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTenantVpcIgwResponse), nil
+	}
+}
+
+// CreateTenantVpcIgwInvoker 创建虚拟igw
+func (c *EipClient) CreateTenantVpcIgwInvoker(request *model.CreateTenantVpcIgwRequest) *CreateTenantVpcIgwInvoker {
+	requestDef := GenReqDefForCreateTenantVpcIgw()
+	return &CreateTenantVpcIgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTenantVpcIgw 删除虚拟igw
+//
+// 删除虚拟igw
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) DeleteTenantVpcIgw(request *model.DeleteTenantVpcIgwRequest) (*model.DeleteTenantVpcIgwResponse, error) {
+	requestDef := GenReqDefForDeleteTenantVpcIgw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTenantVpcIgwResponse), nil
+	}
+}
+
+// DeleteTenantVpcIgwInvoker 删除虚拟igw
+func (c *EipClient) DeleteTenantVpcIgwInvoker(request *model.DeleteTenantVpcIgwRequest) *DeleteTenantVpcIgwInvoker {
+	requestDef := GenReqDefForDeleteTenantVpcIgw()
+	return &DeleteTenantVpcIgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantVpcIgws 查询指定租户下的虚拟igw列表
+//
+// 查询指定租户下的虚拟igw列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ListTenantVpcIgws(request *model.ListTenantVpcIgwsRequest) (*model.ListTenantVpcIgwsResponse, error) {
+	requestDef := GenReqDefForListTenantVpcIgws()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantVpcIgwsResponse), nil
+	}
+}
+
+// ListTenantVpcIgwsInvoker 查询指定租户下的虚拟igw列表
+func (c *EipClient) ListTenantVpcIgwsInvoker(request *model.ListTenantVpcIgwsRequest) *ListTenantVpcIgwsInvoker {
+	requestDef := GenReqDefForListTenantVpcIgws()
+	return &ListTenantVpcIgwsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInternalVpcIgw 查询虚拟igw详情
+//
+// 查询虚拟igw详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ShowInternalVpcIgw(request *model.ShowInternalVpcIgwRequest) (*model.ShowInternalVpcIgwResponse, error) {
+	requestDef := GenReqDefForShowInternalVpcIgw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInternalVpcIgwResponse), nil
+	}
+}
+
+// ShowInternalVpcIgwInvoker 查询虚拟igw详情
+func (c *EipClient) ShowInternalVpcIgwInvoker(request *model.ShowInternalVpcIgwRequest) *ShowInternalVpcIgwInvoker {
+	requestDef := GenReqDefForShowInternalVpcIgw()
+	return &ShowInternalVpcIgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTenantVpcIgw 修改虚拟igw
+//
+// 修改虚拟igw
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) UpdateTenantVpcIgw(request *model.UpdateTenantVpcIgwRequest) (*model.UpdateTenantVpcIgwResponse, error) {
+	requestDef := GenReqDefForUpdateTenantVpcIgw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTenantVpcIgwResponse), nil
+	}
+}
+
+// UpdateTenantVpcIgwInvoker 修改虚拟igw
+func (c *EipClient) UpdateTenantVpcIgwInvoker(request *model.UpdateTenantVpcIgwRequest) *UpdateTenantVpcIgwInvoker {
+	requestDef := GenReqDefForUpdateTenantVpcIgw()
+	return &UpdateTenantVpcIgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AssociatePublicips 绑定弹性公网IP
 //
 // 绑定弹性公网IP

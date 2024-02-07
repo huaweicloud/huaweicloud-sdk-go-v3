@@ -502,6 +502,27 @@ func (c *EiHealthClient) CreateBackupInvoker(request *model.CreateBackupRequest)
 	return &CreateBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateClusterJob 创建分子聚类作业
+//
+// 创建分子聚类作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateClusterJob(request *model.CreateClusterJobRequest) (*model.CreateClusterJobResponse, error) {
+	requestDef := GenReqDefForCreateClusterJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateClusterJobResponse), nil
+	}
+}
+
+// CreateClusterJobInvoker 创建分子聚类作业
+func (c *EiHealthClient) CreateClusterJobInvoker(request *model.CreateClusterJobRequest) *CreateClusterJobInvoker {
+	requestDef := GenReqDefForCreateClusterJob()
+	return &CreateClusterJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCode 发送验证码
 //
 // 发送验证码
@@ -1634,6 +1655,69 @@ func (c *EiHealthClient) ExecuteJob(request *model.ExecuteJobRequest) (*model.Ex
 func (c *EiHealthClient) ExecuteJobInvoker(request *model.ExecuteJobRequest) *ExecuteJobInvoker {
 	requestDef := GenReqDefForExecuteJob()
 	return &ExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GenerateComplexCombine 将传入的蛋白和小分子拼接成复合物结构
+//
+// 将传入的蛋白和小分子拼接成复合物结构
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) GenerateComplexCombine(request *model.GenerateComplexCombineRequest) (*model.GenerateComplexCombineResponse, error) {
+	requestDef := GenReqDefForGenerateComplexCombine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GenerateComplexCombineResponse), nil
+	}
+}
+
+// GenerateComplexCombineInvoker 将传入的蛋白和小分子拼接成复合物结构
+func (c *EiHealthClient) GenerateComplexCombineInvoker(request *model.GenerateComplexCombineRequest) *GenerateComplexCombineInvoker {
+	requestDef := GenReqDefForGenerateComplexCombine()
+	return &GenerateComplexCombineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GeneratePocketFile 根据center、size、padding参数生成可渲染的口袋文件内容
+//
+// 根据center、size、padding参数生成可渲染的口袋文件内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) GeneratePocketFile(request *model.GeneratePocketFileRequest) (*model.GeneratePocketFileResponse, error) {
+	requestDef := GenReqDefForGeneratePocketFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GeneratePocketFileResponse), nil
+	}
+}
+
+// GeneratePocketFileInvoker 根据center、size、padding参数生成可渲染的口袋文件内容
+func (c *EiHealthClient) GeneratePocketFileInvoker(request *model.GeneratePocketFileRequest) *GeneratePocketFileInvoker {
+	requestDef := GenReqDefForGeneratePocketFile()
+	return &GeneratePocketFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GenerateSurfacePoints 根据表面离散点坐标集生成可渲染的文件内容
+//
+// 根据表面离散点坐标集生成可渲染的文件内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) GenerateSurfacePoints(request *model.GenerateSurfacePointsRequest) (*model.GenerateSurfacePointsResponse, error) {
+	requestDef := GenReqDefForGenerateSurfacePoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GenerateSurfacePointsResponse), nil
+	}
+}
+
+// GenerateSurfacePointsInvoker 根据表面离散点坐标集生成可渲染的文件内容
+func (c *EiHealthClient) GenerateSurfacePointsInvoker(request *model.GenerateSurfacePointsRequest) *GenerateSurfacePointsInvoker {
+	requestDef := GenReqDefForGenerateSurfacePoints()
+	return &GenerateSurfacePointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ImportData 导入项目数据

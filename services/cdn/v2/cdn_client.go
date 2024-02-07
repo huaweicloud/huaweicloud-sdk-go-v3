@@ -42,6 +42,48 @@ func (c *CdnClient) BatchCopyDomainInvoker(request *model.BatchCopyDomainRequest
 	return &BatchCopyDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteTags 删除资源标签配置接口
+//
+// 用于删除资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*model.BatchDeleteTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
+// BatchDeleteTagsInvoker 删除资源标签配置接口
+func (c *CdnClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest) *BatchDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteTags()
+	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDomain 创建加速域名
+//
+// 创建加速域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateDomain(request *model.CreateDomainRequest) (*model.CreateDomainResponse, error) {
+	requestDef := GenReqDefForCreateDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainResponse), nil
+	}
+}
+
+// CreateDomainInvoker 创建加速域名
+func (c *CdnClient) CreateDomainInvoker(request *model.CreateDomainRequest) *CreateDomainInvoker {
+	requestDef := GenReqDefForCreateDomain()
+	return &CreateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePreheatingTasks 创建预热缓存任务
 //
 // 创建预热任务。
@@ -82,6 +124,69 @@ func (c *CdnClient) CreateRefreshTasks(request *model.CreateRefreshTasksRequest)
 func (c *CdnClient) CreateRefreshTasksInvoker(request *model.CreateRefreshTasksRequest) *CreateRefreshTasksInvoker {
 	requestDef := GenReqDefForCreateRefreshTasks()
 	return &CreateRefreshTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTags 创建资源标签配置接口
+//
+// 用于创建资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateTags(request *model.CreateTagsRequest) (*model.CreateTagsResponse, error) {
+	requestDef := GenReqDefForCreateTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagsResponse), nil
+	}
+}
+
+// CreateTagsInvoker 创建资源标签配置接口
+func (c *CdnClient) CreateTagsInvoker(request *model.CreateTagsRequest) *CreateTagsInvoker {
+	requestDef := GenReqDefForCreateTags()
+	return &CreateTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDomain 删除加速域名
+//
+// 删除加速域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.DeleteDomainResponse, error) {
+	requestDef := GenReqDefForDeleteDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainResponse), nil
+	}
+}
+
+// DeleteDomainInvoker 删除加速域名
+func (c *CdnClient) DeleteDomainInvoker(request *model.DeleteDomainRequest) *DeleteDomainInvoker {
+	requestDef := GenReqDefForDeleteDomain()
+	return &DeleteDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableDomain 停用加速域名
+//
+// 停用加速域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) DisableDomain(request *model.DisableDomainRequest) (*model.DisableDomainResponse, error) {
+	requestDef := GenReqDefForDisableDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableDomainResponse), nil
+	}
+}
+
+// DisableDomainInvoker 停用加速域名
+func (c *CdnClient) DisableDomainInvoker(request *model.DisableDomainRequest) *DisableDomainInvoker {
+	requestDef := GenReqDefForDisableDomain()
+	return &DisableDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -148,6 +253,27 @@ func (c *CdnClient) DownloadStatisticsExcel(request *model.DownloadStatisticsExc
 func (c *CdnClient) DownloadStatisticsExcelInvoker(request *model.DownloadStatisticsExcelRequest) *DownloadStatisticsExcelInvoker {
 	requestDef := GenReqDefForDownloadStatisticsExcel()
 	return &DownloadStatisticsExcelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableDomain 启用加速域名
+//
+// 启用加速域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) EnableDomain(request *model.EnableDomainRequest) (*model.EnableDomainResponse, error) {
+	requestDef := GenReqDefForEnableDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDomainResponse), nil
+	}
+}
+
+// EnableDomainInvoker 启用加速域名
+func (c *CdnClient) EnableDomainInvoker(request *model.EnableDomainRequest) *EnableDomainInvoker {
+	requestDef := GenReqDefForEnableDomain()
+	return &EnableDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCdnDomainTopRefers 查询统计TOP100 referer数据明细
@@ -260,6 +386,27 @@ func (c *CdnClient) ShowBandwidthCalc(request *model.ShowBandwidthCalcRequest) (
 func (c *CdnClient) ShowBandwidthCalcInvoker(request *model.ShowBandwidthCalcRequest) *ShowBandwidthCalcInvoker {
 	requestDef := GenReqDefForShowBandwidthCalc()
 	return &ShowBandwidthCalcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCertificatesHttpsInfo 查询所有绑定HTTPS证书的域名信息
+//
+// 查询所有绑定HTTPS证书的域名信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowCertificatesHttpsInfo(request *model.ShowCertificatesHttpsInfoRequest) (*model.ShowCertificatesHttpsInfoResponse, error) {
+	requestDef := GenReqDefForShowCertificatesHttpsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCertificatesHttpsInfoResponse), nil
+	}
+}
+
+// ShowCertificatesHttpsInfoInvoker 查询所有绑定HTTPS证书的域名信息
+func (c *CdnClient) ShowCertificatesHttpsInfoInvoker(request *model.ShowCertificatesHttpsInfoRequest) *ShowCertificatesHttpsInfoInvoker {
+	requestDef := GenReqDefForShowCertificatesHttpsInfo()
+	return &ShowCertificatesHttpsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowChargeModes 查询用户计费模式
@@ -441,6 +588,27 @@ func (c *CdnClient) ShowHistoryTasksInvoker(request *model.ShowHistoryTasksReque
 	return &ShowHistoryTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowIpInfo 查询IP归属信息
+//
+// 查询IP归属信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowIpInfo(request *model.ShowIpInfoRequest) (*model.ShowIpInfoResponse, error) {
+	requestDef := GenReqDefForShowIpInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpInfoResponse), nil
+	}
+}
+
+// ShowIpInfoInvoker 查询IP归属信息
+func (c *CdnClient) ShowIpInfoInvoker(request *model.ShowIpInfoRequest) *ShowIpInfoInvoker {
+	requestDef := GenReqDefForShowIpInfo()
+	return &ShowIpInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLogs 日志查询
 //
 // 查询日志下载链接，支持查询30天内的日志信息。
@@ -460,6 +628,27 @@ func (c *CdnClient) ShowLogs(request *model.ShowLogsRequest) (*model.ShowLogsRes
 func (c *CdnClient) ShowLogsInvoker(request *model.ShowLogsRequest) *ShowLogsInvoker {
 	requestDef := GenReqDefForShowLogs()
 	return &ShowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTags 查询资源标签列表配置接口
+//
+// 用于查询资源标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowTags(request *model.ShowTagsRequest) (*model.ShowTagsResponse, error) {
+	requestDef := GenReqDefForShowTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagsResponse), nil
+	}
+}
+
+// ShowTagsInvoker 查询资源标签列表配置接口
+func (c *CdnClient) ShowTagsInvoker(request *model.ShowTagsRequest) *ShowTagsInvoker {
+	requestDef := GenReqDefForShowTags()
+	return &ShowTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -551,6 +740,27 @@ func (c *CdnClient) ShowUrlTaskInfoInvoker(request *model.ShowUrlTaskInfoRequest
 	return &ShowUrlTaskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVerifyDomainOwnerInfo 查询域名归属校验信息
+//
+// 用于查询域名归属校验信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowVerifyDomainOwnerInfo(request *model.ShowVerifyDomainOwnerInfoRequest) (*model.ShowVerifyDomainOwnerInfoResponse, error) {
+	requestDef := GenReqDefForShowVerifyDomainOwnerInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVerifyDomainOwnerInfoResponse), nil
+	}
+}
+
+// ShowVerifyDomainOwnerInfoInvoker 查询域名归属校验信息
+func (c *CdnClient) ShowVerifyDomainOwnerInfoInvoker(request *model.ShowVerifyDomainOwnerInfoRequest) *ShowVerifyDomainOwnerInfoInvoker {
+	requestDef := GenReqDefForShowVerifyDomainOwnerInfo()
+	return &ShowVerifyDomainOwnerInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDomainFullConfig 修改域名全量配置接口
 //
 // 修改域名配置接口，支持修改业务类型、服务范围、备注、IPv6开关、回源方式、回源URL改写、高级回源、Range回源、回源跟随、回源是否校验Etag、回源超时时间、回源请求头、HTTPS配置、TLS版本配置、强制跳转、HSTS、HTTP/2、OCSP Stapling、QUIC、缓存规则、状态码缓存时间、防盗链、IP黑白名单、Use-Agent黑白名单、URL鉴权配置、远程鉴权配置、IP访问限频、HTTP header配置、自定义错误页面配置、智能压缩、请求限速配置、WebSocket配置、视频拖拽。
@@ -570,4 +780,67 @@ func (c *CdnClient) UpdateDomainFullConfig(request *model.UpdateDomainFullConfig
 func (c *CdnClient) UpdateDomainFullConfigInvoker(request *model.UpdateDomainFullConfigRequest) *UpdateDomainFullConfigInvoker {
 	requestDef := GenReqDefForUpdateDomainFullConfig()
 	return &UpdateDomainFullConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainMultiCertificates 一个证书批量设置多个域名
+//
+// 一个证书配置多个域名，设置域名强制https回源参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdateDomainMultiCertificates(request *model.UpdateDomainMultiCertificatesRequest) (*model.UpdateDomainMultiCertificatesResponse, error) {
+	requestDef := GenReqDefForUpdateDomainMultiCertificates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainMultiCertificatesResponse), nil
+	}
+}
+
+// UpdateDomainMultiCertificatesInvoker 一个证书批量设置多个域名
+func (c *CdnClient) UpdateDomainMultiCertificatesInvoker(request *model.UpdateDomainMultiCertificatesRequest) *UpdateDomainMultiCertificatesInvoker {
+	requestDef := GenReqDefForUpdateDomainMultiCertificates()
+	return &UpdateDomainMultiCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrivateBucketAccess 修改私有桶开启关闭状态
+//
+// 修改私有桶开启关闭状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdatePrivateBucketAccess(request *model.UpdatePrivateBucketAccessRequest) (*model.UpdatePrivateBucketAccessResponse, error) {
+	requestDef := GenReqDefForUpdatePrivateBucketAccess()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrivateBucketAccessResponse), nil
+	}
+}
+
+// UpdatePrivateBucketAccessInvoker 修改私有桶开启关闭状态
+func (c *CdnClient) UpdatePrivateBucketAccessInvoker(request *model.UpdatePrivateBucketAccessRequest) *UpdatePrivateBucketAccessInvoker {
+	requestDef := GenReqDefForUpdatePrivateBucketAccess()
+	return &UpdatePrivateBucketAccessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// VerifyDomainOwner 域名归属校验
+//
+// 用于域名归属校验
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) VerifyDomainOwner(request *model.VerifyDomainOwnerRequest) (*model.VerifyDomainOwnerResponse, error) {
+	requestDef := GenReqDefForVerifyDomainOwner()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.VerifyDomainOwnerResponse), nil
+	}
+}
+
+// VerifyDomainOwnerInvoker 域名归属校验
+func (c *CdnClient) VerifyDomainOwnerInvoker(request *model.VerifyDomainOwnerRequest) *VerifyDomainOwnerInvoker {
+	requestDef := GenReqDefForVerifyDomainOwner()
+	return &VerifyDomainOwnerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

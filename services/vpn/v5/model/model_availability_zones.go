@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// AvailabilityZones 可用区情况
 type AvailabilityZones struct {
 	Basic *VpnGatewayAvailabilityZones `json:"basic,omitempty"`
 

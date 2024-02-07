@@ -101,6 +101,78 @@ func (i *ShowPublicipPoolInvoker) Invoke() (*model.ShowPublicipPoolResponse, err
 	}
 }
 
+type ListProjectGeipBindingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectGeipBindingsInvoker) Invoke() (*model.ListProjectGeipBindingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectGeipBindingsResponse), nil
+	}
+}
+
+type CreateTenantVpcIgwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTenantVpcIgwInvoker) Invoke() (*model.CreateTenantVpcIgwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTenantVpcIgwResponse), nil
+	}
+}
+
+type DeleteTenantVpcIgwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTenantVpcIgwInvoker) Invoke() (*model.DeleteTenantVpcIgwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTenantVpcIgwResponse), nil
+	}
+}
+
+type ListTenantVpcIgwsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTenantVpcIgwsInvoker) Invoke() (*model.ListTenantVpcIgwsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTenantVpcIgwsResponse), nil
+	}
+}
+
+type ShowInternalVpcIgwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInternalVpcIgwInvoker) Invoke() (*model.ShowInternalVpcIgwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInternalVpcIgwResponse), nil
+	}
+}
+
+type UpdateTenantVpcIgwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTenantVpcIgwInvoker) Invoke() (*model.UpdateTenantVpcIgwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTenantVpcIgwResponse), nil
+	}
+}
+
 type AssociatePublicipsInvoker struct {
 	*invoker.BaseInvoker
 }

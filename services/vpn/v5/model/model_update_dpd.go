@@ -11,13 +11,13 @@ import (
 
 type UpdateDpd struct {
 
-	// DPD检测间隔时长
+	// 对等体存活检测空闲时间
 	Interval *int32 `json:"interval,omitempty"`
 
-	// DPD检测间隔超时时间
+	// 对等体存活检测报文重传间隔
 	Timeout *int32 `json:"timeout,omitempty"`
 
-	// DPD检测报文格式
+	// 对等体存活检测报文格式
 	Msg *UpdateDpdMsg `json:"msg,omitempty"`
 }
 

@@ -7,7 +7,7 @@ import (
 )
 
 type DeleteResourcesTagsRequestBody struct {
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o DeleteResourcesTagsRequestBody) String() string {

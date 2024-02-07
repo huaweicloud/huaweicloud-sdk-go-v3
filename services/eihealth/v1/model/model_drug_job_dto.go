@@ -29,7 +29,7 @@ type DrugJobDto struct {
 	// 作业结束时间
 	FinishTime *string `json:"finish_time,omitempty"`
 
-	// 作业结束时间
+	// 作业开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
 	// 失败提示，当作业执行失败时会返回
@@ -42,10 +42,10 @@ type DrugJobDto struct {
 	OutputDir *string `json:"output_dir,omitempty"`
 
 	// 预估功能调用消耗次数
-	ExpectChargeNum *int32 `json:"expect_charge_num,omitempty"`
+	ExpectChargeNum *float64 `json:"expect_charge_num,omitempty"`
 
 	// 实际功能调用消耗次数
-	RealChargeNum *int32 `json:"real_charge_num,omitempty"`
+	RealChargeNum *float64 `json:"real_charge_num,omitempty"`
 
 	Progress *Progress `json:"progress,omitempty"`
 }
