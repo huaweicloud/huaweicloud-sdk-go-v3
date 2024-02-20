@@ -28,7 +28,7 @@ type ListJobsJobs struct {
 	StartTime int64 `json:"start_time"`
 
 	// 作业运行时长，单位毫秒。
-	Duration *int32 `json:"duration,omitempty"`
+	Duration *int64 `json:"duration,omitempty"`
 
 	// 此作业的当前状态，包含提交（LAUNCHING）、运行中（RUNNING）、完成（FINISHED）、失败（FAILED）、取消（CANCELLED）。
 	Status ListJobsJobsStatus `json:"status"`
@@ -43,7 +43,7 @@ type ListJobsJobs struct {
 	InputSize int64 `json:"input_size"`
 
 	// 当前作业返回的结果总条数或insert作业插入的总条数。
-	ResultCount int32 `json:"result_count"`
+	ResultCount int64 `json:"result_count"`
 
 	// 记录其操作的表所在的数据库名称。类型为Import和Export作业才有“database_name”属性。
 	DatabaseName *string `json:"database_name,omitempty"`

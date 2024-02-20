@@ -437,6 +437,30 @@ func (i *ExportInstancesTaskInvoker) Invoke() (*model.ExportInstancesTaskRespons
 	}
 }
 
+type HangUpClientsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *HangUpClientsInvoker) Invoke() (*model.HangUpClientsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.HangUpClientsResponse), nil
+	}
+}
+
+type HangUpKillAllClientsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *HangUpKillAllClientsInvoker) Invoke() (*model.HangUpKillAllClientsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.HangUpKillAllClientsResponse), nil
+	}
+}
+
 type ListAclAccountsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +542,18 @@ func (i *ListCenterTaskInvoker) Invoke() (*model.ListCenterTaskResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListCenterTaskResponse), nil
+	}
+}
+
+type ListClientsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClientsInvoker) Invoke() (*model.ListClientsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClientsResponse), nil
 	}
 }
 
@@ -842,6 +878,18 @@ func (i *RestoreInstanceInvoker) Invoke() (*model.RestoreInstanceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.RestoreInstanceResponse), nil
+	}
+}
+
+type ScanClientsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ScanClientsInvoker) Invoke() (*model.ScanClientsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ScanClientsResponse), nil
 	}
 }
 

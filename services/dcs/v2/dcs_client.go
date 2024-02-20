@@ -786,6 +786,48 @@ func (c *DcsClient) ExportInstancesTaskInvoker(request *model.ExportInstancesTas
 	return &ExportInstancesTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// HangUpClients kill指定的会话
+//
+// kill指定的会话
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) HangUpClients(request *model.HangUpClientsRequest) (*model.HangUpClientsResponse, error) {
+	requestDef := GenReqDefForHangUpClients()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.HangUpClientsResponse), nil
+	}
+}
+
+// HangUpClientsInvoker kill指定的会话
+func (c *DcsClient) HangUpClientsInvoker(request *model.HangUpClientsRequest) *HangUpClientsInvoker {
+	requestDef := GenReqDefForHangUpClients()
+	return &HangUpClientsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// HangUpKillAllClients 下发kill指定节点或实例的全部会话任务
+//
+// 下发kill指定节点或实例的全部会话任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) HangUpKillAllClients(request *model.HangUpKillAllClientsRequest) (*model.HangUpKillAllClientsResponse, error) {
+	requestDef := GenReqDefForHangUpKillAllClients()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.HangUpKillAllClientsResponse), nil
+	}
+}
+
+// HangUpKillAllClientsInvoker 下发kill指定节点或实例的全部会话任务
+func (c *DcsClient) HangUpKillAllClientsInvoker(request *model.HangUpKillAllClientsRequest) *HangUpKillAllClientsInvoker {
+	requestDef := GenReqDefForHangUpKillAllClients()
+	return &HangUpKillAllClientsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAclAccounts 查询ACL账户列表
 //
 // 查询ACL账户列表。
@@ -931,6 +973,27 @@ func (c *DcsClient) ListCenterTask(request *model.ListCenterTaskRequest) (*model
 func (c *DcsClient) ListCenterTaskInvoker(request *model.ListCenterTaskRequest) *ListCenterTaskInvoker {
 	requestDef := GenReqDefForListCenterTask()
 	return &ListCenterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClients 获取会话列表
+//
+// 获取会话列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ListClients(request *model.ListClientsRequest) (*model.ListClientsResponse, error) {
+	requestDef := GenReqDefForListClients()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClientsResponse), nil
+	}
+}
+
+// ListClientsInvoker 获取会话列表
+func (c *DcsClient) ListClientsInvoker(request *model.ListClientsRequest) *ListClientsInvoker {
+	requestDef := GenReqDefForListClients()
+	return &ListClientsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListConfigHistories 查询实例参数修改记录列表
@@ -1503,6 +1566,27 @@ func (c *DcsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*mod
 func (c *DcsClient) RestoreInstanceInvoker(request *model.RestoreInstanceRequest) *RestoreInstanceInvoker {
 	requestDef := GenReqDefForRestoreInstance()
 	return &RestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ScanClients 下发查询会话列表任务
+//
+// 下发查询会话列表任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ScanClients(request *model.ScanClientsRequest) (*model.ScanClientsResponse, error) {
+	requestDef := GenReqDefForScanClients()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ScanClientsResponse), nil
+	}
+}
+
+// ScanClientsInvoker 下发查询会话列表任务
+func (c *DcsClient) ScanClientsInvoker(request *model.ScanClientsRequest) *ScanClientsInvoker {
+	requestDef := GenReqDefForScanClients()
+	return &ScanClientsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ScanExpireKey 立刻扫描过期Key
