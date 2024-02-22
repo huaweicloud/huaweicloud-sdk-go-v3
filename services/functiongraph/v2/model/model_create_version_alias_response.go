@@ -25,9 +25,12 @@ type CreateVersionAliasResponse struct {
 	// 版本别名唯一标识。
 	AliasUrn *string `json:"alias_urn,omitempty"`
 
-	// 灰度版本信息
-	AdditionalVersionWeights map[string]int64 `json:"additional_version_weights,omitempty"`
-	HttpStatusCode           int              `json:"-"`
+	// 百分比灰度配置信息
+	AdditionalVersionWeights map[string]int32 `json:"additional_version_weights,omitempty"`
+
+	// 指定规则灰度策略信息
+	AdditionalVersionStrategy map[string]VersionStrategy `json:"additional_version_strategy,omitempty"`
+	HttpStatusCode            int                        `json:"-"`
 }
 
 func (o CreateVersionAliasResponse) String() string {

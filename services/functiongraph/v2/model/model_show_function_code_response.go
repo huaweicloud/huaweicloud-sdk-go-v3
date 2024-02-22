@@ -20,10 +20,10 @@ type ShowFunctionCodeResponse struct {
 	// 域名id。
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime *ShowFunctionCodeResponseRuntime `json:"runtime,omitempty"`
 
-	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+	// 函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
 	CodeType *ShowFunctionCodeResponseCodeType `json:"code_type,omitempty"`
 
 	// 当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -88,6 +88,7 @@ type ShowFunctionCodeResponseRuntimeEnum struct {
 	PYTHON3_9       ShowFunctionCodeResponseRuntime
 	CUSTOM          ShowFunctionCodeResponseRuntime
 	HTTP            ShowFunctionCodeResponseRuntime
+	CUSTOM_IMAGE    ShowFunctionCodeResponseRuntime
 }
 
 func GetShowFunctionCodeResponseRuntimeEnum() ShowFunctionCodeResponseRuntimeEnum {
@@ -146,6 +147,9 @@ func GetShowFunctionCodeResponseRuntimeEnum() ShowFunctionCodeResponseRuntimeEnu
 		HTTP: ShowFunctionCodeResponseRuntime{
 			value: "http",
 		},
+		CUSTOM_IMAGE: ShowFunctionCodeResponseRuntime{
+			value: "Custom Image",
+		},
 	}
 }
 
@@ -181,10 +185,11 @@ type ShowFunctionCodeResponseCodeType struct {
 }
 
 type ShowFunctionCodeResponseCodeTypeEnum struct {
-	INLINE ShowFunctionCodeResponseCodeType
-	ZIP    ShowFunctionCodeResponseCodeType
-	OBS    ShowFunctionCodeResponseCodeType
-	JAR    ShowFunctionCodeResponseCodeType
+	INLINE           ShowFunctionCodeResponseCodeType
+	ZIP              ShowFunctionCodeResponseCodeType
+	OBS              ShowFunctionCodeResponseCodeType
+	JAR              ShowFunctionCodeResponseCodeType
+	CUSTOM_IMAGE_SWR ShowFunctionCodeResponseCodeType
 }
 
 func GetShowFunctionCodeResponseCodeTypeEnum() ShowFunctionCodeResponseCodeTypeEnum {
@@ -200,6 +205,9 @@ func GetShowFunctionCodeResponseCodeTypeEnum() ShowFunctionCodeResponseCodeTypeE
 		},
 		JAR: ShowFunctionCodeResponseCodeType{
 			value: "jar",
+		},
+		CUSTOM_IMAGE_SWR: ShowFunctionCodeResponseCodeType{
+			value: "Custom-Image-Swr",
 		},
 	}
 }

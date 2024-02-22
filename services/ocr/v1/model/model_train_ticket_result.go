@@ -59,6 +59,60 @@ type TrainTicketResult struct {
 	// 车票售票地点。
 	SaleLocation *string `json:"sale_location,omitempty"`
 
+	// 类型。包含以下几种类型： - paper：纸质火车票 - electronic：电子发票 - refund_old：旧版退票凭证 - refund_new：新版退票凭证
+	InvoiceStyle *string `json:"invoice_style,omitempty"`
+
+	// 开票时间
+	IssueDate *string `json:"issue_date,omitempty"`
+
+	// 打折标识
+	DiscountMark *string `json:"discount_mark,omitempty"`
+
+	// 电子客票号
+	SerialNumber *string `json:"serial_number,omitempty"`
+
+	// 税金价格
+	TaxAmount *string `json:"tax_amount,omitempty"`
+
+	// 税率
+	TaxRate *string `json:"tax_rate,omitempty"`
+
+	// 是否是空调车厢
+	AirConditioning *string `json:"air_conditioning,omitempty"`
+
+	// 原发票号码
+	OriginalInvoiceNumber *string `json:"original_invoice_number,omitempty"`
+
+	// 统一社会信用号码
+	UnifiedSocialCreditCode *string `json:"unified_social_credit_code,omitempty"`
+
+	// 购买方名称
+	BuyerName *string `json:"buyer_name,omitempty"`
+
+	// 不含税价格
+	TotalAmountExcludingTax *string `json:"total_amount_excluding_tax,omitempty"`
+
+	// 发票号码
+	InvoiceNumber *string `json:"invoice_number,omitempty"`
+
+	// 是否有印章，True表示有印章，False表示不含印章，字段默认为False
+	SealMark *bool `json:"seal_mark,omitempty"`
+
+	// 标题
+	Title *string `json:"title,omitempty"`
+
+	// 地区
+	Area *string `json:"area,omitempty"`
+
+	// 收据编码
+	ReceiptNumber *string `json:"receipt_number,omitempty"`
+
+	// 小写票据金额
+	AmountInFigures *string `json:"amount_in_figures,omitempty"`
+
+	// 大写票据金额
+	AmountInWords *string `json:"amount_in_words,omitempty"`
+
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
 	Confidence *interface{} `json:"confidence,omitempty"`
 

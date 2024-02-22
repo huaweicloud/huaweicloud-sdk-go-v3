@@ -6,8 +6,14 @@ import (
 	"strings"
 )
 
-// FuncVpc 函数vpc配置。
+// FuncVpc 函数vpc配置。需同时为函数配置具有vpc权限的委托。
 type FuncVpc struct {
+
+	// 域名id。
+	DomainId *string `json:"domain_id,omitempty"`
+
+	// 租户的project id。
+	Namespace *string `json:"namespace,omitempty"`
 
 	// 虚拟私有云名称。
 	VpcName *string `json:"vpc_name,omitempty"`

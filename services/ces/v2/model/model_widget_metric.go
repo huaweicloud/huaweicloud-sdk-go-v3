@@ -9,12 +9,12 @@ import (
 type WidgetMetric struct {
 
 	// 服务维度
-	Namespace *string `json:"namespace,omitempty"`
+	Namespace string `json:"namespace"`
 
-	Dimensions *DimensionInfo `json:"dimensions,omitempty"`
+	Dimensions *DimensionInfo `json:"dimensions"`
 
 	// 指标名称
-	MetricName *string `json:"metric_name,omitempty"`
+	MetricName string `json:"metric_name"`
 
 	// 监控视图的指标别名列表
 	Alias *[]string `json:"alias,omitempty"`

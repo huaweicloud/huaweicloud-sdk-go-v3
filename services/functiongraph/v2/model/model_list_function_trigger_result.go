@@ -19,8 +19,7 @@ type ListFunctionTriggerResult struct {
 	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
 	TriggerStatus ListFunctionTriggerResultTriggerStatus `json:"trigger_status"`
 
-	// 触发器源事件。
-	EventData *interface{} `json:"event_data"`
+	EventData *TriggerEventDataResponseBody `json:"event_data"`
 
 	// 最后更新时间。
 	LastUpdatedTime *sdktime.SdkTime `json:"last_updated_time"`

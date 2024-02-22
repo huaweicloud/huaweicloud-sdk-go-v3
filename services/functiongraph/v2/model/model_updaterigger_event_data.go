@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-type TriggerEventData struct {
+type UpdateriggerEventData struct {
 
 	// 串行处理数据
 	IsSerial *bool `json:"is_serial,omitempty"`
@@ -21,47 +21,47 @@ type TriggerEventData struct {
 	PollingInterval *int32 `json:"polling_interval,omitempty"`
 
 	// 拉取周期单位
-	PollingUnit *TriggerEventDataPollingUnit `json:"polling_unit,omitempty"`
+	PollingUnit *UpdateriggerEventDataPollingUnit `json:"polling_unit,omitempty"`
 }
 
-func (o TriggerEventData) String() string {
+func (o UpdateriggerEventData) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "TriggerEventData struct{}"
+		return "UpdateriggerEventData struct{}"
 	}
 
-	return strings.Join([]string{"TriggerEventData", string(data)}, " ")
+	return strings.Join([]string{"UpdateriggerEventData", string(data)}, " ")
 }
 
-type TriggerEventDataPollingUnit struct {
+type UpdateriggerEventDataPollingUnit struct {
 	value string
 }
 
-type TriggerEventDataPollingUnitEnum struct {
-	MS TriggerEventDataPollingUnit
-	S  TriggerEventDataPollingUnit
+type UpdateriggerEventDataPollingUnitEnum struct {
+	MS UpdateriggerEventDataPollingUnit
+	S  UpdateriggerEventDataPollingUnit
 }
 
-func GetTriggerEventDataPollingUnitEnum() TriggerEventDataPollingUnitEnum {
-	return TriggerEventDataPollingUnitEnum{
-		MS: TriggerEventDataPollingUnit{
+func GetUpdateriggerEventDataPollingUnitEnum() UpdateriggerEventDataPollingUnitEnum {
+	return UpdateriggerEventDataPollingUnitEnum{
+		MS: UpdateriggerEventDataPollingUnit{
 			value: "ms",
 		},
-		S: TriggerEventDataPollingUnit{
+		S: UpdateriggerEventDataPollingUnit{
 			value: "s",
 		},
 	}
 }
 
-func (c TriggerEventDataPollingUnit) Value() string {
+func (c UpdateriggerEventDataPollingUnit) Value() string {
 	return c.value
 }
 
-func (c TriggerEventDataPollingUnit) MarshalJSON() ([]byte, error) {
+func (c UpdateriggerEventDataPollingUnit) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *TriggerEventDataPollingUnit) UnmarshalJSON(b []byte) error {
+func (c *UpdateriggerEventDataPollingUnit) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

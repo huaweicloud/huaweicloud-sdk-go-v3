@@ -35,10 +35,10 @@ type ShowFunctionConfigResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime *ShowFunctionConfigResponseRuntime `json:"runtime,omitempty"`
 
-	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
 	Timeout *int32 `json:"timeout,omitempty"`
 
 	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
@@ -53,7 +53,7 @@ type ShowFunctionConfigResponse struct {
 	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
 	Cpu *int32 `json:"cpu,omitempty"`
 
-	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+	// 函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
 	CodeType *ShowFunctionConfigResponseCodeType `json:"code_type,omitempty"`
 
 	// 当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -80,10 +80,10 @@ type ShowFunctionConfigResponse struct {
 	// 函数版本的内部标识。
 	ImageName *string `json:"image_name,omitempty"`
 
-	// 函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+	// 函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
 	Xrole *string `json:"xrole,omitempty"`
 
-	// 函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+	// 函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
 	AppXrole *string `json:"app_xrole,omitempty"`
 
 	// 函数描述。
@@ -92,7 +92,7 @@ type ShowFunctionConfigResponse struct {
 	// 函数最后一次更新时间。
 	LastModified *sdktime.SdkTime `json:"last_modified,omitempty"`
 
-	// 临时存储大小。
+	// 临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
 	EphemeralStorage *int32 `json:"ephemeral_storage,omitempty"`
 
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
@@ -110,10 +110,10 @@ type ShowFunctionConfigResponse struct {
 	// 函数依赖代码包列表。
 	Dependencies *[]Dependency `json:"dependencies,omitempty"`
 
-	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+	// 函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 	InitializerHandler *string `json:"initializer_handler,omitempty"`
 
-	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
+	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
 
 	// 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -134,8 +134,11 @@ type ShowFunctionConfigResponse struct {
 	// 自定义日志查询流id
 	LogStreamId *string `json:"log_stream_id,omitempty"`
 
-	// v2表示为公测版本,v1为原来版本。
+	// v2表示为正式版本,v1为废弃版本。
 	Type *ShowFunctionConfigResponseType `json:"type,omitempty"`
+
+	// 是否启用cloud debug功能
+	EnableCloudDebug *string `json:"enable_cloud_debug,omitempty"`
 
 	// 是否允许动态内存配置
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
@@ -143,11 +146,34 @@ type ShowFunctionConfigResponse struct {
 	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
 
+	// 是否为bridge函数
+	IsBridgeFunction *bool `json:"is_bridge_function,omitempty"`
+
 	// 是否允许在请求头中添加鉴权信息
 	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
 
-	CustomImage    *CustomImage `json:"custom_image,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	CustomImage *CustomImage `json:"custom_image,omitempty"`
+
+	// 是否开启预留实例闲置模式
+	ReservedInstanceIdleMode *bool `json:"reserved_instance_idle_mode,omitempty"`
+
+	// 是否配置下沉apig路由规则。
+	ApigRouteEnable *bool `json:"apig_route_enable,omitempty"`
+
+	// 心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+	HeartbeatHandler *string `json:"heartbeat_handler,omitempty"`
+
+	// 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+	EnableClassIsolation *bool `json:"enable_class_isolation,omitempty"`
+
+	// 显卡类型。
+	GpuType *string `json:"gpu_type,omitempty"`
+
+	// 是否支持配置临时存储。
+	AllowEphemeralStorage *bool `json:"allow_ephemeral_storage,omitempty"`
+
+	NetworkController *NetworkControlConfig `json:"network_controller,omitempty"`
+	HttpStatusCode    int                   `json:"-"`
 }
 
 func (o ShowFunctionConfigResponse) String() string {
@@ -182,6 +208,7 @@ type ShowFunctionConfigResponseRuntimeEnum struct {
 	PYTHON3_9       ShowFunctionConfigResponseRuntime
 	CUSTOM          ShowFunctionConfigResponseRuntime
 	HTTP            ShowFunctionConfigResponseRuntime
+	CUSTOM_IMAGE    ShowFunctionConfigResponseRuntime
 }
 
 func GetShowFunctionConfigResponseRuntimeEnum() ShowFunctionConfigResponseRuntimeEnum {
@@ -240,6 +267,9 @@ func GetShowFunctionConfigResponseRuntimeEnum() ShowFunctionConfigResponseRuntim
 		HTTP: ShowFunctionConfigResponseRuntime{
 			value: "http",
 		},
+		CUSTOM_IMAGE: ShowFunctionConfigResponseRuntime{
+			value: "Custom Image",
+		},
 	}
 }
 
@@ -275,10 +305,11 @@ type ShowFunctionConfigResponseCodeType struct {
 }
 
 type ShowFunctionConfigResponseCodeTypeEnum struct {
-	INLINE ShowFunctionConfigResponseCodeType
-	ZIP    ShowFunctionConfigResponseCodeType
-	OBS    ShowFunctionConfigResponseCodeType
-	JAR    ShowFunctionConfigResponseCodeType
+	INLINE           ShowFunctionConfigResponseCodeType
+	ZIP              ShowFunctionConfigResponseCodeType
+	OBS              ShowFunctionConfigResponseCodeType
+	JAR              ShowFunctionConfigResponseCodeType
+	CUSTOM_IMAGE_SWR ShowFunctionConfigResponseCodeType
 }
 
 func GetShowFunctionConfigResponseCodeTypeEnum() ShowFunctionConfigResponseCodeTypeEnum {
@@ -294,6 +325,9 @@ func GetShowFunctionConfigResponseCodeTypeEnum() ShowFunctionConfigResponseCodeT
 		},
 		JAR: ShowFunctionConfigResponseCodeType{
 			value: "jar",
+		},
+		CUSTOM_IMAGE_SWR: ShowFunctionConfigResponseCodeType{
+			value: "Custom-Image-Swr",
 		},
 	}
 }

@@ -13,7 +13,7 @@ type CreateFirewallReq struct {
 	Name string `json:"name"`
 
 	// 企业项目ID，租户未开启企业项目时传0
-	EnterpriseProjectId string `json:"enterprise_project_id"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 资源标签
 	Tags *[]CreateFirewallReqTags `json:"tags,omitempty"`

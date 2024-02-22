@@ -12,11 +12,14 @@ var (
 		"https://sms.ap-southeast-1.myhuaweicloud.com")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
 		"https://sms.ap-southeast-3.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://sms.eu-west-101.myhuaweicloud.eu")
 )
 
 var staticFields = map[string]*region.Region{
 	"ap-southeast-1": AP_SOUTHEAST_1,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"eu-west-101":    EU_WEST_101,
 }
 
 var provider = region.DefaultProviderChain("SMS")

@@ -29,10 +29,10 @@ type ImportFunctionResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
+	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime *ImportFunctionResponseRuntime `json:"runtime,omitempty"`
 
-	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
 	Timeout *int32 `json:"timeout,omitempty"`
 
 	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
@@ -47,7 +47,7 @@ type ImportFunctionResponse struct {
 	// 函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
 	Cpu *int32 `json:"cpu,omitempty"`
 
-	// 函数代码类型，取值有4种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。
+	// 函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
 	CodeType *ImportFunctionResponseCodeType `json:"code_type,omitempty"`
 
 	// 当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -99,10 +99,10 @@ type ImportFunctionResponse struct {
 	// 函数扩展配置。
 	ExtendConfig *string `json:"extend_config,omitempty"`
 
-	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+	// 函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 	InitializerHandler *string `json:"initializer_handler,omitempty"`
 
-	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
+	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
 
 	// 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -148,6 +148,7 @@ type ImportFunctionResponseRuntimeEnum struct {
 	PYTHON3_9       ImportFunctionResponseRuntime
 	CUSTOM          ImportFunctionResponseRuntime
 	HTTP            ImportFunctionResponseRuntime
+	CUSTOM_IMAGE    ImportFunctionResponseRuntime
 }
 
 func GetImportFunctionResponseRuntimeEnum() ImportFunctionResponseRuntimeEnum {
@@ -206,6 +207,9 @@ func GetImportFunctionResponseRuntimeEnum() ImportFunctionResponseRuntimeEnum {
 		HTTP: ImportFunctionResponseRuntime{
 			value: "http",
 		},
+		CUSTOM_IMAGE: ImportFunctionResponseRuntime{
+			value: "Custom Image",
+		},
 	}
 }
 
@@ -241,10 +245,11 @@ type ImportFunctionResponseCodeType struct {
 }
 
 type ImportFunctionResponseCodeTypeEnum struct {
-	INLINE ImportFunctionResponseCodeType
-	ZIP    ImportFunctionResponseCodeType
-	OBS    ImportFunctionResponseCodeType
-	JAR    ImportFunctionResponseCodeType
+	INLINE           ImportFunctionResponseCodeType
+	ZIP              ImportFunctionResponseCodeType
+	OBS              ImportFunctionResponseCodeType
+	JAR              ImportFunctionResponseCodeType
+	CUSTOM_IMAGE_SWR ImportFunctionResponseCodeType
 }
 
 func GetImportFunctionResponseCodeTypeEnum() ImportFunctionResponseCodeTypeEnum {
@@ -260,6 +265,9 @@ func GetImportFunctionResponseCodeTypeEnum() ImportFunctionResponseCodeTypeEnum 
 		},
 		JAR: ImportFunctionResponseCodeType{
 			value: "jar",
+		},
+		CUSTOM_IMAGE_SWR: ImportFunctionResponseCodeType{
+			value: "Custom-Image-Swr",
 		},
 	}
 }

@@ -16,7 +16,7 @@ type RunPocketReq struct {
 	Size []float32 `json:"size"`
 
 	// 口袋的padding值
-	Padding int32 `json:"padding"`
+	Padding float32 `json:"padding"`
 }
 
 func (o RunPocketReq) String() string {

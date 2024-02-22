@@ -25,7 +25,19 @@ type ListFunctionStatisticsResponse struct {
 	MinDuration *[]SlaReportsValue `json:"min_duration,omitempty"`
 
 	// 被拒绝次数
-	RejectCount    *[]SlaReportsValue `json:"reject_count,omitempty"`
+	RejectCount *[]SlaReportsValue `json:"reject_count,omitempty"`
+
+	// 函数错误次数
+	FunctionErrorCount *[]SlaReportsValue `json:"function_error_count,omitempty"`
+
+	// 系统错误次数
+	SystemErrorCount *[]SlaReportsValue `json:"system_error_count,omitempty"`
+
+	// 预留实例指标
+	ReservedInstanceNum *[]SlaReportsValue `json:"reserved_instance_num,omitempty"`
+
+	// 弹性实例指标
+	ConcurrencyNum *[]SlaReportsValue `json:"concurrency_num,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

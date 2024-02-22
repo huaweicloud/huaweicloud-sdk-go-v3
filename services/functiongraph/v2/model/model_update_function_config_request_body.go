@@ -17,7 +17,7 @@ type UpdateFunctionConfigRequestBody struct {
 	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。
 	Runtime UpdateFunctionConfigRequestBodyRuntime `json:"runtime"`
 
-	// 函数执行超时时间，超时函数将被强行停止，范围3～900秒，可以通过白名单配置延长到12小时，具体可以咨询客服进行配置
+	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
 	Timeout int32 `json:"timeout"`
 
 	// 函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
@@ -35,10 +35,10 @@ type UpdateFunctionConfigRequestBody struct {
 	// 用户自定义的name/value信息，用于需要加密的配置。
 	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
 
-	// 函数使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+	// 函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
 	Xrole *string `json:"xrole,omitempty"`
 
-	// 函数app使用的权限委托名称，需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。
+	// 函数执行委托。可为函数执行单独配置执行委托，这将减小不必要的性能损耗；不单独配置执行委托时，函数执行和函数配置将使用同一委托。
 	AppXrole *string `json:"app_xrole,omitempty"`
 
 	// 函数描述。
@@ -55,10 +55,10 @@ type UpdateFunctionConfigRequestBody struct {
 	// 函数扩展配置。
 	ExtendConfig *string `json:"extend_config,omitempty"`
 
-	// 函数初始化入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
+	// 函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 	InitializerHandler *string `json:"initializer_handler,omitempty"`
 
-	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。
+	// 初始化超时时间，超时函数将被强行停止，范围1～300秒。当配置初始化函数时，此参数必填。
 	InitializerTimeout *int32 `json:"initializer_timeout,omitempty"`
 
 	// 函数预停止函数的入口，规则：xx.xx，必须包含“. ”。 举例：对于node.js函数：myfunction.pre_stop_handler，则表示函数的文件名为myfunction.js，初始化的入口函数名为pre_stop_handler。
@@ -67,7 +67,7 @@ type UpdateFunctionConfigRequestBody struct {
 	// 初始化超时时间，超时函数将被强行停止，范围1～90秒。
 	PreStopTimeout *int32 `json:"pre_stop_timeout,omitempty"`
 
-	// 临时存储大小, 默认512M, 支持配置10G。
+	// 临时存储大小。默认情况下会为函数的/tmp目录分配512MB的空间。您可以通过临时存储设置将函数的/tmp目录大小调整为10G。
 	EphemeralStorage *int32 `json:"ephemeral_storage,omitempty"`
 
 	// 企业项目ID，在企业用户创建函数时必填。
@@ -94,6 +94,15 @@ type UpdateFunctionConfigRequestBody struct {
 
 	// 快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
 	RestoreHookTimeout *int32 `json:"restore_hook_timeout,omitempty"`
+
+	// 心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
+	HeartbeatHandler *string `json:"heartbeat_handler,omitempty"`
+
+	// 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
+	EnableClassIsolation *bool `json:"enable_class_isolation,omitempty"`
+
+	// 显卡类型。
+	GpuType *string `json:"gpu_type,omitempty"`
 }
 
 func (o UpdateFunctionConfigRequestBody) String() string {

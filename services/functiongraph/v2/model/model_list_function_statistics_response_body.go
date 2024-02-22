@@ -26,6 +26,18 @@ type ListFunctionStatisticsResponseBody struct {
 
 	// 被拒绝次数
 	RejectCount *[]SlaReportsValue `json:"reject_count,omitempty"`
+
+	// 函数错误次数
+	FunctionErrorCount *[]SlaReportsValue `json:"function_error_count,omitempty"`
+
+	// 系统错误次数
+	SystemErrorCount *[]SlaReportsValue `json:"system_error_count,omitempty"`
+
+	// 预留实例指标
+	ReservedInstanceNum *[]SlaReportsValue `json:"reserved_instance_num,omitempty"`
+
+	// 弹性实例指标
+	ConcurrencyNum *[]SlaReportsValue `json:"concurrency_num,omitempty"`
 }
 
 func (o ListFunctionStatisticsResponseBody) String() string {

@@ -29,9 +29,9 @@ type WidgetInfo struct {
 	// 指标展示类型，single 单指标展示，multiple 多指标展示
 	MetricDisplayMode *WidgetInfoMetricDisplayMode `json:"metric_display_mode,omitempty"`
 
-	Properties *BaseWidgetInfoProperties `json:"properties,omitempty"`
+	Properties *UpdateWidgetInfoProperties `json:"properties,omitempty"`
 
-	Location *BaseWidgetInfoLocation `json:"location,omitempty"`
+	Location *UpdateWidgetInfoLocation `json:"location,omitempty"`
 
 	// 单位
 	Unit *string `json:"unit,omitempty"`

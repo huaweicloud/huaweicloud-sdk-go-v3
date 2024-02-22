@@ -15,7 +15,7 @@ type UpdateTriggerRequestBody struct {
 	TriggerStatus *UpdateTriggerRequestBodyTriggerStatus `json:"trigger_status,omitempty"`
 
 	// 触发器更新事件
-	EventData *[]TriggerEventData `json:"event_data,omitempty"`
+	EventData *[]UpdateriggerEventData `json:"event_data,omitempty"`
 }
 
 func (o UpdateTriggerRequestBody) String() string {

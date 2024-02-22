@@ -20,6 +20,9 @@ type RecycleInstancesDetailResult struct {
 	// 部署形态。
 	HaMode RecycleInstancesDetailResultHaMode `json:"ha_mode"`
 
+	// 引擎名称
+	EngineName *string `json:"engine_name,omitempty"`
+
 	// 引擎版本号。
 	EngineVersion string `json:"engine_version"`
 
@@ -35,11 +38,20 @@ type RecycleInstancesDetailResult struct {
 	// 磁盘类型。（SAS：high；SSD：ultrahigh；ESSD：essd）。
 	VolumeType RecycleInstancesDetailResultVolumeType `json:"volume_type"`
 
+	// 磁盘大小
+	VolumeSize *string `json:"volume_size,omitempty"`
+
 	// 数据vip。
 	DataVip string `json:"data_vip"`
 
 	// 企业项目ID。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	// 企业项目名称
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
+
+	// 备份级别
+	BackupLevel *string `json:"backup_level,omitempty"`
 
 	// 备份ID。（指删除实例时产生备份信息中的备份ID）。
 	RecycleBackupId string `json:"recycle_backup_id"`

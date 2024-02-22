@@ -9,7 +9,7 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://sa.myhuaweicloud.com")
+		"https://secmaster.cn-north-4.myhuaweicloud.com")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
 		"https://secmaster.cn-east-3.myhuaweicloud.com")
 	CN_SOUTH_1 = region.NewRegion("cn-south-1",

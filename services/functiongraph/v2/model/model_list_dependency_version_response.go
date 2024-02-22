@@ -10,7 +10,7 @@ import (
 type ListDependencyVersionResponse struct {
 
 	// 依赖包列表
-	Dependencies *[]ListDependenciesResult `json:"dependencies,omitempty"`
+	Dependencies *[]ListDependencyVersionsResult `json:"dependencies,omitempty"`
 
 	// 下次读取位置
 	NextMarker *int64 `json:"next_marker,omitempty"`

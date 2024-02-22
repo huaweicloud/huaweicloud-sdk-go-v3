@@ -12,10 +12,10 @@ import (
 type DimensionInfo struct {
 
 	// 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 资源类型, all_instances: 全部资源, specific_instances: 指定资源
-	FilterType *DimensionInfoFilterType `json:"filter_type,omitempty"`
+	FilterType DimensionInfoFilterType `json:"filter_type"`
 
 	// 维度值列表
 	Values *[]string `json:"values,omitempty"`

@@ -36,7 +36,7 @@ type ShowFunctionTemplateResponse struct {
 	// 代码文件
 	Code *string `json:"code,omitempty"`
 
-	// 超时时间
+	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
 	Timeout *int32 `json:"timeout,omitempty"`
 
 	// 内存大小

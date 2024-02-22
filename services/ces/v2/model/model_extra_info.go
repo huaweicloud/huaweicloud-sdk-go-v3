@@ -9,7 +9,7 @@ import (
 type ExtraInfo struct {
 
 	// 指标名称
-	OriginMetricName *string `json:"origin_metric_name,omitempty"`
+	OriginMetricName string `json:"origin_metric_name"`
 
 	// 指标名称前缀
 	MetricPrefix *string `json:"metric_prefix,omitempty"`

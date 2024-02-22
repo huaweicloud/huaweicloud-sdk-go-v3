@@ -13,7 +13,7 @@ import (
 type UpdateWidgetInfo struct {
 
 	// 视图id
-	WidgetId *string `json:"widget_id,omitempty"`
+	WidgetId string `json:"widget_id"`
 
 	// 指标列表
 	Metrics *[]WidgetMetric `json:"metrics,omitempty"`
@@ -33,9 +33,9 @@ type UpdateWidgetInfo struct {
 	// 指标展示类型，single 单指标展示，multiple 多指标展示
 	MetricDisplayMode *UpdateWidgetInfoMetricDisplayMode `json:"metric_display_mode,omitempty"`
 
-	Properties *BaseWidgetInfoProperties `json:"properties,omitempty"`
+	Properties *UpdateWidgetInfoProperties `json:"properties,omitempty"`
 
-	Location *BaseWidgetInfoLocation `json:"location,omitempty"`
+	Location *UpdateWidgetInfoLocation `json:"location,omitempty"`
 
 	// 单位
 	Unit *string `json:"unit,omitempty"`

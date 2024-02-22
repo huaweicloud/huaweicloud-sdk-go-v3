@@ -16,7 +16,7 @@ type BoundingBoxDto struct {
 	Size []float32 `json:"size"`
 
 	// 填充
-	Padding *int32 `json:"padding,omitempty"`
+	Padding *float32 `json:"padding,omitempty"`
 }
 
 func (o BoundingBoxDto) String() string {

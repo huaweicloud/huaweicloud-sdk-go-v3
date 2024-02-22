@@ -21,10 +21,10 @@ type ServerDetails struct {
 	Name string `json:"name"`
 
 	// 裸金属服务器创建时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T03:30:52Z
-	Created *sdktime.SdkTime `json:"created,omitempty"`
+	Created *string `json:"created,omitempty"`
 
 	// 裸金属服务器更新时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T04:30:52Z
-	Updated *sdktime.SdkTime `json:"updated,omitempty"`
+	Updated *string `json:"updated,omitempty"`
 
 	// 裸金属服务器所属租户ID，格式为UUID。该参数和project_id表示相同的概念。
 	TenantId string `json:"tenant_id"`

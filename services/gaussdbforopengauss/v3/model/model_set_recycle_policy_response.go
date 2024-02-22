@@ -8,7 +8,10 @@ import (
 
 // SetRecyclePolicyResponse Response Object
 type SetRecyclePolicyResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 修改结果，“success”表示修改成功
+	Result         *string `json:"result,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o SetRecyclePolicyResponse) String() string {
