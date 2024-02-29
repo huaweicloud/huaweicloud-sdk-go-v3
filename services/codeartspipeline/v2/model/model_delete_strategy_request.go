@@ -9,7 +9,7 @@ import (
 // DeleteStrategyRequest Request Object
 type DeleteStrategyRequest struct {
 
-	// 规则集ID
+	// 策略ID
 	RuleSetId string `json:"rule_set_id"`
 
 	// 租户ID

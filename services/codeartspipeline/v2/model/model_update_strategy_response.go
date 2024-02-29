@@ -12,7 +12,7 @@ type UpdateStrategyResponse struct {
 	// 状态
 	Status *bool `json:"status,omitempty"`
 
-	// 规则集ID
+	// 策略ID
 	RuleSetId      *string `json:"rule_set_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 type PersistObjectIdsModifierDto struct {
 
 	// ID列表。
-	Ids []string `json:"ids"`
+	Ids []int64 `json:"ids"`
 
 	// 修改人。
 	Modifier *string `json:"modifier,omitempty"`

@@ -10,6 +10,9 @@ type IdObject struct {
 
 	// id值
 	Id *string `json:"id,omitempty"`
+
+	// 名称
+	Name *string `json:"name,omitempty"`
 }
 
 func (o IdObject) String() string {

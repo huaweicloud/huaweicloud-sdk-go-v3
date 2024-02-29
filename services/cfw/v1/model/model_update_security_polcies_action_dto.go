@@ -14,7 +14,7 @@ type UpdateSecurityPolciesActionDto struct {
 	// 动作
 	Action string `json:"action"`
 
-	// 规则列表
+	// 规则ID列表
 	RuleIds []string `json:"rule_ids"`
 }
 

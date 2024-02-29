@@ -189,6 +189,9 @@ type ShowInstanceResponse struct {
 	// 是否开启转储。新规格产品暂不支持开启转储。
 	ConnectorEnable *bool `json:"connector_enable,omitempty"`
 
+	// connector节点数量。
+	ConnectorNodeNum *int32 `json:"connector_node_num,omitempty"`
+
 	// 转储任务ID。
 	ConnectorId *string `json:"connector_id,omitempty"`
 

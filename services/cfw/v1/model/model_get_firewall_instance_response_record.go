@@ -40,6 +40,12 @@ type GetFirewallInstanceResponseRecord struct {
 	// 是否为旧引擎，true表示是，false表示不是
 	IsOldFirewallInstance *bool `json:"is_old_firewall_instance,omitempty"`
 
+	// 是否支持obs
+	IsAvailableObs *bool `json:"is_available_obs,omitempty"`
+
+	// 是否支持威胁标签
+	IsSupportThreatTags *bool `json:"is_support_threat_tags,omitempty"`
+
 	// 是否支持ipv6，true表示是，false表示不是
 	SupportIpv6 *bool `json:"support_ipv6,omitempty"`
 

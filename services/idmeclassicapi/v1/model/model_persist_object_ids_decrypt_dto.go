@@ -12,7 +12,7 @@ type PersistObjectIdsDecryptDto struct {
 	Decrypt *bool `json:"decrypt,omitempty"`
 
 	// ID列表。
-	Ids []string `json:"ids"`
+	Ids []int64 `json:"ids"`
 }
 
 func (o PersistObjectIdsDecryptDto) String() string {

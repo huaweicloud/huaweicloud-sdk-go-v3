@@ -663,6 +663,10 @@ func GenReqDefForListAddressSetDetail() *def.HttpRequestDef {
 		WithName("FwInstanceId").
 		WithJsonTag("fw_instance_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryAddressSetType").
+		WithJsonTag("query_address_set_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -706,6 +710,10 @@ func GenReqDefForListAddressSets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("FwInstanceId").
 		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryAddressSetType").
+		WithJsonTag("query_address_set_type").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

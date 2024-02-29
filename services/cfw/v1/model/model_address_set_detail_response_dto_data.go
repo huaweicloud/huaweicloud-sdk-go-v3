@@ -21,6 +21,9 @@ type AddressSetDetailResponseDtoData struct {
 	// 地址组描述
 	Description *string `json:"description,omitempty"`
 
+	// 地址组类型，0表示自定义地址组，1表示预定义地址组
+	AddressSetType *int32 `json:"address_set_type,omitempty"`
+
 	// 地址类型0 ipv4,1 ipv6
 	AddressType *AddressSetDetailResponseDtoDataAddressType `json:"address_type,omitempty"`
 }

@@ -46,28 +46,31 @@ var (
 		"https://iam.eu-west-101.myhuaweicloud.eu")
 	EU_WEST_0 = region.NewRegion("eu-west-0",
 		"https://iam.eu-west-0.myhuaweicloud.com")
+	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
+		"https://iam.my-kualalumpur-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-2":     CN_NORTH_2,
-	"cn-north-4":     CN_NORTH_4,
-	"cn-north-1":     CN_NORTH_1,
-	"cn-east-2":      CN_EAST_2,
-	"cn-east-3":      CN_EAST_3,
-	"cn-south-1":     CN_SOUTH_1,
-	"cn-south-2":     CN_SOUTH_2,
-	"cn-southwest-2": CN_SOUTHWEST_2,
-	"ap-southeast-1": AP_SOUTHEAST_1,
-	"ap-southeast-2": AP_SOUTHEAST_2,
-	"ap-southeast-3": AP_SOUTHEAST_3,
-	"af-south-1":     AF_SOUTH_1,
-	"sa-brazil-1":    SA_BRAZIL_1,
-	"la-south-2":     LA_SOUTH_2,
-	"na-mexico-1":    NA_MEXICO_1,
-	"la-north-2":     LA_NORTH_2,
-	"cn-north-9":     CN_NORTH_9,
-	"eu-west-101":    EU_WEST_101,
-	"eu-west-0":      EU_WEST_0,
+	"cn-north-2":       CN_NORTH_2,
+	"cn-north-4":       CN_NORTH_4,
+	"cn-north-1":       CN_NORTH_1,
+	"cn-east-2":        CN_EAST_2,
+	"cn-east-3":        CN_EAST_3,
+	"cn-south-1":       CN_SOUTH_1,
+	"cn-south-2":       CN_SOUTH_2,
+	"cn-southwest-2":   CN_SOUTHWEST_2,
+	"ap-southeast-1":   AP_SOUTHEAST_1,
+	"ap-southeast-2":   AP_SOUTHEAST_2,
+	"ap-southeast-3":   AP_SOUTHEAST_3,
+	"af-south-1":       AF_SOUTH_1,
+	"sa-brazil-1":      SA_BRAZIL_1,
+	"la-south-2":       LA_SOUTH_2,
+	"na-mexico-1":      NA_MEXICO_1,
+	"la-north-2":       LA_NORTH_2,
+	"cn-north-9":       CN_NORTH_9,
+	"eu-west-101":      EU_WEST_101,
+	"eu-west-0":        EU_WEST_0,
+	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 }
 
 var provider = region.DefaultProviderChain("IAM")
@@ -81,6 +84,17 @@ func getRegionIds() []string {
 	return ids
 }
 
+func SafeValueOf(regionId string) (region *region.Region, err error) {
+	defer func() {
+		if r := recover(); r != nil {
+			err = fmt.Errorf("%v", r)
+		}
+	}()
+	region = ValueOf(regionId)
+	return region, err
+}
+
+// Deprecated: This function may panic under certain circumstances. Use SafeValueOf instead.
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
 		panic("unexpected empty parameter: regionId")

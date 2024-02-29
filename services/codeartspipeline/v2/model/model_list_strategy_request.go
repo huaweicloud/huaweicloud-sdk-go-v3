@@ -27,7 +27,7 @@ type ListStrategyRequest struct {
 	// 是否有效
 	IsValid *bool `json:"is_valid,omitempty"`
 
-	// 规则集类型
+	// 策略类型
 	Type *string `json:"type,omitempty"`
 
 	// 项目ID

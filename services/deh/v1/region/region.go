@@ -54,6 +54,17 @@ func getRegionIds() []string {
 	return ids
 }
 
+func SafeValueOf(regionId string) (region *region.Region, err error) {
+	defer func() {
+		if r := recover(); r != nil {
+			err = fmt.Errorf("%v", r)
+		}
+	}()
+	region = ValueOf(regionId)
+	return region, err
+}
+
+// Deprecated: This function may panic under certain circumstances. Use SafeValueOf instead.
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
 		panic("unexpected empty parameter: regionId")

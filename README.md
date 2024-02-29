@@ -55,28 +55,43 @@ import (
 )
 
 func main() {
-	// Configure authentication
+    // Configure authentication
     // Authentication can be configured through environment variables and other methods. Please refer to Chapter 2.4 Authentication Management
-	auth := basic.NewCredentialsBuilder().
-		WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-		WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-		Build()
+    auth, err := basic.NewCredentialsBuilder().
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
 
-	// Create a service client
-	client := vpc.NewVpcClient(
-		vpc.VpcClientBuilder().
-			WithRegion(vpcRegion.ValueOf("cn-north-4")).
-			WithCredential(auth).
-			Build())
+    // Get available region
+    region, err := vpcRegion.SafeValueOf("cn-north-4")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
 
-	// Send the request and get the response
-	request := &vpcModel.ListVpcsRequest{}
-	response, err := client.ListVpcs(request)
-	if err == nil {
-		fmt.Printf("%+v\n", response)
-	} else {
-		fmt.Println(err)
-	}
+    // Create a service client
+    hcClient, err := vpc.VpcClientBuilder().
+        WithRegion(region).
+        WithCredential(auth).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
+
+    // Send the request and get the response
+    request := &vpcModel.ListVpcsRequest{}
+    response, err := client.ListVpcs(request)
+    if err == nil {
+        fmt.Printf("%+v\n", response)
+    } else {
+        fmt.Println(err)
+    }
 }
 ```
 
@@ -100,73 +115,87 @@ import (
 )
 
 func main() {
-	// Configure authentication
-	auth := basic.NewCredentialsBuilder().
+    // Configure authentication
+    auth, err := basic.NewCredentialsBuilder().
         // Authentication can be configured through environment variables and other methods. Please refer to Chapter 2.4 Authentication Management
-		WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-		WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-		// If ProjectId is not filled in, the SDK will automatically call the IAM service to query the project id corresponding to the region.
-		WithProjectId("{your projectId string}").
-		// Configure the SDK built-in IAM service endpoint, default is https://iam.myhuaweicloud.com
-		WithIamEndpointOverride("https://iam.cn-north-4.myhuaweicloud.com").
-		Build()
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        // If ProjectId is not filled in, the SDK will automatically call the IAM service to query the project id corresponding to the region.
+        WithProjectId("{your projectId string}").
+        // Configure the SDK built-in IAM service endpoint, default is https://iam.myhuaweicloud.com
+        WithIamEndpointOverride("https://iam.cn-north-4.myhuaweicloud.com").
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
 
-	// Use default configuration
-	httpConfig := config.DefaultHttpConfig()
-	// Configure whether to ignore the SSL certificate verification, default is false
-	httpConfig.WithIgnoreSSLVerification(true)
-	// Configure timeout as needed, default timeout is 120 seconds
-	httpConfig.WithTimeout(120)
-	// Configure proxy as needed
-	proxy := config.NewProxy().
-		// Replace the proxy schema, host and port in the example according to the actual situation
-		WithSchema("http").
-		WithHost("proxy.huaweicloud.com").
-		WithPort(80).
-		// Configure the username and password if the proxy requires authentication
-		WithUsername(os.Getenv("PROXY_USERNAME")).
-		WithPassword(os.Getenv("PROXY_PASSWORD"))
-	httpConfig.WithProxy(proxy)
-	// Configure how to create network connections as needed
-	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
-		// You need to implement this function
-	}
-	httpConfig.WithDialContext(dialContext)
-	// Configure HTTP handler for debugging, do not use in production environment
-	requestHandler := func(request http.Request) {
-		fmt.Println(request)
-	}
-	responseHandler := func(response http.Response) {
-		fmt.Println(response)
-	}
-	httpHandler := httphandler.NewHttpHandler().AddRequestHandler(requestHandler).AddResponseHandler(responseHandler)
-	httpConfig.WithHttpHandler(httpHandler)
+    // Use default configuration
+    httpConfig := config.DefaultHttpConfig()
+    // Configure whether to ignore the SSL certificate verification, default is false
+    httpConfig.WithIgnoreSSLVerification(true)
+    // Configure timeout as needed, default timeout is 120 seconds
+    httpConfig.WithTimeout(120)
+    // Configure proxy as needed
+    proxy := config.NewProxy().
+        // Replace the proxy schema, host and port in the example according to the actual situation
+        WithSchema("http").
+        WithHost("proxy.huaweicloud.com").
+        WithPort(80).
+        // Configure the username and password if the proxy requires authentication
+        WithUsername(os.Getenv("PROXY_USERNAME")).
+        WithPassword(os.Getenv("PROXY_PASSWORD"))
+    httpConfig.WithProxy(proxy)
+    // Configure how to create network connections as needed
+    dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
+        // You need to implement this function
+    }
+    httpConfig.WithDialContext(dialContext)
+    // Configure HTTP handler for debugging, do not use in production environment
+    requestHandler := func(request http.Request) {
+        fmt.Println(request)
+    }
+    responseHandler := func(response http.Response) {
+        fmt.Println(response)
+    }
+    httpHandler := httphandler.NewHttpHandler().AddRequestHandler(requestHandler).AddResponseHandler(responseHandler)
+    httpConfig.WithHttpHandler(httpHandler)
 
-	// Create a service client
-	client := vpc.NewVpcClient(
-		vpc.VpcClientBuilder().
-			// Configure region, it will cause a panic if the region does not exist
-			WithRegion(vpcRegion.ValueOf("cn-north-4")).
-			// Configure authentication
-			WithCredential(auth).
-			// Configure HTTP
-			WithHttpConfig(httpConfig).
-			Build())
+    // Get available region
+    region, err := vpcRegion.SafeValueOf("cn-north-4")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    // Create a service client
+    hcClient, err := vpc.VpcClientBuilder().
+        // Configure region, it will cause a panic if the region does not exist
+        WithRegion(region).
+        // Configure authentication
+        WithCredential(auth).
+        // Configure HTTP
+        WithHttpConfig(httpConfig).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
 
-	// Create a request
-	request := &vpcModel.ListVpcsRequest{}
-	// Configure the number of records on each page
-	limit := int32(1)
-	request.Limit = &limit
+    // Create a request
+    request := &vpcModel.ListVpcsRequest{}
+    // Configure the number of records on each page
+    limit := int32(1)
+    request.Limit = &limit
 
-	// Send the request and get the response
-	response, err := client.ListVpcs(request)
-	// Handle error and print response
-	if err == nil {
-		fmt.Printf("%+v\n", response)
-	} else {
-		fmt.Println(err)
-	}
+    // Send the request and get the response
+    response, err := client.ListVpcs(request)
+    // Handle error and print response
+    if err == nil {
+        fmt.Printf("%+v\n", response)
+    } else {
+        fmt.Println(err)
+    }
 }
 ```
 
@@ -194,9 +223,9 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
   * [2.3 Use IdpId&IdTokenFile](#23-use-idpididtokenfile-top)
   * [2.4 Authentication Management](#24-authentication-management-top)
     * [2.4.1 Environment Variables](#241-environment-variables-top)
-	* [2.4.2 Profile](#242-profile-top)
-	* [2.4.3 Metadata](#243-metadata-top)
-	* [2.4.4 Provider Chain](#244-provider-chain-top)
+    * [2.4.2 Profile](#242-profile-top)
+    * [2.4.3 Metadata](#243-metadata-top)
+    * [2.4.4 Provider Chain](#244-provider-chain-top)
 * [3. Client Initialization](#3-client-initialization-top)
   * [3.1 Initialize client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
   * [3.2 Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
@@ -217,15 +246,21 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
 #### 1.1 Default Configuration [:top:](#user-manual-top)
 
 ``` go
-import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+)
 
 // Use default configuration
 httpConfig := config.DefaultHttpConfig()
 
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 1.2 Network Proxy [:top:](#user-manual-top)
@@ -243,10 +278,13 @@ proxy := config.NewProxy().
     WithPassword(os.Getenv("PROXY_PASSWORD"))
 httpConfig := config.DefaultHttpConfig().WithProxy(proxy)
 
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 1.3 Timeout Configuration [:top:](#user-manual-top)
@@ -255,10 +293,13 @@ client := vpc.NewVpcClient(
 // The default timeout is 120 seconds, which can be adjusted as needed
 httpConfig := config.DefaultHttpConfig().WithTimeout(120)
 
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 1.4 SSL Certification [:top:](#user-manual-top)
@@ -267,10 +308,13 @@ client := vpc.NewVpcClient(
 // Skip SSL certification checking while using https protocol if needed
 httpConfig := config.DefaultHttpConfig().WithIgnoreSSLVerification(true)
 
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 1.5 Custom Network Connection [:top:](#user-manual-top)
@@ -278,14 +322,17 @@ client := vpc.NewVpcClient(
 ``` go
 // Config network connection dial function if needed
 func DialContext(ctx context.Context, network string, addr string) (net.Conn, error) {
-	return net.Dial(network, addr)
+    return net.Dial(network, addr)
 }
 httpConfig := config.DefaultHttpConfig().WithDialContext(DialContext)
 
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 1.6 Custom HTTP Transport [:top:](#user-manual-top)
@@ -298,10 +345,13 @@ Specifying the custom HTTP transport **will invalidate the configurations [1.2 N
 transport := &http.Transport{}
 httpConfig := config.DefaultHttpConfig().WithHttpTransport(transport)
 
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 ### 2. Credentials Configuration [:top:](#user-manual-top)
@@ -335,22 +385,22 @@ ak := os.Getenv("HUAWEICLOUD_SDK_AK")
 sk := os.Getenv("HUAWEICLOUD_SDK_SK")
 projectId := "{your projectId string}"
 
-basicCredentials := basic.NewCredentialsBuilder().
+basicAuth, err := basic.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
     WithProjectId(projectId).
-    Build()
+    SafeBuild()
 
 // Global Services
 ak := os.Getenv("HUAWEICLOUD_SDK_AK")
 sk := os.Getenv("HUAWEICLOUD_SDK_SK")
 domainId := "{your domainId string}"
 
-globalCredentials := global.NewCredentialsBuilder().
+globalAuth, err := global.NewCredentialsBuilder().
     WithAk(ak).
     WithSk(sk).
     WithDomainId(domainId).
-    Build()
+    SafeBuild()
 ```
 
 **Notice**:
@@ -389,12 +439,12 @@ sk := os.Getenv("HUAWEICLOUD_SDK_SK")
 securityToken := os.Getenv("HUAWEICLOUD_SDK_SECURITY_TOKEN")
 projectId := "{your projectId string}"
 
-basicCredentials := basic.NewCredentialsBuilder().
-            WithAk(ak).
-            WithSk(sk).
-            WithSecurityToken(securityToken).
-            WithProjectId(projectId).
-            Build()
+basicAuth, err := basic.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithSecurityToken(securityToken).
+    WithProjectId(projectId).
+    SafeBuild()
 
 // Global Services
 ak := os.Getenv("HUAWEICLOUD_SDK_AK")
@@ -402,12 +452,12 @@ sk := os.Getenv("HUAWEICLOUD_SDK_SK")
 securityToken := os.Getenv("HUAWEICLOUD_SDK_SECURITY_TOKEN")
 domainId := "{your domainId string}"
 
-globalCredentials := global.NewCredentialsBuilder().
-            WithAk(ak).
-            WithSk(sk).
-            WithSecurityToken(securityToken).
-            WithDomainId(domainId).
-            Build()
+globalAuth, err := global.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithSecurityToken(securityToken).
+    WithDomainId(domainId).
+    SafeBuild()
 ```
 
 In the following two cases, the temporary AK/SK and securitytoken will be obtained from the **metadata of the instance**:
@@ -419,10 +469,10 @@ Refer to the [Obtaining Metadata](https://support.huaweicloud.com/intl/en-us/use
 
 ```go
 // Regional Services
-basicAuth := basic.NewCredentialsBuilder().WithProjectId(projectId).Build()
+basicAuth, err := basic.NewCredentialsBuilder().WithProjectId(projectId).SafeBuild()
 
 // Global Services
-globalAuth := global.NewCredentialsBuilder().WithDomainId(domainId).Build()
+globalAuth, err := global.NewCredentialsBuilder().WithDomainId(domainId).SafeBuild()
 ```
 
 #### 2.3 Use IdpId&IdTokenFile [:top:](#user-manual-top)
@@ -438,23 +488,23 @@ Obtain a federated identity authentication token using an OpenID Connect ID toke
 
 ```go
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
 )
 
 // Regional service
-basicAuth := basic.NewCredentialsBuilder().
-	WithIdpId(idpId).
-	WithIdTokenFile(idTokenFile).
-	WithProjectId(projectId).
-	Build()
+basicAuth, err := basic.NewCredentialsBuilder().
+    WithIdpId(idpId).
+    WithIdTokenFile(idTokenFile).
+    WithProjectId(projectId).
+    SafeBuild()
 
 // Global service
-globalAuth := global.NewCredentialsBuilder().
-	WithIdpId(idpId).
-	WithIdTokenFile(idTokenFile).
-	WithDomainId(domainId).
-	Build()
+globalAuth, err := global.NewCredentialsBuilder().
+    WithIdpId(idpId).
+    WithIdTokenFile(idTokenFile).
+    WithDomainId(domainId).
+    SafeBuild()
 ```
 
 #### 2.4 Authentication Management [:top:](#user-manual-top)
@@ -490,9 +540,7 @@ set HUAWEICLOUD_SDK_SK=YOUR_SK
 Get the credentials from configured environment variables:
 
 ```go
-import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 // basic
 basicProvider := provider.BasicCredentialEnvProvider()
@@ -531,9 +579,7 @@ set HUAWEICLOUD_SDK_DOMAIN_ID=YOUR_DOMAIN_ID // For global credentials, this par
 Get the credentials from configured environment variables:
 
 ```go
-import (
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 // basic
 basicProvider := provider.BasicCredentialEnvProvider()
@@ -574,9 +620,7 @@ sk = your_sk
 Get the credentials from profile:
 
 ```go
-import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 // basic
 basicProvider := provider.BasicCredentialProfileProvider()
@@ -614,9 +658,7 @@ domainId = your_domain_id
 Get the credentials from profile:
 
 ```go
-import (
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 // basic
 basicProvider := provider.BasicCredentialProfileProvider()
@@ -634,9 +676,7 @@ Get temporary AK/SK and securitytoken from instance's metadata. Refer to the [Ob
 Manually obtain authentication from instance metadata:
 
 ```go
-import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 // basic
 basicProvider := provider.BasicCredentialMetadataProvider()
@@ -654,9 +694,7 @@ When creating a service client without credentials, try to load authentication i
 Get authentication from provider chain:
 
 ```go
-import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 // basic
 basicChain := provider.BasicCredentialProviderChain()
@@ -670,9 +708,7 @@ globalCred, err := globalChain.GetCredentials()
 Custom credentials provider chain is supported:
 
 ```go
-import (
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
-)
+import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/provider"
 
 providers := []provider.ICredentialProvider{
     provider.BasicCredentialMetadataProvider(),
@@ -689,23 +725,41 @@ There are two ways to initialize the {Service}Client, you could choose one you p
 #### 3.1 Initialize the {Service}Client with specified Endpoint [:top:](#user-manual-top)
 
 ``` go
-// Specify the endpoint, take the endpoint of VPC service in region of cn-north-4 for example
-endpoint := "https://vpc.cn-north-4.myhuaweicloud.com"
+package main
 
-// Initialize the credentials, you should provide projectId or domainId in this way, take initializing BasicCredentials for example
-basicAuth := basic.NewCredentialsBuilder().
-    WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-    WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-    WithProjectId("{your projectId string}").
-    Build()
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "os"
+)
 
-// Initialize specified New{Service}Client, take initializing the regional service VPC's VpcClient for example
-client := vpc.NewVpcClient(
-    vpc.VpcClientBuilder().
+func main() {
+    // Specify the endpoint, take the endpoint of VPC service in region of cn-north-4 for example
+    endpoint := "https://vpc.cn-north-4.myhuaweicloud.com"
+    // Initialize the credentials, you should provide projectId or domainId in this way, take initializing BasicCredentials for example
+    basicAuth, err := basic.NewCredentialsBuilder().
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        WithProjectId("{your projectId string}").
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+
+    // Initialize specified New{Service}Client, take initializing the regional service VPC's VpcClient for example
+    hcClient, err := vpc.VpcClientBuilder().
         WithEndpoint(endpoint).
-        WithCredential(basicCredentials).
-        WithHttpConfig(config.DefaultHttpConfig()).  
-        Build())
+        WithCredential(basicAuth).
+        WithHttpConfig(config.DefaultHttpConfig()).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
+}
 ```
 
 **where:**
@@ -718,26 +772,41 @@ client := vpc.NewVpcClient(
 #### 3.2 Initialize the {Service}Client with specified Region **(Recommended)** [:top:](#user-manual-top)
 
 ``` go
+package main
+
 import (
-    // dependency for region module
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    iam "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3"
+    iamRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
     "os"
 )
 
-// Initialize the credentials, projectId or domainId could be unassigned in this situation, take initializing GlobalCredentials for example
-globalCredentials := global.NewCredentialsBuilder().
-    WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-    WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-    // domainId could be unassigned in this situation
-    Build()
+func main() {
+    // Initialize the credentials, projectId or domainId could be unassigned in this situation, take initializing GlobalCredentials for example
+    globalAuth, err := global.NewCredentialsBuilder().
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        // domainId could be unassigned in this situation
+        WithDomainId(domainId).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
 
-// Initialize specified New{Service}Client, take initializing the global service IAM's NewIamClient for example
-client := iam.NewIamClient(
-    iam.IamClientBuilder().
-        WithRegion(region.CN_NORTH_4).
-        WithCredential(globalCredentials).
-        WithHttpConfig(config.DefaultHttpConfig()).  
-        Build())
+    // Initialize specified New{Service}Client, take initializing the global service IAM's NewIamClient for example
+    hcClient, err := iam.IamClientBuilder().
+        WithRegion(iamRegion.CN_NORTH_4).
+        WithCredential(globalAuth).
+        WithHttpConfig(config.DefaultHttpConfig()).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := iam.NewIamClient(hcClient)
+}
 ```
 
 **Notice:**
@@ -786,11 +855,11 @@ This configuration is only valid for a credential, and it will override the glob
 import "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 
 iamEndpoint := "https://iam.cn-north-4.myhuaweicloud.com"
-cred := basic.NewCredentialsBuilder().
-			WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-			WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-			WithIamEndpointOverride(iamEndpoint).
-			Build()
+cred, err := basic.NewCredentialsBuilder().
+            WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+            WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+            WithIamEndpointOverride(iamEndpoint).
+            SafeBuild()
 ```
 
 ##### 3.3.2 Region configuration [:top:](#user-manual-top)
@@ -806,11 +875,14 @@ import (
 // Create a region with custom region id and endpoint
 reg := region.NewRegion("cn-north-9", "https://ecs.cn-north-9.myhuaweicloud.com")
 
-client := ecs.NewEcsClient(
-    ecs.EcsClientBuilder().
+hcClient, err := ecs.EcsClientBuilder().
     WithRegion(reg).
     WithCredential(auth).
-    Build())
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := ecs.NewEcsClient(hcClient)
 ```
 
 ###### 3.3.2.2 Environment variable [:top:](#user-manual-top)
@@ -872,10 +944,8 @@ The default lookup order is **environment variables -> profile -> region defined
 ```go
 import "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/region"
 
-var (
-	region1 = region.ValueOf("cn-north-1")
-	region2 = region.ValueOf("cn-north-9")
-)
+region1, err := region.SafeValueOf("cn-north-1")
+region2, err := region.SafeValueOf("cn-north-9")
 ```
 
 ### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
@@ -921,31 +991,39 @@ needed. The SDK provides a listener function to obtain the original encrypted ht
 > :warning:  Warning: The original http log information is used in debugging stage only, please do not print the original http header or body in the production environment. This log information is not encrypted and contains sensitive data such as the password of your ECS virtual machine, or the password of your IAM user account, etc. When the response body is binary content, the body will be printed as "***" without detailed information.
 
 ``` go
+package main
+
 import (
-	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
-	vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
-	"net/http"
+    "fmt"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "net/http"
 )
 
 func RequestHandler(request http.Request) {
-	fmt.Println(request)
+    fmt.Println(request)
 }
 
 func ResponseHandler(response http.Response) {
-	fmt.Println(response)
+    fmt.Println(response)
 }
 
-handler := httphandler.NewHttpHandler().
-	AddRequestHandler(RequestHandler).
-	AddResponseHandler(ResponseHandler)
-httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
+func main() {
+    handler := httphandler.NewHttpHandler().
+        AddRequestHandler(RequestHandler).
+        AddResponseHandler(ResponseHandler)
+    httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
 
-client := vpc.NewVpcClient(
-	vpc.VpcClientBuilder().
-		WithHttpConfig(httpConfig).
-		Build())
+    hcClient, err := vpc.VpcClientBuilder().
+        WithHttpConfig(httpConfig).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
+}
 ```
 
 ### 6. Upload and download files [:top:](#user-manual-top)
@@ -956,67 +1034,70 @@ Take the interface `CreateImageWatermark` of the service `Data Security Center` 
 package main
 
 import (
-	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-	dsc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
-	"os"
+    "fmt"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+    dsc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dsc/v1/model"
+    "os"
 )
 
-func createImageWatermark(client *dsc.DscClient) {
-	
-	// Open the file.
-	file, err := os.Open("demo.jpg")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	defer file.Close()
+func createImageWatermark(client *dsc.DscClient) error {
+    // Open the file.
+    file, err := os.Open("demo.jpg")
+    if err != nil {
+        return err
+    }
+    defer file.Close()
 
-	body := &model.CreateImageWatermarkRequestBody{
-		File:           def.NewFilePart(file),
-		BlindWatermark: def.NewMultiPart("test_watermark"),
-	}
+    body := &model.CreateImageWatermarkRequestBody{
+        File:           def.NewFilePart(file),
+        BlindWatermark: def.NewMultiPart("test123"),
+    }
 
-	request := &model.CreateImageWatermarkRequest{Body: body}
-	response, err := client.CreateImageWatermark(request)
-	if err == nil {
-		fmt.Printf("%+v\n", response)
-	} else {
-		fmt.Println(err)
-		return
-	}
+    request := &model.CreateImageWatermarkRequest{Body: body}
+    response, err := client.CreateImageWatermark(request)
+    if err != nil {
+        return err
+    }
 
-	// Download the file.
-	result, err := os.Create("result.jpg")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	response.Consume(result)
+    fmt.Printf("status code: %d\n", response.HttpStatusCode)
 
+    // Download the file.
+    result, err := os.Create("result.jpg")
+    if err != nil {
+        return err
+    }
+    _, err = response.Consume(result)
+    return err
 }
 
 func main() {
-	ak := os.Getenv("HUAWEICLOUD_SDK_AK")
-	sk := os.Getenv("HUAWEICLOUD_SDK_SK")
-	endpoint := "{your endpoint string}"
-	projectId := "{your project id}"
+    ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+    sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+    endpoint := "{your endpoint string}"
+    projectId := "{your project id}"
 
-	credentials := basic.NewCredentialsBuilder().
-		WithAk(ak).
-		WithSk(sk).
-		WithProjectId(projectId).
-		Build()
+    credentials, err := basic.NewCredentialsBuilder().
+        WithAk(ak).
+        WithSk(sk).
+        WithProjectId(projectId).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
 
-	client := dsc.NewDscClient(
-		dsc.DscClientBuilder().
-			WithEndpoint(endpoint).
-			WithCredential(credentials).
-			Build())
-
-	createImageWatermark(client)
+    hcClient, err := dsc.DscClientBuilder().
+        WithEndpoint(endpoint).
+        WithCredential(credentials).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := dsc.NewDscClient(hcClient)
+    err := createImageWatermark(client)
 }
 ```
 
@@ -1027,27 +1108,48 @@ func main() {
 You can flexibly configure request headers as needed. **Do not** specify common request headers such as `Host`, `Authorization`, `User-Agent`, `Content-Type` unless necessary, as this may cause the errors.
 
 ```go
-client := vpc.NewVpcClient(
-	vpc.VpcClientBuilder().
-		WithEndpoint("<input your endpoint>").
-		WithCredential(
-			basic.NewCredentialsBuilder().
-				WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-				WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-				WithProjectId("<input your project id>").
-				Build()).
-		Build())
+package main
 
-request := &model.ListVpcsRequest{}
-response, err := client.ListVpcsInvoker(request).
-	// custom request headers
-	AddHeaders(map[string]string{"key1": "value1", "key2": "value2"}).
-	Invoke()
+import (
+    "fmt"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+    "os"
+)
 
-if err == nil {
-	fmt.Printf("%+v\n", response)
-} else {
-	fmt.Printf("%+v\n", err)
+func main() {
+    auth, err := basic.NewCredentialsBuilder().
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        WithProjectId("<input your project id>").
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+
+    hcClient, err := vpc.VpcClientBuilder().
+        WithEndpoint("<input your endpoint>").
+        WithCredential(auth).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
+
+    request := &model.ListVpcsRequest{}
+    response, err := client.ListVpcsInvoker(request).
+        // custom request headers
+        AddHeaders(map[string]string{"key1": "value1", "key2": "value2"}).
+        Invoke()
+
+    if err == nil {
+        fmt.Printf("%+v\n", response)
+    } else {
+        fmt.Printf("%+v\n", err)
+    }
 }
 ```
 
@@ -1065,29 +1167,50 @@ Take the interface `ListVpcs` of VPC service for example, assume the request wou
 retry when service responses an error, the code would be like the following:
 
 ``` go
-// initialize the client
-client := vpc.NewVpcClient(
-	vpc.VpcClientBuilder().
-		WithEndpoint("<input your endpoint>").
-		WithCredential(
-			basic.NewCredentialsBuilder().
-				WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
-				WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
-				WithProjectId("<input your project id>").
-				Build()).
-		Build())
+package main
 
-// initialize the request
-request := &model.ListVpcsRequest{}
+import (
+    "fmt"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker/retry"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/model"
+    "os"
+)
 
-// send the requet and retry when service responses an error
-response, err := client.ListVpcsInvoker(request).WithRetry(3, func(i interface{}, err error) bool {
-	return err != nil
-}, new(retry.None)).Invoke()
+func main() {
+    auth, err := basic.NewCredentialsBuilder().
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        WithProjectId("<input your project id>").
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    // initialize the client
+    hcClient, err := vpc.VpcClientBuilder().
+        WithEndpoint("<input your endpoint>").
+        WithCredential(auth).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
 
-if err == nil {
-	fmt.Printf("%+v\n", response)
-} else {
-	fmt.Printf("%+v\n", err)
+    // initialize the request
+    request := &model.ListVpcsRequest{}
+
+    // send the requet and retry when service responses an error
+    response, err := client.ListVpcsInvoker(request).WithRetry(3, func(i interface{}, err error) bool {
+        return err != nil
+    }, new(retry.None)).Invoke()
+
+    if err == nil {
+        fmt.Printf("%+v\n", response)
+    } else {
+        fmt.Printf("%+v\n", err)
+    }
 }
 ```

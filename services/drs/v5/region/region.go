@@ -50,6 +50,8 @@ var (
 		"https://drs.tr-west-1.myhuaweicloud.com")
 	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
 		"https://drs.ap-southeast-4.myhuaweicloud.com")
+	EU_WEST_0 = region.NewRegion("eu-west-0",
+		"https://drs.eu-west-0.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -74,6 +76,7 @@ var staticFields = map[string]*region.Region{
 	"cn-south-4":     CN_SOUTH_4,
 	"tr-west-1":      TR_WEST_1,
 	"ap-southeast-4": AP_SOUTHEAST_4,
+	"eu-west-0":      EU_WEST_0,
 }
 
 var provider = region.DefaultProviderChain("DRS")
@@ -87,6 +90,17 @@ func getRegionIds() []string {
 	return ids
 }
 
+func SafeValueOf(regionId string) (region *region.Region, err error) {
+	defer func() {
+		if r := recover(); r != nil {
+			err = fmt.Errorf("%v", r)
+		}
+	}()
+	region = ValueOf(regionId)
+	return region, err
+}
+
+// Deprecated: This function may panic under certain circumstances. Use SafeValueOf instead.
 func ValueOf(regionId string) *region.Region {
 	if regionId == "" {
 		panic("unexpected empty parameter: regionId")

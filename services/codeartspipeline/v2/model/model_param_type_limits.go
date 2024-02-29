@@ -18,7 +18,7 @@ type ParamTypeLimits struct {
 	// 语言展示名字
 	Displayname string `json:"displayname"`
 
-	// 规则集ID
+	// 策略ID
 	Id string `json:"id"`
 
 	// 扫描语言

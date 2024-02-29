@@ -10,6 +10,9 @@ type RuleId struct {
 
 	// id
 	Id *string `json:"id,omitempty"`
+
+	// 名称
+	Name *string `json:"name,omitempty"`
 }
 
 func (o RuleId) String() string {

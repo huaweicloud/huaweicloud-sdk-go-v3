@@ -38,7 +38,7 @@ type MeetingAuthResBody struct {
 	AccessToken string `json:"accessToken"`
 }
 
-func (s MeetingCredentials) BuildAccessTokenRequest(endpoint string) *request.DefaultHttpRequest {
+func (s *MeetingCredentials) BuildAccessTokenRequest(endpoint string) *request.DefaultHttpRequest {
 	meetingAuthInfo := []byte(s.UserName + ":" + s.UserPassword)
 	meetingAuth := "Basic " + base64.StdEncoding.EncodeToString(meetingAuthInfo)
 	body := &MeetingAuthReqBody{s.UserName, ClientType}

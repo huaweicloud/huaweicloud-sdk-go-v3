@@ -13,6 +13,9 @@ type EipSwitchStatusVo struct {
 
 	// 修改eip防护状态失败列表。
 	FailEipIdList *[]string `json:"fail_eip_id_list,omitempty"`
+
+	// ID
+	Id *string `json:"id,omitempty"`
 }
 
 func (o EipSwitchStatusVo) String() string {

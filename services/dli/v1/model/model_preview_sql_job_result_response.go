@@ -34,8 +34,8 @@ type PreviewSqlJobResultResponse struct {
 	Schema *[]interface{} `json:"schema,omitempty"`
 
 	// 作业结果集。
-	Rows           *[][]string `json:"rows,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Rows           *[][]interface{} `json:"rows,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o PreviewSqlJobResultResponse) String() string {

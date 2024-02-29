@@ -12,7 +12,7 @@ import (
 // CreateFirewallReqFlavor 规格信息
 type CreateFirewallReqFlavor struct {
 
-	// 防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版 Platinum - 铂金版，防火墙版本“charge_mode”为\"postPaid\"时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+	// 防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
 	Version *CreateFirewallReqFlavorVersion `json:"version,omitempty"`
 
 	// 扩展EIP数量，仅包周期场景下生效
@@ -41,7 +41,6 @@ type CreateFirewallReqFlavorVersion struct {
 type CreateFirewallReqFlavorVersionEnum struct {
 	STANDARD     CreateFirewallReqFlavorVersion
 	PROFESSIONAL CreateFirewallReqFlavorVersion
-	PLATINUM     CreateFirewallReqFlavorVersion
 }
 
 func GetCreateFirewallReqFlavorVersionEnum() CreateFirewallReqFlavorVersionEnum {
@@ -51,9 +50,6 @@ func GetCreateFirewallReqFlavorVersionEnum() CreateFirewallReqFlavorVersionEnum 
 		},
 		PROFESSIONAL: CreateFirewallReqFlavorVersion{
 			value: "Professional",
-		},
-		PLATINUM: CreateFirewallReqFlavorVersion{
-			value: "Platinum",
 		},
 	}
 }

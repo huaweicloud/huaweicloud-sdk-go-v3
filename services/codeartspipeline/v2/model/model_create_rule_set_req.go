@@ -8,7 +8,7 @@ import (
 
 type CreateRuleSetReq struct {
 
-	// 规则集名称
+	// 策略名称
 	Name string `json:"name"`
 
 	// 规则集合

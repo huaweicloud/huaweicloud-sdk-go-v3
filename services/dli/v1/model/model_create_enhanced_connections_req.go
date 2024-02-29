@@ -18,6 +18,9 @@ type CreateEnhancedConnectionsReq struct {
 	// 对应服务的子网网络ID，即为需要建立连接的服务所在的子网。
 	DestNetworkId string `json:"dest_network_id"`
 
+	// 弹性资源池列表。
+	ElasticResourcePools *[]string `json:"elastic_resource_pools,omitempty"`
+
 	// 需要使用跨源的队列列表。
 	Queues *[]string `json:"queues,omitempty"`
 

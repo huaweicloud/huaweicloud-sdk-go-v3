@@ -17,6 +17,12 @@ type CreateLogStreamParams struct {
 
 	// 标签字段信息
 	Tags *[]TagsBody `json:"tags,omitempty"`
+
+	// 日志流名称别名
+	LogStreamNameAlias *string `json:"log_stream_name_alias,omitempty"`
+
+	// 企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 }
 
 func (o CreateLogStreamParams) String() string {

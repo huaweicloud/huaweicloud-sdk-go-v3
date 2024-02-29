@@ -313,6 +313,27 @@ func (c *DataArtsStudioClient) BatchSyncMetadataInvoker(request *model.BatchSync
 	return &BatchSyncMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelFactoryPackages 撤销任务包
+//
+// 撤销任务包
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CancelFactoryPackages(request *model.CancelFactoryPackagesRequest) (*model.CancelFactoryPackagesResponse, error) {
+	requestDef := GenReqDefForCancelFactoryPackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelFactoryPackagesResponse), nil
+	}
+}
+
+// CancelFactoryPackagesInvoker 撤销任务包
+func (c *DataArtsStudioClient) CancelFactoryPackagesInvoker(request *model.CancelFactoryPackagesRequest) *CancelFactoryPackagesInvoker {
+	requestDef := GenReqDefForCancelFactoryPackages()
+	return &CancelFactoryPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeCatalog 修改流程架构
 //
 // 修改流程架构
@@ -733,9 +754,9 @@ func (c *DataArtsStudioClient) CreateFactoryJobInvoker(request *model.CreateFact
 	return &CreateFactoryJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateFactorySupplementDataInstance 创建补数据实例的接口
+// CreateFactorySupplementDataInstance 创建补数据实例
 //
-// 创建一个补数据实例
+// 创建补数据实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateFactorySupplementDataInstance(request *model.CreateFactorySupplementDataInstanceRequest) (*model.CreateFactorySupplementDataInstanceResponse, error) {
@@ -748,7 +769,7 @@ func (c *DataArtsStudioClient) CreateFactorySupplementDataInstance(request *mode
 	}
 }
 
-// CreateFactorySupplementDataInstanceInvoker 创建补数据实例的接口
+// CreateFactorySupplementDataInstanceInvoker 创建补数据实例
 func (c *DataArtsStudioClient) CreateFactorySupplementDataInstanceInvoker(request *model.CreateFactorySupplementDataInstanceRequest) *CreateFactorySupplementDataInstanceInvoker {
 	requestDef := GenReqDefForCreateFactorySupplementDataInstance()
 	return &CreateFactorySupplementDataInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -794,6 +815,27 @@ func (c *DataArtsStudioClient) CreateOrUpdateAsset(request *model.CreateOrUpdate
 func (c *DataArtsStudioClient) CreateOrUpdateAssetInvoker(request *model.CreateOrUpdateAssetRequest) *CreateOrUpdateAssetInvoker {
 	requestDef := GenReqDefForCreateOrUpdateAsset()
 	return &CreateOrUpdateAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrUpdateEntities 创建或修改资产(邀测)
+//
+// 创建或修改资产，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateOrUpdateEntities(request *model.CreateOrUpdateEntitiesRequest) (*model.CreateOrUpdateEntitiesResponse, error) {
+	requestDef := GenReqDefForCreateOrUpdateEntities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOrUpdateEntitiesResponse), nil
+	}
+}
+
+// CreateOrUpdateEntitiesInvoker 创建或修改资产(邀测)
+func (c *DataArtsStudioClient) CreateOrUpdateEntitiesInvoker(request *model.CreateOrUpdateEntitiesRequest) *CreateOrUpdateEntitiesInvoker {
+	requestDef := GenReqDefForCreateOrUpdateEntities()
+	return &CreateOrUpdateEntitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSecurityDataClassificationRule 创建识别规则
@@ -1529,6 +1571,27 @@ func (c *DataArtsStudioClient) DeleteWorkspaceusers(request *model.DeleteWorkspa
 func (c *DataArtsStudioClient) DeleteWorkspaceusersInvoker(request *model.DeleteWorkspaceusersRequest) *DeleteWorkspaceusersInvoker {
 	requestDef := GenReqDefForDeleteWorkspaceusers()
 	return &DeleteWorkspaceusersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeployFactoryPackages 发布任务包
+//
+// 发布任务包
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeployFactoryPackages(request *model.DeployFactoryPackagesRequest) (*model.DeployFactoryPackagesResponse, error) {
+	requestDef := GenReqDefForDeployFactoryPackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeployFactoryPackagesResponse), nil
+	}
+}
+
+// DeployFactoryPackagesInvoker 发布任务包
+func (c *DataArtsStudioClient) DeployFactoryPackagesInvoker(request *model.DeployFactoryPackagesRequest) *DeployFactoryPackagesInvoker {
+	requestDef := GenReqDefForDeployFactoryPackages()
+	return &DeployFactoryPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteTaskAction 启动、调度、停止采集任务
@@ -2392,6 +2455,27 @@ func (c *DataArtsStudioClient) ListFactoryAlarmInfoInvoker(request *model.ListFa
 	return &ListFactoryAlarmInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFactoryJobInstancesByName 查询指定作业的实例列表
+//
+// 查询指定作业的实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryJobInstancesByName(request *model.ListFactoryJobInstancesByNameRequest) (*model.ListFactoryJobInstancesByNameResponse, error) {
+	requestDef := GenReqDefForListFactoryJobInstancesByName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryJobInstancesByNameResponse), nil
+	}
+}
+
+// ListFactoryJobInstancesByNameInvoker 查询指定作业的实例列表
+func (c *DataArtsStudioClient) ListFactoryJobInstancesByNameInvoker(request *model.ListFactoryJobInstancesByNameRequest) *ListFactoryJobInstancesByNameInvoker {
+	requestDef := GenReqDefForListFactoryJobInstancesByName()
+	return &ListFactoryJobInstancesByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFactoryJobs 查询作业列表
 //
 // 查询作业列表清单
@@ -2411,6 +2495,27 @@ func (c *DataArtsStudioClient) ListFactoryJobs(request *model.ListFactoryJobsReq
 func (c *DataArtsStudioClient) ListFactoryJobsInvoker(request *model.ListFactoryJobsRequest) *ListFactoryJobsInvoker {
 	requestDef := GenReqDefForListFactoryJobs()
 	return &ListFactoryJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFactoryReleasePackages 查询发布包列表
+//
+// 查询发布包列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryReleasePackages(request *model.ListFactoryReleasePackagesRequest) (*model.ListFactoryReleasePackagesResponse, error) {
+	requestDef := GenReqDefForListFactoryReleasePackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryReleasePackagesResponse), nil
+	}
+}
+
+// ListFactoryReleasePackagesInvoker 查询发布包列表
+func (c *DataArtsStudioClient) ListFactoryReleasePackagesInvoker(request *model.ListFactoryReleasePackagesRequest) *ListFactoryReleasePackagesInvoker {
+	requestDef := GenReqDefForListFactoryReleasePackages()
+	return &ListFactoryReleasePackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFactoryTaskCompletion 查询任务完成情况
@@ -3984,9 +4089,30 @@ func (c *DataArtsStudioClient) ShowFactoryEnvInvoker(request *model.ShowFactoryE
 	return &ShowFactoryEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowFactorySupplementData 查询所有的补数据实例
+// ShowFactoryPackageDetail 查询指定发布包详情
 //
-// 查询所有的补数据实例
+// 查询指定发布包详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowFactoryPackageDetail(request *model.ShowFactoryPackageDetailRequest) (*model.ShowFactoryPackageDetailResponse, error) {
+	requestDef := GenReqDefForShowFactoryPackageDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFactoryPackageDetailResponse), nil
+	}
+}
+
+// ShowFactoryPackageDetailInvoker 查询指定发布包详情
+func (c *DataArtsStudioClient) ShowFactoryPackageDetailInvoker(request *model.ShowFactoryPackageDetailRequest) *ShowFactoryPackageDetailInvoker {
+	requestDef := GenReqDefForShowFactoryPackageDetail()
+	return &ShowFactoryPackageDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFactorySupplementData 查询补数据实例
+//
+// 查询补数据实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowFactorySupplementData(request *model.ShowFactorySupplementDataRequest) (*model.ShowFactorySupplementDataResponse, error) {
@@ -3999,7 +4125,7 @@ func (c *DataArtsStudioClient) ShowFactorySupplementData(request *model.ShowFact
 	}
 }
 
-// ShowFactorySupplementDataInvoker 查询所有的补数据实例
+// ShowFactorySupplementDataInvoker 查询补数据实例
 func (c *DataArtsStudioClient) ShowFactorySupplementDataInvoker(request *model.ShowFactorySupplementDataRequest) *ShowFactorySupplementDataInvoker {
 	requestDef := GenReqDefForShowFactorySupplementData()
 	return &ShowFactorySupplementDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4593,9 +4719,9 @@ func (c *DataArtsStudioClient) ShowWorkspaceDetailByIdInvoker(request *model.Sho
 	return &ShowWorkspaceDetailByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StopFactorySupplementDataInstance 停止一个补数据实例
+// StopFactorySupplementDataInstance 停止补数据实例
 //
-// 停止一个补数据实例
+// 停止补数据实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) StopFactorySupplementDataInstance(request *model.StopFactorySupplementDataInstanceRequest) (*model.StopFactorySupplementDataInstanceResponse, error) {
@@ -4608,7 +4734,7 @@ func (c *DataArtsStudioClient) StopFactorySupplementDataInstance(request *model.
 	}
 }
 
-// StopFactorySupplementDataInstanceInvoker 停止一个补数据实例
+// StopFactorySupplementDataInstanceInvoker 停止补数据实例
 func (c *DataArtsStudioClient) StopFactorySupplementDataInstanceInvoker(request *model.StopFactorySupplementDataInstanceRequest) *StopFactorySupplementDataInstanceInvoker {
 	requestDef := GenReqDefForStopFactorySupplementDataInstance()
 	return &StopFactorySupplementDataInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

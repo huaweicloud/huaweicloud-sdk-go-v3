@@ -50,8 +50,6 @@ type ModelDto struct {
 
 	// 模型评估指标
 	Metrics *[]ModelMetric `json:"metrics,omitempty"`
-
-	ModelMetric *ModelDtoModelMetric `json:"ModelMetric,omitempty"`
 }
 
 func (o ModelDto) String() string {

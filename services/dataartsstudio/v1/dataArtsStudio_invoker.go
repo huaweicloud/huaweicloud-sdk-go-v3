@@ -173,6 +173,18 @@ func (i *BatchSyncMetadataInvoker) Invoke() (*model.BatchSyncMetadataResponse, e
 	}
 }
 
+type CancelFactoryPackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelFactoryPackagesInvoker) Invoke() (*model.CancelFactoryPackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelFactoryPackagesResponse), nil
+	}
+}
+
 type ChangeCatalogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,6 +458,18 @@ func (i *CreateOrUpdateAssetInvoker) Invoke() (*model.CreateOrUpdateAssetRespons
 		return nil, err
 	} else {
 		return result.(*model.CreateOrUpdateAssetResponse), nil
+	}
+}
+
+type CreateOrUpdateEntitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrUpdateEntitiesInvoker) Invoke() (*model.CreateOrUpdateEntitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrUpdateEntitiesResponse), nil
 	}
 }
 
@@ -866,6 +890,18 @@ func (i *DeleteWorkspaceusersInvoker) Invoke() (*model.DeleteWorkspaceusersRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteWorkspaceusersResponse), nil
+	}
+}
+
+type DeployFactoryPackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeployFactoryPackagesInvoker) Invoke() (*model.DeployFactoryPackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeployFactoryPackagesResponse), nil
 	}
 }
 
@@ -1361,6 +1397,18 @@ func (i *ListFactoryAlarmInfoInvoker) Invoke() (*model.ListFactoryAlarmInfoRespo
 	}
 }
 
+type ListFactoryJobInstancesByNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryJobInstancesByNameInvoker) Invoke() (*model.ListFactoryJobInstancesByNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryJobInstancesByNameResponse), nil
+	}
+}
+
 type ListFactoryJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1370,6 +1418,18 @@ func (i *ListFactoryJobsInvoker) Invoke() (*model.ListFactoryJobsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListFactoryJobsResponse), nil
+	}
+}
+
+type ListFactoryReleasePackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryReleasePackagesInvoker) Invoke() (*model.ListFactoryReleasePackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryReleasePackagesResponse), nil
 	}
 }
 
@@ -2270,6 +2330,18 @@ func (i *ShowFactoryEnvInvoker) Invoke() (*model.ShowFactoryEnvResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowFactoryEnvResponse), nil
+	}
+}
+
+type ShowFactoryPackageDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactoryPackageDetailInvoker) Invoke() (*model.ShowFactoryPackageDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactoryPackageDetailResponse), nil
 	}
 }
 

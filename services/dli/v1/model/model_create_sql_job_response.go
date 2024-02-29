@@ -28,7 +28,7 @@ type CreateSqlJobResponse struct {
 	Schema *[]interface{} `json:"schema,omitempty"`
 
 	// 当语句类型为DDL时，直接返回其执行结果。
-	Rows *[][]string `json:"rows,omitempty"`
+	Rows *[][]interface{} `json:"rows,omitempty"`
 
 	// 表示作业执行方式，是同步还是异步的
 	JobMode        *string `json:"job_mode,omitempty"`

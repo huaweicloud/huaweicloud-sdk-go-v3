@@ -12,7 +12,7 @@ type PersistObjectIdDecryptDto struct {
 	Decrypt bool `json:"decrypt"`
 
 	// 唯一标识。
-	Id string `json:"id"`
+	Id int64 `json:"id"`
 }
 
 func (o PersistObjectIdDecryptDto) String() string {

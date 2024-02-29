@@ -8,8 +8,8 @@ import (
 
 // UpdateAddressSetResponse Response Object
 type UpdateAddressSetResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *UpdateAddressSetResponseData `json:"data,omitempty"`
+	HttpStatusCode int                           `json:"-"`
 }
 
 func (o UpdateAddressSetResponse) String() string {

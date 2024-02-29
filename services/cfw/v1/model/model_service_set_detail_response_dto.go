@@ -17,6 +17,9 @@ type ServiceSetDetailResponseDto struct {
 
 	// 服务组描述信息
 	Description *string `json:"description,omitempty"`
+
+	// 服务组类型，0表示自定义服务组，1表示预定义服务组
+	ServiceSetType *int32 `json:"service_set_type,omitempty"`
 }
 
 func (o ServiceSetDetailResponseDto) String() string {

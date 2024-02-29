@@ -57,7 +57,7 @@ type VersionModelViewDto struct {
 	Name *string `json:"name,omitempty"`
 
 	// 前序版本实例ID。
-	PreVersionId *int64 `json:"preVersionId,omitempty"`
+	PreVersionId *string `json:"preVersionId,omitempty"`
 
 	// 软删除标识，参数值为0或1。 - 0：表示未删除。 - 1：表示已删除。
 	RdmDeleteFlag *int32 `json:"rdmDeleteFlag,omitempty"`

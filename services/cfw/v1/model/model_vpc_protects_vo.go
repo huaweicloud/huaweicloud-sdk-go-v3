@@ -26,6 +26,9 @@ type VpcProtectsVo struct {
 
 	// 其他项目防护VPC
 	OtherProtectVpcs *[]VpcAttachmentDetail `json:"other_protect_vpcs,omitempty"`
+
+	// 所有资产数量
+	TotalAssets *int32 `json:"total_assets,omitempty"`
 }
 
 func (o VpcProtectsVo) String() string {

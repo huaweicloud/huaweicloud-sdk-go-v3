@@ -77,18 +77,6 @@ func (i *CloseKafkaManagerInvoker) Invoke() (*model.CloseKafkaManagerResponse, e
 	}
 }
 
-type CreateConnectorInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateConnectorInvoker) Invoke() (*model.CreateConnectorResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateConnectorResponse), nil
-	}
-}
-
 type CreateDeleteConnectorOrderInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,18 +194,6 @@ func (i *DeleteBackgroundTaskInvoker) Invoke() (*model.DeleteBackgroundTaskRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteBackgroundTaskResponse), nil
-	}
-}
-
-type DeleteConnectorInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteConnectorInvoker) Invoke() (*model.DeleteConnectorResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteConnectorResponse), nil
 	}
 }
 
@@ -878,5 +854,113 @@ func (i *UpdateTopicReplicaInvoker) Invoke() (*model.UpdateTopicReplicaResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateTopicReplicaResponse), nil
+	}
+}
+
+type CreateConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectorInvoker) Invoke() (*model.CreateConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConnectorResponse), nil
+	}
+}
+
+type CreateConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectorTaskInvoker) Invoke() (*model.CreateConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConnectorTaskResponse), nil
+	}
+}
+
+type DeleteConnectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConnectorInvoker) Invoke() (*model.DeleteConnectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConnectorResponse), nil
+	}
+}
+
+type DeleteConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConnectorTaskInvoker) Invoke() (*model.DeleteConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConnectorTaskResponse), nil
+	}
+}
+
+type ListConnectorTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConnectorTasksInvoker) Invoke() (*model.ListConnectorTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConnectorTasksResponse), nil
+	}
+}
+
+type PauseConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PauseConnectorTaskInvoker) Invoke() (*model.PauseConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PauseConnectorTaskResponse), nil
+	}
+}
+
+type RestartConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartConnectorTaskInvoker) Invoke() (*model.RestartConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartConnectorTaskResponse), nil
+	}
+}
+
+type ResumeConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumeConnectorTaskInvoker) Invoke() (*model.ResumeConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumeConnectorTaskResponse), nil
+	}
+}
+
+type ShowConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConnectorTaskInvoker) Invoke() (*model.ShowConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConnectorTaskResponse), nil
 	}
 }

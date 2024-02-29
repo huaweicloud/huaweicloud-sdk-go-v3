@@ -313,9 +313,9 @@ func (c *CodeArtsPipelineClient) CreateRuleInvoker(request *model.CreateRuleRequ
 	return &CreateRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateStrategy 创建规则集
+// CreateStrategy 创建策略
 //
-// 创建规则集
+// 创建策略
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) CreateStrategy(request *model.CreateStrategyRequest) (*model.CreateStrategyResponse, error) {
@@ -328,7 +328,7 @@ func (c *CodeArtsPipelineClient) CreateStrategy(request *model.CreateStrategyReq
 	}
 }
 
-// CreateStrategyInvoker 创建规则集
+// CreateStrategyInvoker 创建策略
 func (c *CodeArtsPipelineClient) CreateStrategyInvoker(request *model.CreateStrategyRequest) *CreateStrategyInvoker {
 	requestDef := GenReqDefForCreateStrategy()
 	return &CreateStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -481,9 +481,9 @@ func (c *CodeArtsPipelineClient) DeleteRuleInvoker(request *model.DeleteRuleRequ
 	return &DeleteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteStrategy 删除规则集
+// DeleteStrategy 删除策略
 //
-// 删除规则集
+// 删除策略
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) DeleteStrategy(request *model.DeleteStrategyRequest) (*model.DeleteStrategyResponse, error) {
@@ -496,7 +496,7 @@ func (c *CodeArtsPipelineClient) DeleteStrategy(request *model.DeleteStrategyReq
 	}
 }
 
-// DeleteStrategyInvoker 删除规则集
+// DeleteStrategyInvoker 删除策略
 func (c *CodeArtsPipelineClient) DeleteStrategyInvoker(request *model.DeleteStrategyRequest) *DeleteStrategyInvoker {
 	requestDef := GenReqDefForDeleteStrategy()
 	return &DeleteStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -735,7 +735,7 @@ func (c *CodeArtsPipelineClient) ListPluginsInvoker(request *model.ListPluginsRe
 
 // ListProjectStrategy 获取规则模板实例列表
 //
-// 获取规则集列表
+// 获取策略列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) ListProjectStrategy(request *model.ListProjectStrategyRequest) (*model.ListProjectStrategyResponse, error) {
@@ -817,9 +817,9 @@ func (c *CodeArtsPipelineClient) ListStagePluginsInvoker(request *model.ListStag
 	return &ListStagePluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListStrategy 获取规则集列表
+// ListStrategy 获取策略列表
 //
-// 获取规则集列表
+// 获取策略列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) ListStrategy(request *model.ListStrategyRequest) (*model.ListStrategyResponse, error) {
@@ -832,7 +832,7 @@ func (c *CodeArtsPipelineClient) ListStrategy(request *model.ListStrategyRequest
 	}
 }
 
-// ListStrategyInvoker 获取规则集列表
+// ListStrategyInvoker 获取策略列表
 func (c *CodeArtsPipelineClient) ListStrategyInvoker(request *model.ListStrategyRequest) *ListStrategyInvoker {
 	requestDef := GenReqDefForListStrategy()
 	return &ListStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1321,9 +1321,9 @@ func (c *CodeArtsPipelineClient) ShowRuleInvoker(request *model.ShowRuleRequest)
 	return &ShowRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowStrategy 获取规则集详情
+// ShowStrategy 获取策略详情
 //
-// 获取规则集详情
+// 获取策略详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) ShowStrategy(request *model.ShowStrategyRequest) (*model.ShowStrategyResponse, error) {
@@ -1336,7 +1336,7 @@ func (c *CodeArtsPipelineClient) ShowStrategy(request *model.ShowStrategyRequest
 	}
 }
 
-// ShowStrategyInvoker 获取规则集详情
+// ShowStrategyInvoker 获取策略详情
 func (c *CodeArtsPipelineClient) ShowStrategyInvoker(request *model.ShowStrategyRequest) *ShowStrategyInvoker {
 	requestDef := GenReqDefForShowStrategy()
 	return &ShowStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1426,9 +1426,9 @@ func (c *CodeArtsPipelineClient) StopPipelineRunInvoker(request *model.StopPipel
 	return &StopPipelineRunInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SwitchStrategy 开关规则集
+// SwitchStrategy 开关策略
 //
-// 修改规则集状态
+// 修改策略状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) SwitchStrategy(request *model.SwitchStrategyRequest) (*model.SwitchStrategyResponse, error) {
@@ -1441,7 +1441,7 @@ func (c *CodeArtsPipelineClient) SwitchStrategy(request *model.SwitchStrategyReq
 	}
 }
 
-// SwitchStrategyInvoker 开关规则集
+// SwitchStrategyInvoker 开关策略
 func (c *CodeArtsPipelineClient) SwitchStrategyInvoker(request *model.SwitchStrategyRequest) *SwitchStrategyInvoker {
 	requestDef := GenReqDefForSwitchStrategy()
 	return &SwitchStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1573,9 +1573,9 @@ func (c *CodeArtsPipelineClient) UpdateRuleInvoker(request *model.UpdateRuleRequ
 	return &UpdateRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateStrategy 修改规则集
+// UpdateStrategy 修改策略
 //
-// 修改规则集
+// 修改策略
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsPipelineClient) UpdateStrategy(request *model.UpdateStrategyRequest) (*model.UpdateStrategyResponse, error) {
@@ -1588,7 +1588,7 @@ func (c *CodeArtsPipelineClient) UpdateStrategy(request *model.UpdateStrategyReq
 	}
 }
 
-// UpdateStrategyInvoker 修改规则集
+// UpdateStrategyInvoker 修改策略
 func (c *CodeArtsPipelineClient) UpdateStrategyInvoker(request *model.UpdateStrategyRequest) *UpdateStrategyInvoker {
 	requestDef := GenReqDefForUpdateStrategy()
 	return &UpdateStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

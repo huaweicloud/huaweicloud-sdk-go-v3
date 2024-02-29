@@ -27,9 +27,15 @@ import (
 )
 
 func TestCredentials_NeedUpdate(t *testing.T) {
-	credentials := NewCredentialsBuilder().Build()
+	credentials, err := NewCredentialsBuilder().SafeBuild()
+	assert.Nil(t, err)
 	// Manually specifying a security token
-	credentials = NewCredentialsBuilder().WithAk("ak").WithSk("sk").WithSecurityToken("token").Build()
+	credentials, err = NewCredentialsBuilder().
+		WithAk("ak").
+		WithSk("sk").
+		WithSecurityToken("token").
+		SafeBuild()
+	assert.Nil(t, err)
 	assert.False(t, credentials.needUpdateSecurityToken())
 	// Automatically update the expired security token
 	credentials.expiredAt = 1
@@ -40,7 +46,8 @@ func TestCredentials_NeedUpdate(t *testing.T) {
 }
 
 func TestCredentials_NeedUpdateAuthToken(t *testing.T) {
-	credentials := NewCredentialsBuilder().Build()
+	credentials, err := NewCredentialsBuilder().SafeBuild()
+	assert.Nil(t, err)
 	// Without idp_id or id_token
 	assert.False(t, credentials.needUpdateAuthToken())
 	credentials.IdpId = "idp_id"
@@ -56,35 +63,25 @@ func TestCredentials_NeedUpdateAuthToken(t *testing.T) {
 }
 
 func TestCredentialsBuilder_Build(t *testing.T) {
-	defer func() {
-		err := recover()
-		assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-		assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "ProjectId is required when using IdpId&IdTokenFile")
-	}()
-
-	NewCredentialsBuilder().WithIdpId("id").WithIdTokenFile("file").Build()
+	_, err := NewCredentialsBuilder().WithIdpId("id").WithIdTokenFile("file").SafeBuild()
+	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
+	assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "ProjectId is required when using IdpId&IdTokenFile")
 }
 
 func TestCredentialsBuilder_Build1(t *testing.T) {
-	defer func() {
-		err := recover()
-		assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-		assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "IdTokenFile is required when using IdpId&IdTokenFile")
-	}()
-
-	NewCredentialsBuilder().WithIdpId("id").Build()
+	_, err := NewCredentialsBuilder().WithIdpId("id").SafeBuild()
+	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
+	assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "IdTokenFile is required when using IdpId&IdTokenFile")
 }
 
 func TestCredentialsBuilder_Build2(t *testing.T) {
-	defer func() {
-		err := recover()
-		assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-		assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "IdpId is required when using IdpId&IdTokenFile")
-	}()
-
-	NewCredentialsBuilder().WithIdTokenFile("file").Build()
+	_, err := NewCredentialsBuilder().WithIdTokenFile("file").SafeBuild()
+	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
+	assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "IdpId is required when using IdpId&IdTokenFile")
 }
 
 func TestCredentialsBuilder_Build3(t *testing.T) {
-	NewCredentialsBuilder().WithIdpId("id").WithIdTokenFile("file").WithProjectId("projectId").Build()
+	credentials, err := NewCredentialsBuilder().WithIdpId("id").WithIdTokenFile("file").WithProjectId("projectId").SafeBuild()
+	assert.Nil(t, err)
+	assert.IsType(t, &Credentials{}, credentials)
 }

@@ -29,6 +29,9 @@ type EwProtectResourceInfo struct {
 
 	// 防护资源模式
 	ProtectedResourceMode *string `json:"protected_resource_mode,omitempty"`
+
+	// 防护VPC的防护状态，0表示已关联，1表示未关联。
+	Status *int32 `json:"status,omitempty"`
 }
 
 func (o EwProtectResourceInfo) String() string {

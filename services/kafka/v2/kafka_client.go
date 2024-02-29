@@ -149,29 +149,6 @@ func (c *KafkaClient) CloseKafkaManagerInvoker(request *model.CloseKafkaManagerR
 	return &CloseKafkaManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateConnector 创建实例的Smart Connect节点
-//
-// 创建Smart Connect节点。
-//
-// **当前通过调用API，只支持按需实例创建Smart Connect节点。**
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
-	requestDef := GenReqDefForCreateConnector()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateConnectorResponse), nil
-	}
-}
-
-// CreateConnectorInvoker 创建实例的Smart Connect节点
-func (c *KafkaClient) CreateConnectorInvoker(request *model.CreateConnectorRequest) *CreateConnectorInvoker {
-	requestDef := GenReqDefForCreateConnector()
-	return &CreateConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateDeleteConnectorOrder 创建关闭实例转储节点的订单
 //
 // 创建删除实例转储节点的订单。
@@ -382,27 +359,6 @@ func (c *KafkaClient) DeleteBackgroundTask(request *model.DeleteBackgroundTaskRe
 func (c *KafkaClient) DeleteBackgroundTaskInvoker(request *model.DeleteBackgroundTaskRequest) *DeleteBackgroundTaskInvoker {
 	requestDef := GenReqDefForDeleteBackgroundTask()
 	return &DeleteBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteConnector 关闭Smart Connect（按需实例）
-//
-// 介绍按需实例如何关闭Smart Connect。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) DeleteConnector(request *model.DeleteConnectorRequest) (*model.DeleteConnectorResponse, error) {
-	requestDef := GenReqDefForDeleteConnector()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteConnectorResponse), nil
-	}
-}
-
-// DeleteConnectorInvoker 关闭Smart Connect（按需实例）
-func (c *KafkaClient) DeleteConnectorInvoker(request *model.DeleteConnectorRequest) *DeleteConnectorInvoker {
-	requestDef := GenReqDefForDeleteConnector()
-	return &DeleteConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteInstance 删除指定的实例
@@ -1575,4 +1531,195 @@ func (c *KafkaClient) UpdateTopicReplica(request *model.UpdateTopicReplicaReques
 func (c *KafkaClient) UpdateTopicReplicaInvoker(request *model.UpdateTopicReplicaRequest) *UpdateTopicReplicaInvoker {
 	requestDef := GenReqDefForUpdateTopicReplica()
 	return &UpdateTopicReplicaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnector 开启Smart Connect（按需实例）
+//
+// 开启Smart Connect，提交创建Smart Connect节点任务。
+//
+// **当前通过调用API，只支持按需实例创建Smart Connect节点。**
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) CreateConnector(request *model.CreateConnectorRequest) (*model.CreateConnectorResponse, error) {
+	requestDef := GenReqDefForCreateConnector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConnectorResponse), nil
+	}
+}
+
+// CreateConnectorInvoker 开启Smart Connect（按需实例）
+func (c *KafkaClient) CreateConnectorInvoker(request *model.CreateConnectorRequest) *CreateConnectorInvoker {
+	requestDef := GenReqDefForCreateConnector()
+	return &CreateConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnectorTask 创建Smart Connect任务
+//
+// 创建Smart Connect任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) CreateConnectorTask(request *model.CreateConnectorTaskRequest) (*model.CreateConnectorTaskResponse, error) {
+	requestDef := GenReqDefForCreateConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConnectorTaskResponse), nil
+	}
+}
+
+// CreateConnectorTaskInvoker 创建Smart Connect任务
+func (c *KafkaClient) CreateConnectorTaskInvoker(request *model.CreateConnectorTaskRequest) *CreateConnectorTaskInvoker {
+	requestDef := GenReqDefForCreateConnectorTask()
+	return &CreateConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConnector 关闭Smart Connect（按需实例）
+//
+// 介绍按需实例如何关闭Smart Connect。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) DeleteConnector(request *model.DeleteConnectorRequest) (*model.DeleteConnectorResponse, error) {
+	requestDef := GenReqDefForDeleteConnector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConnectorResponse), nil
+	}
+}
+
+// DeleteConnectorInvoker 关闭Smart Connect（按需实例）
+func (c *KafkaClient) DeleteConnectorInvoker(request *model.DeleteConnectorRequest) *DeleteConnectorInvoker {
+	requestDef := GenReqDefForDeleteConnector()
+	return &DeleteConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConnectorTask 删除Smart Connector任务
+//
+// 删除Smart Connector任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) DeleteConnectorTask(request *model.DeleteConnectorTaskRequest) (*model.DeleteConnectorTaskResponse, error) {
+	requestDef := GenReqDefForDeleteConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConnectorTaskResponse), nil
+	}
+}
+
+// DeleteConnectorTaskInvoker 删除Smart Connector任务
+func (c *KafkaClient) DeleteConnectorTaskInvoker(request *model.DeleteConnectorTaskRequest) *DeleteConnectorTaskInvoker {
+	requestDef := GenReqDefForDeleteConnectorTask()
+	return &DeleteConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConnectorTasks 查询Smart Connect任务列表
+//
+// 查询Smart Connect任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ListConnectorTasks(request *model.ListConnectorTasksRequest) (*model.ListConnectorTasksResponse, error) {
+	requestDef := GenReqDefForListConnectorTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConnectorTasksResponse), nil
+	}
+}
+
+// ListConnectorTasksInvoker 查询Smart Connect任务列表
+func (c *KafkaClient) ListConnectorTasksInvoker(request *model.ListConnectorTasksRequest) *ListConnectorTasksInvoker {
+	requestDef := GenReqDefForListConnectorTasks()
+	return &ListConnectorTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PauseConnectorTask 暂停Smart Connect任务
+//
+// 暂停Smart Connect任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) PauseConnectorTask(request *model.PauseConnectorTaskRequest) (*model.PauseConnectorTaskResponse, error) {
+	requestDef := GenReqDefForPauseConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PauseConnectorTaskResponse), nil
+	}
+}
+
+// PauseConnectorTaskInvoker 暂停Smart Connect任务
+func (c *KafkaClient) PauseConnectorTaskInvoker(request *model.PauseConnectorTaskRequest) *PauseConnectorTaskInvoker {
+	requestDef := GenReqDefForPauseConnectorTask()
+	return &PauseConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartConnectorTask 启动未启动的Smart Connect任务/重启已暂停或者运行中的Smart Connect任务
+//
+// 用于**启动未启动的Smart Connect任务**以及**重启已暂停或者运行中的Smart Connect任务**。注意，重启Smart Connect任务将重置同步进度，并重新开始同步任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) RestartConnectorTask(request *model.RestartConnectorTaskRequest) (*model.RestartConnectorTaskResponse, error) {
+	requestDef := GenReqDefForRestartConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartConnectorTaskResponse), nil
+	}
+}
+
+// RestartConnectorTaskInvoker 启动未启动的Smart Connect任务/重启已暂停或者运行中的Smart Connect任务
+func (c *KafkaClient) RestartConnectorTaskInvoker(request *model.RestartConnectorTaskRequest) *RestartConnectorTaskInvoker {
+	requestDef := GenReqDefForRestartConnectorTask()
+	return &RestartConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResumeConnectorTask 启动已暂停的Smart Connect任务
+//
+// 启动已暂停的Smart Connect任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ResumeConnectorTask(request *model.ResumeConnectorTaskRequest) (*model.ResumeConnectorTaskResponse, error) {
+	requestDef := GenReqDefForResumeConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResumeConnectorTaskResponse), nil
+	}
+}
+
+// ResumeConnectorTaskInvoker 启动已暂停的Smart Connect任务
+func (c *KafkaClient) ResumeConnectorTaskInvoker(request *model.ResumeConnectorTaskRequest) *ResumeConnectorTaskInvoker {
+	requestDef := GenReqDefForResumeConnectorTask()
+	return &ResumeConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConnectorTask 查询Smart Connector任务详情
+//
+// 查询Smart Connector任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ShowConnectorTask(request *model.ShowConnectorTaskRequest) (*model.ShowConnectorTaskResponse, error) {
+	requestDef := GenReqDefForShowConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConnectorTaskResponse), nil
+	}
+}
+
+// ShowConnectorTaskInvoker 查询Smart Connector任务详情
+func (c *KafkaClient) ShowConnectorTaskInvoker(request *model.ShowConnectorTaskRequest) *ShowConnectorTaskInvoker {
+	requestDef := GenReqDefForShowConnectorTask()
+	return &ShowConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -12,6 +12,9 @@ type GenStreamGraphReq struct {
 	// SQL
 	SqlBody string `json:"sql_body"`
 
+	// flink版本。可以为空，也可以填写1.10或1.12。
+	FlinkVersion *string `json:"flink_version,omitempty"`
+
 	// CU总数
 	CuNumber *int32 `json:"cu_number,omitempty"`
 

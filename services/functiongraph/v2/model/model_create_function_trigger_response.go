@@ -20,7 +20,7 @@ type CreateFunctionTriggerResponse struct {
 	// \"触发器状态\"  - ACTIVE: 启用状态。 - DISABLED: 禁用状态。
 	TriggerStatus *CreateFunctionTriggerResponseTriggerStatus `json:"trigger_status,omitempty"`
 
-	EventData *TriggerEventDataRequestBody `json:"event_data,omitempty"`
+	EventData *TriggerEventDataResponseBody `json:"event_data,omitempty"`
 
 	// 最后更新时间。
 	LastUpdatedTime *sdktime.SdkTime `json:"last_updated_time,omitempty"`
