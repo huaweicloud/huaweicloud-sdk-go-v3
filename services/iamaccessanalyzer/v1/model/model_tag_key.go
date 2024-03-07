@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TagKey 标记的密钥标识符或名称。
+// TagKey 标签键。
 type TagKey struct {
 }
 

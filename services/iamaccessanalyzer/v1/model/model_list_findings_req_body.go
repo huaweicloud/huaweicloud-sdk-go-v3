@@ -7,6 +7,8 @@ import (
 )
 
 type ListFindingsReqBody struct {
+
+	// 匹配要返回的访问分析结果的筛选器。
 	Filters *[]FindingFilter `json:"filters,omitempty"`
 
 	// 单页最大结果数。

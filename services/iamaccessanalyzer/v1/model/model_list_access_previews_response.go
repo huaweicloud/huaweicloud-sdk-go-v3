@@ -8,6 +8,8 @@ import (
 
 // ListAccessPreviewsResponse Response Object
 type ListAccessPreviewsResponse struct {
+
+	// 访问预览列表。
 	AccessPreviews *[]AccessPreviewSummary `json:"access_previews,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

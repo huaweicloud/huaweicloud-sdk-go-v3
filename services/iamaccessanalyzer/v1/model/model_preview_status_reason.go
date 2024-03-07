@@ -9,9 +9,10 @@ import (
 	"strings"
 )
 
+// PreviewStatusReason 提供有关访问预览当前状态的更多详细信息。
 type PreviewStatusReason struct {
 
-	// 分析预览状态原因
+	// 访问预览当前状态的原因。
 	Code PreviewStatusReasonCode `json:"code"`
 }
 

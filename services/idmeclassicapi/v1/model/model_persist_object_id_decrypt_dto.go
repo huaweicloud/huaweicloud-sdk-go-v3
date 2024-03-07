@@ -9,10 +9,10 @@ import (
 type PersistObjectIdDecryptDto struct {
 
 	// 是否加密。 - true：加密。 - false：不加密。
-	Decrypt bool `json:"decrypt"`
+	Decrypt *bool `json:"decrypt,omitempty"`
 
 	// 唯一标识。
-	Id int64 `json:"id"`
+	Id string `json:"id"`
 }
 
 func (o PersistObjectIdDecryptDto) String() string {

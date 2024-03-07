@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-// FindingFilter 匹配要返回的调查结果的筛选器。
 type FindingFilter struct {
 	Criterion *Criterion `json:"criterion"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Substring json反序列化后的字符串的子串。
+// Substring JSON反序列化后的字符串的子串。
 type Substring struct {
 
 	// 子字符串的起始索引，从0开始。0表示第一个字符。

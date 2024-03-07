@@ -221,18 +221,6 @@ func (i *UpdatePtrRecordInvoker) Invoke() (*model.UpdatePtrRecordResponse, error
 	}
 }
 
-type AssociateHealthCheckInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AssociateHealthCheckInvoker) Invoke() (*model.AssociateHealthCheckResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AssociateHealthCheckResponse), nil
-	}
-}
-
 type BatchDeleteRecordSetWithLineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,18 +302,6 @@ func (i *DeleteRecordSetsInvoker) Invoke() (*model.DeleteRecordSetsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteRecordSetsResponse), nil
-	}
-}
-
-type DisassociateHealthCheckInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DisassociateHealthCheckInvoker) Invoke() (*model.DisassociateHealthCheckResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DisassociateHealthCheckResponse), nil
 	}
 }
 

@@ -917,9 +917,9 @@ func (c *DwsClient) DeleteWorkloadPlanStageInvoker(request *model.DeleteWorkload
 	return &DeleteWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteWorkloadQueue 删除工作负载队列
+// DeleteWorkloadQueue 删除资源池
 //
-// 该接口用于删除工作负载队列。
+// 该接口用于删除资源池。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteWorkloadQueue(request *model.DeleteWorkloadQueueRequest) (*model.DeleteWorkloadQueueResponse, error) {
@@ -932,7 +932,7 @@ func (c *DwsClient) DeleteWorkloadQueue(request *model.DeleteWorkloadQueueReques
 	}
 }
 
-// DeleteWorkloadQueueInvoker 删除工作负载队列
+// DeleteWorkloadQueueInvoker 删除资源池
 func (c *DwsClient) DeleteWorkloadQueueInvoker(request *model.DeleteWorkloadQueueRequest) *DeleteWorkloadQueueInvoker {
 	requestDef := GenReqDefForDeleteWorkloadQueue()
 	return &DeleteWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

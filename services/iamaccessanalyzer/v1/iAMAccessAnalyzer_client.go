@@ -21,7 +21,7 @@ func IAMAccessAnalyzerClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // CreateAnalyzer 创建分析器
 //
-// 为您的帐号或者组织创建分析器。
+// 为您的账号或者组织创建分析器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IAMAccessAnalyzerClient) CreateAnalyzer(request *model.CreateAnalyzerRequest) (*model.CreateAnalyzerResponse, error) {
@@ -250,9 +250,9 @@ func (c *IAMAccessAnalyzerClient) UpdateArchiveRuleInvoker(request *model.Update
 	return &UpdateArchiveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFindings 检索指定分析器生成的结果列表
+// ListFindings 检索指定分析器生成的访问分析结果列表
 //
-// 检索指定分析器生成的查找结果列表。
+// 检索指定分析器生成的访问分析结果列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IAMAccessAnalyzerClient) ListFindings(request *model.ListFindingsRequest) (*model.ListFindingsResponse, error) {
@@ -265,7 +265,7 @@ func (c *IAMAccessAnalyzerClient) ListFindings(request *model.ListFindingsReques
 	}
 }
 
-// ListFindingsInvoker 检索指定分析器生成的结果列表
+// ListFindingsInvoker 检索指定分析器生成的访问分析结果列表
 func (c *IAMAccessAnalyzerClient) ListFindingsInvoker(request *model.ListFindingsRequest) *ListFindingsInvoker {
 	requestDef := GenReqDefForListFindings()
 	return &ListFindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -294,7 +294,7 @@ func (c *IAMAccessAnalyzerClient) ShowFindingInvoker(request *model.ShowFindingR
 
 // UpdateFindings 更新指定结果的状态
 //
-// 更新指定调查结果的状态。
+// 更新指定访问分析结果的状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IAMAccessAnalyzerClient) UpdateFindings(request *model.UpdateFindingsRequest) (*model.UpdateFindingsResponse, error) {
@@ -376,9 +376,9 @@ func (c *IAMAccessAnalyzerClient) ListAccessPreviewsInvoker(request *model.ListA
 	return &ListAccessPreviewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPreviewFindings 获取相关预览生成的findings
+// ListPreviewFindings 获取相关预览生成的分析结果
 //
-// 获取指定预览生成的findings
+// 获取相关预览生成的分析结果
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IAMAccessAnalyzerClient) ListPreviewFindings(request *model.ListPreviewFindingsRequest) (*model.ListPreviewFindingsResponse, error) {
@@ -391,7 +391,7 @@ func (c *IAMAccessAnalyzerClient) ListPreviewFindings(request *model.ListPreview
 	}
 }
 
-// ListPreviewFindingsInvoker 获取相关预览生成的findings
+// ListPreviewFindingsInvoker 获取相关预览生成的分析结果
 func (c *IAMAccessAnalyzerClient) ListPreviewFindingsInvoker(request *model.ListPreviewFindingsRequest) *ListPreviewFindingsInvoker {
 	requestDef := GenReqDefForListPreviewFindings()
 	return &ListPreviewFindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

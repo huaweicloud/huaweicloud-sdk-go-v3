@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ArchiveRuleName 创建归档规则的名称。
+// ArchiveRuleName 创建存档规则的名称。
 type ArchiveRuleName struct {
 }
 

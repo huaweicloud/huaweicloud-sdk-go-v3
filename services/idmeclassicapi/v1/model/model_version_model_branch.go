@@ -15,7 +15,7 @@ type VersionModelBranch struct {
 	Creator *string `json:"creator,omitempty"`
 
 	// 唯一标识。
-	Id *int64 `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 最后更新时间。
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`

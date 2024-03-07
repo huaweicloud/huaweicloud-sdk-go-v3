@@ -82,7 +82,7 @@ type InstanceResponse struct {
 	// 内存大小（单位：GB）。
 	Mem *string `json:"mem,omitempty"`
 
-	Volume *Volume `json:"volume"`
+	Volume *VolumeForInstanceResponse `json:"volume"`
 
 	// 区域ID。
 	Region string `json:"region"`

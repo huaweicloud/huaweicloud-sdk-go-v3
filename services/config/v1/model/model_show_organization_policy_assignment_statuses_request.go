@@ -12,6 +12,9 @@ type ShowOrganizationPolicyAssignmentStatusesRequest struct {
 	// 组织ID。
 	OrganizationId string `json:"organization_id"`
 
+	// 组织合规规则ID
+	OrganizationPolicyAssignmentId *string `json:"organization_policy_assignment_id,omitempty"`
+
 	// 组织合规规则名称。
 	OrganizationPolicyAssignmentName *string `json:"organization_policy_assignment_name,omitempty"`
 

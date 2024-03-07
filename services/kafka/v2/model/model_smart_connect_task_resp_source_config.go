@@ -57,10 +57,10 @@ type SmartConnectTaskRespSourceConfig struct {
 	SyncConsumerOffsetsEnabled *bool `json:"sync_consumer_offsets_enabled,omitempty"`
 
 	// 副本数。（仅源端类型为Kafka时会显示）
-	ReplicationFactor *string `json:"replication_factor,omitempty"`
+	ReplicationFactor *int32 `json:"replication_factor,omitempty"`
 
 	// 任务数。（仅源端类型为Kafka时会显示）
-	TaskNum *string `json:"task_num,omitempty"`
+	TaskNum *int32 `json:"task_num,omitempty"`
 
 	// 是否重命名Topic。（仅源端类型为Kafka时会显示）
 	RenameTopicEnable *bool `json:"rename_topic_enable,omitempty"`

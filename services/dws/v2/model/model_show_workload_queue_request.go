@@ -14,6 +14,9 @@ type ShowWorkloadQueueRequest struct {
 
 	// 资源队列名
 	QueueName string `json:"queue_name"`
+
+	// 逻辑集群名称。非逻辑集群模式下该字段不填,逻辑集群模式下需指定逻辑集群名称。
+	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 }
 
 func (o ShowWorkloadQueueRequest) String() string {

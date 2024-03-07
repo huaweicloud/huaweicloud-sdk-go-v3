@@ -12,7 +12,7 @@ import (
 // StatusReason 提供有关分析器当前状态的更多详细信息。
 type StatusReason struct {
 
-	// 分析器的当前状态的原因。
+	// 分析器当前状态的原因。
 	Code StatusReasonCode `json:"code"`
 }
 

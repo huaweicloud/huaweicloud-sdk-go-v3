@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// Configuration 访问预览配置。
 type Configuration struct {
 	IamAgency *IamAgency `json:"iam_agency,omitempty"`
 

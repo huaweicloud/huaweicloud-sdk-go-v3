@@ -593,6 +593,18 @@ func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse,
 	}
 }
 
+type ShowPipelineArtifactsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineArtifactsInvoker) Invoke() (*model.ShowPipelineArtifactsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPipelineArtifactsResponse), nil
+	}
+}
+
 type ShowPipelineDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -746,6 +758,18 @@ func (i *ShowRuleInvoker) Invoke() (*model.ShowRuleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowRuleResponse), nil
+	}
+}
+
+type ShowStepOutputsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStepOutputsInvoker) Invoke() (*model.ShowStepOutputsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStepOutputsResponse), nil
 	}
 }
 

@@ -37,6 +37,15 @@ type JobDetailInfo struct {
 	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
+	// 桌面名称。
+	DesktopName *string `json:"desktop_name,omitempty"`
+
+	// ip地址。
+	IpAddress *string `json:"ip_address,omitempty"`
+
+	// mac地址。
+	MacAddress *string `json:"mac_address,omitempty"`
+
 	// 任务进度。
 	Process *int32 `json:"process,omitempty"`
 }

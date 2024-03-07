@@ -1048,6 +1048,27 @@ func (c *CodeArtsPipelineClient) ShowInstanceStatusInvoker(request *model.ShowIn
 	return &ShowInstanceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPipelineArtifacts 查询流水线上的构建产物
+//
+// 查询流水线上的构建产物
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowPipelineArtifacts(request *model.ShowPipelineArtifactsRequest) (*model.ShowPipelineArtifactsResponse, error) {
+	requestDef := GenReqDefForShowPipelineArtifacts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPipelineArtifactsResponse), nil
+	}
+}
+
+// ShowPipelineArtifactsInvoker 查询流水线上的构建产物
+func (c *CodeArtsPipelineClient) ShowPipelineArtifactsInvoker(request *model.ShowPipelineArtifactsRequest) *ShowPipelineArtifactsInvoker {
+	requestDef := GenReqDefForShowPipelineArtifacts()
+	return &ShowPipelineArtifactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPipelineDetail 查询流水线详情
 //
 // 查询流水线详情
@@ -1319,6 +1340,27 @@ func (c *CodeArtsPipelineClient) ShowRule(request *model.ShowRuleRequest) (*mode
 func (c *CodeArtsPipelineClient) ShowRuleInvoker(request *model.ShowRuleRequest) *ShowRuleInvoker {
 	requestDef := GenReqDefForShowRule()
 	return &ShowRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStepOutputs 获取流水线步骤执行输出
+//
+// 获取流水线步骤执行输出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowStepOutputs(request *model.ShowStepOutputsRequest) (*model.ShowStepOutputsResponse, error) {
+	requestDef := GenReqDefForShowStepOutputs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStepOutputsResponse), nil
+	}
+}
+
+// ShowStepOutputsInvoker 获取流水线步骤执行输出
+func (c *CodeArtsPipelineClient) ShowStepOutputsInvoker(request *model.ShowStepOutputsRequest) *ShowStepOutputsInvoker {
+	requestDef := GenReqDefForShowStepOutputs()
+	return &ShowStepOutputsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowStrategy 获取策略详情

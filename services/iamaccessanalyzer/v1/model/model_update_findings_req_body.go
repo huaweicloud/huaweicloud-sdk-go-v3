@@ -11,13 +11,13 @@ import (
 
 type UpdateFindingsReqBody struct {
 
-	// 要更新的调查结果的ID。
+	// 要更新的访问分析结果唯一标识符数组。
 	Ids *[]string `json:"ids,omitempty"`
 
-	// 唯一的资源名称。
+	// 访问分析的唯一资源标识。
 	ResourceUrn *string `json:"resource_urn,omitempty"`
 
-	// 状态表示为更新查找状态而要采取的操作。使用“存档”将活动查找更改为存档查找。使用“活动”将存档的查找更改为活动查找。
+	// 要更新的访问分析结果状态。
 	Status UpdateFindingsReqBodyStatus `json:"status"`
 }
 

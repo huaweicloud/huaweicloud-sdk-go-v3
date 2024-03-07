@@ -15,7 +15,7 @@ type VersionModelVersionMasterQueryDto struct {
 	Iteration *int32 `json:"iteration,omitempty"`
 
 	// 主对象ID。
-	MasterId *int64 `json:"masterId,omitempty"`
+	MasterId *string `json:"masterId,omitempty"`
 
 	// 版本号。
 	Version *string `json:"version,omitempty"`

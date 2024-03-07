@@ -16,12 +16,6 @@ type JobEntities struct {
 
 	// 用户名。
 	UserName *string `json:"user_name,omitempty"`
-
-	// 桌面名称。
-	DesktopName *string `json:"desktop_name,omitempty"`
-
-	// ip地址。
-	IpAddress *string `json:"ip_address,omitempty"`
 }
 
 func (o JobEntities) String() string {

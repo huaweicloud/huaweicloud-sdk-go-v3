@@ -17,7 +17,7 @@ type VersionModelVersionReviseAndUpdateDtoVersionModel struct {
 	Data *VersionModel `json:"data,omitempty"`
 
 	// 主对象ID。
-	MasterId int64 `json:"masterId"`
+	MasterId string `json:"masterId"`
 
 	Modifier *string `json:"modifier,omitempty"`
 

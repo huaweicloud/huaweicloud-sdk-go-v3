@@ -77,18 +77,6 @@ func (i *CloseKafkaManagerInvoker) Invoke() (*model.CloseKafkaManagerResponse, e
 	}
 }
 
-type CreateDeleteConnectorOrderInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDeleteConnectorOrderInvoker) Invoke() (*model.CreateDeleteConnectorOrderResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDeleteConnectorOrderResponse), nil
-	}
-}
-
 type CreateInstanceByEngineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -173,18 +161,6 @@ func (i *CreateReassignmentTaskInvoker) Invoke() (*model.CreateReassignmentTaskR
 	}
 }
 
-type CreateSinkTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSinkTaskInvoker) Invoke() (*model.CreateSinkTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSinkTaskResponse), nil
-	}
-}
-
 type DeleteBackgroundTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,18 +194,6 @@ func (i *DeleteKafkaUserClientQuotaTaskInvoker) Invoke() (*model.DeleteKafkaUser
 		return nil, err
 	} else {
 		return result.(*model.DeleteKafkaUserClientQuotaTaskResponse), nil
-	}
-}
-
-type DeleteSinkTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteSinkTaskInvoker) Invoke() (*model.DeleteSinkTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteSinkTaskResponse), nil
 	}
 }
 
@@ -314,18 +278,6 @@ func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListProductsResponse), nil
-	}
-}
-
-type ListSinkTasksInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSinkTasksInvoker) Invoke() (*model.ListSinkTasksResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSinkTasksResponse), nil
 	}
 }
 
@@ -722,18 +674,6 @@ func (i *ShowPartitionMessageInvoker) Invoke() (*model.ShowPartitionMessageRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowPartitionMessageResponse), nil
-	}
-}
-
-type ShowSinkTaskDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSinkTaskDetailInvoker) Invoke() (*model.ShowSinkTaskDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSinkTaskDetailResponse), nil
 	}
 }
 

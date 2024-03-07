@@ -11,6 +11,7 @@ type CreateAnalyzerReqBody struct {
 	// 分析器的名称。
 	Name string `json:"name"`
 
+	// 自定义标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	Type *AnalyzerType `json:"type"`

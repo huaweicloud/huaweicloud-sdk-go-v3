@@ -12,7 +12,7 @@ import (
 type Job struct {
 
 	// 作业类型： - NORMAL_JOB：表/文件迁移。 - BATCH_JOB：整库迁移。 - SCENARIO_JOB：场景迁移。
-	JobType *JobJobType `json:"job_type,omitempty"`
+	JobType JobJobType `json:"job_type"`
 
 	// 源端连接类型
 	FromConnectorName string `json:"from-connector-name"`
@@ -27,13 +27,13 @@ type Job struct {
 	FromConfigValues *ConfigValues `json:"from-config-values"`
 
 	// 目的端连接类型
-	ToConnectorName *string `json:"to-connector-name,omitempty"`
+	ToConnectorName string `json:"to-connector-name"`
 
 	// 作业名称，长度在1到240个字符之间
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 源连接名称
-	FromLinkName *string `json:"from-link-name,omitempty"`
+	FromLinkName string `json:"from-link-name"`
 
 	// 创建的用户。
 	CreationUser *string `json:"creation-user,omitempty"`

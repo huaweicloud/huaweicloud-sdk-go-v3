@@ -12,10 +12,10 @@ import (
 // FindingPrincipal 访问信任区域内资源的外部主体。
 type FindingPrincipal struct {
 
-	// 检索结果的身份的类型。
+	// 外部主体身份的标识符。
 	Identifier string `json:"identifier"`
 
-	// 检索结果的标识符。
+	// 外部主体身份的类型。
 	Type FindingPrincipalType `json:"type"`
 }
 

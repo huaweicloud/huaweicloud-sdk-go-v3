@@ -1181,6 +1181,18 @@ func (i *UpdateConfigurationInvoker) Invoke() (*model.UpdateConfigurationRespons
 	}
 }
 
+type UpdateDatabasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDatabasesInvoker) Invoke() (*model.UpdateDatabasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDatabasesResponse), nil
+	}
+}
+
 type UpdateHighRiskCommandsInvoker struct {
 	*invoker.BaseInvoker
 }

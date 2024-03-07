@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// PublicIp 弹性IP信息。
 type PublicIp struct {
 
 	// 弹性IP唯一标识

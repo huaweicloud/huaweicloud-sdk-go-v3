@@ -7,9 +7,11 @@ import (
 )
 
 type CreateArchiveRuleReqBody struct {
+
+	// 匹配要返回的访问分析结果的筛选器。
 	Filters []FindingFilter `json:"filters"`
 
-	// 创建归档规则的名称。
+	// 创建存档规则的名称。
 	Name string `json:"name"`
 }
 

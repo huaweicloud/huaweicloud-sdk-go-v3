@@ -397,6 +397,27 @@ func (c *RdsClient) CreateRestoreInstanceInvoker(request *model.CreateRestoreIns
 	return &CreateRestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSqlLimit 新增SQL限流
+//
+// 新增SQL限流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateSqlLimit(request *model.CreateSqlLimitRequest) (*model.CreateSqlLimitResponse, error) {
+	requestDef := GenReqDefForCreateSqlLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlLimitResponse), nil
+	}
+}
+
+// CreateSqlLimitInvoker 新增SQL限流
+func (c *RdsClient) CreateSqlLimitInvoker(request *model.CreateSqlLimitRequest) *CreateSqlLimitInvoker {
+	requestDef := GenReqDefForCreateSqlLimit()
+	return &CreateSqlLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateXelLogDownload 获取扩展日志下载信息
 //
 // 获取扩展日志下载信息
@@ -561,6 +582,27 @@ func (c *RdsClient) DeleteRdSforMySqlProxy(request *model.DeleteRdSforMySqlProxy
 func (c *RdsClient) DeleteRdSforMySqlProxyInvoker(request *model.DeleteRdSforMySqlProxyRequest) *DeleteRdSforMySqlProxyInvoker {
 	requestDef := GenReqDefForDeleteRdSforMySqlProxy()
 	return &DeleteRdSforMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSqlLimit 删除SQL限流
+//
+// 删除SQL限流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteSqlLimit(request *model.DeleteSqlLimitRequest) (*model.DeleteSqlLimitResponse, error) {
+	requestDef := GenReqDefForDeleteSqlLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlLimitResponse), nil
+	}
+}
+
+// DeleteSqlLimitInvoker 删除SQL限流
+func (c *RdsClient) DeleteSqlLimitInvoker(request *model.DeleteSqlLimitRequest) *DeleteSqlLimitInvoker {
+	requestDef := GenReqDefForDeleteSqlLimit()
+	return &DeleteSqlLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadSlowlog 获取慢日志下载链接
@@ -1471,6 +1513,27 @@ func (c *RdsClient) ListSlowlogStatisticsInvoker(request *model.ListSlowlogStati
 	return &ListSlowlogStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSqlLimit 查询SQL限流列表
+//
+// 查询SQL限流列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSqlLimit(request *model.ListSqlLimitRequest) (*model.ListSqlLimitResponse, error) {
+	requestDef := GenReqDefForListSqlLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlLimitResponse), nil
+	}
+}
+
+// ListSqlLimitInvoker 查询SQL限流列表
+func (c *RdsClient) ListSqlLimitInvoker(request *model.ListSqlLimitRequest) *ListSqlLimitInvoker {
+	requestDef := GenReqDefForListSqlLimit()
+	return &ListSqlLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSslCertDownloadLink 获取SSL证书下载地址
 //
 // 获取SSL证书下载地址
@@ -2295,6 +2358,27 @@ func (c *RdsClient) ShowSecondLevelMonitoringInvoker(request *model.ShowSecondLe
 	return &ShowSecondLevelMonitoringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowStorageUsedSpace 查询实例磁盘空间使用量
+//
+// 查询实例磁盘空间使用量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowStorageUsedSpace(request *model.ShowStorageUsedSpaceRequest) (*model.ShowStorageUsedSpaceResponse, error) {
+	requestDef := GenReqDefForShowStorageUsedSpace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStorageUsedSpaceResponse), nil
+	}
+}
+
+// ShowStorageUsedSpaceInvoker 查询实例磁盘空间使用量
+func (c *RdsClient) ShowStorageUsedSpaceInvoker(request *model.ShowStorageUsedSpaceRequest) *ShowStorageUsedSpaceInvoker {
+	requestDef := GenReqDefForShowStorageUsedSpace()
+	return &ShowStorageUsedSpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTdeStatus 根据实例id查询sqlserver TDE状态
 //
 // 根据实例id查询sqlserver TDE状态
@@ -2547,6 +2631,27 @@ func (c *RdsClient) StopInstanceInvoker(request *model.StopInstanceRequest) *Sto
 	return &StopInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchSqlLimit 开启/关闭/禁用所有SQL限流
+//
+// 开启/关闭/禁用所有SQL限流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchSqlLimit(request *model.SwitchSqlLimitRequest) (*model.SwitchSqlLimitResponse, error) {
+	requestDef := GenReqDefForSwitchSqlLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSqlLimitResponse), nil
+	}
+}
+
+// SwitchSqlLimitInvoker 开启/关闭/禁用所有SQL限流
+func (c *RdsClient) SwitchSqlLimitInvoker(request *model.SwitchSqlLimitRequest) *SwitchSqlLimitInvoker {
+	requestDef := GenReqDefForSwitchSqlLimit()
+	return &SwitchSqlLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchSsl 设置SSL数据加密
 //
 // 设置SSL数据加密。
@@ -2755,6 +2860,27 @@ func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresq
 func (c *RdsClient) UpdatePostgresqlInstanceAliasInvoker(request *model.UpdatePostgresqlInstanceAliasRequest) *UpdatePostgresqlInstanceAliasInvoker {
 	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
 	return &UpdatePostgresqlInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSqlLimit 修改SQL限流
+//
+// 修改SQL限流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateSqlLimit(request *model.UpdateSqlLimitRequest) (*model.UpdateSqlLimitResponse, error) {
+	requestDef := GenReqDefForUpdateSqlLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSqlLimitResponse), nil
+	}
+}
+
+// UpdateSqlLimitInvoker 修改SQL限流
+func (c *RdsClient) UpdateSqlLimitInvoker(request *model.UpdateSqlLimitRequest) *UpdateSqlLimitInvoker {
+	requestDef := GenReqDefForUpdateSqlLimit()
+	return &UpdateSqlLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTdeStatus sqlserverTDE开关

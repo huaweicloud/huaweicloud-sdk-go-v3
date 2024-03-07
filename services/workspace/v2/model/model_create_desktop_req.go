@@ -36,7 +36,7 @@ type CreateDesktopReq struct {
 	Nics *[]Nic `json:"nics,omitempty"`
 
 	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组。
-	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 
 	// 创建桌面使用的参数列表。长度为1-100。  当前不支持一批桌面不同配置，所有桌面的配置和第一台的一致，如果第一台未设置参数，则取外层的同名参数。
 	Desktops []Desktop `json:"desktops"`

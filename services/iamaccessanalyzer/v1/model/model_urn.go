@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Urn 唯一的资源名称。
+// Urn 访问分析的唯一资源标识。
 type Urn struct {
 }
 

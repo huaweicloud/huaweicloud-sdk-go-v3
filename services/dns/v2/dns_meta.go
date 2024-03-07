@@ -376,26 +376,6 @@ func GenReqDefForUpdatePtrRecord() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAssociateHealthCheck() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v2.1/recordsets/{recordset_id}/associatehealthcheck").
-		WithResponse(new(model.AssociateHealthCheckResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RecordsetId").
-		WithJsonTag("recordset_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForBatchDeleteRecordSetWithLine() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -531,26 +511,6 @@ func GenReqDefForDeleteRecordSets() *def.HttpRequestDef {
 		WithName("RecordsetId").
 		WithJsonTag("recordset_id").
 		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDisassociateHealthCheck() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2.1/recordsets/{recordset_id}/disassociatehealthcheck").
-		WithResponse(new(model.DisassociateHealthCheckResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RecordsetId").
-		WithJsonTag("recordset_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

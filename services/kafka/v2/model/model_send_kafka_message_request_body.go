@@ -16,7 +16,7 @@ type SendKafkaMessageRequestBody struct {
 	Body string `json:"body"`
 
 	// topic的分区信息等
-	PropertyList []interface{} `json:"property_list"`
+	PropertyList []SendKafkaMessageRequestBodyPropertyList `json:"property_list"`
 }
 
 func (o SendKafkaMessageRequestBody) String() string {

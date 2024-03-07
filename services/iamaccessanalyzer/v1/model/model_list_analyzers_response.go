@@ -8,6 +8,8 @@ import (
 
 // ListAnalyzersResponse Response Object
 type ListAnalyzersResponse struct {
+
+	// 分析器列表信息。
 	Analyzers *[]AnalyzerSummary `json:"analyzers,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

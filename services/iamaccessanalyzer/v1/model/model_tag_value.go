@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TagValue 与标记键关联的字符串值。
+// TagValue 与标签键关联的字符串值。
 type TagValue struct {
 }
 

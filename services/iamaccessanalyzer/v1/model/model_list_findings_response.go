@@ -8,6 +8,8 @@ import (
 
 // ListFindingsResponse Response Object
 type ListFindingsResponse struct {
+
+	// 访问分析结果列表。
 	Findings *[]Finding `json:"findings,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

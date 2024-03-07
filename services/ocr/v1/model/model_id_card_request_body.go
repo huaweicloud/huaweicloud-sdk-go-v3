@@ -33,6 +33,12 @@ type IdCardRequestBody struct {
 	// 返回头像位置信息的开关，默认false，可选值如下所示：  - true ：开启返回头像位置信息的功能 - false : 关闭返回头像位置信息的功能
 	ReturnPortraitLocation *bool `json:"return_portrait_location,omitempty"`
 
+	// 返回头像图片信息（base64码）的开关，默认false，可选值如下所示：  - true ：开启头像图片信息（base64码）的功能 - false : 关闭头像图片信息（base64码）的功能
+	ReturnPortraitImage *bool `json:"return_portrait_image,omitempty"`
+
+	// 返回身份证卡面（base64码）的开关，默认false，可选值如下所示：  - true ：开启身份证卡面（base64码）的功能 - false : 关闭身份证卡面（base64码）的功能
+	ReturnAdjustedImage *bool `json:"return_adjusted_image,omitempty"`
+
 	// 身份证图像PS告警功能开关，默认false，可选值如下：  - true ：开启身份证图像PS告警功能 - false : 关闭身份证图像告警功能
 	DetectTampering *bool `json:"detect_tampering,omitempty"`
 

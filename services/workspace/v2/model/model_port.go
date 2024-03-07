@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// Port 私有IP信息。
 type Port struct {
 
 	// 私有IP唯一标识

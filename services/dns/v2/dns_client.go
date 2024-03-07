@@ -397,27 +397,6 @@ func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest
 	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AssociateHealthCheck Record Set关联健康检查
-//
-// Record Set关联健康检查。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) AssociateHealthCheck(request *model.AssociateHealthCheckRequest) (*model.AssociateHealthCheckResponse, error) {
-	requestDef := GenReqDefForAssociateHealthCheck()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AssociateHealthCheckResponse), nil
-	}
-}
-
-// AssociateHealthCheckInvoker Record Set关联健康检查
-func (c *DnsClient) AssociateHealthCheckInvoker(request *model.AssociateHealthCheckRequest) *AssociateHealthCheckInvoker {
-	requestDef := GenReqDefForAssociateHealthCheck()
-	return &AssociateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchDeleteRecordSetWithLine 批量删除某个Zone下的Record Set资源
 //
 // 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
@@ -565,27 +544,6 @@ func (c *DnsClient) DeleteRecordSets(request *model.DeleteRecordSetsRequest) (*m
 func (c *DnsClient) DeleteRecordSetsInvoker(request *model.DeleteRecordSetsRequest) *DeleteRecordSetsInvoker {
 	requestDef := GenReqDefForDeleteRecordSets()
 	return &DeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DisassociateHealthCheck Record Set解关联健康检查
-//
-// Record Set解关联健康检查。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DisassociateHealthCheck(request *model.DisassociateHealthCheckRequest) (*model.DisassociateHealthCheckResponse, error) {
-	requestDef := GenReqDefForDisassociateHealthCheck()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DisassociateHealthCheckResponse), nil
-	}
-}
-
-// DisassociateHealthCheckInvoker Record Set解关联健康检查
-func (c *DnsClient) DisassociateHealthCheckInvoker(request *model.DisassociateHealthCheckRequest) *DisassociateHealthCheckInvoker {
-	requestDef := GenReqDefForDisassociateHealthCheck()
-	return &DisassociateHealthCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRecordSets 查询租户Record Set资源列表

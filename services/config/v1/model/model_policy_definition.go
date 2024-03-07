@@ -15,6 +15,9 @@ type PolicyDefinition struct {
 	// 策略名字
 	Name *string `json:"name,omitempty"`
 
+	// 策略展示名
+	DisplayName *string `json:"display_name,omitempty"`
+
 	// 策略类型
 	PolicyType *string `json:"policy_type,omitempty"`
 

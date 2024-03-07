@@ -17,25 +17,26 @@ type AnalyzerSummary struct {
 	// 分析器的唯一标识符。
 	Id string `json:"id"`
 
-	// 唯一的资源名称。
+	// 访问分析的唯一资源标识。
 	LastAnalyzedResource *string `json:"last_analyzed_resource,omitempty"`
 
-	// 分析最近分析的资源的时间。
+	// 最近一次分析资源的时间。
 	LastResourceAnalyzedAt *sdktime.SdkTime `json:"last_resource_analyzed_at,omitempty"`
 
 	// 分析器的名称。
 	Name string `json:"name"`
 
-	// 分析器的状态
+	// 分析器的状态。
 	Status AnalyzerSummaryStatus `json:"status"`
 
 	StatusReason *StatusReason `json:"status_reason,omitempty"`
 
+	// 自定义标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	Type *AnalyzerType `json:"type"`
 
-	// 唯一的资源名称。
+	// 访问分析的唯一资源标识。
 	Urn string `json:"urn"`
 }
 

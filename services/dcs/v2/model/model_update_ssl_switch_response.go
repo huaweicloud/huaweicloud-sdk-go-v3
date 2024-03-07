@@ -10,7 +10,13 @@ import (
 type UpdateSslSwitchResponse struct {
 
 	// DCS任务ID。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
+
+	// 实例ID。
+	InstanceId *string `json:"instance_id,omitempty"`
+
+	// 执行结果。
+	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

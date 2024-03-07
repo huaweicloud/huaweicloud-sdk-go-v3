@@ -24,6 +24,27 @@ type TemplateParameterDefinition struct {
 	// 预定义合规包模板参数允许值列表。
 	AllowedValues *[]interface{} `json:"allowed_values,omitempty"`
 
+	// 策略参数的最小值，当参数类型为Integer或Float时生效。
+	Minimum *float32 `json:"minimum,omitempty"`
+
+	// 策略参数的最大值，当参数类型为Integer或Float时生效。
+	Maximum *float32 `json:"maximum,omitempty"`
+
+	// 策略参数的最小项数，当参数类型为Array时生效。
+	MinItems *int32 `json:"min_items,omitempty"`
+
+	// 策略参数的最大项数，当参数类型为Array时生效。
+	MaxItems *int32 `json:"max_items,omitempty"`
+
+	// 策略参数的最小字符串长度或每项的最小字符串长度，当参数类型为String或Array时生效。
+	MinLength *int32 `json:"min_length,omitempty"`
+
+	// 策略参数的最大字符串长度或每项的最大字符串长度，当参数类型为String或Array时生效。
+	MaxLength *int32 `json:"max_length,omitempty"`
+
+	// 策略参数的字符串正则要求或每项的字符串正则要求，当参数类型为String或Array时生效。
+	Pattern *string `json:"pattern,omitempty"`
+
 	// 预定义合规包模板参数类型。
 	Type *TemplateParameterDefinitionType `json:"type,omitempty"`
 }

@@ -6,13 +6,12 @@ import (
 	"strings"
 )
 
-// Tag 自定义键值对。
 type Tag struct {
 
-	// 标记的密钥标识符或名称。
+	// 标签键。
 	Key string `json:"key"`
 
-	// 与标记键关联的字符串值。
+	// 与标签键关联的字符串值。
 	Value string `json:"value"`
 }
 

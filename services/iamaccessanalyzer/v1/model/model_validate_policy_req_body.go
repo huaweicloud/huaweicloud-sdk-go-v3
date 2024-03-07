@@ -8,7 +8,7 @@ import (
 
 type ValidatePolicyReqBody struct {
 
-	// 此策略的json格式策略文档。
+	// 该策略JSON格式策略文档。
 	PolicyDocument string `json:"policy_document"`
 
 	PolicyType *PolicyType `json:"policy_type"`

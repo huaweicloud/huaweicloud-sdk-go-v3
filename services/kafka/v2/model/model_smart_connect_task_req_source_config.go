@@ -63,10 +63,10 @@ type SmartConnectTaskReqSourceConfig struct {
 	SyncConsumerOffsetsEnabled *bool `json:"sync_consumer_offsets_enabled,omitempty"`
 
 	// 在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
-	ReplicationFactor *string `json:"replication_factor,omitempty"`
+	ReplicationFactor *int32 `json:"replication_factor,omitempty"`
 
 	// 数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
-	TaskNum *string `json:"task_num,omitempty"`
+	TaskNum *int32 `json:"task_num,omitempty"`
 
 	// 是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
 	RenameTopicEnable *bool `json:"rename_topic_enable,omitempty"`

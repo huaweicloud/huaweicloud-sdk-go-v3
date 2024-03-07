@@ -124,6 +124,48 @@ func (c *WorkspaceClient) UpdateAccessPolicyObjectsInvoker(request *model.Update
 	return &UpdateAccessPolicyObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAgencies 开通委托功能
+//
+// 开通委托功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateAgencies(request *model.CreateAgenciesRequest) (*model.CreateAgenciesResponse, error) {
+	requestDef := GenReqDefForCreateAgencies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgenciesResponse), nil
+	}
+}
+
+// CreateAgenciesInvoker 开通委托功能
+func (c *WorkspaceClient) CreateAgenciesInvoker(request *model.CreateAgenciesRequest) *CreateAgenciesInvoker {
+	requestDef := GenReqDefForCreateAgencies()
+	return &CreateAgenciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAgencies 查询委托功能
+//
+// 查询委托功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListAgencies(request *model.ListAgenciesRequest) (*model.ListAgenciesResponse, error) {
+	requestDef := GenReqDefForListAgencies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAgenciesResponse), nil
+	}
+}
+
+// ListAgenciesInvoker 查询委托功能
+func (c *WorkspaceClient) ListAgenciesInvoker(request *model.ListAgenciesRequest) *ListAgenciesInvoker {
+	requestDef := GenReqDefForListAgencies()
+	return &ListAgenciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAssistAuthConfig 查询辅助认证配置
 //
 // 查询辅助认证的配置信息
@@ -248,6 +290,27 @@ func (c *WorkspaceClient) ListLoginRecordsNew(request *model.ListLoginRecordsNew
 func (c *WorkspaceClient) ListLoginRecordsNewInvoker(request *model.ListLoginRecordsNewRequest) *ListLoginRecordsNewInvoker {
 	requestDef := GenReqDefForListLoginRecordsNew()
 	return &ListLoginRecordsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachInstances 分配用户
+//
+// 将桌面分配给用户
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) AttachInstances(request *model.AttachInstancesRequest) (*model.AttachInstancesResponse, error) {
+	requestDef := GenReqDefForAttachInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachInstancesResponse), nil
+	}
+}
+
+// AttachInstancesInvoker 分配用户
+func (c *WorkspaceClient) AttachInstancesInvoker(request *model.AttachInstancesRequest) *AttachInstancesInvoker {
+	requestDef := GenReqDefForAttachInstances()
+	return &AttachInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteDesktops 批量删除桌面
@@ -395,6 +458,27 @@ func (c *WorkspaceClient) DeleteDesktop(request *model.DeleteDesktopRequest) (*m
 func (c *WorkspaceClient) DeleteDesktopInvoker(request *model.DeleteDesktopRequest) *DeleteDesktopInvoker {
 	requestDef := GenReqDefForDeleteDesktop()
 	return &DeleteDesktopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachInstances 解绑用户
+//
+// 将桌面和用户解绑
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DetachInstances(request *model.DetachInstancesRequest) (*model.DetachInstancesResponse, error) {
+	requestDef := GenReqDefForDetachInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachInstancesResponse), nil
+	}
+}
+
+// DetachInstancesInvoker 解绑用户
+func (c *WorkspaceClient) DetachInstancesInvoker(request *model.DetachInstancesRequest) *DetachInstancesInvoker {
+	requestDef := GenReqDefForDetachInstances()
+	return &DetachInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDesktops 查询桌面列表
@@ -1109,6 +1193,354 @@ func (c *WorkspaceClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.S
 func (c *WorkspaceClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
 	requestDef := GenReqDefForShowQuotas()
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteScheduledTasks 批量删除定时任务
+//
+// 批量删除定时任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteScheduledTasks(request *model.BatchDeleteScheduledTasksRequest) (*model.BatchDeleteScheduledTasksResponse, error) {
+	requestDef := GenReqDefForBatchDeleteScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteScheduledTasksResponse), nil
+	}
+}
+
+// BatchDeleteScheduledTasksInvoker 批量删除定时任务
+func (c *WorkspaceClient) BatchDeleteScheduledTasksInvoker(request *model.BatchDeleteScheduledTasksRequest) *BatchDeleteScheduledTasksInvoker {
+	requestDef := GenReqDefForBatchDeleteScheduledTasks()
+	return &BatchDeleteScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateScheduledTasks 创建定时任务
+//
+// 创建定时任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateScheduledTasks(request *model.CreateScheduledTasksRequest) (*model.CreateScheduledTasksResponse, error) {
+	requestDef := GenReqDefForCreateScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScheduledTasksResponse), nil
+	}
+}
+
+// CreateScheduledTasksInvoker 创建定时任务
+func (c *WorkspaceClient) CreateScheduledTasksInvoker(request *model.CreateScheduledTasksRequest) *CreateScheduledTasksInvoker {
+	requestDef := GenReqDefForCreateScheduledTasks()
+	return &CreateScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScheduledTasks 删除定时任务
+//
+// 删除定时任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteScheduledTasks(request *model.DeleteScheduledTasksRequest) (*model.DeleteScheduledTasksResponse, error) {
+	requestDef := GenReqDefForDeleteScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScheduledTasksResponse), nil
+	}
+}
+
+// DeleteScheduledTasksInvoker 删除定时任务
+func (c *WorkspaceClient) DeleteScheduledTasksInvoker(request *model.DeleteScheduledTasksRequest) *DeleteScheduledTasksInvoker {
+	requestDef := GenReqDefForDeleteScheduledTasks()
+	return &DeleteScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFutureExecutions 未来执行的具体时间列表
+//
+// 未来执行的具体时间列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListFutureExecutions(request *model.ListFutureExecutionsRequest) (*model.ListFutureExecutionsResponse, error) {
+	requestDef := GenReqDefForListFutureExecutions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFutureExecutionsResponse), nil
+	}
+}
+
+// ListFutureExecutionsInvoker 未来执行的具体时间列表
+func (c *WorkspaceClient) ListFutureExecutionsInvoker(request *model.ListFutureExecutionsRequest) *ListFutureExecutionsInvoker {
+	requestDef := GenReqDefForListFutureExecutions()
+	return &ListFutureExecutionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduledTasks 查询定时任务列表
+//
+// 查询定时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListScheduledTasks(request *model.ListScheduledTasksRequest) (*model.ListScheduledTasksResponse, error) {
+	requestDef := GenReqDefForListScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTasksResponse), nil
+	}
+}
+
+// ListScheduledTasksInvoker 查询定时任务列表
+func (c *WorkspaceClient) ListScheduledTasksInvoker(request *model.ListScheduledTasksRequest) *ListScheduledTasksInvoker {
+	requestDef := GenReqDefForListScheduledTasks()
+	return &ListScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduledTasksRecords 查询定时任务执行记录
+//
+// 查询定时任务执行记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListScheduledTasksRecords(request *model.ListScheduledTasksRecordsRequest) (*model.ListScheduledTasksRecordsResponse, error) {
+	requestDef := GenReqDefForListScheduledTasksRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTasksRecordsResponse), nil
+	}
+}
+
+// ListScheduledTasksRecordsInvoker 查询定时任务执行记录
+func (c *WorkspaceClient) ListScheduledTasksRecordsInvoker(request *model.ListScheduledTasksRecordsRequest) *ListScheduledTasksRecordsInvoker {
+	requestDef := GenReqDefForListScheduledTasksRecords()
+	return &ListScheduledTasksRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduledTasksRecordsDetails 查询定时任务执行记录详情
+//
+// 查询定时任务执行记录详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListScheduledTasksRecordsDetails(request *model.ListScheduledTasksRecordsDetailsRequest) (*model.ListScheduledTasksRecordsDetailsResponse, error) {
+	requestDef := GenReqDefForListScheduledTasksRecordsDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTasksRecordsDetailsResponse), nil
+	}
+}
+
+// ListScheduledTasksRecordsDetailsInvoker 查询定时任务执行记录详情
+func (c *WorkspaceClient) ListScheduledTasksRecordsDetailsInvoker(request *model.ListScheduledTasksRecordsDetailsRequest) *ListScheduledTasksRecordsDetailsInvoker {
+	requestDef := GenReqDefForListScheduledTasksRecordsDetails()
+	return &ListScheduledTasksRecordsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowScheduledTasks 查询定时任务详情
+//
+// 查询定时任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowScheduledTasks(request *model.ShowScheduledTasksRequest) (*model.ShowScheduledTasksResponse, error) {
+	requestDef := GenReqDefForShowScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScheduledTasksResponse), nil
+	}
+}
+
+// ShowScheduledTasksInvoker 查询定时任务详情
+func (c *WorkspaceClient) ShowScheduledTasksInvoker(request *model.ShowScheduledTasksRequest) *ShowScheduledTasksInvoker {
+	requestDef := GenReqDefForShowScheduledTasks()
+	return &ShowScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateScheduledTasks 修改定时任务
+//
+// 修改定时任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateScheduledTasks(request *model.UpdateScheduledTasksRequest) (*model.UpdateScheduledTasksResponse, error) {
+	requestDef := GenReqDefForUpdateScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScheduledTasksResponse), nil
+	}
+}
+
+// UpdateScheduledTasksInvoker 修改定时任务
+func (c *WorkspaceClient) UpdateScheduledTasksInvoker(request *model.UpdateScheduledTasksRequest) *UpdateScheduledTasksInvoker {
+	requestDef := GenReqDefForUpdateScheduledTasks()
+	return &UpdateScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddMetricNotifyRule 新增通知规则
+//
+// 新增对应指标的通知规则;对应指标满足相应的规则条件时发送通知
+// 同一指标的规则不允许重复;
+// 统计指标名称，目前仅支持固定值：desktop_idle_duration
+//   - &#x60;desktop_idle_duration&#x60; -  桌面空闲时长, 仅允许设置 &#39;&gt;&#x3D;&#39; 阈值
+//
+// 注：需先为云服务添加委托授权，否则无法正常发送通知到SMN
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) AddMetricNotifyRule(request *model.AddMetricNotifyRuleRequest) (*model.AddMetricNotifyRuleResponse, error) {
+	requestDef := GenReqDefForAddMetricNotifyRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddMetricNotifyRuleResponse), nil
+	}
+}
+
+// AddMetricNotifyRuleInvoker 新增通知规则
+func (c *WorkspaceClient) AddMetricNotifyRuleInvoker(request *model.AddMetricNotifyRuleRequest) *AddMetricNotifyRuleInvoker {
+	requestDef := GenReqDefForAddMetricNotifyRule()
+	return &AddMetricNotifyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMetricNotifyRule 删除通知规则
+//
+// 删除对应指标的通知规则;对应指标满足相应的规则条件时发送通知
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteMetricNotifyRule(request *model.DeleteMetricNotifyRuleRequest) (*model.DeleteMetricNotifyRuleResponse, error) {
+	requestDef := GenReqDefForDeleteMetricNotifyRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMetricNotifyRuleResponse), nil
+	}
+}
+
+// DeleteMetricNotifyRuleInvoker 删除通知规则
+func (c *WorkspaceClient) DeleteMetricNotifyRuleInvoker(request *model.DeleteMetricNotifyRuleRequest) *DeleteMetricNotifyRuleInvoker {
+	requestDef := GenReqDefForDeleteMetricNotifyRule()
+	return &DeleteMetricNotifyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopUsageMetric 查询桌面使用情况统计数据
+//
+// 查询桌面使用统计信息;
+// 云服务每天凌晨02:00进行聚合运算前一天00:00:00~23:59:59的使用时长,并将周期范围内的数据聚合到周期边界上
+// 跨天的记录会按照统计周期进行计算
+// 假设一天内桌面登录多次，09:00~12:00,13:00~21:00,22:00~01:00(次日):
+// 则当天的累计使用时长数据会被汇聚到23:59:59这个点;总使用时长为 3hours(09:00~12:00)+8hours(13:00~21:00)+2hours(22:00~00:00)
+// 仅能查询最近180天已进行汇聚计算的数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopUsageMetric(request *model.ListDesktopUsageMetricRequest) (*model.ListDesktopUsageMetricResponse, error) {
+	requestDef := GenReqDefForListDesktopUsageMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopUsageMetricResponse), nil
+	}
+}
+
+// ListDesktopUsageMetricInvoker 查询桌面使用情况统计数据
+func (c *WorkspaceClient) ListDesktopUsageMetricInvoker(request *model.ListDesktopUsageMetricRequest) *ListDesktopUsageMetricInvoker {
+	requestDef := GenReqDefForListDesktopUsageMetric()
+	return &ListDesktopUsageMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMetricNotifyRecord 查询对应指标维度是否存在满足通知规则的记录
+//
+// 查询对应指标维度是否存在满足通知规则的记录;
+// 查询结果仅表示满足相应指标维度下对应通知规则可产生的通知记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListMetricNotifyRecord(request *model.ListMetricNotifyRecordRequest) (*model.ListMetricNotifyRecordResponse, error) {
+	requestDef := GenReqDefForListMetricNotifyRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricNotifyRecordResponse), nil
+	}
+}
+
+// ListMetricNotifyRecordInvoker 查询对应指标维度是否存在满足通知规则的记录
+func (c *WorkspaceClient) ListMetricNotifyRecordInvoker(request *model.ListMetricNotifyRecordRequest) *ListMetricNotifyRecordInvoker {
+	requestDef := GenReqDefForListMetricNotifyRecord()
+	return &ListMetricNotifyRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMetricNotifyRule 查询通知规则
+//
+// 查询对应指标的通知规则;
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListMetricNotifyRule(request *model.ListMetricNotifyRuleRequest) (*model.ListMetricNotifyRuleResponse, error) {
+	requestDef := GenReqDefForListMetricNotifyRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricNotifyRuleResponse), nil
+	}
+}
+
+// ListMetricNotifyRuleInvoker 查询通知规则
+func (c *WorkspaceClient) ListMetricNotifyRuleInvoker(request *model.ListMetricNotifyRuleRequest) *ListMetricNotifyRuleInvoker {
+	requestDef := GenReqDefForListMetricNotifyRule()
+	return &ListMetricNotifyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserUsageMetric 查询用户使用统计数据
+//
+// 查询用户使用统计信息;
+// 最多查询30天内的数据;
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUserUsageMetric(request *model.ListUserUsageMetricRequest) (*model.ListUserUsageMetricResponse, error) {
+	requestDef := GenReqDefForListUserUsageMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserUsageMetricResponse), nil
+	}
+}
+
+// ListUserUsageMetricInvoker 查询用户使用统计数据
+func (c *WorkspaceClient) ListUserUsageMetricInvoker(request *model.ListUserUsageMetricRequest) *ListUserUsageMetricInvoker {
+	requestDef := GenReqDefForListUserUsageMetric()
+	return &ListUserUsageMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMetricNotifyRule 更新通知规则
+//
+// 更新对应指标的通知规则;对应指标满足相应的规则条件时发送通知
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateMetricNotifyRule(request *model.UpdateMetricNotifyRuleRequest) (*model.UpdateMetricNotifyRuleResponse, error) {
+	requestDef := GenReqDefForUpdateMetricNotifyRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMetricNotifyRuleResponse), nil
+	}
+}
+
+// UpdateMetricNotifyRuleInvoker 更新通知规则
+func (c *WorkspaceClient) UpdateMetricNotifyRuleInvoker(request *model.UpdateMetricNotifyRuleRequest) *UpdateMetricNotifyRuleInvoker {
+	requestDef := GenReqDefForUpdateMetricNotifyRule()
+	return &UpdateMetricNotifyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTerminalsBindingDesktops 增加终端与桌面绑定配置

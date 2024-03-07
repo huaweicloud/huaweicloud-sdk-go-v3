@@ -65,6 +65,30 @@ func (i *UpdateAccessPolicyObjectsInvoker) Invoke() (*model.UpdateAccessPolicyOb
 	}
 }
 
+type CreateAgenciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgenciesInvoker) Invoke() (*model.CreateAgenciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgenciesResponse), nil
+	}
+}
+
+type ListAgenciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgenciesInvoker) Invoke() (*model.ListAgenciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgenciesResponse), nil
+	}
+}
+
 type ShowAssistAuthConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +158,18 @@ func (i *ListLoginRecordsNewInvoker) Invoke() (*model.ListLoginRecordsNewRespons
 		return nil, err
 	} else {
 		return result.(*model.ListLoginRecordsNewResponse), nil
+	}
+}
+
+type AttachInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachInstancesInvoker) Invoke() (*model.AttachInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachInstancesResponse), nil
 	}
 }
 
@@ -218,6 +254,18 @@ func (i *DeleteDesktopInvoker) Invoke() (*model.DeleteDesktopResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDesktopResponse), nil
+	}
+}
+
+type DetachInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachInstancesInvoker) Invoke() (*model.DetachInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachInstancesResponse), nil
 	}
 }
 
@@ -626,6 +674,198 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
+type BatchDeleteScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteScheduledTasksInvoker) Invoke() (*model.BatchDeleteScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteScheduledTasksResponse), nil
+	}
+}
+
+type CreateScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateScheduledTasksInvoker) Invoke() (*model.CreateScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateScheduledTasksResponse), nil
+	}
+}
+
+type DeleteScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScheduledTasksInvoker) Invoke() (*model.DeleteScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScheduledTasksResponse), nil
+	}
+}
+
+type ListFutureExecutionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFutureExecutionsInvoker) Invoke() (*model.ListFutureExecutionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFutureExecutionsResponse), nil
+	}
+}
+
+type ListScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduledTasksInvoker) Invoke() (*model.ListScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduledTasksResponse), nil
+	}
+}
+
+type ListScheduledTasksRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduledTasksRecordsInvoker) Invoke() (*model.ListScheduledTasksRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduledTasksRecordsResponse), nil
+	}
+}
+
+type ListScheduledTasksRecordsDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduledTasksRecordsDetailsInvoker) Invoke() (*model.ListScheduledTasksRecordsDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduledTasksRecordsDetailsResponse), nil
+	}
+}
+
+type ShowScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowScheduledTasksInvoker) Invoke() (*model.ShowScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowScheduledTasksResponse), nil
+	}
+}
+
+type UpdateScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScheduledTasksInvoker) Invoke() (*model.UpdateScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScheduledTasksResponse), nil
+	}
+}
+
+type AddMetricNotifyRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddMetricNotifyRuleInvoker) Invoke() (*model.AddMetricNotifyRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddMetricNotifyRuleResponse), nil
+	}
+}
+
+type DeleteMetricNotifyRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMetricNotifyRuleInvoker) Invoke() (*model.DeleteMetricNotifyRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMetricNotifyRuleResponse), nil
+	}
+}
+
+type ListDesktopUsageMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopUsageMetricInvoker) Invoke() (*model.ListDesktopUsageMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopUsageMetricResponse), nil
+	}
+}
+
+type ListMetricNotifyRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricNotifyRecordInvoker) Invoke() (*model.ListMetricNotifyRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricNotifyRecordResponse), nil
+	}
+}
+
+type ListMetricNotifyRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricNotifyRuleInvoker) Invoke() (*model.ListMetricNotifyRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricNotifyRuleResponse), nil
+	}
+}
+
+type ListUserUsageMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserUsageMetricInvoker) Invoke() (*model.ListUserUsageMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserUsageMetricResponse), nil
+	}
+}
+
+type UpdateMetricNotifyRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMetricNotifyRuleInvoker) Invoke() (*model.UpdateMetricNotifyRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMetricNotifyRuleResponse), nil
 	}
 }
 

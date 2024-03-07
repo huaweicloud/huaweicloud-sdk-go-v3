@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FindingId 要检索的结果的ID。
+// FindingId 访问分析结果的唯一标识符。
 type FindingId struct {
 }
 

@@ -24,6 +24,9 @@ type ListImagesRequest struct {
 	// 套餐系列
 	PackageType *string `json:"package_type,omitempty"`
 
+	// 镜像Id
+	ImageId *string `json:"image_id,omitempty"`
+
 	// 每页数量，范围0-100，默认100。
 	Limit *int32 `json:"limit,omitempty"`
 

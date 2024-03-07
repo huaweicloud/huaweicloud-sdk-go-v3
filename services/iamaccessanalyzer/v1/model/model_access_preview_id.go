@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AccessPreviewId 分析预览的唯一标识符。
+// AccessPreviewId 访问预览的唯一标识符。
 type AccessPreviewId struct {
 }
 

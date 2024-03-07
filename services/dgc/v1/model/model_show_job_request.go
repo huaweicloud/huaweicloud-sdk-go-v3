@@ -14,6 +14,9 @@ type ShowJobRequest struct {
 
 	// 作业名称.
 	JobName string `json:"job_name"`
+
+	// 作业版本号，若传入版本号，则查询指定版本号的作业；若不传入，则查询最新的版本作业.
+	Version *int32 `json:"version,omitempty"`
 }
 
 func (o ShowJobRequest) String() string {

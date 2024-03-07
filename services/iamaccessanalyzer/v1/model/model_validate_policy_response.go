@@ -8,6 +8,8 @@ import (
 
 // ValidatePolicyResponse Response Object
 type ValidatePolicyResponse struct {
+
+	// 可用于改进策略的可操作建议。
 	Findings *[]ValidatePolicyFinding `json:"findings,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`

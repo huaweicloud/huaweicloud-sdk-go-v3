@@ -27,6 +27,12 @@ type IdcardFrontResult struct {
 	// 身份证号。
 	Number *string `json:"number,omitempty"`
 
+	// 身份证头像图片信息的base64码结果。  > 说明： - 仅在输入参数return_portrait_image为true时，返回该字段。 - 当输入为身份证背面时返回为空字符串。
+	PortraitImage *string `json:"portrait_image,omitempty"`
+
+	// 身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+	AdjustedImage *string `json:"adjusted_image,omitempty"`
+
 	VerificationResult *IdcardFrontVerificationResult `json:"verification_result,omitempty"`
 
 	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。

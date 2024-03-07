@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-// FindingSourceType 发现的来源。这指示如何授予生成查找结果的访问权限。OBS桶查找结果会填充它。
 type FindingSourceType struct {
 	value string
 }

@@ -12,7 +12,7 @@ type ShowFindingRequest struct {
 	// 分析器的唯一标识符。
 	AnalyzerId string `json:"analyzer_id"`
 
-	// 要检索的结果的ID。
+	// 访问分析结果的唯一标识符。
 	FindingId string `json:"finding_id"`
 }
 

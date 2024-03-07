@@ -1,0 +1,28 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// DeleteLogicalLatestVersionRequest Request Object
+type DeleteLogicalLatestVersionRequest struct {
+
+	// 应用ID。
+	Identifier string `json:"identifier"`
+
+	// 数据模型的英文名称。
+	ModelName string `json:"modelName"`
+
+	Body *RdmParamVoVersionModelVersionMasterModifierDto `json:"body,omitempty"`
+}
+
+func (o DeleteLogicalLatestVersionRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "DeleteLogicalLatestVersionRequest struct{}"
+	}
+
+	return strings.Join([]string{"DeleteLogicalLatestVersionRequest", string(data)}, " ")
+}

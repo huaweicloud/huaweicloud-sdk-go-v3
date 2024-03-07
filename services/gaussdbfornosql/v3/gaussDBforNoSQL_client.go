@@ -2080,6 +2080,27 @@ func (c *GaussDBforNoSQLClient) UpdateConfigurationInvoker(request *model.Update
 	return &UpdateConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDatabases 操作GeminDB实例数据库
+//
+// 操作GeminDB实例数据库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdateDatabases(request *model.UpdateDatabasesRequest) (*model.UpdateDatabasesResponse, error) {
+	requestDef := GenReqDefForUpdateDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDatabasesResponse), nil
+	}
+}
+
+// UpdateDatabasesInvoker 操作GeminDB实例数据库
+func (c *GaussDBforNoSQLClient) UpdateDatabasesInvoker(request *model.UpdateDatabasesRequest) *UpdateDatabasesInvoker {
+	requestDef := GenReqDefForUpdateDatabases()
+	return &UpdateDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateHighRiskCommands 修改高危命令
 //
 // 批量修改高危命令

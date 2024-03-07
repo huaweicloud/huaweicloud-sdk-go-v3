@@ -9,7 +9,7 @@ import (
 type PersistableModelSaveAsDto struct {
 
 	// 唯一标识。
-	Id *int64 `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 修改者。
 	Modifier *string `json:"modifier,omitempty"`
@@ -32,7 +32,7 @@ type PersistableModelSaveAsDto struct {
 	SourceEntityNumber *string `json:"sourceEntityNumber,omitempty"`
 
 	// 源实例的唯一标识(单实例为ID，版本实例为versionId)。
-	SourceInstanceId int64 `json:"sourceInstanceId"`
+	SourceInstanceId string `json:"sourceInstanceId"`
 
 	// 置空字段数组。
 	NeedSetNullAttrs *[]string `json:"needSetNullAttrs,omitempty"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResourceOwnerAccount 拥有资源的帐户ID。
+// ResourceOwnerAccount 拥有资源的账户ID。
 type ResourceOwnerAccount struct {
 }
 

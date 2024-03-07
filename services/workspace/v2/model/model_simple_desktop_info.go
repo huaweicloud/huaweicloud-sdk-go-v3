@@ -38,8 +38,17 @@ type SimpleDesktopInfo struct {
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 标签列表。
+	Tags *[]Tag `json:"tags,omitempty"`
+
 	// 是否处于管理员维护模式
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
+
+	// 桌面的子网ID。
+	SubnetId *string `json:"subnet_id,omitempty"`
+
+	// 桌面计费资源ID。
+	BillResourceId *string `json:"bill_resource_id,omitempty"`
 }
 
 func (o SimpleDesktopInfo) String() string {

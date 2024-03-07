@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// IamAgency IAM委托。
 type IamAgency struct {
 
-	// 此策略的json格式策略文档。
+	// 该策略JSON格式策略文档。
 	TrustPolicy string `json:"trust_policy"`
 }
 

@@ -944,6 +944,19 @@ func GenReqDefForListPolicyAssignments() *def.HttpRequestDef {
 		WithResponse(new(model.ListPolicyAssignmentsResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyAssignmentName").
+		WithJsonTag("policy_assignment_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1164,6 +1177,10 @@ func GenReqDefForShowOrganizationPolicyAssignmentStatuses() *def.HttpRequestDef 
 		WithJsonTag("organization_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationPolicyAssignmentId").
+		WithJsonTag("organization_policy_assignment_id").
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrganizationPolicyAssignmentName").
 		WithJsonTag("organization_policy_assignment_name").

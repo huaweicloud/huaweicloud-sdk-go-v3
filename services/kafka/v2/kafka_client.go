@@ -149,27 +149,6 @@ func (c *KafkaClient) CloseKafkaManagerInvoker(request *model.CloseKafkaManagerR
 	return &CloseKafkaManagerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateDeleteConnectorOrder 创建关闭实例转储节点的订单
-//
-// 创建删除实例转储节点的订单。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreateDeleteConnectorOrder(request *model.CreateDeleteConnectorOrderRequest) (*model.CreateDeleteConnectorOrderResponse, error) {
-	requestDef := GenReqDefForCreateDeleteConnectorOrder()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateDeleteConnectorOrderResponse), nil
-	}
-}
-
-// CreateDeleteConnectorOrderInvoker 创建关闭实例转储节点的订单
-func (c *KafkaClient) CreateDeleteConnectorOrderInvoker(request *model.CreateDeleteConnectorOrderRequest) *CreateDeleteConnectorOrderInvoker {
-	requestDef := GenReqDefForCreateDeleteConnectorOrder()
-	return &CreateDeleteConnectorOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateInstanceByEngine 创建实例
 //
 // 创建实例。
@@ -319,27 +298,6 @@ func (c *KafkaClient) CreateReassignmentTaskInvoker(request *model.CreateReassig
 	return &CreateReassignmentTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateSinkTask 创建转储任务
-//
-// 创建转储任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreateSinkTask(request *model.CreateSinkTaskRequest) (*model.CreateSinkTaskResponse, error) {
-	requestDef := GenReqDefForCreateSinkTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateSinkTaskResponse), nil
-	}
-}
-
-// CreateSinkTaskInvoker 创建转储任务
-func (c *KafkaClient) CreateSinkTaskInvoker(request *model.CreateSinkTaskRequest) *CreateSinkTaskInvoker {
-	requestDef := GenReqDefForCreateSinkTask()
-	return &CreateSinkTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteBackgroundTask 删除后台任务管理中的指定记录
 //
 // 删除后台任务管理中的指定记录。
@@ -401,27 +359,6 @@ func (c *KafkaClient) DeleteKafkaUserClientQuotaTask(request *model.DeleteKafkaU
 func (c *KafkaClient) DeleteKafkaUserClientQuotaTaskInvoker(request *model.DeleteKafkaUserClientQuotaTaskRequest) *DeleteKafkaUserClientQuotaTaskInvoker {
 	requestDef := GenReqDefForDeleteKafkaUserClientQuotaTask()
 	return &DeleteKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteSinkTask 删除单个转储任务
-//
-// 删除单个转储任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) DeleteSinkTask(request *model.DeleteSinkTaskRequest) (*model.DeleteSinkTaskResponse, error) {
-	requestDef := GenReqDefForDeleteSinkTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteSinkTaskResponse), nil
-	}
-}
-
-// DeleteSinkTaskInvoker 删除单个转储任务
-func (c *KafkaClient) DeleteSinkTaskInvoker(request *model.DeleteSinkTaskRequest) *DeleteSinkTaskInvoker {
-	requestDef := GenReqDefForDeleteSinkTask()
-	return &DeleteSinkTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息
@@ -575,27 +512,6 @@ func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.L
 func (c *KafkaClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
 	requestDef := GenReqDefForListProducts()
 	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSinkTasks 查询转储任务列表
-//
-// 查询转储任务列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ListSinkTasks(request *model.ListSinkTasksRequest) (*model.ListSinkTasksResponse, error) {
-	requestDef := GenReqDefForListSinkTasks()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSinkTasksResponse), nil
-	}
-}
-
-// ListSinkTasksInvoker 查询转储任务列表
-func (c *KafkaClient) ListSinkTasksInvoker(request *model.ListSinkTasksRequest) *ListSinkTasksInvoker {
-	requestDef := GenReqDefForListSinkTasks()
-	return &ListSinkTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTopicPartitions 查询Topic的分区列表
@@ -1296,27 +1212,6 @@ func (c *KafkaClient) ShowPartitionMessage(request *model.ShowPartitionMessageRe
 func (c *KafkaClient) ShowPartitionMessageInvoker(request *model.ShowPartitionMessageRequest) *ShowPartitionMessageInvoker {
 	requestDef := GenReqDefForShowPartitionMessage()
 	return &ShowPartitionMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowSinkTaskDetail 查询单个转储任务
-//
-// 查询单个转储任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ShowSinkTaskDetail(request *model.ShowSinkTaskDetailRequest) (*model.ShowSinkTaskDetailResponse, error) {
-	requestDef := GenReqDefForShowSinkTaskDetail()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSinkTaskDetailResponse), nil
-	}
-}
-
-// ShowSinkTaskDetailInvoker 查询单个转储任务
-func (c *KafkaClient) ShowSinkTaskDetailInvoker(request *model.ShowSinkTaskDetailRequest) *ShowSinkTaskDetailInvoker {
-	requestDef := GenReqDefForShowSinkTaskDetail()
-	return &ShowSinkTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTopicAccessPolicy 查询用户权限

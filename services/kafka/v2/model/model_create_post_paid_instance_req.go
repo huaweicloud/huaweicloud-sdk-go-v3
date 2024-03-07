@@ -90,6 +90,9 @@ type CreatePostPaidInstanceReq struct {
 	// 磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
 	RetentionPolicy *CreatePostPaidInstanceReqRetentionPolicy `json:"retention_policy,omitempty"`
 
+	// 是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
 	// 是否开启磁盘加密。
 	DiskEncryptedEnable *bool `json:"disk_encrypted_enable,omitempty"`
 

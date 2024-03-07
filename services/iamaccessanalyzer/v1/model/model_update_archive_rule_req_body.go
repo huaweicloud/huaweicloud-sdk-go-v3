@@ -7,6 +7,8 @@ import (
 )
 
 type UpdateArchiveRuleReqBody struct {
+
+	// 匹配要返回的访问分析结果的筛选器。
 	Filters []FindingFilter `json:"filters"`
 }
 

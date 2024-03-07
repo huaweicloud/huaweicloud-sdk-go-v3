@@ -221,6 +221,18 @@ func (i *CreateRestoreInstanceInvoker) Invoke() (*model.CreateRestoreInstanceRes
 	}
 }
 
+type CreateSqlLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSqlLimitInvoker) Invoke() (*model.CreateSqlLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSqlLimitResponse), nil
+	}
+}
+
 type CreateXelLogDownloadInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +326,18 @@ func (i *DeleteRdSforMySqlProxyInvoker) Invoke() (*model.DeleteRdSforMySqlProxyR
 		return nil, err
 	} else {
 		return result.(*model.DeleteRdSforMySqlProxyResponse), nil
+	}
+}
+
+type DeleteSqlLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSqlLimitInvoker) Invoke() (*model.DeleteSqlLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSqlLimitResponse), nil
 	}
 }
 
@@ -833,6 +857,18 @@ func (i *ListSlowlogStatisticsInvoker) Invoke() (*model.ListSlowlogStatisticsRes
 	}
 }
 
+type ListSqlLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlLimitInvoker) Invoke() (*model.ListSqlLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlLimitResponse), nil
+	}
+}
+
 type ListSslCertDownloadLinkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1301,6 +1337,18 @@ func (i *ShowSecondLevelMonitoringInvoker) Invoke() (*model.ShowSecondLevelMonit
 	}
 }
 
+type ShowStorageUsedSpaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStorageUsedSpaceInvoker) Invoke() (*model.ShowStorageUsedSpaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStorageUsedSpaceResponse), nil
+	}
+}
+
 type ShowTdeStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1445,6 +1493,18 @@ func (i *StopInstanceInvoker) Invoke() (*model.StopInstanceResponse, error) {
 	}
 }
 
+type SwitchSqlLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSqlLimitInvoker) Invoke() (*model.SwitchSqlLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSqlLimitResponse), nil
+	}
+}
+
 type SwitchSslInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1562,6 +1622,18 @@ func (i *UpdatePostgresqlInstanceAliasInvoker) Invoke() (*model.UpdatePostgresql
 		return nil, err
 	} else {
 		return result.(*model.UpdatePostgresqlInstanceAliasResponse), nil
+	}
+}
+
+type UpdateSqlLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSqlLimitInvoker) Invoke() (*model.UpdateSqlLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSqlLimitResponse), nil
 	}
 }
 

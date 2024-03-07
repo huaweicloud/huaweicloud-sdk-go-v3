@@ -21,7 +21,7 @@ type ListInstancesDetailsRequest struct {
 	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 实例状态，详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)。
+	// 实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
 	Status *ListInstancesDetailsRequestStatus `json:"status,omitempty"`
 
 	// 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。

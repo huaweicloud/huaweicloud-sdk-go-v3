@@ -15,7 +15,7 @@ type VersionModelCompareVersionVo struct {
 	CorrelationVersion string `json:"correlationVersion"`
 
 	// 主对象ID。
-	Id int64 `json:"id"`
+	Id string `json:"id"`
 }
 
 func (o VersionModelCompareVersionVo) String() string {

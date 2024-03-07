@@ -25,8 +25,8 @@ type ListAuthorizationPrivilegesResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 权限信息
-	Privileges     *[]ShowDatabaseUsersPrivilege `json:"privileges,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Privileges     *[]AuthorizationPrivilege `json:"privileges,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ListAuthorizationPrivilegesResponse) String() string {

@@ -10,10 +10,10 @@ import (
 type RebuildDesktopsReq struct {
 
 	// 计算机id列表。
-	DesktopIds []string `json:"desktop_ids"`
+	DesktopIds *[]string `json:"desktop_ids,omitempty"`
 
 	// 镜像类型。
-	ImageType string `json:"image_type"`
+	ImageType *string `json:"image_type,omitempty"`
 
 	// 模板ID。
 	ImageId string `json:"image_id"`

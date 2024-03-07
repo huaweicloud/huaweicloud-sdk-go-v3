@@ -7,6 +7,8 @@ import (
 )
 
 type UntagResourceReqBody struct {
+
+	// 待删除的标签键列表。
 	TagKeys []string `json:"tag_keys"`
 }
 

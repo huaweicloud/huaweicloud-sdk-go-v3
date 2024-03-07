@@ -11,7 +11,7 @@ type ShowInstanceExtendProductInfoRespMonthly struct {
 	// 消息引擎的名称，该字段显示为rabbitmq。
 	Name *string `json:"name,omitempty"`
 
-	// 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)
+	// 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:cmcc,sbc,hk_sbc,tm,hk_tm)
 	Version *string `json:"version,omitempty"`
 
 	// 产品规格列表。

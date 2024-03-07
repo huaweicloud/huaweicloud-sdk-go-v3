@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// ObsBucket OBS桶。
 type ObsBucket struct {
 
-	// 此ACL xml文件的string格式
+	// 桶ACL xml文件的string格式
 	BucketAcl *string `json:"bucket_acl,omitempty"`
 
-	// 此策略的json格式策略文档。
+	// 该策略JSON格式策略文档。
 	BucketPolicy *string `json:"bucket_policy,omitempty"`
 }
 

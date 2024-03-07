@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PolicyDocument 此策略的json格式策略文档。
+// PolicyDocument 该策略JSON格式策略文档。
 type PolicyDocument struct {
 }
 

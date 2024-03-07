@@ -8,10 +8,14 @@ import (
 
 // SendKafkaMessageResponse Response Object
 type SendKafkaMessageResponse struct {
+
+	// Kafka的topic
 	Topic *string `json:"topic,omitempty"`
 
+	// 消息内容
 	Body *string `json:"body,omitempty"`
 
+	// topic的分区信息等
 	PropertyList   *[]interface{} `json:"property_list,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

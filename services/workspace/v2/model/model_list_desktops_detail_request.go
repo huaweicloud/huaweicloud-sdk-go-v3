@@ -65,6 +65,9 @@ type ListDesktopsDetailRequest struct {
 
 	// 按照维护模式过滤
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
+
+	// 桌面的子网ID。
+	SubnetId *string `json:"subnet_id,omitempty"`
 }
 
 func (o ListDesktopsDetailRequest) String() string {

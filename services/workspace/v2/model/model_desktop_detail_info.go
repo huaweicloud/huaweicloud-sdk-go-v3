@@ -33,7 +33,7 @@ type DesktopDetailInfo struct {
 	// 桌面类型。  - DEDICATED：专属桌面。
 	DesktopType *string `json:"desktop_type,omitempty"`
 
-	// 桌面元数据。  - charging_mode 周期套餐标识，1表示包周期，0表示按需。 - image_name 创建桌面的镜像名称。 - metering.image_id 镜像ID。 - metering.resourcespeccode 桌面资源编码。 - metering.resourcetype 桌面资源类型。 - os_bit 操作系统位数：32或64。 - os_type 操作系统类型：Linux、Windows或Others。 - desktop_os_version 操作系统版本。
+	// 桌面元数据。  - charging_mode 周期套餐标识，1表示包周期，0表示按需。 - image_name 创建桌面的镜像名称。 - bill_resource_id 镜像计费资源ID。 - metering.image_id 镜像ID。 - metering.resourcespeccode 桌面资源编码。 - metering.resourcetype 桌面资源类型。 - os_bit 操作系统位数：32或64。 - os_type 操作系统类型：Linux、Windows或Others。 - desktop_os_version 操作系统版本。
 	Metadata map[string]string `json:"metadata,omitempty"`
 
 	Flavor *FlavorInfo `json:"flavor,omitempty"`
@@ -48,7 +48,7 @@ type DesktopDetailInfo struct {
 	Created *string `json:"created,omitempty"`
 
 	// 桌面安全组。
-	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 
 	// 桌面的登录状态。  - UNREGISTER：表示桌面未注册时的状态（桌面启动后，会自动注册）。关机后也会出现未注册的状态。 - REGISTERED：表示桌面注册以后，等待用户连接的状态。 - CONNECTED：表示用户已经成功登录，正在使用桌面。 - DISCONNECTED：表示桌面与客户端断开会话后显示的状态，可能为关闭客户端窗口，或客户端与桌面网络断开引起。
 	LoginStatus *string `json:"login_status,omitempty"`
@@ -107,6 +107,15 @@ type DesktopDetailInfo struct {
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 桌面的子网ID。
+	SubnetId *string `json:"subnet_id,omitempty"`
+
+	// 桌面计费资源ID
+	BillResourceId *string `json:"bill_resource_id,omitempty"`
+
+	// 桌面任务进度， 取值范围0-100以及null，null表示该桌面无任务，0-100表明该任务进度的百分比。
+	Process *int32 `json:"process,omitempty"`
 }
 
 func (o DesktopDetailInfo) String() string {

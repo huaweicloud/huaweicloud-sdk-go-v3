@@ -25,7 +25,7 @@ type VersionModel struct {
 	Description *string `json:"description,omitempty"`
 
 	// 唯一标识。
-	Id *int64 `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 关键信息资产ID。
 	Kiaguid *string `json:"kiaguid,omitempty"`

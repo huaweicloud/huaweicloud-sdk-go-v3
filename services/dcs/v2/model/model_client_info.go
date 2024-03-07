@@ -17,6 +17,9 @@ type ClientInfo struct {
 	// 客户端的地址和端口
 	Addr *string `json:"addr,omitempty"`
 
+	// 套接字所使用的文件描述符。
+	Fd *string `json:"fd,omitempty"`
+
 	// 客户端的名称
 	Name *string `json:"name,omitempty"`
 
@@ -61,6 +64,15 @@ type ClientInfo struct {
 
 	// 文件描述符事件
 	Events *ClientInfoEvents `json:"events,omitempty"`
+
+	// 客户端所使用的网络类型。
+	Network *string `json:"network,omitempty"`
+
+	// 单机，主备和cluster实例地址和端口。
+	Peer *string `json:"peer,omitempty"`
+
+	// 客户端用户。
+	User *string `json:"user,omitempty"`
 }
 
 func (o ClientInfo) String() string {

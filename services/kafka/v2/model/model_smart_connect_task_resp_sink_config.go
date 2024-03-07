@@ -18,7 +18,7 @@ type SmartConnectTaskRespSinkConfig struct {
 	DcsInstanceId *string `json:"dcs_instance_id,omitempty"`
 
 	// 目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
-	TargetDb *string `json:"target_db,omitempty"`
+	TargetDb *int32 `json:"target_db,omitempty"`
 
 	// 转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
 	ConsumerStrategy *string `json:"consumer_strategy,omitempty"`

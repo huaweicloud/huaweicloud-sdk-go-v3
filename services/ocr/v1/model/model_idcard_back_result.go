@@ -18,6 +18,9 @@ type IdcardBackResult struct {
 	// 有效结束日期。
 	ValidTo *string `json:"valid_to,omitempty"`
 
+	// 身份证卡面图片信息的base64码结果。  > 说明： - 仅在输入参数return_adjusted_image为true时，返回该字段。
+	AdjustedImage *string `json:"adjusted_image,omitempty"`
+
 	VerificationResult *IdcardBackVerificationResult `json:"verification_result,omitempty"`
 
 	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。 仅return_text_location设置为true时才返回。

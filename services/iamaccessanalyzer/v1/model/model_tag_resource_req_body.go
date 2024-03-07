@@ -7,6 +7,8 @@ import (
 )
 
 type TagResourceReqBody struct {
+
+	// 自定义标签列表。
 	Tags []Tag `json:"tags"`
 }
 

@@ -9,7 +9,7 @@ import (
 type VersionModelVersionUpdateDto struct {
 
 	// 唯一标识。
-	Id *int64 `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 
 	// 迭代版本。
 	Iteration *int32 `json:"iteration,omitempty"`

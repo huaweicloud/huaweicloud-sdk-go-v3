@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Location 策略中的位置，形式分别为json表示的路径和相应的行列范围。
+// Location 策略中的位置，形式分别为JSON表示的路径和相应的行列范围。
 type Location struct {
 
 	// 策略中的路径，表示为路径元素的有序序列。

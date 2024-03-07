@@ -15,7 +15,7 @@ type VersionModelVersionCheckOutDto struct {
 	CustomLinkSet *[]string `json:"customLinkSet,omitempty"`
 
 	// 主对象ID。
-	MasterId int64 `json:"masterId"`
+	MasterId string `json:"masterId"`
 
 	// 更新者。
 	Modifier *string `json:"modifier,omitempty"`

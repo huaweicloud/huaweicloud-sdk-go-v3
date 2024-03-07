@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PathElement 策略的json表示的路径的单个元素。
+// PathElement 策略的JSON表示的路径的单个元素。
 type PathElement struct {
 
 	// 数组中的索引，从0开始。
