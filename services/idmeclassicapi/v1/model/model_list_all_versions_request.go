@@ -36,10 +36,10 @@ type ListAllVersionsRequest struct {
 	// 数据模型的英文名称。
 	ModelName string `json:"modelName"`
 
-	// 当前页
+	// 当前页数（路径参数）。
 	CurPagePath int32 `json:"curPagePath"`
 
-	// 每页大小
+	// 当前页数（路径参数）。
 	PageSizePath int32 `json:"pageSizePath"`
 
 	Body *RdmParamVoVersionModelVersionMasterDto `json:"body,omitempty"`

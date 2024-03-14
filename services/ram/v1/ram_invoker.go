@@ -101,6 +101,18 @@ func (i *ShowOrganizationShareInvoker) Invoke() (*model.ShowOrganizationShareRes
 	}
 }
 
+type ListPermissionVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPermissionVersionsInvoker) Invoke() (*model.ListPermissionVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPermissionVersionsResponse), nil
+	}
+}
+
 type ListPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }

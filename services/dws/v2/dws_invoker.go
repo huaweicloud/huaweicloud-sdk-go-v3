@@ -1049,6 +1049,30 @@ func (i *ListLtsLogsInvoker) Invoke() (*model.ListLtsLogsResponse, error) {
 	}
 }
 
+type ListMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricsInvoker) Invoke() (*model.ListMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricsResponse), nil
+	}
+}
+
+type ListMetricsDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricsDataInvoker) Invoke() (*model.ListMetricsDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricsDataResponse), nil
+	}
+}
+
 type ListMonitorIndicatorDataInvoker struct {
 	*invoker.BaseInvoker
 }

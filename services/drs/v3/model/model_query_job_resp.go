@@ -173,6 +173,15 @@ type QueryJobResp struct {
 
 	// DRS任务标签
 	Tags *[]Tag `json:"tags,omitempty"`
+
+	// 指定公网Ip的信息
+	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
+
+	// 是否成功绑定公网IP
+	BindPublicIpState *string `json:"bind_public_ip_state,omitempty"`
+
+	// 多任务时，存在子任务绑定失败时，返回子任务的信息
+	Children *[]FailedToBindEipChildInfo `json:"children,omitempty"`
 }
 
 func (o QueryJobResp) String() string {

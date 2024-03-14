@@ -30,6 +30,8 @@ type ActionParams struct {
 
 	// 强制结束时取值为true。
 	ForceDelete *bool `json:"force_delete,omitempty"`
+
+	PublicIpConfig *PublicIpConfig `json:"public_ip_config,omitempty"`
 }
 
 func (o ActionParams) String() string {

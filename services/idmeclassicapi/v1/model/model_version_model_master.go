@@ -15,7 +15,7 @@ type VersionModelMaster struct {
 	Creator *string `json:"creator,omitempty"`
 
 	// 唯一标识。
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 
 	// 最后更新时间。
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`

@@ -10,10 +10,10 @@ import (
 type InviteAccountReqBody struct {
 	Target *TargetDto `json:"target"`
 
-	// 给收件帐号所有者的邮件中的附加信息。
+	// 给收件账号所有者的邮件中的附加信息。
 	Notes string `json:"notes"`
 
-	// 要绑定到新创建的帐号的标签列表。
+	// 要绑定到新创建的账号的标签列表。
 	Tags *[]TagDto `json:"tags,omitempty"`
 }
 

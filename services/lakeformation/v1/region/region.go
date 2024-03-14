@@ -8,18 +8,27 @@ import (
 )
 
 var (
-	CN_NORTH_9 = region.NewRegion("cn-north-9",
-		"https://lakeformation.cn-north-9.myhuaweicloud.com")
-	CN_NORTH_2 = region.NewRegion("cn-north-2",
-		"https://lakeformation.cn-north-2.myhuaweicloud.com")
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
 		"https://lakeformation.cn-north-4.myhuaweicloud.com")
+	CN_NORTH_9 = region.NewRegion("cn-north-9",
+		"https://lakeformation.cn-north-9.myhuaweicloud.com")
+	CN_EAST_3 = region.NewRegion("cn-east-3",
+		"https://lakeformation.cn-east-3.myhuaweicloud.com")
+	CN_SOUTH_1 = region.NewRegion("cn-south-1",
+		"https://lakeformation.cn-south-1.myhuaweicloud.com")
+	CN_NORTH_11 = region.NewRegion("cn-north-11",
+		"https://lakeformation.cn-north-11.myhuaweicloud.com")
+	LA_NORTH_2 = region.NewRegion("la-north-2",
+		"https://lakeformation.la-north-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-9": CN_NORTH_9,
-	"cn-north-2": CN_NORTH_2,
-	"cn-north-4": CN_NORTH_4,
+	"cn-north-4":  CN_NORTH_4,
+	"cn-north-9":  CN_NORTH_9,
+	"cn-east-3":   CN_EAST_3,
+	"cn-south-1":  CN_SOUTH_1,
+	"cn-north-11": CN_NORTH_11,
+	"la-north-2":  LA_NORTH_2,
 }
 
 var provider = region.DefaultProviderChain("LAKEFORMATION")

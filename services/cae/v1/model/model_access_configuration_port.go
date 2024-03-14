@@ -13,10 +13,10 @@ import (
 type AccessConfigurationPort struct {
 
 	// 监听端口。
-	TargetPort *string `json:"target_port,omitempty"`
+	TargetPort *int32 `json:"target_port,omitempty"`
 
 	// 访问端口。
-	Port *string `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty"`
 
 	// 协议，负载均衡支持TCP，负载均衡与路由配置支持HTTP、HTTPS。
 	Protocol *AccessConfigurationPortProtocol `json:"protocol,omitempty"`

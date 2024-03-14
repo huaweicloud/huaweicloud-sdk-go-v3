@@ -12,6 +12,9 @@ import (
 // ListAssetsRequest Request Object
 type ListAssetsRequest struct {
 
+	// 客户端IP
+	XRealIp *string `json:"X-REAL-IP,omitempty"`
+
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
 	Authorization *string `json:"Authorization,omitempty"`
 

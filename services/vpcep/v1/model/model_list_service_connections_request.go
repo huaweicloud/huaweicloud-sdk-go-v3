@@ -24,13 +24,13 @@ type ListServiceConnectionsRequest struct {
 	// 终端节点的报文标识。
 	MarkerId *string `json:"marker_id,omitempty"`
 
-	// 终端节点的连接状态。 ● pendingAcceptance：待接受 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败
-	Status *string `json:"status,omitempty"`
+	// 终端节点的连接状态。  - pendingAcceptance：待接受  - accepted：已接受  - rejected：已拒绝  - failed：失败
+	Status *ListServiceConnectionsRequestStatus `json:"status,omitempty"`
 
-	// 查询结果中终端节点列表的排序字段，取值为： ● create_at：终端节点的创建时间 ● update_at：终端节点的更新时间 默认值为create_at。
+	// 查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
 	SortKey *ListServiceConnectionsRequestSortKey `json:"sort_key,omitempty"`
 
-	// 查询结果中终端节点列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+	// 查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
 	SortDir *ListServiceConnectionsRequestSortDir `json:"sort_dir,omitempty"`
 
 	// 查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
@@ -47,6 +47,61 @@ func (o ListServiceConnectionsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListServiceConnectionsRequest", string(data)}, " ")
+}
+
+type ListServiceConnectionsRequestStatus struct {
+	value string
+}
+
+type ListServiceConnectionsRequestStatusEnum struct {
+	PENDING_ACCEPTANCE ListServiceConnectionsRequestStatus
+	ACCEPTED           ListServiceConnectionsRequestStatus
+	REJECTED           ListServiceConnectionsRequestStatus
+	FAILED             ListServiceConnectionsRequestStatus
+}
+
+func GetListServiceConnectionsRequestStatusEnum() ListServiceConnectionsRequestStatusEnum {
+	return ListServiceConnectionsRequestStatusEnum{
+		PENDING_ACCEPTANCE: ListServiceConnectionsRequestStatus{
+			value: "pendingAcceptance",
+		},
+		ACCEPTED: ListServiceConnectionsRequestStatus{
+			value: "accepted",
+		},
+		REJECTED: ListServiceConnectionsRequestStatus{
+			value: "rejected",
+		},
+		FAILED: ListServiceConnectionsRequestStatus{
+			value: "failed",
+		},
+	}
+}
+
+func (c ListServiceConnectionsRequestStatus) Value() string {
+	return c.value
+}
+
+func (c ListServiceConnectionsRequestStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListServiceConnectionsRequestStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListServiceConnectionsRequestSortKey struct {

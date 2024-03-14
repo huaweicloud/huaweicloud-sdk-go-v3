@@ -12,7 +12,7 @@ type NameDto struct {
 	// 用户的姓氏
 	FamilyName string `json:"family_name"`
 
-	// 包含要显示的名称的格式化版本的字符串display.
+	// 包含要显示的名称的格式化版本的字符串
 	Formatted *string `json:"formatted,omitempty"`
 
 	// 用户的名字

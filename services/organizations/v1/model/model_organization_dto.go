@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// OrganizationDto 包含有关组织的详细信息。组织是帐号集合，使用合并计费集中管理，由组织单元构成的层次结构，并通过策略控制。
+// OrganizationDto 包含有关组织的详细信息。组织是账号集合，使用合并计费集中管理，由组织单元构成的层次结构，并通过策略控制。
 type OrganizationDto struct {
 
 	// 组织的唯一标识符（ID）。
@@ -16,10 +16,10 @@ type OrganizationDto struct {
 	// 组织的统一资源名称。
 	Urn string `json:"urn"`
 
-	// 组织管理帐号的唯一标识符（ID）。
+	// 组织管理账号的唯一标识符（ID）。
 	ManagementAccountId string `json:"management_account_id"`
 
-	// 组织的管理帐号的名称。
+	// 组织的管理账号的名称。
 	ManagementAccountName string `json:"management_account_name"`
 
 	// 组织的创建时间。

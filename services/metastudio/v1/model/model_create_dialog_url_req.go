@@ -9,10 +9,10 @@ import (
 // CreateDialogUrlReq 创建对话链接。
 type CreateDialogUrlReq struct {
 
-	// 直播间ID。
+	// 智能交互对话ID。
 	RoomId string `json:"room_id"`
 
-	// 机器人ID。
+	// 应用ID。
 	RobotId string `json:"robot_id"`
 }
 

@@ -62,6 +62,9 @@ type SyncPolicyReq struct {
 
 	// - MySQL为源的任务需要，通过show master status命令获取源库位点，根据提示填写Executed_Gtid_Set（如果源库为MySQL 5.5版本，则不支持使用同步任务）。  - 不能包含< > & \" \\' / \\\\\\\\ 特殊字符和中文。且不能超过2048个字符
 	GtidSet *string `json:"gtid_set,omitempty"`
+
+	// 存储DDL的topic。Kafka为目标且ddl_trans为true时必填，取值：目标库已存在的topic名称，确保topic已存在。
+	DdlTopic *string `json:"ddl_topic,omitempty"`
 }
 
 func (o SyncPolicyReq) String() string {

@@ -178,9 +178,9 @@ type ChildrenJobInfoJobDirection struct {
 }
 
 type ChildrenJobInfoJobDirectionEnum struct {
-	UP     ChildrenJobInfoJobDirection
-	DOWN   ChildrenJobInfoJobDirection
-	NO_DBS ChildrenJobInfoJobDirection
+	UP      ChildrenJobInfoJobDirection
+	DOWN    ChildrenJobInfoJobDirection
+	NON_DBS ChildrenJobInfoJobDirection
 }
 
 func GetChildrenJobInfoJobDirectionEnum() ChildrenJobInfoJobDirectionEnum {
@@ -191,8 +191,8 @@ func GetChildrenJobInfoJobDirectionEnum() ChildrenJobInfoJobDirectionEnum {
 		DOWN: ChildrenJobInfoJobDirection{
 			value: "down",
 		},
-		NO_DBS: ChildrenJobInfoJobDirection{
-			value: "no-dbs",
+		NON_DBS: ChildrenJobInfoJobDirection{
+			value: "non-dbs",
 		},
 	}
 }

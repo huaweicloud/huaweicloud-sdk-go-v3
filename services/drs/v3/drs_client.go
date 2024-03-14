@@ -593,6 +593,27 @@ func (c *DrsClient) CreateCompareTaskInvoker(request *model.CreateCompareTaskReq
 	return &CreateCompareTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAvailableNodeTypes 查询可用的Node规格
+//
+// 查询可用的Node规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListAvailableNodeTypes(request *model.ListAvailableNodeTypesRequest) (*model.ListAvailableNodeTypesResponse, error) {
+	requestDef := GenReqDefForListAvailableNodeTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableNodeTypesResponse), nil
+	}
+}
+
+// ListAvailableNodeTypesInvoker 查询可用的Node规格
+func (c *DrsClient) ListAvailableNodeTypesInvoker(request *model.ListAvailableNodeTypesRequest) *ListAvailableNodeTypesInvoker {
+	requestDef := GenReqDefForListAvailableNodeTypes()
+	return &ListAvailableNodeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAvailableZone 查询规格未售罄的可用区
 //
 // 查询规格未售罄的可用区

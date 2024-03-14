@@ -27,6 +27,9 @@ type TrainingJobInfo struct {
 
 	State *JobState `json:"state,omitempty"`
 
+	// 本次任务中该状态出现的次数
+	RejectTimes *int32 `json:"reject_times,omitempty"`
+
 	// 当任务状态为成功时呈现,音色模型在资产库中的id。
 	AssetId *string `json:"asset_id,omitempty"`
 

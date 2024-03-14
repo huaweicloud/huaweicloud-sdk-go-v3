@@ -12,7 +12,7 @@ import (
 // ShowResourceInstancesCountRequest Request Object
 type ShowResourceInstancesCountRequest struct {
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
 	ResourceType ShowResourceInstancesCountRequestResourceType `json:"resource_type"`
 
 	Body *ResourceInstanceReqBody `json:"body,omitempty"`
@@ -32,16 +32,16 @@ type ShowResourceInstancesCountRequestResourceType struct {
 }
 
 type ShowResourceInstancesCountRequestResourceTypeEnum struct {
-	ORGANIZATIONSROOTS    ShowResourceInstancesCountRequestResourceType
+	ORGANIZATIONSPOLICIES ShowResourceInstancesCountRequestResourceType
 	ORGANIZATIONSOUS      ShowResourceInstancesCountRequestResourceType
 	ORGANIZATIONSACCOUNTS ShowResourceInstancesCountRequestResourceType
-	ORGANIZATIONSPOLICIES ShowResourceInstancesCountRequestResourceType
+	ORGANIZATIONSROOTS    ShowResourceInstancesCountRequestResourceType
 }
 
 func GetShowResourceInstancesCountRequestResourceTypeEnum() ShowResourceInstancesCountRequestResourceTypeEnum {
 	return ShowResourceInstancesCountRequestResourceTypeEnum{
-		ORGANIZATIONSROOTS: ShowResourceInstancesCountRequestResourceType{
-			value: "organizations:roots",
+		ORGANIZATIONSPOLICIES: ShowResourceInstancesCountRequestResourceType{
+			value: "organizations:policies",
 		},
 		ORGANIZATIONSOUS: ShowResourceInstancesCountRequestResourceType{
 			value: "organizations:ous",
@@ -49,8 +49,8 @@ func GetShowResourceInstancesCountRequestResourceTypeEnum() ShowResourceInstance
 		ORGANIZATIONSACCOUNTS: ShowResourceInstancesCountRequestResourceType{
 			value: "organizations:accounts",
 		},
-		ORGANIZATIONSPOLICIES: ShowResourceInstancesCountRequestResourceType{
-			value: "organizations:policies",
+		ORGANIZATIONSROOTS: ShowResourceInstancesCountRequestResourceType{
+			value: "organizations:roots",
 		},
 	}
 }

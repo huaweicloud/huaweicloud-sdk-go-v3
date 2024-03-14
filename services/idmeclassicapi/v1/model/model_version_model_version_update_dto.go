@@ -9,13 +9,13 @@ import (
 type VersionModelVersionUpdateDto struct {
 
 	// 唯一标识。
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 
 	// 迭代版本。
 	Iteration *int32 `json:"iteration,omitempty"`
 
 	// 版本号。
-	Version *string `json:"version,omitempty"`
+	Version string `json:"version"`
 }
 
 func (o VersionModelVersionUpdateDto) String() string {

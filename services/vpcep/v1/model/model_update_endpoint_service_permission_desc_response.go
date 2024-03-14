@@ -8,6 +8,8 @@ import (
 
 // UpdateEndpointServicePermissionDescResponse Response Object
 type UpdateEndpointServicePermissionDescResponse struct {
+
+	// 终端节点服务白名单
 	Permissions    *[]EpsPermission `json:"permissions,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

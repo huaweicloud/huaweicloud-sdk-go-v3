@@ -5,6 +5,78 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/metastudio/v1/model"
 )
 
+type CreateActiveCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateActiveCodeInvoker) Invoke() (*model.CreateActiveCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateActiveCodeResponse), nil
+	}
+}
+
+type DeleteActiveCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteActiveCodeInvoker) Invoke() (*model.DeleteActiveCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteActiveCodeResponse), nil
+	}
+}
+
+type ListActiveCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListActiveCodeInvoker) Invoke() (*model.ListActiveCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListActiveCodeResponse), nil
+	}
+}
+
+type ResetActiveCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetActiveCodeInvoker) Invoke() (*model.ResetActiveCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetActiveCodeResponse), nil
+	}
+}
+
+type ShowActiveCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowActiveCodeInvoker) Invoke() (*model.ShowActiveCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowActiveCodeResponse), nil
+	}
+}
+
+type UpdateActiveCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateActiveCodeInvoker) Invoke() (*model.UpdateActiveCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateActiveCodeResponse), nil
+	}
+}
+
 type CreateDialogUrlInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +122,18 @@ func (i *StopSmartChatJobInvoker) Invoke() (*model.StopSmartChatJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.StopSmartChatJobResponse), nil
+	}
+}
+
+type CreateAssetbyReplicationInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetbyReplicationInfoInvoker) Invoke() (*model.CreateAssetbyReplicationInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetbyReplicationInfoResponse), nil
 	}
 }
 
@@ -122,6 +206,18 @@ func (i *ShowAssetInvoker) Invoke() (*model.ShowAssetResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAssetResponse), nil
+	}
+}
+
+type ShowAssetReplicationInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetReplicationInfoInvoker) Invoke() (*model.ShowAssetReplicationInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetReplicationInfoResponse), nil
 	}
 }
 

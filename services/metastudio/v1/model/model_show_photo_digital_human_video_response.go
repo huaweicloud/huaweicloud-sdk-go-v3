@@ -15,7 +15,7 @@ type ShowPhotoDigitalHumanVideoResponse struct {
 	// 任务ID。
 	JobId string `json:"job_id"`
 
-	// 任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消
+	// 任务的状态。 * WAITING：等待 * PROCESSING：处理中 * SUCCEED：成功 * FAILED：失败 * CANCELED：取消 * BLOCK: 冻结
 	State ShowPhotoDigitalHumanVideoResponseState `json:"state"`
 
 	// 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
@@ -76,6 +76,7 @@ type ShowPhotoDigitalHumanVideoResponseStateEnum struct {
 	SUCCEED    ShowPhotoDigitalHumanVideoResponseState
 	FAILED     ShowPhotoDigitalHumanVideoResponseState
 	CANCELED   ShowPhotoDigitalHumanVideoResponseState
+	BLOCK      ShowPhotoDigitalHumanVideoResponseState
 }
 
 func GetShowPhotoDigitalHumanVideoResponseStateEnum() ShowPhotoDigitalHumanVideoResponseStateEnum {
@@ -94,6 +95,9 @@ func GetShowPhotoDigitalHumanVideoResponseStateEnum() ShowPhotoDigitalHumanVideo
 		},
 		CANCELED: ShowPhotoDigitalHumanVideoResponseState{
 			value: "CANCELED",
+		},
+		BLOCK: ShowPhotoDigitalHumanVideoResponseState{
+			value: "BLOCK",
 		},
 	}
 }

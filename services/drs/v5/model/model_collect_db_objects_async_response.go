@@ -16,8 +16,11 @@ type CollectDbObjectsAsyncResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 查询状态
-	Status         *CollectDbObjectsAsyncResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                                  `json:"-"`
+	Status *CollectDbObjectsAsyncResponseStatus `json:"status,omitempty"`
+
+	// 任务ID
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CollectDbObjectsAsyncResponse) String() string {

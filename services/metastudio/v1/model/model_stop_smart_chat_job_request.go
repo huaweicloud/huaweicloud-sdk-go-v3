@@ -21,7 +21,7 @@ type StopSmartChatJobRequest struct {
 	// 开发者应用作为资产权属的可选字段。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
-	// 直播间ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
+	// 智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
 	RoomId string `json:"room_id"`
 
 	// 任务ID。

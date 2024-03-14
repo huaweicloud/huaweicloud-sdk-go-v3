@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -31,7 +34,7 @@ type QueryResourceInstanceTagsBody struct {
 	Offset *string `json:"offset,omitempty"`
 
 	// 操作标识（仅限于filter，count）：filter（过滤）， count(查询总条数)如果是filter就按照过滤条件查询， 如果是count，只需要返回总条数，禁止返回其他字段。
-	Action string `json:"action"`
+	Action QueryResourceInstanceTagsBodyAction `json:"action"`
 
 	// 搜索字段，key为要匹配的字段，如resource_name等。value为匹配的值。 key为固定字典值，不能包含重复的key或不支持的key。 根据key的值确认是否需要模糊匹配，如resource_name默认为模糊搜索（不区分大小写）， 如果value为空字符串精确匹配（多数服务不存在资源名称为空的情况， 因此此类情况返回空列表）。resource_id为精确匹配。 第一期只做resource_name，后续再扩展。
 	Matches *[]Match `json:"matches,omitempty"`
@@ -47,4 +50,51 @@ func (o QueryResourceInstanceTagsBody) String() string {
 	}
 
 	return strings.Join([]string{"QueryResourceInstanceTagsBody", string(data)}, " ")
+}
+
+type QueryResourceInstanceTagsBodyAction struct {
+	value string
+}
+
+type QueryResourceInstanceTagsBodyActionEnum struct {
+	FILTER QueryResourceInstanceTagsBodyAction
+	COUNT  QueryResourceInstanceTagsBodyAction
+}
+
+func GetQueryResourceInstanceTagsBodyActionEnum() QueryResourceInstanceTagsBodyActionEnum {
+	return QueryResourceInstanceTagsBodyActionEnum{
+		FILTER: QueryResourceInstanceTagsBodyAction{
+			value: "filter",
+		},
+		COUNT: QueryResourceInstanceTagsBodyAction{
+			value: "count",
+		},
+	}
+}
+
+func (c QueryResourceInstanceTagsBodyAction) Value() string {
+	return c.value
+}
+
+func (c QueryResourceInstanceTagsBodyAction) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *QueryResourceInstanceTagsBodyAction) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

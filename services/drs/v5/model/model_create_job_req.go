@@ -19,6 +19,9 @@ type CreateJobReq struct {
 	PeriodOrder *PeriodOrderInfo `json:"period_order,omitempty"`
 
 	NodeInfo *JobNodeInfo `json:"node_info"`
+
+	// 指定公网IP的信息
+	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
 }
 
 func (o CreateJobReq) String() string {

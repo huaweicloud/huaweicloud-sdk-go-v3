@@ -15,7 +15,7 @@ type BatchAddEndpointServicePermissionsRequest struct {
 	// 终端节点服务的ID。
 	VpcEndpointServiceId string `json:"vpc_endpoint_service_id"`
 
-	Body *BatchAddPermissionRequest `json:"body,omitempty"`
+	Body *BatchAddEndpointServicePermissionsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchAddEndpointServicePermissionsRequest) String() string {

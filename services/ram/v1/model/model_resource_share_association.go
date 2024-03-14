@@ -10,7 +10,7 @@ import (
 // ResourceShareAssociation 与资源共享实例关联的资源使用者或共享资源的详细信息。
 type ResourceShareAssociation struct {
 
-	// 绑定的实体。这可以是共享资源的URN、帐号ID、共享资源目录的URN或文件夹的URN之一。
+	// 绑定的实体。这可以是共享资源的URN、账号ID、组织根的URN或OU的URN之一。
 	AssociatedEntity string `json:"associated_entity"`
 
 	// 绑定中包含的实体类型。

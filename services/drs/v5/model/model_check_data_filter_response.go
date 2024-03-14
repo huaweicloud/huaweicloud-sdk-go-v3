@@ -16,8 +16,11 @@ type CheckDataFilterResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 查询状态
-	Status         *CheckDataFilterResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+	Status *CheckDataFilterResponseStatus `json:"status,omitempty"`
+
+	// 任务ID
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CheckDataFilterResponse) String() string {

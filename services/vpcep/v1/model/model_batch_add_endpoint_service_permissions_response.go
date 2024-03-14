@@ -8,6 +8,8 @@ import (
 
 // BatchAddEndpointServicePermissionsResponse Response Object
 type BatchAddEndpointServicePermissionsResponse struct {
+
+	// 终端节点服务白名单
 	Permissions    *[]EpsPermission `json:"permissions,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

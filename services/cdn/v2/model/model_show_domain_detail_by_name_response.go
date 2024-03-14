@@ -8,8 +8,10 @@ import (
 
 // ShowDomainDetailByNameResponse Response Object
 type ShowDomainDetailByNameResponse struct {
-	Domain         *DomainsDetail `json:"domain,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Domain *DomainsDetail `json:"domain,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowDomainDetailByNameResponse) String() string {

@@ -9,7 +9,7 @@ import (
 type VersionMasterIdsDtoVersionModelVersionMasterDto struct {
 
 	// 主对象集合。
-	MasterIds *[]VersionModelMasterIdsDto `json:"masterIds,omitempty"`
+	MasterIds []VersionModelMasterIdsDto `json:"masterIds"`
 
 	// 更新者。
 	Modifier *string `json:"modifier,omitempty"`

@@ -15,7 +15,7 @@ type DigitalHumanBusinessCardJobInfo struct {
 	// 任务ID。
 	JobId string `json:"job_id"`
 
-	// 任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消
+	// 任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * BLOCK: 冻结
 	State DigitalHumanBusinessCardJobInfoState `json:"state"`
 
 	// 数字人名片制作开始时间。
@@ -57,6 +57,7 @@ type DigitalHumanBusinessCardJobInfoStateEnum struct {
 	SUCCEED    DigitalHumanBusinessCardJobInfoState
 	FAILED     DigitalHumanBusinessCardJobInfoState
 	CANCELED   DigitalHumanBusinessCardJobInfoState
+	BLOCK      DigitalHumanBusinessCardJobInfoState
 }
 
 func GetDigitalHumanBusinessCardJobInfoStateEnum() DigitalHumanBusinessCardJobInfoStateEnum {
@@ -75,6 +76,9 @@ func GetDigitalHumanBusinessCardJobInfoStateEnum() DigitalHumanBusinessCardJobIn
 		},
 		CANCELED: DigitalHumanBusinessCardJobInfoState{
 			value: "CANCELED",
+		},
+		BLOCK: DigitalHumanBusinessCardJobInfoState{
+			value: "BLOCK",
 		},
 	}
 }

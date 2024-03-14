@@ -12,10 +12,10 @@ import (
 // CreateTagResourceRequest Request Object
 type CreateTagResourceRequest struct {
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
 	ResourceType CreateTagResourceRequestResourceType `json:"resource_type"`
 
-	// 根、组织单元、帐号或策略的唯一标识符（ID）。
+	// 根、组织单元、账号或策略的唯一标识符（ID）。
 	ResourceId string `json:"resource_id"`
 
 	Body *TagResourceReqBody `json:"body,omitempty"`
@@ -35,16 +35,16 @@ type CreateTagResourceRequestResourceType struct {
 }
 
 type CreateTagResourceRequestResourceTypeEnum struct {
-	ORGANIZATIONSROOTS    CreateTagResourceRequestResourceType
+	ORGANIZATIONSPOLICIES CreateTagResourceRequestResourceType
 	ORGANIZATIONSOUS      CreateTagResourceRequestResourceType
 	ORGANIZATIONSACCOUNTS CreateTagResourceRequestResourceType
-	ORGANIZATIONSPOLICIES CreateTagResourceRequestResourceType
+	ORGANIZATIONSROOTS    CreateTagResourceRequestResourceType
 }
 
 func GetCreateTagResourceRequestResourceTypeEnum() CreateTagResourceRequestResourceTypeEnum {
 	return CreateTagResourceRequestResourceTypeEnum{
-		ORGANIZATIONSROOTS: CreateTagResourceRequestResourceType{
-			value: "organizations:roots",
+		ORGANIZATIONSPOLICIES: CreateTagResourceRequestResourceType{
+			value: "organizations:policies",
 		},
 		ORGANIZATIONSOUS: CreateTagResourceRequestResourceType{
 			value: "organizations:ous",
@@ -52,8 +52,8 @@ func GetCreateTagResourceRequestResourceTypeEnum() CreateTagResourceRequestResou
 		ORGANIZATIONSACCOUNTS: CreateTagResourceRequestResourceType{
 			value: "organizations:accounts",
 		},
-		ORGANIZATIONSPOLICIES: CreateTagResourceRequestResourceType{
-			value: "organizations:policies",
+		ORGANIZATIONSROOTS: CreateTagResourceRequestResourceType{
+			value: "organizations:roots",
 		},
 	}
 }

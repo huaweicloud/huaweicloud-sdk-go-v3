@@ -12,10 +12,10 @@ import (
 // ListTagResourcesRequest Request Object
 type ListTagResourcesRequest struct {
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
 	ResourceType ListTagResourcesRequestResourceType `json:"resource_type"`
 
-	// 根、组织单元、帐号或策略的唯一标识符（ID）。
+	// 根、组织单元、账号或策略的唯一标识符（ID）。
 	ResourceId string `json:"resource_id"`
 
 	// 页面中最大结果数量。
@@ -39,16 +39,16 @@ type ListTagResourcesRequestResourceType struct {
 }
 
 type ListTagResourcesRequestResourceTypeEnum struct {
-	ORGANIZATIONSROOTS    ListTagResourcesRequestResourceType
+	ORGANIZATIONSPOLICIES ListTagResourcesRequestResourceType
 	ORGANIZATIONSOUS      ListTagResourcesRequestResourceType
 	ORGANIZATIONSACCOUNTS ListTagResourcesRequestResourceType
-	ORGANIZATIONSPOLICIES ListTagResourcesRequestResourceType
+	ORGANIZATIONSROOTS    ListTagResourcesRequestResourceType
 }
 
 func GetListTagResourcesRequestResourceTypeEnum() ListTagResourcesRequestResourceTypeEnum {
 	return ListTagResourcesRequestResourceTypeEnum{
-		ORGANIZATIONSROOTS: ListTagResourcesRequestResourceType{
-			value: "organizations:roots",
+		ORGANIZATIONSPOLICIES: ListTagResourcesRequestResourceType{
+			value: "organizations:policies",
 		},
 		ORGANIZATIONSOUS: ListTagResourcesRequestResourceType{
 			value: "organizations:ous",
@@ -56,8 +56,8 @@ func GetListTagResourcesRequestResourceTypeEnum() ListTagResourcesRequestResourc
 		ORGANIZATIONSACCOUNTS: ListTagResourcesRequestResourceType{
 			value: "organizations:accounts",
 		},
-		ORGANIZATIONSPOLICIES: ListTagResourcesRequestResourceType{
-			value: "organizations:policies",
+		ORGANIZATIONSROOTS: ListTagResourcesRequestResourceType{
+			value: "organizations:roots",
 		},
 	}
 }

@@ -28,6 +28,9 @@ type TriggerProcess struct {
 
 	// 回复次序 - RANDOM：随机 - ORDER：顺序循环
 	ReplyOrder *TriggerProcessReplyOrder `json:"reply_order,omitempty"`
+
+	// 回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+	ReplyRole *TriggerProcessReplyRole `json:"reply_role,omitempty"`
 }
 
 func (o TriggerProcess) String() string {
@@ -119,6 +122,53 @@ func (c TriggerProcessReplyOrder) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TriggerProcessReplyOrder) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TriggerProcessReplyRole struct {
+	value string
+}
+
+type TriggerProcessReplyRoleEnum struct {
+	STREAMER    TriggerProcessReplyRole
+	CO_STREAMER TriggerProcessReplyRole
+}
+
+func GetTriggerProcessReplyRoleEnum() TriggerProcessReplyRoleEnum {
+	return TriggerProcessReplyRoleEnum{
+		STREAMER: TriggerProcessReplyRole{
+			value: "STREAMER",
+		},
+		CO_STREAMER: TriggerProcessReplyRole{
+			value: "CO_STREAMER",
+		},
+	}
+}
+
+func (c TriggerProcessReplyRole) Value() string {
+	return c.value
+}
+
+func (c TriggerProcessReplyRole) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TriggerProcessReplyRole) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

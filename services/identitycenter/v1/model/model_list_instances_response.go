@@ -9,7 +9,7 @@ import (
 // ListInstancesResponse Response Object
 type ListInstancesResponse struct {
 
-	// IdentityCenter实例信息列表
+	// IAM身份中心实例信息列表
 	Instances *[]InstanceMetadataEntryDto `json:"instances,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

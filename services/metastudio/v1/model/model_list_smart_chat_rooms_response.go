@@ -9,10 +9,13 @@ import (
 // ListSmartChatRoomsResponse Response Object
 type ListSmartChatRoomsResponse struct {
 
-	// 智能交互对话直播间总数。
+	// 智能交互对话总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 智能交互对话直播间列表。
+	// 智能交互对话总并发路数。
+	CountConcurrency *int32 `json:"count_concurrency,omitempty"`
+
+	// 智能交互对话列表。
 	SmartChatRooms *[]SmartChatRoomBaseInfo `json:"smart_chat_rooms,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`

@@ -12,7 +12,7 @@ type DelegatedAdministratorReqBody struct {
 	// 服务主体名称。
 	ServicePrincipal string `json:"service_principal"`
 
-	// 帐号的唯一标识符（ID）。
+	// 账号的唯一标识符（ID）。
 	AccountId string `json:"account_id"`
 }
 

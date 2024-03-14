@@ -15,15 +15,17 @@ type JobState struct {
 }
 
 type JobStateEnum struct {
-	CREATING        JobState
-	SYSTEM_AUDITING JobState
-	AUDITING        JobState
-	WAITING         JobState
-	PROCESSING      JobState
-	RESULT_REVIEW   JobState
-	AUDIT_FAILED    JobState
-	FAILED          JobState
-	SUCCEED         JobState
+	CREATING           JobState
+	SYSTEM_AUDITING    JobState
+	AUDITING           JobState
+	WAITING            JobState
+	PROCESSING         JobState
+	RESULT_REVIEW      JobState
+	AUDIT_FAILED       JobState
+	USER_RESULT_REVIEW JobState
+	USER_REVIEW_REJECT JobState
+	FAILED             JobState
+	SUCCEED            JobState
 }
 
 func GetJobStateEnum() JobStateEnum {
@@ -48,6 +50,12 @@ func GetJobStateEnum() JobStateEnum {
 		},
 		AUDIT_FAILED: JobState{
 			value: "AUDIT_FAILED",
+		},
+		USER_RESULT_REVIEW: JobState{
+			value: "USER_RESULT_REVIEW",
+		},
+		USER_REVIEW_REJECT: JobState{
+			value: "USER_REVIEW_REJECT",
 		},
 		FAILED: JobState{
 			value: "FAILED",

@@ -1870,6 +1870,48 @@ func (c *DwsClient) ListLtsLogsInvoker(request *model.ListLtsLogsRequest) *ListL
 	return &ListLtsLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMetrics 查询集群使用指标列表
+//
+// 查询集群使用指标列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
+	requestDef := GenReqDefForListMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricsResponse), nil
+	}
+}
+
+// ListMetricsInvoker 查询集群使用指标列表
+func (c *DwsClient) ListMetricsInvoker(request *model.ListMetricsRequest) *ListMetricsInvoker {
+	requestDef := GenReqDefForListMetrics()
+	return &ListMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMetricsData 获取指定指标相关采集数据
+//
+// 获取指定指标相关采集数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListMetricsData(request *model.ListMetricsDataRequest) (*model.ListMetricsDataResponse, error) {
+	requestDef := GenReqDefForListMetricsData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricsDataResponse), nil
+	}
+}
+
+// ListMetricsDataInvoker 获取指定指标相关采集数据
+func (c *DwsClient) ListMetricsDataInvoker(request *model.ListMetricsDataRequest) *ListMetricsDataInvoker {
+	requestDef := GenReqDefForListMetricsData()
+	return &ListMetricsDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMonitorIndicatorData openApi查询历史监控数据
 //
 // openApi查询历史监控数据

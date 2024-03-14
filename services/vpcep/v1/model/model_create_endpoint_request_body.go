@@ -9,7 +9,7 @@ import (
 // CreateEndpointRequestBody 创建终端节接口请求结构体
 type CreateEndpointRequestBody struct {
 
-	// 说明： 创建Interface类型Client必选。 需要指定vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。 详细内容请参考《虚拟私有云API参考》中的“查询子网”，详见响应消息中的“id”字段。 创建连接Interface类型终端节点服务的终端节点时，此参数必选。 说明 ● VPC的子网网段不能与198.19.128.0/17重叠 ● VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠
+	// 创建Interface类型Client必选。 需要指定vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。 详细内容请参考《虚拟私有云API参考》中的“查询子网”，详见响应消息中的“id”字段。 创建连接Interface类型终端节点服务的终端节点时，此参数必选。 说明:  - VPC的子网网段不能与198.19.128.0/17重叠  - VPC路由表中自定义路由的目的地址不能与198.19.128.0/17重叠
 	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 终端节点服务的ID。 可以通过查询终端节点服务概 要获取要连接的终端节点服务 ID。
@@ -18,7 +18,7 @@ type CreateEndpointRequestBody struct {
 	// 终端节点所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”， 详见响应消息中的“id”字段。
 	VpcId string `json:"vpc_id"`
 
-	// 是否创建域名。 ● true：创建域名 ● false：不创建域名 默认值为false。 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+	// 是否创建域名。  - true：创建域名  - false：不创建域名 默认值为false。 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
 	EnableDns *bool `json:"enable_dns,omitempty"`
 
 	// 标签列表，没有标签默认为空数组。

@@ -77,6 +77,9 @@ type CreateJobReq struct {
 	ChargingMode *CreateJobReqChargingMode `json:"charging_mode,omitempty"`
 
 	PeriodOrder *PeriodOrderInfo `json:"period_order,omitempty"`
+
+	// 指定公网IP的信息
+	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
 }
 
 func (o CreateJobReq) String() string {

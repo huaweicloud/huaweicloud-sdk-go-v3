@@ -10,8 +10,10 @@ import (
 type ShowTagsResponse struct {
 
 	// 标签列表
-	Tags           *[]TagMap `json:"tags,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Tags *[]TagMap `json:"tags,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTagsResponse) String() string {

@@ -12,7 +12,7 @@ import (
 // ListResourceTagsRequest Request Object
 type ListResourceTagsRequest struct {
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
 	ResourceType ListResourceTagsRequestResourceType `json:"resource_type"`
 }
 
@@ -30,16 +30,16 @@ type ListResourceTagsRequestResourceType struct {
 }
 
 type ListResourceTagsRequestResourceTypeEnum struct {
-	ORGANIZATIONSROOTS    ListResourceTagsRequestResourceType
+	ORGANIZATIONSPOLICIES ListResourceTagsRequestResourceType
 	ORGANIZATIONSOUS      ListResourceTagsRequestResourceType
 	ORGANIZATIONSACCOUNTS ListResourceTagsRequestResourceType
-	ORGANIZATIONSPOLICIES ListResourceTagsRequestResourceType
+	ORGANIZATIONSROOTS    ListResourceTagsRequestResourceType
 }
 
 func GetListResourceTagsRequestResourceTypeEnum() ListResourceTagsRequestResourceTypeEnum {
 	return ListResourceTagsRequestResourceTypeEnum{
-		ORGANIZATIONSROOTS: ListResourceTagsRequestResourceType{
-			value: "organizations:roots",
+		ORGANIZATIONSPOLICIES: ListResourceTagsRequestResourceType{
+			value: "organizations:policies",
 		},
 		ORGANIZATIONSOUS: ListResourceTagsRequestResourceType{
 			value: "organizations:ous",
@@ -47,8 +47,8 @@ func GetListResourceTagsRequestResourceTypeEnum() ListResourceTagsRequestResourc
 		ORGANIZATIONSACCOUNTS: ListResourceTagsRequestResourceType{
 			value: "organizations:accounts",
 		},
-		ORGANIZATIONSPOLICIES: ListResourceTagsRequestResourceType{
-			value: "organizations:policies",
+		ORGANIZATIONSROOTS: ListResourceTagsRequestResourceType{
+			value: "organizations:roots",
 		},
 	}
 }

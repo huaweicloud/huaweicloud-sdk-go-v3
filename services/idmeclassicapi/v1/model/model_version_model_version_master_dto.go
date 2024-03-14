@@ -9,7 +9,7 @@ import (
 type VersionModelVersionMasterDto struct {
 
 	// 主对象ID。
-	MasterId *string `json:"masterId,omitempty"`
+	MasterId string `json:"masterId"`
 
 	// 版本对象版本号。
 	Version *string `json:"version,omitempty"`

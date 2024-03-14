@@ -16,8 +16,11 @@ type CollectColumnsResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 查询状态
-	Status         *CollectColumnsResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Status *CollectColumnsResponseStatus `json:"status,omitempty"`
+
+	// 任务ID
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CollectColumnsResponse) String() string {

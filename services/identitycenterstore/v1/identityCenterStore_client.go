@@ -21,7 +21,7 @@ func IdentityCenterStoreClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // ListUsers 列出用户
 //
-// 查询指定IdentityStore下的IdentityCenter用户列表
+// 查询指定身份源下的IAM身份中心用户列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterStoreClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {

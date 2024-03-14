@@ -9,7 +9,7 @@ import (
 // ListDelegatedServicesResponse Response Object
 type ListDelegatedServicesResponse struct {
 
-	// 帐号是其委托管理员的服务。
+	// 账号是其委托管理员的服务。
 	DelegatedServices *[]DelegatedServiceDto `json:"delegated_services,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

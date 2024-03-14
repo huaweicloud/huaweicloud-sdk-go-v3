@@ -18,6 +18,9 @@ type UserDto struct {
 	// 用户的电子邮箱信息列表
 	Emails []EmailDto `json:"emails"`
 
+	// 外部身份源分配给此资源的标识符
+	ExternalId *string `json:"external_id,omitempty"`
+
 	// 用户的外部标识符信息列表
 	ExternalIds *[]ExternalIdDto `json:"external_ids,omitempty"`
 
@@ -47,7 +50,7 @@ type UserDto struct {
 	// 用户头衔
 	Title *string `json:"title,omitempty"`
 
-	// 身份源中IdentityCenter用户的全局唯一标识符（ID）
+	// 身份源中IAM身份中心用户的全局唯一标识符（ID）
 	UserId string `json:"user_id"`
 
 	// 用户名，用于标识用户的唯一字符串
@@ -70,6 +73,8 @@ type UserDto struct {
 
 	// 一个布尔值，表示用户是否启用
 	Enabled bool `json:"enabled"`
+
+	Enterprise *EnterpriseDto `json:"enterprise,omitempty"`
 }
 
 func (o UserDto) String() string {

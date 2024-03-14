@@ -15,7 +15,7 @@ type BatchRemoveEndpointServicePermissionsRequest struct {
 	// 终端节点服务的ID。
 	VpcEndpointServiceId string `json:"vpc_endpoint_service_id"`
 
-	Body *BatchRemovePermissionRequest `json:"body,omitempty"`
+	Body *BatchRemoveEndpointServicePermissionsRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchRemoveEndpointServicePermissionsRequest) String() string {

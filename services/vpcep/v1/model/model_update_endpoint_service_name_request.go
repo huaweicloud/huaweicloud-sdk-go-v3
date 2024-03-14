@@ -12,7 +12,7 @@ type UpdateEndpointServiceNameRequest struct {
 	// 终端节点服务ID
 	VpcEndpointServiceId string `json:"vpc_endpoint_service_id"`
 
-	Body *UpdateEndpointServiceNameMode `json:"body,omitempty"`
+	Body *UpdateEndpointServiceNameRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateEndpointServiceNameRequest) String() string {

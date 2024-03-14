@@ -7,10 +7,10 @@ import (
 	"strings"
 )
 
-// HandshakeDto 两个帐号（发起者和接收者）之间为了能安全地建立关系，所需要交换的信息。例如，当管理帐号（发起者）邀请另一个帐号（接收者）加入其组织时，两个帐号一系列邀请（握手）请求和响应交换信息。
+// HandshakeDto 两个账号（发起者和接收者）之间为了能安全地建立关系，所需要交换的信息。例如，当管理账号（发起者）邀请另一个账号（接收者）加入其组织时，两个账号一系列邀请（握手）请求和响应交换信息。
 type HandshakeDto struct {
 
-	// 邀请（握手）的唯一标识符（ID）。源帐号在发起邀请（握手）时创建ID。
+	// 邀请（握手）的唯一标识符（ID）。源账号在发起邀请（握手）时创建ID。
 	Id string `json:"id"`
 
 	// 邀请（握手）的统一资源名称。
@@ -22,16 +22,16 @@ type HandshakeDto struct {
 	// 提出邀请（握手）请求的日期和时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
-	// 组织管理帐号的唯一标识符（ID）。
+	// 组织管理账号的唯一标识符（ID）。
 	ManagementAccountId string `json:"management_account_id"`
 
-	// 组织管理帐号的名称。
+	// 组织管理账号的名称。
 	ManagementAccountName string `json:"management_account_name"`
 
 	// 组织的唯一标识符（ID）。
 	OrganizationId string `json:"organization_id"`
 
-	// 给收件帐号所有者的邮件中的附加信息。
+	// 给收件账号所有者的邮件中的附加信息。
 	Notes string `json:"notes"`
 
 	Target *TargetDto `json:"target"`

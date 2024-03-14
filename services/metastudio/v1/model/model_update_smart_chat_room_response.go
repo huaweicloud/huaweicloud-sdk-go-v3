@@ -9,10 +9,10 @@ import (
 // UpdateSmartChatRoomResponse Response Object
 type UpdateSmartChatRoomResponse struct {
 
-	// 直播间名称
+	// 对话名称
 	RoomName string `json:"room_name"`
 
-	// 直播间描述。
+	// 对话描述。
 	RoomDescription *string `json:"room_description,omitempty"`
 
 	VideoConfig *VideoConfig `json:"video_config,omitempty"`
@@ -22,7 +22,7 @@ type UpdateSmartChatRoomResponse struct {
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`
 
-	// 机器人ID。
+	// 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
 	RobotId string `json:"robot_id"`
 
 	// 并发路数。
@@ -37,16 +37,16 @@ type UpdateSmartChatRoomResponse struct {
 
 	ChatSubtitleConfig *ChatSubtitleConfig `json:"chat_subtitle_config,omitempty"`
 
-	// 直播间ID
+	// 对话ID。
 	RoomId *string `json:"room_id,omitempty"`
 
-	// 智能交互对话直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 智能交互对话直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 直播间封面图URL
+	// 对话封面图URL
 	CoverUrl *string `json:"cover_url,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`

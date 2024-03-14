@@ -12,7 +12,7 @@ import (
 // ListPoliciesRequest Request Object
 type ListPoliciesRequest struct {
 
-	// 根、组织单元或帐号的唯一标识符（ID）。
+	// 根、组织单元或账号的唯一标识符（ID）。
 	AttachedEntityId *string `json:"attached_entity_id,omitempty"`
 
 	// 页面中最大结果数量。

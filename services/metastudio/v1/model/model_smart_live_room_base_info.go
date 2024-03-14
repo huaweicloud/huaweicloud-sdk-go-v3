@@ -26,6 +26,9 @@ type SmartLiveRoomBaseInfo struct {
 	// 直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
 	RoomState *SmartLiveRoomBaseInfoRoomState `json:"room_state,omitempty"`
 
+	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+	ViewMode *SmartLiveRoomBaseInfoViewMode `json:"view_mode,omitempty"`
+
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 
 	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
@@ -35,6 +38,9 @@ type SmartLiveRoomBaseInfo struct {
 
 	// 直播间封面图URL
 	CoverUrl *string `json:"cover_url,omitempty"`
+
+	// 直播间封面图URL
+	Thumbnail *string `json:"thumbnail,omitempty"`
 
 	// 数字人模型信息
 	ModelInfos *[]ModelInfo `json:"model_infos,omitempty"`
@@ -148,6 +154,53 @@ func (c SmartLiveRoomBaseInfoRoomState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SmartLiveRoomBaseInfoRoomState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SmartLiveRoomBaseInfoViewMode struct {
+	value string
+}
+
+type SmartLiveRoomBaseInfoViewModeEnum struct {
+	LANDSCAPE SmartLiveRoomBaseInfoViewMode
+	VERTICAL  SmartLiveRoomBaseInfoViewMode
+}
+
+func GetSmartLiveRoomBaseInfoViewModeEnum() SmartLiveRoomBaseInfoViewModeEnum {
+	return SmartLiveRoomBaseInfoViewModeEnum{
+		LANDSCAPE: SmartLiveRoomBaseInfoViewMode{
+			value: "LANDSCAPE",
+		},
+		VERTICAL: SmartLiveRoomBaseInfoViewMode{
+			value: "VERTICAL",
+		},
+	}
+}
+
+func (c SmartLiveRoomBaseInfoViewMode) Value() string {
+	return c.value
+}
+
+func (c SmartLiveRoomBaseInfoViewMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartLiveRoomBaseInfoViewMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

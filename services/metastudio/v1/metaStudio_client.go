@@ -19,6 +19,132 @@ func MetaStudioClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CreateActiveCode 创建激活码
+//
+// 该接口用于创建激活码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateActiveCode(request *model.CreateActiveCodeRequest) (*model.CreateActiveCodeResponse, error) {
+	requestDef := GenReqDefForCreateActiveCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateActiveCodeResponse), nil
+	}
+}
+
+// CreateActiveCodeInvoker 创建激活码
+func (c *MetaStudioClient) CreateActiveCodeInvoker(request *model.CreateActiveCodeRequest) *CreateActiveCodeInvoker {
+	requestDef := GenReqDefForCreateActiveCode()
+	return &CreateActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteActiveCode 删除激活码
+//
+// 该接口用于删除激活码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteActiveCode(request *model.DeleteActiveCodeRequest) (*model.DeleteActiveCodeResponse, error) {
+	requestDef := GenReqDefForDeleteActiveCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteActiveCodeResponse), nil
+	}
+}
+
+// DeleteActiveCodeInvoker 删除激活码
+func (c *MetaStudioClient) DeleteActiveCodeInvoker(request *model.DeleteActiveCodeRequest) *DeleteActiveCodeInvoker {
+	requestDef := GenReqDefForDeleteActiveCode()
+	return &DeleteActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActiveCode 查询激活码列表
+//
+// 该接口用于查询激活码列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListActiveCode(request *model.ListActiveCodeRequest) (*model.ListActiveCodeResponse, error) {
+	requestDef := GenReqDefForListActiveCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListActiveCodeResponse), nil
+	}
+}
+
+// ListActiveCodeInvoker 查询激活码列表
+func (c *MetaStudioClient) ListActiveCodeInvoker(request *model.ListActiveCodeRequest) *ListActiveCodeInvoker {
+	requestDef := GenReqDefForListActiveCode()
+	return &ListActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetActiveCode 重置激活码
+//
+// 该接口用于重置激活码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ResetActiveCode(request *model.ResetActiveCodeRequest) (*model.ResetActiveCodeResponse, error) {
+	requestDef := GenReqDefForResetActiveCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetActiveCodeResponse), nil
+	}
+}
+
+// ResetActiveCodeInvoker 重置激活码
+func (c *MetaStudioClient) ResetActiveCodeInvoker(request *model.ResetActiveCodeRequest) *ResetActiveCodeInvoker {
+	requestDef := GenReqDefForResetActiveCode()
+	return &ResetActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowActiveCode 查询激活码详情
+//
+// 该接口用于查询激活码详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowActiveCode(request *model.ShowActiveCodeRequest) (*model.ShowActiveCodeResponse, error) {
+	requestDef := GenReqDefForShowActiveCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowActiveCodeResponse), nil
+	}
+}
+
+// ShowActiveCodeInvoker 查询激活码详情
+func (c *MetaStudioClient) ShowActiveCodeInvoker(request *model.ShowActiveCodeRequest) *ShowActiveCodeInvoker {
+	requestDef := GenReqDefForShowActiveCode()
+	return &ShowActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateActiveCode 修改激活码
+//
+// 该接口用于修改激活码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateActiveCode(request *model.UpdateActiveCodeRequest) (*model.UpdateActiveCodeResponse, error) {
+	requestDef := GenReqDefForUpdateActiveCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateActiveCodeResponse), nil
+	}
+}
+
+// UpdateActiveCodeInvoker 修改激活码
+func (c *MetaStudioClient) UpdateActiveCodeInvoker(request *model.UpdateActiveCodeRequest) *UpdateActiveCodeInvoker {
+	requestDef := GenReqDefForUpdateActiveCode()
+	return &UpdateActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDialogUrl 创建对话链接
 //
 // 该接口用于创建对话链接。
@@ -101,6 +227,27 @@ func (c *MetaStudioClient) StopSmartChatJob(request *model.StopSmartChatJobReque
 func (c *MetaStudioClient) StopSmartChatJobInvoker(request *model.StopSmartChatJobRequest) *StopSmartChatJobInvoker {
 	requestDef := GenReqDefForStopSmartChatJob()
 	return &StopSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAssetbyReplicationInfo 复制资产
+//
+// 该接口用于在Region B复制Region A的指定资产。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateAssetbyReplicationInfo(request *model.CreateAssetbyReplicationInfoRequest) (*model.CreateAssetbyReplicationInfoResponse, error) {
+	requestDef := GenReqDefForCreateAssetbyReplicationInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetbyReplicationInfoResponse), nil
+	}
+}
+
+// CreateAssetbyReplicationInfoInvoker 复制资产
+func (c *MetaStudioClient) CreateAssetbyReplicationInfoInvoker(request *model.CreateAssetbyReplicationInfoRequest) *CreateAssetbyReplicationInfoInvoker {
+	requestDef := GenReqDefForCreateAssetbyReplicationInfo()
+	return &CreateAssetbyReplicationInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDigitalAsset 创建资产
@@ -230,6 +377,27 @@ func (c *MetaStudioClient) ShowAsset(request *model.ShowAssetRequest) (*model.Sh
 func (c *MetaStudioClient) ShowAssetInvoker(request *model.ShowAssetRequest) *ShowAssetInvoker {
 	requestDef := GenReqDefForShowAsset()
 	return &ShowAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssetReplicationInfo 查询资产复制信息
+//
+// 当需要将资产从A Region复制到B Region时，先要在A Region调用该接口用于查询资产复制信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowAssetReplicationInfo(request *model.ShowAssetReplicationInfoRequest) (*model.ShowAssetReplicationInfoResponse, error) {
+	requestDef := GenReqDefForShowAssetReplicationInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetReplicationInfoResponse), nil
+	}
+}
+
+// ShowAssetReplicationInfoInvoker 查询资产复制信息
+func (c *MetaStudioClient) ShowAssetReplicationInfoInvoker(request *model.ShowAssetReplicationInfoRequest) *ShowAssetReplicationInfoInvoker {
+	requestDef := GenReqDefForShowAssetReplicationInfo()
+	return &ShowAssetReplicationInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDigitalAsset 更新资产
@@ -613,6 +781,7 @@ func (c *MetaStudioClient) DeleteFileInvoker(request *model.DeleteFileRequest) *
 // CreateOnceCode 创建一次性鉴权码
 //
 // 该接口用于创建一次性鉴权码，有效期5分钟，鉴权码只能使用一次，每次使用后需要重新获取。
+// &gt; 接口只能通过第三方后台调用，不能在浏览器前台直接调用，否则会有跨域问题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateOnceCode(request *model.CreateOnceCodeRequest) (*model.CreateOnceCodeResponse, error) {
@@ -820,9 +989,9 @@ func (c *MetaStudioClient) UpdateRobotInvoker(request *model.UpdateRobotRequest)
 	return &UpdateRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateSmartChatRoom 创建智能交互对话直播间
+// CreateSmartChatRoom 创建智能交互对话
 //
-// 该接口用于创建智能交互对话直播间。
+// 该接口用于创建智能交互对话。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateSmartChatRoom(request *model.CreateSmartChatRoomRequest) (*model.CreateSmartChatRoomResponse, error) {
@@ -835,15 +1004,15 @@ func (c *MetaStudioClient) CreateSmartChatRoom(request *model.CreateSmartChatRoo
 	}
 }
 
-// CreateSmartChatRoomInvoker 创建智能交互对话直播间
+// CreateSmartChatRoomInvoker 创建智能交互对话
 func (c *MetaStudioClient) CreateSmartChatRoomInvoker(request *model.CreateSmartChatRoomRequest) *CreateSmartChatRoomInvoker {
 	requestDef := GenReqDefForCreateSmartChatRoom()
 	return &CreateSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteSmartChatRoom 删除智能交互对话直播间
+// DeleteSmartChatRoom 删除智能交互对话
 //
-// 该接口用于删除智能交互对话直播间。
+// 该接口用于删除智能交互对话。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteSmartChatRoom(request *model.DeleteSmartChatRoomRequest) (*model.DeleteSmartChatRoomResponse, error) {
@@ -856,15 +1025,15 @@ func (c *MetaStudioClient) DeleteSmartChatRoom(request *model.DeleteSmartChatRoo
 	}
 }
 
-// DeleteSmartChatRoomInvoker 删除智能交互对话直播间
+// DeleteSmartChatRoomInvoker 删除智能交互对话
 func (c *MetaStudioClient) DeleteSmartChatRoomInvoker(request *model.DeleteSmartChatRoomRequest) *DeleteSmartChatRoomInvoker {
 	requestDef := GenReqDefForDeleteSmartChatRoom()
 	return &DeleteSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSmartChatRooms 查询智能交互对话直播间列表
+// ListSmartChatRooms 查询智能交互对话列表
 //
-// 该接口用于智能交互对话直播间列表。
+// 该接口用于智能交互对话列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListSmartChatRooms(request *model.ListSmartChatRoomsRequest) (*model.ListSmartChatRoomsResponse, error) {
@@ -877,15 +1046,15 @@ func (c *MetaStudioClient) ListSmartChatRooms(request *model.ListSmartChatRoomsR
 	}
 }
 
-// ListSmartChatRoomsInvoker 查询智能交互对话直播间列表
+// ListSmartChatRoomsInvoker 查询智能交互对话列表
 func (c *MetaStudioClient) ListSmartChatRoomsInvoker(request *model.ListSmartChatRoomsRequest) *ListSmartChatRoomsInvoker {
 	requestDef := GenReqDefForListSmartChatRooms()
 	return &ListSmartChatRoomsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSmartChatRoom 查询智能交互对话直播间详情
+// ShowSmartChatRoom 查询智能交互对话详情
 //
-// 该接口用于查询智能交互对话直播间详情。
+// 该接口用于查询智能交互对话详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowSmartChatRoom(request *model.ShowSmartChatRoomRequest) (*model.ShowSmartChatRoomResponse, error) {
@@ -898,15 +1067,15 @@ func (c *MetaStudioClient) ShowSmartChatRoom(request *model.ShowSmartChatRoomReq
 	}
 }
 
-// ShowSmartChatRoomInvoker 查询智能交互对话直播间详情
+// ShowSmartChatRoomInvoker 查询智能交互对话详情
 func (c *MetaStudioClient) ShowSmartChatRoomInvoker(request *model.ShowSmartChatRoomRequest) *ShowSmartChatRoomInvoker {
 	requestDef := GenReqDefForShowSmartChatRoom()
 	return &ShowSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateSmartChatRoom 更新智能交互对话直播间信息
+// UpdateSmartChatRoom 更新智能交互对话信息
 //
-// 该接口用于智能交互对话直播间信息。
+// 该接口用于智能交互对话信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateSmartChatRoom(request *model.UpdateSmartChatRoomRequest) (*model.UpdateSmartChatRoomResponse, error) {
@@ -919,7 +1088,7 @@ func (c *MetaStudioClient) UpdateSmartChatRoom(request *model.UpdateSmartChatRoo
 	}
 }
 
-// UpdateSmartChatRoomInvoker 更新智能交互对话直播间信息
+// UpdateSmartChatRoomInvoker 更新智能交互对话信息
 func (c *MetaStudioClient) UpdateSmartChatRoomInvoker(request *model.UpdateSmartChatRoomRequest) *UpdateSmartChatRoomInvoker {
 	requestDef := GenReqDefForUpdateSmartChatRoom()
 	return &UpdateSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

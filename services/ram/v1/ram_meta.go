@@ -140,6 +140,31 @@ func GenReqDefForShowOrganizationShare() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListPermissionVersions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/permissions/{permission_id}/versions").
+		WithResponse(new(model.ListPermissionVersionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PermissionId").
+		WithJsonTag("permission_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListPermissions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -159,6 +184,10 @@ func GenReqDefForListPermissions() *def.HttpRequestDef {
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PermissionType").
+		WithJsonTag("permission_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -175,6 +204,11 @@ func GenReqDefForShowPermission() *def.HttpRequestDef {
 		WithName("PermissionId").
 		WithJsonTag("permission_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PermissionVersion").
+		WithJsonTag("permission_version").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

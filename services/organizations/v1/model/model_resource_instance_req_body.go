@@ -15,7 +15,7 @@ type ResourceInstanceReqBody struct {
 	// 包含标签，最多包含10个key，每个key下面的value最多10个，结构体不能缺失，key不能为空或者空字符串。Key不能重复，同一个key中values不能重复。返回包含所有标签的资源列表，key之间是与的关系，key-value结构中value是或的关系。无tag过滤条件时返回全量数据。
 	Tags *[]TagsDto `json:"tags,omitempty"`
 
-	// 要绑定到新创建的帐号的标签列表。
+	// 要绑定到新创建的账号的标签列表。
 	Matches *[]Match `json:"matches,omitempty"`
 }
 

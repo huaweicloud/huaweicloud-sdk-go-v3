@@ -49,6 +49,8 @@ type ShowSmartLiveRoomResponse struct {
 	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
 	ViewMode *ShowSmartLiveRoomResponseViewMode `json:"view_mode,omitempty"`
 
+	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`
+
 	// 直播间ID
 	RoomId *string `json:"room_id,omitempty"`
 
@@ -60,6 +62,9 @@ type ShowSmartLiveRoomResponse struct {
 
 	// 直播间封面图URL
 	CoverUrl *string `json:"cover_url,omitempty"`
+
+	// 直播间封面图新URL
+	Thumbnail *string `json:"thumbnail,omitempty"`
 
 	// 直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
 	RoomState *ShowSmartLiveRoomResponseRoomState `json:"room_state,omitempty"`

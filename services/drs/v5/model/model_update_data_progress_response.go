@@ -16,8 +16,11 @@ type UpdateDataProgressResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 查询状态
-	Status         *UpdateDataProgressResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                               `json:"-"`
+	Status *UpdateDataProgressResponseStatus `json:"status,omitempty"`
+
+	// 任务ID
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateDataProgressResponse) String() string {

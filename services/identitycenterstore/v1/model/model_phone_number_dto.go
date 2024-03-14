@@ -9,7 +9,7 @@ import (
 // PhoneNumberDto The phone number associated with the user.
 type PhoneNumberDto struct {
 
-	// 一个布尔值，表示这是否是用户的主电话号码
+	// 一个布尔值，表示这是否为用户的主电话号码
 	Primary *bool `json:"primary,omitempty"`
 
 	// 表示电话号码类型的字符串

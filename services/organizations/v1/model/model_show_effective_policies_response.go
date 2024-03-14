@@ -20,7 +20,7 @@ type ShowEffectivePoliciesResponse struct {
 	// 策略类型的名称，tag_policy标签策略。
 	PolicyType *ShowEffectivePoliciesResponsePolicyType `json:"policy_type,omitempty"`
 
-	// 根、组织单元或帐号的唯一标识符（ID）。
+	// 根、组织单元或账号的唯一标识符（ID）。
 	EntityId       *string `json:"entity_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

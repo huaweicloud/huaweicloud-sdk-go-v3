@@ -9,7 +9,7 @@ import (
 // CreateSmartChatRoomResponse Response Object
 type CreateSmartChatRoomResponse struct {
 
-	// 智能交互对话直播间ID
+	// 智能交互对话ID
 	RoomId *string `json:"room_id,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`

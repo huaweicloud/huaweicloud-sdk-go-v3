@@ -30,6 +30,21 @@ type Permission struct {
 
 	// 最后一次更新权限的时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+
+	// 权限URN。
+	PermissionUrn *string `json:"permission_urn,omitempty"`
+
+	// 权限类型。
+	PermissionType *string `json:"permission_type,omitempty"`
+
+	// 此权限是否为默认版本。
+	DefaultVersion *bool `json:"default_version,omitempty"`
+
+	// 权限版本。
+	Version *int32 `json:"version,omitempty"`
+
+	// 权限的状态
+	Status *string `json:"status,omitempty"`
 }
 
 func (o Permission) String() string {

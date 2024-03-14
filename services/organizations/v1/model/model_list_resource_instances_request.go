@@ -18,7 +18,7 @@ type ListResourceInstancesRequest struct {
 	// 分页标记。
 	Offset *string `json:"offset,omitempty"`
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
 	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
 
 	Body *ResourceInstanceReqBody `json:"body,omitempty"`
@@ -38,16 +38,16 @@ type ListResourceInstancesRequestResourceType struct {
 }
 
 type ListResourceInstancesRequestResourceTypeEnum struct {
-	ORGANIZATIONSROOTS    ListResourceInstancesRequestResourceType
+	ORGANIZATIONSPOLICIES ListResourceInstancesRequestResourceType
 	ORGANIZATIONSOUS      ListResourceInstancesRequestResourceType
 	ORGANIZATIONSACCOUNTS ListResourceInstancesRequestResourceType
-	ORGANIZATIONSPOLICIES ListResourceInstancesRequestResourceType
+	ORGANIZATIONSROOTS    ListResourceInstancesRequestResourceType
 }
 
 func GetListResourceInstancesRequestResourceTypeEnum() ListResourceInstancesRequestResourceTypeEnum {
 	return ListResourceInstancesRequestResourceTypeEnum{
-		ORGANIZATIONSROOTS: ListResourceInstancesRequestResourceType{
-			value: "organizations:roots",
+		ORGANIZATIONSPOLICIES: ListResourceInstancesRequestResourceType{
+			value: "organizations:policies",
 		},
 		ORGANIZATIONSOUS: ListResourceInstancesRequestResourceType{
 			value: "organizations:ous",
@@ -55,8 +55,8 @@ func GetListResourceInstancesRequestResourceTypeEnum() ListResourceInstancesRequ
 		ORGANIZATIONSACCOUNTS: ListResourceInstancesRequestResourceType{
 			value: "organizations:accounts",
 		},
-		ORGANIZATIONSPOLICIES: ListResourceInstancesRequestResourceType{
-			value: "organizations:policies",
+		ORGANIZATIONSROOTS: ListResourceInstancesRequestResourceType{
+			value: "organizations:roots",
 		},
 	}
 }

@@ -13,7 +13,7 @@ type SharedPrincipal struct {
 	// 资源使用者绑定的资源共享实例的ID。
 	ResourceShareId *string `json:"resource_share_id,omitempty"`
 
-	// 资源使用者的帐号ID或URN。
+	// 资源使用者的账号ID或URN。
 	Id *string `json:"id,omitempty"`
 
 	// 资源使用者与资源共享实例关联的时间。

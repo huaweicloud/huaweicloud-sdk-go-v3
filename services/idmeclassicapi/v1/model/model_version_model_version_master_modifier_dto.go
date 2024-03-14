@@ -9,7 +9,7 @@ import (
 type VersionModelVersionMasterModifierDto struct {
 
 	// 父模型ID。
-	MasterId *string `json:"masterId,omitempty"`
+	MasterId string `json:"masterId"`
 
 	// 修改人。
 	Modifier *string `json:"modifier,omitempty"`

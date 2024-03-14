@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EntityDto 包含有关根、组织单位或帐号的信息。
+// EntityDto 包含有关根、组织单位或账号的信息。
 type EntityDto struct {
 
 	// 实体的名称。

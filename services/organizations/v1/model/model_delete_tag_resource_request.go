@@ -12,10 +12,10 @@ import (
 // DeleteTagResourceRequest Request Object
 type DeleteTagResourceRequest struct {
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts 帐号信息 organizations:roots根
+	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
 	ResourceType DeleteTagResourceRequestResourceType `json:"resource_type"`
 
-	// 根、组织单元、帐号或策略的唯一标识符（ID）。
+	// 根、组织单元、账号或策略的唯一标识符（ID）。
 	ResourceId string `json:"resource_id"`
 
 	Body *TagResourceReqBody `json:"body,omitempty"`
@@ -35,16 +35,16 @@ type DeleteTagResourceRequestResourceType struct {
 }
 
 type DeleteTagResourceRequestResourceTypeEnum struct {
-	ORGANIZATIONSROOTS    DeleteTagResourceRequestResourceType
+	ORGANIZATIONSPOLICIES DeleteTagResourceRequestResourceType
 	ORGANIZATIONSOUS      DeleteTagResourceRequestResourceType
 	ORGANIZATIONSACCOUNTS DeleteTagResourceRequestResourceType
-	ORGANIZATIONSPOLICIES DeleteTagResourceRequestResourceType
+	ORGANIZATIONSROOTS    DeleteTagResourceRequestResourceType
 }
 
 func GetDeleteTagResourceRequestResourceTypeEnum() DeleteTagResourceRequestResourceTypeEnum {
 	return DeleteTagResourceRequestResourceTypeEnum{
-		ORGANIZATIONSROOTS: DeleteTagResourceRequestResourceType{
-			value: "organizations:roots",
+		ORGANIZATIONSPOLICIES: DeleteTagResourceRequestResourceType{
+			value: "organizations:policies",
 		},
 		ORGANIZATIONSOUS: DeleteTagResourceRequestResourceType{
 			value: "organizations:ous",
@@ -52,8 +52,8 @@ func GetDeleteTagResourceRequestResourceTypeEnum() DeleteTagResourceRequestResou
 		ORGANIZATIONSACCOUNTS: DeleteTagResourceRequestResourceType{
 			value: "organizations:accounts",
 		},
-		ORGANIZATIONSPOLICIES: DeleteTagResourceRequestResourceType{
-			value: "organizations:policies",
+		ORGANIZATIONSROOTS: DeleteTagResourceRequestResourceType{
+			value: "organizations:roots",
 		},
 	}
 }

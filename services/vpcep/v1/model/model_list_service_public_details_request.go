@@ -27,10 +27,10 @@ type ListServicePublicDetailsRequest struct {
 	// 公共终端节点服务的ID，唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 查询结果中终端节点服务列表的排序字段，取值为： ● create_at：终端节点服务的创建时间 ● update_at：终端节点服务的更新时间 默认值为create_at。
+	// 查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
 	SortKey *ListServicePublicDetailsRequestSortKey `json:"sort_key,omitempty"`
 
-	// 查询结果中终端节点服务列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+	// 查询结果中终端节点服务列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
 	SortDir *ListServicePublicDetailsRequestSortDir `json:"sort_dir,omitempty"`
 }
 

@@ -12,7 +12,7 @@ type UpdateEndpointConnectionsDescRequest struct {
 	// 终端节点服务ID
 	VpcEndpointServiceId string `json:"vpc_endpoint_service_id"`
 
-	Body *UpdateEpConnections `json:"body,omitempty"`
+	Body *UpdateEndpointConnectionsDescRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateEndpointConnectionsDescRequest) String() string {

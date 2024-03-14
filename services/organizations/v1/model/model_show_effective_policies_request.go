@@ -12,7 +12,7 @@ import (
 // ShowEffectivePoliciesRequest Request Object
 type ShowEffectivePoliciesRequest struct {
 
-	// 帐号的唯一标识符（ID）。当前还不支持指定根、组织单元。
+	// 账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
 	EntityId string `json:"entity_id"`
 
 	// 策略类型的名称，tag_policy标签策略。

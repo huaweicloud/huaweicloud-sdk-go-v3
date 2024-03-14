@@ -28,7 +28,9 @@ type ShowVerifyDomainOwnerInfoResponse struct {
 	FileVerifyFilename *string `json:"file_verify_filename,omitempty"`
 
 	// 探测内容，DNS值或者文件内容，时间加uuid
-	VerifyContent  *string `json:"verify_content,omitempty"`
+	VerifyContent *string `json:"verify_content,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

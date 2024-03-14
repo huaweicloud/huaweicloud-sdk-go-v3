@@ -9,7 +9,7 @@ import (
 // ListEntitiesResponse Response Object
 type ListEntitiesResponse struct {
 
-	// 组织中的根、组织单元和帐号的列表。
+	// 组织中的根、组织单元和账号的列表。
 	Entities *[]EntityDto `json:"entities,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

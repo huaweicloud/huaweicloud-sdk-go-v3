@@ -57,6 +57,10 @@ type ShowSmartLiveResponse struct {
 	// 直播间封面图UR
 	CoverUrl *string `json:"cover_url,omitempty"`
 
+	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`
+
+	LiveJobLog *LiveJobLog `json:"live_job_log,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

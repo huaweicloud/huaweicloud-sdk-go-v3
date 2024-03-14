@@ -9,7 +9,7 @@ import (
 // ListTagsForResourceRequest Request Object
 type ListTagsForResourceRequest struct {
 
-	// 根、组织单元、帐号或策略的唯一标识符（ID）。
+	// 根、组织单元、账号或策略的唯一标识符（ID）。
 	ResourceId string `json:"resource_id"`
 
 	// 页面中最大结果数量。

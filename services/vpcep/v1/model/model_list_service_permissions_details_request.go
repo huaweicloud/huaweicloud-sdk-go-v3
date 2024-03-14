@@ -27,10 +27,10 @@ type ListServicePermissionsDetailsRequest struct {
 	// 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询结果中白名单列表的排序字段，取值为create_at，表示白名单的添加时间。
+	// 查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
 	SortKey *ListServicePermissionsDetailsRequestSortKey `json:"sort_key,omitempty"`
 
-	// 查询结果中白名单列表的排序方式，取值为： ● desc：降序排序 ● asc：升序排序 默认值为desc。
+	// 查询结果中白名单列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
 	SortDir *ListServicePermissionsDetailsRequestSortDir `json:"sort_dir,omitempty"`
 }
 

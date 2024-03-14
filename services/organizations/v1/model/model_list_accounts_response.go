@@ -9,7 +9,7 @@ import (
 // ListAccountsResponse Response Object
 type ListAccountsResponse struct {
 
-	// 组织中的帐号列表。
+	// 组织中的账号列表。
 	Accounts *[]AccountDto `json:"accounts,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

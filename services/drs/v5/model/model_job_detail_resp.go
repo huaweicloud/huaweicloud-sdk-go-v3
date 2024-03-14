@@ -74,6 +74,15 @@ type JobDetailResp struct {
 	TaskVersion *string `json:"task_version,omitempty"`
 
 	ConnectionManagement *ConnectionManagement `json:"connection_management,omitempty"`
+
+	// 指定公网IP的信息
+	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
+
+	// 是否成功绑定公网IP
+	BindPublicIpState *string `json:"bind_public_ip_state,omitempty"`
+
+	// 多任务时，存在子任务绑定失败时，返回子任务的信息
+	Children *[]FailedToBindEipChildInfo `json:"children,omitempty"`
 }
 
 func (o JobDetailResp) String() string {

@@ -9,7 +9,7 @@ import (
 // PolicyTachReqBody AttachPolicy 和 DetachPolicy 操作的请求体。
 type PolicyTachReqBody struct {
 
-	// 根、组织单元或帐号的唯一标识符（ID）。
+	// 根、组织单元或账号的唯一标识符（ID）。
 	EntityId string `json:"entity_id"`
 }
 

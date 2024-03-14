@@ -31,7 +31,7 @@ type PersistableModelSaveAsDto struct {
 	// 源模型编号。
 	SourceEntityNumber *string `json:"sourceEntityNumber,omitempty"`
 
-	// 源实例的唯一标识(单实例为ID，版本实例为versionId)。
+	// 源实例的唯一标识（单实例为ID，版本实例为versionId）。
 	SourceInstanceId string `json:"sourceInstanceId"`
 
 	// 置空字段数组。

@@ -27,7 +27,7 @@ type ListSmartChatRoomsRequest struct {
 	// 每页显示的条目数量。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 按智能交互对话直播间名称模糊查询。
+	// 按智能交互对话名称模糊查询。
 	RoomName *string `json:"room_name,omitempty"`
 
 	// 按形象名称模糊查询。

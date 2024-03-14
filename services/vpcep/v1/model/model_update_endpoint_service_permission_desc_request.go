@@ -18,7 +18,7 @@ type UpdateEndpointServicePermissionDescRequest struct {
 	// 白名单的ID。
 	PermissionId string `json:"permission_id"`
 
-	Body *UpdatePermissionDescRequest `json:"body,omitempty"`
+	Body *UpdateEndpointServicePermissionDescRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateEndpointServicePermissionDescRequest) String() string {

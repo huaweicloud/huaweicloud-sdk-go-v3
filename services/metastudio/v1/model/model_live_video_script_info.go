@@ -9,6 +9,9 @@ import (
 // LiveVideoScriptInfo 创视频制作脚本请求。
 type LiveVideoScriptInfo struct {
 
+	// 剧本ID。
+	ScriptId *string `json:"script_id,omitempty"`
+
 	// 剧本名称
 	ScriptName string `json:"script_name"`
 

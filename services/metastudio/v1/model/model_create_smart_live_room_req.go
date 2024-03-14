@@ -48,6 +48,8 @@ type CreateSmartLiveRoomReq struct {
 
 	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
 	ViewMode *CreateSmartLiveRoomReqViewMode `json:"view_mode,omitempty"`
+
+	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`
 }
 
 func (o CreateSmartLiveRoomReq) String() string {

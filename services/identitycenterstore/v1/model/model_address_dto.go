@@ -21,7 +21,7 @@ type AddressDto struct {
 	// 邮政编码
 	PostalCode *string `json:"postal_code,omitempty"`
 
-	// 一个布尔值，表示这是否是用户的主地址
+	// 一个布尔值，表示这是否为用户的主地址
 	Primary *bool `json:"primary,omitempty"`
 
 	// 区域

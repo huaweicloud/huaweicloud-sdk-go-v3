@@ -10,7 +10,7 @@ import (
 // ResourceShareInvitation 资源共享邀请的详细信息。
 type ResourceShareInvitation struct {
 
-	// 接收资源共享邀请的帐号ID。
+	// 接收资源共享邀请的账号ID。
 	ReceiverAccountId *string `json:"receiver_account_id,omitempty"`
 
 	// 资源共享实例的ID。
@@ -22,7 +22,7 @@ type ResourceShareInvitation struct {
 	// 资源共享邀请的ID。
 	ResourceShareInvitationId *string `json:"resource_share_invitation_id,omitempty"`
 
-	// 发送资源共享邀请的帐号ID。
+	// 发送资源共享邀请的账号ID。
 	SenderAccountId *string `json:"sender_account_id,omitempty"`
 
 	// 资源共享邀请的当前状态。

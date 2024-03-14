@@ -29,6 +29,18 @@ func (i *ListAccountsInvoker) Invoke() (*model.ListAccountsResponse, error) {
 	}
 }
 
+type ListCloseAccountStatusesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloseAccountStatusesInvoker) Invoke() (*model.ListCloseAccountStatusesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloseAccountStatusesResponse), nil
+	}
+}
+
 type ListCreateAccountStatusesInvoker struct {
 	*invoker.BaseInvoker
 }

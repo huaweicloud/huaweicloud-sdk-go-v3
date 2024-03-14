@@ -12,7 +12,7 @@ import (
 // ControlSmartLiveReq 控制命令。
 type ControlSmartLiveReq struct {
 
-	// 命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：PlayTextInfo - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO:插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - SHOW_LAYER：显示导播素材，用于直播导播。params结构定义：LiveGuideRuleInfo
+	// 命令名称。 - INSERT_PLAY_SCRIPT: 插入表演脚本。用于互动回复。数字人不变，背景不变。params结构定义：PlayTextInfo - REWRITE_PLAY_SCRIPT: 动态编辑未播放剧本。params结构定义：scene_scripts - INSERT_PLAY_AUDIO:插入驱动音频。用于音频直接驱动。数字人不变，背景不变。params结构定义：PlayAudioInfo - REWRITE_INTERACTION_RULES: 动态修改互动规则。params结构定义：interaction_rules - GET_CURRENT_PLAYING_SCRIPTS: 查询本轮剧本列表。响应为LivePlayingScriptList结构 - SHOW_LAYER：显示导播素材，用于直播导播。params结构定义：LiveGuideRuleInfo - GET_LIVE_JOB_CONFIG_INFO：获取任务中的房间信息。params结构定义：SmartLiveRoomInfo
 	Command ControlSmartLiveReqCommand `json:"command"`
 
 	// 命令参数。
@@ -38,7 +38,9 @@ type ControlSmartLiveReqCommandEnum struct {
 	INSERT_PLAY_SCRIPT          ControlSmartLiveReqCommand
 	REWRITE_PLAY_SCRIPT         ControlSmartLiveReqCommand
 	INSERT_PLAY_AUDIO           ControlSmartLiveReqCommand
+	REWRITE_INTERACTION_RULES   ControlSmartLiveReqCommand
 	GET_CURRENT_PLAYING_SCRIPTS ControlSmartLiveReqCommand
+	GET_LIVE_JOB_CONFIG_INFO    ControlSmartLiveReqCommand
 }
 
 func GetControlSmartLiveReqCommandEnum() ControlSmartLiveReqCommandEnum {
@@ -52,8 +54,14 @@ func GetControlSmartLiveReqCommandEnum() ControlSmartLiveReqCommandEnum {
 		INSERT_PLAY_AUDIO: ControlSmartLiveReqCommand{
 			value: "INSERT_PLAY_AUDIO",
 		},
+		REWRITE_INTERACTION_RULES: ControlSmartLiveReqCommand{
+			value: "REWRITE_INTERACTION_RULES",
+		},
 		GET_CURRENT_PLAYING_SCRIPTS: ControlSmartLiveReqCommand{
 			value: "GET_CURRENT_PLAYING_SCRIPTS",
+		},
+		GET_LIVE_JOB_CONFIG_INFO: ControlSmartLiveReqCommand{
+			value: "GET_LIVE_JOB_CONFIG_INFO",
 		},
 	}
 }

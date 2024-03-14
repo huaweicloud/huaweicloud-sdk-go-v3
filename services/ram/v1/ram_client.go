@@ -84,7 +84,7 @@ func (c *RamClient) ListResourceSharePermissionsInvoker(request *model.ListResou
 
 // ListQuota 查询资源共享的配额
 //
-// 查询当前帐号的资源共享配额信息。
+// 查询当前账号的资源共享配额信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuotaResponse, error) {
@@ -187,6 +187,27 @@ func (c *RamClient) ShowOrganizationShareInvoker(request *model.ShowOrganization
 	return &ShowOrganizationShareInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPermissionVersions 获取权限的所有版本
+//
+// 获取权限的所有版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RamClient) ListPermissionVersions(request *model.ListPermissionVersionsRequest) (*model.ListPermissionVersionsResponse, error) {
+	requestDef := GenReqDefForListPermissionVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPermissionVersionsResponse), nil
+	}
+}
+
+// ListPermissionVersionsInvoker 获取权限的所有版本
+func (c *RamClient) ListPermissionVersionsInvoker(request *model.ListPermissionVersionsRequest) *ListPermissionVersionsInvoker {
+	requestDef := GenReqDefForListPermissionVersions()
+	return &ListPermissionVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPermissions 检索共享资源权限列表
 //
 // 检索指定资源类型的共享资源权限列表。
@@ -210,7 +231,7 @@ func (c *RamClient) ListPermissionsInvoker(request *model.ListPermissionsRequest
 
 // ShowPermission 检索资源共享权限内容
 //
-// 检索指定资源类型的共享资源权限内容。
+// 检索指定资源类型的共享资源指定版本的权限内容，如果不指定权限版本，则返回默认版本的权限内容。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) ShowPermission(request *model.ShowPermissionRequest) (*model.ShowPermissionResponse, error) {
@@ -294,7 +315,7 @@ func (c *RamClient) CreateResourceShareInvoker(request *model.CreateResourceShar
 
 // DeleteResourceShare 删除资源共享实例
 //
-// 删除指定的资源共享实例。此操作不会删除实体资源，仅停止向其他帐号共享资源。
+// 删除指定的资源共享实例。此操作不会删除实体资源，仅停止向其他账号共享资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) DeleteResourceShare(request *model.DeleteResourceShareRequest) (*model.DeleteResourceShareResponse, error) {
@@ -420,7 +441,7 @@ func (c *RamClient) SearchResourceShareAssociationsInvoker(request *model.Search
 
 // AcceptResourceShareInvitation 接受共享邀请
 //
-// 接受来自其他帐号的资源共享邀请。
+// 接受来自其他账号的资源共享邀请。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) AcceptResourceShareInvitation(request *model.AcceptResourceShareInvitationRequest) (*model.AcceptResourceShareInvitationResponse, error) {
@@ -441,7 +462,7 @@ func (c *RamClient) AcceptResourceShareInvitationInvoker(request *model.AcceptRe
 
 // RejectResourceShareInvitation 拒绝共享邀请
 //
-// 拒绝来自其他帐号的资源共享邀请。
+// 拒绝来自其他账号的资源共享邀请。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) RejectResourceShareInvitation(request *model.RejectResourceShareInvitationRequest) (*model.RejectResourceShareInvitationResponse, error) {

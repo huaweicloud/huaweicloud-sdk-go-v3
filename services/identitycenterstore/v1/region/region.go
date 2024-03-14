@@ -10,13 +10,22 @@ import (
 var (
 	CN_EAST_3 = region.NewRegion("cn-east-3",
 		"https://identitystore.cn-east-3.myhuaweicloud.com")
+	CN_NORTH_4 = region.NewRegion("cn-north-4",
+		"https://identitystore.cn-north-4.myhuaweicloud.com")
 	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
 		"https://identitystore.ap-southeast-4.myhuaweicloud.com")
+	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
+		"https://identitystore.ap-southeast-3.myhuaweicloud.com")
+	AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2",
+		"https://identitystore.ap-southeast-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-east-3":      CN_EAST_3,
+	"cn-north-4":     CN_NORTH_4,
 	"ap-southeast-4": AP_SOUTHEAST_4,
+	"ap-southeast-3": AP_SOUTHEAST_3,
+	"ap-southeast-2": AP_SOUTHEAST_2,
 }
 
 var provider = region.DefaultProviderChain("IDENTITYCENTERSTORE")

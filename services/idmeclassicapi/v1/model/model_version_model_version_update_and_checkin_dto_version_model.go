@@ -7,7 +7,7 @@ import (
 )
 
 type VersionModelVersionUpdateAndCheckinDtoVersionModel struct {
-	Data *VersionModel `json:"data,omitempty"`
+	Data *VersionModel `json:"data"`
 
 	// 主对象ID。
 	MasterId string `json:"masterId"`

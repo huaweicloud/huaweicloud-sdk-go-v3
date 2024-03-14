@@ -329,6 +329,18 @@ func (i *CreateCompareTaskInvoker) Invoke() (*model.CreateCompareTaskResponse, e
 	}
 }
 
+type ListAvailableNodeTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableNodeTypesInvoker) Invoke() (*model.ListAvailableNodeTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableNodeTypesResponse), nil
+	}
+}
+
 type ListAvailableZoneInvoker struct {
 	*invoker.BaseInvoker
 }

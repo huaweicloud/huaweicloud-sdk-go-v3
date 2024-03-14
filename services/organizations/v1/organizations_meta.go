@@ -46,6 +46,22 @@ func GenReqDefForListAccounts() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCloseAccountStatuses() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/organizations/close-account-status").
+		WithResponse(new(model.ListCloseAccountStatusesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("States").
+		WithJsonTag("states").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCreateAccountStatuses() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
