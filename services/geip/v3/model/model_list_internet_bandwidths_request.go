@@ -24,10 +24,8 @@ type ListInternetBandwidthsRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListInternetBandwidthsRequestFields `json:"fields,omitempty"`
 
-	// 在默认显示字段的基础上追加指定字段
 	ExtFields *[]ListInternetBandwidthsRequestExtFields `json:"ext-fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -36,31 +34,22 @@ type ListInternetBandwidthsRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListInternetBandwidthsRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据全域公网带宽大小过滤
 	Size *[]int32 `json:"size,omitempty"`
 
-	// 根据名称过滤
 	Name *[]string `json:"name,omitempty"`
 
-	// 根据名称模糊匹配
 	NameLike *string `json:"name_like,omitempty"`
 
-	// 根据接入点过滤
 	AccessSite *[]string `json:"access_site,omitempty"`
 
-	// 根据资源状态过滤
 	Status *[]ListInternetBandwidthsRequestStatus `json:"status,omitempty"`
 
-	// 根据企业项目ID过滤
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
-	// 根据标签过滤
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 根据全域公网带宽类型过滤
 	Type *[]string `json:"type,omitempty"`
 }
 

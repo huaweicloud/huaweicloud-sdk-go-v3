@@ -8,8 +8,6 @@ import (
 
 // AttachInternetBandwidthRequest Request Object
 type AttachInternetBandwidthRequest struct {
-
-	// global_eip_id
 	GlobalEipId string `json:"global_eip_id"`
 
 	Body *AttachInternetBandwidthGlobalEipRequestBody `json:"body,omitempty"`

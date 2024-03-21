@@ -14,6 +14,9 @@ type ListBridgeFunctionsRequest struct {
 
 	// servicebridge类型
 	Type *string `json:"type,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListBridgeFunctionsRequest) String() string {

@@ -12,7 +12,7 @@ type BatchDeleteV2RequestBody struct {
 	Tags []BatchDeleteV2RequestBodyTags `json:"tags"`
 
 	// 系统标签
-	SysTags *[]BatchDeleteV2RequestBodySysTags `json:"sys_tags,omitempty"`
+	SysTags *[]BatchDeleteV2RequestBodyTags `json:"sys_tags,omitempty"`
 }
 
 func (o BatchDeleteV2RequestBody) String() string {

@@ -21,11 +21,11 @@ type ListNatGatewaySnatRulesRequest struct {
 	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。
-	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
+	// 功能说明：弹性公网IP。
+	FloatingIpAddress *[]string `json:"floating_ip_address,omitempty"`
 
-	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
-	FloatingIpId *string `json:"floating_ip_id,omitempty"`
+	// 功能说明：弹性公网IP的id。
+	FloatingIpId *[]string `json:"floating_ip_id,omitempty"`
 
 	// SNAT规则的ID。
 	Id *string `json:"id,omitempty"`

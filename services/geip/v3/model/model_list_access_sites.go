@@ -9,10 +9,10 @@ import (
 
 type ListAccessSites struct {
 
-	// ID
+	// 接入点的ID
 	Id *string `json:"id,omitempty"`
 
-	// 资源名称
+	// - 功能说明：接入点名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name *string `json:"name,omitempty"`
 
 	// pop站点托管的region(id)

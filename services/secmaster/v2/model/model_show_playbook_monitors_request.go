@@ -21,13 +21,13 @@ type ShowPlaybookMonitorsRequest struct {
 	// 剧本ID
 	PlaybookId string `json:"playbook_id"`
 
-	// 开始时间
+	// 开始时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
 	StartTime string `json:"start_time"`
 
 	// 统计剧本版本类型（ALL:全部，VALID:有效的，DELETED:已删除）
 	VersionQueryType ShowPlaybookMonitorsRequestVersionQueryType `json:"version_query_type"`
 
-	// 结束时间
+	// 结束时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。例如：2021-01-30T23:00:00Z+0800。时区信息为剧本实例产生的时区，无法解析时区的时间，默认时区填东八区。
 	EndTime string `json:"end_time"`
 }
 

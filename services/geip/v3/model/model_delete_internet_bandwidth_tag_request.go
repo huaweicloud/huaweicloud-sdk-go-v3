@@ -8,11 +8,8 @@ import (
 
 // DeleteInternetBandwidthTagRequest Request Object
 type DeleteInternetBandwidthTagRequest struct {
-
-	// 全域公网带宽的id
 	ResourceId string `json:"resource_id"`
 
-	// 待删除标签的key
 	TagKey string `json:"tag_key"`
 }
 

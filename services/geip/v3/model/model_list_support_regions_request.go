@@ -24,7 +24,6 @@ type ListSupportRegionsRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListSupportRegionsRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -33,25 +32,18 @@ type ListSupportRegionsRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListSupportRegionsRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据实例类型过滤
 	InstanceType *[]string `json:"instance_type,omitempty"`
 
-	// 根据边缘信息过滤，中心站点or边缘站点
 	PublicBorderGroup *[]string `json:"public_border_group,omitempty"`
 
-	// 根据接入点过滤
 	AccessSite *[]string `json:"access_site,omitempty"`
 
-	// 根据region_id过滤
 	RegionId *[]string `json:"region_id,omitempty"`
 
-	// query by remote_endpoint
 	RemoteEndpoint *[]string `json:"remote_endpoint,omitempty"`
 
-	// 根据资源状态过滤
 	Status *[]string `json:"status,omitempty"`
 }
 

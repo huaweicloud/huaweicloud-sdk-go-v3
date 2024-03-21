@@ -17,6 +17,9 @@ type ShowFuncSnapshotStateRequest struct {
 
 	// 查询快照制作开关状态
 	Action ShowFuncSnapshotStateRequestAction `json:"action"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowFuncSnapshotStateRequest) String() string {

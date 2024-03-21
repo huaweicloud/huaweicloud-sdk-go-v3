@@ -21,6 +21,9 @@ type CreateAppRequestBody struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
+	// 分组id
+	GroupId *string `json:"group_id,omitempty"`
+
 	// 是否为草稿
 	IsDraft bool `json:"is_draft"`
 

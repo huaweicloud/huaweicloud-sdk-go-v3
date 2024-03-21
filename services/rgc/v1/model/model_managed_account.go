@@ -52,6 +52,9 @@ type ManagedAccount struct {
 	// 模板部署状态，包括失败, 完成, 进行中。
 	BlueprintStatus *string `json:"blueprint_status,omitempty"`
 
+	// 模板是否包含多账号资源。
+	IsBlueprintHasMultiAccountResource *bool `json:"is_blueprint_has_multi_account_resource,omitempty"`
+
 	// 区域信息。
 	Regions *[]RegionManagedList `json:"regions,omitempty"`
 

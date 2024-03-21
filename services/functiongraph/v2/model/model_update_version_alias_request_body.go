@@ -16,6 +16,9 @@ type UpdateVersionAliasRequestBody struct {
 
 	// 灰度版本信息
 	AdditionalVersionWeights map[string]int32 `json:"additional_version_weights,omitempty"`
+
+	// 指定规则灰度策略信息
+	AdditionalVersionStrategy map[string]VersionStrategy `json:"additional_version_strategy,omitempty"`
 }
 
 func (o UpdateVersionAliasRequestBody) String() string {

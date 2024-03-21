@@ -42,6 +42,15 @@ type EventProcessResponseInfo struct {
 	// 进程有效用户ID
 	ProcessEuid *int32 `json:"process_euid,omitempty"`
 
+	// 祖父进程文件路径
+	AncestorProcessPath *string `json:"ancestor_process_path,omitempty"`
+
+	// 祖父进程id
+	AncestorProcessPid *int32 `json:"ancestor_process_pid,omitempty"`
+
+	// 祖父进程文件命令行
+	AncestorProcessCmdline *string `json:"ancestor_process_cmdline,omitempty"`
+
 	// 父进程名称
 	ParentProcessName *string `json:"parent_process_name,omitempty"`
 

@@ -8,7 +8,7 @@ import (
 
 // BatchDeleteGeipSegmentTagsResponse Response Object
 type BatchDeleteGeipSegmentTagsResponse struct {
-	XRequestId     *string `json:"x-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

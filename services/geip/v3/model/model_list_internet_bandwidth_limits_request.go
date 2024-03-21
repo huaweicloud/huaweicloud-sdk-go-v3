@@ -11,8 +11,6 @@ import (
 
 // ListInternetBandwidthLimitsRequest Request Object
 type ListInternetBandwidthLimitsRequest struct {
-
-	// 只显示指定的字段
 	Fields *[]ListInternetBandwidthLimitsRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -21,10 +19,8 @@ type ListInternetBandwidthLimitsRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListInternetBandwidthLimitsRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据计费模式过滤
 	ChargeMode *[]ListInternetBandwidthLimitsRequestChargeMode `json:"charge_mode,omitempty"`
 
-	// 根据全域公网带宽类型过滤
 	Type *string `json:"type,omitempty"`
 }
 

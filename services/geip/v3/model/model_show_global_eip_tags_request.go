@@ -8,8 +8,6 @@ import (
 
 // ShowGlobalEipTagsRequest Request Object
 type ShowGlobalEipTagsRequest struct {
-
-	// 全域弹性公网IP的id
 	ResourceId string `json:"resource_id"`
 }
 

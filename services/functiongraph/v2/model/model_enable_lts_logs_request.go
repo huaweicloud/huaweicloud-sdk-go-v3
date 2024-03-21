@@ -8,6 +8,9 @@ import (
 
 // EnableLtsLogsRequest Request Object
 type EnableLtsLogsRequest struct {
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o EnableLtsLogsRequest) String() string {

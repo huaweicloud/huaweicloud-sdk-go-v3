@@ -415,6 +415,18 @@ func (i *ListAuthorizationPrivilegesInvoker) Invoke() (*model.ListAuthorizationP
 	}
 }
 
+type ListCatalogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCatalogsInvoker) Invoke() (*model.ListCatalogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCatalogsResponse), nil
+	}
+}
+
 type ListDatabaseUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -627,6 +639,18 @@ func (i *RunAuthorizationActionInvoker) Invoke() (*model.RunAuthorizationActionR
 	}
 }
 
+type RunCatalogActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunCatalogActionInvoker) Invoke() (*model.RunCatalogActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunCatalogActionResponse), nil
+	}
+}
+
 type RunQueueActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -636,6 +660,18 @@ func (i *RunQueueActionInvoker) Invoke() (*model.RunQueueActionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.RunQueueActionResponse), nil
+	}
+}
+
+type ShowCatalogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCatalogInvoker) Invoke() (*model.ShowCatalogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCatalogResponse), nil
 	}
 }
 

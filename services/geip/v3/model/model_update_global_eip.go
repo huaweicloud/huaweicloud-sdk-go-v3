@@ -8,10 +8,10 @@ import (
 
 type UpdateGlobalEip struct {
 
-	// ID
+	// 全域弹性公网IP的ID
 	Id *string `json:"id,omitempty"`
 
-	// 资源名称
+	// - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name *string `json:"name,omitempty"`
 }
 

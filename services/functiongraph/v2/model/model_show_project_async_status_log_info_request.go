@@ -8,6 +8,9 @@ import (
 
 // ShowProjectAsyncStatusLogInfoRequest Request Object
 type ShowProjectAsyncStatusLogInfoRequest struct {
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowProjectAsyncStatusLogInfoRequest) String() string {

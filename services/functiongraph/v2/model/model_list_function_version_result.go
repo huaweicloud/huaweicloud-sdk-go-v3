@@ -119,7 +119,7 @@ type ListFunctionVersionResult struct {
 	// 企业项目ID，在企业用户创建函数时必填。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+	// 是否支持有状态，v2版本支持
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
 
 	// 是否允许在请求头中添加鉴权信息

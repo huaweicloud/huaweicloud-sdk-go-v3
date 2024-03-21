@@ -14,6 +14,12 @@ type Blueprint struct {
 
 	// 模板版本。
 	BlueprintProductVersion *string `json:"blueprint_product_version,omitempty"`
+
+	// 模板部署参数。
+	Variables *string `json:"variables,omitempty"`
+
+	// 模板是否包含多账号资源。
+	IsBlueprintHasMultiAccountResource *bool `json:"is_blueprint_has_multi_account_resource,omitempty"`
 }
 
 func (o Blueprint) String() string {

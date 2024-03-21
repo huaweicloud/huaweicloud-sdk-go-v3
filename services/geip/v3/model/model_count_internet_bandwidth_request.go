@@ -11,29 +11,20 @@ import (
 
 // CountInternetBandwidthRequest Request Object
 type CountInternetBandwidthRequest struct {
-
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据全域公网带宽大小过滤
 	Size *[]int32 `json:"size,omitempty"`
 
-	// 根据名称过滤
 	Name *[]string `json:"name,omitempty"`
 
-	// 根据名称模糊匹配
 	NameLike *string `json:"name_like,omitempty"`
 
-	// 根据接入点过滤
 	AccessSite *[]string `json:"access_site,omitempty"`
 
-	// 根据资源状态过滤
 	Status *[]CountInternetBandwidthRequestStatus `json:"status,omitempty"`
 
-	// 根据企业项目ID过滤
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
-	// 根据标签过滤
 	Tags *[]string `json:"tags,omitempty"`
 }
 

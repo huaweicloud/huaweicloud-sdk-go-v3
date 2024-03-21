@@ -11,11 +11,8 @@ import (
 
 // ShowInternetBandwidthRequest Request Object
 type ShowInternetBandwidthRequest struct {
-
-	// 全域公网带宽的ID
 	InternetBandwidthId string `json:"internet_bandwidth_id"`
 
-	// 只显示指定的字段
 	Fields *[]ShowInternetBandwidthRequestFields `json:"fields,omitempty"`
 }
 

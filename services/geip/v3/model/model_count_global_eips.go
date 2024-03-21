@@ -8,7 +8,7 @@ import (
 
 type CountGlobalEips struct {
 
-	// Global Eip Count
+	// 全域弹性公网IP个数
 	Count int32 `json:"count"`
 }
 

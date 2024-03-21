@@ -10,7 +10,7 @@ import (
 type HealthCheckConfigurationTcpSocket struct {
 
 	// 端口。
-	Port *string `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty"`
 }
 
 func (o HealthCheckConfigurationTcpSocket) String() string {

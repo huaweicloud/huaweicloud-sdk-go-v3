@@ -14,6 +14,9 @@ type ShowVersionAliasRequest struct {
 
 	// 要查询的别名名称。
 	AliasName string `json:"alias_name"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowVersionAliasRequest) String() string {

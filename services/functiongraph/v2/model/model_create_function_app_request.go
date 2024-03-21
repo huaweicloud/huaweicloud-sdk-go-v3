@@ -8,6 +8,10 @@ import (
 
 // CreateFunctionAppRequest Request Object
 type CreateFunctionAppRequest struct {
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
+
 	Body *CreateFunctionAppRequestBody `json:"body,omitempty"`
 }
 

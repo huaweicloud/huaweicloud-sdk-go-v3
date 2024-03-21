@@ -30,6 +30,9 @@ type ListActiveAsyncInvocationsRequest struct {
 
 	// 搜索结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。如果不指定默认为当前时间
 	QueryEndTime *sdktime.SdkTime `json:"query_end_time,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListActiveAsyncInvocationsRequest) String() string {

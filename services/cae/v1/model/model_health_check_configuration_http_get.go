@@ -16,7 +16,7 @@ type HealthCheckConfigurationHttpGet struct {
 	Path *string `json:"path,omitempty"`
 
 	// 端口。
-	Port *string `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty"`
 
 	// 协议。
 	Scheme *HealthCheckConfigurationHttpGetScheme `json:"scheme,omitempty"`

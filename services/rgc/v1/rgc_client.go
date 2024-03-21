@@ -607,6 +607,27 @@ func (c *RgcClient) ListManagedOrganizationalUnitsInvoker(request *model.ListMan
 	return &ListManagedOrganizationalUnitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListOperation 查询已注册OU和纳管帐号操作过程信息列表
+//
+// 查询在RGC服务里已注册OU和纳管帐号操作的过程信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) ListOperation(request *model.ListOperationRequest) (*model.ListOperationResponse, error) {
+	requestDef := GenReqDefForListOperation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOperationResponse), nil
+	}
+}
+
+// ListOperationInvoker 查询已注册OU和纳管帐号操作过程信息列表
+func (c *RgcClient) ListOperationInvoker(request *model.ListOperationRequest) *ListOperationInvoker {
+	requestDef := GenReqDefForListOperation()
+	return &ListOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ReRegisterOrganizationalUnit 重新注册OU
 //
 // 重新注册组织里的某个OU到RGC服务。
@@ -773,4 +794,88 @@ func (c *RgcClient) UpdateManagedAccount(request *model.UpdateManagedAccountRequ
 func (c *RgcClient) UpdateManagedAccountInvoker(request *model.UpdateManagedAccountRequest) *UpdateManagedAccountInvoker {
 	requestDef := GenReqDefForUpdateManagedAccount()
 	return &UpdateManagedAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTemplate 创建模板。
+//
+// 创建RFS模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
+	requestDef := GenReqDefForCreateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTemplateResponse), nil
+	}
+}
+
+// CreateTemplateInvoker 创建模板。
+func (c *RgcClient) CreateTemplateInvoker(request *model.CreateTemplateRequest) *CreateTemplateInvoker {
+	requestDef := GenReqDefForCreateTemplate()
+	return &CreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTemplate 删除模板。
+//
+// 删除RFS模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTemplateResponse), nil
+	}
+}
+
+// DeleteTemplateInvoker 删除模板。
+func (c *RgcClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequest) *DeleteTemplateInvoker {
+	requestDef := GenReqDefForDeleteTemplate()
+	return &DeleteTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPredefinedTemplates 查询预置模板列表
+//
+// 查询预置模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) ListPredefinedTemplates(request *model.ListPredefinedTemplatesRequest) (*model.ListPredefinedTemplatesResponse, error) {
+	requestDef := GenReqDefForListPredefinedTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPredefinedTemplatesResponse), nil
+	}
+}
+
+// ListPredefinedTemplatesInvoker 查询预置模板列表
+func (c *RgcClient) ListPredefinedTemplatesInvoker(request *model.ListPredefinedTemplatesRequest) *ListPredefinedTemplatesInvoker {
+	requestDef := GenReqDefForListPredefinedTemplates()
+	return &ListPredefinedTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTemplateDeployParams 查询模板的部署参数。
+//
+// 查询模板的部署参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) ShowTemplateDeployParams(request *model.ShowTemplateDeployParamsRequest) (*model.ShowTemplateDeployParamsResponse, error) {
+	requestDef := GenReqDefForShowTemplateDeployParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTemplateDeployParamsResponse), nil
+	}
+}
+
+// ShowTemplateDeployParamsInvoker 查询模板的部署参数。
+func (c *RgcClient) ShowTemplateDeployParamsInvoker(request *model.ShowTemplateDeployParamsRequest) *ShowTemplateDeployParamsInvoker {
+	requestDef := GenReqDefForShowTemplateDeployParams()
+	return &ShowTemplateDeployParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

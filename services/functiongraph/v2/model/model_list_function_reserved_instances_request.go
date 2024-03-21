@@ -17,6 +17,9 @@ type ListFunctionReservedInstancesRequest struct {
 
 	// 查询指定函数版本预留实例数的函数urn。
 	Urn *string `json:"urn,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListFunctionReservedInstancesRequest) String() string {

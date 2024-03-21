@@ -8,8 +8,6 @@ import (
 
 // UpdateGlobalEipRequest Request Object
 type UpdateGlobalEipRequest struct {
-
-	// global_eip_id
 	GlobalEipId string `json:"global_eip_id"`
 
 	Body *UpdateGlobalEipRequestBody `json:"body,omitempty"`

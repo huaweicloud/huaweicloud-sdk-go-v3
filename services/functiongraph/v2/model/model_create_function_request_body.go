@@ -52,6 +52,9 @@ type CreateFunctionRequestBody struct {
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 	UserData *string `json:"user_data,omitempty"`
 
+	// 用户自定义的name/value信息，用于需要加密的配置。举例：如配置加密密码，可以设置自定义参数：password={1234}，最多定义20个，总长度不超过4KB。
+	EncryptedUserData *string `json:"encrypted_user_data,omitempty"`
+
 	// 函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
 	Xrole *string `json:"xrole,omitempty"`
 
@@ -62,6 +65,8 @@ type CreateFunctionRequestBody struct {
 	Description *string `json:"description,omitempty"`
 
 	FuncCode *FuncCode `json:"func_code,omitempty"`
+
+	MountConfig *MountConfig `json:"mount_config,omitempty"`
 
 	// 函数初始化入口，规则：xx.xx，必须包含“. ”。当配置初始化函数时，此参数必填。 举例：对于node.js函数：myfunction.initializer，则表示函数的文件名为myfunction.js，初始化的入口函数名为initializer。
 	InitializerHandler *string `json:"initializer_handler,omitempty"`
@@ -84,6 +89,12 @@ type CreateFunctionRequestBody struct {
 	LogConfig *FuncLogConfig `json:"log_config,omitempty"`
 
 	NetworkController *NetworkControlConfig `json:"network_controller,omitempty"`
+
+	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
+
+	// 是否启动动态内存配置
+	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
 }
 
 func (o CreateFunctionRequestBody) String() string {

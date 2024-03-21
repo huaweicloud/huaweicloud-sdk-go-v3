@@ -7,6 +7,8 @@ import (
 )
 
 type AttachInternetBandwidth struct {
+
+	// 全域弹性公网IP段的ID
 	GlobalEipSegmentId string `json:"global_eip_segment_id"`
 
 	// 全域公网带宽的ID

@@ -11,6 +11,9 @@ type ShowAppTemplateRequest struct {
 
 	// 应用模板ID。
 	Id string `json:"id"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowAppTemplateRequest) String() string {

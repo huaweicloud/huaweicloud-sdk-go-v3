@@ -8,6 +8,10 @@ import (
 
 // CreateDependencyVersionRequest Request Object
 type CreateDependencyVersionRequest struct {
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
+
 	Body *CreateDependencyRequestBody `json:"body,omitempty"`
 }
 

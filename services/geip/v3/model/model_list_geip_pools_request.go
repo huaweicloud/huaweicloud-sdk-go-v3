@@ -24,7 +24,6 @@ type ListGeipPoolsRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListGeipPoolsRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -33,25 +32,18 @@ type ListGeipPoolsRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListGeipPoolsRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据名称过滤
 	Code *[]string `json:"code,omitempty"`
 
-	// 根据接入点过滤
 	AccessSite *[]string `json:"access_site,omitempty"`
 
-	// 根据运营商线路过滤
 	Isp *[]string `json:"isp,omitempty"`
 
-	// 根据IP版本过滤
 	IpVersion *[]ListGeipPoolsRequestIpVersion `json:"ip_version,omitempty"`
 
-	// 根据池子状态过滤
 	Status *[]ListGeipPoolsRequestStatus `json:"status,omitempty"`
 
-	// 根据池子里存的内容过滤。取值：GEIP-用于分配全域弹性公网IP单地址；GEIP_SEGMENT-用于分配全域弹性公网IP段
 	Type *[]ListGeipPoolsRequestType `json:"type,omitempty"`
 }
 

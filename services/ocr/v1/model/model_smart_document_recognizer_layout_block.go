@@ -19,6 +19,12 @@ type SmartDocumentRecognizerLayoutBlock struct {
 
 	// 文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
 	WordsIds *[]int32 `json:"words_ids,omitempty"`
+
+	// 仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
+	TableId *int32 `json:"table_id,omitempty"`
+
+	// 仅当type为\"form\"且入参form为True时返回该字段，表示当前有线表单区域对应form_result中哪一项识别结果。
+	FormId *int32 `json:"form_id,omitempty"`
 }
 
 func (o SmartDocumentRecognizerLayoutBlock) String() string {

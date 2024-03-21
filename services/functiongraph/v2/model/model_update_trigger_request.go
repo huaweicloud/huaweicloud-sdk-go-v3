@@ -21,6 +21,9 @@ type UpdateTriggerRequest struct {
 	// 触发器编码。
 	TriggerId string `json:"trigger_id"`
 
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
+
 	Body *UpdateTriggerRequestBody `json:"body,omitempty"`
 }
 
@@ -54,6 +57,7 @@ type UpdateTriggerRequestTriggerTypeCodeEnum struct {
 	APIC             UpdateTriggerRequestTriggerTypeCode
 	GAUSSMONGO       UpdateTriggerRequestTriggerTypeCode
 	EVENTGRID        UpdateTriggerRequestTriggerTypeCode
+	IOTDA            UpdateTriggerRequestTriggerTypeCode
 }
 
 func GetUpdateTriggerRequestTriggerTypeCodeEnum() UpdateTriggerRequestTriggerTypeCodeEnum {
@@ -105,6 +109,9 @@ func GetUpdateTriggerRequestTriggerTypeCodeEnum() UpdateTriggerRequestTriggerTyp
 		},
 		EVENTGRID: UpdateTriggerRequestTriggerTypeCode{
 			value: "EVENTGRID",
+		},
+		IOTDA: UpdateTriggerRequestTriggerTypeCode{
+			value: "IOTDA",
 		},
 	}
 }

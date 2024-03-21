@@ -14,6 +14,9 @@ type DeleteVpcEndpointRequest struct {
 
 	// 子网编号
 	SubnetId string `json:"subnet_id"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o DeleteVpcEndpointRequest) String() string {

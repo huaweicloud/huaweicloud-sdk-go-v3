@@ -23,6 +23,9 @@ type ListAppTemplatesRequest struct {
 
 	// 模板语言
 	XLanguage *string `json:"X-Language,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListAppTemplatesRequest) String() string {

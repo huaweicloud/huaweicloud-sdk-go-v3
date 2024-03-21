@@ -24,7 +24,6 @@ type ListGlobalEipSegmentsRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListGlobalEipSegmentsRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -33,73 +32,50 @@ type ListGlobalEipSegmentsRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListGlobalEipSegmentsRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据资源ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据全域公网带宽的ID过滤
 	InternetBandwidthId *[]string `json:"internet_bandwidth_id,omitempty"`
 
-	// 根据名称过滤
 	Name *[]string `json:"name,omitempty"`
 
-	// 根据名称模糊匹配
 	NameLike *string `json:"name_like,omitempty"`
 
-	// 根据接入点过滤
 	AccessSite *[]string `json:"access_site,omitempty"`
 
-	// 根据全域弹性公网IP池名称过滤
 	GeipPoolName *[]string `json:"geip_pool_name,omitempty"`
 
-	// 根据运营商线路过滤
 	Isp *[]string `json:"isp,omitempty"`
 
-	// 根据可分配的IP版本过滤
 	IpVersion *[]ListGlobalEipSegmentsRequestIpVersion `json:"ip_version,omitempty"`
 
-	// 根据分配的CIDR过滤
 	Cidr *[]string `json:"cidr,omitempty"`
 
-	// 根据分配的IPv6 CIDR过滤
 	CidrV6 *[]string `json:"cidr_v6,omitempty"`
 
-	// 根据是否冻结过滤
 	Freezen *[]bool `json:"freezen,omitempty"`
 
-	// 根据是否绑定全域公网带宽过滤
 	InternetBandwidthIsNull *[]bool `json:"internet_bandwidth_is_null,omitempty"`
 
-	// 根据状态过滤
 	Status *[]ListGlobalEipSegmentsRequestStatus `json:"status,omitempty"`
 
-	// 根据绑定实例所属的局点过滤
 	AssociateInstanceRegion *[]string `json:"associate_instance.region,omitempty"`
 
-	// 根据绑定实例的类型过滤
 	AssociateInstanceInstanceType *[]string `json:"associate_instance.instance_type,omitempty"`
 
-	// 根据绑定实例所属的边缘信息过滤
 	AssociateInstancePublicBorderGroup *[]string `json:"associate_instance.public_border_group,omitempty"`
 
-	// 根据绑定实例所在的站点过滤
 	AssociateInstanceInstanceSite *[]string `json:"associate_instance.instance_site,omitempty"`
 
-	// 根据绑定实例的ID过滤
 	AssociateInstanceInstanceId *[]string `json:"associate_instance.instance_id,omitempty"`
 
-	// 根据绑定实例所属的项目ID过滤
 	AssociateInstanceProjectId *[]string `json:"associate_instance.project_id,omitempty"`
 
-	// 根据绑定实例所属的服务ID过滤
 	AssociateInstanceServiceId *[]string `json:"associate_instance.service_id,omitempty"`
 
-	// 根据绑定实例的服务类型过滤
 	AssociateInstanceServiceType *[]string `json:"associate_instance.service_type,omitempty"`
 
-	// 根据企业项目ID过滤
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
-	// 根据标签过滤
 	Tags *[]string `json:"tags,omitempty"`
 }
 

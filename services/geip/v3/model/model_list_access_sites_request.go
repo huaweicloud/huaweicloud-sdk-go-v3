@@ -24,7 +24,6 @@ type ListAccessSitesRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListAccessSitesRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -33,16 +32,12 @@ type ListAccessSitesRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListAccessSitesRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据名称过滤
 	Code *[]string `json:"code,omitempty"`
 
-	// 根据proxy_region过滤
 	ProxyRegion *[]string `json:"proxy_region,omitempty"`
 
-	// 根据iec_az_code过滤
 	IecAzCode *[]string `json:"iec_az_code,omitempty"`
 }
 

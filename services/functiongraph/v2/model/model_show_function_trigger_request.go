@@ -20,6 +20,9 @@ type ShowFunctionTriggerRequest struct {
 
 	// 触发器编码。
 	TriggerId string `json:"trigger_id"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowFunctionTriggerRequest) String() string {
@@ -52,6 +55,7 @@ type ShowFunctionTriggerRequestTriggerTypeCodeEnum struct {
 	APIC             ShowFunctionTriggerRequestTriggerTypeCode
 	GAUSSMONGO       ShowFunctionTriggerRequestTriggerTypeCode
 	EVENTGRID        ShowFunctionTriggerRequestTriggerTypeCode
+	IOTDA            ShowFunctionTriggerRequestTriggerTypeCode
 }
 
 func GetShowFunctionTriggerRequestTriggerTypeCodeEnum() ShowFunctionTriggerRequestTriggerTypeCodeEnum {
@@ -103,6 +107,9 @@ func GetShowFunctionTriggerRequestTriggerTypeCodeEnum() ShowFunctionTriggerReque
 		},
 		EVENTGRID: ShowFunctionTriggerRequestTriggerTypeCode{
 			value: "EVENTGRID",
+		},
+		IOTDA: ShowFunctionTriggerRequestTriggerTypeCode{
+			value: "IOTDA",
 		},
 	}
 }

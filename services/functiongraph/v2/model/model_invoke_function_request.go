@@ -12,6 +12,9 @@ type InvokeFunctionRequest struct {
 	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 	FunctionUrn string `json:"function_urn"`
 
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
+
 	// 取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
 	XCffLogType *string `json:"X-Cff-Log-Type,omitempty"`
 

@@ -10,7 +10,7 @@ import (
 
 type ListSupportRegions struct {
 
-	// ID
+	// 域弹性公网IP支持绑定的Region限制的ID
 	Id *string `json:"id,omitempty"`
 
 	// 支持绑定的实例类型
@@ -22,7 +22,7 @@ type ListSupportRegions struct {
 	// region_id
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 中心站点or边缘站点
+	// - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
 	// remote_endpoint

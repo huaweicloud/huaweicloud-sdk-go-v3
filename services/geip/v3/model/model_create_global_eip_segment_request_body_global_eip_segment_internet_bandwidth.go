@@ -20,11 +20,11 @@ type CreateGlobalEipSegmentRequestBodyGlobalEipSegmentInternetBandwidth struct {
 	// 全域公网带宽大小（出云方向）
 	Size *int32 `json:"size,omitempty"`
 
-	// 资源名称
+	// - 功能说明：全域公网带宽名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name *string `json:"name,omitempty"`
 
 	// 全域弹性公网IP段标签
-	Tags *[]AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags `json:"tags,omitempty"`
+	Tags *[]CreateGlobalEipRequestBodyGlobalEipTags `json:"tags,omitempty"`
 
 	// 全域公网带宽类型
 	Type *string `json:"type,omitempty"`

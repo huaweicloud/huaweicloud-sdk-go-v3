@@ -14,7 +14,7 @@ type InstanceInfo struct {
 	// quark后端地址
 	QuarkVpcEndpoint *string `json:"quarkVpcEndpoint,omitempty"`
 
-	// 项目ID
+	// 项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 支持绑定的实例类型
@@ -29,7 +29,7 @@ type InstanceInfo struct {
 	// 服务id
 	ServiceId *string `json:"service_id,omitempty"`
 
-	// 中心站点or边缘站点
+	// - 功能说明：表示中心站点资源或者边缘站点资源 - 取值范围：center、边缘站点名称
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
 	// 绑定实例所在的站点

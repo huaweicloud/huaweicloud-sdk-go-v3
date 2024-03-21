@@ -9,10 +9,10 @@ import (
 type BatchCreateV2RequestBody struct {
 
 	// 全域弹性公网IP标签
-	Tags []BatchCreateV2RequestBodyTags `json:"tags"`
+	Tags []CreateGlobalEipRequestBodyGlobalEipTags `json:"tags"`
 
 	// 系统标签
-	SysTags *[]BatchCreateV2RequestBodySysTags `json:"sys_tags,omitempty"`
+	SysTags *[]CreateGlobalEipRequestBodyGlobalEipTags `json:"sys_tags,omitempty"`
 }
 
 func (o BatchCreateV2RequestBody) String() string {

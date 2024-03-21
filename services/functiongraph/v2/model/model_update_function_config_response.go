@@ -134,7 +134,7 @@ type UpdateFunctionConfigResponse struct {
 	// 是否启动动态内存配置
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
 
-	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
+	// 是否支持有状态，v2版本支持
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
 
 	// 函数配置的需要支持域名解析的内网域名。

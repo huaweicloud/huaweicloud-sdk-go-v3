@@ -14,6 +14,8 @@ type SmartDocumentRecognizerResult struct {
 	TableResult *SmartDocumentRecognizerTableResult `json:"table_result,omitempty"`
 
 	LayoutResult *SmartDocumentRecognizerLayoutResult `json:"layout_result,omitempty"`
+
+	FormResult *SmartDocumentRecognizerFormResult `json:"form_result,omitempty"`
 }
 
 func (o SmartDocumentRecognizerResult) String() string {

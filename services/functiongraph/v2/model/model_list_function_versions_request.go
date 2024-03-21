@@ -17,6 +17,9 @@ type ListFunctionVersionsRequest struct {
 
 	// 每次查询获取的最大函数记录数量。
 	Maxitems *string `json:"maxitems,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListFunctionVersionsRequest) String() string {

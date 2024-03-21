@@ -14,6 +14,9 @@ type ShowFunctionMetricsRequest struct {
 
 	// 时间间隔（单位：min）
 	Period string `json:"period"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowFunctionMetricsRequest) String() string {

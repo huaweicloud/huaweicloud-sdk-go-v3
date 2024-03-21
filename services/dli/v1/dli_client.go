@@ -749,6 +749,27 @@ func (c *DliClient) ListAuthorizationPrivilegesInvoker(request *model.ListAuthor
 	return &ListAuthorizationPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCatalogs 获取项目下所有catalog信息
+//
+// 该API获取指定项目下所有catalog信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListCatalogs(request *model.ListCatalogsRequest) (*model.ListCatalogsResponse, error) {
+	requestDef := GenReqDefForListCatalogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCatalogsResponse), nil
+	}
+}
+
+// ListCatalogsInvoker 获取项目下所有catalog信息
+func (c *DliClient) ListCatalogsInvoker(request *model.ListCatalogsRequest) *ListCatalogsInvoker {
+	requestDef := GenReqDefForListCatalogs()
+	return &ListCatalogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDatabaseUsers 查看数据库的使用者
 //
@@ -1122,6 +1143,27 @@ func (c *DliClient) RunAuthorizationActionInvoker(request *model.RunAuthorizatio
 	return &RunAuthorizationActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RunCatalogAction 绑定/解绑catalog映射信息
+//
+// 该API创建DLI绑定/解绑到lakeformation等服务的元数据目录（CATALOG）相关信息，包含DLI侧CATALOG名称、外部CATALOG名称和类型，类型为预留字段，当前只支持lakeformation
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) RunCatalogAction(request *model.RunCatalogActionRequest) (*model.RunCatalogActionResponse, error) {
+	requestDef := GenReqDefForRunCatalogAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunCatalogActionResponse), nil
+	}
+}
+
+// RunCatalogActionInvoker 绑定/解绑catalog映射信息
+func (c *DliClient) RunCatalogActionInvoker(request *model.RunCatalogActionRequest) *RunCatalogActionInvoker {
+	requestDef := GenReqDefForRunCatalogAction()
+	return &RunCatalogActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunQueueAction 重启/扩容/缩容队列
 //
 // 该功能用于重新启动队列、扩容队列、缩容队列。
@@ -1141,6 +1183,27 @@ func (c *DliClient) RunQueueAction(request *model.RunQueueActionRequest) (*model
 func (c *DliClient) RunQueueActionInvoker(request *model.RunQueueActionRequest) *RunQueueActionInvoker {
 	requestDef := GenReqDefForRunQueueAction()
 	return &RunQueueActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCatalog 描述catalog信息
+//
+// 该API用于描述DLI catalog详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowCatalog(request *model.ShowCatalogRequest) (*model.ShowCatalogResponse, error) {
+	requestDef := GenReqDefForShowCatalog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCatalogResponse), nil
+	}
+}
+
+// ShowCatalogInvoker 描述catalog信息
+func (c *DliClient) ShowCatalogInvoker(request *model.ShowCatalogRequest) *ShowCatalogInvoker {
+	requestDef := GenReqDefForShowCatalog()
+	return &ShowCatalogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowConnectivityTask 查询指定地址连通性测试详情

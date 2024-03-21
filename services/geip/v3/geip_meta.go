@@ -72,7 +72,7 @@ func GenReqDefForBatchCreateInternetBandwidthTags() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("x-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -98,7 +98,7 @@ func GenReqDefForBatchDeleteInternetBandwidthTags() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("x-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -909,7 +909,7 @@ func GenReqDefForBatchCreateGeipSegmentTags() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("x-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -956,7 +956,7 @@ func GenReqDefForBatchCreateGlobalEipTags() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("x-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -982,7 +982,7 @@ func GenReqDefForBatchDeleteGeipSegmentTags() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("x-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 
@@ -1008,7 +1008,7 @@ func GenReqDefForBatchDeleteGlobalEipTags() *def.HttpRequestDef {
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
-		WithJsonTag("x-request-id").
+		WithJsonTag("X-Request-Id").
 		WithKindName("string").
 		WithLocationType(def.Header))
 

@@ -115,7 +115,7 @@ type ConfigurationResponseDataSpec struct {
 	Path *string `json:"path,omitempty"`
 
 	// 自定义监控指标配置采集端口。  Configuration.type为\"customMetric\"时，返回此参数。
-	Port *string `json:"port,omitempty"`
+	Port *int32 `json:"port,omitempty"`
 
 	// 自定义监控指标配置指标名称。  Configuration.type为\"customMetric\"时，返回此参数。
 	Metrics *[]string `json:"metrics,omitempty"`

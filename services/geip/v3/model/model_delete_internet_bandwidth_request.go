@@ -8,8 +8,6 @@ import (
 
 // DeleteInternetBandwidthRequest Request Object
 type DeleteInternetBandwidthRequest struct {
-
-	// 全域公网带宽的ID
 	InternetBandwidthId string `json:"internet_bandwidth_id"`
 }
 

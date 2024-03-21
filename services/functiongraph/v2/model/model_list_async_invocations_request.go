@@ -10,7 +10,7 @@ import (
 // ListAsyncInvocationsRequest Request Object
 type ListAsyncInvocationsRequest struct {
 
-	// 函数URN
+	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 	FunctionUrn string `json:"function_urn"`
 
 	// 需要查询的异步请求ID。如果不指定，默认查询所有异步调用记录
@@ -30,6 +30,9 @@ type ListAsyncInvocationsRequest struct {
 
 	// 搜索结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。如果不指定默认为当前时间
 	QueryEndTime *sdktime.SdkTime `json:"query_end_time,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListAsyncInvocationsRequest) String() string {

@@ -9,11 +9,14 @@ import (
 // ListFunctionStatisticsRequest Request Object
 type ListFunctionStatisticsRequest struct {
 
-	// 函数的URN（Uniform Resource Name），唯一标识函数。
+	// 函数的URN，详细解释见FunctionGraph函数模型的描述。
 	FuncUrn string `json:"func_urn"`
 
 	// 获取最近多少分钟内函数执行的指标。
 	Period string `json:"period"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListFunctionStatisticsRequest) String() string {

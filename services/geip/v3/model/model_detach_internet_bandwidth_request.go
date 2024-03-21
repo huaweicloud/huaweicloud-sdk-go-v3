@@ -8,11 +8,8 @@ import (
 
 // DetachInternetBandwidthRequest Request Object
 type DetachInternetBandwidthRequest struct {
-
-	// global_eip_id
 	GlobalEipId string `json:"global_eip_id"`
 
-	// 是否强制解绑
 	ForceUnbind *bool `json:"force_unbind,omitempty"`
 }
 

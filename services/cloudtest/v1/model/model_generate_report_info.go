@@ -14,7 +14,7 @@ type GenerateReportInfo struct {
 	// 工件类型(用例：case,测试套：suite)
 	WorkpieceType *string `json:"workpiece_type,omitempty"`
 
-	// 分析维度
+	// 分析维度。该参数选择横坐标（X轴）维度，不传会返回空列表。
 	AnalysisDimRow *string `json:"analysis_dim_row,omitempty"`
 
 	// 对比维度

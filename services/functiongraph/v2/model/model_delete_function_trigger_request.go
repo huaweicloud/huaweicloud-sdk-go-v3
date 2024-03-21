@@ -20,6 +20,9 @@ type DeleteFunctionTriggerRequest struct {
 
 	// 触发器编码。
 	TriggerId string `json:"trigger_id"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o DeleteFunctionTriggerRequest) String() string {
@@ -52,6 +55,7 @@ type DeleteFunctionTriggerRequestTriggerTypeCodeEnum struct {
 	APIC             DeleteFunctionTriggerRequestTriggerTypeCode
 	GAUSSMONGO       DeleteFunctionTriggerRequestTriggerTypeCode
 	EVENTGRID        DeleteFunctionTriggerRequestTriggerTypeCode
+	IOTDA            DeleteFunctionTriggerRequestTriggerTypeCode
 }
 
 func GetDeleteFunctionTriggerRequestTriggerTypeCodeEnum() DeleteFunctionTriggerRequestTriggerTypeCodeEnum {
@@ -103,6 +107,9 @@ func GetDeleteFunctionTriggerRequestTriggerTypeCodeEnum() DeleteFunctionTriggerR
 		},
 		EVENTGRID: DeleteFunctionTriggerRequestTriggerTypeCode{
 			value: "EVENTGRID",
+		},
+		IOTDA: DeleteFunctionTriggerRequestTriggerTypeCode{
+			value: "IOTDA",
 		},
 	}
 }

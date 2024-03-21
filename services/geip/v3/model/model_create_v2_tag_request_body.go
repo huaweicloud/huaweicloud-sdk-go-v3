@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateV2TagRequestBody 标签对象
 type CreateV2TagRequestBody struct {
 	Tag *CreateV2TagRequestBodyTag `json:"tag"`
 }

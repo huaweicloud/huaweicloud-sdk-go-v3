@@ -15,7 +15,6 @@ type ShowJobsRequest struct {
 	// job_id
 	JobId string `json:"job_id"`
 
-	// 只显示指定的字段
 	Fields *[]ShowJobsRequestFields `json:"fields,omitempty"`
 }
 

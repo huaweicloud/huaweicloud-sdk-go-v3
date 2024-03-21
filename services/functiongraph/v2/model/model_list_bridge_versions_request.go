@@ -11,6 +11,9 @@ type ListBridgeVersionsRequest struct {
 
 	// servicebridge 类型，可选  rds, mqs 或 cache
 	Type string `json:"type"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListBridgeVersionsRequest) String() string {

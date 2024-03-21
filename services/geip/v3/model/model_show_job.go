@@ -9,7 +9,7 @@ import (
 
 type ShowJob struct {
 
-	// ID
+	// Job的ID
 	Id *string `json:"id,omitempty"`
 
 	// 处理规则

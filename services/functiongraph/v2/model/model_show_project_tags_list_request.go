@@ -9,8 +9,11 @@ import (
 // ShowProjectTagsListRequest Request Object
 type ShowProjectTagsListRequest struct {
 
-	// 资源类型
+	// 资源类型，此处请填写functions
 	ResourceType string `json:"resource_type"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowProjectTagsListRequest) String() string {

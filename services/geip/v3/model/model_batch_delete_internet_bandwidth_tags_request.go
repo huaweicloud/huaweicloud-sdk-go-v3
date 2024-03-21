@@ -8,8 +8,6 @@ import (
 
 // BatchDeleteInternetBandwidthTagsRequest Request Object
 type BatchDeleteInternetBandwidthTagsRequest struct {
-
-	// 全域公网带宽的id
 	ResourceId string `json:"resource_id"`
 
 	Body *BatchDeleteV2RequestBody `json:"body,omitempty"`

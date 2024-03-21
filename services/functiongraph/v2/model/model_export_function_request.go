@@ -20,6 +20,9 @@ type ExportFunctionRequest struct {
 
 	// 不兼容与code、config参数混用；type=code代表导出代码，type=config代码导出配置
 	Type *string `json:"type,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ExportFunctionRequest) String() string {

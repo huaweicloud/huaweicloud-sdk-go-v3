@@ -17,6 +17,9 @@ type ListReservedInstanceConfigsRequest struct {
 
 	// 本次查询最大返回的数据条数，最大值500，默认值100
 	Limit *string `json:"limit,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListReservedInstanceConfigsRequest) String() string {

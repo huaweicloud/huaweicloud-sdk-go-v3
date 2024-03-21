@@ -11,8 +11,6 @@ import (
 
 // ShowUserDisclaimerRequest Request Object
 type ShowUserDisclaimerRequest struct {
-
-	// 只显示指定的字段
 	Fields *[]ShowUserDisclaimerRequestFields `json:"fields,omitempty"`
 }
 

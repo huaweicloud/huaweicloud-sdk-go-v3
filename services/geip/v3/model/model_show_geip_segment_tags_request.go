@@ -8,8 +8,6 @@ import (
 
 // ShowGeipSegmentTagsRequest Request Object
 type ShowGeipSegmentTagsRequest struct {
-
-	// 全域弹性公网IP的id
 	ResourceId string `json:"resource_id"`
 }
 

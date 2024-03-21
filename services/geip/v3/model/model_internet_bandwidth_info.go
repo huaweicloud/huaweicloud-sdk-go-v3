@@ -8,7 +8,7 @@ import (
 
 type InternetBandwidthInfo struct {
 
-	// ID
+	// 全域公网带宽的ID
 	Id *string `json:"id,omitempty"`
 
 	// 全域公网带宽大小（出云方向）

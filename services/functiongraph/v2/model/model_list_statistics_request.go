@@ -26,6 +26,9 @@ type ListStatisticsRequest struct {
 
 	// 本次查询起始位置，默认值0
 	Marker *string `json:"marker,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListStatisticsRequest) String() string {

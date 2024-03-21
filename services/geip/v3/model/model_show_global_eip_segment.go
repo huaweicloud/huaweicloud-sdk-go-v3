@@ -10,16 +10,16 @@ import (
 
 type ShowGlobalEipSegment struct {
 
-	// ID
+	// 全域弹性公网IP段的ID
 	Id *string `json:"id,omitempty"`
 
-	// 资源名称
+	// - 功能说明：全域弹性公网IP段名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name *string `json:"name,omitempty"`
 
-	// 用户自定义的资源描述
+	// - 功能说明：用户自定义的资源描述 - 约束：   - 值的长度最大512字符，由数字、字母、中文、_(下划线)、-（中划线）、.（点）组成。
 	Description *string `json:"description,omitempty"`
 
-	// 租户ID
+	// - 租户账号ID，获取租户账号ID请参见[租户账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)
 	DomainId *string `json:"domain_id,omitempty"`
 
 	// 接入点信息
@@ -28,11 +28,11 @@ type ShowGlobalEipSegment struct {
 	// 全域弹性公网IP池子名称
 	GeipPoolName *string `json:"geip_pool_name,omitempty"`
 
-	// 线路
+	// 全域弹性公网IP所属线路
 	Isp *string `json:"isp,omitempty"`
 
-	// IPv4或IPv6
-	IpVersion *int32 `json:"ip_version,omitempty"`
+	// - 功能说明：全域弹性公网IP段的版本 - 取值范围：4、6
+	IpVersion *ShowGlobalEipSegmentIpVersion `json:"ip_version,omitempty"`
 
 	// 全域公网IP段的cidr
 	Cidr *string `json:"cidr,omitempty"`
@@ -68,7 +68,7 @@ type ShowGlobalEipSegment struct {
 	// 系统标签
 	SysTags *[]Tag `json:"sys_tags,omitempty"`
 
-	// 资源的企业项目id
+	// - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
@@ -79,6 +79,52 @@ func (o ShowGlobalEipSegment) String() string {
 	}
 
 	return strings.Join([]string{"ShowGlobalEipSegment", string(data)}, " ")
+}
+
+type ShowGlobalEipSegmentIpVersion struct {
+	value int32
+}
+
+type ShowGlobalEipSegmentIpVersionEnum struct {
+	E_4 ShowGlobalEipSegmentIpVersion
+	E_6 ShowGlobalEipSegmentIpVersion
+}
+
+func GetShowGlobalEipSegmentIpVersionEnum() ShowGlobalEipSegmentIpVersionEnum {
+	return ShowGlobalEipSegmentIpVersionEnum{
+		E_4: ShowGlobalEipSegmentIpVersion{
+			value: 4,
+		}, E_6: ShowGlobalEipSegmentIpVersion{
+			value: 6,
+		},
+	}
+}
+
+func (c ShowGlobalEipSegmentIpVersion) Value() int32 {
+	return c.value
+}
+
+func (c ShowGlobalEipSegmentIpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowGlobalEipSegmentIpVersion) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ShowGlobalEipSegmentStatus struct {

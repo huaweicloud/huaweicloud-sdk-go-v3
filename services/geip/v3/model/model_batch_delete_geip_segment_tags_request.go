@@ -8,8 +8,6 @@ import (
 
 // BatchDeleteGeipSegmentTagsRequest Request Object
 type BatchDeleteGeipSegmentTagsRequest struct {
-
-	// 全域弹性公网IP的id
 	ResourceId string `json:"resource_id"`
 
 	Body *BatchDeleteV2RequestBody `json:"body,omitempty"`

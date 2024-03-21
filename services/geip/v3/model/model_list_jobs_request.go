@@ -24,7 +24,6 @@ type ListJobsRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListJobsRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -33,13 +32,10 @@ type ListJobsRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListJobsRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据action过滤
 	Action *[]ListJobsRequestAction `json:"action,omitempty"`
 
-	// 根据job状态过滤
 	Status *[]ListJobsRequestStatus `json:"status,omitempty"`
 }
 

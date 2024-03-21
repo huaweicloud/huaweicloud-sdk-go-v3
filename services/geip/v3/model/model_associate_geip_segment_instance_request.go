@@ -8,8 +8,6 @@ import (
 
 // AssociateGeipSegmentInstanceRequest Request Object
 type AssociateGeipSegmentInstanceRequest struct {
-
-	// global_eip_segment_id
 	GlobalEipSegmentId string `json:"global_eip_segment_id"`
 
 	Body *AssociateInstanceGlobalEipSegmentRequestBody `json:"body,omitempty"`

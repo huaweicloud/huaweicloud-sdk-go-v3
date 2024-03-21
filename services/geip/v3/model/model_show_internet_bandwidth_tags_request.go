@@ -8,8 +8,6 @@ import (
 
 // ShowInternetBandwidthTagsRequest Request Object
 type ShowInternetBandwidthTagsRequest struct {
-
-	// 全域公网带宽的id
 	ResourceId string `json:"resource_id"`
 }
 

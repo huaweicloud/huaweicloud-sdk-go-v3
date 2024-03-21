@@ -26,6 +26,9 @@ type ListFunctionTemplateRequest struct {
 
 	// 指定云服务模板
 	Service *string `json:"service,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListFunctionTemplateRequest) String() string {

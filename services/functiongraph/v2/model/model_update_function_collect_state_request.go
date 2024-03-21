@@ -14,6 +14,9 @@ type UpdateFunctionCollectStateRequest struct {
 
 	// 置顶状态
 	State string `json:"state"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o UpdateFunctionCollectStateRequest) String() string {

@@ -24,7 +24,6 @@ type ListSupportMasksRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]ListSupportMasksRequestFields `json:"fields,omitempty"`
 
 	// 按照sort_key指定的字段排序
@@ -33,13 +32,10 @@ type ListSupportMasksRequest struct {
 	// 排序的方向，倒序或者正序
 	SortDir *[]ListSupportMasksRequestSortDir `json:"sort_dir,omitempty"`
 
-	// 根据ID过滤
 	Id *[]string `json:"id,omitempty"`
 
-	// 根据IP版本过滤
 	IpVersion *[]ListSupportMasksRequestIpVersion `json:"ip_version,omitempty"`
 
-	// 根据掩码过滤
 	Mask *[]int32 `json:"mask,omitempty"`
 }
 

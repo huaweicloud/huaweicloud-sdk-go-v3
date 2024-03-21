@@ -8,7 +8,7 @@ import (
 
 // BatchDeleteGlobalEipTagsResponse Response Object
 type BatchDeleteGlobalEipTagsResponse struct {
-	XRequestId     *string `json:"x-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

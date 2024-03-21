@@ -17,6 +17,9 @@ type ListDependencyVersionRequest struct {
 
 	// 单次查询最大条数
 	Maxitems *string `json:"maxitems,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListDependencyVersionRequest) String() string {

@@ -8,8 +8,6 @@ import (
 
 // UpdateGlobalEipSegmentRequest Request Object
 type UpdateGlobalEipSegmentRequest struct {
-
-	// global_eip_segment_id
 	GlobalEipSegmentId string `json:"global_eip_segment_id"`
 
 	Body *UpdateGlobalEipSegmentRequestBody `json:"body,omitempty"`

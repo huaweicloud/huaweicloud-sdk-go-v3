@@ -29,6 +29,9 @@ type ListDependenciesRequest struct {
 
 	// 本次查询可获取的依赖包的最大数目，默认为\"400\"。
 	Limit *string `json:"limit,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListDependenciesRequest) String() string {

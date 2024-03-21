@@ -8,8 +8,6 @@ import (
 
 // DisassociateGeipSegmentInstanceRequest Request Object
 type DisassociateGeipSegmentInstanceRequest struct {
-
-	// global_eip_segment_id
 	GlobalEipSegmentId string `json:"global_eip_segment_id"`
 }
 

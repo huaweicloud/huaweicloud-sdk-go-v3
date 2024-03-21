@@ -8,11 +8,8 @@ import (
 
 // DeleteGeipSegmentTagRequest Request Object
 type DeleteGeipSegmentTagRequest struct {
-
-	// 全域弹性公网IP的id
 	ResourceId string `json:"resource_id"`
 
-	// 待删除标签的key
 	TagKey string `json:"tag_key"`
 }
 

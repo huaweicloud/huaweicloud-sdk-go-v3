@@ -11,11 +11,8 @@ import (
 
 // ListTenantGeipSupportInstancesRequest Request Object
 type ListTenantGeipSupportInstancesRequest struct {
-
-	// 接入点信息
 	AccessSite string `json:"access_site"`
 
-	// 只显示指定的字段
 	Fields *[]ListTenantGeipSupportInstancesRequestFields `json:"fields,omitempty"`
 }
 

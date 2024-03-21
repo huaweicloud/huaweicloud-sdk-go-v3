@@ -11,11 +11,8 @@ import (
 
 // ShowGlobalEipRequest Request Object
 type ShowGlobalEipRequest struct {
-
-	// global_eip_id
 	GlobalEipId string `json:"global_eip_id"`
 
-	// 只显示指定的字段
 	Fields *[]ShowGlobalEipRequestFields `json:"fields,omitempty"`
 }
 

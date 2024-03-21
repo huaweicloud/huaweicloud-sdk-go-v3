@@ -11,6 +11,9 @@ type ShowFunctionTemplateRequest struct {
 
 	// 指定模板id。
 	TemplateId string `json:"template_id"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ShowFunctionTemplateRequest) String() string {

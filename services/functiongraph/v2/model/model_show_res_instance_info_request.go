@@ -9,11 +9,14 @@ import (
 // ShowResInstanceInfoRequest Request Object
 type ShowResInstanceInfoRequest struct {
 
-	// 资源类型
+	// 资源类型，此处请填写functions
 	ResourceType string `json:"resource_type"`
 
 	// 禁用/启用
 	Action string `json:"action"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 
 	Body *ListEnterpriseResourceRequestBody `json:"body,omitempty"`
 }

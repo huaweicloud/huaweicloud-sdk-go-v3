@@ -9,10 +9,10 @@ import (
 // ListControlViolationsRequest Request Object
 type ListControlViolationsRequest struct {
 
-	// 账户ID，用于过滤不合规资源。
+	// 账户ID。
 	AccountId *string `json:"account_id,omitempty"`
 
-	// 注册OU ID，用于过滤不合规资源。
+	// 注册OU ID。
 	OrganizationUnitId *string `json:"organization_unit_id,omitempty"`
 }
 

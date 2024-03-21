@@ -26,6 +26,12 @@ type TableMeta struct {
 
 	// 表描述信息
 	Comments string `json:"comments"`
+
+	// 分区列以外的所有字段。
+	Columns *[]Column `json:"columns,omitempty"`
+
+	// 分区列的信息。
+	PartitionKeys *[]Column `json:"partition_keys,omitempty"`
 }
 
 func (o TableMeta) String() string {

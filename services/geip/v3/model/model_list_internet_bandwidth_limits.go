@@ -8,7 +8,7 @@ import (
 
 type ListInternetBandwidthLimits struct {
 
-	// ID
+	// 全域公网带宽限制的ID
 	Id *string `json:"id,omitempty"`
 
 	// 全域公网带宽的计费模式

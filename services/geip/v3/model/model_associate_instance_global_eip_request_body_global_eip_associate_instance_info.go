@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo 绑定实例的信息
 type AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo struct {
 
 	// region
@@ -17,6 +18,7 @@ type AssociateInstanceGlobalEipRequestBodyGlobalEipAssociateInstanceInfo struct 
 	// 实例ID
 	InstanceId *string `json:"instance_id,omitempty"`
 
+	// 项目ID，获取项目ID请参见[获取项目ID](https://support.huaweicloud.com/api-vpc/vpc_api_0011.html)
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 服务id

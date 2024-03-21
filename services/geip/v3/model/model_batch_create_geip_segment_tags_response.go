@@ -8,7 +8,7 @@ import (
 
 // BatchCreateGeipSegmentTagsResponse Response Object
 type BatchCreateGeipSegmentTagsResponse struct {
-	XRequestId     *string `json:"x-request-id,omitempty"`
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

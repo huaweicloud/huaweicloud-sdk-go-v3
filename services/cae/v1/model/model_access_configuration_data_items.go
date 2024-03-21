@@ -12,16 +12,30 @@ import (
 // AccessConfigurationDataItems 访问方式配置项。
 type AccessConfigurationDataItems struct {
 
+	// 访问方式的uid。
+	Uid *string `json:"uid,omitempty"`
+
+	Metadata *AccessConfigurationMetadata `json:"metadata,omitempty"`
+
 	// 访问方式类型。
 	Type *AccessConfigurationDataItemsType `json:"type,omitempty"`
 
 	// 内网访问方式域名。
-	DomainNames *string `json:"domain_names,omitempty"`
+	DomainNames *[]string `json:"domain_names,omitempty"`
 
 	AccessControl *AccessControl `json:"access_control,omitempty"`
 
 	// 访问方式配置端口、协议、证书、URL路径等信息列表。
 	Ports *[]AccessConfigurationPort `json:"ports,omitempty"`
+
+	// 用户选择的elb的ID。
+	ElbId *string `json:"elb_id,omitempty"`
+
+	// 响应体参数，用户选择的elb的公网ip。
+	PublicIp *string `json:"public_ip,omitempty"`
+
+	// 响应体参数，用户选择的elb的私网ip。
+	PrivateIp *string `json:"private_ip,omitempty"`
 }
 
 func (o AccessConfigurationDataItems) String() string {

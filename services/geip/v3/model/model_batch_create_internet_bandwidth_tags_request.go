@@ -8,8 +8,6 @@ import (
 
 // BatchCreateInternetBandwidthTagsRequest Request Object
 type BatchCreateInternetBandwidthTagsRequest struct {
-
-	// 全域公网带宽的id
 	ResourceId string `json:"resource_id"`
 
 	Body *BatchCreateV2RequestBody `json:"body,omitempty"`

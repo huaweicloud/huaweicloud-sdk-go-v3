@@ -8,8 +8,6 @@ import (
 
 // DeleteGlobalEipSegmentRequest Request Object
 type DeleteGlobalEipSegmentRequest struct {
-
-	// global_eip_segment_id
 	GlobalEipSegmentId string `json:"global_eip_segment_id"`
 }
 

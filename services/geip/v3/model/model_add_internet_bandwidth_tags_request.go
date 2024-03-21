@@ -8,8 +8,6 @@ import (
 
 // AddInternetBandwidthTagsRequest Request Object
 type AddInternetBandwidthTagsRequest struct {
-
-	// 全域公网带宽的id
 	ResourceId string `json:"resource_id"`
 
 	Body *CreateV2TagRequestBody `json:"body,omitempty"`

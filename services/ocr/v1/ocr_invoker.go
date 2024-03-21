@@ -209,6 +209,18 @@ func (i *RecognizeHkIdCardInvoker) Invoke() (*model.RecognizeHkIdCardResponse, e
 	}
 }
 
+type RecognizeHouseholdRegisterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeHouseholdRegisterInvoker) Invoke() (*model.RecognizeHouseholdRegisterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeHouseholdRegisterResponse), nil
+	}
+}
+
 type RecognizeIdCardInvoker struct {
 	*invoker.BaseInvoker
 }

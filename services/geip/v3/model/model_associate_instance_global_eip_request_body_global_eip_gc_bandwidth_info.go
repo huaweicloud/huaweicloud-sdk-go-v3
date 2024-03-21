@@ -9,27 +9,31 @@ import (
 	"strings"
 )
 
+// AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo 骨干带宽的信息
 type AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo struct {
 
-	// ID
+	// 骨干带宽的ID
 	Id *string `json:"id,omitempty"`
 
-	// 资源名称
+	// - 功能说明：骨干带宽的名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
 	Name *string `json:"name,omitempty"`
 
+	// 骨干带宽描述信息
 	Description *string `json:"description,omitempty"`
 
+	// 骨干带宽类型
 	Type *AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoType `json:"type,omitempty"`
 
-	// 资源的企业项目id
+	// - 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。 - 创建全域弹性公网IP时，给全域弹性公网IP绑定企业项目ID。 - 不指定该参数时，默认值是 0 - 关于企业项目ID的获取及企业项目特性的详细信息，请参见[《企业管理用户指南》](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 计费模式
 	ChargeMode *AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoChargeMode `json:"charge_mode,omitempty"`
 
+	// 域间带宽值
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
-	// 大小
+	// 域间带宽大小
 	Size *int32 `json:"size,omitempty"`
 
 	// 骨干带宽的两端之一：A点
@@ -39,7 +43,7 @@ type AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo struct {
 	RemoteArea *string `json:"remote_area,omitempty"`
 
 	// 全域弹性公网IP标签
-	Tags *[]AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfoTags `json:"tags,omitempty"`
+	Tags *[]CreateGlobalEipRequestBodyGlobalEipTags `json:"tags,omitempty"`
 }
 
 func (o AssociateInstanceGlobalEipRequestBodyGlobalEipGcBandwidthInfo) String() string {

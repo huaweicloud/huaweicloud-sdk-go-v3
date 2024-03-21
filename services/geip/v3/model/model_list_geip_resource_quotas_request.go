@@ -24,10 +24,8 @@ type ListGeipResourceQuotasRequest struct {
 	// 翻页方向
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 只显示指定的字段
 	Fields *[]string `json:"fields,omitempty"`
 
-	// 根据类型过滤
 	Type *[]ListGeipResourceQuotasRequestType `json:"type,omitempty"`
 }
 

@@ -8,6 +8,10 @@ import (
 
 // ImportFunctionRequest Request Object
 type ImportFunctionRequest struct {
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
+
 	Body *ImportFunctionRequestBody `json:"body,omitempty"`
 }
 

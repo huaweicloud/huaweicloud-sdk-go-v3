@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/idmeclassicapi/v1/model"
 )
 
+type AddTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddTagInvoker) Invoke() (*model.AddTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddTagResponse), nil
+	}
+}
+
 type BatchCheckinInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *BatchCreateUsingPostInvoker) Invoke() (*model.BatchCreateUsingPostRespo
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateUsingPostResponse), nil
+	}
+}
+
+type BatchCreateViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateViewInvoker) Invoke() (*model.BatchCreateViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateViewResponse), nil
 	}
 }
 
@@ -269,6 +293,18 @@ func (i *CheckoutUndoByAdminInvoker) Invoke() (*model.CheckoutUndoByAdminRespons
 	}
 }
 
+type CollectHistoryDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectHistoryDataInvoker) Invoke() (*model.CollectHistoryDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectHistoryDataResponse), nil
+	}
+}
+
 type CompareBusinessVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +329,18 @@ func (i *CountUsingPostInvoker) Invoke() (*model.CountUsingPostResponse, error) 
 	}
 }
 
+type CreateMultiViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMultiViewInvoker) Invoke() (*model.CreateMultiViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMultiViewResponse), nil
+	}
+}
+
 type CreateUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -305,6 +353,18 @@ func (i *CreateUsingPostInvoker) Invoke() (*model.CreateUsingPostResponse, error
 	}
 }
 
+type CreateViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateViewInvoker) Invoke() (*model.CreateViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateViewResponse), nil
+	}
+}
+
 type DeleteBranchInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +374,18 @@ func (i *DeleteBranchInvoker) Invoke() (*model.DeleteBranchResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteBranchResponse), nil
+	}
+}
+
+type DeleteByConditionMultiViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteByConditionMultiViewInvoker) Invoke() (*model.DeleteByConditionMultiViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteByConditionMultiViewResponse), nil
 	}
 }
 
@@ -377,6 +449,30 @@ func (i *DeleteUsingPostInvoker) Invoke() (*model.DeleteUsingPostResponse, error
 	}
 }
 
+type DisableDataInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableDataInstanceInvoker) Invoke() (*model.DisableDataInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableDataInstanceResponse), nil
+	}
+}
+
+type EnableDataInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableDataInstanceInvoker) Invoke() (*model.EnableDataInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableDataInstanceResponse), nil
+	}
+}
+
 type ExecuteReviseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -389,6 +485,18 @@ func (i *ExecuteReviseInvoker) Invoke() (*model.ExecuteReviseResponse, error) {
 	}
 }
 
+type GenerateBusinessCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GenerateBusinessCodeInvoker) Invoke() (*model.GenerateBusinessCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GenerateBusinessCodeResponse), nil
+	}
+}
+
 type ListAllVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,6 +506,18 @@ func (i *ListAllVersionsInvoker) Invoke() (*model.ListAllVersionsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListAllVersionsResponse), nil
+	}
+}
+
+type ListHistoryDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryDataInvoker) Invoke() (*model.ListHistoryDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistoryDataResponse), nil
 	}
 }
 
@@ -434,6 +554,18 @@ func (i *ListUsingPostInvoker) Invoke() (*model.ListUsingPostResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListUsingPostResponse), nil
+	}
+}
+
+type RemoveTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveTagInvoker) Invoke() (*model.RemoveTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveTagResponse), nil
 	}
 }
 
@@ -545,6 +677,18 @@ func (i *ShowStaticsUsingPostInvoker) Invoke() (*model.ShowStaticsUsingPostRespo
 	}
 }
 
+type ShowTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTagInvoker) Invoke() (*model.ShowTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTagResponse), nil
+	}
+}
+
 type ShowVersionByMasterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +698,18 @@ func (i *ShowVersionByMasterInvoker) Invoke() (*model.ShowVersionByMasterRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowVersionByMasterResponse), nil
+	}
+}
+
+type SwitchLifecycleTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchLifecycleTemplateInvoker) Invoke() (*model.SwitchLifecycleTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchLifecycleTemplateResponse), nil
 	}
 }
 
@@ -605,6 +761,18 @@ func (i *UpdateByConditionUsingPostInvoker) Invoke() (*model.UpdateByConditionUs
 	}
 }
 
+type UpdateStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStateInvoker) Invoke() (*model.UpdateStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStateResponse), nil
+	}
+}
+
 type UpdateUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -614,5 +782,17 @@ func (i *UpdateUsingPostInvoker) Invoke() (*model.UpdateUsingPostResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateUsingPostResponse), nil
+	}
+}
+
+type UpdateViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateViewInvoker) Invoke() (*model.UpdateViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateViewResponse), nil
 	}
 }

@@ -341,6 +341,18 @@ func (i *ListManagedOrganizationalUnitsInvoker) Invoke() (*model.ListManagedOrga
 	}
 }
 
+type ListOperationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOperationInvoker) Invoke() (*model.ListOperationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOperationResponse), nil
+	}
+}
+
 type ReRegisterOrganizationalUnitInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,5 +446,53 @@ func (i *UpdateManagedAccountInvoker) Invoke() (*model.UpdateManagedAccountRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateManagedAccountResponse), nil
+	}
+}
+
+type CreateTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTemplateResponse), nil
+	}
+}
+
+type DeleteTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTemplateResponse), nil
+	}
+}
+
+type ListPredefinedTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPredefinedTemplatesInvoker) Invoke() (*model.ListPredefinedTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPredefinedTemplatesResponse), nil
+	}
+}
+
+type ShowTemplateDeployParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateDeployParamsInvoker) Invoke() (*model.ShowTemplateDeployParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateDeployParamsResponse), nil
 	}
 }

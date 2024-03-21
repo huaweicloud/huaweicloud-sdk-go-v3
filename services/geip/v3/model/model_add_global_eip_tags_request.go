@@ -8,8 +8,6 @@ import (
 
 // AddGlobalEipTagsRequest Request Object
 type AddGlobalEipTagsRequest struct {
-
-	// 全域弹性公网IP的id
 	ResourceId string `json:"resource_id"`
 
 	Body *CreateV2TagRequestBody `json:"body,omitempty"`

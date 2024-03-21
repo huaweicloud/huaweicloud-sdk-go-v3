@@ -8,8 +8,6 @@ import (
 
 // UpdateInternetBandwidthRequest Request Object
 type UpdateInternetBandwidthRequest struct {
-
-	// 全域公网带宽的ID
 	InternetBandwidthId string `json:"internet_bandwidth_id"`
 
 	Body *UpdateInternetBandwidthRequestBody `json:"body,omitempty"`

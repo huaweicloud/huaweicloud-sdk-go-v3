@@ -20,6 +20,9 @@ type ListFunctionAsMetricRequest struct {
 
 	// 指标类型，默认值为failcount。
 	Limit *string `json:"limit,omitempty"`
+
+	// 消息体的类型（格式）
+	ContentType string `json:"Content-Type"`
 }
 
 func (o ListFunctionAsMetricRequest) String() string {
