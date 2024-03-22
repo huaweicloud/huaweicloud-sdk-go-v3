@@ -25,7 +25,7 @@ type Phone struct {
 	ImageId *string `json:"image_id,omitempty"`
 
 	// 云手机是否开启VNC服务。 - true：开启 - false：不开启
-	VncEnable *string `json:"vnc_enable,omitempty"`
+	VncEnable *bool `json:"vnc_enable,omitempty"`
 
 	// 云手机状态。 - 0: 创建中 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
 	Status *int32 `json:"status,omitempty"`
