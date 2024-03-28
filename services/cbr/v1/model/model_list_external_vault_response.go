@@ -19,11 +19,8 @@ type ListExternalVaultResponse struct {
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询
-	Offset *int32 `json:"offset,omitempty"`
-
-	// 用于标识SMB服务
-	SysLockSourceService *string `json:"sys_lock_source_service,omitempty"`
-	HttpStatusCode       int     `json:"-"`
+	Offset         *int32 `json:"offset,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListExternalVaultResponse) String() string {

@@ -15,8 +15,8 @@ type DeleteFlinkSqlJobTemplateResponse struct {
 	// 消息内容。
 	Message *string `json:"message,omitempty"`
 
-	Template       *DeleteTemplateRespTemplate `json:"template,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Template       *FlinkSqlJobTemplateId `json:"template,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o DeleteFlinkSqlJobTemplateResponse) String() string {

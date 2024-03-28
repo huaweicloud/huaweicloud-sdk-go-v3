@@ -48,7 +48,7 @@ type FlinkJobDetail struct {
 	// 作业运行模式： shared_cluster：共享。 exclusive_cluster：独享。 edge_node：边缘节点。
 	RunMode *string `json:"run_mode,omitempty"`
 
-	JobConfig *FlinkJobConfig `json:"job_config,omitempty"`
+	JobConfig *FlinkJobConfigDetail `json:"job_config,omitempty"`
 
 	// jar包主类。
 	MainClass *string `json:"main_class,omitempty"`

@@ -13,6 +13,9 @@ type ResponseInfo struct {
 
 	// 响应的Body模板
 	Body *string `json:"body,omitempty"`
+
+	// 自定义的响应头
+	Headers *[]ResponseInfoHeader `json:"headers,omitempty"`
 }
 
 func (o ResponseInfo) String() string {

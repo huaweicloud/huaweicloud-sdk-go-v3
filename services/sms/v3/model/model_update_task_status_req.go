@@ -12,7 +12,7 @@ import (
 // UpdateTaskStatusReq This is a auto create Body Object
 type UpdateTaskStatusReq struct {
 
-	// 操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
+	// 操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
 	Operation UpdateTaskStatusReqOperation `json:"operation"`
 
 	// 操作参数
@@ -46,6 +46,7 @@ type UpdateTaskStatusReqOperationEnum struct {
 	CLONE_TEST           UpdateTaskStatusReqOperation
 	RESTART              UpdateTaskStatusReqOperation
 	SYNC_FAILED_ROLLBACK UpdateTaskStatusReqOperation
+	NETWORK_CHECK        UpdateTaskStatusReqOperation
 }
 
 func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
@@ -70,6 +71,9 @@ func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
 		},
 		SYNC_FAILED_ROLLBACK: UpdateTaskStatusReqOperation{
 			value: "sync_failed_rollback",
+		},
+		NETWORK_CHECK: UpdateTaskStatusReqOperation{
+			value: "network_check",
 		},
 	}
 }

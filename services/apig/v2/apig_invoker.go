@@ -617,6 +617,30 @@ func (i *DisassociateSignatureKeyV2Invoker) Invoke() (*model.DisassociateSignatu
 	}
 }
 
+type ExportApiDefinitionsAsyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportApiDefinitionsAsyncInvoker) Invoke() (*model.ExportApiDefinitionsAsyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportApiDefinitionsAsyncResponse), nil
+	}
+}
+
+type ImportApiDefinitionsAsyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportApiDefinitionsAsyncInvoker) Invoke() (*model.ImportApiDefinitionsAsyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportApiDefinitionsAsyncResponse), nil
+	}
+}
+
 type ImportMicroserviceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -881,6 +905,18 @@ func (i *ListInstanceConfigsV2Invoker) Invoke() (*model.ListInstanceConfigsV2Res
 	}
 }
 
+type ListInstanceFeaturesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceFeaturesInvoker) Invoke() (*model.ListInstanceFeaturesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceFeaturesResponse), nil
+	}
+}
+
 type ListInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1130,6 +1166,18 @@ func (i *ShowAppQuotaInvoker) Invoke() (*model.ShowAppQuotaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAppQuotaResponse), nil
+	}
+}
+
+type ShowAsyncTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAsyncTaskResultInvoker) Invoke() (*model.ShowAsyncTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAsyncTaskResultResponse), nil
 	}
 }
 
@@ -1466,6 +1514,18 @@ func (i *UpdateSignatureKeyV2Invoker) Invoke() (*model.UpdateSignatureKeyV2Respo
 		return nil, err
 	} else {
 		return result.(*model.UpdateSignatureKeyV2Response), nil
+	}
+}
+
+type UpdateSlDomainSettingV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSlDomainSettingV2Invoker) Invoke() (*model.UpdateSlDomainSettingV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSlDomainSettingV2Response), nil
 	}
 }
 

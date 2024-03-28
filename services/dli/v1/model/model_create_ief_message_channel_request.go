@@ -8,7 +8,7 @@ import (
 
 // CreateIefMessageChannelRequest Request Object
 type CreateIefMessageChannelRequest struct {
-	Body *CreateIefMessageChannelReq `json:"body,omitempty"`
+	Body *CreateIefMessageChannelRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateIefMessageChannelRequest) String() string {

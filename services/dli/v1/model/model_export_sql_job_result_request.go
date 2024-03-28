@@ -12,7 +12,7 @@ type ExportSqlJobResultRequest struct {
 	// 作业ID
 	JobId string `json:"job_id"`
 
-	Body *ExportSqlResultRequestBody `json:"body,omitempty"`
+	Body *ExportSqlJobResultRequestBody `json:"body,omitempty"`
 }
 
 func (o ExportSqlJobResultRequest) String() string {

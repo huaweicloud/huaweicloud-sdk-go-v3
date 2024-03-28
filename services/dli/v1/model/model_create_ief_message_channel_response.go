@@ -9,10 +9,10 @@ import (
 // CreateIefMessageChannelResponse Response Object
 type CreateIefMessageChannelResponse struct {
 
-	// 请求是否成功
+	// 执行请求是否成功。“true”表示请求执行成功。
 	IsSuccess *bool `json:"is_success,omitempty"`
 
-	// 返回信息
+	// 系统提示信息，执行成功时，信息可能为空。
 	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

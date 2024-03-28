@@ -16,8 +16,8 @@ type ListCatalogsResponse struct {
 	TotalCount *int64 `json:"total_count,omitempty"`
 
 	// 项目下所有catalog信息
-	Catalogs       *[]CatalogEntity `json:"catalogs,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Catalogs       *[]Catalog `json:"catalogs,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ListCatalogsResponse) String() string {

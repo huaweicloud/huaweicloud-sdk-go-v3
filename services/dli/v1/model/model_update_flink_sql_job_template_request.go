@@ -10,7 +10,7 @@ import (
 type UpdateFlinkSqlJobTemplateRequest struct {
 	TemplateId int64 `json:"template_id"`
 
-	Body *UpdateFlinkTemplateRequestBody `json:"body,omitempty"`
+	Body *UpdateFlinkSqlJobTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateFlinkSqlJobTemplateRequest) String() string {

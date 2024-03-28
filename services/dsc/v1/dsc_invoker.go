@@ -233,66 +233,6 @@ func (i *ListDbMaskTaskInvoker) Invoke() (*model.ListDbMaskTaskResponse, error) 
 	}
 }
 
-type ListRelationBucketsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRelationBucketsInvoker) Invoke() (*model.ListRelationBucketsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRelationBucketsResponse), nil
-	}
-}
-
-type ListRelationColumnInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRelationColumnInvoker) Invoke() (*model.ListRelationColumnResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRelationColumnResponse), nil
-	}
-}
-
-type ListRelationDbInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRelationDbInvoker) Invoke() (*model.ListRelationDbResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRelationDbResponse), nil
-	}
-}
-
-type ListRelationFileInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRelationFileInvoker) Invoke() (*model.ListRelationFileResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRelationFileResponse), nil
-	}
-}
-
-type ListRelationTableInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRelationTableInvoker) Invoke() (*model.ListRelationTableResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRelationTableResponse), nil
-	}
-}
-
 type ListRuleGroupsInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -1,0 +1,108 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
+	"strings"
+)
+
+type CreateCentralNetworkErRouteTableAttachment struct {
+
+	// 实例名字。
+	Name string `json:"name"`
+
+	// 实例描述。不支持 <>。
+	Description *string `json:"description,omitempty"`
+
+	// 资源ID标识符。
+	EnterpriseRouterId string `json:"enterprise_router_id"`
+
+	// 实例所属项目ID。
+	EnterpriseRouterProjectId string `json:"enterprise_router_project_id"`
+
+	// RegionID。
+	EnterpriseRouterRegionId string `json:"enterprise_router_region_id"`
+
+	// 资源ID标识符。
+	AttachmentId *string `json:"attachment_id,omitempty"`
+
+	// 资源ID标识符。
+	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
+
+	// 实例所属项目ID。
+	AttachedErTableProjectId string `json:"attached_er_table_project_id"`
+
+	// RegionID。
+	AttachedErTableRegionId string `json:"attached_er_table_region_id"`
+
+	// 资源ID标识符。
+	AttachedErId string `json:"attached_er_id"`
+
+	// 资源ID标识符。
+	AttachedErTableId string `json:"attached_er_table_id"`
+
+	// 资源ID标识符。
+	CentralNetworkPlaneId string `json:"central_network_plane_id"`
+
+	// - HWCloud (华为云) - Ireland (爱尔兰)
+	HostedCloud CreateCentralNetworkErRouteTableAttachmentHostedCloud `json:"hosted_cloud"`
+}
+
+func (o CreateCentralNetworkErRouteTableAttachment) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "CreateCentralNetworkErRouteTableAttachment struct{}"
+	}
+
+	return strings.Join([]string{"CreateCentralNetworkErRouteTableAttachment", string(data)}, " ")
+}
+
+type CreateCentralNetworkErRouteTableAttachmentHostedCloud struct {
+	value string
+}
+
+type CreateCentralNetworkErRouteTableAttachmentHostedCloudEnum struct {
+	HW_CLOUD CreateCentralNetworkErRouteTableAttachmentHostedCloud
+	IRELAND  CreateCentralNetworkErRouteTableAttachmentHostedCloud
+}
+
+func GetCreateCentralNetworkErRouteTableAttachmentHostedCloudEnum() CreateCentralNetworkErRouteTableAttachmentHostedCloudEnum {
+	return CreateCentralNetworkErRouteTableAttachmentHostedCloudEnum{
+		HW_CLOUD: CreateCentralNetworkErRouteTableAttachmentHostedCloud{
+			value: "HWCloud",
+		},
+		IRELAND: CreateCentralNetworkErRouteTableAttachmentHostedCloud{
+			value: "Ireland",
+		},
+	}
+}
+
+func (c CreateCentralNetworkErRouteTableAttachmentHostedCloud) Value() string {
+	return c.value
+}
+
+func (c CreateCentralNetworkErRouteTableAttachmentHostedCloud) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateCentralNetworkErRouteTableAttachmentHostedCloud) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}

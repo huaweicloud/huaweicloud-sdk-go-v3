@@ -27,7 +27,7 @@ type ConsumerGroup struct {
 	RetryMaxTime *int32 `json:"retry_max_time,omitempty"`
 
 	// 创建时间戳。
-	CreatedAt *string `json:"createdAt,omitempty"`
+	CreatedAt *int64 `json:"createdAt,omitempty"`
 
 	// 权限集。
 	Permissions *[]string `json:"permissions,omitempty"`

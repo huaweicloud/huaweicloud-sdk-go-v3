@@ -10,16 +10,16 @@ import (
 )
 
 type ScriptInfo struct {
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 脚本类型： - FlinkSQL - DLISQL - SparkSQL - HiveSQL - DWSSQL - RDSSQL - Shell - PRESTO - ClickHouseSQL - HetuEngineSQL - PYTHON - ImpalaSQL - SparkPython
-	Type *ScriptInfoType `json:"type,omitempty"`
+	Type ScriptInfoType `json:"type"`
 
 	// 脚本关联的目录。通过DataArts Studio管理控制台 > 数据开发，左侧列表选择“数据开发 > 脚本开发”。在脚本的目录树上，可以查看到当前已经创建的目录，默认在根目录/。
 	Directory *string `json:"directory,omitempty"`
 
 	// 脚本内容。最大支持4M。
-	Content *string `json:"content,omitempty"`
+	Content string `json:"content"`
 
 	// 脚本关联的连接名称。当type参数值为DLISQL、SparkSQL、HiveSQL、DWSSQL、Shell、PRESTO、ClickHouseSQL、HetuEngineSQL、RDSSQL、ImpalaSQL、PYTHON、SparkPython其中之一时，这个参数是必选的。用户可以通过查询连接列表（待下线）接口获取当前系统中已经存在的连接。默认值为空。
 	ConnectionName *string `json:"connectionName,omitempty"`

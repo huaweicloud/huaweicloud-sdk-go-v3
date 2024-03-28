@@ -19,7 +19,7 @@ type CreateDatabaseRequestBody struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 标签
-	Tags *[]TmsTagEntity `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 }
 
 func (o CreateDatabaseRequestBody) String() string {

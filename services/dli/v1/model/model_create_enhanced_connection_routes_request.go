@@ -12,7 +12,7 @@ type CreateEnhancedConnectionRoutesRequest struct {
 	// 连接ID，用于标识跨源连接的UUID。
 	ConnectionId string `json:"connection_id"`
 
-	Body *CreateRouteRequestBody `json:"body,omitempty"`
+	Body *CreateEnhancedConnectionRoutesRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateEnhancedConnectionRoutesRequest) String() string {

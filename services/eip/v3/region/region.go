@@ -45,7 +45,7 @@ var (
 	TR_WEST_1 = region.NewRegion("tr-west-1",
 		"https://vpc.tr-west-1.myhuaweicloud.com")
 	EU_WEST_101 = region.NewRegion("eu-west-101",
-		"https://vpc.eu-west-101.myhuaweicloud.eu")
+		"https://vpc.eu-west-101.myhuaweicloud.com")
 	CN_SOUTH_4 = region.NewRegion("cn-south-4",
 		"https://vpc.cn-south-4.myhuaweicloud.com")
 	ME_EAST_1 = region.NewRegion("me-east-1",

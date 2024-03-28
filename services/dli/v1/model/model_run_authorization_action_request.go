@@ -8,7 +8,7 @@ import (
 
 // RunAuthorizationActionRequest Request Object
 type RunAuthorizationActionRequest struct {
-	Body *AuthorizeResourceRequestBody `json:"body,omitempty"`
+	Body *RunAuthorizationActionRequestBody `json:"body,omitempty"`
 }
 
 func (o RunAuthorizationActionRequest) String() string {

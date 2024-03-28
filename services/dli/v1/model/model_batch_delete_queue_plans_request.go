@@ -12,7 +12,7 @@ type BatchDeleteQueuePlansRequest struct {
 	// 待删除定时扩缩计划的队列名称
 	QueueName string `json:"queue_name"`
 
-	Body *QueuePlanIds `json:"body,omitempty"`
+	Body *BatchDeleteQueuePlansRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteQueuePlansRequest) String() string {

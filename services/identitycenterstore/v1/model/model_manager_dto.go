@@ -7,6 +7,8 @@ import (
 )
 
 type ManagerDto struct {
+
+	// 经理
 	Value *string `json:"value,omitempty"`
 }
 

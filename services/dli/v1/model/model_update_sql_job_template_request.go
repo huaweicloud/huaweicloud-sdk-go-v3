@@ -10,7 +10,7 @@ import (
 type UpdateSqlJobTemplateRequest struct {
 	SqlId string `json:"sql_id"`
 
-	Body *UpdateSqlTemplatesRequestBody `json:"body,omitempty"`
+	Body *UpdateSqlJobTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSqlJobTemplateRequest) String() string {

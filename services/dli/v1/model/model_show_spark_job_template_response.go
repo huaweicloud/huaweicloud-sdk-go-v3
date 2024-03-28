@@ -18,7 +18,7 @@ type ShowSparkJobTemplateResponse struct {
 	// 模板名字
 	Name *string `json:"name,omitempty"`
 
-	Body *BatchJobInfo `json:"body,omitempty"`
+	Body *SparkJobTemplateDetail `json:"body,omitempty"`
 
 	// 组名
 	Group *string `json:"group,omitempty"`

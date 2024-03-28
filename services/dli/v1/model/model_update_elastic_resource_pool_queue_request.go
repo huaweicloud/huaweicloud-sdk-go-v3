@@ -15,7 +15,7 @@ type UpdateElasticResourcePoolQueueRequest struct {
 	// 队列名称
 	QueueName string `json:"queue_name"`
 
-	Body *UpdateElasticResourcePoolQueueScalingPolicyInfo `json:"body,omitempty"`
+	Body *UpdateElasticResourcePoolQueueRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateElasticResourcePoolQueueRequest) String() string {

@@ -23,9 +23,6 @@ type ImageMediaTaggingReq struct {
 
 	// 最多返回的tag数（取值范围：1~150），默认值： 50
 	Limit *int32 `json:"limit,omitempty"`
-
-	// \"true\"：使用系统默认标签体系。  \"false\"：使用用户自定义标签体系（用户需预先调用接口进行自定义标签体系的构建）。  默认值为\"true\"。
-	UseDefaultTags *string `json:"use_default_tags,omitempty"`
 }
 
 func (o ImageMediaTaggingReq) String() string {

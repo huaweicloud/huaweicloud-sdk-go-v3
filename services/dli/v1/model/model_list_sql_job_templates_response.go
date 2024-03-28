@@ -18,8 +18,8 @@ type ListSqlJobTemplatesResponse struct {
 	// SQL模板总数。
 	SqlCount *int32 `json:"sql_count,omitempty"`
 
-	Sqls           *[]SqlsResp `json:"sqls,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Sqls           *[]SqlJobTemplate `json:"sqls,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListSqlJobTemplatesResponse) String() string {

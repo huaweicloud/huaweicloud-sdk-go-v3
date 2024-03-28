@@ -19,8 +19,8 @@ type ListSparkJobTemplatesResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 模板信息列表。
-	Templates      *[]JobTemplateInfo `json:"templates,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Templates      *[]SparkJobTemplate `json:"templates,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListSparkJobTemplatesResponse) String() string {

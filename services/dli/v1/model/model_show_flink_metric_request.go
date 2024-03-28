@@ -8,7 +8,7 @@ import (
 
 // ShowFlinkMetricRequest Request Object
 type ShowFlinkMetricRequest struct {
-	Body *ShowJobMonitorInfoReq `json:"body,omitempty"`
+	Body *ShowFlinkMetricRequestBody `json:"body,omitempty"`
 }
 
 func (o ShowFlinkMetricRequest) String() string {

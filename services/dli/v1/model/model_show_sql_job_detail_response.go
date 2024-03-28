@@ -60,12 +60,12 @@ type ShowSqlJobDetailResponse struct {
 	// 导入作业时，指定表的时间格式
 	TimestampFormat *string `json:"timestamp_format,omitempty"`
 
-	//   导出作业时，用户指定的压缩方式。
+	// 导出作业时，用户指定的压缩方式。
 	Compress *string `json:"compress,omitempty"`
 
 	// 作业标签
-	Tags           *[]TmsTagEntity `json:"tags,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Tags           *[]Tag `json:"tags,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowSqlJobDetailResponse) String() string {

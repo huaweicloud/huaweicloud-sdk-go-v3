@@ -19,8 +19,8 @@ type ListQueueUsersResponse struct {
 	QueueName *string `json:"queue_name,omitempty"`
 
 	// 有权限使用该队列的用户及其对应的权限数组。
-	Privileges     *[]PrivilegesInfo `json:"privileges,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Privileges     *[]QueueUserPrivilege `json:"privileges,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ListQueueUsersResponse) String() string {

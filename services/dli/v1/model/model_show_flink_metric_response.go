@@ -15,8 +15,8 @@ type ShowFlinkMetricResponse struct {
 	// 消息内容。
 	Message *string `json:"message,omitempty"`
 
-	Metrics        *ShowJobMonitorInfoRespPayload `json:"metrics,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+	Metrics        *FlinkMetric `json:"metrics,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowFlinkMetricResponse) String() string {

@@ -12,7 +12,7 @@ type CreateQueuePlanRequest struct {
 	// 需要设置定时扩缩计划的队列名称，名称只能包含数字、英文字母和下划线，但不能是纯数字，且不能以下划线开头。
 	QueueName string `json:"queue_name"`
 
-	Body *SetQueuePlanReq `json:"body,omitempty"`
+	Body *QueuePlanRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateQueuePlanRequest) String() string {

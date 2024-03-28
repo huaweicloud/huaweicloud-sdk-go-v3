@@ -13,8 +13,11 @@ type ListGcbResourceByTagResponse struct {
 	Resources *[]TmsResource `json:"resources,omitempty"`
 
 	// 总记录数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	TotalCount *int32 `json:"total_count,omitempty"`
+
+	// 请求ID。
+	RequestId      *string `json:"request_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListGcbResourceByTagResponse) String() string {

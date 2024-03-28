@@ -113,6 +113,18 @@ func (i *ShowApplicationsInvoker) Invoke() (*model.ShowApplicationsResponse, err
 	}
 }
 
+type UpdateApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateApplicationInvoker) Invoke() (*model.UpdateApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateApplicationResponse), nil
+	}
+}
+
 type CreateAsyncCommandInvoker struct {
 	*invoker.BaseInvoker
 }

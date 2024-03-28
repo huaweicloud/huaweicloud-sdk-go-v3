@@ -155,6 +155,9 @@ type MvsInvoiceResult struct {
 	// 二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
 	UsedVehicleMarketPhone *string `json:"used_vehicle_market_phone,omitempty"`
 
+	// 二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+	ReverseIssue *bool `json:"reverse_issue,omitempty"`
+
 	// 备注
 	Remark *string `json:"remark,omitempty"`
 

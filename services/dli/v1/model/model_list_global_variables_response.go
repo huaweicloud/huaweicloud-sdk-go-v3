@@ -16,7 +16,7 @@ type ListGlobalVariablesResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 全局变量
-	GlobalVars *[]ListGlobalValue `json:"global_vars,omitempty"`
+	GlobalVars *[]GlobalVariable `json:"global_vars,omitempty"`
 
 	// 全局变量总数
 	Count          *int32 `json:"count,omitempty"`

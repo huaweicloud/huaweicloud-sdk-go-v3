@@ -16,8 +16,8 @@ type ImportFlinkJobsResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 作业导入结果。
-	JobMapping     *[]JobMapInfo `json:"job_mapping,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	JobMapping     *[]JobMap `json:"job_mapping,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ImportFlinkJobsResponse) String() string {

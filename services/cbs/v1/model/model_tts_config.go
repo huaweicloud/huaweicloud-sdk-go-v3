@@ -13,7 +13,7 @@ type TtsConfig struct {
 	Property string `json:"property"`
 
 	// 用户设置音速
-	Speed int32 `json:"speed"`
+	Speed float32 `json:"speed"`
 
 	// 用于设置音量
 	Volume int32 `json:"volume"`

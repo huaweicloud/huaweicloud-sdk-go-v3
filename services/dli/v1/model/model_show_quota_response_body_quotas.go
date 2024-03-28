@@ -9,7 +9,7 @@ import (
 type ShowQuotaResponseBodyQuotas struct {
 	ProjectId *string `json:"projectId,omitempty"`
 
-	Resources *[]ShowQuotaPropertiesBody `json:"resources,omitempty"`
+	Resources *[]QuotaInfo `json:"resources,omitempty"`
 }
 
 func (o ShowQuotaResponseBodyQuotas) String() string {

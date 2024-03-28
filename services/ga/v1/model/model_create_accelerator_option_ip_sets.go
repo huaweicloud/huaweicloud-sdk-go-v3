@@ -11,7 +11,7 @@ import (
 
 type CreateAcceleratorOptionIpSets struct {
 
-	// IP地址类型，取值：IPV4
+	// IP地址类型，取值：IPV4，IPV6
 	IpType CreateAcceleratorOptionIpSetsIpType `json:"ip_type"`
 
 	Area *Area `json:"area"`
@@ -32,12 +32,16 @@ type CreateAcceleratorOptionIpSetsIpType struct {
 
 type CreateAcceleratorOptionIpSetsIpTypeEnum struct {
 	IPV4 CreateAcceleratorOptionIpSetsIpType
+	IPV6 CreateAcceleratorOptionIpSetsIpType
 }
 
 func GetCreateAcceleratorOptionIpSetsIpTypeEnum() CreateAcceleratorOptionIpSetsIpTypeEnum {
 	return CreateAcceleratorOptionIpSetsIpTypeEnum{
 		IPV4: CreateAcceleratorOptionIpSetsIpType{
 			value: "IPV4",
+		},
+		IPV6: CreateAcceleratorOptionIpSetsIpType{
+			value: "IPV6",
 		},
 	}
 }

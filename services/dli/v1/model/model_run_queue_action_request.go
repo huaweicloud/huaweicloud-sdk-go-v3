@@ -10,7 +10,7 @@ import (
 type RunQueueActionRequest struct {
 	QueueName string `json:"queue_name"`
 
-	Body *RunQueueActionReq `json:"body,omitempty"`
+	Body *RunQueueActionRequestBody `json:"body,omitempty"`
 }
 
 func (o RunQueueActionRequest) String() string {

@@ -79,7 +79,7 @@ type CreateFlinkSqlJobRequestBody struct {
 	TmSlotNum *int32 `json:"tm_slot_num,omitempty"`
 
 	// 标签
-	Tags *[]TmsTagEntity `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 异常重启是否从checkpoint恢复。
 	ResumeCheckpoint *bool `json:"resume_checkpoint,omitempty"`

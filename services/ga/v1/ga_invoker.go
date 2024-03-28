@@ -425,6 +425,18 @@ func (i *ListRegionsInvoker) Invoke() (*model.ListRegionsResponse, error) {
 	}
 }
 
+type CountResourcesByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountResourcesByTagInvoker) Invoke() (*model.CountResourcesByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountResourcesByTagResponse), nil
+	}
+}
+
 type CreateTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,6 +458,30 @@ func (i *DeleteTagsInvoker) Invoke() (*model.DeleteTagsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteTagsResponse), nil
+	}
+}
+
+type ListResourcesByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesByTagInvoker) Invoke() (*model.ListResourcesByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourcesByTagResponse), nil
+	}
+}
+
+type ListTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTagsResponse), nil
 	}
 }
 

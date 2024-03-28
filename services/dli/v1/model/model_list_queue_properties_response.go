@@ -12,8 +12,8 @@ type ListQueuePropertiesResponse struct {
 
 	Message *string `json:"message,omitempty"`
 
-	Properties     *[]ListQueuePropertyRespProperties `json:"properties,omitempty"`
-	HttpStatusCode int                                `json:"-"`
+	Properties     *[]Property `json:"properties,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ListQueuePropertiesResponse) String() string {

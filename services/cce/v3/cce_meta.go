@@ -465,6 +465,10 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 		WithJsonTag("delete_sfs30").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LtsReclaimPolicy").
+		WithJsonTag("lts_reclaim_policy").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tobedeleted").
 		WithJsonTag("tobedeleted").
 		WithLocationType(def.Query))
@@ -1123,6 +1127,10 @@ func GenReqDefForShowClusterConfigurationDetails() *def.HttpRequestDef {
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1240,6 +1248,10 @@ func GenReqDefForShowNodePoolConfigurationDetails() *def.HttpRequestDef {
 		WithName("NodepoolId").
 		WithJsonTag("nodepool_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

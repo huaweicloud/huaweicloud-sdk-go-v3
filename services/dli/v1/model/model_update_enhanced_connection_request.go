@@ -12,7 +12,7 @@ type UpdateEnhancedConnectionRequest struct {
 	// 连接ID，用于标识跨源连接的UUID。
 	ConnectionId string `json:"connection_id"`
 
-	Body *UpdateHostMassageReq `json:"body,omitempty"`
+	Body *UpdateEnhancedConnectionRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateEnhancedConnectionRequest) String() string {

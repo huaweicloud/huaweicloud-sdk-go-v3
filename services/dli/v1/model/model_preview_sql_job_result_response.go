@@ -31,7 +31,7 @@ type PreviewSqlJobResultResponse struct {
 	InputSize *int64 `json:"input_size,omitempty"`
 
 	// 作业结果列名称和类型。
-	Schema *[]interface{} `json:"schema,omitempty"`
+	Schema *[]map[string]string `json:"schema,omitempty"`
 
 	// 作业结果集。
 	Rows           *[][]interface{} `json:"rows,omitempty"`

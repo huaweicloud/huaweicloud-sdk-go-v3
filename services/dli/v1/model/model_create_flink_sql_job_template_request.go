@@ -8,7 +8,7 @@ import (
 
 // CreateFlinkSqlJobTemplateRequest Request Object
 type CreateFlinkSqlJobTemplateRequest struct {
-	Body *CreateFlinkTemplateRequestBody `json:"body,omitempty"`
+	Body *CreateFlinkSqlJobTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateFlinkSqlJobTemplateRequest) String() string {

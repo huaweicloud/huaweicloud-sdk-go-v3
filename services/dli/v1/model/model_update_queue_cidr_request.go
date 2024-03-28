@@ -12,7 +12,7 @@ type UpdateQueueCidrRequest struct {
 	// 指定删除的队列名称。
 	QueueName string `json:"queue_name"`
 
-	Body *UpdateQueueCidrReq `json:"body,omitempty"`
+	Body *UpdateQueueCidrRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateQueueCidrRequest) String() string {

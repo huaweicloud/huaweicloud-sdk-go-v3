@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// State
 type State struct {
 	Phase string `json:"phase"`
 

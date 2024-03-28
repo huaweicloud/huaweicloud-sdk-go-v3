@@ -15,8 +15,8 @@ type ShowFlinkJobExecutionGraphResponse struct {
 	// 消息内容。
 	Message *string `json:"message,omitempty"`
 
-	ExecuteGraph   *StreamGraphInfo `json:"execute_graph,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	ExecuteGraph   *FlinkJobExecutionGraph `json:"execute_graph,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ShowFlinkJobExecutionGraphResponse) String() string {

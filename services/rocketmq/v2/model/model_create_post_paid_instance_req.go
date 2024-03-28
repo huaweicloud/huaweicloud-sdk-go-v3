@@ -15,13 +15,13 @@ type CreatePostPaidInstanceReq struct {
 	// 实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
 	Name string `json:"name"`
 
-	// 实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+	// 实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
 	Description *string `json:"description,omitempty"`
 
 	// 消息引擎。取值填写为：reliability。
 	Engine CreatePostPaidInstanceReqEngine `json:"engine"`
 
-	// 消息引擎的版本。取值填写为：4.8.0。
+	// 消息引擎的版本。取值填写为：[4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[5.x](tag:hcs)。
 	EngineVersion CreatePostPaidInstanceReqEngineVersion `json:"engine_version"`
 
 	// 存储空间。
@@ -39,7 +39,7 @@ type CreatePostPaidInstanceReq struct {
 	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 该参数不能为空数组或者数组的值为空， 请注意查看该可用区是否有资源。  创建RocketMQ实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
-	// RocketMQ实例规格。   - c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000   - c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000   - c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000   - c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000
+	// RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。](tag:hcs)   - [c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs)   - [c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs)   - [c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs)   - [c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs)
 	ProductId CreatePostPaidInstanceReqProductId `json:"product_id"`
 
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
@@ -124,13 +124,13 @@ type CreatePostPaidInstanceReqEngineVersion struct {
 }
 
 type CreatePostPaidInstanceReqEngineVersionEnum struct {
-	E_4_8_0 CreatePostPaidInstanceReqEngineVersion
+	E_4_8_0_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_5_X_TAGHCS CreatePostPaidInstanceReqEngineVersion
 }
 
 func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEngineVersionEnum {
 	return CreatePostPaidInstanceReqEngineVersionEnum{
-		E_4_8_0: CreatePostPaidInstanceReqEngineVersion{
-			value: "4.8.0",
+		E_4_8_0_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_5_X_TAGHCS: CreatePostPaidInstanceReqEngineVersion{
+			value: "[4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[5.x](tag:hcs)",
 		},
 	}
 }
@@ -167,25 +167,41 @@ type CreatePostPaidInstanceReqProductId struct {
 }
 
 type CreatePostPaidInstanceReqProductIdEnum struct {
-	C6_4U8G_CLUSTER   CreatePostPaidInstanceReqProductId
-	C6_8U16G_CLUSTER  CreatePostPaidInstanceReqProductId
-	C6_12U24G_CLUSTER CreatePostPaidInstanceReqProductId
-	C6_16U32G_CLUSTER CreatePostPaidInstanceReqProductId
+	C6_4U8G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_4U16G_CLUSTER_X86_TAGHCS     CreatePostPaidInstanceReqProductId
+	C6_8U16G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_8U32G_CLUSTER_X86_TAGHCS    CreatePostPaidInstanceReqProductId
+	C6_12U24G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_16U64G_CLUSTER_X86_TAGHCS  CreatePostPaidInstanceReqProductId
+	C6_16U32G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_32U128G_CLUSTER_X86_TAGHCS CreatePostPaidInstanceReqProductId
+	C6_4U16G_CLUSTER_ARM_TAGHCS                                                                     CreatePostPaidInstanceReqProductId
+	C6_8U32G_CLUSTER_ARM_TAGHCS                                                                     CreatePostPaidInstanceReqProductId
+	C6_16U64G_CLUSTER_ARM_TAGHCS                                                                    CreatePostPaidInstanceReqProductId
+	C6_32U128G_CLUSTER_ARM_TAGHCS                                                                   CreatePostPaidInstanceReqProductId
 }
 
 func GetCreatePostPaidInstanceReqProductIdEnum() CreatePostPaidInstanceReqProductIdEnum {
 	return CreatePostPaidInstanceReqProductIdEnum{
-		C6_4U8G_CLUSTER: CreatePostPaidInstanceReqProductId{
-			value: "c6.4u8g.cluster",
+		C6_4U8G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_4U16G_CLUSTER_X86_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.4u8g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.4u16g.cluster.x86](tag:hcs)",
 		},
-		C6_8U16G_CLUSTER: CreatePostPaidInstanceReqProductId{
-			value: "c6.8u16g.cluster",
+		C6_8U16G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_8U32G_CLUSTER_X86_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.8u16g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.8u32g.cluster.x86](tag:hcs)",
 		},
-		C6_12U24G_CLUSTER: CreatePostPaidInstanceReqProductId{
-			value: "c6.12u24g.cluster",
+		C6_12U24G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_16U64G_CLUSTER_X86_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.12u24g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.16u64g.cluster.x86](tag:hcs)",
 		},
-		C6_16U32G_CLUSTER: CreatePostPaidInstanceReqProductId{
-			value: "c6.16u32g.cluster",
+		C6_16U32G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMHK_TM_C6_32U128G_CLUSTER_X86_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.16u32g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)[c6.32u128g.cluster.x86](tag:hcs)",
+		},
+		C6_4U16G_CLUSTER_ARM_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.4u16g.cluster.arm](tag:hcs)",
+		},
+		C6_8U32G_CLUSTER_ARM_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.8u32g.cluster.arm](tag:hcs)",
+		},
+		C6_16U64G_CLUSTER_ARM_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.16u64g.cluster.arm](tag:hcs)",
+		},
+		C6_32U128G_CLUSTER_ARM_TAGHCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.32u128g.cluster.arm](tag:hcs)",
 		},
 	}
 }

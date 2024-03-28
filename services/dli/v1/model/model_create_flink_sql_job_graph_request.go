@@ -10,7 +10,7 @@ import (
 type CreateFlinkSqlJobGraphRequest struct {
 	JobId string `json:"job_id"`
 
-	Body *GenStreamGraphReq `json:"body,omitempty"`
+	Body *CreateFlinkSqlJobGraphRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateFlinkSqlJobGraphRequest) String() string {

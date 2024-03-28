@@ -19,8 +19,8 @@ type ListAuthInfoResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 认证信息列表
-	AuthInfos      *[]AuthInfos `json:"auth_infos,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	AuthInfos      *[]AuthInfo `json:"auth_infos,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ListAuthInfoResponse) String() string {

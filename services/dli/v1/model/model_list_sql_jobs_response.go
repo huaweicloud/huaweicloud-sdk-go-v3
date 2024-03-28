@@ -19,8 +19,8 @@ type ListSqlJobsResponse struct {
 	JobCount *int32 `json:"job_count,omitempty"`
 
 	// 作业信息。
-	Jobs           *[]ListJobsJobs `json:"jobs,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Jobs           *[]SqlJob `json:"jobs,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListSqlJobsResponse) String() string {

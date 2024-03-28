@@ -28,8 +28,8 @@ type ShowSqlJobProgressResponse struct {
 	Progress *float64 `json:"progress,omitempty"`
 
 	// 正在运行作业的子作业的详细信息，一个作业可能包含多个子作业。
-	SubJobs        *[]SubJobDatas `json:"sub_jobs,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	SubJobs        *[]SubJob `json:"sub_jobs,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowSqlJobProgressResponse) String() string {

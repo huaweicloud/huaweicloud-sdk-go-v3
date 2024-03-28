@@ -16,6 +16,9 @@ type ThailandLicensePlateItem struct {
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。注：置信度由算法给出，不直接等价于对应字段的准确率。
 	Confidence *float32 `json:"confidence,omitempty"`
+
+	// 车牌所属府
+	Province *string `json:"province,omitempty"`
 }
 
 func (o ThailandLicensePlateItem) String() string {

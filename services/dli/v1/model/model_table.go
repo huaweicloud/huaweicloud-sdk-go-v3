@@ -37,7 +37,7 @@ type Table struct {
 	TableType string `json:"table_type"`
 
 	// 分区字段。只有OBS分区表有该参数，其他表没有该参数。
-	PartitionColumns *string `json:"partition_columns,omitempty"`
+	PartitionColumns *[]string `json:"partition_columns,omitempty"`
 
 	// 分页大小，最小为1，最大为100。
 	PageSize *int32 `json:"page-size,omitempty"`

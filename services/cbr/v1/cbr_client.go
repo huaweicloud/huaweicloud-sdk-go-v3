@@ -237,6 +237,27 @@ func (c *CbrClient) CreateCheckpointInvoker(request *model.CreateCheckpointReque
 	return &CreateCheckpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateOrganizationPolicy 创建组织策略
+//
+// 创建组织策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) CreateOrganizationPolicy(request *model.CreateOrganizationPolicyRequest) (*model.CreateOrganizationPolicyResponse, error) {
+	requestDef := GenReqDefForCreateOrganizationPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOrganizationPolicyResponse), nil
+	}
+}
+
+// CreateOrganizationPolicyInvoker 创建组织策略
+func (c *CbrClient) CreateOrganizationPolicyInvoker(request *model.CreateOrganizationPolicyRequest) *CreateOrganizationPolicyInvoker {
+	requestDef := GenReqDefForCreateOrganizationPolicy()
+	return &CreateOrganizationPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePolicy 创建策略
 //
 // 创建策略，策略分为备份策略和复制策略。
@@ -362,6 +383,27 @@ func (c *CbrClient) DeleteMember(request *model.DeleteMemberRequest) (*model.Del
 func (c *CbrClient) DeleteMemberInvoker(request *model.DeleteMemberRequest) *DeleteMemberInvoker {
 	requestDef := GenReqDefForDeleteMember()
 	return &DeleteMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOrganizationPolicy 删除组织策略
+//
+// 删除组织策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) DeleteOrganizationPolicy(request *model.DeleteOrganizationPolicyRequest) (*model.DeleteOrganizationPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteOrganizationPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOrganizationPolicyResponse), nil
+	}
+}
+
+// DeleteOrganizationPolicyInvoker 删除组织策略
+func (c *CbrClient) DeleteOrganizationPolicyInvoker(request *model.DeleteOrganizationPolicyRequest) *DeleteOrganizationPolicyInvoker {
+	requestDef := GenReqDefForDeleteOrganizationPolicy()
+	return &DeleteOrganizationPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePolicy 删除策略
@@ -593,6 +635,48 @@ func (c *CbrClient) ListOpLogs(request *model.ListOpLogsRequest) (*model.ListOpL
 func (c *CbrClient) ListOpLogsInvoker(request *model.ListOpLogsRequest) *ListOpLogsInvoker {
 	requestDef := GenReqDefForListOpLogs()
 	return &ListOpLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOrganizationPolicies 查询组织策略列表
+//
+// 查询组织策略列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListOrganizationPolicies(request *model.ListOrganizationPoliciesRequest) (*model.ListOrganizationPoliciesResponse, error) {
+	requestDef := GenReqDefForListOrganizationPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOrganizationPoliciesResponse), nil
+	}
+}
+
+// ListOrganizationPoliciesInvoker 查询组织策略列表
+func (c *CbrClient) ListOrganizationPoliciesInvoker(request *model.ListOrganizationPoliciesRequest) *ListOrganizationPoliciesInvoker {
+	requestDef := GenReqDefForListOrganizationPolicies()
+	return &ListOrganizationPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOrganizationPolicyDetail 查询组织策略部署状态列表
+//
+// 查询组织策略每个账号下策略部署状态列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListOrganizationPolicyDetail(request *model.ListOrganizationPolicyDetailRequest) (*model.ListOrganizationPolicyDetailResponse, error) {
+	requestDef := GenReqDefForListOrganizationPolicyDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOrganizationPolicyDetailResponse), nil
+	}
+}
+
+// ListOrganizationPolicyDetailInvoker 查询组织策略部署状态列表
+func (c *CbrClient) ListOrganizationPolicyDetailInvoker(request *model.ListOrganizationPolicyDetailRequest) *ListOrganizationPolicyDetailInvoker {
+	requestDef := GenReqDefForListOrganizationPolicyDetail()
+	return &ListOrganizationPolicyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPolicies 查询策略列表
@@ -1015,6 +1099,27 @@ func (c *CbrClient) ShowOpLogInvoker(request *model.ShowOpLogRequest) *ShowOpLog
 	return &ShowOpLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowOrganizationPolicy 查询指定组织策略
+//
+// 查询指定组织策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowOrganizationPolicy(request *model.ShowOrganizationPolicyRequest) (*model.ShowOrganizationPolicyResponse, error) {
+	requestDef := GenReqDefForShowOrganizationPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOrganizationPolicyResponse), nil
+	}
+}
+
+// ShowOrganizationPolicyInvoker 查询指定组织策略
+func (c *CbrClient) ShowOrganizationPolicyInvoker(request *model.ShowOrganizationPolicyRequest) *ShowOrganizationPolicyInvoker {
+	requestDef := GenReqDefForShowOrganizationPolicy()
+	return &ShowOrganizationPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPolicy 查询单个策略
 //
 // 查询单个策略
@@ -1310,6 +1415,27 @@ func (c *CbrClient) UpdateOrder(request *model.UpdateOrderRequest) (*model.Updat
 func (c *CbrClient) UpdateOrderInvoker(request *model.UpdateOrderRequest) *UpdateOrderInvoker {
 	requestDef := GenReqDefForUpdateOrder()
 	return &UpdateOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOrganizationPolicy 更新组织策略
+//
+// 更新组织策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) UpdateOrganizationPolicy(request *model.UpdateOrganizationPolicyRequest) (*model.UpdateOrganizationPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateOrganizationPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOrganizationPolicyResponse), nil
+	}
+}
+
+// UpdateOrganizationPolicyInvoker 更新组织策略
+func (c *CbrClient) UpdateOrganizationPolicyInvoker(request *model.UpdateOrganizationPolicyRequest) *UpdateOrganizationPolicyInvoker {
+	requestDef := GenReqDefForUpdateOrganizationPolicy()
+	return &UpdateOrganizationPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePolicy 修改策略

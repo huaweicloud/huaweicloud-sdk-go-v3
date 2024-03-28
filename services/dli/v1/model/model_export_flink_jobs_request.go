@@ -8,7 +8,7 @@ import (
 
 // ExportFlinkJobsRequest Request Object
 type ExportFlinkJobsRequest struct {
-	Body *ExportFlinkJobRequestBody `json:"body,omitempty"`
+	Body *ExportFlinkJobsRequestBody `json:"body,omitempty"`
 }
 
 func (o ExportFlinkJobsRequest) String() string {

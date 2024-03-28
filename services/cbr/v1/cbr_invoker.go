@@ -125,6 +125,18 @@ func (i *CreateCheckpointInvoker) Invoke() (*model.CreateCheckpointResponse, err
 	}
 }
 
+type CreateOrganizationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrganizationPolicyInvoker) Invoke() (*model.CreateOrganizationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrganizationPolicyResponse), nil
+	}
+}
+
 type CreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +206,18 @@ func (i *DeleteMemberInvoker) Invoke() (*model.DeleteMemberResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteMemberResponse), nil
+	}
+}
+
+type DeleteOrganizationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOrganizationPolicyInvoker) Invoke() (*model.DeleteOrganizationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOrganizationPolicyResponse), nil
 	}
 }
 
@@ -326,6 +350,30 @@ func (i *ListOpLogsInvoker) Invoke() (*model.ListOpLogsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListOpLogsResponse), nil
+	}
+}
+
+type ListOrganizationPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationPoliciesInvoker) Invoke() (*model.ListOrganizationPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrganizationPoliciesResponse), nil
+	}
+}
+
+type ListOrganizationPolicyDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationPolicyDetailInvoker) Invoke() (*model.ListOrganizationPolicyDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrganizationPolicyDetailResponse), nil
 	}
 }
 
@@ -569,6 +617,18 @@ func (i *ShowOpLogInvoker) Invoke() (*model.ShowOpLogResponse, error) {
 	}
 }
 
+type ShowOrganizationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOrganizationPolicyInvoker) Invoke() (*model.ShowOrganizationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOrganizationPolicyResponse), nil
+	}
+}
+
 type ShowPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -734,6 +794,18 @@ func (i *UpdateOrderInvoker) Invoke() (*model.UpdateOrderResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateOrderResponse), nil
+	}
+}
+
+type UpdateOrganizationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOrganizationPolicyInvoker) Invoke() (*model.UpdateOrganizationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOrganizationPolicyResponse), nil
 	}
 }
 

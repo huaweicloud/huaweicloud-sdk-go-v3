@@ -25,10 +25,10 @@ type ShowEnhancedConnectionResponse struct {
 	Status *string `json:"status,omitempty"`
 
 	// 各个队列创建对等连接的信息。
-	AvailableQueueInfo *[]EnhancedConnectionResourceInfo `json:"available_queue_info,omitempty"`
+	AvailableQueueInfo *[]EnhancedConnectionResource `json:"available_queue_info,omitempty"`
 
 	// 各个弹性资源池创建对等连接的信息。
-	ElasticResourcePools *[]EnhancedConnectionResourceInfo `json:"elastic_resource_pools,omitempty"`
+	ElasticResourcePools *[]EnhancedConnectionResource `json:"elastic_resource_pools,omitempty"`
 
 	// 对应服务的虚拟私有云标识。
 	DestVpcId *string `json:"dest_vpc_id,omitempty"`
@@ -40,8 +40,8 @@ type ShowEnhancedConnectionResponse struct {
 	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 用户自定义主机信息。
-	Hosts          *[]EnhancedConnectionsHost `json:"hosts,omitempty"`
-	HttpStatusCode int                        `json:"-"`
+	Hosts          *[]EnhancedConnectionHost `json:"hosts,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ShowEnhancedConnectionResponse) String() string {

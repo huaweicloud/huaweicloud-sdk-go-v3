@@ -16,7 +16,7 @@ type ListEnhancedConnectionsResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 跨源连接信息列表。
-	Connections *[]ListEnhancedConnectionsDetail `json:"connections,omitempty"`
+	Connections *[]EnhancedConnection `json:"connections,omitempty"`
 
 	// 返回的跨源连接个数。
 	Count          *int32 `json:"count,omitempty"`

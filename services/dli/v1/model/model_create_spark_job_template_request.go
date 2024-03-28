@@ -8,7 +8,7 @@ import (
 
 // CreateSparkJobTemplateRequest Request Object
 type CreateSparkJobTemplateRequest struct {
-	Body *CreateJobTemplatesRequestBody `json:"body,omitempty"`
+	Body *CreateSparkJobTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSparkJobTemplateRequest) String() string {

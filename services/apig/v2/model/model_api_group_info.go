@@ -34,6 +34,9 @@ type ApiGroupInfo struct {
 	// 分组上绑定的独立域名列表
 	UrlDomains *[]UrlDomain `json:"url_domains,omitempty"`
 
+	// 调试域名是否可以访问，true表示可以访问，false表示禁止访问
+	SlDomainAccessEnabled *bool `json:"sl_domain_access_enabled,omitempty"`
+
 	// 系统默认分配的子域名列表
 	SlDomains *[]string `json:"sl_domains,omitempty"`
 

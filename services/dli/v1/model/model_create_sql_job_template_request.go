@@ -8,7 +8,7 @@ import (
 
 // CreateSqlJobTemplateRequest Request Object
 type CreateSqlJobTemplateRequest struct {
-	Body *CreateSqlTemplatesRequestBody `json:"body,omitempty"`
+	Body *CreateSqlJobTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSqlJobTemplateRequest) String() string {

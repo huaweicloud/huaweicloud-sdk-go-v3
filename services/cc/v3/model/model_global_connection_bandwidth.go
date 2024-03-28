@@ -44,11 +44,20 @@ type GlobalConnectionBandwidth struct {
 	// 功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
 	SlaLevel *GlobalConnectionBandwidthSlaLevel `json:"sla_level,omitempty"`
 
+	// 功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+	LocalArea *string `json:"local_area,omitempty"`
+
+	// 功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+	RemoteArea *string `json:"remote_area,omitempty"`
+
 	// 功能说明：本端接入点的编码。
 	LocalSiteCode *string `json:"local_site_code,omitempty"`
 
 	// 功能说明：远端接入点的编码。
 	RemoteSiteCode *string `json:"remote_site_code,omitempty"`
+
+	// 功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
+	AdminState *GlobalConnectionBandwidthAdminState `json:"admin_state,omitempty"`
 
 	// 功能说明: 全域互联带宽是否冻结。 取值范围：     true-冻结     false-非冻结
 	Frozen *bool `json:"frozen,omitempty"`
@@ -275,6 +284,53 @@ func (c GlobalConnectionBandwidthSlaLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GlobalConnectionBandwidthSlaLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type GlobalConnectionBandwidthAdminState struct {
+	value string
+}
+
+type GlobalConnectionBandwidthAdminStateEnum struct {
+	NORMAL  GlobalConnectionBandwidthAdminState
+	FREEZED GlobalConnectionBandwidthAdminState
+}
+
+func GetGlobalConnectionBandwidthAdminStateEnum() GlobalConnectionBandwidthAdminStateEnum {
+	return GlobalConnectionBandwidthAdminStateEnum{
+		NORMAL: GlobalConnectionBandwidthAdminState{
+			value: "NORMAL",
+		},
+		FREEZED: GlobalConnectionBandwidthAdminState{
+			value: "FREEZED",
+		},
+	}
+}
+
+func (c GlobalConnectionBandwidthAdminState) Value() string {
+	return c.value
+}
+
+func (c GlobalConnectionBandwidthAdminState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *GlobalConnectionBandwidthAdminState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

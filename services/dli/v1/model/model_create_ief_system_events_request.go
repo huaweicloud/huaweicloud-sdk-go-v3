@@ -8,7 +8,7 @@ import (
 
 // CreateIefSystemEventsRequest Request Object
 type CreateIefSystemEventsRequest struct {
-	Body *IefSystemEventsReq `json:"body,omitempty"`
+	Body *CreateIefSystemEventsRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateIefSystemEventsRequest) String() string {

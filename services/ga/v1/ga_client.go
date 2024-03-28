@@ -760,6 +760,27 @@ func (c *GaClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListRe
 	return &ListRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountResourcesByTag 通过标签查询资源实例数量
+//
+// 通过标签查询资源实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) CountResourcesByTag(request *model.CountResourcesByTagRequest) (*model.CountResourcesByTagResponse, error) {
+	requestDef := GenReqDefForCountResourcesByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountResourcesByTagResponse), nil
+	}
+}
+
+// CountResourcesByTagInvoker 通过标签查询资源实例数量
+func (c *GaClient) CountResourcesByTagInvoker(request *model.CountResourcesByTagRequest) *CountResourcesByTagInvoker {
+	requestDef := GenReqDefForCountResourcesByTag()
+	return &CountResourcesByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTags 创建资源标签
 //
 // 创建资源标签。
@@ -800,6 +821,48 @@ func (c *GaClient) DeleteTags(request *model.DeleteTagsRequest) (*model.DeleteTa
 func (c *GaClient) DeleteTagsInvoker(request *model.DeleteTagsRequest) *DeleteTagsInvoker {
 	requestDef := GenReqDefForDeleteTags()
 	return &DeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourcesByTag 通过标签查询资源实例列表
+//
+// 通过标签查询资源实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListResourcesByTag(request *model.ListResourcesByTagRequest) (*model.ListResourcesByTagResponse, error) {
+	requestDef := GenReqDefForListResourcesByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesByTagResponse), nil
+	}
+}
+
+// ListResourcesByTagInvoker 通过标签查询资源实例列表
+func (c *GaClient) ListResourcesByTagInvoker(request *model.ListResourcesByTagRequest) *ListResourcesByTagInvoker {
+	requestDef := GenReqDefForListResourcesByTag()
+	return &ListResourcesByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 查询标签列表
+//
+// 查询标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
+	requestDef := GenReqDefForListTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsResponse), nil
+	}
+}
+
+// ListTagsInvoker 查询标签列表
+func (c *GaClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResourceTags 查询特定资源标签

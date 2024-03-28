@@ -16,8 +16,8 @@ type ListQueuePlansResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 定时扩缩容信息
-	Plans          *[]QueuePlanEntity `json:"plans,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Plans          *[]QueuePlan `json:"plans,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListQueuePlansResponse) String() string {

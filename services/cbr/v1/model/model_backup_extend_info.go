@@ -17,9 +17,6 @@ type BackupExtendInfo struct {
 	// 是否系统盘备份
 	Bootable *bool `json:"bootable,omitempty"`
 
-	// 是否是增备
-	Incremental *bool `json:"incremental,omitempty"`
-
 	// 卷备份副本的快照id
 	SnapshotId *string `json:"snapshot_id,omitempty"`
 

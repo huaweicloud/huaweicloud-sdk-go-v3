@@ -44,6 +44,7 @@ type PutCopyStateReqCopystateEnum struct {
 	ERROR       PutCopyStateReqCopystate
 	CLONING     PutCopyStateReqCopystate
 	CUTOVERING  PutCopyStateReqCopystate
+	FINISHED    PutCopyStateReqCopystate
 }
 
 func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
@@ -80,6 +81,9 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 		},
 		CUTOVERING: PutCopyStateReqCopystate{
 			value: "CUTOVERING",
+		},
+		FINISHED: PutCopyStateReqCopystate{
+			value: "FINISHED",
 		},
 	}
 }

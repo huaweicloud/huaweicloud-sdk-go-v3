@@ -19,8 +19,8 @@ type ListDatabaseUsersResponse struct {
 	DatabaseName *string `json:"database_name,omitempty"`
 
 	// 权限信息。
-	Privileges     *[]ShowDatabaseUsersPrivilege `json:"privileges,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Privileges     *[]DatabaseUserPrivilege `json:"privileges,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListDatabaseUsersResponse) String() string {

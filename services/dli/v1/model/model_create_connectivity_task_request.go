@@ -12,7 +12,7 @@ type CreateConnectivityTaskRequest struct {
 	// 队列名称
 	QueueName string `json:"queue_name"`
 
-	Body *VerityConnectivityReq `json:"body,omitempty"`
+	Body *CreateConnectivityTaskRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateConnectivityTaskRequest) String() string {

@@ -8,14 +8,10 @@ import (
 
 // CreateFlinkSqlJobGraphResponse Response Object
 type CreateFlinkSqlJobGraphResponse struct {
-
-	//
 	IsSuccess *bool `json:"is_success,omitempty"`
 
-	//
 	Message *string `json:"message,omitempty"`
 
-	//
 	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 静态流图的描述信息

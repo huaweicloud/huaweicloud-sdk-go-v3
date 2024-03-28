@@ -45,7 +45,7 @@ func GetHttpDetectRequestBodyProtocolEnum() HttpDetectRequestBodyProtocolEnum {
 			value: "http",
 		},
 		HTTPS: HttpDetectRequestBodyProtocol{
-			value: "https;",
+			value: "https",
 		},
 	}
 }

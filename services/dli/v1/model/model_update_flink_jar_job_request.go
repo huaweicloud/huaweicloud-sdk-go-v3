@@ -12,7 +12,7 @@ type UpdateFlinkJarJobRequest struct {
 	// 作业ID。
 	JobId int64 `json:"job_id"`
 
-	Body *UpdateFlinkJarRequestBody `json:"body,omitempty"`
+	Body *UpdateFlinkJarJobRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateFlinkJarJobRequest) String() string {

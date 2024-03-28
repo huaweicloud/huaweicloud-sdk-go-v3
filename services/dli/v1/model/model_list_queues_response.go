@@ -16,8 +16,8 @@ type ListQueuesResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 队列信息。
-	Queues         *[]QueueDetails `json:"queues,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Queues         *[]Queue `json:"queues,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o ListQueuesResponse) String() string {

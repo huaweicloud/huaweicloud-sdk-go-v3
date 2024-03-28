@@ -549,6 +549,27 @@ func (c *CcClient) ListCentralNetworksInvoker(request *model.ListCentralNetworks
 	return &ListCentralNetworksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCentralNetworksByTags 通过标签过滤中心网络实例
+//
+// 通过标签过滤中心网络实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworksByTags(request *model.ListCentralNetworksByTagsRequest) (*model.ListCentralNetworksByTagsResponse, error) {
+	requestDef := GenReqDefForListCentralNetworksByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworksByTagsResponse), nil
+	}
+}
+
+// ListCentralNetworksByTagsInvoker 通过标签过滤中心网络实例
+func (c *CcClient) ListCentralNetworksByTagsInvoker(request *model.ListCentralNetworksByTagsRequest) *ListCentralNetworksByTagsInvoker {
+	requestDef := GenReqDefForListCentralNetworksByTags()
+	return &ListCentralNetworksByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCentralNetwork 查询中心网络详情
 //
 // 查询中心网络详情。
@@ -633,6 +654,27 @@ func (c *CcClient) UpdateCentralNetworkInvoker(request *model.UpdateCentralNetwo
 	return &UpdateCentralNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCentralNetworkErRouteTableAttachment 创建中心网络ER路由表附件
+//
+// 创建中心网络的路由表附件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) CreateCentralNetworkErRouteTableAttachment(request *model.CreateCentralNetworkErRouteTableAttachmentRequest) (*model.CreateCentralNetworkErRouteTableAttachmentResponse, error) {
+	requestDef := GenReqDefForCreateCentralNetworkErRouteTableAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCentralNetworkErRouteTableAttachmentResponse), nil
+	}
+}
+
+// CreateCentralNetworkErRouteTableAttachmentInvoker 创建中心网络ER路由表附件
+func (c *CcClient) CreateCentralNetworkErRouteTableAttachmentInvoker(request *model.CreateCentralNetworkErRouteTableAttachmentRequest) *CreateCentralNetworkErRouteTableAttachmentInvoker {
+	requestDef := GenReqDefForCreateCentralNetworkErRouteTableAttachment()
+	return &CreateCentralNetworkErRouteTableAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCentralNetworkGdgwAttachment 创建中心网络GDGW附件
 //
 // 创建中心网络的GDGW附件。
@@ -696,6 +738,28 @@ func (c *CcClient) ListCentralNetworkAttachmentsInvoker(request *model.ListCentr
 	return &ListCentralNetworkAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCentralNetworkErRouteTableAttachments 查询中心网络ER路由表附件列表
+//
+// 查询中心网络ER路由表附件列表。
+// 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCentralNetworkErRouteTableAttachments(request *model.ListCentralNetworkErRouteTableAttachmentsRequest) (*model.ListCentralNetworkErRouteTableAttachmentsResponse, error) {
+	requestDef := GenReqDefForListCentralNetworkErRouteTableAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCentralNetworkErRouteTableAttachmentsResponse), nil
+	}
+}
+
+// ListCentralNetworkErRouteTableAttachmentsInvoker 查询中心网络ER路由表附件列表
+func (c *CcClient) ListCentralNetworkErRouteTableAttachmentsInvoker(request *model.ListCentralNetworkErRouteTableAttachmentsRequest) *ListCentralNetworkErRouteTableAttachmentsInvoker {
+	requestDef := GenReqDefForListCentralNetworkErRouteTableAttachments()
+	return &ListCentralNetworkErRouteTableAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCentralNetworkGdgwAttachments 查询中心网络GDGW附件列表
 //
 // 查询中心网络GDGW附件列表。
@@ -718,6 +782,27 @@ func (c *CcClient) ListCentralNetworkGdgwAttachmentsInvoker(request *model.ListC
 	return &ListCentralNetworkGdgwAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCentralNetworkErRouteTableAttachment 查询中心网络ER路由表附件详情
+//
+// 查询中心网络ER路由表附件详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ShowCentralNetworkErRouteTableAttachment(request *model.ShowCentralNetworkErRouteTableAttachmentRequest) (*model.ShowCentralNetworkErRouteTableAttachmentResponse, error) {
+	requestDef := GenReqDefForShowCentralNetworkErRouteTableAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCentralNetworkErRouteTableAttachmentResponse), nil
+	}
+}
+
+// ShowCentralNetworkErRouteTableAttachmentInvoker 查询中心网络ER路由表附件详情
+func (c *CcClient) ShowCentralNetworkErRouteTableAttachmentInvoker(request *model.ShowCentralNetworkErRouteTableAttachmentRequest) *ShowCentralNetworkErRouteTableAttachmentInvoker {
+	requestDef := GenReqDefForShowCentralNetworkErRouteTableAttachment()
+	return &ShowCentralNetworkErRouteTableAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCentralNetworkGdgwAttachment 查询中心网络GDGW附件详情
 //
 // 查询中心网络GDGW附件详情。
@@ -737,6 +822,27 @@ func (c *CcClient) ShowCentralNetworkGdgwAttachment(request *model.ShowCentralNe
 func (c *CcClient) ShowCentralNetworkGdgwAttachmentInvoker(request *model.ShowCentralNetworkGdgwAttachmentRequest) *ShowCentralNetworkGdgwAttachmentInvoker {
 	requestDef := GenReqDefForShowCentralNetworkGdgwAttachment()
 	return &ShowCentralNetworkGdgwAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCentralNetworkErRouteTableAttachment 更新中心网络ER路由表附件
+//
+// 更新中心网络ER路由表附件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateCentralNetworkErRouteTableAttachment(request *model.UpdateCentralNetworkErRouteTableAttachmentRequest) (*model.UpdateCentralNetworkErRouteTableAttachmentResponse, error) {
+	requestDef := GenReqDefForUpdateCentralNetworkErRouteTableAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCentralNetworkErRouteTableAttachmentResponse), nil
+	}
+}
+
+// UpdateCentralNetworkErRouteTableAttachmentInvoker 更新中心网络ER路由表附件
+func (c *CcClient) UpdateCentralNetworkErRouteTableAttachmentInvoker(request *model.UpdateCentralNetworkErRouteTableAttachmentRequest) *UpdateCentralNetworkErRouteTableAttachmentInvoker {
+	requestDef := GenReqDefForUpdateCentralNetworkErRouteTableAttachment()
+	return &UpdateCentralNetworkErRouteTableAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCentralNetworkGdgwAttachment 更新中心网络GDGW附件

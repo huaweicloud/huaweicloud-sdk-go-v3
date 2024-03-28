@@ -12,7 +12,7 @@ type UpdateFlinkSqlJobRequest struct {
 	// 作业ID。
 	JobId int64 `json:"job_id"`
 
-	Body *UpdateFlinkSqlRequestBody `json:"body,omitempty"`
+	Body *UpdateFlinkSqlJobRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateFlinkSqlJobRequest) String() string {

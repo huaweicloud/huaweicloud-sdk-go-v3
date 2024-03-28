@@ -1141,6 +1141,48 @@ func (c *ApigClient) DisassociateSignatureKeyV2Invoker(request *model.Disassocia
 	return &DisassociateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportApiDefinitionsAsync 异步导出API
+//
+// 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ExportApiDefinitionsAsync(request *model.ExportApiDefinitionsAsyncRequest) (*model.ExportApiDefinitionsAsyncResponse, error) {
+	requestDef := GenReqDefForExportApiDefinitionsAsync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportApiDefinitionsAsyncResponse), nil
+	}
+}
+
+// ExportApiDefinitionsAsyncInvoker 异步导出API
+func (c *ApigClient) ExportApiDefinitionsAsyncInvoker(request *model.ExportApiDefinitionsAsyncRequest) *ExportApiDefinitionsAsyncInvoker {
+	requestDef := GenReqDefForExportApiDefinitionsAsync()
+	return &ExportApiDefinitionsAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportApiDefinitionsAsync 异步导入API
+//
+// 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ImportApiDefinitionsAsync(request *model.ImportApiDefinitionsAsyncRequest) (*model.ImportApiDefinitionsAsyncResponse, error) {
+	requestDef := GenReqDefForImportApiDefinitionsAsync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportApiDefinitionsAsyncResponse), nil
+	}
+}
+
+// ImportApiDefinitionsAsyncInvoker 异步导入API
+func (c *ApigClient) ImportApiDefinitionsAsyncInvoker(request *model.ImportApiDefinitionsAsyncRequest) *ImportApiDefinitionsAsyncInvoker {
+	requestDef := GenReqDefForImportApiDefinitionsAsync()
+	return &ImportApiDefinitionsAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportMicroservice 导入微服务
 //
 // 导入微服务。
@@ -1610,6 +1652,27 @@ func (c *ApigClient) ListInstanceConfigsV2Invoker(request *model.ListInstanceCon
 	return &ListInstanceConfigsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceFeatures 查询实例支持的特性列表
+//
+// 查询实例支持的特性列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListInstanceFeatures(request *model.ListInstanceFeaturesRequest) (*model.ListInstanceFeaturesResponse, error) {
+	requestDef := GenReqDefForListInstanceFeatures()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceFeaturesResponse), nil
+	}
+}
+
+// ListInstanceFeaturesInvoker 查询实例支持的特性列表
+func (c *ApigClient) ListInstanceFeaturesInvoker(request *model.ListInstanceFeaturesRequest) *ListInstanceFeaturesInvoker {
+	requestDef := GenReqDefForListInstanceFeatures()
+	return &ListInstanceFeaturesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceTags 查询单个实例标签
 //
 // 查询单个实例的标签。
@@ -2063,6 +2126,27 @@ func (c *ApigClient) ShowAppQuota(request *model.ShowAppQuotaRequest) (*model.Sh
 func (c *ApigClient) ShowAppQuotaInvoker(request *model.ShowAppQuotaRequest) *ShowAppQuotaInvoker {
 	requestDef := GenReqDefForShowAppQuota()
 	return &ShowAppQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAsyncTaskResult 获取异步任务结果
+//
+// 获取异步任务结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowAsyncTaskResult(request *model.ShowAsyncTaskResultRequest) (*model.ShowAsyncTaskResultResponse, error) {
+	requestDef := GenReqDefForShowAsyncTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAsyncTaskResultResponse), nil
+	}
+}
+
+// ShowAsyncTaskResultInvoker 获取异步任务结果
+func (c *ApigClient) ShowAsyncTaskResultInvoker(request *model.ShowAsyncTaskResultRequest) *ShowAsyncTaskResultInvoker {
+	requestDef := GenReqDefForShowAsyncTaskResult()
+	return &ShowAsyncTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDetailsOfAppAcl 查看APP的访问控制详情
@@ -2653,6 +2737,27 @@ func (c *ApigClient) UpdateSignatureKeyV2(request *model.UpdateSignatureKeyV2Req
 func (c *ApigClient) UpdateSignatureKeyV2Invoker(request *model.UpdateSignatureKeyV2Request) *UpdateSignatureKeyV2Invoker {
 	requestDef := GenReqDefForUpdateSignatureKeyV2()
 	return &UpdateSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSlDomainSettingV2 设置调试域名是否可以访问
+//
+// 禁用或启用API分组绑定的调试域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) UpdateSlDomainSettingV2(request *model.UpdateSlDomainSettingV2Request) (*model.UpdateSlDomainSettingV2Response, error) {
+	requestDef := GenReqDefForUpdateSlDomainSettingV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSlDomainSettingV2Response), nil
+	}
+}
+
+// UpdateSlDomainSettingV2Invoker 设置调试域名是否可以访问
+func (c *ApigClient) UpdateSlDomainSettingV2Invoker(request *model.UpdateSlDomainSettingV2Request) *UpdateSlDomainSettingV2Invoker {
+	requestDef := GenReqDefForUpdateSlDomainSettingV2()
+	return &UpdateSlDomainSettingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSpecialThrottlingConfigurationV2 修改特殊设置

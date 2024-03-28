@@ -8,7 +8,7 @@ import (
 
 // CreateFlinkJarJobRequest Request Object
 type CreateFlinkJarJobRequest struct {
-	Body *CreateFlinkJarRequestBody `json:"body,omitempty"`
+	Body *CreateFlinkJarJobRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateFlinkJarJobRequest) String() string {

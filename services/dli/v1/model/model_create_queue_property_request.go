@@ -12,7 +12,7 @@ type CreateQueuePropertyRequest struct {
 	// 队列名称
 	QueueName string `json:"queue_name"`
 
-	Body *InsertQueuePropertyRequestBody `json:"body,omitempty"`
+	Body *CreateQueuePropertyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateQueuePropertyRequest) String() string {

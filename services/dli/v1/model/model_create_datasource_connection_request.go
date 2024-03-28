@@ -8,7 +8,7 @@ import (
 
 // CreateDatasourceConnectionRequest Request Object
 type CreateDatasourceConnectionRequest struct {
-	Body *CreateDatasourceConnectionReq `json:"body,omitempty"`
+	Body *CreateDatasourceConnectionRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateDatasourceConnectionRequest) String() string {

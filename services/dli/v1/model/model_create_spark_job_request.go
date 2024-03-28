@@ -10,7 +10,7 @@ import (
 type CreateSparkJobRequest struct {
 	UserId *string `json:"USER-ID,omitempty"`
 
-	Body *BatchJobInfo `json:"body,omitempty"`
+	Body *CreateSparkJobRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSparkJobRequest) String() string {

@@ -16,7 +16,7 @@ type ListElasticResourcePoolQueuesResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 该弹性资源池下所有queue信息及队列扩缩容策略信息。
-	Queues *[]QueueInfo `json:"queues,omitempty"`
+	Queues *[]ElasticResourcePoolQueue `json:"queues,omitempty"`
 
 	// 该资源池下关联的队列数量
 	Count          *int64 `json:"count,omitempty"`

@@ -12,7 +12,7 @@ type DisassociateQueueFromEnhancedConnectionRequest struct {
 	// 连接ID，用于标识跨源连接的UUID。
 	ConnectionId string `json:"connection_id"`
 
-	Body *DisassociateConnectionQueueReq `json:"body,omitempty"`
+	Body *DisassociateQueueFromEnhancedConnectionRequestBody `json:"body,omitempty"`
 }
 
 func (o DisassociateQueueFromEnhancedConnectionRequest) String() string {

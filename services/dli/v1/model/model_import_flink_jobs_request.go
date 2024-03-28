@@ -8,7 +8,7 @@ import (
 
 // ImportFlinkJobsRequest Request Object
 type ImportFlinkJobsRequest struct {
-	Body *ImportFlinkJobRequestBody `json:"body,omitempty"`
+	Body *ImportFlinkJobsRequestBody `json:"body,omitempty"`
 }
 
 func (o ImportFlinkJobsRequest) String() string {

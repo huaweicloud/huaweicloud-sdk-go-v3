@@ -54,7 +54,7 @@ type ListMessageTraceRespTrace struct {
 	ClientHost *string `json:"client_host,omitempty"`
 
 	// 重试次数。
-	RetryTimes *string `json:"retry_times,omitempty"`
+	RetryTimes *int32 `json:"retry_times,omitempty"`
 
 	// 消息体长度。
 	BodyLength float32 `json:"body_length,omitempty"`

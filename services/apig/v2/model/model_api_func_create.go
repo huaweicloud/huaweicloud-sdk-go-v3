@@ -35,6 +35,9 @@ type ApiFuncCreate struct {
 
 	// 后端自定义认证ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
+
+	// 函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
+	ReqProtocol *ApiFuncCreateReqProtocol `json:"req_protocol,omitempty"`
 }
 
 func (o ApiFuncCreate) String() string {
@@ -122,6 +125,53 @@ func (c ApiFuncCreateNetworkType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiFuncCreateNetworkType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiFuncCreateReqProtocol struct {
+	value string
+}
+
+type ApiFuncCreateReqProtocolEnum struct {
+	HTTPS ApiFuncCreateReqProtocol
+	GRPCS ApiFuncCreateReqProtocol
+}
+
+func GetApiFuncCreateReqProtocolEnum() ApiFuncCreateReqProtocolEnum {
+	return ApiFuncCreateReqProtocolEnum{
+		HTTPS: ApiFuncCreateReqProtocol{
+			value: "HTTPS",
+		},
+		GRPCS: ApiFuncCreateReqProtocol{
+			value: "GRPCS",
+		},
+	}
+}
+
+func (c ApiFuncCreateReqProtocol) Value() string {
+	return c.value
+}
+
+func (c ApiFuncCreateReqProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiFuncCreateReqProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

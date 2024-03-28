@@ -8,7 +8,7 @@ import (
 
 // CreateGlobalVariableRequest Request Object
 type CreateGlobalVariableRequest struct {
-	Body *CreateGlobalValueReq `json:"body,omitempty"`
+	Body *CreateGlobalVariableRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateGlobalVariableRequest) String() string {

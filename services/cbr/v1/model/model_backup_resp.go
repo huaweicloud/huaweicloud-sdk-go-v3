@@ -77,6 +77,9 @@ type BackupResp struct {
 
 	// 子副本列表
 	Children *[]BackupResp `json:"children,omitempty"`
+
+	// 是否是增备
+	Incremental *bool `json:"incremental,omitempty"`
 }
 
 func (o BackupResp) String() string {

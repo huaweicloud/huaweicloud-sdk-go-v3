@@ -19,8 +19,8 @@ type ListTablePrivilegesResponse struct {
 	UserName *string `json:"user_name,omitempty"`
 
 	// 权限信息。
-	Privileges     *[]TableUserPermissionsRespPrivilege `json:"privileges,omitempty"`
-	HttpStatusCode int                                  `json:"-"`
+	Privileges     *[]TablePrivilege `json:"privileges,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListTablePrivilegesResponse) String() string {

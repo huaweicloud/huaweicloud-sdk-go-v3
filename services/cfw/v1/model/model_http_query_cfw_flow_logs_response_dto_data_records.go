@@ -12,7 +12,7 @@ import (
 type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 
 	// 字节
-	Bytes *int32 `json:"bytes,omitempty"`
+	Bytes *float64 `json:"bytes,omitempty"`
 
 	// 方向，有内到外和外到内两种
 	Direction *HttpQueryCfwFlowLogsResponseDtoDataRecordsDirection `json:"direction,omitempty"`

@@ -8,6 +8,12 @@ import (
 
 type NetworkCheckInfoRequestBody struct {
 
+	// 域名连通性
+	DomainConnectivity *bool `json:"domain_connectivity,omitempty"`
+
+	// 目的端连通性
+	DestinationConnectivity *bool `json:"destination_connectivity,omitempty"`
+
 	// 网络时延
 	NetworkDelay float64 `json:"network_delay"`
 

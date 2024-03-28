@@ -8,7 +8,7 @@ import (
 
 // RunIefJobActionCallBackRequest Request Object
 type RunIefJobActionCallBackRequest struct {
-	Body *IefFlinkJobMessagesReq `json:"body,omitempty"`
+	Body *RunIefJobActionCallBackRequestBody `json:"body,omitempty"`
 }
 
 func (o RunIefJobActionCallBackRequest) String() string {

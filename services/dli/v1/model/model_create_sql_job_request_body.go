@@ -12,6 +12,9 @@ type CreateSqlJobRequestBody struct {
 	// 待执行的SQL语句。
 	Sql string `json:"sql"`
 
+	// 待提交作业的队列引擎名称，名称只能包含英文字母。
+	EngineType *string `json:"engine_type,omitempty"`
+
 	// SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
 	Currentdb *string `json:"currentdb,omitempty"`
 
@@ -22,7 +25,7 @@ type CreateSqlJobRequestBody struct {
 	Conf *[]string `json:"conf,omitempty"`
 
 	// 作业标签
-	Tags *[]TmsTagEntity `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 }
 
 func (o CreateSqlJobRequestBody) String() string {

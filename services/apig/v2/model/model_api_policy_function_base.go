@@ -28,6 +28,9 @@ type ApiPolicyFunctionBase struct {
 
 	// API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 	Timeout *int32 `json:"timeout,omitempty"`
+
+	// 函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
+	ReqProtocol *ApiPolicyFunctionBaseReqProtocol `json:"req_protocol,omitempty"`
 }
 
 func (o ApiPolicyFunctionBase) String() string {
@@ -115,6 +118,53 @@ func (c ApiPolicyFunctionBaseNetworkType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiPolicyFunctionBaseNetworkType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiPolicyFunctionBaseReqProtocol struct {
+	value string
+}
+
+type ApiPolicyFunctionBaseReqProtocolEnum struct {
+	HTTPS ApiPolicyFunctionBaseReqProtocol
+	GRPCS ApiPolicyFunctionBaseReqProtocol
+}
+
+func GetApiPolicyFunctionBaseReqProtocolEnum() ApiPolicyFunctionBaseReqProtocolEnum {
+	return ApiPolicyFunctionBaseReqProtocolEnum{
+		HTTPS: ApiPolicyFunctionBaseReqProtocol{
+			value: "HTTPS",
+		},
+		GRPCS: ApiPolicyFunctionBaseReqProtocol{
+			value: "GRPCS",
+		},
+	}
+}
+
+func (c ApiPolicyFunctionBaseReqProtocol) Value() string {
+	return c.value
+}
+
+func (c ApiPolicyFunctionBaseReqProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiPolicyFunctionBaseReqProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

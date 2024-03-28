@@ -19,8 +19,8 @@ type ShowEnhancedConnectionPrivilegeResponse struct {
 	ConnectionId *string `json:"connection_id,omitempty"`
 
 	// 跨源连接各个授权项目的信息。
-	Privileges     *[]ProjectPrivilege `json:"privileges,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Privileges     *[]EnhancedConnectionPrivilege `json:"privileges,omitempty"`
+	HttpStatusCode int                            `json:"-"`
 }
 
 func (o ShowEnhancedConnectionPrivilegeResponse) String() string {

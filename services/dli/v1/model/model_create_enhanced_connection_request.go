@@ -8,7 +8,7 @@ import (
 
 // CreateEnhancedConnectionRequest Request Object
 type CreateEnhancedConnectionRequest struct {
-	Body *CreateEnhancedConnectionsReq `json:"body,omitempty"`
+	Body *CreateEnhancedConnectionRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateEnhancedConnectionRequest) String() string {

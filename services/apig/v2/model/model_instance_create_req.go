@@ -56,7 +56,7 @@ type InstanceCreateReq struct {
 	// 公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
-	// 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+	// 实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
 	LoadbalancerProvider *InstanceCreateReqLoadbalancerProvider `json:"loadbalancer_provider,omitempty"`
 
 	// 标签列表。  一个实例默认最多支持创建20个标签

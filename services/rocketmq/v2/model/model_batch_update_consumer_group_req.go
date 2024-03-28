@@ -9,7 +9,7 @@ import (
 type BatchUpdateConsumerGroupReq struct {
 
 	// 消费组列表。
-	Groups *[]ConsumerGroup `json:"groups,omitempty"`
+	Groups *[]CreateOrUpdateConsumerGroup `json:"groups,omitempty"`
 }
 
 func (o BatchUpdateConsumerGroupReq) String() string {

@@ -65,6 +65,7 @@ type ListSqlJobsRequestJobType struct {
 }
 
 type ListSqlJobsRequestJobTypeEnum struct {
+	ALL    ListSqlJobsRequestJobType
 	DDL    ListSqlJobsRequestJobType
 	DCL    ListSqlJobsRequestJobType
 	IMPORT ListSqlJobsRequestJobType
@@ -75,6 +76,9 @@ type ListSqlJobsRequestJobTypeEnum struct {
 
 func GetListSqlJobsRequestJobTypeEnum() ListSqlJobsRequestJobTypeEnum {
 	return ListSqlJobsRequestJobTypeEnum{
+		ALL: ListSqlJobsRequestJobType{
+			value: "ALL",
+		},
 		DDL: ListSqlJobsRequestJobType{
 			value: "DDL",
 		},

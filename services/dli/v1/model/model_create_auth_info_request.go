@@ -8,7 +8,7 @@ import (
 
 // CreateAuthInfoRequest Request Object
 type CreateAuthInfoRequest struct {
-	Body *CreateAuthInfoReq `json:"body,omitempty"`
+	Body *CreateAuthInfoRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateAuthInfoRequest) String() string {

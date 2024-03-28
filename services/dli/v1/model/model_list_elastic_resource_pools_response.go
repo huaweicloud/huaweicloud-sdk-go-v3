@@ -19,8 +19,8 @@ type ListElasticResourcePoolsResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 弹性资源池列表
-	ElasticResourcePools *[]ElasticResourcePoolsResponse `json:"elastic_resource_pools,omitempty"`
-	HttpStatusCode       int                             `json:"-"`
+	ElasticResourcePools *[]ElasticResourcePool `json:"elastic_resource_pools,omitempty"`
+	HttpStatusCode       int                    `json:"-"`
 }
 
 func (o ListElasticResourcePoolsResponse) String() string {

@@ -8,7 +8,7 @@ import (
 
 // BatchDeleteSqlJobTemplatesRequest Request Object
 type BatchDeleteSqlJobTemplatesRequest struct {
-	Body *DeleteSqlTemplatesRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteSqlJobTemplatesRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchDeleteSqlJobTemplatesRequest) String() string {

@@ -8,7 +8,7 @@ import (
 
 // RegisterBucketRequest Request Object
 type RegisterBucketRequest struct {
-	Body *ObsBuckets `json:"body,omitempty"`
+	Body *RegisterBucketRequestBody `json:"body,omitempty"`
 }
 
 func (o RegisterBucketRequest) String() string {

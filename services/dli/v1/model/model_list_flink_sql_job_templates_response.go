@@ -15,8 +15,8 @@ type ListFlinkSqlJobTemplatesResponse struct {
 	// 消息内容。
 	Message *string `json:"message,omitempty"`
 
-	TemplateList   *FlinkTemplateList `json:"template_list,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	TemplateList   *FlinkSqlJobTemplateList `json:"template_list,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListFlinkSqlJobTemplatesResponse) String() string {

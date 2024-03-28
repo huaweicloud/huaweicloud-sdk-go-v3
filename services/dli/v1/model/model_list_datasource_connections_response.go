@@ -16,7 +16,7 @@ type ListDatasourceConnectionsResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 跨源连接信息列表。
-	Connections *[]ShowDatasourceConnectionResp `json:"connections,omitempty"`
+	Connections *[]DatasourceConnection `json:"connections,omitempty"`
 
 	// 总数
 	Count          *int32 `json:"count,omitempty"`

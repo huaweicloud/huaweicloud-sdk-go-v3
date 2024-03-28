@@ -121,11 +121,22 @@ type ShowDetailsOfInstanceV2Response struct {
 
 	NodeIps *NodeIps `json:"node_ips,omitempty"`
 
+	NodeIpv6Ips *NodeIps `json:"node_ipv6_ips,omitempty"`
+
+	// 实例IPV6出公网IP
+	PublicIpv6Ips *[]string `json:"public_ipv6_ips,omitempty"`
+
 	// 公网入口地址列表
 	Publicips *[]IpDetails `json:"publicips,omitempty"`
 
 	// 私网入口地址列表
 	Privateips *[]IpDetails `json:"privateips,omitempty"`
+
+	// 不建议使用的实例入口列表：分组子域名解析未指向到该列表的IP，不能用该列表的IP直接访问DEFAULT分组
+	UnreliableIps *[]string `json:"unreliable_ips,omitempty"`
+
+	// 实例是否支持全量IPv6 - true：支持，实例入口和实例出口都支持IPV6 - false：不支持，仅实例入口支持IPV6
+	EnableFullstackIpv6 *bool `json:"enable_fullstack_ipv6,omitempty"`
 
 	// 实例是否可释放 - true：可释放 - false：不可释放
 	IsReleasable *bool `json:"is_releasable,omitempty"`

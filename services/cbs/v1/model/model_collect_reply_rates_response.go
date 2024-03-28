@@ -17,7 +17,8 @@ type CollectReplyRatesResponse struct {
 
 	Total *ReplyRatesTotal `json:"total,omitempty"`
 
-	Intervals *ReplyRatesIntervals `json:"intervals,omitempty"`
+	// 会话间隔统计数据。
+	Intervals *[]ReplyRatesIntervals `json:"intervals,omitempty"`
 
 	// 统计开始的utc时间。
 	Startutc *int64 `json:"startutc,omitempty"`

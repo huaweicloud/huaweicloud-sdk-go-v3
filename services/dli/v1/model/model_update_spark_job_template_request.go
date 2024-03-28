@@ -10,7 +10,7 @@ import (
 type UpdateSparkJobTemplateRequest struct {
 	TemplateId string `json:"template_id"`
 
-	Body *UpdateJobTemplatesRequestBody `json:"body,omitempty"`
+	Body *UpdateSparkJobTemplateRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSparkJobTemplateRequest) String() string {

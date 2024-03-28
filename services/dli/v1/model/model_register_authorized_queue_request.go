@@ -8,7 +8,7 @@ import (
 
 // RegisterAuthorizedQueueRequest Request Object
 type RegisterAuthorizedQueueRequest struct {
-	Body *GrantQueuePermissionReq `json:"body,omitempty"`
+	Body *RegisterAuthorizedQueueRequestBody `json:"body,omitempty"`
 }
 
 func (o RegisterAuthorizedQueueRequest) String() string {
