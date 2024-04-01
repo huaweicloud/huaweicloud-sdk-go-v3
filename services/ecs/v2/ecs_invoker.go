@@ -846,6 +846,30 @@ func (i *UpdateServerMetadataInvoker) Invoke() (*model.UpdateServerMetadataRespo
 	}
 }
 
+type NovaListVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NovaListVersionsInvoker) Invoke() (*model.NovaListVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NovaListVersionsResponse), nil
+	}
+}
+
+type NovaShowVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NovaShowVersionInvoker) Invoke() (*model.NovaShowVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NovaShowVersionResponse), nil
+	}
+}
+
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }

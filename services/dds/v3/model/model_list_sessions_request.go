@@ -27,7 +27,7 @@ type ListSessionsRequest struct {
 	// 命名空间。取空值表示查询所有命名空间。也可根据当前业务进行指定。
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+	// 运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
 	CostTime *int32 `json:"cost_time,omitempty"`
 }
 

@@ -21,7 +21,7 @@ type QuerySessionResponse struct {
 	// 操作类型。
 	Type string `json:"type"`
 
-	// 运行时间，单位为 ms。
+	// 运行时间，单位为 us。
 	CostTime string `json:"cost_time"`
 
 	// 执行计划描述。

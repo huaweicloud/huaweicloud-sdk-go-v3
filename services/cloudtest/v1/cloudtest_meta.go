@@ -346,6 +346,14 @@ func GenReqDefForShowPlanList() *def.HttpRequestDef {
 		WithName("CurrentStage").
 		WithJsonTag("current_stage").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BranchUri").
+		WithJsonTag("branch_uri").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryAllVersion").
+		WithJsonTag("query_all_version").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").

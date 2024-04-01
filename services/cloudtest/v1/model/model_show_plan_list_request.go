@@ -23,6 +23,12 @@ type ShowPlanListRequest struct {
 
 	// 测试计划所处阶段（create,design,execute,report）
 	CurrentStage *string `json:"current_stage,omitempty"`
+
+	// 分支Uri，默认master
+	BranchUri *string `json:"branch_uri,omitempty"`
+
+	// 是否查询所有版本下测试计划，默认为false。若值为true, 查询所有版本下测试计划; 若为false, 查询branch_uri指定分支下的测试计划, branch_uri为空时默认为master
+	QueryAllVersion *bool `json:"query_all_version,omitempty"`
 }
 
 func (o ShowPlanListRequest) String() string {

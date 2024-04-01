@@ -1597,6 +1597,57 @@ func (c *EcsClient) UpdateServerMetadataInvoker(request *model.UpdateServerMetad
 	return &UpdateServerMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// NovaListVersions 查询API版本信息列表
+//
+// 返回Nova当前所有可用的版本。
+//
+// 为了支持功能不断扩展，Nova API支持版本号区分。Nova中有两种形式的版本号：
+//
+// - \&quot;主版本号\&quot;: 具有独立的url。
+// - \&quot;微版本号\&quot;: 通过Http请求头X-OpenStack-Nova-API-Version来使用，从2.27版本后更改为OpenStack-API-Version。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) NovaListVersions(request *model.NovaListVersionsRequest) (*model.NovaListVersionsResponse, error) {
+	requestDef := GenReqDefForNovaListVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NovaListVersionsResponse), nil
+	}
+}
+
+// NovaListVersionsInvoker 查询API版本信息列表
+func (c *EcsClient) NovaListVersionsInvoker(request *model.NovaListVersionsRequest) *NovaListVersionsInvoker {
+	requestDef := GenReqDefForNovaListVersions()
+	return &NovaListVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaShowVersion 查询指定API版本信息
+//
+// 返回指定版本的信息。
+// 为了支持功能不断扩展，Nova API支持版本号区分。Nova中有两种形式的版本号：
+//
+// - \&quot;主版本号\&quot;: 具有独立的url。
+// - \&quot;微版本号\&quot;: 通过Http请求头X-OpenStack-Nova-API-Version来使用，从2.27版本后更改为OpenStack-API-Version。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) NovaShowVersion(request *model.NovaShowVersionRequest) (*model.NovaShowVersionResponse, error) {
+	requestDef := GenReqDefForNovaShowVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NovaShowVersionResponse), nil
+	}
+}
+
+// NovaShowVersionInvoker 查询指定API版本信息
+func (c *EcsClient) NovaShowVersionInvoker(request *model.NovaShowVersionRequest) *NovaShowVersionInvoker {
+	requestDef := GenReqDefForNovaShowVersion()
+	return &NovaShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJob 查询任务的执行状态
 //
 // 查询Job的执行状态。

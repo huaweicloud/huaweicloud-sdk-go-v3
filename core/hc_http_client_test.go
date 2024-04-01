@@ -2,6 +2,7 @@ package core
 
 import (
 	"fmt"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/exchange"
@@ -33,6 +34,7 @@ func TestHcHttpClient_SyncInvokeWithExtraHeaders(t *testing.T) {
 	client, err := NewHcHttpClientBuilder().
 		WithHttpConfig(config.DefaultHttpConfig()).
 		WithEndpoints([]string{ts.URL}).
+		WithCredential(&basic.Credentials{AK: "test", SK: "test"}).
 		SafeBuild()
 	assert.Nil(t, err)
 	client.extraHeaders = map[string]string{
