@@ -9,7 +9,7 @@ import (
 // RuleAddressDto 规则地址dto
 type RuleAddressDto struct {
 
-	// 源类型0手工输入,1关联IP地址组,2域名
+	// 源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
 	Type int32 `json:"type"`
 
 	// 源类型0 ipv4,1 ipv6
@@ -47,6 +47,12 @@ type RuleAddressDto struct {
 
 	// 地址组名称列表
 	AddressGroupNames *[]AddressGroupVo `json:"address_group_names,omitempty"`
+
+	// 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+	AddressSetType *int32 `json:"address_set_type,omitempty"`
+
+	// 预定义地址组列表
+	PredefinedGroup *[]string `json:"predefined_group,omitempty"`
 }
 
 func (o RuleAddressDto) String() string {

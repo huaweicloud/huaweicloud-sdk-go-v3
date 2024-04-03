@@ -12,10 +12,7 @@ type CountGlobalEipsResponse struct {
 	// 本次请求的编号
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 全域弹性公网IP列表
-	GlobalEips *[]CountGlobalEips `json:"global_eips,omitempty"`
-
-	PageInfo *ListGlobalEipsResponseBodyPageInfo `json:"page_info,omitempty"`
+	GlobalEip *CountGlobalEips `json:"global_eip,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

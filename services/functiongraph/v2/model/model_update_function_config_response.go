@@ -35,7 +35,7 @@ type UpdateFunctionConfigResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+	// FunctionGraph函数的执行环境 Java8: Java语言8版本。 Java11: Java语言11版本。 Java17: Java语言17版本（当前仅支持华北-乌兰察布二零二） Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Python3.10: Python语言3.10版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 Node.js16.17: Nodejs语言16.17版本。 Node.js18.15: Nodejs语言18.15版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 C#(.NET Core 6.0): C#语言6.0版本（当前仅支持华北-乌兰察布二零二）。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Cangjie1.0：仓颉语言1.0版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime *UpdateFunctionConfigResponseRuntime `json:"runtime,omitempty"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
@@ -131,6 +131,9 @@ type UpdateFunctionConfigResponse struct {
 	// v2表示为正式版本,v1为废弃版本。
 	Type *UpdateFunctionConfigResponseType `json:"type,omitempty"`
 
+	// 适配CloudDebug场景，是否开启云调试（已废弃）
+	EnableCloudDebug *string `json:"enable_cloud_debug,omitempty"`
+
 	// 是否启动动态内存配置
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
 
@@ -140,11 +143,14 @@ type UpdateFunctionConfigResponse struct {
 	// 函数配置的需要支持域名解析的内网域名。
 	DomainNames *string `json:"domain_names,omitempty"`
 
-	// 是否允许在请求头中添加鉴权信息
+	// 是否允许在请求头中添加鉴权信息，只支持自定义镜像函数
 	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
 
-	CustomImage    *CustomImage `json:"custom_image,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	CustomImage *CustomImage `json:"custom_image,omitempty"`
+
+	// 是否返回流式数据（已废弃）
+	IsReturnStream *bool `json:"is_return_stream,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o UpdateFunctionConfigResponse) String() string {
@@ -163,21 +169,27 @@ type UpdateFunctionConfigResponseRuntime struct {
 type UpdateFunctionConfigResponseRuntimeEnum struct {
 	JAVA8           UpdateFunctionConfigResponseRuntime
 	JAVA11          UpdateFunctionConfigResponseRuntime
+	JAVA17          UpdateFunctionConfigResponseRuntime
+	PYTHON2_7       UpdateFunctionConfigResponseRuntime
+	PYTHON3_6       UpdateFunctionConfigResponseRuntime
+	PYTHON3_9       UpdateFunctionConfigResponseRuntime
+	PYTHON3_10      UpdateFunctionConfigResponseRuntime
+	GO1_8           UpdateFunctionConfigResponseRuntime
+	GO1_X           UpdateFunctionConfigResponseRuntime
 	NODE_JS6_10     UpdateFunctionConfigResponseRuntime
 	NODE_JS8_10     UpdateFunctionConfigResponseRuntime
 	NODE_JS10_16    UpdateFunctionConfigResponseRuntime
 	NODE_JS12_13    UpdateFunctionConfigResponseRuntime
 	NODE_JS14_18    UpdateFunctionConfigResponseRuntime
-	PYTHON2_7       UpdateFunctionConfigResponseRuntime
-	PYTHON3_6       UpdateFunctionConfigResponseRuntime
-	GO1_8           UpdateFunctionConfigResponseRuntime
-	GO1_X           UpdateFunctionConfigResponseRuntime
+	NODE_JS16_17    UpdateFunctionConfigResponseRuntime
+	NODE_JS18_15    UpdateFunctionConfigResponseRuntime
 	C__NET_CORE_2_0 UpdateFunctionConfigResponseRuntime
 	C__NET_CORE_2_1 UpdateFunctionConfigResponseRuntime
 	C__NET_CORE_3_1 UpdateFunctionConfigResponseRuntime
-	PHP7_3          UpdateFunctionConfigResponseRuntime
-	PYTHON3_9       UpdateFunctionConfigResponseRuntime
+	C__NET_CORE_6_0 UpdateFunctionConfigResponseRuntime
 	CUSTOM          UpdateFunctionConfigResponseRuntime
+	PHP7_3          UpdateFunctionConfigResponseRuntime
+	CANGJIE1_0      UpdateFunctionConfigResponseRuntime
 	HTTP            UpdateFunctionConfigResponseRuntime
 	CUSTOM_IMAGE    UpdateFunctionConfigResponseRuntime
 }
@@ -189,6 +201,27 @@ func GetUpdateFunctionConfigResponseRuntimeEnum() UpdateFunctionConfigResponseRu
 		},
 		JAVA11: UpdateFunctionConfigResponseRuntime{
 			value: "Java11",
+		},
+		JAVA17: UpdateFunctionConfigResponseRuntime{
+			value: "Java17",
+		},
+		PYTHON2_7: UpdateFunctionConfigResponseRuntime{
+			value: "Python2.7",
+		},
+		PYTHON3_6: UpdateFunctionConfigResponseRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: UpdateFunctionConfigResponseRuntime{
+			value: "Python3.9",
+		},
+		PYTHON3_10: UpdateFunctionConfigResponseRuntime{
+			value: "Python3.10",
+		},
+		GO1_8: UpdateFunctionConfigResponseRuntime{
+			value: "Go1.8",
+		},
+		GO1_X: UpdateFunctionConfigResponseRuntime{
+			value: "Go1.x",
 		},
 		NODE_JS6_10: UpdateFunctionConfigResponseRuntime{
 			value: "Node.js6.10",
@@ -205,17 +238,11 @@ func GetUpdateFunctionConfigResponseRuntimeEnum() UpdateFunctionConfigResponseRu
 		NODE_JS14_18: UpdateFunctionConfigResponseRuntime{
 			value: "Node.js14.18",
 		},
-		PYTHON2_7: UpdateFunctionConfigResponseRuntime{
-			value: "Python2.7",
+		NODE_JS16_17: UpdateFunctionConfigResponseRuntime{
+			value: "Node.js16.17",
 		},
-		PYTHON3_6: UpdateFunctionConfigResponseRuntime{
-			value: "Python3.6",
-		},
-		GO1_8: UpdateFunctionConfigResponseRuntime{
-			value: "Go1.8",
-		},
-		GO1_X: UpdateFunctionConfigResponseRuntime{
-			value: "Go1.x",
+		NODE_JS18_15: UpdateFunctionConfigResponseRuntime{
+			value: "Node.js18.15",
 		},
 		C__NET_CORE_2_0: UpdateFunctionConfigResponseRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -226,14 +253,17 @@ func GetUpdateFunctionConfigResponseRuntimeEnum() UpdateFunctionConfigResponseRu
 		C__NET_CORE_3_1: UpdateFunctionConfigResponseRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP7_3: UpdateFunctionConfigResponseRuntime{
-			value: "PHP7.3",
-		},
-		PYTHON3_9: UpdateFunctionConfigResponseRuntime{
-			value: "Python3.9",
+		C__NET_CORE_6_0: UpdateFunctionConfigResponseRuntime{
+			value: "C#(.NET Core 6.0)",
 		},
 		CUSTOM: UpdateFunctionConfigResponseRuntime{
 			value: "Custom",
+		},
+		PHP7_3: UpdateFunctionConfigResponseRuntime{
+			value: "PHP7.3",
+		},
+		CANGJIE1_0: UpdateFunctionConfigResponseRuntime{
+			value: "Cangjie1.0",
 		},
 		HTTP: UpdateFunctionConfigResponseRuntime{
 			value: "http",

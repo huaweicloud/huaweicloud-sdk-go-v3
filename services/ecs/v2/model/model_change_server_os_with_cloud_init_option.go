@@ -25,6 +25,9 @@ type ChangeServerOsWithCloudInitOption struct {
 
 	// 取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
 	Mode *string `json:"mode,omitempty"`
+
+	// 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
+	IsAutoPay *string `json:"isAutoPay,omitempty"`
 }
 
 func (o ChangeServerOsWithCloudInitOption) String() string {

@@ -8,7 +8,7 @@ import (
 
 // CreateQueuePropertyRequestBody 新加队列属性值时对应的属性信息
 type CreateQueuePropertyRequestBody struct {
-	Properties *CreateQueuePropertyRequestBodyProperties `json:"properties,omitempty"`
+	Properties *CommonQueueProperty `json:"properties,omitempty"`
 }
 
 func (o CreateQueuePropertyRequestBody) String() string {

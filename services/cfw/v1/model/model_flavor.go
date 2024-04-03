@@ -40,6 +40,18 @@ type Flavor struct {
 
 	// vpc间带宽
 	VpcBandwith *int32 `json:"vpc_bandwith,omitempty"`
+
+	// 默认防火墙带宽
+	DefaultBandwidth *int32 `json:"default_bandwidth,omitempty"`
+
+	// 默认eip数
+	DefaultEipCount *int32 `json:"default_eip_count,omitempty"`
+
+	// 默认日志存储
+	DefaultLogStorage *int32 `json:"default_log_storage,omitempty"`
+
+	// 默认vpc数
+	DefaultVpcCount *int32 `json:"default_vpc_count,omitempty"`
 }
 
 func (o Flavor) String() string {

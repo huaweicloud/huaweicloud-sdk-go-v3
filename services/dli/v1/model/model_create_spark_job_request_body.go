@@ -40,10 +40,10 @@ type CreateSparkJobRequestBody struct {
 	Modules *[]string `json:"modules,omitempty"`
 
 	// JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
-	Resources *[]SparkJobResource `json:"resources,omitempty"`
+	Resources *[]JobResource `json:"resources,omitempty"`
 
 	// JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
-	Groups *[]SparkJobGroup `json:"groups,omitempty"`
+	Groups *[]JobResourcesGroup `json:"groups,omitempty"`
 
 	// batch配置项。
 	Conf map[string]interface{} `json:"conf,omitempty"`

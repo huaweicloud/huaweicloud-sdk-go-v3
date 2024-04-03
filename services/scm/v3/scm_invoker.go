@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/scm/v3/model"
 )
 
+type ApplyCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyCertificateInvoker) Invoke() (*model.ApplyCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyCertificateResponse), nil
+	}
+}
+
 type BatchPushCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +89,18 @@ func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, err
 	}
 }
 
+type ListDeployedResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDeployedResourcesInvoker) Invoke() (*model.ListDeployedResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDeployedResourcesResponse), nil
+	}
+}
+
 type PushCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,5 +122,29 @@ func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowCertificateResponse), nil
+	}
+}
+
+type SubscribeCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SubscribeCertificateInvoker) Invoke() (*model.SubscribeCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SubscribeCertificateResponse), nil
+	}
+}
+
+type UnsubscribeCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribeCertificateInvoker) Invoke() (*model.UnsubscribeCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnsubscribeCertificateResponse), nil
 	}
 }

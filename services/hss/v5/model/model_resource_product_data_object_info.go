@@ -9,7 +9,7 @@ import (
 type ResourceProductDataObjectInfo struct {
 
 	// 计费模式   - packet_cycle : 包周期   - on_demand : 按需
-	ChargingMode *interface{} `json:"charging_mode,omitempty"`
+	ChargingMode *string `json:"charging_mode,omitempty"`
 
 	// 是否自动续费
 	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`

@@ -208,6 +208,27 @@ func (c *CloudtestClient) ListTestCasesInvoker(request *model.ListTestCasesReque
 	return &ListTestCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTestcasesByProjectIssuesRelation 查询项目下关联了需求的用例列表
+//
+// 查询项目下关联了需求的用例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTestcasesByProjectIssuesRelation(request *model.ListTestcasesByProjectIssuesRelationRequest) (*model.ListTestcasesByProjectIssuesRelationResponse, error) {
+	requestDef := GenReqDefForListTestcasesByProjectIssuesRelation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTestcasesByProjectIssuesRelationResponse), nil
+	}
+}
+
+// ListTestcasesByProjectIssuesRelationInvoker 查询项目下关联了需求的用例列表
+func (c *CloudtestClient) ListTestcasesByProjectIssuesRelationInvoker(request *model.ListTestcasesByProjectIssuesRelationRequest) *ListTestcasesByProjectIssuesRelationInvoker {
+	requestDef := GenReqDefForListTestcasesByProjectIssuesRelation()
+	return &ListTestcasesByProjectIssuesRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunTestCase 批量执行测试用例
 //
 // 批量执行测试用例

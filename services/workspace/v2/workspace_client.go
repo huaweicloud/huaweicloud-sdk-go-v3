@@ -397,6 +397,27 @@ func (c *WorkspaceClient) BatchRunDesktopsInvoker(request *model.BatchRunDesktop
 	return &BatchRunDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelRemoteAssistance 取消远程协助
+//
+// 取消远程协助。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CancelRemoteAssistance(request *model.CancelRemoteAssistanceRequest) (*model.CancelRemoteAssistanceResponse, error) {
+	requestDef := GenReqDefForCancelRemoteAssistance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelRemoteAssistanceResponse), nil
+	}
+}
+
+// CancelRemoteAssistanceInvoker 取消远程协助
+func (c *WorkspaceClient) CancelRemoteAssistanceInvoker(request *model.CancelRemoteAssistanceRequest) *CancelRemoteAssistanceInvoker {
+	requestDef := GenReqDefForCancelRemoteAssistance()
+	return &CancelRemoteAssistanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeDesktopNetwork 切换桌面网络
 //
 // 切换桌面vpc、子网、ip、安全组
@@ -437,6 +458,27 @@ func (c *WorkspaceClient) CreateDesktop(request *model.CreateDesktopRequest) (*m
 func (c *WorkspaceClient) CreateDesktopInvoker(request *model.CreateDesktopRequest) *CreateDesktopInvoker {
 	requestDef := GenReqDefForCreateDesktop()
 	return &CreateDesktopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRemoteAssistance 创建远程协助
+//
+// 创建远程协助。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateRemoteAssistance(request *model.CreateRemoteAssistanceRequest) (*model.CreateRemoteAssistanceResponse, error) {
+	requestDef := GenReqDefForCreateRemoteAssistance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRemoteAssistanceResponse), nil
+	}
+}
+
+// CreateRemoteAssistanceInvoker 创建远程协助
+func (c *WorkspaceClient) CreateRemoteAssistanceInvoker(request *model.CreateRemoteAssistanceRequest) *CreateRemoteAssistanceInvoker {
+	requestDef := GenReqDefForCreateRemoteAssistance()
+	return &CreateRemoteAssistanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDesktop 删除单个桌面
@@ -584,6 +626,27 @@ func (c *WorkspaceClient) ShowDesktopNetwork(request *model.ShowDesktopNetworkRe
 func (c *WorkspaceClient) ShowDesktopNetworkInvoker(request *model.ShowDesktopNetworkRequest) *ShowDesktopNetworkInvoker {
 	requestDef := GenReqDefForShowDesktopNetwork()
 	return &ShowDesktopNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDesktopRemoteAssistanceInfo 根据桌面id查询远程协助信息
+//
+// 根据桌面id查询远程协助信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowDesktopRemoteAssistanceInfo(request *model.ShowDesktopRemoteAssistanceInfoRequest) (*model.ShowDesktopRemoteAssistanceInfoResponse, error) {
+	requestDef := GenReqDefForShowDesktopRemoteAssistanceInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDesktopRemoteAssistanceInfoResponse), nil
+	}
+}
+
+// ShowDesktopRemoteAssistanceInfoInvoker 根据桌面id查询远程协助信息
+func (c *WorkspaceClient) ShowDesktopRemoteAssistanceInfoInvoker(request *model.ShowDesktopRemoteAssistanceInfoRequest) *ShowDesktopRemoteAssistanceInfoInvoker {
+	requestDef := GenReqDefForShowDesktopRemoteAssistanceInfo()
+	return &ShowDesktopRemoteAssistanceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteDesktopNamePolicy 批量删除桌面名称策略

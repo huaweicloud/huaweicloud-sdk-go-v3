@@ -12,7 +12,7 @@ type DeleteQueuePropertyRequest struct {
 	// 队列名称
 	QueueName string `json:"queue_name"`
 
-	Body *DeleteQueuePropertiesRequestBody `json:"body,omitempty"`
+	Body *DeleteQueuePropertyRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteQueuePropertyRequest) String() string {

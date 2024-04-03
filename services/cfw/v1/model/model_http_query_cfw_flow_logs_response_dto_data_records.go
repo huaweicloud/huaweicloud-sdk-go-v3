@@ -49,6 +49,18 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 
 	// 目标主机
 	DstHost *string `json:"dst_host,omitempty"`
+
+	// 目的地域id
+	DstRegionId *string `json:"dst_region_id,omitempty"`
+
+	// 目的地域名称
+	DstRegionName *string `json:"dst_region_name,omitempty"`
+
+	// 源地域id
+	SrcRegionId *string `json:"src_region_id,omitempty"`
+
+	// 源地域名称
+	SrcRegionName *string `json:"src_region_name,omitempty"`
 }
 
 func (o HttpQueryCfwFlowLogsResponseDtoDataRecords) String() string {

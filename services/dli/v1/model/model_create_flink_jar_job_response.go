@@ -15,8 +15,8 @@ type CreateFlinkJarJobResponse struct {
 	// 消息内容
 	Message *string `json:"message,omitempty"`
 
-	Job            *FlinkJob `json:"job,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Job            *FlinkJobStatus `json:"job,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o CreateFlinkJarJobResponse) String() string {

@@ -25,6 +25,9 @@ type ChangeServerOsWithoutCloudInitOption struct {
 	Mode *string `json:"mode,omitempty"`
 
 	Metadata *ChangeSeversOsMetadataWithoutCloudInitOption `json:"metadata,omitempty"`
+
+	// 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
+	IsAutoPay *string `json:"isAutoPay,omitempty"`
 }
 
 func (o ChangeServerOsWithoutCloudInitOption) String() string {

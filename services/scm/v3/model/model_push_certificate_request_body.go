@@ -8,7 +8,7 @@ import (
 
 type PushCertificateRequestBody struct {
 
-	// 推送到的目标服务所在的区域，CDN支持区域固定为：Global。
+	// 推送到的目标服务所在的区域。
 	TargetProject string `json:"target_project"`
 
 	// 证书推送的目标服务，当前仅支持：CDN、WAF、ELB。

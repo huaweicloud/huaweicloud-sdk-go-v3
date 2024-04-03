@@ -586,6 +586,27 @@ func (c *KmsClient) EncryptDatakeyInvoker(request *model.EncryptDatakeyRequest) 
 	return &EncryptDatakeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GenerateMac 生成消息验证码
+//
+// 功能介绍：生成消息验证码
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) GenerateMac(request *model.GenerateMacRequest) (*model.GenerateMacResponse, error) {
+	requestDef := GenReqDefForGenerateMac()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GenerateMacResponse), nil
+	}
+}
+
+// GenerateMacInvoker 生成消息验证码
+func (c *KmsClient) GenerateMacInvoker(request *model.GenerateMacRequest) *GenerateMacInvoker {
+	requestDef := GenReqDefForGenerateMac()
+	return &GenerateMacInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportKeyMaterial 导入密钥材料
 //
 // - 功能介绍：导入密钥材料。
@@ -989,6 +1010,27 @@ func (c *KmsClient) ValidateSignature(request *model.ValidateSignatureRequest) (
 func (c *KmsClient) ValidateSignatureInvoker(request *model.ValidateSignatureRequest) *ValidateSignatureInvoker {
 	requestDef := GenReqDefForValidateSignature()
 	return &ValidateSignatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// VerifyMac 校验消息验证码
+//
+// 功能介绍：校验消息验证码
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) VerifyMac(request *model.VerifyMacRequest) (*model.VerifyMacResponse, error) {
+	requestDef := GenReqDefForVerifyMac()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.VerifyMacResponse), nil
+	}
+}
+
+// VerifyMacInvoker 校验消息验证码
+func (c *KmsClient) VerifyMacInvoker(request *model.VerifyMacRequest) *VerifyMacInvoker {
+	requestDef := GenReqDefForVerifyMac()
+	return &VerifyMacInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVersion 查询指定版本信息

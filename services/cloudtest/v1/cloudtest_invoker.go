@@ -113,6 +113,18 @@ func (i *ListTestCasesInvoker) Invoke() (*model.ListTestCasesResponse, error) {
 	}
 }
 
+type ListTestcasesByProjectIssuesRelationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestcasesByProjectIssuesRelationInvoker) Invoke() (*model.ListTestcasesByProjectIssuesRelationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestcasesByProjectIssuesRelationResponse), nil
+	}
+}
+
 type RunTestCaseInvoker struct {
 	*invoker.BaseInvoker
 }

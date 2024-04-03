@@ -1145,27 +1145,6 @@ func (c *EcsClient) NovaShowServerInterfaceInvoker(request *model.NovaShowServer
 	return &NovaShowServerInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RegisterServerAutoRecovery 管理云服务器自动恢复动作
-//
-// 配置、删除云服务器自动恢复动作。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EcsClient) RegisterServerAutoRecovery(request *model.RegisterServerAutoRecoveryRequest) (*model.RegisterServerAutoRecoveryResponse, error) {
-	requestDef := GenReqDefForRegisterServerAutoRecovery()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RegisterServerAutoRecoveryResponse), nil
-	}
-}
-
-// RegisterServerAutoRecoveryInvoker 管理云服务器自动恢复动作
-func (c *EcsClient) RegisterServerAutoRecoveryInvoker(request *model.RegisterServerAutoRecoveryRequest) *RegisterServerAutoRecoveryInvoker {
-	requestDef := GenReqDefForRegisterServerAutoRecovery()
-	return &RegisterServerAutoRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RegisterServerMonitor 注册云服务器监控
 //
 // 将云服务器添加到监控表中。
@@ -1352,27 +1331,6 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 func (c *EcsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowServerInvoker {
 	requestDef := GenReqDefForShowServer()
 	return &ShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowServerAutoRecovery 查询云服务器是否配置了自动恢复动作
-//
-// 查询云服务器是否配置了自动恢复动作。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EcsClient) ShowServerAutoRecovery(request *model.ShowServerAutoRecoveryRequest) (*model.ShowServerAutoRecoveryResponse, error) {
-	requestDef := GenReqDefForShowServerAutoRecovery()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowServerAutoRecoveryResponse), nil
-	}
-}
-
-// ShowServerAutoRecoveryInvoker 查询云服务器是否配置了自动恢复动作
-func (c *EcsClient) ShowServerAutoRecoveryInvoker(request *model.ShowServerAutoRecoveryRequest) *ShowServerAutoRecoveryInvoker {
-	requestDef := GenReqDefForShowServerAutoRecovery()
-	return &ShowServerAutoRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowServerBlockDevice 查询弹性云服务器单个磁盘信息

@@ -39,6 +39,9 @@ type FirewallInstanceVo struct {
 
 	// 防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
 	Status *int32 `json:"status,omitempty"`
+
+	// 标签列表
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o FirewallInstanceVo) String() string {

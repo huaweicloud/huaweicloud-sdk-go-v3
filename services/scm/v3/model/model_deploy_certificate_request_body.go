@@ -8,10 +8,10 @@ import (
 
 type DeployCertificateRequestBody struct {
 
-	// 部署的资源所在的项目名称，若在主项目下，则该值为region id，CDN支持区域固定为：Global。
+	// 部署的资源所在的项目名称，若在主项目下，则该值为region id。
 	ProjectName *string `json:"project_name,omitempty"`
 
-	// 证书部署到资源的目标服务，当前仅支持：CDN、WAF、ELB。
+	// 证书推送的目标服务，当前仅支持：CDN、WAF、ELB。
 	ServiceName string `json:"service_name"`
 
 	// 所要部署的资源列表。

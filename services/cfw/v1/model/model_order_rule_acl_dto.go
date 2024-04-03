@@ -14,6 +14,9 @@ type OrderRuleAclDto struct {
 
 	// 是否置顶，0代表非置顶，1代表置顶
 	Top *int32 `json:"top,omitempty"`
+
+	// 是否置底，0代表非置底，1代表置底
+	Bottom *int32 `json:"bottom,omitempty"`
 }
 
 func (o OrderRuleAclDto) String() string {

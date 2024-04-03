@@ -77,6 +77,12 @@ type ListProjectGeipBindingsRequest struct {
 
 	// 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 分页起始点
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 分页起始点
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListProjectGeipBindingsRequest) String() string {

@@ -12,7 +12,7 @@ type CreateConsumerGroupOrBatchDeleteConsumerGroupRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 批量删除消费组时使用，不配置则为创建接口。
+	// 批量删除消费组时使用，不配置则为创建接口。删除操作：delete。
 	Action *string `json:"action,omitempty"`
 
 	Body *CreateConsumerGroupOrBatchDeleteConsumerGroupReq `json:"body,omitempty"`

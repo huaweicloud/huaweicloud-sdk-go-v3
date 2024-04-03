@@ -606,18 +606,6 @@ func (i *NovaShowServerInterfaceInvoker) Invoke() (*model.NovaShowServerInterfac
 	}
 }
 
-type RegisterServerAutoRecoveryInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RegisterServerAutoRecoveryInvoker) Invoke() (*model.RegisterServerAutoRecoveryResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RegisterServerAutoRecoveryResponse), nil
-	}
-}
-
 type RegisterServerMonitorInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -711,18 +699,6 @@ func (i *ShowServerInvoker) Invoke() (*model.ShowServerResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowServerResponse), nil
-	}
-}
-
-type ShowServerAutoRecoveryInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowServerAutoRecoveryInvoker) Invoke() (*model.ShowServerAutoRecoveryResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowServerAutoRecoveryResponse), nil
 	}
 }
 

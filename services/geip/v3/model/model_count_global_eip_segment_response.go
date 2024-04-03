@@ -12,7 +12,7 @@ type CountGlobalEipSegmentResponse struct {
 	// 本次请求的编号
 	RequestId *string `json:"request_id,omitempty"`
 
-	GlobalEipSegments *CountGeipSegments `json:"global_eip_segments,omitempty"`
+	GlobalEipSegment *CountGeipSegments `json:"global_eip_segment,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

@@ -19,9 +19,30 @@ func ScmClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ApplyCertificate 申请证书
+//
+// 申请证书。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ApplyCertificate(request *model.ApplyCertificateRequest) (*model.ApplyCertificateResponse, error) {
+	requestDef := GenReqDefForApplyCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyCertificateResponse), nil
+	}
+}
+
+// ApplyCertificateInvoker 申请证书
+func (c *ScmClient) ApplyCertificateInvoker(request *model.ApplyCertificateRequest) *ApplyCertificateInvoker {
+	requestDef := GenReqDefForApplyCertificate()
+	return &ApplyCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchPushCertificate 批量推送证书
 //
-// 批量推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它云产品多个region中。
+// 批量推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) BatchPushCertificate(request *model.BatchPushCertificateRequest) (*model.BatchPushCertificateResponse, error) {
@@ -63,7 +84,7 @@ func (c *ScmClient) DeleteCertificateInvoker(request *model.DeleteCertificateReq
 
 // DeployCertificate 部署证书
 //
-// 部署SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它云产品中。
+// 部署SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) DeployCertificate(request *model.DeployCertificateRequest) (*model.DeployCertificateResponse, error) {
@@ -145,9 +166,30 @@ func (c *ScmClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDeployedResources 查询已部署资源
+//
+// 查询证书已部署的具体资源。针对已签发和上传的非国密证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ListDeployedResources(request *model.ListDeployedResourcesRequest) (*model.ListDeployedResourcesResponse, error) {
+	requestDef := GenReqDefForListDeployedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeployedResourcesResponse), nil
+	}
+}
+
+// ListDeployedResourcesInvoker 查询已部署资源
+func (c *ScmClient) ListDeployedResourcesInvoker(request *model.ListDeployedResourcesRequest) *ListDeployedResourcesInvoker {
+	requestDef := GenReqDefForListDeployedResources()
+	return &ListDeployedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PushCertificate 推送证书
 //
-// 推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它云产品中。
+// 推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) PushCertificate(request *model.PushCertificateRequest) (*model.PushCertificateResponse, error) {
@@ -185,4 +227,46 @@ func (c *ScmClient) ShowCertificate(request *model.ShowCertificateRequest) (*mod
 func (c *ScmClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
 	requestDef := GenReqDefForShowCertificate()
 	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SubscribeCertificate 购买SSL证书
+//
+// 购买SSL证书。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) SubscribeCertificate(request *model.SubscribeCertificateRequest) (*model.SubscribeCertificateResponse, error) {
+	requestDef := GenReqDefForSubscribeCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SubscribeCertificateResponse), nil
+	}
+}
+
+// SubscribeCertificateInvoker 购买SSL证书
+func (c *ScmClient) SubscribeCertificateInvoker(request *model.SubscribeCertificateRequest) *SubscribeCertificateInvoker {
+	requestDef := GenReqDefForSubscribeCertificate()
+	return &SubscribeCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnsubscribeCertificate 退订证书
+//
+// 退订证书。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) UnsubscribeCertificate(request *model.UnsubscribeCertificateRequest) (*model.UnsubscribeCertificateResponse, error) {
+	requestDef := GenReqDefForUnsubscribeCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnsubscribeCertificateResponse), nil
+	}
+}
+
+// UnsubscribeCertificateInvoker 退订证书
+func (c *ScmClient) UnsubscribeCertificateInvoker(request *model.UnsubscribeCertificateRequest) *UnsubscribeCertificateInvoker {
+	requestDef := GenReqDefForUnsubscribeCertificate()
+	return &UnsubscribeCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

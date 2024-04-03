@@ -68,6 +68,12 @@ type ListAccessControlLogsRequest struct {
 
 	// 动作0：permit,1：deny
 	Action *string `json:"action,omitempty"`
+
+	// 源region名称
+	SrcRegionName *string `json:"src_region_name,omitempty"`
+
+	// 目的region名称
+	DstRegionName *string `json:"dst_region_name,omitempty"`
 }
 
 func (o ListAccessControlLogsRequest) String() string {

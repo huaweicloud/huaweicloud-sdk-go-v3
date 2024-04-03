@@ -665,6 +665,18 @@ func (i *ShowPolicyAssignmentInvoker) Invoke() (*model.ShowPolicyAssignmentRespo
 	}
 }
 
+type UpdateOrganizationPolicyAssignmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOrganizationPolicyAssignmentInvoker) Invoke() (*model.UpdateOrganizationPolicyAssignmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOrganizationPolicyAssignmentResponse), nil
+	}
+}
+
 type UpdatePolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
 }

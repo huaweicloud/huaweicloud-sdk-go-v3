@@ -16,7 +16,7 @@ type ListSparkJobsResponse struct {
 	Total *int32 `json:"total,omitempty"`
 
 	// 批处理作业信息。
-	Sessions *[]SparkJobSession `json:"sessions,omitempty"`
+	Sessions *[]SparkJob `json:"sessions,omitempty"`
 
 	// 批处理作业的创建时间。
 	CreateTime     *int64 `json:"create_time,omitempty"`

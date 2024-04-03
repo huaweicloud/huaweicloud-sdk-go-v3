@@ -8,7 +8,7 @@ import (
 
 type CountGeipSegments struct {
 
-	// Geip Segment Count
+	// 全域弹性公网IP段个数
 	Count int32 `json:"count"`
 }
 

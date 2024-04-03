@@ -62,6 +62,9 @@ type ListAclRulesRequest struct {
 
 	// 服务端口
 	Service *string `json:"service,omitempty"`
+
+	// 应用
+	Application *string `json:"application,omitempty"`
 }
 
 func (o ListAclRulesRequest) String() string {

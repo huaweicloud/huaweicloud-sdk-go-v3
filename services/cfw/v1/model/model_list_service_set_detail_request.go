@@ -17,6 +17,9 @@ type ListServiceSetDetailRequest struct {
 
 	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
 	FwInstanceId *string `json:"fw_instance_id,omitempty"`
+
+	// 查询服务组类型，0表示自定义服务组，1表示预定义服务组
+	QueryServiceSetType *int32 `json:"query_service_set_type,omitempty"`
 }
 
 func (o ListServiceSetDetailRequest) String() string {

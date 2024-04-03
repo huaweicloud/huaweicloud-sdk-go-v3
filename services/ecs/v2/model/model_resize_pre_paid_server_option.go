@@ -19,6 +19,8 @@ type ResizePrePaidServerOption struct {
 
 	// 取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
 	Mode *string `json:"mode,omitempty"`
+
+	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
 }
 
 func (o ResizePrePaidServerOption) String() string {

@@ -14,7 +14,7 @@ type BatchPushCertificateResponseBodyResults struct {
 	// 目标证书ID。
 	CertId *string `json:"cert_id,omitempty"`
 
-	// 推送结果
+	// 推送结果。
 	Message *string `json:"message,omitempty"`
 }
 

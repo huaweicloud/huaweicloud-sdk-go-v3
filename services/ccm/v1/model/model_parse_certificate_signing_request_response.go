@@ -13,7 +13,7 @@ type ParseCertificateSigningRequestResponse struct {
 	KeyAlgorithm *string `json:"key_algorithm,omitempty"`
 
 	// 密钥算法长度，单位为bit。
-	KeyAlgorithmLength *string `json:"key_algorithm_length,omitempty"`
+	KeyAlgorithmLength *int32 `json:"key_algorithm_length,omitempty"`
 
 	// 签名算法，带具体的签名与哈希算法，如\"SHA256withRSA\"。
 	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`

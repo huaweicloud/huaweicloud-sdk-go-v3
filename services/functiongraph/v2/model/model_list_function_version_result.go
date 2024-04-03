@@ -28,7 +28,7 @@ type ListFunctionVersionResult struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package string `json:"package"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+	// FunctionGraph函数的执行环境 Java8: Java语言8版本。 Java11: Java语言11版本。 Java17: Java语言17版本（当前仅支持华北-乌兰察布二零二） Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Python3.10: Python语言3.10版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 Node.js16.17: Nodejs语言16.17版本。 Node.js18.15: Nodejs语言18.15版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 C#(.NET Core 6.0): C#语言6.0版本（当前仅支持华北-乌兰察布二零二）。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Cangjie1.0：仓颉语言1.0版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime ListFunctionVersionResultRuntime `json:"runtime"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
@@ -110,9 +110,6 @@ type ListFunctionVersionResult struct {
 	// 函数版本
 	Type *string `json:"type,omitempty"`
 
-	// 是否启用cloud debug功能
-	EnableCloudDebug *string `json:"enable_cloud_debug,omitempty"`
-
 	// 是否启用动态内存功能
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
 
@@ -147,21 +144,27 @@ type ListFunctionVersionResultRuntime struct {
 type ListFunctionVersionResultRuntimeEnum struct {
 	JAVA8           ListFunctionVersionResultRuntime
 	JAVA11          ListFunctionVersionResultRuntime
+	JAVA17          ListFunctionVersionResultRuntime
+	PYTHON2_7       ListFunctionVersionResultRuntime
+	PYTHON3_6       ListFunctionVersionResultRuntime
+	PYTHON3_9       ListFunctionVersionResultRuntime
+	PYTHON3_10      ListFunctionVersionResultRuntime
+	GO1_8           ListFunctionVersionResultRuntime
+	GO1_X           ListFunctionVersionResultRuntime
 	NODE_JS6_10     ListFunctionVersionResultRuntime
 	NODE_JS8_10     ListFunctionVersionResultRuntime
 	NODE_JS10_16    ListFunctionVersionResultRuntime
 	NODE_JS12_13    ListFunctionVersionResultRuntime
 	NODE_JS14_18    ListFunctionVersionResultRuntime
-	PYTHON2_7       ListFunctionVersionResultRuntime
-	PYTHON3_6       ListFunctionVersionResultRuntime
-	GO1_8           ListFunctionVersionResultRuntime
-	GO1_X           ListFunctionVersionResultRuntime
+	NODE_JS16_17    ListFunctionVersionResultRuntime
+	NODE_JS18_15    ListFunctionVersionResultRuntime
 	C__NET_CORE_2_0 ListFunctionVersionResultRuntime
 	C__NET_CORE_2_1 ListFunctionVersionResultRuntime
 	C__NET_CORE_3_1 ListFunctionVersionResultRuntime
-	PHP7_3          ListFunctionVersionResultRuntime
-	PYTHON3_9       ListFunctionVersionResultRuntime
+	C__NET_CORE_6_0 ListFunctionVersionResultRuntime
 	CUSTOM          ListFunctionVersionResultRuntime
+	PHP7_3          ListFunctionVersionResultRuntime
+	CANGJIE1_0      ListFunctionVersionResultRuntime
 	HTTP            ListFunctionVersionResultRuntime
 	CUSTOM_IMAGE    ListFunctionVersionResultRuntime
 }
@@ -173,6 +176,27 @@ func GetListFunctionVersionResultRuntimeEnum() ListFunctionVersionResultRuntimeE
 		},
 		JAVA11: ListFunctionVersionResultRuntime{
 			value: "Java11",
+		},
+		JAVA17: ListFunctionVersionResultRuntime{
+			value: "Java17",
+		},
+		PYTHON2_7: ListFunctionVersionResultRuntime{
+			value: "Python2.7",
+		},
+		PYTHON3_6: ListFunctionVersionResultRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: ListFunctionVersionResultRuntime{
+			value: "Python3.9",
+		},
+		PYTHON3_10: ListFunctionVersionResultRuntime{
+			value: "Python3.10",
+		},
+		GO1_8: ListFunctionVersionResultRuntime{
+			value: "Go1.8",
+		},
+		GO1_X: ListFunctionVersionResultRuntime{
+			value: "Go1.x",
 		},
 		NODE_JS6_10: ListFunctionVersionResultRuntime{
 			value: "Node.js6.10",
@@ -189,17 +213,11 @@ func GetListFunctionVersionResultRuntimeEnum() ListFunctionVersionResultRuntimeE
 		NODE_JS14_18: ListFunctionVersionResultRuntime{
 			value: "Node.js14.18",
 		},
-		PYTHON2_7: ListFunctionVersionResultRuntime{
-			value: "Python2.7",
+		NODE_JS16_17: ListFunctionVersionResultRuntime{
+			value: "Node.js16.17",
 		},
-		PYTHON3_6: ListFunctionVersionResultRuntime{
-			value: "Python3.6",
-		},
-		GO1_8: ListFunctionVersionResultRuntime{
-			value: "Go1.8",
-		},
-		GO1_X: ListFunctionVersionResultRuntime{
-			value: "Go1.x",
+		NODE_JS18_15: ListFunctionVersionResultRuntime{
+			value: "Node.js18.15",
 		},
 		C__NET_CORE_2_0: ListFunctionVersionResultRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -210,14 +228,17 @@ func GetListFunctionVersionResultRuntimeEnum() ListFunctionVersionResultRuntimeE
 		C__NET_CORE_3_1: ListFunctionVersionResultRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP7_3: ListFunctionVersionResultRuntime{
-			value: "PHP7.3",
-		},
-		PYTHON3_9: ListFunctionVersionResultRuntime{
-			value: "Python3.9",
+		C__NET_CORE_6_0: ListFunctionVersionResultRuntime{
+			value: "C#(.NET Core 6.0)",
 		},
 		CUSTOM: ListFunctionVersionResultRuntime{
 			value: "Custom",
+		},
+		PHP7_3: ListFunctionVersionResultRuntime{
+			value: "PHP7.3",
+		},
+		CANGJIE1_0: ListFunctionVersionResultRuntime{
+			value: "Cangjie1.0",
 		},
 		HTTP: ListFunctionVersionResultRuntime{
 			value: "http",

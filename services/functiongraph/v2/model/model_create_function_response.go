@@ -32,7 +32,7 @@ type CreateFunctionResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Java8: Java语言8版本。 Java11: Java语言11版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+	// FunctionGraph函数的执行环境 Java8: Java语言8版本。 Java11: Java语言11版本。 Java17: Java语言17版本（当前仅支持华北-乌兰察布二零二） Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Python3.10: Python语言3.10版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 Node.js16.17: Nodejs语言16.17版本。 Node.js18.15: Nodejs语言18.15版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 C#(.NET Core 6.0): C#语言6.0版本（当前仅支持华北-乌兰察布二零二）。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Cangjie1.0：仓颉语言1.0版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime *CreateFunctionResponseRuntime `json:"runtime,omitempty"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
@@ -140,7 +140,7 @@ type CreateFunctionResponse struct {
 	// v2表示为正式版本,v1为废弃版本。
 	Type *CreateFunctionResponseType `json:"type,omitempty"`
 
-	// 是否启用cloud debug功能
+	// 适配CloudDebug场景，是否开启云调试（已废弃）
 	EnableCloudDebug *string `json:"enable_cloud_debug,omitempty"`
 
 	// 是否启动动态内存配置
@@ -148,9 +148,6 @@ type CreateFunctionResponse struct {
 
 	// 是否支持有状态，如果需要支持，需要固定传参为true，v2版本支持
 	IsStatefulFunction *bool `json:"is_stateful_function,omitempty"`
-
-	// 是否允许在请求头中添加鉴权信息
-	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
 
 	CustomImage *CustomImage `json:"custom_image,omitempty"`
 
@@ -178,8 +175,14 @@ type CreateFunctionResponse struct {
 	NetworkController *NetworkControlConfig `json:"network_controller,omitempty"`
 
 	// 资源id。
-	ResourceId     *string `json:"resource_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ResourceId *string `json:"resource_id,omitempty"`
+
+	// 是否返回流式数据（已废弃）
+	IsReturnStream *bool `json:"is_return_stream,omitempty"`
+
+	// 是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
+	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
+	HttpStatusCode     int   `json:"-"`
 }
 
 func (o CreateFunctionResponse) String() string {
@@ -198,21 +201,27 @@ type CreateFunctionResponseRuntime struct {
 type CreateFunctionResponseRuntimeEnum struct {
 	JAVA8           CreateFunctionResponseRuntime
 	JAVA11          CreateFunctionResponseRuntime
+	JAVA17          CreateFunctionResponseRuntime
+	PYTHON2_7       CreateFunctionResponseRuntime
+	PYTHON3_6       CreateFunctionResponseRuntime
+	PYTHON3_9       CreateFunctionResponseRuntime
+	PYTHON3_10      CreateFunctionResponseRuntime
+	GO1_8           CreateFunctionResponseRuntime
+	GO1_X           CreateFunctionResponseRuntime
 	NODE_JS6_10     CreateFunctionResponseRuntime
 	NODE_JS8_10     CreateFunctionResponseRuntime
 	NODE_JS10_16    CreateFunctionResponseRuntime
 	NODE_JS12_13    CreateFunctionResponseRuntime
 	NODE_JS14_18    CreateFunctionResponseRuntime
-	PYTHON2_7       CreateFunctionResponseRuntime
-	PYTHON3_6       CreateFunctionResponseRuntime
-	GO1_8           CreateFunctionResponseRuntime
-	GO1_X           CreateFunctionResponseRuntime
+	NODE_JS16_17    CreateFunctionResponseRuntime
+	NODE_JS18_15    CreateFunctionResponseRuntime
 	C__NET_CORE_2_0 CreateFunctionResponseRuntime
 	C__NET_CORE_2_1 CreateFunctionResponseRuntime
 	C__NET_CORE_3_1 CreateFunctionResponseRuntime
-	PHP7_3          CreateFunctionResponseRuntime
-	PYTHON3_9       CreateFunctionResponseRuntime
+	C__NET_CORE_6_0 CreateFunctionResponseRuntime
 	CUSTOM          CreateFunctionResponseRuntime
+	PHP7_3          CreateFunctionResponseRuntime
+	CANGJIE1_0      CreateFunctionResponseRuntime
 	HTTP            CreateFunctionResponseRuntime
 	CUSTOM_IMAGE    CreateFunctionResponseRuntime
 }
@@ -224,6 +233,27 @@ func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
 		},
 		JAVA11: CreateFunctionResponseRuntime{
 			value: "Java11",
+		},
+		JAVA17: CreateFunctionResponseRuntime{
+			value: "Java17",
+		},
+		PYTHON2_7: CreateFunctionResponseRuntime{
+			value: "Python2.7",
+		},
+		PYTHON3_6: CreateFunctionResponseRuntime{
+			value: "Python3.6",
+		},
+		PYTHON3_9: CreateFunctionResponseRuntime{
+			value: "Python3.9",
+		},
+		PYTHON3_10: CreateFunctionResponseRuntime{
+			value: "Python3.10",
+		},
+		GO1_8: CreateFunctionResponseRuntime{
+			value: "Go1.8",
+		},
+		GO1_X: CreateFunctionResponseRuntime{
+			value: "Go1.x",
 		},
 		NODE_JS6_10: CreateFunctionResponseRuntime{
 			value: "Node.js6.10",
@@ -240,17 +270,11 @@ func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
 		NODE_JS14_18: CreateFunctionResponseRuntime{
 			value: "Node.js14.18",
 		},
-		PYTHON2_7: CreateFunctionResponseRuntime{
-			value: "Python2.7",
+		NODE_JS16_17: CreateFunctionResponseRuntime{
+			value: "Node.js16.17",
 		},
-		PYTHON3_6: CreateFunctionResponseRuntime{
-			value: "Python3.6",
-		},
-		GO1_8: CreateFunctionResponseRuntime{
-			value: "Go1.8",
-		},
-		GO1_X: CreateFunctionResponseRuntime{
-			value: "Go1.x",
+		NODE_JS18_15: CreateFunctionResponseRuntime{
+			value: "Node.js18.15",
 		},
 		C__NET_CORE_2_0: CreateFunctionResponseRuntime{
 			value: "C#(.NET Core 2.0)",
@@ -261,14 +285,17 @@ func GetCreateFunctionResponseRuntimeEnum() CreateFunctionResponseRuntimeEnum {
 		C__NET_CORE_3_1: CreateFunctionResponseRuntime{
 			value: "C#(.NET Core 3.1)",
 		},
-		PHP7_3: CreateFunctionResponseRuntime{
-			value: "PHP7.3",
-		},
-		PYTHON3_9: CreateFunctionResponseRuntime{
-			value: "Python3.9",
+		C__NET_CORE_6_0: CreateFunctionResponseRuntime{
+			value: "C#(.NET Core 6.0)",
 		},
 		CUSTOM: CreateFunctionResponseRuntime{
 			value: "Custom",
+		},
+		PHP7_3: CreateFunctionResponseRuntime{
+			value: "PHP7.3",
+		},
+		CANGJIE1_0: CreateFunctionResponseRuntime{
+			value: "Cangjie1.0",
 		},
 		HTTP: CreateFunctionResponseRuntime{
 			value: "http",

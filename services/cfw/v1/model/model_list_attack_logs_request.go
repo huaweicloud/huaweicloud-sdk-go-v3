@@ -75,8 +75,17 @@ type ListAttackLogsRequest struct {
 	// 目标主机
 	DstHost *string `json:"dst_host,omitempty"`
 
-	// log_type
+	// 日志类型
 	LogType *ListAttackLogsRequestLogType `json:"log_type,omitempty"`
+
+	// 入侵事件id
+	AttackRuleId *string `json:"attack_rule_id,omitempty"`
+
+	// 源region名称
+	SrcRegionName *string `json:"src_region_name,omitempty"`
+
+	// 目的region名称
+	DstRegionName *string `json:"dst_region_name,omitempty"`
 }
 
 func (o ListAttackLogsRequest) String() string {

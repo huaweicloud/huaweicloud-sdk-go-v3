@@ -29,6 +29,12 @@ type UpdateRuleAclDto struct {
 	// 规则下发状态 0：禁用,1：启用
 	Status *int32 `json:"status,omitempty"`
 
+	// 应用列表
+	Applications *[]string `json:"applications,omitempty"`
+
+	// 应用列表转化为字符串
+	ApplicationsJsonString *string `json:"applicationsJsonString,omitempty"`
+
 	// 描述
 	Description *string `json:"description,omitempty"`
 
@@ -46,6 +52,8 @@ type UpdateRuleAclDto struct {
 
 	// 是否支持长连接，0表示不支持，1表示支持
 	LongConnectEnable *UpdateRuleAclDtoLongConnectEnable `json:"long_connect_enable,omitempty"`
+
+	Profile *RuleProfileDto `json:"profile,omitempty"`
 
 	Source *RuleAddressDto `json:"source,omitempty"`
 

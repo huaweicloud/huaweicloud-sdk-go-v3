@@ -38,6 +38,9 @@ type ListAddressSetsRequest struct {
 
 	// 查询地址组类型，0表示自定义地址组，1表示预定义地址组
 	QueryAddressSetType *int32 `json:"query_address_set_type,omitempty"`
+
+	// 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+	AddressSetType *int32 `json:"address_set_type,omitempty"`
 }
 
 func (o ListAddressSetsRequest) String() string {

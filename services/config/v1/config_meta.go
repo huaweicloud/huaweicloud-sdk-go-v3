@@ -625,6 +625,10 @@ func GenReqDefForListOrganizationConformancePackStatuses() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationConformancePackId").
+		WithJsonTag("organization_conformance_pack_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConformancePackName").
 		WithJsonTag("conformance_pack_name").
 		WithLocationType(def.Query))
@@ -652,6 +656,10 @@ func GenReqDefForListOrganizationConformancePacks() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
 		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationConformancePackId").
+		WithJsonTag("organization_conformance_pack_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConformancePackName").
@@ -734,6 +742,10 @@ func GenReqDefForShowOrganizationConformancePackDetailedStatuses() *def.HttpRequ
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConformancePackName").
 		WithJsonTag("conformance_pack_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationConformancePackId").
+		WithJsonTag("organization_conformance_pack_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("State").
@@ -920,6 +932,10 @@ func GenReqDefForListOrganizationPolicyAssignments() *def.HttpRequestDef {
 		WithJsonTag("organization_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationPolicyAssignmentId").
+		WithJsonTag("organization_policy_assignment_id").
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrganizationPolicyAssignmentName").
 		WithJsonTag("organization_policy_assignment_name").
@@ -1149,6 +1165,10 @@ func GenReqDefForShowOrganizationPolicyAssignmentDetailedStatus() *def.HttpReque
 		WithJsonTag("organization_policy_assignment_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationPolicyAssignmentId").
+		WithJsonTag("organization_policy_assignment_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Status").
 		WithJsonTag("status").
 		WithLocationType(def.Query))
@@ -1209,6 +1229,30 @@ func GenReqDefForShowPolicyAssignment() *def.HttpRequestDef {
 		WithName("PolicyAssignmentId").
 		WithJsonTag("policy_assignment_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateOrganizationPolicyAssignment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/resource-manager/organizations/{organization_id}/policy-assignments/{organization_policy_assignment_id}").
+		WithResponse(new(model.UpdateOrganizationPolicyAssignmentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationId").
+		WithJsonTag("organization_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationPolicyAssignmentId").
+		WithJsonTag("organization_policy_assignment_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

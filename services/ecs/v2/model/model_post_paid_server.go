@@ -73,6 +73,8 @@ type PostPaidServer struct {
 
 	// 云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
 	Description *string `json:"description,omitempty"`
+
+	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
 }
 
 func (o PostPaidServer) String() string {

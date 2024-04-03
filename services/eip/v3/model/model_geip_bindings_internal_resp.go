@@ -25,16 +25,14 @@ type GeipBindingsInternalResp struct {
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 绑定实例的类型
-	BindingInstanceType *string `json:"binding_instance_type,omitempty"`
+	InstanceType *string `json:"instance_type,omitempty"`
 
 	// 绑定实例的id
-	BindingInstanceId *string `json:"binding_instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 骨干带宽对象
-	Gcbandwidth *interface{} `json:"gcbandwidth,omitempty"`
+	Gcbandwidth *BackboneBandwidthResp `json:"gcbandwidth,omitempty"`
 
-	// 实例port的信息
-	Vnic *interface{} `json:"vnic,omitempty"`
+	Vnic *InstanceVnicResp `json:"vnic,omitempty"`
 
 	// GEIP实例的vn信息
 	VnList *[]InstancevirtualListResp `json:"vn_list,omitempty"`

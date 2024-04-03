@@ -13,7 +13,7 @@ type FlinkJobList struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 作业信息
-	Jobs *[]FlinkJobInfo `json:"jobs,omitempty"`
+	Jobs *[]FlinkJob `json:"jobs,omitempty"`
 }
 
 func (o FlinkJobList) String() string {

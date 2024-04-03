@@ -29,7 +29,7 @@ type ListMessageTraceRespTrace struct {
 	// 请求ID。
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 消费状态。
+	// 消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
 	ConsumeStatus float32 `json:"consume_status,omitempty"`
 
 	// 主题名称。
@@ -87,7 +87,8 @@ type ListMessageTraceRespTraceTraceType struct {
 
 type ListMessageTraceRespTraceTraceTypeEnum struct {
 	PUB             ListMessageTraceRespTraceTraceType
-	SUB             ListMessageTraceRespTraceTraceType
+	SUB_BEFORE      ListMessageTraceRespTraceTraceType
+	SUB_AFTER       ListMessageTraceRespTraceTraceType
 	END_TRANSACTION ListMessageTraceRespTraceTraceType
 }
 
@@ -96,8 +97,11 @@ func GetListMessageTraceRespTraceTraceTypeEnum() ListMessageTraceRespTraceTraceT
 		PUB: ListMessageTraceRespTraceTraceType{
 			value: "Pub",
 		},
-		SUB: ListMessageTraceRespTraceTraceType{
-			value: "Sub",
+		SUB_BEFORE: ListMessageTraceRespTraceTraceType{
+			value: "SubBefore",
+		},
+		SUB_AFTER: ListMessageTraceRespTraceTraceType{
+			value: "SubAfter",
 		},
 		END_TRANSACTION: ListMessageTraceRespTraceTraceType{
 			value: "EndTransaction",

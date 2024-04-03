@@ -26,6 +26,12 @@ type AddRuleAclDtoRules struct {
 	// 规则下发状态 0：禁用,1：启用
 	Status AddRuleAclDtoRulesStatus `json:"status"`
 
+	// 应用列表
+	Applications *[]string `json:"applications,omitempty"`
+
+	// 应用列表转化json字符串
+	ApplicationsJsonString *string `json:"applicationsJsonString,omitempty"`
+
 	// 长连接时长
 	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
 
@@ -47,9 +53,11 @@ type AddRuleAclDtoRules struct {
 	// 方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
 	Direction *AddRuleAclDtoRulesDirection `json:"direction,omitempty"`
 
-	Source *RuleAddressDto `json:"source"`
+	Profile *RuleProfileDto `json:"profile,omitempty"`
 
-	Destination *RuleAddressDto `json:"destination"`
+	Source *RuleAddressDtoForRequest `json:"source"`
+
+	Destination *RuleAddressDtoForRequest `json:"destination"`
 
 	Service *RuleServiceDto `json:"service"`
 

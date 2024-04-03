@@ -29,6 +29,9 @@ type ShowPlanListRequest struct {
 
 	// 是否查询所有版本下测试计划，默认为false。若值为true, 查询所有版本下测试计划; 若为false, 查询branch_uri指定分支下的测试计划, branch_uri为空时默认为master
 	QueryAllVersion *bool `json:"query_all_version,omitempty"`
+
+	// 测试计划关联的迭代。迭代id以逗号间隔
+	FixVersionIds *string `json:"fix_version_ids,omitempty"`
 }
 
 func (o ShowPlanListRequest) String() string {

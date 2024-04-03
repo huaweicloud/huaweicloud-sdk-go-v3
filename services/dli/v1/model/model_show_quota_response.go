@@ -8,8 +8,12 @@ import (
 
 // ShowQuotaResponse Response Object
 type ShowQuotaResponse struct {
-	Quotas         *ShowQuotaResponseBodyQuotas `json:"Quotas,omitempty"`
-	HttpStatusCode int                          `json:"-"`
+
+	// 是否成功
+	IsSuccess *bool `json:"is_success,omitempty"`
+
+	Quotas         *QuotaList `json:"quotas,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ShowQuotaResponse) String() string {

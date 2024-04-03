@@ -12,7 +12,8 @@ type BatchCreateGlobalEipResponse struct {
 	// 本次请求的编号
 	RequestId *string `json:"request_id,omitempty"`
 
-	GlobalEip *BatchCreateGlobalEip `json:"global_eip,omitempty"`
+	// 响应对象
+	GlobalEips *[]BatchCreateGlobalEipJob `json:"global_eips,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

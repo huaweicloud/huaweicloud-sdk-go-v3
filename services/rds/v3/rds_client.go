@@ -3918,6 +3918,27 @@ func (c *RdsClient) ShowPostgresqlParamValueInvoker(request *model.ShowPostgresq
 	return &ShowPostgresqlParamValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowReplayDelayStatus 获取wal日志延迟回放状态
+//
+// 获取wal日志延迟回放状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowReplayDelayStatus(request *model.ShowReplayDelayStatusRequest) (*model.ShowReplayDelayStatusResponse, error) {
+	requestDef := GenReqDefForShowReplayDelayStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplayDelayStatusResponse), nil
+	}
+}
+
+// ShowReplayDelayStatusInvoker 获取wal日志延迟回放状态
+func (c *RdsClient) ShowReplayDelayStatusInvoker(request *model.ShowReplayDelayStatusRequest) *ShowReplayDelayStatusInvoker {
+	requestDef := GenReqDefForShowReplayDelayStatus()
+	return &ShowReplayDelayStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartDatabaseProxy 开启数据库代理
 //
 // 为指定实例开启数据库代理。
@@ -3958,6 +3979,27 @@ func (c *RdsClient) StopDatabaseProxy(request *model.StopDatabaseProxyRequest) (
 func (c *RdsClient) StopDatabaseProxyInvoker(request *model.StopDatabaseProxyRequest) *StopDatabaseProxyInvoker {
 	requestDef := GenReqDefForStopDatabaseProxy()
 	return &StopDatabaseProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchLogReplay 中止/恢复wal日志回放
+//
+// 中止/恢复wal日志回放
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchLogReplay(request *model.SwitchLogReplayRequest) (*model.SwitchLogReplayResponse, error) {
+	requestDef := GenReqDefForSwitchLogReplay()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchLogReplayResponse), nil
+	}
+}
+
+// SwitchLogReplayInvoker 中止/恢复wal日志回放
+func (c *RdsClient) SwitchLogReplayInvoker(request *model.SwitchLogReplayRequest) *SwitchLogReplayInvoker {
+	requestDef := GenReqDefForSwitchLogReplay()
+	return &SwitchLogReplayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDatabaseOwner 修改数据库owner

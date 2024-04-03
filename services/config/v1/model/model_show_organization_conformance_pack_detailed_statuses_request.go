@@ -18,6 +18,9 @@ type ShowOrganizationConformancePackDetailedStatusesRequest struct {
 	// 合规规则包名称。
 	ConformancePackName string `json:"conformance_pack_name"`
 
+	// 组织合规规则包ID。
+	OrganizationConformancePackId *string `json:"organization_conformance_pack_id,omitempty"`
+
 	// 部署状态，区分大小写
 	State *ShowOrganizationConformancePackDetailedStatusesRequestState `json:"state,omitempty"`
 

@@ -8,7 +8,7 @@ import (
 
 type BatchPushCertificateRequestBody struct {
 
-	// 推送到的目标服务所在的区域，CDN支持区域固定为：Global。
+	// 推送到的目标服务所在的区域，CDN、ELB、WAF。
 	TargetProjects []string `json:"target_projects"`
 
 	// 证书推送的目标服务，当前仅支持：CDN、WAF、ELB。

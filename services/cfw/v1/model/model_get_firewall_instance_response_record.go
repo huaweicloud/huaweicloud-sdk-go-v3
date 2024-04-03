@@ -66,6 +66,9 @@ type GetFirewallInstanceResponseRecord struct {
 
 	// 是否支持url过滤，true表示是，false表示不是
 	SupportUrlFiltering *bool `json:"support_url_filtering,omitempty"`
+
+	// 标签列表
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o GetFirewallInstanceResponseRecord) String() string {

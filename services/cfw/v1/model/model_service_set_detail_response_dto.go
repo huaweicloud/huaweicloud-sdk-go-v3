@@ -18,7 +18,7 @@ type ServiceSetDetailResponseDto struct {
 	// 服务组描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 服务组类型，0表示自定义服务组，1表示预定义服务组
+	// 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
 	ServiceSetType *int32 `json:"service_set_type,omitempty"`
 }
 

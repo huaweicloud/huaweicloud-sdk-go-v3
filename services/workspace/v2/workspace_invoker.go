@@ -221,6 +221,18 @@ func (i *BatchRunDesktopsInvoker) Invoke() (*model.BatchRunDesktopsResponse, err
 	}
 }
 
+type CancelRemoteAssistanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelRemoteAssistanceInvoker) Invoke() (*model.CancelRemoteAssistanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelRemoteAssistanceResponse), nil
+	}
+}
+
 type ChangeDesktopNetworkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +254,18 @@ func (i *CreateDesktopInvoker) Invoke() (*model.CreateDesktopResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateDesktopResponse), nil
+	}
+}
+
+type CreateRemoteAssistanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRemoteAssistanceInvoker) Invoke() (*model.CreateRemoteAssistanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRemoteAssistanceResponse), nil
 	}
 }
 
@@ -326,6 +350,18 @@ func (i *ShowDesktopNetworkInvoker) Invoke() (*model.ShowDesktopNetworkResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDesktopNetworkResponse), nil
+	}
+}
+
+type ShowDesktopRemoteAssistanceInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDesktopRemoteAssistanceInfoInvoker) Invoke() (*model.ShowDesktopRemoteAssistanceInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDesktopRemoteAssistanceInfoResponse), nil
 	}
 }
 

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -13,7 +16,7 @@ type CreateSqlJobRequestBody struct {
 	Sql string `json:"sql"`
 
 	// 待提交作业的队列引擎名称，名称只能包含英文字母。
-	EngineType *string `json:"engine_type,omitempty"`
+	EngineType *CreateSqlJobRequestBodyEngineType `json:"engine_type,omitempty"`
 
 	// SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
 	Currentdb *string `json:"currentdb,omitempty"`
@@ -35,4 +38,51 @@ func (o CreateSqlJobRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateSqlJobRequestBody", string(data)}, " ")
+}
+
+type CreateSqlJobRequestBodyEngineType struct {
+	value string
+}
+
+type CreateSqlJobRequestBodyEngineTypeEnum struct {
+	TRINO CreateSqlJobRequestBodyEngineType
+	SPARK CreateSqlJobRequestBodyEngineType
+}
+
+func GetCreateSqlJobRequestBodyEngineTypeEnum() CreateSqlJobRequestBodyEngineTypeEnum {
+	return CreateSqlJobRequestBodyEngineTypeEnum{
+		TRINO: CreateSqlJobRequestBodyEngineType{
+			value: "trino",
+		},
+		SPARK: CreateSqlJobRequestBodyEngineType{
+			value: "spark",
+		},
+	}
+}
+
+func (c CreateSqlJobRequestBodyEngineType) Value() string {
+	return c.value
+}
+
+func (c CreateSqlJobRequestBodyEngineType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSqlJobRequestBodyEngineType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

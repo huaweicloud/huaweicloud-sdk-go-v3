@@ -15,6 +15,9 @@ type ListStatisticsResponse struct {
 	// 月度资源用量
 	Gbs *[]MonthUsed `json:"gbs,omitempty"`
 
+	// 月度gpu资源用量
+	GpuGbs *[]MonthUsed `json:"gpu_gbs,omitempty"`
+
 	Statistics     *ListFunctionStatisticsResponseBody `json:"statistics,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }

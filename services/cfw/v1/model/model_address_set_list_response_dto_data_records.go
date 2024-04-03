@@ -27,7 +27,7 @@ type AddressSetListResponseDtoDataRecords struct {
 	// 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
 	ObjectId *string `json:"object_id,omitempty"`
 
-	// 地址组类型，0表示自定义地址组，1表示预定义地址组
+	// 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
 	AddressSetType *int32 `json:"address_set_type,omitempty"`
 }
 

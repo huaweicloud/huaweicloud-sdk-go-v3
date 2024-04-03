@@ -28,6 +28,9 @@ type DomainSetVo struct {
 
 	// 异常信息
 	Message *string `json:"message,omitempty"`
+
+	// 使用规则id列表
+	Rules *[]UseRuleVo `json:"rules,omitempty"`
 }
 
 func (o DomainSetVo) String() string {

@@ -8,7 +8,7 @@ import (
 
 type DetachInternetBandwidth struct {
 
-	// 全局IP段id
+	// 全域弹性公网IP段ID
 	GlobalEipSegmentId string `json:"global_eip_segment_id"`
 }
 

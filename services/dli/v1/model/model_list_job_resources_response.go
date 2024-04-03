@@ -9,6 +9,9 @@ import (
 // ListJobResourcesResponse Response Object
 type ListJobResourcesResponse struct {
 
+	// 资源包返回总数
+	Total *int32 `json:"total,omitempty"`
+
 	// 已上传的用户资源名列表。
 	Resources *[]PackageResource `json:"resources,omitempty"`
 
@@ -16,11 +19,8 @@ type ListJobResourcesResponse struct {
 	Modules *[]PackageResourceMoudle `json:"modules,omitempty"`
 
 	// 已上传的用户分组资源。
-	Groups *[]interface{} `json:"groups,omitempty"`
-
-	// 资源包返回总数
-	Total          *int32 `json:"total,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Groups         *[]PackageResourceGroup `json:"groups,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListJobResourcesResponse) String() string {

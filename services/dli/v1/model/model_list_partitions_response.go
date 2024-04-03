@@ -15,8 +15,8 @@ type ListPartitionsResponse struct {
 	// 信息
 	Message *string `json:"message,omitempty"`
 
-	Partitions     *Partition `json:"partitions,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Partitions     *PartitionList `json:"partitions,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListPartitionsResponse) String() string {

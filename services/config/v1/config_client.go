@@ -775,9 +775,9 @@ func (c *ConfigClient) ShowResourceHistoryInvoker(request *model.ShowResourceHis
 	return &ShowResourceHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateOrganizationPolicyAssignment 创建或更新组织合规规则
+// CreateOrganizationPolicyAssignment 创建组织合规规则
 //
-// 创建或更新组织合规规则，如果规则名称已存在，则为更新操作。
+// 创建组织合规规则，如果规则名称已存在，则为更新操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ConfigClient) CreateOrganizationPolicyAssignment(request *model.CreateOrganizationPolicyAssignmentRequest) (*model.CreateOrganizationPolicyAssignmentResponse, error) {
@@ -790,7 +790,7 @@ func (c *ConfigClient) CreateOrganizationPolicyAssignment(request *model.CreateO
 	}
 }
 
-// CreateOrganizationPolicyAssignmentInvoker 创建或更新组织合规规则
+// CreateOrganizationPolicyAssignmentInvoker 创建组织合规规则
 func (c *ConfigClient) CreateOrganizationPolicyAssignmentInvoker(request *model.CreateOrganizationPolicyAssignmentRequest) *CreateOrganizationPolicyAssignmentInvoker {
 	requestDef := GenReqDefForCreateOrganizationPolicyAssignment()
 	return &CreateOrganizationPolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1172,6 +1172,27 @@ func (c *ConfigClient) ShowPolicyAssignment(request *model.ShowPolicyAssignmentR
 func (c *ConfigClient) ShowPolicyAssignmentInvoker(request *model.ShowPolicyAssignmentRequest) *ShowPolicyAssignmentInvoker {
 	requestDef := GenReqDefForShowPolicyAssignment()
 	return &ShowPolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOrganizationPolicyAssignment 更新组织合规规则
+//
+// 更新组织合规规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) UpdateOrganizationPolicyAssignment(request *model.UpdateOrganizationPolicyAssignmentRequest) (*model.UpdateOrganizationPolicyAssignmentResponse, error) {
+	requestDef := GenReqDefForUpdateOrganizationPolicyAssignment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOrganizationPolicyAssignmentResponse), nil
+	}
+}
+
+// UpdateOrganizationPolicyAssignmentInvoker 更新组织合规规则
+func (c *ConfigClient) UpdateOrganizationPolicyAssignmentInvoker(request *model.UpdateOrganizationPolicyAssignmentRequest) *UpdateOrganizationPolicyAssignmentInvoker {
+	requestDef := GenReqDefForUpdateOrganizationPolicyAssignment()
+	return &UpdateOrganizationPolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePolicyAssignment 更新合规规则
