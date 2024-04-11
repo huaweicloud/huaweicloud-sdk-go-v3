@@ -53,6 +53,18 @@ func (i *BatchImportCloudPhoneDataInvoker) Invoke() (*model.BatchImportCloudPhon
 	}
 }
 
+type ChangeCloudPhoneServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeCloudPhoneServerInvoker) Invoke() (*model.ChangeCloudPhoneServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeCloudPhoneServerResponse), nil
+	}
+}
+
 type ChangeCloudPhoneServerModelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *CreateNet2CloudPhoneServerInvoker) Invoke() (*model.CreateNet2CloudPhon
 		return nil, err
 	} else {
 		return result.(*model.CreateNet2CloudPhoneServerResponse), nil
+	}
+}
+
+type DeleteCloudPhoneServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudPhoneServerInvoker) Invoke() (*model.DeleteCloudPhoneServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCloudPhoneServerResponse), nil
 	}
 }
 

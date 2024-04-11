@@ -8,7 +8,7 @@ import (
 
 type CatalogEntityVo struct {
 
-	// 类型名称,填写“BusinessCatalog”即可
+	// 类型名称，填写“BusinessCatalog”即可。
 	TypeName *string `json:"typeName,omitempty"`
 
 	Attributes *CatalogAttributeVo `json:"attributes"`

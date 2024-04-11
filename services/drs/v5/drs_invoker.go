@@ -425,6 +425,18 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 	}
 }
 
+type ListsAgencyPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListsAgencyPermissionsInvoker) Invoke() (*model.ListsAgencyPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListsAgencyPermissionsResponse), nil
+	}
+}
+
 type ShowActionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +686,18 @@ func (i *ShowProgressDataInvoker) Invoke() (*model.ShowProgressDataResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowProgressDataResponse), nil
+	}
+}
+
+type ShowReplayResultsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplayResultsInvoker) Invoke() (*model.ShowReplayResultsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplayResultsResponse), nil
 	}
 }
 

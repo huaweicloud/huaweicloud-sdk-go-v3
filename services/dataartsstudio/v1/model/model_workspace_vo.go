@@ -10,47 +10,48 @@ import (
 
 type WorkspaceVo struct {
 
-	// 编号
+	// 编号。
 	Id *int64 `json:"id,omitempty"`
 
-	// 工作区名字
+	// 工作区名字。
 	Name string `json:"name"`
 
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 是否为物理表
+	// 是否为物理表。
 	IsPhysical *bool `json:"is_physical,omitempty"`
 
-	// 是否为常用
+	// 是否为常用。
 	Frequent *bool `json:"frequent,omitempty"`
 
-	// 分层治理
+	// 分层治理。
 	Top *bool `json:"top,omitempty"`
 
 	Level *ModelLevel `json:"level,omitempty"`
 
-	// 数据连接类型
+	// 数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
 	DwType *string `json:"dw_type,omitempty"`
 
-	// 创建时间
+	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 创建人
+	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人
+	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 工作区类型枚举
+	// 工作区类型枚举。THIRD_NF(关系建模)、DIMENSION(维度建模)。
 	Type WorkspaceVoType `json:"type"`
 
-	// 关联的业务分层的id列表 {\"l1Ids\":[],\"l2Ids\":[],\"l3Ids\":[]}
+	// 关联的业务分层的ID列表 {\"l1Ids\":[],\"l2Ids\":[],\"l3Ids\":[]}。
 	BizCatalogIds *string `json:"biz_catalog_ids,omitempty"`
 
-	// 数据库名称数组
+	// 数据库名称数组。
 	Databases *[]string `json:"databases,omitempty"`
 }
 

@@ -9,19 +9,19 @@ import (
 	"strings"
 )
 
-// LinkAttributeAndElementVo 属性id列表
+// LinkAttributeAndElementVo 属性ID列表。
 type LinkAttributeAndElementVo struct {
 
-	// 属性id列表
+	// 属性ID列表。
 	Ids []int64 `json:"ids"`
 
-	// 关联的数据标准的id
+	// 关联的数据标准的ID。
 	StandRowId int64 `json:"stand_row_id"`
 
-	// 表id
+	// 表ID。
 	TableId int64 `json:"table_id"`
 
-	// 表类型:维度、事实表、汇总表、业务表(默认)
+	// 表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
 	BizType LinkAttributeAndElementVoBizType `json:"biz_type"`
 }
 

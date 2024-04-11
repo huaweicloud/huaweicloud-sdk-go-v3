@@ -9,7 +9,7 @@ import (
 type DefaultTopicRequest struct {
 
 	// DSC告警主题ID（非消息通知服务主题ID）
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
@@ -18,7 +18,7 @@ type DefaultTopicRequest struct {
 	Status *int32 `json:"status,omitempty"`
 
 	// 消息通知主题的唯一资源标识符
-	TopicUrn *string `json:"topic_urn,omitempty"`
+	TopicUrn string `json:"topic_urn"`
 }
 
 func (o DefaultTopicRequest) String() string {

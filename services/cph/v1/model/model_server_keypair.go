@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ServerKeypair 服务器秘钥对。
+// ServerKeypair 服务器密钥对。
 type ServerKeypair struct {
 
 	// 云手机服务器ID，不得超过32个字节。

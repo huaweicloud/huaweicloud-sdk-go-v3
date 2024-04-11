@@ -8,10 +8,10 @@ import (
 
 type ApprovalInfoParam struct {
 
-	// 审批单id列表
+	// 审批单ID列表。
 	Ids []int64 `json:"ids"`
 
-	// 审批单信息
+	// 审批单信息。
 	Msg string `json:"msg"`
 }
 

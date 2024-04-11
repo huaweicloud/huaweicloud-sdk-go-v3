@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// CompoundMetricVoSearchResultDataValue 返回的数据信息。
 type CompoundMetricVoSearchResultDataValue struct {
 
-	// CompoundMetricVO数组
+	// CompoundMetricVO数组。
 	Records *[]CompoundMetricVo `json:"records,omitempty"`
 
-	// 总数
+	// 总数。
 	Total *int32 `json:"total,omitempty"`
 }
 

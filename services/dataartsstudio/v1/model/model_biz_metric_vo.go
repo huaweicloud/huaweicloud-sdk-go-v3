@@ -8,106 +8,107 @@ import (
 	"strings"
 )
 
+// BizMetricVo 业务指标信息。
 type BizMetricVo struct {
 
-	// 编码
+	// 编码，更新时必填，创建是为空。
 	Id *int64 `json:"id,omitempty"`
 
-	// 指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+	// 指标名称。
 	Name string `json:"name"`
 
-	// 指标编码
+	// 指标编码。
 	Code *string `json:"code,omitempty"`
 
-	// 指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+	// 指标别名。
 	NameAlias *string `json:"name_alias,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
-	// 归属的流程架构的id
+	// 归属的流程架构的ID。
 	BizCatalogId int64 `json:"biz_catalog_id"`
 
-	// 归属的流程架构路径
+	// 归属的流程架构路径。
 	BizCatalogPath *string `json:"biz_catalog_path,omitempty"`
 
-	// 创建人
+	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人
+	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 数据来源
+	// 数据来源。
 	DataOrigin *string `json:"data_origin,omitempty"`
 
-	// 计量单位
+	// 计量单位。
 	Unit *string `json:"unit,omitempty"`
 
-	// 统计周期(时间限定)
+	// 统计周期(时间限定)。
 	TimeFilters string `json:"time_filters"`
 
-	// 统计维度
+	// 统计维度。
 	Dimensions *string `json:"dimensions,omitempty"`
 
-	// 统计口径/修饰词（通用限定）
+	// 统计口径和修饰词。
 	GeneralFilters *string `json:"general_filters,omitempty"`
 
-	// 刷新频率
+	// 刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
 	IntervalType BizMetricVoIntervalType `json:"interval_type"`
 
-	// 应用场景
+	// 应用场景。
 	ApplyScenario *string `json:"apply_scenario,omitempty"`
 
-	// 关联技术指标
+	// 关联技术指标。
 	TechnicalMetric *int64 `json:"technical_metric,omitempty"`
 
-	// 关联技术指标名称
+	// 关联技术指标名称。
 	TechnicalMetricName *string `json:"technical_metric_name,omitempty"`
 
 	TechnicalMetricType *BizTypeEnum `json:"technical_metric_type,omitempty"`
 
-	// 度量对象
+	// 度量对象。
 	Measure *string `json:"measure,omitempty"`
 
-	// 负责人，指标解释人
+	// 指标责任人。
 	Owner string `json:"owner"`
 
-	// 指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
+	// 指标管理部门。
 	OwnerDepartment string `json:"owner_department"`
 
-	// 设置目的
+	// 设置目的。
 	Destination string `json:"destination"`
 
-	// 资产同步后的guid
+	// 资产同步后的guid。
 	Guid *string `json:"guid,omitempty"`
 
-	// 指标定义
+	// 指标定义。
 	Definition string `json:"definition"`
 
-	// 计算公式
+	// 计算公式。
 	Expression string `json:"expression"`
 
-	// 备注
+	// 备注。
 	Remark *string `json:"remark,omitempty"`
 
 	ApprovalInfo *ApprovalVo `json:"approval_info,omitempty"`
 
 	NewBiz *BizVersionManageVo `json:"new_biz,omitempty"`
 
-	// 创建时间
+	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 主题域分组中文名
+	// 主题域分组中文名，只读，创建和更新时无需填写。
 	L1 *string `json:"l1,omitempty"`
 
-	// 主题域中文名
+	// 主题域中文名，只读，创建和更新时无需填写。
 	L2 *string `json:"l2,omitempty"`
 
-	// 业务对象中文名
+	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
 	BizMetric *SyncStatusEnum `json:"biz_metric,omitempty"`

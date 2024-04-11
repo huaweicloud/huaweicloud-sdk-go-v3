@@ -16,7 +16,7 @@ type VersionModelVersionCheckoutAndUpdateDtoVersionModel struct {
 
 	Data *VersionModel `json:"data"`
 
-	// 小版本ID。
+	// 主对象ID。
 	MasterId string `json:"masterId"`
 
 	// 更新者。

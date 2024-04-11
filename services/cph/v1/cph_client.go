@@ -63,7 +63,7 @@ func (c *CphClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest
 
 // BatchExportCloudPhoneData 导出云手机数据
 //
-// 批量导出云手机中的数据。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cph/cph_bp_0050.html)。](tag:hws_hk)
+// 批量导出云手机中的数据。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) BatchExportCloudPhoneData(request *model.BatchExportCloudPhoneDataRequest) (*model.BatchExportCloudPhoneDataResponse, error) {
@@ -84,7 +84,9 @@ func (c *CphClient) BatchExportCloudPhoneDataInvoker(request *model.BatchExportC
 
 // BatchImportCloudPhoneData 恢复云手机数据
 //
-// 批量恢复数据到云手机中。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cph/cph_bp_0050.html)。](tag:hws_hk)
+// 批量恢复数据到云手机中。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+//
+// 高版本手机导出的数据无法在低版本手机内恢复。低版本手机导出的数据可以在高版本手机内恢复，但可能会在极少数场景下有不兼容的风险。因此推荐您在同版本手机间进行导出与恢复。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) BatchImportCloudPhoneData(request *model.BatchImportCloudPhoneDataRequest) (*model.BatchImportCloudPhoneDataResponse, error) {
@@ -101,6 +103,27 @@ func (c *CphClient) BatchImportCloudPhoneData(request *model.BatchImportCloudPho
 func (c *CphClient) BatchImportCloudPhoneDataInvoker(request *model.BatchImportCloudPhoneDataRequest) *BatchImportCloudPhoneDataInvoker {
 	requestDef := GenReqDefForBatchImportCloudPhoneData()
 	return &BatchImportCloudPhoneDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeCloudPhoneServer 切换云手机服务器
+//
+// 切换云手机服务器, 支持您换一台新的云手机服务器。切换后服务器名称、服务器ID和服务器所在AZ与原服务器相同, 服务器计费保持不变。服务器切换的同时服务器上的手机重新创建，不保留用户数据。切换需要额外的资源和资源配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ChangeCloudPhoneServer(request *model.ChangeCloudPhoneServerRequest) (*model.ChangeCloudPhoneServerResponse, error) {
+	requestDef := GenReqDefForChangeCloudPhoneServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeCloudPhoneServerResponse), nil
+	}
+}
+
+// ChangeCloudPhoneServerInvoker 切换云手机服务器
+func (c *CphClient) ChangeCloudPhoneServerInvoker(request *model.ChangeCloudPhoneServerRequest) *ChangeCloudPhoneServerInvoker {
+	requestDef := GenReqDefForChangeCloudPhoneServer()
+	return &ChangeCloudPhoneServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeCloudPhoneServerModel 变更云手机服务器规格
@@ -124,13 +147,15 @@ func (c *CphClient) ChangeCloudPhoneServerModelInvoker(request *model.ChangeClou
 	return &ChangeCloudPhoneServerModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateNet2CloudPhoneServer 购买自定义网络云手机服务器
+// CreateNet2CloudPhoneServer [创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)云手机服务器
 //
-// 购买自定义网络的云手机服务器。自定义网络是云手机全新一代网络配置管理模式，支持您复用已有的VPC网络管理云手机服务器，支持云手机服务器复用您已购买的共享带宽等资源。
-// - 请确保您已具有虚拟私有云资源，创建服务器需要指定一个已有的虚拟私有云，否则无法创建服务器。
+// [创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)云手机服务器，支持您复用已有的VPC网络管理云手机服务器，支持云手机服务器复用您已[创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)的共享带宽等资源。
+// - 请确保您已具有虚拟私有云资源，创建服务器需要指定一个已有的虚拟私有云，否则无法创建服务器。同时请确保您的账号至少具有VPC ReadOnlyAccess权限，以便虚拟私有云资源可以被选取到。
+// - 请确保您的账号已成功创建密钥对，并具有查询密钥对列表的细粒度权限ecs:serverKeypairs:list。若需要创建密钥对，请确保账号具有创建密钥对的细粒度权限ecs:serverKeypairs:create。
 // - 请确保已正确创建委托（委托名称cph_admin_trust，委托服务CPH），委托未被删除， 确保委托包含VPC FullAccess权限，委托及权限校验失败将导致云服务器创建失败。创建委托时委托类型选择“云服务”，云服务选择“CPH”，即允许CPH调用云服务。
-// - 请确保您使用的账号具有Security Administrator权限或者具备创建委托的细粒度权限iam:agencies:createAgency。
+// - 请确保您使用的账号具有Security Administrator权限。
 // - 请确保您有足够的服务器及网络配额，配额校验不通过将导致创建失败。
+// [- 当前只支持按需创建。](tag:fcs)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) CreateNet2CloudPhoneServer(request *model.CreateNet2CloudPhoneServerRequest) (*model.CreateNet2CloudPhoneServerResponse, error) {
@@ -143,10 +168,31 @@ func (c *CphClient) CreateNet2CloudPhoneServer(request *model.CreateNet2CloudPho
 	}
 }
 
-// CreateNet2CloudPhoneServerInvoker 购买自定义网络云手机服务器
+// CreateNet2CloudPhoneServerInvoker [创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)云手机服务器
 func (c *CphClient) CreateNet2CloudPhoneServerInvoker(request *model.CreateNet2CloudPhoneServerRequest) *CreateNet2CloudPhoneServerInvoker {
 	requestDef := GenReqDefForCreateNet2CloudPhoneServer()
 	return &CreateNet2CloudPhoneServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCloudPhoneServer 删除云手机服务器
+//
+// 删除云手机服务器，仅可以删除按需购买的云手机服务器，最多删除十台。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) DeleteCloudPhoneServer(request *model.DeleteCloudPhoneServerRequest) (*model.DeleteCloudPhoneServerResponse, error) {
+	requestDef := GenReqDefForDeleteCloudPhoneServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCloudPhoneServerResponse), nil
+	}
+}
+
+// DeleteCloudPhoneServerInvoker 删除云手机服务器
+func (c *CphClient) DeleteCloudPhoneServerInvoker(request *model.DeleteCloudPhoneServerRequest) *DeleteCloudPhoneServerInvoker {
+	requestDef := GenReqDefForDeleteCloudPhoneServer()
+	return &DeleteCloudPhoneServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteShareApps 删除共享应用
@@ -445,7 +491,9 @@ func (c *CphClient) ListShareFilesInvoker(request *model.ListShareFilesRequest) 
 
 // PushShareApps 推送共享应用
 //
-// 推送应用tar文件至共享应用存储目录中，该功能仅在支持共享应用的云手机规格上可实现。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cph/cph_bp_0050.html)。](tag:hws_hk)
+// 推送应用tar文件至共享应用存储目录中，该功能仅在支持共享应用的云手机规格上可实现。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+//
+// 注意：不能向低版本服务器推送高版本手机导出的应用包，否则可能会造成兼容性问题。如果您使用的是physical.kg1.4xlarge.a.cp服务器规格，请确保共享应用的可用空间大于两倍的tar包
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) PushShareApps(request *model.PushShareAppsRequest) (*model.PushShareAppsResponse, error) {
@@ -466,7 +514,7 @@ func (c *CphClient) PushShareAppsInvoker(request *model.PushShareAppsRequest) *P
 
 // PushShareFiles 推送共享存储文件
 //
-// 推送文件至共享存储目录中，该功能仅在支持共享存储的云手机规格上可实现。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cph/cph_bp_0050.html)。](tag:hws_hk)
+// 推送文件至共享存储目录中，该功能仅在支持共享存储的云手机规格上可实现。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) PushShareFiles(request *model.PushShareFilesRequest) (*model.PushShareFilesResponse, error) {
@@ -782,7 +830,7 @@ func (c *CphClient) UpdateServerNameInvoker(request *model.UpdateServerNameReque
 // InstallApk 安装apk
 //
 // 在云手机中安装apk。系统会将指定的apk文件下载后直接安装到云手机中。
-// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cph/cph_bp_0050.html)。](tag:hws_hk)
+// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 // - 管理面性能有限，对相同服务器批量执行的ADB命令，将会阻塞云手机其他任务执行。
 // - 建议通过开发应用市场的方式安装apk。允许安装的apk大小限制为2G（即不可将obs桶内大于2G的apk安装到手机中），超过限制将返回错误。
 //
@@ -805,7 +853,7 @@ func (c *CphClient) InstallApkInvoker(request *model.InstallApkRequest) *Install
 
 // PushFile 推送文件
 //
-// 推送文件到云手机文件系统中。系统会将所指定的文件下载解压后，将解压后的内容全部推送到云手机的根目录下。只支持指定tar格式的文件进行推送，您需要将tar文件提前上传至您的OBS桶中。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cph/cph_bp_0050.html)。](tag:hws_hk)
+// 推送文件到云手机文件系统中。系统会将所指定的文件下载解压后，将解压后的内容全部推送到云手机的根目录下。只支持指定tar格式的文件进行推送，您需要将tar文件提前上传至您的OBS桶中。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 // - 管理面性能有限，对相同服务器批量执行的ADB命令，将会阻塞云手机其他任务执行。
 // - 允许推送的文件大小限制为6G（即不可将obs桶内大于6G的文件推送到手机中），超过限制将返回错误。
 // - 手机的系统有限制，推送到系统盘不保证推送成功，推荐把文件推送到手机的数据盘。所以在构建\&quot;tar\&quot;文件时，应将待推送的文件放到本地创建的data目录后将其打包（如tar -cvf data.tar data ），以确保把文件推送到手机的数据盘下。

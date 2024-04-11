@@ -17,6 +17,18 @@ func (i *AddTagInvoker) Invoke() (*model.AddTagResponse, error) {
 	}
 }
 
+type BatchAddChildNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddChildNodeInvoker) Invoke() (*model.BatchAddChildNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddChildNodeResponse), nil
+	}
+}
+
 type BatchCheckinInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,6 +170,18 @@ func (i *BatchExecuteReviseInvoker) Invoke() (*model.BatchExecuteReviseResponse,
 		return nil, err
 	} else {
 		return result.(*model.BatchExecuteReviseResponse), nil
+	}
+}
+
+type BatchRemoveChildNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRemoveChildNodeInvoker) Invoke() (*model.BatchRemoveChildNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRemoveChildNodeResponse), nil
 	}
 }
 
@@ -317,6 +341,18 @@ func (i *CompareBusinessVersionInvoker) Invoke() (*model.CompareBusinessVersionR
 	}
 }
 
+type CompareVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CompareVersionInvoker) Invoke() (*model.CompareVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CompareVersionResponse), nil
+	}
+}
+
 type CountUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -437,6 +473,18 @@ func (i *DeleteLogicalLatestVersionInvoker) Invoke() (*model.DeleteLogicalLatest
 	}
 }
 
+type DeleteTargetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTargetInvoker) Invoke() (*model.DeleteTargetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTargetResponse), nil
+	}
+}
+
 type DeleteUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -509,6 +557,42 @@ func (i *ListAllVersionsInvoker) Invoke() (*model.ListAllVersionsResponse, error
 	}
 }
 
+type ListBatchQueryRelatedObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBatchQueryRelatedObjectsInvoker) Invoke() (*model.ListBatchQueryRelatedObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBatchQueryRelatedObjectsResponse), nil
+	}
+}
+
+type ListGetAllParentListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGetAllParentListInvoker) Invoke() (*model.ListGetAllParentListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGetAllParentListResponse), nil
+	}
+}
+
+type ListGetChildListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGetChildListInvoker) Invoke() (*model.ListGetChildListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGetChildListResponse), nil
+	}
+}
+
 type ListHistoryDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +602,42 @@ func (i *ListHistoryDataInvoker) Invoke() (*model.ListHistoryDataResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListHistoryDataResponse), nil
+	}
+}
+
+type ListQueryRelatedObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryRelatedObjectsInvoker) Invoke() (*model.ListQueryRelatedObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryRelatedObjectsResponse), nil
+	}
+}
+
+type ListQueryRelationshipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryRelationshipInvoker) Invoke() (*model.ListQueryRelationshipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryRelationshipResponse), nil
+	}
+}
+
+type ListQueryTargetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryTargetInvoker) Invoke() (*model.ListQueryTargetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryTargetResponse), nil
 	}
 }
 
@@ -554,6 +674,18 @@ func (i *ListUsingPostInvoker) Invoke() (*model.ListUsingPostResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListUsingPostResponse), nil
+	}
+}
+
+type RefreshInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RefreshInvoker) Invoke() (*model.RefreshResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RefreshResponse), nil
 	}
 }
 
@@ -626,6 +758,30 @@ func (i *ShowGetByUniqueKeyInvoker) Invoke() (*model.ShowGetByUniqueKeyResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowGetByUniqueKeyResponse), nil
+	}
+}
+
+type ShowGetParentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGetParentInvoker) Invoke() (*model.ShowGetParentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGetParentResponse), nil
+	}
+}
+
+type ShowGetRootInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGetRootInvoker) Invoke() (*model.ShowGetRootResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGetRootResponse), nil
 	}
 }
 

@@ -9,6 +9,9 @@ import (
 // ShowTopicsResponse Response Object
 type ShowTopicsResponse struct {
 
+	// DSC告警主题ID（非消息通知服务主题ID）
+	Id *string `json:"id,omitempty"`
+
 	// 默认消息通知主题的唯一资源标识符
 	DefaultTopicUrn *string `json:"default_topic_urn,omitempty"`
 

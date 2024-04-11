@@ -11,10 +11,10 @@ import (
 
 type IdsParam struct {
 
-	// ID列表
-	Ids []int64 `json:"ids"`
+	// ID列表。
+	Ids []string `json:"ids"`
 
-	// 删除物理表
+	// 删除物理表。PHYSICAL_TABLE(关系建模)。
 	DelTypes *IdsParamDelTypes `json:"del_types,omitempty"`
 }
 

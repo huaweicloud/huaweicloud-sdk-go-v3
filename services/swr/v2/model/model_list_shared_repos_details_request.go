@@ -22,7 +22,7 @@ type ListSharedReposDetailsRequest struct {
 	Name *string `json:"name,omitempty"`
 
 	// self: 我共享的镜像。thirdparty: 他人共享给我的镜像
-	Center *string `json:"center,omitempty"`
+	Center string `json:"center"`
 
 	// 返回条数。注意：offset和limit参数需要配套使用。
 	Limit *string `json:"limit,omitempty"`

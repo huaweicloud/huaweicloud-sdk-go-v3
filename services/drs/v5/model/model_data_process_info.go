@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -31,6 +34,9 @@ type DataProcessInfo struct {
 
 	// 表示该规则是否已同步至目标库
 	IsSynchronized *bool `json:"is_synchronized,omitempty"`
+
+	// 对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+	Source *DataProcessInfoSource `json:"source,omitempty"`
 }
 
 func (o DataProcessInfo) String() string {
@@ -40,4 +46,51 @@ func (o DataProcessInfo) String() string {
 	}
 
 	return strings.Join([]string{"DataProcessInfo", string(data)}, " ")
+}
+
+type DataProcessInfoSource struct {
+	value string
+}
+
+type DataProcessInfoSourceEnum struct {
+	JOB     DataProcessInfoSource
+	COMPARE DataProcessInfoSource
+}
+
+func GetDataProcessInfoSourceEnum() DataProcessInfoSourceEnum {
+	return DataProcessInfoSourceEnum{
+		JOB: DataProcessInfoSource{
+			value: "job",
+		},
+		COMPARE: DataProcessInfoSource{
+			value: "compare",
+		},
+	}
+}
+
+func (c DataProcessInfoSource) Value() string {
+	return c.value
+}
+
+func (c DataProcessInfoSource) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DataProcessInfoSource) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

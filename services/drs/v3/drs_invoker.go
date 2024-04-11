@@ -329,6 +329,30 @@ func (i *CreateCompareTaskInvoker) Invoke() (*model.CreateCompareTaskResponse, e
 	}
 }
 
+type CreateDataLevelTableCompareJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDataLevelTableCompareJobInvoker) Invoke() (*model.CreateDataLevelTableCompareJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDataLevelTableCompareJobResponse), nil
+	}
+}
+
+type DeleteCompareJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCompareJobInvoker) Invoke() (*model.DeleteCompareJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCompareJobResponse), nil
+	}
+}
+
 type ListAvailableNodeTypesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +386,66 @@ func (i *ListCompareResultInvoker) Invoke() (*model.ListCompareResultResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListCompareResultResponse), nil
+	}
+}
+
+type ListContentCompareDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListContentCompareDetailInvoker) Invoke() (*model.ListContentCompareDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListContentCompareDetailResponse), nil
+	}
+}
+
+type ListContentCompareOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListContentCompareOverviewInvoker) Invoke() (*model.ListContentCompareOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListContentCompareOverviewResponse), nil
+	}
+}
+
+type ListDataCompareDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataCompareDetailInvoker) Invoke() (*model.ListDataCompareDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataCompareDetailResponse), nil
+	}
+}
+
+type ListDataCompareOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataCompareOverviewInvoker) Invoke() (*model.ListDataCompareOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataCompareOverviewResponse), nil
+	}
+}
+
+type ListDataLevelTableCompareJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataLevelTableCompareJobsInvoker) Invoke() (*model.ListDataLevelTableCompareJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataLevelTableCompareJobsResponse), nil
 	}
 }
 
@@ -410,6 +494,18 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
+type StartPromptlyDataLevelTableCompareJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartPromptlyDataLevelTableCompareJobInvoker) Invoke() (*model.StartPromptlyDataLevelTableCompareJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartPromptlyDataLevelTableCompareJobResponse), nil
 	}
 }
 

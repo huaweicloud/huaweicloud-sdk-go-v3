@@ -18,7 +18,7 @@ type ShowPositionResultResponse struct {
 	// 位点信息
 	Position *string `json:"position,omitempty"`
 
-	// 查询状态。
+	// 查询状态
 	Status         *ShowPositionResultResponseStatus `json:"status,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }

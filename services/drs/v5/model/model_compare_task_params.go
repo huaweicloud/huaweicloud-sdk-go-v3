@@ -26,6 +26,9 @@ type CompareTaskParams struct {
 
 	// 对比选择对象。
 	DbObject map[string]DatabaseObject `json:"db_object,omitempty"`
+
+	// 更新数据加工规则请求体
+	DataProcessInfo *[]DataProcessInfo `json:"data_process_info,omitempty"`
 }
 
 func (o CompareTaskParams) String() string {

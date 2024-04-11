@@ -30,7 +30,7 @@ type DiffCommitInfo struct {
 	DeletedFile *bool `json:"deleted_file,omitempty"`
 
 	// 差异信息
-	Diff *bool `json:"diff,omitempty"`
+	Diff *string `json:"diff,omitempty"`
 }
 
 func (o DiffCommitInfo) String() string {

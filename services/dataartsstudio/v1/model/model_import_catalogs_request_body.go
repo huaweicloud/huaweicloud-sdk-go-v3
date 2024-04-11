@@ -15,7 +15,7 @@ import (
 
 type ImportCatalogsRequestBody struct {
 
-	// 导入主题用的excel文件，大小必须小于4MB，且行数小于3000行
+	// 导入主题用的excel文件，大小必须小于4MB，且行数小于3000行。
 	File *def.FilePart `json:"file"`
 }
 

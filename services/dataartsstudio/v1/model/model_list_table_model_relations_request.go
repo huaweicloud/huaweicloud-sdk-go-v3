@@ -12,22 +12,28 @@ import (
 // ListTableModelRelationsRequest Request Object
 type ListTableModelRelationsRequest struct {
 
-	// DataArts Studio工作空间ID
+	// 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
 	Workspace string `json:"workspace"`
 
-	// 依据workspace id查工作区
+	// 项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+	XProjectId *string `json:"X-Project-Id,omitempty"`
+
+	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+	ContentType *string `json:"Content-Type,omitempty"`
+
+	// 所属关系建模的模型ID。
 	ModelId string `json:"model_id"`
 
 	// 表模型ids
 	TableIds *string `json:"table_ids,omitempty"`
 
-	// 表类型
+	// 表类型。TABLE_MODEL(关系建模：逻辑实体/物理表)、FACT_LOGIC_TABLE(事实表)。
 	BizType *ListTableModelRelationsRequestBizType `json:"biz_type,omitempty"`
 
-	// 查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+	// 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 }
 

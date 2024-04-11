@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// DerivativeIndexVoSearchResultDataValue 返回的数据信息。
 type DerivativeIndexVoSearchResultDataValue struct {
 
-	// DerivativeIndexVO数组
+	// DerivativeIndexVO数组。
 	Records *[]DerivativeIndexVo `json:"records,omitempty"`
 
-	// 总数
+	// 总数。
 	Total *int32 `json:"total,omitempty"`
 }
 

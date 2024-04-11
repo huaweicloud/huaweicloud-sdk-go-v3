@@ -149,6 +149,66 @@ func (i *ShowAsyncDeviceCommandInvoker) Invoke() (*model.ShowAsyncDeviceCommandR
 	}
 }
 
+type CreateRoutingBacklogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRoutingBacklogPolicyInvoker) Invoke() (*model.CreateRoutingBacklogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRoutingBacklogPolicyResponse), nil
+	}
+}
+
+type DeleteRoutingBacklogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRoutingBacklogPolicyInvoker) Invoke() (*model.DeleteRoutingBacklogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRoutingBacklogPolicyResponse), nil
+	}
+}
+
+type ListRoutingBacklogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRoutingBacklogPolicyInvoker) Invoke() (*model.ListRoutingBacklogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRoutingBacklogPolicyResponse), nil
+	}
+}
+
+type ShowRoutingBacklogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRoutingBacklogPolicyInvoker) Invoke() (*model.ShowRoutingBacklogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRoutingBacklogPolicyResponse), nil
+	}
+}
+
+type UpdateRoutingBacklogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRoutingBacklogPolicyInvoker) Invoke() (*model.UpdateRoutingBacklogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRoutingBacklogPolicyResponse), nil
+	}
+}
+
 type CreateBatchTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +614,66 @@ func (i *UpdateDeviceShadowDesiredDataInvoker) Invoke() (*model.UpdateDeviceShad
 		return nil, err
 	} else {
 		return result.(*model.UpdateDeviceShadowDesiredDataResponse), nil
+	}
+}
+
+type CreateRoutingFlowControlPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRoutingFlowControlPolicyInvoker) Invoke() (*model.CreateRoutingFlowControlPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRoutingFlowControlPolicyResponse), nil
+	}
+}
+
+type DeleteRoutingFlowControlPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRoutingFlowControlPolicyInvoker) Invoke() (*model.DeleteRoutingFlowControlPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRoutingFlowControlPolicyResponse), nil
+	}
+}
+
+type ListRoutingFlowControlPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRoutingFlowControlPolicyInvoker) Invoke() (*model.ListRoutingFlowControlPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRoutingFlowControlPolicyResponse), nil
+	}
+}
+
+type ShowRoutingFlowControlPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRoutingFlowControlPolicyInvoker) Invoke() (*model.ShowRoutingFlowControlPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRoutingFlowControlPolicyResponse), nil
+	}
+}
+
+type UpdateRoutingFlowControlPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRoutingFlowControlPolicyInvoker) Invoke() (*model.UpdateRoutingFlowControlPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRoutingFlowControlPolicyResponse), nil
 	}
 }
 

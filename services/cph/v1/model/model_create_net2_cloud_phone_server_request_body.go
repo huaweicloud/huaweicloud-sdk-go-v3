@@ -8,7 +8,7 @@ import (
 
 type CreateNet2CloudPhoneServerRequestBody struct {
 
-	// 云手机服务器名称，  不超过60个字符，只支持英文字母、数字、汉字、下划线和中划线。  批量购买会在服务器名称后自动添加序号，比如设置此参数为server-1，那么创建的云手机服务器名称会自动按序增加数字后缀，比如为server-1-0001。
+	// 云手机服务器名称，  不超过60个字符，只支持英文字母、数字、汉字、下划线和中划线。  批量[创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)会在服务器名称后自动添加序号，比如设置此参数为server-1，那么创建的云手机服务器名称会自动按序增加数字后缀，比如为server-1-0001。
 	ServerName string `json:"server_name"`
 
 	// 云手机服务器规格，不超过64个字节。
@@ -20,7 +20,7 @@ type CreateNet2CloudPhoneServerRequestBody struct {
 	// 云手机镜像ID，不超过32个字节。
 	ImageId string `json:"image_id"`
 
-	// 购买的云手机服务器个数，最多可购买10台。
+	// [创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)的云手机服务器个数，最多可[创建](tag:fcs)[购买](tag:hws,hws_hk,cmcc)10台。
 	Count int32 `json:"count"`
 
 	// 密钥对名称，不超过64个字节，用于云手机ADB登录。
@@ -39,9 +39,16 @@ type CreateNet2CloudPhoneServerRequestBody struct {
 
 	PublicIp *CreateNet2CloudPhoneServerRequestBodyPublicIp `json:"public_ip"`
 
+	// 多少个手机共用一个vip。默认为手机开数，表示所有手机共享1个vip。取值范围：1到手机规格开数。
+	PhoneCountPerIp *int32 `json:"phone_count_per_ip,omitempty"`
+
+	PhoneDataVolume *CreateNet2CloudPhoneServerRequestBodyPhoneDataVolume `json:"phone_data_volume,omitempty"`
+
+	ServerShareDataVolume *CreateNet2CloudPhoneServerRequestBodyServerShareDataVolume `json:"server_share_data_volume,omitempty"`
+
 	BandWidth *CreateNet2CloudPhoneServerRequestBodyBandWidth `json:"band_width"`
 
-	// 待创建云服务器所在的可用区，需要指定可用区（AZ）的名称。
+	// 待创建云服务器所在的可用区，需要指定可用区（AZ）的名称。如上海一可用区1为cn-east-3a。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 

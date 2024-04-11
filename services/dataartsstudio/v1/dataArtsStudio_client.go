@@ -19,6 +19,27 @@ func DataArtsStudioClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddDesignEntityTags 添加标签
+//
+// 根据资产（表或属性）的ID给资产打上标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) AddDesignEntityTags(request *model.AddDesignEntityTagsRequest) (*model.AddDesignEntityTagsResponse, error) {
+	requestDef := GenReqDefForAddDesignEntityTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddDesignEntityTagsResponse), nil
+	}
+}
+
+// AddDesignEntityTagsInvoker 添加标签
+func (c *DataArtsStudioClient) AddDesignEntityTagsInvoker(request *model.AddDesignEntityTagsRequest) *AddDesignEntityTagsInvoker {
+	requestDef := GenReqDefForAddDesignEntityTags()
+	return &AddDesignEntityTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddTagToAsset 标签关联到资产
 //
 // 标签关联到资产
@@ -273,7 +294,7 @@ func (c *DataArtsStudioClient) BatchDeleteTemplatesInvoker(request *model.BatchD
 
 // BatchOffline 批量下线
 //
-// 批量下线
+// 批量下线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) BatchOffline(request *model.BatchOfflineRequest) (*model.BatchOfflineResponse, error) {
@@ -294,7 +315,7 @@ func (c *DataArtsStudioClient) BatchOfflineInvoker(request *model.BatchOfflineRe
 
 // BatchPublish 批量发布
 //
-// 批量发布
+// 批量发布。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) BatchPublish(request *model.BatchPublishRequest) (*model.BatchPublishResponse, error) {
@@ -357,7 +378,7 @@ func (c *DataArtsStudioClient) CancelFactoryPackagesInvoker(request *model.Cance
 
 // ChangeCatalog 修改流程架构
 //
-// 修改流程架构
+// 修改流程架构。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ChangeCatalog(request *model.ChangeCatalogRequest) (*model.ChangeCatalogResponse, error) {
@@ -399,7 +420,7 @@ func (c *DataArtsStudioClient) ChangeResourceInvoker(request *model.ChangeResour
 
 // ChangeSubjects 修改或删除主题层级
 //
-// 修改或删除主题层级
+// 修改或删除主题层级。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ChangeSubjects(request *model.ChangeSubjectsRequest) (*model.ChangeSubjectsResponse, error) {
@@ -420,7 +441,7 @@ func (c *DataArtsStudioClient) ChangeSubjectsInvoker(request *model.ChangeSubjec
 
 // CheckDimensionStatus 查看逆向维度表任务
 //
-// 查看逆向维度表任务
+// 查看逆向维度表任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CheckDimensionStatus(request *model.CheckDimensionStatusRequest) (*model.CheckDimensionStatusResponse, error) {
@@ -441,7 +462,7 @@ func (c *DataArtsStudioClient) CheckDimensionStatusInvoker(request *model.CheckD
 
 // CheckFactLogicTableStatus 查看逆向事实表任务
 //
-// 查看逆向事实表任务
+// 查看逆向事实表任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CheckFactLogicTableStatus(request *model.CheckFactLogicTableStatusRequest) (*model.CheckFactLogicTableStatusResponse, error) {
@@ -462,7 +483,7 @@ func (c *DataArtsStudioClient) CheckFactLogicTableStatusInvoker(request *model.C
 
 // ConfirmApprovals 审批单处理
 //
-// 审批驳回/通过，单个或多个 action-id&#x3D;reject/resolve
+// 审批驳回/通过，单个或多个action-id&#x3D;reject/resolve。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ConfirmApprovals(request *model.ConfirmApprovalsRequest) (*model.ConfirmApprovalsResponse, error) {
@@ -504,7 +525,7 @@ func (c *DataArtsStudioClient) ConfirmMessageInvoker(request *model.ConfirmMessa
 
 // CountAllModels 关系建模统计信息
 //
-// 关系建模统计信息
+// 关系建模统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountAllModels(request *model.CountAllModelsRequest) (*model.CountAllModelsResponse, error) {
@@ -525,7 +546,7 @@ func (c *DataArtsStudioClient) CountAllModelsInvoker(request *model.CountAllMode
 
 // CountOverviews 总览统计信息
 //
-// 总览统计信息
+// 总览统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountOverviews(request *model.CountOverviewsRequest) (*model.CountOverviewsResponse, error) {
@@ -546,7 +567,7 @@ func (c *DataArtsStudioClient) CountOverviewsInvoker(request *model.CountOvervie
 
 // CountStandards 标准覆盖率统计信息
 //
-// 标准覆盖率统计信息
+// 标准覆盖率统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountStandards(request *model.CountStandardsRequest) (*model.CountStandardsResponse, error) {
@@ -567,7 +588,7 @@ func (c *DataArtsStudioClient) CountStandardsInvoker(request *model.CountStandar
 
 // CountTableModels 模型统计信息
 //
-// 模型统计信息
+// 模型统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountTableModels(request *model.CountTableModelsRequest) (*model.CountTableModelsResponse, error) {
@@ -609,7 +630,7 @@ func (c *DataArtsStudioClient) CreateAppInvoker(request *model.CreateAppRequest)
 
 // CreateApprover 创建审批人
 //
-// 创建审批人
+// 创建审批人。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateApprover(request *model.CreateApproverRequest) (*model.CreateApproverResponse, error) {
@@ -630,7 +651,7 @@ func (c *DataArtsStudioClient) CreateApproverInvoker(request *model.CreateApprov
 
 // CreateBizMetric 创建业务指标
 //
-// 创建业务指标
+// 创建业务指标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateBizMetric(request *model.CreateBizMetricRequest) (*model.CreateBizMetricResponse, error) {
@@ -651,7 +672,7 @@ func (c *DataArtsStudioClient) CreateBizMetricInvoker(request *model.CreateBizMe
 
 // CreateCatalog 创建流程架构
 //
-// 创建流程架构
+// 创建流程架构。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateCatalog(request *model.CreateCatalogRequest) (*model.CreateCatalogResponse, error) {
@@ -672,7 +693,7 @@ func (c *DataArtsStudioClient) CreateCatalogInvoker(request *model.CreateCatalog
 
 // CreateCodeTable 创建码表
 //
-// 创建码表
+// 创建码表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateCodeTable(request *model.CreateCodeTableRequest) (*model.CreateCodeTableResponse, error) {
@@ -712,9 +733,51 @@ func (c *DataArtsStudioClient) CreateConnectionsInvoker(request *model.CreateCon
 	return &CreateConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDesignAggregationLogicTable 新建汇总表
+//
+// 新建汇总表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDesignAggregationLogicTable(request *model.CreateDesignAggregationLogicTableRequest) (*model.CreateDesignAggregationLogicTableResponse, error) {
+	requestDef := GenReqDefForCreateDesignAggregationLogicTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesignAggregationLogicTableResponse), nil
+	}
+}
+
+// CreateDesignAggregationLogicTableInvoker 新建汇总表
+func (c *DataArtsStudioClient) CreateDesignAggregationLogicTableInvoker(request *model.CreateDesignAggregationLogicTableRequest) *CreateDesignAggregationLogicTableInvoker {
+	requestDef := GenReqDefForCreateDesignAggregationLogicTable()
+	return &CreateDesignAggregationLogicTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesignAtomicIndex 新建原子指标
+//
+// 新建单个原子指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDesignAtomicIndex(request *model.CreateDesignAtomicIndexRequest) (*model.CreateDesignAtomicIndexResponse, error) {
+	requestDef := GenReqDefForCreateDesignAtomicIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesignAtomicIndexResponse), nil
+	}
+}
+
+// CreateDesignAtomicIndexInvoker 新建原子指标
+func (c *DataArtsStudioClient) CreateDesignAtomicIndexInvoker(request *model.CreateDesignAtomicIndexRequest) *CreateDesignAtomicIndexInvoker {
+	requestDef := GenReqDefForCreateDesignAtomicIndex()
+	return &CreateDesignAtomicIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDirectory 创建目录
 //
-// 创建目录
+// 创建目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateDirectory(request *model.CreateDirectoryRequest) (*model.CreateDirectoryResponse, error) {
@@ -987,7 +1050,7 @@ func (c *DataArtsStudioClient) CreateServiceCatalogInvoker(request *model.Create
 
 // CreateStandard 创建数据标准
 //
-// 创建数据标准
+// 创建数据标准。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateStandard(request *model.CreateStandardRequest) (*model.CreateStandardResponse, error) {
@@ -1008,7 +1071,7 @@ func (c *DataArtsStudioClient) CreateStandardInvoker(request *model.CreateStanda
 
 // CreateStandardTemplate 创建数据标准模板
 //
-// 创建数据标准模板
+// 创建数据标准模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateStandardTemplate(request *model.CreateStandardTemplateRequest) (*model.CreateStandardTemplateResponse, error) {
@@ -1029,7 +1092,7 @@ func (c *DataArtsStudioClient) CreateStandardTemplateInvoker(request *model.Crea
 
 // CreateSubject 创建主题
 //
-// 创建主题
+// 创建主题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateSubject(request *model.CreateSubjectRequest) (*model.CreateSubjectResponse, error) {
@@ -1050,7 +1113,7 @@ func (c *DataArtsStudioClient) CreateSubjectInvoker(request *model.CreateSubject
 
 // CreateSubjectNew 创建主题(新)
 //
-// 创建主题(新)
+// 创建主题(新)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateSubjectNew(request *model.CreateSubjectNewRequest) (*model.CreateSubjectNewResponse, error) {
@@ -1069,9 +1132,9 @@ func (c *DataArtsStudioClient) CreateSubjectNewInvoker(request *model.CreateSubj
 	return &CreateSubjectNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTableModel 创建模型实体
+// CreateTableModel 创建表模型
 //
-// 创建一个模型实体，包括逻辑实体或物理数据表。
+// 在关系建模中创建一个表模型，包括逻辑实体和物理表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateTableModel(request *model.CreateTableModelRequest) (*model.CreateTableModelResponse, error) {
@@ -1084,7 +1147,7 @@ func (c *DataArtsStudioClient) CreateTableModel(request *model.CreateTableModelR
 	}
 }
 
-// CreateTableModelInvoker 创建模型实体
+// CreateTableModelInvoker 创建表模型
 func (c *DataArtsStudioClient) CreateTableModelInvoker(request *model.CreateTableModelRequest) *CreateTableModelInvoker {
 	requestDef := GenReqDefForCreateTableModel()
 	return &CreateTableModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1134,7 +1197,7 @@ func (c *DataArtsStudioClient) CreateTemplateInvoker(request *model.CreateTempla
 
 // CreateWorkspace 新建模型工作区
 //
-// 新建模型工作区
+// 新建模型工作区。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateWorkspace(request *model.CreateWorkspaceRequest) (*model.CreateWorkspaceResponse, error) {
@@ -1197,7 +1260,7 @@ func (c *DataArtsStudioClient) DeleteAppInvoker(request *model.DeleteAppRequest)
 
 // DeleteApprover 删除审批人
 //
-// 删除审批人
+// 删除审批人。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteApprover(request *model.DeleteApproverRequest) (*model.DeleteApproverResponse, error) {
@@ -1239,7 +1302,7 @@ func (c *DataArtsStudioClient) DeleteAssetInvoker(request *model.DeleteAssetRequ
 
 // DeleteBizMetric 删除业务指标
 //
-// 删除业务指标
+// 删除业务指标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteBizMetric(request *model.DeleteBizMetricRequest) (*model.DeleteBizMetricResponse, error) {
@@ -1260,7 +1323,7 @@ func (c *DataArtsStudioClient) DeleteBizMetricInvoker(request *model.DeleteBizMe
 
 // DeleteCatalog 删除流程架构
 //
-// 删除流程架构
+// 删除流程架构。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteCatalog(request *model.DeleteCatalogRequest) (*model.DeleteCatalogResponse, error) {
@@ -1302,7 +1365,7 @@ func (c *DataArtsStudioClient) DeleteClassificationFromEntitiesInvoker(request *
 
 // DeleteCodeTable 删除码表
 //
-// 删除码表
+// 删除码表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteCodeTable(request *model.DeleteCodeTableRequest) (*model.DeleteCodeTableResponse, error) {
@@ -1342,9 +1405,72 @@ func (c *DataArtsStudioClient) DeleteDataconnectionInvoker(request *model.Delete
 	return &DeleteDataconnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDesignAggregationLogicTable 删除汇总表
+//
+// 批量删除汇总表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignAggregationLogicTable(request *model.DeleteDesignAggregationLogicTableRequest) (*model.DeleteDesignAggregationLogicTableResponse, error) {
+	requestDef := GenReqDefForDeleteDesignAggregationLogicTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignAggregationLogicTableResponse), nil
+	}
+}
+
+// DeleteDesignAggregationLogicTableInvoker 删除汇总表
+func (c *DataArtsStudioClient) DeleteDesignAggregationLogicTableInvoker(request *model.DeleteDesignAggregationLogicTableRequest) *DeleteDesignAggregationLogicTableInvoker {
+	requestDef := GenReqDefForDeleteDesignAggregationLogicTable()
+	return &DeleteDesignAggregationLogicTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignAtomicIndex 删除原子指标
+//
+// 批量删除原子指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignAtomicIndex(request *model.DeleteDesignAtomicIndexRequest) (*model.DeleteDesignAtomicIndexResponse, error) {
+	requestDef := GenReqDefForDeleteDesignAtomicIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignAtomicIndexResponse), nil
+	}
+}
+
+// DeleteDesignAtomicIndexInvoker 删除原子指标
+func (c *DataArtsStudioClient) DeleteDesignAtomicIndexInvoker(request *model.DeleteDesignAtomicIndexRequest) *DeleteDesignAtomicIndexInvoker {
+	requestDef := GenReqDefForDeleteDesignAtomicIndex()
+	return &DeleteDesignAtomicIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignLatestApproval 删除实体下展
+//
+// 当已发布的实体被编辑时，其会生成下展，该接口用于删除实体的下展信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignLatestApproval(request *model.DeleteDesignLatestApprovalRequest) (*model.DeleteDesignLatestApprovalResponse, error) {
+	requestDef := GenReqDefForDeleteDesignLatestApproval()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignLatestApprovalResponse), nil
+	}
+}
+
+// DeleteDesignLatestApprovalInvoker 删除实体下展
+func (c *DataArtsStudioClient) DeleteDesignLatestApprovalInvoker(request *model.DeleteDesignLatestApprovalRequest) *DeleteDesignLatestApprovalInvoker {
+	requestDef := GenReqDefForDeleteDesignLatestApproval()
+	return &DeleteDesignLatestApprovalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDirectory 删除目录
 //
-// 删除目录
+// 删除目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteDirectory(request *model.DeleteDirectoryRequest) (*model.DeleteDirectoryResponse, error) {
@@ -1470,7 +1596,7 @@ func (c *DataArtsStudioClient) DeleteServiceCatalogInvoker(request *model.Delete
 
 // DeleteStandard 删除数据标准
 //
-// 删除数据标准
+// 删除数据标准。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteStandard(request *model.DeleteStandardRequest) (*model.DeleteStandardResponse, error) {
@@ -1491,7 +1617,7 @@ func (c *DataArtsStudioClient) DeleteStandardInvoker(request *model.DeleteStanda
 
 // DeleteStandardTemplate 删除数据标准模板
 //
-// 删除数据标准模板
+// 删除数据标准模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteStandardTemplate(request *model.DeleteStandardTemplateRequest) (*model.DeleteStandardTemplateResponse, error) {
@@ -1512,7 +1638,7 @@ func (c *DataArtsStudioClient) DeleteStandardTemplateInvoker(request *model.Dele
 
 // DeleteSubject 删除主题
 //
-// 删除主题
+// 删除主题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteSubject(request *model.DeleteSubjectRequest) (*model.DeleteSubjectResponse, error) {
@@ -1533,7 +1659,7 @@ func (c *DataArtsStudioClient) DeleteSubjectInvoker(request *model.DeleteSubject
 
 // DeleteSubjectNew 删除主题(新)
 //
-// 删除主题(新)
+// 删除主题(新)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteSubjectNew(request *model.DeleteSubjectNewRequest) (*model.DeleteSubjectNewResponse, error) {
@@ -1552,9 +1678,9 @@ func (c *DataArtsStudioClient) DeleteSubjectNewInvoker(request *model.DeleteSubj
 	return &DeleteSubjectNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteTableModel 删除模型实体
+// DeleteTableModel 删除表模型
 //
-// 删除一个模型实体，包括逻辑实体或物理数据表。
+// 在关系建模中删除一个表模型及其属性，包括逻辑实体和物理表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteTableModel(request *model.DeleteTableModelRequest) (*model.DeleteTableModelResponse, error) {
@@ -1567,7 +1693,7 @@ func (c *DataArtsStudioClient) DeleteTableModel(request *model.DeleteTableModelR
 	}
 }
 
-// DeleteTableModelInvoker 删除模型实体
+// DeleteTableModelInvoker 删除表模型
 func (c *DataArtsStudioClient) DeleteTableModelInvoker(request *model.DeleteTableModelRequest) *DeleteTableModelInvoker {
 	requestDef := GenReqDefForDeleteTableModel()
 	return &DeleteTableModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1596,7 +1722,7 @@ func (c *DataArtsStudioClient) DeleteTaskInfoInvoker(request *model.DeleteTaskIn
 
 // DeleteWorkspaces 删除模型工作区
 //
-// 删除模型工作区
+// 删除模型工作区。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteWorkspaces(request *model.DeleteWorkspacesRequest) (*model.DeleteWorkspacesResponse, error) {
@@ -1678,9 +1804,72 @@ func (c *DataArtsStudioClient) ExecuteTaskActionInvoker(request *model.ExecuteTa
 	return &ExecuteTaskActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportDesignModelTableDdl 导出模型中表的DDL语句
+//
+// 根据模型ID导出指定表的DDL语句。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ExportDesignModelTableDdl(request *model.ExportDesignModelTableDdlRequest) (*model.ExportDesignModelTableDdlResponse, error) {
+	requestDef := GenReqDefForExportDesignModelTableDdl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportDesignModelTableDdlResponse), nil
+	}
+}
+
+// ExportDesignModelTableDdlInvoker 导出模型中表的DDL语句
+func (c *DataArtsStudioClient) ExportDesignModelTableDdlInvoker(request *model.ExportDesignModelTableDdlRequest) *ExportDesignModelTableDdlInvoker {
+	requestDef := GenReqDefForExportDesignModelTableDdl()
+	return &ExportDesignModelTableDdlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportDesignModels 导出业务数据
+//
+// 根据请求参数，导出业务数据，可以导出：码表、数据标准、原子指标、衍生指标、复合指标、汇总表、业务指标、主题、流程、逻辑模型、物理模型、维度、事实表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ExportDesignModels(request *model.ExportDesignModelsRequest) (*model.ExportDesignModelsResponse, error) {
+	requestDef := GenReqDefForExportDesignModels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportDesignModelsResponse), nil
+	}
+}
+
+// ExportDesignModelsInvoker 导出业务数据
+func (c *DataArtsStudioClient) ExportDesignModelsInvoker(request *model.ExportDesignModelsRequest) *ExportDesignModelsInvoker {
+	requestDef := GenReqDefForExportDesignModels()
+	return &ExportDesignModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportDesignResult 获取excel导出结果
+//
+// 根据请求导出接口（/export-model）时返回的uuid，获取excel导出结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ExportDesignResult(request *model.ExportDesignResultRequest) (*model.ExportDesignResultResponse, error) {
+	requestDef := GenReqDefForExportDesignResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportDesignResultResponse), nil
+	}
+}
+
+// ExportDesignResultInvoker 获取excel导出结果
+func (c *DataArtsStudioClient) ExportDesignResultInvoker(request *model.ExportDesignResultRequest) *ExportDesignResultInvoker {
+	requestDef := GenReqDefForExportDesignResult()
+	return &ExportDesignResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportCatalogs 导入主题
 //
-// 用于导入主题
+// 用于导入主题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ImportCatalogs(request *model.ImportCatalogsRequest) (*model.ImportCatalogsResponse, error) {
@@ -1722,7 +1911,7 @@ func (c *DataArtsStudioClient) ImportLineageInvoker(request *model.ImportLineage
 
 // ImportModels 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
 //
-// 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+// 导入模型，关系建模，维度建模，码表，业务指标以及流程架构。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ImportModels(request *model.ImportModelsRequest) (*model.ImportModelsResponse, error) {
@@ -1743,7 +1932,7 @@ func (c *DataArtsStudioClient) ImportModelsInvoker(request *model.ImportModelsRe
 
 // ImportResult 查询导入结果
 //
-// 查询导入excel的处理结果
+// 查询导入excel的处理结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ImportResult(request *model.ImportResultRequest) (*model.ImportResultResponse, error) {
@@ -1764,7 +1953,7 @@ func (c *DataArtsStudioClient) ImportResultInvoker(request *model.ImportResultRe
 
 // InitializeStandardTemplate 初始化数据标准模板
 //
-// 初始化模板
+// 初始化数据标准模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) InitializeStandardTemplate(request *model.InitializeStandardTemplateRequest) (*model.InitializeStandardTemplateResponse, error) {
@@ -1785,7 +1974,7 @@ func (c *DataArtsStudioClient) InitializeStandardTemplateInvoker(request *model.
 
 // ListAggregationLogicTables 查找汇总表
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListAggregationLogicTables(request *model.ListAggregationLogicTablesRequest) (*model.ListAggregationLogicTablesResponse, error) {
@@ -1825,9 +2014,9 @@ func (c *DataArtsStudioClient) ListAllCatalogListInvoker(request *model.ListAllC
 	return &ListAllCatalogListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAllStandards 获取数据标准
+// ListAllStandards 获取数据标准集合
 //
-// 获取数据标准
+// 根据查询条件分页获取数据标准集合，按修改时间降序排序。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListAllStandards(request *model.ListAllStandardsRequest) (*model.ListAllStandardsResponse, error) {
@@ -1840,7 +2029,7 @@ func (c *DataArtsStudioClient) ListAllStandards(request *model.ListAllStandardsR
 	}
 }
 
-// ListAllStandardsInvoker 获取数据标准
+// ListAllStandardsInvoker 获取数据标准集合
 func (c *DataArtsStudioClient) ListAllStandardsInvoker(request *model.ListAllStandardsRequest) *ListAllStandardsInvoker {
 	requestDef := GenReqDefForListAllStandards()
 	return &ListAllStandardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1848,7 +2037,7 @@ func (c *DataArtsStudioClient) ListAllStandardsInvoker(request *model.ListAllSta
 
 // ListAllTables 查询多种类型的表信息
 //
-// 从信息架构中查询多种类型的表信息，包括逻辑实体、物理表、维度表、事实表、汇总表
+// 从信息架构中查询多种类型的表信息，包括逻辑实体、物理表、维度表、事实表、汇总表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListAllTables(request *model.ListAllTablesRequest) (*model.ListAllTablesResponse, error) {
@@ -1995,7 +2184,7 @@ func (c *DataArtsStudioClient) ListApplyInvoker(request *model.ListApplyRequest)
 
 // ListApprovers 查询审批人列表
 //
-// 查询审批人列表
+// 查询审批人列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListApprovers(request *model.ListApproversRequest) (*model.ListApproversResponse, error) {
@@ -2058,7 +2247,7 @@ func (c *DataArtsStudioClient) ListAppsTopInvoker(request *model.ListAppsTopRequ
 
 // ListBizMetricDimensions 查看指标维度信息
 //
-// 查看指标维度信息
+// 查看指标维度信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListBizMetricDimensions(request *model.ListBizMetricDimensionsRequest) (*model.ListBizMetricDimensionsResponse, error) {
@@ -2079,7 +2268,7 @@ func (c *DataArtsStudioClient) ListBizMetricDimensionsInvoker(request *model.Lis
 
 // ListBizMetricOwners 查看指标指标责任人信息
 //
-// 查看指标指标责任人信息
+// 查看指标指标责任人信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListBizMetricOwners(request *model.ListBizMetricOwnersRequest) (*model.ListBizMetricOwnersResponse, error) {
@@ -2100,7 +2289,7 @@ func (c *DataArtsStudioClient) ListBizMetricOwnersInvoker(request *model.ListBiz
 
 // ListBizMetrics 查询业务指标信息
 //
-// 通过名称、创建者、修改时间分页查找业务指标信息
+// 通过名称、创建者、修改时间分页查找业务指标信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListBizMetrics(request *model.ListBizMetricsRequest) (*model.ListBizMetricsResponse, error) {
@@ -2121,7 +2310,7 @@ func (c *DataArtsStudioClient) ListBizMetricsInvoker(request *model.ListBizMetri
 
 // ListBusiness 获取主题树信息
 //
-// 获取数据资产主题树信息l1，l2，l3
+// 获取数据资产主题树信息l1，l2，l3。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListBusiness(request *model.ListBusinessRequest) (*model.ListBusinessResponse, error) {
@@ -2163,7 +2352,7 @@ func (c *DataArtsStudioClient) ListCatalogListInvoker(request *model.ListCatalog
 
 // ListCatalogTree 获取所有流程架构目录树
 //
-// 获取所有目录树
+// 获取所有目录树。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListCatalogTree(request *model.ListCatalogTreeRequest) (*model.ListCatalogTreeResponse, error) {
@@ -2226,7 +2415,7 @@ func (c *DataArtsStudioClient) ListColumnsInvoker(request *model.ListColumnsRequ
 
 // ListCompoundMetrics 查找复合指标
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找复合指标信息
+// 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找复合指标信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListCompoundMetrics(request *model.ListCompoundMetricsRequest) (*model.ListCompoundMetricsResponse, error) {
@@ -2247,7 +2436,7 @@ func (c *DataArtsStudioClient) ListCompoundMetricsInvoker(request *model.ListCom
 
 // ListCondition 查找业务限定
 //
-// 通过中英文名称、描述、创建者、审核人、限定分组id、修改时间状态分页查找限定信息
+// 通过中英文名称、描述、创建者、审核人、限定分组id、修改时间状态分页查找限定信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListCondition(request *model.ListConditionRequest) (*model.ListConditionResponse, error) {
@@ -2373,7 +2562,7 @@ func (c *DataArtsStudioClient) ListDataconnectionsInvoker(request *model.ListDat
 
 // ListDerivativeIndexes 查找衍生指标
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找衍生指标信息
+// 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找衍生指标信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListDerivativeIndexes(request *model.ListDerivativeIndexesRequest) (*model.ListDerivativeIndexesResponse, error) {
@@ -2394,7 +2583,7 @@ func (c *DataArtsStudioClient) ListDerivativeIndexesInvoker(request *model.ListD
 
 // ListDimensionGroups 查看维度颗粒度
 //
-// 查询维度颗粒度, 依据tableId查询涉及所有维度，不传tableId查询所有维度组颗粒度
+// 查询维度颗粒度，依据tableId查询涉及所有维度，不传tableId查询所有维度组颗粒度。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListDimensionGroups(request *model.ListDimensionGroupsRequest) (*model.ListDimensionGroupsResponse, error) {
@@ -2415,7 +2604,7 @@ func (c *DataArtsStudioClient) ListDimensionGroupsInvoker(request *model.ListDim
 
 // ListDimensionLogicTables 查找维度表
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找维度表信息
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找维度表信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListDimensionLogicTables(request *model.ListDimensionLogicTablesRequest) (*model.ListDimensionLogicTablesResponse, error) {
@@ -2436,7 +2625,7 @@ func (c *DataArtsStudioClient) ListDimensionLogicTablesInvoker(request *model.Li
 
 // ListDimensions 查找维度
 //
-// 通过中英文名称、描述、创建者、审核人、状态、l3Id、派生指标idList、修改时间分页查找维度信息
+// 通过中英文名称、描述、创建者、审核人、状态、l3Id、衍生指标idList、修改时间分页查找维度信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListDimensions(request *model.ListDimensionsRequest) (*model.ListDimensionsResponse, error) {
@@ -2457,7 +2646,7 @@ func (c *DataArtsStudioClient) ListDimensionsInvoker(request *model.ListDimensio
 
 // ListDirectories 获取所有目录
 //
-// 获取所有目录
+// 获取所有目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListDirectories(request *model.ListDirectoriesRequest) (*model.ListDirectoriesResponse, error) {
@@ -2478,7 +2667,7 @@ func (c *DataArtsStudioClient) ListDirectoriesInvoker(request *model.ListDirecto
 
 // ListFactLogicTables 查找事实表
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找事实表信息
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找事实表信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactLogicTables(request *model.ListFactLogicTablesRequest) (*model.ListFactLogicTablesResponse, error) {
@@ -2688,7 +2877,7 @@ func (c *DataArtsStudioClient) ListMessageInvoker(request *model.ListMessageRequ
 
 // ListMetricRelations 获取指标关联信息
 //
-// 获取当前指标图谱
+// 获取当前指标图谱。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListMetricRelations(request *model.ListMetricRelationsRequest) (*model.ListMetricRelationsResponse, error) {
@@ -2770,7 +2959,7 @@ func (c *DataArtsStudioClient) ListQualityTemplatesInvoker(request *model.ListQu
 
 // ListRelations 关系
 //
-// 通过名称、等分页查找关系信息
+// 通过名称、等分页查找关系信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListRelations(request *model.ListRelationsRequest) (*model.ListRelationsResponse, error) {
@@ -3022,7 +3211,7 @@ func (c *DataArtsStudioClient) ListSecuritySecrecyLevelsInvoker(request *model.L
 
 // ListSubjectLevels 获取主题层级
 //
-// 获取主题层级
+// 获取主题层级。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListSubjectLevels(request *model.ListSubjectLevelsRequest) (*model.ListSubjectLevelsResponse, error) {
@@ -3043,7 +3232,7 @@ func (c *DataArtsStudioClient) ListSubjectLevelsInvoker(request *model.ListSubje
 
 // ListTableModelRelations 查询模型下所有关系
 //
-// 查询模型下所有关系
+// 查询模型下所有关系。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListTableModelRelations(request *model.ListTableModelRelationsRequest) (*model.ListTableModelRelationsResponse, error) {
@@ -3062,9 +3251,9 @@ func (c *DataArtsStudioClient) ListTableModelRelationsInvoker(request *model.Lis
 	return &ListTableModelRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTableModels 查找模型实体列表
+// ListTableModels 查找表模型列表
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找模型实体信息，包含逻辑实体、表或属性。
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找关系建模中的表模型信息，包括逻辑实体、物理表和其属性。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListTableModels(request *model.ListTableModelsRequest) (*model.ListTableModelsResponse, error) {
@@ -3077,7 +3266,7 @@ func (c *DataArtsStudioClient) ListTableModels(request *model.ListTableModelsReq
 	}
 }
 
-// ListTableModelsInvoker 查找模型实体列表
+// ListTableModelsInvoker 查找表模型列表
 func (c *DataArtsStudioClient) ListTableModelsInvoker(request *model.ListTableModelsRequest) *ListTableModelsInvoker {
 	requestDef := GenReqDefForListTableModels()
 	return &ListTableModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3106,7 +3295,7 @@ func (c *DataArtsStudioClient) ListWorkspaceRolesInvoker(request *model.ListWork
 
 // ListWorkspaces 获取模型
 //
-// 获取模型
+// 获取模型。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListWorkspaces(request *model.ListWorkspacesRequest) (*model.ListWorkspacesResponse, error) {
@@ -3190,7 +3379,7 @@ func (c *DataArtsStudioClient) MigrateCatalogInvoker(request *model.MigrateCatal
 
 // ModifyCustomizedFields 修改自定义项
 //
-// 修改自定义项
+// 修改自定义项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ModifyCustomizedFields(request *model.ModifyCustomizedFieldsRequest) (*model.ModifyCustomizedFieldsResponse, error) {
@@ -3251,6 +3440,48 @@ func (c *DataArtsStudioClient) PayForDgcOneKeyInvoker(request *model.PayForDgcOn
 	return &PayForDgcOneKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RemoveDesignEntityTags 删除标签
+//
+// 根据资产（表或属性）的ID删除资产标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) RemoveDesignEntityTags(request *model.RemoveDesignEntityTagsRequest) (*model.RemoveDesignEntityTagsResponse, error) {
+	requestDef := GenReqDefForRemoveDesignEntityTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveDesignEntityTagsResponse), nil
+	}
+}
+
+// RemoveDesignEntityTagsInvoker 删除标签
+func (c *DataArtsStudioClient) RemoveDesignEntityTagsInvoker(request *model.RemoveDesignEntityTagsRequest) *RemoveDesignEntityTagsInvoker {
+	requestDef := GenReqDefForRemoveDesignEntityTags()
+	return &RemoveDesignEntityTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveDesignQualityInfos 清空质量规则
+//
+// 清空表的质量规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) RemoveDesignQualityInfos(request *model.RemoveDesignQualityInfosRequest) (*model.RemoveDesignQualityInfosResponse, error) {
+	requestDef := GenReqDefForRemoveDesignQualityInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveDesignQualityInfosResponse), nil
+	}
+}
+
+// RemoveDesignQualityInfosInvoker 清空质量规则
+func (c *DataArtsStudioClient) RemoveDesignQualityInfosInvoker(request *model.RemoveDesignQualityInfosRequest) *RemoveDesignQualityInfosInvoker {
+	requestDef := GenReqDefForRemoveDesignQualityInfos()
+	return &RemoveDesignQualityInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RenewDataProfile 指定字段采集概要
 //
 // 指定字段采集概要信息接口
@@ -3274,7 +3505,7 @@ func (c *DataArtsStudioClient) RenewDataProfileInvoker(request *model.RenewDataP
 
 // ResetLinkAttributeAndStandard 关联属性与数据标准
 //
-// 关联属性与数据标准
+// 关联属性与数据标准。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ResetLinkAttributeAndStandard(request *model.ResetLinkAttributeAndStandardRequest) (*model.ResetLinkAttributeAndStandardResponse, error) {
@@ -3295,7 +3526,7 @@ func (c *DataArtsStudioClient) ResetLinkAttributeAndStandardInvoker(request *mod
 
 // RollbackApproval 撤回审批单
 //
-// 撤回审批单
+// 撤回审批单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) RollbackApproval(request *model.RollbackApprovalRequest) (*model.RollbackApprovalResponse, error) {
@@ -3316,7 +3547,7 @@ func (c *DataArtsStudioClient) RollbackApprovalInvoker(request *model.RollbackAp
 
 // SearchApprovals 获取审批单
 //
-// 获取审批单
+// 获取审批单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchApprovals(request *model.SearchApprovalsRequest) (*model.SearchApprovalsResponse, error) {
@@ -3337,7 +3568,7 @@ func (c *DataArtsStudioClient) SearchApprovalsInvoker(request *model.SearchAppro
 
 // SearchAtomicIndexes 查找原子指标
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchAtomicIndexes(request *model.SearchAtomicIndexesRequest) (*model.SearchAtomicIndexesResponse, error) {
@@ -3400,7 +3631,7 @@ func (c *DataArtsStudioClient) SearchBindApiInvoker(request *model.SearchBindApi
 
 // SearchCatalogs 查询流程架构列表
 //
-// 查询流程架构列表
+// 查询流程架构列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchCatalogs(request *model.SearchCatalogsRequest) (*model.SearchCatalogsResponse, error) {
@@ -3421,7 +3652,7 @@ func (c *DataArtsStudioClient) SearchCatalogsInvoker(request *model.SearchCatalo
 
 // SearchCodeTableValues 查看码表字段值
 //
-// 查看码表字段值
+// 查看码表字段值。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchCodeTableValues(request *model.SearchCodeTableValuesRequest) (*model.SearchCodeTableValuesResponse, error) {
@@ -3442,7 +3673,7 @@ func (c *DataArtsStudioClient) SearchCodeTableValuesInvoker(request *model.Searc
 
 // SearchCodeTables 查询码表列表
 //
-// 查询码表列表
+// 查询码表列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchCodeTables(request *model.SearchCodeTablesRequest) (*model.SearchCodeTablesResponse, error) {
@@ -3463,7 +3694,7 @@ func (c *DataArtsStudioClient) SearchCodeTablesInvoker(request *model.SearchCode
 
 // SearchCustomizedFields 查询自定义项
 //
-// 查询自定义项
+// 查询自定义项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchCustomizedFields(request *model.SearchCustomizedFieldsRequest) (*model.SearchCustomizedFieldsResponse, error) {
@@ -3482,9 +3713,30 @@ func (c *DataArtsStudioClient) SearchCustomizedFieldsInvoker(request *model.Sear
 	return &SearchCustomizedFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SearchDesignLatestApprovalDiff 获取下展信息与已发布实体的差异
+//
+// 当已发布的实体被编辑时，其会生成下展，该接口用于获取下展信息与已发布实体的差异。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) SearchDesignLatestApprovalDiff(request *model.SearchDesignLatestApprovalDiffRequest) (*model.SearchDesignLatestApprovalDiffResponse, error) {
+	requestDef := GenReqDefForSearchDesignLatestApprovalDiff()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchDesignLatestApprovalDiffResponse), nil
+	}
+}
+
+// SearchDesignLatestApprovalDiffInvoker 获取下展信息与已发布实体的差异
+func (c *DataArtsStudioClient) SearchDesignLatestApprovalDiffInvoker(request *model.SearchDesignLatestApprovalDiffRequest) *SearchDesignLatestApprovalDiffInvoker {
+	requestDef := GenReqDefForSearchDesignLatestApprovalDiff()
+	return &SearchDesignLatestApprovalDiffInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchDwByType 获取数据连接信息
 //
-// 获取指定类型下的数据连接信息
+// 获取指定类型下的数据连接信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchDwByType(request *model.SearchDwByTypeRequest) (*model.SearchDwByTypeResponse, error) {
@@ -3501,6 +3753,27 @@ func (c *DataArtsStudioClient) SearchDwByType(request *model.SearchDwByTypeReque
 func (c *DataArtsStudioClient) SearchDwByTypeInvoker(request *model.SearchDwByTypeRequest) *SearchDwByTypeInvoker {
 	requestDef := GenReqDefForSearchDwByType()
 	return &SearchDwByTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchFieldsForRelation 查询目的表和字段(待下线)
+//
+// 查询目的表和字段(待下线)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) SearchFieldsForRelation(request *model.SearchFieldsForRelationRequest) (*model.SearchFieldsForRelationResponse, error) {
+	requestDef := GenReqDefForSearchFieldsForRelation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchFieldsForRelationResponse), nil
+	}
+}
+
+// SearchFieldsForRelationInvoker 查询目的表和字段(待下线)
+func (c *DataArtsStudioClient) SearchFieldsForRelationInvoker(request *model.SearchFieldsForRelationRequest) *SearchFieldsForRelationInvoker {
+	requestDef := GenReqDefForSearchFieldsForRelation()
+	return &SearchFieldsForRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchIdByPath 通过路径获取id
@@ -3526,7 +3799,7 @@ func (c *DataArtsStudioClient) SearchIdByPathInvoker(request *model.SearchIdByPa
 
 // SearchSubject 查找主题列表
 //
-// 通过名称、创建者、责任人、状态、修改时间分页查找主题
+// 通过名称、创建者、责任人、状态、修改时间分页查找主题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchSubject(request *model.SearchSubjectRequest) (*model.SearchSubjectResponse, error) {
@@ -3547,7 +3820,7 @@ func (c *DataArtsStudioClient) SearchSubjectInvoker(request *model.SearchSubject
 
 // SearchSubjectNew 查找主题列表(新)
 //
-// 查找主题(新)
+// 查找主题(新)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchSubjectNew(request *model.SearchSubjectNewRequest) (*model.SearchSubjectNewResponse, error) {
@@ -3568,7 +3841,7 @@ func (c *DataArtsStudioClient) SearchSubjectNewInvoker(request *model.SearchSubj
 
 // SearchVersions 查找版本信息
 //
-// 通过名称、创建者、修改时间查找版本信息
+// 通过名称、创建者、修改时间查找版本信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchVersions(request *model.SearchVersionsRequest) (*model.SearchVersionsResponse, error) {
@@ -3608,7 +3881,7 @@ func (c *DataArtsStudioClient) SetFactoryJobTagsInvoker(request *model.SetFactor
 
 // ShowAggregationLogicTableById 查看汇总表详情
 //
-// 通过id查看汇总表的详情信息
+// 通过ID查看汇总表的详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowAggregationLogicTableById(request *model.ShowAggregationLogicTableByIdRequest) (*model.ShowAggregationLogicTableByIdResponse, error) {
@@ -3818,7 +4091,7 @@ func (c *DataArtsStudioClient) ShowAppsOverviewInvoker(request *model.ShowAppsOv
 
 // ShowAtomicIndexById 查看原子指标详情
 //
-// 通过id获取指标详情信息
+// 通过ID获取指标详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowAtomicIndexById(request *model.ShowAtomicIndexByIdRequest) (*model.ShowAtomicIndexByIdResponse, error) {
@@ -3839,7 +4112,7 @@ func (c *DataArtsStudioClient) ShowAtomicIndexByIdInvoker(request *model.ShowAto
 
 // ShowBizCatalogDetail 查找流程架构详情
 //
-// 查找流程架构详情
+// 查找流程架构详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowBizCatalogDetail(request *model.ShowBizCatalogDetailRequest) (*model.ShowBizCatalogDetailResponse, error) {
@@ -3860,7 +4133,7 @@ func (c *DataArtsStudioClient) ShowBizCatalogDetailInvoker(request *model.ShowBi
 
 // ShowBizMetricById 查看指标详情
 //
-// 通过id查看指标的详情信息
+// 通过ID查看指标的详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowBizMetricById(request *model.ShowBizMetricByIdRequest) (*model.ShowBizMetricByIdResponse, error) {
@@ -3965,7 +4238,7 @@ func (c *DataArtsStudioClient) ShowCatalogDetailInvoker(request *model.ShowCatal
 
 // ShowCodeTableById 查看码表详情
 //
-// 通过id查看码表的详情信息
+// 通过ID查看码表的详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowCodeTableById(request *model.ShowCodeTableByIdRequest) (*model.ShowCodeTableByIdResponse, error) {
@@ -3986,7 +4259,7 @@ func (c *DataArtsStudioClient) ShowCodeTableByIdInvoker(request *model.ShowCodeT
 
 // ShowCompoundMetricById 查看复合指标详情
 //
-// 通过id获取复合指标详情信息
+// 通过ID获取复合指标详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowCompoundMetricById(request *model.ShowCompoundMetricByIdRequest) (*model.ShowCompoundMetricByIdResponse, error) {
@@ -4007,7 +4280,7 @@ func (c *DataArtsStudioClient) ShowCompoundMetricByIdInvoker(request *model.Show
 
 // ShowConditionById 查看限定详情
 //
-// 通过id查看限定详情信息
+// 通过ID查看限定详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowConditionById(request *model.ShowConditionByIdRequest) (*model.ShowConditionByIdResponse, error) {
@@ -4154,7 +4427,7 @@ func (c *DataArtsStudioClient) ShowDatamapLineageInvoker(request *model.ShowData
 
 // ShowDerivativeIndexById 查看衍生指标详情
 //
-// 通过id获取衍生详情信息
+// 通过ID获取衍生详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowDerivativeIndexById(request *model.ShowDerivativeIndexByIdRequest) (*model.ShowDerivativeIndexByIdResponse, error) {
@@ -4175,7 +4448,7 @@ func (c *DataArtsStudioClient) ShowDerivativeIndexByIdInvoker(request *model.Sho
 
 // ShowDimensionById 查看维度详情
 //
-// 通过id查看维度详情信息
+// 通过ID查看维度详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowDimensionById(request *model.ShowDimensionByIdRequest) (*model.ShowDimensionByIdResponse, error) {
@@ -4196,7 +4469,7 @@ func (c *DataArtsStudioClient) ShowDimensionByIdInvoker(request *model.ShowDimen
 
 // ShowDimensionLogicTableById 查看维度表详情
 //
-// 通过id查看维度表的详情信息
+// 通过ID查看维度表的详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowDimensionLogicTableById(request *model.ShowDimensionLogicTableByIdRequest) (*model.ShowDimensionLogicTableByIdResponse, error) {
@@ -4259,7 +4532,7 @@ func (c *DataArtsStudioClient) ShowEntityInfoByGuidInvoker(request *model.ShowEn
 
 // ShowFactLogicTableById 查看事实表详情
 //
-// 通过id查看事实表的详情信息
+// 通过ID查看事实表的详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowFactLogicTableById(request *model.ShowFactLogicTableByIdRequest) (*model.ShowFactLogicTableByIdResponse, error) {
@@ -4616,7 +4889,7 @@ func (c *DataArtsStudioClient) ShowQualityTaskDetailInvoker(request *model.ShowQ
 
 // ShowRelationById 查看关系详情
 //
-// 通过id获取关系详情信息
+// 通过ID获取关系详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowRelationById(request *model.ShowRelationByIdRequest) (*model.ShowRelationByIdResponse, error) {
@@ -4721,7 +4994,7 @@ func (c *DataArtsStudioClient) ShowSecuritySecrecyLevelInvoker(request *model.Sh
 
 // ShowStandardById 查看数据标准详情
 //
-// 通过id获取数据标准详情信息
+// 通过ID获取数据标准详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowStandardById(request *model.ShowStandardByIdRequest) (*model.ShowStandardByIdResponse, error) {
@@ -4742,7 +5015,7 @@ func (c *DataArtsStudioClient) ShowStandardByIdInvoker(request *model.ShowStanda
 
 // ShowStandardTemplate 查询数据标准模板
 //
-// 查询数据标准模板
+// 查询数据标准模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowStandardTemplate(request *model.ShowStandardTemplateRequest) (*model.ShowStandardTemplateResponse, error) {
@@ -4763,7 +5036,7 @@ func (c *DataArtsStudioClient) ShowStandardTemplateInvoker(request *model.ShowSt
 
 // ShowTableModelById 查看表模型详情
 //
-// 通过id获取模型表详情信息
+// 通过ID获取模型表详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowTableModelById(request *model.ShowTableModelByIdRequest) (*model.ShowTableModelByIdResponse, error) {
@@ -4931,7 +5204,7 @@ func (c *DataArtsStudioClient) ShowWorkSpaceInvoker(request *model.ShowWorkSpace
 
 // ShowWorkspaceDetailById 查询模型详情
 //
-// 查询物理模型或逻辑模型的工作区空间详情
+// 查询物理模型或逻辑模型的工作区空间详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowWorkspaceDetailById(request *model.ShowWorkspaceDetailByIdRequest) (*model.ShowWorkspaceDetailByIdResponse, error) {
@@ -4994,7 +5267,7 @@ func (c *DataArtsStudioClient) UpdateAppInvoker(request *model.UpdateAppRequest)
 
 // UpdateBizMetric 更新业务指标
 //
-// 更新业务指标
+// 更新业务指标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateBizMetric(request *model.UpdateBizMetricRequest) (*model.UpdateBizMetricResponse, error) {
@@ -5036,7 +5309,7 @@ func (c *DataArtsStudioClient) UpdateCatalogInvoker(request *model.UpdateCatalog
 
 // UpdateCodeTable 修改码表
 //
-// 修改码表
+// 修改码表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateCodeTable(request *model.UpdateCodeTableRequest) (*model.UpdateCodeTableResponse, error) {
@@ -5057,7 +5330,7 @@ func (c *DataArtsStudioClient) UpdateCodeTableInvoker(request *model.UpdateCodeT
 
 // UpdateCodeTableValues 编辑码表字段值
 //
-// 编辑码表字段值
+// 编辑码表字段值。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateCodeTableValues(request *model.UpdateCodeTableValuesRequest) (*model.UpdateCodeTableValuesResponse, error) {
@@ -5097,9 +5370,72 @@ func (c *DataArtsStudioClient) UpdateDataconnectionInvoker(request *model.Update
 	return &UpdateDataconnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDesignAggregationLogicTable 更新汇总表
+//
+// 更新汇总表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignAggregationLogicTable(request *model.UpdateDesignAggregationLogicTableRequest) (*model.UpdateDesignAggregationLogicTableResponse, error) {
+	requestDef := GenReqDefForUpdateDesignAggregationLogicTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignAggregationLogicTableResponse), nil
+	}
+}
+
+// UpdateDesignAggregationLogicTableInvoker 更新汇总表
+func (c *DataArtsStudioClient) UpdateDesignAggregationLogicTableInvoker(request *model.UpdateDesignAggregationLogicTableRequest) *UpdateDesignAggregationLogicTableInvoker {
+	requestDef := GenReqDefForUpdateDesignAggregationLogicTable()
+	return &UpdateDesignAggregationLogicTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesignAtomicIndex 更新原子指标
+//
+// 更新单个原子指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignAtomicIndex(request *model.UpdateDesignAtomicIndexRequest) (*model.UpdateDesignAtomicIndexResponse, error) {
+	requestDef := GenReqDefForUpdateDesignAtomicIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignAtomicIndexResponse), nil
+	}
+}
+
+// UpdateDesignAtomicIndexInvoker 更新原子指标
+func (c *DataArtsStudioClient) UpdateDesignAtomicIndexInvoker(request *model.UpdateDesignAtomicIndexRequest) *UpdateDesignAtomicIndexInvoker {
+	requestDef := GenReqDefForUpdateDesignAtomicIndex()
+	return &UpdateDesignAtomicIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesignTableQuality 更新表的异常数据输出配置
+//
+// 更新表的异常数据输出配置，包括是否生成异常数据、设置异常数据数据库或Schema、设置异常表表前缀/表后缀。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignTableQuality(request *model.UpdateDesignTableQualityRequest) (*model.UpdateDesignTableQualityResponse, error) {
+	requestDef := GenReqDefForUpdateDesignTableQuality()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignTableQualityResponse), nil
+	}
+}
+
+// UpdateDesignTableQualityInvoker 更新表的异常数据输出配置
+func (c *DataArtsStudioClient) UpdateDesignTableQualityInvoker(request *model.UpdateDesignTableQualityRequest) *UpdateDesignTableQualityInvoker {
+	requestDef := GenReqDefForUpdateDesignTableQuality()
+	return &UpdateDesignTableQualityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDirectory 修改目录
 //
-// 修改目录
+// 修改目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateDirectory(request *model.UpdateDirectoryRequest) (*model.UpdateDirectoryResponse, error) {
@@ -5246,7 +5582,7 @@ func (c *DataArtsStudioClient) UpdateSecuritySecrecyLevelInvoker(request *model.
 
 // UpdateStandard 修改数据标准
 //
-// 修改数据标准
+// 修改数据标准。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateStandard(request *model.UpdateStandardRequest) (*model.UpdateStandardResponse, error) {
@@ -5267,7 +5603,7 @@ func (c *DataArtsStudioClient) UpdateStandardInvoker(request *model.UpdateStanda
 
 // UpdateStandardTemplate 修改数据标准模板
 //
-// 修改数据标准模板
+// 修改数据标准模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateStandardTemplate(request *model.UpdateStandardTemplateRequest) (*model.UpdateStandardTemplateResponse, error) {
@@ -5288,7 +5624,7 @@ func (c *DataArtsStudioClient) UpdateStandardTemplateInvoker(request *model.Upda
 
 // UpdateSubject 修改主题
 //
-// 修改主题
+// 修改主题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateSubject(request *model.UpdateSubjectRequest) (*model.UpdateSubjectResponse, error) {
@@ -5309,7 +5645,7 @@ func (c *DataArtsStudioClient) UpdateSubjectInvoker(request *model.UpdateSubject
 
 // UpdateSubjectNew 修改主题(新)
 //
-// 修改主题(新)
+// 修改主题(新)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateSubjectNew(request *model.UpdateSubjectNewRequest) (*model.UpdateSubjectNewResponse, error) {
@@ -5328,9 +5664,9 @@ func (c *DataArtsStudioClient) UpdateSubjectNewInvoker(request *model.UpdateSubj
 	return &UpdateSubjectNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateTableModel 更新模型实体
+// UpdateTableModel 更新表模型
 //
-// 更新一个模型实体，包括逻辑实体或物理数据表。
+// 在关系建模中更新一个表模型及其属性，包括逻辑实体和物理表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateTableModel(request *model.UpdateTableModelRequest) (*model.UpdateTableModelResponse, error) {
@@ -5343,7 +5679,7 @@ func (c *DataArtsStudioClient) UpdateTableModel(request *model.UpdateTableModelR
 	}
 }
 
-// UpdateTableModelInvoker 更新模型实体
+// UpdateTableModelInvoker 更新表模型
 func (c *DataArtsStudioClient) UpdateTableModelInvoker(request *model.UpdateTableModelRequest) *UpdateTableModelInvoker {
 	requestDef := GenReqDefForUpdateTableModel()
 	return &UpdateTableModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5414,7 +5750,7 @@ func (c *DataArtsStudioClient) UpdateWorkSpaceUserOrGroupInvoker(request *model.
 
 // UpdateWorkspace 更新模型工作区
 //
-// 更新模型工作区
+// 更新模型工作区。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateWorkspace(request *model.UpdateWorkspaceRequest) (*model.UpdateWorkspaceResponse, error) {

@@ -26,7 +26,7 @@ type ServerModel struct {
 	// 产品类型。 - 0：云手机 - 1：云手游
 	ProductType *int32 `json:"product_type,omitempty"`
 
-	// 服务器磁盘的免费配额。
+	// 服务器磁盘的免费配额，单位G。
 	FreeSize *int32 `json:"free_size,omitempty"`
 }
 

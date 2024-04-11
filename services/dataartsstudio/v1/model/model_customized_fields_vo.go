@@ -8,43 +8,43 @@ import (
 	"strings"
 )
 
-// CustomizedFieldsVo 自定义项信息
+// CustomizedFieldsVo 自定义项信息。
 type CustomizedFieldsVo struct {
 
-	// 编码
+	// 编码。
 	Id *int64 `json:"id,omitempty"`
 
-	// 中文名称
+	// 中文名称。
 	NameCh string `json:"name_ch"`
 
-	// 英文名称
+	// 英文名称。
 	NameEn string `json:"name_en"`
 
-	// 是否必填
+	// 是否必填。
 	NotNull bool `json:"not_null"`
 
-	// 可选值。分号分隔
+	// 可选值。分号分隔。
 	OptionalValues *string `json:"optional_values,omitempty"`
 
-	// 自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
+	// 自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
 	Type CustomizedFieldsVoType `json:"type"`
 
-	// 顺序
+	// 顺序。
 	Ordinal *int32 `json:"ordinal,omitempty"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 创建人
+	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人
+	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 创建时间
+	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 

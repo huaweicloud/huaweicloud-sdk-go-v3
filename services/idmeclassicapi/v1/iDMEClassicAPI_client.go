@@ -19,9 +19,9 @@ func IDMEClassicAPIClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// AddTag 添加标签
+// AddTag 绑定标签
 //
-// 给模型实例数据添加标签数据。
+// 调用该接口为指定模型的数据实例绑定标签。在调用该接口前请确保数据模型具有“标签管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) AddTag(request *model.AddTagRequest) (*model.AddTagResponse, error) {
@@ -34,10 +34,31 @@ func (c *IDMEClassicAPIClient) AddTag(request *model.AddTagRequest) (*model.AddT
 	}
 }
 
-// AddTagInvoker 添加标签
+// AddTagInvoker 绑定标签
 func (c *IDMEClassicAPIClient) AddTagInvoker(request *model.AddTagRequest) *AddTagInvoker {
 	requestDef := GenReqDefForAddTag()
 	return &AddTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddChildNode 批量添加实例的子节点
+//
+// 调用该接口批量为指定数据实例添加子节点。在调用该接口前请确保数据模型具有“树形结构”功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchAddChildNode(request *model.BatchAddChildNodeRequest) (*model.BatchAddChildNodeResponse, error) {
+	requestDef := GenReqDefForBatchAddChildNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddChildNodeResponse), nil
+	}
+}
+
+// BatchAddChildNodeInvoker 批量添加实例的子节点
+func (c *IDMEClassicAPIClient) BatchAddChildNodeInvoker(request *model.BatchAddChildNodeRequest) *BatchAddChildNodeInvoker {
+	requestDef := GenReqDefForBatchAddChildNode()
+	return &BatchAddChildNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCheckin 批量检入M-V模型数据实例
@@ -166,9 +187,9 @@ func (c *IDMEClassicAPIClient) BatchCreateUsingPostInvoker(request *model.BatchC
 	return &BatchCreateUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchCreateView 批量创建视图
+// BatchCreateView 批量创建多维视图
 //
-// 通过模型版本对象ID和视图对象ID批量创建模型多视图。
+// 调用该接口批量创建指定M-V模型实体的多维视图。在调用该接口前请确保数据模型具有“多维视图&amp;多维分支”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) BatchCreateView(request *model.BatchCreateViewRequest) (*model.BatchCreateViewResponse, error) {
@@ -181,7 +202,7 @@ func (c *IDMEClassicAPIClient) BatchCreateView(request *model.BatchCreateViewReq
 	}
 }
 
-// BatchCreateViewInvoker 批量创建视图
+// BatchCreateViewInvoker 批量创建多维视图
 func (c *IDMEClassicAPIClient) BatchCreateViewInvoker(request *model.BatchCreateViewRequest) *BatchCreateViewInvoker {
 	requestDef := GenReqDefForBatchCreateView()
 	return &BatchCreateViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -294,6 +315,27 @@ func (c *IDMEClassicAPIClient) BatchExecuteRevise(request *model.BatchExecuteRev
 func (c *IDMEClassicAPIClient) BatchExecuteReviseInvoker(request *model.BatchExecuteReviseRequest) *BatchExecuteReviseInvoker {
 	requestDef := GenReqDefForBatchExecuteRevise()
 	return &BatchExecuteReviseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRemoveChildNode 批量移除实例的子节点
+//
+// 调用该接口批量移除指定数据实例的所有子节点。在调用该接口前请确保数据模型具有“树形结构”功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchRemoveChildNode(request *model.BatchRemoveChildNodeRequest) (*model.BatchRemoveChildNodeResponse, error) {
+	requestDef := GenReqDefForBatchRemoveChildNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRemoveChildNodeResponse), nil
+	}
+}
+
+// BatchRemoveChildNodeInvoker 批量移除实例的子节点
+func (c *IDMEClassicAPIClient) BatchRemoveChildNodeInvoker(request *model.BatchRemoveChildNodeRequest) *BatchRemoveChildNodeInvoker {
+	requestDef := GenReqDefForBatchRemoveChildNode()
+	return &BatchRemoveChildNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchShowGetUsingPost 批量查询实例
@@ -527,9 +569,9 @@ func (c *IDMEClassicAPIClient) CheckoutUndoByAdminInvoker(request *model.Checkou
 	return &CheckoutUndoByAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CollectHistoryData 统计模型历史数据
+// CollectHistoryData 获取模型的统计信息
 //
-// 根据开始时间&amp;结束时间统计这段时间内各操作类型（创建、更新、软删除、硬删除）的数据量。
+// 输入指定模型的统计时间区间（开始时间和结束时间），即可获取该模型的统计数据，包含创建实例、删除实例、软删除实例和更新实例的数据。在调用该接口前请确保数据模型具有“系统版本”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) CollectHistoryData(request *model.CollectHistoryDataRequest) (*model.CollectHistoryDataResponse, error) {
@@ -542,7 +584,7 @@ func (c *IDMEClassicAPIClient) CollectHistoryData(request *model.CollectHistoryD
 	}
 }
 
-// CollectHistoryDataInvoker 统计模型历史数据
+// CollectHistoryDataInvoker 获取模型的统计信息
 func (c *IDMEClassicAPIClient) CollectHistoryDataInvoker(request *model.CollectHistoryDataRequest) *CollectHistoryDataInvoker {
 	requestDef := GenReqDefForCollectHistoryData()
 	return &CollectHistoryDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -567,6 +609,27 @@ func (c *IDMEClassicAPIClient) CompareBusinessVersion(request *model.CompareBusi
 func (c *IDMEClassicAPIClient) CompareBusinessVersionInvoker(request *model.CompareBusinessVersionRequest) *CompareBusinessVersionInvoker {
 	requestDef := GenReqDefForCompareBusinessVersion()
 	return &CompareBusinessVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CompareVersion 对比数据实例
+//
+// 通过此接口可以对比某个模型数据实例的不同版本的属性和关系。建议使用数据建模引擎（xDM Foundation，简称xDM-F）新增的差异对比功能，即使用instance-attrs-comparison和instance-relation-comparison接口，更多内容可在应用运行态的“数据服务管理 &gt; 全量数据服务 &gt; 系统管理API &gt; 属性对比API”中查看。在调用该接口前请确保数据模型具有“系统版本”功能。。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) CompareVersion(request *model.CompareVersionRequest) (*model.CompareVersionResponse, error) {
+	requestDef := GenReqDefForCompareVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CompareVersionResponse), nil
+	}
+}
+
+// CompareVersionInvoker 对比数据实例
+func (c *IDMEClassicAPIClient) CompareVersionInvoker(request *model.CompareVersionRequest) *CompareVersionInvoker {
+	requestDef := GenReqDefForCompareVersion()
+	return &CompareVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CountUsingPost 统计指定数据模型的实例总数
@@ -632,9 +695,9 @@ func (c *IDMEClassicAPIClient) CreateUsingPostInvoker(request *model.CreateUsing
 	return &CreateUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateView 创建视图
+// CreateView 创建多维视图
 //
-// 通过模型版本对象ID和视图对象ID创建模型多视图。
+// 调用该接口创建指定M-V模型实体的多维视图。在调用该接口前请确保数据模型具有“多维视图&amp;多维分支”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) CreateView(request *model.CreateViewRequest) (*model.CreateViewResponse, error) {
@@ -647,7 +710,7 @@ func (c *IDMEClassicAPIClient) CreateView(request *model.CreateViewRequest) (*mo
 	}
 }
 
-// CreateViewInvoker 创建视图
+// CreateViewInvoker 创建多维视图
 func (c *IDMEClassicAPIClient) CreateViewInvoker(request *model.CreateViewRequest) *CreateViewInvoker {
 	requestDef := GenReqDefForCreateView()
 	return &CreateViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -781,6 +844,27 @@ func (c *IDMEClassicAPIClient) DeleteLogicalLatestVersionInvoker(request *model.
 	return &DeleteLogicalLatestVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteTarget 通过目标模型删除关系实体的数据实例
+//
+// 调用该接口输入源模型的数据实例ID和目标模型的英文名称，删除对应关系实体的数据实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) DeleteTarget(request *model.DeleteTargetRequest) (*model.DeleteTargetResponse, error) {
+	requestDef := GenReqDefForDeleteTarget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTargetResponse), nil
+	}
+}
+
+// DeleteTargetInvoker 通过目标模型删除关系实体的数据实例
+func (c *IDMEClassicAPIClient) DeleteTargetInvoker(request *model.DeleteTargetRequest) *DeleteTargetInvoker {
+	requestDef := GenReqDefForDeleteTarget()
+	return &DeleteTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteUsingPost 删除实例
 //
 // 根据数据实例的唯一编码，删除指定数据模型中的一个数据实例。
@@ -806,7 +890,7 @@ func (c *IDMEClassicAPIClient) DeleteUsingPostInvoker(request *model.DeleteUsing
 
 // DisableDataInstance 失效模型数据实例
 //
-// 根据对象ID失效对应实例数据，返回失效成功数量。
+// 调用该接口失效指定模型的数据实例，同时返回失效成功的实例数量。在调用该接口前请确保数据模型具有“失效管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) DisableDataInstance(request *model.DisableDataInstanceRequest) (*model.DisableDataInstanceResponse, error) {
@@ -827,7 +911,7 @@ func (c *IDMEClassicAPIClient) DisableDataInstanceInvoker(request *model.Disable
 
 // EnableDataInstance 生效模型数据实例
 //
-// 根据对象ID生效对应实例数据，返回生效成功数量。
+// 调用该接口生效指定模型的数据实例，同时返回生效成功的实例数量。在调用该接口前请确保数据模型具有“失效管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) EnableDataInstance(request *model.EnableDataInstanceRequest) (*model.EnableDataInstanceResponse, error) {
@@ -869,7 +953,7 @@ func (c *IDMEClassicAPIClient) ExecuteReviseInvoker(request *model.ExecuteRevise
 
 // GenerateBusinessCode 新增模型业务编码
 //
-// 调用接口生成模型业务编码。
+// 调用该接口为指定模型的数据实例生成业务编码。在调用该接口前请确保数据模型具有“业务编码生成器”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) GenerateBusinessCode(request *model.GenerateBusinessCodeRequest) (*model.GenerateBusinessCodeResponse, error) {
@@ -909,9 +993,72 @@ func (c *IDMEClassicAPIClient) ListAllVersionsInvoker(request *model.ListAllVers
 	return &ListAllVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBatchQueryRelatedObjects 批量查询关系实体关联模型的信息
+//
+// 调用该接口批量查询指定关系实体所关联的源/目标模型的所有实例信息，包含具体的属性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListBatchQueryRelatedObjects(request *model.ListBatchQueryRelatedObjectsRequest) (*model.ListBatchQueryRelatedObjectsResponse, error) {
+	requestDef := GenReqDefForListBatchQueryRelatedObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBatchQueryRelatedObjectsResponse), nil
+	}
+}
+
+// ListBatchQueryRelatedObjectsInvoker 批量查询关系实体关联模型的信息
+func (c *IDMEClassicAPIClient) ListBatchQueryRelatedObjectsInvoker(request *model.ListBatchQueryRelatedObjectsRequest) *ListBatchQueryRelatedObjectsInvoker {
+	requestDef := GenReqDefForListBatchQueryRelatedObjects()
+	return &ListBatchQueryRelatedObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGetAllParentList 获取所有父节点
+//
+// 调用该接口获取指定数据实例的所有父节点，同时返回其列表属性。在调用该接口前请确保数据模型具有“树形结构”功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListGetAllParentList(request *model.ListGetAllParentListRequest) (*model.ListGetAllParentListResponse, error) {
+	requestDef := GenReqDefForListGetAllParentList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGetAllParentListResponse), nil
+	}
+}
+
+// ListGetAllParentListInvoker 获取所有父节点
+func (c *IDMEClassicAPIClient) ListGetAllParentListInvoker(request *model.ListGetAllParentListRequest) *ListGetAllParentListInvoker {
+	requestDef := GenReqDefForListGetAllParentList()
+	return &ListGetAllParentListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGetChildList 获取子节点
+//
+// 调用该接口获取指定数据实例的子节点，同时返回其列表属性。在调用该接口前请确保数据模型具有“树形结构”功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListGetChildList(request *model.ListGetChildListRequest) (*model.ListGetChildListResponse, error) {
+	requestDef := GenReqDefForListGetChildList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGetChildListResponse), nil
+	}
+}
+
+// ListGetChildListInvoker 获取子节点
+func (c *IDMEClassicAPIClient) ListGetChildListInvoker(request *model.ListGetChildListRequest) *ListGetChildListInvoker {
+	requestDef := GenReqDefForListGetChildList()
+	return &ListGetChildListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHistoryData 分页查询模型历史版本信息
 //
-// 根据对象入参分页查询满足条件的系统版本详细信息
+// 调用该接口输入指定模型的统计时间区间（开始时间和结束时间）后，会以数据实例的最后修改时间作为查询条件，分页查询该实例的历史版本信息。在调用该接口前请确保数据模型具有“系统版本”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) ListHistoryData(request *model.ListHistoryDataRequest) (*model.ListHistoryDataResponse, error) {
@@ -928,6 +1075,71 @@ func (c *IDMEClassicAPIClient) ListHistoryData(request *model.ListHistoryDataReq
 func (c *IDMEClassicAPIClient) ListHistoryDataInvoker(request *model.ListHistoryDataRequest) *ListHistoryDataInvoker {
 	requestDef := GenReqDefForListHistoryData()
 	return &ListHistoryDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueryRelatedObjects 查询关系实体关联模型的信息
+//
+// 调用该接口查询指定关系实体所关联的源/目标模型的所有实例信息，包含具体的属性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListQueryRelatedObjects(request *model.ListQueryRelatedObjectsRequest) (*model.ListQueryRelatedObjectsResponse, error) {
+	requestDef := GenReqDefForListQueryRelatedObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueryRelatedObjectsResponse), nil
+	}
+}
+
+// ListQueryRelatedObjectsInvoker 查询关系实体关联模型的信息
+func (c *IDMEClassicAPIClient) ListQueryRelatedObjectsInvoker(request *model.ListQueryRelatedObjectsRequest) *ListQueryRelatedObjectsInvoker {
+	requestDef := GenReqDefForListQueryRelatedObjects()
+	return &ListQueryRelatedObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueryRelationship 查询关系实体的数据实例
+//
+// 调用该接口输入数据实例的ID和对应的关系角色（源/目标模型），查询并返回对应关系实体的数据实例。
+// 如果对应的关系实体存在“参考对象”类型属性，且参考的数据模型为抽象模型，返回信息仅返回对应模型的英文名称和ID。如果参考的数据模型为实体模型，返回空。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListQueryRelationship(request *model.ListQueryRelationshipRequest) (*model.ListQueryRelationshipResponse, error) {
+	requestDef := GenReqDefForListQueryRelationship()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueryRelationshipResponse), nil
+	}
+}
+
+// ListQueryRelationshipInvoker 查询关系实体的数据实例
+func (c *IDMEClassicAPIClient) ListQueryRelationshipInvoker(request *model.ListQueryRelationshipRequest) *ListQueryRelationshipInvoker {
+	requestDef := GenReqDefForListQueryRelationship()
+	return &ListQueryRelationshipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueryTarget 通过源模型实例ID查询关联的目标模型实例
+//
+// 调用该接口输入源模型的数据实例ID，查询并返回与该实例关联的目标模型数据实例的信息，实例信息包含对应数据实例的“列表属性”。
+// 如果目标模型存在“参考对象”类型的属性，且参考的数据模型为抽象模型，返回信息仅返回对应模型的英文名称和ID。如果参考的数据模型为实体模型，返回空。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListQueryTarget(request *model.ListQueryTargetRequest) (*model.ListQueryTargetResponse, error) {
+	requestDef := GenReqDefForListQueryTarget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueryTargetResponse), nil
+	}
+}
+
+// ListQueryTargetInvoker 通过源模型实例ID查询关联的目标模型实例
+func (c *IDMEClassicAPIClient) ListQueryTargetInvoker(request *model.ListQueryTargetRequest) *ListQueryTargetInvoker {
+	requestDef := GenReqDefForListQueryTarget()
+	return &ListQueryTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListQueryUsingPost 根据“列表属性”为“是”的属性查询实例
@@ -993,9 +1205,31 @@ func (c *IDMEClassicAPIClient) ListUsingPostInvoker(request *model.ListUsingPost
 	return &ListUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RemoveTag 删除标签
+// Refresh 刷新树形节点
 //
-// 删除模型实例数据绑定的标签数据。
+// 调用该接口刷新指定数据实例对应的节点全路径。在调用该接口前请确保数据模型具有“树形结构”功能。
+// 调用该接口时，如果未指定数据实例或指定的数据实例为父节点，则刷新整颗树的所有节点全路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) Refresh(request *model.RefreshRequest) (*model.RefreshResponse, error) {
+	requestDef := GenReqDefForRefresh()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RefreshResponse), nil
+	}
+}
+
+// RefreshInvoker 刷新树形节点
+func (c *IDMEClassicAPIClient) RefreshInvoker(request *model.RefreshRequest) *RefreshInvoker {
+	requestDef := GenReqDefForRefresh()
+	return &RefreshInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveTag 解绑标签
+//
+// 调用该接口为指定数据模型的数据实例解绑标签。在调用该接口前请确保数据模型具有“标签管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) RemoveTag(request *model.RemoveTagRequest) (*model.RemoveTagResponse, error) {
@@ -1008,7 +1242,7 @@ func (c *IDMEClassicAPIClient) RemoveTag(request *model.RemoveTagRequest) (*mode
 	}
 }
 
-// RemoveTagInvoker 删除标签
+// RemoveTagInvoker 解绑标签
 func (c *IDMEClassicAPIClient) RemoveTagInvoker(request *model.RemoveTagRequest) *RemoveTagInvoker {
 	requestDef := GenReqDefForRemoveTag()
 	return &RemoveTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1123,6 +1357,48 @@ func (c *IDMEClassicAPIClient) ShowGetByUniqueKeyInvoker(request *model.ShowGetB
 	return &ShowGetByUniqueKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGetParent 获取父节点
+//
+// 调用该接口获取指定数据实例的父节点，同时返回其列表属性。在调用该接口前请确保数据模型具有“树形结构”功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ShowGetParent(request *model.ShowGetParentRequest) (*model.ShowGetParentResponse, error) {
+	requestDef := GenReqDefForShowGetParent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGetParentResponse), nil
+	}
+}
+
+// ShowGetParentInvoker 获取父节点
+func (c *IDMEClassicAPIClient) ShowGetParentInvoker(request *model.ShowGetParentRequest) *ShowGetParentInvoker {
+	requestDef := GenReqDefForShowGetParent()
+	return &ShowGetParentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGetRoot 获取根节点
+//
+// 调用该接口获取指定数据实例的根节点。在调用该接口前请确保数据模型具有“树形结构”功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ShowGetRoot(request *model.ShowGetRootRequest) (*model.ShowGetRootResponse, error) {
+	requestDef := GenReqDefForShowGetRoot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGetRootResponse), nil
+	}
+}
+
+// ShowGetRootInvoker 获取根节点
+func (c *IDMEClassicAPIClient) ShowGetRootInvoker(request *model.ShowGetRootRequest) *ShowGetRootInvoker {
+	requestDef := GenReqDefForShowGetRoot()
+	return &ShowGetRootInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGetUsingPost 查询实例
 //
 // 根据一个数据实例的唯一编码，查询实例的详细信息。
@@ -1211,9 +1487,9 @@ func (c *IDMEClassicAPIClient) ShowStaticsUsingPostInvoker(request *model.ShowSt
 	return &ShowStaticsUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowTag 查询实例标签详细信息
+// ShowTag 查询指定数据实例的标签详情
 //
-// 根据对象ID获取数据实例标签信息。
+// 调用该接口查询指定模型的数据实例对应标签信息。在调用该接口前请确保数据模型具有“标签管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) ShowTag(request *model.ShowTagRequest) (*model.ShowTagResponse, error) {
@@ -1226,7 +1502,7 @@ func (c *IDMEClassicAPIClient) ShowTag(request *model.ShowTagRequest) (*model.Sh
 	}
 }
 
-// ShowTagInvoker 查询实例标签详细信息
+// ShowTagInvoker 查询指定数据实例的标签详情
 func (c *IDMEClassicAPIClient) ShowTagInvoker(request *model.ShowTagRequest) *ShowTagInvoker {
 	requestDef := GenReqDefForShowTag()
 	return &ShowTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1253,9 +1529,9 @@ func (c *IDMEClassicAPIClient) ShowVersionByMasterInvoker(request *model.ShowVer
 	return &ShowVersionByMasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SwitchLifecycleTemplate 切换模型生命周期模板或状态
+// SwitchLifecycleTemplate 切换生命周期模板
 //
-// 根据对象ID重新分配生命周期模板&amp;状态。
+// 调用该接口切换指定模型的数据实例绑定的生命周期模板。切换生命周期模板时，需为数据实例指定生命周期的状态。在调用该接口前请确保数据模型具有“生命周期管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) SwitchLifecycleTemplate(request *model.SwitchLifecycleTemplateRequest) (*model.SwitchLifecycleTemplateResponse, error) {
@@ -1268,7 +1544,7 @@ func (c *IDMEClassicAPIClient) SwitchLifecycleTemplate(request *model.SwitchLife
 	}
 }
 
-// SwitchLifecycleTemplateInvoker 切换模型生命周期模板或状态
+// SwitchLifecycleTemplateInvoker 切换生命周期模板
 func (c *IDMEClassicAPIClient) SwitchLifecycleTemplateInvoker(request *model.SwitchLifecycleTemplateRequest) *SwitchLifecycleTemplateInvoker {
 	requestDef := GenReqDefForSwitchLifecycleTemplate()
 	return &SwitchLifecycleTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1358,9 +1634,9 @@ func (c *IDMEClassicAPIClient) UpdateByConditionUsingPostInvoker(request *model.
 	return &UpdateByConditionUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateState 设置模型生命周期状态
+// UpdateState 设置生命周期的状态
 //
-// 根据对象实例ID设置指定生命周期状态。
+// 调用该接口修改或切换数据实例绑定的生命周期状态。在调用该接口前请确保数据模型具有“生命周期管理”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) UpdateState(request *model.UpdateStateRequest) (*model.UpdateStateResponse, error) {
@@ -1373,7 +1649,7 @@ func (c *IDMEClassicAPIClient) UpdateState(request *model.UpdateStateRequest) (*
 	}
 }
 
-// UpdateStateInvoker 设置模型生命周期状态
+// UpdateStateInvoker 设置生命周期的状态
 func (c *IDMEClassicAPIClient) UpdateStateInvoker(request *model.UpdateStateRequest) *UpdateStateInvoker {
 	requestDef := GenReqDefForUpdateState()
 	return &UpdateStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1400,9 +1676,9 @@ func (c *IDMEClassicAPIClient) UpdateUsingPostInvoker(request *model.UpdateUsing
 	return &UpdateUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateView 批量创建视图
+// UpdateView 更新多维视图
 //
-// 通过模型版本对象ID和视图对象ID批量创建模型多视图。
+// 调用该接口更新指定M-V模型实体的多维视图。在调用该接口前请确保数据模型具有“多维视图&amp;多维分支”功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) UpdateView(request *model.UpdateViewRequest) (*model.UpdateViewResponse, error) {
@@ -1415,7 +1691,7 @@ func (c *IDMEClassicAPIClient) UpdateView(request *model.UpdateViewRequest) (*mo
 	}
 }
 
-// UpdateViewInvoker 批量创建视图
+// UpdateViewInvoker 更新多维视图
 func (c *IDMEClassicAPIClient) UpdateViewInvoker(request *model.UpdateViewRequest) *UpdateViewInvoker {
 	requestDef := GenReqDefForUpdateView()
 	return &UpdateViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

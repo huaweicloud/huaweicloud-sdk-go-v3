@@ -15,7 +15,7 @@ type CreateInstanceReq struct {
 	// 实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
 	Name string `json:"name"`
 
-	// 实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+	// 实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
 	Description *string `json:"description,omitempty"`
 
 	// 消息引擎：rabbitmq。
@@ -24,7 +24,7 @@ type CreateInstanceReq struct {
 	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
 	EngineVersion CreateInstanceReqEngineVersion `json:"engine_version"`
 
-	// 消息存储空间，单位GB。   - 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。   - 集群RabbitMQ实例的存储空间的取值范围为100GB\\*节点数~90000GB、200GB\\*节点数~90000GB、300GB\\*节点数~90000GB。
+	// 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
 	StorageSpace int32 `json:"storage_space"`
 
 	// 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -45,7 +45,7 @@ type CreateInstanceReq struct {
 	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
 	AvailableZones []string `json:"available_zones"`
 
-	// 产品标识。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ctc,cmcc,hws_eu,g42,hk_g42,tm,hk_tm,ocb,hws_ocb,hcs) [产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:hk_sbc,sbc)  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+	// 产品标识。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ctc,cmcc,hws_eu,g42,hk_g42,tm,hk_tm,ocb,hws_ocb) [产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:hk_sbc,sbc) [产品ID可以从“其他接口 > 查询产品规格列表”获取。](tag:hcs)  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
 	ProductId string `json:"product_id"`
 
 	// 代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7
@@ -66,7 +66,7 @@ type CreateInstanceReq struct {
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
-	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   - dms.physical.storage.high.dss.v2(专属云)   - dms.physical.storage.ultra.dss.v2(专属云)
+	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2   - dms.physical.storage.ultra.v2   [- dms.physical.storage.high.dss.v2(专属云)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)   [- dms.physical.storage.ultra.dss.v2(专属云)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
 	StorageSpecCode CreateInstanceReqStorageSpecCode `json:"storage_spec_code"`
 
 	// 企业项目ID。若为企业项目账号，该参数必填。

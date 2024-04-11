@@ -2225,18 +2225,6 @@ func (i *ShowPostgresqlParamValueInvoker) Invoke() (*model.ShowPostgresqlParamVa
 	}
 }
 
-type ShowReplayDelayStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowReplayDelayStatusInvoker) Invoke() (*model.ShowReplayDelayStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowReplayDelayStatusResponse), nil
-	}
-}
-
 type StartDatabaseProxyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2258,18 +2246,6 @@ func (i *StopDatabaseProxyInvoker) Invoke() (*model.StopDatabaseProxyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.StopDatabaseProxyResponse), nil
-	}
-}
-
-type SwitchLogReplayInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SwitchLogReplayInvoker) Invoke() (*model.SwitchLogReplayResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SwitchLogReplayResponse), nil
 	}
 }
 

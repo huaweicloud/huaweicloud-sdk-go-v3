@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// DerivativeIndexVoDetailData 返回数据。
 type DerivativeIndexVoDetailData struct {
 	Value *DerivativeIndexVo `json:"value,omitempty"`
 }

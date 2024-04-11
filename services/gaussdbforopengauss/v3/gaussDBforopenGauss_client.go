@@ -271,6 +271,27 @@ func (c *GaussDBforopenGaussClient) CreateRestoreInstanceInvoker(request *model.
 	return &CreateRestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSlowLogDownload 创建慢日志下载信息
+//
+// 创建慢日志下载信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateSlowLogDownload(request *model.CreateSlowLogDownloadRequest) (*model.CreateSlowLogDownloadResponse, error) {
+	requestDef := GenReqDefForCreateSlowLogDownload()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSlowLogDownloadResponse), nil
+	}
+}
+
+// CreateSlowLogDownloadInvoker 创建慢日志下载信息
+func (c *GaussDBforopenGaussClient) CreateSlowLogDownloadInvoker(request *model.CreateSlowLogDownloadRequest) *CreateSlowLogDownloadInvoker {
+	requestDef := GenReqDefForCreateSlowLogDownload()
+	return &CreateSlowLogDownloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConfiguration 删除参数模板
 //
 // 删除参数模板。
@@ -500,6 +521,27 @@ func (c *GaussDBforopenGaussClient) ListBindedEips(request *model.ListBindedEips
 func (c *GaussDBforopenGaussClient) ListBindedEipsInvoker(request *model.ListBindedEipsRequest) *ListBindedEipsInvoker {
 	requestDef := GenReqDefForListBindedEips()
 	return &ListBindedEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCnInfosBeforeReduce 查询协调节点列表
+//
+// 查询协调节点列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListCnInfosBeforeReduce(request *model.ListCnInfosBeforeReduceRequest) (*model.ListCnInfosBeforeReduceResponse, error) {
+	requestDef := GenReqDefForListCnInfosBeforeReduce()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCnInfosBeforeReduceResponse), nil
+	}
+}
+
+// ListCnInfosBeforeReduceInvoker 查询协调节点列表
+func (c *GaussDBforopenGaussClient) ListCnInfosBeforeReduceInvoker(request *model.ListCnInfosBeforeReduceRequest) *ListCnInfosBeforeReduceInvoker {
+	requestDef := GenReqDefForListCnInfosBeforeReduce()
+	return &ListCnInfosBeforeReduceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListComponentInfos 查询实例的组件列表
@@ -1133,6 +1175,27 @@ func (c *GaussDBforopenGaussClient) RunInstanceActionInvoker(request *model.RunI
 	return &RunInstanceActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SearchAutoEnlargePolicy 查询磁盘自动扩容策略
+//
+// 查询磁盘自动扩容策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) SearchAutoEnlargePolicy(request *model.SearchAutoEnlargePolicyRequest) (*model.SearchAutoEnlargePolicyResponse, error) {
+	requestDef := GenReqDefForSearchAutoEnlargePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchAutoEnlargePolicyResponse), nil
+	}
+}
+
+// SearchAutoEnlargePolicyInvoker 查询磁盘自动扩容策略
+func (c *GaussDBforopenGaussClient) SearchAutoEnlargePolicyInvoker(request *model.SearchAutoEnlargePolicyRequest) *SearchAutoEnlargePolicyInvoker {
+	requestDef := GenReqDefForSearchAutoEnlargePolicy()
+	return &SearchAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetBackupPolicy 设置自动备份策略。
 //
 // 设置自动备份策略。
@@ -1364,6 +1427,27 @@ func (c *GaussDBforopenGaussClient) ShowInstanceSnapshotInvoker(request *model.S
 	return &ShowInstanceSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstancesStatistics 实例统计
+//
+// 实例统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowInstancesStatistics(request *model.ShowInstancesStatisticsRequest) (*model.ShowInstancesStatisticsResponse, error) {
+	requestDef := GenReqDefForShowInstancesStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstancesStatisticsResponse), nil
+	}
+}
+
+// ShowInstancesStatisticsInvoker 实例统计
+func (c *GaussDBforopenGaussClient) ShowInstancesStatisticsInvoker(request *model.ShowInstancesStatisticsRequest) *ShowInstancesStatisticsInvoker {
+	requestDef := GenReqDefForShowInstancesStatistics()
+	return &ShowInstancesStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobDetail 获取指定ID的任务信息。
 //
 // 获取指定ID的任务信息。
@@ -1425,6 +1509,27 @@ func (c *GaussDBforopenGaussClient) ShowRecyclePolicyInvoker(request *model.Show
 	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSlowLogDownload 查询慢日志下载信息
+//
+// 查询慢日志下载信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowSlowLogDownload(request *model.ShowSlowLogDownloadRequest) (*model.ShowSlowLogDownloadResponse, error) {
+	requestDef := GenReqDefForShowSlowLogDownload()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlowLogDownloadResponse), nil
+	}
+}
+
+// ShowSlowLogDownloadInvoker 查询慢日志下载信息
+func (c *GaussDBforopenGaussClient) ShowSlowLogDownloadInvoker(request *model.ShowSlowLogDownloadRequest) *ShowSlowLogDownloadInvoker {
+	requestDef := GenReqDefForShowSlowLogDownload()
+	return &ShowSlowLogDownloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSslCertDownloadLink 查询实例SSL证书下载地址
 //
 // 查询实例SSL证书下载地址。
@@ -1444,6 +1549,48 @@ func (c *GaussDBforopenGaussClient) ShowSslCertDownloadLink(request *model.ShowS
 func (c *GaussDBforopenGaussClient) ShowSslCertDownloadLinkInvoker(request *model.ShowSslCertDownloadLinkRequest) *ShowSslCertDownloadLinkInvoker {
 	requestDef := GenReqDefForShowSslCertDownloadLink()
 	return &ShowSslCertDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUpgradeCandidateVersions 查询实例可升级版本
+//
+// 查询实例可升级版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowUpgradeCandidateVersions(request *model.ShowUpgradeCandidateVersionsRequest) (*model.ShowUpgradeCandidateVersionsResponse, error) {
+	requestDef := GenReqDefForShowUpgradeCandidateVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUpgradeCandidateVersionsResponse), nil
+	}
+}
+
+// ShowUpgradeCandidateVersionsInvoker 查询实例可升级版本
+func (c *GaussDBforopenGaussClient) ShowUpgradeCandidateVersionsInvoker(request *model.ShowUpgradeCandidateVersionsRequest) *ShowUpgradeCandidateVersionsInvoker {
+	requestDef := GenReqDefForShowUpgradeCandidateVersions()
+	return &ShowUpgradeCandidateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartInstance 启动数据库
+//
+// 启动数据库，同时支持节点级别的启动操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) StartInstance(request *model.StartInstanceRequest) (*model.StartInstanceResponse, error) {
+	requestDef := GenReqDefForStartInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartInstanceResponse), nil
+	}
+}
+
+// StartInstanceInvoker 启动数据库
+func (c *GaussDBforopenGaussClient) StartInstanceInvoker(request *model.StartInstanceRequest) *StartInstanceInvoker {
+	requestDef := GenReqDefForStartInstance()
+	return &StartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StopBackup 停止备份
@@ -1549,6 +1696,37 @@ func (c *GaussDBforopenGaussClient) UpdateInstanceName(request *model.UpdateInst
 func (c *GaussDBforopenGaussClient) UpdateInstanceNameInvoker(request *model.UpdateInstanceNameRequest) *UpdateInstanceNameInvoker {
 	requestDef := GenReqDefForUpdateInstanceName()
 	return &UpdateInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeInstanceVersion 实例内核版本升级
+//
+// GaussDB(for openGauss)实例版本升级。包括灰度升级，就地升级，热补丁升级等三种升级方式。
+// 就地升级：
+// 就地升级需要停止业务进行，会一次性升级集群中所有节点。就地升级需要暂停业务30分钟来升级。
+// 灰度升级：
+// 升级自动提交：所有节点进程一起升级，在升级过程中有大概10秒的业务中断，不阻塞其他业务操作。
+// 升级待观察：升级待观察，将数据库升级过程细分为升级，提交两个阶段。升级阶段可以根据部署方式细分为按分片或者按az的滚动升级，提交阶段可以对升级完成后的实例进行业务测试，根据需要可以选择提交升级，或者升级回退。每个主dn或者cn组件升级就有一次10秒业务中断。升级过程均是先管理面，再数据面，由备到主的升级方式。 分布式实例：根据分片数滚动升级，每次滚动升级可以根据选择的分片数进行指定分片数量的节点进行升级。 主备版实例：根据AZ数进行滚动升级，每次滚动升级可以根据选择的AZ进行1个分区或者多个分区进行升级。
+// 提交升级：提交升级。在升级完成，进入提交阶段时。业务测试正常后提交升级，完成本次升级流程。
+// 升级回退：升级回退，在升级完成，进入提交阶段时。可以根据需要回退本次升级，回退到升级前的版本。
+// 热补丁升级：
+// 升级自动提交：热补丁自动升级并提交，中间无业务中断，仅修复产品bug。
+// 升级回退：热补丁回退，无业务中断时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) UpgradeInstanceVersion(request *model.UpgradeInstanceVersionRequest) (*model.UpgradeInstanceVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeInstanceVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeInstanceVersionResponse), nil
+	}
+}
+
+// UpgradeInstanceVersionInvoker 实例内核版本升级
+func (c *GaussDBforopenGaussClient) UpgradeInstanceVersionInvoker(request *model.UpgradeInstanceVersionRequest) *UpgradeInstanceVersionInvoker {
+	requestDef := GenReqDefForUpgradeInstanceVersion()
+	return &UpgradeInstanceVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateParaGroupName 校验参数组名称是否存在

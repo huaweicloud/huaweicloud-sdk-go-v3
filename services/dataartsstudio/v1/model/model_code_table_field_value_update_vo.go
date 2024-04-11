@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// CodeTableFieldValueUpdateVo 码表属性值修改内容
+// CodeTableFieldValueUpdateVo 码表属性值修改内容。
 type CodeTableFieldValueUpdateVo struct {
 
-	// 新增码表属性、属性值列表
+	// 新增码表属性、属性值列表。
 	ToAdd *[]CodeTableFieldVo `json:"to_add,omitempty"`
 
-	// 编辑码表属性值列表
+	// 编辑码表属性值列表。
 	ToModify *[]CodeTableFieldVo `json:"to_modify,omitempty"`
 
-	// 删除码表属性id列表
+	// 删除码表属性ID列表。
 	ToRemove *[]CodeTableFieldVo `json:"to_remove,omitempty"`
 }
 

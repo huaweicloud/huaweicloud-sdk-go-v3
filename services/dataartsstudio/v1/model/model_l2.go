@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// L2 主题域中文名
+// L2 主题域中文名，只读，创建和更新时无需填写。
 type L2 struct {
 }
 

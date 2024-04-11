@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dataartsstudio/v1/model"
 )
 
+type AddDesignEntityTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddDesignEntityTagsInvoker) Invoke() (*model.AddDesignEntityTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddDesignEntityTagsResponse), nil
+	}
+}
+
 type AddTagToAssetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -401,6 +413,30 @@ func (i *CreateConnectionsInvoker) Invoke() (*model.CreateConnectionsResponse, e
 	}
 }
 
+type CreateDesignAggregationLogicTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesignAggregationLogicTableInvoker) Invoke() (*model.CreateDesignAggregationLogicTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesignAggregationLogicTableResponse), nil
+	}
+}
+
+type CreateDesignAtomicIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesignAtomicIndexInvoker) Invoke() (*model.CreateDesignAtomicIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesignAtomicIndexResponse), nil
+	}
+}
+
 type CreateDirectoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -761,6 +797,42 @@ func (i *DeleteDataconnectionInvoker) Invoke() (*model.DeleteDataconnectionRespo
 	}
 }
 
+type DeleteDesignAggregationLogicTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignAggregationLogicTableInvoker) Invoke() (*model.DeleteDesignAggregationLogicTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignAggregationLogicTableResponse), nil
+	}
+}
+
+type DeleteDesignAtomicIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignAtomicIndexInvoker) Invoke() (*model.DeleteDesignAtomicIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignAtomicIndexResponse), nil
+	}
+}
+
+type DeleteDesignLatestApprovalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignLatestApprovalInvoker) Invoke() (*model.DeleteDesignLatestApprovalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignLatestApprovalResponse), nil
+	}
+}
+
 type DeleteDirectoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -950,6 +1022,42 @@ func (i *ExecuteTaskActionInvoker) Invoke() (*model.ExecuteTaskActionResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ExecuteTaskActionResponse), nil
+	}
+}
+
+type ExportDesignModelTableDdlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDesignModelTableDdlInvoker) Invoke() (*model.ExportDesignModelTableDdlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDesignModelTableDdlResponse), nil
+	}
+}
+
+type ExportDesignModelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDesignModelsInvoker) Invoke() (*model.ExportDesignModelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDesignModelsResponse), nil
+	}
+}
+
+type ExportDesignResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDesignResultInvoker) Invoke() (*model.ExportDesignResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDesignResultResponse), nil
 	}
 }
 
@@ -1853,6 +1961,30 @@ func (i *PayForDgcOneKeyInvoker) Invoke() (*model.PayForDgcOneKeyResponse, error
 	}
 }
 
+type RemoveDesignEntityTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveDesignEntityTagsInvoker) Invoke() (*model.RemoveDesignEntityTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveDesignEntityTagsResponse), nil
+	}
+}
+
+type RemoveDesignQualityInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveDesignQualityInfosInvoker) Invoke() (*model.RemoveDesignQualityInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveDesignQualityInfosResponse), nil
+	}
+}
+
 type RenewDataProfileInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1985,6 +2117,18 @@ func (i *SearchCustomizedFieldsInvoker) Invoke() (*model.SearchCustomizedFieldsR
 	}
 }
 
+type SearchDesignLatestApprovalDiffInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchDesignLatestApprovalDiffInvoker) Invoke() (*model.SearchDesignLatestApprovalDiffResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchDesignLatestApprovalDiffResponse), nil
+	}
+}
+
 type SearchDwByTypeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1994,6 +2138,18 @@ func (i *SearchDwByTypeInvoker) Invoke() (*model.SearchDwByTypeResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.SearchDwByTypeResponse), nil
+	}
+}
+
+type SearchFieldsForRelationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchFieldsForRelationInvoker) Invoke() (*model.SearchFieldsForRelationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchFieldsForRelationResponse), nil
 	}
 }
 
@@ -2906,6 +3062,42 @@ func (i *UpdateDataconnectionInvoker) Invoke() (*model.UpdateDataconnectionRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateDataconnectionResponse), nil
+	}
+}
+
+type UpdateDesignAggregationLogicTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignAggregationLogicTableInvoker) Invoke() (*model.UpdateDesignAggregationLogicTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignAggregationLogicTableResponse), nil
+	}
+}
+
+type UpdateDesignAtomicIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignAtomicIndexInvoker) Invoke() (*model.UpdateDesignAtomicIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignAtomicIndexResponse), nil
+	}
+}
+
+type UpdateDesignTableQualityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignTableQualityInvoker) Invoke() (*model.UpdateDesignTableQualityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignTableQualityResponse), nil
 	}
 }
 

@@ -12,7 +12,7 @@ type ResponseInfoHeader struct {
 	Key *string `json:"key,omitempty"`
 
 	// 分组自定义响应的响应头的value，为长度为1到1024位的字符串
-	Value *interface{} `json:"value,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o ResponseInfoHeader) String() string {

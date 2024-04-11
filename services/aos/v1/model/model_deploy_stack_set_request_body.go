@@ -26,6 +26,8 @@ type DeployStackSetRequestBody struct {
 	VarsBody *string `json:"vars_body,omitempty"`
 
 	VarOverrides *VarOverridesPrimitiveTypeHolderVarOverrides `json:"var_overrides,omitempty"`
+
+	OperationPreferences *OperationPreferences `json:"operation_preferences,omitempty"`
 }
 
 func (o DeployStackSetRequestBody) String() string {

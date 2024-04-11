@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// AtomicIndexVoSearchResultDataValue 返回的数据信息。
 type AtomicIndexVoSearchResultDataValue struct {
 
-	// AtomicIndexVO数组
+	// AtomicIndexVO数组。
 	Records *[]AtomicIndexVo `json:"records,omitempty"`
 
-	// 总数
+	// 总数。
 	Total *int32 `json:"total,omitempty"`
 }
 

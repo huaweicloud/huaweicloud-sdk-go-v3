@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// CatalogAttributeVoParent 父节点
+// CatalogAttributeVoParent 父节点。
 type CatalogAttributeVoParent struct {
 
-	// 父节点ID
+	// 父节点ID。
 	Id *string `json:"id,omitempty"`
 }
 

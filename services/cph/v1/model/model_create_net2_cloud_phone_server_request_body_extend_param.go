@@ -9,7 +9,7 @@ import (
 // CreateNet2CloudPhoneServerRequestBodyExtendParam 计费模式参数。
 type CreateNet2CloudPhoneServerRequestBodyExtendParam struct {
 
-	// 计费类型。  - 0：包周期
+	// 计费类型。  [- 0：包周期](tag:hws,hws_hk,cmcc) [- 1：按需](tag:fcs)
 	ChargingMode int32 `json:"charging_mode"`
 
 	// 订购周期类型。 - 2：月 - 3：年

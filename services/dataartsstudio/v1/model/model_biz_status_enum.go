@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// BizStatusEnum 业务状态
+// BizStatusEnum 实体的发布状态，只读，创建和更新时无需填写。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审核)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审核)、OFFLINE(已下线)、REJECT(已驳回)。
 type BizStatusEnum struct {
 	value string
 }

@@ -149,6 +149,18 @@ func (i *CreateRestoreInstanceInvoker) Invoke() (*model.CreateRestoreInstanceRes
 	}
 }
 
+type CreateSlowLogDownloadInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSlowLogDownloadInvoker) Invoke() (*model.CreateSlowLogDownloadResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSlowLogDownloadResponse), nil
+	}
+}
+
 type DeleteConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -278,6 +290,18 @@ func (i *ListBindedEipsInvoker) Invoke() (*model.ListBindedEipsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListBindedEipsResponse), nil
+	}
+}
+
+type ListCnInfosBeforeReduceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCnInfosBeforeReduceInvoker) Invoke() (*model.ListCnInfosBeforeReduceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCnInfosBeforeReduceResponse), nil
 	}
 }
 
@@ -641,6 +665,18 @@ func (i *RunInstanceActionInvoker) Invoke() (*model.RunInstanceActionResponse, e
 	}
 }
 
+type SearchAutoEnlargePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchAutoEnlargePolicyInvoker) Invoke() (*model.SearchAutoEnlargePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchAutoEnlargePolicyResponse), nil
+	}
+}
+
 type SetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,6 +809,18 @@ func (i *ShowInstanceSnapshotInvoker) Invoke() (*model.ShowInstanceSnapshotRespo
 	}
 }
 
+type ShowInstancesStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstancesStatisticsInvoker) Invoke() (*model.ShowInstancesStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstancesStatisticsResponse), nil
+	}
+}
+
 type ShowJobDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -809,6 +857,18 @@ func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, e
 	}
 }
 
+type ShowSlowLogDownloadInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSlowLogDownloadInvoker) Invoke() (*model.ShowSlowLogDownloadResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSlowLogDownloadResponse), nil
+	}
+}
+
 type ShowSslCertDownloadLinkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,6 +878,30 @@ func (i *ShowSslCertDownloadLinkInvoker) Invoke() (*model.ShowSslCertDownloadLin
 		return nil, err
 	} else {
 		return result.(*model.ShowSslCertDownloadLinkResponse), nil
+	}
+}
+
+type ShowUpgradeCandidateVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUpgradeCandidateVersionsInvoker) Invoke() (*model.ShowUpgradeCandidateVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUpgradeCandidateVersionsResponse), nil
+	}
+}
+
+type StartInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartInstanceInvoker) Invoke() (*model.StartInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartInstanceResponse), nil
 	}
 }
 
@@ -878,6 +962,18 @@ func (i *UpdateInstanceNameInvoker) Invoke() (*model.UpdateInstanceNameResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceNameResponse), nil
+	}
+}
+
+type UpgradeInstanceVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeInstanceVersionInvoker) Invoke() (*model.UpgradeInstanceVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeInstanceVersionResponse), nil
 	}
 }
 

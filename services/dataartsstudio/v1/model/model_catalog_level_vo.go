@@ -8,16 +8,16 @@ import (
 
 type CatalogLevelVo struct {
 
-	// 编号
+	// 编号。
 	Id *int64 `json:"id,omitempty"`
 
-	// 层级
+	// 层级。
 	Level *int32 `json:"level,omitempty"`
 
-	// 中文名称
+	// 中文名称。
 	NameCh *string `json:"name_ch,omitempty"`
 
-	// 英文名称
+	// 英文名称。
 	NameEn *string `json:"name_en,omitempty"`
 }
 

@@ -14,6 +14,8 @@ type UpdateStackInstancesRequestBody struct {
 	DeploymentTargets *DeploymentTargets `json:"deployment_targets"`
 
 	VarOverrides *VarOverridesPrimitiveTypeHolderVarOverrides `json:"var_overrides,omitempty"`
+
+	OperationPreferences *OperationPreferences `json:"operation_preferences,omitempty"`
 }
 
 func (o UpdateStackInstancesRequestBody) String() string {

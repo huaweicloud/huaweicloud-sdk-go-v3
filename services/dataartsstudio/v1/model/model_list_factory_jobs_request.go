@@ -12,7 +12,7 @@ import (
 // ListFactoryJobsRequest Request Object
 type ListFactoryJobsRequest struct {
 
-	// DataArts Studio工作空间ID
+	// 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
 	Workspace string `json:"workspace"`
 
 	// 分页参数：每页限定数量

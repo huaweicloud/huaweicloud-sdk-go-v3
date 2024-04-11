@@ -8,46 +8,46 @@ import (
 	"strings"
 )
 
-// DirectoryVo 目录
+// DirectoryVo 目录。
 type DirectoryVo struct {
 
-	// 名称
+	// 名称。
 	Name string `json:"name"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 目录类型
+	// 目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
 	Type DirectoryVoType `json:"type"`
 
-	// ID
+	// ID，创建时可不传，更新时必填。
 	Id *int64 `json:"id,omitempty"`
 
-	// 父目录ID,根节点没有此ID
+	// 父目录ID，首层传null。
 	ParentId int64 `json:"parent_id"`
 
-	// 上个节点ID,首节点没有
+	// 上个节点ID，首节点传null。
 	PrevId int64 `json:"prev_id"`
 
-	// 根节点ID,根节点此ID为自身ID
+	// 根节点ID，根节点此ID为自身ID。
 	RootId *int64 `json:"root_id,omitempty"`
 
-	// 所属目录
+	// 所属目录。
 	QualifiedName *string `json:"qualified_name,omitempty"`
 
-	// 创建时间
+	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 创建人
+	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人
+	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 子目录
+	// 子目录。
 	Children *[]DirectoryVo `json:"children,omitempty"`
 }
 
@@ -66,7 +66,6 @@ type DirectoryVoType struct {
 
 type DirectoryVoTypeEnum struct {
 	STANDARD_ELEMENT DirectoryVoType
-	TAG              DirectoryVoType
 	CODE             DirectoryVoType
 }
 
@@ -74,9 +73,6 @@ func GetDirectoryVoTypeEnum() DirectoryVoTypeEnum {
 	return DirectoryVoTypeEnum{
 		STANDARD_ELEMENT: DirectoryVoType{
 			value: "STANDARD_ELEMENT",
-		},
-		TAG: DirectoryVoType{
-			value: "TAG",
 		},
 		CODE: DirectoryVoType{
 			value: "CODE",

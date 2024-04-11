@@ -9,7 +9,7 @@ import (
 // ListSubjectLevelsResponse Response Object
 type ListSubjectLevelsResponse struct {
 
-	// 主题层级信息
+	// 主题层级信息。
 	Levels         *[]CatalogLevelVo `json:"levels,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

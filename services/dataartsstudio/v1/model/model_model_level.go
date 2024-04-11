@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ModelLevel 数据治理分层
+// ModelLevel 数据治理分层。SDI(贴源数据层)、DWI(数据整合层)、DWR(数据报告层)、DM(数据集市层)。
 type ModelLevel struct {
 	value string
 }

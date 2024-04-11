@@ -8,7 +8,7 @@ import (
 
 type BusinessCodeVo struct {
 
-	// 策略集编码。
+	// 业务编码。
 	Code *string `json:"code,omitempty"`
 }
 

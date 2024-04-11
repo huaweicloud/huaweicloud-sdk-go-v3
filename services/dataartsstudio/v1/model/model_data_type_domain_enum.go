@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// DataTypeDomainEnum 字段类型所属域
+// DataTypeDomainEnum 字段类型所属域。NUMBER(数字类型)、STRING(字符类型)、DATETIME(日期类型)、BLOB(大对象(BLOB))、OTHER(其它类型)。
 type DataTypeDomainEnum struct {
 	value string
 }

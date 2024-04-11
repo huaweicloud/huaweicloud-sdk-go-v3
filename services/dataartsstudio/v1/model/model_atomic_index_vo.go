@@ -9,66 +9,68 @@ import (
 
 type AtomicIndexVo struct {
 
-	// 编码
-	Id *int64 `json:"id,omitempty"`
+	// 编码。
+	Id *string `json:"id,omitempty"`
 
-	// 字段名
+	// 字段名。
 	NameEn string `json:"name_en"`
 
-	// 业务属性
+	// 业务属性。
 	NameCh string `json:"name_ch"`
 
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 创建人
+	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 计算表达式
+	// 计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
 	CalExp string `json:"cal_exp"`
 
-	// 计算表达式id
+	// 引用函数ID。
 	CalFnIds *[]int64 `json:"cal_fn_ids,omitempty"`
 
-	// 主题域分组id
+	// 主题域分组ID。
 	L1Id *int64 `json:"l1_id,omitempty"`
 
+	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象guid
-	L3Id int64 `json:"l3_id"`
+	// 业务对象guid。
+	L3Id string `json:"l3_id"`
 
-	// 表id
-	TableId int64 `json:"table_id"`
+	// 表ID。
+	TableId string `json:"table_id"`
 
-	// 表名称
+	// 表名称。
 	TbName *string `json:"tb_name,omitempty"`
 
-	// 数据连接类型
+	// 数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
 	DwType *string `json:"dw_type,omitempty"`
 
-	// 字段id信息
+	// 字段ID信息。
 	FieldIds []int64 `json:"field_ids"`
 
-	// 字段名称信息
+	// 字段名称信息。
 	FieldNames *[]string `json:"field_names,omitempty"`
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`
 
-	// 创建时间
+	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 主题域分组中文名
+	// 主题域分组中文名，只读，创建和更新时无需填写。
 	L1 *string `json:"l1,omitempty"`
 
-	// 主题域中文名
+	// 主题域中文名，只读，创建和更新时无需填写。
 	L2 *string `json:"l2,omitempty"`
 
-	// 业务对象中文名
+	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
 	ApprovalInfo *ApprovalVo `json:"approval_info,omitempty"`

@@ -8,7 +8,7 @@ import (
 
 type TagOperationDto struct {
 
-	// 模型对象ID。
+	// 数据实例ID。
 	ObjectId string `json:"objectId"`
 
 	// 标签ID。

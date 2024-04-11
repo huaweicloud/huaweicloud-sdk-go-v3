@@ -13,7 +13,7 @@ type LifecycleManagedModelUpdateLifecycleStateDto struct {
 
 	LifecycleState *ObjectReferenceParamDto `json:"lifecycleState"`
 
-	// 更新人
+	// 修改人。
 	Modifier *string `json:"modifier,omitempty"`
 }
 

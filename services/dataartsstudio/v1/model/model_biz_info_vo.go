@@ -8,7 +8,7 @@ import (
 
 type BizInfoVo struct {
 
-	// 业务ID
+	// 业务ID。
 	BizId int64 `json:"biz_id"`
 
 	BizType *BizTypeEnum `json:"biz_type"`

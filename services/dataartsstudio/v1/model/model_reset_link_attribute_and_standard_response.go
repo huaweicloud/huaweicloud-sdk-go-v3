@@ -9,7 +9,7 @@ import (
 // ResetLinkAttributeAndStandardResponse Response Object
 type ResetLinkAttributeAndStandardResponse struct {
 
-	// 返回的数据信息
+	// 返回的数据信息。
 	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

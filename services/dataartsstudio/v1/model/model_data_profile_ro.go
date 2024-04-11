@@ -54,8 +54,7 @@ type DataProfileRo struct {
 	// 是否自动停止
 	AutoStop *bool `json:"auto_stop,omitempty"`
 
-	// obs配置，概要采集不涉及
-	Obsconfig *interface{} `json:"obsconfig,omitempty"`
+	Obsconfig *ObsCommonConfig `json:"obsconfig,omitempty"`
 }
 
 func (o DataProfileRo) String() string {

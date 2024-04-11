@@ -62,6 +62,8 @@ type ShowCloudPhoneServerDetailResponse struct {
 	// 云手机服务器卷信息的结构体数组。
 	Volumes *[]Volume `json:"volumes,omitempty"`
 
+	ShareVolumeInfo *ShowCloudPhoneServerDetailResponseBodyShareVolumeInfo `json:"share_volume_info,omitempty"`
+
 	// 是否为自定义网络的云手机服务器标识。\"v1\"，非自定义网络的云手机服务器。\"v2\"，自定义网络的云手机服务器。支持按照网络版本字段进行筛选。
 	NetworkVersion *string `json:"network_version,omitempty"`
 

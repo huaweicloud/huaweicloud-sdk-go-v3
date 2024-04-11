@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CompoundMetricVoDetailData 返回数据。
 type CompoundMetricVoDetailData struct {
 	Value *CompoundMetricVo `json:"value,omitempty"`
 }

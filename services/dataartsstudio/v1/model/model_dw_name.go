@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DwName 数据连接名称
+// DwName 数据连接名称，只读，创建和更新时无需填写。
 type DwName struct {
 }
 

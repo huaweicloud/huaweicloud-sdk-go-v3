@@ -12,6 +12,8 @@ type DeleteStackInstanceRequestBody struct {
 	StackSetId *string `json:"stack_set_id,omitempty"`
 
 	DeploymentTargets *DeploymentTargets `json:"deployment_targets"`
+
+	OperationPreferences *OperationPreferences `json:"operation_preferences,omitempty"`
 }
 
 func (o DeleteStackInstanceRequestBody) String() string {

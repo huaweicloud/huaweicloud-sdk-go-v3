@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DataType 字段类型
+// DataType 字段类型。
 type DataType struct {
 }
 

@@ -9,69 +9,71 @@ import (
 
 type DimensionAttributeVo struct {
 
-	// 编码
+	// 编码。
 	Id *int64 `json:"id,omitempty"`
 
-	// 维度id
+	// 维度ID。
 	DimensionId *int64 `json:"dimension_id,omitempty"`
 
-	// 码表属性id
+	// 码表属性ID。
 	CodeTableFieldId *int64 `json:"code_table_field_id,omitempty"`
 
-	// 字段名
+	// 字段名。
 	NameEn string `json:"name_en"`
 
-	// 业务属性
+	// 业务属性。
 	NameCh string `json:"name_ch"`
 
+	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 创建人
+	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 字段类型
+	// 字段类型。
 	DataType string `json:"data_type"`
 
 	DomainType *DataTypeDomainEnum `json:"domain_type,omitempty"`
 
-	// 数据类型扩展字段
+	// 数据类型扩展字段。
 	DataTypeExtend *string `json:"data_type_extend,omitempty"`
 
-	// 是否主键
+	// 是否主键。
 	IsPrimaryKey bool `json:"is_primary_key"`
 
-	// 是否业务主键
+	// 是否业务主键。
 	IsBizPrimary *bool `json:"is_biz_primary,omitempty"`
 
-	// 是否分区
+	// 是否分区。
 	IsPartitionKey *bool `json:"is_partition_key,omitempty"`
 
-	// 序号
+	// 序号。
 	Ordinal int32 `json:"ordinal"`
 
-	// 是否不为空
+	// 是否不为空。
 	NotNull *bool `json:"not_null,omitempty"`
 
-	// 关联的数据标准的id
+	// 关联的数据标准的ID。
 	StandRowId *int64 `json:"stand_row_id,omitempty"`
 
+	// 关联的数据标准名称。
 	StandRowName *string `json:"stand_row_name,omitempty"`
 
-	// 质量信息
+	// 质量信息。
 	QualityInfos *[]QualityInfoVo `json:"quality_infos,omitempty"`
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
-	// 创建时间
+	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 别名
 	Alias *string `json:"alias,omitempty"`
 
-	// 自定义项
+	// 自定义项。
 	SelfDefinedFields *[]SelfDefinedFieldVo `json:"self_defined_fields,omitempty"`
 }
 

@@ -8,10 +8,8 @@ import (
 
 // SearchVersionsResponse Response Object
 type SearchVersionsResponse struct {
-
-	// 返回的数据信息
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *PublishVersionVoSearchResultData `json:"data,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o SearchVersionsResponse) String() string {

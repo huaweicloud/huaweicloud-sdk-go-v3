@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// L2Id 主题域ID，只读，创建和更新时无需填写。
 type L2Id struct {
 }
 

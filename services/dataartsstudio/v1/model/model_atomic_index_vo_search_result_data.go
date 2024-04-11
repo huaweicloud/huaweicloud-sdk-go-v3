@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// AtomicIndexVoSearchResultData 返回数据。
 type AtomicIndexVoSearchResultData struct {
 	Value *AtomicIndexVoSearchResultDataValue `json:"value,omitempty"`
 }

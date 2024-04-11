@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// DerivativeIndexVoSearchResultData 返回数据。
 type DerivativeIndexVoSearchResultData struct {
 	Value *DerivativeIndexVoSearchResultDataValue `json:"value,omitempty"`
 }

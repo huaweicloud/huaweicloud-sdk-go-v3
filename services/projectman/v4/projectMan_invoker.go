@@ -377,6 +377,18 @@ func (i *BatchDeleteIterationsV4Invoker) Invoke() (*model.BatchDeleteIterationsV
 	}
 }
 
+type BatchListAssociatedIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListAssociatedIssuesInvoker) Invoke() (*model.BatchListAssociatedIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListAssociatedIssuesResponse), nil
+	}
+}
+
 type CancelProjectDomainInvoker struct {
 	*invoker.BaseInvoker
 }

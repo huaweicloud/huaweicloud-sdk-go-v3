@@ -24,6 +24,9 @@ type Phone struct {
 	// 云手机镜像ID，不超过32个字节。
 	ImageId *string `json:"image_id,omitempty"`
 
+	// 镜像版本。
+	ImageVersion *string `json:"image_version,omitempty"`
+
 	// 云手机是否开启VNC服务。 - true：开启 - false：不开启
 	VncEnable *string `json:"vnc_enable,omitempty"`
 
@@ -32,6 +35,18 @@ type Phone struct {
 
 	// 云手机类型。 - 0：普通云手机 - 1：试玩云手机
 	Type *int32 `json:"type,omitempty"`
+
+	// imei码。
+	Imei *string `json:"imei,omitempty"`
+
+	// 手机路由类型。 - direct：默认路由 - routing：路由到编码容器
+	TrafficType *string `json:"traffic_type,omitempty"`
+
+	// 手机物理磁盘是否独立。 - 0：不独立 - 1：独立
+	VolumeMode *int32 `json:"volume_mode,omitempty"`
+
+	// 云手机服务器所在的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	Metadata *PhoneMetadata `json:"metadata,omitempty"`
 

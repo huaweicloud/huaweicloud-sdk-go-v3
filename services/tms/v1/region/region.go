@@ -9,9 +9,11 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://tms.myhuaweicloud.com")
+		"https://tms.myhuaweicloud.com",
+		"https://tms.myhuaweicloud.cn")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
-		"https://tms.ap-southeast-1.myhuaweicloud.com")
+		"https://tms.ap-southeast-1.myhuaweicloud.com",
+		"https://tms.ap-southeast-1.myhuaweicloud.cn")
 	EU_WEST_101 = region.NewRegion("eu-west-101",
 		"https://tms.eu-west-101.myhuaweicloud.eu")
 )

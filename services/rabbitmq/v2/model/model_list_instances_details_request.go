@@ -12,8 +12,8 @@ import (
 // ListInstancesDetailsRequest Request Object
 type ListInstancesDetailsRequest struct {
 
-	// 引擎类型：rabbitmq，参数缺失查询所有实例。
-	Engine *string `json:"engine,omitempty"`
+	// 引擎类型：rabbitmq。
+	Engine ListInstancesDetailsRequestEngine `json:"engine"`
 
 	// 实例名称。
 	Name *string `json:"name,omitempty"`
@@ -47,6 +47,49 @@ func (o ListInstancesDetailsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListInstancesDetailsRequest", string(data)}, " ")
+}
+
+type ListInstancesDetailsRequestEngine struct {
+	value string
+}
+
+type ListInstancesDetailsRequestEngineEnum struct {
+	RABBITMQ ListInstancesDetailsRequestEngine
+}
+
+func GetListInstancesDetailsRequestEngineEnum() ListInstancesDetailsRequestEngineEnum {
+	return ListInstancesDetailsRequestEngineEnum{
+		RABBITMQ: ListInstancesDetailsRequestEngine{
+			value: "rabbitmq",
+		},
+	}
+}
+
+func (c ListInstancesDetailsRequestEngine) Value() string {
+	return c.value
+}
+
+func (c ListInstancesDetailsRequestEngine) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListInstancesDetailsRequestEngine) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListInstancesDetailsRequestStatus struct {

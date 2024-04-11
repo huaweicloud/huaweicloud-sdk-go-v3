@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// L3 业务对象中文名
+// L3 业务对象中文名，只读，创建和更新时无需填写。
 type L3 struct {
 }
 

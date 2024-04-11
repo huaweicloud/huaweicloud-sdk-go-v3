@@ -24,13 +24,16 @@ type ShowCloudPhoneDetailResponse struct {
 	// 云手机镜像ID，不超过32个字节。
 	ImageId *string `json:"image_id,omitempty"`
 
+	// 镜像版本。
+	ImageVersion *string `json:"image_version,omitempty"`
+
 	// 云手机是否开启VNC服务（过期） - true：开启 - false：关闭
 	VncEnable *string `json:"vnc_enable,omitempty"`
 
 	// 云手机规格名称，不超过64个字节。
 	PhoneModelName *string `json:"phone_model_name,omitempty"`
 
-	// 云手机状态。 - 0：创建中 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
+	// 云手机状态。 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
 	Status *int32 `json:"status,omitempty"`
 
 	// 云手机访问信息。
@@ -40,6 +43,20 @@ type ShowCloudPhoneDetailResponse struct {
 	Property *string `json:"property,omitempty"`
 
 	Metadata *ShowCloudPhoneDetailResponseBodyMetadata `json:"metadata,omitempty"`
+
+	PhoneDataVolume *PhoneDataVolume `json:"phone_data_volume,omitempty"`
+
+	// imei码。
+	Imei *string `json:"imei,omitempty"`
+
+	// 手机路由类型。 - direct：默认路由 - routing：路由到编码容器
+	TrafficType *string `json:"traffic_type,omitempty"`
+
+	// 手机物理磁盘是否独立。 - 0：不独立 - 1：独立
+	VolumeMode *int32 `json:"volume_mode,omitempty"`
+
+	// 云手机服务器所在的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 创建时间， 时间格式为UTC，YYYY-MM-DDTHH:MM:SSZ。
 	CreateTime *string `json:"create_time,omitempty"`

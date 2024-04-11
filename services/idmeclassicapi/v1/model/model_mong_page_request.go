@@ -8,10 +8,10 @@ import (
 
 type MongPageRequest struct {
 
-	// 查询条件：最后修改时间，结束时间范围。
+	// 结束时间。系统以数据实例的最后修改时间作为查询条件，您定义的开始时间和结束时间作为时间范围进行查询。
 	EndLastModifiedTime *string `json:"endLastModifiedTime,omitempty"`
 
-	// 唯一标识。
+	// 数据实例ID。
 	Id string `json:"id"`
 
 	// 版本号。
@@ -23,7 +23,7 @@ type MongPageRequest struct {
 	// 关系实体源端系统版本。
 	SourceRdmVersion *int32 `json:"sourceRdmVersion,omitempty"`
 
-	// 查询条件：最后修改时间,开始时间范围。
+	// 开始时间。系统以数据实例的最后修改时间作为查询条件，您定义的开始时间和结束时间作为时间范围进行查询。
 	StartLastModifiedTime *string `json:"startLastModifiedTime,omitempty"`
 
 	// 关系实体目标端ID。

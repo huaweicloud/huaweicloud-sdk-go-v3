@@ -12,8 +12,8 @@ import (
 // ListInstancesRequest Request Object
 type ListInstancesRequest struct {
 
-	// 消息引擎。
-	Engine *ListInstancesRequestEngine `json:"engine,omitempty"`
+	// 消息引擎：rocketmq。
+	Engine ListInstancesRequestEngine `json:"engine"`
 
 	// 实例名称。
 	Name *string `json:"name,omitempty"`
@@ -54,13 +54,13 @@ type ListInstancesRequestEngine struct {
 }
 
 type ListInstancesRequestEngineEnum struct {
-	RELIABILITY ListInstancesRequestEngine
+	ROCKETMQ ListInstancesRequestEngine
 }
 
 func GetListInstancesRequestEngineEnum() ListInstancesRequestEngineEnum {
 	return ListInstancesRequestEngineEnum{
-		RELIABILITY: ListInstancesRequestEngine{
-			value: "reliability",
+		ROCKETMQ: ListInstancesRequestEngine{
+			value: "rocketmq",
 		},
 	}
 }

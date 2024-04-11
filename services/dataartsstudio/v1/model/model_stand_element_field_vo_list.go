@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// StandElementFieldVoList 属性列表
+// StandElementFieldVoList 属性列表。
 type StandElementFieldVoList struct {
 
-	// 属性信息
+	// 属性信息。
 	Fields *[]StandElementFieldVo `json:"fields,omitempty"`
 }
 

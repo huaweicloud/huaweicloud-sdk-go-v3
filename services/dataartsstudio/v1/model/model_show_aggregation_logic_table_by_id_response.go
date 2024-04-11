@@ -8,10 +8,8 @@ import (
 
 // ShowAggregationLogicTableByIdResponse Response Object
 type ShowAggregationLogicTableByIdResponse struct {
-
-	// 返回的数据信息
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *AggregationLogicTableVoDetailData `json:"data,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o ShowAggregationLogicTableByIdResponse) String() string {

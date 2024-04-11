@@ -762,6 +762,27 @@ func (c *DrsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInv
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListsAgencyPermissions 查询委托的权限列表
+//
+// 根据源库类型，目标库类型，是否自建，获取委托所需要的权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListsAgencyPermissions(request *model.ListsAgencyPermissionsRequest) (*model.ListsAgencyPermissionsResponse, error) {
+	requestDef := GenReqDefForListsAgencyPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListsAgencyPermissionsResponse), nil
+	}
+}
+
+// ListsAgencyPermissionsInvoker 查询委托的权限列表
+func (c *DrsClient) ListsAgencyPermissionsInvoker(request *model.ListsAgencyPermissionsRequest) *ListsAgencyPermissionsInvoker {
+	requestDef := GenReqDefForListsAgencyPermissions()
+	return &ListsAgencyPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowActions 获取指定任务操作信息
 //
 // 获取指定任务允许、不允许、当前操作信息。
@@ -1207,6 +1228,27 @@ func (c *DrsClient) ShowProgressData(request *model.ShowProgressDataRequest) (*m
 func (c *DrsClient) ShowProgressDataInvoker(request *model.ShowProgressDataRequest) *ShowProgressDataInvoker {
 	requestDef := GenReqDefForShowProgressData()
 	return &ShowProgressDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReplayResults 查询录制回放结果
+//
+// 获取录制回放结果数据，包括：回放基于时间维度统计信息，异常SQL及统计结果、慢SQL及统计结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowReplayResults(request *model.ShowReplayResultsRequest) (*model.ShowReplayResultsResponse, error) {
+	requestDef := GenReqDefForShowReplayResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplayResultsResponse), nil
+	}
+}
+
+// ShowReplayResultsInvoker 查询录制回放结果
+func (c *DrsClient) ShowReplayResultsInvoker(request *model.ShowReplayResultsRequest) *ShowReplayResultsInvoker {
+	requestDef := GenReqDefForShowReplayResults()
+	return &ShowReplayResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSupportObjectType 查询是否支持对象选择和列映射

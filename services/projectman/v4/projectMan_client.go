@@ -670,6 +670,27 @@ func (c *ProjectManClient) BatchDeleteIterationsV4Invoker(request *model.BatchDe
 	return &BatchDeleteIterationsV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchListAssociatedIssues 查询当前项目下已经关联的工作项
+//
+// 查询当前项目下已经关联的工作项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) BatchListAssociatedIssues(request *model.BatchListAssociatedIssuesRequest) (*model.BatchListAssociatedIssuesResponse, error) {
+	requestDef := GenReqDefForBatchListAssociatedIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListAssociatedIssuesResponse), nil
+	}
+}
+
+// BatchListAssociatedIssuesInvoker 查询当前项目下已经关联的工作项
+func (c *ProjectManClient) BatchListAssociatedIssuesInvoker(request *model.BatchListAssociatedIssuesRequest) *BatchListAssociatedIssuesInvoker {
+	requestDef := GenReqDefForBatchListAssociatedIssues()
+	return &BatchListAssociatedIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelProjectDomain 取消领域与项目的关联关系
 //
 // 取消领域与项目的关联关系

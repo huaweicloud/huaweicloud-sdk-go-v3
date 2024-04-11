@@ -9,7 +9,7 @@ import (
 // DeleteSubjectNewResponse Response Object
 type DeleteSubjectNewResponse struct {
 
-	// 返回的数据信息
+	// 返回的数据信息。
 	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ApprovalTypeEnum 业务审核类型
+// ApprovalTypeEnum 业务审核类型。PUBLISH(发布)、OFFLINE(下线)。
 type ApprovalTypeEnum struct {
 	value string
 }
