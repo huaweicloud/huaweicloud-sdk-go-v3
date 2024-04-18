@@ -21,7 +21,7 @@ type ListVoiceTrainingJobRequest struct {
 	// 过滤创建时间>=输入时间的记录。
 	CreateSince *string `json:"create_since,omitempty"`
 
-	// 第三方用户ID。 > * 不允许输入中文。
+	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 任务状态，默认所有状态。 可多个状态查询，使用英文逗号分隔。 如state=FAILED,WAITING

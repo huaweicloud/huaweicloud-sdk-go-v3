@@ -22,7 +22,7 @@ type ShowBackupPolicy struct {
 	DifferentialPriod *string `json:"differential_priod,omitempty"`
 
 	// 差量备份周期配置。自动差量备份将每隔周期分钟执行。
-	DifferentialPeriod string `json:"differential_period"`
+	DifferentialPeriod int32 `json:"differential_period"`
 
 	// 备份时备份数据上传OBS的速度，单位为MB/s。范围为0~1024MB/s，默认75MB/s，0MB/s表示不限速。
 	RateLimit *int32 `json:"rate_limit,omitempty"`

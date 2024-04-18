@@ -20,6 +20,9 @@ type OutputInfo struct {
 
 	// 会话ID。
 	SessionId *int32 `json:"session_id,omitempty"`
+
+	// 输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
+	OutputDataVersion *string `json:"output_data_version,omitempty"`
 }
 
 func (o OutputInfo) String() string {

@@ -23,7 +23,7 @@ type MysqlProxyNodeV3 struct {
 	// 节点读写分离读权重。
 	Weight *int32 `json:"weight,omitempty"`
 
-	// 可用区信息。
+	// 主实例所有节点的可用区信息。
 	AvailabilityZone *[]MysqlProxyAvailable `json:"availability_zone,omitempty"`
 }
 

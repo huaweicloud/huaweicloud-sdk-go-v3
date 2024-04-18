@@ -764,6 +764,50 @@ func GenReqDefForShowOrganizationConformancePackDetailedStatuses() *def.HttpRequ
 	return requestDef
 }
 
+func GenReqDefForUpdateConformancePack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/resource-manager/domains/{domain_id}/conformance-packs/{conformance_pack_id}").
+		WithResponse(new(model.UpdateConformancePackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackId").
+		WithJsonTag("conformance_pack_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateOrganizationConformancePack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/resource-manager/organizations/{organization_id}/conformance-packs/{conformance_pack_id}").
+		WithResponse(new(model.UpdateOrganizationConformancePackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrganizationId").
+		WithJsonTag("organization_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConformancePackId").
+		WithJsonTag("conformance_pack_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowResourceHistory() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

@@ -125,6 +125,15 @@ type EventProcessResponseInfo struct {
 
 	// 进程启动文件hash
 	ProcessHash *string `json:"process_hash,omitempty"`
+
+	// 进程文件hash
+	ProcessFileHash *string `json:"process_file_hash,omitempty"`
+
+	// 父进程文件hash
+	ParentProcessFileHash *string `json:"parent_process_file_hash,omitempty"`
+
+	// 是否阻断成功，1阻断成功 0阻断失败
+	Block *int32 `json:"block,omitempty"`
 }
 
 func (o EventProcessResponseInfo) String() string {

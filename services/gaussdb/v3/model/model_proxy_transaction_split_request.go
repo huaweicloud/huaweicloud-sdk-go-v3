@@ -11,7 +11,7 @@ type ProxyTransactionSplitRequest struct {
 	// 开启/关闭事务拆分，取值范围是[ON/OFF]
 	TransactionSplit string `json:"transaction_split"`
 
-	// 实例的proxy列表
+	// 实例的数据库代理列表，仅支持单proxy使用。
 	ProxyIdList []string `json:"proxy_id_list"`
 }
 

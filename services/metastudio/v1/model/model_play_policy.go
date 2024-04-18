@@ -23,6 +23,9 @@ type PlayPolicy struct {
 
 	// 随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
 	RandomPlayMode *PlayPolicyRandomPlayMode `json:"random_play_mode,omitempty"`
+
+	// 是否需要独立采集端
+	NeedIndependentCaptureClient *bool `json:"need_independent_capture_client,omitempty"`
 }
 
 func (o PlayPolicy) String() string {

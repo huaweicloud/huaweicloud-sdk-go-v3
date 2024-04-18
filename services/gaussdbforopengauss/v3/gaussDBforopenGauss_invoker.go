@@ -197,6 +197,18 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 	}
 }
 
+type DeleteInstanceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceTagInvoker) Invoke() (*model.DeleteInstanceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceTagResponse), nil
+	}
+}
+
 type DeleteJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -461,6 +473,18 @@ func (i *ListHistoryOperationsInvoker) Invoke() (*model.ListHistoryOperationsRes
 	}
 }
 
+type ListInstanceErrorLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceErrorLogsInvoker) Invoke() (*model.ListInstanceErrorLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceErrorLogsResponse), nil
+	}
+}
+
 type ListInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -590,6 +614,18 @@ func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTasksResponse), nil
+	}
+}
+
+type ListTopIoTrafficsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopIoTrafficsInvoker) Invoke() (*model.ListTopIoTrafficsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopIoTrafficsResponse), nil
 	}
 }
 
@@ -761,6 +797,18 @@ func (i *ShowDeploymentFormInvoker) Invoke() (*model.ShowDeploymentFormResponse,
 	}
 }
 
+type ShowErrorLogSwitchStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowErrorLogSwitchStatusInvoker) Invoke() (*model.ShowErrorLogSwitchStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowErrorLogSwitchStatusResponse), nil
+	}
+}
+
 type ShowInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -806,18 +854,6 @@ func (i *ShowInstanceSnapshotInvoker) Invoke() (*model.ShowInstanceSnapshotRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceSnapshotResponse), nil
-	}
-}
-
-type ShowInstancesStatisticsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowInstancesStatisticsInvoker) Invoke() (*model.ShowInstancesStatisticsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowInstancesStatisticsResponse), nil
 	}
 }
 

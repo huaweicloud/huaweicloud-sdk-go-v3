@@ -12,7 +12,7 @@ import (
 // CheckTextLanguageResponse Response Object
 type CheckTextLanguageResponse struct {
 
-	// 语言检测状态
+	// 语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
 	Result         *CheckTextLanguageResponseResult `json:"result,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

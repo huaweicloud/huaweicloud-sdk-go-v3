@@ -54,7 +54,7 @@ type SmartLiveJob struct {
 	// 封禁信息
 	BlockReason *string `json:"block_reason,omitempty"`
 
-	// 直播间封面图UR
+	// 直播间封面图URL
 	CoverUrl *string `json:"cover_url,omitempty"`
 
 	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`

@@ -18,7 +18,7 @@ type CreateSmartChatRoomRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 第三方用户ID。 > * 不允许输入中文。
+	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	Body *CreateSmartChatRoomReq `json:"body,omitempty"`

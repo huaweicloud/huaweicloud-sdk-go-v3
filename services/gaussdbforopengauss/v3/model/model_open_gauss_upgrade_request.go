@@ -13,7 +13,7 @@ type OpenGaussUpgradeRequest struct {
 	UpgradeType string `json:"upgrade_type"`
 
 	// 实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
-	UpgrdeAction *string `json:"upgrde_action,omitempty"`
+	UpgradeAction *string `json:"upgrade_action,omitempty"`
 
 	// 实例升级目标版本，非必填。如果未传值则默认升级到当前实例的优选版本。仅热补丁升级方式下支持传入多个值，升级操作为升级自动提交，则实例版本从小到大批量升级，升级操作为升级回退，则实例版本从大到小批量回退。
 	TargetVersion *string `json:"target_version,omitempty"`
@@ -23,9 +23,6 @@ type OpenGaussUpgradeRequest struct {
 
 	// 主备版实例灰度升级，滚动升级az值，可以支持多az一起升级，az之间以’,’分割。集中式实例灰度升级，升级待观察必填。该值不能填入不属于该实例的az值。
 	UpgradeAz *string `json:"upgrade_az,omitempty"`
-
-	// 支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
-	IsParallelUpgrade *bool `json:"is_parallel_upgrade,omitempty"`
 }
 
 func (o OpenGaussUpgradeRequest) String() string {

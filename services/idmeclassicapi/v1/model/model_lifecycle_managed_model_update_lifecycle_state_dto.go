@@ -8,7 +8,7 @@ import (
 
 type LifecycleManagedModelUpdateLifecycleStateDto struct {
 
-	// 唯一标识。
+	// 数据实例ID。
 	Id string `json:"id"`
 
 	LifecycleState *ObjectReferenceParamDto `json:"lifecycleState"`

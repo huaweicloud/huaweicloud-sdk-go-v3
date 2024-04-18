@@ -46,7 +46,34 @@ type StopMigrationTaskResponse struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 迁移任务完成时间。
-	UpdatedAt      *string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 迁移机释放时间。
+	ReleasedAt *string `json:"released_at,omitempty"`
+
+	// 版本。
+	Version *string `json:"version,omitempty"`
+
+	// 操作模式，分为auto和manual。
+	ResumeMode *string `json:"resume_mode,omitempty"`
+
+	// 支持的特性。
+	SupportedFeatures *[]string `json:"supported_features,omitempty"`
+
+	// 租户VPC ID。
+	TenantVpcId *string `json:"tenant_vpc_id,omitempty"`
+
+	// 租户子网ID。
+	TenantSubnetId *string `json:"tenant_subnet_id,omitempty"`
+
+	// 租户安全组ID。
+	TenantSecurityGroupId *string `json:"tenant_security_group_id,omitempty"`
+
+	// 带宽限制速度。
+	BandwidthLimitMb *string `json:"bandwidth_limit_mb,omitempty"`
+
+	// 任务状态。
+	TaskStatus     *string `json:"task_status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -32,6 +32,9 @@ type Create2dModelTrainingJobReq struct {
 
 	// 分身数字人训练任务标签。
 	Tags *[]string `json:"tags,omitempty"`
+
+	// 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+	ModelVersion *Create2dModelTrainingJobReqModelVersion `json:"model_version,omitempty"`
 }
 
 func (o Create2dModelTrainingJobReq) String() string {
@@ -72,6 +75,57 @@ func (c Create2dModelTrainingJobReqCommandMessage) MarshalJSON() ([]byte, error)
 }
 
 func (c *Create2dModelTrainingJobReqCommandMessage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type Create2dModelTrainingJobReqModelVersion struct {
+	value string
+}
+
+type Create2dModelTrainingJobReqModelVersionEnum struct {
+	V2   Create2dModelTrainingJobReqModelVersion
+	V3   Create2dModelTrainingJobReqModelVersion
+	V3_2 Create2dModelTrainingJobReqModelVersion
+}
+
+func GetCreate2dModelTrainingJobReqModelVersionEnum() Create2dModelTrainingJobReqModelVersionEnum {
+	return Create2dModelTrainingJobReqModelVersionEnum{
+		V2: Create2dModelTrainingJobReqModelVersion{
+			value: "V2",
+		},
+		V3: Create2dModelTrainingJobReqModelVersion{
+			value: "V3",
+		},
+		V3_2: Create2dModelTrainingJobReqModelVersion{
+			value: "V3.2",
+		},
+	}
+}
+
+func (c Create2dModelTrainingJobReqModelVersion) Value() string {
+	return c.value
+}
+
+func (c Create2dModelTrainingJobReqModelVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *Create2dModelTrainingJobReqModelVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

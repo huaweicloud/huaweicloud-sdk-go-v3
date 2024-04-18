@@ -646,10 +646,6 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XRealIp").
-		WithJsonTag("X-REAL-IP").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
 		WithJsonTag("Authorization").
 		WithLocationType(def.Header))
@@ -1846,6 +1842,10 @@ func GenReqDefForListRobot() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RoomId").
+		WithJsonTag("room_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3469,10 +3469,6 @@ func GenReqDefForList2dModelTrainingJob() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("State").
-		WithJsonTag("state").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortKey").
 		WithJsonTag("sort_key").
 		WithLocationType(def.Query))
@@ -3489,6 +3485,14 @@ func GenReqDefForList2dModelTrainingJob() *def.HttpRequestDef {
 		WithJsonTag("create_since").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryProjectId").
+		WithJsonTag("query_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BatchName").
 		WithJsonTag("batch_name").
 		WithLocationType(def.Query))
@@ -3503,6 +3507,10 @@ func GenReqDefForList2dModelTrainingJob() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
 		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelResolution").
+		WithJsonTag("model_resolution").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

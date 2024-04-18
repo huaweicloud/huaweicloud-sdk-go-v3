@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MobvoiVoiceAssetMeta 出门问问 TTS音色元数据。
+// MobvoiVoiceAssetMeta 出门问问TTS音色元数据。
 type MobvoiVoiceAssetMeta struct {
 
 	// 合成音频指定发音人

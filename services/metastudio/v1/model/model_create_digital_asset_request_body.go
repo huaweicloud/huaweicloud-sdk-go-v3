@@ -35,6 +35,9 @@ type CreateDigitalAssetRequestBody struct {
 	SystemProperties *[]SystemProperty `json:"system_properties,omitempty"`
 
 	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
+
+	// 是否需要生成封面。
+	IsNeedGenerateCover *bool `json:"is_need_generate_cover,omitempty"`
 }
 
 func (o CreateDigitalAssetRequestBody) String() string {

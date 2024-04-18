@@ -23,7 +23,7 @@ type ShowSmartChatRoomResponse struct {
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`
 
 	// 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
-	RobotId string `json:"robot_id"`
+	RobotId *string `json:"robot_id,omitempty"`
 
 	// 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`

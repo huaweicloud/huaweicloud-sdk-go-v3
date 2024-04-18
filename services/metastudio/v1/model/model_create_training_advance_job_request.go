@@ -9,7 +9,7 @@ import (
 // CreateTrainingAdvanceJobRequest Request Object
 type CreateTrainingAdvanceJobRequest struct {
 
-	// 第三方用户ID。 > * 不允许输入中文。
+	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	Body *CreateTrainingJobReq `json:"body,omitempty"`

@@ -12,7 +12,7 @@ type CreateFileResponse struct {
 	// 文件ID。
 	FileId *string `json:"file_id,omitempty"`
 
-	// 文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+	// 文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
 	UploadUrl *string `json:"upload_url,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`

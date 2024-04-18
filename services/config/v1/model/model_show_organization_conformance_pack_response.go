@@ -34,7 +34,13 @@ type ShowOrganizationConformancePackResponse struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 组织合规规则包更新时间。
-	UpdatedAt      *string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 预定义合规规则包模板名称。
+	TemplateKey *string `json:"template_key,omitempty"`
+
+	// 合规规则包模板OBS地址
+	TemplateUri    *string `json:"template_uri,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

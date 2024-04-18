@@ -12,16 +12,13 @@ import (
 // ListAssetsRequest Request Object
 type ListAssetsRequest struct {
 
-	// 客户端IP
-	XRealIp *string `json:"X-REAL-IP,omitempty"`
-
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
 	Authorization *string `json:"Authorization,omitempty"`
 
 	// 使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
 	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
 
-	// 第三方用户ID。 > * 不允许输入中文。
+	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 每页显示的条目数量。
@@ -75,10 +72,10 @@ type ListAssetsRequest struct {
 	// 动作是否可编辑。仅在分身数字人模型查询时有效。
 	ActionEditable *bool `json:"action_editable,omitempty"`
 
-	// 分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+	// 分身数字人是否支持走动。仅在分身数字人模型查询时有效。
 	IsMovable *bool `json:"is_movable,omitempty"`
 
-	// 可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+	// 取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
 	VoiceProvider *string `json:"voice_provider,omitempty"`
 
 	// 角色。 SHARER：共享方，SHAREE：被共享方

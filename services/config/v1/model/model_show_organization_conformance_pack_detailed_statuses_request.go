@@ -16,7 +16,7 @@ type ShowOrganizationConformancePackDetailedStatusesRequest struct {
 	OrganizationId string `json:"organization_id"`
 
 	// 合规规则包名称。
-	ConformancePackName string `json:"conformance_pack_name"`
+	ConformancePackName *string `json:"conformance_pack_name,omitempty"`
 
 	// 组织合规规则包ID。
 	OrganizationConformancePackId *string `json:"organization_conformance_pack_id,omitempty"`
@@ -50,6 +50,9 @@ type ShowOrganizationConformancePackDetailedStatusesRequestStateEnum struct {
 	CREATE_FAILED      ShowOrganizationConformancePackDetailedStatusesRequestState
 	DELETE_IN_PROGRESS ShowOrganizationConformancePackDetailedStatusesRequestState
 	DELETE_FAILED      ShowOrganizationConformancePackDetailedStatusesRequestState
+	UPDATE_SUCCESSFUL  ShowOrganizationConformancePackDetailedStatusesRequestState
+	UPDATE_IN_PROGRESS ShowOrganizationConformancePackDetailedStatusesRequestState
+	UPDATE_FAILED      ShowOrganizationConformancePackDetailedStatusesRequestState
 }
 
 func GetShowOrganizationConformancePackDetailedStatusesRequestStateEnum() ShowOrganizationConformancePackDetailedStatusesRequestStateEnum {
@@ -68,6 +71,15 @@ func GetShowOrganizationConformancePackDetailedStatusesRequestStateEnum() ShowOr
 		},
 		DELETE_FAILED: ShowOrganizationConformancePackDetailedStatusesRequestState{
 			value: "DELETE_FAILED",
+		},
+		UPDATE_SUCCESSFUL: ShowOrganizationConformancePackDetailedStatusesRequestState{
+			value: "UPDATE_SUCCESSFUL",
+		},
+		UPDATE_IN_PROGRESS: ShowOrganizationConformancePackDetailedStatusesRequestState{
+			value: "UPDATE_IN_PROGRESS",
+		},
+		UPDATE_FAILED: ShowOrganizationConformancePackDetailedStatusesRequestState{
+			value: "UPDATE_FAILED",
 		},
 	}
 }

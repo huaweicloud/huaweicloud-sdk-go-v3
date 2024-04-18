@@ -12,6 +12,9 @@ type ShowTrackerConfigResponse struct {
 
 	Selector *SelectorConfigBody `json:"selector,omitempty"`
 
+	// 存储历史信息的天数
+	RetentionPeriodInDays *int32 `json:"retention_period_in_days,omitempty"`
+
 	// IAM委托名称
 	AgencyName     *string `json:"agency_name,omitempty"`
 	HttpStatusCode int     `json:"-"`

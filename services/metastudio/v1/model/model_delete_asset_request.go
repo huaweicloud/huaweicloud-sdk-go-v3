@@ -15,7 +15,7 @@ type DeleteAssetRequest struct {
 	// 使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
 	XSdkDate *string `json:"X-Sdk-Date,omitempty"`
 
-	// 第三方用户ID。 > * 不允许输入中文。
+	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 资产ID。

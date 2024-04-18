@@ -9,7 +9,7 @@ import (
 // ShowProductdataOfferingInfosResponse Response Object
 type ShowProductdataOfferingInfosResponse struct {
 
-	//
+	// 商品数据列表
 	Body           *[]ResourceProductDataObjectInfo `json:"body,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

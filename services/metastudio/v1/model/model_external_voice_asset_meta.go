@@ -12,7 +12,7 @@ import (
 // ExternalVoiceAssetMeta 第三方TTS音色元数据。
 type ExternalVoiceAssetMeta struct {
 
-	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
 	Provider ExternalVoiceAssetMetaProvider `json:"provider"`
 
 	MobvoiVoiceMeta *MobvoiVoiceAssetMeta `json:"mobvoi_voice_meta,omitempty"`

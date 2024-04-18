@@ -355,6 +355,27 @@ func (c *GaussDBforopenGaussClient) DeleteInstanceInvoker(request *model.DeleteI
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteInstanceTag 删除实例标签
+//
+// 删除实例标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DeleteInstanceTag(request *model.DeleteInstanceTagRequest) (*model.DeleteInstanceTagResponse, error) {
+	requestDef := GenReqDefForDeleteInstanceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstanceTagResponse), nil
+	}
+}
+
+// DeleteInstanceTagInvoker 删除实例标签
+func (c *GaussDBforopenGaussClient) DeleteInstanceTagInvoker(request *model.DeleteInstanceTagRequest) *DeleteInstanceTagInvoker {
+	requestDef := GenReqDefForDeleteInstanceTag()
+	return &DeleteInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteJob 删除任务记录
 //
 // 删除任务记录。
@@ -817,6 +838,27 @@ func (c *GaussDBforopenGaussClient) ListHistoryOperationsInvoker(request *model.
 	return &ListHistoryOperationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceErrorLogs 查询错误日志下载链接
+//
+// 查询数据库错误日志下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListInstanceErrorLogs(request *model.ListInstanceErrorLogsRequest) (*model.ListInstanceErrorLogsResponse, error) {
+	requestDef := GenReqDefForListInstanceErrorLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceErrorLogsResponse), nil
+	}
+}
+
+// ListInstanceErrorLogsInvoker 查询错误日志下载链接
+func (c *GaussDBforopenGaussClient) ListInstanceErrorLogsInvoker(request *model.ListInstanceErrorLogsRequest) *ListInstanceErrorLogsInvoker {
+	requestDef := GenReqDefForListInstanceErrorLogs()
+	return &ListInstanceErrorLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceTags 查询实例标签
 //
 // 查询指定实例的用户标签信息。
@@ -1047,6 +1089,27 @@ func (c *GaussDBforopenGaussClient) ListTasks(request *model.ListTasksRequest) (
 func (c *GaussDBforopenGaussClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
 	requestDef := GenReqDefForListTasks()
 	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopIoTraffics 查询Top IO列表
+//
+// 查询实例数据库进程下的Top IO流量数据，返回与会话信息相关联后的结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListTopIoTraffics(request *model.ListTopIoTrafficsRequest) (*model.ListTopIoTrafficsResponse, error) {
+	requestDef := GenReqDefForListTopIoTraffics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopIoTrafficsResponse), nil
+	}
+}
+
+// ListTopIoTrafficsInvoker 查询Top IO列表
+func (c *GaussDBforopenGaussClient) ListTopIoTrafficsInvoker(request *model.ListTopIoTrafficsRequest) *ListTopIoTrafficsInvoker {
+	requestDef := GenReqDefForListTopIoTraffics()
+	return &ListTopIoTrafficsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyEpsQuota 修改企业项目配额
@@ -1343,6 +1406,27 @@ func (c *GaussDBforopenGaussClient) ShowDeploymentFormInvoker(request *model.Sho
 	return &ShowDeploymentFormInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowErrorLogSwitchStatus 查询错误日志采集开关状态
+//
+// 查询数据库错误日志采集的开关状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowErrorLogSwitchStatus(request *model.ShowErrorLogSwitchStatusRequest) (*model.ShowErrorLogSwitchStatusResponse, error) {
+	requestDef := GenReqDefForShowErrorLogSwitchStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowErrorLogSwitchStatusResponse), nil
+	}
+}
+
+// ShowErrorLogSwitchStatusInvoker 查询错误日志采集开关状态
+func (c *GaussDBforopenGaussClient) ShowErrorLogSwitchStatusInvoker(request *model.ShowErrorLogSwitchStatusRequest) *ShowErrorLogSwitchStatusInvoker {
+	requestDef := GenReqDefForShowErrorLogSwitchStatus()
+	return &ShowErrorLogSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceConfiguration 获取指定实例的参数模板
 //
 // 获取指定实例的参数模板。
@@ -1425,27 +1509,6 @@ func (c *GaussDBforopenGaussClient) ShowInstanceSnapshot(request *model.ShowInst
 func (c *GaussDBforopenGaussClient) ShowInstanceSnapshotInvoker(request *model.ShowInstanceSnapshotRequest) *ShowInstanceSnapshotInvoker {
 	requestDef := GenReqDefForShowInstanceSnapshot()
 	return &ShowInstanceSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowInstancesStatistics 实例统计
-//
-// 实例统计
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBforopenGaussClient) ShowInstancesStatistics(request *model.ShowInstancesStatisticsRequest) (*model.ShowInstancesStatisticsResponse, error) {
-	requestDef := GenReqDefForShowInstancesStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowInstancesStatisticsResponse), nil
-	}
-}
-
-// ShowInstancesStatisticsInvoker 实例统计
-func (c *GaussDBforopenGaussClient) ShowInstancesStatisticsInvoker(request *model.ShowInstancesStatisticsRequest) *ShowInstancesStatisticsInvoker {
-	requestDef := GenReqDefForShowInstancesStatistics()
-	return &ShowInstancesStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJobDetail 获取指定ID的任务信息。

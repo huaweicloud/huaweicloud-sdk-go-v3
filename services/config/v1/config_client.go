@@ -754,6 +754,48 @@ func (c *ConfigClient) ShowOrganizationConformancePackDetailedStatusesInvoker(re
 	return &ShowOrganizationConformancePackDetailedStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateConformancePack 更新合规规则包
+//
+// 更新用户的合规规则包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) UpdateConformancePack(request *model.UpdateConformancePackRequest) (*model.UpdateConformancePackResponse, error) {
+	requestDef := GenReqDefForUpdateConformancePack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateConformancePackResponse), nil
+	}
+}
+
+// UpdateConformancePackInvoker 更新合规规则包
+func (c *ConfigClient) UpdateConformancePackInvoker(request *model.UpdateConformancePackRequest) *UpdateConformancePackInvoker {
+	requestDef := GenReqDefForUpdateConformancePack()
+	return &UpdateConformancePackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOrganizationConformancePack 更新组织合规规则包
+//
+// 更新用户的组织合规规则包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) UpdateOrganizationConformancePack(request *model.UpdateOrganizationConformancePackRequest) (*model.UpdateOrganizationConformancePackResponse, error) {
+	requestDef := GenReqDefForUpdateOrganizationConformancePack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOrganizationConformancePackResponse), nil
+	}
+}
+
+// UpdateOrganizationConformancePackInvoker 更新组织合规规则包
+func (c *ConfigClient) UpdateOrganizationConformancePackInvoker(request *model.UpdateOrganizationConformancePackRequest) *UpdateOrganizationConformancePackInvoker {
+	requestDef := GenReqDefForUpdateOrganizationConformancePack()
+	return &UpdateOrganizationConformancePackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceHistory 查询资源历史
 //
 // 查询资源与资源关系的变更历史

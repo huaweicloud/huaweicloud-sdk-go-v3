@@ -57,7 +57,7 @@ type SmartLiveRoomBaseInfo struct {
 	// 结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	LastJobEndTime *string `json:"last_job_end_time,omitempty"`
 
-	// 当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+	// 当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
 	LastJobStatus *SmartLiveRoomBaseInfoLastJobStatus `json:"last_job_status,omitempty"`
 }
 

@@ -18,7 +18,7 @@ type Show2dModelTrainingJobResponse struct {
 	// 分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
 	Name string `json:"name"`
 
-	// 任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+	// 任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
 	State Show2dModelTrainingJobResponseState `json:"state"`
 
 	// 模型资产ID。
@@ -45,11 +45,17 @@ type Show2dModelTrainingJobResponse struct {
 	// 分身数字人训练任务标签。
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+	// 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
 	ModelVersion *Show2dModelTrainingJobResponseModelVersion `json:"model_version,omitempty"`
 
 	// 抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
 	MattingType *Show2dModelTrainingJobResponseMattingType `json:"matting_type,omitempty"`
+
+	// 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+	ModelResolution *string `json:"model_resolution,omitempty"`
+
+	// 自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
+	AppUserId *string `json:"app_user_id,omitempty"`
 
 	// 分身数字人训练视频下载URL。24小时内有效。
 	TrainingVideoDownloadUrl *string `json:"training_video_download_url,omitempty"`
@@ -85,11 +91,13 @@ type Show2dModelTrainingJobResponse struct {
 
 	InferenceDataProcessActionMarkInfo *InferenceActionMarkInfo `json:"inference_data_process_action_mark_info,omitempty"`
 
+	InferenceDataProcessEyeCorrectionMarkInfo *InferenceEyeCorrectionMarkInfo `json:"inference_data_process_eye_correction_mark_info,omitempty"`
+
 	// 分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
 	IsBackgroundReplacement *bool `json:"is_background_replacement,omitempty"`
 
-	// 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
-	ModelResolution *string `json:"model_resolution,omitempty"`
+	// 转编译任务机型
+	WorkerType *[]string `json:"worker_type,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
@@ -232,8 +240,9 @@ type Show2dModelTrainingJobResponseModelVersion struct {
 }
 
 type Show2dModelTrainingJobResponseModelVersionEnum struct {
-	V2 Show2dModelTrainingJobResponseModelVersion
-	V3 Show2dModelTrainingJobResponseModelVersion
+	V2   Show2dModelTrainingJobResponseModelVersion
+	V3   Show2dModelTrainingJobResponseModelVersion
+	V3_2 Show2dModelTrainingJobResponseModelVersion
 }
 
 func GetShow2dModelTrainingJobResponseModelVersionEnum() Show2dModelTrainingJobResponseModelVersionEnum {
@@ -243,6 +252,9 @@ func GetShow2dModelTrainingJobResponseModelVersionEnum() Show2dModelTrainingJobR
 		},
 		V3: Show2dModelTrainingJobResponseModelVersion{
 			value: "V3",
+		},
+		V3_2: Show2dModelTrainingJobResponseModelVersion{
+			value: "V3.2",
 		},
 	}
 }

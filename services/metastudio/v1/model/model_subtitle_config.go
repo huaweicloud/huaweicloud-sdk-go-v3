@@ -21,10 +21,10 @@ type SubtitleConfig struct {
 	// 字体大小。  取值范围：[4, 120]
 	FontSize *int32 `json:"font_size,omitempty"`
 
-	// 字幕框高度 > * 字幕框宽度固定为屏幕宽度的80% > * 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数
+	// 字幕框高度 > * 参数h用于方便前端计算字幕框左上角坐标，后台不使用该参数
 	H *int32 `json:"h,omitempty"`
 
-	// 字幕框宽度
+	// 字幕框宽度 > * 字幕框宽度固定为屏幕宽度的80% > * 参数w用于方便前端计算字幕框左上角坐标，后台不使用该参数
 	W *int32 `json:"w,omitempty"`
 }
 

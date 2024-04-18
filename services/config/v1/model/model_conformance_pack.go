@@ -33,6 +33,15 @@ type ConformancePack struct {
 	// 合规规则包更新时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
+	// 预定义合规规则包模板名称。
+	TemplateKey *string `json:"template_key,omitempty"`
+
+	// 合规规则包模板OBS地址
+	TemplateUri *string `json:"template_uri,omitempty"`
+
+	// 委托名称
+	AgencyName *string `json:"agency_name,omitempty"`
+
 	// 合规规则包部署状态。
 	Status *ConformancePackStatus `json:"status,omitempty"`
 
@@ -68,6 +77,9 @@ type ConformancePackStatusEnum struct {
 	ROLLBACK_SUCCESSFUL  ConformancePackStatus
 	ROLLBACK_IN_PROGRESS ConformancePackStatus
 	ROLLBACK_FAILED      ConformancePackStatus
+	UPDATE_SUCCESSFUL    ConformancePackStatus
+	UPDATE_IN_PROGRESS   ConformancePackStatus
+	UPDATE_FAILED        ConformancePackStatus
 }
 
 func GetConformancePackStatusEnum() ConformancePackStatusEnum {
@@ -95,6 +107,15 @@ func GetConformancePackStatusEnum() ConformancePackStatusEnum {
 		},
 		ROLLBACK_FAILED: ConformancePackStatus{
 			value: "ROLLBACK_FAILED",
+		},
+		UPDATE_SUCCESSFUL: ConformancePackStatus{
+			value: "UPDATE_SUCCESSFUL",
+		},
+		UPDATE_IN_PROGRESS: ConformancePackStatus{
+			value: "UPDATE_IN_PROGRESS",
+		},
+		UPDATE_FAILED: ConformancePackStatus{
+			value: "UPDATE_FAILED",
 		},
 	}
 }

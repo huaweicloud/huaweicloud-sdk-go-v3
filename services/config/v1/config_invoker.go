@@ -425,6 +425,30 @@ func (i *ShowOrganizationConformancePackDetailedStatusesInvoker) Invoke() (*mode
 	}
 }
 
+type UpdateConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateConformancePackInvoker) Invoke() (*model.UpdateConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateConformancePackResponse), nil
+	}
+}
+
+type UpdateOrganizationConformancePackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOrganizationConformancePackInvoker) Invoke() (*model.UpdateOrganizationConformancePackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOrganizationConformancePackResponse), nil
+	}
+}
+
 type ShowResourceHistoryInvoker struct {
 	*invoker.BaseInvoker
 }

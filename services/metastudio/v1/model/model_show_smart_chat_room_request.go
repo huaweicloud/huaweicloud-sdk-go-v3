@@ -9,7 +9,7 @@ import (
 // ShowSmartChatRoomRequest Request Object
 type ShowSmartChatRoomRequest struct {
 
-	// 剧本ID。
+	// 智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
 	RoomId string `json:"room_id"`
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
@@ -21,7 +21,7 @@ type ShowSmartChatRoomRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 第三方用户ID。 > * 不允许输入中文。
+	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 }
 

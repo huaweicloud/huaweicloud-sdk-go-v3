@@ -36,7 +36,7 @@ type ListSwrImageRepositoryRequest struct {
 	// 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
 	ImageType string `json:"image_type"`
 
-	// 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+	// 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
 	ScanStatus *string `json:"scan_status,omitempty"`
 
 	// 企业镜像实例名称

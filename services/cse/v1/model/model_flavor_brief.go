@@ -14,6 +14,8 @@ type FlavorBrief struct {
 
 	// 微服务引擎专享版规格描述
 	Description *string `json:"description,omitempty"`
+
+	Spec *EngineSpec `json:"spec,omitempty"`
 }
 
 func (o FlavorBrief) String() string {
