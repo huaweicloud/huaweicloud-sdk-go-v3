@@ -1,3 +1,16 @@
+# 0.1.92-patch 2024-04-23
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowServerLimits**
+    - changes of response param
+      - `* absolute.totalRAMUsed: int32 -> int64`
+
 # 0.1.92 2024-04-18
 
 ### HuaweiCloud SDK AOM
