@@ -18,6 +18,9 @@ type AppExecutionInfo struct {
 	// 部署时间
 	Duration *string `json:"duration,omitempty"`
 
+	// 当前应用是否被禁用
+	IsDisable *bool `json:"is_disable,omitempty"`
+
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
@@ -47,6 +50,9 @@ type AppExecutionInfo struct {
 
 	// 是否有创建环境的权限
 	CanCreateEnv *bool `json:"can_create_env,omitempty"`
+
+	// 是否有禁用应用的权限
+	CanDisable *bool `json:"can_disable,omitempty"`
 
 	// 部署类型模式，包括deployTemplate、ansible、shell
 	DeploySystem *string `json:"deploy_system,omitempty"`

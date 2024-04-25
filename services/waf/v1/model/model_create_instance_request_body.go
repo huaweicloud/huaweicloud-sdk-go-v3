@@ -24,7 +24,7 @@ type CreateInstanceRequestBody struct {
 	// 独享引擎名称前缀
 	Instancename string `json:"instancename"`
 
-	// 独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-100规格   - waf.instance.professional：专业版，对应控制台WI-500规格
+	// 独享引擎版本规格   - waf.instance.enterprise：企业版，对应控制台WI-500规格   - waf.instance.professional：专业版，对应控制台WI-100规格
 	Specification string `json:"specification"`
 
 	// 独享引擎ECS规格，实例规格。创建资源租户类独享引擎可不填该参数，创建普通资源租户独享引擎必填该参数。普通租户类独享引擎具体支持的规格以waf控制台上支持的规格为准，企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格。

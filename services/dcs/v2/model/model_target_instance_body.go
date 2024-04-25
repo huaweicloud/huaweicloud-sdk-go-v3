@@ -17,6 +17,21 @@ type TargetInstanceBody struct {
 
 	// Redis密码，如果设置了密码，则必须填写。
 	Password *string `json:"password,omitempty"`
+
+	// Redis IP地址。
+	Ip *string `json:"ip,omitempty"`
+
+	// Redis端口。
+	Port *string `json:"port,omitempty"`
+
+	// Redis实例地址。
+	Addrs *string `json:"addrs,omitempty"`
+
+	// proxy实例是否开启了多DB。
+	ProxyMultiDb *bool `json:"proxy_multi_db,omitempty"`
+
+	// Redis数据库。
+	Db *string `json:"db,omitempty"`
 }
 
 func (o TargetInstanceBody) String() string {

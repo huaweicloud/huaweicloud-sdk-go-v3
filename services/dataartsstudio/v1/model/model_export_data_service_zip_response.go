@@ -1,0 +1,31 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"io"
+
+	"strings"
+)
+
+// ExportDataServiceZipResponse Response Object
+type ExportDataServiceZipResponse struct {
+	HttpStatusCode int           `json:"-"`
+	Body           io.ReadCloser `json:"-" type:"stream"`
+}
+
+func (o ExportDataServiceZipResponse) Consume(writer io.Writer) (int64, error) {
+	written, err := io.Copy(writer, o.Body)
+	defer o.Body.Close()
+
+	return written, err
+}
+
+func (o ExportDataServiceZipResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ExportDataServiceZipResponse struct{}"
+	}
+
+	return strings.Join([]string{"ExportDataServiceZipResponse", string(data)}, " ")
+}

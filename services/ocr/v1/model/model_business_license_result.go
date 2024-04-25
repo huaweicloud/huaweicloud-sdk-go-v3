@@ -9,25 +9,28 @@ import (
 // BusinessLicenseResult
 type BusinessLicenseResult struct {
 
-	//   - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+	// - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
 	RegistrationNumber *string `json:"registration_number,omitempty"`
 
 	// 企业名称。
 	Name *string `json:"name,omitempty"`
 
-	// 公司/企业类型/主体类型。
+	// 公司/企业类型/主体类型/类型。
 	Type *string `json:"type,omitempty"`
 
-	// 住所/营业场所/企业住所。
+	// 住所/营业场所/企业住所/主要经营场所/经营场所。
 	Address *string `json:"address,omitempty"`
 
-	// 法定代表人/负责人。
+	// 法定代表人/负责人/执行事务合伙人/投资人/经营者。
 	LegalRepresentative *string `json:"legal_representative,omitempty"`
 
-	// 注册资本。
+	// 注册资本/出资额。
 	RegisteredCapital *string `json:"registered_capital,omitempty"`
 
-	// 成立日期。
+	// 组成形式。
+	OrganizationForm *string `json:"organization_form,omitempty"`
+
+	// 成立日期/注册日期。
 	FoundDate *string `json:"found_date,omitempty"`
 
 	// 营业期限。

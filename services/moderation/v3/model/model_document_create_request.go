@@ -26,6 +26,9 @@ type DocumentCreateRequest struct {
 
 	// 回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
 	Callback *string `json:"callback,omitempty"`
+
+	// 用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+	Seed *string `json:"seed,omitempty"`
 }
 
 func (o DocumentCreateRequest) String() string {

@@ -78,6 +78,9 @@ type ListInstancesResult struct {
 
 	// 负载均衡端口，只有存在负载均衡ip，才会返回该参数。
 	LbPort *string `json:"lb_port,omitempty"`
+
+	// 实例可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 
 func (o ListInstancesResult) String() string {

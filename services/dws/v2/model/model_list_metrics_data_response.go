@@ -16,7 +16,7 @@ type ListMetricsDataResponse struct {
 	Msg *string `json:"msg,omitempty"`
 
 	// 指标采集数据列表。
-	Data *[]map[string]string `json:"data,omitempty"`
+	Data *[]map[string]interface{} `json:"data,omitempty"`
 
 	// 总列表大小。
 	Count          *int64 `json:"count,omitempty"`

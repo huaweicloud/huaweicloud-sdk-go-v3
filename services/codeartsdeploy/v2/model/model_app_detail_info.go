@@ -21,6 +21,9 @@ type AppDetailInfo struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
+	// 当前应用是否被禁用
+	IsDisable *bool `json:"is_disable,omitempty"`
+
 	// 创建方式
 	CreateType *string `json:"create_type,omitempty"`
 
@@ -56,6 +59,9 @@ type AppDetailInfo struct {
 
 	// 是否有创建环境的权限
 	CanCreateEnv *bool `json:"can_create_env,omitempty"`
+
+	// 是否有禁用应用的权限
+	CanDisable *bool `json:"can_disable,omitempty"`
 
 	// 应用所属人租户ID
 	OwnerTenantId *string `json:"owner_tenant_id,omitempty"`

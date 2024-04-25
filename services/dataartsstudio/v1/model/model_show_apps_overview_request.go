@@ -12,22 +12,22 @@ import (
 // ShowAppsOverviewRequest Request Object
 type ShowAppsOverviewRequest struct {
 
-	// 工作空间id
+	// 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
 	Workspace string `json:"workspace"`
 
-	// dlm版本类型
+	// 数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
 	DlmType *ShowAppsOverviewRequestDlmType `json:"Dlm-Type,omitempty"`
 
-	// 资源类型
+	// 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
 	ContentType string `json:"Content-Type"`
 
-	// 开始时间（13位时间戳）
+	// 开始时间（13位时间戳）。
 	StartTime int64 `json:"start_time"`
 
-	// 结束时间（13位时间戳）
+	// 结束时间（13位时间戳）。
 	EndTime int64 `json:"end_time"`
 
-	// 时间单位
+	// 时间单位。
 	TimeUnit ShowAppsOverviewRequestTimeUnit `json:"time_unit"`
 }
 

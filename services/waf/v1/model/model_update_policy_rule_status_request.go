@@ -47,6 +47,7 @@ type UpdatePolicyRuleStatusRequestRuletypeEnum struct {
 	ANTITAMPER   UpdatePolicyRuleStatusRequestRuletype
 	CUSTOM       UpdatePolicyRuleStatusRequestRuletype
 	IGNORE       UpdatePolicyRuleStatusRequestRuletype
+	CC           UpdatePolicyRuleStatusRequestRuletype
 }
 
 func GetUpdatePolicyRuleStatusRequestRuletypeEnum() UpdatePolicyRuleStatusRequestRuletypeEnum {
@@ -68,6 +69,9 @@ func GetUpdatePolicyRuleStatusRequestRuletypeEnum() UpdatePolicyRuleStatusReques
 		},
 		IGNORE: UpdatePolicyRuleStatusRequestRuletype{
 			value: "ignore",
+		},
+		CC: UpdatePolicyRuleStatusRequestRuletype{
+			value: "cc",
 		},
 	}
 }

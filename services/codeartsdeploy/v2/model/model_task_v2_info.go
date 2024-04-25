@@ -90,6 +90,9 @@ type TaskV2Info struct {
 	// 是否有创建环境的权限
 	CanCreateEnv *bool `json:"can_create_env,omitempty"`
 
+	// 是否有禁用应用的权限
+	CanDisable *bool `json:"can_disable,omitempty"`
+
 	// 应用组件列表
 	AppComponentList *[]AppComponentDao `json:"app_component_list,omitempty"`
 
@@ -98,6 +101,9 @@ type TaskV2Info struct {
 
 	// 部署任务所属应用id
 	AppId *string `json:"app_id,omitempty"`
+
+	// 当前应用是否被禁用
+	IsDisable *bool `json:"is_disable,omitempty"`
 }
 
 func (o TaskV2Info) String() string {

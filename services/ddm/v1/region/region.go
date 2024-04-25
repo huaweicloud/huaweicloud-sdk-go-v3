@@ -34,22 +34,25 @@ var (
 		"https://ddm.sa-brazil-1.myhuaweicloud.com")
 	LA_SOUTH_2 = region.NewRegion("la-south-2",
 		"https://ddm.la-south-2.myhuaweicloud.com")
+	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
+		"https://ddm.my-kualalumpur-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"eu-west-101":    EU_WEST_101,
-	"cn-southwest-2": CN_SOUTHWEST_2,
-	"cn-south-2":     CN_SOUTH_2,
-	"cn-north-4":     CN_NORTH_4,
-	"cn-north-9":     CN_NORTH_9,
-	"cn-east-3":      CN_EAST_3,
-	"cn-east-2":      CN_EAST_2,
-	"cn-north-1":     CN_NORTH_1,
-	"cn-south-1":     CN_SOUTH_1,
-	"ap-southeast-1": AP_SOUTHEAST_1,
-	"la-north-2":     LA_NORTH_2,
-	"sa-brazil-1":    SA_BRAZIL_1,
-	"la-south-2":     LA_SOUTH_2,
+	"eu-west-101":      EU_WEST_101,
+	"cn-southwest-2":   CN_SOUTHWEST_2,
+	"cn-south-2":       CN_SOUTH_2,
+	"cn-north-4":       CN_NORTH_4,
+	"cn-north-9":       CN_NORTH_9,
+	"cn-east-3":        CN_EAST_3,
+	"cn-east-2":        CN_EAST_2,
+	"cn-north-1":       CN_NORTH_1,
+	"cn-south-1":       CN_SOUTH_1,
+	"ap-southeast-1":   AP_SOUTHEAST_1,
+	"la-north-2":       LA_NORTH_2,
+	"sa-brazil-1":      SA_BRAZIL_1,
+	"la-south-2":       LA_SOUTH_2,
+	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 }
 
 var provider = region.DefaultProviderChain("DDM")

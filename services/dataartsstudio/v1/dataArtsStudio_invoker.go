@@ -197,6 +197,18 @@ func (i *BatchSyncMetadataInvoker) Invoke() (*model.BatchSyncMetadataResponse, e
 	}
 }
 
+type BatchUpdateSecurityDlfDataWareHousesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateSecurityDlfDataWareHousesInvoker) Invoke() (*model.BatchUpdateSecurityDlfDataWareHousesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateSecurityDlfDataWareHousesResponse), nil
+	}
+}
+
 type CancelFactoryPackagesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -698,6 +710,18 @@ func (i *DebugDataconnectionInvoker) Invoke() (*model.DebugDataconnectionRespons
 		return nil, err
 	} else {
 		return result.(*model.DebugDataconnectionResponse), nil
+	}
+}
+
+type DebugSecurityDlfDataWareHousesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DebugSecurityDlfDataWareHousesInvoker) Invoke() (*model.DebugSecurityDlfDataWareHousesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DebugSecurityDlfDataWareHousesResponse), nil
 	}
 }
 
@@ -1769,6 +1793,18 @@ func (i *ListSecurityDatasourceUrlsInvoker) Invoke() (*model.ListSecurityDatasou
 	}
 }
 
+type ListSecurityDlfDataWareHousesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityDlfDataWareHousesInvoker) Invoke() (*model.ListSecurityDlfDataWareHousesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityDlfDataWareHousesResponse), nil
+	}
+}
+
 type ListSecurityPermissionSetMembersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1826,6 +1862,18 @@ func (i *ListSecuritySecrecyLevelsInvoker) Invoke() (*model.ListSecuritySecrecyL
 		return nil, err
 	} else {
 		return result.(*model.ListSecuritySecrecyLevelsResponse), nil
+	}
+}
+
+type ListSecuritySensitiveDataOverviewsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecuritySensitiveDataOverviewsInvoker) Invoke() (*model.ListSecuritySensitiveDataOverviewsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecuritySensitiveDataOverviewsResponse), nil
 	}
 }
 
@@ -3365,6 +3413,54 @@ func (i *ExecuteApiToInstanceInvoker) Invoke() (*model.ExecuteApiToInstanceRespo
 	}
 }
 
+type ExportDataServiceExcelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDataServiceExcelInvoker) Invoke() (*model.ExportDataServiceExcelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDataServiceExcelResponse), nil
+	}
+}
+
+type ExportDataServiceExcelTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDataServiceExcelTemplateInvoker) Invoke() (*model.ExportDataServiceExcelTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDataServiceExcelTemplateResponse), nil
+	}
+}
+
+type ExportDataServiceZipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDataServiceZipInvoker) Invoke() (*model.ExportDataServiceZipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDataServiceZipResponse), nil
+	}
+}
+
+type ImportDataServiceExcelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportDataServiceExcelInvoker) Invoke() (*model.ImportDataServiceExcelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportDataServiceExcelResponse), nil
+	}
+}
+
 type ListApisInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3386,18 +3482,6 @@ func (i *ListInstanceListInvoker) Invoke() (*model.ListInstanceListResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceListResponse), nil
-	}
-}
-
-type PublishApiInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *PublishApiInvoker) Invoke() (*model.PublishApiResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.PublishApiResponse), nil
 	}
 }
 

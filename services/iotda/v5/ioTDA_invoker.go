@@ -593,6 +593,66 @@ func (i *UpdateDeviceInvoker) Invoke() (*model.UpdateDeviceResponse, error) {
 	}
 }
 
+type CreateDeviceProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDeviceProxyInvoker) Invoke() (*model.CreateDeviceProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDeviceProxyResponse), nil
+	}
+}
+
+type DeleteDeviceProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDeviceProxyInvoker) Invoke() (*model.DeleteDeviceProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDeviceProxyResponse), nil
+	}
+}
+
+type ListDeviceProxiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDeviceProxiesInvoker) Invoke() (*model.ListDeviceProxiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDeviceProxiesResponse), nil
+	}
+}
+
+type ShowDeviceProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeviceProxyInvoker) Invoke() (*model.ShowDeviceProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeviceProxyResponse), nil
+	}
+}
+
+type UpdateDeviceProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDeviceProxyInvoker) Invoke() (*model.UpdateDeviceProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDeviceProxyResponse), nil
+	}
+}
+
 type ShowDeviceShadowInvoker struct {
 	*invoker.BaseInvoker
 }

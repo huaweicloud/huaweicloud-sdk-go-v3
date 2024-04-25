@@ -32,7 +32,7 @@ type ApplyCertificateRequestBody struct {
 	// OV和EV型证书必填,国家编码，需符合正则\"**[A-Za-z]{2}**\"。
 	Country *string `json:"country,omitempty"`
 
-	// 申请人的姓名。字符长度为0~63位。
+	// 申请人的姓名。请输入中文、英文字符，下划线，中划线，英文逗号，英文句点，且长度为4到100字节。
 	ApplicantName string `json:"applicant_name"`
 
 	// 申请人的电话号码。示例：13212345678

@@ -18,7 +18,7 @@ type UnblockRecordResponseUnblockRecord struct {
 	Executor *string `json:"executor,omitempty"`
 
 	// 封堵id
-	BlockId *string `json:"block_id,omitempty"`
+	BlockId *int64 `json:"block_id,omitempty"`
 
 	// 封堵时间
 	BlockingTime *int64 `json:"blocking_time,omitempty"`

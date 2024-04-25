@@ -8,7 +8,10 @@ import (
 
 // CreateQuotasOrderResponse Response Object
 type CreateQuotasOrderResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 订单ID
+	OrderId        *string `json:"order_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateQuotasOrderResponse) String() string {

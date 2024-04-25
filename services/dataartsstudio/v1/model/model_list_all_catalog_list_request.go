@@ -12,22 +12,22 @@ import (
 // ListAllCatalogListRequest Request Object
 type ListAllCatalogListRequest struct {
 
-	// 工作空间id
+	// 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
 	Workspace string `json:"workspace"`
 
-	// dlm版本类型
+	// 数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
 	DlmType *ListAllCatalogListRequestDlmType `json:"Dlm-Type,omitempty"`
 
-	// 资源类型
+	// 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
 	ContentType string `json:"Content-Type"`
 
-	// 目录编号
+	// 目录编号。
 	CatalogId string `json:"catalog_id"`
 
-	// 查询起始坐标, 即跳过前X条数据
+	// 查询起始坐标, 即跳过前X条数据。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询条数, 即查询Y条数据
+	// 查询条数, 即查询Y条数据。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

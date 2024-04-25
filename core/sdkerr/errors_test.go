@@ -53,6 +53,7 @@ func TestNewServiceResponseError(t *testing.T) {
 	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
 	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
 	assert.Equal(t, "97e2***11df", responseError.RequestId)
+	assert.Equal(t, "Egpjbi1ub*****GoxMzgrcA==", responseError.EncodedAuthorizationMessage)
 }
 
 func TestNewServiceResponseError2(t *testing.T) {
@@ -75,6 +76,7 @@ func TestNewServiceResponseError2(t *testing.T) {
 	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
 	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
 	assert.Equal(t, "97e2***11df", responseError.RequestId)
+	assert.Equal(t, "Egpjbi1ub*****GoxMzgrcA==", responseError.EncodedAuthorizationMessage)
 }
 
 func TestNewServiceResponseError3(t *testing.T) {
@@ -99,6 +101,7 @@ func TestNewServiceResponseError3(t *testing.T) {
 	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
 	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
 	assert.Equal(t, "97e2***11df", responseError.RequestId)
+	assert.Equal(t, "Egpjbi1ub*****GoxMzgrcA==", responseError.EncodedAuthorizationMessage)
 }
 
 func TestNewServiceResponseError4(t *testing.T) {
@@ -137,4 +140,26 @@ func TestNewServiceResponseError5(t *testing.T) {
 	assert.Equal(t, "", responseError.ErrorCode)
 	assert.Equal(t, "invalid json data", responseError.ErrorMessage)
 	assert.Equal(t, "97e2***11df", responseError.RequestId)
+}
+
+func TestNewServiceResponseError6(t *testing.T) {
+	data := []byte("{\"error_code\":\"XXX.0001\"," +
+		"\"error_msg\":\"Some errors occurred.\"," +
+		"\"encoded_authorization_message\":null}")
+	response := &http.Response{
+		StatusCode: 400,
+		Header:     mockHeader(),
+		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
+	}
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		assert.Nil(t, err)
+	}(response.Body)
+
+	responseError := NewServiceResponseError(response)
+	assert.Equal(t, 400, responseError.StatusCode)
+	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
+	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
+	assert.Equal(t, "97e2***11df", responseError.RequestId)
+	assert.Equal(t, "", responseError.EncodedAuthorizationMessage)
 }
