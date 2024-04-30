@@ -14,16 +14,19 @@ type CreateTopicReq struct {
 	// 主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
 	Name *string `json:"name,omitempty"`
 
-	// 关联的代理。
+	// 关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
 	Brokers *[]string `json:"brokers,omitempty"`
 
 	// 队列数，范围1~50。
 	QueueNum float32 `json:"queue_num,omitempty"`
 
-	// 权限。
+	// 队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+	Queues *[]CreateTopicReqQueues `json:"queues,omitempty"`
+
+	// 权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
 	Permission *CreateTopicReqPermission `json:"permission,omitempty"`
 
-	// 消息类型（RocketMQ实例5.x版本才包含此参数）。
+	// 消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
 	MessageType *CreateTopicReqMessageType `json:"message_type,omitempty"`
 }
 

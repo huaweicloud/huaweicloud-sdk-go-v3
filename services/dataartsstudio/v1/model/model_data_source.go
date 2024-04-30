@@ -51,7 +51,7 @@ type DataSource struct {
 	TableCount *int32 `json:"table_count,omitempty"`
 
 	// 数据大小
-	DataSize *int32 `json:"data_size,omitempty"`
+	DataSize *float64 `json:"data_size,omitempty"`
 
 	// 数据库统计信息
 	Databases *[]Database `json:"databases,omitempty"`

@@ -21,7 +21,7 @@ type ObsFolder struct {
 	ObjectCount *int32 `json:"object_count,omitempty"`
 
 	// 数据量
-	DataSize *int32 `json:"data_size,omitempty"`
+	DataSize *float64 `json:"data_size,omitempty"`
 }
 
 func (o ObsFolder) String() string {

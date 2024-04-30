@@ -19,6 +19,48 @@ func OrganizationsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CloseAccount 关闭账号
+//
+// 关闭账号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) CloseAccount(request *model.CloseAccountRequest) (*model.CloseAccountResponse, error) {
+	requestDef := GenReqDefForCloseAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloseAccountResponse), nil
+	}
+}
+
+// CloseAccountInvoker 关闭账号
+func (c *OrganizationsClient) CloseAccountInvoker(request *model.CloseAccountRequest) *CloseAccountInvoker {
+	requestDef := GenReqDefForCloseAccount()
+	return &CloseAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAccount 创建账号
+//
+// 创建一个账号，生成的账号将自动成为调用此接口的账号所属组织的成员。此操作只能由组织的管理账号调用。组织云服务将在新账号中创建所需的服务关联委托和账号访问委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) CreateAccount(request *model.CreateAccountRequest) (*model.CreateAccountResponse, error) {
+	requestDef := GenReqDefForCreateAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccountResponse), nil
+	}
+}
+
+// CreateAccountInvoker 创建账号
+func (c *OrganizationsClient) CreateAccountInvoker(request *model.CreateAccountRequest) *CreateAccountInvoker {
+	requestDef := GenReqDefForCreateAccount()
+	return &CreateAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // InviteAccount 邀请账号加入组织
 //
 // 向另一个账号发送邀请，受邀账号将以成员账号加入您的组织。此操作只能由组织的管理账号调用。

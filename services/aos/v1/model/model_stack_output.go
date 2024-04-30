@@ -21,7 +21,7 @@ type StackOutput struct {
 	// 资源栈输出的值
 	Value *string `json:"value,omitempty"`
 
-	// 标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+	// 标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
 	Sensitive *bool `json:"sensitive,omitempty"`
 }
 

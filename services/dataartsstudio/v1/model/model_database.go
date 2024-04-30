@@ -21,7 +21,7 @@ type Database struct {
 	TableCount *int32 `json:"table_count,omitempty"`
 
 	// 数据量大小
-	DataSize *int32 `json:"data_size,omitempty"`
+	DataSize *float64 `json:"data_size,omitempty"`
 }
 
 func (o Database) String() string {

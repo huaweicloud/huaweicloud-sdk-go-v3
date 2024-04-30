@@ -21,7 +21,7 @@ type CssIndex struct {
 	IndexDocCount *int32 `json:"index_doc_count,omitempty"`
 
 	// 索引数据量大小
-	IndexDataSize *int32 `json:"index_data_size,omitempty"`
+	IndexDataSize *float64 `json:"index_data_size,omitempty"`
 }
 
 func (o CssIndex) String() string {

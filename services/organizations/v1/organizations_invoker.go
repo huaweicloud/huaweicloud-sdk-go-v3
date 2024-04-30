@@ -5,6 +5,30 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/organizations/v1/model"
 )
 
+type CloseAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CloseAccountInvoker) Invoke() (*model.CloseAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CloseAccountResponse), nil
+	}
+}
+
+type CreateAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAccountInvoker) Invoke() (*model.CreateAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAccountResponse), nil
+	}
+}
+
 type InviteAccountInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -14,7 +14,7 @@ type CreateConsumerGroupOrBatchDeleteConsumerGroupReq struct {
 	// 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
 	Name *string `json:"name,omitempty"`
 
-	// 关联的代理列表。
+	// 关联的代理列表（仅RocketMQ实例4.8.0版本需要填写此参数）。
 	Brokers *[]string `json:"brokers,omitempty"`
 
 	// 是否广播。
@@ -26,7 +26,7 @@ type CreateConsumerGroupOrBatchDeleteConsumerGroupReq struct {
 	// 是否可以消费。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 是否按序消费。
+	// 是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
 	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
 
 	// 消费组描述，长度0~200个字符。
