@@ -15,10 +15,10 @@ type BackgroundConfigInfo struct {
 	// 背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
 	BackgroundType BackgroundConfigInfoBackgroundType `json:"background_type"`
 
-	// 背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
+	// 背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
 	BackgroundConfig *string `json:"background_config,omitempty"`
 
-	// 纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
+	// 纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
 	BackgroundColorConfig *string `json:"background_color_config,omitempty"`
 
 	// 背景资产ID。 > * 背景是背景图片时，填图片资产ID。

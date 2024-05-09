@@ -29,6 +29,9 @@ type UpdateFunctionConfigRequestBody struct {
 	// 函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
 	GpuMemory *int32 `json:"gpu_memory,omitempty"`
 
+	// 显卡类型。
+	GpuType *string `json:"gpu_type,omitempty"`
+
 	// 用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
 	UserData *string `json:"user_data,omitempty"`
 
@@ -100,9 +103,6 @@ type UpdateFunctionConfigRequestBody struct {
 
 	// 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
 	EnableClassIsolation *bool `json:"enable_class_isolation,omitempty"`
-
-	// 显卡类型。
-	GpuType *string `json:"gpu_type,omitempty"`
 }
 
 func (o UpdateFunctionConfigRequestBody) String() string {

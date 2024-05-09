@@ -32,6 +32,8 @@ type ActionParams struct {
 	ForceDelete *bool `json:"force_delete,omitempty"`
 
 	PublicIpConfig *PublicIpConfig `json:"public_ip_config,omitempty"`
+
+	ReplayConfig *ReplayConfigInfo `json:"replay_config,omitempty"`
 }
 
 func (o ActionParams) String() string {

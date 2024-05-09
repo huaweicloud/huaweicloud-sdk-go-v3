@@ -1385,6 +1385,102 @@ func (i *UpgradeGaussMySqlInstanceDatabaseInvoker) Invoke() (*model.UpgradeGauss
 	}
 }
 
+type CheckDataBaseConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDataBaseConfigInvoker) Invoke() (*model.CheckDataBaseConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDataBaseConfigResponse), nil
+	}
+}
+
+type CheckTableConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckTableConfigInvoker) Invoke() (*model.CheckTableConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckTableConfigResponse), nil
+	}
+}
+
+type CreateStarRocksDataReplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStarRocksDataReplicationInvoker) Invoke() (*model.CreateStarRocksDataReplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStarRocksDataReplicationResponse), nil
+	}
+}
+
+type DeleteStarRocksDataReplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStarRocksDataReplicationInvoker) Invoke() (*model.DeleteStarRocksDataReplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStarRocksDataReplicationResponse), nil
+	}
+}
+
+type ListStarRocksDataBasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStarRocksDataBasesInvoker) Invoke() (*model.ListStarRocksDataBasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStarRocksDataBasesResponse), nil
+	}
+}
+
+type ListStarRocksDataReplicationConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStarRocksDataReplicationConfigInvoker) Invoke() (*model.ListStarRocksDataReplicationConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStarRocksDataReplicationConfigResponse), nil
+	}
+}
+
+type ListStarRocksDataReplicationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStarRocksDataReplicationsInvoker) Invoke() (*model.ListStarRocksDataReplicationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStarRocksDataReplicationsResponse), nil
+	}
+}
+
+type ListStarRocksDbParametersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStarRocksDbParametersInvoker) Invoke() (*model.ListStarRocksDbParametersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStarRocksDbParametersResponse), nil
+	}
+}
+
 type DeleteSqlFilterRuleInvoker struct {
 	*invoker.BaseInvoker
 }

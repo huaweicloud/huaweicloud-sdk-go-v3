@@ -41,6 +41,9 @@ type ShowSmartChatJobResponse struct {
 
 	VideoConfig *ChatVideoConfigRsp `json:"video_config,omitempty"`
 
+	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+	ChatVideoType *ShowSmartChatJobResponseChatVideoType `json:"chat_video_type,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
@@ -99,6 +102,57 @@ func (c ShowSmartChatJobResponseState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowSmartChatJobResponseState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowSmartChatJobResponseChatVideoType struct {
+	value string
+}
+
+type ShowSmartChatJobResponseChatVideoTypeEnum struct {
+	COMPUTER ShowSmartChatJobResponseChatVideoType
+	MOBILE   ShowSmartChatJobResponseChatVideoType
+	HUB      ShowSmartChatJobResponseChatVideoType
+}
+
+func GetShowSmartChatJobResponseChatVideoTypeEnum() ShowSmartChatJobResponseChatVideoTypeEnum {
+	return ShowSmartChatJobResponseChatVideoTypeEnum{
+		COMPUTER: ShowSmartChatJobResponseChatVideoType{
+			value: "COMPUTER",
+		},
+		MOBILE: ShowSmartChatJobResponseChatVideoType{
+			value: "MOBILE",
+		},
+		HUB: ShowSmartChatJobResponseChatVideoType{
+			value: "HUB",
+		},
+	}
+}
+
+func (c ShowSmartChatJobResponseChatVideoType) Value() string {
+	return c.value
+}
+
+func (c ShowSmartChatJobResponseChatVideoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowSmartChatJobResponseChatVideoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -18,7 +18,7 @@ type ShowJobDetailRequest struct {
 	// 请求语言类型。
 	XLanguage *ShowJobDetailRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息
+	// 任务详情类型。取值： - overview：任务概览信息。 - detail：任务基本信息。 - network：测试连接结果信息，需配合query_id参数一起查询。 - precheck：预检查结果信息，需配合query_id参数一起查询。 - progress：任务进度信息。 - log：任务日志信息，支持分页查询参数offset与limit。 - compare：查询对比任务。 - file：对象导入信息。 - is_writable：目标库解除只读结果。 - cloud_connection：录制回放他云连通性测试，需配合query_id参数一起查询。
 	Type ShowJobDetailRequestType `json:"type"`
 
 	// 通过指定Query ID查询任务详情。  说明：部分type类型的任务详情，需要通过触发该操作的请求返回的query_id进行操作结果查询。
@@ -113,14 +113,16 @@ type ShowJobDetailRequestType struct {
 }
 
 type ShowJobDetailRequestTypeEnum struct {
-	OVERVIEW ShowJobDetailRequestType
-	DETAIL   ShowJobDetailRequestType
-	NETWORK  ShowJobDetailRequestType
-	PRECHECK ShowJobDetailRequestType
-	PROGRESS ShowJobDetailRequestType
-	LOG      ShowJobDetailRequestType
-	COMPARE  ShowJobDetailRequestType
-	FILE     ShowJobDetailRequestType
+	OVERVIEW         ShowJobDetailRequestType
+	DETAIL           ShowJobDetailRequestType
+	NETWORK          ShowJobDetailRequestType
+	PRECHECK         ShowJobDetailRequestType
+	PROGRESS         ShowJobDetailRequestType
+	LOG              ShowJobDetailRequestType
+	COMPARE          ShowJobDetailRequestType
+	FILE             ShowJobDetailRequestType
+	IS_WRITABLE      ShowJobDetailRequestType
+	CLOUD_CONNECTION ShowJobDetailRequestType
 }
 
 func GetShowJobDetailRequestTypeEnum() ShowJobDetailRequestTypeEnum {
@@ -148,6 +150,12 @@ func GetShowJobDetailRequestTypeEnum() ShowJobDetailRequestTypeEnum {
 		},
 		FILE: ShowJobDetailRequestType{
 			value: "file",
+		},
+		IS_WRITABLE: ShowJobDetailRequestType{
+			value: "is_writable",
+		},
+		CLOUD_CONNECTION: ShowJobDetailRequestType{
+			value: "cloud_connection",
 		},
 	}
 }

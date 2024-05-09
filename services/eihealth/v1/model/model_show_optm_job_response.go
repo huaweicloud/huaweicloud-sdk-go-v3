@@ -20,6 +20,9 @@ type ShowOptmJobResponse struct {
 
 	BindingSite *BindSiteDto `json:"binding_site,omitempty"`
 
+	// 受体列表和受体是二选一的关系，受体列表优先级最高
+	BindingSites *[]BindSiteDto `json:"binding_sites,omitempty"`
+
 	// 弱约束集合
 	WeakConstraints *[]WeakConstraintDto `json:"weak_constraints,omitempty"`
 

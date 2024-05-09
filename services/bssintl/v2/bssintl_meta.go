@@ -99,6 +99,17 @@ func GenReqDefForCheckUserIdentity() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateEnterpriseProjectAuth() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/enterprises/enterprise-projects/authority").
+		WithResponse(new(model.CreateEnterpriseProjectAuthResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateEnterpriseRealnameAuthentication() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -709,6 +720,21 @@ func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSubCustomerBudget() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/partners/sub-customers/budget/query").
+		WithResponse(new(model.ListSubCustomerBudgetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

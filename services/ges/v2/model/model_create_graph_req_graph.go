@@ -67,6 +67,9 @@ type CreateGraphReqGraph struct {
 
 	// 图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
 	CapacityRatio *int32 `json:"capacity_ratio,omitempty"`
+
+	// 是否为动态图
+	IsDynamicGraph *bool `json:"is_dynamic_graph,omitempty"`
 }
 
 func (o CreateGraphReqGraph) String() string {

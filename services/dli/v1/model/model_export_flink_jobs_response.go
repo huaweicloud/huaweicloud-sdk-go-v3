@@ -10,7 +10,7 @@ import (
 type ExportFlinkJobsResponse struct {
 
 	// 执行请求是否成功。“true”表示请求执行成功。
-	IsSuccess *bool `json:"is_success,omitempty"`
+	IsSuccess *string `json:"is_success,omitempty"`
 
 	// 消息内容
 	Message *string `json:"message,omitempty"`

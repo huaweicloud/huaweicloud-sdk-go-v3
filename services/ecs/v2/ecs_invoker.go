@@ -197,6 +197,18 @@ func (i *ChangeServerOsWithoutCloudInitInvoker) Invoke() (*model.ChangeServerOsW
 	}
 }
 
+type ChangeVpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeVpcInvoker) Invoke() (*model.ChangeVpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeVpcResponse), nil
+	}
+}
+
 type CreatePostPaidServersInvoker struct {
 	*invoker.BaseInvoker
 }

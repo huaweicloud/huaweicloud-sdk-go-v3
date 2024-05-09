@@ -27,6 +27,8 @@ type CompareResultInfo struct {
 
 	// 内容对比详情信息体。
 	ContentCompareDetailInfos *[]ContentCompareDetailInfo `json:"content_compare_detail_infos,omitempty"`
+
+	ContentDiffDetailInfo *ContentDiffDetailInfo `json:"content_diff_detail_info,omitempty"`
 }
 
 func (o CompareResultInfo) String() string {

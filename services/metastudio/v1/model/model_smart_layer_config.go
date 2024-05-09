@@ -12,7 +12,7 @@ import (
 // SmartLayerConfig 智能图层配置。
 type SmartLayerConfig struct {
 
-	// 图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+	// 图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
 	LayerType SmartLayerConfigLayerType `json:"layer_type"`
 
 	// 图层所需资产的资产id，外部资产信息无需填写
@@ -25,6 +25,8 @@ type SmartLayerConfig struct {
 	ImageConfig *SmartImageLayerConfig `json:"image_config,omitempty"`
 
 	VideoConfig *SmartVideoLayerConfig `json:"video_config,omitempty"`
+
+	TextConfig *SmartTextLayerConfig `json:"text_config,omitempty"`
 }
 
 func (o SmartLayerConfig) String() string {
@@ -43,6 +45,7 @@ type SmartLayerConfigLayerType struct {
 type SmartLayerConfigLayerTypeEnum struct {
 	IMAGE SmartLayerConfigLayerType
 	VIDEO SmartLayerConfigLayerType
+	TEXT  SmartLayerConfigLayerType
 }
 
 func GetSmartLayerConfigLayerTypeEnum() SmartLayerConfigLayerTypeEnum {
@@ -52,6 +55,9 @@ func GetSmartLayerConfigLayerTypeEnum() SmartLayerConfigLayerTypeEnum {
 		},
 		VIDEO: SmartLayerConfigLayerType{
 			value: "VIDEO",
+		},
+		TEXT: SmartLayerConfigLayerType{
+			value: "TEXT",
 		},
 	}
 }

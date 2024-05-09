@@ -30,7 +30,7 @@ type ListContentCompareDetailRequest struct {
 	// 类型。 compare：对比 unCompare：无法对比
 	Type *string `json:"type,omitempty"`
 
-	// 每页显示的条目数量。
+	// 每页显示的条目数量，最大值1000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。

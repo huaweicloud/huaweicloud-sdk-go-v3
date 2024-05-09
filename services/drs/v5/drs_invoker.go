@@ -581,6 +581,18 @@ func (i *ShowEnterpriseProjectInvoker) Invoke() (*model.ShowEnterpriseProjectRes
 	}
 }
 
+type ShowHealthCompareJobDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHealthCompareJobDetailInvoker) Invoke() (*model.ShowHealthCompareJobDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHealthCompareJobDetailResponse), nil
+	}
+}
+
 type ShowHealthCompareJobListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -590,6 +602,18 @@ func (i *ShowHealthCompareJobListInvoker) Invoke() (*model.ShowHealthCompareJobL
 		return nil, err
 	} else {
 		return result.(*model.ShowHealthCompareJobListResponse), nil
+	}
+}
+
+type ShowHealthObjectCompareJobOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHealthObjectCompareJobOverviewInvoker) Invoke() (*model.ShowHealthObjectCompareJobOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHealthObjectCompareJobOverviewResponse), nil
 	}
 }
 
@@ -758,6 +782,18 @@ func (i *UpdateBatchAsyncJobsInvoker) Invoke() (*model.UpdateBatchAsyncJobsRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateBatchAsyncJobsResponse), nil
+	}
+}
+
+type UpdateComparePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateComparePolicyInvoker) Invoke() (*model.UpdateComparePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateComparePolicyResponse), nil
 	}
 }
 

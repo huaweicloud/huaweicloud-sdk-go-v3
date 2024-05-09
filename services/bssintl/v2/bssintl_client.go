@@ -145,6 +145,27 @@ func (c *BssintlClient) CheckUserIdentityInvoker(request *model.CheckUserIdentit
 	return &CheckUserIdentityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateEnterpriseProjectAuth 开通客户企业项目权限
+//
+// 客户在自建平台开通客户企业项目权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) CreateEnterpriseProjectAuth(request *model.CreateEnterpriseProjectAuthRequest) (*model.CreateEnterpriseProjectAuthResponse, error) {
+	requestDef := GenReqDefForCreateEnterpriseProjectAuth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEnterpriseProjectAuthResponse), nil
+	}
+}
+
+// CreateEnterpriseProjectAuthInvoker 开通客户企业项目权限
+func (c *BssintlClient) CreateEnterpriseProjectAuthInvoker(request *model.CreateEnterpriseProjectAuthRequest) *CreateEnterpriseProjectAuthInvoker {
+	requestDef := GenReqDefForCreateEnterpriseProjectAuth()
+	return &CreateEnterpriseProjectAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEnterpriseRealnameAuthentication 申请企业实名认证
 //
 // 功能描述：企业客户可以进行企业实名认证申请。
@@ -691,6 +712,27 @@ func (c *BssintlClient) ListServiceTypes(request *model.ListServiceTypesRequest)
 func (c *BssintlClient) ListServiceTypesInvoker(request *model.ListServiceTypesRequest) *ListServiceTypesInvoker {
 	requestDef := GenReqDefForListServiceTypes()
 	return &ListServiceTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubCustomerBudget 批量查询客户预算
+//
+// 功能描述：批量查询客户预算
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListSubCustomerBudget(request *model.ListSubCustomerBudgetRequest) (*model.ListSubCustomerBudgetResponse, error) {
+	requestDef := GenReqDefForListSubCustomerBudget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubCustomerBudgetResponse), nil
+	}
+}
+
+// ListSubCustomerBudgetInvoker 批量查询客户预算
+func (c *BssintlClient) ListSubCustomerBudgetInvoker(request *model.ListSubCustomerBudgetRequest) *ListSubCustomerBudgetInvoker {
+	requestDef := GenReqDefForListSubCustomerBudget()
+	return &ListSubCustomerBudgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSubCustomerCoupons 查询优惠券列表

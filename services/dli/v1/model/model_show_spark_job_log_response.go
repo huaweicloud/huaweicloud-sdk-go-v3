@@ -13,7 +13,7 @@ type ShowSparkJobLogResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 日志起始索引。
-	From *string `json:"from,omitempty"`
+	From *int32 `json:"from,omitempty"`
 
 	// 日志的总记录数。
 	Total *int64 `json:"total,omitempty"`

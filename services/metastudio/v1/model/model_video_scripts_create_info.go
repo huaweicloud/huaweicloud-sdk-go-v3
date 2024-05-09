@@ -18,6 +18,9 @@ type VideoScriptsCreateInfo struct {
 	// 剧本描述。
 	ScriptDescription *string `json:"script_description,omitempty"`
 
+	// 横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+	ViewMode *VideoScriptsCreateInfoViewMode `json:"view_mode,omitempty"`
+
 	// 数字人模型资产ID。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
@@ -49,6 +52,53 @@ func (o VideoScriptsCreateInfo) String() string {
 	}
 
 	return strings.Join([]string{"VideoScriptsCreateInfo", string(data)}, " ")
+}
+
+type VideoScriptsCreateInfoViewMode struct {
+	value string
+}
+
+type VideoScriptsCreateInfoViewModeEnum struct {
+	LANDSCAPE VideoScriptsCreateInfoViewMode
+	VERTICAL  VideoScriptsCreateInfoViewMode
+}
+
+func GetVideoScriptsCreateInfoViewModeEnum() VideoScriptsCreateInfoViewModeEnum {
+	return VideoScriptsCreateInfoViewModeEnum{
+		LANDSCAPE: VideoScriptsCreateInfoViewMode{
+			value: "LANDSCAPE",
+		},
+		VERTICAL: VideoScriptsCreateInfoViewMode{
+			value: "VERTICAL",
+		},
+	}
+}
+
+func (c VideoScriptsCreateInfoViewMode) Value() string {
+	return c.value
+}
+
+func (c VideoScriptsCreateInfoViewMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VideoScriptsCreateInfoViewMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type VideoScriptsCreateInfoModelAssetType struct {

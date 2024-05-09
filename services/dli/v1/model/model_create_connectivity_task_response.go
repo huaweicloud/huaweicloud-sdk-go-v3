@@ -16,8 +16,8 @@ type CreateConnectivityTaskResponse struct {
 	Message *string `json:"message,omitempty"`
 
 	// 请求id
-	TaskId         *string `json:"task_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	TaskId         *int64 `json:"task_id,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateConnectivityTaskResponse) String() string {

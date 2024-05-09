@@ -18,7 +18,7 @@ type ListDataLevelTableCompareJobsRequest struct {
 	// 任务ID。
 	JobId string `json:"job_id"`
 
-	// 每页显示的条目数量。
+	// 每页显示的条目数量，最大值1000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。

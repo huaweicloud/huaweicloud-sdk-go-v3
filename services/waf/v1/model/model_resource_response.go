@@ -15,7 +15,7 @@ type ResourceResponse struct {
 	// 云服务产品对应的云服务类型
 	CloudServiceType *string `json:"cloudServiceType,omitempty"`
 
-	// 云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.domain：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.domain：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
+	// 云服务产品的资源类型   - hws.resource.type.waf：云模式包周期WAF   - hws.resource.type.waf.domain：云模式包周期WAF域名扩展包   - hws.resource.type.waf.bandwidth：云模式包周期WAF带宽扩展包   - hws.resource.type.waf.rule：云模式包周期WAF规则扩展包   - hws.resource.type.waf.instance：独享实例WAF   - hws.resource.type.waf.payperuserequest : Web应用防火墙按需请求   - hws.resource.type.waf.payperusedomain：Web应用防火墙按需域名   - hws.resource.type.waf.payperuserule: Web应用防火墙按需规则
 	ResourceType *string `json:"resourceType,omitempty"`
 
 	// 云服务产品的资源规格

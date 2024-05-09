@@ -68,3 +68,17 @@ func TestSigner_Sign2(t *testing.T) {
 	assert.Equal(t, "SDK-HMAC-SHA256 Access=AccessKey, SignedHeaders=x-sdk-date, "+
 		"Signature=7f587e76874c5079f7e98769ab285ee75bea28e30110ab10dec4fc4d12c32f62", result["Authorization"])
 }
+
+func TestSigner_Sign3(t *testing.T) {
+	req := request.NewHttpRequestBuilder().
+		WithMethod("GET").
+		WithEndpoint("https://"+host).
+		WithPath("/path").
+		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
+		AddQueryParam("limit", 1).
+		Build()
+	result, err := Sign(req, ak, sk)
+	assert.Nil(t, err)
+	assert.Equal(t, "SDK-HMAC-SHA256 Access=AccessKey, SignedHeaders=x-sdk-date, "+
+		"Signature=eb70b3a0caf6633a8b8e4317622d8a0f6819821ec84896ceb7739a57e2d9ed76", result["Authorization"])
+}

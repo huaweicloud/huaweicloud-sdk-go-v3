@@ -1035,6 +1035,27 @@ func (c *DrsClient) ShowEnterpriseProjectInvoker(request *model.ShowEnterprisePr
 	return &ShowEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHealthCompareJobDetail 查询健康对比任务详情
+//
+// 查询健康对比任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowHealthCompareJobDetail(request *model.ShowHealthCompareJobDetailRequest) (*model.ShowHealthCompareJobDetailResponse, error) {
+	requestDef := GenReqDefForShowHealthCompareJobDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHealthCompareJobDetailResponse), nil
+	}
+}
+
+// ShowHealthCompareJobDetailInvoker 查询健康对比任务详情
+func (c *DrsClient) ShowHealthCompareJobDetailInvoker(request *model.ShowHealthCompareJobDetailRequest) *ShowHealthCompareJobDetailInvoker {
+	requestDef := GenReqDefForShowHealthCompareJobDetail()
+	return &ShowHealthCompareJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHealthCompareJobList 查询健康对比列表
 //
 // 查询健康对比列表。
@@ -1054,6 +1075,27 @@ func (c *DrsClient) ShowHealthCompareJobList(request *model.ShowHealthCompareJob
 func (c *DrsClient) ShowHealthCompareJobListInvoker(request *model.ShowHealthCompareJobListRequest) *ShowHealthCompareJobListInvoker {
 	requestDef := GenReqDefForShowHealthCompareJobList()
 	return &ShowHealthCompareJobListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHealthObjectCompareJobOverview 获取健康对比对象级对比概览
+//
+// 获取健康对比对象级对比概览。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowHealthObjectCompareJobOverview(request *model.ShowHealthObjectCompareJobOverviewRequest) (*model.ShowHealthObjectCompareJobOverviewResponse, error) {
+	requestDef := GenReqDefForShowHealthObjectCompareJobOverview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHealthObjectCompareJobOverviewResponse), nil
+	}
+}
+
+// ShowHealthObjectCompareJobOverviewInvoker 获取健康对比对象级对比概览
+func (c *DrsClient) ShowHealthObjectCompareJobOverviewInvoker(request *model.ShowHealthObjectCompareJobOverviewRequest) *ShowHealthObjectCompareJobOverviewInvoker {
+	requestDef := GenReqDefForShowHealthObjectCompareJobOverview()
+	return &ShowHealthObjectCompareJobOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIncrementComponentsDetail 查询增量组件详情
@@ -1354,6 +1396,27 @@ func (c *DrsClient) UpdateBatchAsyncJobs(request *model.UpdateBatchAsyncJobsRequ
 func (c *DrsClient) UpdateBatchAsyncJobsInvoker(request *model.UpdateBatchAsyncJobsRequest) *UpdateBatchAsyncJobsInvoker {
 	requestDef := GenReqDefForUpdateBatchAsyncJobs()
 	return &UpdateBatchAsyncJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateComparePolicy 修改对比策略
+//
+// 修改周期性对比的对比策略，目前仅MySQL-&gt;MySQL、MySQL-&gt;GaussDB(for MySQL)、MySQL-&gt;GaussDB(DWS)、GaussDB(for MySQL)-&gt;MySQL同步任务，MySQL-&gt;MySQL、MySQL-&gt;GaussDB(for MySQL)迁移任务，MySQL-&gt;MySQL、MySQL-&gt;GaussDB(for MySQL)、GaussDB(for MySQL)-&gt;GaussDB(for MySQL)、DDM-&gt;DDM、DDS-DDS灾备任务支持对比策略设置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UpdateComparePolicy(request *model.UpdateComparePolicyRequest) (*model.UpdateComparePolicyResponse, error) {
+	requestDef := GenReqDefForUpdateComparePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateComparePolicyResponse), nil
+	}
+}
+
+// UpdateComparePolicyInvoker 修改对比策略
+func (c *DrsClient) UpdateComparePolicyInvoker(request *model.UpdateComparePolicyRequest) *UpdateComparePolicyInvoker {
+	requestDef := GenReqDefForUpdateComparePolicy()
+	return &UpdateComparePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDataProgress 更新指定任务数据加工规则

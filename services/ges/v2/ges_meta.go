@@ -138,6 +138,10 @@ func GenReqDefForDeleteGraph2() *def.HttpRequestDef {
 		WithName("KeepBackup").
 		WithJsonTag("keep_backup").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeleteEip").
+		WithJsonTag("delete_eip").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

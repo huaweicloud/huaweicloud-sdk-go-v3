@@ -317,6 +317,18 @@ func (i *BatchValidateConnectionsInvoker) Invoke() (*model.BatchValidateConnecti
 	}
 }
 
+type CreateCompareResultFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCompareResultFileInvoker) Invoke() (*model.CreateCompareResultFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCompareResultFileResponse), nil
+	}
+}
+
 type CreateCompareTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -341,6 +353,18 @@ func (i *CreateDataLevelTableCompareJobInvoker) Invoke() (*model.CreateDataLevel
 	}
 }
 
+type CreateObjectLevelCompareJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateObjectLevelCompareJobInvoker) Invoke() (*model.CreateObjectLevelCompareJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateObjectLevelCompareJobResponse), nil
+	}
+}
+
 type DeleteCompareJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -350,6 +374,18 @@ func (i *DeleteCompareJobInvoker) Invoke() (*model.DeleteCompareJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteCompareJobResponse), nil
+	}
+}
+
+type DownloadCompareResultFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadCompareResultFileInvoker) Invoke() (*model.DownloadCompareResultFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadCompareResultFileResponse), nil
 	}
 }
 
@@ -401,6 +437,18 @@ func (i *ListContentCompareDetailInvoker) Invoke() (*model.ListContentCompareDet
 	}
 }
 
+type ListContentCompareDifferenceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListContentCompareDifferenceInvoker) Invoke() (*model.ListContentCompareDifferenceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListContentCompareDifferenceResponse), nil
+	}
+}
+
 type ListContentCompareOverviewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -446,6 +494,30 @@ func (i *ListDataLevelTableCompareJobsInvoker) Invoke() (*model.ListDataLevelTab
 		return nil, err
 	} else {
 		return result.(*model.ListDataLevelTableCompareJobsResponse), nil
+	}
+}
+
+type ListObejectLevelCompareDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListObejectLevelCompareDetailInvoker) Invoke() (*model.ListObejectLevelCompareDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListObejectLevelCompareDetailResponse), nil
+	}
+}
+
+type ListObejectLevelCompareOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListObejectLevelCompareOverviewInvoker) Invoke() (*model.ListObejectLevelCompareOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListObejectLevelCompareOverviewResponse), nil
 	}
 }
 

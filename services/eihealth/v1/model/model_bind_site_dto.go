@@ -8,6 +8,10 @@ import (
 
 // BindSiteDto 结合位点
 type BindSiteDto struct {
+
+	// 靶点名称
+	Name *string `json:"name,omitempty"`
+
 	Receptor *ReceptorDrugFile `json:"receptor"`
 
 	BoundingBox *BoundingBoxDto `json:"bounding_box,omitempty"`

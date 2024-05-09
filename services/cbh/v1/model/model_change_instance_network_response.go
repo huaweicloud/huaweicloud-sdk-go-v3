@@ -9,24 +9,18 @@ import (
 // ChangeInstanceNetworkResponse Response Object
 type ChangeInstanceNetworkResponse struct {
 
-	// 状态
-	Status *string `json:"status,omitempty"`
+	// 云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
+	Status *bool `json:"status,omitempty"`
 
-	// 安全组
-	SecurityGrpStatus *string `json:"security_grp_status,omitempty"`
+	// 云堡垒机实例安全组状态。 - true  正常 - false 失败
+	SecurityGrpStatus *bool `json:"security_grp_status,omitempty"`
 
-	// 防火墙状态
+	// 云堡垒机实例防火墙状态。 - true  正常 - false 失败
 	FirewallStatus *bool `json:"firewall_status,omitempty"`
 
-	// 公共EIP状态
+	// 云堡垒机实例公网IP状态。 - true  正常 - false 失败
 	PublicEipStatus *bool `json:"public_eip_status,omitempty"`
-
-	// 防火墙状态(兼容)
-	Nics *bool `json:"nics,omitempty"`
-
-	// 公共EIP状态(兼容)
-	PublicEipStatu *bool `json:"public_eip_statu,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	HttpStatusCode  int   `json:"-"`
 }
 
 func (o ChangeInstanceNetworkResponse) String() string {

@@ -148,3 +148,15 @@ func (i *ShowStoragePoolInvoker) Invoke() (*model.ShowStoragePoolResponse, error
 		return result.(*model.ShowStoragePoolResponse), nil
 	}
 }
+
+type ListSupportedZonesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupportedZonesInvoker) Invoke() (*model.ListSupportedZonesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupportedZonesResponse), nil
+	}
+}

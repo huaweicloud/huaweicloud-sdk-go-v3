@@ -24,7 +24,7 @@ type ShowComparePolicyResponse struct {
 	// 对比结束时间。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+	// 对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
 	CompareType *[]string `json:"compare_type,omitempty"`
 
 	// 下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z

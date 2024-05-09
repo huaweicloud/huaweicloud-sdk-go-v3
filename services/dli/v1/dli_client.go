@@ -1908,6 +1908,27 @@ func (c *DliClient) DeleteFlinkSqlJobTemplateInvoker(request *model.DeleteFlinkS
 	return &DeleteFlinkSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteFlinkJobSavepoint 触发Flink作业保存点
+//
+// 触发Flink作业保存点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ExecuteFlinkJobSavepoint(request *model.ExecuteFlinkJobSavepointRequest) (*model.ExecuteFlinkJobSavepointResponse, error) {
+	requestDef := GenReqDefForExecuteFlinkJobSavepoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteFlinkJobSavepointResponse), nil
+	}
+}
+
+// ExecuteFlinkJobSavepointInvoker 触发Flink作业保存点
+func (c *DliClient) ExecuteFlinkJobSavepointInvoker(request *model.ExecuteFlinkJobSavepointRequest) *ExecuteFlinkJobSavepointInvoker {
+	requestDef := GenReqDefForExecuteFlinkJobSavepoint()
+	return &ExecuteFlinkJobSavepointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportFlinkJobs flink作业导出
 //
 // 通过POST方式，导出flink作业，请求体为JSON格式。
@@ -1927,6 +1948,27 @@ func (c *DliClient) ExportFlinkJobs(request *model.ExportFlinkJobsRequest) (*mod
 func (c *DliClient) ExportFlinkJobsInvoker(request *model.ExportFlinkJobsRequest) *ExportFlinkJobsInvoker {
 	requestDef := GenReqDefForExportFlinkJobs()
 	return &ExportFlinkJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportFlinkJobSavepoint 导入Flink作业保存点
+//
+// 导入Flink作业保存点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ImportFlinkJobSavepoint(request *model.ImportFlinkJobSavepointRequest) (*model.ImportFlinkJobSavepointResponse, error) {
+	requestDef := GenReqDefForImportFlinkJobSavepoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportFlinkJobSavepointResponse), nil
+	}
+}
+
+// ImportFlinkJobSavepointInvoker 导入Flink作业保存点
+func (c *DliClient) ImportFlinkJobSavepointInvoker(request *model.ImportFlinkJobSavepointRequest) *ImportFlinkJobSavepointInvoker {
+	requestDef := GenReqDefForImportFlinkJobSavepoint()
+	return &ImportFlinkJobSavepointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ImportFlinkJobs flink作业导入

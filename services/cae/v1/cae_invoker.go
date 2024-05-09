@@ -520,3 +520,39 @@ func (i *ListVolumesInvoker) Invoke() (*model.ListVolumesResponse, error) {
 		return result.(*model.ListVolumesResponse), nil
 	}
 }
+
+type CreateVpcEgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVpcEgressInvoker) Invoke() (*model.CreateVpcEgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVpcEgressResponse), nil
+	}
+}
+
+type DeleteVpcEgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpcEgressInvoker) Invoke() (*model.DeleteVpcEgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVpcEgressResponse), nil
+	}
+}
+
+type ListVpcEgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVpcEgressInvoker) Invoke() (*model.ListVpcEgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVpcEgressResponse), nil
+	}
+}

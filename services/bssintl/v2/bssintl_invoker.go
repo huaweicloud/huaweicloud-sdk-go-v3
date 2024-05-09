@@ -77,6 +77,18 @@ func (i *CheckUserIdentityInvoker) Invoke() (*model.CheckUserIdentityResponse, e
 	}
 }
 
+type CreateEnterpriseProjectAuthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEnterpriseProjectAuthInvoker) Invoke() (*model.CreateEnterpriseProjectAuthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEnterpriseProjectAuthResponse), nil
+	}
+}
+
 type CreateEnterpriseRealnameAuthenticationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +398,18 @@ func (i *ListServiceTypesInvoker) Invoke() (*model.ListServiceTypesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListServiceTypesResponse), nil
+	}
+}
+
+type ListSubCustomerBudgetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubCustomerBudgetInvoker) Invoke() (*model.ListSubCustomerBudgetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubCustomerBudgetResponse), nil
 	}
 }
 

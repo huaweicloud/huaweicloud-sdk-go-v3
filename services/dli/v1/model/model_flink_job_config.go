@@ -31,7 +31,7 @@ type FlinkJobConfig struct {
 	EdgeGroupIds *[]string `json:"edge_group_ids,omitempty"`
 
 	// 父作业ID。
-	RootId *int32 `json:"root_id,omitempty"`
+	RootId *int64 `json:"root_id,omitempty"`
 
 	// 管理单元CU数。默认为1。
 	ManagerCuNumber *int32 `json:"manager_cu_number,omitempty"`

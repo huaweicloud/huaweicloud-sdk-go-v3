@@ -8,8 +8,8 @@ import (
 
 // BatchStopFlinkJobsResponse Response Object
 type BatchStopFlinkJobsResponse struct {
-	Body           *[]SuccessResponse `json:"body,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Body           *[]FlinkSuccessResponse `json:"body,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o BatchStopFlinkJobsResponse) String() string {

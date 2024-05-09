@@ -370,6 +370,27 @@ func (c *EcsClient) ChangeServerOsWithoutCloudInitInvoker(request *model.ChangeS
 	return &ChangeServerOsWithoutCloudInitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeVpc 云服务器切换虚拟私有云
+//
+// 云服务器切换虚拟私有云。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ChangeVpc(request *model.ChangeVpcRequest) (*model.ChangeVpcResponse, error) {
+	requestDef := GenReqDefForChangeVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeVpcResponse), nil
+	}
+}
+
+// ChangeVpcInvoker 云服务器切换虚拟私有云
+func (c *EcsClient) ChangeVpcInvoker(request *model.ChangeVpcRequest) *ChangeVpcInvoker {
+	requestDef := GenReqDefForChangeVpc()
+	return &ChangeVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePostPaidServers 创建云服务器(按需)
 //
 // 创建一台或多台[按需付费](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)方式的云服务器。

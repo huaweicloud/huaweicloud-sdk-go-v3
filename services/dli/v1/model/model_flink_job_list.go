@@ -10,7 +10,7 @@ import (
 type FlinkJobList struct {
 
 	// 作业查询结果条数。
-	TotalCount *int32 `json:"total_count,omitempty"`
+	TotalCount *int64 `json:"total_count,omitempty"`
 
 	// 作业信息
 	Jobs *[]FlinkJob `json:"jobs,omitempty"`

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -37,6 +40,9 @@ type UpdateSmartChatRoomResponse struct {
 
 	ChatSubtitleConfig *ChatSubtitleConfig `json:"chat_subtitle_config,omitempty"`
 
+	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+	ChatVideoType *UpdateSmartChatRoomResponseChatVideoType `json:"chat_video_type,omitempty"`
+
 	// 对话ID。
 	RoomId *string `json:"room_id,omitempty"`
 
@@ -60,4 +66,55 @@ func (o UpdateSmartChatRoomResponse) String() string {
 	}
 
 	return strings.Join([]string{"UpdateSmartChatRoomResponse", string(data)}, " ")
+}
+
+type UpdateSmartChatRoomResponseChatVideoType struct {
+	value string
+}
+
+type UpdateSmartChatRoomResponseChatVideoTypeEnum struct {
+	COMPUTER UpdateSmartChatRoomResponseChatVideoType
+	MOBILE   UpdateSmartChatRoomResponseChatVideoType
+	HUB      UpdateSmartChatRoomResponseChatVideoType
+}
+
+func GetUpdateSmartChatRoomResponseChatVideoTypeEnum() UpdateSmartChatRoomResponseChatVideoTypeEnum {
+	return UpdateSmartChatRoomResponseChatVideoTypeEnum{
+		COMPUTER: UpdateSmartChatRoomResponseChatVideoType{
+			value: "COMPUTER",
+		},
+		MOBILE: UpdateSmartChatRoomResponseChatVideoType{
+			value: "MOBILE",
+		},
+		HUB: UpdateSmartChatRoomResponseChatVideoType{
+			value: "HUB",
+		},
+	}
+}
+
+func (c UpdateSmartChatRoomResponseChatVideoType) Value() string {
+	return c.value
+}
+
+func (c UpdateSmartChatRoomResponseChatVideoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateSmartChatRoomResponseChatVideoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

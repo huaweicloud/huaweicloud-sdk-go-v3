@@ -10,7 +10,7 @@ import (
 type DeleteInstanceRequest struct {
 
 	// 删除故障云堡垒机实例id。
-	InstanceId float32 `json:"instance_id,omitempty"`
+	InstanceId float32 `json:"instance_id"`
 }
 
 func (o DeleteInstanceRequest) String() string {

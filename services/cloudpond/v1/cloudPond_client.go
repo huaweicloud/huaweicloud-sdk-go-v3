@@ -272,3 +272,25 @@ func (c *CloudPondClient) ShowStoragePoolInvoker(request *model.ShowStoragePoolR
 	requestDef := GenReqDefForShowStoragePool()
 	return &ShowStoragePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ListSupportedZones 查询支持的地区列表
+//
+// 查询支持智能边缘小站接入的华为云地区列表。
+// - 该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ies:zone:list
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudPondClient) ListSupportedZones(request *model.ListSupportedZonesRequest) (*model.ListSupportedZonesResponse, error) {
+	requestDef := GenReqDefForListSupportedZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupportedZonesResponse), nil
+	}
+}
+
+// ListSupportedZonesInvoker 查询支持的地区列表
+func (c *CloudPondClient) ListSupportedZonesInvoker(request *model.ListSupportedZonesRequest) *ListSupportedZonesInvoker {
+	requestDef := GenReqDefForListSupportedZones()
+	return &ListSupportedZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

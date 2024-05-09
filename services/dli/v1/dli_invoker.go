@@ -1071,6 +1071,18 @@ func (i *DeleteFlinkSqlJobTemplateInvoker) Invoke() (*model.DeleteFlinkSqlJobTem
 	}
 }
 
+type ExecuteFlinkJobSavepointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteFlinkJobSavepointInvoker) Invoke() (*model.ExecuteFlinkJobSavepointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteFlinkJobSavepointResponse), nil
+	}
+}
+
 type ExportFlinkJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1080,6 +1092,18 @@ func (i *ExportFlinkJobsInvoker) Invoke() (*model.ExportFlinkJobsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ExportFlinkJobsResponse), nil
+	}
+}
+
+type ImportFlinkJobSavepointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportFlinkJobSavepointInvoker) Invoke() (*model.ImportFlinkJobSavepointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportFlinkJobSavepointResponse), nil
 	}
 }
 

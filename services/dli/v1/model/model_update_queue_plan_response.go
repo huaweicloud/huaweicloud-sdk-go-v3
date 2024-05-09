@@ -13,7 +13,7 @@ type UpdateQueuePlanResponse struct {
 	QueueName *string `json:"queue_name,omitempty"`
 
 	// 扩缩容计划的ID编号
-	PlanId *string `json:"plan_id,omitempty"`
+	PlanId *int64 `json:"plan_id,omitempty"`
 
 	// 请求执行是否成功。“true”表示请求执行成功。
 	IsSuccess *bool `json:"is_success,omitempty"`

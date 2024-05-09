@@ -18,7 +18,7 @@ type ContentCompareOverviewInfo struct {
 	// 目标库库名。
 	TargetDb *string `json:"target_db,omitempty"`
 
-	// 对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+	// 对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
 	Status *ContentCompareOverviewInfoStatus `json:"status,omitempty"`
 
 	// 对比结果。
@@ -46,6 +46,8 @@ type ContentCompareOverviewInfoStatusEnum struct {
 	FAILED_TO_COMPARE      ContentCompareOverviewInfoStatus
 	TARGET_DB_NOT_EXIST    ContentCompareOverviewInfoStatus
 	CAN_NOT_COMPARE        ContentCompareOverviewInfoStatus
+	WAIT_FOR_COMPARE       ContentCompareOverviewInfoStatus
+	CANCELED               ContentCompareOverviewInfoStatus
 }
 
 func GetContentCompareOverviewInfoStatusEnum() ContentCompareOverviewInfoStatusEnum {
@@ -70,6 +72,12 @@ func GetContentCompareOverviewInfoStatusEnum() ContentCompareOverviewInfoStatusE
 		},
 		CAN_NOT_COMPARE: ContentCompareOverviewInfoStatus{
 			value: "CAN_NOT_COMPARE",
+		},
+		WAIT_FOR_COMPARE: ContentCompareOverviewInfoStatus{
+			value: "WAIT_FOR_COMPARE",
+		},
+		CANCELED: ContentCompareOverviewInfoStatus{
+			value: "CANCELED",
 		},
 	}
 }

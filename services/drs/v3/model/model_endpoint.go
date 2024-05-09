@@ -80,6 +80,8 @@ type Endpoint struct {
 
 	// MongDB集群4.0及以上版本，当集群实例无法获取到分片节点的IP时，source_endpoint中需要填写，值为：Sharding4.0+。
 	ClusterMode *EndpointClusterMode `json:"cluster_mode,omitempty"`
+
+	KafkaSecurityConfig *KafkaSecurity `json:"kafka_security_config,omitempty"`
 }
 
 func (o Endpoint) String() string {

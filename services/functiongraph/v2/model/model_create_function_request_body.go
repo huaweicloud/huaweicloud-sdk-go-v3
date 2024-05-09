@@ -38,6 +38,9 @@ type CreateFunctionRequestBody struct {
 	// 函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
 	GpuMemory *int32 `json:"gpu_memory,omitempty"`
 
+	// 显卡类型。
+	GpuType *string `json:"gpu_type,omitempty"`
+
 	// 函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
 	CodeType CreateFunctionRequestBodyCodeType `json:"code_type"`
 

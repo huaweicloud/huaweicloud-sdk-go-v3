@@ -14,6 +14,9 @@ type DeleteGraph2Request struct {
 
 	// 删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
 	KeepBackup *bool `json:"keep_backup,omitempty"`
+
+	// 是否同时删除EIP。
+	DeleteEip *bool `json:"delete_eip,omitempty"`
 }
 
 func (o DeleteGraph2Request) String() string {

@@ -15,7 +15,7 @@ type SmartVideoLayerConfig struct {
 	// 视频封面文件的URL。
 	VideoCoverUrl *string `json:"video_cover_url,omitempty"`
 
-	// 视频显示时长。单位s * 0：表示一直显示。
+	// 视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
 	DisplayDuration *int32 `json:"display_duration,omitempty"`
 }
 

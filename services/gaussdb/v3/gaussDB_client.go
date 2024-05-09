@@ -2436,6 +2436,174 @@ func (c *GaussDBClient) UpgradeGaussMySqlInstanceDatabaseInvoker(request *model.
 	return &UpgradeGaussMySqlInstanceDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckDataBaseConfig HTAP数据同步库配置校验
+//
+// HTAP数据同步库配置校验。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CheckDataBaseConfig(request *model.CheckDataBaseConfigRequest) (*model.CheckDataBaseConfigResponse, error) {
+	requestDef := GenReqDefForCheckDataBaseConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckDataBaseConfigResponse), nil
+	}
+}
+
+// CheckDataBaseConfigInvoker HTAP数据同步库配置校验
+func (c *GaussDBClient) CheckDataBaseConfigInvoker(request *model.CheckDataBaseConfigRequest) *CheckDataBaseConfigInvoker {
+	requestDef := GenReqDefForCheckDataBaseConfig()
+	return &CheckDataBaseConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckTableConfig HTAP数据同步表配置校验
+//
+// HTAP数据同步表配置校验。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CheckTableConfig(request *model.CheckTableConfigRequest) (*model.CheckTableConfigResponse, error) {
+	requestDef := GenReqDefForCheckTableConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckTableConfigResponse), nil
+	}
+}
+
+// CheckTableConfigInvoker HTAP数据同步表配置校验
+func (c *GaussDBClient) CheckTableConfigInvoker(request *model.CheckTableConfigRequest) *CheckTableConfigInvoker {
+	requestDef := GenReqDefForCheckTableConfig()
+	return &CheckTableConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateStarRocksDataReplication 创建StarRocks数据同步
+//
+// 创建StarRocks数据同步。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CreateStarRocksDataReplication(request *model.CreateStarRocksDataReplicationRequest) (*model.CreateStarRocksDataReplicationResponse, error) {
+	requestDef := GenReqDefForCreateStarRocksDataReplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStarRocksDataReplicationResponse), nil
+	}
+}
+
+// CreateStarRocksDataReplicationInvoker 创建StarRocks数据同步
+func (c *GaussDBClient) CreateStarRocksDataReplicationInvoker(request *model.CreateStarRocksDataReplicationRequest) *CreateStarRocksDataReplicationInvoker {
+	requestDef := GenReqDefForCreateStarRocksDataReplication()
+	return &CreateStarRocksDataReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteStarRocksDataReplication 删除StarRocks数据同步
+//
+// 删除StarRocks数据同步。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteStarRocksDataReplication(request *model.DeleteStarRocksDataReplicationRequest) (*model.DeleteStarRocksDataReplicationResponse, error) {
+	requestDef := GenReqDefForDeleteStarRocksDataReplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteStarRocksDataReplicationResponse), nil
+	}
+}
+
+// DeleteStarRocksDataReplicationInvoker 删除StarRocks数据同步
+func (c *GaussDBClient) DeleteStarRocksDataReplicationInvoker(request *model.DeleteStarRocksDataReplicationRequest) *DeleteStarRocksDataReplicationInvoker {
+	requestDef := GenReqDefForDeleteStarRocksDataReplication()
+	return &DeleteStarRocksDataReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStarRocksDataBases 查询StarRocks数据库
+//
+// 查询StarRocks数据库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListStarRocksDataBases(request *model.ListStarRocksDataBasesRequest) (*model.ListStarRocksDataBasesResponse, error) {
+	requestDef := GenReqDefForListStarRocksDataBases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStarRocksDataBasesResponse), nil
+	}
+}
+
+// ListStarRocksDataBasesInvoker 查询StarRocks数据库
+func (c *GaussDBClient) ListStarRocksDataBasesInvoker(request *model.ListStarRocksDataBasesRequest) *ListStarRocksDataBasesInvoker {
+	requestDef := GenReqDefForListStarRocksDataBases()
+	return &ListStarRocksDataBasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStarRocksDataReplicationConfig 查询StarRocks数据同步配置信息
+//
+// 查询StarRocks数据同步配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListStarRocksDataReplicationConfig(request *model.ListStarRocksDataReplicationConfigRequest) (*model.ListStarRocksDataReplicationConfigResponse, error) {
+	requestDef := GenReqDefForListStarRocksDataReplicationConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStarRocksDataReplicationConfigResponse), nil
+	}
+}
+
+// ListStarRocksDataReplicationConfigInvoker 查询StarRocks数据同步配置信息
+func (c *GaussDBClient) ListStarRocksDataReplicationConfigInvoker(request *model.ListStarRocksDataReplicationConfigRequest) *ListStarRocksDataReplicationConfigInvoker {
+	requestDef := GenReqDefForListStarRocksDataReplicationConfig()
+	return &ListStarRocksDataReplicationConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStarRocksDataReplications 查询StarRocks数据同步状态信息
+//
+// 查询StarRocks数据同步状态信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListStarRocksDataReplications(request *model.ListStarRocksDataReplicationsRequest) (*model.ListStarRocksDataReplicationsResponse, error) {
+	requestDef := GenReqDefForListStarRocksDataReplications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStarRocksDataReplicationsResponse), nil
+	}
+}
+
+// ListStarRocksDataReplicationsInvoker 查询StarRocks数据同步状态信息
+func (c *GaussDBClient) ListStarRocksDataReplicationsInvoker(request *model.ListStarRocksDataReplicationsRequest) *ListStarRocksDataReplicationsInvoker {
+	requestDef := GenReqDefForListStarRocksDataReplications()
+	return &ListStarRocksDataReplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListStarRocksDbParameters 查询StarRocks数据同步的库参数配置
+//
+// 查询StarRocks数据同步的库参数配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListStarRocksDbParameters(request *model.ListStarRocksDbParametersRequest) (*model.ListStarRocksDbParametersResponse, error) {
+	requestDef := GenReqDefForListStarRocksDbParameters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStarRocksDbParametersResponse), nil
+	}
+}
+
+// ListStarRocksDbParametersInvoker 查询StarRocks数据同步的库参数配置
+func (c *GaussDBClient) ListStarRocksDbParametersInvoker(request *model.ListStarRocksDbParametersRequest) *ListStarRocksDbParametersInvoker {
+	requestDef := GenReqDefForListStarRocksDbParameters()
+	return &ListStarRocksDbParametersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSqlFilterRule 删除SQL限流规则
 //
 // 删除SQL限流规则。

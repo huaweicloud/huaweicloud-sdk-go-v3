@@ -20,6 +20,8 @@ type TriggerProcess struct {
 
 	LayerConfig *SmartLayerConfig `json:"layer_config,omitempty"`
 
+	ExtraLayerConfig *SmartLayerConfig `json:"extra_layer_config,omitempty"`
+
 	// 回复话术集
 	ReplyTexts *[]string `json:"reply_texts,omitempty"`
 

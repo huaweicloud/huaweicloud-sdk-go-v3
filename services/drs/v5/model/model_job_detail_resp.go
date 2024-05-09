@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -83,6 +86,9 @@ type JobDetailResp struct {
 
 	// 多任务时，存在子任务绑定失败时，返回子任务的信息
 	Children *[]FailedToBindEipChildInfo `json:"children,omitempty"`
+
+	// 解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+	IsWritable *JobDetailRespIsWritable `json:"is_writable,omitempty"`
 }
 
 func (o JobDetailResp) String() string {
@@ -92,4 +98,51 @@ func (o JobDetailResp) String() string {
 	}
 
 	return strings.Join([]string{"JobDetailResp", string(data)}, " ")
+}
+
+type JobDetailRespIsWritable struct {
+	value string
+}
+
+type JobDetailRespIsWritableEnum struct {
+	PENDING JobDetailRespIsWritable
+	SUCCESS JobDetailRespIsWritable
+}
+
+func GetJobDetailRespIsWritableEnum() JobDetailRespIsWritableEnum {
+	return JobDetailRespIsWritableEnum{
+		PENDING: JobDetailRespIsWritable{
+			value: "pending",
+		},
+		SUCCESS: JobDetailRespIsWritable{
+			value: "success",
+		},
+	}
+}
+
+func (c JobDetailRespIsWritable) Value() string {
+	return c.value
+}
+
+func (c JobDetailRespIsWritable) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *JobDetailRespIsWritable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -921,3 +921,66 @@ func (c *CaeClient) ListVolumesInvoker(request *model.ListVolumesRequest) *ListV
 	requestDef := GenReqDefForListVolumes()
 	return &ListVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// CreateVpcEgress 创建CAE环境访问VPC配置
+//
+// 创建CAE环境访问VPC配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) CreateVpcEgress(request *model.CreateVpcEgressRequest) (*model.CreateVpcEgressResponse, error) {
+	requestDef := GenReqDefForCreateVpcEgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVpcEgressResponse), nil
+	}
+}
+
+// CreateVpcEgressInvoker 创建CAE环境访问VPC配置
+func (c *CaeClient) CreateVpcEgressInvoker(request *model.CreateVpcEgressRequest) *CreateVpcEgressInvoker {
+	requestDef := GenReqDefForCreateVpcEgress()
+	return &CreateVpcEgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpcEgress 删除CAE环境访问VPC配置
+//
+// 删除CAE环境访问VPC配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) DeleteVpcEgress(request *model.DeleteVpcEgressRequest) (*model.DeleteVpcEgressResponse, error) {
+	requestDef := GenReqDefForDeleteVpcEgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpcEgressResponse), nil
+	}
+}
+
+// DeleteVpcEgressInvoker 删除CAE环境访问VPC配置
+func (c *CaeClient) DeleteVpcEgressInvoker(request *model.DeleteVpcEgressRequest) *DeleteVpcEgressInvoker {
+	requestDef := GenReqDefForDeleteVpcEgress()
+	return &DeleteVpcEgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpcEgress 获取CAE环境访问VPC配置
+//
+// 获取CAE环境访问VPC配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ListVpcEgress(request *model.ListVpcEgressRequest) (*model.ListVpcEgressResponse, error) {
+	requestDef := GenReqDefForListVpcEgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpcEgressResponse), nil
+	}
+}
+
+// ListVpcEgressInvoker 获取CAE环境访问VPC配置
+func (c *CaeClient) ListVpcEgressInvoker(request *model.ListVpcEgressRequest) *ListVpcEgressInvoker {
+	requestDef := GenReqDefForListVpcEgress()
+	return &ListVpcEgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
