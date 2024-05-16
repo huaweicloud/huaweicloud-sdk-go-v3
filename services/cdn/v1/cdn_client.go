@@ -292,6 +292,7 @@ func (c *CdnClient) ShowDomainDetailInvoker(request *model.ShowDomainDetailReque
 	return &ShowDomainDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDomainFullConfig 查询域名配置接口
 //
 // 查询域名配置接口，
@@ -308,6 +309,7 @@ func (c *CdnClient) ShowDomainFullConfig(request *model.ShowDomainFullConfigRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowDomainFullConfigInvoker 查询域名配置接口
 func (c *CdnClient) ShowDomainFullConfigInvoker(request *model.ShowDomainFullConfigRequest) *ShowDomainFullConfigInvoker {
 	requestDef := GenReqDefForShowDomainFullConfig()
@@ -758,6 +760,7 @@ func (c *CdnClient) UpdateCacheRulesInvoker(request *model.UpdateCacheRulesReque
 	return &UpdateCacheRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateDomainFullConfig 修改域名全量配置接口
 //
 // 修改域名配置接口，
@@ -774,6 +777,7 @@ func (c *CdnClient) UpdateDomainFullConfig(request *model.UpdateDomainFullConfig
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateDomainFullConfigInvoker 修改域名全量配置接口
 func (c *CdnClient) UpdateDomainFullConfigInvoker(request *model.UpdateDomainFullConfigRequest) *UpdateDomainFullConfigInvoker {
 	requestDef := GenReqDefForUpdateDomainFullConfig()

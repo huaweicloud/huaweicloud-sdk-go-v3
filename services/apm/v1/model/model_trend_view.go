@@ -13,7 +13,7 @@ import (
 type TrendView struct {
 
 	// 视图类型。
-	ViewType TrendViewViewType `json:"view_type"`
+	ViewType *TrendViewViewType `json:"view_type,omitempty"`
 
 	// 采集器名称。
 	CollectorName string `json:"collector_name"`

@@ -8,8 +8,10 @@ import (
 
 // RecognizeHealthCodeResponse Response Object
 type RecognizeHealthCodeResponse struct {
-	Result         *HealthCodeResult `json:"result,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Result *HealthCodeResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeHealthCodeResponse) String() string {

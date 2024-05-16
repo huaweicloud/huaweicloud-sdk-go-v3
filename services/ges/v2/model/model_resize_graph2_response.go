@@ -9,7 +9,7 @@ import (
 // ResizeGraph2Response Response Object
 type ResizeGraph2Response struct {
 
-	// 扩容图任务ID。请求失败时字段为空。
+	// 变更图规格任务ID。请求失败时字段为空。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

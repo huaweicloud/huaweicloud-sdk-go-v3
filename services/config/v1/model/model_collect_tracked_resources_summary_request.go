@@ -26,6 +26,9 @@ type CollectTrackedResourcesSummaryRequest struct {
 
 	// 标签列表
 	Tags *[]string `json:"tags,omitempty"`
+
+	// 是否查询已删除的资源。默认为false，不查询已删除的资源
+	ResourceDeleted *bool `json:"resource_deleted,omitempty"`
 }
 
 func (o CollectTrackedResourcesSummaryRequest) String() string {

@@ -5,6 +5,102 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsinspector/v3/model"
 )
 
+type AddGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddGroupInvoker) Invoke() (*model.AddGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddGroupResponse), nil
+	}
+}
+
+type DeleteGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) Invoke() (*model.DeleteGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGroupResponse), nil
+	}
+}
+
+type ListGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGroupsInvoker) Invoke() (*model.ListGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGroupsResponse), nil
+	}
+}
+
+type ListHostResultsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostResultsInvoker) Invoke() (*model.ListHostResultsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostResultsResponse), nil
+	}
+}
+
+type BatchStartHostTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchStartHostTasksInvoker) Invoke() (*model.BatchStartHostTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchStartHostTasksResponse), nil
+	}
+}
+
+type BatchCreateHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateHostsInvoker) Invoke() (*model.BatchCreateHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateHostsResponse), nil
+	}
+}
+
+type DeleteHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHostInvoker) Invoke() (*model.DeleteHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHostResponse), nil
+	}
+}
+
+type ListHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostsResponse), nil
+	}
+}
+
 type DownloadTaskReportInvoker struct {
 	*invoker.BaseInvoker
 }

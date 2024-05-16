@@ -166,6 +166,27 @@ func (c *IoTEdgeClient) ExecuteDeviceControlsSetInvoker(request *model.ExecuteDe
 	return &ExecuteDeviceControlsSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetDeviceControlDefaultValues 设备控制默认值
+//
+// 设备控制默认值
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) SetDeviceControlDefaultValues(request *model.SetDeviceControlDefaultValuesRequest) (*model.SetDeviceControlDefaultValuesResponse, error) {
+	requestDef := GenReqDefForSetDeviceControlDefaultValues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetDeviceControlDefaultValuesResponse), nil
+	}
+}
+
+// SetDeviceControlDefaultValuesInvoker 设备控制默认值
+func (c *IoTEdgeClient) SetDeviceControlDefaultValuesInvoker(request *model.SetDeviceControlDefaultValuesRequest) *SetDeviceControlDefaultValuesInvoker {
+	requestDef := GenReqDefForSetDeviceControlDefaultValues()
+	return &SetDeviceControlDefaultValuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddDevice 添加设备
 //
 // 添加设备

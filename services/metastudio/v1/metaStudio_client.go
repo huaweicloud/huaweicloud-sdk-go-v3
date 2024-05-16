@@ -757,6 +757,27 @@ func (c *MetaStudioClient) CreateFileInvoker(request *model.CreateFileRequest) *
 	return &CreateFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLargeFile 创建大文件
+//
+// 该接口用于创建大文件（超过5G），获取分段上传URL。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateLargeFile(request *model.CreateLargeFileRequest) (*model.CreateLargeFileResponse, error) {
+	requestDef := GenReqDefForCreateLargeFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLargeFileResponse), nil
+	}
+}
+
+// CreateLargeFileInvoker 创建大文件
+func (c *MetaStudioClient) CreateLargeFileInvoker(request *model.CreateLargeFileRequest) *CreateLargeFileInvoker {
+	requestDef := GenReqDefForCreateLargeFile()
+	return &CreateLargeFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteFile 删除文件
 //
 // 该接口用于删除媒体资产库中指定的文件。
@@ -776,6 +797,510 @@ func (c *MetaStudioClient) DeleteFile(request *model.DeleteFileRequest) (*model.
 func (c *MetaStudioClient) DeleteFileInvoker(request *model.DeleteFileRequest) *DeleteFileInvoker {
 	requestDef := GenReqDefForDeleteFile()
 	return &DeleteFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHotQuestion 创建热点问题
+//
+// 该接口用于创建热点问题。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateHotQuestion(request *model.CreateHotQuestionRequest) (*model.CreateHotQuestionResponse, error) {
+	requestDef := GenReqDefForCreateHotQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHotQuestionResponse), nil
+	}
+}
+
+// CreateHotQuestionInvoker 创建热点问题
+func (c *MetaStudioClient) CreateHotQuestionInvoker(request *model.CreateHotQuestionRequest) *CreateHotQuestionInvoker {
+	requestDef := GenReqDefForCreateHotQuestion()
+	return &CreateHotQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHotQuestion 删除热点问题
+//
+// 该接口用于删除热点问题。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteHotQuestion(request *model.DeleteHotQuestionRequest) (*model.DeleteHotQuestionResponse, error) {
+	requestDef := GenReqDefForDeleteHotQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHotQuestionResponse), nil
+	}
+}
+
+// DeleteHotQuestionInvoker 删除热点问题
+func (c *MetaStudioClient) DeleteHotQuestionInvoker(request *model.DeleteHotQuestionRequest) *DeleteHotQuestionInvoker {
+	requestDef := GenReqDefForDeleteHotQuestion()
+	return &DeleteHotQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHotQuestion 查询热点问题列表
+//
+// 该接口用于查询热点问题列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListHotQuestion(request *model.ListHotQuestionRequest) (*model.ListHotQuestionResponse, error) {
+	requestDef := GenReqDefForListHotQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHotQuestionResponse), nil
+	}
+}
+
+// ListHotQuestionInvoker 查询热点问题列表
+func (c *MetaStudioClient) ListHotQuestionInvoker(request *model.ListHotQuestionRequest) *ListHotQuestionInvoker {
+	requestDef := GenReqDefForListHotQuestion()
+	return &ListHotQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHotQuestion 查询热点问题详情
+//
+// 该接口用于查询热点问题详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowHotQuestion(request *model.ShowHotQuestionRequest) (*model.ShowHotQuestionResponse, error) {
+	requestDef := GenReqDefForShowHotQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHotQuestionResponse), nil
+	}
+}
+
+// ShowHotQuestionInvoker 查询热点问题详情
+func (c *MetaStudioClient) ShowHotQuestionInvoker(request *model.ShowHotQuestionRequest) *ShowHotQuestionInvoker {
+	requestDef := GenReqDefForShowHotQuestion()
+	return &ShowHotQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHotQuestion 修改热点问题
+//
+// 该接口用于修改热点问题。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateHotQuestion(request *model.UpdateHotQuestionRequest) (*model.UpdateHotQuestionResponse, error) {
+	requestDef := GenReqDefForUpdateHotQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHotQuestionResponse), nil
+	}
+}
+
+// UpdateHotQuestionInvoker 修改热点问题
+func (c *MetaStudioClient) UpdateHotQuestionInvoker(request *model.UpdateHotQuestionRequest) *UpdateHotQuestionInvoker {
+	requestDef := GenReqDefForUpdateHotQuestion()
+	return &UpdateHotQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIntentAndQuestion 创建知识库意图和问法
+//
+// 该接口用于创建知识库意图和问法。一个意图包含一个主题，一个答案，若干个问法等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateIntentAndQuestion(request *model.CreateIntentAndQuestionRequest) (*model.CreateIntentAndQuestionResponse, error) {
+	requestDef := GenReqDefForCreateIntentAndQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIntentAndQuestionResponse), nil
+	}
+}
+
+// CreateIntentAndQuestionInvoker 创建知识库意图和问法
+func (c *MetaStudioClient) CreateIntentAndQuestionInvoker(request *model.CreateIntentAndQuestionRequest) *CreateIntentAndQuestionInvoker {
+	requestDef := GenReqDefForCreateIntentAndQuestion()
+	return &CreateIntentAndQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKnowledgeIntent 创建知识库意图
+//
+// 该接口用于创建知识库意图。一个意图包含一个主题，一个答案，若干个问法等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateKnowledgeIntent(request *model.CreateKnowledgeIntentRequest) (*model.CreateKnowledgeIntentResponse, error) {
+	requestDef := GenReqDefForCreateKnowledgeIntent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKnowledgeIntentResponse), nil
+	}
+}
+
+// CreateKnowledgeIntentInvoker 创建知识库意图
+func (c *MetaStudioClient) CreateKnowledgeIntentInvoker(request *model.CreateKnowledgeIntentRequest) *CreateKnowledgeIntentInvoker {
+	requestDef := GenReqDefForCreateKnowledgeIntent()
+	return &CreateKnowledgeIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKnowledgeIntent 删除知识库意图
+//
+// 该接口用于删除知识库意图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteKnowledgeIntent(request *model.DeleteKnowledgeIntentRequest) (*model.DeleteKnowledgeIntentResponse, error) {
+	requestDef := GenReqDefForDeleteKnowledgeIntent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKnowledgeIntentResponse), nil
+	}
+}
+
+// DeleteKnowledgeIntentInvoker 删除知识库意图
+func (c *MetaStudioClient) DeleteKnowledgeIntentInvoker(request *model.DeleteKnowledgeIntentRequest) *DeleteKnowledgeIntentInvoker {
+	requestDef := GenReqDefForDeleteKnowledgeIntent()
+	return &DeleteKnowledgeIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKnowledgeIntent 查询知识库意图列表
+//
+// 该接口用于查询知识库意图列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListKnowledgeIntent(request *model.ListKnowledgeIntentRequest) (*model.ListKnowledgeIntentResponse, error) {
+	requestDef := GenReqDefForListKnowledgeIntent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKnowledgeIntentResponse), nil
+	}
+}
+
+// ListKnowledgeIntentInvoker 查询知识库意图列表
+func (c *MetaStudioClient) ListKnowledgeIntentInvoker(request *model.ListKnowledgeIntentRequest) *ListKnowledgeIntentInvoker {
+	requestDef := GenReqDefForListKnowledgeIntent()
+	return &ListKnowledgeIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKnowledgeIntent 查询知识库意图详情
+//
+// 该接口用于查询知识库意图详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowKnowledgeIntent(request *model.ShowKnowledgeIntentRequest) (*model.ShowKnowledgeIntentResponse, error) {
+	requestDef := GenReqDefForShowKnowledgeIntent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKnowledgeIntentResponse), nil
+	}
+}
+
+// ShowKnowledgeIntentInvoker 查询知识库意图详情
+func (c *MetaStudioClient) ShowKnowledgeIntentInvoker(request *model.ShowKnowledgeIntentRequest) *ShowKnowledgeIntentInvoker {
+	requestDef := GenReqDefForShowKnowledgeIntent()
+	return &ShowKnowledgeIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKnowledgeIntent 修改知识库意图
+//
+// 该接口用于修改知识库意图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateKnowledgeIntent(request *model.UpdateKnowledgeIntentRequest) (*model.UpdateKnowledgeIntentResponse, error) {
+	requestDef := GenReqDefForUpdateKnowledgeIntent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKnowledgeIntentResponse), nil
+	}
+}
+
+// UpdateKnowledgeIntentInvoker 修改知识库意图
+func (c *MetaStudioClient) UpdateKnowledgeIntentInvoker(request *model.UpdateKnowledgeIntentRequest) *UpdateKnowledgeIntentInvoker {
+	requestDef := GenReqDefForUpdateKnowledgeIntent()
+	return &UpdateKnowledgeIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBatchKnowledgeQuestion 批量创建知识库问法
+//
+// 该接口用于批量创建知识库问法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateBatchKnowledgeQuestion(request *model.CreateBatchKnowledgeQuestionRequest) (*model.CreateBatchKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForCreateBatchKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBatchKnowledgeQuestionResponse), nil
+	}
+}
+
+// CreateBatchKnowledgeQuestionInvoker 批量创建知识库问法
+func (c *MetaStudioClient) CreateBatchKnowledgeQuestionInvoker(request *model.CreateBatchKnowledgeQuestionRequest) *CreateBatchKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForCreateBatchKnowledgeQuestion()
+	return &CreateBatchKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKnowledgeQuestion 创建知识库问法
+//
+// 该接口用于创建知识库问法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateKnowledgeQuestion(request *model.CreateKnowledgeQuestionRequest) (*model.CreateKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForCreateKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKnowledgeQuestionResponse), nil
+	}
+}
+
+// CreateKnowledgeQuestionInvoker 创建知识库问法
+func (c *MetaStudioClient) CreateKnowledgeQuestionInvoker(request *model.CreateKnowledgeQuestionRequest) *CreateKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForCreateKnowledgeQuestion()
+	return &CreateKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKnowledgeQuestion 删除知识库问法
+//
+// 该接口用于删除知识库问法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteKnowledgeQuestion(request *model.DeleteKnowledgeQuestionRequest) (*model.DeleteKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForDeleteKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKnowledgeQuestionResponse), nil
+	}
+}
+
+// DeleteKnowledgeQuestionInvoker 删除知识库问法
+func (c *MetaStudioClient) DeleteKnowledgeQuestionInvoker(request *model.DeleteKnowledgeQuestionRequest) *DeleteKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForDeleteKnowledgeQuestion()
+	return &DeleteKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKnowledgeQuestion 查询知识库问法列表
+//
+// 该接口用于查询知识库问法列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListKnowledgeQuestion(request *model.ListKnowledgeQuestionRequest) (*model.ListKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForListKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKnowledgeQuestionResponse), nil
+	}
+}
+
+// ListKnowledgeQuestionInvoker 查询知识库问法列表
+func (c *MetaStudioClient) ListKnowledgeQuestionInvoker(request *model.ListKnowledgeQuestionRequest) *ListKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForListKnowledgeQuestion()
+	return &ListKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKnowledgeQuestion 查询知识库问法详情
+//
+// 该接口用于查询知识库问法详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowKnowledgeQuestion(request *model.ShowKnowledgeQuestionRequest) (*model.ShowKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForShowKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKnowledgeQuestionResponse), nil
+	}
+}
+
+// ShowKnowledgeQuestionInvoker 查询知识库问法详情
+func (c *MetaStudioClient) ShowKnowledgeQuestionInvoker(request *model.ShowKnowledgeQuestionRequest) *ShowKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForShowKnowledgeQuestion()
+	return &ShowKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBatchKnowledgeQuestion 批量修改知识库问法
+//
+// 该接口用于批量修改知识库问法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateBatchKnowledgeQuestion(request *model.UpdateBatchKnowledgeQuestionRequest) (*model.UpdateBatchKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForUpdateBatchKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBatchKnowledgeQuestionResponse), nil
+	}
+}
+
+// UpdateBatchKnowledgeQuestionInvoker 批量修改知识库问法
+func (c *MetaStudioClient) UpdateBatchKnowledgeQuestionInvoker(request *model.UpdateBatchKnowledgeQuestionRequest) *UpdateBatchKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForUpdateBatchKnowledgeQuestion()
+	return &UpdateBatchKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKnowledgeQuestion 修改知识库问法
+//
+// 该接口用于修改知识库问法。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateKnowledgeQuestion(request *model.UpdateKnowledgeQuestionRequest) (*model.UpdateKnowledgeQuestionResponse, error) {
+	requestDef := GenReqDefForUpdateKnowledgeQuestion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKnowledgeQuestionResponse), nil
+	}
+}
+
+// UpdateKnowledgeQuestionInvoker 修改知识库问法
+func (c *MetaStudioClient) UpdateKnowledgeQuestionInvoker(request *model.UpdateKnowledgeQuestionRequest) *UpdateKnowledgeQuestionInvoker {
+	requestDef := GenReqDefForUpdateKnowledgeQuestion()
+	return &UpdateKnowledgeQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKnowledgeSkill 创建知识库技能
+//
+// 该接口用于创建知识库技能。一个技能用于特定场景的交互问答，包含若干个意图等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateKnowledgeSkill(request *model.CreateKnowledgeSkillRequest) (*model.CreateKnowledgeSkillResponse, error) {
+	requestDef := GenReqDefForCreateKnowledgeSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKnowledgeSkillResponse), nil
+	}
+}
+
+// CreateKnowledgeSkillInvoker 创建知识库技能
+func (c *MetaStudioClient) CreateKnowledgeSkillInvoker(request *model.CreateKnowledgeSkillRequest) *CreateKnowledgeSkillInvoker {
+	requestDef := GenReqDefForCreateKnowledgeSkill()
+	return &CreateKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKnowledgeSkill 删除知识库技能
+//
+// 该接口用于删除知识库技能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteKnowledgeSkill(request *model.DeleteKnowledgeSkillRequest) (*model.DeleteKnowledgeSkillResponse, error) {
+	requestDef := GenReqDefForDeleteKnowledgeSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKnowledgeSkillResponse), nil
+	}
+}
+
+// DeleteKnowledgeSkillInvoker 删除知识库技能
+func (c *MetaStudioClient) DeleteKnowledgeSkillInvoker(request *model.DeleteKnowledgeSkillRequest) *DeleteKnowledgeSkillInvoker {
+	requestDef := GenReqDefForDeleteKnowledgeSkill()
+	return &DeleteKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportKnowledgeSkill 导出知识库技能
+//
+// 该接口用于导出知识库技能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ExportKnowledgeSkill(request *model.ExportKnowledgeSkillRequest) (*model.ExportKnowledgeSkillResponse, error) {
+	requestDef := GenReqDefForExportKnowledgeSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportKnowledgeSkillResponse), nil
+	}
+}
+
+// ExportKnowledgeSkillInvoker 导出知识库技能
+func (c *MetaStudioClient) ExportKnowledgeSkillInvoker(request *model.ExportKnowledgeSkillRequest) *ExportKnowledgeSkillInvoker {
+	requestDef := GenReqDefForExportKnowledgeSkill()
+	return &ExportKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKnowledgeSkill 查询知识库技能列表
+//
+// 该接口用于查询知识库技能列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListKnowledgeSkill(request *model.ListKnowledgeSkillRequest) (*model.ListKnowledgeSkillResponse, error) {
+	requestDef := GenReqDefForListKnowledgeSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKnowledgeSkillResponse), nil
+	}
+}
+
+// ListKnowledgeSkillInvoker 查询知识库技能列表
+func (c *MetaStudioClient) ListKnowledgeSkillInvoker(request *model.ListKnowledgeSkillRequest) *ListKnowledgeSkillInvoker {
+	requestDef := GenReqDefForListKnowledgeSkill()
+	return &ListKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKnowledgeSkill 查询知识库技能详情
+//
+// 该接口用于查询知识库技能详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowKnowledgeSkill(request *model.ShowKnowledgeSkillRequest) (*model.ShowKnowledgeSkillResponse, error) {
+	requestDef := GenReqDefForShowKnowledgeSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKnowledgeSkillResponse), nil
+	}
+}
+
+// ShowKnowledgeSkillInvoker 查询知识库技能详情
+func (c *MetaStudioClient) ShowKnowledgeSkillInvoker(request *model.ShowKnowledgeSkillRequest) *ShowKnowledgeSkillInvoker {
+	requestDef := GenReqDefForShowKnowledgeSkill()
+	return &ShowKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKnowledgeSkill 修改知识库技能
+//
+// 该接口用于修改知识库技能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateKnowledgeSkill(request *model.UpdateKnowledgeSkillRequest) (*model.UpdateKnowledgeSkillResponse, error) {
+	requestDef := GenReqDefForUpdateKnowledgeSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKnowledgeSkillResponse), nil
+	}
+}
+
+// UpdateKnowledgeSkillInvoker 修改知识库技能
+func (c *MetaStudioClient) UpdateKnowledgeSkillInvoker(request *model.UpdateKnowledgeSkillRequest) *UpdateKnowledgeSkillInvoker {
+	requestDef := GenReqDefForUpdateKnowledgeSkill()
+	return &UpdateKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateOnceCode 创建一次性鉴权码
@@ -2223,4 +2748,151 @@ func (c *MetaStudioClient) UpdateVideoScript(request *model.UpdateVideoScriptReq
 func (c *MetaStudioClient) UpdateVideoScriptInvoker(request *model.UpdateVideoScriptRequest) *UpdateVideoScriptInvoker {
 	requestDef := GenReqDefForUpdateVideoScript()
 	return &UpdateVideoScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWelcomeSpeech 创建欢迎词
+//
+// 该接口用于创建欢迎词。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateWelcomeSpeech(request *model.CreateWelcomeSpeechRequest) (*model.CreateWelcomeSpeechResponse, error) {
+	requestDef := GenReqDefForCreateWelcomeSpeech()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWelcomeSpeechResponse), nil
+	}
+}
+
+// CreateWelcomeSpeechInvoker 创建欢迎词
+func (c *MetaStudioClient) CreateWelcomeSpeechInvoker(request *model.CreateWelcomeSpeechRequest) *CreateWelcomeSpeechInvoker {
+	requestDef := GenReqDefForCreateWelcomeSpeech()
+	return &CreateWelcomeSpeechInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWelcomeSpeech 删除欢迎词
+//
+// 该接口用于删除欢迎词。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteWelcomeSpeech(request *model.DeleteWelcomeSpeechRequest) (*model.DeleteWelcomeSpeechResponse, error) {
+	requestDef := GenReqDefForDeleteWelcomeSpeech()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWelcomeSpeechResponse), nil
+	}
+}
+
+// DeleteWelcomeSpeechInvoker 删除欢迎词
+func (c *MetaStudioClient) DeleteWelcomeSpeechInvoker(request *model.DeleteWelcomeSpeechRequest) *DeleteWelcomeSpeechInvoker {
+	requestDef := GenReqDefForDeleteWelcomeSpeech()
+	return &DeleteWelcomeSpeechInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWelcomeSpeech 查询欢迎词列表
+//
+// 该接口用于查询欢迎词列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListWelcomeSpeech(request *model.ListWelcomeSpeechRequest) (*model.ListWelcomeSpeechResponse, error) {
+	requestDef := GenReqDefForListWelcomeSpeech()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWelcomeSpeechResponse), nil
+	}
+}
+
+// ListWelcomeSpeechInvoker 查询欢迎词列表
+func (c *MetaStudioClient) ListWelcomeSpeechInvoker(request *model.ListWelcomeSpeechRequest) *ListWelcomeSpeechInvoker {
+	requestDef := GenReqDefForListWelcomeSpeech()
+	return &ListWelcomeSpeechInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWelcomeSpeech 查询欢迎词详情
+//
+// 该接口用于查询欢迎词详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowWelcomeSpeech(request *model.ShowWelcomeSpeechRequest) (*model.ShowWelcomeSpeechResponse, error) {
+	requestDef := GenReqDefForShowWelcomeSpeech()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWelcomeSpeechResponse), nil
+	}
+}
+
+// ShowWelcomeSpeechInvoker 查询欢迎词详情
+func (c *MetaStudioClient) ShowWelcomeSpeechInvoker(request *model.ShowWelcomeSpeechRequest) *ShowWelcomeSpeechInvoker {
+	requestDef := GenReqDefForShowWelcomeSpeech()
+	return &ShowWelcomeSpeechInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWelcomeSpeechSwitch 查询欢迎词功能开关
+//
+// 该接口用于查询欢迎词功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowWelcomeSpeechSwitch(request *model.ShowWelcomeSpeechSwitchRequest) (*model.ShowWelcomeSpeechSwitchResponse, error) {
+	requestDef := GenReqDefForShowWelcomeSpeechSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWelcomeSpeechSwitchResponse), nil
+	}
+}
+
+// ShowWelcomeSpeechSwitchInvoker 查询欢迎词功能开关
+func (c *MetaStudioClient) ShowWelcomeSpeechSwitchInvoker(request *model.ShowWelcomeSpeechSwitchRequest) *ShowWelcomeSpeechSwitchInvoker {
+	requestDef := GenReqDefForShowWelcomeSpeechSwitch()
+	return &ShowWelcomeSpeechSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWelcomeSpeech 修改欢迎词
+//
+// 该接口用于修改欢迎词。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateWelcomeSpeech(request *model.UpdateWelcomeSpeechRequest) (*model.UpdateWelcomeSpeechResponse, error) {
+	requestDef := GenReqDefForUpdateWelcomeSpeech()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWelcomeSpeechResponse), nil
+	}
+}
+
+// UpdateWelcomeSpeechInvoker 修改欢迎词
+func (c *MetaStudioClient) UpdateWelcomeSpeechInvoker(request *model.UpdateWelcomeSpeechRequest) *UpdateWelcomeSpeechInvoker {
+	requestDef := GenReqDefForUpdateWelcomeSpeech()
+	return &UpdateWelcomeSpeechInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWelcomeSpeechSwitch 修改欢迎词功能开关
+//
+// 该接口用于修改欢迎词功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateWelcomeSpeechSwitch(request *model.UpdateWelcomeSpeechSwitchRequest) (*model.UpdateWelcomeSpeechSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateWelcomeSpeechSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWelcomeSpeechSwitchResponse), nil
+	}
+}
+
+// UpdateWelcomeSpeechSwitchInvoker 修改欢迎词功能开关
+func (c *MetaStudioClient) UpdateWelcomeSpeechSwitchInvoker(request *model.UpdateWelcomeSpeechSwitchRequest) *UpdateWelcomeSpeechSwitchInvoker {
+	requestDef := GenReqDefForUpdateWelcomeSpeechSwitch()
+	return &UpdateWelcomeSpeechSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

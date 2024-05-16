@@ -8,8 +8,10 @@ import (
 
 // RecognizeVinResponse Response Object
 type RecognizeVinResponse struct {
-	Result         *VinResult `json:"result,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Result *VinResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeVinResponse) String() string {

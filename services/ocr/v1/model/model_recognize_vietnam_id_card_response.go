@@ -8,8 +8,10 @@ import (
 
 // RecognizeVietnamIdCardResponse Response Object
 type RecognizeVietnamIdCardResponse struct {
-	Result         *VietnamIdCardResult `json:"result,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	Result *VietnamIdCardResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeVietnamIdCardResponse) String() string {

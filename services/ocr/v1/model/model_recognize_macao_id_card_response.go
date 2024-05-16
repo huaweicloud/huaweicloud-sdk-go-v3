@@ -8,8 +8,10 @@ import (
 
 // RecognizeMacaoIdCardResponse Response Object
 type RecognizeMacaoIdCardResponse struct {
-	Result         *MacaoIdCardResult `json:"result,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Result *MacaoIdCardResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeMacaoIdCardResponse) String() string {

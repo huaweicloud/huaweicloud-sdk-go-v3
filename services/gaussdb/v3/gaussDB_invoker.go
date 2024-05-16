@@ -1397,6 +1397,18 @@ func (i *CheckDataBaseConfigInvoker) Invoke() (*model.CheckDataBaseConfigRespons
 	}
 }
 
+type CheckStarRocksResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckStarRocksResourceInvoker) Invoke() (*model.CheckStarRocksResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckStarRocksResourceResponse), nil
+	}
+}
+
 type CheckTableConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1421,6 +1433,30 @@ func (i *CreateStarRocksDataReplicationInvoker) Invoke() (*model.CreateStarRocks
 	}
 }
 
+type CreateStarRocksDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStarRocksDatabaseUserInvoker) Invoke() (*model.CreateStarRocksDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStarRocksDatabaseUserResponse), nil
+	}
+}
+
+type CreateStarrocksInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStarrocksInstanceInvoker) Invoke() (*model.CreateStarrocksInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStarrocksInstanceResponse), nil
+	}
+}
+
 type DeleteStarRocksDataReplicationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1430,6 +1466,78 @@ func (i *DeleteStarRocksDataReplicationInvoker) Invoke() (*model.DeleteStarRocks
 		return nil, err
 	} else {
 		return result.(*model.DeleteStarRocksDataReplicationResponse), nil
+	}
+}
+
+type DeleteStarRocksDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStarRocksDatabaseUserInvoker) Invoke() (*model.DeleteStarRocksDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStarRocksDatabaseUserResponse), nil
+	}
+}
+
+type DeleteStarrocksInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStarrocksInstanceInvoker) Invoke() (*model.DeleteStarrocksInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStarrocksInstanceResponse), nil
+	}
+}
+
+type ListHtapDataStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHtapDataStoreInvoker) Invoke() (*model.ListHtapDataStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHtapDataStoreResponse), nil
+	}
+}
+
+type ListHtapFlavorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHtapFlavorInvoker) Invoke() (*model.ListHtapFlavorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHtapFlavorResponse), nil
+	}
+}
+
+type ListHtapInstanceInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHtapInstanceInfoInvoker) Invoke() (*model.ListHtapInstanceInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHtapInstanceInfoResponse), nil
+	}
+}
+
+type ListHtapStorageTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHtapStorageTypeInvoker) Invoke() (*model.ListHtapStorageTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHtapStorageTypeResponse), nil
 	}
 }
 
@@ -1478,6 +1586,78 @@ func (i *ListStarRocksDbParametersInvoker) Invoke() (*model.ListStarRocksDbParam
 		return nil, err
 	} else {
 		return result.(*model.ListStarRocksDbParametersResponse), nil
+	}
+}
+
+type ListStarrocksInstanceInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStarrocksInstanceInfoInvoker) Invoke() (*model.ListStarrocksInstanceInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStarrocksInstanceInfoResponse), nil
+	}
+}
+
+type RestartStarrocksInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartStarrocksInstanceInvoker) Invoke() (*model.RestartStarrocksInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartStarrocksInstanceResponse), nil
+	}
+}
+
+type RestartStarrocksNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartStarrocksNodeInvoker) Invoke() (*model.RestartStarrocksNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartStarrocksNodeResponse), nil
+	}
+}
+
+type ShowStarRocksDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStarRocksDatabaseUserInvoker) Invoke() (*model.ShowStarRocksDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStarRocksDatabaseUserResponse), nil
+	}
+}
+
+type UpdateStarRocksDatabaseUserPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStarRocksDatabaseUserPasswordInvoker) Invoke() (*model.UpdateStarRocksDatabaseUserPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStarRocksDatabaseUserPasswordResponse), nil
+	}
+}
+
+type UpdateStarRocksDatabaseUserPermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStarRocksDatabaseUserPermissionInvoker) Invoke() (*model.UpdateStarRocksDatabaseUserPermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStarRocksDatabaseUserPermissionResponse), nil
 	}
 }
 

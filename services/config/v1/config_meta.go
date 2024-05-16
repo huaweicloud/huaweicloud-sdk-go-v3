@@ -1608,6 +1608,10 @@ func GenReqDefForCollectTrackedResourcesSummary() *def.HttpRequestDef {
 		WithName("Tags").
 		WithJsonTag("tags").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceDeleted").
+		WithJsonTag("resource_deleted").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
@@ -1691,6 +1695,10 @@ func GenReqDefForCountTrackedResources() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tags").
 		WithJsonTag("tags").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceDeleted").
+		WithJsonTag("resource_deleted").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1854,6 +1862,10 @@ func GenReqDefForListTrackedResourceTags() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceDeleted").
+		WithJsonTag("resource_deleted").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1897,6 +1909,10 @@ func GenReqDefForListTrackedResources() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tags").
 		WithJsonTag("tags").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceDeleted").
+		WithJsonTag("resource_deleted").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

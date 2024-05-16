@@ -161,6 +161,18 @@ func (i *ExportSlowQueryLogsInvoker) Invoke() (*model.ExportSlowQueryLogsRespons
 	}
 }
 
+type ExportSlowSqlStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportSlowSqlStatisticsInvoker) Invoke() (*model.ExportSlowSqlStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportSlowSqlStatisticsResponse), nil
+	}
+}
+
 type ExportSlowSqlTemplatesDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -398,5 +410,17 @@ func (i *UpdateDbUserInvoker) Invoke() (*model.UpdateDbUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateDbUserResponse), nil
+	}
+}
+
+type UpdateSqlLimitRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSqlLimitRulesInvoker) Invoke() (*model.UpdateSqlLimitRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSqlLimitRulesResponse), nil
 	}
 }

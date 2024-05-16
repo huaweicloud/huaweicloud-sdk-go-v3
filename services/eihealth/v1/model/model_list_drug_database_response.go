@@ -13,7 +13,10 @@ type ListDrugDatabaseResponse struct {
 	Databases *[]DrugDatabaseDto `json:"databases,omitempty"`
 
 	// 数据库总数
-	Count          *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty"`
+
+	// 当前用户数据库总数
+	CurUserCount   *int32 `json:"cur_user_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

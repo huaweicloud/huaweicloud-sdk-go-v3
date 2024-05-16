@@ -8,8 +8,10 @@ import (
 
 // RecognizeSealResponse Response Object
 type RecognizeSealResponse struct {
-	Result         *SealResult `json:"result,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Result *SealResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeSealResponse) String() string {

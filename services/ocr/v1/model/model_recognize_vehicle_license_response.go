@@ -8,8 +8,10 @@ import (
 
 // RecognizeVehicleLicenseResponse Response Object
 type RecognizeVehicleLicenseResponse struct {
-	Result         *VehicleLicenseResult `json:"result,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	Result *VehicleLicenseResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeVehicleLicenseResponse) String() string {

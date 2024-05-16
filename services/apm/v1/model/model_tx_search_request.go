@@ -31,7 +31,7 @@ type TxSearchRequest struct {
 	PageNo int32 `json:"page_no"`
 
 	// 每页数量。
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 }
 
 func (o TxSearchRequest) String() string {

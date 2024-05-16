@@ -19,7 +19,7 @@ type AppSearchParam struct {
 	Page int32 `json:"page"`
 
 	// 每页条数。
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 关键字。
 	Keyword *string `json:"keyword,omitempty"`

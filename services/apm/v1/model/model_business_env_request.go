@@ -13,7 +13,7 @@ type BusinessEnvRequest struct {
 	BusinessId int64 `json:"business_id"`
 
 	// region英文名称。
-	Region string `json:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 开始时间。
 	StartTime *string `json:"start_time,omitempty"`

@@ -944,6 +944,27 @@ func (c *DataArtsStudioClient) CreateOrUpdateEntitiesInvoker(request *model.Crea
 	return &CreateOrUpdateEntitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSecurityAssignedQueue 分配队列资源给指定空间
+//
+// 分配队列资源给指定空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateSecurityAssignedQueue(request *model.CreateSecurityAssignedQueueRequest) (*model.CreateSecurityAssignedQueueResponse, error) {
+	requestDef := GenReqDefForCreateSecurityAssignedQueue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityAssignedQueueResponse), nil
+	}
+}
+
+// CreateSecurityAssignedQueueInvoker 分配队列资源给指定空间
+func (c *DataArtsStudioClient) CreateSecurityAssignedQueueInvoker(request *model.CreateSecurityAssignedQueueRequest) *CreateSecurityAssignedQueueInvoker {
+	requestDef := GenReqDefForCreateSecurityAssignedQueue()
+	return &CreateSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSecurityDataClassificationRule 创建识别规则
 //
 // 创建识别规则
@@ -1530,6 +1551,27 @@ func (c *DataArtsStudioClient) DeleteDirectory(request *model.DeleteDirectoryReq
 func (c *DataArtsStudioClient) DeleteDirectoryInvoker(request *model.DeleteDirectoryRequest) *DeleteDirectoryInvoker {
 	requestDef := GenReqDefForDeleteDirectory()
 	return &DeleteDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityAssignedQueue 删除当前空间下分配的队列资源
+//
+// 删除当前空间下分配的队列资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteSecurityAssignedQueue(request *model.DeleteSecurityAssignedQueueRequest) (*model.DeleteSecurityAssignedQueueResponse, error) {
+	requestDef := GenReqDefForDeleteSecurityAssignedQueue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecurityAssignedQueueResponse), nil
+	}
+}
+
+// DeleteSecurityAssignedQueueInvoker 删除当前空间下分配的队列资源
+func (c *DataArtsStudioClient) DeleteSecurityAssignedQueueInvoker(request *model.DeleteSecurityAssignedQueueRequest) *DeleteSecurityAssignedQueueInvoker {
+	requestDef := GenReqDefForDeleteSecurityAssignedQueue()
+	return &DeleteSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSecurityDataClassificationRule 删除识别规则
@@ -3043,6 +3085,27 @@ func (c *DataArtsStudioClient) ListSchemasInvoker(request *model.ListSchemasRequ
 	return &ListSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityAssignedQueues 查询当前空间下分配的队列资源
+//
+// 查询当前空间下分配的队列资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityAssignedQueues(request *model.ListSecurityAssignedQueuesRequest) (*model.ListSecurityAssignedQueuesResponse, error) {
+	requestDef := GenReqDefForListSecurityAssignedQueues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityAssignedQueuesResponse), nil
+	}
+}
+
+// ListSecurityAssignedQueuesInvoker 查询当前空间下分配的队列资源
+func (c *DataArtsStudioClient) ListSecurityAssignedQueuesInvoker(request *model.ListSecurityAssignedQueuesRequest) *ListSecurityAssignedQueuesInvoker {
+	requestDef := GenReqDefForListSecurityAssignedQueues()
+	return &ListSecurityAssignedQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityDataClassificationRuleGroups 查询规则组列表
 //
 // 查询规则组列表
@@ -3167,6 +3230,27 @@ func (c *DataArtsStudioClient) ListSecurityDlfDataWareHouses(request *model.List
 func (c *DataArtsStudioClient) ListSecurityDlfDataWareHousesInvoker(request *model.ListSecurityDlfDataWareHousesRequest) *ListSecurityDlfDataWareHousesInvoker {
 	requestDef := GenReqDefForListSecurityDlfDataWareHouses()
 	return &ListSecurityDlfDataWareHousesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityMemberSyncTasks 查询用户同步列表
+//
+// 查询用户同步列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityMemberSyncTasks(request *model.ListSecurityMemberSyncTasksRequest) (*model.ListSecurityMemberSyncTasksResponse, error) {
+	requestDef := GenReqDefForListSecurityMemberSyncTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityMemberSyncTasksResponse), nil
+	}
+}
+
+// ListSecurityMemberSyncTasksInvoker 查询用户同步列表
+func (c *DataArtsStudioClient) ListSecurityMemberSyncTasksInvoker(request *model.ListSecurityMemberSyncTasksRequest) *ListSecurityMemberSyncTasksInvoker {
+	requestDef := GenReqDefForListSecurityMemberSyncTasks()
+	return &ListSecurityMemberSyncTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSecurityPermissionSetMembers 查询权限集成员列表
@@ -5039,6 +5123,27 @@ func (c *DataArtsStudioClient) ShowSecurityDataClassificationRuleGroupInvoker(re
 	return &ShowSecurityDataClassificationRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecurityMemberSyncTask 查询单个用户同步任务
+//
+// 查询单个用户同步任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityMemberSyncTask(request *model.ShowSecurityMemberSyncTaskRequest) (*model.ShowSecurityMemberSyncTaskResponse, error) {
+	requestDef := GenReqDefForShowSecurityMemberSyncTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityMemberSyncTaskResponse), nil
+	}
+}
+
+// ShowSecurityMemberSyncTaskInvoker 查询单个用户同步任务
+func (c *DataArtsStudioClient) ShowSecurityMemberSyncTaskInvoker(request *model.ShowSecurityMemberSyncTaskRequest) *ShowSecurityMemberSyncTaskInvoker {
+	requestDef := GenReqDefForShowSecurityMemberSyncTask()
+	return &ShowSecurityMemberSyncTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecurityPermissionSet 查询权限集
 //
 // 查询权限集
@@ -5562,6 +5667,27 @@ func (c *DataArtsStudioClient) UpdateFactoryJobName(request *model.UpdateFactory
 func (c *DataArtsStudioClient) UpdateFactoryJobNameInvoker(request *model.UpdateFactoryJobNameRequest) *UpdateFactoryJobNameInvoker {
 	requestDef := GenReqDefForUpdateFactoryJobName()
 	return &UpdateFactoryJobNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityAssignedQueue 修改当前空间下分配的队列资源
+//
+// 修改当前空间下分配的队列资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityAssignedQueue(request *model.UpdateSecurityAssignedQueueRequest) (*model.UpdateSecurityAssignedQueueResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityAssignedQueue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityAssignedQueueResponse), nil
+	}
+}
+
+// UpdateSecurityAssignedQueueInvoker 修改当前空间下分配的队列资源
+func (c *DataArtsStudioClient) UpdateSecurityAssignedQueueInvoker(request *model.UpdateSecurityAssignedQueueRequest) *UpdateSecurityAssignedQueueInvoker {
+	requestDef := GenReqDefForUpdateSecurityAssignedQueue()
+	return &UpdateSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityDataClassificationRule 修改识别规则接口

@@ -9,7 +9,8 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://rms.myhuaweicloud.com")
+		"https://rms.myhuaweicloud.com",
+		"https://rms.myhuaweicloud.cn")
 )
 
 var staticFields = map[string]*region.Region{

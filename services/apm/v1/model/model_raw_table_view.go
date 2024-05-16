@@ -13,7 +13,7 @@ import (
 type RawTableView struct {
 
 	// 视图类型。
-	ViewType RawTableViewViewType `json:"view_type"`
+	ViewType *RawTableViewViewType `json:"view_type,omitempty"`
 
 	// 采集器名称。
 	CollectorName string `json:"collector_name"`

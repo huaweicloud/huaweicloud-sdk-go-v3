@@ -8,8 +8,10 @@ import (
 
 // RecognizeFlightItineraryResponse Response Object
 type RecognizeFlightItineraryResponse struct {
-	Result         *FlightItineraryResult `json:"result,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Result *FlightItineraryResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeFlightItineraryResponse) String() string {

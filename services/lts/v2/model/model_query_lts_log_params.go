@@ -30,6 +30,9 @@ type QueryLtsLogParams struct {
 	// 日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
 	LineNum *string `json:"line_num,omitempty"`
 
+	// 若已开启自定义时间功能，需要使用该字段进行分页查询。
+	Time *string `json:"__time__,omitempty"`
+
 	// 顺序或者倒序查询, 默认为false(顺序查询)
 	IsDesc *bool `json:"is_desc,omitempty"`
 

@@ -8,8 +8,10 @@ import (
 
 // RecognizeHandwritingResponse Response Object
 type RecognizeHandwritingResponse struct {
-	Result         *HandwritingResult `json:"result,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Result *HandwritingResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeHandwritingResponse) String() string {

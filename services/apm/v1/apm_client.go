@@ -460,6 +460,25 @@ func (c *ApmClient) ShowTopologyTreeInvoker(request *model.ShowTopologyTreeReque
 	return &ShowTopologyTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFlameLineTree
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) ShowFlameLineTree(request *model.ShowFlameLineTreeRequest) (*model.ShowFlameLineTreeResponse, error) {
+	requestDef := GenReqDefForShowFlameLineTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlameLineTreeResponse), nil
+	}
+}
+
+// ShowFlameLineTreeInvoker
+func (c *ApmClient) ShowFlameLineTreeInvoker(request *model.ShowFlameLineTreeRequest) *ShowFlameLineTreeInvoker {
+	requestDef := GenReqDefForShowFlameLineTree()
+	return &ShowFlameLineTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOpenRegion 查询开通的region
 //
 // 该接口用于查询用户开通的region信息。
@@ -542,6 +561,69 @@ func (c *ApmClient) SearchEnvTopology(request *model.SearchEnvTopologyRequest) (
 func (c *ApmClient) SearchEnvTopologyInvoker(request *model.SearchEnvTopologyRequest) *SearchEnvTopologyInvoker {
 	requestDef := GenReqDefForSearchEnvTopology()
 	return &SearchEnvTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBusiness 创建链路追踪应用
+//
+// 创建链路追踪应用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) CreateBusiness(request *model.CreateBusinessRequest) (*model.CreateBusinessResponse, error) {
+	requestDef := GenReqDefForCreateBusiness()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBusinessResponse), nil
+	}
+}
+
+// CreateBusinessInvoker 创建链路追踪应用
+func (c *ApmClient) CreateBusinessInvoker(request *model.CreateBusinessRequest) *CreateBusinessInvoker {
+	requestDef := GenReqDefForCreateBusiness()
+	return &CreateBusinessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAccessPoint 获取链路追踪应用接入地址
+//
+// 获取链路追踪应用接入地址
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) ShowAccessPoint(request *model.ShowAccessPointRequest) (*model.ShowAccessPointResponse, error) {
+	requestDef := GenReqDefForShowAccessPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAccessPointResponse), nil
+	}
+}
+
+// ShowAccessPointInvoker 获取链路追踪应用接入地址
+func (c *ApmClient) ShowAccessPointInvoker(request *model.ShowAccessPointRequest) *ShowAccessPointInvoker {
+	requestDef := GenReqDefForShowAccessPoint()
+	return &ShowAccessPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowToken 获取链路追踪应用的token
+//
+// 获取链路追踪应用的token
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) ShowToken(request *model.ShowTokenRequest) (*model.ShowTokenResponse, error) {
+	requestDef := GenReqDefForShowToken()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTokenResponse), nil
+	}
+}
+
+// ShowTokenInvoker 获取链路追踪应用的token
+func (c *ApmClient) ShowTokenInvoker(request *model.ShowTokenRequest) *ShowTokenInvoker {
+	requestDef := GenReqDefForShowToken()
+	return &ShowTokenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListBusinessEnv 查询URL跟踪Region环境列表
@@ -710,6 +792,27 @@ func (c *ApmClient) ShowEventDetail(request *model.ShowEventDetailRequest) (*mod
 func (c *ApmClient) ShowEventDetailInvoker(request *model.ShowEventDetailRequest) *ShowEventDetailInvoker {
 	requestDef := GenReqDefForShowEventDetail()
 	return &ShowEventDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMonitorItemDetail 获取一个监控项的详情
+//
+// 获取一个监控项的详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApmClient) ShowMonitorItemDetail(request *model.ShowMonitorItemDetailRequest) (*model.ShowMonitorItemDetailResponse, error) {
+	requestDef := GenReqDefForShowMonitorItemDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMonitorItemDetailResponse), nil
+	}
+}
+
+// ShowMonitorItemDetailInvoker 获取一个监控项的详情
+func (c *ApmClient) ShowMonitorItemDetailInvoker(request *model.ShowMonitorItemDetailRequest) *ShowMonitorItemDetailInvoker {
+	requestDef := GenReqDefForShowMonitorItemDetail()
+	return &ShowMonitorItemDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMonitorItemViewConfig 查询监控项配置信息

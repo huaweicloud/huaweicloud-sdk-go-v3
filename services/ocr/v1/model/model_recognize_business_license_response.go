@@ -8,8 +8,10 @@ import (
 
 // RecognizeBusinessLicenseResponse Response Object
 type RecognizeBusinessLicenseResponse struct {
-	Result         *BusinessLicenseResult `json:"result,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Result *BusinessLicenseResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeBusinessLicenseResponse) String() string {

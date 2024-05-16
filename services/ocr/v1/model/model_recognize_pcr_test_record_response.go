@@ -8,8 +8,10 @@ import (
 
 // RecognizePcrTestRecordResponse Response Object
 type RecognizePcrTestRecordResponse struct {
-	Result         *PcrTestRecordResult `json:"result,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	Result *PcrTestRecordResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizePcrTestRecordResponse) String() string {

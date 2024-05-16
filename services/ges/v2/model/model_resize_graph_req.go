@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResizeGraphReq 扩容图请求体
+// ResizeGraphReq 变更图规格请求体
 type ResizeGraphReq struct {
 	Resize *ResizeGraphReqResize `json:"resize"`
 }

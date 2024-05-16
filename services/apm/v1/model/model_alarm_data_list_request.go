@@ -10,10 +10,10 @@ import (
 type AlarmDataListRequest struct {
 
 	// 页码。
-	Page int32 `json:"page"`
+	Page *int32 `json:"page,omitempty"`
 
 	// 每页数量。
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// region英文名称。
 	Region *string `json:"region,omitempty"`

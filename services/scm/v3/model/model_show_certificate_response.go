@@ -54,6 +54,9 @@ type ShowCertificateResponse struct {
 	// 域名类型，取值如下： - SINGLE_DOMAIN：单域名 - WILDCARD：通配符 - MULTI_DOMAIN：多域名
 	DomainType *string `json:"domain_type,omitempty"`
 
+	// 多域名类型，取值如下： - primary_single 主单 - primary_wildcard 主泛
+	MultiDomainType *string `json:"multi_domain_type,omitempty"`
+
 	// 证书绑定域名。
 	Domain *string `json:"domain,omitempty"`
 

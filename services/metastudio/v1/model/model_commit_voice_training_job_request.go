@@ -23,6 +23,8 @@ type CommitVoiceTrainingJobRequest struct {
 
 	// 任务id。
 	JobId string `json:"job_id"`
+
+	Body *CommitJobReq `json:"body,omitempty"`
 }
 
 func (o CommitVoiceTrainingJobRequest) String() string {

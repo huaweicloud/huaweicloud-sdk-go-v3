@@ -21,7 +21,7 @@ type LayerConfig struct {
 	// 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
 	GroupId *string `json:"group_id,omitempty"`
 
-	Position *LayerPositionConfig `json:"position"`
+	Position *LayerPositionConfig `json:"position,omitempty"`
 
 	Size *LayerSizeConfig `json:"size,omitempty"`
 

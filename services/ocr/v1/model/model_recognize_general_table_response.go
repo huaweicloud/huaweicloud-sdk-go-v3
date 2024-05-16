@@ -8,8 +8,10 @@ import (
 
 // RecognizeGeneralTableResponse Response Object
 type RecognizeGeneralTableResponse struct {
-	Result         *GeneralTableResult `json:"result,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Result *GeneralTableResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeGeneralTableResponse) String() string {

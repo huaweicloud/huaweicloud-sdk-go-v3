@@ -16,7 +16,7 @@ type GetEnvMonitorItemListParam struct {
 	Page int32 `json:"page"`
 
 	// 每页数量。
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 }
 
 func (o GetEnvMonitorItemListParam) String() string {

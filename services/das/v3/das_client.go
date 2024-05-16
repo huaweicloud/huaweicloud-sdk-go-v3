@@ -171,14 +171,17 @@ func (c *DasClient) CreateSpaceAnalysisTaskInvoker(request *model.CreateSpaceAna
 
 // CreateSqlLimitRules 创建SQL限流规则
 //
-// 添加SQL限流规则。目前仅支持MySQL数据库。
-// 使用限制如下：
+// 添加SQL限流规则。目前仅支持MySQL和PostgreSQL数据库。
+// MySQL使用限制如下：
 // 1.规则举例详细说明：例如关键字是\&quot;select~a\&quot;, 含义为：select以及a为该并发控制所包含的两个关键字，~为关键字间隔符，即若执行SQL命令包含select与a两个关键字视为命中此条并发控制规则。
 // 2.当SQL语句匹配多条限流规则时，优先生效最新添加的规则，之前的规则不再生效。
 // 3.限流规则关键字有顺序要求，只会按顺序匹配。如：a~and~b 只会匹配 xxx a&gt;1 and b&gt;2，而不会匹配 xxx b&gt;2 and a&gt;1。
 // 4.关键字可能大小写敏感，请执行 \&quot;show variables like &#39;rds_sqlfilter_case_sensitive&#39;或者到实例参数设置页面进行确认。
 // 5.部分版本只读实例不允许设置限流规则，如果要设置限流规则，请到主实例上进行添加。
 // 6.系统表不限制、不涉及数据查询的不限制、root账号在特定版本下不限制。
+// PostgreSQL使用限制如下：
+// 1.无法添加相同QUERY_ID或SQL语句的规则。
+// 2.使用SQL语句添加规则时，需要确保存在数据库表，如：select * from test，需要确保数据库中有test表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DasClient) CreateSqlLimitRules(request *model.CreateSqlLimitRulesRequest) (*model.CreateSqlLimitRulesResponse, error) {
@@ -265,7 +268,7 @@ func (c *DasClient) DeleteProcessInvoker(request *model.DeleteProcessRequest) *D
 
 // DeleteSqlLimitRules 删除SQL限流规则
 //
-// 删除SQL限流规则。目前仅支持MySQL数据库
+// 删除SQL限流规则。目前仅支持MySQL和PostgreSQL数据库
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DasClient) DeleteSqlLimitRules(request *model.DeleteSqlLimitRulesRequest) (*model.DeleteSqlLimitRulesResponse, error) {
@@ -286,7 +289,7 @@ func (c *DasClient) DeleteSqlLimitRulesInvoker(request *model.DeleteSqlLimitRule
 
 // ExportSlowQueryLogs 导出慢SQL数据
 //
-// DAS收集慢SQL开关打开后，一次性导出指定时间范围内的慢SQL数据，支持分页滚动获取。该功能仅支持付费实例。
+// DAS收集慢SQL开关打开后，一次性导出指定时间范围内的慢SQL数据，支持分页滚动获取。免费实例仅支持查看最近一小时数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DasClient) ExportSlowQueryLogs(request *model.ExportSlowQueryLogsRequest) (*model.ExportSlowQueryLogsResponse, error) {
@@ -305,9 +308,30 @@ func (c *DasClient) ExportSlowQueryLogsInvoker(request *model.ExportSlowQueryLog
 	return &ExportSlowQueryLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportSlowSqlStatistics 导出慢SQL统计数据
+//
+// 慢SQL开关打开后，导出慢SQL统计数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ExportSlowSqlStatistics(request *model.ExportSlowSqlStatisticsRequest) (*model.ExportSlowSqlStatisticsResponse, error) {
+	requestDef := GenReqDefForExportSlowSqlStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportSlowSqlStatisticsResponse), nil
+	}
+}
+
+// ExportSlowSqlStatisticsInvoker 导出慢SQL统计数据
+func (c *DasClient) ExportSlowSqlStatisticsInvoker(request *model.ExportSlowSqlStatisticsRequest) *ExportSlowSqlStatisticsInvoker {
+	requestDef := GenReqDefForExportSlowSqlStatistics()
+	return &ExportSlowSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportSlowSqlTemplatesDetails 导出慢SQL模板列表。
 //
-// 慢SQL开关打开后，导出慢SQL模板列表。该功能仅支持付费实例。查询时间间隔最长一天。
+// 慢SQL开关打开后，导出慢SQL模板列表。免费实例仅支持查看最近一小时数据。查询时间间隔最长一天。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DasClient) ExportSlowSqlTemplatesDetails(request *model.ExportSlowSqlTemplatesDetailsRequest) (*model.ExportSlowSqlTemplatesDetailsResponse, error) {
@@ -500,7 +524,7 @@ func (c *DasClient) ListSpaceAnalysisInvoker(request *model.ListSpaceAnalysisReq
 
 // ListSqlLimitRules 查询SQL限流规则列表
 //
-// 查询SQL限流规则。目前仅支持MySQL数据库。
+// 查询SQL限流规则。目前仅支持MySQL和PostgreSQL数据库。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DasClient) ListSqlLimitRules(request *model.ListSqlLimitRulesRequest) (*model.ListSqlLimitRulesResponse, error) {
@@ -733,4 +757,25 @@ func (c *DasClient) UpdateDbUser(request *model.UpdateDbUserRequest) (*model.Upd
 func (c *DasClient) UpdateDbUserInvoker(request *model.UpdateDbUserRequest) *UpdateDbUserInvoker {
 	requestDef := GenReqDefForUpdateDbUser()
 	return &UpdateDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSqlLimitRules 修改SQL限流规则
+//
+// 修改SQL限流规则。目前仅支持PostgreSQL数据库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) UpdateSqlLimitRules(request *model.UpdateSqlLimitRulesRequest) (*model.UpdateSqlLimitRulesResponse, error) {
+	requestDef := GenReqDefForUpdateSqlLimitRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSqlLimitRulesResponse), nil
+	}
+}
+
+// UpdateSqlLimitRulesInvoker 修改SQL限流规则
+func (c *DasClient) UpdateSqlLimitRulesInvoker(request *model.UpdateSqlLimitRulesRequest) *UpdateSqlLimitRulesInvoker {
+	requestDef := GenReqDefForUpdateSqlLimitRules()
+	return &UpdateSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

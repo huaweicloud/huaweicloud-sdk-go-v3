@@ -8,8 +8,10 @@ import (
 
 // RecognizeQualificationCertificateResponse Response Object
 type RecognizeQualificationCertificateResponse struct {
-	Result         *QualificationCertificateResult `json:"result,omitempty"`
-	HttpStatusCode int                             `json:"-"`
+	Result *QualificationCertificateResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeQualificationCertificateResponse) String() string {

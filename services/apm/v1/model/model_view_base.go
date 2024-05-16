@@ -43,7 +43,7 @@ type ViewBase struct {
 	OrderBy *string `json:"order_by,omitempty"`
 
 	// 是否只展示最近一笔数据。
-	Latest *string `json:"latest,omitempty"`
+	Latest *bool `json:"latest,omitempty"`
 
 	// 视图类型。
 	ViewType *ViewBaseViewType `json:"view_type,omitempty"`

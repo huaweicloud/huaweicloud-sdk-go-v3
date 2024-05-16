@@ -8,8 +8,10 @@ import (
 
 // RecognizeFinancialStatementResponse Response Object
 type RecognizeFinancialStatementResponse struct {
-	Result         *FinancialStatementResult `json:"result,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Result *FinancialStatementResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeFinancialStatementResponse) String() string {

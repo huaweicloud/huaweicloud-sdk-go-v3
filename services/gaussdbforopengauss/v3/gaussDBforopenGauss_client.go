@@ -1217,6 +1217,27 @@ func (c *GaussDBforopenGaussClient) RestartInstanceInvoker(request *model.Restar
 	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestoreInstance 备份恢复到当前实例
+//
+// 备份恢复到当前实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) RestoreInstance(request *model.RestoreInstanceRequest) (*model.RestoreInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreInstanceResponse), nil
+	}
+}
+
+// RestoreInstanceInvoker 备份恢复到当前实例
+func (c *GaussDBforopenGaussClient) RestoreInstanceInvoker(request *model.RestoreInstanceRequest) *RestoreInstanceInvoker {
+	requestDef := GenReqDefForRestoreInstance()
+	return &RestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunInstanceAction CN横向扩容/DN分片扩容/磁盘扩容
 //
 // CN横向扩容/DN分片扩容/磁盘扩容

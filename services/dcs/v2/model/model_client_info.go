@@ -30,7 +30,7 @@ type ClientInfo struct {
 	Age *int32 `json:"age,omitempty"`
 
 	// 空闲时长（单位：秒）
-	Idle *string `json:"idle,omitempty"`
+	Idle *int32 `json:"idle,omitempty"`
 
 	// 该客户端正在使用的数据库 ID
 	Db *string `json:"db,omitempty"`

@@ -50,7 +50,10 @@ type ShowVoiceTrainingJobResponse struct {
 
 	CreateType *CreateType `json:"create_type,omitempty"`
 
-	Tag            *JobTag `json:"tag,omitempty"`
+	Tag *JobTag `json:"tag,omitempty"`
+
+	// 手机号
+	Phone          *string `json:"phone,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

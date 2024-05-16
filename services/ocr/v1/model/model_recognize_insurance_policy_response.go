@@ -8,8 +8,10 @@ import (
 
 // RecognizeInsurancePolicyResponse Response Object
 type RecognizeInsurancePolicyResponse struct {
-	Result         *InsurancePolicyResult `json:"result,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Result *InsurancePolicyResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeInsurancePolicyResponse) String() string {

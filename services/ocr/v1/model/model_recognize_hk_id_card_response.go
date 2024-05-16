@@ -8,8 +8,10 @@ import (
 
 // RecognizeHkIdCardResponse Response Object
 type RecognizeHkIdCardResponse struct {
-	Result         *HkIdCardResult `json:"result,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Result *HkIdCardResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeHkIdCardResponse) String() string {

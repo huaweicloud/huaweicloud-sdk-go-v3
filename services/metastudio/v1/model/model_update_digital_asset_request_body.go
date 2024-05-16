@@ -24,7 +24,7 @@ type UpdateDigitalAssetRequestBody struct {
 	// 资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
 	AssetState *UpdateDigitalAssetRequestBodyAssetState `json:"asset_state,omitempty"`
 
-	// 项目ID。 > * 仅管理员帐号可设置此参数。
+	// 项目ID。 > * 仅管理员账号可设置此参数。
 	AssetOwner *string `json:"asset_owner,omitempty"`
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`

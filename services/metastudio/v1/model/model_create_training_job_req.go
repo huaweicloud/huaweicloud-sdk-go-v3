@@ -26,6 +26,9 @@ type CreateTrainingJobReq struct {
 	Language *CreateTrainingJobReqLanguage `json:"language,omitempty"`
 
 	CreateType *CreateType `json:"create_type,omitempty"`
+
+	// 手机号
+	Phone *string `json:"phone,omitempty"`
 }
 
 func (o CreateTrainingJobReq) String() string {

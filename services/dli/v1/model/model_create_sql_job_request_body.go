@@ -18,6 +18,9 @@ type CreateSqlJobRequestBody struct {
 	// 待提交作业的队列引擎名称，名称只能包含英文字母。
 	EngineType *CreateSqlJobRequestBodyEngineType `json:"engine_type,omitempty"`
 
+	// 待提交作业的表默认catalog。
+	CurrentCatalog *string `json:"current_catalog,omitempty"`
+
 	// SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
 	Currentdb *string `json:"currentdb,omitempty"`
 

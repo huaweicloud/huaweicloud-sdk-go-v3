@@ -13,7 +13,7 @@ import (
 type SumTableView struct {
 
 	// 视图类型。
-	ViewType SumTableViewViewType `json:"view_type"`
+	ViewType *SumTableViewViewType `json:"view_type,omitempty"`
 
 	// 采集器名称。
 	CollectorName string `json:"collector_name"`

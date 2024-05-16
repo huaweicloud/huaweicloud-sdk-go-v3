@@ -8,8 +8,10 @@ import (
 
 // RecognizeBankReceiptResponse Response Object
 type RecognizeBankReceiptResponse struct {
-	Result         *BankReceiptResult `json:"result,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Result *BankReceiptResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeBankReceiptResponse) String() string {

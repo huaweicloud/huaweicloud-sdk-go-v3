@@ -257,6 +257,18 @@ func (i *ShowTopologyTreeInvoker) Invoke() (*model.ShowTopologyTreeResponse, err
 	}
 }
 
+type ShowFlameLineTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlameLineTreeInvoker) Invoke() (*model.ShowFlameLineTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlameLineTreeResponse), nil
+	}
+}
+
 type ListOpenRegionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +314,42 @@ func (i *SearchEnvTopologyInvoker) Invoke() (*model.SearchEnvTopologyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.SearchEnvTopologyResponse), nil
+	}
+}
+
+type CreateBusinessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBusinessInvoker) Invoke() (*model.CreateBusinessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBusinessResponse), nil
+	}
+}
+
+type ShowAccessPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAccessPointInvoker) Invoke() (*model.ShowAccessPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAccessPointResponse), nil
+	}
+}
+
+type ShowTokenInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTokenInvoker) Invoke() (*model.ShowTokenResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTokenResponse), nil
 	}
 }
 
@@ -398,6 +446,18 @@ func (i *ShowEventDetailInvoker) Invoke() (*model.ShowEventDetailResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowEventDetailResponse), nil
+	}
+}
+
+type ShowMonitorItemDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMonitorItemDetailInvoker) Invoke() (*model.ShowMonitorItemDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMonitorItemDetailResponse), nil
 	}
 }
 

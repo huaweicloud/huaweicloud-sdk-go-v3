@@ -8,8 +8,10 @@ import (
 
 // RecognizeQuotaInvoiceResponse Response Object
 type RecognizeQuotaInvoiceResponse struct {
-	Result         *QuotaInvoiceResult `json:"result,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Result *QuotaInvoiceResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeQuotaInvoiceResponse) String() string {

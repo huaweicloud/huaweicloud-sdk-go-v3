@@ -21,8 +21,11 @@ type RobotInfo struct {
 	// 第三方应用ID。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
 	AppType *int32 `json:"app_type,omitempty"`
+
+	// 应用的AccessKey或帐号。
+	AppKey *string `json:"app_key,omitempty"`
 
 	Language *LanguageEnum `json:"language,omitempty"`
 
@@ -46,6 +49,9 @@ type RobotInfo struct {
 
 	// 支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
 	ChatRounds *int32 `json:"chat_rounds,omitempty"`
+
+	// 奇妙问角色ID。
+	RoleId *string `json:"role_id,omitempty"`
 }
 
 func (o RobotInfo) String() string {

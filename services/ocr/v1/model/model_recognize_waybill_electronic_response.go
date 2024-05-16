@@ -8,8 +8,10 @@ import (
 
 // RecognizeWaybillElectronicResponse Response Object
 type RecognizeWaybillElectronicResponse struct {
-	Result         *WaybillElectronicResult `json:"result,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Result *WaybillElectronicResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeWaybillElectronicResponse) String() string {

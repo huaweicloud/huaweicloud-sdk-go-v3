@@ -31,7 +31,7 @@ type AgentSearchParam struct {
 	Page int32 `json:"page"`
 
 	// 查询结果每页最多显示的条数。
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 关键字。
 	Keyword *string `json:"keyword,omitempty"`

@@ -83,13 +83,17 @@ type ShowSqlLimitSwitchStatusRequestDatastoreType struct {
 }
 
 type ShowSqlLimitSwitchStatusRequestDatastoreTypeEnum struct {
-	MY_SQL ShowSqlLimitSwitchStatusRequestDatastoreType
+	MY_SQL      ShowSqlLimitSwitchStatusRequestDatastoreType
+	POSTGRE_SQL ShowSqlLimitSwitchStatusRequestDatastoreType
 }
 
 func GetShowSqlLimitSwitchStatusRequestDatastoreTypeEnum() ShowSqlLimitSwitchStatusRequestDatastoreTypeEnum {
 	return ShowSqlLimitSwitchStatusRequestDatastoreTypeEnum{
 		MY_SQL: ShowSqlLimitSwitchStatusRequestDatastoreType{
 			value: "MySQL",
+		},
+		POSTGRE_SQL: ShowSqlLimitSwitchStatusRequestDatastoreType{
+			value: "PostgreSQL",
 		},
 	}
 }

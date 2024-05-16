@@ -8,8 +8,10 @@ import (
 
 // RecognizePassportResponse Response Object
 type RecognizePassportResponse struct {
-	Result         *PassportResult `json:"result,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Result *PassportResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizePassportResponse) String() string {

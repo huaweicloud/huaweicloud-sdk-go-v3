@@ -8,8 +8,10 @@ import (
 
 // RecognizeWebImageResponse Response Object
 type RecognizeWebImageResponse struct {
-	Result         *WebImageResult `json:"result,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Result *WebImageResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeWebImageResponse) String() string {

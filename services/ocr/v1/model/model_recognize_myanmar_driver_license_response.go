@@ -8,8 +8,10 @@ import (
 
 // RecognizeMyanmarDriverLicenseResponse Response Object
 type RecognizeMyanmarDriverLicenseResponse struct {
-	Result         *MyanmarDriverLicenseResult `json:"result,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Result *MyanmarDriverLicenseResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeMyanmarDriverLicenseResponse) String() string {

@@ -80,13 +80,17 @@ type ChangeSqlLimitSwitchStatusBodyDatastoreType struct {
 }
 
 type ChangeSqlLimitSwitchStatusBodyDatastoreTypeEnum struct {
-	MY_SQL ChangeSqlLimitSwitchStatusBodyDatastoreType
+	MY_SQL      ChangeSqlLimitSwitchStatusBodyDatastoreType
+	POSTGRE_SQL ChangeSqlLimitSwitchStatusBodyDatastoreType
 }
 
 func GetChangeSqlLimitSwitchStatusBodyDatastoreTypeEnum() ChangeSqlLimitSwitchStatusBodyDatastoreTypeEnum {
 	return ChangeSqlLimitSwitchStatusBodyDatastoreTypeEnum{
 		MY_SQL: ChangeSqlLimitSwitchStatusBodyDatastoreType{
 			value: "MySQL",
+		},
+		POSTGRE_SQL: ChangeSqlLimitSwitchStatusBodyDatastoreType{
+			value: "PostgreSQL",
 		},
 	}
 }

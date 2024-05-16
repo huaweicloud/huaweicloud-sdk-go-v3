@@ -8,8 +8,10 @@ import (
 
 // RecognizeMainlandTravelPermitResponse Response Object
 type RecognizeMainlandTravelPermitResponse struct {
-	Result         *MainlandTravelPermitResult `json:"result,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Result *MainlandTravelPermitResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeMainlandTravelPermitResponse) String() string {

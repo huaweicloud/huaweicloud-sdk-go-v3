@@ -19,6 +19,174 @@ func CodeArtsInspectorClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddGroup 批量创建主机组
+//
+// 批量创建主机组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) AddGroup(request *model.AddGroupRequest) (*model.AddGroupResponse, error) {
+	requestDef := GenReqDefForAddGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddGroupResponse), nil
+	}
+}
+
+// AddGroupInvoker 批量创建主机组
+func (c *CodeArtsInspectorClient) AddGroupInvoker(request *model.AddGroupRequest) *AddGroupInvoker {
+	requestDef := GenReqDefForAddGroup()
+	return &AddGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGroup 删除主机组
+//
+// 删除主机组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) DeleteGroup(request *model.DeleteGroupRequest) (*model.DeleteGroupResponse, error) {
+	requestDef := GenReqDefForDeleteGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGroupResponse), nil
+	}
+}
+
+// DeleteGroupInvoker 删除主机组
+func (c *CodeArtsInspectorClient) DeleteGroupInvoker(request *model.DeleteGroupRequest) *DeleteGroupInvoker {
+	requestDef := GenReqDefForDeleteGroup()
+	return &DeleteGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroups 获取主机组列表
+//
+// 获取主机组列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) ListGroups(request *model.ListGroupsRequest) (*model.ListGroupsResponse, error) {
+	requestDef := GenReqDefForListGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupsResponse), nil
+	}
+}
+
+// ListGroupsInvoker 获取主机组列表
+func (c *CodeArtsInspectorClient) ListGroupsInvoker(request *model.ListGroupsRequest) *ListGroupsInvoker {
+	requestDef := GenReqDefForListGroups()
+	return &ListGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostResults 获取主机漏洞扫描结果
+//
+// 获取主机漏洞扫描结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) ListHostResults(request *model.ListHostResultsRequest) (*model.ListHostResultsResponse, error) {
+	requestDef := GenReqDefForListHostResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostResultsResponse), nil
+	}
+}
+
+// ListHostResultsInvoker 获取主机漏洞扫描结果
+func (c *CodeArtsInspectorClient) ListHostResultsInvoker(request *model.ListHostResultsRequest) *ListHostResultsInvoker {
+	requestDef := GenReqDefForListHostResults()
+	return &ListHostResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchStartHostTasks 批量启动或取消主机扫描任务
+//
+// 批量启动或取消主机漏洞扫描任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) BatchStartHostTasks(request *model.BatchStartHostTasksRequest) (*model.BatchStartHostTasksResponse, error) {
+	requestDef := GenReqDefForBatchStartHostTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchStartHostTasksResponse), nil
+	}
+}
+
+// BatchStartHostTasksInvoker 批量启动或取消主机扫描任务
+func (c *CodeArtsInspectorClient) BatchStartHostTasksInvoker(request *model.BatchStartHostTasksRequest) *BatchStartHostTasksInvoker {
+	requestDef := GenReqDefForBatchStartHostTasks()
+	return &BatchStartHostTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateHosts 批量创建主机资产
+//
+// 批量创建租户的主机资产
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) BatchCreateHosts(request *model.BatchCreateHostsRequest) (*model.BatchCreateHostsResponse, error) {
+	requestDef := GenReqDefForBatchCreateHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateHostsResponse), nil
+	}
+}
+
+// BatchCreateHostsInvoker 批量创建主机资产
+func (c *CodeArtsInspectorClient) BatchCreateHostsInvoker(request *model.BatchCreateHostsRequest) *BatchCreateHostsInvoker {
+	requestDef := GenReqDefForBatchCreateHosts()
+	return &BatchCreateHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHost 删除主机资产
+//
+// 删除租户的主机资产
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) DeleteHost(request *model.DeleteHostRequest) (*model.DeleteHostResponse, error) {
+	requestDef := GenReqDefForDeleteHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHostResponse), nil
+	}
+}
+
+// DeleteHostInvoker 删除主机资产
+func (c *CodeArtsInspectorClient) DeleteHostInvoker(request *model.DeleteHostRequest) *DeleteHostInvoker {
+	requestDef := GenReqDefForDeleteHost()
+	return &DeleteHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHosts 获取主机资产
+//
+// 获取租户的主机资产列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) ListHosts(request *model.ListHostsRequest) (*model.ListHostsResponse, error) {
+	requestDef := GenReqDefForListHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostsResponse), nil
+	}
+}
+
+// ListHostsInvoker 获取主机资产
+func (c *CodeArtsInspectorClient) ListHostsInvoker(request *model.ListHostsRequest) *ListHostsInvoker {
+	requestDef := GenReqDefForListHosts()
+	return &ListHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadTaskReport 下载网站扫描报告
 //
 // 下载网站扫描任务PDF报告

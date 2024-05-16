@@ -8,8 +8,10 @@ import (
 
 // RecognizeRealEstateCertificateResponse Response Object
 type RecognizeRealEstateCertificateResponse struct {
-	Result         *RealEstateCertificateResult `json:"result,omitempty"`
-	HttpStatusCode int                          `json:"-"`
+	Result *RealEstateCertificateResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeRealEstateCertificateResponse) String() string {

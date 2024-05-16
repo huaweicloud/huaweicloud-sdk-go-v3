@@ -17,6 +17,9 @@ type DeleteSqlLimitRulesBody struct {
 
 	// SQL限流规则ID
 	SqlLimitRuleIds []string `json:"sql_limit_rule_ids"`
+
+	// 数据库名（PostgreSQL必填）
+	DatabaseName *string `json:"database_name,omitempty"`
 }
 
 func (o DeleteSqlLimitRulesBody) String() string {
@@ -33,13 +36,17 @@ type DeleteSqlLimitRulesBodyDatastoreType struct {
 }
 
 type DeleteSqlLimitRulesBodyDatastoreTypeEnum struct {
-	MY_SQL DeleteSqlLimitRulesBodyDatastoreType
+	MY_SQL      DeleteSqlLimitRulesBodyDatastoreType
+	POSTGRE_SQL DeleteSqlLimitRulesBodyDatastoreType
 }
 
 func GetDeleteSqlLimitRulesBodyDatastoreTypeEnum() DeleteSqlLimitRulesBodyDatastoreTypeEnum {
 	return DeleteSqlLimitRulesBodyDatastoreTypeEnum{
 		MY_SQL: DeleteSqlLimitRulesBodyDatastoreType{
 			value: "MySQL",
+		},
+		POSTGRE_SQL: DeleteSqlLimitRulesBodyDatastoreType{
+			value: "PostgreSQL",
 		},
 	}
 }

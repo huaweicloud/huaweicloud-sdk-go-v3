@@ -17,6 +17,9 @@ type CreateSqlLimitRuleOption struct {
 	// 最大并发数
 	MaxConcurrency int32 `json:"max_concurrency"`
 
+	// 最大等待时间
+	MaxWaiting *int32 `json:"max_waiting,omitempty"`
+
 	// SQL限流规则。限流规则以~分隔关键字，例如select~a。规则举例详细说明：例如关键字是\"select~a\", 含义为：select以及a为该并发控制所包含的两个关键字，~为关键字间隔符，即若执行SQL命令包含select与a两个关键字视为命中此条并发控制规则。
 	Pattern string `json:"pattern"`
 }
@@ -35,9 +38,11 @@ type CreateSqlLimitRuleOptionSqlType struct {
 }
 
 type CreateSqlLimitRuleOptionSqlTypeEnum struct {
-	SELECT CreateSqlLimitRuleOptionSqlType
-	UPDATE CreateSqlLimitRuleOptionSqlType
-	DELETE CreateSqlLimitRuleOptionSqlType
+	SELECT    CreateSqlLimitRuleOptionSqlType
+	UPDATE    CreateSqlLimitRuleOptionSqlType
+	DELETE    CreateSqlLimitRuleOptionSqlType
+	QUERY_ID  CreateSqlLimitRuleOptionSqlType
+	QUERY_STR CreateSqlLimitRuleOptionSqlType
 }
 
 func GetCreateSqlLimitRuleOptionSqlTypeEnum() CreateSqlLimitRuleOptionSqlTypeEnum {
@@ -50,6 +55,12 @@ func GetCreateSqlLimitRuleOptionSqlTypeEnum() CreateSqlLimitRuleOptionSqlTypeEnu
 		},
 		DELETE: CreateSqlLimitRuleOptionSqlType{
 			value: "DELETE",
+		},
+		QUERY_ID: CreateSqlLimitRuleOptionSqlType{
+			value: "QUERY_ID",
+		},
+		QUERY_STR: CreateSqlLimitRuleOptionSqlType{
+			value: "QUERY_STR",
 		},
 	}
 }

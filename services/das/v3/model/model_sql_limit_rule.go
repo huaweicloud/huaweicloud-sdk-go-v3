@@ -20,6 +20,9 @@ type SqlLimitRule struct {
 
 	// 最大并发数
 	MaxConcurrency int32 `json:"max_concurrency"`
+
+	// 最大等待时间
+	MaxWaiting *int32 `json:"max_waiting,omitempty"`
 }
 
 func (o SqlLimitRule) String() string {

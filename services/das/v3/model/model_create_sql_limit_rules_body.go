@@ -17,6 +17,9 @@ type CreateSqlLimitRulesBody struct {
 
 	// 需要创建的SQL限流规则列表，一次最多创建5个
 	SqlLimitRules []CreateSqlLimitRuleOption `json:"sql_limit_rules"`
+
+	// 数据库名（PostgreSQL必填）
+	DatabaseName *string `json:"database_name,omitempty"`
 }
 
 func (o CreateSqlLimitRulesBody) String() string {
@@ -33,13 +36,17 @@ type CreateSqlLimitRulesBodyDatastoreType struct {
 }
 
 type CreateSqlLimitRulesBodyDatastoreTypeEnum struct {
-	MY_SQL CreateSqlLimitRulesBodyDatastoreType
+	MY_SQL      CreateSqlLimitRulesBodyDatastoreType
+	POSTGRE_SQL CreateSqlLimitRulesBodyDatastoreType
 }
 
 func GetCreateSqlLimitRulesBodyDatastoreTypeEnum() CreateSqlLimitRulesBodyDatastoreTypeEnum {
 	return CreateSqlLimitRulesBodyDatastoreTypeEnum{
 		MY_SQL: CreateSqlLimitRulesBodyDatastoreType{
 			value: "MySQL",
+		},
+		POSTGRE_SQL: CreateSqlLimitRulesBodyDatastoreType{
+			value: "PostgreSQL",
 		},
 	}
 }

@@ -12,11 +12,11 @@ type TimeRange struct {
 	// 时区信息，默认为“UTC”。
 	SqlTimeZone *string `json:"sql_time_zone,omitempty"`
 
-	// 搜索起始时间（UTC时间，毫秒级）。
-	StartTime string `json:"start_time"`
+	// 搜索起始时间（UTC时间，毫秒级）
+	StartTime int64 `json:"start_time"`
 
-	// 搜索起始时间（UTC时间，毫秒级）。
-	EndTime string `json:"end_time"`
+	// 搜索结束时间（UTC时间，毫秒级）。
+	EndTime int64 `json:"end_time"`
 
 	// 搜索是否包含起始时间点，默认为false。
 	StartTimeGt *bool `json:"start_time_gt,omitempty"`

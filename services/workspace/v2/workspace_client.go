@@ -1132,6 +1132,27 @@ func (c *WorkspaceClient) ListItaSubJobsInvoker(request *model.ListItaSubJobsReq
 	return &ListItaSubJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowJob 查询任务详情
+//
+// 该接口用于查询异步任务的执行情况，比如查询创建桌面任务的执行状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
+	requestDef := GenReqDefForShowJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobResponse), nil
+	}
+}
+
+// ShowJobInvoker 查询任务详情
+func (c *WorkspaceClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ApplyDesktopsInternet 开通桌面上网功能
 //
 // 开通桌面上网功能。

@@ -10,10 +10,10 @@ import (
 type AlarmNotifyListRequest struct {
 
 	// 页码。
-	Page int32 `json:"page"`
+	Page *int32 `json:"page,omitempty"`
 
 	// 每页数量。
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
 
 	// 告警事件id。
 	AlarmDataId int32 `json:"alarm_data_id"`

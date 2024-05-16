@@ -13,7 +13,9 @@ type RecognizeCustomTemplateResponse struct {
 	Result *interface{} `json:"result,omitempty"`
 
 	// 调用成功时返回调用模板id。 调用失败时无此字段。
-	TemplateId     *string `json:"template_id,omitempty"`
+	TemplateId *string `json:"template_id,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

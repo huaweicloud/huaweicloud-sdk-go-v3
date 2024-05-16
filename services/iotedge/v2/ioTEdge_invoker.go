@@ -89,6 +89,18 @@ func (i *ExecuteDeviceControlsSetInvoker) Invoke() (*model.ExecuteDeviceControls
 	}
 }
 
+type SetDeviceControlDefaultValuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetDeviceControlDefaultValuesInvoker) Invoke() (*model.SetDeviceControlDefaultValuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetDeviceControlDefaultValuesResponse), nil
+	}
+}
+
 type AddDeviceInvoker struct {
 	*invoker.BaseInvoker
 }

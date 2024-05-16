@@ -533,6 +533,18 @@ func (i *CreateOrUpdateEntitiesInvoker) Invoke() (*model.CreateOrUpdateEntitiesR
 	}
 }
 
+type CreateSecurityAssignedQueueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityAssignedQueueInvoker) Invoke() (*model.CreateSecurityAssignedQueueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityAssignedQueueResponse), nil
+	}
+}
+
 type CreateSecurityDataClassificationRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -866,6 +878,18 @@ func (i *DeleteDirectoryInvoker) Invoke() (*model.DeleteDirectoryResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteDirectoryResponse), nil
+	}
+}
+
+type DeleteSecurityAssignedQueueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityAssignedQueueInvoker) Invoke() (*model.DeleteSecurityAssignedQueueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecurityAssignedQueueResponse), nil
 	}
 }
 
@@ -1733,6 +1757,18 @@ func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
 	}
 }
 
+type ListSecurityAssignedQueuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityAssignedQueuesInvoker) Invoke() (*model.ListSecurityAssignedQueuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityAssignedQueuesResponse), nil
+	}
+}
+
 type ListSecurityDataClassificationRuleGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1802,6 +1838,18 @@ func (i *ListSecurityDlfDataWareHousesInvoker) Invoke() (*model.ListSecurityDlfD
 		return nil, err
 	} else {
 		return result.(*model.ListSecurityDlfDataWareHousesResponse), nil
+	}
+}
+
+type ListSecurityMemberSyncTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityMemberSyncTasksInvoker) Invoke() (*model.ListSecurityMemberSyncTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityMemberSyncTasksResponse), nil
 	}
 }
 
@@ -2873,6 +2921,18 @@ func (i *ShowSecurityDataClassificationRuleGroupInvoker) Invoke() (*model.ShowSe
 	}
 }
 
+type ShowSecurityMemberSyncTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityMemberSyncTaskInvoker) Invoke() (*model.ShowSecurityMemberSyncTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityMemberSyncTaskResponse), nil
+	}
+}
+
 type ShowSecurityPermissionSetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3170,6 +3230,18 @@ func (i *UpdateFactoryJobNameInvoker) Invoke() (*model.UpdateFactoryJobNameRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateFactoryJobNameResponse), nil
+	}
+}
+
+type UpdateSecurityAssignedQueueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityAssignedQueueInvoker) Invoke() (*model.UpdateSecurityAssignedQueueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityAssignedQueueResponse), nil
 	}
 }
 

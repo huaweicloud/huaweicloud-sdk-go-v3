@@ -24,13 +24,13 @@ type RawTableParam struct {
 	OrderBy *string `json:"order_by,omitempty"`
 
 	// 搜索关键字。
-	SearchWord string `json:"search_word"`
+	SearchWord *string `json:"search_word,omitempty"`
 
 	// 实例id。
-	InstanceId int64 `json:"instance_id"`
+	InstanceId *int64 `json:"instance_id,omitempty"`
 
 	// 监控项id。
-	MonitorItemId int64 `json:"monitor_item_id"`
+	MonitorItemId *int64 `json:"monitor_item_id,omitempty"`
 
 	// 环境id。
 	EnvId int64 `json:"env_id"`

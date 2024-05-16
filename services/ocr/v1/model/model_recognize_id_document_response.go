@@ -8,8 +8,10 @@ import (
 
 // RecognizeIdDocumentResponse Response Object
 type RecognizeIdDocumentResponse struct {
-	Result         *IdDocumentItem `json:"result,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Result *IdDocumentItem `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeIdDocumentResponse) String() string {

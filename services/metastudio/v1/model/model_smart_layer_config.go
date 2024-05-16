@@ -18,7 +18,7 @@ type SmartLayerConfig struct {
 	// 图层所需资产的资产id，外部资产信息无需填写
 	AssetId *string `json:"asset_id,omitempty"`
 
-	Position *LayerPositionConfig `json:"position"`
+	Position *LayerPositionConfig `json:"position,omitempty"`
 
 	Size *LayerSizeConfig `json:"size,omitempty"`
 

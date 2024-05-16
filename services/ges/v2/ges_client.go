@@ -212,8 +212,8 @@ func (c *GesClient) DetachEip2Invoker(request *model.DetachEip2Request) *DetachE
 //
 // 扩副本能力允许动态扩容多个从节点，扩容的从节点可以处理读请求，从而提高读请求性能。
 // &gt; 1.一万边和百亿边规格的图暂不支持扩副本。
-// 2.进行扩副本操作后，不支持扩容图操作。
-// 3.如果要对图进行扩容和扩副本两个操作，需要您先进行扩容图操作，再进行扩副本操作。
+// 2.进行扩副本操作后，不支持变更图规格操作。
+// 3.如果要对图进行扩容和扩副本两个操作，需要您先进行变更图规格操作，再进行扩副本操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GesClient) ExpandGraph2(request *model.ExpandGraph2Request) (*model.ExpandGraph2Response, error) {
@@ -443,10 +443,10 @@ func (c *GesClient) ListQuotas2Invoker(request *model.ListQuotas2Request) *ListQ
 	return &ListQuotas2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizeGraph2 扩容图
+// ResizeGraph2 变更图规格
 //
-// 扩容图规格。
-// &gt; 扩容图以后所有索引（复合索引和全文索引）都需要重新创建。
+// 变更图规格规格。
+// &gt; 变更图规格以后所有索引（复合索引和全文索引）都需要重新创建。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GesClient) ResizeGraph2(request *model.ResizeGraph2Request) (*model.ResizeGraph2Response, error) {
@@ -459,7 +459,7 @@ func (c *GesClient) ResizeGraph2(request *model.ResizeGraph2Request) (*model.Res
 	}
 }
 
-// ResizeGraph2Invoker 扩容图
+// ResizeGraph2Invoker 变更图规格
 func (c *GesClient) ResizeGraph2Invoker(request *model.ResizeGraph2Request) *ResizeGraph2Invoker {
 	requestDef := GenReqDefForResizeGraph2()
 	return &ResizeGraph2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

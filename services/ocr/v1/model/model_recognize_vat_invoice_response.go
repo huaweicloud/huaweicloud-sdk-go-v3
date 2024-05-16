@@ -8,8 +8,10 @@ import (
 
 // RecognizeVatInvoiceResponse Response Object
 type RecognizeVatInvoiceResponse struct {
-	Result         *VatInvoiceResult `json:"result,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Result *VatInvoiceResult `json:"result,omitempty"`
+
+	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RecognizeVatInvoiceResponse) String() string {

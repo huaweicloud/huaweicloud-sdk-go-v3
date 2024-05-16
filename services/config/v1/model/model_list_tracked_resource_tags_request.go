@@ -17,6 +17,9 @@ type ListTrackedResourceTagsRequest struct {
 
 	// 最大的返回数量。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 是否查询已删除的资源。默认为false，不查询已删除的资源
+	ResourceDeleted *bool `json:"resource_deleted,omitempty"`
 }
 
 func (o ListTrackedResourceTagsRequest) String() string {

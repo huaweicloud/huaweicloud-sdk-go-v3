@@ -24,6 +24,9 @@ type ListSqlLimitRulesRequest struct {
 	// 数据库类型
 	DatastoreType ListSqlLimitRulesRequestDatastoreType `json:"datastore_type"`
 
+	// 数据库名（PostgreSQL必填）
+	DatabaseName *string `json:"database_name,omitempty"`
+
 	// 语言
 	XLanguage *ListSqlLimitRulesRequestXLanguage `json:"X-Language,omitempty"`
 }
@@ -42,13 +45,17 @@ type ListSqlLimitRulesRequestDatastoreType struct {
 }
 
 type ListSqlLimitRulesRequestDatastoreTypeEnum struct {
-	MY_SQL ListSqlLimitRulesRequestDatastoreType
+	MY_SQL      ListSqlLimitRulesRequestDatastoreType
+	POSTGRE_SQL ListSqlLimitRulesRequestDatastoreType
 }
 
 func GetListSqlLimitRulesRequestDatastoreTypeEnum() ListSqlLimitRulesRequestDatastoreTypeEnum {
 	return ListSqlLimitRulesRequestDatastoreTypeEnum{
 		MY_SQL: ListSqlLimitRulesRequestDatastoreType{
 			value: "MySQL",
+		},
+		POSTGRE_SQL: ListSqlLimitRulesRequestDatastoreType{
+			value: "PostgreSQL",
 		},
 	}
 }

@@ -32,6 +32,12 @@ type AccessAkskVo struct {
 
 	// ak/sk的描述信息。
 	Descp *string `json:"descp,omitempty"`
+
+	// ak/sk的生成时间戳。
+	GmtCreateTimestamp *int64 `json:"gmt_create_timestamp,omitempty"`
+
+	// ak/sk的修改时间戳。
+	GmtModifyTimestamp *int64 `json:"gmt_modify_timestamp,omitempty"`
 }
 
 func (o AccessAkskVo) String() string {

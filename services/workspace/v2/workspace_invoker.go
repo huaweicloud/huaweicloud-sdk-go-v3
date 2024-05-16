@@ -641,6 +641,18 @@ func (i *ListItaSubJobsInvoker) Invoke() (*model.ListItaSubJobsResponse, error) 
 	}
 }
 
+type ShowJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobResponse), nil
+	}
+}
+
 type ApplyDesktopsInternetInvoker struct {
 	*invoker.BaseInvoker
 }

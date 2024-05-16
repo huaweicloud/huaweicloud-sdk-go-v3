@@ -689,6 +689,18 @@ func (i *RestartInstanceInvoker) Invoke() (*model.RestartInstanceResponse, error
 	}
 }
 
+type RestoreInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreInstanceInvoker) Invoke() (*model.RestoreInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreInstanceResponse), nil
+	}
+}
+
 type RunInstanceActionInvoker struct {
 	*invoker.BaseInvoker
 }

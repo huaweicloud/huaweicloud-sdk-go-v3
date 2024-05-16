@@ -425,6 +425,18 @@ func (i *CreateFileInvoker) Invoke() (*model.CreateFileResponse, error) {
 	}
 }
 
+type CreateLargeFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLargeFileInvoker) Invoke() (*model.CreateLargeFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLargeFileResponse), nil
+	}
+}
+
 type DeleteFileInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +446,294 @@ func (i *DeleteFileInvoker) Invoke() (*model.DeleteFileResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteFileResponse), nil
+	}
+}
+
+type CreateHotQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHotQuestionInvoker) Invoke() (*model.CreateHotQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHotQuestionResponse), nil
+	}
+}
+
+type DeleteHotQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHotQuestionInvoker) Invoke() (*model.DeleteHotQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHotQuestionResponse), nil
+	}
+}
+
+type ListHotQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHotQuestionInvoker) Invoke() (*model.ListHotQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHotQuestionResponse), nil
+	}
+}
+
+type ShowHotQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHotQuestionInvoker) Invoke() (*model.ShowHotQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHotQuestionResponse), nil
+	}
+}
+
+type UpdateHotQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHotQuestionInvoker) Invoke() (*model.UpdateHotQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHotQuestionResponse), nil
+	}
+}
+
+type CreateIntentAndQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIntentAndQuestionInvoker) Invoke() (*model.CreateIntentAndQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIntentAndQuestionResponse), nil
+	}
+}
+
+type CreateKnowledgeIntentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKnowledgeIntentInvoker) Invoke() (*model.CreateKnowledgeIntentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKnowledgeIntentResponse), nil
+	}
+}
+
+type DeleteKnowledgeIntentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKnowledgeIntentInvoker) Invoke() (*model.DeleteKnowledgeIntentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKnowledgeIntentResponse), nil
+	}
+}
+
+type ListKnowledgeIntentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKnowledgeIntentInvoker) Invoke() (*model.ListKnowledgeIntentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKnowledgeIntentResponse), nil
+	}
+}
+
+type ShowKnowledgeIntentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKnowledgeIntentInvoker) Invoke() (*model.ShowKnowledgeIntentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKnowledgeIntentResponse), nil
+	}
+}
+
+type UpdateKnowledgeIntentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKnowledgeIntentInvoker) Invoke() (*model.UpdateKnowledgeIntentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKnowledgeIntentResponse), nil
+	}
+}
+
+type CreateBatchKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBatchKnowledgeQuestionInvoker) Invoke() (*model.CreateBatchKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBatchKnowledgeQuestionResponse), nil
+	}
+}
+
+type CreateKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKnowledgeQuestionInvoker) Invoke() (*model.CreateKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKnowledgeQuestionResponse), nil
+	}
+}
+
+type DeleteKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKnowledgeQuestionInvoker) Invoke() (*model.DeleteKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKnowledgeQuestionResponse), nil
+	}
+}
+
+type ListKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKnowledgeQuestionInvoker) Invoke() (*model.ListKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKnowledgeQuestionResponse), nil
+	}
+}
+
+type ShowKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKnowledgeQuestionInvoker) Invoke() (*model.ShowKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKnowledgeQuestionResponse), nil
+	}
+}
+
+type UpdateBatchKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBatchKnowledgeQuestionInvoker) Invoke() (*model.UpdateBatchKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBatchKnowledgeQuestionResponse), nil
+	}
+}
+
+type UpdateKnowledgeQuestionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKnowledgeQuestionInvoker) Invoke() (*model.UpdateKnowledgeQuestionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKnowledgeQuestionResponse), nil
+	}
+}
+
+type CreateKnowledgeSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKnowledgeSkillInvoker) Invoke() (*model.CreateKnowledgeSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKnowledgeSkillResponse), nil
+	}
+}
+
+type DeleteKnowledgeSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKnowledgeSkillInvoker) Invoke() (*model.DeleteKnowledgeSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKnowledgeSkillResponse), nil
+	}
+}
+
+type ExportKnowledgeSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportKnowledgeSkillInvoker) Invoke() (*model.ExportKnowledgeSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportKnowledgeSkillResponse), nil
+	}
+}
+
+type ListKnowledgeSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKnowledgeSkillInvoker) Invoke() (*model.ListKnowledgeSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKnowledgeSkillResponse), nil
+	}
+}
+
+type ShowKnowledgeSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKnowledgeSkillInvoker) Invoke() (*model.ShowKnowledgeSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKnowledgeSkillResponse), nil
+	}
+}
+
+type UpdateKnowledgeSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKnowledgeSkillInvoker) Invoke() (*model.UpdateKnowledgeSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKnowledgeSkillResponse), nil
 	}
 }
 
@@ -1250,5 +1550,89 @@ func (i *UpdateVideoScriptInvoker) Invoke() (*model.UpdateVideoScriptResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateVideoScriptResponse), nil
+	}
+}
+
+type CreateWelcomeSpeechInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateWelcomeSpeechInvoker) Invoke() (*model.CreateWelcomeSpeechResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateWelcomeSpeechResponse), nil
+	}
+}
+
+type DeleteWelcomeSpeechInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWelcomeSpeechInvoker) Invoke() (*model.DeleteWelcomeSpeechResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWelcomeSpeechResponse), nil
+	}
+}
+
+type ListWelcomeSpeechInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWelcomeSpeechInvoker) Invoke() (*model.ListWelcomeSpeechResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWelcomeSpeechResponse), nil
+	}
+}
+
+type ShowWelcomeSpeechInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWelcomeSpeechInvoker) Invoke() (*model.ShowWelcomeSpeechResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWelcomeSpeechResponse), nil
+	}
+}
+
+type ShowWelcomeSpeechSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWelcomeSpeechSwitchInvoker) Invoke() (*model.ShowWelcomeSpeechSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWelcomeSpeechSwitchResponse), nil
+	}
+}
+
+type UpdateWelcomeSpeechInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWelcomeSpeechInvoker) Invoke() (*model.UpdateWelcomeSpeechResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWelcomeSpeechResponse), nil
+	}
+}
+
+type UpdateWelcomeSpeechSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWelcomeSpeechSwitchInvoker) Invoke() (*model.UpdateWelcomeSpeechSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWelcomeSpeechSwitchResponse), nil
 	}
 }
