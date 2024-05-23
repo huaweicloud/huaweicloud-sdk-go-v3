@@ -1025,6 +1025,18 @@ func (i *ShowModifyHistoryInvoker) Invoke() (*model.ShowModifyHistoryResponse, e
 	}
 }
 
+type ShowPasswordlessConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPasswordlessConfigInvoker) Invoke() (*model.ShowPasswordlessConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPasswordlessConfigResponse), nil
+	}
+}
+
 type ShowPauseResumeStutusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1058,6 +1070,18 @@ func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
+type ShowRedisBigKeysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRedisBigKeysInvoker) Invoke() (*model.ShowRedisBigKeysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRedisBigKeysResponse), nil
 	}
 }
 
@@ -1226,6 +1250,18 @@ func (i *UpdateInstanceNameInvoker) Invoke() (*model.UpdateInstanceNameResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceNameResponse), nil
+	}
+}
+
+type UpdatePasswordlessConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePasswordlessConfigInvoker) Invoke() (*model.UpdatePasswordlessConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePasswordlessConfigResponse), nil
 	}
 }
 

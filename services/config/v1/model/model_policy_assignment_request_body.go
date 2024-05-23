@@ -33,6 +33,8 @@ type PolicyAssignmentRequestBody struct {
 
 	// 规则参数
 	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
+
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o PolicyAssignmentRequestBody) String() string {

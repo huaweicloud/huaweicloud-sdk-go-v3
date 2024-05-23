@@ -17,6 +17,12 @@ type HuaweiEiCbs struct {
 
 	// CBS所在区域的projectId
 	CbsProjectId *string `json:"cbs_project_id,omitempty"`
+
+	// SIS所在区域
+	SisRegion *int32 `json:"sis_region,omitempty"`
+
+	// SIS所在区域的projectId
+	SisProjectId *string `json:"sis_project_id,omitempty"`
 }
 
 func (o HuaweiEiCbs) String() string {

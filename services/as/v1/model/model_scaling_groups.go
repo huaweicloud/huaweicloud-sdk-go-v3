@@ -106,6 +106,9 @@ type ScalingGroups struct {
 
 	// 伸缩组描述信息
 	Description *string `json:"description,omitempty"`
+
+	// 添加到伸缩组的标签。
+	Tags *[]TagsSingleValue `json:"tags,omitempty"`
 }
 
 func (o ScalingGroups) String() string {

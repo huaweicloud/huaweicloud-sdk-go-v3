@@ -67,7 +67,10 @@ type UpdateSecurityPermissionSetPermissionResponse struct {
 	SyncStatus *UpdateSecurityPermissionSetPermissionResponseSyncStatus `json:"sync_status,omitempty"`
 
 	// 同步信息
-	SyncMsg        *string `json:"sync_msg,omitempty"`
+	SyncMsg *string `json:"sync_msg,omitempty"`
+
+	// url路径名称。
+	Url            *string `json:"url,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

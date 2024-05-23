@@ -17,6 +17,9 @@ type IflytekAiuiConfig struct {
 
 	// AIUI API密钥。
 	ApiSecret *string `json:"api_secret,omitempty"`
+
+	// 是否为正式环境
+	IsProduction *bool `json:"is_production,omitempty"`
 }
 
 func (o IflytekAiuiConfig) String() string {

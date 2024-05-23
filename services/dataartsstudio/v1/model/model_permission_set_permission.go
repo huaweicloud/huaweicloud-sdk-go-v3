@@ -67,6 +67,9 @@ type PermissionSetPermission struct {
 
 	// 同步信息
 	SyncMsg *string `json:"sync_msg,omitempty"`
+
+	// url路径名称。
+	Url *string `json:"url,omitempty"`
 }
 
 func (o PermissionSetPermission) String() string {

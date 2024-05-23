@@ -17,6 +17,12 @@ type MobvoiConfig struct {
 
 	// 奇妙问角色ID。
 	RoleId *string `json:"role_id,omitempty"`
+
+	// SIS所在区域
+	SisRegion *int32 `json:"sis_region,omitempty"`
+
+	// SIS所在区域的projectId
+	SisProjectId *string `json:"sis_project_id,omitempty"`
 }
 
 func (o MobvoiConfig) String() string {

@@ -1807,6 +1807,27 @@ func (c *GaussDBforNoSQLClient) ShowModifyHistoryInvoker(request *model.ShowModi
 	return &ShowModifyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPasswordlessConfig 获取GeminiDB Redis的免密配置
+//
+// 获取GeminiDB Redis的免密配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowPasswordlessConfig(request *model.ShowPasswordlessConfigRequest) (*model.ShowPasswordlessConfigResponse, error) {
+	requestDef := GenReqDefForShowPasswordlessConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPasswordlessConfigResponse), nil
+	}
+}
+
+// ShowPasswordlessConfigInvoker 获取GeminiDB Redis的免密配置
+func (c *GaussDBforNoSQLClient) ShowPasswordlessConfigInvoker(request *model.ShowPasswordlessConfigRequest) *ShowPasswordlessConfigInvoker {
+	requestDef := GenReqDefForShowPasswordlessConfig()
+	return &ShowPasswordlessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPauseResumeStutus 获取容灾实例数据同步状态
 //
 // 获取容灾实例数据同步状态，主备实例id，数据同步指标值，以及倒换和切换场景下的RPO，RTO指标值。
@@ -1868,6 +1889,27 @@ func (c *GaussDBforNoSQLClient) ShowRecyclePolicy(request *model.ShowRecyclePoli
 func (c *GaussDBforNoSQLClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyRequest) *ShowRecyclePolicyInvoker {
 	requestDef := GenReqDefForShowRecyclePolicy()
 	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRedisBigKeys 查询Redis实例的大key
+//
+// 支持查询Redis实例的大key。value长度大于bigkeys-string-threshold参数的string类型的key或者元素数大于bigkeys-composite-threshold参数的hash/list/zset/set/stream类型key，会被判断为大key。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRedisBigKeys(request *model.ShowRedisBigKeysRequest) (*model.ShowRedisBigKeysResponse, error) {
+	requestDef := GenReqDefForShowRedisBigKeys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRedisBigKeysResponse), nil
+	}
+}
+
+// ShowRedisBigKeysInvoker 查询Redis实例的大key
+func (c *GaussDBforNoSQLClient) ShowRedisBigKeysInvoker(request *model.ShowRedisBigKeysRequest) *ShowRedisBigKeysInvoker {
+	requestDef := GenReqDefForShowRedisBigKeys()
+	return &ShowRedisBigKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRestorableList 查询可恢复的实例列表
@@ -2162,6 +2204,27 @@ func (c *GaussDBforNoSQLClient) UpdateInstanceName(request *model.UpdateInstance
 func (c *GaussDBforNoSQLClient) UpdateInstanceNameInvoker(request *model.UpdateInstanceNameRequest) *UpdateInstanceNameInvoker {
 	requestDef := GenReqDefForUpdateInstanceName()
 	return &UpdateInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePasswordlessConfig 支持修改GeminiDB Redis的免密配置
+//
+// 支持修改GeminiDB Redis的免密配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdatePasswordlessConfig(request *model.UpdatePasswordlessConfigRequest) (*model.UpdatePasswordlessConfigResponse, error) {
+	requestDef := GenReqDefForUpdatePasswordlessConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePasswordlessConfigResponse), nil
+	}
+}
+
+// UpdatePasswordlessConfigInvoker 支持修改GeminiDB Redis的免密配置
+func (c *GaussDBforNoSQLClient) UpdatePasswordlessConfigInvoker(request *model.UpdatePasswordlessConfigRequest) *UpdatePasswordlessConfigInvoker {
+	requestDef := GenReqDefForUpdatePasswordlessConfig()
+	return &UpdatePasswordlessConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityGroup 变更实例安全组

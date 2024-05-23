@@ -35,7 +35,7 @@ type PermissionSetPermissionCreateDto struct {
 	// 模式名称
 	SchemaName *string `json:"schema_name,omitempty"`
 
-	// 命名空间
+	// 命名空间。无效参数，待下线。
 	Namespace *string `json:"namespace,omitempty"`
 
 	// 表名称
@@ -44,8 +44,11 @@ type PermissionSetPermissionCreateDto struct {
 	// 列名称
 	ColumnName *string `json:"column_name,omitempty"`
 
-	// 行级策略
+	// 行级策略。无效参数，待下线。
 	RowLevelSecurity *string `json:"row_level_security,omitempty"`
+
+	// url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+	Url *string `json:"url,omitempty"`
 }
 
 func (o PermissionSetPermissionCreateDto) String() string {

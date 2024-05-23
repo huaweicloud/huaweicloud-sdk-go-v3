@@ -77,6 +77,42 @@ func (i *UpdateActiveCodeInvoker) Invoke() (*model.UpdateActiveCodeResponse, err
 	}
 }
 
+type CreateAgencyWithRoleTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyWithRoleTypeInvoker) Invoke() (*model.CreateAgencyWithRoleTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyWithRoleTypeResponse), nil
+	}
+}
+
+type DeleteAgencyWithRoleTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgencyWithRoleTypeInvoker) Invoke() (*model.DeleteAgencyWithRoleTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAgencyWithRoleTypeResponse), nil
+	}
+}
+
+type ShowAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyResponse), nil
+	}
+}
+
 type CreateDialogUrlInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -506,6 +542,90 @@ func (i *UpdateHotQuestionInvoker) Invoke() (*model.UpdateHotQuestionResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateHotQuestionResponse), nil
+	}
+}
+
+type CreateHotWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHotWordsInvoker) Invoke() (*model.CreateHotWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHotWordsResponse), nil
+	}
+}
+
+type DeleteHotWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHotWordsInvoker) Invoke() (*model.DeleteHotWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHotWordsResponse), nil
+	}
+}
+
+type ListHotWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHotWordsInvoker) Invoke() (*model.ListHotWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHotWordsResponse), nil
+	}
+}
+
+type ShowHotWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHotWordsInvoker) Invoke() (*model.ShowHotWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHotWordsResponse), nil
+	}
+}
+
+type ShowHotWordsSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHotWordsSwitchInvoker) Invoke() (*model.ShowHotWordsSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHotWordsSwitchResponse), nil
+	}
+}
+
+type UpdateHotWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHotWordsInvoker) Invoke() (*model.UpdateHotWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHotWordsResponse), nil
+	}
+}
+
+type UpdateHotWordsSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHotWordsSwitchInvoker) Invoke() (*model.UpdateHotWordsSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHotWordsSwitchResponse), nil
 	}
 }
 
@@ -998,18 +1118,6 @@ func (i *StopSmartLiveInvoker) Invoke() (*model.StopSmartLiveResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopSmartLiveResponse), nil
-	}
-}
-
-type CheckTextLanguageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CheckTextLanguageInvoker) Invoke() (*model.CheckTextLanguageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckTextLanguageResponse), nil
 	}
 }
 

@@ -17,6 +17,18 @@ func (i *BatchCreateInstanceTagInvoker) Invoke() (*model.BatchCreateInstanceTagR
 	}
 }
 
+type ChangeInstanceTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeInstanceTypeInvoker) Invoke() (*model.ChangeInstanceTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeInstanceTypeResponse), nil
+	}
+}
+
 type CountInstancesByTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *LoginInstanceInvoker) Invoke() (*model.LoginInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.LoginInstanceResponse), nil
+	}
+}
+
+type LoginInstanceAdminInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LoginInstanceAdminInvoker) Invoke() (*model.LoginInstanceAdminResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LoginInstanceAdminResponse), nil
 	}
 }
 
@@ -302,6 +326,18 @@ func (i *StopInstanceInvoker) Invoke() (*model.StopInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopInstanceResponse), nil
+	}
+}
+
+type SwitchInstanceVpcInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchInstanceVpcInvoker) Invoke() (*model.SwitchInstanceVpcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchInstanceVpcResponse), nil
 	}
 }
 

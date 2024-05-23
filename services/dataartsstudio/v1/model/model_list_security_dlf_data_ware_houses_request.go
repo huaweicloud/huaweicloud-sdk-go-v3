@@ -11,6 +11,12 @@ type ListSecurityDlfDataWareHousesRequest struct {
 
 	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
+
+	// offset
+	Offset *int32 `json:"offset,omitempty"`
+
+	// limit
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListSecurityDlfDataWareHousesRequest) String() string {

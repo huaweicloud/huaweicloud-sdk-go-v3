@@ -80,6 +80,9 @@ type CreateScalingGroupOption struct {
 
 	// 伸缩组描述信息(0-256个字符)
 	Description *string `json:"description,omitempty"`
+
+	// 创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
+	Tags *[]TagsSingleValue `json:"tags,omitempty"`
 }
 
 func (o CreateScalingGroupOption) String() string {

@@ -20,6 +20,9 @@ type CreateRobotReq struct {
 
 	Language *LanguageEnum `json:"language,omitempty"`
 
+	// 语音识别后端点静音时长默认500ms
+	TailSilenceTime *int32 `json:"tail_silence_time,omitempty"`
+
 	HuaweiEiCbs *HuaweiEiCbs `json:"huawei_ei_cbs,omitempty"`
 
 	IflytekAiuiConfig *IflytekAiuiConfig `json:"iflytek_aiui_config,omitempty"`

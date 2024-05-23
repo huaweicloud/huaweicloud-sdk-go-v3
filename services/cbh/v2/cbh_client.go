@@ -40,6 +40,27 @@ func (c *CbhClient) BatchCreateInstanceTagInvoker(request *model.BatchCreateInst
 	return &BatchCreateInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeInstanceType 修改单机堡垒机实例类型
+//
+// 修改单机堡垒机实例类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbhClient) ChangeInstanceType(request *model.ChangeInstanceTypeRequest) (*model.ChangeInstanceTypeResponse, error) {
+	requestDef := GenReqDefForChangeInstanceType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeInstanceTypeResponse), nil
+	}
+}
+
+// ChangeInstanceTypeInvoker 修改单机堡垒机实例类型
+func (c *CbhClient) ChangeInstanceTypeInvoker(request *model.ChangeInstanceTypeRequest) *ChangeInstanceTypeInvoker {
+	requestDef := GenReqDefForChangeInstanceType()
+	return &ChangeInstanceTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountInstancesByTag 统计符合标签条件的实例数量
 //
 // 统计符合标签条件的实例数量。
@@ -248,6 +269,27 @@ func (c *CbhClient) LoginInstance(request *model.LoginInstanceRequest) (*model.L
 func (c *CbhClient) LoginInstanceInvoker(request *model.LoginInstanceRequest) *LoginInstanceInvoker {
 	requestDef := GenReqDefForLoginInstance()
 	return &LoginInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// LoginInstanceAdmin 用户登录堡垒机实例admin的console
+//
+// 用户登录堡垒机实例admin的console。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbhClient) LoginInstanceAdmin(request *model.LoginInstanceAdminRequest) (*model.LoginInstanceAdminResponse, error) {
+	requestDef := GenReqDefForLoginInstanceAdmin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LoginInstanceAdminResponse), nil
+	}
+}
+
+// LoginInstanceAdminInvoker 用户登录堡垒机实例admin的console
+func (c *CbhClient) LoginInstanceAdminInvoker(request *model.LoginInstanceAdminRequest) *LoginInstanceAdminInvoker {
+	requestDef := GenReqDefForLoginInstanceAdmin()
+	return &LoginInstanceAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RebootInstance 重启堡垒机实例
@@ -542,6 +584,27 @@ func (c *CbhClient) StopInstance(request *model.StopInstanceRequest) (*model.Sto
 func (c *CbhClient) StopInstanceInvoker(request *model.StopInstanceRequest) *StopInstanceInvoker {
 	requestDef := GenReqDefForStopInstance()
 	return &StopInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchInstanceVpc 切换堡垒机虚拟私有云
+//
+// 切换堡垒机虚拟私有云
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbhClient) SwitchInstanceVpc(request *model.SwitchInstanceVpcRequest) (*model.SwitchInstanceVpcResponse, error) {
+	requestDef := GenReqDefForSwitchInstanceVpc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchInstanceVpcResponse), nil
+	}
+}
+
+// SwitchInstanceVpcInvoker 切换堡垒机虚拟私有云
+func (c *CbhClient) SwitchInstanceVpcInvoker(request *model.SwitchInstanceVpcRequest) *SwitchInstanceVpcInvoker {
+	requestDef := GenReqDefForSwitchInstanceVpc()
+	return &SwitchInstanceVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UninstallInstanceEip 堡垒机实例解绑弹性公网IP

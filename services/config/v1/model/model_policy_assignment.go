@@ -46,6 +46,8 @@ type PolicyAssignment struct {
 	// 规则参数
 	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
 
+	Tags *[]ResourceTag `json:"tags,omitempty"`
+
 	// 规则的创建者
 	CreatedBy *string `json:"created_by,omitempty"`
 }

@@ -733,10 +733,6 @@ func GenReqDefForShowMonitorItemDetail() *def.HttpRequestDef {
 		WithJsonTag("x-business-id").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

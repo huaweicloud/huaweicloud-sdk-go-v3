@@ -1762,6 +1762,132 @@ func (c *ConfigClient) ShowTrackedResourceDetailInvoker(request *model.ShowTrack
 	return &ShowTrackedResourceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountResourcesByTag 查询资源实例数量
+//
+// 使用标签过滤实例，标签管理服务需要提供按标签过滤各服务实例并汇总显示在列表中，需要各服务提供查询能力。注意：tags, tags_any, not_tags, not_tags_any等字段支持的tag的数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CountResourcesByTag(request *model.CountResourcesByTagRequest) (*model.CountResourcesByTagResponse, error) {
+	requestDef := GenReqDefForCountResourcesByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountResourcesByTagResponse), nil
+	}
+}
+
+// CountResourcesByTagInvoker 查询资源实例数量
+func (c *ConfigClient) CountResourcesByTagInvoker(request *model.CountResourcesByTagRequest) *CountResourcesByTagInvoker {
+	requestDef := GenReqDefForCountResourcesByTag()
+	return &CountResourcesByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourcesByTag 查询资源实例列表
+//
+// 使用标签过滤实例，标签管理服务需要提供按标签过滤各服务实例并汇总显示在列表中，需要各服务提供查询能力。注意：tags, tags_any, not_tags, not_tags_any等字段支持的tag的数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListResourcesByTag(request *model.ListResourcesByTagRequest) (*model.ListResourcesByTagResponse, error) {
+	requestDef := GenReqDefForListResourcesByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesByTagResponse), nil
+	}
+}
+
+// ListResourcesByTagInvoker 查询资源实例列表
+func (c *ConfigClient) ListResourcesByTagInvoker(request *model.ListResourcesByTagRequest) *ListResourcesByTagInvoker {
+	requestDef := GenReqDefForListResourcesByTag()
+	return &ListResourcesByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTagsForResource 查询资源标签
+//
+// 查询指定实例的标签信息。标签管理服务需要使用该接口查询指定实例的全部标签数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListTagsForResource(request *model.ListTagsForResourceRequest) (*model.ListTagsForResourceResponse, error) {
+	requestDef := GenReqDefForListTagsForResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsForResourceResponse), nil
+	}
+}
+
+// ListTagsForResourceInvoker 查询资源标签
+func (c *ConfigClient) ListTagsForResourceInvoker(request *model.ListTagsForResourceRequest) *ListTagsForResourceInvoker {
+	requestDef := GenReqDefForListTagsForResource()
+	return &ListTagsForResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTagsForResourceType 查询项目标签
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合。标签管理服务需要能够列出当前租户全部已使用的资源标签集合，为各服务Console打资源标签和过滤实例时提供标签联想功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListTagsForResourceType(request *model.ListTagsForResourceTypeRequest) (*model.ListTagsForResourceTypeResponse, error) {
+	requestDef := GenReqDefForListTagsForResourceType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsForResourceTypeResponse), nil
+	}
+}
+
+// ListTagsForResourceTypeInvoker 查询项目标签
+func (c *ConfigClient) ListTagsForResourceTypeInvoker(request *model.ListTagsForResourceTypeRequest) *ListTagsForResourceTypeInvoker {
+	requestDef := GenReqDefForListTagsForResourceType()
+	return &ListTagsForResourceTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TagResource 批量添加资源标签
+//
+// 此接口为幂等接口。为指定实例批量添加或删除标签，标签管理服务需要使用该接口批量管理实例的标签。一个资源上最多有20个标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) TagResource(request *model.TagResourceRequest) (*model.TagResourceResponse, error) {
+	requestDef := GenReqDefForTagResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TagResourceResponse), nil
+	}
+}
+
+// TagResourceInvoker 批量添加资源标签
+func (c *ConfigClient) TagResourceInvoker(request *model.TagResourceRequest) *TagResourceInvoker {
+	requestDef := GenReqDefForTagResource()
+	return &TagResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnTagResource 批量删除资源标签
+//
+// 此接口为幂等接口。为指定实例批量添加或删除标签，标签管理服务需要使用该接口批量管理实例的标签。一个资源上最多有20个标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) UnTagResource(request *model.UnTagResourceRequest) (*model.UnTagResourceResponse, error) {
+	requestDef := GenReqDefForUnTagResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnTagResourceResponse), nil
+	}
+}
+
+// UnTagResourceInvoker 批量删除资源标签
+func (c *ConfigClient) UnTagResourceInvoker(request *model.UnTagResourceRequest) *UnTagResourceInvoker {
+	requestDef := GenReqDefForUnTagResource()
+	return &UnTagResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTrackerConfig 创建或更新记录器
 //
 // 创建或更新资源记录器，只能存在一个资源记录器

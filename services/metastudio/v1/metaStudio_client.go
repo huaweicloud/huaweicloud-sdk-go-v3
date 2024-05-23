@@ -145,6 +145,69 @@ func (c *MetaStudioClient) UpdateActiveCodeInvoker(request *model.UpdateActiveCo
 	return &UpdateActiveCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAgencyWithRoleType 创建委托
+//
+// 该接口用于创建委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateAgencyWithRoleType(request *model.CreateAgencyWithRoleTypeRequest) (*model.CreateAgencyWithRoleTypeResponse, error) {
+	requestDef := GenReqDefForCreateAgencyWithRoleType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyWithRoleTypeResponse), nil
+	}
+}
+
+// CreateAgencyWithRoleTypeInvoker 创建委托
+func (c *MetaStudioClient) CreateAgencyWithRoleTypeInvoker(request *model.CreateAgencyWithRoleTypeRequest) *CreateAgencyWithRoleTypeInvoker {
+	requestDef := GenReqDefForCreateAgencyWithRoleType()
+	return &CreateAgencyWithRoleTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAgencyWithRoleType 删除委托
+//
+// 该接口用于删除项目下委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteAgencyWithRoleType(request *model.DeleteAgencyWithRoleTypeRequest) (*model.DeleteAgencyWithRoleTypeResponse, error) {
+	requestDef := GenReqDefForDeleteAgencyWithRoleType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAgencyWithRoleTypeResponse), nil
+	}
+}
+
+// DeleteAgencyWithRoleTypeInvoker 删除委托
+func (c *MetaStudioClient) DeleteAgencyWithRoleTypeInvoker(request *model.DeleteAgencyWithRoleTypeRequest) *DeleteAgencyWithRoleTypeInvoker {
+	requestDef := GenReqDefForDeleteAgencyWithRoleType()
+	return &DeleteAgencyWithRoleTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgency 查询委托
+//
+// 该接口用于查询项目下委托
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
+	requestDef := GenReqDefForShowAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyResponse), nil
+	}
+}
+
+// ShowAgencyInvoker 查询委托
+func (c *MetaStudioClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *ShowAgencyInvoker {
+	requestDef := GenReqDefForShowAgency()
+	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDialogUrl 创建对话链接
 //
 // 该接口用于创建对话链接。
@@ -902,6 +965,153 @@ func (c *MetaStudioClient) UpdateHotQuestion(request *model.UpdateHotQuestionReq
 func (c *MetaStudioClient) UpdateHotQuestionInvoker(request *model.UpdateHotQuestionRequest) *UpdateHotQuestionInvoker {
 	requestDef := GenReqDefForUpdateHotQuestion()
 	return &UpdateHotQuestionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHotWords 创建热词记录
+//
+// 该接口用于创建热词记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateHotWords(request *model.CreateHotWordsRequest) (*model.CreateHotWordsResponse, error) {
+	requestDef := GenReqDefForCreateHotWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHotWordsResponse), nil
+	}
+}
+
+// CreateHotWordsInvoker 创建热词记录
+func (c *MetaStudioClient) CreateHotWordsInvoker(request *model.CreateHotWordsRequest) *CreateHotWordsInvoker {
+	requestDef := GenReqDefForCreateHotWords()
+	return &CreateHotWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHotWords 删除热词记录
+//
+// 该接口用于删除热词记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteHotWords(request *model.DeleteHotWordsRequest) (*model.DeleteHotWordsResponse, error) {
+	requestDef := GenReqDefForDeleteHotWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHotWordsResponse), nil
+	}
+}
+
+// DeleteHotWordsInvoker 删除热词记录
+func (c *MetaStudioClient) DeleteHotWordsInvoker(request *model.DeleteHotWordsRequest) *DeleteHotWordsInvoker {
+	requestDef := GenReqDefForDeleteHotWords()
+	return &DeleteHotWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHotWords 查询热词记录列表
+//
+// 该接口用于查询热词记录列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListHotWords(request *model.ListHotWordsRequest) (*model.ListHotWordsResponse, error) {
+	requestDef := GenReqDefForListHotWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHotWordsResponse), nil
+	}
+}
+
+// ListHotWordsInvoker 查询热词记录列表
+func (c *MetaStudioClient) ListHotWordsInvoker(request *model.ListHotWordsRequest) *ListHotWordsInvoker {
+	requestDef := GenReqDefForListHotWords()
+	return &ListHotWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHotWords 查询配置热词记录详情
+//
+// 该接口用于查询热词记录详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowHotWords(request *model.ShowHotWordsRequest) (*model.ShowHotWordsResponse, error) {
+	requestDef := GenReqDefForShowHotWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHotWordsResponse), nil
+	}
+}
+
+// ShowHotWordsInvoker 查询配置热词记录详情
+func (c *MetaStudioClient) ShowHotWordsInvoker(request *model.ShowHotWordsRequest) *ShowHotWordsInvoker {
+	requestDef := GenReqDefForShowHotWords()
+	return &ShowHotWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHotWordsSwitch 查询热词功能开关
+//
+// 该接口用于查询热词功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowHotWordsSwitch(request *model.ShowHotWordsSwitchRequest) (*model.ShowHotWordsSwitchResponse, error) {
+	requestDef := GenReqDefForShowHotWordsSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHotWordsSwitchResponse), nil
+	}
+}
+
+// ShowHotWordsSwitchInvoker 查询热词功能开关
+func (c *MetaStudioClient) ShowHotWordsSwitchInvoker(request *model.ShowHotWordsSwitchRequest) *ShowHotWordsSwitchInvoker {
+	requestDef := GenReqDefForShowHotWordsSwitch()
+	return &ShowHotWordsSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHotWords 修改热词记录
+//
+// 该接口用于修改热词记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateHotWords(request *model.UpdateHotWordsRequest) (*model.UpdateHotWordsResponse, error) {
+	requestDef := GenReqDefForUpdateHotWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHotWordsResponse), nil
+	}
+}
+
+// UpdateHotWordsInvoker 修改热词记录
+func (c *MetaStudioClient) UpdateHotWordsInvoker(request *model.UpdateHotWordsRequest) *UpdateHotWordsInvoker {
+	requestDef := GenReqDefForUpdateHotWords()
+	return &UpdateHotWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHotWordsSwitch 修改热词功能开关
+//
+// 该接口用于修改热词功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateHotWordsSwitch(request *model.UpdateHotWordsSwitchRequest) (*model.UpdateHotWordsSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateHotWordsSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHotWordsSwitchResponse), nil
+	}
+}
+
+// UpdateHotWordsSwitchInvoker 修改热词功能开关
+func (c *MetaStudioClient) UpdateHotWordsSwitchInvoker(request *model.UpdateHotWordsSwitchRequest) *UpdateHotWordsSwitchInvoker {
+	requestDef := GenReqDefForUpdateHotWordsSwitch()
+	return &UpdateHotWordsSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateIntentAndQuestion 创建知识库意图和问法
@@ -1764,27 +1974,6 @@ func (c *MetaStudioClient) StopSmartLive(request *model.StopSmartLiveRequest) (*
 func (c *MetaStudioClient) StopSmartLiveInvoker(request *model.StopSmartLiveRequest) *StopSmartLiveInvoker {
 	requestDef := GenReqDefForStopSmartLive()
 	return &StopSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CheckTextLanguage 检测音色与文本的语言一致性
-//
-// 检测音色与文本的语言一致性，音色与文本不一致会导致报错
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CheckTextLanguage(request *model.CheckTextLanguageRequest) (*model.CheckTextLanguageResponse, error) {
-	requestDef := GenReqDefForCheckTextLanguage()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckTextLanguageResponse), nil
-	}
-}
-
-// CheckTextLanguageInvoker 检测音色与文本的语言一致性
-func (c *MetaStudioClient) CheckTextLanguageInvoker(request *model.CheckTextLanguageRequest) *CheckTextLanguageInvoker {
-	requestDef := GenReqDefForCheckTextLanguage()
-	return &CheckTextLanguageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInteractionRuleGroup 创建智能直播间互动规则库

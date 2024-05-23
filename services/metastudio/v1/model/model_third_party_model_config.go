@@ -23,6 +23,12 @@ type ThirdPartyModelConfig struct {
 
 	// 支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
 	ChatRounds *int32 `json:"chat_rounds,omitempty"`
+
+	// SIS所在区域
+	SisRegion *int32 `json:"sis_region,omitempty"`
+
+	// SIS所在区域的projectId
+	SisProjectId *string `json:"sis_project_id,omitempty"`
 }
 
 func (o ThirdPartyModelConfig) String() string {

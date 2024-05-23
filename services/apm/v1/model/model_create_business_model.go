@@ -14,8 +14,8 @@ type CreateBusinessModel struct {
 	// 应用名字
 	Name string `json:"name"`
 
-	// 企业项目ID
-	EpsId string `json:"eps_id"`
+	// 企业项目ID，默认值为“0”，表示默认项目的ID。
+	EpsId *string `json:"eps_id,omitempty"`
 
 	// CMDB树显示的名称
 	DisplayName string `json:"display_name"`
@@ -23,8 +23,8 @@ type CreateBusinessModel struct {
 	// 描述
 	Descp string `json:"descp"`
 
-	// 新建类型
-	CmdbDatasourceType CreateBusinessModelCmdbDatasourceType `json:"cmdb_datasource_type"`
+	// 默认值为SKYWALKING。
+	CmdbDatasourceType *CreateBusinessModelCmdbDatasourceType `json:"cmdb_datasource_type,omitempty"`
 }
 
 func (o CreateBusinessModel) String() string {

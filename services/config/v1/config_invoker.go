@@ -1001,6 +1001,78 @@ func (i *ShowTrackedResourceDetailInvoker) Invoke() (*model.ShowTrackedResourceD
 	}
 }
 
+type CountResourcesByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountResourcesByTagInvoker) Invoke() (*model.CountResourcesByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountResourcesByTagResponse), nil
+	}
+}
+
+type ListResourcesByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesByTagInvoker) Invoke() (*model.ListResourcesByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourcesByTagResponse), nil
+	}
+}
+
+type ListTagsForResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTagsForResourceInvoker) Invoke() (*model.ListTagsForResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTagsForResourceResponse), nil
+	}
+}
+
+type ListTagsForResourceTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTagsForResourceTypeInvoker) Invoke() (*model.ListTagsForResourceTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTagsForResourceTypeResponse), nil
+	}
+}
+
+type TagResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TagResourceInvoker) Invoke() (*model.TagResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TagResourceResponse), nil
+	}
+}
+
+type UnTagResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnTagResourceInvoker) Invoke() (*model.UnTagResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnTagResourceResponse), nil
+	}
+}
+
 type CreateTrackerConfigInvoker struct {
 	*invoker.BaseInvoker
 }

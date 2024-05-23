@@ -50,6 +50,9 @@ type ListDigitalHumanVideoRequest struct {
 
 	// 任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
 	JobType *string `json:"job_type,omitempty"`
+
+	// 任务ID。
+	JobId *string `json:"job_id,omitempty"`
 }
 
 func (o ListDigitalHumanVideoRequest) String() string {
