@@ -19,6 +19,28 @@ func CphClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddImageMember 共享镜像给指定账号
+//
+// 镜像共享,共享镜像给指定账号。
+// - 镜像只能共享给同region下的其他华为云账号(project_id)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) AddImageMember(request *model.AddImageMemberRequest) (*model.AddImageMemberResponse, error) {
+	requestDef := GenReqDefForAddImageMember()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddImageMemberResponse), nil
+	}
+}
+
+// AddImageMemberInvoker 共享镜像给指定账号
+func (c *CphClient) AddImageMemberInvoker(request *model.AddImageMemberRequest) *AddImageMemberInvoker {
+	requestDef := GenReqDefForAddImageMember()
+	return &AddImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateTags 批量添加标签
 //
 // 批量添加标签。
@@ -103,6 +125,27 @@ func (c *CphClient) BatchImportCloudPhoneData(request *model.BatchImportCloudPho
 func (c *CphClient) BatchImportCloudPhoneDataInvoker(request *model.BatchImportCloudPhoneDataRequest) *BatchImportCloudPhoneDataInvoker {
 	requestDef := GenReqDefForBatchImportCloudPhoneData()
 	return &BatchImportCloudPhoneDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchShowPhoneConnectInfos 获取云手机连接信息
+//
+// 获取云手机连接信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) BatchShowPhoneConnectInfos(request *model.BatchShowPhoneConnectInfosRequest) (*model.BatchShowPhoneConnectInfosResponse, error) {
+	requestDef := GenReqDefForBatchShowPhoneConnectInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowPhoneConnectInfosResponse), nil
+	}
+}
+
+// BatchShowPhoneConnectInfosInvoker 获取云手机连接信息
+func (c *CphClient) BatchShowPhoneConnectInfosInvoker(request *model.BatchShowPhoneConnectInfosRequest) *BatchShowPhoneConnectInfosInvoker {
+	requestDef := GenReqDefForBatchShowPhoneConnectInfos()
+	return &BatchShowPhoneConnectInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeCloudPhoneServer 切换云手机服务器
@@ -193,6 +236,48 @@ func (c *CphClient) DeleteCloudPhoneServer(request *model.DeleteCloudPhoneServer
 func (c *CphClient) DeleteCloudPhoneServerInvoker(request *model.DeleteCloudPhoneServerRequest) *DeleteCloudPhoneServerInvoker {
 	requestDef := GenReqDefForDeleteCloudPhoneServer()
 	return &DeleteCloudPhoneServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteImage 删除镜像
+//
+// 删除镜像
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) DeleteImage(request *model.DeleteImageRequest) (*model.DeleteImageResponse, error) {
+	requestDef := GenReqDefForDeleteImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteImageResponse), nil
+	}
+}
+
+// DeleteImageInvoker 删除镜像
+func (c *CphClient) DeleteImageInvoker(request *model.DeleteImageRequest) *DeleteImageInvoker {
+	requestDef := GenReqDefForDeleteImage()
+	return &DeleteImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteImageMember 删除共享镜像
+//
+// 删除共享镜像
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) DeleteImageMember(request *model.DeleteImageMemberRequest) (*model.DeleteImageMemberResponse, error) {
+	requestDef := GenReqDefForDeleteImageMember()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteImageMemberResponse), nil
+	}
+}
+
+// DeleteImageMemberInvoker 删除共享镜像
+func (c *CphClient) DeleteImageMemberInvoker(request *model.DeleteImageMemberRequest) *DeleteImageMemberInvoker {
+	requestDef := GenReqDefForDeleteImageMember()
+	return &DeleteImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteShareApps 删除共享应用
@@ -382,6 +467,50 @@ func (c *CphClient) ListEncodeServers(request *model.ListEncodeServersRequest) (
 func (c *CphClient) ListEncodeServersInvoker(request *model.ListEncodeServersRequest) *ListEncodeServersInvoker {
 	requestDef := GenReqDefForListEncodeServers()
 	return &ListEncodeServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImageMembers 获取镜像已共享账号列表
+//
+// 获取镜像已共享账号列表
+// - 路径中的project_id为共享账号的租户id
+// - 路径中的image_id为共享账号的镜像id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListImageMembers(request *model.ListImageMembersRequest) (*model.ListImageMembersResponse, error) {
+	requestDef := GenReqDefForListImageMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageMembersResponse), nil
+	}
+}
+
+// ListImageMembersInvoker 获取镜像已共享账号列表
+func (c *CphClient) ListImageMembersInvoker(request *model.ListImageMembersRequest) *ListImageMembersInvoker {
+	requestDef := GenReqDefForListImageMembers()
+	return &ListImageMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImages 查询镜像列表
+//
+// 查询镜像列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListImages(request *model.ListImagesRequest) (*model.ListImagesResponse, error) {
+	requestDef := GenReqDefForListImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImagesResponse), nil
+	}
+}
+
+// ListImagesInvoker 查询镜像列表
+func (c *CphClient) ListImagesInvoker(request *model.ListImagesRequest) *ListImagesInvoker {
+	requestDef := GenReqDefForListImages()
+	return &ListImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListJobs 查询任务执行状态列表
@@ -619,7 +748,7 @@ func (c *CphClient) RestartEncodeServerInvoker(request *model.RestartEncodeServe
 
 // ShowBandwidthDetail 查询带宽信息
 //
-// 查询云手机使用的带宽信息。
+// 查询云手机使用的带宽信息，本接口只适用于使用系统定义网络的服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) ShowBandwidthDetail(request *model.ShowBandwidthDetailRequest) (*model.ShowBandwidthDetailResponse, error) {
@@ -724,7 +853,7 @@ func (c *CphClient) StopCloudPhoneInvoker(request *model.StopCloudPhoneRequest) 
 
 // UpdateBandwidth 修改共享带宽
 //
-// 修改云手机使用的共享带宽大小。
+// 修改云手机使用的共享带宽大小，本接口只适用于使用系统定义网络的服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*model.UpdateBandwidthResponse, error) {
@@ -830,7 +959,7 @@ func (c *CphClient) UpdateServerNameInvoker(request *model.UpdateServerNameReque
 // InstallApk 安装apk
 //
 // 在云手机中安装apk。系统会将指定的apk文件下载后直接安装到云手机中。
-// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk，如果一次传多个apk只有第一个安装成功；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 // - 管理面性能有限，对相同服务器批量执行的ADB命令，将会阻塞云手机其他任务执行。
 // - 建议通过开发应用市场的方式安装apk。允许安装的apk大小限制为2G（即不可将obs桶内大于2G的apk安装到手机中），超过限制将返回错误。
 //

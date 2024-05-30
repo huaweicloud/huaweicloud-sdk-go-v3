@@ -20,6 +20,9 @@ type UpgradeTypeInfo struct {
 
 	// 升级操作列表
 	UpgradeActionList *[]UpgradeActionInfo `json:"upgrade_action_list,omitempty"`
+
+	// 是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
+	IsParallelUpgrade *bool `json:"is_parallel_upgrade,omitempty"`
 }
 
 func (o UpgradeTypeInfo) String() string {

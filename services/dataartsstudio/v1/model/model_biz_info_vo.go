@@ -8,10 +8,12 @@ import (
 
 type BizInfoVo struct {
 
-	// 业务ID。
-	BizId int64 `json:"biz_id"`
+	// 业务ID，填写String类型替代Long类型。
+	BizId string `json:"biz_id"`
 
 	BizType *BizTypeEnum `json:"biz_type"`
+
+	EnvType *EnvTypeEnum `json:"env_type,omitempty"`
 }
 
 func (o BizInfoVo) String() string {

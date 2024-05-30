@@ -8,10 +8,8 @@ import (
 
 // ListConditionResponse Response Object
 type ListConditionResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ListConditionResultData `json:"data,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListConditionResponse) String() string {

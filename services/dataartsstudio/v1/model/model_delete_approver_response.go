@@ -8,10 +8,8 @@ import (
 
 // DeleteApproverResponse Response Object
 type DeleteApproverResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *DeleteResultData `json:"data,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o DeleteApproverResponse) String() string {

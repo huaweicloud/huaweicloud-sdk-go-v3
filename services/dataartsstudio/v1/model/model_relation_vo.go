@@ -9,14 +9,14 @@ import (
 
 type RelationVo struct {
 
-	// 编码。
-	Id *int64 `json:"id,omitempty"`
+	// 编码，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
-	// 源表ID。
-	SourceTableId *int64 `json:"source_table_id,omitempty"`
+	// 源表ID，填写String类型替代Long类型。
+	SourceTableId *string `json:"source_table_id,omitempty"`
 
-	// 目标表ID。
-	TargetTableId *int64 `json:"target_table_id,omitempty"`
+	// 目标表ID，填写String类型替代Long类型。
+	TargetTableId *string `json:"target_table_id,omitempty"`
 
 	// 关系名称。
 	Name string `json:"name"`
@@ -43,13 +43,13 @@ type RelationVo struct {
 	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 表属性信息。
+	// 表属性信息，只读。
 	Mappings *[]RelationMappingVo `json:"mappings,omitempty"`
 }
 

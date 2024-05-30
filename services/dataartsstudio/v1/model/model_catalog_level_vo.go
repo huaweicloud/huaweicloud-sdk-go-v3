@@ -8,10 +8,10 @@ import (
 
 type CatalogLevelVo struct {
 
-	// 编号。
-	Id *int64 `json:"id,omitempty"`
+	// 编号，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
-	// 层级。
+	// 层级。取值范围为1-7。
 	Level *int32 `json:"level,omitempty"`
 
 	// 中文名称。

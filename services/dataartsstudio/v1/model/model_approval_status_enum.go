@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ApprovalStatusEnum 业务审批状态。DEVELOPING(审核中)、APPROVED(审核通过)、REJECT(审核驳回)、WITHDREW(审核撤销)。
+// ApprovalStatusEnum 业务审批状态，只读。 枚举值：   - DEVELOPING: 审核中   - APPROVED: 审核通过   - REJECT: 审核驳回   - WITHDREW: 审核撤销
 type ApprovalStatusEnum struct {
 	value string
 }

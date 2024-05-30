@@ -1469,6 +1469,42 @@ func (i *ListDataArtsStudioInstancesInvoker) Invoke() (*model.ListDataArtsStudio
 	}
 }
 
+type ListDataServiceInstancesDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataServiceInstancesDetailInvoker) Invoke() (*model.ListDataServiceInstancesDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataServiceInstancesDetailResponse), nil
+	}
+}
+
+type ListDataServiceInstancesOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataServiceInstancesOverviewInvoker) Invoke() (*model.ListDataServiceInstancesOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataServiceInstancesOverviewResponse), nil
+	}
+}
+
+type ListDataServiceMarketApisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataServiceMarketApisInvoker) Invoke() (*model.ListDataServiceMarketApisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataServiceMarketApisResponse), nil
+	}
+}
+
 type ListDataTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2582,6 +2618,18 @@ func (i *ShowDataProfileInvoker) Invoke() (*model.ShowDataProfileResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowDataProfileResponse), nil
+	}
+}
+
+type ShowDataServiceInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataServiceInstanceInvoker) Invoke() (*model.ShowDataServiceInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataServiceInstanceResponse), nil
 	}
 }
 

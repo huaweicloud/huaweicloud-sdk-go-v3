@@ -8,10 +8,8 @@ import (
 
 // SearchDwByTypeResponse Response Object
 type SearchDwByTypeResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *SearchDwByTypeResultData `json:"data,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o SearchDwByTypeResponse) String() string {

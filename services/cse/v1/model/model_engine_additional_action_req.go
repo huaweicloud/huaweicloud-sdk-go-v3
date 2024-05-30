@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// EngineAdditionalActionReq 升级微服务引擎专享版请求体
+// EngineAdditionalActionReq 升级微服务引擎请求体
 type EngineAdditionalActionReq struct {
 
 	// 操作类型

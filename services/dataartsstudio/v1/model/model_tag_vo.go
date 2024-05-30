@@ -9,7 +9,7 @@ import (
 
 type TagVo struct {
 
-	// 编码。
+	// 编码，填写String类型替代Long类型。
 	Id *string `json:"id,omitempty"`
 
 	// 标签名。
@@ -24,10 +24,10 @@ type TagVo struct {
 	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	NewBiz *BizVersionManageVo `json:"new_biz,omitempty"`

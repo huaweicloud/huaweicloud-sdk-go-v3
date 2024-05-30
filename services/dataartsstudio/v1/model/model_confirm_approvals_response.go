@@ -8,10 +8,8 @@ import (
 
 // ConfirmApprovalsResponse Response Object
 type ConfirmApprovalsResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ConfirmApprovalsResultData `json:"data,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o ConfirmApprovalsResponse) String() string {

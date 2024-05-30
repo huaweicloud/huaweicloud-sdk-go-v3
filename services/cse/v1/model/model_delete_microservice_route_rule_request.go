@@ -12,7 +12,7 @@ type DeleteMicroserviceRouteRuleRequest struct {
 	// 该字段内容填为 \"application/json;charset=UTF-8\"。
 	ContentType string `json:"Content-Type"`
 
-	// 微服务引擎专享版的实例ID
+	// 微服务引擎的实例ID
 	XEngineId string `json:"x-engine-id"`
 
 	// 企业项目ID

@@ -21,7 +21,7 @@ type ConfirmApprovalsRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 处理审批单结果类型。reject(审批驳回)、resolve(审批通过)。
+	// 处理审批单结果类型。 枚举值：   - reject: 审批驳回   - resolve: 审批通过
 	ActionId ConfirmApprovalsRequestActionId `json:"action-id"`
 
 	Body *ApprovalInfoParam `json:"body,omitempty"`

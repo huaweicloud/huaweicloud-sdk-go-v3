@@ -15,13 +15,13 @@ type DerivativeIndexDimensionVo struct {
 	// 维度角色。
 	Role *string `json:"role,omitempty"`
 
-	// 维度ID。
-	DimensionId *int64 `json:"dimension_id,omitempty"`
+	// 维度ID，填写String类型替代Long类型。
+	DimensionId *string `json:"dimension_id,omitempty"`
 
-	// 维度层级ID。
-	HierarchiesId *int64 `json:"hierarchies_id,omitempty"`
+	// 维度层级ID，填写String类型替代Long类型。
+	HierarchiesId *string `json:"hierarchies_id,omitempty"`
 
-	// 序号。
+	// 序号，只读。
 	Ordinal *int32 `json:"ordinal,omitempty"`
 
 	// 维度分组名称。
@@ -32,7 +32,7 @@ type DerivativeIndexDimensionVo struct {
 
 	BizType *BizTypeEnum `json:"biz_type"`
 
-	// 层级属性。
+	// 层级属性，只读。
 	Hierarchies *[]DimensionHierarchiesVo `json:"hierarchies,omitempty"`
 
 	// 主题域分组中文名，只读，创建和更新时无需填写。
@@ -44,20 +44,20 @@ type DerivativeIndexDimensionVo struct {
 	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
-	// 主题域分组ID。
-	L1Id *int64 `json:"l1_id,omitempty"`
+	// 主题域分组ID，只读，填写String类型替代Long类型。
+	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID。
-	L3Id *int64 `json:"l3_id,omitempty"`
+	// 业务对象ID，只读，填写String类型替代Long类型。
+	L3Id *string `json:"l3_id,omitempty"`
 
 	// 数据连接类型。
 	DwType *string `json:"dw_type,omitempty"`
 
-	// id
-	Id *int64 `json:"id,omitempty"`
+	// 层级的ID，只读，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 }
 
 func (o DerivativeIndexDimensionVo) String() string {

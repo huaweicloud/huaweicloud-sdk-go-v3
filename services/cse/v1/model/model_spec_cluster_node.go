@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SpecClusterNode 微服务引擎专享版CCE节点列表
+// SpecClusterNode 微服务引擎的CCE节点列表
 type SpecClusterNode struct {
 
 	// CCE节点信息。

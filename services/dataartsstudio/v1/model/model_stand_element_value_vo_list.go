@@ -13,17 +13,17 @@ type StandElementValueVoList struct {
 	// 属性信息。
 	Values []StandElementValueVo `json:"values"`
 
-	// ID
-	Id *int64 `json:"id,omitempty"`
+	// 数据标准的ID，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
-	// 标准所属目录。
-	DirectoryId int64 `json:"directory_id"`
+	// 标准所属目录，填写String类型替代Long类型。
+	DirectoryId string `json:"directory_id"`
 
 	// 目录树。
 	DirectoryPath *string `json:"directory_path,omitempty"`
 
-	// 标准行的ID。
-	RowId *int64 `json:"row_id,omitempty"`
+	// 标准行的ID，填写String类型替代Long类型。
+	RowId *string `json:"row_id,omitempty"`
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
@@ -40,10 +40,10 @@ type StandElementValueVoList struct {
 	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 }
 

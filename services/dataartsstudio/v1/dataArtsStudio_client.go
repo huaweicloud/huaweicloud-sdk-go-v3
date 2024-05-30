@@ -546,7 +546,7 @@ func (c *DataArtsStudioClient) ConfirmMessageInvoker(request *model.ConfirmMessa
 
 // CountAllModels 关系建模统计信息
 //
-// 关系建模统计信息。
+// 关系建模页面，外层的统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountAllModels(request *model.CountAllModelsRequest) (*model.CountAllModelsResponse, error) {
@@ -588,7 +588,7 @@ func (c *DataArtsStudioClient) CountOverviewsInvoker(request *model.CountOvervie
 
 // CountStandards 标准覆盖率统计信息
 //
-// 标准覆盖率统计信息。
+// 查看某个数据标准在所有模型字段中的覆盖率，即使用该标准的字段占总字段的百分比。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountStandards(request *model.CountStandardsRequest) (*model.CountStandardsResponse, error) {
@@ -609,7 +609,7 @@ func (c *DataArtsStudioClient) CountStandardsInvoker(request *model.CountStandar
 
 // CountTableModels 模型统计信息
 //
-// 模型统计信息。
+// 单个模型中的统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CountTableModels(request *model.CountTableModelsRequest) (*model.CountTableModelsResponse, error) {
@@ -757,7 +757,7 @@ func (c *DataArtsStudioClient) CreateConnectionsInvoker(request *model.CreateCon
 
 // CreateDesignAggregationLogicTable 新建汇总表
 //
-// 新建汇总表。
+// 根据入参，手动创建汇总表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateDesignAggregationLogicTable(request *model.CreateDesignAggregationLogicTableRequest) (*model.CreateDesignAggregationLogicTableResponse, error) {
@@ -799,7 +799,7 @@ func (c *DataArtsStudioClient) CreateDesignAtomicIndexInvoker(request *model.Cre
 
 // CreateDirectory 创建目录
 //
-// 创建目录。
+// 创建目录（数据标准、码表）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateDirectory(request *model.CreateDirectoryRequest) (*model.CreateDirectoryResponse, error) {
@@ -1114,7 +1114,7 @@ func (c *DataArtsStudioClient) CreateStandardInvoker(request *model.CreateStanda
 
 // CreateStandardTemplate 创建数据标准模板
 //
-// 创建数据标准模板。
+// 创建当前工作空间下的数据标准模板自定义项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateStandardTemplate(request *model.CreateStandardTemplateRequest) (*model.CreateStandardTemplateResponse, error) {
@@ -1471,7 +1471,7 @@ func (c *DataArtsStudioClient) DeleteDataconnectionInvoker(request *model.Delete
 
 // DeleteDesignAggregationLogicTable 删除汇总表
 //
-// 批量删除汇总表。
+// 批量删除汇总表，只能删除状态为草稿、已线下、已驳回的表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteDesignAggregationLogicTable(request *model.DeleteDesignAggregationLogicTableRequest) (*model.DeleteDesignAggregationLogicTableResponse, error) {
@@ -1534,7 +1534,7 @@ func (c *DataArtsStudioClient) DeleteDesignLatestApprovalInvoker(request *model.
 
 // DeleteDirectory 删除目录
 //
-// 删除目录。
+// 删除目录（数据标准、码表）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeleteDirectory(request *model.DeleteDirectoryRequest) (*model.DeleteDirectoryResponse, error) {
@@ -1934,7 +1934,7 @@ func (c *DataArtsStudioClient) ExportDesignModelsInvoker(request *model.ExportDe
 
 // ExportDesignResult 获取excel导出结果
 //
-// 根据请求导出接口（/export-model）时返回的uuid，获取excel导出结果。
+// 根据请求导出业务数据（/export-model）时返回的uuid，获取excel导出结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ExportDesignResult(request *model.ExportDesignResultRequest) (*model.ExportDesignResultResponse, error) {
@@ -2018,7 +2018,7 @@ func (c *DataArtsStudioClient) ImportModelsInvoker(request *model.ImportModelsRe
 
 // ImportResult 查询导入结果
 //
-// 查询导入excel的处理结果。
+// 查询导入excel的处理结果（其中参数uuid获取为：/design/models/action或/design/catalogs/action接口返回结果）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ImportResult(request *model.ImportResultRequest) (*model.ImportResultResponse, error) {
@@ -2060,7 +2060,7 @@ func (c *DataArtsStudioClient) InitializeStandardTemplateInvoker(request *model.
 
 // ListAggregationLogicTables 查找汇总表
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息。
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息，中英文名称支持模糊查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListAggregationLogicTables(request *model.ListAggregationLogicTablesRequest) (*model.ListAggregationLogicTablesResponse, error) {
@@ -2352,9 +2352,9 @@ func (c *DataArtsStudioClient) ListBizMetricDimensionsInvoker(request *model.Lis
 	return &ListBizMetricDimensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListBizMetricOwners 查看指标指标责任人信息
+// ListBizMetricOwners 查看指标责任人信息
 //
-// 查看指标指标责任人信息。
+// 查看指标责任人信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListBizMetricOwners(request *model.ListBizMetricOwnersRequest) (*model.ListBizMetricOwnersResponse, error) {
@@ -2367,7 +2367,7 @@ func (c *DataArtsStudioClient) ListBizMetricOwners(request *model.ListBizMetricO
 	}
 }
 
-// ListBizMetricOwnersInvoker 查看指标指标责任人信息
+// ListBizMetricOwnersInvoker 查看指标责任人信息
 func (c *DataArtsStudioClient) ListBizMetricOwnersInvoker(request *model.ListBizMetricOwnersRequest) *ListBizMetricOwnersInvoker {
 	requestDef := GenReqDefForListBizMetricOwners()
 	return &ListBizMetricOwnersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2583,6 +2583,69 @@ func (c *DataArtsStudioClient) ListDataArtsStudioInstancesInvoker(request *model
 	return &ListDataArtsStudioInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDataServiceInstancesDetail 查询集群详情信息列表
+//
+// 查询集群详情信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDataServiceInstancesDetail(request *model.ListDataServiceInstancesDetailRequest) (*model.ListDataServiceInstancesDetailResponse, error) {
+	requestDef := GenReqDefForListDataServiceInstancesDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataServiceInstancesDetailResponse), nil
+	}
+}
+
+// ListDataServiceInstancesDetailInvoker 查询集群详情信息列表
+func (c *DataArtsStudioClient) ListDataServiceInstancesDetailInvoker(request *model.ListDataServiceInstancesDetailRequest) *ListDataServiceInstancesDetailInvoker {
+	requestDef := GenReqDefForListDataServiceInstancesDetail()
+	return &ListDataServiceInstancesDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDataServiceInstancesOverview 查询集群概览信息列表
+//
+// 查询集群概览信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDataServiceInstancesOverview(request *model.ListDataServiceInstancesOverviewRequest) (*model.ListDataServiceInstancesOverviewResponse, error) {
+	requestDef := GenReqDefForListDataServiceInstancesOverview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataServiceInstancesOverviewResponse), nil
+	}
+}
+
+// ListDataServiceInstancesOverviewInvoker 查询集群概览信息列表
+func (c *DataArtsStudioClient) ListDataServiceInstancesOverviewInvoker(request *model.ListDataServiceInstancesOverviewRequest) *ListDataServiceInstancesOverviewInvoker {
+	requestDef := GenReqDefForListDataServiceInstancesOverview()
+	return &ListDataServiceInstancesOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDataServiceMarketApis 查询服务目录API列表
+//
+// 查询服务目录API列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDataServiceMarketApis(request *model.ListDataServiceMarketApisRequest) (*model.ListDataServiceMarketApisResponse, error) {
+	requestDef := GenReqDefForListDataServiceMarketApis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataServiceMarketApisResponse), nil
+	}
+}
+
+// ListDataServiceMarketApisInvoker 查询服务目录API列表
+func (c *DataArtsStudioClient) ListDataServiceMarketApisInvoker(request *model.ListDataServiceMarketApisRequest) *ListDataServiceMarketApisInvoker {
+	requestDef := GenReqDefForListDataServiceMarketApis()
+	return &ListDataServiceMarketApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDataTables 获取数据源中的表
 //
 // 获取数据源中的表
@@ -2732,7 +2795,7 @@ func (c *DataArtsStudioClient) ListDimensionsInvoker(request *model.ListDimensio
 
 // ListDirectories 获取所有目录
 //
-// 获取所有目录。
+// 获取所有目录(数据标准、码表)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListDirectories(request *model.ListDirectoriesRequest) (*model.ListDirectoriesResponse, error) {
@@ -3043,9 +3106,9 @@ func (c *DataArtsStudioClient) ListQualityTemplatesInvoker(request *model.ListQu
 	return &ListQualityTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRelations 关系
+// ListRelations 查询关系
 //
-// 通过名称、等分页查找关系信息。
+// 通过关系名称(支持模糊查询)、创建人、开始时间、结束时间等分页查找关系信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListRelations(request *model.ListRelationsRequest) (*model.ListRelationsResponse, error) {
@@ -3058,7 +3121,7 @@ func (c *DataArtsStudioClient) ListRelations(request *model.ListRelationsRequest
 	}
 }
 
-// ListRelationsInvoker 关系
+// ListRelationsInvoker 查询关系
 func (c *DataArtsStudioClient) ListRelationsInvoker(request *model.ListRelationsRequest) *ListRelationsInvoker {
 	requestDef := GenReqDefForListRelations()
 	return &ListRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3465,7 +3528,7 @@ func (c *DataArtsStudioClient) ListWorkspaceRolesInvoker(request *model.ListWork
 
 // ListWorkspaces 获取模型
 //
-// 获取模型。
+// 获取当前空间下的全部模型信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListWorkspaces(request *model.ListWorkspacesRequest) (*model.ListWorkspacesResponse, error) {
@@ -3550,7 +3613,7 @@ func (c *DataArtsStudioClient) MigrateCatalogInvoker(request *model.MigrateCatal
 
 // ModifyCustomizedFields 修改自定义项
 //
-// 修改自定义项。
+// 修改自定义项（包括表自定义项、属性自定义项、主题自定义项、业务指标自定义项）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ModifyCustomizedFields(request *model.ModifyCustomizedFieldsRequest) (*model.ModifyCustomizedFieldsResponse, error) {
@@ -3739,7 +3802,7 @@ func (c *DataArtsStudioClient) SearchApprovalsInvoker(request *model.SearchAppro
 
 // SearchAtomicIndexes 查找原子指标
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息。
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息看，中英文名称支持模糊查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchAtomicIndexes(request *model.SearchAtomicIndexesRequest) (*model.SearchAtomicIndexesResponse, error) {
@@ -3865,7 +3928,7 @@ func (c *DataArtsStudioClient) SearchCodeTablesInvoker(request *model.SearchCode
 
 // SearchCustomizedFields 查询自定义项
 //
-// 查询自定义项。
+// 查询自定义项（包括表自定义项、属性自定义项、主题自定义项、业务指标自定义项）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchCustomizedFields(request *model.SearchCustomizedFieldsRequest) (*model.SearchCustomizedFieldsResponse, error) {
@@ -3970,7 +4033,7 @@ func (c *DataArtsStudioClient) SearchIdByPathInvoker(request *model.SearchIdByPa
 
 // SearchSubject 查找主题列表
 //
-// 通过名称、创建者、责任人、状态、修改时间分页查找主题。
+// 通过名称（支持模糊查询）、创建者、责任人、状态、修改时间分页查找主题。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchSubject(request *model.SearchSubjectRequest) (*model.SearchSubjectResponse, error) {
@@ -4263,7 +4326,7 @@ func (c *DataArtsStudioClient) ShowAppsOverviewInvoker(request *model.ShowAppsOv
 
 // ShowAtomicIndexById 查看原子指标详情
 //
-// 通过ID获取指标详情信息。
+// 通过ID获取原子指标详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowAtomicIndexById(request *model.ShowAtomicIndexByIdRequest) (*model.ShowAtomicIndexByIdResponse, error) {
@@ -4532,6 +4595,27 @@ func (c *DataArtsStudioClient) ShowDataProfile(request *model.ShowDataProfileReq
 func (c *DataArtsStudioClient) ShowDataProfileInvoker(request *model.ShowDataProfileRequest) *ShowDataProfileInvoker {
 	requestDef := GenReqDefForShowDataProfile()
 	return &ShowDataProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataServiceInstance 查询集群详情信息
+//
+// 查询集群详情信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDataServiceInstance(request *model.ShowDataServiceInstanceRequest) (*model.ShowDataServiceInstanceResponse, error) {
+	requestDef := GenReqDefForShowDataServiceInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataServiceInstanceResponse), nil
+	}
+}
+
+// ShowDataServiceInstanceInvoker 查询集群详情信息
+func (c *DataArtsStudioClient) ShowDataServiceInstanceInvoker(request *model.ShowDataServiceInstanceRequest) *ShowDataServiceInstanceInvoker {
+	requestDef := GenReqDefForShowDataServiceInstance()
+	return &ShowDataServiceInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDataSets 资产搜索
@@ -5209,7 +5293,7 @@ func (c *DataArtsStudioClient) ShowStandardByIdInvoker(request *model.ShowStanda
 
 // ShowStandardTemplate 查询数据标准模板
 //
-// 查询数据标准模板。
+// 查询当前工作空间下的数据标准模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowStandardTemplate(request *model.ShowStandardTemplateRequest) (*model.ShowStandardTemplateResponse, error) {
@@ -5629,7 +5713,7 @@ func (c *DataArtsStudioClient) UpdateDesignTableQualityInvoker(request *model.Up
 
 // UpdateDirectory 修改目录
 //
-// 修改目录。
+// 修改目录（数据标准、码表）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateDirectory(request *model.UpdateDirectoryRequest) (*model.UpdateDirectoryResponse, error) {

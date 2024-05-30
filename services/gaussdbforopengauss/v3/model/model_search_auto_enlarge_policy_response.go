@@ -25,8 +25,14 @@ type SearchAutoEnlargePolicyResponse struct {
 	TriggerAvailablePercent *int32 `json:"trigger_available_percent,omitempty"`
 
 	// 空间率集合。
-	Percents       *[]int32 `json:"percents,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Percents *[]int32 `json:"percents,omitempty"`
+
+	// 扩容步长，固定大小扩容方式。
+	StepSize *int32 `json:"step_size,omitempty"`
+
+	// 扩容步长，百分比扩容方式。
+	StepPercent    *int32 `json:"step_percent,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o SearchAutoEnlargePolicyResponse) String() string {

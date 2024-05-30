@@ -187,6 +187,7 @@ func (c *CdnClient) EnableDomainInvoker(request *model.EnableDomainRequest) *Ena
 	return &EnableDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDomains 查询加速域名
 //
 // 查询加速域名信息
@@ -202,6 +203,7 @@ func (c *CdnClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDomainsInvoker 查询加速域名
 func (c *CdnClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListDomainsInvoker {
 	requestDef := GenReqDefForListDomains()

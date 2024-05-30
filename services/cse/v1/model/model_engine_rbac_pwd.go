@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// EngineRbacPwd 操作微服务引擎专享版安全认证信息
+// EngineRbacPwd 操作ServiceComb引擎专享版安全认证信息
 type EngineRbacPwd struct {
 
-	// 开启安全认证的微服务引擎专享版默认root帐号的密码
+	// 开启安全认证的ServiceComb引擎专享版默认root帐号的密码
 	Pwd *string `json:"pwd,omitempty"`
 }
 

@@ -8,10 +8,8 @@ import (
 
 // ShowConditionByIdResponse Response Object
 type ShowConditionByIdResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ShowConditionByIdResultData `json:"data,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ShowConditionByIdResponse) String() string {

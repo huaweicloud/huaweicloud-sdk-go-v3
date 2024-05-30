@@ -14,6 +14,9 @@ type ListEnginesRequest struct {
 
 	// 每页显示的条目数量。
 	Limit *string `json:"limit,omitempty"`
+
+	// 查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ListEnginesRequest) String() string {

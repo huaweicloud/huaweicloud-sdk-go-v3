@@ -9,7 +9,7 @@ import (
 // PublishVersionVoSearchResultDataValue 返回的数据信息。
 type PublishVersionVoSearchResultDataValue struct {
 
-	// 查询到的的版本值对象（PublishVersionVO）数组。
+	// 查询到的版本值对象（PublishVersionVO）数组。
 	Records *[]PublishVersionVo `json:"records,omitempty"`
 
 	// 符合搜索条件的记录总数。

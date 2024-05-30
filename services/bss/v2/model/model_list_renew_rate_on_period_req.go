@@ -16,6 +16,9 @@ type ListRenewRateOnPeriodReq struct {
 
 	// |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
 	PeriodNum int32 `json:"period_num"`
+
+	// 是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+	IncludeRelativeResources *bool `json:"include_relative_resources,omitempty"`
 }
 
 func (o ListRenewRateOnPeriodReq) String() string {

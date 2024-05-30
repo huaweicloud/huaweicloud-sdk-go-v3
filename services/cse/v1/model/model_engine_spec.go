@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EngineSpec 微服务引擎专享版相关参数。
+// EngineSpec 微服务引擎相关参数。
 type EngineSpec struct {
 
 	// CPU及内存规格。

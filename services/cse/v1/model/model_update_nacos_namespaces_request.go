@@ -9,7 +9,7 @@ import (
 // UpdateNacosNamespacesRequest Request Object
 type UpdateNacosNamespacesRequest struct {
 
-	// 微服务引擎专享版的实例ID
+	// 微服务引擎的实例ID
 	XEngineId string `json:"x-engine-id"`
 
 	// 企业项目ID

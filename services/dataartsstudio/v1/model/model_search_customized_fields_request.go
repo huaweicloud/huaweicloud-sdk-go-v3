@@ -21,13 +21,13 @@ type SearchCustomizedFieldsRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+	// 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+	// 自定义项类型。 枚举值：   - TABLE: 表自定义项   - ATTRIBUTE: 属性自定义项   - SUBJECT: 主题自定义项   - METRIC: 业务指标自定义项
 	Type SearchCustomizedFieldsRequestType `json:"type"`
 }
 

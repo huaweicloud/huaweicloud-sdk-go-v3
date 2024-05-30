@@ -23,6 +23,12 @@ type GaussDBforOpenGaussListDatabase struct {
 
 	// 数据库大小（单位：MB）。
 	Size *string `json:"size,omitempty"`
+
+	// 数据库使用的字符分类，例如en_US.UTF-8等。
+	Datctype *string `json:"datctype,omitempty"`
+
+	// 数据库兼容的类型，如GaussDB，M。
+	CompatibilityType *string `json:"compatibility_type,omitempty"`
 }
 
 func (o GaussDBforOpenGaussListDatabase) String() string {

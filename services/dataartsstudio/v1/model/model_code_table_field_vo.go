@@ -9,11 +9,11 @@ import (
 // CodeTableFieldVo 码表属性信息。
 type CodeTableFieldVo struct {
 
-	// 码表字段ID。
-	Id *int64 `json:"id,omitempty"`
+	// 码表字段ID，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
-	// 所属码表ID。
-	CodeTableId *int64 `json:"code_table_id,omitempty"`
+	// 所属码表ID，填写String类型替代Long类型。
+	CodeTableId *string `json:"code_table_id,omitempty"`
 
 	// 序号。
 	Ordinal int32 `json:"ordinal"`

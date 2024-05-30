@@ -12,7 +12,7 @@ import (
 // DsExportResultVoData 导出结果对象。
 type DsExportResultVoData struct {
 
-	// 标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+	// 标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
 	Status *DsExportResultVoDataStatus `json:"status,omitempty"`
 
 	Group *BatchOperationVo `json:"group,omitempty"`

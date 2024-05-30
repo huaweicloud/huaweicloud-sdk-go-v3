@@ -50,6 +50,8 @@ var (
 		"https://functiongraph.me-east-1.myhuaweicloud.com")
 	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
 		"https://functiongraph.my-kualalumpur-1.myhuaweicloud.com")
+	CN_SOUTH_4 = region.NewRegion("cn-south-4",
+		"https://functiongraph.cn-south-4.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -74,6 +76,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-11":      CN_NORTH_11,
 	"me-east-1":        ME_EAST_1,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
+	"cn-south-4":       CN_SOUTH_4,
 }
 
 var provider = region.DefaultProviderChain("FUNCTIONGRAPH")

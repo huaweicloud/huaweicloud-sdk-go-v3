@@ -9,25 +9,25 @@ import (
 	"strings"
 )
 
-// EngineCreateReq 创建微服务引擎专享版请求结构体
+// EngineCreateReq 创建微服务引擎请求结构体
 type EngineCreateReq struct {
 
-	// 微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+	// 微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
 	Name string `json:"name"`
 
-	// 微服务引擎专享版描述，长度0~255。
+	// 微服务引擎描述，长度0~255。
 	Description *string `json:"description,omitempty"`
 
-	// 微服务引擎专享版计费方式，1表示按需
+	// 微服务引擎计费方式，1表示按需
 	Payment EngineCreateReqPayment `json:"payment"`
 
-	// 微服务引擎专享版的规格
+	// 微服务引擎的规格
 	Flavor EngineCreateReqFlavor `json:"flavor"`
 
-	// 当前局点可用区列表。
-	AzList []string `json:"azList"`
+	// 当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
+	AzList *[]string `json:"azList,omitempty"`
 
-	// 微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+	// ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
 	AuthType EngineCreateReqAuthType `json:"authType"`
 
 	// vpc名称
@@ -36,22 +36,56 @@ type EngineCreateReq struct {
 	// vpc标识
 	VpcId *string `json:"vpcId,omitempty"`
 
-	// 微服务引擎专享版子网ID
+	// 微服务引擎子网ID
 	NetworkId string `json:"networkId"`
 
-	// 微服务引擎专享版子网划分
+	// 微服务引擎子网划分
 	SubnetCidr string `json:"subnetCidr"`
 
-	// 微服务引擎专享版公网地址ID，当前为null
+	// ServiceComb引擎专享版公网地址ID，当前为null
 	PublicIpId *string `json:"publicIpId,omitempty"`
 
 	AuthCred *EngineRbacPwd `json:"auth_cred,omitempty"`
 
-	// 微服务引擎专享版应用部署类型
+	// 微服务引擎部署类型
 	SpecType EngineCreateReqSpecType `json:"specType"`
 
 	// 引擎附加参数
 	Inputs map[string]string `json:"inputs,omitempty"`
+
+	EnginestateInfo *EngineCreateReqEnginestateInfo `json:"enginestateInfo,omitempty"`
+
+	// 创建阶段类型
+	PeriodType *int32 `json:"periodType,omitempty"`
+
+	FlavorType *EngineCreateReqFlavorType `json:"flavorType,omitempty"`
+
+	EnterpriseProject *EngineCreateReqEnterpriseProject `json:"enterpriseProject,omitempty"`
+
+	// 网关vpc划分
+	VpcCidr *string `json:"vpcCidr,omitempty"`
+
+	ResourceParams *EngineCreateReqResourceParams `json:"resourceParams,omitempty"`
+
+	// 产品ID
+	ProductId *string `json:"productId,omitempty"`
+
+	// 容量产品ID
+	CapacityProductId *string `json:"capacityProductId,omitempty"`
+
+	// 微服务引擎是否免费
+	IsFree *bool `json:"isFree,omitempty"`
+
+	// 微服务引擎使用的子网名称
+	SubnetName *string `json:"subnetName,omitempty"`
+
+	// 标签
+	Tags *[]string `json:"tags,omitempty"`
+
+	MaintenanceConfig *EngineCreateReqMaintenanceConfig `json:"maintenanceConfig,omitempty"`
+
+	// 微服务引擎使用的elb的id
+	Elbid *string `json:"elbid,omitempty"`
 }
 
 func (o EngineCreateReq) String() string {
@@ -111,10 +145,18 @@ type EngineCreateReqFlavor struct {
 }
 
 type EngineCreateReqFlavorEnum struct {
-	CSE_S1_SMALL2  EngineCreateReqFlavor
-	CSE_S1_MEDIUM2 EngineCreateReqFlavor
-	CSE_S1_LARGE2  EngineCreateReqFlavor
-	CSE_S1_XLARGE2 EngineCreateReqFlavor
+	CSE_S1_SMALL2                 EngineCreateReqFlavor
+	CSE_S1_MEDIUM2                EngineCreateReqFlavor
+	CSE_S1_LARGE2                 EngineCreateReqFlavor
+	CSE_S1_XLARGE2                EngineCreateReqFlavor
+	CSE_NACOS2_C1_LARGE_10        EngineCreateReqFlavor
+	CSE_NACOS2_C1_XLARGE_20       EngineCreateReqFlavor
+	CSE_NACOS2_C1_XLARGE_50       EngineCreateReqFlavor
+	CSE_NACOS2_C1_XLARGE_60       EngineCreateReqFlavor
+	CSE_NACOS2_C1_2XLARGE_100     EngineCreateReqFlavor
+	CSE_MICROGATEWAY_PRO_SMALL_1  EngineCreateReqFlavor
+	CSE_MICROGATEWAY_PRO_MEDIUM_1 EngineCreateReqFlavor
+	CSE_MICROGATEWAY_PRO_LARGE_1  EngineCreateReqFlavor
 }
 
 func GetEngineCreateReqFlavorEnum() EngineCreateReqFlavorEnum {
@@ -130,6 +172,30 @@ func GetEngineCreateReqFlavorEnum() EngineCreateReqFlavorEnum {
 		},
 		CSE_S1_XLARGE2: EngineCreateReqFlavor{
 			value: "cse.s1.xlarge2",
+		},
+		CSE_NACOS2_C1_LARGE_10: EngineCreateReqFlavor{
+			value: "cse.nacos2.c1.large.10",
+		},
+		CSE_NACOS2_C1_XLARGE_20: EngineCreateReqFlavor{
+			value: "cse.nacos2.c1.xlarge.20",
+		},
+		CSE_NACOS2_C1_XLARGE_50: EngineCreateReqFlavor{
+			value: "cse.nacos2.c1.xlarge.50",
+		},
+		CSE_NACOS2_C1_XLARGE_60: EngineCreateReqFlavor{
+			value: "cse.nacos2.c1.xlarge.60",
+		},
+		CSE_NACOS2_C1_2XLARGE_100: EngineCreateReqFlavor{
+			value: "cse.nacos2.c1.2xlarge.100",
+		},
+		CSE_MICROGATEWAY_PRO_SMALL_1: EngineCreateReqFlavor{
+			value: "cse.microgateway.pro.small.1",
+		},
+		CSE_MICROGATEWAY_PRO_MEDIUM_1: EngineCreateReqFlavor{
+			value: "cse.microgateway.pro.medium.1",
+		},
+		CSE_MICROGATEWAY_PRO_LARGE_1: EngineCreateReqFlavor{
+			value: "cse.microgateway.pro.large.1",
 		},
 	}
 }
@@ -213,17 +279,21 @@ type EngineCreateReqSpecType struct {
 }
 
 type EngineCreateReqSpecTypeEnum struct {
-	CSE  EngineCreateReqSpecType
-	CSE2 EngineCreateReqSpecType
+	CSE2          EngineCreateReqSpecType
+	NACOS2        EngineCreateReqSpecType
+	MICRO_GATEWAY EngineCreateReqSpecType
 }
 
 func GetEngineCreateReqSpecTypeEnum() EngineCreateReqSpecTypeEnum {
 	return EngineCreateReqSpecTypeEnum{
-		CSE: EngineCreateReqSpecType{
-			value: "CSE",
-		},
 		CSE2: EngineCreateReqSpecType{
 			value: "CSE2",
+		},
+		NACOS2: EngineCreateReqSpecType{
+			value: "Nacos2",
+		},
+		MICRO_GATEWAY: EngineCreateReqSpecType{
+			value: "MicroGateway",
 		},
 	}
 }

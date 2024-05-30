@@ -12,40 +12,40 @@ import (
 // ShowEngineResponse Response Object
 type ShowEngineResponse struct {
 
-	// 微服务引擎专享版ID
+	// 微服务引擎ID
 	Id *string `json:"id,omitempty"`
 
-	// 微服务引擎专享版名称
+	// 微服务引擎名称
 	Name *string `json:"name,omitempty"`
 
-	// 微服务引擎专享版描述
+	// 微服务引擎描述
 	Description *string `json:"description,omitempty"`
 
-	// 微服务引擎专享版认证类型
+	// 微服务引擎认证类型
 	AuthType *ShowEngineResponseAuthType `json:"authType,omitempty"`
 
-	// 微服务引擎专享版规格
+	// 微服务引擎规格
 	Flavor *string `json:"flavor,omitempty"`
 
-	// 微服务引擎专享版计费方式
+	// 微服务引擎计费方式
 	Payment *string `json:"payment,omitempty"`
 
-	// 微服务引擎专享版当前版本
+	// 微服务引擎当前版本
 	Version *string `json:"version,omitempty"`
 
-	// 微服务引擎专享版最新版本
+	// 微服务引擎最新版本
 	LatestVersion *string `json:"latestVersion,omitempty"`
 
-	// 微服务引擎专享版状态
+	// 微服务引擎状态
 	Status *ShowEngineResponseStatus `json:"status,omitempty"`
 
 	// engine 是否是默认引擎
 	BeDefault *bool `json:"beDefault,omitempty"`
 
-	// 微服务引擎专享版创建者
+	// 微服务引擎创建者
 	CreateUser *string `json:"createUser,omitempty"`
 
-	// 微服务引擎专享版创建时间
+	// 微服务引擎创建时间
 	CreateTime *int64 `json:"createTime,omitempty"`
 
 	CceSpec *Spec `json:"cceSpec,omitempty"`
@@ -54,25 +54,25 @@ type ShowEngineResponse struct {
 
 	Reference *EngineReference `json:"reference,omitempty"`
 
-	// 微服务引擎专享版最近的任务ID
+	// 微服务引擎最近的任务ID
 	LatestJobId *int32 `json:"latestJobId,omitempty"`
 
-	// 微服务引擎专享版所属企业项目ID
+	// 微服务引擎所属企业项目ID
 	EnterpriseProjectId *string `json:"enterpriseProjectId,omitempty"`
 
-	// 微服务引擎专享版所属企业项目名称
+	// 微服务引擎所属企业项目名称
 	EnterpriseProjectName *string `json:"enterpriseProjectName,omitempty"`
 
-	// 微服务引擎专享版允许的附加操作
+	// 微服务引擎允许的附加操作
 	EngineAdditionalActions *[]ShowEngineResponseEngineAdditionalActions `json:"engineAdditionalActions,omitempty"`
 
-	// 微服务引擎专享版应用部署类型
+	// 微服务引擎应用部署类型
 	SpecType *ShowEngineResponseSpecType `json:"specType,omitempty"`
 
-	// 微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
+	// 微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
 	Type *ShowEngineResponseType `json:"type,omitempty"`
 
-	// 微服务引擎专享版所属项目ID
+	// 微服务引擎所属项目ID
 	ProjectId *string `json:"projectId,omitempty"`
 
 	// 当前引擎在资源租户侧使用的虚拟机 id 列表
@@ -283,21 +283,21 @@ type ShowEngineResponseSpecType struct {
 }
 
 type ShowEngineResponseSpecTypeEnum struct {
-	CCE          ShowEngineResponseSpecType
-	CSE          ShowEngineResponseSpecType
-	SPRING_CLOUD ShowEngineResponseSpecType
+	CSE2          ShowEngineResponseSpecType
+	NACOS2        ShowEngineResponseSpecType
+	MICRO_GATEWAY ShowEngineResponseSpecType
 }
 
 func GetShowEngineResponseSpecTypeEnum() ShowEngineResponseSpecTypeEnum {
 	return ShowEngineResponseSpecTypeEnum{
-		CCE: ShowEngineResponseSpecType{
-			value: "CCE",
+		CSE2: ShowEngineResponseSpecType{
+			value: "CSE2",
 		},
-		CSE: ShowEngineResponseSpecType{
-			value: "CSE",
+		NACOS2: ShowEngineResponseSpecType{
+			value: "Nacos2",
 		},
-		SPRING_CLOUD: ShowEngineResponseSpecType{
-			value: "SpringCloud",
+		MICRO_GATEWAY: ShowEngineResponseSpecType{
+			value: "MicroGateway",
 		},
 	}
 }
@@ -334,8 +334,9 @@ type ShowEngineResponseType struct {
 }
 
 type ShowEngineResponseTypeEnum struct {
-	CSE       ShowEngineResponseType
-	CSE_SHARE ShowEngineResponseType
+	CSE          ShowEngineResponseType
+	NACOS        ShowEngineResponseType
+	MICROGATEWAY ShowEngineResponseType
 }
 
 func GetShowEngineResponseTypeEnum() ShowEngineResponseTypeEnum {
@@ -343,8 +344,11 @@ func GetShowEngineResponseTypeEnum() ShowEngineResponseTypeEnum {
 		CSE: ShowEngineResponseType{
 			value: "CSE",
 		},
-		CSE_SHARE: ShowEngineResponseType{
-			value: "CSE_Share",
+		NACOS: ShowEngineResponseType{
+			value: "NACOS",
+		},
+		MICROGATEWAY: ShowEngineResponseType{
+			value: "MICROGATEWAY",
 		},
 	}
 }

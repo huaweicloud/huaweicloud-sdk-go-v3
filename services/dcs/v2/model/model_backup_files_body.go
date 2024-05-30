@@ -16,7 +16,7 @@ type BackupFilesBody struct {
 	FileSource *BackupFilesBodyFileSource `json:"file_source,omitempty"`
 
 	// OBS桶名。
-	BucketName string `json:"bucket_name"`
+	BucketName *string `json:"bucket_name,omitempty"`
 
 	// 导入的备份文件文件列表。
 	Files []Files `json:"files"`

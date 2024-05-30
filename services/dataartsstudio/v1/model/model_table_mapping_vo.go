@@ -9,8 +9,8 @@ import (
 
 type TableMappingVo struct {
 
-	// 编码。
-	Id *int64 `json:"id,omitempty"`
+	// 编码，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
 	// 名称。
 	Name string `json:"name"`
@@ -18,11 +18,11 @@ type TableMappingVo struct {
 	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 目的表ID。
-	TargetTableId *int64 `json:"target_table_id,omitempty"`
+	// 目的表ID，填写String类型替代Long类型。
+	TargetTableId *string `json:"target_table_id,omitempty"`
 
-	// 来源表在关系建模中的模型ID。
-	SrcModelId *int64 `json:"src_model_id,omitempty"`
+	// 来源表在关系建模中的模型ID，填写String类型替代Long类型。
+	SrcModelId *string `json:"src_model_id,omitempty"`
 
 	// 来源模型名称。
 	SrcModelName *string `json:"src_model_name,omitempty"`

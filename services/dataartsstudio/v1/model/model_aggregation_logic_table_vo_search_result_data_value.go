@@ -9,7 +9,7 @@ import (
 // AggregationLogicTableVoSearchResultDataValue 返回的数据信息。
 type AggregationLogicTableVoSearchResultDataValue struct {
 
-	// 查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+	// 查询到的汇总表值对象（AggregationLogicTableVO）数组。
 	Records *[]AggregationLogicTableVo `json:"records,omitempty"`
 
 	// 符合搜索条件的记录总数。

@@ -11,7 +11,7 @@ import (
 // AggregationLogicTableVo 汇总表值对象（VO）。
 type AggregationLogicTableVo struct {
 
-	// 汇总表的唯一系统ID，更新时必填，创建时不须填写。
+	// 汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
 	Id *string `json:"id,omitempty"`
 
 	// 汇总表英文名称，对应实际的物理表名。
@@ -20,13 +20,13 @@ type AggregationLogicTableVo struct {
 	// 汇总表的中文名，用于展示使用。
 	TbLogicName string `json:"tb_logic_name"`
 
-	// 主题域分组ID，只读，创建和更新时无需填写。
+	// 主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 汇总表所属主题的ID，必填。
+	// 汇总表所属主题的ID，必填，填写String类型替代Long类型。
 	L3Id string `json:"l3_id"`
 
 	// 汇总表描述信息。
@@ -34,6 +34,10 @@ type AggregationLogicTableVo struct {
 
 	// 汇总表的资产责任人。
 	Owner string `json:"owner"`
+
+	SecretType *SecretTypeEnum `json:"secret_type,omitempty"`
+
+	ApplyBg *ApplyBgEnum `json:"apply_bg,omitempty"`
 
 	// 汇总表的创建人，只读，创建和更新时无需填写。
 	CreateBy *string `json:"create_by,omitempty"`
@@ -89,10 +93,10 @@ type AggregationLogicTableVo struct {
 	// 颗粒度ID。
 	DimensionGroup *string `json:"dimension_group,omitempty"`
 
-	// 颗粒度名称。
+	// 颗粒度名称，只读。
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 颗粒度编码。
+	// 颗粒度编码，只读。
 	GroupCode *string `json:"group_code,omitempty"`
 
 	TimePeriod *AggregationLogicTableAttributeVo `json:"time_period,omitempty"`
@@ -118,13 +122,13 @@ type AggregationLogicTableVo struct {
 
 	SummaryStatus *SyncStatusEnum `json:"summary_status,omitempty"`
 
-	// DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+	// DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
 	Distribute *AggregationLogicTableVoDistribute `json:"distribute,omitempty"`
 
 	// DISTRIBUTE BY HASH column.
 	DistributeColumn *string `json:"distribute_column,omitempty"`
 
-	// DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+	// DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
 	Compression *AggregationLogicTableVoCompression `json:"compression,omitempty"`
 
 	// 外表路径。
@@ -139,13 +143,13 @@ type AggregationLogicTableVo struct {
 	// DLF作业ID。
 	DlfTaskId *string `json:"dlf_task_id,omitempty"`
 
-	// 质量ID。
+	// 质量ID，填写String类型替代Long类型。
 	QualityId *string `json:"quality_id,omitempty"`
 
-	// 是否是逆向的。
+	// 是否是逆向的，只读。
 	Reversed *bool `json:"reversed,omitempty"`
 
-	// 为2时，表示汇总表是汇总生成的。
+	// 为2时，表示汇总表是汇总生成的，只读。
 	TableVersion *int32 `json:"table_version,omitempty"`
 
 	// 分区表达式。
@@ -177,6 +181,20 @@ type AggregationLogicTableVo struct {
 
 	// 汇总表绑定的SQL。
 	Sql *string `json:"sql,omitempty"`
+
+	// 开发环境版本，填写String类型替代Long类型。
+	DevVersion *string `json:"dev_version,omitempty"`
+
+	// 生产环境版本，填写String类型替代Long类型。
+	ProdVersion *string `json:"prod_version,omitempty"`
+
+	// 开发环境版本名称
+	DevVersionName *string `json:"dev_version_name,omitempty"`
+
+	// 生产环境版本名称
+	ProdVersionName *string `json:"prod_version_name,omitempty"`
+
+	EnvType *EnvTypeEnum `json:"env_type,omitempty"`
 }
 
 func (o AggregationLogicTableVo) String() string {

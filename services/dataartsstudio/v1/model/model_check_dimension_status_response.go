@@ -8,10 +8,8 @@ import (
 
 // CheckDimensionStatusResponse Response Object
 type CheckDimensionStatusResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CheckDimensionStatusResultData `json:"data,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o CheckDimensionStatusResponse) String() string {

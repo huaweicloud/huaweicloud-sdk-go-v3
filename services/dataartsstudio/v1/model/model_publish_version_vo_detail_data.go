@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PublishVersionVoDetailData 返回数据。
+// PublishVersionVoDetailData 接口返回的数据。
 type PublishVersionVoDetailData struct {
 	Value *PublishVersionVo `json:"value,omitempty"`
 }

@@ -8,10 +8,8 @@ import (
 
 // SearchApprovalsResponse Response Object
 type SearchApprovalsResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *SearchApprovalsResultData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o SearchApprovalsResponse) String() string {

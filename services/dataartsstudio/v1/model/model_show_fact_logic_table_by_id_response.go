@@ -8,10 +8,8 @@ import (
 
 // ShowFactLogicTableByIdResponse Response Object
 type ShowFactLogicTableByIdResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ShowFactLogicTableByIdResultData `json:"data,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o ShowFactLogicTableByIdResponse) String() string {

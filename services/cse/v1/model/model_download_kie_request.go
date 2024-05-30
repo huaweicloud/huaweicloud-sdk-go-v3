@@ -15,7 +15,7 @@ type DownloadKieRequest struct {
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"
 	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
 
-	// 微服务引擎专享版ID。
+	// 微服务引擎ID。
 	XEngineId string `json:"x-engine-id"`
 
 	// 按label过滤项导出，格式为：{标签key}:{标签value}

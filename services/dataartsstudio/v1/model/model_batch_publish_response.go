@@ -8,10 +8,8 @@ import (
 
 // BatchPublishResponse Response Object
 type BatchPublishResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *BatchPublishResultData `json:"data,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o BatchPublishResponse) String() string {

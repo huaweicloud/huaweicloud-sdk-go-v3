@@ -18,7 +18,7 @@ type ShowAtomicIndexByIdRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 实体ID
+	// 实体ID，填写String类型替代Long类型。
 	Id string `json:"id"`
 
 	// 是否查询最新的。

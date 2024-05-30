@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// SyncStatusEnum 同步状态。NO_NEED(未同步)、CREATE_SUCCESS(创建成功)、CREATE_FAILED(创建失败)、UPDATE_SUCCESS(更新成功)、UPDATE_FAILED(更新失败)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)、RUNNING(整体运行)、OFFLINE(已下线)。
+// SyncStatusEnum 同步状态。 枚举值：   - NO_NEED: 未同步   - CREATE_SUCCESS: 创建成功   - CREATE_FAILED: 创建失败   - UPDATE_SUCCESS: 更新成功   - UPDATE_FAILED: 更新失败   - SUMMARY_SUCCESS: 整体成功   - SUMMARY_FAILED: 整体失败   - RUNNING: 整体运行   - OFFLINE: 已下线
 type SyncStatusEnum struct {
 	value string
 }

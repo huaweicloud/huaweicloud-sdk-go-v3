@@ -8,8 +8,8 @@ import (
 
 type SubjectParamsVo struct {
 
-	// 编码。更新时必填，创建时可以为空。
-	Id *int64 `json:"id,omitempty"`
+	// 编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
 	// 中文名称。
 	NameCh string `json:"name_ch"`
@@ -26,16 +26,16 @@ type SubjectParamsVo struct {
 	// 数据owner部门。
 	DataOwner *string `json:"data_owner,omitempty"`
 
-	// 数据owner人员。
+	// 数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
 	DataOwnerList string `json:"data_owner_list"`
 
-	// 层级。
+	// 层级。取值范围1-7。
 	Level int32 `json:"level"`
 
-	// 上层主题ID，首层则为空。
-	ParentId *int64 `json:"parent_id,omitempty"`
+	// 上层主题ID，首层则为空，填写String类型替代Long类型。
+	ParentId *string `json:"parent_id,omitempty"`
 
-	// 属性自定义项。
+	// 自定义项。主题的自定义属性。
 	SelfDefinedFields *[]SelfDefinedFieldVo `json:"self_defined_fields,omitempty"`
 }
 

@@ -12,7 +12,7 @@ type ShowEngineRequest struct {
 	// 如果不带则默认企业项目为\"default\"，ID为\"0\"。
 	XEnterpriseProjectID *string `json:"X-Enterprise-Project-ID,omitempty"`
 
-	// 微服务引擎专享版ID。
+	// 微服务引擎ID。
 	EngineId string `json:"engine_id"`
 }
 

@@ -11,13 +11,13 @@ import (
 // BizMetricVo 业务指标信息。
 type BizMetricVo struct {
 
-	// 编码，更新时必填，创建是为空。
-	Id *int64 `json:"id,omitempty"`
+	// 编码，更新时必填，创建时为空，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
 	// 指标名称。
 	Name string `json:"name"`
 
-	// 指标编码。
+	// 指标编码，只读。
 	Code *string `json:"code,omitempty"`
 
 	// 指标别名。
@@ -27,16 +27,16 @@ type BizMetricVo struct {
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
-	// 归属的流程架构的ID。
-	BizCatalogId int64 `json:"biz_catalog_id"`
+	// 归属的流程架构的ID，填写String类型替代Long类型。
+	BizCatalogId string `json:"biz_catalog_id"`
 
-	// 归属的流程架构路径。
+	// 归属的流程架构路径，只读。
 	BizCatalogPath *string `json:"biz_catalog_path,omitempty"`
 
-	// 创建人。
+	// 创建人，只读。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人。
+	// 更新人，只读。
 	UpdateBy *string `json:"update_by,omitempty"`
 
 	// 数据来源。
@@ -54,16 +54,16 @@ type BizMetricVo struct {
 	// 统计口径和修饰词。
 	GeneralFilters *string `json:"general_filters,omitempty"`
 
-	// 刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+	// 刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
 	IntervalType BizMetricVoIntervalType `json:"interval_type"`
 
 	// 应用场景。
 	ApplyScenario *string `json:"apply_scenario,omitempty"`
 
-	// 关联技术指标。
-	TechnicalMetric *int64 `json:"technical_metric,omitempty"`
+	// 关联技术指标，填写String类型替代Long类型。
+	TechnicalMetric *string `json:"technical_metric,omitempty"`
 
-	// 关联技术指标名称。
+	// 关联技术指标名称，只读。
 	TechnicalMetricName *string `json:"technical_metric_name,omitempty"`
 
 	TechnicalMetricType *BizTypeEnum `json:"technical_metric_type,omitempty"`
@@ -80,7 +80,7 @@ type BizMetricVo struct {
 	// 设置目的。
 	Destination string `json:"destination"`
 
-	// 资产同步后的guid。
+	// 资产同步后的guid，只读。
 	Guid *string `json:"guid,omitempty"`
 
 	// 指标定义。
@@ -96,10 +96,10 @@ type BizMetricVo struct {
 
 	NewBiz *BizVersionManageVo `json:"new_biz,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 主题域分组中文名，只读，创建和更新时无需填写。
@@ -114,6 +114,9 @@ type BizMetricVo struct {
 	BizMetric *SyncStatusEnum `json:"biz_metric,omitempty"`
 
 	SummaryStatus *SyncStatusEnum `json:"summary_status,omitempty"`
+
+	// 自定义项
+	SelfDefinedFields *[]SelfDefinedFieldVo `json:"self_defined_fields,omitempty"`
 }
 
 func (o BizMetricVo) String() string {

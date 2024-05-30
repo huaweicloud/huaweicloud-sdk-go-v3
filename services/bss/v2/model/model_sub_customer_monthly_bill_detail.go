@@ -30,7 +30,7 @@ type SubCustomerMonthlyBillDetail struct {
 	// 资源类型名称。例如ECS的资源类型名称为“云主机”。
 	ResourceTypeName *string `json:"resource_type_name,omitempty"`
 
-	// 计费模式。 1：包周期3：按需10：预留实例
+	// 计费模式。 1：包周期3：按需10：预留实例11：节省计划
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// 交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
@@ -42,7 +42,7 @@ type SubCustomerMonthlyBillDetail struct {
 	// 唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更8：消费-自动续订5：消费-使用12：消费-按时计费4：退款-退订9：调账-补偿13：消费-退订手续费增收14：消费-服务支持计划月末补扣16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
 	BillDetailType *int32 `json:"bill_detail_type,omitempty"`
 
 	// 资源ID。
@@ -132,22 +132,22 @@ type SubCustomerMonthlyBillDetail struct {
 	// 云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
 	RegionName *string `json:"region_name,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的云服务类型编码。
 	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的云服务类型名称。
 	SubServiceTypeName *string `json:"sub_service_type_name,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源类型编码。
 	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源类型名称。
 	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceId *string `json:"sub_resource_id,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
 }
 

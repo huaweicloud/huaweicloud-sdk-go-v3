@@ -19,9 +19,9 @@ func CseClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateEngine 创建微服务引擎专享版
+// CreateEngine 创建微服务引擎
 //
-// 创建微服务引擎专享版。
+// 创建微服务引擎，支持创建ServiceComb引擎专享版、注册配置中心、应用网关（公测）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) CreateEngine(request *model.CreateEngineRequest) (*model.CreateEngineResponse, error) {
@@ -34,7 +34,7 @@ func (c *CseClient) CreateEngine(request *model.CreateEngineRequest) (*model.Cre
 	}
 }
 
-// CreateEngineInvoker 创建微服务引擎专享版
+// CreateEngineInvoker 创建微服务引擎
 func (c *CseClient) CreateEngineInvoker(request *model.CreateEngineRequest) *CreateEngineInvoker {
 	requestDef := GenReqDefForCreateEngine()
 	return &CreateEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -82,9 +82,9 @@ func (c *CseClient) CreateMicroserviceRouteRuleInvoker(request *model.CreateMicr
 	return &CreateMicroserviceRouteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteEngine 删除微服务引擎专享版
+// DeleteEngine 删除微服务引擎
 //
-// 删除微服务引擎专享版。
+// 删除微服务引擎。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) DeleteEngine(request *model.DeleteEngineRequest) (*model.DeleteEngineResponse, error) {
@@ -97,7 +97,7 @@ func (c *CseClient) DeleteEngine(request *model.DeleteEngineRequest) (*model.Del
 	}
 }
 
-// DeleteEngineInvoker 删除微服务引擎专享版
+// DeleteEngineInvoker 删除微服务引擎
 func (c *CseClient) DeleteEngineInvoker(request *model.DeleteEngineRequest) *DeleteEngineInvoker {
 	requestDef := GenReqDefForDeleteEngine()
 	return &DeleteEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -187,9 +187,9 @@ func (c *CseClient) ListEnginesInvoker(request *model.ListEnginesRequest) *ListE
 	return &ListEnginesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFlavors 查询微服务引擎专享版的规格列表
+// ListFlavors 查询微服务引擎的规格列表
 //
-// 查询微服务引擎专享版的规格列表。
+// 查询微服务引擎的规格列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListFlavorsResponse, error) {
@@ -202,7 +202,7 @@ func (c *CseClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
-// ListFlavorsInvoker 查询微服务引擎专享版的规格列表
+// ListFlavorsInvoker 查询微服务引擎的规格列表
 func (c *CseClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -313,9 +313,9 @@ func (c *CseClient) ResizeEngineInvoker(request *model.ResizeEngineRequest) *Res
 	return &ResizeEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RetryEngine 对微服务引擎专享版进行重试
+// RetryEngine 对微服务引擎进行重试
 //
-// 对微服务引擎专享版进行重试
+// 对微服务引擎进行重试，当前支持ServiceComb专享版引擎
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) RetryEngine(request *model.RetryEngineRequest) (*model.RetryEngineResponse, error) {
@@ -328,15 +328,15 @@ func (c *CseClient) RetryEngine(request *model.RetryEngineRequest) (*model.Retry
 	}
 }
 
-// RetryEngineInvoker 对微服务引擎专享版进行重试
+// RetryEngineInvoker 对微服务引擎进行重试
 func (c *CseClient) RetryEngineInvoker(request *model.RetryEngineRequest) *RetryEngineInvoker {
 	requestDef := GenReqDefForRetryEngine()
 	return &RetryEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowEngine 查询微服务引擎专享版详情
+// ShowEngine 查询微服务引擎详情
 //
-// 查询微服务引擎专享版详情
+// 查询微服务引擎详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) ShowEngine(request *model.ShowEngineRequest) (*model.ShowEngineResponse, error) {
@@ -349,7 +349,7 @@ func (c *CseClient) ShowEngine(request *model.ShowEngineRequest) (*model.ShowEng
 	}
 }
 
-// ShowEngineInvoker 查询微服务引擎专享版详情
+// ShowEngineInvoker 查询微服务引擎详情
 func (c *CseClient) ShowEngineInvoker(request *model.ShowEngineRequest) *ShowEngineInvoker {
 	requestDef := GenReqDefForShowEngine()
 	return &ShowEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -418,9 +418,9 @@ func (c *CseClient) UpdateGovernancePolicyInvoker(request *model.UpdateGovernanc
 	return &UpdateGovernancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpgradeEngine 升级微服务引擎专享版
+// UpgradeEngine 升级微服务引擎
 //
-// 升级微服务引擎专享版
+// 升级微服务引擎
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) UpgradeEngine(request *model.UpgradeEngineRequest) (*model.UpgradeEngineResponse, error) {
@@ -433,15 +433,15 @@ func (c *CseClient) UpgradeEngine(request *model.UpgradeEngineRequest) (*model.U
 	}
 }
 
-// UpgradeEngineInvoker 升级微服务引擎专享版
+// UpgradeEngineInvoker 升级微服务引擎
 func (c *CseClient) UpgradeEngineInvoker(request *model.UpgradeEngineRequest) *UpgradeEngineInvoker {
 	requestDef := GenReqDefForUpgradeEngine()
 	return &UpgradeEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpgradeEngineConfig 更新微服务引擎专享版配置
+// UpgradeEngineConfig 更新微服务引擎配置
 //
-// 更新微服务引擎专享版配置
+// 更新微服务引擎配置，更新ServiceComb专享版引擎与注册配置中心引擎的配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CseClient) UpgradeEngineConfig(request *model.UpgradeEngineConfigRequest) (*model.UpgradeEngineConfigResponse, error) {
@@ -454,7 +454,7 @@ func (c *CseClient) UpgradeEngineConfig(request *model.UpgradeEngineConfigReques
 	}
 }
 
-// UpgradeEngineConfigInvoker 更新微服务引擎专享版配置
+// UpgradeEngineConfigInvoker 更新微服务引擎配置
 func (c *CseClient) UpgradeEngineConfigInvoker(request *model.UpgradeEngineConfigRequest) *UpgradeEngineConfigInvoker {
 	requestDef := GenReqDefForUpgradeEngineConfig()
 	return &UpgradeEngineConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

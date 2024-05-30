@@ -9,13 +9,13 @@ import (
 // ListIssuedPartnerCouponsRequest Request Object
 type ListIssuedPartnerCouponsRequest struct {
 
-	// 优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	CouponId *string `json:"coupon_id,omitempty"`
 
 	// 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
 	CustomerId *string `json:"customer_id,omitempty"`
 
-	// 订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	OrderId *string `json:"order_id,omitempty"`
 
 	// 优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。

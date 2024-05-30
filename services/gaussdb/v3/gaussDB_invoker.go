@@ -1025,6 +1025,30 @@ func (i *ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker) Invoke() (*model
 	}
 }
 
+type ShowProxyIpgroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProxyIpgroupInvoker) Invoke() (*model.ShowProxyIpgroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProxyIpgroupResponse), nil
+	}
+}
+
+type ShowProxyVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProxyVersionInvoker) Invoke() (*model.ShowProxyVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProxyVersionResponse), nil
+	}
+}
+
 type ShowRestoreTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1325,6 +1349,18 @@ func (i *UpdateProxyConnectionPoolTypeInvoker) Invoke() (*model.UpdateProxyConne
 	}
 }
 
+type UpdateProxyNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProxyNameInvoker) Invoke() (*model.UpdateProxyNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProxyNameResponse), nil
+	}
+}
+
 type UpdateProxyNewConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1382,6 +1418,18 @@ func (i *UpgradeGaussMySqlInstanceDatabaseInvoker) Invoke() (*model.UpgradeGauss
 		return nil, err
 	} else {
 		return result.(*model.UpgradeGaussMySqlInstanceDatabaseResponse), nil
+	}
+}
+
+type UpgradeProxyVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeProxyVersionInvoker) Invoke() (*model.UpgradeProxyVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeProxyVersionResponse), nil
 	}
 }
 

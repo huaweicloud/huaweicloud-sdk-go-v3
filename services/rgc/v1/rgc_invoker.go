@@ -29,15 +29,15 @@ func (i *EnableControlInvoker) Invoke() (*model.EnableControlResponse, error) {
 	}
 }
 
-type ListControlsForOrganizationUnitInvoker struct {
+type ListControlsForOrganizationalUnitInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListControlsForOrganizationUnitInvoker) Invoke() (*model.ListControlsForOrganizationUnitResponse, error) {
+func (i *ListControlsForOrganizationalUnitInvoker) Invoke() (*model.ListControlsForOrganizationalUnitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListControlsForOrganizationUnitResponse), nil
+		return result.(*model.ListControlsForOrganizationalUnitResponse), nil
 	}
 }
 

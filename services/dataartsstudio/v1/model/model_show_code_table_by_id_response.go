@@ -8,10 +8,8 @@ import (
 
 // ShowCodeTableByIdResponse Response Object
 type ShowCodeTableByIdResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CreateCodeTableResultData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ShowCodeTableByIdResponse) String() string {

@@ -173,6 +173,18 @@ func (i *ChangeServerChargeModeInvoker) Invoke() (*model.ChangeServerChargeModeR
 	}
 }
 
+type ChangeServerNetworkInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeServerNetworkInterfaceInvoker) Invoke() (*model.ChangeServerNetworkInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeServerNetworkInterfaceResponse), nil
+	}
+}
+
 type ChangeServerOsWithCloudInitInvoker struct {
 	*invoker.BaseInvoker
 }

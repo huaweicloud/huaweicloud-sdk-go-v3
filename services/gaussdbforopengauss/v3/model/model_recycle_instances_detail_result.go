@@ -17,7 +17,7 @@ type RecycleInstancesDetailResult struct {
 	// 实例名称。
 	Name string `json:"name"`
 
-	// 部署形态。
+	// 部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
 	HaMode RecycleInstancesDetailResultHaMode `json:"ha_mode"`
 
 	// 引擎名称
@@ -59,7 +59,7 @@ type RecycleInstancesDetailResult struct {
 	// 回收站备份状态。（Running：运行中；Active：有效的）。
 	RecycleStatus RecycleInstancesDetailResultRecycleStatus `json:"recycle_status"`
 
-	// 实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+	// 产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
 	Mode RecycleInstancesDetailResultMode `json:"mode"`
 }
 

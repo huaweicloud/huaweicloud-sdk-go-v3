@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ListControlsForOrganizationUnitResponse Response Object
-type ListControlsForOrganizationUnitResponse struct {
+// ListControlsForOrganizationalUnitResponse Response Object
+type ListControlsForOrganizationalUnitResponse struct {
 
 	// 治理策略概要。
 	ControlSummaries *[]TargetControl `json:"control_summaries,omitempty"`
@@ -19,11 +19,11 @@ type ListControlsForOrganizationUnitResponse struct {
 	HttpStatusCode int          `json:"-"`
 }
 
-func (o ListControlsForOrganizationUnitResponse) String() string {
+func (o ListControlsForOrganizationalUnitResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListControlsForOrganizationUnitResponse struct{}"
+		return "ListControlsForOrganizationalUnitResponse struct{}"
 	}
 
-	return strings.Join([]string{"ListControlsForOrganizationUnitResponse", string(data)}, " ")
+	return strings.Join([]string{"ListControlsForOrganizationalUnitResponse", string(data)}, " ")
 }

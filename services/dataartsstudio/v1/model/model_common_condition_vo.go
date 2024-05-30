@@ -20,14 +20,14 @@ type CommonConditionVo struct {
 	// 计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
 	CalExp string `json:"cal_exp"`
 
-	// 引用函数ID。
-	CalFnIds []int64 `json:"cal_fn_ids"`
+	// 引用函数ID，填写String类型替代Long类型。
+	CalFnIds []string `json:"cal_fn_ids"`
 
 	// 前端表达式配置，用于前端数据恢复。
 	FrontConfigs *string `json:"front_configs,omitempty"`
 
-	// id
-	Id *int64 `json:"id,omitempty"`
+	// 通用限定ID，只读，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 }
 
 func (o CommonConditionVo) String() string {

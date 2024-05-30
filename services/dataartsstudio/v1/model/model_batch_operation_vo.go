@@ -9,24 +9,25 @@ import (
 	"strings"
 )
 
+// BatchOperationVo 批量操作对象，只读。
 type BatchOperationVo struct {
 
-	// 批量审批ID。
-	Id *int64 `json:"id,omitempty"`
+	// 批量审批ID，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
 	// 项目ID。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 组ID。
-	GroupId *int64 `json:"group_id,omitempty"`
+	// 组ID，填写String类型替代Long类型。
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 业务名。
 	BizName *string `json:"biz_name,omitempty"`
 
-	// 业务ID。
-	BizId *int64 `json:"biz_id,omitempty"`
+	// 业务ID，填写String类型替代Long类型。
+	BizId *string `json:"biz_id,omitempty"`
 
-	// 操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+	// 操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
 	OperationStatus *BatchOperationVoOperationStatus `json:"operation_status,omitempty"`
 
 	// 类型。
@@ -44,10 +45,10 @@ type BatchOperationVo struct {
 	// 总数。
 	Total *int32 `json:"total,omitempty"`
 
-	// 成功个数。
+	// 操作成功个数。
 	Success *int32 `json:"success,omitempty"`
 
-	// 失败个数。
+	// 操作失败个数。
 	Failed *int32 `json:"failed,omitempty"`
 
 	// 当前进度。

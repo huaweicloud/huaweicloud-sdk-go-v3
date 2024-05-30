@@ -8,10 +8,10 @@ import (
 
 type CatalogAttributeVo struct {
 
-	// 路径。
+	// 路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
 	Path string `json:"path"`
 
-	// 名称。
+	// 资产名称。
 	QualifiedName string `json:"qualifiedName"`
 
 	// 主题所属层级。
@@ -55,22 +55,22 @@ type CatalogAttributeVo struct {
 	// 父节点ID。
 	ParentId *string `json:"parentId,omitempty"`
 
-	// 是否为L1层。
+	// 是否为L1层。主题域分组。
 	L1 *bool `json:"l1,omitempty"`
 
-	// 是否为L2层。
+	// 是否为L2层。主题域。
 	L2 *bool `json:"l2,omitempty"`
 
-	// 是否为L3层。
+	// 是否为L3层。业务对象。
 	L3 *bool `json:"l3,omitempty"`
 
-	// 顺序编号。
+	// 顺序编号。主题返回时根据此编号由小到大排序。
 	Ordinal *int32 `json:"ordinal,omitempty"`
 
-	// 租户ID。
+	// 租户ID。获取方式参考此接口的路径参数“project_id”获取。
 	TenantId *string `json:"tenantId,omitempty"`
 
-	// 自定义项。
+	// 自定义项。主题的自定义属性项。
 	SelfDefinedFields *[]SelfDefinedFieldVo `json:"self_defined_fields,omitempty"`
 }
 

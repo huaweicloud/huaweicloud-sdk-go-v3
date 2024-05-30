@@ -27,7 +27,7 @@ type ListAllStandardsRequest struct {
 	// 时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+	// 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。

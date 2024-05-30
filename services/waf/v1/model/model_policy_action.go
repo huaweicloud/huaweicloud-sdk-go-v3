@@ -14,6 +14,9 @@ type PolicyAction struct {
 
 	// web基础防护动作（log为仅记录、block为拦截）
 	Category *PolicyActionCategory `json:"category,omitempty"`
+
+	// 攻击惩罚规则ID
+	FollowedActionId *string `json:"followed_action_id,omitempty"`
 }
 
 func (o PolicyAction) String() string {

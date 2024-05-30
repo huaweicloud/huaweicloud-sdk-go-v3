@@ -8,10 +8,8 @@ import (
 
 // UpdateWorkspaceResponse Response Object
 type UpdateWorkspaceResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CreateWorkspaceResultData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o UpdateWorkspaceResponse) String() string {

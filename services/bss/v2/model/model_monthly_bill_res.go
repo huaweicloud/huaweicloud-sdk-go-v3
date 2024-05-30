@@ -14,7 +14,7 @@ type MonthlyBillRes struct {
 	// 消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
 	BillDate *string `json:"bill_date,omitempty"`
 
-	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
 	BillType *int32 `json:"bill_type,omitempty"`
 
 	// 消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
@@ -56,7 +56,7 @@ type MonthlyBillRes struct {
 	// 企业项目名称。
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
-	// 计费模式。 1 : 包年/包月3：按需10：预留实例
+	// 计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
 	ChargeMode *int32 `json:"charge_mode,omitempty"`
 
 	// 客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -113,22 +113,22 @@ type MonthlyBillRes struct {
 	// 产品的规格描述。
 	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的云服务类型编码。
 	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的云服务类型名称。
 	SubServiceTypeName *string `json:"sub_service_type_name,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源类型编码。
 	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源类型名称。
 	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceId *string `json:"sub_resource_id,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
 
 	// 原订单ID 。

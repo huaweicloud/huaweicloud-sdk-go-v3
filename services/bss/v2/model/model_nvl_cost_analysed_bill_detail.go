@@ -15,7 +15,7 @@ type NvlCostAnalysedBillDetail struct {
 	// 账期。 格式：YYYY-MM。按照东八区时间截取。
 	BillCycle *string `json:"bill_cycle,omitempty"`
 
-	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
 	BillType *int32 `json:"bill_type,omitempty"`
 
 	// 消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
@@ -63,7 +63,7 @@ type NvlCostAnalysedBillDetail struct {
 	// 企业项目的名称。
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
-	// 计费模式。 1：包年/包月3：按需10：预留实例
+	// 计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// 订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
@@ -123,22 +123,22 @@ type NvlCostAnalysedBillDetail struct {
 	// 月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
 	AmortizedBonusAmount *decimal.Decimal `json:"amortized_bonus_amount,omitempty"`
 
-	// 该字段为预留字段
+	// 整机的子云服务的自身的云服务类型编码。
 	SubServiceTypeCode *string `json:"sub_service_type_code,omitempty"`
 
-	// 该字段为预留字段
+	// 整机的子云服务的自身的云服务类型名称。
 	SubServiceTypeName *string `json:"sub_service_type_name,omitempty"`
 
-	// 该字段为预留字段
+	// 整机的子云服务的自身的资源类型编码。
 	SubResourceTypeCode *string `json:"sub_resource_type_code,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源类型名称。
 	SubResourceTypeName *string `json:"sub_resource_type_name,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceId *string `json:"sub_resource_id,omitempty"`
 
-	// 该字段为预留字段。
+	// 整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
 
 	// 成本标签。

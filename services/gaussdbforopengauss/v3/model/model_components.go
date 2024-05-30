@@ -20,6 +20,12 @@ type Components struct {
 
 	// 分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
 	DistributedId *string `json:"distributed_id,omitempty"`
+
+	// 节点类型，包括：DN, CN, GTM, CM, ETCD。
+	Type *string `json:"type,omitempty"`
+
+	// 详情。
+	Detail *string `json:"detail,omitempty"`
 }
 
 func (o Components) String() string {

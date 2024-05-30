@@ -8,8 +8,8 @@ import (
 
 type MappingSourceFieldVo struct {
 
-	// 目标字段ID，当前表的某个字段。
-	TargetFieldId *int64 `json:"target_field_id,omitempty"`
+	// 目标字段ID，当前表的某个字段，填写String类型替代Long类型。
+	TargetFieldId *string `json:"target_field_id,omitempty"`
 
 	// 目标字段编码。
 	TargetFieldName string `json:"target_field_name"`

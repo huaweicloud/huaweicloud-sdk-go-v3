@@ -8,10 +8,8 @@ import (
 
 // ListSubjectLevelsResponse Response Object
 type ListSubjectLevelsResponse struct {
-
-	// 主题层级信息。
-	Levels         *[]CatalogLevelVo `json:"levels,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Data           *ListSubjectLevelsResultData `json:"data,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ListSubjectLevelsResponse) String() string {

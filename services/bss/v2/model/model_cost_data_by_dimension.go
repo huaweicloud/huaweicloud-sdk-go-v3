@@ -8,10 +8,10 @@ import (
 
 type CostDataByDimension struct {
 
-	// 维度列表。
+	// 维度列表，具体请参见表 DimensionGroup。
 	Dimensions *[]DimensionGroup `json:"dimensions,omitempty"`
 
-	// 成本值。
+	// 成本值，具体请参见表 Cost。
 	Costs *[]Cost `json:"costs,omitempty"`
 
 	// 此维度值对应整个时间跨度的成本汇总金额。

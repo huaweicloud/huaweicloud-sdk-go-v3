@@ -324,6 +324,27 @@ func (c *EcsClient) ChangeServerChargeModeInvoker(request *model.ChangeServerCha
 	return &ChangeServerChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeServerNetworkInterface 更新云服务器指定网卡属性
+//
+// 更新云服务器指定网卡属性，当前仅支持更新网卡IP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ChangeServerNetworkInterface(request *model.ChangeServerNetworkInterfaceRequest) (*model.ChangeServerNetworkInterfaceResponse, error) {
+	requestDef := GenReqDefForChangeServerNetworkInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeServerNetworkInterfaceResponse), nil
+	}
+}
+
+// ChangeServerNetworkInterfaceInvoker 更新云服务器指定网卡属性
+func (c *EcsClient) ChangeServerNetworkInterfaceInvoker(request *model.ChangeServerNetworkInterfaceRequest) *ChangeServerNetworkInterfaceInvoker {
+	requestDef := GenReqDefForChangeServerNetworkInterface()
+	return &ChangeServerNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeServerOsWithCloudInit 切换弹性云服务器操作系统(安装Cloud init)
 //
 // 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。

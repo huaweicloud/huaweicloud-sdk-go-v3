@@ -8,10 +8,8 @@ import (
 
 // UpdateDirectoryResponse Response Object
 type UpdateDirectoryResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CreateDirectoryResultData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o UpdateDirectoryResponse) String() string {

@@ -18,7 +18,7 @@ type RollbackApprovalRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 审批单ID。
+	// 审批单ID数组。
 	Ids string `json:"ids"`
 }
 

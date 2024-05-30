@@ -35,7 +35,7 @@ type MonthlyBillRecord struct {
 	// 企业项目的名称。
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
-	// 计费模式。 1：包年/包月3：按需10：预留实例
+	// 计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
 	// 消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
@@ -50,7 +50,7 @@ type MonthlyBillRecord struct {
 	// 订单ID或交易ID，扣费维度的唯一标识。
 	TradeId *string `json:"trade_id,omitempty"`
 
-	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+	// 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
 	BillType *int32 `json:"bill_type,omitempty"`
 
 	// 支付状态。 1：已支付2：未结清3：未结算

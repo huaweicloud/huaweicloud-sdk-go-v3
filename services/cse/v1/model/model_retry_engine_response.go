@@ -9,13 +9,13 @@ import (
 // RetryEngineResponse Response Object
 type RetryEngineResponse struct {
 
-	// 创建的微服务引擎专享版ID
+	// 创建的微服务引擎ID
 	Id *string `json:"id,omitempty"`
 
-	// 创建的微服务引擎专享版名称
+	// 创建的微服务引擎名称
 	Name *string `json:"name,omitempty"`
 
-	// 微服务引擎专享版执行的任务ID
+	// 微服务引擎执行的任务ID
 	JobId          *int32 `json:"jobId,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

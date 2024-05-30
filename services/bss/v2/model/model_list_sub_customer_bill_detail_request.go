@@ -24,25 +24,25 @@ type ListSubCustomerBillDetailRequest struct {
 	// 云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
 	RegionCode *string `json:"region_code,omitempty"`
 
-	// 计费模式。1：包周期3：按需10：预留实例此参数不携带或携带值为空时，默认查询所有计费模式下的消费记录；携带值为空串或携带值为null时，作为筛选条件。
+	// 计费模式。1：包周期3：按需10：预留实例11：节省计划此参数不携带或携带值为空或携带为null时，默认查询所有计费模式下的消费记录；不支持携带值为空串。
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
-	// 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空或携带值为null时，不作为筛选条件；不支持携带值为空串。
 	BillDetailType *int32 `json:"bill_detail_type,omitempty"`
 
-	// 资源标识。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 资源标识。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 资源名称。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 资源名称。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID 此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID 此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	TradeId *string `json:"trade_id,omitempty"`
 
-	// 客户经理标识。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 客户经理标识。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	AccountManagerId *string `json:"account_manager_id,omitempty"`
 
-	// 子客户的关联类型：1：顾问销售2：代售 此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+	// 子客户的关联类型：1：顾问销售2：代售 此参数不携带或携带值为空时，不作为筛选条件；不支持携带为null和空串。
 	AssociationType *string `json:"association_type,omitempty"`
 
 	// 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
@@ -54,10 +54,10 @@ type ListSubCustomerBillDetailRequest struct {
 	// 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商可以查询名下所有子客户消费（包括云经销商子客户）。如果是普通经销商，那么此处可以为空。如果华为云总经销商需要查询客户在云经销商关联期间的消费，需要携带该字段；除此之外，此参数不做处理。否则只能查询该客户在与自己关联期间的消费。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
-	// 查询的资源消费记录的开始日期，格式为YYYY-MM-DD。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串。 说明： 必须和cycle（即资源的消费账期）在同一个月。
+	// 查询的资源消费记录的开始日期，格式为YYYY-MM-DD。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串。 说明： 必须和bill_cycle（即资源的消费账期）在同一个月。bill_date_begin需小于等于bill_date_end。
 	BillDateBegin *string `json:"bill_date_begin,omitempty"`
 
-	// 查询的资源消费记录的结束日期，格式为YYYY-MM-DD。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+	// 查询的资源消费记录的结束日期，格式为YYYY-MM-DD。此参数不携带或携带值为空时，不作为筛选条件；不支持携带值为空串。 说明： 必须和bill_cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即资源的消费账期）进行查询。bill_date_begin需小于等于bill_date_end。
 	BillDateEnd *string `json:"bill_date_end,omitempty"`
 }
 

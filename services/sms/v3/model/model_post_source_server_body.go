@@ -101,6 +101,9 @@ type PostSourceServerBody struct {
 
 	// 启动方式，可以取值MANUAL、MGC或者空。
 	StartType *PostSourceServerBodyStartType `json:"start_type,omitempty"`
+
+	// 磁盘IO读时延，单位为ms
+	IoReadWait *float64 `json:"io_read_wait,omitempty"`
 }
 
 func (o PostSourceServerBody) String() string {

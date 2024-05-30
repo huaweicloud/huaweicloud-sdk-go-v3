@@ -21,6 +21,12 @@ type TaskDetailResult struct {
 	// 任务进度，单位：%。
 	Process *string `json:"process,omitempty"`
 
+	// 创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+	EndedAt *string `json:"ended_at,omitempty"`
+
 	// 失败原因。
 	FailReason *string `json:"fail_reason,omitempty"`
 }

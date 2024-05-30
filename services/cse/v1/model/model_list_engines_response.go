@@ -9,10 +9,10 @@ import (
 // ListEnginesResponse Response Object
 type ListEnginesResponse struct {
 
-	// 当前符合查询条件的微服务引擎专享版总个数
+	// 当前符合查询条件的微服务引擎个数
 	Total *int32 `json:"total,omitempty"`
 
-	// 微服务引擎专享版详情
+	// 微服务引擎详情
 	Data           *[]EngineSimpleInfo `json:"data,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

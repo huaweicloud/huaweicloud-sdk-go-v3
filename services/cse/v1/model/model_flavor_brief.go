@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// FlavorBrief 微服务引擎专享版规格及描述
+// FlavorBrief 微服务引擎规格及描述
 type FlavorBrief struct {
 
-	// 微服务引擎专享版规格
+	// 微服务引擎规格
 	Flavor *string `json:"flavor,omitempty"`
 
-	// 微服务引擎专享版规格描述
+	// 微服务引擎规格描述
 	Description *string `json:"description,omitempty"`
 
 	Spec *EngineSpec `json:"spec,omitempty"`

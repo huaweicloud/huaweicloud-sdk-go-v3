@@ -10,8 +10,8 @@ import (
 
 type WorkspaceVo struct {
 
-	// 编号。
-	Id *int64 `json:"id,omitempty"`
+	// 编号，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
 	// 工作区名字。
 	Name string `json:"name"`
@@ -33,10 +33,10 @@ type WorkspaceVo struct {
 	// 数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
 	DwType *string `json:"dw_type,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 创建人。
@@ -45,7 +45,7 @@ type WorkspaceVo struct {
 	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 工作区类型枚举。THIRD_NF(关系建模)、DIMENSION(维度建模)。
+	// 工作区类型枚举。 枚举值：   - THIRD_NF: 关系建模   - DIMENSION: 维度建模
 	Type WorkspaceVoType `json:"type"`
 
 	// 关联的业务分层的ID列表 {\"l1Ids\":[],\"l2Ids\":[],\"l3Ids\":[]}。
@@ -53,6 +53,9 @@ type WorkspaceVo struct {
 
 	// 数据库名称数组。
 	Databases *[]string `json:"databases,omitempty"`
+
+	// 模型校验前缀，长度不超过100，数字字母下划线组成，字母开头
+	TableModelPrefix *string `json:"table_model_prefix,omitempty"`
 }
 
 func (o WorkspaceVo) String() string {

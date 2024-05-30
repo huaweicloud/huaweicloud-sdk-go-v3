@@ -30,17 +30,17 @@ type ListDerivativeIndexesRequest struct {
 	// 按审核人查询。
 	Approver *string `json:"approver,omitempty"`
 
-	// 业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+	// 业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
 	Status *ListDerivativeIndexesRequestStatus `json:"status,omitempty"`
 
-	// 依据维度ID查维度属性。
-	DimensionId *int64 `json:"dimension_id,omitempty"`
+	// 依据维度ID查维度属性，填写String类型替代Long类型。
+	DimensionId *string `json:"dimension_id,omitempty"`
 
 	// 依据维度颗粒度查维度属性。
 	DimensionGroup *string `json:"dimension_group,omitempty"`
 
-	// 依据原子指标ID查维度属性。
-	AtomicIndexId *int64 `json:"atomic_index_id,omitempty"`
+	// 依据原子指标ID查维度属性，填写String类型替代Long类型。
+	AtomicIndexId *string `json:"atomic_index_id,omitempty"`
 
 	// 是否查询复合指标
 	AllMetrics *bool `json:"all_metrics,omitempty"`
@@ -48,8 +48,8 @@ type ListDerivativeIndexesRequest struct {
 	// 数据连接类型
 	DwType *string `json:"dw_type,omitempty"`
 
-	// 业务对象l3的ID。
-	L3Id *int64 `json:"l3_id,omitempty"`
+	// 业务对象l3的ID，填写String类型替代Long类型。
+	L3Id *string `json:"l3_id,omitempty"`
 
 	// 时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	BeginTime *string `json:"begin_time,omitempty"`
@@ -57,7 +57,7 @@ type ListDerivativeIndexesRequest struct {
 	// 时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+	// 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。

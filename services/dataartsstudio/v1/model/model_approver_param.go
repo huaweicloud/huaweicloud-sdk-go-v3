@@ -8,6 +8,9 @@ import (
 
 type ApproverParam struct {
 
+	// 调用审核系统的应用名称，开发人员自己定。
+	AppName *string `json:"app_name,omitempty"`
+
 	// 审批人姓名。
 	ApproverName string `json:"approver_name"`
 

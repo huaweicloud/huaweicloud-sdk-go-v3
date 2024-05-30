@@ -52,6 +52,8 @@ var (
 		"https://swr-api.eu-west-101.myhuaweicloud.eu")
 	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
 		"https://swr-api.my-kualalumpur-1.myhuaweicloud.com")
+	ME_EAST_1 = region.NewRegion("me-east-1",
+		"https://swr-api.me-east-1.myhuaweicloud.com")
 	EU_WEST_0 = region.NewRegion("eu-west-0",
 		"https://swr-api.eu-west-0.myhuaweicloud.com")
 )
@@ -79,6 +81,7 @@ var staticFields = map[string]*region.Region{
 	"ae-ad-1":          AE_AD_1,
 	"eu-west-101":      EU_WEST_101,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
+	"me-east-1":        ME_EAST_1,
 	"eu-west-0":        EU_WEST_0,
 }
 

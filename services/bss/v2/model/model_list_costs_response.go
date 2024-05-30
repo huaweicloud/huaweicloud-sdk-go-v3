@@ -15,7 +15,7 @@ type ListCostsResponse struct {
 	// 总条数。
 	TotalCount *int32 `json:"total_count,omitempty"`
 
-	// 按天或按月的明细金额。
+	// 按天或按月的明细金额，具体请参见表 CostDataByDimension。
 	CostData       *[]CostDataByDimension `json:"cost_data,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

@@ -48,7 +48,7 @@ type ShowQualityTaskDetailResponse struct {
 	// 调度周期，MINUTE:按分钟调度，HOUR:按小时调度，DAY:按天调度，WEEK:按周调度
 	SchedulePeriod *string `json:"schedule_period,omitempty"`
 
-	// 调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+	// 调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
 	ScheduleInterval *string `json:"schedule_interval,omitempty"`
 
 	// 调度开始时间

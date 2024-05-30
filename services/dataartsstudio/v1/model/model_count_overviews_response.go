@@ -8,10 +8,8 @@ import (
 
 // CountOverviewsResponse Response Object
 type CountOverviewsResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CountOverviewsResultData `json:"data,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o CountOverviewsResponse) String() string {

@@ -8,10 +8,8 @@ import (
 
 // ListTableModelsResponse Response Object
 type ListTableModelsResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ListTableModelsResultData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ListTableModelsResponse) String() string {

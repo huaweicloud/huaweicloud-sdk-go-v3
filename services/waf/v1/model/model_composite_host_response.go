@@ -60,6 +60,9 @@ type CompositeHostResponse struct {
 
 	// 华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
 	Region *string `json:"region,omitempty"`
+
+	// 防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+	Server *[]WafServer `json:"server,omitempty"`
 }
 
 func (o CompositeHostResponse) String() string {

@@ -26,7 +26,7 @@ type ParaGroupParameterResult struct {
 	// 参数取值范围。
 	ValueRange string `json:"value_range"`
 
-	// 参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+	// 参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
 	DataType ParaGroupParameterResultDataType `json:"data_type"`
 
 	// 参数描述。

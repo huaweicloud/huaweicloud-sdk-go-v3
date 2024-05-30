@@ -8,10 +8,8 @@ import (
 
 // UpdateCodeTableValuesResponse Response Object
 type UpdateCodeTableValuesResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *UpdateCodeTableValuesResultData `json:"data,omitempty"`
+	HttpStatusCode int                              `json:"-"`
 }
 
 func (o UpdateCodeTableValuesResponse) String() string {

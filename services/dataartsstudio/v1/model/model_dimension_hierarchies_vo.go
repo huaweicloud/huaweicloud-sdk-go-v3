@@ -9,8 +9,8 @@ import (
 
 type DimensionHierarchiesVo struct {
 
-	// 编码。
-	Id *int64 `json:"id,omitempty"`
+	// 编码，填写String类型替代Long类型。
+	Id *string `json:"id,omitempty"`
 
 	// 层级名称。
 	Name *string `json:"name,omitempty"`
@@ -18,10 +18,10 @@ type DimensionHierarchiesVo struct {
 	// 层级包含的属性。
 	Attrs *[]HierarchiesAttrVo `json:"attrs,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 创建人。

@@ -8,19 +8,19 @@ import (
 
 type ClusterNode struct {
 
-	// 微服务引擎专享版CCE节点ID
+	// 微服务引擎CCE节点ID
 	Id *string `json:"id,omitempty"`
 
-	// 微服务引擎专享版CCE节点所属可用区
+	// 微服务引擎CCE节点所属可用区
 	Az *string `json:"az,omitempty"`
 
-	// 微服务引擎专享版CCE节点IP
+	// 微服务引擎CCE节点IP
 	Ip *string `json:"ip,omitempty"`
 
-	// 微服务引擎专享版CCE节点标签
+	// 微服务引擎CCE节点标签
 	Label *string `json:"label,omitempty"`
 
-	// 微服务引擎专享版CCE节点状态
+	// 微服务引擎CCE节点状态
 	Status *string `json:"status,omitempty"`
 }
 

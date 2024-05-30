@@ -33,6 +33,7 @@ type DatastoreOptionInstanceMode struct {
 
 type DatastoreOptionInstanceModeEnum struct {
 	HA          DatastoreOptionInstanceMode
+	HAREADONLY  DatastoreOptionInstanceMode
 	INDEPENDENT DatastoreOptionInstanceMode
 }
 
@@ -40,6 +41,9 @@ func GetDatastoreOptionInstanceModeEnum() DatastoreOptionInstanceModeEnum {
 	return DatastoreOptionInstanceModeEnum{
 		HA: DatastoreOptionInstanceMode{
 			value: "ha",
+		},
+		HAREADONLY: DatastoreOptionInstanceMode{
+			value: "ha:readonly",
 		},
 		INDEPENDENT: DatastoreOptionInstanceMode{
 			value: "independent",

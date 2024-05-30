@@ -9,36 +9,36 @@ import (
 	"strings"
 )
 
-// Spec 微服务引擎专享版的CCE规格
+// Spec 微服务引擎的CCE规格
 type Spec struct {
 
-	// 微服务引擎专享版CCE规格ID
+	// 微服务引擎CCE规格ID
 	Id *int64 `json:"id,omitempty"`
 
-	// 微服务引擎专享版ID
+	// 微服务引擎ID
 	EngineId *string `json:"engineId,omitempty"`
 
-	// 微服务引擎专享版CCE集群部署类型
+	// 微服务引擎的集群部署类型
 	SpecType *SpecSpecType `json:"specType,omitempty"`
 
-	// 微服务引擎专享版CCE集群信息，目前为null
+	// 微服务引擎的CCE集群信息，目前为null
 	Cluster *string `json:"cluster,omitempty"`
 
-	// 微服务引擎专享版CCE集群ID
+	// 微服务引擎的CCE集群ID
 	ClusterId *string `json:"clusterId,omitempty"`
 
 	ClusterNodes *SpecClusterNode `json:"clusterNodes,omitempty"`
 
-	// 微服务引擎专享版CCE集群规格
+	// 微服务引擎的CCE集群规格
 	Flavor *string `json:"flavor,omitempty"`
 
-	// 微服务引擎专享版CCE集群所在region
+	// 微服务引擎的CCE集群所在region
 	Region *string `json:"region,omitempty"`
 
-	// 微服务引擎专享版CCE集群版本
+	// 微服务引擎的CCE集群版本
 	Version *string `json:"version,omitempty"`
 
-	// 微服务引擎专享版CCE集群附加参数
+	// 微服务引擎的CCE集群附加参数
 	ExtendParam *string `json:"extendParam,omitempty"`
 }
 
@@ -56,21 +56,21 @@ type SpecSpecType struct {
 }
 
 type SpecSpecTypeEnum struct {
-	CCE          SpecSpecType
-	CSE          SpecSpecType
-	SPRING_CLOUD SpecSpecType
+	CSE2          SpecSpecType
+	NACOS2        SpecSpecType
+	MICRO_GATEWAY SpecSpecType
 }
 
 func GetSpecSpecTypeEnum() SpecSpecTypeEnum {
 	return SpecSpecTypeEnum{
-		CCE: SpecSpecType{
-			value: "CCE",
+		CSE2: SpecSpecType{
+			value: "CSE2",
 		},
-		CSE: SpecSpecType{
-			value: "CSE",
+		NACOS2: SpecSpecType{
+			value: "Nacos2",
 		},
-		SPRING_CLOUD: SpecSpecType{
-			value: "SpringCloud",
+		MICRO_GATEWAY: SpecSpecType{
+			value: "MicroGateway",
 		},
 	}
 }

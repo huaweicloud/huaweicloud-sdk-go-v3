@@ -648,6 +648,10 @@ func GenReqDefForListCustomerOrders() *def.HttpRequestDef {
 		WithName("IndirectPartnerId").
 		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Method").
+		WithJsonTag("method").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -674,6 +678,11 @@ func GenReqDefForListCustomerselfResourceRecordDetails() *def.HttpRequestDef {
 		WithPath("/v2/bills/customer-bills/res-records/query").
 		WithResponse(new(model.ListCustomerselfResourceRecordDetailsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -749,6 +758,10 @@ func GenReqDefForListCustomerselfResourceRecords() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BillDateEnd").
 		WithJsonTag("bill_date_end").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StatisticType").
+		WithJsonTag("statistic_type").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

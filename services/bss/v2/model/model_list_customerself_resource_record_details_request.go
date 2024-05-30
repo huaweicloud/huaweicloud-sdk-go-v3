@@ -8,6 +8,10 @@ import (
 
 // ListCustomerselfResourceRecordDetailsRequest Request Object
 type ListCustomerselfResourceRecordDetailsRequest struct {
+
+	// 大陆站默认中文，枚举：zh_cn：中文 en_us：英文
+	XLanguage *string `json:"X-Language,omitempty"`
+
 	Body *QueryResRecordsDetailReq `json:"body,omitempty"`
 }
 

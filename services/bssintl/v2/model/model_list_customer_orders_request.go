@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -47,6 +50,9 @@ type ListCustomerOrdersRequest struct {
 
 	// 云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
+
+	// |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
+	Method *ListCustomerOrdersRequestMethod `json:"method,omitempty"`
 }
 
 func (o ListCustomerOrdersRequest) String() string {
@@ -56,4 +62,51 @@ func (o ListCustomerOrdersRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListCustomerOrdersRequest", string(data)}, " ")
+}
+
+type ListCustomerOrdersRequestMethod struct {
+	value string
+}
+
+type ListCustomerOrdersRequestMethodEnum struct {
+	ONESELF      ListCustomerOrdersRequestMethod
+	SUB_CUSTOMER ListCustomerOrdersRequestMethod
+}
+
+func GetListCustomerOrdersRequestMethodEnum() ListCustomerOrdersRequestMethodEnum {
+	return ListCustomerOrdersRequestMethodEnum{
+		ONESELF: ListCustomerOrdersRequestMethod{
+			value: "oneself",
+		},
+		SUB_CUSTOMER: ListCustomerOrdersRequestMethod{
+			value: "sub_customer",
+		},
+	}
+}
+
+func (c ListCustomerOrdersRequestMethod) Value() string {
+	return c.value
+}
+
+func (c ListCustomerOrdersRequestMethod) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListCustomerOrdersRequestMethod) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

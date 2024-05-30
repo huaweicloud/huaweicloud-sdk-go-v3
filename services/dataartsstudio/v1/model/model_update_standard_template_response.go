@@ -8,10 +8,8 @@ import (
 
 // UpdateStandardTemplateResponse Response Object
 type UpdateStandardTemplateResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CreateStandardTemplateResultData `json:"data,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o UpdateStandardTemplateResponse) String() string {

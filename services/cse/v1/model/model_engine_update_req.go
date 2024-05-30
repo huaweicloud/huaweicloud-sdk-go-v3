@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EngineUpdateReq 升级微服务引擎专享版请求体
+// EngineUpdateReq 升级微服务引擎请求体
 type EngineUpdateReq struct {
 
 	// 版本号

@@ -8,11 +8,11 @@ import (
 
 type MappingJoinFieldVo struct {
 
-	// 属性1ID。
-	Field1Id int64 `json:"field1_id"`
+	// 属性1ID，填写String类型替代Long类型。
+	Field1Id string `json:"field1_id"`
 
-	// 属性2ID。
-	Field2Id int64 `json:"field2_id"`
+	// 属性2ID，填写String类型替代Long类型。
+	Field2Id string `json:"field2_id"`
 
 	// 属性1名称。
 	Field1Name string `json:"field1_name"`

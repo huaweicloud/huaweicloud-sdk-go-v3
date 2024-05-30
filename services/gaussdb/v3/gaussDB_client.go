@@ -1805,6 +1805,48 @@ func (c *GaussDBClient) ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker(re
 	return &ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowProxyIpgroup 查询代理实例访问控制
+//
+// 查询代理实例访问控制
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowProxyIpgroup(request *model.ShowProxyIpgroupRequest) (*model.ShowProxyIpgroupResponse, error) {
+	requestDef := GenReqDefForShowProxyIpgroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProxyIpgroupResponse), nil
+	}
+}
+
+// ShowProxyIpgroupInvoker 查询代理实例访问控制
+func (c *GaussDBClient) ShowProxyIpgroupInvoker(request *model.ShowProxyIpgroupRequest) *ShowProxyIpgroupInvoker {
+	requestDef := GenReqDefForShowProxyIpgroup()
+	return &ShowProxyIpgroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProxyVersion 查询代理实例小版本
+//
+// 查询代理实例小版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowProxyVersion(request *model.ShowProxyVersionRequest) (*model.ShowProxyVersionResponse, error) {
+	requestDef := GenReqDefForShowProxyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProxyVersionResponse), nil
+	}
+}
+
+// ShowProxyVersionInvoker 查询代理实例小版本
+func (c *GaussDBClient) ShowProxyVersionInvoker(request *model.ShowProxyVersionRequest) *ShowProxyVersionInvoker {
+	requestDef := GenReqDefForShowProxyVersion()
+	return &ShowProxyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRestoreTables 查询表级时间点恢复可选表
 //
 // 查询表级时间点恢复可选表。
@@ -2331,6 +2373,27 @@ func (c *GaussDBClient) UpdateProxyConnectionPoolTypeInvoker(request *model.Upda
 	return &UpdateProxyConnectionPoolTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateProxyName 修改代理实例名称
+//
+// 修改代理实例名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateProxyName(request *model.UpdateProxyNameRequest) (*model.UpdateProxyNameResponse, error) {
+	requestDef := GenReqDefForUpdateProxyName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProxyNameResponse), nil
+	}
+}
+
+// UpdateProxyNameInvoker 修改代理实例名称
+func (c *GaussDBClient) UpdateProxyNameInvoker(request *model.UpdateProxyNameRequest) *UpdateProxyNameInvoker {
+	requestDef := GenReqDefForUpdateProxyName()
+	return &UpdateProxyNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateProxyNewConfigurations 修改代理实例参数
 //
 // 修改数据库代理参数。
@@ -2434,6 +2497,27 @@ func (c *GaussDBClient) UpgradeGaussMySqlInstanceDatabase(request *model.Upgrade
 func (c *GaussDBClient) UpgradeGaussMySqlInstanceDatabaseInvoker(request *model.UpgradeGaussMySqlInstanceDatabaseRequest) *UpgradeGaussMySqlInstanceDatabaseInvoker {
 	requestDef := GenReqDefForUpgradeGaussMySqlInstanceDatabase()
 	return &UpgradeGaussMySqlInstanceDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeProxyVersion 升级数据库代理实例内核版本
+//
+// 升级数据库代理实例内核版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpgradeProxyVersion(request *model.UpgradeProxyVersionRequest) (*model.UpgradeProxyVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeProxyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeProxyVersionResponse), nil
+	}
+}
+
+// UpgradeProxyVersionInvoker 升级数据库代理实例内核版本
+func (c *GaussDBClient) UpgradeProxyVersionInvoker(request *model.UpgradeProxyVersionRequest) *UpgradeProxyVersionInvoker {
+	requestDef := GenReqDefForUpgradeProxyVersion()
+	return &UpgradeProxyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckDataBaseConfig HTAP数据同步库配置校验

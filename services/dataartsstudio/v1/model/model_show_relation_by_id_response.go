@@ -8,10 +8,8 @@ import (
 
 // ShowRelationByIdResponse Response Object
 type ShowRelationByIdResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ShowRelationByIdResultData `json:"data,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o ShowRelationByIdResponse) String() string {

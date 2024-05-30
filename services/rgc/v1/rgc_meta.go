@@ -37,16 +37,16 @@ func GenReqDefForEnableControl() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListControlsForOrganizationUnit() *def.HttpRequestDef {
+func GenReqDefForListControlsForOrganizationalUnit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/governance/managed-organization-units/{managed_organization_unit_id}/controls").
-		WithResponse(new(model.ListControlsForOrganizationUnitResponse)).
+		WithPath("/v1/governance/managed-organizational-units/{managed_organizational_unit_id}/controls").
+		WithResponse(new(model.ListControlsForOrganizationalUnitResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ManagedOrganizationUnitId").
-		WithJsonTag("managed_organization_unit_id").
+		WithName("ManagedOrganizationalUnitId").
+		WithJsonTag("managed_organizational_unit_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

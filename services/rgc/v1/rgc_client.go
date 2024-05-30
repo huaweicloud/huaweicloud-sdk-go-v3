@@ -61,25 +61,25 @@ func (c *RgcClient) EnableControlInvoker(request *model.EnableControlRequest) *E
 	return &EnableControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListControlsForOrganizationUnit 列出注册OU下开启的控制策略
+// ListControlsForOrganizationalUnit 列出注册OU下开启的控制策略
 //
 // 列出组织里某个注册OU开启的所有控制策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *RgcClient) ListControlsForOrganizationUnit(request *model.ListControlsForOrganizationUnitRequest) (*model.ListControlsForOrganizationUnitResponse, error) {
-	requestDef := GenReqDefForListControlsForOrganizationUnit()
+func (c *RgcClient) ListControlsForOrganizationalUnit(request *model.ListControlsForOrganizationalUnitRequest) (*model.ListControlsForOrganizationalUnitResponse, error) {
+	requestDef := GenReqDefForListControlsForOrganizationalUnit()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListControlsForOrganizationUnitResponse), nil
+		return resp.(*model.ListControlsForOrganizationalUnitResponse), nil
 	}
 }
 
-// ListControlsForOrganizationUnitInvoker 列出注册OU下开启的控制策略
-func (c *RgcClient) ListControlsForOrganizationUnitInvoker(request *model.ListControlsForOrganizationUnitRequest) *ListControlsForOrganizationUnitInvoker {
-	requestDef := GenReqDefForListControlsForOrganizationUnit()
-	return &ListControlsForOrganizationUnitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListControlsForOrganizationalUnitInvoker 列出注册OU下开启的控制策略
+func (c *RgcClient) ListControlsForOrganizationalUnitInvoker(request *model.ListControlsForOrganizationalUnitRequest) *ListControlsForOrganizationalUnitInvoker {
+	requestDef := GenReqDefForListControlsForOrganizationalUnit()
+	return &ListControlsForOrganizationalUnitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowControlOperate 查询控制策略操作状态

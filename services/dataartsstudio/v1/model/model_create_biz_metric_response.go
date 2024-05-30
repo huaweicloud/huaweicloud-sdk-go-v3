@@ -8,10 +8,8 @@ import (
 
 // CreateBizMetricResponse Response Object
 type CreateBizMetricResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CreateBizMetricResultData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o CreateBizMetricResponse) String() string {

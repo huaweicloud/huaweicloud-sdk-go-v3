@@ -8,10 +8,8 @@ import (
 
 // CreateCatalogResponse Response Object
 type CreateCatalogResponse struct {
-
-	// 返回的数据信息。
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *CreateCatalogResultData `json:"data,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o CreateCatalogResponse) String() string {

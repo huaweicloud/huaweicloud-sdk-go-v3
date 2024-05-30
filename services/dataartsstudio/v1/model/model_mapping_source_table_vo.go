@@ -11,11 +11,11 @@ import (
 
 type MappingSourceTableVo struct {
 
-	// 表1ID。
-	Table1Id int64 `json:"table1_id"`
+	// 表1ID，填写String类型替代Long类型。
+	Table1Id string `json:"table1_id"`
 
-	// 表2ID。
-	Table2Id *int64 `json:"table2_id,omitempty"`
+	// 表2ID，填写String类型替代Long类型。
+	Table2Id *string `json:"table2_id,omitempty"`
 
 	// 表1名称。
 	Table1Name string `json:"table1_name"`
@@ -23,7 +23,7 @@ type MappingSourceTableVo struct {
 	// 表2名称。
 	Table2Name *string `json:"table2_name,omitempty"`
 
-	// 关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
+	// 关联类型。 枚举值：   - LEFT: 左外连接   - RIGHT: 右外连接   - INNER: 内连接   - FULL: 全连接
 	JoinType MappingSourceTableVoJoinType `json:"join_type"`
 
 	// on条件。

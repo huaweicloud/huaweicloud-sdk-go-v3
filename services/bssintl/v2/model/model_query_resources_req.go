@@ -31,6 +31,9 @@ type QueryResourcesReq struct {
 
 	// 查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
 	ExpireTimeEnd *string `json:"expire_time_end,omitempty"`
+
+	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+	ServiceTypeCode *string `json:"service_type_code,omitempty"`
 }
 
 func (o QueryResourcesReq) String() string {

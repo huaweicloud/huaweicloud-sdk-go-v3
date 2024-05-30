@@ -10,19 +10,19 @@ import (
 
 type TableModelUpdateVo struct {
 
-	// 编码。
-	Id int64 `json:"id"`
+	// 编码，填写String类型替代Long类型。
+	Id string `json:"id"`
 
-	// 所属关系建模的模型ID。
-	ModelId int64 `json:"model_id"`
+	// 所属关系建模的模型ID，填写String类型替代Long类型。
+	ModelId string `json:"model_id"`
 
-	// 父表ID。
-	ParentTableId *int64 `json:"parent_table_id,omitempty"`
+	// 父表ID，填写String类型替代Long类型。
+	ParentTableId *string `json:"parent_table_id,omitempty"`
 
-	// 父表名称。
+	// 父表名称，只读。
 	ParentTableName *string `json:"parent_table_name,omitempty"`
 
-	// 父表编码。
+	// 父表编码，只读。
 	ParentTableCode *string `json:"parent_table_code,omitempty"`
 
 	Model *WorkspaceVo `json:"model,omitempty"`
@@ -39,7 +39,7 @@ type TableModelUpdateVo struct {
 	// 其他配置。
 	Configs *string `json:"configs,omitempty"`
 
-	// 表类型。
+	// 表类型，只读。
 	TableType *string `json:"table_type,omitempty"`
 
 	// 责任人。
@@ -63,16 +63,16 @@ type TableModelUpdateVo struct {
 	// 扩展信息。
 	ExtendInfo *string `json:"extend_info,omitempty"`
 
-	// 表物化后的guid。
+	// 表物化后的guid，只读。
 	TbGuid *string `json:"tb_guid,omitempty"`
 
-	// 数据表ID。
+	// 数据表ID，只读。
 	TbId *string `json:"tb_id,omitempty"`
 
 	// 逻辑实体名。
 	LogicTbName string `json:"logic_tb_name"`
 
-	// 逻辑实体的guid。
+	// 逻辑实体的guid，只读。
 	LogicTbGuid *string `json:"logic_tb_guid,omitempty"`
 
 	// 描述。
@@ -80,28 +80,28 @@ type TableModelUpdateVo struct {
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
-	// 逻辑实体的ID。
-	LogicTbId *int64 `json:"logic_tb_id,omitempty"`
+	// 逻辑实体的ID，填写String类型替代Long类型。
+	LogicTbId *string `json:"logic_tb_id,omitempty"`
 
-	// 归属的业务分类的ID。
-	BizCatalogId *int64 `json:"biz_catalog_id,omitempty"`
+	// 归属的业务分类的ID，填写String类型替代Long类型。
+	BizCatalogId *string `json:"biz_catalog_id,omitempty"`
 
-	// 归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
+	// 归属的业务分类的路径，格式： {\"l1Id\":\"958408897973161984\",\"l2Id\":\"958408897973161985\",\"l3Id\":\"958408897973161986\"}。
 	CatalogPath *string `json:"catalog_path,omitempty"`
 
-	// 创建人。
+	// 创建人，只读。
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人。
+	// 更新人，只读。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 表标签。
+	// 表标签，只读。
 	Tags *[]TagVo `json:"tags,omitempty"`
 
 	ApprovalInfo *ApprovalVo `json:"approval_info,omitempty"`
@@ -132,14 +132,14 @@ type TableModelUpdateVo struct {
 	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
-	// 主题域分组ID。
-	L1Id *int64 `json:"l1_id,omitempty"`
+	// 主题域分组ID，只读，填写String类型替代Long类型。
+	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID。
-	L3Id *int64 `json:"l3_id,omitempty"`
+	// 业务对象ID，只读，填写String类型替代Long类型。
+	L3Id *string `json:"l3_id,omitempty"`
 
 	// 分区表达式
 	PartitionConf *string `json:"partition_conf,omitempty"`
@@ -168,19 +168,21 @@ type TableModelUpdateVo struct {
 	// 质量责任人。
 	QualityOwner *string `json:"quality_owner,omitempty"`
 
-	// 质量ID。
-	QualityId *int64 `json:"quality_id,omitempty"`
+	// 质量ID，填写String类型替代Long类型。
+	QualityId *string `json:"quality_id,omitempty"`
 
-	// DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+	// DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
 	Distribute *TableModelUpdateVoDistribute `json:"distribute,omitempty"`
 
 	// DISTRIBUTE BY HASH column.
 	DistributeColumn *string `json:"distribute_column,omitempty"`
 
-	// 是否分区表。
+	// 是否分区表，只读。
 	IsPartition *bool `json:"is_partition,omitempty"`
 
 	PhysicalTable *SyncStatusEnum `json:"physical_table,omitempty"`
+
+	DevPhysicalTable *SyncStatusEnum `json:"dev_physical_table,omitempty"`
 
 	TechnicalAsset *SyncStatusEnum `json:"technical_asset,omitempty"`
 
@@ -197,6 +199,26 @@ type TableModelUpdateVo struct {
 
 	// 自定义项。
 	SelfDefinedFields *[]SelfDefinedFieldVo `json:"self_defined_fields,omitempty"`
+
+	// 开发环境版本，填写String类型替代Long类型。
+	DevVersion *string `json:"dev_version,omitempty"`
+
+	// 生产环境版本，填写String类型替代Long类型。
+	ProdVersion *string `json:"prod_version,omitempty"`
+
+	// 开发环境版本名称
+	DevVersionName *string `json:"dev_version_name,omitempty"`
+
+	// 生产环境版本名称
+	ProdVersionName *string `json:"prod_version_name,omitempty"`
+
+	EnvType *EnvTypeEnum `json:"env_type,omitempty"`
+
+	// 是否关联了物理表
+	HasRelatedPhysicalTable *bool `json:"has_related_physical_table,omitempty"`
+
+	// 是否关联了逻辑实体
+	HasRelatedLogicTable *bool `json:"has_related_logic_table,omitempty"`
 }
 
 func (o TableModelUpdateVo) String() string {

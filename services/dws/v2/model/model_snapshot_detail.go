@@ -27,7 +27,7 @@ type SnapshotDetail struct {
 	// 快照大小，单位GB。
 	Size float64 `json:"size"`
 
-	// 快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+	// 快照状态： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
 	Status string `json:"status"`
 
 	// 快照创建类型。

@@ -8,16 +8,16 @@ import (
 
 type EngineExternalEntrypoint struct {
 
-	// 微服务引擎专享版暴露的IP地址。
+	// 微服务引擎暴露的IP地址。
 	ExternalAddress *string `json:"externalAddress,omitempty"`
 
-	// 微服务引擎专享版的公网地址。
+	// 微服务引擎的公网地址。
 	PublicAddress *string `json:"publicAddress,omitempty"`
 
-	// 微服务引擎专享版组件的访问地址。
+	// 微服务引擎组件的访问地址。
 	ServiceEndpoint map[string]EntrypointItem `json:"serviceEndpoint,omitempty"`
 
-	// 微服务引擎专享版组件的公网地址。
+	// 微服务引擎组件的公网地址。
 	PublicServiceEndpoint map[string]EntrypointItem `json:"publicServiceEndpoint,omitempty"`
 }
 
