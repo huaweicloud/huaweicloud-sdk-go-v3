@@ -10,7 +10,7 @@ import (
 type ShowStepOutputsResponse struct {
 	StepOutputs *[]OutputRespStepOutputs `json:"step_outputs,omitempty"`
 
-	CurrentSystemTime *int32 `json:"current_system_time,omitempty"`
+	CurrentSystemTime *int64 `json:"current_system_time,omitempty"`
 	HttpStatusCode    int    `json:"-"`
 }
 

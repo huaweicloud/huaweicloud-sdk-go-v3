@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ListPreviewFindingsResponse Response Object
-type ListPreviewFindingsResponse struct {
+// ListAccessPreviewFindingsResponse Response Object
+type ListAccessPreviewFindingsResponse struct {
 
 	// 访问预览生成的分析结果列表。
 	Findings *[]PreviewFinding `json:"findings,omitempty"`
@@ -16,11 +16,11 @@ type ListPreviewFindingsResponse struct {
 	HttpStatusCode int       `json:"-"`
 }
 
-func (o ListPreviewFindingsResponse) String() string {
+func (o ListAccessPreviewFindingsResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListPreviewFindingsResponse struct{}"
+		return "ListAccessPreviewFindingsResponse struct{}"
 	}
 
-	return strings.Join([]string{"ListPreviewFindingsResponse", string(data)}, " ")
+	return strings.Join([]string{"ListAccessPreviewFindingsResponse", string(data)}, " ")
 }

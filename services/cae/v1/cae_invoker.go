@@ -425,6 +425,66 @@ func (i *UpdateMonitorSystemInvoker) Invoke() (*model.UpdateMonitorSystemRespons
 	}
 }
 
+type CreateNoticeRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNoticeRuleInvoker) Invoke() (*model.CreateNoticeRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNoticeRuleResponse), nil
+	}
+}
+
+type DeleteNoticeRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNoticeRuleInvoker) Invoke() (*model.DeleteNoticeRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNoticeRuleResponse), nil
+	}
+}
+
+type ListNoticeRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNoticeRulesInvoker) Invoke() (*model.ListNoticeRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNoticeRulesResponse), nil
+	}
+}
+
+type ShowNoticeRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNoticeRuleInvoker) Invoke() (*model.ShowNoticeRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNoticeRuleResponse), nil
+	}
+}
+
+type UpdateNoticeRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNoticeRuleInvoker) Invoke() (*model.UpdateNoticeRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNoticeRuleResponse), nil
+	}
+}
+
 type CreateTimerRuleInvoker struct {
 	*invoker.BaseInvoker
 }

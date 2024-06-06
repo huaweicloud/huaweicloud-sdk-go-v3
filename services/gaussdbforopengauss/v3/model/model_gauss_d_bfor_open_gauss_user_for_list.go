@@ -12,10 +12,13 @@ type GaussDBforOpenGaussUserForList struct {
 	// 帐号名。
 	Name string `json:"name"`
 
-	Attributes *GaussDBforOpenGaussUserForListAttributes `json:"attributes,omitempty"`
+	Attribute *GaussDBforOpenGaussUserForListAttribute `json:"attribute,omitempty"`
 
 	// 用户的默认权限。
 	Memberof *string `json:"memberof,omitempty"`
+
+	// 用户是否被锁，取值为“true”或“false”。
+	LockStatus *bool `json:"lock_status,omitempty"`
 }
 
 func (o GaussDBforOpenGaussUserForList) String() string {

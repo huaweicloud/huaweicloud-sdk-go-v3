@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IamAgency IAM委托。
+// IamAgency IAM信任委托。
 type IamAgency struct {
 
 	// 该策略JSON格式策略文档。

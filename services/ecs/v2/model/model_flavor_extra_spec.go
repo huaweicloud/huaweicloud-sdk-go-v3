@@ -90,6 +90,9 @@ type FlavorExtraSpec struct {
 	// 存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
 	Condstorage *string `json:"cond:storage,omitempty"`
 
+	// 存储约束  - 支持磁盘特性，不配置时以UI配置为准。
+	Condstoragetype *string `json:"cond:storage:type,omitempty"`
+
 	// 计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
 	CondcomputeliveResizable *string `json:"cond:compute:live_resizable,omitempty"`
 

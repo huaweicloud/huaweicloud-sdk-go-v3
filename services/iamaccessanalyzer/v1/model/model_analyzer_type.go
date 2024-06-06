@@ -15,13 +15,17 @@ type AnalyzerType struct {
 }
 
 type AnalyzerTypeEnum struct {
-	ACCOUNT AnalyzerType
+	ACCOUNT      AnalyzerType
+	ORGANIZATION AnalyzerType
 }
 
 func GetAnalyzerTypeEnum() AnalyzerTypeEnum {
 	return AnalyzerTypeEnum{
 		ACCOUNT: AnalyzerType{
 			value: "account",
+		},
+		ORGANIZATION: AnalyzerType{
+			value: "organization",
 		},
 	}
 }

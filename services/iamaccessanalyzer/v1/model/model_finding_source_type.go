@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// FindingSourceType 访问分析结果的来源。
 type FindingSourceType struct {
 	value string
 }

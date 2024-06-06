@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ListPreviewFindingsRequest Request Object
-type ListPreviewFindingsRequest struct {
+// ListAccessPreviewFindingsRequest Request Object
+type ListAccessPreviewFindingsRequest struct {
 
 	// 分析器的唯一标识符。
 	AnalyzerId string `json:"analyzer_id"`
@@ -18,11 +18,11 @@ type ListPreviewFindingsRequest struct {
 	Body *ListPreviewFindingsReqBody `json:"body,omitempty"`
 }
 
-func (o ListPreviewFindingsRequest) String() string {
+func (o ListAccessPreviewFindingsRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListPreviewFindingsRequest struct{}"
+		return "ListAccessPreviewFindingsRequest struct{}"
 	}
 
-	return strings.Join([]string{"ListPreviewFindingsRequest", string(data)}, " ")
+	return strings.Join([]string{"ListAccessPreviewFindingsRequest", string(data)}, " ")
 }

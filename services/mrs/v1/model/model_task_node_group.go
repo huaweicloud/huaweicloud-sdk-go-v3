@@ -20,7 +20,7 @@ type TaskNodeGroup struct {
 	// Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
 	DataVolumeType TaskNodeGroupDataVolumeType `json:"data_volume_type"`
 
-	// Task节点数据磁盘存储数目，取值范围：0～10。
+	// Task节点数据磁盘存储数目，取值范围：0～20。
 	DataVolumeCount int32 `json:"data_volume_count"`
 
 	// Task节点数据磁盘存储大小。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。

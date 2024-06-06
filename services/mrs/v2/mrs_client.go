@@ -390,6 +390,27 @@ func (c *MrsClient) ExpandClusterInvoker(request *model.ExpandClusterRequest) *E
 	return &ExpandClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNodes 查询集群节点列表
+//
+// 查询集群节点列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListNodes(request *model.ListNodesRequest) (*model.ListNodesResponse, error) {
+	requestDef := GenReqDefForListNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNodesResponse), nil
+	}
+}
+
+// ListNodesInvoker 查询集群节点列表
+func (c *MrsClient) ListNodesInvoker(request *model.ListNodesRequest) *ListNodesInvoker {
+	requestDef := GenReqDefForListNodes()
+	return &ListNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkCluster 缩容集群
 //
 // 对MRS集群进行缩容。

@@ -24,7 +24,7 @@ type InstancesResult struct {
 	DataVolumeSize float32 `json:"data_volume_size,omitempty"`
 
 	// 实例版本信息。
-	Version float32 `json:"version,omitempty"`
+	Version *string `json:"version,omitempty"`
 
 	// 部署形态。
 	Mode *InstancesResultMode `json:"mode,omitempty"`

@@ -1531,6 +1531,27 @@ func (c *CodeArtsPipelineClient) UpdatePipelineGroupInvoker(request *model.Updat
 	return &UpdatePipelineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePipelineInfo 修改流水线信息
+//
+// 修改流水线信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) UpdatePipelineInfo(request *model.UpdatePipelineInfoRequest) (*model.UpdatePipelineInfoResponse, error) {
+	requestDef := GenReqDefForUpdatePipelineInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePipelineInfoResponse), nil
+	}
+}
+
+// UpdatePipelineInfoInvoker 修改流水线信息
+func (c *CodeArtsPipelineClient) UpdatePipelineInfoInvoker(request *model.UpdatePipelineInfoRequest) *UpdatePipelineInfoInvoker {
+	requestDef := GenReqDefForUpdatePipelineInfo()
+	return &UpdatePipelineInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePipelineTemplate 更新流水线模板
 //
 // 更新流水线模板

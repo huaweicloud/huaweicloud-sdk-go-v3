@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -16,7 +19,7 @@ type ListAnalyzersRequest struct {
 	Marker *string `json:"marker,omitempty"`
 
 	// 分析器的类型。
-	Type *AnalyzerType `json:"type,omitempty"`
+	Type *ListAnalyzersRequestType `json:"type,omitempty"`
 }
 
 func (o ListAnalyzersRequest) String() string {
@@ -26,4 +29,51 @@ func (o ListAnalyzersRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListAnalyzersRequest", string(data)}, " ")
+}
+
+type ListAnalyzersRequestType struct {
+	value string
+}
+
+type ListAnalyzersRequestTypeEnum struct {
+	ACCOUNT      ListAnalyzersRequestType
+	ORGANIZATION ListAnalyzersRequestType
+}
+
+func GetListAnalyzersRequestTypeEnum() ListAnalyzersRequestTypeEnum {
+	return ListAnalyzersRequestTypeEnum{
+		ACCOUNT: ListAnalyzersRequestType{
+			value: "account",
+		},
+		ORGANIZATION: ListAnalyzersRequestType{
+			value: "organization",
+		},
+	}
+}
+
+func (c ListAnalyzersRequestType) Value() string {
+	return c.value
+}
+
+func (c ListAnalyzersRequestType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAnalyzersRequestType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

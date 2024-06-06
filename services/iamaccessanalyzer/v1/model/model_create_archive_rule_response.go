@@ -12,7 +12,7 @@ type CreateArchiveRuleResponse struct {
 	// 存档规则的唯一标识符。
 	Id *string `json:"id,omitempty"`
 
-	// 访问分析的唯一资源标识。
+	// 存档规则的唯一资源标识符。
 	Urn            *string `json:"urn,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

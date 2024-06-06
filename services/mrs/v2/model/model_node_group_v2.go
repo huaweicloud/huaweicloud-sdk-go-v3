@@ -21,7 +21,7 @@ type NodeGroupV2 struct {
 
 	DataVolume *Volume `json:"data_volume,omitempty"`
 
-	// 节点数据磁盘存储数目，取值范围：0～10。
+	// 节点数据磁盘存储数目，取值范围：0～20。
 	DataVolumeCount *int32 `json:"data_volume_count,omitempty"`
 
 	ChargeInfo *ChargeInfo `json:"charge_info,omitempty"`

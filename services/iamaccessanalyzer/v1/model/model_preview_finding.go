@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// PreviewFinding 包含有关访问预览分析结果的信息。
 type PreviewFinding struct {
 
 	// 允许外部主体使用的操作。
@@ -19,13 +20,13 @@ type PreviewFinding struct {
 	// 分析的策略语句中导致访问预览分析结果的条件。
 	Condition []FindingCondition `json:"condition"`
 
-	// 生成预览访问分析结果的时间。
+	// 生成访问预览分析结果的时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
 	// 访问分析结果的唯一标识符。
 	ExistingFindingId *string `json:"existing_finding_id,omitempty"`
 
-	// 结果的当前状态。
+	// 分析结果的当前状态。
 	ExistingFindingStatus *PreviewFindingExistingFindingStatus `json:"existing_finding_status,omitempty"`
 
 	// 访问分析结果的唯一标识符。
@@ -36,10 +37,10 @@ type PreviewFinding struct {
 
 	Principal *FindingPrincipal `json:"principal"`
 
-	// 访问分析的唯一资源标识。
+	// 资源的唯一资源标识符。
 	Resource string `json:"resource"`
 
-	// 拥有资源的账户ID。
+	// 拥有资源的账号ID。
 	ResourceOwnerAccount string `json:"resource_owner_account"`
 
 	ResourceType *ResourceType `json:"resource_type"`

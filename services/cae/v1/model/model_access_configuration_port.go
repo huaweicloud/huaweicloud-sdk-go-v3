@@ -31,6 +31,9 @@ type AccessConfigurationPort struct {
 	Policy *AccessConfigurationPortPolicy `json:"policy,omitempty"`
 
 	Paths *[]AccessConfigurationHttpPath `json:"paths,omitempty"`
+
+	// 用户选择的elb的ID。
+	ElbId *string `json:"elb_id,omitempty"`
 }
 
 func (o AccessConfigurationPort) String() string {

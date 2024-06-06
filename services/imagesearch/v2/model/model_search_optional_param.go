@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -29,6 +32,9 @@ type SearchOptionalParam struct {
 
 	// 查询考察中心点的数目。值越大精度越高，查询速度变慢。默认值为100。
 	Nprobe *int32 `json:"nprobe,omitempty"`
+
+	// 文本字符串的语言类型枚举值。
+	TextLang *SearchOptionalParamTextLang `json:"text_lang,omitempty"`
 }
 
 func (o SearchOptionalParam) String() string {
@@ -38,4 +44,99 @@ func (o SearchOptionalParam) String() string {
 	}
 
 	return strings.Join([]string{"SearchOptionalParam", string(data)}, " ")
+}
+
+type SearchOptionalParamTextLang struct {
+	value string
+}
+
+type SearchOptionalParamTextLangEnum struct {
+	AR    SearchOptionalParamTextLang
+	DE    SearchOptionalParamTextLang
+	RU    SearchOptionalParamTextLang
+	FR    SearchOptionalParamTextLang
+	KO    SearchOptionalParamTextLang
+	PT    SearchOptionalParamTextLang
+	JA    SearchOptionalParamTextLang
+	TH    SearchOptionalParamTextLang
+	TR    SearchOptionalParamTextLang
+	ES    SearchOptionalParamTextLang
+	EN    SearchOptionalParamTextLang
+	VI    SearchOptionalParamTextLang
+	ZH    SearchOptionalParamTextLang
+	ZH_TW SearchOptionalParamTextLang
+}
+
+func GetSearchOptionalParamTextLangEnum() SearchOptionalParamTextLangEnum {
+	return SearchOptionalParamTextLangEnum{
+		AR: SearchOptionalParamTextLang{
+			value: "ar",
+		},
+		DE: SearchOptionalParamTextLang{
+			value: "de",
+		},
+		RU: SearchOptionalParamTextLang{
+			value: "ru",
+		},
+		FR: SearchOptionalParamTextLang{
+			value: "fr",
+		},
+		KO: SearchOptionalParamTextLang{
+			value: "ko",
+		},
+		PT: SearchOptionalParamTextLang{
+			value: "pt",
+		},
+		JA: SearchOptionalParamTextLang{
+			value: "ja",
+		},
+		TH: SearchOptionalParamTextLang{
+			value: "th",
+		},
+		TR: SearchOptionalParamTextLang{
+			value: "tr",
+		},
+		ES: SearchOptionalParamTextLang{
+			value: "es",
+		},
+		EN: SearchOptionalParamTextLang{
+			value: "en",
+		},
+		VI: SearchOptionalParamTextLang{
+			value: "vi",
+		},
+		ZH: SearchOptionalParamTextLang{
+			value: "zh",
+		},
+		ZH_TW: SearchOptionalParamTextLang{
+			value: "zhTW",
+		},
+	}
+}
+
+func (c SearchOptionalParamTextLang) Value() string {
+	return c.value
+}
+
+func (c SearchOptionalParamTextLang) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SearchOptionalParamTextLang) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

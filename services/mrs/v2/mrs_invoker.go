@@ -209,6 +209,18 @@ func (i *ExpandClusterInvoker) Invoke() (*model.ExpandClusterResponse, error) {
 	}
 }
 
+type ListNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNodesResponse), nil
+	}
+}
+
 type ShrinkClusterInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -11,6 +11,8 @@ type Configuration struct {
 	IamAgency *IamAgency `json:"iam_agency,omitempty"`
 
 	ObsBucket *ObsBucket `json:"obs_bucket,omitempty"`
+
+	KmsCmk *KmsCmk `json:"kms_cmk,omitempty"`
 }
 
 func (o Configuration) String() string {

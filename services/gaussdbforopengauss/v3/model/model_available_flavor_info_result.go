@@ -10,7 +10,7 @@ import (
 type AvailableFlavorInfoResult struct {
 
 	// 资源规格编码。
-	SpecCpde *string `json:"spec_cpde,omitempty"`
+	SpecCode *string `json:"spec_code,omitempty"`
 
 	// CPU核数。
 	Vcpus *string `json:"vcpus,omitempty"`

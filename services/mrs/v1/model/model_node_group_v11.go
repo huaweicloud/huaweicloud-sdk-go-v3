@@ -26,7 +26,7 @@ type NodeGroupV11 struct {
 	// 节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
 	DataVolumeType *string `json:"data_volume_type,omitempty"`
 
-	// 节点数据磁盘存储数目 取值范围：0～10。
+	// 节点数据磁盘存储数目 取值范围：0～20。
 	DataVolumeCount *int32 `json:"data_volume_count,omitempty"`
 
 	// 节点数据磁盘存储大小 取值范围：100GB～32000GB。

@@ -9,7 +9,7 @@ import (
 type CreateAccessPreviewReqBody struct {
 	Configurations *Configuration `json:"configurations"`
 
-	// 访问分析的唯一资源标识。
+	// 资源的唯一资源标识符。
 	ResourceUrn string `json:"resource_urn"`
 }
 

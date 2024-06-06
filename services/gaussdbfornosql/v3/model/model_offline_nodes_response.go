@@ -8,8 +8,10 @@ import (
 
 // OfflineNodesResponse Response Object
 type OfflineNodesResponse struct {
-	Body           *interface{} `json:"body,omitempty"`
-	HttpStatusCode int          `json:"-"`
+
+	// 工作流ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o OfflineNodesResponse) String() string {

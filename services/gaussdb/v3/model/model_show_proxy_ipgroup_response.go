@@ -15,9 +15,8 @@ type ShowProxyIpgroupResponse struct {
 	// 白名单或者黑名单 'white' | 'black'
 	Type *string `json:"type,omitempty"`
 
-	// 白名单或黑名单详细信息
-	IpGroup        *interface{} `json:"ip_group,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	IpGroup        *ProxyIpGroupDetail `json:"ip_group,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ShowProxyIpgroupResponse) String() string {

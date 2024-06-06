@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// GaussDBforOpenGaussUserForListAttributes 用户的权限属性。
-type GaussDBforOpenGaussUserForListAttributes struct {
+// GaussDBforOpenGaussUserForListAttribute 用户的权限属性。
+type GaussDBforOpenGaussUserForListAttribute struct {
 
 	// 用户是否具有超级用户权限，取值为“true”或“false”。
 	Rolsuper *bool `json:"rolsuper,omitempty"`
@@ -32,13 +32,16 @@ type GaussDBforOpenGaussUserForListAttributes struct {
 
 	// 用户是否绕过每个行级安全策略，取值为“true”或“false”。
 	Rolbypassrls *bool `json:"rolbypassrls,omitempty"`
+
+	// 用户密码过期时间。
+	Rolpassworddeadline *string `json:"rolpassworddeadline,omitempty"`
 }
 
-func (o GaussDBforOpenGaussUserForListAttributes) String() string {
+func (o GaussDBforOpenGaussUserForListAttribute) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "GaussDBforOpenGaussUserForListAttributes struct{}"
+		return "GaussDBforOpenGaussUserForListAttribute struct{}"
 	}
 
-	return strings.Join([]string{"GaussDBforOpenGaussUserForListAttributes", string(data)}, " ")
+	return strings.Join([]string{"GaussDBforOpenGaussUserForListAttribute", string(data)}, " ")
 }

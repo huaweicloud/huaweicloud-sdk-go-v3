@@ -14,7 +14,7 @@ type UpdateFindingsReqBody struct {
 	// 要更新的访问分析结果唯一标识符数组。
 	Ids *[]string `json:"ids,omitempty"`
 
-	// 访问分析的唯一资源标识。
+	// 资源的唯一资源标识符。
 	ResourceUrn *string `json:"resource_urn,omitempty"`
 
 	// 要更新的访问分析结果状态。

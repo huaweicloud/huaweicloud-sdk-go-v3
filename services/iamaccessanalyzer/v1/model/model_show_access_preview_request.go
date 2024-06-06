@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// GetAccessPreviewRequest Request Object
-type GetAccessPreviewRequest struct {
+// ShowAccessPreviewRequest Request Object
+type ShowAccessPreviewRequest struct {
 
 	// 分析器的唯一标识符。
 	AnalyzerId string `json:"analyzer_id"`
@@ -16,11 +16,11 @@ type GetAccessPreviewRequest struct {
 	AccessPreviewId string `json:"access_preview_id"`
 }
 
-func (o GetAccessPreviewRequest) String() string {
+func (o ShowAccessPreviewRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "GetAccessPreviewRequest struct{}"
+		return "ShowAccessPreviewRequest struct{}"
 	}
 
-	return strings.Join([]string{"GetAccessPreviewRequest", string(data)}, " ")
+	return strings.Join([]string{"ShowAccessPreviewRequest", string(data)}, " ")
 }

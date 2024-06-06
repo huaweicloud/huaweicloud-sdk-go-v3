@@ -869,6 +869,18 @@ func (i *UpdatePipelineGroupInvoker) Invoke() (*model.UpdatePipelineGroupRespons
 	}
 }
 
+type UpdatePipelineInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipelineInfoInvoker) Invoke() (*model.UpdatePipelineInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePipelineInfoResponse), nil
+	}
+}
+
 type UpdatePipelineTemplateInvoker struct {
 	*invoker.BaseInvoker
 }

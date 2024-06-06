@@ -139,6 +139,9 @@ type ShowGraphRespGraph struct {
 
 	// 图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
 	CapacityRatio *int32 `json:"capacity_ratio,omitempty"`
+
+	// 持久化版图边数据的sortKey类型
+	SortKeyType *string `json:"sort_key_type,omitempty"`
 }
 
 func (o ShowGraphRespGraph) String() string {

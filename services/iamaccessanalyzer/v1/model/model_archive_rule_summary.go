@@ -25,7 +25,7 @@ type ArchiveRuleSummary struct {
 	// 上次更新存档规则的时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
-	// 访问分析的唯一资源标识。
+	// 存档规则的唯一资源标识符。
 	Urn string `json:"urn"`
 }
 

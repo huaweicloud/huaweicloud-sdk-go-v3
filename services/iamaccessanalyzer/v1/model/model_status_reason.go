@@ -30,11 +30,27 @@ type StatusReasonCode struct {
 }
 
 type StatusReasonCodeEnum struct {
+	DELEGATED_ADMINISTRATOR_DEREGISTERED  StatusReasonCode
+	TRUSTED_SERVICE_DISABLED              StatusReasonCode
+	INTERNAL_ERROR                        StatusReasonCode
+	ORGANIZATION_DELETED                  StatusReasonCode
 	SERVICE_LINKED_AGENCY_CREATION_FAILED StatusReasonCode
 }
 
 func GetStatusReasonCodeEnum() StatusReasonCodeEnum {
 	return StatusReasonCodeEnum{
+		DELEGATED_ADMINISTRATOR_DEREGISTERED: StatusReasonCode{
+			value: "delegated_administrator_deregistered",
+		},
+		TRUSTED_SERVICE_DISABLED: StatusReasonCode{
+			value: "trusted_service_disabled",
+		},
+		INTERNAL_ERROR: StatusReasonCode{
+			value: "internal_error",
+		},
+		ORGANIZATION_DELETED: StatusReasonCode{
+			value: "organization_deleted",
+		},
 		SERVICE_LINKED_AGENCY_CREATION_FAILED: StatusReasonCode{
 			value: "service_linked_agency_creation_failed",
 		},

@@ -104,7 +104,7 @@ func resolveProfile() map[string]*Region {
 				continue
 			}
 
-			endpoints := make([]string, 0, len(regInfo.Endpoints)+1)
+			endpoints := make([]string, 0)
 			if regInfo.Endpoint != "" {
 				endpoints = append(endpoints, regInfo.Endpoint)
 			}

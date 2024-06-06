@@ -15,7 +15,8 @@ type ChangeVpcNicBody struct {
 	// 云服务器云主机添加网卡的信息。 需要指定云服务器云主机所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
 	SubnetId *string `json:"subnet_id,omitempty"`
 
-	SecurityGroups *ChangeVpcSecurityGroups `json:"security_groups,omitempty"`
+	// 添加网卡的安全组信息
+	SecurityGroups *[]ChangeVpcSecurityGroups `json:"security_groups,omitempty"`
 
 	// P地址，无该参数表示自动分配IP地址
 	IpAddress *string `json:"ip_address,omitempty"`

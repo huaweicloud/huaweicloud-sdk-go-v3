@@ -7,14 +7,16 @@ import (
 )
 
 type LtsIndexConfigInfo struct {
-
-	// 日志流ID
-	LogStreamId *string `json:"logStreamId,omitempty"`
-
 	FullTextIndex *LtsFullTextIndexInfo `json:"fullTextIndex"`
 
 	// 字段索引配置
 	Fields *[]LtsFieldsInfo `json:"fields,omitempty"`
+
+	// 是否开启可视化
+	SqlAnalysisEnable *bool `json:"sqlAnalysisEnable,omitempty"`
+
+	// 日志流id
+	LogStreamId *string `json:"logStreamId,omitempty"`
 }
 
 func (o LtsIndexConfigInfo) String() string {

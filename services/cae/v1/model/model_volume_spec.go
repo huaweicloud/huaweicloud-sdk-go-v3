@@ -19,6 +19,9 @@ type VolumeSpec struct {
 
 	// 云存储名称。
 	Resources []string `json:"resources"`
+
+	// 云存储和授权凭证，获取环境列表接口响应中env_category字段为v2时需添加该字段的值。
+	ResourcesCredentials *[]ResourcesCredential `json:"resources_credentials,omitempty"`
 }
 
 func (o VolumeSpec) String() string {

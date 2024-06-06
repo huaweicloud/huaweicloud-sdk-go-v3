@@ -221,6 +221,18 @@ func (i *CreateGaussMysqlDnsInvoker) Invoke() (*model.CreateGaussMysqlDnsRespons
 	}
 }
 
+type CreateLtsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLtsConfigsInvoker) Invoke() (*model.CreateLtsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLtsConfigsResponse), nil
+	}
+}
+
 type CreateRestoreTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +338,18 @@ func (i *DeleteGaussMySqlReadonlyNodeInvoker) Invoke() (*model.DeleteGaussMySqlR
 		return nil, err
 	} else {
 		return result.(*model.DeleteGaussMySqlReadonlyNodeResponse), nil
+	}
+}
+
+type DeleteLtsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLtsConfigsInvoker) Invoke() (*model.DeleteLtsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLtsConfigsResponse), nil
 	}
 }
 
@@ -629,6 +653,18 @@ func (i *ListModifyHistoryInvoker) Invoke() (*model.ListModifyHistoryResponse, e
 	}
 }
 
+type ListParamsTemplateApplyHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListParamsTemplateApplyHistoryInvoker) Invoke() (*model.ListParamsTemplateApplyHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListParamsTemplateApplyHistoryResponse), nil
+	}
+}
+
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -638,6 +674,18 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ListRecycleInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecycleInstancesResponse), nil
 	}
 }
 
@@ -689,6 +737,30 @@ func (i *ModifyGaussMysqlDnsInvoker) Invoke() (*model.ModifyGaussMysqlDnsRespons
 	}
 }
 
+type ModifyNodePriorityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyNodePriorityInvoker) Invoke() (*model.ModifyNodePriorityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyNodePriorityResponse), nil
+	}
+}
+
+type RenameInstanceNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RenameInstanceNodeInvoker) Invoke() (*model.RenameInstanceNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RenameInstanceNodeResponse), nil
+	}
+}
+
 type ResetGaussMySqlDatabasePasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -737,6 +809,18 @@ func (i *RestartGaussMySqlNodeInvoker) Invoke() (*model.RestartGaussMySqlNodeRes
 	}
 }
 
+type RestartProxyInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartProxyInstanceInvoker) Invoke() (*model.RestartProxyInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartProxyInstanceResponse), nil
+	}
+}
+
 type RestoreOldInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,6 +857,18 @@ func (i *SetGaussMySqlQuotasInvoker) Invoke() (*model.SetGaussMySqlQuotasRespons
 	}
 }
 
+type SetRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRecyclePolicyInvoker) Invoke() (*model.SetRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
 type ShowAuditLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -782,6 +878,18 @@ func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAuditLogResponse), nil
+	}
+}
+
+type ShowAutoScalingHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoScalingHistoryInvoker) Invoke() (*model.ShowAutoScalingHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoScalingHistoryResponse), nil
 	}
 }
 
@@ -989,6 +1097,18 @@ func (i *ShowInstanceDatabaseVersionInvoker) Invoke() (*model.ShowInstanceDataba
 	}
 }
 
+type ShowInstanceEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceEipInvoker) Invoke() (*model.ShowInstanceEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceEipResponse), nil
+	}
+}
+
 type ShowInstanceMonitorExtendInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1025,6 +1145,30 @@ func (i *ShowIntelligentDiagnosisInstanceInfosPerMetricInvoker) Invoke() (*model
 	}
 }
 
+type ShowLtsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLtsConfigsInvoker) Invoke() (*model.ShowLtsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLtsConfigsResponse), nil
+	}
+}
+
+type ShowProxyConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProxyConfigurationsInvoker) Invoke() (*model.ShowProxyConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProxyConfigurationsResponse), nil
+	}
+}
+
 type ShowProxyIpgroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1049,6 +1193,18 @@ func (i *ShowProxyVersionInvoker) Invoke() (*model.ShowProxyVersionResponse, err
 	}
 }
 
+type ShowRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
 type ShowRestoreTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1058,6 +1214,18 @@ func (i *ShowRestoreTablesInvoker) Invoke() (*model.ShowRestoreTablesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowRestoreTablesResponse), nil
+	}
+}
+
+type ShowSlowlogSensitiveStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSlowlogSensitiveStatusInvoker) Invoke() (*model.ShowSlowlogSensitiveStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSlowlogSensitiveStatusResponse), nil
 	}
 }
 
@@ -1394,6 +1562,30 @@ func (i *UpdateProxySessionConsistenceInvoker) Invoke() (*model.UpdateProxySessi
 		return nil, err
 	} else {
 		return result.(*model.UpdateProxySessionConsistenceResponse), nil
+	}
+}
+
+type UpdateServerlessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerlessPolicyInvoker) Invoke() (*model.UpdateServerlessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerlessPolicyResponse), nil
+	}
+}
+
+type UpdateSlowlogSensitiveSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSlowlogSensitiveSwitchInvoker) Invoke() (*model.UpdateSlowlogSensitiveSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSlowlogSensitiveSwitchResponse), nil
 	}
 }
 

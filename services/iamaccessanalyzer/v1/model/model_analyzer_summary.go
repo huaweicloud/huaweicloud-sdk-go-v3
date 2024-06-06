@@ -17,7 +17,7 @@ type AnalyzerSummary struct {
 	// 分析器的唯一标识符。
 	Id string `json:"id"`
 
-	// 访问分析的唯一资源标识。
+	// 最近分析的资源的唯一资源标识符。
 	LastAnalyzedResource *string `json:"last_analyzed_resource,omitempty"`
 
 	// 最近一次分析资源的时间。
@@ -25,6 +25,9 @@ type AnalyzerSummary struct {
 
 	// 分析器的名称。
 	Name string `json:"name"`
+
+	// 组织ID。
+	OrganizationId *string `json:"organization_id,omitempty"`
 
 	// 分析器的状态。
 	Status AnalyzerSummaryStatus `json:"status"`
@@ -36,7 +39,7 @@ type AnalyzerSummary struct {
 
 	Type *AnalyzerType `json:"type"`
 
-	// 访问分析的唯一资源标识。
+	// 分析器的唯一资源标识符。
 	Urn string `json:"urn"`
 }
 
@@ -56,6 +59,7 @@ type AnalyzerSummaryStatus struct {
 type AnalyzerSummaryStatusEnum struct {
 	ACTIVE   AnalyzerSummaryStatus
 	CREATING AnalyzerSummaryStatus
+	DISABLED AnalyzerSummaryStatus
 	FAILED   AnalyzerSummaryStatus
 }
 
@@ -66,6 +70,9 @@ func GetAnalyzerSummaryStatusEnum() AnalyzerSummaryStatusEnum {
 		},
 		CREATING: AnalyzerSummaryStatus{
 			value: "creating",
+		},
+		DISABLED: AnalyzerSummaryStatus{
+			value: "disabled",
 		},
 		FAILED: AnalyzerSummaryStatus{
 			value: "failed",

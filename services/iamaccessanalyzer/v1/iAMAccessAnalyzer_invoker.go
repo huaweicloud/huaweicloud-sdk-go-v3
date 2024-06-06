@@ -185,15 +185,15 @@ func (i *CreateAccessPreviewInvoker) Invoke() (*model.CreateAccessPreviewRespons
 	}
 }
 
-type GetAccessPreviewInvoker struct {
+type ListAccessPreviewFindingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *GetAccessPreviewInvoker) Invoke() (*model.GetAccessPreviewResponse, error) {
+func (i *ListAccessPreviewFindingsInvoker) Invoke() (*model.ListAccessPreviewFindingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.GetAccessPreviewResponse), nil
+		return result.(*model.ListAccessPreviewFindingsResponse), nil
 	}
 }
 
@@ -209,15 +209,15 @@ func (i *ListAccessPreviewsInvoker) Invoke() (*model.ListAccessPreviewsResponse,
 	}
 }
 
-type ListPreviewFindingsInvoker struct {
+type ShowAccessPreviewInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListPreviewFindingsInvoker) Invoke() (*model.ListPreviewFindingsResponse, error) {
+func (i *ShowAccessPreviewInvoker) Invoke() (*model.ShowAccessPreviewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListPreviewFindingsResponse), nil
+		return result.(*model.ShowAccessPreviewResponse), nil
 	}
 }
 

@@ -315,7 +315,7 @@ func (c *IAMAccessAnalyzerClient) UpdateFindingsInvoker(request *model.UpdateFin
 
 // CreateAccessPreview 创建访问预览
 //
-// 创建访问预览
+// 创建访问预览。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IAMAccessAnalyzerClient) CreateAccessPreview(request *model.CreateAccessPreviewRequest) (*model.CreateAccessPreviewResponse, error) {
@@ -334,30 +334,30 @@ func (c *IAMAccessAnalyzerClient) CreateAccessPreviewInvoker(request *model.Crea
 	return &CreateAccessPreviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetAccessPreview 获取相关访问预览的信息
+// ListAccessPreviewFindings 获取相关预览生成的分析结果
 //
-// 获取相关访问预览的信息。
+// 获取相关预览生成的分析结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *IAMAccessAnalyzerClient) GetAccessPreview(request *model.GetAccessPreviewRequest) (*model.GetAccessPreviewResponse, error) {
-	requestDef := GenReqDefForGetAccessPreview()
+func (c *IAMAccessAnalyzerClient) ListAccessPreviewFindings(request *model.ListAccessPreviewFindingsRequest) (*model.ListAccessPreviewFindingsResponse, error) {
+	requestDef := GenReqDefForListAccessPreviewFindings()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.GetAccessPreviewResponse), nil
+		return resp.(*model.ListAccessPreviewFindingsResponse), nil
 	}
 }
 
-// GetAccessPreviewInvoker 获取相关访问预览的信息
-func (c *IAMAccessAnalyzerClient) GetAccessPreviewInvoker(request *model.GetAccessPreviewRequest) *GetAccessPreviewInvoker {
-	requestDef := GenReqDefForGetAccessPreview()
-	return &GetAccessPreviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListAccessPreviewFindingsInvoker 获取相关预览生成的分析结果
+func (c *IAMAccessAnalyzerClient) ListAccessPreviewFindingsInvoker(request *model.ListAccessPreviewFindingsRequest) *ListAccessPreviewFindingsInvoker {
+	requestDef := GenReqDefForListAccessPreviewFindings()
+	return &ListAccessPreviewFindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAccessPreviews 获取所有访问预览
 //
-// 获取所有访问预览
+// 获取所有访问预览。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IAMAccessAnalyzerClient) ListAccessPreviews(request *model.ListAccessPreviewsRequest) (*model.ListAccessPreviewsResponse, error) {
@@ -376,25 +376,25 @@ func (c *IAMAccessAnalyzerClient) ListAccessPreviewsInvoker(request *model.ListA
 	return &ListAccessPreviewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPreviewFindings 获取相关预览生成的分析结果
+// ShowAccessPreview 获取相关访问预览的信息
 //
-// 获取相关预览生成的分析结果
+// 获取相关访问预览的信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *IAMAccessAnalyzerClient) ListPreviewFindings(request *model.ListPreviewFindingsRequest) (*model.ListPreviewFindingsResponse, error) {
-	requestDef := GenReqDefForListPreviewFindings()
+func (c *IAMAccessAnalyzerClient) ShowAccessPreview(request *model.ShowAccessPreviewRequest) (*model.ShowAccessPreviewResponse, error) {
+	requestDef := GenReqDefForShowAccessPreview()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPreviewFindingsResponse), nil
+		return resp.(*model.ShowAccessPreviewResponse), nil
 	}
 }
 
-// ListPreviewFindingsInvoker 获取相关预览生成的分析结果
-func (c *IAMAccessAnalyzerClient) ListPreviewFindingsInvoker(request *model.ListPreviewFindingsRequest) *ListPreviewFindingsInvoker {
-	requestDef := GenReqDefForListPreviewFindings()
-	return &ListPreviewFindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowAccessPreviewInvoker 获取相关访问预览的信息
+func (c *IAMAccessAnalyzerClient) ShowAccessPreviewInvoker(request *model.ShowAccessPreviewRequest) *ShowAccessPreviewInvoker {
+	requestDef := GenReqDefForShowAccessPreview()
+	return &ShowAccessPreviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // TagResource 向指定资源添加标签

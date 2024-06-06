@@ -42,6 +42,9 @@ type ConfigurationRequestDataSpec struct {
 	// 环境变量配置。 常用环境变量如下： - TZ: 时区设置，东八区可设置为Asia/Shanghai。 - LANG: 语言字符集设置，中文UTF8可设置为zh_CN.UTF-8。
 	Envs map[string]string `json:"envs,omitempty"`
 
+	// 弹性公网IP，响应体参数，未配置域名时返回此参数。
+	Ip *string `json:"ip,omitempty"`
+
 	// 访问方式配置列表。  ConfigurationItem.type为\"access\"时，配置此参数。
 	Items *[]AccessConfigurationDataItems `json:"items,omitempty"`
 

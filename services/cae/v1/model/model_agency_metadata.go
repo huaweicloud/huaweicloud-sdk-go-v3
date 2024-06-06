@@ -11,6 +11,8 @@ type AgencyMetadata struct {
 
 	// 委托名称，固定值“cae_trust”，该值不可修改。
 	Name string `json:"name"`
+
+	Enum *interface{} `json:"enum,omitempty"`
 }
 
 func (o AgencyMetadata) String() string {

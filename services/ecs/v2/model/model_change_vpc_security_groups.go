@@ -10,7 +10,7 @@ import (
 type ChangeVpcSecurityGroups struct {
 
 	// 安全组id
-	Id *interface{} `json:"id"`
+	Id string `json:"id"`
 }
 
 func (o ChangeVpcSecurityGroups) String() string {

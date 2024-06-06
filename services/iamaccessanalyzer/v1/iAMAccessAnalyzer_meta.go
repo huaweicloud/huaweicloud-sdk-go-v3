@@ -307,11 +307,11 @@ func GenReqDefForCreateAccessPreview() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForGetAccessPreview() *def.HttpRequestDef {
+func GenReqDefForListAccessPreviewFindings() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}").
-		WithResponse(new(model.GetAccessPreviewResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}/findings").
+		WithResponse(new(model.ListAccessPreviewFindingsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -322,6 +322,10 @@ func GenReqDefForGetAccessPreview() *def.HttpRequestDef {
 		WithName("AccessPreviewId").
 		WithJsonTag("access_preview_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -352,11 +356,11 @@ func GenReqDefForListAccessPreviews() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListPreviewFindings() *def.HttpRequestDef {
+func GenReqDefForShowAccessPreview() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}/findings").
-		WithResponse(new(model.ListPreviewFindingsResponse)).
+		WithMethod(http.MethodGet).
+		WithPath("/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}").
+		WithResponse(new(model.ShowAccessPreviewResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -367,10 +371,6 @@ func GenReqDefForListPreviewFindings() *def.HttpRequestDef {
 		WithName("AccessPreviewId").
 		WithJsonTag("access_preview_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -2297,6 +2297,18 @@ func (i *SearchIdByPathInvoker) Invoke() (*model.SearchIdByPathResponse, error) 
 	}
 }
 
+type SearchSgcComputeDimensionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchSgcComputeDimensionsInvoker) Invoke() (*model.SearchSgcComputeDimensionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchSgcComputeDimensionsResponse), nil
+	}
+}
+
 type SearchSubjectInvoker struct {
 	*invoker.BaseInvoker
 }

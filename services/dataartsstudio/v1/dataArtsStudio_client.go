@@ -4031,6 +4031,27 @@ func (c *DataArtsStudioClient) SearchIdByPathInvoker(request *model.SearchIdByPa
 	return &SearchIdByPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SearchSgcComputeDimensions 获取计算维度成本列表信息
+//
+// 获取计算维度成本列表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) SearchSgcComputeDimensions(request *model.SearchSgcComputeDimensionsRequest) (*model.SearchSgcComputeDimensionsResponse, error) {
+	requestDef := GenReqDefForSearchSgcComputeDimensions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchSgcComputeDimensionsResponse), nil
+	}
+}
+
+// SearchSgcComputeDimensionsInvoker 获取计算维度成本列表信息
+func (c *DataArtsStudioClient) SearchSgcComputeDimensionsInvoker(request *model.SearchSgcComputeDimensionsRequest) *SearchSgcComputeDimensionsInvoker {
+	requestDef := GenReqDefForSearchSgcComputeDimensions()
+	return &SearchSgcComputeDimensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchSubject 查找主题列表
 //
 // 通过名称（支持模糊查询）、创建者、责任人、状态、修改时间分页查找主题。

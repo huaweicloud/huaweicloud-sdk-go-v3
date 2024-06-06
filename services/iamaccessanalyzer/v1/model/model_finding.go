@@ -31,14 +31,17 @@ type Finding struct {
 
 	Principal *FindingPrincipal `json:"principal"`
 
-	// 访问分析的唯一资源标识。
+	// 资源的唯一资源标识符。
 	Resource string `json:"resource"`
 
 	// 资源的唯一标识符。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 拥有资源的账户ID。
+	// 拥有资源的账号ID。
 	ResourceOwnerAccount string `json:"resource_owner_account"`
+
+	// 资源所属的项目标识符
+	ResourceProjectId *string `json:"resource_project_id,omitempty"`
 
 	ResourceType *ResourceType `json:"resource_type"`
 

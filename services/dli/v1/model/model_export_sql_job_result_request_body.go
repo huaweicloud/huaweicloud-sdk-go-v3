@@ -35,6 +35,12 @@ type ExportSqlJobResultRequestBody struct {
 
 	// 导出数据的编码格式。支持\"utf-8\"，\"gb2312\"，\"gbk\"三种，如果不填写默认为\"utf-8\"。
 	EncodingType *string `json:"encoding_type,omitempty"`
+
+	// 用户自定义引用字符
+	QuoteChar *string `json:"quote_char,omitempty"`
+
+	// 用户自定义转义字符
+	EscapeChar *string `json:"escape_char,omitempty"`
 }
 
 func (o ExportSqlJobResultRequestBody) String() string {

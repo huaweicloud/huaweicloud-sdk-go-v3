@@ -754,6 +754,111 @@ func (c *CaeClient) UpdateMonitorSystemInvoker(request *model.UpdateMonitorSyste
 	return &UpdateMonitorSystemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateNoticeRule 创建事件通知规则。
+//
+// 创建事件通知规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) CreateNoticeRule(request *model.CreateNoticeRuleRequest) (*model.CreateNoticeRuleResponse, error) {
+	requestDef := GenReqDefForCreateNoticeRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNoticeRuleResponse), nil
+	}
+}
+
+// CreateNoticeRuleInvoker 创建事件通知规则。
+func (c *CaeClient) CreateNoticeRuleInvoker(request *model.CreateNoticeRuleRequest) *CreateNoticeRuleInvoker {
+	requestDef := GenReqDefForCreateNoticeRule()
+	return &CreateNoticeRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNoticeRule 删除事件通知规则。
+//
+// 删除事件通知规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) DeleteNoticeRule(request *model.DeleteNoticeRuleRequest) (*model.DeleteNoticeRuleResponse, error) {
+	requestDef := GenReqDefForDeleteNoticeRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNoticeRuleResponse), nil
+	}
+}
+
+// DeleteNoticeRuleInvoker 删除事件通知规则。
+func (c *CaeClient) DeleteNoticeRuleInvoker(request *model.DeleteNoticeRuleRequest) *DeleteNoticeRuleInvoker {
+	requestDef := GenReqDefForDeleteNoticeRule()
+	return &DeleteNoticeRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNoticeRules 查询事件通知规则列表。
+//
+// 查询事件通知规则列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ListNoticeRules(request *model.ListNoticeRulesRequest) (*model.ListNoticeRulesResponse, error) {
+	requestDef := GenReqDefForListNoticeRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNoticeRulesResponse), nil
+	}
+}
+
+// ListNoticeRulesInvoker 查询事件通知规则列表。
+func (c *CaeClient) ListNoticeRulesInvoker(request *model.ListNoticeRulesRequest) *ListNoticeRulesInvoker {
+	requestDef := GenReqDefForListNoticeRules()
+	return &ListNoticeRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNoticeRule 查询事件通知规则。
+//
+// 查询事件通知规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ShowNoticeRule(request *model.ShowNoticeRuleRequest) (*model.ShowNoticeRuleResponse, error) {
+	requestDef := GenReqDefForShowNoticeRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNoticeRuleResponse), nil
+	}
+}
+
+// ShowNoticeRuleInvoker 查询事件通知规则。
+func (c *CaeClient) ShowNoticeRuleInvoker(request *model.ShowNoticeRuleRequest) *ShowNoticeRuleInvoker {
+	requestDef := GenReqDefForShowNoticeRule()
+	return &ShowNoticeRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNoticeRule 修改事件通知规则。
+//
+// 修改事件通知规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) UpdateNoticeRule(request *model.UpdateNoticeRuleRequest) (*model.UpdateNoticeRuleResponse, error) {
+	requestDef := GenReqDefForUpdateNoticeRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNoticeRuleResponse), nil
+	}
+}
+
+// UpdateNoticeRuleInvoker 修改事件通知规则。
+func (c *CaeClient) UpdateNoticeRuleInvoker(request *model.UpdateNoticeRuleRequest) *UpdateNoticeRuleInvoker {
+	requestDef := GenReqDefForUpdateNoticeRule()
+	return &UpdateNoticeRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTimerRule 创建定时启停规则
 //
 // 创建定时启停规则。

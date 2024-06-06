@@ -26,6 +26,9 @@ type Volume struct {
 	// 存储资源子类型。
 	ResourceSubType *VolumeResourceSubType `json:"resource_sub_type,omitempty"`
 
+	// 用户access key。
+	Access *string `json:"access,omitempty"`
+
 	// 创建时间。
 	Time *string `json:"time,omitempty"`
 }

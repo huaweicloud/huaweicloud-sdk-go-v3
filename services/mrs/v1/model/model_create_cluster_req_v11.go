@@ -80,7 +80,7 @@ type CreateClusterReqV11 struct {
 	// 该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
 	CoreDataVolumeSize *int32 `json:"core_data_volume_size,omitempty"`
 
-	// 该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+	// 该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
 	CoreDataVolumeCount *int32 `json:"core_data_volume_count,omitempty"`
 
 	// Task节点列表信息。
