@@ -161,15 +161,27 @@ func (i *StopSmartChatJobInvoker) Invoke() (*model.StopSmartChatJobResponse, err
 	}
 }
 
-type CreateAssetbyReplicationInfoInvoker struct {
+type BatchExecuteAssetActionInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateAssetbyReplicationInfoInvoker) Invoke() (*model.CreateAssetbyReplicationInfoResponse, error) {
+func (i *BatchExecuteAssetActionInvoker) Invoke() (*model.BatchExecuteAssetActionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateAssetbyReplicationInfoResponse), nil
+		return result.(*model.BatchExecuteAssetActionResponse), nil
+	}
+}
+
+type CreateAssetByReplicationInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetByReplicationInfoInvoker) Invoke() (*model.CreateAssetByReplicationInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetByReplicationInfoResponse), nil
 	}
 }
 
@@ -914,6 +926,78 @@ func (i *ShowPictureModelingJobInvoker) Invoke() (*model.ShowPictureModelingJobR
 		return nil, err
 	} else {
 		return result.(*model.ShowPictureModelingJobResponse), nil
+	}
+}
+
+type CreateProductInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProductInvoker) Invoke() (*model.CreateProductResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProductResponse), nil
+	}
+}
+
+type DeleteProductInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteProductInvoker) Invoke() (*model.DeleteProductResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteProductResponse), nil
+	}
+}
+
+type ListProductsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProductsResponse), nil
+	}
+}
+
+type SetProductAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetProductAssetInvoker) Invoke() (*model.SetProductAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetProductAssetResponse), nil
+	}
+}
+
+type ShowProductInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProductInvoker) Invoke() (*model.ShowProductResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProductResponse), nil
+	}
+}
+
+type UpdateProductInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProductInvoker) Invoke() (*model.UpdateProductResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProductResponse), nil
 	}
 }
 

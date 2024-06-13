@@ -283,7 +283,6 @@ type PublicipUpdateRespAssociateInstanceTypeEnum struct {
 	ELB   PublicipUpdateRespAssociateInstanceType
 	ELBV1 PublicipUpdateRespAssociateInstanceType
 	VPN   PublicipUpdateRespAssociateInstanceType
-	NULL  PublicipUpdateRespAssociateInstanceType
 }
 
 func GetPublicipUpdateRespAssociateInstanceTypeEnum() PublicipUpdateRespAssociateInstanceTypeEnum {
@@ -302,9 +301,6 @@ func GetPublicipUpdateRespAssociateInstanceTypeEnum() PublicipUpdateRespAssociat
 		},
 		VPN: PublicipUpdateRespAssociateInstanceType{
 			value: "VPN",
-		},
-		NULL: PublicipUpdateRespAssociateInstanceType{
-			value: "null",
 		},
 	}
 }

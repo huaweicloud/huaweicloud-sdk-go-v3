@@ -40,6 +40,9 @@ type VideoConfig struct {
 
 	// 裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080
 	Dy *int32 `json:"dy,omitempty"`
+
+	// 视频是否开启超分。 > true: 开启 > false: 不开启
+	IsEnableSuperResolution *bool `json:"is_enable_super_resolution,omitempty"`
 }
 
 func (o VideoConfig) String() string {

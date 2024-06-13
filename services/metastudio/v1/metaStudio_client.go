@@ -292,25 +292,46 @@ func (c *MetaStudioClient) StopSmartChatJobInvoker(request *model.StopSmartChatJ
 	return &StopSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAssetbyReplicationInfo 复制资产
+// BatchExecuteAssetAction 批量资产操作
 //
-// 该接口用于在Region B复制Region A的指定资产。
+// 该接口用批量资产操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CreateAssetbyReplicationInfo(request *model.CreateAssetbyReplicationInfoRequest) (*model.CreateAssetbyReplicationInfoResponse, error) {
-	requestDef := GenReqDefForCreateAssetbyReplicationInfo()
+func (c *MetaStudioClient) BatchExecuteAssetAction(request *model.BatchExecuteAssetActionRequest) (*model.BatchExecuteAssetActionResponse, error) {
+	requestDef := GenReqDefForBatchExecuteAssetAction()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateAssetbyReplicationInfoResponse), nil
+		return resp.(*model.BatchExecuteAssetActionResponse), nil
 	}
 }
 
-// CreateAssetbyReplicationInfoInvoker 复制资产
-func (c *MetaStudioClient) CreateAssetbyReplicationInfoInvoker(request *model.CreateAssetbyReplicationInfoRequest) *CreateAssetbyReplicationInfoInvoker {
-	requestDef := GenReqDefForCreateAssetbyReplicationInfo()
-	return &CreateAssetbyReplicationInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// BatchExecuteAssetActionInvoker 批量资产操作
+func (c *MetaStudioClient) BatchExecuteAssetActionInvoker(request *model.BatchExecuteAssetActionRequest) *BatchExecuteAssetActionInvoker {
+	requestDef := GenReqDefForBatchExecuteAssetAction()
+	return &BatchExecuteAssetActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAssetByReplicationInfo 复制资产
+//
+// 该接口用于在Region B复制Region A的指定资产。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateAssetByReplicationInfo(request *model.CreateAssetByReplicationInfoRequest) (*model.CreateAssetByReplicationInfoResponse, error) {
+	requestDef := GenReqDefForCreateAssetByReplicationInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetByReplicationInfoResponse), nil
+	}
+}
+
+// CreateAssetByReplicationInfoInvoker 复制资产
+func (c *MetaStudioClient) CreateAssetByReplicationInfoInvoker(request *model.CreateAssetByReplicationInfoRequest) *CreateAssetByReplicationInfoInvoker {
+	requestDef := GenReqDefForCreateAssetByReplicationInfo()
+	return &CreateAssetByReplicationInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDigitalAsset 创建资产
@@ -1617,6 +1638,132 @@ func (c *MetaStudioClient) ShowPictureModelingJob(request *model.ShowPictureMode
 func (c *MetaStudioClient) ShowPictureModelingJobInvoker(request *model.ShowPictureModelingJobRequest) *ShowPictureModelingJobInvoker {
 	requestDef := GenReqDefForShowPictureModelingJob()
 	return &ShowPictureModelingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProduct 创建商品
+//
+// # Create product
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateProduct(request *model.CreateProductRequest) (*model.CreateProductResponse, error) {
+	requestDef := GenReqDefForCreateProduct()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProductResponse), nil
+	}
+}
+
+// CreateProductInvoker 创建商品
+func (c *MetaStudioClient) CreateProductInvoker(request *model.CreateProductRequest) *CreateProductInvoker {
+	requestDef := GenReqDefForCreateProduct()
+	return &CreateProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProduct 删除商品
+//
+// 删除商品
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteProduct(request *model.DeleteProductRequest) (*model.DeleteProductResponse, error) {
+	requestDef := GenReqDefForDeleteProduct()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProductResponse), nil
+	}
+}
+
+// DeleteProductInvoker 删除商品
+func (c *MetaStudioClient) DeleteProductInvoker(request *model.DeleteProductRequest) *DeleteProductInvoker {
+	requestDef := GenReqDefForDeleteProduct()
+	return &DeleteProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProducts 查询商品列表
+//
+// 查询商品列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
+	requestDef := GenReqDefForListProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProductsResponse), nil
+	}
+}
+
+// ListProductsInvoker 查询商品列表
+func (c *MetaStudioClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
+	requestDef := GenReqDefForListProducts()
+	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetProductAsset 商品资产组合配置
+//
+// 商品资产组合配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SetProductAsset(request *model.SetProductAssetRequest) (*model.SetProductAssetResponse, error) {
+	requestDef := GenReqDefForSetProductAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetProductAssetResponse), nil
+	}
+}
+
+// SetProductAssetInvoker 商品资产组合配置
+func (c *MetaStudioClient) SetProductAssetInvoker(request *model.SetProductAssetRequest) *SetProductAssetInvoker {
+	requestDef := GenReqDefForSetProductAsset()
+	return &SetProductAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProduct 查询商品详情
+//
+// # Show product
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowProduct(request *model.ShowProductRequest) (*model.ShowProductResponse, error) {
+	requestDef := GenReqDefForShowProduct()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProductResponse), nil
+	}
+}
+
+// ShowProductInvoker 查询商品详情
+func (c *MetaStudioClient) ShowProductInvoker(request *model.ShowProductRequest) *ShowProductInvoker {
+	requestDef := GenReqDefForShowProduct()
+	return &ShowProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProduct 更新商品
+//
+// # Update product
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateProduct(request *model.UpdateProductRequest) (*model.UpdateProductResponse, error) {
+	requestDef := GenReqDefForUpdateProduct()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProductResponse), nil
+	}
+}
+
+// UpdateProductInvoker 更新商品
+func (c *MetaStudioClient) UpdateProductInvoker(request *model.UpdateProductRequest) *UpdateProductInvoker {
+	requestDef := GenReqDefForUpdateProduct()
+	return &UpdateProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRobot 创建应用

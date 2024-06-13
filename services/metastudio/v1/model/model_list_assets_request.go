@@ -60,6 +60,9 @@ type ListAssetsRequest struct {
 	// 可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
 	RenderEngine *string `json:"render_engine,omitempty"`
 
+	// 资产id
+	AssetId *[]string `json:"asset_id,omitempty"`
+
 	// 性别。多选使用英文逗号分隔。
 	Sex *string `json:"sex,omitempty"`
 
@@ -80,6 +83,18 @@ type ListAssetsRequest struct {
 
 	// 角色。 SHARER：共享方，SHAREE：被共享方
 	Role *ListAssetsRequestRole `json:"role,omitempty"`
+
+	// 音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+	IsRealtimeVoice *bool `json:"is_realtime_voice,omitempty"`
+
+	// 模型版本
+	HumanModel2dVersion *string `json:"human_model_2d_version,omitempty"`
+
+	// 资产已执行的任务名称
+	IncludeDeviceName *string `json:"include_device_name,omitempty"`
+
+	// 资产已执行的任务名称
+	ExcludeDeviceName *string `json:"exclude_device_name,omitempty"`
 }
 
 func (o ListAssetsRequest) String() string {

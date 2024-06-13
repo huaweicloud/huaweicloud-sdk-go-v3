@@ -137,6 +137,18 @@ func (i *CreateComponentInvoker) Invoke() (*model.CreateComponentResponse, error
 	}
 }
 
+type CreateComponentWithConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateComponentWithConfigurationInvoker) Invoke() (*model.CreateComponentWithConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateComponentWithConfigurationResponse), nil
+	}
+}
+
 type DeleteComponentInvoker struct {
 	*invoker.BaseInvoker
 }

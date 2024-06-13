@@ -38,6 +38,8 @@ const (
 	SecurityTokenInHeader = "X-Security-Token"
 	GlobalRegionId        = "globe"
 	AuthTokenInHeader     = "X-Auth-Token"
+	emptyAk               = "EMPTY_AK"
+	emptySK               = "EMPTY_SK"
 )
 
 var DefaultDerivedPredicate = auth.GetDefaultDerivedPredicate()
@@ -242,21 +244,33 @@ func (s *Credentials) updateAuthTokenByIdToken(client *impl.DefaultHttpClient) e
 
 type CredentialsBuilder struct {
 	Credentials *Credentials
+	errMap      map[string]string
 }
 
 func NewCredentialsBuilder() *CredentialsBuilder {
-	return &CredentialsBuilder{Credentials: &Credentials{
-		IamEndpoint: internal.GetIamEndpoint(),
-	}}
+	return &CredentialsBuilder{
+		Credentials: &Credentials{IamEndpoint: internal.GetIamEndpoint()},
+		errMap:      make(map[string]string),
+	}
 }
 
 func (builder *CredentialsBuilder) WithAk(ak string) *CredentialsBuilder {
-	builder.Credentials.AK = ak
+	if ak == "" {
+		builder.errMap[emptyAk] = "input ak cannot be an empty string"
+	} else {
+		builder.Credentials.AK = ak
+		delete(builder.errMap, emptyAk)
+	}
 	return builder
 }
 
 func (builder *CredentialsBuilder) WithSk(sk string) *CredentialsBuilder {
-	builder.Credentials.SK = sk
+	if sk == "" {
+		builder.errMap[emptySK] = "input sk cannot be an empty string"
+	} else {
+		builder.Credentials.SK = sk
+		delete(builder.errMap, emptySK)
+	}
 	return builder
 }
 
@@ -300,6 +314,14 @@ func (builder *CredentialsBuilder) Build() *Credentials {
 }
 
 func (builder *CredentialsBuilder) SafeBuild() (*Credentials, error) {
+	if builder.errMap != nil && len(builder.errMap) != 0 {
+		errMsg := "build credentials failed: "
+		for _, msg := range builder.errMap {
+			errMsg += msg + "; "
+		}
+		return nil, sdkerr.NewCredentialsTypeError(errMsg)
+	}
+
 	if builder.Credentials.IdpId != "" || builder.Credentials.IdTokenFile != "" {
 		if builder.Credentials.IdpId == "" {
 			return nil, sdkerr.NewCredentialsTypeError("IdpId is required when using IdpId&IdTokenFile")

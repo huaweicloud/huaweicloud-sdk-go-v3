@@ -18,6 +18,9 @@ type TargetInstanceBody struct {
 	// Redis密码，如果设置了密码，则必须填写。
 	Password *string `json:"password,omitempty"`
 
+	// 任务状态。
+	TaskStatus *string `json:"task_status,omitempty"`
+
 	// Redis IP地址。
 	Ip *string `json:"ip,omitempty"`
 

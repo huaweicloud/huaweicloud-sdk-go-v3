@@ -23,7 +23,7 @@ type CommitJobReq struct {
 	VoiceName *string `json:"voice_name,omitempty"`
 
 	// 训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
-	Language *CommitJobReqLanguage `json:"language,omitempty"`
+	Language *string `json:"language,omitempty"`
 
 	// 手机号
 	Phone *string `json:"phone,omitempty"`
@@ -70,53 +70,6 @@ func (c CommitJobReqSex) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommitJobReqSex) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type CommitJobReqLanguage struct {
-	value string
-}
-
-type CommitJobReqLanguageEnum struct {
-	CN CommitJobReqLanguage
-	EN CommitJobReqLanguage
-}
-
-func GetCommitJobReqLanguageEnum() CommitJobReqLanguageEnum {
-	return CommitJobReqLanguageEnum{
-		CN: CommitJobReqLanguage{
-			value: "CN",
-		},
-		EN: CommitJobReqLanguage{
-			value: "EN",
-		},
-	}
-}
-
-func (c CommitJobReqLanguage) Value() string {
-	return c.value
-}
-
-func (c CommitJobReqLanguage) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CommitJobReqLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

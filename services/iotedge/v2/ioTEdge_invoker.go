@@ -65,6 +65,30 @@ func (i *ShowEdgeNodeInvoker) Invoke() (*model.ShowEdgeNodeResponse, error) {
 	}
 }
 
+type ShowEdgeNodeHostsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEdgeNodeHostsInfoInvoker) Invoke() (*model.ShowEdgeNodeHostsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEdgeNodeHostsInfoResponse), nil
+	}
+}
+
+type UpdateEdgeNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEdgeNodeInvoker) Invoke() (*model.UpdateEdgeNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEdgeNodeResponse), nil
+	}
+}
+
 type ExecuteDeviceControlsReleaseInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,7 +9,7 @@ import (
 // ApiError 失败时的error信息
 type ApiError struct {
 
-	// 只有对外的接口才会返回此内容
+	// 业务失败的错误码
 	Code *string `json:"code,omitempty"`
 
 	// 业务失败的提示内容

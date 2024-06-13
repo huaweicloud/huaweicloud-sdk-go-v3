@@ -473,6 +473,42 @@ func (i *AssociateSubnetFirewallInvoker) Invoke() (*model.AssociateSubnetFirewal
 	}
 }
 
+type BatchCreateFirewallTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateFirewallTagsInvoker) Invoke() (*model.BatchCreateFirewallTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateFirewallTagsResponse), nil
+	}
+}
+
+type BatchDeleteFirewallTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteFirewallTagsInvoker) Invoke() (*model.BatchDeleteFirewallTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteFirewallTagsResponse), nil
+	}
+}
+
+type CountFirewallsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountFirewallsByTagsInvoker) Invoke() (*model.CountFirewallsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountFirewallsByTagsResponse), nil
+	}
+}
+
 type CreateFirewallInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -485,6 +521,18 @@ func (i *CreateFirewallInvoker) Invoke() (*model.CreateFirewallResponse, error) 
 	}
 }
 
+type CreateFirewallTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFirewallTagInvoker) Invoke() (*model.CreateFirewallTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFirewallTagResponse), nil
+	}
+}
+
 type DeleteFirewallInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -494,6 +542,18 @@ func (i *DeleteFirewallInvoker) Invoke() (*model.DeleteFirewallResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteFirewallResponse), nil
+	}
+}
+
+type DeleteFirewallTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFirewallTagInvoker) Invoke() (*model.DeleteFirewallTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFirewallTagResponse), nil
 	}
 }
 
@@ -521,6 +581,30 @@ func (i *ListFirewallInvoker) Invoke() (*model.ListFirewallResponse, error) {
 	}
 }
 
+type ListFirewallTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFirewallTagsInvoker) Invoke() (*model.ListFirewallTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFirewallTagsResponse), nil
+	}
+}
+
+type ListFirewallsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFirewallsByTagsInvoker) Invoke() (*model.ListFirewallsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFirewallsByTagsResponse), nil
+	}
+}
+
 type RemoveFirewallRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -542,6 +626,18 @@ func (i *ShowFirewallInvoker) Invoke() (*model.ShowFirewallResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowFirewallResponse), nil
+	}
+}
+
+type ShowFirewallTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFirewallTagsInvoker) Invoke() (*model.ShowFirewallTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFirewallTagsResponse), nil
 	}
 }
 

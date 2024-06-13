@@ -12,6 +12,9 @@ type ShowReplayDelayStatusResponse struct {
 	// 当前配置的延迟时间，单位ms
 	CurDelayTimeMills *int32 `json:"cur_delay_time_mills,omitempty"`
 
+	// 延迟时间参数取值范围
+	DelayTimeValueRange *string `json:"delay_time_value_range,omitempty"`
+
 	// 真实延迟时间，单位ms
 	RealDelayTimeMills *int32 `json:"real_delay_time_mills,omitempty"`
 

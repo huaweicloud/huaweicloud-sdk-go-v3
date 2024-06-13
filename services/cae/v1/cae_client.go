@@ -250,6 +250,27 @@ func (c *CaeClient) CreateComponentInvoker(request *model.CreateComponentRequest
 	return &CreateComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateComponentWithConfiguration 创建、生效配置并部署组件
+//
+// 创建、生效配置并部署组件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) CreateComponentWithConfiguration(request *model.CreateComponentWithConfigurationRequest) (*model.CreateComponentWithConfigurationResponse, error) {
+	requestDef := GenReqDefForCreateComponentWithConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateComponentWithConfigurationResponse), nil
+	}
+}
+
+// CreateComponentWithConfigurationInvoker 创建、生效配置并部署组件
+func (c *CaeClient) CreateComponentWithConfigurationInvoker(request *model.CreateComponentWithConfigurationRequest) *CreateComponentWithConfigurationInvoker {
+	requestDef := GenReqDefForCreateComponentWithConfiguration()
+	return &CreateComponentWithConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteComponent 删除组件
 //
 // 删除组件。

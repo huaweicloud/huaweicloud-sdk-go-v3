@@ -29,6 +29,18 @@ func (i *AssociateRouteTableInvoker) Invoke() (*model.AssociateRouteTableRespons
 	}
 }
 
+type BatchCreateSecurityGroupTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSecurityGroupTagsInvoker) Invoke() (*model.BatchCreateSecurityGroupTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSecurityGroupTagsResponse), nil
+	}
+}
+
 type BatchCreateSubnetTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +50,18 @@ func (i *BatchCreateSubnetTagsInvoker) Invoke() (*model.BatchCreateSubnetTagsRes
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateSubnetTagsResponse), nil
+	}
+}
+
+type BatchDeleteSecurityGroupTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSecurityGroupTagsInvoker) Invoke() (*model.BatchDeleteSecurityGroupTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSecurityGroupTagsResponse), nil
 	}
 }
 
@@ -110,6 +134,18 @@ func (i *CreateSecurityGroupRuleInvoker) Invoke() (*model.CreateSecurityGroupRul
 		return nil, err
 	} else {
 		return result.(*model.CreateSecurityGroupRuleResponse), nil
+	}
+}
+
+type CreateSecurityGroupTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityGroupTagInvoker) Invoke() (*model.CreateSecurityGroupTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityGroupTagResponse), nil
 	}
 }
 
@@ -209,6 +245,18 @@ func (i *DeleteSecurityGroupRuleInvoker) Invoke() (*model.DeleteSecurityGroupRul
 	}
 }
 
+type DeleteSecurityGroupTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityGroupTagInvoker) Invoke() (*model.DeleteSecurityGroupTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecurityGroupTagResponse), nil
+	}
+}
+
 type DeleteSubnetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -305,6 +353,18 @@ func (i *ListSecurityGroupRulesInvoker) Invoke() (*model.ListSecurityGroupRulesR
 	}
 }
 
+type ListSecurityGroupTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityGroupTagsInvoker) Invoke() (*model.ListSecurityGroupTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityGroupTagsResponse), nil
+	}
+}
+
 type ListSecurityGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +374,18 @@ func (i *ListSecurityGroupsInvoker) Invoke() (*model.ListSecurityGroupsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListSecurityGroupsResponse), nil
+	}
+}
+
+type ListSecurityGroupsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityGroupsByTagsInvoker) Invoke() (*model.ListSecurityGroupsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityGroupsByTagsResponse), nil
 	}
 }
 
@@ -446,6 +518,18 @@ func (i *ShowSecurityGroupRuleInvoker) Invoke() (*model.ShowSecurityGroupRuleRes
 		return nil, err
 	} else {
 		return result.(*model.ShowSecurityGroupRuleResponse), nil
+	}
+}
+
+type ShowSecurityGroupTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityGroupTagsInvoker) Invoke() (*model.ShowSecurityGroupTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityGroupTagsResponse), nil
 	}
 }
 

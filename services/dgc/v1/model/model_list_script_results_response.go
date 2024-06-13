@@ -8,10 +8,16 @@ import (
 
 // ListScriptResultsResponse Response Object
 type ListScriptResultsResponse struct {
+
+	// 执行状态。 - LAUNCHING ：提交中 - RUNNING ： 运行中 - FINISHED：执行成功 - FAILED：执行失败
 	Status *string `json:"status,omitempty"`
 
-	Result         *[]Result `json:"result,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	// 执行结果
+	Results *[]Result `json:"results,omitempty"`
+
+	// 执行失败消息
+	Message        *string `json:"message,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListScriptResultsResponse) String() string {

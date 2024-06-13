@@ -12,7 +12,7 @@ import (
 // HitCondition 命中条件配置
 type HitCondition struct {
 
-	// 条件关系；取值And或者Or
+	// 条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
 	Relation *HitConditionRelation `json:"relation,omitempty"`
 
 	// 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
@@ -36,8 +36,9 @@ type HitConditionRelation struct {
 }
 
 type HitConditionRelationEnum struct {
-	AND HitConditionRelation
-	OR  HitConditionRelation
+	AND      HitConditionRelation
+	OR       HitConditionRelation
+	RESERVED HitConditionRelation
 }
 
 func GetHitConditionRelationEnum() HitConditionRelationEnum {
@@ -47,6 +48,9 @@ func GetHitConditionRelationEnum() HitConditionRelationEnum {
 		},
 		OR: HitConditionRelation{
 			value: "OR",
+		},
+		RESERVED: HitConditionRelation{
+			value: "RESERVED",
 		},
 	}
 }

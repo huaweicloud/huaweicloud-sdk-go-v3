@@ -33,7 +33,7 @@ type AssetFileInfo struct {
 	// 文件下载URL，有效期为24小时。
 	DownloadUrl *string `json:"download_url,omitempty"`
 
-	// 文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传）
+	// 文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
 	State *AssetFileInfoState `json:"state,omitempty"`
 
 	// 审核失败原因
@@ -62,6 +62,7 @@ type AssetFileInfoStateEnum struct {
 	DELETED   AssetFileInfoState
 	UPLOADED  AssetFileInfoState
 	REVIEW    AssetFileInfoState
+	BLOCK     AssetFileInfoState
 }
 
 func GetAssetFileInfoStateEnum() AssetFileInfoStateEnum {
@@ -89,6 +90,9 @@ func GetAssetFileInfoStateEnum() AssetFileInfoStateEnum {
 		},
 		REVIEW: AssetFileInfoState{
 			value: "REVIEW",
+		},
+		BLOCK: AssetFileInfoState{
+			value: "BLOCK",
 		},
 	}
 }

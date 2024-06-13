@@ -26,6 +26,8 @@ type CreatePhotoDigitalHumanVideoReq struct {
 	BackgroundMusicConfig *BackgroundMusicConfig `json:"background_music_config,omitempty"`
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
+
+	CallbackConfig *CallBackConfig `json:"callback_config,omitempty"`
 }
 
 func (o CreatePhotoDigitalHumanVideoReq) String() string {

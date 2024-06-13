@@ -62,26 +62,50 @@ func TestCredentials_NeedUpdateAuthToken(t *testing.T) {
 	assert.False(t, credentials.needUpdateAuthToken())
 }
 
-func TestCredentialsBuilder_Build(t *testing.T) {
+// test build with IdpId, IdTokenFile and ProjectId
+func TestCredentialsBuilder_SafeBuild(t *testing.T) {
+	// ProjectId is missing
 	_, err := NewCredentialsBuilder().WithIdpId("id").WithIdTokenFile("file").SafeBuild()
 	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-	assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "ProjectId is required when using IdpId&IdTokenFile")
-}
-
-func TestCredentialsBuilder_Build1(t *testing.T) {
-	_, err := NewCredentialsBuilder().WithIdpId("id").SafeBuild()
+	assert.Equal(t, "ProjectId is required when using IdpId&IdTokenFile", err.(*sdkerr.CredentialsTypeError).ErrorMessage)
+	// IdTokenFile is missing
+	_, err = NewCredentialsBuilder().WithIdpId("id").SafeBuild()
 	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-	assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "IdTokenFile is required when using IdpId&IdTokenFile")
-}
-
-func TestCredentialsBuilder_Build2(t *testing.T) {
-	_, err := NewCredentialsBuilder().WithIdTokenFile("file").SafeBuild()
+	assert.Equal(t, "IdTokenFile is required when using IdpId&IdTokenFile", err.(*sdkerr.CredentialsTypeError).ErrorMessage)
+	// IdpId is missing
+	_, err = NewCredentialsBuilder().WithIdTokenFile("file").SafeBuild()
 	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-	assert.Equal(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "IdpId is required when using IdpId&IdTokenFile")
-}
-
-func TestCredentialsBuilder_Build3(t *testing.T) {
+	assert.Equal(t, "IdpId is required when using IdpId&IdTokenFile", err.(*sdkerr.CredentialsTypeError).ErrorMessage)
+	// success with IdpId, IdTokenFile and ProjectId
 	credentials, err := NewCredentialsBuilder().WithIdpId("id").WithIdTokenFile("file").WithProjectId("projectId").SafeBuild()
 	assert.Nil(t, err)
-	assert.IsType(t, &Credentials{}, credentials)
+	assert.Equal(t, "id", credentials.IdpId)
+	assert.Equal(t, "file", credentials.IdTokenFile)
+	assert.Equal(t, "projectId", credentials.ProjectId)
+}
+
+// test empty ak&sk
+func TestCredentialsBuilder_SafeBuild2(t *testing.T) {
+	// ak is empty string
+	_, err := NewCredentialsBuilder().WithAk("").WithSk("sk").SafeBuild()
+	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
+	assert.Contains(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "input ak cannot be an empty string")
+	// sk is empty string
+	_, err = NewCredentialsBuilder().WithAk("ak").WithSk("").SafeBuild()
+	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
+	assert.Contains(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "input sk cannot be an empty string")
+	// ak and sk are both empty string
+	_, err = NewCredentialsBuilder().WithAk("").WithSk("").SafeBuild()
+	assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
+	assert.Contains(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "input ak cannot be an empty string")
+	assert.Contains(t, err.(*sdkerr.CredentialsTypeError).ErrorMessage, "input sk cannot be an empty string")
+	// success with valid ak and sk
+	credentials, err := NewCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
+	assert.Nil(t, err)
+	assert.Equal(t, "ak", credentials.AK)
+	assert.Equal(t, "sk", credentials.SK)
+	credentials, err = NewCredentialsBuilder().WithAk("").WithSk("").WithAk("ak").WithSk("sk").SafeBuild()
+	assert.Nil(t, err)
+	assert.Equal(t, "ak", credentials.AK)
+	assert.Equal(t, "sk", credentials.SK)
 }

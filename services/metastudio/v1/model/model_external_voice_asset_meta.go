@@ -12,10 +12,8 @@ import (
 // ExternalVoiceAssetMeta 第三方TTS音色元数据。
 type ExternalVoiceAssetMeta struct {
 
-	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
+	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
 	Provider ExternalVoiceAssetMetaProvider `json:"provider"`
-
-	MobvoiVoiceMeta *MobvoiVoiceAssetMeta `json:"mobvoi_voice_meta,omitempty"`
 }
 
 func (o ExternalVoiceAssetMeta) String() string {
@@ -35,6 +33,10 @@ type ExternalVoiceAssetMetaProviderEnum struct {
 	XIMALAYA  ExternalVoiceAssetMetaProvider
 	HUAWEI_EI ExternalVoiceAssetMetaProvider
 	MOBVOI    ExternalVoiceAssetMetaProvider
+	AUDIOX    ExternalVoiceAssetMetaProvider
+	SINOVOICE ExternalVoiceAssetMetaProvider
+	DATABACK  ExternalVoiceAssetMetaProvider
+	AISPEECH  ExternalVoiceAssetMetaProvider
 }
 
 func GetExternalVoiceAssetMetaProviderEnum() ExternalVoiceAssetMetaProviderEnum {
@@ -47,6 +49,18 @@ func GetExternalVoiceAssetMetaProviderEnum() ExternalVoiceAssetMetaProviderEnum 
 		},
 		MOBVOI: ExternalVoiceAssetMetaProvider{
 			value: "MOBVOI",
+		},
+		AUDIOX: ExternalVoiceAssetMetaProvider{
+			value: "AUDIOX",
+		},
+		SINOVOICE: ExternalVoiceAssetMetaProvider{
+			value: "SINOVOICE",
+		},
+		DATABACK: ExternalVoiceAssetMetaProvider{
+			value: "DATABACK",
+		},
+		AISPEECH: ExternalVoiceAssetMetaProvider{
+			value: "AISPEECH",
 		},
 	}
 }

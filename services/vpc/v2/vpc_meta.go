@@ -43,6 +43,26 @@ func GenReqDefForAssociateRouteTable() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateSecurityGroupTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/security-groups/{security_group_id}/tags/action").
+		WithResponse(new(model.BatchCreateSecurityGroupTagsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroupId").
+		WithJsonTag("security_group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchCreateSubnetTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -53,6 +73,26 @@ func GenReqDefForBatchCreateSubnetTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SubnetId").
 		WithJsonTag("subnet_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteSecurityGroupTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/security-groups/{security_group_id}/tags/action").
+		WithResponse(new(model.BatchDeleteSecurityGroupTagsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroupId").
+		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -149,6 +189,26 @@ func GenReqDefForCreateSecurityGroupRule() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/security-group-rules").
 		WithResponse(new(model.CreateSecurityGroupRuleResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateSecurityGroupTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/security-groups/{security_group_id}/tags").
+		WithResponse(new(model.CreateSecurityGroupTagResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroupId").
+		WithJsonTag("security_group_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -282,6 +342,26 @@ func GenReqDefForDeleteSecurityGroupRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupRuleId").
 		WithJsonTag("security_group_rule_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteSecurityGroupTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2.0/{project_id}/security-groups/{security_group_id}/tags/{key}").
+		WithResponse(new(model.DeleteSecurityGroupTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Key").
+		WithJsonTag("key").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroupId").
+		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -556,6 +636,17 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSecurityGroupTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/{project_id}/security-groups/tags").
+		WithResponse(new(model.ListSecurityGroupTagsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -579,6 +670,21 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSecurityGroupsByTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.0/{project_id}/security-groups/resource_instances/action").
+		WithResponse(new(model.ListSecurityGroupsByTagsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -780,6 +886,22 @@ func GenReqDefForShowSecurityGroupRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SecurityGroupRuleId").
 		WithJsonTag("security_group_rule_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowSecurityGroupTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.0/{project_id}/security-groups/{security_group_id}/tags").
+		WithResponse(new(model.ShowSecurityGroupTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SecurityGroupId").
+		WithJsonTag("security_group_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()

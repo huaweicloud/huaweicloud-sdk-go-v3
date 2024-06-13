@@ -13,11 +13,15 @@ var (
 		"https://eps.myhuaweicloud.cn")
 	EU_WEST_101 = region.NewRegion("eu-west-101",
 		"https://eps.eu-west-101.myhuaweicloud.eu")
+	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
+		"https://eps.ru-moscow-1.myhuaweicloud.com",
+		"https://eps.ru-moscow-1.myhuaweicloud.cn")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":  CN_NORTH_4,
 	"eu-west-101": EU_WEST_101,
+	"ru-moscow-1": RU_MOSCOW_1,
 }
 
 var provider = region.DefaultProviderChain("EPS")

@@ -12,7 +12,7 @@ type Input struct {
 	Name string `json:"name"`
 
 	// 参数值
-	Value string `json:"value"`
+	Value *interface{} `json:"value"`
 
 	// 值类型
 	Type *string `json:"type,omitempty"`

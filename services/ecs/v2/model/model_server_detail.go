@@ -76,7 +76,8 @@ type ServerDetail struct {
 	// 预留属性。
 	AccessIPv6 string `json:"accessIPv6"`
 
-	Fault *ServerFault `json:"fault,omitempty"`
+	// 弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
+	Fault *interface{} `json:"fault,omitempty"`
 
 	// 弹性云服务器进度。
 	Progress *int32 `json:"progress,omitempty"`

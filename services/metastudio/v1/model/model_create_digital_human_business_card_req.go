@@ -41,6 +41,8 @@ type CreateDigitalHumanBusinessCardReq struct {
 	Gender *CreateDigitalHumanBusinessCardReqGender `json:"gender,omitempty"`
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
+
+	CallbackConfig *CallBackConfig `json:"callback_config,omitempty"`
 }
 
 func (o CreateDigitalHumanBusinessCardReq) String() string {

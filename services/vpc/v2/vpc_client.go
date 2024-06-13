@@ -61,6 +61,28 @@ func (c *VpcClient) AssociateRouteTableInvoker(request *model.AssociateRouteTabl
 	return &AssociateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateSecurityGroupTags 批量创建安全组资源标签
+//
+// 为指定的安全组资源实例批量添加标签。
+// 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchCreateSecurityGroupTags(request *model.BatchCreateSecurityGroupTagsRequest) (*model.BatchCreateSecurityGroupTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateSecurityGroupTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSecurityGroupTagsResponse), nil
+	}
+}
+
+// BatchCreateSecurityGroupTagsInvoker 批量创建安全组资源标签
+func (c *VpcClient) BatchCreateSecurityGroupTagsInvoker(request *model.BatchCreateSecurityGroupTagsRequest) *BatchCreateSecurityGroupTagsInvoker {
+	requestDef := GenReqDefForBatchCreateSecurityGroupTags()
+	return &BatchCreateSecurityGroupTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateSubnetTags 批量创建子网资源标签
 //
 // 为指定的子网资源实例批量添加标签。
@@ -81,6 +103,28 @@ func (c *VpcClient) BatchCreateSubnetTags(request *model.BatchCreateSubnetTagsRe
 func (c *VpcClient) BatchCreateSubnetTagsInvoker(request *model.BatchCreateSubnetTagsRequest) *BatchCreateSubnetTagsInvoker {
 	requestDef := GenReqDefForBatchCreateSubnetTags()
 	return &BatchCreateSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSecurityGroupTags 批量删除安全组资源标签
+//
+// 为指定的安全组资源实例批量删除标签
+// 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchDeleteSecurityGroupTags(request *model.BatchDeleteSecurityGroupTagsRequest) (*model.BatchDeleteSecurityGroupTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSecurityGroupTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSecurityGroupTagsResponse), nil
+	}
+}
+
+// BatchDeleteSecurityGroupTagsInvoker 批量删除安全组资源标签
+func (c *VpcClient) BatchDeleteSecurityGroupTagsInvoker(request *model.BatchDeleteSecurityGroupTagsRequest) *BatchDeleteSecurityGroupTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteSecurityGroupTags()
+	return &BatchDeleteSecurityGroupTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteSubnetTags 批量删除子网资源标签
@@ -210,6 +254,28 @@ func (c *VpcClient) CreateSecurityGroupRule(request *model.CreateSecurityGroupRu
 func (c *VpcClient) CreateSecurityGroupRuleInvoker(request *model.CreateSecurityGroupRuleRequest) *CreateSecurityGroupRuleInvoker {
 	requestDef := GenReqDefForCreateSecurityGroupRule()
 	return &CreateSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityGroupTag 创建安全组资源标签
+//
+// 给指定安全组资源实例增加标签信息。
+// 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreateSecurityGroupTag(request *model.CreateSecurityGroupTagRequest) (*model.CreateSecurityGroupTagResponse, error) {
+	requestDef := GenReqDefForCreateSecurityGroupTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityGroupTagResponse), nil
+	}
+}
+
+// CreateSecurityGroupTagInvoker 创建安全组资源标签
+func (c *VpcClient) CreateSecurityGroupTagInvoker(request *model.CreateSecurityGroupTagRequest) *CreateSecurityGroupTagInvoker {
+	requestDef := GenReqDefForCreateSecurityGroupTag()
+	return &CreateSecurityGroupTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSubnet 创建子网
@@ -379,6 +445,28 @@ func (c *VpcClient) DeleteSecurityGroupRule(request *model.DeleteSecurityGroupRu
 func (c *VpcClient) DeleteSecurityGroupRuleInvoker(request *model.DeleteSecurityGroupRuleRequest) *DeleteSecurityGroupRuleInvoker {
 	requestDef := GenReqDefForDeleteSecurityGroupRule()
 	return &DeleteSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityGroupTag 删除安全组资源标签
+//
+// 删除指定安全组资源实例的标签信息。
+// 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeleteSecurityGroupTag(request *model.DeleteSecurityGroupTagRequest) (*model.DeleteSecurityGroupTagResponse, error) {
+	requestDef := GenReqDefForDeleteSecurityGroupTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecurityGroupTagResponse), nil
+	}
+}
+
+// DeleteSecurityGroupTagInvoker 删除安全组资源标签
+func (c *VpcClient) DeleteSecurityGroupTagInvoker(request *model.DeleteSecurityGroupTagRequest) *DeleteSecurityGroupTagInvoker {
+	requestDef := GenReqDefForDeleteSecurityGroupTag()
+	return &DeleteSecurityGroupTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSubnet 删除子网
@@ -551,6 +639,27 @@ func (c *VpcClient) ListSecurityGroupRulesInvoker(request *model.ListSecurityGro
 	return &ListSecurityGroupRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityGroupTags 查询安全组项目标签
+//
+// 查询租户在指定区域和实例类型的所有标签集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListSecurityGroupTags(request *model.ListSecurityGroupTagsRequest) (*model.ListSecurityGroupTagsResponse, error) {
+	requestDef := GenReqDefForListSecurityGroupTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityGroupTagsResponse), nil
+	}
+}
+
+// ListSecurityGroupTagsInvoker 查询安全组项目标签
+func (c *VpcClient) ListSecurityGroupTagsInvoker(request *model.ListSecurityGroupTagsRequest) *ListSecurityGroupTagsInvoker {
+	requestDef := GenReqDefForListSecurityGroupTags()
+	return &ListSecurityGroupTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityGroups 查询安全组列表
 //
 // 查询安全组列表
@@ -570,6 +679,27 @@ func (c *VpcClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest)
 func (c *VpcClient) ListSecurityGroupsInvoker(request *model.ListSecurityGroupsRequest) *ListSecurityGroupsInvoker {
 	requestDef := GenReqDefForListSecurityGroups()
 	return &ListSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityGroupsByTags 查询安全组资源实例
+//
+// 使用标签过滤实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListSecurityGroupsByTags(request *model.ListSecurityGroupsByTagsRequest) (*model.ListSecurityGroupsByTagsResponse, error) {
+	requestDef := GenReqDefForListSecurityGroupsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityGroupsByTagsResponse), nil
+	}
+}
+
+// ListSecurityGroupsByTagsInvoker 查询安全组资源实例
+func (c *VpcClient) ListSecurityGroupsByTagsInvoker(request *model.ListSecurityGroupsByTagsRequest) *ListSecurityGroupsByTagsInvoker {
+	requestDef := GenReqDefForListSecurityGroupsByTags()
+	return &ListSecurityGroupsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSubnetTags 查询子网项目标签
@@ -801,6 +931,27 @@ func (c *VpcClient) ShowSecurityGroupRule(request *model.ShowSecurityGroupRuleRe
 func (c *VpcClient) ShowSecurityGroupRuleInvoker(request *model.ShowSecurityGroupRuleRequest) *ShowSecurityGroupRuleInvoker {
 	requestDef := GenReqDefForShowSecurityGroupRule()
 	return &ShowSecurityGroupRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityGroupTags 查询安全组资源标签
+//
+// 查询指定安全组实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowSecurityGroupTags(request *model.ShowSecurityGroupTagsRequest) (*model.ShowSecurityGroupTagsResponse, error) {
+	requestDef := GenReqDefForShowSecurityGroupTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityGroupTagsResponse), nil
+	}
+}
+
+// ShowSecurityGroupTagsInvoker 查询安全组资源标签
+func (c *VpcClient) ShowSecurityGroupTagsInvoker(request *model.ShowSecurityGroupTagsRequest) *ShowSecurityGroupTagsInvoker {
+	requestDef := GenReqDefForShowSecurityGroupTags()
+	return &ShowSecurityGroupTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSubnet 查询子网

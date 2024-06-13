@@ -124,6 +124,48 @@ func (c *IoTEdgeClient) ShowEdgeNodeInvoker(request *model.ShowEdgeNodeRequest) 
 	return &ShowEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEdgeNodeHostsInfo 查询边缘节点下的主机详情
+//
+// 查询边缘节点下的主机详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowEdgeNodeHostsInfo(request *model.ShowEdgeNodeHostsInfoRequest) (*model.ShowEdgeNodeHostsInfoResponse, error) {
+	requestDef := GenReqDefForShowEdgeNodeHostsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEdgeNodeHostsInfoResponse), nil
+	}
+}
+
+// ShowEdgeNodeHostsInfoInvoker 查询边缘节点下的主机详情
+func (c *IoTEdgeClient) ShowEdgeNodeHostsInfoInvoker(request *model.ShowEdgeNodeHostsInfoRequest) *ShowEdgeNodeHostsInfoInvoker {
+	requestDef := GenReqDefForShowEdgeNodeHostsInfo()
+	return &ShowEdgeNodeHostsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEdgeNode 修改边缘节点
+//
+// 修改边缘节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateEdgeNode(request *model.UpdateEdgeNodeRequest) (*model.UpdateEdgeNodeResponse, error) {
+	requestDef := GenReqDefForUpdateEdgeNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEdgeNodeResponse), nil
+	}
+}
+
+// UpdateEdgeNodeInvoker 修改边缘节点
+func (c *IoTEdgeClient) UpdateEdgeNodeInvoker(request *model.UpdateEdgeNodeRequest) *UpdateEdgeNodeInvoker {
+	requestDef := GenReqDefForUpdateEdgeNode()
+	return &UpdateEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteDeviceControlsRelease 设备控制释放
 //
 // 设备控制释放

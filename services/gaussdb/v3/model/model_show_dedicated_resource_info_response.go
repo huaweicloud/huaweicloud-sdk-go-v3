@@ -13,7 +13,7 @@ type ShowDedicatedResourceInfoResponse struct {
 	Id *string `json:"id,omitempty"`
 
 	// 专属资源池名称。
-	Name *string `json:"name,omitempty"`
+	ResourceName *string `json:"resource_name,omitempty"`
 
 	// 引擎名称。
 	EngineName *string `json:"engine_name,omitempty"`

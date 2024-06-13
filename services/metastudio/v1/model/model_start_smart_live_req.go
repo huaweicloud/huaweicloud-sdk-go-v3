@@ -26,6 +26,8 @@ type StartSmartLiveReq struct {
 
 	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
 
+	RtcCallbackConfig *RtcLiveEventCallBackConfig `json:"rtc_callback_config,omitempty"`
+
 	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
 	ViewMode *StartSmartLiveReqViewMode `json:"view_mode,omitempty"`
 

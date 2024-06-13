@@ -25,7 +25,7 @@ type CreateSmartLiveRoomReq struct {
 	SceneScripts *[]LiveVideoScriptInfo `json:"scene_scripts,omitempty"`
 
 	// 互动规则列表
-	InteractionRules *[]InteractionRuleInfo `json:"interaction_rules,omitempty"`
+	InteractionRules *[]LiveRoomInteractionRuleInfo `json:"interaction_rules,omitempty"`
 
 	PlayPolicy *PlayPolicy `json:"play_policy,omitempty"`
 
@@ -41,6 +41,8 @@ type CreateSmartLiveRoomReq struct {
 	BackupModelAssetIds *[]string `json:"backup_model_asset_ids,omitempty"`
 
 	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
+
+	RtcCallbackConfig *RtcLiveEventCallBackConfig `json:"rtc_callback_config,omitempty"`
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 

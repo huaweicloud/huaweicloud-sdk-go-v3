@@ -838,6 +838,71 @@ func (c *VpcClient) AssociateSubnetFirewallInvoker(request *model.AssociateSubne
 	return &AssociateSubnetFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateFirewallTags 批量添加ACL资源标签
+//
+// 为指定的IP地址组资源实例批量添加标签。
+// 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchCreateFirewallTags(request *model.BatchCreateFirewallTagsRequest) (*model.BatchCreateFirewallTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateFirewallTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateFirewallTagsResponse), nil
+	}
+}
+
+// BatchCreateFirewallTagsInvoker 批量添加ACL资源标签
+func (c *VpcClient) BatchCreateFirewallTagsInvoker(request *model.BatchCreateFirewallTagsRequest) *BatchCreateFirewallTagsInvoker {
+	requestDef := GenReqDefForBatchCreateFirewallTags()
+	return &BatchCreateFirewallTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteFirewallTags 批量删除ACL资源标签
+//
+// 为指定的IP地址组资源实例批量删除标签。
+// 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchDeleteFirewallTags(request *model.BatchDeleteFirewallTagsRequest) (*model.BatchDeleteFirewallTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteFirewallTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteFirewallTagsResponse), nil
+	}
+}
+
+// BatchDeleteFirewallTagsInvoker 批量删除ACL资源标签
+func (c *VpcClient) BatchDeleteFirewallTagsInvoker(request *model.BatchDeleteFirewallTagsRequest) *BatchDeleteFirewallTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteFirewallTags()
+	return &BatchDeleteFirewallTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountFirewallsByTags 查询ACL资源实例数量
+//
+// 使用标签过滤查询ACL实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CountFirewallsByTags(request *model.CountFirewallsByTagsRequest) (*model.CountFirewallsByTagsResponse, error) {
+	requestDef := GenReqDefForCountFirewallsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountFirewallsByTagsResponse), nil
+	}
+}
+
+// CountFirewallsByTagsInvoker 查询ACL资源实例数量
+func (c *VpcClient) CountFirewallsByTagsInvoker(request *model.CountFirewallsByTagsRequest) *CountFirewallsByTagsInvoker {
+	requestDef := GenReqDefForCountFirewallsByTags()
+	return &CountFirewallsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFirewall 创建网络ACL
 //
 // 创建网络ACL
@@ -859,6 +924,28 @@ func (c *VpcClient) CreateFirewallInvoker(request *model.CreateFirewallRequest) 
 	return &CreateFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFirewallTag 添加ACL资源标签
+//
+// 给指定IP地址组资源实例增加标签信息
+// 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreateFirewallTag(request *model.CreateFirewallTagRequest) (*model.CreateFirewallTagResponse, error) {
+	requestDef := GenReqDefForCreateFirewallTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFirewallTagResponse), nil
+	}
+}
+
+// CreateFirewallTagInvoker 添加ACL资源标签
+func (c *VpcClient) CreateFirewallTagInvoker(request *model.CreateFirewallTagRequest) *CreateFirewallTagInvoker {
+	requestDef := GenReqDefForCreateFirewallTag()
+	return &CreateFirewallTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteFirewall 删除网络ACL
 //
 // 删除网络ACL
@@ -878,6 +965,28 @@ func (c *VpcClient) DeleteFirewall(request *model.DeleteFirewallRequest) (*model
 func (c *VpcClient) DeleteFirewallInvoker(request *model.DeleteFirewallRequest) *DeleteFirewallInvoker {
 	requestDef := GenReqDefForDeleteFirewall()
 	return &DeleteFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFirewallTag 删除ACL资源标签
+//
+// 删除指定IP地址组资源实例的标签信息
+// 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeleteFirewallTag(request *model.DeleteFirewallTagRequest) (*model.DeleteFirewallTagResponse, error) {
+	requestDef := GenReqDefForDeleteFirewallTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFirewallTagResponse), nil
+	}
+}
+
+// DeleteFirewallTagInvoker 删除ACL资源标签
+func (c *VpcClient) DeleteFirewallTagInvoker(request *model.DeleteFirewallTagRequest) *DeleteFirewallTagInvoker {
+	requestDef := GenReqDefForDeleteFirewallTag()
+	return &DeleteFirewallTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisassociateSubnetFirewall 网络ACL解绑子网
@@ -922,6 +1031,48 @@ func (c *VpcClient) ListFirewallInvoker(request *model.ListFirewallRequest) *Lis
 	return &ListFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFirewallTags 查询ACL项目标签
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListFirewallTags(request *model.ListFirewallTagsRequest) (*model.ListFirewallTagsResponse, error) {
+	requestDef := GenReqDefForListFirewallTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFirewallTagsResponse), nil
+	}
+}
+
+// ListFirewallTagsInvoker 查询ACL项目标签
+func (c *VpcClient) ListFirewallTagsInvoker(request *model.ListFirewallTagsRequest) *ListFirewallTagsInvoker {
+	requestDef := GenReqDefForListFirewallTags()
+	return &ListFirewallTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFirewallsByTags 查询ACL资源实例列表
+//
+// 使用标签过滤查询ACL实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListFirewallsByTags(request *model.ListFirewallsByTagsRequest) (*model.ListFirewallsByTagsResponse, error) {
+	requestDef := GenReqDefForListFirewallsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFirewallsByTagsResponse), nil
+	}
+}
+
+// ListFirewallsByTagsInvoker 查询ACL资源实例列表
+func (c *VpcClient) ListFirewallsByTagsInvoker(request *model.ListFirewallsByTagsRequest) *ListFirewallsByTagsInvoker {
+	requestDef := GenReqDefForListFirewallsByTags()
+	return &ListFirewallsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RemoveFirewallRules 网络ACL移除规则
 //
 // 网络ACL移除规则
@@ -962,6 +1113,27 @@ func (c *VpcClient) ShowFirewall(request *model.ShowFirewallRequest) (*model.Sho
 func (c *VpcClient) ShowFirewallInvoker(request *model.ShowFirewallRequest) *ShowFirewallInvoker {
 	requestDef := GenReqDefForShowFirewall()
 	return &ShowFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFirewallTags 查询ACL资源标签
+//
+// 查询指定ACL实例的标签信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowFirewallTags(request *model.ShowFirewallTagsRequest) (*model.ShowFirewallTagsResponse, error) {
+	requestDef := GenReqDefForShowFirewallTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFirewallTagsResponse), nil
+	}
+}
+
+// ShowFirewallTagsInvoker 查询ACL资源标签
+func (c *VpcClient) ShowFirewallTagsInvoker(request *model.ShowFirewallTagsRequest) *ShowFirewallTagsInvoker {
+	requestDef := GenReqDefForShowFirewallTags()
+	return &ShowFirewallTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateFirewall 更新网络ACL

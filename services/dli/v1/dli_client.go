@@ -370,6 +370,27 @@ func (c *DliClient) CreateRouteToEnhancedConnectionInvoker(request *model.Create
 	return &CreateRouteToEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateStreamJob 提交流作业
+//
+// 通过 POST 方式，提交流式作业，请求体为 JSON 格式。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateStreamJob(request *model.CreateStreamJobRequest) (*model.CreateStreamJobResponse, error) {
+	requestDef := GenReqDefForCreateStreamJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStreamJobResponse), nil
+	}
+}
+
+// CreateStreamJobInvoker 提交流作业
+func (c *DliClient) CreateStreamJobInvoker(request *model.CreateStreamJobRequest) *CreateStreamJobInvoker {
+	requestDef := GenReqDefForCreateStreamJob()
+	return &CreateStreamJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteAuthInfo 删除跨源认证
 //

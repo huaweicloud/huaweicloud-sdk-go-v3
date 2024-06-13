@@ -23,7 +23,7 @@ type CreateTrainingJobReq struct {
 	VoiceName string `json:"voice_name"`
 
 	// 训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
-	Language *CreateTrainingJobReqLanguage `json:"language,omitempty"`
+	Language *string `json:"language,omitempty"`
 
 	CreateType *CreateType `json:"create_type,omitempty"`
 
@@ -69,53 +69,6 @@ func (c CreateTrainingJobReqSex) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateTrainingJobReqSex) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type CreateTrainingJobReqLanguage struct {
-	value string
-}
-
-type CreateTrainingJobReqLanguageEnum struct {
-	CN CreateTrainingJobReqLanguage
-	EN CreateTrainingJobReqLanguage
-}
-
-func GetCreateTrainingJobReqLanguageEnum() CreateTrainingJobReqLanguageEnum {
-	return CreateTrainingJobReqLanguageEnum{
-		CN: CreateTrainingJobReqLanguage{
-			value: "CN",
-		},
-		EN: CreateTrainingJobReqLanguage{
-			value: "EN",
-		},
-	}
-}
-
-func (c CreateTrainingJobReqLanguage) Value() string {
-	return c.value
-}
-
-func (c CreateTrainingJobReqLanguage) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateTrainingJobReqLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

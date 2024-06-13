@@ -254,6 +254,35 @@ func GenReqDefForCreateComponent() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateComponentWithConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cae/applications/{application_id}/component-with-configurations").
+		WithResponse(new(model.CreateComponentWithConfigurationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ApplicationId").
+		WithJsonTag("application_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnterpriseProjectID").
+		WithJsonTag("X-Enterprise-Project-ID").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XEnvironmentID").
+		WithJsonTag("X-Environment-ID").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteComponent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).

@@ -11,9 +11,9 @@ type CreateComponentRequestBody struct {
 
 	Kind *ComponentKindObj `json:"kind"`
 
-	Metadata *CreateComponentRequestBodyMetadata `json:"metadata,omitempty"`
+	Metadata *CreateComponentWithConfigurationRequestBodyMetadata `json:"metadata,omitempty"`
 
-	Spec *CreateComponentRequestBodySpec `json:"spec,omitempty"`
+	Spec *CreateComponentWithConfigurationRequestBodySpec `json:"spec,omitempty"`
 }
 
 func (o CreateComponentRequestBody) String() string {

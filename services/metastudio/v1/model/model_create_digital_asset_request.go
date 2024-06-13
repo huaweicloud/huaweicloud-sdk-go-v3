@@ -18,6 +18,9 @@ type CreateDigitalAssetRequest struct {
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
+	// 数字人内部token
+	XMSSAuthorization *string `json:"X-MSS-Authorization,omitempty"`
+
 	Body *CreateDigitalAssetRequestBody `json:"body,omitempty"`
 }
 

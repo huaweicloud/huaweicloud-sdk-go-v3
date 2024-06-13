@@ -30,6 +30,11 @@ type VoiceModelAssetMeta struct {
 	// 音量缩放比例
 	VolumeRatio *float32 `json:"volume_ratio,omitempty"`
 
+	// 该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+	IsRealtimeVoice *bool `json:"is_realtime_voice,omitempty"`
+
+	VoiceCapability *VoiceCapability `json:"voice_capability,omitempty"`
+
 	ExternalVoiceMeta *ExternalVoiceAssetMeta `json:"external_voice_meta,omitempty"`
 }
 

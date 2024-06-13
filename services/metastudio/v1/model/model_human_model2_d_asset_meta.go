@@ -26,6 +26,9 @@ type HumanModel2DAssetMeta struct {
 
 	// 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
 	ModelResolution *string `json:"model_resolution,omitempty"`
+
+	// 已执行编译任务
+	DeviceNames *[]string `json:"device_names,omitempty"`
 }
 
 func (o HumanModel2DAssetMeta) String() string {

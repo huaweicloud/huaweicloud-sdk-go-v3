@@ -48,6 +48,8 @@ type SmartLiveJob struct {
 
 	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
 
+	RtcCallbackConfig *RtcLiveEventCallBackConfig `json:"rtc_callback_config,omitempty"`
+
 	// 数字人直播推流时长，单位秒
 	StreamDuration *float32 `json:"stream_duration,omitempty"`
 

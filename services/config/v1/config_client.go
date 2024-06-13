@@ -817,6 +817,69 @@ func (c *ConfigClient) ShowResourceHistoryInvoker(request *model.ShowResourceHis
 	return &ShowResourceHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateRemediationExceptions 批量创建修正例外
+//
+// 批量创建合规规则修正例外。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) BatchCreateRemediationExceptions(request *model.BatchCreateRemediationExceptionsRequest) (*model.BatchCreateRemediationExceptionsResponse, error) {
+	requestDef := GenReqDefForBatchCreateRemediationExceptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateRemediationExceptionsResponse), nil
+	}
+}
+
+// BatchCreateRemediationExceptionsInvoker 批量创建修正例外
+func (c *ConfigClient) BatchCreateRemediationExceptionsInvoker(request *model.BatchCreateRemediationExceptionsRequest) *BatchCreateRemediationExceptionsInvoker {
+	requestDef := GenReqDefForBatchCreateRemediationExceptions()
+	return &BatchCreateRemediationExceptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteRemediationExceptions 批量删除修正例外
+//
+// 批量删除合规规则修正例外。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) BatchDeleteRemediationExceptions(request *model.BatchDeleteRemediationExceptionsRequest) (*model.BatchDeleteRemediationExceptionsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteRemediationExceptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteRemediationExceptionsResponse), nil
+	}
+}
+
+// BatchDeleteRemediationExceptionsInvoker 批量删除修正例外
+func (c *ConfigClient) BatchDeleteRemediationExceptionsInvoker(request *model.BatchDeleteRemediationExceptionsRequest) *BatchDeleteRemediationExceptionsInvoker {
+	requestDef := GenReqDefForBatchDeleteRemediationExceptions()
+	return &BatchDeleteRemediationExceptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOrUpdateRemediationConfiguration 创建或更新修正配置
+//
+// 创建或更新合规规则修正配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CreateOrUpdateRemediationConfiguration(request *model.CreateOrUpdateRemediationConfigurationRequest) (*model.CreateOrUpdateRemediationConfigurationResponse, error) {
+	requestDef := GenReqDefForCreateOrUpdateRemediationConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOrUpdateRemediationConfigurationResponse), nil
+	}
+}
+
+// CreateOrUpdateRemediationConfigurationInvoker 创建或更新修正配置
+func (c *ConfigClient) CreateOrUpdateRemediationConfigurationInvoker(request *model.CreateOrUpdateRemediationConfigurationRequest) *CreateOrUpdateRemediationConfigurationInvoker {
+	requestDef := GenReqDefForCreateOrUpdateRemediationConfiguration()
+	return &CreateOrUpdateRemediationConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateOrganizationPolicyAssignment 创建组织合规规则
 //
 // 创建组织合规规则，如果规则名称已存在，则为更新操作。
@@ -899,6 +962,27 @@ func (c *ConfigClient) DeletePolicyAssignment(request *model.DeletePolicyAssignm
 func (c *ConfigClient) DeletePolicyAssignmentInvoker(request *model.DeletePolicyAssignmentRequest) *DeletePolicyAssignmentInvoker {
 	requestDef := GenReqDefForDeletePolicyAssignment()
 	return &DeletePolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRemediationConfiguration 删除修正配置
+//
+// 删除合规规则修正配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) DeleteRemediationConfiguration(request *model.DeleteRemediationConfigurationRequest) (*model.DeleteRemediationConfigurationResponse, error) {
+	requestDef := GenReqDefForDeleteRemediationConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRemediationConfigurationResponse), nil
+	}
+}
+
+// DeleteRemediationConfigurationInvoker 删除修正配置
+func (c *ConfigClient) DeleteRemediationConfigurationInvoker(request *model.DeleteRemediationConfigurationRequest) *DeleteRemediationConfigurationInvoker {
+	requestDef := GenReqDefForDeleteRemediationConfiguration()
+	return &DeleteRemediationConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisablePolicyAssignment 停用合规规则
@@ -1069,6 +1153,48 @@ func (c *ConfigClient) ListPolicyStatesByResourceIdInvoker(request *model.ListPo
 	return &ListPolicyStatesByResourceIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRemediationExceptions 查询修正例外
+//
+// 查询合规规则修正例外。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListRemediationExceptions(request *model.ListRemediationExceptionsRequest) (*model.ListRemediationExceptionsResponse, error) {
+	requestDef := GenReqDefForListRemediationExceptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRemediationExceptionsResponse), nil
+	}
+}
+
+// ListRemediationExceptionsInvoker 查询修正例外
+func (c *ConfigClient) ListRemediationExceptionsInvoker(request *model.ListRemediationExceptionsRequest) *ListRemediationExceptionsInvoker {
+	requestDef := GenReqDefForListRemediationExceptions()
+	return &ListRemediationExceptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRemediationExecutionStatuses 查询修正执行结果
+//
+// 查询合规规则修正执行结果详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListRemediationExecutionStatuses(request *model.ListRemediationExecutionStatusesRequest) (*model.ListRemediationExecutionStatusesResponse, error) {
+	requestDef := GenReqDefForListRemediationExecutionStatuses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRemediationExecutionStatusesResponse), nil
+	}
+}
+
+// ListRemediationExecutionStatusesInvoker 查询修正执行结果
+func (c *ConfigClient) ListRemediationExecutionStatusesInvoker(request *model.ListRemediationExecutionStatusesRequest) *ListRemediationExecutionStatusesInvoker {
+	requestDef := GenReqDefForListRemediationExecutionStatuses()
+	return &ListRemediationExecutionStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunEvaluationByPolicyAssignmentId 运行合规评估
 //
 // 根据规则ID评估此规则
@@ -1088,6 +1214,27 @@ func (c *ConfigClient) RunEvaluationByPolicyAssignmentId(request *model.RunEvalu
 func (c *ConfigClient) RunEvaluationByPolicyAssignmentIdInvoker(request *model.RunEvaluationByPolicyAssignmentIdRequest) *RunEvaluationByPolicyAssignmentIdInvoker {
 	requestDef := GenReqDefForRunEvaluationByPolicyAssignmentId()
 	return &RunEvaluationByPolicyAssignmentIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunRemediationExecution 运行修正执行
+//
+// 手动运行合规规则修正执行。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) RunRemediationExecution(request *model.RunRemediationExecutionRequest) (*model.RunRemediationExecutionResponse, error) {
+	requestDef := GenReqDefForRunRemediationExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunRemediationExecutionResponse), nil
+	}
+}
+
+// RunRemediationExecutionInvoker 运行修正执行
+func (c *ConfigClient) RunRemediationExecutionInvoker(request *model.RunRemediationExecutionRequest) *RunRemediationExecutionInvoker {
+	requestDef := GenReqDefForRunRemediationExecution()
+	return &RunRemediationExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBuiltInPolicyDefinition 查询单个内置策略
@@ -1214,6 +1361,27 @@ func (c *ConfigClient) ShowPolicyAssignment(request *model.ShowPolicyAssignmentR
 func (c *ConfigClient) ShowPolicyAssignmentInvoker(request *model.ShowPolicyAssignmentRequest) *ShowPolicyAssignmentInvoker {
 	requestDef := GenReqDefForShowPolicyAssignment()
 	return &ShowPolicyAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRemediationConfiguration 查询修正配置
+//
+// 查询合规规则修正配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ShowRemediationConfiguration(request *model.ShowRemediationConfigurationRequest) (*model.ShowRemediationConfigurationResponse, error) {
+	requestDef := GenReqDefForShowRemediationConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRemediationConfigurationResponse), nil
+	}
+}
+
+// ShowRemediationConfigurationInvoker 查询修正配置
+func (c *ConfigClient) ShowRemediationConfigurationInvoker(request *model.ShowRemediationConfigurationRequest) *ShowRemediationConfigurationInvoker {
+	requestDef := GenReqDefForShowRemediationConfiguration()
+	return &ShowRemediationConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateOrganizationPolicyAssignment 更新组织合规规则

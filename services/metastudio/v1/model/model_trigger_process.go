@@ -15,7 +15,7 @@ type TriggerProcess struct {
 	// 处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
 	TimeWindow *int32 `json:"time_window,omitempty"`
 
-	// 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+	// 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
 	ReplyMode *TriggerProcessReplyMode `json:"reply_mode,omitempty"`
 
 	LayerConfig *SmartLayerConfig `json:"layer_config,omitempty"`
@@ -33,6 +33,9 @@ type TriggerProcess struct {
 
 	// 回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
 	ReplyRole *TriggerProcessReplyRole `json:"reply_role,omitempty"`
+
+	// 机器人ID。
+	RobotId *string `json:"robot_id,omitempty"`
 }
 
 func (o TriggerProcess) String() string {
@@ -49,9 +52,10 @@ type TriggerProcessReplyMode struct {
 }
 
 type TriggerProcessReplyModeEnum struct {
-	SYSTEM_REPLY TriggerProcessReplyMode
-	CALLBACK     TriggerProcessReplyMode
-	SHOW_LAYER   TriggerProcessReplyMode
+	SYSTEM_REPLY      TriggerProcessReplyMode
+	CALLBACK          TriggerProcessReplyMode
+	SHOW_LAYER        TriggerProcessReplyMode
+	INTELLIGENT_REPLY TriggerProcessReplyMode
 }
 
 func GetTriggerProcessReplyModeEnum() TriggerProcessReplyModeEnum {
@@ -64,6 +68,9 @@ func GetTriggerProcessReplyModeEnum() TriggerProcessReplyModeEnum {
 		},
 		SHOW_LAYER: TriggerProcessReplyMode{
 			value: "SHOW_LAYER",
+		},
+		INTELLIGENT_REPLY: TriggerProcessReplyMode{
+			value: "INTELLIGENT_REPLY",
 		},
 	}
 }

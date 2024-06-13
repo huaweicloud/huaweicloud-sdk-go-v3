@@ -12,6 +12,9 @@ import (
 // DigitalAssetInfo 资产信息。
 type DigitalAssetInfo struct {
 
+	// 租户id
+	ProjectId *string `json:"project_id,omitempty"`
+
 	// 资产ID。
 	AssetId *string `json:"asset_id,omitempty"`
 

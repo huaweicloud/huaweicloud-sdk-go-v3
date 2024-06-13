@@ -37,7 +37,7 @@ type UpdateDigitalAssetRequestBody struct {
 	// 设置系统属性。
 	SystemProperties *[]SystemProperty `json:"system_properties,omitempty"`
 
-	SharedConfig *SharedConfig `json:"shared_config,omitempty"`
+	SharedConfig *AssetSharedConfig `json:"shared_config,omitempty"`
 }
 
 func (o UpdateDigitalAssetRequestBody) String() string {

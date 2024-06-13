@@ -23,6 +23,9 @@ type UpdateRobotReq struct {
 	// 语音识别后端点静音时长默认500ms
 	TailSilenceTime *int32 `json:"tail_silence_time,omitempty"`
 
+	// 提问文本审核开关
+	EnableQuestionAudit *bool `json:"enable_question_audit,omitempty"`
+
 	HuaweiEiCbs *HuaweiEiCbs `json:"huawei_ei_cbs,omitempty"`
 
 	IflytekAiuiConfig *IflytekAiuiConfig `json:"iflytek_aiui_config,omitempty"`

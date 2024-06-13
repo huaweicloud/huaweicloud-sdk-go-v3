@@ -203,6 +203,18 @@ func (i *CreateRouteToEnhancedConnectionInvoker) Invoke() (*model.CreateRouteToE
 	}
 }
 
+type CreateStreamJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStreamJobInvoker) Invoke() (*model.CreateStreamJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStreamJobResponse), nil
+	}
+}
+
 type DeleteAuthInfoInvoker struct {
 	*invoker.BaseInvoker
 }

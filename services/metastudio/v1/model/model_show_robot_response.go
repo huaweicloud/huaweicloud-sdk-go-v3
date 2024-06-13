@@ -65,6 +65,12 @@ type ShowRobotResponse struct {
 	// SIS所在区域的projectId
 	SisProjectId *string `json:"sis_project_id,omitempty"`
 
+	// 是否开启热词
+	EnableHotWords *bool `json:"enable_hot_words,omitempty"`
+
+	// 是否开启提问文本审核开关
+	EnableQuestionAudit *bool `json:"enable_question_audit,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
