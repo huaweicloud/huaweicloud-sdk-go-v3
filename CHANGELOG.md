@@ -1,3 +1,14 @@
+# 0.1.101 2024-06-14
+
+### HuaweiCloud SDK DLI
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the API `CreateStreamJob`
+
 # 0.1.100 2024-06-13
 
 ### HuaweiCloud SDK Core
