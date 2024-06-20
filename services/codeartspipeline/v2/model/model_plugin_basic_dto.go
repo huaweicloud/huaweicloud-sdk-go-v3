@@ -18,16 +18,16 @@ type PluginBasicDto struct {
 	RuntimeAttribution *string `json:"runtime_attribution,omitempty"`
 
 	// 插件名
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	// 展示名
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName string `json:"display_name"`
 
 	// 业务类型
-	BusinessType *string `json:"business_type,omitempty"`
+	BusinessType string `json:"business_type"`
 
 	// 业务类型展示名
-	BusinessTypeDisplayName *string `json:"business_type_display_name,omitempty"`
+	BusinessTypeDisplayName string `json:"business_type_display_name"`
 
 	// 描述
 	Description *string `json:"description,omitempty"`

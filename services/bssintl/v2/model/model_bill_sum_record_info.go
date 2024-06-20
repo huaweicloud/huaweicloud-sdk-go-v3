@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -27,13 +28,13 @@ type BillSumRecordInfo struct {
 	PayMethod *string `json:"pay_method,omitempty"`
 
 	// 消费的金额，即从客户账户实际扣除的金额。包含代金券支付的金额。
-	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
+	ConsumeAmount *decimal.Decimal `json:"consume_amount,omitempty"`
 
 	// 欠费金额，即从客户账户扣费的时候，客户账户金额不足，欠费的金额。
-	Debt *float64 `json:"debt,omitempty"`
+	Debt *decimal.Decimal `json:"debt,omitempty"`
 
 	// 折扣金额。
-	Discount *float64 `json:"discount,omitempty"`
+	Discount *decimal.Decimal `json:"discount,omitempty"`
 
 	// 金额单位。 1：元3：分 默认值为3。
 	MeasureId *int32 `json:"measure_id,omitempty"`

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,7 +13,7 @@ type BalanceTypePay struct {
 	BalanceTypeId *string `json:"balance_type_id,omitempty"`
 
 	// 支出金额。 单位：分
-	DeductAmount *float64 `json:"deduct_amount,omitempty"`
+	DeductAmount *decimal.Decimal `json:"deduct_amount,omitempty"`
 }
 
 func (o BalanceTypePay) String() string {

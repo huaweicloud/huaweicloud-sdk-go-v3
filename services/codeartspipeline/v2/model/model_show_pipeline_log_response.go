@@ -12,10 +12,10 @@ type ShowPipelineLogResponse struct {
 	// 是否有更多日志
 	HasMore *bool `json:"has_more,omitempty"`
 
-	// 查询日志结束偏移
+	// 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
 	EndOffset *string `json:"end_offset,omitempty"`
 
-	// 查询日志起始偏移
+	// 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
 	StartOffset *string `json:"start_offset,omitempty"`
 
 	// 日志内容

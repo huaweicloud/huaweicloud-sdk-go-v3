@@ -15,22 +15,22 @@ type PluginDto struct {
 	IconUrl *string `json:"icon_url,omitempty"`
 
 	// 运行属性
-	RuntimeAttribution *string `json:"runtime_attribution,omitempty"`
+	RuntimeAttribution string `json:"runtime_attribution"`
 
 	// 插件名
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	// 展示名
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName string `json:"display_name"`
 
 	// 业务类型
-	BusinessType *string `json:"business_type,omitempty"`
+	BusinessType string `json:"business_type"`
 
 	// 业务类型展示名
-	BusinessTypeDisplayName *string `json:"business_type_display_name,omitempty"`
+	BusinessTypeDisplayName string `json:"business_type_display_name"`
 
 	// 描述
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 
 	// 是否私有
 	IsPrivate *int32 `json:"is_private,omitempty"`
@@ -42,12 +42,12 @@ type PluginDto struct {
 	Maintainers *string `json:"maintainers,omitempty"`
 
 	// 版本号
-	Version *string `json:"version,omitempty"`
+	Version string `json:"version"`
 
 	// 版本号说明
 	VersionDescription *string `json:"version_description,omitempty"`
 
-	ExecutionInfo *PluginDtoExecutionInfo `json:"execution_info,omitempty"`
+	ExecutionInfo *PluginDtoExecutionInfo `json:"execution_info"`
 
 	// 输入信息
 	InputInfo *[]PluginDtoInputInfo `json:"input_info,omitempty"`

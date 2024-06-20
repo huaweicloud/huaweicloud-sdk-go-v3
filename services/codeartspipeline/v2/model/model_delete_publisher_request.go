@@ -13,7 +13,7 @@ type DeletePublisherRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 发布商ID
-	PublisherUniqueId *string `json:"publisher_unique_id,omitempty"`
+	PublisherUniqueId string `json:"publisher_unique_id"`
 }
 
 func (o DeletePublisherRequest) String() string {

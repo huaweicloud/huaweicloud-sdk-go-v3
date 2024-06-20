@@ -20,7 +20,7 @@ type ListPipelineTemplatesQuery struct {
 	// 偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
 	Offset *int64 `json:"offset,omitempty"`
 
-	// 每次查询的条目数量
+	// 每次查询的条目数量，默认为10。
 	Limit *int64 `json:"limit,omitempty"`
 
 	// 用于排序的字段，非必选。取值为：name，create_time

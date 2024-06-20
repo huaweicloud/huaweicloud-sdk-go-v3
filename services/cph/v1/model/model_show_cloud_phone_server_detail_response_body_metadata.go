@@ -9,10 +9,10 @@ import (
 // ShowCloudPhoneServerDetailResponseBodyMetadata 订单以及产品相关信息。
 type ShowCloudPhoneServerDetailResponseBodyMetadata struct {
 
-	// 订单ID，不超过64个字节。
+	// 产品ID，不超过64个字节。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 产品ID，不超过64个字节。
+	// 订单ID，不超过64个字节。
 	OrderId *string `json:"order_id,omitempty"`
 }
 

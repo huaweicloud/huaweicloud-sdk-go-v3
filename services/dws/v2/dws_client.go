@@ -257,6 +257,27 @@ func (c *DwsClient) CancelReadonlyClusterInvoker(request *model.CancelReadonlyCl
 	return &CancelReadonlyClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeSecurityGroup 修改集群安全组
+//
+// 该接口用于修改集群安全组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ChangeSecurityGroup(request *model.ChangeSecurityGroupRequest) (*model.ChangeSecurityGroupResponse, error) {
+	requestDef := GenReqDefForChangeSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeSecurityGroupResponse), nil
+	}
+}
+
+// ChangeSecurityGroupInvoker 修改集群安全组
+func (c *DwsClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurityGroupRequest) *ChangeSecurityGroupInvoker {
+	requestDef := GenReqDefForChangeSecurityGroup()
+	return &ChangeSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckCluster 创建集群前检查
 //
 // 创建集群前预检查
@@ -2609,6 +2630,27 @@ func (c *DwsClient) SaveClusterDescriptionInfo(request *model.SaveClusterDescrip
 func (c *DwsClient) SaveClusterDescriptionInfoInvoker(request *model.SaveClusterDescriptionInfoRequest) *SaveClusterDescriptionInfoInvoker {
 	requestDef := GenReqDefForSaveClusterDescriptionInfo()
 	return &SaveClusterDescriptionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterFlavor 查询集群规格详情
+//
+// 查询集群使用的规格详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowClusterFlavor(request *model.ShowClusterFlavorRequest) (*model.ShowClusterFlavorResponse, error) {
+	requestDef := GenReqDefForShowClusterFlavor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterFlavorResponse), nil
+	}
+}
+
+// ShowClusterFlavorInvoker 查询集群规格详情
+func (c *DwsClient) ShowClusterFlavorInvoker(request *model.ShowClusterFlavorRequest) *ShowClusterFlavorInvoker {
+	requestDef := GenReqDefForShowClusterFlavor()
+	return &ShowClusterFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowClusterRedistribution 查询重分布详情

@@ -543,6 +543,27 @@ func (c *DasClient) ListSqlLimitRulesInvoker(request *model.ListSqlLimitRulesReq
 	return &ListSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ParseSqlLimitRules 根据原始SQL生成SQL限流关键字
+//
+// 根据原始SQL生成SQL限流关键字，目前支持MySQL、MariaDB、GaussDB(for MySQL)三种引擎。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ParseSqlLimitRules(request *model.ParseSqlLimitRulesRequest) (*model.ParseSqlLimitRulesResponse, error) {
+	requestDef := GenReqDefForParseSqlLimitRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ParseSqlLimitRulesResponse), nil
+	}
+}
+
+// ParseSqlLimitRulesInvoker 根据原始SQL生成SQL限流关键字
+func (c *DasClient) ParseSqlLimitRulesInvoker(request *model.ParseSqlLimitRulesRequest) *ParseSqlLimitRulesInvoker {
+	requestDef := GenReqDefForParseSqlLimitRules()
+	return &ParseSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RegisterDbUser 注册数据库用户
 //
 // 此接口是将数据库用户和密码注册进DAS系统，同时会返回一个数据库用户ID ，后续调用其他接口时（如查询实例会话列表接口）需要用到此数据库用户ID。密码为加密存储，且仅用于DAS API相关功能。此接口不会在数据库实例上创建数据库用户对象。请确保输入的用户名和密码是已经存在并且是正确的。

@@ -12,8 +12,14 @@ type DeleteBasicPluginRequest struct {
 	// 租户ID
 	DomainId string `json:"domain_id"`
 
-	// 是否调用成功
-	PluginName *string `json:"plugin_name,omitempty"`
+	// 需要删除的插件名
+	PluginName string `json:"plugin_name"`
+
+	// 删除类型，all 代表删除整个插件，single代表删除单个插件版本
+	Type string `json:"type"`
+
+	// 需要删除的插件版本
+	Version *string `json:"version,omitempty"`
 }
 
 func (o DeleteBasicPluginRequest) String() string {

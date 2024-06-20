@@ -13,10 +13,10 @@ type UploadBasicPluginRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 插件名
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	// 业务类型
-	BusinessType *string `json:"business_type,omitempty"`
+	BusinessType string `json:"business_type"`
 
 	Body *UploadBasicPluginRequestBody `json:"body,omitempty" type:"multipart"`
 }

@@ -12,7 +12,7 @@ type UploadPluginIconRequest struct {
 	// 租户ID
 	DomainId string `json:"domain_id"`
 
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	Body *UploadPluginIconRequestBody `json:"body,omitempty" type:"multipart"`
 }

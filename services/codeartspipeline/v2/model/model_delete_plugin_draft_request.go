@@ -13,10 +13,10 @@ type DeletePluginDraftRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 插件名
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	// 版本
-	Version *string `json:"version,omitempty"`
+	Version string `json:"version"`
 }
 
 func (o DeletePluginDraftRequest) String() string {

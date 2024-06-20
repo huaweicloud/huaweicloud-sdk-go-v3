@@ -137,6 +137,18 @@ func (i *CancelReadonlyClusterInvoker) Invoke() (*model.CancelReadonlyClusterRes
 	}
 }
 
+type ChangeSecurityGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeSecurityGroupResponse), nil
+	}
+}
+
 type CheckClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1466,6 +1478,18 @@ func (i *SaveClusterDescriptionInfoInvoker) Invoke() (*model.SaveClusterDescript
 		return nil, err
 	} else {
 		return result.(*model.SaveClusterDescriptionInfoResponse), nil
+	}
+}
+
+type ShowClusterFlavorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterFlavorInvoker) Invoke() (*model.ShowClusterFlavorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterFlavorResponse), nil
 	}
 }
 

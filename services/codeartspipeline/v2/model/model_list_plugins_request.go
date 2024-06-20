@@ -13,10 +13,10 @@ type ListPluginsRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 偏移
-	Offset *string `json:"offset,omitempty"`
+	Offset string `json:"offset"`
 
 	// 大小
-	Limit *string `json:"limit,omitempty"`
+	Limit string `json:"limit"`
 
 	Body *AgentPluginInfoQueryDto `json:"body,omitempty"`
 }

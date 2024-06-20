@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -9,7 +10,7 @@ import (
 type OfficialWebsiteRatingResult struct {
 
 	// 包年/包月产品的官网价。
-	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty"`
+	OfficialWebsiteAmount *decimal.Decimal `json:"official_website_amount,omitempty"`
 
 	// 价格度量单位标识。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

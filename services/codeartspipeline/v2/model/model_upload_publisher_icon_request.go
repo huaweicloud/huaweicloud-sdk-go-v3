@@ -13,7 +13,7 @@ type UploadPublisherIconRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 发布商名称
-	PublisherEnName *string `json:"publisher_en_name,omitempty"`
+	PublisherEnName string `json:"publisher_en_name"`
 
 	Body *UploadPublisherIconRequestBody `json:"body,omitempty" type:"multipart"`
 }

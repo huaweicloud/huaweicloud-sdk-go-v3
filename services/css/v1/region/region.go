@@ -56,6 +56,8 @@ var (
 		"https://css.my-kualalumpur-1.myhuaweicloud.com")
 	EU_WEST_101 = region.NewRegion("eu-west-101",
 		"https://css.eu-west-101.myhuaweicloud.com")
+	AF_NORTH_1 = region.NewRegion("af-north-1",
+		"https://css.af-north-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -83,6 +85,7 @@ var staticFields = map[string]*region.Region{
 	"cn-east-5":        CN_EAST_5,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 	"eu-west-101":      EU_WEST_101,
+	"af-north-1":       AF_NORTH_1,
 }
 
 var provider = region.DefaultProviderChain("CSS")

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,7 +13,7 @@ type DiscountDetailInfo struct {
 	PromotionType *string `json:"promotion_type,omitempty"`
 
 	// 折扣金额。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *decimal.Decimal `json:"discount_amount,omitempty"`
 
 	// 折扣类型对应的标识，可为合同ID或商务ID。
 	PromotionId *string `json:"promotion_id,omitempty"`

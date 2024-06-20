@@ -9,18 +9,18 @@ import (
 type PluginPartQueryDto struct {
 
 	// 插件名
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	// 展示名
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName string `json:"display_name"`
 
 	// 版本号
-	Version *string `json:"version,omitempty"`
+	Version string `json:"version"`
 
-	// 插件属性
-	PluginAttribution *string `json:"plugin_attribution,omitempty"`
+	// 插件属性,custom/official
+	PluginAttribution string `json:"plugin_attribution"`
 
-	// 版本属性
+	// 版本属性,draft/formal
 	VersionAttribution *string `json:"version_attribution,omitempty"`
 }
 

@@ -26,6 +26,12 @@ type ShowPackageDetailRespTaskDetails struct {
 	// 具体脚本ID
 	ScriptId *string `json:"script_id,omitempty"`
 
+	// 作业ID
+	TaskId *string `json:"task_id,omitempty"`
+
+	// 作业启动状态，2：成功，3：失败
+	StartJobStatus *int32 `json:"start_job_status,omitempty"`
+
 	// 提交时间戳，13位时间戳
 	SubmitTimestamp *int64 `json:"submit_timestamp,omitempty"`
 

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -18,7 +19,7 @@ type TaxInfo struct {
 	SubTaxClass *string `json:"subTaxClass,omitempty"`
 
 	// 税金金额。 单位：美元
-	TaxAmount *float64 `json:"taxAmount,omitempty"`
+	TaxAmount *decimal.Decimal `json:"taxAmount,omitempty"`
 }
 
 func (o TaxInfo) String() string {

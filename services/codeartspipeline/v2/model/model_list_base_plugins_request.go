@@ -12,14 +12,14 @@ type ListBasePluginsRequest struct {
 	// 租户ID
 	DomainId string `json:"domain_id"`
 
-	// 属性
-	Attribution *string `json:"attribution,omitempty"`
+	// 插件属性,可选official、published
+	Attribution string `json:"attribution"`
 
 	// 偏移
-	Offset *string `json:"offset,omitempty"`
+	Offset string `json:"offset"`
 
 	// 大小
-	Limit *string `json:"limit,omitempty"`
+	Limit string `json:"limit"`
 }
 
 func (o ListBasePluginsRequest) String() string {

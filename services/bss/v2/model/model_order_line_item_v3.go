@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -15,10 +16,10 @@ type OrderLineItemV3 struct {
 	DiscountMode int32 `json:"discount_mode"`
 
 	// 订单可用的折扣金额（即减免金额）。
-	DiscountAmount float64 `json:"discount_amount"`
+	DiscountAmount *decimal.Decimal `json:"discount_amount"`
 
 	// 订单可用的折扣比例。
-	DiscountRatio float64 `json:"discount_ratio"`
+	DiscountRatio *decimal.Decimal `json:"discount_ratio"`
 }
 
 func (o OrderLineItemV3) String() string {

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -15,16 +16,16 @@ type AccountBalanceV3 struct {
 	AccountType int32 `json:"account_type"`
 
 	// 账户余额。
-	Amount float64 `json:"amount"`
+	Amount *decimal.Decimal `json:"amount"`
 
 	// 币种。 USD：美元。
 	Currency string `json:"currency"`
 
 	// 专款专用余额。
-	DesignatedAmount *float64 `json:"designated_amount,omitempty"`
+	DesignatedAmount *decimal.Decimal `json:"designated_amount,omitempty"`
 
 	// 总信用额度，仅信用账户存在该字段。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *decimal.Decimal `json:"credit_amount,omitempty"`
 
 	// 度量单位。 1：元
 	MeasureId int32 `json:"measure_id"`

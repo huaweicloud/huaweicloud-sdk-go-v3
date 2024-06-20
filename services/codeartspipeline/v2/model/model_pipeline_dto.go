@@ -9,13 +9,13 @@ import (
 type PipelineDto struct {
 
 	// 流水线名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 流水线描述
 	Description *string `json:"description,omitempty"`
 
 	// 是否为发布流水线
-	IsPublish *bool `json:"is_publish,omitempty"`
+	IsPublish bool `json:"is_publish"`
 
 	// 流水线源
 	Sources *[]CodeSource `json:"sources,omitempty"`
@@ -33,7 +33,7 @@ type PipelineDto struct {
 	ManifestVersion *string `json:"manifest_version,omitempty"`
 
 	// 流水线结构定义
-	Definition *string `json:"definition,omitempty"`
+	Definition string `json:"definition"`
 
 	// 项目名称
 	ProjectName *string `json:"project_name,omitempty"`
@@ -43,6 +43,8 @@ type PipelineDto struct {
 
 	// 若为复制场景，则为原流水线ID
 	Id *string `json:"id,omitempty"`
+
+	ConcurrencyControl *PipelineConcurrencyMgmt `json:"concurrency_control,omitempty"`
 }
 
 func (o PipelineDto) String() string {

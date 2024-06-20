@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -15,7 +16,7 @@ type DemandDiscountRatingResult struct {
 	DiscountType *int32 `json:"discount_type,omitempty"`
 
 	// 折扣的金额。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 度量单位标识。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

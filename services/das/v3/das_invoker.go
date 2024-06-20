@@ -293,6 +293,18 @@ func (i *ListSqlLimitRulesInvoker) Invoke() (*model.ListSqlLimitRulesResponse, e
 	}
 }
 
+type ParseSqlLimitRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ParseSqlLimitRulesInvoker) Invoke() (*model.ParseSqlLimitRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ParseSqlLimitRulesResponse), nil
+	}
+}
+
 type RegisterDbUserInvoker struct {
 	*invoker.BaseInvoker
 }

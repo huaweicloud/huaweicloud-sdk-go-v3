@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -60,37 +61,37 @@ type MonthlyBillRes struct {
 	ChargeMode *int32 `json:"charge_mode,omitempty"`
 
 	// 客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
-	ConsumeAmount *float64 `json:"consume_amount,omitempty"`
+	ConsumeAmount *decimal.Decimal `json:"consume_amount,omitempty"`
 
 	// 现金支付金额。
-	CashAmount *float64 `json:"cash_amount,omitempty"`
+	CashAmount *decimal.Decimal `json:"cash_amount,omitempty"`
 
 	// 信用额度支付金额。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *decimal.Decimal `json:"credit_amount,omitempty"`
 
 	// 代金券支付金额。
-	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	CouponAmount *decimal.Decimal `json:"coupon_amount,omitempty"`
 
 	// 现金券支付金额。
-	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty"`
+	FlexipurchaseCouponAmount *decimal.Decimal `json:"flexipurchase_coupon_amount,omitempty"`
 
 	// 储值卡支付金额。
-	StoredCardAmount *float64 `json:"stored_card_amount,omitempty"`
+	StoredCardAmount *decimal.Decimal `json:"stored_card_amount,omitempty"`
 
 	// 奖励金支付金额（用于现网客户未使用完的奖励金）。
-	BonusAmount *float64 `json:"bonus_amount,omitempty"`
+	BonusAmount *decimal.Decimal `json:"bonus_amount,omitempty"`
 
 	// 欠费金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 欠费核销金额。
-	AdjustmentAmount *float64 `json:"adjustment_amount,omitempty"`
+	AdjustmentAmount *decimal.Decimal `json:"adjustment_amount,omitempty"`
 
 	// 官网价。
-	OfficialAmount *float64 `json:"official_amount,omitempty"`
+	OfficialAmount *decimal.Decimal `json:"official_amount,omitempty"`
 
 	// 对应官网价折扣金额。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *decimal.Decimal `json:"discount_amount,omitempty"`
 
 	// 金额单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

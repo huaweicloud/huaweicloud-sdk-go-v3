@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -27,7 +28,7 @@ type InvoiceRequestInfoIntl struct {
 	InvoiceTitle *string `json:"invoiceTitle,omitempty"`
 
 	// 已开票金额（美元） 。
-	InvoiceAmount *float64 `json:"invoiceAmount,omitempty"`
+	InvoiceAmount *decimal.Decimal `json:"invoiceAmount,omitempty"`
 
 	// 开票方式。 0：账期1：到账2：订单
 	InvoiceMethod *int32 `json:"invoiceMethod,omitempty"`

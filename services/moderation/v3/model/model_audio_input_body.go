@@ -11,6 +11,9 @@ type AudioInputBody struct {
 
 	// 音频url地址。
 	Url string `json:"url"`
+
+	// 支持的语言，默认为zh，zh：中文
+	Language *string `json:"language,omitempty"`
 }
 
 func (o AudioInputBody) String() string {

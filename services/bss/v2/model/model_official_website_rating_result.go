@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -9,7 +10,7 @@ import (
 type OfficialWebsiteRatingResult struct {
 
 	// 包年/包月产品的官网价。
-	OfficialWebsiteAmount *float64 `json:"official_website_amount,omitempty"`
+	OfficialWebsiteAmount *decimal.Decimal `json:"official_website_amount,omitempty"`
 
 	// 分期金额的官网价。  说明： 暂只支持IES产品。
 	InstallmentOfficialWebsiteAmount *string `json:"installment_official_website_amount,omitempty"`

@@ -9,7 +9,7 @@ import (
 type PublisherRequest struct {
 
 	// 名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 用户ID
 	UserId *string `json:"user_id,omitempty"`
@@ -24,13 +24,13 @@ type PublisherRequest struct {
 	Website *string `json:"website,omitempty"`
 
 	// 地址
-	SupportUrl *string `json:"support_url,omitempty"`
+	SupportUrl string `json:"support_url"`
 
 	// 地址
 	SourceUrl *string `json:"source_url,omitempty"`
 
 	// 英文名
-	EnName *string `json:"en_name,omitempty"`
+	EnName string `json:"en_name"`
 
 	// 唯一ID
 	PublisherUniqueId *string `json:"publisher_unique_id,omitempty"`

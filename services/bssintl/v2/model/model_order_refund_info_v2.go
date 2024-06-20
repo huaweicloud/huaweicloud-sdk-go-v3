@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -12,7 +13,7 @@ type OrderRefundInfoV2 struct {
 	Id string `json:"id"`
 
 	// 金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
-	Amount float64 `json:"amount"`
+	Amount *decimal.Decimal `json:"amount"`
 
 	// 金额的度量单位。 1：元
 	MeasureId string `json:"measure_id"`

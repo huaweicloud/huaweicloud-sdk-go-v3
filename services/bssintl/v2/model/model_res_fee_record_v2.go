@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -63,7 +64,7 @@ type ResFeeRecordV2 struct {
 	SkuCode *string `json:"sku_code,omitempty"`
 
 	// 产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
-	SpecSize *float64 `json:"spec_size,omitempty"`
+	SpecSize *decimal.Decimal `json:"spec_size,omitempty"`
 
 	// 产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
@@ -96,61 +97,61 @@ type ResFeeRecordV2 struct {
 	UsageType *string `json:"usage_type,omitempty"`
 
 	// 资源的使用量。
-	Usage *float64 `json:"usage,omitempty"`
+	Usage *decimal.Decimal `json:"usage,omitempty"`
 
 	// 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
 	UsageMeasureId *int32 `json:"usage_measure_id,omitempty"`
 
 	// 套餐内使用量。
-	FreeResourceUsage *float64 `json:"free_resource_usage,omitempty"`
+	FreeResourceUsage *decimal.Decimal `json:"free_resource_usage,omitempty"`
 
 	// 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
 	FreeResourceMeasureId *int32 `json:"free_resource_measure_id,omitempty"`
 
 	// 预留实例使用量。
-	RiUsage *float64 `json:"ri_usage,omitempty"`
+	RiUsage *decimal.Decimal `json:"ri_usage,omitempty"`
 
 	// 预留实例使用量单位。
 	RiUsageMeasureId *int32 `json:"ri_usage_measure_id,omitempty"`
 
 	// 产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
-	UnitPrice *float64 `json:"unit_price,omitempty"`
+	UnitPrice *decimal.Decimal `json:"unit_price,omitempty"`
 
 	// 产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
 	Unit *string `json:"unit,omitempty"`
 
 	// 官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
-	OfficialAmount *float64 `json:"official_amount,omitempty"`
+	OfficialAmount *decimal.Decimal `json:"official_amount,omitempty"`
 
 	// 优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
-	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	DiscountAmount *decimal.Decimal `json:"discount_amount,omitempty"`
 
 	// 应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
-	Amount *float64 `json:"amount,omitempty"`
+	Amount *decimal.Decimal `json:"amount,omitempty"`
 
 	// 现金支付金额。
-	CashAmount *float64 `json:"cash_amount,omitempty"`
+	CashAmount *decimal.Decimal `json:"cash_amount,omitempty"`
 
 	// 信用额度支付金额。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *decimal.Decimal `json:"credit_amount,omitempty"`
 
 	// 代金券支付金额。
-	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	CouponAmount *decimal.Decimal `json:"coupon_amount,omitempty"`
 
 	// 现金券支付金额。
-	FlexipurchaseCouponAmount *float64 `json:"flexipurchase_coupon_amount,omitempty"`
+	FlexipurchaseCouponAmount *decimal.Decimal `json:"flexipurchase_coupon_amount,omitempty"`
 
 	// 储值卡支付金额。
-	StoredCardAmount *float64 `json:"stored_card_amount,omitempty"`
+	StoredCardAmount *decimal.Decimal `json:"stored_card_amount,omitempty"`
 
 	// 奖励金支付金额（用于现网客户未使用完的奖励金）。
-	BonusAmount *float64 `json:"bonus_amount,omitempty"`
+	BonusAmount *decimal.Decimal `json:"bonus_amount,omitempty"`
 
 	// 欠费金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 欠费核销金额。
-	AdjustmentAmount *float64 `json:"adjustment_amount,omitempty"`
+	AdjustmentAmount *decimal.Decimal `json:"adjustment_amount,omitempty"`
 
 	// 金额单位。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`

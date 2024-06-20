@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -22,25 +23,25 @@ type ListMonthlyExpendituresResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 总金额（包含退订）。
-	TotalAmount *float64 `json:"total_amount,omitempty"`
+	TotalAmount *decimal.Decimal `json:"total_amount,omitempty"`
 
 	// 总欠费金额。
-	DebtAmount *float64 `json:"debt_amount,omitempty"`
+	DebtAmount *decimal.Decimal `json:"debt_amount,omitempty"`
 
 	// 代金券金额。
-	CouponAmount *float64 `json:"coupon_amount,omitempty"`
+	CouponAmount *decimal.Decimal `json:"coupon_amount,omitempty"`
 
 	// 现金券金额，预留。
-	CashcouponAmount *float64 `json:"cashcoupon_amount,omitempty"`
+	CashcouponAmount *decimal.Decimal `json:"cashcoupon_amount,omitempty"`
 
 	// 储值卡金额，预留。
-	StoredcardAmount *float64 `json:"storedcard_amount,omitempty"`
+	StoredcardAmount *decimal.Decimal `json:"storedcard_amount,omitempty"`
 
 	// 现金账户金额。
-	DebitAmount *float64 `json:"debit_amount,omitempty"`
+	DebitAmount *decimal.Decimal `json:"debit_amount,omitempty"`
 
 	// 信用账户金额。
-	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	CreditAmount *decimal.Decimal `json:"credit_amount,omitempty"`
 
 	// 金额单位。 1：元3：分 默认值为3。
 	MeasureId *int32 `json:"measure_id,omitempty"`

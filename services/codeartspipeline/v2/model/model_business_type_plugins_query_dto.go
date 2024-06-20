@@ -8,7 +8,7 @@ import (
 
 type BusinessTypePluginsQueryDto struct {
 
-	// 用于区分插件为流水线可使用/模板可使用
+	// 用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
 	UseCondition *string `json:"use_condition,omitempty"`
 
 	// 用于区分源的代码仓类型codehub/gitlab/github等

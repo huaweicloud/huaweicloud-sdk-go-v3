@@ -13,13 +13,13 @@ type ListPLuginVersionRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 插件名
-	PluginName *string `json:"plugin_name,omitempty"`
+	PluginName string `json:"plugin_name"`
 
 	// 偏移
-	Offset *string `json:"offset,omitempty"`
+	Offset string `json:"offset"`
 
 	// 大小
-	Limit *string `json:"limit,omitempty"`
+	Limit string `json:"limit"`
 }
 
 func (o ListPLuginVersionRequest) String() string {

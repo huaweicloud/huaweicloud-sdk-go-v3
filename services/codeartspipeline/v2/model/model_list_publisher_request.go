@@ -13,10 +13,10 @@ type ListPublisherRequest struct {
 	DomainId string `json:"domain_id"`
 
 	// 偏移
-	Offset *string `json:"offset,omitempty"`
+	Offset string `json:"offset"`
 
 	// 大小
-	Limit *string `json:"limit,omitempty"`
+	Limit string `json:"limit"`
 
 	// 名称
 	Name *string `json:"name,omitempty"`

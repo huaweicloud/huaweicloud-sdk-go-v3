@@ -9,7 +9,7 @@ import (
 type ListReleasePackagesRespData struct {
 
 	// 申请时间，13位时间戳
-	ApplyTimestamp *string `json:"apply_timestamp,omitempty"`
+	ApplyTimestamp *int64 `json:"apply_timestamp,omitempty"`
 
 	// 申请人id
 	ApplyUserId *string `json:"apply_user_id,omitempty"`
