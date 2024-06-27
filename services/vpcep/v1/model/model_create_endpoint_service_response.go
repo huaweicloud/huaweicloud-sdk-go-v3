@@ -1,9 +1,10 @@
 package model
 
 import (
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"strings"
 )
 
@@ -49,7 +50,7 @@ type CreateEndpointServiceResponse struct {
 	// 服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
 	Ports *[]PortList `json:"ports,omitempty"`
 
-	// 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+	// 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
 	TcpProxy *string `json:"tcp_proxy,omitempty"`
 
 	// 资源标签列表
@@ -58,9 +59,12 @@ type CreateEndpointServiceResponse struct {
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
 
-	// 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
-	EnablePolicy   *bool `json:"enable_policy,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	// 是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+	EnablePolicy *bool `json:"enable_policy,omitempty"`
+
+	// 指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+	IpVersion      *CreateEndpointServiceResponseIpVersion `json:"ip_version,omitempty"`
+	HttpStatusCode int                                     `json:"-"`
 }
 
 func (o CreateEndpointServiceResponse) String() string {
@@ -70,4 +74,51 @@ func (o CreateEndpointServiceResponse) String() string {
 	}
 
 	return strings.Join([]string{"CreateEndpointServiceResponse", string(data)}, " ")
+}
+
+type CreateEndpointServiceResponseIpVersion struct {
+	value string
+}
+
+type CreateEndpointServiceResponseIpVersionEnum struct {
+	IPV4 CreateEndpointServiceResponseIpVersion
+	IPV6 CreateEndpointServiceResponseIpVersion
+}
+
+func GetCreateEndpointServiceResponseIpVersionEnum() CreateEndpointServiceResponseIpVersionEnum {
+	return CreateEndpointServiceResponseIpVersionEnum{
+		IPV4: CreateEndpointServiceResponseIpVersion{
+			value: "ipv4",
+		},
+		IPV6: CreateEndpointServiceResponseIpVersion{
+			value: "ipv6",
+		},
+	}
+}
+
+func (c CreateEndpointServiceResponseIpVersion) Value() string {
+	return c.value
+}
+
+func (c CreateEndpointServiceResponseIpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateEndpointServiceResponseIpVersion) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

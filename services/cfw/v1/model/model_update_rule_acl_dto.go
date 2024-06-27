@@ -53,8 +53,6 @@ type UpdateRuleAclDto struct {
 	// 是否支持长连接，0表示不支持，1表示支持
 	LongConnectEnable *UpdateRuleAclDtoLongConnectEnable `json:"long_connect_enable,omitempty"`
 
-	Profile *RuleProfileDto `json:"profile,omitempty"`
-
 	Source *RuleAddressDto `json:"source,omitempty"`
 
 	Destination *RuleAddressDto `json:"destination,omitempty"`

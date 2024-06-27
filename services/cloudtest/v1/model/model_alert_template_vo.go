@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -13,7 +12,7 @@ type AlertTemplateVo struct {
 	AlertLevels *[]AlertLevel `json:"alertLevels,omitempty"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 创建人
 	CreateUser *string `json:"create_user,omitempty"`
@@ -31,7 +30,7 @@ type AlertTemplateVo struct {
 	TestServiceId *string `json:"test_service_id,omitempty"`
 
 	// 创建时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *string `json:"update_time,omitempty"`
 
 	// 更新人
 	UpdateUser *string `json:"update_user,omitempty"`

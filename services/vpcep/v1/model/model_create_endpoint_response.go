@@ -13,7 +13,7 @@ type CreateEndpointResponse struct {
 	// 终端节点的ID，唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+	// 终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
 	ServiceType *string `json:"service_type,omitempty"`
 
 	// 终端节点的状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
@@ -22,7 +22,7 @@ type CreateEndpointResponse struct {
 	// 终端节点ip
 	Ip *string `json:"ip,omitempty"`
 
-	// 帐号状态。  - frozen：冻结  - active：解冻
+	// 账号状态。  - frozen：冻结  - active：解冻
 	ActiveStatus *[]string `json:"active_status,omitempty"`
 
 	// 终端节点服务的名称。
@@ -34,7 +34,7 @@ type CreateEndpointResponse struct {
 	// 终端节点服务的ID。
 	EndpointServiceId *string `json:"endpoint_service_id,omitempty"`
 
-	// 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+	// 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
 	EnableDns *bool `json:"enable_dns,omitempty"`
 
 	// vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
@@ -61,7 +61,7 @@ type CreateEndpointResponse struct {
 	// 是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
 	EnableWhitelist *bool `json:"enable_whitelist,omitempty"`
 
-	// 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+	// 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
 	Routetables *[]string `json:"routetables,omitempty"`
 
 	// 规格名称
@@ -70,7 +70,7 @@ type CreateEndpointResponse struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 只涉及开启双端固定的网关型终端节点，响应体展示此字段
+	// 终端节点策略信息
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
 	// 终端节点是否可用。  - enable：启用  - disable：不启用
@@ -81,7 +81,10 @@ type CreateEndpointResponse struct {
 
 	// 终端节点对应Pool的Public Border Group信息
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
-	HttpStatusCode    int     `json:"-"`
+
+	// 终端节点的IPv6地址,仅专业型终端节点支持此参数
+	Ipv6Address    *string `json:"ipv6_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateEndpointResponse) String() string {

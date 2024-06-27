@@ -9,7 +9,7 @@ import (
 // UpdateEndpointPolicyRequestBody 更新网关型终端节点policy请求结构体
 type UpdateEndpointPolicyRequestBody struct {
 
-	// 只涉及开启双端固定的网关型终端节点
+	// 终端节点策略信息
 	PolicyStatement []PolicyStatement `json:"policy_statement"`
 }
 

@@ -8,11 +8,16 @@ import (
 
 // ListFirewallTagsResponse Response Object
 type ListFirewallTagsResponse struct {
-	Tags *ListTag `json:"tags,omitempty"`
+
+	// tag对象列表
+	Tags *[]ListTag `json:"tags,omitempty"`
 
 	// 请求ID
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 资源数量
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListFirewallTagsResponse) String() string {

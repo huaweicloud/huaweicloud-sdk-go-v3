@@ -21,8 +21,6 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 规则名称
 	Name *string `json:"name,omitempty"`
 
-	Sequence *OrderRuleAclDto `json:"sequence,omitempty"`
-
 	// 规则方向0：外到内1：内到外
 	Direction *RuleAclListResponseDtoDataRecordsDirection `json:"direction,omitempty"`
 
@@ -35,6 +33,12 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
+	// 长连接时长
+	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
+
+	// 长连接支持
+	LongConnectEnable *int32 `json:"long_connect_enable,omitempty"`
+
 	// 长连接时长小时
 	LongConnectTimeHour *int64 `json:"long_connect_time_hour,omitempty"`
 
@@ -44,17 +48,11 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 长连接时长秒
 	LongConnectTimeSecond *int64 `json:"long_connect_time_second,omitempty"`
 
-	// 长连接时长
-	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
+	Source *RuleAddressDtoForResponse `json:"source,omitempty"`
 
-	// 长连接支持
-	LongConnectEnable *int32 `json:"long_connect_enable,omitempty"`
+	Destination *RuleAddressDtoForResponse `json:"destination,omitempty"`
 
-	Source *RuleAddressDto `json:"source,omitempty"`
-
-	Destination *RuleAddressDto `json:"destination,omitempty"`
-
-	Service *RuleServiceDto `json:"service,omitempty"`
+	Service *RuleServiceDtoForResponse `json:"service,omitempty"`
 
 	// 规则type，0：互联网规则，1：vpc规则，2：nat规则
 	Type *RuleAclListResponseDtoDataRecordsType `json:"type,omitempty"`

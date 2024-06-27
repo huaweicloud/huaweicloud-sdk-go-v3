@@ -41,6 +41,18 @@ func (i *AttachEipInvoker) Invoke() (*model.AttachEipResponse, error) {
 	}
 }
 
+type ConfirmRestoredDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmRestoredDataInvoker) Invoke() (*model.ConfirmRestoredDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmRestoredDataResponse), nil
+	}
+}
+
 type CopyConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -473,6 +485,18 @@ func (i *ListHistoryOperationsInvoker) Invoke() (*model.ListHistoryOperationsRes
 	}
 }
 
+type ListInstanceDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceDetailsInvoker) Invoke() (*model.ListInstanceDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceDetailsResponse), nil
+	}
+}
+
 type ListInstanceErrorLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -749,6 +773,18 @@ func (i *SetDbUserPwdInvoker) Invoke() (*model.SetDbUserPwdResponse, error) {
 	}
 }
 
+type SetNewBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetNewBackupPolicyInvoker) Invoke() (*model.SetNewBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetNewBackupPolicyResponse), nil
+	}
+}
+
 type SetRecyclePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -782,6 +818,18 @@ func (i *ShowBalanceStatusInvoker) Invoke() (*model.ShowBalanceStatusResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowBalanceStatusResponse), nil
+	}
+}
+
+type ShowBatchUpgradeCandidateVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBatchUpgradeCandidateVersionsInvoker) Invoke() (*model.ShowBatchUpgradeCandidateVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBatchUpgradeCandidateVersionsResponse), nil
 	}
 }
 
@@ -1022,6 +1070,18 @@ func (i *UpgradeInstanceVersionInvoker) Invoke() (*model.UpgradeInstanceVersionR
 		return nil, err
 	} else {
 		return result.(*model.UpgradeInstanceVersionResponse), nil
+	}
+}
+
+type UpgradeInstancesVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeInstancesVersionInvoker) Invoke() (*model.UpgradeInstancesVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeInstancesVersionResponse), nil
 	}
 }
 

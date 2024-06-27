@@ -44,7 +44,7 @@ func (c *VpcepClient) AcceptOrRejectEndpointInvoker(request *model.AcceptOrRejec
 //
 // 批量添加或移除当前用户下终端节点服务的白名单。
 // 说明
-// 本帐号默认在自身用户的终端节点服务的白名单中。
+// 本账号默认在自身用户的终端节点服务的白名单中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) AddOrRemoveServicePermissions(request *model.AddOrRemoveServicePermissionsRequest) (*model.AddOrRemoveServicePermissionsResponse, error) {
@@ -67,7 +67,7 @@ func (c *VpcepClient) AddOrRemoveServicePermissionsInvoker(request *model.AddOrR
 //
 // 批量添加当前用户下终端节点服务的白名单，支持添加描述信息。
 // 说明
-// 本帐号默认在自身用户的终端节点服务的白名单中。
+// 本账号默认在自身用户的终端节点服务的白名单中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) BatchAddEndpointServicePermissions(request *model.BatchAddEndpointServicePermissionsRequest) (*model.BatchAddEndpointServicePermissionsResponse, error) {
@@ -367,7 +367,7 @@ func (c *VpcepClient) ListServiceDetailsInvoker(request *model.ListServiceDetail
 //
 // 查询当前用户下终端节点服务的白名单列表。
 // 说明
-// 本帐号默认在当前用户下终端节点服务的白名单中。
+// 本账号默认在当前用户下终端节点服务的白名单中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) ListServicePermissionsDetails(request *model.ListServicePermissionsDetailsRequest) (*model.ListServicePermissionsDetailsResponse, error) {

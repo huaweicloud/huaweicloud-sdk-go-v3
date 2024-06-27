@@ -19,7 +19,7 @@ type ListEndpointInfoDetailsResponse struct {
 	// 终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
 	Status *string `json:"status,omitempty"`
 
-	// 帐号状态。  - frozen：冻结  - active：解冻
+	// 账号状态。  - frozen：冻结  - active：解冻
 	ActiveStatus *[]string `json:"active_status,omitempty"`
 
 	// 终端节点是否可用。  - enable：启用  - disable：不启用
@@ -37,7 +37,7 @@ type ListEndpointInfoDetailsResponse struct {
 	// 终端节点服务的ID。
 	EndpointServiceId *string `json:"endpoint_service_id,omitempty"`
 
-	// 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+	// 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
 	EnableDns *bool `json:"enable_dns,omitempty"`
 
 	// 访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
@@ -72,13 +72,13 @@ type ListEndpointInfoDetailsResponse struct {
 	// 是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
 	EnableWhitelist *bool `json:"enable_whitelist,omitempty"`
 
-	// 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+	// 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
 	Routetables *[]string `json:"routetables,omitempty"`
 
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
 
-	// 只涉及开启双端固定的网关型终端节点，响应体展示此字段
+	// 终端节点策略信息
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
 	// 待废弃，实例相关联的集群ID
@@ -86,7 +86,10 @@ type ListEndpointInfoDetailsResponse struct {
 
 	// 终端节点对应Pool的Public Border Group信息
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
-	HttpStatusCode    int     `json:"-"`
+
+	// 访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+	Ipv6Address    *string `json:"ipv6_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListEndpointInfoDetailsResponse) String() string {

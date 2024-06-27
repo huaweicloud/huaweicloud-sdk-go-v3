@@ -18,7 +18,7 @@ type DownloadDbObjectTemplateRequest struct {
 	// 请求语言类型。
 	XLanguage *DownloadDbObjectTemplateRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+	// 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
 	FileImportDbLevel *DownloadDbObjectTemplateRequestFileImportDbLevel `json:"file_import_db_level,omitempty"`
 }
 
@@ -85,6 +85,7 @@ type DownloadDbObjectTemplateRequestFileImportDbLevel struct {
 type DownloadDbObjectTemplateRequestFileImportDbLevelEnum struct {
 	DATABASE DownloadDbObjectTemplateRequestFileImportDbLevel
 	TABLE    DownloadDbObjectTemplateRequestFileImportDbLevel
+	COLUMN   DownloadDbObjectTemplateRequestFileImportDbLevel
 }
 
 func GetDownloadDbObjectTemplateRequestFileImportDbLevelEnum() DownloadDbObjectTemplateRequestFileImportDbLevelEnum {
@@ -94,6 +95,9 @@ func GetDownloadDbObjectTemplateRequestFileImportDbLevelEnum() DownloadDbObjectT
 		},
 		TABLE: DownloadDbObjectTemplateRequestFileImportDbLevel{
 			value: "table",
+		},
+		COLUMN: DownloadDbObjectTemplateRequestFileImportDbLevel{
+			value: "column",
 		},
 	}
 }

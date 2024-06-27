@@ -8,8 +8,8 @@ import (
 
 // CreateEastWestFirewallResponse Response Object
 type CreateEastWestFirewallResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *CreateEwFirewallResp `json:"data,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o CreateEastWestFirewallResponse) String() string {

@@ -17,7 +17,7 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 	// 规则ID
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// 命中时间
+	// 命中时间，以毫秒为单位的时间戳，如1718936272648
 	HitTime *int64 `json:"hit_time,omitempty"`
 
 	// 源区域id
@@ -55,6 +55,30 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 
 	// 目标主机
 	DstHost *string `json:"dst_host,omitempty"`
+
+	// 源省份id
+	SrcProvinceId *string `json:"src_province_id,omitempty"`
+
+	// 源省份名称
+	SrcProvinceName *string `json:"src_province_name,omitempty"`
+
+	// 源城市id
+	SrcCityId *string `json:"src_city_id,omitempty"`
+
+	// 源城市名称
+	SrcCityName *string `json:"src_city_name,omitempty"`
+
+	// 目的省份id
+	DstProvinceId *string `json:"dst_province_id,omitempty"`
+
+	// 目的省份名称
+	DstProvinceName *string `json:"dst_province_name,omitempty"`
+
+	// 目的城市id
+	DstCityId *string `json:"dst_city_id,omitempty"`
+
+	// 目的城市名称
+	DstCityName *string `json:"dst_city_name,omitempty"`
 }
 
 func (o HttpQueryCfwAccessControllerLogsResponseDtoDataRecords) String() string {

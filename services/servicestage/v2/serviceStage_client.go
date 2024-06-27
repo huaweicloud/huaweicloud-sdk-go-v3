@@ -456,6 +456,27 @@ func (c *ServiceStageClient) ListApplicationsInvoker(request *model.ListApplicat
 	return &ListApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListComponentOverviews 获取应用所有组件部署信息
+//
+// 通过此API获取应用下所有应用组件部署信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ServiceStageClient) ListComponentOverviews(request *model.ListComponentOverviewsRequest) (*model.ListComponentOverviewsResponse, error) {
+	requestDef := GenReqDefForListComponentOverviews()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListComponentOverviewsResponse), nil
+	}
+}
+
+// ListComponentOverviewsInvoker 获取应用所有组件部署信息
+func (c *ServiceStageClient) ListComponentOverviewsInvoker(request *model.ListComponentOverviewsRequest) *ListComponentOverviewsInvoker {
+	requestDef := GenReqDefForListComponentOverviews()
+	return &ListComponentOverviewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListComponents 获取应用所有组件
 //
 // 通过此API获取应用下所有应用组件。

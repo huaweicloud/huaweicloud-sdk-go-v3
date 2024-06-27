@@ -23,6 +23,9 @@ type ShowDbObjectTemplateProgressRequest struct {
 
 	// 查询返回记录的数量限制。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ShowDbObjectTemplateProgressRequest) String() string {

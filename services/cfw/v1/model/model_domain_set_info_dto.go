@@ -9,7 +9,7 @@ import (
 type DomainSetInfoDto struct {
 
 	// 域名
-	DomainName *string `json:"domain_name,omitempty"`
+	DomainName string `json:"domain_name"`
 
 	// 描述
 	Description *string `json:"description,omitempty"`

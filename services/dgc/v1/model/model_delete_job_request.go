@@ -14,6 +14,8 @@ type DeleteJobRequest struct {
 
 	// 作业名称.
 	JobName string `json:"job_name"`
+
+	Body *DeleteReq `json:"body,omitempty"`
 }
 
 func (o DeleteJobRequest) String() string {

@@ -8,10 +8,6 @@ import (
 
 // ListProtectedVpcsResponse Response Object
 type ListProtectedVpcsResponse struct {
-
-	// 调用链id
-	TraceId *string `json:"trace_id,omitempty"`
-
 	Data           *VpcProtectsVo `json:"data,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

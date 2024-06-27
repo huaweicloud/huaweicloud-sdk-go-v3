@@ -116,6 +116,12 @@ type FlavorExtraSpec struct {
 
 	// 该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
 	EcsinstanceArchitecture *string `json:"ecs:instance_architecture,omitempty"`
+
+	// 该规格是否支持流量镜像。
+	NetworkInterfacetrafficMirroringSupported *string `json:"network_interface:traffic_mirroring_supported,omitempty"`
+
+	// 该规格是否支持QingTian Enclave。
+	SecurityenclaveSupported *string `json:"security:enclave_supported,omitempty"`
 }
 
 func (o FlavorExtraSpec) String() string {

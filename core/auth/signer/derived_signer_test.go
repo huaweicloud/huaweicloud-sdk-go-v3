@@ -36,6 +36,7 @@ func TestDerivedSigner_Sign(t *testing.T) {
 		WithEndpoint("https://"+host).
 		WithPath("/path").
 		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
+		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
 		AddQueryParam("limit", 1).
 		Build()
 	result, err := GetDerivedSigner().Sign(req, ak, sk, service, regionId)
@@ -57,6 +58,7 @@ func TestDerivedSigner_Sign2(t *testing.T) {
 		WithBody("body", body).AddQueryParam("key", "value").
 		AddHeaderParam("Content-Type", "application/json").
 		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
+		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
 		Build()
 	result, err := GetDerivedSigner().Sign(req, ak, sk, service, regionId)
 	assert.Nil(t, err)
@@ -71,6 +73,7 @@ func TestDerivedSigner_Sign3(t *testing.T) {
 		WithEndpoint("https://"+host).
 		WithPath("/path").
 		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
+		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
 		AddQueryParam("limit", 1).
 		Build()
 	result, err := SignDerived(req, ak, sk, service, regionId)

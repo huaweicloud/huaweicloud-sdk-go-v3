@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -24,7 +21,7 @@ type PageResourceListParam struct {
 	CiRelationships *bool `json:"ci_relationships,omitempty"`
 
 	// 节点类型，取值：application、sub_application、component、environment
-	CiType PageResourceListParamCiType `json:"ci_type"`
+	CiType string `json:"ci_type"`
 
 	// 环境的region信息，若没有值，代表全部
 	CiRegion *string `json:"ci_region,omitempty"`
@@ -43,59 +40,4 @@ func (o PageResourceListParam) String() string {
 	}
 
 	return strings.Join([]string{"PageResourceListParam", string(data)}, " ")
-}
-
-type PageResourceListParamCiType struct {
-	value string
-}
-
-type PageResourceListParamCiTypeEnum struct {
-	APPLICATION     PageResourceListParamCiType
-	SUB_APPLICATION PageResourceListParamCiType
-	COMPONENT       PageResourceListParamCiType
-	ENVIRONMENT     PageResourceListParamCiType
-}
-
-func GetPageResourceListParamCiTypeEnum() PageResourceListParamCiTypeEnum {
-	return PageResourceListParamCiTypeEnum{
-		APPLICATION: PageResourceListParamCiType{
-			value: "APPLICATION",
-		},
-		SUB_APPLICATION: PageResourceListParamCiType{
-			value: "SUB_APPLICATION",
-		},
-		COMPONENT: PageResourceListParamCiType{
-			value: "COMPONENT",
-		},
-		ENVIRONMENT: PageResourceListParamCiType{
-			value: "ENVIRONMENT",
-		},
-	}
-}
-
-func (c PageResourceListParamCiType) Value() string {
-	return c.value
-}
-
-func (c PageResourceListParamCiType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PageResourceListParamCiType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

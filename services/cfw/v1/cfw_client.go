@@ -229,6 +229,27 @@ func (c *CfwClient) BatchDeleteServiceItemsInvoker(request *model.BatchDeleteSer
 	return &BatchDeleteServiceItemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelCaptureTask 取消抓包任务
+//
+// 取消抓包任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) CancelCaptureTask(request *model.CancelCaptureTaskRequest) (*model.CancelCaptureTaskResponse, error) {
+	requestDef := GenReqDefForCancelCaptureTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelCaptureTaskResponse), nil
+	}
+}
+
+// CancelCaptureTaskInvoker 取消抓包任务
+func (c *CfwClient) CancelCaptureTaskInvoker(request *model.CancelCaptureTaskRequest) *CancelCaptureTaskInvoker {
+	requestDef := GenReqDefForCancelCaptureTask()
+	return &CancelCaptureTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeEastWestFirewallStatus 修改东西向防火墙防护状态
 //
 // 东西向防护资源防护开启/关闭
@@ -248,6 +269,27 @@ func (c *CfwClient) ChangeEastWestFirewallStatus(request *model.ChangeEastWestFi
 func (c *CfwClient) ChangeEastWestFirewallStatusInvoker(request *model.ChangeEastWestFirewallStatusRequest) *ChangeEastWestFirewallStatusInvoker {
 	requestDef := GenReqDefForChangeEastWestFirewallStatus()
 	return &ChangeEastWestFirewallStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCaptureTask 创建抓包任务
+//
+// 创建抓包任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) CreateCaptureTask(request *model.CreateCaptureTaskRequest) (*model.CreateCaptureTaskResponse, error) {
+	requestDef := GenReqDefForCreateCaptureTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCaptureTaskResponse), nil
+	}
+}
+
+// CreateCaptureTaskInvoker 创建抓包任务
+func (c *CfwClient) CreateCaptureTaskInvoker(request *model.CreateCaptureTaskRequest) *CreateCaptureTaskInvoker {
+	requestDef := GenReqDefForCreateCaptureTask()
+	return &CreateCaptureTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateEastWestFirewall 创建东西向防火墙
@@ -290,6 +332,27 @@ func (c *CfwClient) CreateFirewall(request *model.CreateFirewallRequest) (*model
 func (c *CfwClient) CreateFirewallInvoker(request *model.CreateFirewallRequest) *CreateFirewallInvoker {
 	requestDef := GenReqDefForCreateFirewall()
 	return &CreateFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 标签创建接口
+//
+// 创建标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
+	requestDef := GenReqDefForCreateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagResponse), nil
+	}
+}
+
+// CreateTagInvoker 标签创建接口
+func (c *CfwClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAddressItem 删除地址组成员
@@ -353,6 +416,27 @@ func (c *CfwClient) DeleteBlackWhiteList(request *model.DeleteBlackWhiteListRequ
 func (c *CfwClient) DeleteBlackWhiteListInvoker(request *model.DeleteBlackWhiteListRequest) *DeleteBlackWhiteListInvoker {
 	requestDef := GenReqDefForDeleteBlackWhiteList()
 	return &DeleteBlackWhiteListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCaptureTask 删除抓包任务
+//
+// 删除抓包任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) DeleteCaptureTask(request *model.DeleteCaptureTaskRequest) (*model.DeleteCaptureTaskResponse, error) {
+	requestDef := GenReqDefForDeleteCaptureTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCaptureTaskResponse), nil
+	}
+}
+
+// DeleteCaptureTaskInvoker 删除抓包任务
+func (c *CfwClient) DeleteCaptureTaskInvoker(request *model.DeleteCaptureTaskRequest) *DeleteCaptureTaskInvoker {
+	requestDef := GenReqDefForDeleteCaptureTask()
+	return &DeleteCaptureTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDomainSet 删除域名组
@@ -458,6 +542,27 @@ func (c *CfwClient) DeleteServiceSet(request *model.DeleteServiceSetRequest) (*m
 func (c *CfwClient) DeleteServiceSetInvoker(request *model.DeleteServiceSetRequest) *DeleteServiceSetInvoker {
 	requestDef := GenReqDefForDeleteServiceSet()
 	return &DeleteServiceSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除标签
+//
+// 删除标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
+	requestDef := GenReqDefForDeleteTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagResponse), nil
+	}
+}
+
+// DeleteTagInvoker 删除标签
+func (c *CfwClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAccessControlLogs 查询访问控制日志
@@ -584,6 +689,48 @@ func (c *CfwClient) ListBlackWhiteLists(request *model.ListBlackWhiteListsReques
 func (c *CfwClient) ListBlackWhiteListsInvoker(request *model.ListBlackWhiteListsRequest) *ListBlackWhiteListsInvoker {
 	requestDef := GenReqDefForListBlackWhiteLists()
 	return &ListBlackWhiteListsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaptureResult 获取抓包任务结果
+//
+// 获取抓包任务结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListCaptureResult(request *model.ListCaptureResultRequest) (*model.ListCaptureResultResponse, error) {
+	requestDef := GenReqDefForListCaptureResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCaptureResultResponse), nil
+	}
+}
+
+// ListCaptureResultInvoker 获取抓包任务结果
+func (c *CfwClient) ListCaptureResultInvoker(request *model.ListCaptureResultRequest) *ListCaptureResultInvoker {
+	requestDef := GenReqDefForListCaptureResult()
+	return &ListCaptureResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCaptureTask 查询抓包任务
+//
+// 查询抓包任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListCaptureTask(request *model.ListCaptureTaskRequest) (*model.ListCaptureTaskResponse, error) {
+	requestDef := GenReqDefForListCaptureTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCaptureTaskResponse), nil
+	}
+}
+
+// ListCaptureTaskInvoker 查询抓包任务
+func (c *CfwClient) ListCaptureTaskInvoker(request *model.ListCaptureTaskRequest) *ListCaptureTaskInvoker {
+	requestDef := GenReqDefForListCaptureTask()
+	return &ListCaptureTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDnsServers 查询dns服务器列表

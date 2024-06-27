@@ -9,7 +9,7 @@ import (
 type UpdateDnsServersRequestBody struct {
 
 	// DNS服务器
-	DnsServer *[]UpdateDnsServersRequestBodyDnsServer `json:"dns_server,omitempty"`
+	DnsServer []UpdateDnsServersRequestBodyDnsServer `json:"dns_server"`
 
 	// 健康检查域名
 	HealthCheckDomainName *string `json:"health_check_domain_name,omitempty"`

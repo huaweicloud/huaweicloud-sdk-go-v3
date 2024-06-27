@@ -18,7 +18,7 @@ type CreateFirewallReq struct {
 	// 资源标签
 	Tags *[]CreateFirewallReqTags `json:"tags,omitempty"`
 
-	Flavor *CreateFirewallReqFlavor `json:"flavor,omitempty"`
+	Flavor *CreateFirewallReqFlavor `json:"flavor"`
 
 	ChargeInfo *CreateFirewallReqChargeInfo `json:"charge_info"`
 }

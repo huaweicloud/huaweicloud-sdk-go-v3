@@ -45,7 +45,7 @@ type JobInfo struct {
 	// 在开启审批开关后，需要填写该字段。表示创建作业的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示作业创建后是保存态，提交态，生产态。
 	TargetStatus *JobInfoTargetStatus `json:"targetStatus,omitempty"`
 
-	// 在开启审批开关后，需要填写该字段，表示作业审批人。
+	// 在开启审批开关后，需要填写该字段，表示作业（或脚本）审批人。
 	Approvers *[]JobApprover `json:"approvers,omitempty"`
 }
 

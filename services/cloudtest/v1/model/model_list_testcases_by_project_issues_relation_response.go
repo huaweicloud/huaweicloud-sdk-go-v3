@@ -10,7 +10,7 @@ import (
 type ListTestcasesByProjectIssuesRelationResponse struct {
 
 	// 用例详情
-	Testcases *[]TestCaseVo `json:"testcases,omitempty"`
+	Testcases *[]IssuesRelationTestCaseVo `json:"testcases,omitempty"`
 
 	// 用例总数
 	TotalCount *int32 `json:"total_count,omitempty"`

@@ -20,6 +20,12 @@ type ShowTemplateVersionContentRequest struct {
 
 	// 模板的ID。当template_id存在时，模板服务会检查template_id是否和template_name匹配，不匹配会返回400
 	TemplateId *string `json:"template_id,omitempty"`
+
+	// 允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+	AccessControlSourceVpcIds *[]string `json:"access_control_source_vpc_ids,omitempty"`
+
+	// 允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+	AccessControlSourceIps *[]string `json:"access_control_source_ips,omitempty"`
 }
 
 func (o ShowTemplateVersionContentRequest) String() string {

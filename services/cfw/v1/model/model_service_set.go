@@ -23,9 +23,6 @@ type ServiceSet struct {
 	// 引用次数
 	RefCount *int32 `json:"ref_count,omitempty"`
 
-	// 状态
-	Status *string `json:"status,omitempty"`
-
 	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 

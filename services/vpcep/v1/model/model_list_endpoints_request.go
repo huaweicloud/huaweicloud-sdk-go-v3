@@ -35,9 +35,6 @@ type ListEndpointsRequest struct {
 
 	// 查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
 	SortDir *ListEndpointsRequestSortDir `json:"sort_dir,omitempty"`
-
-	// 筛选结果中匹配边缘属性的EPS
-	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 }
 
 func (o ListEndpointsRequest) String() string {

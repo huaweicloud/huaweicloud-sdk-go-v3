@@ -61,7 +61,7 @@ type CreateJobReq struct {
 	// 产品id。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+	// 企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
 	SysTags *[]ResourceTag `json:"sys_tags,omitempty"`
 
 	// 任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
@@ -78,8 +78,11 @@ type CreateJobReq struct {
 
 	PeriodOrder *PeriodOrderInfo `json:"period_order,omitempty"`
 
-	// 指定公网IP的信息
+	// 指定公网IP的信息。
 	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
+
+	// 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
+	IsOpenFastClean *bool `json:"is_open_fast_clean,omitempty"`
 }
 
 func (o CreateJobReq) String() string {

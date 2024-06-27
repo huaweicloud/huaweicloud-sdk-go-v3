@@ -22,7 +22,7 @@ type UpdateEndpointWhiteResponse struct {
 	// 访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  - 当查询连接interface类型终端节点服务的终端节点时。  - 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
 	Ip *string `json:"ip,omitempty"`
 
-	// 帐号状态。  - frozen：冻结  - active：解冻
+	// 账号状态。  - frozen：冻结  - active：解冻
 	ActiveStatus *[]string `json:"active_status,omitempty"`
 
 	// 终端节点服务的名称。
@@ -34,7 +34,7 @@ type UpdateEndpointWhiteResponse struct {
 	// 终端节点服务的ID。
 	EndpointServiceId *string `json:"endpoint_service_id,omitempty"`
 
-	// 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+	// 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
 	EnableDns *bool `json:"enable_dns,omitempty"`
 
 	// 访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。

@@ -1308,6 +1308,27 @@ func (c *MeetingClient) ListHistoryWebinarsInvoker(request *model.ListHistoryWeb
 	return &ListHistoryWebinarsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNetworkQuality 查询会场网络质量
+//
+// 查询会场网络质量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) ListNetworkQuality(request *model.ListNetworkQualityRequest) (*model.ListNetworkQualityResponse, error) {
+	requestDef := GenReqDefForListNetworkQuality()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNetworkQualityResponse), nil
+	}
+}
+
+// ListNetworkQualityInvoker 查询会场网络质量
+func (c *MeetingClient) ListNetworkQualityInvoker(request *model.ListNetworkQualityRequest) *ListNetworkQualityInvoker {
+	requestDef := GenReqDefForListNetworkQuality()
+	return &ListNetworkQualityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOngoingWebinars 查询正在召开的网络研讨会列表
 //
 // 该接口用于查询正在召开的网络研讨会。管理员可查询企业内正在召开网络研讨会，非管理员可查询自己预订的正在召开的网络研讨会。

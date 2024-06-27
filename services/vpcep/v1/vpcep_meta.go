@@ -315,10 +315,6 @@ func GenReqDefForListEndpoints() *def.HttpRequestDef {
 		WithName("SortDir").
 		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PublicBorderGroup").
-		WithJsonTag("public_border_group").
-		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").

@@ -12,6 +12,9 @@ type ReplaySlowSqlTemplateResp struct {
 	// SQL语句模板
 	SqlTemplate string `json:"sql_template"`
 
+	// SQL语句模板MD5
+	SqlTemplateMd5 *string `json:"sql_template_md5,omitempty"`
+
 	// 目标库别名
 	TargetName *string `json:"target_name,omitempty"`
 

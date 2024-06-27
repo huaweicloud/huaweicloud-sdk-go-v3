@@ -32,6 +32,7 @@ func TestSM2SM3Signer_Sign(t *testing.T) {
 		WithEndpoint("https://"+host).
 		WithPath("/path").
 		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
+		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
 		AddQueryParam("limit", 1).
 		Build()
 	result, err := sm2sm3SignerInst.Sign(req, ak, sk)
@@ -50,6 +51,7 @@ func TestSM2SM3Signer_Sign2(t *testing.T) {
 		WithPath("/path").
 		WithBody("body", body).AddQueryParam("key", "value").
 		AddHeaderParam("Content-Type", "application/json").
+		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
 		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
 		Build()
 	result, err := sm2sm3SignerInst.Sign(req, ak, sk)

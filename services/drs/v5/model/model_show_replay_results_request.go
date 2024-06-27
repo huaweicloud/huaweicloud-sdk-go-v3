@@ -18,7 +18,7 @@ type ShowReplayResultsRequest struct {
 	// 请求语言类型。
 	XLanguage *ShowReplayResultsRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+	// 结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
 	Type ShowReplayResultsRequestType `json:"type"`
 
 	// 查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
@@ -41,6 +41,15 @@ type ShowReplayResultsRequest struct {
 
 	// 回放数据库名称，用于在一致性回放策略场景，过滤目标库与源库镜像库回放结果。参数非必须，不提供则默认查询所有数据，其取值如下： - target：查询目标库回放结果 - target_mirror：查询源库镜像库回放结果
 	TargetName *ShowReplayResultsRequestTargetName `json:"target_name,omitempty"`
+
+	// 是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+	IsSample *bool `json:"is_sample,omitempty"`
+
+	// 错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+	ErrorType *string `json:"error_type,omitempty"`
+
+	// sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
+	SqlTemplateMd5 *string `json:"sql_template_md5,omitempty"`
 }
 
 func (o ShowReplayResultsRequest) String() string {
@@ -104,12 +113,13 @@ type ShowReplayResultsRequestType struct {
 }
 
 type ShowReplayResultsRequestTypeEnum struct {
-	SHARD_STATISTICS   ShowReplayResultsRequestType
-	SLOW_SQL           ShowReplayResultsRequestType
-	ERROR_SQL          ShowReplayResultsRequestType
-	SLOW_SQL_TEMPLATE  ShowReplayResultsRequestType
-	ERROR_SQL_TEMPLATE ShowReplayResultsRequestType
-	REPLAYING_SQL      ShowReplayResultsRequestType
+	SHARD_STATISTICS     ShowReplayResultsRequestType
+	SLOW_SQL             ShowReplayResultsRequestType
+	ERROR_SQL            ShowReplayResultsRequestType
+	SLOW_SQL_TEMPLATE    ShowReplayResultsRequestType
+	ERROR_SQL_TEMPLATE   ShowReplayResultsRequestType
+	REPLAYING_SQL        ShowReplayResultsRequestType
+	ERROR_CLASSIFICATION ShowReplayResultsRequestType
 }
 
 func GetShowReplayResultsRequestTypeEnum() ShowReplayResultsRequestTypeEnum {
@@ -131,6 +141,9 @@ func GetShowReplayResultsRequestTypeEnum() ShowReplayResultsRequestTypeEnum {
 		},
 		REPLAYING_SQL: ShowReplayResultsRequestType{
 			value: "replaying_sql",
+		},
+		ERROR_CLASSIFICATION: ShowReplayResultsRequestType{
+			value: "error_classification",
 		},
 	}
 }

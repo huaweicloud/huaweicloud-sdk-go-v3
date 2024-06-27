@@ -82,6 +82,27 @@ func (c *GaussDBforopenGaussClient) AttachEipInvoker(request *model.AttachEipReq
 	return &AttachEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ConfirmRestoredData 备份恢复到目标实例数据后执行数据确认
+//
+// 确认备份恢复到目标实例的数据正常。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ConfirmRestoredData(request *model.ConfirmRestoredDataRequest) (*model.ConfirmRestoredDataResponse, error) {
+	requestDef := GenReqDefForConfirmRestoredData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmRestoredDataResponse), nil
+	}
+}
+
+// ConfirmRestoredDataInvoker 备份恢复到目标实例数据后执行数据确认
+func (c *GaussDBforopenGaussClient) ConfirmRestoredDataInvoker(request *model.ConfirmRestoredDataRequest) *ConfirmRestoredDataInvoker {
+	requestDef := GenReqDefForConfirmRestoredData()
+	return &ConfirmRestoredDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyConfiguration 复制参数模板
 //
 // 复制参数模板。
@@ -838,6 +859,27 @@ func (c *GaussDBforopenGaussClient) ListHistoryOperationsInvoker(request *model.
 	return &ListHistoryOperationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceDetails 查询数据库实例列表/查询实例详情
+//
+// 查询数据库实例列表/查询实例详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListInstanceDetails(request *model.ListInstanceDetailsRequest) (*model.ListInstanceDetailsResponse, error) {
+	requestDef := GenReqDefForListInstanceDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceDetailsResponse), nil
+	}
+}
+
+// ListInstanceDetailsInvoker 查询数据库实例列表/查询实例详情
+func (c *GaussDBforopenGaussClient) ListInstanceDetailsInvoker(request *model.ListInstanceDetailsRequest) *ListInstanceDetailsInvoker {
+	requestDef := GenReqDefForListInstanceDetails()
+	return &ListInstanceDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceErrorLogs 查询错误日志下载链接
 //
 // 查询数据库错误日志下载链接。
@@ -1322,6 +1364,27 @@ func (c *GaussDBforopenGaussClient) SetDbUserPwdInvoker(request *model.SetDbUser
 	return &SetDbUserPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetNewBackupPolicy 设置自动备份策略
+//
+// 设置自动备份策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) SetNewBackupPolicy(request *model.SetNewBackupPolicyRequest) (*model.SetNewBackupPolicyResponse, error) {
+	requestDef := GenReqDefForSetNewBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetNewBackupPolicyResponse), nil
+	}
+}
+
+// SetNewBackupPolicyInvoker 设置自动备份策略
+func (c *GaussDBforopenGaussClient) SetNewBackupPolicyInvoker(request *model.SetNewBackupPolicyRequest) *SetNewBackupPolicyInvoker {
+	requestDef := GenReqDefForSetNewBackupPolicy()
+	return &SetNewBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetRecyclePolicy 设置回收站策略
 //
 // 设置回收站策略。
@@ -1383,6 +1446,27 @@ func (c *GaussDBforopenGaussClient) ShowBalanceStatus(request *model.ShowBalance
 func (c *GaussDBforopenGaussClient) ShowBalanceStatusInvoker(request *model.ShowBalanceStatusRequest) *ShowBalanceStatusInvoker {
 	requestDef := GenReqDefForShowBalanceStatus()
 	return &ShowBalanceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBatchUpgradeCandidateVersions 查询批量实例可升级的版本和升级类型
+//
+// 查询批量实例可升级的版本和升级类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowBatchUpgradeCandidateVersions(request *model.ShowBatchUpgradeCandidateVersionsRequest) (*model.ShowBatchUpgradeCandidateVersionsResponse, error) {
+	requestDef := GenReqDefForShowBatchUpgradeCandidateVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBatchUpgradeCandidateVersionsResponse), nil
+	}
+}
+
+// ShowBatchUpgradeCandidateVersionsInvoker 查询批量实例可升级的版本和升级类型
+func (c *GaussDBforopenGaussClient) ShowBatchUpgradeCandidateVersionsInvoker(request *model.ShowBatchUpgradeCandidateVersionsRequest) *ShowBatchUpgradeCandidateVersionsInvoker {
+	requestDef := GenReqDefForShowBatchUpgradeCandidateVersions()
+	return &ShowBatchUpgradeCandidateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowConfigurationDetail 查询参数模板详情
@@ -1811,6 +1895,38 @@ func (c *GaussDBforopenGaussClient) UpgradeInstanceVersion(request *model.Upgrad
 func (c *GaussDBforopenGaussClient) UpgradeInstanceVersionInvoker(request *model.UpgradeInstanceVersionRequest) *UpgradeInstanceVersionInvoker {
 	requestDef := GenReqDefForUpgradeInstanceVersion()
 	return &UpgradeInstanceVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeInstancesVersion 批量实例内核版本升级
+//
+// GaussDB批量实例版本升级。包括灰度升级，就地升级、热补丁升级三种升级方式。
+// 就地升级：
+// 就地升级需要停止业务进行，会一次性升级集群中所有节点。就地升级需要暂停业务30分钟来升级。
+// 灰度升级：
+// 升级自动提交：所有节点进程一起升级，在升级过程中有大概10秒的业务中断，不阻塞其他业务操作。
+// 升级待观察：升级待观察，将数据库升级过程细分为升级，提交两个阶段。升级阶段可以根据部署方式细分为按分片或者按az的滚动升级，提交阶段可以对升级完成后的实例进行业务测试，根据需要可以选择提交升级，或者升级回退。每个主dn或者cn组件升级就有一次10秒业务中断。升级过程均是先管理面，再数据面，由备到主的升级方式。 分布式实例：根据分片数滚动升级，每次滚动升级可以根据选择的分片数进行指定分片数量的节点进行升级。 主备版实例：根据AZ数进行滚动升级，每次滚动升级可以根据选择的AZ进行1个分区或者多个分区进行升级。
+// 热补丁升级：
+// 升级自动提交：热补丁自动升级并提交，中间无业务中断，仅修复产品bug。
+// 提交升级：提交升级。在升级完成，进入提交阶段时。业务测试正常后提交升级，完成本次升级流程。
+// 升级回退：升级回退，在升级完成，进入提交阶段时。可以根据需要回退本次升级，回退到升级前的版本。
+// 批量实例可升级版本大于当前所有实例的引擎版本，且选择的所有实例，其升级方式和操作方式要保持一致。
+// 若批量实例升级方式是灰度升级，默认升级所有az和分片。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) UpgradeInstancesVersion(request *model.UpgradeInstancesVersionRequest) (*model.UpgradeInstancesVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeInstancesVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeInstancesVersionResponse), nil
+	}
+}
+
+// UpgradeInstancesVersionInvoker 批量实例内核版本升级
+func (c *GaussDBforopenGaussClient) UpgradeInstancesVersionInvoker(request *model.UpgradeInstancesVersionRequest) *UpgradeInstancesVersionInvoker {
+	requestDef := GenReqDefForUpgradeInstancesVersion()
+	return &UpgradeInstancesVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateParaGroupName 校验参数组名称是否存在

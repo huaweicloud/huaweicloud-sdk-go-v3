@@ -456,6 +456,14 @@ func GenReqDefForGetStackTemplate() *def.HttpRequestDef {
 		WithName("StackId").
 		WithJsonTag("stack_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessControlSourceIps").
+		WithJsonTag("access_control_source_ips").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessControlSourceVpcIds").
+		WithJsonTag("access_control_source_vpc_ids").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -714,6 +722,10 @@ func GenReqDefForDeleteStackSet() *def.HttpRequestDef {
 		WithName("StackSetId").
 		WithJsonTag("stack_set_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -777,6 +789,10 @@ func GenReqDefForListStackInstances() *def.HttpRequestDef {
 		WithName("SortDir").
 		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -815,6 +831,10 @@ func GenReqDefForListStackSetOperations() *def.HttpRequestDef {
 		WithName("SortDir").
 		WithJsonTag("sort_dir").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -843,6 +863,10 @@ func GenReqDefForListStackSets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortDir").
 		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -874,6 +898,10 @@ func GenReqDefForShowStackInstance() *def.HttpRequestDef {
 		WithName("StackSetId").
 		WithJsonTag("stack_set_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -899,6 +927,10 @@ func GenReqDefForShowStackSetMetadata() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StackSetId").
 		WithJsonTag("stack_set_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -930,6 +962,10 @@ func GenReqDefForShowStackSetOperationMetadata() *def.HttpRequestDef {
 		WithName("StackSetId").
 		WithJsonTag("stack_set_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClientRequestId").
@@ -955,6 +991,18 @@ func GenReqDefForShowStackSetTemplate() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StackSetId").
 		WithJsonTag("stack_set_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessControlSourceIps").
+		WithJsonTag("access_control_source_ips").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessControlSourceVpcIds").
+		WithJsonTag("access_control_source_vpc_ids").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallIdentity").
+		WithJsonTag("call_identity").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1193,6 +1241,14 @@ func GenReqDefForShowTemplateVersionContent() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateId").
 		WithJsonTag("template_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessControlSourceVpcIds").
+		WithJsonTag("access_control_source_vpc_ids").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessControlSourceIps").
+		WithJsonTag("access_control_source_ips").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

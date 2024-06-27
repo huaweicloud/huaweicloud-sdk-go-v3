@@ -28,7 +28,7 @@ type ListServiceDescribeDetailsResponse struct {
 	// 终端节点对应Pool的Public Border Group信息
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
-	// 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+	// 是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
 	EnablePolicy   *bool `json:"enable_policy,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

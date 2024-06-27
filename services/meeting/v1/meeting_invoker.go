@@ -737,6 +737,18 @@ func (i *ListHistoryWebinarsInvoker) Invoke() (*model.ListHistoryWebinarsRespons
 	}
 }
 
+type ListNetworkQualityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNetworkQualityInvoker) Invoke() (*model.ListNetworkQualityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNetworkQualityResponse), nil
+	}
+}
+
 type ListOngoingWebinarsInvoker struct {
 	*invoker.BaseInvoker
 }

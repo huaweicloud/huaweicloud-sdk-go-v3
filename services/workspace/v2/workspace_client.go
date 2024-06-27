@@ -1584,6 +1584,48 @@ func (c *WorkspaceClient) ListMetricNotifyRuleInvoker(request *model.ListMetricN
 	return &ListMetricNotifyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMetrics 查询指标
+//
+// 查询指标
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
+	requestDef := GenReqDefForListMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricsResponse), nil
+	}
+}
+
+// ListMetricsInvoker 查询指标
+func (c *WorkspaceClient) ListMetricsInvoker(request *model.ListMetricsRequest) *ListMetricsInvoker {
+	requestDef := GenReqDefForListMetrics()
+	return &ListMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMetricsTrend 查询指标趋势
+//
+// 查询指标趋势
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListMetricsTrend(request *model.ListMetricsTrendRequest) (*model.ListMetricsTrendResponse, error) {
+	requestDef := GenReqDefForListMetricsTrend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMetricsTrendResponse), nil
+	}
+}
+
+// ListMetricsTrendInvoker 查询指标趋势
+func (c *WorkspaceClient) ListMetricsTrendInvoker(request *model.ListMetricsTrendRequest) *ListMetricsTrendInvoker {
+	requestDef := GenReqDefForListMetricsTrend()
+	return &ListMetricsTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUserUsageMetric 查询用户使用统计数据
 //
 // 查询用户使用统计信息;

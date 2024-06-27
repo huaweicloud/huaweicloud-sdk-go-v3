@@ -125,6 +125,18 @@ func (i *BatchDeleteServiceItemsInvoker) Invoke() (*model.BatchDeleteServiceItem
 	}
 }
 
+type CancelCaptureTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelCaptureTaskInvoker) Invoke() (*model.CancelCaptureTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelCaptureTaskResponse), nil
+	}
+}
+
 type ChangeEastWestFirewallStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +146,18 @@ func (i *ChangeEastWestFirewallStatusInvoker) Invoke() (*model.ChangeEastWestFir
 		return nil, err
 	} else {
 		return result.(*model.ChangeEastWestFirewallStatusResponse), nil
+	}
+}
+
+type CreateCaptureTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCaptureTaskInvoker) Invoke() (*model.CreateCaptureTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCaptureTaskResponse), nil
 	}
 }
 
@@ -158,6 +182,18 @@ func (i *CreateFirewallInvoker) Invoke() (*model.CreateFirewallResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateFirewallResponse), nil
+	}
+}
+
+type CreateTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTagInvoker) Invoke() (*model.CreateTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTagResponse), nil
 	}
 }
 
@@ -194,6 +230,18 @@ func (i *DeleteBlackWhiteListInvoker) Invoke() (*model.DeleteBlackWhiteListRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteBlackWhiteListResponse), nil
+	}
+}
+
+type DeleteCaptureTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCaptureTaskInvoker) Invoke() (*model.DeleteCaptureTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCaptureTaskResponse), nil
 	}
 }
 
@@ -254,6 +302,18 @@ func (i *DeleteServiceSetInvoker) Invoke() (*model.DeleteServiceSetResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteServiceSetResponse), nil
+	}
+}
+
+type DeleteTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTagResponse), nil
 	}
 }
 
@@ -326,6 +386,30 @@ func (i *ListBlackWhiteListsInvoker) Invoke() (*model.ListBlackWhiteListsRespons
 		return nil, err
 	} else {
 		return result.(*model.ListBlackWhiteListsResponse), nil
+	}
+}
+
+type ListCaptureResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCaptureResultInvoker) Invoke() (*model.ListCaptureResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCaptureResultResponse), nil
+	}
+}
+
+type ListCaptureTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCaptureTaskInvoker) Invoke() (*model.ListCaptureTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCaptureTaskResponse), nil
 	}
 }
 

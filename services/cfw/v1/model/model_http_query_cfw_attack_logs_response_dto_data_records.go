@@ -17,7 +17,7 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	// 动作
 	Action *string `json:"action,omitempty"`
 
-	// 事件时间
+	// 事件时间，以毫秒为单位的时间戳，如1718936272648
 	EventTime *int64 `json:"event_time,omitempty"`
 
 	// 攻击类型
@@ -38,8 +38,8 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	// 攻击规则id
 	AttackRuleId *string `json:"attack_rule_id,omitempty"`
 
-	// 命中时间
-	HitTime *int32 `json:"hit_time,omitempty"`
+	// 命中时间，以毫秒为单位的时间戳，如1718936272648
+	HitTime *int64 `json:"hit_time,omitempty"`
 
 	// 日志ID
 	LogId *string `json:"log_id,omitempty"`
@@ -68,9 +68,6 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	// 攻击报文信息
 	PacketMessages *[]PacketMessage `json:"packetMessages,omitempty"`
 
-	// 目标主机
-	DstHost *string `json:"dst_host,omitempty"`
-
 	// 源区域id
 	SrcRegionId *string `json:"src_region_id,omitempty"`
 
@@ -82,6 +79,30 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 
 	// 目的区域名称
 	DstRegionName *string `json:"dst_region_name,omitempty"`
+
+	// 源省份id
+	SrcProvinceId *string `json:"src_province_id,omitempty"`
+
+	// 源省份名称
+	SrcProvinceName *string `json:"src_province_name,omitempty"`
+
+	// 源城市id
+	SrcCityId *string `json:"src_city_id,omitempty"`
+
+	// 源城市名称
+	SrcCityName *string `json:"src_city_name,omitempty"`
+
+	// 目的省份id
+	DstProvinceId *string `json:"dst_province_id,omitempty"`
+
+	// 目的省份名称
+	DstProvinceName *string `json:"dst_province_name,omitempty"`
+
+	// 目的城市id
+	DstCityId *string `json:"dst_city_id,omitempty"`
+
+	// 目的城市名称
+	DstCityName *string `json:"dst_city_name,omitempty"`
 }
 
 func (o HttpQueryCfwAttackLogsResponseDtoDataRecords) String() string {

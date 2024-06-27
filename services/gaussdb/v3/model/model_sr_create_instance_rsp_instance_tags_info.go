@@ -10,7 +10,7 @@ import (
 type SrCreateInstanceRspInstanceTagsInfo struct {
 
 	// 用户标签。默认为空。
-	Tags *[]SrCreateInstanceRspInstanceTagsInfoTags `json:"tags,omitempty"`
+	Tags *[]CreateChInstanceInfoTagsInfoTags `json:"tags,omitempty"`
 
 	// 系统标签。
 	SysTags *[]SrCreateInstanceRspInstanceTagsInfoSysTags `json:"sys_tags,omitempty"`

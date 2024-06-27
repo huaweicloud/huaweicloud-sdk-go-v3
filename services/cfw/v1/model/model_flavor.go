@@ -26,21 +26,6 @@ type Flavor struct {
 	// 日志存储
 	LogStorage *int32 `json:"log_storage,omitempty"`
 
-	// 目前的会话数
-	SessionConcurrent *int32 `json:"session_concurrent,omitempty"`
-
-	// 创建会话数
-	SessionCreate *int32 `json:"session_create,omitempty"`
-
-	// 总计规则数
-	TotalRuleCount *int32 `json:"total_rule_count,omitempty"`
-
-	// 已使用规则数
-	UsedRuleCount *int32 `json:"used_rule_count,omitempty"`
-
-	// vpc间带宽
-	VpcBandwith *int32 `json:"vpc_bandwith,omitempty"`
-
 	// 默认防火墙带宽
 	DefaultBandwidth *int32 `json:"default_bandwidth,omitempty"`
 

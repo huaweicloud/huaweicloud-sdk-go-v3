@@ -57,9 +57,6 @@ type CreateResponseVpnConnection struct {
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 连接监控ID
-	ConnectionMonitorId *string `json:"connection_monitor_id,omitempty"`
-
 	// 连接的HA角色
 	HaRole *string `json:"ha_role,omitempty"`
 

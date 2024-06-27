@@ -18,7 +18,7 @@ type ListServicePermissionsDetailsRequest struct {
 	// 终端节点服务的ID。
 	VpcEndpointServiceId string `json:"vpc_endpoint_service_id"`
 
-	// 权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+	// 权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
 	Permission *string `json:"permission,omitempty"`
 
 	// 查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。

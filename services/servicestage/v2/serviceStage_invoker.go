@@ -257,6 +257,18 @@ func (i *ListApplicationsInvoker) Invoke() (*model.ListApplicationsResponse, err
 	}
 }
 
+type ListComponentOverviewsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListComponentOverviewsInvoker) Invoke() (*model.ListComponentOverviewsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListComponentOverviewsResponse), nil
+	}
+}
+
 type ListComponentsInvoker struct {
 	*invoker.BaseInvoker
 }

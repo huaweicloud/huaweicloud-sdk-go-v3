@@ -40,7 +40,7 @@ type RuleServiceDto struct {
 	ServiceGroup *[]string `json:"service_group,omitempty"`
 
 	// 服务组名称列表
-	ServiceGroupNames *[]AddressGroupVo `json:"service_group_names,omitempty"`
+	ServiceGroupNames *[]ServiceGroupVo `json:"service_group_names,omitempty"`
 
 	// 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
 	ServiceSetType *int32 `json:"service_set_type,omitempty"`

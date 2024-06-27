@@ -23,6 +23,9 @@ type ListStackSetsRequest struct {
 
 	// 指定升序还是降序   * `asc` - 升序   * `desc` - 降序
 	SortDir *[]ListStackSetsRequestSortDir `json:"sort_dir,omitempty"`
+
+	// 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+	CallIdentity *ListStackSetsRequestCallIdentity `json:"call_identity,omitempty"`
 }
 
 func (o ListStackSetsRequest) String() string {
@@ -106,6 +109,53 @@ func (c ListStackSetsRequestSortDir) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListStackSetsRequestSortDir) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListStackSetsRequestCallIdentity struct {
+	value string
+}
+
+type ListStackSetsRequestCallIdentityEnum struct {
+	SELF            ListStackSetsRequestCallIdentity
+	DELEGATED_ADMIN ListStackSetsRequestCallIdentity
+}
+
+func GetListStackSetsRequestCallIdentityEnum() ListStackSetsRequestCallIdentityEnum {
+	return ListStackSetsRequestCallIdentityEnum{
+		SELF: ListStackSetsRequestCallIdentity{
+			value: "SELF",
+		},
+		DELEGATED_ADMIN: ListStackSetsRequestCallIdentity{
+			value: "DELEGATED_ADMIN",
+		},
+	}
+}
+
+func (c ListStackSetsRequestCallIdentity) Value() string {
+	return c.value
+}
+
+func (c ListStackSetsRequestCallIdentity) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListStackSetsRequestCallIdentity) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

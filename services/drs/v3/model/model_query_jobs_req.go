@@ -27,7 +27,7 @@ type QueryJobsReq struct {
 	// 企业项目
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// name或id
+	// Name或ID。支持传入多个任务ID，逗号分隔，最多100个。
 	Name *string `json:"name,omitempty"`
 
 	// 网络类型

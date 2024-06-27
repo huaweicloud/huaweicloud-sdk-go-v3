@@ -61,6 +61,28 @@ func (c *VpcClient) AddSourcesToTrafficMirrorSessionInvoker(request *model.AddSo
 	return &AddSourcesToTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreatePortTags 批量添加端口资源标签
+//
+// 为指定的端口批量添加标签。
+// 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchCreatePortTags(request *model.BatchCreatePortTagsRequest) (*model.BatchCreatePortTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreatePortTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreatePortTagsResponse), nil
+	}
+}
+
+// BatchCreatePortTagsInvoker 批量添加端口资源标签
+func (c *VpcClient) BatchCreatePortTagsInvoker(request *model.BatchCreatePortTagsRequest) *BatchCreatePortTagsInvoker {
+	requestDef := GenReqDefForBatchCreatePortTags()
+	return &BatchCreatePortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateSecurityGroupRules 批量创建安全组规则
 //
 // 在特定安全组下批量创建安全组规则
@@ -101,6 +123,71 @@ func (c *VpcClient) BatchCreateSubNetworkInterface(request *model.BatchCreateSub
 func (c *VpcClient) BatchCreateSubNetworkInterfaceInvoker(request *model.BatchCreateSubNetworkInterfaceRequest) *BatchCreateSubNetworkInterfaceInvoker {
 	requestDef := GenReqDefForBatchCreateSubNetworkInterface()
 	return &BatchCreateSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeletePortTags 批量删除端口资源标签
+//
+// 为指定的端口资源实例批量删除标签。
+// 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchDeletePortTags(request *model.BatchDeletePortTagsRequest) (*model.BatchDeletePortTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeletePortTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeletePortTagsResponse), nil
+	}
+}
+
+// BatchDeletePortTagsInvoker 批量删除端口资源标签
+func (c *VpcClient) BatchDeletePortTagsInvoker(request *model.BatchDeletePortTagsRequest) *BatchDeletePortTagsInvoker {
+	requestDef := GenReqDefForBatchDeletePortTags()
+	return &BatchDeletePortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountPortsByTags 查询端口资源实例数量
+//
+// 使用标签过滤查询端口实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CountPortsByTags(request *model.CountPortsByTagsRequest) (*model.CountPortsByTagsResponse, error) {
+	requestDef := GenReqDefForCountPortsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountPortsByTagsResponse), nil
+	}
+}
+
+// CountPortsByTagsInvoker 查询端口资源实例数量
+func (c *VpcClient) CountPortsByTagsInvoker(request *model.CountPortsByTagsRequest) *CountPortsByTagsInvoker {
+	requestDef := GenReqDefForCountPortsByTags()
+	return &CountPortsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePortTag 添加端口资源标签
+//
+// 给指定端口资源实例增加标签信息
+// 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreatePortTag(request *model.CreatePortTagRequest) (*model.CreatePortTagResponse, error) {
+	requestDef := GenReqDefForCreatePortTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePortTagResponse), nil
+	}
+}
+
+// CreatePortTagInvoker 添加端口资源标签
+func (c *VpcClient) CreatePortTagInvoker(request *model.CreatePortTagRequest) *CreatePortTagInvoker {
+	requestDef := GenReqDefForCreatePortTag()
+	return &CreatePortTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSecurityGroup 创建安全组
@@ -229,6 +316,28 @@ func (c *VpcClient) CreateTrafficMirrorSessionInvoker(request *model.CreateTraff
 	return &CreateTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePortTag 删除端口资源标签
+//
+// 删除指定端口的标签信息
+// 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeletePortTag(request *model.DeletePortTagRequest) (*model.DeletePortTagResponse, error) {
+	requestDef := GenReqDefForDeletePortTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePortTagResponse), nil
+	}
+}
+
+// DeletePortTagInvoker 删除端口资源标签
+func (c *VpcClient) DeletePortTagInvoker(request *model.DeletePortTagRequest) *DeletePortTagInvoker {
+	requestDef := GenReqDefForDeletePortTag()
+	return &DeletePortTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSecurityGroup 删除安全组
 //
 // 删除安全组
@@ -353,6 +462,48 @@ func (c *VpcClient) DeleteTrafficMirrorSession(request *model.DeleteTrafficMirro
 func (c *VpcClient) DeleteTrafficMirrorSessionInvoker(request *model.DeleteTrafficMirrorSessionRequest) *DeleteTrafficMirrorSessionInvoker {
 	requestDef := GenReqDefForDeleteTrafficMirrorSession()
 	return &DeleteTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPortTags 查询端口项目标签
+//
+// 查询租户在指定Project中实例类型的所有资源标签集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListPortTags(request *model.ListPortTagsRequest) (*model.ListPortTagsResponse, error) {
+	requestDef := GenReqDefForListPortTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortTagsResponse), nil
+	}
+}
+
+// ListPortTagsInvoker 查询端口项目标签
+func (c *VpcClient) ListPortTagsInvoker(request *model.ListPortTagsRequest) *ListPortTagsInvoker {
+	requestDef := GenReqDefForListPortTags()
+	return &ListPortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPortsByTags 查询端口资源实例列表
+//
+// 使用标签过滤查询端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListPortsByTags(request *model.ListPortsByTagsRequest) (*model.ListPortsByTagsResponse, error) {
+	requestDef := GenReqDefForListPortsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortsByTagsResponse), nil
+	}
+}
+
+// ListPortsByTagsInvoker 查询端口资源实例列表
+func (c *VpcClient) ListPortsByTagsInvoker(request *model.ListPortsByTagsRequest) *ListPortsByTagsInvoker {
+	requestDef := GenReqDefForListPortsByTags()
+	return &ListPortsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSecurityGroupRules 查询安全组规则列表
@@ -542,6 +693,27 @@ func (c *VpcClient) RemoveSourcesFromTrafficMirrorSession(request *model.RemoveS
 func (c *VpcClient) RemoveSourcesFromTrafficMirrorSessionInvoker(request *model.RemoveSourcesFromTrafficMirrorSessionRequest) *RemoveSourcesFromTrafficMirrorSessionInvoker {
 	requestDef := GenReqDefForRemoveSourcesFromTrafficMirrorSession()
 	return &RemoveSourcesFromTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPortTags 查询端口资源标签
+//
+// 查询指定端口的标签信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowPortTags(request *model.ShowPortTagsRequest) (*model.ShowPortTagsResponse, error) {
+	requestDef := GenReqDefForShowPortTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPortTagsResponse), nil
+	}
+}
+
+// ShowPortTagsInvoker 查询端口资源标签
+func (c *VpcClient) ShowPortTagsInvoker(request *model.ShowPortTagsRequest) *ShowPortTagsInvoker {
+	requestDef := GenReqDefForShowPortTags()
+	return &ShowPortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecurityGroup 查询安全组
@@ -840,7 +1012,7 @@ func (c *VpcClient) AssociateSubnetFirewallInvoker(request *model.AssociateSubne
 
 // BatchCreateFirewallTags 批量添加ACL资源标签
 //
-// 为指定的IP地址组资源实例批量添加标签。
+// 为指定的网络ACL资源实例批量添加标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -862,7 +1034,7 @@ func (c *VpcClient) BatchCreateFirewallTagsInvoker(request *model.BatchCreateFir
 
 // BatchDeleteFirewallTags 批量删除ACL资源标签
 //
-// 为指定的IP地址组资源实例批量删除标签。
+// 为指定的网络ACL资源实例批量删除标签。
 // 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
 //
 // Please refer to HUAWEI cloud API Explorer for details.

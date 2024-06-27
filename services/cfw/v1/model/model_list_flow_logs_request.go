@@ -12,19 +12,19 @@ import (
 // ListFlowLogsRequest Request Object
 type ListFlowLogsRequest struct {
 
-	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
 	FwInstanceId string `json:"fw_instance_id"`
 
-	// 方向
+	// 方向，包含in2out，out2in
 	Direction *string `json:"direction,omitempty"`
 
-	// 日志类型
+	// 日志类型包括：internet，vpc，nat
 	LogType *ListFlowLogsRequestLogType `json:"log_type,omitempty"`
 
-	// 开始时间
+	// 开始时间，以毫秒为单位的时间戳，如1718936272648
 	StartTime int64 `json:"start_time"`
 
-	// 结束时间
+	// 结束时间，以毫秒为单位的时间戳，如1718936272648
 	EndTime int64 `json:"end_time"`
 
 	// 源IP
@@ -39,19 +39,19 @@ type ListFlowLogsRequest struct {
 	// 目的端口
 	DstPort *int32 `json:"dst_port,omitempty"`
 
-	// 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-	Protocol *ListFlowLogsRequestProtocol `json:"protocol,omitempty"`
+	// 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+	Protocol *string `json:"protocol,omitempty"`
 
 	// 应用协议
 	App *string `json:"app,omitempty"`
 
-	// 文档ID，首页时为null，非首页时不为null
+	// 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
 	LogId *string `json:"log_id,omitempty"`
 
-	// 日期，首页时为null，非首页时不为null
+	// 下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
 	NextDate *int64 `json:"next_date,omitempty"`
 
-	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 每页显示个数，范围为1-1024
@@ -68,6 +68,18 @@ type ListFlowLogsRequest struct {
 
 	// 目的region名称
 	DstRegionName *string `json:"dst_region_name,omitempty"`
+
+	// 源省份名称
+	SrcProvinceName *string `json:"src_province_name,omitempty"`
+
+	// 目的省份名称
+	DstProvinceName *string `json:"dst_province_name,omitempty"`
+
+	// 源城市名称
+	SrcCityName *string `json:"src_city_name,omitempty"`
+
+	// 目的城市名称
+	DstCityName *string `json:"dst_city_name,omitempty"`
 }
 
 func (o ListFlowLogsRequest) String() string {
@@ -112,61 +124,6 @@ func (c ListFlowLogsRequestLogType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListFlowLogsRequestLogType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ListFlowLogsRequestProtocol struct {
-	value string
-}
-
-type ListFlowLogsRequestProtocolEnum struct {
-	E_6  ListFlowLogsRequestProtocol
-	E_17 ListFlowLogsRequestProtocol
-	E_1  ListFlowLogsRequestProtocol
-	E_58 ListFlowLogsRequestProtocol
-}
-
-func GetListFlowLogsRequestProtocolEnum() ListFlowLogsRequestProtocolEnum {
-	return ListFlowLogsRequestProtocolEnum{
-		E_6: ListFlowLogsRequestProtocol{
-			value: "6",
-		},
-		E_17: ListFlowLogsRequestProtocol{
-			value: "17",
-		},
-		E_1: ListFlowLogsRequestProtocol{
-			value: "1",
-		},
-		E_58: ListFlowLogsRequestProtocol{
-			value: "58",
-		},
-	}
-}
-
-func (c ListFlowLogsRequestProtocol) Value() string {
-	return c.value
-}
-
-func (c ListFlowLogsRequestProtocol) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListFlowLogsRequestProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

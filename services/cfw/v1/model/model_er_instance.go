@@ -25,6 +25,9 @@ type ErInstance struct {
 
 	// 是否开启ipv6
 	EnableIpv6 *string `json:"enable_ipv6,omitempty"`
+
+	// 连接id
+	AttachmentId *string `json:"attachment_id,omitempty"`
 }
 
 func (o ErInstance) String() string {

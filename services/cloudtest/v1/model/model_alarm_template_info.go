@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -10,7 +9,7 @@ import (
 type AlarmTemplateInfo struct {
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"createTime,omitempty"`
+	CreateTime *string `json:"createTime,omitempty"`
 
 	// 创建者
 	CreateUser *string `json:"createUser,omitempty"`
@@ -25,7 +24,7 @@ type AlarmTemplateInfo struct {
 	TestServiceId *string `json:"testServiceId,omitempty"`
 
 	// 修改时间
-	UpdateTime *sdktime.SdkTime `json:"updateTime,omitempty"`
+	UpdateTime *string `json:"updateTime,omitempty"`
 
 	// 修改者
 	UpdateUser *string `json:"updateUser,omitempty"`

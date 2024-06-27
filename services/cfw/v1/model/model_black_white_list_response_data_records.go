@@ -15,7 +15,7 @@ type BlackWhiteListResponseDataRecords struct {
 	// 黑白地址方向0：源地址1：目的地址
 	Direction *int32 `json:"direction,omitempty"`
 
-	// IP地址类型0：ipv4,1:ipv6,2:domain
+	// IP地址类型0：ipv4,1:ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
 	// ip地址

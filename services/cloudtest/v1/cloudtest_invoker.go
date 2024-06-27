@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudtest/v1/model"
 )
 
+type AddTestCaseCommentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddTestCaseCommentInvoker) Invoke() (*model.AddTestCaseCommentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddTestCaseCommentResponse), nil
+	}
+}
+
 type BatchAddRelationsByOneCaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -14,6 +26,18 @@ func (i *BatchAddRelationsByOneCaseInvoker) Invoke() (*model.BatchAddRelationsBy
 		return nil, err
 	} else {
 		return result.(*model.BatchAddRelationsByOneCaseResponse), nil
+	}
+}
+
+type BatchAddResourcesForIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddResourcesForIteratorInvoker) Invoke() (*model.BatchAddResourcesForIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddResourcesForIteratorResponse), nil
 	}
 }
 
@@ -29,6 +53,18 @@ func (i *BatchDeleteTestCaseInvoker) Invoke() (*model.BatchDeleteTestCaseRespons
 	}
 }
 
+type BatchDeleteTestCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTestCasesInvoker) Invoke() (*model.BatchDeleteTestCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteTestCasesResponse), nil
+	}
+}
+
 type BatchDeleteTestReportInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,6 +74,30 @@ func (i *BatchDeleteTestReportInvoker) Invoke() (*model.BatchDeleteTestReportRes
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteTestReportResponse), nil
+	}
+}
+
+type BatchRemoveTestCasesFromIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRemoveTestCasesFromIteratorInvoker) Invoke() (*model.BatchRemoveTestCasesFromIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRemoveTestCasesFromIteratorResponse), nil
+	}
+}
+
+type BatchUpdateVersionTestCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateVersionTestCasesInvoker) Invoke() (*model.BatchUpdateVersionTestCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateVersionTestCasesResponse), nil
 	}
 }
 
@@ -53,6 +113,18 @@ func (i *CheckPermissionInvoker) Invoke() (*model.CheckPermissionResponse, error
 	}
 }
 
+type CreateIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIteratorInvoker) Invoke() (*model.CreateIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIteratorResponse), nil
+	}
+}
+
 type CreatePlanInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -65,6 +137,18 @@ func (i *CreatePlanInvoker) Invoke() (*model.CreatePlanResponse, error) {
 	}
 }
 
+type CreateProjectBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProjectBranchInvoker) Invoke() (*model.CreateProjectBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProjectBranchResponse), nil
+	}
+}
+
 type CreateRelationsByOneCaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +158,18 @@ func (i *CreateRelationsByOneCaseInvoker) Invoke() (*model.CreateRelationsByOneC
 		return nil, err
 	} else {
 		return result.(*model.CreateRelationsByOneCaseResponse), nil
+	}
+}
+
+type CreateReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateReportInvoker) Invoke() (*model.CreateReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateReportResponse), nil
 	}
 }
 
@@ -125,6 +221,42 @@ func (i *CreateTestCaseInPlanInvoker) Invoke() (*model.CreateTestCaseInPlanRespo
 	}
 }
 
+type CreateUserDefinedUrlKeyWordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUserDefinedUrlKeyWordInvoker) Invoke() (*model.CreateUserDefinedUrlKeyWordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUserDefinedUrlKeyWordResponse), nil
+	}
+}
+
+type CreateVersionTestCaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVersionTestCaseInvoker) Invoke() (*model.CreateVersionTestCaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVersionTestCaseResponse), nil
+	}
+}
+
+type DeleteBasicAwByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBasicAwByIdInvoker) Invoke() (*model.DeleteBasicAwByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBasicAwByIdResponse), nil
+	}
+}
+
 type DeleteRelationsByOneCaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -149,6 +281,54 @@ func (i *DeleteServiceInvoker) Invoke() (*model.DeleteServiceResponse, error) {
 	}
 }
 
+type DeleteTestCaseCommentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTestCaseCommentInvoker) Invoke() (*model.DeleteTestCaseCommentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTestCaseCommentResponse), nil
+	}
+}
+
+type ListAlarmStatisticsUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmStatisticsUsingInvoker) Invoke() (*model.ListAlarmStatisticsUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmStatisticsUsingResponse), nil
+	}
+}
+
+type ListAlertGroupsByConditionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlertGroupsByConditionInvoker) Invoke() (*model.ListAlertGroupsByConditionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlertGroupsByConditionResponse), nil
+	}
+}
+
+type ListAlertTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlertTemplatesInvoker) Invoke() (*model.ListAlertTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlertTemplatesResponse), nil
+	}
+}
+
 type ListAllBranchesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -158,6 +338,18 @@ func (i *ListAllBranchesInvoker) Invoke() (*model.ListAllBranchesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListAllBranchesResponse), nil
+	}
+}
+
+type ListAllConfigItemByTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllConfigItemByTypeInvoker) Invoke() (*model.ListAllConfigItemByTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllConfigItemByTypeResponse), nil
 	}
 }
 
@@ -173,6 +365,18 @@ func (i *ListAllIteratorsInvoker) Invoke() (*model.ListAllIteratorsResponse, err
 	}
 }
 
+type ListAllTestCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllTestCasesInvoker) Invoke() (*model.ListAllTestCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllTestCasesResponse), nil
+	}
+}
+
 type ListAttachmentsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -182,6 +386,42 @@ func (i *ListAttachmentsInvoker) Invoke() (*model.ListAttachmentsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListAttachmentsResponse), nil
+	}
+}
+
+type ListAvailableConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableConfigInvoker) Invoke() (*model.ListAvailableConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableConfigResponse), nil
+	}
+}
+
+type ListBasicAwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBasicAwInvoker) Invoke() (*model.ListBasicAwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBasicAwResponse), nil
+	}
+}
+
+type ListBasicAwInfoListSupportsSearchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBasicAwInfoListSupportsSearchInvoker) Invoke() (*model.ListBasicAwInfoListSupportsSearchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBasicAwInfoListSupportsSearchResponse), nil
 	}
 }
 
@@ -197,6 +437,30 @@ func (i *ListBranchesInvoker) Invoke() (*model.ListBranchesResponse, error) {
 	}
 }
 
+type ListCasesStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCasesStatusInvoker) Invoke() (*model.ListCasesStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCasesStatusResponse), nil
+	}
+}
+
+type ListDomainVisibleServicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainVisibleServicesInvoker) Invoke() (*model.ListDomainVisibleServicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainVisibleServicesResponse), nil
+	}
+}
+
 type ListIssueTreeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +470,66 @@ func (i *ListIssueTreeInvoker) Invoke() (*model.ListIssueTreeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListIssueTreeResponse), nil
+	}
+}
+
+type ListIteratorIssueTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIteratorIssueTreeInvoker) Invoke() (*model.ListIteratorIssueTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIteratorIssueTreeResponse), nil
+	}
+}
+
+type ListIteratorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIteratorsInvoker) Invoke() (*model.ListIteratorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIteratorsResponse), nil
+	}
+}
+
+type ListLinesUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLinesUsingInvoker) Invoke() (*model.ListLinesUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLinesUsingResponse), nil
+	}
+}
+
+type ListMsgInfosUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMsgInfosUsingInvoker) Invoke() (*model.ListMsgInfosUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMsgInfosUsingResponse), nil
+	}
+}
+
+type ListOwnTestCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOwnTestCasesInvoker) Invoke() (*model.ListOwnTestCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOwnTestCasesResponse), nil
 	}
 }
 
@@ -233,6 +557,18 @@ func (i *ListProjectTestCaseFieldsInvoker) Invoke() (*model.ListProjectTestCaseF
 	}
 }
 
+type ListPublicLibAndAwsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublicLibAndAwsInvoker) Invoke() (*model.ListPublicLibAndAwsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublicLibAndAwsResponse), nil
+	}
+}
+
 type ListReportsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -257,6 +593,42 @@ func (i *ListResourcePoolsInvoker) Invoke() (*model.ListResourcePoolsResponse, e
 	}
 }
 
+type ListScattersUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScattersUsingInvoker) Invoke() (*model.ListScattersUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScattersUsingResponse), nil
+	}
+}
+
+type ListSubTaskCaseOverstockUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubTaskCaseOverstockUsingInvoker) Invoke() (*model.ListSubTaskCaseOverstockUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubTaskCaseOverstockUsingResponse), nil
+	}
+}
+
+type ListTaskAssignCasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTaskAssignCasesInvoker) Invoke() (*model.ListTaskAssignCasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTaskAssignCasesResponse), nil
+	}
+}
+
 type ListTaskTestCasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +638,30 @@ func (i *ListTaskTestCasesInvoker) Invoke() (*model.ListTaskTestCasesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListTaskTestCasesResponse), nil
+	}
+}
+
+type ListTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTasksResponse), nil
+	}
+}
+
+type ListTestCaseCommentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestCaseCommentsInvoker) Invoke() (*model.ListTestCaseCommentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestCaseCommentsResponse), nil
 	}
 }
 
@@ -281,6 +677,18 @@ func (i *ListTestCaseHistoriesInvoker) Invoke() (*model.ListTestCaseHistoriesRes
 	}
 }
 
+type ListTestCaseScriptDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestCaseScriptDetailInvoker) Invoke() (*model.ListTestCaseScriptDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestCaseScriptDetailResponse), nil
+	}
+}
+
 type ListTestCasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +698,18 @@ func (i *ListTestCasesInvoker) Invoke() (*model.ListTestCasesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTestCasesResponse), nil
+	}
+}
+
+type ListTestCasesByIssueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestCasesByIssueInvoker) Invoke() (*model.ListTestCasesByIssueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestCasesByIssueResponse), nil
 	}
 }
 
@@ -341,6 +761,18 @@ func (i *ListUsageInfosInvoker) Invoke() (*model.ListUsageInfosResponse, error) 
 	}
 }
 
+type ListUserDnsMappingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserDnsMappingInvoker) Invoke() (*model.ListUserDnsMappingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserDnsMappingResponse), nil
+	}
+}
+
 type ListUserPackageUsageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -365,6 +797,42 @@ func (i *ListUserPopupInfoInvoker) Invoke() (*model.ListUserPopupInfoResponse, e
 	}
 }
 
+type ListUsingGetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsingGetInvoker) Invoke() (*model.ListUsingGetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsingGetResponse), nil
+	}
+}
+
+type ListVariablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVariablesInvoker) Invoke() (*model.ListVariablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVariablesResponse), nil
+	}
+}
+
+type RemoveIssuesFromIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveIssuesFromIteratorInvoker) Invoke() (*model.RemoveIssuesFromIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveIssuesFromIteratorResponse), nil
+	}
+}
+
 type RunTestCaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +842,30 @@ func (i *RunTestCaseInvoker) Invoke() (*model.RunTestCaseResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RunTestCaseResponse), nil
+	}
+}
+
+type SaveTaskSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveTaskSettingInvoker) Invoke() (*model.SaveTaskSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveTaskSettingResponse), nil
+	}
+}
+
+type ShowAllConfigValueByTypeAndKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAllConfigValueByTypeAndKeyInvoker) Invoke() (*model.ShowAllConfigValueByTypeAndKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAllConfigValueByTypeAndKeyResponse), nil
 	}
 }
 
@@ -401,6 +893,30 @@ func (i *ShowApiTestcaseHistoriesInvoker) Invoke() (*model.ShowApiTestcaseHistor
 	}
 }
 
+type ShowAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetInvoker) Invoke() (*model.ShowAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetResponse), nil
+	}
+}
+
+type ShowAssetTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssetTreeInvoker) Invoke() (*model.ShowAssetTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssetTreeResponse), nil
+	}
+}
+
 type ShowBackgroundInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +926,30 @@ func (i *ShowBackgroundInfoInvoker) Invoke() (*model.ShowBackgroundInfoResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowBackgroundInfoResponse), nil
+	}
+}
+
+type ShowBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBranchInvoker) Invoke() (*model.ShowBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBranchResponse), nil
+	}
+}
+
+type ShowConcurrencyPackageUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConcurrencyPackageUsingInvoker) Invoke() (*model.ShowConcurrencyPackageUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConcurrencyPackageUsingResponse), nil
 	}
 }
 
@@ -437,6 +977,42 @@ func (i *ShowDomainInfoInvoker) Invoke() (*model.ShowDomainInfoResponse, error) 
 	}
 }
 
+type ShowEchoTestPackageUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEchoTestPackageUsingInvoker) Invoke() (*model.ShowEchoTestPackageUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEchoTestPackageUsingResponse), nil
+	}
+}
+
+type ShowFactorByAssetIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactorByAssetIdInvoker) Invoke() (*model.ShowFactorByAssetIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactorByAssetIdResponse), nil
+	}
+}
+
+type ShowFactorByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactorByIdInvoker) Invoke() (*model.ShowFactorByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactorByIdResponse), nil
+	}
+}
+
 type ShowFeatureChildrenInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +1034,30 @@ func (i *ShowFreeDeclarationInvoker) Invoke() (*model.ShowFreeDeclarationRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowFreeDeclarationResponse), nil
+	}
+}
+
+type ShowIfTaskNameRepeatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIfTaskNameRepeatInvoker) Invoke() (*model.ShowIfTaskNameRepeatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIfTaskNameRepeatResponse), nil
+	}
+}
+
+type ShowIfUserNameRepeatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIfUserNameRepeatInvoker) Invoke() (*model.ShowIfUserNameRepeatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIfUserNameRepeatResponse), nil
 	}
 }
 
@@ -485,6 +1085,30 @@ func (i *ShowIteratorByDefectInvoker) Invoke() (*model.ShowIteratorByDefectRespo
 	}
 }
 
+type ShowIteratorDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIteratorDetailInvoker) Invoke() (*model.ShowIteratorDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIteratorDetailResponse), nil
+	}
+}
+
+type ShowMindMapByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMindMapByIdInvoker) Invoke() (*model.ShowMindMapByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMindMapByIdResponse), nil
+	}
+}
+
 type ShowMindmapByPageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -506,6 +1130,18 @@ func (i *ShowMindmapCreatorNameInvoker) Invoke() (*model.ShowMindmapCreatorNameR
 		return nil, err
 	} else {
 		return result.(*model.ShowMindmapCreatorNameResponse), nil
+	}
+}
+
+type ShowOperationalDataCurrentMonthUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOperationalDataCurrentMonthUsingInvoker) Invoke() (*model.ShowOperationalDataCurrentMonthUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOperationalDataCurrentMonthUsingResponse), nil
 	}
 }
 
@@ -605,6 +1241,42 @@ func (i *ShowRequirementsOverviewInvoker) Invoke() (*model.ShowRequirementsOverv
 	}
 }
 
+type ShowReviewByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReviewByPageInvoker) Invoke() (*model.ShowReviewByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReviewByPageResponse), nil
+	}
+}
+
+type ShowSceneByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSceneByPageInvoker) Invoke() (*model.ShowSceneByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSceneByPageResponse), nil
+	}
+}
+
+type ShowStatisticByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatisticByIdInvoker) Invoke() (*model.ShowStatisticByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatisticByIdResponse), nil
+	}
+}
+
 type ShowSystemConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -614,6 +1286,18 @@ func (i *ShowSystemConfigsInvoker) Invoke() (*model.ShowSystemConfigsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSystemConfigsResponse), nil
+	}
+}
+
+type ShowTemplateByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateByPageInvoker) Invoke() (*model.ShowTemplateByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateByPageResponse), nil
 	}
 }
 
@@ -665,6 +1349,42 @@ func (i *ShowTestCaseDetailV2Invoker) Invoke() (*model.ShowTestCaseDetailV2Respo
 	}
 }
 
+type ShowTestCasesChangeStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestCasesChangeStatisticsInvoker) Invoke() (*model.ShowTestCasesChangeStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestCasesChangeStatisticsResponse), nil
+	}
+}
+
+type ShowTestcaseByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestcaseByPageInvoker) Invoke() (*model.ShowTestcaseByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestcaseByPageResponse), nil
+	}
+}
+
+type ShowTestpointByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestpointByPageInvoker) Invoke() (*model.ShowTestpointByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestpointByPageResponse), nil
+	}
+}
+
 type ShowUserAccessInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -686,6 +1406,30 @@ func (i *ShowUserExecuteTestCaseInfoInvoker) Invoke() (*model.ShowUserExecuteTes
 		return nil, err
 	} else {
 		return result.(*model.ShowUserExecuteTestCaseInfoResponse), nil
+	}
+}
+
+type UpdateBasicAwByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBasicAwByIdInvoker) Invoke() (*model.UpdateBasicAwByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBasicAwByIdResponse), nil
+	}
+}
+
+type UpdateIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIteratorInvoker) Invoke() (*model.UpdateIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIteratorResponse), nil
 	}
 }
 
@@ -713,6 +1457,30 @@ func (i *UpdateTestCaseInvoker) Invoke() (*model.UpdateTestCaseResponse, error) 
 	}
 }
 
+type UpdateTestCaseAndScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTestCaseAndScriptInvoker) Invoke() (*model.UpdateTestCaseAndScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTestCaseAndScriptResponse), nil
+	}
+}
+
+type UpdateTestCaseCommentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTestCaseCommentInvoker) Invoke() (*model.UpdateTestCaseCommentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTestCaseCommentResponse), nil
+	}
+}
+
 type UpdateTestCaseResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -725,87 +1493,27 @@ func (i *UpdateTestCaseResultInvoker) Invoke() (*model.UpdateTestCaseResultRespo
 	}
 }
 
-type ListAlertGroupsByConditionInvoker struct {
+type UpdateUserDnsMappingInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListAlertGroupsByConditionInvoker) Invoke() (*model.ListAlertGroupsByConditionResponse, error) {
+func (i *UpdateUserDnsMappingInvoker) Invoke() (*model.UpdateUserDnsMappingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListAlertGroupsByConditionResponse), nil
+		return result.(*model.UpdateUserDnsMappingResponse), nil
 	}
 }
 
-type ListAlertTemplatesInvoker struct {
+type UpdateVersionTestCaseInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListAlertTemplatesInvoker) Invoke() (*model.ListAlertTemplatesResponse, error) {
+func (i *UpdateVersionTestCaseInvoker) Invoke() (*model.UpdateVersionTestCaseResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListAlertTemplatesResponse), nil
-	}
-}
-
-type ListAllConfigItemByTypeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAllConfigItemByTypeInvoker) Invoke() (*model.ListAllConfigItemByTypeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAllConfigItemByTypeResponse), nil
-	}
-}
-
-type SaveTaskSettingInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SaveTaskSettingInvoker) Invoke() (*model.SaveTaskSettingResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SaveTaskSettingResponse), nil
-	}
-}
-
-type ShowAllConfigValueByTypeAndKeyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAllConfigValueByTypeAndKeyInvoker) Invoke() (*model.ShowAllConfigValueByTypeAndKeyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAllConfigValueByTypeAndKeyResponse), nil
-	}
-}
-
-type ShowIfTaskNameRepeatInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowIfTaskNameRepeatInvoker) Invoke() (*model.ShowIfTaskNameRepeatResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowIfTaskNameRepeatResponse), nil
-	}
-}
-
-type ShowIfUserNameRepeatInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowIfUserNameRepeatInvoker) Invoke() (*model.ShowIfUserNameRepeatResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowIfUserNameRepeatResponse), nil
+		return result.(*model.UpdateVersionTestCaseResponse), nil
 	}
 }
 
@@ -830,53 +1538,5 @@ func (i *ListEnvironmentsInvoker) Invoke() (*model.ListEnvironmentsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListEnvironmentsResponse), nil
-	}
-}
-
-type ListBasicAwInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBasicAwInvoker) Invoke() (*model.ListBasicAwResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBasicAwResponse), nil
-	}
-}
-
-type ListPublicLibAndAwsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPublicLibAndAwsInvoker) Invoke() (*model.ListPublicLibAndAwsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPublicLibAndAwsResponse), nil
-	}
-}
-
-type ListUserDnsMappingInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListUserDnsMappingInvoker) Invoke() (*model.ListUserDnsMappingResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListUserDnsMappingResponse), nil
-	}
-}
-
-type ListVariablesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListVariablesInvoker) Invoke() (*model.ListVariablesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListVariablesResponse), nil
 	}
 }

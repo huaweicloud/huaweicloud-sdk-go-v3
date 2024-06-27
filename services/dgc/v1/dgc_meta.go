@@ -162,7 +162,7 @@ func GenReqDefForDeleteJob() *def.HttpRequestDef {
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/jobs/{job_name}").
 		WithResponse(new(model.DeleteJobResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobName").
@@ -173,6 +173,10 @@ func GenReqDefForDeleteJob() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -204,7 +208,7 @@ func GenReqDefForDeleteScript() *def.HttpRequestDef {
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/{project_id}/scripts/{script_name}").
 		WithResponse(new(model.DeleteScriptResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptName").
@@ -215,6 +219,10 @@ func GenReqDefForDeleteScript() *def.HttpRequestDef {
 		WithName("Workspace").
 		WithJsonTag("workspace").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -40,8 +40,11 @@ type ShowSupportObjectTypeResponse struct {
 	PreviousSelect *string `json:"previous_select,omitempty"`
 
 	// 对象导入类型。 - table：表级 - database：库级
-	ImportLevel    *string `json:"import_level,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ImportLevel *string `json:"import_level,omitempty"`
+
+	// 取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+	IsImportCloumn *bool `json:"is_import_cloumn,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowSupportObjectTypeResponse) String() string {

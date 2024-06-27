@@ -13,6 +13,8 @@ type DeleteScriptRequest struct {
 	Workspace *string `json:"workspace,omitempty"`
 
 	ScriptName string `json:"script_name"`
+
+	Body *DeleteReq `json:"body,omitempty"`
 }
 
 func (o DeleteScriptRequest) String() string {

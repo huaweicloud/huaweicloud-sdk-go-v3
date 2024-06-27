@@ -47,6 +47,9 @@ type RuleAddressDtoForRequest struct {
 
 	// 预定义地址组列表
 	PredefinedGroup *[]string `json:"predefined_group,omitempty"`
+
+	// 地址组列表
+	AddressGroup *[]string `json:"address_group,omitempty"`
 }
 
 func (o RuleAddressDtoForRequest) String() string {

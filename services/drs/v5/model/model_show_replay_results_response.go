@@ -28,8 +28,11 @@ type ShowReplayResultsResponse struct {
 	ErrorSqlTemplates *[]ReplayErrorSqlTemplateResp `json:"error_sql_templates,omitempty"`
 
 	// 正在回放SQL信息列表，在type为replaying_sql时返回
-	ReplayingSqls  *[]ReplayingSqlResp `json:"replaying_sqls,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	ReplayingSqls *[]ReplayingSqlResp `json:"replaying_sqls,omitempty"`
+
+	// 回放异常SQL分类信息，在type为error_classification时返回
+	ErrorClassifications *[]ReplayErrorClassification `json:"error_classifications,omitempty"`
+	HttpStatusCode       int                          `json:"-"`
 }
 
 func (o ShowReplayResultsResponse) String() string {

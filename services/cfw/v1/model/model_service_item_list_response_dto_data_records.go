@@ -21,9 +21,6 @@ type ServiceItemListResponseDtoDataRecords struct {
 	// 目的端口
 	DestPort *string `json:"dest_port,omitempty"`
 
-	// 服务成员名称
-	Name *string `json:"name,omitempty"`
-
 	// 服务成员描述
 	Description *string `json:"description,omitempty"`
 }

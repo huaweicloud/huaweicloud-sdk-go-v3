@@ -171,17 +171,20 @@ type QueryJobResp struct {
 
 	DataTransformation *GetDataTransformationResp `json:"data_transformation,omitempty"`
 
-	// DRS任务标签
+	// DRS任务标签。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 指定公网Ip的信息
+	// 指定公网Ip的信息。
 	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
 
-	// 是否成功绑定公网IP
+	// 是否成功绑定公网IP。
 	BindPublicIpState *string `json:"bind_public_ip_state,omitempty"`
 
-	// 多任务时，存在子任务绑定失败时，返回子任务的信息
+	// 多任务时，存在子任务绑定失败时，返回子任务的信息。
 	Children *[]FailedToBindEipChildInfo `json:"children,omitempty"`
+
+	// 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+	IsOpenFastClean *bool `json:"is_open_fast_clean,omitempty"`
 }
 
 func (o QueryJobResp) String() string {

@@ -20,10 +20,10 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	// 包
 	Packets *int32 `json:"packets,omitempty"`
 
-	// 开始时间
+	// 开始时间，以毫秒为单位的时间戳，如1718936272648
 	StartTime *int64 `json:"start_time,omitempty"`
 
-	// 结束时间
+	// 结束时间，以毫秒为单位的时间戳，如1718936272648
 	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 文档ID
@@ -61,6 +61,30 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 
 	// 源地域名称
 	SrcRegionName *string `json:"src_region_name,omitempty"`
+
+	// 目的省份id
+	DstProvinceId *string `json:"dst_province_id,omitempty"`
+
+	// 目的省份名称
+	DstProvinceName *string `json:"dst_province_name,omitempty"`
+
+	// 目的城市id
+	DstCityId *string `json:"dst_city_id,omitempty"`
+
+	// 目的城市名称
+	DstCityName *string `json:"dst_city_name,omitempty"`
+
+	// 源省份id
+	SrcProvinceId *string `json:"src_province_id,omitempty"`
+
+	// 源省份名称
+	SrcProvinceName *string `json:"src_province_name,omitempty"`
+
+	// 源城市id
+	SrcCityId *string `json:"src_city_id,omitempty"`
+
+	// 源城市名称
+	SrcCityName *string `json:"src_city_name,omitempty"`
 }
 
 func (o HttpQueryCfwFlowLogsResponseDtoDataRecords) String() string {

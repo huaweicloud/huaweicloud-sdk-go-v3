@@ -8,13 +8,13 @@ import (
 
 // ShowFirewallTagsResponse Response Object
 type ShowFirewallTagsResponse struct {
-	Tags *ResourceTag `json:"tags,omitempty"`
+
+	// tag对象列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 
 	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
-
-	SysTags        *ResourceTag `json:"sys_tags,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	RequestId      *string `json:"request_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowFirewallTagsResponse) String() string {

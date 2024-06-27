@@ -19,7 +19,7 @@ type UpdateEndpointPolicyResponse struct {
 	// 终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
 	Status *string `json:"status,omitempty"`
 
-	// 帐号状态。  - frozen：冻结  - active：解冻
+	// 账号状态。  - frozen：冻结  - active：解冻
 	ActiveStatus *[]string `json:"active_status,omitempty"`
 
 	// 终端节点服务的名称。
@@ -58,13 +58,13 @@ type UpdateEndpointPolicyResponse struct {
 	// 是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
 	EnableWhitelist *bool `json:"enable_whitelist,omitempty"`
 
-	// 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+	// 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
 	Routetables *[]string `json:"routetables,omitempty"`
 
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
 
-	// 只涉及开启双端固定的网关型终端节点，响应体展示此字段
+	// 终端节点策略信息
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
 	// 待废弃，实例相关联的集群ID

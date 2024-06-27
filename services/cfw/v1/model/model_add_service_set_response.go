@@ -8,8 +8,8 @@ import (
 
 // AddServiceSetResponse Response Object
 type AddServiceSetResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *CommonResponseDtoData `json:"data,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o AddServiceSetResponse) String() string {

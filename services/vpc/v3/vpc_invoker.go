@@ -29,6 +29,18 @@ func (i *AddSourcesToTrafficMirrorSessionInvoker) Invoke() (*model.AddSourcesToT
 	}
 }
 
+type BatchCreatePortTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreatePortTagsInvoker) Invoke() (*model.BatchCreatePortTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreatePortTagsResponse), nil
+	}
+}
+
 type BatchCreateSecurityGroupRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +62,42 @@ func (i *BatchCreateSubNetworkInterfaceInvoker) Invoke() (*model.BatchCreateSubN
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateSubNetworkInterfaceResponse), nil
+	}
+}
+
+type BatchDeletePortTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeletePortTagsInvoker) Invoke() (*model.BatchDeletePortTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeletePortTagsResponse), nil
+	}
+}
+
+type CountPortsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountPortsByTagsInvoker) Invoke() (*model.CountPortsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountPortsByTagsResponse), nil
+	}
+}
+
+type CreatePortTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePortTagInvoker) Invoke() (*model.CreatePortTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePortTagResponse), nil
 	}
 }
 
@@ -125,6 +173,18 @@ func (i *CreateTrafficMirrorSessionInvoker) Invoke() (*model.CreateTrafficMirror
 	}
 }
 
+type DeletePortTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePortTagInvoker) Invoke() (*model.DeletePortTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePortTagResponse), nil
+	}
+}
+
 type DeleteSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +254,30 @@ func (i *DeleteTrafficMirrorSessionInvoker) Invoke() (*model.DeleteTrafficMirror
 		return nil, err
 	} else {
 		return result.(*model.DeleteTrafficMirrorSessionResponse), nil
+	}
+}
+
+type ListPortTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPortTagsInvoker) Invoke() (*model.ListPortTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPortTagsResponse), nil
+	}
+}
+
+type ListPortsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPortsByTagsInvoker) Invoke() (*model.ListPortsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPortsByTagsResponse), nil
 	}
 }
 
@@ -302,6 +386,18 @@ func (i *RemoveSourcesFromTrafficMirrorSessionInvoker) Invoke() (*model.RemoveSo
 		return nil, err
 	} else {
 		return result.(*model.RemoveSourcesFromTrafficMirrorSessionResponse), nil
+	}
+}
+
+type ShowPortTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPortTagsInvoker) Invoke() (*model.ShowPortTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPortTagsResponse), nil
 	}
 }
 

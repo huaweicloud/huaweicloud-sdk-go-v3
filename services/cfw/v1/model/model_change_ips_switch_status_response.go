@@ -8,10 +8,6 @@ import (
 
 // ChangeIpsSwitchStatusResponse Response Object
 type ChangeIpsSwitchStatusResponse struct {
-
-	// trace_id
-	TraceId *string `json:"trace_id,omitempty"`
-
 	Data           *CommonResponseDtoData `json:"data,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

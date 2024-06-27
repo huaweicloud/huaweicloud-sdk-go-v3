@@ -893,6 +893,30 @@ func (i *ListMetricNotifyRuleInvoker) Invoke() (*model.ListMetricNotifyRuleRespo
 	}
 }
 
+type ListMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricsInvoker) Invoke() (*model.ListMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricsResponse), nil
+	}
+}
+
+type ListMetricsTrendInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMetricsTrendInvoker) Invoke() (*model.ListMetricsTrendResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMetricsTrendResponse), nil
+	}
+}
+
 type ListUserUsageMetricInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -10,7 +10,7 @@ import (
 type BatchDeleteFirewallTagsRequestBody struct {
 
 	// 标签列表
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]DeleteResourceTagRequestBody `json:"tags,omitempty"`
 }
 
 func (o BatchDeleteFirewallTagsRequestBody) String() string {

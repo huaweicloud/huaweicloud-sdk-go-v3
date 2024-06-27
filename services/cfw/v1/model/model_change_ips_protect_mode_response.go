@@ -8,8 +8,8 @@ import (
 
 // ChangeIpsProtectModeResponse Response Object
 type ChangeIpsProtectModeResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *CommonResponseDtoData `json:"data,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ChangeIpsProtectModeResponse) String() string {

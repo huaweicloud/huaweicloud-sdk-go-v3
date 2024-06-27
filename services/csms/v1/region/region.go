@@ -48,29 +48,35 @@ var (
 		"https://kms.tr-west-1.myhuaweicloud.com")
 	AE_AD_1 = region.NewRegion("ae-ad-1",
 		"https://kms.ae-ad-1.myhuaweicloud.com")
+	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
+		"https://kms.my-kualalumpur-1.myhuaweicloud.com")
+	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
+		"https://kms.ru-moscow-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4":     CN_NORTH_4,
-	"cn-north-1":     CN_NORTH_1,
-	"cn-north-2":     CN_NORTH_2,
-	"cn-north-9":     CN_NORTH_9,
-	"cn-east-2":      CN_EAST_2,
-	"cn-east-3":      CN_EAST_3,
-	"cn-south-1":     CN_SOUTH_1,
-	"cn-southwest-2": CN_SOUTHWEST_2,
-	"ap-southeast-1": AP_SOUTHEAST_1,
-	"ap-southeast-3": AP_SOUTHEAST_3,
-	"ap-southeast-4": AP_SOUTHEAST_4,
-	"la-south-2":     LA_SOUTH_2,
-	"sa-brazil-1":    SA_BRAZIL_1,
-	"la-north-2":     LA_NORTH_2,
-	"ap-southeast-2": AP_SOUTHEAST_2,
-	"na-mexico-1":    NA_MEXICO_1,
-	"cn-south-2":     CN_SOUTH_2,
-	"me-east-1":      ME_EAST_1,
-	"tr-west-1":      TR_WEST_1,
-	"ae-ad-1":        AE_AD_1,
+	"cn-north-4":       CN_NORTH_4,
+	"cn-north-1":       CN_NORTH_1,
+	"cn-north-2":       CN_NORTH_2,
+	"cn-north-9":       CN_NORTH_9,
+	"cn-east-2":        CN_EAST_2,
+	"cn-east-3":        CN_EAST_3,
+	"cn-south-1":       CN_SOUTH_1,
+	"cn-southwest-2":   CN_SOUTHWEST_2,
+	"ap-southeast-1":   AP_SOUTHEAST_1,
+	"ap-southeast-3":   AP_SOUTHEAST_3,
+	"ap-southeast-4":   AP_SOUTHEAST_4,
+	"la-south-2":       LA_SOUTH_2,
+	"sa-brazil-1":      SA_BRAZIL_1,
+	"la-north-2":       LA_NORTH_2,
+	"ap-southeast-2":   AP_SOUTHEAST_2,
+	"na-mexico-1":      NA_MEXICO_1,
+	"cn-south-2":       CN_SOUTH_2,
+	"me-east-1":        ME_EAST_1,
+	"tr-west-1":        TR_WEST_1,
+	"ae-ad-1":          AE_AD_1,
+	"my-kualalumpur-1": MY_KUALALUMPUR_1,
+	"ru-moscow-1":      RU_MOSCOW_1,
 }
 
 var provider = region.DefaultProviderChain("CSMS")

@@ -18,7 +18,7 @@ type CreateEndpointServiceRequestBody struct {
 	// 终端节点服务的名称，长度不大于16，允许传入大小写字母、数字、下划线、中划线。 - 传入为空，存入值为regionName+.+serviceId - 传入不为空并校验通过，存入值为regionName+.+serviceName+.+serviceId
 	ServiceName *string `json:"service_name,omitempty"`
 
-	// 终端节点服务对应后端资源所在的VPC的ID。 详细内容请参考《虚拟私有云API参考》中的“查询VPC”，详见响应消息中的“id”字段。
+	// 终端节点服务对应后端资源所在的VPC的ID。
 	VpcId string `json:"vpc_id"`
 
 	// 是否需要审批。  - false：不需要审批，创建的终端节点连接直接为accepted状态。  - true：需要审批，创建的终端节点连接为pendingAcceptance状态， 需要终端节点服务所属用户审核后方可使用。 默认为true，需要审批。
@@ -33,7 +33,7 @@ type CreateEndpointServiceRequestBody struct {
 	// 服务开放的端口映射列表，详细内容请参见表4-10。 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复， 单次最多添加200个。
 	Ports []PortList `json:"ports"`
 
-	// 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+	// 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
 	TcpProxy *CreateEndpointServiceRequestBodyTcpProxy `json:"tcp_proxy,omitempty"`
 
 	// 资源标签列表。同一个终端节点服务最多可添加10个标签。
@@ -42,8 +42,8 @@ type CreateEndpointServiceRequestBody struct {
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
 
-	// 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
-	EnablePolicy *bool `json:"enable_policy,omitempty"`
+	// 指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+	IpVersion *CreateEndpointServiceRequestBodyIpVersion `json:"ip_version,omitempty"`
 }
 
 func (o CreateEndpointServiceRequestBody) String() string {
@@ -194,6 +194,53 @@ func (c CreateEndpointServiceRequestBodyTcpProxy) MarshalJSON() ([]byte, error) 
 }
 
 func (c *CreateEndpointServiceRequestBodyTcpProxy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateEndpointServiceRequestBodyIpVersion struct {
+	value string
+}
+
+type CreateEndpointServiceRequestBodyIpVersionEnum struct {
+	IPV4 CreateEndpointServiceRequestBodyIpVersion
+	IPV6 CreateEndpointServiceRequestBodyIpVersion
+}
+
+func GetCreateEndpointServiceRequestBodyIpVersionEnum() CreateEndpointServiceRequestBodyIpVersionEnum {
+	return CreateEndpointServiceRequestBodyIpVersionEnum{
+		IPV4: CreateEndpointServiceRequestBodyIpVersion{
+			value: "ipv4",
+		},
+		IPV6: CreateEndpointServiceRequestBodyIpVersion{
+			value: "ipv6",
+		},
+	}
+}
+
+func (c CreateEndpointServiceRequestBodyIpVersion) Value() string {
+	return c.value
+}
+
+func (c CreateEndpointServiceRequestBodyIpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateEndpointServiceRequestBodyIpVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

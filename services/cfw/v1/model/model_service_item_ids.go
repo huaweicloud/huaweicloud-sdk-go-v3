@@ -9,7 +9,7 @@ import (
 type ServiceItemIds struct {
 
 	// 服务组成员id列表
-	Items *[]IdObject `json:"items,omitempty"`
+	Items *[]ServiceItemIdsItems `json:"items,omitempty"`
 }
 
 func (o ServiceItemIds) String() string {

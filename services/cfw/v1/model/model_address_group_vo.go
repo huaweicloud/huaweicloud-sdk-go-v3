@@ -8,17 +8,14 @@ import (
 
 type AddressGroupVo struct {
 
-	// 地址组id
-	SetId *string `json:"set_id,omitempty"`
+	// 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+	AddressSetType *int32 `json:"address_set_type,omitempty"`
 
 	// 地址组名称
 	Name *string `json:"name,omitempty"`
 
-	// 协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-	Protocols *[]int32 `json:"protocols,omitempty"`
-
-	// 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
-	ServiceSetType *int32 `json:"service_set_type,omitempty"`
+	// 地址组id
+	SetId *string `json:"set_id,omitempty"`
 }
 
 func (o AddressGroupVo) String() string {

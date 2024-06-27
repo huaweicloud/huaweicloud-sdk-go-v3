@@ -9,10 +9,10 @@ import (
 type CreateFirewallReqTags struct {
 
 	// 标签KEY
-	Key string `json:"key"`
+	Key *string `json:"key,omitempty"`
 
 	// 标签VALUE
-	Value string `json:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o CreateFirewallReqTags) String() string {

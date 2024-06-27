@@ -50,6 +50,9 @@ type JobBaseInfo struct {
 
 	// 标签信息，最多添加10个标签。
 	Tags *[]ResourceTag `json:"tags,omitempty"`
+
+	// 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+	IsOpenFastClean *bool `json:"is_open_fast_clean,omitempty"`
 }
 
 func (o JobBaseInfo) String() string {
