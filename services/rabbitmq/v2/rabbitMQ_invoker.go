@@ -53,6 +53,18 @@ func (i *CreatePostPaidInstanceByEngineInvoker) Invoke() (*model.CreatePostPaidI
 	}
 }
 
+type CreateUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUserInvoker) Invoke() (*model.CreateUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUserResponse), nil
+	}
+}
+
 type DeleteBackgroundTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -74,6 +86,18 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstanceResponse), nil
+	}
+}
+
+type DeleteUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteUserResponse), nil
 	}
 }
 
@@ -146,6 +170,18 @@ func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListProductsResponse), nil
+	}
+}
+
+type ListUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserInvoker) Invoke() (*model.ListUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserResponse), nil
 	}
 }
 
@@ -302,5 +338,185 @@ func (i *UpdatePluginsInvoker) Invoke() (*model.UpdatePluginsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdatePluginsResponse), nil
+	}
+}
+
+type UpdateUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateUserResponse), nil
+	}
+}
+
+type CreateBindingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBindingInvoker) Invoke() (*model.CreateBindingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBindingResponse), nil
+	}
+}
+
+type DeleteBindingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBindingInvoker) Invoke() (*model.DeleteBindingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBindingResponse), nil
+	}
+}
+
+type ListBindingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBindingsInvoker) Invoke() (*model.ListBindingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBindingsResponse), nil
+	}
+}
+
+type BatchDeleteExchangesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteExchangesInvoker) Invoke() (*model.BatchDeleteExchangesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteExchangesResponse), nil
+	}
+}
+
+type CreateExchangeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateExchangeInvoker) Invoke() (*model.CreateExchangeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateExchangeResponse), nil
+	}
+}
+
+type ListExchangesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExchangesInvoker) Invoke() (*model.ListExchangesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExchangesResponse), nil
+	}
+}
+
+type BatchDeleteQueuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteQueuesInvoker) Invoke() (*model.BatchDeleteQueuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteQueuesResponse), nil
+	}
+}
+
+type CreateQueueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateQueueInvoker) Invoke() (*model.CreateQueueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateQueueResponse), nil
+	}
+}
+
+type DeleteQueueInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteQueueInfoInvoker) Invoke() (*model.DeleteQueueInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteQueueInfoResponse), nil
+	}
+}
+
+type ListQueuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueuesInvoker) Invoke() (*model.ListQueuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueuesResponse), nil
+	}
+}
+
+type ShowQueueDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQueueDetailsInvoker) Invoke() (*model.ShowQueueDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQueueDetailsResponse), nil
+	}
+}
+
+type BatchDeleteVhostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteVhostsInvoker) Invoke() (*model.BatchDeleteVhostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteVhostsResponse), nil
+	}
+}
+
+type CreateVhostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVhostInvoker) Invoke() (*model.CreateVhostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVhostResponse), nil
+	}
+}
+
+type ListVhostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVhostsInvoker) Invoke() (*model.ListVhostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVhostsResponse), nil
 	}
 }

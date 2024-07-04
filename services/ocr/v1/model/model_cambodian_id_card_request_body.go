@@ -22,6 +22,24 @@ type CambodianIdCardRequestBody struct {
 
 	// 是否返回身份证类型的开关，可选值如下所示： - true:返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
 	ReturnIdcardType *bool `json:"return_idcard_type,omitempty"`
+
+	// 返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+	DetectBorderIntegrity *bool `json:"detect_border_integrity,omitempty"`
+
+	// 返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+	DetectBlockingWithinBorder *bool `json:"detect_blocking_within_border,omitempty"`
+
+	// 返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+	DetectBlur *bool `json:"detect_blur,omitempty"`
+
+	// 返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+	DetectGlare *bool `json:"detect_glare,omitempty"`
+
+	// 返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+	ReturnAdjustedImage *bool `json:"return_adjusted_image,omitempty"`
+
+	// 返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+	DetectTampering *bool `json:"detect_tampering,omitempty"`
 }
 
 func (o CambodianIdCardRequestBody) String() string {

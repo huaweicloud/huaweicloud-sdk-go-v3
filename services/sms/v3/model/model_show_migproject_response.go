@@ -24,8 +24,6 @@ type ShowMigprojectResponse struct {
 	// 是否为默认模板
 	Isdefault *bool `json:"isdefault,omitempty"`
 
-	Template *TemplateResponseBody `json:"template,omitempty"`
-
 	// 区域名称
 	Region *string `json:"region,omitempty"`
 

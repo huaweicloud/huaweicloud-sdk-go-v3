@@ -56,8 +56,28 @@ type CambodianIdCardResult struct {
 	// 头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
 	PortraitLocation *[][]int32 `json:"portrait_location,omitempty"`
 
-	// 身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+	// 身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
 	IdcardType *string `json:"idcard_type,omitempty"`
+
+	// 身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+	AdjustedImage *string `json:"adjusted_image,omitempty"`
+
+	// 身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+	DetectBorderIntegrityResult *bool `json:"detect_border_integrity_result,omitempty"`
+
+	// 身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+	DetectBlockingWithinBorderResult *bool `json:"detect_blocking_within_border_result,omitempty"`
+
+	// 身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+	DetectBlurResult *bool `json:"detect_blur_result,omitempty"`
+
+	// 身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+	DetectGlareResult *bool `json:"detect_glare_result,omitempty"`
+
+	// 身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+	DetectTamperingResult *bool `json:"detect_tampering_result,omitempty"`
+
+	ScoreInfo *CambodianIdCardScoreInformationResult `json:"score_info,omitempty"`
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
 	Confidence *interface{} `json:"confidence,omitempty"`

@@ -21,6 +21,9 @@ type PostTask struct {
 	// 迁移后是否启动目的端虚拟机
 	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
+	// 是否自动启动
+	AutoStart *bool `json:"auto_start,omitempty"`
+
 	// 操作系统类型
 	OsType string `json:"os_type"`
 
@@ -43,11 +46,17 @@ type PostTask struct {
 	// 项目ID
 	ProjectId string `json:"project_id"`
 
+	// 优先级。默认为1
+	Priority *int32 `json:"priority,omitempty"`
+
 	// 自动创建虚拟机使用模板
 	VmTemplateId *string `json:"vm_template_id,omitempty"`
 
 	// 是否使用公网ip
 	UsePublicIp *bool `json:"use_public_ip,omitempty"`
+
+	// 是否使用ipv6
+	UseIpv6 *bool `json:"use_ipv6,omitempty"`
 
 	// 复制或者同步后是否会继续持续同步，不添加则默认是false
 	Syncing *bool `json:"syncing,omitempty"`

@@ -17,6 +17,18 @@ func (i *AcceptOrRejectEndpointConnectionsInvoker) Invoke() (*model.AcceptOrReje
 	}
 }
 
+type AddCustomIngressPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddCustomIngressPortInvoker) Invoke() (*model.AddCustomIngressPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddCustomIngressPortResponse), nil
+	}
+}
+
 type AddEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -425,6 +437,18 @@ func (i *DeleteCustomAuthorizerV2Invoker) Invoke() (*model.DeleteCustomAuthorize
 	}
 }
 
+type DeleteCustomIngressPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomIngressPortInvoker) Invoke() (*model.DeleteCustomIngressPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomIngressPortResponse), nil
+	}
+}
+
 type DeleteEndpointPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,6 +842,30 @@ func (i *ListCustomAuthorizersV2Invoker) Invoke() (*model.ListCustomAuthorizersV
 		return nil, err
 	} else {
 		return result.(*model.ListCustomAuthorizersV2Response), nil
+	}
+}
+
+type ListCustomIngressPortDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomIngressPortDomainsInvoker) Invoke() (*model.ListCustomIngressPortDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomIngressPortDomainsResponse), nil
+	}
+}
+
+type ListCustomIngressPortsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomIngressPortsInvoker) Invoke() (*model.ListCustomIngressPortsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomIngressPortsResponse), nil
 	}
 }
 

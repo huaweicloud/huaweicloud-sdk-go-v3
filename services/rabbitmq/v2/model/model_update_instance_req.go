@@ -31,6 +31,9 @@ type UpdateInstanceReq struct {
 
 	// 企业项目。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// ACL访问控制（仅AMQP版本支持此参数）。
+	EnableAcl *bool `json:"enable_acl,omitempty"`
 }
 
 func (o UpdateInstanceReq) String() string {

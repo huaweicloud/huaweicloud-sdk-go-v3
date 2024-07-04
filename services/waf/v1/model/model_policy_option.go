@@ -15,7 +15,7 @@ type PolicyOption struct {
 	// 常规检测是否开启
 	Common *bool `json:"common,omitempty"`
 
-	// 预留参数，改参数值一直为true，用户可忽略该参数值
+	// 预留参数，该参数值一直为true，用户可忽略该参数值
 	Crawler *bool `json:"crawler,omitempty"`
 
 	// 搜索engine是否开启

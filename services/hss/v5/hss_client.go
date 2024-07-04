@@ -523,6 +523,27 @@ func (c *HssClient) ListContainerNodesInvoker(request *model.ListContainerNodesR
 	return &ListContainerNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListContainers 查询容器基本信息列表
+//
+// 查询容器基本信息列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListContainers(request *model.ListContainersRequest) (*model.ListContainersResponse, error) {
+	requestDef := GenReqDefForListContainers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListContainersResponse), nil
+	}
+}
+
+// ListContainersInvoker 查询容器基本信息列表
+func (c *HssClient) ListContainersInvoker(request *model.ListContainersRequest) *ListContainersInvoker {
+	requestDef := GenReqDefForListContainers()
+	return &ListContainersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHostGroups 查询服务器组列表
 //
 // 查询服务器组列表
@@ -626,6 +647,27 @@ func (c *HssClient) ListHostVuls(request *model.ListHostVulsRequest) (*model.Lis
 func (c *HssClient) ListHostVulsInvoker(request *model.ListHostVulsRequest) *ListHostVulsInvoker {
 	requestDef := GenReqDefForListHostVuls()
 	return &ListHostVulsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImageLocal 本地镜像列表查询
+//
+// 本地镜像列表查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListImageLocal(request *model.ListImageLocalRequest) (*model.ListImageLocalResponse, error) {
+	requestDef := GenReqDefForListImageLocal()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageLocalResponse), nil
+	}
+}
+
+// ListImageLocalInvoker 本地镜像列表查询
+func (c *HssClient) ListImageLocalInvoker(request *model.ListImageLocalRequest) *ListImageLocalInvoker {
+	requestDef := GenReqDefForListImageLocal()
+	return &ListImageLocalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListImageRiskConfigRules 查询镜像指定安全配置项的检查项列表

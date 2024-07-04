@@ -8,10 +8,10 @@ import (
 
 type ShowCeshierarchyRespQueues struct {
 
-	// 队列名称。
+	// Queue名称。
 	Name *string `json:"name,omitempty"`
 
-	// 对应的vhost。
+	// 对应的Vhost。
 	Vhost *string `json:"vhost,omitempty"`
 }
 

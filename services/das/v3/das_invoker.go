@@ -185,6 +185,18 @@ func (i *ExportSlowSqlTemplatesDetailsInvoker) Invoke() (*model.ExportSlowSqlTem
 	}
 }
 
+type ExportSlowSqlTrendDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportSlowSqlTrendDetailsInvoker) Invoke() (*model.ExportSlowSqlTrendDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportSlowSqlTrendDetailsResponse), nil
+	}
+}
+
 type ExportSqlStatementsInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -16,16 +16,16 @@ type PostSourceServerBody struct {
 	Id *string `json:"id,omitempty"`
 
 	// 源端服务器ip，注册源端时必选，更新非必选
-	Ip string `json:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 用来区分不同源端服务器的名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 源端主机名，注册源端必选，更新非必选
 	Hostname *string `json:"hostname,omitempty"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType PostSourceServerBodyOsType `json:"os_type"`
+	OsType *PostSourceServerBodyOsType `json:"os_type,omitempty"`
 
 	// 操作系统版本，注册必选，更新非必选
 	OsVersion *string `json:"os_version,omitempty"`
@@ -85,7 +85,7 @@ type PostSourceServerBody struct {
 	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
 
 	// Agent版本
-	AgentVersion string `json:"agent_version"`
+	AgentVersion *string `json:"agent_version,omitempty"`
 
 	// 内核版本信息
 	KernelVersion *string `json:"kernel_version,omitempty"`

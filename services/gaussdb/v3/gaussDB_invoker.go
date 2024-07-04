@@ -1673,6 +1673,18 @@ func (i *CheckStarRocksResourceInvoker) Invoke() (*model.CheckStarRocksResourceR
 	}
 }
 
+type CheckStarrocksParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckStarrocksParamsInvoker) Invoke() (*model.CheckStarrocksParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckStarrocksParamsResponse), nil
+	}
+}
+
 type CheckTableConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2081,6 +2093,18 @@ func (i *ResizeClickHouseInstanceInvoker) Invoke() (*model.ResizeClickHouseInsta
 	}
 }
 
+type ResizeStarRocksFlavorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeStarRocksFlavorInvoker) Invoke() (*model.ResizeStarRocksFlavorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeStarRocksFlavorResponse), nil
+	}
+}
+
 type RestartStarrocksInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2177,6 +2201,30 @@ func (i *ShowStarRocksDatabaseUserInvoker) Invoke() (*model.ShowStarRocksDatabas
 	}
 }
 
+type ShowStarrocksParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStarrocksParamsInvoker) Invoke() (*model.ShowStarrocksParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStarrocksParamsResponse), nil
+	}
+}
+
+type SyncStarRocksUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncStarRocksUsersInvoker) Invoke() (*model.SyncStarRocksUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncStarRocksUsersResponse), nil
+	}
+}
+
 type UpdateClickHouseDataBaseConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2258,6 +2306,18 @@ func (i *UpdateStarRocksDatabaseUserPermissionInvoker) Invoke() (*model.UpdateSt
 		return nil, err
 	} else {
 		return result.(*model.UpdateStarRocksDatabaseUserPermissionResponse), nil
+	}
+}
+
+type UpdateStarrocksParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStarrocksParamsInvoker) Invoke() (*model.UpdateStarrocksParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStarrocksParamsResponse), nil
 	}
 }
 

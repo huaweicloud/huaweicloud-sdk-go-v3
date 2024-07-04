@@ -425,6 +425,30 @@ func (i *ListRetirableGrantsInvoker) Invoke() (*model.ListRetirableGrantsRespons
 	}
 }
 
+type ListSupportRegionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupportRegionsInvoker) Invoke() (*model.ListSupportRegionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupportRegionsResponse), nil
+	}
+}
+
+type ReplicateKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ReplicateKeyInvoker) Invoke() (*model.ReplicateKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ReplicateKeyResponse), nil
+	}
+}
+
 type ShowKeyRotationStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -542,6 +566,18 @@ func (i *UpdateKeyRotationIntervalInvoker) Invoke() (*model.UpdateKeyRotationInt
 		return nil, err
 	} else {
 		return result.(*model.UpdateKeyRotationIntervalResponse), nil
+	}
+}
+
+type UpdatePrimaryRegionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrimaryRegionInvoker) Invoke() (*model.UpdatePrimaryRegionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrimaryRegionResponse), nil
 	}
 }
 

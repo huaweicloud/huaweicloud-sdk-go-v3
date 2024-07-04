@@ -775,6 +775,48 @@ func (c *KmsClient) ListRetirableGrantsInvoker(request *model.ListRetirableGrant
 	return &ListRetirableGrantsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSupportRegions 查询跨区域密钥所支持的区域
+//
+// - 功能介绍：查询跨区域密钥所支持的区域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ListSupportRegions(request *model.ListSupportRegionsRequest) (*model.ListSupportRegionsResponse, error) {
+	requestDef := GenReqDefForListSupportRegions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupportRegionsResponse), nil
+	}
+}
+
+// ListSupportRegionsInvoker 查询跨区域密钥所支持的区域
+func (c *KmsClient) ListSupportRegionsInvoker(request *model.ListSupportRegionsRequest) *ListSupportRegionsInvoker {
+	requestDef := GenReqDefForListSupportRegions()
+	return &ListSupportRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ReplicateKey 复制密钥到指定区域
+//
+// 将本区域的密钥复制到指定区域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ReplicateKey(request *model.ReplicateKeyRequest) (*model.ReplicateKeyResponse, error) {
+	requestDef := GenReqDefForReplicateKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ReplicateKeyResponse), nil
+	}
+}
+
+// ReplicateKeyInvoker 复制密钥到指定区域
+func (c *KmsClient) ReplicateKeyInvoker(request *model.ReplicateKeyRequest) *ReplicateKeyInvoker {
+	requestDef := GenReqDefForReplicateKey()
+	return &ReplicateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowKeyRotationStatus 查询密钥轮换状态
 //
 // - 功能介绍：查询用户主密钥轮换状态。
@@ -989,6 +1031,27 @@ func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIn
 func (c *KmsClient) UpdateKeyRotationIntervalInvoker(request *model.UpdateKeyRotationIntervalRequest) *UpdateKeyRotationIntervalInvoker {
 	requestDef := GenReqDefForUpdateKeyRotationInterval()
 	return &UpdateKeyRotationIntervalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrimaryRegion 修改密钥所属的主区域
+//
+// 修改密钥所属的主区域。修改后当前区域会变为副本区域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) UpdatePrimaryRegion(request *model.UpdatePrimaryRegionRequest) (*model.UpdatePrimaryRegionResponse, error) {
+	requestDef := GenReqDefForUpdatePrimaryRegion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrimaryRegionResponse), nil
+	}
+}
+
+// UpdatePrimaryRegionInvoker 修改密钥所属的主区域
+func (c *KmsClient) UpdatePrimaryRegionInvoker(request *model.UpdatePrimaryRegionRequest) *UpdatePrimaryRegionInvoker {
+	requestDef := GenReqDefForUpdatePrimaryRegion()
+	return &UpdatePrimaryRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateSignature 验证签名

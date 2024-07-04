@@ -40,6 +40,27 @@ func (c *ApigClient) AcceptOrRejectEndpointConnectionsInvoker(request *model.Acc
 	return &AcceptOrRejectEndpointConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddCustomIngressPort 新增实例的自定义入方向端口
+//
+// 新增实例的自定义入方向端口，在同个实例中，一个端口仅能支持一种协议。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) AddCustomIngressPort(request *model.AddCustomIngressPortRequest) (*model.AddCustomIngressPortResponse, error) {
+	requestDef := GenReqDefForAddCustomIngressPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddCustomIngressPortResponse), nil
+	}
+}
+
+// AddCustomIngressPortInvoker 新增实例的自定义入方向端口
+func (c *ApigClient) AddCustomIngressPortInvoker(request *model.AddCustomIngressPortRequest) *AddCustomIngressPortInvoker {
+	requestDef := GenReqDefForAddCustomIngressPort()
+	return &AddCustomIngressPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddEipV2 实例更新或绑定EIP
 //
 // 实例更新或绑定EIP
@@ -148,6 +169,7 @@ func (c *ApigClient) AssociateAppsForAppQuotaInvoker(request *model.AssociateApp
 // AssociateCertificateV2 绑定域名证书
 //
 // 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
+// 使用实例自定义入方向端口的特性时，相同的域名会同时绑定证书，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
 // 本章节主要介绍为特定域名绑定证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -798,6 +820,27 @@ func (c *ApigClient) DeleteCustomAuthorizerV2Invoker(request *model.DeleteCustom
 	return &DeleteCustomAuthorizerV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteCustomIngressPort 删除实例指定的自定义入方向端口
+//
+// 删除实例指定的自定义入方向端口，不包含默认端口80和443。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteCustomIngressPort(request *model.DeleteCustomIngressPortRequest) (*model.DeleteCustomIngressPortResponse, error) {
+	requestDef := GenReqDefForDeleteCustomIngressPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCustomIngressPortResponse), nil
+	}
+}
+
+// DeleteCustomIngressPortInvoker 删除实例指定的自定义入方向端口
+func (c *ApigClient) DeleteCustomIngressPortInvoker(request *model.DeleteCustomIngressPortRequest) *DeleteCustomIngressPortInvoker {
+	requestDef := GenReqDefForDeleteCustomIngressPort()
+	return &DeleteCustomIngressPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteEndpointPermissions 批量删除实例终端节点连接白名单
 //
 // 批量删除实例终端节点连接白名单。
@@ -1080,7 +1123,7 @@ func (c *ApigClient) DisassociateAppQuotaWithAppInvoker(request *model.Disassoci
 
 // DisassociateCertificateV2 删除域名证书
 //
-// 如果域名证书不再需要或者已过期，则可以删除证书内容。
+// 如果域名证书不再需要或者已过期，则可以删除证书内容。在使用自定义入方向端口的特性时，相同的域名会同时解绑证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) DisassociateCertificateV2(request *model.DisassociateCertificateV2Request) (*model.DisassociateCertificateV2Response, error) {
@@ -1501,6 +1544,48 @@ func (c *ApigClient) ListCustomAuthorizersV2(request *model.ListCustomAuthorizer
 func (c *ApigClient) ListCustomAuthorizersV2Invoker(request *model.ListCustomAuthorizersV2Request) *ListCustomAuthorizersV2Invoker {
 	requestDef := GenReqDefForListCustomAuthorizersV2()
 	return &ListCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomIngressPortDomains 查询实例指定的自定义入方向端口绑定的域名信息
+//
+// 查询实例指定的自定义入方向端口绑定的域名信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListCustomIngressPortDomains(request *model.ListCustomIngressPortDomainsRequest) (*model.ListCustomIngressPortDomainsResponse, error) {
+	requestDef := GenReqDefForListCustomIngressPortDomains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomIngressPortDomainsResponse), nil
+	}
+}
+
+// ListCustomIngressPortDomainsInvoker 查询实例指定的自定义入方向端口绑定的域名信息
+func (c *ApigClient) ListCustomIngressPortDomainsInvoker(request *model.ListCustomIngressPortDomainsRequest) *ListCustomIngressPortDomainsInvoker {
+	requestDef := GenReqDefForListCustomIngressPortDomains()
+	return &ListCustomIngressPortDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomIngressPorts 查询实例的自定义入方向端口列表
+//
+// 查询实例的自定义入方向端口列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListCustomIngressPorts(request *model.ListCustomIngressPortsRequest) (*model.ListCustomIngressPortsResponse, error) {
+	requestDef := GenReqDefForListCustomIngressPorts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomIngressPortsResponse), nil
+	}
+}
+
+// ListCustomIngressPortsInvoker 查询实例的自定义入方向端口列表
+func (c *ApigClient) ListCustomIngressPortsInvoker(request *model.ListCustomIngressPortsRequest) *ListCustomIngressPortsInvoker {
+	requestDef := GenReqDefForListCustomIngressPorts()
+	return &ListCustomIngressPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEndpointConnections 查询实例终端节点连接列表
@@ -2508,7 +2593,7 @@ func (c *ApigClient) UpdateCustomAuthorizerV2Invoker(request *model.UpdateCustom
 
 // UpdateDomainV2 修改域名
 //
-// 修改绑定的域名所对应的配置信息。
+// 修改绑定的域名所对应的配置信息。使用实例自定义入方向端口的特性时，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateDomainV2(request *model.UpdateDomainV2Request) (*model.UpdateDomainV2Response, error) {
@@ -3758,7 +3843,7 @@ func (c *ApigClient) ImportApiDefinitionsV2Invoker(request *model.ImportApiDefin
 
 // BatchAssociateCertsV2 域名绑定SSL证书
 //
-// 域名绑定SSL证书。目前暂时仅支持单个绑定，请求体当中的certificate_ids里面有且只能有一个证书ID。
+// 域名绑定SSL证书。目前暂时仅支持单个绑定，请求体当中的certificate_ids里面有且只能有一个证书ID。使用实例自定义入方向端口的特性时，相同的域名会同时绑定证书，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchAssociateCertsV2(request *model.BatchAssociateCertsV2Request) (*model.BatchAssociateCertsV2Response, error) {
@@ -3779,7 +3864,7 @@ func (c *ApigClient) BatchAssociateCertsV2Invoker(request *model.BatchAssociateC
 
 // BatchAssociateDomainsV2 SSL证书绑定域名
 //
-// SSL证书绑定域名。
+// SSL证书绑定域名。使用实例自定义入方向端口的特性时，相同的域名会同时绑定证书，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchAssociateDomainsV2(request *model.BatchAssociateDomainsV2Request) (*model.BatchAssociateDomainsV2Response, error) {
@@ -3800,7 +3885,7 @@ func (c *ApigClient) BatchAssociateDomainsV2Invoker(request *model.BatchAssociat
 
 // BatchDisassociateCertsV2 域名解绑SSL证书
 //
-// 域名解绑SSL证书。目前暂时仅支持单个解绑，请求体当中的certificate_ids里面有且只能有一个证书ID。
+// 域名解绑SSL证书。目前暂时仅支持单个解绑，请求体当中的certificate_ids里面有且只能有一个证书ID。在使用自定义入方向端口的特性时，相同的域名会同时解绑证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateCertsV2(request *model.BatchDisassociateCertsV2Request) (*model.BatchDisassociateCertsV2Response, error) {
@@ -3821,7 +3906,7 @@ func (c *ApigClient) BatchDisassociateCertsV2Invoker(request *model.BatchDisasso
 
 // BatchDisassociateDomainsV2 SSL证书解绑域名
 //
-// SSL证书解绑域名。
+// SSL证书解绑域名。在使用自定义入方向端口的特性时，相同的域名会同时解绑证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) BatchDisassociateDomainsV2(request *model.BatchDisassociateDomainsV2Request) (*model.BatchDisassociateDomainsV2Response, error) {

@@ -197,6 +197,18 @@ func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) 
 	}
 }
 
+type CreateInstanceIam5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceIam5Invoker) Invoke() (*model.CreateInstanceIam5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceIam5Response), nil
+	}
+}
+
 type CreateManualBackupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +278,18 @@ func (i *DeleteConfigurationInvoker) Invoke() (*model.DeleteConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteConfigurationResponse), nil
+	}
+}
+
+type DeleteDisasterRecoveryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDisasterRecoveryInvoker) Invoke() (*model.DeleteDisasterRecoveryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDisasterRecoveryResponse), nil
 	}
 }
 
@@ -518,6 +542,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListFlavorsResizeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFlavorsResizeInvoker) Invoke() (*model.ListFlavorsResizeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFlavorsResizeResponse), nil
 	}
 }
 
@@ -1550,6 +1586,18 @@ func (i *SwitchSslInvoker) Invoke() (*model.SwitchSslResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchSslResponse), nil
+	}
+}
+
+type UnlockNodeReadonlyStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnlockNodeReadonlyStatusInvoker) Invoke() (*model.UnlockNodeReadonlyStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnlockNodeReadonlyStatusResponse), nil
 	}
 }
 

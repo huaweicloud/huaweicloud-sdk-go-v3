@@ -293,6 +293,18 @@ func (i *ListContainerNodesInvoker) Invoke() (*model.ListContainerNodesResponse,
 	}
 }
 
+type ListContainersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListContainersInvoker) Invoke() (*model.ListContainersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListContainersResponse), nil
+	}
+}
+
 type ListHostGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -350,6 +362,18 @@ func (i *ListHostVulsInvoker) Invoke() (*model.ListHostVulsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListHostVulsResponse), nil
+	}
+}
+
+type ListImageLocalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListImageLocalInvoker) Invoke() (*model.ListImageLocalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListImageLocalResponse), nil
 	}
 }
 

@@ -13,8 +13,8 @@ type ListComponentOverviewsResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 组件部署信息列表。
-	Components     *[]ComponentView `json:"components,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Components     *[]ComponentOverview `json:"components,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListComponentOverviewsResponse) String() string {

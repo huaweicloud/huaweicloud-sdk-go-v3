@@ -21,10 +21,10 @@ type CreateInstanceReq struct {
 	// 消息引擎：rabbitmq。
 	Engine CreateInstanceReqEngine `json:"engine"`
 
-	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
-	EngineVersion CreateInstanceReqEngineVersion `json:"engine_version"`
+	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+	EngineVersion string `json:"engine_version"`
 
-	// 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+	// 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
 	StorageSpace int32 `json:"storage_space"`
 
 	// 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -112,49 +112,6 @@ func (c CreateInstanceReqEngine) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateInstanceReqEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type CreateInstanceReqEngineVersion struct {
-	value string
-}
-
-type CreateInstanceReqEngineVersionEnum struct {
-	E_3_8_35 CreateInstanceReqEngineVersion
-}
-
-func GetCreateInstanceReqEngineVersionEnum() CreateInstanceReqEngineVersionEnum {
-	return CreateInstanceReqEngineVersionEnum{
-		E_3_8_35: CreateInstanceReqEngineVersion{
-			value: "3.8.35",
-		},
-	}
-}
-
-func (c CreateInstanceReqEngineVersion) Value() string {
-	return c.value
-}
-
-func (c CreateInstanceReqEngineVersion) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateInstanceReqEngineVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

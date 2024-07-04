@@ -329,7 +329,7 @@ func (c *DasClient) ExportSlowSqlStatisticsInvoker(request *model.ExportSlowSqlS
 	return &ExportSlowSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportSlowSqlTemplatesDetails 导出慢SQL模板列表。
+// ExportSlowSqlTemplatesDetails 导出慢SQL模板列表
 //
 // 慢SQL开关打开后，导出慢SQL模板列表。免费实例仅支持查看最近一小时数据。查询时间间隔最长一天。
 //
@@ -344,10 +344,31 @@ func (c *DasClient) ExportSlowSqlTemplatesDetails(request *model.ExportSlowSqlTe
 	}
 }
 
-// ExportSlowSqlTemplatesDetailsInvoker 导出慢SQL模板列表。
+// ExportSlowSqlTemplatesDetailsInvoker 导出慢SQL模板列表
 func (c *DasClient) ExportSlowSqlTemplatesDetailsInvoker(request *model.ExportSlowSqlTemplatesDetailsRequest) *ExportSlowSqlTemplatesDetailsInvoker {
 	requestDef := GenReqDefForExportSlowSqlTemplatesDetails()
 	return &ExportSlowSqlTemplatesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportSlowSqlTrendDetails 导出慢SQL数量趋势
+//
+// 慢SQL开关打开后，导出慢SQL数量趋势。免费实例仅支持查看最近一小时数据。查询时间间隔最长一天。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ExportSlowSqlTrendDetails(request *model.ExportSlowSqlTrendDetailsRequest) (*model.ExportSlowSqlTrendDetailsResponse, error) {
+	requestDef := GenReqDefForExportSlowSqlTrendDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportSlowSqlTrendDetailsResponse), nil
+	}
+}
+
+// ExportSlowSqlTrendDetailsInvoker 导出慢SQL数量趋势
+func (c *DasClient) ExportSlowSqlTrendDetailsInvoker(request *model.ExportSlowSqlTrendDetailsRequest) *ExportSlowSqlTrendDetailsInvoker {
+	requestDef := GenReqDefForExportSlowSqlTrendDetails()
+	return &ExportSlowSqlTrendDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExportSqlStatements 导出全量SQL
@@ -371,7 +392,7 @@ func (c *DasClient) ExportSqlStatementsInvoker(request *model.ExportSqlStatement
 	return &ExportSqlStatementsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportTopSqlTemplatesDetails 导出TopSQL模板列表。
+// ExportTopSqlTemplatesDetails 导出TopSQL模板列表
 //
 // TopSQL开关打开后，导出TopSQL模板列表。该功能仅支持付费实例。查询时间间隔最长一小时。
 //
@@ -386,13 +407,13 @@ func (c *DasClient) ExportTopSqlTemplatesDetails(request *model.ExportTopSqlTemp
 	}
 }
 
-// ExportTopSqlTemplatesDetailsInvoker 导出TopSQL模板列表。
+// ExportTopSqlTemplatesDetailsInvoker 导出TopSQL模板列表
 func (c *DasClient) ExportTopSqlTemplatesDetailsInvoker(request *model.ExportTopSqlTemplatesDetailsRequest) *ExportTopSqlTemplatesDetailsInvoker {
 	requestDef := GenReqDefForExportTopSqlTemplatesDetails()
 	return &ExportTopSqlTemplatesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportTopSqlTrendDetails 导出SQL执行耗时区间数据。
+// ExportTopSqlTrendDetails 导出SQL执行耗时区间数据
 //
 // TopSQL开关打开后，导出SQL执行耗时区间数据。该功能仅支持付费实例。查询时间间隔最长六小时。
 //
@@ -407,7 +428,7 @@ func (c *DasClient) ExportTopSqlTrendDetails(request *model.ExportTopSqlTrendDet
 	}
 }
 
-// ExportTopSqlTrendDetailsInvoker 导出SQL执行耗时区间数据。
+// ExportTopSqlTrendDetailsInvoker 导出SQL执行耗时区间数据
 func (c *DasClient) ExportTopSqlTrendDetailsInvoker(request *model.ExportTopSqlTrendDetailsRequest) *ExportTopSqlTrendDetailsInvoker {
 	requestDef := GenReqDefForExportTopSqlTrendDetails()
 	return &ExportTopSqlTrendDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -716,7 +737,7 @@ func (c *DasClient) ShowSqlLimitSwitchStatusInvoker(request *model.ShowSqlLimitS
 	return &ShowSqlLimitSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSqlSwitchStatus 查询全量SQL和慢SQL的开关状态。
+// ShowSqlSwitchStatus 查询全量SQL和慢SQL的开关状态
 //
 // 查询DAS收集全量SQL和慢SQL的开关状态。该功能仅支持付费实例。
 //
@@ -731,7 +752,7 @@ func (c *DasClient) ShowSqlSwitchStatus(request *model.ShowSqlSwitchStatusReques
 	}
 }
 
-// ShowSqlSwitchStatusInvoker 查询全量SQL和慢SQL的开关状态。
+// ShowSqlSwitchStatusInvoker 查询全量SQL和慢SQL的开关状态
 func (c *DasClient) ShowSqlSwitchStatusInvoker(request *model.ShowSqlSwitchStatusRequest) *ShowSqlSwitchStatusInvoker {
 	requestDef := GenReqDefForShowSqlSwitchStatus()
 	return &ShowSqlSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

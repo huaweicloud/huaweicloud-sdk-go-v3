@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ResourceType 资源类型。  基础资源：cce、cci、ecs、as。  可选资源：rds、dcs、elb等其他类型。
+// ResourceType 资源类型。  基础资源：cce、ecs、as。  可选资源：rds、dcs、elb、cse等其他类型。
 type ResourceType struct {
 	value string
 }

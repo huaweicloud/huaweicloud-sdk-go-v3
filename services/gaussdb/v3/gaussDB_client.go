@@ -2940,6 +2940,27 @@ func (c *GaussDBClient) CheckStarRocksResourceInvoker(request *model.CheckStarRo
 	return &CheckStarRocksResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckStarrocksParams 参数对比
+//
+// 对比实例参数和默认模板的差异
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CheckStarrocksParams(request *model.CheckStarrocksParamsRequest) (*model.CheckStarrocksParamsResponse, error) {
+	requestDef := GenReqDefForCheckStarrocksParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckStarrocksParamsResponse), nil
+	}
+}
+
+// CheckStarrocksParamsInvoker 参数对比
+func (c *GaussDBClient) CheckStarrocksParamsInvoker(request *model.CheckStarrocksParamsRequest) *CheckStarrocksParamsInvoker {
+	requestDef := GenReqDefForCheckStarrocksParams()
+	return &CheckStarrocksParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckTableConfig HTAP数据同步表配置校验
 //
 // HTAP数据同步表配置校验。
@@ -3654,6 +3675,27 @@ func (c *GaussDBClient) ResizeClickHouseInstanceInvoker(request *model.ResizeCli
 	return &ResizeClickHouseInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResizeStarRocksFlavor StarRocks实例规格变更
+//
+// StarRocks实例规格变更。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ResizeStarRocksFlavor(request *model.ResizeStarRocksFlavorRequest) (*model.ResizeStarRocksFlavorResponse, error) {
+	requestDef := GenReqDefForResizeStarRocksFlavor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeStarRocksFlavorResponse), nil
+	}
+}
+
+// ResizeStarRocksFlavorInvoker StarRocks实例规格变更
+func (c *GaussDBClient) ResizeStarRocksFlavorInvoker(request *model.ResizeStarRocksFlavorRequest) *ResizeStarRocksFlavorInvoker {
+	requestDef := GenReqDefForResizeStarRocksFlavor()
+	return &ResizeStarRocksFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestartStarrocksInstance 重启StarRocks实例
 //
 // 重启StarRocks实例。
@@ -3822,6 +3864,48 @@ func (c *GaussDBClient) ShowStarRocksDatabaseUserInvoker(request *model.ShowStar
 	return &ShowStarRocksDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowStarrocksParams 查询参数
+//
+// 按节点类型查询参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowStarrocksParams(request *model.ShowStarrocksParamsRequest) (*model.ShowStarrocksParamsResponse, error) {
+	requestDef := GenReqDefForShowStarrocksParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStarrocksParamsResponse), nil
+	}
+}
+
+// ShowStarrocksParamsInvoker 查询参数
+func (c *GaussDBClient) ShowStarrocksParamsInvoker(request *model.ShowStarrocksParamsRequest) *ShowStarrocksParamsInvoker {
+	requestDef := GenReqDefForShowStarrocksParams()
+	return &ShowStarrocksParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncStarRocksUsers StarRocks实例开启行列分流
+//
+// StarRocks实例开启行列分流。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SyncStarRocksUsers(request *model.SyncStarRocksUsersRequest) (*model.SyncStarRocksUsersResponse, error) {
+	requestDef := GenReqDefForSyncStarRocksUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncStarRocksUsersResponse), nil
+	}
+}
+
+// SyncStarRocksUsersInvoker StarRocks实例开启行列分流
+func (c *GaussDBClient) SyncStarRocksUsersInvoker(request *model.SyncStarRocksUsersRequest) *SyncStarRocksUsersInvoker {
+	requestDef := GenReqDefForSyncStarRocksUsers()
+	return &SyncStarRocksUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateClickHouseDataBaseConfig 修改数据同步
 //
 // 修改数据同步。
@@ -3967,6 +4051,27 @@ func (c *GaussDBClient) UpdateStarRocksDatabaseUserPermission(request *model.Upd
 func (c *GaussDBClient) UpdateStarRocksDatabaseUserPermissionInvoker(request *model.UpdateStarRocksDatabaseUserPermissionRequest) *UpdateStarRocksDatabaseUserPermissionInvoker {
 	requestDef := GenReqDefForUpdateStarRocksDatabaseUserPermission()
 	return &UpdateStarRocksDatabaseUserPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStarrocksParams 修改参数
+//
+// 按节点类型修改节点参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateStarrocksParams(request *model.UpdateStarrocksParamsRequest) (*model.UpdateStarrocksParamsResponse, error) {
+	requestDef := GenReqDefForUpdateStarrocksParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStarrocksParamsResponse), nil
+	}
+}
+
+// UpdateStarrocksParamsInvoker 修改参数
+func (c *GaussDBClient) UpdateStarrocksParamsInvoker(request *model.UpdateStarrocksParamsRequest) *UpdateStarrocksParamsInvoker {
+	requestDef := GenReqDefForUpdateStarrocksParams()
+	return &UpdateStarrocksParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSqlFilterRule 删除SQL限流规则
