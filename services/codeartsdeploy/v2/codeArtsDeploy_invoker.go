@@ -5,6 +5,162 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsdeploy/v2/model"
 )
 
+type CreateAppGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAppGroupsInvoker) Invoke() (*model.CreateAppGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAppGroupsResponse), nil
+	}
+}
+
+type DeleteAppGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppGroupsInvoker) Invoke() (*model.DeleteAppGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppGroupsResponse), nil
+	}
+}
+
+type ListAppGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppGroupsInvoker) Invoke() (*model.ListAppGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppGroupsResponse), nil
+	}
+}
+
+type MoveAppGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MoveAppGroupsInvoker) Invoke() (*model.MoveAppGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MoveAppGroupsResponse), nil
+	}
+}
+
+type MoveAppToGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MoveAppToGroupInvoker) Invoke() (*model.MoveAppToGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MoveAppToGroupResponse), nil
+	}
+}
+
+type UpdateAppGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppGroupsInvoker) Invoke() (*model.UpdateAppGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppGroupsResponse), nil
+	}
+}
+
+type BatchUpdateApplicationPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateApplicationPermissionsInvoker) Invoke() (*model.BatchUpdateApplicationPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateApplicationPermissionsResponse), nil
+	}
+}
+
+type BatchUpdatePermissionLevelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdatePermissionLevelInvoker) Invoke() (*model.BatchUpdatePermissionLevelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdatePermissionLevelResponse), nil
+	}
+}
+
+type CheckCanCreateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckCanCreateInvoker) Invoke() (*model.CheckCanCreateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckCanCreateResponse), nil
+	}
+}
+
+type ListApplicationPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApplicationPermissionsInvoker) Invoke() (*model.ListApplicationPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApplicationPermissionsResponse), nil
+	}
+}
+
+type BatchDeleteAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAppInvoker) Invoke() (*model.BatchDeleteAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAppResponse), nil
+	}
+}
+
+type CheckIsDuplicateAppNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckIsDuplicateAppNameInvoker) Invoke() (*model.CheckIsDuplicateAppNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckIsDuplicateAppNameResponse), nil
+	}
+}
+
+type CopyApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyApplicationInvoker) Invoke() (*model.CopyApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyApplicationResponse), nil
+	}
+}
+
 type CreateAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -137,6 +293,30 @@ func (i *StartDeployTaskInvoker) Invoke() (*model.StartDeployTaskResponse, error
 	}
 }
 
+type UpdateAppDisableStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppDisableStatusInvoker) Invoke() (*model.UpdateAppDisableStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppDisableStatusResponse), nil
+	}
+}
+
+type UpdateAppInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppInfoInvoker) Invoke() (*model.UpdateAppInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppInfoResponse), nil
+	}
+}
+
 type CreateEnvironmentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -185,6 +365,18 @@ func (i *ImportHostToEnvironmentInvoker) Invoke() (*model.ImportHostToEnvironmen
 	}
 }
 
+type ListEnvironmentHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEnvironmentHostsInvoker) Invoke() (*model.ListEnvironmentHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEnvironmentHostsResponse), nil
+	}
+}
+
 type ListEnvironmentsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +398,66 @@ func (i *ShowEnvironmentDetailInvoker) Invoke() (*model.ShowEnvironmentDetailRes
 		return nil, err
 	} else {
 		return result.(*model.ShowEnvironmentDetailResponse), nil
+	}
+}
+
+type UpdateEnvironmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnvironmentInvoker) Invoke() (*model.UpdateEnvironmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEnvironmentResponse), nil
+	}
+}
+
+type ListEnvironmentPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEnvironmentPermissionsInvoker) Invoke() (*model.ListEnvironmentPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEnvironmentPermissionsResponse), nil
+	}
+}
+
+type UpdateEnvironmentPermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnvironmentPermissionInvoker) Invoke() (*model.UpdateEnvironmentPermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEnvironmentPermissionResponse), nil
+	}
+}
+
+type BatchDeleteHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteHostsInvoker) Invoke() (*model.BatchDeleteHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteHostsResponse), nil
+	}
+}
+
+type CopyHostsToTargetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyHostsToTargetInvoker) Invoke() (*model.CopyHostsToTargetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyHostsToTargetResponse), nil
 	}
 }
 
@@ -242,6 +494,18 @@ func (i *DeleteDeploymentHostInvoker) Invoke() (*model.DeleteDeploymentHostRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteDeploymentHostResponse), nil
+	}
+}
+
+type DeleteHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHostInvoker) Invoke() (*model.DeleteHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHostResponse), nil
 	}
 }
 
@@ -305,6 +569,18 @@ func (i *UpdateDeploymentHostInvoker) Invoke() (*model.UpdateDeploymentHostRespo
 	}
 }
 
+type UpdateHostInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostInfoInvoker) Invoke() (*model.UpdateHostInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHostInfoResponse), nil
+	}
+}
+
 type CreateDeploymentGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -341,6 +617,30 @@ func (i *DeleteDeploymentGroupInvoker) Invoke() (*model.DeleteDeploymentGroupRes
 	}
 }
 
+type DeleteHostClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHostClusterInvoker) Invoke() (*model.DeleteHostClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHostClusterResponse), nil
+	}
+}
+
+type ListAssociateEnvironmentsInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssociateEnvironmentsInfosInvoker) Invoke() (*model.ListAssociateEnvironmentsInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssociateEnvironmentsInfosResponse), nil
+	}
+}
+
 type ListHostClustersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -350,6 +650,18 @@ func (i *ListHostClustersInvoker) Invoke() (*model.ListHostClustersResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListHostClustersResponse), nil
+	}
+}
+
+type ListHostGroupBaseInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostGroupBaseInfosInvoker) Invoke() (*model.ListHostGroupBaseInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostGroupBaseInfosResponse), nil
 	}
 }
 
@@ -398,6 +710,54 @@ func (i *UpdateDeploymentGroupInvoker) Invoke() (*model.UpdateDeploymentGroupRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateDeploymentGroupResponse), nil
+	}
+}
+
+type UpdateHostClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostClusterInvoker) Invoke() (*model.UpdateHostClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHostClusterResponse), nil
+	}
+}
+
+type CheckWhetherHostGroupCanBeCreatedInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckWhetherHostGroupCanBeCreatedInvoker) Invoke() (*model.CheckWhetherHostGroupCanBeCreatedResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckWhetherHostGroupCanBeCreatedResponse), nil
+	}
+}
+
+type ListHostGroupPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostGroupPermissionsInvoker) Invoke() (*model.ListHostGroupPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostGroupPermissionsResponse), nil
+	}
+}
+
+type UpdateHostGroupPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostGroupPermissionsInvoker) Invoke() (*model.UpdateHostGroupPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHostGroupPermissionsResponse), nil
 	}
 }
 

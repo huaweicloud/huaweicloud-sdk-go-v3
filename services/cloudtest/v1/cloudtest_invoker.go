@@ -1349,6 +1349,18 @@ func (i *ShowTestCaseDetailV2Invoker) Invoke() (*model.ShowTestCaseDetailV2Respo
 	}
 }
 
+type ShowTestCaseReviewsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestCaseReviewsInvoker) Invoke() (*model.ShowTestCaseReviewsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestCaseReviewsResponse), nil
+	}
+}
+
 type ShowTestCasesChangeStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }

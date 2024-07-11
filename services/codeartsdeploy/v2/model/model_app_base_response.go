@@ -17,7 +17,7 @@ type AppBaseResponse struct {
 	// 应用所属区域
 	Region *string `json:"region,omitempty"`
 
-	// 部署任务列表
+	// 部署任务列表信息
 	ArrangeInfos *[]TaskBaseBody `json:"arrange_infos,omitempty"`
 }
 

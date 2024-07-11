@@ -9,13 +9,13 @@ import (
 // ListRocketInstanceTopicsResponse Response Object
 type ListRocketInstanceTopicsResponse struct {
 
-	// topic总数。
+	// Topic总数。
 	Total *int32 `json:"total,omitempty"`
 
-	// 最大可创建topic数量。
+	// 最大可创建Topic数量。
 	Max *int32 `json:"max,omitempty"`
 
-	// 剩余可创建topic数量。
+	// 剩余可创建Topic数量。
 	Remaining *int32 `json:"remaining,omitempty"`
 
 	// 下个分页的offset。
@@ -24,7 +24,7 @@ type ListRocketInstanceTopicsResponse struct {
 	// 上个分页的offset。
 	PreviousOffset *int32 `json:"previous_offset,omitempty"`
 
-	// topic列表。
+	// Topic列表。
 	Topics         *[]Topic `json:"topics,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

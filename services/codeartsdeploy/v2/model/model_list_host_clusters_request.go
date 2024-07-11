@@ -12,7 +12,7 @@ import (
 // ListHostClustersRequest Request Object
 type ListHostClustersRequest struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 主机集群模糊查询信息

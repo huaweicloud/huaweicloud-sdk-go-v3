@@ -12,7 +12,7 @@ import (
 // EnvironmentRequestBody 新建和编辑环境的请求体
 type EnvironmentRequestBody struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 环境名称

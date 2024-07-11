@@ -12,7 +12,7 @@ type ShowProjectSuccessRateResponse struct {
 	// 成功率
 	SuccessRate *string `json:"success_rate,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称

@@ -19,6 +19,279 @@ func CodeArtsDeployClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CreateAppGroups 创建分组
+//
+// 创建分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CreateAppGroups(request *model.CreateAppGroupsRequest) (*model.CreateAppGroupsResponse, error) {
+	requestDef := GenReqDefForCreateAppGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAppGroupsResponse), nil
+	}
+}
+
+// CreateAppGroupsInvoker 创建分组
+func (c *CodeArtsDeployClient) CreateAppGroupsInvoker(request *model.CreateAppGroupsRequest) *CreateAppGroupsInvoker {
+	requestDef := GenReqDefForCreateAppGroups()
+	return &CreateAppGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppGroups 删除分组
+//
+// 删除分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) DeleteAppGroups(request *model.DeleteAppGroupsRequest) (*model.DeleteAppGroupsResponse, error) {
+	requestDef := GenReqDefForDeleteAppGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppGroupsResponse), nil
+	}
+}
+
+// DeleteAppGroupsInvoker 删除分组
+func (c *CodeArtsDeployClient) DeleteAppGroupsInvoker(request *model.DeleteAppGroupsRequest) *DeleteAppGroupsInvoker {
+	requestDef := GenReqDefForDeleteAppGroups()
+	return &DeleteAppGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppGroups 查询分组列表
+//
+// 查询分组列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListAppGroups(request *model.ListAppGroupsRequest) (*model.ListAppGroupsResponse, error) {
+	requestDef := GenReqDefForListAppGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppGroupsResponse), nil
+	}
+}
+
+// ListAppGroupsInvoker 查询分组列表
+func (c *CodeArtsDeployClient) ListAppGroupsInvoker(request *model.ListAppGroupsRequest) *ListAppGroupsInvoker {
+	requestDef := GenReqDefForListAppGroups()
+	return &ListAppGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MoveAppGroups 移动分组
+//
+// 往上或者往下移动单个分组,用来在页面上调整分组位置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) MoveAppGroups(request *model.MoveAppGroupsRequest) (*model.MoveAppGroupsResponse, error) {
+	requestDef := GenReqDefForMoveAppGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MoveAppGroupsResponse), nil
+	}
+}
+
+// MoveAppGroupsInvoker 移动分组
+func (c *CodeArtsDeployClient) MoveAppGroupsInvoker(request *model.MoveAppGroupsRequest) *MoveAppGroupsInvoker {
+	requestDef := GenReqDefForMoveAppGroups()
+	return &MoveAppGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MoveAppToGroup 移动应用至指定分组
+//
+// 将应用移动至指定分组（支持批量）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) MoveAppToGroup(request *model.MoveAppToGroupRequest) (*model.MoveAppToGroupResponse, error) {
+	requestDef := GenReqDefForMoveAppToGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MoveAppToGroupResponse), nil
+	}
+}
+
+// MoveAppToGroupInvoker 移动应用至指定分组
+func (c *CodeArtsDeployClient) MoveAppToGroupInvoker(request *model.MoveAppToGroupRequest) *MoveAppToGroupInvoker {
+	requestDef := GenReqDefForMoveAppToGroup()
+	return &MoveAppToGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppGroups 修改分组
+//
+// 修改分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateAppGroups(request *model.UpdateAppGroupsRequest) (*model.UpdateAppGroupsResponse, error) {
+	requestDef := GenReqDefForUpdateAppGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppGroupsResponse), nil
+	}
+}
+
+// UpdateAppGroupsInvoker 修改分组
+func (c *CodeArtsDeployClient) UpdateAppGroupsInvoker(request *model.UpdateAppGroupsRequest) *UpdateAppGroupsInvoker {
+	requestDef := GenReqDefForUpdateAppGroups()
+	return &UpdateAppGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateApplicationPermissions 批量修改应用权限
+//
+// 批量修改应用权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) BatchUpdateApplicationPermissions(request *model.BatchUpdateApplicationPermissionsRequest) (*model.BatchUpdateApplicationPermissionsResponse, error) {
+	requestDef := GenReqDefForBatchUpdateApplicationPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateApplicationPermissionsResponse), nil
+	}
+}
+
+// BatchUpdateApplicationPermissionsInvoker 批量修改应用权限
+func (c *CodeArtsDeployClient) BatchUpdateApplicationPermissionsInvoker(request *model.BatchUpdateApplicationPermissionsRequest) *BatchUpdateApplicationPermissionsInvoker {
+	requestDef := GenReqDefForBatchUpdateApplicationPermissions()
+	return &BatchUpdateApplicationPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdatePermissionLevel 批量配置应用下鉴权级别
+//
+// 批量配置应用下鉴权级别为项目级或实例级。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) BatchUpdatePermissionLevel(request *model.BatchUpdatePermissionLevelRequest) (*model.BatchUpdatePermissionLevelResponse, error) {
+	requestDef := GenReqDefForBatchUpdatePermissionLevel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdatePermissionLevelResponse), nil
+	}
+}
+
+// BatchUpdatePermissionLevelInvoker 批量配置应用下鉴权级别
+func (c *CodeArtsDeployClient) BatchUpdatePermissionLevelInvoker(request *model.BatchUpdatePermissionLevelRequest) *BatchUpdatePermissionLevelInvoker {
+	requestDef := GenReqDefForBatchUpdatePermissionLevel()
+	return &BatchUpdatePermissionLevelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckCanCreate 查询当前用户是否有项目下创建应用权限
+//
+// 查询当前用户是否有项目下创建应用权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CheckCanCreate(request *model.CheckCanCreateRequest) (*model.CheckCanCreateResponse, error) {
+	requestDef := GenReqDefForCheckCanCreate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckCanCreateResponse), nil
+	}
+}
+
+// CheckCanCreateInvoker 查询当前用户是否有项目下创建应用权限
+func (c *CodeArtsDeployClient) CheckCanCreateInvoker(request *model.CheckCanCreateRequest) *CheckCanCreateInvoker {
+	requestDef := GenReqDefForCheckCanCreate()
+	return &CheckCanCreateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationPermissions 查询应用实例级/项目级权限矩阵
+//
+// 查询应用实例级/项目级权限矩阵，传递app_id时，查询应用实例级权限矩阵；未传app_id，传递project_id时，查询应用项目级权限矩阵。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListApplicationPermissions(request *model.ListApplicationPermissionsRequest) (*model.ListApplicationPermissionsResponse, error) {
+	requestDef := GenReqDefForListApplicationPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApplicationPermissionsResponse), nil
+	}
+}
+
+// ListApplicationPermissionsInvoker 查询应用实例级/项目级权限矩阵
+func (c *CodeArtsDeployClient) ListApplicationPermissionsInvoker(request *model.ListApplicationPermissionsRequest) *ListApplicationPermissionsInvoker {
+	requestDef := GenReqDefForListApplicationPermissions()
+	return &ListApplicationPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteApp 批量删除项目下应用
+//
+// 批量删除项目下应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) BatchDeleteApp(request *model.BatchDeleteAppRequest) (*model.BatchDeleteAppResponse, error) {
+	requestDef := GenReqDefForBatchDeleteApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteAppResponse), nil
+	}
+}
+
+// BatchDeleteAppInvoker 批量删除项目下应用
+func (c *CodeArtsDeployClient) BatchDeleteAppInvoker(request *model.BatchDeleteAppRequest) *BatchDeleteAppInvoker {
+	requestDef := GenReqDefForBatchDeleteApp()
+	return &BatchDeleteAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckIsDuplicateAppName 查询项目下是否存在同名应用
+//
+// 查询项目下是否存在同名应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CheckIsDuplicateAppName(request *model.CheckIsDuplicateAppNameRequest) (*model.CheckIsDuplicateAppNameResponse, error) {
+	requestDef := GenReqDefForCheckIsDuplicateAppName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckIsDuplicateAppNameResponse), nil
+	}
+}
+
+// CheckIsDuplicateAppNameInvoker 查询项目下是否存在同名应用
+func (c *CodeArtsDeployClient) CheckIsDuplicateAppNameInvoker(request *model.CheckIsDuplicateAppNameRequest) *CheckIsDuplicateAppNameInvoker {
+	requestDef := GenReqDefForCheckIsDuplicateAppName()
+	return &CheckIsDuplicateAppNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyApplication 复制应用
+//
+// 复制应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CopyApplication(request *model.CopyApplicationRequest) (*model.CopyApplicationResponse, error) {
+	requestDef := GenReqDefForCopyApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyApplicationResponse), nil
+	}
+}
+
+// CopyApplicationInvoker 复制应用
+func (c *CodeArtsDeployClient) CopyApplicationInvoker(request *model.CopyApplicationRequest) *CopyApplicationInvoker {
+	requestDef := GenReqDefForCopyApplication()
+	return &CopyApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateApp 新建应用
 //
 // 新建应用。
@@ -210,7 +483,7 @@ func (c *CodeArtsDeployClient) ShowDeployTaskDetailInvoker(request *model.ShowDe
 
 // ShowExecutionParams 查询部署记录的执行参数
 //
-// 查询部署记录的执行参数
+// 查询部署记录的执行参数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsDeployClient) ShowExecutionParams(request *model.ShowExecutionParamsRequest) (*model.ShowExecutionParamsResponse, error) {
@@ -248,6 +521,48 @@ func (c *CodeArtsDeployClient) StartDeployTask(request *model.StartDeployTaskReq
 func (c *CodeArtsDeployClient) StartDeployTaskInvoker(request *model.StartDeployTaskRequest) *StartDeployTaskInvoker {
 	requestDef := GenReqDefForStartDeployTask()
 	return &StartDeployTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppDisableStatus 禁用/取消禁用应用
+//
+// 禁用/取消禁用应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateAppDisableStatus(request *model.UpdateAppDisableStatusRequest) (*model.UpdateAppDisableStatusResponse, error) {
+	requestDef := GenReqDefForUpdateAppDisableStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppDisableStatusResponse), nil
+	}
+}
+
+// UpdateAppDisableStatusInvoker 禁用/取消禁用应用
+func (c *CodeArtsDeployClient) UpdateAppDisableStatusInvoker(request *model.UpdateAppDisableStatusRequest) *UpdateAppDisableStatusInvoker {
+	requestDef := GenReqDefForUpdateAppDisableStatus()
+	return &UpdateAppDisableStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppInfo 更新应用
+//
+// 更新应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateAppInfo(request *model.UpdateAppInfoRequest) (*model.UpdateAppInfoResponse, error) {
+	requestDef := GenReqDefForUpdateAppInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppInfoResponse), nil
+	}
+}
+
+// UpdateAppInfoInvoker 更新应用
+func (c *CodeArtsDeployClient) UpdateAppInfoInvoker(request *model.UpdateAppInfoRequest) *UpdateAppInfoInvoker {
+	requestDef := GenReqDefForUpdateAppInfo()
+	return &UpdateAppInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateEnvironment 应用下创建环境
@@ -334,6 +649,27 @@ func (c *CodeArtsDeployClient) ImportHostToEnvironmentInvoker(request *model.Imp
 	return &ImportHostToEnvironmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEnvironmentHosts 查询环境内的主机列表
+//
+// 查询环境内的主机列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListEnvironmentHosts(request *model.ListEnvironmentHostsRequest) (*model.ListEnvironmentHostsResponse, error) {
+	requestDef := GenReqDefForListEnvironmentHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEnvironmentHostsResponse), nil
+	}
+}
+
+// ListEnvironmentHostsInvoker 查询环境内的主机列表
+func (c *CodeArtsDeployClient) ListEnvironmentHostsInvoker(request *model.ListEnvironmentHostsRequest) *ListEnvironmentHostsInvoker {
+	requestDef := GenReqDefForListEnvironmentHosts()
+	return &ListEnvironmentHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListEnvironments 查询应用下环境列表
 //
 // 查询应用下环境列表。
@@ -374,6 +710,111 @@ func (c *CodeArtsDeployClient) ShowEnvironmentDetail(request *model.ShowEnvironm
 func (c *CodeArtsDeployClient) ShowEnvironmentDetailInvoker(request *model.ShowEnvironmentDetailRequest) *ShowEnvironmentDetailInvoker {
 	requestDef := GenReqDefForShowEnvironmentDetail()
 	return &ShowEnvironmentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnvironment 应用下编辑环境
+//
+// 应用下编辑环境。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateEnvironment(request *model.UpdateEnvironmentRequest) (*model.UpdateEnvironmentResponse, error) {
+	requestDef := GenReqDefForUpdateEnvironment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEnvironmentResponse), nil
+	}
+}
+
+// UpdateEnvironmentInvoker 应用下编辑环境
+func (c *CodeArtsDeployClient) UpdateEnvironmentInvoker(request *model.UpdateEnvironmentRequest) *UpdateEnvironmentInvoker {
+	requestDef := GenReqDefForUpdateEnvironment()
+	return &UpdateEnvironmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnvironmentPermissions 查询环境权限
+//
+// 查询环境权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListEnvironmentPermissions(request *model.ListEnvironmentPermissionsRequest) (*model.ListEnvironmentPermissionsResponse, error) {
+	requestDef := GenReqDefForListEnvironmentPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEnvironmentPermissionsResponse), nil
+	}
+}
+
+// ListEnvironmentPermissionsInvoker 查询环境权限
+func (c *CodeArtsDeployClient) ListEnvironmentPermissionsInvoker(request *model.ListEnvironmentPermissionsRequest) *ListEnvironmentPermissionsInvoker {
+	requestDef := GenReqDefForListEnvironmentPermissions()
+	return &ListEnvironmentPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnvironmentPermission 编辑环境权限
+//
+// 编辑环境权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateEnvironmentPermission(request *model.UpdateEnvironmentPermissionRequest) (*model.UpdateEnvironmentPermissionResponse, error) {
+	requestDef := GenReqDefForUpdateEnvironmentPermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEnvironmentPermissionResponse), nil
+	}
+}
+
+// UpdateEnvironmentPermissionInvoker 编辑环境权限
+func (c *CodeArtsDeployClient) UpdateEnvironmentPermissionInvoker(request *model.UpdateEnvironmentPermissionRequest) *UpdateEnvironmentPermissionInvoker {
+	requestDef := GenReqDefForUpdateEnvironmentPermission()
+	return &UpdateEnvironmentPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteHosts 批量删除主机集群下的主机
+//
+// 批量删除主机集群下的主机。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) BatchDeleteHosts(request *model.BatchDeleteHostsRequest) (*model.BatchDeleteHostsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteHostsResponse), nil
+	}
+}
+
+// BatchDeleteHostsInvoker 批量删除主机集群下的主机
+func (c *CodeArtsDeployClient) BatchDeleteHostsInvoker(request *model.BatchDeleteHostsRequest) *BatchDeleteHostsInvoker {
+	requestDef := GenReqDefForBatchDeleteHosts()
+	return &BatchDeleteHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyHostsToTarget 批量复制主机至目标主机集群
+//
+// 批量复制主机至目标主机集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CopyHostsToTarget(request *model.CopyHostsToTargetRequest) (*model.CopyHostsToTargetResponse, error) {
+	requestDef := GenReqDefForCopyHostsToTarget()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyHostsToTargetResponse), nil
+	}
+}
+
+// CopyHostsToTargetInvoker 批量复制主机至目标主机集群
+func (c *CodeArtsDeployClient) CopyHostsToTargetInvoker(request *model.CopyHostsToTargetRequest) *CopyHostsToTargetInvoker {
+	requestDef := GenReqDefForCopyHostsToTarget()
+	return &CopyHostsToTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDeploymentHost 新建主机
@@ -437,6 +878,27 @@ func (c *CodeArtsDeployClient) DeleteDeploymentHost(request *model.DeleteDeploym
 func (c *CodeArtsDeployClient) DeleteDeploymentHostInvoker(request *model.DeleteDeploymentHostRequest) *DeleteDeploymentHostInvoker {
 	requestDef := GenReqDefForDeleteDeploymentHost()
 	return &DeleteDeploymentHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHost 删除主机集群下主机
+//
+// 根据主机id删除主机集群下主机。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) DeleteHost(request *model.DeleteHostRequest) (*model.DeleteHostResponse, error) {
+	requestDef := GenReqDefForDeleteHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHostResponse), nil
+	}
+}
+
+// DeleteHostInvoker 删除主机集群下主机
+func (c *CodeArtsDeployClient) DeleteHostInvoker(request *model.DeleteHostRequest) *DeleteHostInvoker {
+	requestDef := GenReqDefForDeleteHost()
+	return &DeleteHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHosts 查询主机列表
@@ -544,6 +1006,27 @@ func (c *CodeArtsDeployClient) UpdateDeploymentHostInvoker(request *model.Update
 	return &UpdateDeploymentHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateHostInfo 编辑主机集群下主机信息
+//
+// 根据主机id编辑主机集群下主机信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateHostInfo(request *model.UpdateHostInfoRequest) (*model.UpdateHostInfoResponse, error) {
+	requestDef := GenReqDefForUpdateHostInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHostInfoResponse), nil
+	}
+}
+
+// UpdateHostInfoInvoker 编辑主机集群下主机信息
+func (c *CodeArtsDeployClient) UpdateHostInfoInvoker(request *model.UpdateHostInfoRequest) *UpdateHostInfoInvoker {
+	requestDef := GenReqDefForUpdateHostInfo()
+	return &UpdateHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDeploymentGroup 新建主机集群
 //
 // 在项目下新建主机集群。该接口于2024年09月30日后不再维护，推荐使用新版CreateHostCluster接口。
@@ -607,6 +1090,48 @@ func (c *CodeArtsDeployClient) DeleteDeploymentGroupInvoker(request *model.Delet
 	return &DeleteDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteHostCluster 删除主机集群
+//
+// 根据主机集群id删除主机集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) DeleteHostCluster(request *model.DeleteHostClusterRequest) (*model.DeleteHostClusterResponse, error) {
+	requestDef := GenReqDefForDeleteHostCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHostClusterResponse), nil
+	}
+}
+
+// DeleteHostClusterInvoker 删除主机集群
+func (c *CodeArtsDeployClient) DeleteHostClusterInvoker(request *model.DeleteHostClusterRequest) *DeleteHostClusterInvoker {
+	requestDef := GenReqDefForDeleteHostCluster()
+	return &DeleteHostClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssociateEnvironmentsInfos 查询主机集群关联环境信息
+//
+// 查询主机集群关联环境信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListAssociateEnvironmentsInfos(request *model.ListAssociateEnvironmentsInfosRequest) (*model.ListAssociateEnvironmentsInfosResponse, error) {
+	requestDef := GenReqDefForListAssociateEnvironmentsInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssociateEnvironmentsInfosResponse), nil
+	}
+}
+
+// ListAssociateEnvironmentsInfosInvoker 查询主机集群关联环境信息
+func (c *CodeArtsDeployClient) ListAssociateEnvironmentsInfosInvoker(request *model.ListAssociateEnvironmentsInfosRequest) *ListAssociateEnvironmentsInfosInvoker {
+	requestDef := GenReqDefForListAssociateEnvironmentsInfos()
+	return &ListAssociateEnvironmentsInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHostClusters 查询主机集群列表
 //
 // 按条件查询主机集群列表。
@@ -626,6 +1151,27 @@ func (c *CodeArtsDeployClient) ListHostClusters(request *model.ListHostClustersR
 func (c *CodeArtsDeployClient) ListHostClustersInvoker(request *model.ListHostClustersRequest) *ListHostClustersInvoker {
 	requestDef := GenReqDefForListHostClusters()
 	return &ListHostClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostGroupBaseInfos 查询应用下环境基本信息列表
+//
+// 查询应用下环境基本信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListHostGroupBaseInfos(request *model.ListHostGroupBaseInfosRequest) (*model.ListHostGroupBaseInfosResponse, error) {
+	requestDef := GenReqDefForListHostGroupBaseInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostGroupBaseInfosResponse), nil
+	}
+}
+
+// ListHostGroupBaseInfosInvoker 查询应用下环境基本信息列表
+func (c *CodeArtsDeployClient) ListHostGroupBaseInfosInvoker(request *model.ListHostGroupBaseInfosRequest) *ListHostGroupBaseInfosInvoker {
+	requestDef := GenReqDefForListHostGroupBaseInfos()
+	return &ListHostGroupBaseInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHostGroups 查询主机集群列表
@@ -710,6 +1256,90 @@ func (c *CodeArtsDeployClient) UpdateDeploymentGroup(request *model.UpdateDeploy
 func (c *CodeArtsDeployClient) UpdateDeploymentGroupInvoker(request *model.UpdateDeploymentGroupRequest) *UpdateDeploymentGroupInvoker {
 	requestDef := GenReqDefForUpdateDeploymentGroup()
 	return &UpdateDeploymentGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHostCluster 编辑主机集群
+//
+// 编辑主机集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateHostCluster(request *model.UpdateHostClusterRequest) (*model.UpdateHostClusterResponse, error) {
+	requestDef := GenReqDefForUpdateHostCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHostClusterResponse), nil
+	}
+}
+
+// UpdateHostClusterInvoker 编辑主机集群
+func (c *CodeArtsDeployClient) UpdateHostClusterInvoker(request *model.UpdateHostClusterRequest) *UpdateHostClusterInvoker {
+	requestDef := GenReqDefForUpdateHostCluster()
+	return &UpdateHostClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckWhetherHostGroupCanBeCreated 判断当前用户在项目下是否有权限创建主机集群
+//
+// 判断当前用户在项目下是否有权限创建主机集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CheckWhetherHostGroupCanBeCreated(request *model.CheckWhetherHostGroupCanBeCreatedRequest) (*model.CheckWhetherHostGroupCanBeCreatedResponse, error) {
+	requestDef := GenReqDefForCheckWhetherHostGroupCanBeCreated()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckWhetherHostGroupCanBeCreatedResponse), nil
+	}
+}
+
+// CheckWhetherHostGroupCanBeCreatedInvoker 判断当前用户在项目下是否有权限创建主机集群
+func (c *CodeArtsDeployClient) CheckWhetherHostGroupCanBeCreatedInvoker(request *model.CheckWhetherHostGroupCanBeCreatedRequest) *CheckWhetherHostGroupCanBeCreatedInvoker {
+	requestDef := GenReqDefForCheckWhetherHostGroupCanBeCreated()
+	return &CheckWhetherHostGroupCanBeCreatedInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostGroupPermissions 查询主机集群权限矩阵
+//
+// 根据主机集群id查询主机集群权限矩阵。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ListHostGroupPermissions(request *model.ListHostGroupPermissionsRequest) (*model.ListHostGroupPermissionsResponse, error) {
+	requestDef := GenReqDefForListHostGroupPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostGroupPermissionsResponse), nil
+	}
+}
+
+// ListHostGroupPermissionsInvoker 查询主机集群权限矩阵
+func (c *CodeArtsDeployClient) ListHostGroupPermissionsInvoker(request *model.ListHostGroupPermissionsRequest) *ListHostGroupPermissionsInvoker {
+	requestDef := GenReqDefForListHostGroupPermissions()
+	return &ListHostGroupPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHostGroupPermissions 修改主机集群权限矩阵
+//
+// 根据主机集群id修改主机集群权限矩阵。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) UpdateHostGroupPermissions(request *model.UpdateHostGroupPermissionsRequest) (*model.UpdateHostGroupPermissionsResponse, error) {
+	requestDef := GenReqDefForUpdateHostGroupPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHostGroupPermissionsResponse), nil
+	}
+}
+
+// UpdateHostGroupPermissionsInvoker 修改主机集群权限矩阵
+func (c *CodeArtsDeployClient) UpdateHostGroupPermissionsInvoker(request *model.UpdateHostGroupPermissionsRequest) *UpdateHostGroupPermissionsInvoker {
+	requestDef := GenReqDefForUpdateHostGroupPermissions()
+	return &UpdateHostGroupPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTaskSuccessRate 获取指定应用的应用部署成功率

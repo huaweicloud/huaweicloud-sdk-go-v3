@@ -14,13 +14,13 @@ type CreateExchangeBody struct {
 	// 类型（direct、fanout、topic、headers）
 	Type string `json:"type"`
 
-	// 是否持久化（AMQP版本默认持久化，不涉及此参数）。
+	// 是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
 	Durable *bool `json:"durable,omitempty"`
 
 	// 是否自动删除
 	AutoDelete bool `json:"auto_delete"`
 
-	// 内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+	// 内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
 	Internal *bool `json:"internal,omitempty"`
 }
 

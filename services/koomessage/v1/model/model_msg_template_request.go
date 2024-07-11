@@ -27,10 +27,10 @@ type MsgTemplateRequest struct {
 	// 模板名称。
 	TemplateName string `json:"template_name"`
 
-	// 模板类型。默认取所属签名的签名类型。
+	// 模板类型。默认取所属签名的签名类型。PROMOTION_TYPE：营销类，NOTIFY_TYPE：通知类。
 	TemplateType *MsgTemplateRequestTemplateType `json:"template_type,omitempty"`
 
-	// 是否为通用模板(暂不支持通用模板)。
+	// 是否为通用模板(暂不支持通用模板)。0：非通用模板，1：通用模板。
 	UniversalTemplate *MsgTemplateRequestUniversalTemplate `json:"universal_template,omitempty"`
 
 	// 模板参数。
@@ -58,10 +58,10 @@ type MsgTemplateRequestTemplateTypeEnum struct {
 func GetMsgTemplateRequestTemplateTypeEnum() MsgTemplateRequestTemplateTypeEnum {
 	return MsgTemplateRequestTemplateTypeEnum{
 		PROMOTION_TYPE: MsgTemplateRequestTemplateType{
-			value: "PROMOTION_TYPE：营销类",
+			value: "PROMOTION_TYPE",
 		},
 		NOTIFY_TYPE: MsgTemplateRequestTemplateType{
-			value: "NOTIFY_TYPE：通知类",
+			value: "NOTIFY_TYPE",
 		},
 	}
 }
@@ -105,10 +105,10 @@ type MsgTemplateRequestUniversalTemplateEnum struct {
 func GetMsgTemplateRequestUniversalTemplateEnum() MsgTemplateRequestUniversalTemplateEnum {
 	return MsgTemplateRequestUniversalTemplateEnum{
 		E_0: MsgTemplateRequestUniversalTemplate{
-			value: "0：非通用模板",
+			value: "0",
 		},
 		E_1: MsgTemplateRequestUniversalTemplate{
-			value: "1：通用模板",
+			value: "1",
 		},
 	}
 }

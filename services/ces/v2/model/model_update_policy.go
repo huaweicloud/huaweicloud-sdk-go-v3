@@ -21,7 +21,7 @@ type UpdatePolicy struct {
 	ComparisonOperator string `json:"comparison_operator"`
 
 	// 阈值
-	Value float64 `json:"value"`
+	Value *float64 `json:"value,omitempty"`
 
 	// 单位
 	Unit *string `json:"unit,omitempty"`

@@ -2470,6 +2470,39 @@ func GenReqDefForShowTestCaseDetailV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTestCaseReviews() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/GT3KServer/v4/testcases/{testcase_uri}/review").
+		WithResponse(new(model.ShowTestCaseReviewsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TestcaseUri").
+		WithJsonTag("testcase_uri").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectUuid").
+		WithJsonTag("project_uuid").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VersionUri").
+		WithJsonTag("version_uri").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageNo").
+		WithJsonTag("page_no").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageSize").
+		WithJsonTag("page_size").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowTestCasesChangeStatistics() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

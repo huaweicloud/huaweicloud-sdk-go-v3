@@ -18,7 +18,7 @@ type QueueArguments struct {
 	// 死信的RoutingKey，死信Exchange会发送死信消息到绑定对应RoutingKey的Queue上。
 	XDeadLetterRoutingKey *string `json:"x-dead-letter-routing-key,omitempty"`
 
-	// 惰性队列（AMQP版本默认持久化所有消息，不涉及此参数）
+	// 惰性队列[（AMQP版本默认持久化所有消息，不涉及此参数）](tag:hws,hws_hk)
 	XQueueMode *string `json:"x-queue-mode,omitempty"`
 }
 

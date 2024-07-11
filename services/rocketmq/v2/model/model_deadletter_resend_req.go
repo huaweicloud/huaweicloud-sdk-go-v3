@@ -8,7 +8,7 @@ import (
 
 type DeadletterResendReq struct {
 
-	// topic。
+	// Topic名称。
 	Topic *string `json:"topic,omitempty"`
 
 	// 消息列表。

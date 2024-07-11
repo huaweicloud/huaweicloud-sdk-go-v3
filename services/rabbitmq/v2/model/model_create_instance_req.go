@@ -28,10 +28,10 @@ type CreateInstanceReq struct {
 	StorageSpace int32 `json:"storage_space"`
 
 	// 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
-	AccessUser string `json:"access_user"`
+	AccessUser *string `json:"access_user,omitempty"`
 
 	// 实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
-	Password string `json:"password"`
+	Password *string `json:"password,omitempty"`
 
 	// 租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
 	VpcId string `json:"vpc_id"`

@@ -18,7 +18,7 @@ type DeleteBindingRequest struct {
 	// Exchange名称
 	Exchange string `json:"exchange"`
 
-	// 绑定目标端类型，Exchange或Queue（AMQP版本只支持Queue绑定类型）
+	// 绑定目标端类型，Exchange或Queue。[（AMQP版本只支持Queue绑定类型）](tag:hws,hws_hk)
 	DestinationType string `json:"destination_type"`
 
 	// 绑定的目标端名称

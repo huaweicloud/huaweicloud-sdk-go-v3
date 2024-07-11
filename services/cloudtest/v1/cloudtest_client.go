@@ -2367,6 +2367,27 @@ func (c *CloudtestClient) ShowTestCaseDetailV2Invoker(request *model.ShowTestCas
 	return &ShowTestCaseDetailV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTestCaseReviews 根据用例查询评审记录
+//
+// 根据用例查询评审记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTestCaseReviews(request *model.ShowTestCaseReviewsRequest) (*model.ShowTestCaseReviewsResponse, error) {
+	requestDef := GenReqDefForShowTestCaseReviews()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTestCaseReviewsResponse), nil
+	}
+}
+
+// ShowTestCaseReviewsInvoker 根据用例查询评审记录
+func (c *CloudtestClient) ShowTestCaseReviewsInvoker(request *model.ShowTestCaseReviewsRequest) *ShowTestCaseReviewsInvoker {
+	requestDef := GenReqDefForShowTestCaseReviews()
+	return &ShowTestCaseReviewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTestCasesChangeStatistics 版本测试用例变更统计（只统计分支，不统计基线）
 //
 // 版本测试用例变更统计（只统计分支，不统计基线）

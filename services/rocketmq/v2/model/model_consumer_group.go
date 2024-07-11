@@ -32,7 +32,7 @@ type ConsumerGroup struct {
 	// 权限集。
 	Permissions *[]string `json:"permissions,omitempty"`
 
-	// 是否按序消费。
+	// 是否按顺序消费。
 	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
 }
 

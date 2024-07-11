@@ -9,7 +9,7 @@ import (
 // ListTaskSuccessRateResponse Response Object
 type ListTaskSuccessRateResponse struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称

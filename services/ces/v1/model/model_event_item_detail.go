@@ -35,6 +35,9 @@ type EventItemDetail struct {
 
 	// 事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
 	EventType *string `json:"event_type,omitempty"`
+
+	// 一个或者多个资源维度。
+	Dimensions *[]MetricsDimension `json:"dimensions,omitempty"`
 }
 
 func (o EventItemDetail) String() string {

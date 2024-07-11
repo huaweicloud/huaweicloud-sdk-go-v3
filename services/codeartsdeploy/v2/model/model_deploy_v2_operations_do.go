@@ -8,6 +8,9 @@ import (
 
 type DeployV2OperationsDo struct {
 
+	// 步骤id
+	Id *string `json:"id,omitempty"`
+
 	// 步骤名称
 	Name *string `json:"name,omitempty"`
 
@@ -17,7 +20,7 @@ type DeployV2OperationsDo struct {
 	// 下载地址
 	Code *string `json:"code,omitempty"`
 
-	// 参数
+	// 步骤详细定义
 	Params *string `json:"params,omitempty"`
 
 	// 入口函数

@@ -8,19 +8,19 @@ import (
 
 type ClientData struct {
 
-	// 客户端语言
+	// 客户端语言。
 	Language *string `json:"language,omitempty"`
 
-	// 客户端版本
+	// 客户端版本。
 	Version *string `json:"version,omitempty"`
 
-	// 客户端ID
+	// 客户端ID。
 	ClientId *string `json:"client_id,omitempty"`
 
-	// 客户端地址
+	// 客户端地址。
 	ClientAddr *string `json:"client_addr,omitempty"`
 
-	// 订阅关系列表
+	// 订阅关系列表。
 	Subscriptions *[]Subscription `json:"subscriptions,omitempty"`
 }
 

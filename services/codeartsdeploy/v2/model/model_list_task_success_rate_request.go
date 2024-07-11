@@ -9,7 +9,7 @@ import (
 // ListTaskSuccessRateRequest Request Object
 type ListTaskSuccessRateRequest struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	Body *TasksSuccessRateQuery `json:"body,omitempty"`

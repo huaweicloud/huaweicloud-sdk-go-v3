@@ -9,7 +9,7 @@ import (
 // UpdateDeploymentGroupRequest Request Object
 type UpdateDeploymentGroupRequest struct {
 
-	// 主机集群ID
+	// 主机集群id
 	GroupId string `json:"group_id"`
 
 	Body *DeploymentGroupUpdateRequest `json:"body,omitempty"`

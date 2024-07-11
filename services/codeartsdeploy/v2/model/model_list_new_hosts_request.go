@@ -12,7 +12,7 @@ import (
 // ListNewHostsRequest Request Object
 type ListNewHostsRequest struct {
 
-	// 项目ID
+	// 项目id
 	GroupId string `json:"group_id"`
 
 	// 主机名模糊查询信息

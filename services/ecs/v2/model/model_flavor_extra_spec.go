@@ -122,6 +122,12 @@ type FlavorExtraSpec struct {
 
 	// 该规格是否支持QingTian Enclave。
 	SecurityenclaveSupported *string `json:"security:enclave_supported,omitempty"`
+
+	// 该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+	Infogpus *string `json:"info:gpus,omitempty"`
+
+	// 该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+	InfoasicAccelerators *string `json:"info:asic_accelerators,omitempty"`
 }
 
 func (o FlavorExtraSpec) String() string {

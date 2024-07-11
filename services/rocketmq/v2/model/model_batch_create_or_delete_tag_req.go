@@ -11,7 +11,7 @@ import (
 
 type BatchCreateOrDeleteTagReq struct {
 
-	// 操作标识（仅支持小写）: - create（创建） - delete（删除）
+	// 操作标识（仅支持小写）： - create（创建） - delete（删除）
 	Action *BatchCreateOrDeleteTagReqAction `json:"action,omitempty"`
 
 	// 标签列表。

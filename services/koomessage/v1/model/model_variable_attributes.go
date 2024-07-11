@@ -14,7 +14,7 @@ type VariableAttributes struct {
 	// 参数索引。
 	VariableIndex int32 `json:"variable_index"`
 
-	// 参数类型。
+	// 参数类型。PHONE：电话号码，NEWTEXT：解析标识，CHARDIGIT：其他号码(如验证码、订单号、密码等)，DATETIME：日期时间，MONEY：金额，TEXT：其他。
 	VariableType VariableAttributesVariableType `json:"variable_type"`
 
 	// 参数描述。变量类型为TEXT（其他）时必填。
@@ -46,22 +46,22 @@ type VariableAttributesVariableTypeEnum struct {
 func GetVariableAttributesVariableTypeEnum() VariableAttributesVariableTypeEnum {
 	return VariableAttributesVariableTypeEnum{
 		PHONE: VariableAttributesVariableType{
-			value: "PHONE：电话号码",
+			value: "PHONE",
 		},
 		NEWTEXT: VariableAttributesVariableType{
-			value: "NEWTEXT：解析标识",
+			value: "NEWTEXT",
 		},
 		CHARDIGIT: VariableAttributesVariableType{
-			value: "CHARDIGIT：其他号码(如验证码、订单号、密码等)",
+			value: "CHARDIGIT",
 		},
 		DATETIME: VariableAttributesVariableType{
-			value: "DATETIME：日期时间",
+			value: "DATETIME",
 		},
 		MONEY: VariableAttributesVariableType{
-			value: "MONEY：金额",
+			value: "MONEY",
 		},
 		TEXT: VariableAttributesVariableType{
-			value: "TEXT：其他",
+			value: "TEXT",
 		},
 	}
 }

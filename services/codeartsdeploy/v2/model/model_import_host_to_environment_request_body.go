@@ -12,7 +12,7 @@ type ImportHostToEnvironmentRequestBody struct {
 	// 主机集群id
 	GroupId string `json:"group_id"`
 
-	// 要导入的主机ids
+	// 要导入的主机id列表
 	HostIds []string `json:"host_ids"`
 }
 

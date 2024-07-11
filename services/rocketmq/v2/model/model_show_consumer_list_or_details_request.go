@@ -15,7 +15,7 @@ type ShowConsumerListOrDetailsRequest struct {
 	// 消费组名称。
 	Group string `json:"group"`
 
-	// 待查询的topic，不指定时查询topic列表，指定时查询详情。
+	// 待查询的Topic，不指定时查询Topic列表，指定时查询详情。
 	Topic *string `json:"topic,omitempty"`
 
 	// 当次查询返回的最大个数，默认值为10，取值范围为1~50。

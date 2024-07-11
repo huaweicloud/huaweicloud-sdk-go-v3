@@ -11,7 +11,7 @@ type ResendReq struct {
 	// Group ID。
 	Group *string `json:"group,omitempty"`
 
-	// 消息所属topic。
+	// 消息所属Topic。
 	Topic *string `json:"topic,omitempty"`
 
 	// 客户端ID。

@@ -1048,6 +1048,27 @@ func (c *IoTEdgeClient) DeleteModuleInvoker(request *model.DeleteModuleRequest) 
 	return &DeleteModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// InvokeModuleMsg 代理边缘模块消息
+//
+// iotedge通过该接口透明代理用户到模块的请求
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokeModuleMsg(request *model.InvokeModuleMsgRequest) (*model.InvokeModuleMsgResponse, error) {
+	requestDef := GenReqDefForInvokeModuleMsg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokeModuleMsgResponse), nil
+	}
+}
+
+// InvokeModuleMsgInvoker 代理边缘模块消息
+func (c *IoTEdgeClient) InvokeModuleMsgInvoker(request *model.InvokeModuleMsgRequest) *InvokeModuleMsgInvoker {
+	requestDef := GenReqDefForInvokeModuleMsg()
+	return &InvokeModuleMsgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowModule 查询边缘模块
 //
 // 用户通过Console接口查询指定边缘节点上指定边缘模块

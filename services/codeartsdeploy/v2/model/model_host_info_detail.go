@@ -9,7 +9,7 @@ import (
 // HostInfoDetail 主机详情信息
 type HostInfoDetail struct {
 
-	// 主机ID
+	// 主机id
 	HostId *string `json:"host_id,omitempty"`
 
 	// 主机IP
@@ -34,7 +34,7 @@ type HostInfoDetail struct {
 	// 是否为代理机
 	AsProxy *bool `json:"as_proxy,omitempty"`
 
-	// 代理机ID
+	// 代理机id
 	ProxyHostId *string `json:"proxy_host_id,omitempty"`
 
 	// 主机所属人名称

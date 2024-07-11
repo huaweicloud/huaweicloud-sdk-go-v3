@@ -9,13 +9,13 @@ import (
 // ShowEngineInstanceExtendProductInfoResponse Response Object
 type ShowEngineInstanceExtendProductInfoResponse struct {
 
-	// 消息引擎类型
+	// 消息引擎类型。
 	Engine *string `json:"engine,omitempty"`
 
-	// 消息引擎支持的版本
+	// 消息引擎支持的版本。
 	Versions *[]string `json:"versions,omitempty"`
 
-	// 规格变更的产品信息
+	// 规格变更的产品信息。
 	Products       *[]RocketMqExtendProductInfoEntity `json:"products,omitempty"`
 	HttpStatusCode int                                `json:"-"`
 }

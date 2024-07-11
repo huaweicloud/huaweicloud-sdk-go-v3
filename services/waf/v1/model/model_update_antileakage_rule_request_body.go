@@ -20,6 +20,8 @@ type UpdateAntileakageRuleRequestBody struct {
 	// 内容（http状态码：400 、401、402 、 403 、404 、 405 、500 、501 、502 、503、 504 、507；手机：phone、身份证号：id_card、邮箱：email）
 	Contents []string `json:"contents"`
 
+	Action *CreateAntileakageRuleRequestBodyAction `json:"action,omitempty"`
+
 	// 规则描述
 	Description *string `json:"description,omitempty"`
 }

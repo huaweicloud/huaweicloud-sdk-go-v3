@@ -9,7 +9,7 @@ import (
 // CreateHostResponse Response Object
 type CreateHostResponse struct {
 
-	// 状态
+	// 请求成功失败状态
 	Status *string `json:"status,omitempty"`
 
 	// 主机id

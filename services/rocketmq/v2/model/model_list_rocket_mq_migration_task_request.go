@@ -15,16 +15,16 @@ type ListRocketMqMigrationTaskRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 任务ID
+	// 任务ID。
 	Id *string `json:"id,omitempty"`
 
-	// 查询类型
+	// 查询类型。
 	Type *ListRocketMqMigrationTaskRequestType `json:"type,omitempty"`
 
-	// 当前页，从1开始
+	// 当前页，从1开始。
 	Offset *string `json:"offset,omitempty"`
 
-	// 当前页大小
+	// 当前页大小。
 	Limit *string `json:"limit,omitempty"`
 
 	// - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。

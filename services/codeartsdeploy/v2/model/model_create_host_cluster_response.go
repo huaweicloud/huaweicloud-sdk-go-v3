@@ -9,10 +9,10 @@ import (
 // CreateHostClusterResponse Response Object
 type CreateHostClusterResponse struct {
 
-	// 主机集群ID
+	// 主机集群id
 	Id *string `json:"id,omitempty"`
 
-	// 请求状态
+	// 请求成功失败状态
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

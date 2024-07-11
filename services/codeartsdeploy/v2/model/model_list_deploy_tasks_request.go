@@ -9,7 +9,7 @@ import (
 // ListDeployTasksRequest Request Object
 type ListDeployTasksRequest struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 分页页码， 表示从此页开始查询， page大于等于1

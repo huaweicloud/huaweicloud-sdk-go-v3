@@ -27,7 +27,7 @@ type ShowGroupResponse struct {
 	// 最大重试次数。
 	RetryMaxTime *int32 `json:"retry_max_time,omitempty"`
 
-	// 应用id。
+	// 应用ID。
 	AppId *string `json:"app_id,omitempty"`
 
 	// 应用名称。

@@ -14,7 +14,7 @@ type CreateBindingBody struct {
 	// 绑定键值，用于告知Exchange应该将消息投递到哪些Queue或Exchange中
 	RoutingKey string `json:"routing_key"`
 
-	// 绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+	// 绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
 	DestinationType string `json:"destination_type"`
 }
 

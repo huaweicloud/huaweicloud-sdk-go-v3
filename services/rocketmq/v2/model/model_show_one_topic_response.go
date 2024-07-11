@@ -12,7 +12,7 @@ import (
 // ShowOneTopicResponse Response Object
 type ShowOneTopicResponse struct {
 
-	// topic名称。
+	// Topic名称。
 	Name *string `json:"name,omitempty"`
 
 	// 总读队列个数。

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -36,7 +37,7 @@ type DemandProductInfo struct {
 	UsageFactor string `json:"usage_factor"`
 
 	// 使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
-	UsageValue float64 `json:"usage_value"`
+	UsageValue *decimal.Decimal `json:"usage_value"`
 
 	// 使用量度量单位，您可以调用查询度量单位列表接口获取。 例如按小时询价，使用量值为1，使用量单位为小时。
 	UsageMeasureId int32 `json:"usage_measure_id"`

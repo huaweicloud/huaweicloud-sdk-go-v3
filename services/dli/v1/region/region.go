@@ -56,6 +56,8 @@ var (
 		"https://dli.eu-west-0.myhuaweicloud.com")
 	ME_EAST_1 = region.NewRegion("me-east-1",
 		"https://dli.me-east-1.myhuaweicloud.com")
+	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
+		"https://dli.ru-moscow-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -83,6 +85,7 @@ var staticFields = map[string]*region.Region{
 	"ae-ad-1":          AE_AD_1,
 	"eu-west-0":        EU_WEST_0,
 	"me-east-1":        ME_EAST_1,
+	"ru-moscow-1":      RU_MOSCOW_1,
 }
 
 var provider = region.DefaultProviderChain("DLI")

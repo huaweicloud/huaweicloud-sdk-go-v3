@@ -9,7 +9,7 @@ import (
 // ShowEnvironmentDetailResponse Response Object
 type ShowEnvironmentDetailResponse struct {
 
-	// 响应状态
+	// 请求成功失败状态
 	Status *string `json:"status,omitempty"`
 
 	Result         *EnvironmentDetail `json:"result,omitempty"`

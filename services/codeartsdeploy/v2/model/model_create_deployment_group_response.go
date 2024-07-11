@@ -9,7 +9,7 @@ import (
 // CreateDeploymentGroupResponse Response Object
 type CreateDeploymentGroupResponse struct {
 
-	// 主机集群ID
+	// 主机集群id
 	GroupId        *string `json:"group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

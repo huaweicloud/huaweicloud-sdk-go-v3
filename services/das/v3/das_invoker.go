@@ -65,6 +65,18 @@ func (i *ChangeSqlSwitchInvoker) Invoke() (*model.ChangeSqlSwitchResponse, error
 	}
 }
 
+type ChangeTransactionSwitchStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeTransactionSwitchStatusInvoker) Invoke() (*model.ChangeTransactionSwitchStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeTransactionSwitchStatusResponse), nil
+	}
+}
+
 type CreateShareConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -305,6 +317,18 @@ func (i *ListSqlLimitRulesInvoker) Invoke() (*model.ListSqlLimitRulesResponse, e
 	}
 }
 
+type ListTransactionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTransactionsInvoker) Invoke() (*model.ListTransactionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTransactionsResponse), nil
+	}
+}
+
 type ParseSqlLimitRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -410,6 +434,18 @@ func (i *ShowSqlSwitchStatusInvoker) Invoke() (*model.ShowSqlSwitchStatusRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowSqlSwitchStatusResponse), nil
+	}
+}
+
+type ShowTransactionSwitchStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTransactionSwitchStatusInvoker) Invoke() (*model.ShowTransactionSwitchStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTransactionSwitchStatusResponse), nil
 	}
 }
 

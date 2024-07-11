@@ -126,6 +126,27 @@ func (c *DasClient) ChangeSqlSwitchInvoker(request *model.ChangeSqlSwitchRequest
 	return &ChangeSqlSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeTransactionSwitchStatus 开启/关闭历史事务开关
+//
+// 开启/关闭历史事务开关，仅支持MySQL引擎，并且依赖开启全量SQL或者慢SQL功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ChangeTransactionSwitchStatus(request *model.ChangeTransactionSwitchStatusRequest) (*model.ChangeTransactionSwitchStatusResponse, error) {
+	requestDef := GenReqDefForChangeTransactionSwitchStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeTransactionSwitchStatusResponse), nil
+	}
+}
+
+// ChangeTransactionSwitchStatusInvoker 开启/关闭历史事务开关
+func (c *DasClient) ChangeTransactionSwitchStatusInvoker(request *model.ChangeTransactionSwitchStatusRequest) *ChangeTransactionSwitchStatusInvoker {
+	requestDef := GenReqDefForChangeTransactionSwitchStatus()
+	return &ChangeTransactionSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateShareConnections 设置共享链接
 //
 // 设置共享链接，
@@ -564,6 +585,28 @@ func (c *DasClient) ListSqlLimitRulesInvoker(request *model.ListSqlLimitRulesReq
 	return &ListSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTransactions 查询历史事务列表
+//
+// 查询历史事务列表。
+// 目前仅支持MySQL实例，仅支持查看最近7天的历史事务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListTransactions(request *model.ListTransactionsRequest) (*model.ListTransactionsResponse, error) {
+	requestDef := GenReqDefForListTransactions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTransactionsResponse), nil
+	}
+}
+
+// ListTransactionsInvoker 查询历史事务列表
+func (c *DasClient) ListTransactionsInvoker(request *model.ListTransactionsRequest) *ListTransactionsInvoker {
+	requestDef := GenReqDefForListTransactions()
+	return &ListTransactionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ParseSqlLimitRules 根据原始SQL生成SQL限流关键字
 //
 // 根据原始SQL生成SQL限流关键字，目前支持MySQL、MariaDB、GaussDB(for MySQL)三种引擎。
@@ -756,6 +799,28 @@ func (c *DasClient) ShowSqlSwitchStatus(request *model.ShowSqlSwitchStatusReques
 func (c *DasClient) ShowSqlSwitchStatusInvoker(request *model.ShowSqlSwitchStatusRequest) *ShowSqlSwitchStatusInvoker {
 	requestDef := GenReqDefForShowSqlSwitchStatus()
 	return &ShowSqlSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTransactionSwitchStatus 查询历史事务开关
+//
+// 查询历史事务开关。
+// 目前仅支持MySQL实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowTransactionSwitchStatus(request *model.ShowTransactionSwitchStatusRequest) (*model.ShowTransactionSwitchStatusResponse, error) {
+	requestDef := GenReqDefForShowTransactionSwitchStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTransactionSwitchStatusResponse), nil
+	}
+}
+
+// ShowTransactionSwitchStatusInvoker 查询历史事务开关
+func (c *DasClient) ShowTransactionSwitchStatusInvoker(request *model.ShowTransactionSwitchStatusRequest) *ShowTransactionSwitchStatusInvoker {
+	requestDef := GenReqDefForShowTransactionSwitchStatus()
+	return &ShowTransactionSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTuning 获取诊断结果

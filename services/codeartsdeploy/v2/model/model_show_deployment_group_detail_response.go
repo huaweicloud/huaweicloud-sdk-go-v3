@@ -30,7 +30,7 @@ type ShowDeploymentGroupDetailResponse struct {
 	// 局点信息
 	RegionName *string `json:"region_name,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 操作系统：windows|linux

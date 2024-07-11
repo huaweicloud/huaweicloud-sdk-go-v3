@@ -8,8 +8,7 @@ import (
 
 // DeleteRocketMqMigrationTaskResponse Response Object
 type DeleteRocketMqMigrationTaskResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteRocketMqMigrationTaskResponse) String() string {

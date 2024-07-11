@@ -11,10 +11,10 @@ import (
 
 type RocketMqConfigReq struct {
 
-	// RocketMQ配置名称
+	// RocketMQ配置名称。
 	Name *RocketMqConfigReqName `json:"name,omitempty"`
 
-	// RocketMQ配置目标值
+	// RocketMQ配置目标值。
 	Value *string `json:"value,omitempty"`
 }
 

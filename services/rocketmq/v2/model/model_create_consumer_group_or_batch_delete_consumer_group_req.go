@@ -26,7 +26,7 @@ type CreateConsumerGroupOrBatchDeleteConsumerGroupReq struct {
 	// 是否可以消费。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+	// 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
 	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
 
 	// 消费组描述，长度0~200个字符。

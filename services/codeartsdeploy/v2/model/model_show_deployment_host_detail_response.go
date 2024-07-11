@@ -38,7 +38,7 @@ type ShowDeploymentHostDetailResponse struct {
 	// 免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
 	InstallIcagent *bool `json:"install_icagent,omitempty"`
 
-	// 主机ID
+	// 主机id
 	HostId *string `json:"host_id,omitempty"`
 
 	ProxyHost *DeploymentHostDetail `json:"proxy_host,omitempty"`
@@ -46,7 +46,7 @@ type ShowDeploymentHostDetailResponse struct {
 	// 主机集群名
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称

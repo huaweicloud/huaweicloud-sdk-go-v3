@@ -9,7 +9,7 @@ import (
 // DeleteHostFromEnvironmentResponse Response Object
 type DeleteHostFromEnvironmentResponse struct {
 
-	// 响应状态
+	// 请求成功失败状态
 	Status *string `json:"status,omitempty"`
 
 	// 环境id

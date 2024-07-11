@@ -11,7 +11,7 @@ import (
 
 type Topic struct {
 
-	// topic名称。
+	// Topic名称。
 	Name *string `json:"name,omitempty"`
 
 	// 总读队列个数。

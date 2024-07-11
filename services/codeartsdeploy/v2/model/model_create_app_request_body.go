@@ -12,7 +12,7 @@ import (
 // CreateAppRequestBody 创建应用请求体
 type CreateAppRequestBody struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 应用名称

@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// MigrationRocketMqTopicConfig RocketMQ元数据迁移，RocketMQ topic元数据。
+// MigrationRocketMqTopicConfig RocketMQ元数据迁移，RocketMQ Topic元数据。
 type MigrationRocketMqTopicConfig struct {
 
-	// topic名称。
+	// Topic名称。
 	TopicName *string `json:"topicName,omitempty"`
 
 	// 是否有序消息。
 	Order *bool `json:"order,omitempty"`
 
-	// topic权限。
+	// Topic权限。
 	Perm *int32 `json:"perm,omitempty"`
 
 	// 读队列个数。
@@ -24,10 +24,10 @@ type MigrationRocketMqTopicConfig struct {
 	// 写队列个数。
 	WriteQueueNums *int32 `json:"writeQueueNums,omitempty"`
 
-	// topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+	// Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
 	TopicFilterType *string `json:"topicFilterType,omitempty"`
 
-	// topic系统标志位。
+	// Topic系统标志位。
 	TopicSysFlag *int32 `json:"topicSysFlag,omitempty"`
 }
 

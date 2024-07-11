@@ -9,7 +9,7 @@ import (
 // TemplateTaskRequestBody 通过模板创建应用请求体
 type TemplateTaskRequestBody struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 项目名称

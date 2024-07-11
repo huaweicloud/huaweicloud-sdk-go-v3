@@ -21,7 +21,7 @@ type AppExecutionInfo struct {
 	// 当前应用是否被禁用
 	IsDisable *bool `json:"is_disable,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称
@@ -57,10 +57,10 @@ type AppExecutionInfo struct {
 	// 部署类型模式，包括deployTemplate、ansible、shell
 	DeploySystem *string `json:"deploy_system,omitempty"`
 
-	// 应用创建者用户ID
+	// 应用创建者用户id
 	CreateUserId *string `json:"create_user_id,omitempty"`
 
-	// 应用创建者租户ID
+	// 应用创建者租户id
 	CreateTenantId *string `json:"create_tenant_id,omitempty"`
 
 	// 创建时间

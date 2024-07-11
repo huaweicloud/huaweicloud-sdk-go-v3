@@ -24,7 +24,7 @@ type AppComponentDao struct {
 	// AOM应用组件名称
 	CompName *string `json:"comp_name,omitempty"`
 
-	// 租户ID
+	// 租户id
 	DomainId *string `json:"domain_id,omitempty"`
 
 	// 局点信息

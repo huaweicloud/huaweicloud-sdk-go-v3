@@ -9,10 +9,10 @@ import (
 // ShowConsumerConnectionsRequest Request Object
 type ShowConsumerConnectionsRequest struct {
 
-	// 实例ID
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 消费组名称
+	// 消费组名称。
 	Group string `json:"group"`
 
 	// 查询数量，取值范围为1~50。

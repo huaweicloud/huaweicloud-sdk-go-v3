@@ -18,7 +18,7 @@ type ExecuteRecordV2Body struct {
 	// 操作人用户名
 	Operator *string `json:"operator,omitempty"`
 
-	// 部署记录ID
+	// 部署记录id
 	ExecutionId *string `json:"execution_id,omitempty"`
 
 	// 部署应用的开始时间

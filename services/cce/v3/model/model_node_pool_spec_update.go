@@ -14,6 +14,8 @@ type NodePoolSpecUpdate struct {
 	InitialNodeCount int32 `json:"initialNodeCount"`
 
 	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling"`
+
+	ExtensionScaleGroups *ExtensionScaleGroup `json:"extensionScaleGroups,omitempty"`
 }
 
 func (o NodePoolSpecUpdate) String() string {

@@ -1046,6 +1046,28 @@ func (c *CceClient) RollbackAddonInstanceInvoker(request *model.RollbackAddonIns
 	return &RollbackAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ScaleNodePool 伸缩节点池
+//
+// 该API用于伸缩指定的节点池
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ScaleNodePool(request *model.ScaleNodePoolRequest) (*model.ScaleNodePoolResponse, error) {
+	requestDef := GenReqDefForScaleNodePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ScaleNodePoolResponse), nil
+	}
+}
+
+// ScaleNodePoolInvoker 伸缩节点池
+func (c *CceClient) ScaleNodePoolInvoker(request *model.ScaleNodePoolRequest) *ScaleNodePoolInvoker {
+	requestDef := GenReqDefForScaleNodePool()
+	return &ScaleNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAddonInstance 获取AddonInstance详情
 //
 // 获取插件实例详情。

@@ -11,7 +11,7 @@ type ShowVhostDetailResp struct {
 	// Vhost名称。
 	Name *string `json:"name,omitempty"`
 
-	// 是否开启消息轨迹（AMQP版本不涉及此字段）
+	// 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
 	Tracing *bool `json:"tracing,omitempty"`
 }
 

@@ -12,7 +12,7 @@ type ListNewHostsResponse struct {
 	// 主机数量
 	Total *int32 `json:"total,omitempty"`
 
-	// 请求状态
+	// 请求成功失败状态
 	Status *string `json:"status,omitempty"`
 
 	// 主机信息列表

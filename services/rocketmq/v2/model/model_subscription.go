@@ -8,13 +8,13 @@ import (
 
 type Subscription struct {
 
-	// 订阅的topic名称
+	// 订阅的Topic名称。
 	Topic *string `json:"topic,omitempty"`
 
-	// 订阅类型，取值如下：TAG和SQL92
+	// 订阅类型，取值如下：TAG和SQL92。
 	Type *string `json:"type,omitempty"`
 
-	// 订阅tag字符
+	// 订阅tag字符。
 	Expression *string `json:"expression,omitempty"`
 }
 

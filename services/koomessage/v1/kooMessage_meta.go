@@ -1141,7 +1141,7 @@ func GenReqDefForAddAimMsgSignature() *def.HttpRequestDef {
 func GenReqDefForDeleteAimMsgSignature() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/aim/sms/signatures/{signature_id}").
+		WithPath("/v1/sms/signatures/{signature_id}").
 		WithResponse(new(model.DeleteAimMsgSignatureResponse)).
 		WithContentType("application/json")
 

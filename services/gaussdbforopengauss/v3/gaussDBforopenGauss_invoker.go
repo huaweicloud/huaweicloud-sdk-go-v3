@@ -257,6 +257,18 @@ func (i *DownloadBackupInvoker) Invoke() (*model.DownloadBackupResponse, error) 
 	}
 }
 
+type InstallKernelPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InstallKernelPluginInvoker) Invoke() (*model.InstallKernelPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InstallKernelPluginResponse), nil
+	}
+}
+
 type ListApplicableInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -545,6 +557,18 @@ func (i *ListInstancesDetailsInvoker) Invoke() (*model.ListInstancesDetailsRespo
 	}
 }
 
+type ListKernelPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKernelPluginsInvoker) Invoke() (*model.ListKernelPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKernelPluginsResponse), nil
+	}
+}
+
 type ListParamGroupTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +578,18 @@ func (i *ListParamGroupTemplatesInvoker) Invoke() (*model.ListParamGroupTemplate
 		return nil, err
 	} else {
 		return result.(*model.ListParamGroupTemplatesResponse), nil
+	}
+}
+
+type ListPluginExtensionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginExtensionsInvoker) Invoke() (*model.ListPluginExtensionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginExtensionsResponse), nil
 	}
 }
 
@@ -626,6 +662,18 @@ func (i *ListStorageTypesInvoker) Invoke() (*model.ListStorageTypesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListStorageTypesResponse), nil
+	}
+}
+
+type ListSupportKernelPluginsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupportKernelPluginsInvoker) Invoke() (*model.ListSupportKernelPluginsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupportKernelPluginsResponse), nil
 	}
 }
 
@@ -725,6 +773,18 @@ func (i *RestoreInstanceInvoker) Invoke() (*model.RestoreInstanceResponse, error
 	}
 }
 
+type ResumePluginExtensionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumePluginExtensionsInvoker) Invoke() (*model.ResumePluginExtensionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumePluginExtensionsResponse), nil
+	}
+}
+
 type RunInstanceActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,6 +830,18 @@ func (i *SetDbUserPwdInvoker) Invoke() (*model.SetDbUserPwdResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SetDbUserPwdResponse), nil
+	}
+}
+
+type SetKernelPluginLicenseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetKernelPluginLicenseInvoker) Invoke() (*model.SetKernelPluginLicenseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetKernelPluginLicenseResponse), nil
 	}
 }
 

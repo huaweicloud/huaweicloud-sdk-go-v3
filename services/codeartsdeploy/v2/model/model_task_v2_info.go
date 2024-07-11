@@ -27,7 +27,7 @@ type TaskV2Info struct {
 	// 部署步骤
 	Steps map[string]Step `json:"steps,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称
@@ -42,7 +42,7 @@ type TaskV2Info struct {
 	// 修改时间
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 角色ID
+	// 角色id
 	RoleId *int32 `json:"role_id,omitempty"`
 
 	// 是否为默认角色
@@ -54,10 +54,10 @@ type TaskV2Info struct {
 	// 应用创建者昵称
 	NickName *string `json:"nick_name,omitempty"`
 
-	// 应用创建者用户ID
+	// 应用创建者用户id
 	OwnerId *string `json:"owner_id,omitempty"`
 
-	// 应用创建者租户ID
+	// 应用创建者租户id
 	TenantId *string `json:"tenant_id,omitempty"`
 
 	// 应用创建者租户名

@@ -8,7 +8,7 @@ import (
 
 type CreateRocketMqMigrationTaskReq struct {
 
-	// RocketMQ topic 元数据，键为topic名，值为topic配置，迁移任务类型为自建RocketMQ上云(rocketmq)时必填。
+	// RocketMQ Topic 元数据，键为Topic名，值为topic配置，迁移任务类型为自建RocketMQ上云(rocketmq)时必填。
 	TopicConfigTable map[string]MigrationRocketMqTopicConfig `json:"topicConfigTable,omitempty"`
 
 	// RocketMQ消费组元数据，键为消费组名，值为消费组配置，迁移任务类型为自建RocketMQ上云(rocketmq)时必填。

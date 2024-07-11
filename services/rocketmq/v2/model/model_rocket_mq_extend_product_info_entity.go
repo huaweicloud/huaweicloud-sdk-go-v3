@@ -8,36 +8,36 @@ import (
 
 type RocketMqExtendProductInfoEntity struct {
 
-	// 实例类型
+	// 实例类型。
 	Type *string `json:"type,omitempty"`
 
-	// 产品ID
+	// 产品ID。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 该产品使用的ECS规格
+	// 该产品使用的ECS规格。
 	EcsFlavorId *string `json:"ecs_flavor_id,omitempty"`
 
 	// 账单计费类型。
 	BillingCode *string `json:"billing_code,omitempty"`
 
-	// 支持的CPU架构类型
+	// 支持的CPU架构类型。
 	ArchTypes *[]string `json:"arch_types,omitempty"`
 
-	// 支持的计费模式类型
+	// 支持的计费模式类型。
 	ChargingMode *[]string `json:"charging_mode,omitempty"`
 
-	// 磁盘IO信息
+	// 磁盘IO信息。
 	Ios *[]RocketMqExtendProductIosEntity `json:"ios,omitempty"`
 
 	Properties *RocketMqExtendProductPropertiesEntity `json:"properties,omitempty"`
 
-	// 有可用资源的可用区列表
+	// 有可用资源的可用区列表。
 	AvailableZones *[]string `json:"available_zones,omitempty"`
 
-	// 资源售罄的可用区列表
+	// 资源售罄的可用区列表。
 	UnavailableZones *[]string `json:"unavailable_zones,omitempty"`
 
-	// 支持的特性功能
+	// 支持的特性功能。
 	SupportFeatures *[]RocketMqProductSupportFeaturesEntity `json:"support_features,omitempty"`
 
 	// 是否为擎天实例。

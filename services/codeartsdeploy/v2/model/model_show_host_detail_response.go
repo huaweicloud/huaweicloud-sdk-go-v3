@@ -9,7 +9,7 @@ import (
 // ShowHostDetailResponse Response Object
 type ShowHostDetailResponse struct {
 
-	// 请求状态
+	// 请求成功失败状态
 	Status *string `json:"status,omitempty"`
 
 	Result         *HostInfoDetail `json:"result,omitempty"`

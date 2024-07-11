@@ -9,7 +9,7 @@ import (
 // HostInfo 主机信息
 type HostInfo struct {
 
-	// 主机ID
+	// 主机id
 	Uuid *string `json:"uuid,omitempty"`
 
 	// 主机IP
@@ -34,7 +34,7 @@ type HostInfo struct {
 	// 主机集群id
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 代理机ID
+	// 代理机id
 	ProxyHostId *string `json:"proxy_host_id,omitempty"`
 
 	// 主机所属人id

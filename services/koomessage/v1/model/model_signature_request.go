@@ -15,7 +15,7 @@ type SignatureRequest struct {
 	// 签名名称。
 	SignatureName string `json:"signature_name"`
 
-	// 签名类型。
+	// 签名类型。PROMOTION_TYPE：营销类，NOTIFY_TYPE：通知类。
 	SignatureType SignatureRequestSignatureType `json:"signature_type"`
 
 	// 短信应用ID。
@@ -27,10 +27,10 @@ type SignatureRequest struct {
 	// 营业执照文件ID。调用上传申请文件接口获取。
 	FileId string `json:"file_id"`
 
-	// 签名来源。
+	// 签名来源。0：企事业单位的全称或简称，1：工信部备案网站的全称或简称，2：APP应用的全称或简称，3：公众号或小程序的全称或简称，4：电商平台店铺名的全称或简称，5：商标名的全称或简称。
 	SignatureSource int32 `json:"signature_source"`
 
-	// 是否涉及第三方权益。若为yes，则还需要传入授权委托书。
+	// 是否涉及第三方权益。若为yes，则还需要传入授权委托书。yes：涉及，no：不涉及。
 	IsInvolvedThird SignatureRequestIsInvolvedThird `json:"is_involved_third"`
 
 	// 授权委托书文件ID。调用上传申请文件接口获取。
@@ -61,10 +61,10 @@ type SignatureRequestSignatureTypeEnum struct {
 func GetSignatureRequestSignatureTypeEnum() SignatureRequestSignatureTypeEnum {
 	return SignatureRequestSignatureTypeEnum{
 		PROMOTION_TYPE: SignatureRequestSignatureType{
-			value: "PROMOTION_TYPE：营销类",
+			value: "PROMOTION_TYPE",
 		},
 		NOTIFY_TYPE: SignatureRequestSignatureType{
-			value: "NOTIFY_TYPE：通知类",
+			value: "NOTIFY_TYPE",
 		},
 	}
 }
@@ -108,10 +108,10 @@ type SignatureRequestIsInvolvedThirdEnum struct {
 func GetSignatureRequestIsInvolvedThirdEnum() SignatureRequestIsInvolvedThirdEnum {
 	return SignatureRequestIsInvolvedThirdEnum{
 		YES: SignatureRequestIsInvolvedThird{
-			value: "yes：涉及",
+			value: "yes",
 		},
 		NO: SignatureRequestIsInvolvedThird{
-			value: "no：不涉及",
+			value: "no",
 		},
 	}
 }

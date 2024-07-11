@@ -27,7 +27,7 @@ type ListMessagesRequest struct {
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
 	Offset *string `json:"offset,omitempty"`
 
-	// 消息的key
+	// 消息的key。
 	Key *string `json:"key,omitempty"`
 
 	// 开始时间（不通过msg_id精确查询消息时，此参数必填）。

@@ -9,10 +9,10 @@ import (
 // ImportHostToEnvironmentResponse Response Object
 type ImportHostToEnvironmentResponse struct {
 
-	// 响应状态
+	// 请求成功失败状态
 	Status *string `json:"status,omitempty"`
 
-	// 被导入的主机ids
+	// 被导入的主机id列表
 	Result         *[]string `json:"result,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -52,6 +52,9 @@ type HostModel struct {
 
 	// 数据盘个数
 	DataVolumeCount *int32 `json:"data_volume_count,omitempty"`
+
+	// 节点组名称
+	NodeGroupName *string `json:"node_group_name,omitempty"`
 }
 
 func (o HostModel) String() string {

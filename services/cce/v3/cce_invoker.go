@@ -569,6 +569,18 @@ func (i *RollbackAddonInstanceInvoker) Invoke() (*model.RollbackAddonInstanceRes
 	}
 }
 
+type ScaleNodePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ScaleNodePoolInvoker) Invoke() (*model.ScaleNodePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ScaleNodePoolResponse), nil
+	}
+}
+
 type ShowAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

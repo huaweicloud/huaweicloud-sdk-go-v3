@@ -18,7 +18,7 @@ type ShowEngineInstanceExtendProductInfoRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 产品的类型。 advanced：专享版
+	// 产品的类型。 advanced：专享版。
 	Type *ShowEngineInstanceExtendProductInfoRequestType `json:"type,omitempty"`
 }
 

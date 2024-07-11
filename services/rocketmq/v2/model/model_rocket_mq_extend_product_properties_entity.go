@@ -27,10 +27,10 @@ type RocketMqExtendProductPropertiesEntity struct {
 	// 消息引擎版本。
 	EngineVersions *string `json:"engine_versions,omitempty"`
 
-	// 每个节点的最小存储。单位为GB
+	// 每个节点的最小存储。单位为GB。
 	MinStoragePerNode *string `json:"min_storage_per_node,omitempty"`
 
-	// product_id的别名
+	// product_id的别名。
 	ProductAlias *string `json:"product_alias,omitempty"`
 }
 

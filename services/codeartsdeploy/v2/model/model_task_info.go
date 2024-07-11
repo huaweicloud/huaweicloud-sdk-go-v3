@@ -18,7 +18,7 @@ type TaskInfo struct {
 	// 应用名称
 	Name *string `json:"name,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 项目名称
@@ -54,10 +54,10 @@ type TaskInfo struct {
 	// 应用创建者昵称
 	NickName *string `json:"nick_name,omitempty"`
 
-	// 应用创建者用户ID
+	// 应用创建者用户id
 	OwnerId *string `json:"owner_id,omitempty"`
 
-	// 应用创建者租户ID
+	// 应用创建者租户id
 	TenantId *string `json:"tenant_id,omitempty"`
 
 	// 应用创建者租户名
@@ -93,7 +93,7 @@ type TaskInfo struct {
 	// 应用和AOM应用组件对应关系
 	AppComponentList *[]AppComponentDao `json:"app_component_list,omitempty"`
 
-	// 角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+	// 角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
 	RoleId *int32 `json:"role_id,omitempty"`
 
 	// 部署任务id

@@ -14,7 +14,7 @@ type BatchDeleteInstanceReq struct {
 	// 实例的ID列表。
 	Instances *[]string `json:"instances,omitempty"`
 
-	// 对实例的操作：delete
+	// 对实例的操作：delete。
 	Action BatchDeleteInstanceReqAction `json:"action"`
 
 	// 参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。

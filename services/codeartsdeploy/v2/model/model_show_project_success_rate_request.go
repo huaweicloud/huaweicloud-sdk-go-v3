@@ -9,7 +9,7 @@ import (
 // ShowProjectSuccessRateRequest Request Object
 type ShowProjectSuccessRateRequest struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd

@@ -40,6 +40,9 @@ type PoliciesInListResp struct {
 
 	// 告警级别，1为紧急，2为重要，3为次要，4为提示
 	AlarmLevel *int32 `json:"alarm_level,omitempty"`
+
+	// 用户在页面中选择的指标单位， 用于后续指标数据回显和计算
+	SelectedUnit *string `json:"selected_unit,omitempty"`
 }
 
 func (o PoliciesInListResp) String() string {

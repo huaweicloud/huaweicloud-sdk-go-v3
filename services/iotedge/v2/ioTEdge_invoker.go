@@ -593,6 +593,18 @@ func (i *DeleteModuleInvoker) Invoke() (*model.DeleteModuleResponse, error) {
 	}
 }
 
+type InvokeModuleMsgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokeModuleMsgInvoker) Invoke() (*model.InvokeModuleMsgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokeModuleMsgResponse), nil
+	}
+}
+
 type ShowModuleInvoker struct {
 	*invoker.BaseInvoker
 }

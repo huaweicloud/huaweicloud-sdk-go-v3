@@ -15,7 +15,7 @@ type CreateHostClusterRequestBody struct {
 	// 主机集群名
 	Name string `json:"name"`
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 操作系统：windows|linux

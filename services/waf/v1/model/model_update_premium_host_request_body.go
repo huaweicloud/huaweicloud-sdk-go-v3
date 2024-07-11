@@ -21,6 +21,9 @@ type UpdatePremiumHostRequestBody struct {
 	// 证书名   - 对外协议为HTTP时不需要填写   - 对外协议HTTPS时为必填参数
 	Certificatename *string `json:"certificatename,omitempty"`
 
+	// 防护域名的源站服务器配置信息
+	Server *[]PremiumWafServer `json:"server,omitempty"`
+
 	// 配置的最低TLS版本（TLS v1.0/TLS v1.1/TLS v1.2）,默认为TLS v1.0版本，对于低于最低TLS版本的请求，将无法正常访问网站
 	Tls *UpdatePremiumHostRequestBodyTls `json:"tls,omitempty"`
 

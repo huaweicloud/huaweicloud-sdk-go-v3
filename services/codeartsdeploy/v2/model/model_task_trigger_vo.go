@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// TaskTriggerVo 部署任务触发场景配置
 type TaskTriggerVo struct {
 
 	// 部署任务允许执行的场景。其中0：所有执行请求均可，1：只允许流水线触发

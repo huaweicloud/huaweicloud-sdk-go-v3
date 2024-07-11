@@ -15,7 +15,7 @@ type CreateQueueResponse struct {
 	// 是否自动删除
 	AutoDelete *bool `json:"auto_delete,omitempty"`
 
-	// 是否持久化（AMQP版本默认持久化，不涉及此字段）
+	// 是否持久化[（AMQP版本默认持久化，不涉及此字段）](tag:hws,hws_hk)
 	Durable *bool `json:"durable,omitempty"`
 
 	// 死信Exchange名称，消息被拒绝或过期时将重新发布到该Exchange。
@@ -27,7 +27,7 @@ type CreateQueueResponse struct {
 	// 发布到Queue的消息在被丢弃之前可以存活多长时间
 	MessageTtl *int64 `json:"message_ttl,omitempty"`
 
-	// 若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。（AMQP版本默认将消息存储到磁盘，不涉及此字段）
+	// 若设置惰性队列，请输入lazy。惰性队列模式会在磁盘上存储尽可能多的消息以减少内存使用；若不设置，队列将消息存储在内存缓存以尽可能快地传递消息。[（AMQP版本默认将消息存储到磁盘，不涉及此字段）](tag:hws,hws_hk)
 	LazyMode       *string `json:"lazy_mode,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

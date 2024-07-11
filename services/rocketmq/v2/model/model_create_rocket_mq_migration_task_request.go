@@ -15,10 +15,10 @@ type CreateRocketMqMigrationTaskRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当topic或group已存在则会报错。
+	// true开启同名覆盖，会对已有的同名元数据的配置进行修改，false时当Topic或group已存在则会报错。
 	Overwrite CreateRocketMqMigrationTaskRequestOverwrite `json:"overwrite"`
 
-	// 迁移任务名称，名称规则参考创建实例
+	// 迁移任务名称，名称规则参考创建实例。
 	Name string `json:"name"`
 
 	// 迁移任务类型，分为自建RocketMQ上云(rocketmq)、自建RabbitMQ上云(rabbitToRocket)

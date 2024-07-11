@@ -18,7 +18,7 @@ type HostClusterInfo struct {
 	// 主机集群名
 	Name *string `json:"name,omitempty"`
 
-	// 项目ID
+	// 项目id
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 操作系统：windows|linux

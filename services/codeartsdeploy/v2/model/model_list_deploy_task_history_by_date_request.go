@@ -9,10 +9,10 @@ import (
 // ListDeployTaskHistoryByDateRequest Request Object
 type ListDeployTaskHistoryByDateRequest struct {
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
-	// 任务ID
+	// 任务id
 	Id string `json:"id"`
 
 	// 分页页码， 表示从此页开始查询， page大于等于1

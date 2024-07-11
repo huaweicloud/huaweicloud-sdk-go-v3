@@ -18,7 +18,7 @@ type DeploymentGroup struct {
 	// 局点信息
 	RegionName string `json:"region_name"`
 
-	// 项目ID
+	// 项目id
 	ProjectId string `json:"project_id"`
 
 	// 操作信息：windows|linux

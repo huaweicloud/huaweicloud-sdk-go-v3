@@ -460,6 +460,27 @@ func (c *GaussDBforopenGaussClient) DownloadBackupInvoker(request *model.Downloa
 	return &DownloadBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// InstallKernelPlugin 安装插件
+//
+// 安装插件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) InstallKernelPlugin(request *model.InstallKernelPluginRequest) (*model.InstallKernelPluginResponse, error) {
+	requestDef := GenReqDefForInstallKernelPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InstallKernelPluginResponse), nil
+	}
+}
+
+// InstallKernelPluginInvoker 安装插件
+func (c *GaussDBforopenGaussClient) InstallKernelPluginInvoker(request *model.InstallKernelPluginRequest) *InstallKernelPluginInvoker {
+	requestDef := GenReqDefForInstallKernelPlugin()
+	return &InstallKernelPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApplicableInstances 查询可应用实例列表
 //
 // 查询可应用当前参数组模板的实例列表。
@@ -964,6 +985,27 @@ func (c *GaussDBforopenGaussClient) ListInstancesDetailsInvoker(request *model.L
 	return &ListInstancesDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListKernelPlugins 查询实例已安装的插件列表
+//
+// 查询实例已安装的插件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListKernelPlugins(request *model.ListKernelPluginsRequest) (*model.ListKernelPluginsResponse, error) {
+	requestDef := GenReqDefForListKernelPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKernelPluginsResponse), nil
+	}
+}
+
+// ListKernelPluginsInvoker 查询实例已安装的插件列表
+func (c *GaussDBforopenGaussClient) ListKernelPluginsInvoker(request *model.ListKernelPluginsRequest) *ListKernelPluginsInvoker {
+	requestDef := GenReqDefForListKernelPlugins()
+	return &ListKernelPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListParamGroupTemplates 获取参数模板列表
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
@@ -983,6 +1025,27 @@ func (c *GaussDBforopenGaussClient) ListParamGroupTemplates(request *model.ListP
 func (c *GaussDBforopenGaussClient) ListParamGroupTemplatesInvoker(request *model.ListParamGroupTemplatesRequest) *ListParamGroupTemplatesInvoker {
 	requestDef := GenReqDefForListParamGroupTemplates()
 	return &ListParamGroupTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPluginExtensions 查询实例插件拓展信息
+//
+// 查询实例插件拓展信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListPluginExtensions(request *model.ListPluginExtensionsRequest) (*model.ListPluginExtensionsResponse, error) {
+	requestDef := GenReqDefForListPluginExtensions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginExtensionsResponse), nil
+	}
+}
+
+// ListPluginExtensionsInvoker 查询实例插件拓展信息
+func (c *GaussDBforopenGaussClient) ListPluginExtensionsInvoker(request *model.ListPluginExtensionsRequest) *ListPluginExtensionsInvoker {
+	requestDef := GenReqDefForListPluginExtensions()
+	return &ListPluginExtensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPredefinedTags 查询预定义标签
@@ -1110,6 +1173,27 @@ func (c *GaussDBforopenGaussClient) ListStorageTypes(request *model.ListStorageT
 func (c *GaussDBforopenGaussClient) ListStorageTypesInvoker(request *model.ListStorageTypesRequest) *ListStorageTypesInvoker {
 	requestDef := GenReqDefForListStorageTypes()
 	return &ListStorageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSupportKernelPlugins 查询支持的插件列表
+//
+// 查询支持的插件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSupportKernelPlugins(request *model.ListSupportKernelPluginsRequest) (*model.ListSupportKernelPluginsResponse, error) {
+	requestDef := GenReqDefForListSupportKernelPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupportKernelPluginsResponse), nil
+	}
+}
+
+// ListSupportKernelPluginsInvoker 查询支持的插件列表
+func (c *GaussDBforopenGaussClient) ListSupportKernelPluginsInvoker(request *model.ListSupportKernelPluginsRequest) *ListSupportKernelPluginsInvoker {
+	requestDef := GenReqDefForListSupportKernelPlugins()
+	return &ListSupportKernelPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTasks 查询任务列表
@@ -1280,6 +1364,27 @@ func (c *GaussDBforopenGaussClient) RestoreInstanceInvoker(request *model.Restor
 	return &RestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResumePluginExtensions 配置插件拓展能力
+//
+// 配置插件拓展能力
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ResumePluginExtensions(request *model.ResumePluginExtensionsRequest) (*model.ResumePluginExtensionsResponse, error) {
+	requestDef := GenReqDefForResumePluginExtensions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResumePluginExtensionsResponse), nil
+	}
+}
+
+// ResumePluginExtensionsInvoker 配置插件拓展能力
+func (c *GaussDBforopenGaussClient) ResumePluginExtensionsInvoker(request *model.ResumePluginExtensionsRequest) *ResumePluginExtensionsInvoker {
+	requestDef := GenReqDefForResumePluginExtensions()
+	return &ResumePluginExtensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunInstanceAction CN横向扩容/DN分片扩容/磁盘扩容
 //
 // CN横向扩容/DN分片扩容/磁盘扩容
@@ -1362,6 +1467,27 @@ func (c *GaussDBforopenGaussClient) SetDbUserPwd(request *model.SetDbUserPwdRequ
 func (c *GaussDBforopenGaussClient) SetDbUserPwdInvoker(request *model.SetDbUserPwdRequest) *SetDbUserPwdInvoker {
 	requestDef := GenReqDefForSetDbUserPwd()
 	return &SetDbUserPwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetKernelPluginLicense 配置插件license
+//
+// 配置插件license
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) SetKernelPluginLicense(request *model.SetKernelPluginLicenseRequest) (*model.SetKernelPluginLicenseResponse, error) {
+	requestDef := GenReqDefForSetKernelPluginLicense()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetKernelPluginLicenseResponse), nil
+	}
+}
+
+// SetKernelPluginLicenseInvoker 配置插件license
+func (c *GaussDBforopenGaussClient) SetKernelPluginLicenseInvoker(request *model.SetKernelPluginLicenseRequest) *SetKernelPluginLicenseInvoker {
+	requestDef := GenReqDefForSetKernelPluginLicense()
+	return &SetKernelPluginLicenseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetNewBackupPolicy 设置自动备份策略
