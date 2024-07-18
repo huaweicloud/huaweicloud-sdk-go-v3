@@ -38,6 +38,7 @@ type CountResourcesByTagsRequestResourceTypeEnum struct {
 	VPN_GATEWAY      CountResourcesByTagsRequestResourceType
 	VPN_CONNECTION   CountResourcesByTagsRequestResourceType
 	CUSTOMER_GATEWAY CountResourcesByTagsRequestResourceType
+	P2C_VPN_GATEWAYS CountResourcesByTagsRequestResourceType
 }
 
 func GetCountResourcesByTagsRequestResourceTypeEnum() CountResourcesByTagsRequestResourceTypeEnum {
@@ -50,6 +51,9 @@ func GetCountResourcesByTagsRequestResourceTypeEnum() CountResourcesByTagsReques
 		},
 		CUSTOMER_GATEWAY: CountResourcesByTagsRequestResourceType{
 			value: "customer-gateway",
+		},
+		P2C_VPN_GATEWAYS: CountResourcesByTagsRequestResourceType{
+			value: "p2c-vpn-gateways",
 		},
 	}
 }

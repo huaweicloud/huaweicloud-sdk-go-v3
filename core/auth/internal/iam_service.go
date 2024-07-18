@@ -20,7 +20,6 @@
 package internal
 
 import (
-	"bytes"
 	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
@@ -29,7 +28,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-	"io/ioutil"
 	"os"
 	"reflect"
 	"strings"
@@ -173,22 +171,7 @@ func GetResponseBody(resp *response.DefaultHttpResponse) ([]byte, error) {
 		return nil, sdkerr.NewServiceResponseError(resp.Response)
 	}
 
-	data, err := ioutil.ReadAll(resp.Response.Body)
-
-	if err != nil {
-		if closeErr := resp.Response.Body.Close(); closeErr != nil {
-			return nil, err
-		}
-		return nil, err
-	}
-
-	if err := resp.Response.Body.Close(); err != nil {
-		return nil, err
-	} else {
-		resp.Response.Body = ioutil.NopCloser(bytes.NewBuffer(data))
-	}
-
-	return data, nil
+	return resp.GetBodyAsBytes()
 }
 
 type CreateTokenWithIdTokenRequest struct {

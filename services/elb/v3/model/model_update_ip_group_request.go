@@ -9,7 +9,7 @@ import (
 // UpdateIpGroupRequest Request Object
 type UpdateIpGroupRequest struct {
 
-	// 待更新的IP地址组的ID。
+	// 参数解释：待更新的IP地址组的ID。
 	IpgroupId string `json:"ipgroup_id"`
 
 	Body *UpdateIpGroupRequestBody `json:"body,omitempty"`

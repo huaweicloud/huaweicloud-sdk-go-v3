@@ -9,7 +9,7 @@ import (
 // BatchDeleteIpListOption 批量删除IP地址组中的IP。
 type BatchDeleteIpListOption struct {
 
-	// IP列表。
+	// 参数解释：IP列表。
 	IpList *[]IpGroupIp `json:"ip_list,omitempty"`
 }
 

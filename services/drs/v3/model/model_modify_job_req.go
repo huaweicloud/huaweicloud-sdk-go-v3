@@ -30,7 +30,7 @@ type ModifyJobReq struct {
 
 	TargetEndpoint *Endpoint `json:"target_endpoint,omitempty"`
 
-	// node规格类型，测试连接之后修改调用时必填。
+	// node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
 	NodeType *ModifyJobReqNodeType `json:"node_type,omitempty"`
 
 	// 引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
@@ -129,13 +129,33 @@ type ModifyJobReqNodeType struct {
 }
 
 type ModifyJobReqNodeTypeEnum struct {
-	HIGH ModifyJobReqNodeType
+	MICRO     ModifyJobReqNodeType
+	SMALL     ModifyJobReqNodeType
+	MEDIUM    ModifyJobReqNodeType
+	HIGH      ModifyJobReqNodeType
+	XLARGE    ModifyJobReqNodeType
+	E_2XLARGE ModifyJobReqNodeType
 }
 
 func GetModifyJobReqNodeTypeEnum() ModifyJobReqNodeTypeEnum {
 	return ModifyJobReqNodeTypeEnum{
+		MICRO: ModifyJobReqNodeType{
+			value: "micro",
+		},
+		SMALL: ModifyJobReqNodeType{
+			value: "small",
+		},
+		MEDIUM: ModifyJobReqNodeType{
+			value: "medium",
+		},
 		HIGH: ModifyJobReqNodeType{
 			value: "high",
+		},
+		XLARGE: ModifyJobReqNodeType{
+			value: "xlarge",
+		},
+		E_2XLARGE: ModifyJobReqNodeType{
+			value: "2xlarge",
 		},
 	}
 }

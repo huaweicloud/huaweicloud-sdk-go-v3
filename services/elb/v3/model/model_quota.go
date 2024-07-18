@@ -24,7 +24,7 @@ type Quota struct {
 	// 转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 	L7policy int32 `json:"l7policy"`
 
-	// 转发策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	// 单个转发策略下所有转发规则的condition总数配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 	ConditionPerPolicy int32 `json:"condition_per_policy"`
 
 	// 后端云服务器组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
@@ -39,16 +39,16 @@ type Quota struct {
 	// 单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 	MembersPerPool int32 `json:"members_per_pool"`
 
-	// 单个pool下的member的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	// 单个监听器下的pool的配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 	ListenersPerPool int32 `json:"listeners_per_pool"`
 
 	// IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	Ipgroup int32 `json:"ipgroup"`
 
-	// IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+	// 单个IP地址组可以关联的监听器数量配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	IpgroupBindings int32 `json:"ipgroup_bindings"`
 
-	// IP地址组配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
+	// 单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	IpgroupMaxLength int32 `json:"ipgroup_max_length"`
 
 	// 自定义安全策略配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)

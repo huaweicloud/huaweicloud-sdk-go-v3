@@ -44,6 +44,7 @@ type ListResourcesByTagsRequestResourceTypeEnum struct {
 	VPN_GATEWAY      ListResourcesByTagsRequestResourceType
 	VPN_CONNECTION   ListResourcesByTagsRequestResourceType
 	CUSTOMER_GATEWAY ListResourcesByTagsRequestResourceType
+	P2C_VPN_GATEWAYS ListResourcesByTagsRequestResourceType
 }
 
 func GetListResourcesByTagsRequestResourceTypeEnum() ListResourcesByTagsRequestResourceTypeEnum {
@@ -56,6 +57,9 @@ func GetListResourcesByTagsRequestResourceTypeEnum() ListResourcesByTagsRequestR
 		},
 		CUSTOMER_GATEWAY: ListResourcesByTagsRequestResourceType{
 			value: "customer-gateway",
+		},
+		P2C_VPN_GATEWAYS: ListResourcesByTagsRequestResourceType{
+			value: "p2c-vpn-gateways",
 		},
 	}
 }

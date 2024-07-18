@@ -350,6 +350,31 @@ func (c *LiveClient) ShowUpBandwidthInvoker(request *model.ShowUpBandwidthReques
 	return &ShowUpBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPlayDomainStreamInfo 查询播放域名下的流数据
+//
+// 查询播放域名下的监控数据，根据输入时间点，返回查询该时间点所有流的带宽、在线人数、协议。
+//
+// 返回的数据粒度为1分钟。
+//
+// 最大查询周期7天，数据延迟5分钟。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListPlayDomainStreamInfo(request *model.ListPlayDomainStreamInfoRequest) (*model.ListPlayDomainStreamInfoResponse, error) {
+	requestDef := GenReqDefForListPlayDomainStreamInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPlayDomainStreamInfoResponse), nil
+	}
+}
+
+// ListPlayDomainStreamInfoInvoker 查询播放域名下的流数据
+func (c *LiveClient) ListPlayDomainStreamInfoInvoker(request *model.ListPlayDomainStreamInfoRequest) *ListPlayDomainStreamInfoInvoker {
+	requestDef := GenReqDefForListPlayDomainStreamInfo()
+	return &ListPlayDomainStreamInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSingleStreamBitrate 查询推流码率数据接口
 //
 // 查询推流监控码率数据接口。

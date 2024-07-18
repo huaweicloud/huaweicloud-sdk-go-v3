@@ -33,8 +33,8 @@ type UpdateStartedConfigReqBody struct {
 	// 是否允许与会人改名 0:不允许 1:允许
 	AllowRename *int32 `json:"allowRename,omitempty"`
 
-	// 标注权限 0:所有人可标注 1:仅共享人可标注
-	LabelPermission *int32 `json:"labelPermission,omitempty"`
+	// 锁定会议 0：解锁 1：锁定
+	IsLock *int32 `json:"isLock,omitempty"`
 
 	// 抢共享权限设置 0:仅主持人/联席 1:所有人可抢共享
 	FreeShare *int32 `json:"freeShare,omitempty"`

@@ -62,9 +62,6 @@ type KeyDetails struct {
 
 	// 密钥库ID
 	KeystoreId *string `json:"keystore_id,omitempty"`
-
-	// 密钥在加密机中的标签
-	KeyLabel *string `json:"key_label,omitempty"`
 }
 
 func (o KeyDetails) String() string {

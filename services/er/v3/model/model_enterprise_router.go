@@ -60,6 +60,9 @@ type EnterpriseRouter struct {
 
 	// 是否自动接受共享连接创建，默认false不开启
 	AutoAcceptSharedAttachments *bool `json:"auto_accept_shared_attachments,omitempty"`
+
+	// domain id
+	DomainId *string `json:"domain_id,omitempty"`
 }
 
 func (o EnterpriseRouter) String() string {

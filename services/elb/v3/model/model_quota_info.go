@@ -9,7 +9,7 @@ import (
 // QuotaInfo 配额信息，包括总配额和已使用配额。
 type QuotaInfo struct {
 
-	// 资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、members_per_pool、 healthmonitor、l7policy、certificate、security_policy、condition_per_policy、listeners_per_pool、ipgroup_bindings、ipgroup_max_length。  其中members_per_pool表示一个pool下最多可关联的member数量。
+	// 资源类型。  取值：loadbalancer、listener、ipgroup、pool、member、healthmonitor、l7policy、certificate、security_policy、listeners_per_loadbalancer、listeners_per_pool、members_per_pool、condition_per_policy、ipgroup_bindings、ipgroup_max_length。
 	QuotaKey string `json:"quota_key"`
 
 	// 总配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。

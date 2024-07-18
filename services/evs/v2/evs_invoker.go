@@ -29,6 +29,18 @@ func (i *BatchDeleteVolumeTagsInvoker) Invoke() (*model.BatchDeleteVolumeTagsRes
 	}
 }
 
+type ChangeVolumeChargeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeVolumeChargeModeInvoker) Invoke() (*model.ChangeVolumeChargeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeVolumeChargeModeResponse), nil
+	}
+}
+
 type CinderAcceptVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +314,18 @@ func (i *ShowVolumeTagsInvoker) Invoke() (*model.ShowVolumeTagsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowVolumeTagsResponse), nil
+	}
+}
+
+type UnsubscribePostpaidVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribePostpaidVolumeInvoker) Invoke() (*model.UnsubscribePostpaidVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnsubscribePostpaidVolumeResponse), nil
 	}
 }
 

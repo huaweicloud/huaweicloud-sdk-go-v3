@@ -41,6 +41,7 @@ type BatchCreateResourceTagsRequestResourceTypeEnum struct {
 	VPN_GATEWAY      BatchCreateResourceTagsRequestResourceType
 	VPN_CONNECTION   BatchCreateResourceTagsRequestResourceType
 	CUSTOMER_GATEWAY BatchCreateResourceTagsRequestResourceType
+	P2C_VPN_GATEWAYS BatchCreateResourceTagsRequestResourceType
 }
 
 func GetBatchCreateResourceTagsRequestResourceTypeEnum() BatchCreateResourceTagsRequestResourceTypeEnum {
@@ -53,6 +54,9 @@ func GetBatchCreateResourceTagsRequestResourceTypeEnum() BatchCreateResourceTags
 		},
 		CUSTOMER_GATEWAY: BatchCreateResourceTagsRequestResourceType{
 			value: "customer-gateway",
+		},
+		P2C_VPN_GATEWAYS: BatchCreateResourceTagsRequestResourceType{
+			value: "p2c-vpn-gateways",
 		},
 	}
 }

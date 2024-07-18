@@ -9,7 +9,7 @@ import (
 // ListenerRef 监听器
 type ListenerRef struct {
 
-	// 监听器ID。
+	// 参数解释：监听器ID。
 	Id string `json:"id"`
 }
 

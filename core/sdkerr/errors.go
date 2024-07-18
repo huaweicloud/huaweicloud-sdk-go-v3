@@ -20,7 +20,6 @@
 package sdkerr
 
 import (
-	"bytes"
 	"fmt"
 	"go.mongodb.org/mongo-driver/bson"
 	"io/ioutil"
@@ -114,28 +113,25 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 		RequestId:  resp.Header.Get(xRequestId),
 	}
 
+	defer resp.Body.Close()
 	data, err := ioutil.ReadAll(resp.Body)
-	defer func() {
-		closeErr := resp.Body.Close()
-		if closeErr == nil && err == nil {
-			resp.Body = ioutil.NopCloser(bytes.NewBuffer(data))
-		}
-	}()
+	if err != nil {
+		sr.ErrorMessage = err.Error()
+		return sr
+	}
 
-	if err == nil {
-		dataBuf := errMap{}
-		if resp.Header.Get("Content-Type") == "application/bson" {
-			err = bson.Unmarshal(data, &sr)
-		} else {
-			err = utils.Unmarshal(data, &dataBuf)
-		}
-		if err != nil {
+	dataBuf := errMap{}
+	if resp.Header.Get("Content-Type") == "application/bson" {
+		err = bson.Unmarshal(data, &sr)
+	} else {
+		err = utils.Unmarshal(data, &dataBuf)
+	}
+	if err != nil {
+		sr.ErrorMessage = string(data)
+	} else {
+		processServiceResponseError(dataBuf, sr)
+		if sr.ErrorMessage == "" {
 			sr.ErrorMessage = string(data)
-		} else {
-			processServiceResponseError(dataBuf, sr)
-			if sr.ErrorMessage == "" {
-				sr.ErrorMessage = string(data)
-			}
 		}
 	}
 

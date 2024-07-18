@@ -15,7 +15,7 @@ type CreateResolveTaskRequestBody struct {
 	// 短信签名列表，需要与最终发送短信的签名一致，才能解析。  > 最多传入5个签名，单个签名内容不包括中括号。
 	SmsSigns []string `json:"sms_signs"`
 
-	// 短链最大解析次数。  >个性化短链只支持最大解析数为1，设置其他值无效。
+	// 短链最大解析次数。  >个性化短链只支持最大解析数为1，设置其他值无效。 >群发短链设置解析次数需要大于等于2。
 	ResolvingTimes int32 `json:"resolving_times"`
 
 	// 生成短链类型。  - group：群发 - individual：个性化  > 使用动态参数模板时，该字段只能为individual。

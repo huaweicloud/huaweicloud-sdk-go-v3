@@ -44,7 +44,7 @@ type PolicyRoleResult struct {
 	// 自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
 	Type string `json:"type"`
 
-	Policy *ServicePolicy `json:"policy"`
+	Policy *CustomPolicy `json:"policy"`
 }
 
 func (o PolicyRoleResult) String() string {

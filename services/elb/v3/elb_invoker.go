@@ -101,6 +101,18 @@ func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, e
 	}
 }
 
+type CreateCertificatePrivateKeyEchoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificatePrivateKeyEchoInvoker) Invoke() (*model.CreateCertificatePrivateKeyEchoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificatePrivateKeyEchoResponse), nil
+	}
+}
+
 type CreateHealthMonitorInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,6 +590,18 @@ func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowCertificateResponse), nil
+	}
+}
+
+type ShowCertificatePrivateKeyEchoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificatePrivateKeyEchoInvoker) Invoke() (*model.ShowCertificatePrivateKeyEchoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertificatePrivateKeyEchoResponse), nil
 	}
 }
 

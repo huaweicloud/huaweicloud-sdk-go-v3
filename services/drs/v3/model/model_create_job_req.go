@@ -42,7 +42,7 @@ type CreateJobReq struct {
 	// 节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
 	NodeNum *int32 `json:"node_num,omitempty"`
 
-	// 规格类型。
+	// 规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
 	NodeType CreateJobReqNodeType `json:"node_type"`
 
 	SourceEndpoint *Endpoint `json:"source_endpoint"`
@@ -323,13 +323,33 @@ type CreateJobReqNodeType struct {
 }
 
 type CreateJobReqNodeTypeEnum struct {
-	HIGH CreateJobReqNodeType
+	MICRO     CreateJobReqNodeType
+	SMALL     CreateJobReqNodeType
+	MEDIUM    CreateJobReqNodeType
+	HIGH      CreateJobReqNodeType
+	XLARGE    CreateJobReqNodeType
+	E_2XLARGE CreateJobReqNodeType
 }
 
 func GetCreateJobReqNodeTypeEnum() CreateJobReqNodeTypeEnum {
 	return CreateJobReqNodeTypeEnum{
+		MICRO: CreateJobReqNodeType{
+			value: "micro",
+		},
+		SMALL: CreateJobReqNodeType{
+			value: "small",
+		},
+		MEDIUM: CreateJobReqNodeType{
+			value: "medium",
+		},
 		HIGH: CreateJobReqNodeType{
 			value: "high",
+		},
+		XLARGE: CreateJobReqNodeType{
+			value: "xlarge",
+		},
+		E_2XLARGE: CreateJobReqNodeType{
+			value: "2xlarge",
 		},
 	}
 }

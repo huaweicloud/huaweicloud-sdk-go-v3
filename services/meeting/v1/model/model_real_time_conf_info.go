@@ -11,6 +11,9 @@ type RealTimeConfInfo struct {
 
 	// 主持人与会者标识。
 	ChairID *string `json:"chairID,omitempty"`
+
+	// 联席主持人会场id。
+	CoHosts *[]string `json:"coHosts,omitempty"`
 }
 
 func (o RealTimeConfInfo) String() string {

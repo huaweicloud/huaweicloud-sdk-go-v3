@@ -20,7 +20,6 @@
 package core
 
 import (
-	"bytes"
 	"encoding/json"
 	"encoding/xml"
 	"errors"
@@ -36,7 +35,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"go.mongodb.org/mongo-driver/bson"
-	"io/ioutil"
 	"net"
 	"net/url"
 	"reflect"
@@ -361,6 +359,7 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 		field.Set(reflect.ValueOf(resp.GetStatusCode()))
 	}
 
+	// Return directly without reading the stream
 	if body, ok := t.FieldByName("Body"); ok && body.Type.Name() == "ReadCloser" {
 		v.FieldByName("Body").Set(reflect.ValueOf(resp.Response.Body))
 		addStatusCode()
@@ -377,17 +376,9 @@ func (hc *HcHttpClient) deserializeResponse(resp *response.DefaultHttpResponse, 
 }
 
 func (hc *HcHttpClient) deserializeResponseFields(resp *response.DefaultHttpResponse, reqDef *def.HttpRequestDef) error {
-	data, err := ioutil.ReadAll(resp.Response.Body)
+	data, err := resp.GetBodyAsBytes()
 	if err != nil {
-		if closeErr := resp.Response.Body.Close(); closeErr != nil {
-			return err
-		}
 		return err
-	}
-	if err = resp.Response.Body.Close(); err != nil {
-		return err
-	} else {
-		resp.Response.Body = ioutil.NopCloser(bytes.NewBuffer(data))
 	}
 
 	processError := func(err error) error {

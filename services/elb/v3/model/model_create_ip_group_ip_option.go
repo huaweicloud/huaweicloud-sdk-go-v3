@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// CreateIpGroupIpOption IP地址组中的包含的IP信息。
+// CreateIpGroupIpOption 参数解释：IP地址组中的包含的IP信息。
 type CreateIpGroupIpOption struct {
 
-	// IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+	// 参数解释：IP地址。支持IPv4、IPv6。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
 	Ip string `json:"ip"`
 
-	// 备注信息。
+	// 参数解释：备注信息。
 	Description *string `json:"description,omitempty"`
 }
 

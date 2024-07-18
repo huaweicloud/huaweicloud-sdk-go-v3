@@ -15,7 +15,7 @@ type LoadBalancerStatusPolicy struct {
 	// 转发策略ID。
 	Id *string `json:"id,omitempty"`
 
-	// 转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)
+	// 转发策略的配置状态。  取值范围： - ACTIVE: 默认值，表示正常。 [- ERROR: 表示当前策略与同一监听器下的其他策略存在相同的规则配置。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs)
 	ProvisioningStatus *string `json:"provisioning_status,omitempty"`
 
 	// 转发策略名称。

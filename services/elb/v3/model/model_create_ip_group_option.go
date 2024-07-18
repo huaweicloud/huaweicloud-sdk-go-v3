@@ -9,19 +9,19 @@ import (
 // CreateIpGroupOption 创建IP地址组请求参数。
 type CreateIpGroupOption struct {
 
-	// IP地址组所在的项目ID。
+	// 参数解释：IP地址组所在的项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// IP地址组的描述。
+	// 参数解释：IP地址组的描述。
 	Description *string `json:"description,omitempty"`
 
-	// IP地址组的名称。
+	// 参数解释：IP地址组的名称。
 	Name *string `json:"name,omitempty"`
 
-	// IP地址组中包含的IP或网段列表。[]表示任意IP。
+	// 参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
 	IpList []CreateIpGroupIpOption `json:"ip_list"`
 
-	// IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

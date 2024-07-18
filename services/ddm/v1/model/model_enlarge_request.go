@@ -20,6 +20,9 @@ type EnlargeRequest struct {
 
 	// 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。true，表示自动从账户中支付。false，表示手动从账户中支付，默认为该方式。
 	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
+
+	// 可用区Code，仅包年包月实例传递该参数，个数需与node_number一致。请参见地区和终端节点(https://developer.huaweicloud.com/endpoint?DDM)。
+	AvailableZones *[]string `json:"available_zones,omitempty"`
 }
 
 func (o EnlargeRequest) String() string {

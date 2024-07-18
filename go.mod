@@ -7,7 +7,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	github.com/tjfoc/gmsm v1.4.1
 	go.mongodb.org/mongo-driver v1.12.0
-	golang.org/x/crypto v0.21.0
+	golang.org/x/crypto v0.23.0
 	gopkg.in/ini.v1 v1.67.0
 	gopkg.in/yaml.v3 v3.0.1
 )

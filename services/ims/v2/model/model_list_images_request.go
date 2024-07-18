@@ -338,18 +338,19 @@ type ListImagesRequestPlatform struct {
 }
 
 type ListImagesRequestPlatformEnum struct {
-	WINDOWS      ListImagesRequestPlatform
-	UBUNTU       ListImagesRequestPlatform
-	RED_HAT      ListImagesRequestPlatform
-	SUSE         ListImagesRequestPlatform
-	CENT_OS      ListImagesRequestPlatform
-	DEBIAN       ListImagesRequestPlatform
-	OPEN_SUSE    ListImagesRequestPlatform
-	ORACLE_LINUX ListImagesRequestPlatform
-	FEDORA       ListImagesRequestPlatform
-	OTHER        ListImagesRequestPlatform
-	CORE_OS      ListImagesRequestPlatform
-	EULER_OS     ListImagesRequestPlatform
+	WINDOWS               ListImagesRequestPlatform
+	UBUNTU                ListImagesRequestPlatform
+	RED_HAT               ListImagesRequestPlatform
+	SUSE                  ListImagesRequestPlatform
+	CENT_OS               ListImagesRequestPlatform
+	DEBIAN                ListImagesRequestPlatform
+	OPEN_SUSE             ListImagesRequestPlatform
+	ORACLE_LINUX          ListImagesRequestPlatform
+	FEDORA                ListImagesRequestPlatform
+	OTHER                 ListImagesRequestPlatform
+	CORE_OS               ListImagesRequestPlatform
+	EULER_OS              ListImagesRequestPlatform
+	HUAWEI_CLOUD_EULER_OS ListImagesRequestPlatform
 }
 
 func GetListImagesRequestPlatformEnum() ListImagesRequestPlatformEnum {
@@ -389,6 +390,9 @@ func GetListImagesRequestPlatformEnum() ListImagesRequestPlatformEnum {
 		},
 		EULER_OS: ListImagesRequestPlatform{
 			value: "EulerOS",
+		},
+		HUAWEI_CLOUD_EULER_OS: ListImagesRequestPlatform{
+			value: "Huawei Cloud EulerOS",
 		},
 	}
 }

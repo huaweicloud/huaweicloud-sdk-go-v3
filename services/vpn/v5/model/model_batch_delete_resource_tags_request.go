@@ -41,6 +41,7 @@ type BatchDeleteResourceTagsRequestResourceTypeEnum struct {
 	VPN_GATEWAY      BatchDeleteResourceTagsRequestResourceType
 	VPN_CONNECTION   BatchDeleteResourceTagsRequestResourceType
 	CUSTOMER_GATEWAY BatchDeleteResourceTagsRequestResourceType
+	P2C_VPN_GATEWAYS BatchDeleteResourceTagsRequestResourceType
 }
 
 func GetBatchDeleteResourceTagsRequestResourceTypeEnum() BatchDeleteResourceTagsRequestResourceTypeEnum {
@@ -53,6 +54,9 @@ func GetBatchDeleteResourceTagsRequestResourceTypeEnum() BatchDeleteResourceTags
 		},
 		CUSTOMER_GATEWAY: BatchDeleteResourceTagsRequestResourceType{
 			value: "customer-gateway",
+		},
+		P2C_VPN_GATEWAYS: BatchDeleteResourceTagsRequestResourceType{
+			value: "p2c-vpn-gateways",
 		},
 	}
 }

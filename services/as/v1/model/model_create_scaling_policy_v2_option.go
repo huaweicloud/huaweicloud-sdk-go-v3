@@ -101,9 +101,10 @@ type CreateScalingPolicyV2OptionScalingPolicyType struct {
 }
 
 type CreateScalingPolicyV2OptionScalingPolicyTypeEnum struct {
-	ALARM      CreateScalingPolicyV2OptionScalingPolicyType
-	SCHEDULED  CreateScalingPolicyV2OptionScalingPolicyType
-	RECURRENCE CreateScalingPolicyV2OptionScalingPolicyType
+	ALARM          CreateScalingPolicyV2OptionScalingPolicyType
+	SCHEDULED      CreateScalingPolicyV2OptionScalingPolicyType
+	RECURRENCE     CreateScalingPolicyV2OptionScalingPolicyType
+	INTERVAL_ALARM CreateScalingPolicyV2OptionScalingPolicyType
 }
 
 func GetCreateScalingPolicyV2OptionScalingPolicyTypeEnum() CreateScalingPolicyV2OptionScalingPolicyTypeEnum {
@@ -116,6 +117,9 @@ func GetCreateScalingPolicyV2OptionScalingPolicyTypeEnum() CreateScalingPolicyV2
 		},
 		RECURRENCE: CreateScalingPolicyV2OptionScalingPolicyType{
 			value: "RECURRENCE",
+		},
+		INTERVAL_ALARM: CreateScalingPolicyV2OptionScalingPolicyType{
+			value: "INTERVAL_ALARM",
 		},
 	}
 }

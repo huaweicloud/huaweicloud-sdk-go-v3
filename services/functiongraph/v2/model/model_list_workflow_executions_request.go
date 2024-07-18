@@ -18,6 +18,9 @@ type ListWorkflowExecutionsRequest struct {
 	// 分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
 	Limit *int32 `json:"limit,omitempty"`
 
+	// 分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
+	Offset *int32 `json:"offset,omitempty"`
+
 	// 需要过滤的流程实例状态
 	Status *ListWorkflowExecutionsRequestStatus `json:"status,omitempty"`
 

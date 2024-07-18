@@ -23,6 +23,12 @@ type ServerFlavor struct {
 
 	// 该云服务器规格对应的内存大小，单位为MB。
 	Ram string `json:"ram"`
+
+	// 该云服务器规格对应的GPU设备。
+	Gpus []GpuInfo `json:"gpus"`
+
+	// 该云服务器规格对应的ASIC设备。
+	AsicAccelerators []AsicAcceleratorInfo `json:"asic_accelerators"`
 }
 
 func (o ServerFlavor) String() string {

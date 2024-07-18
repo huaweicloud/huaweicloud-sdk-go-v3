@@ -152,6 +152,21 @@ func GenReqDefForCreateCertificate() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateCertificatePrivateKeyEcho() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/elb/certificates/settings/private-key-echo").
+		WithResponse(new(model.CreateCertificatePrivateKeyEchoResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateHealthMonitor() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -658,6 +673,14 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Type").
 		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CommonName").
+		WithJsonTag("common_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Fingerprint").
+		WithJsonTag("fingerprint").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1513,6 +1536,18 @@ func GenReqDefForListPools() *def.HttpRequestDef {
 		WithName("ConnectionDrain").
 		WithJsonTag("connection_drain").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PoolHealth").
+		WithJsonTag("pool_health").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AnyPortEnable").
+		WithJsonTag("any_port_enable").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PublicBorderGroup").
+		WithJsonTag("public_border_group").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1600,6 +1635,17 @@ func GenReqDefForShowCertificate() *def.HttpRequestDef {
 		WithName("CertificateId").
 		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowCertificatePrivateKeyEcho() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/elb/certificates/settings/private-key-echo").
+		WithResponse(new(model.ShowCertificatePrivateKeyEchoResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2152,6 +2198,10 @@ func GenReqDefForListIpGroups() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IpList").
 		WithJsonTag("ip_list").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
