@@ -24,8 +24,6 @@ type MicroServiceInfo struct {
 
 	CceInfo *MicroServiceInfoCce `json:"cce_info,omitempty"`
 
-	CceServiceInfo *MicroServiceInfoCceService `json:"cce_service_info,omitempty"`
-
 	// 微服务更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 

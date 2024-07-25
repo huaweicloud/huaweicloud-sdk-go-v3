@@ -38,7 +38,7 @@ type IndicatorDataObjectDetail struct {
 	// 名称
 	Name *string `json:"name,omitempty"`
 
-	// 情报ID
+	// 威胁情报ID
 	Id *string `json:"id,omitempty"`
 
 	// 项目ID

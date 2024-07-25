@@ -77,6 +77,9 @@ type CambodianIdCardResult struct {
 	// 身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
 	DetectTamperingResult *bool `json:"detect_tampering_result,omitempty"`
 
+	// 身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+	DetectReproduceResult *bool `json:"detect_reproduce_result,omitempty"`
+
 	ScoreInfo *CambodianIdCardScoreInformationResult `json:"score_info,omitempty"`
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。

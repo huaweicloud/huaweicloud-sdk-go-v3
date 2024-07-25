@@ -20,42 +20,30 @@
 package signer
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestSM3Signer_Sign(t *testing.T) {
-	req := request.NewHttpRequestBuilder().
-		WithMethod("GET").
-		WithEndpoint("https://"+host).
-		WithPath("/path").
-		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
-		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
-		AddQueryParam("limit", 1).
-		Build()
-	result, err := sm3SignerInst.Sign(req, ak, sk)
-	assert.Nil(t, err)
-	assert.Equal(t, "SDK-HMAC-SM3 Access=AccessKey, SignedHeaders=x-sdk-date, "+
-		"Signature=89aaefc444abb883a30d0cb777afd186a777802b9e2bf2fe2f027d9bee1cb67e", result["Authorization"])
-}
-
-func TestSM3Signer_Sign2(t *testing.T) {
-	body := &testBody{
-		Name: "test",
-		Id:   1,
+	cases := []TestCase{
+		{
+			TestParam: testParam1,
+			Expected: "SDK-HMAC-SM3 Access=AccessKey, SignedHeaders=x-sdk-date, " +
+				"Signature=89aaefc444abb883a30d0cb777afd186a777802b9e2bf2fe2f027d9bee1cb67e",
+		},
+		{
+			TestParam: testParam2,
+			Expected: "SDK-HMAC-SM3 Access=AccessKey, SignedHeaders=x-sdk-date, " +
+				"Signature=afa8c5174d72dd8b74eba5a1613945aaceb3cc579bce6ea7efc0cca350d12db2",
+		},
 	}
-	req := request.NewHttpRequestBuilder().
-		WithMethod("POST").
-		WithEndpoint("https://"+host).
-		WithPath("/path").
-		WithBody("body", body).AddQueryParam("key", "value").
-		AddHeaderParam("Content-Type", "application/json").
-		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
-		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
-		Build()
-	result, err := sm3SignerInst.Sign(req, ak, sk)
-	assert.Nil(t, err)
-	assert.Equal(t, "SDK-HMAC-SM3 Access=AccessKey, SignedHeaders=x-sdk-date, "+
-		"Signature=afa8c5174d72dd8b74eba5a1613945aaceb3cc579bce6ea7efc0cca350d12db2", result["Authorization"])
+
+	for _, c := range cases {
+		t.Run(c.Name, func(t *testing.T) {
+			req := buildReqWithTestcase(c)
+			result, err := sm3SignerInst.Sign(req, ak, sk)
+			assert.Nil(t, err)
+			assert.Equal(t, result["Authorization"], c.Expected)
+		})
+	}
 }

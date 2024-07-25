@@ -8,16 +8,16 @@ import (
 
 type WorkingState struct {
 
-	// 别名。
+	// **参数解释：**  别名。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Alias *string `json:"alias,omitempty"`
 
-	// 中文名称。
+	// **参数解释：**  中文名称。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CnName *string `json:"cnName,omitempty"`
 
-	// 编码。
+	// **参数解释：**  编码。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Code *string `json:"code,omitempty"`
 
-	// 英文名称。
+	// **参数解释：**  英文名称。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	EnName *string `json:"enName,omitempty"`
 }
 

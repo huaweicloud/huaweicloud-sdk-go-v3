@@ -8,13 +8,13 @@ import (
 
 type RelatedObjectViewDto struct {
 
-	// 数据实例ID。
+	// **参数解释：**  数据实例ID。  **取值范围：**  -9223372036854775808到9223372036854775807的整数。  **默认取值：**  不涉及。
 	ObjectId *string `json:"objectId,omitempty"`
 
-	// 关联的数据传输对象列表。
+	// **参数解释：**  关联的数据传输对象列表。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	RelatedList *[]BasicObjectQueryViewDto `json:"relatedList,omitempty"`
 
-	// 关联的数据实体列表。
+	// **参数解释：**  关联的数据实体列表。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	RelatedEntityList *[]BasicObjectQueryViewDto `json:"relatedEntityList,omitempty"`
 }
 

@@ -27,7 +27,7 @@ type ListEnvironmentVariablesV2Request struct {
 	// 变量名
 	VariableName *string `json:"variable_name,omitempty"`
 
-	// 指定需要精确匹配查找的参数名称，目前仅支持name
+	// 指定需要精确匹配查找的参数名称，目前仅支持variable_name
 	PreciseSearch *string `json:"precise_search,omitempty"`
 }
 

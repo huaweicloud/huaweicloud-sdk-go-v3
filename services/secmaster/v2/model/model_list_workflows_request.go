@@ -19,10 +19,10 @@ type ListWorkflowsRequest struct {
 	WorkspaceId string `json:"workspace_id"`
 
 	// 偏移量
-	Offset float32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 数据量
-	Limit float32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 排序顺序，asc：升序，desc：降序
 	Order *ListWorkflowsRequestOrder `json:"order,omitempty"`

@@ -15,7 +15,7 @@ type AlertEnvironment struct {
 	// 租户id
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 区域od，全局服务global
+	// 区域id，全局服务global
 	RegionId *string `json:"region_id,omitempty"`
 
 	// 数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id

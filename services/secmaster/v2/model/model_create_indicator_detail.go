@@ -39,27 +39,22 @@ type CreateIndicatorDetail struct {
 	// 最近发生时间
 	LastReportTime *string `json:"last_report_time,omitempty"`
 
-	// 指标ID
+	// 威胁情报ID
 	Id *string `json:"id,omitempty"`
 
 	IndicatorType *CreateIndicatorDetailIndicatorType `json:"indicator_type"`
 
-	// 指标名称
+	// 威胁情报名称
 	Name string `json:"name"`
 
 	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`
-
-	DataObject *IndicatorDataObjectDetail `json:"data_object,omitempty"`
 
 	// workspace id
 	WorkspaceId string `json:"workspace_id"`
 
 	// Project id value
 	ProjectId *string `json:"project_id,omitempty"`
-
-	// 布局ID
-	LayoutId *string `json:"layout_id,omitempty"`
 
 	Dataclass *DataClassRefPojo `json:"dataclass,omitempty"`
 

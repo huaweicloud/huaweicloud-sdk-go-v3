@@ -8,10 +8,10 @@ import (
 
 type VersionMasterIdsDtoVersionModelVersionMasterDto struct {
 
-	// 主对象集合。
+	// **参数解释：**  主对象集合。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	MasterIds []VersionModelMasterIdsDto `json:"masterIds"`
 
-	// 更新者。
+	// **参数解释：**  更新者。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Modifier *string `json:"modifier,omitempty"`
 }
 

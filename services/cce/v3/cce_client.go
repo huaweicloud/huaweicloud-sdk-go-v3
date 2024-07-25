@@ -85,6 +85,27 @@ func (c *CceClient) BatchCreateClusterTagsInvoker(request *model.BatchCreateClus
 	return &BatchCreateClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateDeleteResourceTags 绑定、删除资源标签，创建集群时供EPS调用；EPS页面迁移集群企业项目时调用
+//
+// 该API用于绑定、删除资源标签，创建集群时供EPS调用；EPS页面迁移集群企业项目时调用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) BatchCreateDeleteResourceTags(request *model.BatchCreateDeleteResourceTagsRequest) (*model.BatchCreateDeleteResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateDeleteResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateDeleteResourceTagsResponse), nil
+	}
+}
+
+// BatchCreateDeleteResourceTagsInvoker 绑定、删除资源标签，创建集群时供EPS调用；EPS页面迁移集群企业项目时调用
+func (c *CceClient) BatchCreateDeleteResourceTagsInvoker(request *model.BatchCreateDeleteResourceTagsRequest) *BatchCreateDeleteResourceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateDeleteResourceTags()
+	return &BatchCreateDeleteResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteClusterTags 批量删除指定集群的资源标签
 //
 // 该API用于批量删除指定集群的资源标签。
@@ -1217,6 +1238,27 @@ func (c *CceClient) ShowClusterEndpointsInvoker(request *model.ShowClusterEndpoi
 	return &ShowClusterEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowClusterSupportConfiguration 根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定
+//
+// 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowClusterSupportConfiguration(request *model.ShowClusterSupportConfigurationRequest) (*model.ShowClusterSupportConfigurationResponse, error) {
+	requestDef := GenReqDefForShowClusterSupportConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterSupportConfigurationResponse), nil
+	}
+}
+
+// ShowClusterSupportConfigurationInvoker 根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定
+func (c *CceClient) ShowClusterSupportConfigurationInvoker(request *model.ShowClusterSupportConfigurationRequest) *ShowClusterSupportConfigurationInvoker {
+	requestDef := GenReqDefForShowClusterSupportConfiguration()
+	return &ShowClusterSupportConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowClusterUpgradeInfo 获取集群升级相关信息
 //
 // 获取集群升级相关信息
@@ -1236,6 +1278,27 @@ func (c *CceClient) ShowClusterUpgradeInfo(request *model.ShowClusterUpgradeInfo
 func (c *CceClient) ShowClusterUpgradeInfoInvoker(request *model.ShowClusterUpgradeInfoRequest) *ShowClusterUpgradeInfoInvoker {
 	requestDef := GenReqDefForShowClusterUpgradeInfo()
 	return &ShowClusterUpgradeInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomizeClusterTagsByProjectId 查询集群的标签
+//
+// 该API用于查询集群的标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowCustomizeClusterTagsByProjectId(request *model.ShowCustomizeClusterTagsByProjectIdRequest) (*model.ShowCustomizeClusterTagsByProjectIdResponse, error) {
+	requestDef := GenReqDefForShowCustomizeClusterTagsByProjectId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomizeClusterTagsByProjectIdResponse), nil
+	}
+}
+
+// ShowCustomizeClusterTagsByProjectIdInvoker 查询集群的标签
+func (c *CceClient) ShowCustomizeClusterTagsByProjectIdInvoker(request *model.ShowCustomizeClusterTagsByProjectIdRequest) *ShowCustomizeClusterTagsByProjectIdInvoker {
+	requestDef := GenReqDefForShowCustomizeClusterTagsByProjectId()
+	return &ShowCustomizeClusterTagsByProjectIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJob 获取任务信息
@@ -1454,6 +1517,48 @@ func (c *CceClient) ShowReleaseHistoryInvoker(request *model.ShowReleaseHistoryR
 	return &ShowReleaseHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowResourceInstances 查询资源实例，EPS页面查询CCE集群资源时调用
+//
+// 该API用于查询资源实例，EPS页面查询CCE集群资源时调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowResourceInstances(request *model.ShowResourceInstancesRequest) (*model.ShowResourceInstancesResponse, error) {
+	requestDef := GenReqDefForShowResourceInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceInstancesResponse), nil
+	}
+}
+
+// ShowResourceInstancesInvoker 查询资源实例，EPS页面查询CCE集群资源时调用
+func (c *CceClient) ShowResourceInstancesInvoker(request *model.ShowResourceInstancesRequest) *ShowResourceInstancesInvoker {
+	requestDef := GenReqDefForShowResourceInstances()
+	return &ShowResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceTags 查询资源标签（用于企业项目场景，企业项目是一种系统标签）
+//
+// 该API用于查询资源标签（用于企业项目场景，企业项目是一种系统标签）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*model.ShowResourceTagsResponse, error) {
+	requestDef := GenReqDefForShowResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceTagsResponse), nil
+	}
+}
+
+// ShowResourceTagsInvoker 查询资源标签（用于企业项目场景，企业项目是一种系统标签）
+func (c *CceClient) ShowResourceTagsInvoker(request *model.ShowResourceTagsRequest) *ShowResourceTagsInvoker {
+	requestDef := GenReqDefForShowResourceTags()
+	return &ShowResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUpgradeClusterTask 获取集群升级任务详情
 //
 // 获取集群升级任务详情，任务ID由调用集群升级API后从响应体中uid字段获取。
@@ -1517,6 +1622,27 @@ func (c *CceClient) ShowUserChartsQuotas(request *model.ShowUserChartsQuotasRequ
 func (c *CceClient) ShowUserChartsQuotasInvoker(request *model.ShowUserChartsQuotasRequest) *ShowUserChartsQuotasInvoker {
 	requestDef := GenReqDefForShowUserChartsQuotas()
 	return &ShowUserChartsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncNodePool 同步nodePool配置到存量节点
+//
+// 该API用于同步nodePool配置到存量节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) SyncNodePool(request *model.SyncNodePoolRequest) (*model.SyncNodePoolResponse, error) {
+	requestDef := GenReqDefForSyncNodePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncNodePoolResponse), nil
+	}
+}
+
+// SyncNodePoolInvoker 同步nodePool配置到存量节点
+func (c *CceClient) SyncNodePoolInvoker(request *model.SyncNodePoolRequest) *SyncNodePoolInvoker {
+	requestDef := GenReqDefForSyncNodePool()
+	return &SyncNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAddonInstance 更新AddonInstance
@@ -1758,6 +1884,27 @@ func (c *CceClient) UpgradeCluster(request *model.UpgradeClusterRequest) (*model
 func (c *CceClient) UpgradeClusterInvoker(request *model.UpgradeClusterRequest) *UpgradeClusterInvoker {
 	requestDef := GenReqDefForUpgradeCluster()
 	return &UpgradeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeNodePool 节点池升级
+//
+// 该API用于节点池升级。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpgradeNodePool(request *model.UpgradeNodePoolRequest) (*model.UpgradeNodePoolResponse, error) {
+	requestDef := GenReqDefForUpgradeNodePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeNodePoolResponse), nil
+	}
+}
+
+// UpgradeNodePoolInvoker 节点池升级
+func (c *CceClient) UpgradeNodePoolInvoker(request *model.UpgradeNodePoolRequest) *UpgradeNodePoolInvoker {
+	requestDef := GenReqDefForUpgradeNodePool()
+	return &UpgradeNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeWorkFlowUpdate 更新指定集群升级引导任务状态
@@ -2786,6 +2933,28 @@ func (c *CceClient) UpdateAutopilotCluster(request *model.UpdateAutopilotCluster
 func (c *CceClient) UpdateAutopilotClusterInvoker(request *model.UpdateAutopilotClusterRequest) *UpdateAutopilotClusterInvoker {
 	requestDef := GenReqDefForUpdateAutopilotCluster()
 	return &UpdateAutopilotClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAutopilotClusterEip 绑定、解绑集群公网apiserver地址
+//
+// 该API用于通过集群ID绑定、解绑集群公网apiserver地址
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateAutopilotClusterEip(request *model.UpdateAutopilotClusterEipRequest) (*model.UpdateAutopilotClusterEipResponse, error) {
+	requestDef := GenReqDefForUpdateAutopilotClusterEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutopilotClusterEipResponse), nil
+	}
+}
+
+// UpdateAutopilotClusterEipInvoker 绑定、解绑集群公网apiserver地址
+func (c *CceClient) UpdateAutopilotClusterEipInvoker(request *model.UpdateAutopilotClusterEipRequest) *UpdateAutopilotClusterEipInvoker {
+	requestDef := GenReqDefForUpdateAutopilotClusterEip()
+	return &UpdateAutopilotClusterEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAutopilotRelease 更新指定模板实例

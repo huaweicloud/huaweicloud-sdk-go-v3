@@ -29,7 +29,7 @@ type TransportationLicenseResult struct {
 	// 核发机关（非必有，依赖对应运输证板式）。
 	IssuingAuthority *string `json:"issuing_authority,omitempty"`
 
-	// 签发日期（非必有，依赖对应运输证板式）。
+	// 发证日期（非必有，依赖对应运输证板式）。
 	IssueDate *string `json:"issue_date,omitempty"`
 
 	// 业户地址（非必有，依赖对应运输证板式）。
@@ -41,7 +41,7 @@ type TransportationLicenseResult struct {
 	// 经营许可证号（非必有，依赖对应运输证板式）。
 	BusinessCertificate *string `json:"business_certificate,omitempty"`
 
-	// 道路普通货物运输（非必有，依赖对应运输证板式）。
+	// 经营范围（非必有，依赖对应运输证板式）。
 	BusinessScope *string `json:"business_scope,omitempty"`
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。

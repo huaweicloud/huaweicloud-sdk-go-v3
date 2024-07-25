@@ -124,7 +124,8 @@ func (hc *HcHttpClient) SyncInvokeWithExtraHeaders(req interface{}, reqDef *def.
 			break
 		}
 
-		if isNoSuchHostErr(err) && atomic.LoadInt32(&hc.endpointIndex) < int32(len(hc.endpoints)-1) {
+		var dnsErr *net.DNSError
+		if errors.As(err, &dnsErr) && atomic.LoadInt32(&hc.endpointIndex) < int32(len(hc.endpoints)-1) {
 			atomic.AddInt32(&hc.endpointIndex, 1)
 		} else {
 			return nil, err
@@ -517,28 +518,4 @@ func (hc *HcHttpClient) getFieldInfo(reqDef *def.HttpRequestDef, item *def.Field
 	}
 
 	return isPtr, fieldKind
-}
-
-func isNoSuchHostErr(err error) bool {
-	if err == nil {
-		return false
-	}
-	var errInterface interface{} = err
-	if innerErr, ok := errInterface.(*url.Error); !ok {
-		return false
-	} else {
-		errInterface = innerErr.Err
-	}
-
-	if innerErr, ok := errInterface.(*net.OpError); !ok {
-		return false
-	} else {
-		errInterface = innerErr.Err
-	}
-
-	if innerErr, ok := errInterface.(*net.DNSError); !ok {
-		return false
-	} else {
-		return innerErr.Err == "no such host"
-	}
 }

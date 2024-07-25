@@ -16,7 +16,7 @@ type VpcMemberInfo struct {
 	// 权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
 	Weight *int32 `json:"weight,omitempty"`
 
-	// 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+	// 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
 	IsBackup *bool `json:"is_backup,omitempty"`
 
 	// 后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
@@ -45,6 +45,9 @@ type VpcMemberInfo struct {
 
 	// 后端服务器组编号
 	MemberGroupId *string `json:"member_group_id,omitempty"`
+
+	// 负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
+	HealthStatus *VpcMemberInfoHealthStatus `json:"health_status,omitempty"`
 }
 
 func (o VpcMemberInfo) String() string {
@@ -99,5 +102,56 @@ func (c *VpcMemberInfoStatus) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type VpcMemberInfoHealthStatus struct {
+	value string
+}
+
+type VpcMemberInfoHealthStatusEnum struct {
+	HEALTHY   VpcMemberInfoHealthStatus
+	UNHEALTHY VpcMemberInfoHealthStatus
+	UNKNOWN   VpcMemberInfoHealthStatus
+}
+
+func GetVpcMemberInfoHealthStatusEnum() VpcMemberInfoHealthStatusEnum {
+	return VpcMemberInfoHealthStatusEnum{
+		HEALTHY: VpcMemberInfoHealthStatus{
+			value: "healthy",
+		},
+		UNHEALTHY: VpcMemberInfoHealthStatus{
+			value: "unhealthy",
+		},
+		UNKNOWN: VpcMemberInfoHealthStatus{
+			value: "unknown",
+		},
+	}
+}
+
+func (c VpcMemberInfoHealthStatus) Value() string {
+	return c.value
+}
+
+func (c VpcMemberInfoHealthStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VpcMemberInfoHealthStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

@@ -15,7 +15,7 @@ type UpdateIndicatorRequest struct {
 	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// 情报ID
+	// 威胁情报ID
 	IndicatorId string `json:"indicator_id"`
 
 	Body *UpdateIndicatorRequestBody `json:"body,omitempty"`

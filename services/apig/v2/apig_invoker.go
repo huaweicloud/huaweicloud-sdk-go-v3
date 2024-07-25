@@ -293,6 +293,18 @@ func (i *CreateInstanceV2Invoker) Invoke() (*model.CreateInstanceV2Response, err
 	}
 }
 
+type CreateOrchestrationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOrchestrationInvoker) Invoke() (*model.CreateOrchestrationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOrchestrationResponse), nil
+	}
+}
+
 type CreateOrderInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -518,6 +530,18 @@ func (i *DeleteInstancesV2Invoker) Invoke() (*model.DeleteInstancesV2Response, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstancesV2Response), nil
+	}
+}
+
+type DeleteOrchestrationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOrchestrationInvoker) Invoke() (*model.DeleteOrchestrationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOrchestrationResponse), nil
 	}
 }
 
@@ -977,6 +1001,18 @@ func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, err
 	}
 }
 
+type ListInstancesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesByTagsInvoker) Invoke() (*model.ListInstancesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesByTagsResponse), nil
+	}
+}
+
 type ListInstancesV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1022,6 +1058,30 @@ func (i *ListMetricDataInvoker) Invoke() (*model.ListMetricDataResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListMetricDataResponse), nil
+	}
+}
+
+type ListOrchestrationAttachedApisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrchestrationAttachedApisInvoker) Invoke() (*model.ListOrchestrationAttachedApisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrchestrationAttachedApisResponse), nil
+	}
+}
+
+type ListOrchestrationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrchestrationsInvoker) Invoke() (*model.ListOrchestrationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrchestrationsResponse), nil
 	}
 }
 
@@ -1349,6 +1409,18 @@ func (i *ShowDetailsOfInstanceV2Invoker) Invoke() (*model.ShowDetailsOfInstanceV
 	}
 }
 
+type ShowDetailsOfOrchestrationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfOrchestrationInvoker) Invoke() (*model.ShowDetailsOfOrchestrationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfOrchestrationResponse), nil
+	}
+}
+
 type ShowDetailsOfRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -1358,6 +1430,18 @@ func (i *ShowDetailsOfRequestThrottlingPolicyV2Invoker) Invoke() (*model.ShowDet
 		return nil, err
 	} else {
 		return result.(*model.ShowDetailsOfRequestThrottlingPolicyV2Response), nil
+	}
+}
+
+type ShowInstancesNumByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstancesNumByTagsInvoker) Invoke() (*model.ShowInstancesNumByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstancesNumByTagsResponse), nil
 	}
 }
 
@@ -1526,6 +1610,18 @@ func (i *UpdateInstanceV2Invoker) Invoke() (*model.UpdateInstanceV2Response, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceV2Response), nil
+	}
+}
+
+type UpdateOrchestrationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOrchestrationInvoker) Invoke() (*model.UpdateOrchestrationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOrchestrationResponse), nil
 	}
 }
 

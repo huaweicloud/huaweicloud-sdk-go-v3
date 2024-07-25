@@ -51,6 +51,21 @@ type CreateAlertRuleRequestBody struct {
 
 	// 告警触发规则。Alert triggers.
 	Triggers []AlertRuleTrigger `json:"triggers"`
+
+	// 管道名称
+	PipeName string `json:"pipe_name"`
+
+	// 告警名称
+	AlertName string `json:"alert_name"`
+
+	// 告警描述
+	AlertDescription *string `json:"alert_description,omitempty"`
+
+	// 修复建议
+	AlertRemediation *string `json:"alert_remediation,omitempty"`
+
+	// 执行次数
+	AccumulatedTimes *int32 `json:"accumulated_times,omitempty"`
 }
 
 func (o CreateAlertRuleRequestBody) String() string {

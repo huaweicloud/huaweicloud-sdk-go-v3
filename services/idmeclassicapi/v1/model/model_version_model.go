@@ -9,45 +9,45 @@ import (
 type VersionModel struct {
 	Branch *VersionModelBranch `json:"branch,omitempty"`
 
-	// 检出时间。
+	// **参数解释：**  检出时间。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CheckOutTime *string `json:"checkOutTime,omitempty"`
 
-	// 检出用户名称。
+	// **参数解释：**  检出用户名称。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CheckOutUserName *string `json:"checkOutUserName,omitempty"`
 
-	// 创建时间。
+	// **参数解释：**  创建时间。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CreateTime *string `json:"createTime,omitempty"`
 
-	// 创建者。
+	// **参数解释：**  创建者。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Creator *string `json:"creator,omitempty"`
 
-	// 描述信息。
+	// **参数解释：**  描述信息。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 唯一标识。
+	// **参数解释：**  唯一标识。  **约束限制：**  不涉及。  **取值范围：**  -9223372036854775808到9223372036854775807的整数。  **默认取值：**  不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 关键信息资产ID。
+	// **参数解释：**  关键信息资产ID。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Kiaguid *string `json:"kiaguid,omitempty"`
 
-	// 最后更新时间。
+	// **参数解释：**  最后更新时间。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
 
 	Master *VersionModelMaster `json:"master,omitempty"`
 
-	// 更新者。
+	// **参数解释：**  更新者。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Modifier *string `json:"modifier,omitempty"`
 
-	// 中文名称。
+	// **参数解释：**  中文名称。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 设置NULL值的属性名称。
+	// **参数解释：**  设置NULL值的属性名称。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	NeedSetNullAttrs *[]string `json:"needSetNullAttrs,omitempty"`
 
-	// 扩展类型。
+	// **参数解释：**  扩展类型。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	RdmExtensionType *string `json:"rdmExtensionType,omitempty"`
 
-	// 安全密级。 - INTERNAL：内部公开。 - SECRET：秘密。 - CONFIDENTIAL：机密。 - TOP_SECRET：绝密。
+	// **参数解释：**  安全密级。  **约束限制：**  不涉及。  **取值范围：**  - INTERNAL：内部公开。 - SECRET：秘密。 - CONFIDENTIAL：机密。 - TOP_SECRET：绝密。  **默认取值：**  不涉及。
 	SecurityLevel *string `json:"securityLevel,omitempty"`
 }
 

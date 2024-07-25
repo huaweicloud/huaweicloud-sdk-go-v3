@@ -21,6 +21,9 @@ type AlertDetail struct {
 	// 事件唯一标识，UUID格式，最大36个字符
 	Id *string `json:"id,omitempty"`
 
+	// 数据类型
+	Type *string `json:"type,omitempty"`
+
 	// 当前项目的id
 	ProjectId *string `json:"project_id,omitempty"`
 

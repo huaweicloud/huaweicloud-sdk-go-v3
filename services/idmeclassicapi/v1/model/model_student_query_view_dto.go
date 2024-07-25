@@ -8,36 +8,36 @@ import (
 
 type StudentQueryViewDto struct {
 
-	// 唯一编码。
+	// **参数解释：**  唯一标识。  **取值范围：**  -9223372036854775808到9223372036854775807的整数。  **默认取值：**  不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 创建者。
+	// **参数解释：**  创建者。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Creator *string `json:"creator,omitempty"`
 
-	// 创建时间。
+	// **参数解释：**  创建时间。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CreateTime *string `json:"createTime,omitempty"`
 
-	// 修改人。
+	// **参数解释：**  修改人。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Modifier *string `json:"modifier,omitempty"`
 
-	// 最后的修改时间。
+	// **参数解释：**  最后的修改时间。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
 
-	// 扩展类型。
+	// **参数解释：**  扩展类型。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	RdmExtensionType *string `json:"rdmExtensionType,omitempty"`
 
 	Tenant *TenantViewDto `json:"tenant,omitempty"`
 
-	// 类名。
+	// **参数解释：**  类名。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	ClassName *string `json:"className,omitempty"`
 
-	// 名称。
+	// **参数解释：**  名称。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 描述。
+	// **参数解释：**  描述。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 成绩。
+	// **参数解释：**  成绩。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Grade float32 `json:"grade,omitempty"`
 }
 

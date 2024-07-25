@@ -19,6 +19,27 @@ func SecMasterClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchSearchMetricHits 批量查询指标结果
+//
+// 批量查询指标结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) BatchSearchMetricHits(request *model.BatchSearchMetricHitsRequest) (*model.BatchSearchMetricHitsResponse, error) {
+	requestDef := GenReqDefForBatchSearchMetricHits()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSearchMetricHitsResponse), nil
+	}
+}
+
+// BatchSearchMetricHitsInvoker 批量查询指标结果
+func (c *SecMasterClient) BatchSearchMetricHitsInvoker(request *model.BatchSearchMetricHitsRequest) *BatchSearchMetricHitsInvoker {
+	requestDef := GenReqDefForBatchSearchMetricHits()
+	return &BatchSearchMetricHitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeAlert 更新告警
 //
 // 编辑告警，根据实际修改的属性更新，未修改的列不更新
@@ -208,9 +229,9 @@ func (c *SecMasterClient) CreateDataobjectRelationsInvoker(request *model.Create
 	return &CreateDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateDataspace create dataspace (创建数据空间)
+// CreateDataspace 创建数据空间
 //
-// create dataspace
+// 创建数据空间
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreateDataspace(request *model.CreateDataspaceRequest) (*model.CreateDataspaceResponse, error) {
@@ -223,7 +244,7 @@ func (c *SecMasterClient) CreateDataspace(request *model.CreateDataspaceRequest)
 	}
 }
 
-// CreateDataspaceInvoker create dataspace (创建数据空间)
+// CreateDataspaceInvoker 创建数据空间
 func (c *SecMasterClient) CreateDataspaceInvoker(request *model.CreateDataspaceRequest) *CreateDataspaceInvoker {
 	requestDef := GenReqDefForCreateDataspace()
 	return &CreateDataspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -250,9 +271,9 @@ func (c *SecMasterClient) CreateIncidentInvoker(request *model.CreateIncidentReq
 	return &CreateIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateIndicator 创建指标
+// CreateIndicator 创建威胁情报
 //
-// 创建指标
+// 创建威胁情报
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreateIndicator(request *model.CreateIndicatorRequest) (*model.CreateIndicatorResponse, error) {
@@ -265,15 +286,15 @@ func (c *SecMasterClient) CreateIndicator(request *model.CreateIndicatorRequest)
 	}
 }
 
-// CreateIndicatorInvoker 创建指标
+// CreateIndicatorInvoker 创建威胁情报
 func (c *SecMasterClient) CreateIndicatorInvoker(request *model.CreateIndicatorRequest) *CreateIndicatorInvoker {
 	requestDef := GenReqDefForCreateIndicator()
 	return &CreateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePipe create pipe (创建数据管道)
+// CreatePipe 创建数据管道
 //
-// create pipe
+// 创建数据管道
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePipe(request *model.CreatePipeRequest) (*model.CreatePipeResponse, error) {
@@ -286,7 +307,7 @@ func (c *SecMasterClient) CreatePipe(request *model.CreatePipeRequest) (*model.C
 	}
 }
 
-// CreatePipeInvoker create pipe (创建数据管道)
+// CreatePipeInvoker 创建数据管道
 func (c *SecMasterClient) CreatePipeInvoker(request *model.CreatePipeRequest) *CreatePipeInvoker {
 	requestDef := GenReqDefForCreatePipe()
 	return &CreatePipeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -397,6 +418,48 @@ func (c *SecMasterClient) CreatePlaybookVersionInvoker(request *model.CreatePlay
 	return &CreatePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePostPaidOrder 安全云脑按需订购
+//
+// 开通安全云脑按需服务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreatePostPaidOrder(request *model.CreatePostPaidOrderRequest) (*model.CreatePostPaidOrderResponse, error) {
+	requestDef := GenReqDefForCreatePostPaidOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePostPaidOrderResponse), nil
+	}
+}
+
+// CreatePostPaidOrderInvoker 安全云脑按需订购
+func (c *SecMasterClient) CreatePostPaidOrderInvoker(request *model.CreatePostPaidOrderRequest) *CreatePostPaidOrderInvoker {
+	requestDef := GenReqDefForCreatePostPaidOrder()
+	return &CreatePostPaidOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWorkspace 新建工作空间
+//
+// 在使用安全云脑的基线检查、告警管理、安全分析、安全编排等功能前，需要创建工作空间，它可以将资源划分为各个不同的工作场景，避免资源冗余查找不便，影响日常使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateWorkspace(request *model.CreateWorkspaceRequest) (*model.CreateWorkspaceResponse, error) {
+	requestDef := GenReqDefForCreateWorkspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWorkspaceResponse), nil
+	}
+}
+
+// CreateWorkspaceInvoker 新建工作空间
+func (c *SecMasterClient) CreateWorkspaceInvoker(request *model.CreateWorkspaceRequest) *CreateWorkspaceInvoker {
+	requestDef := GenReqDefForCreateWorkspace()
+	return &CreateWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAlert 删除告警
 //
 // 删除告警
@@ -481,9 +544,9 @@ func (c *SecMasterClient) DeleteIncidentInvoker(request *model.DeleteIncidentReq
 	return &DeleteIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteIndicator 删除指标
+// DeleteIndicator 删除威胁情报
 //
-// 删除指标
+// 删除威胁情报
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeleteIndicator(request *model.DeleteIndicatorRequest) (*model.DeleteIndicatorResponse, error) {
@@ -496,7 +559,7 @@ func (c *SecMasterClient) DeleteIndicator(request *model.DeleteIndicatorRequest)
 	}
 }
 
-// DeleteIndicatorInvoker 删除指标
+// DeleteIndicatorInvoker 删除威胁情报
 func (c *SecMasterClient) DeleteIndicatorInvoker(request *model.DeleteIndicatorRequest) *DeleteIndicatorInvoker {
 	requestDef := GenReqDefForDeleteIndicator()
 	return &DeleteIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -796,9 +859,9 @@ func (c *SecMasterClient) ListIncidentsInvoker(request *model.ListIncidentsReque
 	return &ListIncidentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIndicators 查询指标列表
+// ListIndicators 查询威胁情报列表
 //
-// 查询指标列表
+// 查询威胁情报列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListIndicators(request *model.ListIndicatorsRequest) (*model.ListIndicatorsResponse, error) {
@@ -811,7 +874,7 @@ func (c *SecMasterClient) ListIndicators(request *model.ListIndicatorsRequest) (
 	}
 }
 
-// ListIndicatorsInvoker 查询指标列表
+// ListIndicatorsInvoker 查询威胁情报列表
 func (c *SecMasterClient) ListIndicatorsInvoker(request *model.ListIndicatorsRequest) *ListIndicatorsInvoker {
 	requestDef := GenReqDefForListIndicators()
 	return &ListIndicatorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -964,6 +1027,48 @@ func (c *SecMasterClient) ListWorkflowsInvoker(request *model.ListWorkflowsReque
 	return &ListWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListWorkspaces 工作空间列表查询
+//
+// 工作空间列表查询:可通过工作空间名称、工作空间描述、创建时间等条件对租户的工作空间进行筛选。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListWorkspaces(request *model.ListWorkspacesRequest) (*model.ListWorkspacesResponse, error) {
+	requestDef := GenReqDefForListWorkspaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkspacesResponse), nil
+	}
+}
+
+// ListWorkspacesInvoker 工作空间列表查询
+func (c *SecMasterClient) ListWorkspacesInvoker(request *model.ListWorkspacesRequest) *ListWorkspacesInvoker {
+	requestDef := GenReqDefForListWorkspaces()
+	return &ListWorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchBaseline 搜索基线检查结果列表
+//
+// 搜索基线检查结果列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) SearchBaseline(request *model.SearchBaselineRequest) (*model.SearchBaselineResponse, error) {
+	requestDef := GenReqDefForSearchBaseline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchBaselineResponse), nil
+	}
+}
+
+// SearchBaselineInvoker 搜索基线检查结果列表
+func (c *SecMasterClient) SearchBaselineInvoker(request *model.SearchBaselineRequest) *SearchBaselineInvoker {
+	requestDef := GenReqDefForSearchBaseline()
+	return &SearchBaselineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAlert 获取告警详情
 //
 // 获取告警详情
@@ -1048,9 +1153,9 @@ func (c *SecMasterClient) ShowIncidentInvoker(request *model.ShowIncidentRequest
 	return &ShowIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowIndicatorDetail 查询指标详情
+// ShowIndicatorDetail 查询威胁情报详情
 //
-// 查询指标详情
+// 查询威胁情报详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowIndicatorDetail(request *model.ShowIndicatorDetailRequest) (*model.ShowIndicatorDetailResponse, error) {
@@ -1063,7 +1168,7 @@ func (c *SecMasterClient) ShowIndicatorDetail(request *model.ShowIndicatorDetail
 	}
 }
 
-// ShowIndicatorDetailInvoker 查询指标详情
+// ShowIndicatorDetailInvoker 查询威胁情报详情
 func (c *SecMasterClient) ShowIndicatorDetailInvoker(request *model.ShowIndicatorDetailRequest) *ShowIndicatorDetailInvoker {
 	requestDef := GenReqDefForShowIndicatorDetail()
 	return &ShowIndicatorDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1237,9 +1342,9 @@ func (c *SecMasterClient) UpdateAlertRuleInvoker(request *model.UpdateAlertRuleR
 	return &UpdateAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateIndicator 更新指标
+// UpdateIndicator 更新威胁情报
 //
-// 更新指标
+// 更新威胁情报
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdateIndicator(request *model.UpdateIndicatorRequest) (*model.UpdateIndicatorResponse, error) {
@@ -1252,7 +1357,7 @@ func (c *SecMasterClient) UpdateIndicator(request *model.UpdateIndicatorRequest)
 	}
 }
 
-// UpdateIndicatorInvoker 更新指标
+// UpdateIndicatorInvoker 更新威胁情报
 func (c *SecMasterClient) UpdateIndicatorInvoker(request *model.UpdateIndicatorRequest) *UpdateIndicatorInvoker {
 	requestDef := GenReqDefForUpdateIndicator()
 	return &UpdateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

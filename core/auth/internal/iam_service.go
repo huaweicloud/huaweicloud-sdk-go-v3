@@ -21,7 +21,6 @@ package internal
 
 import (
 	"errors"
-	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
@@ -39,29 +38,15 @@ const (
 	KeystoneListAuthDomainsUri = "/v3/auth/domains"
 	IamEndpointEnv             = "HUAWEICLOUD_SDK_IAM_ENDPOINT"
 	CreateTokenWithIdTokenUri  = "/v3.0/OS-AUTH/id-token/tokens"
-
-	NoDomainIdFound = `no domain id found, please select one of the following solutions:
-  1. Manually specify domainId when initializing the credentials,
-     credentials := global.NewCredentialsBuilder().
-				WithAk(ak).
-				WithSk(sk).
-				WithDomainId(domainId).
-				Build()
-  2. Use the domain account to grant IAM read permission to the current account
-  3. Replace the ak/sk of the IAM account with the ak/sk of the domain account`
-
-	NoProjectIdFound = `no project id found, please select one of the following solutions:
-  1. Manually specify project_id when initializing the credentials,
-     credentials := basic.NewCredentialsBuilder().
-				WithAk(ak).
-				WithSk(sk).
-				WithProjectId(projectId).
-				Build()
-  2. Use the domain account to grant IAM read permission to the current account
-  3. Replace the ak/sk of the IAM account with the ak/sk of the domain account`
+	IamTraceId                 = "X-IAM-Trace-Id"
 )
 
+type IamResponse struct {
+	TraceId string
+}
+
 type KeystoneListProjectsResponse struct {
+	IamResponse
 	Projects *[]ProjectResult `json:"projects,omitempty"`
 }
 
@@ -91,39 +76,29 @@ func GetKeystoneListProjectsRequest(iamEndpoint string, regionId string, httpCon
 		Build()
 }
 
-func KeystoneListProjects(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (string, error) {
+func KeystoneListProjects(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*KeystoneListProjectsResponse, error) {
 	resp, err := client.SyncInvokeHttp(req)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
-	data, err := GetResponseBody(resp)
+	data, err := handleErrAndGetRespData(req, resp)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
 	keystoneListProjectResponse := new(KeystoneListProjectsResponse)
 	err = utils.Unmarshal(data, keystoneListProjectResponse)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
+	keystoneListProjectResponse.TraceId = resp.GetHeader(IamTraceId)
 
-	projects := *keystoneListProjectResponse.Projects
-	if len(projects) == 1 {
-		return (projects)[0].Id, nil
-	} else if len(projects) > 1 {
-		projectIds := make([]string, 0, len(projects))
-		for _, project := range projects {
-			projectIds = append(projectIds, project.Id)
-		}
-
-		return "", fmt.Errorf("multiple project ids found: [%s], please specify one when initializing the credentials", strings.Join(projectIds, ","))
-	}
-
-	return "", errors.New(NoProjectIdFound)
+	return keystoneListProjectResponse, nil
 }
 
 type KeystoneListAuthDomainsResponse struct {
+	IamResponse
 	Domains *[]Domains `json:"domains,omitempty"`
 }
 
@@ -141,34 +116,30 @@ func GetKeystoneListAuthDomainsRequest(iamEndpoint string, httpConfig config.Htt
 		Build()
 }
 
-func KeystoneListAuthDomains(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (string, error) {
+func KeystoneListAuthDomains(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*KeystoneListAuthDomainsResponse, error) {
 	resp, err := client.SyncInvokeHttp(req)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
-	data, err := GetResponseBody(resp)
+	data, err := handleErrAndGetRespData(req, resp)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
 	keystoneListAuthDomainsResponse := new(KeystoneListAuthDomainsResponse)
 	err = utils.Unmarshal(data, keystoneListAuthDomainsResponse)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
+	keystoneListAuthDomainsResponse.TraceId = resp.GetHeader(IamTraceId)
 
-	if len(*keystoneListAuthDomainsResponse.Domains) > 0 {
-
-		return (*keystoneListAuthDomainsResponse.Domains)[0].Id, nil
-	}
-
-	return "", errors.New(NoDomainIdFound)
+	return keystoneListAuthDomainsResponse, nil
 }
 
-func GetResponseBody(resp *response.DefaultHttpResponse) ([]byte, error) {
-	if resp.GetStatusCode() >= 400 {
-		return nil, sdkerr.NewServiceResponseError(resp.Response)
+func handleErrAndGetRespData(req *request.DefaultHttpRequest, resp *response.DefaultHttpResponse) ([]byte, error) {
+	if err := (sdkerr.DefaultErrorHandler{}).HandleError(req, resp); err != nil {
+		return nil, err
 	}
 
 	return resp.GetBodyAsBytes()
@@ -205,6 +176,7 @@ type GetIdTokenScopeDomainOrProjectBody struct {
 }
 
 type CreateTokenWithIdTokenResponse struct {
+	IamResponse
 	Token          *ScopedTokenInfo `json:"token"`
 	XSubjectToken  string           `json:"X-Subject-Token"`
 	XRequestId     string           `json:"X-Request-Id"`
@@ -322,7 +294,7 @@ func CreateTokenWithIdToken(client *impl.DefaultHttpClient, req *request.Default
 		return nil, err
 	}
 
-	data, err := GetResponseBody(resp)
+	data, err := handleErrAndGetRespData(req, resp)
 	if err != nil {
 		return nil, err
 	}
@@ -347,6 +319,7 @@ func CreateTokenWithIdToken(client *impl.DefaultHttpClient, req *request.Default
 	createTokenWithIdTokenResponse.HttpStatusCode = resp.GetStatusCode()
 	createTokenWithIdTokenResponse.XRequestId = requestId
 	createTokenWithIdTokenResponse.XSubjectToken = authToken
+	createTokenWithIdTokenResponse.TraceId = resp.GetHeader(IamTraceId)
 
 	return createTokenWithIdTokenResponse, nil
 }

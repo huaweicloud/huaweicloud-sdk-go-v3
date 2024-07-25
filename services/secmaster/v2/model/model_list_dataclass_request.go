@@ -16,10 +16,10 @@ type ListDataclassRequest struct {
 	WorkspaceId string `json:"workspace_id"`
 
 	// 偏移量
-	Offset float32 `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 数据量
-	Limit float32 `json:"limit,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 名称查询
 	Name *string `json:"name,omitempty"`

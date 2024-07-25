@@ -8,16 +8,16 @@ import (
 
 type StatisticsRvo struct {
 
-	// 新增统计记录数。
+	// **参数解释：**  新增统计记录数。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CreateCount *int32 `json:"createCount,omitempty"`
 
-	// 删除统计记录数。
+	// **参数解释：**  删除统计记录数。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	DeleteCount *int32 `json:"deleteCount,omitempty"`
 
-	// 软删除统计记录数。
+	// **参数解释：**  软删除统计记录数。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	LogicalDeleteCount *int32 `json:"logicalDeleteCount,omitempty"`
 
-	// 更新统计记录数。
+	// **参数解释：**  更新统计记录数。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	UpdateCount *int32 `json:"updateCount,omitempty"`
 }
 

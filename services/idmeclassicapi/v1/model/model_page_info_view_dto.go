@@ -8,16 +8,16 @@ import (
 
 type PageInfoViewDto struct {
 
-	// 当前页。
+	// **参数解释：**  当前页。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CurPage *int32 `json:"curPage,omitempty"`
 
-	// 每页大小。
+	// **参数解释：**  每页大小。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	PageSize *int32 `json:"pageSize,omitempty"`
 
-	// 总行数。
+	// **参数解释：**  总行数。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	TotalRows *int32 `json:"totalRows,omitempty"`
 
-	// 总页数。
+	// **参数解释：**  总页数。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	TotalPages *int32 `json:"totalPages,omitempty"`
 }
 

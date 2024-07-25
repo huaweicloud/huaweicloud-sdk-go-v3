@@ -9,13 +9,13 @@ import (
 // ShowLogicalDeleteUsingPostResponse Response Object
 type ShowLogicalDeleteUsingPostResponse struct {
 
-	// 请求结果。
+	// **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。  **默认取值：**  不涉及。
 	Result *string `json:"result,omitempty"`
 
-	// 请求数据。
+	// **参数解释：**  请求操作数据数量。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Data *[]int64 `json:"data,omitempty"`
 
-	// 异常信息。
+	// **参数解释：**  异常信息。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Errors         *[]string `json:"errors,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

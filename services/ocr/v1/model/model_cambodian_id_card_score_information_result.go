@@ -25,6 +25,9 @@ type CambodianIdCardScoreInformationResult struct {
 
 	// 告警分数，字段取值范围[0, 99]值大于50表示身份证人像被其他非身份证人像篡改过，小于50表示身份证人像未被篡改，值越靠近99，表示身份证人像被篡改的可能性越大，值越靠近0，表示身份证未人像被篡改的可能性越大。 仅在传入参数detect_tampering为true时，返回该字段。
 	TamperingScore *int32 `json:"tampering_score,omitempty"`
+
+	// 告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
+	ReproduceScore *int32 `json:"reproduce_score,omitempty"`
 }
 
 func (o CambodianIdCardScoreInformationResult) String() string {

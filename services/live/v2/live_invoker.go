@@ -77,6 +77,18 @@ func (i *ListHistoryStreamsInvoker) Invoke() (*model.ListHistoryStreamsResponse,
 	}
 }
 
+type ListPlayDomainStreamInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPlayDomainStreamInfoInvoker) Invoke() (*model.ListPlayDomainStreamInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPlayDomainStreamInfoResponse), nil
+	}
+}
+
 type ListQueryHttpCodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -170,18 +182,6 @@ func (i *ShowUpBandwidthInvoker) Invoke() (*model.ShowUpBandwidthResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowUpBandwidthResponse), nil
-	}
-}
-
-type ListPlayDomainStreamInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPlayDomainStreamInfoInvoker) Invoke() (*model.ListPlayDomainStreamInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPlayDomainStreamInfoResponse), nil
 	}
 }
 

@@ -41,6 +41,18 @@ func (i *BatchCreateClusterTagsInvoker) Invoke() (*model.BatchCreateClusterTagsR
 	}
 }
 
+type BatchCreateDeleteResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateDeleteResourceTagsInvoker) Invoke() (*model.BatchCreateDeleteResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateDeleteResourceTagsResponse), nil
+	}
+}
+
 type BatchDeleteClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -665,6 +677,18 @@ func (i *ShowClusterEndpointsInvoker) Invoke() (*model.ShowClusterEndpointsRespo
 	}
 }
 
+type ShowClusterSupportConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterSupportConfigurationInvoker) Invoke() (*model.ShowClusterSupportConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterSupportConfigurationResponse), nil
+	}
+}
+
 type ShowClusterUpgradeInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +698,18 @@ func (i *ShowClusterUpgradeInfoInvoker) Invoke() (*model.ShowClusterUpgradeInfoR
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterUpgradeInfoResponse), nil
+	}
+}
+
+type ShowCustomizeClusterTagsByProjectIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomizeClusterTagsByProjectIdInvoker) Invoke() (*model.ShowCustomizeClusterTagsByProjectIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomizeClusterTagsByProjectIdResponse), nil
 	}
 }
 
@@ -797,6 +833,30 @@ func (i *ShowReleaseHistoryInvoker) Invoke() (*model.ShowReleaseHistoryResponse,
 	}
 }
 
+type ShowResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceInstancesInvoker) Invoke() (*model.ShowResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceInstancesResponse), nil
+	}
+}
+
+type ShowResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceTagsResponse), nil
+	}
+}
+
 type ShowUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -830,6 +890,18 @@ func (i *ShowUserChartsQuotasInvoker) Invoke() (*model.ShowUserChartsQuotasRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowUserChartsQuotasResponse), nil
+	}
+}
+
+type SyncNodePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncNodePoolInvoker) Invoke() (*model.SyncNodePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncNodePoolResponse), nil
 	}
 }
 
@@ -962,6 +1034,18 @@ func (i *UpgradeClusterInvoker) Invoke() (*model.UpgradeClusterResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpgradeClusterResponse), nil
+	}
+}
+
+type UpgradeNodePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeNodePoolInvoker) Invoke() (*model.UpgradeNodePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeNodePoolResponse), nil
 	}
 }
 
@@ -1538,6 +1622,18 @@ func (i *UpdateAutopilotClusterInvoker) Invoke() (*model.UpdateAutopilotClusterR
 		return nil, err
 	} else {
 		return result.(*model.UpdateAutopilotClusterResponse), nil
+	}
+}
+
+type UpdateAutopilotClusterEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutopilotClusterEipInvoker) Invoke() (*model.UpdateAutopilotClusterEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutopilotClusterEipResponse), nil
 	}
 }
 

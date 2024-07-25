@@ -9,28 +9,28 @@ import (
 // CreateDataobjectRelationsResponse Response Object
 type CreateDataobjectRelationsResponse struct {
 
-	// Id value
+	// 错误码
 	Code *string `json:"code,omitempty"`
 
-	// Error message
+	// 错误信息
 	Message *string `json:"message,omitempty"`
 
-	// Error message
+	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
-	// Error message
-	Success *bool `json:"success,omitempty"`
-
-	// tatal count
+	// 总数
 	Total *int32 `json:"total,omitempty"`
 
-	// current page count
+	// 分页大小
 	Limit *int32 `json:"limit,omitempty"`
 
-	// current page size
+	// 偏移量
 	Offset *int32 `json:"offset,omitempty"`
 
-	Data *DataResponse `json:"data,omitempty"`
+	// 是否成功
+	Success *bool `json:"success,omitempty"`
+
+	Data *BatchOperateDataobjectResult `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`

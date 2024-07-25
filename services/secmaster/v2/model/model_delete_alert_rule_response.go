@@ -9,11 +9,14 @@ import (
 // DeleteAlertRuleResponse Response Object
 type DeleteAlertRuleResponse struct {
 
-	// 告警规则 ID。Alert rule ID.
-	RuleId *string `json:"rule_id,omitempty"`
+	// 是否删除.
+	Deleted *bool `json:"deleted,omitempty"`
 
-	// 删除时间。Delete time.
-	DeleteTime *int64 `json:"delete_time,omitempty"`
+	// Alert rule ID.
+	FailList *[]AlertRule `json:"fail_list,omitempty"`
+
+	// Alert rule ID.
+	SuccessList *[]AlertRule `json:"success_list,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`

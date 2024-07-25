@@ -9,11 +9,8 @@ import (
 // IndicatorListSearchRequest indicator list query request
 type IndicatorListSearchRequest struct {
 
-	// 指标ID列表
+	// 威胁情报ID列表
 	Ids *[]string `json:"ids,omitempty"`
-
-	// 指标名称
-	Name *string `json:"name,omitempty"`
 
 	// 数据类ID
 	DataclassId *string `json:"dataclass_id,omitempty"`

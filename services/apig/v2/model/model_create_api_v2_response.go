@@ -58,7 +58,7 @@ type CreateApiV2Response struct {
 	// 失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
 	ResultFailureSample *string `json:"result_failure_sample,omitempty"`
 
-	// 前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+	// 前端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
 	// 标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
@@ -76,8 +76,11 @@ type CreateApiV2Response struct {
 	// 标签  待废弃，优先使用tags字段
 	Tag *string `json:"tag,omitempty"`
 
-	// 请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+	// 请求内容格式类型：  application/json application/xml multipart/form-data text/plain
 	ContentType *CreateApiV2ResponseContentType `json:"content_type,omitempty"`
+
+	// 是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
+	IsSendFgBodyBase64 *bool `json:"is_send_fg_body_base64,omitempty"`
 
 	// API编号
 	Id *string `json:"id,omitempty"`

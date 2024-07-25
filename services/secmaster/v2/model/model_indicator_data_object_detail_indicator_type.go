@@ -14,12 +14,6 @@ type IndicatorDataObjectDetailIndicatorType struct {
 
 	// 情报类型ID
 	Id *string `json:"id,omitempty"`
-
-	// 目录
-	Category *string `json:"category,omitempty"`
-
-	// 布局ID
-	LayoutId *string `json:"layout_id,omitempty"`
 }
 
 func (o IndicatorDataObjectDetailIndicatorType) String() string {

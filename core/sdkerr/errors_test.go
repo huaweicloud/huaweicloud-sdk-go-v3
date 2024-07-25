@@ -22,7 +22,6 @@ package sdkerr
 import (
 	"bytes"
 	"github.com/stretchr/testify/assert"
-	"io"
 	"io/ioutil"
 	"net/http"
 	"testing"
@@ -35,131 +34,64 @@ func mockHeader() http.Header {
 }
 
 func TestNewServiceResponseError(t *testing.T) {
-	data := []byte("{\"error_code\":\"XXX.0001\"," +
-		"\"error_msg\":\"Some errors occurred.\"," +
-		"\"encoded_authorization_message\":\"Egpjbi1ub*****GoxMzgrcA==\"}")
-	response := &http.Response{
-		StatusCode: 400,
-		Header:     mockHeader(),
-		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
+	cases := []struct {
+		Name                                                            string
+		Data                                                            []byte
+		StatusCode                                                      int
+		ErrorCode, ErrorMessage, RequestId, EncodedAuthorizationMessage string
+	}{
+		{
+			"error_code&error_msg",
+			[]byte("{\"error_code\":\"XXX.0001\",\"error_msg\":\"Some errors occurred.\"," +
+				"\"encoded_authorization_message\":\"Egpjbi1ub*****GoxMzgrcA==\"}"),
+			400, "XXX.0001", "Some errors occurred.", "97e2***11df", "Egpjbi1ub*****GoxMzgrcA==",
+		},
+		{
+			"code&message",
+			[]byte("{\"error\":{\"code\":\"XXX.0001\",\"message\":\"Some errors occurred.\"," +
+				"\"encoded_authorization_message\":\"Egpjbi1ub*****GoxMzgrcA==\"}}"),
+			400, "XXX.0001", "Some errors occurred.", "97e2***11df", "Egpjbi1ub*****GoxMzgrcA==",
+		},
+		{
+			"error_code&error_msg&code&message",
+			[]byte("{\"error\":" +
+				"{\"code\":\"XXX.0002\"," +
+				"\"message\":\"Some errors occurred...\"}," +
+				"\"error_code\":\"XXX.0001\"," +
+				"\"error_msg\":\"Some errors occurred.\"," +
+				"\"encoded_authorization_message\":\"Egpjbi1ub*****GoxMzgrcA==\"}"),
+			400, "XXX.0001", "Some errors occurred.", "97e2***11df", "Egpjbi1ub*****GoxMzgrcA==",
+		},
+		{
+			"miss error info", []byte("{\"invalid_key\":\"invalid_value\"}"),
+			400, "", "{\"invalid_key\":\"invalid_value\"}", "97e2***11df", "",
+		},
+		{
+			"invalid json", []byte("invalid json data"),
+			400, "", "invalid json data", "97e2***11df", "",
+		},
+		{
+			"null encoded message",
+			[]byte("{\"error_code\":\"XXX.0001\",\"error_msg\":\"Some errors occurred.\",\"encoded_authorization_message\":null}"),
+			400, "XXX.0001", "Some errors occurred.", "97e2***11df", "",
+		},
 	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		assert.Nil(t, err)
-	}(response.Body)
 
-	responseError := NewServiceResponseError(response)
-	assert.Equal(t, 400, responseError.StatusCode)
-	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
-	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
-	assert.Equal(t, "97e2***11df", responseError.RequestId)
-	assert.Equal(t, "Egpjbi1ub*****GoxMzgrcA==", responseError.EncodedAuthorizationMessage)
-}
+	for _, c := range cases {
+		t.Run(c.Name, func(t *testing.T) {
+			resp := &http.Response{
+				StatusCode: 400,
+				Header:     mockHeader(),
+				Body:       ioutil.NopCloser(bytes.NewBuffer(c.Data)),
+			}
+			defer resp.Body.Close()
 
-func TestNewServiceResponseError2(t *testing.T) {
-	data := []byte("{\"error\":" +
-		"{\"code\":\"XXX.0001\"," +
-		"\"message\":\"Some errors occurred.\"," +
-		"\"encoded_authorization_message\":\"Egpjbi1ub*****GoxMzgrcA==\"}}")
-	response := &http.Response{
-		StatusCode: 400,
-		Header:     mockHeader(),
-		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
+			err := NewServiceResponseError(resp)
+			assert.Equal(t, c.StatusCode, err.StatusCode)
+			assert.Equal(t, c.ErrorCode, err.ErrorCode)
+			assert.Equal(t, c.ErrorMessage, err.ErrorMessage)
+			assert.Equal(t, c.RequestId, err.RequestId)
+			assert.Equal(t, c.EncodedAuthorizationMessage, err.EncodedAuthorizationMessage)
+		})
 	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		assert.Nil(t, err)
-	}(response.Body)
-
-	responseError := NewServiceResponseError(response)
-	assert.Equal(t, 400, responseError.StatusCode)
-	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
-	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
-	assert.Equal(t, "97e2***11df", responseError.RequestId)
-	assert.Equal(t, "Egpjbi1ub*****GoxMzgrcA==", responseError.EncodedAuthorizationMessage)
-}
-
-func TestNewServiceResponseError3(t *testing.T) {
-	data := []byte("{\"error\":" +
-		"{\"code\":\"XXX.0001\"," +
-		"\"message\":\"Some errors occurred.\"}," +
-		"\"error_code\":\"XXX.0001\"," +
-		"\"error_msg\":\"Some errors occurred.\"," +
-		"\"encoded_authorization_message\":\"Egpjbi1ub*****GoxMzgrcA==\"}")
-	response := &http.Response{
-		StatusCode: 400,
-		Header:     mockHeader(),
-		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
-	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		assert.Nil(t, err)
-	}(response.Body)
-
-	responseError := NewServiceResponseError(response)
-	assert.Equal(t, 400, responseError.StatusCode)
-	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
-	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
-	assert.Equal(t, "97e2***11df", responseError.RequestId)
-	assert.Equal(t, "Egpjbi1ub*****GoxMzgrcA==", responseError.EncodedAuthorizationMessage)
-}
-
-func TestNewServiceResponseError4(t *testing.T) {
-	data := []byte("{\"invalid_key\":\"invalid_value\"}")
-	response := &http.Response{
-		StatusCode: 400,
-		Header:     mockHeader(),
-		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
-	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		assert.Nil(t, err)
-	}(response.Body)
-
-	responseError := NewServiceResponseError(response)
-	assert.Equal(t, 400, responseError.StatusCode)
-	assert.Equal(t, "", responseError.ErrorCode)
-	assert.Equal(t, "{\"invalid_key\":\"invalid_value\"}", responseError.ErrorMessage)
-	assert.Equal(t, "97e2***11df", responseError.RequestId)
-}
-
-func TestNewServiceResponseError5(t *testing.T) {
-	data := []byte("invalid json data")
-	response := &http.Response{
-		StatusCode: 400,
-		Header:     mockHeader(),
-		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
-	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		assert.Nil(t, err)
-	}(response.Body)
-
-	responseError := NewServiceResponseError(response)
-	assert.Equal(t, 400, responseError.StatusCode)
-	assert.Equal(t, "", responseError.ErrorCode)
-	assert.Equal(t, "invalid json data", responseError.ErrorMessage)
-	assert.Equal(t, "97e2***11df", responseError.RequestId)
-}
-
-func TestNewServiceResponseError6(t *testing.T) {
-	data := []byte("{\"error_code\":\"XXX.0001\"," +
-		"\"error_msg\":\"Some errors occurred.\"," +
-		"\"encoded_authorization_message\":null}")
-	response := &http.Response{
-		StatusCode: 400,
-		Header:     mockHeader(),
-		Body:       ioutil.NopCloser(bytes.NewBuffer(data)),
-	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		assert.Nil(t, err)
-	}(response.Body)
-
-	responseError := NewServiceResponseError(response)
-	assert.Equal(t, 400, responseError.StatusCode)
-	assert.Equal(t, "XXX.0001", responseError.ErrorCode)
-	assert.Equal(t, "Some errors occurred.", responseError.ErrorMessage)
-	assert.Equal(t, "97e2***11df", responseError.RequestId)
-	assert.Equal(t, "", responseError.EncodedAuthorizationMessage)
 }

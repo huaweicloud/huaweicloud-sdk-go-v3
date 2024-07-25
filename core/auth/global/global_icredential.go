@@ -77,14 +77,21 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 
 	req, err := s.ProcessAuthRequest(client, internal.GetKeystoneListAuthDomainsRequest(s.IamEndpoint, client.GetHttpConfig()))
 	if err != nil {
-		panic(fmt.Sprintf("failed to get domain id, %s", err.Error()))
+		panic(fmt.Errorf("failed to get domain id automatically, %w", err))
 	}
 
-	id, err := internal.KeystoneListAuthDomains(client, req)
+	resp, err := internal.KeystoneListAuthDomains(client, req)
 	if err != nil {
-		panic(fmt.Sprintf("failed to get domain id, %s", err.Error()))
+		panic(fmt.Errorf("failed to get domain id automatically, X-IAM-Trace-Id=%s, %w", resp.TraceId, err))
+	}
+	domains := *resp.Domains
+	if len(domains) == 0 {
+		panic(fmt.Errorf("failed to get domain id automatically, X-IAM-Trace-Id=%s,"+
+			" please confirm that you have 'iam:users:getUser' permission, or set domain id manually:"+
+			" global.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithDomainId(domainId).SafeBuild()", resp.TraceId))
 	}
 
+	id := domains[0].Id
 	s.DomainId = id
 	_ = authCache.PutAuth(s.AK, id)
 

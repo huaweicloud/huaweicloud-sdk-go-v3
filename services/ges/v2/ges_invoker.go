@@ -17,6 +17,18 @@ func (i *AttachEip2Invoker) Invoke() (*model.AttachEip2Response, error) {
 	}
 }
 
+type ChangeSecurityGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeSecurityGroupResponse), nil
+	}
+}
+
 type ClearGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -266,6 +278,18 @@ func (i *RestartGraph2Invoker) Invoke() (*model.RestartGraph2Response, error) {
 		return nil, err
 	} else {
 		return result.(*model.RestartGraph2Response), nil
+	}
+}
+
+type ShowBackupDownloadLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackupDownloadLinkInvoker) Invoke() (*model.ShowBackupDownloadLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackupDownloadLinkResponse), nil
 	}
 }
 

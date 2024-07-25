@@ -181,6 +181,29 @@ func (c *LiveClient) ListHistoryStreamsInvoker(request *model.ListHistoryStreams
 	return &ListHistoryStreamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPlayDomainStreamInfo 查询播放域名下的流数据
+//
+// 查询播放域名下的监控数据，根据输入时间点，返回查询该时间点所有流的带宽、在线人数、协议。
+// 返回的数据粒度为1分钟。
+// 最大查询周期7天，数据延迟5分钟。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListPlayDomainStreamInfo(request *model.ListPlayDomainStreamInfoRequest) (*model.ListPlayDomainStreamInfoResponse, error) {
+	requestDef := GenReqDefForListPlayDomainStreamInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPlayDomainStreamInfoResponse), nil
+	}
+}
+
+// ListPlayDomainStreamInfoInvoker 查询播放域名下的流数据
+func (c *LiveClient) ListPlayDomainStreamInfoInvoker(request *model.ListPlayDomainStreamInfoRequest) *ListPlayDomainStreamInfoInvoker {
+	requestDef := GenReqDefForListPlayDomainStreamInfo()
+	return &ListPlayDomainStreamInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListQueryHttpCode 查询直播拉流HTTP状态码接口
 //
 // 查询直播拉流HTTP状态码接口。  获取加速域名1分钟粒度的HTTP返回码  最大查询跨度不能超过24小时，最大查询周期7天。
@@ -348,31 +371,6 @@ func (c *LiveClient) ShowUpBandwidth(request *model.ShowUpBandwidthRequest) (*mo
 func (c *LiveClient) ShowUpBandwidthInvoker(request *model.ShowUpBandwidthRequest) *ShowUpBandwidthInvoker {
 	requestDef := GenReqDefForShowUpBandwidth()
 	return &ShowUpBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPlayDomainStreamInfo 查询播放域名下的流数据
-//
-// 查询播放域名下的监控数据，根据输入时间点，返回查询该时间点所有流的带宽、在线人数、协议。
-//
-// 返回的数据粒度为1分钟。
-//
-// 最大查询周期7天，数据延迟5分钟。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *LiveClient) ListPlayDomainStreamInfo(request *model.ListPlayDomainStreamInfoRequest) (*model.ListPlayDomainStreamInfoResponse, error) {
-	requestDef := GenReqDefForListPlayDomainStreamInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPlayDomainStreamInfoResponse), nil
-	}
-}
-
-// ListPlayDomainStreamInfoInvoker 查询播放域名下的流数据
-func (c *LiveClient) ListPlayDomainStreamInfoInvoker(request *model.ListPlayDomainStreamInfoRequest) *ListPlayDomainStreamInfoInvoker {
-	requestDef := GenReqDefForListPlayDomainStreamInfo()
-	return &ListPlayDomainStreamInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSingleStreamBitrate 查询推流码率数据接口

@@ -8,13 +8,13 @@ import (
 
 type VersionModelVersionUpdateDto struct {
 
-	// 唯一标识。
+	// **参数解释：**  唯一标识。  **约束限制：**  不涉及。  **取值范围：**  -9223372036854775808到9223372036854775807的整数。  **默认取值：**  不涉及。
 	Id string `json:"id"`
 
-	// 迭代版本。
+	// **参数解释：**  迭代版本。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Iteration *int32 `json:"iteration,omitempty"`
 
-	// 版本号。
+	// **参数解释：**  版本号。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Version string `json:"version"`
 }
 

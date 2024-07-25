@@ -25,7 +25,7 @@ type MicroserviceImportReq struct {
 	// APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
 	BackendTimeout *int32 `json:"backend_timeout,omitempty"`
 
-	// API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+	// API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
 	AuthType *MicroserviceImportReqAuthType `json:"auth_type,omitempty"`
 
 	// 是否支持跨域，默认不支持 - true：支持 - false：不支持
@@ -34,8 +34,6 @@ type MicroserviceImportReq struct {
 	CseInfo *MicroServiceInfoCseCreate `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCceCreate `json:"cce_info,omitempty"`
-
-	CceServiceInfo *MicroServiceInfoCceServiceCreate `json:"cce_service_info,omitempty"`
 }
 
 func (o MicroserviceImportReq) String() string {

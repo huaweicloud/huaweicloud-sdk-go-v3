@@ -6,20 +6,14 @@ import (
 	"strings"
 )
 
-// CreateIndicatorDetailIndicatorType 指标类型统计数据
+// CreateIndicatorDetailIndicatorType 威胁情报类型
 type CreateIndicatorDetailIndicatorType struct {
 
-	// 指标类型
+	// 威胁情报类型
 	IndicatorType string `json:"indicator_type"`
 
 	// 情报类型ID
 	Id string `json:"id"`
-
-	// 目录
-	Category string `json:"category"`
-
-	// 布局ID
-	LayoutId string `json:"layout_id"`
 }
 
 func (o CreateIndicatorDetailIndicatorType) String() string {

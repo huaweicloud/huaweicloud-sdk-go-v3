@@ -208,6 +208,27 @@ func (c *DataArtsStudioClient) BatchDeleteSecurityDataClassificationRuleInvoker(
 	return &BatchDeleteSecurityDataClassificationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteSecurityDynamicMaskingPolicies 批量删除动态脱敏策略
+//
+// 批量删除动态脱敏策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchDeleteSecurityDynamicMaskingPolicies(request *model.BatchDeleteSecurityDynamicMaskingPoliciesRequest) (*model.BatchDeleteSecurityDynamicMaskingPoliciesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSecurityDynamicMaskingPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSecurityDynamicMaskingPoliciesResponse), nil
+	}
+}
+
+// BatchDeleteSecurityDynamicMaskingPoliciesInvoker 批量删除动态脱敏策略
+func (c *DataArtsStudioClient) BatchDeleteSecurityDynamicMaskingPoliciesInvoker(request *model.BatchDeleteSecurityDynamicMaskingPoliciesRequest) *BatchDeleteSecurityDynamicMaskingPoliciesInvoker {
+	requestDef := GenReqDefForBatchDeleteSecurityDynamicMaskingPolicies()
+	return &BatchDeleteSecurityDynamicMaskingPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteSecurityPermissionSetMembers 批量删除权限集成员
 //
 // 批量删除权限集成员
@@ -984,6 +1005,27 @@ func (c *DataArtsStudioClient) CreateSecurityDataClassificationRule(request *mod
 func (c *DataArtsStudioClient) CreateSecurityDataClassificationRuleInvoker(request *model.CreateSecurityDataClassificationRuleRequest) *CreateSecurityDataClassificationRuleInvoker {
 	requestDef := GenReqDefForCreateSecurityDataClassificationRule()
 	return &CreateSecurityDataClassificationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityDynamicMaskingPolicy 创建数据脱敏策略
+//
+// 创建动态数据脱敏策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateSecurityDynamicMaskingPolicy(request *model.CreateSecurityDynamicMaskingPolicyRequest) (*model.CreateSecurityDynamicMaskingPolicyResponse, error) {
+	requestDef := GenReqDefForCreateSecurityDynamicMaskingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityDynamicMaskingPolicyResponse), nil
+	}
+}
+
+// CreateSecurityDynamicMaskingPolicyInvoker 创建数据脱敏策略
+func (c *DataArtsStudioClient) CreateSecurityDynamicMaskingPolicyInvoker(request *model.CreateSecurityDynamicMaskingPolicyRequest) *CreateSecurityDynamicMaskingPolicyInvoker {
+	requestDef := GenReqDefForCreateSecurityDynamicMaskingPolicy()
+	return &CreateSecurityDynamicMaskingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSecurityPermissionSet 创建权限集
@@ -3295,6 +3337,27 @@ func (c *DataArtsStudioClient) ListSecurityDlfDataWareHousesInvoker(request *mod
 	return &ListSecurityDlfDataWareHousesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityDynamicMaskingPolicies 查询动态数据脱敏策略列表
+//
+// 查询动态数据脱敏策略列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityDynamicMaskingPolicies(request *model.ListSecurityDynamicMaskingPoliciesRequest) (*model.ListSecurityDynamicMaskingPoliciesResponse, error) {
+	requestDef := GenReqDefForListSecurityDynamicMaskingPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityDynamicMaskingPoliciesResponse), nil
+	}
+}
+
+// ListSecurityDynamicMaskingPoliciesInvoker 查询动态数据脱敏策略列表
+func (c *DataArtsStudioClient) ListSecurityDynamicMaskingPoliciesInvoker(request *model.ListSecurityDynamicMaskingPoliciesRequest) *ListSecurityDynamicMaskingPoliciesInvoker {
+	requestDef := GenReqDefForListSecurityDynamicMaskingPolicies()
+	return &ListSecurityDynamicMaskingPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityMemberSyncTasks 查询用户同步列表
 //
 // 查询用户同步列表。
@@ -5228,6 +5291,27 @@ func (c *DataArtsStudioClient) ShowSecurityDataClassificationRuleGroupInvoker(re
 	return &ShowSecurityDataClassificationRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecurityDynamicMaskingPolicy 查询某个脱敏策略的详细信息
+//
+// 查询某个脱敏策略的详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityDynamicMaskingPolicy(request *model.ShowSecurityDynamicMaskingPolicyRequest) (*model.ShowSecurityDynamicMaskingPolicyResponse, error) {
+	requestDef := GenReqDefForShowSecurityDynamicMaskingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityDynamicMaskingPolicyResponse), nil
+	}
+}
+
+// ShowSecurityDynamicMaskingPolicyInvoker 查询某个脱敏策略的详细信息
+func (c *DataArtsStudioClient) ShowSecurityDynamicMaskingPolicyInvoker(request *model.ShowSecurityDynamicMaskingPolicyRequest) *ShowSecurityDynamicMaskingPolicyInvoker {
+	requestDef := GenReqDefForShowSecurityDynamicMaskingPolicy()
+	return &ShowSecurityDynamicMaskingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecurityMemberSyncTask 查询单个用户同步任务
 //
 // 查询单个用户同步任务。
@@ -5814,6 +5898,27 @@ func (c *DataArtsStudioClient) UpdateSecurityDataClassificationRule(request *mod
 func (c *DataArtsStudioClient) UpdateSecurityDataClassificationRuleInvoker(request *model.UpdateSecurityDataClassificationRuleRequest) *UpdateSecurityDataClassificationRuleInvoker {
 	requestDef := GenReqDefForUpdateSecurityDataClassificationRule()
 	return &UpdateSecurityDataClassificationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityDynamicMaskingPolicy 更新动态数据脱敏策略
+//
+// 更新动态数据脱敏策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityDynamicMaskingPolicy(request *model.UpdateSecurityDynamicMaskingPolicyRequest) (*model.UpdateSecurityDynamicMaskingPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityDynamicMaskingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityDynamicMaskingPolicyResponse), nil
+	}
+}
+
+// UpdateSecurityDynamicMaskingPolicyInvoker 更新动态数据脱敏策略
+func (c *DataArtsStudioClient) UpdateSecurityDynamicMaskingPolicyInvoker(request *model.UpdateSecurityDynamicMaskingPolicyRequest) *UpdateSecurityDynamicMaskingPolicyInvoker {
+	requestDef := GenReqDefForUpdateSecurityDynamicMaskingPolicy()
+	return &UpdateSecurityDynamicMaskingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityPermissionSet 更新权限集

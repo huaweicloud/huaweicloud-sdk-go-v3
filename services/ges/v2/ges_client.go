@@ -40,6 +40,27 @@ func (c *GesClient) AttachEip2Invoker(request *model.AttachEip2Request) *AttachE
 	return &AttachEip2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeSecurityGroup 切换安全组
+//
+// 该接口可以在图创建成功后，修改图的安全组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GesClient) ChangeSecurityGroup(request *model.ChangeSecurityGroupRequest) (*model.ChangeSecurityGroupResponse, error) {
+	requestDef := GenReqDefForChangeSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeSecurityGroupResponse), nil
+	}
+}
+
+// ChangeSecurityGroupInvoker 切换安全组
+func (c *GesClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurityGroupRequest) *ChangeSecurityGroupInvoker {
+	requestDef := GenReqDefForChangeSecurityGroup()
+	return &ChangeSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ClearGraph2 清空图
 //
 // 清空图中所有数据。
@@ -484,6 +505,27 @@ func (c *GesClient) RestartGraph2(request *model.RestartGraph2Request) (*model.R
 func (c *GesClient) RestartGraph2Invoker(request *model.RestartGraph2Request) *RestartGraph2Invoker {
 	requestDef := GenReqDefForRestartGraph2()
 	return &RestartGraph2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackupDownloadLink 获取备份下载链接
+//
+// 获取备份下载链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GesClient) ShowBackupDownloadLink(request *model.ShowBackupDownloadLinkRequest) (*model.ShowBackupDownloadLinkResponse, error) {
+	requestDef := GenReqDefForShowBackupDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupDownloadLinkResponse), nil
+	}
+}
+
+// ShowBackupDownloadLinkInvoker 获取备份下载链接
+func (c *GesClient) ShowBackupDownloadLinkInvoker(request *model.ShowBackupDownloadLinkRequest) *ShowBackupDownloadLinkInvoker {
+	requestDef := GenReqDefForShowBackupDownloadLink()
+	return &ShowBackupDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGraph2 查询图详情

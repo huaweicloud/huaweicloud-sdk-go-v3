@@ -12,19 +12,19 @@ import (
 type ScanJobRequest struct {
 
 	// 资产ID列表
-	AssetIds *[]string `json:"asset_ids,omitempty"`
+	AssetIds []string `json:"asset_ids"`
 
 	// 扫描周期，日(DAY)，周(WEEK)，月(MONTH)，单次扫描(ONCE)
-	Cycle *ScanJobRequestCycle `json:"cycle,omitempty"`
+	Cycle ScanJobRequestCycle `json:"cycle"`
 
 	// 扫描任务名
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 是否开启任务
 	Open *bool `json:"open,omitempty"`
 
 	// 规则组ID列表
-	RuleGroupIds *[]string `json:"rule_group_ids,omitempty"`
+	RuleGroupIds []string `json:"rule_group_ids"`
 
 	// 扫描任务开始时间
 	StartTime *int64 `json:"start_time,omitempty"`

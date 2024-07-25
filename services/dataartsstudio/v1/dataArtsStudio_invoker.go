@@ -113,6 +113,18 @@ func (i *BatchDeleteSecurityDataClassificationRuleInvoker) Invoke() (*model.Batc
 	}
 }
 
+type BatchDeleteSecurityDynamicMaskingPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSecurityDynamicMaskingPoliciesInvoker) Invoke() (*model.BatchDeleteSecurityDynamicMaskingPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSecurityDynamicMaskingPoliciesResponse), nil
+	}
+}
+
 type BatchDeleteSecurityPermissionSetMembersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +566,18 @@ func (i *CreateSecurityDataClassificationRuleInvoker) Invoke() (*model.CreateSec
 		return nil, err
 	} else {
 		return result.(*model.CreateSecurityDataClassificationRuleResponse), nil
+	}
+}
+
+type CreateSecurityDynamicMaskingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityDynamicMaskingPolicyInvoker) Invoke() (*model.CreateSecurityDynamicMaskingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityDynamicMaskingPolicyResponse), nil
 	}
 }
 
@@ -1877,6 +1901,18 @@ func (i *ListSecurityDlfDataWareHousesInvoker) Invoke() (*model.ListSecurityDlfD
 	}
 }
 
+type ListSecurityDynamicMaskingPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityDynamicMaskingPoliciesInvoker) Invoke() (*model.ListSecurityDynamicMaskingPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityDynamicMaskingPoliciesResponse), nil
+	}
+}
+
 type ListSecurityMemberSyncTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2981,6 +3017,18 @@ func (i *ShowSecurityDataClassificationRuleGroupInvoker) Invoke() (*model.ShowSe
 	}
 }
 
+type ShowSecurityDynamicMaskingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityDynamicMaskingPolicyInvoker) Invoke() (*model.ShowSecurityDynamicMaskingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityDynamicMaskingPolicyResponse), nil
+	}
+}
+
 type ShowSecurityMemberSyncTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3314,6 +3362,18 @@ func (i *UpdateSecurityDataClassificationRuleInvoker) Invoke() (*model.UpdateSec
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecurityDataClassificationRuleResponse), nil
+	}
+}
+
+type UpdateSecurityDynamicMaskingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityDynamicMaskingPolicyInvoker) Invoke() (*model.UpdateSecurityDynamicMaskingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityDynamicMaskingPolicyResponse), nil
 	}
 }
 

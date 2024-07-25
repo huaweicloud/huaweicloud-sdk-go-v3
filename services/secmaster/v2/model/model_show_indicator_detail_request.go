@@ -15,7 +15,7 @@ type ShowIndicatorDetailRequest struct {
 	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// 情报指标ID
+	// 威胁情报ID
 	IndicatorId string `json:"indicator_id"`
 }
 

@@ -25,17 +25,22 @@ import (
 )
 
 func TestNewRegion(t *testing.T) {
-	reg := NewRegion("region-id-1", "https://service1.region-id-1.com")
-	assert.NotNil(t, reg)
-	assert.Equal(t, "region-id-1", reg.Id)
-	assert.Equal(t, []string{"https://service1.region-id-1.com"}, reg.Endpoints)
-}
+	cases := []struct {
+		Name, Id  string
+		Endpoints []string
+	}{
+		{"single endpoint", "region-id-1", []string{"https://service1.region-id-1.com"}},
+		{"multi endpoints", "region-id-2", []string{"https://service2.region-id-2.com", "https://service2.region-id-2.cn"}},
+	}
 
-func TestNewRegion2(t *testing.T) {
-	reg := NewRegion("region-id-2", "https://service2.region-id-2.com", "https://service2.region-id-2.cn")
-	assert.NotNil(t, reg)
-	assert.Equal(t, "region-id-2", reg.Id)
-	assert.Equal(t, []string{"https://service2.region-id-2.com", "https://service2.region-id-2.cn"}, reg.Endpoints)
+	for _, c := range cases {
+		t.Run(c.Name, func(t *testing.T) {
+			reg := NewRegion(c.Id, c.Endpoints...)
+			assert.NotNil(t, reg)
+			assert.Equal(t, c.Id, reg.Id)
+			assert.Equal(t, c.Endpoints, reg.Endpoints)
+		})
+	}
 }
 
 func TestRegion_WithEndpointsOverride(t *testing.T) {

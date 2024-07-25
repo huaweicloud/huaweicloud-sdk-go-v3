@@ -17,9 +17,6 @@ type CreatePlaybookInfo struct {
 
 	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
-
-	// 是否启用，默认传false
-	Enabled *bool `json:"enabled,omitempty"`
 }
 
 func (o CreatePlaybookInfo) String() string {

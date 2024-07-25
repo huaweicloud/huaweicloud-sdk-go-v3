@@ -48,14 +48,14 @@ type CreateSqlJobRequestBodyEngineType struct {
 }
 
 type CreateSqlJobRequestBodyEngineTypeEnum struct {
-	TRINO CreateSqlJobRequestBodyEngineType
-	SPARK CreateSqlJobRequestBodyEngineType
+	HETU_ENGINE CreateSqlJobRequestBodyEngineType
+	SPARK       CreateSqlJobRequestBodyEngineType
 }
 
 func GetCreateSqlJobRequestBodyEngineTypeEnum() CreateSqlJobRequestBodyEngineTypeEnum {
 	return CreateSqlJobRequestBodyEngineTypeEnum{
-		TRINO: CreateSqlJobRequestBodyEngineType{
-			value: "trino",
+		HETU_ENGINE: CreateSqlJobRequestBodyEngineType{
+			value: "hetuEngine",
 		},
 		SPARK: CreateSqlJobRequestBodyEngineType{
 			value: "spark",

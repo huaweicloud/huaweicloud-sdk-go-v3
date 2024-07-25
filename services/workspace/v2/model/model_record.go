@@ -8,6 +8,12 @@ import (
 
 type Record struct {
 
+	// 桌面sid
+	Sid *string `json:"sid,omitempty"`
+
+	// 事务id
+	TransactionId *string `json:"transaction_id,omitempty"`
+
 	// 计算机名。
 	ComputerName *string `json:"computer_name,omitempty"`
 
@@ -49,6 +55,12 @@ type Record struct {
 
 	// 连接失败原因。
 	ConnectionFailureReason *string `json:"connection_failure_reason,omitempty"`
+
+	// 网络时延ms
+	NetworkRtt *int32 `json:"network_rtt,omitempty"`
+
+	// 端到端时延 ms
+	E2eRtt *int32 `json:"e2e_rtt,omitempty"`
 }
 
 func (o Record) String() string {

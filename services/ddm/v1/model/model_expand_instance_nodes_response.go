@@ -19,7 +19,7 @@ type ExpandInstanceNodesResponse struct {
 	JobId *string `json:"jobId,omitempty"`
 
 	// 订单号,仅包年包月实例时返回该参数。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId        *string `json:"orderId,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,10 +8,10 @@ import (
 
 type PersistObjectIdsDecryptDto struct {
 
-	// 是否加密。 - true：加密。 - false：不加密。
+	// **参数解释：**  是否加密。  **约束限制：**  不涉及。  **取值范围：**  - true：加密。 - false：不加密。  **默认取值：**  false。
 	Decrypt *bool `json:"decrypt,omitempty"`
 
-	// ID列表。
+	// **参数解释：**  ID列表。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Ids []string `json:"ids"`
 }
 

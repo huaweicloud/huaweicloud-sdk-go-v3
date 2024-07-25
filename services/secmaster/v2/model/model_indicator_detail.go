@@ -9,10 +9,10 @@ import (
 // IndicatorDetail 情报详情信息
 type IndicatorDetail struct {
 
-	// 指标ID
+	// 威胁情报ID
 	Id *string `json:"id,omitempty"`
 
-	// 指标名称
+	// 威胁情报名称
 	Name string `json:"name"`
 
 	DataObject *IndicatorDataObjectDetail `json:"data_object,omitempty"`

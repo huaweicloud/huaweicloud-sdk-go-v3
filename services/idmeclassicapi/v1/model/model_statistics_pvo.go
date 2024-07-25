@@ -8,10 +8,10 @@ import (
 
 type StatisticsPvo struct {
 
-	// 结束时间。
+	// **参数解释：**  结束时间。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	EndTime string `json:"endTime"`
 
-	// 开始时间。
+	// **参数解释：**  开始时间。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	StartTime string `json:"startTime"`
 }
 

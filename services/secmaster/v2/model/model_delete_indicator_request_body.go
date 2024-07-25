@@ -9,7 +9,7 @@ import (
 // DeleteIndicatorRequestBody 删除指标请求参数
 type DeleteIndicatorRequestBody struct {
 
-	// 指标ID列表
+	// 威胁情报ID列表
 	BatchIds *[]string `json:"batch_ids,omitempty"`
 }
 

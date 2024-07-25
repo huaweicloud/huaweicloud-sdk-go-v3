@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/secmaster/v2/model"
 )
 
+type BatchSearchMetricHitsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSearchMetricHitsInvoker) Invoke() (*model.BatchSearchMetricHitsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSearchMetricHitsResponse), nil
+	}
+}
+
 type ChangeAlertInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -218,6 +230,30 @@ func (i *CreatePlaybookVersionInvoker) Invoke() (*model.CreatePlaybookVersionRes
 		return nil, err
 	} else {
 		return result.(*model.CreatePlaybookVersionResponse), nil
+	}
+}
+
+type CreatePostPaidOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePostPaidOrderInvoker) Invoke() (*model.CreatePostPaidOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePostPaidOrderResponse), nil
+	}
+}
+
+type CreateWorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateWorkspaceInvoker) Invoke() (*model.CreateWorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateWorkspaceResponse), nil
 	}
 }
 
@@ -542,6 +578,30 @@ func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListWorkflowsResponse), nil
+	}
+}
+
+type ListWorkspacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkspacesInvoker) Invoke() (*model.ListWorkspacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkspacesResponse), nil
+	}
+}
+
+type SearchBaselineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchBaselineInvoker) Invoke() (*model.SearchBaselineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchBaselineResponse), nil
 	}
 }
 

@@ -8,10 +8,10 @@ import (
 
 type CompareVersionRespVo struct {
 
-	// 基础版本对象。
+	// **参数解释：**  基础版本对象。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	BasicVersion *interface{} `json:"basicVersion,omitempty"`
 
-	// 当前版本对象。
+	// **参数解释：**  当前版本对象。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CorrelationVersion *interface{} `json:"correlationVersion,omitempty"`
 }
 

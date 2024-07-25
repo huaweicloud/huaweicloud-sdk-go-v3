@@ -59,6 +59,9 @@ type ReqParam struct {
 	// 是否透传 - 1：是 - 2：否
 	PassThrough *ReqParamPassThrough `json:"pass_through,omitempty"`
 
+	// 请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
+	Orchestrations *[]string `json:"orchestrations,omitempty"`
+
 	// 参数编号
 	Id *string `json:"id,omitempty"`
 }
@@ -127,6 +130,7 @@ type ReqParamLocationEnum struct {
 	PATH   ReqParamLocation
 	QUERY  ReqParamLocation
 	HEADER ReqParamLocation
+	COOKIE ReqParamLocation
 }
 
 func GetReqParamLocationEnum() ReqParamLocationEnum {
@@ -139,6 +143,9 @@ func GetReqParamLocationEnum() ReqParamLocationEnum {
 		},
 		HEADER: ReqParamLocation{
 			value: "HEADER",
+		},
+		COOKIE: ReqParamLocation{
+			value: "COOKIE",
 		},
 	}
 }

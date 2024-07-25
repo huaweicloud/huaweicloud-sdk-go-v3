@@ -20,41 +20,29 @@
 package signer
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/stretchr/testify/assert"
-	"strings"
 	"testing"
 )
 
 func TestSM2SM3Signer_Sign(t *testing.T) {
-	req := request.NewHttpRequestBuilder().
-		WithMethod("GET").
-		WithEndpoint("https://"+host).
-		WithPath("/path").
-		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
-		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
-		AddQueryParam("limit", 1).
-		Build()
-	result, err := sm2sm3SignerInst.Sign(req, ak, sk)
-	assert.Nil(t, err)
-	assert.True(t, strings.HasPrefix(result["Authorization"], "SDK-SM2-SM3"))
-}
-
-func TestSM2SM3Signer_Sign2(t *testing.T) {
-	body := &testBody{
-		Name: "test",
-		Id:   1,
+	expectedPrefix := "SDK-SM2-SM3"
+	cases := []TestCase{
+		{
+			TestParam: testParam1,
+			Expected:  expectedPrefix,
+		},
+		{
+			TestParam: testParam2,
+			Expected:  expectedPrefix,
+		},
 	}
-	req := request.NewHttpRequestBuilder().
-		WithMethod("POST").
-		WithEndpoint("https://"+host).
-		WithPath("/path").
-		WithBody("body", body).AddQueryParam("key", "value").
-		AddHeaderParam("Content-Type", "application/json").
-		AddHeaderParam("TEST_UNDERSCORE", "TEST_VALUE").
-		AddHeaderParam("X-Sdk-Date", "20060102T150405Z").
-		Build()
-	result, err := sm2sm3SignerInst.Sign(req, ak, sk)
-	assert.Nil(t, err)
-	assert.True(t, strings.HasPrefix(result["Authorization"], "SDK-SM2-SM3"))
+
+	for _, c := range cases {
+		t.Run(c.Name, func(t *testing.T) {
+			req := buildReqWithTestcase(c)
+			result, err := sm2sm3SignerInst.Sign(req, ak, sk)
+			assert.Nil(t, err)
+			assert.Contains(t, result["Authorization"], c.Expected)
+		})
+	}
 }

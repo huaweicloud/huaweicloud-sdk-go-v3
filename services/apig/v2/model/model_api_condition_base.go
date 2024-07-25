@@ -29,8 +29,14 @@ type ApiConditionBase struct {
 	// 策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
 	ConditionOrigin ApiConditionBaseConditionOrigin `json:"condition_origin"`
 
-	// 策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+	// 策略值。
 	ConditionValue string `json:"condition_value"`
+
+	// 参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+	MappedParamName *string `json:"mapped_param_name,omitempty"`
+
+	// 参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
+	MappedParamLocation *ApiConditionBaseMappedParamLocation `json:"mapped_param_location,omitempty"`
 }
 
 func (o ApiConditionBase) String() string {
@@ -181,6 +187,53 @@ func (c ApiConditionBaseConditionOrigin) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiConditionBaseConditionOrigin) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiConditionBaseMappedParamLocation struct {
+	value string
+}
+
+type ApiConditionBaseMappedParamLocationEnum struct {
+	HEADER ApiConditionBaseMappedParamLocation
+	QUERY  ApiConditionBaseMappedParamLocation
+}
+
+func GetApiConditionBaseMappedParamLocationEnum() ApiConditionBaseMappedParamLocationEnum {
+	return ApiConditionBaseMappedParamLocationEnum{
+		HEADER: ApiConditionBaseMappedParamLocation{
+			value: "header",
+		},
+		QUERY: ApiConditionBaseMappedParamLocation{
+			value: "query",
+		},
+	}
+}
+
+func (c ApiConditionBaseMappedParamLocation) Value() string {
+	return c.value
+}
+
+func (c ApiConditionBaseMappedParamLocation) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiConditionBaseMappedParamLocation) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

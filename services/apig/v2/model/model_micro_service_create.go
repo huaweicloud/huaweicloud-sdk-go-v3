@@ -18,8 +18,6 @@ type MicroServiceCreate struct {
 	CseInfo *MicroServiceInfoCseBase `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCceBase `json:"cce_info,omitempty"`
-
-	CceServiceInfo *MicroServiceInfoCceServiceBase `json:"cce_service_info,omitempty"`
 }
 
 func (o MicroServiceCreate) String() string {

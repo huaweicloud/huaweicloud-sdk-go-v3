@@ -30,6 +30,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"io/ioutil"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -77,14 +78,29 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 	r := internal.GetKeystoneListProjectsRequest(s.IamEndpoint, region, client.GetHttpConfig())
 	req, err := s.ProcessAuthRequest(client, r)
 	if err != nil {
-		panic(fmt.Sprintf("failed to get project id, %s", err.Error()))
+		panic(fmt.Errorf("failed to get project id of region '%s' automatically: %s", region, err.Error()))
 	}
 
-	id, err := internal.KeystoneListProjects(client, req)
+	resp, err := internal.KeystoneListProjects(client, req)
 	if err != nil {
-		panic(fmt.Sprintf("failed to get project id, %s", err.Error()))
+		panic(fmt.Errorf("failed to get project id of region '%s' automatically, X-IAM-Trace-Id=%s, %s",
+			region, resp.TraceId, err.Error()))
+	}
+	projects := *resp.Projects
+	if len(projects) < 1 {
+		panic(fmt.Errorf("failed to get project id of region '%s' automatically, X-IAM-Trace-Id=%s,"+
+			" confirm that the project exists in your account, or set project id manually:"+
+			" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()", region, resp.TraceId))
+	} else if len(projects) > 1 {
+		projectIds := make([]string, 0, len(projects))
+		for _, project := range projects {
+			projectIds = append(projectIds, project.Id)
+		}
+		panic(fmt.Errorf("multiple project ids found: [%s], X-IAM-Trace-Id=%s, please select one when initializing the credentials:"+
+			" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()", strings.Join(projectIds, ","), resp.TraceId))
 	}
 
+	id := projects[0].Id
 	s.ProjectId = id
 	_ = authCache.PutAuth(akWithName, id)
 

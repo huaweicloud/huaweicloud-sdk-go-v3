@@ -40,6 +40,9 @@ type CambodianIdCardRequestBody struct {
 
 	// 返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
 	DetectTampering *bool `json:"detect_tampering,omitempty"`
+
+	// 返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
+	DetectReproduce *bool `json:"detect_reproduce,omitempty"`
 }
 
 func (o CambodianIdCardRequestBody) String() string {
