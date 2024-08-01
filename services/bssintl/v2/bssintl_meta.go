@@ -939,6 +939,17 @@ func GenReqDefForShowCustomerOrderDetails() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowPartnerConsumptionQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/partners/credit/consumption-quota").
+		WithResponse(new(model.ShowPartnerConsumptionQuotaResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowRealnameAuthenticationReviewResult() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

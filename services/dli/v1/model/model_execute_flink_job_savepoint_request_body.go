@@ -15,7 +15,7 @@ type ExecuteFlinkJobSavepointRequestBody struct {
 	// 操作类型
 	Action ExecuteFlinkJobSavepointRequestBodyAction `json:"action"`
 
-	// Savepoint路径
+	// obs桶路径.例 \"bucket_name/file_name/\"
 	SavepointPath string `json:"savepoint_path"`
 }
 

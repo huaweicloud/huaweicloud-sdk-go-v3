@@ -929,6 +929,114 @@ func (i *UpdateAomMappingRulesInvoker) Invoke() (*model.UpdateAomMappingRulesRes
 	}
 }
 
+type ConsumerGroupHeartBeatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConsumerGroupHeartBeatInvoker) Invoke() (*model.ConsumerGroupHeartBeatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConsumerGroupHeartBeatResponse), nil
+	}
+}
+
+type CreateConsumerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConsumerGroupInvoker) Invoke() (*model.CreateConsumerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConsumerGroupResponse), nil
+	}
+}
+
+type DeleteConsumerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConsumerGroupInvoker) Invoke() (*model.DeleteConsumerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConsumerGroupResponse), nil
+	}
+}
+
+type ListConsumerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConsumerGroupInvoker) Invoke() (*model.ListConsumerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConsumerGroupResponse), nil
+	}
+}
+
+type ListDetailsConsumerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDetailsConsumerGroupInvoker) Invoke() (*model.ListDetailsConsumerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDetailsConsumerGroupResponse), nil
+	}
+}
+
+type ShowCursorByTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCursorByTimeInvoker) Invoke() (*model.ShowCursorByTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCursorByTimeResponse), nil
+	}
+}
+
+type ShowCursorTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCursorTimeInvoker) Invoke() (*model.ShowCursorTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCursorTimeResponse), nil
+	}
+}
+
+type ShowLogStreamShardsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLogStreamShardsInvoker) Invoke() (*model.ShowLogStreamShardsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLogStreamShardsResponse), nil
+	}
+}
+
+type UpdateCheckPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCheckPointInvoker) Invoke() (*model.UpdateCheckPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCheckPointResponse), nil
+	}
+}
+
 type CreateSqlAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }

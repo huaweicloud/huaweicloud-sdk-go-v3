@@ -509,6 +509,18 @@ func (i *ShowCustomerOrderDetailsInvoker) Invoke() (*model.ShowCustomerOrderDeta
 	}
 }
 
+type ShowPartnerConsumptionQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPartnerConsumptionQuotaInvoker) Invoke() (*model.ShowPartnerConsumptionQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPartnerConsumptionQuotaResponse), nil
+	}
+}
+
 type ShowRealnameAuthenticationReviewResultInvoker struct {
 	*invoker.BaseInvoker
 }

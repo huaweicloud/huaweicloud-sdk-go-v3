@@ -26,9 +26,6 @@ type PeriodProductRatingResult struct {
 
 	// 价格度量单位标识。 1：元
 	MeasureId *int32 `json:"measure_id,omitempty"`
-
-	// |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
-	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o PeriodProductRatingResult) String() string {

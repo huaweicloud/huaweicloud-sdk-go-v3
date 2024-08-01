@@ -40,6 +40,27 @@ func (c *DdmClient) CreateDatabaseInvoker(request *model.CreateDatabaseRequest) 
 	return &CreateDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGroup 创建组
+//
+// 创建组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CreateGroup(request *model.CreateGroupRequest) (*model.CreateGroupResponse, error) {
+	requestDef := GenReqDefForCreateGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGroupResponse), nil
+	}
+}
+
+// CreateGroupInvoker 创建组
+func (c *DdmClient) CreateGroupInvoker(request *model.CreateGroupRequest) *CreateGroupInvoker {
+	requestDef := GenReqDefForCreateGroup()
+	return &CreateGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateInstance 购买DDM实例
 //
 // 创建一个DDM实例。
@@ -147,6 +168,48 @@ func (c *DdmClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteU
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteKillLogicalProcesses kill逻辑会话
+//
+// kill逻辑会话
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ExecuteKillLogicalProcesses(request *model.ExecuteKillLogicalProcessesRequest) (*model.ExecuteKillLogicalProcessesResponse, error) {
+	requestDef := GenReqDefForExecuteKillLogicalProcesses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteKillLogicalProcessesResponse), nil
+	}
+}
+
+// ExecuteKillLogicalProcessesInvoker kill逻辑会话
+func (c *DdmClient) ExecuteKillLogicalProcessesInvoker(request *model.ExecuteKillLogicalProcessesRequest) *ExecuteKillLogicalProcessesInvoker {
+	requestDef := GenReqDefForExecuteKillLogicalProcesses()
+	return &ExecuteKillLogicalProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteKillPhysicalProcesses kill物理会话
+//
+// kill物理会话
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ExecuteKillPhysicalProcesses(request *model.ExecuteKillPhysicalProcessesRequest) (*model.ExecuteKillPhysicalProcessesResponse, error) {
+	requestDef := GenReqDefForExecuteKillPhysicalProcesses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteKillPhysicalProcessesResponse), nil
+	}
+}
+
+// ExecuteKillPhysicalProcessesInvoker kill物理会话
+func (c *DdmClient) ExecuteKillPhysicalProcessesInvoker(request *model.ExecuteKillPhysicalProcessesRequest) *ExecuteKillPhysicalProcessesInvoker {
+	requestDef := GenReqDefForExecuteKillPhysicalProcesses()
+	return &ExecuteKillPhysicalProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandInstanceNodes DDM实例节点扩容
 //
 // 对指定的DDM实例的节点个数进行扩容，支持按需实例与包周期实例。
@@ -250,6 +313,27 @@ func (c *DdmClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 func (c *DdmClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroup 获取实例组信息列表
+//
+// 获取实例组信息列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListGroup(request *model.ListGroupRequest) (*model.ListGroupResponse, error) {
+	requestDef := GenReqDefForListGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupResponse), nil
+	}
+}
+
+// ListGroupInvoker 获取实例组信息列表
+func (c *DdmClient) ListGroupInvoker(request *model.ListGroupRequest) *ListGroupInvoker {
+	requestDef := GenReqDefForListGroup()
+	return &ListGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstances 查询DDM实例列表
@@ -525,6 +609,27 @@ func (c *DdmClient) ShowInstanceParamInvoker(request *model.ShowInstanceParamReq
 	return &ShowInstanceParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLogicalProcesses 查询逻辑会话列表
+//
+// 查询逻辑会话列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowLogicalProcesses(request *model.ShowLogicalProcessesRequest) (*model.ShowLogicalProcessesResponse, error) {
+	requestDef := GenReqDefForShowLogicalProcesses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogicalProcessesResponse), nil
+	}
+}
+
+// ShowLogicalProcessesInvoker 查询逻辑会话列表
+func (c *DdmClient) ShowLogicalProcessesInvoker(request *model.ShowLogicalProcessesRequest) *ShowLogicalProcessesInvoker {
+	requestDef := GenReqDefForShowLogicalProcesses()
+	return &ShowLogicalProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowNode 查询DDM实例节点详情
 //
 // 查询DDM实例节点详情。
@@ -544,6 +649,48 @@ func (c *DdmClient) ShowNode(request *model.ShowNodeRequest) (*model.ShowNodeRes
 func (c *DdmClient) ShowNodeInvoker(request *model.ShowNodeRequest) *ShowNodeInvoker {
 	requestDef := GenReqDefForShowNode()
 	return &ShowNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPhysicalProcesses 查询物理会话列表
+//
+// 查询物理会话列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowPhysicalProcesses(request *model.ShowPhysicalProcessesRequest) (*model.ShowPhysicalProcessesResponse, error) {
+	requestDef := GenReqDefForShowPhysicalProcesses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPhysicalProcessesResponse), nil
+	}
+}
+
+// ShowPhysicalProcessesInvoker 查询物理会话列表
+func (c *DdmClient) ShowPhysicalProcessesInvoker(request *model.ShowPhysicalProcessesRequest) *ShowPhysicalProcessesInvoker {
+	requestDef := GenReqDefForShowPhysicalProcesses()
+	return &ShowPhysicalProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProcessesAuditLog 查询kill会话审计日志
+//
+// 查询kill会话审计日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowProcessesAuditLog(request *model.ShowProcessesAuditLogRequest) (*model.ShowProcessesAuditLogResponse, error) {
+	requestDef := GenReqDefForShowProcessesAuditLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProcessesAuditLogResponse), nil
+	}
+}
+
+// ShowProcessesAuditLogInvoker 查询kill会话审计日志
+func (c *DdmClient) ShowProcessesAuditLogInvoker(request *model.ShowProcessesAuditLogRequest) *ShowProcessesAuditLogInvoker {
+	requestDef := GenReqDefForShowProcessesAuditLog()
+	return &ShowProcessesAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkInstanceNodes DDM实例节点缩容

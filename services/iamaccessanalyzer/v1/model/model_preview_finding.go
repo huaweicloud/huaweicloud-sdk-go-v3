@@ -26,7 +26,7 @@ type PreviewFinding struct {
 	// 访问分析结果的唯一标识符。
 	ExistingFindingId *string `json:"existing_finding_id,omitempty"`
 
-	// 分析结果的当前状态。
+	// 访问分析结果当前状态。
 	ExistingFindingStatus *PreviewFindingExistingFindingStatus `json:"existing_finding_status,omitempty"`
 
 	// 访问分析结果的唯一标识符。

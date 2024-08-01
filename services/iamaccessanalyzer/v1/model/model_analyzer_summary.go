@@ -10,6 +10,7 @@ import (
 
 // AnalyzerSummary 包含有关分析器的信息。
 type AnalyzerSummary struct {
+	Configuration *AnalyzerConfiguration `json:"configuration,omitempty"`
 
 	// 分析器创建的时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`

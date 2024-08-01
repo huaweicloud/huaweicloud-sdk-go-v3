@@ -1636,6 +1636,195 @@ func (c *LtsClient) UpdateAomMappingRulesInvoker(request *model.UpdateAomMapping
 	return &UpdateAomMappingRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ConsumerGroupHeartBeat 消费者发送心跳到服务端
+//
+// 消费者发送心跳到服务端
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ConsumerGroupHeartBeat(request *model.ConsumerGroupHeartBeatRequest) (*model.ConsumerGroupHeartBeatResponse, error) {
+	requestDef := GenReqDefForConsumerGroupHeartBeat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConsumerGroupHeartBeatResponse), nil
+	}
+}
+
+// ConsumerGroupHeartBeatInvoker 消费者发送心跳到服务端
+func (c *LtsClient) ConsumerGroupHeartBeatInvoker(request *model.ConsumerGroupHeartBeatRequest) *ConsumerGroupHeartBeatInvoker {
+	requestDef := GenReqDefForConsumerGroupHeartBeat()
+	return &ConsumerGroupHeartBeatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConsumerGroup 创建消费组
+//
+// 创建消费组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) CreateConsumerGroup(request *model.CreateConsumerGroupRequest) (*model.CreateConsumerGroupResponse, error) {
+	requestDef := GenReqDefForCreateConsumerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConsumerGroupResponse), nil
+	}
+}
+
+// CreateConsumerGroupInvoker 创建消费组
+func (c *LtsClient) CreateConsumerGroupInvoker(request *model.CreateConsumerGroupRequest) *CreateConsumerGroupInvoker {
+	requestDef := GenReqDefForCreateConsumerGroup()
+	return &CreateConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConsumerGroup 删除消费组
+//
+// 删除消费组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) DeleteConsumerGroup(request *model.DeleteConsumerGroupRequest) (*model.DeleteConsumerGroupResponse, error) {
+	requestDef := GenReqDefForDeleteConsumerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConsumerGroupResponse), nil
+	}
+}
+
+// DeleteConsumerGroupInvoker 删除消费组
+func (c *LtsClient) DeleteConsumerGroupInvoker(request *model.DeleteConsumerGroupRequest) *DeleteConsumerGroupInvoker {
+	requestDef := GenReqDefForDeleteConsumerGroup()
+	return &DeleteConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConsumerGroup 查询消费组列表
+//
+// 查询消费组列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListConsumerGroup(request *model.ListConsumerGroupRequest) (*model.ListConsumerGroupResponse, error) {
+	requestDef := GenReqDefForListConsumerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConsumerGroupResponse), nil
+	}
+}
+
+// ListConsumerGroupInvoker 查询消费组列表
+func (c *LtsClient) ListConsumerGroupInvoker(request *model.ListConsumerGroupRequest) *ListConsumerGroupInvoker {
+	requestDef := GenReqDefForListConsumerGroup()
+	return &ListConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDetailsConsumerGroup 查询消费组详情
+//
+// 查询消费组详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListDetailsConsumerGroup(request *model.ListDetailsConsumerGroupRequest) (*model.ListDetailsConsumerGroupResponse, error) {
+	requestDef := GenReqDefForListDetailsConsumerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDetailsConsumerGroupResponse), nil
+	}
+}
+
+// ListDetailsConsumerGroupInvoker 查询消费组详情
+func (c *LtsClient) ListDetailsConsumerGroupInvoker(request *model.ListDetailsConsumerGroupRequest) *ListDetailsConsumerGroupInvoker {
+	requestDef := GenReqDefForListDetailsConsumerGroup()
+	return &ListDetailsConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCursorByTime 通过时间获取消费游标
+//
+// 通过时间查询cursor
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ShowCursorByTime(request *model.ShowCursorByTimeRequest) (*model.ShowCursorByTimeResponse, error) {
+	requestDef := GenReqDefForShowCursorByTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCursorByTimeResponse), nil
+	}
+}
+
+// ShowCursorByTimeInvoker 通过时间获取消费游标
+func (c *LtsClient) ShowCursorByTimeInvoker(request *model.ShowCursorByTimeRequest) *ShowCursorByTimeInvoker {
+	requestDef := GenReqDefForShowCursorByTime()
+	return &ShowCursorByTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCursorTime 通过消费游标获取时间
+//
+// 通过cursor查询服务端时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ShowCursorTime(request *model.ShowCursorTimeRequest) (*model.ShowCursorTimeResponse, error) {
+	requestDef := GenReqDefForShowCursorTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCursorTimeResponse), nil
+	}
+}
+
+// ShowCursorTimeInvoker 通过消费游标获取时间
+func (c *LtsClient) ShowCursorTimeInvoker(request *model.ShowCursorTimeRequest) *ShowCursorTimeInvoker {
+	requestDef := GenReqDefForShowCursorTime()
+	return &ShowCursorTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLogStreamShards 流消费获取Shards
+//
+// 流消费获取所有的query shards
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ShowLogStreamShards(request *model.ShowLogStreamShardsRequest) (*model.ShowLogStreamShardsResponse, error) {
+	requestDef := GenReqDefForShowLogStreamShards()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogStreamShardsResponse), nil
+	}
+}
+
+// ShowLogStreamShardsInvoker 流消费获取Shards
+func (c *LtsClient) ShowLogStreamShardsInvoker(request *model.ShowLogStreamShardsRequest) *ShowLogStreamShardsInvoker {
+	requestDef := GenReqDefForShowLogStreamShards()
+	return &ShowLogStreamShardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCheckPoint 更新消费组位点
+//
+// 更新消费组位点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) UpdateCheckPoint(request *model.UpdateCheckPointRequest) (*model.UpdateCheckPointResponse, error) {
+	requestDef := GenReqDefForUpdateCheckPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCheckPointResponse), nil
+	}
+}
+
+// UpdateCheckPointInvoker 更新消费组位点
+func (c *LtsClient) UpdateCheckPointInvoker(request *model.UpdateCheckPointRequest) *UpdateCheckPointInvoker {
+	requestDef := GenReqDefForUpdateCheckPoint()
+	return &UpdateCheckPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSqlAlarmRule 创建SQL告警规则
 //
 // 该接口用于创建SQL告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警

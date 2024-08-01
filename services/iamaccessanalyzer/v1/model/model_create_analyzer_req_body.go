@@ -7,6 +7,7 @@ import (
 )
 
 type CreateAnalyzerReqBody struct {
+	Configuration *AnalyzerConfiguration `json:"configuration,omitempty"`
 
 	// 分析器的名称。
 	Name string `json:"name"`

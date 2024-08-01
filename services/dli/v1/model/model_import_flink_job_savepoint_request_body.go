@@ -12,7 +12,7 @@ type ImportFlinkJobSavepointRequestBody struct {
 	// Flink作业的id
 	JobId int64 `json:"job_id"`
 
-	// Savepoint路径
+	// Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
 	SavepointPath string `json:"savepoint_path"`
 }
 

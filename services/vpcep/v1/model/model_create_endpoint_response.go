@@ -73,6 +73,9 @@ type CreateEndpointResponse struct {
 	// 终端节点策略信息
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
+	// iam 5.0 策略
+	PolicyDocument *interface{} `json:"policy_document,omitempty"`
+
 	// 终端节点是否可用。  - enable：启用  - disable：不启用
 	EnableStatus *string `json:"enable_status,omitempty"`
 

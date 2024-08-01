@@ -903,6 +903,27 @@ func (c *BssintlClient) ShowCustomerOrderDetailsInvoker(request *model.ShowCusto
 	return &ShowCustomerOrderDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPartnerConsumptionQuota 查询消费配额
+//
+// 功能描述：合作伙伴可以查询消费配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ShowPartnerConsumptionQuota(request *model.ShowPartnerConsumptionQuotaRequest) (*model.ShowPartnerConsumptionQuotaResponse, error) {
+	requestDef := GenReqDefForShowPartnerConsumptionQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPartnerConsumptionQuotaResponse), nil
+	}
+}
+
+// ShowPartnerConsumptionQuotaInvoker 查询消费配额
+func (c *BssintlClient) ShowPartnerConsumptionQuotaInvoker(request *model.ShowPartnerConsumptionQuotaRequest) *ShowPartnerConsumptionQuotaInvoker {
+	requestDef := GenReqDefForShowPartnerConsumptionQuota()
+	return &ShowPartnerConsumptionQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRealnameAuthenticationReviewResult 查询实名认证审核结果
 //
 // 功能描述：如果实名认证申请或实名认证变更申请的响应中，显示需要人工审核，使用该接口查询审核结果。

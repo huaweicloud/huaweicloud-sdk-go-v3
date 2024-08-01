@@ -221,6 +221,18 @@ func (i *ExportSqlStatementsInvoker) Invoke() (*model.ExportSqlStatementsRespons
 	}
 }
 
+type ExportTopRiskInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportTopRiskInstancesInvoker) Invoke() (*model.ExportTopRiskInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportTopRiskInstancesResponse), nil
+	}
+}
+
 type ExportTopSqlTemplatesDetailsInvoker struct {
 	*invoker.BaseInvoker
 }

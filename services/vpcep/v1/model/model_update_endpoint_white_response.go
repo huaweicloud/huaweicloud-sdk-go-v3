@@ -63,7 +63,10 @@ type UpdateEndpointWhiteResponse struct {
 
 	// 是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
 	EnableWhitelist *bool `json:"enable_whitelist,omitempty"`
-	HttpStatusCode  int   `json:"-"`
+
+	// iam 5.0 策略
+	PolicyDocument *interface{} `json:"policy_document,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o UpdateEndpointWhiteResponse) String() string {

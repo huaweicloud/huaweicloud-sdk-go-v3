@@ -14,6 +14,9 @@ type StatusReason struct {
 
 	// 分析器当前状态的原因。
 	Code StatusReasonCode `json:"code"`
+
+	// 分析器当前状态的详细原因。
+	Details *string `json:"details,omitempty"`
 }
 
 func (o StatusReason) String() string {

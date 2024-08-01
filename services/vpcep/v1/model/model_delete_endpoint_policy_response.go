@@ -67,10 +67,13 @@ type DeleteEndpointPolicyResponse struct {
 	// 终端节点策略信息
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
+	// iam 5.0 策略
+	PolicyDocument *interface{} `json:"policy_document,omitempty"`
+
 	// 待废弃，实例相关联的集群ID
 	EndpointPoolId *string `json:"endpoint_pool_id,omitempty"`
 
-	// 终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+	// 终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 	HttpStatusCode    int     `json:"-"`
 }

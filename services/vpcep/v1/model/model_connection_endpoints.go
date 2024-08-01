@@ -16,10 +16,10 @@ type ConnectionEndpoints struct {
 	// 终端节点的报文标识。
 	MarkerId *int32 `json:"marker_id,omitempty"`
 
-	// 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+	// 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
-	// 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+	// 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
 	// 用户的Domain ID。

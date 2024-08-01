@@ -245,6 +245,18 @@ func (i *UntagResourceInvoker) Invoke() (*model.UntagResourceResponse, error) {
 	}
 }
 
+type CheckNoNewAccessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckNoNewAccessInvoker) Invoke() (*model.CheckNoNewAccessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckNoNewAccessResponse), nil
+	}
+}
+
 type ValidatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }

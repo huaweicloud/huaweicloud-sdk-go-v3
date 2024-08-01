@@ -36,8 +36,10 @@ type ListAnalyzersRequestType struct {
 }
 
 type ListAnalyzersRequestTypeEnum struct {
-	ACCOUNT      ListAnalyzersRequestType
-	ORGANIZATION ListAnalyzersRequestType
+	ACCOUNT                    ListAnalyzersRequestType
+	ORGANIZATION               ListAnalyzersRequestType
+	ACCOUNT_UNUSED_ACCESS      ListAnalyzersRequestType
+	ORGANIZATION_UNUSED_ACCESS ListAnalyzersRequestType
 }
 
 func GetListAnalyzersRequestTypeEnum() ListAnalyzersRequestTypeEnum {
@@ -47,6 +49,12 @@ func GetListAnalyzersRequestTypeEnum() ListAnalyzersRequestTypeEnum {
 		},
 		ORGANIZATION: ListAnalyzersRequestType{
 			value: "organization",
+		},
+		ACCOUNT_UNUSED_ACCESS: ListAnalyzersRequestType{
+			value: "account_unused_access",
+		},
+		ORGANIZATION_UNUSED_ACCESS: ListAnalyzersRequestType{
+			value: "organization_unused_access",
 		},
 	}
 }

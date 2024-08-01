@@ -17,6 +17,18 @@ func (i *CreateDatabaseInvoker) Invoke() (*model.CreateDatabaseResponse, error) 
 	}
 }
 
+type CreateGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGroupInvoker) Invoke() (*model.CreateGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGroupResponse), nil
+	}
+}
+
 type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -77,6 +89,30 @@ func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
 	}
 }
 
+type ExecuteKillLogicalProcessesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteKillLogicalProcessesInvoker) Invoke() (*model.ExecuteKillLogicalProcessesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteKillLogicalProcessesResponse), nil
+	}
+}
+
+type ExecuteKillPhysicalProcessesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteKillPhysicalProcessesInvoker) Invoke() (*model.ExecuteKillPhysicalProcessesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteKillPhysicalProcessesResponse), nil
+	}
+}
+
 type ExpandInstanceNodesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -134,6 +170,18 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGroupInvoker) Invoke() (*model.ListGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGroupResponse), nil
 	}
 }
 
@@ -293,6 +341,18 @@ func (i *ShowInstanceParamInvoker) Invoke() (*model.ShowInstanceParamResponse, e
 	}
 }
 
+type ShowLogicalProcessesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLogicalProcessesInvoker) Invoke() (*model.ShowLogicalProcessesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLogicalProcessesResponse), nil
+	}
+}
+
 type ShowNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -302,6 +362,30 @@ func (i *ShowNodeInvoker) Invoke() (*model.ShowNodeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowNodeResponse), nil
+	}
+}
+
+type ShowPhysicalProcessesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPhysicalProcessesInvoker) Invoke() (*model.ShowPhysicalProcessesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPhysicalProcessesResponse), nil
+	}
+}
+
+type ShowProcessesAuditLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProcessesAuditLogInvoker) Invoke() (*model.ShowProcessesAuditLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProcessesAuditLogResponse), nil
 	}
 }
 

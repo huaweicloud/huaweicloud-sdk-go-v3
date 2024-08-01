@@ -10,7 +10,10 @@ import (
 type UpdateEndpointPolicyRequestBody struct {
 
 	// 终端节点策略信息
-	PolicyStatement []PolicyStatement `json:"policy_statement"`
+	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
+
+	// iam 5.0 策略
+	PolicyDocument *interface{} `json:"policy_document,omitempty"`
 }
 
 func (o UpdateEndpointPolicyRequestBody) String() string {

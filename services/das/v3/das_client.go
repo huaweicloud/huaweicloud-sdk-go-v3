@@ -413,6 +413,27 @@ func (c *DasClient) ExportSqlStatementsInvoker(request *model.ExportSqlStatement
 	return &ExportSqlStatementsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportTopRiskInstances 导出TOP风险实例列表
+//
+// 导出TOP风险实例列表，支持查看最近24小时数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ExportTopRiskInstances(request *model.ExportTopRiskInstancesRequest) (*model.ExportTopRiskInstancesResponse, error) {
+	requestDef := GenReqDefForExportTopRiskInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportTopRiskInstancesResponse), nil
+	}
+}
+
+// ExportTopRiskInstancesInvoker 导出TOP风险实例列表
+func (c *DasClient) ExportTopRiskInstancesInvoker(request *model.ExportTopRiskInstancesRequest) *ExportTopRiskInstancesInvoker {
+	requestDef := GenReqDefForExportTopRiskInstances()
+	return &ExportTopRiskInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportTopSqlTemplatesDetails 导出TopSQL模板列表
 //
 // TopSQL开关打开后，导出TopSQL模板列表。该功能仅支持付费实例。查询时间间隔最长一小时。

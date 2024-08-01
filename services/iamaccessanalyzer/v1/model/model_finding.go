@@ -12,24 +12,29 @@ import (
 type Finding struct {
 
 	// 允许外部主体使用的操作。
-	Action []string `json:"action"`
+	Action *[]string `json:"action,omitempty"`
 
 	// 分析资源的时间。
 	AnalyzedAt *sdktime.SdkTime `json:"analyzed_at"`
 
 	// 分析的策略语句中导致访问分析结果的条件。
-	Condition []FindingCondition `json:"condition"`
+	Condition *[]FindingCondition `json:"condition,omitempty"`
 
 	// 生成访问分析结果的时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
+
+	// 访问分析结果的详细信息。
+	FindingDetails []FindingDetails `json:"finding_details"`
+
+	FindingType *FindingType `json:"finding_type"`
 
 	// 访问分析结果的唯一标识符。
 	Id string `json:"id"`
 
 	// 表示生成访问分析结果的策略是否允许公共访问资源。
-	IsPublic bool `json:"is_public"`
+	IsPublic *bool `json:"is_public,omitempty"`
 
-	Principal *FindingPrincipal `json:"principal"`
+	Principal *FindingPrincipal `json:"principal,omitempty"`
 
 	// 资源的唯一资源标识符。
 	Resource string `json:"resource"`
@@ -48,7 +53,7 @@ type Finding struct {
 	// 访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
 	Sources *[]FindingSourceType `json:"sources,omitempty"`
 
-	// 结果的当前状态。
+	// 访问分析结果当前状态。
 	Status FindingStatus `json:"status"`
 
 	// 更新访问分析结果的时间。

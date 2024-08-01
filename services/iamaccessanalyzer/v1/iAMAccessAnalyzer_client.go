@@ -439,6 +439,27 @@ func (c *IAMAccessAnalyzerClient) UntagResourceInvoker(request *model.UntagResou
 	return &UntagResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckNoNewAccess 校验策略是否有新访问权限
+//
+// 校验策略是否有新访问权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) CheckNoNewAccess(request *model.CheckNoNewAccessRequest) (*model.CheckNoNewAccessResponse, error) {
+	requestDef := GenReqDefForCheckNoNewAccess()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckNoNewAccessResponse), nil
+	}
+}
+
+// CheckNoNewAccessInvoker 校验策略是否有新访问权限
+func (c *IAMAccessAnalyzerClient) CheckNoNewAccessInvoker(request *model.CheckNoNewAccessRequest) *CheckNoNewAccessInvoker {
+	requestDef := GenReqDefForCheckNoNewAccess()
+	return &CheckNoNewAccessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ValidatePolicy 校验策略
 //
 // 校验策略并返回结果列表。

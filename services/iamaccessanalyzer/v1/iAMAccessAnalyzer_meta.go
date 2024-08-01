@@ -424,6 +424,21 @@ func GenReqDefForUntagResource() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckNoNewAccess() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/policies/check-no-new-access").
+		WithResponse(new(model.CheckNoNewAccessResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForValidatePolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

@@ -12,10 +12,10 @@ import (
 // ListMetricsRequest Request Object
 type ListMetricsRequest struct {
 
-	// 开始时间, UTC时间
+	// 开始时间, UTC时间, 格式为：yyyy-MM-ddTHH:mm:ssZ
 	StartTime string `json:"start_time"`
 
-	// 结束时间,UTC时间
+	// 结束时间 ,UTC时间, 格式为：yyyy-MM-ddTHH:mm:ssZ
 	EndTime string `json:"end_time"`
 
 	// 指标维度 | 目前最大支持3个维度，必须从0开始；维度格式为dim.{i}=key,value，key的最大长度32，value的最大长度为256。 单维度：dim.0=instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 多维度：dim.0=key,value&dim.1=key,value

@@ -81,13 +81,16 @@ type ListEndpointInfoDetailsResponse struct {
 	// 终端节点策略信息
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
+	// iam 5.0 策略
+	PolicyDocument *interface{} `json:"policy_document,omitempty"`
+
 	// 待废弃，实例相关联的集群ID
 	EndpointPoolId *string `json:"endpoint_pool_id,omitempty"`
 
 	// 终端节点对应Pool的Public Border Group信息
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
-	// 访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+	// 访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
 	Ipv6Address    *string `json:"ipv6_address,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
