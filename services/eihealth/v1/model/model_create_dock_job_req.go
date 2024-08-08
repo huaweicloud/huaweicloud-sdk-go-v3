@@ -15,6 +15,9 @@ type CreateDockJobReq struct {
 
 	// 配体文件列表，当前仅支持1个
 	Ligands []LigandDto `json:"ligands"`
+
+	// 引擎，默认为AUTODOCK_VINA
+	Engine *string `json:"engine,omitempty"`
 }
 
 func (o CreateDockJobReq) String() string {

@@ -14,9 +14,10 @@ type StrongConstraintType struct {
 }
 
 type StrongConstraintTypeEnum struct {
-	BOOL   StrongConstraintType
-	RANGE  StrongConstraintType
-	STRUCT StrongConstraintType
+	BOOL        StrongConstraintType
+	RANGE       StrongConstraintType
+	STRUCT      StrongConstraintType
+	INTERACTION StrongConstraintType
 }
 
 func GetStrongConstraintTypeEnum() StrongConstraintTypeEnum {
@@ -29,6 +30,9 @@ func GetStrongConstraintTypeEnum() StrongConstraintTypeEnum {
 		},
 		STRUCT: StrongConstraintType{
 			value: "struct",
+		},
+		INTERACTION: StrongConstraintType{
+			value: "interaction",
 		},
 	}
 }

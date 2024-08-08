@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AppServerTaskStatus server的任务状态: * `scheduling` - 实例处于创建中，正在进行调度 * `block_device_mapping` - 实例处于创建中，正在准备磁盘 * `networking` - 实例处于创建中，正在准备网络 * `spawning` - 实例处于创建中，正在内部创建 * `rebooting` - 实例处于重启中 * `reboot_pending` - 实例处于重启中，正在下发重启。 * `reboot_started` - 实例处于重启中，开始内部重启 * `rebooting_hard` - 实例处于强制重启中 * `reboot_pending_hard` - 实例处于强制重启中，正在下发重启 * `reboot_started_hard` - 实例处于强制重启中，开始内部重启。 * `rebuilding` - 实例处于重建中。 * `rebuild_fail` - 实例重建失败。 * `updating_tsvi` - 实例处于虚拟会话IP更新中。 * `updating_tsvi_failed` - 实例虚拟会话IP更新失败。 * `rebuild_block_device_mapping` - 实例处于重建中，正在准备磁盘。 * `rebuild_spawning` - 实例处于重建中，正在内部重建。 * `migrating` - 实例处于热迁移中。 * `resize_prep` - 实例处于调整规格中，正在准备阶段。 * `resize_migrating` - 实例处于调整规格中，正在迁移阶段。 * `resize_migrated` - 实例处于调整规格中，已经完成迁移。 * `resize_finish` - 实例处于调整规格中，正在完成调整。 * `resize_reverting` - 实例处于调整规格中，正在回退调整。 * `powering-off` - 实例处于停止中。 * `powering-on` - 实例处于启动中。 * `deleting` - 实例处于删除中。 * `source_locking` - 资源锁定中 * `rejoining_domain` - 实例正在重新加域 * `delete_failed` - 实例删除失败 * `upgrading_access_agent` - 实例正在升级AccessAgent * `upgrad_access_agent_fail` - 实例升级AccessAgent失败 * `upgrad_access_agent_success` - 实例升级AccessAgent成功 * `updating_sid` - 实例处于创建中，等待更新SID * `migrate_failed` - 实例迁移失败 * `build_image` - 生成镜像中 * `null` - 未设置
+// AppServerTaskStatus server的任务状态: * `scheduling` - 实例处于创建中，正在进行调度 * `block_device_mapping` - 实例处于创建中，正在准备磁盘 * `networking` - 实例处于创建中，正在准备网络 * `spawning` - 实例处于创建中，正在内部创建 * `rebooting` - 实例处于重启中 * `reboot_pending` - 实例处于重启中，正在下发重启。 * `reboot_started` - 实例处于重启中，开始内部重启 * `rebooting_hard` - 实例处于强制重启中 * `reboot_pending_hard` - 实例处于强制重启中，正在下发重启 * `reboot_started_hard` - 实例处于强制重启中，开始内部重启。 * `rebuilding` - 实例处于重建中。 * `rebuild_fail` - 实例重建失败。 * `updating_tsvi` - 实例处于虚拟会话IP更新中。 * `updating_tsvi_failed` - 实例虚拟会话IP更新失败。 * `rebuild_block_device_mapping` - 实例处于重建中，正在准备磁盘。 * `rebuild_spawning` - 实例处于重建中，正在内部重建。 * `migrating` - 实例处于热迁移中。 * `resize_prep` - 实例处于调整规格中，正在准备阶段。 * `resize_migrating` - 实例处于调整规格中，正在迁移阶段。 * `resize_migrated` - 实例处于调整规格中，已经完成迁移。 * `resize_finish` - 实例处于调整规格中，正在完成调整。 * `resize_reverting` - 实例处于调整规格中，正在回退调整。 * `powering-off` - 实例处于停止中。 * `powering-on` - 实例处于启动中。 * `deleting` - 实例处于删除中。 * `source_locking` - 资源锁定中 * `rejoining_domain` - 实例正在重新加域 * `delete_failed` - 实例删除失败 * `upgrading_access_agent` - 实例正在升级AccessAgent * `upgrad_access_agent_fail` - 实例升级AccessAgent失败 * `upgrad_access_agent_success` - 实例升级AccessAgent成功 * `updating_sid` - 实例处于创建中，等待更新SID * `migrate_failed` - 实例迁移失败 * `build_image` - 生成镜像中 * `build_snapshot` - 生成快照中 * `restore_snapshot` - 恢复快照中 * `null` - 未设置
 type AppServerTaskStatus struct {
 	value string
 }
@@ -48,6 +48,8 @@ type AppServerTaskStatusEnum struct {
 	UPGRAD_ACCESS_AGENT_SUCCESS  AppServerTaskStatus
 	MIGRATE_FAILED               AppServerTaskStatus
 	BUILD_IMAGE                  AppServerTaskStatus
+	BUILD_SNAPSHOT               AppServerTaskStatus
+	RESTORE_SNAPSHOT             AppServerTaskStatus
 	NULL                         AppServerTaskStatus
 }
 
@@ -151,6 +153,12 @@ func GetAppServerTaskStatusEnum() AppServerTaskStatusEnum {
 		},
 		BUILD_IMAGE: AppServerTaskStatus{
 			value: "build_image",
+		},
+		BUILD_SNAPSHOT: AppServerTaskStatus{
+			value: "build_snapshot",
+		},
+		RESTORE_SNAPSHOT: AppServerTaskStatus{
+			value: "restore_snapshot",
 		},
 		NULL: AppServerTaskStatus{
 			value: "null",

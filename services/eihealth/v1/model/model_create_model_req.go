@@ -20,6 +20,9 @@ type CreateModelReq struct {
 
 	// 是否打开组织共享
 	Shareable *bool `json:"shareable,omitempty"`
+
+	// 基模型id
+	BaseModelId *string `json:"base_model_id,omitempty"`
 }
 
 func (o CreateModelReq) String() string {

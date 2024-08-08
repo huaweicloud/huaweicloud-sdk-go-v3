@@ -106,6 +106,12 @@ type AppServer struct {
 
 	// vpc和子网信息。
 	HostAddress *[]EcsNetWork `json:"host_address,omitempty"`
+
+	// 企业项目ID,仅企业项目会返回
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 标签信息
+	Tags *[]TmsTag `json:"tags,omitempty"`
 }
 
 func (o AppServer) String() string {

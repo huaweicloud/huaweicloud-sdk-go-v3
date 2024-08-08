@@ -32,6 +32,8 @@ type ShowOptmJobResponse struct {
 	// 初始化采样权重
 	SamplerMixinWeight *float32 `json:"sampler_mixin_weight,omitempty"`
 
+	BaseModel *BaseModel `json:"base_model,omitempty"`
+
 	// 模型列表
 	Models *[]BasicDrugModel `json:"models,omitempty"`
 

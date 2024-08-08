@@ -23,7 +23,7 @@ type CreateOrUpdateRemediationConfigurationResponse struct {
 
 	ResourceParameter *RemediationResourceParameter `json:"resource_parameter,omitempty"`
 
-	// 指定时间内自动修正的最大尝试次数。
+	// 指定时间内修正的最大尝试次数。
 	MaximumAttempts *int32 `json:"maximum_attempts,omitempty"`
 
 	// 用于防止循环修正的时间窗口，如果在指定时间内进行了自动修正的最大尝试次数，则将资源添加至修正例外。

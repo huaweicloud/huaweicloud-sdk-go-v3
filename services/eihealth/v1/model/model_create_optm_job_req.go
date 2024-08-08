@@ -29,6 +29,9 @@ type CreateOptmJobReq struct {
 	// 初始化采样权重，参数范围(0.5, 1)，不包含0.5和1，默认为0.6
 	SamplerMixinWeight *float32 `json:"sampler_mixin_weight,omitempty"`
 
+	// 基模型id
+	BaseModelId *string `json:"base_model_id,omitempty"`
+
 	// 模型id列表
 	ModelIds *[]string `json:"model_ids,omitempty"`
 

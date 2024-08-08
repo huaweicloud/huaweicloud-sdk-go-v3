@@ -5,6 +5,78 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/workspaceapp/v1/model"
 )
 
+type AuthorizeObsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeObsInvoker) Invoke() (*model.AuthorizeObsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AuthorizeObsResponse), nil
+	}
+}
+
+type BatchDeleteWarehouseAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteWarehouseAppInvoker) Invoke() (*model.BatchDeleteWarehouseAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteWarehouseAppResponse), nil
+	}
+}
+
+type CreateWarehouseAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateWarehouseAppInvoker) Invoke() (*model.CreateWarehouseAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateWarehouseAppResponse), nil
+	}
+}
+
+type ListWarehouseAppsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWarehouseAppsInvoker) Invoke() (*model.ListWarehouseAppsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWarehouseAppsResponse), nil
+	}
+}
+
+type UpdateWarehouseAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWarehouseAppInvoker) Invoke() (*model.UpdateWarehouseAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWarehouseAppResponse), nil
+	}
+}
+
+type UploadWarehouseAppIconInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadWarehouseAppIconInvoker) Invoke() (*model.UploadWarehouseAppIconResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadWarehouseAppIconResponse), nil
+	}
+}
+
 type ListPublishedAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +266,102 @@ func (i *ListAvailabilityZoneInvoker) Invoke() (*model.ListAvailabilityZoneRespo
 		return nil, err
 	} else {
 		return result.(*model.ListAvailabilityZoneResponse), nil
+	}
+}
+
+type AttachImageServerAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachImageServerAppInvoker) Invoke() (*model.AttachImageServerAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachImageServerAppResponse), nil
+	}
+}
+
+type BatchDeleteImageServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteImageServerInvoker) Invoke() (*model.BatchDeleteImageServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteImageServerResponse), nil
+	}
+}
+
+type CreateImageServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateImageServerInvoker) Invoke() (*model.CreateImageServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateImageServerResponse), nil
+	}
+}
+
+type ListImageServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListImageServersInvoker) Invoke() (*model.ListImageServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListImageServersResponse), nil
+	}
+}
+
+type ListLatestAttachedServerAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLatestAttachedServerAppInvoker) Invoke() (*model.ListLatestAttachedServerAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLatestAttachedServerAppResponse), nil
+	}
+}
+
+type RecreateServerImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecreateServerImageInvoker) Invoke() (*model.RecreateServerImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecreateServerImageResponse), nil
+	}
+}
+
+type UpdateImageServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateImageServerInvoker) Invoke() (*model.UpdateImageServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateImageServerResponse), nil
+	}
+}
+
+type ShowImageJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowImageJobInvoker) Invoke() (*model.ShowImageJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowImageJobResponse), nil
 	}
 }
 
@@ -605,6 +773,18 @@ func (i *CreateAppServersInvoker) Invoke() (*model.CreateAppServersResponse, err
 	}
 }
 
+type ListServerMetricDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServerMetricDataInvoker) Invoke() (*model.ListServerMetricDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServerMetricDataResponse), nil
+	}
+}
+
 type ListServersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +806,18 @@ func (i *ReinstallServerInvoker) Invoke() (*model.ReinstallServerResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ReinstallServerResponse), nil
+	}
+}
+
+type ShowServerVncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerVncInvoker) Invoke() (*model.ShowServerVncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerVncResponse), nil
 	}
 }
 
@@ -710,6 +902,18 @@ func (i *ListSessionByUserNameInvoker) Invoke() (*model.ListSessionByUserNameRes
 		return nil, err
 	} else {
 		return result.(*model.ListSessionByUserNameResponse), nil
+	}
+}
+
+type ListSessionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSessionsInvoker) Invoke() (*model.ListSessionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSessionsResponse), nil
 	}
 }
 

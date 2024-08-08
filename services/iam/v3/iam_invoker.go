@@ -641,18 +641,6 @@ func (i *KeystoneListServicesInvoker) Invoke() (*model.KeystoneListServicesRespo
 	}
 }
 
-type KeystoneListUsersForGroupByAdminInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *KeystoneListUsersForGroupByAdminInvoker) Invoke() (*model.KeystoneListUsersForGroupByAdminResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.KeystoneListUsersForGroupByAdminResponse), nil
-	}
-}
-
 type KeystoneListVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1598,6 +1586,18 @@ func (i *KeystoneListUsersInvoker) Invoke() (*model.KeystoneListUsersResponse, e
 		return nil, err
 	} else {
 		return result.(*model.KeystoneListUsersResponse), nil
+	}
+}
+
+type KeystoneListUsersForGroupByAdminInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListUsersForGroupByAdminInvoker) Invoke() (*model.KeystoneListUsersForGroupByAdminResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.KeystoneListUsersForGroupByAdminResponse), nil
 	}
 }
 

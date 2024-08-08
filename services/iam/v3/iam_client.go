@@ -88,7 +88,7 @@ func (c *IamClient) AssociateAgencyWithProjectPermissionInvoker(request *model.A
 	return &AssociateAgencyWithProjectPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AssociateRoleToAgencyOnEnterpriseProject application/json
+// AssociateRoleToAgencyOnEnterpriseProject 基于委托为企业项目授权
 //
 // 该接口可以基于委托为企业项目授权
 //
@@ -103,7 +103,7 @@ func (c *IamClient) AssociateRoleToAgencyOnEnterpriseProject(request *model.Asso
 	}
 }
 
-// AssociateRoleToAgencyOnEnterpriseProjectInvoker application/json
+// AssociateRoleToAgencyOnEnterpriseProjectInvoker 基于委托为企业项目授权
 func (c *IamClient) AssociateRoleToAgencyOnEnterpriseProjectInvoker(request *model.AssociateRoleToAgencyOnEnterpriseProjectRequest) *AssociateRoleToAgencyOnEnterpriseProjectInvoker {
 	requestDef := GenReqDefForAssociateRoleToAgencyOnEnterpriseProject()
 	return &AssociateRoleToAgencyOnEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1232,29 +1232,6 @@ func (c *IamClient) KeystoneListServicesInvoker(request *model.KeystoneListServi
 	return &KeystoneListServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// KeystoneListUsersForGroupByAdmin 管理员查询用户组所包含的IAM用户
-//
-// 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组中所包含的IAM用户。
-//
-// 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) KeystoneListUsersForGroupByAdmin(request *model.KeystoneListUsersForGroupByAdminRequest) (*model.KeystoneListUsersForGroupByAdminResponse, error) {
-	requestDef := GenReqDefForKeystoneListUsersForGroupByAdmin()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.KeystoneListUsersForGroupByAdminResponse), nil
-	}
-}
-
-// KeystoneListUsersForGroupByAdminInvoker 管理员查询用户组所包含的IAM用户
-func (c *IamClient) KeystoneListUsersForGroupByAdminInvoker(request *model.KeystoneListUsersForGroupByAdminRequest) *KeystoneListUsersForGroupByAdminInvoker {
-	requestDef := GenReqDefForKeystoneListUsersForGroupByAdmin()
-	return &KeystoneListUsersForGroupByAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // KeystoneListVersions 查询版本信息列表
 //
 // 该接口用于查询Keystone API的版本信息。
@@ -2081,7 +2058,7 @@ func (c *IamClient) RemoveProjectPermissionFromAgencyInvoker(request *model.Remo
 	return &RemoveProjectPermissionFromAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RevokeRoleFromAgencyOnEnterpriseProject
+// RevokeRoleFromAgencyOnEnterpriseProject 删除企业项目关联委托的权限
 //
 // 该接口可以删除企业项目委托上的授权
 //
@@ -2096,7 +2073,7 @@ func (c *IamClient) RevokeRoleFromAgencyOnEnterpriseProject(request *model.Revok
 	}
 }
 
-// RevokeRoleFromAgencyOnEnterpriseProjectInvoker
+// RevokeRoleFromAgencyOnEnterpriseProjectInvoker 删除企业项目关联委托的权限
 func (c *IamClient) RevokeRoleFromAgencyOnEnterpriseProjectInvoker(request *model.RevokeRoleFromAgencyOnEnterpriseProjectRequest) *RevokeRoleFromAgencyOnEnterpriseProjectInvoker {
 	requestDef := GenReqDefForRevokeRoleFromAgencyOnEnterpriseProject()
 	return &RevokeRoleFromAgencyOnEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3066,6 +3043,29 @@ func (c *IamClient) KeystoneListUsers(request *model.KeystoneListUsersRequest) (
 func (c *IamClient) KeystoneListUsersInvoker(request *model.KeystoneListUsersRequest) *KeystoneListUsersInvoker {
 	requestDef := GenReqDefForKeystoneListUsers()
 	return &KeystoneListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// KeystoneListUsersForGroupByAdmin 管理员查询用户组所包含的IAM用户
+//
+// 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组中所包含的IAM用户。
+//
+// 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) KeystoneListUsersForGroupByAdmin(request *model.KeystoneListUsersForGroupByAdminRequest) (*model.KeystoneListUsersForGroupByAdminResponse, error) {
+	requestDef := GenReqDefForKeystoneListUsersForGroupByAdmin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.KeystoneListUsersForGroupByAdminResponse), nil
+	}
+}
+
+// KeystoneListUsersForGroupByAdminInvoker 管理员查询用户组所包含的IAM用户
+func (c *IamClient) KeystoneListUsersForGroupByAdminInvoker(request *model.KeystoneListUsersForGroupByAdminRequest) *KeystoneListUsersForGroupByAdminInvoker {
+	requestDef := GenReqDefForKeystoneListUsersForGroupByAdmin()
+	return &KeystoneListUsersForGroupByAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // KeystoneShowUser 查询IAM用户详情

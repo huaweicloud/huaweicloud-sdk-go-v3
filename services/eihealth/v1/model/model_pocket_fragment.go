@@ -16,6 +16,9 @@ type PocketFragment struct {
 	// 文件格式，支持PDB、SDF、MOL2、SMI，仅数据源为RAW时提供
 	Format *string `json:"format,omitempty"`
 
+	// 原始配体名称，仅RAW类型时用于配体名称标识
+	Name *string `json:"name,omitempty"`
+
 	// 文件原始数据，仅数据源为RAW时提供
 	Data *string `json:"data,omitempty"`
 

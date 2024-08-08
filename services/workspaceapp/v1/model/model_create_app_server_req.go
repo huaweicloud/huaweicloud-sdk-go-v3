@@ -30,6 +30,9 @@ type CreateAppServerReq struct {
 	// 产品ID。 > - 获取方式详见产品套餐管理ListProduct：\"GET /v1/{project_id}/product\"。
 	ProductId string `json:"product_id"`
 
+	// 规格ID。
+	FlavorId *string `json:"flavor_id,omitempty"`
+
 	// 操作系统类型，当前仅支持Windows。
 	OsType *string `json:"os_type,omitempty"`
 

@@ -113,6 +113,90 @@ func (i *ListExecutionPlansInvoker) Invoke() (*model.ListExecutionPlansResponse,
 	}
 }
 
+type CreatePrivateHookInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivateHookInvoker) Invoke() (*model.CreatePrivateHookResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivateHookResponse), nil
+	}
+}
+
+type CreatePrivateHookVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivateHookVersionInvoker) Invoke() (*model.CreatePrivateHookVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivateHookVersionResponse), nil
+	}
+}
+
+type DeletePrivateHookInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateHookInvoker) Invoke() (*model.DeletePrivateHookResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePrivateHookResponse), nil
+	}
+}
+
+type DeletePrivateHookVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateHookVersionInvoker) Invoke() (*model.DeletePrivateHookVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePrivateHookVersionResponse), nil
+	}
+}
+
+type ShowPrivateHookMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateHookMetadataInvoker) Invoke() (*model.ShowPrivateHookMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateHookMetadataResponse), nil
+	}
+}
+
+type ShowPrivateHookVersionMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateHookVersionMetadataInvoker) Invoke() (*model.ShowPrivateHookVersionMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateHookVersionMetadataResponse), nil
+	}
+}
+
+type UpdatePrivateHookMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrivateHookMetadataInvoker) Invoke() (*model.UpdatePrivateHookMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrivateHookMetadataResponse), nil
+	}
+}
+
 type ContinueDeployStackInvoker struct {
 	*invoker.BaseInvoker
 }

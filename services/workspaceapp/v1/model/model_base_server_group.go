@@ -52,6 +52,24 @@ type BaseServerGroup struct {
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	StorageMountPolicy *StorageFolderMountType `json:"storage_mount_policy,omitempty"`
+
+	// 企业项目ID(0表示默认企业项目Id)
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 主服务器组id列表。
+	PrimaryServerGroupIds *[]string `json:"primary_server_group_ids,omitempty"`
+
+	// 备服务器组id列表。
+	SecondaryServerGroupIds *[]string `json:"secondary_server_group_ids,omitempty"`
+
+	// 服务器是否处于启用状态，true表示处于启用状态 false表示处于禁用状态。
+	ServerGroupStatus *bool `json:"server_group_status,omitempty"`
+
+	// 站点类型 - CENTER/IES
+	SiteType *string `json:"site_type,omitempty"`
+
+	// 站点id
+	SiteId *string `json:"site_id,omitempty"`
 }
 
 func (o BaseServerGroup) String() string {

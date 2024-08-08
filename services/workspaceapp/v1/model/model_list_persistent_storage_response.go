@@ -9,7 +9,7 @@ import (
 // ListPersistentStorageResponse Response Object
 type ListPersistentStorageResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 存储列表。

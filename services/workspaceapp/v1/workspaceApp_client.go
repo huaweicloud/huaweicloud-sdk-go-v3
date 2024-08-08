@@ -19,6 +19,132 @@ func WorkspaceAppClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AuthorizeObs 获取上传至OBS桶的临时ak/sk
+//
+// 获取上传至OBS桶的临时ak/sk。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) AuthorizeObs(request *model.AuthorizeObsRequest) (*model.AuthorizeObsResponse, error) {
+	requestDef := GenReqDefForAuthorizeObs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AuthorizeObsResponse), nil
+	}
+}
+
+// AuthorizeObsInvoker 获取上传至OBS桶的临时ak/sk
+func (c *WorkspaceAppClient) AuthorizeObsInvoker(request *model.AuthorizeObsRequest) *AuthorizeObsInvoker {
+	requestDef := GenReqDefForAuthorizeObs()
+	return &AuthorizeObsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteWarehouseApp 批量删除应用仓库中的指定应用
+//
+// 批量删除应用仓库中的指定应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) BatchDeleteWarehouseApp(request *model.BatchDeleteWarehouseAppRequest) (*model.BatchDeleteWarehouseAppResponse, error) {
+	requestDef := GenReqDefForBatchDeleteWarehouseApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteWarehouseAppResponse), nil
+	}
+}
+
+// BatchDeleteWarehouseAppInvoker 批量删除应用仓库中的指定应用
+func (c *WorkspaceAppClient) BatchDeleteWarehouseAppInvoker(request *model.BatchDeleteWarehouseAppRequest) *BatchDeleteWarehouseAppInvoker {
+	requestDef := GenReqDefForBatchDeleteWarehouseApp()
+	return &BatchDeleteWarehouseAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWarehouseApp 在应用仓库中新增应用
+//
+// 在应用仓库中新增应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CreateWarehouseApp(request *model.CreateWarehouseAppRequest) (*model.CreateWarehouseAppResponse, error) {
+	requestDef := GenReqDefForCreateWarehouseApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWarehouseAppResponse), nil
+	}
+}
+
+// CreateWarehouseAppInvoker 在应用仓库中新增应用
+func (c *WorkspaceAppClient) CreateWarehouseAppInvoker(request *model.CreateWarehouseAppRequest) *CreateWarehouseAppInvoker {
+	requestDef := GenReqDefForCreateWarehouseApp()
+	return &CreateWarehouseAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWarehouseApps 查询租户应用仓库中的应用列表
+//
+// 查询租户应用仓库中的应用列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListWarehouseApps(request *model.ListWarehouseAppsRequest) (*model.ListWarehouseAppsResponse, error) {
+	requestDef := GenReqDefForListWarehouseApps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWarehouseAppsResponse), nil
+	}
+}
+
+// ListWarehouseAppsInvoker 查询租户应用仓库中的应用列表
+func (c *WorkspaceAppClient) ListWarehouseAppsInvoker(request *model.ListWarehouseAppsRequest) *ListWarehouseAppsInvoker {
+	requestDef := GenReqDefForListWarehouseApps()
+	return &ListWarehouseAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWarehouseApp 修改应用仓库中的指定应用信息
+//
+// 修改应用仓库中的指定应用信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UpdateWarehouseApp(request *model.UpdateWarehouseAppRequest) (*model.UpdateWarehouseAppResponse, error) {
+	requestDef := GenReqDefForUpdateWarehouseApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWarehouseAppResponse), nil
+	}
+}
+
+// UpdateWarehouseAppInvoker 修改应用仓库中的指定应用信息
+func (c *WorkspaceAppClient) UpdateWarehouseAppInvoker(request *model.UpdateWarehouseAppRequest) *UpdateWarehouseAppInvoker {
+	requestDef := GenReqDefForUpdateWarehouseApp()
+	return &UpdateWarehouseAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadWarehouseAppIcon 在应用仓库中上传图标文件
+//
+// 在应用仓库中上传图标文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UploadWarehouseAppIcon(request *model.UploadWarehouseAppIconRequest) (*model.UploadWarehouseAppIconResponse, error) {
+	requestDef := GenReqDefForUploadWarehouseAppIcon()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadWarehouseAppIconResponse), nil
+	}
+}
+
+// UploadWarehouseAppIconInvoker 在应用仓库中上传图标文件
+func (c *WorkspaceAppClient) UploadWarehouseAppIconInvoker(request *model.UploadWarehouseAppIconRequest) *UploadWarehouseAppIconInvoker {
+	requestDef := GenReqDefForUploadWarehouseAppIcon()
+	return &UploadWarehouseAppIconInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPublishedApp 查询已发布应用
 //
 // 查询已发布的应用。
@@ -355,6 +481,180 @@ func (c *WorkspaceAppClient) ListAvailabilityZone(request *model.ListAvailabilit
 func (c *WorkspaceAppClient) ListAvailabilityZoneInvoker(request *model.ListAvailabilityZoneRequest) *ListAvailabilityZoneInvoker {
 	requestDef := GenReqDefForListAvailabilityZone()
 	return &ListAvailabilityZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachImageServerApp 分发软件信息至镜像实例
+//
+// 分发应用软件信息至镜像实例，管理员可以按需下载并安装应用软件。
+// * 目前只支持来自云应用仓库的软件信息。
+// * 只允许对状态为 &#x60;实例正常运行&#x60;、&#x60;镜像任务结束&#x60; 的实例分发软件信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) AttachImageServerApp(request *model.AttachImageServerAppRequest) (*model.AttachImageServerAppResponse, error) {
+	requestDef := GenReqDefForAttachImageServerApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachImageServerAppResponse), nil
+	}
+}
+
+// AttachImageServerAppInvoker 分发软件信息至镜像实例
+func (c *WorkspaceAppClient) AttachImageServerAppInvoker(request *model.AttachImageServerAppRequest) *AttachImageServerAppInvoker {
+	requestDef := GenReqDefForAttachImageServerApp()
+	return &AttachImageServerAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteImageServer 批量删除镜像实例
+//
+// 批量删除镜像实例。
+// * 忽略不存在的镜像实例，响应正常。
+// * 不允许操作状态为 &#x60;创建中&#x60;、&#x60;镜像创建中&#x60;的实例，响应异常。
+// * 不支持资源关联发生变化后，请求删除镜像实例关联资源，任务响应异常。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) BatchDeleteImageServer(request *model.BatchDeleteImageServerRequest) (*model.BatchDeleteImageServerResponse, error) {
+	requestDef := GenReqDefForBatchDeleteImageServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteImageServerResponse), nil
+	}
+}
+
+// BatchDeleteImageServerInvoker 批量删除镜像实例
+func (c *WorkspaceAppClient) BatchDeleteImageServerInvoker(request *model.BatchDeleteImageServerRequest) *BatchDeleteImageServerInvoker {
+	requestDef := GenReqDefForBatchDeleteImageServer()
+	return &BatchDeleteImageServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateImageServer 创建镜像实例
+//
+// 创建镜像实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CreateImageServer(request *model.CreateImageServerRequest) (*model.CreateImageServerResponse, error) {
+	requestDef := GenReqDefForCreateImageServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateImageServerResponse), nil
+	}
+}
+
+// CreateImageServerInvoker 创建镜像实例
+func (c *WorkspaceAppClient) CreateImageServerInvoker(request *model.CreateImageServerRequest) *CreateImageServerInvoker {
+	requestDef := GenReqDefForCreateImageServer()
+	return &CreateImageServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImageServers 查询镜像实例列表
+//
+// 查询镜像实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListImageServers(request *model.ListImageServersRequest) (*model.ListImageServersResponse, error) {
+	requestDef := GenReqDefForListImageServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageServersResponse), nil
+	}
+}
+
+// ListImageServersInvoker 查询镜像实例列表
+func (c *WorkspaceAppClient) ListImageServersInvoker(request *model.ListImageServersRequest) *ListImageServersInvoker {
+	requestDef := GenReqDefForListImageServers()
+	return &ListImageServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLatestAttachedServerApp 查询最近一次分发软件信息列表
+//
+// 查询最近一次分发软件信息列表，返回ID列表，不包含具体信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListLatestAttachedServerApp(request *model.ListLatestAttachedServerAppRequest) (*model.ListLatestAttachedServerAppResponse, error) {
+	requestDef := GenReqDefForListLatestAttachedServerApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLatestAttachedServerAppResponse), nil
+	}
+}
+
+// ListLatestAttachedServerAppInvoker 查询最近一次分发软件信息列表
+func (c *WorkspaceAppClient) ListLatestAttachedServerAppInvoker(request *model.ListLatestAttachedServerAppRequest) *ListLatestAttachedServerAppInvoker {
+	requestDef := GenReqDefForListLatestAttachedServerApp()
+	return &ListLatestAttachedServerAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RecreateServerImage 构建云应用镜像
+//
+// 构建云应用镜像。
+// * 只允许对状态为 &#x60;实例正常运行&#x60;、&#x60;镜像任务结束&#x60; 的实例构建云应用镜像。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) RecreateServerImage(request *model.RecreateServerImageRequest) (*model.RecreateServerImageResponse, error) {
+	requestDef := GenReqDefForRecreateServerImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecreateServerImageResponse), nil
+	}
+}
+
+// RecreateServerImageInvoker 构建云应用镜像
+func (c *WorkspaceAppClient) RecreateServerImageInvoker(request *model.RecreateServerImageRequest) *RecreateServerImageInvoker {
+	requestDef := GenReqDefForRecreateServerImage()
+	return &RecreateServerImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateImageServer 修改镜像实例
+//
+// 修改镜像实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UpdateImageServer(request *model.UpdateImageServerRequest) (*model.UpdateImageServerResponse, error) {
+	requestDef := GenReqDefForUpdateImageServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateImageServerResponse), nil
+	}
+}
+
+// UpdateImageServerInvoker 修改镜像实例
+func (c *WorkspaceAppClient) UpdateImageServerInvoker(request *model.UpdateImageServerRequest) *UpdateImageServerInvoker {
+	requestDef := GenReqDefForUpdateImageServer()
+	return &UpdateImageServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageJob 查询镜像任务详情
+//
+// 该接口用于查询异步任务的执行情况，比如查询创建镜像实例任务的执行状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowImageJob(request *model.ShowImageJobRequest) (*model.ShowImageJobResponse, error) {
+	requestDef := GenReqDefForShowImageJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowImageJobResponse), nil
+	}
+}
+
+// ShowImageJobInvoker 查询镜像任务详情
+func (c *WorkspaceAppClient) ShowImageJobInvoker(request *model.ShowImageJobRequest) *ShowImageJobInvoker {
+	requestDef := GenReqDefForShowImageJob()
+	return &ShowImageJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJob 查询任务的执行状态
@@ -1078,6 +1378,27 @@ func (c *WorkspaceAppClient) CreateAppServersInvoker(request *model.CreateAppSer
 	return &CreateAppServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListServerMetricData 查询指定时间范围指定指标的指定粒度的监控数据
+//
+// 查询指定时间范围指定指标的指定粒度的监控数据，可以通过参数指定需要查询的数据维度。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListServerMetricData(request *model.ListServerMetricDataRequest) (*model.ListServerMetricDataResponse, error) {
+	requestDef := GenReqDefForListServerMetricData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerMetricDataResponse), nil
+	}
+}
+
+// ListServerMetricDataInvoker 查询指定时间范围指定指标的指定粒度的监控数据
+func (c *WorkspaceAppClient) ListServerMetricDataInvoker(request *model.ListServerMetricDataRequest) *ListServerMetricDataInvoker {
+	requestDef := GenReqDefForListServerMetricData()
+	return &ListServerMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListServers 查询服务器列表
 //
 // 查询服务器列表。
@@ -1119,6 +1440,27 @@ func (c *WorkspaceAppClient) ReinstallServer(request *model.ReinstallServerReque
 func (c *WorkspaceAppClient) ReinstallServerInvoker(request *model.ReinstallServerRequest) *ReinstallServerInvoker {
 	requestDef := GenReqDefForReinstallServer()
 	return &ReinstallServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerVnc 获取VNC远程登录地址
+//
+// 获取VNC远程登录地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowServerVnc(request *model.ShowServerVncRequest) (*model.ShowServerVncResponse, error) {
+	requestDef := GenReqDefForShowServerVnc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerVncResponse), nil
+	}
+}
+
+// ShowServerVncInvoker 获取VNC远程登录地址
+func (c *WorkspaceAppClient) ShowServerVncInvoker(request *model.ShowServerVncRequest) *ShowServerVncInvoker {
+	requestDef := GenReqDefForShowServerVnc()
+	return &ShowServerVncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServer 修改服务器
@@ -1270,6 +1612,27 @@ func (c *WorkspaceAppClient) ListSessionByUserName(request *model.ListSessionByU
 func (c *WorkspaceAppClient) ListSessionByUserNameInvoker(request *model.ListSessionByUserNameRequest) *ListSessionByUserNameInvoker {
 	requestDef := GenReqDefForListSessionByUserName()
 	return &ListSessionByUserNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSessions 查询用户会话列表
+//
+// 查询用户会话列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListSessions(request *model.ListSessionsRequest) (*model.ListSessionsResponse, error) {
+	requestDef := GenReqDefForListSessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionsResponse), nil
+	}
+}
+
+// ListSessionsInvoker 查询用户会话列表
+func (c *WorkspaceAppClient) ListSessionsInvoker(request *model.ListSessionsRequest) *ListSessionsInvoker {
+	requestDef := GenReqDefForListSessions()
+	return &ListSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListUserConnection 查询用户登录记录

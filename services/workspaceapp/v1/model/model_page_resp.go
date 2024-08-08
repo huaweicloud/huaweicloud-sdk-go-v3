@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// PageResp API列表查询响应。  **⚠ 警告: 此Model不生成java代码，允许其它Model中引用，请勿直接作为Model使用**
+// PageResp API列表查询响应  **⚠ 警告: 此Model不生成java代码，允许其它Model中引用，请勿直接作为Model使用**
 type PageResp struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 }
 

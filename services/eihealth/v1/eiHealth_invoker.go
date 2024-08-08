@@ -413,6 +413,18 @@ func (i *CreateFepJobInvoker) Invoke() (*model.CreateFepJobResponse, error) {
 	}
 }
 
+type CreateGenJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGenJobInvoker) Invoke() (*model.CreateGenJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGenJobResponse), nil
+	}
+}
+
 type CreateImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -590,6 +602,18 @@ func (i *CreateSynthesisJobInvoker) Invoke() (*model.CreateSynthesisJobResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateSynthesisJobResponse), nil
+	}
+}
+
+type CreateTargetOptJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTargetOptJobInvoker) Invoke() (*model.CreateTargetOptJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTargetOptJobResponse), nil
 	}
 }
 
@@ -1178,6 +1202,18 @@ func (i *ListBackupInvoker) Invoke() (*model.ListBackupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListBackupResponse), nil
+	}
+}
+
+type ListBaseModelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBaseModelInvoker) Invoke() (*model.ListBaseModelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBaseModelResponse), nil
 	}
 }
 
@@ -1865,6 +1901,18 @@ func (i *RetryJobInvoker) Invoke() (*model.RetryJobResponse, error) {
 	}
 }
 
+type RunFastaPreprocessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunFastaPreprocessInvoker) Invoke() (*model.RunFastaPreprocessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunFastaPreprocessResponse), nil
+	}
+}
+
 type Show3dStructureContentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2078,6 +2126,18 @@ func (i *ShowFepJobInvoker) Invoke() (*model.ShowFepJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowFepJobResponse), nil
+	}
+}
+
+type ShowGenJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGenJobInvoker) Invoke() (*model.ShowGenJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGenJobResponse), nil
 	}
 }
 
@@ -2354,6 +2414,18 @@ func (i *ShowSynthesisJobInvoker) Invoke() (*model.ShowSynthesisJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowSynthesisJobResponse), nil
+	}
+}
+
+type ShowTargetOptJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTargetOptJobInvoker) Invoke() (*model.ShowTargetOptJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTargetOptJobResponse), nil
 	}
 }
 
@@ -3029,6 +3101,18 @@ func (i *ShowAdmetPropertiesInvoker) Invoke() (*model.ShowAdmetPropertiesRespons
 	}
 }
 
+type CreateCpiJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCpiJobInvoker) Invoke() (*model.CreateCpiJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCpiJobResponse), nil
+	}
+}
+
 type CreateCpiTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3038,6 +3122,18 @@ func (i *CreateCpiTaskInvoker) Invoke() (*model.CreateCpiTaskResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateCpiTaskResponse), nil
+	}
+}
+
+type ShowCpiJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCpiJobInvoker) Invoke() (*model.ShowCpiJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCpiJobResponse), nil
 	}
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RoutePolicy 路由策略。
+// RoutePolicy 路由策略
 type RoutePolicy struct {
 
 	// 单台服务器最大的链接会话数。

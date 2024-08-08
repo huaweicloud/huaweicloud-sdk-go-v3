@@ -15,7 +15,7 @@ func NewIAMAccessAnalyzerClient(hcClient *httpclient.HcHttpClient) *IAMAccessAna
 }
 
 func IAMAccessAnalyzerClientBuilder() *httpclient.HcHttpClientBuilder {
-	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

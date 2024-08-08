@@ -32,6 +32,18 @@ type CreatePremiumHostRequestBody struct {
 	// 字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
 	ForwardHeaderMap map[string]string `json:"forward_header_map,omitempty"`
 
+	// 添加云模式elb接入域名时，请输入elb-shared，否则不输入
+	Mode *string `json:"mode,omitempty"`
+
+	// 负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
+
+	// 监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+	ListenerId *string `json:"listener_id,omitempty"`
+
+	// 业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
+	ProtocolPort *int32 `json:"protocol_port,omitempty"`
+
 	// 防护域名备注
 	Description *string `json:"description,omitempty"`
 }

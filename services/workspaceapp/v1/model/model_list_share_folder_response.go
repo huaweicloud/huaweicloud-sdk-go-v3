@@ -9,7 +9,7 @@ import (
 // ListShareFolderResponse Response Object
 type ListShareFolderResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 存储声明。

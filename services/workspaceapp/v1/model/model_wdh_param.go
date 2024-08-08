@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// WdhParam wdh参数。
+// WdhParam wdh参数
 type WdhParam struct {
 
-	// 云办公主机id。
+	//  云办公主机id
 	DedicatedHostId *string `json:"dedicated_host_id,omitempty"`
 
-	// 专属主机类型，目前只支持dedicated。 - dedicated：专属型 - shared： 共享型
+	//  类型
 	Tenancy *string `json:"tenancy,omitempty"`
 }
 

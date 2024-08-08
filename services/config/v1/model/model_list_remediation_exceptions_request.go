@@ -20,9 +20,6 @@ type ListRemediationExceptionsRequest struct {
 
 	// 资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
-
-	// 资源名称
-	ResourceName *string `json:"resource_name,omitempty"`
 }
 
 func (o ListRemediationExceptionsRequest) String() string {

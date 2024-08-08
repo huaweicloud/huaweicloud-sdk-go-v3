@@ -25,6 +25,15 @@ type JobInfo struct {
 	// 作业在目录树上的路径。创建作业时如果路径目录不存在，会自动创建目录，如/dir/a/，默认在根目录/。
 	Directory *string `json:"directory,omitempty"`
 
+	// 设置作业的最大超时时间。
+	CleanOverdueDays *int32 `json:"cleanOverdueDays,omitempty"`
+
+	// 清除等待的作业。
+	CleanWaitingJob *string `json:"cleanWaitingJob,omitempty"`
+
+	// 取值为0和1，1表示空跑，0表示：取消空跑，不设置该参数时，默认为0。
+	EmptyRunningJob *string `json:"emptyRunningJob,omitempty"`
+
 	// 作业类型，REAL_TIME： 实时处理，BATCH：批处理
 	ProcessType JobInfoProcessType `json:"processType"`
 

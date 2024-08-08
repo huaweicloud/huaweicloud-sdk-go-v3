@@ -1082,22 +1082,6 @@ func GenReqDefForKeystoneListServices() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForKeystoneListUsersForGroupByAdmin() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v3/groups/{group_id}/users").
-		WithResponse(new(model.KeystoneListUsersForGroupByAdminResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("GroupId").
-		WithJsonTag("group_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForKeystoneListVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2590,6 +2574,22 @@ func GenReqDefForKeystoneListUsers() *def.HttpRequestDef {
 		WithName("PasswordExpiresAt").
 		WithJsonTag("password_expires_at").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForKeystoneListUsersForGroupByAdmin() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/groups/{group_id}/users").
+		WithResponse(new(model.KeystoneListUsersForGroupByAdminResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GroupId").
+		WithJsonTag("group_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

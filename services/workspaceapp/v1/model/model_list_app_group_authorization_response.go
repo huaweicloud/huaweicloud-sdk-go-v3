@@ -9,7 +9,7 @@ import (
 // ListAppGroupAuthorizationResponse Response Object
 type ListAppGroupAuthorizationResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 授权信息。

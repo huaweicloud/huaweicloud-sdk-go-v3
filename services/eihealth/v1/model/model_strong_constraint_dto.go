@@ -24,6 +24,8 @@ type StrongConstraintDto struct {
 	Range *[]float32 `json:"range,omitempty"`
 
 	Struct *StructureConstraintParamsDto `json:"struct,omitempty"`
+
+	Interaction *InteractionConstraintDto `json:"interaction,omitempty"`
 }
 
 func (o StrongConstraintDto) String() string {

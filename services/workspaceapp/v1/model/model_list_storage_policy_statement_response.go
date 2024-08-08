@@ -9,7 +9,7 @@ import (
 // ListStoragePolicyStatementResponse Response Object
 type ListStoragePolicyStatementResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 支持的访问策略。

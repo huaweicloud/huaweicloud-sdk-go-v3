@@ -174,9 +174,9 @@ func (c *VpcepClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest
 	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteEndpointPolicy 删除网关型终端节点policy
+// DeleteEndpointPolicy 删除网关型终端节点策略（待下线）
 //
-// 删除网关型终端节点policy。
+// 删除网关型终端节点策略，该接口待下线，不建议使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) DeleteEndpointPolicy(request *model.DeleteEndpointPolicyRequest) (*model.DeleteEndpointPolicyResponse, error) {
@@ -189,7 +189,7 @@ func (c *VpcepClient) DeleteEndpointPolicy(request *model.DeleteEndpointPolicyRe
 	}
 }
 
-// DeleteEndpointPolicyInvoker 删除网关型终端节点policy
+// DeleteEndpointPolicyInvoker 删除网关型终端节点策略（待下线）
 func (c *VpcepClient) DeleteEndpointPolicyInvoker(request *model.DeleteEndpointPolicyRequest) *DeleteEndpointPolicyInvoker {
 	requestDef := GenReqDefForDeleteEndpointPolicy()
 	return &DeleteEndpointPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -471,9 +471,9 @@ func (c *VpcepClient) UpdateEndpointConnectionsDescInvoker(request *model.Update
 	return &UpdateEndpointConnectionsDescInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEndpointPolicy 修改网关型终端节点policy
+// UpdateEndpointPolicy 修改终端节点策略
 //
-// 修改网关型终端节点policy。
+// 修改终端节点策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) UpdateEndpointPolicy(request *model.UpdateEndpointPolicyRequest) (*model.UpdateEndpointPolicyResponse, error) {
@@ -486,7 +486,7 @@ func (c *VpcepClient) UpdateEndpointPolicy(request *model.UpdateEndpointPolicyRe
 	}
 }
 
-// UpdateEndpointPolicyInvoker 修改网关型终端节点policy
+// UpdateEndpointPolicyInvoker 修改终端节点策略
 func (c *VpcepClient) UpdateEndpointPolicyInvoker(request *model.UpdateEndpointPolicyRequest) *UpdateEndpointPolicyInvoker {
 	requestDef := GenReqDefForUpdateEndpointPolicy()
 	return &UpdateEndpointPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

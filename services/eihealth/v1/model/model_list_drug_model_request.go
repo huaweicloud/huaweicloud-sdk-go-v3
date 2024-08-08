@@ -21,7 +21,7 @@ type ListDrugModelRequest struct {
 	// 模型状态列表
 	StatusList *[]string `json:"status_list,omitempty"`
 
-	// 排序规则 目前默认时间降序，支持根据create_time|finish_time
+	// 排序规则 目前默认时间降序，支持根据create_time|finish_time|base_model_name
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 排序规则 目前默认时间降序
@@ -44,6 +44,9 @@ type ListDrugModelRequest struct {
 
 	// 偏移量，查询起始偏移，必须由数字组成，默认为0，取值范围[0,100000000]
 	Offset *int32 `json:"offset,omitempty"`
+
+	// 基模型id列表
+	BaseModelList *[]string `json:"base_model_list,omitempty"`
 }
 
 func (o ListDrugModelRequest) String() string {

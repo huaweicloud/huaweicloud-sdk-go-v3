@@ -42,11 +42,11 @@ type CreateEndpointRequestBody struct {
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
 
-	// 终端节点策略信息
+	// Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
-	// iam 5.0 策略
-	PolicyDocument *interface{} `json:"policy_document,omitempty"`
+	// 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
+	PolicyDocument *string `json:"policy_document,omitempty"`
 
 	// 指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
 	IpVersion *CreateEndpointRequestBodyIpVersion `json:"ip_version,omitempty"`

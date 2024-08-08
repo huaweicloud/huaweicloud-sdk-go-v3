@@ -53,6 +53,24 @@ type CreateServerGroupResponse struct {
 
 	StorageMountPolicy *StorageFolderMountType `json:"storage_mount_policy,omitempty"`
 
+	// 企业项目ID(0表示默认企业项目Id)
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 主服务器组id列表。
+	PrimaryServerGroupIds *[]string `json:"primary_server_group_ids,omitempty"`
+
+	// 备服务器组id列表。
+	SecondaryServerGroupIds *[]string `json:"secondary_server_group_ids,omitempty"`
+
+	// 服务器是否处于启用状态，true表示处于启用状态 false表示处于禁用状态。
+	ServerGroupStatus *bool `json:"server_group_status,omitempty"`
+
+	// 站点类型 - CENTER/IES
+	SiteType *string `json:"site_type,omitempty"`
+
+	// 站点id
+	SiteId *string `json:"site_id,omitempty"`
+
 	// 服务器配置总数量。
 	AppServerFlavorCount *int32 `json:"app_server_flavor_count,omitempty"`
 
@@ -71,6 +89,9 @@ type CreateServerGroupResponse struct {
 	SubnetName *string `json:"subnet_name,omitempty"`
 
 	ScalingPolicy *ScalingPolicy `json:"scaling_policy,omitempty"`
+
+	// 标签信息
+	Tags *[]TmsTag `json:"tags,omitempty"`
 
 	// 默认组织名称。
 	OuName         *string `json:"ou_name,omitempty"`

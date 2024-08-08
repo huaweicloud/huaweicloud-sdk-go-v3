@@ -9,7 +9,7 @@ import (
 // ShowPublishableAppResponse Response Object
 type ShowPublishableAppResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 组下面的镜像ID列表。

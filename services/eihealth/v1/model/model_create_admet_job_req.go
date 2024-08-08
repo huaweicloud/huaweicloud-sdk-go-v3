@@ -12,8 +12,14 @@ type CreateAdmetJobReq struct {
 
 	MoleculeFile *MoleculeFileDto `json:"molecule_file"`
 
+	// 基模型id
+	BaseModelId *string `json:"base_model_id,omitempty"`
+
 	// 模型id列表
 	ModelIds *[]string `json:"model_ids,omitempty"`
+
+	// 是否输出表征，仅专业版平台支持
+	SaveFingerprint *bool `json:"save_fingerprint,omitempty"`
 }
 
 func (o CreateAdmetJobReq) String() string {

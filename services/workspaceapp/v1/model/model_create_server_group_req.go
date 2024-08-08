@@ -30,6 +30,9 @@ type CreateServerGroupReq struct {
 	// 产品ID。 > - 获取方式详见产品套餐管理ListProduct：\"GET  /v1/{project_id}/product\"。
 	ProductId string `json:"product_id"`
 
+	// 规格ID。
+	FlavorId *string `json:"flavor_id,omitempty"`
+
 	// 虚拟私有云ID。
 	VpcId string `json:"vpc_id"`
 
@@ -61,6 +64,18 @@ type CreateServerGroupReq struct {
 
 	// 付费会话数，单位/个。
 	ExtraSessionSize *int32 `json:"extra_session_size,omitempty"`
+
+	// 标签信息，最多包含20个key,不允许重复
+	Tags *[]TmsTag `json:"tags,omitempty"`
+
+	// 企业项目ID,仅企业项目需配置(字段为空或者0表示使用默认default企业项目)
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 主服务器组id,绑定主服务器组，则创建的是备服务器。
+	PrimaryServerGroupId *string `json:"primary_server_group_id,omitempty"`
+
+	// 是否启用服务器组。
+	ServerGroupStatus *bool `json:"server_group_status,omitempty"`
 }
 
 func (o CreateServerGroupReq) String() string {

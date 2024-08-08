@@ -27,7 +27,7 @@ type UsbPortRedirectionOptions struct {
 	// 是否开启无线设备（如：蓝牙）。取值为： - false：表示关闭。 - true：表示开启。
 	WirelessDevicesEnable *bool `json:"wireless_devices_enable,omitempty"`
 
-	// 是否开启网路设备（如：无线网卡）。取值为： - false：表示关闭。 - true：表示开启。
+	// 是否开启网络设备（如：无线网卡）。取值为： - false：表示关闭。 - true：表示开启。
 	NetworkDevicesEnable *bool `json:"network_devices_enable,omitempty"`
 
 	// 是否开启智能卡设备（如：Ukey）。取值为： - false：表示关闭。 - true：表示开启。

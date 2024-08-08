@@ -9,7 +9,7 @@ import (
 // PublishAppResponse Response Object
 type PublishAppResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 查发布的应用列表。

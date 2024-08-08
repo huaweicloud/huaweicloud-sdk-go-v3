@@ -15,6 +15,9 @@ type CreateLigandPreviewTaskReq struct {
 
 	// 计数上限，若分子数量大于计数上限，则终止计数并在结果中标明计数不完整（has_more=true），计数数量应不小于preview_count
 	CountLimit *int32 `json:"count_limit,omitempty"`
+
+	// 是否生成3D构象，默认为true
+	Generate3d *bool `json:"generate_3d,omitempty"`
 }
 
 func (o CreateLigandPreviewTaskReq) String() string {

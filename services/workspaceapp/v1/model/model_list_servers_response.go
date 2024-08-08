@@ -9,7 +9,7 @@ import (
 // ListServersResponse Response Object
 type ListServersResponse struct {
 
-	// 总数。
+	// 总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 服务器列表返回列表条目数量上限为分页的最大上限值。

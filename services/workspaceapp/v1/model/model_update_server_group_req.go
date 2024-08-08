@@ -36,6 +36,9 @@ type UpdateServerGroupReq struct {
 	OuName *string `json:"ou_name,omitempty"`
 
 	AppType *AppTypeEnum `json:"app_type,omitempty"`
+
+	// 服务器是否处于禁用状态： * `true` - 启用状态 * `false` - 禁用状态
+	ServerGroupStatus *bool `json:"server_group_status,omitempty"`
 }
 
 func (o UpdateServerGroupReq) String() string {

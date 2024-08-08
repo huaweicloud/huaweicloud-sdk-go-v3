@@ -14,11 +14,12 @@ type WeakConstraintType struct {
 }
 
 type WeakConstraintTypeEnum struct {
-	BOOL     WeakConstraintType
-	RANGE    WeakConstraintType
-	STRUCT   WeakConstraintType
-	MINIMIZE WeakConstraintType
-	MAXIMIZE WeakConstraintType
+	BOOL        WeakConstraintType
+	RANGE       WeakConstraintType
+	STRUCT      WeakConstraintType
+	MINIMIZE    WeakConstraintType
+	MAXIMIZE    WeakConstraintType
+	INTERACTION WeakConstraintType
 }
 
 func GetWeakConstraintTypeEnum() WeakConstraintTypeEnum {
@@ -37,6 +38,9 @@ func GetWeakConstraintTypeEnum() WeakConstraintTypeEnum {
 		},
 		MAXIMIZE: WeakConstraintType{
 			value: "maximize",
+		},
+		INTERACTION: WeakConstraintType{
+			value: "interaction",
 		},
 	}
 }

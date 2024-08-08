@@ -16,6 +16,9 @@ type ShowDockingJobResponse struct {
 	// 配体文件列表，当前仅支持1个
 	Ligands *[]LigandDto `json:"ligands,omitempty"`
 
+	// 引擎
+	Engine *string `json:"engine,omitempty"`
+
 	JobResult *JobResult `json:"job_result,omitempty"`
 
 	// 部分失败原因和数量

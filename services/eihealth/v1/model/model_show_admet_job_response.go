@@ -17,11 +17,16 @@ type ShowAdmetJobResponse struct {
 	// 作业结果信息
 	PartFailedReason *[]FailedReasonRecord `json:"part_failed_reason,omitempty"`
 
+	BaseModel *BaseModel `json:"base_model,omitempty"`
+
 	// 模型信息
 	Models *[]BasicDrugModel `json:"models,omitempty"`
 
-	ClusterResult  *ClusterJobRsp `json:"cluster_result,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	ClusterResult *ClusterJobRsp `json:"cluster_result,omitempty"`
+
+	// 是否输出表征
+	SaveFingerprint *bool `json:"save_fingerprint,omitempty"`
+	HttpStatusCode  int   `json:"-"`
 }
 
 func (o ShowAdmetJobResponse) String() string {

@@ -12,6 +12,9 @@ type CheckQuotaRequest struct {
 	// 产品id。
 	ProductId string `json:"product_id"`
 
+	// 规格id。
+	FlavorId *string `json:"flavor_id,omitempty"`
+
 	// 订单需要创建总实例数、订购数量。
 	SubscriptionNum int32 `json:"subscription_num"`
 

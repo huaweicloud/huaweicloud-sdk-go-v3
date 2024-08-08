@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ExtraSessionTypeEnum 付费会话类型： * `GPU` - GPU规格会话。 * `CPU` - 普通CPU规格会话。
+// ExtraSessionTypeEnum 付费会话类型 * `GPU` - GPU规格会话 * `CPU` - 普通CPU规格会话
 type ExtraSessionTypeEnum struct {
 	value string
 }

@@ -23,6 +23,18 @@ type PoliciesFileAndClipboardClipboardRedirectionOptions struct {
 
 	// 剪切板文件重定向。取值为： DISABLED：表示禁用。（默认） SERVER_TO_CLIENT_ENABLED：表示开启服务端到客户端。 CLIENT_TO_SERVER_ENABLED：表示开启客户端到服务端。 TWO_WAY_ENABLED：表示开启双向。
 	FileClipboardRedirection *PoliciesFileAndClipboardClipboardRedirectionOptionsFileClipboardRedirection `json:"file_clipboard_redirection,omitempty"`
+
+	// 本地到虚拟机长度限制开关。取值为： false: 标识关闭。 ture: 标识开启。
+	ClipboardLengthLimitCtsEnable *bool `json:"clipboard_length_limit_cts_enable,omitempty"`
+
+	// 本地到虚拟机长度限制。
+	ClipboardLengthLimitCts *int32 `json:"clipboard_length_limit_cts,omitempty"`
+
+	// 虚拟机到本地到长度限制开关。取值为： false: 标识关闭。 ture: 标识开启。
+	ClipboardLengthLimitStcEnable *bool `json:"clipboard_length_limit_stc_enable,omitempty"`
+
+	// 虚拟机到本地长度限制。
+	ClipboardLengthLimitStc *int32 `json:"clipboard_length_limit_stc,omitempty"`
 }
 
 func (o PoliciesFileAndClipboardClipboardRedirectionOptions) String() string {

@@ -50,6 +50,12 @@ type ModelDto struct {
 
 	// 模型评估指标
 	Metrics *[]ModelMetric `json:"metrics,omitempty"`
+
+	// 基模型id
+	BaseModelId *string `json:"base_model_id,omitempty"`
+
+	// 基模型名称
+	BaseModelName *string `json:"base_model_name,omitempty"`
 }
 
 func (o ModelDto) String() string {
