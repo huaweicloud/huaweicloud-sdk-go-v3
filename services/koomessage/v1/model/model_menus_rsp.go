@@ -36,6 +36,12 @@ type MenusRsp struct {
 
 	// 最新操作时间。格式为：2020-12-12T12:00:00Z。
 	OperTime *string `json:"oper_time,omitempty"`
+
+	// 企业ID。
+	CompanyId *string `json:"company_id,omitempty"`
+
+	// 企业名称。
+	CompanyName *string `json:"company_name,omitempty"`
 }
 
 func (o MenusRsp) String() string {

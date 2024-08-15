@@ -101,6 +101,18 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 	}
 }
 
+type ModifyClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyClusterInvoker) Invoke() (*model.ModifyClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyClusterResponse), nil
+	}
+}
+
 type RestartClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -113,6 +125,18 @@ func (i *RestartClusterInvoker) Invoke() (*model.RestartClusterResponse, error) 
 	}
 }
 
+type ShowAvailabilityZonesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailabilityZonesInvoker) Invoke() (*model.ShowAvailabilityZonesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAvailabilityZonesResponse), nil
+	}
+}
+
 type ShowClusterDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -122,6 +146,78 @@ func (i *ShowClusterDetailInvoker) Invoke() (*model.ShowClusterDetailResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterDetailResponse), nil
+	}
+}
+
+type ShowClusterEnterpriseProjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterEnterpriseProjectsInvoker) Invoke() (*model.ShowClusterEnterpriseProjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterEnterpriseProjectsResponse), nil
+	}
+}
+
+type ShowDatastoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatastoresInvoker) Invoke() (*model.ShowDatastoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatastoresResponse), nil
+	}
+}
+
+type ShowEnterpriseProjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEnterpriseProjectsInvoker) Invoke() (*model.ShowEnterpriseProjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEnterpriseProjectsResponse), nil
+	}
+}
+
+type ShowFlavorDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlavorDetailInvoker) Invoke() (*model.ShowFlavorDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlavorDetailResponse), nil
+	}
+}
+
+type ShowFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlavorsInvoker) Invoke() (*model.ShowFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlavorsResponse), nil
+	}
+}
+
+type ShowInstanceDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceDetailInvoker) Invoke() (*model.ShowInstanceDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceDetailResponse), nil
 	}
 }
 

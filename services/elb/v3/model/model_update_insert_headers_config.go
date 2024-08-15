@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// UpdateInsertHeadersConfig 要添加的请求头参数列表。
+// UpdateInsertHeadersConfig 参数解释：要添加的请求头参数列表。
 type UpdateInsertHeadersConfig struct {
 
-	// 要添加请求头参数列表。
+	// 参数解释：要添加请求头参数列表。
 	Configs []UpdateInsertHeaderConfig `json:"configs"`
 }
 

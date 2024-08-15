@@ -23,7 +23,7 @@ type UploadAimTemplateMaterialRequestBody struct {
 	// 文件资源码流。  > file_type=stream时，file_stream为必填。
 	FileStream *string `json:"file_stream,omitempty"`
 
-	// 图像比例。 - oneToOne：指1:1比例 - sixteenToNine：指16:9比例 - threeToOne：指3:1比例 - fortyEightToSixtyFive：指48:65比例 - twentyOneToNine：指21:9比例  > resource type=image时，image_rate必填。
+	// 图像比例。 - oneToOne：指1:1比例 - sixteenToNine：指16:9比例 - threeToOne：指3:1比例 - fortyEightToSixtyFive：指48:65比例 - twentyOneToNine：指21:9比例 - threeToFour：指3:4比例  > resource type=image时，image_rate必填。
 	ImageRate *string `json:"image_rate,omitempty"`
 
 	// 文件名称。  > file_type=stream时，file_name必填。

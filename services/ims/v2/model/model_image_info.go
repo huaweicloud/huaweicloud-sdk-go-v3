@@ -141,7 +141,7 @@ type ImageInfo struct {
 	// 目前暂时不使用
 	VirtualSize *int32 `json:"virtual_size,omitempty"`
 
-	// 是否被其他租户可见，取值为private或public
+	// 是否被其他租户可见，取值为private、public或shared
 	Visibility ImageInfoVisibility `json:"visibility"`
 
 	// 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
@@ -649,6 +649,7 @@ type ImageInfoVisibility struct {
 type ImageInfoVisibilityEnum struct {
 	PRIVATE ImageInfoVisibility
 	PUBLIC  ImageInfoVisibility
+	SHARED  ImageInfoVisibility
 }
 
 func GetImageInfoVisibilityEnum() ImageInfoVisibilityEnum {
@@ -658,6 +659,9 @@ func GetImageInfoVisibilityEnum() ImageInfoVisibilityEnum {
 		},
 		PUBLIC: ImageInfoVisibility{
 			value: "public",
+		},
+		SHARED: ImageInfoVisibility{
+			value: "shared",
 		},
 	}
 }

@@ -30,7 +30,10 @@ type Thumbnail struct {
 	// 从OBS返回的文件Key。
 	ObsObjectKey string `json:"obs_object_key"`
 
-	// 图像比例。 - oneToOne：指1:1比例 - sixteenToNine：指16:9比例 - threeToOne：指3:1比例 - fortyEightToSixtyFive：指48:65比例 - twentyOneToNine：指21:9比例
+	// 文件访问路径。
+	ObsFileUrl *string `json:"obs_file_url,omitempty"`
+
+	// 图像比例。 - oneToOne：指1:1比例 - sixteenToNine：指16:9比例 - threeToOne：指3:1比例 - fortyEightToSixtyFive：指48:65比例 - twentyOneToNine：指21:9比例 - threeToFour：指3:4比例
 	ImageRate *string `json:"image_rate,omitempty"`
 
 	// 缩略图是否自动从系统生成。
@@ -38,6 +41,9 @@ type Thumbnail struct {
 
 	// 缩略图的详细描述。
 	Description *string `json:"description,omitempty"`
+
+	// 缩略图所占空间大小。
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o Thumbnail) String() string {

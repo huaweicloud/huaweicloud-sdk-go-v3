@@ -18,6 +18,9 @@ type CreateEdgeSite struct {
 	Description *string `json:"description,omitempty"`
 
 	Location *CreateLocation `json:"location"`
+
+	// 企业项目Id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CreateEdgeSite) String() string {

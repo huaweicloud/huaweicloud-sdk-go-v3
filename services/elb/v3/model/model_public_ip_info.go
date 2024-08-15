@@ -9,13 +9,13 @@ import (
 // PublicIpInfo 弹性公网EIP信息
 type PublicIpInfo struct {
 
-	// 弹性公网ip配置id
+	// 参数解释：弹性公网ip配置id
 	PublicipId string `json:"publicip_id"`
 
-	// IP地址
+	// 参数解释：IP地址
 	PublicipAddress string `json:"publicip_address"`
 
-	// IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+	// 参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
 	IpVersion int32 `json:"ip_version"`
 }
 

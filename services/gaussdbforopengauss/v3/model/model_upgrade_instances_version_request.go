@@ -9,7 +9,7 @@ import (
 // UpgradeInstancesVersionRequest Request Object
 type UpgradeInstancesVersionRequest struct {
 
-	// 语言
+	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *GaussDbUpgradeInstancesVersionRequest `json:"body,omitempty"`

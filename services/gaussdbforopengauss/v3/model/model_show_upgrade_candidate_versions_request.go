@@ -15,7 +15,7 @@ type ShowUpgradeCandidateVersionsRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 语言[zh-cn, en-us]
+	// 语言[zh-cn, en-us]。
 	XLanguage *ShowUpgradeCandidateVersionsRequestXLanguage `json:"X-Language,omitempty"`
 }
 

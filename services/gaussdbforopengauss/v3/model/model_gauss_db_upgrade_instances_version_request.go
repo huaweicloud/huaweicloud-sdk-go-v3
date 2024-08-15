@@ -12,10 +12,10 @@ import (
 // GaussDbUpgradeInstancesVersionRequest GaussDB批量实例版本升级接口传参参数。
 type GaussDbUpgradeInstancesVersionRequest struct {
 
-	// 批量实例ID
+	// 批量实例ID。
 	InstanceIds *[]string `json:"instance_ids,omitempty"`
 
-	// 实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+	// 实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
 	UpgradeType GaussDbUpgradeInstancesVersionRequestUpgradeType `json:"upgrade_type"`
 
 	// 实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。

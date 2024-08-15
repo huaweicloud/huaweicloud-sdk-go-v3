@@ -17,7 +17,10 @@ type ListLogsResponse struct {
 
 	// 是否查询完成。
 	IsQueryComplete *bool `json:"isQueryComplete,omitempty"`
-	HttpStatusCode  int   `json:"-"`
+
+	// 分析日志返回响应体
+	AnalysisLogs   *[]map[string]string `json:"analysisLogs,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListLogsResponse) String() string {

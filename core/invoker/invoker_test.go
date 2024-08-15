@@ -20,11 +20,14 @@
 package invoker
 
 import (
+	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/httphandler"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker/retry"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"github.com/stretchr/testify/assert"
@@ -43,14 +46,27 @@ var reqDef = def.NewHttpRequestDefBuilder().
 	WithResponse(&mockModel{}).
 	Build()
 
-func mockHcClient(url string) (*core.HcHttpClient, error) {
+func mockHcClient(url string, options ...interface{}) (*core.HcHttpClient, error) {
+	var credentials auth.ICredential
 	credentials, err := basic.NewCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
 	if err != nil {
 		return nil, err
 	}
+	conf := config.DefaultHttpConfig()
+
+	for _, op := range options {
+		switch op.(type) {
+		case auth.ICredential:
+			credentials = op.(auth.ICredential)
+		case *config.HttpConfig:
+			conf = op.(*config.HttpConfig)
+		default:
+			return nil, errors.New("invalid option type")
+		}
+	}
 
 	client, err := core.NewHcHttpClientBuilder().
-		WithHttpConfig(config.DefaultHttpConfig()).
+		WithHttpConfig(conf).
 		WithCredential(credentials).
 		WithEndpoints([]string{url}).
 		SafeBuild()
@@ -59,6 +75,30 @@ func mockHcClient(url string) (*core.HcHttpClient, error) {
 	}
 
 	return client, nil
+}
+
+func TestBaseInvoker_Exchange_Attributes(t *testing.T) {
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		_, err := fmt.Fprintln(w, "{}")
+		assert.Nil(t, err)
+	}))
+	defer ts.Close()
+
+	handler := httphandler.NewHttpHandler().AddMonitorHandler(func(metric *httphandler.MonitorMetric) {
+		assert.Equal(t, map[string]interface{}{"key": "value"}, metric.Attributes)
+	})
+	httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
+
+	client, err := mockHcClient(ts.URL, httpConfig)
+	assert.Nil(t, err)
+	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(10, func(resp interface{}, err error) bool {
+		return err != nil
+	}, retry.NewDecorRelatedJitter())
+	invoker.Exchange.Attributes = map[string]interface{}{"key": "value"}
+	resp, err := invoker.Invoke()
+	assert.Nil(t, err)
+	assert.IsType(t, &mockModel{}, resp)
+	assert.Equal(t, 200, resp.(*mockModel).HttpStatusCode)
 }
 
 // 当发生ServerResponseException(status_code>=500)时进行重试,最大重试次数设置为3

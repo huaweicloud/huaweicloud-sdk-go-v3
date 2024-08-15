@@ -62,7 +62,31 @@ type ShowQueueResponse struct {
 
 	// 弹性资源池名称。
 	ElasticResourcePoolName *string `json:"elastic_resource_pool_name,omitempty"`
-	HttpStatusCode          int     `json:"-"`
+
+	// 队列支持的Spark版本。
+	SupportSparkVersions *[]string `json:"support_spark_versions,omitempty"`
+
+	// 队列默认的Spark版本。
+	DefaultSparkVersion *string `json:"default_spark_version,omitempty"`
+
+	// 队列支持的HetuEngine版本。
+	SupportHetuEngineVersions *[]string `json:"support_hetu_engine_versions,omitempty"`
+
+	// 队列默认的HetuEngine版本。
+	DefaultHetuEngineVersion *string `json:"default_hetu_engine_version,omitempty"`
+
+	// 队列支持的Flink SQL版本。
+	SupportFlinkSqlVersions *[]string `json:"support_flink_sql_versions,omitempty"`
+
+	// 队列默认的Flink SQL版本。
+	DefaultFlinkSqlVersion *string `json:"default_flink_sql_version,omitempty"`
+
+	// 队列支持的Flink JAR版本。
+	SupportFlinkJarVersions *[]string `json:"support_flink_jar_versions,omitempty"`
+
+	// 队列默认的Flink JAR版本。
+	DefaultFlinkJarVersion *string `json:"default_flink_jar_version,omitempty"`
+	HttpStatusCode         int     `json:"-"`
 }
 
 func (o ShowQueueResponse) String() string {

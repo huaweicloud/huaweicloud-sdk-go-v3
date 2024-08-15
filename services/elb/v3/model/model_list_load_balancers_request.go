@@ -27,7 +27,7 @@ type ListLoadBalancersRequest struct {
 	// 负载均衡器的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
 	Description *[]string `json:"description,omitempty"`
 
-	// 参数解释：负载均衡器的启用状态。  取值范围：布尔类型。 - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt,dt_test)
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// 负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
@@ -48,7 +48,7 @@ type ListLoadBalancersRequest struct {
 	// 负载均衡器的IPv4虚拟IP地址。  支持多值查询，查询条件格式：*vip_address=xxx&vip_address=xxx*。
 	VipAddress *[]string `json:"vip_address,omitempty"`
 
-	// 负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  支持多值查询，查询条件格式：*vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。
+	// 负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。   支持多值查询，查询条件格式：*vip_subnet_cidr_id=xxx&vip_subnet_cidr_id=xxx*。
 	VipSubnetCidrId *[]string `json:"vip_subnet_cidr_id,omitempty"`
 
 	// 双栈类型负载均衡器的IPv6对应的port ID。  支持多值查询，查询条件格式：*ipv6_vip_port_id=xxx&ipv6_vip_port_id=xxx*。  [不支持IPv6，请勿使用。](tag:dt,dt_test)

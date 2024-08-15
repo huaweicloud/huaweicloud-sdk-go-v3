@@ -31,7 +31,7 @@ type InstanceVnicResp struct {
 	Vtep *string `json:"vtep,omitempty"`
 
 	// port的vni
-	Vni *int32 `json:"vni,omitempty"`
+	Vni *string `json:"vni,omitempty"`
 
 	// port的实例id
 	InstanceId *string `json:"instance_id,omitempty"`

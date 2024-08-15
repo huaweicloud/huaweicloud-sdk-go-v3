@@ -47,6 +47,12 @@ type QueryLtsLogParams struct {
 
 	// 日志迭代查询，默认为false（不开启迭代），true为开启迭代。
 	IsIterative *bool `json:"is_iterative,omitempty"`
+
+	// 使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+	Query *string `json:"query,omitempty"`
+
+	// 是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+	IsAnalysisQuery *bool `json:"is_analysis_query,omitempty"`
 }
 
 func (o QueryLtsLogParams) String() string {

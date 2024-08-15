@@ -9,7 +9,7 @@ import (
 // UpdateListenerResponse Response Object
 type UpdateListenerResponse struct {
 
-	// 请求ID。  注：自动生成 。
+	// 参数解释：请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	Listener       *Listener `json:"listener,omitempty"`

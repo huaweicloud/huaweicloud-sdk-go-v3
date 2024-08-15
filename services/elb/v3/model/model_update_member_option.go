@@ -18,7 +18,7 @@ type UpdateMemberOption struct {
 	// 后端云服务器的权重，请求将根据pool配置的负载均衡算法和后端云服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP，该字段无效。
 	Weight *int32 `json:"weight,omitempty"`
 
-	// 后端服务器端口。>在开启端口透传的pool下的member，该字段无法更新
+	// 后端服务器端口。  在开启端口透传的pool下的member，该字段无法更新。  [网关型LB，即pool协议为IP时，protocol_port必须设置为0。](tag:hws_eu)
 	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // UpdateRedirectPoolsExtendConfig 转发到的后端主机组的URL配置。
 type UpdateRedirectPoolsExtendConfig struct {
 
-	// 是否开启url重定向
+	// 参数解释：是否开启url重定向
 	RewriteUrlEnable *bool `json:"rewrite_url_enable,omitempty"`
 
 	RewriteUrlConfig *UpdateRewriteUrlConfig `json:"rewrite_url_config,omitempty"`

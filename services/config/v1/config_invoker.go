@@ -485,6 +485,18 @@ func (i *BatchDeleteRemediationExceptionsInvoker) Invoke() (*model.BatchDeleteRe
 	}
 }
 
+type CollectRemediationExecutionStatusesSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectRemediationExecutionStatusesSummaryInvoker) Invoke() (*model.CollectRemediationExecutionStatusesSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectRemediationExecutionStatusesSummaryResponse), nil
+	}
+}
+
 type CreateOrUpdateRemediationConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -100,6 +100,7 @@ type ListSpaceAnalysisRequestDatastoreType struct {
 type ListSpaceAnalysisRequestDatastoreTypeEnum struct {
 	MY_SQL              ListSpaceAnalysisRequestDatastoreType
 	GAUSS_DB_FOR_MY_SQL ListSpaceAnalysisRequestDatastoreType
+	SQL_SERVER          ListSpaceAnalysisRequestDatastoreType
 }
 
 func GetListSpaceAnalysisRequestDatastoreTypeEnum() ListSpaceAnalysisRequestDatastoreTypeEnum {
@@ -109,6 +110,9 @@ func GetListSpaceAnalysisRequestDatastoreTypeEnum() ListSpaceAnalysisRequestData
 		},
 		GAUSS_DB_FOR_MY_SQL: ListSpaceAnalysisRequestDatastoreType{
 			value: "GaussDB(for MySQL)",
+		},
+		SQL_SERVER: ListSpaceAnalysisRequestDatastoreType{
+			value: "SQLServer",
 		},
 	}
 }

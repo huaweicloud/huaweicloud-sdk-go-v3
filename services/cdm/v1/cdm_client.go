@@ -187,6 +187,27 @@ func (c *CdmClient) ListClustersInvoker(request *model.ListClustersRequest) *Lis
 	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyCluster 修改集群
+//
+// 修改CDM集群配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ModifyCluster(request *model.ModifyClusterRequest) (*model.ModifyClusterResponse, error) {
+	requestDef := GenReqDefForModifyCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyClusterResponse), nil
+	}
+}
+
+// ModifyClusterInvoker 修改集群
+func (c *CdmClient) ModifyClusterInvoker(request *model.ModifyClusterRequest) *ModifyClusterInvoker {
+	requestDef := GenReqDefForModifyCluster()
+	return &ModifyClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestartCluster 重启集群
 //
 // 重启集群接口。
@@ -208,6 +229,27 @@ func (c *CdmClient) RestartClusterInvoker(request *model.RestartClusterRequest) 
 	return &RestartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAvailabilityZones 查询所有可用区
+//
+// 查询CDM集群的所有可用区。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowAvailabilityZones(request *model.ShowAvailabilityZonesRequest) (*model.ShowAvailabilityZonesResponse, error) {
+	requestDef := GenReqDefForShowAvailabilityZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvailabilityZonesResponse), nil
+	}
+}
+
+// ShowAvailabilityZonesInvoker 查询所有可用区
+func (c *CdmClient) ShowAvailabilityZonesInvoker(request *model.ShowAvailabilityZonesRequest) *ShowAvailabilityZonesInvoker {
+	requestDef := GenReqDefForShowAvailabilityZones()
+	return &ShowAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowClusterDetail 查询集群详情
 //
 // 查询集群详情接口。
@@ -227,6 +269,132 @@ func (c *CdmClient) ShowClusterDetail(request *model.ShowClusterDetailRequest) (
 func (c *CdmClient) ShowClusterDetailInvoker(request *model.ShowClusterDetailRequest) *ShowClusterDetailInvoker {
 	requestDef := GenReqDefForShowClusterDetail()
 	return &ShowClusterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterEnterpriseProjects 查询集群的企业项目ID
+//
+// 查询指定集群的企业项目ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowClusterEnterpriseProjects(request *model.ShowClusterEnterpriseProjectsRequest) (*model.ShowClusterEnterpriseProjectsResponse, error) {
+	requestDef := GenReqDefForShowClusterEnterpriseProjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterEnterpriseProjectsResponse), nil
+	}
+}
+
+// ShowClusterEnterpriseProjectsInvoker 查询集群的企业项目ID
+func (c *CdmClient) ShowClusterEnterpriseProjectsInvoker(request *model.ShowClusterEnterpriseProjectsRequest) *ShowClusterEnterpriseProjectsInvoker {
+	requestDef := GenReqDefForShowClusterEnterpriseProjects()
+	return &ShowClusterEnterpriseProjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDatastores 查询支持的版本
+//
+// 查询CDM集群支持的版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowDatastores(request *model.ShowDatastoresRequest) (*model.ShowDatastoresResponse, error) {
+	requestDef := GenReqDefForShowDatastores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatastoresResponse), nil
+	}
+}
+
+// ShowDatastoresInvoker 查询支持的版本
+func (c *CdmClient) ShowDatastoresInvoker(request *model.ShowDatastoresRequest) *ShowDatastoresInvoker {
+	requestDef := GenReqDefForShowDatastores()
+	return &ShowDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEnterpriseProjects 查询所有集群的企业项目ID
+//
+// 查询当前项目下的所有集群的企业项目ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowEnterpriseProjects(request *model.ShowEnterpriseProjectsRequest) (*model.ShowEnterpriseProjectsResponse, error) {
+	requestDef := GenReqDefForShowEnterpriseProjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEnterpriseProjectsResponse), nil
+	}
+}
+
+// ShowEnterpriseProjectsInvoker 查询所有集群的企业项目ID
+func (c *CdmClient) ShowEnterpriseProjectsInvoker(request *model.ShowEnterpriseProjectsRequest) *ShowEnterpriseProjectsInvoker {
+	requestDef := GenReqDefForShowEnterpriseProjects()
+	return &ShowEnterpriseProjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlavorDetail 查询规格详情
+//
+// 查询指定规格ID的规格详请。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowFlavorDetail(request *model.ShowFlavorDetailRequest) (*model.ShowFlavorDetailResponse, error) {
+	requestDef := GenReqDefForShowFlavorDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlavorDetailResponse), nil
+	}
+}
+
+// ShowFlavorDetailInvoker 查询规格详情
+func (c *CdmClient) ShowFlavorDetailInvoker(request *model.ShowFlavorDetailRequest) *ShowFlavorDetailInvoker {
+	requestDef := GenReqDefForShowFlavorDetail()
+	return &ShowFlavorDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlavors 查询版本规格
+//
+// 按版本ID查询所有兼容规格。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowFlavors(request *model.ShowFlavorsRequest) (*model.ShowFlavorsResponse, error) {
+	requestDef := GenReqDefForShowFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlavorsResponse), nil
+	}
+}
+
+// ShowFlavorsInvoker 查询版本规格
+func (c *CdmClient) ShowFlavorsInvoker(request *model.ShowFlavorsRequest) *ShowFlavorsInvoker {
+	requestDef := GenReqDefForShowFlavors()
+	return &ShowFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceDetail 查询集群实例信息
+//
+// 查询集群实例信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdmClient) ShowInstanceDetail(request *model.ShowInstanceDetailRequest) (*model.ShowInstanceDetailResponse, error) {
+	requestDef := GenReqDefForShowInstanceDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceDetailResponse), nil
+	}
+}
+
+// ShowInstanceDetailInvoker 查询集群实例信息
+func (c *CdmClient) ShowInstanceDetailInvoker(request *model.ShowInstanceDetailRequest) *ShowInstanceDetailInvoker {
+	requestDef := GenReqDefForShowInstanceDetail()
+	return &ShowInstanceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJobStatus 查询作业状态

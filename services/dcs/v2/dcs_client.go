@@ -61,6 +61,27 @@ func (c *DcsClient) BatchDeleteInstancesInvoker(request *model.BatchDeleteInstan
 	return &BatchDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchRestartOnlineMigrationTasks 批量重启在线迁移任务
+//
+// 批量重启在线迁移任务，接口响应成功，返回重启在线迁移任务下发结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) BatchRestartOnlineMigrationTasks(request *model.BatchRestartOnlineMigrationTasksRequest) (*model.BatchRestartOnlineMigrationTasksResponse, error) {
+	requestDef := GenReqDefForBatchRestartOnlineMigrationTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRestartOnlineMigrationTasksResponse), nil
+	}
+}
+
+// BatchRestartOnlineMigrationTasksInvoker 批量重启在线迁移任务
+func (c *DcsClient) BatchRestartOnlineMigrationTasksInvoker(request *model.BatchRestartOnlineMigrationTasksRequest) *BatchRestartOnlineMigrationTasksInvoker {
+	requestDef := GenReqDefForBatchRestartOnlineMigrationTasks()
+	return &BatchRestartOnlineMigrationTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchShowNodesInformation 批量查询实例节点信息
 //
 // 批量查询指定项目所有实例的节点信息、有效实例个数及节点个数。

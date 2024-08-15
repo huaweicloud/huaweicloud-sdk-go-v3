@@ -1574,9 +1574,9 @@ func (c *GaussDBforopenGaussClient) ShowBalanceStatusInvoker(request *model.Show
 	return &ShowBalanceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowBatchUpgradeCandidateVersions 查询批量实例可升级的版本和升级类型
+// ShowBatchUpgradeCandidateVersions 查询批量实例可升级的版本和升级类型。
 //
-// 查询批量实例可升级的版本和升级类型
+// 查询批量实例可升级的版本和升级类型。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ShowBatchUpgradeCandidateVersions(request *model.ShowBatchUpgradeCandidateVersionsRequest) (*model.ShowBatchUpgradeCandidateVersionsResponse, error) {
@@ -1589,7 +1589,7 @@ func (c *GaussDBforopenGaussClient) ShowBatchUpgradeCandidateVersions(request *m
 	}
 }
 
-// ShowBatchUpgradeCandidateVersionsInvoker 查询批量实例可升级的版本和升级类型
+// ShowBatchUpgradeCandidateVersionsInvoker 查询批量实例可升级的版本和升级类型。
 func (c *GaussDBforopenGaussClient) ShowBatchUpgradeCandidateVersionsInvoker(request *model.ShowBatchUpgradeCandidateVersionsRequest) *ShowBatchUpgradeCandidateVersionsInvoker {
 	requestDef := GenReqDefForShowBatchUpgradeCandidateVersions()
 	return &ShowBatchUpgradeCandidateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1847,7 +1847,7 @@ func (c *GaussDBforopenGaussClient) ShowSslCertDownloadLinkInvoker(request *mode
 
 // ShowUpgradeCandidateVersions 查询实例可升级版本
 //
-// 查询实例可升级版本
+// 查询实例可升级版本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ShowUpgradeCandidateVersions(request *model.ShowUpgradeCandidateVersionsRequest) (*model.ShowUpgradeCandidateVersionsResponse, error) {

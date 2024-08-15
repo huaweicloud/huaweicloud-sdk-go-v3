@@ -903,6 +903,32 @@ func GenReqDefForShowVgw() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdatePostpaidVgwSpecification() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/vpn-gateways/{vgw_id}/update-specification").
+		WithResponse(new(model.UpdatePostpaidVgwSpecificationResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VgwId").
+		WithJsonTag("vgw_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("HeaderResponseToken").
+		WithJsonTag("header-response-token").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateVgw() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

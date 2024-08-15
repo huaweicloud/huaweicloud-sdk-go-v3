@@ -17,6 +17,9 @@ type FactoryInfo struct {
 
 	// 厂商版本
 	Version *string `json:"version,omitempty"`
+
+	// 智能信息模板ID
+	TplId *string `json:"tpl_id,omitempty"`
 }
 
 func (o FactoryInfo) String() string {

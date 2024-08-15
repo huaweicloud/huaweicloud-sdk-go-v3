@@ -16,7 +16,7 @@ type CreatePubFastappModel struct {
 	LogoImg string `json:"logo_img"`
 
 	// 快应用描述。  > 长度范围为1-38个字符，中文占2个字符，英文占1个字符。
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 
 	// 快应用跳转链接。
 	Deeplink string `json:"deeplink"`

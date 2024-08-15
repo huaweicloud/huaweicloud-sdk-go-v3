@@ -42,7 +42,7 @@ type ListDesktopsDetailRequest struct {
 	// 桌面ID。
 	DesktopId *[]string `json:"desktop_id,omitempty"`
 
-	// 桌面类型，为空时查所有桌面。 - DEDICATED：普通桌面，包括专享桌面、专属桌面等 - POOLED：池桌面，即桌面池里的桌面
+	// 桌面类型，为空时查所有桌面。 - DEDICATED：普通桌面，包括专享桌面、专属桌面等 - POOLED：池桌面，即桌面池里的桌面 - SHARED: 多用户共享桌面。
 	DesktopType *string `json:"desktop_type,omitempty"`
 
 	// 桌面的标签。样例：  - key1=value1。 - key1=value1，key2=value2。

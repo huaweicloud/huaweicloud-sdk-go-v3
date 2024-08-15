@@ -9,7 +9,7 @@ import (
 // Quota 负载均衡相关各类资源的配额信息。仅返回资源的总配额，不包括剩余可用配额。
 type Quota struct {
 
-	// 项目ID。
+	// 参数解释：项目ID。
 	ProjectId string `json:"project_id"`
 
 	// 负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。

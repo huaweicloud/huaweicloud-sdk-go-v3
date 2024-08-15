@@ -47,6 +47,21 @@ func GenReqDefForBatchDeleteInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchRestartOnlineMigrationTasks() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/migration-tasks/batch-restart").
+		WithResponse(new(model.BatchRestartOnlineMigrationTasksResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchShowNodesInformation() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

@@ -9,7 +9,7 @@ import (
 // ShowL7PolicyRequest Request Object
 type ShowL7PolicyRequest struct {
 
-	// 转发策略ID。
+	// 参数解释：转发策略ID。
 	L7policyId string `json:"l7policy_id"`
 }
 

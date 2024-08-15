@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// RemoveHeadersConfig 要移除的请求头参数列表。
+// RemoveHeadersConfig 参数解释：要移除的请求头参数列表。
 type RemoveHeadersConfig struct {
 
-	// 要移除的请求头参数列表。
+	// 参数解释：要移除的请求头参数列表。
 	Configs []RemoveHeaderConfig `json:"configs"`
 }
 

@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// UpgradeActionInfo 升级操作信息
+// UpgradeActionInfo 升级操作信息。
 type UpgradeActionInfo struct {
 
-	// 升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
+	// 升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
 	UpgradeAction *UpgradeActionInfoUpgradeAction `json:"upgrade_action,omitempty"`
 
-	// 可用，不可用
+	// 可用，不可用。
 	Enable *bool `json:"enable,omitempty"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 type DeleteBackupErrorResponse struct {
 
-	// 错误码
+	// 错误码。
 	ErrorCode string `json:"error_code"`
 
 	// 错误消息。

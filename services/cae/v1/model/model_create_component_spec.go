@@ -59,6 +59,9 @@ type CreateComponentSpecRuntimeEnum struct {
 	NODEJS14 CreateComponentSpecRuntime
 	NODEJS16 CreateComponentSpecRuntime
 	PHP7     CreateComponentSpecRuntime
+	DOTNET6  CreateComponentSpecRuntime
+	DOTNET7  CreateComponentSpecRuntime
+	DOTNET8  CreateComponentSpecRuntime
 }
 
 func GetCreateComponentSpecRuntimeEnum() CreateComponentSpecRuntimeEnum {
@@ -95,6 +98,15 @@ func GetCreateComponentSpecRuntimeEnum() CreateComponentSpecRuntimeEnum {
 		},
 		PHP7: CreateComponentSpecRuntime{
 			value: "Php7",
+		},
+		DOTNET6: CreateComponentSpecRuntime{
+			value: "Dotnet6",
+		},
+		DOTNET7: CreateComponentSpecRuntime{
+			value: "Dotnet7",
+		},
+		DOTNET8: CreateComponentSpecRuntime{
+			value: "Dotnet8",
 		},
 	}
 }

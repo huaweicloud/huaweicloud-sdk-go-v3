@@ -9,12 +9,12 @@ import (
 // ListL7RulesResponse Response Object
 type ListL7RulesResponse struct {
 
-	// 请求ID。  注：自动生成 。
+	// 参数解释：请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 规则对象列表。
+	// 参数解释：规则对象列表。
 	Rules          *[]L7Rule `json:"rules,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

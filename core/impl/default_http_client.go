@@ -217,6 +217,7 @@ func (client *DefaultHttpClient) monitorHttp(exch *exchange.SdkExchange, resp *h
 			RequestId:     exch.ApiReference.RequestId,
 			StatusCode:    exch.ApiReference.StatusCode,
 			ContentLength: exch.ApiReference.ContentLength,
+			Attributes:    exch.Attributes,
 		}
 
 		client.httpHandler.MonitorHandlers(metric)

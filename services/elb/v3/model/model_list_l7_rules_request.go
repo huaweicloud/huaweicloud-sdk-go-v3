@@ -33,7 +33,7 @@ type ListL7RulesRequest struct {
 	// 是否反向匹配。使用说明：固定为false。该字段能更新但不会生效。
 	Invert *bool `json:"invert,omitempty"`
 
-	// 转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+	// 转发规则的管理状态。  不支持该字段，请勿使用。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// 匹配内容的值。  支持多值查询，查询条件格式：*value=xxx&value=xxx*。

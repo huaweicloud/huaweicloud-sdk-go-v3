@@ -12,7 +12,7 @@ import (
 // ShowBatchUpgradeCandidateVersionsRequest Request Object
 type ShowBatchUpgradeCandidateVersionsRequest struct {
 
-	// 语言[zh-cn, en-us]
+	// 语言[zh-cn, en-us]。
 	XLanguage *ShowBatchUpgradeCandidateVersionsRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *UpgradeInstancesRequestBody `json:"body,omitempty"`

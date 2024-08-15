@@ -485,6 +485,18 @@ func (i *ShowVgwInvoker) Invoke() (*model.ShowVgwResponse, error) {
 	}
 }
 
+type UpdatePostpaidVgwSpecificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePostpaidVgwSpecificationInvoker) Invoke() (*model.UpdatePostpaidVgwSpecificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePostpaidVgwSpecificationResponse), nil
+	}
+}
+
 type UpdateVgwInvoker struct {
 	*invoker.BaseInvoker
 }

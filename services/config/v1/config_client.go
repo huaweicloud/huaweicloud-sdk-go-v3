@@ -859,6 +859,27 @@ func (c *ConfigClient) BatchDeleteRemediationExceptionsInvoker(request *model.Ba
 	return &BatchDeleteRemediationExceptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectRemediationExecutionStatusesSummary 列举修正最新记录
+//
+// 列举合规规则修正最新记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CollectRemediationExecutionStatusesSummary(request *model.CollectRemediationExecutionStatusesSummaryRequest) (*model.CollectRemediationExecutionStatusesSummaryResponse, error) {
+	requestDef := GenReqDefForCollectRemediationExecutionStatusesSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectRemediationExecutionStatusesSummaryResponse), nil
+	}
+}
+
+// CollectRemediationExecutionStatusesSummaryInvoker 列举修正最新记录
+func (c *ConfigClient) CollectRemediationExecutionStatusesSummaryInvoker(request *model.CollectRemediationExecutionStatusesSummaryRequest) *CollectRemediationExecutionStatusesSummaryInvoker {
+	requestDef := GenReqDefForCollectRemediationExecutionStatusesSummary()
+	return &CollectRemediationExecutionStatusesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateOrUpdateRemediationConfiguration 创建或更新修正配置
 //
 // 创建或更新合规规则修正配置。

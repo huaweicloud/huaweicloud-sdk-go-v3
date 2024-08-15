@@ -9,7 +9,7 @@ import (
 // ListMembersRequest Request Object
 type ListMembersRequest struct {
 
-	// 后端服务器组ID。
+	// 参数解释：后端服务器组ID。
 	PoolId string `json:"pool_id"`
 
 	// 上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。

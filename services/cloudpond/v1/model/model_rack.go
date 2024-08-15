@@ -56,6 +56,8 @@ type Rack struct {
 	StorageUnit *StorageUnit `json:"storage_unit,omitempty"`
 
 	RackInfo *RackInfo `json:"rack_info,omitempty"`
+
+	ProductInfo *ProductInfo `json:"product_info,omitempty"`
 }
 
 func (o Rack) String() string {

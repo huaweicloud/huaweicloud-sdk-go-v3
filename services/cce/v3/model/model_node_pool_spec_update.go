@@ -15,7 +15,8 @@ type NodePoolSpecUpdate struct {
 
 	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling"`
 
-	ExtensionScaleGroups *ExtensionScaleGroup `json:"extensionScaleGroups,omitempty"`
+	// 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
+	ExtensionScaleGroups *[]ExtensionScaleGroup `json:"extensionScaleGroups,omitempty"`
 }
 
 func (o NodePoolSpecUpdate) String() string {

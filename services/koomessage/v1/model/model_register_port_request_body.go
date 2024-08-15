@@ -21,7 +21,7 @@ type RegisterPortRequestBody struct {
 	// 是否需要校验。  - 0：不校验  - 1：校验签名  > 当port_type为3或者5时，sign_check必须为1。
 	SignCheck int32 `json:"sign_check"`
 
-	// 授权证明图片资源，最多支持5张。参数格式为：*资源ID:资源URL*，样例：3d214a61672846f88ad77597f935cccc:AimSauploadService/272957b708ac4891a6d5282ccd2175cccc.png。 > 资源ID与资源URL对应上传智能信息服务号图片资源API返回的resource_id和resource_url。
+	// 授权证明图片资源，支持jpg、bmp、png和jpeg格式，全部图片总大小不超过4M，最多支持5张。参数格式为：*资源ID:资源URL*，样例：3d214a61672846f88ad77597f935cccc:AimSauploadService/272957b708ac4891a6d5282ccd2175cccc.png。 > 资源ID与资源URL对应上传智能信息服务号图片资源API返回的resource_id和resource_url。
 	AuthorizationFiles []string `json:"authorization_files"`
 }
 

@@ -50,6 +50,18 @@ type AimTemplate struct {
 
 	// 支持厂商列表。
 	FactoryInfo *[]FactoryInfo `json:"factory_info,omitempty"`
+
+	// 审核状态。 - 1：短链解析模板 - 2：文本识别模板 - 4：一体化模板
+	MatchType *int32 `json:"match_type,omitempty"`
+
+	// 布局类型。
+	CardId *string `json:"card_id,omitempty"`
+
+	// sub_type。
+	SubType *int32 `json:"sub_type,omitempty"`
+
+	// 模板二维码预览地址。
+	PreviewUrl *string `json:"preview_url,omitempty"`
 }
 
 func (o AimTemplate) String() string {

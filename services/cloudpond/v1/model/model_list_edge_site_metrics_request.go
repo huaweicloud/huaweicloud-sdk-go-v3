@@ -15,7 +15,7 @@ type ListEdgeSiteMetricsRequest struct {
 	// 边缘小站ID
 	SiteId string `json:"site_id"`
 
-	// 指定维度查询 - site_id: 按站点维度，查询站点下计算、存储资源容量信息 - flavor: 按规格维度，查询站点下各flavor的计算资源使用情况 - storage: 按存储维度，查询站点下各存储资源类型的使用情况 - flavor_capacity: 按规格容量维度，查询站点下各规格可发放数量预测
+	// 指定维度查询 - site_id: 按站点维度，查询站点下计算、存储资源容量信息 - flavor: 按规格维度，查询站点下各flavor的计算资源使用情况 - storage: 按存储维度，查询站点下各存储资源类型的使用情况 - flavor_capacity: 按规格容量维度，查询站点下各规格可发放数量预测 - storage_pool：按存储池维度，查询站点下各存储池的使用情况
 	Dim *ListEdgeSiteMetricsRequestDim `json:"dim,omitempty"`
 }
 
@@ -37,6 +37,7 @@ type ListEdgeSiteMetricsRequestDimEnum struct {
 	FLAVOR          ListEdgeSiteMetricsRequestDim
 	STORAGE         ListEdgeSiteMetricsRequestDim
 	FLAVOR_CAPACITY ListEdgeSiteMetricsRequestDim
+	STORAGE_POOL    ListEdgeSiteMetricsRequestDim
 }
 
 func GetListEdgeSiteMetricsRequestDimEnum() ListEdgeSiteMetricsRequestDimEnum {
@@ -52,6 +53,9 @@ func GetListEdgeSiteMetricsRequestDimEnum() ListEdgeSiteMetricsRequestDimEnum {
 		},
 		FLAVOR_CAPACITY: ListEdgeSiteMetricsRequestDim{
 			value: "flavor_capacity",
+		},
+		STORAGE_POOL: ListEdgeSiteMetricsRequestDim{
+			value: "storage_pool",
 		},
 	}
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateLoadBalancerRequestBody 创建负载均衡器实例的参数对象。
+// CreateLoadBalancerRequestBody 参数解释：创建负载均衡器实例的参数对象。
 type CreateLoadBalancerRequestBody struct {
 	Loadbalancer *CreateLoadBalancerOption `json:"loadbalancer"`
 }

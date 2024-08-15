@@ -53,6 +53,9 @@ type CreateComponentWithConfigurationRequestBodySpecRuntimeEnum struct {
 	NODEJS14 CreateComponentWithConfigurationRequestBodySpecRuntime
 	NODEJS16 CreateComponentWithConfigurationRequestBodySpecRuntime
 	PHP7     CreateComponentWithConfigurationRequestBodySpecRuntime
+	DOTNET6  CreateComponentWithConfigurationRequestBodySpecRuntime
+	DOTNET7  CreateComponentWithConfigurationRequestBodySpecRuntime
+	DOTNET8  CreateComponentWithConfigurationRequestBodySpecRuntime
 }
 
 func GetCreateComponentWithConfigurationRequestBodySpecRuntimeEnum() CreateComponentWithConfigurationRequestBodySpecRuntimeEnum {
@@ -89,6 +92,15 @@ func GetCreateComponentWithConfigurationRequestBodySpecRuntimeEnum() CreateCompo
 		},
 		PHP7: CreateComponentWithConfigurationRequestBodySpecRuntime{
 			value: "Php7",
+		},
+		DOTNET6: CreateComponentWithConfigurationRequestBodySpecRuntime{
+			value: "Dotnet6",
+		},
+		DOTNET7: CreateComponentWithConfigurationRequestBodySpecRuntime{
+			value: "Dotnet7",
+		},
+		DOTNET8: CreateComponentWithConfigurationRequestBodySpecRuntime{
+			value: "Dotnet8",
 		},
 	}
 }

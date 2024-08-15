@@ -9,7 +9,7 @@ import (
 // UpdateL7RuleResponse Response Object
 type UpdateL7RuleResponse struct {
 
-	// 请求ID。  注：自动生成 。
+	// 参数解释：请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	Rule           *L7Rule `json:"rule,omitempty"`

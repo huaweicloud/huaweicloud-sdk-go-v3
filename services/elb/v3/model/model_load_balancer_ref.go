@@ -9,7 +9,7 @@ import (
 // LoadBalancerRef 负载均衡器信息
 type LoadBalancerRef struct {
 
-	// 负载均衡器ID。
+	// 参数解释：负载均衡器ID。
 	Id *string `json:"id,omitempty"`
 }
 

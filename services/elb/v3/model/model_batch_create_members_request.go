@@ -9,7 +9,7 @@ import (
 // BatchCreateMembersRequest Request Object
 type BatchCreateMembersRequest struct {
 
-	// 后端服务器组ID。
+	// 参数解释：后端服务器组ID。
 	PoolId string `json:"pool_id"`
 
 	Body *BatchCreateMembersRequestBody `json:"body,omitempty"`

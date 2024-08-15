@@ -12,7 +12,7 @@ import (
 // PolicyStatement policy
 type PolicyStatement struct {
 
-	// Allow允许或Refuse拒绝，控制访问权限
+	// Allow允许或Deny拒绝，控制访问权限
 	Effect PolicyStatementEffect `json:"Effect"`
 
 	// obs访问权限
@@ -36,8 +36,8 @@ type PolicyStatementEffect struct {
 }
 
 type PolicyStatementEffectEnum struct {
-	ALLOW  PolicyStatementEffect
-	REFUSE PolicyStatementEffect
+	ALLOW PolicyStatementEffect
+	DENY  PolicyStatementEffect
 }
 
 func GetPolicyStatementEffectEnum() PolicyStatementEffectEnum {
@@ -45,8 +45,8 @@ func GetPolicyStatementEffectEnum() PolicyStatementEffectEnum {
 		ALLOW: PolicyStatementEffect{
 			value: "Allow",
 		},
-		REFUSE: PolicyStatementEffect{
-			value: "Refuse",
+		DENY: PolicyStatementEffect{
+			value: "Deny",
 		},
 	}
 }

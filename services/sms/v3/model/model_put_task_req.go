@@ -36,6 +36,9 @@ type PutTaskReq struct {
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+	ExistServer *bool `json:"exist_server,omitempty"`
+
 	// 目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
 	MigrationIp *string `json:"migration_ip,omitempty"`
 

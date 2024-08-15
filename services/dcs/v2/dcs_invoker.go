@@ -29,6 +29,18 @@ func (i *BatchDeleteInstancesInvoker) Invoke() (*model.BatchDeleteInstancesRespo
 	}
 }
 
+type BatchRestartOnlineMigrationTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchRestartOnlineMigrationTasksInvoker) Invoke() (*model.BatchRestartOnlineMigrationTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchRestartOnlineMigrationTasksResponse), nil
+	}
+}
+
 type BatchShowNodesInformationInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// UpgradeTypeInfo 升级类型信息
+// UpgradeTypeInfo 升级类型信息。
 type UpgradeTypeInfo struct {
 
-	// 升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
+	// 升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
 	UpgradeType *UpgradeTypeInfoUpgradeType `json:"upgrade_type,omitempty"`
 
-	// 可用，不可用
+	// 可用，不可用。
 	Enable *bool `json:"enable,omitempty"`
 
-	// 升级操作列表
+	// 升级操作列表。
 	UpgradeActionList *[]UpgradeActionInfo `json:"upgrade_action_list,omitempty"`
 
 	// 是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。

@@ -586,9 +586,9 @@ func (c *CaeClient) ListEipsInvoker(request *model.ListEipsRequest) *ListEipsInv
 	return &ListEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEip 修改带宽
+// UpdateEip 修改出入网带宽以及开闭状态
 //
-// 修改带宽。
+// 修改出入网带宽以及开闭状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CaeClient) UpdateEip(request *model.UpdateEipRequest) (*model.UpdateEipResponse, error) {
@@ -601,7 +601,7 @@ func (c *CaeClient) UpdateEip(request *model.UpdateEipRequest) (*model.UpdateEip
 	}
 }
 
-// UpdateEipInvoker 修改带宽
+// UpdateEipInvoker 修改出入网带宽以及开闭状态
 func (c *CaeClient) UpdateEipInvoker(request *model.UpdateEipRequest) *UpdateEipInvoker {
 	requestDef := GenReqDefForUpdateEip()
 	return &UpdateEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

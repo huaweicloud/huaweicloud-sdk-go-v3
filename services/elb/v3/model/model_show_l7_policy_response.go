@@ -9,7 +9,7 @@ import (
 // ShowL7PolicyResponse Response Object
 type ShowL7PolicyResponse struct {
 
-	// 请求ID。  注：自动生成 。
+	// 参数解释：请求ID。  注：自动生成 。
 	RequestId *string `json:"request_id,omitempty"`
 
 	L7policy       *L7Policy `json:"l7policy,omitempty"`

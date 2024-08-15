@@ -16,6 +16,12 @@ type StopMigrationTaskResult struct {
 
 	// 数据迁移任务ID。
 	TaskId *string `json:"task_id,omitempty"`
+
+	// 错误信息
+	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 错误码
+	ErrorCode *string `json:"error_code,omitempty"`
 }
 
 func (o StopMigrationTaskResult) String() string {

@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// PrepaidCreateOption 创建负载均衡器实例的预付费计费配置，若传入该结构体，则创建预付费类型的负载均衡器实例。  [不支持该字段，请勿使用](tag:dt,dt_test,hcso_dt)
+// PrepaidCreateOption 参数解释：创建负载均衡器实例的预付费计费配置。若传入该结构体，则创建预付费类型的负载均衡器实例。  [不支持该字段，请勿使用](tag:dt,dt_test,hcso_dt)
 type PrepaidCreateOption struct {
 
 	// 参数解释：预付费实例的订购周期类型，当前支持月和年。  取值范围：  - month：月。  - year：年。
 	PeriodType PrepaidCreateOptionPeriodType `json:"period_type"`
 
-	// 参数解释：预付费实例的订购周期数，取值会随运营策略变化。  约束限制： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
+	// 参数解释：预付费实例的订购周期数。  取值范围： - period_type为month时，为[1,9]。 - period_type为year时，为[1,3]。
 	PeriodNum *int32 `json:"period_num,omitempty"`
 
 	// 参数解释：自动续订开关。  取值范围： - true：开启自动续订。 - false：关闭自动续订。

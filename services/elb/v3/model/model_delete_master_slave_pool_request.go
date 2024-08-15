@@ -9,7 +9,7 @@ import (
 // DeleteMasterSlavePoolRequest Request Object
 type DeleteMasterSlavePoolRequest struct {
 
-	// 后端服务器组ID。
+	// 参数解释：后端服务器组ID。
 	PoolId string `json:"pool_id"`
 }
 

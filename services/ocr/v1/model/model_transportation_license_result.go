@@ -26,23 +26,32 @@ type TransportationLicenseResult struct {
 	// 车辆尺寸。
 	VehicleSize *string `json:"vehicle_size,omitempty"`
 
-	// 核发机关（非必有，依赖对应运输证板式）。
+	// 核发机关。
 	IssuingAuthority *string `json:"issuing_authority,omitempty"`
 
-	// 发证日期（非必有，依赖对应运输证板式）。
+	// 发证日期。
 	IssueDate *string `json:"issue_date,omitempty"`
 
-	// 业户地址（非必有，依赖对应运输证板式）。
+	// 业户地址。
 	OwnerAddress *string `json:"owner_address,omitempty"`
 
-	// 经济类型（非必有，依赖对应运输证板式）。
+	// 经济类型。
 	EconomicType *string `json:"economic_type,omitempty"`
 
-	// 经营许可证号（非必有，依赖对应运输证板式）。
+	// 经营许可证号。
 	BusinessCertificate *string `json:"business_certificate,omitempty"`
 
-	// 经营范围（非必有，依赖对应运输证板式）。
+	// 经营范围。
 	BusinessScope *string `json:"business_scope,omitempty"`
+
+	// 有效期。
+	ExpiryDate *string `json:"expiry_date,omitempty"`
+
+	// 审验有效期。
+	ReviewExpiryDate *string `json:"review_expiry_date,omitempty"`
+
+	// 技术等级评定。
+	AssessedTechnicalLevel *string `json:"assessed_technical_level,omitempty"`
 
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
 	Confidence *interface{} `json:"confidence,omitempty"`

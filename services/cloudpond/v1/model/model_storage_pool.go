@@ -29,6 +29,8 @@ type StoragePool struct {
 	// 资源规格编码
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
+	ProductInfo *ProductInfo `json:"product_info,omitempty"`
+
 	// 总容量
 	Capacity *int32 `json:"capacity,omitempty"`
 

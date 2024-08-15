@@ -49,6 +49,9 @@ type UpdateComponentRequestSpecRuntimeEnum struct {
 	NODEJS14 UpdateComponentRequestSpecRuntime
 	NODEJS16 UpdateComponentRequestSpecRuntime
 	PHP7     UpdateComponentRequestSpecRuntime
+	DOTNET6  UpdateComponentRequestSpecRuntime
+	DOTNET7  UpdateComponentRequestSpecRuntime
+	DOTNET8  UpdateComponentRequestSpecRuntime
 }
 
 func GetUpdateComponentRequestSpecRuntimeEnum() UpdateComponentRequestSpecRuntimeEnum {
@@ -85,6 +88,15 @@ func GetUpdateComponentRequestSpecRuntimeEnum() UpdateComponentRequestSpecRuntim
 		},
 		PHP7: UpdateComponentRequestSpecRuntime{
 			value: "Php7",
+		},
+		DOTNET6: UpdateComponentRequestSpecRuntime{
+			value: "Dotnet6",
+		},
+		DOTNET7: UpdateComponentRequestSpecRuntime{
+			value: "Dotnet7",
+		},
+		DOTNET8: UpdateComponentRequestSpecRuntime{
+			value: "Dotnet8",
 		},
 	}
 }

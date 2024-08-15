@@ -53,6 +53,12 @@ type PubDetail struct {
 
 	// 服务号备注。
 	PubRemark *string `json:"pub_remark,omitempty"`
+
+	// 审核状态。 - 1：审核中 - 2：审核通过 - 3：驳回
+	ApproveState *int32 `json:"approve_state,omitempty"`
+
+	// 自动收集端口生效的地区列表。地区取值见《地区名称列表》。
+	AreasForAutoGetPort *[]string `json:"areas_for_auto_get_port,omitempty"`
 }
 
 func (o PubDetail) String() string {

@@ -9,7 +9,7 @@ import (
 // RuleRef
 type RuleRef struct {
 
-	// 规则ID。
+	// 参数解释：规则ID。
 	Id string `json:"id"`
 }
 
