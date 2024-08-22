@@ -544,6 +544,27 @@ func (c *WorkspaceClient) ListDesktopsInvoker(request *model.ListDesktopsRequest
 	return &ListDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDesktopsConnectStatus 查询桌面登录状态列表
+//
+// 查询桌面登录状态列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopsConnectStatus(request *model.ListDesktopsConnectStatusRequest) (*model.ListDesktopsConnectStatusResponse, error) {
+	requestDef := GenReqDefForListDesktopsConnectStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopsConnectStatusResponse), nil
+	}
+}
+
+// ListDesktopsConnectStatusInvoker 查询桌面登录状态列表
+func (c *WorkspaceClient) ListDesktopsConnectStatusInvoker(request *model.ListDesktopsConnectStatusRequest) *ListDesktopsConnectStatusInvoker {
+	requestDef := GenReqDefForListDesktopsConnectStatus()
+	return &ListDesktopsConnectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDesktopsDetail 查询桌面详情列表
 //
 // 查询桌面详情信息列表。

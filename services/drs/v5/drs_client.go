@@ -403,6 +403,27 @@ func (c *DrsClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJob
 	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteUserJdbcDriver 删除驱动文件
+//
+// 删除驱动文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) DeleteUserJdbcDriver(request *model.DeleteUserJdbcDriverRequest) (*model.DeleteUserJdbcDriverResponse, error) {
+	requestDef := GenReqDefForDeleteUserJdbcDriver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteUserJdbcDriverResponse), nil
+	}
+}
+
+// DeleteUserJdbcDriverInvoker 删除驱动文件
+func (c *DrsClient) DeleteUserJdbcDriverInvoker(request *model.DeleteUserJdbcDriverRequest) *DeleteUserJdbcDriverInvoker {
+	requestDef := GenReqDefForDeleteUserJdbcDriver()
+	return &DeleteUserJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadBatchCreateTemplate 下载批量导入任务模板
 //
 // 下载批量导入任务模板
@@ -760,6 +781,27 @@ func (c *DrsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsRes
 func (c *DrsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
 	requestDef := GenReqDefForListTags()
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserJdbcDrivers 查询驱动文件列表
+//
+// 查询驱动文件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListUserJdbcDrivers(request *model.ListUserJdbcDriversRequest) (*model.ListUserJdbcDriversResponse, error) {
+	requestDef := GenReqDefForListUserJdbcDrivers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserJdbcDriversResponse), nil
+	}
+}
+
+// ListUserJdbcDriversInvoker 查询驱动文件列表
+func (c *DrsClient) ListUserJdbcDriversInvoker(request *model.ListUserJdbcDriversRequest) *ListUserJdbcDriversInvoker {
+	requestDef := GenReqDefForListUserJdbcDrivers()
+	return &ListUserJdbcDriversInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListsAgencyPermissions 查询委托的权限列表
@@ -1377,6 +1419,27 @@ func (c *DrsClient) SyncJdbcDriverInvoker(request *model.SyncJdbcDriverRequest) 
 	return &SyncJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SyncUserJdbcDriver 同步驱动文件
+//
+// 同步驱动文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) SyncUserJdbcDriver(request *model.SyncUserJdbcDriverRequest) (*model.SyncUserJdbcDriverResponse, error) {
+	requestDef := GenReqDefForSyncUserJdbcDriver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncUserJdbcDriverResponse), nil
+	}
+}
+
+// SyncUserJdbcDriverInvoker 同步驱动文件
+func (c *DrsClient) SyncUserJdbcDriverInvoker(request *model.SyncUserJdbcDriverRequest) *SyncUserJdbcDriverInvoker {
+	requestDef := GenReqDefForSyncUserJdbcDriver()
+	return &SyncUserJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateBatchAsyncJobs 更新指定ID批量异步任务详情
 //
 // 更新租户指定ID批量异步任务详情。
@@ -1546,6 +1609,27 @@ func (c *DrsClient) UploadJdbcDriver(request *model.UploadJdbcDriverRequest) (*m
 func (c *DrsClient) UploadJdbcDriverInvoker(request *model.UploadJdbcDriverRequest) *UploadJdbcDriverInvoker {
 	requestDef := GenReqDefForUploadJdbcDriver()
 	return &UploadJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadUserJdbcDriver 上传驱动文件
+//
+// 上传驱动文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UploadUserJdbcDriver(request *model.UploadUserJdbcDriverRequest) (*model.UploadUserJdbcDriverResponse, error) {
+	requestDef := GenReqDefForUploadUserJdbcDriver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadUserJdbcDriverResponse), nil
+	}
+}
+
+// UploadUserJdbcDriverInvoker 上传驱动文件
+func (c *DrsClient) UploadUserJdbcDriverInvoker(request *model.UploadUserJdbcDriverRequest) *UploadUserJdbcDriverInvoker {
+	requestDef := GenReqDefForUploadUserJdbcDriver()
+	return &UploadUserJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateJobName 任务名称校验

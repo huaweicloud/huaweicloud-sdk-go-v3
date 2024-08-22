@@ -20,6 +20,9 @@ type DecryptDataRequestBody struct {
 	// 密钥ID，36字节，满足正则匹配“^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$”。仅当密文使用非对称密钥加密时才需要此参数。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
 	KeyId *string `json:"key_id,omitempty"`
 
+	// 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+	AdditionalAuthenticatedData *string `json:"additional_authenticated_data,omitempty"`
+
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
 }

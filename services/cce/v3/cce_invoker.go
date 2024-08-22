@@ -65,6 +65,18 @@ func (i *BatchDeleteClusterTagsInvoker) Invoke() (*model.BatchDeleteClusterTagsR
 	}
 }
 
+type BatchSyncNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSyncNodesInvoker) Invoke() (*model.BatchSyncNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSyncNodesResponse), nil
+	}
+}
+
 type ContinueUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -890,6 +902,18 @@ func (i *ShowUserChartsQuotasInvoker) Invoke() (*model.ShowUserChartsQuotasRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowUserChartsQuotasResponse), nil
+	}
+}
+
+type SyncNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncNodeInvoker) Invoke() (*model.SyncNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncNodeResponse), nil
 	}
 }
 

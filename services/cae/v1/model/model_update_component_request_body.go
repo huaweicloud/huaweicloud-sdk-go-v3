@@ -11,9 +11,9 @@ type UpdateComponentRequestBody struct {
 
 	Kind *ComponentKindObj `json:"kind"`
 
-	Metadata *UpdateComponentRequestMetadata `json:"metadata,omitempty"`
+	Metadata *UpdateComponentRequestMetadata `json:"metadata"`
 
-	Spec *UpdateComponentRequestSpec `json:"spec,omitempty"`
+	Spec *UpdateComponentRequestSpec `json:"spec"`
 }
 
 func (o UpdateComponentRequestBody) String() string {

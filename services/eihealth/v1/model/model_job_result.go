@@ -14,6 +14,9 @@ type JobResult struct {
 
 	// 失败个数
 	FailedCount *int32 `json:"failed_count,omitempty"`
+
+	// 子任务运行时长（秒）。
+	SubTasksDuration *[]float32 `json:"sub_tasks_duration,omitempty"`
 }
 
 func (o JobResult) String() string {

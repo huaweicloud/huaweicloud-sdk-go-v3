@@ -345,35 +345,6 @@ func GenReqDefForExecuteAction() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListComponentEvents() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/cae/applications/{application_id}/components/{component_id}/events").
-		WithResponse(new(model.ListComponentEventsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ApplicationId").
-		WithJsonTag("application_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ComponentId").
-		WithJsonTag("component_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnterpriseProjectID").
-		WithJsonTag("X-Enterprise-Project-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListComponentInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

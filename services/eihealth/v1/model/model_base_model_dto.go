@@ -17,9 +17,6 @@ type BaseModelDto struct {
 	// 模型创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 创建模型的用户名称
-	Creator *string `json:"creator,omitempty"`
-
 	// 模型描述信息
 	Description *string `json:"description,omitempty"`
 }

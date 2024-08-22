@@ -13,7 +13,7 @@ import (
 type GaussDbUpgradeInstancesVersionRequest struct {
 
 	// 批量实例ID。
-	InstanceIds *[]string `json:"instance_ids,omitempty"`
+	InstanceIds []string `json:"instance_ids"`
 
 	// 实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
 	UpgradeType GaussDbUpgradeInstancesVersionRequestUpgradeType `json:"upgrade_type"`

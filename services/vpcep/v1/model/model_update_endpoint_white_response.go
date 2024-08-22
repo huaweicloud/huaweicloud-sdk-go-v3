@@ -68,8 +68,8 @@ type UpdateEndpointWhiteResponse struct {
 	PolicyStatement *[]PolicyStatement `json:"policy_statement,omitempty"`
 
 	// 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
-	PolicyDocument *string `json:"policy_document,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	PolicyDocument *interface{} `json:"policy_document,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o UpdateEndpointWhiteResponse) String() string {

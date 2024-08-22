@@ -21,7 +21,7 @@ type JobBaseInfo struct {
 	// 灾备类型是否双主灾备。说明： - job_type 是cloudDataGuard时，必填，灾备类型是双主灾备时，multi_write取值true, 否则为false。 - job_type 是其他类型时，multi_write是非必选参数。
 	MultiWrite *bool `json:"multi_write,omitempty"`
 
-	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：Redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：Redis集群同步到GeminiDB Redis，实时迁移场景使用。
+	// 引擎类型。取值： - oracle-to-gaussdbv5：Oracle同步到GaussDB分布式版，实时同步场景使用。 - redis-to-gaussredis：Redis同步到GeminiDB Redis，实时迁移场景使用。 - rediscluster-to-gaussredis：Redis集群同步到GeminiDB Redis，实时迁移场景使用。 - mysql-to-mysql：MySQL同步到MySQL，实时同步场景使用。
 	EngineType *JobBaseInfoEngineType `json:"engine_type,omitempty"`
 
 	// 迁移方向。取值： - up：入云 ，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
@@ -123,6 +123,7 @@ type JobBaseInfoEngineTypeEnum struct {
 	ORACLE_TO_GAUSSDBV5        JobBaseInfoEngineType
 	REDIS_TO_GAUSSREDIS        JobBaseInfoEngineType
 	REDISCLUSTER_TO_GAUSSREDIS JobBaseInfoEngineType
+	MYSQL_TO_MYSQL             JobBaseInfoEngineType
 }
 
 func GetJobBaseInfoEngineTypeEnum() JobBaseInfoEngineTypeEnum {
@@ -135,6 +136,9 @@ func GetJobBaseInfoEngineTypeEnum() JobBaseInfoEngineTypeEnum {
 		},
 		REDISCLUSTER_TO_GAUSSREDIS: JobBaseInfoEngineType{
 			value: "rediscluster-to-gaussredis",
+		},
+		MYSQL_TO_MYSQL: JobBaseInfoEngineType{
+			value: "mysql-to-mysql",
 		},
 	}
 }

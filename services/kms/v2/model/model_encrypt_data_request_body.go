@@ -20,6 +20,9 @@ type EncryptDataRequestBody struct {
 	// 数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
 	EncryptionAlgorithm *EncryptDataRequestBodyEncryptionAlgorithm `json:"encryption_algorithm,omitempty"`
 
+	// 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+	AdditionalAuthenticatedData *string `json:"additional_authenticated_data,omitempty"`
+
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
 }

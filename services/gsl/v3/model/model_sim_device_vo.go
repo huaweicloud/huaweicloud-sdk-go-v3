@@ -27,16 +27,16 @@ type SimDeviceVo struct {
 	// sim卡状态：  10.可测试  11.未激活  13.可激活  14.已停用  20.在用  30.已拆机
 	SimStatus *int32 `json:"sim_status,omitempty"`
 
-	// 设备状态
+	// 设备状态：1.注册 2.重启 3.在线 4.离线 (该参数只有ESIM、VSIM返回, 实体卡返回null)
 	DeviceStatus *int32 `json:"device_status,omitempty"`
 
-	// 设备模组
+	// 设备模组 (该参数只有ESIM、VSIM返回, 实体卡返回null)
 	DeviceModel *string `json:"device_model,omitempty"`
 
 	// 激活日期 例如2020-01-31T16:00:00.000Z
 	ActDate *sdktime.SdkTime `json:"act_date,omitempty"`
 
-	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z
+	// 设备状态变更时间 例如2020-01-31T16:00:00.000Z (该参数只有ESIM、VSIM返回, 实体卡返回null)
 	DeviceStatusDate *sdktime.SdkTime `json:"device_status_date,omitempty"`
 
 	// 设备标识
@@ -48,10 +48,10 @@ type SimDeviceVo struct {
 	// 网络类型
 	NetworkType *string `json:"network_type,omitempty"`
 
-	// 信号强度
+	// 信号强度 (该参数只有ESIM、VSIM返回, 实体卡返回null)
 	Dbm *string `json:"dbm,omitempty"`
 
-	// 信号等级:1.差  2.良  3.良 4.优（该参数只有eSIM,vSIM返回，实体卡不返回）
+	// 信号等级:1.差  2.良  3.良  4.优 (该参数只有ESIM、VSIM返回, 实体卡返回null)
 	SignalLevel *string `json:"signal_level,omitempty"`
 
 	// sim卡类型 1.vSIM  2.eSIM  3.实体卡

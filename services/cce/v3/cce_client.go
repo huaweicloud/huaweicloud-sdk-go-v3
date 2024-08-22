@@ -128,6 +128,27 @@ func (c *CceClient) BatchDeleteClusterTagsInvoker(request *model.BatchDeleteClus
 	return &BatchDeleteClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchSyncNodes 批量同步节点
+//
+// 该API用于批量同步节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) BatchSyncNodes(request *model.BatchSyncNodesRequest) (*model.BatchSyncNodesResponse, error) {
+	requestDef := GenReqDefForBatchSyncNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSyncNodesResponse), nil
+	}
+}
+
+// BatchSyncNodesInvoker 批量同步节点
+func (c *CceClient) BatchSyncNodesInvoker(request *model.BatchSyncNodesRequest) *BatchSyncNodesInvoker {
+	requestDef := GenReqDefForBatchSyncNodes()
+	return &BatchSyncNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ContinueUpgradeClusterTask 继续执行集群升级任务
 //
 // 继续执行被暂停的集群升级任务。
@@ -1622,6 +1643,27 @@ func (c *CceClient) ShowUserChartsQuotas(request *model.ShowUserChartsQuotasRequ
 func (c *CceClient) ShowUserChartsQuotasInvoker(request *model.ShowUserChartsQuotasRequest) *ShowUserChartsQuotasInvoker {
 	requestDef := GenReqDefForShowUserChartsQuotas()
 	return &ShowUserChartsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncNode 同步节点
+//
+// 该API用于同步节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) SyncNode(request *model.SyncNodeRequest) (*model.SyncNodeResponse, error) {
+	requestDef := GenReqDefForSyncNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncNodeResponse), nil
+	}
+}
+
+// SyncNodeInvoker 同步节点
+func (c *CceClient) SyncNodeInvoker(request *model.SyncNodeRequest) *SyncNodeInvoker {
+	requestDef := GenReqDefForSyncNode()
+	return &SyncNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SyncNodePool 同步nodePool配置到存量节点

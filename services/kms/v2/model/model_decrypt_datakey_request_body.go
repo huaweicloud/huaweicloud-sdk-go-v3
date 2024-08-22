@@ -17,6 +17,9 @@ type DecryptDatakeyRequestBody struct {
 	// 密钥字节长度，取值范围为1~1024。 密钥字节长度，取值为“64”。
 	DatakeyCipherLength string `json:"datakey_cipher_length"`
 
+	// 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+	AdditionalAuthenticatedData *string `json:"additional_authenticated_data,omitempty"`
+
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
 }

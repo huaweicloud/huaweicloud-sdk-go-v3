@@ -12,7 +12,7 @@ import (
 // JobEndpointInfo 创建任务数据库信息体。
 type JobEndpointInfo struct {
 
-	// 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+	// 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
 	DbType JobEndpointInfoDbType `json:"db_type"`
 
 	// 数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
@@ -53,6 +53,7 @@ type JobEndpointInfoDbTypeEnum struct {
 	REDIS        JobEndpointInfoDbType
 	REDISCLUSTER JobEndpointInfoDbType
 	GAUSSREDIS   JobEndpointInfoDbType
+	MYSQL        JobEndpointInfoDbType
 }
 
 func GetJobEndpointInfoDbTypeEnum() JobEndpointInfoDbTypeEnum {
@@ -71,6 +72,9 @@ func GetJobEndpointInfoDbTypeEnum() JobEndpointInfoDbTypeEnum {
 		},
 		GAUSSREDIS: JobEndpointInfoDbType{
 			value: "gaussredis",
+		},
+		MYSQL: JobEndpointInfoDbType{
+			value: "mysql",
 		},
 	}
 }

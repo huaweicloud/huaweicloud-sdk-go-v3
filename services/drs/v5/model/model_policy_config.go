@@ -38,6 +38,9 @@ type PolicyConfig struct {
 
 	// DML同步类型。
 	DmlTypes *string `json:"dml_types,omitempty"`
+
+	// 索引与表结构是否同时建立。
+	IsCreateTableWithIndex *bool `json:"is_create_table_with_index,omitempty"`
 }
 
 func (o PolicyConfig) String() string {

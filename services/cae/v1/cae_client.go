@@ -313,27 +313,6 @@ func (c *CaeClient) ExecuteActionInvoker(request *model.ExecuteActionRequest) *E
 	return &ExecuteActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListComponentEvents 获取组件事件列表
-//
-// 获取组件事件列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CaeClient) ListComponentEvents(request *model.ListComponentEventsRequest) (*model.ListComponentEventsResponse, error) {
-	requestDef := GenReqDefForListComponentEvents()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListComponentEventsResponse), nil
-	}
-}
-
-// ListComponentEventsInvoker 获取组件事件列表
-func (c *CaeClient) ListComponentEventsInvoker(request *model.ListComponentEventsRequest) *ListComponentEventsInvoker {
-	requestDef := GenReqDefForListComponentEvents()
-	return &ListComponentEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListComponentInstances 获取组件实例列表
 //
 // 获取组件实例列表。

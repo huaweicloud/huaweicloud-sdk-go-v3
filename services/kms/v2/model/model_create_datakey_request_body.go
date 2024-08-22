@@ -20,6 +20,9 @@ type CreateDatakeyRequestBody struct {
 	// 密钥bit位长度。取值为8的倍数，取值范围为8~8192。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
 	DatakeyLength *string `json:"datakey_length,omitempty"`
 
+	// 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+	AdditionalAuthenticatedData *string `json:"additional_authenticated_data,omitempty"`
+
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
 }

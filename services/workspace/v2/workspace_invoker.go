@@ -305,6 +305,18 @@ func (i *ListDesktopsInvoker) Invoke() (*model.ListDesktopsResponse, error) {
 	}
 }
 
+type ListDesktopsConnectStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopsConnectStatusInvoker) Invoke() (*model.ListDesktopsConnectStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopsConnectStatusResponse), nil
+	}
+}
+
 type ListDesktopsDetailInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -12,6 +12,9 @@ type CreateFepJobReq struct {
 
 	Receptor *ReceptorDrugFile `json:"receptor"`
 
+	// 是否加膜处理
+	AddMembrane *bool `json:"add_membrane,omitempty"`
+
 	// 配体列表
 	Ligands []LigandPreviewDto `json:"ligands"`
 

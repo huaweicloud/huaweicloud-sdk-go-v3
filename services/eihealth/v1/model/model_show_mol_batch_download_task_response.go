@@ -16,8 +16,10 @@ type ShowMolBatchDownloadTaskResponse struct {
 	Filename *string `json:"filename,omitempty"`
 
 	// 下载路径
-	OutDir         *string `json:"out_dir,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	OutDir *string `json:"out_dir,omitempty"`
+
+	Progress       *TaskProgress `json:"progress,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowMolBatchDownloadTaskResponse) String() string {

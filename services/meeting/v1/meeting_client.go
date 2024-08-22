@@ -19,6 +19,27 @@ func MeetingClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddAppId 添加企业应用
+//
+// 企业默认管理员添加应用，添加应用后，记录返回信息，后续可通过[[执行App ID鉴权](https://support.huaweicloud.com/api-meeting/meeting_21_0311.html)](tag:hws) [[执行App ID鉴权](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0311.html)](tag:hk)获取accessToken
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) AddAppId(request *model.AddAppIdRequest) (*model.AddAppIdResponse, error) {
+	requestDef := GenReqDefForAddAppId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddAppIdResponse), nil
+	}
+}
+
+// AddAppIdInvoker 添加企业应用
+func (c *MeetingClient) AddAppIdInvoker(request *model.AddAppIdRequest) *AddAppIdInvoker {
+	requestDef := GenReqDefForAddAppId()
+	return &AddAppIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddCorp SP管理员创建企业
 //
 // 创建企业，默认管理员及分配资源。
@@ -462,6 +483,27 @@ func (c *MeetingClient) BatchHandInvoker(request *model.BatchHandRequest) *Batch
 	return &BatchHandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchSearchAppId 分页查询企业应用
+//
+// 企业默认管理员分页查询企业应用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) BatchSearchAppId(request *model.BatchSearchAppIdRequest) (*model.BatchSearchAppIdResponse, error) {
+	requestDef := GenReqDefForBatchSearchAppId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSearchAppIdResponse), nil
+	}
+}
+
+// BatchSearchAppIdInvoker 分页查询企业应用
+func (c *MeetingClient) BatchSearchAppIdInvoker(request *model.BatchSearchAppIdRequest) *BatchSearchAppIdInvoker {
+	requestDef := GenReqDefForBatchSearchAppId()
+	return &BatchSearchAppIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchShowUserDetails 批量查询用户详情
 //
 // 批量查询用户详情，支持指定第三方账号查询详情。
@@ -880,6 +922,27 @@ func (c *MeetingClient) CreateWebinar(request *model.CreateWebinarRequest) (*mod
 func (c *MeetingClient) CreateWebinarInvoker(request *model.CreateWebinarRequest) *CreateWebinarInvoker {
 	requestDef := GenReqDefForCreateWebinar()
 	return &CreateWebinarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAppId 删除企业应用
+//
+// 企业管理员删除企业应用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) DeleteAppId(request *model.DeleteAppIdRequest) (*model.DeleteAppIdResponse, error) {
+	requestDef := GenReqDefForDeleteAppId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAppIdResponse), nil
+	}
+}
+
+// DeleteAppIdInvoker 删除企业应用
+func (c *MeetingClient) DeleteAppIdInvoker(request *model.DeleteAppIdRequest) *DeleteAppIdInvoker {
+	requestDef := GenReqDefForDeleteAppId()
+	return &DeleteAppIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAttendees 删除与会者
@@ -1579,6 +1642,27 @@ func (c *MeetingClient) ResetActivecode(request *model.ResetActivecodeRequest) (
 func (c *MeetingClient) ResetActivecodeInvoker(request *model.ResetActivecodeRequest) *ResetActivecodeInvoker {
 	requestDef := GenReqDefForResetActivecode()
 	return &ResetActivecodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetAppKey 重置企业应用appkey
+//
+// 企业默认管理员重置企业应用appkey
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) ResetAppKey(request *model.ResetAppKeyRequest) (*model.ResetAppKeyResponse, error) {
+	requestDef := GenReqDefForResetAppKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetAppKeyResponse), nil
+	}
+}
+
+// ResetAppKeyInvoker 重置企业应用appkey
+func (c *MeetingClient) ResetAppKeyInvoker(request *model.ResetAppKeyRequest) *ResetAppKeyInvoker {
+	requestDef := GenReqDefForResetAppKey()
+	return &ResetAppKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetPwd 用户重置密码
@@ -3232,6 +3316,27 @@ func (c *MeetingClient) SwitchMode(request *model.SwitchModeRequest) (*model.Swi
 func (c *MeetingClient) SwitchModeInvoker(request *model.SwitchModeRequest) *SwitchModeInvoker {
 	requestDef := GenReqDefForSwitchMode()
 	return &SwitchModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAppId 修改企业应用
+//
+// 企业默认管理员修改企业应用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) UpdateAppId(request *model.UpdateAppIdRequest) (*model.UpdateAppIdResponse, error) {
+	requestDef := GenReqDefForUpdateAppId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAppIdResponse), nil
+	}
+}
+
+// UpdateAppIdInvoker 修改企业应用
+func (c *MeetingClient) UpdateAppIdInvoker(request *model.UpdateAppIdRequest) *UpdateAppIdInvoker {
+	requestDef := GenReqDefForUpdateAppId()
+	return &UpdateAppIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateContact 修改手机或邮箱

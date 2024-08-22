@@ -20,6 +20,9 @@ type OpenGaussHaOption struct {
 
 	// 备机同步参数。  取值：  GaussDB为“sync\"  说明： - “sync”为同步模式。
 	ReplicationMode OpenGaussHaOptionReplicationMode `json:"replication_mode"`
+
+	// 指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
+	InstanceMode *OpenGaussHaOptionInstanceMode `json:"instance_mode,omitempty"`
 }
 
 func (o OpenGaussHaOption) String() string {
@@ -150,6 +153,57 @@ func (c OpenGaussHaOptionReplicationMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *OpenGaussHaOptionReplicationMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type OpenGaussHaOptionInstanceMode struct {
+	value string
+}
+
+type OpenGaussHaOptionInstanceModeEnum struct {
+	ENTERPRISE OpenGaussHaOptionInstanceMode
+	BASIC      OpenGaussHaOptionInstanceMode
+	ECOLOGY    OpenGaussHaOptionInstanceMode
+}
+
+func GetOpenGaussHaOptionInstanceModeEnum() OpenGaussHaOptionInstanceModeEnum {
+	return OpenGaussHaOptionInstanceModeEnum{
+		ENTERPRISE: OpenGaussHaOptionInstanceMode{
+			value: "enterprise",
+		},
+		BASIC: OpenGaussHaOptionInstanceMode{
+			value: "basic",
+		},
+		ECOLOGY: OpenGaussHaOptionInstanceMode{
+			value: "ecology",
+		},
+	}
+}
+
+func (c OpenGaussHaOptionInstanceMode) Value() string {
+	return c.value
+}
+
+func (c OpenGaussHaOptionInstanceMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *OpenGaussHaOptionInstanceMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

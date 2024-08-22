@@ -173,18 +173,6 @@ func (i *ExecuteActionInvoker) Invoke() (*model.ExecuteActionResponse, error) {
 	}
 }
 
-type ListComponentEventsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListComponentEventsInvoker) Invoke() (*model.ListComponentEventsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListComponentEventsResponse), nil
-	}
-}
-
 type ListComponentInstancesInvoker struct {
 	*invoker.BaseInvoker
 }

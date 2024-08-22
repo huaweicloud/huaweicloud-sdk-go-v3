@@ -5,6 +5,18 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/meeting/v1/model"
 )
 
+type AddAppIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddAppIdInvoker) Invoke() (*model.AddAppIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddAppIdResponse), nil
+	}
+}
+
 type AddCorpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -257,6 +269,18 @@ func (i *BatchHandInvoker) Invoke() (*model.BatchHandResponse, error) {
 	}
 }
 
+type BatchSearchAppIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSearchAppIdInvoker) Invoke() (*model.BatchSearchAppIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSearchAppIdResponse), nil
+	}
+}
+
 type BatchShowUserDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -494,6 +518,18 @@ func (i *CreateWebinarInvoker) Invoke() (*model.CreateWebinarResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateWebinarResponse), nil
+	}
+}
+
+type DeleteAppIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppIdInvoker) Invoke() (*model.DeleteAppIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAppIdResponse), nil
 	}
 }
 
@@ -890,6 +926,18 @@ func (i *ResetActivecodeInvoker) Invoke() (*model.ResetActivecodeResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ResetActivecodeResponse), nil
+	}
+}
+
+type ResetAppKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetAppKeyInvoker) Invoke() (*model.ResetAppKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetAppKeyResponse), nil
 	}
 }
 
@@ -1826,6 +1874,18 @@ func (i *SwitchModeInvoker) Invoke() (*model.SwitchModeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchModeResponse), nil
+	}
+}
+
+type UpdateAppIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppIdInvoker) Invoke() (*model.UpdateAppIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAppIdResponse), nil
 	}
 }
 
