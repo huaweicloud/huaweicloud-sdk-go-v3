@@ -2475,6 +2475,27 @@ func (c *MetaStudioClient) DeleteVoiceTrainingJobInvoker(request *model.DeleteVo
 	return &DeleteVoiceTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListJobOperationLog 查询任务操作日志
+//
+// 查询任务操作日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListJobOperationLog(request *model.ListJobOperationLogRequest) (*model.ListJobOperationLogResponse, error) {
+	requestDef := GenReqDefForListJobOperationLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobOperationLogResponse), nil
+	}
+}
+
+// ListJobOperationLogInvoker 查询任务操作日志
+func (c *MetaStudioClient) ListJobOperationLogInvoker(request *model.ListJobOperationLogRequest) *ListJobOperationLogInvoker {
+	requestDef := GenReqDefForListJobOperationLog()
+	return &ListJobOperationLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVoiceTrainingJob 查询语音训练任务列表
 //
 // 查询语音训练任务列表

@@ -45,6 +45,9 @@ type VideoAssetMeta struct {
 	// Horizontal=横向；Vertical=纵向
 	Mode *VideoAssetMetaMode `json:"mode,omitempty"`
 
+	// 视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
+	VideoTranscodingStatus *VideoAssetMetaVideoTranscodingStatus `json:"video_transcoding_status,omitempty"`
+
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 }
 
@@ -86,6 +89,61 @@ func (c VideoAssetMetaMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *VideoAssetMetaMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type VideoAssetMetaVideoTranscodingStatus struct {
+	value string
+}
+
+type VideoAssetMetaVideoTranscodingStatusEnum struct {
+	WAITING     VideoAssetMetaVideoTranscodingStatus
+	TRANSCODING VideoAssetMetaVideoTranscodingStatus
+	FAILED      VideoAssetMetaVideoTranscodingStatus
+	SUCCEEDED   VideoAssetMetaVideoTranscodingStatus
+}
+
+func GetVideoAssetMetaVideoTranscodingStatusEnum() VideoAssetMetaVideoTranscodingStatusEnum {
+	return VideoAssetMetaVideoTranscodingStatusEnum{
+		WAITING: VideoAssetMetaVideoTranscodingStatus{
+			value: "WAITING",
+		},
+		TRANSCODING: VideoAssetMetaVideoTranscodingStatus{
+			value: "TRANSCODING",
+		},
+		FAILED: VideoAssetMetaVideoTranscodingStatus{
+			value: "FAILED",
+		},
+		SUCCEEDED: VideoAssetMetaVideoTranscodingStatus{
+			value: "SUCCEEDED",
+		},
+	}
+}
+
+func (c VideoAssetMetaVideoTranscodingStatus) Value() string {
+	return c.value
+}
+
+func (c VideoAssetMetaVideoTranscodingStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VideoAssetMetaVideoTranscodingStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -21,7 +21,7 @@ type ShowVideoScriptResponse struct {
 	// 横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
 	ViewMode *ShowVideoScriptResponseViewMode `json:"view_mode,omitempty"`
 
-	// 数字人模型资产ID。
+	// 数字人模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	// 数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
@@ -31,7 +31,7 @@ type ShowVideoScriptResponse struct {
 
 	VideoConfig *VideoConfig `json:"video_config,omitempty"`
 
-	// 场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+	// 场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
 	SceneAssetId *string `json:"scene_asset_id,omitempty"`
 
 	// 私有数据，用户填写，原样带回。

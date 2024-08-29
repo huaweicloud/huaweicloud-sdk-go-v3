@@ -9,22 +9,22 @@ import (
 // CreateInstanceBody 创建堡垒机实例请求参数。
 type CreateInstanceBody struct {
 
-	// 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+	// 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
 	Specification string `json:"specification"`
 
 	// 云堡垒机实例名称，取值范围：  只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。  例如：CBH-6b8e
 	InstanceName string `json:"instance_name"`
 
-	// 堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
+	// 堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
 	Password string `json:"password"`
 
-	// 创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+	// 创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
 	Region string `json:"region"`
 
-	// 创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+	// 创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
 	AvailabilityZone string `json:"availability_zone"`
 
-	// 创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+	// 创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
 	SlaveAvailabilityZone *string `json:"slave_availability_zone,omitempty"`
 
 	// 计费模式。 - 0 包周期计费。

@@ -33,16 +33,19 @@ type ListAssetsRequest struct {
 	// 按标签模糊查询。
 	Tag *string `json:"tag,omitempty"`
 
-	// 起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 标签查询组合方式 INTERSECTION：交集 UNION_SET：并集
+	TagCombinationType *ListAssetsRequestTagCombinationType `json:"tag_combination_type,omitempty"`
+
+	// 最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+	// 最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频
 	AssetType *string `json:"asset_type,omitempty"`
 
-	// 排序字段，目前只支持create_time。
+	// 排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 排序方式。 * asc：升序 * desc：降序  默认asc升序。
@@ -56,6 +59,9 @@ type ListAssetsRequest struct {
 
 	// 基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
 	StyleId *string `json:"style_id,omitempty"`
+
+	// 使用精确查询的字段
+	AccurateQueryField *[]string `json:"accurate_query_field,omitempty"`
 
 	// 可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
 	RenderEngine *string `json:"render_engine,omitempty"`
@@ -74,6 +80,9 @@ type ListAssetsRequest struct {
 
 	// 动作是否可编辑。仅在分身数字人模型查询时有效。
 	ActionEditable *bool `json:"action_editable,omitempty"`
+
+	// 分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+	IsWithActionLibrary *bool `json:"is_with_action_library,omitempty"`
 
 	// 分身数字人是否支持走动。仅在分身数字人模型查询时有效。
 	IsMovable *bool `json:"is_movable,omitempty"`
@@ -95,6 +104,9 @@ type ListAssetsRequest struct {
 
 	// 资产已执行的任务名称
 	ExcludeDeviceName *string `json:"exclude_device_name,omitempty"`
+
+	// 资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+	SupportedService *ListAssetsRequestSupportedService `json:"supported_service,omitempty"`
 }
 
 func (o ListAssetsRequest) String() string {
@@ -104,6 +116,53 @@ func (o ListAssetsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListAssetsRequest", string(data)}, " ")
+}
+
+type ListAssetsRequestTagCombinationType struct {
+	value string
+}
+
+type ListAssetsRequestTagCombinationTypeEnum struct {
+	INTERSECTION ListAssetsRequestTagCombinationType
+	UNION_SET    ListAssetsRequestTagCombinationType
+}
+
+func GetListAssetsRequestTagCombinationTypeEnum() ListAssetsRequestTagCombinationTypeEnum {
+	return ListAssetsRequestTagCombinationTypeEnum{
+		INTERSECTION: ListAssetsRequestTagCombinationType{
+			value: "INTERSECTION",
+		},
+		UNION_SET: ListAssetsRequestTagCombinationType{
+			value: "UNION_SET",
+		},
+	}
+}
+
+func (c ListAssetsRequestTagCombinationType) Value() string {
+	return c.value
+}
+
+func (c ListAssetsRequestTagCombinationType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAssetsRequestTagCombinationType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListAssetsRequestAssetSource struct {
@@ -186,6 +245,57 @@ func (c ListAssetsRequestRole) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListAssetsRequestRole) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListAssetsRequestSupportedService struct {
+	value string
+}
+
+type ListAssetsRequestSupportedServiceEnum struct {
+	VIDEO_2_D ListAssetsRequestSupportedService
+	LIVE_2_D  ListAssetsRequestSupportedService
+	CHAT_2_D  ListAssetsRequestSupportedService
+}
+
+func GetListAssetsRequestSupportedServiceEnum() ListAssetsRequestSupportedServiceEnum {
+	return ListAssetsRequestSupportedServiceEnum{
+		VIDEO_2_D: ListAssetsRequestSupportedService{
+			value: "VIDEO_2D",
+		},
+		LIVE_2_D: ListAssetsRequestSupportedService{
+			value: "LIVE_2D",
+		},
+		CHAT_2_D: ListAssetsRequestSupportedService{
+			value: "CHAT_2D",
+		},
+	}
+}
+
+func (c ListAssetsRequestSupportedService) Value() string {
+	return c.value
+}
+
+func (c ListAssetsRequestSupportedService) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAssetsRequestSupportedService) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

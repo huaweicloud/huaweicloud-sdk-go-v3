@@ -13,7 +13,7 @@ import (
 type ShowDigitalHumanBusinessCardResponse struct {
 	JobInfo *DigitalHumanBusinessCardJobInfo `json:"job_info,omitempty"`
 
-	// 数字人名片模板资产ID。
+	// 数字人名片模板资产ID，可以从资产库中查询。
 	CardTempletAssetId *string `json:"card_templet_asset_id,omitempty"`
 
 	CardTextConfig *BusinessCardTextConfig `json:"card_text_config,omitempty"`
@@ -26,10 +26,10 @@ type ShowDigitalHumanBusinessCardResponse struct {
 	// 自我介绍文本，用于驱动数字人口型。
 	IntroductionText *string `json:"introduction_text,omitempty"`
 
-	// 音色资产ID。
+	// 音色资产ID，可以从资产库中查询。
 	VoiceAssetId *string `json:"voice_asset_id,omitempty"`
 
-	// 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+	// 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
 	IntroductionAudioAssetId *string `json:"introduction_audio_asset_id,omitempty"`
 
 	// 性别。 * MALE：男性 * FEMALE：女性

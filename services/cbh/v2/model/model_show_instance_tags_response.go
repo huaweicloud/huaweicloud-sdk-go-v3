@@ -10,8 +10,8 @@ import (
 type ShowInstanceTagsResponse struct {
 
 	// 标签列表。
-	Tags           *[]Tags `json:"tags,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowInstanceTagsResponse) String() string {

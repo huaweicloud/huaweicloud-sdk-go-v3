@@ -18,6 +18,9 @@ type ListBandwidthRequest struct {
 	// - 功能说明：带宽唯一标识
 	Id *string `json:"id,omitempty"`
 
+	// display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
+	Fields *[]string `json:"fields,omitempty"`
+
 	// - 功能说明：带宽类型，共享带宽默认为share。 - 取值范围：share，bgp，telcom，sbgp等。   - share：共享带宽   - bgp：动态bgp   - telcom ：联通   - sbgp：静态bgp
 	BandwidthType *string `json:"bandwidth_type,omitempty"`
 

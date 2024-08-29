@@ -29,6 +29,18 @@ func (i *AssociatePolicyGroupInvoker) Invoke() (*model.AssociatePolicyGroupRespo
 	}
 }
 
+type BatchAddAccountsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddAccountsInvoker) Invoke() (*model.BatchAddAccountsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddAccountsResponse), nil
+	}
+}
+
 type BatchCreateTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -161,6 +173,18 @@ func (i *CreateVulnerabilityScanTaskInvoker) Invoke() (*model.CreateVulnerabilit
 	}
 }
 
+type DeleteAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAccountInvoker) Invoke() (*model.DeleteAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAccountResponse), nil
+	}
+}
+
 type DeleteHostsGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -182,6 +206,30 @@ func (i *DeleteResourceInstanceTagInvoker) Invoke() (*model.DeleteResourceInstan
 		return nil, err
 	} else {
 		return result.(*model.DeleteResourceInstanceTagResponse), nil
+	}
+}
+
+type ExportVulsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportVulsInvoker) Invoke() (*model.ExportVulsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportVulsResponse), nil
+	}
+}
+
+type ListAccountsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccountsInvoker) Invoke() (*model.ListAccountsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccountsResponse), nil
 	}
 }
 
@@ -302,6 +350,18 @@ func (i *ListContainersInvoker) Invoke() (*model.ListContainersResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListContainersResponse), nil
+	}
+}
+
+type ListDownloadExportedFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDownloadExportedFileInvoker) Invoke() (*model.ListDownloadExportedFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDownloadExportedFileResponse), nil
 	}
 }
 
@@ -449,6 +509,18 @@ func (i *ListJarPackageStatisticsInvoker) Invoke() (*model.ListJarPackageStatist
 	}
 }
 
+type ListOrganizationTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationTreeInvoker) Invoke() (*model.ListOrganizationTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrganizationTreeResponse), nil
+	}
+}
+
 type ListPasswordComplexityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -554,6 +626,18 @@ func (i *ListProtectionServerInvoker) Invoke() (*model.ListProtectionServerRespo
 		return nil, err
 	} else {
 		return result.(*model.ListProtectionServerResponse), nil
+	}
+}
+
+type ListQueryExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryExportTaskInvoker) Invoke() (*model.ListQueryExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryExportTaskResponse), nil
 	}
 }
 

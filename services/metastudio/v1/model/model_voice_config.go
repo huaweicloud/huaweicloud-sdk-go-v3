@@ -9,7 +9,7 @@ import (
 // VoiceConfig 语音配置参数。
 type VoiceConfig struct {
 
-	// 音色资产ID。
+	// 音色资产ID，可以从资产库中查询。
 	VoiceAssetId string `json:"voice_asset_id"`
 
 	// 语速。  默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。

@@ -36,6 +36,12 @@ type VoiceModelAssetMeta struct {
 	VoiceCapability *VoiceCapability `json:"voice_capability,omitempty"`
 
 	ExternalVoiceMeta *ExternalVoiceAssetMeta `json:"external_voice_meta,omitempty"`
+
+	// 是否支持vc。
+	IsSupportVcProcess *bool `json:"is_support_vc_process,omitempty"`
+
+	// 是否是Flexus版本声音。
+	IsFlexus *bool `json:"is_flexus,omitempty"`
 }
 
 func (o VoiceModelAssetMeta) String() string {

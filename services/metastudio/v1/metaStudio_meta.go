@@ -159,6 +159,10 @@ func GenReqDefForResetActiveCode() *def.HttpRequestDef {
 		WithJsonTag("X-App-UserId").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-Request-Id").
@@ -432,6 +436,10 @@ func GenReqDefForStartSmartChatJob() *def.HttpRequestDef {
 		WithJsonTag("X-App-UserId").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
 		WithJsonTag("X-Request-Id").
@@ -685,6 +693,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 		WithJsonTag("tag").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagCombinationType").
+		WithJsonTag("tag_combination_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))
@@ -717,6 +729,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 		WithJsonTag("style_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccurateQueryField").
+		WithJsonTag("accurate_query_field").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RenderEngine").
 		WithJsonTag("render_engine").
 		WithLocationType(def.Query))
@@ -739,6 +755,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ActionEditable").
 		WithJsonTag("action_editable").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsWithActionLibrary").
+		WithJsonTag("is_with_action_library").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IsMovable").
@@ -767,6 +787,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ExcludeDeviceName").
 		WithJsonTag("exclude_device_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SupportedService").
+		WithJsonTag("supported_service").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1196,6 +1220,10 @@ func GenReqDefForListDigitalHumanVideo() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CreateSince").
 		WithJsonTag("create_since").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FuzzyQueryField").
+		WithJsonTag("fuzzy_query_field").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ScriptId").
@@ -3551,6 +3579,10 @@ func GenReqDefForListRobot() *def.HttpRequestDef {
 		WithName("RoomId").
 		WithJsonTag("room_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RobotType").
+		WithJsonTag("robot_type").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
@@ -4896,6 +4928,31 @@ func GenReqDefForDeleteVoiceTrainingJob() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListJobOperationLog() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/voice-training-manage/user/jobs/{job_id}/op-logs").
+		WithResponse(new(model.ListJobOperationLogResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListVoiceTrainingJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -4934,6 +4991,10 @@ func GenReqDefForListVoiceTrainingJob() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tag").
 		WithJsonTag("tag").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobType").
+		WithJsonTag("job_type").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

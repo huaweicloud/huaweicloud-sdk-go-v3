@@ -665,6 +665,27 @@ func (c *EcsClient) DisassociateServerVirtualIpInvoker(request *model.Disassocia
 	return &DisassociateServerVirtualIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCloudServers 查询云服务器列表接口
+//
+// 查询云服务器列表接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListCloudServers(request *model.ListCloudServersRequest) (*model.ListCloudServersResponse, error) {
+	requestDef := GenReqDefForListCloudServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudServersResponse), nil
+	}
+}
+
+// ListCloudServersInvoker 查询云服务器列表接口
+func (c *EcsClient) ListCloudServersInvoker(request *model.ListCloudServersRequest) *ListCloudServersInvoker {
+	requestDef := GenReqDefForListCloudServers()
+	return &ListCloudServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFlavorSellPolicies 查询规格销售策略
 //
 // 查询规格销售策略。

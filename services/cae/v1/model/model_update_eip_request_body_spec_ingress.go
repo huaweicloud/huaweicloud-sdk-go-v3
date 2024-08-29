@@ -11,6 +11,9 @@ type UpdateEipRequestBodySpecIngress struct {
 
 	// 入网IP带宽。
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
+
+	// 是否关闭入网IP。
+	Enabled *bool `json:"enabled,omitempty"`
 }
 
 func (o UpdateEipRequestBodySpecIngress) String() string {

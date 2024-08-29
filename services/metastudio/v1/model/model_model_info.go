@@ -9,13 +9,13 @@ import (
 // ModelInfo 模型信息
 type ModelInfo struct {
 
-	// 模型资产ID
+	// 模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	// 资产名称
 	AssetName *string `json:"asset_name,omitempty"`
 
-	// 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+	// 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
 	BackupModelAssetIds *[]string `json:"backup_model_asset_ids,omitempty"`
 }
 

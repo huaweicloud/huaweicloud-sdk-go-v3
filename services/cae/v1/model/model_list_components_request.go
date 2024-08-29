@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -23,6 +26,12 @@ type ListComponentsRequest struct {
 
 	// 分页偏移位，查询起始位置。
 	Offset *string `json:"offset,omitempty"`
+
+	// 排序字段。
+	SortKey *ListComponentsRequestSortKey `json:"sort_key,omitempty"`
+
+	// 升降序规则。
+	Sort *ListComponentsRequestSort `json:"sort,omitempty"`
 }
 
 func (o ListComponentsRequest) String() string {
@@ -32,4 +41,98 @@ func (o ListComponentsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListComponentsRequest", string(data)}, " ")
+}
+
+type ListComponentsRequestSortKey struct {
+	value string
+}
+
+type ListComponentsRequestSortKeyEnum struct {
+	CREATED_AT ListComponentsRequestSortKey
+	UPDATED_AT ListComponentsRequestSortKey
+}
+
+func GetListComponentsRequestSortKeyEnum() ListComponentsRequestSortKeyEnum {
+	return ListComponentsRequestSortKeyEnum{
+		CREATED_AT: ListComponentsRequestSortKey{
+			value: "created_at",
+		},
+		UPDATED_AT: ListComponentsRequestSortKey{
+			value: "updated_at",
+		},
+	}
+}
+
+func (c ListComponentsRequestSortKey) Value() string {
+	return c.value
+}
+
+func (c ListComponentsRequestSortKey) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListComponentsRequestSortKey) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListComponentsRequestSort struct {
+	value string
+}
+
+type ListComponentsRequestSortEnum struct {
+	ASC  ListComponentsRequestSort
+	DESC ListComponentsRequestSort
+}
+
+func GetListComponentsRequestSortEnum() ListComponentsRequestSortEnum {
+	return ListComponentsRequestSortEnum{
+		ASC: ListComponentsRequestSort{
+			value: "asc",
+		},
+		DESC: ListComponentsRequestSort{
+			value: "desc",
+		},
+	}
+}
+
+func (c ListComponentsRequestSort) Value() string {
+	return c.value
+}
+
+func (c ListComponentsRequestSort) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListComponentsRequestSort) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

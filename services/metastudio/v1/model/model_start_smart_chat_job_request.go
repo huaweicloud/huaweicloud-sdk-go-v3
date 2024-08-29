@@ -26,6 +26,8 @@ type StartSmartChatJobRequest struct {
 
 	// 应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
 	RobotId string `json:"robot_id"`
+
+	Body *SmartChatJobsReq `json:"body,omitempty"`
 }
 
 func (o StartSmartChatJobRequest) String() string {

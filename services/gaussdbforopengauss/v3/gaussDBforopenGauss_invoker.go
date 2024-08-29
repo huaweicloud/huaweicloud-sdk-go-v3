@@ -125,6 +125,18 @@ func (i *CreateDbUserInvoker) Invoke() (*model.CreateDbUserResponse, error) {
 	}
 }
 
+type CreateGaussDbInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGaussDbInstanceInvoker) Invoke() (*model.CreateGaussDbInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGaussDbInstanceResponse), nil
+	}
+}
+
 type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

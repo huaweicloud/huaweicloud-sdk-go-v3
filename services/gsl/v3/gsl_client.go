@@ -187,6 +187,48 @@ func (c *GslClient) ListBackPoolsInvoker(request *model.ListBackPoolsRequest) *L
 	return &ListBackPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddNetworkSwitchPolicy 新增网络切换策略
+//
+// 新增网络切换策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) AddNetworkSwitchPolicy(request *model.AddNetworkSwitchPolicyRequest) (*model.AddNetworkSwitchPolicyResponse, error) {
+	requestDef := GenReqDefForAddNetworkSwitchPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddNetworkSwitchPolicyResponse), nil
+	}
+}
+
+// AddNetworkSwitchPolicyInvoker 新增网络切换策略
+func (c *GslClient) AddNetworkSwitchPolicyInvoker(request *model.AddNetworkSwitchPolicyRequest) *AddNetworkSwitchPolicyInvoker {
+	requestDef := GenReqDefForAddNetworkSwitchPolicy()
+	return &AddNetworkSwitchPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNetworkSwitchPolicies 查询策略列表
+//
+// 查询策略列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListNetworkSwitchPolicies(request *model.ListNetworkSwitchPoliciesRequest) (*model.ListNetworkSwitchPoliciesResponse, error) {
+	requestDef := GenReqDefForListNetworkSwitchPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNetworkSwitchPoliciesResponse), nil
+	}
+}
+
+// ListNetworkSwitchPoliciesInvoker 查询策略列表
+func (c *GslClient) ListNetworkSwitchPoliciesInvoker(request *model.ListNetworkSwitchPoliciesRequest) *ListNetworkSwitchPoliciesInvoker {
+	requestDef := GenReqDefForListNetworkSwitchPolicies()
+	return &ListNetworkSwitchPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProPricePlans 查询套餐列表信息
 //
 // 查询套餐列表信息
@@ -458,6 +500,69 @@ func (c *GslClient) StopSimCard(request *model.StopSimCardRequest) (*model.StopS
 func (c *GslClient) StopSimCardInvoker(request *model.StopSimCardRequest) *StopSimCardInvoker {
 	requestDef := GenReqDefForStopSimCard()
 	return &StopSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSimDeviceMultiply 查询三网卡列表
+//
+// 通过cid或全量查询三网卡列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListSimDeviceMultiply(request *model.ListSimDeviceMultiplyRequest) (*model.ListSimDeviceMultiplyResponse, error) {
+	requestDef := GenReqDefForListSimDeviceMultiply()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSimDeviceMultiplyResponse), nil
+	}
+}
+
+// ListSimDeviceMultiplyInvoker 查询三网卡列表
+func (c *GslClient) ListSimDeviceMultiplyInvoker(request *model.ListSimDeviceMultiplyRequest) *ListSimDeviceMultiplyInvoker {
+	requestDef := GenReqDefForListSimDeviceMultiply()
+	return &ListSimDeviceMultiplyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetNetworkSwitchPolicy SIM卡设置网络切换策略
+//
+// SIM卡设置网络切换策略，接口仅支持三网卡调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) SetNetworkSwitchPolicy(request *model.SetNetworkSwitchPolicyRequest) (*model.SetNetworkSwitchPolicyResponse, error) {
+	requestDef := GenReqDefForSetNetworkSwitchPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetNetworkSwitchPolicyResponse), nil
+	}
+}
+
+// SetNetworkSwitchPolicyInvoker SIM卡设置网络切换策略
+func (c *GslClient) SetNetworkSwitchPolicyInvoker(request *model.SetNetworkSwitchPolicyRequest) *SetNetworkSwitchPolicyInvoker {
+	requestDef := GenReqDefForSetNetworkSwitchPolicy()
+	return &SetNetworkSwitchPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchNetwork 切换网络
+//
+// 切换网络
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) SwitchNetwork(request *model.SwitchNetworkRequest) (*model.SwitchNetworkResponse, error) {
+	requestDef := GenReqDefForSwitchNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchNetworkResponse), nil
+	}
+}
+
+// SwitchNetworkInvoker 切换网络
+func (c *GslClient) SwitchNetworkInvoker(request *model.SwitchNetworkRequest) *SwitchNetworkInvoker {
+	requestDef := GenReqDefForSwitchNetwork()
+	return &SwitchNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSimPoolMembers 查询流量池成员列表

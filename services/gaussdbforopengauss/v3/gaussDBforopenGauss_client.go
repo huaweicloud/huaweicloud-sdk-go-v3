@@ -229,6 +229,27 @@ func (c *GaussDBforopenGaussClient) CreateDbUserInvoker(request *model.CreateDbU
 	return &CreateDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGaussDbInstance 创建数据库实例
+//
+// 创建数据库实例，仅支持IAM5的新平面认证方式（AK/SK认证方式）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateGaussDbInstance(request *model.CreateGaussDbInstanceRequest) (*model.CreateGaussDbInstanceResponse, error) {
+	requestDef := GenReqDefForCreateGaussDbInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGaussDbInstanceResponse), nil
+	}
+}
+
+// CreateGaussDbInstanceInvoker 创建数据库实例
+func (c *GaussDBforopenGaussClient) CreateGaussDbInstanceInvoker(request *model.CreateGaussDbInstanceRequest) *CreateGaussDbInstanceInvoker {
+	requestDef := GenReqDefForCreateGaussDbInstance()
+	return &CreateGaussDbInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateInstance 创建数据库实例
 //
 // 创建数据库企业版和集中式实例

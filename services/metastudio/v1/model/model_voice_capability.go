@@ -9,6 +9,9 @@ import (
 // VoiceCapability 音色资产支持的能力集。 > 音色能力集只允许查询，不允许设置
 type VoiceCapability struct {
 
+	// 支持英文音标。
+	IsSupportPhonemeEn *bool `json:"is_support_phoneme_en,omitempty"`
+
 	// 是否支持多音字。
 	IsSupportPhoneme *bool `json:"is_support_phoneme,omitempty"`
 

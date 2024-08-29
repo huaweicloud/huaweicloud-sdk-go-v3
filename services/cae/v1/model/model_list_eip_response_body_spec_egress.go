@@ -12,6 +12,9 @@ type ListEipResponseBodySpecEgress struct {
 	// 出网IP带宽。
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
+	// 是否关闭出网IP。
+	Enabled *bool `json:"enabled,omitempty"`
+
 	// 出网IP列表。
 	IpList *[]string `json:"ip_list,omitempty"`
 }

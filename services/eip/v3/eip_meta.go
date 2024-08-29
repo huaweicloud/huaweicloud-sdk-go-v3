@@ -27,6 +27,10 @@ func GenReqDefForListBandwidth() *def.HttpRequestDef {
 		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Fields").
+		WithJsonTag("fields").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BandwidthType").
 		WithJsonTag("bandwidth_type").
 		WithLocationType(def.Query))
@@ -165,6 +169,10 @@ func GenReqDefForListEipBandwidths() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
 		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Fields").
+		WithJsonTag("fields").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").

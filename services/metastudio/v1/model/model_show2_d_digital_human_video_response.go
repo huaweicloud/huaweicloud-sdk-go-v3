@@ -49,7 +49,7 @@ type Show2DDigitalHumanVideoResponse struct {
 	// 人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
 	HumanImage *string `json:"human_image,omitempty"`
 
-	// 分身数字人模型资产ID。
+	// 分身数字人模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`

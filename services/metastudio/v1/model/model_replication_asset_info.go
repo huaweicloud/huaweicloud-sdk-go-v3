@@ -16,6 +16,9 @@ type ReplicationAssetInfo struct {
 	AssetInfo *string `json:"asset_info,omitempty"`
 
 	EncryptionInfo *ReplicationEncInfo `json:"encryption_info,omitempty"`
+
+	// 过期时间
+	ExpireTime *int64 `json:"expire_time,omitempty"`
 }
 
 func (o ReplicationAssetInfo) String() string {

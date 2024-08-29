@@ -21,7 +21,7 @@ type LiveVideoScriptInfo struct {
 	// 数字人ID。对应形象和音色组合。
 	DhId *string `json:"dh_id,omitempty"`
 
-	// 数字人模型资产ID。
+	// 数字人模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`

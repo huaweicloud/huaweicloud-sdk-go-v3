@@ -45,7 +45,7 @@ type DigitalAssetInfo struct {
 	// 冻结/解冻/失败 原因。
 	Reason *string `json:"reason,omitempty"`
 
-	// 标签列表。
+	// 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
 	Tags *[]string `json:"tags,omitempty"`
 
 	AssetExtraMeta *AssetExtraMeta `json:"asset_extra_meta,omitempty"`
@@ -55,6 +55,12 @@ type DigitalAssetInfo struct {
 
 	// 资产下的文件。
 	Files *[]AssetFileInfo `json:"files,omitempty"`
+
+	// 展示顺序
+	AssetOrder *int32 `json:"asset_order,omitempty"`
+
+	// 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
 }
 
 func (o DigitalAssetInfo) String() string {

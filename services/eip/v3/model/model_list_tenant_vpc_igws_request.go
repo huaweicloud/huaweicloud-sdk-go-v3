@@ -10,7 +10,7 @@ import (
 type ListTenantVpcIgwsRequest struct {
 
 	// 形式为\\\"fields=id&fields=project_id&...\\\"，支持字段：id/project_id/vpc_id/created_at/updated_at/name
-	Fields *string `json:"fields,omitempty"`
+	Fields *[]string `json:"fields,omitempty"`
 
 	// 虚拟IGW的uuid
 	Id *string `json:"id,omitempty"`

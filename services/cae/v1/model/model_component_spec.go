@@ -43,7 +43,7 @@ type ComponentSpec struct {
 	BuildId *string `json:"build_id,omitempty"`
 
 	// 组件状态。
-	Status *string `json:"status,omitempty"`
+	Status *ComponentSpecStatus `json:"status,omitempty"`
 
 	// 构建日志ID。
 	BuildLogId *string `json:"build_log_id,omitempty"`
@@ -77,6 +77,7 @@ type ComponentSpecRuntimeEnum struct {
 	NODEJS14 ComponentSpecRuntime
 	NODEJS16 ComponentSpecRuntime
 	PHP7     ComponentSpecRuntime
+	PHP8     ComponentSpecRuntime
 	DOTNET6  ComponentSpecRuntime
 	DOTNET7  ComponentSpecRuntime
 	DOTNET8  ComponentSpecRuntime
@@ -117,6 +118,9 @@ func GetComponentSpecRuntimeEnum() ComponentSpecRuntimeEnum {
 		PHP7: ComponentSpecRuntime{
 			value: "Php7",
 		},
+		PHP8: ComponentSpecRuntime{
+			value: "Php8",
+		},
 		DOTNET6: ComponentSpecRuntime{
 			value: "Dotnet6",
 		},
@@ -138,6 +142,61 @@ func (c ComponentSpecRuntime) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ComponentSpecRuntime) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ComponentSpecStatus struct {
+	value string
+}
+
+type ComponentSpecStatusEnum struct {
+	CREATED   ComponentSpecStatus
+	RUNNING   ComponentSpecStatus
+	PAUSED    ComponentSpecStatus
+	NOT_READY ComponentSpecStatus
+}
+
+func GetComponentSpecStatusEnum() ComponentSpecStatusEnum {
+	return ComponentSpecStatusEnum{
+		CREATED: ComponentSpecStatus{
+			value: "created",
+		},
+		RUNNING: ComponentSpecStatus{
+			value: "running",
+		},
+		PAUSED: ComponentSpecStatus{
+			value: "paused",
+		},
+		NOT_READY: ComponentSpecStatus{
+			value: "notReady",
+		},
+	}
+}
+
+func (c ComponentSpecStatus) Value() string {
+	return c.value
+}
+
+func (c ComponentSpecStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ComponentSpecStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

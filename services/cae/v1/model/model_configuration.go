@@ -20,8 +20,11 @@ type Configuration struct {
 	// 组件配置类型。
 	Type *ConfigurationType `json:"type,omitempty"`
 
-	// 配置是否生效。
+	// 配置是否生效过。
 	IsActivated *bool `json:"is_activated,omitempty"`
+
+	// 配置是否正在使用。
+	IsUsing *bool `json:"is_using,omitempty"`
 }
 
 func (o Configuration) String() string {

@@ -16,7 +16,7 @@ type ListPublicipPoolRequest struct {
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
-	Fields *string `json:"fields,omitempty"`
+	Fields *[]string `json:"fields,omitempty"`
 
 	// 排序，形式为\"sort_key=id&sort_dir=asc\"  支持字段：id/name/created_at/updated_at/public_border_group
 	SortKey *string `json:"sort_key,omitempty"`

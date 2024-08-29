@@ -10,7 +10,7 @@ import (
 type ListShareBandwidthTypesRequest struct {
 
 	// 形式为\\\"fields=id&fields=bandwidth_type&...\\\"，支持字段：id/bandwidth_type/name_en/name_zh/created_at/update_at/public_border_group/description
-	Fields *string `json:"fields,omitempty"`
+	Fields *[]string `json:"fields,omitempty"`
 
 	// 支持带宽类型的id
 	Id *string `json:"id,omitempty"`

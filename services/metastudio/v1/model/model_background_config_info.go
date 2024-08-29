@@ -21,7 +21,7 @@ type BackgroundConfigInfo struct {
 	// 纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
 	BackgroundColorConfig *string `json:"background_color_config,omitempty"`
 
-	// 背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+	// 背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
 	BackgroundAssetId *string `json:"background_asset_id,omitempty"`
 }
 

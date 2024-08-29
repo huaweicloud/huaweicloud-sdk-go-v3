@@ -24,6 +24,9 @@ type CreateWhiteblackipRuleResponse struct {
 	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
 	White *int32 `json:"white,omitempty"`
 
+	// 生效模式，默认为permanent（立即生效）
+	TimeMode *string `json:"time_mode,omitempty"`
+
 	IpGroup *IpGroup `json:"ip_group,omitempty"`
 
 	// 规则状态，0：关闭，1：开启

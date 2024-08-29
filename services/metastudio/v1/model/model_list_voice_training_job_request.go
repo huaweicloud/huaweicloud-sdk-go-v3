@@ -35,6 +35,9 @@ type ListVoiceTrainingJobRequest struct {
 
 	// 任务标签。
 	Tag *string `json:"tag,omitempty"`
+
+	// 训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+	JobType *string `json:"job_type,omitempty"`
 }
 
 func (o ListVoiceTrainingJobRequest) String() string {

@@ -37,7 +37,7 @@ type ShowSmartLiveRoomResponse struct {
 	// RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
 	StreamKeys *[]string `json:"stream_keys,omitempty"`
 
-	// 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+	// 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
 	BackupModelAssetIds *[]string `json:"backup_model_asset_ids,omitempty"`
 
 	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
@@ -52,6 +52,9 @@ type ShowSmartLiveRoomResponse struct {
 	ViewMode *ShowSmartLiveRoomResponseViewMode `json:"view_mode,omitempty"`
 
 	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`
+
+	// 私有数据，用户填写，原样带回。
+	PrivData *string `json:"priv_data,omitempty"`
 
 	// 直播间ID
 	RoomId *string `json:"room_id,omitempty"`

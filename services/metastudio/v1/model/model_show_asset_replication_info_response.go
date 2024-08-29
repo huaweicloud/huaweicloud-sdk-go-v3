@@ -17,6 +17,9 @@ type ShowAssetReplicationInfoResponse struct {
 
 	EncryptionInfo *ReplicationEncInfo `json:"encryption_info,omitempty"`
 
+	// 过期时间
+	ExpireTime *int64 `json:"expire_time,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

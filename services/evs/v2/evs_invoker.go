@@ -257,6 +257,18 @@ func (i *ResizeVolumeInvoker) Invoke() (*model.ResizeVolumeResponse, error) {
 	}
 }
 
+type RetypeVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetypeVolumeInvoker) Invoke() (*model.RetypeVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetypeVolumeResponse), nil
+	}
+}
+
 type RollbackSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }

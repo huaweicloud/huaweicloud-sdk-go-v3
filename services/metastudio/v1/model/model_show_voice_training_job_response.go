@@ -53,7 +53,10 @@ type ShowVoiceTrainingJobResponse struct {
 	Tag *JobTag `json:"tag,omitempty"`
 
 	// 手机号
-	Phone          *string `json:"phone,omitempty"`
+	Phone *string `json:"phone,omitempty"`
+
+	// 形象制作任务id
+	DhtmsJobId     *string `json:"dhtms_job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

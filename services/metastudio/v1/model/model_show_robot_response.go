@@ -27,6 +27,8 @@ type ShowRobotResponse struct {
 	// 应用的AccessKey或帐号。
 	AppKey *string `json:"app_key,omitempty"`
 
+	RobotType *RobotTypeEnum `json:"robot_type,omitempty"`
+
 	Language *LanguageEnum `json:"language,omitempty"`
 
 	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。

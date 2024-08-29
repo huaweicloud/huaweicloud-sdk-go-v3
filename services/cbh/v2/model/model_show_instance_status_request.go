@@ -9,7 +9,7 @@ import (
 // ShowInstanceStatusRequest Request Object
 type ShowInstanceStatusRequest struct {
 
-	// 云堡垒机实例ID，使用UUID格式表示。  [实例ID获取方式](https://support.huaweicloud.com/usermanual-cbh/cbh_02_1003.html)。
+	// 云堡垒机实例ID，使用UUID格式表示。  获取方法详见用户指南里面的实例\"查看实例详情\"
 	ServerId string `json:"server_id"`
 }
 

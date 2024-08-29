@@ -12,7 +12,7 @@ type LargeFilesCreateReq struct {
 	// 文件名，不区分大小写，最大长度256，最小长度1。
 	FileName string `json:"file_name"`
 
-	// 文件总的大小，最小1，最大5368709120。
+	// 文件总的大小，最小1，最大536870912000。
 	FileSize *int64 `json:"file_size,omitempty"`
 
 	// 文件类型（默认提取文件后缀）。

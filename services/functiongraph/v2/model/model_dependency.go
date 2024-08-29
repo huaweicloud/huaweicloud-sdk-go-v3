@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -44,8 +45,8 @@ type Dependency struct {
 	// 依赖包ID
 	DepId *string `json:"dep_id,omitempty"`
 
-	// 函数最后一次更新时间。
-	LastModified *sdktime.SdkTime `json:"last_modified,omitempty"`
+	// 依赖包最后一次更新时间。
+	LastModified *int64 `json:"last_modified,omitempty"`
 }
 
 func (o Dependency) String() string {

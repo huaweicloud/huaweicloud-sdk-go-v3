@@ -20,7 +20,7 @@ type VideoScriptBaseInfo struct {
 	// 剧本描述。
 	ScriptDescription *string `json:"script_description,omitempty"`
 
-	// 数字人模型资产ID。
+	// 数字人模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	// 数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人

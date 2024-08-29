@@ -13,6 +13,8 @@ type ShootScriptShowItem struct {
 	SequenceNo *int32 `json:"sequence_no,omitempty"`
 
 	ShootScript *ShootScriptDetail `json:"shoot_script,omitempty"`
+
+	SubtitleFileInfo *SubtitleFileInfo `json:"subtitle_file_info,omitempty"`
 }
 
 func (o ShootScriptShowItem) String() string {

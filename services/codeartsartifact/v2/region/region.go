@@ -13,13 +13,13 @@ var (
 	CN_EAST_2 = region.NewRegion("cn-east-2",
 		"https://cloudartifacts-ext.cn-east-2.myhuaweicloud.com")
 	CN_NORTH_1 = region.NewRegion("cn-north-1",
-		"https://artifact.cn-north-1.myhuaweicloud.com")
+		"https://cloudartifacts-ext.cn-north-1.myhuaweicloud.com")
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://artifact.cn-north-4.myhuaweicloud.com")
+		"https://cloudartifacts-ext.cn-north-4.myhuaweicloud.com")
 	CN_SOUTH_1 = region.NewRegion("cn-south-1",
 		"https://artifact.cn-south-1.myhuaweicloud.com")
 	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
-		"https://artifact.cn-southwest-2.myhuaweicloud.com")
+		"https://cloudartifacts-ext.cn-southwest-2.myhuaweicloud.com")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
 		"https://artifact.ap-southeast-3.myhuaweicloud.com")
 )

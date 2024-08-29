@@ -15,6 +15,9 @@ type ListEipBandwidthsRequest struct {
 	// - 功能说明：分页查询起始的资源ID，为空时为查询第一页
 	Marker *string `json:"marker,omitempty"`
 
+	// display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
+	Fields *[]string `json:"fields,omitempty"`
+
 	// - 功能说明：带宽唯一标识
 	Id *string `json:"id,omitempty"`
 

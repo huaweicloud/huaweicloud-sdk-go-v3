@@ -1397,6 +1397,18 @@ func (i *DeleteVoiceTrainingJobInvoker) Invoke() (*model.DeleteVoiceTrainingJobR
 	}
 }
 
+type ListJobOperationLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListJobOperationLogInvoker) Invoke() (*model.ListJobOperationLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListJobOperationLogResponse), nil
+	}
+}
+
 type ListVoiceTrainingJobInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -341,6 +341,18 @@ func (i *DisassociateServerVirtualIpInvoker) Invoke() (*model.DisassociateServer
 	}
 }
 
+type ListCloudServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudServersInvoker) Invoke() (*model.ListCloudServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudServersResponse), nil
+	}
+}
+
 type ListFlavorSellPoliciesInvoker struct {
 	*invoker.BaseInvoker
 }

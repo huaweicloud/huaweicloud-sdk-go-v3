@@ -75,8 +75,11 @@ type ConfigurationResponseDataSpec struct {
 
 	PreStop *ConfigurationResponseDataSpecPreStop `json:"preStop,omitempty"`
 
-	// 自定义日志路径数组。  Configuration.type为\"log\"时，返回此参数。
+	// 自定义本地磁盘日志路径数组。  Configuration.type为\"log\"时，返回此参数。
 	LogPaths *[]string `json:"log_paths,omitempty"`
+
+	// 自定义云存储日志路径数组。  Configuration.type为\"log\"时，返回此参数。
+	CloudStorageLogPaths *[]CloudStorageLogPathInfo `json:"cloud_storage_log_paths,omitempty"`
 
 	// 探针注入方式。  Configuration.type为\"apm2\"时，返回此参数。
 	Instrumentation *string `json:"instrumentation,omitempty"`

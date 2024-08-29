@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -157,6 +156,27 @@ type TriggerEventDataRequestBody struct {
 
 	// RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
+
+	// EG obs触发器是否对对象加密。
+	KeyEncode *bool `json:"Key_encode,omitempty"`
+
+	// 使用的代理
+	Agency *string `json:"agency,omitempty"`
+
+	// 通道名称
+	ChannelName *string `json:"channel_name,omitempty"`
+
+	// 事件源名称
+	SourceName *string `json:"source_name,omitempty"`
+
+	// 创建时间
+	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
+
+	// 触发器状态
+	Status *string `json:"status,omitempty"`
+
+	// 触发器名称
+	TriggerName *string `json:"trigger_name,omitempty"`
 }
 
 func (o TriggerEventDataRequestBody) String() string {

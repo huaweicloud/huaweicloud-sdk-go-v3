@@ -21,6 +21,15 @@ type ImportFileReq struct {
 	JobsParam *interface{} `json:"jobsParam,omitempty"`
 
 	ExecuteUser *string `json:"executeUser,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段。表示创建作业的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示作业创建后是保存态，提交态，生产态
+	TargetStatus *ImportFileReqTargetStatus `json:"targetStatus,omitempty"`
+
+	// 在开启审批开关后，需要填写该字段，表示作业审批人
+	Approvers *[]JobApprover `json:"approvers,omitempty"`
+
+	// 如需替换资源，需要填写该字段，包含替换的资源名和资源类型和替换后的资源名
+	Resources *[]JobResourceInfo `json:"resources,omitempty"`
 }
 
 func (o ImportFileReq) String() string {
@@ -61,6 +70,57 @@ func (c ImportFileReqSameNamePolicy) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ImportFileReqSameNamePolicy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ImportFileReqTargetStatus struct {
+	value string
+}
+
+type ImportFileReqTargetStatusEnum struct {
+	SAVED      ImportFileReqTargetStatus
+	SUBMITTED  ImportFileReqTargetStatus
+	PRODUCTION ImportFileReqTargetStatus
+}
+
+func GetImportFileReqTargetStatusEnum() ImportFileReqTargetStatusEnum {
+	return ImportFileReqTargetStatusEnum{
+		SAVED: ImportFileReqTargetStatus{
+			value: "SAVED",
+		},
+		SUBMITTED: ImportFileReqTargetStatus{
+			value: "SUBMITTED",
+		},
+		PRODUCTION: ImportFileReqTargetStatus{
+			value: "PRODUCTION",
+		},
+	}
+}
+
+func (c ImportFileReqTargetStatus) Value() string {
+	return c.value
+}
+
+func (c ImportFileReqTargetStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ImportFileReqTargetStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

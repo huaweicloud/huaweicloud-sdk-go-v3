@@ -10,7 +10,7 @@ import (
 type ListProjectGeipBindingsRequest struct {
 
 	// 形式为\\\"fields=geip_id&fields=geip_ip_address&...\\\"，支持字段：geip_id/geip_ip_address/instance_type/instance_id/vnic/vn_list/public_border_group/gcbandwidth/version/created_at/updated_at/instance_vpc_id
-	Fields *string `json:"fields,omitempty"`
+	Fields *[]string `json:"fields,omitempty"`
 
 	// GEIP的uuid
 	GeipId *string `json:"geip_id,omitempty"`

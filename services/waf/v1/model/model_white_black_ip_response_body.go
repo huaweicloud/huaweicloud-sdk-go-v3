@@ -33,6 +33,9 @@ type WhiteBlackIpResponseBody struct {
 	White *int32 `json:"white,omitempty"`
 
 	IpGroup *IpGroup `json:"ip_group,omitempty"`
+
+	// 生效模式，默认为permanent（立即生效）
+	TimeMode *string `json:"time_mode,omitempty"`
 }
 
 func (o WhiteBlackIpResponseBody) String() string {

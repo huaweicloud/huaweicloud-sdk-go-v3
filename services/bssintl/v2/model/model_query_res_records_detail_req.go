@@ -58,6 +58,9 @@ type QueryResRecordsDetailReq struct {
 
 	// |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
 	BillCycleEnd *string `json:"bill_cycle_end,omitempty"`
+
+	// |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
+	PayerAccountId *string `json:"payer_account_id,omitempty"`
 }
 
 func (o QueryResRecordsDetailReq) String() string {

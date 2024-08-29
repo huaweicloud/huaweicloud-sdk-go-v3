@@ -11,7 +11,7 @@ type Create2DDigitalHumanVideoReq struct {
 	// 剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
 	ScriptId *string `json:"script_id,omitempty"`
 
-	// 分身数字人模型资产ID。
+	// 分身数字人模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`

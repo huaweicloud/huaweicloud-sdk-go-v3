@@ -474,6 +474,32 @@ func (c *EvsClient) ResizeVolumeInvoker(request *model.ResizeVolumeRequest) *Res
 	return &ResizeVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RetypeVolume 磁盘类型变更
+//
+// 对按需或者包周期云硬盘进行磁盘类型变更。
+// [在磁盘类型变更包周期云硬盘的场景下：](tag:hws)
+// - [如果您需要查看订单可用的优惠券，请参考\&quot;[查询订单可用优惠券](https://support.huaweicloud.com/api-oce/zh-cn_topic_0092953630.html)\&quot;。](tag:hws)
+// - [如果您需要支付订单，请参考\&quot;[支付包周期产品订单](https://support.huaweicloud.com/api-oce/api_order_00030.html)\&quot;。](tag:hws)
+// - [如果您需要查询订单的资源开通详情，请参考\&quot;[查询订单的资源开通详情](https://support.huaweicloud.com/api-oce/api_order_00001.html)\&quot;。](tag:hws)
+// - [如果您需要退订该包周期资源，请参考“[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html)”。](tag:hws)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) RetypeVolume(request *model.RetypeVolumeRequest) (*model.RetypeVolumeResponse, error) {
+	requestDef := GenReqDefForRetypeVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetypeVolumeResponse), nil
+	}
+}
+
+// RetypeVolumeInvoker 磁盘类型变更
+func (c *EvsClient) RetypeVolumeInvoker(request *model.RetypeVolumeRequest) *RetypeVolumeInvoker {
+	requestDef := GenReqDefForRetypeVolume()
+	return &RetypeVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RollbackSnapshot 回滚快照到云硬盘
 //
 // 将快照数据回滚到云硬盘。支持企业项目授权功能。

@@ -20,7 +20,7 @@ type FreezeSubCustomersReq struct {
 	// 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
-	// |参数名称：冻结类型| |参数的约束及描述：该参数非必填，冻结类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+	// |参数名称：冻结类型| |参数的约束及描述：该参数非必填，冻结类型，支持枚举| |ACCOUNT：冻结账号，ACCOUNT_AND_RESOURCE：冻结账号与资源|
 	FreezeType *FreezeSubCustomersReqFreezeType `json:"freeze_type,omitempty"`
 }
 

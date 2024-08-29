@@ -37,12 +37,23 @@ type ShowSmartChatJobResponse struct {
 
 	RtcRoomInfo *RtcRoomInfoList `json:"rtc_room_info,omitempty"`
 
-	ChatSubtitleConfig *ChatSubtitleConfig `json:"chat_subtitle_config,omitempty"`
+	ChatSubtitleConfig *SmartChatSubtitleConfig `json:"chat_subtitle_config,omitempty"`
 
-	VideoConfig *ChatVideoConfigRsp `json:"video_config,omitempty"`
+	VideoConfig *SmartChatVideoConfig `json:"video_config,omitempty"`
+
+	// 数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+	ChatState *int32 `json:"chat_state,omitempty"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
 
 	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
 	ChatVideoType *ShowSmartChatJobResponseChatVideoType `json:"chat_video_type,omitempty"`
+
+	// 智能交互接入地址。
+	ChatAccessAddress *string `json:"chat_access_address,omitempty"`
+
+	// 是否透明背景
+	IsTransparent *bool `json:"is_transparent,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

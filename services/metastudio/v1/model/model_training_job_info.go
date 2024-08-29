@@ -54,6 +54,9 @@ type TrainingJobInfo struct {
 
 	// 手机号
 	Phone *string `json:"phone,omitempty"`
+
+	// 形象制作任务id
+	DhtmsJobId *string `json:"dhtms_job_id,omitempty"`
 }
 
 func (o TrainingJobInfo) String() string {

@@ -12,7 +12,7 @@ import (
 // ShowAgencyRequest Request Object
 type ShowAgencyRequest struct {
 
-	// 委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+	// 委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
 	RoleType *ShowAgencyRequestRoleType `json:"role_type,omitempty"`
 }
 

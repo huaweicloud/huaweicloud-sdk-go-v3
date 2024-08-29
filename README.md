@@ -31,6 +31,8 @@ Run the following command to install Huawei Cloud Go SDK:
 go get github.com/huaweicloud/huaweicloud-sdk-go-v3
 ```
 
+You can get the SDK version information through [SDK center](https://console-intl.huaweicloud.com/apiexplorer/#/sdkcenter?language=Go) or [Github Releases](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/releases?page=1).
+
 ## Code Example
 
 - The following example shows how to query a list of VPCs in a specific region, you need to substitute your
@@ -201,7 +203,7 @@ func main() {
 
 ## Online Debugging
 
-[API Explorer](https://apiexplorer.developer.intl.huaweicloud.com/apiexplorer/overview) provides api retrieval and online debugging, supports full fast retrieval, visual debugging, help document viewing, and online consultation.
+[API Explorer](https://apiexplorer.developer.intl.huaweicloud.com/apiexplorer/overview) provides api retrieval, SDK samples and online debugging, supports full fast retrieval, visual debugging, help document viewing, and online consultation.
 
 ## Changelog
 

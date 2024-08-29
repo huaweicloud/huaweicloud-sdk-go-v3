@@ -31,6 +31,8 @@
 go get github.com/huaweicloud/huaweicloud-sdk-go-v3
 ```
 
+您可以通过 [SDK中心](https://console.huaweicloud.com/apiexplorer/#/sdkcenter?language=Go) 或 [Github Releases](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/releases?page=1) 查询SDK版本信息。
+
 ## 代码示例
 
 - 使用如下代码在指定 Region 下查询 VPC 列表，实际使用中请将 `vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"`
@@ -201,7 +203,7 @@ func main() {
 ## 在线调试
 
 [API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/overview)
-提供API检索及平台调试，支持全量快速检索、可视化调试、帮助文档查看、在线咨询。
+提供API检索、SDK示例及平台调试，支持全量快速检索、可视化调试、帮助文档查看、在线咨询。
 
 ## 变更日志
 

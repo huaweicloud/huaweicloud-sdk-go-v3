@@ -29,6 +29,15 @@ type HumanModel2DAssetMeta struct {
 
 	// 已执行编译任务
 	DeviceNames *[]string `json:"device_names,omitempty"`
+
+	// 分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+	IsWithActionLibrary *bool `json:"is_with_action_library,omitempty"`
+
+	// 动作标签映射。
+	ActionTagMap *[]ActionTagInfo `json:"action_tag_map,omitempty"`
+
+	// 是否是Flexus版本分身数字人。
+	IsFlexus *bool `json:"is_flexus,omitempty"`
 }
 
 func (o HumanModel2DAssetMeta) String() string {

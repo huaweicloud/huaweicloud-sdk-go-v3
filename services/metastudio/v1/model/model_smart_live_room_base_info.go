@@ -59,6 +59,9 @@ type SmartLiveRoomBaseInfo struct {
 
 	// 当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
 	LastJobStatus *SmartLiveRoomBaseInfoLastJobStatus `json:"last_job_status,omitempty"`
+
+	// 私有数据，用户填写，原样带回。
+	PrivData *string `json:"priv_data,omitempty"`
 }
 
 func (o SmartLiveRoomBaseInfo) String() string {

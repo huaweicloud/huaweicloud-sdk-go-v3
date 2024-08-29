@@ -18,6 +18,8 @@ type UpdateRobotReq struct {
 	// 智能交互对话房间ID。
 	RoomId *string `json:"room_id,omitempty"`
 
+	RobotType *RobotTypeEnum `json:"robot_type,omitempty"`
+
 	Language *LanguageEnum `json:"language,omitempty"`
 
 	// 语音识别后端点静音时长默认500ms

@@ -23,6 +23,8 @@ type ResetActiveCodeRequest struct {
 
 	// 激活码ID。
 	ActiveCodeId string `json:"active_code_id"`
+
+	Body *ResetActiveCodeReq `json:"body,omitempty"`
 }
 
 func (o ResetActiveCodeRequest) String() string {

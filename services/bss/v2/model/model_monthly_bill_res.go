@@ -137,6 +137,9 @@ type MonthlyBillRes struct {
 
 	// 可用区信息列表。具体请参见表 AzCodeInfo。
 	AzCodeInfos *[]AzCodeInfo `json:"az_code_infos,omitempty"`
+
+	// |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+	PayerAccountId *string `json:"payer_account_id,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

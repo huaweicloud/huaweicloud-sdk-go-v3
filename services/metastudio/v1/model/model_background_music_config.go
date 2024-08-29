@@ -9,7 +9,7 @@ import (
 // BackgroundMusicConfig 背景音乐配置。
 type BackgroundMusicConfig struct {
 
-	// 音乐资产ID。
+	// 音乐资产ID，可以从资产库中查询。
 	MusicAssetId *string `json:"music_asset_id,omitempty"`
 
 	// 音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。

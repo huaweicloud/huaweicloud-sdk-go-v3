@@ -27,7 +27,7 @@ type ListProductsRequest struct {
 	// 每页显示的条目数量。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 排序字段，目前只支持create_time。
+	// 排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 排序方式。 * asc：升序 * desc：降序  默认asc升序。

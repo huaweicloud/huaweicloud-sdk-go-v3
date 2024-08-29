@@ -60,6 +60,16 @@ var (
 		"https://vpc.my-kualalumpur-1.myhuaweicloud.com")
 	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
 		"https://vpc.ru-moscow-1.myhuaweicloud.com")
+	CN_EAST_5 = region.NewRegion("cn-east-5",
+		"https://vpc.cn-east-5.myhuaweicloud.com")
+	CN_EAST_4 = region.NewRegion("cn-east-4",
+		"https://vpc.cn-east-4.myhuaweicloud.com")
+	AF_NORTH_1 = region.NewRegion("af-north-1",
+		"https://vpc.af-north-1.myhuaweicloud.com")
+	CN_NORTH_11 = region.NewRegion("cn-north-11",
+		"https://vpc.cn-north-11.myhuaweicloud.com")
+	CN_SOUTH_2 = region.NewRegion("cn-south-2",
+		"https://vpc.cn-south-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -89,6 +99,11 @@ var staticFields = map[string]*region.Region{
 	"ru-northwest-2":   RU_NORTHWEST_2,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 	"ru-moscow-1":      RU_MOSCOW_1,
+	"cn-east-5":        CN_EAST_5,
+	"cn-east-4":        CN_EAST_4,
+	"af-north-1":       AF_NORTH_1,
+	"cn-north-11":      CN_NORTH_11,
+	"cn-south-2":       CN_SOUTH_2,
 }
 
 var provider = region.DefaultProviderChain("EIP")

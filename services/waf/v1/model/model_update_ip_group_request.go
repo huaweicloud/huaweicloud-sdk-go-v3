@@ -15,6 +15,9 @@ type UpdateIpGroupRequest struct {
 	// ip地址组id
 	Id string `json:"id"`
 
+	// 增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+	Action *string `json:"action,omitempty"`
+
 	Body *UpdateIpGroupRequestBody `json:"body,omitempty"`
 }
 

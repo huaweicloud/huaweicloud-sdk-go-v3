@@ -9,7 +9,7 @@ import (
 // ListDigitalHumanBusinessCardResponse Response Object
 type ListDigitalHumanBusinessCardResponse struct {
 
-	// 数字人名片制作任总数。
+	// 数字人名片制作任务总数。
 	Count *int32 `json:"count,omitempty"`
 
 	// 数字人名片制作任务列表。

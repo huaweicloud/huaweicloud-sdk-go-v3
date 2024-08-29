@@ -9,8 +9,8 @@ import (
 // ListCommonPoolsRequest Request Object
 type ListCommonPoolsRequest struct {
 
-	// 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
-	Fields *string `json:"fields,omitempty"`
+	// 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
+	Fields *[]string `json:"fields,omitempty"`
 
 	// 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
 	Limit *int32 `json:"limit,omitempty"`
