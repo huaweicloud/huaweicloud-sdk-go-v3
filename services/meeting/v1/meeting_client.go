@@ -3802,6 +3802,27 @@ func (c *MeetingClient) UploadFileInvoker(request *model.UploadFileRequest) *Upl
 	return &UploadFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAuthRandom 获取会议鉴权随机数
+//
+// 根据会议ID + 密码鉴权返回鉴权随机数，如果是小程序调用时，需要企业支持小程序功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) CreateAuthRandom(request *model.CreateAuthRandomRequest) (*model.CreateAuthRandomResponse, error) {
+	requestDef := GenReqDefForCreateAuthRandom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthRandomResponse), nil
+	}
+}
+
+// CreateAuthRandomInvoker 获取会议鉴权随机数
+func (c *MeetingClient) CreateAuthRandomInvoker(request *model.CreateAuthRandomRequest) *CreateAuthRandomInvoker {
+	requestDef := GenReqDefForCreateAuthRandom()
+	return &CreateAuthRandomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchQosHistoryMeetings 查询QoS历史会议列表
 //
 // 该接口用于查询企业内历史会议的QoS告警。仅旗舰版企业/标准版企业的企业管理员有权限查询。可以查询最近3个月内的数据。

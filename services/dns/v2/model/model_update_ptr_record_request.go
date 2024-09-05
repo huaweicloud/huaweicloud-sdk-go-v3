@@ -12,7 +12,7 @@ type UpdatePtrRecordRequest struct {
 	// 域名所属的区域。
 	Region string `json:"region"`
 
-	// 待修改弹性IP的PTR记录ID信息。
+	// 弹性公网IP（EIP）的ID。
 	FloatingipId string `json:"floatingip_id"`
 
 	Body *UpdatePtrReq `json:"body,omitempty"`

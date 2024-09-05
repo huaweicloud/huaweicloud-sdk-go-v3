@@ -17,6 +17,11 @@ type TrackerConfigBody struct {
 
 	// IAM委托名称
 	AgencyName string `json:"agency_name"`
+
+	// 账号ID
+	DomainId *string `json:"domain_id,omitempty"`
+
+	FrozenStatus *FrozenStatus `json:"frozen_status,omitempty"`
 }
 
 func (o TrackerConfigBody) String() string {

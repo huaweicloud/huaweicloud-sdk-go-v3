@@ -25,6 +25,9 @@ type NetworkAddresses struct {
 
 	// 扩展属性，分配IP地址方式。  fixed：代表私有IP地址。 floating：代表浮动IP地址。
 	OSEXTIPStype string `json:"OS-EXT-IPS:type"`
+
+	// 是否是主网卡。  true：主网卡。 false：辅助网卡。
+	Primary *bool `json:"primary,omitempty"`
 }
 
 func (o NetworkAddresses) String() string {

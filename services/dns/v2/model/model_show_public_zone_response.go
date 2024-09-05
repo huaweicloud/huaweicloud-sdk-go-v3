@@ -48,7 +48,7 @@ type ShowPublicZoneResponse struct {
 	// 域名关联的企业项目ID，长度不超过36个字符
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 主从模式中，从DNS服务器用以获取DNS信息
+	// 主从模式中，从DNS服务器获取DNS信息
 	Masters *[]string `json:"masters,omitempty"`
 
 	Links *PageLink `json:"links,omitempty"`

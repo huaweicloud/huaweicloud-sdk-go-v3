@@ -20,6 +20,9 @@ type VolumeAttach struct {
 
 	// 盘在云服务器上的挂载顺序，0表示启动盘。
 	BootIndex *string `json:"bootIndex,omitempty"`
+
+	// 云盘大小（单位：GB）。
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o VolumeAttach) String() string {

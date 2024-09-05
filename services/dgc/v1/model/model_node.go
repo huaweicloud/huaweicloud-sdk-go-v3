@@ -87,6 +87,7 @@ type NodeTypeEnum struct {
 	RDS_SQL            NodeType
 	DATA_MIGRATION     NodeType
 	ONECLICK_CDC       NodeType
+	DUMMY              NodeType
 }
 
 func GetNodeTypeEnum() NodeTypeEnum {
@@ -156,6 +157,9 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		},
 		ONECLICK_CDC: NodeType{
 			value: "OneclickCDC",
+		},
+		DUMMY: NodeType{
+			value: "Dummy",
 		},
 	}
 }

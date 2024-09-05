@@ -49,8 +49,8 @@ type CloudServer struct {
 	// 云服务器上一次更新时间。时间格式例如：2020-05-22T07:48:53Z
 	Updated string `json:"updated"`
 
-	// 云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
-	Launched *string `json:"launched,omitempty"`
+	// 云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
+	LaunchedAt *string `json:"launched_at,omitempty"`
 
 	// 云服务器的描述信息。
 	Description *string `json:"description,omitempty"`

@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// PolicyRoleResult
-type PolicyRoleResult struct {
+// ShowPolicyRoleResult
+type ShowPolicyRoleResult struct {
 
 	// 自定义策略所属账号ID。
 	DomainId string `json:"domain_id"`
@@ -47,11 +47,11 @@ type PolicyRoleResult struct {
 	Policy *CustomPolicy `json:"policy"`
 }
 
-func (o PolicyRoleResult) String() string {
+func (o ShowPolicyRoleResult) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "PolicyRoleResult struct{}"
+		return "ShowPolicyRoleResult struct{}"
 	}
 
-	return strings.Join([]string{"PolicyRoleResult", string(data)}, " ")
+	return strings.Join([]string{"ShowPolicyRoleResult", string(data)}, " ")
 }

@@ -1040,6 +1040,26 @@ func GenReqDefForRetryUpgradeClusterTask() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRevokeKubernetesClusterCert() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/projects/{project_id}/clusters/{cluster_id}/clustercertrevoke").
+		WithResponse(new(model.RevokeKubernetesClusterCertResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRollbackAddonInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

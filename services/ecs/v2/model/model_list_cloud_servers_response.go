@@ -9,9 +9,6 @@ import (
 // ListCloudServersResponse Response Object
 type ListCloudServersResponse struct {
 
-	// 查询云服务器个数。
-	Count *int32 `json:"count,omitempty"`
-
 	// 查询云服务器信息列表。
 	Servers *[]CloudServer `json:"servers,omitempty"`
 

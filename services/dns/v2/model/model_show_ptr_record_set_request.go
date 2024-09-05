@@ -12,7 +12,7 @@ type ShowPtrRecordSetRequest struct {
 	// 租户的区域信息。
 	Region string `json:"region"`
 
-	// 弹性IP的ID。
+	// 弹性公网IP（EIP）的ID。
 	FloatingipId string `json:"floatingip_id"`
 }
 

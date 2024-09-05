@@ -50,7 +50,7 @@ type DeletePrivateZoneResponse struct {
 
 	Links *PageLink `json:"links,omitempty"`
 
-	// 主从模式中，从DNS服务器用以获取DNS信息。
+	// 主从模式中，从DNS服务器获取DNS信息。
 	Masters *[]string `json:"masters,omitempty"`
 
 	// 与该zone关联的Router(VPC)列表。

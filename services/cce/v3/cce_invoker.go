@@ -581,6 +581,18 @@ func (i *RetryUpgradeClusterTaskInvoker) Invoke() (*model.RetryUpgradeClusterTas
 	}
 }
 
+type RevokeKubernetesClusterCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevokeKubernetesClusterCertInvoker) Invoke() (*model.RevokeKubernetesClusterCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevokeKubernetesClusterCertResponse), nil
+	}
+}
+
 type RollbackAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

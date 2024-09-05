@@ -52,7 +52,7 @@ type PublicZoneResp struct {
 	// 资源标签。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 主从模式中，从DNS服务器用以获取DNS信息。
+	// 主从模式中，从DNS服务器获取DNS信息。
 	Masters *[]string `json:"masters,omitempty"`
 
 	// 域名关联的企业项目ID，长度不超过36个字符。

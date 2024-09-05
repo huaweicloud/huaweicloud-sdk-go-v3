@@ -50,13 +50,13 @@ type ShowPrivateZoneResponse struct {
 
 	Links *PageLink `json:"links,omitempty"`
 
-	// 主从模式中，从DNS服务器用以获取DNS信息。
+	// 主从模式中，从DNS服务器获取DNS信息。
 	Masters *[]string `json:"masters,omitempty"`
 
 	// 与该zone关联的Router(VPC)列表。
 	Routers *[]Router `json:"routers,omitempty"`
 
-	// 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+	// 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
 	ProxyPattern *string `json:"proxy_pattern,omitempty"`
 
 	// 域名关联的企业项目ID，长度不超过36个字符。

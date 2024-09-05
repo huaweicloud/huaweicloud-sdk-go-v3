@@ -12,10 +12,10 @@ type RemediationResourceKey struct {
 	// 资源ID。
 	ResourceId string `json:"resource_id"`
 
-	// 云服务名称。
+	// 云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
 	ResourceProvider string `json:"resource_provider"`
 
-	// 资源类型。
+	// 资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
 	ResourceType string `json:"resource_type"`
 }
 

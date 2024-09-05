@@ -24,12 +24,9 @@ type FlavorQuasar struct {
 	// 该云服务器规格对应要求系统盘大小，0为不限制。
 	Disk *int32 `json:"disk,omitempty"`
 
-	RootGb *int32 `json:"root_gb,omitempty"`
+	Gpus *[]GpuInfo `json:"gpus,omitempty"`
 
-	EphemeralGb *int32 `json:"ephemeral_gb,omitempty"`
-
-	// flavor扩展字段。
-	ExtraSpecs map[string]string `json:"extra_specs,omitempty"`
+	AsicAccelerators *[]AsicAcceleratorInfo `json:"asic_accelerators,omitempty"`
 }
 
 func (o FlavorQuasar) String() string {

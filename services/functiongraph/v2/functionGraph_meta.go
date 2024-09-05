@@ -23,6 +23,10 @@ func GenReqDefForAsyncInvokeFunction() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XCffInstanceMemory").
+		WithJsonTag("X-Cff-Instance-Memory").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -676,6 +680,10 @@ func GenReqDefForInvokeFunction() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XCFFRequestVersion").
 		WithJsonTag("X-CFF-Request-Version").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XCffInstanceMemory").
+		WithJsonTag("X-Cff-Instance-Memory").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -9,13 +9,13 @@ import (
 type UpdateRecordSetReq struct {
 
 	// 域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 可选配置，对域名的描述。
 	Description *string `json:"description,omitempty"`
 
 	// Record Set的类型。
-	Type string `json:"type"`
+	Type *string `json:"type,omitempty"`
 
 	// 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
 	Ttl *int32 `json:"ttl,omitempty"`

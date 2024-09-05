@@ -10,11 +10,8 @@ import (
 type ShowResourceTagResponse struct {
 
 	// 指定实例的标签列表。
-	Tags *[]Tag `json:"tags,omitempty"`
-
-	// 企业项目或默认项目
-	EnterpriseProjectOrDefault *string `json:"enterpriseProjectOrDefault,omitempty"`
-	HttpStatusCode             int     `json:"-"`
+	Tags           *[]Tag `json:"tags,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowResourceTagResponse) String() string {

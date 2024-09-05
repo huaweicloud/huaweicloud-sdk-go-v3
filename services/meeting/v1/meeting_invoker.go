@@ -2153,6 +2153,18 @@ func (i *UploadFileInvoker) Invoke() (*model.UploadFileResponse, error) {
 	}
 }
 
+type CreateAuthRandomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthRandomInvoker) Invoke() (*model.CreateAuthRandomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthRandomResponse), nil
+	}
+}
+
 type SearchQosHistoryMeetingsInvoker struct {
 	*invoker.BaseInvoker
 }

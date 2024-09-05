@@ -21,6 +21,9 @@ type InvokeFunctionRequest struct {
 	// 返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
 	XCFFRequestVersion *string `json:"X-CFF-Request-Version,omitempty"`
 
+	// 设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
+	XCffInstanceMemory *string `json:"X-Cff-Instance-Memory,omitempty"`
+
 	// 执行函数请求体，为json格式。
 	Body map[string]interface{} `json:"body,omitempty"`
 }

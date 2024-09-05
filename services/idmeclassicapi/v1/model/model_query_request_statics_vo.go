@@ -9,7 +9,7 @@ import (
 type QueryRequestStaticsVo struct {
 	CharacterSet *CharacterSetEnum `json:"characterSet,omitempty"`
 
-	// **参数解释：**  查询条件。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  查询条件。  此参数已废弃，不建议继续使用，建议使用替代参数filter。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Conditions *[]QueryCondition `json:"conditions,omitempty"`
 
 	// **参数解释：**  是否加密。  **约束限制：**  不涉及。  **取值范围：**  - true：加密。 - false：不加密。  **默认取值：**  false。

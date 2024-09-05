@@ -5111,6 +5111,31 @@ func GenReqDefForUploadFile() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateAuthRandom() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/mms/ncms/conferences/auth/random").
+		WithResponse(new(model.CreateAuthRandomResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfId").
+		WithJsonTag("conf_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GuestWaiting").
+		WithJsonTag("guest_waiting").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XPassword").
+		WithJsonTag("X-Password").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSearchQosHistoryMeetings() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

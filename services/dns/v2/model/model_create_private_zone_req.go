@@ -25,7 +25,7 @@ type CreatePrivateZoneReq struct {
 
 	Router *Router `json:"router"`
 
-	// 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+	// 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
 	ProxyPattern *string `json:"proxy_pattern,omitempty"`
 
 	// 资源标签。

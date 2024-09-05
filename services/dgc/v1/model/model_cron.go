@@ -23,6 +23,9 @@ type Cron struct {
 	// 是否依赖本作业上一个运行周期任务的执行结果
 	DependPrePeriod *bool `json:"dependPrePeriod,omitempty"`
 
+	// 调度间隔类型： - minutes：分钟 - hours：小时 - days：天 - weeks： 周 - months：月 - seasons： 季 - years：年
+	IntervalType *string `json:"intervalType,omitempty"`
+
 	DependJobs *DependJob `json:"dependJobs,omitempty"`
 }
 

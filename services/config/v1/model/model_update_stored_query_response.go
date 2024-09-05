@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -14,6 +17,9 @@ type UpdateStoredQueryResponse struct {
 
 	// ResourceQL 名字
 	Name *string `json:"name,omitempty"`
+
+	// 自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
+	Type *UpdateStoredQueryResponseType `json:"type,omitempty"`
 
 	// ResourceQL 描述
 	Description *string `json:"description,omitempty"`
@@ -36,4 +42,51 @@ func (o UpdateStoredQueryResponse) String() string {
 	}
 
 	return strings.Join([]string{"UpdateStoredQueryResponse", string(data)}, " ")
+}
+
+type UpdateStoredQueryResponseType struct {
+	value string
+}
+
+type UpdateStoredQueryResponseTypeEnum struct {
+	ACCOUNT    UpdateStoredQueryResponseType
+	AGGREGATOR UpdateStoredQueryResponseType
+}
+
+func GetUpdateStoredQueryResponseTypeEnum() UpdateStoredQueryResponseTypeEnum {
+	return UpdateStoredQueryResponseTypeEnum{
+		ACCOUNT: UpdateStoredQueryResponseType{
+			value: "account",
+		},
+		AGGREGATOR: UpdateStoredQueryResponseType{
+			value: "aggregator",
+		},
+	}
+}
+
+func (c UpdateStoredQueryResponseType) Value() string {
+	return c.value
+}
+
+func (c UpdateStoredQueryResponseType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateStoredQueryResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

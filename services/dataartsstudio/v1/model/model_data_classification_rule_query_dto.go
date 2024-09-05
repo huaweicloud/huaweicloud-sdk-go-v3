@@ -32,7 +32,7 @@ type DataClassificationRuleQueryDto struct {
 	// 规则是否开启
 	Enable *bool `json:"enable,omitempty"`
 
-	// 规则方式, REGULAR, NONE, DEFAULT
+	// 规则方式, REGULAR, NONE, DEFAULT, COMBINE
 	Method *DataClassificationRuleQueryDtoMethod `json:"method,omitempty"`
 
 	// 内容表达式
@@ -43,6 +43,9 @@ type DataClassificationRuleQueryDto struct {
 
 	// 备注表达式
 	CommitExpression *string `json:"commit_expression,omitempty"`
+
+	// 条件表达式
+	CombineExpression *string `json:"combine_expression,omitempty"`
 
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
@@ -139,6 +142,7 @@ type DataClassificationRuleQueryDtoMethodEnum struct {
 	REGULAR DataClassificationRuleQueryDtoMethod
 	NONE    DataClassificationRuleQueryDtoMethod
 	DEFAULT DataClassificationRuleQueryDtoMethod
+	COMBINE DataClassificationRuleQueryDtoMethod
 }
 
 func GetDataClassificationRuleQueryDtoMethodEnum() DataClassificationRuleQueryDtoMethodEnum {
@@ -151,6 +155,9 @@ func GetDataClassificationRuleQueryDtoMethodEnum() DataClassificationRuleQueryDt
 		},
 		DEFAULT: DataClassificationRuleQueryDtoMethod{
 			value: "DEFAULT",
+		},
+		COMBINE: DataClassificationRuleQueryDtoMethod{
+			value: "COMBINE",
 		},
 	}
 }

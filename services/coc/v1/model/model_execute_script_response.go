@@ -9,11 +9,8 @@ import (
 // ExecuteScriptResponse Response Object
 type ExecuteScriptResponse struct {
 
-	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
-
-	// 错误描述
-	ErrorMsg       *string `json:"error_msg,omitempty"`
+	// execute_uuid
+	Data           *string `json:"data,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

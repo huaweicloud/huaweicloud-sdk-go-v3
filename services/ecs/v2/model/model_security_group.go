@@ -11,6 +11,9 @@ type SecurityGroup struct {
 
 	// 安全组名称。
 	Name *string `json:"name,omitempty"`
+
+	// 安全组ID。
+	Id *string `json:"id,omitempty"`
 }
 
 func (o SecurityGroup) String() string {

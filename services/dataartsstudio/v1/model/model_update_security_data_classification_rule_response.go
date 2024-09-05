@@ -33,7 +33,7 @@ type UpdateSecurityDataClassificationRuleResponse struct {
 	// 规则是否开启
 	Enable *bool `json:"enable,omitempty"`
 
-	// 规则方式, REGULAR, NONE, DEFAULT
+	// 规则方式, REGULAR, NONE, DEFAULT, COMBINE
 	Method *UpdateSecurityDataClassificationRuleResponseMethod `json:"method,omitempty"`
 
 	// 内容表达式
@@ -44,6 +44,9 @@ type UpdateSecurityDataClassificationRuleResponse struct {
 
 	// 备注表达式
 	CommitExpression *string `json:"commit_expression,omitempty"`
+
+	// 条件表达式
+	CombineExpression *string `json:"combine_expression,omitempty"`
 
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
@@ -141,6 +144,7 @@ type UpdateSecurityDataClassificationRuleResponseMethodEnum struct {
 	REGULAR UpdateSecurityDataClassificationRuleResponseMethod
 	NONE    UpdateSecurityDataClassificationRuleResponseMethod
 	DEFAULT UpdateSecurityDataClassificationRuleResponseMethod
+	COMBINE UpdateSecurityDataClassificationRuleResponseMethod
 }
 
 func GetUpdateSecurityDataClassificationRuleResponseMethodEnum() UpdateSecurityDataClassificationRuleResponseMethodEnum {
@@ -153,6 +157,9 @@ func GetUpdateSecurityDataClassificationRuleResponseMethodEnum() UpdateSecurityD
 		},
 		DEFAULT: UpdateSecurityDataClassificationRuleResponseMethod{
 			value: "DEFAULT",
+		},
+		COMBINE: UpdateSecurityDataClassificationRuleResponseMethod{
+			value: "COMBINE",
 		},
 	}
 }
