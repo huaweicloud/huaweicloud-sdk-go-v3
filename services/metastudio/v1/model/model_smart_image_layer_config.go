@@ -12,7 +12,7 @@ type SmartImageLayerConfig struct {
 	// 图片文件的URL。
 	ImageUrl string `json:"image_url"`
 
-	// 图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+	// **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
 	DisplayDuration *int32 `json:"display_duration,omitempty"`
 }
 

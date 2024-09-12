@@ -108,10 +108,7 @@ type ServiceResponseError struct {
 }
 
 func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
-	sr := &ServiceResponseError{
-		StatusCode: resp.StatusCode,
-		RequestId:  resp.Header.Get(xRequestId),
-	}
+	sr := &ServiceResponseError{}
 
 	defer resp.Body.Close()
 	data, err := ioutil.ReadAll(resp.Body)
@@ -134,6 +131,8 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 			sr.ErrorMessage = string(data)
 		}
 	}
+	sr.StatusCode = resp.StatusCode
+	sr.RequestId = resp.Header.Get(xRequestId)
 
 	return sr
 }

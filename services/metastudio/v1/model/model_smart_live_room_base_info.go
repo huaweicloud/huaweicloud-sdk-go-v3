@@ -20,7 +20,7 @@ type SmartLiveRoomBaseInfo struct {
 	// 直播间名称
 	RoomName *string `json:"room_name,omitempty"`
 
-	// 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+	// 直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
 	RoomType *SmartLiveRoomBaseInfoRoomType `json:"room_type,omitempty"`
 
 	// 直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
@@ -45,16 +45,16 @@ type SmartLiveRoomBaseInfo struct {
 	// 数字人模型信息
 	ModelInfos *[]ModelInfo `json:"model_infos,omitempty"`
 
-	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 开始直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	LastJobStartTime *string `json:"last_job_start_time,omitempty"`
 
-	// 结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 结束直播时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	LastJobEndTime *string `json:"last_job_end_time,omitempty"`
 
 	// 当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结

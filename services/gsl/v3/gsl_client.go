@@ -292,6 +292,27 @@ func (c *GslClient) EnableSimCardInvoker(request *model.EnableSimCardRequest) *E
 	return &EnableSimCardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSimCardFlowPerDay 批量查询SIM卡日用量
+//
+// 批量查询SIM卡日用量接口，支持按天或按月查询。SIM卡标识和容器ID只能选一个参数，天和月也只能选一个参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GslClient) ListSimCardFlowPerDay(request *model.ListSimCardFlowPerDayRequest) (*model.ListSimCardFlowPerDayResponse, error) {
+	requestDef := GenReqDefForListSimCardFlowPerDay()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSimCardFlowPerDayResponse), nil
+	}
+}
+
+// ListSimCardFlowPerDayInvoker 批量查询SIM卡日用量
+func (c *GslClient) ListSimCardFlowPerDayInvoker(request *model.ListSimCardFlowPerDayRequest) *ListSimCardFlowPerDayInvoker {
+	requestDef := GenReqDefForListSimCardFlowPerDay()
+	return &ListSimCardFlowPerDayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSimCards 查询SIM卡列表
 //
 // 查询SIM卡列表

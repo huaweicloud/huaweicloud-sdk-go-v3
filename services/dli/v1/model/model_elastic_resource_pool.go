@@ -65,7 +65,7 @@ type ElasticResourcePool struct {
 	// 弹性资源池类型
 	Manager *string `json:"manager,omitempty"`
 
-	// 标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+	// 弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
 	Label map[string]string `json:"label,omitempty"`
 }
 

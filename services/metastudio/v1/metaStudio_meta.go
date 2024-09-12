@@ -5266,6 +5266,10 @@ func GenReqDefForList2dModelTrainingJob() *def.HttpRequestDef {
 		WithName("ModelResolution").
 		WithJsonTag("model_resolution").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsFlexus").
+		WithJsonTag("is_flexus").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").

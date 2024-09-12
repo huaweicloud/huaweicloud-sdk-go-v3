@@ -29,6 +29,9 @@ type UpdateEndpointServiceRequestBody struct {
 
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
+
+	// 接口型VLAN场景服务端IPv4地址或域名
+	Ip *string `json:"ip,omitempty"`
 }
 
 func (o UpdateEndpointServiceRequestBody) String() string {

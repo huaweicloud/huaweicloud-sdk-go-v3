@@ -18,10 +18,10 @@ type UpdateInteractionRuleGroupResponse struct {
 	// 互动规则列表
 	InteractionRules *[]InteractionRuleDetailInfo `json:"interaction_rules,omitempty"`
 
-	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	UpdateTime *string `json:"update_time,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`

@@ -59,6 +59,9 @@ type List2dModelTrainingJobRequest struct {
 
 	// 模型分辨率
 	ModelResolution *string `json:"model_resolution,omitempty"`
+
+	// 是否是flexus任务
+	IsFlexus *bool `json:"is_flexus,omitempty"`
 }
 
 func (o List2dModelTrainingJobRequest) String() string {

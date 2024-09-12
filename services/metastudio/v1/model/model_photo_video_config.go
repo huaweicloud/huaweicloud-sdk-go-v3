@@ -12,10 +12,10 @@ import (
 // PhotoVideoConfig 视频输出配置。照片数字人支持该输出配置查询，不支持修改。
 type PhotoVideoConfig struct {
 
-	// 视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
+	// 视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
 	Codec PhotoVideoConfigCodec `json:"codec"`
 
-	// 输出平均码率。  单位：kbps。  最小值40，最大值30000。
+	// **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
 	Bitrate *int32 `json:"bitrate,omitempty"`
 
 	// 帧率。  单位：FPS。

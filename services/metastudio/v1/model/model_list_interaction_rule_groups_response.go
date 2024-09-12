@@ -9,7 +9,7 @@ import (
 // ListInteractionRuleGroupsResponse Response Object
 type ListInteractionRuleGroupsResponse struct {
 
-	// 互动规则总数。
+	// **参数解释**： 互动规则总数。
 	Count *int32 `json:"count,omitempty"`
 
 	// 互动规则库列表。

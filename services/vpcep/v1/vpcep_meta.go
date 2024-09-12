@@ -270,6 +270,10 @@ func GenReqDefForListEndpointService() *def.HttpRequestDef {
 		WithName("PublicBorderGroup").
 		WithJsonTag("public_border_group").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NetType").
+		WithJsonTag("net_type").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").

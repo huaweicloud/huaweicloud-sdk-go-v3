@@ -960,6 +960,31 @@ func GenReqDefForCreateAnonymousAuthRandom() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateAuthRandom() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/mms/ncms/conferences/auth/random").
+		WithResponse(new(model.CreateAuthRandomResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfId").
+		WithJsonTag("conf_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GuestWaiting").
+		WithJsonTag("guest_waiting").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XPassword").
+		WithJsonTag("X-Password").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateConfToken() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -4176,6 +4201,21 @@ func GenReqDefForShowRealTimeInfoOfMeeting() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowRecordInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/mmc/rlm/record/info").
+		WithResponse(new(model.ShowRecordInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowRecordingDetail() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -5106,31 +5146,6 @@ func GenReqDefForUploadFile() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateAuthRandom() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/mms/ncms/conferences/auth/random").
-		WithResponse(new(model.CreateAuthRandomResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ConfId").
-		WithJsonTag("conf_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("GuestWaiting").
-		WithJsonTag("guest_waiting").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XPassword").
-		WithJsonTag("X-Password").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

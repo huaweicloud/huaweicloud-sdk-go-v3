@@ -27,7 +27,7 @@ type DigitalHumanVideo struct {
 	// 数字人视频制作结束时间。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 数字人视频内容时长。
+	// **参数解释**： 数字人视频内容时长。
 	Duration *float32 `json:"duration,omitempty"`
 
 	OutputAssetConfig *OutputAssetInfo `json:"output_asset_config,omitempty"`

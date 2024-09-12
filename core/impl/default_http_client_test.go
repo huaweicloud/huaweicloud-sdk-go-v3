@@ -20,7 +20,9 @@
 package impl
 
 import (
+	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer/algorithm"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
@@ -28,6 +30,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
+	"net"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -36,6 +39,13 @@ import (
 type Person struct {
 	Name string `json:"name"`
 	Age  int    `json:"age"`
+}
+
+type MockRoundTripper struct {
+}
+
+func (r *MockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
+	return nil, errors.New("test")
 }
 
 func TestDefaultHttpClient_SyncInvokeHttp(t *testing.T) {
@@ -109,4 +119,54 @@ func TestDefaultHttpClient_SyncInvokeHttp(t *testing.T) {
 	body, err := httpResponse.GetBodyAsString()
 	assert.Nil(t, err)
 	assert.Equal(t, "{\"name\": \"Miles\", \"age\": 18}", body)
+}
+
+func TestNewDefaultHttpClient(t *testing.T) {
+	httpConfig := config.DefaultHttpConfig()
+	httpConfig.WithIgnoreSSLVerification(true)
+	httpConfig.WithTimeout(120)
+	proxy := config.NewProxy().
+		// 请根据实际情况替换示例中的代理协议、地址和端口号
+		WithSchema("http").
+		WithHost("proxy.test.com").
+		WithPort(80).
+		// 如果代理需要认证，请配置用户名和密码
+		WithUsername("user").
+		WithPassword("pass")
+	httpConfig.WithProxy(proxy)
+	dialContext := func(ctx context.Context, network string, addr string) (net.Conn, error) {
+		return nil, errors.New("test")
+	}
+	httpConfig.WithDialContext(dialContext)
+	httpConfig.WithHttpTransport(&http.Transport{})
+	requestHandler := func(request http.Request) {}
+	responseHandler := func(response http.Response) {}
+	httpHandler := httphandler.NewHttpHandler().AddRequestHandler(requestHandler).AddResponseHandler(responseHandler)
+	httpConfig.WithHttpHandler(httpHandler)
+
+	client := NewDefaultHttpClient(httpConfig)
+	assert.NotNil(t, client)
+	assert.Equal(t, httpConfig, client.httpConfig)
+}
+
+func TestNewDefaultHttpClient_TransPort(t *testing.T) {
+	conf := config.DefaultHttpConfig()
+	client := NewDefaultHttpClient(conf)
+	assert.IsType(t, &http.Transport{}, client.roundTripper)
+
+	conf1 := config.DefaultHttpConfig()
+	conf1.WithHttpTransport(&http.Transport{})
+	client1 := NewDefaultHttpClient(conf1)
+	assert.IsType(t, &http.Transport{}, client1.roundTripper)
+
+	conf2 := config.DefaultHttpConfig()
+	conf2.WithHttpRoundTripper(&MockRoundTripper{})
+	client2 := NewDefaultHttpClient(conf2)
+	assert.IsType(t, &MockRoundTripper{}, client2.roundTripper)
+
+	conf3 := config.DefaultHttpConfig()
+	conf3.WithHttpTransport(&http.Transport{})
+	conf3.WithHttpRoundTripper(&MockRoundTripper{})
+	client3 := NewDefaultHttpClient(conf3)
+	assert.IsType(t, &http.Transport{}, client3.roundTripper)
 }

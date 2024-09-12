@@ -21,6 +21,9 @@ type Execute2dModelTrainingCommandByUserResponse struct {
 	// 训练视频已上传分片信息
 	MultipartData *[]MultipartUploadInfo `json:"multipart_data,omitempty"`
 
+	// 命令执行失败原因描述
+	ExcuteFailedMsg *string `json:"excute_failed_msg,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

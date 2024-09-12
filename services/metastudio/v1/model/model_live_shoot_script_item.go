@@ -9,10 +9,10 @@ import (
 // LiveShootScriptItem 直播话术配置。
 type LiveShootScriptItem struct {
 
-	// 剧本序号。
+	// **参数解释**： 剧本序号。 **约束限制**： 不涉及
 	SequenceNo *int32 `json:"sequence_no,omitempty"`
 
-	// 段落标题。
+	// **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
 	Title *string `json:"title,omitempty"`
 
 	TextConfig *TextConfig `json:"text_config,omitempty"`

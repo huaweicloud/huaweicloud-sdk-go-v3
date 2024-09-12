@@ -30,7 +30,7 @@ type LiveEventReportRequest struct {
 	// 鉴权Key。通过HmacSHA256生成的鉴权key
 	AuthKey *string `json:"auth_key,omitempty"`
 
-	// 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+	// **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
 	ExpiresTime *int64 `json:"expires_time,omitempty"`
 
 	// 是否刷新URL

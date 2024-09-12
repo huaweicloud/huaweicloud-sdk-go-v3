@@ -331,6 +331,25 @@ func GenReqDefForEnableSimCard() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSimCardFlowPerDay() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/sim-cards/batch-daily-flow").
+		WithResponse(new(model.ListSimCardFlowPerDayResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSimCards() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

@@ -338,13 +338,16 @@ client := vpc.NewVpcClient(hcClient)
 
 #### 1.6 自定义HTTP传输 [:top:](#用户手册-top)
 
-**注意：** 该配置项拥有最高优先级。
+支持配置**HttpTransport**或**HttpRoundTripper**(v0.1.114版本以上)，前者是对后者的接口实现，选择其一配置即可。
 
-如果配置了自定义HTTP传输，**会导致 [1.2 网络代理](#12-网络代理-top)、[1.4 SSL配置](#14-ssl-配置-top)、[1.5 自定义网络连接创建](#15-自定义网络连接创建-top) 配置失效。**
+**注意：** HttpTransport配置项拥有最高优先级。
+
+如果配置了**HttpTransport**或**HttpRoundTripper**，**会导致 [1.2 网络代理](#12-网络代理-top)、[1.4 SSL配置](#14-ssl-配置-top)、[1.5 自定义网络连接创建](#15-自定义网络连接创建-top) 配置失效。**
 
 ``` go
 transport := &http.Transport{}
 httpConfig := config.DefaultHttpConfig().WithHttpTransport(transport)
+// httpConfig.WithHttpRoundTripper(&YourRoundTripper{})
 
 hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).

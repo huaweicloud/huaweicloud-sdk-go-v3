@@ -36,7 +36,7 @@ type ListVideoScriptsRequest struct {
 	// 剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
 	ScriptCatalog *ListVideoScriptsRequestScriptCatalog `json:"script_catalog,omitempty"`
 
-	// 横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+	// 横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
 	ViewMode *ListVideoScriptsRequestViewMode `json:"view_mode,omitempty"`
 }
 

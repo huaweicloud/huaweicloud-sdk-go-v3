@@ -24,21 +24,21 @@ type ShowSmartLiveResponse struct {
 	// 数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
 	State *ShowSmartLiveResponseState `json:"state,omitempty"`
 
-	// 数字人直播时长，单位秒。
+	// **参数解释**： 数字人直播时长，单位秒。
 	Duration *float32 `json:"duration,omitempty"`
 
-	// 数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	EndTime *string `json:"end_time,omitempty"`
 
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 
-	// 数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	LastupdateTime *string `json:"lastupdate_time,omitempty"`
 
 	RtcRoomInfo *RtcRoomInfoList `json:"rtc_room_info,omitempty"`
@@ -50,7 +50,7 @@ type ShowSmartLiveResponse struct {
 
 	RtcCallbackConfig *RtcLiveEventCallBackConfig `json:"rtc_callback_config,omitempty"`
 
-	// 数字人直播推流时长，单位秒
+	// **参数解释**： 数字人直播推流时长，单位秒。
 	StreamDuration *float32 `json:"stream_duration,omitempty"`
 
 	// 封禁信息

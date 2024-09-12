@@ -777,6 +777,27 @@ func (c *MeetingClient) CreateAnonymousAuthRandomInvoker(request *model.CreateAn
 	return &CreateAnonymousAuthRandomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAuthRandom 获取会议鉴权随机数
+//
+// 根据会议ID + 密码鉴权返回鉴权随机数，如果是小程序调用时，需要企业支持小程序功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) CreateAuthRandom(request *model.CreateAuthRandomRequest) (*model.CreateAuthRandomResponse, error) {
+	requestDef := GenReqDefForCreateAuthRandom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthRandomResponse), nil
+	}
+}
+
+// CreateAuthRandomInvoker 获取会议鉴权随机数
+func (c *MeetingClient) CreateAuthRandomInvoker(request *model.CreateAuthRandomRequest) *CreateAuthRandomInvoker {
+	requestDef := GenReqDefForCreateAuthRandom()
+	return &CreateAuthRandomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateConfToken 获取会控Token
 //
 // 该接口用于获取正在召开会议的会控Token（未开始的会议调用该接口返回失败）。Token有效期是半个小时。
@@ -3040,6 +3061,27 @@ func (c *MeetingClient) ShowRealTimeInfoOfMeetingInvoker(request *model.ShowReal
 	return &ShowRealTimeInfoOfMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRecordInfo 查询单会议录制文件信息
+//
+// 查询单会议录制文件信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) ShowRecordInfo(request *model.ShowRecordInfoRequest) (*model.ShowRecordInfoResponse, error) {
+	requestDef := GenReqDefForShowRecordInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecordInfoResponse), nil
+	}
+}
+
+// ShowRecordInfoInvoker 查询单会议录制文件信息
+func (c *MeetingClient) ShowRecordInfoInvoker(request *model.ShowRecordInfoRequest) *ShowRecordInfoInvoker {
+	requestDef := GenReqDefForShowRecordInfo()
+	return &ShowRecordInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRecordingDetail 查询录制详情
 //
 // 改接口用于查询某个会议录制的详情。
@@ -3800,27 +3842,6 @@ func (c *MeetingClient) UploadFile(request *model.UploadFileRequest) (*model.Upl
 func (c *MeetingClient) UploadFileInvoker(request *model.UploadFileRequest) *UploadFileInvoker {
 	requestDef := GenReqDefForUploadFile()
 	return &UploadFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateAuthRandom 获取会议鉴权随机数
-//
-// 根据会议ID + 密码鉴权返回鉴权随机数，如果是小程序调用时，需要企业支持小程序功能
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MeetingClient) CreateAuthRandom(request *model.CreateAuthRandomRequest) (*model.CreateAuthRandomResponse, error) {
-	requestDef := GenReqDefForCreateAuthRandom()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAuthRandomResponse), nil
-	}
-}
-
-// CreateAuthRandomInvoker 获取会议鉴权随机数
-func (c *MeetingClient) CreateAuthRandomInvoker(request *model.CreateAuthRandomRequest) *CreateAuthRandomInvoker {
-	requestDef := GenReqDefForCreateAuthRandom()
-	return &CreateAuthRandomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchQosHistoryMeetings 查询QoS历史会议列表

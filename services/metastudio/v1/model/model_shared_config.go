@@ -9,19 +9,19 @@ import (
 	"strings"
 )
 
-// SharedConfig 共享配置
+// SharedConfig 模板共享配置。该配置仅用于模板。
 type SharedConfig struct {
 
-	// 共享类型。 * PRIVATE: 私有，仅本租户可访问。 * PUBLIC: 公开，所有租户可访问。当前仅提供系统资产可公开访问。 * SHARED：共享，指定租户可访问。拥有者指定租户可访问。
+	// **参数解释**： 共享类型。 **约束限制**： 该配置仅用于模板 **取值范围**： * PRIVATE：私有，仅本租户可访问。 * PUBLIC：公开，所有租户可访问。当前仅提供系统资产可公开访问。 * SHARED：共享，指定租户可访问。拥有者指定租户可访问。  **默认取值**： 不涉及。
 	SharedType *SharedConfigSharedType `json:"shared_type,omitempty"`
 
-	// 共享状态。 * PUBLISHED: 发布。模板可用。 - DRAFT： 草稿。编辑态，仅拥有者可访问。 - REVIEW：审核态。不可编辑，仅拥有者/审核人员可查看。
+	// **参数解释**： 共享状态。 **约束限制**： 该配置仅用于shared_type为SHARED的模板。 **取值范围**： * PUBLISHED：发布。模板可用。 * DRAFT：草稿。编辑态，仅拥有者可访问。 * REVIEW：审核态。不可编辑，仅拥有者/审核人员可查看。  **默认取值**： 不涉及。
 	SharedState *SharedConfigSharedState `json:"shared_state,omitempty"`
 
-	// 共享过期时间。空表示永久不过期。
+	// **参数解释**： 共享过期时间。空表示永久不过期。 **约束限制**： 该配置仅用于shared_type为SHARED的模板。 格式遵循：RFC 3339，示例“2021*01*10T08:43:17Z”。 **取值范围**： 字符长度0-20位 **默认取值**： 不涉及。
 	ExpireTime *string `json:"expire_time,omitempty"`
 
-	// 允许访问本资产的租户列表
+	// **参数解释**： 允许访问本资产的租户列表。 **约束限制**： 该配置仅用于shared_type为SHARED的模板。 **取值范围**： 最大支持100个租户，重复的记录会被忽略。 租户ID填写project_id，字符长度1-64位。 **默认取值**： 不涉及。
 	AllowedProjectIds *[]string `json:"allowed_project_ids,omitempty"`
 }
 

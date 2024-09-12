@@ -15,20 +15,20 @@ type StartSmartLiveReq struct {
 
 	PlayPolicy *PlayPolicy `json:"play_policy,omitempty"`
 
-	// RTMP视频推流第三方直播平台地址。
+	// **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
 	OutputUrls *[]string `json:"output_urls,omitempty"`
 
-	// RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+	// **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
 	StreamKeys *[]string `json:"stream_keys,omitempty"`
 
-	// 互动回调URL，含鉴权信息。
+	// **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
 	InteractionCallbackUrl *string `json:"interaction_callback_url,omitempty"`
 
 	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
 
 	RtcCallbackConfig *RtcLiveEventCallBackConfig `json:"rtc_callback_config,omitempty"`
 
-	// 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+	// **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
 	ViewMode *StartSmartLiveReqViewMode `json:"view_mode,omitempty"`
 
 	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`

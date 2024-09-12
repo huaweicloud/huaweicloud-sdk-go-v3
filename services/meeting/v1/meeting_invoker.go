@@ -437,6 +437,18 @@ func (i *CreateAnonymousAuthRandomInvoker) Invoke() (*model.CreateAnonymousAuthR
 	}
 }
 
+type CreateAuthRandomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthRandomInvoker) Invoke() (*model.CreateAuthRandomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthRandomResponse), nil
+	}
+}
+
 type CreateConfTokenInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1721,6 +1733,18 @@ func (i *ShowRealTimeInfoOfMeetingInvoker) Invoke() (*model.ShowRealTimeInfoOfMe
 	}
 }
 
+type ShowRecordInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordInfoInvoker) Invoke() (*model.ShowRecordInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecordInfoResponse), nil
+	}
+}
+
 type ShowRecordingDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2150,18 +2174,6 @@ func (i *UploadFileInvoker) Invoke() (*model.UploadFileResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UploadFileResponse), nil
-	}
-}
-
-type CreateAuthRandomInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAuthRandomInvoker) Invoke() (*model.CreateAuthRandomResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAuthRandomResponse), nil
 	}
 }
 

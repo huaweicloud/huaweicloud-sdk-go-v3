@@ -39,13 +39,13 @@ type ListSmartLiveRoomsRequest struct {
 	// 当前直播间直播状态。 WAITING，PROCESSING，SUCCESS，FAILED，CANCELED对应直播任务状态 NULL 对应没有直播任务 可多个状态查询，使用英文逗号分隔。
 	LiveState *string `json:"live_state,omitempty"`
 
-	// 最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 最近直播任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+	// 最近直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 按直播间类型查询。直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+	// 按直播间类型查询。直播间类型。 * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
 	RoomType *string `json:"room_type,omitempty"`
 
 	// 按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板

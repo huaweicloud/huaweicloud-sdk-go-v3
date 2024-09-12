@@ -27,13 +27,13 @@ type SmartChatRoomBaseInfo struct {
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`
 
-	// 并发路数。
+	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
 
-	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	UpdateTime *string `json:"update_time,omitempty"`
 }
 

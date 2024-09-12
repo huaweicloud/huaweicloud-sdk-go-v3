@@ -8,7 +8,7 @@ import (
 
 type ReportLiveEventReq struct {
 
-	// 事件条目数。
+	// **参数解释**： 事件条目数。
 	Total int32 `json:"total"`
 
 	// 事件内容。

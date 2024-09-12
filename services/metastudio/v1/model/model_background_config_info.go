@@ -12,16 +12,16 @@ import (
 // BackgroundConfigInfo 背景配置。
 type BackgroundConfigInfo struct {
 
-	// 背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
+	// **参数解释**： 背景类型。 **约束限制**： 不涉及。 **取值范围**： * IMAGE：图片背景，指定图片用作分身数字人背景。 * COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。  **默认取值**： 不涉及
 	BackgroundType BackgroundConfigInfoBackgroundType `json:"background_type"`
 
-	// 背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
+	// **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
 	BackgroundConfig *string `json:"background_config,omitempty"`
 
-	// 纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
+	// **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
 	BackgroundColorConfig *string `json:"background_color_config,omitempty"`
 
-	// 背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
+	// **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
 	BackgroundAssetId *string `json:"background_asset_id,omitempty"`
 }
 

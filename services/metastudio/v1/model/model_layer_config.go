@@ -12,13 +12,13 @@ import (
 // LayerConfig 图层配置。
 type LayerConfig struct {
 
-	// 图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
+	// **参数解释**： 图层类型。 **约束限制**： 不涉及。 **取值范围**： * HUMAN:  人物图层 * IMAGE： 素材图片图层 * VIDEO： 素材视频图层 * TEXT: 素材文字图层  **默认取值**： 不涉及
 	LayerType LayerConfigLayerType `json:"layer_type"`
 
-	// 图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
+	// **参数解释**： 图层所需资产的资产id，外部资产信息无需填写。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
 	AssetId *string `json:"asset_id,omitempty"`
 
-	// 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
+	// **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
 	GroupId *string `json:"group_id,omitempty"`
 
 	Position *LayerPositionConfig `json:"position,omitempty"`

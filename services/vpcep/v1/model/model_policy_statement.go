@@ -12,7 +12,7 @@ import (
 // PolicyStatement policy
 type PolicyStatement struct {
 
-	// Allow允许或Deny拒绝，控制访问权限
+	// - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
 	Effect PolicyStatementEffect `json:"Effect"`
 
 	// obs访问权限

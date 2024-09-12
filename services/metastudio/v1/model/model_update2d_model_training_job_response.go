@@ -15,6 +15,12 @@ type Update2dModelTrainingJobResponse struct {
 	// 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
 	TrainingVideoUploadUrl *[]string `json:"training_video_upload_url,omitempty"`
 
+	// 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+	ActionVideoUploadUrl *[]string `json:"action_video_upload_url,omitempty"`
+
+	// 音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
+	AudioUploadUrl *string `json:"audio_upload_url,omitempty"`
+
 	// 模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
 	CoverUploadUrl *string `json:"cover_upload_url,omitempty"`
 

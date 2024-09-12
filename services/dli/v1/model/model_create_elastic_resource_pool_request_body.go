@@ -18,13 +18,13 @@ type CreateElasticResourcePoolRequestBody struct {
 	// 虚拟集群关联的vpc cidr.如果不填，默认值为172.16.0.0//12
 	CidrInVpc *string `json:"cidr_in_vpc,omitempty"`
 
-	// 最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+	// max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
 	MaxCu int32 `json:"max_cu"`
 
 	// 计费类型 1、按需计费
 	ChargingMode *int32 `json:"charging_mode,omitempty"`
 
-	// 最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+	// min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
 	MinCu int32 `json:"min_cu"`
 
 	// 企业ID，不填默认为“0”
@@ -32,6 +32,9 @@ type CreateElasticResourcePoolRequestBody struct {
 
 	// 标签
 	Tags *[]Tag `json:"tags,omitempty"`
+
+	// 弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+	Label map[string]string `json:"label,omitempty"`
 }
 
 func (o CreateElasticResourcePoolRequestBody) String() string {

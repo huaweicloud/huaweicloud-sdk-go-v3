@@ -28,7 +28,7 @@ type CreateSmartChatRoomReq struct {
 	// 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
 	RobotId *string `json:"robot_id,omitempty"`
 
-	// 并发路数。
+	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
 
 	BackgroundConfig *BackgroundConfigInfo `json:"background_config,omitempty"`

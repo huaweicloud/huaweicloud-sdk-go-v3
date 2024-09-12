@@ -17,6 +17,18 @@ func (i *AddNodeInvoker) Invoke() (*model.AddNodeResponse, error) {
 	}
 }
 
+type AddNodesToNodePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddNodesToNodePoolInvoker) Invoke() (*model.AddNodesToNodePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddNodesToNodePoolResponse), nil
+	}
+}
+
 type AwakeClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -38,18 +50,6 @@ func (i *BatchCreateClusterTagsInvoker) Invoke() (*model.BatchCreateClusterTagsR
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateClusterTagsResponse), nil
-	}
-}
-
-type BatchCreateDeleteResourceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateDeleteResourceTagsInvoker) Invoke() (*model.BatchCreateDeleteResourceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateDeleteResourceTagsResponse), nil
 	}
 }
 
@@ -725,18 +725,6 @@ func (i *ShowClusterUpgradeInfoInvoker) Invoke() (*model.ShowClusterUpgradeInfoR
 	}
 }
 
-type ShowCustomizeClusterTagsByProjectIdInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowCustomizeClusterTagsByProjectIdInvoker) Invoke() (*model.ShowCustomizeClusterTagsByProjectIdResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowCustomizeClusterTagsByProjectIdResponse), nil
-	}
-}
-
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -854,30 +842,6 @@ func (i *ShowReleaseHistoryInvoker) Invoke() (*model.ShowReleaseHistoryResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowReleaseHistoryResponse), nil
-	}
-}
-
-type ShowResourceInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowResourceInstancesInvoker) Invoke() (*model.ShowResourceInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowResourceInstancesResponse), nil
-	}
-}
-
-type ShowResourceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowResourceTagsResponse), nil
 	}
 }
 

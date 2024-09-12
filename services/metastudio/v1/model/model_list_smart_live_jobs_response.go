@@ -9,7 +9,7 @@ import (
 // ListSmartLiveJobsResponse Response Object
 type ListSmartLiveJobsResponse struct {
 
-	// 数字人直播任务总数。
+	// **参数解释**： 数字人直播任务总数。
 	Count *int32 `json:"count,omitempty"`
 
 	// 数字人直播任务列表。

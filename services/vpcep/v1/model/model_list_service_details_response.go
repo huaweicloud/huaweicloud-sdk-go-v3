@@ -46,6 +46,9 @@ type ListServiceDetailsResponse struct {
 	// 网段类型。 public：公网网段 internal：内网网段 默认值为internal。
 	CidrType *string `json:"cidr_type,omitempty"`
 
+	// 接口型VLAN场景服务端IPv4地址或域名
+	Ip *string `json:"ip,omitempty"`
+
 	// 服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
 	Ports *[]PortList `json:"ports,omitempty"`
 

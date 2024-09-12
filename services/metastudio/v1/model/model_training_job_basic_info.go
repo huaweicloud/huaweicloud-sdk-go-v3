@@ -17,7 +17,7 @@ type TrainingJobBasicInfo struct {
 	// 分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
 	Name string `json:"name"`
 
-	// 任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
+	// 任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * WAIT_TRAINING_DATA_PREPROCESS: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING: 训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MASK_UPLOAD: 等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD: 等待主文件上传 * JOB_SUCCESS: 训练任务完成 * MANUAL_STOP_INFERENCE_DATA_PREPROCESS: 人工中止推理预处理 * MANUAL_STOP_TRAIN: 人工中止训练 * MANUAL_STOP_TRAINING_DATA_PREPROCESS: 人工中止训练预处理 * WAIT_USER_CONFIRM: 等待用户确认训练效果 * JOB_REJECT: 驳回任务 * JOB_PENDING: 挂起任务 * WAIT_ADMIN_CONFIRM: 等待管理员审核 * JOB_FINISH: 任务结束，是最终状态，不支持修改此状态。 * COMPILING: 转编译中 * WAIT_COMPILE: 等待转编译 * COMPILE_FAILED: 转编译失败 * WAIT_GENERATE_ACTION: 等待原子动作生成 * WAIT_ARRANGE: 等待编排 * ACTION_GENERATE_DATA_PROCESSING: 原子动作生成中 * MANUAL_STOP_ACTION_GENERATE_DATA_PROCESSING: 人工中止动作生成 * MANUAL_STOP_ACTION_GENERATE_ORI_PROCESSING: 人工中止动作编排 * ACTION_GENERATE_ORI_PROCESSING: 动作编排中 * ACTION_GENERATE_DATA_FAILED: 动作生成失败 * ACTION_GENERATE_ORI_FAILED: 动作编排失败 * ACTION_GENERATE_ORI_SUCCESS: 动作编排成功 * GENERATE_ACTION_PREPROCESS_FAILED: 动作编排失败 * WAIT_ADMIN_CALIBRATION: 等待管理员确认动作信息
 	State TrainingJobBasicInfoState `json:"state"`
 
 	// 模型资产ID。
@@ -55,6 +55,9 @@ type TrainingJobBasicInfo struct {
 
 	// 自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
 	AppUserId *string `json:"app_user_id,omitempty"`
+
+	// 是否是基础版的形象训练
+	IsFlexus *bool `json:"is_flexus,omitempty"`
 }
 
 func (o TrainingJobBasicInfo) String() string {
@@ -71,27 +74,53 @@ type TrainingJobBasicInfoState struct {
 }
 
 type TrainingJobBasicInfoStateEnum struct {
-	WAIT_FILE_UPLOAD                 TrainingJobBasicInfoState
-	AUTO_VERIFYING                   TrainingJobBasicInfoState
-	AUTO_VERIFY_FAILED               TrainingJobBasicInfoState
-	MANUAL_VERIFYING                 TrainingJobBasicInfoState
-	MANUAL_VERIFY_FAILED             TrainingJobBasicInfoState
-	MANUAL_VERIFY_SUCCESS            TrainingJobBasicInfoState
-	TRAINING_DATA_PREPROCESSING      TrainingJobBasicInfoState
-	TRAINING_DATA_PREPROCESS_FAILED  TrainingJobBasicInfoState
-	TRAINING_DATA_PREPROCESS_SUCCESS TrainingJobBasicInfoState
-	TRAINING                         TrainingJobBasicInfoState
-	TRAIN_FAILED                     TrainingJobBasicInfoState
-	TRAIN_SUCCESS                    TrainingJobBasicInfoState
-	INFERENCE_DATA_PREPROCESSING     TrainingJobBasicInfoState
-	INFERENCE_DATA_PREPROCESS_FAILED TrainingJobBasicInfoState
-	WAIT_MASK_UPLOAD                 TrainingJobBasicInfoState
-	WAIT_MAIN_FILE_UPLOAD            TrainingJobBasicInfoState
-	JOB_SUCCESS                      TrainingJobBasicInfoState
-	WAIT_USER_CONFIRM                TrainingJobBasicInfoState
-	JOB_REJECT                       TrainingJobBasicInfoState
-	JOB_PENDING                      TrainingJobBasicInfoState
-	JOB_FINISH                       TrainingJobBasicInfoState
+	WAIT_FILE_UPLOAD                            TrainingJobBasicInfoState
+	AUTO_VERIFYING                              TrainingJobBasicInfoState
+	AUTO_VERIFY_FAILED                          TrainingJobBasicInfoState
+	MANUAL_VERIFYING                            TrainingJobBasicInfoState
+	WAIT_TRAINING_DATA_PREPROCESS               TrainingJobBasicInfoState
+	MANUAL_VERIFY_FAILED                        TrainingJobBasicInfoState
+	MANUAL_VERIFY_SUCCESS                       TrainingJobBasicInfoState
+	TRAINING_DATA_PREPROCESSING                 TrainingJobBasicInfoState
+	TRAINING_DATA_PREPROCESS_FAILED             TrainingJobBasicInfoState
+	TRAINING_DATA_PREPROCESS_SUCCESS            TrainingJobBasicInfoState
+	TRAINING                                    TrainingJobBasicInfoState
+	TRAIN_FAILED                                TrainingJobBasicInfoState
+	TRAIN_SUCCESS                               TrainingJobBasicInfoState
+	INFERENCE_DATA_PREPROCESSING                TrainingJobBasicInfoState
+	INFERENCE_DATA_PREPROCESS_FAILED            TrainingJobBasicInfoState
+	WAIT_MASK_UPLOAD                            TrainingJobBasicInfoState
+	WAIT_MAIN_FILE_UPLOAD                       TrainingJobBasicInfoState
+	JOB_SUCCESS                                 TrainingJobBasicInfoState
+	MANUAL_STOP_INFERENCE_DATA_PREPROCESS       TrainingJobBasicInfoState
+	MANUAL_STOP_TRAIN                           TrainingJobBasicInfoState
+	MANUAL_STOP_TRAINING_DATA_PREPROCESS        TrainingJobBasicInfoState
+	MANUAL_STOP_BEAUTY_PREPROCESS               TrainingJobBasicInfoState
+	WAIT_USER_CONFIRM                           TrainingJobBasicInfoState
+	JOB_REJECT                                  TrainingJobBasicInfoState
+	JOB_PENDING                                 TrainingJobBasicInfoState
+	WAIT_ADMIN_CONFIRM                          TrainingJobBasicInfoState
+	JOB_FINISH                                  TrainingJobBasicInfoState
+	COMPILING                                   TrainingJobBasicInfoState
+	WAIT_COMPILE                                TrainingJobBasicInfoState
+	COMPILE_FAILED                              TrainingJobBasicInfoState
+	WAIT_BEAUTY                                 TrainingJobBasicInfoState
+	WAIT_GENERATE_ACTION                        TrainingJobBasicInfoState
+	WAIT_ARRANGE                                TrainingJobBasicInfoState
+	ACTION_GENERATE_DATA_PROCESSING             TrainingJobBasicInfoState
+	MANUAL_STOP_ACTION_GENERATE_DATA_PROCESSING TrainingJobBasicInfoState
+	MANUAL_STOP_ACTION_GENERATE_ORI_PROCESSING  TrainingJobBasicInfoState
+	ACTION_GENERATE_ORI_PROCESSING              TrainingJobBasicInfoState
+	ACTION_GENERATE_DATA_FAILED                 TrainingJobBasicInfoState
+	ACTION_GENERATE_ORI_FAILED                  TrainingJobBasicInfoState
+	ACTION_GENERATE_ORI_SUCCESS                 TrainingJobBasicInfoState
+	GENERATE_ACTION_PREPROCESS_FAILED           TrainingJobBasicInfoState
+	WAIT_ADMIN_CALIBRATION                      TrainingJobBasicInfoState
+	BEAUTY_VIDEO_FILE_UPLOADED                  TrainingJobBasicInfoState
+	BEAUTYFACE_SUCCESS                          TrainingJobBasicInfoState
+	BEAUTYFACE_FAILED                           TrainingJobBasicInfoState
+	WAIT_BEAUTY_VIDEO_FILE_UPLOAD               TrainingJobBasicInfoState
+	BEAUTYFACE_ROCESSING                        TrainingJobBasicInfoState
 }
 
 func GetTrainingJobBasicInfoStateEnum() TrainingJobBasicInfoStateEnum {
@@ -107,6 +136,9 @@ func GetTrainingJobBasicInfoStateEnum() TrainingJobBasicInfoStateEnum {
 		},
 		MANUAL_VERIFYING: TrainingJobBasicInfoState{
 			value: "MANUAL_VERIFYING",
+		},
+		WAIT_TRAINING_DATA_PREPROCESS: TrainingJobBasicInfoState{
+			value: "WAIT_TRAINING_DATA_PREPROCESS",
 		},
 		MANUAL_VERIFY_FAILED: TrainingJobBasicInfoState{
 			value: "MANUAL_VERIFY_FAILED",
@@ -147,6 +179,18 @@ func GetTrainingJobBasicInfoStateEnum() TrainingJobBasicInfoStateEnum {
 		JOB_SUCCESS: TrainingJobBasicInfoState{
 			value: "JOB_SUCCESS",
 		},
+		MANUAL_STOP_INFERENCE_DATA_PREPROCESS: TrainingJobBasicInfoState{
+			value: "MANUAL_STOP_INFERENCE_DATA_PREPROCESS",
+		},
+		MANUAL_STOP_TRAIN: TrainingJobBasicInfoState{
+			value: "MANUAL_STOP_TRAIN",
+		},
+		MANUAL_STOP_TRAINING_DATA_PREPROCESS: TrainingJobBasicInfoState{
+			value: "MANUAL_STOP_TRAINING_DATA_PREPROCESS",
+		},
+		MANUAL_STOP_BEAUTY_PREPROCESS: TrainingJobBasicInfoState{
+			value: "MANUAL_STOP_BEAUTY_PREPROCESS",
+		},
 		WAIT_USER_CONFIRM: TrainingJobBasicInfoState{
 			value: "WAIT_USER_CONFIRM",
 		},
@@ -156,8 +200,71 @@ func GetTrainingJobBasicInfoStateEnum() TrainingJobBasicInfoStateEnum {
 		JOB_PENDING: TrainingJobBasicInfoState{
 			value: "JOB_PENDING",
 		},
+		WAIT_ADMIN_CONFIRM: TrainingJobBasicInfoState{
+			value: "WAIT_ADMIN_CONFIRM",
+		},
 		JOB_FINISH: TrainingJobBasicInfoState{
 			value: "JOB_FINISH",
+		},
+		COMPILING: TrainingJobBasicInfoState{
+			value: "COMPILING",
+		},
+		WAIT_COMPILE: TrainingJobBasicInfoState{
+			value: "WAIT_COMPILE",
+		},
+		COMPILE_FAILED: TrainingJobBasicInfoState{
+			value: "COMPILE_FAILED",
+		},
+		WAIT_BEAUTY: TrainingJobBasicInfoState{
+			value: "WAIT_BEAUTY",
+		},
+		WAIT_GENERATE_ACTION: TrainingJobBasicInfoState{
+			value: "WAIT_GENERATE_ACTION",
+		},
+		WAIT_ARRANGE: TrainingJobBasicInfoState{
+			value: "WAIT_ARRANGE",
+		},
+		ACTION_GENERATE_DATA_PROCESSING: TrainingJobBasicInfoState{
+			value: "ACTION_GENERATE_DATA_PROCESSING",
+		},
+		MANUAL_STOP_ACTION_GENERATE_DATA_PROCESSING: TrainingJobBasicInfoState{
+			value: "MANUAL_STOP_ACTION_GENERATE_DATA_PROCESSING",
+		},
+		MANUAL_STOP_ACTION_GENERATE_ORI_PROCESSING: TrainingJobBasicInfoState{
+			value: "MANUAL_STOP_ACTION_GENERATE_ORI_PROCESSING",
+		},
+		ACTION_GENERATE_ORI_PROCESSING: TrainingJobBasicInfoState{
+			value: "ACTION_GENERATE_ORI_PROCESSING",
+		},
+		ACTION_GENERATE_DATA_FAILED: TrainingJobBasicInfoState{
+			value: "ACTION_GENERATE_DATA_FAILED",
+		},
+		ACTION_GENERATE_ORI_FAILED: TrainingJobBasicInfoState{
+			value: "ACTION_GENERATE_ORI_FAILED",
+		},
+		ACTION_GENERATE_ORI_SUCCESS: TrainingJobBasicInfoState{
+			value: "ACTION_GENERATE_ORI_SUCCESS",
+		},
+		GENERATE_ACTION_PREPROCESS_FAILED: TrainingJobBasicInfoState{
+			value: "GENERATE_ACTION_PREPROCESS_FAILED",
+		},
+		WAIT_ADMIN_CALIBRATION: TrainingJobBasicInfoState{
+			value: "WAIT_ADMIN_CALIBRATION",
+		},
+		BEAUTY_VIDEO_FILE_UPLOADED: TrainingJobBasicInfoState{
+			value: "BEAUTY_VIDEO_FILE_UPLOADED",
+		},
+		BEAUTYFACE_SUCCESS: TrainingJobBasicInfoState{
+			value: "BEAUTYFACE_SUCCESS",
+		},
+		BEAUTYFACE_FAILED: TrainingJobBasicInfoState{
+			value: "BEAUTYFACE_FAILED",
+		},
+		WAIT_BEAUTY_VIDEO_FILE_UPLOAD: TrainingJobBasicInfoState{
+			value: "WAIT_BEAUTY_VIDEO_FILE_UPLOAD",
+		},
+		BEAUTYFACE_ROCESSING: TrainingJobBasicInfoState{
+			value: "BEAUTYFACE_ROCESSING",
 		},
 	}
 }

@@ -27,6 +27,30 @@ func GenReqDefForAddNode() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAddNodesToNodePool() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/projects/{project_id}/clusters/{cluster_id}/nodepools/{nodepool_id}/nodes/add").
+		WithResponse(new(model.AddNodesToNodePoolResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodepoolId").
+		WithJsonTag("nodepool_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAwakeCluster() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -53,30 +77,6 @@ func GenReqDefForBatchCreateClusterTags() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForBatchCreateDeleteResourceTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/cce/v1/{project_id}/{resource_type}/{resource_id}/tags/action").
-		WithResponse(new(model.BatchCreateDeleteResourceTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceId").
-		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1287,22 +1287,6 @@ func GenReqDefForShowClusterUpgradeInfo() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowCustomizeClusterTagsByProjectId() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/cce/v1/{project_id}/{resource_type}/tags").
-		WithResponse(new(model.ShowCustomizeClusterTagsByProjectIdResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1511,46 +1495,6 @@ func GenReqDefForShowReleaseHistory() *def.HttpRequestDef {
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowResourceInstances() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/cce/v1/{project_id}/{resource_type}/resource_instances/action").
-		WithResponse(new(model.ShowResourceInstancesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowResourceTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/cce/v1/{project_id}/{resource_type}/{resource_id}/tags").
-		WithResponse(new(model.ShowResourceTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceType").
-		WithJsonTag("resource_type").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ResourceId").
-		WithJsonTag("resource_id").
-		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

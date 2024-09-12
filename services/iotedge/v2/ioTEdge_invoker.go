@@ -485,6 +485,18 @@ func (i *DeleteDcPointInvoker) Invoke() (*model.DeleteDcPointResponse, error) {
 	}
 }
 
+type DeleteDcPointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDcPointsInvoker) Invoke() (*model.DeleteDcPointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDcPointsResponse), nil
+	}
+}
+
 type ShowDcPointInvoker struct {
 	*invoker.BaseInvoker
 }

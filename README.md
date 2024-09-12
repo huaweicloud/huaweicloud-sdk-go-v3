@@ -339,13 +339,16 @@ client := vpc.NewVpcClient(hcClient)
 
 #### 1.6 Custom HTTP Transport [:top:](#user-manual-top)
 
-**NOTE:** The configuration has the highest priority.
+Supports configuring **HttpTransport** or **HttpRoundTripper** (v0.1.114 or above). The former is an interface implementation of the latter. Just choose one to configure.
 
-Specifying the custom HTTP transport **will invalidate the configurations [1.2 Network Proxy](#12-network-proxy-top), [1.4 SSL Certification](#14-ssl-certification-top), [1.5 Custom Network Connection](#15-custom-network-connection-top).**
+**NOTE:** HttpTransport has the highest priority.
+
+Specifying the custom HTTP transport or roundTripper  **will invalidate the configurations [1.2 Network Proxy](#12-network-proxy-top), [1.4 SSL Certification](#14-ssl-certification-top), [1.5 Custom Network Connection](#15-custom-network-connection-top).**
 
 ``` go
 transport := &http.Transport{}
 httpConfig := config.DefaultHttpConfig().WithHttpTransport(transport)
+// httpConfig.WithHttpRoundTripper(&YourRoundTripper{})
 
 hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).

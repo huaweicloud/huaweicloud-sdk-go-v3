@@ -12,10 +12,13 @@ import (
 // ShootScript 表演脚本。
 type ShootScript struct {
 
-	// 脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+	// **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
 	ScriptType *ShootScriptScriptType `json:"script_type,omitempty"`
 
 	TextConfig *TextConfig `json:"text_config,omitempty"`
+
+	// 语音驱动时的动作配置。
+	AudioDriveActionConfig *[]AudioDriveActionConfig `json:"audio_drive_action_config,omitempty"`
 
 	// 背景配置。
 	BackgroundConfig *[]BackgroundConfigInfo `json:"background_config,omitempty"`

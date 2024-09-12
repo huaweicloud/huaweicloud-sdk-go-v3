@@ -38,6 +38,9 @@ type ListEndpointServiceRequest struct {
 
 	// 筛选结果中匹配边缘属性的EPS
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+
+	// 后端类型
+	NetType *ListEndpointServiceRequestNetType `json:"net_type,omitempty"`
 }
 
 func (o ListEndpointServiceRequest) String() string {
@@ -180,6 +183,57 @@ func (c ListEndpointServiceRequestSortDir) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListEndpointServiceRequestSortDir) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListEndpointServiceRequestNetType struct {
+	value string
+}
+
+type ListEndpointServiceRequestNetTypeEnum struct {
+	VLAN  ListEndpointServiceRequestNetType
+	VXLAN ListEndpointServiceRequestNetType
+	ALL   ListEndpointServiceRequestNetType
+}
+
+func GetListEndpointServiceRequestNetTypeEnum() ListEndpointServiceRequestNetTypeEnum {
+	return ListEndpointServiceRequestNetTypeEnum{
+		VLAN: ListEndpointServiceRequestNetType{
+			value: "vlan",
+		},
+		VXLAN: ListEndpointServiceRequestNetType{
+			value: "vxlan",
+		},
+		ALL: ListEndpointServiceRequestNetType{
+			value: "all",
+		},
+	}
+}
+
+func (c ListEndpointServiceRequestNetType) Value() string {
+	return c.value
+}
+
+func (c ListEndpointServiceRequestNetType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListEndpointServiceRequestNetType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

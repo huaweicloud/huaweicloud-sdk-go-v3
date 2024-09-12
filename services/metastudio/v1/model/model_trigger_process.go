@@ -12,29 +12,29 @@ import (
 // TriggerProcess 触发器处理
 type TriggerProcess struct {
 
-	// 处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+	// **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
 	TimeWindow *int32 `json:"time_window,omitempty"`
 
-	// 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+	// **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
 	ReplyMode *TriggerProcessReplyMode `json:"reply_mode,omitempty"`
 
 	LayerConfig *SmartLayerConfig `json:"layer_config,omitempty"`
 
 	ExtraLayerConfig *SmartLayerConfig `json:"extra_layer_config,omitempty"`
 
-	// 回复话术集
+	// **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
 	ReplyTexts *[]string `json:"reply_texts,omitempty"`
 
-	// 回复音频集。填写audio_url。
+	// **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
 	ReplyAudios *[]ReplyAudioInfo `json:"reply_audios,omitempty"`
 
-	// 回复次序 - RANDOM：随机 - ORDER：顺序循环
+	// **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
 	ReplyOrder *TriggerProcessReplyOrder `json:"reply_order,omitempty"`
 
-	// 回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+	// **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
 	ReplyRole *TriggerProcessReplyRole `json:"reply_role,omitempty"`
 
-	// 机器人ID。
+	// **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
 	RobotId *string `json:"robot_id,omitempty"`
 }
 

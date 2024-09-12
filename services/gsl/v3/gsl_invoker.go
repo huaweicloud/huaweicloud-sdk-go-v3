@@ -161,6 +161,18 @@ func (i *EnableSimCardInvoker) Invoke() (*model.EnableSimCardResponse, error) {
 	}
 }
 
+type ListSimCardFlowPerDayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSimCardFlowPerDayInvoker) Invoke() (*model.ListSimCardFlowPerDayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSimCardFlowPerDayResponse), nil
+	}
+}
+
 type ListSimCardsInvoker struct {
 	*invoker.BaseInvoker
 }

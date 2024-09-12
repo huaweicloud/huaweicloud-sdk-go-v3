@@ -36,10 +36,10 @@ type ListAssetsRequest struct {
 	// 标签查询组合方式 INTERSECTION：交集 UNION_SET：并集
 	TagCombinationType *ListAssetsRequestTagCombinationType `json:"tag_combination_type,omitempty"`
 
-	// 最近直播任务起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	// 最近直播任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 最近直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
+	// 最近直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 资产类型。多个类型使用英文逗号分割。 * HUMAN_MODEL：数字人模型 * VOICE_MODEL：音色模型（仅系统管理员可上传） * SCENE：场景模型 * ANIMATION：动作动画 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MATERIAL：风格化素材 * HUMAN_MODEL_2D: 2D数字人网络模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板 * MUSIC: 音乐 * AUDIO: 音频

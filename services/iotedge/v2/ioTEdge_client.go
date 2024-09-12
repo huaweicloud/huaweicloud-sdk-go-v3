@@ -859,6 +859,27 @@ func (c *IoTEdgeClient) DeleteDcPointInvoker(request *model.DeleteDcPointRequest
 	return &DeleteDcPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDcPoints 批量删除点位表配置
+//
+// 批量删除点位表配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeleteDcPoints(request *model.DeleteDcPointsRequest) (*model.DeleteDcPointsResponse, error) {
+	requestDef := GenReqDefForDeleteDcPoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDcPointsResponse), nil
+	}
+}
+
+// DeleteDcPointsInvoker 批量删除点位表配置
+func (c *IoTEdgeClient) DeleteDcPointsInvoker(request *model.DeleteDcPointsRequest) *DeleteDcPointsInvoker {
+	requestDef := GenReqDefForDeleteDcPoints()
+	return &DeleteDcPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDcPoint 查询点位表配置详情
 //
 // 查询点位表配置详情

@@ -12,16 +12,16 @@ import (
 // HitConditionTag 命中条件定义
 type HitConditionTag struct {
 
-	// 事件内容关键字段
+	// **参数解释**： 事件内容关键字段 > * event_type为1,2,3,4：与LiveEventReport中event.content中反序列化后的JSON字段对应。如：弹幕事件上报事件。   {     \"timestamp\": 1694481224245,     \"type\": 1,     \"content\": \"{\\\"user\\\":{\\\"userId\\\":\\\"2027271526\\\",\\\"name\\\":\\\"***\\\",\\\"level\\\":17,\\\"badge\\\":\\\"\\\",\\\"badgeLevel\\\":0},\\\"content\\\":\\\"***\\\"}\"   }   匹配弹幕内容，填写content；匹配用户平台等级，填写level。 > * 10：固定填写content即可。  **约束限制**： 不涉及 **取值范围**： 字符长度0-256位 **默认取值**： 不涉及
 	Tag *string `json:"tag,omitempty"`
 
-	// 字段处理 - SUM: 累计 - AVG：平均 - COUNT: 计数 - NONE: 无处理
+	// **参数解释**： 字段取值处理 **约束限制**： 不涉及 **取值范围**： * SUM：累计 * AVG：平均 * COUNT：计数 * NONE：无处理
 	Operation *HitConditionTagOperation `json:"operation,omitempty"`
 
-	// 匹配类型 - EQUAL: 完全相等 - REGEX：正则匹配 - MATH_GT：数值大于 - MATH_GE： 数值大于等于 - MATH_LT：数值小于 - MATH_LE：数值小于等于 - MATH_EQ：数值相等
+	// **参数解释**： 匹配类型。关键词匹配建议使用REGEX。 **约束限制**： 不涉及。 **取值范围**： * EQUAL: 完全相等 * REGEX：正则匹配 * MATH_GT：数值大于 * MATH_GE：数值大于等于  * MATH_LT：数值小于 * MATH_LE：数值小于等于 * MATH_EQ：数值相等  **默认取值**： 不涉及
 	Match *HitConditionTagMatch `json:"match,omitempty"`
 
-	// 匹配值
+	// **参数解释**： 匹配值。 **约束限制**： 不涉及 **取值范围**： 字符长度0-1024 **默认取值**： 不涉及。
 	Value *string `json:"value,omitempty"`
 }
 

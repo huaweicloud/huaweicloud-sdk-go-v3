@@ -9,13 +9,13 @@ import (
 // VideoLayerConfig 素材视频图层配置。
 type VideoLayerConfig struct {
 
-	// 视频文件的URL。
+	// **参数解释**： 视频文件的URL。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
 	VideoUrl *string `json:"video_url,omitempty"`
 
-	// 视频封面文件的URL。
+	// **参数解释**： 视频封面文件的URL。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
 	VideoCoverUrl *string `json:"video_cover_url,omitempty"`
 
-	// 循环播放视频次数。
+	// **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
 	LoopCount *int32 `json:"loop_count,omitempty"`
 }
 

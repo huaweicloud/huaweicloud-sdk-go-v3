@@ -30,13 +30,16 @@ type CreateEndpointServiceRequestBody struct {
 	// 资源类型。  - VM：云服务器，适用于作为服务器使用。  - VIP：虚拟IP，适用于作为虚IP场景使用。（该字段已废弃，请优先使用LB类型）  - LB：负载均衡，适用于高访问量业务和对可靠性和容灾性要求较高的业务。
 	ServerType CreateEndpointServiceRequestBodyServerType `json:"server_type"`
 
+	// 接口型VLAN场景服务端IPv4地址或域名
+	Ip *string `json:"ip,omitempty"`
+
 	// 服务开放的端口映射列表，详细内容请参见表4-10。 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复， 单次最多添加200个。
 	Ports []PortList `json:"ports"`
 
 	// 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
 	TcpProxy *CreateEndpointServiceRequestBodyTcpProxy `json:"tcp_proxy,omitempty"`
 
-	// 资源标签列表。同一个终端节点服务最多可添加10个标签。
+	// 资源标签列表。同一个终端节点服务最多可添加20个标签。
 	Tags *[]TagList `json:"tags,omitempty"`
 
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
