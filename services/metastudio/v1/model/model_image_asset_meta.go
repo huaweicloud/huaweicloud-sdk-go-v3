@@ -12,19 +12,19 @@ import (
 // ImageAssetMeta 图片元数据
 type ImageAssetMeta struct {
 
-	// 图片编码格式，自动提取。
+	// **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
 	Codec *string `json:"codec,omitempty"`
 
-	// 图片宽度，自动提取
+	// **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
 	Width *int32 `json:"width,omitempty"`
 
-	// 图片高度，自动提取
+	// **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
 	Height *int32 `json:"height,omitempty"`
 
-	// 大小
+	// **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
 	Size float32 `json:"size,omitempty"`
 
-	// Horizontal=横向；Vertical=纵向
+	// **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
 	Mode *ImageAssetMetaMode `json:"mode,omitempty"`
 
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`

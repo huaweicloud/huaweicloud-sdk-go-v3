@@ -212,7 +212,7 @@ func (c *CloudPondClient) ShowRackInvoker(request *model.ShowRackRequest) *ShowR
 
 // ListSupportedRegions 查询支持的区域列表
 //
-// 查询支持智能边缘小站接入的华为云区域（region）列表。
+// 查询支持CloudPond接入的华为云区域（region）列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudPondClient) ListSupportedRegions(request *model.ListSupportedRegionsRequest) (*model.ListSupportedRegionsResponse, error) {
@@ -275,7 +275,7 @@ func (c *CloudPondClient) ShowStoragePoolInvoker(request *model.ShowStoragePoolR
 
 // ListSupportedZones 查询支持的地区列表
 //
-// 查询支持智能边缘小站接入的华为云地区列表。
+// 查询支持CloudPond接入的华为云地区列表。
 // - 该接口支持企业项目细粒度权限的校验，具体细粒度请参见 ies:zone:list
 //
 // Please refer to HUAWEI cloud API Explorer for details.

@@ -9,32 +9,35 @@ import (
 // VoiceCapability 音色资产支持的能力集。 > 音色能力集只允许查询，不允许设置
 type VoiceCapability struct {
 
-	// 支持英文音标。
+	// **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
 	IsSupportPhonemeEn *bool `json:"is_support_phoneme_en,omitempty"`
 
-	// 是否支持多音字。
+	// **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
 	IsSupportPhoneme *bool `json:"is_support_phoneme,omitempty"`
 
-	// 是否支持停顿。
+	// **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
 	IsSupportBreakTime *bool `json:"is_support_break_time,omitempty"`
 
-	// 是否支持韵律。
+	// **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
 	IsSupportBreakStrength *bool `json:"is_support_break_strength,omitempty"`
 
-	// 是否支持全局语速。
+	// **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
 	IsSupportSpeed *bool `json:"is_support_speed,omitempty"`
 
-	// 是否支持局部语速。
+	// **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
 	IsSupportProsody *bool `json:"is_support_prosody,omitempty"`
 
-	// 是否支持SSML的say-as标签。
+	// **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
 	IsSupportSsmlSayAs *bool `json:"is_support_ssml_say_as,omitempty"`
 
-	// 是否支持SSML的sub标签。
+	// **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
 	IsSupportSsmlSub *bool `json:"is_support_ssml_sub,omitempty"`
 
-	// 是否支持连读。
+	// **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
 	IsSupportWord *bool `json:"is_support_word,omitempty"`
+
+	// 是否支持缓存。
+	IsSupportVoiceCache *bool `json:"is_support_voice_cache,omitempty"`
 }
 
 func (o VoiceCapability) String() string {

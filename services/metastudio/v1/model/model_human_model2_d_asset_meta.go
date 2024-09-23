@@ -12,22 +12,22 @@ import (
 // HumanModel2DAssetMeta 分身模型元数据
 type HumanModel2DAssetMeta struct {
 
-	// 分身数字人的动作是否可编辑。默认不可编辑。
+	// **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
 	IsActionEditable *bool `json:"is_action_editable,omitempty"`
 
-	// 是否是实景分身数字人。实景分身数字人不做背景替换。
+	// **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
 	IsRealBackground *bool `json:"is_real_background,omitempty"`
 
-	// 是否支持直播
+	// **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
 	SupportLive *bool `json:"support_live,omitempty"`
 
-	// 分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+	// **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
 	ModelVersion *HumanModel2DAssetMetaModelVersion `json:"model_version,omitempty"`
 
-	// 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+	// **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
 	ModelResolution *string `json:"model_resolution,omitempty"`
 
-	// 已执行编译任务
+	// **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
 	DeviceNames *[]string `json:"device_names,omitempty"`
 
 	// 分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。

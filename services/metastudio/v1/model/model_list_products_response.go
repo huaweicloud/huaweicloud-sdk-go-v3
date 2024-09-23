@@ -9,7 +9,7 @@ import (
 // ListProductsResponse Response Object
 type ListProductsResponse struct {
 
-	// 商品信息总数
+	// **参数解释**： 商品信息总数
 	Count *int32 `json:"count,omitempty"`
 
 	// 商品信息列表

@@ -9,13 +9,13 @@ import (
 // PptPageInfo PPT图片元数据。
 type PptPageInfo struct {
 
-	// 页面编号。
+	// **参数解释**： 页面编号。 **约束限制**： 不涉及
 	PageNo *int32 `json:"page_no,omitempty"`
 
-	// 页面对应图片文件ID。
+	// **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
 	FileId *string `json:"file_id,omitempty"`
 
-	// 讲解词（从备注中提取）。
+	// **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
 	PageContent *string `json:"page_content,omitempty"`
 }
 

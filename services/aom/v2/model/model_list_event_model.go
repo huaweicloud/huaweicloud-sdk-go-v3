@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// EventModel 事件或者告警元数据。
-type EventModel struct {
+// ListEventModel 事件或者告警元数据。
+type ListEventModel struct {
 
 	// 事件或者告警产生的时间，CST毫秒级时间戳。
 	StartsAt *int64 `json:"starts_at,omitempty"`
@@ -29,13 +29,25 @@ type EventModel struct {
 
 	// 事件或者告警id，系统会自动生成，上报无须填写该字段。
 	Id *string `json:"id,omitempty"`
+
+	// 告警流水号。
+	EventSn *string `json:"event_sn,omitempty"`
+
+	// 事件到达系统时间，CST毫秒级时间戳。
+	ArrivesAt *int64 `json:"arrives_at,omitempty"`
+
+	// 事件或告警所属企业项目id。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 开放告警策略
+	Policy map[string]interface{} `json:"policy,omitempty"`
 }
 
-func (o EventModel) String() string {
+func (o ListEventModel) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "EventModel struct{}"
+		return "ListEventModel struct{}"
 	}
 
-	return strings.Join([]string{"EventModel", string(data)}, " ")
+	return strings.Join([]string{"ListEventModel", string(data)}, " ")
 }

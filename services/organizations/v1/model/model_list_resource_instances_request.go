@@ -12,13 +12,16 @@ import (
 // ListResourceInstancesRequest Request Object
 type ListResourceInstancesRequest struct {
 
+	// 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+	XSecurityToken *string `json:"X-Security-Token,omitempty"`
+
 	// 页面中最大结果数量。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页标记。
 	Offset *string `json:"offset,omitempty"`
 
-	// 资源类型 organizations:policies服务策略 organizations:ous组织OU organizations:accounts账号信息 organizations:roots根
+	// 资源类型。枚举值：organizations:policies（服务策略）、organizations:ous（组织OU）、organizations:accounts（账号信息） 、organizations:roots：（根）。
 	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
 
 	Body *ResourceInstanceReqBody `json:"body,omitempty"`

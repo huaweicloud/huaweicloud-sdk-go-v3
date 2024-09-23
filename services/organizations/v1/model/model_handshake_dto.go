@@ -22,6 +22,9 @@ type HandshakeDto struct {
 	// 提出邀请（握手）请求的日期和时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
+	// 邀请（握手）过期的日期和时间。
+	ExpiredAt *sdktime.SdkTime `json:"expired_at"`
+
 	// 组织管理账号的唯一标识符（ID）。
 	ManagementAccountId string `json:"management_account_id"`
 

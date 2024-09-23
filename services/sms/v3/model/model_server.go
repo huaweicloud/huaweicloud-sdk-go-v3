@@ -39,9 +39,6 @@ type Server struct {
 	// 内存大小，单位MB
 	Memory *int64 `json:"memory,omitempty"`
 
-	// 源端服务器的磁盘信息
-	Disks *[]Disk `json:"disks,omitempty"`
-
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
 	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 

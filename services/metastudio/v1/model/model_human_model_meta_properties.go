@@ -8,10 +8,10 @@ import (
 
 type HumanModelMetaProperties struct {
 
-	// 当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
+	// **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
 	WholeModelBaseFileId *string `json:"whole_model_base_file_id,omitempty"`
 
-	// 当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+	// **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
 	LoadModelFileId *string `json:"load_model_file_id,omitempty"`
 }
 

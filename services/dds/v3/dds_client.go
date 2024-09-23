@@ -838,6 +838,27 @@ func (c *DdsClient) ListDatabaseUsersInvoker(request *model.ListDatabaseUsersReq
 	return &ListDatabaseUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDatabases 查询数据库列表
+//
+// 查询数据库列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ListDatabases(request *model.ListDatabasesRequest) (*model.ListDatabasesResponse, error) {
+	requestDef := GenReqDefForListDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabasesResponse), nil
+	}
+}
+
+// ListDatabasesInvoker 查询数据库列表
+func (c *DdsClient) ListDatabasesInvoker(request *model.ListDatabasesRequest) *ListDatabasesInvoker {
+	requestDef := GenReqDefForListDatabases()
+	return &ListDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDatastoreVersions 查询数据库版本信息
 //
 // 查询指定实例类型的数据库版本信息。

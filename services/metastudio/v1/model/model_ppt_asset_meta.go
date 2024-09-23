@@ -12,15 +12,15 @@ import (
 // PptAssetMeta PPT资产元数据信息。
 type PptAssetMeta struct {
 
-	// PPT是否需要自动解析。
+	// **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
 	AutoAnalysis *bool `json:"auto_analysis,omitempty"`
 
-	// PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+	// **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
 	PptAnalysisStatus *PptAssetMetaPptAnalysisStatus `json:"ppt_analysis_status,omitempty"`
 
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 
-	// PPT页面总数。
+	// **参数解释**： PPT页面总数。 **约束限制**： 不涉及
 	PageCount *int32 `json:"page_count,omitempty"`
 
 	// PPT页面图片。

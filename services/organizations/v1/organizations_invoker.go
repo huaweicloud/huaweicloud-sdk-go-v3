@@ -125,6 +125,18 @@ func (i *ShowCreateAccountStatusInvoker) Invoke() (*model.ShowCreateAccountStatu
 	}
 }
 
+type UpdateAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAccountInvoker) Invoke() (*model.UpdateAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAccountResponse), nil
+	}
+}
+
 type DeregisterDelegatedAdministratorInvoker struct {
 	*invoker.BaseInvoker
 }

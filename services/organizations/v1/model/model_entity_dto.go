@@ -15,7 +15,7 @@ type EntityDto struct {
 	// 实体的唯一标识符（ID）。
 	Id string `json:"id"`
 
-	// 实体的类型，account:账户，organizational_unit:组织单元，root:根。
+	// 实体的类型。account：账号；organizational_unit：组织单元；root：根。
 	Type string `json:"type"`
 }
 

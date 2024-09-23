@@ -824,6 +824,31 @@ func GenReqDefForListDatabaseUsers() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListDatabases() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/databases").
+		WithResponse(new(model.ListDatabasesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListDatastoreVersions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

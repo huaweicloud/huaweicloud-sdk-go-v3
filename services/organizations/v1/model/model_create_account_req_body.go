@@ -21,6 +21,9 @@ type CreateAccountReqBody struct {
 	// 委托名称
 	AgencyName *string `json:"agency_name,omitempty"`
 
+	// 描述信息。
+	Description *string `json:"description,omitempty"`
+
 	// 要绑定到新创建的账号的标签列表。
 	Tags *[]TagDto `json:"tags,omitempty"`
 }

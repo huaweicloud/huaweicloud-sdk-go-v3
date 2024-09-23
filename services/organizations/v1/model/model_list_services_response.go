@@ -8,6 +8,8 @@ import (
 
 // ListServicesResponse Response Object
 type ListServicesResponse struct {
+
+	// 云服务名称。
 	Services       *[]string `json:"services,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

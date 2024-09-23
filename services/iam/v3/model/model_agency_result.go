@@ -32,6 +32,9 @@ type AgencyResult struct {
 
 	// 被委托方账号名。
 	TrustDomainName *string `json:"trust_domain_name,omitempty"`
+
+	// 委托URN。
+	AgencyUrn *string `json:"agency_urn,omitempty"`
 }
 
 func (o AgencyResult) String() string {

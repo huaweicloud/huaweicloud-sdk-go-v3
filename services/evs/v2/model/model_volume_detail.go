@@ -114,6 +114,9 @@ type VolumeDetail struct {
 	Iops *Iops `json:"iops,omitempty"`
 
 	Throughput *Throughput `json:"throughput,omitempty"`
+
+	// 云硬盘关联的自动快照策略ID
+	SnapshotPolicyId *string `json:"snapshot_policy_id,omitempty"`
 }
 
 func (o VolumeDetail) String() string {

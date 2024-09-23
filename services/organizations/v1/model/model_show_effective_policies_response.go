@@ -17,7 +17,7 @@ type ShowEffectivePoliciesResponse struct {
 	// 有效策略文本内容。
 	PolicyContent *string `json:"policy_content,omitempty"`
 
-	// 策略类型的名称，tag_policy标签策略。
+	// 策略类型的名称。tag_policy标签策略。
 	PolicyType *ShowEffectivePoliciesResponsePolicyType `json:"policy_type,omitempty"`
 
 	// 根、组织单元或账号的唯一标识符（ID）。

@@ -12,6 +12,9 @@ import (
 // CreatePolicyRequest Request Object
 type CreatePolicyRequest struct {
 
+	// 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+	XSecurityToken *string `json:"X-Security-Token,omitempty"`
+
 	// 选择接口返回的信息的语言
 	XLanguage *CreatePolicyRequestXLanguage `json:"X-Language,omitempty"`
 

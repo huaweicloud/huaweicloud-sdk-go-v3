@@ -962,7 +962,7 @@ func GenReqDefForDeleteDcPoint() *def.HttpRequestDef {
 func GenReqDefForDeleteDcPoints() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/edge-nodes/{edge_node_id}/ots/data-sources/{ds_id}/points/batch-delete").
+		WithPath("/v2/{project_id}/edge-nodes/{edge_node_id}/ots/data-sources/{ds_id}/points/batch-delete").
 		WithResponse(new(model.DeleteDcPointsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

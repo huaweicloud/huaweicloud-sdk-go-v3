@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
-// TagPolicyServiceDto A quota of organization.
+// TagPolicyServiceDto 被添加到标签策略强制执行的资源类型。
 type TagPolicyServiceDto struct {
 
-	// The service name of the service.
+	// 服务名称。
 	ServiceName string `json:"service_name"`
 
+	// 资源类型。
 	ResourceTypes []string `json:"resource_types"`
 
 	// resource_type是否支持全量选择，即*

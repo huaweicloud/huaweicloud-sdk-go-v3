@@ -473,6 +473,18 @@ func (i *ListDatabaseUsersInvoker) Invoke() (*model.ListDatabaseUsersResponse, e
 	}
 }
 
+type ListDatabasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabasesInvoker) Invoke() (*model.ListDatabasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabasesResponse), nil
+	}
+}
+
 type ListDatastoreVersionsInvoker struct {
 	*invoker.BaseInvoker
 }

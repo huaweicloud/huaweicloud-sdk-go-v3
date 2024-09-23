@@ -9,7 +9,7 @@ import (
 type PageInfo struct {
 
 	// 当前页事件、告警总数
-	CurrentCount string `json:"current_count"`
+	CurrentCount int32 `json:"current_count"`
 
 	// 前一个marker
 	PreviousMarker string `json:"previous_marker"`

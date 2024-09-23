@@ -18,7 +18,7 @@ type TargetServer struct {
 	// 源端服务器IP，注册源端时必选，更新非必选
 	Ip string `json:"ip"`
 
-	// 目的端服务器名称
+	// 用来区分不同源端服务器的名称
 	Name string `json:"name"`
 
 	// 源端主机名，注册源端必选，更新非必选
@@ -38,9 +38,6 @@ type TargetServer struct {
 
 	// 内存大小，单位MB
 	Memory *int64 `json:"memory,omitempty"`
-
-	// 目的端磁盘信息，一般和源端保持一致
-	Disks []TargetDisk `json:"disks"`
 
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
 	BtrfsList *[]string `json:"btrfs_list,omitempty"`
@@ -75,7 +72,7 @@ type TargetServer struct {
 	// Windows必选，系统目录
 	SystemDir *string `json:"system_dir,omitempty"`
 
-	// lvm信息，一般和源端保持一致
+	// Linux必选，如果没有卷组，输入[]
 	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
 
 	// 目的端服务器ID，自动创建虚拟机不需要这个参数
@@ -83,6 +80,9 @@ type TargetServer struct {
 
 	// 目的端服务器的规格
 	Flavor *string `json:"flavor,omitempty"`
+
+	// 目的端磁盘信息，一般和源端保持一致
+	Disks []TargetDisk `json:"disks"`
 
 	// 目的端代理镜像磁盘ID
 	ImageDiskId *string `json:"image_disk_id,omitempty"`

@@ -12,40 +12,40 @@ import (
 // VideoAssetMeta 视频元数据，自动提取获得。
 type VideoAssetMeta struct {
 
-	// 视频编码格式
+	// **参数解释**： 视频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
 	VideoCodec *string `json:"video_codec,omitempty"`
 
-	// 视频宽度
+	// **参数解释**： 视频画面宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	Width *int32 `json:"width,omitempty"`
 
-	// 视频高度
+	// **参数解释**： 视频画面高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	Height *int32 `json:"height,omitempty"`
 
-	// 帧率
+	// **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
 	FrameRate *string `json:"frame_rate,omitempty"`
 
-	// 视频平均码率,单位kbps
+	// **参数解释**： 视频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	VideoBitRate *int32 `json:"video_bit_rate,omitempty"`
 
-	// 时长,单位秒
+	// **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	Duration *int32 `json:"duration,omitempty"`
 
-	// 音频编码格式
+	// **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
 	AudioCodec *string `json:"audio_codec,omitempty"`
 
-	// 音频平均码率,单位kbps
+	// **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	AudioBitRate *int32 `json:"audio_bit_rate,omitempty"`
 
-	// 音频声道数
+	// **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	AudioChannels *int32 `json:"audio_channels,omitempty"`
 
-	// 采样率,HZ
+	// **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
 	Sample *int32 `json:"sample,omitempty"`
 
-	// Horizontal=横向；Vertical=纵向
+	// **参数解释**： 横向画面或纵向画面。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及
 	Mode *VideoAssetMetaMode `json:"mode,omitempty"`
 
-	// 视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
+	// **参数解释**： 视频转码状态。 **约束限制**： 用户无需填写，系统自行填写。 **取值范围**： * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功  **默认取值**： 不涉及
 	VideoTranscodingStatus *VideoAssetMetaVideoTranscodingStatus `json:"video_transcoding_status,omitempty"`
 
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`

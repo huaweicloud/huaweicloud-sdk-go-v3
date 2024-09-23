@@ -26,7 +26,7 @@ type CreateProductRequestBody struct {
 	// 素材资产列表
 	AssetList *[]ProductMediaInfo `json:"asset_list,omitempty"`
 
-	// 自动激活商品
+	// **参数解释**： 自动激活商品
 	AutoActive *bool `json:"auto_active,omitempty"`
 }
 
