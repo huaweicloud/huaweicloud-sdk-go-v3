@@ -11,7 +11,7 @@ import (
 // CloudConnection 云连接实例。
 type CloudConnection struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例名字。
@@ -20,7 +20,7 @@ type CloudConnection struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
 	// 实例所属企业项目ID。

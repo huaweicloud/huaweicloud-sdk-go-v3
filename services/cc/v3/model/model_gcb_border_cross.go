@@ -10,7 +10,7 @@ import (
 type GcbBorderCross struct {
 
 	// 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
-	Bordercross *bool `json:"bordercross,omitempty"`
+	Bordercross bool `json:"bordercross"`
 }
 
 func (o GcbBorderCross) String() string {

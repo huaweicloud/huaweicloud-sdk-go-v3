@@ -11,7 +11,7 @@ import (
 // GlobalConnectionBandwidthSites 站点信息。
 type GlobalConnectionBandwidthSites struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例描述。不支持 <>。

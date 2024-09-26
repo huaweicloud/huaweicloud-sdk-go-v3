@@ -12,16 +12,16 @@ import (
 type DisassociateGlobalConnectionBandwidthInstanceResponseInfo struct {
 
 	// 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId string `json:"resource_id"`
 
 	// 功能说明：实例类型。
-	ResourceType *string `json:"resource_type,omitempty"`
+	ResourceType string `json:"resource_type"`
 
 	// 功能说明：实例所在region，不填默认\"global\"。
 	RegionId *string `json:"region_id,omitempty"`
 
 	// 功能说明：实例所在region对应的projectId。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId string `json:"project_id"`
 
 	// 功能说明：解绑操作成功还是失败。 - success: 成功 - fail: 失败
 	Result *DisassociateGlobalConnectionBandwidthInstanceResponseInfoResult `json:"result,omitempty"`

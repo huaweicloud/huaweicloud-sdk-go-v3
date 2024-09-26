@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// InstanceDomainId 网络实例的账户ID。
+// InstanceDomainId 网络实例（VPC，VGW）所属账号ID。
 type InstanceDomainId struct {
 
-	// 实例所属帐号ID。
+	// 网络实例（VPC，VGW）所属账号ID。
 	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
 }
 

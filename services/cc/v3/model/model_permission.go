@@ -10,7 +10,7 @@ import (
 // Permission 权限信息。
 type Permission struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例名字。
@@ -19,7 +19,7 @@ type Permission struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 资源ID标识符。
+	// 网络实例（VPC，VGW）的ID。
 	InstanceId string `json:"instance_id"`
 
 	// 实例所属项目ID。
@@ -31,10 +31,10 @@ type Permission struct {
 	// 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
-	// 资源ID标识符。
+	// 云连接实例ID。
 	CloudConnectionId string `json:"cloud_connection_id"`
 
 	// 授权的状态。

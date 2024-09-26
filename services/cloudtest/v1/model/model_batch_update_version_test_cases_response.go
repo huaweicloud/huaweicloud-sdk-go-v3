@@ -9,18 +9,19 @@ import (
 // BatchUpdateVersionTestCasesResponse Response Object
 type BatchUpdateVersionTestCasesResponse struct {
 
-	// CTS需要返回资源id
-	Id *string `json:"id,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	// CTS需要返回资源name
-	Name *string `json:"name,omitempty"`
+	Result *ResultValueUpdateTestCaseListVo `json:"result,omitempty"`
 
-	// 成功批量更新用例的id列表
-	SuccessList *[]string `json:"success_list,omitempty"`
+	Error *ApiError `json:"error,omitempty"`
 
-	// 没有批量更新用例的id列表
-	FailedList     *[]string `json:"failed_list,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o BatchUpdateVersionTestCasesResponse) String() string {

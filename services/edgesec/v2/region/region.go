@@ -29,27 +29,27 @@ var (
 	CN_NORTH_9 = region.NewRegion("cn-north-9",
 		"https://esa.cn-north-4.myhuaweicloud.com")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	AF_SOUTH_1 = region.NewRegion("af-south-1",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	LA_SOUTH_2 = region.NewRegion("la-south-2",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	NA_MEXICO_1 = region.NewRegion("na-mexico-1",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	LA_NORTH_2 = region.NewRegion("la-north-2",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 	TR_WEST_1 = region.NewRegion("tr-west-1",
-		"https://edgesec-intl.myhuaweicloud.com")
+		"https://esa.cn-north-4.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{

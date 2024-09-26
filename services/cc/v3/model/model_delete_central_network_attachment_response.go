@@ -9,7 +9,7 @@ import (
 // DeleteCentralNetworkAttachmentResponse Response Object
 type DeleteCentralNetworkAttachmentResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CentralNetworkAttachment *CentralNetworkAttachment `json:"central_network_attachment"`

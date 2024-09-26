@@ -20,6 +20,9 @@ type ListComponentConfigurationsRequest struct {
 
 	// 环境ID。      - 获取环境ID，通过《[云应用引擎API参考](https://support.huaweicloud.com/api-cae/ListEnvironments.html)》的“获取环境列表”章节获取环境信息。     - 请求响应成功后在响应体的items数组中的一个元素即为一个环境的信息，其中id字段即是环境ID。
 	XEnvironmentID string `json:"X-Environment-ID"`
+
+	// 显示模式，当前只支持“latestEffective”，即只显示最后一次生效配置。
+	DisplayMode *string `json:"displayMode,omitempty"`
 }
 
 func (o ListComponentConfigurationsRequest) String() string {

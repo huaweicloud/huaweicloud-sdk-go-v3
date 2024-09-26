@@ -61,27 +61,6 @@ func (c *HssClient) AssociatePolicyGroupInvoker(request *model.AssociatePolicyGr
 	return &AssociatePolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchAddAccounts 批量添加账号
-//
-// 批量添加账号
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) BatchAddAccounts(request *model.BatchAddAccountsRequest) (*model.BatchAddAccountsResponse, error) {
-	requestDef := GenReqDefForBatchAddAccounts()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchAddAccountsResponse), nil
-	}
-}
-
-// BatchAddAccountsInvoker 批量添加账号
-func (c *HssClient) BatchAddAccountsInvoker(request *model.BatchAddAccountsRequest) *BatchAddAccountsInvoker {
-	requestDef := GenReqDefForBatchAddAccounts()
-	return &BatchAddAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchCreateTags 批量创建标签
 //
 // 批量创建标签
@@ -313,27 +292,6 @@ func (c *HssClient) CreateVulnerabilityScanTaskInvoker(request *model.CreateVuln
 	return &CreateVulnerabilityScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteAccount 删除账号
-//
-// 删除账号
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) DeleteAccount(request *model.DeleteAccountRequest) (*model.DeleteAccountResponse, error) {
-	requestDef := GenReqDefForDeleteAccount()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteAccountResponse), nil
-	}
-}
-
-// DeleteAccountInvoker 删除账号
-func (c *HssClient) DeleteAccountInvoker(request *model.DeleteAccountRequest) *DeleteAccountInvoker {
-	requestDef := GenReqDefForDeleteAccount()
-	return &DeleteAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteHostsGroup 删除服务器组
 //
 // 删除服务器组
@@ -395,27 +353,6 @@ func (c *HssClient) ExportVuls(request *model.ExportVulsRequest) (*model.ExportV
 func (c *HssClient) ExportVulsInvoker(request *model.ExportVulsRequest) *ExportVulsInvoker {
 	requestDef := GenReqDefForExportVuls()
 	return &ExportVulsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAccounts 多账号列表
-//
-// 多账号列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAccounts(request *model.ListAccountsRequest) (*model.ListAccountsResponse, error) {
-	requestDef := GenReqDefForListAccounts()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAccountsResponse), nil
-	}
-}
-
-// ListAccountsInvoker 多账号列表
-func (c *HssClient) ListAccountsInvoker(request *model.ListAccountsRequest) *ListAccountsInvoker {
-	requestDef := GenReqDefForListAccounts()
-	return &ListAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAlarmWhiteList 查询告警白名单列表
@@ -899,27 +836,6 @@ func (c *HssClient) ListJarPackageStatistics(request *model.ListJarPackageStatis
 func (c *HssClient) ListJarPackageStatisticsInvoker(request *model.ListJarPackageStatisticsRequest) *ListJarPackageStatisticsInvoker {
 	requestDef := GenReqDefForListJarPackageStatistics()
 	return &ListJarPackageStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListOrganizationTree 多账号列表
-//
-// # List organization tree
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListOrganizationTree(request *model.ListOrganizationTreeRequest) (*model.ListOrganizationTreeResponse, error) {
-	requestDef := GenReqDefForListOrganizationTree()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListOrganizationTreeResponse), nil
-	}
-}
-
-// ListOrganizationTreeInvoker 多账号列表
-func (c *HssClient) ListOrganizationTreeInvoker(request *model.ListOrganizationTreeRequest) *ListOrganizationTreeInvoker {
-	requestDef := GenReqDefForListOrganizationTree()
-	return &ListOrganizationTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPasswordComplexity 查询口令复杂度策略检测报告

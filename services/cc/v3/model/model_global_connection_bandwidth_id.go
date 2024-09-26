@@ -9,7 +9,7 @@ import (
 // GlobalConnectionBandwidthId 全域互联带宽ID。
 type GlobalConnectionBandwidthId struct {
 
-	// 资源ID标识符。
+	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 }
 

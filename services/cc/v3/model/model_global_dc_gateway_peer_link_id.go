@@ -9,7 +9,7 @@ import (
 // GlobalDcGatewayPeerLinkId GDGW的连接ID。
 type GlobalDcGatewayPeerLinkId struct {
 
-	// 资源ID标识符。
+	// GDGW的连接ID。
 	GlobalDcGatewayPeerLinkId *string `json:"global_dc_gateway_peer_link_id,omitempty"`
 }
 

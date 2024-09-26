@@ -10,7 +10,7 @@ import (
 // CentralNetworkConnection 中心网络连接。
 type CentralNetworkConnection struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例名字。
@@ -19,19 +19,19 @@ type CentralNetworkConnection struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
 	// 实例所属企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源ID标识符。
+	// 中心网络ID。
 	CentralNetworkId string `json:"central_network_id"`
 
-	// 资源ID标识符。
+	// 中心网络平面ID。
 	CentralNetworkPlaneId string `json:"central_network_plane_id"`
 
-	// 资源ID标识符。
+	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 
 	BandwidthType *BandwidthTypeEnum `json:"bandwidth_type"`

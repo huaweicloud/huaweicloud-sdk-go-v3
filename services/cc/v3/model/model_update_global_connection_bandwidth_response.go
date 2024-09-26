@@ -9,7 +9,7 @@ import (
 // UpdateGlobalConnectionBandwidthResponse Response Object
 type UpdateGlobalConnectionBandwidthResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	GlobalconnectionBandwidth *GlobalConnectionBandwidth `json:"globalconnection_bandwidth"`

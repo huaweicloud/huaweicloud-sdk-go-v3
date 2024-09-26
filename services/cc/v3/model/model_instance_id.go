@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// InstanceId 网络实例的ID。
 type InstanceId struct {
 
-	// 资源ID标识符。
+	// 网络实例（VPC，VGW）的ID。
 	InstanceId string `json:"instance_id"`
 }
 

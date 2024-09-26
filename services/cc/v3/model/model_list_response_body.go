@@ -9,7 +9,7 @@ import (
 // ListResponseBody 列表响应体基类。
 type ListResponseBody struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`

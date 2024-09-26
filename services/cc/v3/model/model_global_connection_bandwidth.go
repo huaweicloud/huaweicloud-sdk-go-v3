@@ -11,23 +11,23 @@ import (
 // GlobalConnectionBandwidth 全域互联带宽实例的详细信息。
 type GlobalConnectionBandwidth struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例名字。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
 	// 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
-	Bordercross *bool `json:"bordercross,omitempty"`
+	Bordercross bool `json:"bordercross"`
 
 	// 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-	Type *GlobalConnectionBandwidthType `json:"type,omitempty"`
+	Type GlobalConnectionBandwidthType `json:"type"`
 
 	// 功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
 	BindingService *GlobalConnectionBandwidthBindingService `json:"binding_service,omitempty"`
@@ -35,11 +35,11 @@ type GlobalConnectionBandwidth struct {
 	// 实例所属企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
-	ChargeMode *GlobalConnectionBandwidthChargeMode `json:"charge_mode,omitempty"`
+	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
+	ChargeMode GlobalConnectionBandwidthChargeMode `json:"charge_mode"`
 
 	// 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
-	Size *int32 `json:"size,omitempty"`
+	Size int32 `json:"size"`
 
 	// 功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
 	SlaLevel *GlobalConnectionBandwidthSlaLevel `json:"sla_level,omitempty"`
@@ -209,8 +209,9 @@ type GlobalConnectionBandwidthChargeMode struct {
 }
 
 type GlobalConnectionBandwidthChargeModeEnum struct {
-	BWD  GlobalConnectionBandwidthChargeMode
-	E_95 GlobalConnectionBandwidthChargeMode
+	BWD     GlobalConnectionBandwidthChargeMode
+	E_95    GlobalConnectionBandwidthChargeMode
+	E_95AVR GlobalConnectionBandwidthChargeMode
 }
 
 func GetGlobalConnectionBandwidthChargeModeEnum() GlobalConnectionBandwidthChargeModeEnum {
@@ -220,6 +221,9 @@ func GetGlobalConnectionBandwidthChargeModeEnum() GlobalConnectionBandwidthCharg
 		},
 		E_95: GlobalConnectionBandwidthChargeMode{
 			value: "95",
+		},
+		E_95AVR: GlobalConnectionBandwidthChargeMode{
+			value: "95avr",
 		},
 	}
 }

@@ -47,6 +47,9 @@ type CreateEndpointServiceRequestBody struct {
 
 	// 指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
 	IpVersion *CreateEndpointServiceRequestBodyIpVersion `json:"ip_version,omitempty"`
+
+	// 接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
+	SnatNetworkId *string `json:"snat_network_id,omitempty"`
 }
 
 func (o CreateEndpointServiceRequestBody) String() string {

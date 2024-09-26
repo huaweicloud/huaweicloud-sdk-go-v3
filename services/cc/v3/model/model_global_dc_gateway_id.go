@@ -9,7 +9,7 @@ import (
 // GlobalDcGatewayId Gdgw的ID。
 type GlobalDcGatewayId struct {
 
-	// 资源ID标识符。
+	// Gdgw的ID。
 	GlobalDcGatewayId string `json:"global_dc_gateway_id"`
 }
 

@@ -9,7 +9,7 @@ import (
 // DeleteCloudConnectionRequest Request Object
 type DeleteCloudConnectionRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 }
 

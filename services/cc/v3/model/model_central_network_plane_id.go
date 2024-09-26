@@ -9,7 +9,7 @@ import (
 // CentralNetworkPlaneId 中心网络平面ID。
 type CentralNetworkPlaneId struct {
 
-	// 资源ID标识符。
+	// 中心网络平面ID。
 	CentralNetworkPlaneId string `json:"central_network_plane_id"`
 }
 

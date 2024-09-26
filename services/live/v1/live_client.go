@@ -1243,6 +1243,111 @@ func (c *LiveClient) UpdateDomainHttpsCertInvoker(request *model.UpdateDomainHtt
 	return &UpdateDomainHttpsCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateHarvestTask 创建Live2VOD任务
+//
+// 创建Live2VOD任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateHarvestTask(request *model.CreateHarvestTaskRequest) (*model.CreateHarvestTaskResponse, error) {
+	requestDef := GenReqDefForCreateHarvestTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHarvestTaskResponse), nil
+	}
+}
+
+// CreateHarvestTaskInvoker 创建Live2VOD任务
+func (c *LiveClient) CreateHarvestTaskInvoker(request *model.CreateHarvestTaskRequest) *CreateHarvestTaskInvoker {
+	requestDef := GenReqDefForCreateHarvestTask()
+	return &CreateHarvestTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHarvestTask 删除Live2VOD任务
+//
+// 删除Live2VOD任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeleteHarvestTask(request *model.DeleteHarvestTaskRequest) (*model.DeleteHarvestTaskResponse, error) {
+	requestDef := GenReqDefForDeleteHarvestTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHarvestTaskResponse), nil
+	}
+}
+
+// DeleteHarvestTaskInvoker 删除Live2VOD任务
+func (c *LiveClient) DeleteHarvestTaskInvoker(request *model.DeleteHarvestTaskRequest) *DeleteHarvestTaskInvoker {
+	requestDef := GenReqDefForDeleteHarvestTask()
+	return &DeleteHarvestTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHarvestTask 查询Live2VOD任务
+//
+// 查询Live2VOD任务，支持批量查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListHarvestTask(request *model.ListHarvestTaskRequest) (*model.ListHarvestTaskResponse, error) {
+	requestDef := GenReqDefForListHarvestTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHarvestTaskResponse), nil
+	}
+}
+
+// ListHarvestTaskInvoker 查询Live2VOD任务
+func (c *LiveClient) ListHarvestTaskInvoker(request *model.ListHarvestTaskRequest) *ListHarvestTaskInvoker {
+	requestDef := GenReqDefForListHarvestTask()
+	return &ListHarvestTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyHarvestTask 修改Live2VOD任务
+//
+// 修改Live2VOD任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyHarvestTask(request *model.ModifyHarvestTaskRequest) (*model.ModifyHarvestTaskResponse, error) {
+	requestDef := GenReqDefForModifyHarvestTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyHarvestTaskResponse), nil
+	}
+}
+
+// ModifyHarvestTaskInvoker 修改Live2VOD任务
+func (c *LiveClient) ModifyHarvestTaskInvoker(request *model.ModifyHarvestTaskRequest) *ModifyHarvestTaskInvoker {
+	requestDef := GenReqDefForModifyHarvestTask()
+	return &ModifyHarvestTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHarvestJobStatus 修改Live2VOD任务状态
+//
+// 修改Live2VOD任务状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) UpdateHarvestJobStatus(request *model.UpdateHarvestJobStatusRequest) (*model.UpdateHarvestJobStatusResponse, error) {
+	requestDef := GenReqDefForUpdateHarvestJobStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHarvestJobStatusResponse), nil
+	}
+}
+
+// UpdateHarvestJobStatusInvoker 修改Live2VOD任务状态
+func (c *LiveClient) UpdateHarvestJobStatusInvoker(request *model.UpdateHarvestJobStatusRequest) *UpdateHarvestJobStatusInvoker {
+	requestDef := GenReqDefForUpdateHarvestJobStatus()
+	return &UpdateHarvestJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateObsBucketAuthorityPublic OBS桶授权及取消授权
 //
 // # OBS桶授权及取消授权

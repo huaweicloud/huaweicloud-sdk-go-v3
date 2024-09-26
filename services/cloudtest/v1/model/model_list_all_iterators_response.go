@@ -9,21 +9,11 @@ import (
 // ListAllIteratorsResponse Response Object
 type ListAllIteratorsResponse struct {
 
-	// 起始记录数 大于 实际总条数时， 值为0， 分页请求才有此值
-	Total *int32 `json:"total,omitempty"`
+	// 对外时：success|error;
+	Status *string `json:"status,omitempty"`
 
-	// 实际的数据类型：单个对象，集合 或 NULL
-	Value *[]TestVersionVo `json:"value,omitempty"`
-
-	// 业务失败的提示内容，对内接口才有此值
-	Reason *string `json:"reason,omitempty"`
-
-	PageSize *int32 `json:"page_size,omitempty"`
-
-	PageNo *int32 `json:"page_no,omitempty"`
-
-	HasMore        *bool `json:"has_more,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	Result         *ResultValueListTestVersionVo `json:"result,omitempty"`
+	HttpStatusCode int                           `json:"-"`
 }
 
 func (o ListAllIteratorsResponse) String() string {

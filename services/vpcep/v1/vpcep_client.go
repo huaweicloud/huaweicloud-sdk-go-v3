@@ -111,6 +111,9 @@ func (c *VpcepClient) BatchRemoveEndpointServicePermissionsInvoker(request *mode
 //
 // 创建终端节点，以便访问终端节点服务。
 //
+// 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。
+// 通常创建终端节点需要1~2分钟，可以通过[查询终端节点详情](https://support.huaweicloud.com/api-vpcep/ListEndpointInfoDetails.html)查看创建结果
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
 	requestDef := GenReqDefForCreateEndpoint()
@@ -132,9 +135,9 @@ func (c *VpcepClient) CreateEndpointInvoker(request *model.CreateEndpointRequest
 //
 // 创建终端节点服务，允许其他用户创建终端节点连接您创建的终端节点服务，
 // 使用您所提供的服务。
-// 说明
+//
 // 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。
-// 通常创建终端节点服务需要1~2分钟，可以通过查询终端节点服务详情查看创建结果。
+// 通常创建终端节点服务需要1~2分钟，可以通过[查询终端节点服务详情](https://support.huaweicloud.com/api-vpcep/ListServiceDetails.html)查看创建结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) CreateEndpointService(request *model.CreateEndpointServiceRequest) (*model.CreateEndpointServiceResponse, error) {
@@ -156,6 +159,9 @@ func (c *VpcepClient) CreateEndpointServiceInvoker(request *model.CreateEndpoint
 // DeleteEndpoint 删除终端节点
 //
 // 删除终端节点。
+//
+// 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。
+// 通常删除终端节点需要1~2分钟，可以通过[查询终端节点详情](https://support.huaweicloud.com/api-vpcep/ListEndpointInfoDetails.html)查看删除结果
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
@@ -198,6 +204,8 @@ func (c *VpcepClient) DeleteEndpointPolicyInvoker(request *model.DeleteEndpointP
 // DeleteEndpointService 删除终端节点服务
 //
 // 删除终端节点服务。
+//
+// 该接口为异步接口，调用成功会返回200状态码，说明请求已正常下发。通常删除终端节点服务需要1~2分钟，可以通过[查询终端节点服务详情](https://support.huaweicloud.com/api-vpcep/ListServiceDetails.html)查看删除结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcepClient) DeleteEndpointService(request *model.DeleteEndpointServiceRequest) (*model.DeleteEndpointServiceResponse, error) {

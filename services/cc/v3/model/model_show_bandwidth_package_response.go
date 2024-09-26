@@ -9,7 +9,7 @@ import (
 // ShowBandwidthPackageResponse Response Object
 type ShowBandwidthPackageResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	BandwidthPackage *BandwidthPackage `json:"bandwidth_package"`

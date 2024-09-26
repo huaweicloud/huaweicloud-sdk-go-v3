@@ -9,7 +9,7 @@ import (
 // TagBandwidthPackageRequest Request Object
 type TagBandwidthPackageRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *TagBandwidthPackageRequestBody `json:"body,omitempty"`

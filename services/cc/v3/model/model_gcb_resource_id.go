@@ -9,7 +9,7 @@ import (
 type GcbResourceId struct {
 
 	// 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
-	ResourceId *string `json:"resource_id,omitempty"`
+	ResourceId string `json:"resource_id"`
 }
 
 func (o GcbResourceId) String() string {

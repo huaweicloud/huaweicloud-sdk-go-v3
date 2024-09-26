@@ -9,7 +9,7 @@ import (
 // SiteGroupReferenceInfo 站点分组跟外部关联的数据模型。
 type SiteGroupReferenceInfo struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例描述。不支持 <>。

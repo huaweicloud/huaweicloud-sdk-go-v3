@@ -9,7 +9,7 @@ import (
 // ListCentralNetworkConnectionsResponse Response Object
 type ListCentralNetworkConnectionsResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`

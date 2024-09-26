@@ -9,7 +9,7 @@ import (
 type GcbResourceType struct {
 
 	// 功能说明：实例类型。
-	ResourceType *string `json:"resource_type,omitempty"`
+	ResourceType string `json:"resource_type"`
 }
 
 func (o GcbResourceType) String() string {

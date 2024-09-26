@@ -586,6 +586,11 @@ func GenReqDefForListComponentConfigurations() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DisplayMode").
+		WithJsonTag("displayMode").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))

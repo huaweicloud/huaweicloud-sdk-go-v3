@@ -9,11 +9,11 @@ import (
 // CentralNetworkAttachmentSpecificationValueInfo 附件的额外信息。
 type CentralNetworkAttachmentSpecificationValueInfo struct {
 
-	// 资源ID标识符。
-	EnterpriseRouterTableId *string `json:"enterprise_router_table_id,omitempty"`
+	// 企业路由器的路由表ID。
+	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
 
-	// 资源ID标识符。
-	AttachedErId *string `json:"attached_er_id,omitempty"`
+	// 实例ID。
+	AttachmentParentInstanceId *string `json:"attachment_parent_instance_id,omitempty"`
 
 	ApprovedState *ApprovedStateEnum `json:"approved_state,omitempty"`
 

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BandwidthPackageId 云连接实例ID。
+// BandwidthPackageId 带宽包实例ID。
 type BandwidthPackageId struct {
 
-	// 资源ID标识符。
+	// 带宽包实例ID。
 	BandwidthPackageId string `json:"bandwidth_package_id"`
 }
 

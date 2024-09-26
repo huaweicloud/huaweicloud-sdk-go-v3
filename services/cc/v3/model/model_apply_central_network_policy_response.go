@@ -9,7 +9,7 @@ import (
 // ApplyCentralNetworkPolicyResponse Response Object
 type ApplyCentralNetworkPolicyResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CentralNetworkPolicy *CentralNetworkPolicy `json:"central_network_policy"`

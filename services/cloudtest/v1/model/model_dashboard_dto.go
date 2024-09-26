@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -10,7 +9,7 @@ import (
 type DashboardDto struct {
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 创建者
 	CreateUser *string `json:"create_user,omitempty"`
@@ -34,7 +33,7 @@ type DashboardDto struct {
 	TaskType *string `json:"task_type,omitempty"`
 
 	// 修改时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
 
 	// 修改者
 	UpdateUser *string `json:"update_user,omitempty"`

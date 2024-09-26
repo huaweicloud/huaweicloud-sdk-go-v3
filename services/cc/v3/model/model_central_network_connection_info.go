@@ -8,13 +8,13 @@ import (
 
 type CentralNetworkConnectionInfo struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
-	// 资源ID标识符。
+	// 中心网络平面ID。
 	PlaneId string `json:"plane_id"`
 
-	// 资源ID标识符。
+	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 
 	// 带宽值定义，单位Mbps。

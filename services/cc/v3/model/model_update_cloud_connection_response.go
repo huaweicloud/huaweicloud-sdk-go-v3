@@ -9,7 +9,7 @@ import (
 // UpdateCloudConnectionResponse Response Object
 type UpdateCloudConnectionResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CloudConnection *CloudConnection `json:"cloud_connection"`

@@ -257,6 +257,18 @@ func (i *ExportTopSqlTrendDetailsInvoker) Invoke() (*model.ExportTopSqlTrendDeta
 	}
 }
 
+type ListCloudDbaInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudDbaInstancesInvoker) Invoke() (*model.ListCloudDbaInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudDbaInstancesResponse), nil
+	}
+}
+
 type ListDbUsersInvoker struct {
 	*invoker.BaseInvoker
 }

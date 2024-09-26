@@ -701,6 +701,66 @@ func (i *UpdateDomainHttpsCertInvoker) Invoke() (*model.UpdateDomainHttpsCertRes
 	}
 }
 
+type CreateHarvestTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHarvestTaskInvoker) Invoke() (*model.CreateHarvestTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHarvestTaskResponse), nil
+	}
+}
+
+type DeleteHarvestTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHarvestTaskInvoker) Invoke() (*model.DeleteHarvestTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHarvestTaskResponse), nil
+	}
+}
+
+type ListHarvestTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHarvestTaskInvoker) Invoke() (*model.ListHarvestTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHarvestTaskResponse), nil
+	}
+}
+
+type ModifyHarvestTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyHarvestTaskInvoker) Invoke() (*model.ModifyHarvestTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyHarvestTaskResponse), nil
+	}
+}
+
+type UpdateHarvestJobStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHarvestJobStatusInvoker) Invoke() (*model.UpdateHarvestJobStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHarvestJobStatusResponse), nil
+	}
+}
+
 type UpdateObsBucketAuthorityPublicInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -15,10 +15,10 @@ type AssociateErTableDocument struct {
 	// RegionID。
 	RegionId string `json:"region_id"`
 
-	// 资源ID标识符。
+	// 企业路由器的ID。
 	EnterpriseRouterId string `json:"enterprise_router_id"`
 
-	// 资源ID标识符。
+	// 企业路由器的路由表ID。
 	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
 }
 

@@ -9,7 +9,7 @@ import (
 // UntagCloudConnectionRequest Request Object
 type UntagCloudConnectionRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *UntagCloudConnectionRequestBody `json:"body,omitempty"`

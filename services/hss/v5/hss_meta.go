@@ -65,41 +65,6 @@ func GenReqDefForAssociatePolicyGroup() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForBatchAddAccounts() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v5/setting/account/accounts").
-		WithResponse(new(model.BatchAddAccountsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Region").
-		WithJsonTag("region").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XRequestId").
-		WithJsonTag("X-request-id").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForBatchCreateTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -388,35 +353,6 @@ func GenReqDefForCreateVulnerabilityScanTask() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDeleteAccount() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v5/setting/account/accounts").
-		WithResponse(new(model.DeleteAccountResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Region").
-		WithJsonTag("region").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForDeleteHostsGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -541,45 +477,6 @@ func GenReqDefForExportVuls() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListAccounts() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v5/setting/account/accounts").
-		WithResponse(new(model.ListAccountsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Region").
-		WithJsonTag("region").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XRequestId").
-		WithJsonTag("X-request-id").
-		WithKindName("string").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1812,41 +1709,6 @@ func GenReqDefForListJarPackageStatistics() *def.HttpRequestDef {
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListOrganizationTree() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v5/setting/account/organization-tree").
-		WithResponse(new(model.ListOrganizationTreeResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IsRefresh").
-		WithJsonTag("is_refresh").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EnterpriseProjectId").
-		WithJsonTag("enterprise_project_id").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XSecurityToken").
-		WithJsonTag("X-Security-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Region").
-		WithJsonTag("region").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XRequestId").
-		WithJsonTag("X-request-id").
-		WithKindName("string").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

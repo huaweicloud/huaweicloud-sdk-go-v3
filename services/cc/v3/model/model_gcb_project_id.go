@@ -9,7 +9,7 @@ import (
 type GcbProjectId struct {
 
 	// 功能说明：实例所在region对应的projectId。
-	ProjectId *string `json:"project_id,omitempty"`
+	ProjectId string `json:"project_id"`
 }
 
 func (o GcbProjectId) String() string {

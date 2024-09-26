@@ -27,13 +27,22 @@ type ListGlobalConnectionBandwidthsRequest struct {
 	// 根据企业项目ID过滤列表。
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
+	// 根据绑定实例id过滤全域互联带宽列表。
+	InstanceId *[]string `json:"instance_id,omitempty"`
+
+	// 根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
+	InstanceType *[]ListGlobalConnectionBandwidthsRequestInstanceType `json:"instance_type,omitempty"`
+
 	// 根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
 	BindingService *[]ListGlobalConnectionBandwidthsRequestBindingService `json:"binding_service,omitempty"`
 
 	// 根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
 	Type *[]ListGlobalConnectionBandwidthsRequestType `json:"type,omitempty"`
 
-	// 根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+	// 根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+	AdminState *[]ListGlobalConnectionBandwidthsRequestAdminState `json:"admin_state,omitempty"`
+
+	// 根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
 	ChargeMode *[]ListGlobalConnectionBandwidthsRequestChargeMode `json:"charge_mode,omitempty"`
 }
 
@@ -44,6 +53,61 @@ func (o ListGlobalConnectionBandwidthsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListGlobalConnectionBandwidthsRequest", string(data)}, " ")
+}
+
+type ListGlobalConnectionBandwidthsRequestInstanceType struct {
+	value string
+}
+
+type ListGlobalConnectionBandwidthsRequestInstanceTypeEnum struct {
+	CC   ListGlobalConnectionBandwidthsRequestInstanceType
+	GEIP ListGlobalConnectionBandwidthsRequestInstanceType
+	GCN  ListGlobalConnectionBandwidthsRequestInstanceType
+	GSN  ListGlobalConnectionBandwidthsRequestInstanceType
+}
+
+func GetListGlobalConnectionBandwidthsRequestInstanceTypeEnum() ListGlobalConnectionBandwidthsRequestInstanceTypeEnum {
+	return ListGlobalConnectionBandwidthsRequestInstanceTypeEnum{
+		CC: ListGlobalConnectionBandwidthsRequestInstanceType{
+			value: "CC",
+		},
+		GEIP: ListGlobalConnectionBandwidthsRequestInstanceType{
+			value: "GEIP",
+		},
+		GCN: ListGlobalConnectionBandwidthsRequestInstanceType{
+			value: "GCN",
+		},
+		GSN: ListGlobalConnectionBandwidthsRequestInstanceType{
+			value: "GSN",
+		},
+	}
+}
+
+func (c ListGlobalConnectionBandwidthsRequestInstanceType) Value() string {
+	return c.value
+}
+
+func (c ListGlobalConnectionBandwidthsRequestInstanceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListGlobalConnectionBandwidthsRequestInstanceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListGlobalConnectionBandwidthsRequestBindingService struct {
@@ -156,13 +220,61 @@ func (c *ListGlobalConnectionBandwidthsRequestType) UnmarshalJSON(b []byte) erro
 	}
 }
 
+type ListGlobalConnectionBandwidthsRequestAdminState struct {
+	value string
+}
+
+type ListGlobalConnectionBandwidthsRequestAdminStateEnum struct {
+	NORMAL  ListGlobalConnectionBandwidthsRequestAdminState
+	FREEZED ListGlobalConnectionBandwidthsRequestAdminState
+}
+
+func GetListGlobalConnectionBandwidthsRequestAdminStateEnum() ListGlobalConnectionBandwidthsRequestAdminStateEnum {
+	return ListGlobalConnectionBandwidthsRequestAdminStateEnum{
+		NORMAL: ListGlobalConnectionBandwidthsRequestAdminState{
+			value: "NORMAL",
+		},
+		FREEZED: ListGlobalConnectionBandwidthsRequestAdminState{
+			value: "FREEZED",
+		},
+	}
+}
+
+func (c ListGlobalConnectionBandwidthsRequestAdminState) Value() string {
+	return c.value
+}
+
+func (c ListGlobalConnectionBandwidthsRequestAdminState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListGlobalConnectionBandwidthsRequestAdminState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
 type ListGlobalConnectionBandwidthsRequestChargeMode struct {
 	value string
 }
 
 type ListGlobalConnectionBandwidthsRequestChargeModeEnum struct {
-	BWD  ListGlobalConnectionBandwidthsRequestChargeMode
-	E_95 ListGlobalConnectionBandwidthsRequestChargeMode
+	BWD     ListGlobalConnectionBandwidthsRequestChargeMode
+	E_95    ListGlobalConnectionBandwidthsRequestChargeMode
+	E_95AVR ListGlobalConnectionBandwidthsRequestChargeMode
 }
 
 func GetListGlobalConnectionBandwidthsRequestChargeModeEnum() ListGlobalConnectionBandwidthsRequestChargeModeEnum {
@@ -172,6 +284,9 @@ func GetListGlobalConnectionBandwidthsRequestChargeModeEnum() ListGlobalConnecti
 		},
 		E_95: ListGlobalConnectionBandwidthsRequestChargeMode{
 			value: "95",
+		},
+		E_95AVR: ListGlobalConnectionBandwidthsRequestChargeMode{
+			value: "95avr",
 		},
 	}
 }

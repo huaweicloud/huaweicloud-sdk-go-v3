@@ -26,6 +26,9 @@ type PostAlarmsReqV2 struct {
 	// 告警规则关联告警模板ID
 	AlarmTemplateId *string `json:"alarm_template_id,omitempty"`
 
+	// 租户标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
+
 	// 告警策略，当alarm_template_id字段为空时必填，不为空时不填
 	Policies *[]Policy `json:"policies,omitempty"`
 

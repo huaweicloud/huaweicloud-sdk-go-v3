@@ -9,10 +9,10 @@ import (
 // CreateInterRegionBandwidth 创建域间带宽的详情信息。
 type CreateInterRegionBandwidth struct {
 
-	// 资源ID标识符。
+	// 云连接实例ID。
 	CloudConnectionId string `json:"cloud_connection_id"`
 
-	// 资源ID标识符。
+	// 带宽包实例ID。
 	BandwidthPackageId string `json:"bandwidth_package_id"`
 
 	// 域间带宽值。

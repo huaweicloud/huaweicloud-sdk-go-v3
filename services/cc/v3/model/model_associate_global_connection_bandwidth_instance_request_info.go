@@ -14,11 +14,11 @@ type AssociateGlobalConnectionBandwidthInstanceRequestInfo struct {
 	// 功能说明：实例类型。
 	ResourceType string `json:"resource_type"`
 
-	// 功能说明：实例所在region对应的projectId。
-	ProjectId string `json:"project_id"`
-
 	// 功能说明：实例所在region，不填默认\"global\"。
 	RegionId *string `json:"region_id,omitempty"`
+
+	// 功能说明：实例所在region对应的projectId。
+	ProjectId string `json:"project_id"`
 }
 
 func (o AssociateGlobalConnectionBandwidthInstanceRequestInfo) String() string {

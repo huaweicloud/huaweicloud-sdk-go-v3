@@ -28,7 +28,7 @@ type ListSupportBindingConnectionBandwidthsRequest struct {
 	RemoteArea *string `json:"remote_area,omitempty"`
 
 	// 根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
-	BindingService ListSupportBindingConnectionBandwidthsRequestBindingService `json:"binding_service"`
+	BindingService *ListSupportBindingConnectionBandwidthsRequestBindingService `json:"binding_service,omitempty"`
 }
 
 func (o ListSupportBindingConnectionBandwidthsRequest) String() string {

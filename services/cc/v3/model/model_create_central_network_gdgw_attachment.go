@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateCentralNetworkGdgwAttachment 创建中心网络GDGW附件的请求体。
 type CreateCentralNetworkGdgwAttachment struct {
 
 	// 实例名字。
@@ -14,25 +15,25 @@ type CreateCentralNetworkGdgwAttachment struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 资源ID标识符。
+	// 企业路由器的ID。
 	EnterpriseRouterId string `json:"enterprise_router_id"`
 
-	// 资源ID标识符。
+	// Gdgw的ID。
 	GlobalDcGatewayId string `json:"global_dc_gateway_id"`
 
-	// 实例所属项目ID。
-	EnterpriseRouterProjectId string `json:"enterprise_router_project_id"`
-
-	// RegionID。
-	EnterpriseRouterRegionId string `json:"enterprise_router_region_id"`
-
-	// 实例所属项目ID。
+	// Gdgw的项目ID。
 	GlobalDcGatewayProjectId string `json:"global_dc_gateway_project_id"`
 
-	// RegionID。
+	// Gdgw的RegionID。
 	GlobalDcGatewayRegionId string `json:"global_dc_gateway_region_id"`
 
-	// 资源ID标识符。
+	// 企业路由器的项目ID。
+	EnterpriseRouterProjectId string `json:"enterprise_router_project_id"`
+
+	// ER路由器的regionID。
+	EnterpriseRouterRegionId string `json:"enterprise_router_region_id"`
+
+	// 中心网络平面ID。
 	CentralNetworkPlaneId *string `json:"central_network_plane_id,omitempty"`
 }
 

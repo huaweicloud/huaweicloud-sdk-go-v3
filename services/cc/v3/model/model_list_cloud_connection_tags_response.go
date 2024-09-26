@@ -9,7 +9,7 @@ import (
 // ListCloudConnectionTagsResponse Response Object
 type ListCloudConnectionTagsResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	// 云连接实例的所有标签。

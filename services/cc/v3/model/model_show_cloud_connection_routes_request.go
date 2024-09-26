@@ -9,7 +9,7 @@ import (
 // ShowCloudConnectionRoutesRequest Request Object
 type ShowCloudConnectionRoutesRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 }
 

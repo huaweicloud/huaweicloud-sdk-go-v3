@@ -8,7 +8,7 @@ import (
 
 type RenewalResourcesReq struct {
 
-	// 资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+	// 资源ID列表。 只支持传入主资源ID，最多10个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
 	ResourceIds []string `json:"resource_ids"`
 
 	// 周期类型： 2：月3：年

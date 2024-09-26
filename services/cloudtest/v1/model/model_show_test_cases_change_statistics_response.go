@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -10,21 +9,19 @@ import (
 // ShowTestCasesChangeStatisticsResponse Response Object
 type ShowTestCasesChangeStatisticsResponse struct {
 
-	// 新增用例数
-	AddTestcasesNumber *int32 `json:"add_testcases_number,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	// 复用用例数
-	ReuseTestcasesNumber *int32 `json:"reuse_testcases_number,omitempty"`
+	Result *ResultValueVersionTestCasesChangeStatisticsVo `json:"result,omitempty"`
 
-	// 修改用例数
-	ModifyingTestcasesNumber *int32 `json:"modifying_testcases_number,omitempty"`
+	Error *ApiError `json:"error,omitempty"`
 
-	// 修改时间时间戳
-	UpdateDateTimestamp *int64 `json:"update_date_timestamp,omitempty"`
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
 
-	// 修改时间
-	UpdateDate     *sdktime.SdkTime `json:"update_date,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTestCasesChangeStatisticsResponse) String() string {

@@ -9,7 +9,7 @@ import (
 // CentralNetworkPlane 中心网络平面详情信息。
 type CentralNetworkPlane struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例名字。

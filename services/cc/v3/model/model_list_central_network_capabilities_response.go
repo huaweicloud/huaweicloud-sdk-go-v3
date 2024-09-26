@@ -9,7 +9,7 @@ import (
 // ListCentralNetworkCapabilitiesResponse Response Object
 type ListCentralNetworkCapabilitiesResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	// 租户能力列表

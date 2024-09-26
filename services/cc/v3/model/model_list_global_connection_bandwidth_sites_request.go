@@ -21,6 +21,12 @@ type ListGlobalConnectionBandwidthSitesRequest struct {
 	// 根据id查询，可查询多个id。
 	Id *[]string `json:"id,omitempty"`
 
+	// 站点信息自定义英文名称。
+	NameEn *string `json:"name_en,omitempty"`
+
+	// 站点信息自定义中文名称。
+	NameCn *string `json:"name_cn,omitempty"`
+
 	// 站点编码。
 	SiteCode *string `json:"site_code,omitempty"`
 

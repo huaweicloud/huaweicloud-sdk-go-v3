@@ -9,7 +9,7 @@ import (
 // CreateInterRegionBandwidthResponse Response Object
 type CreateInterRegionBandwidthResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	InterRegionBandwidth *InterRegionBandwidth `json:"inter_region_bandwidth"`

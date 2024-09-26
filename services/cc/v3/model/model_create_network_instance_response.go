@@ -9,7 +9,7 @@ import (
 // CreateNetworkInstanceResponse Response Object
 type CreateNetworkInstanceResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	NetworkInstance *NetworkInstance `json:"network_instance"`

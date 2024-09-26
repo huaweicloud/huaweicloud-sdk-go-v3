@@ -476,6 +476,27 @@ func (c *DasClient) ExportTopSqlTrendDetailsInvoker(request *model.ExportTopSqlT
 	return &ExportTopSqlTrendDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCloudDbaInstances 获取DAS云DBA实例列表
+//
+// 获取DAS云DBA实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListCloudDbaInstances(request *model.ListCloudDbaInstancesRequest) (*model.ListCloudDbaInstancesResponse, error) {
+	requestDef := GenReqDefForListCloudDbaInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudDbaInstancesResponse), nil
+	}
+}
+
+// ListCloudDbaInstancesInvoker 获取DAS云DBA实例列表
+func (c *DasClient) ListCloudDbaInstancesInvoker(request *model.ListCloudDbaInstancesRequest) *ListCloudDbaInstancesInvoker {
+	requestDef := GenReqDefForListCloudDbaInstances()
+	return &ListCloudDbaInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDbUsers 查询数据库用户列表
 //
 // 查询注册在DAS里的数据库用户列表，后续调用其他接口时(如查询实例会话列表接口)需要用到此接口返回的db_user_id。此接口不会返回数据库实例上的数据库用户对象。

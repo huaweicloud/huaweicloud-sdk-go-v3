@@ -8,8 +8,8 @@ import (
 
 // ShowEchoTestPackageUsingResponse Response Object
 type ShowEchoTestPackageUsingResponse struct {
-	Body           *[]EchoTestPackageCheckResult `json:"body,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowEchoTestPackageUsingResponse) String() string {

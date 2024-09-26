@@ -9,7 +9,7 @@ import (
 // CloudConnectionId 云连接实例ID。
 type CloudConnectionId struct {
 
-	// 资源ID标识符。
+	// 云连接实例ID。
 	CloudConnectionId string `json:"cloud_connection_id"`
 }
 

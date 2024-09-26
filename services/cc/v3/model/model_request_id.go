@@ -9,7 +9,7 @@ import (
 // RequestId 请求ID。
 type RequestId struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 }
 

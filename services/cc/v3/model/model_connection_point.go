@@ -9,7 +9,7 @@ import (
 // ConnectionPoint 中心网络连接点定义。
 type ConnectionPoint struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例所属项目ID。
@@ -21,10 +21,13 @@ type ConnectionPoint struct {
 	// 站点编码定义
 	SiteCode string `json:"site_code"`
 
-	// 资源ID标识符。
+	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
 	Type *ConnectionPointTypeEnum `json:"type"`
+
+	// 实例ID。
+	ParentInstanceId *string `json:"parent_instance_id,omitempty"`
 }
 
 func (o ConnectionPoint) String() string {

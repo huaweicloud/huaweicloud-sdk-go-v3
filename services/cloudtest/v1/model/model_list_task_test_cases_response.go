@@ -9,15 +9,19 @@ import (
 // ListTaskTestCasesResponse Response Object
 type ListTaskTestCasesResponse struct {
 
-	// 关联的用例uris
-	RelatedCaseUris *[]string `json:"related_case_uris,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	// 未关联的用例uris
-	NotRelatedCaseUris *[]string `json:"not_related_case_uris,omitempty"`
+	Result *ResultValueQueryTaskTestCasesVo `json:"result,omitempty"`
 
-	// 用例及任务信息
-	CaseTaskInfo   *[]RelateTaskTestCasesVo `json:"case_task_info,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Error *ApiError `json:"error,omitempty"`
+
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTaskTestCasesResponse) String() string {

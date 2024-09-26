@@ -9,7 +9,7 @@ import (
 // ShowCloudConnectionRoutesResponse Response Object
 type ShowCloudConnectionRoutesResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CloudConnectionRoute *CloudConnectionRoute `json:"cloud_connection_route"`

@@ -9,7 +9,7 @@ import (
 // CreateAuthorisationResponse Response Object
 type CreateAuthorisationResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	Authorisation  *Authorisation `json:"authorisation"`

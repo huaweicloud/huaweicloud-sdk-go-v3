@@ -9,7 +9,7 @@ import (
 // AssociateErInstanceDocument 中心网络实例详情。
 type AssociateErInstanceDocument struct {
 
-	// 资源ID标识符。
+	// 企业路由器的ID。
 	EnterpriseRouterId string `json:"enterprise_router_id"`
 
 	// 实例所属项目ID。

@@ -12,10 +12,10 @@ import (
 // CloudConnectionQuota 配额实例
 type CloudConnectionQuota struct {
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
-	// 资源ID标识符。
+	// 云连接实例ID。
 	CloudConnectionId string `json:"cloud_connection_id"`
 
 	// RegionID。

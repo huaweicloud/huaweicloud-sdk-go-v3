@@ -15,9 +15,8 @@ type ShowRecordInfoResponse struct {
 	// 结果描述
 	Message *string `json:"message,omitempty"`
 
-	// 响应体详情数据
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *RecordInfoDo `json:"data,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowRecordInfoResponse) String() string {

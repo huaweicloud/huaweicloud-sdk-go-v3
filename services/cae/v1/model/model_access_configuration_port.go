@@ -12,6 +12,12 @@ import (
 // AccessConfigurationPort 访问方式配置端口、协议、证书等信息。
 type AccessConfigurationPort struct {
 
+	// 配置模式。 - 如果operator值为空，则表示使用全量覆盖模式进行配置，否则表示使用增删改模式进行配置。且此级列表的所有元素的operator值必须同时全为空或者非空。 - 当使用增删改模式时，operator取值支持\"add\",\"copy\",\"modify\",\"delete\"，分别表示新增，复制指定uid的元素修改后新增，修改指定uid的元素，删除指定uid的元素。 - 当operator取值为\"copy\",\"modify\",\"delete\"时，uid的值必须为非空，且存在于最后一次生效的配置中。 - 当operator取值为\"copy\",\"modify\"时，与operator同级别的字段中除uid外的所有字段如不写，置空或者为空列表，则表示保留在最后一次生效配置中指定uid的元素的同一字段的值。
+	Operator *string `json:"operator,omitempty"`
+
+	// 端口配置的uid。
+	Uid *string `json:"uid,omitempty"`
+
 	// 监听端口。
 	TargetPort *int32 `json:"target_port,omitempty"`
 

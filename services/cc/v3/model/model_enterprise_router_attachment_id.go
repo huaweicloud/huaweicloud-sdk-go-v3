@@ -9,7 +9,7 @@ import (
 // EnterpriseRouterAttachmentId 企业路由器的连接ID。
 type EnterpriseRouterAttachmentId struct {
 
-	// 资源ID标识符。
+	// 企业路由器的连接ID。
 	EnterpriseRouterAttachmentId *string `json:"enterprise_router_attachment_id,omitempty"`
 }
 

@@ -9,11 +9,18 @@ import (
 // BatchRemoveTestCasesFromIteratorResponse Response Object
 type BatchRemoveTestCasesFromIteratorResponse struct {
 
-	// 操作的id, 由projectUuid + - + iteratorUri + - + caseId 组成
-	Id *string `json:"id,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	// 操作名称
-	Name           *string `json:"name,omitempty"`
+	Result *ResultValueIteratorDeleteCaseVo `json:"result,omitempty"`
+
+	Error *ApiError `json:"error,omitempty"`
+
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

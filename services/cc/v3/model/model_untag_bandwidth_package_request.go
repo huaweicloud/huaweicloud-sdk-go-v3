@@ -9,7 +9,7 @@ import (
 // UntagBandwidthPackageRequest Request Object
 type UntagBandwidthPackageRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *UntagBandwidthPackageRequestBody `json:"body,omitempty"`

@@ -9,7 +9,7 @@ import (
 
 type GlobalConnectionBandwidthLineLevel struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例描述。不支持 <>。

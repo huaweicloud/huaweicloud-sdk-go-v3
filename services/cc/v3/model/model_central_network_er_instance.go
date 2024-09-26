@@ -8,10 +8,10 @@ import (
 
 type CentralNetworkErInstance struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
-	// 资源ID标识符。
+	// 企业路由器的ID。
 	EnterpriseRouterId string `json:"enterprise_router_id"`
 
 	// 实例所属项目ID。

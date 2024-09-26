@@ -10,7 +10,7 @@ import (
 type UpdateCentralNetworkConnection struct {
 	BandwidthType *BandwidthTypeEnum `json:"bandwidth_type"`
 
-	// 资源ID标识符。
+	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 
 	// 带宽值定义，单位Mbps。

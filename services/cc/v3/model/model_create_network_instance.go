@@ -18,10 +18,10 @@ type CreateNetworkInstance struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 资源ID标识符。
+	// 网络实例（VPC，VGW）的ID。
 	InstanceId string `json:"instance_id"`
 
-	// 实例所属帐号ID。
+	// 网络实例（VPC，VGW）所属账号ID。
 	InstanceDomainId *string `json:"instance_domain_id,omitempty"`
 
 	// 实例所属项目ID。
@@ -30,7 +30,7 @@ type CreateNetworkInstance struct {
 	// RegionID。
 	RegionId string `json:"region_id"`
 
-	// 资源ID标识符。
+	// 云连接实例ID。
 	CloudConnectionId string `json:"cloud_connection_id"`
 
 	// 添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。

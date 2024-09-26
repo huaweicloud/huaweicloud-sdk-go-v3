@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// CentralNetworkConnectionStateEnum 中心网络连接状态。 - AVAILABLE (可用) - CREATING (创建中) - UPDATING (更新中) - DELETING (删除中) - FREEZING (冻结中) - UNFREEZING (解冻中) - RECOVERING (恢复中) - FAILED (失败) - DELETED (已刪除)
+// CentralNetworkConnectionStateEnum 中心网络连接状态。 - AVAILABLE (可用) - CREATING (创建中) - UPDATING (更新中) - DELETING (删除中) - FREEZING (冻结中) - UNFREEZING (解冻中) - RECOVERING (恢复中) - FAILED (失败) - DELETED (已刪除) - APPROVING (审批中) - APPROVED (已审批) - UNAPPROVED (审批未通过)
 type CentralNetworkConnectionStateEnum struct {
 	value string
 }
@@ -24,6 +24,9 @@ type CentralNetworkConnectionStateEnumEnum struct {
 	RECOVERING CentralNetworkConnectionStateEnum
 	FAILED     CentralNetworkConnectionStateEnum
 	DELETED    CentralNetworkConnectionStateEnum
+	APPROVING  CentralNetworkConnectionStateEnum
+	APPROVED   CentralNetworkConnectionStateEnum
+	UNAPPROVED CentralNetworkConnectionStateEnum
 }
 
 func GetCentralNetworkConnectionStateEnumEnum() CentralNetworkConnectionStateEnumEnum {
@@ -54,6 +57,15 @@ func GetCentralNetworkConnectionStateEnumEnum() CentralNetworkConnectionStateEnu
 		},
 		DELETED: CentralNetworkConnectionStateEnum{
 			value: "DELETED",
+		},
+		APPROVING: CentralNetworkConnectionStateEnum{
+			value: "APPROVING",
+		},
+		APPROVED: CentralNetworkConnectionStateEnum{
+			value: "APPROVED",
+		},
+		UNAPPROVED: CentralNetworkConnectionStateEnum{
+			value: "UNAPPROVED",
 		},
 	}
 }

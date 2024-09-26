@@ -9,7 +9,7 @@ import (
 // ListGlobalConnectionBandwidthConfigsResponse Response Object
 type ListGlobalConnectionBandwidthConfigsResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	Configs        *ListGlobalConnectionBandwidthConfigs `json:"configs,omitempty"`

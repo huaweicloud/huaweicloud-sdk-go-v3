@@ -9,7 +9,7 @@ import (
 // UpdateCentralNetworkConnectionResponse Response Object
 type UpdateCentralNetworkConnectionResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CentralNetworkConnection *CentralNetworkConnection `json:"central_network_connection"`

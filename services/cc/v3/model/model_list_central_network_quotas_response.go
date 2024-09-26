@@ -9,7 +9,7 @@ import (
 // ListCentralNetworkQuotasResponse Response Object
 type ListCentralNetworkQuotasResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	// 配额列表

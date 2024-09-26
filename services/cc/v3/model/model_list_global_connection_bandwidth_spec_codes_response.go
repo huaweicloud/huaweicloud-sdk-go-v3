@@ -9,7 +9,7 @@ import (
 // ListGlobalConnectionBandwidthSpecCodesResponse Response Object
 type ListGlobalConnectionBandwidthSpecCodesResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`

@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -9,31 +8,19 @@ import (
 
 // UpdateTestCaseCommentResponse Response Object
 type UpdateTestCaseCommentResponse struct {
-	Uri *string `json:"uri,omitempty"`
 
-	Creator *string `json:"creator,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	Comment *string `json:"comment,omitempty"`
+	Result *ResultValueTestCaseCommentVo `json:"result,omitempty"`
 
-	Notifier *[]string `json:"notifier,omitempty"`
+	Error *ApiError `json:"error,omitempty"`
 
-	TestCaseUri *string `json:"test_case_uri,omitempty"`
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
 
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
-
-	// 创建时间时间戳
-	CreateTimeTimestamp *int64 `json:"create_time_timestamp,omitempty"`
-
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
-
-	// 更新时间时间戳
-	UpdateTimeTimestamp *int64 `json:"update_time_timestamp,omitempty"`
-
-	ProjectUuid *string `json:"project_uuid,omitempty"`
-
-	VersionUri *string `json:"version_uri,omitempty"`
-
-	DisplayName    *string `json:"display_name,omitempty"`
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

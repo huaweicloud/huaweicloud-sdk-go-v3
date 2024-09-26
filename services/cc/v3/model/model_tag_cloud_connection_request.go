@@ -9,7 +9,7 @@ import (
 // TagCloudConnectionRequest Request Object
 type TagCloudConnectionRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *TagCloudConnectionRequestBody `json:"body,omitempty"`

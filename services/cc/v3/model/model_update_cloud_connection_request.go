@@ -9,7 +9,7 @@ import (
 // UpdateCloudConnectionRequest Request Object
 type UpdateCloudConnectionRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *UpdateCloudConnectionRequestBody `json:"body,omitempty"`

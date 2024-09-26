@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DomainIdDef 实例所属帐号ID。
+// DomainIdDef 实例所属账号ID。
 type DomainIdDef struct {
 }
 

@@ -12,8 +12,8 @@ import (
 // GcbChargeMode 全域互联带宽计费类型。
 type GcbChargeMode struct {
 
-	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
-	ChargeMode *GcbChargeModeChargeMode `json:"charge_mode,omitempty"`
+	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
+	ChargeMode GcbChargeModeChargeMode `json:"charge_mode"`
 }
 
 func (o GcbChargeMode) String() string {
@@ -30,8 +30,9 @@ type GcbChargeModeChargeMode struct {
 }
 
 type GcbChargeModeChargeModeEnum struct {
-	BWD  GcbChargeModeChargeMode
-	E_95 GcbChargeModeChargeMode
+	BWD     GcbChargeModeChargeMode
+	E_95    GcbChargeModeChargeMode
+	E_95AVR GcbChargeModeChargeMode
 }
 
 func GetGcbChargeModeChargeModeEnum() GcbChargeModeChargeModeEnum {
@@ -41,6 +42,9 @@ func GetGcbChargeModeChargeModeEnum() GcbChargeModeChargeModeEnum {
 		},
 		E_95: GcbChargeModeChargeMode{
 			value: "95",
+		},
+		E_95AVR: GcbChargeModeChargeMode{
+			value: "95avr",
 		},
 	}
 }

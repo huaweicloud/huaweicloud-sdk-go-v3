@@ -13,7 +13,7 @@ import (
 type GcbType struct {
 
 	// 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-	Type *GcbTypeType `json:"type,omitempty"`
+	Type GcbTypeType `json:"type"`
 }
 
 func (o GcbType) String() string {

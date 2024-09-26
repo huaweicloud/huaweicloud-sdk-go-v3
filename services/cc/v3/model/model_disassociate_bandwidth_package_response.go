@@ -9,7 +9,7 @@ import (
 // DisassociateBandwidthPackageResponse Response Object
 type DisassociateBandwidthPackageResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	BandwidthPackage *BandwidthPackage `json:"bandwidth_package"`

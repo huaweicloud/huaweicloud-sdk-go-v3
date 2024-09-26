@@ -9,7 +9,7 @@ import (
 // ShowInterRegionBandwidthRequest Request Object
 type ShowInterRegionBandwidthRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 }
 

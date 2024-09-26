@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// EnterpriseRouterRegionId ER路由器的region ID。
+// EnterpriseRouterRegionId ER路由器的regionID。
 type EnterpriseRouterRegionId struct {
 
-	// RegionID。
+	// ER路由器的regionID。
 	EnterpriseRouterRegionId string `json:"enterprise_router_region_id"`
 }
 

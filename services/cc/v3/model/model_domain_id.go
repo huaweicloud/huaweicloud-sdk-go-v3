@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DomainId 实例所属帐号ID。
+// DomainId 实例所属账号ID。
 type DomainId struct {
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 }
 

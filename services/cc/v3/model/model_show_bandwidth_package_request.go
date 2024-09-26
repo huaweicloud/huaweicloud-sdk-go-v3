@@ -9,7 +9,7 @@ import (
 // ShowBandwidthPackageRequest Request Object
 type ShowBandwidthPackageRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 }
 

@@ -9,7 +9,7 @@ import (
 // CentralNetworkId 中心网络ID。
 type CentralNetworkId struct {
 
-	// 资源ID标识符。
+	// 中心网络ID。
 	CentralNetworkId string `json:"central_network_id"`
 }
 

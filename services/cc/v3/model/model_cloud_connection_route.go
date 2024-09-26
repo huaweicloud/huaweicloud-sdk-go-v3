@@ -12,16 +12,16 @@ import (
 // CloudConnectionRoute 云连接路由实例。
 type CloudConnectionRoute struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
-	// 资源ID标识符。
+	// 云连接实例ID。
 	CloudConnectionId string `json:"cloud_connection_id"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
-	// 资源ID标识符。
+	// 网络实例（VPC，VGW）的ID。
 	InstanceId string `json:"instance_id"`
 
 	// 实例所属项目ID。

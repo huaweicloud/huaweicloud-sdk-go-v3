@@ -9,10 +9,10 @@ import (
 // CentralNetworkCapability 租户能力详情
 type CentralNetworkCapability struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
 	Capability *CentralNetworkCapabilityEnum `json:"capability"`

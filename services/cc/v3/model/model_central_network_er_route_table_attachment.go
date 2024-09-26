@@ -10,7 +10,7 @@ import (
 // CentralNetworkErRouteTableAttachment 企业路由器的路由表附件详情。
 type CentralNetworkErRouteTableAttachment struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例名字。
@@ -19,7 +19,7 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
 	State *CentralNetworkConnectionStateEnum `json:"state"`
@@ -30,13 +30,13 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
-	// 资源ID标识符。
+	// 中心网络ID。
 	CentralNetworkId string `json:"central_network_id"`
 
-	// 资源ID标识符。
+	// 中心网络平面ID。
 	CentralNetworkPlaneId string `json:"central_network_plane_id"`
 
-	// 资源ID标识符。
+	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 
 	// 是否冻结
@@ -47,25 +47,25 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 带宽值定义，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 
-	// 资源ID标识符。
+	// 企业路由器的ID。
 	EnterpriseRouterId string `json:"enterprise_router_id"`
 
-	// 实例所属项目ID。
+	// 企业路由器的项目ID。
 	EnterpriseRouterProjectId string `json:"enterprise_router_project_id"`
 
-	// RegionID。
+	// ER路由器的regionID。
 	EnterpriseRouterRegionId string `json:"enterprise_router_region_id"`
 
-	// 资源ID标识符。
+	// 企业路由器的连接ID。
 	EnterpriseRouterAttachmentId *string `json:"enterprise_router_attachment_id,omitempty"`
 
-	// 资源ID标识符。
+	// 企业路由器的路由表ID。
 	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
 
-	// 站点编码定义
+	// 中心网络企业路由器的站点编码。
 	EnterpriseRouterSiteCode string `json:"enterprise_router_site_code"`
 
-	// 资源ID标识符。
+	// 实例ID。
 	AttachedErTableId string `json:"attached_er_table_id"`
 
 	// RegionID。
@@ -77,10 +77,10 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 站点编码定义
 	AttachedErTableSiteCode string `json:"attached_er_table_site_code"`
 
-	// 资源ID标识符。
+	// 实例ID。
 	AttachedErId string `json:"attached_er_id"`
 
-	// 资源ID标识符。
+	// 实例ID。
 	AttachedErAttachmentId *string `json:"attached_er_attachment_id,omitempty"`
 
 	ApprovedState *ApprovedStateEnum `json:"approved_state"`

@@ -733,6 +733,76 @@ func GenReqDefForListFiles() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListMergeChanges() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/repositories/{repository_id}/merge-requests/{merge_request_iid}/changes").
+		WithResponse(new(model.ListMergeChangesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergeRequestIid").
+		WithJsonTag("merge_request_iid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FilePath").
+		WithJsonTag("file_path").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IgnoreWhitespaceChange").
+		WithJsonTag("ignore_whitespace_change").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ForceEncode").
+		WithJsonTag("force_encode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("View").
+		WithJsonTag("view").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CommitId").
+		WithJsonTag("commit_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListMergeChangesTrees() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/repositories/{repository_id}/merge-requests/{merge_request_iid}/changes-trees").
+		WithResponse(new(model.ListMergeChangesTreesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergeRequestIid").
+		WithJsonTag("merge_request_iid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("View").
+		WithJsonTag("view").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CommitId").
+		WithJsonTag("commit_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListMergeRequest() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -760,6 +830,68 @@ func GenReqDefForListMergeRequest() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Search").
 		WithJsonTag("search").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListMergeRequestReviewers() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/repositories/{repository_id}/merge-requests/{merge_request_iid}/approval-reviewers").
+		WithResponse(new(model.ListMergeRequestReviewersResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergeRequestIid").
+		WithJsonTag("merge_request_iid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Page").
+		WithJsonTag("page").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PerPage").
+		WithJsonTag("per_page").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListRelatedCommits() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/repositories/{repository_uuid}/related-commits").
+		WithResponse(new(model.ListRelatedCommitsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryUuid").
+		WithJsonTag("repository_uuid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Page").
+		WithJsonTag("page").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PerPage").
+		WithJsonTag("per_page").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1256,6 +1388,30 @@ func GenReqDefForShowStatisticalData() *def.HttpRequestDef {
 		WithName("RepositoryUuid").
 		WithJsonTag("repository_uuid").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateMergeRequestApprovalState() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/repositories/{repository_id}/merge-requests/{merge_request_iid}/approval").
+		WithResponse(new(model.UpdateMergeRequestApprovalStateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergeRequestIid").
+		WithJsonTag("merge_request_iid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

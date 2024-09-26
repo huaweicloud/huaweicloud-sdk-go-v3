@@ -11,7 +11,7 @@ import (
 
 type GlobalConnectionBandwidthSizeRange struct {
 
-	// 描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+	// 描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
 	Type *GlobalConnectionBandwidthSizeRangeType `json:"type,omitempty"`
 
 	// 全域互联带宽最小值，单位Mbit/s。
@@ -35,8 +35,9 @@ type GlobalConnectionBandwidthSizeRangeType struct {
 }
 
 type GlobalConnectionBandwidthSizeRangeTypeEnum struct {
-	BWD  GlobalConnectionBandwidthSizeRangeType
-	E_95 GlobalConnectionBandwidthSizeRangeType
+	BWD     GlobalConnectionBandwidthSizeRangeType
+	E_95    GlobalConnectionBandwidthSizeRangeType
+	E_95AVR GlobalConnectionBandwidthSizeRangeType
 }
 
 func GetGlobalConnectionBandwidthSizeRangeTypeEnum() GlobalConnectionBandwidthSizeRangeTypeEnum {
@@ -46,6 +47,9 @@ func GetGlobalConnectionBandwidthSizeRangeTypeEnum() GlobalConnectionBandwidthSi
 		},
 		E_95: GlobalConnectionBandwidthSizeRangeType{
 			value: "95",
+		},
+		E_95AVR: GlobalConnectionBandwidthSizeRangeType{
+			value: "95avr",
 		},
 	}
 }

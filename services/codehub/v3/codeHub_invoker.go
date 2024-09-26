@@ -372,6 +372,30 @@ func (i *ListFilesInvoker) Invoke() (*model.ListFilesResponse, error) {
 	}
 }
 
+type ListMergeChangesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMergeChangesInvoker) Invoke() (*model.ListMergeChangesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMergeChangesResponse), nil
+	}
+}
+
+type ListMergeChangesTreesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMergeChangesTreesInvoker) Invoke() (*model.ListMergeChangesTreesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMergeChangesTreesResponse), nil
+	}
+}
+
 type ListMergeRequestInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -381,6 +405,30 @@ func (i *ListMergeRequestInvoker) Invoke() (*model.ListMergeRequestResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListMergeRequestResponse), nil
+	}
+}
+
+type ListMergeRequestReviewersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMergeRequestReviewersInvoker) Invoke() (*model.ListMergeRequestReviewersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMergeRequestReviewersResponse), nil
+	}
+}
+
+type ListRelatedCommitsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelatedCommitsInvoker) Invoke() (*model.ListRelatedCommitsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelatedCommitsResponse), nil
 	}
 }
 
@@ -623,6 +671,18 @@ func (i *ShowStatisticalDataInvoker) Invoke() (*model.ShowStatisticalDataRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowStatisticalDataResponse), nil
+	}
+}
+
+type UpdateMergeRequestApprovalStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMergeRequestApprovalStateInvoker) Invoke() (*model.UpdateMergeRequestApprovalStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMergeRequestApprovalStateResponse), nil
 	}
 }
 

@@ -9,7 +9,7 @@ import (
 // DisassociateGlobalConnectionBandwidthInstanceResponse Response Object
 type DisassociateGlobalConnectionBandwidthInstanceResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	// 全域互联带宽解绑实例响应详情。

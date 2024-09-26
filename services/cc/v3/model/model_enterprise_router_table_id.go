@@ -9,7 +9,7 @@ import (
 // EnterpriseRouterTableId 企业路由器的路由表ID。
 type EnterpriseRouterTableId struct {
 
-	// 资源ID标识符。
+	// 企业路由器的路由表ID。
 	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
 }
 

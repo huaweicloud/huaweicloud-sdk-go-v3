@@ -12,7 +12,7 @@ type CreateVersionTestCaseRequest struct {
 	// 分支或者迭代uri
 	VersionId string `json:"version_id"`
 
-	Body *TestCaseInfo `json:"body,omitempty"`
+	Body *ApiResultTestCaseVo `json:"body,omitempty"`
 }
 
 func (o CreateVersionTestCaseRequest) String() string {

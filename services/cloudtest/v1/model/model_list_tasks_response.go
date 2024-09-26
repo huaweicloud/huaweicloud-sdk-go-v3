@@ -9,20 +9,19 @@ import (
 // ListTasksResponse Response Object
 type ListTasksResponse struct {
 
-	// 起始记录数 大于 实际总条数时， 值为0， 分页请求才有此值
-	Total *int32 `json:"total,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	Value *TaskListVo `json:"value,omitempty"`
+	Result *ResultValueTaskListVo `json:"result,omitempty"`
 
-	// 业务失败的提示内容，对内接口才有此值
-	Reason *string `json:"reason,omitempty"`
+	Error *ApiError `json:"error,omitempty"`
 
-	PageSize *int32 `json:"page_size,omitempty"`
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
 
-	PageNo *int32 `json:"page_no,omitempty"`
-
-	HasMore        *bool `json:"has_more,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTasksResponse) String() string {

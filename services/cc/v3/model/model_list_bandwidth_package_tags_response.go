@@ -9,7 +9,7 @@ import (
 // ListBandwidthPackageTagsResponse Response Object
 type ListBandwidthPackageTagsResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	// 带宽包的所有标签。

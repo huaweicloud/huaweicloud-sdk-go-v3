@@ -19,6 +19,27 @@ func EdgeSecClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ApplyHttpPolicy 更新防护策略的域名
+//
+// 更新防护策略的域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) ApplyHttpPolicy(request *model.ApplyHttpPolicyRequest) (*model.ApplyHttpPolicyResponse, error) {
+	requestDef := GenReqDefForApplyHttpPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyHttpPolicyResponse), nil
+	}
+}
+
+// ApplyHttpPolicyInvoker 更新防护策略的域名
+func (c *EdgeSecClient) ApplyHttpPolicyInvoker(request *model.ApplyHttpPolicyRequest) *ApplyHttpPolicyInvoker {
+	requestDef := GenReqDefForApplyHttpPolicy()
+	return &ApplyHttpPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomains 创建防护域名
 //
 // 创建防护域名
@@ -40,6 +61,27 @@ func (c *EdgeSecClient) CreateDomainsInvoker(request *model.CreateDomainsRequest
 	return &CreateDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateHttpPolicy 创建防护策略
+//
+// 创建防护策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) CreateHttpPolicy(request *model.CreateHttpPolicyRequest) (*model.CreateHttpPolicyResponse, error) {
+	requestDef := GenReqDefForCreateHttpPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHttpPolicyResponse), nil
+	}
+}
+
+// CreateHttpPolicyInvoker 创建防护策略
+func (c *EdgeSecClient) CreateHttpPolicyInvoker(request *model.CreateHttpPolicyRequest) *CreateHttpPolicyInvoker {
+	requestDef := GenReqDefForCreateHttpPolicy()
+	return &CreateHttpPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDomains 删除防护域名
 //
 // 删除防护域名
@@ -59,6 +101,27 @@ func (c *EdgeSecClient) DeleteDomains(request *model.DeleteDomainsRequest) (*mod
 func (c *EdgeSecClient) DeleteDomainsInvoker(request *model.DeleteDomainsRequest) *DeleteDomainsInvoker {
 	requestDef := GenReqDefForDeleteDomains()
 	return &DeleteDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHttpPolicy 删除防护策略
+//
+// 删除防护策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) DeleteHttpPolicy(request *model.DeleteHttpPolicyRequest) (*model.DeleteHttpPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteHttpPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHttpPolicyResponse), nil
+	}
+}
+
+// DeleteHttpPolicyInvoker 删除防护策略
+func (c *EdgeSecClient) DeleteHttpPolicyInvoker(request *model.DeleteHttpPolicyRequest) *DeleteHttpPolicyInvoker {
+	requestDef := GenReqDefForDeleteHttpPolicy()
+	return &DeleteHttpPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDomainDetail 查询防护域名详情
@@ -103,6 +166,48 @@ func (c *EdgeSecClient) ShowDomainsInvoker(request *model.ShowDomainsRequest) *S
 	return &ShowDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHttpPolicies 查询防护策略列表
+//
+// 查询防护策略列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) ShowHttpPolicies(request *model.ShowHttpPoliciesRequest) (*model.ShowHttpPoliciesResponse, error) {
+	requestDef := GenReqDefForShowHttpPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHttpPoliciesResponse), nil
+	}
+}
+
+// ShowHttpPoliciesInvoker 查询防护策略列表
+func (c *EdgeSecClient) ShowHttpPoliciesInvoker(request *model.ShowHttpPoliciesRequest) *ShowHttpPoliciesInvoker {
+	requestDef := GenReqDefForShowHttpPolicies()
+	return &ShowHttpPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHttpPolicy 查询防护策略
+//
+// 查询防护策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) ShowHttpPolicy(request *model.ShowHttpPolicyRequest) (*model.ShowHttpPolicyResponse, error) {
+	requestDef := GenReqDefForShowHttpPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHttpPolicyResponse), nil
+	}
+}
+
+// ShowHttpPolicyInvoker 查询防护策略
+func (c *EdgeSecClient) ShowHttpPolicyInvoker(request *model.ShowHttpPolicyRequest) *ShowHttpPolicyInvoker {
+	requestDef := GenReqDefForShowHttpPolicy()
+	return &ShowHttpPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDomains 更新防护域名
 //
 // 更新防护域名
@@ -122,4 +227,46 @@ func (c *EdgeSecClient) UpdateDomains(request *model.UpdateDomainsRequest) (*mod
 func (c *EdgeSecClient) UpdateDomainsInvoker(request *model.UpdateDomainsRequest) *UpdateDomainsInvoker {
 	requestDef := GenReqDefForUpdateDomains()
 	return &UpdateDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHttpPolicy 更新防护策略
+//
+// 更新防护策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) UpdateHttpPolicy(request *model.UpdateHttpPolicyRequest) (*model.UpdateHttpPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateHttpPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHttpPolicyResponse), nil
+	}
+}
+
+// UpdateHttpPolicyInvoker 更新防护策略
+func (c *EdgeSecClient) UpdateHttpPolicyInvoker(request *model.UpdateHttpPolicyRequest) *UpdateHttpPolicyInvoker {
+	requestDef := GenReqDefForUpdateHttpPolicy()
+	return &UpdateHttpPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHttpPolicyRuleStatus 更新防护策略规则开关
+//
+// 更新防护策略规则开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EdgeSecClient) UpdateHttpPolicyRuleStatus(request *model.UpdateHttpPolicyRuleStatusRequest) (*model.UpdateHttpPolicyRuleStatusResponse, error) {
+	requestDef := GenReqDefForUpdateHttpPolicyRuleStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHttpPolicyRuleStatusResponse), nil
+	}
+}
+
+// UpdateHttpPolicyRuleStatusInvoker 更新防护策略规则开关
+func (c *EdgeSecClient) UpdateHttpPolicyRuleStatusInvoker(request *model.UpdateHttpPolicyRuleStatusRequest) *UpdateHttpPolicyRuleStatusInvoker {
+	requestDef := GenReqDefForUpdateHttpPolicyRuleStatus()
+	return &UpdateHttpPolicyRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -25,7 +25,7 @@ type ShowTestCaseDetailV2Response struct {
 	TestcaseNumber *string `json:"testcase_number,omitempty"`
 
 	// 测试用例等级
-	RankId *string `json:"rank_id,omitempty"`
+	RankId *int32 `json:"rank_id,omitempty"`
 
 	// 测试用例状态
 	StatusId *string `json:"status_id,omitempty"`

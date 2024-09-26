@@ -9,7 +9,7 @@ import (
 // ListCentralNetworkTagsResponse Response Object
 type ListCentralNetworkTagsResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	// 所有标签。

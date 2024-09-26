@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// CreateCentralNetworkErRouteTableAttachment 创建中心网络ER附件的请求体。
 type CreateCentralNetworkErRouteTableAttachment struct {
 
 	// 实例名字。
@@ -17,19 +18,22 @@ type CreateCentralNetworkErRouteTableAttachment struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 资源ID标识符。
+	// 企业路由器的ID。
 	EnterpriseRouterId string `json:"enterprise_router_id"`
 
-	// 实例所属项目ID。
+	// 企业路由器的项目ID。
 	EnterpriseRouterProjectId string `json:"enterprise_router_project_id"`
 
-	// RegionID。
+	// ER路由器的regionID。
 	EnterpriseRouterRegionId string `json:"enterprise_router_region_id"`
 
-	// 资源ID标识符。
+	// 中心网络平面ID。
+	CentralNetworkPlaneId string `json:"central_network_plane_id"`
+
+	// 中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
 	AttachmentId *string `json:"attachment_id,omitempty"`
 
-	// 资源ID标识符。
+	// 企业路由器的路由表ID。
 	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
 
 	// 实例所属项目ID。
@@ -38,14 +42,11 @@ type CreateCentralNetworkErRouteTableAttachment struct {
 	// RegionID。
 	AttachedErTableRegionId string `json:"attached_er_table_region_id"`
 
-	// 资源ID标识符。
+	// 实例ID。
 	AttachedErId string `json:"attached_er_id"`
 
-	// 资源ID标识符。
+	// 实例ID。
 	AttachedErTableId string `json:"attached_er_table_id"`
-
-	// 资源ID标识符。
-	CentralNetworkPlaneId string `json:"central_network_plane_id"`
 
 	// - HWCloud (华为云) - Ireland (爱尔兰)
 	HostedCloud CreateCentralNetworkErRouteTableAttachmentHostedCloud `json:"hosted_cloud"`

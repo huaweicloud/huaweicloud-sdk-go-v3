@@ -10,18 +10,18 @@ import (
 // CentralNetworkPolicy 中心网络策略详情。
 type CentralNetworkPolicy struct {
 
-	// 资源ID标识符。
+	// 实例ID。
 	Id string `json:"id"`
 
 	// 实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
-	// 实例所属帐号ID。
+	// 实例所属账号ID。
 	DomainId string `json:"domain_id"`
 
 	State *CentralNetworkPolicyStateEnum `json:"state"`
 
-	// 资源ID标识符。
+	// 中心网络ID。
 	CentralNetworkId string `json:"central_network_id"`
 
 	DocumentTemplateVersion *DocumentTemplateVersionEnum `json:"document_template_version"`

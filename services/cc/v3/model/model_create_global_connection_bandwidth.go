@@ -30,7 +30,7 @@ type CreateGlobalConnectionBandwidth struct {
 	// 实例标签。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
 	ChargeMode CreateGlobalConnectionBandwidthChargeMode `json:"charge_mode"`
 
 	// 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
@@ -45,7 +45,7 @@ type CreateGlobalConnectionBandwidth struct {
 	// 功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
 	RemoteArea *string `json:"remote_area,omitempty"`
 
-	// UUID of a line specification code.
+	// 功能说明：线路规格编码UUID。
 	SpecCodeId *string `json:"spec_code_id,omitempty"`
 }
 
@@ -118,8 +118,9 @@ type CreateGlobalConnectionBandwidthChargeMode struct {
 }
 
 type CreateGlobalConnectionBandwidthChargeModeEnum struct {
-	BWD  CreateGlobalConnectionBandwidthChargeMode
-	E_95 CreateGlobalConnectionBandwidthChargeMode
+	BWD     CreateGlobalConnectionBandwidthChargeMode
+	E_95    CreateGlobalConnectionBandwidthChargeMode
+	E_95AVR CreateGlobalConnectionBandwidthChargeMode
 }
 
 func GetCreateGlobalConnectionBandwidthChargeModeEnum() CreateGlobalConnectionBandwidthChargeModeEnum {
@@ -129,6 +130,9 @@ func GetCreateGlobalConnectionBandwidthChargeModeEnum() CreateGlobalConnectionBa
 		},
 		E_95: CreateGlobalConnectionBandwidthChargeMode{
 			value: "95",
+		},
+		E_95AVR: CreateGlobalConnectionBandwidthChargeMode{
+			value: "95avr",
 		},
 	}
 }

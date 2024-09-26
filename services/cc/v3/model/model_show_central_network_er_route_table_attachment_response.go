@@ -9,7 +9,7 @@ import (
 // ShowCentralNetworkErRouteTableAttachmentResponse Response Object
 type ShowCentralNetworkErRouteTableAttachmentResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CentralNetworkErRouteTableAttachment *CentralNetworkErRouteTableAttachment `json:"central_network_er_route_table_attachment"`

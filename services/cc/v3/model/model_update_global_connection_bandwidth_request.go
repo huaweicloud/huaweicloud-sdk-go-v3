@@ -9,7 +9,7 @@ import (
 // UpdateGlobalConnectionBandwidthRequest Request Object
 type UpdateGlobalConnectionBandwidthRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *UpdateGlobalConnectionBandwidthRequestBody `json:"body,omitempty"`

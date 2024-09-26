@@ -9,7 +9,7 @@ import (
 // CreateCentralNetworkGdgwAttachmentResponse Response Object
 type CreateCentralNetworkGdgwAttachmentResponse struct {
 
-	// 资源ID标识符。
+	// 请求ID。
 	RequestId string `json:"request_id"`
 
 	CentralNetworkGdgwAttachment *CentralNetworkGdgwAttachment `json:"central_network_gdgw_attachment"`

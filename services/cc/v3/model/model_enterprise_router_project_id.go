@@ -9,7 +9,7 @@ import (
 // EnterpriseRouterProjectId 企业路由器的项目ID。
 type EnterpriseRouterProjectId struct {
 
-	// 实例所属项目ID。
+	// 企业路由器的项目ID。
 	EnterpriseRouterProjectId string `json:"enterprise_router_project_id"`
 }
 

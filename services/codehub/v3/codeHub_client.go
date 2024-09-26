@@ -663,6 +663,48 @@ func (c *CodeHubClient) ListFilesInvoker(request *model.ListFilesRequest) *ListF
 	return &ListFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMergeChanges 获取变更文件
+//
+// 获取变更文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeChanges(request *model.ListMergeChangesRequest) (*model.ListMergeChangesResponse, error) {
+	requestDef := GenReqDefForListMergeChanges()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeChangesResponse), nil
+	}
+}
+
+// ListMergeChangesInvoker 获取变更文件
+func (c *CodeHubClient) ListMergeChangesInvoker(request *model.ListMergeChangesRequest) *ListMergeChangesInvoker {
+	requestDef := GenReqDefForListMergeChanges()
+	return &ListMergeChangesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMergeChangesTrees 获取变更文件列表
+//
+// 获取变更文件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeChangesTrees(request *model.ListMergeChangesTreesRequest) (*model.ListMergeChangesTreesResponse, error) {
+	requestDef := GenReqDefForListMergeChangesTrees()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeChangesTreesResponse), nil
+	}
+}
+
+// ListMergeChangesTreesInvoker 获取变更文件列表
+func (c *CodeHubClient) ListMergeChangesTreesInvoker(request *model.ListMergeChangesTreesRequest) *ListMergeChangesTreesInvoker {
+	requestDef := GenReqDefForListMergeChangesTrees()
+	return &ListMergeChangesTreesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMergeRequest 获取仓库合并请求列表
 //
 // 获取仓库合并请求列表
@@ -682,6 +724,48 @@ func (c *CodeHubClient) ListMergeRequest(request *model.ListMergeRequestRequest)
 func (c *CodeHubClient) ListMergeRequestInvoker(request *model.ListMergeRequestRequest) *ListMergeRequestInvoker {
 	requestDef := GenReqDefForListMergeRequest()
 	return &ListMergeRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMergeRequestReviewers 根据仓库短ID和合并请求短ID获取检视人信息
+//
+// 根据仓库短ID和合并请求短ID获取检视人信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeRequestReviewers(request *model.ListMergeRequestReviewersRequest) (*model.ListMergeRequestReviewersResponse, error) {
+	requestDef := GenReqDefForListMergeRequestReviewers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeRequestReviewersResponse), nil
+	}
+}
+
+// ListMergeRequestReviewersInvoker 根据仓库短ID和合并请求短ID获取检视人信息
+func (c *CodeHubClient) ListMergeRequestReviewersInvoker(request *model.ListMergeRequestReviewersRequest) *ListMergeRequestReviewersInvoker {
+	requestDef := GenReqDefForListMergeRequestReviewers()
+	return &ListMergeRequestReviewersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRelatedCommits 获取关联工作项信息
+//
+// 获取关联工作项信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListRelatedCommits(request *model.ListRelatedCommitsRequest) (*model.ListRelatedCommitsResponse, error) {
+	requestDef := GenReqDefForListRelatedCommits()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRelatedCommitsResponse), nil
+	}
+}
+
+// ListRelatedCommitsInvoker 获取关联工作项信息
+func (c *CodeHubClient) ListRelatedCommitsInvoker(request *model.ListRelatedCommitsRequest) *ListRelatedCommitsInvoker {
+	requestDef := GenReqDefForListRelatedCommits()
+	return &ListRelatedCommitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryStatus 查看仓库的创建状态
@@ -1106,6 +1190,27 @@ func (c *CodeHubClient) ShowStatisticalData(request *model.ShowStatisticalDataRe
 func (c *CodeHubClient) ShowStatisticalDataInvoker(request *model.ShowStatisticalDataRequest) *ShowStatisticalDataInvoker {
 	requestDef := GenReqDefForShowStatisticalData()
 	return &ShowStatisticalDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMergeRequestApprovalState 合并请求代码审核
+//
+// 合并请求代码审核
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateMergeRequestApprovalState(request *model.UpdateMergeRequestApprovalStateRequest) (*model.UpdateMergeRequestApprovalStateResponse, error) {
+	requestDef := GenReqDefForUpdateMergeRequestApprovalState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMergeRequestApprovalStateResponse), nil
+	}
+}
+
+// UpdateMergeRequestApprovalStateInvoker 合并请求代码审核
+func (c *CodeHubClient) UpdateMergeRequestApprovalStateInvoker(request *model.UpdateMergeRequestApprovalStateRequest) *UpdateMergeRequestApprovalStateInvoker {
+	requestDef := GenReqDefForUpdateMergeRequestApprovalState()
+	return &UpdateMergeRequestApprovalStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddSshKey 添加ssh key

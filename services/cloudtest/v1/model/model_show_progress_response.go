@@ -9,66 +9,19 @@ import (
 // ShowProgressResponse Response Object
 type ShowProgressResponse struct {
 
-	// 进度uri
-	Uri *string `json:"uri,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	// 异步进度名称
-	Name *string `json:"name,omitempty"`
+	Result *ResultValueProgressVo `json:"result,omitempty"`
 
-	// 资源总数
-	Total *int32 `json:"total,omitempty"`
+	Error *ApiError `json:"error,omitempty"`
 
-	// 异步操作是否完成
-	Completed *bool `json:"completed,omitempty"`
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
 
-	// 异步操作是否取消
-	Cancelled *bool `json:"cancelled,omitempty"`
-
-	// 提示信息列表
-	Informations *[]string `json:"informations,omitempty"`
-
-	// 错误编码
-	Code *string `json:"code,omitempty"`
-
-	// 错误信息
-	Reason *string `json:"reason,omitempty"`
-
-	// 提交时间
-	SubmittedTime *string `json:"submitted_time,omitempty"`
-
-	// 开始时间
-	BeginTime *string `json:"begin_time,omitempty"`
-
-	// 结束时间
-	EndTime *string `json:"end_time,omitempty"`
-
-	// 服务ip
-	ServerIp *string `json:"server_ip,omitempty"`
-
-	// 最后修改时间
-	LastModifiedTime *int64 `json:"last_modified_time,omitempty"`
-
-	// 执行完成总数
-	FinishedCount *int32 `json:"finished_count,omitempty"`
-
-	// 异步操作返回值
-	ReturnValue *interface{} `json:"return_value,omitempty"`
-
-	// 异常信息
-	ExceptionMessage *string `json:"exception_message,omitempty"`
-
-	// 行编号
-	LineUpNum *int32 `json:"line_up_num,omitempty"`
-
-	// 异步操作的key
-	AsynOperationKey *string `json:"asyn_operation_key,omitempty"`
-
-	// 是否结束
-	IsEnded *bool `json:"is_ended,omitempty"`
-
-	// 异步操作完成进度
-	FinishedPercent *int32 `json:"finished_percent,omitempty"`
-	HttpStatusCode  int    `json:"-"`
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowProgressResponse) String() string {

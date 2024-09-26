@@ -43,10 +43,10 @@ type ListGlobalConnectionBandwidthConfigs struct {
 	BindLimit int32 `json:"bind_limit"`
 
 	// 是否启用传统的大区带宽。
-	EnableAreaBandwidth *bool `json:"enable_area_bandwidth,omitempty"`
+	EnableAreaBandwidth bool `json:"enable_area_bandwidth"`
 
 	// 是否支持95转按需。
-	EnableChange95 *bool `json:"enable_change_95,omitempty"`
+	EnableChange95 bool `json:"enable_change_95"`
 
 	// 是否支持多SKU产品功能。
 	EnableSpecCode *bool `json:"enable_spec_code,omitempty"`
@@ -66,8 +66,9 @@ type ListGlobalConnectionBandwidthConfigsChargeMode struct {
 }
 
 type ListGlobalConnectionBandwidthConfigsChargeModeEnum struct {
-	BWD  ListGlobalConnectionBandwidthConfigsChargeMode
-	E_95 ListGlobalConnectionBandwidthConfigsChargeMode
+	BWD     ListGlobalConnectionBandwidthConfigsChargeMode
+	E_95    ListGlobalConnectionBandwidthConfigsChargeMode
+	E_95AVR ListGlobalConnectionBandwidthConfigsChargeMode
 }
 
 func GetListGlobalConnectionBandwidthConfigsChargeModeEnum() ListGlobalConnectionBandwidthConfigsChargeModeEnum {
@@ -77,6 +78,9 @@ func GetListGlobalConnectionBandwidthConfigsChargeModeEnum() ListGlobalConnectio
 		},
 		E_95: ListGlobalConnectionBandwidthConfigsChargeMode{
 			value: "95",
+		},
+		E_95AVR: ListGlobalConnectionBandwidthConfigsChargeMode{
+			value: "95avr",
 		},
 	}
 }

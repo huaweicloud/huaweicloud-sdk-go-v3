@@ -18,7 +18,7 @@ type DomainInfo struct {
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// - 调度状态: - 调度异常：dispatch_abnormal - 未调度：un_dispatch - 调度中：dispatching - 已调度：dispatched - 删除中：dispatch_deleting
+	// 调度状态： - 调度异常：dispatch_abnormal - 未调度：un_dispatch - 调度中：dispatching - 已调度：dispatched - 删除中：dispatch_deleting
 	DispatchStatus *string `json:"dispatch_status,omitempty"`
 
 	// 网站名称
@@ -30,7 +30,7 @@ type DomainInfo struct {
 	// 策略id
 	PolicyId *string `json:"policy_id,omitempty"`
 
-	// - 防护状态: - 防护中：on - 未防护：off
+	// 防护状态： - 防护中：on - 未防护：off
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// 创建域名的时间

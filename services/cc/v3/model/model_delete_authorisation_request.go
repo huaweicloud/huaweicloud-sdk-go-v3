@@ -9,7 +9,7 @@ import (
 // DeleteAuthorisationRequest Request Object
 type DeleteAuthorisationRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 }
 

@@ -21,7 +21,7 @@ type UpdateGlobalConnectionBandwidth struct {
 	// 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
 	Size *int32 `json:"size,omitempty"`
 
-	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+	// 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
 	ChargeMode *UpdateGlobalConnectionBandwidthChargeMode `json:"charge_mode,omitempty"`
 
 	// 功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
@@ -48,8 +48,9 @@ type UpdateGlobalConnectionBandwidthChargeMode struct {
 }
 
 type UpdateGlobalConnectionBandwidthChargeModeEnum struct {
-	BWD  UpdateGlobalConnectionBandwidthChargeMode
-	E_95 UpdateGlobalConnectionBandwidthChargeMode
+	BWD     UpdateGlobalConnectionBandwidthChargeMode
+	E_95    UpdateGlobalConnectionBandwidthChargeMode
+	E_95AVR UpdateGlobalConnectionBandwidthChargeMode
 }
 
 func GetUpdateGlobalConnectionBandwidthChargeModeEnum() UpdateGlobalConnectionBandwidthChargeModeEnum {
@@ -59,6 +60,9 @@ func GetUpdateGlobalConnectionBandwidthChargeModeEnum() UpdateGlobalConnectionBa
 		},
 		E_95: UpdateGlobalConnectionBandwidthChargeMode{
 			value: "95",
+		},
+		E_95AVR: UpdateGlobalConnectionBandwidthChargeMode{
+			value: "95avr",
 		},
 	}
 }

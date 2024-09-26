@@ -9,17 +9,18 @@ import (
 // ShowBackgroundInfoResponse Response Object
 type ShowBackgroundInfoResponse struct {
 
-	// 项目id
-	ProjectUuid *string `json:"project_uuid,omitempty"`
+	// 对外时：success|error; 对内时：ok|failed
+	Status *string `json:"status,omitempty"`
 
-	// cover文件名称
-	CoverFileName *string `json:"cover_file_name,omitempty"`
+	Result *ResultValueBackgroundInfoVo `json:"result,omitempty"`
 
-	// 背景文件名称
-	BackgroundFileName *string `json:"background_file_name,omitempty"`
+	Error *ApiError `json:"error,omitempty"`
 
-	// logo文件名称
-	LogoFileName   *string `json:"logo_file_name,omitempty"`
+	// 由接口调用方传入，建议使用UUID保证请求的唯一性。
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 对内接口才有此属性
+	ServerAddress  *string `json:"server_address,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

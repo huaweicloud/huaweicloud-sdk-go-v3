@@ -9,7 +9,7 @@ import (
 // DisassociateGlobalConnectionBandwidthInstanceRequest Request Object
 type DisassociateGlobalConnectionBandwidthInstanceRequest struct {
 
-	// 资源的Id。
+	// 实例ID。
 	Id string `json:"id"`
 
 	Body *DisassociateGlobalConnectionBandwidthInstanceRequestBody `json:"body,omitempty"`
