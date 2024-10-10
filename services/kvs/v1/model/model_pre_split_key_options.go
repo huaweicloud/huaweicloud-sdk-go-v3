@@ -7,13 +7,10 @@ import (
 	"strings"
 )
 
-// PreSplitKeyOptions 在hash分区时，预分裂分区数量。
+// PreSplitKeyOptions 按照设定的键值前缀进行预分裂。
 type PreSplitKeyOptions struct {
 
-	// 在hash分区时，预分裂分区数量。
-	HashCount *int32 `bson:"hash_count,omitempty"`
-
-	// 在range分区模式有效，最大1000个，与\"hash_count\"二选一。
+	// 在range分区模式有效，最大10个。
 	RangeSplitPoints *[]bson.D `bson:"range_split_points,omitempty"`
 }
 

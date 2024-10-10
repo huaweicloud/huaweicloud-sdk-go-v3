@@ -24,6 +24,8 @@ type ShowSmartLiveRoomResponse struct {
 	// 默认直播剧本列表。
 	SceneScripts *[]LiveVideoScriptInfo `json:"scene_scripts,omitempty"`
 
+	InteractionConfig *LiveRoomInteractionConfig `json:"interaction_config,omitempty"`
+
 	// 互动规则列表
 	InteractionRules *[]LiveRoomInteractionRuleInfo `json:"interaction_rules,omitempty"`
 

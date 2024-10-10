@@ -509,6 +509,18 @@ func (i *CreateFactorySupplementDataInstanceInvoker) Invoke() (*model.CreateFact
 	}
 }
 
+type CreateLineageInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLineageInfoInvoker) Invoke() (*model.CreateLineageInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLineageInfoResponse), nil
+	}
+}
+
 type CreateManagerWorkSpaceInvoker struct {
 	*invoker.BaseInvoker
 }

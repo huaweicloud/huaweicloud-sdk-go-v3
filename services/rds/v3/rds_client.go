@@ -3051,6 +3051,27 @@ func (c *RdsClient) UpdateTdeStatusInvoker(request *model.UpdateTdeStatusRequest
 	return &UpdateTdeStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateToPeriod RDS实例按需转包周期
+//
+// # RDS实例按需转包周期
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateToPeriod(request *model.UpdateToPeriodRequest) (*model.UpdateToPeriodResponse, error) {
+	requestDef := GenReqDefForUpdateToPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateToPeriodResponse), nil
+	}
+}
+
+// UpdateToPeriodInvoker RDS实例按需转包周期
+func (c *RdsClient) UpdateToPeriodInvoker(request *model.UpdateToPeriodRequest) *UpdateToPeriodInvoker {
+	requestDef := GenReqDefForUpdateToPeriod()
+	return &UpdateToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpgradeDbMajorVersion
 //
 // PostgreSQL数据库升级大版本。
@@ -4042,6 +4063,27 @@ func (c *RdsClient) ShowPostgresqlParamValue(request *model.ShowPostgresqlParamV
 func (c *RdsClient) ShowPostgresqlParamValueInvoker(request *model.ShowPostgresqlParamValueRequest) *ShowPostgresqlParamValueInvoker {
 	requestDef := GenReqDefForShowPostgresqlParamValue()
 	return &ShowPostgresqlParamValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecoveryTimeWindow 查询wal日志恢复时间窗
+//
+// 查询wal日志恢复时间窗
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowRecoveryTimeWindow(request *model.ShowRecoveryTimeWindowRequest) (*model.ShowRecoveryTimeWindowResponse, error) {
+	requestDef := GenReqDefForShowRecoveryTimeWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecoveryTimeWindowResponse), nil
+	}
+}
+
+// ShowRecoveryTimeWindowInvoker 查询wal日志恢复时间窗
+func (c *RdsClient) ShowRecoveryTimeWindowInvoker(request *model.ShowRecoveryTimeWindowRequest) *ShowRecoveryTimeWindowInvoker {
+	requestDef := GenReqDefForShowRecoveryTimeWindow()
+	return &ShowRecoveryTimeWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowReplayDelayStatus 获取wal日志延迟回放状态

@@ -47,6 +47,9 @@ type StarRocksCreateRequest struct {
 	TimeZone *string `json:"time_zone,omitempty"`
 
 	TagsInfo *StarRocksCreateRequestTagsInfo `json:"tags_info"`
+
+	// 实例安全组ID。默认与Taurus安全组ID一致。
+	SecurityGroupId *string `json:"security_group_id,omitempty"`
 }
 
 func (o StarRocksCreateRequest) String() string {

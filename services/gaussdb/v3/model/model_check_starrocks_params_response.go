@@ -10,8 +10,8 @@ import (
 type CheckStarrocksParamsResponse struct {
 
 	// 参数之间区别的集合。
-	CheckStarrocksParamsResponce *[]ParamGroupParameterDifferences `json:"check_starrocks_params_responce,omitempty"`
-	HttpStatusCode               int                               `json:"-"`
+	Differences    *[]ParamGroupParameterDifferences `json:"differences,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o CheckStarrocksParamsResponse) String() string {

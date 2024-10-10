@@ -9,7 +9,7 @@ import (
 // ListAvailabilityZonesRequest Request Object
 type ListAvailabilityZonesRequest struct {
 
-	// 参数解释：AZ组。
+	// 参数解释：可用区组。
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 }
 

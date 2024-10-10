@@ -902,6 +902,27 @@ func (c *DataArtsStudioClient) CreateFactorySupplementDataInstanceInvoker(reques
 	return &CreateFactorySupplementDataInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLineageInfo 创建血缘信息
+//
+// 创建血缘信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateLineageInfo(request *model.CreateLineageInfoRequest) (*model.CreateLineageInfoResponse, error) {
+	requestDef := GenReqDefForCreateLineageInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLineageInfoResponse), nil
+	}
+}
+
+// CreateLineageInfoInvoker 创建血缘信息
+func (c *DataArtsStudioClient) CreateLineageInfoInvoker(request *model.CreateLineageInfoRequest) *CreateLineageInfoInvoker {
+	requestDef := GenReqDefForCreateLineageInfo()
+	return &CreateLineageInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateManagerWorkSpace 创建工作空间
 //
 // 创建工作空间

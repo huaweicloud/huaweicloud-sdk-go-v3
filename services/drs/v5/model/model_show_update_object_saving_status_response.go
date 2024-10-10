@@ -15,7 +15,7 @@ type ShowUpdateObjectSavingStatusResponse struct {
 	// 查询结果id
 	Id *string `json:"id,omitempty"`
 
-	// 查询状态
+	// 查询状态 pending：处理中 failed：失败 success：成功
 	Status *ShowUpdateObjectSavingStatusResponseStatus `json:"status,omitempty"`
 
 	// 任务ID

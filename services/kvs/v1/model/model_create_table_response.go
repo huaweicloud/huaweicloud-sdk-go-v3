@@ -12,6 +12,11 @@ type CreateTableResponse struct {
 	// 表名，仓内唯一。
 	TableName *string `bson:"table_name,omitempty"`
 
+	// 计费模式，可为\"provisioned\"或\"on_demand\"
+	BillMode *string `bson:"bill_mode,omitempty"`
+
+	ProvisionedThroughput *ProvisionedThroughput `bson:"provisioned_throughput,omitempty"`
+
 	PrimaryKeySchema *PrimaryKeySchema `bson:"primary_key_schema,omitempty"`
 
 	// 本地二级索引模板，可以多个。

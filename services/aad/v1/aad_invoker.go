@@ -101,6 +101,18 @@ func (i *AssociateIpToPolicyInvoker) Invoke() (*model.AssociateIpToPolicyRespons
 	}
 }
 
+type AssociateIpToPolicyAndPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateIpToPolicyAndPackageInvoker) Invoke() (*model.AssociateIpToPolicyAndPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateIpToPolicyAndPackageResponse), nil
+	}
+}
+
 type BatchCreateInstanceIpRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -206,6 +218,18 @@ func (i *DisassociateIpFromPolicyInvoker) Invoke() (*model.DisassociateIpFromPol
 		return nil, err
 	} else {
 		return result.(*model.DisassociateIpFromPolicyResponse), nil
+	}
+}
+
+type DisassociateIpFromPolicyAndPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateIpFromPolicyAndPackageInvoker) Invoke() (*model.DisassociateIpFromPolicyAndPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateIpFromPolicyAndPackageResponse), nil
 	}
 }
 

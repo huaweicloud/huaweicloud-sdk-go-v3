@@ -36,6 +36,12 @@ type DeleteWhiteBlackIpRuleResponse struct {
 	// 生效模式，默认为permanent（立即生效）
 	TimeMode *string `json:"time_mode,omitempty"`
 
+	// 规则生效开始时间，生效模式为自定义时，此字段才有效
+	Start *int64 `json:"start,omitempty"`
+
+	// 规则生效结束时间，生效模式为自定义时，此字段才有效
+	Terminal *int64 `json:"terminal,omitempty"`
+
 	IpGroup        *IpGroup `json:"ip_group,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

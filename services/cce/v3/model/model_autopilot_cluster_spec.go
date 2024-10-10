@@ -74,6 +74,9 @@ type AutopilotClusterSpec struct {
 
 	// 覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
 	ConfigurationsOverride *[]AutopilotPackageConfiguration `json:"configurationsOverride,omitempty"`
+
+	// 集群删除保护，开启后禁止用户通过API或console调用删除集群，true表示开启，默认值false关闭。
+	DeletionProtection *bool `json:"deletionProtection,omitempty"`
 }
 
 func (o AutopilotClusterSpec) String() string {

@@ -8,7 +8,13 @@ import (
 
 // DeleteManualBackupResponse Response Object
 type DeleteManualBackupResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 备份ID。
+	BackupId *string `json:"backup_id,omitempty"`
+
+	// 备份名称。
+	BackupName     *string `json:"backup_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteManualBackupResponse) String() string {

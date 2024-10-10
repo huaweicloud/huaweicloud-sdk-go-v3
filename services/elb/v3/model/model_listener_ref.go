@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ListenerRef 监听器
+// ListenerRef 参数解释：监听器
 type ListenerRef struct {
 
 	// 参数解释：监听器ID。

@@ -62,9 +62,6 @@ type ListVolumesRequest struct {
 
 	// 云服务器id。
 	ServerId *string `json:"server_id,omitempty"`
-
-	// 自动快照策略ID
-	SnapshotPolicyId *string `json:"snapshot_policy_id,omitempty"`
 }
 
 func (o ListVolumesRequest) String() string {

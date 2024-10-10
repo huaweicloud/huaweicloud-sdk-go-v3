@@ -166,6 +166,27 @@ func (c *DrsClient) BatchTagActionInvoker(request *model.BatchTagActionRequest) 
 	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeToPeriod 按需转包周期
+//
+// DRS同步和灾备任务按需计费转包周期计费。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ChangeToPeriod(request *model.ChangeToPeriodRequest) (*model.ChangeToPeriodResponse, error) {
+	requestDef := GenReqDefForChangeToPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeToPeriodResponse), nil
+	}
+}
+
+// ChangeToPeriodInvoker 按需转包周期
+func (c *DrsClient) ChangeToPeriodInvoker(request *model.ChangeToPeriodRequest) *ChangeToPeriodInvoker {
+	requestDef := GenReqDefForChangeToPeriod()
+	return &ChangeToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckDataFilter 数据过滤规则校验
 //
 // 数据过滤规则校验
@@ -185,6 +206,27 @@ func (c *DrsClient) CheckDataFilter(request *model.CheckDataFilterRequest) (*mod
 func (c *DrsClient) CheckDataFilterInvoker(request *model.CheckDataFilterRequest) *CheckDataFilterInvoker {
 	requestDef := GenReqDefForCheckDataFilter()
 	return &CheckDataFilterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CleanAlarms 清除DDL告警
+//
+// 清除DDL告警
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CleanAlarms(request *model.CleanAlarmsRequest) (*model.CleanAlarmsResponse, error) {
+	requestDef := GenReqDefForCleanAlarms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CleanAlarmsResponse), nil
+	}
+}
+
+// CleanAlarmsInvoker 清除DDL告警
+func (c *DrsClient) CleanAlarmsInvoker(request *model.CleanAlarmsRequest) *CleanAlarmsInvoker {
+	requestDef := GenReqDefForCleanAlarms()
+	return &CleanAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CollectColumns 采集指定数据库表的列信息
@@ -340,6 +382,27 @@ func (c *DrsClient) CountInstanceByTagsInvoker(request *model.CountInstanceByTag
 	return &CountInstanceByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateConnection 创建连接
+//
+// 创建单个连接，该连接可以为线下自建库或云上RDS等，目前支持的数据库引擎包括MySQL、PostgreSQL、Oracle和MongoDB。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
+	requestDef := GenReqDefForCreateConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConnectionResponse), nil
+	}
+}
+
+// CreateConnectionInvoker 创建连接
+func (c *DrsClient) CreateConnectionInvoker(request *model.CreateConnectionRequest) *CreateConnectionInvoker {
+	requestDef := GenReqDefForCreateConnection()
+	return &CreateConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateJob 创建任务
 //
 // 创建单个任务，根据请求参数不同，可以创建单个实时迁移、实时同步、实时灾备等任务。
@@ -361,7 +424,53 @@ func (c *DrsClient) CreateJobInvoker(request *model.CreateJobRequest) *CreateJob
 	return &CreateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteJdbcDriver 删除驱动文件
+// CreateReplicationJob 创建备份迁移任务
+//
+// 该接口主要用于三种常见场景下备份迁移任务的配置。
+// 备份迁移支持如下的常见场景：
+// - 通过OBS桶备份文件进行全量数据迁移。
+// - 通过OBS桶备份文件进行全量+增量数据迁移。
+// - 通过RDS全量备份进行全量数据迁移。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) CreateReplicationJob(request *model.CreateReplicationJobRequest) (*model.CreateReplicationJobResponse, error) {
+	requestDef := GenReqDefForCreateReplicationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateReplicationJobResponse), nil
+	}
+}
+
+// CreateReplicationJobInvoker 创建备份迁移任务
+func (c *DrsClient) CreateReplicationJobInvoker(request *model.CreateReplicationJobRequest) *CreateReplicationJobInvoker {
+	requestDef := GenReqDefForCreateReplicationJob()
+	return &CreateReplicationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConnection 删除连接
+//
+// 删除租户指定的连接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) DeleteConnection(request *model.DeleteConnectionRequest) (*model.DeleteConnectionResponse, error) {
+	requestDef := GenReqDefForDeleteConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConnectionResponse), nil
+	}
+}
+
+// DeleteConnectionInvoker 删除连接
+func (c *DrsClient) DeleteConnectionInvoker(request *model.DeleteConnectionRequest) *DeleteConnectionInvoker {
+	requestDef := GenReqDefForDeleteConnection()
+	return &DeleteConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteJdbcDriver 删除驱动文件（不再推广）
 //
 // 删除驱动文件。
 //
@@ -376,7 +485,7 @@ func (c *DrsClient) DeleteJdbcDriver(request *model.DeleteJdbcDriverRequest) (*m
 	}
 }
 
-// DeleteJdbcDriverInvoker 删除驱动文件
+// DeleteJdbcDriverInvoker 删除驱动文件（不再推广）
 func (c *DrsClient) DeleteJdbcDriverInvoker(request *model.DeleteJdbcDriverRequest) *DeleteJdbcDriverInvoker {
 	requestDef := GenReqDefForDeleteJdbcDriver()
 	return &DeleteJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -401,6 +510,27 @@ func (c *DrsClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJob
 func (c *DrsClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJobInvoker {
 	requestDef := GenReqDefForDeleteJob()
 	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteReplicationJob 删除备份迁移任务
+//
+// 对于已经完成的备份迁移任务，可以选择删除迁移任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) DeleteReplicationJob(request *model.DeleteReplicationJobRequest) (*model.DeleteReplicationJobResponse, error) {
+	requestDef := GenReqDefForDeleteReplicationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteReplicationJobResponse), nil
+	}
+}
+
+// DeleteReplicationJobInvoker 删除备份迁移任务
+func (c *DrsClient) DeleteReplicationJobInvoker(request *model.DeleteReplicationJobRequest) *DeleteReplicationJobInvoker {
+	requestDef := GenReqDefForDeleteReplicationJob()
+	return &DeleteReplicationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteUserJdbcDriver 删除驱动文件
@@ -571,6 +701,27 @@ func (c *DrsClient) ListAsyncJobsInvoker(request *model.ListAsyncJobsRequest) *L
 	return &ListAsyncJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListConnections 查询连接列表
+//
+// 查询连接列表，可根据连接类型进行查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
+	requestDef := GenReqDefForListConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConnectionsResponse), nil
+	}
+}
+
+// ListConnectionsInvoker 查询连接列表
+func (c *DrsClient) ListConnectionsInvoker(request *model.ListConnectionsRequest) *ListConnectionsInvoker {
+	requestDef := GenReqDefForListConnections()
+	return &ListConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDbObjects 查询数据库对象信息
 //
 // 查询数据库对象信息。
@@ -634,7 +785,7 @@ func (c *DrsClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsReque
 	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListJdbcDrivers 查询驱动文件列表
+// ListJdbcDrivers 查询驱动文件列表（不再推广）
 //
 // 查询驱动文件列表。
 //
@@ -649,10 +800,31 @@ func (c *DrsClient) ListJdbcDrivers(request *model.ListJdbcDriversRequest) (*mod
 	}
 }
 
-// ListJdbcDriversInvoker 查询驱动文件列表
+// ListJdbcDriversInvoker 查询驱动文件列表（不再推广）
 func (c *DrsClient) ListJdbcDriversInvoker(request *model.ListJdbcDriversRequest) *ListJdbcDriversInvoker {
 	requestDef := GenReqDefForListJdbcDrivers()
 	return &ListJdbcDriversInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobDdls 查询增量DDL列表
+//
+// 查询增量DDL列表，可根据status查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListJobDdls(request *model.ListJobDdlsRequest) (*model.ListJobDdlsResponse, error) {
+	requestDef := GenReqDefForListJobDdls()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobDdlsResponse), nil
+	}
+}
+
+// ListJobDdlsInvoker 查询增量DDL列表
+func (c *DrsClient) ListJobDdlsInvoker(request *model.ListJobDdlsRequest) *ListJobDdlsInvoker {
+	requestDef := GenReqDefForListJobDdls()
+	return &ListJobDdlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListJobHistoryParameters 查询任务的参数配置修改历史
@@ -762,6 +934,27 @@ func (c *DrsClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListReplicationJobs 查询备份迁移任务列表
+//
+// 获取当前备份迁移任务列表，不包含已删除的任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListReplicationJobs(request *model.ListReplicationJobsRequest) (*model.ListReplicationJobsResponse, error) {
+	requestDef := GenReqDefForListReplicationJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReplicationJobsResponse), nil
+	}
+}
+
+// ListReplicationJobsInvoker 查询备份迁移任务列表
+func (c *DrsClient) ListReplicationJobsInvoker(request *model.ListReplicationJobsRequest) *ListReplicationJobsInvoker {
+	requestDef := GenReqDefForListReplicationJobs()
+	return &ListReplicationJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTags 查询项目标签
 //
 // 查询租户在指定Project中实例类型的所有资源标签集合。
@@ -823,6 +1016,27 @@ func (c *DrsClient) ListsAgencyPermissions(request *model.ListsAgencyPermissions
 func (c *DrsClient) ListsAgencyPermissionsInvoker(request *model.ListsAgencyPermissionsRequest) *ListsAgencyPermissionsInvoker {
 	requestDef := GenReqDefForListsAgencyPermissions()
 	return &ListsAgencyPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyConnection 修改连接
+//
+// 修改创建的连接信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ModifyConnection(request *model.ModifyConnectionRequest) (*model.ModifyConnectionResponse, error) {
+	requestDef := GenReqDefForModifyConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyConnectionResponse), nil
+	}
+}
+
+// ModifyConnectionInvoker 修改连接
+func (c *DrsClient) ModifyConnectionInvoker(request *model.ModifyConnectionRequest) *ModifyConnectionInvoker {
+	requestDef := GenReqDefForModifyConnection()
+	return &ModifyConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowActions 获取指定任务操作信息
@@ -1335,6 +1549,27 @@ func (c *DrsClient) ShowReplayResultsInvoker(request *model.ShowReplayResultsReq
 	return &ShowReplayResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowReplicationJob 查询备份迁移任务详细信息
+//
+// 获取指定备份迁移任务详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowReplicationJob(request *model.ShowReplicationJobRequest) (*model.ShowReplicationJobResponse, error) {
+	requestDef := GenReqDefForShowReplicationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplicationJobResponse), nil
+	}
+}
+
+// ShowReplicationJobInvoker 查询备份迁移任务详细信息
+func (c *DrsClient) ShowReplicationJobInvoker(request *model.ShowReplicationJobRequest) *ShowReplicationJobInvoker {
+	requestDef := GenReqDefForShowReplicationJob()
+	return &ShowReplicationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSupportObjectType 查询是否支持对象选择和列映射
 //
 // 查询任务支持的对象选择类型、列映射、支持搜索的对象类型等信息。
@@ -1398,7 +1633,7 @@ func (c *DrsClient) StopJobActionInvoker(request *model.StopJobActionRequest) *S
 	return &StopJobActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SyncJdbcDriver 同步驱动文件
+// SyncJdbcDriver 同步驱动文件（不再推广）
 //
 // 同步驱动文件。
 //
@@ -1413,7 +1648,7 @@ func (c *DrsClient) SyncJdbcDriver(request *model.SyncJdbcDriverRequest) (*model
 	}
 }
 
-// SyncJdbcDriverInvoker 同步驱动文件
+// SyncJdbcDriverInvoker 同步驱动文件（不再推广）
 func (c *DrsClient) SyncJdbcDriverInvoker(request *model.SyncJdbcDriverRequest) *SyncJdbcDriverInvoker {
 	requestDef := GenReqDefForSyncJdbcDriver()
 	return &SyncJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1547,6 +1782,27 @@ func (c *DrsClient) UpdateJobConfigurationsInvoker(request *model.UpdateJobConfi
 	return &UpdateJobConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateReplicationJob 修改备份迁移任务信息
+//
+// 修改指定备份迁移任务信息，任务名与任务描述。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UpdateReplicationJob(request *model.UpdateReplicationJobRequest) (*model.UpdateReplicationJobResponse, error) {
+	requestDef := GenReqDefForUpdateReplicationJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateReplicationJobResponse), nil
+	}
+}
+
+// UpdateReplicationJobInvoker 修改备份迁移任务信息
+func (c *DrsClient) UpdateReplicationJobInvoker(request *model.UpdateReplicationJobRequest) *UpdateReplicationJobInvoker {
+	requestDef := GenReqDefForUpdateReplicationJob()
+	return &UpdateReplicationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateStartPosition 更新增量任务启动位点
 //
 // 更新增量任务的启动位点。
@@ -1590,7 +1846,7 @@ func (c *DrsClient) UploadDbObjectTemplateInvoker(request *model.UploadDbObjectT
 	return &UploadDbObjectTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UploadJdbcDriver 上传驱动文件
+// UploadJdbcDriver 上传驱动文件（不再推广）
 //
 // 上传驱动文件。
 //
@@ -1605,7 +1861,7 @@ func (c *DrsClient) UploadJdbcDriver(request *model.UploadJdbcDriverRequest) (*m
 	}
 }
 
-// UploadJdbcDriverInvoker 上传驱动文件
+// UploadJdbcDriverInvoker 上传驱动文件（不再推广）
 func (c *DrsClient) UploadJdbcDriverInvoker(request *model.UploadJdbcDriverRequest) *UploadJdbcDriverInvoker {
 	requestDef := GenReqDefForUploadJdbcDriver()
 	return &UploadJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

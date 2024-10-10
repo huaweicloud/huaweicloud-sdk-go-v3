@@ -36,6 +36,9 @@ type TriggerProcess struct {
 
 	// **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
 	RobotId *string `json:"robot_id,omitempty"`
+
+	// 回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
+	PlayType *TriggerProcessPlayType `json:"play_type,omitempty"`
 }
 
 func (o TriggerProcess) String() string {
@@ -178,6 +181,57 @@ func (c TriggerProcessReplyRole) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TriggerProcessReplyRole) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TriggerProcessPlayType struct {
+	value string
+}
+
+type TriggerProcessPlayTypeEnum struct {
+	APPEND   TriggerProcessPlayType
+	INSERT   TriggerProcessPlayType
+	PLAY_NOW TriggerProcessPlayType
+}
+
+func GetTriggerProcessPlayTypeEnum() TriggerProcessPlayTypeEnum {
+	return TriggerProcessPlayTypeEnum{
+		APPEND: TriggerProcessPlayType{
+			value: "APPEND",
+		},
+		INSERT: TriggerProcessPlayType{
+			value: "INSERT",
+		},
+		PLAY_NOW: TriggerProcessPlayType{
+			value: "PLAY_NOW",
+		},
+	}
+}
+
+func (c TriggerProcessPlayType) Value() string {
+	return c.value
+}
+
+func (c TriggerProcessPlayType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TriggerProcessPlayType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -17,7 +17,7 @@ type LoadBalancerStatus struct {
 	// 负载均衡器关联的监听器列表。
 	Listeners []LoadBalancerStatusListener `json:"listeners"`
 
-	// 负载均衡器关联的后端云服务器组列表。
+	// 负载均衡器关联的后端服务器组列表。
 	Pools []LoadBalancerStatusPool `json:"pools"`
 
 	// 负载均衡器ID。

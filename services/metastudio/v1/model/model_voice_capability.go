@@ -38,6 +38,12 @@ type VoiceCapability struct {
 
 	// 是否支持缓存。
 	IsSupportVoiceCache *bool `json:"is_support_voice_cache,omitempty"`
+
+	// **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+	ConversionRate *float32 `json:"conversion_rate,omitempty"`
+
+	// **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+	ConversionRateEn *float32 `json:"conversion_rate_en,omitempty"`
 }
 
 func (o VoiceCapability) String() string {

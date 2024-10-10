@@ -26,6 +26,9 @@ type ShowJobResponse struct {
 	// 作业在目录树上的路径。创建作业时如果路径目录不存在，会自动创建目录，如/dir/a/，默认在根目录/。
 	Directory *string `json:"directory,omitempty"`
 
+	// 下游作业信息
+	DownstreamJobs *[]JobInformation `json:"downstreamJobs,omitempty"`
+
 	// 作业类型，REAL_TIME： 实时处理，BATCH：批处理
 	ProcessType *ShowJobResponseProcessType `json:"processType,omitempty"`
 

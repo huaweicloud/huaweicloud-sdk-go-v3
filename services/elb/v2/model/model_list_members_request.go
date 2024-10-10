@@ -41,6 +41,9 @@ type ListMembersRequest struct {
 
 	// 后端云服务器的权重。
 	Weight *int32 `json:"weight,omitempty"`
+
+	// 企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListMembersRequest) String() string {

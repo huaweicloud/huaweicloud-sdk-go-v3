@@ -9,7 +9,7 @@ import (
 // BatchAddAvailableZonesRequest Request Object
 type BatchAddAvailableZonesRequest struct {
 
-	// 负载均衡器ID。
+	// 参数解释：负载均衡器ID。
 	LoadbalancerId string `json:"loadbalancer_id"`
 
 	Body *BatchAddAvailableZonesRequestBody `json:"body,omitempty"`

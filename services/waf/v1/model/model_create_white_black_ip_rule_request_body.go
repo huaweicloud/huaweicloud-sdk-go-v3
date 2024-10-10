@@ -23,6 +23,15 @@ type CreateWhiteBlackIpRuleRequestBody struct {
 
 	// 创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
 	IpGroupId *string `json:"ip_group_id,omitempty"`
+
+	// 生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+	TimeMode *string `json:"time_mode,omitempty"`
+
+	// 规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+	Start *int32 `json:"start,omitempty"`
+
+	// 规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
+	Terminal *int32 `json:"terminal,omitempty"`
 }
 
 func (o CreateWhiteBlackIpRuleRequestBody) String() string {

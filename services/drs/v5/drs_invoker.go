@@ -89,6 +89,18 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type ChangeToPeriodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeToPeriodInvoker) Invoke() (*model.ChangeToPeriodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeToPeriodResponse), nil
+	}
+}
+
 type CheckDataFilterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +110,18 @@ func (i *CheckDataFilterInvoker) Invoke() (*model.CheckDataFilterResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CheckDataFilterResponse), nil
+	}
+}
+
+type CleanAlarmsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CleanAlarmsInvoker) Invoke() (*model.CleanAlarmsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CleanAlarmsResponse), nil
 	}
 }
 
@@ -185,6 +209,18 @@ func (i *CountInstanceByTagsInvoker) Invoke() (*model.CountInstanceByTagsRespons
 	}
 }
 
+type CreateConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectionInvoker) Invoke() (*model.CreateConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConnectionResponse), nil
+	}
+}
+
 type CreateJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +230,30 @@ func (i *CreateJobInvoker) Invoke() (*model.CreateJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateJobResponse), nil
+	}
+}
+
+type CreateReplicationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateReplicationJobInvoker) Invoke() (*model.CreateReplicationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateReplicationJobResponse), nil
+	}
+}
+
+type DeleteConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConnectionInvoker) Invoke() (*model.DeleteConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConnectionResponse), nil
 	}
 }
 
@@ -218,6 +278,18 @@ func (i *DeleteJobInvoker) Invoke() (*model.DeleteJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteJobResponse), nil
+	}
+}
+
+type DeleteReplicationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteReplicationJobInvoker) Invoke() (*model.DeleteReplicationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteReplicationJobResponse), nil
 	}
 }
 
@@ -317,6 +389,18 @@ func (i *ListAsyncJobsInvoker) Invoke() (*model.ListAsyncJobsResponse, error) {
 	}
 }
 
+type ListConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConnectionsResponse), nil
+	}
+}
+
 type ListDbObjectsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -362,6 +446,18 @@ func (i *ListJdbcDriversInvoker) Invoke() (*model.ListJdbcDriversResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListJdbcDriversResponse), nil
+	}
+}
+
+type ListJobDdlsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListJobDdlsInvoker) Invoke() (*model.ListJobDdlsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListJobDdlsResponse), nil
 	}
 }
 
@@ -425,6 +521,18 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 	}
 }
 
+type ListReplicationJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReplicationJobsInvoker) Invoke() (*model.ListReplicationJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReplicationJobsResponse), nil
+	}
+}
+
 type ListTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -458,6 +566,18 @@ func (i *ListsAgencyPermissionsInvoker) Invoke() (*model.ListsAgencyPermissionsR
 		return nil, err
 	} else {
 		return result.(*model.ListsAgencyPermissionsResponse), nil
+	}
+}
+
+type ModifyConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyConnectionInvoker) Invoke() (*model.ModifyConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyConnectionResponse), nil
 	}
 }
 
@@ -749,6 +869,18 @@ func (i *ShowReplayResultsInvoker) Invoke() (*model.ShowReplayResultsResponse, e
 	}
 }
 
+type ShowReplicationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplicationJobInvoker) Invoke() (*model.ShowReplicationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplicationJobResponse), nil
+	}
+}
+
 type ShowSupportObjectTypeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -866,6 +998,18 @@ func (i *UpdateJobConfigurationsInvoker) Invoke() (*model.UpdateJobConfiguration
 		return nil, err
 	} else {
 		return result.(*model.UpdateJobConfigurationsResponse), nil
+	}
+}
+
+type UpdateReplicationJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateReplicationJobInvoker) Invoke() (*model.UpdateReplicationJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateReplicationJobResponse), nil
 	}
 }
 

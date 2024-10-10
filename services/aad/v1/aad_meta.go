@@ -155,6 +155,26 @@ func GenReqDefForAssociateIpToPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAssociateIpToPolicyAndPackage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/cnad/policies/{policy_id}/bind").
+		WithResponse(new(model.AssociateIpToPolicyAndPackageResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchCreateInstanceIpRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -300,6 +320,26 @@ func GenReqDefForDisassociateIpFromPolicy() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/cnad/policies/{policy_id}/unbind").
 		WithResponse(new(model.DisassociateIpFromPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDisassociateIpFromPolicyAndPackage() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/cnad/policies/{policy_id}/unbind").
+		WithResponse(new(model.DisassociateIpFromPolicyAndPackageResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

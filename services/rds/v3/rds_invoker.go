@@ -1733,6 +1733,18 @@ func (i *UpdateTdeStatusInvoker) Invoke() (*model.UpdateTdeStatusResponse, error
 	}
 }
 
+type UpdateToPeriodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateToPeriodInvoker) Invoke() (*model.UpdateToPeriodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateToPeriodResponse), nil
+	}
+}
+
 type UpgradeDbMajorVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2294,6 +2306,18 @@ func (i *ShowPostgresqlParamValueInvoker) Invoke() (*model.ShowPostgresqlParamVa
 		return nil, err
 	} else {
 		return result.(*model.ShowPostgresqlParamValueResponse), nil
+	}
+}
+
+type ShowRecoveryTimeWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecoveryTimeWindowInvoker) Invoke() (*model.ShowRecoveryTimeWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecoveryTimeWindowResponse), nil
 	}
 }
 

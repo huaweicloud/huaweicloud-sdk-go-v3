@@ -28,6 +28,9 @@ type CreateDigitalAssetRequestBody struct {
 
 	AssetExtraMeta *AssetExtraMeta `json:"asset_extra_meta,omitempty"`
 
+	// **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
+	SystemProperties *[]SystemProperty `json:"system_properties,omitempty"`
+
 	SharedConfig *AssetSharedConfig `json:"shared_config,omitempty"`
 
 	// **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。

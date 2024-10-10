@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// GlobalSecondaryIndex 全局二级索引定义，元素key为数组下标
 type GlobalSecondaryIndex struct {
 
 	// 二级索引名称，表内唯一。
@@ -23,6 +22,8 @@ type GlobalSecondaryIndex struct {
 
 	// 摘要字段名数组。
 	AbstractFields *[]string `bson:"abstract_fields,omitempty"`
+
+	ProvisionedThroughput *ProvisionedThroughput `bson:"provisioned_throughput,omitempty"`
 }
 
 func (o GlobalSecondaryIndex) String() string {

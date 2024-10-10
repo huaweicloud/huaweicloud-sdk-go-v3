@@ -187,6 +187,27 @@ func (c *AadClient) AssociateIpToPolicyInvoker(request *model.AssociateIpToPolic
 	return &AssociateIpToPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssociateIpToPolicyAndPackage 策略和防护包绑定防护对象
+//
+// 策略和防护包绑定防护对象
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) AssociateIpToPolicyAndPackage(request *model.AssociateIpToPolicyAndPackageRequest) (*model.AssociateIpToPolicyAndPackageResponse, error) {
+	requestDef := GenReqDefForAssociateIpToPolicyAndPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateIpToPolicyAndPackageResponse), nil
+	}
+}
+
+// AssociateIpToPolicyAndPackageInvoker 策略和防护包绑定防护对象
+func (c *AadClient) AssociateIpToPolicyAndPackageInvoker(request *model.AssociateIpToPolicyAndPackageRequest) *AssociateIpToPolicyAndPackageInvoker {
+	requestDef := GenReqDefForAssociateIpToPolicyAndPackage()
+	return &AssociateIpToPolicyAndPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateInstanceIpRule 批量创建高防实例IP的转发规则
 //
 // 批量创建高防实例IP的转发规则
@@ -374,6 +395,27 @@ func (c *AadClient) DisassociateIpFromPolicy(request *model.DisassociateIpFromPo
 func (c *AadClient) DisassociateIpFromPolicyInvoker(request *model.DisassociateIpFromPolicyRequest) *DisassociateIpFromPolicyInvoker {
 	requestDef := GenReqDefForDisassociateIpFromPolicy()
 	return &DisassociateIpFromPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateIpFromPolicyAndPackage 策略和防护包解绑防护对象
+//
+// 策略和防护包解绑防护对象
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) DisassociateIpFromPolicyAndPackage(request *model.DisassociateIpFromPolicyAndPackageRequest) (*model.DisassociateIpFromPolicyAndPackageResponse, error) {
+	requestDef := GenReqDefForDisassociateIpFromPolicyAndPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateIpFromPolicyAndPackageResponse), nil
+	}
+}
+
+// DisassociateIpFromPolicyAndPackageInvoker 策略和防护包解绑防护对象
+func (c *AadClient) DisassociateIpFromPolicyAndPackageInvoker(request *model.DisassociateIpFromPolicyAndPackageRequest) *DisassociateIpFromPolicyAndPackageInvoker {
+	requestDef := GenReqDefForDisassociateIpFromPolicyAndPackage()
+	return &DisassociateIpFromPolicyAndPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDomain 查询域名列表
