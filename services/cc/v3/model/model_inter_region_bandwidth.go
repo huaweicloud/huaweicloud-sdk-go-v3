@@ -37,8 +37,8 @@ type InterRegionBandwidth struct {
 	// 域间实例信息。
 	InterRegions *[]InterRegion `json:"inter_regions,omitempty"`
 
-	// 域间带宽的值。
-	Bandwidth *int32 `json:"bandwidth,omitempty"`
+	// 带宽值，单位Mbps。
+	Bandwidth *int64 `json:"bandwidth,omitempty"`
 }
 
 func (o InterRegionBandwidth) String() string {

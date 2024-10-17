@@ -12,7 +12,7 @@ type KeyValueBean struct {
 	Key string `json:"key"`
 
 	// 值
-	Value string `json:"value"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o KeyValueBean) String() string {

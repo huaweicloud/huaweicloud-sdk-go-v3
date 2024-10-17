@@ -9,6 +9,10 @@ type CollectTranscriberJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CollectTranscriberJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CollectTranscriberJobInvoker) Invoke() (*model.CollectTranscriberJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CollectTranscriberJobInvoker) Invoke() (*model.CollectTranscriberJobRes
 
 type CreateVocabularyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVocabularyInvoker) Invoke() (*model.CreateVocabularyResponse, error) {
@@ -33,6 +41,10 @@ type DeleteVocabularyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVocabularyInvoker) Invoke() (*model.DeleteVocabularyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *DeleteVocabularyInvoker) Invoke() (*model.DeleteVocabularyResponse, err
 
 type PushTranscriberJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PushTranscriberJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PushTranscriberJobsInvoker) Invoke() (*model.PushTranscriberJobsResponse, error) {
@@ -57,6 +73,10 @@ type RecognizeFlashAsrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeFlashAsrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeFlashAsrInvoker) Invoke() (*model.RecognizeFlashAsrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *RecognizeFlashAsrInvoker) Invoke() (*model.RecognizeFlashAsrResponse, e
 
 type RecognizeShortAudioInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeShortAudioInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeShortAudioInvoker) Invoke() (*model.RecognizeShortAudioResponse, error) {
@@ -81,6 +105,10 @@ type RunTtsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunTtsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunTtsInvoker) Invoke() (*model.RunTtsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *RunTtsInvoker) Invoke() (*model.RunTtsResponse, error) {
 
 type ShowVocabulariesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVocabulariesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVocabulariesInvoker) Invoke() (*model.ShowVocabulariesResponse, error) {
@@ -105,6 +137,10 @@ type ShowVocabularyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVocabularyInvoker) Invoke() (*model.ShowVocabularyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowVocabularyInvoker) Invoke() (*model.ShowVocabularyResponse, error) 
 
 type UpdateVocabularyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVocabularyInvoker) Invoke() (*model.UpdateVocabularyResponse, error) {

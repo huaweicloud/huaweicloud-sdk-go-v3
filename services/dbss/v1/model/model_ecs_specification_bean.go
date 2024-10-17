@@ -8,19 +8,19 @@ import (
 
 type EcsSpecificationBean struct {
 
-	// 可用区集合
+	// ECS规格所在的可用区集合
 	Azs []string `json:"azs"`
 
-	// ID
+	// 规格ID
 	Id string `json:"id"`
 
-	// 等级
+	// 规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
 	Level string `json:"level"`
 
-	// 名称
+	// 规格名称
 	Name string `json:"name"`
 
-	// 代理
+	// 规格可添加的数据库数量
 	Proxy int32 `json:"proxy"`
 
 	// 内存
@@ -28,6 +28,9 @@ type EcsSpecificationBean struct {
 
 	// CPU
 	Vcpus int32 `json:"vcpus"`
+
+	// 可用区类型 - DEDICATED - DEC - EDGE
+	AzType *string `json:"az_type,omitempty"`
 }
 
 func (o EcsSpecificationBean) String() string {

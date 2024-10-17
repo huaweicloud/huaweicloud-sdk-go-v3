@@ -9,6 +9,10 @@ type CreateAnalyzerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAnalyzerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAnalyzerInvoker) Invoke() (*model.CreateAnalyzerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAnalyzerInvoker) Invoke() (*model.CreateAnalyzerResponse, error) 
 
 type DeleteAnalyzerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAnalyzerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAnalyzerInvoker) Invoke() (*model.DeleteAnalyzerResponse, error) {
@@ -33,6 +41,10 @@ type ListAnalyzersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAnalyzersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAnalyzersInvoker) Invoke() (*model.ListAnalyzersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListAnalyzersInvoker) Invoke() (*model.ListAnalyzersResponse, error) {
 
 type ShowAnalyzerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAnalyzerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAnalyzerInvoker) Invoke() (*model.ShowAnalyzerResponse, error) {
@@ -57,6 +73,10 @@ type StartResourceScanInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartResourceScanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartResourceScanInvoker) Invoke() (*model.StartResourceScanResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *StartResourceScanInvoker) Invoke() (*model.StartResourceScanResponse, e
 
 type ApplyArchiveRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ApplyArchiveRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ApplyArchiveRuleInvoker) Invoke() (*model.ApplyArchiveRuleResponse, error) {
@@ -81,6 +105,10 @@ type CreateArchiveRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateArchiveRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateArchiveRuleInvoker) Invoke() (*model.CreateArchiveRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateArchiveRuleInvoker) Invoke() (*model.CreateArchiveRuleResponse, e
 
 type DeleteArchiveRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteArchiveRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteArchiveRuleInvoker) Invoke() (*model.DeleteArchiveRuleResponse, error) {
@@ -105,6 +137,10 @@ type ListArchiveRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListArchiveRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListArchiveRulesInvoker) Invoke() (*model.ListArchiveRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListArchiveRulesInvoker) Invoke() (*model.ListArchiveRulesResponse, err
 
 type ShowArchiveRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowArchiveRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowArchiveRuleInvoker) Invoke() (*model.ShowArchiveRuleResponse, error) {
@@ -129,6 +169,10 @@ type UpdateArchiveRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateArchiveRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateArchiveRuleInvoker) Invoke() (*model.UpdateArchiveRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *UpdateArchiveRuleInvoker) Invoke() (*model.UpdateArchiveRuleResponse, e
 
 type ListFindingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFindingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFindingsInvoker) Invoke() (*model.ListFindingsResponse, error) {
@@ -153,6 +201,10 @@ type ShowFindingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFindingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFindingInvoker) Invoke() (*model.ShowFindingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowFindingInvoker) Invoke() (*model.ShowFindingResponse, error) {
 
 type UpdateFindingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateFindingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateFindingsInvoker) Invoke() (*model.UpdateFindingsResponse, error) {
@@ -177,6 +233,10 @@ type CreateAccessPreviewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAccessPreviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAccessPreviewInvoker) Invoke() (*model.CreateAccessPreviewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateAccessPreviewInvoker) Invoke() (*model.CreateAccessPreviewRespons
 
 type ListAccessPreviewFindingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAccessPreviewFindingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAccessPreviewFindingsInvoker) Invoke() (*model.ListAccessPreviewFindingsResponse, error) {
@@ -201,6 +265,10 @@ type ListAccessPreviewsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAccessPreviewsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAccessPreviewsInvoker) Invoke() (*model.ListAccessPreviewsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListAccessPreviewsInvoker) Invoke() (*model.ListAccessPreviewsResponse,
 
 type ShowAccessPreviewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAccessPreviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAccessPreviewInvoker) Invoke() (*model.ShowAccessPreviewResponse, error) {
@@ -225,6 +297,10 @@ type TagResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *TagResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *TagResourceInvoker) Invoke() (*model.TagResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *TagResourceInvoker) Invoke() (*model.TagResourceResponse, error) {
 
 type UntagResourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UntagResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UntagResourceInvoker) Invoke() (*model.UntagResourceResponse, error) {
@@ -249,6 +329,10 @@ type CheckNoNewAccessInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckNoNewAccessInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckNoNewAccessInvoker) Invoke() (*model.CheckNoNewAccessResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CheckNoNewAccessInvoker) Invoke() (*model.CheckNoNewAccessResponse, err
 
 type ValidatePolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ValidatePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ValidatePolicyInvoker) Invoke() (*model.ValidatePolicyResponse, error) {

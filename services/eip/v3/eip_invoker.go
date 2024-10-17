@@ -9,6 +9,10 @@ type ListBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBandwidthInvoker) Invoke() (*model.ListBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ListBandwidthInvoker) Invoke() (*model.ListBandwidthResponse, error) {
 
 type ListBandwidthsLimitInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthsLimitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBandwidthsLimitInvoker) Invoke() (*model.ListBandwidthsLimitResponse, error) {
@@ -33,6 +41,10 @@ type ListCommonPoolsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCommonPoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCommonPoolsInvoker) Invoke() (*model.ListCommonPoolsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListCommonPoolsInvoker) Invoke() (*model.ListCommonPoolsResponse, error
 
 type ListEipBandwidthsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEipBandwidthsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEipBandwidthsInvoker) Invoke() (*model.ListEipBandwidthsResponse, error) {
@@ -57,6 +73,10 @@ type ListPublicBorderGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPublicBorderGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPublicBorderGroupsInvoker) Invoke() (*model.ListPublicBorderGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListPublicBorderGroupsInvoker) Invoke() (*model.ListPublicBorderGroupsR
 
 type ListPublicipPoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPublicipPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPublicipPoolInvoker) Invoke() (*model.ListPublicipPoolResponse, error) {
@@ -81,6 +105,10 @@ type ListShareBandwidthTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListShareBandwidthTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListShareBandwidthTypesInvoker) Invoke() (*model.ListShareBandwidthTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListShareBandwidthTypesInvoker) Invoke() (*model.ListShareBandwidthType
 
 type ShowPublicipPoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicipPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPublicipPoolInvoker) Invoke() (*model.ShowPublicipPoolResponse, error) {
@@ -105,6 +137,10 @@ type ListProjectGeipBindingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectGeipBindingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectGeipBindingsInvoker) Invoke() (*model.ListProjectGeipBindingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListProjectGeipBindingsInvoker) Invoke() (*model.ListProjectGeipBinding
 
 type CreateTenantVpcIgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTenantVpcIgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTenantVpcIgwInvoker) Invoke() (*model.CreateTenantVpcIgwResponse, error) {
@@ -129,6 +169,10 @@ type DeleteTenantVpcIgwInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTenantVpcIgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTenantVpcIgwInvoker) Invoke() (*model.DeleteTenantVpcIgwResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteTenantVpcIgwInvoker) Invoke() (*model.DeleteTenantVpcIgwResponse,
 
 type ListTenantVpcIgwsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTenantVpcIgwsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTenantVpcIgwsInvoker) Invoke() (*model.ListTenantVpcIgwsResponse, error) {
@@ -153,6 +201,10 @@ type ShowInternalVpcIgwInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowInternalVpcIgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowInternalVpcIgwInvoker) Invoke() (*model.ShowInternalVpcIgwResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowInternalVpcIgwInvoker) Invoke() (*model.ShowInternalVpcIgwResponse,
 
 type UpdateTenantVpcIgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTenantVpcIgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTenantVpcIgwInvoker) Invoke() (*model.UpdateTenantVpcIgwResponse, error) {
@@ -177,6 +233,10 @@ type AssociatePublicipsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociatePublicipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociatePublicipsInvoker) Invoke() (*model.AssociatePublicipsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *AssociatePublicipsInvoker) Invoke() (*model.AssociatePublicipsResponse,
 
 type AttachBatchPublicIpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AttachBatchPublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AttachBatchPublicIpInvoker) Invoke() (*model.AttachBatchPublicIpResponse, error) {
@@ -201,6 +265,10 @@ type AttachShareBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AttachShareBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AttachShareBandwidthInvoker) Invoke() (*model.AttachShareBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *AttachShareBandwidthInvoker) Invoke() (*model.AttachShareBandwidthRespo
 
 type CountEipAvailableResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountEipAvailableResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountEipAvailableResourcesInvoker) Invoke() (*model.CountEipAvailableResourcesResponse, error) {
@@ -225,6 +297,10 @@ type DetachBatchPublicIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetachBatchPublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetachBatchPublicIpInvoker) Invoke() (*model.DetachBatchPublicIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DetachBatchPublicIpInvoker) Invoke() (*model.DetachBatchPublicIpRespons
 
 type DetachShareBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetachShareBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetachShareBandwidthInvoker) Invoke() (*model.DetachShareBandwidthResponse, error) {
@@ -249,6 +329,10 @@ type DisableNat64Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisableNat64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisableNat64Invoker) Invoke() (*model.DisableNat64Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DisableNat64Invoker) Invoke() (*model.DisableNat64Response, error) {
 
 type DisassociatePublicipsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociatePublicipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociatePublicipsInvoker) Invoke() (*model.DisassociatePublicipsResponse, error) {
@@ -273,6 +361,10 @@ type EnableNat64Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableNat64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableNat64Invoker) Invoke() (*model.EnableNat64Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *EnableNat64Invoker) Invoke() (*model.EnableNat64Response, error) {
 
 type ListPublicipsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPublicipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPublicipsInvoker) Invoke() (*model.ListPublicipsResponse, error) {
@@ -297,6 +393,10 @@ type ShowPublicipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPublicipInvoker) Invoke() (*model.ShowPublicipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowPublicipInvoker) Invoke() (*model.ShowPublicipResponse, error) {
 
 type UpdatePublicipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePublicipInvoker) Invoke() (*model.UpdatePublicipResponse, error) {

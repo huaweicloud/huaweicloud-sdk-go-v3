@@ -9,6 +9,10 @@ type AddAppIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddAppIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddAppIdInvoker) Invoke() (*model.AddAppIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddAppIdInvoker) Invoke() (*model.AddAppIdResponse, error) {
 
 type AddCorpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddCorpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddCorpInvoker) Invoke() (*model.AddCorpResponse, error) {
@@ -33,6 +41,10 @@ type AddCorpAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddCorpAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddCorpAdminInvoker) Invoke() (*model.AddCorpAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AddCorpAdminInvoker) Invoke() (*model.AddCorpAdminResponse, error) {
 
 type AddDepartmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddDepartmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddDepartmentInvoker) Invoke() (*model.AddDepartmentResponse, error) {
@@ -57,6 +73,10 @@ type AddDeviceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddDeviceInvoker) Invoke() (*model.AddDeviceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *AddDeviceInvoker) Invoke() (*model.AddDeviceResponse, error) {
 
 type AddMaterialInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddMaterialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddMaterialInvoker) Invoke() (*model.AddMaterialResponse, error) {
@@ -81,6 +105,10 @@ type AddProgramInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddProgramInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddProgramInvoker) Invoke() (*model.AddProgramResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *AddProgramInvoker) Invoke() (*model.AddProgramResponse, error) {
 
 type AddPublicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddPublicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddPublicationInvoker) Invoke() (*model.AddPublicationResponse, error) {
@@ -105,6 +137,10 @@ type AddResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddResourceInvoker) Invoke() (*model.AddResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *AddResourceInvoker) Invoke() (*model.AddResourceResponse, error) {
 
 type AddToPersonalSpaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddToPersonalSpaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddToPersonalSpaceInvoker) Invoke() (*model.AddToPersonalSpaceResponse, error) {
@@ -129,6 +169,10 @@ type AddUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddUserInvoker) Invoke() (*model.AddUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *AddUserInvoker) Invoke() (*model.AddUserResponse, error) {
 
 type AllowClientRecordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AllowClientRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AllowClientRecordInvoker) Invoke() (*model.AllowClientRecordResponse, error) {
@@ -153,6 +201,10 @@ type AllowGuestUnmuteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AllowGuestUnmuteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AllowGuestUnmuteInvoker) Invoke() (*model.AllowGuestUnmuteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *AllowGuestUnmuteInvoker) Invoke() (*model.AllowGuestUnmuteResponse, err
 
 type AllowWaitingParticipantInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AllowWaitingParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AllowWaitingParticipantInvoker) Invoke() (*model.AllowWaitingParticipantResponse, error) {
@@ -177,6 +233,10 @@ type AssociateVmrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateVmrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateVmrInvoker) Invoke() (*model.AssociateVmrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *AssociateVmrInvoker) Invoke() (*model.AssociateVmrResponse, error) {
 
 type BatchDeleteCorpAdminsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCorpAdminsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteCorpAdminsInvoker) Invoke() (*model.BatchDeleteCorpAdminsResponse, error) {
@@ -201,6 +265,10 @@ type BatchDeleteDevicesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteDevicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteDevicesInvoker) Invoke() (*model.BatchDeleteDevicesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *BatchDeleteDevicesInvoker) Invoke() (*model.BatchDeleteDevicesResponse,
 
 type BatchDeleteMaterialsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteMaterialsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteMaterialsInvoker) Invoke() (*model.BatchDeleteMaterialsResponse, error) {
@@ -225,6 +297,10 @@ type BatchDeleteProgramsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteProgramsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteProgramsInvoker) Invoke() (*model.BatchDeleteProgramsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *BatchDeleteProgramsInvoker) Invoke() (*model.BatchDeleteProgramsRespons
 
 type BatchDeletePublicationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeletePublicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeletePublicationsInvoker) Invoke() (*model.BatchDeletePublicationsResponse, error) {
@@ -249,6 +329,10 @@ type BatchDeleteUsersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteUsersInvoker) Invoke() (*model.BatchDeleteUsersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *BatchDeleteUsersInvoker) Invoke() (*model.BatchDeleteUsersResponse, err
 
 type BatchHandInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchHandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchHandInvoker) Invoke() (*model.BatchHandResponse, error) {
@@ -273,6 +361,10 @@ type BatchSearchAppIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchSearchAppIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchSearchAppIdInvoker) Invoke() (*model.BatchSearchAppIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *BatchSearchAppIdInvoker) Invoke() (*model.BatchSearchAppIdResponse, err
 
 type BatchShowUserDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchShowUserDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchShowUserDetailsInvoker) Invoke() (*model.BatchShowUserDetailsResponse, error) {
@@ -297,6 +393,10 @@ type BatchUpdateDevicesStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateDevicesStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateDevicesStatusInvoker) Invoke() (*model.BatchUpdateDevicesStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *BatchUpdateDevicesStatusInvoker) Invoke() (*model.BatchUpdateDevicesSta
 
 type BatchUpdateUserStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateUserStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUpdateUserStatusInvoker) Invoke() (*model.BatchUpdateUserStatusResponse, error) {
@@ -321,6 +425,10 @@ type BroadcastParticipantInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BroadcastParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BroadcastParticipantInvoker) Invoke() (*model.BroadcastParticipantResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *BroadcastParticipantInvoker) Invoke() (*model.BroadcastParticipantRespo
 
 type CancelBroadcastInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelBroadcastInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelBroadcastInvoker) Invoke() (*model.CancelBroadcastResponse, error) {
@@ -345,6 +457,10 @@ type CancelMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelMeetingInvoker) Invoke() (*model.CancelMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *CancelMeetingInvoker) Invoke() (*model.CancelMeetingResponse, error) {
 
 type CancelRecurringMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelRecurringMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelRecurringMeetingInvoker) Invoke() (*model.CancelRecurringMeetingResponse, error) {
@@ -369,6 +489,10 @@ type CancelRecurringSubMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelRecurringSubMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelRecurringSubMeetingInvoker) Invoke() (*model.CancelRecurringSubMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *CancelRecurringSubMeetingInvoker) Invoke() (*model.CancelRecurringSubMe
 
 type CheckSlideVerifyCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckSlideVerifyCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckSlideVerifyCodeInvoker) Invoke() (*model.CheckSlideVerifyCodeResponse, error) {
@@ -393,6 +521,10 @@ type CheckTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckTokenInvoker) Invoke() (*model.CheckTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *CheckTokenInvoker) Invoke() (*model.CheckTokenResponse, error) {
 
 type CheckVeriCodeForUpdateUserInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckVeriCodeForUpdateUserInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckVeriCodeForUpdateUserInfoInvoker) Invoke() (*model.CheckVeriCodeForUpdateUserInfoResponse, error) {
@@ -417,6 +553,10 @@ type CheckVerifyCodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckVerifyCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckVerifyCodeInvoker) Invoke() (*model.CheckVerifyCodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *CheckVerifyCodeInvoker) Invoke() (*model.CheckVerifyCodeResponse, error
 
 type CreateAnonymousAuthRandomInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAnonymousAuthRandomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAnonymousAuthRandomInvoker) Invoke() (*model.CreateAnonymousAuthRandomResponse, error) {
@@ -441,6 +585,10 @@ type CreateAuthRandomInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAuthRandomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAuthRandomInvoker) Invoke() (*model.CreateAuthRandomResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *CreateAuthRandomInvoker) Invoke() (*model.CreateAuthRandomResponse, err
 
 type CreateConfTokenInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateConfTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateConfTokenInvoker) Invoke() (*model.CreateConfTokenResponse, error) {
@@ -465,6 +617,10 @@ type CreateMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMeetingInvoker) Invoke() (*model.CreateMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateMeetingInvoker) Invoke() (*model.CreateMeetingResponse, error) {
 
 type CreatePortalRefNonceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePortalRefNonceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePortalRefNonceInvoker) Invoke() (*model.CreatePortalRefNonceResponse, error) {
@@ -489,6 +649,10 @@ type CreateRecurringMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRecurringMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRecurringMeetingInvoker) Invoke() (*model.CreateRecurringMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *CreateRecurringMeetingInvoker) Invoke() (*model.CreateRecurringMeetingR
 
 type CreateVisionActiveCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVisionActiveCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVisionActiveCodeInvoker) Invoke() (*model.CreateVisionActiveCodeResponse, error) {
@@ -513,6 +681,10 @@ type CreateWebSocketTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateWebSocketTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateWebSocketTokenInvoker) Invoke() (*model.CreateWebSocketTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *CreateWebSocketTokenInvoker) Invoke() (*model.CreateWebSocketTokenRespo
 
 type CreateWebinarInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateWebinarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateWebinarInvoker) Invoke() (*model.CreateWebinarResponse, error) {
@@ -537,6 +713,10 @@ type DeleteAppIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAppIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAppIdInvoker) Invoke() (*model.DeleteAppIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *DeleteAppIdInvoker) Invoke() (*model.DeleteAppIdResponse, error) {
 
 type DeleteAttendeesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAttendeesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAttendeesInvoker) Invoke() (*model.DeleteAttendeesResponse, error) {
@@ -561,6 +745,10 @@ type DeleteCorpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCorpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCorpInvoker) Invoke() (*model.DeleteCorpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *DeleteCorpInvoker) Invoke() (*model.DeleteCorpResponse, error) {
 
 type DeleteCorpVmrInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteCorpVmrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteCorpVmrInvoker) Invoke() (*model.DeleteCorpVmrResponse, error) {
@@ -585,6 +777,10 @@ type DeleteDepartmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDepartmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDepartmentInvoker) Invoke() (*model.DeleteDepartmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *DeleteDepartmentInvoker) Invoke() (*model.DeleteDepartmentResponse, err
 
 type DeleteLayoutInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteLayoutInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteLayoutInvoker) Invoke() (*model.DeleteLayoutResponse, error) {
@@ -609,6 +809,10 @@ type DeleteRecordingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRecordingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRecordingsInvoker) Invoke() (*model.DeleteRecordingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *DeleteRecordingsInvoker) Invoke() (*model.DeleteRecordingsResponse, err
 
 type DeleteResourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteResourceInvoker) Invoke() (*model.DeleteResourceResponse, error) {
@@ -633,6 +841,10 @@ type DeleteTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTokenInvoker) Invoke() (*model.DeleteTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *DeleteTokenInvoker) Invoke() (*model.DeleteTokenResponse, error) {
 
 type DeleteVisionActiveCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVisionActiveCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVisionActiveCodeInvoker) Invoke() (*model.DeleteVisionActiveCodeResponse, error) {
@@ -657,6 +873,10 @@ type DeleteWebHookConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteWebHookConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteWebHookConfigInvoker) Invoke() (*model.DeleteWebHookConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *DeleteWebHookConfigInvoker) Invoke() (*model.DeleteWebHookConfigRespons
 
 type DeleteWebinarInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteWebinarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteWebinarInvoker) Invoke() (*model.DeleteWebinarResponse, error) {
@@ -681,6 +905,10 @@ type DisassociateVmrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateVmrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateVmrInvoker) Invoke() (*model.DisassociateVmrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *DisassociateVmrInvoker) Invoke() (*model.DisassociateVmrResponse, error
 
 type HandInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *HandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *HandInvoker) Invoke() (*model.HandResponse, error) {
@@ -705,6 +937,10 @@ type HangUpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *HangUpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *HangUpInvoker) Invoke() (*model.HangUpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *HangUpInvoker) Invoke() (*model.HangUpResponse, error) {
 
 type InviteOperateVideoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *InviteOperateVideoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *InviteOperateVideoInvoker) Invoke() (*model.InviteOperateVideoResponse, error) {
@@ -729,6 +969,10 @@ type InviteParticipantInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *InviteParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *InviteParticipantInvoker) Invoke() (*model.InviteParticipantResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *InviteParticipantInvoker) Invoke() (*model.InviteParticipantResponse, e
 
 type InviteShareInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *InviteShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *InviteShareInvoker) Invoke() (*model.InviteShareResponse, error) {
@@ -753,6 +1001,10 @@ type InviteUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *InviteUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *InviteUserInvoker) Invoke() (*model.InviteUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *InviteUserInvoker) Invoke() (*model.InviteUserResponse, error) {
 
 type InviteWithPwdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *InviteWithPwdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *InviteWithPwdInvoker) Invoke() (*model.InviteWithPwdResponse, error) {
@@ -777,6 +1033,10 @@ type ListHistoryWebinarsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHistoryWebinarsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHistoryWebinarsInvoker) Invoke() (*model.ListHistoryWebinarsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ListHistoryWebinarsInvoker) Invoke() (*model.ListHistoryWebinarsRespons
 
 type ListNetworkQualityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNetworkQualityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNetworkQualityInvoker) Invoke() (*model.ListNetworkQualityResponse, error) {
@@ -801,6 +1065,10 @@ type ListOngoingWebinarsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListOngoingWebinarsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListOngoingWebinarsInvoker) Invoke() (*model.ListOngoingWebinarsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *ListOngoingWebinarsInvoker) Invoke() (*model.ListOngoingWebinarsRespons
 
 type ListUpComingWebinarsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUpComingWebinarsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUpComingWebinarsInvoker) Invoke() (*model.ListUpComingWebinarsResponse, error) {
@@ -825,6 +1097,10 @@ type LiveInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *LiveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *LiveInvoker) Invoke() (*model.LiveResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *LiveInvoker) Invoke() (*model.LiveResponse, error) {
 
 type LockMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *LockMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *LockMeetingInvoker) Invoke() (*model.LockMeetingResponse, error) {
@@ -849,6 +1129,10 @@ type LockViewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *LockViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *LockViewInvoker) Invoke() (*model.LockViewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *LockViewInvoker) Invoke() (*model.LockViewResponse, error) {
 
 type MoveToWaitingRoomInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *MoveToWaitingRoomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *MoveToWaitingRoomInvoker) Invoke() (*model.MoveToWaitingRoomResponse, error) {
@@ -873,6 +1161,10 @@ type MuteMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *MuteMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *MuteMeetingInvoker) Invoke() (*model.MuteMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *MuteMeetingInvoker) Invoke() (*model.MuteMeetingResponse, error) {
 
 type MuteParticipantInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *MuteParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *MuteParticipantInvoker) Invoke() (*model.MuteParticipantResponse, error) {
@@ -897,6 +1193,10 @@ type ProlongMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ProlongMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ProlongMeetingInvoker) Invoke() (*model.ProlongMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *ProlongMeetingInvoker) Invoke() (*model.ProlongMeetingResponse, error) 
 
 type RecordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecordInvoker) Invoke() (*model.RecordResponse, error) {
@@ -921,6 +1225,10 @@ type RenameParticipantInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RenameParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RenameParticipantInvoker) Invoke() (*model.RenameParticipantResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *RenameParticipantInvoker) Invoke() (*model.RenameParticipantResponse, e
 
 type ResetActivecodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetActivecodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetActivecodeInvoker) Invoke() (*model.ResetActivecodeResponse, error) {
@@ -945,6 +1257,10 @@ type ResetAppKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetAppKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetAppKeyInvoker) Invoke() (*model.ResetAppKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -955,6 +1271,10 @@ func (i *ResetAppKeyInvoker) Invoke() (*model.ResetAppKeyResponse, error) {
 
 type ResetPwdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetPwdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetPwdInvoker) Invoke() (*model.ResetPwdResponse, error) {
@@ -969,6 +1289,10 @@ type ResetPwdByAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetPwdByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetPwdByAdminInvoker) Invoke() (*model.ResetPwdByAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -979,6 +1303,10 @@ func (i *ResetPwdByAdminInvoker) Invoke() (*model.ResetPwdByAdminResponse, error
 
 type ResetVisionActiveCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetVisionActiveCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetVisionActiveCodeInvoker) Invoke() (*model.ResetVisionActiveCodeResponse, error) {
@@ -993,6 +1321,10 @@ type ResumeSimultaneousInterpretationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResumeSimultaneousInterpretationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResumeSimultaneousInterpretationInvoker) Invoke() (*model.ResumeSimultaneousInterpretationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1003,6 +1335,10 @@ func (i *ResumeSimultaneousInterpretationInvoker) Invoke() (*model.ResumeSimulta
 
 type RollcallParticipantInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RollcallParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RollcallParticipantInvoker) Invoke() (*model.RollcallParticipantResponse, error) {
@@ -1017,6 +1353,10 @@ type SaveLayoutInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SaveLayoutInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SaveLayoutInvoker) Invoke() (*model.SaveLayoutResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1027,6 +1367,10 @@ func (i *SaveLayoutInvoker) Invoke() (*model.SaveLayoutResponse, error) {
 
 type SearchAttendanceRecordsOfHisMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchAttendanceRecordsOfHisMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchAttendanceRecordsOfHisMeetingInvoker) Invoke() (*model.SearchAttendanceRecordsOfHisMeetingResponse, error) {
@@ -1041,6 +1385,10 @@ type SearchCorpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchCorpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchCorpInvoker) Invoke() (*model.SearchCorpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1051,6 +1399,10 @@ func (i *SearchCorpInvoker) Invoke() (*model.SearchCorpResponse, error) {
 
 type SearchCorpAdminsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchCorpAdminsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchCorpAdminsInvoker) Invoke() (*model.SearchCorpAdminsResponse, error) {
@@ -1065,6 +1417,10 @@ type SearchCorpDirInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchCorpDirInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchCorpDirInvoker) Invoke() (*model.SearchCorpDirResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1075,6 +1431,10 @@ func (i *SearchCorpDirInvoker) Invoke() (*model.SearchCorpDirResponse, error) {
 
 type SearchCorpExternalDirInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchCorpExternalDirInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchCorpExternalDirInvoker) Invoke() (*model.SearchCorpExternalDirResponse, error) {
@@ -1089,6 +1449,10 @@ type SearchCorpResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchCorpResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchCorpResourcesInvoker) Invoke() (*model.SearchCorpResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1099,6 +1463,10 @@ func (i *SearchCorpResourcesInvoker) Invoke() (*model.SearchCorpResourcesRespons
 
 type SearchCorpVmrInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchCorpVmrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchCorpVmrInvoker) Invoke() (*model.SearchCorpVmrResponse, error) {
@@ -1113,6 +1481,10 @@ type SearchCtlRecordsOfHisMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchCtlRecordsOfHisMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchCtlRecordsOfHisMeetingInvoker) Invoke() (*model.SearchCtlRecordsOfHisMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1123,6 +1495,10 @@ func (i *SearchCtlRecordsOfHisMeetingInvoker) Invoke() (*model.SearchCtlRecordsO
 
 type SearchDepartmentByNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchDepartmentByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchDepartmentByNameInvoker) Invoke() (*model.SearchDepartmentByNameResponse, error) {
@@ -1137,6 +1513,10 @@ type SearchDevicesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchDevicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchDevicesInvoker) Invoke() (*model.SearchDevicesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1147,6 +1527,10 @@ func (i *SearchDevicesInvoker) Invoke() (*model.SearchDevicesResponse, error) {
 
 type SearchHisMeetingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchHisMeetingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchHisMeetingsInvoker) Invoke() (*model.SearchHisMeetingsResponse, error) {
@@ -1161,6 +1545,10 @@ type SearchMaterialsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchMaterialsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchMaterialsInvoker) Invoke() (*model.SearchMaterialsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1171,6 +1559,10 @@ func (i *SearchMaterialsInvoker) Invoke() (*model.SearchMaterialsResponse, error
 
 type SearchMeetingFileListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchMeetingFileListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchMeetingFileListInvoker) Invoke() (*model.SearchMeetingFileListResponse, error) {
@@ -1185,6 +1577,10 @@ type SearchMeetingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchMeetingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchMeetingsInvoker) Invoke() (*model.SearchMeetingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1195,6 +1591,10 @@ func (i *SearchMeetingsInvoker) Invoke() (*model.SearchMeetingsResponse, error) 
 
 type SearchMemberVmrInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchMemberVmrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchMemberVmrInvoker) Invoke() (*model.SearchMemberVmrResponse, error) {
@@ -1209,6 +1609,10 @@ type SearchOnlineMeetingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchOnlineMeetingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchOnlineMeetingsInvoker) Invoke() (*model.SearchOnlineMeetingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1219,6 +1623,10 @@ func (i *SearchOnlineMeetingsInvoker) Invoke() (*model.SearchOnlineMeetingsRespo
 
 type SearchProgramsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchProgramsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchProgramsInvoker) Invoke() (*model.SearchProgramsResponse, error) {
@@ -1233,6 +1641,10 @@ type SearchPublicationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchPublicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchPublicationsInvoker) Invoke() (*model.SearchPublicationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1243,6 +1655,10 @@ func (i *SearchPublicationsInvoker) Invoke() (*model.SearchPublicationsResponse,
 
 type SearchRecordingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchRecordingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchRecordingsInvoker) Invoke() (*model.SearchRecordingsResponse, error) {
@@ -1257,6 +1673,10 @@ type SearchResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchResourceInvoker) Invoke() (*model.SearchResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1267,6 +1687,10 @@ func (i *SearchResourceInvoker) Invoke() (*model.SearchResourceResponse, error) 
 
 type SearchResourceOpRecordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchResourceOpRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchResourceOpRecordInvoker) Invoke() (*model.SearchResourceOpRecordResponse, error) {
@@ -1281,6 +1705,10 @@ type SearchUsersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchUsersInvoker) Invoke() (*model.SearchUsersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1291,6 +1719,10 @@ func (i *SearchUsersInvoker) Invoke() (*model.SearchUsersResponse, error) {
 
 type SearchVisionActiveCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchVisionActiveCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchVisionActiveCodeInvoker) Invoke() (*model.SearchVisionActiveCodeResponse, error) {
@@ -1305,6 +1737,10 @@ type SendSlideVerifyCodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SendSlideVerifyCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SendSlideVerifyCodeInvoker) Invoke() (*model.SendSlideVerifyCodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1315,6 +1751,10 @@ func (i *SendSlideVerifyCodeInvoker) Invoke() (*model.SendSlideVerifyCodeRespons
 
 type SendVeriCodeForChangePwdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SendVeriCodeForChangePwdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SendVeriCodeForChangePwdInvoker) Invoke() (*model.SendVeriCodeForChangePwdResponse, error) {
@@ -1329,6 +1769,10 @@ type SendVeriCodeForUpdateUserInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SendVeriCodeForUpdateUserInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SendVeriCodeForUpdateUserInfoInvoker) Invoke() (*model.SendVeriCodeForUpdateUserInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1339,6 +1783,10 @@ func (i *SendVeriCodeForUpdateUserInfoInvoker) Invoke() (*model.SendVeriCodeForU
 
 type SetAttendeeLanChannelInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetAttendeeLanChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetAttendeeLanChannelInvoker) Invoke() (*model.SetAttendeeLanChannelResponse, error) {
@@ -1353,6 +1801,10 @@ type SetCohostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetCohostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetCohostInvoker) Invoke() (*model.SetCohostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1363,6 +1815,10 @@ func (i *SetCohostInvoker) Invoke() (*model.SetCohostResponse, error) {
 
 type SetCustomMultiPictureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetCustomMultiPictureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetCustomMultiPictureInvoker) Invoke() (*model.SetCustomMultiPictureResponse, error) {
@@ -1377,6 +1833,10 @@ type SetHostViewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetHostViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetHostViewInvoker) Invoke() (*model.SetHostViewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1387,6 +1847,10 @@ func (i *SetHostViewInvoker) Invoke() (*model.SetHostViewResponse, error) {
 
 type SetInterpreterGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetInterpreterGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetInterpreterGroupInvoker) Invoke() (*model.SetInterpreterGroupResponse, error) {
@@ -1401,6 +1865,10 @@ type SetMultiPictureInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetMultiPictureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetMultiPictureInvoker) Invoke() (*model.SetMultiPictureResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1411,6 +1879,10 @@ func (i *SetMultiPictureInvoker) Invoke() (*model.SetMultiPictureResponse, error
 
 type SetParticipantViewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetParticipantViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetParticipantViewInvoker) Invoke() (*model.SetParticipantViewResponse, error) {
@@ -1425,6 +1897,10 @@ type SetProfileImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetProfileImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetProfileImageInvoker) Invoke() (*model.SetProfileImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1435,6 +1911,10 @@ func (i *SetProfileImageInvoker) Invoke() (*model.SetProfileImageResponse, error
 
 type SetRoleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetRoleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetRoleInvoker) Invoke() (*model.SetRoleResponse, error) {
@@ -1449,6 +1929,10 @@ type SetSsoConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetSsoConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetSsoConfigInvoker) Invoke() (*model.SetSsoConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1459,6 +1943,10 @@ func (i *SetSsoConfigInvoker) Invoke() (*model.SetSsoConfigResponse, error) {
 
 type SetUserProfileImageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetUserProfileImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetUserProfileImageInvoker) Invoke() (*model.SetUserProfileImageResponse, error) {
@@ -1473,6 +1961,10 @@ type SetWebHookConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetWebHookConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetWebHookConfigInvoker) Invoke() (*model.SetWebHookConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1483,6 +1975,10 @@ func (i *SetWebHookConfigInvoker) Invoke() (*model.SetWebHookConfigResponse, err
 
 type ShowConfOrgInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowConfOrgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowConfOrgInvoker) Invoke() (*model.ShowConfOrgResponse, error) {
@@ -1497,6 +1993,10 @@ type ShowCorpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCorpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCorpInvoker) Invoke() (*model.ShowCorpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1507,6 +2007,10 @@ func (i *ShowCorpInvoker) Invoke() (*model.ShowCorpResponse, error) {
 
 type ShowCorpAdminInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCorpAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCorpAdminInvoker) Invoke() (*model.ShowCorpAdminResponse, error) {
@@ -1521,6 +2025,10 @@ type ShowCorpBasicInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCorpBasicInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCorpBasicInfoInvoker) Invoke() (*model.ShowCorpBasicInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1531,6 +2039,10 @@ func (i *ShowCorpBasicInfoInvoker) Invoke() (*model.ShowCorpBasicInfoResponse, e
 
 type ShowCorpResourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCorpResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCorpResourceInvoker) Invoke() (*model.ShowCorpResourceResponse, error) {
@@ -1545,6 +2057,10 @@ type ShowDepartmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDepartmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDepartmentInvoker) Invoke() (*model.ShowDepartmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1555,6 +2071,10 @@ func (i *ShowDepartmentInvoker) Invoke() (*model.ShowDepartmentResponse, error) 
 
 type ShowDeptAndChildDeptInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDeptAndChildDeptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDeptAndChildDeptInvoker) Invoke() (*model.ShowDeptAndChildDeptResponse, error) {
@@ -1569,6 +2089,10 @@ type ShowDeviceDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDeviceDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDeviceDetailInvoker) Invoke() (*model.ShowDeviceDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1579,6 +2103,10 @@ func (i *ShowDeviceDetailInvoker) Invoke() (*model.ShowDeviceDetailResponse, err
 
 type ShowDeviceStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDeviceStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDeviceStatusInvoker) Invoke() (*model.ShowDeviceStatusResponse, error) {
@@ -1593,6 +2121,10 @@ type ShowDeviceTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDeviceTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDeviceTypesInvoker) Invoke() (*model.ShowDeviceTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1603,6 +2135,10 @@ func (i *ShowDeviceTypesInvoker) Invoke() (*model.ShowDeviceTypesResponse, error
 
 type ShowHisMeetingDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowHisMeetingDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowHisMeetingDetailInvoker) Invoke() (*model.ShowHisMeetingDetailResponse, error) {
@@ -1617,6 +2153,10 @@ type ShowLayoutInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowLayoutInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowLayoutInvoker) Invoke() (*model.ShowLayoutResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1627,6 +2167,10 @@ func (i *ShowLayoutInvoker) Invoke() (*model.ShowLayoutResponse, error) {
 
 type ShowMeetingDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMeetingDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMeetingDetailInvoker) Invoke() (*model.ShowMeetingDetailResponse, error) {
@@ -1641,6 +2185,10 @@ type ShowMeetingFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMeetingFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMeetingFileInvoker) Invoke() (*model.ShowMeetingFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1651,6 +2199,10 @@ func (i *ShowMeetingFileInvoker) Invoke() (*model.ShowMeetingFileResponse, error
 
 type ShowMeetingFileListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMeetingFileListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMeetingFileListInvoker) Invoke() (*model.ShowMeetingFileListResponse, error) {
@@ -1665,6 +2217,10 @@ type ShowMyInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMyInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMyInfoInvoker) Invoke() (*model.ShowMyInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1675,6 +2231,10 @@ func (i *ShowMyInfoInvoker) Invoke() (*model.ShowMyInfoResponse, error) {
 
 type ShowOnlineMeetingDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOnlineMeetingDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOnlineMeetingDetailInvoker) Invoke() (*model.ShowOnlineMeetingDetailResponse, error) {
@@ -1689,6 +2249,10 @@ type ShowOrgResInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowOrgResInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowOrgResInvoker) Invoke() (*model.ShowOrgResResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1699,6 +2263,10 @@ func (i *ShowOrgResInvoker) Invoke() (*model.ShowOrgResResponse, error) {
 
 type ShowProgramInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowProgramInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowProgramInvoker) Invoke() (*model.ShowProgramResponse, error) {
@@ -1713,6 +2281,10 @@ type ShowPublicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPublicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPublicationInvoker) Invoke() (*model.ShowPublicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1723,6 +2295,10 @@ func (i *ShowPublicationInvoker) Invoke() (*model.ShowPublicationResponse, error
 
 type ShowRealTimeInfoOfMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRealTimeInfoOfMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRealTimeInfoOfMeetingInvoker) Invoke() (*model.ShowRealTimeInfoOfMeetingResponse, error) {
@@ -1737,6 +2313,10 @@ type ShowRecordInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRecordInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRecordInfoInvoker) Invoke() (*model.ShowRecordInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1747,6 +2327,10 @@ func (i *ShowRecordInfoInvoker) Invoke() (*model.ShowRecordInfoResponse, error) 
 
 type ShowRecordingDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordingDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRecordingDetailInvoker) Invoke() (*model.ShowRecordingDetailResponse, error) {
@@ -1761,6 +2345,10 @@ type ShowRecordingFileDownloadUrlsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRecordingFileDownloadUrlsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRecordingFileDownloadUrlsInvoker) Invoke() (*model.ShowRecordingFileDownloadUrlsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1771,6 +2359,10 @@ func (i *ShowRecordingFileDownloadUrlsInvoker) Invoke() (*model.ShowRecordingFil
 
 type ShowRegionInfoOfMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRegionInfoOfMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRegionInfoOfMeetingInvoker) Invoke() (*model.ShowRegionInfoOfMeetingResponse, error) {
@@ -1785,6 +2377,10 @@ type ShowRoomSettingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRoomSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRoomSettingInvoker) Invoke() (*model.ShowRoomSettingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1795,6 +2391,10 @@ func (i *ShowRoomSettingInvoker) Invoke() (*model.ShowRoomSettingResponse, error
 
 type ShowSpResInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSpResInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSpResInvoker) Invoke() (*model.ShowSpResResponse, error) {
@@ -1809,6 +2409,10 @@ type ShowSpResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSpResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSpResourceInvoker) Invoke() (*model.ShowSpResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1819,6 +2423,10 @@ func (i *ShowSpResourceInvoker) Invoke() (*model.ShowSpResourceResponse, error) 
 
 type ShowSsoConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSsoConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSsoConfigInvoker) Invoke() (*model.ShowSsoConfigResponse, error) {
@@ -1833,6 +2441,10 @@ type ShowUserDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserDetailInvoker) Invoke() (*model.ShowUserDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1843,6 +2455,10 @@ func (i *ShowUserDetailInvoker) Invoke() (*model.ShowUserDetailResponse, error) 
 
 type ShowWebHookConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowWebHookConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowWebHookConfigInvoker) Invoke() (*model.ShowWebHookConfigResponse, error) {
@@ -1857,6 +2473,10 @@ type ShowWebinarInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowWebinarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowWebinarInvoker) Invoke() (*model.ShowWebinarResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1867,6 +2487,10 @@ func (i *ShowWebinarInvoker) Invoke() (*model.ShowWebinarResponse, error) {
 
 type StartMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartMeetingInvoker) Invoke() (*model.StartMeetingResponse, error) {
@@ -1881,6 +2505,10 @@ type StopMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopMeetingInvoker) Invoke() (*model.StopMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1891,6 +2519,10 @@ func (i *StopMeetingInvoker) Invoke() (*model.StopMeetingResponse, error) {
 
 type SwitchModeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SwitchModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SwitchModeInvoker) Invoke() (*model.SwitchModeResponse, error) {
@@ -1905,6 +2537,10 @@ type UpdateAppIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAppIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAppIdInvoker) Invoke() (*model.UpdateAppIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1915,6 +2551,10 @@ func (i *UpdateAppIdInvoker) Invoke() (*model.UpdateAppIdResponse, error) {
 
 type UpdateContactInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateContactInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateContactInvoker) Invoke() (*model.UpdateContactResponse, error) {
@@ -1929,6 +2569,10 @@ type UpdateCorpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateCorpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateCorpInvoker) Invoke() (*model.UpdateCorpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1939,6 +2583,10 @@ func (i *UpdateCorpInvoker) Invoke() (*model.UpdateCorpResponse, error) {
 
 type UpdateCorpBasicInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateCorpBasicInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateCorpBasicInfoInvoker) Invoke() (*model.UpdateCorpBasicInfoResponse, error) {
@@ -1953,6 +2601,10 @@ type UpdateDepartmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDepartmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDepartmentInvoker) Invoke() (*model.UpdateDepartmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1963,6 +2615,10 @@ func (i *UpdateDepartmentInvoker) Invoke() (*model.UpdateDepartmentResponse, err
 
 type UpdateDeviceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDeviceInvoker) Invoke() (*model.UpdateDeviceResponse, error) {
@@ -1977,6 +2633,10 @@ type UpdateMaterialInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMaterialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMaterialInvoker) Invoke() (*model.UpdateMaterialResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1987,6 +2647,10 @@ func (i *UpdateMaterialInvoker) Invoke() (*model.UpdateMaterialResponse, error) 
 
 type UpdateMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateMeetingInvoker) Invoke() (*model.UpdateMeetingResponse, error) {
@@ -2001,6 +2665,10 @@ type UpdateMemberVmrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMemberVmrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMemberVmrInvoker) Invoke() (*model.UpdateMemberVmrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2011,6 +2679,10 @@ func (i *UpdateMemberVmrInvoker) Invoke() (*model.UpdateMemberVmrResponse, error
 
 type UpdateMyInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateMyInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateMyInfoInvoker) Invoke() (*model.UpdateMyInfoResponse, error) {
@@ -2025,6 +2697,10 @@ type UpdateProgramInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateProgramInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateProgramInvoker) Invoke() (*model.UpdateProgramResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2035,6 +2711,10 @@ func (i *UpdateProgramInvoker) Invoke() (*model.UpdateProgramResponse, error) {
 
 type UpdatePublicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePublicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePublicationInvoker) Invoke() (*model.UpdatePublicationResponse, error) {
@@ -2049,6 +2729,10 @@ type UpdatePwdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePwdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePwdInvoker) Invoke() (*model.UpdatePwdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2059,6 +2743,10 @@ func (i *UpdatePwdInvoker) Invoke() (*model.UpdatePwdResponse, error) {
 
 type UpdateRecurringMeetingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecurringMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateRecurringMeetingInvoker) Invoke() (*model.UpdateRecurringMeetingResponse, error) {
@@ -2073,6 +2761,10 @@ type UpdateRecurringSubMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRecurringSubMeetingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRecurringSubMeetingInvoker) Invoke() (*model.UpdateRecurringSubMeetingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2083,6 +2775,10 @@ func (i *UpdateRecurringSubMeetingInvoker) Invoke() (*model.UpdateRecurringSubMe
 
 type UpdateResourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateResourceInvoker) Invoke() (*model.UpdateResourceResponse, error) {
@@ -2097,6 +2793,10 @@ type UpdateRoomSettingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRoomSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRoomSettingInvoker) Invoke() (*model.UpdateRoomSettingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2107,6 +2807,10 @@ func (i *UpdateRoomSettingInvoker) Invoke() (*model.UpdateRoomSettingResponse, e
 
 type UpdateStartedConfConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateStartedConfConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateStartedConfConfigInvoker) Invoke() (*model.UpdateStartedConfConfigResponse, error) {
@@ -2121,6 +2825,10 @@ type UpdateTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTokenInvoker) Invoke() (*model.UpdateTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2131,6 +2839,10 @@ func (i *UpdateTokenInvoker) Invoke() (*model.UpdateTokenResponse, error) {
 
 type UpdateUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
@@ -2145,6 +2857,10 @@ type UpdateWebHookConfigStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateWebHookConfigStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateWebHookConfigStatusInvoker) Invoke() (*model.UpdateWebHookConfigStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2155,6 +2871,10 @@ func (i *UpdateWebHookConfigStatusInvoker) Invoke() (*model.UpdateWebHookConfigS
 
 type UpdateWebinarInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateWebinarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateWebinarInvoker) Invoke() (*model.UpdateWebinarResponse, error) {
@@ -2169,6 +2889,10 @@ type UploadFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadFileInvoker) Invoke() (*model.UploadFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2179,6 +2903,10 @@ func (i *UploadFileInvoker) Invoke() (*model.UploadFileResponse, error) {
 
 type SearchQosHistoryMeetingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchQosHistoryMeetingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchQosHistoryMeetingsInvoker) Invoke() (*model.SearchQosHistoryMeetingsResponse, error) {
@@ -2193,6 +2921,10 @@ type SearchQosOnlineMeetingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchQosOnlineMeetingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchQosOnlineMeetingsInvoker) Invoke() (*model.SearchQosOnlineMeetingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2203,6 +2935,10 @@ func (i *SearchQosOnlineMeetingsInvoker) Invoke() (*model.SearchQosOnlineMeeting
 
 type SearchQosParticipantDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchQosParticipantDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchQosParticipantDetailInvoker) Invoke() (*model.SearchQosParticipantDetailResponse, error) {
@@ -2217,6 +2953,10 @@ type SearchQosParticipantsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchQosParticipantsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchQosParticipantsInvoker) Invoke() (*model.SearchQosParticipantsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2227,6 +2967,10 @@ func (i *SearchQosParticipantsInvoker) Invoke() (*model.SearchQosParticipantsRes
 
 type SetQosThresholdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetQosThresholdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetQosThresholdInvoker) Invoke() (*model.SetQosThresholdResponse, error) {
@@ -2241,6 +2985,10 @@ type ShowQosThresholdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowQosThresholdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowQosThresholdInvoker) Invoke() (*model.ShowQosThresholdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2251,6 +2999,10 @@ func (i *ShowQosThresholdInvoker) Invoke() (*model.ShowQosThresholdResponse, err
 
 type SearchStatisticConferenceInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchStatisticConferenceInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchStatisticConferenceInfoInvoker) Invoke() (*model.SearchStatisticConferenceInfoResponse, error) {
@@ -2265,6 +3017,10 @@ type SearchStatisticConferenceParticipantInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchStatisticConferenceParticipantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchStatisticConferenceParticipantInvoker) Invoke() (*model.SearchStatisticConferenceParticipantResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2277,6 +3033,10 @@ type SearchStatisticResourceInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchStatisticResourceInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchStatisticResourceInfoInvoker) Invoke() (*model.SearchStatisticResourceInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2287,6 +3047,10 @@ func (i *SearchStatisticResourceInfoInvoker) Invoke() (*model.SearchStatisticRes
 
 type SearchStatisticUserInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchStatisticUserInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchStatisticUserInfoInvoker) Invoke() (*model.SearchStatisticUserInfoResponse, error) {

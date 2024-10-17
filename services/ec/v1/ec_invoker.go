@@ -9,6 +9,10 @@ type CreateEcnAccessPointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEcnAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEcnAccessPointInvoker) Invoke() (*model.CreateEcnAccessPointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateEcnAccessPointInvoker) Invoke() (*model.CreateEcnAccessPointRespo
 
 type DeleteEcnAccessPointInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEcnAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEcnAccessPointInvoker) Invoke() (*model.DeleteEcnAccessPointResponse, error) {
@@ -33,6 +41,10 @@ type ListEcnAccessPointByEcnIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEcnAccessPointByEcnIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEcnAccessPointByEcnIdInvoker) Invoke() (*model.ListEcnAccessPointByEcnIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListEcnAccessPointByEcnIdInvoker) Invoke() (*model.ListEcnAccessPointBy
 
 type UpdateEcnAccessPointInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEcnAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEcnAccessPointInvoker) Invoke() (*model.UpdateEcnAccessPointResponse, error) {
@@ -57,6 +73,10 @@ type AddEcnWithIegInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddEcnWithIegInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddEcnWithIegInvoker) Invoke() (*model.AddEcnWithIegResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *AddEcnWithIegInvoker) Invoke() (*model.AddEcnWithIegResponse, error) {
 
 type DeleteEcnWithIegInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEcnWithIegInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEcnWithIegInvoker) Invoke() (*model.DeleteEcnWithIegResponse, error) {
@@ -81,6 +105,10 @@ type ListEcnInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEcnInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEcnInvoker) Invoke() (*model.ListEcnResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListEcnInvoker) Invoke() (*model.ListEcnResponse, error) {
 
 type ListEcnWithIegInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEcnWithIegInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEcnWithIegInvoker) Invoke() (*model.ListEcnWithIegResponse, error) {
@@ -105,6 +137,10 @@ type ShowEcnInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEcnInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEcnInfoInvoker) Invoke() (*model.ShowEcnInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowEcnInfoInvoker) Invoke() (*model.ShowEcnInfoResponse, error) {
 
 type ShowEcnWithIegInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEcnWithIegInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEcnWithIegInvoker) Invoke() (*model.ShowEcnWithIegResponse, error) {
@@ -129,6 +169,10 @@ type UpdateEcnInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEcnInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEcnInvoker) Invoke() (*model.UpdateEcnResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *UpdateEcnInvoker) Invoke() (*model.UpdateEcnResponse, error) {
 
 type CreateEquipmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEquipmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEquipmentInvoker) Invoke() (*model.CreateEquipmentResponse, error) {
@@ -153,6 +201,10 @@ type DeleteEquipmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEquipmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEquipmentInvoker) Invoke() (*model.DeleteEquipmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteEquipmentInvoker) Invoke() (*model.DeleteEquipmentResponse, error
 
 type GenerateInitialConfigurationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GenerateInitialConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GenerateInitialConfigurationInvoker) Invoke() (*model.GenerateInitialConfigurationResponse, error) {
@@ -177,6 +233,10 @@ type ListEquipmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEquipmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEquipmentsInvoker) Invoke() (*model.ListEquipmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListEquipmentsInvoker) Invoke() (*model.ListEquipmentsResponse, error) 
 
 type RebootEquipmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RebootEquipmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RebootEquipmentInvoker) Invoke() (*model.RebootEquipmentResponse, error) {
@@ -201,6 +265,10 @@ type ShowEquipmentInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEquipmentInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEquipmentInfoInvoker) Invoke() (*model.ShowEquipmentInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowEquipmentInfoInvoker) Invoke() (*model.ShowEquipmentInfoResponse, e
 
 type ShowEquipmentSpecificConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentSpecificConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEquipmentSpecificConfigInvoker) Invoke() (*model.ShowEquipmentSpecificConfigResponse, error) {
@@ -225,6 +297,10 @@ type UpdateEquipmentEsnInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEquipmentEsnInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEquipmentEsnInvoker) Invoke() (*model.UpdateEquipmentEsnResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *UpdateEquipmentEsnInvoker) Invoke() (*model.UpdateEquipmentEsnResponse,
 
 type UpdateEquipmentInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEquipmentInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEquipmentInfoInvoker) Invoke() (*model.UpdateEquipmentInfoResponse, error) {
@@ -249,6 +329,10 @@ type CreateEquipmentLanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEquipmentLanConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEquipmentLanConfigInvoker) Invoke() (*model.CreateEquipmentLanConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CreateEquipmentLanConfigInvoker) Invoke() (*model.CreateEquipmentLanCon
 
 type DeleteEquipmentLanConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEquipmentLanConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEquipmentLanConfigInvoker) Invoke() (*model.DeleteEquipmentLanConfigResponse, error) {
@@ -273,6 +361,10 @@ type ListEquipmentInterfaceNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEquipmentInterfaceNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEquipmentInterfaceNameInvoker) Invoke() (*model.ListEquipmentInterfaceNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListEquipmentInterfaceNameInvoker) Invoke() (*model.ListEquipmentInterf
 
 type ShowEquipmentDnsInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentDnsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEquipmentDnsInfoInvoker) Invoke() (*model.ShowEquipmentDnsInfoResponse, error) {
@@ -297,6 +393,10 @@ type ShowEquipmentLanInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEquipmentLanInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEquipmentLanInfoInvoker) Invoke() (*model.ShowEquipmentLanInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowEquipmentLanInfoInvoker) Invoke() (*model.ShowEquipmentLanInfoRespo
 
 type UpdateEquipmentDnsInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEquipmentDnsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEquipmentDnsInfoInvoker) Invoke() (*model.UpdateEquipmentDnsInfoResponse, error) {
@@ -321,6 +425,10 @@ type UpdateEquipmentLanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEquipmentLanConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEquipmentLanConfigInvoker) Invoke() (*model.UpdateEquipmentLanConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UpdateEquipmentLanConfigInvoker) Invoke() (*model.UpdateEquipmentLanCon
 
 type ShowEquipmentOspfInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentOspfInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEquipmentOspfInvoker) Invoke() (*model.ShowEquipmentOspfResponse, error) {
@@ -345,6 +457,10 @@ type UpdateEquipmentOspfInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEquipmentOspfInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEquipmentOspfInvoker) Invoke() (*model.UpdateEquipmentOspfResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *UpdateEquipmentOspfInvoker) Invoke() (*model.UpdateEquipmentOspfRespons
 
 type CreateEquipmentStaticRouteConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEquipmentStaticRouteConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEquipmentStaticRouteConfigInvoker) Invoke() (*model.CreateEquipmentStaticRouteConfigResponse, error) {
@@ -369,6 +489,10 @@ type DeleteEquipmentStaticRouteConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEquipmentStaticRouteConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEquipmentStaticRouteConfigInvoker) Invoke() (*model.DeleteEquipmentStaticRouteConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *DeleteEquipmentStaticRouteConfigInvoker) Invoke() (*model.DeleteEquipme
 
 type ShowEquipmentStaticRouteInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentStaticRouteInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEquipmentStaticRouteInfoInvoker) Invoke() (*model.ShowEquipmentStaticRouteInfoResponse, error) {
@@ -393,6 +521,10 @@ type UpdateEquipmentStaticRouteConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEquipmentStaticRouteConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEquipmentStaticRouteConfigInvoker) Invoke() (*model.UpdateEquipmentStaticRouteConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *UpdateEquipmentStaticRouteConfigInvoker) Invoke() (*model.UpdateEquipme
 
 type ShowEquipmentWanInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentWanInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEquipmentWanInfoInvoker) Invoke() (*model.ShowEquipmentWanInfoResponse, error) {
@@ -417,6 +553,10 @@ type UpdateEquipmentWanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEquipmentWanConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEquipmentWanConfigInvoker) Invoke() (*model.UpdateEquipmentWanConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *UpdateEquipmentWanConfigInvoker) Invoke() (*model.UpdateEquipmentWanCon
 
 type ShowEquipmentWlanInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEquipmentWlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEquipmentWlanInvoker) Invoke() (*model.ShowEquipmentWlanResponse, error) {
@@ -441,6 +585,10 @@ type UpdateEquipmentWlanInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEquipmentWlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEquipmentWlanInvoker) Invoke() (*model.UpdateEquipmentWlanResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *UpdateEquipmentWlanInvoker) Invoke() (*model.UpdateEquipmentWlanRespons
 
 type AddEcnWithErInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddEcnWithErInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddEcnWithErInvoker) Invoke() (*model.AddEcnWithErResponse, error) {
@@ -465,6 +617,10 @@ type DeleteEcnWithErInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEcnWithErInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEcnWithErInvoker) Invoke() (*model.DeleteEcnWithErResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *DeleteEcnWithErInvoker) Invoke() (*model.DeleteEcnWithErResponse, error
 
 type ListEcnWithErInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEcnWithErInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEcnWithErInvoker) Invoke() (*model.ListEcnWithErResponse, error) {
@@ -489,6 +649,10 @@ type ChangeIegPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeIegPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeIegPasswordInvoker) Invoke() (*model.ChangeIegPasswordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ChangeIegPasswordInvoker) Invoke() (*model.ChangeIegPasswordResponse, e
 
 type ListIegInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListIegInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListIegInvoker) Invoke() (*model.ListIegResponse, error) {
@@ -513,6 +681,10 @@ type ShowIegInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowIegInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowIegInfoInvoker) Invoke() (*model.ShowIegInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ShowIegInfoInvoker) Invoke() (*model.ShowIegInfoResponse, error) {
 
 type SwitchEquipmentHaTypeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SwitchEquipmentHaTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SwitchEquipmentHaTypeInvoker) Invoke() (*model.SwitchEquipmentHaTypeResponse, error) {
@@ -537,6 +713,10 @@ type UpdateIegInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateIegInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateIegInvoker) Invoke() (*model.UpdateIegResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateIegInvoker) Invoke() (*model.UpdateIegResponse, error) {
 
 type ShowQuotasInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotasInfoInvoker) Invoke() (*model.ShowQuotasInfoResponse, error) {
@@ -561,6 +745,10 @@ type AddEcnWithVpcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddEcnWithVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddEcnWithVpcInvoker) Invoke() (*model.AddEcnWithVpcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *AddEcnWithVpcInvoker) Invoke() (*model.AddEcnWithVpcResponse, error) {
 
 type DeleteEcnWithVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEcnWithVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEcnWithVpcInvoker) Invoke() (*model.DeleteEcnWithVpcResponse, error) {
@@ -585,6 +777,10 @@ type ListEcnWithVpcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEcnWithVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEcnWithVpcInvoker) Invoke() (*model.ListEcnWithVpcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListEcnWithVpcInvoker) Invoke() (*model.ListEcnWithVpcResponse, error) 
 
 type UpdateEcnWithVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEcnWithVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEcnWithVpcInvoker) Invoke() (*model.UpdateEcnWithVpcResponse, error) {
@@ -609,6 +809,10 @@ type AddVrrpConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddVrrpConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddVrrpConfigInvoker) Invoke() (*model.AddVrrpConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *AddVrrpConfigInvoker) Invoke() (*model.AddVrrpConfigResponse, error) {
 
 type DeleteVrrpConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVrrpConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVrrpConfigInvoker) Invoke() (*model.DeleteVrrpConfigResponse, error) {
@@ -633,6 +841,10 @@ type ShowVrrpConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVrrpConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVrrpConfigInvoker) Invoke() (*model.ShowVrrpConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ShowVrrpConfigInvoker) Invoke() (*model.ShowVrrpConfigResponse, error) 
 
 type UpdateVrrpConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVrrpConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVrrpConfigInvoker) Invoke() (*model.UpdateVrrpConfigResponse, error) {

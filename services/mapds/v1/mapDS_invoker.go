@@ -9,6 +9,10 @@ type CreateCredentialInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCredentialInvoker) Invoke() (*model.CreateCredentialResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateCredentialInvoker) Invoke() (*model.CreateCredentialResponse, err
 
 type CreateSasTokenInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSasTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSasTokenInvoker) Invoke() (*model.CreateSasTokenResponse, error) {
@@ -33,6 +41,10 @@ type DeleteCedentialInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCedentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCedentialInvoker) Invoke() (*model.DeleteCedentialResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -45,6 +57,10 @@ type ShowCredentialInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCredentialInvoker) Invoke() (*model.ShowCredentialResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -55,6 +71,10 @@ func (i *ShowCredentialInvoker) Invoke() (*model.ShowCredentialResponse, error) 
 
 type ShowMapTileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMapTileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMapTileInvoker) Invoke() (*model.ShowMapTileResponse, error) {

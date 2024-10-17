@@ -9,6 +9,10 @@ type AddFacesByBase64Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddFacesByBase64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddFacesByBase64Invoker) Invoke() (*model.AddFacesByBase64Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddFacesByBase64Invoker) Invoke() (*model.AddFacesByBase64Response, err
 
 type AddFacesByFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddFacesByFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddFacesByFileInvoker) Invoke() (*model.AddFacesByFileResponse, error) {
@@ -33,6 +41,10 @@ type AddFacesByUrlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddFacesByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddFacesByUrlInvoker) Invoke() (*model.AddFacesByUrlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AddFacesByUrlInvoker) Invoke() (*model.AddFacesByUrlResponse, error) {
 
 type BatchDeleteFacesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteFacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteFacesInvoker) Invoke() (*model.BatchDeleteFacesResponse, error) {
@@ -57,6 +73,10 @@ type CompareFaceByBase64Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CompareFaceByBase64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CompareFaceByBase64Invoker) Invoke() (*model.CompareFaceByBase64Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CompareFaceByBase64Invoker) Invoke() (*model.CompareFaceByBase64Respons
 
 type CompareFaceByFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CompareFaceByFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CompareFaceByFileInvoker) Invoke() (*model.CompareFaceByFileResponse, error) {
@@ -81,6 +105,10 @@ type CompareFaceByUrlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CompareFaceByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CompareFaceByUrlInvoker) Invoke() (*model.CompareFaceByUrlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CompareFaceByUrlInvoker) Invoke() (*model.CompareFaceByUrlResponse, err
 
 type CreateFaceSetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateFaceSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateFaceSetInvoker) Invoke() (*model.CreateFaceSetResponse, error) {
@@ -105,6 +137,10 @@ type DeleteFaceByExternalImageIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteFaceByExternalImageIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteFaceByExternalImageIdInvoker) Invoke() (*model.DeleteFaceByExternalImageIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteFaceByExternalImageIdInvoker) Invoke() (*model.DeleteFaceByExtern
 
 type DeleteFaceByFaceIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteFaceByFaceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteFaceByFaceIdInvoker) Invoke() (*model.DeleteFaceByFaceIdResponse, error) {
@@ -129,6 +169,10 @@ type DeleteFaceSetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteFaceSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteFaceSetInvoker) Invoke() (*model.DeleteFaceSetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteFaceSetInvoker) Invoke() (*model.DeleteFaceSetResponse, error) {
 
 type DetectFaceByBase64Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectFaceByBase64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectFaceByBase64Invoker) Invoke() (*model.DetectFaceByBase64Response, error) {
@@ -153,6 +201,10 @@ type DetectFaceByBase64IntlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectFaceByBase64IntlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectFaceByBase64IntlInvoker) Invoke() (*model.DetectFaceByBase64IntlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DetectFaceByBase64IntlInvoker) Invoke() (*model.DetectFaceByBase64IntlR
 
 type DetectFaceByFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectFaceByFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectFaceByFileInvoker) Invoke() (*model.DetectFaceByFileResponse, error) {
@@ -177,6 +233,10 @@ type DetectFaceByFileIntlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectFaceByFileIntlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectFaceByFileIntlInvoker) Invoke() (*model.DetectFaceByFileIntlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DetectFaceByFileIntlInvoker) Invoke() (*model.DetectFaceByFileIntlRespo
 
 type DetectFaceByUrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectFaceByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectFaceByUrlInvoker) Invoke() (*model.DetectFaceByUrlResponse, error) {
@@ -201,6 +265,10 @@ type DetectFaceByUrlIntlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectFaceByUrlIntlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectFaceByUrlIntlInvoker) Invoke() (*model.DetectFaceByUrlIntlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DetectFaceByUrlIntlInvoker) Invoke() (*model.DetectFaceByUrlIntlRespons
 
 type DetectLiveByBase64Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectLiveByBase64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectLiveByBase64Invoker) Invoke() (*model.DetectLiveByBase64Response, error) {
@@ -225,6 +297,10 @@ type DetectLiveByBase64IntlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectLiveByBase64IntlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectLiveByBase64IntlInvoker) Invoke() (*model.DetectLiveByBase64IntlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DetectLiveByBase64IntlInvoker) Invoke() (*model.DetectLiveByBase64IntlR
 
 type DetectLiveByFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectLiveByFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectLiveByFileInvoker) Invoke() (*model.DetectLiveByFileResponse, error) {
@@ -249,6 +329,10 @@ type DetectLiveByFileIntlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectLiveByFileIntlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectLiveByFileIntlInvoker) Invoke() (*model.DetectLiveByFileIntlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DetectLiveByFileIntlInvoker) Invoke() (*model.DetectLiveByFileIntlRespo
 
 type DetectLiveByUrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectLiveByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectLiveByUrlInvoker) Invoke() (*model.DetectLiveByUrlResponse, error) {
@@ -273,6 +361,10 @@ type DetectLiveByUrlIntlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectLiveByUrlIntlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectLiveByUrlIntlInvoker) Invoke() (*model.DetectLiveByUrlIntlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DetectLiveByUrlIntlInvoker) Invoke() (*model.DetectLiveByUrlIntlRespons
 
 type DetectLiveFaceByBase64Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectLiveFaceByBase64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectLiveFaceByBase64Invoker) Invoke() (*model.DetectLiveFaceByBase64Response, error) {
@@ -297,6 +393,10 @@ type DetectLiveFaceByFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetectLiveFaceByFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetectLiveFaceByFileInvoker) Invoke() (*model.DetectLiveFaceByFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DetectLiveFaceByFileInvoker) Invoke() (*model.DetectLiveFaceByFileRespo
 
 type DetectLiveFaceByUrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetectLiveFaceByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetectLiveFaceByUrlInvoker) Invoke() (*model.DetectLiveFaceByUrlResponse, error) {
@@ -321,6 +425,10 @@ type SearchFaceByBase64Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchFaceByBase64Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchFaceByBase64Invoker) Invoke() (*model.SearchFaceByBase64Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *SearchFaceByBase64Invoker) Invoke() (*model.SearchFaceByBase64Response,
 
 type SearchFaceByFaceIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchFaceByFaceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchFaceByFaceIdInvoker) Invoke() (*model.SearchFaceByFaceIdResponse, error) {
@@ -345,6 +457,10 @@ type SearchFaceByFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchFaceByFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchFaceByFileInvoker) Invoke() (*model.SearchFaceByFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *SearchFaceByFileInvoker) Invoke() (*model.SearchFaceByFileResponse, err
 
 type SearchFaceByUrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchFaceByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchFaceByUrlInvoker) Invoke() (*model.SearchFaceByUrlResponse, error) {
@@ -369,6 +489,10 @@ type ShowAllFaceSetsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAllFaceSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAllFaceSetsInvoker) Invoke() (*model.ShowAllFaceSetsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowAllFaceSetsInvoker) Invoke() (*model.ShowAllFaceSetsResponse, error
 
 type ShowFaceSetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowFaceSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowFaceSetInvoker) Invoke() (*model.ShowFaceSetResponse, error) {
@@ -393,6 +521,10 @@ type ShowFacesByFaceIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFacesByFaceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFacesByFaceIdInvoker) Invoke() (*model.ShowFacesByFaceIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -405,6 +537,10 @@ type ShowFacesByLimitInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFacesByLimitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFacesByLimitInvoker) Invoke() (*model.ShowFacesByLimitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -415,6 +551,10 @@ func (i *ShowFacesByLimitInvoker) Invoke() (*model.ShowFacesByLimitResponse, err
 
 type UpdateFaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateFaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateFaceInvoker) Invoke() (*model.UpdateFaceResponse, error) {

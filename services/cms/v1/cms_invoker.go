@@ -9,6 +9,10 @@ type CreateAutoLaunchGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAutoLaunchGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAutoLaunchGroupInvoker) Invoke() (*model.CreateAutoLaunchGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAutoLaunchGroupInvoker) Invoke() (*model.CreateAutoLaunchGroupRes
 
 type DeleteAutoLaunchGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutoLaunchGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAutoLaunchGroupInvoker) Invoke() (*model.DeleteAutoLaunchGroupResponse, error) {
@@ -33,6 +41,10 @@ type ListAutoLaunchGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAutoLaunchGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAutoLaunchGroupsInvoker) Invoke() (*model.ListAutoLaunchGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListAutoLaunchGroupsInvoker) Invoke() (*model.ListAutoLaunchGroupsRespo
 
 type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
@@ -57,6 +73,10 @@ type ListSupplyRecommendationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSupplyRecommendationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSupplyRecommendationInvoker) Invoke() (*model.ListSupplyRecommendationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -69,6 +89,10 @@ type ShowAutoLaunchGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutoLaunchGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutoLaunchGroupInvoker) Invoke() (*model.ShowAutoLaunchGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -79,6 +103,10 @@ func (i *ShowAutoLaunchGroupInvoker) Invoke() (*model.ShowAutoLaunchGroupRespons
 
 type UpdateAutoLaunchGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoLaunchGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAutoLaunchGroupInvoker) Invoke() (*model.UpdateAutoLaunchGroupResponse, error) {

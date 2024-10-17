@@ -9,6 +9,10 @@ type AutoRenewalResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AutoRenewalResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AutoRenewalResourcesInvoker) Invoke() (*model.AutoRenewalResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AutoRenewalResourcesInvoker) Invoke() (*model.AutoRenewalResourcesRespo
 
 type CancelAutoRenewalResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelAutoRenewalResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelAutoRenewalResourcesInvoker) Invoke() (*model.CancelAutoRenewalResourcesResponse, error) {
@@ -33,6 +41,10 @@ type CancelCustomerOrderInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelCustomerOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelCustomerOrderInvoker) Invoke() (*model.CancelCustomerOrderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CancelCustomerOrderInvoker) Invoke() (*model.CancelCustomerOrderRespons
 
 type CancelResourcesSubscriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelResourcesSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelResourcesSubscriptionInvoker) Invoke() (*model.CancelResourcesSubscriptionResponse, error) {
@@ -57,6 +73,10 @@ type ChangeEnterpriseRealnameAuthenticationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeEnterpriseRealnameAuthenticationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeEnterpriseRealnameAuthenticationInvoker) Invoke() (*model.ChangeEnterpriseRealnameAuthenticationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ChangeEnterpriseRealnameAuthenticationInvoker) Invoke() (*model.ChangeE
 
 type CheckUserIdentityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckUserIdentityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckUserIdentityInvoker) Invoke() (*model.CheckUserIdentityResponse, error) {
@@ -81,6 +105,10 @@ type CreateEnterpriseProjectAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEnterpriseProjectAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEnterpriseProjectAuthInvoker) Invoke() (*model.CreateEnterpriseProjectAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateEnterpriseProjectAuthInvoker) Invoke() (*model.CreateEnterprisePr
 
 type CreateEnterpriseRealnameAuthenticationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEnterpriseRealnameAuthenticationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEnterpriseRealnameAuthenticationInvoker) Invoke() (*model.CreateEnterpriseRealnameAuthenticationResponse, error) {
@@ -105,6 +137,10 @@ type CreatePersonalRealnameAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePersonalRealnameAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePersonalRealnameAuthInvoker) Invoke() (*model.CreatePersonalRealnameAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreatePersonalRealnameAuthInvoker) Invoke() (*model.CreatePersonalRealn
 
 type CreateSubCustomerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSubCustomerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSubCustomerInvoker) Invoke() (*model.CreateSubCustomerResponse, error) {
@@ -129,6 +169,10 @@ type FreezeSubCustomersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *FreezeSubCustomersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *FreezeSubCustomersInvoker) Invoke() (*model.FreezeSubCustomersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *FreezeSubCustomersInvoker) Invoke() (*model.FreezeSubCustomersResponse,
 
 type ListConversionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListConversionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListConversionsInvoker) Invoke() (*model.ListConversionsResponse, error) {
@@ -153,6 +201,10 @@ type ListCostsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCostsInvoker) Invoke() (*model.ListCostsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListCostsInvoker) Invoke() (*model.ListCostsResponse, error) {
 
 type ListCustomerOnDemandResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCustomerOnDemandResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCustomerOnDemandResourcesInvoker) Invoke() (*model.ListCustomerOnDemandResourcesResponse, error) {
@@ -177,6 +233,10 @@ type ListCustomerOrdersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCustomerOrdersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCustomerOrdersInvoker) Invoke() (*model.ListCustomerOrdersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListCustomerOrdersInvoker) Invoke() (*model.ListCustomerOrdersResponse,
 
 type ListCustomerselfResourceRecordDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCustomerselfResourceRecordDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCustomerselfResourceRecordDetailsInvoker) Invoke() (*model.ListCustomerselfResourceRecordDetailsResponse, error) {
@@ -201,6 +265,10 @@ type ListCustomerselfResourceRecordsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCustomerselfResourceRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCustomerselfResourceRecordsInvoker) Invoke() (*model.ListCustomerselfResourceRecordsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListCustomerselfResourceRecordsInvoker) Invoke() (*model.ListCustomerse
 
 type ListFreeResourceInfosInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFreeResourceInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFreeResourceInfosInvoker) Invoke() (*model.ListFreeResourceInfosResponse, error) {
@@ -225,6 +297,10 @@ type ListFreeResourceUsagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListFreeResourceUsagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListFreeResourceUsagesInvoker) Invoke() (*model.ListFreeResourceUsagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListFreeResourceUsagesInvoker) Invoke() (*model.ListFreeResourceUsagesR
 
 type ListFreeResourcesUsageRecordsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFreeResourcesUsageRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFreeResourcesUsageRecordsInvoker) Invoke() (*model.ListFreeResourcesUsageRecordsResponse, error) {
@@ -249,6 +329,10 @@ type ListIndirectPartnersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListIndirectPartnersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListIndirectPartnersInvoker) Invoke() (*model.ListIndirectPartnersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListIndirectPartnersInvoker) Invoke() (*model.ListIndirectPartnersRespo
 
 type ListInvoicesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInvoicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInvoicesInvoker) Invoke() (*model.ListInvoicesResponse, error) {
@@ -273,6 +361,10 @@ type ListMeasureUnitsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMeasureUnitsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMeasureUnitsInvoker) Invoke() (*model.ListMeasureUnitsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListMeasureUnitsInvoker) Invoke() (*model.ListMeasureUnitsResponse, err
 
 type ListMonthlyExpendituresInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMonthlyExpendituresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMonthlyExpendituresInvoker) Invoke() (*model.ListMonthlyExpendituresResponse, error) {
@@ -297,6 +393,10 @@ type ListOnDemandResourceRatingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListOnDemandResourceRatingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListOnDemandResourceRatingsInvoker) Invoke() (*model.ListOnDemandResourceRatingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListOnDemandResourceRatingsInvoker) Invoke() (*model.ListOnDemandResour
 
 type ListOrderDiscountsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListOrderDiscountsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListOrderDiscountsInvoker) Invoke() (*model.ListOrderDiscountsResponse, error) {
@@ -321,6 +425,10 @@ type ListPayPerUseCustomerResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPayPerUseCustomerResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPayPerUseCustomerResourcesInvoker) Invoke() (*model.ListPayPerUseCustomerResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListPayPerUseCustomerResourcesInvoker) Invoke() (*model.ListPayPerUseCu
 
 type ListPostpaidBillSumInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPostpaidBillSumInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPostpaidBillSumInvoker) Invoke() (*model.ListPostpaidBillSumResponse, error) {
@@ -345,6 +457,10 @@ type ListRateOnPeriodDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRateOnPeriodDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRateOnPeriodDetailInvoker) Invoke() (*model.ListRateOnPeriodDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListRateOnPeriodDetailInvoker) Invoke() (*model.ListRateOnPeriodDetailR
 
 type ListRenewRateOnPeriodInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRenewRateOnPeriodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRenewRateOnPeriodInvoker) Invoke() (*model.ListRenewRateOnPeriodResponse, error) {
@@ -369,6 +489,10 @@ type ListResourceTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceTypesInvoker) Invoke() (*model.ListResourceTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListResourceTypesInvoker) Invoke() (*model.ListResourceTypesResponse, e
 
 type ListServiceResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListServiceResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListServiceResourcesInvoker) Invoke() (*model.ListServiceResourcesResponse, error) {
@@ -393,6 +521,10 @@ type ListServiceTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListServiceTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListServiceTypesInvoker) Invoke() (*model.ListServiceTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListServiceTypesInvoker) Invoke() (*model.ListServiceTypesResponse, err
 
 type ListSubCustomerBudgetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSubCustomerBudgetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSubCustomerBudgetInvoker) Invoke() (*model.ListSubCustomerBudgetResponse, error) {
@@ -417,6 +553,10 @@ type ListSubCustomerCouponsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSubCustomerCouponsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSubCustomerCouponsInvoker) Invoke() (*model.ListSubCustomerCouponsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListSubCustomerCouponsInvoker) Invoke() (*model.ListSubCustomerCouponsR
 
 type ListSubCustomersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSubCustomersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSubCustomersInvoker) Invoke() (*model.ListSubCustomersResponse, error) {
@@ -441,6 +585,10 @@ type ListUsageTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListUsageTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListUsageTypesInvoker) Invoke() (*model.ListUsageTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ListUsageTypesInvoker) Invoke() (*model.ListUsageTypesResponse, error) 
 
 type PayOrdersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PayOrdersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PayOrdersInvoker) Invoke() (*model.PayOrdersResponse, error) {
@@ -465,6 +617,10 @@ type RenewalResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RenewalResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RenewalResourcesInvoker) Invoke() (*model.RenewalResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *RenewalResourcesInvoker) Invoke() (*model.RenewalResourcesResponse, err
 
 type SendVerificationMessageCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SendVerificationMessageCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SendVerificationMessageCodeInvoker) Invoke() (*model.SendVerificationMessageCodeResponse, error) {
@@ -489,6 +649,10 @@ type ShowCustomerAccountBalancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCustomerAccountBalancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCustomerAccountBalancesInvoker) Invoke() (*model.ShowCustomerAccountBalancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ShowCustomerAccountBalancesInvoker) Invoke() (*model.ShowCustomerAccoun
 
 type ShowCustomerOrderDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomerOrderDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCustomerOrderDetailsInvoker) Invoke() (*model.ShowCustomerOrderDetailsResponse, error) {
@@ -513,6 +681,10 @@ type ShowPartnerConsumptionQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPartnerConsumptionQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPartnerConsumptionQuotaInvoker) Invoke() (*model.ShowPartnerConsumptionQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ShowPartnerConsumptionQuotaInvoker) Invoke() (*model.ShowPartnerConsump
 
 type ShowRealnameAuthenticationReviewResultInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRealnameAuthenticationReviewResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRealnameAuthenticationReviewResultInvoker) Invoke() (*model.ShowRealnameAuthenticationReviewResultResponse, error) {
@@ -537,6 +713,10 @@ type ShowRefundOrderDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRefundOrderDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRefundOrderDetailsInvoker) Invoke() (*model.ShowRefundOrderDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ShowRefundOrderDetailsInvoker) Invoke() (*model.ShowRefundOrderDetailsR
 
 type ShowSubCustomerBudgetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSubCustomerBudgetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSubCustomerBudgetInvoker) Invoke() (*model.ShowSubCustomerBudgetResponse, error) {
@@ -561,6 +745,10 @@ type UnfreezeSubCustomersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UnfreezeSubCustomersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UnfreezeSubCustomersInvoker) Invoke() (*model.UnfreezeSubCustomersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -573,6 +761,10 @@ type UpdatePeriodToOnDemandInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePeriodToOnDemandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePeriodToOnDemandInvoker) Invoke() (*model.UpdatePeriodToOnDemandResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -583,6 +775,10 @@ func (i *UpdatePeriodToOnDemandInvoker) Invoke() (*model.UpdatePeriodToOnDemandR
 
 type UpdateSubCustomerBudgetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubCustomerBudgetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSubCustomerBudgetInvoker) Invoke() (*model.UpdateSubCustomerBudgetResponse, error) {

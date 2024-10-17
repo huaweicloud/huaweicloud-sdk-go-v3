@@ -9,6 +9,10 @@ type AttachCallbackInstanceLifeCycleHookInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AttachCallbackInstanceLifeCycleHookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AttachCallbackInstanceLifeCycleHookInvoker) Invoke() (*model.AttachCallbackInstanceLifeCycleHookResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AttachCallbackInstanceLifeCycleHookInvoker) Invoke() (*model.AttachCall
 
 type BatchAddScalingInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAddScalingInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAddScalingInstancesInvoker) Invoke() (*model.BatchAddScalingInstancesResponse, error) {
@@ -33,6 +41,10 @@ type BatchDeleteScalingConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteScalingConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteScalingConfigsInvoker) Invoke() (*model.BatchDeleteScalingConfigsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchDeleteScalingConfigsInvoker) Invoke() (*model.BatchDeleteScalingCo
 
 type BatchDeleteScalingPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteScalingPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteScalingPoliciesInvoker) Invoke() (*model.BatchDeleteScalingPoliciesResponse, error) {
@@ -57,6 +73,10 @@ type BatchPauseScalingPoliciesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchPauseScalingPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchPauseScalingPoliciesInvoker) Invoke() (*model.BatchPauseScalingPoliciesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchPauseScalingPoliciesInvoker) Invoke() (*model.BatchPauseScalingPol
 
 type BatchProtectScalingInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchProtectScalingInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchProtectScalingInstancesInvoker) Invoke() (*model.BatchProtectScalingInstancesResponse, error) {
@@ -81,6 +105,10 @@ type BatchRemoveScalingInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchRemoveScalingInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchRemoveScalingInstancesInvoker) Invoke() (*model.BatchRemoveScalingInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *BatchRemoveScalingInstancesInvoker) Invoke() (*model.BatchRemoveScaling
 
 type BatchResumeScalingPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchResumeScalingPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchResumeScalingPoliciesInvoker) Invoke() (*model.BatchResumeScalingPoliciesResponse, error) {
@@ -105,6 +137,10 @@ type BatchSetScalingInstancesStandbyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchSetScalingInstancesStandbyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchSetScalingInstancesStandbyInvoker) Invoke() (*model.BatchSetScalingInstancesStandbyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *BatchSetScalingInstancesStandbyInvoker) Invoke() (*model.BatchSetScalin
 
 type BatchUnprotectScalingInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUnprotectScalingInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUnprotectScalingInstancesInvoker) Invoke() (*model.BatchUnprotectScalingInstancesResponse, error) {
@@ -129,6 +169,10 @@ type BatchUnsetScalingInstancesStantbyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUnsetScalingInstancesStantbyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUnsetScalingInstancesStantbyInvoker) Invoke() (*model.BatchUnsetScalingInstancesStantbyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *BatchUnsetScalingInstancesStantbyInvoker) Invoke() (*model.BatchUnsetSc
 
 type CreateGroupScheduledTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateGroupScheduledTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateGroupScheduledTaskInvoker) Invoke() (*model.CreateGroupScheduledTaskResponse, error) {
@@ -153,6 +201,10 @@ type CreateLifyCycleHookInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateLifyCycleHookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateLifyCycleHookInvoker) Invoke() (*model.CreateLifyCycleHookResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateLifyCycleHookInvoker) Invoke() (*model.CreateLifyCycleHookRespons
 
 type CreateScalingConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateScalingConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateScalingConfigInvoker) Invoke() (*model.CreateScalingConfigResponse, error) {
@@ -177,6 +233,10 @@ type CreateScalingGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateScalingGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateScalingGroupInvoker) Invoke() (*model.CreateScalingGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateScalingGroupInvoker) Invoke() (*model.CreateScalingGroupResponse,
 
 type CreateScalingNotificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateScalingNotificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateScalingNotificationInvoker) Invoke() (*model.CreateScalingNotificationResponse, error) {
@@ -201,6 +265,10 @@ type CreateScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateScalingPolicyInvoker) Invoke() (*model.CreateScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreateScalingPolicyInvoker) Invoke() (*model.CreateScalingPolicyRespons
 
 type CreateScalingTagInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateScalingTagInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateScalingTagInfoInvoker) Invoke() (*model.CreateScalingTagInfoResponse, error) {
@@ -225,6 +297,10 @@ type DeleteGroupScheduledTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteGroupScheduledTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteGroupScheduledTaskInvoker) Invoke() (*model.DeleteGroupScheduledTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteGroupScheduledTaskInvoker) Invoke() (*model.DeleteGroupScheduledT
 
 type DeleteLifecycleHookInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteLifecycleHookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteLifecycleHookInvoker) Invoke() (*model.DeleteLifecycleHookResponse, error) {
@@ -249,6 +329,10 @@ type DeleteScalingConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteScalingConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteScalingConfigInvoker) Invoke() (*model.DeleteScalingConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteScalingConfigInvoker) Invoke() (*model.DeleteScalingConfigRespons
 
 type DeleteScalingGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteScalingGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteScalingGroupInvoker) Invoke() (*model.DeleteScalingGroupResponse, error) {
@@ -273,6 +361,10 @@ type DeleteScalingInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteScalingInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteScalingInstanceInvoker) Invoke() (*model.DeleteScalingInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteScalingInstanceInvoker) Invoke() (*model.DeleteScalingInstanceRes
 
 type DeleteScalingNotificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteScalingNotificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteScalingNotificationInvoker) Invoke() (*model.DeleteScalingNotificationResponse, error) {
@@ -297,6 +393,10 @@ type DeleteScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteScalingPolicyInvoker) Invoke() (*model.DeleteScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DeleteScalingPolicyInvoker) Invoke() (*model.DeleteScalingPolicyRespons
 
 type DeleteScalingTagInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteScalingTagInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteScalingTagInfoInvoker) Invoke() (*model.DeleteScalingTagInfoResponse, error) {
@@ -321,6 +425,10 @@ type ExecuteScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteScalingPolicyInvoker) Invoke() (*model.ExecuteScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ExecuteScalingPolicyInvoker) Invoke() (*model.ExecuteScalingPolicyRespo
 
 type ListGroupScheduledTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGroupScheduledTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGroupScheduledTasksInvoker) Invoke() (*model.ListGroupScheduledTasksResponse, error) {
@@ -345,6 +457,10 @@ type ListHookInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHookInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHookInstancesInvoker) Invoke() (*model.ListHookInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListHookInstancesInvoker) Invoke() (*model.ListHookInstancesResponse, e
 
 type ListLifeCycleHooksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListLifeCycleHooksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListLifeCycleHooksInvoker) Invoke() (*model.ListLifeCycleHooksResponse, error) {
@@ -369,6 +489,10 @@ type ListResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesRes
 
 type ListScalingActivityLogsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScalingActivityLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScalingActivityLogsInvoker) Invoke() (*model.ListScalingActivityLogsResponse, error) {
@@ -393,6 +521,10 @@ type ListScalingActivityV2LogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScalingActivityV2LogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScalingActivityV2LogsInvoker) Invoke() (*model.ListScalingActivityV2LogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListScalingActivityV2LogsInvoker) Invoke() (*model.ListScalingActivityV
 
 type ListScalingConfigsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScalingConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScalingConfigsInvoker) Invoke() (*model.ListScalingConfigsResponse, error) {
@@ -417,6 +553,10 @@ type ListScalingGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScalingGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScalingGroupsInvoker) Invoke() (*model.ListScalingGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListScalingGroupsInvoker) Invoke() (*model.ListScalingGroupsResponse, e
 
 type ListScalingInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScalingInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScalingInstancesInvoker) Invoke() (*model.ListScalingInstancesResponse, error) {
@@ -441,6 +585,10 @@ type ListScalingNotificationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScalingNotificationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScalingNotificationsInvoker) Invoke() (*model.ListScalingNotificationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ListScalingNotificationsInvoker) Invoke() (*model.ListScalingNotificati
 
 type ListScalingPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScalingPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScalingPoliciesInvoker) Invoke() (*model.ListScalingPoliciesResponse, error) {
@@ -465,6 +617,10 @@ type ListScalingPolicyExecuteLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScalingPolicyExecuteLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScalingPolicyExecuteLogsInvoker) Invoke() (*model.ListScalingPolicyExecuteLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListScalingPolicyExecuteLogsInvoker) Invoke() (*model.ListScalingPolicy
 
 type ListScalingTagInfosByResourceIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScalingTagInfosByResourceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScalingTagInfosByResourceIdInvoker) Invoke() (*model.ListScalingTagInfosByResourceIdResponse, error) {
@@ -489,6 +649,10 @@ type ListScalingTagInfosByTenantIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScalingTagInfosByTenantIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScalingTagInfosByTenantIdInvoker) Invoke() (*model.ListScalingTagInfosByTenantIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListScalingTagInfosByTenantIdInvoker) Invoke() (*model.ListScalingTagIn
 
 type PauseScalingGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PauseScalingGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PauseScalingGroupInvoker) Invoke() (*model.PauseScalingGroupResponse, error) {
@@ -513,6 +681,10 @@ type PauseScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PauseScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PauseScalingPolicyInvoker) Invoke() (*model.PauseScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *PauseScalingPolicyInvoker) Invoke() (*model.PauseScalingPolicyResponse,
 
 type ResumeScalingGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResumeScalingGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResumeScalingGroupInvoker) Invoke() (*model.ResumeScalingGroupResponse, error) {
@@ -537,6 +713,10 @@ type ResumeScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResumeScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResumeScalingPolicyInvoker) Invoke() (*model.ResumeScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ResumeScalingPolicyInvoker) Invoke() (*model.ResumeScalingPolicyRespons
 
 type ShowLifeCycleHookInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowLifeCycleHookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowLifeCycleHookInvoker) Invoke() (*model.ShowLifeCycleHookResponse, error) {
@@ -561,6 +745,10 @@ type ShowPolicyAndInstanceQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPolicyAndInstanceQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPolicyAndInstanceQuotaInvoker) Invoke() (*model.ShowPolicyAndInstanceQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ShowPolicyAndInstanceQuotaInvoker) Invoke() (*model.ShowPolicyAndInstan
 
 type ShowResourceQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceQuotaInvoker) Invoke() (*model.ShowResourceQuotaResponse, error) {
@@ -585,6 +777,10 @@ type ShowScalingConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowScalingConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowScalingConfigInvoker) Invoke() (*model.ShowScalingConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ShowScalingConfigInvoker) Invoke() (*model.ShowScalingConfigResponse, e
 
 type ShowScalingGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowScalingGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowScalingGroupInvoker) Invoke() (*model.ShowScalingGroupResponse, error) {
@@ -609,6 +809,10 @@ type ShowScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowScalingPolicyInvoker) Invoke() (*model.ShowScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ShowScalingPolicyInvoker) Invoke() (*model.ShowScalingPolicyResponse, e
 
 type UpdateGroupScheduledTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateGroupScheduledTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateGroupScheduledTaskInvoker) Invoke() (*model.UpdateGroupScheduledTaskResponse, error) {
@@ -633,6 +841,10 @@ type UpdateLifeCycleHookInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateLifeCycleHookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateLifeCycleHookInvoker) Invoke() (*model.UpdateLifeCycleHookResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *UpdateLifeCycleHookInvoker) Invoke() (*model.UpdateLifeCycleHookRespons
 
 type UpdateScalingGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateScalingGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateScalingGroupInvoker) Invoke() (*model.UpdateScalingGroupResponse, error) {
@@ -657,6 +873,10 @@ type UpdateScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateScalingPolicyInvoker) Invoke() (*model.UpdateScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *UpdateScalingPolicyInvoker) Invoke() (*model.UpdateScalingPolicyRespons
 
 type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
@@ -681,6 +905,10 @@ type ShowApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowApiVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 
 type CreateScalingV2PolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateScalingV2PolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateScalingV2PolicyInvoker) Invoke() (*model.CreateScalingV2PolicyResponse, error) {
@@ -705,6 +937,10 @@ type ListAllScalingV2PoliciesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAllScalingV2PoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAllScalingV2PoliciesInvoker) Invoke() (*model.ListAllScalingV2PoliciesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ListAllScalingV2PoliciesInvoker) Invoke() (*model.ListAllScalingV2Polic
 
 type ListScalingV2PoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScalingV2PoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScalingV2PoliciesInvoker) Invoke() (*model.ListScalingV2PoliciesResponse, error) {
@@ -729,6 +969,10 @@ type ShowScalingV2PolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowScalingV2PolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowScalingV2PolicyInvoker) Invoke() (*model.ShowScalingV2PolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ShowScalingV2PolicyInvoker) Invoke() (*model.ShowScalingV2PolicyRespons
 
 type UpdateScalingV2PolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateScalingV2PolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateScalingV2PolicyInvoker) Invoke() (*model.UpdateScalingV2PolicyResponse, error) {

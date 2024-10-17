@@ -8,7 +8,7 @@ import (
 
 type SqlRuleRequest struct {
 
-	// 风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+	// 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
 	RiskLevels *string `json:"risk_levels,omitempty"`
 }
 

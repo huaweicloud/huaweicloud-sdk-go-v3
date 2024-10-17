@@ -9,6 +9,10 @@ type CreateFastExecuteScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateFastExecuteScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateFastExecuteScriptInvoker) Invoke() (*model.CreateFastExecuteScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateFastExecuteScriptInvoker) Invoke() (*model.CreateFastExecuteScrip
 
 type CreateWorkflowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateWorkflowInvoker) Invoke() (*model.CreateWorkflowResponse, error) {
@@ -33,6 +41,10 @@ type ExecuteWorkflowInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteWorkflowInvoker) Invoke() (*model.ExecuteWorkflowResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ExecuteWorkflowInvoker) Invoke() (*model.ExecuteWorkflowResponse, error
 
 type ListAllJobByNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllJobByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllJobByNameInvoker) Invoke() (*model.ListAllJobByNameResponse, error) {
@@ -57,6 +73,10 @@ type ListAllScriptByNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAllScriptByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAllScriptByNameInvoker) Invoke() (*model.ListAllScriptByNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListAllScriptByNameInvoker) Invoke() (*model.ListAllScriptByNameRespons
 
 type ListAllVersionByVersionIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllVersionByVersionIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllVersionByVersionIdInvoker) Invoke() (*model.ListAllVersionByVersionIdResponse, error) {
@@ -81,6 +105,10 @@ type ListTemplateByJobIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTemplateByJobIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTemplateByJobIdInvoker) Invoke() (*model.ListTemplateByJobIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListTemplateByJobIdInvoker) Invoke() (*model.ListTemplateByJobIdRespons
 
 type ListWorkflowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListWorkflowInvoker) Invoke() (*model.ListWorkflowResponse, error) {
@@ -105,6 +137,10 @@ type ListWorkflowExecutionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListWorkflowExecutionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListWorkflowExecutionsInvoker) Invoke() (*model.ListWorkflowExecutionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListWorkflowExecutionsInvoker) Invoke() (*model.ListWorkflowExecutionsR
 
 type SearchTemplateByIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchTemplateByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchTemplateByIdInvoker) Invoke() (*model.SearchTemplateByIdResponse, error) {
@@ -129,6 +169,10 @@ type SearchWorkflowExecutionDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchWorkflowExecutionDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchWorkflowExecutionDetailInvoker) Invoke() (*model.SearchWorkflowExecutionDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *SearchWorkflowExecutionDetailInvoker) Invoke() (*model.SearchWorkflowEx
 
 type StartPausingWorkflowExecutionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartPausingWorkflowExecutionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartPausingWorkflowExecutionsInvoker) Invoke() (*model.StartPausingWorkflowExecutionsResponse, error) {
@@ -153,6 +201,10 @@ type StopExecutionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopExecutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopExecutionInvoker) Invoke() (*model.StopExecutionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *StopExecutionInvoker) Invoke() (*model.StopExecutionResponse, error) {
 
 type UpdateWorkflowTriggerStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkflowTriggerStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateWorkflowTriggerStatusInvoker) Invoke() (*model.UpdateWorkflowTriggerStatusResponse, error) {

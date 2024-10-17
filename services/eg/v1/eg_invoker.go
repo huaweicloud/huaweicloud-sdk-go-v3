@@ -9,6 +9,10 @@ type CheckPutEventsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckPutEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckPutEventsInvoker) Invoke() (*model.CheckPutEventsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CheckPutEventsInvoker) Invoke() (*model.CheckPutEventsResponse, error) 
 
 type CreateAgenciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAgenciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAgenciesInvoker) Invoke() (*model.CreateAgenciesResponse, error) {
@@ -33,6 +41,10 @@ type CreateChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateChannelInvoker) Invoke() (*model.CreateChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateChannelInvoker) Invoke() (*model.CreateChannelResponse, error) {
 
 type CreateConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateConnectionInvoker) Invoke() (*model.CreateConnectionResponse, error) {
@@ -57,6 +73,10 @@ type CreateEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) 
 
 type CreateEventSourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEventSourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEventSourceInvoker) Invoke() (*model.CreateEventSourceResponse, error) {
@@ -81,6 +105,10 @@ type CreateEventStreamingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEventStreamingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEventStreamingInvoker) Invoke() (*model.CreateEventStreamingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateEventStreamingInvoker) Invoke() (*model.CreateEventStreamingRespo
 
 type CreateSubscriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSubscriptionInvoker) Invoke() (*model.CreateSubscriptionResponse, error) {
@@ -105,6 +137,10 @@ type CreateSubscriptionTargetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSubscriptionTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSubscriptionTargetInvoker) Invoke() (*model.CreateSubscriptionTargetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateSubscriptionTargetInvoker) Invoke() (*model.CreateSubscriptionTar
 
 type DeleteChannelInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteChannelInvoker) Invoke() (*model.DeleteChannelResponse, error) {
@@ -129,6 +169,10 @@ type DeleteConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteConnectionInvoker) Invoke() (*model.DeleteConnectionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteConnectionInvoker) Invoke() (*model.DeleteConnectionResponse, err
 
 type DeleteEndpointInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEndpointInvoker) Invoke() (*model.DeleteEndpointResponse, error) {
@@ -153,6 +201,10 @@ type DeleteEventSourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEventSourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEventSourceInvoker) Invoke() (*model.DeleteEventSourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteEventSourceInvoker) Invoke() (*model.DeleteEventSourceResponse, e
 
 type DeleteEventStreamingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEventStreamingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEventStreamingInvoker) Invoke() (*model.DeleteEventStreamingResponse, error) {
@@ -177,6 +233,10 @@ type DeleteSubscriptionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSubscriptionInvoker) Invoke() (*model.DeleteSubscriptionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteSubscriptionInvoker) Invoke() (*model.DeleteSubscriptionResponse,
 
 type DeleteSubscriptionTargetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubscriptionTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSubscriptionTargetInvoker) Invoke() (*model.DeleteSubscriptionTargetResponse, error) {
@@ -201,6 +265,10 @@ type ListAgenciesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAgenciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAgenciesInvoker) Invoke() (*model.ListAgenciesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListAgenciesInvoker) Invoke() (*model.ListAgenciesResponse, error) {
 
 type ListChannelsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListChannelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListChannelsInvoker) Invoke() (*model.ListChannelsResponse, error) {
@@ -225,6 +297,10 @@ type ListConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error
 
 type ListEndpointsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
@@ -249,6 +329,10 @@ type ListEventSourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEventSourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEventSourcesInvoker) Invoke() (*model.ListEventSourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListEventSourcesInvoker) Invoke() (*model.ListEventSourcesResponse, err
 
 type ListEventStreamingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEventStreamingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEventStreamingInvoker) Invoke() (*model.ListEventStreamingResponse, error) {
@@ -273,6 +361,10 @@ type ListEventTargetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEventTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEventTargetInvoker) Invoke() (*model.ListEventTargetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListEventTargetInvoker) Invoke() (*model.ListEventTargetResponse, error
 
 type ListPubMetricsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPubMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPubMetricsInvoker) Invoke() (*model.ListPubMetricsResponse, error) {
@@ -297,6 +393,10 @@ type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 
 type ListSubMetricsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSubMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSubMetricsInvoker) Invoke() (*model.ListSubMetricsResponse, error) {
@@ -321,6 +425,10 @@ type ListSubscriptionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSubscriptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSubscriptionsInvoker) Invoke() (*model.ListSubscriptionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListSubscriptionsInvoker) Invoke() (*model.ListSubscriptionsResponse, e
 
 type ListTracedEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTracedEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTracedEventsInvoker) Invoke() (*model.ListTracedEventsResponse, error) {
@@ -345,6 +457,10 @@ type ListTriggersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTriggersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTriggersInvoker) Invoke() (*model.ListTriggersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListTriggersInvoker) Invoke() (*model.ListTriggersResponse, error) {
 
 type ListWorkflowTriggersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowTriggersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListWorkflowTriggersInvoker) Invoke() (*model.ListWorkflowTriggersResponse, error) {
@@ -369,6 +489,10 @@ type OperateSubscriptionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *OperateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *OperateSubscriptionInvoker) Invoke() (*model.OperateSubscriptionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *OperateSubscriptionInvoker) Invoke() (*model.OperateSubscriptionRespons
 
 type PutEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PutEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PutEventsInvoker) Invoke() (*model.PutEventsResponse, error) {
@@ -393,6 +521,10 @@ type PutOfficialEventsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PutOfficialEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PutOfficialEventsInvoker) Invoke() (*model.PutOfficialEventsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *PutOfficialEventsInvoker) Invoke() (*model.PutOfficialEventsResponse, e
 
 type ResumeEventStreamingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResumeEventStreamingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResumeEventStreamingInvoker) Invoke() (*model.ResumeEventStreamingResponse, error) {
@@ -417,6 +553,10 @@ type ShowDetailOfChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailOfChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailOfChannelInvoker) Invoke() (*model.ShowDetailOfChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowDetailOfChannelInvoker) Invoke() (*model.ShowDetailOfChannelRespons
 
 type ShowDetailOfConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailOfConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailOfConnectionInvoker) Invoke() (*model.ShowDetailOfConnectionResponse, error) {
@@ -441,6 +585,10 @@ type ShowDetailOfEventInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailOfEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailOfEventInvoker) Invoke() (*model.ShowDetailOfEventResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowDetailOfEventInvoker) Invoke() (*model.ShowDetailOfEventResponse, e
 
 type ShowDetailOfEventSourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailOfEventSourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailOfEventSourceInvoker) Invoke() (*model.ShowDetailOfEventSourceResponse, error) {
@@ -465,6 +617,10 @@ type ShowDetailOfEventTraceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailOfEventTraceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailOfEventTraceInvoker) Invoke() (*model.ShowDetailOfEventTraceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ShowDetailOfEventTraceInvoker) Invoke() (*model.ShowDetailOfEventTraceR
 
 type ShowDetailOfSubscriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailOfSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailOfSubscriptionInvoker) Invoke() (*model.ShowDetailOfSubscriptionResponse, error) {
@@ -489,6 +649,10 @@ type ShowDetailOfSubscriptionTargetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailOfSubscriptionTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailOfSubscriptionTargetInvoker) Invoke() (*model.ShowDetailOfSubscriptionTargetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ShowDetailOfSubscriptionTargetInvoker) Invoke() (*model.ShowDetailOfSub
 
 type ShowEventStreamingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEventStreamingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEventStreamingInvoker) Invoke() (*model.ShowEventStreamingResponse, error) {
@@ -513,6 +681,10 @@ type UpdateChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateChannelInvoker) Invoke() (*model.UpdateChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *UpdateChannelInvoker) Invoke() (*model.UpdateChannelResponse, error) {
 
 type UpdateConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateConnectionInvoker) Invoke() (*model.UpdateConnectionResponse, error) {
@@ -537,6 +713,10 @@ type UpdateEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEndpointInvoker) Invoke() (*model.UpdateEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateEndpointInvoker) Invoke() (*model.UpdateEndpointResponse, error) 
 
 type UpdateEventSourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEventSourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEventSourceInvoker) Invoke() (*model.UpdateEventSourceResponse, error) {
@@ -561,6 +745,10 @@ type UpdateEventStreamingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEventStreamingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEventStreamingInvoker) Invoke() (*model.UpdateEventStreamingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *UpdateEventStreamingInvoker) Invoke() (*model.UpdateEventStreamingRespo
 
 type UpdateSubscriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSubscriptionInvoker) Invoke() (*model.UpdateSubscriptionResponse, error) {
@@ -585,6 +777,10 @@ type UpdateSubscriptionSourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateSubscriptionSourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateSubscriptionSourceInvoker) Invoke() (*model.UpdateSubscriptionSourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *UpdateSubscriptionSourceInvoker) Invoke() (*model.UpdateSubscriptionSou
 
 type UpdateSubscriptionTargetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSubscriptionTargetInvoker) Invoke() (*model.UpdateSubscriptionTargetResponse, error) {
@@ -609,6 +809,10 @@ type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error
 
 type ListObsBucketsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListObsBucketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListObsBucketsInvoker) Invoke() (*model.ListObsBucketsResponse, error) {

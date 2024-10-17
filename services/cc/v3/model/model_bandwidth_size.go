@@ -9,7 +9,7 @@ import (
 // BandwidthSize 带宽值，单位Mbps。
 type BandwidthSize struct {
 
-	// 带宽值定义，单位Mbps。
+	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 }
 

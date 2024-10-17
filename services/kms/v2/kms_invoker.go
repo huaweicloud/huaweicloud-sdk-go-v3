@@ -9,6 +9,10 @@ type BatchCreateKmsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateKmsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateKmsTagsInvoker) Invoke() (*model.BatchCreateKmsTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateKmsTagsInvoker) Invoke() (*model.BatchCreateKmsTagsResponse,
 
 type CancelGrantInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelGrantInvoker) Invoke() (*model.CancelGrantResponse, error) {
@@ -33,6 +41,10 @@ type CancelKeyDeletionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelKeyDeletionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelKeyDeletionInvoker) Invoke() (*model.CancelKeyDeletionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CancelKeyDeletionInvoker) Invoke() (*model.CancelKeyDeletionResponse, e
 
 type CancelSelfGrantInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelSelfGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelSelfGrantInvoker) Invoke() (*model.CancelSelfGrantResponse, error) {
@@ -57,6 +73,10 @@ type CreateDatakeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDatakeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDatakeyInvoker) Invoke() (*model.CreateDatakeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateDatakeyInvoker) Invoke() (*model.CreateDatakeyResponse, error) {
 
 type CreateDatakeyWithoutPlaintextInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDatakeyWithoutPlaintextInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDatakeyWithoutPlaintextInvoker) Invoke() (*model.CreateDatakeyWithoutPlaintextResponse, error) {
@@ -81,6 +105,10 @@ type CreateGrantInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateGrantInvoker) Invoke() (*model.CreateGrantResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateGrantInvoker) Invoke() (*model.CreateGrantResponse, error) {
 
 type CreateKeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateKeyInvoker) Invoke() (*model.CreateKeyResponse, error) {
@@ -105,6 +137,10 @@ type CreateKeyStoreInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateKeyStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateKeyStoreInvoker) Invoke() (*model.CreateKeyStoreResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateKeyStoreInvoker) Invoke() (*model.CreateKeyStoreResponse, error) 
 
 type CreateKmsTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateKmsTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateKmsTagInvoker) Invoke() (*model.CreateKmsTagResponse, error) {
@@ -129,6 +169,10 @@ type CreateParametersForImportInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateParametersForImportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateParametersForImportInvoker) Invoke() (*model.CreateParametersForImportResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateParametersForImportInvoker) Invoke() (*model.CreateParametersForI
 
 type CreateRandomInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRandomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRandomInvoker) Invoke() (*model.CreateRandomResponse, error) {
@@ -153,6 +201,10 @@ type DecryptDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DecryptDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DecryptDataInvoker) Invoke() (*model.DecryptDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DecryptDataInvoker) Invoke() (*model.DecryptDataResponse, error) {
 
 type DecryptDatakeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DecryptDatakeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DecryptDatakeyInvoker) Invoke() (*model.DecryptDatakeyResponse, error) {
@@ -177,6 +233,10 @@ type DeleteImportedKeyMaterialInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteImportedKeyMaterialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteImportedKeyMaterialInvoker) Invoke() (*model.DeleteImportedKeyMaterialResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteImportedKeyMaterialInvoker) Invoke() (*model.DeleteImportedKeyMat
 
 type DeleteKeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteKeyInvoker) Invoke() (*model.DeleteKeyResponse, error) {
@@ -201,6 +265,10 @@ type DeleteKeyStoreInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteKeyStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteKeyStoreInvoker) Invoke() (*model.DeleteKeyStoreResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteKeyStoreInvoker) Invoke() (*model.DeleteKeyStoreResponse, error) 
 
 type DeleteTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
@@ -225,6 +297,10 @@ type DisableKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisableKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisableKeyInvoker) Invoke() (*model.DisableKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DisableKeyInvoker) Invoke() (*model.DisableKeyResponse, error) {
 
 type DisableKeyRotationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableKeyRotationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableKeyRotationInvoker) Invoke() (*model.DisableKeyRotationResponse, error) {
@@ -249,6 +329,10 @@ type DisableKeyStoreInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisableKeyStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisableKeyStoreInvoker) Invoke() (*model.DisableKeyStoreResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DisableKeyStoreInvoker) Invoke() (*model.DisableKeyStoreResponse, error
 
 type EnableKeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnableKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnableKeyInvoker) Invoke() (*model.EnableKeyResponse, error) {
@@ -273,6 +361,10 @@ type EnableKeyRotationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableKeyRotationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableKeyRotationInvoker) Invoke() (*model.EnableKeyRotationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *EnableKeyRotationInvoker) Invoke() (*model.EnableKeyRotationResponse, e
 
 type EnableKeyStoreInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnableKeyStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnableKeyStoreInvoker) Invoke() (*model.EnableKeyStoreResponse, error) {
@@ -297,6 +393,10 @@ type EncryptDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EncryptDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EncryptDataInvoker) Invoke() (*model.EncryptDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *EncryptDataInvoker) Invoke() (*model.EncryptDataResponse, error) {
 
 type EncryptDatakeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EncryptDatakeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EncryptDatakeyInvoker) Invoke() (*model.EncryptDatakeyResponse, error) {
@@ -321,6 +425,10 @@ type GenerateMacInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GenerateMacInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GenerateMacInvoker) Invoke() (*model.GenerateMacResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *GenerateMacInvoker) Invoke() (*model.GenerateMacResponse, error) {
 
 type ImportKeyMaterialInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportKeyMaterialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportKeyMaterialInvoker) Invoke() (*model.ImportKeyMaterialResponse, error) {
@@ -345,6 +457,10 @@ type ListGrantsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGrantsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGrantsInvoker) Invoke() (*model.ListGrantsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListGrantsInvoker) Invoke() (*model.ListGrantsResponse, error) {
 
 type ListKeyDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListKeyDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListKeyDetailInvoker) Invoke() (*model.ListKeyDetailResponse, error) {
@@ -369,6 +489,10 @@ type ListKeyStoresInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListKeyStoresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListKeyStoresInvoker) Invoke() (*model.ListKeyStoresResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListKeyStoresInvoker) Invoke() (*model.ListKeyStoresResponse, error) {
 
 type ListKeysInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListKeysInvoker) Invoke() (*model.ListKeysResponse, error) {
@@ -393,6 +521,10 @@ type ListKmsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListKmsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListKmsByTagsInvoker) Invoke() (*model.ListKmsByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListKmsByTagsInvoker) Invoke() (*model.ListKmsByTagsResponse, error) {
 
 type ListKmsTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListKmsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListKmsTagsInvoker) Invoke() (*model.ListKmsTagsResponse, error) {
@@ -417,6 +553,10 @@ type ListRetirableGrantsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRetirableGrantsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRetirableGrantsInvoker) Invoke() (*model.ListRetirableGrantsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListRetirableGrantsInvoker) Invoke() (*model.ListRetirableGrantsRespons
 
 type ListSupportRegionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSupportRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSupportRegionsInvoker) Invoke() (*model.ListSupportRegionsResponse, error) {
@@ -441,6 +585,10 @@ type ReplicateKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ReplicateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ReplicateKeyInvoker) Invoke() (*model.ReplicateKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ReplicateKeyInvoker) Invoke() (*model.ReplicateKeyResponse, error) {
 
 type ShowKeyRotationStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowKeyRotationStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowKeyRotationStatusInvoker) Invoke() (*model.ShowKeyRotationStatusResponse, error) {
@@ -465,6 +617,10 @@ type ShowKeyStoreInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowKeyStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowKeyStoreInvoker) Invoke() (*model.ShowKeyStoreResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ShowKeyStoreInvoker) Invoke() (*model.ShowKeyStoreResponse, error) {
 
 type ShowKmsTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowKmsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowKmsTagsInvoker) Invoke() (*model.ShowKmsTagsResponse, error) {
@@ -489,6 +649,10 @@ type ShowPublicKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPublicKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPublicKeyInvoker) Invoke() (*model.ShowPublicKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ShowPublicKeyInvoker) Invoke() (*model.ShowPublicKeyResponse, error) {
 
 type ShowUserInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowUserInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowUserInstancesInvoker) Invoke() (*model.ShowUserInstancesResponse, error) {
@@ -513,6 +681,10 @@ type ShowUserQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserQuotasInvoker) Invoke() (*model.ShowUserQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ShowUserQuotasInvoker) Invoke() (*model.ShowUserQuotasResponse, error) 
 
 type SignInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SignInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SignInvoker) Invoke() (*model.SignResponse, error) {
@@ -537,6 +713,10 @@ type UpdateKeyAliasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateKeyAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateKeyAliasInvoker) Invoke() (*model.UpdateKeyAliasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateKeyAliasInvoker) Invoke() (*model.UpdateKeyAliasResponse, error) 
 
 type UpdateKeyDescriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeyDescriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateKeyDescriptionInvoker) Invoke() (*model.UpdateKeyDescriptionResponse, error) {
@@ -561,6 +745,10 @@ type UpdateKeyRotationIntervalInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateKeyRotationIntervalInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateKeyRotationIntervalInvoker) Invoke() (*model.UpdateKeyRotationIntervalResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *UpdateKeyRotationIntervalInvoker) Invoke() (*model.UpdateKeyRotationInt
 
 type UpdatePrimaryRegionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrimaryRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePrimaryRegionInvoker) Invoke() (*model.UpdatePrimaryRegionResponse, error) {
@@ -585,6 +777,10 @@ type ValidateSignatureInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ValidateSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ValidateSignatureInvoker) Invoke() (*model.ValidateSignatureResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ValidateSignatureInvoker) Invoke() (*model.ValidateSignatureResponse, e
 
 type VerifyMacInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *VerifyMacInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *VerifyMacInvoker) Invoke() (*model.VerifyMacResponse, error) {
@@ -609,6 +809,10 @@ type ShowVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
 
 type ShowVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVersionsInvoker) Invoke() (*model.ShowVersionsResponse, error) {

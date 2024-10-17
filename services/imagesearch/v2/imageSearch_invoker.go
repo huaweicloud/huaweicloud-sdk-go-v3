@@ -9,6 +9,10 @@ type RunAddDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunAddDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunAddDataInvoker) Invoke() (*model.RunAddDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *RunAddDataInvoker) Invoke() (*model.RunAddDataResponse, error) {
 
 type RunCheckDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunCheckDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunCheckDataInvoker) Invoke() (*model.RunCheckDataResponse, error) {
@@ -33,6 +41,10 @@ type RunDeleteDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunDeleteDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunDeleteDataInvoker) Invoke() (*model.RunDeleteDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -45,6 +57,10 @@ type RunSearchInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunSearchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunSearchInvoker) Invoke() (*model.RunSearchResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -55,6 +71,10 @@ func (i *RunSearchInvoker) Invoke() (*model.RunSearchResponse, error) {
 
 type RunUpdateDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunUpdateDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunUpdateDataInvoker) Invoke() (*model.RunUpdateDataResponse, error) {

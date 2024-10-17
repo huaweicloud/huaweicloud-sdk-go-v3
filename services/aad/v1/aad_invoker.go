@@ -9,6 +9,10 @@ type ExecuteUnblockIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteUnblockIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteUnblockIpInvoker) Invoke() (*model.ExecuteUnblockIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ExecuteUnblockIpInvoker) Invoke() (*model.ExecuteUnblockIpResponse, err
 
 type ListBlockIpsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBlockIpsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBlockIpsInvoker) Invoke() (*model.ListBlockIpsResponse, error) {
@@ -33,6 +41,10 @@ type ListUnblockQuotaStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListUnblockQuotaStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListUnblockQuotaStatisticsInvoker) Invoke() (*model.ListUnblockQuotaStatisticsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListUnblockQuotaStatisticsInvoker) Invoke() (*model.ListUnblockQuotaSta
 
 type ShowBlockStatisticsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBlockStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBlockStatisticsInvoker) Invoke() (*model.ShowBlockStatisticsResponse, error) {
@@ -57,6 +73,10 @@ type ShowUnblockRecordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUnblockRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUnblockRecordInvoker) Invoke() (*model.ShowUnblockRecordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ShowUnblockRecordInvoker) Invoke() (*model.ShowUnblockRecordResponse, e
 
 type AddBlackWhiteIpListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddBlackWhiteIpListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddBlackWhiteIpListInvoker) Invoke() (*model.AddBlackWhiteIpListResponse, error) {
@@ -81,6 +105,10 @@ type AddPolicyBlackAndWhiteIpListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddPolicyBlackAndWhiteIpListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddPolicyBlackAndWhiteIpListInvoker) Invoke() (*model.AddPolicyBlackAndWhiteIpListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *AddPolicyBlackAndWhiteIpListInvoker) Invoke() (*model.AddPolicyBlackAnd
 
 type AssociateIpToPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateIpToPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateIpToPolicyInvoker) Invoke() (*model.AssociateIpToPolicyResponse, error) {
@@ -105,6 +137,10 @@ type AssociateIpToPolicyAndPackageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateIpToPolicyAndPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateIpToPolicyAndPackageInvoker) Invoke() (*model.AssociateIpToPolicyAndPackageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *AssociateIpToPolicyAndPackageInvoker) Invoke() (*model.AssociateIpToPol
 
 type BatchCreateInstanceIpRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateInstanceIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateInstanceIpRuleInvoker) Invoke() (*model.BatchCreateInstanceIpRuleResponse, error) {
@@ -129,6 +169,10 @@ type BatchDeleteInstanceIpRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteInstanceIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteInstanceIpRuleInvoker) Invoke() (*model.BatchDeleteInstanceIpRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *BatchDeleteInstanceIpRuleInvoker) Invoke() (*model.BatchDeleteInstanceI
 
 type CreateAadDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAadDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAadDomainInvoker) Invoke() (*model.CreateAadDomainResponse, error) {
@@ -153,6 +201,10 @@ type CreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePolicyInvoker) Invoke() (*model.CreatePolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreatePolicyInvoker) Invoke() (*model.CreatePolicyResponse, error) {
 
 type DeleteAlarmConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlarmConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAlarmConfigInvoker) Invoke() (*model.DeleteAlarmConfigResponse, error) {
@@ -177,6 +233,10 @@ type DeleteBlackWhiteIpListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteBlackWhiteIpListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteBlackWhiteIpListInvoker) Invoke() (*model.DeleteBlackWhiteIpListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteBlackWhiteIpListInvoker) Invoke() (*model.DeleteBlackWhiteIpListR
 
 type DeletePolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePolicyInvoker) Invoke() (*model.DeletePolicyResponse, error) {
@@ -201,6 +265,10 @@ type DeletePolicyBlackAndWhiteIpListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePolicyBlackAndWhiteIpListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePolicyBlackAndWhiteIpListInvoker) Invoke() (*model.DeletePolicyBlackAndWhiteIpListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeletePolicyBlackAndWhiteIpListInvoker) Invoke() (*model.DeletePolicyBl
 
 type DisassociateIpFromPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateIpFromPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateIpFromPolicyInvoker) Invoke() (*model.DisassociateIpFromPolicyResponse, error) {
@@ -225,6 +297,10 @@ type DisassociateIpFromPolicyAndPackageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateIpFromPolicyAndPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateIpFromPolicyAndPackageInvoker) Invoke() (*model.DisassociateIpFromPolicyAndPackageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DisassociateIpFromPolicyAndPackageInvoker) Invoke() (*model.Disassociat
 
 type ListDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDomainInvoker) Invoke() (*model.ListDomainResponse, error) {
@@ -249,6 +329,10 @@ type ListInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
 
 type ListInstanceIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstanceIdInvoker) Invoke() (*model.ListInstanceIdResponse, error) {
@@ -273,6 +361,10 @@ type ListInstanceIpRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstanceIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstanceIpRuleInvoker) Invoke() (*model.ListInstanceIpRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListInstanceIpRuleInvoker) Invoke() (*model.ListInstanceIpRuleResponse,
 
 type ListPackageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPackageInvoker) Invoke() (*model.ListPackageResponse, error) {
@@ -297,6 +393,10 @@ type ListPeakInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPeakInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPeakInvoker) Invoke() (*model.ListPeakResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListPeakInvoker) Invoke() (*model.ListPeakResponse, error) {
 
 type ListPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPolicyInvoker) Invoke() (*model.ListPolicyResponse, error) {
@@ -321,6 +425,10 @@ type ListProtectedIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProtectedIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProtectedIpInvoker) Invoke() (*model.ListProtectedIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListProtectedIpInvoker) Invoke() (*model.ListProtectedIpResponse, error
 
 type ListSourceIpsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSourceIpsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSourceIpsInvoker) Invoke() (*model.ListSourceIpsResponse, error) {
@@ -345,6 +457,10 @@ type ListUnboundProtectedIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListUnboundProtectedIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListUnboundProtectedIpInvoker) Invoke() (*model.ListUnboundProtectedIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListUnboundProtectedIpInvoker) Invoke() (*model.ListUnboundProtectedIpR
 
 type ModifyDomainWebSwitchInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ModifyDomainWebSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ModifyDomainWebSwitchInvoker) Invoke() (*model.ModifyDomainWebSwitchResponse, error) {
@@ -369,6 +489,10 @@ type SetCertForDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetCertForDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetCertForDomainInvoker) Invoke() (*model.SetCertForDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *SetCertForDomainInvoker) Invoke() (*model.SetCertForDomainResponse, err
 
 type ShowAlarmConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAlarmConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAlarmConfigInvoker) Invoke() (*model.ShowAlarmConfigResponse, error) {
@@ -393,6 +521,10 @@ type ShowPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPolicyInvoker) Invoke() (*model.ShowPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowPolicyInvoker) Invoke() (*model.ShowPolicyResponse, error) {
 
 type UpdateAlarmConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAlarmConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAlarmConfigInvoker) Invoke() (*model.UpdateAlarmConfigResponse, error) {
@@ -417,6 +553,10 @@ type UpdateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDomainInvoker) Invoke() (*model.UpdateDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *UpdateDomainInvoker) Invoke() (*model.UpdateDomainResponse, error) {
 
 type UpdateInstanceIpRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateInstanceIpRuleInvoker) Invoke() (*model.UpdateInstanceIpRuleResponse, error) {
@@ -441,6 +585,10 @@ type UpdatePackageIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePackageIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePackageIpInvoker) Invoke() (*model.UpdatePackageIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *UpdatePackageIpInvoker) Invoke() (*model.UpdatePackageIpResponse, error
 
 type UpdatePackageNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePackageNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePackageNameInvoker) Invoke() (*model.UpdatePackageNameResponse, error) {
@@ -465,6 +617,10 @@ type UpdatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePolicyInvoker) Invoke() (*model.UpdatePolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *UpdatePolicyInvoker) Invoke() (*model.UpdatePolicyResponse, error) {
 
 type UpdateTagForProtectedIpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTagForProtectedIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTagForProtectedIpInvoker) Invoke() (*model.UpdateTagForProtectedIpResponse, error) {

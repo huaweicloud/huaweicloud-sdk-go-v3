@@ -9,6 +9,10 @@ type AttachEip2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AttachEip2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AttachEip2Invoker) Invoke() (*model.AttachEip2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AttachEip2Invoker) Invoke() (*model.AttachEip2Response, error) {
 
 type ChangeSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupResponse, error) {
@@ -33,6 +41,10 @@ type ClearGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ClearGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ClearGraph2Invoker) Invoke() (*model.ClearGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ClearGraph2Invoker) Invoke() (*model.ClearGraph2Response, error) {
 
 type CreateBackup2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateBackup2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateBackup2Invoker) Invoke() (*model.CreateBackup2Response, error) {
@@ -57,6 +73,10 @@ type CreateGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateGraph2Invoker) Invoke() (*model.CreateGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateGraph2Invoker) Invoke() (*model.CreateGraph2Response, error) {
 
 type CreateMetadata2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMetadata2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMetadata2Invoker) Invoke() (*model.CreateMetadata2Response, error) {
@@ -81,6 +105,10 @@ type DeleteBackup2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteBackup2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteBackup2Invoker) Invoke() (*model.DeleteBackup2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteBackup2Invoker) Invoke() (*model.DeleteBackup2Response, error) {
 
 type DeleteGraph2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteGraph2Invoker) Invoke() (*model.DeleteGraph2Response, error) {
@@ -105,6 +137,10 @@ type DeleteMetadata2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteMetadata2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteMetadata2Invoker) Invoke() (*model.DeleteMetadata2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteMetadata2Invoker) Invoke() (*model.DeleteMetadata2Response, error
 
 type DetachEip2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetachEip2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetachEip2Invoker) Invoke() (*model.DetachEip2Response, error) {
@@ -129,6 +169,10 @@ type ExpandGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExpandGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExpandGraph2Invoker) Invoke() (*model.ExpandGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ExpandGraph2Invoker) Invoke() (*model.ExpandGraph2Response, error) {
 
 type ExportBackup2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportBackup2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportBackup2Invoker) Invoke() (*model.ExportBackup2Response, error) {
@@ -153,6 +201,10 @@ type ExportGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportGraph2Invoker) Invoke() (*model.ExportGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ExportGraph2Invoker) Invoke() (*model.ExportGraph2Response, error) {
 
 type ImportBackup2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportBackup2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportBackup2Invoker) Invoke() (*model.ImportBackup2Response, error) {
@@ -177,6 +233,10 @@ type ImportGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ImportGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ImportGraph2Invoker) Invoke() (*model.ImportGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ImportGraph2Invoker) Invoke() (*model.ImportGraph2Response, error) {
 
 type ListBackups2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBackups2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBackups2Invoker) Invoke() (*model.ListBackups2Response, error) {
@@ -201,6 +265,10 @@ type ListGraphBackups2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGraphBackups2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGraphBackups2Invoker) Invoke() (*model.ListGraphBackups2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListGraphBackups2Invoker) Invoke() (*model.ListGraphBackups2Response, e
 
 type ListGraphs2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGraphs2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGraphs2Invoker) Invoke() (*model.ListGraphs2Response, error) {
@@ -225,6 +297,10 @@ type ListJobs2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListJobs2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListJobs2Invoker) Invoke() (*model.ListJobs2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListJobs2Invoker) Invoke() (*model.ListJobs2Response, error) {
 
 type ListMetadatas2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMetadatas2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMetadatas2Invoker) Invoke() (*model.ListMetadatas2Response, error) {
@@ -249,6 +329,10 @@ type ListQuotas2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotas2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotas2Invoker) Invoke() (*model.ListQuotas2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListQuotas2Invoker) Invoke() (*model.ListQuotas2Response, error) {
 
 type ResizeGraph2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResizeGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResizeGraph2Invoker) Invoke() (*model.ResizeGraph2Response, error) {
@@ -273,6 +361,10 @@ type RestartGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RestartGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RestartGraph2Invoker) Invoke() (*model.RestartGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *RestartGraph2Invoker) Invoke() (*model.RestartGraph2Response, error) {
 
 type ShowBackupDownloadLinkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBackupDownloadLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBackupDownloadLinkInvoker) Invoke() (*model.ShowBackupDownloadLinkResponse, error) {
@@ -297,6 +393,10 @@ type ShowGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowGraph2Invoker) Invoke() (*model.ShowGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowGraph2Invoker) Invoke() (*model.ShowGraph2Response, error) {
 
 type ShowJob2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJob2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJob2Invoker) Invoke() (*model.ShowJob2Response, error) {
@@ -321,6 +425,10 @@ type ShowMetadata2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMetadata2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMetadata2Invoker) Invoke() (*model.ShowMetadata2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowMetadata2Invoker) Invoke() (*model.ShowMetadata2Response, error) {
 
 type StartGraph2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartGraph2Invoker) Invoke() (*model.StartGraph2Response, error) {
@@ -345,6 +457,10 @@ type StopGraph2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopGraph2Invoker) Invoke() (*model.StopGraph2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *StopGraph2Invoker) Invoke() (*model.StopGraph2Response, error) {
 
 type UpgradeGraph2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpgradeGraph2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpgradeGraph2Invoker) Invoke() (*model.UpgradeGraph2Response, error) {
@@ -369,6 +489,10 @@ type UploadFromObs2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadFromObs2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadFromObs2Invoker) Invoke() (*model.UploadFromObs2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *UploadFromObs2Invoker) Invoke() (*model.UploadFromObs2Response, error) 
 
 type DeregisterScenes2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeregisterScenes2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeregisterScenes2Invoker) Invoke() (*model.DeregisterScenes2Response, error) {
@@ -393,6 +521,10 @@ type ListScenes2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScenes2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScenes2Invoker) Invoke() (*model.ListScenes2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListScenes2Invoker) Invoke() (*model.ListScenes2Response, error) {
 
 type RegisterScenes2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RegisterScenes2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RegisterScenes2Invoker) Invoke() (*model.RegisterScenes2Response, error) {

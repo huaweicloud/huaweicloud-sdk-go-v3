@@ -9,10 +9,10 @@ import (
 // ShowAuditRuleRiskRequest Request Object
 type ShowAuditRuleRiskRequest struct {
 
-	// 实例ID
+	// 实例ID。可在查询实例列表接口的ID字段获取。
 	InstanceId string `json:"instance_id"`
 
-	// 风险规则ID
+	// 风险规则ID。可在查询风险规则策略接口的ID字段获取。
 	RiskId string `json:"risk_id"`
 }
 

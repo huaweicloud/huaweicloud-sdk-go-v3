@@ -9,6 +9,10 @@ type CreateMeshInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMeshInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMeshInvoker) Invoke() (*model.CreateMeshResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateMeshInvoker) Invoke() (*model.CreateMeshResponse, error) {
 
 type DeleteMeshInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMeshInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMeshInvoker) Invoke() (*model.DeleteMeshResponse, error) {
@@ -33,6 +41,10 @@ type ListMeshesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMeshesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMeshesInvoker) Invoke() (*model.ListMeshesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListMeshesInvoker) Invoke() (*model.ListMeshesResponse, error) {
 
 type ShowMeshInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMeshInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMeshInvoker) Invoke() (*model.ShowMeshResponse, error) {

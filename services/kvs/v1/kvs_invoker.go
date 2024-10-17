@@ -9,6 +9,10 @@ type CreateTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTableInvoker) Invoke() (*model.CreateTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateTableInvoker) Invoke() (*model.CreateTableResponse, error) {
 
 type DescribeTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DescribeTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DescribeTableInvoker) Invoke() (*model.DescribeTableResponse, error) {
@@ -33,6 +41,10 @@ type ListStoreInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListStoreInvoker) Invoke() (*model.ListStoreResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListStoreInvoker) Invoke() (*model.ListStoreResponse, error) {
 
 type ListTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTableInvoker) Invoke() (*model.ListTableResponse, error) {
@@ -57,6 +73,10 @@ type BatchWriteKvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchWriteKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchWriteKvInvoker) Invoke() (*model.BatchWriteKvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchWriteKvInvoker) Invoke() (*model.BatchWriteKvResponse, error) {
 
 type DeleteKvInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteKvInvoker) Invoke() (*model.DeleteKvResponse, error) {
@@ -81,6 +105,10 @@ type GetKvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GetKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GetKvInvoker) Invoke() (*model.GetKvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *GetKvInvoker) Invoke() (*model.GetKvResponse, error) {
 
 type PutKvInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PutKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PutKvInvoker) Invoke() (*model.PutKvResponse, error) {
@@ -105,6 +137,10 @@ type ScanKvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ScanKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ScanKvInvoker) Invoke() (*model.ScanKvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -117,6 +153,10 @@ type ScanSkeyKvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ScanSkeyKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ScanSkeyKvInvoker) Invoke() (*model.ScanSkeyKvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -127,6 +167,10 @@ func (i *ScanSkeyKvInvoker) Invoke() (*model.ScanSkeyKvResponse, error) {
 
 type UpdateKvInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateKvInvoker) Invoke() (*model.UpdateKvResponse, error) {

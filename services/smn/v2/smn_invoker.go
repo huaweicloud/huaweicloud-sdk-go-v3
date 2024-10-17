@@ -9,6 +9,10 @@ type AddSubscriptionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddSubscriptionInvoker) Invoke() (*model.AddSubscriptionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddSubscriptionInvoker) Invoke() (*model.AddSubscriptionResponse, error
 
 type AddSubscriptionFromSubscriptionUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddSubscriptionFromSubscriptionUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddSubscriptionFromSubscriptionUserInvoker) Invoke() (*model.AddSubscriptionFromSubscriptionUserResponse, error) {
@@ -33,6 +41,10 @@ type BatchCreateOrDeleteResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateOrDeleteResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateOrDeleteResourceTagsInvoker) Invoke() (*model.BatchCreateOrDeleteResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchCreateOrDeleteResourceTagsInvoker) Invoke() (*model.BatchCreateOrD
 
 type BatchCreateSubscriptionsFilterPolicesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSubscriptionsFilterPolicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateSubscriptionsFilterPolicesInvoker) Invoke() (*model.BatchCreateSubscriptionsFilterPolicesResponse, error) {
@@ -57,6 +73,10 @@ type BatchDeleteSubscriptionsFilterPolicesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteSubscriptionsFilterPolicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteSubscriptionsFilterPolicesInvoker) Invoke() (*model.BatchDeleteSubscriptionsFilterPolicesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchDeleteSubscriptionsFilterPolicesInvoker) Invoke() (*model.BatchDel
 
 type BatchUpdateSubscriptionsFilterPolicesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateSubscriptionsFilterPolicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUpdateSubscriptionsFilterPolicesInvoker) Invoke() (*model.BatchUpdateSubscriptionsFilterPolicesResponse, error) {
@@ -81,6 +105,10 @@ type CancelSubscriptionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelSubscriptionInvoker) Invoke() (*model.CancelSubscriptionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CancelSubscriptionInvoker) Invoke() (*model.CancelSubscriptionResponse,
 
 type CreateLogtankInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateLogtankInvoker) Invoke() (*model.CreateLogtankResponse, error) {
@@ -105,6 +137,10 @@ type CreateMessageTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMessageTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMessageTemplateInvoker) Invoke() (*model.CreateMessageTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateMessageTemplateInvoker) Invoke() (*model.CreateMessageTemplateRes
 
 type CreateResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateResourceTagInvoker) Invoke() (*model.CreateResourceTagResponse, error) {
@@ -129,6 +169,10 @@ type CreateTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTopicInvoker) Invoke() (*model.CreateTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateTopicInvoker) Invoke() (*model.CreateTopicResponse, error) {
 
 type DeleteLogtankInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteLogtankInvoker) Invoke() (*model.DeleteLogtankResponse, error) {
@@ -153,6 +201,10 @@ type DeleteMessageTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteMessageTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteMessageTemplateInvoker) Invoke() (*model.DeleteMessageTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteMessageTemplateInvoker) Invoke() (*model.DeleteMessageTemplateRes
 
 type DeleteResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteResourceTagInvoker) Invoke() (*model.DeleteResourceTagResponse, error) {
@@ -177,6 +233,10 @@ type DeleteTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTopicInvoker) Invoke() (*model.DeleteTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteTopicInvoker) Invoke() (*model.DeleteTopicResponse, error) {
 
 type DeleteTopicAttributeByNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTopicAttributeByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTopicAttributeByNameInvoker) Invoke() (*model.DeleteTopicAttributeByNameResponse, error) {
@@ -201,6 +265,10 @@ type DeleteTopicAttributesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTopicAttributesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTopicAttributesInvoker) Invoke() (*model.DeleteTopicAttributesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteTopicAttributesInvoker) Invoke() (*model.DeleteTopicAttributesRes
 
 type ListLogtankInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListLogtankInvoker) Invoke() (*model.ListLogtankResponse, error) {
@@ -225,6 +297,10 @@ type ListMessageTemplateDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMessageTemplateDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMessageTemplateDetailsInvoker) Invoke() (*model.ListMessageTemplateDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListMessageTemplateDetailsInvoker) Invoke() (*model.ListMessageTemplate
 
 type ListMessageTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMessageTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMessageTemplatesInvoker) Invoke() (*model.ListMessageTemplatesResponse, error) {
@@ -249,6 +329,10 @@ type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 
 type ListResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {
@@ -273,6 +361,10 @@ type ListResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, err
 
 type ListSubscriptionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSubscriptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSubscriptionsInvoker) Invoke() (*model.ListSubscriptionsResponse, error) {
@@ -297,6 +393,10 @@ type ListSubscriptionsByTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSubscriptionsByTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSubscriptionsByTopicInvoker) Invoke() (*model.ListSubscriptionsByTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListSubscriptionsByTopicInvoker) Invoke() (*model.ListSubscriptionsByTo
 
 type ListTopicAttributesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTopicAttributesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTopicAttributesInvoker) Invoke() (*model.ListTopicAttributesResponse, error) {
@@ -321,6 +425,10 @@ type ListTopicDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTopicDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTopicDetailsInvoker) Invoke() (*model.ListTopicDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListTopicDetailsInvoker) Invoke() (*model.ListTopicDetailsResponse, err
 
 type ListTopicsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTopicsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTopicsInvoker) Invoke() (*model.ListTopicsResponse, error) {
@@ -345,6 +457,10 @@ type ListVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVersionInvoker) Invoke() (*model.ListVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListVersionInvoker) Invoke() (*model.ListVersionResponse, error) {
 
 type ListVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVersionsInvoker) Invoke() (*model.ListVersionsResponse, error) {
@@ -369,6 +489,10 @@ type PublishHttpDetectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PublishHttpDetectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PublishHttpDetectInvoker) Invoke() (*model.PublishHttpDetectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *PublishHttpDetectInvoker) Invoke() (*model.PublishHttpDetectResponse, e
 
 type PublishMessageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PublishMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PublishMessageInvoker) Invoke() (*model.PublishMessageResponse, error) {
@@ -393,6 +521,10 @@ type ShowHttpDetectResultInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowHttpDetectResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowHttpDetectResultInvoker) Invoke() (*model.ShowHttpDetectResultResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowHttpDetectResultInvoker) Invoke() (*model.ShowHttpDetectResultRespo
 
 type UpdateLogtankInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateLogtankInvoker) Invoke() (*model.UpdateLogtankResponse, error) {
@@ -417,6 +553,10 @@ type UpdateMessageTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMessageTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMessageTemplateInvoker) Invoke() (*model.UpdateMessageTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *UpdateMessageTemplateInvoker) Invoke() (*model.UpdateMessageTemplateRes
 
 type UpdateSubscriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSubscriptionInvoker) Invoke() (*model.UpdateSubscriptionResponse, error) {
@@ -441,6 +585,10 @@ type UpdateTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTopicInvoker) Invoke() (*model.UpdateTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -453,6 +601,10 @@ type UpdateTopicAttributeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTopicAttributeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTopicAttributeInvoker) Invoke() (*model.UpdateTopicAttributeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -463,6 +615,11 @@ func (i *UpdateTopicAttributeInvoker) Invoke() (*model.UpdateTopicAttributeRespo
 
 type CreateApplicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -479,6 +636,11 @@ type DeleteApplicationInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteApplicationInvoker) Invoke() (*model.DeleteApplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -489,6 +651,11 @@ func (i *DeleteApplicationInvoker) Invoke() (*model.DeleteApplicationResponse, e
 
 type ListApplicationAttributesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListApplicationAttributesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -505,6 +672,11 @@ type ListApplicationsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListApplicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListApplicationsInvoker) Invoke() (*model.ListApplicationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -515,6 +687,11 @@ func (i *ListApplicationsInvoker) Invoke() (*model.ListApplicationsResponse, err
 
 type PublishAppMessageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *PublishAppMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -531,6 +708,11 @@ type UpdateApplicationInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateApplicationInvoker) Invoke() (*model.UpdateApplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -541,6 +723,11 @@ func (i *UpdateApplicationInvoker) Invoke() (*model.UpdateApplicationResponse, e
 
 type CreateApplicationEndpointInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateApplicationEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -557,6 +744,11 @@ type DeleteApplicationEndpointInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteApplicationEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteApplicationEndpointInvoker) Invoke() (*model.DeleteApplicationEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -567,6 +759,11 @@ func (i *DeleteApplicationEndpointInvoker) Invoke() (*model.DeleteApplicationEnd
 
 type ListApplicationEndpointAttributesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListApplicationEndpointAttributesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -583,6 +780,11 @@ type ListApplicationEndpointsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListApplicationEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListApplicationEndpointsInvoker) Invoke() (*model.ListApplicationEndpointsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -593,6 +795,11 @@ func (i *ListApplicationEndpointsInvoker) Invoke() (*model.ListApplicationEndpoi
 
 type UpdateApplicationEndpointInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateApplicationEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.

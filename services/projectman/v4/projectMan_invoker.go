@@ -9,6 +9,10 @@ type AddApplyJoinProjectForAgcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddApplyJoinProjectForAgcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddApplyJoinProjectForAgcInvoker) Invoke() (*model.AddApplyJoinProjectForAgcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddApplyJoinProjectForAgcInvoker) Invoke() (*model.AddApplyJoinProjectF
 
 type AddMemberV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddMemberV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddMemberV4Invoker) Invoke() (*model.AddMemberV4Response, error) {
@@ -33,6 +41,10 @@ type BatchAddMembersV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAddMembersV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAddMembersV4Invoker) Invoke() (*model.BatchAddMembersV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchAddMembersV4Invoker) Invoke() (*model.BatchAddMembersV4Response, e
 
 type BatchDeleteMembersV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteMembersV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteMembersV4Invoker) Invoke() (*model.BatchDeleteMembersV4Response, error) {
@@ -57,6 +73,10 @@ type BatchUpdateChildNickNamesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateChildNickNamesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateChildNickNamesInvoker) Invoke() (*model.BatchUpdateChildNickNamesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchUpdateChildNickNamesInvoker) Invoke() (*model.BatchUpdateChildNick
 
 type CheckProjectNameV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckProjectNameV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckProjectNameV4Invoker) Invoke() (*model.CheckProjectNameV4Response, error) {
@@ -81,6 +105,10 @@ type CreateProjectV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateProjectV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateProjectV4Invoker) Invoke() (*model.CreateProjectV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateProjectV4Invoker) Invoke() (*model.CreateProjectV4Response, error
 
 type DeleteProjectV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteProjectV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteProjectV4Invoker) Invoke() (*model.DeleteProjectV4Response, error) {
@@ -105,6 +137,10 @@ type ListDomainNotAddedProjectsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainNotAddedProjectsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainNotAddedProjectsV4Invoker) Invoke() (*model.ListDomainNotAddedProjectsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListDomainNotAddedProjectsV4Invoker) Invoke() (*model.ListDomainNotAdde
 
 type ListProjectBugStaticsV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectBugStaticsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectBugStaticsV4Invoker) Invoke() (*model.ListProjectBugStaticsV4Response, error) {
@@ -129,6 +169,10 @@ type ListProjectDemandStaticV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectDemandStaticV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectDemandStaticV4Invoker) Invoke() (*model.ListProjectDemandStaticV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListProjectDemandStaticV4Invoker) Invoke() (*model.ListProjectDemandSta
 
 type ListProjectMembersV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectMembersV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectMembersV4Invoker) Invoke() (*model.ListProjectMembersV4Response, error) {
@@ -153,6 +201,10 @@ type ListProjectsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectsV4Invoker) Invoke() (*model.ListProjectsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListProjectsV4Invoker) Invoke() (*model.ListProjectsV4Response, error) 
 
 type ListTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
@@ -177,6 +233,10 @@ type ListWorkitemStatusRecordsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListWorkitemStatusRecordsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListWorkitemStatusRecordsV4Invoker) Invoke() (*model.ListWorkitemStatusRecordsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListWorkitemStatusRecordsV4Invoker) Invoke() (*model.ListWorkitemStatus
 
 type ListWorkitemsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListWorkitemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListWorkitemsInvoker) Invoke() (*model.ListWorkitemsResponse, error) {
@@ -201,6 +265,10 @@ type RemoveProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveProjectInvoker) Invoke() (*model.RemoveProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *RemoveProjectInvoker) Invoke() (*model.RemoveProjectResponse, error) {
 
 type ShowBugDensityV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBugDensityV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBugDensityV2Invoker) Invoke() (*model.ShowBugDensityV2Response, error) {
@@ -225,6 +297,10 @@ type ShowBugsPerDeveloperInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBugsPerDeveloperInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBugsPerDeveloperInvoker) Invoke() (*model.ShowBugsPerDeveloperResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowBugsPerDeveloperInvoker) Invoke() (*model.ShowBugsPerDeveloperRespo
 
 type ShowCompletionRateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCompletionRateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCompletionRateInvoker) Invoke() (*model.ShowCompletionRateResponse, error) {
@@ -249,6 +329,10 @@ type ShowCurUserInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCurUserInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCurUserInfoInvoker) Invoke() (*model.ShowCurUserInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowCurUserInfoInvoker) Invoke() (*model.ShowCurUserInfoResponse, error
 
 type ShowCurUserRoleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCurUserRoleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCurUserRoleInvoker) Invoke() (*model.ShowCurUserRoleResponse, error) {
@@ -273,6 +361,10 @@ type ShowProjectInfoV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProjectInfoV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProjectInfoV4Invoker) Invoke() (*model.ShowProjectInfoV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowProjectInfoV4Invoker) Invoke() (*model.ShowProjectInfoV4Response, e
 
 type ShowProjectSummaryV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectSummaryV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowProjectSummaryV4Invoker) Invoke() (*model.ShowProjectSummaryV4Response, error) {
@@ -297,6 +393,10 @@ type ShowWorkItemWrokflowConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowWorkItemWrokflowConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowWorkItemWrokflowConfigInvoker) Invoke() (*model.ShowWorkItemWrokflowConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowWorkItemWrokflowConfigInvoker) Invoke() (*model.ShowWorkItemWrokflo
 
 type UpdateMembesRoleV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateMembesRoleV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateMembesRoleV4Invoker) Invoke() (*model.UpdateMembesRoleV4Response, error) {
@@ -321,6 +425,10 @@ type UpdateNickNameV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateNickNameV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateNickNameV4Invoker) Invoke() (*model.UpdateNickNameV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UpdateNickNameV4Invoker) Invoke() (*model.UpdateNickNameV4Response, err
 
 type UpdateProjectV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateProjectV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateProjectV4Invoker) Invoke() (*model.UpdateProjectV4Response, error) {
@@ -345,6 +457,10 @@ type AddIssueWorkHoursInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddIssueWorkHoursInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddIssueWorkHoursInvoker) Invoke() (*model.AddIssueWorkHoursResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *AddIssueWorkHoursInvoker) Invoke() (*model.AddIssueWorkHoursResponse, e
 
 type BatchDeleteIssuesV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteIssuesV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteIssuesV4Invoker) Invoke() (*model.BatchDeleteIssuesV4Response, error) {
@@ -369,6 +489,10 @@ type BatchDeleteIterationsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteIterationsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteIterationsV4Invoker) Invoke() (*model.BatchDeleteIterationsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *BatchDeleteIterationsV4Invoker) Invoke() (*model.BatchDeleteIterationsV
 
 type BatchListAssociatedIssuesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchListAssociatedIssuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchListAssociatedIssuesInvoker) Invoke() (*model.BatchListAssociatedIssuesResponse, error) {
@@ -393,6 +521,10 @@ type CancelProjectDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelProjectDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelProjectDomainInvoker) Invoke() (*model.CancelProjectDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *CancelProjectDomainInvoker) Invoke() (*model.CancelProjectDomainRespons
 
 type CreateCustomfieldsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomfieldsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCustomfieldsInvoker) Invoke() (*model.CreateCustomfieldsResponse, error) {
@@ -417,6 +553,10 @@ type CreateIssueV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateIssueV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateIssueV4Invoker) Invoke() (*model.CreateIssueV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *CreateIssueV4Invoker) Invoke() (*model.CreateIssueV4Response, error) {
 
 type CreateIterationV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateIterationV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateIterationV4Invoker) Invoke() (*model.CreateIterationV4Response, error) {
@@ -441,6 +585,10 @@ type CreateProjectDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateProjectDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateProjectDomainInvoker) Invoke() (*model.CreateProjectDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *CreateProjectDomainInvoker) Invoke() (*model.CreateProjectDomainRespons
 
 type CreateProjectModuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateProjectModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateProjectModuleInvoker) Invoke() (*model.CreateProjectModuleResponse, error) {
@@ -465,6 +617,10 @@ type CreateSystemIssueV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSystemIssueV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSystemIssueV4Invoker) Invoke() (*model.CreateSystemIssueV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateSystemIssueV4Invoker) Invoke() (*model.CreateSystemIssueV4Respons
 
 type DeleteAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAttachmentInvoker) Invoke() (*model.DeleteAttachmentResponse, error) {
@@ -489,6 +649,10 @@ type DeleteIssueV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteIssueV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteIssueV4Invoker) Invoke() (*model.DeleteIssueV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *DeleteIssueV4Invoker) Invoke() (*model.DeleteIssueV4Response, error) {
 
 type DeleteIterationV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteIterationV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteIterationV4Invoker) Invoke() (*model.DeleteIterationV4Response, error) {
@@ -513,6 +681,10 @@ type DeleteProjectModuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteProjectModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteProjectModuleInvoker) Invoke() (*model.DeleteProjectModuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *DeleteProjectModuleInvoker) Invoke() (*model.DeleteProjectModuleRespons
 
 type DownloadAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DownloadAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DownloadAttachmentInvoker) Invoke() (*model.DownloadAttachmentResponse, error) {
@@ -537,6 +713,10 @@ type DownloadImageFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DownloadImageFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DownloadImageFileInvoker) Invoke() (*model.DownloadImageFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *DownloadImageFileInvoker) Invoke() (*model.DownloadImageFileResponse, e
 
 type ListAssociatedIssuesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedIssuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAssociatedIssuesInvoker) Invoke() (*model.ListAssociatedIssuesResponse, error) {
@@ -561,6 +745,10 @@ type ListAssociatedTestCasesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAssociatedTestCasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAssociatedTestCasesInvoker) Invoke() (*model.ListAssociatedTestCasesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ListAssociatedTestCasesInvoker) Invoke() (*model.ListAssociatedTestCase
 
 type ListAssociatedWikisInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedWikisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAssociatedWikisInvoker) Invoke() (*model.ListAssociatedWikisResponse, error) {
@@ -585,6 +777,10 @@ type ListChildIssuesV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListChildIssuesV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListChildIssuesV4Invoker) Invoke() (*model.ListChildIssuesV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListChildIssuesV4Invoker) Invoke() (*model.ListChildIssuesV4Response, e
 
 type ListIssueAssociatedCommitsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListIssueAssociatedCommitsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListIssueAssociatedCommitsInvoker) Invoke() (*model.ListIssueAssociatedCommitsResponse, error) {
@@ -609,6 +809,10 @@ type ListIssueCommentsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListIssueCommentsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListIssueCommentsV4Invoker) Invoke() (*model.ListIssueCommentsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ListIssueCommentsV4Invoker) Invoke() (*model.ListIssueCommentsV4Respons
 
 type ListIssueCustomFieldsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListIssueCustomFieldsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListIssueCustomFieldsInvoker) Invoke() (*model.ListIssueCustomFieldsResponse, error) {
@@ -633,6 +841,10 @@ type ListIssueRecordsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListIssueRecordsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListIssueRecordsV4Invoker) Invoke() (*model.ListIssueRecordsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ListIssueRecordsV4Invoker) Invoke() (*model.ListIssueRecordsV4Response,
 
 type ListIssuesSfV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListIssuesSfV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListIssuesSfV4Invoker) Invoke() (*model.ListIssuesSfV4Response, error) {
@@ -657,6 +873,10 @@ type ListIssuesV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListIssuesV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListIssuesV4Invoker) Invoke() (*model.ListIssuesV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListIssuesV4Invoker) Invoke() (*model.ListIssuesV4Response, error) {
 
 type ListIterationHistoriesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListIterationHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListIterationHistoriesInvoker) Invoke() (*model.ListIterationHistoriesResponse, error) {
@@ -681,6 +905,10 @@ type ListProjectDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectDomainsInvoker) Invoke() (*model.ListProjectDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ListProjectDomainsInvoker) Invoke() (*model.ListProjectDomainsResponse,
 
 type ListProjectIssuesRecordsV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectIssuesRecordsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectIssuesRecordsV4Invoker) Invoke() (*model.ListProjectIssuesRecordsV4Response, error) {
@@ -705,6 +937,10 @@ type ListProjectIterationsV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectIterationsV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectIterationsV4Invoker) Invoke() (*model.ListProjectIterationsV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ListProjectIterationsV4Invoker) Invoke() (*model.ListProjectIterationsV
 
 type ListProjectModulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectModulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectModulesInvoker) Invoke() (*model.ListProjectModulesResponse, error) {
@@ -729,6 +969,10 @@ type ListProjectWorkHoursInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectWorkHoursInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectWorkHoursInvoker) Invoke() (*model.ListProjectWorkHoursResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ListProjectWorkHoursInvoker) Invoke() (*model.ListProjectWorkHoursRespo
 
 type ListProjectWorkHoursTypeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectWorkHoursTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectWorkHoursTypeInvoker) Invoke() (*model.ListProjectWorkHoursTypeResponse, error) {
@@ -753,6 +1001,10 @@ type ListScrumProjectStatusesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScrumProjectStatusesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScrumProjectStatusesInvoker) Invoke() (*model.ListScrumProjectStatusesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ListScrumProjectStatusesInvoker) Invoke() (*model.ListScrumProjectStatu
 
 type ListSpecIssueStayTimesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSpecIssueStayTimesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSpecIssueStayTimesInvoker) Invoke() (*model.ListSpecIssueStayTimesResponse, error) {
@@ -777,6 +1033,10 @@ type ListStatusStatisticInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListStatusStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListStatusStatisticInvoker) Invoke() (*model.ListStatusStatisticResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ListStatusStatisticInvoker) Invoke() (*model.ListStatusStatisticRespons
 
 type SearchIssuesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchIssuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchIssuesInvoker) Invoke() (*model.SearchIssuesResponse, error) {
@@ -801,6 +1065,10 @@ type ShowIssueCompletionRateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowIssueCompletionRateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowIssueCompletionRateInvoker) Invoke() (*model.ShowIssueCompletionRateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *ShowIssueCompletionRateInvoker) Invoke() (*model.ShowIssueCompletionRat
 
 type ShowIssueV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowIssueV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowIssueV4Invoker) Invoke() (*model.ShowIssueV4Response, error) {
@@ -825,6 +1097,10 @@ type ShowIssuesWrokFlowConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowIssuesWrokFlowConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowIssuesWrokFlowConfigInvoker) Invoke() (*model.ShowIssuesWrokFlowConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *ShowIssuesWrokFlowConfigInvoker) Invoke() (*model.ShowIssuesWrokFlowCon
 
 type ShowIterationV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowIterationV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowIterationV4Invoker) Invoke() (*model.ShowIterationV4Response, error) {
@@ -849,6 +1129,10 @@ type ShowProjectWorkHoursInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProjectWorkHoursInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProjectWorkHoursInvoker) Invoke() (*model.ShowProjectWorkHoursResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *ShowProjectWorkHoursInvoker) Invoke() (*model.ShowProjectWorkHoursRespo
 
 type UpdateIssueV4Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateIssueV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateIssueV4Invoker) Invoke() (*model.UpdateIssueV4Response, error) {
@@ -873,6 +1161,10 @@ type UpdateIterationV4Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateIterationV4Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateIterationV4Invoker) Invoke() (*model.UpdateIterationV4Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *UpdateIterationV4Invoker) Invoke() (*model.UpdateIterationV4Response, e
 
 type UpdateProjectDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateProjectDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateProjectDomainInvoker) Invoke() (*model.UpdateProjectDomainResponse, error) {
@@ -897,6 +1193,10 @@ type UpdateProjectModuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateProjectModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateProjectModuleInvoker) Invoke() (*model.UpdateProjectModuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -909,6 +1209,10 @@ type UploadAttachmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadAttachmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadAttachmentsInvoker) Invoke() (*model.UploadAttachmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -919,6 +1223,10 @@ func (i *UploadAttachmentsInvoker) Invoke() (*model.UploadAttachmentsResponse, e
 
 type UploadIssueImgInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UploadIssueImgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UploadIssueImgInvoker) Invoke() (*model.UploadIssueImgResponse, error) {

@@ -9,6 +9,10 @@ type BatchChangeDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchChangeDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchChangeDataInvoker) Invoke() (*model.BatchChangeDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchChangeDataInvoker) Invoke() (*model.BatchChangeDataResponse, error
 
 type BatchCheckJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCheckJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCheckJobsInvoker) Invoke() (*model.BatchCheckJobsResponse, error) {
@@ -33,6 +41,10 @@ type BatchCheckResultsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCheckResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCheckResultsInvoker) Invoke() (*model.BatchCheckResultsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchCheckResultsInvoker) Invoke() (*model.BatchCheckResultsResponse, e
 
 type BatchCreateJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateJobsInvoker) Invoke() (*model.BatchCreateJobsResponse, error) {
@@ -57,6 +73,10 @@ type BatchDeleteJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteJobsInvoker) Invoke() (*model.BatchDeleteJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchDeleteJobsInvoker) Invoke() (*model.BatchDeleteJobsResponse, error
 
 type BatchListJobDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchListJobDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchListJobDetailsInvoker) Invoke() (*model.BatchListJobDetailsResponse, error) {
@@ -81,6 +105,10 @@ type BatchListJobStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchListJobStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchListJobStatusInvoker) Invoke() (*model.BatchListJobStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *BatchListJobStatusInvoker) Invoke() (*model.BatchListJobStatusResponse,
 
 type BatchListProgressesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchListProgressesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchListProgressesInvoker) Invoke() (*model.BatchListProgressesResponse, error) {
@@ -105,6 +137,10 @@ type BatchListRposAndRtosInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchListRposAndRtosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchListRposAndRtosInvoker) Invoke() (*model.BatchListRposAndRtosResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *BatchListRposAndRtosInvoker) Invoke() (*model.BatchListRposAndRtosRespo
 
 type BatchListStructDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchListStructDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchListStructDetailInvoker) Invoke() (*model.BatchListStructDetailResponse, error) {
@@ -129,6 +169,10 @@ type BatchListStructProcessInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchListStructProcessInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchListStructProcessInvoker) Invoke() (*model.BatchListStructProcessResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *BatchListStructProcessInvoker) Invoke() (*model.BatchListStructProcessR
 
 type BatchResetPasswordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchResetPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchResetPasswordInvoker) Invoke() (*model.BatchResetPasswordResponse, error) {
@@ -153,6 +201,10 @@ type BatchRestoreTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchRestoreTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchRestoreTaskInvoker) Invoke() (*model.BatchRestoreTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *BatchRestoreTaskInvoker) Invoke() (*model.BatchRestoreTaskResponse, err
 
 type BatchSetDefinerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchSetDefinerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchSetDefinerInvoker) Invoke() (*model.BatchSetDefinerResponse, error) {
@@ -177,6 +233,10 @@ type BatchSetObjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchSetObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchSetObjectsInvoker) Invoke() (*model.BatchSetObjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *BatchSetObjectsInvoker) Invoke() (*model.BatchSetObjectsResponse, error
 
 type BatchSetPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchSetPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchSetPolicyInvoker) Invoke() (*model.BatchSetPolicyResponse, error) {
@@ -201,6 +265,10 @@ type BatchSetSmnInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchSetSmnInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchSetSmnInvoker) Invoke() (*model.BatchSetSmnResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *BatchSetSmnInvoker) Invoke() (*model.BatchSetSmnResponse, error) {
 
 type BatchSetSpeedInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchSetSpeedInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchSetSpeedInvoker) Invoke() (*model.BatchSetSpeedResponse, error) {
@@ -225,6 +297,10 @@ type BatchShowParamsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchShowParamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchShowParamsInvoker) Invoke() (*model.BatchShowParamsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *BatchShowParamsInvoker) Invoke() (*model.BatchShowParamsResponse, error
 
 type BatchStartJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchStartJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchStartJobsInvoker) Invoke() (*model.BatchStartJobsResponse, error) {
@@ -249,6 +329,10 @@ type BatchStopJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchStopJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchStopJobsInvoker) Invoke() (*model.BatchStopJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *BatchStopJobsInvoker) Invoke() (*model.BatchStopJobsResponse, error) {
 
 type BatchSwitchoverInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchSwitchoverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchSwitchoverInvoker) Invoke() (*model.BatchSwitchoverResponse, error) {
@@ -273,6 +361,10 @@ type BatchUpdateJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateJobInvoker) Invoke() (*model.BatchUpdateJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *BatchUpdateJobInvoker) Invoke() (*model.BatchUpdateJobResponse, error) 
 
 type BatchUpdateUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUpdateUserInvoker) Invoke() (*model.BatchUpdateUserResponse, error) {
@@ -297,6 +393,10 @@ type BatchValidateClustersConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchValidateClustersConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchValidateClustersConnectionsInvoker) Invoke() (*model.BatchValidateClustersConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *BatchValidateClustersConnectionsInvoker) Invoke() (*model.BatchValidate
 
 type BatchValidateConnectionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchValidateConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchValidateConnectionsInvoker) Invoke() (*model.BatchValidateConnectionsResponse, error) {
@@ -321,6 +425,10 @@ type CreateCompareResultFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCompareResultFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCompareResultFileInvoker) Invoke() (*model.CreateCompareResultFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *CreateCompareResultFileInvoker) Invoke() (*model.CreateCompareResultFil
 
 type CreateCompareTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCompareTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCompareTaskInvoker) Invoke() (*model.CreateCompareTaskResponse, error) {
@@ -345,6 +457,10 @@ type CreateDataLevelTableCompareJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDataLevelTableCompareJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDataLevelTableCompareJobInvoker) Invoke() (*model.CreateDataLevelTableCompareJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *CreateDataLevelTableCompareJobInvoker) Invoke() (*model.CreateDataLevel
 
 type CreateObjectLevelCompareJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateObjectLevelCompareJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateObjectLevelCompareJobInvoker) Invoke() (*model.CreateObjectLevelCompareJobResponse, error) {
@@ -369,6 +489,10 @@ type DeleteCompareJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCompareJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCompareJobInvoker) Invoke() (*model.DeleteCompareJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *DeleteCompareJobInvoker) Invoke() (*model.DeleteCompareJobResponse, err
 
 type DownloadCompareResultFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DownloadCompareResultFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DownloadCompareResultFileInvoker) Invoke() (*model.DownloadCompareResultFileResponse, error) {
@@ -393,6 +521,10 @@ type ListAvailableNodeTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAvailableNodeTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAvailableNodeTypesInvoker) Invoke() (*model.ListAvailableNodeTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListAvailableNodeTypesInvoker) Invoke() (*model.ListAvailableNodeTypesR
 
 type ListAvailableZoneInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAvailableZoneInvoker) Invoke() (*model.ListAvailableZoneResponse, error) {
@@ -417,6 +553,10 @@ type ListCompareResultInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCompareResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCompareResultInvoker) Invoke() (*model.ListCompareResultResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListCompareResultInvoker) Invoke() (*model.ListCompareResultResponse, e
 
 type ListContentCompareDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListContentCompareDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListContentCompareDetailInvoker) Invoke() (*model.ListContentCompareDetailResponse, error) {
@@ -441,6 +585,10 @@ type ListContentCompareDifferenceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListContentCompareDifferenceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListContentCompareDifferenceInvoker) Invoke() (*model.ListContentCompareDifferenceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ListContentCompareDifferenceInvoker) Invoke() (*model.ListContentCompar
 
 type ListContentCompareOverviewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListContentCompareOverviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListContentCompareOverviewInvoker) Invoke() (*model.ListContentCompareOverviewResponse, error) {
@@ -465,6 +617,10 @@ type ListDataCompareDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDataCompareDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDataCompareDetailInvoker) Invoke() (*model.ListDataCompareDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListDataCompareDetailInvoker) Invoke() (*model.ListDataCompareDetailRes
 
 type ListDataCompareOverviewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDataCompareOverviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDataCompareOverviewInvoker) Invoke() (*model.ListDataCompareOverviewResponse, error) {
@@ -489,6 +649,10 @@ type ListDataLevelTableCompareJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDataLevelTableCompareJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDataLevelTableCompareJobsInvoker) Invoke() (*model.ListDataLevelTableCompareJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListDataLevelTableCompareJobsInvoker) Invoke() (*model.ListDataLevelTab
 
 type ListObejectLevelCompareDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListObejectLevelCompareDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListObejectLevelCompareDetailInvoker) Invoke() (*model.ListObejectLevelCompareDetailResponse, error) {
@@ -513,6 +681,10 @@ type ListObejectLevelCompareOverviewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListObejectLevelCompareOverviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListObejectLevelCompareOverviewInvoker) Invoke() (*model.ListObejectLevelCompareOverviewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ListObejectLevelCompareOverviewInvoker) Invoke() (*model.ListObejectLev
 
 type ListUsersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
@@ -537,6 +713,10 @@ type ShowJobListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobListInvoker) Invoke() (*model.ShowJobListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ShowJobListInvoker) Invoke() (*model.ShowJobListResponse, error) {
 
 type ShowMonitoringDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMonitoringDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMonitoringDataInvoker) Invoke() (*model.ShowMonitoringDataResponse, error) {
@@ -561,6 +745,10 @@ type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 
 type StartPromptlyDataLevelTableCompareJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartPromptlyDataLevelTableCompareJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartPromptlyDataLevelTableCompareJobInvoker) Invoke() (*model.StartPromptlyDataLevelTableCompareJobResponse, error) {
@@ -585,6 +777,10 @@ type UpdateParamsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateParamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateParamsInvoker) Invoke() (*model.UpdateParamsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *UpdateParamsInvoker) Invoke() (*model.UpdateParamsResponse, error) {
 
 type UpdateTuningParamsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTuningParamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTuningParamsInvoker) Invoke() (*model.UpdateTuningParamsResponse, error) {

@@ -44,7 +44,7 @@ type CentralNetworkErRouteTableAttachment struct {
 
 	BandwidthType *BandwidthTypeEnum `json:"bandwidth_type"`
 
-	// 带宽值定义，单位Mbps。
+	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 
 	// 企业路由器的ID。
@@ -65,23 +65,23 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 中心网络企业路由器的站点编码。
 	EnterpriseRouterSiteCode string `json:"enterprise_router_site_code"`
 
-	// 实例ID。
-	AttachedErTableId string `json:"attached_er_table_id"`
-
-	// RegionID。
-	AttachedErTableRegionId string `json:"attached_er_table_region_id"`
-
-	// 实例所属项目ID。
+	// 被挂载的企业路由器的项目ID。
 	AttachedErTableProjectId string `json:"attached_er_table_project_id"`
 
-	// 站点编码定义
-	AttachedErTableSiteCode string `json:"attached_er_table_site_code"`
+	// ER路由器的regionID。
+	AttachedErTableRegionId string `json:"attached_er_table_region_id"`
 
-	// 实例ID。
+	// 被挂载的企业路由器ID。
 	AttachedErId string `json:"attached_er_id"`
 
-	// 实例ID。
+	// 被挂载的企业路由器的路由表ID。
+	AttachedErTableId string `json:"attached_er_table_id"`
+
+	// 被挂载的企业路由器的连接ID。
 	AttachedErAttachmentId *string `json:"attached_er_attachment_id,omitempty"`
+
+	// 被挂载的企业路由器的站点编码。
+	AttachedErTableSiteCode string `json:"attached_er_table_site_code"`
 
 	ApprovedState *ApprovedStateEnum `json:"approved_state"`
 

@@ -59,6 +59,9 @@ type SimPoolVo struct {
 
 	// 组成流量池的批次号列表
 	OrderIds *string `json:"order_ids,omitempty"`
+
+	// 流量池状态，0：废弃，1：在用
+	Status *int32 `json:"status,omitempty"`
 }
 
 func (o SimPoolVo) String() string {

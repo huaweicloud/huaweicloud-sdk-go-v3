@@ -9,6 +9,10 @@ type CreateAppGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAppGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAppGroupsInvoker) Invoke() (*model.CreateAppGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAppGroupsInvoker) Invoke() (*model.CreateAppGroupsResponse, error
 
 type DeleteAppGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAppGroupsInvoker) Invoke() (*model.DeleteAppGroupsResponse, error) {
@@ -33,6 +41,10 @@ type ListAppGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAppGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAppGroupsInvoker) Invoke() (*model.ListAppGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListAppGroupsInvoker) Invoke() (*model.ListAppGroupsResponse, error) {
 
 type MoveAppGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *MoveAppGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *MoveAppGroupsInvoker) Invoke() (*model.MoveAppGroupsResponse, error) {
@@ -57,6 +73,10 @@ type MoveAppToGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *MoveAppToGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *MoveAppToGroupInvoker) Invoke() (*model.MoveAppToGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *MoveAppToGroupInvoker) Invoke() (*model.MoveAppToGroupResponse, error) 
 
 type UpdateAppGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAppGroupsInvoker) Invoke() (*model.UpdateAppGroupsResponse, error) {
@@ -81,6 +105,10 @@ type BatchUpdateApplicationPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateApplicationPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateApplicationPermissionsInvoker) Invoke() (*model.BatchUpdateApplicationPermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *BatchUpdateApplicationPermissionsInvoker) Invoke() (*model.BatchUpdateA
 
 type BatchUpdatePermissionLevelInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdatePermissionLevelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUpdatePermissionLevelInvoker) Invoke() (*model.BatchUpdatePermissionLevelResponse, error) {
@@ -105,6 +137,10 @@ type CheckCanCreateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckCanCreateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckCanCreateInvoker) Invoke() (*model.CheckCanCreateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CheckCanCreateInvoker) Invoke() (*model.CheckCanCreateResponse, error) 
 
 type ListApplicationPermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApplicationPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApplicationPermissionsInvoker) Invoke() (*model.ListApplicationPermissionsResponse, error) {
@@ -129,6 +169,10 @@ type BatchDeleteAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteAppInvoker) Invoke() (*model.BatchDeleteAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *BatchDeleteAppInvoker) Invoke() (*model.BatchDeleteAppResponse, error) 
 
 type CheckIsDuplicateAppNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckIsDuplicateAppNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckIsDuplicateAppNameInvoker) Invoke() (*model.CheckIsDuplicateAppNameResponse, error) {
@@ -153,6 +201,10 @@ type CopyApplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CopyApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CopyApplicationInvoker) Invoke() (*model.CopyApplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CopyApplicationInvoker) Invoke() (*model.CopyApplicationResponse, error
 
 type CreateAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
@@ -177,6 +233,10 @@ type CreateDeployTaskByTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDeployTaskByTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDeployTaskByTemplateInvoker) Invoke() (*model.CreateDeployTaskByTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateDeployTaskByTemplateInvoker) Invoke() (*model.CreateDeployTaskByT
 
 type DeleteApplicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteApplicationInvoker) Invoke() (*model.DeleteApplicationResponse, error) {
@@ -201,6 +265,10 @@ type DeleteDeployTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDeployTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDeployTaskInvoker) Invoke() (*model.DeleteDeployTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteDeployTaskInvoker) Invoke() (*model.DeleteDeployTaskResponse, err
 
 type ListAllAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllAppInvoker) Invoke() (*model.ListAllAppResponse, error) {
@@ -225,6 +297,10 @@ type ListDeployTaskHistoryByDateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDeployTaskHistoryByDateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDeployTaskHistoryByDateInvoker) Invoke() (*model.ListDeployTaskHistoryByDateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListDeployTaskHistoryByDateInvoker) Invoke() (*model.ListDeployTaskHist
 
 type ListDeployTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDeployTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDeployTasksInvoker) Invoke() (*model.ListDeployTasksResponse, error) {
@@ -249,6 +329,10 @@ type ShowAppDetailByIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAppDetailByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAppDetailByIdInvoker) Invoke() (*model.ShowAppDetailByIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowAppDetailByIdInvoker) Invoke() (*model.ShowAppDetailByIdResponse, e
 
 type ShowDeployTaskDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDeployTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDeployTaskDetailInvoker) Invoke() (*model.ShowDeployTaskDetailResponse, error) {
@@ -273,6 +361,10 @@ type ShowExecutionParamsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowExecutionParamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowExecutionParamsInvoker) Invoke() (*model.ShowExecutionParamsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowExecutionParamsInvoker) Invoke() (*model.ShowExecutionParamsRespons
 
 type StartDeployTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartDeployTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartDeployTaskInvoker) Invoke() (*model.StartDeployTaskResponse, error) {
@@ -297,6 +393,10 @@ type UpdateAppDisableStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAppDisableStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAppDisableStatusInvoker) Invoke() (*model.UpdateAppDisableStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *UpdateAppDisableStatusInvoker) Invoke() (*model.UpdateAppDisableStatusR
 
 type UpdateAppInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAppInfoInvoker) Invoke() (*model.UpdateAppInfoResponse, error) {
@@ -321,6 +425,10 @@ type CreateEnvironmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEnvironmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEnvironmentInvoker) Invoke() (*model.CreateEnvironmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *CreateEnvironmentInvoker) Invoke() (*model.CreateEnvironmentResponse, e
 
 type DeleteEnvironmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnvironmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEnvironmentInvoker) Invoke() (*model.DeleteEnvironmentResponse, error) {
@@ -345,6 +457,10 @@ type DeleteHostFromEnvironmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteHostFromEnvironmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteHostFromEnvironmentInvoker) Invoke() (*model.DeleteHostFromEnvironmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *DeleteHostFromEnvironmentInvoker) Invoke() (*model.DeleteHostFromEnviro
 
 type ImportHostToEnvironmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportHostToEnvironmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportHostToEnvironmentInvoker) Invoke() (*model.ImportHostToEnvironmentResponse, error) {
@@ -369,6 +489,10 @@ type ListEnvironmentHostsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnvironmentHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnvironmentHostsInvoker) Invoke() (*model.ListEnvironmentHostsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListEnvironmentHostsInvoker) Invoke() (*model.ListEnvironmentHostsRespo
 
 type ListEnvironmentsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEnvironmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEnvironmentsInvoker) Invoke() (*model.ListEnvironmentsResponse, error) {
@@ -393,6 +521,10 @@ type ShowEnvironmentDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEnvironmentDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEnvironmentDetailInvoker) Invoke() (*model.ShowEnvironmentDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowEnvironmentDetailInvoker) Invoke() (*model.ShowEnvironmentDetailRes
 
 type UpdateEnvironmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnvironmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEnvironmentInvoker) Invoke() (*model.UpdateEnvironmentResponse, error) {
@@ -417,6 +553,10 @@ type ListEnvironmentPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnvironmentPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnvironmentPermissionsInvoker) Invoke() (*model.ListEnvironmentPermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListEnvironmentPermissionsInvoker) Invoke() (*model.ListEnvironmentPerm
 
 type UpdateEnvironmentPermissionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnvironmentPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEnvironmentPermissionInvoker) Invoke() (*model.UpdateEnvironmentPermissionResponse, error) {
@@ -441,6 +585,10 @@ type BatchDeleteHostsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteHostsInvoker) Invoke() (*model.BatchDeleteHostsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *BatchDeleteHostsInvoker) Invoke() (*model.BatchDeleteHostsResponse, err
 
 type CopyHostsToTargetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CopyHostsToTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CopyHostsToTargetInvoker) Invoke() (*model.CopyHostsToTargetResponse, error) {
@@ -465,6 +617,10 @@ type CreateDeploymentHostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDeploymentHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDeploymentHostInvoker) Invoke() (*model.CreateDeploymentHostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateDeploymentHostInvoker) Invoke() (*model.CreateDeploymentHostRespo
 
 type CreateHostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateHostInvoker) Invoke() (*model.CreateHostResponse, error) {
@@ -489,6 +649,10 @@ type DeleteDeploymentHostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDeploymentHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDeploymentHostInvoker) Invoke() (*model.DeleteDeploymentHostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *DeleteDeploymentHostInvoker) Invoke() (*model.DeleteDeploymentHostRespo
 
 type DeleteHostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteHostInvoker) Invoke() (*model.DeleteHostResponse, error) {
@@ -513,6 +681,10 @@ type ListHostsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
 
 type ListNewHostsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNewHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNewHostsInvoker) Invoke() (*model.ListNewHostsResponse, error) {
@@ -537,6 +713,10 @@ type ShowDeploymentHostDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDeploymentHostDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDeploymentHostDetailInvoker) Invoke() (*model.ShowDeploymentHostDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ShowDeploymentHostDetailInvoker) Invoke() (*model.ShowDeploymentHostDet
 
 type ShowHostDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowHostDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowHostDetailInvoker) Invoke() (*model.ShowHostDetailResponse, error) {
@@ -561,6 +745,10 @@ type UpdateDeploymentHostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDeploymentHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDeploymentHostInvoker) Invoke() (*model.UpdateDeploymentHostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *UpdateDeploymentHostInvoker) Invoke() (*model.UpdateDeploymentHostRespo
 
 type UpdateHostInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateHostInfoInvoker) Invoke() (*model.UpdateHostInfoResponse, error) {
@@ -585,6 +777,10 @@ type CreateDeploymentGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDeploymentGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDeploymentGroupInvoker) Invoke() (*model.CreateDeploymentGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *CreateDeploymentGroupInvoker) Invoke() (*model.CreateDeploymentGroupRes
 
 type CreateHostClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateHostClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateHostClusterInvoker) Invoke() (*model.CreateHostClusterResponse, error) {
@@ -609,6 +809,10 @@ type DeleteDeploymentGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDeploymentGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDeploymentGroupInvoker) Invoke() (*model.DeleteDeploymentGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *DeleteDeploymentGroupInvoker) Invoke() (*model.DeleteDeploymentGroupRes
 
 type DeleteHostClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteHostClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteHostClusterInvoker) Invoke() (*model.DeleteHostClusterResponse, error) {
@@ -633,6 +841,10 @@ type ListAssociateEnvironmentsInfosInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAssociateEnvironmentsInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAssociateEnvironmentsInfosInvoker) Invoke() (*model.ListAssociateEnvironmentsInfosResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ListAssociateEnvironmentsInfosInvoker) Invoke() (*model.ListAssociateEn
 
 type ListHostClustersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHostClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHostClustersInvoker) Invoke() (*model.ListHostClustersResponse, error) {
@@ -657,6 +873,10 @@ type ListHostGroupBaseInfosInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHostGroupBaseInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHostGroupBaseInfosInvoker) Invoke() (*model.ListHostGroupBaseInfosResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListHostGroupBaseInfosInvoker) Invoke() (*model.ListHostGroupBaseInfosR
 
 type ListHostGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHostGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHostGroupsInvoker) Invoke() (*model.ListHostGroupsResponse, error) {
@@ -681,6 +905,10 @@ type ShowDeploymentGroupDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDeploymentGroupDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDeploymentGroupDetailInvoker) Invoke() (*model.ShowDeploymentGroupDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowDeploymentGroupDetailInvoker) Invoke() (*model.ShowDeploymentGroupD
 
 type ShowHostClusterDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowHostClusterDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowHostClusterDetailInvoker) Invoke() (*model.ShowHostClusterDetailResponse, error) {
@@ -705,6 +937,10 @@ type UpdateDeploymentGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDeploymentGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDeploymentGroupInvoker) Invoke() (*model.UpdateDeploymentGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *UpdateDeploymentGroupInvoker) Invoke() (*model.UpdateDeploymentGroupRes
 
 type UpdateHostClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateHostClusterInvoker) Invoke() (*model.UpdateHostClusterResponse, error) {
@@ -729,6 +969,10 @@ type CheckWhetherHostGroupCanBeCreatedInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckWhetherHostGroupCanBeCreatedInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckWhetherHostGroupCanBeCreatedInvoker) Invoke() (*model.CheckWhetherHostGroupCanBeCreatedResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *CheckWhetherHostGroupCanBeCreatedInvoker) Invoke() (*model.CheckWhether
 
 type ListHostGroupPermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHostGroupPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHostGroupPermissionsInvoker) Invoke() (*model.ListHostGroupPermissionsResponse, error) {
@@ -753,6 +1001,10 @@ type UpdateHostGroupPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateHostGroupPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateHostGroupPermissionsInvoker) Invoke() (*model.UpdateHostGroupPermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -765,6 +1017,10 @@ type ListTaskSuccessRateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTaskSuccessRateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTaskSuccessRateInvoker) Invoke() (*model.ListTaskSuccessRateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -775,6 +1031,10 @@ func (i *ListTaskSuccessRateInvoker) Invoke() (*model.ListTaskSuccessRateRespons
 
 type ShowProjectSuccessRateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectSuccessRateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowProjectSuccessRateInvoker) Invoke() (*model.ShowProjectSuccessRateResponse, error) {

@@ -9,6 +9,10 @@ type AssociateKeypairInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateKeypairInvoker) Invoke() (*model.AssociateKeypairResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AssociateKeypairInvoker) Invoke() (*model.AssociateKeypairResponse, err
 
 type BatchAssociateKeypairInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAssociateKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAssociateKeypairInvoker) Invoke() (*model.BatchAssociateKeypairResponse, error) {
@@ -33,6 +41,10 @@ type ClearPrivateKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ClearPrivateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ClearPrivateKeyInvoker) Invoke() (*model.ClearPrivateKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ClearPrivateKeyInvoker) Invoke() (*model.ClearPrivateKeyResponse, error
 
 type CreateKeypairInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateKeypairInvoker) Invoke() (*model.CreateKeypairResponse, error) {
@@ -57,6 +73,10 @@ type DeleteAllFailedTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAllFailedTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAllFailedTaskInvoker) Invoke() (*model.DeleteAllFailedTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteAllFailedTaskInvoker) Invoke() (*model.DeleteAllFailedTaskRespons
 
 type DeleteFailedTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteFailedTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteFailedTaskInvoker) Invoke() (*model.DeleteFailedTaskResponse, error) {
@@ -81,6 +105,10 @@ type DeleteKeypairInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteKeypairInvoker) Invoke() (*model.DeleteKeypairResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteKeypairInvoker) Invoke() (*model.DeleteKeypairResponse, error) {
 
 type DisassociateKeypairInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateKeypairInvoker) Invoke() (*model.DisassociateKeypairResponse, error) {
@@ -105,6 +137,10 @@ type ExportPrivateKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportPrivateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportPrivateKeyInvoker) Invoke() (*model.ExportPrivateKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ExportPrivateKeyInvoker) Invoke() (*model.ExportPrivateKeyResponse, err
 
 type ImportPrivateKeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportPrivateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportPrivateKeyInvoker) Invoke() (*model.ImportPrivateKeyResponse, error) {
@@ -129,6 +169,10 @@ type ListFailedTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListFailedTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListFailedTaskInvoker) Invoke() (*model.ListFailedTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListFailedTaskInvoker) Invoke() (*model.ListFailedTaskResponse, error) 
 
 type ListKeypairDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListKeypairDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListKeypairDetailInvoker) Invoke() (*model.ListKeypairDetailResponse, error) {
@@ -153,6 +201,10 @@ type ListKeypairTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListKeypairTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListKeypairTaskInvoker) Invoke() (*model.ListKeypairTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListKeypairTaskInvoker) Invoke() (*model.ListKeypairTaskResponse, error
 
 type ListKeypairsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListKeypairsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListKeypairsInvoker) Invoke() (*model.ListKeypairsResponse, error) {
@@ -177,6 +233,10 @@ type ListRunningTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRunningTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRunningTaskInvoker) Invoke() (*model.ListRunningTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListRunningTaskInvoker) Invoke() (*model.ListRunningTaskResponse, error
 
 type UpdateKeypairDescriptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeypairDescriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateKeypairDescriptionInvoker) Invoke() (*model.UpdateKeypairDescriptionResponse, error) {

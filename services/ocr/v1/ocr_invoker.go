@@ -9,6 +9,10 @@ type RecognizeAcceptanceBillInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeAcceptanceBillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeAcceptanceBillInvoker) Invoke() (*model.RecognizeAcceptanceBillResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *RecognizeAcceptanceBillInvoker) Invoke() (*model.RecognizeAcceptanceBil
 
 type RecognizeAutoClassificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeAutoClassificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeAutoClassificationInvoker) Invoke() (*model.RecognizeAutoClassificationResponse, error) {
@@ -33,6 +41,10 @@ type RecognizeBankReceiptInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeBankReceiptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeBankReceiptInvoker) Invoke() (*model.RecognizeBankReceiptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *RecognizeBankReceiptInvoker) Invoke() (*model.RecognizeBankReceiptRespo
 
 type RecognizeBankcardInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeBankcardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeBankcardInvoker) Invoke() (*model.RecognizeBankcardResponse, error) {
@@ -57,6 +73,10 @@ type RecognizeBusinessCardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeBusinessCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeBusinessCardInvoker) Invoke() (*model.RecognizeBusinessCardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *RecognizeBusinessCardInvoker) Invoke() (*model.RecognizeBusinessCardRes
 
 type RecognizeBusinessLicenseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeBusinessLicenseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeBusinessLicenseInvoker) Invoke() (*model.RecognizeBusinessLicenseResponse, error) {
@@ -81,6 +105,10 @@ type RecognizeCambodianIdCardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeCambodianIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeCambodianIdCardInvoker) Invoke() (*model.RecognizeCambodianIdCardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *RecognizeCambodianIdCardInvoker) Invoke() (*model.RecognizeCambodianIdC
 
 type RecognizeChileIdCardInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeChileIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeChileIdCardInvoker) Invoke() (*model.RecognizeChileIdCardResponse, error) {
@@ -105,6 +137,10 @@ type RecognizeColombiaIdCardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeColombiaIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeColombiaIdCardInvoker) Invoke() (*model.RecognizeColombiaIdCardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *RecognizeColombiaIdCardInvoker) Invoke() (*model.RecognizeColombiaIdCar
 
 type RecognizeDriverLicenseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeDriverLicenseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeDriverLicenseInvoker) Invoke() (*model.RecognizeDriverLicenseResponse, error) {
@@ -129,6 +169,10 @@ type RecognizeExitEntryPermitInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeExitEntryPermitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeExitEntryPermitInvoker) Invoke() (*model.RecognizeExitEntryPermitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *RecognizeExitEntryPermitInvoker) Invoke() (*model.RecognizeExitEntryPer
 
 type RecognizeFinancialStatementInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeFinancialStatementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeFinancialStatementInvoker) Invoke() (*model.RecognizeFinancialStatementResponse, error) {
@@ -153,6 +201,10 @@ type RecognizeFlightItineraryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeFlightItineraryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeFlightItineraryInvoker) Invoke() (*model.RecognizeFlightItineraryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *RecognizeFlightItineraryInvoker) Invoke() (*model.RecognizeFlightItiner
 
 type RecognizeGeneralTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeGeneralTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeGeneralTableInvoker) Invoke() (*model.RecognizeGeneralTableResponse, error) {
@@ -177,6 +233,10 @@ type RecognizeGeneralTextInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeGeneralTextInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeGeneralTextInvoker) Invoke() (*model.RecognizeGeneralTextResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *RecognizeGeneralTextInvoker) Invoke() (*model.RecognizeGeneralTextRespo
 
 type RecognizeHandwritingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeHandwritingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeHandwritingInvoker) Invoke() (*model.RecognizeHandwritingResponse, error) {
@@ -201,6 +265,10 @@ type RecognizeHealthCodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeHealthCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeHealthCodeInvoker) Invoke() (*model.RecognizeHealthCodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *RecognizeHealthCodeInvoker) Invoke() (*model.RecognizeHealthCodeRespons
 
 type RecognizeHkIdCardInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeHkIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeHkIdCardInvoker) Invoke() (*model.RecognizeHkIdCardResponse, error) {
@@ -225,6 +297,10 @@ type RecognizeHouseholdRegisterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeHouseholdRegisterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeHouseholdRegisterInvoker) Invoke() (*model.RecognizeHouseholdRegisterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *RecognizeHouseholdRegisterInvoker) Invoke() (*model.RecognizeHouseholdR
 
 type RecognizeIdCardInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeIdCardInvoker) Invoke() (*model.RecognizeIdCardResponse, error) {
@@ -249,6 +329,10 @@ type RecognizeIdDocumentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeIdDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeIdDocumentInvoker) Invoke() (*model.RecognizeIdDocumentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *RecognizeIdDocumentInvoker) Invoke() (*model.RecognizeIdDocumentRespons
 
 type RecognizeInsurancePolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeInsurancePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeInsurancePolicyInvoker) Invoke() (*model.RecognizeInsurancePolicyResponse, error) {
@@ -273,6 +361,10 @@ type RecognizeInvoiceVerificationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeInvoiceVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeInvoiceVerificationInvoker) Invoke() (*model.RecognizeInvoiceVerificationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *RecognizeInvoiceVerificationInvoker) Invoke() (*model.RecognizeInvoiceV
 
 type RecognizeLicensePlateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeLicensePlateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeLicensePlateInvoker) Invoke() (*model.RecognizeLicensePlateResponse, error) {
@@ -297,6 +393,10 @@ type RecognizeMacaoIdCardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeMacaoIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeMacaoIdCardInvoker) Invoke() (*model.RecognizeMacaoIdCardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *RecognizeMacaoIdCardInvoker) Invoke() (*model.RecognizeMacaoIdCardRespo
 
 type RecognizeMainlandTravelPermitInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeMainlandTravelPermitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeMainlandTravelPermitInvoker) Invoke() (*model.RecognizeMainlandTravelPermitResponse, error) {
@@ -321,6 +425,10 @@ type RecognizeMvsInvoiceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeMvsInvoiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeMvsInvoiceInvoker) Invoke() (*model.RecognizeMvsInvoiceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *RecognizeMvsInvoiceInvoker) Invoke() (*model.RecognizeMvsInvoiceRespons
 
 type RecognizeMyanmarDriverLicenseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeMyanmarDriverLicenseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeMyanmarDriverLicenseInvoker) Invoke() (*model.RecognizeMyanmarDriverLicenseResponse, error) {
@@ -345,6 +457,10 @@ type RecognizeMyanmarIdcardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeMyanmarIdcardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeMyanmarIdcardInvoker) Invoke() (*model.RecognizeMyanmarIdcardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *RecognizeMyanmarIdcardInvoker) Invoke() (*model.RecognizeMyanmarIdcardR
 
 type RecognizePassportInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizePassportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizePassportInvoker) Invoke() (*model.RecognizePassportResponse, error) {
@@ -369,6 +489,10 @@ type RecognizePcrTestRecordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizePcrTestRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizePcrTestRecordInvoker) Invoke() (*model.RecognizePcrTestRecordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *RecognizePcrTestRecordInvoker) Invoke() (*model.RecognizePcrTestRecordR
 
 type RecognizePeruIdCardInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizePeruIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizePeruIdCardInvoker) Invoke() (*model.RecognizePeruIdCardResponse, error) {
@@ -393,6 +521,10 @@ type RecognizeQualificationCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeQualificationCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeQualificationCertificateInvoker) Invoke() (*model.RecognizeQualificationCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *RecognizeQualificationCertificateInvoker) Invoke() (*model.RecognizeQua
 
 type RecognizeQuotaInvoiceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeQuotaInvoiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeQuotaInvoiceInvoker) Invoke() (*model.RecognizeQuotaInvoiceResponse, error) {
@@ -417,6 +553,10 @@ type RecognizeRealEstateCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeRealEstateCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeRealEstateCertificateInvoker) Invoke() (*model.RecognizeRealEstateCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *RecognizeRealEstateCertificateInvoker) Invoke() (*model.RecognizeRealEs
 
 type RecognizeSealInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeSealInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeSealInvoker) Invoke() (*model.RecognizeSealResponse, error) {
@@ -441,6 +585,10 @@ type RecognizeSmartDocumentRecognizerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeSmartDocumentRecognizerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeSmartDocumentRecognizerInvoker) Invoke() (*model.RecognizeSmartDocumentRecognizerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *RecognizeSmartDocumentRecognizerInvoker) Invoke() (*model.RecognizeSmar
 
 type RecognizeTaxiInvoiceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeTaxiInvoiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeTaxiInvoiceInvoker) Invoke() (*model.RecognizeTaxiInvoiceResponse, error) {
@@ -465,6 +617,10 @@ type RecognizeThailandIdcardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeThailandIdcardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeThailandIdcardInvoker) Invoke() (*model.RecognizeThailandIdcardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *RecognizeThailandIdcardInvoker) Invoke() (*model.RecognizeThailandIdcar
 
 type RecognizeThailandLicensePlateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeThailandLicensePlateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeThailandLicensePlateInvoker) Invoke() (*model.RecognizeThailandLicensePlateResponse, error) {
@@ -489,6 +649,10 @@ type RecognizeTollInvoiceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeTollInvoiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeTollInvoiceInvoker) Invoke() (*model.RecognizeTollInvoiceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *RecognizeTollInvoiceInvoker) Invoke() (*model.RecognizeTollInvoiceRespo
 
 type RecognizeTrainTicketInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeTrainTicketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeTrainTicketInvoker) Invoke() (*model.RecognizeTrainTicketResponse, error) {
@@ -513,6 +681,10 @@ type RecognizeTransportationLicenseInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeTransportationLicenseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeTransportationLicenseInvoker) Invoke() (*model.RecognizeTransportationLicenseResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *RecognizeTransportationLicenseInvoker) Invoke() (*model.RecognizeTransp
 
 type RecognizeVatInvoiceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeVatInvoiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeVatInvoiceInvoker) Invoke() (*model.RecognizeVatInvoiceResponse, error) {
@@ -537,6 +713,10 @@ type RecognizeVehicleCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeVehicleCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeVehicleCertificateInvoker) Invoke() (*model.RecognizeVehicleCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *RecognizeVehicleCertificateInvoker) Invoke() (*model.RecognizeVehicleCe
 
 type RecognizeVehicleLicenseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeVehicleLicenseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeVehicleLicenseInvoker) Invoke() (*model.RecognizeVehicleLicenseResponse, error) {
@@ -561,6 +745,10 @@ type RecognizeVietnamIdCardInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeVietnamIdCardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeVietnamIdCardInvoker) Invoke() (*model.RecognizeVietnamIdCardResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *RecognizeVietnamIdCardInvoker) Invoke() (*model.RecognizeVietnamIdCardR
 
 type RecognizeWaybillElectronicInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeWaybillElectronicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeWaybillElectronicInvoker) Invoke() (*model.RecognizeWaybillElectronicResponse, error) {
@@ -585,6 +777,10 @@ type RecognizeWebImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeWebImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeWebImageInvoker) Invoke() (*model.RecognizeWebImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -597,6 +793,10 @@ type RecognizeCustomTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RecognizeCustomTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RecognizeCustomTemplateInvoker) Invoke() (*model.RecognizeCustomTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -607,6 +807,10 @@ func (i *RecognizeCustomTemplateInvoker) Invoke() (*model.RecognizeCustomTemplat
 
 type RecognizeVinInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RecognizeVinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RecognizeVinInvoker) Invoke() (*model.RecognizeVinResponse, error) {

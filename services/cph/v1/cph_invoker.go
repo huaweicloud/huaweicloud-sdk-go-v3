@@ -9,6 +9,10 @@ type AddImageMemberInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddImageMemberInvoker) Invoke() (*model.AddImageMemberResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddImageMemberInvoker) Invoke() (*model.AddImageMemberResponse, error) 
 
 type BatchCreateTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateTagsInvoker) Invoke() (*model.BatchCreateTagsResponse, error) {
@@ -33,6 +41,10 @@ type BatchDeleteTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error
 
 type BatchExportCloudPhoneDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchExportCloudPhoneDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchExportCloudPhoneDataInvoker) Invoke() (*model.BatchExportCloudPhoneDataResponse, error) {
@@ -57,6 +73,10 @@ type BatchImportCloudPhoneDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchImportCloudPhoneDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchImportCloudPhoneDataInvoker) Invoke() (*model.BatchImportCloudPhoneDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchImportCloudPhoneDataInvoker) Invoke() (*model.BatchImportCloudPhon
 
 type BatchShowPhoneConnectInfosInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchShowPhoneConnectInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchShowPhoneConnectInfosInvoker) Invoke() (*model.BatchShowPhoneConnectInfosResponse, error) {
@@ -81,6 +105,10 @@ type ChangeCloudPhoneServerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeCloudPhoneServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeCloudPhoneServerInvoker) Invoke() (*model.ChangeCloudPhoneServerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ChangeCloudPhoneServerInvoker) Invoke() (*model.ChangeCloudPhoneServerR
 
 type ChangeCloudPhoneServerModelInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeCloudPhoneServerModelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeCloudPhoneServerModelInvoker) Invoke() (*model.ChangeCloudPhoneServerModelResponse, error) {
@@ -105,6 +137,10 @@ type CreateNet2CloudPhoneServerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateNet2CloudPhoneServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateNet2CloudPhoneServerInvoker) Invoke() (*model.CreateNet2CloudPhoneServerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateNet2CloudPhoneServerInvoker) Invoke() (*model.CreateNet2CloudPhon
 
 type DeleteCloudPhoneServerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudPhoneServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteCloudPhoneServerInvoker) Invoke() (*model.DeleteCloudPhoneServerResponse, error) {
@@ -129,6 +169,10 @@ type DeleteImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteImageInvoker) Invoke() (*model.DeleteImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteImageInvoker) Invoke() (*model.DeleteImageResponse, error) {
 
 type DeleteImageMemberInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteImageMemberInvoker) Invoke() (*model.DeleteImageMemberResponse, error) {
@@ -153,6 +201,10 @@ type DeleteShareAppsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteShareAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteShareAppsInvoker) Invoke() (*model.DeleteShareAppsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteShareAppsInvoker) Invoke() (*model.DeleteShareAppsResponse, error
 
 type DeleteShareFilesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteShareFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteShareFilesInvoker) Invoke() (*model.DeleteShareFilesResponse, error) {
@@ -177,6 +233,10 @@ type ImportTrafficInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ImportTrafficInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ImportTrafficInvoker) Invoke() (*model.ImportTrafficResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ImportTrafficInvoker) Invoke() (*model.ImportTrafficResponse, error) {
 
 type ListCloudPhoneImagesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCloudPhoneImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCloudPhoneImagesInvoker) Invoke() (*model.ListCloudPhoneImagesResponse, error) {
@@ -201,6 +265,10 @@ type ListCloudPhoneModelsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCloudPhoneModelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCloudPhoneModelsInvoker) Invoke() (*model.ListCloudPhoneModelsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListCloudPhoneModelsInvoker) Invoke() (*model.ListCloudPhoneModelsRespo
 
 type ListCloudPhoneServerModelsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCloudPhoneServerModelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCloudPhoneServerModelsInvoker) Invoke() (*model.ListCloudPhoneServerModelsResponse, error) {
@@ -225,6 +297,10 @@ type ListCloudPhoneServersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCloudPhoneServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCloudPhoneServersInvoker) Invoke() (*model.ListCloudPhoneServersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListCloudPhoneServersInvoker) Invoke() (*model.ListCloudPhoneServersRes
 
 type ListCloudPhonesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCloudPhonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCloudPhonesInvoker) Invoke() (*model.ListCloudPhonesResponse, error) {
@@ -249,6 +329,10 @@ type ListEncodeServersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEncodeServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEncodeServersInvoker) Invoke() (*model.ListEncodeServersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListEncodeServersInvoker) Invoke() (*model.ListEncodeServersResponse, e
 
 type ListImageMembersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListImageMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListImageMembersInvoker) Invoke() (*model.ListImageMembersResponse, error) {
@@ -273,6 +361,10 @@ type ListImagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListImagesInvoker) Invoke() (*model.ListImagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListImagesInvoker) Invoke() (*model.ListImagesResponse, error) {
 
 type ListJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
@@ -297,6 +393,10 @@ type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 
 type ListResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {
@@ -321,6 +425,10 @@ type ListResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, err
 
 type ListShareFilesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListShareFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListShareFilesInvoker) Invoke() (*model.ListShareFilesResponse, error) {
@@ -345,6 +457,10 @@ type PushShareAppsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PushShareAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PushShareAppsInvoker) Invoke() (*model.PushShareAppsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *PushShareAppsInvoker) Invoke() (*model.PushShareAppsResponse, error) {
 
 type PushShareFilesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PushShareFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PushShareFilesInvoker) Invoke() (*model.PushShareFilesResponse, error) {
@@ -369,6 +489,10 @@ type ResetCloudPhoneInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetCloudPhoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetCloudPhoneInvoker) Invoke() (*model.ResetCloudPhoneResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ResetCloudPhoneInvoker) Invoke() (*model.ResetCloudPhoneResponse, error
 
 type RestartCloudPhoneInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RestartCloudPhoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RestartCloudPhoneInvoker) Invoke() (*model.RestartCloudPhoneResponse, error) {
@@ -393,6 +521,10 @@ type RestartCloudPhoneServerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RestartCloudPhoneServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RestartCloudPhoneServerInvoker) Invoke() (*model.RestartCloudPhoneServerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *RestartCloudPhoneServerInvoker) Invoke() (*model.RestartCloudPhoneServe
 
 type RestartEncodeServerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RestartEncodeServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RestartEncodeServerInvoker) Invoke() (*model.RestartEncodeServerResponse, error) {
@@ -417,6 +553,10 @@ type ShowBandwidthDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBandwidthDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBandwidthDetailInvoker) Invoke() (*model.ShowBandwidthDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowBandwidthDetailInvoker) Invoke() (*model.ShowBandwidthDetailRespons
 
 type ShowCloudPhoneDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCloudPhoneDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCloudPhoneDetailInvoker) Invoke() (*model.ShowCloudPhoneDetailResponse, error) {
@@ -441,6 +585,10 @@ type ShowCloudPhoneServerDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCloudPhoneServerDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCloudPhoneServerDetailInvoker) Invoke() (*model.ShowCloudPhoneServerDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowCloudPhoneServerDetailInvoker) Invoke() (*model.ShowCloudPhoneServe
 
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
@@ -465,6 +617,10 @@ type StopCloudPhoneInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopCloudPhoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopCloudPhoneInvoker) Invoke() (*model.StopCloudPhoneResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *StopCloudPhoneInvoker) Invoke() (*model.StopCloudPhoneResponse, error) 
 
 type UpdateBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateBandwidthInvoker) Invoke() (*model.UpdateBandwidthResponse, error) {
@@ -489,6 +649,10 @@ type UpdateCloudPhonePropertyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateCloudPhonePropertyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateCloudPhonePropertyInvoker) Invoke() (*model.UpdateCloudPhonePropertyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *UpdateCloudPhonePropertyInvoker) Invoke() (*model.UpdateCloudPhonePrope
 
 type UpdateKeypairInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateKeypairInvoker) Invoke() (*model.UpdateKeypairResponse, error) {
@@ -513,6 +681,10 @@ type UpdatePhoneNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePhoneNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePhoneNameInvoker) Invoke() (*model.UpdatePhoneNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *UpdatePhoneNameInvoker) Invoke() (*model.UpdatePhoneNameResponse, error
 
 type UpdateServerNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateServerNameInvoker) Invoke() (*model.UpdateServerNameResponse, error) {
@@ -537,6 +713,10 @@ type InstallApkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *InstallApkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *InstallApkInvoker) Invoke() (*model.InstallApkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *InstallApkInvoker) Invoke() (*model.InstallApkResponse, error) {
 
 type PushFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PushFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PushFileInvoker) Invoke() (*model.PushFileResponse, error) {
@@ -561,6 +745,10 @@ type RunShellCommandInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunShellCommandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunShellCommandInvoker) Invoke() (*model.RunShellCommandResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -573,6 +761,10 @@ type RunSyncCommandInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunSyncCommandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunSyncCommandInvoker) Invoke() (*model.RunSyncCommandResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -583,6 +775,10 @@ func (i *RunSyncCommandInvoker) Invoke() (*model.RunSyncCommandResponse, error) 
 
 type UninstallApkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UninstallApkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UninstallApkInvoker) Invoke() (*model.UninstallApkResponse, error) {

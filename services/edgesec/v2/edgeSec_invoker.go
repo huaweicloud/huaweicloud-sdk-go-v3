@@ -9,6 +9,10 @@ type ApplyHttpPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ApplyHttpPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ApplyHttpPolicyInvoker) Invoke() (*model.ApplyHttpPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ApplyHttpPolicyInvoker) Invoke() (*model.ApplyHttpPolicyResponse, error
 
 type CreateDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDomainsInvoker) Invoke() (*model.CreateDomainsResponse, error) {
@@ -33,6 +41,10 @@ type CreateHttpPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateHttpPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateHttpPolicyInvoker) Invoke() (*model.CreateHttpPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateHttpPolicyInvoker) Invoke() (*model.CreateHttpPolicyResponse, err
 
 type DeleteDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteDomainsInvoker) Invoke() (*model.DeleteDomainsResponse, error) {
@@ -57,6 +73,10 @@ type DeleteHttpPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteHttpPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteHttpPolicyInvoker) Invoke() (*model.DeleteHttpPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteHttpPolicyInvoker) Invoke() (*model.DeleteHttpPolicyResponse, err
 
 type ShowDomainDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDomainDetailInvoker) Invoke() (*model.ShowDomainDetailResponse, error) {
@@ -81,6 +105,10 @@ type ShowDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainsInvoker) Invoke() (*model.ShowDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ShowDomainsInvoker) Invoke() (*model.ShowDomainsResponse, error) {
 
 type ShowHttpPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowHttpPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowHttpPoliciesInvoker) Invoke() (*model.ShowHttpPoliciesResponse, error) {
@@ -105,6 +137,10 @@ type ShowHttpPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowHttpPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowHttpPolicyInvoker) Invoke() (*model.ShowHttpPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowHttpPolicyInvoker) Invoke() (*model.ShowHttpPolicyResponse, error) 
 
 type UpdateDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDomainsInvoker) Invoke() (*model.UpdateDomainsResponse, error) {
@@ -129,6 +169,10 @@ type UpdateHttpPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateHttpPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateHttpPolicyInvoker) Invoke() (*model.UpdateHttpPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *UpdateHttpPolicyInvoker) Invoke() (*model.UpdateHttpPolicyResponse, err
 
 type UpdateHttpPolicyRuleStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateHttpPolicyRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateHttpPolicyRuleStatusInvoker) Invoke() (*model.UpdateHttpPolicyRuleStatusResponse, error) {

@@ -9,6 +9,10 @@ type BatchDeleteTrashesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteTrashesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteTrashesInvoker) Invoke() (*model.BatchDeleteTrashesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchDeleteTrashesInvoker) Invoke() (*model.BatchDeleteTrashesResponse,
 
 type BatchRestoreRepoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchRestoreRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchRestoreRepoInvoker) Invoke() (*model.BatchRestoreRepoResponse, error) {
@@ -33,6 +41,10 @@ type CreateArtifactoryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateArtifactoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateArtifactoryInvoker) Invoke() (*model.CreateArtifactoryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateArtifactoryInvoker) Invoke() (*model.CreateArtifactoryResponse, e
 
 type CreateAttentionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAttentionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAttentionInvoker) Invoke() (*model.CreateAttentionResponse, error) {
@@ -57,6 +73,10 @@ type CreateDockerRepositoriesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDockerRepositoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDockerRepositoriesInvoker) Invoke() (*model.CreateDockerRepositoriesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateDockerRepositoriesInvoker) Invoke() (*model.CreateDockerRepositor
 
 type CreateMavenRepoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMavenRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMavenRepoInvoker) Invoke() (*model.CreateMavenRepoResponse, error) {
@@ -81,6 +105,10 @@ type CreateProjectRelatedRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateProjectRelatedRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateProjectRelatedRepositoryInvoker) Invoke() (*model.CreateProjectRelatedRepositoryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateProjectRelatedRepositoryInvoker) Invoke() (*model.CreateProjectRe
 
 type DeleteArtifactFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteArtifactFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteArtifactFileInvoker) Invoke() (*model.DeleteArtifactFileResponse, error) {
@@ -105,6 +137,10 @@ type DeleteRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRepositoryInvoker) Invoke() (*model.DeleteRepositoryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteRepositoryInvoker) Invoke() (*model.DeleteRepositoryResponse, err
 
 type ListAllRepositoriesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllRepositoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllRepositoriesInvoker) Invoke() (*model.ListAllRepositoriesResponse, error) {
@@ -129,6 +169,10 @@ type ListArtifactoryComponentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListArtifactoryComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListArtifactoryComponentInvoker) Invoke() (*model.ListArtifactoryComponentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListArtifactoryComponentInvoker) Invoke() (*model.ListArtifactoryCompon
 
 type ListArtifactoryStorageStatisticInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListArtifactoryStorageStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListArtifactoryStorageStatisticInvoker) Invoke() (*model.ListArtifactoryStorageStatisticResponse, error) {
@@ -153,6 +201,10 @@ type ListAttentionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAttentionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAttentionsInvoker) Invoke() (*model.ListAttentionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListAttentionsInvoker) Invoke() (*model.ListAttentionsResponse, error) 
 
 type ModifyRepositoryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ModifyRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ModifyRepositoryInvoker) Invoke() (*model.ModifyRepositoryResponse, error) {
@@ -177,6 +233,10 @@ type ResetUserPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetUserPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetUserPasswordInvoker) Invoke() (*model.ResetUserPasswordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ResetUserPasswordInvoker) Invoke() (*model.ResetUserPasswordResponse, e
 
 type SearchArtifactsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchArtifactsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchArtifactsInvoker) Invoke() (*model.SearchArtifactsResponse, error) {
@@ -201,6 +265,10 @@ type SearchByChecksumInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchByChecksumInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchByChecksumInvoker) Invoke() (*model.SearchByChecksumResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *SearchByChecksumInvoker) Invoke() (*model.SearchByChecksumResponse, err
 
 type ShowAuditInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAuditInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAuditInvoker) Invoke() (*model.ShowAuditResponse, error) {
@@ -225,6 +297,10 @@ type ShowFileTreeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFileTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFileTreeInvoker) Invoke() (*model.ShowFileTreeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowFileTreeInvoker) Invoke() (*model.ShowFileTreeResponse, error) {
 
 type ShowMavenInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMavenInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMavenInfoInvoker) Invoke() (*model.ShowMavenInfoResponse, error) {
@@ -249,6 +329,10 @@ type ShowProjectListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProjectListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProjectListInvoker) Invoke() (*model.ShowProjectListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowProjectListInvoker) Invoke() (*model.ShowProjectListResponse, error
 
 type ShowProjectReleaseFilesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectReleaseFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowProjectReleaseFilesInvoker) Invoke() (*model.ShowProjectReleaseFilesResponse, error) {
@@ -274,6 +362,11 @@ type ShowReleaseProjectFilesInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowReleaseProjectFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowReleaseProjectFilesInvoker) Invoke() (*model.ShowReleaseProjectFilesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -284,6 +377,10 @@ func (i *ShowReleaseProjectFilesInvoker) Invoke() (*model.ShowReleaseProjectFile
 
 type ShowRepositoryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRepositoryInvoker) Invoke() (*model.ShowRepositoryResponse, error) {
@@ -298,6 +395,10 @@ type ShowRepositoryInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRepositoryInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRepositoryInfoInvoker) Invoke() (*model.ShowRepositoryInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -310,6 +411,10 @@ type ShowStorageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStorageInvoker) Invoke() (*model.ShowStorageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -320,6 +425,10 @@ func (i *ShowStorageInvoker) Invoke() (*model.ShowStorageResponse, error) {
 
 type UpdateArtifactoryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateArtifactoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateArtifactoryInvoker) Invoke() (*model.UpdateArtifactoryResponse, error) {

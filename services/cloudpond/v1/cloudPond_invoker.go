@@ -9,6 +9,10 @@ type CreateEdgeSiteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEdgeSiteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEdgeSiteInvoker) Invoke() (*model.CreateEdgeSiteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateEdgeSiteInvoker) Invoke() (*model.CreateEdgeSiteResponse, error) 
 
 type DeleteEdgeSiteInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEdgeSiteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEdgeSiteInvoker) Invoke() (*model.DeleteEdgeSiteResponse, error) {
@@ -33,6 +41,10 @@ type ListEdgeSitesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEdgeSitesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEdgeSitesInvoker) Invoke() (*model.ListEdgeSitesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListEdgeSitesInvoker) Invoke() (*model.ListEdgeSitesResponse, error) {
 
 type ShowEdgeSiteInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEdgeSiteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEdgeSiteInvoker) Invoke() (*model.ShowEdgeSiteResponse, error) {
@@ -57,6 +73,10 @@ type UpdateEdgeSiteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEdgeSiteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEdgeSiteInvoker) Invoke() (*model.UpdateEdgeSiteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *UpdateEdgeSiteInvoker) Invoke() (*model.UpdateEdgeSiteResponse, error) 
 
 type ListEdgeSiteMetricsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEdgeSiteMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEdgeSiteMetricsInvoker) Invoke() (*model.ListEdgeSiteMetricsResponse, error) {
@@ -81,6 +105,10 @@ type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 
 type ListRacksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRacksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRacksInvoker) Invoke() (*model.ListRacksResponse, error) {
@@ -105,6 +137,10 @@ type ShowRackInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRackInvoker) Invoke() (*model.ShowRackResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowRackInvoker) Invoke() (*model.ShowRackResponse, error) {
 
 type ListSupportedRegionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSupportedRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSupportedRegionsInvoker) Invoke() (*model.ListSupportedRegionsResponse, error) {
@@ -129,6 +169,10 @@ type ListStoragePoolsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListStoragePoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListStoragePoolsInvoker) Invoke() (*model.ListStoragePoolsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -141,6 +185,10 @@ type ShowStoragePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStoragePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStoragePoolInvoker) Invoke() (*model.ShowStoragePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -151,6 +199,10 @@ func (i *ShowStoragePoolInvoker) Invoke() (*model.ShowStoragePoolResponse, error
 
 type ListSupportedZonesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSupportedZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSupportedZonesInvoker) Invoke() (*model.ListSupportedZonesResponse, error) {

@@ -9,6 +9,10 @@ type BatchCreateDeleteTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateDeleteTagsInvoker) Invoke() (*model.BatchCreateDeleteTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateDeleteTagsInvoker) Invoke() (*model.BatchCreateDeleteTagsRes
 
 type CreateTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTagInvoker) Invoke() (*model.CreateTagResponse, error) {
@@ -33,6 +41,10 @@ type DeleteTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
 
 type ListDomainTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDomainTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDomainTagsInvoker) Invoke() (*model.ListDomainTagsResponse, error) {
@@ -57,6 +73,10 @@ type ListResourceByFilterTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceByFilterTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceByFilterTagInvoker) Invoke() (*model.ListResourceByFilterTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListResourceByFilterTagInvoker) Invoke() (*model.ListResourceByFilterTa
 
 type ListTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {

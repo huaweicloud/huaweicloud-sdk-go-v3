@@ -9,6 +9,10 @@ type CreateAnimatedGraphicsTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAnimatedGraphicsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAnimatedGraphicsTaskInvoker) Invoke() (*model.CreateAnimatedGraphicsTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAnimatedGraphicsTaskInvoker) Invoke() (*model.CreateAnimatedGraph
 
 type DeleteAnimatedGraphicsTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAnimatedGraphicsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAnimatedGraphicsTaskInvoker) Invoke() (*model.DeleteAnimatedGraphicsTaskResponse, error) {
@@ -33,6 +41,10 @@ type ListAnimatedGraphicsTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAnimatedGraphicsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAnimatedGraphicsTaskInvoker) Invoke() (*model.ListAnimatedGraphicsTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListAnimatedGraphicsTaskInvoker) Invoke() (*model.ListAnimatedGraphicsT
 
 type CreateAgenciesTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAgenciesTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAgenciesTaskInvoker) Invoke() (*model.CreateAgenciesTaskResponse, error) {
@@ -57,6 +73,10 @@ type ListAllBucketsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAllBucketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAllBucketsInvoker) Invoke() (*model.ListAllBucketsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListAllBucketsInvoker) Invoke() (*model.ListAllBucketsResponse, error) 
 
 type ListAllObsObjListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllObsObjListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllObsObjListInvoker) Invoke() (*model.ListAllObsObjListResponse, error) {
@@ -81,6 +105,10 @@ type ListNotifyEventInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListNotifyEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListNotifyEventInvoker) Invoke() (*model.ListNotifyEventResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListNotifyEventInvoker) Invoke() (*model.ListNotifyEventResponse, error
 
 type ListNotifySmnTopicConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNotifySmnTopicConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNotifySmnTopicConfigInvoker) Invoke() (*model.ListNotifySmnTopicConfigResponse, error) {
@@ -105,6 +137,10 @@ type NotifySmnTopicConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NotifySmnTopicConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NotifySmnTopicConfigInvoker) Invoke() (*model.NotifySmnTopicConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *NotifySmnTopicConfigInvoker) Invoke() (*model.NotifySmnTopicConfigRespo
 
 type ShowAgenciesTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAgenciesTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAgenciesTaskInvoker) Invoke() (*model.ShowAgenciesTaskResponse, error) {
@@ -129,6 +169,10 @@ type UpdateBucketAuthorizedInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateBucketAuthorizedInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateBucketAuthorizedInvoker) Invoke() (*model.UpdateBucketAuthorizedResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *UpdateBucketAuthorizedInvoker) Invoke() (*model.UpdateBucketAuthorizedR
 
 type CreateEditingJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEditingJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEditingJobInvoker) Invoke() (*model.CreateEditingJobResponse, error) {
@@ -153,6 +201,10 @@ type DeleteEditingJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEditingJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEditingJobInvoker) Invoke() (*model.DeleteEditingJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteEditingJobInvoker) Invoke() (*model.DeleteEditingJobResponse, err
 
 type ListEditingJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEditingJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEditingJobInvoker) Invoke() (*model.ListEditingJobResponse, error) {
@@ -177,6 +233,10 @@ type CreateEncryptTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEncryptTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEncryptTaskInvoker) Invoke() (*model.CreateEncryptTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateEncryptTaskInvoker) Invoke() (*model.CreateEncryptTaskResponse, e
 
 type DeleteEncryptTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEncryptTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEncryptTaskInvoker) Invoke() (*model.DeleteEncryptTaskResponse, error) {
@@ -201,6 +265,10 @@ type ListEncryptTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEncryptTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEncryptTaskInvoker) Invoke() (*model.ListEncryptTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListEncryptTaskInvoker) Invoke() (*model.ListEncryptTaskResponse, error
 
 type CreateExtractTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateExtractTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateExtractTaskInvoker) Invoke() (*model.CreateExtractTaskResponse, error) {
@@ -225,6 +297,10 @@ type DeleteExtractTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteExtractTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteExtractTaskInvoker) Invoke() (*model.DeleteExtractTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteExtractTaskInvoker) Invoke() (*model.DeleteExtractTaskResponse, e
 
 type ListExtractTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListExtractTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListExtractTaskInvoker) Invoke() (*model.ListExtractTaskResponse, error) {
@@ -249,6 +329,10 @@ type CreateMbTasksReportInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMbTasksReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMbTasksReportInvoker) Invoke() (*model.CreateMbTasksReportResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CreateMbTasksReportInvoker) Invoke() (*model.CreateMbTasksReportRespons
 
 type CreateMergeChannelsTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMergeChannelsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMergeChannelsTaskInvoker) Invoke() (*model.CreateMergeChannelsTaskResponse, error) {
@@ -273,6 +361,10 @@ type CreateResetTracksTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateResetTracksTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateResetTracksTaskInvoker) Invoke() (*model.CreateResetTracksTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *CreateResetTracksTaskInvoker) Invoke() (*model.CreateResetTracksTaskRes
 
 type DeleteMergeChannelsTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMergeChannelsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMergeChannelsTaskInvoker) Invoke() (*model.DeleteMergeChannelsTaskResponse, error) {
@@ -297,6 +393,10 @@ type DeleteResetTracksTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteResetTracksTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteResetTracksTaskInvoker) Invoke() (*model.DeleteResetTracksTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DeleteResetTracksTaskInvoker) Invoke() (*model.DeleteResetTracksTaskRes
 
 type ListMergeChannelsTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMergeChannelsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMergeChannelsTaskInvoker) Invoke() (*model.ListMergeChannelsTaskResponse, error) {
@@ -321,6 +425,10 @@ type ListResetTracksTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResetTracksTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResetTracksTaskInvoker) Invoke() (*model.ListResetTracksTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListResetTracksTaskInvoker) Invoke() (*model.ListResetTracksTaskRespons
 
 type CreateMediaProcessTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMediaProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMediaProcessTaskInvoker) Invoke() (*model.CreateMediaProcessTaskResponse, error) {
@@ -345,6 +457,10 @@ type DeleteMediaProcessTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteMediaProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteMediaProcessTaskInvoker) Invoke() (*model.DeleteMediaProcessTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *DeleteMediaProcessTaskInvoker) Invoke() (*model.DeleteMediaProcessTaskR
 
 type ListMediaProcessTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMediaProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMediaProcessTaskInvoker) Invoke() (*model.ListMediaProcessTaskResponse, error) {
@@ -369,6 +489,10 @@ type CreateMpeCallBackInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMpeCallBackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMpeCallBackInvoker) Invoke() (*model.CreateMpeCallBackResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *CreateMpeCallBackInvoker) Invoke() (*model.CreateMpeCallBackResponse, e
 
 type CreateQualityEnhanceTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateQualityEnhanceTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateQualityEnhanceTemplateInvoker) Invoke() (*model.CreateQualityEnhanceTemplateResponse, error) {
@@ -393,6 +521,10 @@ type DeleteQualityEnhanceTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteQualityEnhanceTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteQualityEnhanceTemplateInvoker) Invoke() (*model.DeleteQualityEnhanceTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *DeleteQualityEnhanceTemplateInvoker) Invoke() (*model.DeleteQualityEnha
 
 type ListQualityEnhanceDefaultTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQualityEnhanceDefaultTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQualityEnhanceDefaultTemplateInvoker) Invoke() (*model.ListQualityEnhanceDefaultTemplateResponse, error) {
@@ -417,6 +553,10 @@ type UpdateQualityEnhanceTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateQualityEnhanceTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateQualityEnhanceTemplateInvoker) Invoke() (*model.UpdateQualityEnhanceTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *UpdateQualityEnhanceTemplateInvoker) Invoke() (*model.UpdateQualityEnha
 
 type ListTranscodeDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTranscodeDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTranscodeDetailInvoker) Invoke() (*model.ListTranscodeDetailResponse, error) {
@@ -441,6 +585,10 @@ type CancelRemuxTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelRemuxTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelRemuxTaskInvoker) Invoke() (*model.CancelRemuxTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *CancelRemuxTaskInvoker) Invoke() (*model.CancelRemuxTaskResponse, error
 
 type CreateRemuxTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRemuxTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRemuxTaskInvoker) Invoke() (*model.CreateRemuxTaskResponse, error) {
@@ -465,6 +617,10 @@ type CreateRetryRemuxTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRetryRemuxTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRetryRemuxTaskInvoker) Invoke() (*model.CreateRetryRemuxTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateRetryRemuxTaskInvoker) Invoke() (*model.CreateRetryRemuxTaskRespo
 
 type DeleteRemuxTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRemuxTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRemuxTaskInvoker) Invoke() (*model.DeleteRemuxTaskResponse, error) {
@@ -489,6 +649,10 @@ type ListRemuxTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRemuxTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRemuxTaskInvoker) Invoke() (*model.ListRemuxTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListRemuxTaskInvoker) Invoke() (*model.ListRemuxTaskResponse, error) {
 
 type CreateTemplateGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTemplateGroupInvoker) Invoke() (*model.CreateTemplateGroupResponse, error) {
@@ -513,6 +681,10 @@ type DeleteTemplateGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTemplateGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTemplateGroupInvoker) Invoke() (*model.DeleteTemplateGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *DeleteTemplateGroupInvoker) Invoke() (*model.DeleteTemplateGroupRespons
 
 type ListTemplateGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTemplateGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTemplateGroupInvoker) Invoke() (*model.ListTemplateGroupResponse, error) {
@@ -537,6 +713,10 @@ type UpdateTemplateGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTemplateGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTemplateGroupInvoker) Invoke() (*model.UpdateTemplateGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateTemplateGroupInvoker) Invoke() (*model.UpdateTemplateGroupRespons
 
 type ShowTenantAccessInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantAccessInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTenantAccessInfoInvoker) Invoke() (*model.ShowTenantAccessInfoResponse, error) {
@@ -561,6 +745,10 @@ type UpdateTenantAccessInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTenantAccessInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTenantAccessInfoInvoker) Invoke() (*model.UpdateTenantAccessInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *UpdateTenantAccessInfoInvoker) Invoke() (*model.UpdateTenantAccessInfoR
 
 type CreateThumbnailsTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateThumbnailsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateThumbnailsTaskInvoker) Invoke() (*model.CreateThumbnailsTaskResponse, error) {
@@ -585,6 +777,10 @@ type DeleteThumbnailsTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteThumbnailsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteThumbnailsTaskInvoker) Invoke() (*model.DeleteThumbnailsTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *DeleteThumbnailsTaskInvoker) Invoke() (*model.DeleteThumbnailsTaskRespo
 
 type ListThumbnailsTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListThumbnailsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListThumbnailsTaskInvoker) Invoke() (*model.ListThumbnailsTaskResponse, error) {
@@ -609,6 +809,10 @@ type CreateTranscodingTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTranscodingTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTranscodingTaskInvoker) Invoke() (*model.CreateTranscodingTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *CreateTranscodingTaskInvoker) Invoke() (*model.CreateTranscodingTaskRes
 
 type DeleteTranscodingTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTranscodingTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTranscodingTaskInvoker) Invoke() (*model.DeleteTranscodingTaskResponse, error) {
@@ -633,6 +841,10 @@ type DeleteTranscodingTaskByConsoleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTranscodingTaskByConsoleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTranscodingTaskByConsoleInvoker) Invoke() (*model.DeleteTranscodingTaskByConsoleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *DeleteTranscodingTaskByConsoleInvoker) Invoke() (*model.DeleteTranscodi
 
 type ListStatSummaryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListStatSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListStatSummaryInvoker) Invoke() (*model.ListStatSummaryResponse, error) {
@@ -657,6 +873,10 @@ type ListTranscodingTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTranscodingTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTranscodingTaskInvoker) Invoke() (*model.ListTranscodingTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListTranscodingTaskInvoker) Invoke() (*model.ListTranscodingTaskRespons
 
 type CreateTransTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTransTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTransTemplateInvoker) Invoke() (*model.CreateTransTemplateResponse, error) {
@@ -681,6 +905,10 @@ type DeleteTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) 
 
 type ListTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTemplateInvoker) Invoke() (*model.ListTemplateResponse, error) {
@@ -705,6 +937,10 @@ type UpdateTransTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTransTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTransTemplateInvoker) Invoke() (*model.UpdateTransTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *UpdateTransTemplateInvoker) Invoke() (*model.UpdateTransTemplateRespons
 
 type CreateWatermarkTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateWatermarkTemplateInvoker) Invoke() (*model.CreateWatermarkTemplateResponse, error) {
@@ -729,6 +969,10 @@ type DeleteWatermarkTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteWatermarkTemplateInvoker) Invoke() (*model.DeleteWatermarkTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -741,6 +985,10 @@ type ListWatermarkTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListWatermarkTemplateInvoker) Invoke() (*model.ListWatermarkTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -751,6 +999,10 @@ func (i *ListWatermarkTemplateInvoker) Invoke() (*model.ListWatermarkTemplateRes
 
 type UpdateWatermarkTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateWatermarkTemplateInvoker) Invoke() (*model.UpdateWatermarkTemplateResponse, error) {

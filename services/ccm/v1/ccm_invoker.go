@@ -9,6 +9,10 @@ type BatchCreateCaTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateCaTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateCaTagsInvoker) Invoke() (*model.BatchCreateCaTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateCaTagsInvoker) Invoke() (*model.BatchCreateCaTagsResponse, e
 
 type BatchCreateCertTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateCertTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateCertTagsInvoker) Invoke() (*model.BatchCreateCertTagsResponse, error) {
@@ -33,6 +41,10 @@ type BatchDeleteCaTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteCaTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteCaTagsInvoker) Invoke() (*model.BatchDeleteCaTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchDeleteCaTagsInvoker) Invoke() (*model.BatchDeleteCaTagsResponse, e
 
 type BatchDeleteCertTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCertTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteCertTagsInvoker) Invoke() (*model.BatchDeleteCertTagsResponse, error) {
@@ -57,6 +73,10 @@ type CountCaResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountCaResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountCaResourceInstancesInvoker) Invoke() (*model.CountCaResourceInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CountCaResourceInstancesInvoker) Invoke() (*model.CountCaResourceInstan
 
 type CountCertResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountCertResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountCertResourceInstancesInvoker) Invoke() (*model.CountCertResourceInstancesResponse, error) {
@@ -81,6 +105,10 @@ type CreateCaTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCaTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCaTagInvoker) Invoke() (*model.CreateCaTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateCaTagInvoker) Invoke() (*model.CreateCaTagResponse, error) {
 
 type CreateCertTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCertTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCertTagInvoker) Invoke() (*model.CreateCertTagResponse, error) {
@@ -105,6 +137,10 @@ type CreateCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, e
 
 type CreateCertificateAuthorityObsAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateAuthorityObsAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCertificateAuthorityObsAgencyInvoker) Invoke() (*model.CreateCertificateAuthorityObsAgencyResponse, error) {
@@ -129,6 +169,10 @@ type CreateCertificateAuthorityOrderInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCertificateAuthorityOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCertificateAuthorityOrderInvoker) Invoke() (*model.CreateCertificateAuthorityOrderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateCertificateAuthorityOrderInvoker) Invoke() (*model.CreateCertific
 
 type CreateCertificateByCsrInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateByCsrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCertificateByCsrInvoker) Invoke() (*model.CreateCertificateByCsrResponse, error) {
@@ -153,6 +201,10 @@ type DeleteCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 
 type DisableCertificateAuthorityCrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableCertificateAuthorityCrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableCertificateAuthorityCrlInvoker) Invoke() (*model.DisableCertificateAuthorityCrlResponse, error) {
@@ -177,6 +233,10 @@ type EnableCertificateAuthorityCrlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableCertificateAuthorityCrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableCertificateAuthorityCrlInvoker) Invoke() (*model.EnableCertificateAuthorityCrlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *EnableCertificateAuthorityCrlInvoker) Invoke() (*model.EnableCertificat
 
 type ExportCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportCertificateInvoker) Invoke() (*model.ExportCertificateResponse, error) {
@@ -201,6 +265,10 @@ type ListCaResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCaResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCaResourceInstancesInvoker) Invoke() (*model.ListCaResourceInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListCaResourceInstancesInvoker) Invoke() (*model.ListCaResourceInstance
 
 type ListCaTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCaTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCaTagsInvoker) Invoke() (*model.ListCaTagsResponse, error) {
@@ -225,6 +297,10 @@ type ListCertResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCertResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCertResourceInstancesInvoker) Invoke() (*model.ListCertResourceInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListCertResourceInstancesInvoker) Invoke() (*model.ListCertResourceInst
 
 type ListCertTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCertTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCertTagsInvoker) Invoke() (*model.ListCertTagsResponse, error) {
@@ -249,6 +329,10 @@ type ListCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCertificateInvoker) Invoke() (*model.ListCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListCertificateInvoker) Invoke() (*model.ListCertificateResponse, error
 
 type ListCertificateAuthorityObsBucketInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCertificateAuthorityObsBucketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCertificateAuthorityObsBucketInvoker) Invoke() (*model.ListCertificateAuthorityObsBucketResponse, error) {
@@ -273,6 +361,10 @@ type ListDomainCaTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainCaTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainCaTagsInvoker) Invoke() (*model.ListDomainCaTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListDomainCaTagsInvoker) Invoke() (*model.ListDomainCaTagsResponse, err
 
 type ListDomainCertTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDomainCertTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDomainCertTagsInvoker) Invoke() (*model.ListDomainCertTagsResponse, error) {
@@ -297,6 +393,10 @@ type ParseCertificateSigningRequestInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ParseCertificateSigningRequestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ParseCertificateSigningRequestInvoker) Invoke() (*model.ParseCertificateSigningRequestResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ParseCertificateSigningRequestInvoker) Invoke() (*model.ParseCertificat
 
 type RevokeCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RevokeCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RevokeCertificateInvoker) Invoke() (*model.RevokeCertificateResponse, error) {
@@ -321,6 +425,10 @@ type ShowCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error
 
 type ShowCertificateAuthorityObsAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificateAuthorityObsAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCertificateAuthorityObsAgencyInvoker) Invoke() (*model.ShowCertificateAuthorityObsAgencyResponse, error) {
@@ -345,6 +457,10 @@ type ShowCertificateQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCertificateQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCertificateQuotaInvoker) Invoke() (*model.ShowCertificateQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowCertificateQuotaInvoker) Invoke() (*model.ShowCertificateQuotaRespo
 
 type CreateCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCertificateAuthorityInvoker) Invoke() (*model.CreateCertificateAuthorityResponse, error) {
@@ -369,6 +489,10 @@ type DeleteCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCertificateAuthorityInvoker) Invoke() (*model.DeleteCertificateAuthorityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *DeleteCertificateAuthorityInvoker) Invoke() (*model.DeleteCertificateAu
 
 type DisableCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableCertificateAuthorityInvoker) Invoke() (*model.DisableCertificateAuthorityResponse, error) {
@@ -393,6 +521,10 @@ type EnableCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableCertificateAuthorityInvoker) Invoke() (*model.EnableCertificateAuthorityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *EnableCertificateAuthorityInvoker) Invoke() (*model.EnableCertificateAu
 
 type ExportCertificateAuthorityCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportCertificateAuthorityCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportCertificateAuthorityCertificateInvoker) Invoke() (*model.ExportCertificateAuthorityCertificateResponse, error) {
@@ -417,6 +553,10 @@ type ExportCertificateAuthorityCsrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportCertificateAuthorityCsrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportCertificateAuthorityCsrInvoker) Invoke() (*model.ExportCertificateAuthorityCsrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ExportCertificateAuthorityCsrInvoker) Invoke() (*model.ExportCertificat
 
 type ImportCertificateAuthorityCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportCertificateAuthorityCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportCertificateAuthorityCertificateInvoker) Invoke() (*model.ImportCertificateAuthorityCertificateResponse, error) {
@@ -441,6 +585,10 @@ type IssueCertificateAuthorityCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *IssueCertificateAuthorityCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *IssueCertificateAuthorityCertificateInvoker) Invoke() (*model.IssueCertificateAuthorityCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *IssueCertificateAuthorityCertificateInvoker) Invoke() (*model.IssueCert
 
 type ListCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCertificateAuthorityInvoker) Invoke() (*model.ListCertificateAuthorityResponse, error) {
@@ -465,6 +617,10 @@ type RestoreCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RestoreCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RestoreCertificateAuthorityInvoker) Invoke() (*model.RestoreCertificateAuthorityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *RestoreCertificateAuthorityInvoker) Invoke() (*model.RestoreCertificate
 
 type RevokeCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RevokeCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RevokeCertificateAuthorityInvoker) Invoke() (*model.RevokeCertificateAuthorityResponse, error) {
@@ -489,6 +649,10 @@ type ShowCertificateAuthorityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCertificateAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCertificateAuthorityInvoker) Invoke() (*model.ShowCertificateAuthorityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ShowCertificateAuthorityInvoker) Invoke() (*model.ShowCertificateAuthor
 
 type ShowCertificateAuthorityQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificateAuthorityQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCertificateAuthorityQuotaInvoker) Invoke() (*model.ShowCertificateAuthorityQuotaResponse, error) {

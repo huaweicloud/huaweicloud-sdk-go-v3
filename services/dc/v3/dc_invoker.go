@@ -9,6 +9,10 @@ type CreateHostedDirectConnectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateHostedDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateHostedDirectConnectInvoker) Invoke() (*model.CreateHostedDirectConnectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateHostedDirectConnectInvoker) Invoke() (*model.CreateHostedDirectCo
 
 type DeleteDirectConnectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteDirectConnectInvoker) Invoke() (*model.DeleteDirectConnectResponse, error) {
@@ -33,6 +41,10 @@ type DeleteHostedDirectConnectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteHostedDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteHostedDirectConnectInvoker) Invoke() (*model.DeleteHostedDirectConnectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *DeleteHostedDirectConnectInvoker) Invoke() (*model.DeleteHostedDirectCo
 
 type ListDirectConnectsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDirectConnectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDirectConnectsInvoker) Invoke() (*model.ListDirectConnectsResponse, error) {
@@ -57,6 +73,10 @@ type ListHostedDirectConnectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHostedDirectConnectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHostedDirectConnectsInvoker) Invoke() (*model.ListHostedDirectConnectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListHostedDirectConnectsInvoker) Invoke() (*model.ListHostedDirectConne
 
 type ShowDirectConnectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDirectConnectInvoker) Invoke() (*model.ShowDirectConnectResponse, error) {
@@ -81,6 +105,10 @@ type ShowHostedDirectConnectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowHostedDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowHostedDirectConnectInvoker) Invoke() (*model.ShowHostedDirectConnectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ShowHostedDirectConnectInvoker) Invoke() (*model.ShowHostedDirectConnec
 
 type UpdateDirectConnectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDirectConnectInvoker) Invoke() (*model.UpdateDirectConnectResponse, error) {
@@ -105,6 +137,10 @@ type UpdateHostedDirectConnectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateHostedDirectConnectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateHostedDirectConnectInvoker) Invoke() (*model.UpdateHostedDirectConnectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *UpdateHostedDirectConnectInvoker) Invoke() (*model.UpdateHostedDirectCo
 
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
@@ -129,6 +169,10 @@ type BatchCreateResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTag
 
 type CreateResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateResourceTagInvoker) Invoke() (*model.CreateResourceTagResponse, error) {
@@ -153,6 +201,10 @@ type DeleteResourceTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteResourceTagInvoker) Invoke() (*model.DeleteResourceTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteResourceTagInvoker) Invoke() (*model.DeleteResourceTagResponse, e
 
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
@@ -177,6 +233,10 @@ type ListTagResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTagResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTagResourceInstancesInvoker) Invoke() (*model.ListTagResourceInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListTagResourceInstancesInvoker) Invoke() (*model.ListTagResourceInstan
 
 type ShowResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceTagInvoker) Invoke() (*model.ShowResourceTagResponse, error) {
@@ -201,6 +265,10 @@ type CreateVirtualGatewayInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVirtualGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVirtualGatewayInvoker) Invoke() (*model.CreateVirtualGatewayResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreateVirtualGatewayInvoker) Invoke() (*model.CreateVirtualGatewayRespo
 
 type DeleteVirtualGatewayInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVirtualGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVirtualGatewayInvoker) Invoke() (*model.DeleteVirtualGatewayResponse, error) {
@@ -225,6 +297,10 @@ type ListVirtualGatewaysInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVirtualGatewaysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVirtualGatewaysInvoker) Invoke() (*model.ListVirtualGatewaysResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListVirtualGatewaysInvoker) Invoke() (*model.ListVirtualGatewaysRespons
 
 type ShowVirtualGatewayInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVirtualGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVirtualGatewayInvoker) Invoke() (*model.ShowVirtualGatewayResponse, error) {
@@ -249,6 +329,10 @@ type UpdateVirtualGatewayInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateVirtualGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateVirtualGatewayInvoker) Invoke() (*model.UpdateVirtualGatewayResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *UpdateVirtualGatewayInvoker) Invoke() (*model.UpdateVirtualGatewayRespo
 
 type CreateVifPeerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVifPeerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVifPeerInvoker) Invoke() (*model.CreateVifPeerResponse, error) {
@@ -273,6 +361,10 @@ type CreateVirtualInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVirtualInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVirtualInterfaceInvoker) Invoke() (*model.CreateVirtualInterfaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *CreateVirtualInterfaceInvoker) Invoke() (*model.CreateVirtualInterfaceR
 
 type DeleteVifPeerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVifPeerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVifPeerInvoker) Invoke() (*model.DeleteVifPeerResponse, error) {
@@ -297,6 +393,10 @@ type DeleteVirtualInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVirtualInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVirtualInterfaceInvoker) Invoke() (*model.DeleteVirtualInterfaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DeleteVirtualInterfaceInvoker) Invoke() (*model.DeleteVirtualInterfaceR
 
 type ListSwitchoverTestRecordsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSwitchoverTestRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSwitchoverTestRecordsInvoker) Invoke() (*model.ListSwitchoverTestRecordsResponse, error) {
@@ -321,6 +425,10 @@ type ListVirtualInterfacesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVirtualInterfacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVirtualInterfacesInvoker) Invoke() (*model.ListVirtualInterfacesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListVirtualInterfacesInvoker) Invoke() (*model.ListVirtualInterfacesRes
 
 type ShowVirtualInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVirtualInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVirtualInterfaceInvoker) Invoke() (*model.ShowVirtualInterfaceResponse, error) {
@@ -345,6 +457,10 @@ type SwitchoverTestInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SwitchoverTestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SwitchoverTestInvoker) Invoke() (*model.SwitchoverTestResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -357,6 +473,10 @@ type UpdateVifPeerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateVifPeerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateVifPeerInvoker) Invoke() (*model.UpdateVifPeerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -367,6 +487,10 @@ func (i *UpdateVifPeerInvoker) Invoke() (*model.UpdateVifPeerResponse, error) {
 
 type UpdateVirtualInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVirtualInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVirtualInterfaceInvoker) Invoke() (*model.UpdateVirtualInterfaceResponse, error) {

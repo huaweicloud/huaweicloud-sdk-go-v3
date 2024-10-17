@@ -14,16 +14,16 @@ type SqlRuleResponseRules struct {
 	// SQL规则名称
 	Name *string `json:"name,omitempty"`
 
-	// 规则的状态：  ON  OFF
+	// 规则的状态： - ON - OFF
 	Status *string `json:"status,omitempty"`
 
-	// 风险级别  HIGH  MEDIUM  LOW
+	// 风险级别 - HIGH - MEDIUM - LOW
 	RiskLevel *string `json:"risk_level,omitempty"`
 
-	// 类型
+	// 风险类型
 	Type *string `json:"type,omitempty"`
 
-	// 等级
+	// 优先级。数字越小优先级越高。
 	Rank *int32 `json:"rank,omitempty"`
 
 	// SQL命令特征

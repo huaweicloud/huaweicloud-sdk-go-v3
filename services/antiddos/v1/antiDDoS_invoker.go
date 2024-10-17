@@ -9,6 +9,10 @@ type CreateDefaultConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDefaultConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDefaultConfigInvoker) Invoke() (*model.CreateDefaultConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateDefaultConfigInvoker) Invoke() (*model.CreateDefaultConfigRespons
 
 type DeleteDefaultConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteDefaultConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteDefaultConfigInvoker) Invoke() (*model.DeleteDefaultConfigResponse, error) {
@@ -33,6 +41,10 @@ type ShowAlertConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAlertConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAlertConfigInvoker) Invoke() (*model.ShowAlertConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ShowAlertConfigInvoker) Invoke() (*model.ShowAlertConfigResponse, error
 
 type ShowDefaultConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDefaultConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDefaultConfigInvoker) Invoke() (*model.ShowDefaultConfigResponse, error) {
@@ -57,6 +73,10 @@ type UpdateAlertConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAlertConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAlertConfigInvoker) Invoke() (*model.UpdateAlertConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *UpdateAlertConfigInvoker) Invoke() (*model.UpdateAlertConfigResponse, e
 
 type ListDDosStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDDosStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDDosStatusInvoker) Invoke() (*model.ListDDosStatusResponse, error) {
@@ -81,6 +105,10 @@ type ListDailyLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDailyLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDailyLogInvoker) Invoke() (*model.ListDailyLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListDailyLogInvoker) Invoke() (*model.ListDailyLogResponse, error) {
 
 type ListDailyReportInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDailyReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDailyReportInvoker) Invoke() (*model.ListDailyReportResponse, error) {
@@ -105,6 +137,10 @@ type ListNewConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListNewConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListNewConfigsInvoker) Invoke() (*model.ListNewConfigsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListNewConfigsInvoker) Invoke() (*model.ListNewConfigsResponse, error) 
 
 type ListWeeklyReportsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListWeeklyReportsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListWeeklyReportsInvoker) Invoke() (*model.ListWeeklyReportsResponse, error) {
@@ -129,6 +169,10 @@ type ShowDDosInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDDosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDDosInvoker) Invoke() (*model.ShowDDosResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowDDosInvoker) Invoke() (*model.ShowDDosResponse, error) {
 
 type ShowDDosStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDDosStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDDosStatusInvoker) Invoke() (*model.ShowDDosStatusResponse, error) {
@@ -153,6 +201,10 @@ type ShowNewTaskStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowNewTaskStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowNewTaskStatusInvoker) Invoke() (*model.ShowNewTaskStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowNewTaskStatusInvoker) Invoke() (*model.ShowNewTaskStatusResponse, e
 
 type UpdateDDosInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDDosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDDosInvoker) Invoke() (*model.UpdateDDosResponse, error) {

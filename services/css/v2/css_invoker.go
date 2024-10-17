@@ -9,6 +9,10 @@ type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 
 type RestartClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RestartClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RestartClusterInvoker) Invoke() (*model.RestartClusterResponse, error) {
@@ -33,6 +41,10 @@ type RollingRestartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RollingRestartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RollingRestartInvoker) Invoke() (*model.RollingRestartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -45,6 +57,10 @@ type StartAutoCreateSnapshotsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartAutoCreateSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartAutoCreateSnapshotsInvoker) Invoke() (*model.StartAutoCreateSnapshotsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -55,6 +71,10 @@ func (i *StartAutoCreateSnapshotsInvoker) Invoke() (*model.StartAutoCreateSnapsh
 
 type StopAutoCreateSnapshotsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopAutoCreateSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopAutoCreateSnapshotsInvoker) Invoke() (*model.StopAutoCreateSnapshotsResponse, error) {

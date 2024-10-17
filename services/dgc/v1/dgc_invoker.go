@@ -9,6 +9,10 @@ type CancelScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelScriptInvoker) Invoke() (*model.CancelScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CancelScriptInvoker) Invoke() (*model.CancelScriptResponse, error) {
 
 type CreateConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateConnectionInvoker) Invoke() (*model.CreateConnectionResponse, error) {
@@ -33,6 +41,10 @@ type CreateJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateJobInvoker) Invoke() (*model.CreateJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateJobInvoker) Invoke() (*model.CreateJobResponse, error) {
 
 type CreateResourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateResourceInvoker) Invoke() (*model.CreateResourceResponse, error) {
@@ -57,6 +73,10 @@ type CreateScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateScriptInvoker) Invoke() (*model.CreateScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateScriptInvoker) Invoke() (*model.CreateScriptResponse, error) {
 
 type CreateSupplementdataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSupplementdataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSupplementdataInvoker) Invoke() (*model.CreateSupplementdataResponse, error) {
@@ -81,6 +105,10 @@ type DeleteConnctionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteConnctionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteConnctionInvoker) Invoke() (*model.DeleteConnctionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteConnctionInvoker) Invoke() (*model.DeleteConnctionResponse, error
 
 type DeleteJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteJobInvoker) Invoke() (*model.DeleteJobResponse, error) {
@@ -105,6 +137,10 @@ type DeleteResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteResourceInvoker) Invoke() (*model.DeleteResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteResourceInvoker) Invoke() (*model.DeleteResourceResponse, error) 
 
 type DeleteScriptInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteScriptInvoker) Invoke() (*model.DeleteScriptResponse, error) {
@@ -129,6 +169,10 @@ type ExecuteScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteScriptInvoker) Invoke() (*model.ExecuteScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ExecuteScriptInvoker) Invoke() (*model.ExecuteScriptResponse, error) {
 
 type ExportConnectionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportConnectionsInvoker) Invoke() (*model.ExportConnectionsResponse, error) {
@@ -153,6 +201,10 @@ type ExportJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportJobInvoker) Invoke() (*model.ExportJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ExportJobInvoker) Invoke() (*model.ExportJobResponse, error) {
 
 type ExportJobListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportJobListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportJobListInvoker) Invoke() (*model.ExportJobListResponse, error) {
@@ -177,6 +233,10 @@ type ImportConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ImportConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ImportConnectionsInvoker) Invoke() (*model.ImportConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ImportConnectionsInvoker) Invoke() (*model.ImportConnectionsResponse, e
 
 type ImportJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportJobInvoker) Invoke() (*model.ImportJobResponse, error) {
@@ -201,6 +265,10 @@ type ListConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error
 
 type ListJobInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListJobInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListJobInstancesInvoker) Invoke() (*model.ListJobInstancesResponse, error) {
@@ -225,6 +297,10 @@ type ListJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 
 type ListResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourcesInvoker) Invoke() (*model.ListResourcesResponse, error) {
@@ -249,6 +329,10 @@ type ListScriptResultsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListScriptResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListScriptResultsInvoker) Invoke() (*model.ListScriptResultsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListScriptResultsInvoker) Invoke() (*model.ListScriptResultsResponse, e
 
 type ListScriptsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListScriptsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListScriptsInvoker) Invoke() (*model.ListScriptsResponse, error) {
@@ -273,6 +361,10 @@ type ListSupplementdataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSupplementdataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSupplementdataInvoker) Invoke() (*model.ListSupplementdataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListSupplementdataInvoker) Invoke() (*model.ListSupplementdataResponse,
 
 type ListSystemTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSystemTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSystemTasksInvoker) Invoke() (*model.ListSystemTasksResponse, error) {
@@ -297,6 +393,10 @@ type RestoreJobInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RestoreJobInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RestoreJobInstanceInvoker) Invoke() (*model.RestoreJobInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *RestoreJobInstanceInvoker) Invoke() (*model.RestoreJobInstanceResponse,
 
 type RunOnceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunOnceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunOnceInvoker) Invoke() (*model.RunOnceResponse, error) {
@@ -321,6 +425,10 @@ type ShowConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowConnectionInvoker) Invoke() (*model.ShowConnectionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowConnectionInvoker) Invoke() (*model.ShowConnectionResponse, error) 
 
 type ShowFileInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowFileInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowFileInfoInvoker) Invoke() (*model.ShowFileInfoResponse, error) {
@@ -345,6 +457,10 @@ type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 
 type ShowJobInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobInstanceInvoker) Invoke() (*model.ShowJobInstanceResponse, error) {
@@ -369,6 +489,10 @@ type ShowJobStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobStatusInvoker) Invoke() (*model.ShowJobStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowJobStatusInvoker) Invoke() (*model.ShowJobStatusResponse, error) {
 
 type ShowResourceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceInvoker) Invoke() (*model.ShowResourceResponse, error) {
@@ -393,6 +521,10 @@ type ShowScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowScriptInvoker) Invoke() (*model.ShowScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowScriptInvoker) Invoke() (*model.ShowScriptResponse, error) {
 
 type StartJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartJobInvoker) Invoke() (*model.StartJobResponse, error) {
@@ -417,6 +553,10 @@ type StopJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopJobInvoker) Invoke() (*model.StopJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *StopJobInvoker) Invoke() (*model.StopJobResponse, error) {
 
 type StopJobInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopJobInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopJobInstanceInvoker) Invoke() (*model.StopJobInstanceResponse, error) {
@@ -441,6 +585,10 @@ type StopSupplementdataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopSupplementdataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopSupplementdataInvoker) Invoke() (*model.StopSupplementdataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *StopSupplementdataInvoker) Invoke() (*model.StopSupplementdataResponse,
 
 type UpdateConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateConnectionInvoker) Invoke() (*model.UpdateConnectionResponse, error) {
@@ -465,6 +617,10 @@ type UpdateJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateJobInvoker) Invoke() (*model.UpdateJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -477,6 +633,10 @@ type UpdateResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateResourceInvoker) Invoke() (*model.UpdateResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -487,6 +647,10 @@ func (i *UpdateResourceInvoker) Invoke() (*model.UpdateResourceResponse, error) 
 
 type UpdateScriptInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateScriptInvoker) Invoke() (*model.UpdateScriptResponse, error) {

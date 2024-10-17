@@ -28,6 +28,9 @@ type ScanSkeyKvRequestBody struct {
 	EndSortKey *bson.D `bson:"end_sort_key,omitempty"`
 
 	FilterExpression *ConditionExpression `bson:"filter_expression,omitempty"`
+
+	// 返回查询条件对应的KV总数. - 当KV总数小于limit条件时，返回KV查询结果和KV总数。 - 当KV总数多于limit条件时，只返回KV总数。
+	ReturnCountOnly *bool `bson:"return_count_only,omitempty"`
 }
 
 func (o ScanSkeyKvRequestBody) String() string {

@@ -9,6 +9,10 @@ type AddImageTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddImageTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddImageTagInvoker) Invoke() (*model.AddImageTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddImageTagInvoker) Invoke() (*model.AddImageTagResponse, error) {
 
 type BatchAddMembersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAddMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAddMembersInvoker) Invoke() (*model.BatchAddMembersResponse, error) {
@@ -33,6 +41,10 @@ type BatchAddOrDeleteTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAddOrDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAddOrDeleteTagsInvoker) Invoke() (*model.BatchAddOrDeleteTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchAddOrDeleteTagsInvoker) Invoke() (*model.BatchAddOrDeleteTagsRespo
 
 type BatchDeleteMembersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteMembersInvoker) Invoke() (*model.BatchDeleteMembersResponse, error) {
@@ -57,6 +73,10 @@ type BatchUpdateMembersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateMembersInvoker) Invoke() (*model.BatchUpdateMembersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchUpdateMembersInvoker) Invoke() (*model.BatchUpdateMembersResponse,
 
 type CopyImageCrossRegionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CopyImageCrossRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CopyImageCrossRegionInvoker) Invoke() (*model.CopyImageCrossRegionResponse, error) {
@@ -81,6 +105,10 @@ type CopyImageInRegionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CopyImageInRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CopyImageInRegionInvoker) Invoke() (*model.CopyImageInRegionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CopyImageInRegionInvoker) Invoke() (*model.CopyImageInRegionResponse, e
 
 type CreateDataImageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDataImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDataImageInvoker) Invoke() (*model.CreateDataImageResponse, error) {
@@ -105,6 +137,10 @@ type CreateImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateImageInvoker) Invoke() (*model.CreateImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateImageInvoker) Invoke() (*model.CreateImageResponse, error) {
 
 type CreateOrUpdateTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateOrUpdateTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateOrUpdateTagsInvoker) Invoke() (*model.CreateOrUpdateTagsResponse, error) {
@@ -129,6 +169,10 @@ type CreateWholeImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateWholeImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateWholeImageInvoker) Invoke() (*model.CreateWholeImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateWholeImageInvoker) Invoke() (*model.CreateWholeImageResponse, err
 
 type DeleteImageTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteImageTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteImageTagInvoker) Invoke() (*model.DeleteImageTagResponse, error) {
@@ -153,6 +201,10 @@ type ExportImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportImageInvoker) Invoke() (*model.ExportImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ExportImageInvoker) Invoke() (*model.ExportImageResponse, error) {
 
 type ImportImageQuickInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportImageQuickInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportImageQuickInvoker) Invoke() (*model.ImportImageQuickResponse, error) {
@@ -177,6 +233,10 @@ type ListImageByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListImageByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListImageByTagsInvoker) Invoke() (*model.ListImageByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListImageByTagsInvoker) Invoke() (*model.ListImageByTagsResponse, error
 
 type ListImageTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListImageTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListImageTagsInvoker) Invoke() (*model.ListImageTagsResponse, error) {
@@ -201,6 +265,10 @@ type ListImagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListImagesInvoker) Invoke() (*model.ListImagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListImagesInvoker) Invoke() (*model.ListImagesResponse, error) {
 
 type ListImagesTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListImagesTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListImagesTagsInvoker) Invoke() (*model.ListImagesTagsResponse, error) {
@@ -225,6 +297,10 @@ type ListOsVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListOsVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListOsVersionsInvoker) Invoke() (*model.ListOsVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListOsVersionsInvoker) Invoke() (*model.ListOsVersionsResponse, error) 
 
 type ListTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
@@ -249,6 +329,10 @@ type RegisterImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RegisterImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RegisterImageInvoker) Invoke() (*model.RegisterImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *RegisterImageInvoker) Invoke() (*model.RegisterImageResponse, error) {
 
 type ShowImageQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowImageQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowImageQuotaInvoker) Invoke() (*model.ShowImageQuotaResponse, error) {
@@ -273,6 +361,10 @@ type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 
 type ShowJobProgressInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobProgressInvoker) Invoke() (*model.ShowJobProgressResponse, error) {
@@ -297,6 +393,10 @@ type UpdateImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateImageInvoker) Invoke() (*model.UpdateImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *UpdateImageInvoker) Invoke() (*model.UpdateImageResponse, error) {
 
 type ListVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVersionsInvoker) Invoke() (*model.ListVersionsResponse, error) {
@@ -321,6 +425,10 @@ type ShowVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
 
 type GlanceAddImageMemberInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceAddImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceAddImageMemberInvoker) Invoke() (*model.GlanceAddImageMemberResponse, error) {
@@ -345,6 +457,10 @@ type GlanceCreateImageMetadataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceCreateImageMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceCreateImageMetadataInvoker) Invoke() (*model.GlanceCreateImageMetadataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *GlanceCreateImageMetadataInvoker) Invoke() (*model.GlanceCreateImageMet
 
 type GlanceCreateTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceCreateTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceCreateTagInvoker) Invoke() (*model.GlanceCreateTagResponse, error) {
@@ -369,6 +489,10 @@ type GlanceDeleteImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceDeleteImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceDeleteImageInvoker) Invoke() (*model.GlanceDeleteImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *GlanceDeleteImageInvoker) Invoke() (*model.GlanceDeleteImageResponse, e
 
 type GlanceDeleteImageMemberInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceDeleteImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceDeleteImageMemberInvoker) Invoke() (*model.GlanceDeleteImageMemberResponse, error) {
@@ -393,6 +521,10 @@ type GlanceDeleteTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceDeleteTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceDeleteTagInvoker) Invoke() (*model.GlanceDeleteTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *GlanceDeleteTagInvoker) Invoke() (*model.GlanceDeleteTagResponse, error
 
 type GlanceListImageMemberSchemasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceListImageMemberSchemasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceListImageMemberSchemasInvoker) Invoke() (*model.GlanceListImageMemberSchemasResponse, error) {
@@ -417,6 +553,10 @@ type GlanceListImageMembersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceListImageMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceListImageMembersInvoker) Invoke() (*model.GlanceListImageMembersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *GlanceListImageMembersInvoker) Invoke() (*model.GlanceListImageMembersR
 
 type GlanceListImageSchemasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceListImageSchemasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceListImageSchemasInvoker) Invoke() (*model.GlanceListImageSchemasResponse, error) {
@@ -441,6 +585,10 @@ type GlanceListImagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceListImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceListImagesInvoker) Invoke() (*model.GlanceListImagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *GlanceListImagesInvoker) Invoke() (*model.GlanceListImagesResponse, err
 
 type GlanceShowImageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceShowImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceShowImageInvoker) Invoke() (*model.GlanceShowImageResponse, error) {
@@ -465,6 +617,10 @@ type GlanceShowImageMemberInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceShowImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceShowImageMemberInvoker) Invoke() (*model.GlanceShowImageMemberResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *GlanceShowImageMemberInvoker) Invoke() (*model.GlanceShowImageMemberRes
 
 type GlanceShowImageMemberSchemasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceShowImageMemberSchemasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceShowImageMemberSchemasInvoker) Invoke() (*model.GlanceShowImageMemberSchemasResponse, error) {
@@ -489,6 +649,10 @@ type GlanceShowImageSchemasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceShowImageSchemasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceShowImageSchemasInvoker) Invoke() (*model.GlanceShowImageSchemasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -501,6 +665,10 @@ type GlanceUpdateImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GlanceUpdateImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GlanceUpdateImageInvoker) Invoke() (*model.GlanceUpdateImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -511,6 +679,10 @@ func (i *GlanceUpdateImageInvoker) Invoke() (*model.GlanceUpdateImageResponse, e
 
 type GlanceUpdateImageMemberInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GlanceUpdateImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GlanceUpdateImageMemberInvoker) Invoke() (*model.GlanceUpdateImageMemberResponse, error) {

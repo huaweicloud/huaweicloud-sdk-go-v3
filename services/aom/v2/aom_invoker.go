@@ -9,6 +9,10 @@ type AddActionRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddActionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddActionRuleInvoker) Invoke() (*model.AddActionRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddActionRuleInvoker) Invoke() (*model.AddActionRuleResponse, error) {
 
 type AddAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddAlarmRuleInvoker) Invoke() (*model.AddAlarmRuleResponse, error) {
@@ -33,6 +41,10 @@ type AddEvent2alarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddEvent2alarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddEvent2alarmRuleInvoker) Invoke() (*model.AddEvent2alarmRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AddEvent2alarmRuleInvoker) Invoke() (*model.AddEvent2alarmRuleResponse,
 
 type AddMetricDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddMetricDataInvoker) Invoke() (*model.AddMetricDataResponse, error) {
@@ -57,6 +73,10 @@ type AddMuteRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddMuteRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddMuteRulesInvoker) Invoke() (*model.AddMuteRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *AddMuteRulesInvoker) Invoke() (*model.AddMuteRulesResponse, error) {
 
 type AddOrUpdateMetricOrEventAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddOrUpdateMetricOrEventAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddOrUpdateMetricOrEventAlarmRuleInvoker) Invoke() (*model.AddOrUpdateMetricOrEventAlarmRuleResponse, error) {
@@ -81,6 +105,10 @@ type AddOrUpdateServiceDiscoveryRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddOrUpdateServiceDiscoveryRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddOrUpdateServiceDiscoveryRulesInvoker) Invoke() (*model.AddOrUpdateServiceDiscoveryRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *AddOrUpdateServiceDiscoveryRulesInvoker) Invoke() (*model.AddOrUpdateSe
 
 type CountEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountEventsInvoker) Invoke() (*model.CountEventsResponse, error) {
@@ -105,6 +137,10 @@ type DeleteActionRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteActionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteActionRuleInvoker) Invoke() (*model.DeleteActionRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteActionRuleInvoker) Invoke() (*model.DeleteActionRuleResponse, err
 
 type DeleteAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAlarmRuleInvoker) Invoke() (*model.DeleteAlarmRuleResponse, error) {
@@ -129,6 +169,10 @@ type DeleteAlarmRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAlarmRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAlarmRulesInvoker) Invoke() (*model.DeleteAlarmRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteAlarmRulesInvoker) Invoke() (*model.DeleteAlarmRulesResponse, err
 
 type DeleteEvent2alarmRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEvent2alarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEvent2alarmRuleInvoker) Invoke() (*model.DeleteEvent2alarmRuleResponse, error) {
@@ -153,6 +201,10 @@ type DeleteMetricOrEventAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteMetricOrEventAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteMetricOrEventAlarmRuleInvoker) Invoke() (*model.DeleteMetricOrEventAlarmRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteMetricOrEventAlarmRuleInvoker) Invoke() (*model.DeleteMetricOrEve
 
 type DeleteMuteRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMuteRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMuteRulesInvoker) Invoke() (*model.DeleteMuteRulesResponse, error) {
@@ -177,6 +233,10 @@ type DeleteserviceDiscoveryRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteserviceDiscoveryRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteserviceDiscoveryRulesInvoker) Invoke() (*model.DeleteserviceDiscoveryRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteserviceDiscoveryRulesInvoker) Invoke() (*model.DeleteserviceDisco
 
 type ListActionRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListActionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListActionRuleInvoker) Invoke() (*model.ListActionRuleResponse, error) {
@@ -201,6 +265,10 @@ type ListAgentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAgentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAgentsInvoker) Invoke() (*model.ListAgentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListAgentsInvoker) Invoke() (*model.ListAgentsResponse, error) {
 
 type ListAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAlarmRuleInvoker) Invoke() (*model.ListAlarmRuleResponse, error) {
@@ -225,6 +297,10 @@ type ListEvent2alarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEvent2alarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEvent2alarmRuleInvoker) Invoke() (*model.ListEvent2alarmRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListEvent2alarmRuleInvoker) Invoke() (*model.ListEvent2alarmRuleRespons
 
 type ListEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
@@ -249,6 +329,10 @@ type ListLogItemsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListLogItemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListLogItemsInvoker) Invoke() (*model.ListLogItemsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListLogItemsInvoker) Invoke() (*model.ListLogItemsResponse, error) {
 
 type ListMetricItemsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMetricItemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMetricItemsInvoker) Invoke() (*model.ListMetricItemsResponse, error) {
@@ -273,6 +361,10 @@ type ListMetricOrEventAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMetricOrEventAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMetricOrEventAlarmRuleInvoker) Invoke() (*model.ListMetricOrEventAlarmRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListMetricOrEventAlarmRuleInvoker) Invoke() (*model.ListMetricOrEventAl
 
 type ListMuteRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMuteRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMuteRuleInvoker) Invoke() (*model.ListMuteRuleResponse, error) {
@@ -297,6 +393,10 @@ type ListNotifiedHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListNotifiedHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListNotifiedHistoriesInvoker) Invoke() (*model.ListNotifiedHistoriesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListNotifiedHistoriesInvoker) Invoke() (*model.ListNotifiedHistoriesRes
 
 type ListPermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPermissionsInvoker) Invoke() (*model.ListPermissionsResponse, error) {
@@ -321,6 +425,10 @@ type ListSampleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSampleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSampleInvoker) Invoke() (*model.ListSampleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListSampleInvoker) Invoke() (*model.ListSampleResponse, error) {
 
 type ListSeriesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSeriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSeriesInvoker) Invoke() (*model.ListSeriesResponse, error) {
@@ -345,6 +457,10 @@ type ListServiceDiscoveryRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListServiceDiscoveryRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListServiceDiscoveryRulesInvoker) Invoke() (*model.ListServiceDiscoveryRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListServiceDiscoveryRulesInvoker) Invoke() (*model.ListServiceDiscovery
 
 type PushEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PushEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PushEventsInvoker) Invoke() (*model.PushEventsResponse, error) {
@@ -369,6 +489,10 @@ type ShowActionRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowActionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowActionRuleInvoker) Invoke() (*model.ShowActionRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowActionRuleInvoker) Invoke() (*model.ShowActionRuleResponse, error) 
 
 type ShowAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAlarmRuleInvoker) Invoke() (*model.ShowAlarmRuleResponse, error) {
@@ -393,6 +521,10 @@ type ShowMetricsDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMetricsDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMetricsDataInvoker) Invoke() (*model.ShowMetricsDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowMetricsDataInvoker) Invoke() (*model.ShowMetricsDataResponse, error
 
 type UpdateActionRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateActionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateActionRuleInvoker) Invoke() (*model.UpdateActionRuleResponse, error) {
@@ -417,6 +553,10 @@ type UpdateAlarmRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAlarmRuleInvoker) Invoke() (*model.UpdateAlarmRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *UpdateAlarmRuleInvoker) Invoke() (*model.UpdateAlarmRuleResponse, error
 
 type UpdateEventRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEventRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEventRuleInvoker) Invoke() (*model.UpdateEventRuleResponse, error) {
@@ -441,6 +585,10 @@ type UpdateMuteRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMuteRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMuteRuleInvoker) Invoke() (*model.UpdateMuteRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *UpdateMuteRuleInvoker) Invoke() (*model.UpdateMuteRuleResponse, error) 
 
 type CreatePromInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePromInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePromInstanceInvoker) Invoke() (*model.CreatePromInstanceResponse, error) {
@@ -465,6 +617,10 @@ type CreateRecordingRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRecordingRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRecordingRuleInvoker) Invoke() (*model.CreateRecordingRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateRecordingRuleInvoker) Invoke() (*model.CreateRecordingRuleRespons
 
 type DeletePromInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePromInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePromInstanceInvoker) Invoke() (*model.DeletePromInstanceResponse, error) {
@@ -489,6 +649,10 @@ type ListAccessCodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAccessCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAccessCodeInvoker) Invoke() (*model.ListAccessCodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListAccessCodeInvoker) Invoke() (*model.ListAccessCodeResponse, error) 
 
 type ListInstantQueryAomPromGetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstantQueryAomPromGetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstantQueryAomPromGetInvoker) Invoke() (*model.ListInstantQueryAomPromGetResponse, error) {
@@ -513,6 +681,10 @@ type ListInstantQueryAomPromPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstantQueryAomPromPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstantQueryAomPromPostInvoker) Invoke() (*model.ListInstantQueryAomPromPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ListInstantQueryAomPromPostInvoker) Invoke() (*model.ListInstantQueryAo
 
 type ListLabelValuesAomPromGetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListLabelValuesAomPromGetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListLabelValuesAomPromGetInvoker) Invoke() (*model.ListLabelValuesAomPromGetResponse, error) {
@@ -537,6 +713,10 @@ type ListLabelsAomPromGetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListLabelsAomPromGetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListLabelsAomPromGetInvoker) Invoke() (*model.ListLabelsAomPromGetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ListLabelsAomPromGetInvoker) Invoke() (*model.ListLabelsAomPromGetRespo
 
 type ListLabelsAomPromPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListLabelsAomPromPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListLabelsAomPromPostInvoker) Invoke() (*model.ListLabelsAomPromPostResponse, error) {
@@ -561,6 +745,10 @@ type ListMetadataAomPromGetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMetadataAomPromGetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMetadataAomPromGetInvoker) Invoke() (*model.ListMetadataAomPromGetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ListMetadataAomPromGetInvoker) Invoke() (*model.ListMetadataAomPromGetR
 
 type ListPromInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPromInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPromInstanceInvoker) Invoke() (*model.ListPromInstanceResponse, error) {
@@ -585,6 +777,10 @@ type ListRangeQueryAomPromGetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRangeQueryAomPromGetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRangeQueryAomPromGetInvoker) Invoke() (*model.ListRangeQueryAomPromGetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListRangeQueryAomPromGetInvoker) Invoke() (*model.ListRangeQueryAomProm
 
 type ListRangeQueryAomPromPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRangeQueryAomPromPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRangeQueryAomPromPostInvoker) Invoke() (*model.ListRangeQueryAomPromPostResponse, error) {

@@ -23,6 +23,9 @@ type ListSimPoolsRequest struct {
 
 	// 是否查询近六个月账期标识
 	AllBillingCycle *bool `json:"all_billing_cycle,omitempty"`
+
+	// 流量池状态
+	Status *[]int32 `json:"status,omitempty"`
 }
 
 func (o ListSimPoolsRequest) String() string {

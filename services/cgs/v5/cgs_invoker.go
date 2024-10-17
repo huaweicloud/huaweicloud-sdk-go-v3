@@ -9,6 +9,10 @@ type ListContainerNodesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListContainerNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListContainerNodesInvoker) Invoke() (*model.ListContainerNodesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

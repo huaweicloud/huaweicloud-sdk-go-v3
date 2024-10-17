@@ -9,6 +9,10 @@ type CreateCompetitionScoreInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCompetitionScoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCompetitionScoreInvoker) Invoke() (*model.CreateCompetitionScoreResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateCompetitionScoreInvoker) Invoke() (*model.CreateCompetitionScoreR
 
 type ListCompetitionWorksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCompetitionWorksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCompetitionWorksInvoker) Invoke() (*model.ListCompetitionWorksResponse, error) {
@@ -33,6 +41,10 @@ type RegisterCompetitionInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RegisterCompetitionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RegisterCompetitionInfoInvoker) Invoke() (*model.RegisterCompetitionInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *RegisterCompetitionInfoInvoker) Invoke() (*model.RegisterCompetitionInf
 
 type UpdateCompetitionScoreInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateCompetitionScoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateCompetitionScoreInvoker) Invoke() (*model.UpdateCompetitionScoreResponse, error) {

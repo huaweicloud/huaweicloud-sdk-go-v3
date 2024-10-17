@@ -9,6 +9,10 @@ type ApplyJudgementInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ApplyJudgementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ApplyJudgementInvoker) Invoke() (*model.ApplyJudgementResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ApplyJudgementInvoker) Invoke() (*model.ApplyJudgementResponse, error) 
 
 type ShowJudgementDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJudgementDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJudgementDetailInvoker) Invoke() (*model.ShowJudgementDetailResponse, error) {
@@ -33,6 +41,10 @@ type ShowJudgementFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJudgementFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJudgementFileInvoker) Invoke() (*model.ShowJudgementFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ShowJudgementFileInvoker) Invoke() (*model.ShowJudgementFileResponse, e
 
 type ExecuteExerciseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteExerciseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteExerciseInvoker) Invoke() (*model.ExecuteExerciseResponse, error) {
@@ -57,6 +73,10 @@ type ListExercisesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListExercisesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListExercisesInvoker) Invoke() (*model.ListExercisesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListExercisesInvoker) Invoke() (*model.ListExercisesResponse, error) {
 
 type ListPackagesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPackagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPackagesInvoker) Invoke() (*model.ListPackagesResponse, error) {
@@ -81,6 +105,10 @@ type ShowExerciseDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowExerciseDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowExerciseDetailInvoker) Invoke() (*model.ShowExerciseDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ShowExerciseDetailInvoker) Invoke() (*model.ShowExerciseDetailResponse,
 
 type ShowPackageDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPackageDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPackageDetailInvoker) Invoke() (*model.ShowPackageDetailResponse, error) {
@@ -105,6 +137,10 @@ type ListAllDifficultsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAllDifficultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAllDifficultsInvoker) Invoke() (*model.ListAllDifficultsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListAllDifficultsInvoker) Invoke() (*model.ListAllDifficultsResponse, e
 
 type ListMyKnowledgePointsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMyKnowledgePointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMyKnowledgePointsInvoker) Invoke() (*model.ListMyKnowledgePointsResponse, error) {
@@ -129,6 +169,10 @@ type ListClassroomMembersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClassroomMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClassroomMembersInvoker) Invoke() (*model.ListClassroomMembersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListClassroomMembersInvoker) Invoke() (*model.ListClassroomMembersRespo
 
 type ListClassroomsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClassroomsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClassroomsInvoker) Invoke() (*model.ListClassroomsResponse, error) {
@@ -153,6 +201,10 @@ type ShowClassroomDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClassroomDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClassroomDetailInvoker) Invoke() (*model.ShowClassroomDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowClassroomDetailInvoker) Invoke() (*model.ShowClassroomDetailRespons
 
 type ListClassroomMemberJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClassroomMemberJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClassroomMemberJobsInvoker) Invoke() (*model.ListClassroomMemberJobsResponse, error) {
@@ -177,6 +233,10 @@ type ListJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 
 type ListMemberJobRecordsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMemberJobRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMemberJobRecordsInvoker) Invoke() (*model.ListMemberJobRecordsResponse, error) {
@@ -201,6 +265,10 @@ type ShowJobDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
 
 type ShowJobExercisesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobExercisesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobExercisesInvoker) Invoke() (*model.ShowJobExercisesResponse, error) {

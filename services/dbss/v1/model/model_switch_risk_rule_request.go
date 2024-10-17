@@ -9,7 +9,7 @@ import (
 // SwitchRiskRuleRequest Request Object
 type SwitchRiskRuleRequest struct {
 
-	// 实例ID
+	// 实例ID。可在查询实例列表接口的ID字段获取。
 	InstanceId string `json:"instance_id"`
 
 	Body *BatchSwitchesRequest `json:"body,omitempty"`

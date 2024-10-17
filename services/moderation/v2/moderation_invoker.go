@@ -9,6 +9,10 @@ type RunCheckResultInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunCheckResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunCheckResultInvoker) Invoke() (*model.RunCheckResultResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *RunCheckResultInvoker) Invoke() (*model.RunCheckResultResponse, error) 
 
 type RunCheckTaskJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunCheckTaskJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunCheckTaskJobsInvoker) Invoke() (*model.RunCheckTaskJobsResponse, error) {
@@ -33,6 +41,10 @@ type RunImageBatchModerationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunImageBatchModerationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunImageBatchModerationInvoker) Invoke() (*model.RunImageBatchModerationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *RunImageBatchModerationInvoker) Invoke() (*model.RunImageBatchModeratio
 
 type RunImageModerationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunImageModerationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunImageModerationInvoker) Invoke() (*model.RunImageModerationResponse, error) {
@@ -57,6 +73,10 @@ type RunModerationAudioInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunModerationAudioInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunModerationAudioInvoker) Invoke() (*model.RunModerationAudioResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -69,6 +89,10 @@ type RunTaskSumbitInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunTaskSumbitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunTaskSumbitInvoker) Invoke() (*model.RunTaskSumbitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -79,6 +103,10 @@ func (i *RunTaskSumbitInvoker) Invoke() (*model.RunTaskSumbitResponse, error) {
 
 type RunTextModerationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunTextModerationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunTextModerationInvoker) Invoke() (*model.RunTextModerationResponse, error) {

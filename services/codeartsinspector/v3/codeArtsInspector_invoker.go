@@ -9,6 +9,10 @@ type AddGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddGroupInvoker) Invoke() (*model.AddGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddGroupInvoker) Invoke() (*model.AddGroupResponse, error) {
 
 type DeleteGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteGroupInvoker) Invoke() (*model.DeleteGroupResponse, error) {
@@ -33,6 +41,10 @@ type ListGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGroupsInvoker) Invoke() (*model.ListGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListGroupsInvoker) Invoke() (*model.ListGroupsResponse, error) {
 
 type ListHostResultsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHostResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHostResultsInvoker) Invoke() (*model.ListHostResultsResponse, error) {
@@ -57,6 +73,10 @@ type BatchStartHostTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchStartHostTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchStartHostTasksInvoker) Invoke() (*model.BatchStartHostTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchStartHostTasksInvoker) Invoke() (*model.BatchStartHostTasksRespons
 
 type BatchCreateHostsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateHostsInvoker) Invoke() (*model.BatchCreateHostsResponse, error) {
@@ -81,6 +105,10 @@ type DeleteHostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteHostInvoker) Invoke() (*model.DeleteHostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteHostInvoker) Invoke() (*model.DeleteHostResponse, error) {
 
 type ListHostsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
@@ -105,6 +137,10 @@ type DownloadTaskReportInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DownloadTaskReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DownloadTaskReportInvoker) Invoke() (*model.DownloadTaskReportResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DownloadTaskReportInvoker) Invoke() (*model.DownloadTaskReportResponse,
 
 type ExecuteGenerateReportInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteGenerateReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteGenerateReportInvoker) Invoke() (*model.ExecuteGenerateReportResponse, error) {
@@ -129,6 +169,10 @@ type ListBusinessRisksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBusinessRisksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBusinessRisksInvoker) Invoke() (*model.ListBusinessRisksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListBusinessRisksInvoker) Invoke() (*model.ListBusinessRisksResponse, e
 
 type ListPortResultsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPortResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPortResultsInvoker) Invoke() (*model.ListPortResultsResponse, error) {
@@ -153,6 +201,10 @@ type ShowReportStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowReportStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowReportStatusInvoker) Invoke() (*model.ShowReportStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowReportStatusInvoker) Invoke() (*model.ShowReportStatusResponse, err
 
 type ShowResultsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResultsInvoker) Invoke() (*model.ShowResultsResponse, error) {
@@ -177,6 +233,10 @@ type UpdateFalsePositiveInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateFalsePositiveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateFalsePositiveInvoker) Invoke() (*model.UpdateFalsePositiveResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *UpdateFalsePositiveInvoker) Invoke() (*model.UpdateFalsePositiveRespons
 
 type CancelTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelTasksInvoker) Invoke() (*model.CancelTasksResponse, error) {
@@ -201,6 +265,10 @@ type CreateTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTasksInvoker) Invoke() (*model.CreateTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreateTasksInvoker) Invoke() (*model.CreateTasksResponse, error) {
 
 type ListTaskHistoriesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTaskHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTaskHistoriesInvoker) Invoke() (*model.ListTaskHistoriesResponse, error) {
@@ -225,6 +297,10 @@ type ShowTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTasksInvoker) Invoke() (*model.ShowTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowTasksInvoker) Invoke() (*model.ShowTasksResponse, error) {
 
 type AuthorizeDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AuthorizeDomainsInvoker) Invoke() (*model.AuthorizeDomainsResponse, error) {
@@ -249,6 +329,10 @@ type CreateDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDomainsInvoker) Invoke() (*model.CreateDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CreateDomainsInvoker) Invoke() (*model.CreateDomainsResponse, error) {
 
 type DeleteDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteDomainsInvoker) Invoke() (*model.DeleteDomainsResponse, error) {
@@ -273,6 +361,10 @@ type ListDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -285,6 +377,10 @@ type ShowDomainSettingsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainSettingsInvoker) Invoke() (*model.ShowDomainSettingsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -295,6 +391,10 @@ func (i *ShowDomainSettingsInvoker) Invoke() (*model.ShowDomainSettingsResponse,
 
 type UpdateDomainSettingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDomainSettingsInvoker) Invoke() (*model.UpdateDomainSettingsResponse, error) {

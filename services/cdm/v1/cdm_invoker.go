@@ -9,6 +9,10 @@ type CreateAndStartRandomClusterJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAndStartRandomClusterJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAndStartRandomClusterJobInvoker) Invoke() (*model.CreateAndStartRandomClusterJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAndStartRandomClusterJobInvoker) Invoke() (*model.CreateAndStartR
 
 type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
@@ -33,6 +41,10 @@ type CreateJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateJobInvoker) Invoke() (*model.CreateJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateJobInvoker) Invoke() (*model.CreateJobResponse, error) {
 
 type CreateLinkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateLinkInvoker) Invoke() (*model.CreateLinkResponse, error) {
@@ -57,6 +73,10 @@ type DeleteClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 
 type DeleteJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteJobInvoker) Invoke() (*model.DeleteJobResponse, error) {
@@ -81,6 +105,10 @@ type DeleteLinkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteLinkInvoker) Invoke() (*model.DeleteLinkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteLinkInvoker) Invoke() (*model.DeleteLinkResponse, error) {
 
 type ListClustersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
@@ -105,6 +137,10 @@ type ModifyClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ModifyClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ModifyClusterInvoker) Invoke() (*model.ModifyClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ModifyClusterInvoker) Invoke() (*model.ModifyClusterResponse, error) {
 
 type RestartClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RestartClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RestartClusterInvoker) Invoke() (*model.RestartClusterResponse, error) {
@@ -129,6 +169,10 @@ type ShowAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAvailabilityZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAvailabilityZonesInvoker) Invoke() (*model.ShowAvailabilityZonesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowAvailabilityZonesInvoker) Invoke() (*model.ShowAvailabilityZonesRes
 
 type ShowClusterDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClusterDetailInvoker) Invoke() (*model.ShowClusterDetailResponse, error) {
@@ -153,6 +201,10 @@ type ShowClusterEnterpriseProjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClusterEnterpriseProjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClusterEnterpriseProjectsInvoker) Invoke() (*model.ShowClusterEnterpriseProjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowClusterEnterpriseProjectsInvoker) Invoke() (*model.ShowClusterEnter
 
 type ShowDatastoresInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDatastoresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDatastoresInvoker) Invoke() (*model.ShowDatastoresResponse, error) {
@@ -177,6 +233,10 @@ type ShowEnterpriseProjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEnterpriseProjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEnterpriseProjectsInvoker) Invoke() (*model.ShowEnterpriseProjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowEnterpriseProjectsInvoker) Invoke() (*model.ShowEnterpriseProjectsR
 
 type ShowFlavorDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowFlavorDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowFlavorDetailInvoker) Invoke() (*model.ShowFlavorDetailResponse, error) {
@@ -201,6 +265,10 @@ type ShowFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFlavorsInvoker) Invoke() (*model.ShowFlavorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowFlavorsInvoker) Invoke() (*model.ShowFlavorsResponse, error) {
 
 type ShowInstanceDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowInstanceDetailInvoker) Invoke() (*model.ShowInstanceDetailResponse, error) {
@@ -225,6 +297,10 @@ type ShowJobStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobStatusInvoker) Invoke() (*model.ShowJobStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowJobStatusInvoker) Invoke() (*model.ShowJobStatusResponse, error) {
 
 type ShowJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobsInvoker) Invoke() (*model.ShowJobsResponse, error) {
@@ -249,6 +329,10 @@ type ShowLinkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowLinkInvoker) Invoke() (*model.ShowLinkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowLinkInvoker) Invoke() (*model.ShowLinkResponse, error) {
 
 type ShowSubmissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSubmissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSubmissionsInvoker) Invoke() (*model.ShowSubmissionsResponse, error) {
@@ -273,6 +361,10 @@ type StartClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartClusterInvoker) Invoke() (*model.StartClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *StartClusterInvoker) Invoke() (*model.StartClusterResponse, error) {
 
 type StartJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartJobInvoker) Invoke() (*model.StartJobResponse, error) {
@@ -297,6 +393,10 @@ type StopClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopClusterInvoker) Invoke() (*model.StopClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *StopClusterInvoker) Invoke() (*model.StopClusterResponse, error) {
 
 type StopJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopJobInvoker) Invoke() (*model.StopJobResponse, error) {
@@ -321,6 +425,10 @@ type UpdateJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateJobInvoker) Invoke() (*model.UpdateJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UpdateJobInvoker) Invoke() (*model.UpdateJobResponse, error) {
 
 type UpdateLinkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateLinkInvoker) Invoke() (*model.UpdateLinkResponse, error) {

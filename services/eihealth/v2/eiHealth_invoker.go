@@ -9,6 +9,10 @@ type ShowAdmetWithCustomPropsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAdmetWithCustomPropsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAdmetWithCustomPropsInvoker) Invoke() (*model.ShowAdmetWithCustomPropsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

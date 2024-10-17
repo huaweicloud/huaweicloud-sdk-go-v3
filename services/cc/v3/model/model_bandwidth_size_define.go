@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BandwidthSizeDefine 带宽值定义，单位Mbps。
+// BandwidthSizeDefine 带宽值，单位Mbps。
 type BandwidthSizeDefine struct {
 }
 

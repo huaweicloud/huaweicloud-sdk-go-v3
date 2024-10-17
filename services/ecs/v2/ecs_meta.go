@@ -1143,6 +1143,22 @@ func GenReqDefForNovaListServersDetails() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForNovaShowFlavorExtraSpecs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2.1/{project_id}/flavors/{flavor_id}/os-extra_specs").
+		WithResponse(new(model.NovaShowFlavorExtraSpecsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FlavorId").
+		WithJsonTag("flavor_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForNovaShowKeypair() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

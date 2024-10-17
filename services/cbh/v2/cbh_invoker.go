@@ -9,6 +9,10 @@ type BatchCreateInstanceTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateInstanceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateInstanceTagInvoker) Invoke() (*model.BatchCreateInstanceTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateInstanceTagInvoker) Invoke() (*model.BatchCreateInstanceTagR
 
 type ChangeInstanceTypeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeInstanceTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeInstanceTypeInvoker) Invoke() (*model.ChangeInstanceTypeResponse, error) {
@@ -33,6 +41,10 @@ type CountInstancesByTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountInstancesByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountInstancesByTagInvoker) Invoke() (*model.CountInstancesByTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CountInstancesByTagInvoker) Invoke() (*model.CountInstancesByTagRespons
 
 type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
@@ -57,6 +73,10 @@ type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 
 type InstallInstanceEipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *InstallInstanceEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *InstallInstanceEipInvoker) Invoke() (*model.InstallInstanceEipResponse, error) {
@@ -81,6 +105,10 @@ type ListAvailableZonesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAvailableZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse,
 
 type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
@@ -105,6 +137,10 @@ type ListInstancesByTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstancesByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstancesByTagInvoker) Invoke() (*model.ListInstancesByTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListInstancesByTagInvoker) Invoke() (*model.ListInstancesByTagResponse,
 
 type ListSpecificationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSpecificationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSpecificationsInvoker) Invoke() (*model.ListSpecificationsResponse, error) {
@@ -129,6 +169,10 @@ type ListTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 
 type LoginInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *LoginInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *LoginInstanceInvoker) Invoke() (*model.LoginInstanceResponse, error) {
@@ -153,6 +201,10 @@ type LoginInstanceAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *LoginInstanceAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *LoginInstanceAdminInvoker) Invoke() (*model.LoginInstanceAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *LoginInstanceAdminInvoker) Invoke() (*model.LoginInstanceAdminResponse,
 
 type RebootInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RebootInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RebootInstanceInvoker) Invoke() (*model.RebootInstanceResponse, error) {
@@ -177,6 +233,10 @@ type RegisterAuthorizationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RegisterAuthorizationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RegisterAuthorizationInvoker) Invoke() (*model.RegisterAuthorizationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *RegisterAuthorizationInvoker) Invoke() (*model.RegisterAuthorizationRes
 
 type ResetInstanceLoginMethodInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetInstanceLoginMethodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetInstanceLoginMethodInvoker) Invoke() (*model.ResetInstanceLoginMethodResponse, error) {
@@ -201,6 +265,10 @@ type ResetInstancePasswordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetInstancePasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetInstancePasswordInvoker) Invoke() (*model.ResetInstancePasswordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ResetInstancePasswordInvoker) Invoke() (*model.ResetInstancePasswordRes
 
 type ResizeInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResizeInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) {
@@ -225,6 +297,10 @@ type RollbackInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RollbackInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RollbackInstanceInvoker) Invoke() (*model.RollbackInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *RollbackInstanceInvoker) Invoke() (*model.RollbackInstanceResponse, err
 
 type ShowAuthorizationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAuthorizationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAuthorizationInvoker) Invoke() (*model.ShowAuthorizationResponse, error) {
@@ -249,6 +329,10 @@ type ShowEcsQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEcsQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEcsQuotaInvoker) Invoke() (*model.ShowEcsQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowEcsQuotaInvoker) Invoke() (*model.ShowEcsQuotaResponse, error) {
 
 type ShowInstanceStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse, error) {
@@ -273,6 +361,10 @@ type ShowInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowInstanceTagsInvoker) Invoke() (*model.ShowInstanceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowInstanceTagsInvoker) Invoke() (*model.ShowInstanceTagsResponse, err
 
 type ShowOmUrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOmUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOmUrlInvoker) Invoke() (*model.ShowOmUrlResponse, error) {
@@ -297,6 +393,10 @@ type ShowQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 
 type StartInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartInstanceInvoker) Invoke() (*model.StartInstanceResponse, error) {
@@ -321,6 +425,10 @@ type StopInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopInstanceInvoker) Invoke() (*model.StopInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *StopInstanceInvoker) Invoke() (*model.StopInstanceResponse, error) {
 
 type SwitchInstanceVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SwitchInstanceVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SwitchInstanceVpcInvoker) Invoke() (*model.SwitchInstanceVpcResponse, error) {
@@ -345,6 +457,10 @@ type UninstallInstanceEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UninstallInstanceEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UninstallInstanceEipInvoker) Invoke() (*model.UninstallInstanceEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -357,6 +473,10 @@ type UpdateInstanceSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateInstanceSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateInstanceSecurityGroupInvoker) Invoke() (*model.UpdateInstanceSecurityGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -367,6 +487,10 @@ func (i *UpdateInstanceSecurityGroupInvoker) Invoke() (*model.UpdateInstanceSecu
 
 type UpgradeInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpgradeInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpgradeInstanceInvoker) Invoke() (*model.UpgradeInstanceResponse, error) {

@@ -9,6 +9,10 @@ type AssociateAgencyWithAllProjectsPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateAgencyWithAllProjectsPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateAgencyWithAllProjectsPermissionInvoker) Invoke() (*model.AssociateAgencyWithAllProjectsPermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AssociateAgencyWithAllProjectsPermissionInvoker) Invoke() (*model.Assoc
 
 type AssociateAgencyWithDomainPermissionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateAgencyWithDomainPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateAgencyWithDomainPermissionInvoker) Invoke() (*model.AssociateAgencyWithDomainPermissionResponse, error) {
@@ -33,6 +41,10 @@ type AssociateAgencyWithProjectPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateAgencyWithProjectPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateAgencyWithProjectPermissionInvoker) Invoke() (*model.AssociateAgencyWithProjectPermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AssociateAgencyWithProjectPermissionInvoker) Invoke() (*model.Associate
 
 type AssociateRoleToAgencyOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateRoleToAgencyOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateRoleToAgencyOnEnterpriseProjectInvoker) Invoke() (*model.AssociateRoleToAgencyOnEnterpriseProjectResponse, error) {
@@ -57,6 +73,10 @@ type AssociateRoleToGroupOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateRoleToGroupOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateRoleToGroupOnEnterpriseProjectInvoker) Invoke() (*model.AssociateRoleToGroupOnEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *AssociateRoleToGroupOnEnterpriseProjectInvoker) Invoke() (*model.Associ
 
 type AssociateRoleToUserOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateRoleToUserOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateRoleToUserOnEnterpriseProjectInvoker) Invoke() (*model.AssociateRoleToUserOnEnterpriseProjectResponse, error) {
@@ -81,6 +105,10 @@ type CheckAllProjectsPermissionForAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckAllProjectsPermissionForAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckAllProjectsPermissionForAgencyInvoker) Invoke() (*model.CheckAllProjectsPermissionForAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CheckAllProjectsPermissionForAgencyInvoker) Invoke() (*model.CheckAllPr
 
 type CheckDomainPermissionForAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckDomainPermissionForAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckDomainPermissionForAgencyInvoker) Invoke() (*model.CheckDomainPermissionForAgencyResponse, error) {
@@ -105,6 +137,10 @@ type CheckProjectPermissionForAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckProjectPermissionForAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckProjectPermissionForAgencyInvoker) Invoke() (*model.CheckProjectPermissionForAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CheckProjectPermissionForAgencyInvoker) Invoke() (*model.CheckProjectPe
 
 type CreateAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
@@ -129,6 +169,10 @@ type CreateAgencyCustomPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAgencyCustomPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAgencyCustomPolicyInvoker) Invoke() (*model.CreateAgencyCustomPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateAgencyCustomPolicyInvoker) Invoke() (*model.CreateAgencyCustomPol
 
 type CreateBindingDeviceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateBindingDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateBindingDeviceInvoker) Invoke() (*model.CreateBindingDeviceResponse, error) {
@@ -153,6 +201,10 @@ type CreateCloudServiceCustomPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCloudServiceCustomPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCloudServiceCustomPolicyInvoker) Invoke() (*model.CreateCloudServiceCustomPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateCloudServiceCustomPolicyInvoker) Invoke() (*model.CreateCloudServ
 
 type CreateLoginTokenInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateLoginTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateLoginTokenInvoker) Invoke() (*model.CreateLoginTokenResponse, error) {
@@ -177,6 +233,10 @@ type CreateMetadataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMetadataInvoker) Invoke() (*model.CreateMetadataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateMetadataInvoker) Invoke() (*model.CreateMetadataResponse, error) 
 
 type CreateMfaDeviceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMfaDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMfaDeviceInvoker) Invoke() (*model.CreateMfaDeviceResponse, error) {
@@ -201,6 +265,10 @@ type CreateOpenIdConnectConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateOpenIdConnectConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateOpenIdConnectConfigInvoker) Invoke() (*model.CreateOpenIdConnectConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreateOpenIdConnectConfigInvoker) Invoke() (*model.CreateOpenIdConnectC
 
 type CreateTokenWithIdTokenInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTokenWithIdTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTokenWithIdTokenInvoker) Invoke() (*model.CreateTokenWithIdTokenResponse, error) {
@@ -225,6 +297,10 @@ type CreateUnscopedTokenWithIdTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateUnscopedTokenWithIdTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateUnscopedTokenWithIdTokenInvoker) Invoke() (*model.CreateUnscopedTokenWithIdTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *CreateUnscopedTokenWithIdTokenInvoker) Invoke() (*model.CreateUnscopedT
 
 type DeleteAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAgencyInvoker) Invoke() (*model.DeleteAgencyResponse, error) {
@@ -249,6 +329,10 @@ type DeleteBindingDeviceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteBindingDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteBindingDeviceInvoker) Invoke() (*model.DeleteBindingDeviceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteBindingDeviceInvoker) Invoke() (*model.DeleteBindingDeviceRespons
 
 type DeleteCustomPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteCustomPolicyInvoker) Invoke() (*model.DeleteCustomPolicyResponse, error) {
@@ -273,6 +361,10 @@ type DeleteDomainGroupInheritedRoleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDomainGroupInheritedRoleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDomainGroupInheritedRoleInvoker) Invoke() (*model.DeleteDomainGroupInheritedRoleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteDomainGroupInheritedRoleInvoker) Invoke() (*model.DeleteDomainGro
 
 type DeleteMfaDeviceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMfaDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMfaDeviceInvoker) Invoke() (*model.DeleteMfaDeviceResponse, error) {
@@ -297,6 +393,10 @@ type KeystoneAddUserToGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneAddUserToGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneAddUserToGroupInvoker) Invoke() (*model.KeystoneAddUserToGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *KeystoneAddUserToGroupInvoker) Invoke() (*model.KeystoneAddUserToGroupR
 
 type KeystoneAssociateGroupWithDomainPermissionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneAssociateGroupWithDomainPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneAssociateGroupWithDomainPermissionInvoker) Invoke() (*model.KeystoneAssociateGroupWithDomainPermissionResponse, error) {
@@ -321,6 +425,10 @@ type KeystoneAssociateGroupWithProjectPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneAssociateGroupWithProjectPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneAssociateGroupWithProjectPermissionInvoker) Invoke() (*model.KeystoneAssociateGroupWithProjectPermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *KeystoneAssociateGroupWithProjectPermissionInvoker) Invoke() (*model.Ke
 
 type KeystoneCheckDomainPermissionForGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneCheckDomainPermissionForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneCheckDomainPermissionForGroupInvoker) Invoke() (*model.KeystoneCheckDomainPermissionForGroupResponse, error) {
@@ -345,6 +457,10 @@ type KeystoneCheckProjectPermissionForGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCheckProjectPermissionForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCheckProjectPermissionForGroupInvoker) Invoke() (*model.KeystoneCheckProjectPermissionForGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *KeystoneCheckProjectPermissionForGroupInvoker) Invoke() (*model.Keyston
 
 type KeystoneCheckUserInGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneCheckUserInGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneCheckUserInGroupInvoker) Invoke() (*model.KeystoneCheckUserInGroupResponse, error) {
@@ -369,6 +489,10 @@ type KeystoneCheckroleForGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCheckroleForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCheckroleForGroupInvoker) Invoke() (*model.KeystoneCheckroleForGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *KeystoneCheckroleForGroupInvoker) Invoke() (*model.KeystoneCheckroleFor
 
 type KeystoneCreateGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneCreateGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneCreateGroupInvoker) Invoke() (*model.KeystoneCreateGroupResponse, error) {
@@ -393,6 +521,10 @@ type KeystoneCreateIdentityProviderInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCreateIdentityProviderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCreateIdentityProviderInvoker) Invoke() (*model.KeystoneCreateIdentityProviderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *KeystoneCreateIdentityProviderInvoker) Invoke() (*model.KeystoneCreateI
 
 type KeystoneCreateMappingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneCreateMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneCreateMappingInvoker) Invoke() (*model.KeystoneCreateMappingResponse, error) {
@@ -417,6 +553,10 @@ type KeystoneCreateProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCreateProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCreateProjectInvoker) Invoke() (*model.KeystoneCreateProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *KeystoneCreateProjectInvoker) Invoke() (*model.KeystoneCreateProjectRes
 
 type KeystoneCreateProtocolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneCreateProtocolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneCreateProtocolInvoker) Invoke() (*model.KeystoneCreateProtocolResponse, error) {
@@ -441,6 +585,10 @@ type KeystoneCreateScopedTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCreateScopedTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCreateScopedTokenInvoker) Invoke() (*model.KeystoneCreateScopedTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *KeystoneCreateScopedTokenInvoker) Invoke() (*model.KeystoneCreateScoped
 
 type KeystoneDeleteGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneDeleteGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneDeleteGroupInvoker) Invoke() (*model.KeystoneDeleteGroupResponse, error) {
@@ -465,6 +617,10 @@ type KeystoneDeleteIdentityProviderInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneDeleteIdentityProviderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneDeleteIdentityProviderInvoker) Invoke() (*model.KeystoneDeleteIdentityProviderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *KeystoneDeleteIdentityProviderInvoker) Invoke() (*model.KeystoneDeleteI
 
 type KeystoneDeleteMappingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneDeleteMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneDeleteMappingInvoker) Invoke() (*model.KeystoneDeleteMappingResponse, error) {
@@ -489,6 +649,10 @@ type KeystoneDeleteProtocolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneDeleteProtocolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneDeleteProtocolInvoker) Invoke() (*model.KeystoneDeleteProtocolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *KeystoneDeleteProtocolInvoker) Invoke() (*model.KeystoneDeleteProtocolR
 
 type KeystoneListAllProjectPermissionsForGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListAllProjectPermissionsForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListAllProjectPermissionsForGroupInvoker) Invoke() (*model.KeystoneListAllProjectPermissionsForGroupResponse, error) {
@@ -513,6 +681,10 @@ type KeystoneListAuthDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListAuthDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListAuthDomainsInvoker) Invoke() (*model.KeystoneListAuthDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *KeystoneListAuthDomainsInvoker) Invoke() (*model.KeystoneListAuthDomain
 
 type KeystoneListAuthProjectsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListAuthProjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListAuthProjectsInvoker) Invoke() (*model.KeystoneListAuthProjectsResponse, error) {
@@ -537,6 +713,10 @@ type KeystoneListDomainPermissionsForGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListDomainPermissionsForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListDomainPermissionsForGroupInvoker) Invoke() (*model.KeystoneListDomainPermissionsForGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *KeystoneListDomainPermissionsForGroupInvoker) Invoke() (*model.Keystone
 
 type KeystoneListEndpointsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListEndpointsInvoker) Invoke() (*model.KeystoneListEndpointsResponse, error) {
@@ -561,6 +745,10 @@ type KeystoneListFederationDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListFederationDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListFederationDomainsInvoker) Invoke() (*model.KeystoneListFederationDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *KeystoneListFederationDomainsInvoker) Invoke() (*model.KeystoneListFede
 
 type KeystoneListGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListGroupsInvoker) Invoke() (*model.KeystoneListGroupsResponse, error) {
@@ -585,6 +777,10 @@ type KeystoneListIdentityProvidersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListIdentityProvidersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListIdentityProvidersInvoker) Invoke() (*model.KeystoneListIdentityProvidersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *KeystoneListIdentityProvidersInvoker) Invoke() (*model.KeystoneListIden
 
 type KeystoneListMappingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListMappingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListMappingsInvoker) Invoke() (*model.KeystoneListMappingsResponse, error) {
@@ -609,6 +809,10 @@ type KeystoneListPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListPermissionsInvoker) Invoke() (*model.KeystoneListPermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *KeystoneListPermissionsInvoker) Invoke() (*model.KeystoneListPermission
 
 type KeystoneListProjectPermissionsForGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListProjectPermissionsForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListProjectPermissionsForGroupInvoker) Invoke() (*model.KeystoneListProjectPermissionsForGroupResponse, error) {
@@ -633,6 +841,10 @@ type KeystoneListProjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListProjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListProjectsInvoker) Invoke() (*model.KeystoneListProjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *KeystoneListProjectsInvoker) Invoke() (*model.KeystoneListProjectsRespo
 
 type KeystoneListProjectsForUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListProjectsForUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListProjectsForUserInvoker) Invoke() (*model.KeystoneListProjectsForUserResponse, error) {
@@ -657,6 +873,10 @@ type KeystoneListProtocolsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListProtocolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListProtocolsInvoker) Invoke() (*model.KeystoneListProtocolsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *KeystoneListProtocolsInvoker) Invoke() (*model.KeystoneListProtocolsRes
 
 type KeystoneListRegionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListRegionsInvoker) Invoke() (*model.KeystoneListRegionsResponse, error) {
@@ -681,6 +905,10 @@ type KeystoneListServicesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListServicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListServicesInvoker) Invoke() (*model.KeystoneListServicesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *KeystoneListServicesInvoker) Invoke() (*model.KeystoneListServicesRespo
 
 type KeystoneListVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListVersionsInvoker) Invoke() (*model.KeystoneListVersionsResponse, error) {
@@ -705,6 +937,10 @@ type KeystoneRemoveDomainPermissionFromGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneRemoveDomainPermissionFromGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneRemoveDomainPermissionFromGroupInvoker) Invoke() (*model.KeystoneRemoveDomainPermissionFromGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *KeystoneRemoveDomainPermissionFromGroupInvoker) Invoke() (*model.Keysto
 
 type KeystoneRemoveProjectPermissionFromGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneRemoveProjectPermissionFromGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneRemoveProjectPermissionFromGroupInvoker) Invoke() (*model.KeystoneRemoveProjectPermissionFromGroupResponse, error) {
@@ -729,6 +969,10 @@ type KeystoneRemoveUserFromGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneRemoveUserFromGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneRemoveUserFromGroupInvoker) Invoke() (*model.KeystoneRemoveUserFromGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *KeystoneRemoveUserFromGroupInvoker) Invoke() (*model.KeystoneRemoveUser
 
 type KeystoneShowCatalogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowCatalogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowCatalogInvoker) Invoke() (*model.KeystoneShowCatalogResponse, error) {
@@ -753,6 +1001,10 @@ type KeystoneShowEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneShowEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneShowEndpointInvoker) Invoke() (*model.KeystoneShowEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *KeystoneShowEndpointInvoker) Invoke() (*model.KeystoneShowEndpointRespo
 
 type KeystoneShowGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowGroupInvoker) Invoke() (*model.KeystoneShowGroupResponse, error) {
@@ -777,6 +1033,10 @@ type KeystoneShowIdentityProviderInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneShowIdentityProviderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneShowIdentityProviderInvoker) Invoke() (*model.KeystoneShowIdentityProviderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *KeystoneShowIdentityProviderInvoker) Invoke() (*model.KeystoneShowIdent
 
 type KeystoneShowMappingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowMappingInvoker) Invoke() (*model.KeystoneShowMappingResponse, error) {
@@ -801,6 +1065,10 @@ type KeystoneShowPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneShowPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneShowPermissionInvoker) Invoke() (*model.KeystoneShowPermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *KeystoneShowPermissionInvoker) Invoke() (*model.KeystoneShowPermissionR
 
 type KeystoneShowProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowProjectInvoker) Invoke() (*model.KeystoneShowProjectResponse, error) {
@@ -825,6 +1097,10 @@ type KeystoneShowProtocolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneShowProtocolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneShowProtocolInvoker) Invoke() (*model.KeystoneShowProtocolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *KeystoneShowProtocolInvoker) Invoke() (*model.KeystoneShowProtocolRespo
 
 type KeystoneShowRegionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowRegionInvoker) Invoke() (*model.KeystoneShowRegionResponse, error) {
@@ -849,6 +1129,10 @@ type KeystoneShowSecurityComplianceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneShowSecurityComplianceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneShowSecurityComplianceInvoker) Invoke() (*model.KeystoneShowSecurityComplianceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *KeystoneShowSecurityComplianceInvoker) Invoke() (*model.KeystoneShowSec
 
 type KeystoneShowSecurityComplianceByOptionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowSecurityComplianceByOptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowSecurityComplianceByOptionInvoker) Invoke() (*model.KeystoneShowSecurityComplianceByOptionResponse, error) {
@@ -873,6 +1161,10 @@ type KeystoneShowServiceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneShowServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneShowServiceInvoker) Invoke() (*model.KeystoneShowServiceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *KeystoneShowServiceInvoker) Invoke() (*model.KeystoneShowServiceRespons
 
 type KeystoneShowVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowVersionInvoker) Invoke() (*model.KeystoneShowVersionResponse, error) {
@@ -897,6 +1193,10 @@ type KeystoneUpdateGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneUpdateGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneUpdateGroupInvoker) Invoke() (*model.KeystoneUpdateGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *KeystoneUpdateGroupInvoker) Invoke() (*model.KeystoneUpdateGroupRespons
 
 type KeystoneUpdateIdentityProviderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneUpdateIdentityProviderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneUpdateIdentityProviderInvoker) Invoke() (*model.KeystoneUpdateIdentityProviderResponse, error) {
@@ -921,6 +1225,10 @@ type KeystoneUpdateMappingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneUpdateMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneUpdateMappingInvoker) Invoke() (*model.KeystoneUpdateMappingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *KeystoneUpdateMappingInvoker) Invoke() (*model.KeystoneUpdateMappingRes
 
 type KeystoneUpdateProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneUpdateProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneUpdateProjectInvoker) Invoke() (*model.KeystoneUpdateProjectResponse, error) {
@@ -945,6 +1257,10 @@ type KeystoneUpdateProtocolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneUpdateProtocolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneUpdateProtocolInvoker) Invoke() (*model.KeystoneUpdateProtocolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -955,6 +1271,10 @@ func (i *KeystoneUpdateProtocolInvoker) Invoke() (*model.KeystoneUpdateProtocolR
 
 type ListAgenciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAgenciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAgenciesInvoker) Invoke() (*model.ListAgenciesResponse, error) {
@@ -969,6 +1289,10 @@ type ListAllProjectsPermissionsForAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAllProjectsPermissionsForAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAllProjectsPermissionsForAgencyInvoker) Invoke() (*model.ListAllProjectsPermissionsForAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -979,6 +1303,10 @@ func (i *ListAllProjectsPermissionsForAgencyInvoker) Invoke() (*model.ListAllPro
 
 type ListCustomPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCustomPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCustomPoliciesInvoker) Invoke() (*model.ListCustomPoliciesResponse, error) {
@@ -993,6 +1321,10 @@ type ListDomainPermissionsForAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainPermissionsForAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainPermissionsForAgencyInvoker) Invoke() (*model.ListDomainPermissionsForAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1003,6 +1335,10 @@ func (i *ListDomainPermissionsForAgencyInvoker) Invoke() (*model.ListDomainPermi
 
 type ListEnterpriseProjectsForGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEnterpriseProjectsForGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEnterpriseProjectsForGroupInvoker) Invoke() (*model.ListEnterpriseProjectsForGroupResponse, error) {
@@ -1017,6 +1353,10 @@ type ListEnterpriseProjectsForUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnterpriseProjectsForUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnterpriseProjectsForUserInvoker) Invoke() (*model.ListEnterpriseProjectsForUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1027,6 +1367,10 @@ func (i *ListEnterpriseProjectsForUserInvoker) Invoke() (*model.ListEnterprisePr
 
 type ListGroupsForEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGroupsForEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGroupsForEnterpriseProjectInvoker) Invoke() (*model.ListGroupsForEnterpriseProjectResponse, error) {
@@ -1041,6 +1385,10 @@ type ListProjectPermissionsForAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectPermissionsForAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectPermissionsForAgencyInvoker) Invoke() (*model.ListProjectPermissionsForAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1051,6 +1399,10 @@ func (i *ListProjectPermissionsForAgencyInvoker) Invoke() (*model.ListProjectPer
 
 type ListRolesForGroupOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRolesForGroupOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRolesForGroupOnEnterpriseProjectInvoker) Invoke() (*model.ListRolesForGroupOnEnterpriseProjectResponse, error) {
@@ -1065,6 +1417,10 @@ type ListRolesForUserOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRolesForUserOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRolesForUserOnEnterpriseProjectInvoker) Invoke() (*model.ListRolesForUserOnEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1075,6 +1431,10 @@ func (i *ListRolesForUserOnEnterpriseProjectInvoker) Invoke() (*model.ListRolesF
 
 type ListUsersForEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUsersForEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUsersForEnterpriseProjectInvoker) Invoke() (*model.ListUsersForEnterpriseProjectResponse, error) {
@@ -1089,6 +1449,10 @@ type RemoveAllProjectsPermissionFromAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveAllProjectsPermissionFromAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveAllProjectsPermissionFromAgencyInvoker) Invoke() (*model.RemoveAllProjectsPermissionFromAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1099,6 +1463,10 @@ func (i *RemoveAllProjectsPermissionFromAgencyInvoker) Invoke() (*model.RemoveAl
 
 type RemoveDomainPermissionFromAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemoveDomainPermissionFromAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemoveDomainPermissionFromAgencyInvoker) Invoke() (*model.RemoveDomainPermissionFromAgencyResponse, error) {
@@ -1113,6 +1481,10 @@ type RemoveProjectPermissionFromAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveProjectPermissionFromAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveProjectPermissionFromAgencyInvoker) Invoke() (*model.RemoveProjectPermissionFromAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1123,6 +1495,10 @@ func (i *RemoveProjectPermissionFromAgencyInvoker) Invoke() (*model.RemoveProjec
 
 type RevokeRoleFromAgencyOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RevokeRoleFromAgencyOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RevokeRoleFromAgencyOnEnterpriseProjectInvoker) Invoke() (*model.RevokeRoleFromAgencyOnEnterpriseProjectResponse, error) {
@@ -1137,6 +1513,10 @@ type RevokeRoleFromGroupOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RevokeRoleFromGroupOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RevokeRoleFromGroupOnEnterpriseProjectInvoker) Invoke() (*model.RevokeRoleFromGroupOnEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1147,6 +1527,10 @@ func (i *RevokeRoleFromGroupOnEnterpriseProjectInvoker) Invoke() (*model.RevokeR
 
 type RevokeRoleFromUserOnEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RevokeRoleFromUserOnEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RevokeRoleFromUserOnEnterpriseProjectInvoker) Invoke() (*model.RevokeRoleFromUserOnEnterpriseProjectResponse, error) {
@@ -1161,6 +1545,10 @@ type ShowAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1171,6 +1559,10 @@ func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
 
 type ShowCustomPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCustomPolicyInvoker) Invoke() (*model.ShowCustomPolicyResponse, error) {
@@ -1185,6 +1577,10 @@ type ShowDomainApiAclPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainApiAclPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainApiAclPolicyInvoker) Invoke() (*model.ShowDomainApiAclPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1195,6 +1591,10 @@ func (i *ShowDomainApiAclPolicyInvoker) Invoke() (*model.ShowDomainApiAclPolicyR
 
 type ShowDomainConsoleAclPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainConsoleAclPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDomainConsoleAclPolicyInvoker) Invoke() (*model.ShowDomainConsoleAclPolicyResponse, error) {
@@ -1209,6 +1609,10 @@ type ShowDomainLoginPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainLoginPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainLoginPolicyInvoker) Invoke() (*model.ShowDomainLoginPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1219,6 +1623,10 @@ func (i *ShowDomainLoginPolicyInvoker) Invoke() (*model.ShowDomainLoginPolicyRes
 
 type ShowDomainPasswordPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainPasswordPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDomainPasswordPolicyInvoker) Invoke() (*model.ShowDomainPasswordPolicyResponse, error) {
@@ -1233,6 +1641,10 @@ type ShowDomainProtectPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainProtectPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainProtectPolicyInvoker) Invoke() (*model.ShowDomainProtectPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1243,6 +1655,10 @@ func (i *ShowDomainProtectPolicyInvoker) Invoke() (*model.ShowDomainProtectPolic
 
 type ShowDomainQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDomainQuotaInvoker) Invoke() (*model.ShowDomainQuotaResponse, error) {
@@ -1257,6 +1673,10 @@ type ShowDomainRoleAssignmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainRoleAssignmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainRoleAssignmentsInvoker) Invoke() (*model.ShowDomainRoleAssignmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1267,6 +1687,10 @@ func (i *ShowDomainRoleAssignmentsInvoker) Invoke() (*model.ShowDomainRoleAssign
 
 type ShowMetadataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMetadataInvoker) Invoke() (*model.ShowMetadataResponse, error) {
@@ -1281,6 +1705,10 @@ type ShowOpenIdConnectConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowOpenIdConnectConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowOpenIdConnectConfigInvoker) Invoke() (*model.ShowOpenIdConnectConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1291,6 +1719,10 @@ func (i *ShowOpenIdConnectConfigInvoker) Invoke() (*model.ShowOpenIdConnectConfi
 
 type ShowProjectDetailsAndStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectDetailsAndStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowProjectDetailsAndStatusInvoker) Invoke() (*model.ShowProjectDetailsAndStatusResponse, error) {
@@ -1305,6 +1737,10 @@ type ShowProjectQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProjectQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProjectQuotaInvoker) Invoke() (*model.ShowProjectQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1315,6 +1751,10 @@ func (i *ShowProjectQuotaInvoker) Invoke() (*model.ShowProjectQuotaResponse, err
 
 type UpdateAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAgencyInvoker) Invoke() (*model.UpdateAgencyResponse, error) {
@@ -1329,6 +1769,10 @@ type UpdateAgencyCustomPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAgencyCustomPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAgencyCustomPolicyInvoker) Invoke() (*model.UpdateAgencyCustomPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1339,6 +1783,10 @@ func (i *UpdateAgencyCustomPolicyInvoker) Invoke() (*model.UpdateAgencyCustomPol
 
 type UpdateCloudServiceCustomPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateCloudServiceCustomPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateCloudServiceCustomPolicyInvoker) Invoke() (*model.UpdateCloudServiceCustomPolicyResponse, error) {
@@ -1353,6 +1801,10 @@ type UpdateDomainApiAclPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDomainApiAclPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDomainApiAclPolicyInvoker) Invoke() (*model.UpdateDomainApiAclPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1363,6 +1815,10 @@ func (i *UpdateDomainApiAclPolicyInvoker) Invoke() (*model.UpdateDomainApiAclPol
 
 type UpdateDomainConsoleAclPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainConsoleAclPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDomainConsoleAclPolicyInvoker) Invoke() (*model.UpdateDomainConsoleAclPolicyResponse, error) {
@@ -1377,6 +1833,10 @@ type UpdateDomainGroupInheritRoleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDomainGroupInheritRoleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDomainGroupInheritRoleInvoker) Invoke() (*model.UpdateDomainGroupInheritRoleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1387,6 +1847,10 @@ func (i *UpdateDomainGroupInheritRoleInvoker) Invoke() (*model.UpdateDomainGroup
 
 type UpdateDomainLoginPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainLoginPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDomainLoginPolicyInvoker) Invoke() (*model.UpdateDomainLoginPolicyResponse, error) {
@@ -1401,6 +1865,10 @@ type UpdateDomainPasswordPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDomainPasswordPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDomainPasswordPolicyInvoker) Invoke() (*model.UpdateDomainPasswordPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1411,6 +1879,10 @@ func (i *UpdateDomainPasswordPolicyInvoker) Invoke() (*model.UpdateDomainPasswor
 
 type UpdateDomainProtectPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainProtectPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDomainProtectPolicyInvoker) Invoke() (*model.UpdateDomainProtectPolicyResponse, error) {
@@ -1425,6 +1897,10 @@ type UpdateOpenIdConnectConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateOpenIdConnectConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateOpenIdConnectConfigInvoker) Invoke() (*model.UpdateOpenIdConnectConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1435,6 +1911,10 @@ func (i *UpdateOpenIdConnectConfigInvoker) Invoke() (*model.UpdateOpenIdConnectC
 
 type UpdateProjectStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateProjectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateProjectStatusInvoker) Invoke() (*model.UpdateProjectStatusResponse, error) {
@@ -1449,6 +1929,10 @@ type CreatePermanentAccessKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePermanentAccessKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePermanentAccessKeyInvoker) Invoke() (*model.CreatePermanentAccessKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1459,6 +1943,10 @@ func (i *CreatePermanentAccessKeyInvoker) Invoke() (*model.CreatePermanentAccess
 
 type CreateTemporaryAccessKeyByAgencyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTemporaryAccessKeyByAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTemporaryAccessKeyByAgencyInvoker) Invoke() (*model.CreateTemporaryAccessKeyByAgencyResponse, error) {
@@ -1473,6 +1961,10 @@ type CreateTemporaryAccessKeyByTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTemporaryAccessKeyByTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTemporaryAccessKeyByTokenInvoker) Invoke() (*model.CreateTemporaryAccessKeyByTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1483,6 +1975,10 @@ func (i *CreateTemporaryAccessKeyByTokenInvoker) Invoke() (*model.CreateTemporar
 
 type DeletePermanentAccessKeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePermanentAccessKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePermanentAccessKeyInvoker) Invoke() (*model.DeletePermanentAccessKeyResponse, error) {
@@ -1497,6 +1993,10 @@ type ListPermanentAccessKeysInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPermanentAccessKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPermanentAccessKeysInvoker) Invoke() (*model.ListPermanentAccessKeysResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1507,6 +2007,10 @@ func (i *ListPermanentAccessKeysInvoker) Invoke() (*model.ListPermanentAccessKey
 
 type ShowPermanentAccessKeyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPermanentAccessKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPermanentAccessKeyInvoker) Invoke() (*model.ShowPermanentAccessKeyResponse, error) {
@@ -1521,6 +2025,10 @@ type UpdatePermanentAccessKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePermanentAccessKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePermanentAccessKeyInvoker) Invoke() (*model.UpdatePermanentAccessKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1531,6 +2039,10 @@ func (i *UpdatePermanentAccessKeyInvoker) Invoke() (*model.UpdatePermanentAccess
 
 type CreateUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateUserInvoker) Invoke() (*model.CreateUserResponse, error) {
@@ -1545,6 +2057,10 @@ type KeystoneCreateUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCreateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCreateUserInvoker) Invoke() (*model.KeystoneCreateUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1555,6 +2071,10 @@ func (i *KeystoneCreateUserInvoker) Invoke() (*model.KeystoneCreateUserResponse,
 
 type KeystoneDeleteUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneDeleteUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneDeleteUserInvoker) Invoke() (*model.KeystoneDeleteUserResponse, error) {
@@ -1569,6 +2089,10 @@ type KeystoneListGroupsForUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListGroupsForUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListGroupsForUserInvoker) Invoke() (*model.KeystoneListGroupsForUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1579,6 +2103,10 @@ func (i *KeystoneListGroupsForUserInvoker) Invoke() (*model.KeystoneListGroupsFo
 
 type KeystoneListUsersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneListUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneListUsersInvoker) Invoke() (*model.KeystoneListUsersResponse, error) {
@@ -1593,6 +2121,10 @@ type KeystoneListUsersForGroupByAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneListUsersForGroupByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneListUsersForGroupByAdminInvoker) Invoke() (*model.KeystoneListUsersForGroupByAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1603,6 +2135,10 @@ func (i *KeystoneListUsersForGroupByAdminInvoker) Invoke() (*model.KeystoneListU
 
 type KeystoneShowUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneShowUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneShowUserInvoker) Invoke() (*model.KeystoneShowUserResponse, error) {
@@ -1617,6 +2153,10 @@ type KeystoneUpdateUserByAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneUpdateUserByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneUpdateUserByAdminInvoker) Invoke() (*model.KeystoneUpdateUserByAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1627,6 +2167,10 @@ func (i *KeystoneUpdateUserByAdminInvoker) Invoke() (*model.KeystoneUpdateUserBy
 
 type KeystoneUpdateUserPasswordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneUpdateUserPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneUpdateUserPasswordInvoker) Invoke() (*model.KeystoneUpdateUserPasswordResponse, error) {
@@ -1641,6 +2185,10 @@ type ListUserLoginProtectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListUserLoginProtectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListUserLoginProtectsInvoker) Invoke() (*model.ListUserLoginProtectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1651,6 +2199,10 @@ func (i *ListUserLoginProtectsInvoker) Invoke() (*model.ListUserLoginProtectsRes
 
 type ListUserMfaDevicesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUserMfaDevicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUserMfaDevicesInvoker) Invoke() (*model.ListUserMfaDevicesResponse, error) {
@@ -1665,6 +2217,10 @@ type ShowUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserInvoker) Invoke() (*model.ShowUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1675,6 +2231,10 @@ func (i *ShowUserInvoker) Invoke() (*model.ShowUserResponse, error) {
 
 type ShowUserLoginProtectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowUserLoginProtectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowUserLoginProtectInvoker) Invoke() (*model.ShowUserLoginProtectResponse, error) {
@@ -1689,6 +2249,10 @@ type ShowUserMfaDeviceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserMfaDeviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserMfaDeviceInvoker) Invoke() (*model.ShowUserMfaDeviceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1699,6 +2263,10 @@ func (i *ShowUserMfaDeviceInvoker) Invoke() (*model.ShowUserMfaDeviceResponse, e
 
 type UpdateLoginProtectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateLoginProtectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateLoginProtectInvoker) Invoke() (*model.UpdateLoginProtectResponse, error) {
@@ -1713,6 +2281,10 @@ type UpdateUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1723,6 +2295,10 @@ func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 
 type UpdateUserInformationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateUserInformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateUserInformationInvoker) Invoke() (*model.UpdateUserInformationResponse, error) {
@@ -1737,6 +2313,10 @@ type KeystoneCreateAgencyTokenInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCreateAgencyTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCreateAgencyTokenInvoker) Invoke() (*model.KeystoneCreateAgencyTokenResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1747,6 +2327,10 @@ func (i *KeystoneCreateAgencyTokenInvoker) Invoke() (*model.KeystoneCreateAgency
 
 type KeystoneCreateUserTokenByPasswordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneCreateUserTokenByPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneCreateUserTokenByPasswordInvoker) Invoke() (*model.KeystoneCreateUserTokenByPasswordResponse, error) {
@@ -1761,6 +2345,10 @@ type KeystoneCreateUserTokenByPasswordAndMfaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *KeystoneCreateUserTokenByPasswordAndMfaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *KeystoneCreateUserTokenByPasswordAndMfaInvoker) Invoke() (*model.KeystoneCreateUserTokenByPasswordAndMfaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1771,6 +2359,10 @@ func (i *KeystoneCreateUserTokenByPasswordAndMfaInvoker) Invoke() (*model.Keysto
 
 type KeystoneValidateTokenInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *KeystoneValidateTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *KeystoneValidateTokenInvoker) Invoke() (*model.KeystoneValidateTokenResponse, error) {

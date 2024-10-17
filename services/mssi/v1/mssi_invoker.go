@@ -9,6 +9,10 @@ type CreateConnectionInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateConnectionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateConnectionInfoInvoker) Invoke() (*model.CreateConnectionInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateConnectionInfoInvoker) Invoke() (*model.CreateConnectionInfoRespo
 
 type CreateCustomConnectorFromOpenapiInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomConnectorFromOpenapiInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCustomConnectorFromOpenapiInvoker) Invoke() (*model.CreateCustomConnectorFromOpenapiResponse, error) {
@@ -33,6 +41,10 @@ type CreateFlowInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateFlowInvoker) Invoke() (*model.CreateFlowResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateFlowInvoker) Invoke() (*model.CreateFlowResponse, error) {
 
 type CreateFlowTemplateFromFlowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateFlowTemplateFromFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateFlowTemplateFromFlowInvoker) Invoke() (*model.CreateFlowTemplateFromFlowResponse, error) {
@@ -57,6 +73,10 @@ type DeleteConnectionInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteConnectionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteConnectionInfoInvoker) Invoke() (*model.DeleteConnectionInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteConnectionInfoInvoker) Invoke() (*model.DeleteConnectionInfoRespo
 
 type DeleteCustomConnectorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomConnectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteCustomConnectorInvoker) Invoke() (*model.DeleteCustomConnectorResponse, error) {
@@ -81,6 +105,10 @@ type DeleteFlowInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteFlowInvoker) Invoke() (*model.DeleteFlowResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteFlowInvoker) Invoke() (*model.DeleteFlowResponse, error) {
 
 type SearchFlowByIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchFlowByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchFlowByIdInvoker) Invoke() (*model.SearchFlowByIdResponse, error) {
@@ -105,6 +137,10 @@ type ShowAllConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAllConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAllConnectionsInvoker) Invoke() (*model.ShowAllConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowAllConnectionsInvoker) Invoke() (*model.ShowAllConnectionsResponse,
 
 type ShowAllFlowsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAllFlowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAllFlowsInvoker) Invoke() (*model.ShowAllFlowsResponse, error) {
@@ -129,6 +169,10 @@ type ShowConnectorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowConnectorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowConnectorsInvoker) Invoke() (*model.ShowConnectorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowConnectorsInvoker) Invoke() (*model.ShowConnectorsResponse, error) 
 
 type ShowCustomConnectorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomConnectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCustomConnectorInvoker) Invoke() (*model.ShowCustomConnectorResponse, error) {
@@ -153,6 +201,10 @@ type ShowCustomConnectorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCustomConnectorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCustomConnectorsInvoker) Invoke() (*model.ShowCustomConnectorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowCustomConnectorsInvoker) Invoke() (*model.ShowCustomConnectorsRespo
 
 type ShowSingleConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSingleConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSingleConnectionInvoker) Invoke() (*model.ShowSingleConnectionResponse, error) {
@@ -177,6 +233,10 @@ type UpdateConnectionInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateConnectionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateConnectionInfoInvoker) Invoke() (*model.UpdateConnectionInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *UpdateConnectionInfoInvoker) Invoke() (*model.UpdateConnectionInfoRespo
 
 type UpdateFlowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateFlowInvoker) Invoke() (*model.UpdateFlowResponse, error) {

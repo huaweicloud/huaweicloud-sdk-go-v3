@@ -13,7 +13,7 @@ type UpdateCentralNetworkConnection struct {
 	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 
-	// 带宽值定义，单位Mbps。
+	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 }
 

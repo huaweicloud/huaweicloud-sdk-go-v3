@@ -9,6 +9,10 @@ type BatchCopyDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCopyDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCopyDomainInvoker) Invoke() (*model.BatchCopyDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCopyDomainInvoker) Invoke() (*model.BatchCopyDomainResponse, error
 
 type BatchDeleteTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
@@ -33,6 +41,10 @@ type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
 
 type CreatePreheatingTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePreheatingTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePreheatingTasksInvoker) Invoke() (*model.CreatePreheatingTasksResponse, error) {
@@ -57,6 +73,10 @@ type CreateRefreshTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRefreshTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRefreshTasksInvoker) Invoke() (*model.CreateRefreshTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateRefreshTasksInvoker) Invoke() (*model.CreateRefreshTasksResponse,
 
 type CreateTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
@@ -81,6 +105,10 @@ type DeleteDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -93,6 +121,10 @@ type DisableDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisableDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisableDomainInvoker) Invoke() (*model.DisableDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -103,6 +135,11 @@ func (i *DisableDomainInvoker) Invoke() (*model.DisableDomainResponse, error) {
 
 type DownloadRegionCarrierExcelInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DownloadRegionCarrierExcelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -119,6 +156,11 @@ type DownloadStatisticsExcelInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DownloadStatisticsExcelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DownloadStatisticsExcelInvoker) Invoke() (*model.DownloadStatisticsExcelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -129,6 +171,10 @@ func (i *DownloadStatisticsExcelInvoker) Invoke() (*model.DownloadStatisticsExce
 
 type EnableDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnableDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnableDomainInvoker) Invoke() (*model.EnableDomainResponse, error) {
@@ -143,6 +189,10 @@ type ListCdnDomainTopRefersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCdnDomainTopRefersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCdnDomainTopRefersInvoker) Invoke() (*model.ListCdnDomainTopRefersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -155,6 +205,10 @@ type ListDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -165,6 +219,10 @@ func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 
 type SetChargeModesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetChargeModesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetChargeModesInvoker) Invoke() (*model.SetChargeModesResponse, error) {
@@ -180,6 +238,11 @@ type ShowBandwidthCalcInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowBandwidthCalcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowBandwidthCalcInvoker) Invoke() (*model.ShowBandwidthCalcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -190,6 +253,10 @@ func (i *ShowBandwidthCalcInvoker) Invoke() (*model.ShowBandwidthCalcResponse, e
 
 type ShowCertificatesHttpsInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificatesHttpsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCertificatesHttpsInfoInvoker) Invoke() (*model.ShowCertificatesHttpsInfoResponse, error) {
@@ -204,6 +271,10 @@ type ShowChargeModesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowChargeModesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowChargeModesInvoker) Invoke() (*model.ShowChargeModesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -214,6 +285,10 @@ func (i *ShowChargeModesInvoker) Invoke() (*model.ShowChargeModesResponse, error
 
 type ShowDomainDetailByNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainDetailByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDomainDetailByNameInvoker) Invoke() (*model.ShowDomainDetailByNameResponse, error) {
@@ -228,6 +303,10 @@ type ShowDomainFullConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainFullConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainFullConfigInvoker) Invoke() (*model.ShowDomainFullConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -238,6 +317,10 @@ func (i *ShowDomainFullConfigInvoker) Invoke() (*model.ShowDomainFullConfigRespo
 
 type ShowDomainLocationStatsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainLocationStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDomainLocationStatsInvoker) Invoke() (*model.ShowDomainLocationStatsResponse, error) {
@@ -252,6 +335,10 @@ type ShowDomainStatsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDomainStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDomainStatsInvoker) Invoke() (*model.ShowDomainStatsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -262,6 +349,10 @@ func (i *ShowDomainStatsInvoker) Invoke() (*model.ShowDomainStatsResponse, error
 
 type ShowHistoryTaskDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowHistoryTaskDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowHistoryTaskDetailsInvoker) Invoke() (*model.ShowHistoryTaskDetailsResponse, error) {
@@ -276,6 +367,10 @@ type ShowHistoryTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowHistoryTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowHistoryTasksInvoker) Invoke() (*model.ShowHistoryTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -286,6 +381,10 @@ func (i *ShowHistoryTasksInvoker) Invoke() (*model.ShowHistoryTasksResponse, err
 
 type ShowIpInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowIpInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowIpInfoInvoker) Invoke() (*model.ShowIpInfoResponse, error) {
@@ -300,6 +399,10 @@ type ShowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowLogsInvoker) Invoke() (*model.ShowLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -312,6 +415,10 @@ type ShowQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -322,6 +429,10 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 
 type ShowTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTagsInvoker) Invoke() (*model.ShowTagsResponse, error) {
@@ -337,6 +448,11 @@ type ShowTopDomainNamesInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowTopDomainNamesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowTopDomainNamesInvoker) Invoke() (*model.ShowTopDomainNamesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -347,6 +463,10 @@ func (i *ShowTopDomainNamesInvoker) Invoke() (*model.ShowTopDomainNamesResponse,
 
 type ShowTopUrlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTopUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTopUrlInvoker) Invoke() (*model.ShowTopUrlResponse, error) {
@@ -361,6 +481,10 @@ type ShowUrlTaskInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUrlTaskInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUrlTaskInfoInvoker) Invoke() (*model.ShowUrlTaskInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -371,6 +495,10 @@ func (i *ShowUrlTaskInfoInvoker) Invoke() (*model.ShowUrlTaskInfoResponse, error
 
 type ShowVerifyDomainOwnerInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVerifyDomainOwnerInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVerifyDomainOwnerInfoInvoker) Invoke() (*model.ShowVerifyDomainOwnerInfoResponse, error) {
@@ -385,6 +513,10 @@ type UpdateDomainFullConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDomainFullConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDomainFullConfigInvoker) Invoke() (*model.UpdateDomainFullConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -395,6 +527,10 @@ func (i *UpdateDomainFullConfigInvoker) Invoke() (*model.UpdateDomainFullConfigR
 
 type UpdateDomainMultiCertificatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainMultiCertificatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDomainMultiCertificatesInvoker) Invoke() (*model.UpdateDomainMultiCertificatesResponse, error) {
@@ -409,6 +545,10 @@ type UpdatePrivateBucketAccessInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePrivateBucketAccessInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePrivateBucketAccessInvoker) Invoke() (*model.UpdatePrivateBucketAccessResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -419,6 +559,10 @@ func (i *UpdatePrivateBucketAccessInvoker) Invoke() (*model.UpdatePrivateBucketA
 
 type VerifyDomainOwnerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *VerifyDomainOwnerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *VerifyDomainOwnerInvoker) Invoke() (*model.VerifyDomainOwnerResponse, error) {

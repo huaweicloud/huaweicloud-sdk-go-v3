@@ -9,6 +9,10 @@ type BatchCreateTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateTagsInvoker) Invoke() (*model.BatchCreateTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateTagsInvoker) Invoke() (*model.BatchCreateTagsResponse, error
 
 type BatchDeleteTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
@@ -33,6 +41,10 @@ type BatchStartTransferTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchStartTransferTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchStartTransferTaskInvoker) Invoke() (*model.BatchStartTransferTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchStartTransferTaskInvoker) Invoke() (*model.BatchStartTransferTaskR
 
 type BatchStopTransferTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchStopTransferTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchStopTransferTaskInvoker) Invoke() (*model.BatchStopTransferTaskResponse, error) {
@@ -57,6 +73,10 @@ type ConsumeRecordsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ConsumeRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ConsumeRecordsInvoker) Invoke() (*model.ConsumeRecordsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ConsumeRecordsInvoker) Invoke() (*model.ConsumeRecordsResponse, error) 
 
 type CreateObsTransferTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateObsTransferTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateObsTransferTaskInvoker) Invoke() (*model.CreateObsTransferTaskResponse, error) {
@@ -81,6 +105,10 @@ type CreateStreamInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateStreamInvoker) Invoke() (*model.CreateStreamResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateStreamInvoker) Invoke() (*model.CreateStreamResponse, error) {
 
 type CreateTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTagInvoker) Invoke() (*model.CreateTagResponse, error) {
@@ -105,6 +137,10 @@ type DeleteStreamInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteStreamInvoker) Invoke() (*model.DeleteStreamResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteStreamInvoker) Invoke() (*model.DeleteStreamResponse, error) {
 
 type DeleteTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
@@ -129,6 +169,10 @@ type DeleteTransferTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTransferTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTransferTaskInvoker) Invoke() (*model.DeleteTransferTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteTransferTaskInvoker) Invoke() (*model.DeleteTransferTaskResponse,
 
 type ListPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPoliciesInvoker) Invoke() (*model.ListPoliciesResponse, error) {
@@ -153,6 +201,10 @@ type ListResourcesByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourcesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourcesByTagsInvoker) Invoke() (*model.ListResourcesByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListResourcesByTagsInvoker) Invoke() (*model.ListResourcesByTagsRespons
 
 type ListStreamsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListStreamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListStreamsInvoker) Invoke() (*model.ListStreamsResponse, error) {
@@ -177,6 +233,10 @@ type ListTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 
 type ListTransferTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTransferTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTransferTasksInvoker) Invoke() (*model.ListTransferTasksResponse, error) {
@@ -201,6 +265,10 @@ type SendRecordsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SendRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SendRecordsInvoker) Invoke() (*model.SendRecordsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *SendRecordsInvoker) Invoke() (*model.SendRecordsResponse, error) {
 
 type ShowCursorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCursorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCursorInvoker) Invoke() (*model.ShowCursorResponse, error) {
@@ -225,6 +297,10 @@ type ShowPartitionMetricsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPartitionMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPartitionMetricsInvoker) Invoke() (*model.ShowPartitionMetricsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowPartitionMetricsInvoker) Invoke() (*model.ShowPartitionMetricsRespo
 
 type ShowStreamInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowStreamInvoker) Invoke() (*model.ShowStreamResponse, error) {
@@ -249,6 +329,10 @@ type ShowStreamMetricsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStreamMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStreamMetricsInvoker) Invoke() (*model.ShowStreamMetricsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowStreamMetricsInvoker) Invoke() (*model.ShowStreamMetricsResponse, e
 
 type ShowStreamTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowStreamTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowStreamTagsInvoker) Invoke() (*model.ShowStreamTagsResponse, error) {
@@ -273,6 +361,10 @@ type ShowTransferTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTransferTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTransferTaskInvoker) Invoke() (*model.ShowTransferTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowTransferTaskInvoker) Invoke() (*model.ShowTransferTaskResponse, err
 
 type UpdatePartitionCountInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePartitionCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePartitionCountInvoker) Invoke() (*model.UpdatePartitionCountResponse, error) {
@@ -297,6 +393,10 @@ type UpdateStreamInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateStreamInvoker) Invoke() (*model.UpdateStreamResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *UpdateStreamInvoker) Invoke() (*model.UpdateStreamResponse, error) {
 
 type CreateAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
@@ -321,6 +425,10 @@ type DeleteAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 
 type ListAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAppInvoker) Invoke() (*model.ListAppResponse, error) {
@@ -345,6 +457,10 @@ type ShowAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
 
 type ShowConsumerStateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowConsumerStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowConsumerStateInvoker) Invoke() (*model.ShowConsumerStateResponse, error) {
@@ -369,6 +489,10 @@ type CommitCheckpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CommitCheckpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CommitCheckpointInvoker) Invoke() (*model.CommitCheckpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -381,6 +505,10 @@ type DeleteCheckpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCheckpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCheckpointInvoker) Invoke() (*model.DeleteCheckpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -391,6 +519,10 @@ func (i *DeleteCheckpointInvoker) Invoke() (*model.DeleteCheckpointResponse, err
 
 type ShowCheckpointInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCheckpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCheckpointInvoker) Invoke() (*model.ShowCheckpointResponse, error) {

@@ -9,6 +9,10 @@ type ExecuteChatCompletionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteChatCompletionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteChatCompletionInvoker) Invoke() (*model.ExecuteChatCompletionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ExecuteChatCompletionInvoker) Invoke() (*model.ExecuteChatCompletionRes
 
 type ExecuteTextCompletionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteTextCompletionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteTextCompletionInvoker) Invoke() (*model.ExecuteTextCompletionResponse, error) {

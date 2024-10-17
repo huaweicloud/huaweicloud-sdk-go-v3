@@ -9,10 +9,10 @@ import (
 // ShowUrlTaskInfoRequest Request Object
 type ShowUrlTaskInfoRequest struct {
 
-	// 起始时间戳（毫秒），默认当天00:00。
+	// 查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
 	StartTime *int64 `json:"start_time,omitempty"`
 
-	// 结束时间戳（毫秒），默认次日00:00。
+	// 查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
 	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 偏移量：特定数据字段与起始数据字段位置的距离，默认为0。

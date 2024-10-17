@@ -9,6 +9,10 @@ type ListDeviceAlarmsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDeviceAlarmsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDeviceAlarmsInvoker) Invoke() (*model.ListDeviceAlarmsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ListDeviceAlarmsInvoker) Invoke() (*model.ListDeviceAlarmsResponse, err
 
 type ListDevicesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDevicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDevicesInvoker) Invoke() (*model.ListDevicesResponse, error) {

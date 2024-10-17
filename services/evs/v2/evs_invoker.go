@@ -9,6 +9,10 @@ type BatchCreateVolumeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateVolumeTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateVolumeTagsInvoker) Invoke() (*model.BatchCreateVolumeTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateVolumeTagsInvoker) Invoke() (*model.BatchCreateVolumeTagsRes
 
 type BatchDeleteVolumeTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteVolumeTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteVolumeTagsInvoker) Invoke() (*model.BatchDeleteVolumeTagsResponse, error) {
@@ -33,6 +41,10 @@ type ChangeVolumeChargeModeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeVolumeChargeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeVolumeChargeModeInvoker) Invoke() (*model.ChangeVolumeChargeModeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ChangeVolumeChargeModeInvoker) Invoke() (*model.ChangeVolumeChargeModeR
 
 type CinderAcceptVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CinderAcceptVolumeTransferInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CinderAcceptVolumeTransferInvoker) Invoke() (*model.CinderAcceptVolumeTransferResponse, error) {
@@ -57,6 +73,10 @@ type CinderCreateVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CinderCreateVolumeTransferInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CinderCreateVolumeTransferInvoker) Invoke() (*model.CinderCreateVolumeTransferResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CinderCreateVolumeTransferInvoker) Invoke() (*model.CinderCreateVolumeT
 
 type CinderDeleteVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CinderDeleteVolumeTransferInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CinderDeleteVolumeTransferInvoker) Invoke() (*model.CinderDeleteVolumeTransferResponse, error) {
@@ -81,6 +105,10 @@ type CinderListAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CinderListAvailabilityZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CinderListAvailabilityZonesInvoker) Invoke() (*model.CinderListAvailabilityZonesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CinderListAvailabilityZonesInvoker) Invoke() (*model.CinderListAvailabi
 
 type CinderListQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CinderListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CinderListQuotasInvoker) Invoke() (*model.CinderListQuotasResponse, error) {
@@ -105,6 +137,10 @@ type CinderListVolumeTransfersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CinderListVolumeTransfersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CinderListVolumeTransfersInvoker) Invoke() (*model.CinderListVolumeTransfersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CinderListVolumeTransfersInvoker) Invoke() (*model.CinderListVolumeTran
 
 type CinderListVolumeTypesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CinderListVolumeTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CinderListVolumeTypesInvoker) Invoke() (*model.CinderListVolumeTypesResponse, error) {
@@ -129,6 +169,10 @@ type CinderShowVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CinderShowVolumeTransferInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CinderShowVolumeTransferInvoker) Invoke() (*model.CinderShowVolumeTransferResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CinderShowVolumeTransferInvoker) Invoke() (*model.CinderShowVolumeTrans
 
 type CreateSnapshotInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSnapshotInvoker) Invoke() (*model.CreateSnapshotResponse, error) {
@@ -153,6 +201,10 @@ type CreateVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVolumeInvoker) Invoke() (*model.CreateVolumeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateVolumeInvoker) Invoke() (*model.CreateVolumeResponse, error) {
 
 type DeleteSnapshotInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSnapshotInvoker) Invoke() (*model.DeleteSnapshotResponse, error) {
@@ -177,6 +233,10 @@ type DeleteVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVolumeInvoker) Invoke() (*model.DeleteVolumeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteVolumeInvoker) Invoke() (*model.DeleteVolumeResponse, error) {
 
 type ListSnapshotsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSnapshotsInvoker) Invoke() (*model.ListSnapshotsResponse, error) {
@@ -201,6 +265,10 @@ type ListVolumeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVolumeTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVolumeTagsInvoker) Invoke() (*model.ListVolumeTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListVolumeTagsInvoker) Invoke() (*model.ListVolumeTagsResponse, error) 
 
 type ListVolumesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVolumesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVolumesInvoker) Invoke() (*model.ListVolumesResponse, error) {
@@ -225,6 +297,10 @@ type ListVolumesByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVolumesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVolumesByTagsInvoker) Invoke() (*model.ListVolumesByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListVolumesByTagsInvoker) Invoke() (*model.ListVolumesByTagsResponse, e
 
 type ModifyVolumeQoSInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ModifyVolumeQoSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ModifyVolumeQoSInvoker) Invoke() (*model.ModifyVolumeQoSResponse, error) {
@@ -249,6 +329,10 @@ type ResizeVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResizeVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResizeVolumeInvoker) Invoke() (*model.ResizeVolumeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ResizeVolumeInvoker) Invoke() (*model.ResizeVolumeResponse, error) {
 
 type RetypeVolumeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RetypeVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RetypeVolumeInvoker) Invoke() (*model.RetypeVolumeResponse, error) {
@@ -273,6 +361,10 @@ type RollbackSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RollbackSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RollbackSnapshotInvoker) Invoke() (*model.RollbackSnapshotResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *RollbackSnapshotInvoker) Invoke() (*model.RollbackSnapshotResponse, err
 
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
@@ -297,6 +393,10 @@ type ShowSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSnapshotInvoker) Invoke() (*model.ShowSnapshotResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowSnapshotInvoker) Invoke() (*model.ShowSnapshotResponse, error) {
 
 type ShowVolumeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVolumeInvoker) Invoke() (*model.ShowVolumeResponse, error) {
@@ -321,6 +425,10 @@ type ShowVolumeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVolumeTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVolumeTagsInvoker) Invoke() (*model.ShowVolumeTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowVolumeTagsInvoker) Invoke() (*model.ShowVolumeTagsResponse, error) 
 
 type UnsubscribePostpaidVolumeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribePostpaidVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UnsubscribePostpaidVolumeInvoker) Invoke() (*model.UnsubscribePostpaidVolumeResponse, error) {
@@ -345,6 +457,10 @@ type UpdateSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateSnapshotInvoker) Invoke() (*model.UpdateSnapshotResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *UpdateSnapshotInvoker) Invoke() (*model.UpdateSnapshotResponse, error) 
 
 type UpdateVolumeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVolumeInvoker) Invoke() (*model.UpdateVolumeResponse, error) {
@@ -369,6 +489,10 @@ type ListVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVersionsInvoker) Invoke() (*model.ListVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListVersionsInvoker) Invoke() (*model.ListVersionsResponse, error) {
 
 type ShowVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {

@@ -9,6 +9,10 @@ type CheckPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckPermissionInvoker) Invoke() (*model.CheckPermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CheckPermissionInvoker) Invoke() (*model.CheckPermissionResponse, error
 
 type CommitSyntaxConversionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CommitSyntaxConversionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CommitSyntaxConversionInvoker) Invoke() (*model.CommitSyntaxConversionResponse, error) {
@@ -33,6 +41,10 @@ type CommitVerificationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CommitVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CommitVerificationInvoker) Invoke() (*model.CommitVerificationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CommitVerificationInvoker) Invoke() (*model.CommitVerificationResponse,
 
 type ConfirmTargetDbTypeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ConfirmTargetDbTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ConfirmTargetDbTypeInvoker) Invoke() (*model.ConfirmTargetDbTypeResponse, error) {
@@ -57,6 +73,10 @@ type CreateEvaluationProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEvaluationProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEvaluationProjectInvoker) Invoke() (*model.CreateEvaluationProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateEvaluationProjectInvoker) Invoke() (*model.CreateEvaluationProjec
 
 type CreateMigrationProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMigrationProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMigrationProjectInvoker) Invoke() (*model.CreateMigrationProjectResponse, error) {
@@ -81,6 +105,10 @@ type DeleteEvaluationProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEvaluationProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEvaluationProjectInvoker) Invoke() (*model.DeleteEvaluationProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteEvaluationProjectInvoker) Invoke() (*model.DeleteEvaluationProjec
 
 type DeleteMigrationProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMigrationProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMigrationProjectInvoker) Invoke() (*model.DeleteMigrationProjectResponse, error) {
@@ -105,6 +137,10 @@ type DownloadFailureReportInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DownloadFailureReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DownloadFailureReportInvoker) Invoke() (*model.DownloadFailureReportResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DownloadFailureReportInvoker) Invoke() (*model.DownloadFailureReportRes
 
 type ListEvaluationProjectsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEvaluationProjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEvaluationProjectsInvoker) Invoke() (*model.ListEvaluationProjectsResponse, error) {
@@ -129,6 +169,10 @@ type ListMigrationProjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMigrationProjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMigrationProjectsInvoker) Invoke() (*model.ListMigrationProjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListMigrationProjectsInvoker) Invoke() (*model.ListMigrationProjectsRes
 
 type ListPermissionCheckResultInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPermissionCheckResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPermissionCheckResultInvoker) Invoke() (*model.ListPermissionCheckResultResponse, error) {
@@ -153,6 +201,10 @@ type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 
 type ListSyntaxConversionProgressInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSyntaxConversionProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSyntaxConversionProgressInvoker) Invoke() (*model.ListSyntaxConversionProgressResponse, error) {
@@ -177,6 +233,10 @@ type ListVerificationProgressInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVerificationProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVerificationProgressInvoker) Invoke() (*model.ListVerificationProgressResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListVerificationProgressInvoker) Invoke() (*model.ListVerificationProgr
 
 type ShowEvaluationProjectDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEvaluationProjectDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEvaluationProjectDetailInvoker) Invoke() (*model.ShowEvaluationProjectDetailResponse, error) {
@@ -201,6 +265,10 @@ type ShowEvaluationProjectStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEvaluationProjectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEvaluationProjectStatusInvoker) Invoke() (*model.ShowEvaluationProjectStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowEvaluationProjectStatusInvoker) Invoke() (*model.ShowEvaluationProj
 
 type ShowMigrationProjectDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMigrationProjectDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMigrationProjectDetailInvoker) Invoke() (*model.ShowMigrationProjectDetailResponse, error) {
@@ -225,6 +297,10 @@ type ShowMigrationProjectStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMigrationProjectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMigrationProjectStatusInvoker) Invoke() (*model.ShowMigrationProjectStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowMigrationProjectStatusInvoker) Invoke() (*model.ShowMigrationProjec
 
 type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
@@ -249,6 +329,10 @@ type ShowApiVersionInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowApiVersionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowApiVersionInfoInvoker) Invoke() (*model.ShowApiVersionInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowApiVersionInfoInvoker) Invoke() (*model.ShowApiVersionInfoResponse,
 
 type RunSqlConversionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunSqlConversionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunSqlConversionInvoker) Invoke() (*model.RunSqlConversionResponse, error) {

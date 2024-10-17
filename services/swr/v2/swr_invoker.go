@@ -9,6 +9,10 @@ type CreateImageSyncRepoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateImageSyncRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateImageSyncRepoInvoker) Invoke() (*model.CreateImageSyncRepoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateImageSyncRepoInvoker) Invoke() (*model.CreateImageSyncRepoRespons
 
 type CreateManualImageSyncRepoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateManualImageSyncRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateManualImageSyncRepoInvoker) Invoke() (*model.CreateManualImageSyncRepoResponse, error) {
@@ -33,6 +41,10 @@ type CreateNamespaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateNamespaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateNamespaceInvoker) Invoke() (*model.CreateNamespaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateNamespaceInvoker) Invoke() (*model.CreateNamespaceResponse, error
 
 type CreateNamespaceAuthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateNamespaceAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateNamespaceAuthInvoker) Invoke() (*model.CreateNamespaceAuthResponse, error) {
@@ -57,6 +73,10 @@ type CreateRepoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRepoInvoker) Invoke() (*model.CreateRepoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateRepoInvoker) Invoke() (*model.CreateRepoResponse, error) {
 
 type CreateRepoDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRepoDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRepoDomainsInvoker) Invoke() (*model.CreateRepoDomainsResponse, error) {
@@ -81,6 +105,10 @@ type CreateRetentionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRetentionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRetentionInvoker) Invoke() (*model.CreateRetentionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateRetentionInvoker) Invoke() (*model.CreateRetentionResponse, error
 
 type CreateSecretInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSecretInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSecretInvoker) Invoke() (*model.CreateSecretResponse, error) {
@@ -105,6 +137,10 @@ type CreateTriggerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTriggerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTriggerInvoker) Invoke() (*model.CreateTriggerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateTriggerInvoker) Invoke() (*model.CreateTriggerResponse, error) {
 
 type CreateUserRepositoryAuthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateUserRepositoryAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateUserRepositoryAuthInvoker) Invoke() (*model.CreateUserRepositoryAuthResponse, error) {
@@ -129,6 +169,10 @@ type DeleteImageSyncRepoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteImageSyncRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteImageSyncRepoInvoker) Invoke() (*model.DeleteImageSyncRepoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteImageSyncRepoInvoker) Invoke() (*model.DeleteImageSyncRepoRespons
 
 type DeleteNamespaceAuthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteNamespaceAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteNamespaceAuthInvoker) Invoke() (*model.DeleteNamespaceAuthResponse, error) {
@@ -153,6 +201,10 @@ type DeleteNamespacesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteNamespacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteNamespacesInvoker) Invoke() (*model.DeleteNamespacesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteNamespacesInvoker) Invoke() (*model.DeleteNamespacesResponse, err
 
 type DeleteRepoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRepoInvoker) Invoke() (*model.DeleteRepoResponse, error) {
@@ -177,6 +233,10 @@ type DeleteRepoDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRepoDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRepoDomainsInvoker) Invoke() (*model.DeleteRepoDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteRepoDomainsInvoker) Invoke() (*model.DeleteRepoDomainsResponse, e
 
 type DeleteRepoTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRepoTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRepoTagInvoker) Invoke() (*model.DeleteRepoTagResponse, error) {
@@ -201,6 +265,10 @@ type DeleteRetentionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRetentionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRetentionInvoker) Invoke() (*model.DeleteRetentionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteRetentionInvoker) Invoke() (*model.DeleteRetentionResponse, error
 
 type DeleteTriggerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTriggerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTriggerInvoker) Invoke() (*model.DeleteTriggerResponse, error) {
@@ -225,6 +297,10 @@ type DeleteUserRepositoryAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteUserRepositoryAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteUserRepositoryAuthInvoker) Invoke() (*model.DeleteUserRepositoryAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteUserRepositoryAuthInvoker) Invoke() (*model.DeleteUserRepositoryA
 
 type ListImageAutoSyncReposDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListImageAutoSyncReposDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListImageAutoSyncReposDetailsInvoker) Invoke() (*model.ListImageAutoSyncReposDetailsResponse, error) {
@@ -249,6 +329,10 @@ type ListNamespacesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListNamespacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListNamespacesInvoker) Invoke() (*model.ListNamespacesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListNamespacesInvoker) Invoke() (*model.ListNamespacesResponse, error) 
 
 type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
@@ -273,6 +361,10 @@ type ListRepoDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRepoDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRepoDomainsInvoker) Invoke() (*model.ListRepoDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListRepoDomainsInvoker) Invoke() (*model.ListRepoDomainsResponse, error
 
 type ListReposDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListReposDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListReposDetailsInvoker) Invoke() (*model.ListReposDetailsResponse, error) {
@@ -297,6 +393,10 @@ type ListRepositoryTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRepositoryTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRepositoryTagsInvoker) Invoke() (*model.ListRepositoryTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListRepositoryTagsInvoker) Invoke() (*model.ListRepositoryTagsResponse,
 
 type ListRetentionHistoriesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRetentionHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRetentionHistoriesInvoker) Invoke() (*model.ListRetentionHistoriesResponse, error) {
@@ -321,6 +425,10 @@ type ListRetentionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRetentionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRetentionsInvoker) Invoke() (*model.ListRetentionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListRetentionsInvoker) Invoke() (*model.ListRetentionsResponse, error) 
 
 type ListSharedReposDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSharedReposDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSharedReposDetailsInvoker) Invoke() (*model.ListSharedReposDetailsResponse, error) {
@@ -345,6 +457,10 @@ type ListTriggersDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTriggersDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTriggersDetailsInvoker) Invoke() (*model.ListTriggersDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListTriggersDetailsInvoker) Invoke() (*model.ListTriggersDetailsRespons
 
 type ShowAccessDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAccessDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAccessDomainInvoker) Invoke() (*model.ShowAccessDomainResponse, error) {
@@ -369,6 +489,10 @@ type ShowNamespaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowNamespaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowNamespaceInvoker) Invoke() (*model.ShowNamespaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowNamespaceInvoker) Invoke() (*model.ShowNamespaceResponse, error) {
 
 type ShowNamespaceAuthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowNamespaceAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowNamespaceAuthInvoker) Invoke() (*model.ShowNamespaceAuthResponse, error) {
@@ -393,6 +521,10 @@ type ShowRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRepositoryInvoker) Invoke() (*model.ShowRepositoryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowRepositoryInvoker) Invoke() (*model.ShowRepositoryResponse, error) 
 
 type ShowRetentionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRetentionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRetentionInvoker) Invoke() (*model.ShowRetentionResponse, error) {
@@ -417,6 +553,10 @@ type ShowSyncJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSyncJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSyncJobInvoker) Invoke() (*model.ShowSyncJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowSyncJobInvoker) Invoke() (*model.ShowSyncJobResponse, error) {
 
 type ShowTriggerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTriggerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTriggerInvoker) Invoke() (*model.ShowTriggerResponse, error) {
@@ -441,6 +585,10 @@ type ShowUserRepositoryAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserRepositoryAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserRepositoryAuthInvoker) Invoke() (*model.ShowUserRepositoryAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowUserRepositoryAuthInvoker) Invoke() (*model.ShowUserRepositoryAuthR
 
 type UpdateNamespaceAuthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateNamespaceAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateNamespaceAuthInvoker) Invoke() (*model.UpdateNamespaceAuthResponse, error) {
@@ -465,6 +617,10 @@ type UpdateRepoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRepoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRepoInvoker) Invoke() (*model.UpdateRepoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *UpdateRepoInvoker) Invoke() (*model.UpdateRepoResponse, error) {
 
 type UpdateRepoDomainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateRepoDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateRepoDomainsInvoker) Invoke() (*model.UpdateRepoDomainsResponse, error) {
@@ -489,6 +649,10 @@ type UpdateRetentionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRetentionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRetentionInvoker) Invoke() (*model.UpdateRetentionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *UpdateRetentionInvoker) Invoke() (*model.UpdateRetentionResponse, error
 
 type UpdateTriggerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTriggerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTriggerInvoker) Invoke() (*model.UpdateTriggerResponse, error) {
@@ -513,6 +681,10 @@ type UpdateUserRepositoryAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateUserRepositoryAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateUserRepositoryAuthInvoker) Invoke() (*model.UpdateUserRepositoryAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -525,6 +697,10 @@ type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -535,6 +711,10 @@ func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error
 
 type ShowApiVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowApiVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) {

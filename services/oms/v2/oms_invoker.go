@@ -9,6 +9,10 @@ type BatchUpdateTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateTasksInvoker) Invoke() (*model.BatchUpdateTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchUpdateTasksInvoker) Invoke() (*model.BatchUpdateTasksResponse, err
 
 type CheckPrefixInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckPrefixInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckPrefixInvoker) Invoke() (*model.CheckPrefixResponse, error) {
@@ -33,6 +41,10 @@ type CreateSyncEventsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSyncEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSyncEventsInvoker) Invoke() (*model.CreateSyncEventsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateSyncEventsInvoker) Invoke() (*model.CreateSyncEventsResponse, err
 
 type CreateSyncTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSyncTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSyncTaskInvoker) Invoke() (*model.CreateSyncTaskResponse, error) {
@@ -57,6 +73,10 @@ type CreateTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTaskInvoker) Invoke() (*model.CreateTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateTaskInvoker) Invoke() (*model.CreateTaskResponse, error) {
 
 type CreateTaskGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTaskGroupInvoker) Invoke() (*model.CreateTaskGroupResponse, error) {
@@ -81,6 +105,10 @@ type DeleteSyncTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSyncTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSyncTaskInvoker) Invoke() (*model.DeleteSyncTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteSyncTaskInvoker) Invoke() (*model.DeleteSyncTaskResponse, error) 
 
 type DeleteTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTaskInvoker) Invoke() (*model.DeleteTaskResponse, error) {
@@ -105,6 +137,10 @@ type DeleteTaskGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTaskGroupInvoker) Invoke() (*model.DeleteTaskGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteTaskGroupInvoker) Invoke() (*model.DeleteTaskGroupResponse, error
 
 type ListSyncTaskStatisticInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSyncTaskStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSyncTaskStatisticInvoker) Invoke() (*model.ListSyncTaskStatisticResponse, error) {
@@ -129,6 +169,10 @@ type ListSyncTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSyncTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSyncTasksInvoker) Invoke() (*model.ListSyncTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListSyncTasksInvoker) Invoke() (*model.ListSyncTasksResponse, error) {
 
 type ListTaskGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTaskGroupInvoker) Invoke() (*model.ListTaskGroupResponse, error) {
@@ -153,6 +201,10 @@ type ListTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
 
 type RetryTaskGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RetryTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RetryTaskGroupInvoker) Invoke() (*model.RetryTaskGroupResponse, error) {
@@ -177,6 +233,10 @@ type ShowBucketListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBucketListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBucketListInvoker) Invoke() (*model.ShowBucketListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowBucketListInvoker) Invoke() (*model.ShowBucketListResponse, error) 
 
 type ShowBucketObjectsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBucketObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBucketObjectsInvoker) Invoke() (*model.ShowBucketObjectsResponse, error) {
@@ -201,6 +265,10 @@ type ShowBucketRegionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBucketRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBucketRegionInvoker) Invoke() (*model.ShowBucketRegionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowBucketRegionInvoker) Invoke() (*model.ShowBucketRegionResponse, err
 
 type ShowCdnInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCdnInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCdnInfoInvoker) Invoke() (*model.ShowCdnInfoResponse, error) {
@@ -225,6 +297,10 @@ type ShowCloudTypeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCloudTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCloudTypeInvoker) Invoke() (*model.ShowCloudTypeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowCloudTypeInvoker) Invoke() (*model.ShowCloudTypeResponse, error) {
 
 type ShowRegionInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRegionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRegionInfoInvoker) Invoke() (*model.ShowRegionInfoResponse, error) {
@@ -249,6 +329,10 @@ type ShowSyncTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSyncTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSyncTaskInvoker) Invoke() (*model.ShowSyncTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowSyncTaskInvoker) Invoke() (*model.ShowSyncTaskResponse, error) {
 
 type ShowTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTaskInvoker) Invoke() (*model.ShowTaskResponse, error) {
@@ -273,6 +361,10 @@ type ShowTaskGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTaskGroupInvoker) Invoke() (*model.ShowTaskGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowTaskGroupInvoker) Invoke() (*model.ShowTaskGroupResponse, error) {
 
 type StartSyncTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartSyncTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartSyncTaskInvoker) Invoke() (*model.StartSyncTaskResponse, error) {
@@ -297,6 +393,10 @@ type StartTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartTaskInvoker) Invoke() (*model.StartTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *StartTaskInvoker) Invoke() (*model.StartTaskResponse, error) {
 
 type StartTaskGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartTaskGroupInvoker) Invoke() (*model.StartTaskGroupResponse, error) {
@@ -321,6 +425,10 @@ type StopSyncTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopSyncTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopSyncTaskInvoker) Invoke() (*model.StopSyncTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *StopSyncTaskInvoker) Invoke() (*model.StopSyncTaskResponse, error) {
 
 type StopTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopTaskInvoker) Invoke() (*model.StopTaskResponse, error) {
@@ -345,6 +457,10 @@ type StopTaskGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopTaskGroupInvoker) Invoke() (*model.StopTaskGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *StopTaskGroupInvoker) Invoke() (*model.StopTaskGroupResponse, error) {
 
 type UpdateBandwidthPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateBandwidthPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateBandwidthPolicyInvoker) Invoke() (*model.UpdateBandwidthPolicyResponse, error) {
@@ -369,6 +489,10 @@ type UpdateTaskGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTaskGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTaskGroupInvoker) Invoke() (*model.UpdateTaskGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -381,6 +505,10 @@ type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -391,6 +519,10 @@ func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error
 
 type ShowApiInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowApiInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowApiInfoInvoker) Invoke() (*model.ShowApiInfoResponse, error) {

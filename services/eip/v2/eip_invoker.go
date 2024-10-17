@@ -9,6 +9,10 @@ type AddPublicipsIntoSharedBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddPublicipsIntoSharedBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddPublicipsIntoSharedBandwidthInvoker) Invoke() (*model.AddPublicipsIntoSharedBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddPublicipsIntoSharedBandwidthInvoker) Invoke() (*model.AddPublicipsIn
 
 type BatchCreateSharedBandwidthsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSharedBandwidthsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateSharedBandwidthsInvoker) Invoke() (*model.BatchCreateSharedBandwidthsResponse, error) {
@@ -33,6 +41,10 @@ type BatchModifyBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchModifyBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchModifyBandwidthInvoker) Invoke() (*model.BatchModifyBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchModifyBandwidthInvoker) Invoke() (*model.BatchModifyBandwidthRespo
 
 type ChangeBandwidthToPeriodInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeBandwidthToPeriodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeBandwidthToPeriodInvoker) Invoke() (*model.ChangeBandwidthToPeriodResponse, error) {
@@ -57,6 +73,10 @@ type CreateSharedBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSharedBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSharedBandwidthInvoker) Invoke() (*model.CreateSharedBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateSharedBandwidthInvoker) Invoke() (*model.CreateSharedBandwidthRes
 
 type DeleteSharedBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSharedBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSharedBandwidthInvoker) Invoke() (*model.DeleteSharedBandwidthResponse, error) {
@@ -81,6 +105,10 @@ type ListBandwidthPkgInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBandwidthPkgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBandwidthPkgInvoker) Invoke() (*model.ListBandwidthPkgResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListBandwidthPkgInvoker) Invoke() (*model.ListBandwidthPkgResponse, err
 
 type ListBandwidthsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBandwidthsInvoker) Invoke() (*model.ListBandwidthsResponse, error) {
@@ -105,6 +137,10 @@ type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 
 type RemovePublicipsFromSharedBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemovePublicipsFromSharedBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemovePublicipsFromSharedBandwidthInvoker) Invoke() (*model.RemovePublicipsFromSharedBandwidthResponse, error) {
@@ -129,6 +169,10 @@ type ShowBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBandwidthInvoker) Invoke() (*model.ShowBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowBandwidthInvoker) Invoke() (*model.ShowBandwidthResponse, error) {
 
 type UpdateBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateBandwidthInvoker) Invoke() (*model.UpdateBandwidthResponse, error) {
@@ -153,6 +201,10 @@ type UpdatePrePaidBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePrePaidBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePrePaidBandwidthInvoker) Invoke() (*model.UpdatePrePaidBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *UpdatePrePaidBandwidthInvoker) Invoke() (*model.UpdatePrePaidBandwidthR
 
 type BatchCreatePublicipTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreatePublicipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreatePublicipTagsInvoker) Invoke() (*model.BatchCreatePublicipTagsResponse, error) {
@@ -177,6 +233,10 @@ type BatchCreatePublicipsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreatePublicipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreatePublicipsInvoker) Invoke() (*model.BatchCreatePublicipsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *BatchCreatePublicipsInvoker) Invoke() (*model.BatchCreatePublicipsRespo
 
 type BatchDeletePublicIpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeletePublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeletePublicIpInvoker) Invoke() (*model.BatchDeletePublicIpResponse, error) {
@@ -201,6 +265,10 @@ type BatchDeletePublicipTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeletePublicipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeletePublicipTagsInvoker) Invoke() (*model.BatchDeletePublicipTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *BatchDeletePublicipTagsInvoker) Invoke() (*model.BatchDeletePublicipTag
 
 type BatchDisassociatePublicipsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociatePublicipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDisassociatePublicipsInvoker) Invoke() (*model.BatchDisassociatePublicipsResponse, error) {
@@ -225,6 +297,10 @@ type ChangePublicipToPeriodInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangePublicipToPeriodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangePublicipToPeriodInvoker) Invoke() (*model.ChangePublicipToPeriodResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ChangePublicipToPeriodInvoker) Invoke() (*model.ChangePublicipToPeriodR
 
 type CountPublicIpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountPublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountPublicIpInvoker) Invoke() (*model.CountPublicIpResponse, error) {
@@ -249,6 +329,10 @@ type CountPublicIpInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountPublicIpInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountPublicIpInstanceInvoker) Invoke() (*model.CountPublicIpInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CountPublicIpInstanceInvoker) Invoke() (*model.CountPublicIpInstanceRes
 
 type CreatePrePaidPublicipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePrePaidPublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePrePaidPublicipInvoker) Invoke() (*model.CreatePrePaidPublicipResponse, error) {
@@ -273,6 +361,10 @@ type CreatePublicipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePublicipInvoker) Invoke() (*model.CreatePublicipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *CreatePublicipInvoker) Invoke() (*model.CreatePublicipResponse, error) 
 
 type CreatePublicipTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePublicipTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePublicipTagInvoker) Invoke() (*model.CreatePublicipTagResponse, error) {
@@ -297,6 +393,10 @@ type DeletePublicipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePublicipInvoker) Invoke() (*model.DeletePublicipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DeletePublicipInvoker) Invoke() (*model.DeletePublicipResponse, error) 
 
 type DeletePublicipTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePublicipTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePublicipTagInvoker) Invoke() (*model.DeletePublicipTagResponse, error) {
@@ -321,6 +425,10 @@ type ListPublicipTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPublicipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPublicipTagsInvoker) Invoke() (*model.ListPublicipTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListPublicipTagsInvoker) Invoke() (*model.ListPublicipTagsResponse, err
 
 type ListPublicipsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPublicipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPublicipsInvoker) Invoke() (*model.ListPublicipsResponse, error) {
@@ -345,6 +457,10 @@ type ListPublicipsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPublicipsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPublicipsByTagsInvoker) Invoke() (*model.ListPublicipsByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListPublicipsByTagsInvoker) Invoke() (*model.ListPublicipsByTagsRespons
 
 type ShowPublicIpTypeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicIpTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPublicIpTypeInvoker) Invoke() (*model.ShowPublicIpTypeResponse, error) {
@@ -369,6 +489,10 @@ type ShowPublicipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPublicipInvoker) Invoke() (*model.ShowPublicipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowPublicipInvoker) Invoke() (*model.ShowPublicipResponse, error) {
 
 type ShowPublicipTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPublicipTagsInvoker) Invoke() (*model.ShowPublicipTagsResponse, error) {
@@ -393,6 +521,10 @@ type UpdatePublicipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePublicipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePublicipInvoker) Invoke() (*model.UpdatePublicipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *UpdatePublicipInvoker) Invoke() (*model.UpdatePublicipResponse, error) 
 
 type ShowResourcesJobDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourcesJobDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourcesJobDetailInvoker) Invoke() (*model.ShowResourcesJobDetailResponse, error) {
@@ -417,6 +553,10 @@ type NeutronCreateFloatingIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronCreateFloatingIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronCreateFloatingIpInvoker) Invoke() (*model.NeutronCreateFloatingIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *NeutronCreateFloatingIpInvoker) Invoke() (*model.NeutronCreateFloatingI
 
 type NeutronDeleteFloatingIpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteFloatingIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronDeleteFloatingIpInvoker) Invoke() (*model.NeutronDeleteFloatingIpResponse, error) {
@@ -441,6 +585,10 @@ type NeutronListFloatingIpsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronListFloatingIpsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronListFloatingIpsInvoker) Invoke() (*model.NeutronListFloatingIpsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -453,6 +601,10 @@ type NeutronShowFloatingIpInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronShowFloatingIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronShowFloatingIpInvoker) Invoke() (*model.NeutronShowFloatingIpResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -463,6 +615,10 @@ func (i *NeutronShowFloatingIpInvoker) Invoke() (*model.NeutronShowFloatingIpRes
 
 type NeutronUpdateFloatingIpInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateFloatingIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronUpdateFloatingIpInvoker) Invoke() (*model.NeutronUpdateFloatingIpResponse, error) {

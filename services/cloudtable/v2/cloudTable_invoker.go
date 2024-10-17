@@ -9,6 +9,10 @@ type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 
 type DeleteClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
@@ -33,6 +41,10 @@ type EnableComponentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableComponentInvoker) Invoke() (*model.EnableComponentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *EnableComponentInvoker) Invoke() (*model.EnableComponentResponse, error
 
 type ExpandClusterComponentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExpandClusterComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExpandClusterComponentInvoker) Invoke() (*model.ExpandClusterComponentResponse, error) {
@@ -57,6 +73,10 @@ type ListClustersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 
 type RebootCloudTableClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RebootCloudTableClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RebootCloudTableClusterInvoker) Invoke() (*model.RebootCloudTableClusterResponse, error) {
@@ -81,6 +105,10 @@ type ShowClusterDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClusterDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClusterDetailInvoker) Invoke() (*model.ShowClusterDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ShowClusterDetailInvoker) Invoke() (*model.ShowClusterDetailResponse, e
 
 type ShowClusterSettingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClusterSettingInvoker) Invoke() (*model.ShowClusterSettingResponse, error) {
@@ -105,6 +137,10 @@ type UpdateClusterSettingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateClusterSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateClusterSettingInvoker) Invoke() (*model.UpdateClusterSettingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *UpdateClusterSettingInvoker) Invoke() (*model.UpdateClusterSettingRespo
 
 type CreateCloudTableClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCloudTableClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCloudTableClusterInvoker) Invoke() (*model.CreateCloudTableClusterResponse, error) {

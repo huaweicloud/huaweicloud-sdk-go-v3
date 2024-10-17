@@ -9,6 +9,10 @@ type ListAgentStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAgentStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAgentStatusInvoker) Invoke() (*model.ListAgentStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -21,6 +25,10 @@ type BatchCreateAgentInvocationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateAgentInvocationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateAgentInvocationsInvoker) Invoke() (*model.BatchCreateAgentInvocationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -31,6 +39,10 @@ func (i *BatchCreateAgentInvocationsInvoker) Invoke() (*model.BatchCreateAgentIn
 
 type ListAgentInvocationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAgentInvocationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAgentInvocationsInvoker) Invoke() (*model.ListAgentInvocationsResponse, error) {

@@ -34,6 +34,8 @@ var (
 		"https://gaussdb-opengauss.la-north-2.myhuaweicloud.com")
 	AF_SOUTH_1 = region.NewRegion("af-south-1",
 		"https://gaussdb-opengauss.af-south-1.myhuaweicloud.com")
+	CN_NORTH_9 = region.NewRegion("cn-north-9",
+		"https://gaussdb-opengauss.cn-north-9.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -50,6 +52,7 @@ var staticFields = map[string]*region.Region{
 	"la-south-2":     LA_SOUTH_2,
 	"la-north-2":     LA_NORTH_2,
 	"af-south-1":     AF_SOUTH_1,
+	"cn-north-9":     CN_NORTH_9,
 }
 
 var provider = region.DefaultProviderChain("GAUSSDBFOROPENGAUSS")

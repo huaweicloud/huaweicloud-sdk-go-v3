@@ -9,6 +9,10 @@ type AcceptServiceContractInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AcceptServiceContractInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AcceptServiceContractInvoker) Invoke() (*model.AcceptServiceContractResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AcceptServiceContractInvoker) Invoke() (*model.AcceptServiceContractRes
 
 type AsyncInvokeApiStartWorkflowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AsyncInvokeApiStartWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AsyncInvokeApiStartWorkflowInvoker) Invoke() (*model.AsyncInvokeApiStartWorkflowResponse, error) {
@@ -33,6 +41,10 @@ type CheckWorkflowAuthenticationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckWorkflowAuthenticationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckWorkflowAuthenticationInvoker) Invoke() (*model.CheckWorkflowAuthenticationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CheckWorkflowAuthenticationInvoker) Invoke() (*model.CheckWorkflowAuthe
 
 type CreateMyActionTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMyActionTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMyActionTemplateInvoker) Invoke() (*model.CreateMyActionTemplateResponse, error) {
@@ -57,6 +73,10 @@ type CreateWorkflowAuthenticationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateWorkflowAuthenticationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateWorkflowAuthenticationInvoker) Invoke() (*model.CreateWorkflowAuthenticationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateWorkflowAuthenticationInvoker) Invoke() (*model.CreateWorkflowAut
 
 type DeleteMyActionTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMyActionTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMyActionTemplateInvoker) Invoke() (*model.DeleteMyActionTemplateResponse, error) {
@@ -81,6 +105,10 @@ type ListMyActionTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMyActionTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMyActionTemplateInvoker) Invoke() (*model.ListMyActionTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListMyActionTemplateInvoker) Invoke() (*model.ListMyActionTemplateRespo
 
 type ListSystemTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSystemTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSystemTemplatesInvoker) Invoke() (*model.ListSystemTemplatesResponse, error) {
@@ -105,6 +137,10 @@ type ListWorkflowInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListWorkflowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListWorkflowInstanceInvoker) Invoke() (*model.ListWorkflowInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListWorkflowInstanceInvoker) Invoke() (*model.ListWorkflowInstanceRespo
 
 type RestoreWorkflowExecutionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RestoreWorkflowExecutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RestoreWorkflowExecutionInvoker) Invoke() (*model.RestoreWorkflowExecutionResponse, error) {
@@ -129,6 +169,10 @@ type ShowPublicActionListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPublicActionListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPublicActionListInvoker) Invoke() (*model.ShowPublicActionListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowPublicActionListInvoker) Invoke() (*model.ShowPublicActionListRespo
 
 type ShowPublicTemplateInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicTemplateInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPublicTemplateInfoInvoker) Invoke() (*model.ShowPublicTemplateInfoResponse, error) {
@@ -153,6 +201,10 @@ type ShowServiceContractInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowServiceContractInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowServiceContractInvoker) Invoke() (*model.ShowServiceContractResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowServiceContractInvoker) Invoke() (*model.ShowServiceContractRespons
 
 type ShowSystemTemplateDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSystemTemplateDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSystemTemplateDetailInvoker) Invoke() (*model.ShowSystemTemplateDetailResponse, error) {
@@ -177,6 +233,10 @@ type ShowThirdTemplateInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowThirdTemplateInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowThirdTemplateInfoInvoker) Invoke() (*model.ShowThirdTemplateInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowThirdTemplateInfoInvoker) Invoke() (*model.ShowThirdTemplateInfoRes
 
 type ShowWorkflowInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkflowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowWorkflowInstanceInvoker) Invoke() (*model.ShowWorkflowInstanceResponse, error) {
@@ -201,6 +265,10 @@ type UpdateMyActionTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMyActionTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMyActionTemplateInvoker) Invoke() (*model.UpdateMyActionTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *UpdateMyActionTemplateInvoker) Invoke() (*model.UpdateMyActionTemplateR
 
 type UpdateMyActionTemplateToDeprecatedInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateMyActionTemplateToDeprecatedInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateMyActionTemplateToDeprecatedInvoker) Invoke() (*model.UpdateMyActionTemplateToDeprecatedResponse, error) {
@@ -225,6 +297,10 @@ type CreateWorkflowInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateWorkflowInvoker) Invoke() (*model.CreateWorkflowResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *CreateWorkflowInvoker) Invoke() (*model.CreateWorkflowResponse, error) 
 
 type DeleteWorkflowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteWorkflowInvoker) Invoke() (*model.DeleteWorkflowResponse, error) {
@@ -249,6 +329,10 @@ type ListWorkflowsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListWorkflowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -261,6 +345,10 @@ type ShowWorkflowInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowWorkflowInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowWorkflowInfoInvoker) Invoke() (*model.ShowWorkflowInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -271,6 +359,10 @@ func (i *ShowWorkflowInfoInvoker) Invoke() (*model.ShowWorkflowInfoResponse, err
 
 type UpdateWorkflowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateWorkflowInvoker) Invoke() (*model.UpdateWorkflowResponse, error) {

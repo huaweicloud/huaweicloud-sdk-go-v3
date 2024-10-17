@@ -9,6 +9,10 @@ type AddTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddTagInvoker) Invoke() (*model.AddTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddTagInvoker) Invoke() (*model.AddTagResponse, error) {
 
 type BatchAddChildNodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAddChildNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAddChildNodeInvoker) Invoke() (*model.BatchAddChildNodeResponse, error) {
@@ -33,6 +41,10 @@ type BatchCheckinInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCheckinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCheckinInvoker) Invoke() (*model.BatchCheckinResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchCheckinInvoker) Invoke() (*model.BatchCheckinResponse, error) {
 
 type BatchCheckoutInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCheckoutInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCheckoutInvoker) Invoke() (*model.BatchCheckoutResponse, error) {
@@ -57,6 +73,10 @@ type BatchCheckoutAndUpdateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCheckoutAndUpdateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCheckoutAndUpdateInvoker) Invoke() (*model.BatchCheckoutAndUpdateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchCheckoutAndUpdateInvoker) Invoke() (*model.BatchCheckoutAndUpdateR
 
 type BatchCheckoutUndoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCheckoutUndoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCheckoutUndoInvoker) Invoke() (*model.BatchCheckoutUndoResponse, error) {
@@ -81,6 +105,10 @@ type BatchCheckoutUndoByAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCheckoutUndoByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCheckoutUndoByAdminInvoker) Invoke() (*model.BatchCheckoutUndoByAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *BatchCheckoutUndoByAdminInvoker) Invoke() (*model.BatchCheckoutUndoByAd
 
 type BatchCreateUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateUsingPostInvoker) Invoke() (*model.BatchCreateUsingPostResponse, error) {
@@ -105,6 +137,10 @@ type BatchCreateViewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateViewInvoker) Invoke() (*model.BatchCreateViewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *BatchCreateViewInvoker) Invoke() (*model.BatchCreateViewResponse, error
 
 type BatchDeleteBranchInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteBranchInvoker) Invoke() (*model.BatchDeleteBranchResponse, error) {
@@ -129,6 +169,10 @@ type BatchDeleteLogicalBranchInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteLogicalBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteLogicalBranchInvoker) Invoke() (*model.BatchDeleteLogicalBranchResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *BatchDeleteLogicalBranchInvoker) Invoke() (*model.BatchDeleteLogicalBra
 
 type BatchDeleteLogicalUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteLogicalUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteLogicalUsingPostInvoker) Invoke() (*model.BatchDeleteLogicalUsingPostResponse, error) {
@@ -153,6 +201,10 @@ type BatchDeleteUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteUsingPostInvoker) Invoke() (*model.BatchDeleteUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *BatchDeleteUsingPostInvoker) Invoke() (*model.BatchDeleteUsingPostRespo
 
 type BatchExecuteReviseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchExecuteReviseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchExecuteReviseInvoker) Invoke() (*model.BatchExecuteReviseResponse, error) {
@@ -177,6 +233,10 @@ type BatchRemoveChildNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchRemoveChildNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchRemoveChildNodeInvoker) Invoke() (*model.BatchRemoveChildNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *BatchRemoveChildNodeInvoker) Invoke() (*model.BatchRemoveChildNodeRespo
 
 type BatchShowGetUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchShowGetUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchShowGetUsingPostInvoker) Invoke() (*model.BatchShowGetUsingPostResponse, error) {
@@ -201,6 +265,10 @@ type BatchUpdateAndCheckinInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateAndCheckinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateAndCheckinInvoker) Invoke() (*model.BatchUpdateAndCheckinResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *BatchUpdateAndCheckinInvoker) Invoke() (*model.BatchUpdateAndCheckinRes
 
 type BatchUpdateAndReviseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateAndReviseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUpdateAndReviseInvoker) Invoke() (*model.BatchUpdateAndReviseResponse, error) {
@@ -225,6 +297,10 @@ type BatchUpdateByAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateByAdminInvoker) Invoke() (*model.BatchUpdateByAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *BatchUpdateByAdminInvoker) Invoke() (*model.BatchUpdateByAdminResponse,
 
 type BatchUpdateUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchUpdateUsingPostInvoker) Invoke() (*model.BatchUpdateUsingPostResponse, error) {
@@ -249,6 +329,10 @@ type BatchUpdateVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateVersionInvoker) Invoke() (*model.BatchUpdateVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *BatchUpdateVersionInvoker) Invoke() (*model.BatchUpdateVersionResponse,
 
 type CheckinInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckinInvoker) Invoke() (*model.CheckinResponse, error) {
@@ -273,6 +361,10 @@ type CheckoutInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckoutInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckoutInvoker) Invoke() (*model.CheckoutResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *CheckoutInvoker) Invoke() (*model.CheckoutResponse, error) {
 
 type CheckoutAndUpdateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckoutAndUpdateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckoutAndUpdateInvoker) Invoke() (*model.CheckoutAndUpdateResponse, error) {
@@ -297,6 +393,10 @@ type CheckoutUndoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckoutUndoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckoutUndoInvoker) Invoke() (*model.CheckoutUndoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *CheckoutUndoInvoker) Invoke() (*model.CheckoutUndoResponse, error) {
 
 type CheckoutUndoByAdminInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckoutUndoByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckoutUndoByAdminInvoker) Invoke() (*model.CheckoutUndoByAdminResponse, error) {
@@ -321,6 +425,10 @@ type CollectHistoryDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CollectHistoryDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CollectHistoryDataInvoker) Invoke() (*model.CollectHistoryDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *CollectHistoryDataInvoker) Invoke() (*model.CollectHistoryDataResponse,
 
 type CompareBusinessVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CompareBusinessVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CompareBusinessVersionInvoker) Invoke() (*model.CompareBusinessVersionResponse, error) {
@@ -345,6 +457,10 @@ type CompareVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CompareVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CompareVersionInvoker) Invoke() (*model.CompareVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *CompareVersionInvoker) Invoke() (*model.CompareVersionResponse, error) 
 
 type CountUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountUsingPostInvoker) Invoke() (*model.CountUsingPostResponse, error) {
@@ -369,6 +489,10 @@ type CreateMultiViewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMultiViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMultiViewInvoker) Invoke() (*model.CreateMultiViewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *CreateMultiViewInvoker) Invoke() (*model.CreateMultiViewResponse, error
 
 type CreateUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateUsingPostInvoker) Invoke() (*model.CreateUsingPostResponse, error) {
@@ -393,6 +521,10 @@ type CreateViewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateViewInvoker) Invoke() (*model.CreateViewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *CreateViewInvoker) Invoke() (*model.CreateViewResponse, error) {
 
 type DeleteBranchInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteBranchInvoker) Invoke() (*model.DeleteBranchResponse, error) {
@@ -417,6 +553,10 @@ type DeleteByConditionMultiViewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteByConditionMultiViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteByConditionMultiViewInvoker) Invoke() (*model.DeleteByConditionMultiViewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *DeleteByConditionMultiViewInvoker) Invoke() (*model.DeleteByConditionMu
 
 type DeleteByConditionUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteByConditionUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteByConditionUsingPostInvoker) Invoke() (*model.DeleteByConditionUsingPostResponse, error) {
@@ -441,6 +585,10 @@ type DeleteLatestVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteLatestVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteLatestVersionInvoker) Invoke() (*model.DeleteLatestVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *DeleteLatestVersionInvoker) Invoke() (*model.DeleteLatestVersionRespons
 
 type DeleteLogicalBranchInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogicalBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteLogicalBranchInvoker) Invoke() (*model.DeleteLogicalBranchResponse, error) {
@@ -465,6 +617,10 @@ type DeleteLogicalLatestVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteLogicalLatestVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteLogicalLatestVersionInvoker) Invoke() (*model.DeleteLogicalLatestVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *DeleteLogicalLatestVersionInvoker) Invoke() (*model.DeleteLogicalLatest
 
 type DeleteTargetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTargetInvoker) Invoke() (*model.DeleteTargetResponse, error) {
@@ -489,6 +649,10 @@ type DeleteUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteUsingPostInvoker) Invoke() (*model.DeleteUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *DeleteUsingPostInvoker) Invoke() (*model.DeleteUsingPostResponse, error
 
 type DisableDataInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableDataInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableDataInstanceInvoker) Invoke() (*model.DisableDataInstanceResponse, error) {
@@ -513,6 +681,10 @@ type EnableDataInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableDataInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableDataInstanceInvoker) Invoke() (*model.EnableDataInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *EnableDataInstanceInvoker) Invoke() (*model.EnableDataInstanceResponse,
 
 type ExecuteReviseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteReviseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteReviseInvoker) Invoke() (*model.ExecuteReviseResponse, error) {
@@ -537,6 +713,10 @@ type GenerateBusinessCodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *GenerateBusinessCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *GenerateBusinessCodeInvoker) Invoke() (*model.GenerateBusinessCodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *GenerateBusinessCodeInvoker) Invoke() (*model.GenerateBusinessCodeRespo
 
 type ListAllVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllVersionsInvoker) Invoke() (*model.ListAllVersionsResponse, error) {
@@ -561,6 +745,10 @@ type ListBatchQueryRelatedObjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBatchQueryRelatedObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBatchQueryRelatedObjectsInvoker) Invoke() (*model.ListBatchQueryRelatedObjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ListBatchQueryRelatedObjectsInvoker) Invoke() (*model.ListBatchQueryRel
 
 type ListGetAllParentListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGetAllParentListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGetAllParentListInvoker) Invoke() (*model.ListGetAllParentListResponse, error) {
@@ -585,6 +777,10 @@ type ListGetChildListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGetChildListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGetChildListInvoker) Invoke() (*model.ListGetChildListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListGetChildListInvoker) Invoke() (*model.ListGetChildListResponse, err
 
 type ListHistoryDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHistoryDataInvoker) Invoke() (*model.ListHistoryDataResponse, error) {
@@ -609,6 +809,10 @@ type ListQueryRelatedObjectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQueryRelatedObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQueryRelatedObjectsInvoker) Invoke() (*model.ListQueryRelatedObjectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ListQueryRelatedObjectsInvoker) Invoke() (*model.ListQueryRelatedObject
 
 type ListQueryRelationshipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQueryRelationshipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQueryRelationshipInvoker) Invoke() (*model.ListQueryRelationshipResponse, error) {
@@ -633,6 +841,10 @@ type ListQueryTargetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQueryTargetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQueryTargetInvoker) Invoke() (*model.ListQueryTargetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ListQueryTargetInvoker) Invoke() (*model.ListQueryTargetResponse, error
 
 type ListQueryUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQueryUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQueryUsingPostInvoker) Invoke() (*model.ListQueryUsingPostResponse, error) {
@@ -657,6 +873,10 @@ type ListSelectUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSelectUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSelectUsingPostInvoker) Invoke() (*model.ListSelectUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListSelectUsingPostInvoker) Invoke() (*model.ListSelectUsingPostRespons
 
 type ListUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUsingPostInvoker) Invoke() (*model.ListUsingPostResponse, error) {
@@ -681,6 +905,10 @@ type RefreshInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RefreshInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RefreshInvoker) Invoke() (*model.RefreshResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *RefreshInvoker) Invoke() (*model.RefreshResponse, error) {
 
 type RemoveTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemoveTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemoveTagInvoker) Invoke() (*model.RemoveTagResponse, error) {
@@ -705,6 +937,10 @@ type SaveAllUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SaveAllUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SaveAllUsingPostInvoker) Invoke() (*model.SaveAllUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *SaveAllUsingPostInvoker) Invoke() (*model.SaveAllUsingPostResponse, err
 
 type SaveAsUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SaveAsUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SaveAsUsingPostInvoker) Invoke() (*model.SaveAsUsingPostResponse, error) {
@@ -729,6 +969,10 @@ type SaveUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SaveUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SaveUsingPostInvoker) Invoke() (*model.SaveUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *SaveUsingPostInvoker) Invoke() (*model.SaveUsingPostResponse, error) {
 
 type ShowFindUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowFindUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowFindUsingPostInvoker) Invoke() (*model.ShowFindUsingPostResponse, error) {
@@ -753,6 +1001,10 @@ type ShowGetByUniqueKeyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowGetByUniqueKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowGetByUniqueKeyInvoker) Invoke() (*model.ShowGetByUniqueKeyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ShowGetByUniqueKeyInvoker) Invoke() (*model.ShowGetByUniqueKeyResponse,
 
 type ShowGetParentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowGetParentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowGetParentInvoker) Invoke() (*model.ShowGetParentResponse, error) {
@@ -777,6 +1033,10 @@ type ShowGetRootInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowGetRootInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowGetRootInvoker) Invoke() (*model.ShowGetRootResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ShowGetRootInvoker) Invoke() (*model.ShowGetRootResponse, error) {
 
 type ShowGetUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowGetUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowGetUsingPostInvoker) Invoke() (*model.ShowGetUsingPostResponse, error) {
@@ -801,6 +1065,10 @@ type ShowLogicalDeleteByConditionUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowLogicalDeleteByConditionUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowLogicalDeleteByConditionUsingPostInvoker) Invoke() (*model.ShowLogicalDeleteByConditionUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *ShowLogicalDeleteByConditionUsingPostInvoker) Invoke() (*model.ShowLogi
 
 type ShowLogicalDeleteUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowLogicalDeleteUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowLogicalDeleteUsingPostInvoker) Invoke() (*model.ShowLogicalDeleteUsingPostResponse, error) {
@@ -825,6 +1097,10 @@ type ShowStaticsUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStaticsUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStaticsUsingPostInvoker) Invoke() (*model.ShowStaticsUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *ShowStaticsUsingPostInvoker) Invoke() (*model.ShowStaticsUsingPostRespo
 
 type ShowTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTagInvoker) Invoke() (*model.ShowTagResponse, error) {
@@ -849,6 +1129,10 @@ type ShowVersionByMasterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVersionByMasterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVersionByMasterInvoker) Invoke() (*model.ShowVersionByMasterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *ShowVersionByMasterInvoker) Invoke() (*model.ShowVersionByMasterRespons
 
 type SwitchLifecycleTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SwitchLifecycleTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SwitchLifecycleTemplateInvoker) Invoke() (*model.SwitchLifecycleTemplateResponse, error) {
@@ -873,6 +1161,10 @@ type UpdateAndCheckinInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAndCheckinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAndCheckinInvoker) Invoke() (*model.UpdateAndCheckinResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *UpdateAndCheckinInvoker) Invoke() (*model.UpdateAndCheckinResponse, err
 
 type UpdateAndReviseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAndReviseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAndReviseInvoker) Invoke() (*model.UpdateAndReviseResponse, error) {
@@ -897,6 +1193,10 @@ type UpdateByAdminInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateByAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateByAdminInvoker) Invoke() (*model.UpdateByAdminResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *UpdateByAdminInvoker) Invoke() (*model.UpdateByAdminResponse, error) {
 
 type UpdateByConditionUsingPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateByConditionUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateByConditionUsingPostInvoker) Invoke() (*model.UpdateByConditionUsingPostResponse, error) {
@@ -921,6 +1225,10 @@ type UpdateStateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateStateInvoker) Invoke() (*model.UpdateStateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -933,6 +1241,10 @@ type UpdateUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateUsingPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateUsingPostInvoker) Invoke() (*model.UpdateUsingPostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -943,6 +1255,10 @@ func (i *UpdateUsingPostInvoker) Invoke() (*model.UpdateUsingPostResponse, error
 
 type UpdateViewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateViewInvoker) Invoke() (*model.UpdateViewResponse, error) {

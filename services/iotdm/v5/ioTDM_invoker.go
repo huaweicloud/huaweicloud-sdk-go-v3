@@ -9,6 +9,10 @@ type BindInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BindInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BindInstanceTagsInvoker) Invoke() (*model.BindInstanceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BindInstanceTagsInvoker) Invoke() (*model.BindInstanceTagsResponse, err
 
 type ChangeInstanceChargeModeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeInstanceChargeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeInstanceChargeModeInvoker) Invoke() (*model.ChangeInstanceChargeModeResponse, error) {
@@ -33,6 +41,10 @@ type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) 
 
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) {
@@ -57,6 +73,10 @@ type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 
 type ResizeInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResizeInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) {
@@ -81,6 +105,10 @@ type ShowInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -93,6 +121,10 @@ type UnbindInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UnbindInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UnbindInstanceTagsInvoker) Invoke() (*model.UnbindInstanceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -103,6 +135,10 @@ func (i *UnbindInstanceTagsInvoker) Invoke() (*model.UnbindInstanceTagsResponse,
 
 type UpdateInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) {

@@ -9,6 +9,10 @@ type CreateAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 
 type CreateIndividualStreamJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateIndividualStreamJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateIndividualStreamJobInvoker) Invoke() (*model.CreateIndividualStreamJobResponse, error) {
@@ -33,6 +41,10 @@ type CreateMixJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMixJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMixJobInvoker) Invoke() (*model.CreateMixJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateMixJobInvoker) Invoke() (*model.CreateMixJobResponse, error) {
 
 type CreateRecordRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRecordRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRecordRuleInvoker) Invoke() (*model.CreateRecordRuleResponse, error) {
@@ -57,6 +73,10 @@ type DeleteAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 
 type DeleteRecordRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRecordRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRecordRuleInvoker) Invoke() (*model.DeleteRecordRuleResponse, error) {
@@ -81,6 +105,10 @@ type ListAppsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAppsInvoker) Invoke() (*model.ListAppsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListAppsInvoker) Invoke() (*model.ListAppsResponse, error) {
 
 type ListRecordRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRecordRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRecordRulesInvoker) Invoke() (*model.ListRecordRulesResponse, error) {
@@ -105,6 +137,10 @@ type RemoveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveRoomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveRoomInvoker) Invoke() (*model.RemoveRoomResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *RemoveRoomInvoker) Invoke() (*model.RemoveRoomResponse, error) {
 
 type RemoveUsersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemoveUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemoveUsersInvoker) Invoke() (*model.RemoveUsersResponse, error) {
@@ -129,6 +169,10 @@ type ShowAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
 
 type ShowAutoRecordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutoRecordInvoker) Invoke() (*model.ShowAutoRecordResponse, error) {
@@ -153,6 +201,10 @@ type ShowIndividualStreamJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowIndividualStreamJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowIndividualStreamJobInvoker) Invoke() (*model.ShowIndividualStreamJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowIndividualStreamJobInvoker) Invoke() (*model.ShowIndividualStreamJo
 
 type ShowMixJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMixJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMixJobInvoker) Invoke() (*model.ShowMixJobResponse, error) {
@@ -177,6 +233,10 @@ type ShowRecordCallbackInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRecordCallbackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRecordCallbackInvoker) Invoke() (*model.ShowRecordCallbackResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowRecordCallbackInvoker) Invoke() (*model.ShowRecordCallbackResponse,
 
 type ShowRecordRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRecordRuleInvoker) Invoke() (*model.ShowRecordRuleResponse, error) {
@@ -201,6 +265,10 @@ type ShowUrlAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUrlAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUrlAuthInvoker) Invoke() (*model.ShowUrlAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowUrlAuthInvoker) Invoke() (*model.ShowUrlAuthResponse, error) {
 
 type StartAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartAppInvoker) Invoke() (*model.StartAppResponse, error) {
@@ -225,6 +297,10 @@ type StopAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopAppInvoker) Invoke() (*model.StopAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *StopAppInvoker) Invoke() (*model.StopAppResponse, error) {
 
 type StopIndividualStreamJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopIndividualStreamJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopIndividualStreamJobInvoker) Invoke() (*model.StopIndividualStreamJobResponse, error) {
@@ -249,6 +329,10 @@ type StopMixJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopMixJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopMixJobInvoker) Invoke() (*model.StopMixJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *StopMixJobInvoker) Invoke() (*model.StopMixJobResponse, error) {
 
 type UpdateAutoRecordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAutoRecordInvoker) Invoke() (*model.UpdateAutoRecordResponse, error) {
@@ -273,6 +361,10 @@ type UpdateIndividualStreamJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateIndividualStreamJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateIndividualStreamJobInvoker) Invoke() (*model.UpdateIndividualStreamJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *UpdateIndividualStreamJobInvoker) Invoke() (*model.UpdateIndividualStre
 
 type UpdateMixJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateMixJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateMixJobInvoker) Invoke() (*model.UpdateMixJobResponse, error) {
@@ -297,6 +393,10 @@ type UpdateRecordCallbackInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRecordCallbackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRecordCallbackInvoker) Invoke() (*model.UpdateRecordCallbackResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *UpdateRecordCallbackInvoker) Invoke() (*model.UpdateRecordCallbackRespo
 
 type UpdateRecordRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecordRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateRecordRuleInvoker) Invoke() (*model.UpdateRecordRuleResponse, error) {
@@ -321,6 +425,10 @@ type UpdateUrlAuthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateUrlAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateUrlAuthInvoker) Invoke() (*model.UpdateUrlAuthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UpdateUrlAuthInvoker) Invoke() (*model.UpdateUrlAuthResponse, error) {
 
 type ListObsBucketObjectsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListObsBucketObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListObsBucketObjectsInvoker) Invoke() (*model.ListObsBucketObjectsResponse, error) {
@@ -345,6 +457,10 @@ type ListObsBucketsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListObsBucketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListObsBucketsInvoker) Invoke() (*model.ListObsBucketsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListObsBucketsInvoker) Invoke() (*model.ListObsBucketsResponse, error) 
 
 type UpdateObsBucketAuthorityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateObsBucketAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateObsBucketAuthorityInvoker) Invoke() (*model.UpdateObsBucketAuthorityResponse, error) {

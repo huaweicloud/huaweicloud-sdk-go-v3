@@ -30,7 +30,7 @@ type Policies struct {
 	ComparisonOperator string `json:"comparison_operator"`
 
 	// 告警阈值(Number.MAX_VALUE)
-	Value float32 `json:"value"`
+	Value float32 `json:"value,omitempty"`
 
 	// 数据的单位字符串，长度不超过32
 	Unit *string `json:"unit,omitempty"`

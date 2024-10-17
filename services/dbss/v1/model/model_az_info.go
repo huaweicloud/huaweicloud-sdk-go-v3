@@ -17,10 +17,10 @@ type AzInfo struct {
 	// 可用区类型
 	AzType string `json:"az_type"`
 
-	// 可用区别名
+	// 可用区中文别名
 	Alias string `json:"alias"`
 
-	// 可用区别名英文
+	// 可用区英文别名
 	AliasUs string `json:"alias_us"`
 }
 

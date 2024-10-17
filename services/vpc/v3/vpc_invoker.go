@@ -9,6 +9,10 @@ type AddSecurityGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddSecurityGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddSecurityGroupsInvoker) Invoke() (*model.AddSecurityGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddSecurityGroupsInvoker) Invoke() (*model.AddSecurityGroupsResponse, e
 
 type AddSourcesToTrafficMirrorSessionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddSourcesToTrafficMirrorSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddSourcesToTrafficMirrorSessionInvoker) Invoke() (*model.AddSourcesToTrafficMirrorSessionResponse, error) {
@@ -33,6 +41,10 @@ type BatchCreatePortTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreatePortTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreatePortTagsInvoker) Invoke() (*model.BatchCreatePortTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchCreatePortTagsInvoker) Invoke() (*model.BatchCreatePortTagsRespons
 
 type BatchCreateSecurityGroupRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSecurityGroupRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateSecurityGroupRulesInvoker) Invoke() (*model.BatchCreateSecurityGroupRulesResponse, error) {
@@ -57,6 +73,10 @@ type BatchCreateSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateSubNetworkInterfaceInvoker) Invoke() (*model.BatchCreateSubNetworkInterfaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchCreateSubNetworkInterfaceInvoker) Invoke() (*model.BatchCreateSubN
 
 type BatchDeletePortTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeletePortTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeletePortTagsInvoker) Invoke() (*model.BatchDeletePortTagsResponse, error) {
@@ -81,6 +105,10 @@ type CountPortsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountPortsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountPortsByTagsInvoker) Invoke() (*model.CountPortsByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CountPortsByTagsInvoker) Invoke() (*model.CountPortsByTagsResponse, err
 
 type CreatePortTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePortTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePortTagInvoker) Invoke() (*model.CreatePortTagResponse, error) {
@@ -105,6 +137,10 @@ type CreateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSecurityGroupInvoker) Invoke() (*model.CreateSecurityGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateSecurityGroupInvoker) Invoke() (*model.CreateSecurityGroupRespons
 
 type CreateSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSecurityGroupRuleInvoker) Invoke() (*model.CreateSecurityGroupRuleResponse, error) {
@@ -129,6 +169,10 @@ type CreateSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSubNetworkInterfaceInvoker) Invoke() (*model.CreateSubNetworkInterfaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateSubNetworkInterfaceInvoker) Invoke() (*model.CreateSubNetworkInte
 
 type CreateTrafficMirrorFilterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTrafficMirrorFilterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTrafficMirrorFilterInvoker) Invoke() (*model.CreateTrafficMirrorFilterResponse, error) {
@@ -153,6 +201,10 @@ type CreateTrafficMirrorFilterRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTrafficMirrorFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTrafficMirrorFilterRuleInvoker) Invoke() (*model.CreateTrafficMirrorFilterRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateTrafficMirrorFilterRuleInvoker) Invoke() (*model.CreateTrafficMir
 
 type CreateTrafficMirrorSessionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTrafficMirrorSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTrafficMirrorSessionInvoker) Invoke() (*model.CreateTrafficMirrorSessionResponse, error) {
@@ -177,6 +233,10 @@ type DeletePortTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePortTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePortTagInvoker) Invoke() (*model.DeletePortTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeletePortTagInvoker) Invoke() (*model.DeletePortTagResponse, error) {
 
 type DeleteSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSecurityGroupInvoker) Invoke() (*model.DeleteSecurityGroupResponse, error) {
@@ -201,6 +265,10 @@ type DeleteSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSecurityGroupRuleInvoker) Invoke() (*model.DeleteSecurityGroupRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteSecurityGroupRuleInvoker) Invoke() (*model.DeleteSecurityGroupRul
 
 type DeleteSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSubNetworkInterfaceInvoker) Invoke() (*model.DeleteSubNetworkInterfaceResponse, error) {
@@ -225,6 +297,10 @@ type DeleteTrafficMirrorFilterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTrafficMirrorFilterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTrafficMirrorFilterInvoker) Invoke() (*model.DeleteTrafficMirrorFilterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteTrafficMirrorFilterInvoker) Invoke() (*model.DeleteTrafficMirrorF
 
 type DeleteTrafficMirrorFilterRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTrafficMirrorFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTrafficMirrorFilterRuleInvoker) Invoke() (*model.DeleteTrafficMirrorFilterRuleResponse, error) {
@@ -249,6 +329,10 @@ type DeleteTrafficMirrorSessionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTrafficMirrorSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTrafficMirrorSessionInvoker) Invoke() (*model.DeleteTrafficMirrorSessionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteTrafficMirrorSessionInvoker) Invoke() (*model.DeleteTrafficMirror
 
 type ListPortTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPortTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPortTagsInvoker) Invoke() (*model.ListPortTagsResponse, error) {
@@ -273,6 +361,10 @@ type ListPortsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPortsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPortsByTagsInvoker) Invoke() (*model.ListPortsByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListPortsByTagsInvoker) Invoke() (*model.ListPortsByTagsResponse, error
 
 type ListSecurityGroupRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityGroupRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSecurityGroupRulesInvoker) Invoke() (*model.ListSecurityGroupRulesResponse, error) {
@@ -297,6 +393,10 @@ type ListSecurityGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSecurityGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSecurityGroupsInvoker) Invoke() (*model.ListSecurityGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListSecurityGroupsInvoker) Invoke() (*model.ListSecurityGroupsResponse,
 
 type ListSubNetworkInterfacesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSubNetworkInterfacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSubNetworkInterfacesInvoker) Invoke() (*model.ListSubNetworkInterfacesResponse, error) {
@@ -321,6 +425,10 @@ type ListTrafficMirrorFilterRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTrafficMirrorFilterRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTrafficMirrorFilterRulesInvoker) Invoke() (*model.ListTrafficMirrorFilterRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListTrafficMirrorFilterRulesInvoker) Invoke() (*model.ListTrafficMirror
 
 type ListTrafficMirrorFiltersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTrafficMirrorFiltersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTrafficMirrorFiltersInvoker) Invoke() (*model.ListTrafficMirrorFiltersResponse, error) {
@@ -345,6 +457,10 @@ type ListTrafficMirrorSessionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTrafficMirrorSessionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTrafficMirrorSessionsInvoker) Invoke() (*model.ListTrafficMirrorSessionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListTrafficMirrorSessionsInvoker) Invoke() (*model.ListTrafficMirrorSes
 
 type MigrateSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *MigrateSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *MigrateSubNetworkInterfaceInvoker) Invoke() (*model.MigrateSubNetworkInterfaceResponse, error) {
@@ -369,6 +489,10 @@ type RemoveSecurityGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveSecurityGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveSecurityGroupsInvoker) Invoke() (*model.RemoveSecurityGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *RemoveSecurityGroupsInvoker) Invoke() (*model.RemoveSecurityGroupsRespo
 
 type RemoveSourcesFromTrafficMirrorSessionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemoveSourcesFromTrafficMirrorSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemoveSourcesFromTrafficMirrorSessionInvoker) Invoke() (*model.RemoveSourcesFromTrafficMirrorSessionResponse, error) {
@@ -393,6 +521,10 @@ type ShowPortTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPortTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPortTagsInvoker) Invoke() (*model.ShowPortTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowPortTagsInvoker) Invoke() (*model.ShowPortTagsResponse, error) {
 
 type ShowSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSecurityGroupInvoker) Invoke() (*model.ShowSecurityGroupResponse, error) {
@@ -417,6 +553,10 @@ type ShowSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSecurityGroupRuleInvoker) Invoke() (*model.ShowSecurityGroupRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowSecurityGroupRuleInvoker) Invoke() (*model.ShowSecurityGroupRuleRes
 
 type ShowSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSubNetworkInterfaceInvoker) Invoke() (*model.ShowSubNetworkInterfaceResponse, error) {
@@ -441,6 +585,10 @@ type ShowSubNetworkInterfacesQuantityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSubNetworkInterfacesQuantityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSubNetworkInterfacesQuantityInvoker) Invoke() (*model.ShowSubNetworkInterfacesQuantityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowSubNetworkInterfacesQuantityInvoker) Invoke() (*model.ShowSubNetwor
 
 type ShowTrafficMirrorFilterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTrafficMirrorFilterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTrafficMirrorFilterInvoker) Invoke() (*model.ShowTrafficMirrorFilterResponse, error) {
@@ -465,6 +617,10 @@ type ShowTrafficMirrorFilterRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTrafficMirrorFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTrafficMirrorFilterRuleInvoker) Invoke() (*model.ShowTrafficMirrorFilterRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ShowTrafficMirrorFilterRuleInvoker) Invoke() (*model.ShowTrafficMirrorF
 
 type ShowTrafficMirrorSessionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTrafficMirrorSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTrafficMirrorSessionInvoker) Invoke() (*model.ShowTrafficMirrorSessionResponse, error) {
@@ -489,6 +649,10 @@ type UpdateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateSecurityGroupInvoker) Invoke() (*model.UpdateSecurityGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *UpdateSecurityGroupInvoker) Invoke() (*model.UpdateSecurityGroupRespons
 
 type UpdateSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSubNetworkInterfaceInvoker) Invoke() (*model.UpdateSubNetworkInterfaceResponse, error) {
@@ -513,6 +681,10 @@ type UpdateTrafficMirrorFilterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTrafficMirrorFilterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTrafficMirrorFilterInvoker) Invoke() (*model.UpdateTrafficMirrorFilterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *UpdateTrafficMirrorFilterInvoker) Invoke() (*model.UpdateTrafficMirrorF
 
 type UpdateTrafficMirrorFilterRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTrafficMirrorFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTrafficMirrorFilterRuleInvoker) Invoke() (*model.UpdateTrafficMirrorFilterRuleResponse, error) {
@@ -537,6 +713,10 @@ type UpdateTrafficMirrorSessionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTrafficMirrorSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTrafficMirrorSessionInvoker) Invoke() (*model.UpdateTrafficMirrorSessionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateTrafficMirrorSessionInvoker) Invoke() (*model.UpdateTrafficMirror
 
 type AddFirewallRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddFirewallRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddFirewallRulesInvoker) Invoke() (*model.AddFirewallRulesResponse, error) {
@@ -561,6 +745,10 @@ type AssociateSubnetFirewallInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateSubnetFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateSubnetFirewallInvoker) Invoke() (*model.AssociateSubnetFirewallResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *AssociateSubnetFirewallInvoker) Invoke() (*model.AssociateSubnetFirewal
 
 type BatchCreateFirewallTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateFirewallTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateFirewallTagsInvoker) Invoke() (*model.BatchCreateFirewallTagsResponse, error) {
@@ -585,6 +777,10 @@ type BatchDeleteFirewallTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteFirewallTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteFirewallTagsInvoker) Invoke() (*model.BatchDeleteFirewallTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *BatchDeleteFirewallTagsInvoker) Invoke() (*model.BatchDeleteFirewallTag
 
 type CountFirewallsByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountFirewallsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountFirewallsByTagsInvoker) Invoke() (*model.CountFirewallsByTagsResponse, error) {
@@ -609,6 +809,10 @@ type CreateFirewallInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateFirewallInvoker) Invoke() (*model.CreateFirewallResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *CreateFirewallInvoker) Invoke() (*model.CreateFirewallResponse, error) 
 
 type CreateFirewallTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateFirewallTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateFirewallTagInvoker) Invoke() (*model.CreateFirewallTagResponse, error) {
@@ -633,6 +841,10 @@ type DeleteFirewallInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteFirewallInvoker) Invoke() (*model.DeleteFirewallResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *DeleteFirewallInvoker) Invoke() (*model.DeleteFirewallResponse, error) 
 
 type DeleteFirewallTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteFirewallTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteFirewallTagInvoker) Invoke() (*model.DeleteFirewallTagResponse, error) {
@@ -657,6 +873,10 @@ type DisassociateSubnetFirewallInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateSubnetFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateSubnetFirewallInvoker) Invoke() (*model.DisassociateSubnetFirewallResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *DisassociateSubnetFirewallInvoker) Invoke() (*model.DisassociateSubnetF
 
 type ListFirewallInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFirewallInvoker) Invoke() (*model.ListFirewallResponse, error) {
@@ -681,6 +905,10 @@ type ListFirewallTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListFirewallTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListFirewallTagsInvoker) Invoke() (*model.ListFirewallTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ListFirewallTagsInvoker) Invoke() (*model.ListFirewallTagsResponse, err
 
 type ListFirewallsByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFirewallsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFirewallsByTagsInvoker) Invoke() (*model.ListFirewallsByTagsResponse, error) {
@@ -705,6 +937,10 @@ type RemoveFirewallRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveFirewallRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveFirewallRulesInvoker) Invoke() (*model.RemoveFirewallRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *RemoveFirewallRulesInvoker) Invoke() (*model.RemoveFirewallRulesRespons
 
 type ShowFirewallInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowFirewallInvoker) Invoke() (*model.ShowFirewallResponse, error) {
@@ -729,6 +969,10 @@ type ShowFirewallTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFirewallTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFirewallTagsInvoker) Invoke() (*model.ShowFirewallTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ShowFirewallTagsInvoker) Invoke() (*model.ShowFirewallTagsResponse, err
 
 type UpdateFirewallInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateFirewallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateFirewallInvoker) Invoke() (*model.UpdateFirewallResponse, error) {
@@ -753,6 +1001,10 @@ type UpdateFirewallRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateFirewallRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateFirewallRulesInvoker) Invoke() (*model.UpdateFirewallRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *UpdateFirewallRulesInvoker) Invoke() (*model.UpdateFirewallRulesRespons
 
 type AddClouddcnSubnetsTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddClouddcnSubnetsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddClouddcnSubnetsTagsInvoker) Invoke() (*model.AddClouddcnSubnetsTagsResponse, error) {
@@ -777,6 +1033,10 @@ type BatchCreateClouddcnSubnetsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateClouddcnSubnetsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateClouddcnSubnetsTagsInvoker) Invoke() (*model.BatchCreateClouddcnSubnetsTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *BatchCreateClouddcnSubnetsTagsInvoker) Invoke() (*model.BatchCreateClou
 
 type BatchDeleteClouddcnSubnetsTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteClouddcnSubnetsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteClouddcnSubnetsTagsInvoker) Invoke() (*model.BatchDeleteClouddcnSubnetsTagsResponse, error) {
@@ -801,6 +1065,10 @@ type CreateClouddcnSubnetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateClouddcnSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateClouddcnSubnetInvoker) Invoke() (*model.CreateClouddcnSubnetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *CreateClouddcnSubnetInvoker) Invoke() (*model.CreateClouddcnSubnetRespo
 
 type DeleteClouddcnSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteClouddcnSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteClouddcnSubnetInvoker) Invoke() (*model.DeleteClouddcnSubnetResponse, error) {
@@ -825,6 +1097,10 @@ type DeleteClouddcnSubnetsTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteClouddcnSubnetsTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteClouddcnSubnetsTagInvoker) Invoke() (*model.DeleteClouddcnSubnetsTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *DeleteClouddcnSubnetsTagInvoker) Invoke() (*model.DeleteClouddcnSubnets
 
 type ListClouddcnSubnetsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClouddcnSubnetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClouddcnSubnetsInvoker) Invoke() (*model.ListClouddcnSubnetsResponse, error) {
@@ -849,6 +1129,10 @@ type ListClouddcnSubnetsCountFilterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClouddcnSubnetsCountFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClouddcnSubnetsCountFilterTagsInvoker) Invoke() (*model.ListClouddcnSubnetsCountFilterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *ListClouddcnSubnetsCountFilterTagsInvoker) Invoke() (*model.ListClouddc
 
 type ListClouddcnSubnetsFilterTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClouddcnSubnetsFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClouddcnSubnetsFilterTagsInvoker) Invoke() (*model.ListClouddcnSubnetsFilterTagsResponse, error) {
@@ -873,6 +1161,10 @@ type ListClouddcnSubnetsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClouddcnSubnetsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClouddcnSubnetsTagsInvoker) Invoke() (*model.ListClouddcnSubnetsTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *ListClouddcnSubnetsTagsInvoker) Invoke() (*model.ListClouddcnSubnetsTag
 
 type ShowClouddcnSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClouddcnSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClouddcnSubnetInvoker) Invoke() (*model.ShowClouddcnSubnetResponse, error) {
@@ -897,6 +1193,10 @@ type ShowClouddcnSubnetsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClouddcnSubnetsTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClouddcnSubnetsTagsInvoker) Invoke() (*model.ShowClouddcnSubnetsTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *ShowClouddcnSubnetsTagsInvoker) Invoke() (*model.ShowClouddcnSubnetsTag
 
 type UpdateClouddcnSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateClouddcnSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateClouddcnSubnetInvoker) Invoke() (*model.UpdateClouddcnSubnetResponse, error) {
@@ -921,6 +1225,10 @@ type CreateAddressGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAddressGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAddressGroupInvoker) Invoke() (*model.CreateAddressGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *CreateAddressGroupInvoker) Invoke() (*model.CreateAddressGroupResponse,
 
 type DeleteAddressGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAddressGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAddressGroupInvoker) Invoke() (*model.DeleteAddressGroupResponse, error) {
@@ -945,6 +1257,10 @@ type DeleteIpAddressGroupForceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteIpAddressGroupForceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteIpAddressGroupForceInvoker) Invoke() (*model.DeleteIpAddressGroupForceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -955,6 +1271,10 @@ func (i *DeleteIpAddressGroupForceInvoker) Invoke() (*model.DeleteIpAddressGroup
 
 type ListAddressGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAddressGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAddressGroupInvoker) Invoke() (*model.ListAddressGroupResponse, error) {
@@ -969,6 +1289,10 @@ type ShowAddressGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAddressGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAddressGroupInvoker) Invoke() (*model.ShowAddressGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -979,6 +1303,10 @@ func (i *ShowAddressGroupInvoker) Invoke() (*model.ShowAddressGroupResponse, err
 
 type UpdateAddressGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAddressGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAddressGroupInvoker) Invoke() (*model.UpdateAddressGroupResponse, error) {
@@ -993,6 +1321,10 @@ type AddVpcExtendCidrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddVpcExtendCidrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddVpcExtendCidrInvoker) Invoke() (*model.AddVpcExtendCidrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1003,6 +1335,10 @@ func (i *AddVpcExtendCidrInvoker) Invoke() (*model.AddVpcExtendCidrResponse, err
 
 type CreateVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVpcInvoker) Invoke() (*model.CreateVpcResponse, error) {
@@ -1017,6 +1353,10 @@ type DeleteVpcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVpcInvoker) Invoke() (*model.DeleteVpcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1027,6 +1367,10 @@ func (i *DeleteVpcInvoker) Invoke() (*model.DeleteVpcResponse, error) {
 
 type ListVpcsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpcsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpcsInvoker) Invoke() (*model.ListVpcsResponse, error) {
@@ -1041,6 +1385,10 @@ type RemoveVpcExtendCidrInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveVpcExtendCidrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveVpcExtendCidrInvoker) Invoke() (*model.RemoveVpcExtendCidrResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1053,6 +1401,10 @@ type ShowVpcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpcInvoker) Invoke() (*model.ShowVpcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1063,6 +1415,10 @@ func (i *ShowVpcInvoker) Invoke() (*model.ShowVpcResponse, error) {
 
 type UpdateVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpcInvoker) Invoke() (*model.UpdateVpcResponse, error) {

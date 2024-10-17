@@ -9,6 +9,10 @@ type ApplyCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ApplyCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ApplyCertificateInvoker) Invoke() (*model.ApplyCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ApplyCertificateInvoker) Invoke() (*model.ApplyCertificateResponse, err
 
 type BatchPushCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchPushCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchPushCertificateInvoker) Invoke() (*model.BatchPushCertificateResponse, error) {
@@ -33,6 +41,10 @@ type DeleteCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 
 type DeployCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeployCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeployCertificateInvoker) Invoke() (*model.DeployCertificateResponse, error) {
@@ -57,6 +73,10 @@ type ExportCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportCertificateInvoker) Invoke() (*model.ExportCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ExportCertificateInvoker) Invoke() (*model.ExportCertificateResponse, e
 
 type ImportCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportCertificateInvoker) Invoke() (*model.ImportCertificateResponse, error) {
@@ -81,6 +105,10 @@ type ListCertificatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCertificatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, err
 
 type ListDeployedResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDeployedResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDeployedResourcesInvoker) Invoke() (*model.ListDeployedResourcesResponse, error) {
@@ -105,6 +137,10 @@ type PushCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PushCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PushCertificateInvoker) Invoke() (*model.PushCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *PushCertificateInvoker) Invoke() (*model.PushCertificateResponse, error
 
 type ShowCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error) {
@@ -129,6 +169,10 @@ type SubscribeCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SubscribeCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SubscribeCertificateInvoker) Invoke() (*model.SubscribeCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *SubscribeCertificateInvoker) Invoke() (*model.SubscribeCertificateRespo
 
 type UnsubscribeCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribeCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UnsubscribeCertificateInvoker) Invoke() (*model.UnsubscribeCertificateResponse, error) {

@@ -1145,6 +1145,27 @@ func (c *EcsClient) NovaListServersDetailsInvoker(request *model.NovaListServers
 	return &NovaListServersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// NovaShowFlavorExtraSpecs 查询云服务器规格extra_specs的详情
+//
+// 查询指定的规格的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) NovaShowFlavorExtraSpecs(request *model.NovaShowFlavorExtraSpecsRequest) (*model.NovaShowFlavorExtraSpecsResponse, error) {
+	requestDef := GenReqDefForNovaShowFlavorExtraSpecs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NovaShowFlavorExtraSpecsResponse), nil
+	}
+}
+
+// NovaShowFlavorExtraSpecsInvoker 查询云服务器规格extra_specs的详情
+func (c *EcsClient) NovaShowFlavorExtraSpecsInvoker(request *model.NovaShowFlavorExtraSpecsRequest) *NovaShowFlavorExtraSpecsInvoker {
+	requestDef := GenReqDefForNovaShowFlavorExtraSpecs()
+	return &NovaShowFlavorExtraSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // NovaShowKeypair 查询SSH密钥详情
 //
 // 根据SSH密钥名称查询指定SSH密钥。

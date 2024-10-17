@@ -9,6 +9,10 @@ type DecodeAuthorizationMessageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DecodeAuthorizationMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DecodeAuthorizationMessageInvoker) Invoke() (*model.DecodeAuthorizationMessageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *DecodeAuthorizationMessageInvoker) Invoke() (*model.DecodeAuthorization
 
 type GetCallerIdentityInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *GetCallerIdentityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *GetCallerIdentityInvoker) Invoke() (*model.GetCallerIdentityResponse, error) {

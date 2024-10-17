@@ -30,6 +30,12 @@ type DbObjectSpaceInfo struct {
 	// 索引空间，以字节为单位
 	IndexSize *int64 `json:"index_size,omitempty"`
 
+	// 碎片空间，以字节为单位
+	FreeSize *int64 `json:"free_size,omitempty"`
+
+	// 碎片率
+	FreeRate *float64 `json:"free_rate,omitempty"`
+
 	// 估算值行数，以字节为单位
 	EstimatedRows *int64 `json:"estimated_rows,omitempty"`
 }

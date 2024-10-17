@@ -9,6 +9,10 @@ type CreateAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 
 type CreateComponentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateComponentInvoker) Invoke() (*model.CreateComponentResponse, error) {
@@ -33,6 +41,10 @@ type CreateEnvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEnvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEnvInvoker) Invoke() (*model.CreateEnvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateEnvInvoker) Invoke() (*model.CreateEnvResponse, error) {
 
 type CreateSubAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSubAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSubAppInvoker) Invoke() (*model.CreateSubAppResponse, error) {
@@ -57,6 +73,10 @@ type DeleteAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 
 type DeleteComponentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteComponentInvoker) Invoke() (*model.DeleteComponentResponse, error) {
@@ -81,6 +105,10 @@ type DeleteEnvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEnvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEnvInvoker) Invoke() (*model.DeleteEnvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteEnvInvoker) Invoke() (*model.DeleteEnvResponse, error) {
 
 type DeleteSubAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSubAppInvoker) Invoke() (*model.DeleteSubAppResponse, error) {
@@ -105,6 +137,10 @@ type ListResourceUnderNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceUnderNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceUnderNodeInvoker) Invoke() (*model.ListResourceUnderNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListResourceUnderNodeInvoker) Invoke() (*model.ListResourceUnderNodeRes
 
 type ShowAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
@@ -129,6 +169,10 @@ type ShowAppByNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAppByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAppByNameInvoker) Invoke() (*model.ShowAppByNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowAppByNameInvoker) Invoke() (*model.ShowAppByNameResponse, error) {
 
 type ShowComponentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowComponentInvoker) Invoke() (*model.ShowComponentResponse, error) {
@@ -153,6 +201,10 @@ type ShowComponentByNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowComponentByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowComponentByNameInvoker) Invoke() (*model.ShowComponentByNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowComponentByNameInvoker) Invoke() (*model.ShowComponentByNameRespons
 
 type ShowEnvInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEnvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEnvInvoker) Invoke() (*model.ShowEnvResponse, error) {
@@ -177,6 +233,10 @@ type ShowEnvByNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEnvByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEnvByNameInvoker) Invoke() (*model.ShowEnvByNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowEnvByNameInvoker) Invoke() (*model.ShowEnvByNameResponse, error) {
 
 type UpdateAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
@@ -201,6 +265,10 @@ type UpdateComponentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateComponentInvoker) Invoke() (*model.UpdateComponentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -213,6 +281,10 @@ type UpdateEnvInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEnvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEnvInvoker) Invoke() (*model.UpdateEnvResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -223,6 +295,10 @@ func (i *UpdateEnvInvoker) Invoke() (*model.UpdateEnvResponse, error) {
 
 type UpdateSubAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSubAppInvoker) Invoke() (*model.UpdateSubAppResponse, error) {

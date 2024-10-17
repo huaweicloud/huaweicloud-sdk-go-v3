@@ -8,14 +8,14 @@ import (
 
 type ResourceInstanceResponseResources struct {
 
-	// 资源详情。 资源对象，用于扩展。默认为空
-	ResourceDetail *interface{} `json:"resource_detail"`
-
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 资源名称，资源没有名称时默认为空字符串，eip返回ip地址
+	// 资源名称，资源没有名称时默认为空字符串，eip返回ip地址。
 	ResourceName string `json:"resource_name"`
+
+	// 资源详情。 资源对象，用于扩展，默认为空。
+	ResourceDetail *interface{} `json:"resource_detail"`
 
 	// 标签列表，没有标签默认为空数组
 	Tags []ResourceInstanceResponseTags `json:"tags"`

@@ -12,7 +12,7 @@ type ListSqlInjectionRulesResponse struct {
 	// SQL规则列表
 	Rules *[]SqlRuleResponseRules `json:"rules,omitempty"`
 
-	// 当前范围总数
+	// 总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

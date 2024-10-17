@@ -9,6 +9,10 @@ type ChangeInstanceNetworkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeInstanceNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeInstanceNetworkInvoker) Invoke() (*model.ChangeInstanceNetworkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ChangeInstanceNetworkInvoker) Invoke() (*model.ChangeInstanceNetworkRes
 
 type ChangeInstanceOrderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeInstanceOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeInstanceOrderInvoker) Invoke() (*model.ChangeInstanceOrderResponse, error) {
@@ -33,6 +41,10 @@ type CreateCbhInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCbhInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCbhInvoker) Invoke() (*model.CreateCbhResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateCbhInvoker) Invoke() (*model.CreateCbhResponse, error) {
 
 type CreateInstanceOrderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateInstanceOrderInvoker) Invoke() (*model.CreateInstanceOrderResponse, error) {
@@ -57,6 +73,10 @@ type InstallCbhEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *InstallCbhEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *InstallCbhEipInvoker) Invoke() (*model.InstallCbhEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *InstallCbhEipInvoker) Invoke() (*model.InstallCbhEipResponse, error) {
 
 type ListCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCbhInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCbhInstanceInvoker) Invoke() (*model.ListCbhInstanceResponse, error) {
@@ -81,6 +105,10 @@ type ListQuotaStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotaStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotaStatusInvoker) Invoke() (*model.ListQuotaStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListQuotaStatusInvoker) Invoke() (*model.ListQuotaStatusResponse, error
 
 type ResetLoginMethodInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetLoginMethodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetLoginMethodInvoker) Invoke() (*model.ResetLoginMethodResponse, error) {
@@ -105,6 +137,10 @@ type ResetPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ResetPasswordInvoker) Invoke() (*model.ResetPasswordResponse, error) {
 
 type RestartCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RestartCbhInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RestartCbhInstanceInvoker) Invoke() (*model.RestartCbhInstanceResponse, error) {
@@ -129,6 +169,10 @@ type SearchQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchQuotaInvoker) Invoke() (*model.SearchQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *SearchQuotaInvoker) Invoke() (*model.SearchQuotaResponse, error) {
 
 type ShowAvailableZoneInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailableZoneInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAvailableZoneInfoInvoker) Invoke() (*model.ShowAvailableZoneInfoResponse, error) {
@@ -153,6 +201,10 @@ type ShowNetworkConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowNetworkConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowNetworkConfigurationInvoker) Invoke() (*model.ShowNetworkConfigurationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowNetworkConfigurationInvoker) Invoke() (*model.ShowNetworkConfigurat
 
 type StartCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartCbhInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartCbhInstanceInvoker) Invoke() (*model.StartCbhInstanceResponse, error) {
@@ -177,6 +233,10 @@ type StopCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopCbhInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopCbhInstanceInvoker) Invoke() (*model.StopCbhInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *StopCbhInstanceInvoker) Invoke() (*model.StopCbhInstanceResponse, error
 
 type UninstallCbhEipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UninstallCbhEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UninstallCbhEipInvoker) Invoke() (*model.UninstallCbhEipResponse, error) {
@@ -201,6 +265,10 @@ type UpgradeCbhInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpgradeCbhInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpgradeCbhInstanceInvoker) Invoke() (*model.UpgradeCbhInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *UpgradeCbhInstanceInvoker) Invoke() (*model.UpgradeCbhInstanceResponse,
 
 type LoginCbhInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *LoginCbhInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *LoginCbhInvoker) Invoke() (*model.LoginCbhResponse, error) {

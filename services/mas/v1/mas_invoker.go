@@ -9,6 +9,10 @@ type ShowNameSpaceListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowNameSpaceListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowNameSpaceListInvoker) Invoke() (*model.ShowNameSpaceListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

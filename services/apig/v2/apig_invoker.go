@@ -9,6 +9,10 @@ type AcceptOrRejectEndpointConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AcceptOrRejectEndpointConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AcceptOrRejectEndpointConnectionsInvoker) Invoke() (*model.AcceptOrRejectEndpointConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AcceptOrRejectEndpointConnectionsInvoker) Invoke() (*model.AcceptOrReje
 
 type AddCustomIngressPortInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddCustomIngressPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddCustomIngressPortInvoker) Invoke() (*model.AddCustomIngressPortResponse, error) {
@@ -33,6 +41,10 @@ type AddEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddEipV2Invoker) Invoke() (*model.AddEipV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AddEipV2Invoker) Invoke() (*model.AddEipV2Response, error) {
 
 type AddEndpointPermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddEndpointPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddEndpointPermissionsInvoker) Invoke() (*model.AddEndpointPermissionsResponse, error) {
@@ -57,6 +73,10 @@ type AddEngressEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddEngressEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddEngressEipV2Invoker) Invoke() (*model.AddEngressEipV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *AddEngressEipV2Invoker) Invoke() (*model.AddEngressEipV2Response, error
 
 type AddIngressEipV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddIngressEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddIngressEipV2Invoker) Invoke() (*model.AddIngressEipV2Response, error) {
@@ -81,6 +105,10 @@ type AssociateAppsForAppQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateAppsForAppQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateAppsForAppQuotaInvoker) Invoke() (*model.AssociateAppsForAppQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *AssociateAppsForAppQuotaInvoker) Invoke() (*model.AssociateAppsForAppQu
 
 type AssociateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateCertificateV2Invoker) Invoke() (*model.AssociateCertificateV2Response, error) {
@@ -105,6 +137,10 @@ type AssociateDomainV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateDomainV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateDomainV2Invoker) Invoke() (*model.AssociateDomainV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *AssociateDomainV2Invoker) Invoke() (*model.AssociateDomainV2Response, e
 
 type AssociateSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateSignatureKeyV2Invoker) Invoke() (*model.AssociateSignatureKeyV2Response, error) {
@@ -129,6 +169,10 @@ type AttachApiToPluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AttachApiToPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AttachApiToPluginInvoker) Invoke() (*model.AttachApiToPluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *AttachApiToPluginInvoker) Invoke() (*model.AttachApiToPluginResponse, e
 
 type AttachPluginToApiInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AttachPluginToApiInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AttachPluginToApiInvoker) Invoke() (*model.AttachPluginToApiResponse, error) {
@@ -153,6 +201,10 @@ type BatchCreateOrDeleteInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateOrDeleteInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateOrDeleteInstanceTagsInvoker) Invoke() (*model.BatchCreateOrDeleteInstanceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *BatchCreateOrDeleteInstanceTagsInvoker) Invoke() (*model.BatchCreateOrD
 
 type CheckAppV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckAppV2Invoker) Invoke() (*model.CheckAppV2Response, error) {
@@ -177,6 +233,10 @@ type CreateAnAppV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAnAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAnAppV2Invoker) Invoke() (*model.CreateAnAppV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateAnAppV2Invoker) Invoke() (*model.CreateAnAppV2Response, error) {
 
 type CreateAppCodeAutoV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAppCodeAutoV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAppCodeAutoV2Invoker) Invoke() (*model.CreateAppCodeAutoV2Response, error) {
@@ -201,6 +265,10 @@ type CreateAppCodeV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAppCodeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAppCodeV2Invoker) Invoke() (*model.CreateAppCodeV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreateAppCodeV2Invoker) Invoke() (*model.CreateAppCodeV2Response, error
 
 type CreateAppQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAppQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAppQuotaInvoker) Invoke() (*model.CreateAppQuotaResponse, error) {
@@ -225,6 +297,10 @@ type CreateCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCustomAuthorizerV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCustomAuthorizerV2Invoker) Invoke() (*model.CreateCustomAuthorizerV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *CreateCustomAuthorizerV2Invoker) Invoke() (*model.CreateCustomAuthorize
 
 type CreateEnvironmentV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEnvironmentV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEnvironmentV2Invoker) Invoke() (*model.CreateEnvironmentV2Response, error) {
@@ -249,6 +329,10 @@ type CreateEnvironmentVariableV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEnvironmentVariableV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEnvironmentVariableV2Invoker) Invoke() (*model.CreateEnvironmentVariableV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CreateEnvironmentVariableV2Invoker) Invoke() (*model.CreateEnvironmentV
 
 type CreateFeatureV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateFeatureV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateFeatureV2Invoker) Invoke() (*model.CreateFeatureV2Response, error) {
@@ -273,6 +361,10 @@ type CreateGatewayResponseV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateGatewayResponseV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateGatewayResponseV2Invoker) Invoke() (*model.CreateGatewayResponseV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *CreateGatewayResponseV2Invoker) Invoke() (*model.CreateGatewayResponseV
 
 type CreateInstanceV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateInstanceV2Invoker) Invoke() (*model.CreateInstanceV2Response, error) {
@@ -297,6 +393,10 @@ type CreateOrchestrationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateOrchestrationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateOrchestrationInvoker) Invoke() (*model.CreateOrchestrationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *CreateOrchestrationInvoker) Invoke() (*model.CreateOrchestrationRespons
 
 type CreateOrderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateOrderInvoker) Invoke() (*model.CreateOrderResponse, error) {
@@ -321,6 +425,10 @@ type CreatePluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePluginInvoker) Invoke() (*model.CreatePluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *CreatePluginInvoker) Invoke() (*model.CreatePluginResponse, error) {
 
 type CreatePostPayResizeOrderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePostPayResizeOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePostPayResizeOrderInvoker) Invoke() (*model.CreatePostPayResizeOrderResponse, error) {
@@ -345,6 +457,10 @@ type CreatePrepayResizeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePrepayResizeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePrepayResizeInvoker) Invoke() (*model.CreatePrepayResizeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *CreatePrepayResizeInvoker) Invoke() (*model.CreatePrepayResizeResponse,
 
 type CreateRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRequestThrottlingPolicyV2Invoker) Invoke() (*model.CreateRequestThrottlingPolicyV2Response, error) {
@@ -369,6 +489,10 @@ type CreateSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSignatureKeyV2Invoker) Invoke() (*model.CreateSignatureKeyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *CreateSignatureKeyV2Invoker) Invoke() (*model.CreateSignatureKeyV2Respo
 
 type CreateSpecialThrottlingConfigurationV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSpecialThrottlingConfigurationV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.CreateSpecialThrottlingConfigurationV2Response, error) {
@@ -393,6 +521,10 @@ type DeleteAppAclInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAppAclInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAppAclInvoker) Invoke() (*model.DeleteAppAclResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *DeleteAppAclInvoker) Invoke() (*model.DeleteAppAclResponse, error) {
 
 type DeleteAppCodeV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppCodeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAppCodeV2Invoker) Invoke() (*model.DeleteAppCodeV2Response, error) {
@@ -417,6 +553,10 @@ type DeleteAppQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAppQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAppQuotaInvoker) Invoke() (*model.DeleteAppQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *DeleteAppQuotaInvoker) Invoke() (*model.DeleteAppQuotaResponse, error) 
 
 type DeleteAppV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAppV2Invoker) Invoke() (*model.DeleteAppV2Response, error) {
@@ -441,6 +585,10 @@ type DeleteCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCustomAuthorizerV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCustomAuthorizerV2Invoker) Invoke() (*model.DeleteCustomAuthorizerV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *DeleteCustomAuthorizerV2Invoker) Invoke() (*model.DeleteCustomAuthorize
 
 type DeleteCustomIngressPortInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomIngressPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteCustomIngressPortInvoker) Invoke() (*model.DeleteCustomIngressPortResponse, error) {
@@ -465,6 +617,10 @@ type DeleteEndpointPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEndpointPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEndpointPermissionsInvoker) Invoke() (*model.DeleteEndpointPermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *DeleteEndpointPermissionsInvoker) Invoke() (*model.DeleteEndpointPermis
 
 type DeleteEnvironmentV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnvironmentV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEnvironmentV2Invoker) Invoke() (*model.DeleteEnvironmentV2Response, error) {
@@ -489,6 +649,10 @@ type DeleteEnvironmentVariableV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEnvironmentVariableV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEnvironmentVariableV2Invoker) Invoke() (*model.DeleteEnvironmentVariableV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *DeleteEnvironmentVariableV2Invoker) Invoke() (*model.DeleteEnvironmentV
 
 type DeleteGatewayResponseTypeV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteGatewayResponseTypeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteGatewayResponseTypeV2Invoker) Invoke() (*model.DeleteGatewayResponseTypeV2Response, error) {
@@ -513,6 +681,10 @@ type DeleteGatewayResponseV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteGatewayResponseV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteGatewayResponseV2Invoker) Invoke() (*model.DeleteGatewayResponseV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *DeleteGatewayResponseV2Invoker) Invoke() (*model.DeleteGatewayResponseV
 
 type DeleteInstancesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstancesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteInstancesV2Invoker) Invoke() (*model.DeleteInstancesV2Response, error) {
@@ -537,6 +713,10 @@ type DeleteOrchestrationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteOrchestrationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteOrchestrationInvoker) Invoke() (*model.DeleteOrchestrationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *DeleteOrchestrationInvoker) Invoke() (*model.DeleteOrchestrationRespons
 
 type DeletePluginInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePluginInvoker) Invoke() (*model.DeletePluginResponse, error) {
@@ -561,6 +745,10 @@ type DeleteRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRequestThrottlingPolicyV2Invoker) Invoke() (*model.DeleteRequestThrottlingPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *DeleteRequestThrottlingPolicyV2Invoker) Invoke() (*model.DeleteRequestT
 
 type DeleteSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSignatureKeyV2Invoker) Invoke() (*model.DeleteSignatureKeyV2Response, error) {
@@ -585,6 +777,10 @@ type DeleteSpecialThrottlingConfigurationV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSpecialThrottlingConfigurationV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.DeleteSpecialThrottlingConfigurationV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *DeleteSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.DeleteS
 
 type DetachApiFromPluginInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DetachApiFromPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DetachApiFromPluginInvoker) Invoke() (*model.DetachApiFromPluginResponse, error) {
@@ -609,6 +809,10 @@ type DetachPluginFromApiInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetachPluginFromApiInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetachPluginFromApiInvoker) Invoke() (*model.DetachPluginFromApiResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *DetachPluginFromApiInvoker) Invoke() (*model.DetachPluginFromApiRespons
 
 type DisassociateAppQuotaWithAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateAppQuotaWithAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateAppQuotaWithAppInvoker) Invoke() (*model.DisassociateAppQuotaWithAppResponse, error) {
@@ -633,6 +841,10 @@ type DisassociateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateCertificateV2Invoker) Invoke() (*model.DisassociateCertificateV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *DisassociateCertificateV2Invoker) Invoke() (*model.DisassociateCertific
 
 type DisassociateDomainV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateDomainV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateDomainV2Invoker) Invoke() (*model.DisassociateDomainV2Response, error) {
@@ -657,6 +873,10 @@ type DisassociateSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateSignatureKeyV2Invoker) Invoke() (*model.DisassociateSignatureKeyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *DisassociateSignatureKeyV2Invoker) Invoke() (*model.DisassociateSignatu
 
 type ExportApiDefinitionsAsyncInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportApiDefinitionsAsyncInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportApiDefinitionsAsyncInvoker) Invoke() (*model.ExportApiDefinitionsAsyncResponse, error) {
@@ -681,6 +905,10 @@ type ImportApiDefinitionsAsyncInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ImportApiDefinitionsAsyncInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ImportApiDefinitionsAsyncInvoker) Invoke() (*model.ImportApiDefinitionsAsyncResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ImportApiDefinitionsAsyncInvoker) Invoke() (*model.ImportApiDefinitions
 
 type ImportMicroserviceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportMicroserviceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportMicroserviceInvoker) Invoke() (*model.ImportMicroserviceResponse, error) {
@@ -705,6 +937,10 @@ type ListApiAttachablePluginsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiAttachablePluginsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiAttachablePluginsInvoker) Invoke() (*model.ListApiAttachablePluginsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ListApiAttachablePluginsInvoker) Invoke() (*model.ListApiAttachablePlug
 
 type ListApiAttachedPluginsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiAttachedPluginsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiAttachedPluginsInvoker) Invoke() (*model.ListApiAttachedPluginsResponse, error) {
@@ -729,6 +969,10 @@ type ListApiGroupsQuantitiesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiGroupsQuantitiesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiGroupsQuantitiesV2Invoker) Invoke() (*model.ListApiGroupsQuantitiesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ListApiGroupsQuantitiesV2Invoker) Invoke() (*model.ListApiGroupsQuantit
 
 type ListApiQuantitiesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiQuantitiesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiQuantitiesV2Invoker) Invoke() (*model.ListApiQuantitiesV2Response, error) {
@@ -753,6 +1001,10 @@ type ListApisBindedToSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApisBindedToSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApisBindedToSignatureKeyV2Invoker) Invoke() (*model.ListApisBindedToSignatureKeyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ListApisBindedToSignatureKeyV2Invoker) Invoke() (*model.ListApisBindedT
 
 type ListApisNotBoundWithSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApisNotBoundWithSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApisNotBoundWithSignatureKeyV2Invoker) Invoke() (*model.ListApisNotBoundWithSignatureKeyV2Response, error) {
@@ -777,6 +1033,10 @@ type ListAppCodesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAppCodesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAppCodesV2Invoker) Invoke() (*model.ListAppCodesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ListAppCodesV2Invoker) Invoke() (*model.ListAppCodesV2Response, error) 
 
 type ListAppQuantitiesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAppQuantitiesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAppQuantitiesV2Invoker) Invoke() (*model.ListAppQuantitiesV2Response, error) {
@@ -801,6 +1065,10 @@ type ListAppQuotaBindableAppsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAppQuotaBindableAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAppQuotaBindableAppsInvoker) Invoke() (*model.ListAppQuotaBindableAppsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *ListAppQuotaBindableAppsInvoker) Invoke() (*model.ListAppQuotaBindableA
 
 type ListAppQuotaBoundAppsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAppQuotaBoundAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAppQuotaBoundAppsInvoker) Invoke() (*model.ListAppQuotaBoundAppsResponse, error) {
@@ -825,6 +1097,10 @@ type ListAppQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAppQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAppQuotasInvoker) Invoke() (*model.ListAppQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *ListAppQuotasInvoker) Invoke() (*model.ListAppQuotasResponse, error) {
 
 type ListAppsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAppsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAppsV2Invoker) Invoke() (*model.ListAppsV2Response, error) {
@@ -849,6 +1129,10 @@ type ListAvailableZonesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAvailableZonesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAvailableZonesV2Invoker) Invoke() (*model.ListAvailableZonesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *ListAvailableZonesV2Invoker) Invoke() (*model.ListAvailableZonesV2Respo
 
 type ListCustomAuthorizersV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCustomAuthorizersV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCustomAuthorizersV2Invoker) Invoke() (*model.ListCustomAuthorizersV2Response, error) {
@@ -873,6 +1161,10 @@ type ListCustomIngressPortDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCustomIngressPortDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCustomIngressPortDomainsInvoker) Invoke() (*model.ListCustomIngressPortDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *ListCustomIngressPortDomainsInvoker) Invoke() (*model.ListCustomIngress
 
 type ListCustomIngressPortsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCustomIngressPortsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCustomIngressPortsInvoker) Invoke() (*model.ListCustomIngressPortsResponse, error) {
@@ -897,6 +1193,10 @@ type ListEndpointConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEndpointConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEndpointConnectionsInvoker) Invoke() (*model.ListEndpointConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *ListEndpointConnectionsInvoker) Invoke() (*model.ListEndpointConnection
 
 type ListEndpointPermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEndpointPermissionsInvoker) Invoke() (*model.ListEndpointPermissionsResponse, error) {
@@ -921,6 +1225,10 @@ type ListEnvironmentVariablesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnvironmentVariablesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnvironmentVariablesV2Invoker) Invoke() (*model.ListEnvironmentVariablesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *ListEnvironmentVariablesV2Invoker) Invoke() (*model.ListEnvironmentVari
 
 type ListEnvironmentsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEnvironmentsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEnvironmentsV2Invoker) Invoke() (*model.ListEnvironmentsV2Response, error) {
@@ -945,6 +1257,10 @@ type ListFeaturesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListFeaturesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListFeaturesV2Invoker) Invoke() (*model.ListFeaturesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -955,6 +1271,10 @@ func (i *ListFeaturesV2Invoker) Invoke() (*model.ListFeaturesV2Response, error) 
 
 type ListGatewayResponsesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGatewayResponsesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGatewayResponsesV2Invoker) Invoke() (*model.ListGatewayResponsesV2Response, error) {
@@ -969,6 +1289,10 @@ type ListInstanceConfigsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstanceConfigsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstanceConfigsV2Invoker) Invoke() (*model.ListInstanceConfigsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -979,6 +1303,10 @@ func (i *ListInstanceConfigsV2Invoker) Invoke() (*model.ListInstanceConfigsV2Res
 
 type ListInstanceFeaturesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceFeaturesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstanceFeaturesInvoker) Invoke() (*model.ListInstanceFeaturesResponse, error) {
@@ -993,6 +1321,10 @@ type ListInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1003,6 +1335,10 @@ func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, err
 
 type ListInstancesByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstancesByTagsInvoker) Invoke() (*model.ListInstancesByTagsResponse, error) {
@@ -1017,6 +1353,10 @@ type ListInstancesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstancesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstancesV2Invoker) Invoke() (*model.ListInstancesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1027,6 +1367,10 @@ func (i *ListInstancesV2Invoker) Invoke() (*model.ListInstancesV2Response, error
 
 type ListLatelyApiStatisticsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListLatelyApiStatisticsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListLatelyApiStatisticsV2Invoker) Invoke() (*model.ListLatelyApiStatisticsV2Response, error) {
@@ -1041,6 +1385,10 @@ type ListLatelyGroupStatisticsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListLatelyGroupStatisticsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListLatelyGroupStatisticsV2Invoker) Invoke() (*model.ListLatelyGroupStatisticsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1051,6 +1399,10 @@ func (i *ListLatelyGroupStatisticsV2Invoker) Invoke() (*model.ListLatelyGroupSta
 
 type ListMetricDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMetricDataInvoker) Invoke() (*model.ListMetricDataResponse, error) {
@@ -1065,6 +1417,10 @@ type ListOrchestrationAttachedApisInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListOrchestrationAttachedApisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListOrchestrationAttachedApisInvoker) Invoke() (*model.ListOrchestrationAttachedApisResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1075,6 +1431,10 @@ func (i *ListOrchestrationAttachedApisInvoker) Invoke() (*model.ListOrchestratio
 
 type ListOrchestrationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListOrchestrationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListOrchestrationsInvoker) Invoke() (*model.ListOrchestrationsResponse, error) {
@@ -1089,6 +1449,10 @@ type ListPluginAttachableApisInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPluginAttachableApisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPluginAttachableApisInvoker) Invoke() (*model.ListPluginAttachableApisResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1099,6 +1463,10 @@ func (i *ListPluginAttachableApisInvoker) Invoke() (*model.ListPluginAttachableA
 
 type ListPluginAttachedApisInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPluginAttachedApisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPluginAttachedApisInvoker) Invoke() (*model.ListPluginAttachedApisResponse, error) {
@@ -1113,6 +1481,10 @@ type ListPluginsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPluginsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1123,6 +1495,10 @@ func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
 
 type ListProjectCofigsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProjectCofigsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProjectCofigsV2Invoker) Invoke() (*model.ListProjectCofigsV2Response, error) {
@@ -1137,6 +1513,10 @@ type ListProjectInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectInstanceTagsInvoker) Invoke() (*model.ListProjectInstanceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1147,6 +1527,10 @@ func (i *ListProjectInstanceTagsInvoker) Invoke() (*model.ListProjectInstanceTag
 
 type ListRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRequestThrottlingPolicyV2Invoker) Invoke() (*model.ListRequestThrottlingPolicyV2Response, error) {
@@ -1161,6 +1545,10 @@ type ListSignatureKeysBindedToApiV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSignatureKeysBindedToApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSignatureKeysBindedToApiV2Invoker) Invoke() (*model.ListSignatureKeysBindedToApiV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1171,6 +1559,10 @@ func (i *ListSignatureKeysBindedToApiV2Invoker) Invoke() (*model.ListSignatureKe
 
 type ListSignatureKeysV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSignatureKeysV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSignatureKeysV2Invoker) Invoke() (*model.ListSignatureKeysV2Response, error) {
@@ -1185,6 +1577,10 @@ type ListSpecialThrottlingConfigurationsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSpecialThrottlingConfigurationsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSpecialThrottlingConfigurationsV2Invoker) Invoke() (*model.ListSpecialThrottlingConfigurationsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1195,6 +1591,10 @@ func (i *ListSpecialThrottlingConfigurationsV2Invoker) Invoke() (*model.ListSpec
 
 type ListTagsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTagsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTagsV2Invoker) Invoke() (*model.ListTagsV2Response, error) {
@@ -1209,6 +1609,10 @@ type RemoveEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveEipV2Invoker) Invoke() (*model.RemoveEipV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1219,6 +1623,10 @@ func (i *RemoveEipV2Invoker) Invoke() (*model.RemoveEipV2Response, error) {
 
 type RemoveEngressEipV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemoveEngressEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemoveEngressEipV2Invoker) Invoke() (*model.RemoveEngressEipV2Response, error) {
@@ -1233,6 +1641,10 @@ type RemoveIngressEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveIngressEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveIngressEipV2Invoker) Invoke() (*model.RemoveIngressEipV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1243,6 +1655,10 @@ func (i *RemoveIngressEipV2Invoker) Invoke() (*model.RemoveIngressEipV2Response,
 
 type ResettingAppSecretV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResettingAppSecretV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResettingAppSecretV2Invoker) Invoke() (*model.ResettingAppSecretV2Response, error) {
@@ -1257,6 +1673,10 @@ type ShowAppBoundAppQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAppBoundAppQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAppBoundAppQuotaInvoker) Invoke() (*model.ShowAppBoundAppQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1267,6 +1687,10 @@ func (i *ShowAppBoundAppQuotaInvoker) Invoke() (*model.ShowAppBoundAppQuotaRespo
 
 type ShowAppQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAppQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAppQuotaInvoker) Invoke() (*model.ShowAppQuotaResponse, error) {
@@ -1281,6 +1705,10 @@ type ShowAsyncTaskResultInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAsyncTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAsyncTaskResultInvoker) Invoke() (*model.ShowAsyncTaskResultResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1291,6 +1719,10 @@ func (i *ShowAsyncTaskResultInvoker) Invoke() (*model.ShowAsyncTaskResultRespons
 
 type ShowDetailsOfAppAclInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfAppAclInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfAppAclInvoker) Invoke() (*model.ShowDetailsOfAppAclResponse, error) {
@@ -1305,6 +1737,10 @@ type ShowDetailsOfAppCodeV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfAppCodeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfAppCodeV2Invoker) Invoke() (*model.ShowDetailsOfAppCodeV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1315,6 +1751,10 @@ func (i *ShowDetailsOfAppCodeV2Invoker) Invoke() (*model.ShowDetailsOfAppCodeV2R
 
 type ShowDetailsOfAppV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfAppV2Invoker) Invoke() (*model.ShowDetailsOfAppV2Response, error) {
@@ -1329,6 +1769,10 @@ type ShowDetailsOfCustomAuthorizersV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfCustomAuthorizersV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfCustomAuthorizersV2Invoker) Invoke() (*model.ShowDetailsOfCustomAuthorizersV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1339,6 +1783,10 @@ func (i *ShowDetailsOfCustomAuthorizersV2Invoker) Invoke() (*model.ShowDetailsOf
 
 type ShowDetailsOfDomainNameCertificateV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfDomainNameCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfDomainNameCertificateV2Invoker) Invoke() (*model.ShowDetailsOfDomainNameCertificateV2Response, error) {
@@ -1353,6 +1801,10 @@ type ShowDetailsOfEnvironmentVariableV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfEnvironmentVariableV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfEnvironmentVariableV2Invoker) Invoke() (*model.ShowDetailsOfEnvironmentVariableV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1363,6 +1815,10 @@ func (i *ShowDetailsOfEnvironmentVariableV2Invoker) Invoke() (*model.ShowDetails
 
 type ShowDetailsOfGatewayResponseTypeV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfGatewayResponseTypeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfGatewayResponseTypeV2Invoker) Invoke() (*model.ShowDetailsOfGatewayResponseTypeV2Response, error) {
@@ -1377,6 +1833,10 @@ type ShowDetailsOfGatewayResponseV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfGatewayResponseV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfGatewayResponseV2Invoker) Invoke() (*model.ShowDetailsOfGatewayResponseV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1387,6 +1847,10 @@ func (i *ShowDetailsOfGatewayResponseV2Invoker) Invoke() (*model.ShowDetailsOfGa
 
 type ShowDetailsOfInstanceProgressV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfInstanceProgressV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfInstanceProgressV2Invoker) Invoke() (*model.ShowDetailsOfInstanceProgressV2Response, error) {
@@ -1401,6 +1865,10 @@ type ShowDetailsOfInstanceV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfInstanceV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfInstanceV2Invoker) Invoke() (*model.ShowDetailsOfInstanceV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1411,6 +1879,10 @@ func (i *ShowDetailsOfInstanceV2Invoker) Invoke() (*model.ShowDetailsOfInstanceV
 
 type ShowDetailsOfOrchestrationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfOrchestrationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfOrchestrationInvoker) Invoke() (*model.ShowDetailsOfOrchestrationResponse, error) {
@@ -1425,6 +1897,10 @@ type ShowDetailsOfRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfRequestThrottlingPolicyV2Invoker) Invoke() (*model.ShowDetailsOfRequestThrottlingPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1435,6 +1911,10 @@ func (i *ShowDetailsOfRequestThrottlingPolicyV2Invoker) Invoke() (*model.ShowDet
 
 type ShowInstancesNumByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowInstancesNumByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowInstancesNumByTagsInvoker) Invoke() (*model.ShowInstancesNumByTagsResponse, error) {
@@ -1449,6 +1929,10 @@ type ShowPluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPluginInvoker) Invoke() (*model.ShowPluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1459,6 +1943,10 @@ func (i *ShowPluginInvoker) Invoke() (*model.ShowPluginResponse, error) {
 
 type ShowRestrictionOfInstanceV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRestrictionOfInstanceV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRestrictionOfInstanceV2Invoker) Invoke() (*model.ShowRestrictionOfInstanceV2Response, error) {
@@ -1473,6 +1961,10 @@ type UpdateAppAclInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAppAclInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAppAclInvoker) Invoke() (*model.UpdateAppAclResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1483,6 +1975,10 @@ func (i *UpdateAppAclInvoker) Invoke() (*model.UpdateAppAclResponse, error) {
 
 type UpdateAppQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAppQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAppQuotaInvoker) Invoke() (*model.UpdateAppQuotaResponse, error) {
@@ -1497,6 +1993,10 @@ type UpdateAppV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAppV2Invoker) Invoke() (*model.UpdateAppV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1507,6 +2007,10 @@ func (i *UpdateAppV2Invoker) Invoke() (*model.UpdateAppV2Response, error) {
 
 type UpdateCustomAuthorizerV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomAuthorizerV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateCustomAuthorizerV2Invoker) Invoke() (*model.UpdateCustomAuthorizerV2Response, error) {
@@ -1521,6 +2025,10 @@ type UpdateDomainV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDomainV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDomainV2Invoker) Invoke() (*model.UpdateDomainV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1531,6 +2039,10 @@ func (i *UpdateDomainV2Invoker) Invoke() (*model.UpdateDomainV2Response, error) 
 
 type UpdateEngressEipV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEngressEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEngressEipV2Invoker) Invoke() (*model.UpdateEngressEipV2Response, error) {
@@ -1545,6 +2057,10 @@ type UpdateEnvironmentV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEnvironmentV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEnvironmentV2Invoker) Invoke() (*model.UpdateEnvironmentV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1555,6 +2071,10 @@ func (i *UpdateEnvironmentV2Invoker) Invoke() (*model.UpdateEnvironmentV2Respons
 
 type UpdateEnvironmentVariableV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnvironmentVariableV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEnvironmentVariableV2Invoker) Invoke() (*model.UpdateEnvironmentVariableV2Response, error) {
@@ -1569,6 +2089,10 @@ type UpdateGatewayResponseTypeV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateGatewayResponseTypeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateGatewayResponseTypeV2Invoker) Invoke() (*model.UpdateGatewayResponseTypeV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1579,6 +2103,10 @@ func (i *UpdateGatewayResponseTypeV2Invoker) Invoke() (*model.UpdateGatewayRespo
 
 type UpdateGatewayResponseV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateGatewayResponseV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateGatewayResponseV2Invoker) Invoke() (*model.UpdateGatewayResponseV2Response, error) {
@@ -1593,6 +2121,10 @@ type UpdateIngressEipV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateIngressEipV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateIngressEipV2Invoker) Invoke() (*model.UpdateIngressEipV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1603,6 +2135,10 @@ func (i *UpdateIngressEipV2Invoker) Invoke() (*model.UpdateIngressEipV2Response,
 
 type UpdateInstanceV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateInstanceV2Invoker) Invoke() (*model.UpdateInstanceV2Response, error) {
@@ -1617,6 +2153,10 @@ type UpdateOrchestrationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateOrchestrationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateOrchestrationInvoker) Invoke() (*model.UpdateOrchestrationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1627,6 +2167,10 @@ func (i *UpdateOrchestrationInvoker) Invoke() (*model.UpdateOrchestrationRespons
 
 type UpdatePluginInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePluginInvoker) Invoke() (*model.UpdatePluginResponse, error) {
@@ -1641,6 +2185,10 @@ type UpdateRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRequestThrottlingPolicyV2Invoker) Invoke() (*model.UpdateRequestThrottlingPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1651,6 +2199,10 @@ func (i *UpdateRequestThrottlingPolicyV2Invoker) Invoke() (*model.UpdateRequestT
 
 type UpdateSignatureKeyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSignatureKeyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSignatureKeyV2Invoker) Invoke() (*model.UpdateSignatureKeyV2Response, error) {
@@ -1665,6 +2217,10 @@ type UpdateSlDomainSettingV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateSlDomainSettingV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateSlDomainSettingV2Invoker) Invoke() (*model.UpdateSlDomainSettingV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1675,6 +2231,10 @@ func (i *UpdateSlDomainSettingV2Invoker) Invoke() (*model.UpdateSlDomainSettingV
 
 type UpdateSpecialThrottlingConfigurationV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSpecialThrottlingConfigurationV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.UpdateSpecialThrottlingConfigurationV2Response, error) {
@@ -1689,6 +2249,10 @@ type BatchDeleteAclV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteAclV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteAclV2Invoker) Invoke() (*model.BatchDeleteAclV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1699,6 +2263,10 @@ func (i *BatchDeleteAclV2Invoker) Invoke() (*model.BatchDeleteAclV2Response, err
 
 type CreateAclStrategyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAclStrategyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAclStrategyV2Invoker) Invoke() (*model.CreateAclStrategyV2Response, error) {
@@ -1713,6 +2281,10 @@ type DeleteAclV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAclV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAclV2Invoker) Invoke() (*model.DeleteAclV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1723,6 +2295,10 @@ func (i *DeleteAclV2Invoker) Invoke() (*model.DeleteAclV2Response, error) {
 
 type ListAclStrategiesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAclStrategiesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAclStrategiesV2Invoker) Invoke() (*model.ListAclStrategiesV2Response, error) {
@@ -1737,6 +2313,10 @@ type ShowDetailsOfAclPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfAclPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfAclPolicyV2Invoker) Invoke() (*model.ShowDetailsOfAclPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1747,6 +2327,10 @@ func (i *ShowDetailsOfAclPolicyV2Invoker) Invoke() (*model.ShowDetailsOfAclPolic
 
 type UpdateAclStrategyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAclStrategyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAclStrategyV2Invoker) Invoke() (*model.UpdateAclStrategyV2Response, error) {
@@ -1761,6 +2345,10 @@ type AssociateRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateRequestThrottlingPolicyV2Invoker) Invoke() (*model.AssociateRequestThrottlingPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1771,6 +2359,10 @@ func (i *AssociateRequestThrottlingPolicyV2Invoker) Invoke() (*model.AssociateRe
 
 type BatchDisassociateThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDisassociateThrottlingPolicyV2Invoker) Invoke() (*model.BatchDisassociateThrottlingPolicyV2Response, error) {
@@ -1785,6 +2377,10 @@ type BatchPublishOrOfflineApiV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchPublishOrOfflineApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchPublishOrOfflineApiV2Invoker) Invoke() (*model.BatchPublishOrOfflineApiV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1795,6 +2391,10 @@ func (i *BatchPublishOrOfflineApiV2Invoker) Invoke() (*model.BatchPublishOrOffli
 
 type ChangeApiVersionV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeApiVersionV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeApiVersionV2Invoker) Invoke() (*model.ChangeApiVersionV2Response, error) {
@@ -1809,6 +2409,10 @@ type CheckApiGroupsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckApiGroupsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckApiGroupsV2Invoker) Invoke() (*model.CheckApiGroupsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1819,6 +2423,10 @@ func (i *CheckApiGroupsV2Invoker) Invoke() (*model.CheckApiGroupsV2Response, err
 
 type CheckApisV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckApisV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckApisV2Invoker) Invoke() (*model.CheckApisV2Response, error) {
@@ -1833,6 +2441,10 @@ type CreateApiGroupV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateApiGroupV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateApiGroupV2Invoker) Invoke() (*model.CreateApiGroupV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1843,6 +2455,10 @@ func (i *CreateApiGroupV2Invoker) Invoke() (*model.CreateApiGroupV2Response, err
 
 type CreateApiV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateApiV2Invoker) Invoke() (*model.CreateApiV2Response, error) {
@@ -1857,6 +2473,10 @@ type CreateOrDeletePublishRecordForApiV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateOrDeletePublishRecordForApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateOrDeletePublishRecordForApiV2Invoker) Invoke() (*model.CreateOrDeletePublishRecordForApiV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1867,6 +2487,10 @@ func (i *CreateOrDeletePublishRecordForApiV2Invoker) Invoke() (*model.CreateOrDe
 
 type DebugApiV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DebugApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DebugApiV2Invoker) Invoke() (*model.DebugApiV2Response, error) {
@@ -1881,6 +2505,10 @@ type DeleteApiByVersionIdV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteApiByVersionIdV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteApiByVersionIdV2Invoker) Invoke() (*model.DeleteApiByVersionIdV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1891,6 +2519,10 @@ func (i *DeleteApiByVersionIdV2Invoker) Invoke() (*model.DeleteApiByVersionIdV2R
 
 type DeleteApiGroupV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteApiGroupV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteApiGroupV2Invoker) Invoke() (*model.DeleteApiGroupV2Response, error) {
@@ -1905,6 +2537,10 @@ type DeleteApiV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteApiV2Invoker) Invoke() (*model.DeleteApiV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1915,6 +2551,10 @@ func (i *DeleteApiV2Invoker) Invoke() (*model.DeleteApiV2Response, error) {
 
 type DisassociateRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateRequestThrottlingPolicyV2Invoker) Invoke() (*model.DisassociateRequestThrottlingPolicyV2Response, error) {
@@ -1929,6 +2569,10 @@ type ListApiGroupsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiGroupsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiGroupsV2Invoker) Invoke() (*model.ListApiGroupsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1939,6 +2583,10 @@ func (i *ListApiGroupsV2Invoker) Invoke() (*model.ListApiGroupsV2Response, error
 
 type ListApiRuntimeDefinitionV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiRuntimeDefinitionV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiRuntimeDefinitionV2Invoker) Invoke() (*model.ListApiRuntimeDefinitionV2Response, error) {
@@ -1953,6 +2601,10 @@ type ListApiVersionDetailV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiVersionDetailV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiVersionDetailV2Invoker) Invoke() (*model.ListApiVersionDetailV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1963,6 +2615,10 @@ func (i *ListApiVersionDetailV2Invoker) Invoke() (*model.ListApiVersionDetailV2R
 
 type ListApiVersionsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiVersionsV2Invoker) Invoke() (*model.ListApiVersionsV2Response, error) {
@@ -1977,6 +2633,10 @@ type ListApisBindedToRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApisBindedToRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApisBindedToRequestThrottlingPolicyV2Invoker) Invoke() (*model.ListApisBindedToRequestThrottlingPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1987,6 +2647,10 @@ func (i *ListApisBindedToRequestThrottlingPolicyV2Invoker) Invoke() (*model.List
 
 type ListApisUnbindedToRequestThrottlingPolicyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApisUnbindedToRequestThrottlingPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApisUnbindedToRequestThrottlingPolicyV2Invoker) Invoke() (*model.ListApisUnbindedToRequestThrottlingPolicyV2Response, error) {
@@ -2001,6 +2665,10 @@ type ListApisV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApisV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApisV2Invoker) Invoke() (*model.ListApisV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2011,6 +2679,10 @@ func (i *ListApisV2Invoker) Invoke() (*model.ListApisV2Response, error) {
 
 type ListRequestThrottlingPoliciesBindedToApiV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRequestThrottlingPoliciesBindedToApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRequestThrottlingPoliciesBindedToApiV2Invoker) Invoke() (*model.ListRequestThrottlingPoliciesBindedToApiV2Response, error) {
@@ -2025,6 +2697,10 @@ type ShowDetailsOfApiGroupV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfApiGroupV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfApiGroupV2Invoker) Invoke() (*model.ShowDetailsOfApiGroupV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2035,6 +2711,10 @@ func (i *ShowDetailsOfApiGroupV2Invoker) Invoke() (*model.ShowDetailsOfApiGroupV
 
 type ShowDetailsOfApiV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfApiV2Invoker) Invoke() (*model.ShowDetailsOfApiV2Response, error) {
@@ -2049,6 +2729,10 @@ type UpdateApiGroupV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateApiGroupV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateApiGroupV2Invoker) Invoke() (*model.UpdateApiGroupV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2059,6 +2743,10 @@ func (i *UpdateApiGroupV2Invoker) Invoke() (*model.UpdateApiGroupV2Response, err
 
 type UpdateApiV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateApiV2Invoker) Invoke() (*model.UpdateApiV2Response, error) {
@@ -2073,6 +2761,10 @@ type BatchDeleteApiAclBindingV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteApiAclBindingV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteApiAclBindingV2Invoker) Invoke() (*model.BatchDeleteApiAclBindingV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2083,6 +2775,10 @@ func (i *BatchDeleteApiAclBindingV2Invoker) Invoke() (*model.BatchDeleteApiAclBi
 
 type CreateApiAclBindingV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateApiAclBindingV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateApiAclBindingV2Invoker) Invoke() (*model.CreateApiAclBindingV2Response, error) {
@@ -2097,6 +2793,10 @@ type DeleteApiAclBindingV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteApiAclBindingV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteApiAclBindingV2Invoker) Invoke() (*model.DeleteApiAclBindingV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2107,6 +2807,10 @@ func (i *DeleteApiAclBindingV2Invoker) Invoke() (*model.DeleteApiAclBindingV2Res
 
 type ListAclPolicyBindedToApiV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAclPolicyBindedToApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAclPolicyBindedToApiV2Invoker) Invoke() (*model.ListAclPolicyBindedToApiV2Response, error) {
@@ -2121,6 +2825,10 @@ type ListApisBindedToAclPolicyV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApisBindedToAclPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApisBindedToAclPolicyV2Invoker) Invoke() (*model.ListApisBindedToAclPolicyV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2131,6 +2839,10 @@ func (i *ListApisBindedToAclPolicyV2Invoker) Invoke() (*model.ListApisBindedToAc
 
 type ListApisUnbindedToAclPolicyV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApisUnbindedToAclPolicyV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApisUnbindedToAclPolicyV2Invoker) Invoke() (*model.ListApisUnbindedToAclPolicyV2Response, error) {
@@ -2145,6 +2857,10 @@ type CancelingAuthorizationV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelingAuthorizationV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelingAuthorizationV2Invoker) Invoke() (*model.CancelingAuthorizationV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2155,6 +2871,10 @@ func (i *CancelingAuthorizationV2Invoker) Invoke() (*model.CancelingAuthorizatio
 
 type CreateAuthorizingAppsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthorizingAppsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAuthorizingAppsV2Invoker) Invoke() (*model.CreateAuthorizingAppsV2Response, error) {
@@ -2169,6 +2889,10 @@ type ListApisBindedToAppV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApisBindedToAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApisBindedToAppV2Invoker) Invoke() (*model.ListApisBindedToAppV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2179,6 +2903,10 @@ func (i *ListApisBindedToAppV2Invoker) Invoke() (*model.ListApisBindedToAppV2Res
 
 type ListApisUnbindedToAppV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApisUnbindedToAppV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApisUnbindedToAppV2Invoker) Invoke() (*model.ListApisUnbindedToAppV2Response, error) {
@@ -2193,6 +2921,10 @@ type ListAppsBindedToApiV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAppsBindedToApiV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAppsBindedToApiV2Invoker) Invoke() (*model.ListAppsBindedToApiV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2203,6 +2935,10 @@ func (i *ListAppsBindedToApiV2Invoker) Invoke() (*model.ListAppsBindedToApiV2Res
 
 type ExportApiDefinitionsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportApiDefinitionsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportApiDefinitionsV2Invoker) Invoke() (*model.ExportApiDefinitionsV2Response, error) {
@@ -2217,6 +2953,10 @@ type ImportApiDefinitionsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ImportApiDefinitionsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ImportApiDefinitionsV2Invoker) Invoke() (*model.ImportApiDefinitionsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2227,6 +2967,10 @@ func (i *ImportApiDefinitionsV2Invoker) Invoke() (*model.ImportApiDefinitionsV2R
 
 type BatchAssociateCertsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAssociateCertsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAssociateCertsV2Invoker) Invoke() (*model.BatchAssociateCertsV2Response, error) {
@@ -2241,6 +2985,10 @@ type BatchAssociateDomainsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAssociateDomainsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAssociateDomainsV2Invoker) Invoke() (*model.BatchAssociateDomainsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2251,6 +2999,10 @@ func (i *BatchAssociateDomainsV2Invoker) Invoke() (*model.BatchAssociateDomainsV
 
 type BatchDisassociateCertsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDisassociateCertsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDisassociateCertsV2Invoker) Invoke() (*model.BatchDisassociateCertsV2Response, error) {
@@ -2265,6 +3017,10 @@ type BatchDisassociateDomainsV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDisassociateDomainsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDisassociateDomainsV2Invoker) Invoke() (*model.BatchDisassociateDomainsV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2275,6 +3031,10 @@ func (i *BatchDisassociateDomainsV2Invoker) Invoke() (*model.BatchDisassociateDo
 
 type CreateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCertificateV2Invoker) Invoke() (*model.CreateCertificateV2Response, error) {
@@ -2289,6 +3049,10 @@ type DeleteCertificateV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCertificateV2Invoker) Invoke() (*model.DeleteCertificateV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2299,6 +3063,10 @@ func (i *DeleteCertificateV2Invoker) Invoke() (*model.DeleteCertificateV2Respons
 
 type ListAttachedDomainsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAttachedDomainsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAttachedDomainsV2Invoker) Invoke() (*model.ListAttachedDomainsV2Response, error) {
@@ -2313,6 +3081,10 @@ type ListCertificatesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListCertificatesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListCertificatesV2Invoker) Invoke() (*model.ListCertificatesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2323,6 +3095,10 @@ func (i *ListCertificatesV2Invoker) Invoke() (*model.ListCertificatesV2Response,
 
 type ShowDetailsOfCertificateV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfCertificateV2Invoker) Invoke() (*model.ShowDetailsOfCertificateV2Response, error) {
@@ -2337,6 +3113,10 @@ type UpdateCertificateV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateCertificateV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateCertificateV2Invoker) Invoke() (*model.UpdateCertificateV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2347,6 +3127,10 @@ func (i *UpdateCertificateV2Invoker) Invoke() (*model.UpdateCertificateV2Respons
 
 type AddingBackendInstancesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddingBackendInstancesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddingBackendInstancesV2Invoker) Invoke() (*model.AddingBackendInstancesV2Response, error) {
@@ -2361,6 +3145,10 @@ type BatchDisableMembersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDisableMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDisableMembersInvoker) Invoke() (*model.BatchDisableMembersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2371,6 +3159,10 @@ func (i *BatchDisableMembersInvoker) Invoke() (*model.BatchDisableMembersRespons
 
 type BatchEnableMembersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchEnableMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchEnableMembersInvoker) Invoke() (*model.BatchEnableMembersResponse, error) {
@@ -2385,6 +3177,10 @@ type CreateMemberGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMemberGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMemberGroupInvoker) Invoke() (*model.CreateMemberGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2395,6 +3191,10 @@ func (i *CreateMemberGroupInvoker) Invoke() (*model.CreateMemberGroupResponse, e
 
 type CreateVpcChannelV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVpcChannelV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVpcChannelV2Invoker) Invoke() (*model.CreateVpcChannelV2Response, error) {
@@ -2409,6 +3209,10 @@ type DeleteBackendInstanceV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteBackendInstanceV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteBackendInstanceV2Invoker) Invoke() (*model.DeleteBackendInstanceV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2419,6 +3223,10 @@ func (i *DeleteBackendInstanceV2Invoker) Invoke() (*model.DeleteBackendInstanceV
 
 type DeleteMemberGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMemberGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMemberGroupInvoker) Invoke() (*model.DeleteMemberGroupResponse, error) {
@@ -2433,6 +3241,10 @@ type DeleteVpcChannelV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVpcChannelV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVpcChannelV2Invoker) Invoke() (*model.DeleteVpcChannelV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2443,6 +3255,10 @@ func (i *DeleteVpcChannelV2Invoker) Invoke() (*model.DeleteVpcChannelV2Response,
 
 type ListBackendInstancesV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBackendInstancesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBackendInstancesV2Invoker) Invoke() (*model.ListBackendInstancesV2Response, error) {
@@ -2457,6 +3273,10 @@ type ListMemberGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMemberGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMemberGroupsInvoker) Invoke() (*model.ListMemberGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2467,6 +3287,10 @@ func (i *ListMemberGroupsInvoker) Invoke() (*model.ListMemberGroupsResponse, err
 
 type ListVpcChannelsV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpcChannelsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpcChannelsV2Invoker) Invoke() (*model.ListVpcChannelsV2Response, error) {
@@ -2481,6 +3305,10 @@ type ShowDetailsOfMemberGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDetailsOfMemberGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDetailsOfMemberGroupInvoker) Invoke() (*model.ShowDetailsOfMemberGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2491,6 +3319,10 @@ func (i *ShowDetailsOfMemberGroupInvoker) Invoke() (*model.ShowDetailsOfMemberGr
 
 type ShowDetailsOfVpcChannelV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfVpcChannelV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDetailsOfVpcChannelV2Invoker) Invoke() (*model.ShowDetailsOfVpcChannelV2Response, error) {
@@ -2505,6 +3337,10 @@ type UpdateBackendInstancesV2Invoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateBackendInstancesV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateBackendInstancesV2Invoker) Invoke() (*model.UpdateBackendInstancesV2Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2515,6 +3351,10 @@ func (i *UpdateBackendInstancesV2Invoker) Invoke() (*model.UpdateBackendInstance
 
 type UpdateHealthCheckInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateHealthCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateHealthCheckInvoker) Invoke() (*model.UpdateHealthCheckResponse, error) {
@@ -2529,6 +3369,10 @@ type UpdateMemberGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMemberGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMemberGroupInvoker) Invoke() (*model.UpdateMemberGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2539,6 +3383,10 @@ func (i *UpdateMemberGroupInvoker) Invoke() (*model.UpdateMemberGroupResponse, e
 
 type UpdateVpcChannelV2Invoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpcChannelV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpcChannelV2Invoker) Invoke() (*model.UpdateVpcChannelV2Response, error) {

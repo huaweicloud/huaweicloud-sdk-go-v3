@@ -14,6 +14,9 @@ type SlowSqlTemplate struct {
 	// SQL样本。
 	SqlSample *string `json:"sql_sample,omitempty"`
 
+	// SQL样本执行用户。
+	SqlSampleUser *string `json:"sql_sample_user,omitempty"`
+
 	// 库名。
 	DbNames []string `json:"db_names"`
 

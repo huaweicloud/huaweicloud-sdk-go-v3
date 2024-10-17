@@ -9,6 +9,10 @@ type CreateAggregationAuthorizationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAggregationAuthorizationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAggregationAuthorizationInvoker) Invoke() (*model.CreateAggregationAuthorizationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAggregationAuthorizationInvoker) Invoke() (*model.CreateAggregati
 
 type CreateConfigurationAggregatorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateConfigurationAggregatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateConfigurationAggregatorInvoker) Invoke() (*model.CreateConfigurationAggregatorResponse, error) {
@@ -33,6 +41,10 @@ type DeleteAggregationAuthorizationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAggregationAuthorizationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAggregationAuthorizationInvoker) Invoke() (*model.DeleteAggregationAuthorizationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *DeleteAggregationAuthorizationInvoker) Invoke() (*model.DeleteAggregati
 
 type DeleteConfigurationAggregatorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteConfigurationAggregatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteConfigurationAggregatorInvoker) Invoke() (*model.DeleteConfigurationAggregatorResponse, error) {
@@ -57,6 +73,10 @@ type DeletePendingAggregationRequestInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePendingAggregationRequestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePendingAggregationRequestInvoker) Invoke() (*model.DeletePendingAggregationRequestResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeletePendingAggregationRequestInvoker) Invoke() (*model.DeletePendingA
 
 type ListAggregateComplianceByPolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAggregateComplianceByPolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAggregateComplianceByPolicyAssignmentInvoker) Invoke() (*model.ListAggregateComplianceByPolicyAssignmentResponse, error) {
@@ -81,6 +105,10 @@ type ListAggregateDiscoveredResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAggregateDiscoveredResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAggregateDiscoveredResourcesInvoker) Invoke() (*model.ListAggregateDiscoveredResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListAggregateDiscoveredResourcesInvoker) Invoke() (*model.ListAggregate
 
 type ListAggregationAuthorizationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAggregationAuthorizationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAggregationAuthorizationsInvoker) Invoke() (*model.ListAggregationAuthorizationsResponse, error) {
@@ -105,6 +137,10 @@ type ListConfigurationAggregatorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListConfigurationAggregatorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListConfigurationAggregatorsInvoker) Invoke() (*model.ListConfigurationAggregatorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListConfigurationAggregatorsInvoker) Invoke() (*model.ListConfiguration
 
 type ListPendingAggregationRequestsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPendingAggregationRequestsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPendingAggregationRequestsInvoker) Invoke() (*model.ListPendingAggregationRequestsResponse, error) {
@@ -129,6 +169,10 @@ type RunAggregateResourceQueryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunAggregateResourceQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunAggregateResourceQueryInvoker) Invoke() (*model.RunAggregateResourceQueryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *RunAggregateResourceQueryInvoker) Invoke() (*model.RunAggregateResource
 
 type ShowAggregateComplianceDetailsByPolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAggregateComplianceDetailsByPolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAggregateComplianceDetailsByPolicyAssignmentInvoker) Invoke() (*model.ShowAggregateComplianceDetailsByPolicyAssignmentResponse, error) {
@@ -153,6 +201,10 @@ type ShowAggregateDiscoveredResourceCountsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAggregateDiscoveredResourceCountsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAggregateDiscoveredResourceCountsInvoker) Invoke() (*model.ShowAggregateDiscoveredResourceCountsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowAggregateDiscoveredResourceCountsInvoker) Invoke() (*model.ShowAggr
 
 type ShowAggregatePolicyAssignmentDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAggregatePolicyAssignmentDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAggregatePolicyAssignmentDetailInvoker) Invoke() (*model.ShowAggregatePolicyAssignmentDetailResponse, error) {
@@ -177,6 +233,10 @@ type ShowAggregatePolicyStateComplianceSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAggregatePolicyStateComplianceSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAggregatePolicyStateComplianceSummaryInvoker) Invoke() (*model.ShowAggregatePolicyStateComplianceSummaryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowAggregatePolicyStateComplianceSummaryInvoker) Invoke() (*model.Show
 
 type ShowAggregateResourceConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAggregateResourceConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAggregateResourceConfigInvoker) Invoke() (*model.ShowAggregateResourceConfigResponse, error) {
@@ -201,6 +265,10 @@ type ShowConfigurationAggregatorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowConfigurationAggregatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowConfigurationAggregatorInvoker) Invoke() (*model.ShowConfigurationAggregatorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowConfigurationAggregatorInvoker) Invoke() (*model.ShowConfigurationA
 
 type ShowConfigurationAggregatorSourcesStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigurationAggregatorSourcesStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowConfigurationAggregatorSourcesStatusInvoker) Invoke() (*model.ShowConfigurationAggregatorSourcesStatusResponse, error) {
@@ -225,6 +297,10 @@ type UpdateConfigurationAggregatorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateConfigurationAggregatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateConfigurationAggregatorInvoker) Invoke() (*model.UpdateConfigurationAggregatorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *UpdateConfigurationAggregatorInvoker) Invoke() (*model.UpdateConfigurat
 
 type ShowResourceHistoryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceHistoryInvoker) Invoke() (*model.ShowResourceHistoryResponse, error) {
@@ -249,6 +329,10 @@ type CreateOrganizationPolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateOrganizationPolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateOrganizationPolicyAssignmentInvoker) Invoke() (*model.CreateOrganizationPolicyAssignmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CreateOrganizationPolicyAssignmentInvoker) Invoke() (*model.CreateOrgan
 
 type CreatePolicyAssignmentsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePolicyAssignmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePolicyAssignmentsInvoker) Invoke() (*model.CreatePolicyAssignmentsResponse, error) {
@@ -273,6 +361,10 @@ type DeleteOrganizationPolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteOrganizationPolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteOrganizationPolicyAssignmentInvoker) Invoke() (*model.DeleteOrganizationPolicyAssignmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteOrganizationPolicyAssignmentInvoker) Invoke() (*model.DeleteOrgan
 
 type DeletePolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePolicyAssignmentInvoker) Invoke() (*model.DeletePolicyAssignmentResponse, error) {
@@ -297,6 +393,10 @@ type DisablePolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisablePolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisablePolicyAssignmentInvoker) Invoke() (*model.DisablePolicyAssignmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DisablePolicyAssignmentInvoker) Invoke() (*model.DisablePolicyAssignmen
 
 type EnablePolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnablePolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnablePolicyAssignmentInvoker) Invoke() (*model.EnablePolicyAssignmentResponse, error) {
@@ -321,6 +425,10 @@ type ListBuiltInPolicyDefinitionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBuiltInPolicyDefinitionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBuiltInPolicyDefinitionsInvoker) Invoke() (*model.ListBuiltInPolicyDefinitionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListBuiltInPolicyDefinitionsInvoker) Invoke() (*model.ListBuiltInPolicy
 
 type ListOrganizationPolicyAssignmentsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationPolicyAssignmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListOrganizationPolicyAssignmentsInvoker) Invoke() (*model.ListOrganizationPolicyAssignmentsResponse, error) {
@@ -345,6 +457,10 @@ type ListPolicyAssignmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPolicyAssignmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPolicyAssignmentsInvoker) Invoke() (*model.ListPolicyAssignmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListPolicyAssignmentsInvoker) Invoke() (*model.ListPolicyAssignmentsRes
 
 type ListPolicyStatesByAssignmentIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyStatesByAssignmentIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPolicyStatesByAssignmentIdInvoker) Invoke() (*model.ListPolicyStatesByAssignmentIdResponse, error) {
@@ -369,6 +489,10 @@ type ListPolicyStatesByDomainIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPolicyStatesByDomainIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPolicyStatesByDomainIdInvoker) Invoke() (*model.ListPolicyStatesByDomainIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListPolicyStatesByDomainIdInvoker) Invoke() (*model.ListPolicyStatesByD
 
 type ListPolicyStatesByResourceIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyStatesByResourceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPolicyStatesByResourceIdInvoker) Invoke() (*model.ListPolicyStatesByResourceIdResponse, error) {
@@ -393,6 +521,10 @@ type RunEvaluationByPolicyAssignmentIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunEvaluationByPolicyAssignmentIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunEvaluationByPolicyAssignmentIdInvoker) Invoke() (*model.RunEvaluationByPolicyAssignmentIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *RunEvaluationByPolicyAssignmentIdInvoker) Invoke() (*model.RunEvaluatio
 
 type ShowBuiltInPolicyDefinitionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBuiltInPolicyDefinitionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBuiltInPolicyDefinitionInvoker) Invoke() (*model.ShowBuiltInPolicyDefinitionResponse, error) {
@@ -417,6 +553,10 @@ type ShowEvaluationStateByAssignmentIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEvaluationStateByAssignmentIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEvaluationStateByAssignmentIdInvoker) Invoke() (*model.ShowEvaluationStateByAssignmentIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowEvaluationStateByAssignmentIdInvoker) Invoke() (*model.ShowEvaluati
 
 type ShowOrganizationPolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOrganizationPolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOrganizationPolicyAssignmentInvoker) Invoke() (*model.ShowOrganizationPolicyAssignmentResponse, error) {
@@ -441,6 +585,10 @@ type ShowOrganizationPolicyAssignmentDetailedStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowOrganizationPolicyAssignmentDetailedStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowOrganizationPolicyAssignmentDetailedStatusInvoker) Invoke() (*model.ShowOrganizationPolicyAssignmentDetailedStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowOrganizationPolicyAssignmentDetailedStatusInvoker) Invoke() (*model
 
 type ShowOrganizationPolicyAssignmentStatusesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOrganizationPolicyAssignmentStatusesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOrganizationPolicyAssignmentStatusesInvoker) Invoke() (*model.ShowOrganizationPolicyAssignmentStatusesResponse, error) {
@@ -465,6 +617,10 @@ type ShowPolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPolicyAssignmentInvoker) Invoke() (*model.ShowPolicyAssignmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ShowPolicyAssignmentInvoker) Invoke() (*model.ShowPolicyAssignmentRespo
 
 type UpdatePolicyAssignmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePolicyAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePolicyAssignmentInvoker) Invoke() (*model.UpdatePolicyAssignmentResponse, error) {
@@ -489,6 +649,10 @@ type UpdatePolicyStateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePolicyStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePolicyStateInvoker) Invoke() (*model.UpdatePolicyStateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *UpdatePolicyStateInvoker) Invoke() (*model.UpdatePolicyStateResponse, e
 
 type CreateStoredQueryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateStoredQueryInvoker) Invoke() (*model.CreateStoredQueryResponse, error) {
@@ -513,6 +681,10 @@ type DeleteStoredQueryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteStoredQueryInvoker) Invoke() (*model.DeleteStoredQueryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *DeleteStoredQueryInvoker) Invoke() (*model.DeleteStoredQueryResponse, e
 
 type ListSchemasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSchemasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
@@ -537,6 +713,10 @@ type ListStoredQueriesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListStoredQueriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListStoredQueriesInvoker) Invoke() (*model.ListStoredQueriesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ListStoredQueriesInvoker) Invoke() (*model.ListStoredQueriesResponse, e
 
 type RunQueryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunQueryInvoker) Invoke() (*model.RunQueryResponse, error) {
@@ -561,6 +745,10 @@ type ShowStoredQueryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStoredQueryInvoker) Invoke() (*model.ShowStoredQueryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ShowStoredQueryInvoker) Invoke() (*model.ShowStoredQueryResponse, error
 
 type UpdateStoredQueryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateStoredQueryInvoker) Invoke() (*model.UpdateStoredQueryResponse, error) {
@@ -585,6 +777,10 @@ type ListRegionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRegionsInvoker) Invoke() (*model.ListRegionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListRegionsInvoker) Invoke() (*model.ListRegionsResponse, error) {
 
 type ShowResourceRelationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceRelationsInvoker) Invoke() (*model.ShowResourceRelationsResponse, error) {
@@ -609,6 +809,10 @@ type ShowResourceRelationsDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowResourceRelationsDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowResourceRelationsDetailInvoker) Invoke() (*model.ShowResourceRelationsDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ShowResourceRelationsDetailInvoker) Invoke() (*model.ShowResourceRelati
 
 type CollectAllResourcesSummaryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CollectAllResourcesSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CollectAllResourcesSummaryInvoker) Invoke() (*model.CollectAllResourcesSummaryResponse, error) {
@@ -633,6 +841,10 @@ type CountAllResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountAllResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountAllResourcesInvoker) Invoke() (*model.CountAllResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *CountAllResourcesInvoker) Invoke() (*model.CountAllResourcesResponse, e
 
 type ListAllResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllResourcesInvoker) Invoke() (*model.ListAllResourcesResponse, error) {
@@ -657,6 +873,10 @@ type ListAllTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAllTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAllTagsInvoker) Invoke() (*model.ListAllTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListAllTagsInvoker) Invoke() (*model.ListAllTagsResponse, error) {
 
 type ListProvidersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProvidersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProvidersInvoker) Invoke() (*model.ListProvidersResponse, error) {
@@ -681,6 +905,10 @@ type ListResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourcesInvoker) Invoke() (*model.ListResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ListResourcesInvoker) Invoke() (*model.ListResourcesResponse, error) {
 
 type ShowResourceByIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceByIdInvoker) Invoke() (*model.ShowResourceByIdResponse, error) {
@@ -705,6 +937,10 @@ type ShowResourceDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowResourceDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowResourceDetailInvoker) Invoke() (*model.ShowResourceDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ShowResourceDetailInvoker) Invoke() (*model.ShowResourceDetailResponse,
 
 type CreateTrackerConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTrackerConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTrackerConfigInvoker) Invoke() (*model.CreateTrackerConfigResponse, error) {
@@ -729,6 +969,10 @@ type DeleteTrackerConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTrackerConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTrackerConfigInvoker) Invoke() (*model.DeleteTrackerConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *DeleteTrackerConfigInvoker) Invoke() (*model.DeleteTrackerConfigRespons
 
 type ShowTrackerConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTrackerConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTrackerConfigInvoker) Invoke() (*model.ShowTrackerConfigResponse, error) {

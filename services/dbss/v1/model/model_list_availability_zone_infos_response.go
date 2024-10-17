@@ -9,7 +9,7 @@ import (
 // ListAvailabilityZoneInfosResponse Response Object
 type ListAvailabilityZoneInfosResponse struct {
 
-	// az列表
+	// 可用区集合
 	Azs            *[]AzInfo `json:"azs,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

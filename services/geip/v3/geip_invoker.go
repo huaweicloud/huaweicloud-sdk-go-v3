@@ -9,6 +9,10 @@ type AddInternetBandwidthTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddInternetBandwidthTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddInternetBandwidthTagsInvoker) Invoke() (*model.AddInternetBandwidthTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddInternetBandwidthTagsInvoker) Invoke() (*model.AddInternetBandwidthT
 
 type BatchCreateInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateInternetBandwidthInvoker) Invoke() (*model.BatchCreateInternetBandwidthResponse, error) {
@@ -33,6 +41,10 @@ type BatchCreateInternetBandwidthTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateInternetBandwidthTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateInternetBandwidthTagsInvoker) Invoke() (*model.BatchCreateInternetBandwidthTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchCreateInternetBandwidthTagsInvoker) Invoke() (*model.BatchCreateIn
 
 type BatchDeleteInternetBandwidthTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteInternetBandwidthTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteInternetBandwidthTagsInvoker) Invoke() (*model.BatchDeleteInternetBandwidthTagsResponse, error) {
@@ -57,6 +73,10 @@ type CountInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountInternetBandwidthInvoker) Invoke() (*model.CountInternetBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CountInternetBandwidthInvoker) Invoke() (*model.CountInternetBandwidthR
 
 type CreateInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateInternetBandwidthInvoker) Invoke() (*model.CreateInternetBandwidthResponse, error) {
@@ -81,6 +105,10 @@ type CreateUserDisclaimerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateUserDisclaimerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateUserDisclaimerInvoker) Invoke() (*model.CreateUserDisclaimerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateUserDisclaimerInvoker) Invoke() (*model.CreateUserDisclaimerRespo
 
 type DeleteInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteInternetBandwidthInvoker) Invoke() (*model.DeleteInternetBandwidthResponse, error) {
@@ -105,6 +137,10 @@ type DeleteInternetBandwidthTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteInternetBandwidthTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteInternetBandwidthTagInvoker) Invoke() (*model.DeleteInternetBandwidthTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteInternetBandwidthTagInvoker) Invoke() (*model.DeleteInternetBandw
 
 type DeleteUserDisclaimerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteUserDisclaimerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteUserDisclaimerInvoker) Invoke() (*model.DeleteUserDisclaimerResponse, error) {
@@ -129,6 +169,10 @@ type ListAccessSitesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAccessSitesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAccessSitesInvoker) Invoke() (*model.ListAccessSitesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListAccessSitesInvoker) Invoke() (*model.ListAccessSitesResponse, error
 
 type ListGeipResourceQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGeipResourceQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGeipResourceQuotasInvoker) Invoke() (*model.ListGeipResourceQuotasResponse, error) {
@@ -153,6 +201,10 @@ type ListInternetBandwidthCountFilterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInternetBandwidthCountFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInternetBandwidthCountFilterTagsInvoker) Invoke() (*model.ListInternetBandwidthCountFilterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListInternetBandwidthCountFilterTagsInvoker) Invoke() (*model.ListInter
 
 type ListInternetBandwidthDomainTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInternetBandwidthDomainTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInternetBandwidthDomainTagsInvoker) Invoke() (*model.ListInternetBandwidthDomainTagsResponse, error) {
@@ -177,6 +233,10 @@ type ListInternetBandwidthFilterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInternetBandwidthFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInternetBandwidthFilterTagsInvoker) Invoke() (*model.ListInternetBandwidthFilterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListInternetBandwidthFilterTagsInvoker) Invoke() (*model.ListInternetBa
 
 type ListInternetBandwidthLimitsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInternetBandwidthLimitsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInternetBandwidthLimitsInvoker) Invoke() (*model.ListInternetBandwidthLimitsResponse, error) {
@@ -201,6 +265,10 @@ type ListInternetBandwidthsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInternetBandwidthsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInternetBandwidthsInvoker) Invoke() (*model.ListInternetBandwidthsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListInternetBandwidthsInvoker) Invoke() (*model.ListInternetBandwidthsR
 
 type ListSupportMasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSupportMasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSupportMasksInvoker) Invoke() (*model.ListSupportMasksResponse, error) {
@@ -225,6 +297,10 @@ type ShowInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowInternetBandwidthInvoker) Invoke() (*model.ShowInternetBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowInternetBandwidthInvoker) Invoke() (*model.ShowInternetBandwidthRes
 
 type ShowInternetBandwidthTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowInternetBandwidthTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowInternetBandwidthTagsInvoker) Invoke() (*model.ShowInternetBandwidthTagsResponse, error) {
@@ -249,6 +329,10 @@ type ShowUserDisclaimerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserDisclaimerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserDisclaimerInvoker) Invoke() (*model.ShowUserDisclaimerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowUserDisclaimerInvoker) Invoke() (*model.ShowUserDisclaimerResponse,
 
 type UpdateInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateInternetBandwidthInvoker) Invoke() (*model.UpdateInternetBandwidthResponse, error) {
@@ -273,6 +361,10 @@ type AddGeipSegmentTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddGeipSegmentTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddGeipSegmentTagsInvoker) Invoke() (*model.AddGeipSegmentTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *AddGeipSegmentTagsInvoker) Invoke() (*model.AddGeipSegmentTagsResponse,
 
 type AddGlobalEipTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddGlobalEipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddGlobalEipTagsInvoker) Invoke() (*model.AddGlobalEipTagsResponse, error) {
@@ -297,6 +393,10 @@ type AssociateGeipSegmentInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateGeipSegmentInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateGeipSegmentInstanceInvoker) Invoke() (*model.AssociateGeipSegmentInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *AssociateGeipSegmentInstanceInvoker) Invoke() (*model.AssociateGeipSegm
 
 type AssociateInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateInstanceInvoker) Invoke() (*model.AssociateInstanceResponse, error) {
@@ -321,6 +425,10 @@ type AttachInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AttachInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AttachInternetBandwidthInvoker) Invoke() (*model.AttachInternetBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *AttachInternetBandwidthInvoker) Invoke() (*model.AttachInternetBandwidt
 
 type BatchAttachGeipSegmentInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAttachGeipSegmentInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAttachGeipSegmentInternetBandwidthInvoker) Invoke() (*model.BatchAttachGeipSegmentInternetBandwidthResponse, error) {
@@ -345,6 +457,10 @@ type BatchAttachInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAttachInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAttachInternetBandwidthInvoker) Invoke() (*model.BatchAttachInternetBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *BatchAttachInternetBandwidthInvoker) Invoke() (*model.BatchAttachIntern
 
 type BatchCreateGeipSegmentTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateGeipSegmentTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateGeipSegmentTagsInvoker) Invoke() (*model.BatchCreateGeipSegmentTagsResponse, error) {
@@ -369,6 +489,10 @@ type BatchCreateGlobalEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateGlobalEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateGlobalEipInvoker) Invoke() (*model.BatchCreateGlobalEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *BatchCreateGlobalEipInvoker) Invoke() (*model.BatchCreateGlobalEipRespo
 
 type BatchCreateGlobalEipTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateGlobalEipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateGlobalEipTagsInvoker) Invoke() (*model.BatchCreateGlobalEipTagsResponse, error) {
@@ -393,6 +521,10 @@ type BatchDeleteGeipSegmentTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteGeipSegmentTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteGeipSegmentTagsInvoker) Invoke() (*model.BatchDeleteGeipSegmentTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *BatchDeleteGeipSegmentTagsInvoker) Invoke() (*model.BatchDeleteGeipSegm
 
 type BatchDeleteGlobalEipTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteGlobalEipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteGlobalEipTagsInvoker) Invoke() (*model.BatchDeleteGlobalEipTagsResponse, error) {
@@ -417,6 +553,10 @@ type BatchDetachGeipSegmentInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDetachGeipSegmentInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDetachGeipSegmentInternetBandwidthInvoker) Invoke() (*model.BatchDetachGeipSegmentInternetBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *BatchDetachGeipSegmentInternetBandwidthInvoker) Invoke() (*model.BatchD
 
 type BatchDetachInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDetachInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDetachInternetBandwidthInvoker) Invoke() (*model.BatchDetachInternetBandwidthResponse, error) {
@@ -441,6 +585,10 @@ type CountGlobalEipSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CountGlobalEipSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CountGlobalEipSegmentInvoker) Invoke() (*model.CountGlobalEipSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *CountGlobalEipSegmentInvoker) Invoke() (*model.CountGlobalEipSegmentRes
 
 type CountGlobalEipsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountGlobalEipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountGlobalEipsInvoker) Invoke() (*model.CountGlobalEipsResponse, error) {
@@ -465,6 +617,10 @@ type CreateGlobalEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateGlobalEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateGlobalEipInvoker) Invoke() (*model.CreateGlobalEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateGlobalEipInvoker) Invoke() (*model.CreateGlobalEipResponse, error
 
 type CreateGlobalEipSegmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateGlobalEipSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateGlobalEipSegmentInvoker) Invoke() (*model.CreateGlobalEipSegmentResponse, error) {
@@ -489,6 +649,10 @@ type DeleteGeipSegmentTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteGeipSegmentTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteGeipSegmentTagInvoker) Invoke() (*model.DeleteGeipSegmentTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *DeleteGeipSegmentTagInvoker) Invoke() (*model.DeleteGeipSegmentTagRespo
 
 type DeleteGlobalEipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteGlobalEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteGlobalEipInvoker) Invoke() (*model.DeleteGlobalEipResponse, error) {
@@ -513,6 +681,10 @@ type DeleteGlobalEipSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteGlobalEipSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteGlobalEipSegmentInvoker) Invoke() (*model.DeleteGlobalEipSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *DeleteGlobalEipSegmentInvoker) Invoke() (*model.DeleteGlobalEipSegmentR
 
 type DeleteGlobalEipTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteGlobalEipTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteGlobalEipTagInvoker) Invoke() (*model.DeleteGlobalEipTagResponse, error) {
@@ -537,6 +713,10 @@ type DetachInternetBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetachInternetBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetachInternetBandwidthInvoker) Invoke() (*model.DetachInternetBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *DetachInternetBandwidthInvoker) Invoke() (*model.DetachInternetBandwidt
 
 type DisassociateGeipSegmentInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateGeipSegmentInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateGeipSegmentInstanceInvoker) Invoke() (*model.DisassociateGeipSegmentInstanceResponse, error) {
@@ -561,6 +745,10 @@ type DisassociateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateInstanceInvoker) Invoke() (*model.DisassociateInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *DisassociateInstanceInvoker) Invoke() (*model.DisassociateInstanceRespo
 
 type ListGeipPoolsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGeipPoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGeipPoolsInvoker) Invoke() (*model.ListGeipPoolsResponse, error) {
@@ -585,6 +777,10 @@ type ListGeipSegmentCountFilterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGeipSegmentCountFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGeipSegmentCountFilterTagsInvoker) Invoke() (*model.ListGeipSegmentCountFilterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListGeipSegmentCountFilterTagsInvoker) Invoke() (*model.ListGeipSegment
 
 type ListGeipSegmentDomainTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGeipSegmentDomainTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGeipSegmentDomainTagsInvoker) Invoke() (*model.ListGeipSegmentDomainTagsResponse, error) {
@@ -609,6 +809,10 @@ type ListGeipSegmentFilterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGeipSegmentFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGeipSegmentFilterTagsInvoker) Invoke() (*model.ListGeipSegmentFilterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ListGeipSegmentFilterTagsInvoker) Invoke() (*model.ListGeipSegmentFilte
 
 type ListGlobalEipCountFilterTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalEipCountFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGlobalEipCountFilterTagsInvoker) Invoke() (*model.ListGlobalEipCountFilterTagsResponse, error) {
@@ -633,6 +841,10 @@ type ListGlobalEipDomainTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGlobalEipDomainTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGlobalEipDomainTagsInvoker) Invoke() (*model.ListGlobalEipDomainTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ListGlobalEipDomainTagsInvoker) Invoke() (*model.ListGlobalEipDomainTag
 
 type ListGlobalEipFilterTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalEipFilterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGlobalEipFilterTagsInvoker) Invoke() (*model.ListGlobalEipFilterTagsResponse, error) {
@@ -657,6 +873,10 @@ type ListGlobalEipSegmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListGlobalEipSegmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListGlobalEipSegmentsInvoker) Invoke() (*model.ListGlobalEipSegmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListGlobalEipSegmentsInvoker) Invoke() (*model.ListGlobalEipSegmentsRes
 
 type ListGlobalEipsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalEipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListGlobalEipsInvoker) Invoke() (*model.ListGlobalEipsResponse, error) {
@@ -681,6 +905,10 @@ type ShowGeipSegmentTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowGeipSegmentTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowGeipSegmentTagsInvoker) Invoke() (*model.ShowGeipSegmentTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowGeipSegmentTagsInvoker) Invoke() (*model.ShowGeipSegmentTagsRespons
 
 type ShowGlobalEipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowGlobalEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowGlobalEipInvoker) Invoke() (*model.ShowGlobalEipResponse, error) {
@@ -705,6 +937,10 @@ type ShowGlobalEipSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowGlobalEipSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowGlobalEipSegmentInvoker) Invoke() (*model.ShowGlobalEipSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ShowGlobalEipSegmentInvoker) Invoke() (*model.ShowGlobalEipSegmentRespo
 
 type ShowGlobalEipTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowGlobalEipTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowGlobalEipTagsInvoker) Invoke() (*model.ShowGlobalEipTagsResponse, error) {
@@ -729,6 +969,10 @@ type UpdateGlobalEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateGlobalEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateGlobalEipInvoker) Invoke() (*model.UpdateGlobalEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *UpdateGlobalEipInvoker) Invoke() (*model.UpdateGlobalEipResponse, error
 
 type UpdateGlobalEipSegmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateGlobalEipSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateGlobalEipSegmentInvoker) Invoke() (*model.UpdateGlobalEipSegmentResponse, error) {
@@ -753,6 +1001,10 @@ type ListJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ListJobsInvoker) Invoke() (*model.ListJobsResponse, error) {
 
 type ShowJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobsInvoker) Invoke() (*model.ShowJobsResponse, error) {
@@ -777,6 +1033,10 @@ type ListSupportRegionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSupportRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSupportRegionsInvoker) Invoke() (*model.ListSupportRegionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ListSupportRegionsInvoker) Invoke() (*model.ListSupportRegionsResponse,
 
 type ListTenantGeipSupportInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTenantGeipSupportInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTenantGeipSupportInstancesInvoker) Invoke() (*model.ListTenantGeipSupportInstancesResponse, error) {

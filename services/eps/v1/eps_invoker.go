@@ -9,6 +9,10 @@ type CreateEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEnterpriseProjectInvoker) Invoke() (*model.CreateEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateEnterpriseProjectInvoker) Invoke() (*model.CreateEnterpriseProjec
 
 type DisableEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableEnterpriseProjectInvoker) Invoke() (*model.DisableEnterpriseProjectResponse, error) {
@@ -33,6 +41,10 @@ type EnableEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableEnterpriseProjectInvoker) Invoke() (*model.EnableEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *EnableEnterpriseProjectInvoker) Invoke() (*model.EnableEnterpriseProjec
 
 type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
@@ -57,6 +73,10 @@ type ListEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnterpriseProjectInvoker) Invoke() (*model.ListEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListEnterpriseProjectInvoker) Invoke() (*model.ListEnterpriseProjectRes
 
 type ListProvidersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProvidersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProvidersInvoker) Invoke() (*model.ListProvidersResponse, error) {
@@ -81,6 +105,10 @@ type MigrateResourceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *MigrateResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *MigrateResourceInvoker) Invoke() (*model.MigrateResourceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *MigrateResourceInvoker) Invoke() (*model.MigrateResourceResponse, error
 
 type ShowApiVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowApiVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) {
@@ -105,6 +137,10 @@ type ShowEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEnterpriseProjectInvoker) Invoke() (*model.ShowEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowEnterpriseProjectInvoker) Invoke() (*model.ShowEnterpriseProjectRes
 
 type ShowEnterpriseProjectQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEnterpriseProjectQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEnterpriseProjectQuotaInvoker) Invoke() (*model.ShowEnterpriseProjectQuotaResponse, error) {
@@ -129,6 +169,10 @@ type ShowResourceBindEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowResourceBindEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowResourceBindEnterpriseProjectInvoker) Invoke() (*model.ShowResourceBindEnterpriseProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowResourceBindEnterpriseProjectInvoker) Invoke() (*model.ShowResource
 
 type UpdateEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEnterpriseProjectInvoker) Invoke() (*model.UpdateEnterpriseProjectResponse, error) {

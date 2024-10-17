@@ -9,6 +9,10 @@ type BatchListMetricDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchListMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchListMetricDataInvoker) Invoke() (*model.BatchListMetricDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchListMetricDataInvoker) Invoke() (*model.BatchListMetricDataRespons
 
 type CreateAlarmInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAlarmInvoker) Invoke() (*model.CreateAlarmResponse, error) {
@@ -33,6 +41,10 @@ type CreateAlarmTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAlarmTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAlarmTemplateInvoker) Invoke() (*model.CreateAlarmTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateAlarmTemplateInvoker) Invoke() (*model.CreateAlarmTemplateRespons
 
 type CreateEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEventsInvoker) Invoke() (*model.CreateEventsResponse, error) {
@@ -57,6 +73,10 @@ type CreateMetricDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateMetricDataInvoker) Invoke() (*model.CreateMetricDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateMetricDataInvoker) Invoke() (*model.CreateMetricDataResponse, err
 
 type CreateResourceGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateResourceGroupInvoker) Invoke() (*model.CreateResourceGroupResponse, error) {
@@ -81,6 +105,10 @@ type DeleteAlarmInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAlarmInvoker) Invoke() (*model.DeleteAlarmResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteAlarmInvoker) Invoke() (*model.DeleteAlarmResponse, error) {
 
 type DeleteAlarmTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlarmTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAlarmTemplateInvoker) Invoke() (*model.DeleteAlarmTemplateResponse, error) {
@@ -105,6 +137,10 @@ type DeleteResourceGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteResourceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteResourceGroupInvoker) Invoke() (*model.DeleteResourceGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteResourceGroupInvoker) Invoke() (*model.DeleteResourceGroupRespons
 
 type ListAlarmHistoriesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAlarmHistoriesInvoker) Invoke() (*model.ListAlarmHistoriesResponse, error) {
@@ -129,6 +169,10 @@ type ListAlarmTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAlarmTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAlarmTemplatesInvoker) Invoke() (*model.ListAlarmTemplatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListAlarmTemplatesInvoker) Invoke() (*model.ListAlarmTemplatesResponse,
 
 type ListAlarmsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAlarmsInvoker) Invoke() (*model.ListAlarmsResponse, error) {
@@ -153,6 +201,10 @@ type ListEventDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEventDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEventDetailInvoker) Invoke() (*model.ListEventDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListEventDetailInvoker) Invoke() (*model.ListEventDetailResponse, error
 
 type ListEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
@@ -177,6 +233,10 @@ type ListMetricsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMetricsInvoker) Invoke() (*model.ListMetricsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListMetricsInvoker) Invoke() (*model.ListMetricsResponse, error) {
 
 type ListResourceGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourceGroupInvoker) Invoke() (*model.ListResourceGroupResponse, error) {
@@ -201,6 +265,10 @@ type ShowAlarmInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAlarmInvoker) Invoke() (*model.ShowAlarmResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowAlarmInvoker) Invoke() (*model.ShowAlarmResponse, error) {
 
 type ShowEventDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEventDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEventDataInvoker) Invoke() (*model.ShowEventDataResponse, error) {
@@ -225,6 +297,10 @@ type ShowMetricDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMetricDataInvoker) Invoke() (*model.ShowMetricDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowMetricDataInvoker) Invoke() (*model.ShowMetricDataResponse, error) 
 
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
@@ -249,6 +329,10 @@ type ShowResourceGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowResourceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowResourceGroupInvoker) Invoke() (*model.ShowResourceGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowResourceGroupInvoker) Invoke() (*model.ShowResourceGroupResponse, e
 
 type UpdateAlarmInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAlarmInvoker) Invoke() (*model.UpdateAlarmResponse, error) {
@@ -273,6 +361,10 @@ type UpdateAlarmActionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAlarmActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAlarmActionInvoker) Invoke() (*model.UpdateAlarmActionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -285,6 +377,10 @@ type UpdateAlarmTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAlarmTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAlarmTemplateInvoker) Invoke() (*model.UpdateAlarmTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -295,6 +391,10 @@ func (i *UpdateAlarmTemplateInvoker) Invoke() (*model.UpdateAlarmTemplateRespons
 
 type UpdateResourceGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateResourceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateResourceGroupInvoker) Invoke() (*model.UpdateResourceGroupResponse, error) {

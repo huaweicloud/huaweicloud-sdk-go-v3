@@ -8,10 +8,10 @@ import (
 
 type JobBean struct {
 
-	// 任务ID,异步查询标识
+	// 任务ID。
 	JobId string `json:"job_id"`
 
-	// 状态
+	// 任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
 	Status string `json:"status"`
 
 	// 类型
@@ -23,13 +23,16 @@ type JobBean struct {
 	// 虚拟机名称
 	ServerName string `json:"server_name"`
 
+	// 资源ID
+	ResourceId string `json:"resource_id"`
+
 	// 开始时间
 	BeginTime int64 `json:"begin_time"`
 
 	// 结束时间
 	EndTime int64 `json:"end_time"`
 
-	// 计费模式
+	// 计费模式 - Period:包周期计费 - Demand:按需计费
 	ChargeMode string `json:"charge_mode"`
 
 	// 错误码
@@ -38,10 +41,10 @@ type JobBean struct {
 	// 失败原因
 	FailReason *string `json:"fail_reason,omitempty"`
 
-	// 双机实例HA共用的id
+	// 防护实例ID,该字段已废弃
 	HaId *string `json:"ha_id,omitempty"`
 
-	// HA别名
+	// 防护实例名称，该字段已废弃
 	HaName *string `json:"ha_name,omitempty"`
 }
 

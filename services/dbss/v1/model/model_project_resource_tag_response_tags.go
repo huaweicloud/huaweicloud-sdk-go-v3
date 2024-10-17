@@ -8,11 +8,11 @@ import (
 
 type ProjectResourceTagResponseTags struct {
 
-	// 键。最大长度128个字符。 key满足3.1 KEY字符集规范。
-	Key string `json:"key"`
+	// 键。最大长度128个字符。
+	Key *string `json:"key,omitempty"`
 
-	// 值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
-	Values []string `json:"values"`
+	// 值列表。每个值最大长度255个字符。
+	Values *[]string `json:"values,omitempty"`
 }
 
 func (o ProjectResourceTagResponseTags) String() string {

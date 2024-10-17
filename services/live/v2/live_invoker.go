@@ -9,6 +9,10 @@ type ListAreaDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAreaDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAreaDetailInvoker) Invoke() (*model.ListAreaDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *ListAreaDetailInvoker) Invoke() (*model.ListAreaDetailResponse, error) 
 
 type ListBandwidthDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBandwidthDetailInvoker) Invoke() (*model.ListBandwidthDetailResponse, error) {
@@ -33,6 +41,10 @@ type ListDomainBandwidthPeakInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainBandwidthPeakInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainBandwidthPeakInvoker) Invoke() (*model.ListDomainBandwidthPeakResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListDomainBandwidthPeakInvoker) Invoke() (*model.ListDomainBandwidthPea
 
 type ListDomainTrafficDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDomainTrafficDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDomainTrafficDetailInvoker) Invoke() (*model.ListDomainTrafficDetailResponse, error) {
@@ -57,6 +73,10 @@ type ListDomainTrafficSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDomainTrafficSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDomainTrafficSummaryInvoker) Invoke() (*model.ListDomainTrafficSummaryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListDomainTrafficSummaryInvoker) Invoke() (*model.ListDomainTrafficSumm
 
 type ListHistoryStreamsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryStreamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListHistoryStreamsInvoker) Invoke() (*model.ListHistoryStreamsResponse, error) {
@@ -81,6 +105,10 @@ type ListPlayDomainStreamInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPlayDomainStreamInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPlayDomainStreamInfoInvoker) Invoke() (*model.ListPlayDomainStreamInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ListPlayDomainStreamInfoInvoker) Invoke() (*model.ListPlayDomainStreamI
 
 type ListQueryHttpCodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQueryHttpCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQueryHttpCodeInvoker) Invoke() (*model.ListQueryHttpCodeResponse, error) {
@@ -105,6 +137,10 @@ type ListRecordDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRecordDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRecordDataInvoker) Invoke() (*model.ListRecordDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListRecordDataInvoker) Invoke() (*model.ListRecordDataResponse, error) 
 
 type ListSnapshotDataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSnapshotDataInvoker) Invoke() (*model.ListSnapshotDataResponse, error) {
@@ -129,6 +169,10 @@ type ListTranscodeDataInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTranscodeDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTranscodeDataInvoker) Invoke() (*model.ListTranscodeDataResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListTranscodeDataInvoker) Invoke() (*model.ListTranscodeDataResponse, e
 
 type ListUsersOfStreamInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUsersOfStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUsersOfStreamInvoker) Invoke() (*model.ListUsersOfStreamResponse, error) {
@@ -153,6 +201,10 @@ type ShowStreamCountInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStreamCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStreamCountInvoker) Invoke() (*model.ShowStreamCountResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowStreamCountInvoker) Invoke() (*model.ShowStreamCountResponse, error
 
 type ShowStreamPortraitInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowStreamPortraitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowStreamPortraitInvoker) Invoke() (*model.ShowStreamPortraitResponse, error) {
@@ -177,6 +233,10 @@ type ShowUpBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUpBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUpBandwidthInvoker) Invoke() (*model.ShowUpBandwidthResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowUpBandwidthInvoker) Invoke() (*model.ShowUpBandwidthResponse, error
 
 type ListSingleStreamBitrateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSingleStreamBitrateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSingleStreamBitrateInvoker) Invoke() (*model.ListSingleStreamBitrateResponse, error) {
@@ -201,6 +265,10 @@ type ListSingleStreamDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSingleStreamDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSingleStreamDetailInvoker) Invoke() (*model.ListSingleStreamDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -213,6 +281,10 @@ type ListSingleStreamFramerateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSingleStreamFramerateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSingleStreamFramerateInvoker) Invoke() (*model.ListSingleStreamFramerateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -223,6 +295,10 @@ func (i *ListSingleStreamFramerateInvoker) Invoke() (*model.ListSingleStreamFram
 
 type ListUpStreamDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUpStreamDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUpStreamDetailInvoker) Invoke() (*model.ListUpStreamDetailResponse, error) {

@@ -9,6 +9,10 @@ type CheckParametersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckParametersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckParametersInvoker) Invoke() (*model.CheckParametersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CheckParametersInvoker) Invoke() (*model.CheckParametersResponse, error
 
 type CheckRecordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckRecordInvoker) Invoke() (*model.CheckRecordResponse, error) {
@@ -33,6 +41,10 @@ type CheckRulesetParametersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckRulesetParametersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckRulesetParametersInvoker) Invoke() (*model.CheckRulesetParametersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CheckRulesetParametersInvoker) Invoke() (*model.CheckRulesetParametersR
 
 type CreateRulesetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRulesetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRulesetInvoker) Invoke() (*model.CreateRulesetResponse, error) {
@@ -57,6 +73,10 @@ type CreateTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTaskInvoker) Invoke() (*model.CreateTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateTaskInvoker) Invoke() (*model.CreateTaskResponse, error) {
 
 type DeleteRulesetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRulesetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRulesetInvoker) Invoke() (*model.DeleteRulesetResponse, error) {
@@ -81,6 +105,10 @@ type DeleteTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTaskInvoker) Invoke() (*model.DeleteTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteTaskInvoker) Invoke() (*model.DeleteTaskResponse, error) {
 
 type ListRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRulesInvoker) Invoke() (*model.ListRulesResponse, error) {
@@ -105,6 +137,10 @@ type ListRulesetsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRulesetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRulesetsInvoker) Invoke() (*model.ListRulesetsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListRulesetsInvoker) Invoke() (*model.ListRulesetsResponse, error) {
 
 type ListTaskParameterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTaskParameterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTaskParameterInvoker) Invoke() (*model.ListTaskParameterResponse, error) {
@@ -129,6 +169,10 @@ type ListTaskRulesetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTaskRulesetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTaskRulesetInvoker) Invoke() (*model.ListTaskRulesetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListTaskRulesetInvoker) Invoke() (*model.ListTaskRulesetResponse, error
 
 type ListTemplateRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTemplateRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTemplateRulesInvoker) Invoke() (*model.ListTemplateRulesResponse, error) {
@@ -153,6 +201,10 @@ type RunTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunTaskInvoker) Invoke() (*model.RunTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *RunTaskInvoker) Invoke() (*model.RunTaskResponse, error) {
 
 type SetDefaulTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SetDefaulTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SetDefaulTemplateInvoker) Invoke() (*model.SetDefaulTemplateResponse, error) {
@@ -177,6 +233,10 @@ type ShowProgressDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProgressDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProgressDetailInvoker) Invoke() (*model.ShowProgressDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ShowProgressDetailInvoker) Invoke() (*model.ShowProgressDetailResponse,
 
 type ShowTaskCmetricsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskCmetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTaskCmetricsInvoker) Invoke() (*model.ShowTaskCmetricsResponse, error) {
@@ -201,6 +265,10 @@ type ShowTaskDefectsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTaskDefectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTaskDefectsInvoker) Invoke() (*model.ShowTaskDefectsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ShowTaskDefectsInvoker) Invoke() (*model.ShowTaskDefectsResponse, error
 
 type ShowTaskDefectsStatisticInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskDefectsStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTaskDefectsStatisticInvoker) Invoke() (*model.ShowTaskDefectsStatisticResponse, error) {
@@ -225,6 +297,10 @@ type ShowTaskDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTaskDetailInvoker) Invoke() (*model.ShowTaskDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowTaskDetailInvoker) Invoke() (*model.ShowTaskDetailResponse, error) 
 
 type ShowTaskListByProjectIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskListByProjectIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTaskListByProjectIdInvoker) Invoke() (*model.ShowTaskListByProjectIdResponse, error) {
@@ -249,6 +329,10 @@ type ShowTaskPathTreeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTaskPathTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTaskPathTreeInvoker) Invoke() (*model.ShowTaskPathTreeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowTaskPathTreeInvoker) Invoke() (*model.ShowTaskPathTreeResponse, err
 
 type ShowTaskSettingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTaskSettingsInvoker) Invoke() (*model.ShowTaskSettingsResponse, error) {
@@ -273,6 +361,10 @@ type ShowTasklogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTasklogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTasklogInvoker) Invoke() (*model.ShowTasklogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowTasklogInvoker) Invoke() (*model.ShowTasklogResponse, error) {
 
 type ShowTasksRulesetsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTasksRulesetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTasksRulesetsInvoker) Invoke() (*model.ShowTasksRulesetsResponse, error) {
@@ -297,6 +393,10 @@ type StopTaskByIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopTaskByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopTaskByIdInvoker) Invoke() (*model.StopTaskByIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *StopTaskByIdInvoker) Invoke() (*model.StopTaskByIdResponse, error) {
 
 type UpdateDefectStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDefectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDefectStatusInvoker) Invoke() (*model.UpdateDefectStatusResponse, error) {
@@ -321,6 +425,10 @@ type UpdateIgnorePathInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateIgnorePathInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateIgnorePathInvoker) Invoke() (*model.UpdateIgnorePathResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -333,6 +441,10 @@ type UpdateTaskRulesetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateTaskRulesetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateTaskRulesetInvoker) Invoke() (*model.UpdateTaskRulesetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -343,6 +455,10 @@ func (i *UpdateTaskRulesetInvoker) Invoke() (*model.UpdateTaskRulesetResponse, e
 
 type UpdateTaskSettingsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTaskSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTaskSettingsInvoker) Invoke() (*model.UpdateTaskSettingsResponse, error) {

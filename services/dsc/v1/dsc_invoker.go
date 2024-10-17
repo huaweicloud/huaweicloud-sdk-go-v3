@@ -9,6 +9,10 @@ type AddBucketsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddBucketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddBucketsInvoker) Invoke() (*model.AddBucketsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddBucketsInvoker) Invoke() (*model.AddBucketsResponse, error) {
 
 type AddRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddRuleInvoker) Invoke() (*model.AddRuleResponse, error) {
@@ -33,6 +41,10 @@ type AddRuleGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddRuleGroupInvoker) Invoke() (*model.AddRuleGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AddRuleGroupInvoker) Invoke() (*model.AddRuleGroupResponse, error) {
 
 type AddScanJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddScanJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddScanJobInvoker) Invoke() (*model.AddScanJobResponse, error) {
@@ -57,6 +73,10 @@ type BatchAddDataMaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAddDataMaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAddDataMaskInvoker) Invoke() (*model.BatchAddDataMaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchAddDataMaskInvoker) Invoke() (*model.BatchAddDataMaskResponse, err
 
 type ChangeDbTemplateOperationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeDbTemplateOperationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeDbTemplateOperationInvoker) Invoke() (*model.ChangeDbTemplateOperationResponse, error) {
@@ -81,6 +105,10 @@ type ChangeRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeRuleInvoker) Invoke() (*model.ChangeRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ChangeRuleInvoker) Invoke() (*model.ChangeRuleResponse, error) {
 
 type CreateDatabaseWaterMarkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDatabaseWaterMarkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDatabaseWaterMarkInvoker) Invoke() (*model.CreateDatabaseWaterMarkResponse, error) {
@@ -105,6 +137,10 @@ type CreateDocWatermarkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDocWatermarkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDocWatermarkInvoker) Invoke() (*model.CreateDocWatermarkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateDocWatermarkInvoker) Invoke() (*model.CreateDocWatermarkResponse,
 
 type CreateDocWatermarkByAddressInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDocWatermarkByAddressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDocWatermarkByAddressInvoker) Invoke() (*model.CreateDocWatermarkByAddressResponse, error) {
@@ -129,6 +169,10 @@ type CreateImageWatermarkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateImageWatermarkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateImageWatermarkInvoker) Invoke() (*model.CreateImageWatermarkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateImageWatermarkInvoker) Invoke() (*model.CreateImageWatermarkRespo
 
 type CreateImageWatermarkByAddressInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateImageWatermarkByAddressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateImageWatermarkByAddressInvoker) Invoke() (*model.CreateImageWatermarkByAddressResponse, error) {
@@ -153,6 +201,10 @@ type CreateProductOrderInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateProductOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateProductOrderInvoker) Invoke() (*model.CreateProductOrderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateProductOrderInvoker) Invoke() (*model.CreateProductOrderResponse,
 
 type DeleteBucketInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteBucketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteBucketInvoker) Invoke() (*model.DeleteBucketResponse, error) {
@@ -177,6 +233,10 @@ type DeleteRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRuleInvoker) Invoke() (*model.DeleteRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteRuleInvoker) Invoke() (*model.DeleteRuleResponse, error) {
 
 type DeleteRuleGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRuleGroupInvoker) Invoke() (*model.DeleteRuleGroupResponse, error) {
@@ -201,6 +265,10 @@ type DeleteScanJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteScanJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteScanJobInvoker) Invoke() (*model.DeleteScanJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteScanJobInvoker) Invoke() (*model.DeleteScanJobResponse, error) {
 
 type ListBucketsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBucketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBucketsInvoker) Invoke() (*model.ListBucketsResponse, error) {
@@ -225,6 +297,10 @@ type ListDbMaskTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDbMaskTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDbMaskTaskInvoker) Invoke() (*model.ListDbMaskTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListDbMaskTaskInvoker) Invoke() (*model.ListDbMaskTaskResponse, error) 
 
 type ListRuleGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRuleGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRuleGroupsInvoker) Invoke() (*model.ListRuleGroupsResponse, error) {
@@ -249,6 +329,10 @@ type ShowDatabaseWaterMarkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDatabaseWaterMarkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDatabaseWaterMarkInvoker) Invoke() (*model.ShowDatabaseWaterMarkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowDatabaseWaterMarkInvoker) Invoke() (*model.ShowDatabaseWaterMarkRes
 
 type ShowDocWatermarkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDocWatermarkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDocWatermarkInvoker) Invoke() (*model.ShowDocWatermarkResponse, error) {
@@ -273,6 +361,10 @@ type ShowDocWatermarkByAddressInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDocWatermarkByAddressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDocWatermarkByAddressInvoker) Invoke() (*model.ShowDocWatermarkByAddressResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ShowDocWatermarkByAddressInvoker) Invoke() (*model.ShowDocWatermarkByAd
 
 type ShowImageWatermarkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowImageWatermarkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowImageWatermarkInvoker) Invoke() (*model.ShowImageWatermarkResponse, error) {
@@ -297,6 +393,10 @@ type ShowImageWatermarkByAddressInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowImageWatermarkByAddressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowImageWatermarkByAddressInvoker) Invoke() (*model.ShowImageWatermarkByAddressResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowImageWatermarkByAddressInvoker) Invoke() (*model.ShowImageWatermark
 
 type ShowImageWatermarkWithImageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowImageWatermarkWithImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowImageWatermarkWithImageInvoker) Invoke() (*model.ShowImageWatermarkWithImageResponse, error) {
@@ -321,6 +425,10 @@ type ShowImageWatermarkWithImageByAddressInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowImageWatermarkWithImageByAddressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowImageWatermarkWithImageByAddressInvoker) Invoke() (*model.ShowImageWatermarkWithImageByAddressResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowImageWatermarkWithImageByAddressInvoker) Invoke() (*model.ShowImage
 
 type ShowRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRulesInvoker) Invoke() (*model.ShowRulesResponse, error) {
@@ -345,6 +457,10 @@ type ShowScanJobResultsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowScanJobResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowScanJobResultsInvoker) Invoke() (*model.ShowScanJobResultsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowScanJobResultsInvoker) Invoke() (*model.ShowScanJobResultsResponse,
 
 type ShowScanJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowScanJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowScanJobsInvoker) Invoke() (*model.ShowScanJobsResponse, error) {
@@ -369,6 +489,10 @@ type ShowSpecificationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSpecificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSpecificationInvoker) Invoke() (*model.ShowSpecificationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowSpecificationInvoker) Invoke() (*model.ShowSpecificationResponse, e
 
 type ShowTopicsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTopicsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTopicsInvoker) Invoke() (*model.ShowTopicsResponse, error) {
@@ -393,6 +521,10 @@ type UpdateAssetNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAssetNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAssetNameInvoker) Invoke() (*model.UpdateAssetNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -405,6 +537,10 @@ type UpdateDefaultTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDefaultTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDefaultTopicInvoker) Invoke() (*model.UpdateDefaultTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -415,6 +551,10 @@ func (i *UpdateDefaultTopicInvoker) Invoke() (*model.UpdateDefaultTopicResponse,
 
 type ShowOpenApiCalledRecordsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOpenApiCalledRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOpenApiCalledRecordsInvoker) Invoke() (*model.ShowOpenApiCalledRecordsResponse, error) {

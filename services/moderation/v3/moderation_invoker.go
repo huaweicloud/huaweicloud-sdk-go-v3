@@ -9,6 +9,10 @@ type BatchCheckImageSyncInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCheckImageSyncInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCheckImageSyncInvoker) Invoke() (*model.BatchCheckImageSyncResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCheckImageSyncInvoker) Invoke() (*model.BatchCheckImageSyncRespons
 
 type CheckImageModerationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CheckImageModerationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CheckImageModerationInvoker) Invoke() (*model.CheckImageModerationResponse, error) {
@@ -33,6 +41,10 @@ type RunCloseAudioStreamModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunCloseAudioStreamModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunCloseAudioStreamModerationJobInvoker) Invoke() (*model.RunCloseAudioStreamModerationJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *RunCloseAudioStreamModerationJobInvoker) Invoke() (*model.RunCloseAudio
 
 type RunCloseVideoStreamModerationJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunCloseVideoStreamModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunCloseVideoStreamModerationJobInvoker) Invoke() (*model.RunCloseVideoStreamModerationJobResponse, error) {
@@ -57,6 +73,10 @@ type RunCreateAudioModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunCreateAudioModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunCreateAudioModerationJobInvoker) Invoke() (*model.RunCreateAudioModerationJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *RunCreateAudioModerationJobInvoker) Invoke() (*model.RunCreateAudioMode
 
 type RunCreateAudioStreamModerationJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunCreateAudioStreamModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunCreateAudioStreamModerationJobInvoker) Invoke() (*model.RunCreateAudioStreamModerationJobResponse, error) {
@@ -81,6 +105,10 @@ type RunCreateDocumentModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunCreateDocumentModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunCreateDocumentModerationJobInvoker) Invoke() (*model.RunCreateDocumentModerationJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *RunCreateDocumentModerationJobInvoker) Invoke() (*model.RunCreateDocume
 
 type RunCreateVideoModerationJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunCreateVideoModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunCreateVideoModerationJobInvoker) Invoke() (*model.RunCreateVideoModerationJobResponse, error) {
@@ -105,6 +137,10 @@ type RunCreateVideoStreamModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunCreateVideoStreamModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunCreateVideoStreamModerationJobInvoker) Invoke() (*model.RunCreateVideoStreamModerationJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *RunCreateVideoStreamModerationJobInvoker) Invoke() (*model.RunCreateVid
 
 type RunQueryAudioModerationJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunQueryAudioModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunQueryAudioModerationJobInvoker) Invoke() (*model.RunQueryAudioModerationJobResponse, error) {
@@ -129,6 +169,10 @@ type RunQueryDocumentModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunQueryDocumentModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunQueryDocumentModerationJobInvoker) Invoke() (*model.RunQueryDocumentModerationJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -141,6 +185,10 @@ type RunQueryVideoModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunQueryVideoModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunQueryVideoModerationJobInvoker) Invoke() (*model.RunQueryVideoModerationJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -151,6 +199,10 @@ func (i *RunQueryVideoModerationJobInvoker) Invoke() (*model.RunQueryVideoModera
 
 type RunTextModerationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunTextModerationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunTextModerationInvoker) Invoke() (*model.RunTextModerationResponse, error) {

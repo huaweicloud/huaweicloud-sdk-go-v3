@@ -47,37 +47,6 @@ func GenReqDefForBatchDeleteDedicatedHostTags() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateDedicatedHost() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1.0/{project_id}/dedicated-hosts").
-		WithResponse(new(model.CreateDedicatedHostResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteDedicatedHost() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v1.0/{project_id}/dedicated-hosts/{dedicated_host_id}").
-		WithResponse(new(model.DeleteDedicatedHostResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DedicatedHostId").
-		WithJsonTag("dedicated_host_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListDedicatedHostTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

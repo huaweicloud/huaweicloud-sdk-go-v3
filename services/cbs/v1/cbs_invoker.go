@@ -9,6 +9,10 @@ type CollectHotQuestionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CollectHotQuestionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CollectHotQuestionsInvoker) Invoke() (*model.CollectHotQuestionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CollectHotQuestionsInvoker) Invoke() (*model.CollectHotQuestionsRespons
 
 type CollectKeyWordsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CollectKeyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CollectKeyWordsInvoker) Invoke() (*model.CollectKeyWordsResponse, error) {
@@ -33,6 +41,10 @@ type CollectReplyRatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CollectReplyRatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CollectReplyRatesInvoker) Invoke() (*model.CollectReplyRatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -45,6 +57,10 @@ type CollectSessionStatsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CollectSessionStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CollectSessionStatsInvoker) Invoke() (*model.CollectSessionStatsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -55,6 +71,11 @@ func (i *CollectSessionStatsInvoker) Invoke() (*model.CollectSessionStatsRespons
 
 type CreateSessionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -71,6 +92,11 @@ type DeleteSessionInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteSessionInvoker) Invoke() (*model.DeleteSessionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -81,6 +107,10 @@ func (i *DeleteSessionInvoker) Invoke() (*model.DeleteSessionResponse, error) {
 
 type ExecuteComposeVideoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteComposeVideoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteComposeVideoInvoker) Invoke() (*model.ExecuteComposeVideoResponse, error) {
@@ -95,6 +125,10 @@ type ExecuteComposeVideoOndemandInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteComposeVideoOndemandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteComposeVideoOndemandInvoker) Invoke() (*model.ExecuteComposeVideoOndemandResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -105,6 +139,10 @@ func (i *ExecuteComposeVideoOndemandInvoker) Invoke() (*model.ExecuteComposeVide
 
 type ExecuteCreateVideoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCreateVideoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteCreateVideoInvoker) Invoke() (*model.ExecuteCreateVideoResponse, error) {
@@ -119,6 +157,10 @@ type ExecuteDeleteVideoByIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteDeleteVideoByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteDeleteVideoByIdInvoker) Invoke() (*model.ExecuteDeleteVideoByIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -129,6 +171,10 @@ func (i *ExecuteDeleteVideoByIdInvoker) Invoke() (*model.ExecuteDeleteVideoByIdR
 
 type ExecuteDeleteimageByIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteDeleteimageByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteDeleteimageByIdInvoker) Invoke() (*model.ExecuteDeleteimageByIdResponse, error) {
@@ -143,6 +189,10 @@ type ExecuteGetCharacterInfoByIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteGetCharacterInfoByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteGetCharacterInfoByIdInvoker) Invoke() (*model.ExecuteGetCharacterInfoByIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -153,6 +203,10 @@ func (i *ExecuteGetCharacterInfoByIdInvoker) Invoke() (*model.ExecuteGetCharacte
 
 type ExecuteGetCharactersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteGetCharactersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteGetCharactersInvoker) Invoke() (*model.ExecuteGetCharactersResponse, error) {
@@ -167,6 +221,10 @@ type ExecuteGetFramsListByImagesIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteGetFramsListByImagesIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteGetFramsListByImagesIdInvoker) Invoke() (*model.ExecuteGetFramsListByImagesIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -177,6 +235,10 @@ func (i *ExecuteGetFramsListByImagesIdInvoker) Invoke() (*model.ExecuteGetFramsL
 
 type ExecuteGetImagesListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteGetImagesListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteGetImagesListInvoker) Invoke() (*model.ExecuteGetImagesListResponse, error) {
@@ -191,6 +253,10 @@ type ExecuteGetVideoInfoByIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteGetVideoInfoByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteGetVideoInfoByIdInvoker) Invoke() (*model.ExecuteGetVideoInfoByIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -201,6 +267,10 @@ func (i *ExecuteGetVideoInfoByIdInvoker) Invoke() (*model.ExecuteGetVideoInfoByI
 
 type ExecuteGetVideosListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteGetVideosListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteGetVideosListInvoker) Invoke() (*model.ExecuteGetVideosListResponse, error) {
@@ -215,6 +285,10 @@ type ExecutePostCreateImagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecutePostCreateImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecutePostCreateImagesInvoker) Invoke() (*model.ExecutePostCreateImagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -225,6 +299,10 @@ func (i *ExecutePostCreateImagesInvoker) Invoke() (*model.ExecutePostCreateImage
 
 type ExecuteQaChatInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteQaChatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteQaChatInvoker) Invoke() (*model.ExecuteQaChatResponse, error) {
@@ -240,6 +318,11 @@ type ExecuteSessionInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ExecuteSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ExecuteSessionInvoker) Invoke() (*model.ExecuteSessionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -250,6 +333,10 @@ func (i *ExecuteSessionInvoker) Invoke() (*model.ExecuteSessionResponse, error) 
 
 type ExecuteUpdateImageNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteUpdateImageNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteUpdateImageNameInvoker) Invoke() (*model.ExecuteUpdateImageNameResponse, error) {
@@ -264,6 +351,10 @@ type ExecuteUpdateVideoByIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteUpdateVideoByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteUpdateVideoByIdInvoker) Invoke() (*model.ExecuteUpdateVideoByIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -274,6 +365,10 @@ func (i *ExecuteUpdateVideoByIdInvoker) Invoke() (*model.ExecuteUpdateVideoByIdR
 
 type ExecuteUpdateVideoInfoByIdInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteUpdateVideoInfoByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteUpdateVideoInfoByIdInvoker) Invoke() (*model.ExecuteUpdateVideoInfoByIdResponse, error) {
@@ -288,6 +383,10 @@ type ExecuteUploadImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteUploadImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteUploadImageInvoker) Invoke() (*model.ExecuteUploadImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -298,6 +397,10 @@ func (i *ExecuteUploadImageInvoker) Invoke() (*model.ExecuteUploadImageResponse,
 
 type ExecuteUploadPptInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExecuteUploadPptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExecuteUploadPptInvoker) Invoke() (*model.ExecuteUploadPptResponse, error) {
@@ -312,6 +415,10 @@ type ListSuggestionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSuggestionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSuggestionsInvoker) Invoke() (*model.ListSuggestionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -322,6 +429,10 @@ func (i *ListSuggestionsInvoker) Invoke() (*model.ListSuggestionsResponse, error
 
 type TagLaborInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *TagLaborInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *TagLaborInvoker) Invoke() (*model.TagLaborResponse, error) {
@@ -336,6 +447,10 @@ type TagSatisfactionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *TagSatisfactionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *TagSatisfactionInvoker) Invoke() (*model.TagSatisfactionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -346,6 +461,11 @@ func (i *TagSatisfactionInvoker) Invoke() (*model.TagSatisfactionResponse, error
 
 type PostRequestsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *PostRequestsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.

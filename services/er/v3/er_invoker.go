@@ -9,6 +9,10 @@ type AssociateRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateRouteTableInvoker) Invoke() (*model.AssociateRouteTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AssociateRouteTableInvoker) Invoke() (*model.AssociateRouteTableRespons
 
 type DisassociateRouteTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateRouteTableInvoker) Invoke() (*model.DisassociateRouteTableResponse, error) {
@@ -33,6 +41,10 @@ type ListAssociationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAssociationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAssociationsInvoker) Invoke() (*model.ListAssociationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListAssociationsInvoker) Invoke() (*model.ListAssociationsResponse, err
 
 type AcceptAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AcceptAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AcceptAttachmentInvoker) Invoke() (*model.AcceptAttachmentResponse, error) {
@@ -57,6 +73,10 @@ type ListAttachmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAttachmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAttachmentsInvoker) Invoke() (*model.ListAttachmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListAttachmentsInvoker) Invoke() (*model.ListAttachmentsResponse, error
 
 type RejectAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RejectAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RejectAttachmentInvoker) Invoke() (*model.RejectAttachmentResponse, error) {
@@ -81,6 +105,10 @@ type ShowAttachmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAttachmentInvoker) Invoke() (*model.ShowAttachmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ShowAttachmentInvoker) Invoke() (*model.ShowAttachmentResponse, error) 
 
 type UpdateAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAttachmentInvoker) Invoke() (*model.UpdateAttachmentResponse, error) {
@@ -105,6 +137,10 @@ type ListAvailabilityZoneInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAvailabilityZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAvailabilityZoneInvoker) Invoke() (*model.ListAvailabilityZoneResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListAvailabilityZoneInvoker) Invoke() (*model.ListAvailabilityZoneRespo
 
 type ChangeAvailabilityZoneInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeAvailabilityZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeAvailabilityZoneInvoker) Invoke() (*model.ChangeAvailabilityZoneResponse, error) {
@@ -129,6 +169,10 @@ type CreateEnterpriseRouterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEnterpriseRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEnterpriseRouterInvoker) Invoke() (*model.CreateEnterpriseRouterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateEnterpriseRouterInvoker) Invoke() (*model.CreateEnterpriseRouterR
 
 type DeleteEnterpriseRouterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnterpriseRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEnterpriseRouterInvoker) Invoke() (*model.DeleteEnterpriseRouterResponse, error) {
@@ -153,6 +201,10 @@ type ListEnterpriseRoutersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnterpriseRoutersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnterpriseRoutersInvoker) Invoke() (*model.ListEnterpriseRoutersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListEnterpriseRoutersInvoker) Invoke() (*model.ListEnterpriseRoutersRes
 
 type ShowEnterpriseRouterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowEnterpriseRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowEnterpriseRouterInvoker) Invoke() (*model.ShowEnterpriseRouterResponse, error) {
@@ -177,6 +233,10 @@ type UpdateEnterpriseRouterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEnterpriseRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEnterpriseRouterInvoker) Invoke() (*model.UpdateEnterpriseRouterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *UpdateEnterpriseRouterInvoker) Invoke() (*model.UpdateEnterpriseRouterR
 
 type CreateFlowLogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateFlowLogInvoker) Invoke() (*model.CreateFlowLogResponse, error) {
@@ -201,6 +265,10 @@ type DeleteFlowLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteFlowLogInvoker) Invoke() (*model.DeleteFlowLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteFlowLogInvoker) Invoke() (*model.DeleteFlowLogResponse, error) {
 
 type DisableFlowLogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableFlowLogInvoker) Invoke() (*model.DisableFlowLogResponse, error) {
@@ -225,6 +297,10 @@ type EnableFlowLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableFlowLogInvoker) Invoke() (*model.EnableFlowLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *EnableFlowLogInvoker) Invoke() (*model.EnableFlowLogResponse, error) {
 
 type ListFlowLogsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFlowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
@@ -249,6 +329,10 @@ type ShowFlowLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowFlowLogInvoker) Invoke() (*model.ShowFlowLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ShowFlowLogInvoker) Invoke() (*model.ShowFlowLogResponse, error) {
 
 type UpdateFlowLogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateFlowLogInvoker) Invoke() (*model.UpdateFlowLogResponse, error) {
@@ -273,6 +361,10 @@ type DisablePropagationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisablePropagationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisablePropagationInvoker) Invoke() (*model.DisablePropagationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DisablePropagationInvoker) Invoke() (*model.DisablePropagationResponse,
 
 type EnablePropagationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnablePropagationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnablePropagationInvoker) Invoke() (*model.EnablePropagationResponse, error) {
@@ -297,6 +393,10 @@ type ListPropagationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPropagationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPropagationsInvoker) Invoke() (*model.ListPropagationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListPropagationsInvoker) Invoke() (*model.ListPropagationsResponse, err
 
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
@@ -321,6 +425,10 @@ type CreateStaticRouteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateStaticRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateStaticRouteInvoker) Invoke() (*model.CreateStaticRouteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *CreateStaticRouteInvoker) Invoke() (*model.CreateStaticRouteResponse, e
 
 type DeleteStaticRouteInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteStaticRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteStaticRouteInvoker) Invoke() (*model.DeleteStaticRouteResponse, error) {
@@ -345,6 +457,10 @@ type ListEffectiveRoutesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEffectiveRoutesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEffectiveRoutesInvoker) Invoke() (*model.ListEffectiveRoutesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListEffectiveRoutesInvoker) Invoke() (*model.ListEffectiveRoutesRespons
 
 type ListStaticRoutesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListStaticRoutesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListStaticRoutesInvoker) Invoke() (*model.ListStaticRoutesResponse, error) {
@@ -369,6 +489,10 @@ type ShowStaticRouteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStaticRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStaticRouteInvoker) Invoke() (*model.ShowStaticRouteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowStaticRouteInvoker) Invoke() (*model.ShowStaticRouteResponse, error
 
 type UpdateStaticRouteInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateStaticRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateStaticRouteInvoker) Invoke() (*model.UpdateStaticRouteResponse, error) {
@@ -393,6 +521,10 @@ type CreateRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRouteTableInvoker) Invoke() (*model.CreateRouteTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *CreateRouteTableInvoker) Invoke() (*model.CreateRouteTableResponse, err
 
 type DeleteRouteTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRouteTableInvoker) Invoke() (*model.DeleteRouteTableResponse, error) {
@@ -417,6 +553,10 @@ type ListRouteTablesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRouteTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRouteTablesInvoker) Invoke() (*model.ListRouteTablesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListRouteTablesInvoker) Invoke() (*model.ListRouteTablesResponse, error
 
 type ShowRouteTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRouteTableInvoker) Invoke() (*model.ShowRouteTableResponse, error) {
@@ -441,6 +585,10 @@ type UpdateRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRouteTableInvoker) Invoke() (*model.UpdateRouteTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *UpdateRouteTableInvoker) Invoke() (*model.UpdateRouteTableResponse, err
 
 type BatchCreateResourceTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
@@ -465,6 +617,10 @@ type CreateResourceTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateResourceTagInvoker) Invoke() (*model.CreateResourceTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *CreateResourceTagInvoker) Invoke() (*model.CreateResourceTagResponse, e
 
 type DeleteResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteResourceTagInvoker) Invoke() (*model.DeleteResourceTagResponse, error) {
@@ -489,6 +649,10 @@ type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 
 type ShowResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowResourceTagInvoker) Invoke() (*model.ShowResourceTagResponse, error) {
@@ -513,6 +681,10 @@ type CreateVpcAttachmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVpcAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVpcAttachmentInvoker) Invoke() (*model.CreateVpcAttachmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *CreateVpcAttachmentInvoker) Invoke() (*model.CreateVpcAttachmentRespons
 
 type DeleteVpcAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpcAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVpcAttachmentInvoker) Invoke() (*model.DeleteVpcAttachmentResponse, error) {
@@ -537,6 +713,10 @@ type ListVpcAttachmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVpcAttachmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVpcAttachmentsInvoker) Invoke() (*model.ListVpcAttachmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -549,6 +729,10 @@ type ShowVpcAttachmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpcAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpcAttachmentInvoker) Invoke() (*model.ShowVpcAttachmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -559,6 +743,10 @@ func (i *ShowVpcAttachmentInvoker) Invoke() (*model.ShowVpcAttachmentResponse, e
 
 type UpdateVpcAttachmentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpcAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpcAttachmentInvoker) Invoke() (*model.UpdateVpcAttachmentResponse, error) {

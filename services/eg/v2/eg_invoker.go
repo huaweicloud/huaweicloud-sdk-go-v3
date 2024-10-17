@@ -9,6 +9,10 @@ type PutEventsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PutEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PutEventsInvoker) Invoke() (*model.PutEventsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *PutEventsInvoker) Invoke() (*model.PutEventsResponse, error) {
 
 type PutOfficialEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PutOfficialEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PutOfficialEventsInvoker) Invoke() (*model.PutOfficialEventsResponse, error) {

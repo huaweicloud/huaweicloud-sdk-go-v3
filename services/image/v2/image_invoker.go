@@ -9,6 +9,10 @@ type RunCelebrityRecognitionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunCelebrityRecognitionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunCelebrityRecognitionInvoker) Invoke() (*model.RunCelebrityRecognitionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *RunCelebrityRecognitionInvoker) Invoke() (*model.RunCelebrityRecognitio
 
 type RunImageMainObjectDetectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunImageMainObjectDetectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunImageMainObjectDetectionInvoker) Invoke() (*model.RunImageMainObjectDetectionResponse, error) {
@@ -33,6 +41,10 @@ type RunImageMediaTaggingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunImageMediaTaggingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunImageMediaTaggingInvoker) Invoke() (*model.RunImageMediaTaggingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *RunImageMediaTaggingInvoker) Invoke() (*model.RunImageMediaTaggingRespo
 
 type RunImageMediaTaggingDetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunImageMediaTaggingDetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunImageMediaTaggingDetInvoker) Invoke() (*model.RunImageMediaTaggingDetResponse, error) {
@@ -57,6 +73,10 @@ type RunImageTaggingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunImageTaggingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunImageTaggingInvoker) Invoke() (*model.RunImageTaggingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *RunImageTaggingInvoker) Invoke() (*model.RunImageTaggingResponse, error
 
 type RunRecaptureDetectInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunRecaptureDetectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunRecaptureDetectInvoker) Invoke() (*model.RunRecaptureDetectResponse, error) {

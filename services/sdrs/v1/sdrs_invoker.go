@@ -9,6 +9,10 @@ type AddProtectedInstanceNicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddProtectedInstanceNicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddProtectedInstanceNicInvoker) Invoke() (*model.AddProtectedInstanceNicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddProtectedInstanceNicInvoker) Invoke() (*model.AddProtectedInstanceNi
 
 type AddProtectedInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddProtectedInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddProtectedInstanceTagsInvoker) Invoke() (*model.AddProtectedInstanceTagsResponse, error) {
@@ -33,6 +41,10 @@ type AttachProtectedInstanceReplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AttachProtectedInstanceReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AttachProtectedInstanceReplicationInvoker) Invoke() (*model.AttachProtectedInstanceReplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AttachProtectedInstanceReplicationInvoker) Invoke() (*model.AttachProte
 
 type BatchAddTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAddTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAddTagsInvoker) Invoke() (*model.BatchAddTagsResponse, error) {
@@ -57,6 +73,10 @@ type BatchCreateProtectedInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateProtectedInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateProtectedInstancesInvoker) Invoke() (*model.BatchCreateProtectedInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchCreateProtectedInstancesInvoker) Invoke() (*model.BatchCreateProte
 
 type BatchDeleteProtectedInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteProtectedInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteProtectedInstancesInvoker) Invoke() (*model.BatchDeleteProtectedInstancesResponse, error) {
@@ -81,6 +105,10 @@ type BatchDeleteTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error
 
 type CreateDisasterRecoveryDrillInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDisasterRecoveryDrillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDisasterRecoveryDrillInvoker) Invoke() (*model.CreateDisasterRecoveryDrillResponse, error) {
@@ -105,6 +137,10 @@ type CreateProtectedInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateProtectedInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateProtectedInstanceInvoker) Invoke() (*model.CreateProtectedInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateProtectedInstanceInvoker) Invoke() (*model.CreateProtectedInstanc
 
 type CreateProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateProtectionGroupInvoker) Invoke() (*model.CreateProtectionGroupResponse, error) {
@@ -129,6 +169,10 @@ type CreateReplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateReplicationInvoker) Invoke() (*model.CreateReplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateReplicationInvoker) Invoke() (*model.CreateReplicationResponse, e
 
 type DeleteAllServerGroupFailureJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAllServerGroupFailureJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAllServerGroupFailureJobsInvoker) Invoke() (*model.DeleteAllServerGroupFailureJobsResponse, error) {
@@ -153,6 +201,10 @@ type DeleteDisasterRecoveryDrillInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDisasterRecoveryDrillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDisasterRecoveryDrillInvoker) Invoke() (*model.DeleteDisasterRecoveryDrillResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteDisasterRecoveryDrillInvoker) Invoke() (*model.DeleteDisasterReco
 
 type DeleteFailureJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteFailureJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteFailureJobInvoker) Invoke() (*model.DeleteFailureJobResponse, error) {
@@ -177,6 +233,10 @@ type DeleteProtectedInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteProtectedInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteProtectedInstanceInvoker) Invoke() (*model.DeleteProtectedInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteProtectedInstanceInvoker) Invoke() (*model.DeleteProtectedInstanc
 
 type DeleteProtectedInstanceNicInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteProtectedInstanceNicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteProtectedInstanceNicInvoker) Invoke() (*model.DeleteProtectedInstanceNicResponse, error) {
@@ -201,6 +265,10 @@ type DeleteProtectedInstanceTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteProtectedInstanceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteProtectedInstanceTagInvoker) Invoke() (*model.DeleteProtectedInstanceTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteProtectedInstanceTagInvoker) Invoke() (*model.DeleteProtectedInst
 
 type DeleteProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteProtectionGroupInvoker) Invoke() (*model.DeleteProtectionGroupResponse, error) {
@@ -225,6 +297,10 @@ type DeleteReplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteReplicationInvoker) Invoke() (*model.DeleteReplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteReplicationInvoker) Invoke() (*model.DeleteReplicationResponse, e
 
 type DeleteServerGroupFailureJobsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteServerGroupFailureJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteServerGroupFailureJobsInvoker) Invoke() (*model.DeleteServerGroupFailureJobsResponse, error) {
@@ -249,6 +329,10 @@ type DetachProtectedInstanceReplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DetachProtectedInstanceReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DetachProtectedInstanceReplicationInvoker) Invoke() (*model.DetachProtectedInstanceReplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DetachProtectedInstanceReplicationInvoker) Invoke() (*model.DetachProte
 
 type ExpandReplicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExpandReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExpandReplicationInvoker) Invoke() (*model.ExpandReplicationResponse, error) {
@@ -273,6 +361,10 @@ type ListActiveActiveDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListActiveActiveDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListActiveActiveDomainsInvoker) Invoke() (*model.ListActiveActiveDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListActiveActiveDomainsInvoker) Invoke() (*model.ListActiveActiveDomain
 
 type ListDisasterRecoveryDrillsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDisasterRecoveryDrillsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDisasterRecoveryDrillsInvoker) Invoke() (*model.ListDisasterRecoveryDrillsResponse, error) {
@@ -297,6 +393,10 @@ type ListFailureJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListFailureJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListFailureJobsInvoker) Invoke() (*model.ListFailureJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListFailureJobsInvoker) Invoke() (*model.ListFailureJobsResponse, error
 
 type ListProtectedInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProtectedInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProtectedInstanceTagsInvoker) Invoke() (*model.ListProtectedInstanceTagsResponse, error) {
@@ -321,6 +425,10 @@ type ListProtectedInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProtectedInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProtectedInstancesInvoker) Invoke() (*model.ListProtectedInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListProtectedInstancesInvoker) Invoke() (*model.ListProtectedInstancesR
 
 type ListProtectedInstancesByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProtectedInstancesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProtectedInstancesByTagsInvoker) Invoke() (*model.ListProtectedInstancesByTagsResponse, error) {
@@ -345,6 +457,10 @@ type ListProtectedInstancesProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProtectedInstancesProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProtectedInstancesProjectTagsInvoker) Invoke() (*model.ListProtectedInstancesProjectTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListProtectedInstancesProjectTagsInvoker) Invoke() (*model.ListProtecte
 
 type ListProtectionGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListProtectionGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListProtectionGroupsInvoker) Invoke() (*model.ListProtectionGroupsResponse, error) {
@@ -369,6 +489,10 @@ type ListReplicationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListReplicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListReplicationsInvoker) Invoke() (*model.ListReplicationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListReplicationsInvoker) Invoke() (*model.ListReplicationsResponse, err
 
 type ListRpoStatisticsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRpoStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRpoStatisticsInvoker) Invoke() (*model.ListRpoStatisticsResponse, error) {
@@ -393,6 +521,10 @@ type ResizeProtectedInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResizeProtectedInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResizeProtectedInstanceInvoker) Invoke() (*model.ResizeProtectedInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ResizeProtectedInstanceInvoker) Invoke() (*model.ResizeProtectedInstanc
 
 type ShowDisasterRecoveryDrillInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDisasterRecoveryDrillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDisasterRecoveryDrillInvoker) Invoke() (*model.ShowDisasterRecoveryDrillResponse, error) {
@@ -417,6 +553,10 @@ type ShowProtectedInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProtectedInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProtectedInstanceInvoker) Invoke() (*model.ShowProtectedInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowProtectedInstanceInvoker) Invoke() (*model.ShowProtectedInstanceRes
 
 type ShowProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowProtectionGroupInvoker) Invoke() (*model.ShowProtectionGroupResponse, error) {
@@ -441,6 +585,10 @@ type ShowQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 
 type ShowReplicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowReplicationInvoker) Invoke() (*model.ShowReplicationResponse, error) {
@@ -465,6 +617,10 @@ type StartFailoverProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartFailoverProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartFailoverProtectionGroupInvoker) Invoke() (*model.StartFailoverProtectionGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *StartFailoverProtectionGroupInvoker) Invoke() (*model.StartFailoverProt
 
 type StartProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StartProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StartProtectionGroupInvoker) Invoke() (*model.StartProtectionGroupResponse, error) {
@@ -489,6 +649,10 @@ type StartReverseProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartReverseProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartReverseProtectionGroupInvoker) Invoke() (*model.StartReverseProtectionGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *StartReverseProtectionGroupInvoker) Invoke() (*model.StartReverseProtec
 
 type StopProtectionGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopProtectionGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopProtectionGroupInvoker) Invoke() (*model.StopProtectionGroupResponse, error) {
@@ -513,6 +681,10 @@ type UpdateDisasterRecoveryDrillNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDisasterRecoveryDrillNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDisasterRecoveryDrillNameInvoker) Invoke() (*model.UpdateDisasterRecoveryDrillNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *UpdateDisasterRecoveryDrillNameInvoker) Invoke() (*model.UpdateDisaster
 
 type UpdateProtectedInstanceNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateProtectedInstanceNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateProtectedInstanceNameInvoker) Invoke() (*model.UpdateProtectedInstanceNameResponse, error) {
@@ -537,6 +713,10 @@ type UpdateProtectionGroupNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateProtectionGroupNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateProtectionGroupNameInvoker) Invoke() (*model.UpdateProtectionGroupNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateProtectionGroupNameInvoker) Invoke() (*model.UpdateProtectionGrou
 
 type UpdateReplicationNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateReplicationNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateReplicationNameInvoker) Invoke() (*model.UpdateReplicationNameResponse, error) {
@@ -561,6 +745,10 @@ type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListApiVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -573,6 +761,10 @@ type ShowSpecifiedApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSpecifiedApiVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSpecifiedApiVersionInvoker) Invoke() (*model.ShowSpecifiedApiVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -583,6 +775,10 @@ func (i *ShowSpecifiedApiVersionInvoker) Invoke() (*model.ShowSpecifiedApiVersio
 
 type ShowJobStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowJobStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowJobStatusInvoker) Invoke() (*model.ShowJobStatusResponse, error) {

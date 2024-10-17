@@ -41,7 +41,7 @@ type CentralNetworkGdgwAttachment struct {
 
 	BandwidthType *BandwidthTypeEnum `json:"bandwidth_type"`
 
-	// 带宽值定义，单位Mbps。
+	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 
 	// 是否冻结

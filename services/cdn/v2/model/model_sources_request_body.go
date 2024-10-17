@@ -29,6 +29,12 @@ type SourcesRequestBody struct {
 
 	// 是否开启OBS静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
 	EnableObsWebHosting *int32 `json:"enable_obs_web_hosting,omitempty"`
+
+	// HTTP端口，默认80,端口取值取值范围1-65535。
+	HttpPort *int32 `json:"http_port,omitempty"`
+
+	// HTTPS端口，默认443,端口取值取值范围1-65535。
+	HttpsPort *int32 `json:"https_port,omitempty"`
 }
 
 func (o SourcesRequestBody) String() string {

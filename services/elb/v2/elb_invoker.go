@@ -9,6 +9,10 @@ type BatchCreateListenerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateListenerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateListenerTagsInvoker) Invoke() (*model.BatchCreateListenerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateListenerTagsInvoker) Invoke() (*model.BatchCreateListenerTag
 
 type BatchCreateLoadbalancerTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateLoadbalancerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateLoadbalancerTagsInvoker) Invoke() (*model.BatchCreateLoadbalancerTagsResponse, error) {
@@ -33,6 +41,10 @@ type BatchDeleteListenerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteListenerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteListenerTagsInvoker) Invoke() (*model.BatchDeleteListenerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchDeleteListenerTagsInvoker) Invoke() (*model.BatchDeleteListenerTag
 
 type BatchDeleteLoadbalancerTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteLoadbalancerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteLoadbalancerTagsInvoker) Invoke() (*model.BatchDeleteLoadbalancerTagsResponse, error) {
@@ -57,6 +73,10 @@ type CreateHealthmonitorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateHealthmonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateHealthmonitorInvoker) Invoke() (*model.CreateHealthmonitorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateHealthmonitorInvoker) Invoke() (*model.CreateHealthmonitorRespons
 
 type CreateL7policyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateL7policyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateL7policyInvoker) Invoke() (*model.CreateL7policyResponse, error) {
@@ -81,6 +105,10 @@ type CreateL7ruleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateL7ruleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateL7ruleInvoker) Invoke() (*model.CreateL7ruleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateL7ruleInvoker) Invoke() (*model.CreateL7ruleResponse, error) {
 
 type CreateListenerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateListenerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateListenerInvoker) Invoke() (*model.CreateListenerResponse, error) {
@@ -105,6 +137,10 @@ type CreateListenerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateListenerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateListenerTagsInvoker) Invoke() (*model.CreateListenerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateListenerTagsInvoker) Invoke() (*model.CreateListenerTagsResponse,
 
 type CreateLoadbalancerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateLoadbalancerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateLoadbalancerInvoker) Invoke() (*model.CreateLoadbalancerResponse, error) {
@@ -129,6 +169,10 @@ type CreateLoadbalancerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateLoadbalancerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateLoadbalancerTagsInvoker) Invoke() (*model.CreateLoadbalancerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateLoadbalancerTagsInvoker) Invoke() (*model.CreateLoadbalancerTagsR
 
 type CreateMemberInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateMemberInvoker) Invoke() (*model.CreateMemberResponse, error) {
@@ -153,6 +201,10 @@ type CreatePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePoolInvoker) Invoke() (*model.CreatePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreatePoolInvoker) Invoke() (*model.CreatePoolResponse, error) {
 
 type CreateWhitelistInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateWhitelistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateWhitelistInvoker) Invoke() (*model.CreateWhitelistResponse, error) {
@@ -177,6 +233,10 @@ type DeleteHealthmonitorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteHealthmonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteHealthmonitorInvoker) Invoke() (*model.DeleteHealthmonitorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteHealthmonitorInvoker) Invoke() (*model.DeleteHealthmonitorRespons
 
 type DeleteL7policyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteL7policyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteL7policyInvoker) Invoke() (*model.DeleteL7policyResponse, error) {
@@ -201,6 +265,10 @@ type DeleteL7ruleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteL7ruleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteL7ruleInvoker) Invoke() (*model.DeleteL7ruleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeleteL7ruleInvoker) Invoke() (*model.DeleteL7ruleResponse, error) {
 
 type DeleteListenerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteListenerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteListenerInvoker) Invoke() (*model.DeleteListenerResponse, error) {
@@ -225,6 +297,10 @@ type DeleteListenerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteListenerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteListenerTagsInvoker) Invoke() (*model.DeleteListenerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteListenerTagsInvoker) Invoke() (*model.DeleteListenerTagsResponse,
 
 type DeleteLoadbalancerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteLoadbalancerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteLoadbalancerInvoker) Invoke() (*model.DeleteLoadbalancerResponse, error) {
@@ -249,6 +329,10 @@ type DeleteLoadbalancerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteLoadbalancerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteLoadbalancerTagsInvoker) Invoke() (*model.DeleteLoadbalancerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteLoadbalancerTagsInvoker) Invoke() (*model.DeleteLoadbalancerTagsR
 
 type DeleteMemberInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMemberInvoker) Invoke() (*model.DeleteMemberResponse, error) {
@@ -273,6 +361,10 @@ type DeletePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePoolInvoker) Invoke() (*model.DeletePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeletePoolInvoker) Invoke() (*model.DeletePoolResponse, error) {
 
 type DeleteWhitelistInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteWhitelistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteWhitelistInvoker) Invoke() (*model.DeleteWhitelistResponse, error) {
@@ -297,6 +393,10 @@ type ListHealthmonitorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHealthmonitorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHealthmonitorsInvoker) Invoke() (*model.ListHealthmonitorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListHealthmonitorsInvoker) Invoke() (*model.ListHealthmonitorsResponse,
 
 type ListL7policiesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListL7policiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListL7policiesInvoker) Invoke() (*model.ListL7policiesResponse, error) {
@@ -321,6 +425,10 @@ type ListL7rulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListL7rulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListL7rulesInvoker) Invoke() (*model.ListL7rulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListL7rulesInvoker) Invoke() (*model.ListL7rulesResponse, error) {
 
 type ListListenerTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListListenerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListListenerTagsInvoker) Invoke() (*model.ListListenerTagsResponse, error) {
@@ -345,6 +457,10 @@ type ListListenersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListListenersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListListenersInvoker) Invoke() (*model.ListListenersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListListenersInvoker) Invoke() (*model.ListListenersResponse, error) {
 
 type ListListenersByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListListenersByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListListenersByTagsInvoker) Invoke() (*model.ListListenersByTagsResponse, error) {
@@ -369,6 +489,10 @@ type ListLoadbalancerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListLoadbalancerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListLoadbalancerTagsInvoker) Invoke() (*model.ListLoadbalancerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListLoadbalancerTagsInvoker) Invoke() (*model.ListLoadbalancerTagsRespo
 
 type ListLoadbalancersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListLoadbalancersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListLoadbalancersInvoker) Invoke() (*model.ListLoadbalancersResponse, error) {
@@ -393,6 +521,10 @@ type ListLoadbalancersByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListLoadbalancersByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListLoadbalancersByTagsInvoker) Invoke() (*model.ListLoadbalancersByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListLoadbalancersByTagsInvoker) Invoke() (*model.ListLoadbalancersByTag
 
 type ListMembersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMembersInvoker) Invoke() (*model.ListMembersResponse, error) {
@@ -417,6 +553,10 @@ type ListPoolsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPoolsInvoker) Invoke() (*model.ListPoolsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListPoolsInvoker) Invoke() (*model.ListPoolsResponse, error) {
 
 type ListWhitelistsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListWhitelistsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListWhitelistsInvoker) Invoke() (*model.ListWhitelistsResponse, error) {
@@ -441,6 +585,10 @@ type ShowHealthmonitorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowHealthmonitorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowHealthmonitorsInvoker) Invoke() (*model.ShowHealthmonitorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ShowHealthmonitorsInvoker) Invoke() (*model.ShowHealthmonitorsResponse,
 
 type ShowL7policyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowL7policyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowL7policyInvoker) Invoke() (*model.ShowL7policyResponse, error) {
@@ -465,6 +617,10 @@ type ShowL7ruleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowL7ruleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowL7ruleInvoker) Invoke() (*model.ShowL7ruleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ShowL7ruleInvoker) Invoke() (*model.ShowL7ruleResponse, error) {
 
 type ShowListenerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowListenerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowListenerInvoker) Invoke() (*model.ShowListenerResponse, error) {
@@ -489,6 +649,10 @@ type ShowListenerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowListenerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowListenerTagsInvoker) Invoke() (*model.ShowListenerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ShowListenerTagsInvoker) Invoke() (*model.ShowListenerTagsResponse, err
 
 type ShowLoadbalancerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowLoadbalancerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowLoadbalancerInvoker) Invoke() (*model.ShowLoadbalancerResponse, error) {
@@ -513,6 +681,10 @@ type ShowLoadbalancerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowLoadbalancerTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowLoadbalancerTagsInvoker) Invoke() (*model.ShowLoadbalancerTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ShowLoadbalancerTagsInvoker) Invoke() (*model.ShowLoadbalancerTagsRespo
 
 type ShowLoadbalancersStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowLoadbalancersStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowLoadbalancersStatusInvoker) Invoke() (*model.ShowLoadbalancersStatusResponse, error) {
@@ -537,6 +713,10 @@ type ShowMemberInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMemberInvoker) Invoke() (*model.ShowMemberResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ShowMemberInvoker) Invoke() (*model.ShowMemberResponse, error) {
 
 type ShowPoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPoolInvoker) Invoke() (*model.ShowPoolResponse, error) {
@@ -561,6 +745,10 @@ type ShowWhitelistInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowWhitelistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowWhitelistInvoker) Invoke() (*model.ShowWhitelistResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ShowWhitelistInvoker) Invoke() (*model.ShowWhitelistResponse, error) {
 
 type UpdateHealthmonitorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateHealthmonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateHealthmonitorInvoker) Invoke() (*model.UpdateHealthmonitorResponse, error) {
@@ -585,6 +777,10 @@ type UpdateL7policiesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateL7policiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateL7policiesInvoker) Invoke() (*model.UpdateL7policiesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *UpdateL7policiesInvoker) Invoke() (*model.UpdateL7policiesResponse, err
 
 type UpdateL7ruleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateL7ruleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateL7ruleInvoker) Invoke() (*model.UpdateL7ruleResponse, error) {
@@ -609,6 +809,10 @@ type UpdateListenerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateListenerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateListenerInvoker) Invoke() (*model.UpdateListenerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *UpdateListenerInvoker) Invoke() (*model.UpdateListenerResponse, error) 
 
 type UpdateLoadbalancerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateLoadbalancerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateLoadbalancerInvoker) Invoke() (*model.UpdateLoadbalancerResponse, error) {
@@ -633,6 +841,10 @@ type UpdateMemberInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateMemberInvoker) Invoke() (*model.UpdateMemberResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *UpdateMemberInvoker) Invoke() (*model.UpdateMemberResponse, error) {
 
 type UpdatePoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePoolInvoker) Invoke() (*model.UpdatePoolResponse, error) {
@@ -657,6 +873,10 @@ type UpdateWhitelistInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateWhitelistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateWhitelistInvoker) Invoke() (*model.UpdateWhitelistResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *UpdateWhitelistInvoker) Invoke() (*model.UpdateWhitelistResponse, error
 
 type CreateCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCertificateInvoker) Invoke() (*model.CreateCertificateResponse, error) {
@@ -681,6 +905,10 @@ type DeleteCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *DeleteCertificateInvoker) Invoke() (*model.DeleteCertificateResponse, e
 
 type ListCertificatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCertificatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, error) {
@@ -705,6 +937,10 @@ type ShowCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error
 
 type UpdateCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateCertificateInvoker) Invoke() (*model.UpdateCertificateResponse, error) {

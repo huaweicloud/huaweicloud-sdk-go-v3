@@ -9,6 +9,10 @@ type AssociateResourceSharePermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AssociateResourceSharePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AssociateResourceSharePermissionInvoker) Invoke() (*model.AssociateResourceSharePermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AssociateResourceSharePermissionInvoker) Invoke() (*model.AssociateReso
 
 type DisassociateResourceSharePermissionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisassociateResourceSharePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisassociateResourceSharePermissionInvoker) Invoke() (*model.DisassociateResourceSharePermissionResponse, error) {
@@ -33,6 +41,10 @@ type ListResourceSharePermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceSharePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceSharePermissionsInvoker) Invoke() (*model.ListResourceSharePermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListResourceSharePermissionsInvoker) Invoke() (*model.ListResourceShare
 
 type ListQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
@@ -57,6 +73,10 @@ type ListResourceTypesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceTypesInvoker) Invoke() (*model.ListResourceTypesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListResourceTypesInvoker) Invoke() (*model.ListResourceTypesResponse, e
 
 type DisableOrganizationShareInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DisableOrganizationShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DisableOrganizationShareInvoker) Invoke() (*model.DisableOrganizationShareResponse, error) {
@@ -81,6 +105,10 @@ type EnableOrganizationShareInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *EnableOrganizationShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *EnableOrganizationShareInvoker) Invoke() (*model.EnableOrganizationShareResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *EnableOrganizationShareInvoker) Invoke() (*model.EnableOrganizationShar
 
 type ShowOrganizationShareInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOrganizationShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOrganizationShareInvoker) Invoke() (*model.ShowOrganizationShareResponse, error) {
@@ -105,6 +137,10 @@ type ListPermissionVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPermissionVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPermissionVersionsInvoker) Invoke() (*model.ListPermissionVersionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListPermissionVersionsInvoker) Invoke() (*model.ListPermissionVersionsR
 
 type ListPermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPermissionsInvoker) Invoke() (*model.ListPermissionsResponse, error) {
@@ -129,6 +169,10 @@ type ShowPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPermissionInvoker) Invoke() (*model.ShowPermissionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowPermissionInvoker) Invoke() (*model.ShowPermissionResponse, error) 
 
 type SearchSharedPrincipalsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchSharedPrincipalsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchSharedPrincipalsInvoker) Invoke() (*model.SearchSharedPrincipalsResponse, error) {
@@ -153,6 +201,10 @@ type SearchSharedResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchSharedResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchSharedResourcesInvoker) Invoke() (*model.SearchSharedResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *SearchSharedResourcesInvoker) Invoke() (*model.SearchSharedResourcesRes
 
 type CreateResourceShareInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateResourceShareInvoker) Invoke() (*model.CreateResourceShareResponse, error) {
@@ -177,6 +233,10 @@ type DeleteResourceShareInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteResourceShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteResourceShareInvoker) Invoke() (*model.DeleteResourceShareResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteResourceShareInvoker) Invoke() (*model.DeleteResourceShareRespons
 
 type SearchResourceSharesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchResourceSharesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchResourceSharesInvoker) Invoke() (*model.SearchResourceSharesResponse, error) {
@@ -201,6 +265,10 @@ type UpdateResourceShareInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateResourceShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateResourceShareInvoker) Invoke() (*model.UpdateResourceShareResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *UpdateResourceShareInvoker) Invoke() (*model.UpdateResourceShareRespons
 
 type AssociateResourceShareInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateResourceShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateResourceShareInvoker) Invoke() (*model.AssociateResourceShareResponse, error) {
@@ -225,6 +297,10 @@ type DisassociateResourceShareInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateResourceShareInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateResourceShareInvoker) Invoke() (*model.DisassociateResourceShareResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DisassociateResourceShareInvoker) Invoke() (*model.DisassociateResource
 
 type SearchResourceShareAssociationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchResourceShareAssociationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchResourceShareAssociationsInvoker) Invoke() (*model.SearchResourceShareAssociationsResponse, error) {
@@ -249,6 +329,10 @@ type AcceptResourceShareInvitationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AcceptResourceShareInvitationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AcceptResourceShareInvitationInvoker) Invoke() (*model.AcceptResourceShareInvitationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *AcceptResourceShareInvitationInvoker) Invoke() (*model.AcceptResourceSh
 
 type RejectResourceShareInvitationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RejectResourceShareInvitationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RejectResourceShareInvitationInvoker) Invoke() (*model.RejectResourceShareInvitationResponse, error) {
@@ -273,6 +361,10 @@ type SearchResourceShareInvitationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SearchResourceShareInvitationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SearchResourceShareInvitationInvoker) Invoke() (*model.SearchResourceShareInvitationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *SearchResourceShareInvitationInvoker) Invoke() (*model.SearchResourceSh
 
 type BatchCreateResourceShareTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceShareTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateResourceShareTagsInvoker) Invoke() (*model.BatchCreateResourceShareTagsResponse, error) {
@@ -297,6 +393,10 @@ type BatchDeleteResourceShareTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteResourceShareTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteResourceShareTagsInvoker) Invoke() (*model.BatchDeleteResourceShareTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *BatchDeleteResourceShareTagsInvoker) Invoke() (*model.BatchDeleteResour
 
 type ListResourceShareTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourceShareTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourceShareTagsInvoker) Invoke() (*model.ListResourceShareTagsResponse, error) {
@@ -321,6 +425,10 @@ type ListResourceSharesByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListResourceSharesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListResourceSharesByTagsInvoker) Invoke() (*model.ListResourceSharesByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListResourceSharesByTagsInvoker) Invoke() (*model.ListResourceSharesByT
 
 type SearchResourceShareCountByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchResourceShareCountByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchResourceShareCountByTagsInvoker) Invoke() (*model.SearchResourceShareCountByTagsResponse, error) {

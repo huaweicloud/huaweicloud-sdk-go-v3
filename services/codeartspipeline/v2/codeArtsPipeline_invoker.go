@@ -9,6 +9,10 @@ type AcceptManualReviewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AcceptManualReviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AcceptManualReviewInvoker) Invoke() (*model.AcceptManualReviewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AcceptManualReviewInvoker) Invoke() (*model.AcceptManualReviewResponse,
 
 type BatchMovePipelineToGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchMovePipelineToGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchMovePipelineToGroupInvoker) Invoke() (*model.BatchMovePipelineToGroupResponse, error) {
@@ -33,6 +41,10 @@ type BatchShowPipelinesLatestStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchShowPipelinesLatestStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchShowPipelinesLatestStatusInvoker) Invoke() (*model.BatchShowPipelinesLatestStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchShowPipelinesLatestStatusInvoker) Invoke() (*model.BatchShowPipeli
 
 type BatchShowPipelinesStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchShowPipelinesStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchShowPipelinesStatusInvoker) Invoke() (*model.BatchShowPipelinesStatusResponse, error) {
@@ -57,6 +73,10 @@ type CreateBasicPluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateBasicPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateBasicPluginInvoker) Invoke() (*model.CreateBasicPluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateBasicPluginInvoker) Invoke() (*model.CreateBasicPluginResponse, e
 
 type CreatePipelineByTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineByTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePipelineByTemplateInvoker) Invoke() (*model.CreatePipelineByTemplateResponse, error) {
@@ -81,6 +105,10 @@ type CreatePipelineByTemplateIdInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePipelineByTemplateIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePipelineByTemplateIdInvoker) Invoke() (*model.CreatePipelineByTemplateIdResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreatePipelineByTemplateIdInvoker) Invoke() (*model.CreatePipelineByTem
 
 type CreatePipelineGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePipelineGroupInvoker) Invoke() (*model.CreatePipelineGroupResponse, error) {
@@ -105,6 +137,10 @@ type CreatePipelineNewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePipelineNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePipelineNewInvoker) Invoke() (*model.CreatePipelineNewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreatePipelineNewInvoker) Invoke() (*model.CreatePipelineNewResponse, e
 
 type CreatePipelineTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePipelineTemplateInvoker) Invoke() (*model.CreatePipelineTemplateResponse, error) {
@@ -129,6 +169,10 @@ type CreatePluginDraftInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePluginDraftInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePluginDraftInvoker) Invoke() (*model.CreatePluginDraftResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreatePluginDraftInvoker) Invoke() (*model.CreatePluginDraftResponse, e
 
 type CreatePluginVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePluginVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePluginVersionInvoker) Invoke() (*model.CreatePluginVersionResponse, error) {
@@ -153,6 +201,10 @@ type CreatePublisherInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePublisherInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePublisherInvoker) Invoke() (*model.CreatePublisherResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreatePublisherInvoker) Invoke() (*model.CreatePublisherResponse, error
 
 type CreateRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateRuleInvoker) Invoke() (*model.CreateRuleResponse, error) {
@@ -177,6 +233,10 @@ type CreateStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateStrategyInvoker) Invoke() (*model.CreateStrategyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateStrategyInvoker) Invoke() (*model.CreateStrategyResponse, error) 
 
 type DeleteBasicPluginInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteBasicPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteBasicPluginInvoker) Invoke() (*model.DeleteBasicPluginResponse, error) {
@@ -201,6 +265,10 @@ type DeletePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePipelineInvoker) Invoke() (*model.DeletePipelineResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeletePipelineInvoker) Invoke() (*model.DeletePipelineResponse, error) 
 
 type DeletePipelineGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePipelineGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePipelineGroupInvoker) Invoke() (*model.DeletePipelineGroupResponse, error) {
@@ -225,6 +297,10 @@ type DeletePipelineTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePipelineTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePipelineTemplateInvoker) Invoke() (*model.DeletePipelineTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeletePipelineTemplateInvoker) Invoke() (*model.DeletePipelineTemplateR
 
 type DeletePluginDraftInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePluginDraftInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePluginDraftInvoker) Invoke() (*model.DeletePluginDraftResponse, error) {
@@ -249,6 +329,10 @@ type DeletePublisherInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePublisherInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePublisherInvoker) Invoke() (*model.DeletePublisherResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeletePublisherInvoker) Invoke() (*model.DeletePublisherResponse, error
 
 type DeleteRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRuleInvoker) Invoke() (*model.DeleteRuleResponse, error) {
@@ -273,6 +361,10 @@ type DeleteStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteStrategyInvoker) Invoke() (*model.DeleteStrategyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteStrategyInvoker) Invoke() (*model.DeleteStrategyResponse, error) 
 
 type ListAvailablePublisherInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAvailablePublisherInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAvailablePublisherInvoker) Invoke() (*model.ListAvailablePublisherResponse, error) {
@@ -297,6 +393,10 @@ type ListBasePluginsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBasePluginsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBasePluginsInvoker) Invoke() (*model.ListBasePluginsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListBasePluginsInvoker) Invoke() (*model.ListBasePluginsResponse, error
 
 type ListBasePluginsNewPostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBasePluginsNewPostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBasePluginsNewPostInvoker) Invoke() (*model.ListBasePluginsNewPostResponse, error) {
@@ -321,6 +425,10 @@ type ListPLuginVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPLuginVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPLuginVersionInvoker) Invoke() (*model.ListPLuginVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListPLuginVersionInvoker) Invoke() (*model.ListPLuginVersionResponse, e
 
 type ListPipelineRunsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPipelineRunsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPipelineRunsInvoker) Invoke() (*model.ListPipelineRunsResponse, error) {
@@ -345,6 +457,10 @@ type ListPipelineSimpleInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPipelineSimpleInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPipelineSimpleInfoInvoker) Invoke() (*model.ListPipelineSimpleInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListPipelineSimpleInfoInvoker) Invoke() (*model.ListPipelineSimpleInfoR
 
 type ListPipelineTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPipelineTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPipelineTemplatesInvoker) Invoke() (*model.ListPipelineTemplatesResponse, error) {
@@ -369,6 +489,10 @@ type ListPipelinesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPipelinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPipelinesInvoker) Invoke() (*model.ListPipelinesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListPipelinesInvoker) Invoke() (*model.ListPipelinesResponse, error) {
 
 type ListPipleineBuildResultInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPipleineBuildResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPipleineBuildResultInvoker) Invoke() (*model.ListPipleineBuildResultResponse, error) {
@@ -393,6 +521,10 @@ type ListPluginVersionNumberInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPluginVersionNumberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPluginVersionNumberInvoker) Invoke() (*model.ListPluginVersionNumberResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListPluginVersionNumberInvoker) Invoke() (*model.ListPluginVersionNumbe
 
 type ListPluginsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPluginsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPluginsInvoker) Invoke() (*model.ListPluginsResponse, error) {
@@ -417,6 +553,10 @@ type ListProjectStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectStrategyInvoker) Invoke() (*model.ListProjectStrategyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListProjectStrategyInvoker) Invoke() (*model.ListProjectStrategyRespons
 
 type ListPublisherInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPublisherInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPublisherInvoker) Invoke() (*model.ListPublisherResponse, error) {
@@ -441,6 +585,10 @@ type ListRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRuleInvoker) Invoke() (*model.ListRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ListRuleInvoker) Invoke() (*model.ListRuleResponse, error) {
 
 type ListStagePluginsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListStagePluginsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListStagePluginsInvoker) Invoke() (*model.ListStagePluginsResponse, error) {
@@ -465,6 +617,10 @@ type ListStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListStrategyInvoker) Invoke() (*model.ListStrategyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListStrategyInvoker) Invoke() (*model.ListStrategyResponse, error) {
 
 type ListTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
@@ -489,6 +649,10 @@ type PublishPluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PublishPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PublishPluginInvoker) Invoke() (*model.PublishPluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *PublishPluginInvoker) Invoke() (*model.PublishPluginResponse, error) {
 
 type PublishPluginBindInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PublishPluginBindInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PublishPluginBindInvoker) Invoke() (*model.PublishPluginBindResponse, error) {
@@ -513,6 +681,10 @@ type PublishPluginDraftInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PublishPluginDraftInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PublishPluginDraftInvoker) Invoke() (*model.PublishPluginDraftResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *PublishPluginDraftInvoker) Invoke() (*model.PublishPluginDraftResponse,
 
 type RejectManualReviewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RejectManualReviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RejectManualReviewInvoker) Invoke() (*model.RejectManualReviewResponse, error) {
@@ -537,6 +713,10 @@ type RemovePipelineInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemovePipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemovePipelineInvoker) Invoke() (*model.RemovePipelineResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *RemovePipelineInvoker) Invoke() (*model.RemovePipelineResponse, error) 
 
 type RetryPipelineRunInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RetryPipelineRunInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RetryPipelineRunInvoker) Invoke() (*model.RetryPipelineRunResponse, error) {
@@ -561,6 +745,10 @@ type RunPipelineInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunPipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunPipelineInvoker) Invoke() (*model.RunPipelineResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *RunPipelineInvoker) Invoke() (*model.RunPipelineResponse, error) {
 
 type ShowBasicPluginInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBasicPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBasicPluginInvoker) Invoke() (*model.ShowBasicPluginResponse, error) {
@@ -585,6 +777,10 @@ type ShowInstanceStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowInstanceStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ShowInstanceStatusInvoker) Invoke() (*model.ShowInstanceStatusResponse,
 
 type ShowPipelineArtifactsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineArtifactsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPipelineArtifactsInvoker) Invoke() (*model.ShowPipelineArtifactsResponse, error) {
@@ -609,6 +809,10 @@ type ShowPipelineDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPipelineDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPipelineDetailInvoker) Invoke() (*model.ShowPipelineDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ShowPipelineDetailInvoker) Invoke() (*model.ShowPipelineDetailResponse,
 
 type ShowPipelineGroupTreeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineGroupTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPipelineGroupTreeInvoker) Invoke() (*model.ShowPipelineGroupTreeResponse, error) {
@@ -633,6 +841,10 @@ type ShowPipelineLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPipelineLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPipelineLogInvoker) Invoke() (*model.ShowPipelineLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ShowPipelineLogInvoker) Invoke() (*model.ShowPipelineLogResponse, error
 
 type ShowPipelineRunDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPipelineRunDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPipelineRunDetailInvoker) Invoke() (*model.ShowPipelineRunDetailResponse, error) {
@@ -657,6 +873,10 @@ type ShowPipelineTemplateDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPipelineTemplateDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPipelineTemplateDetailInvoker) Invoke() (*model.ShowPipelineTemplateDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ShowPipelineTemplateDetailInvoker) Invoke() (*model.ShowPipelineTemplat
 
 type ShowPipleineStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPipleineStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPipleineStatusInvoker) Invoke() (*model.ShowPipleineStatusResponse, error) {
@@ -681,6 +905,10 @@ type ShowPluginInputsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPluginInputsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPluginInputsInvoker) Invoke() (*model.ShowPluginInputsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowPluginInputsInvoker) Invoke() (*model.ShowPluginInputsResponse, err
 
 type ShowPluginMetricsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPluginMetricsInvoker) Invoke() (*model.ShowPluginMetricsResponse, error) {
@@ -705,6 +937,10 @@ type ShowPluginOutputsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPluginOutputsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPluginOutputsInvoker) Invoke() (*model.ShowPluginOutputsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ShowPluginOutputsInvoker) Invoke() (*model.ShowPluginOutputsResponse, e
 
 type ShowPluginVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPluginVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPluginVersionInvoker) Invoke() (*model.ShowPluginVersionResponse, error) {
@@ -729,6 +969,10 @@ type ShowProjectStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowProjectStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowProjectStrategyInvoker) Invoke() (*model.ShowProjectStrategyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ShowProjectStrategyInvoker) Invoke() (*model.ShowProjectStrategyRespons
 
 type ShowPublisherInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPublisherInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPublisherInvoker) Invoke() (*model.ShowPublisherResponse, error) {
@@ -753,6 +1001,10 @@ type ShowRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRuleInvoker) Invoke() (*model.ShowRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ShowRuleInvoker) Invoke() (*model.ShowRuleResponse, error) {
 
 type ShowStepOutputsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowStepOutputsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowStepOutputsInvoker) Invoke() (*model.ShowStepOutputsResponse, error) {
@@ -777,6 +1033,10 @@ type ShowStrategyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowStrategyInvoker) Invoke() (*model.ShowStrategyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ShowStrategyInvoker) Invoke() (*model.ShowStrategyResponse, error) {
 
 type ShowTemplateDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTemplateDetailInvoker) Invoke() (*model.ShowTemplateDetailResponse, error) {
@@ -801,6 +1065,10 @@ type StartNewPipelineInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StartNewPipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StartNewPipelineInvoker) Invoke() (*model.StartNewPipelineResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *StartNewPipelineInvoker) Invoke() (*model.StartNewPipelineResponse, err
 
 type StopPipelineNewInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopPipelineNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopPipelineNewInvoker) Invoke() (*model.StopPipelineNewResponse, error) {
@@ -825,6 +1097,10 @@ type StopPipelineRunInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *StopPipelineRunInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *StopPipelineRunInvoker) Invoke() (*model.StopPipelineRunResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *StopPipelineRunInvoker) Invoke() (*model.StopPipelineRunResponse, error
 
 type SwitchStrategyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SwitchStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SwitchStrategyInvoker) Invoke() (*model.SwitchStrategyResponse, error) {
@@ -849,6 +1129,10 @@ type UpdateBasicPluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateBasicPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateBasicPluginInvoker) Invoke() (*model.UpdateBasicPluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *UpdateBasicPluginInvoker) Invoke() (*model.UpdateBasicPluginResponse, e
 
 type UpdatePipelineGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipelineGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePipelineGroupInvoker) Invoke() (*model.UpdatePipelineGroupResponse, error) {
@@ -873,6 +1161,10 @@ type UpdatePipelineInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePipelineInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePipelineInfoInvoker) Invoke() (*model.UpdatePipelineInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *UpdatePipelineInfoInvoker) Invoke() (*model.UpdatePipelineInfoResponse,
 
 type UpdatePipelineTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipelineTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePipelineTemplateInvoker) Invoke() (*model.UpdatePipelineTemplateResponse, error) {
@@ -897,6 +1193,10 @@ type UpdatePluginBaseInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePluginBaseInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePluginBaseInfoInvoker) Invoke() (*model.UpdatePluginBaseInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *UpdatePluginBaseInfoInvoker) Invoke() (*model.UpdatePluginBaseInfoRespo
 
 type UpdatePluginDraftInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePluginDraftInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePluginDraftInvoker) Invoke() (*model.UpdatePluginDraftResponse, error) {
@@ -921,6 +1225,10 @@ type UpdateRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateRuleInvoker) Invoke() (*model.UpdateRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *UpdateRuleInvoker) Invoke() (*model.UpdateRuleResponse, error) {
 
 type UpdateStrategyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateStrategyInvoker) Invoke() (*model.UpdateStrategyResponse, error) {
@@ -945,6 +1257,10 @@ type UploadBasicPluginInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadBasicPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadBasicPluginInvoker) Invoke() (*model.UploadBasicPluginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -957,6 +1273,10 @@ type UploadPluginIconInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadPluginIconInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadPluginIconInvoker) Invoke() (*model.UploadPluginIconResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -967,6 +1287,10 @@ func (i *UploadPluginIconInvoker) Invoke() (*model.UploadPluginIconResponse, err
 
 type UploadPublisherIconInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UploadPublisherIconInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UploadPublisherIconInvoker) Invoke() (*model.UploadPublisherIconResponse, error) {

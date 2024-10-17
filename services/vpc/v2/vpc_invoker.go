@@ -9,6 +9,10 @@ type AcceptVpcPeeringInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AcceptVpcPeeringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AcceptVpcPeeringInvoker) Invoke() (*model.AcceptVpcPeeringResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AcceptVpcPeeringInvoker) Invoke() (*model.AcceptVpcPeeringResponse, err
 
 type AssociateRouteTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AssociateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AssociateRouteTableInvoker) Invoke() (*model.AssociateRouteTableResponse, error) {
@@ -33,6 +41,10 @@ type BatchCreateSecurityGroupTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateSecurityGroupTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateSecurityGroupTagsInvoker) Invoke() (*model.BatchCreateSecurityGroupTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchCreateSecurityGroupTagsInvoker) Invoke() (*model.BatchCreateSecuri
 
 type BatchCreateSubnetTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateSubnetTagsInvoker) Invoke() (*model.BatchCreateSubnetTagsResponse, error) {
@@ -57,6 +73,10 @@ type BatchDeleteSecurityGroupTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteSecurityGroupTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteSecurityGroupTagsInvoker) Invoke() (*model.BatchDeleteSecurityGroupTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchDeleteSecurityGroupTagsInvoker) Invoke() (*model.BatchDeleteSecuri
 
 type BatchDeleteSubnetTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteSubnetTagsInvoker) Invoke() (*model.BatchDeleteSubnetTagsResponse, error) {
@@ -81,6 +105,10 @@ type CreateFlowLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateFlowLogInvoker) Invoke() (*model.CreateFlowLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateFlowLogInvoker) Invoke() (*model.CreateFlowLogResponse, error) {
 
 type CreatePortInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePortInvoker) Invoke() (*model.CreatePortResponse, error) {
@@ -105,6 +137,10 @@ type CreateRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRouteTableInvoker) Invoke() (*model.CreateRouteTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateRouteTableInvoker) Invoke() (*model.CreateRouteTableResponse, err
 
 type CreateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSecurityGroupInvoker) Invoke() (*model.CreateSecurityGroupResponse, error) {
@@ -129,6 +169,10 @@ type CreateSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSecurityGroupRuleInvoker) Invoke() (*model.CreateSecurityGroupRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateSecurityGroupRuleInvoker) Invoke() (*model.CreateSecurityGroupRul
 
 type CreateSecurityGroupTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityGroupTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSecurityGroupTagInvoker) Invoke() (*model.CreateSecurityGroupTagResponse, error) {
@@ -153,6 +201,10 @@ type CreateSubnetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateSubnetInvoker) Invoke() (*model.CreateSubnetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateSubnetInvoker) Invoke() (*model.CreateSubnetResponse, error) {
 
 type CreateSubnetTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSubnetTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSubnetTagInvoker) Invoke() (*model.CreateSubnetTagResponse, error) {
@@ -177,6 +233,10 @@ type CreateVpcPeeringInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVpcPeeringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVpcPeeringInvoker) Invoke() (*model.CreateVpcPeeringResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreateVpcPeeringInvoker) Invoke() (*model.CreateVpcPeeringResponse, err
 
 type DeleteFlowLogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteFlowLogInvoker) Invoke() (*model.DeleteFlowLogResponse, error) {
@@ -201,6 +265,10 @@ type DeletePortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePortInvoker) Invoke() (*model.DeletePortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *DeletePortInvoker) Invoke() (*model.DeletePortResponse, error) {
 
 type DeleteRouteTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteRouteTableInvoker) Invoke() (*model.DeleteRouteTableResponse, error) {
@@ -225,6 +297,10 @@ type DeleteSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSecurityGroupInvoker) Invoke() (*model.DeleteSecurityGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *DeleteSecurityGroupInvoker) Invoke() (*model.DeleteSecurityGroupRespons
 
 type DeleteSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSecurityGroupRuleInvoker) Invoke() (*model.DeleteSecurityGroupRuleResponse, error) {
@@ -249,6 +329,10 @@ type DeleteSecurityGroupTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSecurityGroupTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSecurityGroupTagInvoker) Invoke() (*model.DeleteSecurityGroupTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteSecurityGroupTagInvoker) Invoke() (*model.DeleteSecurityGroupTagR
 
 type DeleteSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteSubnetInvoker) Invoke() (*model.DeleteSubnetResponse, error) {
@@ -273,6 +361,10 @@ type DeleteSubnetTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSubnetTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSubnetTagInvoker) Invoke() (*model.DeleteSubnetTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteSubnetTagInvoker) Invoke() (*model.DeleteSubnetTagResponse, error
 
 type DeleteVpcPeeringInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpcPeeringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVpcPeeringInvoker) Invoke() (*model.DeleteVpcPeeringResponse, error) {
@@ -297,6 +393,10 @@ type DisassociateRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisassociateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisassociateRouteTableInvoker) Invoke() (*model.DisassociateRouteTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DisassociateRouteTableInvoker) Invoke() (*model.DisassociateRouteTableR
 
 type ListFlowLogsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListFlowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
@@ -321,6 +425,10 @@ type ListPortsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPortsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPortsInvoker) Invoke() (*model.ListPortsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ListPortsInvoker) Invoke() (*model.ListPortsResponse, error) {
 
 type ListRouteTablesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRouteTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRouteTablesInvoker) Invoke() (*model.ListRouteTablesResponse, error) {
@@ -345,6 +457,10 @@ type ListSecurityGroupRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSecurityGroupRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSecurityGroupRulesInvoker) Invoke() (*model.ListSecurityGroupRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListSecurityGroupRulesInvoker) Invoke() (*model.ListSecurityGroupRulesR
 
 type ListSecurityGroupTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityGroupTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSecurityGroupTagsInvoker) Invoke() (*model.ListSecurityGroupTagsResponse, error) {
@@ -369,6 +489,10 @@ type ListSecurityGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSecurityGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSecurityGroupsInvoker) Invoke() (*model.ListSecurityGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListSecurityGroupsInvoker) Invoke() (*model.ListSecurityGroupsResponse,
 
 type ListSecurityGroupsByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityGroupsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSecurityGroupsByTagsInvoker) Invoke() (*model.ListSecurityGroupsByTagsResponse, error) {
@@ -393,6 +521,10 @@ type ListSubnetTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSubnetTagsInvoker) Invoke() (*model.ListSubnetTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListSubnetTagsInvoker) Invoke() (*model.ListSubnetTagsResponse, error) 
 
 type ListSubnetsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSubnetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSubnetsInvoker) Invoke() (*model.ListSubnetsResponse, error) {
@@ -417,6 +553,10 @@ type ListSubnetsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSubnetsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSubnetsByTagsInvoker) Invoke() (*model.ListSubnetsByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListSubnetsByTagsInvoker) Invoke() (*model.ListSubnetsByTagsResponse, e
 
 type ListVpcPeeringsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpcPeeringsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpcPeeringsInvoker) Invoke() (*model.ListVpcPeeringsResponse, error) {
@@ -441,6 +585,10 @@ type RejectVpcPeeringInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RejectVpcPeeringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RejectVpcPeeringInvoker) Invoke() (*model.RejectVpcPeeringResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *RejectVpcPeeringInvoker) Invoke() (*model.RejectVpcPeeringResponse, err
 
 type ShowFlowLogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowFlowLogInvoker) Invoke() (*model.ShowFlowLogResponse, error) {
@@ -465,6 +617,10 @@ type ShowPortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPortInvoker) Invoke() (*model.ShowPortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ShowPortInvoker) Invoke() (*model.ShowPortResponse, error) {
 
 type ShowQuotaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
@@ -489,6 +649,10 @@ type ShowRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRouteTableInvoker) Invoke() (*model.ShowRouteTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ShowRouteTableInvoker) Invoke() (*model.ShowRouteTableResponse, error) 
 
 type ShowSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSecurityGroupInvoker) Invoke() (*model.ShowSecurityGroupResponse, error) {
@@ -513,6 +681,10 @@ type ShowSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSecurityGroupRuleInvoker) Invoke() (*model.ShowSecurityGroupRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ShowSecurityGroupRuleInvoker) Invoke() (*model.ShowSecurityGroupRuleRes
 
 type ShowSecurityGroupTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityGroupTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSecurityGroupTagsInvoker) Invoke() (*model.ShowSecurityGroupTagsResponse, error) {
@@ -537,6 +713,10 @@ type ShowSubnetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSubnetInvoker) Invoke() (*model.ShowSubnetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ShowSubnetInvoker) Invoke() (*model.ShowSubnetResponse, error) {
 
 type ShowSubnetTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSubnetTagsInvoker) Invoke() (*model.ShowSubnetTagsResponse, error) {
@@ -561,6 +745,10 @@ type ShowVpcPeeringInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpcPeeringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpcPeeringInvoker) Invoke() (*model.ShowVpcPeeringResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ShowVpcPeeringInvoker) Invoke() (*model.ShowVpcPeeringResponse, error) 
 
 type UpdateFlowLogInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateFlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateFlowLogInvoker) Invoke() (*model.UpdateFlowLogResponse, error) {
@@ -585,6 +777,10 @@ type UpdatePortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePortInvoker) Invoke() (*model.UpdatePortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *UpdatePortInvoker) Invoke() (*model.UpdatePortResponse, error) {
 
 type UpdateRouteTableInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateRouteTableInvoker) Invoke() (*model.UpdateRouteTableResponse, error) {
@@ -609,6 +809,10 @@ type UpdateSubnetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateSubnetInvoker) Invoke() (*model.UpdateSubnetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *UpdateSubnetInvoker) Invoke() (*model.UpdateSubnetResponse, error) {
 
 type UpdateVpcPeeringInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpcPeeringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpcPeeringInvoker) Invoke() (*model.UpdateVpcPeeringResponse, error) {
@@ -633,6 +841,10 @@ type CreatePrivateipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePrivateipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePrivateipInvoker) Invoke() (*model.CreatePrivateipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *CreatePrivateipInvoker) Invoke() (*model.CreatePrivateipResponse, error
 
 type DeletePrivateipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePrivateipInvoker) Invoke() (*model.DeletePrivateipResponse, error) {
@@ -657,6 +873,10 @@ type ListPrivateipsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPrivateipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPrivateipsInvoker) Invoke() (*model.ListPrivateipsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ListPrivateipsInvoker) Invoke() (*model.ListPrivateipsResponse, error) 
 
 type ShowNetworkIpAvailabilitiesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowNetworkIpAvailabilitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowNetworkIpAvailabilitiesInvoker) Invoke() (*model.ShowNetworkIpAvailabilitiesResponse, error) {
@@ -681,6 +905,10 @@ type ShowPrivateipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPrivateipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPrivateipInvoker) Invoke() (*model.ShowPrivateipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowPrivateipInvoker) Invoke() (*model.ShowPrivateipResponse, error) {
 
 type NeutronAddRouterInterfaceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronAddRouterInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronAddRouterInterfaceInvoker) Invoke() (*model.NeutronAddRouterInterfaceResponse, error) {
@@ -705,6 +937,10 @@ type NeutronCreateNetworkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronCreateNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronCreateNetworkInvoker) Invoke() (*model.NeutronCreateNetworkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *NeutronCreateNetworkInvoker) Invoke() (*model.NeutronCreateNetworkRespo
 
 type NeutronCreatePortInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreatePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronCreatePortInvoker) Invoke() (*model.NeutronCreatePortResponse, error) {
@@ -729,6 +969,10 @@ type NeutronCreateRouterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronCreateRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronCreateRouterInvoker) Invoke() (*model.NeutronCreateRouterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *NeutronCreateRouterInvoker) Invoke() (*model.NeutronCreateRouterRespons
 
 type NeutronCreateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronCreateSecurityGroupInvoker) Invoke() (*model.NeutronCreateSecurityGroupResponse, error) {
@@ -753,6 +1001,10 @@ type NeutronCreateSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronCreateSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronCreateSecurityGroupRuleInvoker) Invoke() (*model.NeutronCreateSecurityGroupRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *NeutronCreateSecurityGroupRuleInvoker) Invoke() (*model.NeutronCreateSe
 
 type NeutronCreateSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronCreateSubnetInvoker) Invoke() (*model.NeutronCreateSubnetResponse, error) {
@@ -777,6 +1033,10 @@ type NeutronDeleteNetworkInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronDeleteNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronDeleteNetworkInvoker) Invoke() (*model.NeutronDeleteNetworkResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *NeutronDeleteNetworkInvoker) Invoke() (*model.NeutronDeleteNetworkRespo
 
 type NeutronDeletePortInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeletePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronDeletePortInvoker) Invoke() (*model.NeutronDeletePortResponse, error) {
@@ -801,6 +1065,10 @@ type NeutronDeleteRouterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronDeleteRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronDeleteRouterInvoker) Invoke() (*model.NeutronDeleteRouterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *NeutronDeleteRouterInvoker) Invoke() (*model.NeutronDeleteRouterRespons
 
 type NeutronDeleteSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronDeleteSecurityGroupInvoker) Invoke() (*model.NeutronDeleteSecurityGroupResponse, error) {
@@ -825,6 +1097,10 @@ type NeutronDeleteSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronDeleteSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronDeleteSecurityGroupRuleInvoker) Invoke() (*model.NeutronDeleteSecurityGroupRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *NeutronDeleteSecurityGroupRuleInvoker) Invoke() (*model.NeutronDeleteSe
 
 type NeutronDeleteSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronDeleteSubnetInvoker) Invoke() (*model.NeutronDeleteSubnetResponse, error) {
@@ -849,6 +1129,10 @@ type NeutronListNetworksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronListNetworksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronListNetworksInvoker) Invoke() (*model.NeutronListNetworksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *NeutronListNetworksInvoker) Invoke() (*model.NeutronListNetworksRespons
 
 type NeutronListPortsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronListPortsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronListPortsInvoker) Invoke() (*model.NeutronListPortsResponse, error) {
@@ -873,6 +1161,10 @@ type NeutronListRoutersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronListRoutersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronListRoutersInvoker) Invoke() (*model.NeutronListRoutersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *NeutronListRoutersInvoker) Invoke() (*model.NeutronListRoutersResponse,
 
 type NeutronListSecurityGroupRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronListSecurityGroupRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronListSecurityGroupRulesInvoker) Invoke() (*model.NeutronListSecurityGroupRulesResponse, error) {
@@ -897,6 +1193,10 @@ type NeutronListSecurityGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronListSecurityGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronListSecurityGroupsInvoker) Invoke() (*model.NeutronListSecurityGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *NeutronListSecurityGroupsInvoker) Invoke() (*model.NeutronListSecurityG
 
 type NeutronListSubnetsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronListSubnetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronListSubnetsInvoker) Invoke() (*model.NeutronListSubnetsResponse, error) {
@@ -921,6 +1225,10 @@ type NeutronRemoveRouterInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronRemoveRouterInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronRemoveRouterInterfaceInvoker) Invoke() (*model.NeutronRemoveRouterInterfaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *NeutronRemoveRouterInterfaceInvoker) Invoke() (*model.NeutronRemoveRout
 
 type NeutronShowNetworkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronShowNetworkInvoker) Invoke() (*model.NeutronShowNetworkResponse, error) {
@@ -945,6 +1257,10 @@ type NeutronShowPortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronShowPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronShowPortInvoker) Invoke() (*model.NeutronShowPortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -955,6 +1271,10 @@ func (i *NeutronShowPortInvoker) Invoke() (*model.NeutronShowPortResponse, error
 
 type NeutronShowRouterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronShowRouterInvoker) Invoke() (*model.NeutronShowRouterResponse, error) {
@@ -969,6 +1289,10 @@ type NeutronShowSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronShowSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronShowSecurityGroupInvoker) Invoke() (*model.NeutronShowSecurityGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -979,6 +1303,10 @@ func (i *NeutronShowSecurityGroupInvoker) Invoke() (*model.NeutronShowSecurityGr
 
 type NeutronShowSecurityGroupRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowSecurityGroupRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronShowSecurityGroupRuleInvoker) Invoke() (*model.NeutronShowSecurityGroupRuleResponse, error) {
@@ -993,6 +1321,10 @@ type NeutronShowSubnetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronShowSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronShowSubnetInvoker) Invoke() (*model.NeutronShowSubnetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1003,6 +1335,10 @@ func (i *NeutronShowSubnetInvoker) Invoke() (*model.NeutronShowSubnetResponse, e
 
 type NeutronUpdateNetworkInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronUpdateNetworkInvoker) Invoke() (*model.NeutronUpdateNetworkResponse, error) {
@@ -1017,6 +1353,10 @@ type NeutronUpdatePortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronUpdatePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronUpdatePortInvoker) Invoke() (*model.NeutronUpdatePortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1027,6 +1367,10 @@ func (i *NeutronUpdatePortInvoker) Invoke() (*model.NeutronUpdatePortResponse, e
 
 type NeutronUpdateRouterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateRouterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronUpdateRouterInvoker) Invoke() (*model.NeutronUpdateRouterResponse, error) {
@@ -1041,6 +1385,10 @@ type NeutronUpdateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronUpdateSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronUpdateSecurityGroupInvoker) Invoke() (*model.NeutronUpdateSecurityGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1051,6 +1399,10 @@ func (i *NeutronUpdateSecurityGroupInvoker) Invoke() (*model.NeutronUpdateSecuri
 
 type NeutronUpdateSubnetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronUpdateSubnetInvoker) Invoke() (*model.NeutronUpdateSubnetResponse, error) {
@@ -1065,6 +1417,10 @@ type NeutronAddFirewallRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronAddFirewallRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronAddFirewallRuleInvoker) Invoke() (*model.NeutronAddFirewallRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1075,6 +1431,10 @@ func (i *NeutronAddFirewallRuleInvoker) Invoke() (*model.NeutronAddFirewallRuleR
 
 type NeutronCreateFirewallGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateFirewallGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronCreateFirewallGroupInvoker) Invoke() (*model.NeutronCreateFirewallGroupResponse, error) {
@@ -1089,6 +1449,10 @@ type NeutronCreateFirewallPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronCreateFirewallPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronCreateFirewallPolicyInvoker) Invoke() (*model.NeutronCreateFirewallPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1099,6 +1463,10 @@ func (i *NeutronCreateFirewallPolicyInvoker) Invoke() (*model.NeutronCreateFirew
 
 type NeutronCreateFirewallRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronCreateFirewallRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronCreateFirewallRuleInvoker) Invoke() (*model.NeutronCreateFirewallRuleResponse, error) {
@@ -1113,6 +1481,10 @@ type NeutronDeleteFirewallGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronDeleteFirewallGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronDeleteFirewallGroupInvoker) Invoke() (*model.NeutronDeleteFirewallGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1123,6 +1495,10 @@ func (i *NeutronDeleteFirewallGroupInvoker) Invoke() (*model.NeutronDeleteFirewa
 
 type NeutronDeleteFirewallPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronDeleteFirewallPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronDeleteFirewallPolicyInvoker) Invoke() (*model.NeutronDeleteFirewallPolicyResponse, error) {
@@ -1137,6 +1513,10 @@ type NeutronDeleteFirewallRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronDeleteFirewallRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronDeleteFirewallRuleInvoker) Invoke() (*model.NeutronDeleteFirewallRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1147,6 +1527,10 @@ func (i *NeutronDeleteFirewallRuleInvoker) Invoke() (*model.NeutronDeleteFirewal
 
 type NeutronListFirewallGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronListFirewallGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronListFirewallGroupsInvoker) Invoke() (*model.NeutronListFirewallGroupsResponse, error) {
@@ -1161,6 +1545,10 @@ type NeutronListFirewallPoliciesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronListFirewallPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronListFirewallPoliciesInvoker) Invoke() (*model.NeutronListFirewallPoliciesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1171,6 +1559,10 @@ func (i *NeutronListFirewallPoliciesInvoker) Invoke() (*model.NeutronListFirewal
 
 type NeutronListFirewallRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronListFirewallRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronListFirewallRulesInvoker) Invoke() (*model.NeutronListFirewallRulesResponse, error) {
@@ -1185,6 +1577,10 @@ type NeutronRemoveFirewallRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronRemoveFirewallRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronRemoveFirewallRuleInvoker) Invoke() (*model.NeutronRemoveFirewallRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1195,6 +1591,10 @@ func (i *NeutronRemoveFirewallRuleInvoker) Invoke() (*model.NeutronRemoveFirewal
 
 type NeutronShowFirewallGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowFirewallGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronShowFirewallGroupInvoker) Invoke() (*model.NeutronShowFirewallGroupResponse, error) {
@@ -1209,6 +1609,10 @@ type NeutronShowFirewallPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronShowFirewallPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronShowFirewallPolicyInvoker) Invoke() (*model.NeutronShowFirewallPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1219,6 +1623,10 @@ func (i *NeutronShowFirewallPolicyInvoker) Invoke() (*model.NeutronShowFirewallP
 
 type NeutronShowFirewallRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronShowFirewallRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronShowFirewallRuleInvoker) Invoke() (*model.NeutronShowFirewallRuleResponse, error) {
@@ -1233,6 +1641,10 @@ type NeutronUpdateFirewallGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronUpdateFirewallGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronUpdateFirewallGroupInvoker) Invoke() (*model.NeutronUpdateFirewallGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1243,6 +1655,10 @@ func (i *NeutronUpdateFirewallGroupInvoker) Invoke() (*model.NeutronUpdateFirewa
 
 type NeutronUpdateFirewallPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *NeutronUpdateFirewallPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *NeutronUpdateFirewallPolicyInvoker) Invoke() (*model.NeutronUpdateFirewallPolicyResponse, error) {
@@ -1257,6 +1673,10 @@ type NeutronUpdateFirewallRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *NeutronUpdateFirewallRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *NeutronUpdateFirewallRuleInvoker) Invoke() (*model.NeutronUpdateFirewallRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1267,6 +1687,10 @@ func (i *NeutronUpdateFirewallRuleInvoker) Invoke() (*model.NeutronUpdateFirewal
 
 type ListApiVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListApiVersionInvoker) Invoke() (*model.ListApiVersionResponse, error) {
@@ -1281,6 +1705,10 @@ type BatchCreateVpcTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateVpcTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateVpcTagsInvoker) Invoke() (*model.BatchCreateVpcTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1291,6 +1719,10 @@ func (i *BatchCreateVpcTagsInvoker) Invoke() (*model.BatchCreateVpcTagsResponse,
 
 type BatchDeleteVpcTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteVpcTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteVpcTagsInvoker) Invoke() (*model.BatchDeleteVpcTagsResponse, error) {
@@ -1305,6 +1737,10 @@ type CreateVpcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVpcInvoker) Invoke() (*model.CreateVpcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1315,6 +1751,10 @@ func (i *CreateVpcInvoker) Invoke() (*model.CreateVpcResponse, error) {
 
 type CreateVpcResourceTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVpcResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVpcResourceTagInvoker) Invoke() (*model.CreateVpcResourceTagResponse, error) {
@@ -1329,6 +1769,10 @@ type CreateVpcRouteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVpcRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVpcRouteInvoker) Invoke() (*model.CreateVpcRouteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1339,6 +1783,10 @@ func (i *CreateVpcRouteInvoker) Invoke() (*model.CreateVpcRouteResponse, error) 
 
 type DeleteVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVpcInvoker) Invoke() (*model.DeleteVpcResponse, error) {
@@ -1353,6 +1801,10 @@ type DeleteVpcRouteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVpcRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVpcRouteInvoker) Invoke() (*model.DeleteVpcRouteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1363,6 +1815,10 @@ func (i *DeleteVpcRouteInvoker) Invoke() (*model.DeleteVpcRouteResponse, error) 
 
 type DeleteVpcTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpcTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVpcTagInvoker) Invoke() (*model.DeleteVpcTagResponse, error) {
@@ -1377,6 +1833,10 @@ type ListVpcRoutesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVpcRoutesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVpcRoutesInvoker) Invoke() (*model.ListVpcRoutesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1387,6 +1847,10 @@ func (i *ListVpcRoutesInvoker) Invoke() (*model.ListVpcRoutesResponse, error) {
 
 type ListVpcTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpcTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpcTagsInvoker) Invoke() (*model.ListVpcTagsResponse, error) {
@@ -1401,6 +1865,10 @@ type ListVpcsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVpcsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVpcsInvoker) Invoke() (*model.ListVpcsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1411,6 +1879,10 @@ func (i *ListVpcsInvoker) Invoke() (*model.ListVpcsResponse, error) {
 
 type ListVpcsByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpcsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpcsByTagsInvoker) Invoke() (*model.ListVpcsByTagsResponse, error) {
@@ -1425,6 +1897,10 @@ type ShowVpcInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpcInvoker) Invoke() (*model.ShowVpcResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1435,6 +1911,10 @@ func (i *ShowVpcInvoker) Invoke() (*model.ShowVpcResponse, error) {
 
 type ShowVpcRouteInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVpcRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVpcRouteInvoker) Invoke() (*model.ShowVpcRouteResponse, error) {
@@ -1449,6 +1929,10 @@ type ShowVpcTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpcTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpcTagsInvoker) Invoke() (*model.ShowVpcTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1459,6 +1943,10 @@ func (i *ShowVpcTagsInvoker) Invoke() (*model.ShowVpcTagsResponse, error) {
 
 type UpdateVpcInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpcInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpcInvoker) Invoke() (*model.UpdateVpcResponse, error) {

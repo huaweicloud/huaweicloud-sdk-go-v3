@@ -9,6 +9,10 @@ type CheckProductHealthyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckProductHealthyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckProductHealthyInvoker) Invoke() (*model.CheckProductHealthyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CheckProductHealthyInvoker) Invoke() (*model.CheckProductHealthyRespons
 
 type ImportEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ImportEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ImportEventsInvoker) Invoke() (*model.ImportEventsResponse, error) {

@@ -9,19 +9,16 @@ import (
 // ShowAuditQuotaResponse Response Object
 type ShowAuditQuotaResponse struct {
 
-	// 实例当前剩余配额。
-	AuditQuota *int64 `json:"audit_quota,omitempty"`
-
-	// Cpu当前剩余配额。
-	Cpu *int64 `json:"cpu,omitempty"`
-
-	// 项目Id。
+	// 项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 配额。
-	Quota *int64 `json:"quota,omitempty"`
+	// 审计实例剩余配额。
+	AuditQuota *int64 `json:"audit_quota,omitempty"`
 
-	// 内存当前剩余配额
+	// CPU剩余配额。
+	Cpu *int64 `json:"cpu,omitempty"`
+
+	// 内存剩余配额。
 	Ram            *int64 `json:"ram,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -8,11 +8,11 @@ import (
 
 type ResourceInstanceTagRequestMatches struct {
 
-	// 键
-	Key *string `json:"key,omitempty"`
+	// 键，目前仅支持：resource_name
+	Key string `json:"key"`
 
-	// 值
-	Value *string `json:"value,omitempty"`
+	// 值，需要匹配的资源名称
+	Value string `json:"value"`
 }
 
 func (o ResourceInstanceTagRequestMatches) String() string {

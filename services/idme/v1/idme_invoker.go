@@ -9,6 +9,10 @@ type CreateXdmApplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateXdmApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateXdmApplicationInvoker) Invoke() (*model.CreateXdmApplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateXdmApplicationInvoker) Invoke() (*model.CreateXdmApplicationRespo
 
 type DeleteXdmApplicationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteXdmApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteXdmApplicationInvoker) Invoke() (*model.DeleteXdmApplicationResponse, error) {
@@ -33,6 +41,10 @@ type DeployApplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeployApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeployApplicationInvoker) Invoke() (*model.DeployApplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *DeployApplicationInvoker) Invoke() (*model.DeployApplicationResponse, e
 
 type ListAppsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAppsInvoker) Invoke() (*model.ListAppsResponse, error) {
@@ -57,6 +73,10 @@ type ListEnvsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEnvsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEnvsInvoker) Invoke() (*model.ListEnvsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -69,6 +89,10 @@ type ModifyApplicationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ModifyApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ModifyApplicationInvoker) Invoke() (*model.ModifyApplicationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -79,6 +103,10 @@ func (i *ModifyApplicationInvoker) Invoke() (*model.ModifyApplicationResponse, e
 
 type UninstallInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UninstallInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UninstallInvoker) Invoke() (*model.UninstallResponse, error) {

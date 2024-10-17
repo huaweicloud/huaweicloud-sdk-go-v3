@@ -9,7 +9,7 @@ import (
 // AuditInstanceListBean 审计实例列表bean
 type AuditInstanceListBean struct {
 
-	// 付费模式 Period：包周期 Demand：按需。
+	// 付费模式  - Period：包周期 - Demand：按需。
 	ChargeModel string `json:"charge_model"`
 
 	// 备注信息。
@@ -33,7 +33,7 @@ type AuditInstanceListBean struct {
 	// 支持的数据库总数
 	DatabaseLimit int32 `json:"database_limit"`
 
-	// 1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+	// 实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
 	Effect int32 `json:"effect"`
 
 	// 过期时间
@@ -48,10 +48,10 @@ type AuditInstanceListBean struct {
 	// 实例别名
 	Name string `json:"name"`
 
-	// 如果有返回，则需要升级，如果没有，则为null
+	// 如果有返回，则需要升级，如果没有，则为null。
 	NewVersion string `json:"new_version"`
 
-	// 绑定弹性IP的portID
+	// 绑定弹性IP的port ID
 	PortId string `json:"port_id"`
 
 	// 内存
@@ -78,13 +78,13 @@ type AuditInstanceListBean struct {
 	// 实例规格
 	Specification string `json:"specification"`
 
-	// 实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+	// 实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
 	Status string `json:"status"`
 
 	// 子网ID
 	SubnetId string `json:"subnet_id"`
 
-	// 任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+	// 任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
 	Task string `json:"task"`
 
 	// 实例的当前版本

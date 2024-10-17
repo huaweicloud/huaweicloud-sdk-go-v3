@@ -10,6 +10,11 @@ type BatchDeleteTagsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *BatchDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -20,6 +25,11 @@ func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error
 
 type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -36,6 +46,11 @@ type CreatePreheatingTasksInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreatePreheatingTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreatePreheatingTasksInvoker) Invoke() (*model.CreatePreheatingTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -46,6 +61,11 @@ func (i *CreatePreheatingTasksInvoker) Invoke() (*model.CreatePreheatingTasksRes
 
 type CreateRefreshTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateRefreshTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -62,6 +82,11 @@ type CreateTagsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -72,6 +97,11 @@ func (i *CreateTagsInvoker) Invoke() (*model.CreateTagsResponse, error) {
 
 type DeleteDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -88,6 +118,11 @@ type DisableDomainInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DisableDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DisableDomainInvoker) Invoke() (*model.DisableDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -98,6 +133,11 @@ func (i *DisableDomainInvoker) Invoke() (*model.DisableDomainResponse, error) {
 
 type EnableDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *EnableDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -114,6 +154,11 @@ type ListDomainsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -124,6 +169,11 @@ func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 
 type ShowBlackWhiteListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowBlackWhiteListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -140,6 +190,11 @@ type ShowCacheRulesInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowCacheRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowCacheRulesInvoker) Invoke() (*model.ShowCacheRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -150,6 +205,11 @@ func (i *ShowCacheRulesInvoker) Invoke() (*model.ShowCacheRulesResponse, error) 
 
 type ShowCertificatesHttpsInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowCertificatesHttpsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -166,6 +226,11 @@ type ShowDomainDetailInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowDomainDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowDomainDetailInvoker) Invoke() (*model.ShowDomainDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -176,6 +241,11 @@ func (i *ShowDomainDetailInvoker) Invoke() (*model.ShowDomainDetailResponse, err
 
 type ShowDomainFullConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowDomainFullConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -192,6 +262,11 @@ type ShowDomainItemDetailsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowDomainItemDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowDomainItemDetailsInvoker) Invoke() (*model.ShowDomainItemDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -202,6 +277,11 @@ func (i *ShowDomainItemDetailsInvoker) Invoke() (*model.ShowDomainItemDetailsRes
 
 type ShowDomainItemLocationDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowDomainItemLocationDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -218,6 +298,11 @@ type ShowDomainLocationStatsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowDomainLocationStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowDomainLocationStatsInvoker) Invoke() (*model.ShowDomainLocationStatsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -228,6 +313,11 @@ func (i *ShowDomainLocationStatsInvoker) Invoke() (*model.ShowDomainLocationStat
 
 type ShowDomainStatsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowDomainStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -244,6 +334,11 @@ type ShowHistoryTaskDetailsInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowHistoryTaskDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowHistoryTaskDetailsInvoker) Invoke() (*model.ShowHistoryTaskDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -254,6 +349,11 @@ func (i *ShowHistoryTaskDetailsInvoker) Invoke() (*model.ShowHistoryTaskDetailsR
 
 type ShowHistoryTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowHistoryTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -270,6 +370,11 @@ type ShowHttpInfoInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowHttpInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowHttpInfoInvoker) Invoke() (*model.ShowHttpInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -280,6 +385,11 @@ func (i *ShowHttpInfoInvoker) Invoke() (*model.ShowHttpInfoResponse, error) {
 
 type ShowIpInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowIpInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -295,6 +405,10 @@ type ShowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowLogsInvoker) Invoke() (*model.ShowLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -305,6 +419,11 @@ func (i *ShowLogsInvoker) Invoke() (*model.ShowLogsResponse, error) {
 
 type ShowOriginHostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowOriginHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -321,6 +440,11 @@ type ShowQuotaInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +455,11 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 
 type ShowReferInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowReferInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -347,6 +476,11 @@ type ShowResponseHeaderInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowResponseHeaderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowResponseHeaderInvoker) Invoke() (*model.ShowResponseHeaderResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -357,6 +491,11 @@ func (i *ShowResponseHeaderInvoker) Invoke() (*model.ShowResponseHeaderResponse,
 
 type ShowTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -373,6 +512,11 @@ type ShowTopUrlInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowTopUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowTopUrlInvoker) Invoke() (*model.ShowTopUrlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -383,6 +527,11 @@ func (i *ShowTopUrlInvoker) Invoke() (*model.ShowTopUrlResponse, error) {
 
 type ShowUrlTaskInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowUrlTaskInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -399,6 +548,11 @@ type UpdateBlackWhiteListInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateBlackWhiteListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateBlackWhiteListInvoker) Invoke() (*model.UpdateBlackWhiteListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -409,6 +563,11 @@ func (i *UpdateBlackWhiteListInvoker) Invoke() (*model.UpdateBlackWhiteListRespo
 
 type UpdateCacheRulesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateCacheRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -425,6 +584,11 @@ type UpdateDomainFullConfigInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateDomainFullConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateDomainFullConfigInvoker) Invoke() (*model.UpdateDomainFullConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -435,6 +599,11 @@ func (i *UpdateDomainFullConfigInvoker) Invoke() (*model.UpdateDomainFullConfigR
 
 type UpdateDomainMultiCertificatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateDomainMultiCertificatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -451,6 +620,11 @@ type UpdateDomainOriginInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateDomainOriginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateDomainOriginInvoker) Invoke() (*model.UpdateDomainOriginResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -461,6 +635,11 @@ func (i *UpdateDomainOriginInvoker) Invoke() (*model.UpdateDomainOriginResponse,
 
 type UpdateFollow302SwitchInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateFollow302SwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -477,6 +656,11 @@ type UpdateHttpsInfoInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateHttpsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateHttpsInfoInvoker) Invoke() (*model.UpdateHttpsInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -487,6 +671,11 @@ func (i *UpdateHttpsInfoInvoker) Invoke() (*model.UpdateHttpsInfoResponse, error
 
 type UpdateOriginHostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateOriginHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -503,6 +692,11 @@ type UpdatePrivateBucketAccessInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdatePrivateBucketAccessInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdatePrivateBucketAccessInvoker) Invoke() (*model.UpdatePrivateBucketAccessResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -513,6 +707,11 @@ func (i *UpdatePrivateBucketAccessInvoker) Invoke() (*model.UpdatePrivateBucketA
 
 type UpdateRangeSwitchInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateRangeSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -529,6 +728,11 @@ type UpdateReferInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateReferInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateReferInvoker) Invoke() (*model.UpdateReferResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -539,6 +743,11 @@ func (i *UpdateReferInvoker) Invoke() (*model.UpdateReferResponse, error) {
 
 type UpdateResponseHeaderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateResponseHeaderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.

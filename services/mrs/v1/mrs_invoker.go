@@ -9,6 +9,10 @@ type BatchCreateClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateClusterTagsInvoker) Invoke() (*model.BatchCreateClusterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateClusterTagsInvoker) Invoke() (*model.BatchCreateClusterTagsR
 
 type BatchDeleteClusterTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteClusterTagsInvoker) Invoke() (*model.BatchDeleteClusterTagsResponse, error) {
@@ -34,6 +42,11 @@ type CreateAndExecuteJobInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateAndExecuteJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateAndExecuteJobInvoker) Invoke() (*model.CreateAndExecuteJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -44,6 +57,10 @@ func (i *CreateAndExecuteJobInvoker) Invoke() (*model.CreateAndExecuteJobRespons
 
 type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
@@ -58,6 +75,10 @@ type CreateClusterTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateClusterTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateClusterTagInvoker) Invoke() (*model.CreateClusterTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -68,6 +89,10 @@ func (i *CreateClusterTagInvoker) Invoke() (*model.CreateClusterTagResponse, err
 
 type CreateScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateScalingPolicyInvoker) Invoke() (*model.CreateScalingPolicyResponse, error) {
@@ -82,6 +107,10 @@ type DeleteClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -92,6 +121,10 @@ func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 
 type DeleteClusterTagInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteClusterTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteClusterTagInvoker) Invoke() (*model.DeleteClusterTagResponse, error) {
@@ -107,6 +140,11 @@ type DeleteJobExecutionInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteJobExecutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteJobExecutionInvoker) Invoke() (*model.DeleteJobExecutionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -117,6 +155,10 @@ func (i *DeleteJobExecutionInvoker) Invoke() (*model.DeleteJobExecutionResponse,
 
 type ListAllTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAllTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAllTagsInvoker) Invoke() (*model.ListAllTagsResponse, error) {
@@ -131,6 +173,10 @@ type ListClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClusterTagsInvoker) Invoke() (*model.ListClusterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -143,6 +189,10 @@ type ListClustersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -153,6 +203,10 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 
 type ListClustersByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClustersByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClustersByTagsInvoker) Invoke() (*model.ListClustersByTagsResponse, error) {
@@ -168,6 +222,11 @@ type ListExecuteJobInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListExecuteJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListExecuteJobInvoker) Invoke() (*model.ListExecuteJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -180,6 +239,10 @@ type ListHostsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -190,6 +253,10 @@ func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
 
 type ShowClusterDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClusterDetailsInvoker) Invoke() (*model.ShowClusterDetailsResponse, error) {
@@ -205,6 +272,11 @@ type ShowJobExesInvoker struct {
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowJobExesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowJobExesInvoker) Invoke() (*model.ShowJobExesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -215,6 +287,10 @@ func (i *ShowJobExesInvoker) Invoke() (*model.ShowJobExesResponse, error) {
 
 type UpdateClusterScalingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterScalingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateClusterScalingInvoker) Invoke() (*model.UpdateClusterScalingResponse, error) {
@@ -229,6 +305,10 @@ type ListAvailableZonesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAvailableZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -239,6 +319,10 @@ func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse,
 
 type ShowMrsVersionMetadataInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMrsVersionMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMrsVersionMetadataInvoker) Invoke() (*model.ShowMrsVersionMetadataResponse, error) {

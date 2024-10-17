@@ -9,6 +9,10 @@ type BatchAddPeersToChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAddPeersToChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAddPeersToChannelInvoker) Invoke() (*model.BatchAddPeersToChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchAddPeersToChannelInvoker) Invoke() (*model.BatchAddPeersToChannelR
 
 type BatchCreateChannelsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateChannelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateChannelsInvoker) Invoke() (*model.BatchCreateChannelsResponse, error) {
@@ -33,6 +41,10 @@ type BatchInviteMembersToChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchInviteMembersToChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchInviteMembersToChannelInvoker) Invoke() (*model.BatchInviteMembersToChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchInviteMembersToChannelInvoker) Invoke() (*model.BatchInviteMembers
 
 type BatchRemoveOrgsFromChannelInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchRemoveOrgsFromChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchRemoveOrgsFromChannelInvoker) Invoke() (*model.BatchRemoveOrgsFromChannelResponse, error) {
@@ -57,6 +73,10 @@ type BatchRemovePeersFromChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchRemovePeersFromChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchRemovePeersFromChannelInvoker) Invoke() (*model.BatchRemovePeersFromChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchRemovePeersFromChannelInvoker) Invoke() (*model.BatchRemovePeersFr
 
 type CreateBlockchainCertByUserNameInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateBlockchainCertByUserNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateBlockchainCertByUserNameInvoker) Invoke() (*model.CreateBlockchainCertByUserNameResponse, error) {
@@ -81,6 +105,10 @@ type CreateNewBlockchainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateNewBlockchainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateNewBlockchainInvoker) Invoke() (*model.CreateNewBlockchainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateNewBlockchainInvoker) Invoke() (*model.CreateNewBlockchainRespons
 
 type DeleteBlockchainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteBlockchainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteBlockchainInvoker) Invoke() (*model.DeleteBlockchainResponse, error) {
@@ -105,6 +137,10 @@ type DeleteChannelInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteChannelInvoker) Invoke() (*model.DeleteChannelResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteChannelInvoker) Invoke() (*model.DeleteChannelResponse, error) {
 
 type DeleteMemberInviteInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteMemberInviteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteMemberInviteInvoker) Invoke() (*model.DeleteMemberInviteResponse, error) {
@@ -129,6 +169,10 @@ type DownloadBlockchainCertInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DownloadBlockchainCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DownloadBlockchainCertInvoker) Invoke() (*model.DownloadBlockchainCertResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DownloadBlockchainCertInvoker) Invoke() (*model.DownloadBlockchainCertR
 
 type DownloadBlockchainSdkConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DownloadBlockchainSdkConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DownloadBlockchainSdkConfigInvoker) Invoke() (*model.DownloadBlockchainSdkConfigResponse, error) {
@@ -153,6 +201,10 @@ type FreezeCertInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *FreezeCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *FreezeCertInvoker) Invoke() (*model.FreezeCertResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *FreezeCertInvoker) Invoke() (*model.FreezeCertResponse, error) {
 
 type HandleNotificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *HandleNotificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *HandleNotificationInvoker) Invoke() (*model.HandleNotificationResponse, error) {
@@ -177,6 +233,10 @@ type HandleUnionMemberQuitListInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *HandleUnionMemberQuitListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *HandleUnionMemberQuitListInvoker) Invoke() (*model.HandleUnionMemberQuitListResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *HandleUnionMemberQuitListInvoker) Invoke() (*model.HandleUnionMemberQui
 
 type ListBcsEventsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBcsEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBcsEventsInvoker) Invoke() (*model.ListBcsEventsResponse, error) {
@@ -201,6 +265,10 @@ type ListBcsEventsStatisticInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBcsEventsStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBcsEventsStatisticInvoker) Invoke() (*model.ListBcsEventsStatisticResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListBcsEventsStatisticInvoker) Invoke() (*model.ListBcsEventsStatisticR
 
 type ListBcsMetricInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBcsMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBcsMetricInvoker) Invoke() (*model.ListBcsMetricResponse, error) {
@@ -225,6 +297,10 @@ type ListBlockchainChannelsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBlockchainChannelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBlockchainChannelsInvoker) Invoke() (*model.ListBlockchainChannelsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListBlockchainChannelsInvoker) Invoke() (*model.ListBlockchainChannelsR
 
 type ListBlockchainsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListBlockchainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListBlockchainsInvoker) Invoke() (*model.ListBlockchainsResponse, error) {
@@ -249,6 +329,10 @@ type ListEntityMetricInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEntityMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEntityMetricInvoker) Invoke() (*model.ListEntityMetricResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListEntityMetricInvoker) Invoke() (*model.ListEntityMetricResponse, err
 
 type ListInstanceMetricInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstanceMetricInvoker) Invoke() (*model.ListInstanceMetricResponse, error) {
@@ -273,6 +361,10 @@ type ListMembersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMembersInvoker) Invoke() (*model.ListMembersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListMembersInvoker) Invoke() (*model.ListMembersResponse, error) {
 
 type ListNotificationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNotificationsInvoker) Invoke() (*model.ListNotificationsResponse, error) {
@@ -297,6 +393,10 @@ type ListOpRecordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListOpRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListOpRecordInvoker) Invoke() (*model.ListOpRecordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ListOpRecordInvoker) Invoke() (*model.ListOpRecordResponse, error) {
 
 type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
@@ -321,6 +425,10 @@ type ShowBlockchainDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBlockchainDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBlockchainDetailInvoker) Invoke() (*model.ShowBlockchainDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowBlockchainDetailInvoker) Invoke() (*model.ShowBlockchainDetailRespo
 
 type ShowBlockchainFlavorsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBlockchainFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBlockchainFlavorsInvoker) Invoke() (*model.ShowBlockchainFlavorsResponse, error) {
@@ -345,6 +457,10 @@ type ShowBlockchainNodesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowBlockchainNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowBlockchainNodesInvoker) Invoke() (*model.ShowBlockchainNodesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowBlockchainNodesInvoker) Invoke() (*model.ShowBlockchainNodesRespons
 
 type ShowBlockchainStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowBlockchainStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowBlockchainStatusInvoker) Invoke() (*model.ShowBlockchainStatusResponse, error) {
@@ -369,6 +489,10 @@ type UnfreezeCertInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UnfreezeCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UnfreezeCertInvoker) Invoke() (*model.UnfreezeCertResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *UnfreezeCertInvoker) Invoke() (*model.UnfreezeCertResponse, error) {
 
 type UpdateInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) {

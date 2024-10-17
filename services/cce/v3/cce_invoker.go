@@ -9,6 +9,10 @@ type AddNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddNodeInvoker) Invoke() (*model.AddNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddNodeInvoker) Invoke() (*model.AddNodeResponse, error) {
 
 type AddNodesToNodePoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddNodesToNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddNodesToNodePoolInvoker) Invoke() (*model.AddNodesToNodePoolResponse, error) {
@@ -33,6 +41,10 @@ type AwakeClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AwakeClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AwakeClusterInvoker) Invoke() (*model.AwakeClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *AwakeClusterInvoker) Invoke() (*model.AwakeClusterResponse, error) {
 
 type BatchCreateClusterTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateClusterTagsInvoker) Invoke() (*model.BatchCreateClusterTagsResponse, error) {
@@ -57,6 +73,10 @@ type BatchDeleteClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteClusterTagsInvoker) Invoke() (*model.BatchDeleteClusterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *BatchDeleteClusterTagsInvoker) Invoke() (*model.BatchDeleteClusterTagsR
 
 type BatchSyncNodesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchSyncNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchSyncNodesInvoker) Invoke() (*model.BatchSyncNodesResponse, error) {
@@ -81,6 +105,10 @@ type ContinueUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ContinueUpgradeClusterTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ContinueUpgradeClusterTaskInvoker) Invoke() (*model.ContinueUpgradeClusterTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ContinueUpgradeClusterTaskInvoker) Invoke() (*model.ContinueUpgradeClus
 
 type CreateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAddonInstanceInvoker) Invoke() (*model.CreateAddonInstanceResponse, error) {
@@ -105,6 +137,10 @@ type CreateCloudPersistentVolumeClaimsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateCloudPersistentVolumeClaimsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateCloudPersistentVolumeClaimsInvoker) Invoke() (*model.CreateCloudPersistentVolumeClaimsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateCloudPersistentVolumeClaimsInvoker) Invoke() (*model.CreateCloudP
 
 type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
@@ -129,6 +169,10 @@ type CreateClusterMasterSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateClusterMasterSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateClusterMasterSnapshotInvoker) Invoke() (*model.CreateClusterMasterSnapshotResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateClusterMasterSnapshotInvoker) Invoke() (*model.CreateClusterMaste
 
 type CreateKubernetesClusterCertInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateKubernetesClusterCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateKubernetesClusterCertInvoker) Invoke() (*model.CreateKubernetesClusterCertResponse, error) {
@@ -153,6 +201,10 @@ type CreateNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateNodeInvoker) Invoke() (*model.CreateNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateNodeInvoker) Invoke() (*model.CreateNodeResponse, error) {
 
 type CreateNodePoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateNodePoolInvoker) Invoke() (*model.CreateNodePoolResponse, error) {
@@ -177,6 +233,10 @@ type CreatePartitionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePartitionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error
 
 type CreatePostCheckInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePostCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePostCheckInvoker) Invoke() (*model.CreatePostCheckResponse, error) {
@@ -201,6 +265,10 @@ type CreatePreCheckInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePreCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePreCheckInvoker) Invoke() (*model.CreatePreCheckResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreatePreCheckInvoker) Invoke() (*model.CreatePreCheckResponse, error) 
 
 type CreateReleaseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateReleaseInvoker) Invoke() (*model.CreateReleaseResponse, error) {
@@ -225,6 +297,10 @@ type CreateUpgradeWorkFlowInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateUpgradeWorkFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateUpgradeWorkFlowInvoker) Invoke() (*model.CreateUpgradeWorkFlowResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *CreateUpgradeWorkFlowInvoker) Invoke() (*model.CreateUpgradeWorkFlowRes
 
 type DeleteAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAddonInstanceInvoker) Invoke() (*model.DeleteAddonInstanceResponse, error) {
@@ -249,6 +329,10 @@ type DeleteChartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteChartInvoker) Invoke() (*model.DeleteChartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteChartInvoker) Invoke() (*model.DeleteChartResponse, error) {
 
 type DeleteCloudPersistentVolumeClaimsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudPersistentVolumeClaimsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteCloudPersistentVolumeClaimsInvoker) Invoke() (*model.DeleteCloudPersistentVolumeClaimsResponse, error) {
@@ -273,6 +361,10 @@ type DeleteClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteClusterInvoker) Invoke() (*model.DeleteClusterResponse, error) {
 
 type DeleteNodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteNodeInvoker) Invoke() (*model.DeleteNodeResponse, error) {
@@ -297,6 +393,10 @@ type DeleteNodePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteNodePoolInvoker) Invoke() (*model.DeleteNodePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DeleteNodePoolInvoker) Invoke() (*model.DeleteNodePoolResponse, error) 
 
 type DeleteReleaseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteReleaseInvoker) Invoke() (*model.DeleteReleaseResponse, error) {
@@ -321,6 +425,10 @@ type DownloadChartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DownloadChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DownloadChartInvoker) Invoke() (*model.DownloadChartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *DownloadChartInvoker) Invoke() (*model.DownloadChartResponse, error) {
 
 type HibernateClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *HibernateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *HibernateClusterInvoker) Invoke() (*model.HibernateClusterResponse, error) {
@@ -345,6 +457,10 @@ type ListAddonInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAddonInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAddonInstancesInvoker) Invoke() (*model.ListAddonInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListAddonInstancesInvoker) Invoke() (*model.ListAddonInstancesResponse,
 
 type ListAddonTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAddonTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAddonTemplatesInvoker) Invoke() (*model.ListAddonTemplatesResponse, error) {
@@ -369,6 +489,10 @@ type ListChartsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListChartsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListChartsInvoker) Invoke() (*model.ListChartsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListChartsInvoker) Invoke() (*model.ListChartsResponse, error) {
 
 type ListClusterMasterSnapshotTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClusterMasterSnapshotTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClusterMasterSnapshotTasksInvoker) Invoke() (*model.ListClusterMasterSnapshotTasksResponse, error) {
@@ -393,6 +521,10 @@ type ListClusterUpgradeFeatureGatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClusterUpgradeFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClusterUpgradeFeatureGatesInvoker) Invoke() (*model.ListClusterUpgradeFeatureGatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListClusterUpgradeFeatureGatesInvoker) Invoke() (*model.ListClusterUpgr
 
 type ListClusterUpgradePathsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListClusterUpgradePathsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListClusterUpgradePathsInvoker) Invoke() (*model.ListClusterUpgradePathsResponse, error) {
@@ -417,6 +553,10 @@ type ListClustersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 
 type ListNodePoolsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNodePoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNodePoolsInvoker) Invoke() (*model.ListNodePoolsResponse, error) {
@@ -441,6 +585,10 @@ type ListNodesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
 
 type ListPartitionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPartitionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPartitionsInvoker) Invoke() (*model.ListPartitionsResponse, error) {
@@ -465,6 +617,10 @@ type ListPreCheckTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPreCheckTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPreCheckTasksInvoker) Invoke() (*model.ListPreCheckTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListPreCheckTasksInvoker) Invoke() (*model.ListPreCheckTasksResponse, e
 
 type ListReleasesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListReleasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListReleasesInvoker) Invoke() (*model.ListReleasesResponse, error) {
@@ -489,6 +649,10 @@ type ListUpgradeClusterTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListUpgradeClusterTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListUpgradeClusterTasksInvoker) Invoke() (*model.ListUpgradeClusterTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListUpgradeClusterTasksInvoker) Invoke() (*model.ListUpgradeClusterTask
 
 type ListUpgradeWorkFlowsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUpgradeWorkFlowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUpgradeWorkFlowsInvoker) Invoke() (*model.ListUpgradeWorkFlowsResponse, error) {
@@ -513,6 +681,10 @@ type MigrateNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *MigrateNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *MigrateNodeInvoker) Invoke() (*model.MigrateNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *MigrateNodeInvoker) Invoke() (*model.MigrateNodeResponse, error) {
 
 type PauseUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PauseUpgradeClusterTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PauseUpgradeClusterTaskInvoker) Invoke() (*model.PauseUpgradeClusterTaskResponse, error) {
@@ -537,6 +713,10 @@ type RemoveNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RemoveNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RemoveNodeInvoker) Invoke() (*model.RemoveNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *RemoveNodeInvoker) Invoke() (*model.RemoveNodeResponse, error) {
 
 type ResetNodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetNodeInvoker) Invoke() (*model.ResetNodeResponse, error) {
@@ -561,6 +745,10 @@ type ResizeClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResizeClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResizeClusterInvoker) Invoke() (*model.ResizeClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ResizeClusterInvoker) Invoke() (*model.ResizeClusterResponse, error) {
 
 type RetryUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RetryUpgradeClusterTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RetryUpgradeClusterTaskInvoker) Invoke() (*model.RetryUpgradeClusterTaskResponse, error) {
@@ -585,6 +777,10 @@ type RevokeKubernetesClusterCertInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RevokeKubernetesClusterCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RevokeKubernetesClusterCertInvoker) Invoke() (*model.RevokeKubernetesClusterCertResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *RevokeKubernetesClusterCertInvoker) Invoke() (*model.RevokeKubernetesCl
 
 type RollbackAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RollbackAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RollbackAddonInstanceInvoker) Invoke() (*model.RollbackAddonInstanceResponse, error) {
@@ -609,6 +809,10 @@ type ScaleNodePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ScaleNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ScaleNodePoolInvoker) Invoke() (*model.ScaleNodePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ScaleNodePoolInvoker) Invoke() (*model.ScaleNodePoolResponse, error) {
 
 type ShowAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAddonInstanceInvoker) Invoke() (*model.ShowAddonInstanceResponse, error) {
@@ -633,6 +841,10 @@ type ShowChartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowChartInvoker) Invoke() (*model.ShowChartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ShowChartInvoker) Invoke() (*model.ShowChartResponse, error) {
 
 type ShowChartValuesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowChartValuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowChartValuesInvoker) Invoke() (*model.ShowChartValuesResponse, error) {
@@ -657,6 +873,10 @@ type ShowClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClusterInvoker) Invoke() (*model.ShowClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ShowClusterInvoker) Invoke() (*model.ShowClusterResponse, error) {
 
 type ShowClusterConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClusterConfigInvoker) Invoke() (*model.ShowClusterConfigResponse, error) {
@@ -681,6 +905,10 @@ type ShowClusterConfigurationDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClusterConfigurationDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClusterConfigurationDetailsInvoker) Invoke() (*model.ShowClusterConfigurationDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowClusterConfigurationDetailsInvoker) Invoke() (*model.ShowClusterCon
 
 type ShowClusterEndpointsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClusterEndpointsInvoker) Invoke() (*model.ShowClusterEndpointsResponse, error) {
@@ -705,6 +937,10 @@ type ShowClusterSupportConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowClusterSupportConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowClusterSupportConfigurationInvoker) Invoke() (*model.ShowClusterSupportConfigurationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ShowClusterSupportConfigurationInvoker) Invoke() (*model.ShowClusterSup
 
 type ShowClusterUpgradeInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterUpgradeInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClusterUpgradeInfoInvoker) Invoke() (*model.ShowClusterUpgradeInfoResponse, error) {
@@ -729,6 +969,10 @@ type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 
 type ShowNodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowNodeInvoker) Invoke() (*model.ShowNodeResponse, error) {
@@ -753,6 +1001,10 @@ type ShowNodePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowNodePoolInvoker) Invoke() (*model.ShowNodePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ShowNodePoolInvoker) Invoke() (*model.ShowNodePoolResponse, error) {
 
 type ShowNodePoolConfigurationDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowNodePoolConfigurationDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowNodePoolConfigurationDetailsInvoker) Invoke() (*model.ShowNodePoolConfigurationDetailsResponse, error) {
@@ -777,6 +1033,10 @@ type ShowNodePoolConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowNodePoolConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowNodePoolConfigurationsInvoker) Invoke() (*model.ShowNodePoolConfigurationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ShowNodePoolConfigurationsInvoker) Invoke() (*model.ShowNodePoolConfigu
 
 type ShowPartitionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPartitionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPartitionInvoker) Invoke() (*model.ShowPartitionResponse, error) {
@@ -801,6 +1065,10 @@ type ShowPreCheckInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPreCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPreCheckInvoker) Invoke() (*model.ShowPreCheckResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *ShowPreCheckInvoker) Invoke() (*model.ShowPreCheckResponse, error) {
 
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
@@ -825,6 +1097,10 @@ type ShowReleaseInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowReleaseInvoker) Invoke() (*model.ShowReleaseResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -835,6 +1111,10 @@ func (i *ShowReleaseInvoker) Invoke() (*model.ShowReleaseResponse, error) {
 
 type ShowReleaseHistoryInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowReleaseHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowReleaseHistoryInvoker) Invoke() (*model.ShowReleaseHistoryResponse, error) {
@@ -849,6 +1129,10 @@ type ShowUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUpgradeClusterTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUpgradeClusterTaskInvoker) Invoke() (*model.ShowUpgradeClusterTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -859,6 +1143,10 @@ func (i *ShowUpgradeClusterTaskInvoker) Invoke() (*model.ShowUpgradeClusterTaskR
 
 type ShowUpgradeWorkFlowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowUpgradeWorkFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowUpgradeWorkFlowInvoker) Invoke() (*model.ShowUpgradeWorkFlowResponse, error) {
@@ -873,6 +1161,10 @@ type ShowUserChartsQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserChartsQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserChartsQuotasInvoker) Invoke() (*model.ShowUserChartsQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -883,6 +1175,10 @@ func (i *ShowUserChartsQuotasInvoker) Invoke() (*model.ShowUserChartsQuotasRespo
 
 type SyncNodeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SyncNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SyncNodeInvoker) Invoke() (*model.SyncNodeResponse, error) {
@@ -897,6 +1193,10 @@ type SyncNodePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SyncNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SyncNodePoolInvoker) Invoke() (*model.SyncNodePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -907,6 +1207,10 @@ func (i *SyncNodePoolInvoker) Invoke() (*model.SyncNodePoolResponse, error) {
 
 type UpdateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAddonInstanceInvoker) Invoke() (*model.UpdateAddonInstanceResponse, error) {
@@ -921,6 +1225,10 @@ type UpdateChartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateChartInvoker) Invoke() (*model.UpdateChartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -931,6 +1239,10 @@ func (i *UpdateChartInvoker) Invoke() (*model.UpdateChartResponse, error) {
 
 type UpdateClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateClusterInvoker) Invoke() (*model.UpdateClusterResponse, error) {
@@ -945,6 +1257,10 @@ type UpdateClusterEipInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateClusterEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateClusterEipInvoker) Invoke() (*model.UpdateClusterEipResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -955,6 +1271,10 @@ func (i *UpdateClusterEipInvoker) Invoke() (*model.UpdateClusterEipResponse, err
 
 type UpdateClusterLogConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateClusterLogConfigInvoker) Invoke() (*model.UpdateClusterLogConfigResponse, error) {
@@ -969,6 +1289,10 @@ type UpdateNodeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateNodeInvoker) Invoke() (*model.UpdateNodeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -979,6 +1303,10 @@ func (i *UpdateNodeInvoker) Invoke() (*model.UpdateNodeResponse, error) {
 
 type UpdateNodePoolInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateNodePoolInvoker) Invoke() (*model.UpdateNodePoolResponse, error) {
@@ -993,6 +1321,10 @@ type UpdateNodePoolConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateNodePoolConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateNodePoolConfigurationInvoker) Invoke() (*model.UpdateNodePoolConfigurationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1003,6 +1335,10 @@ func (i *UpdateNodePoolConfigurationInvoker) Invoke() (*model.UpdateNodePoolConf
 
 type UpdatePartitionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePartitionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePartitionInvoker) Invoke() (*model.UpdatePartitionResponse, error) {
@@ -1017,6 +1353,10 @@ type UpdateReleaseInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateReleaseInvoker) Invoke() (*model.UpdateReleaseResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1027,6 +1367,10 @@ func (i *UpdateReleaseInvoker) Invoke() (*model.UpdateReleaseResponse, error) {
 
 type UpgradeClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpgradeClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpgradeClusterInvoker) Invoke() (*model.UpgradeClusterResponse, error) {
@@ -1041,6 +1385,10 @@ type UpgradeNodePoolInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpgradeNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpgradeNodePoolInvoker) Invoke() (*model.UpgradeNodePoolResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1051,6 +1399,10 @@ func (i *UpgradeNodePoolInvoker) Invoke() (*model.UpgradeNodePoolResponse, error
 
 type UpgradeWorkFlowUpdateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpgradeWorkFlowUpdateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpgradeWorkFlowUpdateInvoker) Invoke() (*model.UpgradeWorkFlowUpdateResponse, error) {
@@ -1065,6 +1417,10 @@ type UploadChartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadChartInvoker) Invoke() (*model.UploadChartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1075,6 +1431,10 @@ func (i *UploadChartInvoker) Invoke() (*model.UploadChartResponse, error) {
 
 type ShowVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
@@ -1089,6 +1449,10 @@ type BatchCreateAutopilotClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateAutopilotClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateAutopilotClusterTagsInvoker) Invoke() (*model.BatchCreateAutopilotClusterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1099,6 +1463,10 @@ func (i *BatchCreateAutopilotClusterTagsInvoker) Invoke() (*model.BatchCreateAut
 
 type BatchDeleteAutopilotClusterTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAutopilotClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteAutopilotClusterTagsInvoker) Invoke() (*model.BatchDeleteAutopilotClusterTagsResponse, error) {
@@ -1113,6 +1481,10 @@ type CreateAutopilotAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAutopilotAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAutopilotAddonInstanceInvoker) Invoke() (*model.CreateAutopilotAddonInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1123,6 +1495,10 @@ func (i *CreateAutopilotAddonInstanceInvoker) Invoke() (*model.CreateAutopilotAd
 
 type CreateAutopilotClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAutopilotClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAutopilotClusterInvoker) Invoke() (*model.CreateAutopilotClusterResponse, error) {
@@ -1137,6 +1513,10 @@ type CreateAutopilotClusterMasterSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAutopilotClusterMasterSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAutopilotClusterMasterSnapshotInvoker) Invoke() (*model.CreateAutopilotClusterMasterSnapshotResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1147,6 +1527,10 @@ func (i *CreateAutopilotClusterMasterSnapshotInvoker) Invoke() (*model.CreateAut
 
 type CreateAutopilotKubernetesClusterCertInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAutopilotKubernetesClusterCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAutopilotKubernetesClusterCertInvoker) Invoke() (*model.CreateAutopilotKubernetesClusterCertResponse, error) {
@@ -1161,6 +1545,10 @@ type CreateAutopilotPostCheckInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAutopilotPostCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAutopilotPostCheckInvoker) Invoke() (*model.CreateAutopilotPostCheckResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1171,6 +1559,10 @@ func (i *CreateAutopilotPostCheckInvoker) Invoke() (*model.CreateAutopilotPostCh
 
 type CreateAutopilotPreCheckInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAutopilotPreCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAutopilotPreCheckInvoker) Invoke() (*model.CreateAutopilotPreCheckResponse, error) {
@@ -1185,6 +1577,10 @@ type CreateAutopilotReleaseInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAutopilotReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAutopilotReleaseInvoker) Invoke() (*model.CreateAutopilotReleaseResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1195,6 +1591,10 @@ func (i *CreateAutopilotReleaseInvoker) Invoke() (*model.CreateAutopilotReleaseR
 
 type CreateAutopilotUpgradeWorkFlowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAutopilotUpgradeWorkFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAutopilotUpgradeWorkFlowInvoker) Invoke() (*model.CreateAutopilotUpgradeWorkFlowResponse, error) {
@@ -1209,6 +1609,10 @@ type DeleteAutopilotAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAutopilotAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAutopilotAddonInstanceInvoker) Invoke() (*model.DeleteAutopilotAddonInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1219,6 +1623,10 @@ func (i *DeleteAutopilotAddonInstanceInvoker) Invoke() (*model.DeleteAutopilotAd
 
 type DeleteAutopilotChartInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutopilotChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAutopilotChartInvoker) Invoke() (*model.DeleteAutopilotChartResponse, error) {
@@ -1233,6 +1641,10 @@ type DeleteAutopilotClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAutopilotClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAutopilotClusterInvoker) Invoke() (*model.DeleteAutopilotClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1243,6 +1655,10 @@ func (i *DeleteAutopilotClusterInvoker) Invoke() (*model.DeleteAutopilotClusterR
 
 type DeleteAutopilotReleaseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutopilotReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAutopilotReleaseInvoker) Invoke() (*model.DeleteAutopilotReleaseResponse, error) {
@@ -1257,6 +1673,10 @@ type DownloadAutopilotChartInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DownloadAutopilotChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DownloadAutopilotChartInvoker) Invoke() (*model.DownloadAutopilotChartResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1267,6 +1687,10 @@ func (i *DownloadAutopilotChartInvoker) Invoke() (*model.DownloadAutopilotChartR
 
 type ListAutopilotAddonInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotAddonInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAutopilotAddonInstancesInvoker) Invoke() (*model.ListAutopilotAddonInstancesResponse, error) {
@@ -1281,6 +1705,10 @@ type ListAutopilotAddonTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAutopilotAddonTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAutopilotAddonTemplatesInvoker) Invoke() (*model.ListAutopilotAddonTemplatesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1291,6 +1719,10 @@ func (i *ListAutopilotAddonTemplatesInvoker) Invoke() (*model.ListAutopilotAddon
 
 type ListAutopilotChartsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotChartsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAutopilotChartsInvoker) Invoke() (*model.ListAutopilotChartsResponse, error) {
@@ -1305,6 +1737,10 @@ type ListAutopilotClusterMasterSnapshotTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAutopilotClusterMasterSnapshotTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAutopilotClusterMasterSnapshotTasksInvoker) Invoke() (*model.ListAutopilotClusterMasterSnapshotTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1315,6 +1751,10 @@ func (i *ListAutopilotClusterMasterSnapshotTasksInvoker) Invoke() (*model.ListAu
 
 type ListAutopilotClusterUpgradeFeatureGatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotClusterUpgradeFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAutopilotClusterUpgradeFeatureGatesInvoker) Invoke() (*model.ListAutopilotClusterUpgradeFeatureGatesResponse, error) {
@@ -1329,6 +1769,10 @@ type ListAutopilotClusterUpgradePathsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAutopilotClusterUpgradePathsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAutopilotClusterUpgradePathsInvoker) Invoke() (*model.ListAutopilotClusterUpgradePathsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1339,6 +1783,10 @@ func (i *ListAutopilotClusterUpgradePathsInvoker) Invoke() (*model.ListAutopilot
 
 type ListAutopilotClustersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAutopilotClustersInvoker) Invoke() (*model.ListAutopilotClustersResponse, error) {
@@ -1353,6 +1801,10 @@ type ListAutopilotPreCheckTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAutopilotPreCheckTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAutopilotPreCheckTasksInvoker) Invoke() (*model.ListAutopilotPreCheckTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1363,6 +1815,10 @@ func (i *ListAutopilotPreCheckTasksInvoker) Invoke() (*model.ListAutopilotPreChe
 
 type ListAutopilotReleasesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotReleasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAutopilotReleasesInvoker) Invoke() (*model.ListAutopilotReleasesResponse, error) {
@@ -1377,6 +1833,10 @@ type ListAutopilotUpgradeClusterTasksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAutopilotUpgradeClusterTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAutopilotUpgradeClusterTasksInvoker) Invoke() (*model.ListAutopilotUpgradeClusterTasksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1387,6 +1847,10 @@ func (i *ListAutopilotUpgradeClusterTasksInvoker) Invoke() (*model.ListAutopilot
 
 type ListAutopilotUpgradeWorkFlowsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotUpgradeWorkFlowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAutopilotUpgradeWorkFlowsInvoker) Invoke() (*model.ListAutopilotUpgradeWorkFlowsResponse, error) {
@@ -1401,6 +1865,10 @@ type RetryAutopilotUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RetryAutopilotUpgradeClusterTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RetryAutopilotUpgradeClusterTaskInvoker) Invoke() (*model.RetryAutopilotUpgradeClusterTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1411,6 +1879,10 @@ func (i *RetryAutopilotUpgradeClusterTaskInvoker) Invoke() (*model.RetryAutopilo
 
 type RollbackAutopilotAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RollbackAutopilotAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RollbackAutopilotAddonInstanceInvoker) Invoke() (*model.RollbackAutopilotAddonInstanceResponse, error) {
@@ -1425,6 +1897,10 @@ type ShowAutopilotAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotAddonInstanceInvoker) Invoke() (*model.ShowAutopilotAddonInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1435,6 +1911,10 @@ func (i *ShowAutopilotAddonInstanceInvoker) Invoke() (*model.ShowAutopilotAddonI
 
 type ShowAutopilotChartInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotChartInvoker) Invoke() (*model.ShowAutopilotChartResponse, error) {
@@ -1449,6 +1929,10 @@ type ShowAutopilotChartValuesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotChartValuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotChartValuesInvoker) Invoke() (*model.ShowAutopilotChartValuesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1459,6 +1943,10 @@ func (i *ShowAutopilotChartValuesInvoker) Invoke() (*model.ShowAutopilotChartVal
 
 type ShowAutopilotClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotClusterInvoker) Invoke() (*model.ShowAutopilotClusterResponse, error) {
@@ -1473,6 +1961,10 @@ type ShowAutopilotClusterEndpointsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotClusterEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotClusterEndpointsInvoker) Invoke() (*model.ShowAutopilotClusterEndpointsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1483,6 +1975,10 @@ func (i *ShowAutopilotClusterEndpointsInvoker) Invoke() (*model.ShowAutopilotClu
 
 type ShowAutopilotClusterUpgradeInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotClusterUpgradeInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotClusterUpgradeInfoInvoker) Invoke() (*model.ShowAutopilotClusterUpgradeInfoResponse, error) {
@@ -1497,6 +1993,10 @@ type ShowAutopilotJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotJobInvoker) Invoke() (*model.ShowAutopilotJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1507,6 +2007,10 @@ func (i *ShowAutopilotJobInvoker) Invoke() (*model.ShowAutopilotJobResponse, err
 
 type ShowAutopilotPreCheckInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotPreCheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotPreCheckInvoker) Invoke() (*model.ShowAutopilotPreCheckResponse, error) {
@@ -1521,6 +2025,10 @@ type ShowAutopilotQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotQuotasInvoker) Invoke() (*model.ShowAutopilotQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1531,6 +2039,10 @@ func (i *ShowAutopilotQuotasInvoker) Invoke() (*model.ShowAutopilotQuotasRespons
 
 type ShowAutopilotReleaseInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotReleaseInvoker) Invoke() (*model.ShowAutopilotReleaseResponse, error) {
@@ -1545,6 +2057,10 @@ type ShowAutopilotReleaseHistoryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotReleaseHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotReleaseHistoryInvoker) Invoke() (*model.ShowAutopilotReleaseHistoryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1555,6 +2071,10 @@ func (i *ShowAutopilotReleaseHistoryInvoker) Invoke() (*model.ShowAutopilotRelea
 
 type ShowAutopilotUpgradeClusterTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotUpgradeClusterTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotUpgradeClusterTaskInvoker) Invoke() (*model.ShowAutopilotUpgradeClusterTaskResponse, error) {
@@ -1569,6 +2089,10 @@ type ShowAutopilotUpgradeWorkFlowInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAutopilotUpgradeWorkFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAutopilotUpgradeWorkFlowInvoker) Invoke() (*model.ShowAutopilotUpgradeWorkFlowResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1579,6 +2103,10 @@ func (i *ShowAutopilotUpgradeWorkFlowInvoker) Invoke() (*model.ShowAutopilotUpgr
 
 type ShowAutopilotUserChartsQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotUserChartsQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutopilotUserChartsQuotasInvoker) Invoke() (*model.ShowAutopilotUserChartsQuotasResponse, error) {
@@ -1593,6 +2121,10 @@ type UpdateAutopilotAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAutopilotAddonInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAutopilotAddonInstanceInvoker) Invoke() (*model.UpdateAutopilotAddonInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1603,6 +2135,10 @@ func (i *UpdateAutopilotAddonInstanceInvoker) Invoke() (*model.UpdateAutopilotAd
 
 type UpdateAutopilotChartInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutopilotChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAutopilotChartInvoker) Invoke() (*model.UpdateAutopilotChartResponse, error) {
@@ -1617,6 +2153,10 @@ type UpdateAutopilotClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAutopilotClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAutopilotClusterInvoker) Invoke() (*model.UpdateAutopilotClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1627,6 +2167,10 @@ func (i *UpdateAutopilotClusterInvoker) Invoke() (*model.UpdateAutopilotClusterR
 
 type UpdateAutopilotClusterEipInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutopilotClusterEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAutopilotClusterEipInvoker) Invoke() (*model.UpdateAutopilotClusterEipResponse, error) {
@@ -1641,6 +2185,10 @@ type UpdateAutopilotReleaseInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAutopilotReleaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAutopilotReleaseInvoker) Invoke() (*model.UpdateAutopilotReleaseResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1651,6 +2199,10 @@ func (i *UpdateAutopilotReleaseInvoker) Invoke() (*model.UpdateAutopilotReleaseR
 
 type UpgradeAutopilotClusterInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpgradeAutopilotClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpgradeAutopilotClusterInvoker) Invoke() (*model.UpgradeAutopilotClusterResponse, error) {
@@ -1665,6 +2217,10 @@ type UpgradeAutopilotWorkFlowUpdateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpgradeAutopilotWorkFlowUpdateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpgradeAutopilotWorkFlowUpdateInvoker) Invoke() (*model.UpgradeAutopilotWorkFlowUpdateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1675,6 +2231,10 @@ func (i *UpgradeAutopilotWorkFlowUpdateInvoker) Invoke() (*model.UpgradeAutopilo
 
 type UploadAutopilotChartInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UploadAutopilotChartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UploadAutopilotChartInvoker) Invoke() (*model.UploadAutopilotChartResponse, error) {

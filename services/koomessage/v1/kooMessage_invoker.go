@@ -9,6 +9,10 @@ type AddCallBackInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddCallBackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddCallBackInvoker) Invoke() (*model.AddCallBackResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AddCallBackInvoker) Invoke() (*model.AddCallBackResponse, error) {
 
 type ListAimCallbacksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimCallbacksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimCallbacksInvoker) Invoke() (*model.ListAimCallbacksResponse, error) {
@@ -33,6 +41,10 @@ type CheckMobileCapabilityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckMobileCapabilityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckMobileCapabilityInvoker) Invoke() (*model.CheckMobileCapabilityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CheckMobileCapabilityInvoker) Invoke() (*model.CheckMobileCapabilityRes
 
 type CreateResolveTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateResolveTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateResolveTaskInvoker) Invoke() (*model.CreateResolveTaskResponse, error) {
@@ -57,6 +73,10 @@ type ListAimResolveDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAimResolveDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAimResolveDetailsInvoker) Invoke() (*model.ListAimResolveDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ListAimResolveDetailsInvoker) Invoke() (*model.ListAimResolveDetailsRes
 
 type ListResolveTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResolveTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResolveTasksInvoker) Invoke() (*model.ListResolveTasksResponse, error) {
@@ -81,6 +105,10 @@ type CreateAimSendTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAimSendTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAimSendTaskInvoker) Invoke() (*model.CreateAimSendTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateAimSendTaskInvoker) Invoke() (*model.CreateAimSendTaskResponse, e
 
 type ListAimSendDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimSendDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimSendDetailsInvoker) Invoke() (*model.ListAimSendDetailsResponse, error) {
@@ -105,6 +137,10 @@ type ListAimSendReportsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAimSendReportsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAimSendReportsInvoker) Invoke() (*model.ListAimSendReportsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListAimSendReportsInvoker) Invoke() (*model.ListAimSendReportsResponse,
 
 type ListAimSendTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimSendTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimSendTasksInvoker) Invoke() (*model.ListAimSendTasksResponse, error) {
@@ -129,6 +169,10 @@ type CreateAimPersonalTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAimPersonalTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAimPersonalTemplateInvoker) Invoke() (*model.CreateAimPersonalTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateAimPersonalTemplateInvoker) Invoke() (*model.CreateAimPersonalTem
 
 type DeleteAimPersonalTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAimPersonalTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAimPersonalTemplateInvoker) Invoke() (*model.DeleteAimPersonalTemplateResponse, error) {
@@ -153,6 +201,10 @@ type DeleteTemplateMaterialInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTemplateMaterialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTemplateMaterialInvoker) Invoke() (*model.DeleteTemplateMaterialResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *DeleteTemplateMaterialInvoker) Invoke() (*model.DeleteTemplateMaterialR
 
 type ListAimTemplateMaterialsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimTemplateMaterialsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimTemplateMaterialsInvoker) Invoke() (*model.ListAimTemplateMaterialsResponse, error) {
@@ -177,6 +233,10 @@ type ListAimTemplateReportsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAimTemplateReportsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAimTemplateReportsInvoker) Invoke() (*model.ListAimTemplateReportsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListAimTemplateReportsInvoker) Invoke() (*model.ListAimTemplateReportsR
 
 type ListAimTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimTemplatesInvoker) Invoke() (*model.ListAimTemplatesResponse, error) {
@@ -201,6 +265,10 @@ type SetPrimaryVideoThumbnailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SetPrimaryVideoThumbnailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SetPrimaryVideoThumbnailInvoker) Invoke() (*model.SetPrimaryVideoThumbnailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *SetPrimaryVideoThumbnailInvoker) Invoke() (*model.SetPrimaryVideoThumbn
 
 type ShowTemplateVideoThumbnailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateVideoThumbnailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTemplateVideoThumbnailInvoker) Invoke() (*model.ShowTemplateVideoThumbnailResponse, error) {
@@ -225,6 +297,10 @@ type UpdatePersonalTemplateStateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePersonalTemplateStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePersonalTemplateStateInvoker) Invoke() (*model.UpdatePersonalTemplateStateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *UpdatePersonalTemplateStateInvoker) Invoke() (*model.UpdatePersonalTemp
 
 type UploadAimTemplateMaterialInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UploadAimTemplateMaterialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UploadAimTemplateMaterialInvoker) Invoke() (*model.UploadAimTemplateMaterialResponse, error) {
@@ -249,6 +329,10 @@ type ListMenusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMenusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMenusInvoker) Invoke() (*model.ListMenusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListMenusInvoker) Invoke() (*model.ListMenusResponse, error) {
 
 type UpdateMenuInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateMenuInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateMenuInvoker) Invoke() (*model.UpdateMenuResponse, error) {
@@ -273,6 +361,10 @@ type DeletePortInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePortInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePortInfoInvoker) Invoke() (*model.DeletePortInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeletePortInfoInvoker) Invoke() (*model.DeletePortInfoResponse, error) 
 
 type ListPortInfosInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPortInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPortInfosInvoker) Invoke() (*model.ListPortInfosResponse, error) {
@@ -297,6 +393,10 @@ type LockPortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *LockPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *LockPortInvoker) Invoke() (*model.LockPortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *LockPortInvoker) Invoke() (*model.LockPortResponse, error) {
 
 type RegisterPortInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RegisterPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RegisterPortInvoker) Invoke() (*model.RegisterPortResponse, error) {
@@ -321,6 +425,10 @@ type UnlockPortInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UnlockPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UnlockPortInvoker) Invoke() (*model.UnlockPortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UnlockPortInvoker) Invoke() (*model.UnlockPortResponse, error) {
 
 type ListPortalInfosInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPortalInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPortalInfosInvoker) Invoke() (*model.ListPortalInfosResponse, error) {
@@ -345,6 +457,10 @@ type UpdatePortalInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePortalInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePortalInfoInvoker) Invoke() (*model.UpdatePortalInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *UpdatePortalInfoInvoker) Invoke() (*model.UpdatePortalInfoResponse, err
 
 type FreezePubInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *FreezePubInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *FreezePubInvoker) Invoke() (*model.FreezePubResponse, error) {
@@ -369,6 +489,10 @@ type ListPubInfosInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPubInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPubInfosInvoker) Invoke() (*model.ListPubInfosResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ListPubInfosInvoker) Invoke() (*model.ListPubInfosResponse, error) {
 
 type UnfreezePubInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UnfreezePubInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UnfreezePubInvoker) Invoke() (*model.UnfreezePubResponse, error) {
@@ -393,6 +521,10 @@ type UpdatePubInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePubInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePubInfoInvoker) Invoke() (*model.UpdatePubInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *UpdatePubInfoInvoker) Invoke() (*model.UpdatePubInfoResponse, error) {
 
 type CreatePubInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePubInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePubInfoInvoker) Invoke() (*model.CreatePubInfoResponse, error) {
@@ -417,6 +553,10 @@ type PushMenuInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *PushMenuInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *PushMenuInfoInvoker) Invoke() (*model.PushMenuInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *PushMenuInfoInvoker) Invoke() (*model.PushMenuInfoResponse, error) {
 
 type PushPortalInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *PushPortalInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *PushPortalInfoInvoker) Invoke() (*model.PushPortalInfoResponse, error) {
@@ -441,6 +585,10 @@ type UploadMediaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadMediaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadMediaInvoker) Invoke() (*model.UploadMediaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *UploadMediaInvoker) Invoke() (*model.UploadMediaResponse, error) {
 
 type CreateSmsAppInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSmsAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSmsAppInvoker) Invoke() (*model.CreateSmsAppResponse, error) {
@@ -465,6 +617,10 @@ type ListAimMsgAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAimMsgAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAimMsgAppInvoker) Invoke() (*model.ListAimMsgAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListAimMsgAppInvoker) Invoke() (*model.ListAimMsgAppResponse, error) {
 
 type ListAimMsgAppDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgAppDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimMsgAppDetailInvoker) Invoke() (*model.ListAimMsgAppDetailResponse, error) {
@@ -489,6 +649,10 @@ type UpdateAimMsgAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAimMsgAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAimMsgAppInvoker) Invoke() (*model.UpdateAimMsgAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *UpdateAimMsgAppInvoker) Invoke() (*model.UpdateAimMsgAppResponse, error
 
 type SendAimBatchDifferentMessagesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SendAimBatchDifferentMessagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SendAimBatchDifferentMessagesInvoker) Invoke() (*model.SendAimBatchDifferentMessagesResponse, error) {
@@ -513,6 +681,10 @@ type SendAimBatchMessagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SendAimBatchMessagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SendAimBatchMessagesInvoker) Invoke() (*model.SendAimBatchMessagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *SendAimBatchMessagesInvoker) Invoke() (*model.SendAimBatchMessagesRespo
 
 type AddAimMsgSignatureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddAimMsgSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddAimMsgSignatureInvoker) Invoke() (*model.AddAimMsgSignatureResponse, error) {
@@ -537,6 +713,10 @@ type DeleteAimMsgSignatureInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAimMsgSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAimMsgSignatureInvoker) Invoke() (*model.DeleteAimMsgSignatureResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *DeleteAimMsgSignatureInvoker) Invoke() (*model.DeleteAimMsgSignatureRes
 
 type ListAimMsgSignatureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAimMsgSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAimMsgSignatureInvoker) Invoke() (*model.ListAimMsgSignatureResponse, error) {
@@ -561,6 +745,10 @@ type ListAimMsgSignatureDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAimMsgSignatureDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAimMsgSignatureDetailInvoker) Invoke() (*model.ListAimMsgSignatureDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ListAimMsgSignatureDetailInvoker) Invoke() (*model.ListAimMsgSignatureD
 
 type ShowAimMsgSignatureFileInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAimMsgSignatureFileInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAimMsgSignatureFileInfoInvoker) Invoke() (*model.ShowAimMsgSignatureFileInfoResponse, error) {
@@ -585,6 +777,10 @@ type UpdateAimMsgSignatureInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAimMsgSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAimMsgSignatureInvoker) Invoke() (*model.UpdateAimMsgSignatureResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *UpdateAimMsgSignatureInvoker) Invoke() (*model.UpdateAimMsgSignatureRes
 
 type UploadAimMsgSignatureFileInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UploadAimMsgSignatureFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UploadAimMsgSignatureFileInvoker) Invoke() (*model.UploadAimMsgSignatureFileResponse, error) {
@@ -609,6 +809,10 @@ type CreateAimMsgTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAimMsgTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAimMsgTemplateInvoker) Invoke() (*model.CreateAimMsgTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *CreateAimMsgTemplateInvoker) Invoke() (*model.CreateAimMsgTemplateRespo
 
 type DeleteAimMsgTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAimMsgTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAimMsgTemplateInvoker) Invoke() (*model.DeleteAimMsgTemplateResponse, error) {
@@ -633,6 +841,10 @@ type ListAimMsgTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAimMsgTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAimMsgTemplateInvoker) Invoke() (*model.ListAimMsgTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ListAimMsgTemplateInvoker) Invoke() (*model.ListAimMsgTemplateResponse,
 
 type ShowAimMsgTemplateDetailInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAimMsgTemplateDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAimMsgTemplateDetailInvoker) Invoke() (*model.ShowAimMsgTemplateDetailResponse, error) {
@@ -657,6 +873,10 @@ type ShowAimMsgTemplateVariableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAimMsgTemplateVariableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAimMsgTemplateVariableInvoker) Invoke() (*model.ShowAimMsgTemplateVariableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ShowAimMsgTemplateVariableInvoker) Invoke() (*model.ShowAimMsgTemplateV
 
 type UpdateAimMsgTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAimMsgTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAimMsgTemplateInvoker) Invoke() (*model.UpdateAimMsgTemplateResponse, error) {
@@ -681,6 +905,10 @@ type AddVmsCallBackInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddVmsCallBackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddVmsCallBackInvoker) Invoke() (*model.AddVmsCallBackResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *AddVmsCallBackInvoker) Invoke() (*model.AddVmsCallBackResponse, error) 
 
 type CreateVmsSendTaskInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVmsSendTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVmsSendTaskInvoker) Invoke() (*model.CreateVmsSendTaskResponse, error) {
@@ -705,6 +937,10 @@ type ListVmsCallbacksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVmsCallbacksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVmsCallbacksInvoker) Invoke() (*model.ListVmsCallbacksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ListVmsCallbacksInvoker) Invoke() (*model.ListVmsCallbacksResponse, err
 
 type ListVmsSendTasksInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVmsSendTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVmsSendTasksInvoker) Invoke() (*model.ListVmsSendTasksResponse, error) {
@@ -729,6 +969,10 @@ type CreateVmsTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVmsTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVmsTemplateInvoker) Invoke() (*model.CreateVmsTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *CreateVmsTemplateInvoker) Invoke() (*model.CreateVmsTemplateResponse, e
 
 type ListVmsTemplateStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVmsTemplateStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVmsTemplateStatusInvoker) Invoke() (*model.ListVmsTemplateStatusResponse, error) {

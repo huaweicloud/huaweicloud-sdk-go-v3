@@ -779,6 +779,10 @@ func GenReqDefForListSimPools() *def.HttpRequestDef {
 		WithName("AllBillingCycle").
 		WithJsonTag("all_billing_cycle").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

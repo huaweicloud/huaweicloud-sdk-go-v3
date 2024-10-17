@@ -9,6 +9,10 @@ type BatchCreateOrDeleteRocketmqTagInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateOrDeleteRocketmqTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateOrDeleteRocketmqTagInvoker) Invoke() (*model.BatchCreateOrDeleteRocketmqTagResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateOrDeleteRocketmqTagInvoker) Invoke() (*model.BatchCreateOrDe
 
 type BatchDeleteInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteInstancesInvoker) Invoke() (*model.BatchDeleteInstancesResponse, error) {
@@ -33,6 +41,10 @@ type BatchUpdateConsumerGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchUpdateConsumerGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchUpdateConsumerGroupInvoker) Invoke() (*model.BatchUpdateConsumerGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchUpdateConsumerGroupInvoker) Invoke() (*model.BatchUpdateConsumerGr
 
 type CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker) Invoke() (*model.CreateConsumerGroupOrBatchDeleteConsumerGroupResponse, error) {
@@ -57,6 +73,10 @@ type CreateInstanceByEngineInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateInstanceByEngineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateInstanceByEngineInvoker) Invoke() (*model.CreateInstanceByEngineResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateInstanceByEngineInvoker) Invoke() (*model.CreateInstanceByEngineR
 
 type CreatePostPaidInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePostPaidInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePostPaidInstanceInvoker) Invoke() (*model.CreatePostPaidInstanceResponse, error) {
@@ -81,6 +105,10 @@ type CreateRocketMqMigrationTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateRocketMqMigrationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateRocketMqMigrationTaskInvoker) Invoke() (*model.CreateRocketMqMigrationTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateRocketMqMigrationTaskInvoker) Invoke() (*model.CreateRocketMqMigr
 
 type CreateUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateUserInvoker) Invoke() (*model.CreateUserResponse, error) {
@@ -105,6 +137,10 @@ type DeleteConsumerGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteConsumerGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteConsumerGroupInvoker) Invoke() (*model.DeleteConsumerGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteConsumerGroupInvoker) Invoke() (*model.DeleteConsumerGroupRespons
 
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) {
@@ -129,6 +169,10 @@ type DeleteRocketMqMigrationTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteRocketMqMigrationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteRocketMqMigrationTaskInvoker) Invoke() (*model.DeleteRocketMqMigrationTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteRocketMqMigrationTaskInvoker) Invoke() (*model.DeleteRocketMqMigr
 
 type DeleteUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
@@ -153,6 +201,10 @@ type ExportDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExportDlqMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExportDlqMessageInvoker) Invoke() (*model.ExportDlqMessageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ExportDlqMessageInvoker) Invoke() (*model.ExportDlqMessageResponse, err
 
 type ListAvailableZonesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse, error) {
@@ -177,6 +233,10 @@ type ListBrokersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListBrokersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListBrokersInvoker) Invoke() (*model.ListBrokersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListBrokersInvoker) Invoke() (*model.ListBrokersResponse, error) {
 
 type ListConsumeGroupAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListConsumeGroupAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListConsumeGroupAccessPolicyInvoker) Invoke() (*model.ListConsumeGroupAccessPolicyResponse, error) {
@@ -201,6 +265,10 @@ type ListInstanceConsumerGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListInstanceConsumerGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListInstanceConsumerGroupsInvoker) Invoke() (*model.ListInstanceConsumerGroupsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListInstanceConsumerGroupsInvoker) Invoke() (*model.ListInstanceConsume
 
 type ListInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
@@ -225,6 +297,10 @@ type ListMessageTraceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListMessageTraceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListMessageTraceInvoker) Invoke() (*model.ListMessageTraceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListMessageTraceInvoker) Invoke() (*model.ListMessageTraceResponse, err
 
 type ListMessagesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListMessagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListMessagesInvoker) Invoke() (*model.ListMessagesResponse, error) {
@@ -249,6 +329,10 @@ type ListRocketMqMigrationTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListRocketMqMigrationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListRocketMqMigrationTaskInvoker) Invoke() (*model.ListRocketMqMigrationTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *ListRocketMqMigrationTaskInvoker) Invoke() (*model.ListRocketMqMigratio
 
 type ListTopicAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTopicAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTopicAccessPolicyInvoker) Invoke() (*model.ListTopicAccessPolicyResponse, error) {
@@ -273,6 +361,10 @@ type ListUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListUserInvoker) Invoke() (*model.ListUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListUserInvoker) Invoke() (*model.ListUserResponse, error) {
 
 type ResetConsumeOffsetInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ResetConsumeOffsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ResetConsumeOffsetInvoker) Invoke() (*model.ResetConsumeOffsetResponse, error) {
@@ -297,6 +393,10 @@ type ResizeInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResizeInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) 
 
 type SendDlqMessageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SendDlqMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SendDlqMessageInvoker) Invoke() (*model.SendDlqMessageResponse, error) {
@@ -321,6 +425,10 @@ type ShowConsumerConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowConsumerConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowConsumerConnectionsInvoker) Invoke() (*model.ShowConsumerConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *ShowConsumerConnectionsInvoker) Invoke() (*model.ShowConsumerConnection
 
 type ShowConsumerListOrDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowConsumerListOrDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowConsumerListOrDetailsInvoker) Invoke() (*model.ShowConsumerListOrDetailsResponse, error) {
@@ -345,6 +457,10 @@ type ShowEngineInstanceExtendProductInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowEngineInstanceExtendProductInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowEngineInstanceExtendProductInfoInvoker) Invoke() (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowEngineInstanceExtendProductInfoInvoker) Invoke() (*model.ShowEngine
 
 type ShowGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowGroupInvoker) Invoke() (*model.ShowGroupResponse, error) {
@@ -369,6 +489,10 @@ type ShowInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 
 type ShowRocketMqConfigsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRocketMqConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRocketMqConfigsInvoker) Invoke() (*model.ShowRocketMqConfigsResponse, error) {
@@ -393,6 +521,10 @@ type ShowRocketmqProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowRocketmqProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowRocketmqProjectTagsInvoker) Invoke() (*model.ShowRocketmqProjectTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ShowRocketmqProjectTagsInvoker) Invoke() (*model.ShowRocketmqProjectTag
 
 type ShowRocketmqTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowRocketmqTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowRocketmqTagsInvoker) Invoke() (*model.ShowRocketmqTagsResponse, error) {
@@ -417,6 +553,10 @@ type ShowUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowUserInvoker) Invoke() (*model.ShowUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ShowUserInvoker) Invoke() (*model.ShowUserResponse, error) {
 
 type UpdateConsumerGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateConsumerGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateConsumerGroupInvoker) Invoke() (*model.UpdateConsumerGroupResponse, error) {
@@ -441,6 +585,10 @@ type UpdateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) 
 
 type UpdateRocketMqConfigsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateRocketMqConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateRocketMqConfigsInvoker) Invoke() (*model.UpdateRocketMqConfigsResponse, error) {
@@ -465,6 +617,10 @@ type UpdateUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *UpdateUserInvoker) Invoke() (*model.UpdateUserResponse, error) {
 
 type ValidateConsumedMessageInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ValidateConsumedMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ValidateConsumedMessageInvoker) Invoke() (*model.ValidateConsumedMessageResponse, error) {
@@ -489,6 +649,10 @@ type CreateTopicOrBatchDeleteTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTopicOrBatchDeleteTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTopicOrBatchDeleteTopicInvoker) Invoke() (*model.CreateTopicOrBatchDeleteTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *CreateTopicOrBatchDeleteTopicInvoker) Invoke() (*model.CreateTopicOrBat
 
 type DeleteTopicInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteTopicInvoker) Invoke() (*model.DeleteTopicResponse, error) {
@@ -513,6 +681,10 @@ type ListConsumerGroupOfTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListConsumerGroupOfTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListConsumerGroupOfTopicInvoker) Invoke() (*model.ListConsumerGroupOfTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ListConsumerGroupOfTopicInvoker) Invoke() (*model.ListConsumerGroupOfTo
 
 type ListRocketInstanceTopicsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListRocketInstanceTopicsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListRocketInstanceTopicsInvoker) Invoke() (*model.ListRocketInstanceTopicsResponse, error) {
@@ -537,6 +713,10 @@ type ShowOneTopicInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowOneTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowOneTopicInvoker) Invoke() (*model.ShowOneTopicResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -549,6 +729,10 @@ type ShowTopicStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTopicStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTopicStatusInvoker) Invoke() (*model.ShowTopicStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -559,6 +743,10 @@ func (i *ShowTopicStatusInvoker) Invoke() (*model.ShowTopicStatusResponse, error
 
 type UpdateTopicInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTopicInvoker) Invoke() (*model.UpdateTopicResponse, error) {

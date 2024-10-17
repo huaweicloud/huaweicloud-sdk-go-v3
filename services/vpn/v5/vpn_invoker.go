@@ -9,6 +9,10 @@ type CheckClientCaCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckClientCaCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckClientCaCertificateInvoker) Invoke() (*model.CheckClientCaCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CheckClientCaCertificateInvoker) Invoke() (*model.CheckClientCaCertific
 
 type DeleteClientCaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteClientCaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteClientCaInvoker) Invoke() (*model.DeleteClientCaResponse, error) {
@@ -33,6 +41,10 @@ type ImportClientCaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ImportClientCaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ImportClientCaInvoker) Invoke() (*model.ImportClientCaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ImportClientCaInvoker) Invoke() (*model.ImportClientCaResponse, error) 
 
 type ShowClientCaInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowClientCaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowClientCaInvoker) Invoke() (*model.ShowClientCaResponse, error) {
@@ -57,6 +73,10 @@ type UpdateClientCaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateClientCaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateClientCaInvoker) Invoke() (*model.UpdateClientCaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *UpdateClientCaInvoker) Invoke() (*model.UpdateClientCaResponse, error) 
 
 type CreateConnectionMonitorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectionMonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateConnectionMonitorInvoker) Invoke() (*model.CreateConnectionMonitorResponse, error) {
@@ -81,6 +105,10 @@ type DeleteConnectionMonitorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteConnectionMonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteConnectionMonitorInvoker) Invoke() (*model.DeleteConnectionMonitorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteConnectionMonitorInvoker) Invoke() (*model.DeleteConnectionMonito
 
 type ListConnectionMonitorsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListConnectionMonitorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListConnectionMonitorsInvoker) Invoke() (*model.ListConnectionMonitorsResponse, error) {
@@ -105,6 +137,10 @@ type ShowConnectionMonitorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowConnectionMonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowConnectionMonitorInvoker) Invoke() (*model.ShowConnectionMonitorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowConnectionMonitorInvoker) Invoke() (*model.ShowConnectionMonitorRes
 
 type CreateCgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateCgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateCgwInvoker) Invoke() (*model.CreateCgwResponse, error) {
@@ -129,6 +169,10 @@ type DeleteCgwInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteCgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteCgwInvoker) Invoke() (*model.DeleteCgwResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *DeleteCgwInvoker) Invoke() (*model.DeleteCgwResponse, error) {
 
 type ListCgwsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListCgwsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListCgwsInvoker) Invoke() (*model.ListCgwsResponse, error) {
@@ -153,6 +201,10 @@ type ShowCgwInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowCgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowCgwInvoker) Invoke() (*model.ShowCgwResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ShowCgwInvoker) Invoke() (*model.ShowCgwResponse, error) {
 
 type UpdateCgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateCgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateCgwInvoker) Invoke() (*model.UpdateCgwResponse, error) {
@@ -177,6 +233,10 @@ type ListP2cVgwAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListP2cVgwAvailabilityZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListP2cVgwAvailabilityZonesInvoker) Invoke() (*model.ListP2cVgwAvailabilityZonesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListP2cVgwAvailabilityZonesInvoker) Invoke() (*model.ListP2cVgwAvailabi
 
 type ListP2cVgwConnectionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListP2cVgwConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListP2cVgwConnectionsInvoker) Invoke() (*model.ListP2cVgwConnectionsResponse, error) {
@@ -201,6 +265,10 @@ type ListP2cVgwsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListP2cVgwsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListP2cVgwsInvoker) Invoke() (*model.ListP2cVgwsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListP2cVgwsInvoker) Invoke() (*model.ListP2cVgwsResponse, error) {
 
 type ShowP2cVgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowP2cVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowP2cVgwInvoker) Invoke() (*model.ShowP2cVgwResponse, error) {
@@ -225,6 +297,10 @@ type UpdateP2cVgwInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateP2cVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateP2cVgwInvoker) Invoke() (*model.UpdateP2cVgwResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *UpdateP2cVgwInvoker) Invoke() (*model.UpdateP2cVgwResponse, error) {
 
 type BatchCreateResourceTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
@@ -249,6 +329,10 @@ type BatchDeleteResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteResourceTagsInvoker) Invoke() (*model.BatchDeleteResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *BatchDeleteResourceTagsInvoker) Invoke() (*model.BatchDeleteResourceTag
 
 type CountResourcesByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CountResourcesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CountResourcesByTagsInvoker) Invoke() (*model.CountResourcesByTagsResponse, error) {
@@ -273,6 +361,10 @@ type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 
 type ListResourcesByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourcesByTagsInvoker) Invoke() (*model.ListResourcesByTagsResponse, error) {
@@ -297,6 +393,10 @@ type ShowResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, err
 
 type CreateVpnAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVpnAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVpnAccessPolicyInvoker) Invoke() (*model.CreateVpnAccessPolicyResponse, error) {
@@ -321,6 +425,10 @@ type DeleteVpnAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVpnAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVpnAccessPolicyInvoker) Invoke() (*model.DeleteVpnAccessPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *DeleteVpnAccessPolicyInvoker) Invoke() (*model.DeleteVpnAccessPolicyRes
 
 type ListVpnAccessPoliciesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpnAccessPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpnAccessPoliciesInvoker) Invoke() (*model.ListVpnAccessPoliciesResponse, error) {
@@ -345,6 +457,10 @@ type ShowVpnAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpnAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpnAccessPolicyInvoker) Invoke() (*model.ShowVpnAccessPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ShowVpnAccessPolicyInvoker) Invoke() (*model.ShowVpnAccessPolicyRespons
 
 type UpdateVpnAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpnAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpnAccessPolicyInvoker) Invoke() (*model.UpdateVpnAccessPolicyResponse, error) {
@@ -369,6 +489,10 @@ type CreateVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVpnConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVpnConnectionInvoker) Invoke() (*model.CreateVpnConnectionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *CreateVpnConnectionInvoker) Invoke() (*model.CreateVpnConnectionRespons
 
 type DeleteVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpnConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteVpnConnectionInvoker) Invoke() (*model.DeleteVpnConnectionResponse, error) {
@@ -393,6 +521,10 @@ type ListVpnConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVpnConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVpnConnectionsInvoker) Invoke() (*model.ListVpnConnectionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListVpnConnectionsInvoker) Invoke() (*model.ListVpnConnectionsResponse,
 
 type ShowVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVpnConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVpnConnectionInvoker) Invoke() (*model.ShowVpnConnectionResponse, error) {
@@ -417,6 +553,10 @@ type UpdateVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateVpnConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateVpnConnectionInvoker) Invoke() (*model.UpdateVpnConnectionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *UpdateVpnConnectionInvoker) Invoke() (*model.UpdateVpnConnectionRespons
 
 type CreateVgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVgwInvoker) Invoke() (*model.CreateVgwResponse, error) {
@@ -441,6 +585,10 @@ type DeleteVgwInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVgwInvoker) Invoke() (*model.DeleteVgwResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *DeleteVgwInvoker) Invoke() (*model.DeleteVgwResponse, error) {
 
 type ListAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAvailabilityZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAvailabilityZonesInvoker) Invoke() (*model.ListAvailabilityZonesResponse, error) {
@@ -465,6 +617,10 @@ type ListVgwsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVgwsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVgwsInvoker) Invoke() (*model.ListVgwsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListVgwsInvoker) Invoke() (*model.ListVgwsResponse, error) {
 
 type ShowVgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVgwInvoker) Invoke() (*model.ShowVgwResponse, error) {
@@ -489,6 +649,10 @@ type UpdatePostpaidVgwSpecificationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePostpaidVgwSpecificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePostpaidVgwSpecificationInvoker) Invoke() (*model.UpdatePostpaidVgwSpecificationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *UpdatePostpaidVgwSpecificationInvoker) Invoke() (*model.UpdatePostpaidV
 
 type UpdateVgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVgwInvoker) Invoke() (*model.UpdateVgwResponse, error) {
@@ -513,6 +681,10 @@ type CreateVgwCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVgwCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVgwCertificateInvoker) Invoke() (*model.CreateVgwCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *CreateVgwCertificateInvoker) Invoke() (*model.CreateVgwCertificateRespo
 
 type ShowVpnGatewayCertificateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVpnGatewayCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVpnGatewayCertificateInvoker) Invoke() (*model.ShowVpnGatewayCertificateResponse, error) {
@@ -537,6 +713,10 @@ type UpdateVgwCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateVgwCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateVgwCertificateInvoker) Invoke() (*model.UpdateVgwCertificateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *UpdateVgwCertificateInvoker) Invoke() (*model.UpdateVgwCertificateRespo
 
 type ShowQuotasInfoInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowQuotasInfoInvoker) Invoke() (*model.ShowQuotasInfoResponse, error) {
@@ -561,6 +745,10 @@ type CreateVpnServerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateVpnServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateVpnServerInvoker) Invoke() (*model.CreateVpnServerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *CreateVpnServerInvoker) Invoke() (*model.CreateVpnServerResponse, error
 
 type ExportClientConfigInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ExportClientConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ExportClientConfigInvoker) Invoke() (*model.ExportClientConfigResponse, error) {
@@ -585,6 +777,10 @@ type ListVpnServersByProjectInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVpnServersByProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVpnServersByProjectInvoker) Invoke() (*model.ListVpnServersByProjectResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListVpnServersByProjectInvoker) Invoke() (*model.ListVpnServersByProjec
 
 type ListVpnServersByVgwInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpnServersByVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpnServersByVgwInvoker) Invoke() (*model.ListVpnServersByVgwResponse, error) {
@@ -609,6 +809,10 @@ type UpdateVpnServerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateVpnServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateVpnServerInvoker) Invoke() (*model.UpdateVpnServerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *UpdateVpnServerInvoker) Invoke() (*model.UpdateVpnServerResponse, error
 
 type CreateVpnUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVpnUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVpnUserInvoker) Invoke() (*model.CreateVpnUserResponse, error) {
@@ -633,6 +841,10 @@ type DeleteVpnUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVpnUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVpnUserInvoker) Invoke() (*model.DeleteVpnUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *DeleteVpnUserInvoker) Invoke() (*model.DeleteVpnUserResponse, error) {
 
 type ListVpnUsersInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpnUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpnUsersInvoker) Invoke() (*model.ListVpnUsersResponse, error) {
@@ -657,6 +873,10 @@ type ResetVpnUserPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ResetVpnUserPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ResetVpnUserPasswordInvoker) Invoke() (*model.ResetVpnUserPasswordResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ResetVpnUserPasswordInvoker) Invoke() (*model.ResetVpnUserPasswordRespo
 
 type ShowVpnUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowVpnUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowVpnUserInvoker) Invoke() (*model.ShowVpnUserResponse, error) {
@@ -681,6 +905,10 @@ type UpdateVpnUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateVpnUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateVpnUserInvoker) Invoke() (*model.UpdateVpnUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *UpdateVpnUserInvoker) Invoke() (*model.UpdateVpnUserResponse, error) {
 
 type UpdateVpnUserPasswordInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpnUserPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpnUserPasswordInvoker) Invoke() (*model.UpdateVpnUserPasswordResponse, error) {
@@ -705,6 +937,10 @@ type AddVpnUsersToGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AddVpnUsersToGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AddVpnUsersToGroupInvoker) Invoke() (*model.AddVpnUsersToGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *AddVpnUsersToGroupInvoker) Invoke() (*model.AddVpnUsersToGroupResponse,
 
 type CreateVpnUserGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateVpnUserGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateVpnUserGroupInvoker) Invoke() (*model.CreateVpnUserGroupResponse, error) {
@@ -729,6 +969,10 @@ type DeleteVpnUserGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteVpnUserGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteVpnUserGroupInvoker) Invoke() (*model.DeleteVpnUserGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *DeleteVpnUserGroupInvoker) Invoke() (*model.DeleteVpnUserGroupResponse,
 
 type ListVpnUserGroupsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVpnUserGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVpnUserGroupsInvoker) Invoke() (*model.ListVpnUserGroupsResponse, error) {
@@ -753,6 +1001,10 @@ type ListVpnUsersInGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListVpnUsersInGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListVpnUsersInGroupInvoker) Invoke() (*model.ListVpnUsersInGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *ListVpnUsersInGroupInvoker) Invoke() (*model.ListVpnUsersInGroupRespons
 
 type RemoveVpnUsersFromGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RemoveVpnUsersFromGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RemoveVpnUsersFromGroupInvoker) Invoke() (*model.RemoveVpnUsersFromGroupResponse, error) {
@@ -777,6 +1033,10 @@ type ShowVpnUserGroupInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowVpnUserGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowVpnUserGroupInvoker) Invoke() (*model.ShowVpnUserGroupResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *ShowVpnUserGroupInvoker) Invoke() (*model.ShowVpnUserGroupResponse, err
 
 type UpdateVpnUserGroupInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpnUserGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateVpnUserGroupInvoker) Invoke() (*model.UpdateVpnUserGroupResponse, error) {

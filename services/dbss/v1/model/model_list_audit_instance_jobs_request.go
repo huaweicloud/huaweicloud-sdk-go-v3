@@ -9,7 +9,7 @@ import (
 // ListAuditInstanceJobsRequest Request Object
 type ListAuditInstanceJobsRequest struct {
 
-	// 资源ID
+	// 资源ID。可在查询实例列表接口的resource_id获取。
 	ResourceId string `json:"resource_id"`
 }
 

@@ -9,6 +9,10 @@ type BatchSearchMetricHitsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchSearchMetricHitsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchSearchMetricHitsInvoker) Invoke() (*model.BatchSearchMetricHitsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchSearchMetricHitsInvoker) Invoke() (*model.BatchSearchMetricHitsRes
 
 type ChangeAlertInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangeAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangeAlertInvoker) Invoke() (*model.ChangeAlertResponse, error) {
@@ -33,6 +41,10 @@ type ChangeIncidentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ChangeIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ChangeIncidentInvoker) Invoke() (*model.ChangeIncidentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ChangeIncidentInvoker) Invoke() (*model.ChangeIncidentResponse, error) 
 
 type ChangePlaybookInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ChangePlaybookInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ChangePlaybookInstanceInvoker) Invoke() (*model.ChangePlaybookInstanceResponse, error) {
@@ -57,6 +73,10 @@ type CopyPlaybookVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CopyPlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CopyPlaybookVersionInvoker) Invoke() (*model.CopyPlaybookVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CopyPlaybookVersionInvoker) Invoke() (*model.CopyPlaybookVersionRespons
 
 type CreateAlertInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAlertInvoker) Invoke() (*model.CreateAlertResponse, error) {
@@ -81,6 +105,10 @@ type CreateAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAlertRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAlertRuleInvoker) Invoke() (*model.CreateAlertRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *CreateAlertRuleInvoker) Invoke() (*model.CreateAlertRuleResponse, error
 
 type CreateAlertRuleSimulationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAlertRuleSimulationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAlertRuleSimulationInvoker) Invoke() (*model.CreateAlertRuleSimulationResponse, error) {
@@ -105,6 +137,10 @@ type CreateBatchOrderAlertsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateBatchOrderAlertsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateBatchOrderAlertsInvoker) Invoke() (*model.CreateBatchOrderAlertsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *CreateBatchOrderAlertsInvoker) Invoke() (*model.CreateBatchOrderAlertsR
 
 type CreateDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDataobjectRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDataobjectRelationsInvoker) Invoke() (*model.CreateDataobjectRelationsResponse, error) {
@@ -129,6 +169,10 @@ type CreateDataspaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateDataspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateDataspaceInvoker) Invoke() (*model.CreateDataspaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *CreateDataspaceInvoker) Invoke() (*model.CreateDataspaceResponse, error
 
 type CreateIncidentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateIncidentInvoker) Invoke() (*model.CreateIncidentResponse, error) {
@@ -153,6 +201,10 @@ type CreateIndicatorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateIndicatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateIndicatorInvoker) Invoke() (*model.CreateIndicatorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *CreateIndicatorInvoker) Invoke() (*model.CreateIndicatorResponse, error
 
 type CreatePipeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePipeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePipeInvoker) Invoke() (*model.CreatePipeResponse, error) {
@@ -177,6 +233,10 @@ type CreatePlaybookInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePlaybookInvoker) Invoke() (*model.CreatePlaybookResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *CreatePlaybookInvoker) Invoke() (*model.CreatePlaybookResponse, error) 
 
 type CreatePlaybookActionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePlaybookActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePlaybookActionInvoker) Invoke() (*model.CreatePlaybookActionResponse, error) {
@@ -201,6 +265,10 @@ type CreatePlaybookApproveInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePlaybookApproveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePlaybookApproveInvoker) Invoke() (*model.CreatePlaybookApproveResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *CreatePlaybookApproveInvoker) Invoke() (*model.CreatePlaybookApproveRes
 
 type CreatePlaybookRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePlaybookRuleInvoker) Invoke() (*model.CreatePlaybookRuleResponse, error) {
@@ -225,6 +297,10 @@ type CreatePlaybookVersionInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreatePlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreatePlaybookVersionInvoker) Invoke() (*model.CreatePlaybookVersionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *CreatePlaybookVersionInvoker) Invoke() (*model.CreatePlaybookVersionRes
 
 type CreatePostPaidOrderInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreatePostPaidOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreatePostPaidOrderInvoker) Invoke() (*model.CreatePostPaidOrderResponse, error) {
@@ -249,6 +329,10 @@ type CreateWorkspaceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateWorkspaceInvoker) Invoke() (*model.CreateWorkspaceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *CreateWorkspaceInvoker) Invoke() (*model.CreateWorkspaceResponse, error
 
 type DeleteAlertInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteAlertInvoker) Invoke() (*model.DeleteAlertResponse, error) {
@@ -273,6 +361,10 @@ type DeleteAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAlertRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAlertRuleInvoker) Invoke() (*model.DeleteAlertRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *DeleteAlertRuleInvoker) Invoke() (*model.DeleteAlertRuleResponse, error
 
 type DeleteDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteDataobjectRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteDataobjectRelationsInvoker) Invoke() (*model.DeleteDataobjectRelationsResponse, error) {
@@ -297,6 +393,10 @@ type DeleteIncidentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteIncidentInvoker) Invoke() (*model.DeleteIncidentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *DeleteIncidentInvoker) Invoke() (*model.DeleteIncidentResponse, error) 
 
 type DeleteIndicatorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteIndicatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteIndicatorInvoker) Invoke() (*model.DeleteIndicatorResponse, error) {
@@ -321,6 +425,10 @@ type DeletePlaybookInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePlaybookInvoker) Invoke() (*model.DeletePlaybookResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *DeletePlaybookInvoker) Invoke() (*model.DeletePlaybookResponse, error) 
 
 type DeletePlaybookActionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePlaybookActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePlaybookActionInvoker) Invoke() (*model.DeletePlaybookActionResponse, error) {
@@ -345,6 +457,10 @@ type DeletePlaybookRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeletePlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeletePlaybookRuleInvoker) Invoke() (*model.DeletePlaybookRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *DeletePlaybookRuleInvoker) Invoke() (*model.DeletePlaybookRuleResponse,
 
 type DeletePlaybookVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeletePlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeletePlaybookVersionInvoker) Invoke() (*model.DeletePlaybookVersionResponse, error) {
@@ -369,6 +489,10 @@ type DisableAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisableAlertRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisableAlertRuleInvoker) Invoke() (*model.DisableAlertRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *DisableAlertRuleInvoker) Invoke() (*model.DisableAlertRuleResponse, err
 
 type EnableAlertRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnableAlertRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnableAlertRuleInvoker) Invoke() (*model.EnableAlertRuleResponse, error) {
@@ -393,6 +521,10 @@ type ListAlertRuleMetricsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAlertRuleMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAlertRuleMetricsInvoker) Invoke() (*model.ListAlertRuleMetricsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -403,6 +535,10 @@ func (i *ListAlertRuleMetricsInvoker) Invoke() (*model.ListAlertRuleMetricsRespo
 
 type ListAlertRuleTemplatesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAlertRuleTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAlertRuleTemplatesInvoker) Invoke() (*model.ListAlertRuleTemplatesResponse, error) {
@@ -417,6 +553,10 @@ type ListAlertRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListAlertRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListAlertRulesInvoker) Invoke() (*model.ListAlertRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -427,6 +567,10 @@ func (i *ListAlertRulesInvoker) Invoke() (*model.ListAlertRulesResponse, error) 
 
 type ListAlertsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAlertsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAlertsInvoker) Invoke() (*model.ListAlertsResponse, error) {
@@ -441,6 +585,10 @@ type ListDataclassInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDataclassInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDataclassInvoker) Invoke() (*model.ListDataclassResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -451,6 +599,10 @@ func (i *ListDataclassInvoker) Invoke() (*model.ListDataclassResponse, error) {
 
 type ListDataclassFieldsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDataclassFieldsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDataclassFieldsInvoker) Invoke() (*model.ListDataclassFieldsResponse, error) {
@@ -465,6 +617,10 @@ type ListDataobjectRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDataobjectRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDataobjectRelationsInvoker) Invoke() (*model.ListDataobjectRelationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -475,6 +631,10 @@ func (i *ListDataobjectRelationsInvoker) Invoke() (*model.ListDataobjectRelation
 
 type ListIncidentsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListIncidentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListIncidentsInvoker) Invoke() (*model.ListIncidentsResponse, error) {
@@ -489,6 +649,10 @@ type ListIndicatorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListIndicatorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListIndicatorsInvoker) Invoke() (*model.ListIndicatorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -499,6 +663,10 @@ func (i *ListIndicatorsInvoker) Invoke() (*model.ListIndicatorsResponse, error) 
 
 type ListPlaybookActionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPlaybookActionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPlaybookActionsInvoker) Invoke() (*model.ListPlaybookActionsResponse, error) {
@@ -513,6 +681,10 @@ type ListPlaybookApprovesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPlaybookApprovesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPlaybookApprovesInvoker) Invoke() (*model.ListPlaybookApprovesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -523,6 +695,10 @@ func (i *ListPlaybookApprovesInvoker) Invoke() (*model.ListPlaybookApprovesRespo
 
 type ListPlaybookAuditLogsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPlaybookAuditLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPlaybookAuditLogsInvoker) Invoke() (*model.ListPlaybookAuditLogsResponse, error) {
@@ -537,6 +713,10 @@ type ListPlaybookInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPlaybookInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPlaybookInstancesInvoker) Invoke() (*model.ListPlaybookInstancesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -547,6 +727,10 @@ func (i *ListPlaybookInstancesInvoker) Invoke() (*model.ListPlaybookInstancesRes
 
 type ListPlaybookVersionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListPlaybookVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListPlaybookVersionsInvoker) Invoke() (*model.ListPlaybookVersionsResponse, error) {
@@ -561,6 +745,10 @@ type ListPlaybooksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListPlaybooksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListPlaybooksInvoker) Invoke() (*model.ListPlaybooksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -571,6 +759,10 @@ func (i *ListPlaybooksInvoker) Invoke() (*model.ListPlaybooksResponse, error) {
 
 type ListWorkflowsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListWorkflowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
@@ -585,6 +777,10 @@ type ListWorkspacesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListWorkspacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListWorkspacesInvoker) Invoke() (*model.ListWorkspacesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -595,6 +791,10 @@ func (i *ListWorkspacesInvoker) Invoke() (*model.ListWorkspacesResponse, error) 
 
 type SearchBaselineInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *SearchBaselineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *SearchBaselineInvoker) Invoke() (*model.SearchBaselineResponse, error) {
@@ -609,6 +809,10 @@ type ShowAlertInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAlertInvoker) Invoke() (*model.ShowAlertResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -619,6 +823,10 @@ func (i *ShowAlertInvoker) Invoke() (*model.ShowAlertResponse, error) {
 
 type ShowAlertRuleInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAlertRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAlertRuleInvoker) Invoke() (*model.ShowAlertRuleResponse, error) {
@@ -633,6 +841,10 @@ type ShowAlertRuleTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAlertRuleTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAlertRuleTemplateInvoker) Invoke() (*model.ShowAlertRuleTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -643,6 +855,10 @@ func (i *ShowAlertRuleTemplateInvoker) Invoke() (*model.ShowAlertRuleTemplateRes
 
 type ShowIncidentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowIncidentInvoker) Invoke() (*model.ShowIncidentResponse, error) {
@@ -657,6 +873,10 @@ type ShowIndicatorDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowIndicatorDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowIndicatorDetailInvoker) Invoke() (*model.ShowIndicatorDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -667,6 +887,10 @@ func (i *ShowIndicatorDetailInvoker) Invoke() (*model.ShowIndicatorDetailRespons
 
 type ShowPlaybookInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPlaybookInvoker) Invoke() (*model.ShowPlaybookResponse, error) {
@@ -681,6 +905,10 @@ type ShowPlaybookInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPlaybookInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPlaybookInstanceInvoker) Invoke() (*model.ShowPlaybookInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -691,6 +919,10 @@ func (i *ShowPlaybookInstanceInvoker) Invoke() (*model.ShowPlaybookInstanceRespo
 
 type ShowPlaybookMonitorsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPlaybookMonitorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPlaybookMonitorsInvoker) Invoke() (*model.ShowPlaybookMonitorsResponse, error) {
@@ -705,6 +937,10 @@ type ShowPlaybookRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPlaybookRuleInvoker) Invoke() (*model.ShowPlaybookRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -715,6 +951,10 @@ func (i *ShowPlaybookRuleInvoker) Invoke() (*model.ShowPlaybookRuleResponse, err
 
 type ShowPlaybookStatisticsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPlaybookStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPlaybookStatisticsInvoker) Invoke() (*model.ShowPlaybookStatisticsResponse, error) {
@@ -729,6 +969,10 @@ type ShowPlaybookTopologyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowPlaybookTopologyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowPlaybookTopologyInvoker) Invoke() (*model.ShowPlaybookTopologyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -739,6 +983,10 @@ func (i *ShowPlaybookTopologyInvoker) Invoke() (*model.ShowPlaybookTopologyRespo
 
 type ShowPlaybookVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowPlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowPlaybookVersionInvoker) Invoke() (*model.ShowPlaybookVersionResponse, error) {
@@ -753,6 +1001,10 @@ type UpdateAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAlertRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAlertRuleInvoker) Invoke() (*model.UpdateAlertRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -763,6 +1015,10 @@ func (i *UpdateAlertRuleInvoker) Invoke() (*model.UpdateAlertRuleResponse, error
 
 type UpdateIndicatorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateIndicatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateIndicatorInvoker) Invoke() (*model.UpdateIndicatorResponse, error) {
@@ -777,6 +1033,10 @@ type UpdatePlaybookInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePlaybookInvoker) Invoke() (*model.UpdatePlaybookResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -787,6 +1047,10 @@ func (i *UpdatePlaybookInvoker) Invoke() (*model.UpdatePlaybookResponse, error) 
 
 type UpdatePlaybookActionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePlaybookActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePlaybookActionInvoker) Invoke() (*model.UpdatePlaybookActionResponse, error) {
@@ -801,6 +1065,10 @@ type UpdatePlaybookRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdatePlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdatePlaybookRuleInvoker) Invoke() (*model.UpdatePlaybookRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -811,6 +1079,10 @@ func (i *UpdatePlaybookRuleInvoker) Invoke() (*model.UpdatePlaybookRuleResponse,
 
 type UpdatePlaybookVersionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdatePlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdatePlaybookVersionInvoker) Invoke() (*model.UpdatePlaybookVersionResponse, error) {

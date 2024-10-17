@@ -9,6 +9,10 @@ type AcceptOrRejectEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *AcceptOrRejectEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *AcceptOrRejectEndpointInvoker) Invoke() (*model.AcceptOrRejectEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *AcceptOrRejectEndpointInvoker) Invoke() (*model.AcceptOrRejectEndpointR
 
 type AddOrRemoveServicePermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddOrRemoveServicePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddOrRemoveServicePermissionsInvoker) Invoke() (*model.AddOrRemoveServicePermissionsResponse, error) {
@@ -33,6 +41,10 @@ type BatchAddEndpointServicePermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchAddEndpointServicePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchAddEndpointServicePermissionsInvoker) Invoke() (*model.BatchAddEndpointServicePermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *BatchAddEndpointServicePermissionsInvoker) Invoke() (*model.BatchAddEnd
 
 type BatchRemoveEndpointServicePermissionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchRemoveEndpointServicePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchRemoveEndpointServicePermissionsInvoker) Invoke() (*model.BatchRemoveEndpointServicePermissionsResponse, error) {
@@ -57,6 +73,10 @@ type CreateEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateEndpointInvoker) Invoke() (*model.CreateEndpointResponse, error) 
 
 type CreateEndpointServiceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateEndpointServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateEndpointServiceInvoker) Invoke() (*model.CreateEndpointServiceResponse, error) {
@@ -81,6 +105,10 @@ type DeleteEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEndpointInvoker) Invoke() (*model.DeleteEndpointResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteEndpointInvoker) Invoke() (*model.DeleteEndpointResponse, error) 
 
 type DeleteEndpointPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteEndpointPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteEndpointPolicyInvoker) Invoke() (*model.DeleteEndpointPolicyResponse, error) {
@@ -105,6 +137,10 @@ type DeleteEndpointServiceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteEndpointServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteEndpointServiceInvoker) Invoke() (*model.DeleteEndpointServiceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *DeleteEndpointServiceInvoker) Invoke() (*model.DeleteEndpointServiceRes
 
 type ListEndpointInfoDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointInfoDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEndpointInfoDetailsInvoker) Invoke() (*model.ListEndpointInfoDetailsResponse, error) {
@@ -129,6 +169,10 @@ type ListEndpointServiceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListEndpointServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListEndpointServiceInvoker) Invoke() (*model.ListEndpointServiceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListEndpointServiceInvoker) Invoke() (*model.ListEndpointServiceRespons
 
 type ListEndpointsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
@@ -153,6 +201,10 @@ type ListQuotaDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQuotaDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQuotaDetailsInvoker) Invoke() (*model.ListQuotaDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListQuotaDetailsInvoker) Invoke() (*model.ListQuotaDetailsResponse, err
 
 type ListServiceConnectionsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListServiceConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListServiceConnectionsInvoker) Invoke() (*model.ListServiceConnectionsResponse, error) {
@@ -177,6 +233,10 @@ type ListServiceDescribeDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListServiceDescribeDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListServiceDescribeDetailsInvoker) Invoke() (*model.ListServiceDescribeDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *ListServiceDescribeDetailsInvoker) Invoke() (*model.ListServiceDescribe
 
 type ListServiceDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListServiceDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListServiceDetailsInvoker) Invoke() (*model.ListServiceDetailsResponse, error) {
@@ -201,6 +265,10 @@ type ListServicePermissionsDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListServicePermissionsDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListServicePermissionsDetailsInvoker) Invoke() (*model.ListServicePermissionsDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListServicePermissionsDetailsInvoker) Invoke() (*model.ListServicePermi
 
 type ListServicePublicDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListServicePublicDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListServicePublicDetailsInvoker) Invoke() (*model.ListServicePublicDetailsResponse, error) {
@@ -225,6 +297,10 @@ type ListSpecifiedVersionDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSpecifiedVersionDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSpecifiedVersionDetailsInvoker) Invoke() (*model.ListSpecifiedVersionDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ListSpecifiedVersionDetailsInvoker) Invoke() (*model.ListSpecifiedVersi
 
 type ListVersionDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListVersionDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListVersionDetailsInvoker) Invoke() (*model.ListVersionDetailsResponse, error) {
@@ -249,6 +329,10 @@ type UpdateEndpointConnectionsDescInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEndpointConnectionsDescInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEndpointConnectionsDescInvoker) Invoke() (*model.UpdateEndpointConnectionsDescResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *UpdateEndpointConnectionsDescInvoker) Invoke() (*model.UpdateEndpointCo
 
 type UpdateEndpointPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEndpointPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEndpointPolicyInvoker) Invoke() (*model.UpdateEndpointPolicyResponse, error) {
@@ -273,6 +361,10 @@ type UpdateEndpointRoutetableInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEndpointRoutetableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEndpointRoutetableInvoker) Invoke() (*model.UpdateEndpointRoutetableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *UpdateEndpointRoutetableInvoker) Invoke() (*model.UpdateEndpointRouteta
 
 type UpdateEndpointServiceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEndpointServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEndpointServiceInvoker) Invoke() (*model.UpdateEndpointServiceResponse, error) {
@@ -297,6 +393,10 @@ type UpdateEndpointServiceNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEndpointServiceNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEndpointServiceNameInvoker) Invoke() (*model.UpdateEndpointServiceNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *UpdateEndpointServiceNameInvoker) Invoke() (*model.UpdateEndpointServic
 
 type UpdateEndpointServicePermissionDescInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateEndpointServicePermissionDescInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateEndpointServicePermissionDescInvoker) Invoke() (*model.UpdateEndpointServicePermissionDescResponse, error) {
@@ -321,6 +425,10 @@ type UpdateEndpointWhiteInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateEndpointWhiteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateEndpointWhiteInvoker) Invoke() (*model.UpdateEndpointWhiteResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UpdateEndpointWhiteInvoker) Invoke() (*model.UpdateEndpointWhiteRespons
 
 type BatchAddOrRemoveResourceInstanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchAddOrRemoveResourceInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchAddOrRemoveResourceInstanceInvoker) Invoke() (*model.BatchAddOrRemoveResourceInstanceResponse, error) {
@@ -345,6 +457,10 @@ type ListQueryProjectResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListQueryProjectResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListQueryProjectResourceTagsInvoker) Invoke() (*model.ListQueryProjectResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ListQueryProjectResourceTagsInvoker) Invoke() (*model.ListQueryProjectR
 
 type ListResourceInstancesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListResourceInstancesInvoker) Invoke() (*model.ListResourceInstancesResponse, error) {

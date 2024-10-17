@@ -9,6 +9,10 @@ type RunAspectSentimentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunAspectSentimentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunAspectSentimentInvoker) Invoke() (*model.RunAspectSentimentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *RunAspectSentimentInvoker) Invoke() (*model.RunAspectSentimentResponse,
 
 type RunAspectSentimentAdvanceInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunAspectSentimentAdvanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunAspectSentimentAdvanceInvoker) Invoke() (*model.RunAspectSentimentAdvanceResponse, error) {
@@ -33,6 +41,10 @@ type RunClassificationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunClassificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunClassificationInvoker) Invoke() (*model.RunClassificationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *RunClassificationInvoker) Invoke() (*model.RunClassificationResponse, e
 
 type RunConstituencyParserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunConstituencyParserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunConstituencyParserInvoker) Invoke() (*model.RunConstituencyParserResponse, error) {
@@ -57,6 +73,10 @@ type RunDependencyParserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunDependencyParserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunDependencyParserInvoker) Invoke() (*model.RunDependencyParserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *RunDependencyParserInvoker) Invoke() (*model.RunDependencyParserRespons
 
 type RunDocClassificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunDocClassificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunDocClassificationInvoker) Invoke() (*model.RunDocClassificationResponse, error) {
@@ -81,6 +105,10 @@ type RunDomainSentimentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunDomainSentimentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunDomainSentimentInvoker) Invoke() (*model.RunDomainSentimentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *RunDomainSentimentInvoker) Invoke() (*model.RunDomainSentimentResponse,
 
 type RunEntityLinkingInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunEntityLinkingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunEntityLinkingInvoker) Invoke() (*model.RunEntityLinkingResponse, error) {
@@ -105,6 +137,10 @@ type RunEntitySentimentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunEntitySentimentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunEntitySentimentInvoker) Invoke() (*model.RunEntitySentimentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *RunEntitySentimentInvoker) Invoke() (*model.RunEntitySentimentResponse,
 
 type RunEventExtractionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunEventExtractionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunEventExtractionInvoker) Invoke() (*model.RunEventExtractionResponse, error) {
@@ -129,6 +169,10 @@ type RunFileTranslationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunFileTranslationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunFileTranslationInvoker) Invoke() (*model.RunFileTranslationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *RunFileTranslationInvoker) Invoke() (*model.RunFileTranslationResponse,
 
 type RunGetFileTranslationResultInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunGetFileTranslationResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunGetFileTranslationResultInvoker) Invoke() (*model.RunGetFileTranslationResultResponse, error) {
@@ -153,6 +201,10 @@ type RunKeywordExtractInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunKeywordExtractInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunKeywordExtractInvoker) Invoke() (*model.RunKeywordExtractResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *RunKeywordExtractInvoker) Invoke() (*model.RunKeywordExtractResponse, e
 
 type RunLanguageDetectionInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunLanguageDetectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunLanguageDetectionInvoker) Invoke() (*model.RunLanguageDetectionResponse, error) {
@@ -177,6 +233,10 @@ type RunMultiGrainedSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunMultiGrainedSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunMultiGrainedSegmentInvoker) Invoke() (*model.RunMultiGrainedSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *RunMultiGrainedSegmentInvoker) Invoke() (*model.RunMultiGrainedSegmentR
 
 type RunNerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunNerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunNerInvoker) Invoke() (*model.RunNerResponse, error) {
@@ -201,6 +265,10 @@ type RunNerDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunNerDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunNerDomainInvoker) Invoke() (*model.RunNerDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *RunNerDomainInvoker) Invoke() (*model.RunNerDomainResponse, error) {
 
 type RunPoemInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunPoemInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunPoemInvoker) Invoke() (*model.RunPoemResponse, error) {
@@ -225,6 +297,10 @@ type RunSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunSegmentInvoker) Invoke() (*model.RunSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *RunSegmentInvoker) Invoke() (*model.RunSegmentResponse, error) {
 
 type RunSemanticParserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunSemanticParserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunSemanticParserInvoker) Invoke() (*model.RunSemanticParserResponse, error) {
@@ -249,6 +329,10 @@ type RunSentenceEmbeddingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunSentenceEmbeddingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunSentenceEmbeddingInvoker) Invoke() (*model.RunSentenceEmbeddingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *RunSentenceEmbeddingInvoker) Invoke() (*model.RunSentenceEmbeddingRespo
 
 type RunSentimentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunSentimentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunSentimentInvoker) Invoke() (*model.RunSentimentResponse, error) {
@@ -273,6 +361,10 @@ type RunSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunSummaryInvoker) Invoke() (*model.RunSummaryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *RunSummaryInvoker) Invoke() (*model.RunSummaryResponse, error) {
 
 type RunSummaryDomainInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunSummaryDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunSummaryDomainInvoker) Invoke() (*model.RunSummaryDomainResponse, error) {
@@ -297,6 +393,10 @@ type RunTextSimilarityInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunTextSimilarityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunTextSimilarityInvoker) Invoke() (*model.RunTextSimilarityResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -309,6 +409,10 @@ type RunTextSimilarityAdvanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RunTextSimilarityAdvanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RunTextSimilarityAdvanceInvoker) Invoke() (*model.RunTextSimilarityAdvanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -319,6 +423,10 @@ func (i *RunTextSimilarityAdvanceInvoker) Invoke() (*model.RunTextSimilarityAdva
 
 type RunTextTranslationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunTextTranslationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunTextTranslationInvoker) Invoke() (*model.RunTextTranslationResponse, error) {

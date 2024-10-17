@@ -9,6 +9,10 @@ type BatchDeleteJobsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteJobsInvoker) Invoke() (*model.BatchDeleteJobsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchDeleteJobsInvoker) Invoke() (*model.BatchDeleteJobsResponse, error
 
 type CreateAutoScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAutoScalingPolicyInvoker) Invoke() (*model.CreateAutoScalingPolicyResponse, error) {
@@ -33,6 +41,10 @@ type CreateClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
 
 type CreateExecuteJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateExecuteJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateExecuteJobInvoker) Invoke() (*model.CreateExecuteJobResponse, error) {
@@ -57,6 +73,10 @@ type DeleteAutoScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteAutoScalingPolicyInvoker) Invoke() (*model.DeleteAutoScalingPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *DeleteAutoScalingPolicyInvoker) Invoke() (*model.DeleteAutoScalingPolic
 
 type RunJobFlowInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *RunJobFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *RunJobFlowInvoker) Invoke() (*model.RunJobFlowResponse, error) {
@@ -81,6 +105,10 @@ type ShowAgencyMappingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAgencyMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAgencyMappingInvoker) Invoke() (*model.ShowAgencyMappingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *ShowAgencyMappingInvoker) Invoke() (*model.ShowAgencyMappingResponse, e
 
 type ShowAutoScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAutoScalingPolicyInvoker) Invoke() (*model.ShowAutoScalingPolicyResponse, error) {
@@ -105,6 +137,10 @@ type ShowJobExeListNewInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowJobExeListNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowJobExeListNewInvoker) Invoke() (*model.ShowJobExeListNewResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ShowJobExeListNewInvoker) Invoke() (*model.ShowJobExeListNewResponse, e
 
 type ShowSingleJobExeInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSingleJobExeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSingleJobExeInvoker) Invoke() (*model.ShowSingleJobExeResponse, error) {
@@ -129,6 +169,10 @@ type ShowSqlResultWithJobInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSqlResultWithJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSqlResultWithJobInvoker) Invoke() (*model.ShowSqlResultWithJobResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowSqlResultWithJobInvoker) Invoke() (*model.ShowSqlResultWithJobRespo
 
 type StopJobInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *StopJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *StopJobInvoker) Invoke() (*model.StopJobResponse, error) {
@@ -153,6 +201,10 @@ type UpdateAgencyMappingInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAgencyMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAgencyMappingInvoker) Invoke() (*model.UpdateAgencyMappingResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *UpdateAgencyMappingInvoker) Invoke() (*model.UpdateAgencyMappingRespons
 
 type UpdateAutoScalingPolicyInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateAutoScalingPolicyInvoker) Invoke() (*model.UpdateAutoScalingPolicyResponse, error) {
@@ -177,6 +233,10 @@ type UpdateClusterNameInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateClusterNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateClusterNameInvoker) Invoke() (*model.UpdateClusterNameResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *UpdateClusterNameInvoker) Invoke() (*model.UpdateClusterNameResponse, e
 
 type AddComponentInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *AddComponentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *AddComponentInvoker) Invoke() (*model.AddComponentResponse, error) {
@@ -201,6 +265,10 @@ type ExpandClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExpandClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExpandClusterInvoker) Invoke() (*model.ExpandClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ExpandClusterInvoker) Invoke() (*model.ExpandClusterResponse, error) {
 
 type ListNodesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
@@ -225,6 +297,10 @@ type ShrinkClusterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShrinkClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShrinkClusterInvoker) Invoke() (*model.ShrinkClusterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShrinkClusterInvoker) Invoke() (*model.ShrinkClusterResponse, error) {
 
 type CreateDataConnectorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateDataConnectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateDataConnectorInvoker) Invoke() (*model.CreateDataConnectorResponse, error) {
@@ -249,6 +329,10 @@ type DeleteDataConnectorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteDataConnectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteDataConnectorInvoker) Invoke() (*model.DeleteDataConnectorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -259,6 +343,10 @@ func (i *DeleteDataConnectorInvoker) Invoke() (*model.DeleteDataConnectorRespons
 
 type ListDataConnectorInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDataConnectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDataConnectorInvoker) Invoke() (*model.ListDataConnectorResponse, error) {
@@ -273,6 +361,10 @@ type UpdateDataConnectorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateDataConnectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateDataConnectorInvoker) Invoke() (*model.UpdateDataConnectorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -283,6 +375,10 @@ func (i *UpdateDataConnectorInvoker) Invoke() (*model.UpdateDataConnectorRespons
 
 type ShowHdfsFileListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowHdfsFileListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowHdfsFileListInvoker) Invoke() (*model.ShowHdfsFileListResponse, error) {
@@ -297,6 +393,10 @@ type CancelSyncIamUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CancelSyncIamUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CancelSyncIamUserInvoker) Invoke() (*model.CancelSyncIamUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -307,6 +407,10 @@ func (i *CancelSyncIamUserInvoker) Invoke() (*model.CancelSyncIamUserResponse, e
 
 type ShowSyncIamUserInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSyncIamUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSyncIamUserInvoker) Invoke() (*model.ShowSyncIamUserResponse, error) {
@@ -321,6 +425,10 @@ type UpdateSyncIamUserInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateSyncIamUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateSyncIamUserInvoker) Invoke() (*model.UpdateSyncIamUserResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -331,6 +439,10 @@ func (i *UpdateSyncIamUserInvoker) Invoke() (*model.UpdateSyncIamUserResponse, e
 
 type CancelSqlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CancelSqlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CancelSqlInvoker) Invoke() (*model.CancelSqlResponse, error) {
@@ -345,6 +457,10 @@ type ExecuteSqlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ExecuteSqlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ExecuteSqlInvoker) Invoke() (*model.ExecuteSqlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -355,6 +471,10 @@ func (i *ExecuteSqlInvoker) Invoke() (*model.ExecuteSqlResponse, error) {
 
 type ShowSqlResultInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSqlResultInvoker) Invoke() (*model.ShowSqlResultResponse, error) {
@@ -369,6 +489,10 @@ type ShowTagQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTagQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTagQuotaInvoker) Invoke() (*model.ShowTagQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -379,6 +503,10 @@ func (i *ShowTagQuotaInvoker) Invoke() (*model.ShowTagQuotaResponse, error) {
 
 type ShowTagStatusInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowTagStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowTagStatusInvoker) Invoke() (*model.ShowTagStatusResponse, error) {
@@ -393,6 +521,10 @@ type SwitchClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *SwitchClusterTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *SwitchClusterTagsInvoker) Invoke() (*model.SwitchClusterTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -405,6 +537,10 @@ type ShowMrsFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowMrsFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowMrsFlavorsInvoker) Invoke() (*model.ShowMrsFlavorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -415,6 +551,10 @@ func (i *ShowMrsFlavorsInvoker) Invoke() (*model.ShowMrsFlavorsResponse, error) 
 
 type ShowMrsVersionListInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowMrsVersionListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowMrsVersionListInvoker) Invoke() (*model.ShowMrsVersionListResponse, error) {

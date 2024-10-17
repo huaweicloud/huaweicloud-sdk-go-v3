@@ -9,6 +9,10 @@ type DisableControlInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DisableControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DisableControlInvoker) Invoke() (*model.DisableControlResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *DisableControlInvoker) Invoke() (*model.DisableControlResponse, error) 
 
 type EnableControlInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnableControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnableControlInvoker) Invoke() (*model.EnableControlResponse, error) {
@@ -33,6 +41,10 @@ type ListControlsForOrganizationalUnitInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListControlsForOrganizationalUnitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListControlsForOrganizationalUnitInvoker) Invoke() (*model.ListControlsForOrganizationalUnitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ListControlsForOrganizationalUnitInvoker) Invoke() (*model.ListControls
 
 type ListEnabledControlsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListEnabledControlsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListEnabledControlsInvoker) Invoke() (*model.ListEnabledControlsResponse, error) {
@@ -57,6 +73,10 @@ type ShowControlOperateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowControlOperateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowControlOperateInvoker) Invoke() (*model.ShowControlOperateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *ShowControlOperateInvoker) Invoke() (*model.ShowControlOperateResponse,
 
 type CreateAccountInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateAccountInvoker) Invoke() (*model.CreateAccountResponse, error) {
@@ -81,6 +105,10 @@ type RegisterOrganizationalUnitInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *RegisterOrganizationalUnitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *RegisterOrganizationalUnitInvoker) Invoke() (*model.RegisterOrganizationalUnitResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -93,6 +121,10 @@ type ShowManagedAccountInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowManagedAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowManagedAccountInvoker) Invoke() (*model.ShowManagedAccountResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -103,6 +135,10 @@ func (i *ShowManagedAccountInvoker) Invoke() (*model.ShowManagedAccountResponse,
 
 type ShowOperationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowOperationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowOperationInvoker) Invoke() (*model.ShowOperationResponse, error) {

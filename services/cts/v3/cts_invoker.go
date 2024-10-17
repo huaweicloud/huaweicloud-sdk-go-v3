@@ -9,6 +9,10 @@ type BatchCreateResourceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTag
 
 type BatchDeleteResourceTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *BatchDeleteResourceTagsInvoker) Invoke() (*model.BatchDeleteResourceTagsResponse, error) {
@@ -33,6 +41,10 @@ type CheckObsBucketsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CheckObsBucketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CheckObsBucketsInvoker) Invoke() (*model.CheckObsBucketsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *CheckObsBucketsInvoker) Invoke() (*model.CheckObsBucketsResponse, error
 
 type CreateNotificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateNotificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateNotificationInvoker) Invoke() (*model.CreateNotificationResponse, error) {
@@ -57,6 +73,10 @@ type CreateTrackerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateTrackerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateTrackerInvoker) Invoke() (*model.CreateTrackerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *CreateTrackerInvoker) Invoke() (*model.CreateTrackerResponse, error) {
 
 type DeleteNotificationInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *DeleteNotificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *DeleteNotificationInvoker) Invoke() (*model.DeleteNotificationResponse, error) {
@@ -81,6 +105,10 @@ type DeleteTrackerInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTrackerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTrackerInvoker) Invoke() (*model.DeleteTrackerResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteTrackerInvoker) Invoke() (*model.DeleteTrackerResponse, error) {
 
 type ListNotificationsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListNotificationsInvoker) Invoke() (*model.ListNotificationsResponse, error) {
@@ -105,6 +137,10 @@ type ListOperationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListOperationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListOperationsInvoker) Invoke() (*model.ListOperationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListOperationsInvoker) Invoke() (*model.ListOperationsResponse, error) 
 
 type ListQuotasInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
@@ -129,6 +169,10 @@ type ListTraceResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTraceResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTraceResourcesInvoker) Invoke() (*model.ListTraceResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ListTraceResourcesInvoker) Invoke() (*model.ListTraceResourcesResponse,
 
 type ListTracesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTracesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTracesInvoker) Invoke() (*model.ListTracesResponse, error) {
@@ -153,6 +201,10 @@ type ListTrackersInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTrackersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTrackersInvoker) Invoke() (*model.ListTrackersResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *ListTrackersInvoker) Invoke() (*model.ListTrackersResponse, error) {
 
 type ListUserResourcesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListUserResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListUserResourcesInvoker) Invoke() (*model.ListUserResourcesResponse, error) {
@@ -177,6 +233,10 @@ type UpdateNotificationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateNotificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateNotificationInvoker) Invoke() (*model.UpdateNotificationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *UpdateNotificationInvoker) Invoke() (*model.UpdateNotificationResponse,
 
 type UpdateTrackerInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTrackerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTrackerInvoker) Invoke() (*model.UpdateTrackerResponse, error) {

@@ -9,6 +9,10 @@ type CreateAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *CreateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -19,6 +23,10 @@ func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 
 type ListAppDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListAppDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListAppDetailsInvoker) Invoke() (*model.ListAppDetailsResponse, error) {
@@ -33,6 +41,10 @@ type ShowAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -43,6 +55,10 @@ func (i *ShowAppInvoker) Invoke() (*model.ShowAppResponse, error) {
 
 type ShowAppCountInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowAppCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowAppCountInvoker) Invoke() (*model.ShowAppCountResponse, error) {
@@ -57,6 +73,10 @@ type UpdateAppInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UpdateAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -67,6 +87,10 @@ func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 
 type CreateSignatureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateSignatureInvoker) Invoke() (*model.CreateSignatureResponse, error) {
@@ -81,6 +105,10 @@ type DeleteSignatureInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteSignatureInvoker) Invoke() (*model.DeleteSignatureResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -91,6 +119,10 @@ func (i *DeleteSignatureInvoker) Invoke() (*model.DeleteSignatureResponse, error
 
 type EnableSignatureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *EnableSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *EnableSignatureInvoker) Invoke() (*model.EnableSignatureResponse, error) {
@@ -105,6 +137,10 @@ type ListSignatureDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListSignatureDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListSignatureDetailsInvoker) Invoke() (*model.ListSignatureDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -115,6 +151,10 @@ func (i *ListSignatureDetailsInvoker) Invoke() (*model.ListSignatureDetailsRespo
 
 type ShowSignatureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowSignatureInvoker) Invoke() (*model.ShowSignatureResponse, error) {
@@ -129,6 +169,10 @@ type ShowSignatureFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowSignatureFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowSignatureFileInvoker) Invoke() (*model.ShowSignatureFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +183,10 @@ func (i *ShowSignatureFileInvoker) Invoke() (*model.ShowSignatureFileResponse, e
 
 type UpdateSignatureInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateSignatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateSignatureInvoker) Invoke() (*model.UpdateSignatureResponse, error) {
@@ -153,6 +201,10 @@ type UploadSignatureFileInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *UploadSignatureFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *UploadSignatureFileInvoker) Invoke() (*model.UploadSignatureFileResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -163,6 +215,10 @@ func (i *UploadSignatureFileInvoker) Invoke() (*model.UploadSignatureFileRespons
 
 type CreateTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
@@ -177,6 +233,10 @@ type DeleteTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *DeleteTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -187,6 +247,10 @@ func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) 
 
 type ListSendCountryDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListSendCountryDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListSendCountryDetailsInvoker) Invoke() (*model.ListSendCountryDetailsResponse, error) {
@@ -201,6 +265,10 @@ type ListTemplateDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListTemplateDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListTemplateDetailsInvoker) Invoke() (*model.ListTemplateDetailsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -211,6 +279,10 @@ func (i *ListTemplateDetailsInvoker) Invoke() (*model.ListTemplateDetailsRespons
 
 type ListTemplateVarilableDetailsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListTemplateVarilableDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListTemplateVarilableDetailsInvoker) Invoke() (*model.ListTemplateVarilableDetailsResponse, error) {
@@ -225,6 +297,10 @@ type ShowTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowTemplateInvoker) Invoke() (*model.ShowTemplateResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -235,6 +311,10 @@ func (i *ShowTemplateInvoker) Invoke() (*model.ShowTemplateResponse, error) {
 
 type UpdateTemplateInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateTemplateInvoker) Invoke() (*model.UpdateTemplateResponse, error) {

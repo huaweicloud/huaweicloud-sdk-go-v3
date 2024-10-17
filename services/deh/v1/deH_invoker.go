@@ -9,6 +9,10 @@ type BatchCreateDedicatedHostTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchCreateDedicatedHostTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchCreateDedicatedHostTagsInvoker) Invoke() (*model.BatchCreateDedicatedHostTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -21,6 +25,10 @@ type BatchDeleteDedicatedHostTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *BatchDeleteDedicatedHostTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *BatchDeleteDedicatedHostTagsInvoker) Invoke() (*model.BatchDeleteDedicatedHostTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -29,32 +37,12 @@ func (i *BatchDeleteDedicatedHostTagsInvoker) Invoke() (*model.BatchDeleteDedica
 	}
 }
 
-type CreateDedicatedHostInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDedicatedHostInvoker) Invoke() (*model.CreateDedicatedHostResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDedicatedHostResponse), nil
-	}
-}
-
-type DeleteDedicatedHostInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDedicatedHostInvoker) Invoke() (*model.DeleteDedicatedHostResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDedicatedHostResponse), nil
-	}
-}
-
 type ListDedicatedHostTypesInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDedicatedHostTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDedicatedHostTypesInvoker) Invoke() (*model.ListDedicatedHostTypesResponse, error) {
@@ -69,6 +57,10 @@ type ListDedicatedHostsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListDedicatedHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListDedicatedHostsInvoker) Invoke() (*model.ListDedicatedHostsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -79,6 +71,10 @@ func (i *ListDedicatedHostsInvoker) Invoke() (*model.ListDedicatedHostsResponse,
 
 type ListDedicatedHostsByTagsInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ListDedicatedHostsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ListDedicatedHostsByTagsInvoker) Invoke() (*model.ListDedicatedHostsByTagsResponse, error) {
@@ -93,6 +89,10 @@ type ListServersDedicatedHostInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ListServersDedicatedHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ListServersDedicatedHostInvoker) Invoke() (*model.ListServersDedicatedHostResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -103,6 +103,10 @@ func (i *ListServersDedicatedHostInvoker) Invoke() (*model.ListServersDedicatedH
 
 type ShowDedicatedHostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *ShowDedicatedHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *ShowDedicatedHostInvoker) Invoke() (*model.ShowDedicatedHostResponse, error) {
@@ -117,6 +121,10 @@ type ShowDedicatedHostTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowDedicatedHostTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowDedicatedHostTagsInvoker) Invoke() (*model.ShowDedicatedHostTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -129,6 +137,10 @@ type ShowQuotaSetsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+func (i *ShowQuotaSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
 func (i *ShowQuotaSetsInvoker) Invoke() (*model.ShowQuotaSetsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -139,6 +151,10 @@ func (i *ShowQuotaSetsInvoker) Invoke() (*model.ShowQuotaSetsResponse, error) {
 
 type UpdateDedicatedHostInvoker struct {
 	*invoker.BaseInvoker
+}
+
+func (i *UpdateDedicatedHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
 }
 
 func (i *UpdateDedicatedHostInvoker) Invoke() (*model.UpdateDedicatedHostResponse, error) {
