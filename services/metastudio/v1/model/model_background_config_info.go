@@ -18,6 +18,8 @@ type BackgroundConfigInfo struct {
 	// **参数解释**： 背景文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 * background_type=IMAGE时需要填写。  **取值范围**： 字符长度1-2048位 **默认取值**： 不涉及。
 	BackgroundConfig *string `json:"background_config,omitempty"`
 
+	BackgroundCoverUrl *string `json:"background_cover_url,omitempty"`
+
 	// **参数解释**： 纯色背景的RGB颜色值。 **约束限制**： background_type=COLOR时需要填写。 **取值范围**： 字符长度0-16位
 	BackgroundColorConfig *string `json:"background_color_config,omitempty"`
 
