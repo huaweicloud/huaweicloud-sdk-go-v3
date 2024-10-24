@@ -8,6 +8,12 @@ import (
 
 // ListAppsRequest Request Object
 type ListAppsRequest struct {
+
+	// 页码
+	PageNum *int64 `json:"page_num,omitempty"`
+
+	// 当前页大小
+	PageSize *int64 `json:"page_size,omitempty"`
 }
 
 func (o ListAppsRequest) String() string {

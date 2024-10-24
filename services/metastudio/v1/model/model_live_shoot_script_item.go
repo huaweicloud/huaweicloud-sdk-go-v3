@@ -18,6 +18,8 @@ type LiveShootScriptItem struct {
 	TextConfig *TextConfig `json:"text_config,omitempty"`
 
 	AudioConfig *LiveAudioConfig `json:"audio_config,omitempty"`
+
+	RelationProduct *RelationProductInfo `json:"relation_product,omitempty"`
 }
 
 func (o LiveShootScriptItem) String() string {

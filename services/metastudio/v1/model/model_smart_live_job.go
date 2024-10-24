@@ -62,6 +62,8 @@ type SmartLiveJob struct {
 	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`
 
 	LiveJobLog *LiveJobLog `json:"live_job_log,omitempty"`
+
+	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
 }
 
 func (o SmartLiveJob) String() string {

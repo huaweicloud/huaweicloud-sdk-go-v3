@@ -39,8 +39,14 @@ type CompareJobInfo struct {
 	// 对比任务的标签。
 	CompareJobTag map[string]string `json:"compare_job_tag,omitempty"`
 
+	// 对比任务选项。
+	Options map[string]string `json:"options,omitempty"`
+
 	// 失败原因。
 	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 动态比对时延。
+	DynamicCompareDelay *int64 `json:"dynamic_compare_delay,omitempty"`
 }
 
 func (o CompareJobInfo) String() string {

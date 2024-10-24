@@ -28,6 +28,9 @@ type BatchCreateInvocationRequestBody struct {
 
 	// Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
 	Origin *BatchCreateInvocationRequestBodyOrigin `json:"origin,omitempty"`
+
+	// 版本号
+	Version *string `json:"version,omitempty"`
 }
 
 func (o BatchCreateInvocationRequestBody) String() string {

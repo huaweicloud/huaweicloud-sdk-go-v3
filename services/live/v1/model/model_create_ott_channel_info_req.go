@@ -18,7 +18,7 @@ type CreateOttChannelInfoReq struct {
 	// 组名或应用名
 	AppName string `json:"app_name"`
 
-	// 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+	// 频道ID。频道唯一标识，为必填项。
 	Id string `json:"id"`
 
 	// 频道名。可选配置
@@ -36,6 +36,8 @@ type CreateOttChannelInfoReq struct {
 
 	// 频道出流信息
 	Endpoints []EndpointItem `json:"endpoints"`
+
+	EncoderSettingsExpand *EncoderSettingsExpand `json:"encoder_settings_expand,omitempty"`
 }
 
 func (o CreateOttChannelInfoReq) String() string {

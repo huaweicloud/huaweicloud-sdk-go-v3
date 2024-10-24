@@ -613,6 +613,7 @@ func (c *MetaStudioClient) UpdateDigitalHumanBusinessCardInvoker(request *model.
 // ListDigitalHumanVideo 查询视频制作任务列表
 //
 // 该接口用于查询视频制作任务列表。可查询分身数字人视频制作列表，照片数字人视频制作列表等。
+// &gt; - 默认查询最近一个月任务记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListDigitalHumanVideo(request *model.ListDigitalHumanVideoRequest) (*model.ListDigitalHumanVideoResponse, error) {
@@ -2331,6 +2332,69 @@ func (c *MetaStudioClient) ListStyles(request *model.ListStylesRequest) (*model.
 func (c *MetaStudioClient) ListStylesInvoker(request *model.ListStylesRequest) *ListStylesInvoker {
 	requestDef := GenReqDefForListStyles()
 	return &ListStylesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountTenantResources 统计时间段内资源数量
+//
+// 统计时间段内资源数量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CountTenantResources(request *model.CountTenantResourcesRequest) (*model.CountTenantResourcesResponse, error) {
+	requestDef := GenReqDefForCountTenantResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountTenantResourcesResponse), nil
+	}
+}
+
+// CountTenantResourcesInvoker 统计时间段内资源数量
+func (c *MetaStudioClient) CountTenantResourcesInvoker(request *model.CountTenantResourcesRequest) *CountTenantResourcesInvoker {
+	requestDef := GenReqDefForCountTenantResources()
+	return &CountTenantResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantResources 查看租户资源列表
+//
+// 查看租户资源列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListTenantResources(request *model.ListTenantResourcesRequest) (*model.ListTenantResourcesResponse, error) {
+	requestDef := GenReqDefForListTenantResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantResourcesResponse), nil
+	}
+}
+
+// ListTenantResourcesInvoker 查看租户资源列表
+func (c *MetaStudioClient) ListTenantResourcesInvoker(request *model.ListTenantResourcesRequest) *ListTenantResourcesInvoker {
+	requestDef := GenReqDefForListTenantResources()
+	return &ListTenantResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceUsage 查看租户资源用量信息
+//
+// 查看租户资源用量信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowResourceUsage(request *model.ShowResourceUsageRequest) (*model.ShowResourceUsageResponse, error) {
+	requestDef := GenReqDefForShowResourceUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceUsageResponse), nil
+	}
+}
+
+// ShowResourceUsageInvoker 查看租户资源用量信息
+func (c *MetaStudioClient) ShowResourceUsageInvoker(request *model.ShowResourceUsageRequest) *ShowResourceUsageInvoker {
+	requestDef := GenReqDefForShowResourceUsage()
+	return &ShowResourceUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CommitVoiceTrainingJob 提交语音训练任务

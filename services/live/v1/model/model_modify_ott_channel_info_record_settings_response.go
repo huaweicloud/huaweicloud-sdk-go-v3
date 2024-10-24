@@ -22,11 +22,8 @@ type ModifyOttChannelInfoRecordSettingsResponse struct {
 	AppName *string `json:"app_name,omitempty"`
 
 	// 频道ID。频道唯一标识，为必填项
-	Id *string `json:"id,omitempty"`
-
-	// 推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
-	Sources        *[]SourceRsp `json:"sources,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Id             *string `json:"id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ModifyOttChannelInfoRecordSettingsResponse) String() string {

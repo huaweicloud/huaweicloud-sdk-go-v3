@@ -75,6 +75,9 @@ type ClusterSpec struct {
 	// 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
 	EnableMasterVolumeEncryption *bool `json:"enableMasterVolumeEncryption,omitempty"`
 
+	// 集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
+	EnableDistMgt *bool `json:"enableDistMgt,omitempty"`
+
 	// 覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
 	ConfigurationsOverride *[]PackageConfiguration `json:"configurationsOverride,omitempty"`
 }

@@ -21,6 +21,22 @@ func (i *CreateXdmApplicationInvoker) Invoke() (*model.CreateXdmApplicationRespo
 	}
 }
 
+type DeleteCloudServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCloudServiceInvoker) Invoke() (*model.DeleteCloudServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCloudServiceResponse), nil
+	}
+}
+
 type DeleteXdmApplicationInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -12,10 +12,10 @@ type StreamSelectionItem struct {
 	// 拉流URL中用于码率过滤的参数
 	Key *string `json:"key,omitempty"`
 
-	// 最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+	// 最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
 	MaxBandwidth *int32 `json:"max_bandwidth,omitempty"`
 
-	// 最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+	// 最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
 	MinBandwidth *int32 `json:"min_bandwidth,omitempty"`
 }
 

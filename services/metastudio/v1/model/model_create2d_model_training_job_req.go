@@ -36,7 +36,7 @@ type Create2dModelTrainingJobReq struct {
 	// 分身数字人训练任务标签。
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
 	ModelVersion *Create2dModelTrainingJobReqModelVersion `json:"model_version,omitempty"`
 
 	// 是否是基础版的形象训练

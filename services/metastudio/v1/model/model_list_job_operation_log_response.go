@@ -12,9 +12,9 @@ type ListJobOperationLogResponse struct {
 	// 满足查询要求的操作日志总数
 	Count *int32 `json:"count,omitempty"`
 
-	// 操作
-	Operations     *[]interface{} `json:"operations,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	// 操作日志列表
+	Operations     *[]OperationLogItem `json:"operations,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListJobOperationLogResponse) String() string {

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -45,7 +48,8 @@ type CreateCentralNetworkErRouteTableAttachment struct {
 	// 被挂载的企业路由器的路由表ID。
 	AttachedErTableId string `json:"attached_er_table_id"`
 
-	HostedCloud *HostedCloudEnum `json:"hosted_cloud"`
+	// - HWCloud (华为云) - Ireland (爱尔兰)
+	HostedCloud CreateCentralNetworkErRouteTableAttachmentHostedCloud `json:"hosted_cloud"`
 }
 
 func (o CreateCentralNetworkErRouteTableAttachment) String() string {
@@ -55,4 +59,51 @@ func (o CreateCentralNetworkErRouteTableAttachment) String() string {
 	}
 
 	return strings.Join([]string{"CreateCentralNetworkErRouteTableAttachment", string(data)}, " ")
+}
+
+type CreateCentralNetworkErRouteTableAttachmentHostedCloud struct {
+	value string
+}
+
+type CreateCentralNetworkErRouteTableAttachmentHostedCloudEnum struct {
+	HW_CLOUD CreateCentralNetworkErRouteTableAttachmentHostedCloud
+	IRELAND  CreateCentralNetworkErRouteTableAttachmentHostedCloud
+}
+
+func GetCreateCentralNetworkErRouteTableAttachmentHostedCloudEnum() CreateCentralNetworkErRouteTableAttachmentHostedCloudEnum {
+	return CreateCentralNetworkErRouteTableAttachmentHostedCloudEnum{
+		HW_CLOUD: CreateCentralNetworkErRouteTableAttachmentHostedCloud{
+			value: "HWCloud",
+		},
+		IRELAND: CreateCentralNetworkErRouteTableAttachmentHostedCloud{
+			value: "Ireland",
+		},
+	}
+}
+
+func (c CreateCentralNetworkErRouteTableAttachmentHostedCloud) Value() string {
+	return c.value
+}
+
+func (c CreateCentralNetworkErRouteTableAttachmentHostedCloud) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateCentralNetworkErRouteTableAttachmentHostedCloud) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

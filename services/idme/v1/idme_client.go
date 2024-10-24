@@ -40,6 +40,27 @@ func (c *IdmeClient) CreateXdmApplicationInvoker(request *model.CreateXdmApplica
 	return &CreateXdmApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteCloudService 删除iDME实例
+//
+// 本接口用于删除工业数字模型驱动引擎（Industrial Digital Model Engine，简称iDME）实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IdmeClient) DeleteCloudService(request *model.DeleteCloudServiceRequest) (*model.DeleteCloudServiceResponse, error) {
+	requestDef := GenReqDefForDeleteCloudService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCloudServiceResponse), nil
+	}
+}
+
+// DeleteCloudServiceInvoker 删除iDME实例
+func (c *IdmeClient) DeleteCloudServiceInvoker(request *model.DeleteCloudServiceRequest) *DeleteCloudServiceInvoker {
+	requestDef := GenReqDefForDeleteCloudService()
+	return &DeleteCloudServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteXdmApplication 删除应用
 //
 // 本接口用于删除工业数字模型驱动引擎（Industrial Digital Model Engine，简称iDME）的应用。

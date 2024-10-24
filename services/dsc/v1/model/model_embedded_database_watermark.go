@@ -17,7 +17,7 @@ type EmbeddedDatabaseWatermark struct {
 	// 字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
 	Columns []Columns `json:"columns"`
 
-	// 数据字段的内容，最大支持长度2000
+	// 嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
 	Data []map[string]interface{} `json:"data"`
 }
 

@@ -44,6 +44,9 @@ type VoiceCapability struct {
 
 	// **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
 	ConversionRateEn *float32 `json:"conversion_rate_en,omitempty"`
+
+	// 是否支持生成STR字幕文件。
+	IsSupportSrt *bool `json:"is_support_srt,omitempty"`
 }
 
 func (o VoiceCapability) String() string {

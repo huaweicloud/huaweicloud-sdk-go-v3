@@ -28,6 +28,12 @@ type TableConfigCheckRequestV3 struct {
 	TablesConfigs *[]TablesConfig `json:"tables_configs,omitempty"`
 
 	TableReplConfig *TableReplConfig `json:"table_repl_config,omitempty"`
+
+	// 目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+	TargetDatabaseName *string `json:"target_database_name,omitempty"`
+
+	// 是否创建同步任务
+	IsCreateTask *string `json:"is_create_task,omitempty"`
 }
 
 func (o TableConfigCheckRequestV3) String() string {

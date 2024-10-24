@@ -14,7 +14,9 @@ type ShootScriptShowItem struct {
 
 	ShootScript *ShootScriptDetail `json:"shoot_script,omitempty"`
 
-	SubtitleFileInfo *SubtitleFileInfo `json:"subtitle_file_info,omitempty"`
+	SubtitleFileInfo *SubtitleFiles `json:"subtitle_file_info,omitempty"`
+
+	PreviewInfo *PreviewInfo `json:"preview_info,omitempty"`
 }
 
 func (o ShootScriptShowItem) String() string {

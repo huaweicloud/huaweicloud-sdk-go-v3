@@ -63,6 +63,8 @@ type ShowSmartLiveResponse struct {
 
 	LiveJobLog *LiveJobLog `json:"live_job_log,omitempty"`
 
+	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

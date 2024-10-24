@@ -56,7 +56,10 @@ type ShowVoiceTrainingJobResponse struct {
 	Phone *string `json:"phone,omitempty"`
 
 	// 形象制作任务id
-	DhtmsJobId     *string `json:"dhtms_job_id,omitempty"`
+	DhtmsJobId *string `json:"dhtms_job_id,omitempty"`
+
+	// 批次名称
+	BatchName      *string `json:"batch_name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

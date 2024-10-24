@@ -22,7 +22,7 @@ type GetDatabaseInfo struct {
 	Status string `json:"status"`
 
 	// 逻辑库的创建时间。
-	Created string `json:"created"`
+	Created int64 `json:"created"`
 
 	// 逻辑库关联的RDS实例信息。
 	UsedRds []GetDatabaseUsedRds `json:"used_rds"`

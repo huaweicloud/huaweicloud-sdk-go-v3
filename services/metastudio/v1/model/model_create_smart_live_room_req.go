@@ -57,6 +57,8 @@ type CreateSmartLiveRoomReq struct {
 
 	// **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
 	PrivData *string `json:"priv_data,omitempty"`
+
+	RelationLivePlatformInfo *PlatformLiveInfo `json:"relation_live_platform_info,omitempty"`
 }
 
 func (o CreateSmartLiveRoomReq) String() string {

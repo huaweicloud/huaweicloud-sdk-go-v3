@@ -12,7 +12,7 @@ import (
 // InputStreamInfo 频道入流信息
 type InputStreamInfo struct {
 
-	// 频道入流协议 - FLV_PULL - RTMP_PUSH - RTMP_PULL - HLS_PULL - SRT_PULL - SRT_PUSH
+	// 频道入流协议 - FLV_PULL - RTMP_PUSH - HLS_PULL - SRT_PULL - SRT_PUSH
 	InputProtocol InputStreamInfoInputProtocol `json:"input_protocol"`
 
 	// 频道主源流信息。入流协议为RTMP_PUSH和SRT_PUSH时，非必填项。其他情况下，均为必填项。
@@ -23,11 +23,23 @@ type InputStreamInfo struct {
 
 	FailoverConditions *FailoverConditions `json:"failover_conditions,omitempty"`
 
-	// 当入流协议为HLS_PULL时，最大带宽限制。 未配置会默认选择BANDWIDTH最高的流
+	// 当入流协议为HLS_PULL时，需要配置的最大带宽。  用户提供的拉流URL中，针对不同码率的音视频，均会携带带宽参数“BANDWIDTH”。 - 如果这里配置最大带宽，媒体直播服务从URL拉流时，会选择小于最大带宽且码率最大的音视频流，推流到源站。 - 如果这里未配置最大带宽，媒体直播服务从URL拉流时，会默认选择“BANDWIDTH”最高的音视频流，推流到源站。
 	MaxBandwidthLimit *int32 `json:"max_bandwidth_limit,omitempty"`
 
 	// 当推流协议为SRT_PUSH时，如果配置了直推源站，编码器不支持输入streamid，需要打开设置为true
 	IpPortMode *bool `json:"ip_port_mode,omitempty"`
+
+	// SRT_PUSH类型时，客户push ip白名单
+	IpWhitelist *string `json:"ip_whitelist,omitempty"`
+
+	// 广告的scte35信号源。  仅HLS_PULL类型的频道支持此配置，且目前仅支持SEGMENTS。
+	Scte35Source *string `json:"scte35_source,omitempty"`
+
+	// 广告触发器配置。  包含如下取值： - Splice insert：拼接插入 - Provider advertisement：提供商广告 - Distributor advertisement：分销商广告 - Provider placement opportunity：提供商置放机会 - Distributor placement opportunity：分销商置放机会
+	AdTriggers *[]string `json:"ad_triggers,omitempty"`
+
+	// 设置音频选择器，最多设置8个音频选择器
+	AudioSelectors *[]InputAudioSelector `json:"audio_selectors,omitempty"`
 }
 
 func (o InputStreamInfo) String() string {
@@ -46,7 +58,6 @@ type InputStreamInfoInputProtocol struct {
 type InputStreamInfoInputProtocolEnum struct {
 	FLV_PULL  InputStreamInfoInputProtocol
 	RTMP_PUSH InputStreamInfoInputProtocol
-	RTMP_PULL InputStreamInfoInputProtocol
 	HLS_PULL  InputStreamInfoInputProtocol
 	SRT_PULL  InputStreamInfoInputProtocol
 	SRT_PUSH  InputStreamInfoInputProtocol
@@ -59,9 +70,6 @@ func GetInputStreamInfoInputProtocolEnum() InputStreamInfoInputProtocolEnum {
 		},
 		RTMP_PUSH: InputStreamInfoInputProtocol{
 			value: "RTMP_PUSH",
-		},
-		RTMP_PULL: InputStreamInfoInputProtocol{
-			value: "RTMP_PULL",
 		},
 		HLS_PULL: InputStreamInfoInputProtocol{
 			value: "HLS_PULL",

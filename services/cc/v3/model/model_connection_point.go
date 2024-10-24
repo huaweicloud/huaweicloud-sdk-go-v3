@@ -21,13 +21,13 @@ type ConnectionPoint struct {
 	// 站点编码定义
 	SiteCode string `json:"site_code"`
 
-	// 实例ID。
+	// 连接点的实例ID。
 	InstanceId string `json:"instance_id"`
 
-	Type *ConnectionPointTypeEnum `json:"type"`
-
-	// 实例ID。
+	// 连接点的实例的父资源ID。
 	ParentInstanceId *string `json:"parent_instance_id,omitempty"`
+
+	Type *ConnectionPointTypeEnum `json:"type"`
 }
 
 func (o ConnectionPoint) String() string {

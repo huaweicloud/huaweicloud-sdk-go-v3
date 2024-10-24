@@ -1765,6 +1765,54 @@ func (i *ListStylesInvoker) Invoke() (*model.ListStylesResponse, error) {
 	}
 }
 
+type CountTenantResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountTenantResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountTenantResourcesInvoker) Invoke() (*model.CountTenantResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountTenantResourcesResponse), nil
+	}
+}
+
+type ListTenantResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTenantResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTenantResourcesInvoker) Invoke() (*model.ListTenantResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTenantResourcesResponse), nil
+	}
+}
+
+type ShowResourceUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceUsageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResourceUsageInvoker) Invoke() (*model.ShowResourceUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceUsageResponse), nil
+	}
+}
+
 type CommitVoiceTrainingJobInvoker struct {
 	*invoker.BaseInvoker
 }

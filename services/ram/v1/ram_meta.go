@@ -20,6 +20,11 @@ func GenReqDefForAssociateResourceSharePermission() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -38,6 +43,11 @@ func GenReqDefForDisassociateResourceSharePermission() *def.HttpRequestDef {
 		WithName("ResourceShareId").
 		WithJsonTag("resource_share_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -72,6 +82,11 @@ func GenReqDefForListResourceSharePermissions() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -82,6 +97,11 @@ func GenReqDefForListQuota() *def.HttpRequestDef {
 		WithPath("/v1/resource-shares/quotas").
 		WithResponse(new(model.ListQuotaResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -103,6 +123,11 @@ func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -113,6 +138,11 @@ func GenReqDefForDisableOrganizationShare() *def.HttpRequestDef {
 		WithPath("/v1/organization-share/disable").
 		WithResponse(new(model.DisableOrganizationShareResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -125,6 +155,11 @@ func GenReqDefForEnableOrganizationShare() *def.HttpRequestDef {
 		WithResponse(new(model.EnableOrganizationShareResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -135,6 +170,11 @@ func GenReqDefForShowOrganizationShare() *def.HttpRequestDef {
 		WithPath("/v1/organization-share").
 		WithResponse(new(model.ShowOrganizationShareResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -160,6 +200,11 @@ func GenReqDefForListPermissionVersions() *def.HttpRequestDef {
 		WithName("Marker").
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -189,6 +234,11 @@ func GenReqDefForListPermissions() *def.HttpRequestDef {
 		WithJsonTag("permission_type").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -210,6 +260,11 @@ func GenReqDefForShowPermission() *def.HttpRequestDef {
 		WithJsonTag("permission_version").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -220,6 +275,11 @@ func GenReqDefForSearchSharedPrincipals() *def.HttpRequestDef {
 		WithPath("/v1/shared-principals/search").
 		WithResponse(new(model.SearchSharedPrincipalsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -237,6 +297,11 @@ func GenReqDefForSearchSharedResources() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -250,6 +315,11 @@ func GenReqDefForCreateResourceShare() *def.HttpRequestDef {
 		WithPath("/v1/resource-shares").
 		WithResponse(new(model.CreateResourceShareResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -271,6 +341,11 @@ func GenReqDefForDeleteResourceShare() *def.HttpRequestDef {
 		WithJsonTag("resource_share_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -281,6 +356,11 @@ func GenReqDefForSearchResourceShares() *def.HttpRequestDef {
 		WithPath("/v1/resource-shares/search").
 		WithResponse(new(model.SearchResourceSharesResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -303,6 +383,11 @@ func GenReqDefForUpdateResourceShare() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -321,6 +406,11 @@ func GenReqDefForAssociateResourceShare() *def.HttpRequestDef {
 		WithName("ResourceShareId").
 		WithJsonTag("resource_share_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -343,6 +433,11 @@ func GenReqDefForDisassociateResourceShare() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -356,6 +451,11 @@ func GenReqDefForSearchResourceShareAssociations() *def.HttpRequestDef {
 		WithPath("/v1/resource-share-associations/search").
 		WithResponse(new(model.SearchResourceShareAssociationsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -377,6 +477,11 @@ func GenReqDefForAcceptResourceShareInvitation() *def.HttpRequestDef {
 		WithJsonTag("resource_share_invitation_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -393,6 +498,11 @@ func GenReqDefForRejectResourceShareInvitation() *def.HttpRequestDef {
 		WithJsonTag("resource_share_invitation_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -403,6 +513,11 @@ func GenReqDefForSearchResourceShareInvitation() *def.HttpRequestDef {
 		WithPath("/v1/resource-share-invitations/search").
 		WithResponse(new(model.SearchResourceShareInvitationResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -425,6 +540,11 @@ func GenReqDefForBatchCreateResourceShareTags() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -443,6 +563,11 @@ func GenReqDefForBatchDeleteResourceShareTags() *def.HttpRequestDef {
 		WithName("ResourceShareId").
 		WithJsonTag("resource_share_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -468,6 +593,11 @@ func GenReqDefForListResourceShareTags() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -489,6 +619,11 @@ func GenReqDefForListResourceSharesByTags() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -502,6 +637,11 @@ func GenReqDefForSearchResourceShareCountByTags() *def.HttpRequestDef {
 		WithPath("/v1/resource-shares/resource-instances/count").
 		WithResponse(new(model.SearchResourceShareCountByTagsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSecurityToken").
+		WithJsonTag("X-Security-Token").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

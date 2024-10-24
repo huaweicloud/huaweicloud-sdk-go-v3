@@ -9,7 +9,7 @@ import (
 // ImageLayerConfig 素材图片图层配置。
 type ImageLayerConfig struct {
 
-	// **参数解释**： 图片文件的URL。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及
+	// **参数解释**： 图片文件的URL。 **约束限制**： * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及
 	ImageUrl *string `json:"image_url,omitempty"`
 }
 

@@ -61,6 +61,8 @@ type UpdateSmartLiveRoomResponse struct {
 	// 直播间ID
 	RoomId *string `json:"room_id,omitempty"`
 
+	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
+
 	// 直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 

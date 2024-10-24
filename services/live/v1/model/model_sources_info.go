@@ -12,7 +12,7 @@ type SourcesInfo struct {
 	// 频道源流URL，用于外部拉流
 	Url *string `json:"url,omitempty"`
 
-	// 码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+	// 码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
 	Bitrate *int32 `json:"bitrate,omitempty"`
 
 	// 分辨率对应宽的值，非必填项  取值范围：0 - 4096（4K）
@@ -33,10 +33,10 @@ type SourcesInfo struct {
 	// 备入流地址列表
 	BackupUrls *[]string `json:"backup_urls,omitempty"`
 
-	// 协议为SRT_PULL时，拉流地址的streamid
+	// 频道为SRT_PULL类型时，拉流地址的Stream ID。
 	StreamId *string `json:"stream_id,omitempty"`
 
-	// 协议为SRT_PULL时，拉流时延
+	// 频道为SRT_PULL类型时的拉流时延。
 	Latency *int32 `json:"latency,omitempty"`
 }
 

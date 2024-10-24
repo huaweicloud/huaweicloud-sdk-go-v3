@@ -83,9 +83,9 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 被挂载的企业路由器的站点编码。
 	AttachedErTableSiteCode string `json:"attached_er_table_site_code"`
 
-	ApprovedState *ApprovedStateEnum `json:"approved_state"`
-
 	HostedCloud *HostedCloudEnum `json:"hosted_cloud,omitempty"`
+
+	ApprovedState *ApprovedStateEnum `json:"approved_state"`
 
 	// 审批拒绝创建企业路由表附件的原因。
 	Reason *string `json:"reason,omitempty"`

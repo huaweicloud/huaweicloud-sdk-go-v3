@@ -19,6 +19,27 @@ func DdmClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ListApiVersion 查询API版本列表
+//
+// 查询API版本列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {
+	requestDef := GenReqDefForListApiVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApiVersionResponse), nil
+	}
+}
+
+// ListApiVersionInvoker 查询API版本列表
+func (c *DdmClient) ListApiVersionInvoker(request *model.ListApiVersionRequest) *ListApiVersionInvoker {
+	requestDef := GenReqDefForListApiVersion()
+	return &ListApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDatabase 创建DDM逻辑库
 //
 // 创建DDM逻辑库。
@@ -126,6 +147,27 @@ func (c *DdmClient) DeleteDatabaseInvoker(request *model.DeleteDatabaseRequest) 
 	return &DeleteDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDdmDatabase 删除逻辑库
+//
+// 删除指定的逻辑库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DeleteDdmDatabase(request *model.DeleteDdmDatabaseRequest) (*model.DeleteDdmDatabaseResponse, error) {
+	requestDef := GenReqDefForDeleteDdmDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDdmDatabaseResponse), nil
+	}
+}
+
+// DeleteDdmDatabaseInvoker 删除逻辑库
+func (c *DdmClient) DeleteDdmDatabaseInvoker(request *model.DeleteDdmDatabaseRequest) *DeleteDdmDatabaseInvoker {
+	requestDef := GenReqDefForDeleteDdmDatabase()
+	return &DeleteDdmDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteInstance 删除DDM实例
 //
 // 删除指定的DDM实例，释放该实例的所有资源。
@@ -210,6 +252,27 @@ func (c *DdmClient) ExecuteKillPhysicalProcessesInvoker(request *model.ExecuteKi
 	return &ExecuteKillPhysicalProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExpandDdmInstanceNodes DDM实例节点扩容
+//
+// 对指定的DDM实例的节点个数进行扩容，支持按需实例与包周期实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ExpandDdmInstanceNodes(request *model.ExpandDdmInstanceNodesRequest) (*model.ExpandDdmInstanceNodesResponse, error) {
+	requestDef := GenReqDefForExpandDdmInstanceNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandDdmInstanceNodesResponse), nil
+	}
+}
+
+// ExpandDdmInstanceNodesInvoker DDM实例节点扩容
+func (c *DdmClient) ExpandDdmInstanceNodesInvoker(request *model.ExpandDdmInstanceNodesRequest) *ExpandDdmInstanceNodesInvoker {
+	requestDef := GenReqDefForExpandDdmInstanceNodes()
+	return &ExpandDdmInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandInstanceNodes DDM实例节点扩容
 //
 // 对指定的DDM实例的节点个数进行扩容，支持按需实例与包周期实例。
@@ -271,6 +334,48 @@ func (c *DdmClient) ListDatabases(request *model.ListDatabasesRequest) (*model.L
 func (c *DdmClient) ListDatabasesInvoker(request *model.ListDatabasesRequest) *ListDatabasesInvoker {
 	requestDef := GenReqDefForListDatabases()
 	return &ListDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDdmEngines 查询DDM引擎信息
+//
+// 查询DDM引擎信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListDdmEngines(request *model.ListDdmEnginesRequest) (*model.ListDdmEnginesResponse, error) {
+	requestDef := GenReqDefForListDdmEngines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDdmEnginesResponse), nil
+	}
+}
+
+// ListDdmEnginesInvoker 查询DDM引擎信息
+func (c *DdmClient) ListDdmEnginesInvoker(request *model.ListDdmEnginesRequest) *ListDdmEnginesInvoker {
+	requestDef := GenReqDefForListDdmEngines()
+	return &ListDdmEnginesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDdmFlavors 查询DDM可用区规格信息
+//
+// 查询DDM可用区规格信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListDdmFlavors(request *model.ListDdmFlavorsRequest) (*model.ListDdmFlavorsResponse, error) {
+	requestDef := GenReqDefForListDdmFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDdmFlavorsResponse), nil
+	}
+}
+
+// ListDdmFlavorsInvoker 查询DDM可用区规格信息
+func (c *DdmClient) ListDdmFlavorsInvoker(request *model.ListDdmFlavorsRequest) *ListDdmFlavorsInvoker {
+	requestDef := GenReqDefForListDdmFlavors()
+	return &ListDdmFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEngines 查询DDM引擎信息

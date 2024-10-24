@@ -57,6 +57,9 @@ type TrainingJobInfo struct {
 
 	// 形象制作任务id
 	DhtmsJobId *string `json:"dhtms_job_id,omitempty"`
+
+	// 批次名称
+	BatchName *string `json:"batch_name,omitempty"`
 }
 
 func (o TrainingJobInfo) String() string {

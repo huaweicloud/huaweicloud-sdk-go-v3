@@ -18,7 +18,7 @@ type ModifyOttChannelState struct {
 	// 组名或应用名
 	AppName string `json:"app_name"`
 
-	// 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+	// 频道ID。频道唯一标识，为必填项。
 	Id string `json:"id"`
 
 	// 频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道

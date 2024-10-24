@@ -12,12 +12,12 @@ type CentralNetworkAttachmentSpecificationValueInfo struct {
 	// 企业路由器的路由表ID。
 	EnterpriseRouterTableId string `json:"enterprise_router_table_id"`
 
-	// 实例ID。
+	// 连接的父资源ID，这里表示企业路由器ID。
 	AttachmentParentInstanceId *string `json:"attachment_parent_instance_id,omitempty"`
 
-	ApprovedState *ApprovedStateEnum `json:"approved_state,omitempty"`
-
 	HostedCloud *HostedCloudEnum `json:"hosted_cloud,omitempty"`
+
+	ApprovedState *ApprovedStateEnum `json:"approved_state,omitempty"`
 
 	// 审批拒绝创建附件的原因。
 	Reason *string `json:"reason,omitempty"`

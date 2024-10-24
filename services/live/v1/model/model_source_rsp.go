@@ -12,7 +12,7 @@ type SourceRsp struct {
 	// RTMP推流地址
 	Url *string `json:"url,omitempty"`
 
-	// 码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+	// 码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
 	Bitrate *int32 `json:"bitrate,omitempty"`
 
 	// 分辨率对应宽的值。取值范围：0 - 4096（4K）

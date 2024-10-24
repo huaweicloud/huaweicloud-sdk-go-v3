@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ddm/v1/model"
 )
 
+type ListApiVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApiVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListApiVersionInvoker) Invoke() (*model.ListApiVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApiVersionResponse), nil
+	}
+}
+
 type CreateDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,22 @@ func (i *DeleteDatabaseInvoker) Invoke() (*model.DeleteDatabaseResponse, error) 
 	}
 }
 
+type DeleteDdmDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDdmDatabaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDdmDatabaseInvoker) Invoke() (*model.DeleteDdmDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDdmDatabaseResponse), nil
+	}
+}
+
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -149,6 +181,22 @@ func (i *ExecuteKillPhysicalProcessesInvoker) Invoke() (*model.ExecuteKillPhysic
 	}
 }
 
+type ExpandDdmInstanceNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandDdmInstanceNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExpandDdmInstanceNodesInvoker) Invoke() (*model.ExpandDdmInstanceNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandDdmInstanceNodesResponse), nil
+	}
+}
+
 type ExpandInstanceNodesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +242,38 @@ func (i *ListDatabasesInvoker) Invoke() (*model.ListDatabasesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDatabasesResponse), nil
+	}
+}
+
+type ListDdmEnginesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDdmEnginesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDdmEnginesInvoker) Invoke() (*model.ListDdmEnginesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDdmEnginesResponse), nil
+	}
+}
+
+type ListDdmFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDdmFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDdmFlavorsInvoker) Invoke() (*model.ListDdmFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDdmFlavorsResponse), nil
 	}
 }
 

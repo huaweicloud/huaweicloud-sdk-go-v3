@@ -9,14 +9,14 @@ import (
 // MssPackageItem MSS频道出流信息
 type MssPackageItem struct {
 
-	// 客户自定义的拉流地址，包括方法、域名、路径和参数
+	// 客户自定义的拉流地址，包括方法、域名、路径
 	Url string `json:"url"`
 
 	// 从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
 	StreamSelection *[]StreamSelectionItem `json:"stream_selection,omitempty"`
 
-	// 频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
-	SegmentDurationSeconds *int32 `json:"segment_duration_seconds,omitempty"`
+	// 频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
+	SegmentDurationSeconds int32 `json:"segment_duration_seconds"`
 
 	// 频道直播返回分片的窗口长度，为频道输出分片的时长乘以数量后得到的值。实际返回的分片数不小于3个。  单位：秒。取值范围：0 - 86400（24小时转化成秒后的取值）
 	PlaylistWindowSeconds *int32 `json:"playlist_window_seconds,omitempty"`

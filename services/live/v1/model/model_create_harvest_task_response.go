@@ -21,7 +21,7 @@ type CreateHarvestTaskResponse struct {
 	// 组名或应用名
 	AppName *string `json:"app_name,omitempty"`
 
-	// 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+	// 频道ID。频道唯一标识，为必填项。
 	Id *string `json:"id,omitempty"`
 
 	// 开始时间。Unix时间错，单位为秒
