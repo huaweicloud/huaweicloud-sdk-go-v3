@@ -8,10 +8,10 @@ import (
 
 type CreateFirewallReqTags struct {
 
-	// 标签KEY
+	// 资源标签键
 	Key *string `json:"key,omitempty"`
 
-	// 标签VALUE
+	// 资源标签值
 	Value *string `json:"value,omitempty"`
 }
 

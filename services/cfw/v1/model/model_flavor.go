@@ -11,7 +11,7 @@ import (
 
 type Flavor struct {
 
-	// 防火墙版本，0：标准版，1：专业版，2：铂金版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
+	// 防火墙版本，0：标准版，1：专业版，3：基础版，购买时，当防火墙“charge_mode”为“postPaid”时，仅支持专业版。“charge_mode”为“prePaid”时，支持标准版、专业版。
 	Version *FlavorVersion `json:"version,omitempty"`
 
 	// eip数量
@@ -20,22 +20,22 @@ type Flavor struct {
 	// vpc数量
 	VpcCount *int32 `json:"vpc_count,omitempty"`
 
-	// 带宽
+	// 带宽，单位为mbps
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
-	// 日志存储
+	// 日志存储，单位为byte
 	LogStorage *int32 `json:"log_storage,omitempty"`
 
-	// 默认防火墙带宽
+	// 默认防火墙带宽，单位为mbps，标准版为10，专业版为50，按需专业版为200
 	DefaultBandwidth *int32 `json:"default_bandwidth,omitempty"`
 
-	// 默认eip数
+	// 默认eip数，标准版为20，专业版为50，按需专业版为1000
 	DefaultEipCount *int32 `json:"default_eip_count,omitempty"`
 
-	// 默认日志存储
+	// 默认日志存储，单位为byte，默认为0
 	DefaultLogStorage *int32 `json:"default_log_storage,omitempty"`
 
-	// 默认vpc数
+	// 默认vpc数，标准版为0，专业版为2，按需专业版为5
 	DefaultVpcCount *int32 `json:"default_vpc_count,omitempty"`
 }
 

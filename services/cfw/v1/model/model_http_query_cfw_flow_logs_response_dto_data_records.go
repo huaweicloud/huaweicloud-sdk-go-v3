@@ -14,10 +14,10 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	// 字节
 	Bytes *float64 `json:"bytes,omitempty"`
 
-	// 方向，有内到外和外到内两种
+	// 方向，有内到外（in2out）和外到内（out2in）两种
 	Direction *HttpQueryCfwFlowLogsResponseDtoDataRecordsDirection `json:"direction,omitempty"`
 
-	// 包
+	// 字节包数
 	Packets *int32 `json:"packets,omitempty"`
 
 	// 开始时间，以毫秒为单位的时间戳，如1718936272648
@@ -38,7 +38,7 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	// 目的IP
 	DstIp *string `json:"dst_ip,omitempty"`
 
-	// 应用协议
+	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 目的端口

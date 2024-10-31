@@ -8,13 +8,13 @@ import (
 
 type ResourceTag struct {
 
-	// 键
+	// 标签键
 	Key *string `json:"key,omitempty"`
 
-	// 值
+	// 标签值
 	Value *string `json:"value,omitempty"`
 
-	// 更新时间
+	// 标签更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 }
 

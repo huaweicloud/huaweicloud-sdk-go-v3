@@ -9,7 +9,7 @@ import (
 // DeleteFirewallResponse Response Object
 type DeleteFirewallResponse struct {
 
-	// 删除防火墙返回data
+	// 删除防火墙时生成的任务的job_id
 	Data           *string `json:"data,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

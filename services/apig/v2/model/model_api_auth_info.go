@@ -70,6 +70,9 @@ type ApiAuthInfo struct {
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
 	RomaAppType *string `json:"roma_app_type,omitempty"`
 
+	// API绑定的标签，标签配额默认10条，可以联系技术调整。
+	Tags *[]string `json:"tags,omitempty"`
+
 	// api授权绑定的环境名称
 	EnvName *string `json:"env_name,omitempty"`
 

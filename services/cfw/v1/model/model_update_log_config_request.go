@@ -9,10 +9,10 @@ import (
 // UpdateLogConfigRequest Request Object
 type UpdateLogConfigRequest struct {
 
-	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取(ListFirewallDetail.xml)。
 	FwInstanceId string `json:"fw_instance_id"`
 
-	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	// 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	Body *LogConfigDto `json:"body,omitempty"`

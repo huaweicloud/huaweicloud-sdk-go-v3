@@ -8,10 +8,10 @@ import (
 
 type UpdateDomainSetInfoDto struct {
 
-	// 域名组名称UUID
+	// 域名组名称
 	Name string `json:"name"`
 
-	// 描述
+	// 域名组描述
 	Description *string `json:"description,omitempty"`
 }
 

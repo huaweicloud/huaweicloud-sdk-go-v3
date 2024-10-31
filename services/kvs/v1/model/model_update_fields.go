@@ -17,6 +17,9 @@ type UpdateFields struct {
 
 	// 删除1个或多个字段。 - 数组元素为待删除字段名。
 	Rmv *[]string `bson:"rmv,omitempty"`
+
+	// 插入元素到数组中 > 非数组返回失败。
+	Insert *bson.D `bson:"insert,omitempty"`
 }
 
 func (o UpdateFields) String() string {

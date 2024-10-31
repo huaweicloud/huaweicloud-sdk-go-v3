@@ -9,7 +9,7 @@ import (
 // ListJobRequest Request Object
 type ListJobRequest struct {
 
-	// 任务ID
+	// 创建按需防火墙返回的任务ID，可通过调用[创建防火墙接口](CreateFirewall.xml)返回值获得。返回值中job_id即为此处的job_id
 	JobId string `json:"job_id"`
 }
 

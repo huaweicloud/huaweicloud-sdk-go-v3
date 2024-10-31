@@ -13,7 +13,7 @@ type ShowFactorByAssetIdRequest struct {
 	ProjectId string `json:"project_id"`
 
 	// 资产库ID
-	AssetId string `json:"asset_id"`
+	Id string `json:"id"`
 
 	Body *CommRequestListFactorParam `json:"body,omitempty"`
 }

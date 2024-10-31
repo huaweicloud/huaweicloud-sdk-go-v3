@@ -44,6 +44,18 @@ type ShowPremiumHostResponse struct {
 
 	Flag *Flag `json:"flag,omitempty"`
 
+	// 云模式elb接入域名返回此字段：elb-shared
+	Mode *string `json:"mode,omitempty"`
+
+	// 云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
+
+	// 云模式elb接入域名返回此字段，表示监听器id
+	ListenerId *string `json:"listener_id,omitempty"`
+
+	// 云模式elb接入域名返回此字段， 表示业务端口
+	ProtocolPort *int32 `json:"protocol_port,omitempty"`
+
 	// 域名描述
 	Description *string `json:"description,omitempty"`
 

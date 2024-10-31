@@ -17,7 +17,7 @@ type HttpFirewallInstanceListResponseData struct {
 	// 租户项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 总数
+	// 防火墙总数量
 	Total *int32 `json:"total,omitempty"`
 
 	// 查询防火墙列表记录

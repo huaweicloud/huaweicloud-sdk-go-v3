@@ -12,28 +12,28 @@ import (
 // ListAclRulesRequest Request Object
 type ListAclRulesRequest struct {
 
-	// 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+	// 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
 	ObjectId string `json:"object_id"`
 
-	// 规则Type0：互联网规则,1：vpc规则, 2:nat规则
+	// 规则类型，0：互联网规则，1：vpc规则，2：nat规则
 	Type *ListAclRulesRequestType `json:"type,omitempty"`
 
 	// ip地址
 	Ip *string `json:"ip,omitempty"`
 
-	// 名称
+	// 规则名称
 	Name *string `json:"name,omitempty"`
 
 	// 方向0：外到内1：内到外
 	Direction *int32 `json:"direction,omitempty"`
 
-	// 规则下发状态 0：禁用,1：启用
+	// 规则下发状态 0：禁用，1：启用
 	Status *ListAclRulesRequestStatus `json:"status,omitempty"`
 
-	// 动作0：permit,1：deny
+	// 动作0：permit，1：deny
 	ActionType *ListAclRulesRequestActionType `json:"action_type,omitempty"`
 
-	// 地址类型0 ipv4
+	// 地址类型，0表示ipv4，1表示ipv6
 	AddressType *ListAclRulesRequestAddressType `json:"address_type,omitempty"`
 
 	// 每页显示个数，范围为1-1024
@@ -42,13 +42,13 @@ type ListAclRulesRequest struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset int32 `json:"offset"`
 
-	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	// 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId *string `json:"fw_instance_id,omitempty"`
 
-	// 标签id
+	// 规则标签id，创建规则时产生。
 	TagsId *string `json:"tags_id,omitempty"`
 
 	// 源地址
@@ -60,7 +60,7 @@ type ListAclRulesRequest struct {
 	// 服务端口
 	Service *string `json:"service,omitempty"`
 
-	// 应用
+	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	Application *string `json:"application,omitempty"`
 }
 
@@ -221,7 +221,6 @@ type ListAclRulesRequestAddressType struct {
 type ListAclRulesRequestAddressTypeEnum struct {
 	E_0 ListAclRulesRequestAddressType
 	E_1 ListAclRulesRequestAddressType
-	E_2 ListAclRulesRequestAddressType
 }
 
 func GetListAclRulesRequestAddressTypeEnum() ListAclRulesRequestAddressTypeEnum {
@@ -230,8 +229,6 @@ func GetListAclRulesRequestAddressTypeEnum() ListAclRulesRequestAddressTypeEnum 
 			value: 0,
 		}, E_1: ListAclRulesRequestAddressType{
 			value: 1,
-		}, E_2: ListAclRulesRequestAddressType{
-			value: 2,
 		},
 	}
 }

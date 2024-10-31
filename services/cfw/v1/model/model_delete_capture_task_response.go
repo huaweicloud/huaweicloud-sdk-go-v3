@@ -8,8 +8,8 @@ import (
 
 // DeleteCaptureTaskResponse Response Object
 type DeleteCaptureTaskResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *CaptureTaskId `json:"data,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o DeleteCaptureTaskResponse) String() string {

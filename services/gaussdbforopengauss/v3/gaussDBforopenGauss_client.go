@@ -1908,6 +1908,27 @@ func (c *GaussDBforopenGaussClient) StartInstanceInvoker(request *model.StartIns
 	return &StartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartMysqlCompatibility 开启MySQl兼容端口服务
+//
+// 开启指定实例的MySQl兼容端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) StartMysqlCompatibility(request *model.StartMysqlCompatibilityRequest) (*model.StartMysqlCompatibilityResponse, error) {
+	requestDef := GenReqDefForStartMysqlCompatibility()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartMysqlCompatibilityResponse), nil
+	}
+}
+
+// StartMysqlCompatibilityInvoker 开启MySQl兼容端口服务
+func (c *GaussDBforopenGaussClient) StartMysqlCompatibilityInvoker(request *model.StartMysqlCompatibilityRequest) *StartMysqlCompatibilityInvoker {
+	requestDef := GenReqDefForStartMysqlCompatibility()
+	return &StartMysqlCompatibilityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StopBackup 停止备份
 //
 // 停止进行中的备份，包括全备和差备。
@@ -1927,6 +1948,27 @@ func (c *GaussDBforopenGaussClient) StopBackup(request *model.StopBackupRequest)
 func (c *GaussDBforopenGaussClient) StopBackupInvoker(request *model.StopBackupRequest) *StopBackupInvoker {
 	requestDef := GenReqDefForStopBackup()
 	return &StopBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopInstance 停止数据库
+//
+// 停止数据库,同时支持节点级别的停止操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) StopInstance(request *model.StopInstanceRequest) (*model.StopInstanceResponse, error) {
+	requestDef := GenReqDefForStopInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopInstanceResponse), nil
+	}
+}
+
+// StopInstanceInvoker 停止数据库
+func (c *GaussDBforopenGaussClient) StopInstanceInvoker(request *model.StopInstanceRequest) *StopInstanceInvoker {
+	requestDef := GenReqDefForStopInstance()
+	return &StopInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchConfiguration 应用参数模板
@@ -2011,6 +2053,27 @@ func (c *GaussDBforopenGaussClient) UpdateInstanceName(request *model.UpdateInst
 func (c *GaussDBforopenGaussClient) UpdateInstanceNameInvoker(request *model.UpdateInstanceNameRequest) *UpdateInstanceNameInvoker {
 	requestDef := GenReqDefForUpdateInstanceName()
 	return &UpdateInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMysqlCompatibility 更新/关闭MySQl兼容端口服务
+//
+// 更新指定实例的MySQl兼容端口服务配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) UpdateMysqlCompatibility(request *model.UpdateMysqlCompatibilityRequest) (*model.UpdateMysqlCompatibilityResponse, error) {
+	requestDef := GenReqDefForUpdateMysqlCompatibility()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMysqlCompatibilityResponse), nil
+	}
+}
+
+// UpdateMysqlCompatibilityInvoker 更新/关闭MySQl兼容端口服务
+func (c *GaussDBforopenGaussClient) UpdateMysqlCompatibilityInvoker(request *model.UpdateMysqlCompatibilityRequest) *UpdateMysqlCompatibilityInvoker {
+	requestDef := GenReqDefForUpdateMysqlCompatibility()
+	return &UpdateMysqlCompatibilityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeInstanceVersion 实例内核版本升级
@@ -2116,4 +2179,130 @@ func (c *GaussDBforopenGaussClient) ValidateWeakPassword(request *model.Validate
 func (c *GaussDBforopenGaussClient) ValidateWeakPasswordInvoker(request *model.ValidateWeakPasswordRequest) *ValidateWeakPasswordInvoker {
 	requestDef := GenReqDefForValidateWeakPassword()
 	return &ValidateWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateLimitTask 创建限流任务
+//
+// 根据具体范围和类型，进行限流任务的创建
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateLimitTask(request *model.CreateLimitTaskRequest) (*model.CreateLimitTaskResponse, error) {
+	requestDef := GenReqDefForCreateLimitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLimitTaskResponse), nil
+	}
+}
+
+// CreateLimitTaskInvoker 创建限流任务
+func (c *GaussDBforopenGaussClient) CreateLimitTaskInvoker(request *model.CreateLimitTaskRequest) *CreateLimitTaskInvoker {
+	requestDef := GenReqDefForCreateLimitTask()
+	return &CreateLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLimitTask 删除限流任务
+//
+// 根据task_id进行限流任务的删除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DeleteLimitTask(request *model.DeleteLimitTaskRequest) (*model.DeleteLimitTaskResponse, error) {
+	requestDef := GenReqDefForDeleteLimitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLimitTaskResponse), nil
+	}
+}
+
+// DeleteLimitTaskInvoker 删除限流任务
+func (c *GaussDBforopenGaussClient) DeleteLimitTaskInvoker(request *model.DeleteLimitTaskRequest) *DeleteLimitTaskInvoker {
+	requestDef := GenReqDefForDeleteLimitTask()
+	return &DeleteLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLimitTask 根据指定条件查询限流任务列表
+//
+// 根据指定条件查询限流任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListLimitTask(request *model.ListLimitTaskRequest) (*model.ListLimitTaskResponse, error) {
+	requestDef := GenReqDefForListLimitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLimitTaskResponse), nil
+	}
+}
+
+// ListLimitTaskInvoker 根据指定条件查询限流任务列表
+func (c *GaussDBforopenGaussClient) ListLimitTaskInvoker(request *model.ListLimitTaskRequest) *ListLimitTaskInvoker {
+	requestDef := GenReqDefForListLimitTask()
+	return &ListLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNodeLimitSqlModel 查询节点的sql模板列表
+//
+// 查询节点的sql模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListNodeLimitSqlModel(request *model.ListNodeLimitSqlModelRequest) (*model.ListNodeLimitSqlModelResponse, error) {
+	requestDef := GenReqDefForListNodeLimitSqlModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNodeLimitSqlModelResponse), nil
+	}
+}
+
+// ListNodeLimitSqlModelInvoker 查询节点的sql模板列表
+func (c *GaussDBforopenGaussClient) ListNodeLimitSqlModelInvoker(request *model.ListNodeLimitSqlModelRequest) *ListNodeLimitSqlModelInvoker {
+	requestDef := GenReqDefForListNodeLimitSqlModel()
+	return &ListNodeLimitSqlModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLimitTask 查询限流任务详情
+//
+// 查询限流任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowLimitTask(request *model.ShowLimitTaskRequest) (*model.ShowLimitTaskResponse, error) {
+	requestDef := GenReqDefForShowLimitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLimitTaskResponse), nil
+	}
+}
+
+// ShowLimitTaskInvoker 查询限流任务详情
+func (c *GaussDBforopenGaussClient) ShowLimitTaskInvoker(request *model.ShowLimitTaskRequest) *ShowLimitTaskInvoker {
+	requestDef := GenReqDefForShowLimitTask()
+	return &ShowLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLimitTask 修改限流任务
+//
+// 根据新的条件进行限流任务的更新
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) UpdateLimitTask(request *model.UpdateLimitTaskRequest) (*model.UpdateLimitTaskResponse, error) {
+	requestDef := GenReqDefForUpdateLimitTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLimitTaskResponse), nil
+	}
+}
+
+// UpdateLimitTaskInvoker 修改限流任务
+func (c *GaussDBforopenGaussClient) UpdateLimitTaskInvoker(request *model.UpdateLimitTaskRequest) *UpdateLimitTaskInvoker {
+	requestDef := GenReqDefForUpdateLimitTask()
+	return &UpdateLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -40,8 +40,35 @@ type CreateAccessConfigResponse struct {
 	BinaryCollect *bool `json:"binary_collect,omitempty"`
 
 	// CCE集群ID
-	ClusterId      *string `json:"cluster_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// 编码格式，默认UTF-8
+	EncodingFormat *string `json:"encoding_format,omitempty"`
+
+	// 采集策略：增量/全量
+	IncrementalCollect *bool `json:"incremental_collect,omitempty"`
+
+	// IC结构化解析类型
+	ProcessorType *string `json:"processor_type,omitempty"`
+
+	// 示例日志
+	DemoLog *string `json:"demo_log,omitempty"`
+
+	// 示例日志解析字段
+	DemoFields *[]DemoFieldAccess `json:"demo_fields,omitempty"`
+
+	// IC结构化解析器
+	Processors *[]Processor `json:"processors,omitempty"`
+
+	// ServiceStage应用ID
+	ApplicationId *string `json:"application_id,omitempty"`
+
+	// ServiceStage环境ID
+	EnvironmentId *string `json:"environment_id,omitempty"`
+
+	// ServiceStage组件ID
+	ComponentId    *[]string `json:"component_id,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateAccessConfigResponse) String() string {

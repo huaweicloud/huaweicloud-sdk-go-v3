@@ -8,10 +8,10 @@ import (
 
 type RuleId struct {
 
-	// id
+	// 规则id
 	Id *string `json:"id,omitempty"`
 
-	// 名称
+	// 规则名称
 	Name *string `json:"name,omitempty"`
 }
 

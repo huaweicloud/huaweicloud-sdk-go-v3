@@ -9,7 +9,7 @@ import (
 // ListDomainParseDetailResponse Response Object
 type ListDomainParseDetailResponse struct {
 
-	// 域名id列表
+	// 域名解析ip列表
 	Data           *[]string `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

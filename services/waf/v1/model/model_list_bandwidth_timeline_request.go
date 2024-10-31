@@ -26,6 +26,9 @@ type ListBandwidthTimelineRequest struct {
 
 	// 展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
 	GroupBy *string `json:"group_by,omitempty"`
+
+	// 发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+	DisplayOption *int32 `json:"display_option,omitempty"`
 }
 
 func (o ListBandwidthTimelineRequest) String() string {

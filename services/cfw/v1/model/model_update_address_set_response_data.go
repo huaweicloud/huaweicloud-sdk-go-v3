@@ -8,8 +8,11 @@ import (
 
 type UpdateAddressSetResponseData struct {
 
-	// Id
+	// 地址组id
 	Id *string `json:"id,omitempty"`
+
+	// 地址组名称
+	Name *string `json:"name,omitempty"`
 }
 
 func (o UpdateAddressSetResponseData) String() string {

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// HttpQueryCfwFlowLogsResponseDtoData 查询流日志返回值
+// HttpQueryCfwFlowLogsResponseDtoData 查询流日志返回值数据
 type HttpQueryCfwFlowLogsResponseDtoData struct {
 
-	// 返回数量
+	// 查询流日志返回值记录总数
 	Total *int32 `json:"total,omitempty"`
 
 	// 每页显示个数，范围为1-1024

@@ -71,7 +71,7 @@ type TestCaseListVo struct {
 	CaseType *int32 `json:"case_type,omitempty"`
 
 	// 用例标签名称列表
-	Labels *string `json:"labels,omitempty"`
+	Labels *[]LabelVo `json:"labels,omitempty"`
 
 	// 自定义字段信息
 	CustomFieldInfo *[]CustomFieldVo `json:"custom_field_info,omitempty"`

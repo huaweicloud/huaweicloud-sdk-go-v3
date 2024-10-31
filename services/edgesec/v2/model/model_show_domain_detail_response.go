@@ -24,7 +24,7 @@ type ShowDomainDetailResponse struct {
 	// 策略id
 	PolicyId *string `json:"policy_id,omitempty"`
 
-	// 防护状态： - 防护中：on - 未防护：off
+	// - 防护状态: - 防护中：on - 未防护：off
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// 创建域名的时间

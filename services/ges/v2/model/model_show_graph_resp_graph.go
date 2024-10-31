@@ -142,6 +142,9 @@ type ShowGraphRespGraph struct {
 
 	// 持久化版图边数据的sortKey类型
 	SortKeyType *string `json:"sort_key_type,omitempty"`
+
+	// 对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
+	EnableLts *bool `json:"enable_lts,omitempty"`
 }
 
 func (o ShowGraphRespGraph) String() string {

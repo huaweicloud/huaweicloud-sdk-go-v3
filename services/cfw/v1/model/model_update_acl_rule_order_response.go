@@ -8,8 +8,8 @@ import (
 
 // UpdateAclRuleOrderResponse Response Object
 type UpdateAclRuleOrderResponse struct {
-	Data           *RuleId `json:"data,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Data           *OrderRuleId `json:"data,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o UpdateAclRuleOrderResponse) String() string {

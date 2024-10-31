@@ -8,25 +8,16 @@ import (
 
 type ErInstance struct {
 
-	// ER实例id
+	// ER ID，创建ER时产生的ID
 	Id *string `json:"id,omitempty"`
 
 	// ER名称
 	Name *string `json:"name,omitempty"`
 
-	// ER状态
-	State *string `json:"state,omitempty"`
-
-	// 企业租户id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-
-	// 租户id
+	// 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 是否开启ipv6
-	EnableIpv6 *string `json:"enable_ipv6,omitempty"`
-
-	// 连接id
+	// 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
 	AttachmentId *string `json:"attachment_id,omitempty"`
 }
 

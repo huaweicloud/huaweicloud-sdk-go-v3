@@ -12,12 +12,14 @@ import (
 // MicroServiceCreate 微服务详情。
 type MicroServiceCreate struct {
 
-	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
 	ServiceType *MicroServiceCreateServiceType `json:"service_type,omitempty"`
 
 	CseInfo *MicroServiceInfoCseBase `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCceBase `json:"cce_info,omitempty"`
+
+	NacosInfo *MicroServiceInfoNacosBase `json:"nacos_info,omitempty"`
 }
 
 func (o MicroServiceCreate) String() string {
@@ -37,6 +39,7 @@ type MicroServiceCreateServiceTypeEnum struct {
 	CSE         MicroServiceCreateServiceType
 	CCE         MicroServiceCreateServiceType
 	CCE_SERVICE MicroServiceCreateServiceType
+	NACOS       MicroServiceCreateServiceType
 }
 
 func GetMicroServiceCreateServiceTypeEnum() MicroServiceCreateServiceTypeEnum {
@@ -49,6 +52,9 @@ func GetMicroServiceCreateServiceTypeEnum() MicroServiceCreateServiceTypeEnum {
 		},
 		CCE_SERVICE: MicroServiceCreateServiceType{
 			value: "CCE_SERVICE",
+		},
+		NACOS: MicroServiceCreateServiceType{
+			value: "NACOS",
 		},
 	}
 }

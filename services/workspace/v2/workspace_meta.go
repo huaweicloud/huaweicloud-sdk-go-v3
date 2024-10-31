@@ -376,6 +376,21 @@ func GenReqDefForChangeDesktopNetwork() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangeUserPrivilegeGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/desktops/change-user-privilege-group").
+		WithResponse(new(model.ChangeUserPrivilegeGroupResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateDesktop() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

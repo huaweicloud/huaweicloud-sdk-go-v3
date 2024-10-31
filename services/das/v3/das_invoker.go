@@ -101,6 +101,22 @@ func (i *ChangeTransactionSwitchStatusInvoker) Invoke() (*model.ChangeTransactio
 	}
 }
 
+type CreateHealthReportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHealthReportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHealthReportTaskInvoker) Invoke() (*model.CreateHealthReportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHealthReportTaskResponse), nil
+	}
+}
+
 type CreateShareConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -373,6 +389,22 @@ func (i *ListDbUsersInvoker) Invoke() (*model.ListDbUsersResponse, error) {
 	}
 }
 
+type ListHealthReportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHealthReportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHealthReportTaskInvoker) Invoke() (*model.ListHealthReportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHealthReportTaskResponse), nil
+	}
+}
+
 type ListInnodbLocksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -514,6 +546,22 @@ func (i *ShowDbUserInvoker) Invoke() (*model.ShowDbUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowDbUserResponse), nil
+	}
+}
+
+type ShowInstanceHealthReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceHealthReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceHealthReportInvoker) Invoke() (*model.ShowInstanceHealthReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceHealthReportResponse), nil
 	}
 }
 

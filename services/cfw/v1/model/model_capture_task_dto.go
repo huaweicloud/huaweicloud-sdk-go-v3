@@ -9,10 +9,10 @@ import (
 type CaptureTaskDto struct {
 	Destination *CaptureRuleAddressDto `json:"destination"`
 
-	// 抓包时长
+	// 抓包时长，以分钟为单位
 	Duration int32 `json:"duration"`
 
-	// 最大抓包数
+	// 最大抓包数，以个为单位
 	MaxPackets int32 `json:"max_packets"`
 
 	// 抓包任务名称

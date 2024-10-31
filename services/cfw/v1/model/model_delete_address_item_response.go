@@ -8,8 +8,8 @@ import (
 
 // DeleteAddressItemResponse Response Object
 type DeleteAddressItemResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *AddressItemId `json:"data,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o DeleteAddressItemResponse) String() string {

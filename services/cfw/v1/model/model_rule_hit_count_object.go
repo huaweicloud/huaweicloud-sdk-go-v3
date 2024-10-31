@@ -11,7 +11,7 @@ type RuleHitCountObject struct {
 	// 规则id
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// 规则击中次数
+	// 规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
 	RuleHitCount *int32 `json:"rule_hit_count,omitempty"`
 }
 

@@ -8,10 +8,10 @@ import (
 
 type CreateEwFirewallInspectVpcResp struct {
 
-	// vpc id
+	// 引流VPC的ID
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// 子网列表
+	// 创建的引流VPC的子网ID列表
 	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 }
 

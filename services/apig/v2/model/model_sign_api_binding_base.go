@@ -48,6 +48,9 @@ type SignApiBindingBase struct {
 
 	// API请求方法
 	ReqMethod *SignApiBindingBaseReqMethod `json:"req_method,omitempty"`
+
+	// API绑定的标签，标签配额默认10条，可以联系技术调整。
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o SignApiBindingBase) String() string {

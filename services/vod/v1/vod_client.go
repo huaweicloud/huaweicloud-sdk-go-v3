@@ -896,6 +896,27 @@ func (c *VodClient) ShowPreheatingAssetInvoker(request *model.ShowPreheatingAsse
 	return &ShowPreheatingAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowStorageModeType 查询媒资降冷配置
+//
+// 查询媒资降冷配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ShowStorageModeType(request *model.ShowStorageModeTypeRequest) (*model.ShowStorageModeTypeResponse, error) {
+	requestDef := GenReqDefForShowStorageModeType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStorageModeTypeResponse), nil
+	}
+}
+
+// ShowStorageModeTypeInvoker 查询媒资降冷配置
+func (c *VodClient) ShowStorageModeTypeInvoker(request *model.ShowStorageModeTypeRequest) *ShowStorageModeTypeInvoker {
+	requestDef := GenReqDefForShowStorageModeType()
+	return &ShowStorageModeTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVodRetrieval 查询取回数据信息
 //
 // ## 典型场景 ##
@@ -1097,6 +1118,29 @@ func (c *VodClient) UpdateStorageMode(request *model.UpdateStorageModeRequest) (
 func (c *VodClient) UpdateStorageModeInvoker(request *model.UpdateStorageModeRequest) *UpdateStorageModeInvoker {
 	requestDef := GenReqDefForUpdateStorageMode()
 	return &UpdateStorageModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStorageModeType 修改媒资降冷粒度
+//
+// 修改媒资降冷粒度。
+//
+// 默认为整个媒资粒度，支持转为仅原文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) UpdateStorageModeType(request *model.UpdateStorageModeTypeRequest) (*model.UpdateStorageModeTypeResponse, error) {
+	requestDef := GenReqDefForUpdateStorageModeType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStorageModeTypeResponse), nil
+	}
+}
+
+// UpdateStorageModeTypeInvoker 修改媒资降冷粒度
+func (c *VodClient) UpdateStorageModeTypeInvoker(request *model.UpdateStorageModeTypeRequest) *UpdateStorageModeTypeInvoker {
+	requestDef := GenReqDefForUpdateStorageModeType()
+	return &UpdateStorageModeTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTemplateGroup 修改自定义转码模板组

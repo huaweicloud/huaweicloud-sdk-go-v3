@@ -1422,6 +1422,10 @@ func GenReqDefForListApisBindedToSignatureKeyV2() *def.HttpRequestDef {
 		WithName("GroupId").
 		WithJsonTag("group_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1466,6 +1470,10 @@ func GenReqDefForListApisNotBoundWithSignatureKeyV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -2303,6 +2311,10 @@ func GenReqDefForListPluginAttachableApis() *def.HttpRequestDef {
 		WithName("ReqUri").
 		WithJsonTag("req_uri").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2355,6 +2367,10 @@ func GenReqDefForListPluginAttachedApis() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ReqUri").
 		WithJsonTag("req_uri").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -4121,6 +4137,10 @@ func GenReqDefForListApisBindedToRequestThrottlingPolicyV2() *def.HttpRequestDef
 		WithName("ApiName").
 		WithJsonTag("api_name").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4165,6 +4185,10 @@ func GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2() *def.HttpRequestD
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApiName").
 		WithJsonTag("api_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -4238,6 +4262,10 @@ func GenReqDefForListApisV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ReturnDataMode").
 		WithJsonTag("return_data_mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -4523,6 +4551,10 @@ func GenReqDefForListApisBindedToAclPolicyV2() *def.HttpRequestDef {
 		WithName("GroupId").
 		WithJsonTag("group_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4567,6 +4599,10 @@ func GenReqDefForListApisUnbindedToAclPolicyV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -4657,6 +4693,10 @@ func GenReqDefForListApisBindedToAppV2() *def.HttpRequestDef {
 		WithName("EnvId").
 		WithJsonTag("env_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4701,6 +4741,10 @@ func GenReqDefForListApisUnbindedToAppV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ApiName").
 		WithJsonTag("api_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Tags").
+		WithJsonTag("tags").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

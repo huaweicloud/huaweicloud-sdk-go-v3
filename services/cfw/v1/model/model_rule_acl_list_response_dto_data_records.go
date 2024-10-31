@@ -15,7 +15,7 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 规则id
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// 地址类型0 ipv4,1 ipv6
+	// 地址类型0 ipv4，1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
 	// 规则名称
@@ -24,10 +24,10 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 规则方向0：外到内1：内到外
 	Direction *RuleAclListResponseDtoDataRecordsDirection `json:"direction,omitempty"`
 
-	// 动作0：permit,1：deny
+	// 动作0：permit，1：deny
 	ActionType *int32 `json:"action_type,omitempty"`
 
-	// 规则下发状态 0：禁用,1：启用
+	// 规则下发状态 0：禁用，1：启用
 	Status *int32 `json:"status,omitempty"`
 
 	// 描述
@@ -39,10 +39,10 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 长连接支持
 	LongConnectEnable *int32 `json:"long_connect_enable,omitempty"`
 
-	// 长连接时长小时
+	// 长连接时长对应小时
 	LongConnectTimeHour *int64 `json:"long_connect_time_hour,omitempty"`
 
-	// 长连接时长分钟
+	// 长连接时长对应分钟
 	LongConnectTimeMinute *int64 `json:"long_connect_time_minute,omitempty"`
 
 	// 长连接时长秒
@@ -54,13 +54,13 @@ type RuleAclListResponseDtoDataRecords struct {
 
 	Service *RuleServiceDtoForResponse `json:"service,omitempty"`
 
-	// 规则type，0：互联网规则，1：vpc规则，2：nat规则
+	// 规则类型，0：互联网规则，1：vpc规则，2：nat规则
 	Type *RuleAclListResponseDtoDataRecordsType `json:"type,omitempty"`
 
-	// 创建时间
+	// 规则创建时间，例如：\"2024-08-12 08:40:00\"
 	CreatedDate *string `json:"created_date,omitempty"`
 
-	// 最后开启时间
+	// 规则最后开启时间，例如：\"2024-08-12 08:40:00\"
 	LastOpenTime *string `json:"last_open_time,omitempty"`
 
 	Tag *TagsVo `json:"tag,omitempty"`

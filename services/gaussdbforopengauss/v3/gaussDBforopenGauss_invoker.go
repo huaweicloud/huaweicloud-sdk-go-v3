@@ -1445,6 +1445,22 @@ func (i *StartInstanceInvoker) Invoke() (*model.StartInstanceResponse, error) {
 	}
 }
 
+type StartMysqlCompatibilityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartMysqlCompatibilityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartMysqlCompatibilityInvoker) Invoke() (*model.StartMysqlCompatibilityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartMysqlCompatibilityResponse), nil
+	}
+}
+
 type StopBackupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1458,6 +1474,22 @@ func (i *StopBackupInvoker) Invoke() (*model.StopBackupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopBackupResponse), nil
+	}
+}
+
+type StopInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopInstanceInvoker) Invoke() (*model.StopInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopInstanceResponse), nil
 	}
 }
 
@@ -1525,6 +1557,22 @@ func (i *UpdateInstanceNameInvoker) Invoke() (*model.UpdateInstanceNameResponse,
 	}
 }
 
+type UpdateMysqlCompatibilityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMysqlCompatibilityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateMysqlCompatibilityInvoker) Invoke() (*model.UpdateMysqlCompatibilityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMysqlCompatibilityResponse), nil
+	}
+}
+
 type UpgradeInstanceVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1586,5 +1634,101 @@ func (i *ValidateWeakPasswordInvoker) Invoke() (*model.ValidateWeakPasswordRespo
 		return nil, err
 	} else {
 		return result.(*model.ValidateWeakPasswordResponse), nil
+	}
+}
+
+type CreateLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateLimitTaskInvoker) Invoke() (*model.CreateLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLimitTaskResponse), nil
+	}
+}
+
+type DeleteLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLimitTaskInvoker) Invoke() (*model.DeleteLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLimitTaskResponse), nil
+	}
+}
+
+type ListLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLimitTaskInvoker) Invoke() (*model.ListLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLimitTaskResponse), nil
+	}
+}
+
+type ListNodeLimitSqlModelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNodeLimitSqlModelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNodeLimitSqlModelInvoker) Invoke() (*model.ListNodeLimitSqlModelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNodeLimitSqlModelResponse), nil
+	}
+}
+
+type ShowLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLimitTaskInvoker) Invoke() (*model.ShowLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLimitTaskResponse), nil
+	}
+}
+
+type UpdateLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLimitTaskInvoker) Invoke() (*model.UpdateLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLimitTaskResponse), nil
 	}
 }

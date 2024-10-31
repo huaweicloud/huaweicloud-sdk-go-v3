@@ -53,6 +53,9 @@ type ListApisV2Request struct {
 
 	// 指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
 	ReturnDataMode *string `json:"return_data_mode,omitempty"`
+
+	// API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o ListApisV2Request) String() string {

@@ -255,7 +255,7 @@ type TestCaseDetailVo struct {
 	LabelId *string `json:"label_id,omitempty"`
 
 	// 用例标签名称列表
-	Labels *string `json:"labels,omitempty"`
+	Labels *[]LabelVo `json:"labels,omitempty"`
 
 	// 模块ID
 	ModuleId *string `json:"module_id,omitempty"`

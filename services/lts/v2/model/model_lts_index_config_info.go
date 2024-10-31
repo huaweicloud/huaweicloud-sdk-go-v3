@@ -16,7 +16,7 @@ type LtsIndexConfigInfo struct {
 	SqlAnalysisEnable *bool `json:"sqlAnalysisEnable,omitempty"`
 
 	// 日志流id
-	LogStreamId *string `json:"logStreamId,omitempty"`
+	LogStreamId string `json:"logStreamId"`
 }
 
 func (o LtsIndexConfigInfo) String() string {

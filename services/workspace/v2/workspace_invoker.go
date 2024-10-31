@@ -325,6 +325,22 @@ func (i *ChangeDesktopNetworkInvoker) Invoke() (*model.ChangeDesktopNetworkRespo
 	}
 }
 
+type ChangeUserPrivilegeGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeUserPrivilegeGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeUserPrivilegeGroupInvoker) Invoke() (*model.ChangeUserPrivilegeGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeUserPrivilegeGroupResponse), nil
+	}
+}
+
 type CreateDesktopInvoker struct {
 	*invoker.BaseInvoker
 }

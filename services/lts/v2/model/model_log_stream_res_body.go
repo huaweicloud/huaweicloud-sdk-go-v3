@@ -18,6 +18,9 @@ type LogStreamResBody struct {
 	// 日志流名称
 	LogStreamName *string `json:"log_stream_name,omitempty"`
 
+	// 日志流别名
+	LogStreamNameAlias *string `json:"log_stream_name_alias,omitempty"`
+
 	// 日志流所属标签
 	Tag map[string]string `json:"tag,omitempty"`
 
@@ -26,6 +29,21 @@ type LogStreamResBody struct {
 
 	// 是否收藏日志流。
 	IsFavorite *bool `json:"is_favorite,omitempty"`
+
+	// 是否日志存储
+	WhetherLogStorage *bool `json:"whether_log_storage,omitempty"`
+
+	// 是否冷存储
+	HotColdSeparation *bool `json:"hot_cold_separation,omitempty"`
+
+	// 匿名写入开关
+	AuthWebTracking *bool `json:"auth_web_tracking,omitempty"`
+
+	// 存储时间
+	TtlInDays *int32 `json:"ttl_in_days,omitempty"`
+
+	// 标准存储时间
+	HotStorageDays *int32 `json:"hot_storage_days,omitempty"`
 }
 
 func (o LogStreamResBody) String() string {

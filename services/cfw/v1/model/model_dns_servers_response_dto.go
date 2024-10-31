@@ -8,13 +8,13 @@ import (
 
 type DnsServersResponseDto struct {
 
-	// id
+	// 域名服务器id
 	Id *int32 `json:"id,omitempty"`
 
-	// 是否应用，0否 1是
+	// 域名服务器是否应用，0否 1是
 	IsApplied *int32 `json:"is_applied,omitempty"`
 
-	// 是否是用户自定义的dns服务器，0否 1是
+	// 域名服务器是否是用户自定义的dns服务器，0否 1是
 	IsCustomized *int32 `json:"is_customized,omitempty"`
 
 	// DNS服务器IP

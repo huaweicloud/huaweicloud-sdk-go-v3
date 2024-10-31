@@ -9,7 +9,7 @@ import (
 // OrderRuleAclDto UpdateRuleAclDto
 type OrderRuleAclDto struct {
 
-	// 目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+	// 目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
 	DestRuleId *string `json:"dest_rule_id,omitempty"`
 
 	// 是否置顶，0代表非置顶，1代表置顶

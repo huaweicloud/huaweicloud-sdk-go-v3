@@ -17,28 +17,25 @@ type AddRuleAclDtoRules struct {
 
 	Sequence *OrderRuleAclDto `json:"sequence"`
 
-	// 地址类型，0 ipv4,1 ipv6,2 domain
+	// 地址类型，0表示ipv4，1表示ipv6
 	AddressType AddRuleAclDtoRulesAddressType `json:"address_type"`
 
-	// 动作0：permit,1：deny
+	// 规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
 	ActionType int32 `json:"action_type"`
 
-	// 规则下发状态 0：禁用,1：启用
+	// 规则启用状态，0表示禁用，1表示启用
 	Status AddRuleAclDtoRulesStatus `json:"status"`
 
-	// 应用列表
+	// 规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
 	Applications *[]string `json:"applications,omitempty"`
-
-	// 应用列表转化json字符串
-	ApplicationsJsonString *string `json:"applicationsJsonString,omitempty"`
 
 	// 长连接时长
 	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
 
-	// 长连接时长小时
+	// 长连接时长对应小时
 	LongConnectTimeHour *int64 `json:"long_connect_time_hour,omitempty"`
 
-	// 长连接时长分钟
+	// 长连接时长对应分钟
 	LongConnectTimeMinute *int64 `json:"long_connect_time_minute,omitempty"`
 
 	// 长连接时长秒
@@ -50,7 +47,7 @@ type AddRuleAclDtoRules struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// 方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+	// 方向：0表示外到内，1表示内到外，规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
 	Direction *AddRuleAclDtoRulesDirection `json:"direction,omitempty"`
 
 	Source *RuleAddressDtoForRequest `json:"source"`

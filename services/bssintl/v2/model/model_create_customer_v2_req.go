@@ -18,7 +18,7 @@ type CreateCustomerV2Req struct {
 	VerificationCode *string `json:"verification_code,omitempty"`
 
 	// 客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
-	DomainArea *string `json:"domain_area,omitempty"`
+	DomainArea string `json:"domain_area"`
 
 	// 伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
 	XaccountId string `json:"xaccount_id"`

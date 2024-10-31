@@ -14,10 +14,10 @@ type HttpGetAclTagResponseData struct {
 	// 每页显示个数，范围为1-1024
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 总数
+	// 规则标签总数
 	Total *int32 `json:"total,omitempty"`
 
-	// 标签列表
+	// 规则标签列表
 	Records *[]TagsVo `json:"records,omitempty"`
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CommonResponseDtoData object
+// CommonResponseDtoData 修改ips防护模式返回值数据
 type CommonResponseDtoData struct {
 
 	// 防护对象id

@@ -8,13 +8,13 @@ import (
 
 type EipOperateProtectReqIpInfos struct {
 
-	// 弹性公网IP数据ID
+	// 弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
 	Id *string `json:"id,omitempty"`
 
-	// 弹性公网IP地址
+	// 弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 弹性公网IP地址IPV6
+	// 弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
 	PublicIpv6 *string `json:"public_ipv6,omitempty"`
 }
 

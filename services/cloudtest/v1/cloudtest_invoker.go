@@ -341,6 +341,22 @@ func (i *DeleteBasicAwByIdInvoker) Invoke() (*model.DeleteBasicAwByIdResponse, e
 	}
 }
 
+type DeleteFacotrByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFacotrByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteFacotrByIdInvoker) Invoke() (*model.DeleteFacotrByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFacotrByIdResponse), nil
+	}
+}
+
 type DeleteRelationsByOneCaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1253,6 +1269,22 @@ func (i *ShowBranchInvoker) Invoke() (*model.ShowBranchResponse, error) {
 	}
 }
 
+type ShowCaseResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCaseResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCaseResultInvoker) Invoke() (*model.ShowCaseResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCaseResultResponse), nil
+	}
+}
+
 type ShowConcurrencyPackageUsingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1717,6 +1749,22 @@ func (i *ShowSystemConfigsInvoker) Invoke() (*model.ShowSystemConfigsResponse, e
 	}
 }
 
+type ShowTemplateByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTemplateByIdInvoker) Invoke() (*model.ShowTemplateByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateByIdResponse), nil
+	}
+}
+
 type ShowTemplateByPageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2066,5 +2114,357 @@ func (i *ListEnvironmentsInvoker) Invoke() (*model.ListEnvironmentsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListEnvironmentsResponse), nil
+	}
+}
+
+type BatchDeleteFacotrByIdsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteFacotrByIdsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteFacotrByIdsInvoker) Invoke() (*model.BatchDeleteFacotrByIdsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteFacotrByIdsResponse), nil
+	}
+}
+
+type BatchShowTestCaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchShowTestCaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchShowTestCaseInvoker) Invoke() (*model.BatchShowTestCaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchShowTestCaseResponse), nil
+	}
+}
+
+type CreateAssetTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssetTreeInvoker) Invoke() (*model.CreateAssetTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetTreeResponse), nil
+	}
+}
+
+type CreateBackupMindmapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBackupMindmapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateBackupMindmapInvoker) Invoke() (*model.CreateBackupMindmapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBackupMindmapResponse), nil
+	}
+}
+
+type CreateTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTemplateResponse), nil
+	}
+}
+
+type DeleteAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAssetInvoker) Invoke() (*model.DeleteAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssetResponse), nil
+	}
+}
+
+type DeleteAssetTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssetTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAssetTreeInvoker) Invoke() (*model.DeleteAssetTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssetTreeResponse), nil
+	}
+}
+
+type DeleteMindmapBackupByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMindmapBackupByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteMindmapBackupByIdInvoker) Invoke() (*model.DeleteMindmapBackupByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMindmapBackupByIdResponse), nil
+	}
+}
+
+type DeleteMindmapRecycleByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMindmapRecycleByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteMindmapRecycleByIdInvoker) Invoke() (*model.DeleteMindmapRecycleByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMindmapRecycleByIdResponse), nil
+	}
+}
+
+type DeleteTemplateByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTemplateByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTemplateByIdInvoker) Invoke() (*model.DeleteTemplateByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTemplateByIdResponse), nil
+	}
+}
+
+type DownloadAssetTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadAssetTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadAssetTemplateInvoker) Invoke() (*model.DownloadAssetTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadAssetTemplateResponse), nil
+	}
+}
+
+type ExportFactorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportFactorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportFactorInvoker) Invoke() (*model.ExportFactorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportFactorResponse), nil
+	}
+}
+
+type ImportAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportAssetInvoker) Invoke() (*model.ImportAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportAssetResponse), nil
+	}
+}
+
+type ImportFactorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportFactorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportFactorInvoker) Invoke() (*model.ImportFactorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportFactorResponse), nil
+	}
+}
+
+type ShowDefaultTemplateByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDefaultTemplateByPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDefaultTemplateByPageInvoker) Invoke() (*model.ShowDefaultTemplateByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDefaultTemplateByPageResponse), nil
+	}
+}
+
+type ShowMindmapBackupByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMindmapBackupByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMindmapBackupByIdInvoker) Invoke() (*model.ShowMindmapBackupByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMindmapBackupByIdResponse), nil
+	}
+}
+
+type ShowMindmapBackupByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMindmapBackupByPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMindmapBackupByPageInvoker) Invoke() (*model.ShowMindmapBackupByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMindmapBackupByPageResponse), nil
+	}
+}
+
+type ShowMindmapRecycleByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMindmapRecycleByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMindmapRecycleByIdInvoker) Invoke() (*model.ShowMindmapRecycleByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMindmapRecycleByIdResponse), nil
+	}
+}
+
+type ShowMindmapRecycleByPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMindmapRecycleByPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMindmapRecycleByPageInvoker) Invoke() (*model.ShowMindmapRecycleByPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMindmapRecycleByPageResponse), nil
+	}
+}
+
+type ShowTestcaseByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestcaseByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTestcaseByIdInvoker) Invoke() (*model.ShowTestcaseByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestcaseByIdResponse), nil
+	}
+}
+
+type UpdateAssetTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssetTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAssetTreeInvoker) Invoke() (*model.UpdateAssetTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssetTreeResponse), nil
+	}
+}
+
+type UpdateMindmapNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMindmapNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateMindmapNameInvoker) Invoke() (*model.UpdateMindmapNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMindmapNameResponse), nil
 	}
 }

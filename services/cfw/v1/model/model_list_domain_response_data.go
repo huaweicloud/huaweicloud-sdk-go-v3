@@ -14,7 +14,7 @@ type ListDomainResponseData struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 租户项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 域名信息列表
@@ -23,7 +23,7 @@ type ListDomainResponseData struct {
 	// 域名组id
 	SetId *string `json:"set_id,omitempty"`
 
-	// 总数
+	// 域名总数
 	Total *int32 `json:"total,omitempty"`
 }
 

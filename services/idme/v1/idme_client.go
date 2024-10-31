@@ -166,6 +166,27 @@ func (c *IdmeClient) ModifyApplicationInvoker(request *model.ModifyApplicationRe
 	return &ModifyApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SubscribeCloudService 开通iDME实例
+//
+// 本接口用于开通工业数字模型驱动引擎（Industrial Digital Model Engine，简称iDME）实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IdmeClient) SubscribeCloudService(request *model.SubscribeCloudServiceRequest) (*model.SubscribeCloudServiceResponse, error) {
+	requestDef := GenReqDefForSubscribeCloudService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SubscribeCloudServiceResponse), nil
+	}
+}
+
+// SubscribeCloudServiceInvoker 开通iDME实例
+func (c *IdmeClient) SubscribeCloudServiceInvoker(request *model.SubscribeCloudServiceRequest) *SubscribeCloudServiceInvoker {
+	requestDef := GenReqDefForSubscribeCloudService()
+	return &SubscribeCloudServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Uninstall 卸载应用
 //
 // 本接口用于卸载指定运行服务下的工业数字模型驱动引擎（Industrial Digital Model Engine，简称iDME）应用。

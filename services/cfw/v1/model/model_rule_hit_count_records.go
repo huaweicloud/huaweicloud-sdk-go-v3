@@ -15,10 +15,10 @@ type RuleHitCountRecords struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 总数
+	// 获取规则击中次数总条数
 	Total *int32 `json:"total,omitempty"`
 
-	// 规则击中次数列表
+	// 规则击中次数信息列表
 	Records *[]RuleHitCountObject `json:"records,omitempty"`
 }
 

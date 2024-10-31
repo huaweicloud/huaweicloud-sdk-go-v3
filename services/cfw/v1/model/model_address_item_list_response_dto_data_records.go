@@ -21,7 +21,7 @@ type AddressItemListResponseDtoDataRecords struct {
 	// 地址组类型，0 ipv4,1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
-	// 地址组
+	// 地址信息
 	Address *string `json:"address,omitempty"`
 }
 

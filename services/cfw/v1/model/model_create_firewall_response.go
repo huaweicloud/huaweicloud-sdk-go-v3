@@ -9,7 +9,7 @@ import (
 // CreateFirewallResponse Response Object
 type CreateFirewallResponse struct {
 
-	// 实例创建的任务id。 仅创建按需实例时会返回该参数。
+	// 实例创建的任务id。仅创建按需实例时会返回该参数。
 	JobId *string `json:"job_id,omitempty"`
 
 	// 订单号，创建包年包月时返回该参数。

@@ -14,7 +14,7 @@ type ServiceSetRecords struct {
 	// 每页显示个数，范围为1-1024
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询总数
+	// 查询服务组总数
 	Total *int32 `json:"total,omitempty"`
 
 	// 服务组列表

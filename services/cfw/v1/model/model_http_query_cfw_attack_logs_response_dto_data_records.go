@@ -11,10 +11,10 @@ import (
 
 type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 
-	// 方向，有内到外和外到内两种
+	// 方向，包含in2out，out2in
 	Direction *HttpQueryCfwAttackLogsResponseDtoDataRecordsDirection `json:"direction,omitempty"`
 
-	// 动作
+	// 动作包含permit，deny
 	Action *string `json:"action,omitempty"`
 
 	// 事件时间，以毫秒为单位的时间戳，如1718936272648
@@ -26,7 +26,7 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	// 攻击规则
 	AttackRule *string `json:"attack_rule,omitempty"`
 
-	// 威胁等级
+	// 威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
 	Level *string `json:"level,omitempty"`
 
 	// 来源
@@ -56,13 +56,13 @@ type HttpQueryCfwAttackLogsResponseDtoDataRecords struct {
 	// 目的端口
 	DstPort *int32 `json:"dst_port,omitempty"`
 
-	// 协议
+	// 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
 	Protocol *string `json:"protocol,omitempty"`
 
 	// 攻击日志报文
 	Packet *string `json:"packet,omitempty"`
 
-	// 应用协议
+	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 攻击报文信息

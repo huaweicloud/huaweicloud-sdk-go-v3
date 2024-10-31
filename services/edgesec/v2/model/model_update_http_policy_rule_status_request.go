@@ -12,7 +12,7 @@ type UpdateHttpPolicyRuleStatusRequest struct {
 	// 防护策略id
 	PolicyId string `json:"policy_id"`
 
-	// 防护策略规则 cc|custom|whiteblackip|privacy|ignore|geoip|antitamper|antileakage|punishment|ip-reputation
+	// 防护策略规则 cc-rule|access-control-rule|blocktrustip-rule|privacy-rule|ignore-rule|geoip-rule|punishment-rule
 	RuleType string `json:"rule_type"`
 
 	// 防护策略规则id

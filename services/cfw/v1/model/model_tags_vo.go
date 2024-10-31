@@ -8,13 +8,13 @@ import (
 
 type TagsVo struct {
 
-	// 标签id
+	// 规则id
 	TagId *string `json:"tag_id,omitempty"`
 
-	// 标签键
+	// 规则标签键
 	TagKey *string `json:"tag_key,omitempty"`
 
-	// 标签值
+	// 规则标签值
 	TagValue *string `json:"tag_value,omitempty"`
 }
 

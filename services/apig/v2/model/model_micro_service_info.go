@@ -17,12 +17,14 @@ type MicroServiceInfo struct {
 	// 实例编号
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: nacos引擎，nacos_info必填
 	ServiceType *MicroServiceInfoServiceType `json:"service_type,omitempty"`
 
 	CseInfo *MicroServiceInfoCse `json:"cse_info,omitempty"`
 
 	CceInfo *MicroServiceInfoCce `json:"cce_info,omitempty"`
+
+	NacosInfo *MicroServiceInfoNacosBase `json:"nacos_info,omitempty"`
 
 	// 微服务更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
@@ -48,6 +50,7 @@ type MicroServiceInfoServiceTypeEnum struct {
 	CSE         MicroServiceInfoServiceType
 	CCE         MicroServiceInfoServiceType
 	CCE_SERVICE MicroServiceInfoServiceType
+	NACOS       MicroServiceInfoServiceType
 }
 
 func GetMicroServiceInfoServiceTypeEnum() MicroServiceInfoServiceTypeEnum {
@@ -60,6 +63,9 @@ func GetMicroServiceInfoServiceTypeEnum() MicroServiceInfoServiceTypeEnum {
 		},
 		CCE_SERVICE: MicroServiceInfoServiceType{
 			value: "CCE_SERVICE",
+		},
+		NACOS: MicroServiceInfoServiceType{
+			value: "NACOS",
 		},
 	}
 }

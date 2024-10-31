@@ -60,6 +60,9 @@ type PluginApiInfo struct {
 
 	// 绑定时间。
 	AttachedTime *sdktime.SdkTime `json:"attached_time,omitempty"`
+
+	// API绑定的标签，标签配额默认10条，可以联系技术调整。
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 func (o PluginApiInfo) String() string {

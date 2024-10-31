@@ -8,10 +8,10 @@ import (
 
 type AddServiceItemsUsingPostRequestBody struct {
 
-	// 服务组id
+	// 服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
 	SetId string `json:"set_id"`
 
-	// 添加服务组成员
+	// 服务组成员列表
 	ServiceItems []AddServiceItemsUsingPostRequestBodyServiceItems `json:"service_items"`
 }
 

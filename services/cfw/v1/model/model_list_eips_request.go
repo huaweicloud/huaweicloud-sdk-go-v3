@@ -3,26 +3,23 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ListEipsRequest Request Object
 type ListEipsRequest struct {
 
-	// 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+	// 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
 	ObjectId string `json:"object_id"`
 
-	// 弹性公网ID/弹性公网IP
+	// 查询防护EIP列表关键字，可选用弹性公网ID和弹性公网IP
 	KeyWord *string `json:"key_word,omitempty"`
 
 	// 防护状态 null-全部 0-开启防护 1-关闭防护
-	Status *ListEipsRequestStatus `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 
 	// 是否同步租户EIP数据 0-不同步 1-同步
-	Sync *ListEipsRequestSync `json:"sync,omitempty"`
+	Sync *int32 `json:"sync,omitempty"`
 
 	// 每页显示个数，范围为1-1024
 	Limit int32 `json:"limit"`
@@ -30,25 +27,25 @@ type ListEipsRequest struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset int32 `json:"offset"`
 
-	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	// 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 设备键
+	// 设备关键字，是eip绑定的资产的名称或id
 	DeviceKey *string `json:"device_key,omitempty"`
 
-	// 地址类型0 ipv4,1 ipv6
+	// 地址类型0 ipv4，1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
-	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId *string `json:"fw_instance_id,omitempty"`
 
-	// 所绑定防火墙id防火墙名称
+	// 防火墙关键字，可使用防火墙id或名称查询，可通过[防火墙ID获取方式](cfw_02_0028.xml)
 	FwKeyWord *string `json:"fw_key_word,omitempty"`
 
-	// 弹性公网ip的企业项目id
+	// 弹性公网ip的企业项目id，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，租户未开启企业项目时为0
 	EpsId *string `json:"eps_id,omitempty"`
 
-	// 标签列表信息
+	// 标签列表信息可通过查询EIP服务界面列表标签页签获得
 	Tags *string `json:"tags,omitempty"`
 }
 
@@ -59,101 +56,4 @@ func (o ListEipsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListEipsRequest", string(data)}, " ")
-}
-
-type ListEipsRequestStatus struct {
-	value string
-}
-
-type ListEipsRequestStatusEnum struct {
-	NULL ListEipsRequestStatus
-	E_0  ListEipsRequestStatus
-	E_1  ListEipsRequestStatus
-}
-
-func GetListEipsRequestStatusEnum() ListEipsRequestStatusEnum {
-	return ListEipsRequestStatusEnum{
-		NULL: ListEipsRequestStatus{
-			value: "null",
-		},
-		E_0: ListEipsRequestStatus{
-			value: "0",
-		},
-		E_1: ListEipsRequestStatus{
-			value: "1",
-		},
-	}
-}
-
-func (c ListEipsRequestStatus) Value() string {
-	return c.value
-}
-
-func (c ListEipsRequestStatus) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListEipsRequestStatus) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ListEipsRequestSync struct {
-	value int32
-}
-
-type ListEipsRequestSyncEnum struct {
-	E_0 ListEipsRequestSync
-	E_1 ListEipsRequestSync
-}
-
-func GetListEipsRequestSyncEnum() ListEipsRequestSyncEnum {
-	return ListEipsRequestSyncEnum{
-		E_0: ListEipsRequestSync{
-			value: 0,
-		}, E_1: ListEipsRequestSync{
-			value: 1,
-		},
-	}
-}
-
-func (c ListEipsRequestSync) Value() int32 {
-	return c.value
-}
-
-func (c ListEipsRequestSync) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListEipsRequestSync) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
 }

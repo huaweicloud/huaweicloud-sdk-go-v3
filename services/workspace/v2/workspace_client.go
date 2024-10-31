@@ -439,6 +439,27 @@ func (c *WorkspaceClient) ChangeDesktopNetworkInvoker(request *model.ChangeDeskt
 	return &ChangeDesktopNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeUserPrivilegeGroup 批量修改用户权限组
+//
+// 批量修改用户权限组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ChangeUserPrivilegeGroup(request *model.ChangeUserPrivilegeGroupRequest) (*model.ChangeUserPrivilegeGroupResponse, error) {
+	requestDef := GenReqDefForChangeUserPrivilegeGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeUserPrivilegeGroupResponse), nil
+	}
+}
+
+// ChangeUserPrivilegeGroupInvoker 批量修改用户权限组
+func (c *WorkspaceClient) ChangeUserPrivilegeGroupInvoker(request *model.ChangeUserPrivilegeGroupRequest) *ChangeUserPrivilegeGroupInvoker {
+	requestDef := GenReqDefForChangeUserPrivilegeGroup()
+	return &ChangeUserPrivilegeGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDesktop 创建桌面
 //
 // 创建桌面，并将此桌面分配给用户，当桌面创建成功后用户可以登录使用。

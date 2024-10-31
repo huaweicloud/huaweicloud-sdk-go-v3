@@ -117,6 +117,22 @@ func (i *ModifyApplicationInvoker) Invoke() (*model.ModifyApplicationResponse, e
 	}
 }
 
+type SubscribeCloudServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SubscribeCloudServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SubscribeCloudServiceInvoker) Invoke() (*model.SubscribeCloudServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SubscribeCloudServiceResponse), nil
+	}
+}
+
 type UninstallInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -14,7 +14,7 @@ type ListDomainsetsResponseData struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 总数
+	// 域名组总数
 	Total *int32 `json:"total,omitempty"`
 
 	// 域名组列表

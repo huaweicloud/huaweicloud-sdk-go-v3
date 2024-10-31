@@ -8,7 +8,7 @@ import (
 
 type ServiceItemIdsItems struct {
 
-	// id值
+	// 服务组成员id
 	Id *string `json:"id,omitempty"`
 }
 

@@ -17,11 +17,29 @@ type ListLogStreamsResponseBody1LogStreams struct {
 	// 日志流名称
 	LogStreamName string `json:"log_stream_name"`
 
+	// 日志流别名
+	LogStreamNameAlias *string `json:"log_stream_name_alias,omitempty"`
+
 	// 日志流所属标签
 	Tag map[string]string `json:"tag"`
 
 	// 过滤器个数
 	FilterCount int32 `json:"filter_count"`
+
+	// 是否日志存储
+	WhetherLogStorage *bool `json:"whether_log_storage,omitempty"`
+
+	// 是否冷存储
+	HotColdSeparation *bool `json:"hot_cold_separation,omitempty"`
+
+	// 匿名写入开关
+	AuthWebTracking *bool `json:"auth_web_tracking,omitempty"`
+
+	// 存储时间
+	TtlInDays *int32 `json:"ttl_in_days,omitempty"`
+
+	// 标准存储时间
+	HotStorageDays *int32 `json:"hot_storage_days,omitempty"`
 }
 
 func (o ListLogStreamsResponseBody1LogStreams) String() string {

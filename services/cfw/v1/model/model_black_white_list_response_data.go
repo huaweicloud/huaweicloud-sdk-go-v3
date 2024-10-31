@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BlackWhiteListResponseData 查询黑白名单返回值
+// BlackWhiteListResponseData 查询黑白名单返回值数据
 type BlackWhiteListResponseData struct {
 
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
@@ -15,10 +15,10 @@ type BlackWhiteListResponseData struct {
 	// 每页显示个数，范围为1-1024
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询的总条数
+	// 查询黑白名单总条数
 	Total *int32 `json:"total,omitempty"`
 
-	// 黑白名单记录
+	// 黑白名单列表
 	Records *[]BlackWhiteListResponseDataRecords `json:"records,omitempty"`
 }
 

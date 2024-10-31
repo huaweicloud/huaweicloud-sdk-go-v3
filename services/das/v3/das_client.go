@@ -147,6 +147,27 @@ func (c *DasClient) ChangeTransactionSwitchStatusInvoker(request *model.ChangeTr
 	return &ChangeTransactionSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateHealthReportTask 创建实例健康诊断任务
+//
+// 创建实例健康诊断任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateHealthReportTask(request *model.CreateHealthReportTaskRequest) (*model.CreateHealthReportTaskResponse, error) {
+	requestDef := GenReqDefForCreateHealthReportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHealthReportTaskResponse), nil
+	}
+}
+
+// CreateHealthReportTaskInvoker 创建实例健康诊断任务
+func (c *DasClient) CreateHealthReportTaskInvoker(request *model.CreateHealthReportTaskRequest) *CreateHealthReportTaskInvoker {
+	requestDef := GenReqDefForCreateHealthReportTask()
+	return &CreateHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateShareConnections 设置共享链接
 //
 // 设置共享链接，
@@ -519,6 +540,27 @@ func (c *DasClient) ListDbUsersInvoker(request *model.ListDbUsersRequest) *ListD
 	return &ListDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListHealthReportTask 查询实例健康诊断报告列表
+//
+// 查询实例健康诊断报告列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListHealthReportTask(request *model.ListHealthReportTaskRequest) (*model.ListHealthReportTaskResponse, error) {
+	requestDef := GenReqDefForListHealthReportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHealthReportTaskResponse), nil
+	}
+}
+
+// ListHealthReportTaskInvoker 查询实例健康诊断报告列表
+func (c *DasClient) ListHealthReportTaskInvoker(request *model.ListHealthReportTaskRequest) *ListHealthReportTaskInvoker {
+	requestDef := GenReqDefForListHealthReportTask()
+	return &ListHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInnodbLocks 查询InnoDB锁等待列表
 //
 // 查询InnoDB锁等待列表。
@@ -712,6 +754,27 @@ func (c *DasClient) ShowDbUser(request *model.ShowDbUserRequest) (*model.ShowDbU
 func (c *DasClient) ShowDbUserInvoker(request *model.ShowDbUserRequest) *ShowDbUserInvoker {
 	requestDef := GenReqDefForShowDbUser()
 	return &ShowDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceHealthReport 获取实例健康诊断报告内容
+//
+// 获取实例健康诊断报告内容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowInstanceHealthReport(request *model.ShowInstanceHealthReportRequest) (*model.ShowInstanceHealthReportResponse, error) {
+	requestDef := GenReqDefForShowInstanceHealthReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceHealthReportResponse), nil
+	}
+}
+
+// ShowInstanceHealthReportInvoker 获取实例健康诊断报告内容
+func (c *DasClient) ShowInstanceHealthReportInvoker(request *model.ShowInstanceHealthReportRequest) *ShowInstanceHealthReportInvoker {
+	requestDef := GenReqDefForShowInstanceHealthReport()
+	return &ShowInstanceHealthReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowQuotas 查询云DBA配额

@@ -9,10 +9,10 @@ import (
 // CreateEastWestFirewallRequestBody 创建东西向防火墙body体
 type CreateEastWestFirewallRequestBody struct {
 
-	// 出方向关联ER实例id
-	ErId *string `json:"er_id,omitempty"`
+	// 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+	ErId string `json:"er_id"`
 
-	// inspection cidr
+	// 创建引流VPC时使用的网段
 	InspectionCidr string `json:"inspection_cidr"`
 
 	// 东西向防火墙模式，填写er

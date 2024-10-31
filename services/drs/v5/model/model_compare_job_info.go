@@ -34,7 +34,7 @@ type CompareJobInfo struct {
 	ExportStatus *string `json:"export_status,omitempty"`
 
 	// 导出比对结果有效期剩余时间。
-	ReportRemainSeconds *string `json:"report_remain_seconds,omitempty"`
+	ReportRemainSeconds *int64 `json:"report_remain_seconds,omitempty"`
 
 	// 对比任务的标签。
 	CompareJobTag map[string]string `json:"compare_job_tag,omitempty"`
@@ -44,9 +44,6 @@ type CompareJobInfo struct {
 
 	// 失败原因。
 	ErrorMsg *string `json:"error_msg,omitempty"`
-
-	// 动态比对时延。
-	DynamicCompareDelay *int64 `json:"dynamic_compare_delay,omitempty"`
 }
 
 func (o CompareJobInfo) String() string {

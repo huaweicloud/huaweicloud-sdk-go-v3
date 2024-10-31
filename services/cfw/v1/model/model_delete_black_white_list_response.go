@@ -8,8 +8,8 @@ import (
 
 // DeleteBlackWhiteListResponse Response Object
 type DeleteBlackWhiteListResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *BlackWhiteListId `json:"data,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o DeleteBlackWhiteListResponse) String() string {

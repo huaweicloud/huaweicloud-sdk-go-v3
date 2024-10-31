@@ -35,6 +35,36 @@ type CreateAccessConfigRequestBody struct {
 
 	// CCE集群ID，当CCE类型时，为必填
 	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// 是否增量采集 true 为是   false为否（全量采集）
+	IncrementalCollect *bool `json:"incremental_collect,omitempty"`
+
+	// 编码格式，支持UTF-8，GDB默认UTF-8
+	EncodingFormat *string `json:"encoding_format,omitempty"`
+
+	// IC结构化解析类型包括 ：SINGLE_LINE 单行全文，MULTI_LINE 多行全文，REGEX 单行正则，MULTI_REGEX 多行正则，SPLIT 分隔符，JSON JSON解析，NGINX nginx解析， COMPOSE组合解析
+	ProcessorType *string `json:"processor_type,omitempty"`
+
+	// 示例日志
+	DemoLog *string `json:"demo_log,omitempty"`
+
+	// 示例日志解析字段
+	DemoFields *[]DemoFieldAccess `json:"demo_fields,omitempty"`
+
+	// IC结构化解析器
+	Processors *[]Processor `json:"processors,omitempty"`
+
+	// ServiceStage应用ID
+	ApplicationId *string `json:"application_id,omitempty"`
+
+	// ServiceStage环境ID
+	EnvironmentId *string `json:"environment_id,omitempty"`
+
+	// ServiceStage组件ID
+	ComponentId *[]string `json:"component_id,omitempty"`
+
+	// 日志接入自建软件来源
+	AccessConfigTypeSource *string `json:"access_config_type_source,omitempty"`
 }
 
 func (o CreateAccessConfigRequestBody) String() string {

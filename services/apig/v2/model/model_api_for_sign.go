@@ -41,6 +41,9 @@ type ApiForSign struct {
 	// API的请求地址
 	ReqUri *string `json:"req_uri,omitempty"`
 
+	// API绑定的标签，标签配额默认10条，可以联系技术调整。
+	Tags *[]string `json:"tags,omitempty"`
+
 	// API类型
 	Type *int32 `json:"type,omitempty"`
 

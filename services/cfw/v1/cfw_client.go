@@ -252,7 +252,7 @@ func (c *CfwClient) CancelCaptureTaskInvoker(request *model.CancelCaptureTaskReq
 
 // ChangeEastWestFirewallStatus 修改东西向防火墙防护状态
 //
-// 东西向防护资源防护开启/关闭
+// 东西向防护开启/关闭
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) ChangeEastWestFirewallStatus(request *model.ChangeEastWestFirewallStatusRequest) (*model.ChangeEastWestFirewallStatusResponse, error) {
@@ -273,7 +273,7 @@ func (c *CfwClient) ChangeEastWestFirewallStatusInvoker(request *model.ChangeEas
 
 // CreateCaptureTask 创建抓包任务
 //
-// 创建抓包任务
+// 创建抓包任务，每个任务只能执行一次。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) CreateCaptureTask(request *model.CreateCaptureTaskRequest) (*model.CreateCaptureTaskResponse, error) {
@@ -418,9 +418,9 @@ func (c *CfwClient) DeleteBlackWhiteListInvoker(request *model.DeleteBlackWhiteL
 	return &DeleteBlackWhiteListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteCaptureTask 删除抓包任务
+// DeleteCaptureTask 批量删除抓包任务
 //
-// 删除抓包任务
+// 批量删除抓包任务
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) DeleteCaptureTask(request *model.DeleteCaptureTaskRequest) (*model.DeleteCaptureTaskResponse, error) {
@@ -433,7 +433,7 @@ func (c *CfwClient) DeleteCaptureTask(request *model.DeleteCaptureTaskRequest) (
 	}
 }
 
-// DeleteCaptureTaskInvoker 删除抓包任务
+// DeleteCaptureTaskInvoker 批量删除抓包任务
 func (c *CfwClient) DeleteCaptureTaskInvoker(request *model.DeleteCaptureTaskRequest) *DeleteCaptureTaskInvoker {
 	requestDef := GenReqDefForDeleteCaptureTask()
 	return &DeleteCaptureTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -12,7 +12,7 @@ import (
 // ListFlowLogsRequest Request Object
 type ListFlowLogsRequest struct {
 
-	// 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId string `json:"fw_instance_id"`
 
 	// 方向，包含in2out，out2in
@@ -42,7 +42,7 @@ type ListFlowLogsRequest struct {
 	// 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
 	Protocol *string `json:"protocol,omitempty"`
 
-	// 应用协议
+	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
@@ -57,7 +57,7 @@ type ListFlowLogsRequest struct {
 	// 每页显示个数，范围为1-1024
 	Limit int32 `json:"limit"`
 
-	// 企业项目id，用户支持企业项目后，由企业项目生成的id。
+	// 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 目的主机

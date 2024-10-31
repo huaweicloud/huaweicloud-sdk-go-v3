@@ -51,6 +51,9 @@ type CustomerOrderV2 struct {
 	ContractId *string `json:"contract_id,omitempty"`
 
 	AmountInfo *AmountInfomationV2 `json:"amount_info,omitempty"`
+
+	// |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
+	EnterpriseProjects *[]EnterpriseProject `json:"enterprise_projects,omitempty"`
 }
 
 func (o CustomerOrderV2) String() string {

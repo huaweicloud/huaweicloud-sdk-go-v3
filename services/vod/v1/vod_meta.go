@@ -854,6 +854,17 @@ func GenReqDefForShowPreheatingAsset() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowStorageModeType() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/asset/storage-mode-type").
+		WithResponse(new(model.ShowStorageModeTypeResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowVodRetrieval() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -997,6 +1008,21 @@ func GenReqDefForUpdateStorageMode() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/asset/storage-mode").
 		WithResponse(new(model.UpdateStorageModeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateStorageModeType() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/asset/storage-mode-type").
+		WithResponse(new(model.UpdateStorageModeTypeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -8,10 +8,10 @@ import (
 
 type CreateTag struct {
 
-	// 键
+	// 标签键
 	Key *string `json:"key,omitempty"`
 
-	// 值
+	// 标签值
 	Value *string `json:"value,omitempty"`
 }
 

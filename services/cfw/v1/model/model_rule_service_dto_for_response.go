@@ -12,10 +12,10 @@ type RuleServiceDtoForResponse struct {
 	// 服务输入类型，0为手动输入类型，1为自动输入类型
 	Type int32 `json:"type"`
 
-	// 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+	// 协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
 	Protocol *int32 `json:"protocol,omitempty"`
 
-	// 协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+	// 协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
 	Protocols *[]int32 `json:"protocols,omitempty"`
 
 	// 源端口
@@ -24,7 +24,7 @@ type RuleServiceDtoForResponse struct {
 	// 目的端口
 	DestPort *string `json:"dest_port,omitempty"`
 
-	// 服务组id，手动类型为空，自动类型为非空
+	// 服务组id
 	ServiceSetId *string `json:"service_set_id,omitempty"`
 
 	// 服务组名称
@@ -33,7 +33,7 @@ type RuleServiceDtoForResponse struct {
 	// 自定义服务
 	CustomService *[]ServiceItem `json:"custom_service,omitempty"`
 
-	// 服务组列表
+	// 服务组id列表
 	ServiceGroup *[]string `json:"service_group,omitempty"`
 
 	// 服务组名称列表

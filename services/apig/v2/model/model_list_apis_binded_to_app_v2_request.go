@@ -35,6 +35,9 @@ type ListApisBindedToAppV2Request struct {
 
 	// 授权的环境编号
 	EnvId *string `json:"env_id,omitempty"`
+
+	// API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o ListApisBindedToAppV2Request) String() string {

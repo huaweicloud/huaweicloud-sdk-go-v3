@@ -8,17 +8,14 @@ import (
 
 type VpcDetail struct {
 
-	// id
+	// 创建引流VPC产生的随机UUID
 	Id *string `json:"id,omitempty"`
 
-	// 名称
+	// 引流VPC名称
 	Name *string `json:"name,omitempty"`
 
-	// vpc cidr
+	// 功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
 	Cidr *string `json:"cidr,omitempty"`
-
-	// 状态
-	Status *string `json:"status,omitempty"`
 }
 
 func (o VpcDetail) String() string {

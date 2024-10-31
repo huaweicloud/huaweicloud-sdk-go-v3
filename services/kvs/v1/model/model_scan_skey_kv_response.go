@@ -11,7 +11,7 @@ import (
 type ScanSkeyKvResponse struct {
 
 	// 返回的文档数量，为0不表示结束。 - 如果filtered_count超过500仍无匹配，则返回0。 -  长度：4
-	ReturnedCount *int32 `bson:"returned_count,omitempty"`
+	ReturnedCount *int64 `bson:"returned_count,omitempty"`
 
 	// 被过滤掉的文档数量。 - 长度：4
 	FilteredCount *int32 `bson:"filtered_count,omitempty"`

@@ -8,8 +8,8 @@ import (
 
 // DeleteServiceItemResponse Response Object
 type DeleteServiceItemResponse struct {
-	Data           *IdObject `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *DeleteServiceItemResponseBodyData `json:"data,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o DeleteServiceItemResponse) String() string {

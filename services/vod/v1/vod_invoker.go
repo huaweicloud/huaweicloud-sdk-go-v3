@@ -661,6 +661,22 @@ func (i *ShowPreheatingAssetInvoker) Invoke() (*model.ShowPreheatingAssetRespons
 	}
 }
 
+type ShowStorageModeTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStorageModeTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStorageModeTypeInvoker) Invoke() (*model.ShowStorageModeTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStorageModeTypeResponse), nil
+	}
+}
+
 type ShowVodRetrievalInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -802,6 +818,22 @@ func (i *UpdateStorageModeInvoker) Invoke() (*model.UpdateStorageModeResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateStorageModeResponse), nil
+	}
+}
+
+type UpdateStorageModeTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStorageModeTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateStorageModeTypeInvoker) Invoke() (*model.UpdateStorageModeTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStorageModeTypeResponse), nil
 	}
 }
 

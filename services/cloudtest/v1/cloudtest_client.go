@@ -460,6 +460,27 @@ func (c *CloudtestClient) DeleteBasicAwByIdInvoker(request *model.DeleteBasicAwB
 	return &DeleteBasicAwByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteFacotrById 删除因子
+//
+// 删除因子
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteFacotrById(request *model.DeleteFacotrByIdRequest) (*model.DeleteFacotrByIdResponse, error) {
+	requestDef := GenReqDefForDeleteFacotrById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFacotrByIdResponse), nil
+	}
+}
+
+// DeleteFacotrByIdInvoker 删除因子
+func (c *CloudtestClient) DeleteFacotrByIdInvoker(request *model.DeleteFacotrByIdRequest) *DeleteFacotrByIdInvoker {
+	requestDef := GenReqDefForDeleteFacotrById()
+	return &DeleteFacotrByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRelationsByOneCase 删除一个用例和多个需求/缺陷关联关系
 //
 // 删除一个用例和多个需求/缺陷关联关系
@@ -1653,6 +1674,27 @@ func (c *CloudtestClient) ShowBranchInvoker(request *model.ShowBranchRequest) *S
 	return &ShowBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCaseResult 查询用例结果
+//
+// 查询用例结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowCaseResult(request *model.ShowCaseResultRequest) (*model.ShowCaseResultResponse, error) {
+	requestDef := GenReqDefForShowCaseResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCaseResultResponse), nil
+	}
+}
+
+// ShowCaseResultInvoker 查询用例结果
+func (c *CloudtestClient) ShowCaseResultInvoker(request *model.ShowCaseResultRequest) *ShowCaseResultInvoker {
+	requestDef := GenReqDefForShowCaseResult()
+	return &ShowCaseResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowConcurrencyPackageUsing 查询租户测试并发套餐状态
 //
 // 查询租户测试并发套餐状态
@@ -2262,6 +2304,27 @@ func (c *CloudtestClient) ShowSystemConfigsInvoker(request *model.ShowSystemConf
 	return &ShowSystemConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTemplateById 获取模板V2
+//
+// 获取模板V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTemplateById(request *model.ShowTemplateByIdRequest) (*model.ShowTemplateByIdResponse, error) {
+	requestDef := GenReqDefForShowTemplateById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTemplateByIdResponse), nil
+	}
+}
+
+// ShowTemplateByIdInvoker 获取模板V2
+func (c *CloudtestClient) ShowTemplateByIdInvoker(request *model.ShowTemplateByIdRequest) *ShowTemplateByIdInvoker {
+	requestDef := GenReqDefForShowTemplateById()
+	return &ShowTemplateByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTemplateByPage 根据条件分页获取模板V3
 //
 // 根据条件分页获取模板V3
@@ -2722,4 +2785,466 @@ func (c *CloudtestClient) ListEnvironments(request *model.ListEnvironmentsReques
 func (c *CloudtestClient) ListEnvironmentsInvoker(request *model.ListEnvironmentsRequest) *ListEnvironmentsInvoker {
 	requestDef := GenReqDefForListEnvironments()
 	return &ListEnvironmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteFacotrByIds 批量删除因子
+//
+// 批量删除因子
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) BatchDeleteFacotrByIds(request *model.BatchDeleteFacotrByIdsRequest) (*model.BatchDeleteFacotrByIdsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteFacotrByIds()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteFacotrByIdsResponse), nil
+	}
+}
+
+// BatchDeleteFacotrByIdsInvoker 批量删除因子
+func (c *CloudtestClient) BatchDeleteFacotrByIdsInvoker(request *model.BatchDeleteFacotrByIdsRequest) *BatchDeleteFacotrByIdsInvoker {
+	requestDef := GenReqDefForBatchDeleteFacotrByIds()
+	return &BatchDeleteFacotrByIdsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchShowTestCase 批量查询用例V3
+//
+// 批量查询用例V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) BatchShowTestCase(request *model.BatchShowTestCaseRequest) (*model.BatchShowTestCaseResponse, error) {
+	requestDef := GenReqDefForBatchShowTestCase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchShowTestCaseResponse), nil
+	}
+}
+
+// BatchShowTestCaseInvoker 批量查询用例V3
+func (c *CloudtestClient) BatchShowTestCaseInvoker(request *model.BatchShowTestCaseRequest) *BatchShowTestCaseInvoker {
+	requestDef := GenReqDefForBatchShowTestCase()
+	return &BatchShowTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAssetTree 新增资产树节点
+//
+// 新增资产树节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateAssetTree(request *model.CreateAssetTreeRequest) (*model.CreateAssetTreeResponse, error) {
+	requestDef := GenReqDefForCreateAssetTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetTreeResponse), nil
+	}
+}
+
+// CreateAssetTreeInvoker 新增资产树节点
+func (c *CloudtestClient) CreateAssetTreeInvoker(request *model.CreateAssetTreeRequest) *CreateAssetTreeInvoker {
+	requestDef := GenReqDefForCreateAssetTree()
+	return &CreateAssetTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBackupMindmap 备份脑图V2
+//
+// 备份脑图V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateBackupMindmap(request *model.CreateBackupMindmapRequest) (*model.CreateBackupMindmapResponse, error) {
+	requestDef := GenReqDefForCreateBackupMindmap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBackupMindmapResponse), nil
+	}
+}
+
+// CreateBackupMindmapInvoker 备份脑图V2
+func (c *CloudtestClient) CreateBackupMindmapInvoker(request *model.CreateBackupMindmapRequest) *CreateBackupMindmapInvoker {
+	requestDef := GenReqDefForCreateBackupMindmap()
+	return &CreateBackupMindmapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTemplate 保存模板V2
+//
+// 保存模板V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
+	requestDef := GenReqDefForCreateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTemplateResponse), nil
+	}
+}
+
+// CreateTemplateInvoker 保存模板V2
+func (c *CloudtestClient) CreateTemplateInvoker(request *model.CreateTemplateRequest) *CreateTemplateInvoker {
+	requestDef := GenReqDefForCreateTemplate()
+	return &CreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAsset 删除资产
+//
+// 删除资产
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteAsset(request *model.DeleteAssetRequest) (*model.DeleteAssetResponse, error) {
+	requestDef := GenReqDefForDeleteAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssetResponse), nil
+	}
+}
+
+// DeleteAssetInvoker 删除资产
+func (c *CloudtestClient) DeleteAssetInvoker(request *model.DeleteAssetRequest) *DeleteAssetInvoker {
+	requestDef := GenReqDefForDeleteAsset()
+	return &DeleteAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAssetTree 删除资产树节点
+//
+// 删除资产树节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteAssetTree(request *model.DeleteAssetTreeRequest) (*model.DeleteAssetTreeResponse, error) {
+	requestDef := GenReqDefForDeleteAssetTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssetTreeResponse), nil
+	}
+}
+
+// DeleteAssetTreeInvoker 删除资产树节点
+func (c *CloudtestClient) DeleteAssetTreeInvoker(request *model.DeleteAssetTreeRequest) *DeleteAssetTreeInvoker {
+	requestDef := GenReqDefForDeleteAssetTree()
+	return &DeleteAssetTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMindmapBackupById 根据id删除脑图备份V2
+//
+// 根据id删除脑图备份V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteMindmapBackupById(request *model.DeleteMindmapBackupByIdRequest) (*model.DeleteMindmapBackupByIdResponse, error) {
+	requestDef := GenReqDefForDeleteMindmapBackupById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMindmapBackupByIdResponse), nil
+	}
+}
+
+// DeleteMindmapBackupByIdInvoker 根据id删除脑图备份V2
+func (c *CloudtestClient) DeleteMindmapBackupByIdInvoker(request *model.DeleteMindmapBackupByIdRequest) *DeleteMindmapBackupByIdInvoker {
+	requestDef := GenReqDefForDeleteMindmapBackupById()
+	return &DeleteMindmapBackupByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMindmapRecycleById 删除脑图回收站V2
+//
+// 删除脑图回收站V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteMindmapRecycleById(request *model.DeleteMindmapRecycleByIdRequest) (*model.DeleteMindmapRecycleByIdResponse, error) {
+	requestDef := GenReqDefForDeleteMindmapRecycleById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMindmapRecycleByIdResponse), nil
+	}
+}
+
+// DeleteMindmapRecycleByIdInvoker 删除脑图回收站V2
+func (c *CloudtestClient) DeleteMindmapRecycleByIdInvoker(request *model.DeleteMindmapRecycleByIdRequest) *DeleteMindmapRecycleByIdInvoker {
+	requestDef := GenReqDefForDeleteMindmapRecycleById()
+	return &DeleteMindmapRecycleByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTemplateById 删除模板V2
+//
+// 删除模板V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteTemplateById(request *model.DeleteTemplateByIdRequest) (*model.DeleteTemplateByIdResponse, error) {
+	requestDef := GenReqDefForDeleteTemplateById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTemplateByIdResponse), nil
+	}
+}
+
+// DeleteTemplateByIdInvoker 删除模板V2
+func (c *CloudtestClient) DeleteTemplateByIdInvoker(request *model.DeleteTemplateByIdRequest) *DeleteTemplateByIdInvoker {
+	requestDef := GenReqDefForDeleteTemplateById()
+	return &DeleteTemplateByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAssetTemplate 下载资产模板
+//
+// 下载资产模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DownloadAssetTemplate(request *model.DownloadAssetTemplateRequest) (*model.DownloadAssetTemplateResponse, error) {
+	requestDef := GenReqDefForDownloadAssetTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadAssetTemplateResponse), nil
+	}
+}
+
+// DownloadAssetTemplateInvoker 下载资产模板
+func (c *CloudtestClient) DownloadAssetTemplateInvoker(request *model.DownloadAssetTemplateRequest) *DownloadAssetTemplateInvoker {
+	requestDef := GenReqDefForDownloadAssetTemplate()
+	return &DownloadAssetTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportFactor 因子库导出
+//
+// 因子库导出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ExportFactor(request *model.ExportFactorRequest) (*model.ExportFactorResponse, error) {
+	requestDef := GenReqDefForExportFactor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportFactorResponse), nil
+	}
+}
+
+// ExportFactorInvoker 因子库导出
+func (c *CloudtestClient) ExportFactorInvoker(request *model.ExportFactorRequest) *ExportFactorInvoker {
+	requestDef := GenReqDefForExportFactor()
+	return &ExportFactorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportAsset 资产导入
+//
+// 资产导入
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ImportAsset(request *model.ImportAssetRequest) (*model.ImportAssetResponse, error) {
+	requestDef := GenReqDefForImportAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportAssetResponse), nil
+	}
+}
+
+// ImportAssetInvoker 资产导入
+func (c *CloudtestClient) ImportAssetInvoker(request *model.ImportAssetRequest) *ImportAssetInvoker {
+	requestDef := GenReqDefForImportAsset()
+	return &ImportAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportFactor 因子导入
+//
+// 因子导入
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ImportFactor(request *model.ImportFactorRequest) (*model.ImportFactorResponse, error) {
+	requestDef := GenReqDefForImportFactor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportFactorResponse), nil
+	}
+}
+
+// ImportFactorInvoker 因子导入
+func (c *CloudtestClient) ImportFactorInvoker(request *model.ImportFactorRequest) *ImportFactorInvoker {
+	requestDef := GenReqDefForImportFactor()
+	return &ImportFactorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDefaultTemplateByPage 获取默认模板V2
+//
+// 获取默认模板V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowDefaultTemplateByPage(request *model.ShowDefaultTemplateByPageRequest) (*model.ShowDefaultTemplateByPageResponse, error) {
+	requestDef := GenReqDefForShowDefaultTemplateByPage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDefaultTemplateByPageResponse), nil
+	}
+}
+
+// ShowDefaultTemplateByPageInvoker 获取默认模板V2
+func (c *CloudtestClient) ShowDefaultTemplateByPageInvoker(request *model.ShowDefaultTemplateByPageRequest) *ShowDefaultTemplateByPageInvoker {
+	requestDef := GenReqDefForShowDefaultTemplateByPage()
+	return &ShowDefaultTemplateByPageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMindmapBackupById 根据id获取脑图备份V2
+//
+// 根据id获取脑图备份V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowMindmapBackupById(request *model.ShowMindmapBackupByIdRequest) (*model.ShowMindmapBackupByIdResponse, error) {
+	requestDef := GenReqDefForShowMindmapBackupById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMindmapBackupByIdResponse), nil
+	}
+}
+
+// ShowMindmapBackupByIdInvoker 根据id获取脑图备份V2
+func (c *CloudtestClient) ShowMindmapBackupByIdInvoker(request *model.ShowMindmapBackupByIdRequest) *ShowMindmapBackupByIdInvoker {
+	requestDef := GenReqDefForShowMindmapBackupById()
+	return &ShowMindmapBackupByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMindmapBackupByPage 根据条件分页获取脑图备份对象V3
+//
+// 根据条件分页获取脑图备份对象V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowMindmapBackupByPage(request *model.ShowMindmapBackupByPageRequest) (*model.ShowMindmapBackupByPageResponse, error) {
+	requestDef := GenReqDefForShowMindmapBackupByPage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMindmapBackupByPageResponse), nil
+	}
+}
+
+// ShowMindmapBackupByPageInvoker 根据条件分页获取脑图备份对象V3
+func (c *CloudtestClient) ShowMindmapBackupByPageInvoker(request *model.ShowMindmapBackupByPageRequest) *ShowMindmapBackupByPageInvoker {
+	requestDef := GenReqDefForShowMindmapBackupByPage()
+	return &ShowMindmapBackupByPageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMindmapRecycleById 根据id获取回收站脑图对象V2
+//
+// 根据id获取回收站脑图对象V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowMindmapRecycleById(request *model.ShowMindmapRecycleByIdRequest) (*model.ShowMindmapRecycleByIdResponse, error) {
+	requestDef := GenReqDefForShowMindmapRecycleById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMindmapRecycleByIdResponse), nil
+	}
+}
+
+// ShowMindmapRecycleByIdInvoker 根据id获取回收站脑图对象V2
+func (c *CloudtestClient) ShowMindmapRecycleByIdInvoker(request *model.ShowMindmapRecycleByIdRequest) *ShowMindmapRecycleByIdInvoker {
+	requestDef := GenReqDefForShowMindmapRecycleById()
+	return &ShowMindmapRecycleByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMindmapRecycleByPage 根据条件分页获取回收站脑图对象V3
+//
+// 根据条件分页获取回收站脑图对象V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowMindmapRecycleByPage(request *model.ShowMindmapRecycleByPageRequest) (*model.ShowMindmapRecycleByPageResponse, error) {
+	requestDef := GenReqDefForShowMindmapRecycleByPage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMindmapRecycleByPageResponse), nil
+	}
+}
+
+// ShowMindmapRecycleByPageInvoker 根据条件分页获取回收站脑图对象V3
+func (c *CloudtestClient) ShowMindmapRecycleByPageInvoker(request *model.ShowMindmapRecycleByPageRequest) *ShowMindmapRecycleByPageInvoker {
+	requestDef := GenReqDefForShowMindmapRecycleByPage()
+	return &ShowMindmapRecycleByPageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTestcaseById 根据id获取测试用例对象V2
+//
+// 根据id获取测试用例对象V2
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTestcaseById(request *model.ShowTestcaseByIdRequest) (*model.ShowTestcaseByIdResponse, error) {
+	requestDef := GenReqDefForShowTestcaseById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTestcaseByIdResponse), nil
+	}
+}
+
+// ShowTestcaseByIdInvoker 根据id获取测试用例对象V2
+func (c *CloudtestClient) ShowTestcaseByIdInvoker(request *model.ShowTestcaseByIdRequest) *ShowTestcaseByIdInvoker {
+	requestDef := GenReqDefForShowTestcaseById()
+	return &ShowTestcaseByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAssetTree 修改资产树节点
+//
+// 修改资产树节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateAssetTree(request *model.UpdateAssetTreeRequest) (*model.UpdateAssetTreeResponse, error) {
+	requestDef := GenReqDefForUpdateAssetTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAssetTreeResponse), nil
+	}
+}
+
+// UpdateAssetTreeInvoker 修改资产树节点
+func (c *CloudtestClient) UpdateAssetTreeInvoker(request *model.UpdateAssetTreeRequest) *UpdateAssetTreeInvoker {
+	requestDef := GenReqDefForUpdateAssetTree()
+	return &UpdateAssetTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMindmapName 脑图名称编辑
+//
+// 脑图名称编辑
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateMindmapName(request *model.UpdateMindmapNameRequest) (*model.UpdateMindmapNameResponse, error) {
+	requestDef := GenReqDefForUpdateMindmapName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMindmapNameResponse), nil
+	}
+}
+
+// UpdateMindmapNameInvoker 脑图名称编辑
+func (c *CloudtestClient) UpdateMindmapNameInvoker(request *model.UpdateMindmapNameRequest) *UpdateMindmapNameInvoker {
+	requestDef := GenReqDefForUpdateMindmapName()
+	return &UpdateMindmapNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -11,7 +11,7 @@ type CustomerInformation struct {
 	// 实名认证名称。
 	Customer *string `json:"customer,omitempty"`
 
-	// 客户经理登录名称。
+	// 客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
 	AccountName string `json:"account_name"`
 
 	// 客户账号ID。

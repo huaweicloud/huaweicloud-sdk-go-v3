@@ -8,10 +8,10 @@ import (
 
 type BatchDeleteRuleInfo struct {
 
-	// acl名称
+	// 批量删除的acl的名称
 	Name *string `json:"name,omitempty"`
 
-	// aclId
+	// 批量删除的acl的id
 	Id *string `json:"id,omitempty"`
 }
 

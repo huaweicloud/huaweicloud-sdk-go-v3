@@ -8,7 +8,7 @@ import (
 
 type DeleteTagsDto struct {
 
-	// 标签列表
+	// 防火墙标签列表
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 

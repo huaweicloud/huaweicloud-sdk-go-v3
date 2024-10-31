@@ -29,7 +29,7 @@ type VpcCreate struct {
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
 	DictCode *string `json:"dict_code,omitempty"`
 
-	// VPC通道后端服务器组列表
+	// VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
 	MemberGroups *[]MemberGroupCreate `json:"member_groups,omitempty"`
 
 	// VPC后端实例列表。

@@ -9,13 +9,13 @@ import (
 // HttpQueryCfwAccessControllerLogsResponseDtoData 查询访问控制日志返回数据
 type HttpQueryCfwAccessControllerLogsResponseDtoData struct {
 
-	// 返回数量
+	// 查询访问控制日志记录总数
 	Total *int32 `json:"total,omitempty"`
 
 	// 每页显示个数，范围为1-1024
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 记录
+	// 查询访问控制日志记录
 	Records *[]HttpQueryCfwAccessControllerLogsResponseDtoDataRecords `json:"records,omitempty"`
 }
 

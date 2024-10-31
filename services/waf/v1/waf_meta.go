@@ -1031,6 +1031,10 @@ func GenReqDefForListBandwidthTimeline() *def.HttpRequestDef {
 		WithName("GroupBy").
 		WithJsonTag("group_by").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DisplayOption").
+		WithJsonTag("display_option").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").

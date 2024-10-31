@@ -146,6 +146,22 @@ func GenReqDefForModifyApplication() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSubscribeCloudService() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/{service_type}/instances").
+		WithResponse(new(model.SubscribeCloudServiceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceType").
+		WithJsonTag("service_type").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUninstall() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).

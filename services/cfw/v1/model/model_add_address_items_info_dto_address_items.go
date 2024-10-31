@@ -9,14 +9,11 @@ import (
 // AddAddressItemsInfoDtoAddressItems 成员信息
 type AddAddressItemsInfoDtoAddressItems struct {
 
-	// 地址名称
-	Name string `json:"name"`
-
-	// 地址类型0 ipv4,1 ipv6
+	// 地址类型0 ipv4，1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
-	// 地址组ip信息
-	Address *string `json:"address,omitempty"`
+	// ip
+	Address string `json:"address"`
 
 	// 地址组成员描述
 	Description *string `json:"description,omitempty"`

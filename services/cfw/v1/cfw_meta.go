@@ -532,6 +532,10 @@ func GenReqDefForDeleteDomains() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1822,6 +1826,10 @@ func GenReqDefForBatchUpdateAclRuleActions() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FwInstanceId").
+		WithJsonTag("fw_instance_id").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -2226,11 +2234,6 @@ func GenReqDefForChangeIpsSwitchStatus() *def.HttpRequestDef {
 		WithName("FwInstanceId").
 		WithJsonTag("fw_instance_id").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

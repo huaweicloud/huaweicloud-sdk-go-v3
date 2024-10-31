@@ -8,7 +8,7 @@ import (
 
 type VpcAttachmentDetail struct {
 
-	// vpc id
+	// 东西向防护添加的防护vpc的id
 	VpcId *string `json:"vpc_id,omitempty"`
 }
 

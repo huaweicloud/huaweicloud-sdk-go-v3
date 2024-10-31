@@ -15,7 +15,7 @@ func NewIdentityCenterStoreClient(hcClient *httpclient.HcHttpClient) *IdentityCe
 }
 
 func IdentityCenterStoreClientBuilder() *httpclient.HcHttpClientBuilder {
-	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials")
+	builder := httpclient.NewHcHttpClientBuilder()
 	return builder
 }
 

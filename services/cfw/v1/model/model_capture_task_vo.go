@@ -8,31 +8,31 @@ import (
 
 type CaptureTaskVo struct {
 
-	// 抓包大小
+	// 抓包大小,如500kb,500mb
 	CaptureSize *string `json:"capture_size,omitempty"`
 
-	// 抓包创建时间
+	// 抓包创建时间,如2024/08/31 10:17:30
 	CreatedDate *string `json:"created_date,omitempty"`
 
 	// 目的地址
 	DestAddress *string `json:"dest_address,omitempty"`
 
-	// 目的地址类型0 ipv4,1 ipv6
+	// 目的地址类型0 ipv4，1 ipv6
 	DestAddressType *int32 `json:"dest_address_type,omitempty"`
 
 	// 目的端口
 	DestPort *string `json:"dest_port,omitempty"`
 
-	// 抓包时长
+	// 抓包时长，以分钟为单位
 	Duration *int32 `json:"duration,omitempty"`
 
 	// 是否被删除，0否 1是
 	IsDeleted *int32 `json:"is_deleted,omitempty"`
 
-	// 最大抓包数
+	// 最大抓包数，以个为单位
 	MaxPackets *int32 `json:"max_packets,omitempty"`
 
-	// 修改日期
+	// 修改日期,如2024/08/31 10:17:30
 	ModifiedDate *string `json:"modified_date,omitempty"`
 
 	// 抓包任务名称
@@ -47,13 +47,13 @@ type CaptureTaskVo struct {
 	// 源地址
 	SourceAddress *string `json:"source_address,omitempty"`
 
-	// 源地址类型0 ipv4,1 ipv6
+	// 源地址类型0 ipv4，1 ipv6
 	SourceAddressType *int32 `json:"source_address_type,omitempty"`
 
 	// 源端口
 	SourcePort *string `json:"source_port,omitempty"`
 
-	// 抓包任务状态
+	// 抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
 	Status *int32 `json:"status,omitempty"`
 
 	// 抓包任务id

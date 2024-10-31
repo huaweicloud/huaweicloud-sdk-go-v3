@@ -8,13 +8,13 @@ import (
 
 type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 
-	// 动作0：permit,1：deny
+	// 动作0：permit，1：deny
 	Action *string `json:"action,omitempty"`
 
 	// 规则名称
 	RuleName *string `json:"rule_name,omitempty"`
 
-	// 规则ID
+	// 规则id
 	RuleId *string `json:"rule_id,omitempty"`
 
 	// 命中时间，以毫秒为单位的时间戳，如1718936272648
@@ -50,7 +50,7 @@ type HttpQueryCfwAccessControllerLogsResponseDtoDataRecords struct {
 	// 协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
 	Protocol *string `json:"protocol,omitempty"`
 
-	// 应用协议
+	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 目标主机

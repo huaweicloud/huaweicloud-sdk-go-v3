@@ -8,11 +8,8 @@ import (
 
 // ChangeEastWestFirewallStatusResponse Response Object
 type ChangeEastWestFirewallStatusResponse struct {
-	Data *SuccessRspData `json:"data,omitempty"`
-
-	// trace id
-	TraceId        *string `json:"trace_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Data           *ChangeEastWestFirewallStatusResponseData `json:"data,omitempty"`
+	HttpStatusCode int                                       `json:"-"`
 }
 
 func (o ChangeEastWestFirewallStatusResponse) String() string {

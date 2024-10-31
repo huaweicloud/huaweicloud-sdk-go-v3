@@ -15,7 +15,7 @@ type SetAutoPolicyRequestBody struct {
 	SwitchOption *string `json:"switch_option,omitempty"`
 
 	// 磁盘自动扩容策略
-	Policy *[]DiskAutoExpansionPolicy `json:"policy,omitempty"`
+	Policy []DiskAutoExpansionPolicy `json:"policy"`
 }
 
 func (o SetAutoPolicyRequestBody) String() string {
