@@ -60,6 +60,8 @@ var (
 		"https://nat.eu-west-101.myhuaweicloud.eu")
 	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
 		"https://nat.my-kualalumpur-1.myhuaweicloud.com")
+	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
+		"https://nat.ru-moscow-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -89,6 +91,7 @@ var staticFields = map[string]*region.Region{
 	"cn-south-4":       CN_SOUTH_4,
 	"eu-west-101":      EU_WEST_101,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
+	"ru-moscow-1":      RU_MOSCOW_1,
 }
 
 var provider = region.DefaultProviderChain("NAT")

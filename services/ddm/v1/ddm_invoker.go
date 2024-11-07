@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ddm/v1/model"
 )
 
+type ChangeDatabaseVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeDatabaseVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeDatabaseVersionInvoker) Invoke() (*model.ChangeDatabaseVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeDatabaseVersionResponse), nil
+	}
+}
+
+type ListDatabaseAvailableVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseAvailableVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatabaseAvailableVersionsInvoker) Invoke() (*model.ListDatabaseAvailableVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseAvailableVersionsResponse), nil
+	}
+}
+
+type RollBackDatabaseVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RollBackDatabaseVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RollBackDatabaseVersionInvoker) Invoke() (*model.RollBackDatabaseVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RollBackDatabaseVersionResponse), nil
+	}
+}
+
 type ListApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }

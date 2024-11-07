@@ -16,6 +16,8 @@ type CreateExtractTaskReq struct {
 
 	// 是否同步处理, - 0：排队处理 - 1：同步处理  默认值：0
 	Sync *int32 `json:"sync,omitempty"`
+
+	Encryption *Encryption `json:"encryption,omitempty"`
 }
 
 func (o CreateExtractTaskReq) String() string {

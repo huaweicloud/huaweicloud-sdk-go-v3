@@ -39,13 +39,13 @@ type ShowAsyncDeviceCommandResponse struct {
 	// 物联网平台发送命令的时间，如果命令是立即下发， 则该时间与命令创建时间一致， 如果是缓存命令， 则是命令实际下发的时间。\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
 	SentTime *string `json:"sent_time,omitempty"`
 
-	// 物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+	// 物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
 	DeliveredTime *string `json:"delivered_time,omitempty"`
 
 	// 下发策略， immediately表示立即下发，delay表示缓存起来，等数据上报或者设备上线之后下发。
 	SendStrategy *string `json:"send_strategy,omitempty"`
 
-	// 设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+	// 设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
 	ResponseTime   *string `json:"response_time,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

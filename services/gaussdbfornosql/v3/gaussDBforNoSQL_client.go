@@ -61,6 +61,27 @@ func (c *GaussDBforNoSQLClient) BatchTagActionInvoker(request *model.BatchTagAct
 	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpgradeDatabaseVersion 批量数据库补丁升级
+//
+// 批量升级数据库补丁版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) BatchUpgradeDatabaseVersion(request *model.BatchUpgradeDatabaseVersionRequest) (*model.BatchUpgradeDatabaseVersionResponse, error) {
+	requestDef := GenReqDefForBatchUpgradeDatabaseVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpgradeDatabaseVersionResponse), nil
+	}
+}
+
+// BatchUpgradeDatabaseVersionInvoker 批量数据库补丁升级
+func (c *GaussDBforNoSQLClient) BatchUpgradeDatabaseVersionInvoker(request *model.BatchUpgradeDatabaseVersionRequest) *BatchUpgradeDatabaseVersionInvoker {
+	requestDef := GenReqDefForBatchUpgradeDatabaseVersion()
+	return &BatchUpgradeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckDisasterRecoveryOperation 校验实例是否可以与指定实例建立/解除容灾关系
 //
 // 校验实例是否可以与指定实例建立/解除容灾关系。若接口返回成功，表示可以与指定实例建立/解除容灾关系。

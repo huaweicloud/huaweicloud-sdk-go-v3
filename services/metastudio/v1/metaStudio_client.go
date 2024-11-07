@@ -1872,6 +1872,27 @@ func (c *MetaStudioClient) UpdateRobotInvoker(request *model.UpdateRobotRequest)
 	return &UpdateRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ValidateRobot 校验应用
+//
+// 该接口用于校验应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ValidateRobot(request *model.ValidateRobotRequest) (*model.ValidateRobotResponse, error) {
+	requestDef := GenReqDefForValidateRobot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateRobotResponse), nil
+	}
+}
+
+// ValidateRobotInvoker 校验应用
+func (c *MetaStudioClient) ValidateRobotInvoker(request *model.ValidateRobotRequest) *ValidateRobotInvoker {
+	requestDef := GenReqDefForValidateRobot()
+	return &ValidateRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSmartChatRoom 创建智能交互对话
 //
 // 该接口用于创建智能交互对话。
@@ -2334,9 +2355,9 @@ func (c *MetaStudioClient) ListStylesInvoker(request *model.ListStylesRequest) *
 	return &ListStylesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CountTenantResources 统计时间段内资源数量
+// CountTenantResources 统计时间段内过期的资源数量
 //
-// 统计时间段内资源数量
+// 统计指定时间段内即将过期的包周期与一次性资源数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CountTenantResources(request *model.CountTenantResourcesRequest) (*model.CountTenantResourcesResponse, error) {
@@ -2349,7 +2370,7 @@ func (c *MetaStudioClient) CountTenantResources(request *model.CountTenantResour
 	}
 }
 
-// CountTenantResourcesInvoker 统计时间段内资源数量
+// CountTenantResourcesInvoker 统计时间段内过期的资源数量
 func (c *MetaStudioClient) CountTenantResourcesInvoker(request *model.CountTenantResourcesRequest) *CountTenantResourcesInvoker {
 	requestDef := GenReqDefForCountTenantResources()
 	return &CountTenantResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2357,7 +2378,9 @@ func (c *MetaStudioClient) CountTenantResourcesInvoker(request *model.CountTenan
 
 // ListTenantResources 查看租户资源列表
 //
-// 查看租户资源列表
+// 查看租户资源列表。
+// &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+// &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListTenantResources(request *model.ListTenantResourcesRequest) (*model.ListTenantResourcesResponse, error) {
@@ -2378,7 +2401,9 @@ func (c *MetaStudioClient) ListTenantResourcesInvoker(request *model.ListTenantR
 
 // ShowResourceUsage 查看租户资源用量信息
 //
-// 查看租户资源用量信息
+// 查询租户一次性和包周期（包年/包月）资源用量信息。
+// &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+// &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowResourceUsage(request *model.ShowResourceUsageRequest) (*model.ShowResourceUsageResponse, error) {

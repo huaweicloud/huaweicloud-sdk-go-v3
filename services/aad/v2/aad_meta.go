@@ -22,6 +22,21 @@ func GenReqDefForCreateDomain() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteDomain() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/aad/domains").
+		WithResponse(new(model.DeleteDomainResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListDDoSAttackEvent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -421,21 +436,6 @@ func GenReqDefForUpgradeInstanceSpec() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v2/aad/instance").
 		WithResponse(new(model.UpgradeInstanceSpecResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteDomain() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/aad/domains").
-		WithResponse(new(model.DeleteDomainResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -21,7 +21,7 @@ type UserProcessAuditLog struct {
 	ExecuteUserName *string `json:"execute_user_name,omitempty"`
 
 	// 发生时间，UTC时间
-	ExcuteTime *string `json:"excute_time,omitempty"`
+	ExecuteTime *string `json:"execute_time,omitempty"`
 }
 
 func (o UserProcessAuditLog) String() string {

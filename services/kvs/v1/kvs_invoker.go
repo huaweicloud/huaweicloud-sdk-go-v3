@@ -69,6 +69,22 @@ func (i *ListTableInvoker) Invoke() (*model.ListTableResponse, error) {
 	}
 }
 
+type CheckHealthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckHealthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckHealthInvoker) Invoke() (*model.CheckHealthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckHealthResponse), nil
+	}
+}
+
 type BatchWriteKvInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -229,6 +229,27 @@ func (c *IoTDAClient) UpdateApplicationInvoker(request *model.UpdateApplicationR
 	return &UpdateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountAsyncHistoryCommands 统计设备下的历史命令总数
+//
+// 统计设备下的历史命令总数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CountAsyncHistoryCommands(request *model.CountAsyncHistoryCommandsRequest) (*model.CountAsyncHistoryCommandsResponse, error) {
+	requestDef := GenReqDefForCountAsyncHistoryCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountAsyncHistoryCommandsResponse), nil
+	}
+}
+
+// CountAsyncHistoryCommandsInvoker 统计设备下的历史命令总数
+func (c *IoTDAClient) CountAsyncHistoryCommandsInvoker(request *model.CountAsyncHistoryCommandsRequest) *CountAsyncHistoryCommandsInvoker {
+	requestDef := GenReqDefForCountAsyncHistoryCommands()
+	return &CountAsyncHistoryCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAsyncCommand 下发异步设备命令
 //
 // 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发异步命令，以实现对设备的控制。平台负责将命令发送给设备，并将设备执行命令结果异步通知应用服务器。 命令执行结果支持灵活的数据流转，应用服务器通过调用物联网平台的创建规则触发条件（Resource:device.command.status，Event:update）、创建规则动作并激活规则后，当命令状态变更时，物联网平台会根据规则将结果发送到规则指定的服务器，如用户自定义的HTTP服务器，AMQP服务器，以及华为云的其他储存服务器等, 详情参考[[设备命令状态变更通知](https://support.huaweicloud.com/api-iothub/iot_06_v5_01212.html)](tag:hws)[[设备命令状态变更通知](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_01212.html)](tag:hws_hk)。
@@ -251,6 +272,48 @@ func (c *IoTDAClient) CreateAsyncCommand(request *model.CreateAsyncCommandReques
 func (c *IoTDAClient) CreateAsyncCommandInvoker(request *model.CreateAsyncCommandRequest) *CreateAsyncCommandInvoker {
 	requestDef := GenReqDefForCreateAsyncCommand()
 	return &CreateAsyncCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAsyncCommands 查询设备下队列中的命令
+//
+// 查询设备下队列中的命令（处理中的命令），包含PENDING、SENT、DELIVERED三种状态，注意：DELIVERED状态的命令经过系统设定的一段时间（具体以系统配置为准）仍然没有更新，就会从队列中移除，变为历史命令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListAsyncCommands(request *model.ListAsyncCommandsRequest) (*model.ListAsyncCommandsResponse, error) {
+	requestDef := GenReqDefForListAsyncCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAsyncCommandsResponse), nil
+	}
+}
+
+// ListAsyncCommandsInvoker 查询设备下队列中的命令
+func (c *IoTDAClient) ListAsyncCommandsInvoker(request *model.ListAsyncCommandsRequest) *ListAsyncCommandsInvoker {
+	requestDef := GenReqDefForListAsyncCommands()
+	return &ListAsyncCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAsyncHistoryCommands 查询设备下的历史命令
+//
+// 查询设备下发的历史异步命令，包含EXPIRED、SUCCESSFUL、FAILED、TIMEOUT、DELIVERED五种状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListAsyncHistoryCommands(request *model.ListAsyncHistoryCommandsRequest) (*model.ListAsyncHistoryCommandsResponse, error) {
+	requestDef := GenReqDefForListAsyncHistoryCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAsyncHistoryCommandsResponse), nil
+	}
+}
+
+// ListAsyncHistoryCommandsInvoker 查询设备下的历史命令
+func (c *IoTDAClient) ListAsyncHistoryCommandsInvoker(request *model.ListAsyncHistoryCommandsRequest) *ListAsyncHistoryCommandsInvoker {
+	requestDef := GenReqDefForListAsyncHistoryCommands()
+	return &ListAsyncHistoryCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAsyncDeviceCommand 查询指定id的命令
@@ -1690,6 +1753,69 @@ func (c *IoTDAClient) UpdateRoutingFlowControlPolicy(request *model.UpdateRoutin
 func (c *IoTDAClient) UpdateRoutingFlowControlPolicyInvoker(request *model.UpdateRoutingFlowControlPolicyRequest) *UpdateRoutingFlowControlPolicyInvoker {
 	requestDef := GenReqDefForUpdateRoutingFlowControlPolicy()
 	return &UpdateRoutingFlowControlPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddFunctions 创建编解码函数
+//
+// 提供创建编解码函数的功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) AddFunctions(request *model.AddFunctionsRequest) (*model.AddFunctionsResponse, error) {
+	requestDef := GenReqDefForAddFunctions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFunctionsResponse), nil
+	}
+}
+
+// AddFunctionsInvoker 创建编解码函数
+func (c *IoTDAClient) AddFunctionsInvoker(request *model.AddFunctionsRequest) *AddFunctionsInvoker {
+	requestDef := GenReqDefForAddFunctions()
+	return &AddFunctionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFunctions 删除编解码函数
+//
+// 提供删除编解码函数的功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteFunctions(request *model.DeleteFunctionsRequest) (*model.DeleteFunctionsResponse, error) {
+	requestDef := GenReqDefForDeleteFunctions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFunctionsResponse), nil
+	}
+}
+
+// DeleteFunctionsInvoker 删除编解码函数
+func (c *IoTDAClient) DeleteFunctionsInvoker(request *model.DeleteFunctionsRequest) *DeleteFunctionsInvoker {
+	requestDef := GenReqDefForDeleteFunctions()
+	return &DeleteFunctionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFunctions 查询编解码函数
+//
+// 提供查询编解码函数的功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListFunctions(request *model.ListFunctionsRequest) (*model.ListFunctionsResponse, error) {
+	requestDef := GenReqDefForListFunctions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFunctionsResponse), nil
+	}
+}
+
+// ListFunctionsInvoker 查询编解码函数
+func (c *IoTDAClient) ListFunctionsInvoker(request *model.ListFunctionsRequest) *ListFunctionsInvoker {
+	requestDef := GenReqDefForListFunctions()
+	return &ListFunctionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateMessage 下发设备消息

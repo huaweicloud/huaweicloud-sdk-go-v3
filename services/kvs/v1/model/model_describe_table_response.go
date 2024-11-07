@@ -20,8 +20,10 @@ type DescribeTableResponse struct {
 	// 全局二级索引模板。
 	GlobalSecondaryIndexSchema *[]GlobalSecondaryIndex `bson:"global_secondary_index_schema,omitempty"`
 
-	RunTimeInfo    *RunTimeInfo `bson:"run_time_info,omitempty"`
-	HttpStatusCode int          `bson:"-"`
+	RunTimeInfo *RunTimeInfo `bson:"run_time_info,omitempty"`
+
+	TtlOptions     *TtlOptions `bson:"ttl_options,omitempty"`
+	HttpStatusCode int         `bson:"-"`
 }
 
 func (o DescribeTableResponse) String() string {

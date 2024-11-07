@@ -24,7 +24,7 @@ type VerifyVideoMattingInfo struct {
 	// 区域高度像素值。
 	Height *int32 `json:"height,omitempty"`
 
-	// 资源操作类型。 * RESERVED: 保留区域 * DELETE：删除区域 * NO_DEGREEN：无区域
+	// 资源操作类型。 * RESERVED: 视频不需要抠绿的区域。 * DELETE：视频需要抠绿的区域。 * NO_DEGREEN：视频不需要去绿的区域。
 	Method *VerifyVideoMattingInfoMethod `json:"method,omitempty"`
 }
 

@@ -19,6 +19,69 @@ func DdmClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ChangeDatabaseVersion 变更内核版本
+//
+// 变更内核版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ChangeDatabaseVersion(request *model.ChangeDatabaseVersionRequest) (*model.ChangeDatabaseVersionResponse, error) {
+	requestDef := GenReqDefForChangeDatabaseVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeDatabaseVersionResponse), nil
+	}
+}
+
+// ChangeDatabaseVersionInvoker 变更内核版本
+func (c *DdmClient) ChangeDatabaseVersionInvoker(request *model.ChangeDatabaseVersionRequest) *ChangeDatabaseVersionInvoker {
+	requestDef := GenReqDefForChangeDatabaseVersion()
+	return &ChangeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDatabaseAvailableVersions 查询可变更内核版本
+//
+// 查询可变更内核版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListDatabaseAvailableVersions(request *model.ListDatabaseAvailableVersionsRequest) (*model.ListDatabaseAvailableVersionsResponse, error) {
+	requestDef := GenReqDefForListDatabaseAvailableVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabaseAvailableVersionsResponse), nil
+	}
+}
+
+// ListDatabaseAvailableVersionsInvoker 查询可变更内核版本
+func (c *DdmClient) ListDatabaseAvailableVersionsInvoker(request *model.ListDatabaseAvailableVersionsRequest) *ListDatabaseAvailableVersionsInvoker {
+	requestDef := GenReqDefForListDatabaseAvailableVersions()
+	return &ListDatabaseAvailableVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RollBackDatabaseVersion 回滚内核版本
+//
+// 回滚内核版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RollBackDatabaseVersion(request *model.RollBackDatabaseVersionRequest) (*model.RollBackDatabaseVersionResponse, error) {
+	requestDef := GenReqDefForRollBackDatabaseVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RollBackDatabaseVersionResponse), nil
+	}
+}
+
+// RollBackDatabaseVersionInvoker 回滚内核版本
+func (c *DdmClient) RollBackDatabaseVersionInvoker(request *model.RollBackDatabaseVersionRequest) *RollBackDatabaseVersionInvoker {
+	requestDef := GenReqDefForRollBackDatabaseVersion()
+	return &RollBackDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersion 查询API版本列表
 //
 // 查询API版本列表。

@@ -37,6 +37,22 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type BatchUpgradeDatabaseVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpgradeDatabaseVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpgradeDatabaseVersionInvoker) Invoke() (*model.BatchUpgradeDatabaseVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpgradeDatabaseVersionResponse), nil
+	}
+}
+
 type CheckDisasterRecoveryOperationInvoker struct {
 	*invoker.BaseInvoker
 }

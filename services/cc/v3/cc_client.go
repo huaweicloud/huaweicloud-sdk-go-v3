@@ -1842,3 +1842,298 @@ func (c *CcClient) UpdateNetworkInstanceInvoker(request *model.UpdateNetworkInst
 	requestDef := GenReqDefForUpdateNetworkInstance()
 	return &UpdateNetworkInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// AssociateSiteNetworkBandwidth 关联分支连接带宽
+//
+// 关联分支连接带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) AssociateSiteNetworkBandwidth(request *model.AssociateSiteNetworkBandwidthRequest) (*model.AssociateSiteNetworkBandwidthResponse, error) {
+	requestDef := GenReqDefForAssociateSiteNetworkBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateSiteNetworkBandwidthResponse), nil
+	}
+}
+
+// AssociateSiteNetworkBandwidthInvoker 关联分支连接带宽
+func (c *CcClient) AssociateSiteNetworkBandwidthInvoker(request *model.AssociateSiteNetworkBandwidthRequest) *AssociateSiteNetworkBandwidthInvoker {
+	requestDef := GenReqDefForAssociateSiteNetworkBandwidth()
+	return &AssociateSiteNetworkBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateSiteNetworkBandwidth 解关联分支连接带宽
+//
+// 解关联分支连接带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DisassociateSiteNetworkBandwidth(request *model.DisassociateSiteNetworkBandwidthRequest) (*model.DisassociateSiteNetworkBandwidthResponse, error) {
+	requestDef := GenReqDefForDisassociateSiteNetworkBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateSiteNetworkBandwidthResponse), nil
+	}
+}
+
+// DisassociateSiteNetworkBandwidthInvoker 解关联分支连接带宽
+func (c *CcClient) DisassociateSiteNetworkBandwidthInvoker(request *model.DisassociateSiteNetworkBandwidthRequest) *DisassociateSiteNetworkBandwidthInvoker {
+	requestDef := GenReqDefForDisassociateSiteNetworkBandwidth()
+	return &DisassociateSiteNetworkBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSiteNetworkBandwidth 更改分支连接带宽包
+//
+// 更改分支连接带宽包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateSiteNetworkBandwidth(request *model.UpdateSiteNetworkBandwidthRequest) (*model.UpdateSiteNetworkBandwidthResponse, error) {
+	requestDef := GenReqDefForUpdateSiteNetworkBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSiteNetworkBandwidthResponse), nil
+	}
+}
+
+// UpdateSiteNetworkBandwidthInvoker 更改分支连接带宽包
+func (c *CcClient) UpdateSiteNetworkBandwidthInvoker(request *model.UpdateSiteNetworkBandwidthRequest) *UpdateSiteNetworkBandwidthInvoker {
+	requestDef := GenReqDefForUpdateSiteNetworkBandwidth()
+	return &UpdateSiteNetworkBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSiteNetworkBandwidthSize 更改分支连接带宽大小
+//
+// 更改分支连接带宽大小。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateSiteNetworkBandwidthSize(request *model.UpdateSiteNetworkBandwidthSizeRequest) (*model.UpdateSiteNetworkBandwidthSizeResponse, error) {
+	requestDef := GenReqDefForUpdateSiteNetworkBandwidthSize()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSiteNetworkBandwidthSizeResponse), nil
+	}
+}
+
+// UpdateSiteNetworkBandwidthSizeInvoker 更改分支连接带宽大小
+func (c *CcClient) UpdateSiteNetworkBandwidthSizeInvoker(request *model.UpdateSiteNetworkBandwidthSizeRequest) *UpdateSiteNetworkBandwidthSizeInvoker {
+	requestDef := GenReqDefForUpdateSiteNetworkBandwidthSize()
+	return &UpdateSiteNetworkBandwidthSizeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateP2PSiteNetwork 创建P2P类型的分支网络
+//
+// 创建P2P类型的分支网络。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) CreateP2PSiteNetwork(request *model.CreateP2PSiteNetworkRequest) (*model.CreateP2PSiteNetworkResponse, error) {
+	requestDef := GenReqDefForCreateP2PSiteNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateP2PSiteNetworkResponse), nil
+	}
+}
+
+// CreateP2PSiteNetworkInvoker 创建P2P类型的分支网络
+func (c *CcClient) CreateP2PSiteNetworkInvoker(request *model.CreateP2PSiteNetworkRequest) *CreateP2PSiteNetworkInvoker {
+	requestDef := GenReqDefForCreateP2PSiteNetwork()
+	return &CreateP2PSiteNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSiteNetwork 删除分支网络
+//
+// 删除分支网络。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) DeleteSiteNetwork(request *model.DeleteSiteNetworkRequest) (*model.DeleteSiteNetworkResponse, error) {
+	requestDef := GenReqDefForDeleteSiteNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSiteNetworkResponse), nil
+	}
+}
+
+// DeleteSiteNetworkInvoker 删除分支网络
+func (c *CcClient) DeleteSiteNetworkInvoker(request *model.DeleteSiteNetworkRequest) *DeleteSiteNetworkInvoker {
+	requestDef := GenReqDefForDeleteSiteNetwork()
+	return &DeleteSiteNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSiteNetworks 查询分支网络列表
+//
+// 查询分支网络列表。
+// 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListSiteNetworks(request *model.ListSiteNetworksRequest) (*model.ListSiteNetworksResponse, error) {
+	requestDef := GenReqDefForListSiteNetworks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSiteNetworksResponse), nil
+	}
+}
+
+// ListSiteNetworksInvoker 查询分支网络列表
+func (c *CcClient) ListSiteNetworksInvoker(request *model.ListSiteNetworksRequest) *ListSiteNetworksInvoker {
+	requestDef := GenReqDefForListSiteNetworks()
+	return &ListSiteNetworksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSiteNetwork 查询分支网络详情
+//
+// 查询分支网络详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ShowSiteNetwork(request *model.ShowSiteNetworkRequest) (*model.ShowSiteNetworkResponse, error) {
+	requestDef := GenReqDefForShowSiteNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSiteNetworkResponse), nil
+	}
+}
+
+// ShowSiteNetworkInvoker 查询分支网络详情
+func (c *CcClient) ShowSiteNetworkInvoker(request *model.ShowSiteNetworkRequest) *ShowSiteNetworkInvoker {
+	requestDef := GenReqDefForShowSiteNetwork()
+	return &ShowSiteNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSiteNetwork 更新分支网络详情
+//
+// 更新分支网络详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) UpdateSiteNetwork(request *model.UpdateSiteNetworkRequest) (*model.UpdateSiteNetworkResponse, error) {
+	requestDef := GenReqDefForUpdateSiteNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSiteNetworkResponse), nil
+	}
+}
+
+// UpdateSiteNetworkInvoker 更新分支网络详情
+func (c *CcClient) UpdateSiteNetworkInvoker(request *model.UpdateSiteNetworkRequest) *UpdateSiteNetworkInvoker {
+	requestDef := GenReqDefForUpdateSiteNetwork()
+	return &UpdateSiteNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSiteNetworkCapabilities 查询分支网络的能力列表
+//
+// 查询分支网络的能力列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListSiteNetworkCapabilities(request *model.ListSiteNetworkCapabilitiesRequest) (*model.ListSiteNetworkCapabilitiesResponse, error) {
+	requestDef := GenReqDefForListSiteNetworkCapabilities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSiteNetworkCapabilitiesResponse), nil
+	}
+}
+
+// ListSiteNetworkCapabilitiesInvoker 查询分支网络的能力列表
+func (c *CcClient) ListSiteNetworkCapabilitiesInvoker(request *model.ListSiteNetworkCapabilitiesRequest) *ListSiteNetworkCapabilitiesInvoker {
+	requestDef := GenReqDefForListSiteNetworkCapabilities()
+	return &ListSiteNetworkCapabilitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSiteNetworkQuotas 查询分支网络配额
+//
+// 查询分支网络配额。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListSiteNetworkQuotas(request *model.ListSiteNetworkQuotasRequest) (*model.ListSiteNetworkQuotasResponse, error) {
+	requestDef := GenReqDefForListSiteNetworkQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSiteNetworkQuotasResponse), nil
+	}
+}
+
+// ListSiteNetworkQuotasInvoker 查询分支网络配额
+func (c *CcClient) ListSiteNetworkQuotasInvoker(request *model.ListSiteNetworkQuotasRequest) *ListSiteNetworkQuotasInvoker {
+	requestDef := GenReqDefForListSiteNetworkQuotas()
+	return &ListSiteNetworkQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidthPackageLevels 查询带宽包等级列表
+//
+// 查询带宽包等级列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListBandwidthPackageLevels(request *model.ListBandwidthPackageLevelsRequest) (*model.ListBandwidthPackageLevelsResponse, error) {
+	requestDef := GenReqDefForListBandwidthPackageLevels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthPackageLevelsResponse), nil
+	}
+}
+
+// ListBandwidthPackageLevelsInvoker 查询带宽包等级列表
+func (c *CcClient) ListBandwidthPackageLevelsInvoker(request *model.ListBandwidthPackageLevelsRequest) *ListBandwidthPackageLevelsInvoker {
+	requestDef := GenReqDefForListBandwidthPackageLevels()
+	return &ListBandwidthPackageLevelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidthPackageLines 查询带宽包线路列表
+//
+// 查询带宽包线路列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListBandwidthPackageLines(request *model.ListBandwidthPackageLinesRequest) (*model.ListBandwidthPackageLinesResponse, error) {
+	requestDef := GenReqDefForListBandwidthPackageLines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthPackageLinesResponse), nil
+	}
+}
+
+// ListBandwidthPackageLinesInvoker 查询带宽包线路列表
+func (c *CcClient) ListBandwidthPackageLinesInvoker(request *model.ListBandwidthPackageLinesRequest) *ListBandwidthPackageLinesInvoker {
+	requestDef := GenReqDefForListBandwidthPackageLines()
+	return &ListBandwidthPackageLinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBandwidthPackageSites 查询带宽包站点列表
+//
+// 查询带宽包站点列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListBandwidthPackageSites(request *model.ListBandwidthPackageSitesRequest) (*model.ListBandwidthPackageSitesResponse, error) {
+	requestDef := GenReqDefForListBandwidthPackageSites()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBandwidthPackageSitesResponse), nil
+	}
+}
+
+// ListBandwidthPackageSitesInvoker 查询带宽包站点列表
+func (c *CcClient) ListBandwidthPackageSitesInvoker(request *model.ListBandwidthPackageSitesRequest) *ListBandwidthPackageSitesInvoker {
+	requestDef := GenReqDefForListBandwidthPackageSites()
+	return &ListBandwidthPackageSitesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

@@ -82,6 +82,21 @@ func GenReqDefForListTable() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckHealth() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/check-health").
+		WithResponse(new(model.CheckHealthResponse)).
+		WithContentType("application/bson")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchWriteKv() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

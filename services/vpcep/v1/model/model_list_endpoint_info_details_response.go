@@ -64,7 +64,7 @@ type ListEndpointInfoDetailsResponse struct {
 	// 标签列表，没有标签默认为空数组。
 	Tags *[]TagList `json:"tags,omitempty"`
 
-	Error *QueryError `json:"error,omitempty"`
+	Error *[]QueryError `json:"error,omitempty"`
 
 	// 控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
 	Whitelist *[]string `json:"whitelist,omitempty"`

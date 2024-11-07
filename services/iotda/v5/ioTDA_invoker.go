@@ -165,6 +165,22 @@ func (i *UpdateApplicationInvoker) Invoke() (*model.UpdateApplicationResponse, e
 	}
 }
 
+type CountAsyncHistoryCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountAsyncHistoryCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountAsyncHistoryCommandsInvoker) Invoke() (*model.CountAsyncHistoryCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountAsyncHistoryCommandsResponse), nil
+	}
+}
+
 type CreateAsyncCommandInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,6 +194,38 @@ func (i *CreateAsyncCommandInvoker) Invoke() (*model.CreateAsyncCommandResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateAsyncCommandResponse), nil
+	}
+}
+
+type ListAsyncCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAsyncCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAsyncCommandsInvoker) Invoke() (*model.ListAsyncCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAsyncCommandsResponse), nil
+	}
+}
+
+type ListAsyncHistoryCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAsyncHistoryCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAsyncHistoryCommandsInvoker) Invoke() (*model.ListAsyncHistoryCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAsyncHistoryCommandsResponse), nil
 	}
 }
 
@@ -1154,6 +1202,54 @@ func (i *UpdateRoutingFlowControlPolicyInvoker) Invoke() (*model.UpdateRoutingFl
 		return nil, err
 	} else {
 		return result.(*model.UpdateRoutingFlowControlPolicyResponse), nil
+	}
+}
+
+type AddFunctionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFunctionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddFunctionsInvoker) Invoke() (*model.AddFunctionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFunctionsResponse), nil
+	}
+}
+
+type DeleteFunctionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFunctionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteFunctionsInvoker) Invoke() (*model.DeleteFunctionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFunctionsResponse), nil
+	}
+}
+
+type ListFunctionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFunctionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFunctionsInvoker) Invoke() (*model.ListFunctionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFunctionsResponse), nil
 	}
 }
 

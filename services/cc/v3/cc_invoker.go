@@ -1380,3 +1380,227 @@ func (i *UpdateNetworkInstanceInvoker) Invoke() (*model.UpdateNetworkInstanceRes
 		return result.(*model.UpdateNetworkInstanceResponse), nil
 	}
 }
+
+type AssociateSiteNetworkBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateSiteNetworkBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateSiteNetworkBandwidthInvoker) Invoke() (*model.AssociateSiteNetworkBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateSiteNetworkBandwidthResponse), nil
+	}
+}
+
+type DisassociateSiteNetworkBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateSiteNetworkBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisassociateSiteNetworkBandwidthInvoker) Invoke() (*model.DisassociateSiteNetworkBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateSiteNetworkBandwidthResponse), nil
+	}
+}
+
+type UpdateSiteNetworkBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSiteNetworkBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSiteNetworkBandwidthInvoker) Invoke() (*model.UpdateSiteNetworkBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSiteNetworkBandwidthResponse), nil
+	}
+}
+
+type UpdateSiteNetworkBandwidthSizeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSiteNetworkBandwidthSizeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSiteNetworkBandwidthSizeInvoker) Invoke() (*model.UpdateSiteNetworkBandwidthSizeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSiteNetworkBandwidthSizeResponse), nil
+	}
+}
+
+type CreateP2PSiteNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateP2PSiteNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateP2PSiteNetworkInvoker) Invoke() (*model.CreateP2PSiteNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateP2PSiteNetworkResponse), nil
+	}
+}
+
+type DeleteSiteNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSiteNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSiteNetworkInvoker) Invoke() (*model.DeleteSiteNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSiteNetworkResponse), nil
+	}
+}
+
+type ListSiteNetworksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSiteNetworksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSiteNetworksInvoker) Invoke() (*model.ListSiteNetworksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSiteNetworksResponse), nil
+	}
+}
+
+type ShowSiteNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSiteNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSiteNetworkInvoker) Invoke() (*model.ShowSiteNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSiteNetworkResponse), nil
+	}
+}
+
+type UpdateSiteNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSiteNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSiteNetworkInvoker) Invoke() (*model.UpdateSiteNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSiteNetworkResponse), nil
+	}
+}
+
+type ListSiteNetworkCapabilitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSiteNetworkCapabilitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSiteNetworkCapabilitiesInvoker) Invoke() (*model.ListSiteNetworkCapabilitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSiteNetworkCapabilitiesResponse), nil
+	}
+}
+
+type ListSiteNetworkQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSiteNetworkQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSiteNetworkQuotasInvoker) Invoke() (*model.ListSiteNetworkQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSiteNetworkQuotasResponse), nil
+	}
+}
+
+type ListBandwidthPackageLevelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthPackageLevelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBandwidthPackageLevelsInvoker) Invoke() (*model.ListBandwidthPackageLevelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthPackageLevelsResponse), nil
+	}
+}
+
+type ListBandwidthPackageLinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthPackageLinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBandwidthPackageLinesInvoker) Invoke() (*model.ListBandwidthPackageLinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthPackageLinesResponse), nil
+	}
+}
+
+type ListBandwidthPackageSitesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBandwidthPackageSitesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBandwidthPackageSitesInvoker) Invoke() (*model.ListBandwidthPackageSitesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBandwidthPackageSitesResponse), nil
+	}
+}

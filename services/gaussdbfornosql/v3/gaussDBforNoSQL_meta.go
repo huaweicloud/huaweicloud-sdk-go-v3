@@ -47,6 +47,21 @@ func GenReqDefForBatchTagAction() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchUpgradeDatabaseVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/db-upgrade").
+		WithResponse(new(model.BatchUpgradeDatabaseVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckDisasterRecoveryOperation() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

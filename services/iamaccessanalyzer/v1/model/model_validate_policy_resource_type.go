@@ -15,15 +15,11 @@ type ValidatePolicyResourceType struct {
 }
 
 type ValidatePolicyResourceTypeEnum struct {
-	OBSBUCKET ValidatePolicyResourceType
 	IAMAGENCY ValidatePolicyResourceType
 }
 
 func GetValidatePolicyResourceTypeEnum() ValidatePolicyResourceTypeEnum {
 	return ValidatePolicyResourceTypeEnum{
-		OBSBUCKET: ValidatePolicyResourceType{
-			value: "obs:bucket",
-		},
 		IAMAGENCY: ValidatePolicyResourceType{
 			value: "iam:agency",
 		},

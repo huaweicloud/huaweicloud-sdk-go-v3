@@ -103,6 +103,27 @@ func (c *KvsClient) ListTableInvoker(request *model.ListTableRequest) *ListTable
 	return &ListTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckHealth 网络信道健康检查
+//
+// 网络信道健康检查，返回response未抛出网络异常即为成功
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KvsClient) CheckHealth(request *model.CheckHealthRequest) (*model.CheckHealthResponse, error) {
+	requestDef := GenReqDefForCheckHealth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckHealthResponse), nil
+	}
+}
+
+// CheckHealthInvoker 网络信道健康检查
+func (c *KvsClient) CheckHealthInvoker(request *model.CheckHealthRequest) *CheckHealthInvoker {
+	requestDef := GenReqDefForCheckHealth()
+	return &CheckHealthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchWriteKv 批量写请求
 //
 // 批量写请求，其中可以携带一或多个表的不同kv的写操作，上传kv/删除kv。

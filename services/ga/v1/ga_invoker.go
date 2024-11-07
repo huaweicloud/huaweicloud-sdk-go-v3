@@ -549,6 +549,86 @@ func (i *UpdateListenerInvoker) Invoke() (*model.UpdateListenerResponse, error) 
 	}
 }
 
+type CreateLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateLogtankInvoker) Invoke() (*model.CreateLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLogtankResponse), nil
+	}
+}
+
+type DeleteLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLogtankInvoker) Invoke() (*model.DeleteLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLogtankResponse), nil
+	}
+}
+
+type ListLogtanksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogtanksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLogtanksInvoker) Invoke() (*model.ListLogtanksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogtanksResponse), nil
+	}
+}
+
+type ShowLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLogtankInvoker) Invoke() (*model.ShowLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLogtankResponse), nil
+	}
+}
+
+type UpdateLogtankInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogtankInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLogtankInvoker) Invoke() (*model.UpdateLogtankResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogtankResponse), nil
+	}
+}
+
 type ListRegionsInvoker struct {
 	*invoker.BaseInvoker
 }

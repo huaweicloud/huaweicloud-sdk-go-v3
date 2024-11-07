@@ -21,6 +21,22 @@ func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
 	}
 }
 
+type DeleteDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainResponse), nil
+	}
+}
+
 type ListDDoSAttackEventInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,21 +306,5 @@ func (i *UpgradeInstanceSpecInvoker) Invoke() (*model.UpgradeInstanceSpecRespons
 		return nil, err
 	} else {
 		return result.(*model.UpgradeInstanceSpecResponse), nil
-	}
-}
-
-type DeleteDomainInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDomainResponse), nil
 	}
 }

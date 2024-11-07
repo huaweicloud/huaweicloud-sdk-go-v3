@@ -739,6 +739,111 @@ func (c *GaClient) UpdateListenerInvoker(request *model.UpdateListenerRequest) *
 	return &UpdateListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLogtank 创建云日志
+//
+// 创建云日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.CreateLogtankResponse, error) {
+	requestDef := GenReqDefForCreateLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLogtankResponse), nil
+	}
+}
+
+// CreateLogtankInvoker 创建云日志
+func (c *GaClient) CreateLogtankInvoker(request *model.CreateLogtankRequest) *CreateLogtankInvoker {
+	requestDef := GenReqDefForCreateLogtank()
+	return &CreateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLogtank 删除云日志
+//
+// 删除云日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.DeleteLogtankResponse, error) {
+	requestDef := GenReqDefForDeleteLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogtankResponse), nil
+	}
+}
+
+// DeleteLogtankInvoker 删除云日志
+func (c *GaClient) DeleteLogtankInvoker(request *model.DeleteLogtankRequest) *DeleteLogtankInvoker {
+	requestDef := GenReqDefForDeleteLogtank()
+	return &DeleteLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogtanks 查询云日志列表
+//
+// 查询云日志列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.ListLogtanksResponse, error) {
+	requestDef := GenReqDefForListLogtanks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogtanksResponse), nil
+	}
+}
+
+// ListLogtanksInvoker 查询云日志列表
+func (c *GaClient) ListLogtanksInvoker(request *model.ListLogtanksRequest) *ListLogtanksInvoker {
+	requestDef := GenReqDefForListLogtanks()
+	return &ListLogtanksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLogtank 查询云日志详情
+//
+// 查询云日志详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowLogtankResponse, error) {
+	requestDef := GenReqDefForShowLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogtankResponse), nil
+	}
+}
+
+// ShowLogtankInvoker 查询云日志详情
+func (c *GaClient) ShowLogtankInvoker(request *model.ShowLogtankRequest) *ShowLogtankInvoker {
+	requestDef := GenReqDefForShowLogtank()
+	return &ShowLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogtank 更新云日志
+//
+// 更新云日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) UpdateLogtank(request *model.UpdateLogtankRequest) (*model.UpdateLogtankResponse, error) {
+	requestDef := GenReqDefForUpdateLogtank()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogtankResponse), nil
+	}
+}
+
+// UpdateLogtankInvoker 更新云日志
+func (c *GaClient) UpdateLogtankInvoker(request *model.UpdateLogtankRequest) *UpdateLogtankInvoker {
+	requestDef := GenReqDefForUpdateLogtank()
+	return &UpdateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRegions 查询区域列表
 //
 // 查询区域列表。

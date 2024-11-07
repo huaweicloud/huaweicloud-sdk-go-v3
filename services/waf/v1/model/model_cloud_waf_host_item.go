@@ -20,6 +20,9 @@ type CloudWafHostItem struct {
 	// 域名描述信息，可选参数。
 	Description *string `json:"description,omitempty"`
 
+	// 防护域名的源站服务器配置信息
+	Server *[]CloudWafServer `json:"server,omitempty"`
+
 	// WAF部署模式，默认是1，目前仅支持反代模式，冗余参数
 	Type *int32 `json:"type,omitempty"`
 

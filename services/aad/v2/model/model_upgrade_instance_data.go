@@ -22,6 +22,12 @@ type UpgradeInstanceData struct {
 
 	// 域名数
 	BindDomainNum *int32 `json:"bind_domain_num,omitempty"`
+
+	// 弹性业务带宽,0-关闭，3-月95
+	ElasticServiceBandwidthType *int32 `json:"elastic_service_bandwidth_type,omitempty"`
+
+	// 弹性业务带宽增加值
+	ElasticServiceBandwidth *int32 `json:"elastic_service_bandwidth,omitempty"`
 }
 
 func (o UpgradeInstanceData) String() string {

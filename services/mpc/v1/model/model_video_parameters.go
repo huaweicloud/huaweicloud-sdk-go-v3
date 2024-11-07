@@ -17,6 +17,12 @@ type VideoParameters struct {
 	// 视频编码格式。  取值如下： - 1：VIDEO_CODEC_H264 - 2：VIDEO_CODEC_H265
 	Codec *int32 `json:"codec,omitempty"`
 
+	// 视频恒定码率控制因子。  取值范围为[0, 51]
+	Crf *interface{} `json:"crf,omitempty"`
+
+	// 输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
+	MaxBitrate *int32 `json:"max_bitrate,omitempty"`
+
 	// 输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
 	Bitrate *int32 `json:"bitrate,omitempty"`
 

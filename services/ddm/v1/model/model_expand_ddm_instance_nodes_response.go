@@ -9,9 +9,6 @@ import (
 // ExpandDdmInstanceNodesResponse Response Object
 type ExpandDdmInstanceNodesResponse struct {
 
-	// DDM实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
-
 	// 任务ID，仅创建按需实例时会返回该参数。
 	JobId *string `json:"job_id,omitempty"`
 

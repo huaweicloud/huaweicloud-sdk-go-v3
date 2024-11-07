@@ -40,6 +40,27 @@ func (c *AadClient) CreateDomainInvoker(request *model.CreateDomainRequest) *Cre
 	return &CreateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDomain 删除防护域名
+//
+// 删除防护域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.DeleteDomainResponse, error) {
+	requestDef := GenReqDefForDeleteDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainResponse), nil
+	}
+}
+
+// DeleteDomainInvoker 删除防护域名
+func (c *AadClient) DeleteDomainInvoker(request *model.DeleteDomainRequest) *DeleteDomainInvoker {
+	requestDef := GenReqDefForDeleteDomain()
+	return &DeleteDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDDoSAttackEvent 查询DDoS攻击事件列表
 //
 // 查询DDoS攻击事件列表
@@ -395,25 +416,4 @@ func (c *AadClient) UpgradeInstanceSpec(request *model.UpgradeInstanceSpecReques
 func (c *AadClient) UpgradeInstanceSpecInvoker(request *model.UpgradeInstanceSpecRequest) *UpgradeInstanceSpecInvoker {
 	requestDef := GenReqDefForUpgradeInstanceSpec()
 	return &UpgradeInstanceSpecInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteDomain 删除防护域名
-//
-// 删除防护域名
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AadClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.DeleteDomainResponse, error) {
-	requestDef := GenReqDefForDeleteDomain()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteDomainResponse), nil
-	}
-}
-
-// DeleteDomainInvoker 删除防护域名
-func (c *AadClient) DeleteDomainInvoker(request *model.DeleteDomainRequest) *DeleteDomainInvoker {
-	requestDef := GenReqDefForDeleteDomain()
-	return &DeleteDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

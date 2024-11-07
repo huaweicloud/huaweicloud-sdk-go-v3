@@ -13,6 +13,8 @@ type FindingDetails struct {
 	UnusedIamUserAccessKeyDetails *UnusedIamUserAccessKeyDetails `json:"unused_iam_user_access_key_details,omitempty"`
 
 	UnusedIamUserPasswordDetails *UnusedIamUserPasswordDetails `json:"unused_iam_user_password_details,omitempty"`
+
+	UnusedPermissionDetails *UnusedPermissionDetails `json:"unused_permission_details,omitempty"`
 }
 
 func (o FindingDetails) String() string {

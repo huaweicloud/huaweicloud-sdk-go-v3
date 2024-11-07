@@ -25,6 +25,8 @@ type CreateTableRequestBody struct {
 	GlobalSecondaryIndexSchema *[]GlobalSecondaryIndex `bson:"global_secondary_index_schema,omitempty"`
 
 	PreSplitKeyOptions *PreSplitKeyOptions `bson:"pre_split_key_options,omitempty"`
+
+	TtlOptions *TtlOptions `bson:"ttl_options,omitempty"`
 }
 
 func (o CreateTableRequestBody) String() string {

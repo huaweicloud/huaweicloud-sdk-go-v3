@@ -1413,6 +1413,22 @@ func (i *UpdateRobotInvoker) Invoke() (*model.UpdateRobotResponse, error) {
 	}
 }
 
+type ValidateRobotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateRobotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateRobotInvoker) Invoke() (*model.ValidateRobotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateRobotResponse), nil
+	}
+}
+
 type CreateSmartChatRoomInvoker struct {
 	*invoker.BaseInvoker
 }

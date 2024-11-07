@@ -18,6 +18,7 @@ type FindingTypeEnum struct {
 	EXTERNAL_ACCESS            FindingType
 	UNUSED_IAM_USER_ACCESS_KEY FindingType
 	UNUSED_IAM_USER_PASSWORD   FindingType
+	UNUSED_PERMISSION          FindingType
 }
 
 func GetFindingTypeEnum() FindingTypeEnum {
@@ -30,6 +31,9 @@ func GetFindingTypeEnum() FindingTypeEnum {
 		},
 		UNUSED_IAM_USER_PASSWORD: FindingType{
 			value: "unused_iam_user_password",
+		},
+		UNUSED_PERMISSION: FindingType{
+			value: "unused_permission",
 		},
 	}
 }
