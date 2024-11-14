@@ -40,6 +40,27 @@ func (c *GaussDBforNoSQLClient) ApplyConfigurationInvoker(request *model.ApplyCo
 	return &ApplyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ApplyConfigurationToInstances 应用参数模板
+//
+// 将参数模板应用到实例，可以指定一个或多个实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ApplyConfigurationToInstances(request *model.ApplyConfigurationToInstancesRequest) (*model.ApplyConfigurationToInstancesResponse, error) {
+	requestDef := GenReqDefForApplyConfigurationToInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyConfigurationToInstancesResponse), nil
+	}
+}
+
+// ApplyConfigurationToInstancesInvoker 应用参数模板
+func (c *GaussDBforNoSQLClient) ApplyConfigurationToInstancesInvoker(request *model.ApplyConfigurationToInstancesRequest) *ApplyConfigurationToInstancesInvoker {
+	requestDef := GenReqDefForApplyConfigurationToInstances()
+	return &ApplyConfigurationToInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAction 批量添加或删除资源标签
 //
 // 批量添加或删除指定数据库实例的标签。
@@ -80,6 +101,27 @@ func (c *GaussDBforNoSQLClient) BatchUpgradeDatabaseVersion(request *model.Batch
 func (c *GaussDBforNoSQLClient) BatchUpgradeDatabaseVersionInvoker(request *model.BatchUpgradeDatabaseVersionRequest) *BatchUpgradeDatabaseVersionInvoker {
 	requestDef := GenReqDefForBatchUpgradeDatabaseVersion()
 	return &BatchUpgradeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelInstanceScheduleWindow 取消定时任务
+//
+// 取消定时任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CancelInstanceScheduleWindow(request *model.CancelInstanceScheduleWindowRequest) (*model.CancelInstanceScheduleWindowResponse, error) {
+	requestDef := GenReqDefForCancelInstanceScheduleWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelInstanceScheduleWindowResponse), nil
+	}
+}
+
+// CancelInstanceScheduleWindowInvoker 取消定时任务
+func (c *GaussDBforNoSQLClient) CancelInstanceScheduleWindowInvoker(request *model.CancelInstanceScheduleWindowRequest) *CancelInstanceScheduleWindowInvoker {
+	requestDef := GenReqDefForCancelInstanceScheduleWindow()
+	return &CancelInstanceScheduleWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckDisasterRecoveryOperation 校验实例是否可以与指定实例建立/解除容灾关系
@@ -230,6 +272,48 @@ func (c *GaussDBforNoSQLClient) CreateConfigurationInvoker(request *model.Create
 	return &CreateConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDbCacheMapping 创建内存加速映射
+//
+// 创建内存加速映射。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CreateDbCacheMapping(request *model.CreateDbCacheMappingRequest) (*model.CreateDbCacheMappingResponse, error) {
+	requestDef := GenReqDefForCreateDbCacheMapping()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDbCacheMappingResponse), nil
+	}
+}
+
+// CreateDbCacheMappingInvoker 创建内存加速映射
+func (c *GaussDBforNoSQLClient) CreateDbCacheMappingInvoker(request *model.CreateDbCacheMappingRequest) *CreateDbCacheMappingInvoker {
+	requestDef := GenReqDefForCreateDbCacheMapping()
+	return &CreateDbCacheMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDbCacheRule 创建内存加速规则
+//
+// 创建内存加速规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CreateDbCacheRule(request *model.CreateDbCacheRuleRequest) (*model.CreateDbCacheRuleResponse, error) {
+	requestDef := GenReqDefForCreateDbCacheRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDbCacheRuleResponse), nil
+	}
+}
+
+// CreateDbCacheRuleInvoker 创建内存加速规则
+func (c *GaussDBforNoSQLClient) CreateDbCacheRuleInvoker(request *model.CreateDbCacheRuleRequest) *CreateDbCacheRuleInvoker {
+	requestDef := GenReqDefForCreateDbCacheRule()
+	return &CreateDbCacheRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDbUser 创建Redis数据库账号
 //
 // 在Redis实例中创建数据库帐号。
@@ -333,6 +417,48 @@ func (c *GaussDBforNoSQLClient) DeleteConfiguration(request *model.DeleteConfigu
 func (c *GaussDBforNoSQLClient) DeleteConfigurationInvoker(request *model.DeleteConfigurationRequest) *DeleteConfigurationInvoker {
 	requestDef := GenReqDefForDeleteConfiguration()
 	return &DeleteConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDbCacheMapping 解除内存加速映射
+//
+// 解除指定内存加速映射。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteDbCacheMapping(request *model.DeleteDbCacheMappingRequest) (*model.DeleteDbCacheMappingResponse, error) {
+	requestDef := GenReqDefForDeleteDbCacheMapping()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDbCacheMappingResponse), nil
+	}
+}
+
+// DeleteDbCacheMappingInvoker 解除内存加速映射
+func (c *GaussDBforNoSQLClient) DeleteDbCacheMappingInvoker(request *model.DeleteDbCacheMappingRequest) *DeleteDbCacheMappingInvoker {
+	requestDef := GenReqDefForDeleteDbCacheMapping()
+	return &DeleteDbCacheMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDbCacheRule 删除内存加速规则
+//
+// 删除内存加速规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteDbCacheRule(request *model.DeleteDbCacheRuleRequest) (*model.DeleteDbCacheRuleResponse, error) {
+	requestDef := GenReqDefForDeleteDbCacheRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDbCacheRuleResponse), nil
+	}
+}
+
+// DeleteDbCacheRuleInvoker 删除内存加速规则
+func (c *GaussDBforNoSQLClient) DeleteDbCacheRuleInvoker(request *model.DeleteDbCacheRuleRequest) *DeleteDbCacheRuleInvoker {
+	requestDef := GenReqDefForDeleteDbCacheRule()
+	return &DeleteDbCacheRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDbUser 删除Redis数据库账号
@@ -608,6 +734,48 @@ func (c *GaussDBforNoSQLClient) ListDatastoresInvoker(request *model.ListDatasto
 	return &ListDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDbCacheMappings 查询内存加速映射列表和详情
+//
+// 根据指定条件查询内存加速映射关系列表和详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListDbCacheMappings(request *model.ListDbCacheMappingsRequest) (*model.ListDbCacheMappingsResponse, error) {
+	requestDef := GenReqDefForListDbCacheMappings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbCacheMappingsResponse), nil
+	}
+}
+
+// ListDbCacheMappingsInvoker 查询内存加速映射列表和详情
+func (c *GaussDBforNoSQLClient) ListDbCacheMappingsInvoker(request *model.ListDbCacheMappingsRequest) *ListDbCacheMappingsInvoker {
+	requestDef := GenReqDefForListDbCacheMappings()
+	return &ListDbCacheMappingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDbCacheRules 查询内存加速规则列表和详情
+//
+// 查询内存加速规则列表和详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListDbCacheRules(request *model.ListDbCacheRulesRequest) (*model.ListDbCacheRulesResponse, error) {
+	requestDef := GenReqDefForListDbCacheRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbCacheRulesResponse), nil
+	}
+}
+
+// ListDbCacheRulesInvoker 查询内存加速规则列表和详情
+func (c *GaussDBforNoSQLClient) ListDbCacheRulesInvoker(request *model.ListDbCacheRulesRequest) *ListDbCacheRulesInvoker {
+	requestDef := GenReqDefForListDbCacheRules()
+	return &ListDbCacheRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDbUsers 获取Redis数据库账号列表和详情
 //
 // 获取Redis数据库账号列表和详情。
@@ -753,6 +921,27 @@ func (c *GaussDBforNoSQLClient) ListInstanceDatabases(request *model.ListInstanc
 func (c *GaussDBforNoSQLClient) ListInstanceDatabasesInvoker(request *model.ListInstanceDatabasesRequest) *ListInstanceDatabasesInvoker {
 	requestDef := GenReqDefForListInstanceDatabases()
 	return &ListInstanceDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceMaintenanceWindow
+//
+// 查询实例可维护时间段
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListInstanceMaintenanceWindow(request *model.ListInstanceMaintenanceWindowRequest) (*model.ListInstanceMaintenanceWindowResponse, error) {
+	requestDef := GenReqDefForListInstanceMaintenanceWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceMaintenanceWindowResponse), nil
+	}
+}
+
+// ListInstanceMaintenanceWindowInvoker
+func (c *GaussDBforNoSQLClient) ListInstanceMaintenanceWindowInvoker(request *model.ListInstanceMaintenanceWindowRequest) *ListInstanceMaintenanceWindowInvoker {
+	requestDef := GenReqDefForListInstanceMaintenanceWindow()
+	return &ListInstanceMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceTags 查询资源标签
@@ -965,6 +1154,27 @@ func (c *GaussDBforNoSQLClient) ListMongodbSlowLogsInvoker(request *model.ListMo
 	return &ListMongodbSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNosqlTaskList 查询定时任务列表
+//
+// 根据指定条件查询定时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListNosqlTaskList(request *model.ListNosqlTaskListRequest) (*model.ListNosqlTaskListResponse, error) {
+	requestDef := GenReqDefForListNosqlTaskList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNosqlTaskListResponse), nil
+	}
+}
+
+// ListNosqlTaskListInvoker 查询定时任务列表
+func (c *GaussDBforNoSQLClient) ListNosqlTaskListInvoker(request *model.ListNosqlTaskListRequest) *ListNosqlTaskListInvoker {
+	requestDef := GenReqDefForListNosqlTaskList()
+	return &ListNosqlTaskListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectTags 查询项目标签
 //
 // 查询指定项目的标签信息。
@@ -1152,6 +1362,27 @@ func (c *GaussDBforNoSQLClient) ModifyEpsQuotas(request *model.ModifyEpsQuotasRe
 func (c *GaussDBforNoSQLClient) ModifyEpsQuotasInvoker(request *model.ModifyEpsQuotasRequest) *ModifyEpsQuotasInvoker {
 	requestDef := GenReqDefForModifyEpsQuotas()
 	return &ModifyEpsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyInstanceMaintenanceWindow 查询实例可维护时间段
+//
+// 设置指定实例可维护时间段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ModifyInstanceMaintenanceWindow(request *model.ModifyInstanceMaintenanceWindowRequest) (*model.ModifyInstanceMaintenanceWindowResponse, error) {
+	requestDef := GenReqDefForModifyInstanceMaintenanceWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyInstanceMaintenanceWindowResponse), nil
+	}
+}
+
+// ModifyInstanceMaintenanceWindowInvoker 查询实例可维护时间段
+func (c *GaussDBforNoSQLClient) ModifyInstanceMaintenanceWindowInvoker(request *model.ModifyInstanceMaintenanceWindowRequest) *ModifyInstanceMaintenanceWindowInvoker {
+	requestDef := GenReqDefForModifyInstanceMaintenanceWindow()
+	return &ModifyInstanceMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyPort 修改数据库端口
@@ -1494,6 +1725,28 @@ func (c *GaussDBforNoSQLClient) SetBackupPolicyInvoker(request *model.SetBackupP
 	return &SetBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetInstanceDataDump 开启/关闭实例数据导出
+//
+// 开启/关闭实例数据导出。
+// 当前支持将InfluxDB数据转为parquet格式文件然后上传到指定的OBS桶中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SetInstanceDataDump(request *model.SetInstanceDataDumpRequest) (*model.SetInstanceDataDumpResponse, error) {
+	requestDef := GenReqDefForSetInstanceDataDump()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInstanceDataDumpResponse), nil
+	}
+}
+
+// SetInstanceDataDumpInvoker 开启/关闭实例数据导出
+func (c *GaussDBforNoSQLClient) SetInstanceDataDumpInvoker(request *model.SetInstanceDataDumpRequest) *SetInstanceDataDumpInvoker {
+	requestDef := GenReqDefForSetInstanceDataDump()
+	return &SetInstanceDataDumpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetRecyclePolicy 设置回收策略
 //
 // 设置已删除实例保留天数，修改保留天数后删除的实例按照新的天数保留，修改之前已在回收站的实例保留天数不变。
@@ -1616,6 +1869,27 @@ func (c *GaussDBforNoSQLClient) ShowAutoEnlargePolicy(request *model.ShowAutoEnl
 func (c *GaussDBforNoSQLClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargePolicyRequest) *ShowAutoEnlargePolicyInvoker {
 	requestDef := GenReqDefForShowAutoEnlargePolicy()
 	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackupPolicies 查询自动备份策略
+//
+// 查询自动备份策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowBackupPolicies(request *model.ShowBackupPoliciesRequest) (*model.ShowBackupPoliciesResponse, error) {
+	requestDef := GenReqDefForShowBackupPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupPoliciesResponse), nil
+	}
+}
+
+// ShowBackupPoliciesInvoker 查询自动备份策略
+func (c *GaussDBforNoSQLClient) ShowBackupPoliciesInvoker(request *model.ShowBackupPoliciesRequest) *ShowBackupPoliciesInvoker {
+	requestDef := GenReqDefForShowBackupPolicies()
+	return &ShowBackupPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackupPolicy 查询自动备份策略
@@ -1954,6 +2228,27 @@ func (c *GaussDBforNoSQLClient) ShowRestorableListInvoker(request *model.ShowRes
 	return &ShowRestorableListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecondLevelMonitoringStatus 查询秒级监控配置
+//
+// 查询秒级监控配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowSecondLevelMonitoringStatus(request *model.ShowSecondLevelMonitoringStatusRequest) (*model.ShowSecondLevelMonitoringStatusResponse, error) {
+	requestDef := GenReqDefForShowSecondLevelMonitoringStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecondLevelMonitoringStatusResponse), nil
+	}
+}
+
+// ShowSecondLevelMonitoringStatusInvoker 查询秒级监控配置
+func (c *GaussDBforNoSQLClient) ShowSecondLevelMonitoringStatusInvoker(request *model.ShowSecondLevelMonitoringStatusRequest) *ShowSecondLevelMonitoringStatusInvoker {
+	requestDef := GenReqDefForShowSecondLevelMonitoringStatus()
+	return &ShowSecondLevelMonitoringStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSlowLogDesensitization 查询慢日志脱敏状态
 //
 // 查询慢日志脱敏状态。
@@ -2015,6 +2310,27 @@ func (c *GaussDBforNoSQLClient) SwitchIpGroup(request *model.SwitchIpGroupReques
 func (c *GaussDBforNoSQLClient) SwitchIpGroupInvoker(request *model.SwitchIpGroupRequest) *SwitchIpGroupInvoker {
 	requestDef := GenReqDefForSwitchIpGroup()
 	return &SwitchIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchSecondLevelMonitoring 开启/关闭秒级监控
+//
+// 开启或关闭指定实例的5秒级监控。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchSecondLevelMonitoring(request *model.SwitchSecondLevelMonitoringRequest) (*model.SwitchSecondLevelMonitoringResponse, error) {
+	requestDef := GenReqDefForSwitchSecondLevelMonitoring()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSecondLevelMonitoringResponse), nil
+	}
+}
+
+// SwitchSecondLevelMonitoringInvoker 开启/关闭秒级监控
+func (c *GaussDBforNoSQLClient) SwitchSecondLevelMonitoringInvoker(request *model.SwitchSecondLevelMonitoringRequest) *SwitchSecondLevelMonitoringInvoker {
+	requestDef := GenReqDefForSwitchSecondLevelMonitoring()
+	return &SwitchSecondLevelMonitoringInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSlowlogDesensitization 设置慢日志脱敏状态
@@ -2164,6 +2480,27 @@ func (c *GaussDBforNoSQLClient) UpdateDatabasesInvoker(request *model.UpdateData
 	return &UpdateDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDbCacheRule 修改内存加速规则
+//
+// 修改指定内存加速规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdateDbCacheRule(request *model.UpdateDbCacheRuleRequest) (*model.UpdateDbCacheRuleResponse, error) {
+	requestDef := GenReqDefForUpdateDbCacheRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDbCacheRuleResponse), nil
+	}
+}
+
+// UpdateDbCacheRuleInvoker 修改内存加速规则
+func (c *GaussDBforNoSQLClient) UpdateDbCacheRuleInvoker(request *model.UpdateDbCacheRuleRequest) *UpdateDbCacheRuleInvoker {
+	requestDef := GenReqDefForUpdateDbCacheRule()
+	return &UpdateDbCacheRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateHighRiskCommands 修改高危命令
 //
 // 批量修改高危命令
@@ -2204,6 +2541,27 @@ func (c *GaussDBforNoSQLClient) UpdateInstanceConfiguration(request *model.Updat
 func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurationInvoker(request *model.UpdateInstanceConfigurationRequest) *UpdateInstanceConfigurationInvoker {
 	requestDef := GenReqDefForUpdateInstanceConfiguration()
 	return &UpdateInstanceConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceConfigurations 修改指定实例的参数
+//
+// 修改指定实例的参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurations(request *model.UpdateInstanceConfigurationsRequest) (*model.UpdateInstanceConfigurationsResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceConfigurationsResponse), nil
+	}
+}
+
+// UpdateInstanceConfigurationsInvoker 修改指定实例的参数
+func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurationsInvoker(request *model.UpdateInstanceConfigurationsRequest) *UpdateInstanceConfigurationsInvoker {
+	requestDef := GenReqDefForUpdateInstanceConfigurations()
+	return &UpdateInstanceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceName 修改实例名称

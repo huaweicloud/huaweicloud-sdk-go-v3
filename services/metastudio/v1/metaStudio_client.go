@@ -208,6 +208,69 @@ func (c *MetaStudioClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *
 	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateBeautyPreviewJob 创建美白预览任务
+//
+// 该接口用于创建美白预览任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateBeautyPreviewJob(request *model.CreateBeautyPreviewJobRequest) (*model.CreateBeautyPreviewJobResponse, error) {
+	requestDef := GenReqDefForCreateBeautyPreviewJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBeautyPreviewJobResponse), nil
+	}
+}
+
+// CreateBeautyPreviewJobInvoker 创建美白预览任务
+func (c *MetaStudioClient) CreateBeautyPreviewJobInvoker(request *model.CreateBeautyPreviewJobRequest) *CreateBeautyPreviewJobInvoker {
+	requestDef := GenReqDefForCreateBeautyPreviewJob()
+	return &CreateBeautyPreviewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBeautyPreviewJob 查询美白预览任务
+//
+// 该接口用于查询美白预览任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowBeautyPreviewJob(request *model.ShowBeautyPreviewJobRequest) (*model.ShowBeautyPreviewJobResponse, error) {
+	requestDef := GenReqDefForShowBeautyPreviewJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBeautyPreviewJobResponse), nil
+	}
+}
+
+// ShowBeautyPreviewJobInvoker 查询美白预览任务
+func (c *MetaStudioClient) ShowBeautyPreviewJobInvoker(request *model.ShowBeautyPreviewJobRequest) *ShowBeautyPreviewJobInvoker {
+	requestDef := GenReqDefForShowBeautyPreviewJob()
+	return &ShowBeautyPreviewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartBeautyPreviewJob 启动美白预览任务
+//
+// 该接口用于启动美白预览任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) StartBeautyPreviewJob(request *model.StartBeautyPreviewJobRequest) (*model.StartBeautyPreviewJobResponse, error) {
+	requestDef := GenReqDefForStartBeautyPreviewJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartBeautyPreviewJobResponse), nil
+	}
+}
+
+// StartBeautyPreviewJobInvoker 启动美白预览任务
+func (c *MetaStudioClient) StartBeautyPreviewJobInvoker(request *model.StartBeautyPreviewJobRequest) *StartBeautyPreviewJobInvoker {
+	requestDef := GenReqDefForStartBeautyPreviewJob()
+	return &StartBeautyPreviewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDialogUrl 创建对话链接
 //
 // 该接口用于创建对话链接。

@@ -672,6 +672,27 @@ func (c *MeetingClient) CancelRecurringSubMeetingInvoker(request *model.CancelRe
 	return &CancelRecurringSubMeetingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckCallNumberInConf 根据号码，查询是否在会议中
+//
+// 通过该接口查询号码，是否在会议中
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) CheckCallNumberInConf(request *model.CheckCallNumberInConfRequest) (*model.CheckCallNumberInConfResponse, error) {
+	requestDef := GenReqDefForCheckCallNumberInConf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckCallNumberInConfResponse), nil
+	}
+}
+
+// CheckCallNumberInConfInvoker 根据号码，查询是否在会议中
+func (c *MeetingClient) CheckCallNumberInConfInvoker(request *model.CheckCallNumberInConfRequest) *CheckCallNumberInConfInvoker {
+	requestDef := GenReqDefForCheckCallNumberInConf()
+	return &CheckCallNumberInConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckSlideVerifyCode 校验滑块验证码
 //
 // 该接口提供校验滑块验证码。服务器收到请求，返回校验结果。用户在前台界面通过滑块操作匹配图形，使得抠图和原图吻合。然后服务器进行校验滑块验证码。

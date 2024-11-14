@@ -24,10 +24,10 @@ type ListUsersOfStreamRequest struct {
 	// 运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
 	Isp *[]string `json:"isp,omitempty"`
 
-	// 国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+	// 国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
 	Country *[]string `json:"country,omitempty"`
 
-	// 区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+	// 区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
 	Region *[]string `json:"region,omitempty"`
 
 	// 请求协议

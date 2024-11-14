@@ -380,27 +380,6 @@ func (c *CloudRTCClient) ShowRecordRuleInvoker(request *model.ShowRecordRuleRequ
 	return &ShowRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowUrlAuth 查询访问控制参数
-//
-// 查询应用鉴权配置参数
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudRTCClient) ShowUrlAuth(request *model.ShowUrlAuthRequest) (*model.ShowUrlAuthResponse, error) {
-	requestDef := GenReqDefForShowUrlAuth()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowUrlAuthResponse), nil
-	}
-}
-
-// ShowUrlAuthInvoker 查询访问控制参数
-func (c *CloudRTCClient) ShowUrlAuthInvoker(request *model.ShowUrlAuthRequest) *ShowUrlAuthInvoker {
-	requestDef := GenReqDefForShowUrlAuth()
-	return &ShowUrlAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // StartApp 启用应用
 //
 // 调用此接口启用单个应用。
@@ -596,27 +575,6 @@ func (c *CloudRTCClient) UpdateRecordRule(request *model.UpdateRecordRuleRequest
 func (c *CloudRTCClient) UpdateRecordRuleInvoker(request *model.UpdateRecordRuleRequest) *UpdateRecordRuleInvoker {
 	requestDef := GenReqDefForUpdateRecordRule()
 	return &UpdateRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateUrlAuth 开关访问控制
-//
-// 调用此接口开启或关闭URL鉴权。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudRTCClient) UpdateUrlAuth(request *model.UpdateUrlAuthRequest) (*model.UpdateUrlAuthResponse, error) {
-	requestDef := GenReqDefForUpdateUrlAuth()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateUrlAuthResponse), nil
-	}
-}
-
-// UpdateUrlAuthInvoker 开关访问控制
-func (c *CloudRTCClient) UpdateUrlAuthInvoker(request *model.UpdateUrlAuthRequest) *UpdateUrlAuthInvoker {
-	requestDef := GenReqDefForUpdateUrlAuth()
-	return &UpdateUrlAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListObsBucketObjects 查询OBS桶下对象列表

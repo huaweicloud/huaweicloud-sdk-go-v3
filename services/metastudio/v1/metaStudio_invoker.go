@@ -149,6 +149,54 @@ func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
 	}
 }
 
+type CreateBeautyPreviewJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBeautyPreviewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateBeautyPreviewJobInvoker) Invoke() (*model.CreateBeautyPreviewJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBeautyPreviewJobResponse), nil
+	}
+}
+
+type ShowBeautyPreviewJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBeautyPreviewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBeautyPreviewJobInvoker) Invoke() (*model.ShowBeautyPreviewJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBeautyPreviewJobResponse), nil
+	}
+}
+
+type StartBeautyPreviewJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartBeautyPreviewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartBeautyPreviewJobInvoker) Invoke() (*model.StartBeautyPreviewJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartBeautyPreviewJobResponse), nil
+	}
+}
+
 type CreateDialogUrlInvoker struct {
 	*invoker.BaseInvoker
 }

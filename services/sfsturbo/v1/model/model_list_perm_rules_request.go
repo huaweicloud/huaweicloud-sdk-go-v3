@@ -14,6 +14,12 @@ type ListPermRulesRequest struct {
 
 	// 文件系统id
 	ShareId string `json:"share_id"`
+
+	// 返回的权限规则个数
+	Limit *int64 `json:"limit,omitempty"`
+
+	// 返回的权限规则的偏移量
+	Offset *int64 `json:"offset,omitempty"`
 }
 
 func (o ListPermRulesRequest) String() string {

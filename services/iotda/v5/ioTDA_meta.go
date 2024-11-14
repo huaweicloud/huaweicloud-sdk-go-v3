@@ -2045,14 +2045,6 @@ func GenReqDefForAddFunctions() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
 		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpAuthToken").
-		WithJsonTag("Sp-Auth-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StageAuthToken").
-		WithJsonTag("Stage-Auth-Token").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -2078,18 +2070,6 @@ func GenReqDefForDeleteFunctions() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
 		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpAuthToken").
-		WithJsonTag("Sp-Auth-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StageAuthToken").
-		WithJsonTag("Stage-Auth-Token").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2114,14 +2094,6 @@ func GenReqDefForListFunctions() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("InstanceId").
 		WithJsonTag("Instance-Id").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SpAuthToken").
-		WithJsonTag("Sp-Auth-Token").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StageAuthToken").
-		WithJsonTag("Stage-Auth-Token").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

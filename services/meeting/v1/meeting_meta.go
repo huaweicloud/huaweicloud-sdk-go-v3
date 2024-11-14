@@ -843,6 +843,22 @@ func GenReqDefForCancelRecurringSubMeeting() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckCallNumberInConf() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/mms/ncms/conferences/online/check-callnumber-in-conf").
+		WithResponse(new(model.CheckCallNumberInConfResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CallNumber").
+		WithJsonTag("call_number").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckSlideVerifyCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

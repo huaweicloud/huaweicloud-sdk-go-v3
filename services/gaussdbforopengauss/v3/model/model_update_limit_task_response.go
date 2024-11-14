@@ -40,7 +40,7 @@ type UpdateLimitTaskResponse struct {
 	RuleName *string `json:"rule_name,omitempty"`
 
 	// 工作流ID。
-	JobId          *string `json:"jobId,omitempty"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

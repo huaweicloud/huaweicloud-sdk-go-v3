@@ -27,7 +27,7 @@ type ListUsedDesktopInfoReq struct {
 	// 若传桌面的用户名，则查询使用时间只有该用户的使用时间。
 	DesktopUsername *string `json:"desktop_username,omitempty"`
 
-	// 从查询结果中的第几条数据开始返回,用于分页查询，取值范围0-2000，默认从0开始。
+	// 从查询结果中的第几条数据开始返回,用于分页查询，取值范围0-2147483647，默认从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询结果中想要返回的信息条目数量,用于分页查询，取值范围0-100，默认值100。

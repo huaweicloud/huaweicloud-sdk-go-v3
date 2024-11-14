@@ -39,8 +39,14 @@ type Create2dModelTrainingJobReq struct {
 	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
 	ModelVersion *Create2dModelTrainingJobReqModelVersion `json:"model_version,omitempty"`
 
+	// 美白等级。默认值0，不美白。
+	BeautyLevel *int32 `json:"beauty_level,omitempty"`
+
 	// 是否是基础版的形象训练
 	IsFlexus *bool `json:"is_flexus,omitempty"`
+
+	// 是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
+	IsOnlyHumanModel *bool `json:"is_only_human_model,omitempty"`
 
 	// 声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
 	AudioSourceType *Create2dModelTrainingJobReqAudioSourceType `json:"audio_source_type,omitempty"`

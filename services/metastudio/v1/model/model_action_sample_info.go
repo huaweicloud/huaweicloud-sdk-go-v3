@@ -21,6 +21,9 @@ type ActionSampleInfo struct {
 	// 动作分类名称。
 	Catalog *string `json:"catalog,omitempty"`
 
+	// 推荐等级。
+	RecommendedValue *int32 `json:"recommended_value,omitempty"`
+
 	// 是否选择此动作。
 	IsSelected *bool `json:"is_selected,omitempty"`
 

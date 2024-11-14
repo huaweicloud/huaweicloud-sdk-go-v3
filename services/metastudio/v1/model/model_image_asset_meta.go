@@ -22,7 +22,7 @@ type ImageAssetMeta struct {
 	Height *int32 `json:"height,omitempty"`
 
 	// **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
-	Size float32 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 
 	// **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
 	Mode *ImageAssetMetaMode `json:"mode,omitempty"`

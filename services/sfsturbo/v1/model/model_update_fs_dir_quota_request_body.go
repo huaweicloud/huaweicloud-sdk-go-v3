@@ -12,10 +12,10 @@ type UpdateFsDirQuotaRequestBody struct {
 	// 合法的已存在的目录的全路径
 	Path string `json:"path"`
 
-	// 目录的容量大小，单位：MB
+	// 目录的容量大小，单位：MB; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
 	Capacity *int32 `json:"capacity,omitempty"`
 
-	// 目录的inode数量限制
+	// 目录的inode数量限制; 设置为0会导致数据无法写入目录; capacity和quota至少二选一
 	Inode *int32 `json:"inode,omitempty"`
 }
 

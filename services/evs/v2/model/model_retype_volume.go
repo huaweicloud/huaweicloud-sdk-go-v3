@@ -6,11 +6,17 @@ import (
 	"strings"
 )
 
-// RetypeVolume 变更磁盘类型
+// RetypeVolume 变更云硬盘类型
 type RetypeVolume struct {
 
-	// 磁盘变更至指定的磁盘类型
+	// 变更至指定的云硬盘类型
 	NewType string `json:"new_type"`
+
+	// 云硬盘iops大小。
+	Iops *int32 `json:"iops,omitempty"`
+
+	// 云硬盘的吞吐量大小。
+	Throughput *int32 `json:"throughput,omitempty"`
 }
 
 func (o RetypeVolume) String() string {

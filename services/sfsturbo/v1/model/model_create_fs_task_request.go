@@ -15,7 +15,7 @@ type CreateFsTaskRequest struct {
 	// 文件系统id
 	ShareId string `json:"share_id"`
 
-	// 任务类型。例，DU任务取值为dir-usage
+	// 任务类型。当前仅支持取值\"dir-usage\"。
 	Feature string `json:"feature"`
 
 	Body *FsDirReq `json:"body,omitempty"`

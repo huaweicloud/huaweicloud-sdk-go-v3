@@ -103,6 +103,27 @@ func (c *DdsClient) AttachInternalIpInvoker(request *model.AttachInternalIpReque
 	return &AttachInternalIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteBackup 批量删除手动备份
+//
+// 批量删除数据库实例的手动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) BatchDeleteBackup(request *model.BatchDeleteBackupRequest) (*model.BatchDeleteBackupResponse, error) {
+	requestDef := GenReqDefForBatchDeleteBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteBackupResponse), nil
+	}
+}
+
+// BatchDeleteBackupInvoker 批量删除手动备份
+func (c *DdsClient) BatchDeleteBackupInvoker(request *model.BatchDeleteBackupRequest) *BatchDeleteBackupInvoker {
+	requestDef := GenReqDefForBatchDeleteBackup()
+	return &BatchDeleteBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAction 批量添加或删除资源标签
 //
 // 批量添加或删除指定实例的标签。
@@ -124,6 +145,27 @@ func (c *DdsClient) BatchTagActionInvoker(request *model.BatchTagActionRequest) 
 	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpgradeDatabaseVersion 批量数据库补丁升级
+//
+// 批量升级数据库补丁版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) BatchUpgradeDatabaseVersion(request *model.BatchUpgradeDatabaseVersionRequest) (*model.BatchUpgradeDatabaseVersionResponse, error) {
+	requestDef := GenReqDefForBatchUpgradeDatabaseVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpgradeDatabaseVersionResponse), nil
+	}
+}
+
+// BatchUpgradeDatabaseVersionInvoker 批量数据库补丁升级
+func (c *DdsClient) BatchUpgradeDatabaseVersionInvoker(request *model.BatchUpgradeDatabaseVersionRequest) *BatchUpgradeDatabaseVersionInvoker {
+	requestDef := GenReqDefForBatchUpgradeDatabaseVersion()
+	return &BatchUpgradeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelEip 解绑弹性公网IP
 //
 // 解绑实例下节点已经绑定的弹性公网IP。
@@ -143,6 +185,27 @@ func (c *DdsClient) CancelEip(request *model.CancelEipRequest) (*model.CancelEip
 func (c *DdsClient) CancelEipInvoker(request *model.CancelEipRequest) *CancelEipInvoker {
 	requestDef := GenReqDefForCancelEip()
 	return &CancelEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelScheduledTask 取消定时任务
+//
+// 根据任务ID取消定时任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) CancelScheduledTask(request *model.CancelScheduledTaskRequest) (*model.CancelScheduledTaskResponse, error) {
+	requestDef := GenReqDefForCancelScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelScheduledTaskResponse), nil
+	}
+}
+
+// CancelScheduledTaskInvoker 取消定时任务
+func (c *DdsClient) CancelScheduledTaskInvoker(request *model.CancelScheduledTaskRequest) *CancelScheduledTaskInvoker {
+	requestDef := GenReqDefForCancelScheduledTask()
+	return &CancelScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeOpsWindow 设置可维护时间段
@@ -1174,6 +1237,27 @@ func (c *DdsClient) ListRestoreTimesInvoker(request *model.ListRestoreTimesReque
 	return &ListRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScheduledTasks 查询定时任务
+//
+// 根据指定条件查询定时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ListScheduledTasks(request *model.ListScheduledTasksRequest) (*model.ListScheduledTasksResponse, error) {
+	requestDef := GenReqDefForListScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTasksResponse), nil
+	}
+}
+
+// ListScheduledTasksInvoker 查询定时任务
+func (c *DdsClient) ListScheduledTasksInvoker(request *model.ListScheduledTasksRequest) *ListScheduledTasksInvoker {
+	requestDef := GenReqDefForListScheduledTasks()
+	return &ListScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSessions 查询实例节点会话
 //
 // 查询实例节点会话。
@@ -1489,6 +1573,27 @@ func (c *DdsClient) SetAuditlogPolicyInvoker(request *model.SetAuditlogPolicyReq
 	return &SetAuditlogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAutoEnlargePolicies 设置磁盘自动扩容策略
+//
+// 设置磁盘自动扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) SetAutoEnlargePolicies(request *model.SetAutoEnlargePoliciesRequest) (*model.SetAutoEnlargePoliciesResponse, error) {
+	requestDef := GenReqDefForSetAutoEnlargePolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAutoEnlargePoliciesResponse), nil
+	}
+}
+
+// SetAutoEnlargePoliciesInvoker 设置磁盘自动扩容策略
+func (c *DdsClient) SetAutoEnlargePoliciesInvoker(request *model.SetAutoEnlargePoliciesRequest) *SetAutoEnlargePoliciesInvoker {
+	requestDef := GenReqDefForSetAutoEnlargePolicies()
+	return &SetAutoEnlargePoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetBackupPolicy 设置自动备份策略
 //
 // 设置自动备份策略。
@@ -1592,6 +1697,27 @@ func (c *DdsClient) ShowAuditlogPolicy(request *model.ShowAuditlogPolicyRequest)
 func (c *DdsClient) ShowAuditlogPolicyInvoker(request *model.ShowAuditlogPolicyRequest) *ShowAuditlogPolicyInvoker {
 	requestDef := GenReqDefForShowAuditlogPolicy()
 	return &ShowAuditlogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoEnlargePolicy 查询磁盘自动扩容策略
+//
+// 查询磁盘自动扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ShowAutoEnlargePolicy(request *model.ShowAutoEnlargePolicyRequest) (*model.ShowAutoEnlargePolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoEnlargePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoEnlargePolicyResponse), nil
+	}
+}
+
+// ShowAutoEnlargePolicyInvoker 查询磁盘自动扩容策略
+func (c *DdsClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargePolicyRequest) *ShowAutoEnlargePolicyInvoker {
+	requestDef := GenReqDefForShowAutoEnlargePolicy()
+	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackupDownloadLink 获取备份下载链接
@@ -1781,6 +1907,27 @@ func (c *DdsClient) ShowEntityConfiguration(request *model.ShowEntityConfigurati
 func (c *DdsClient) ShowEntityConfigurationInvoker(request *model.ShowEntityConfigurationRequest) *ShowEntityConfigurationInvoker {
 	requestDef := GenReqDefForShowEntityConfiguration()
 	return &ShowEntityConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceConfigurationModifyHistory 查询实例参数的修改历史
+//
+// 查询实例参数的修改历史。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ShowInstanceConfigurationModifyHistory(request *model.ShowInstanceConfigurationModifyHistoryRequest) (*model.ShowInstanceConfigurationModifyHistoryResponse, error) {
+	requestDef := GenReqDefForShowInstanceConfigurationModifyHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceConfigurationModifyHistoryResponse), nil
+	}
+}
+
+// ShowInstanceConfigurationModifyHistoryInvoker 查询实例参数的修改历史
+func (c *DdsClient) ShowInstanceConfigurationModifyHistoryInvoker(request *model.ShowInstanceConfigurationModifyHistoryRequest) *ShowInstanceConfigurationModifyHistoryInvoker {
+	requestDef := GenReqDefForShowInstanceConfigurationModifyHistory()
+	return &ShowInstanceConfigurationModifyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJobDetail 获取DDS任务中心指定ID的任务信息。
@@ -2371,6 +2518,27 @@ func (c *DdsClient) UpgradeDatabaseVersion(request *model.UpgradeDatabaseVersion
 func (c *DdsClient) UpgradeDatabaseVersionInvoker(request *model.UpgradeDatabaseVersionRequest) *UpgradeDatabaseVersionInvoker {
 	requestDef := GenReqDefForUpgradeDatabaseVersion()
 	return &UpgradeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateConfigurationName 校验参数模板名称是否存在
+//
+// 校验参数模板名称是否存在。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ValidateConfigurationName(request *model.ValidateConfigurationNameRequest) (*model.ValidateConfigurationNameResponse, error) {
+	requestDef := GenReqDefForValidateConfigurationName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateConfigurationNameResponse), nil
+	}
+}
+
+// ValidateConfigurationNameInvoker 校验参数模板名称是否存在
+func (c *DdsClient) ValidateConfigurationNameInvoker(request *model.ValidateConfigurationNameRequest) *ValidateConfigurationNameInvoker {
+	requestDef := GenReqDefForValidateConfigurationName()
+	return &ValidateConfigurationNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersion 查询当前支持的API版本信息列表

@@ -10,7 +10,7 @@ import (
 type ListAppsRequest struct {
 
 	// 主机id
-	HostId string `json:"host_id"`
+	HostId *string `json:"host_id,omitempty"`
 
 	// 主机名称
 	HostName *string `json:"host_name,omitempty"`

@@ -69,6 +69,22 @@ func (i *AttachInternalIpInvoker) Invoke() (*model.AttachInternalIpResponse, err
 	}
 }
 
+type BatchDeleteBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteBackupInvoker) Invoke() (*model.BatchDeleteBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteBackupResponse), nil
+	}
+}
+
 type BatchTagActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,22 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type BatchUpgradeDatabaseVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpgradeDatabaseVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpgradeDatabaseVersionInvoker) Invoke() (*model.BatchUpgradeDatabaseVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpgradeDatabaseVersionResponse), nil
+	}
+}
+
 type CancelEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +130,22 @@ func (i *CancelEipInvoker) Invoke() (*model.CancelEipResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CancelEipResponse), nil
+	}
+}
+
+type CancelScheduledTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelScheduledTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CancelScheduledTaskInvoker) Invoke() (*model.CancelScheduledTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelScheduledTaskResponse), nil
 	}
 }
 
@@ -885,6 +933,22 @@ func (i *ListRestoreTimesInvoker) Invoke() (*model.ListRestoreTimesResponse, err
 	}
 }
 
+type ListScheduledTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduledTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduledTasksInvoker) Invoke() (*model.ListScheduledTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduledTasksResponse), nil
+	}
+}
+
 type ListSessionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1125,6 +1189,22 @@ func (i *SetAuditlogPolicyInvoker) Invoke() (*model.SetAuditlogPolicyResponse, e
 	}
 }
 
+type SetAutoEnlargePoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAutoEnlargePoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAutoEnlargePoliciesInvoker) Invoke() (*model.SetAutoEnlargePoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAutoEnlargePoliciesResponse), nil
+	}
+}
+
 type SetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1202,6 +1282,22 @@ func (i *ShowAuditlogPolicyInvoker) Invoke() (*model.ShowAuditlogPolicyResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowAuditlogPolicyResponse), nil
+	}
+}
+
+type ShowAutoEnlargePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoEnlargePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoEnlargePolicyResponse), nil
 	}
 }
 
@@ -1346,6 +1442,22 @@ func (i *ShowEntityConfigurationInvoker) Invoke() (*model.ShowEntityConfiguratio
 		return nil, err
 	} else {
 		return result.(*model.ShowEntityConfigurationResponse), nil
+	}
+}
+
+type ShowInstanceConfigurationModifyHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceConfigurationModifyHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceConfigurationModifyHistoryInvoker) Invoke() (*model.ShowInstanceConfigurationModifyHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceConfigurationModifyHistoryResponse), nil
 	}
 }
 
@@ -1794,6 +1906,22 @@ func (i *UpgradeDatabaseVersionInvoker) Invoke() (*model.UpgradeDatabaseVersionR
 		return nil, err
 	} else {
 		return result.(*model.UpgradeDatabaseVersionResponse), nil
+	}
+}
+
+type ValidateConfigurationNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateConfigurationNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateConfigurationNameInvoker) Invoke() (*model.ValidateConfigurationNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateConfigurationNameResponse), nil
 	}
 }
 

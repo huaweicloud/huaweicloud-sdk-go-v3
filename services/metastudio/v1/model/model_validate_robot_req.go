@@ -10,7 +10,7 @@ import (
 type ValidateRobotReq struct {
 
 	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；6：第三方语言模型；8：奇妙问
-	AppType *int32 `json:"app_type,omitempty"`
+	AppType int32 `json:"app_type"`
 
 	HuaweiEiCbs *HuaweiEiCbs `json:"huawei_ei_cbs,omitempty"`
 

@@ -501,6 +501,22 @@ func (i *CancelRecurringSubMeetingInvoker) Invoke() (*model.CancelRecurringSubMe
 	}
 }
 
+type CheckCallNumberInConfInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckCallNumberInConfInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckCallNumberInConfInvoker) Invoke() (*model.CheckCallNumberInConfResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckCallNumberInConfResponse), nil
+	}
+}
+
 type CheckSlideVerifyCodeInvoker struct {
 	*invoker.BaseInvoker
 }

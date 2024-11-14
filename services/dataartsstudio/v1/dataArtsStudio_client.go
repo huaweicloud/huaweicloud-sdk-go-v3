@@ -3631,6 +3631,27 @@ func (c *DataArtsStudioClient) ListWorkspacesInvoker(request *model.ListWorkspac
 	return &ListWorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListWorkspacesForUser 获取指定用户所有的工作空间集合
+//
+// 获取指定用户所有的工作空间集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListWorkspacesForUser(request *model.ListWorkspacesForUserRequest) (*model.ListWorkspacesForUserResponse, error) {
+	requestDef := GenReqDefForListWorkspacesForUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWorkspacesForUserResponse), nil
+	}
+}
+
+// ListWorkspacesForUserInvoker 获取指定用户所有的工作空间集合
+func (c *DataArtsStudioClient) ListWorkspacesForUserInvoker(request *model.ListWorkspacesForUserRequest) *ListWorkspacesForUserInvoker {
+	requestDef := GenReqDefForListWorkspacesForUser()
+	return &ListWorkspacesForUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListWorkspaceusers 获取工作空间用户信息
 //
 // 获取工作空间用户信息

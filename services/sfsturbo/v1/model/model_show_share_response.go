@@ -30,10 +30,10 @@ type ShowShareResponse struct {
 	// 用户指定的加密密钥ID，非加密盘时不返回。
 	CryptKeyId *string `json:"crypt_key_id,omitempty"`
 
-	// 如果是增强型文件系统，该字段返回bandwidth，否则不返回。
+	// 如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
 	ExpandType *string `json:"expand_type,omitempty"`
 
-	// SFS Turbo文件系统的挂载端点。
+	// SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
 	ExportLocation *string `json:"export_location,omitempty"`
 
 	// SFS Turbo的文件系统ID。
@@ -42,7 +42,7 @@ type ShowShareResponse struct {
 	// 创建时指定的SFS Turbo文件系统名称。
 	Name *string `json:"name,omitempty"`
 
-	// SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+	// SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
 	PayModel *ShowShareResponsePayModel `json:"pay_model,omitempty"`
 
 	// SFS Turbo文件系统所在区域。
@@ -63,7 +63,7 @@ type ShowShareResponse struct {
 	// SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
 	Status *string `json:"status,omitempty"`
 
-	// SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+	// SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
 	SubStatus *string `json:"sub_status,omitempty"`
 
 	// 用户指定的子网的网络ID。
@@ -76,8 +76,25 @@ type ShowShareResponse struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// tag标签的列表。
-	Tags           *[]ResourceTag `json:"tags,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Tags *[]ResourceTag `json:"tags,omitempty"`
+
+	// 可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+	OptionalEndpoint *string `json:"optional_endpoint,omitempty"`
+
+	// 文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+	HpcBw *string `json:"hpc_bw,omitempty"`
+
+	// 文件系统规格的节点id，为预留字段，不具备实际含义。
+	InstanceId *string `json:"instanceId,omitempty"`
+
+	// 文件系统规格的节点类型，为预留字段，不具备实际含义。
+	InstanceType *string `json:"instanceType,omitempty"`
+
+	// 文件系统的请求ID，为预留字段，不具备实际含义。
+	StatusDetail *string `json:"statusDetail,omitempty"`
+
+	Features       *ShareInfoFeatures `json:"features,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowShareResponse) String() string {

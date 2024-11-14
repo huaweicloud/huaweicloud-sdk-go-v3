@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -16,7 +19,7 @@ type OneHpcCacheTaskInfoResp struct {
 	Type string `json:"type"`
 
 	// 任务状态
-	Status string `json:"status"`
+	Status OneHpcCacheTaskInfoRespStatus `json:"status"`
 
 	// 联动目录名称
 	SrcTarget string `json:"src_target"`
@@ -47,4 +50,55 @@ func (o OneHpcCacheTaskInfoResp) String() string {
 	}
 
 	return strings.Join([]string{"OneHpcCacheTaskInfoResp", string(data)}, " ")
+}
+
+type OneHpcCacheTaskInfoRespStatus struct {
+	value string
+}
+
+type OneHpcCacheTaskInfoRespStatusEnum struct {
+	SUCCESS OneHpcCacheTaskInfoRespStatus
+	DOING   OneHpcCacheTaskInfoRespStatus
+	FAIL    OneHpcCacheTaskInfoRespStatus
+}
+
+func GetOneHpcCacheTaskInfoRespStatusEnum() OneHpcCacheTaskInfoRespStatusEnum {
+	return OneHpcCacheTaskInfoRespStatusEnum{
+		SUCCESS: OneHpcCacheTaskInfoRespStatus{
+			value: "SUCCESS",
+		},
+		DOING: OneHpcCacheTaskInfoRespStatus{
+			value: "DOING",
+		},
+		FAIL: OneHpcCacheTaskInfoRespStatus{
+			value: "FAIL",
+		},
+	}
+}
+
+func (c OneHpcCacheTaskInfoRespStatus) Value() string {
+	return c.value
+}
+
+func (c OneHpcCacheTaskInfoRespStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *OneHpcCacheTaskInfoRespStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

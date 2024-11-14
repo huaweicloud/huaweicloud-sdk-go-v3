@@ -261,6 +261,22 @@ func (i *DeleteFsTaskInvoker) Invoke() (*model.DeleteFsTaskResponse, error) {
 	}
 }
 
+type DeleteHpcCacheTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHpcCacheTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHpcCacheTaskInvoker) Invoke() (*model.DeleteHpcCacheTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHpcCacheTaskResponse), nil
+	}
+}
+
 type DeleteLdapConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +690,38 @@ func (i *UpdateLdapConfigInvoker) Invoke() (*model.UpdateLdapConfigResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateLdapConfigResponse), nil
+	}
+}
+
+type UpdateObsTargetAttributesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateObsTargetAttributesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateObsTargetAttributesInvoker) Invoke() (*model.UpdateObsTargetAttributesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateObsTargetAttributesResponse), nil
+	}
+}
+
+type UpdateObsTargetPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateObsTargetPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateObsTargetPolicyInvoker) Invoke() (*model.UpdateObsTargetPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateObsTargetPolicyResponse), nil
 	}
 }
 

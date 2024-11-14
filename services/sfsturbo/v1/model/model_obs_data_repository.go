@@ -14,6 +14,10 @@ type ObsDataRepository struct {
 
 	// OBS桶所在的区域域名
 	Endpoint string `json:"endpoint"`
+
+	Policy *ObsDataRepositoryPolicy `json:"policy,omitempty"`
+
+	Attributes *ObsTargetAttributes `json:"attributes,omitempty"`
 }
 
 func (o ObsDataRepository) String() string {

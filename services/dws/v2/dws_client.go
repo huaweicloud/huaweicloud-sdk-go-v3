@@ -2927,6 +2927,27 @@ func (c *DwsClient) ShrinkClusterInvoker(request *model.ShrinkClusterRequest) *S
 	return &ShrinkClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartCluster 启动集群
+//
+// 集群管理-启动集群
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) StartCluster(request *model.StartClusterRequest) (*model.StartClusterResponse, error) {
+	requestDef := GenReqDefForStartCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartClusterResponse), nil
+	}
+}
+
+// StartClusterInvoker 启动集群
+func (c *DwsClient) StartClusterInvoker(request *model.StartClusterRequest) *StartClusterInvoker {
+	requestDef := GenReqDefForStartCluster()
+	return &StartClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartDisasterRecovery 启动容灾
 //
 // 该接口用于启动容灾操作。
@@ -2971,6 +2992,27 @@ func (c *DwsClient) StartWorkloadPlan(request *model.StartWorkloadPlanRequest) (
 func (c *DwsClient) StartWorkloadPlanInvoker(request *model.StartWorkloadPlanRequest) *StartWorkloadPlanInvoker {
 	requestDef := GenReqDefForStartWorkloadPlan()
 	return &StartWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopCluster 停止集群
+//
+// 集群管理-停止集群
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) StopCluster(request *model.StopClusterRequest) (*model.StopClusterResponse, error) {
+	requestDef := GenReqDefForStopCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopClusterResponse), nil
+	}
+}
+
+// StopClusterInvoker 停止集群
+func (c *DwsClient) StopClusterInvoker(request *model.StopClusterRequest) *StopClusterInvoker {
+	requestDef := GenReqDefForStopCluster()
+	return &StopClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StopRedistribution 暂停重分布

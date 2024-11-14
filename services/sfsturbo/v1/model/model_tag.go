@@ -9,7 +9,7 @@ import (
 // Tag tag字段说明
 type Tag struct {
 
-	// 标签的键。  最大长度127个字符。 key不能为空。
+	// 标签的键。  最大长度128个字符。 key不能为空。
 	Key string `json:"key"`
 
 	// 值列表。每个值最大长度255个字符，如果values为空列表，则表示匹配任意值value。value之间为或的关系。

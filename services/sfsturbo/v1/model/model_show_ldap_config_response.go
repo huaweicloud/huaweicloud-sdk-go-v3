@@ -20,7 +20,19 @@ type ShowLdapConfigResponse struct {
 
 	// 过滤条件。保留字段，暂不支持
 	FilterCondition *string `json:"filter_condition,omitempty"`
-	HttpStatusCode  int     `json:"-"`
+
+	// ldap备节点的url
+	BackupUrl *string `json:"backup_url,omitempty"`
+
+	// ldap的schema，不填写则默认为RFC2307
+	Schema *string `json:"schema,omitempty"`
+
+	// ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+	SearchTimeout *int32 `json:"search_timeout,omitempty"`
+
+	// 访问ldap服务器失败后是否允许使用本地用户鉴权
+	AllowLocalUser *string `json:"allow_local_user,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowLdapConfigResponse) String() string {

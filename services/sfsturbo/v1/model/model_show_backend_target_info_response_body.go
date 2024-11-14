@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ShowBackendTargetInfoResponseBody 查询文件系统后端存储库详情返回体
+// ShowBackendTargetInfoResponseBody 查询文件系统后端存储详情返回体
 type ShowBackendTargetInfoResponseBody struct {
 
 	// 绑定关系id

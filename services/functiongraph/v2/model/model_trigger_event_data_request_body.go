@@ -157,26 +157,32 @@ type TriggerEventDataRequestBody struct {
 	// RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
-	// EG obs触发器是否对对象加密。
+	// EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
 	KeyEncode *bool `json:"Key_encode,omitempty"`
 
-	// 使用的代理
+	// 使用的代理（EVENTGRID触发器参数）。
 	Agency *string `json:"agency,omitempty"`
 
-	// 通道名称
+	// 通道名称（EVENTGRID触发器参数）。
 	ChannelName *string `json:"channel_name,omitempty"`
 
-	// 事件源名称
+	// 通道id（EVENTGRID触发器参数）。
+	ChannelId *string `json:"channel_id,omitempty"`
+
+	// 事件源名称（EVENTGRID触发器参数）。
 	SourceName *string `json:"source_name,omitempty"`
 
-	// 创建时间
+	// 创建时间（EVENTGRID触发器参数）。
 	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
 
-	// 触发器状态
-	Status *string `json:"status,omitempty"`
+	// 触发器状态（EVENTGRID触发器参数）。
+	Status *TriggerEventDataRequestBodyStatus `json:"status,omitempty"`
 
-	// 触发器名称
+	// 触发器名称（EVENTGRID触发器参数）。
 	TriggerName *string `json:"trigger_name,omitempty"`
+
+	// 事件类型（EVENTGRID触发器参数）。
+	EventTypes *[]string `json:"event_types,omitempty"`
 }
 
 func (o TriggerEventDataRequestBody) String() string {
@@ -617,6 +623,53 @@ func (c TriggerEventDataRequestBodyIsSerial) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TriggerEventDataRequestBodyIsSerial) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TriggerEventDataRequestBodyStatus struct {
+	value string
+}
+
+type TriggerEventDataRequestBodyStatusEnum struct {
+	ACTIVE  TriggerEventDataRequestBodyStatus
+	DISABLE TriggerEventDataRequestBodyStatus
+}
+
+func GetTriggerEventDataRequestBodyStatusEnum() TriggerEventDataRequestBodyStatusEnum {
+	return TriggerEventDataRequestBodyStatusEnum{
+		ACTIVE: TriggerEventDataRequestBodyStatus{
+			value: "ACTIVE",
+		},
+		DISABLE: TriggerEventDataRequestBodyStatus{
+			value: "DISABLE",
+		},
+	}
+}
+
+func (c TriggerEventDataRequestBodyStatus) Value() string {
+	return c.value
+}
+
+func (c TriggerEventDataRequestBodyStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TriggerEventDataRequestBodyStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

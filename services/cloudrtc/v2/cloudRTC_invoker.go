@@ -261,22 +261,6 @@ func (i *ShowRecordRuleInvoker) Invoke() (*model.ShowRecordRuleResponse, error) 
 	}
 }
 
-type ShowUrlAuthInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowUrlAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowUrlAuthInvoker) Invoke() (*model.ShowUrlAuthResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowUrlAuthResponse), nil
-	}
-}
-
 type StartAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,22 +402,6 @@ func (i *UpdateRecordRuleInvoker) Invoke() (*model.UpdateRecordRuleResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateRecordRuleResponse), nil
-	}
-}
-
-type UpdateUrlAuthInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateUrlAuthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateUrlAuthInvoker) Invoke() (*model.UpdateUrlAuthResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateUrlAuthResponse), nil
 	}
 }
 

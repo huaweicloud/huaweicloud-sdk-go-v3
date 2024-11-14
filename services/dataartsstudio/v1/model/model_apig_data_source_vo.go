@@ -26,6 +26,9 @@ type ApigDataSourceVo struct {
 
 	// 0：开发模式 1：生产模式。默认为0
 	EnvType *int32 `json:"env_type,omitempty"`
+
+	// 1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+	SupportService *int32 `json:"supportService,omitempty"`
 }
 
 func (o ApigDataSourceVo) String() string {

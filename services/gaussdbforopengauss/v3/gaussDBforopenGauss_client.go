@@ -1908,9 +1908,9 @@ func (c *GaussDBforopenGaussClient) StartInstanceInvoker(request *model.StartIns
 	return &StartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartMysqlCompatibility 开启MySQl兼容端口服务
+// StartMysqlCompatibility 开启M兼容端口服务
 //
-// 开启指定实例的MySQl兼容端口。
+// 开启指定实例的M兼容端口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) StartMysqlCompatibility(request *model.StartMysqlCompatibilityRequest) (*model.StartMysqlCompatibilityResponse, error) {
@@ -1923,7 +1923,7 @@ func (c *GaussDBforopenGaussClient) StartMysqlCompatibility(request *model.Start
 	}
 }
 
-// StartMysqlCompatibilityInvoker 开启MySQl兼容端口服务
+// StartMysqlCompatibilityInvoker 开启M兼容端口服务
 func (c *GaussDBforopenGaussClient) StartMysqlCompatibilityInvoker(request *model.StartMysqlCompatibilityRequest) *StartMysqlCompatibilityInvoker {
 	requestDef := GenReqDefForStartMysqlCompatibility()
 	return &StartMysqlCompatibilityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2055,9 +2055,9 @@ func (c *GaussDBforopenGaussClient) UpdateInstanceNameInvoker(request *model.Upd
 	return &UpdateInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateMysqlCompatibility 更新/关闭MySQl兼容端口服务
+// UpdateMysqlCompatibility 更新/关闭M兼容端口服务
 //
-// 更新指定实例的MySQl兼容端口服务配置。
+// 更新指定实例的M兼容端口服务配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) UpdateMysqlCompatibility(request *model.UpdateMysqlCompatibilityRequest) (*model.UpdateMysqlCompatibilityResponse, error) {
@@ -2070,7 +2070,7 @@ func (c *GaussDBforopenGaussClient) UpdateMysqlCompatibility(request *model.Upda
 	}
 }
 
-// UpdateMysqlCompatibilityInvoker 更新/关闭MySQl兼容端口服务
+// UpdateMysqlCompatibilityInvoker 更新/关闭M兼容端口服务
 func (c *GaussDBforopenGaussClient) UpdateMysqlCompatibilityInvoker(request *model.UpdateMysqlCompatibilityRequest) *UpdateMysqlCompatibilityInvoker {
 	requestDef := GenReqDefForUpdateMysqlCompatibility()
 	return &UpdateMysqlCompatibilityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

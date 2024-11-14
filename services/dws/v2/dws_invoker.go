@@ -2197,6 +2197,22 @@ func (i *ShrinkClusterInvoker) Invoke() (*model.ShrinkClusterResponse, error) {
 	}
 }
 
+type StartClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartClusterInvoker) Invoke() (*model.StartClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartClusterResponse), nil
+	}
+}
+
 type StartDisasterRecoveryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2226,6 +2242,22 @@ func (i *StartWorkloadPlanInvoker) Invoke() (*model.StartWorkloadPlanResponse, e
 		return nil, err
 	} else {
 		return result.(*model.StartWorkloadPlanResponse), nil
+	}
+}
+
+type StopClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopClusterInvoker) Invoke() (*model.StopClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopClusterResponse), nil
 	}
 }
 

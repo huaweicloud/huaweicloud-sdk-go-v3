@@ -13,7 +13,7 @@ import (
 type PushEventsRequest struct {
 
 	// 告警所属的企业项目id。
-	XEnterprisePrjectId *string `json:"x-enterprise-prject-id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise-project-id,omitempty"`
 
 	// 接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
 	Action *PushEventsRequestAction `json:"action,omitempty"`

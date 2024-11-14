@@ -31,7 +31,7 @@ type CreateLimitTaskResponse struct {
 	SqlModel *string `json:"sql_model,omitempty"`
 
 	// 关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
-	KeyWords *[]string `json:"key_words,omitempty"`
+	KeyWords *string `json:"key_words,omitempty"`
 
 	// 限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
 	Status *string `json:"status,omitempty"`
@@ -73,7 +73,7 @@ type CreateLimitTaskResponse struct {
 	NodeInfos *[]CreateLimitTaskNodeResult `json:"node_infos,omitempty"`
 
 	// 工作流ID。
-	JobId          *string `json:"jobId,omitempty"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

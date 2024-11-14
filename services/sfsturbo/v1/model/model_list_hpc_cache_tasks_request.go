@@ -26,6 +26,12 @@ type ListHpcCacheTasksRequest struct {
 
 	// limit，默认值为 20
 	Limit *int64 `json:"limit,omitempty"`
+
+	// start_time
+	StartTime *string `json:"start_time,omitempty"`
+
+	// end_time
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListHpcCacheTasksRequest) String() string {

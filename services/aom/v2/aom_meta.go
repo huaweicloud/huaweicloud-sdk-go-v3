@@ -592,8 +592,8 @@ func GenReqDefForPushEvents() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnterprisePrjectId").
-		WithJsonTag("x-enterprise-prject-id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise-project-id").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

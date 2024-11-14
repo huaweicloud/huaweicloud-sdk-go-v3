@@ -2757,6 +2757,22 @@ func (i *ListWorkspacesInvoker) Invoke() (*model.ListWorkspacesResponse, error) 
 	}
 }
 
+type ListWorkspacesForUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkspacesForUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWorkspacesForUserInvoker) Invoke() (*model.ListWorkspacesForUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkspacesForUserResponse), nil
+	}
+}
+
 type ListWorkspaceusersInvoker struct {
 	*invoker.BaseInvoker
 }

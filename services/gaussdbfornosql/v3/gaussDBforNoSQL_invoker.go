@@ -21,6 +21,22 @@ func (i *ApplyConfigurationInvoker) Invoke() (*model.ApplyConfigurationResponse,
 	}
 }
 
+type ApplyConfigurationToInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyConfigurationToInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ApplyConfigurationToInstancesInvoker) Invoke() (*model.ApplyConfigurationToInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyConfigurationToInstancesResponse), nil
+	}
+}
+
 type BatchTagActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,22 @@ func (i *BatchUpgradeDatabaseVersionInvoker) Invoke() (*model.BatchUpgradeDataba
 		return nil, err
 	} else {
 		return result.(*model.BatchUpgradeDatabaseVersionResponse), nil
+	}
+}
+
+type CancelInstanceScheduleWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelInstanceScheduleWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CancelInstanceScheduleWindowInvoker) Invoke() (*model.CancelInstanceScheduleWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelInstanceScheduleWindowResponse), nil
 	}
 }
 
@@ -165,6 +197,38 @@ func (i *CreateConfigurationInvoker) Invoke() (*model.CreateConfigurationRespons
 	}
 }
 
+type CreateDbCacheMappingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDbCacheMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDbCacheMappingInvoker) Invoke() (*model.CreateDbCacheMappingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDbCacheMappingResponse), nil
+	}
+}
+
+type CreateDbCacheRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDbCacheRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDbCacheRuleInvoker) Invoke() (*model.CreateDbCacheRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDbCacheRuleResponse), nil
+	}
+}
+
 type CreateDbUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +306,38 @@ func (i *DeleteConfigurationInvoker) Invoke() (*model.DeleteConfigurationRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteConfigurationResponse), nil
+	}
+}
+
+type DeleteDbCacheMappingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDbCacheMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDbCacheMappingInvoker) Invoke() (*model.DeleteDbCacheMappingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDbCacheMappingResponse), nil
+	}
+}
+
+type DeleteDbCacheRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDbCacheRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDbCacheRuleInvoker) Invoke() (*model.DeleteDbCacheRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDbCacheRuleResponse), nil
 	}
 }
 
@@ -453,6 +549,38 @@ func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) 
 	}
 }
 
+type ListDbCacheMappingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbCacheMappingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDbCacheMappingsInvoker) Invoke() (*model.ListDbCacheMappingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbCacheMappingsResponse), nil
+	}
+}
+
+type ListDbCacheRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbCacheRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDbCacheRulesInvoker) Invoke() (*model.ListDbCacheRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbCacheRulesResponse), nil
+	}
+}
+
 type ListDbUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +690,22 @@ func (i *ListInstanceDatabasesInvoker) Invoke() (*model.ListInstanceDatabasesRes
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceDatabasesResponse), nil
+	}
+}
+
+type ListInstanceMaintenanceWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceMaintenanceWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceMaintenanceWindowInvoker) Invoke() (*model.ListInstanceMaintenanceWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceMaintenanceWindowResponse), nil
 	}
 }
 
@@ -725,6 +869,22 @@ func (i *ListMongodbSlowLogsInvoker) Invoke() (*model.ListMongodbSlowLogsRespons
 	}
 }
 
+type ListNosqlTaskListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNosqlTaskListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNosqlTaskListInvoker) Invoke() (*model.ListNosqlTaskListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNosqlTaskListResponse), nil
+	}
+}
+
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -866,6 +1026,22 @@ func (i *ModifyEpsQuotasInvoker) Invoke() (*model.ModifyEpsQuotasResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ModifyEpsQuotasResponse), nil
+	}
+}
+
+type ModifyInstanceMaintenanceWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyInstanceMaintenanceWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyInstanceMaintenanceWindowInvoker) Invoke() (*model.ModifyInstanceMaintenanceWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyInstanceMaintenanceWindowResponse), nil
 	}
 }
 
@@ -1125,6 +1301,22 @@ func (i *SetBackupPolicyInvoker) Invoke() (*model.SetBackupPolicyResponse, error
 	}
 }
 
+type SetInstanceDataDumpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstanceDataDumpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetInstanceDataDumpInvoker) Invoke() (*model.SetInstanceDataDumpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstanceDataDumpResponse), nil
+	}
+}
+
 type SetRecyclePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1218,6 +1410,22 @@ func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyRes
 		return nil, err
 	} else {
 		return result.(*model.ShowAutoEnlargePolicyResponse), nil
+	}
+}
+
+type ShowBackupPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackupPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBackupPoliciesInvoker) Invoke() (*model.ShowBackupPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackupPoliciesResponse), nil
 	}
 }
 
@@ -1477,6 +1685,22 @@ func (i *ShowRestorableListInvoker) Invoke() (*model.ShowRestorableListResponse,
 	}
 }
 
+type ShowSecondLevelMonitoringStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecondLevelMonitoringStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecondLevelMonitoringStatusInvoker) Invoke() (*model.ShowSecondLevelMonitoringStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecondLevelMonitoringStatusResponse), nil
+	}
+}
+
 type ShowSlowLogDesensitizationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1522,6 +1746,22 @@ func (i *SwitchIpGroupInvoker) Invoke() (*model.SwitchIpGroupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchIpGroupResponse), nil
+	}
+}
+
+type SwitchSecondLevelMonitoringInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSecondLevelMonitoringInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchSecondLevelMonitoringInvoker) Invoke() (*model.SwitchSecondLevelMonitoringResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSecondLevelMonitoringResponse), nil
 	}
 }
 
@@ -1637,6 +1877,22 @@ func (i *UpdateDatabasesInvoker) Invoke() (*model.UpdateDatabasesResponse, error
 	}
 }
 
+type UpdateDbCacheRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDbCacheRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDbCacheRuleInvoker) Invoke() (*model.UpdateDbCacheRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDbCacheRuleResponse), nil
+	}
+}
+
 type UpdateHighRiskCommandsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1666,6 +1922,22 @@ func (i *UpdateInstanceConfigurationInvoker) Invoke() (*model.UpdateInstanceConf
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceConfigurationResponse), nil
+	}
+}
+
+type UpdateInstanceConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceConfigurationsInvoker) Invoke() (*model.UpdateInstanceConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceConfigurationsResponse), nil
 	}
 }
 
